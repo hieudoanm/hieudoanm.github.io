@@ -1,5 +1,12 @@
 @host = http://localhost:10000
 
+### OCR Read from Image
+POST {{host}}/api/easy-ocr/read HTTP/1.1
+Content-Disposition: form-data; name="file"; filename="image.png"
+Content-Type: image/png
+
+< ./image.png
+
 ### Download Images from Instagram Post URL
 POST {{host}}/api/instagram/download
 Content-Type: application/json
@@ -7,9 +14,6 @@ Content-Type: application/json
 {
   "url": "https://www.instagram.com/p/DFijU7Gzkae/?utm_source=ig_web_copy_link"
 }
-
-### OCR Read from Image
-POST {{host}}/api/ocr/read
 
 ### Upload a PDF file to the API
 POST {{host}}/api/pdfmake/convert HTTP/1.1

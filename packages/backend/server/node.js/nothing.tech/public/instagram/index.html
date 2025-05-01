@@ -17,7 +17,7 @@
             name="url"
             class="h-full w-full bg-transparent p-8"
             placeholder="URL"
-            hx-post="/api/download"
+            hx-post="/api/instagram/download"
             hx-trigger="input changed delay:500ms"
             hx-on::after-request="parseResponse(event)"></textarea>
         </div>
@@ -30,18 +30,18 @@
         </div>
       </div>
     </div>
-  </body>
-  <script type="text/javascript">
-    const parseResponse = (event) => {
-      const data = JSON.parse(event.detail.xhr.response);
-      const { images } = data;
-      const html = images.map((image, index) => {
-        return `<div class="col-span-1">
+    <script type="text/javascript">
+      const parseResponse = (event) => {
+        const data = JSON.parse(event.detail.xhr.response);
+        const { images } = data;
+        const html = images.map((image, index) => {
+          return `<div class="col-span-1">
   <img src="${image}" alt="${index}" class="rounded-md w-full" />
 </div>`;
-      });
-      const innerHTML = `<div class="grid grid-cols-1 md:grid-cols-2 gap-8">${html}</div>`;
-      document.getElementById('images').innerHTML = innerHTML;
-    };
-  </script>
+        });
+        const innerHTML = `<div class="grid grid-cols-1 md:grid-cols-2 gap-8">${html}</div>`;
+        document.getElementById('images').innerHTML = innerHTML;
+      };
+    </script>
+  </body>
 </html>

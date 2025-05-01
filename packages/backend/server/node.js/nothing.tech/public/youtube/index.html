@@ -12,7 +12,7 @@
     <div class="h-screen w-screen overflow-hidden">
       <form
         class="grid h-full grid-cols-1 md:grid-cols-2"
-        hx-post="/api/download/trigger"
+        hx-post="/api/youtube/download/trigger"
         hx-trigger="submit"
         hx-swap="none"
         hx-on::after-request="parseResponse(event)">
@@ -38,7 +38,7 @@
         );
         const data = JSON.parse(event.detail.xhr.response);
         const { id } = data;
-        const response = await fetch('/api/download', {
+        const response = await fetch('/api/youtube/download', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ id }),

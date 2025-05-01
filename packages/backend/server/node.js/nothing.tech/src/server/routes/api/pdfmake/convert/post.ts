@@ -23,7 +23,7 @@ export const postRoute = async (
   }
 ) => {
   try {
-    logger.info('request', request);
+    logger.info(request, 'request');
 
     const filePath: string = path.join(CWD, 'uploads', 'sample.pdf');
     logger.info('filePath', filePath);
