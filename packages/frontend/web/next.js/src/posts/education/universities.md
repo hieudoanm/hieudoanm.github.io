@@ -79,7 +79,7 @@ date: '2025-04-22'
 
 | #   | Name                                                 | Medical School          | Law School       |
 | --- | ---------------------------------------------------- | ----------------------- | ---------------- |
-| 01  | National University of Singapore                     | Duke–NUS Medical School | Yale-NUS College |
+| 01  | National University of Singapore                     | Duke-NUS Medical School | Yale-NUS College |
 | 02  | Nanyang Technological University (NTU)               |                         |                  |
 | 03  | Singapore Management University (SMU)                |                         |                  |
 | 04  | Singapore University of Technology and Design (SUTD) |                         |                  |
@@ -123,26 +123,27 @@ date: '2025-04-22'
 
 | #   | State         | City         | University                 | Business                      | Medical                                                        |
 | --- | ------------- | ------------ | -------------------------- | ----------------------------- | -------------------------------------------------------------- |
-| 1   | Connecticut   | New Haven    | Yale University            |                               |                                                                |
+| 1   | Connecticut   | New Haven    | Yale University            |                               | Yale School of Medicine                                        |
 | 2   | Massachusetts | Cambridge    | Harvard University         | Harvard Business School (HBS) | Harvard Medical School                                         |
-| 3   | New Hampshire | Hanover      | Dartmouth College          |                               |                                                                |
+| 3   | New Hampshire | Hanover      | Dartmouth College          |                               | Geisel School of Medicine                                      |
 | 4   | New Jersey    | Princeton    | Princeton University       |                               |                                                                |
-| 5   | New York      | Ithaca       | Cornell University         |                               |                                                                |
+| 5   | New York      | Ithaca       | Cornell University         |                               | Weill Cornell Medicine                                         |
 | 6   | New York      | New York     | Columbia University        |                               | Columbia University Vagelos College of Physicians and Surgeons |
-| 7   | Pennsylvania  | Philadelphia | University of Pennsylvania | The Wharton School            |                                                                |
-| 8   | Rhode Island  | Providence   | Brown University           |                               |                                                                |
+| 7   | Pennsylvania  | Philadelphia | University of Pennsylvania | The Wharton School            | Perelman School of Medicine                                    |
+| 8   | Rhode Island  | Providence   | Brown University           |                               | Alpert Medical School                                          |
 
 ### Notable Mentions (USA)
 
-| #   | State          | City          | University                                   | Medical                                |
-| --- | -------------- | ------------- | -------------------------------------------- | -------------------------------------- |
-| 1   | California     | Berkeley      | University of California, Berkeley           |                                        |
-| 2   | California     | Palo Alto     | Stanford University                          | Stanford University School of Medicine |
-| 3   | California     | Pasadena      | California Institute of Technology (Caltech) |                                        |
-| 4   | Connecticut    | New Haven     | Yale University                              |                                        |
-| 5   | Illinois       | Chicago       | University of Chicago                        |                                        |
-| 6   | Maryland       | Baltimore     | Johns Hopkins University                     | Johns Hopkins School of Medicine       |
-| 7   | Massachusetts  | Boston        | MIT                                          |                                        |
-| 8   | New York       | New York City | New York University                          | NYU Grossman School of Medicine        |
-| 9   | North Carolina | Durham        | Duke University                              |                                        |
-| 10  | Texas          | Austin        | University of Texas - Austin                 |                                        |
+| #   | State          | City          | University                                   | Medical                                      |
+| --- | -------------- | ------------- | -------------------------------------------- | -------------------------------------------- |
+| 1   | California     | Berkeley      | University of California, Berkeley           | University of California Schools of Medicine |
+| 2   | California     | Palo Alto     | Stanford University                          | Stanford University - School of Medicine     |
+| 3   | California     | Pasadena      | California Institute of Technology (Caltech) |                                              |
+| 4   | Illinois       | Chicago       | University of Chicago                        |                                              |
+| 5   | Maryland       | Baltimore     | Johns Hopkins University                     | Johns Hopkins - School of Medicine           |
+| 6   | Massachusetts  | Boston        | MIT                                          |                                              |
+| 7   | New York       | New York City | New York University                          | NYU Grossman School of Medicine              |
+| 8   | North Carolina | Durham        | Duke University                              |                                              |
+| 9   | Texas          | Austin        | University of Texas - Austin                 | Dell Medical School                          |
+| 10  | North Carolina | Durham        | Duke University                              | Duke University School of Medicine           |
+| 11  | Indiana        | South Bend    | University of Notre Dame                     |                                              |

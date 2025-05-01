@@ -15,6 +15,7 @@ STEM is short for Science, Technology, Engineering, Arts, and Mathematics
 - Science: Physics, Chemistry, Biology
 - Technology: Tools
 - Engineering: Build the Tools
+  - Robotics
 - Arts
   - Design
   - Literature (Novel, Poem)
@@ -29,5 +30,6 @@ STEM is short for Science, Technology, Engineering, Arts, and Mathematics
   - Number Theory: Properties of integers
   - Set Theory – Study of sets (collections of objects)
   - Linear Algebra – Vector spaces and linear equations
+  - Analysis - Continuous functions, limits, and related theories, such as differentiation, integration, measure, infinite sequences, series, and analytic functions.
 
 > The engineers apply their knowledge of science and mathematics to develop a new technology to create arts.

@@ -22,13 +22,13 @@ date: '2025-05-01'
 
 ## Racing
 
-| No  | Subgroup   | Name       | Notable Competition |
-| --- | ---------- | ---------- | ------------------- |
-| 01  | Individual | Running    | Marathon            |
-| 02  | Individual | Swimming   |                     |
-| 03  | Vehicle    | Bicycling  | Tour de France      |
-| 04  | Vehicle    | Car        | F1                  |
-| 05  | Vehicle    | Motorcycle | Grand Prix          |
+| No  | Subgroup   | Name       | Notable Competition   |
+| --- | ---------- | ---------- | --------------------- |
+| 01  | Individual | Running    | World Marathon Majors |
+| 02  | Individual | Swimming   |                       |
+| 03  | Vehicle    | Bicycling  | Tour de France        |
+| 04  | Vehicle    | Car        | F1                    |
+| 05  | Vehicle    | Motorcycle | Grand Prix            |
 
 ## Racket
 
