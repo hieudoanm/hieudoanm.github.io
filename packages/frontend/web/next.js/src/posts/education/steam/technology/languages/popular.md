@@ -10,20 +10,20 @@ date: '2025-05-01'
 
 ## Usage
 
-| #   | Language                                 | Maintainer             | Group        | Development                                                      | Docker / UI                  | Note                      |
-| --- | ---------------------------------------- | ---------------------- | ------------ | ---------------------------------------------------------------- | ---------------------------- | ------------------------- |
-| 1   | C / C++                                  |                        | Low-level    | OS                                                               |                              |                           |
-| 2   | [Rust][rust]                             |                        | Low-level    | OS                                                               |                              | Best for Memory           |
-| 3   | [Go][go]                                 | [Google][google]       | Low-level    | CLI / Terminal                                                   | [Docker][docker-hub-golang]  | Easiest to Use            |
-| 4   | JavaScript / [TypeScript][ms-typescript] | [Microsoft][ms]        | Front-end    | Web / [ChromeOS][google-chromeos]                                | [Docker][docker-hub-node]    | Most Accessible           |
-| 5   | [Swift][apple-swift]                     | [Apple][apple]         | Front-end    | [iOS][apple-ios] / [iPadOS][apple-ipados] / [macOS][apple-macos] | [SwiftUI][apple-swiftui]     | Closed EcoSytem           |
-| 6   | [Kotlin][jetbrains-kotlin]               | [JetBrains][jetbrains] | Front-end    | [Android][google-android] (Mobile / Tablet)                      | [Material][google-material]  | Most Popular for Mobile   |
-| 7   | [C#][ms-csharp]                          | [Microsoft][ms]        | Front-end    | [Windows][ms-windows]                                            | [WinUI][ms-winui]            | Most Popular for Desktop  |
-| 8   | [Java][oracle-java]                      | [Oracle][oracle]       | Back-end     |                                                                  | [Docker][docker-hub-openjdk] | Best for Enterprise       |
-| 9   | [Python][python]                         |                        | Data Science | Machine Learning with [Jupyter][jupyter]                         | [Docker][docker-hub-python]  | Best for Machine Learning |
-| 10  | [R][r]                                   |                        | Data Science | Mathematics                                                      |                              | Best for Statistics       |
-| 11  | [Docker][docker]                         |                        | DevOps       | Containerization                                                 |                              | Best for Deployment       |
-| 12  | [Terraform][terraform]                   |                        | DevOps       | Infrastructure as Code                                           |                              |                           |
+| #   | Language                                 | Maintainer             | Group        | Development                                                      | Docker / UI                  | Note                          |
+| --- | ---------------------------------------- | ---------------------- | ------------ | ---------------------------------------------------------------- | ---------------------------- | ----------------------------- |
+| 1   | C / C++                                  |                        | Low-level    | OS                                                               |                              | Most Popular                  |
+| 2   | [Rust][rust]                             |                        | Low-level    | OS                                                               |                              | Best for Memory               |
+| 3   | [Go][go]                                 | [Google][google]       | Low-level    | CLI / Terminal                                                   | [Docker][docker-hub-golang]  | Easiest to Use                |
+| 4   | JavaScript / [TypeScript][ms-typescript] | [Microsoft][ms]        | Front-end    | Web / [ChromeOS][google-chromeos]                                | [Docker][docker-hub-node]    | Most Accessible               |
+| 5   | [Swift][apple-swift]                     | [Apple][apple]         | Front-end    | [iOS][apple-ios] / [iPadOS][apple-ipados] / [macOS][apple-macos] | [SwiftUI][apple-swiftui]     | Closed EcoSytem               |
+| 6   | [Kotlin][jetbrains-kotlin]               | [JetBrains][jetbrains] | Front-end    | [Android][google-android] (Mobile / Tablet)                      | [Material][google-material]  | Most Popular for Mobile       |
+| 7   | [C#][ms-csharp]                          | [Microsoft][ms]        | Front-end    | [Windows][ms-windows]                                            | [WinUI][ms-winui]            | Most Popular for Desktop      |
+| 8   | [Java][oracle-java]                      | [Oracle][oracle]       | Back-end     |                                                                  | [Docker][docker-hub-openjdk] | Best for Enterprise           |
+| 9   | [Python][python]                         |                        | Data Science | Machine Learning with [Jupyter][jupyter]                         | [Docker][docker-hub-python]  | Best for Machine Learning     |
+| 10  | [R][r]                                   |                        | Data Science | Mathematics                                                      |                              | Best for Statistics           |
+| 11  | [Docker][docker]                         |                        | DevOps       | Containerization                                                 |                              | Best for Deployment           |
+| 12  | [Terraform][terraform]                   |                        | DevOps       | Infrastructure as Code                                           |                              | Best for Cloud Infrastructure |
 
 [apple]: https://www.apple.com/
 [apple-ios]: https://www.apple.com/ios/
