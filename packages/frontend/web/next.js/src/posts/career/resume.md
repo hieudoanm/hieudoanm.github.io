@@ -1,23 +1,23 @@
 ---
 title: 'Resume'
-date: '2025-04-19'
+date: '2025-05-01'
 ---
 
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
 - [Experiences](#experiences)
-  - [Senior Software Developer at NAB](#senior-software-developer-at-nab)
-  - [Software Developer at BoostCommerce](#software-developer-at-boostcommerce)
-  - [Front-end Developer at admetrics](#front-end-developer-at-admetrics)
-  - [Front-end Developer at Witrafi](#front-end-developer-at-witrafi)
+  - [Senior Software Engineer at NAB](#senior-software-engineer-at-nab)
+  - [Software Engineer at BoostCommerce](#software-engineer-at-boostcommerce)
+  - [Front-end Engineer at admetrics](#front-end-engineer-at-admetrics)
+  - [Front-end Engineer at Witrafi](#front-end-engineer-at-witrafi)
 - [Education](#education)
   - [Bachelor of Psychology at RMIT](#bachelor-of-psychology-at-rmit)
   - [Bachelor of BA, BIT at LAB](#bachelor-of-ba-bit-at-lab)
 
 ## Experiences
 
-### Senior Software Developer at [NAB][nab]
+### Senior Software Engineer at [NAB][nab]
 
 Location: **Ho Chi Minh City**, **Vietnam**
 
@@ -30,7 +30,7 @@ From **2021-08-01** to **now**
 - Certificates:
   - [AWS][aws] [Solutions Architect - Associate][aws-ssa] from **2021-09-11** to **2024-09-11**
 
-### Software Developer at [BoostCommerce][boostcommerce]
+### Software Engineer at [BoostCommerce][boostcommerce]
 
 Location: **Hanoi**, **Vietnam**
 
@@ -41,7 +41,7 @@ From **2019-03-01** to **2021-02-28**
 - Implemented automated unit and integration tests to ensure code quality and functionality.
 - Techstack: **Express.js**, **React**
 
-### Front-end Developer at [admetrics][admetrics]
+### Front-end Engineer at [admetrics][admetrics]
 
 Location: **Frankfurt am Main**, **Germany**
 
@@ -52,7 +52,7 @@ From **2017-03-01** to **2019-02-28**
 - Integrated APIs and third-party services to enhance functionality and improve user experiences.
 - Techstack: **Angular**
 
-### Front-end Developer at Witrafi
+### Front-end Engineer at Witrafi
 
 Location: **Helsinki**, **Finland**
 

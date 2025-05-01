@@ -1,6 +1,6 @@
 ---
-title: 'Chess Champions'
-date: '2025-04-19'
+title: 'World Chess Champions'
+date: '2025-05-01'
 ---
 
 ## Table of Contents
@@ -90,6 +90,11 @@ date: '2025-04-19'
 | 2023 | Samarkand, Uzbekistan    | Magnus Carlsen        | Norway          | Magnus Carlsen                      | Norway          |
 | 2024 | New York, United States  | Volodar Murzin        | Russia          | Magnus Carlsen & Ian Nepomniachtchi | Norway & Russia |
 | 2025 |                          |                       |                 |                                     |                 |
+| 2026 |                          |                       |                 |                                     |                 |
+| 2027 |                          |                       |                 |                                     |                 |
+| 2028 |                          |                       |                 |                                     |                 |
+| 2029 |                          |                       |                 |                                     |                 |
+| 2030 |                          |                       |                 |                                     |                 |
 
 ## World Fisher Random Champion
 
