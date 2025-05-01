@@ -1,22 +1,41 @@
 ---
 title: 'Individual Sports'
-date: '2025-04-18'
+date: '2025-05-01'
 ---
 
-| No  | Group  | Subgroup    | Name         | Notable Competition |
-| --- | ------ | ----------- | ------------ | ------------------- |
-| 01  | Board  |             | Checker      |                     |
-| 02  | Board  |             | Chess        |                     |
-| 03  | Board  |             | Go           |                     |
-| 04  | Board  |             | Shogi        |                     |
-| 05  | Board  |             | Xiangqi      |                     |
-| 06  | Racing | Individual  | Running      | Marathon            |
-| 07  | Racing | Individual  | Swimming     |                     |
-| 08  | Racing | Vehicle     | Bicycling    | Tour de France      |
-| 09  | Racing | Vehicle     | Car          | F1                  |
-| 10  | Racing | Vehicle     | Motorcycle   | Grand Prix          |
-| 11  | Racket | Ball        | Pickleball   |                     |
-| 12  | Racket | Ball        | Squash       |                     |
-| 13  | Racket | Ball        | Table Tennis |                     |
-| 14  | Racket | Ball        | Tennis       | Grand Slam          |
-| 15  | Racket | Shuttercock | Badminton    |                     |
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Board](#board)
+- [Racing](#racing)
+- [Racket](#racket)
+
+## Board
+
+| No  | Group      | Name    | Notable Competition |
+| --- | ---------- | ------- | ------------------- |
+| 01  |            | Checker |                     |
+| 02  |            | Go      |                     |
+| 03  | Chaturanga | Chess   | World Championship  |
+| 04  | Chaturanga | Shogi   |                     |
+| 05  | Chaturanga | Xiangqi |                     |
+
+## Racing
+
+| No  | Subgroup   | Name       | Notable Competition |
+| --- | ---------- | ---------- | ------------------- |
+| 01  | Individual | Running    | Marathon            |
+| 02  | Individual | Swimming   |                     |
+| 03  | Vehicle    | Bicycling  | Tour de France      |
+| 04  | Vehicle    | Car        | F1                  |
+| 05  | Vehicle    | Motorcycle | Grand Prix          |
+
+## Racket
+
+| No  | Group       | Name         | Notable Competition |
+| --- | ----------- | ------------ | ------------------- |
+| 01  | Ball        | Pickleball   |                     |
+| 02  | Ball        | Squash       |                     |
+| 03  | Ball        | Table Tennis |                     |
+| 04  | Ball        | Tennis       | Grand Slam          |
+| 05  | Shuttercock | Badminton    |                     |

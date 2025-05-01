@@ -1,9 +1,12 @@
 ---
-title: 'Vietnam'
-date: '2025-04-30'
+title: 'Israel'
+date: '2025-05-01'
 ---
 
 ## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Prime Ministers](#prime-ministers)
 
 ## Prime Ministers
 
@@ -30,3 +33,5 @@ date: '2025-04-30'
 | 13  | Naftali Bennett      | Yamina              | 13 Jun 2021 | 30 Jun 2022 |
 | 14  | Yair Lapid           | Yesh Atid           | 1 Jul 2022  | 29 Dec 2022 |
 | (9) | Benjamin Netanyahu   | Likud               | 29 Dec 2022 | Present     |
+
+[Back to Table of Contents](#table-of-contents)

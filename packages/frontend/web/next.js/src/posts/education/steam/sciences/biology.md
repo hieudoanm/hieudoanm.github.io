@@ -3,6 +3,13 @@ title: 'Biology'
 date: '2025-05-01'
 ---
 
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Organs and Specialties](#organs-and-specialties)
+
+## Organs and Specialties
+
 | #   | Organ                                  | Specialty                                | Specialist                  | Surgeon            |
 | --- | -------------------------------------- | ---------------------------------------- | --------------------------- | ------------------ |
 | 1   | Heart                                  | Cardiology                               | Cardiologist                |                    |
