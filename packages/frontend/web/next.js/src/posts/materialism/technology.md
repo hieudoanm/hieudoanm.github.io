@@ -76,6 +76,7 @@ date: '2025-04-19'
 | 07  | United States  | Beats      | Beats                         |
 | 08  | United States  | Bose       | QuietComfort Series           |
 | 09  | United States  | JBL        | Club & Tour Series            |
+| 10  |                |            |                               |
 
 ### Smart Watch
 

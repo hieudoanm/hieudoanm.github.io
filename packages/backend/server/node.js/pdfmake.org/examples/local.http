@@ -1,8 +1,0 @@
-@host = http://localhost:10000
-
-## Upload a PDF file to the API
-POST {{host}}/api/convert HTTP/1.1
-Content-Disposition: form-data; name="file"; filename="sample.pdf"
-Content-Type: application/pdf
-
-< ./sample.pdf
