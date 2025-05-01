@@ -6,11 +6,17 @@ date: '2025-05-01'
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
-- [World Classical Champion](#world-classical-champion)
-- [World Rapid and Blitz Champions](#world-rapid-and-blitz-champions)
-- [World Fisher Random Champion](#world-fisher-random-champion)
+- [Open](#open)
+  - [World Chess Championship](#world-chess-championship)
+  - [World Rapid and Blitz Championship](#world-rapid-and-blitz-championship)
+  - [World Fisher Random Championship](#world-fisher-random-championship)
+- [Women](#women)
+  - [Women's World Chess Championship](#womens-world-chess-championship)
+  - [Women's World Rapid and Blitz Championship](#womens-world-rapid-and-blitz-championship)
 
-## World Classical Champion
+## Open
+
+### World Chess Championship
 
 | No   | Name                 | Country               | Style of Play | As          | Year | Opponent                 | Country                   |
 | ---- | -------------------- | --------------------- | ------------- | ----------- | ---- | ------------------------ | ------------------------- |
@@ -66,39 +72,109 @@ date: '2025-05-01'
 | 17.1 | Ding Liren           | China                 | Positional    | Challenger  | 2023 | Ian Nepomniachtchi       | Russia                    |
 | 18.1 | Gukesh Dommaraju     | India                 | Tactical      | Challenger  | 2024 | Ding Liren               | China                     |
 
-## World Rapid and Blitz Champions
+### World Rapid and Blitz Championship
 
-| Year | Host                     | Rapid (Champion)      | Rapid (Country) | Blitz (Champion)                    | Blitz (Country) |
-| ---- | ------------------------ | --------------------- | --------------- | ----------------------------------- | --------------- |
-| 2006 | Rishon Lezion, Israel    |                       |                 | Alexander Grischuk                  | Russia          |
-| 2007 | Moscow, Russia           |                       |                 | Vasyl Ivanchuk                      | Ukraina         |
-| 2008 | Almaty, Kazakhstan       |                       |                 | Leinier Domínguez                   | Cuba            |
-| 2009 | Moscow, Russia           |                       |                 | Magnus Carlsen                      | Norway          |
-| 2010 | Moscow, Russia           |                       |                 | Levon Aronian                       | Armenia         |
-| 2011 |                          |                       |                 | _Cancelled_                         |                 |
-| 2012 | Astana, Kazakhstan       | Sergey Karjakin       | Russia          | Alexander Grischuk                  | Russia          |
-| 2013 | Khanty-Mansiysk, Russia  | Shakhriyar Mamedyarov | Azerbaijan      | Liem Le                             | Vietnam         |
-| 2014 | Dubai, UAE               | Magnus Carlsen        | Norway          | Magnus Carlsen                      | Norway          |
-| 2015 | Berlin, Germany          | Magnus Carlsen        | Norway          | Alexander Grischuk                  | Russia          |
-| 2016 | Doha, Qatar              | Vasyl Ivanchuk        | Ukraina         | Sergey Karjakin                     | Russia          |
-| 2017 | Riyadh, Saudi Arabia     | Viswanathan Anand     | India           | Magnus Carlsen                      | Norway          |
-| 2018 | Saint Petersburg, Russia | Daniil Dubov          | Russia          | Magnus Carlsen                      | Norway          |
-| 2019 | Moscow, Russia           | Magnus Carlsen        | Norway          | Magnus Carlsen                      | Norway          |
-| 2020 |                          | _Cancelled_           |                 | _Cancelled_                         |                 |
-| 2021 | Warsaw, Poland           | Nodirbek Abdusattorov | Uzbekistan      | Maxime Vachier-Lagrave              | France          |
-| 2022 | Almaty, Kazakhstan       | Magnus Carlsen        | Norway          | Magnus Carlsen                      | Norway          |
-| 2023 | Samarkand, Uzbekistan    | Magnus Carlsen        | Norway          | Magnus Carlsen                      | Norway          |
-| 2024 | New York, United States  | Volodar Murzin        | Russia          | Magnus Carlsen & Ian Nepomniachtchi | Norway & Russia |
-| 2025 |                          |                       |                 |                                     |                 |
-| 2026 |                          |                       |                 |                                     |                 |
-| 2027 |                          |                       |                 |                                     |                 |
-| 2028 |                          |                       |                 |                                     |                 |
-| 2029 |                          |                       |                 |                                     |                 |
-| 2030 |                          |                       |                 |                                     |                 |
+| Year | Host                     | Rapid (Champion)      | Rapid (Country) | Blitz (Champion)       | Blitz (Country) |
+| ---- | ------------------------ | --------------------- | --------------- | ---------------------- | --------------- |
+| 2006 | Rishon Lezion, Israel    |                       |                 | Alexander Grischuk     | Russia          |
+| 2007 | Moscow, Russia           |                       |                 | Vasyl Ivanchuk         | Ukraina         |
+| 2008 | Almaty, Kazakhstan       |                       |                 | Leinier Domínguez      | Cuba            |
+| 2009 | Moscow, Russia           |                       |                 | Magnus Carlsen         | Norway          |
+| 2010 | Moscow, Russia           |                       |                 | Levon Aronian          | Armenia         |
+| 2011 | _Cancelled_              |                       |                 |                        |                 |
+| 2012 | Astana, Kazakhstan       | Sergey Karjakin       | Russia          | Alexander Grischuk     | Russia          |
+| 2013 | Khanty-Mansiysk, Russia  | Shakhriyar Mamedyarov | Azerbaijan      | Liem Le                | Vietnam         |
+| 2014 | Dubai, UAE               | Magnus Carlsen        | Norway          | Magnus Carlsen         | Norway          |
+| 2015 | Berlin, Germany          | Magnus Carlsen        | Norway          | Alexander Grischuk     | Russia          |
+| 2016 | Doha, Qatar              | Vasyl Ivanchuk        | Ukraina         | Sergey Karjakin        | Russia          |
+| 2017 | Riyadh, Saudi Arabia     | Viswanathan Anand     | India           | Magnus Carlsen         | Norway          |
+| 2018 | Saint Petersburg, Russia | Daniil Dubov          | Russia          | Magnus Carlsen         | Norway          |
+| 2019 | Moscow, Russia           | Magnus Carlsen        | Norway          | Magnus Carlsen         | Norway          |
+| 2020 | _Cancelled_              |                       |                 |                        |                 |
+| 2021 | Warsaw, Poland           | Nodirbek Abdusattorov | Uzbekistan      | Maxime Vachier-Lagrave | France          |
+| 2022 | Almaty, Kazakhstan       | Magnus Carlsen        | Norway          | Magnus Carlsen         | Norway          |
+| 2023 | Samarkand, Uzbekistan    | Magnus Carlsen        | Norway          | Magnus Carlsen         | Norway          |
+| 2024 | New York, United States  | Volodar Murzin        | Russia          | Magnus Carlsen         | Norway          |
+| -    | -                        |                       |                 | Ian Nepomniachtchi     | Russia          |
+| 2025 |                          |                       |                 |                        |                 |
+| 2026 |                          |                       |                 |                        |                 |
+| 2027 |                          |                       |                 |                        |                 |
+| 2028 |                          |                       |                 |                        |                 |
+| 2029 |                          |                       |                 |                        |                 |
+| 2030 |                          |                       |                 |                        |                 |
 
-## World Fisher Random Champion
+### World Fisher Random Championship
 
 | Year | Name            | Country       |
 | ---- | --------------- | ------------- |
 | 2019 | Wesley So       | United States |
 | 2022 | Hikaru Nakamura | United States |
+
+## Women
+
+### Women's World Chess Championship
+
+| #    | Name                | Country        | Style of Play | As          | Year | Opponent               | Country        |
+| ---- | ------------------- | -------------- | ------------- | ----------- | ---- | ---------------------- | -------------- |
+| 01   | Vera Menchik        | Russia         |               | _Inaugural_ | 1927 | Katarina Beskow        | Sweden         |
+|      | -                   | Czechoslovakia |               | Defending   | 1930 | Paula Wolf-Kalmar      | Austria        |
+|      | -                   | Czechoslovakia |               | Defending   | 1931 | Paula Wolf-Kalmar      | Austria        |
+|      | -                   | Czechoslovakia |               | Defending   | 1933 | Edith Charlotte Price  | United Kingdom |
+|      | -                   | Czechoslovakia |               | Defending   | 1935 | Regina Gerlecka        | Poland         |
+|      | -                   | Czechoslovakia |               | Defending   | 1937 | Sonja Graf             | Germany        |
+|      | -                   | Czechoslovakia |               | Defending   | 1937 | Clarice Benini         | Italy          |
+|      | -                   | United Kingdom |               | Defending   | 1939 | Sonja Graf             | Germany        |
+| 02   | Lyudmila Rudenko    | Soviet Union   |               | Challenger  | 1950 | Olga Rubtsova          | Soviet Union   |
+| 03   | Elisaveta Bykova    | Soviet Union   |               | Challenger  | 1953 | Lyudmila Rudenko       | Soviet Union   |
+| 04   | Olga Rubtsova       | Soviet Union   |               | Challenger  | 1956 | Elisaveta Bykova       | Soviet Union   |
+| (03) | Elisaveta Bykova    | Soviet Union   |               | Challenger  | 1958 | Olga Rubtsova          | Soviet Union   |
+|      | -                   | -              |               | Defending   | 1959 | Kira Zvorykina         | Soviet Union   |
+| 05   | Nona Gaprindashvili | Soviet Union   |               | Challenger  | 1962 | Elisaveta Bykova       | Soviet Union   |
+|      | -                   | -              |               | Defending   | 1965 | Alla Kushnir           | Soviet Union   |
+|      | -                   | -              |               | Defending   | 1969 | Alla Kushnir           | Soviet Union   |
+|      | -                   | -              |               | Defending   | 1972 | Alla Kushnir           | Soviet Union   |
+|      | -                   | -              |               | Defending   | 1975 | Nana Alexandria        | Soviet Union   |
+| 06   | Maia Chiburdanidze  | Soviet Union   |               | Challenger  | 1978 | Nona Gaprindashvili    | Soviet Union   |
+|      | -                   | -              |               | Defending   | 1981 | Nana Alexandria        | Soviet Union   |
+|      | -                   | -              |               | Defending   | 1984 | Irina Levitina         | Soviet Union   |
+|      | -                   | -              |               | Defending   | 1986 | Elena Akhmilovskaya    | Soviet Union   |
+|      | -                   | -              |               | Defending   | 1988 | Nana Ioseliani         | Soviet Union   |
+| 07   | Xie Jun             | China          |               | Challenger  | 1991 | Maia Chiburdanidze     | Soviet Union   |
+|      | -                   | -              |               | Defending   | 1993 | Nana Ioseliani         | Georgia        |
+| 08   | Susan Polgar        | Hungary        |               | Challenger  | 1996 | Xie Jun                | China          |
+| (07) | Xie Jun             | China          |               | Challenger  | 1999 | Alisa Galliamova       | Russia         |
+|      | -                   | -              |               | Defending   | 2000 | Qin Kanying            | China          |
+| 09   | Zhu Chen            | China          |               | Challenger  | 2001 | Alexandra Kosteniuk    | Russia         |
+| 10   | Antoaneta Stefanova | Bulgaria       |               | Challenger  | 2004 | Ekaterina Kovalevskaya | Russia         |
+| 11   | Xu Yuhua            | China          |               | Challenger  | 2006 | Alisa Galliamova       | Russia         |
+| 12   | Alexandra Kosteniuk | Russia         |               | Challenger  | 2008 | Hou Yifan              | China          |
+| 13   | Hou Yifan           | China          |               | Challenger  | 2010 | Ruan Lufei             | China          |
+|      | -                   | -              |               | Defending   | 2011 | Koneru Humpy           | India          |
+| 14   | Anna Ushenina       | Ukraine        |               | Challenger  | 2012 | Antoaneta Stefanova    | Bulgarian      |
+| (13) | Hou Yifan           | China          |               | Challenger  | 2013 | Anna Ushenina          | Ukraina        |
+| 15   | Mariya Muzychuk     | Ukraine        |               | Challenger  | 2015 | Natalia Pogonina       | Russia         |
+| (13) | Hou Yifan           | China          |               | Challenger  | 2016 | Mariya Muzychuk        | Ukraina        |
+| 16   | Tan Zhongyi         | China          |               | Challenger  | 2017 | Anna Muzychuk          | Ukraina        |
+| 17   | Ju Wenjun           | China          |               | Challenger  | 2018 | Tan Zhongyi            | China          |
+|      | -                   | -              |               | Defending   | 2018 | Kateryna Lagno         | Russia         |
+|      | -                   | -              |               | Defending   | 2020 | Aleksandra Goryachkina | Russia         |
+|      | -                   | -              |               | Defending   | 2023 | Lei Tingjie            | China          |
+|      | -                   | -              |               | Defending   | 2025 | Tan Zhongyi            | China          |
+
+### Women's World Rapid and Blitz Championship
+
+| Year | Host                     | Rapid (Champion)    | Rapid (Country) | Blitz (Champion)     | Blitz (Country) |
+| ---- | ------------------------ | ------------------- | --------------- | -------------------- | --------------- |
+| 2012 | Batumi, Georgia          | Antoaneta Stefanova | Bulgaria        | Valentina Gunina     | Russia          |
+| 2013 | _Cancelled_              |                     |                 |                      |                 |
+| 2014 | Khanty-Mansiysk, Russia  | Kateryna Lagno      | Ukraina         | Anna Muzychuk        | Slovenia        |
+| 2015 | _Cancelled_              |                     |                 |                      |                 |
+| 2016 | Doha, Qatar              | Anna Muzychuk       | Ukraina         | Anna Muzychuk        | Ukraina         |
+| 2017 | Riyadh, Saudi Arabia     | Ju Wenjun           | China           | Nana Dzagnidze       | Georgia         |
+| 2018 | Saint Petersburg, Russia | Ju Wenjun           | China           | Kateryna Lagno       | Russia          |
+| 2019 | Moscow, Russia           | Koneru Humpy        | India           | Kateryna Lagno       | Russia          |
+| 2020 |                          |                     |                 |                      |                 |
+| 2021 | Warsaw, Poland           | Alexandra Kosteniuk | Russian         | Bibisara Assaubayeva | Kazakhstani     |
+| 2022 | Almaty, Kazakhstan       | Tan Zhongyi         | China           | Bibisara Assaubayeva | Kazakhstani     |
+| 2023 | Samarkand, Uzbekistan    | Anastasia Bodnaruk  | Russian         | Valentina Gunina     | Russia          |
+| 2024 | New York, United States  | Koneru Humpy        | India           | Ju Wenjun            | China           |
