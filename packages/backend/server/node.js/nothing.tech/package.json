@@ -35,6 +35,7 @@
     "@distube/ytdl-core": "4.16.9",
     "html-to-pdfmake": "2.5.24",
     "jsdom": "26.1.0",
+    "node-easyocr": "1.0.9",
     "pdf2html": "3.3.0",
     "pdfmake": "0.2.19",
     "pino": "9.6.0",

@@ -3,7 +3,7 @@ import { publicIpv4 } from 'public-ip';
 import { logger } from '../utils/log';
 import { enableCors } from '../utils/server';
 import { apiRoutes } from './routes/api';
-import { getPageRoute } from './routes/pages/get';
+import { getPageRoute } from './routes/pages';
 
 const httpServer = createServer(async (request, response) => {
   enableCors(response);

@@ -8,6 +8,9 @@ Content-Type: application/json
   "url": "https://www.instagram.com/p/DFijU7Gzkae/?utm_source=ig_web_copy_link"
 }
 
+### OCR Read from Image
+POST {{host}}/api/ocr/read
+
 ### Upload a PDF file to the API
 POST {{host}}/api/pdfmake/convert HTTP/1.1
 Content-Disposition: form-data; name="file"; filename="sample.pdf"
@@ -15,7 +18,7 @@ Content-Type: application/pdf
 
 < ./sample.pdf
 
-### Stockfish Evaluate
+### Get Evaluation from Stockfish
 POST {{host}}/api/stockfish/evaluate
 Content-Type: application/json
 
