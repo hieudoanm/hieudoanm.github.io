@@ -1,13 +1,15 @@
 ---
 title: 'Popular Languages'
-date: '2025-04-19'
+date: '2025-05-01'
 ---
 
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
 - [Learning](#learning)
-- [List](#list)
+  - [List](#list)
+- [Fluency](#fluency)
+  - [Vocabulary](#vocabulary)
 
 ## Learning
 
@@ -15,9 +17,9 @@ date: '2025-04-19'
 2. `Deutsch`: Closest Related to English
 3. `한국어`: Easiest Symbolic Language
 
-## List
+### List
 
-| No  | Language Family          | Name       | Native Name            |
+| #   | Language Family          | Name       | Native Name            |
 | --- | ------------------------ | ---------- | ---------------------- |
 | 00  | Austroasiatic            | Vietnamese | Tiếng Việt             |
 | 01  | Indo-European (Germanic) | English    | English                |
@@ -32,3 +34,16 @@ date: '2025-04-19'
 | 10  | Sino-Tibetan (Sinitic)   | Chinese    | 中文 (Zhōngwén)        |
 | 11  | Japonic                  | Japanese   | 日本語 (Nihongo)       |
 | 12  | Koreanic                 | Korean     | 한국어 (Hangugeo)      |
+
+## Fluency
+
+### Vocabulary
+
+| Level | Description        | Min    | Max    |
+| ----- | ------------------ | ------ | ------ |
+| A1    | Beginner           | 500    | 1,000  |
+| A2    | Elementary         | 1,000  | 2,000  |
+| B1    | Intermediate       | 2,000  | 3,500  |
+| B2    | Upper-Intermediate | 3,500  | 5,000  |
+| C1    | Advanced           | 5,000  | 10,000 |
+| C2    | Proficiency        | 10,000 | 20,000 |
