@@ -1,5 +1,5 @@
 # Use an official Node.js image
-FROM node:22.15.0
+FROM node:23.11.0-slim
 
 # Set working directory inside the container
 WORKDIR /app
@@ -36,6 +36,7 @@ RUN apt-get update && apt-get install -y \
   libxrandr2 \
   libxrender1 \
   lsb-release \
+  stockfish \
   xdg-utils \
   && rm -rf /var/lib/apt/lists/*
 

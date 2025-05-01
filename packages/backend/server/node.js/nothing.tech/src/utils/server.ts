@@ -38,7 +38,7 @@ export const getRequestBody = async (request: IncomingMessage) => {
         const params = new URLSearchParams(body);
         data = Object.fromEntries(params.entries());
       }
-      logger.info('Received Request Body:', data);
+      logger.info(data, 'Received Request Body');
       resolve(data);
     });
   });
