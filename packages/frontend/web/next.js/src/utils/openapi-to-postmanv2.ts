@@ -1,14 +1,13 @@
-import Converter from 'openapi-to-postmanv2';
-import { logger } from '../../utils/log';
+import Converter, { ConvertResult } from 'openapi-to-postmanv2';
 
-export const convert = async (openapi: string) => {
+export const convert = async (openapi: string): Promise<ConvertResult> => {
   return new Promise((resolve, reject) => {
     Converter.convert(
       { type: 'string', data: openapi },
       {},
       (error, conversionResult) => {
-        logger.error(error);
-        logger.info(conversionResult);
+        console.error(error);
+        console.info(conversionResult);
         if (!conversionResult.result) {
           reject(new Error(conversionResult.reason));
         } else {

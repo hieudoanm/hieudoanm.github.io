@@ -1,5 +1,6 @@
-import '@web/styles/globals.css';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import '@web/styles/globals.css';
+import { trpc } from '@web/utils/trpc';
 import 'github-markdown-css/github-markdown.css';
 import type { AppProps } from 'next/app';
 import { Geist_Mono } from 'next/font/google';
@@ -41,4 +42,4 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
   );
 };
 
-export default App;
+export default trpc.withTRPC(App);

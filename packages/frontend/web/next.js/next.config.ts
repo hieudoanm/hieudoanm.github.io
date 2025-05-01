@@ -4,7 +4,7 @@ const NODE_ENV = process.env.NODE_ENV ?? 'development';
 
 const nextConfig: NextConfig = {
   /* config options here */
-  output: 'export',
+  output: NODE_ENV === 'development' ? 'standalone' : 'export',
   trailingSlash: true,
   reactStrictMode: true,
   images: { unoptimized: true },

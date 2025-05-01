@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
   deleteWebhook,
   getWebhookInfo,
@@ -58,6 +59,7 @@ import {
 import { fromRoman, toRoman } from '@web/utils/number/roman';
 import { capitalise, deburr, kebabcase, snakecase } from '@web/utils/string';
 import { buildEpochString } from '@web/utils/time';
+import { trpcClient } from '@web/utils/trpc';
 import { tryCatch } from '@web/utils/try-catch';
 import { buildUuidString } from '@web/utils/uuid';
 import htmlToPdfmake from 'html-to-pdfmake';
@@ -196,6 +198,11 @@ enum ActQRCode {
   QRCODE_TO_IMAGE = 'QR Code - To Image',
 }
 
+enum ActYAML {
+  YAML_TO_JSON = 'YAML to JSON',
+  YAML_OPENAPI_TO_POSTMAN_V2 = 'OpenAPI to Postman V2',
+}
+
 enum ActOther {
   CODE_BRAILLIFY = 'Braillify (⠃⠗⠁⠊⠇⠇⠊⠋⠽)',
   CODE_MORSIFY = 'Morsify (-----.-........-.-.--)',
@@ -203,7 +210,6 @@ enum ActOther {
   MARKDOWN_EDITOR = 'Markdown Editor',
   TIME_EPOCH = 'Epoch',
   UUID = 'UUID',
-  YAML_TO_JSON = 'YAML to JSON',
 }
 
 enum ActNumber {
@@ -235,7 +241,8 @@ type Act =
   | ActTelegram
   | ActWidget
   | ActGitHub
-  | ActImage;
+  | ActImage
+  | ActYAML;
 
 const INITIAL_JSON = [
   { key1: 'value1', key2: 'value2', key3: 'value3', key4: 'value4' },
@@ -493,8 +500,20 @@ const act = async ({
         ? Math.floor(new Date().getTime() / 1000).toString()
         : source;
     output = await buildEpochString(parseInt(source, 10));
-  } else if (action === ActOther.YAML_TO_JSON) {
+  } else if (action === ActYAML.YAML_TO_JSON) {
     output = JSON.stringify(parse(source), null, 2);
+  } else if (action === ActYAML.YAML_OPENAPI_TO_POSTMAN_V2) {
+    const postman: any = await trpcClient.openapi.postman.mutate({
+      openapi: source,
+    });
+    const keys: string[] = Object.keys(postman).sort((a, b) =>
+      a > b ? 1 : -1
+    );
+    const newPostman: any = {};
+    for (const key of keys) {
+      newPostman[key] = postman[key];
+    }
+    output = JSON.stringify(newPostman, null, 2);
   } else if (action === ActOther.MARKDOWN_EDITOR) {
     output = await marked(source);
   } else if (action === ActOther.UUID) {
@@ -1100,16 +1119,23 @@ const StudioPage: NextPage = () => {
                     nextAction === ActTelegram.TELEGRAM_WEBHOOK_DELETE ||
                     nextAction === ActTelegram.TELEGRAM_WEBHOOK_GET_INFO;
                   // Check HEX
-                  const previousActionIsNotHex: boolean =
+                  const previousActionIsNotHEX: boolean =
                     action !== ActColor.HEX_TO_CMYK &&
                     action !== ActColor.HEX_TO_HSL &&
                     action !== ActColor.HEX_TO_OKLCH &&
                     action !== ActColor.HEX_TO_RGB;
-                  const nextActionIsHex =
+                  const nextActionIsHEX =
                     nextAction === ActColor.HEX_TO_CMYK ||
                     nextAction === ActColor.HEX_TO_HSL ||
                     nextAction === ActColor.HEX_TO_OKLCH ||
                     nextAction === ActColor.HEX_TO_RGB;
+                  // Check YAML
+                  const previousActionIsNotYAML: boolean =
+                    action !== ActYAML.YAML_TO_JSON &&
+                    action !== ActYAML.YAML_OPENAPI_TO_POSTMAN_V2;
+                  const nextActionIsYAML =
+                    nextAction === ActYAML.YAML_TO_JSON ||
+                    nextAction === ActYAML.YAML_OPENAPI_TO_POSTMAN_V2;
                   // Get Initial String
                   if (nextAction === ActOther.TIME_EPOCH) {
                     newText = Math.floor(
@@ -1127,7 +1153,7 @@ const StudioPage: NextPage = () => {
                     newText = 'example';
                   } else if (nextAction === ActOther.UUID) {
                     newText = '';
-                  } else if (nextAction === ActOther.YAML_TO_JSON) {
+                  } else if (previousActionIsNotYAML && nextActionIsYAML) {
                     newText = INTIIAL_YAML;
                   } else if (
                     nextAction === ActManifestJSON.MANIFEST_JSON_EXTENSION
@@ -1170,7 +1196,7 @@ const StudioPage: NextPage = () => {
                     newText = INITIAL_PGN;
                   } else if (nextAction === ActChess.CHESS_OPENINGS) {
                     newText = '';
-                  } else if (previousActionIsNotHex && nextActionIsHex) {
+                  } else if (previousActionIsNotHEX && nextActionIsHEX) {
                     newText = '#000000';
                   } else if (nextAction === ActGitHub.GITHUB_LANGUAGES) {
                     newText = 'hieudoanm/hieudoanm.github.io';
@@ -1379,8 +1405,11 @@ const StudioPage: NextPage = () => {
                   </option>
                 </optgroup>
                 <optgroup label="yaml">
-                  <option value={ActOther.YAML_TO_JSON}>
-                    {ActOther.YAML_TO_JSON}
+                  <option value={ActYAML.YAML_TO_JSON}>
+                    {ActYAML.YAML_TO_JSON}
+                  </option>
+                  <option value={ActYAML.YAML_OPENAPI_TO_POSTMAN_V2}>
+                    {ActYAML.YAML_OPENAPI_TO_POSTMAN_V2}
                   </option>
                 </optgroup>
               </select>

@@ -36,6 +36,10 @@
     "@tanstack/react-query": "5.74.11",
     "@tanstack/react-table": "8.21.3",
     "@tanstack/react-virtual": "3.13.6",
+    "@trpc/client": "11.1.2",
+    "@trpc/next": "11.1.2",
+    "@trpc/react-query": "11.1.2",
+    "@trpc/server": "11.1.2",
     "chess.js": "1.2.0",
     "d3": "7.9.0",
     "dompurify": "3.2.5",
@@ -48,6 +52,7 @@
     "jstoxml": "7.0.1",
     "marked": "15.0.11",
     "next": "15.3.1",
+    "openapi-to-postmanv2": "5.0.0",
     "pdfmake": "0.2.19",
     "qrcode": "1.5.4",
     "react": "19.1.0",
@@ -60,7 +65,8 @@
     "remark-html": "16.0.1",
     "tesseract.js": "6.0.1",
     "uuid": "11.1.0",
-    "yaml": "2.7.1"
+    "yaml": "2.7.1",
+    "zod": "3.24.3"
   },
   "devDependencies": {
     "@eslint/eslintrc": "3.3.1",
@@ -73,6 +79,7 @@
     "@types/jest": "29.5.14",
     "@types/jstoxml": "5.0.0",
     "@types/node": "22.15.3",
+    "@types/openapi-to-postmanv2": "3.2.4",
     "@types/pdfmake": "0.2.11",
     "@types/qrcode": "1.5.5",
     "@types/react": "19.1.2",
