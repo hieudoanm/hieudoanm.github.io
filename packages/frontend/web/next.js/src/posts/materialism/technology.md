@@ -1,8 +1,6 @@
 ---
 title: 'Technology'
 date: '2025-04-19'
-tags:
-  ['mobile', 'tablet', 'laptop', 'headphone', 'smart-watch', 'apple', 'nothing']
 ---
 
 ## Table of Contents

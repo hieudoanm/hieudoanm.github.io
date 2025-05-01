@@ -1,6 +1,6 @@
 ---
 title: 'Vehicles'
-date: '2025-04-19'
+date: '2025-05-01'
 ---
 
 ## Table of Contents
@@ -12,11 +12,13 @@ date: '2025-04-19'
 
 ## Daily Driver
 
-| No  | Vehicle    | Current | Future      |
-| --- | ---------- | ------- | ----------- |
-| 01  | Motorbike  | -       | Honda Wave  |
-| 02  | Motorcycle | -       | Honda Rebel |
-| 03  | Car        | -       | Vinfast VF3 |
+| No  | Vehicle      | Current | Future      |
+| --- | ------------ | ------- | ----------- |
+| 01  | Bike         | Java    | -           |
+| 02  | Motorbike    | -       | Honda Wave  |
+| 03  | Motorcycle   | -       | Honda Rebel |
+| 04  | Car          | -       | Vinfast VF3 |
+| 05  | Pickup Truck | -       | -           |
 
 ## Car
 

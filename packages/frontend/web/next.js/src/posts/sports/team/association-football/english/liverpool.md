@@ -6,6 +6,7 @@ date: '2025-05-01'
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
+- [Teams](#teams)
 - [Best XI](#best-xi)
   - [All-time (4-4-2)](#all-time-4-4-2)
   - [Europe (4-4-2)](#europe-4-4-2)
@@ -13,6 +14,36 @@ date: '2025-05-01'
     - [Netherlands](#netherlands)
 - [Cult Hero](#cult-hero)
 - [Honours](#honours)
+
+## Teams
+
+| #   | Region     | Team                |
+| --- | ---------- | ------------------- |
+| 1   | Manchester | Bolton Wanderers    |
+| 2   | Manchester | Manchester City     |
+| 3   | Manchester | Manchester United   |
+| 4   | Manchester | Wigan Athletic      |
+| 5   | Merseyside | Liverpool           |
+| 6   | Merseyside | Everton             |
+| 7   | London     | Arsenal             |
+| 8   | London     | Brentford           |
+| 9   | London     | Chelsea             |
+| 10  | London     | Crystal Palace      |
+| 11  | London     | Fulham              |
+| 12  | London     | Queens Park Rangers |
+| 13  | London     | Tottenham Hotspur   |
+| 14  | London     | West Ham            |
+| 15  | Birmingham | Aston Villa         |
+| 16  | Birmingham | Birmingham City     |
+| 17  | Wales      | Cardiff City        |
+| 18  | Wales      | Swansea City        |
+| 19  | Other      | Bournemouth         |
+| 20  | Other      | Brighton            |
+| 21  | Other      | Leeds United        |
+| 22  | Other      | Leicester City      |
+| 23  | Other      | Newcastle           |
+| 24  | Other      | Nottingham Forest   |
+| 25  | Other      | Wolves              |
 
 ## Best XI
 

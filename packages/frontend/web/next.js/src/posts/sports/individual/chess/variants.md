@@ -1,7 +1,6 @@
 ---
 title: 'Chess Variants'
 date: '2025-04-19'
-tags: ['chess', 'chess960']
 ---
 
 ## Table of Contents

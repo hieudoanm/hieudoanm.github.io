@@ -7,8 +7,6 @@ date: '2025-04-19'
 
 - [Table of Contents](#table-of-contents)
 - [Clothes](#clothes)
-  - [Software](#software)
-- [Other](#other)
 - [Financial](#financial)
 
 ## Clothes
@@ -41,32 +39,6 @@ date: '2025-04-19'
   - 01 Boots
 - Countless Football Jerseys (for home)
 - `85+` in Total
-
-### Software
-
-1. General
-   1. [1.1.1.1](https://one.one.one.one/)
-   2. [Docker](https://www.docker.com/)
-   3. [Firefox](https://www.mozilla.org/en-US/firefox/)
-   4. [GitHub](https://github.com/)
-   5. [Google Drive](https://drive.google.com)
-   6. [Signal](https://signal.org/)
-   7. [VS Code](https://code.visualstudio.com/)
-2. AI
-   1. Deepseek
-   2. Google Gemini
-   3. Microsoft Copilot
-3. Chess
-   1. [chess.com](https://www.chess.com)
-   2. [lichess.org](https://lichess.org/)
-4. Cloud
-   1. [Google Drive](https://drive.google.com)
-   2. Microsoft OneDrive
-
-## Other
-
-- [Technology](../technology)
-- [Vehicles](../vehicles)
 
 ## Financial
 
