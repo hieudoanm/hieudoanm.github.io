@@ -1,6 +1,6 @@
 services:
-  nothing-instagram:
-    container_name: nothing-instagram
+  nothing-tech:
+    container_name: nothing-tech
     build: .
     ports:
       - '10000:10000'

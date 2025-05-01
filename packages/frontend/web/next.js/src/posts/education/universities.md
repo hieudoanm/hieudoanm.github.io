@@ -33,24 +33,25 @@ date: '2025-04-22'
 
 | #   | State                        | City      | Name                            | Medical                                                          |
 | --- | ---------------------------- | --------- | ------------------------------- | ---------------------------------------------------------------- |
-| 1   | Australian Capital Territory | Canberra  | Australian National University  | Australian National University School of Medicine and Psychology |
-| 2   | New South Wales              | Sydney    | University of New South Wales   | University of New South Wales School of Clinical Medicine        |
-| 3   | New South Wales              | Sydney    | University of Sydney            | University of Sydney School of Medicine                          |
-| 4   | Queensland                   | Brisbane  | University of Queensland        | University of QueenslandMedical School                           |
-| 5   | South Australia              | Adelaide  | University of Adelaide          | University of Adelaide Medical School                            |
-| 6   | Victoria                     | Melbourne | Monash University               | Monash University School of Medicine                             |
-| 7   | Victoria                     | Melbourne | University of Melbourne         | University of Melbourne Melbourne Medical School                 |
-| 8   | Western Australia            | Perth     | University of Western Australia | University of Western Australia Medical School                   |
+| 01  | Australian Capital Territory | Canberra  | Australian National University  | Australian National University School of Medicine and Psychology |
+| 02  | New South Wales              | Sydney    | University of New South Wales   | University of New South Wales School of Clinical Medicine        |
+| 03  | New South Wales              | Sydney    | University of Sydney            | University of Sydney School of Medicine                          |
+| 04  | Queensland                   | Brisbane  | University of Queensland        | University of QueenslandMedical School                           |
+| 05  | South Australia              | Adelaide  | University of Adelaide          | University of Adelaide Medical School                            |
+| 06  | Victoria                     | Melbourne | Monash University               | Monash University School of Medicine                             |
+| 07  | Victoria                     | Melbourne | University of Melbourne         | University of Melbourne Melbourne Medical School                 |
+| 08  | Western Australia            | Perth     | University of Western Australia | University of Western Australia Medical School                   |
 
 ### Notable Mentions
 
-| #   | State           | City      | Name                                  |
-| --- | --------------- | --------- | ------------------------------------- |
-| 1   | Victoria        | Melbourne | Deakin University                     |
-| 2   | Victoria        | Melbourne | RMIT                                  |
-| 3   | Victoria        | Melbourne | La Trobe University                   |
-| 4   | New South Wales | Sydney    | University of Technology Sydney (UTS) |
-| 5   | New South Wales | Sydney    | Macquarie University                  |
+| #   | State           | City      | Name                                                |
+| --- | --------------- | --------- | --------------------------------------------------- |
+| 01  | Victoria        | Melbourne | [Deakin](https://www.deakin.edu.au/)                |
+| 02  | Victoria        | Melbourne | [La Trobe](https://www.latrobe.edu.au/)             |
+| 03  | Victoria        | Melbourne | [RMIT](https://www.rmit.edu.au/)                    |
+| 04  | New South Wales | Sydney    | University of Technology Sydney (UTS)               |
+| 05  | New South Wales | Sydney    | [Macquarie](https://www.mq.edu.au/)                 |
+| 06  | New South Wales | Sydney    | [Western Sydney](https://www.westernsydney.edu.au/) |
 
 ## Canada
 
@@ -91,15 +92,15 @@ date: '2025-04-22'
 
 | #   | Country          | State/Province     | City        | Name                             | Medical |
 | --- | ---------------- | ------------------ | ----------- | -------------------------------- | ------- |
-| 1   | England          | Cambridgeshire     | Cambridge   | University of Cambridge          |         |
-| 2   | England          | County Durham      | Durham      | Durham University                |         |
-| 3   | England          | Devon              | Exeter      | University of Exeter             |         |
-| 4   | England          | Greater London     | London      | Imperial College London          |         |
-| 5   | England          | Greater London     | London      | King's College London            |         |
-| 6   | England          | Greater London     | London      | London School of Economics (LSE) |         |
-| 7   | England          | Greater London     | London      | Queen Mary University of London  |         |
-| 8   | England          | Greater London     | London      | University College London (UCL)  |         |
-| 9   | England          | Greater Manchester | Manchester  | University of Manchester         |         |
+| 01  | England          | Cambridgeshire     | Cambridge   | University of Cambridge          |         |
+| 02  | England          | County Durham      | Durham      | Durham University                |         |
+| 03  | England          | Devon              | Exeter      | University of Exeter             |         |
+| 04  | England          | Greater London     | London      | Imperial College London          |         |
+| 05  | England          | Greater London     | London      | King's College London            |         |
+| 06  | England          | Greater London     | London      | London School of Economics (LSE) |         |
+| 07  | England          | Greater London     | London      | Queen Mary University of London  |         |
+| 08  | England          | Greater London     | London      | University College London (UCL)  |         |
+| 09  | England          | Greater Manchester | Manchester  | University of Manchester         |         |
 | 10  | England          | Hampshire          | Southampton | University of Southampton        |         |
 | 11  | England          | Merseyside         | Liverpool   | University of Liverpool          |         |
 | 12  | England          | North Yorkshire    | York        | University of York               |         |
