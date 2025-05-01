@@ -59,7 +59,7 @@ const NotesPage: NextPage<{
                   </Link>
                   <small>Date: {date}</small>
                 </div>
-                <div className="flex flex-wrap items-center gap-x-2">
+                <div className="flex flex-wrap items-center gap-2">
                   {tags.map((tag: string) => (
                     <button
                       key={tag}
