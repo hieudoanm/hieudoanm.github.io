@@ -6,7 +6,18 @@ date: '2025-05-01'
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
+- [Levels](#levels)
 - [Usage](#usage)
+
+## Levels
+
+| Level | Name          | Note                                                    |
+| ----- | ------------- | ------------------------------------------------------- |
+| 1     | OS Kernel     | OS Functionalities                                      |
+| 2     | Native / OS   | Native Software Development (Hardware - Camera, Sensor) |
+| 3     | Web / Browser | Web Software Development                                |
+| 4     | Back-end      | Over the Network (through RESTful API, GraphQL, tRPC)   |
+| 5     | Data Science  | Build Machine Learning Model                            |
 
 ## Usage
 
@@ -19,11 +30,13 @@ date: '2025-05-01'
 | 5   | [Swift][apple-swift]                     | [Apple][apple]         | Front-end    | [iOS][apple-ios] / [iPadOS][apple-ipados] / [macOS][apple-macos] | [SwiftUI][apple-swiftui]     | Closed EcoSytem               |
 | 6   | [Kotlin][jetbrains-kotlin]               | [JetBrains][jetbrains] | Front-end    | [Android][google-android] (Mobile / Tablet)                      | [Material][google-material]  | Most Popular for Mobile       |
 | 7   | [C#][ms-csharp]                          | [Microsoft][ms]        | Front-end    | [Windows][ms-windows]                                            | [WinUI][ms-winui]            | Most Popular for Desktop      |
-| 8   | [Java][oracle-java]                      | [Oracle][oracle]       | Back-end     |                                                                  | [Docker][docker-hub-openjdk] | Best for Enterprise           |
-| 9   | [Python][python]                         |                        | Data Science | Machine Learning with [Jupyter][jupyter]                         | [Docker][docker-hub-python]  | Best for Machine Learning     |
-| 10  | [R][r]                                   |                        | Data Science | Mathematics                                                      |                              | Best for Statistics           |
-| 11  | [Docker][docker]                         |                        | DevOps       | Containerization                                                 |                              | Best for Deployment           |
-| 12  | [Terraform][terraform]                   |                        | DevOps       | Infrastructure as Code                                           |                              | Best for Cloud Infrastructure |
+| 8   | [Dart][dart]                             | [Google][google]       | Front-end    | Cross Platform                                                   | [Flutter][flutter]           |                               |
+| 9   | [Java][oracle-java]                      | [Oracle][oracle]       | Back-end     |                                                                  | [Docker][docker-hub-openjdk] | Best for Enterprise           |
+| 10  | [Scala][scala]                           |                        | Back-end     |                                                                  |                              |                               |
+| 11  | [Python][python]                         |                        | Data Science | Machine Learning with [Jupyter][jupyter]                         | [Docker][docker-hub-python]  | Best for Machine Learning     |
+| 12  | [R][r]                                   |                        | Data Science | Mathematics                                                      |                              | Best for Statistics           |
+| 13  | [Docker][docker]                         |                        | DevOps       | Containerization                                                 |                              | Best for Deployment           |
+| 14  | [Terraform][terraform]                   |                        | DevOps       | Infrastructure as Code                                           |                              | Best for Cloud Infrastructure |
 
 [apple]: https://www.apple.com/
 [apple-ios]: https://www.apple.com/ios/
@@ -31,11 +44,13 @@ date: '2025-05-01'
 [apple-macos]: https://www.apple.com/macos/
 [apple-swift]: https://www.swift.org/
 [apple-swiftui]: https://developer.apple.com/xcode/swiftui/
+[dart]: https://dart.dev/
 [docker]: https://www.docker.com/
 [docker-hub-golang]: https://hub.docker.com/_/golang/
 [docker-hub-node]: https://hub.docker.com/_/node/
 [docker-hub-openjdk]: https://hub.docker.com/_/openjdk
 [docker-hub-python]: https://hub.docker.com/_/python/
+[flutter]: https://flutter.dev/
 [go]: https://go.dev/
 [google]: https://www.google.com/
 [google-android]: https://www.android.com/
@@ -54,4 +69,5 @@ date: '2025-05-01'
 [python]: https://www.python.org/
 [r]: https://www.r-project.org/
 [rust]: https://www.rust-lang.org/
+[scala]: https://www.scala-lang.org/
 [terraform]: https://developer.hashicorp.com/terraform
