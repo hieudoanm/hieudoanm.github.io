@@ -28,21 +28,26 @@ date: '2025-05-01'
     - Write (min) 100 words
   - Property
   - Family and Social ability
-  - Financial (Stability)
+  - Financial Stability (Psychological Needs)
     - Earn 5k USD or 120,000,000 VND / month
 - Level 3: Love and Belonging (Psychological Needs)
-  - Friendship: Catch up with friends frequently
-  - Family:
+  - Positive Relationships (Environmental Mastery)
+    - How to Win Friends & Influence People
   - Intimacy:
     - Avoid Porn
     - Avoid Social Media
-  - Sense of Connection
+  - Sense of Belonging and Connections
+    - Friendship: Catch up with friends frequently
+    - Family
+    - Colleagues
 - Level 4: Self-esteem
-  - Confidence:
+  - Confidence (Self-acceptance):
     - Practice `Gratitude` (for Stress Regulation)
     - Practice `Mindfulness` (for Stress Regulation)
-  - Achievement: Set small and achieveable goals
-  - Respect of others:
+  - Achievement
+    - Growth: Set small and achieveable goals
+    - Purpose in Life: Long-term (**Important**) goals
+  - Respect of others
   - The need to be a unique individual:
     - Play (min) 10 minutes of Chess
 - Level 5
