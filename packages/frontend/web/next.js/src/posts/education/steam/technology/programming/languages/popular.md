@@ -32,8 +32,8 @@ date: '2025-05-01'
 | 06  | [C#][ms-csharp]                          | [Microsoft][ms]        | Front-end    | [Windows][ms-windows]                                            | [WinUI][ms-winui]            | Most Popular for Desktop      |
 | 07  | [Dart][dart]                             | [Google][google]       | Front-end    | Cross Platform                                                   | [Flutter][flutter]           |                               |
 | 08  | JavaScript / [TypeScript][ms-typescript] | [Microsoft][ms]        | Front-end    | Web / [ChromeOS][google-chromeos]                                | [Docker][docker-hub-node]    | Most Accessible               |
-| 09  | PHP                                      |                        | Front-end    | Web                                                              |                              |                               |
-| 10  | Ruby                                     |                        |              |                                                                  |                              |                               |
+| 09  | PHP                                      |                        | Front-end    | Web                                                              | [Docker][docker-hub-php]     |                               |
+| 10  | Ruby                                     |                        | Front-end    | Web                                                              | [Docker][docker-hub-ruby]    |                               |
 | 11  | [Java][oracle-java]                      | [Oracle][oracle]       | Back-end     |                                                                  | [Docker][docker-hub-openjdk] | Best for Enterprise           |
 | 12  | [Scala][scala]                           |                        | Back-end     |                                                                  |                              |                               |
 | 13  | [Python][python]                         |                        | Data Science | Machine Learning with [Jupyter][jupyter]                         | [Docker][docker-hub-python]  | Best for Machine Learning     |
@@ -52,7 +52,9 @@ date: '2025-05-01'
 [docker-hub-golang]: https://hub.docker.com/_/golang/
 [docker-hub-node]: https://hub.docker.com/_/node/
 [docker-hub-openjdk]: https://hub.docker.com/_/openjdk
+[docker-hub-php]: https://hub.docker.com/_/php
 [docker-hub-python]: https://hub.docker.com/_/python/
+[docker-hub-ruby]: https://hub.docker.com/_/ruby
 [flutter]: https://flutter.dev/
 [go]: https://go.dev/
 [google]: https://www.google.com/

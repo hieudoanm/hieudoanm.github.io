@@ -44,6 +44,8 @@ const NotesPage: NextPage<{
                 const tags: string[] = id
                   .split('/')
                   .filter((tag) => tag !== '');
+                tags.pop();
+
                 const tagsFlag: boolean =
                   tags.length > 0 ? tags.includes(search.toLowerCase()) : true;
                 const searchFlag: boolean =
@@ -56,6 +58,7 @@ const NotesPage: NextPage<{
                 const tags: string[] = id
                   .split('/')
                   .filter((tag) => tag !== '');
+                tags.pop();
 
                 return (
                   <div
