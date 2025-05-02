@@ -203,18 +203,18 @@ date: '2025-05-01'
 
 ### Web Frameworks
 
-| Industry  | Supersector   | Sector         | Subsector | Technology              | Open Source             | Maintainer           | Language | Recommended |
-| --------- | ------------- | -------------- | --------- | ----------------------- | ----------------------- | -------------------- | -------- | ----------- |
-| Front-end | Web Framework | MVC            |           | [Angular][angular]      | [GitHub][gh-angular]    | [Alphabet][alphabet] | [TS][ts] |             |
-| Front-end | Web Framework | MVC            |           | [AngularJS][angularjs]  | [GitHub][gh-angular-js] | [Alphabet][alphabet] | [JS][js] |             |
-| Front-end | Web Framework | MVC            |           | [Backbone.js][backbone] | [GitHub][gh-backbone]   |                      | [JS][js] |             |
-| Front-end | Web Framework | MVC            |           | [Ember.js][ember]       | [GitHub][gh-ember]      |                      | [JS][js] |             |
-| Front-end | Web Framework | MVC            |           | [Svelte.js][svelte]     | [GitHub][gh-svelte]     | [Vercel][vercel]     | [JS][js] |             |
-| Front-end | Web Framework | MVC            |           | [Vue.js][vue]           | [GitHub][gh-vue]        |                      | [TS][ts] |             |
-| Front-end | Web Framework | [JSX][jsx]     |           | [React][react]          | [GitHub][gh-meta-react] | [Meta][meta]         | [JS][js] | Recommended |
-| Front-end | Web Framework | [JSX][jsx]     |           | [Solid.js][solid]       | [GitHub][gh-solid]      |                      | [TS][ts] |             |
-| Front-end | Web Framework | [React][react] |           | [Preact][preact]        | [GitHub][gh-preact]     |                      | [JS][js] |             |
-| Front-end | Web Framework | [React][react] |           | [Qwik][qwik]            | [GitHub][gh-qwik]       |                      | [TS][ts] |             |
+| #   | Industry  | Supersector   | Sector         | Subsector | Technology              | Open Source             | Maintainer           | Language | Recommended |
+| --- | --------- | ------------- | -------------- | --------- | ----------------------- | ----------------------- | -------------------- | -------- | ----------- |
+| 01  | Front-end | Web Framework | MVC            |           | [Angular][angular]      | [GitHub][gh-angular]    | [Alphabet][alphabet] | [TS][ts] |             |
+| 02  | Front-end | Web Framework | MVC            |           | [AngularJS][angularjs]  | [GitHub][gh-angular-js] | [Alphabet][alphabet] | [JS][js] |             |
+| 03  | Front-end | Web Framework | MVC            |           | [Backbone.js][backbone] | [GitHub][gh-backbone]   |                      | [JS][js] |             |
+| 04  | Front-end | Web Framework | MVC            |           | [Ember.js][ember]       | [GitHub][gh-ember]      |                      | [JS][js] |             |
+| 05  | Front-end | Web Framework | MVC            |           | [Svelte.js][svelte]     | [GitHub][gh-svelte]     | [Vercel][vercel]     | [JS][js] |             |
+| 06  | Front-end | Web Framework | MVC            |           | [Vue.js][vue]           | [GitHub][gh-vue]        |                      | [TS][ts] |             |
+| 07  | Front-end | Web Framework | [JSX][jsx]     |           | [React][react]          | [GitHub][gh-meta-react] | [Meta][meta]         | [JS][js] | Recommended |
+| 08  | Front-end | Web Framework | [JSX][jsx]     |           | [Solid.js][solid]       | [GitHub][gh-solid]      |                      | [TS][ts] |             |
+| 09  | Front-end | Web Framework | [React][react] |           | [Preact][preact]        | [GitHub][gh-preact]     |                      | [JS][js] |             |
+| 10  | Front-end | Web Framework | [React][react] |           | [Qwik][qwik]            | [GitHub][gh-qwik]       |                      | [TS][ts] |             |
 
 [⬆️ Back to Table of Contents](#table-of-contents)
 
