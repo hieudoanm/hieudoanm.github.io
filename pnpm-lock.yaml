@@ -238,8 +238,8 @@ importers:
         specifier: 8.31.1
         version: 8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)
       wrangler:
-        specifier: 4.14.0
-        version: 4.14.0
+        specifier: 4.14.1
+        version: 4.14.1
 
   packages/backend/serverless/reverse-proxy/node.js/fastify:
     dependencies:
@@ -278,8 +278,8 @@ importers:
         specifier: 8.31.1
         version: 8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)
       wrangler:
-        specifier: 4.14.0
-        version: 4.14.0
+        specifier: 4.14.1
+        version: 4.14.1
 
   packages/backend/serverless/reverse-proxy/node.js/hono:
     dependencies:
@@ -315,8 +315,8 @@ importers:
         specifier: 8.31.1
         version: 8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)
       wrangler:
-        specifier: 4.14.0
-        version: 4.14.0
+        specifier: 4.14.1
+        version: 4.14.1
 
   packages/backend/serverless/reverse-proxy/node.js/http:
     devDependencies:
@@ -8128,8 +8128,8 @@ packages:
     resolution: {integrity: sha512-e5ISH9xMYU0DzrT+jl8q2ze9D6eWBto+I8CNpe+VI+K2J/F/k3PdkdTdz4wvGVH4NTpo+NRYTVIuMQEMMcsLqg==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
-  miniflare@4.20250428.0:
-    resolution: {integrity: sha512-3kKJNcdh5zUSXoFD3kGSRWc+ETZS36O7ygkCJJF/bwN7lxcB5mOXq+2DPqV/nVyu2DGLDAqsAvjXhpPKCHuPOQ==}
+  miniflare@4.20250428.1:
+    resolution: {integrity: sha512-M3qcJXjeAEimHrEeWXEhrJiC3YHB5M3QSqqK67pOTI+lHn0QyVG/2iFUjVJ/nv+i10uxeAEva8GRGeu+tKRCmQ==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -11152,10 +11152,9 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
-  wrangler@4.14.0:
-    resolution: {integrity: sha512-WhypgOBEYuUMo/ZFw8MgZ0wtyE7EmDanytjD8Me+OMm62raKU9V9DZTlF1UVLkNfilfQNlRbMnFRdzSBji/MEA==}
+  wrangler@4.14.1:
+    resolution: {integrity: sha512-EU7IThP7i68TBftJJSveogvWZ5k/WRijcJh3UclDWiWWhDZTPbL6LOJEFhHKqFzHOaC4Y2Aewt48rfTz0e7oCw==}
     engines: {node: '>=18.0.0'}
-    deprecated: Workers with configured tail consumers would sometimes prevent wrangler dev from running. Downgrade to 4.13.2 to workaround this issue
     hasBin: true
     peerDependencies:
       '@cloudflare/workers-types': ^4.20250428.0
@@ -17259,8 +17258,8 @@ snapshots:
       '@typescript-eslint/parser': 8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)
       eslint: 9.25.1(jiti@2.4.2)
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint@9.25.1(jiti@2.4.2)))(eslint@9.25.1(jiti@2.4.2))
-      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint@9.25.1(jiti@2.4.2)))(eslint@9.25.1(jiti@2.4.2)))(eslint@9.25.1(jiti@2.4.2))
+      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.31.0)(eslint@9.25.1(jiti@2.4.2))
+      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-typescript@3.10.1)(eslint@9.25.1(jiti@2.4.2))
       eslint-plugin-jsx-a11y: 6.10.2(eslint@9.25.1(jiti@2.4.2))
       eslint-plugin-react: 7.37.5(eslint@9.25.1(jiti@2.4.2))
       eslint-plugin-react-hooks: 5.2.0(eslint@9.25.1(jiti@2.4.2))
@@ -17279,7 +17278,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint@9.25.1(jiti@2.4.2)))(eslint@9.25.1(jiti@2.4.2)):
+  eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.31.0)(eslint@9.25.1(jiti@2.4.2)):
     dependencies:
       '@nolyfill/is-core-module': 1.0.39
       debug: 4.4.0(supports-color@8.1.1)
@@ -17290,22 +17289,22 @@ snapshots:
       tinyglobby: 0.2.13
       unrs-resolver: 1.7.2
     optionalDependencies:
-      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint@9.25.1(jiti@2.4.2)))(eslint@9.25.1(jiti@2.4.2)))(eslint@9.25.1(jiti@2.4.2))
+      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-typescript@3.10.1)(eslint@9.25.1(jiti@2.4.2))
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint@9.25.1(jiti@2.4.2)))(eslint@9.25.1(jiti@2.4.2)))(eslint@9.25.1(jiti@2.4.2)):
+  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1)(eslint@9.25.1(jiti@2.4.2)):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
       '@typescript-eslint/parser': 8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)
       eslint: 9.25.1(jiti@2.4.2)
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint@9.25.1(jiti@2.4.2)))(eslint@9.25.1(jiti@2.4.2))
+      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.31.0)(eslint@9.25.1(jiti@2.4.2))
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint@9.25.1(jiti@2.4.2)))(eslint@9.25.1(jiti@2.4.2)))(eslint@9.25.1(jiti@2.4.2)):
+  eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-typescript@3.10.1)(eslint@9.25.1(jiti@2.4.2)):
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.1.8
@@ -17316,7 +17315,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 9.25.1(jiti@2.4.2)
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint@9.25.1(jiti@2.4.2)))(eslint@9.25.1(jiti@2.4.2)))(eslint@9.25.1(jiti@2.4.2))
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1)(eslint@9.25.1(jiti@2.4.2))
       hasown: 2.0.2
       is-core-module: 2.16.1
       is-glob: 4.0.3
@@ -20133,7 +20132,7 @@ snapshots:
 
   mimic-response@4.0.0: {}
 
-  miniflare@4.20250428.0:
+  miniflare@4.20250428.1:
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       acorn: 8.14.0
@@ -23906,13 +23905,13 @@ snapshots:
       '@cloudflare/workerd-linux-arm64': 1.20250428.0
       '@cloudflare/workerd-windows-64': 1.20250428.0
 
-  wrangler@4.14.0:
+  wrangler@4.14.1:
     dependencies:
       '@cloudflare/kv-asset-handler': 0.4.0
       '@cloudflare/unenv-preset': 2.3.1(unenv@2.0.0-rc.15)(workerd@1.20250428.0)
       blake3-wasm: 2.1.5
       esbuild: 0.25.3
-      miniflare: 4.20250428.0
+      miniflare: 4.20250428.1
       path-to-regexp: 6.3.0
       unenv: 2.0.0-rc.15
       workerd: 1.20250428.0
