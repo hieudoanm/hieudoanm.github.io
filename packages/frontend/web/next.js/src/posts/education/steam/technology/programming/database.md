@@ -8,16 +8,19 @@ date: '2025-05-01'
 - [Table of Contents](#table-of-contents)
 - [Relational](#relational)
 - [Other](#other)
+- [ORM](#orm)
 
 ## Relational
 
 | #   | Technology                 | Open Source             | Maintainer | Language | Recommended |
 | --- | -------------------------- | ----------------------- | ---------- | -------- | ----------- |
 | 1   | [CockroachDB][cockroachdb] | [GitHub][gh-cockroach]  |            | [Go][go] |             |
-| 2   | [MariaDB][mariadb]         | [GitHub][gh-mariadb]    |            | C++      |             |
-| 3   | [MySQL][mysql]             | [GitHub][gh-mysql]      |            | C++      |             |
-| 4   | [PostgreSQL][postgresql]   | [GitHub][gh-postgresql] |            | C        | Recommended |
-| 5   | [SQLite][sqlite]           | [GitHub][gh-sqlite]     |            | C        |             |
+| 2   | libSQL                     |                         |            |          |             |
+| 3   | [MariaDB][mariadb]         | [GitHub][gh-mariadb]    |            | C++      |             |
+| 4   | MS SQL                     |                         |            |          |             |
+| 5   | [MySQL][mysql]             | [GitHub][gh-mysql]      |            | C++      |             |
+| 6   | [PostgreSQL][postgresql]   | [GitHub][gh-postgresql] |            | C        | Recommended |
+| 7   | [SQLite][sqlite]           | [GitHub][gh-sqlite]     |            | C        |             |
 
 ## Other
 
@@ -36,6 +39,20 @@ date: '2025-05-01'
 | Search Engine | [ElasticSearch][elasticsearch]         |                             |                  |                  |             |
 | Search Engine | [Solr][apache-solr]                    |                             | [Apache][apache] |                  |             |
 | Multi Model   | [Fauna][fauna]                         |                             |                  |                  |             |
+
+## ORM
+
+| No  | Paradigm   | Database    | Prisma      | Drizzle     | Hosting          |
+| --- | ---------- | ----------- | ----------- | ----------- | ---------------- |
+| 01  | Documental | DynamoDB    |             |             | AWS DynamoDB     |
+| 02  | Documental | MongoDB     | `Supported` |             | MongoDB Atlas    |
+| 03  | Relational | CockroachDB | `Supported` |             | CockroachDB Labs |
+| 04  | Relational | libSQL      |             | `Supported` | Turso            |
+| 05  | Relational | MariaDB     | `Supported` |             |                  |
+| 06  | Relational | MS SQL      | `Supported` |             |                  |
+| 07  | Relational | MySQL       | `Supported` | `Supported` | PlanetScale      |
+| 08  | Relational | PostgreSQL  | `Supported` | `Supported` | Neon / Supabase  |
+| 09  | Relational | SQLite      | `Supported` | `Supported` | Cloudflare D1    |
 
 [apache]: https://apache.org
 [apache-cassandra]: https://cassandra.apache.org
