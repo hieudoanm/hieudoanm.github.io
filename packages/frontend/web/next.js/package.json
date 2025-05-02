@@ -87,7 +87,7 @@
     "@types/web-bluetooth": "0.0.21",
     "cpr": "3.0.1",
     "daisyui": "5.0.35",
-    "eslint": "9.25.1",
+    "eslint": "9.26.0",
     "eslint-config-next": "15.3.1",
     "husky": "9.1.7",
     "jest": "29.7.0",
