@@ -1,18 +1,56 @@
 ---
 title: 'Liverpool FC'
-date: '2025-05-01'
+date: '2025-05-04'
 ---
 
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
+- [Champions](#champions)
+  - [Champions League 2018 / 2019 and Premier League 2019 / 2020 Winners](#champions-league-2018--2019-and-premier-league-2019--2020-winners)
+  - [Premier League 2024 / 2025 Winners](#premier-league-2024--2025-winners)
 - [Best XI](#best-xi)
   - [All-time (4-4-2)](#all-time-4-4-2)
   - [Europe (4-4-2)](#europe-4-4-2)
     - [England](#england)
     - [Netherlands](#netherlands)
+  - [South America](#south-america)
 - [Cult Hero](#cult-hero)
 - [Honours](#honours)
+
+## Champions
+
+### Champions League 2018 / 2019 and Premier League 2019 / 2020 Winners
+
+| No  | Pos | Name                   | Country     | Continent     |
+| --- | --- | ---------------------- | ----------- | ------------- |
+| 1   | GK  | Alisson Becker         | Brazil      | South America |
+| 66  | RB  | Trent Alexander-Arnold | England     | Europe        |
+| 32  | CB  | Joël Matip             | Cameroon    | Africa        |
+| 4   | CB  | Virgil van Dijk        | Netherlands | Europe        |
+| 26  | LB  | Andrew Robertson       | Scotland    | Europe        |
+| 3   | DM  | Fabinho                | Brazil      | South America |
+| 14  | CM  | Jorden Henderson       | England     | Europe        |
+| 5   | CM  | Georginio Wijnaldum    | Netherlands | Europe        |
+| 11  | RW  | Mohamed Salah          | Egypt       | Africa        |
+| 9   | CF  | Roberto Firmino        | Brazil      | Netherlands   |
+| 10  | LW  | Sadio Mané             | Senegal     | Africa        |
+
+### Premier League 2024 / 2025 Winners
+
+| No  | Pos | Name                   | Country     | Continent     |
+| --- | --- | ---------------------- | ----------- | ------------- |
+| 1   | GK  | Alisson Becker         | Brazil      | South America |
+| 66  | RB  | Trent Alexander-Arnold | England     | Europe        |
+| 5   | CB  | Ibrahima Konaté        | France      | Europe        |
+| 4   | CB  | Virgil van Dijk        | Netherlands | Europe        |
+| 26  | LB  | Andrew Robertson       | Scotland    | Europe        |
+| 38  | DM  | Ryan Gravenberch       | Netherlands | Europe        |
+| 8   | CM  | Dominik Szoboszlai     | Hungary     | Europe        |
+| 10  | CM  | Alexis Mac Allister    | Argentina   | South America |
+| 11  | RW  | Mohamed Salah          | Egypt       | Africa        |
+| 7   | CF  | Luis Díaz              | Colombia    | South America |
+| 18  | LW  | Cody Gakpo             | Netherlands | Europe        |
 
 ## Best XI
 
@@ -79,6 +117,22 @@ date: '2025-05-01'
 | 7   | RW  | Dirk Kuyt           |
 | 9   | ST  |                     |
 | 11  | LW  | Cody Gakpo          |
+
+### South America
+
+| No  | Pos | Name                | Country   |
+| --- | --- | ------------------- | --------- |
+| 1   | GK  | Alisson Becker      | Brazil    |
+|     |     |                     |           |
+|     |     |                     |           |
+|     |     |                     |           |
+| 12  | LB  | Fabio Aurelio       | Brazil    |
+| 14  | DM  | Javier Mascherano   | Argentina |
+| 3   | DM  | Fabinho             | Brazil    |
+| 10  | CM  | Alexis Mac Allister | Argentina |
+| 7   | RW  | Luis Suárez         | Uruguay   |
+| 9   | CF  | Roberto Firmino     | Brazil    |
+| 7   | LW  | Luis Díaz           | Colombia  |
 
 ## Cult Hero
 
