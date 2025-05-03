@@ -43,3 +43,8 @@ export const json2csv = <
     .join('\n');
   return `${headerRow}\n${rows}`;
 };
+
+export const json = {
+  parse: jsonParse,
+  csv: json2csv,
+};

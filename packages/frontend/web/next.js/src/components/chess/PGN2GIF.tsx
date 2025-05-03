@@ -7,6 +7,7 @@ import { FC, useRef, useState } from 'react';
 import { Chessboard } from './Board';
 import { FaDownload, FaSpinner } from 'react-icons/fa6';
 import { INITIAL_PGN } from '@web/constants';
+import { logger } from '@web/utils/log';
 
 const downloadGIF = ({
   base64s,
@@ -37,11 +38,11 @@ const downloadGIF = ({
     });
 
     gif.on('start', () => {
-      console.info('start');
+      logger.info('start');
     });
 
     gif.on('progress', (percentage) => {
-      console.info('progressing', percentage);
+      logger.info('progressing', percentage);
     });
 
     gif.on('finished', (blob: any) => {
@@ -93,7 +94,7 @@ export const ChessPGN2GIF: FC<{ pgn: string }> = ({ pgn = INITIAL_PGN }) => {
               const base64s: string[] = [];
               for (const move of moves) {
                 setState((previous) => {
-                  console.log(previous.game.fen());
+                  logger.info(previous.game.fen());
                   const newGame = new Chess(previous.game.fen());
                   newGame.move(move);
 

@@ -1,6 +1,10 @@
+import { logger } from '@web/utils/log';
+import { getSortedPostsData } from '@web/utils/posts';
+import { isSubset } from '@web/utils/set';
 import matter from 'gray-matter';
 import htmlToPdfmake from 'html-to-pdfmake';
 import { GetStaticProps, NextPage } from 'next';
+import Link from 'next/link';
 import fs, { readFileSync } from 'node:fs';
 import path from 'node:path';
 import pdfMake from 'pdfmake/build/pdfmake';
@@ -53,7 +57,7 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  console.info('params.id', params?.id);
+  logger.info(params?.id, 'params.id');
   const id: string = Array.isArray(params?.id)
     ? params.id.join('/')
     : (params?.id ?? '');
@@ -64,6 +68,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const processedContent = await remark().use(gfm).use(html).process(content);
   const contentHtml = processedContent.toString();
 
+  const tags: string[] = id.split('/');
+  const posts = getSortedPostsData();
+  const relatedPosts = posts.filter(({ id = '' }) => {
+    const postTags: string[] = id.split('/').filter((tag) => tag !== '');
+    postTags.pop();
+    return isSubset(new Set(tags), new Set(postTags));
+  });
+
   return {
     props: {
       postData: {
@@ -71,19 +83,24 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         ...data,
         contentHtml,
       },
+      relatedPosts,
     },
   };
 };
 
 const PostPage: NextPage<{
   postData: { title: string; date: string; contentHtml: string };
-}> = ({ postData }) => {
+  relatedPosts: { id: string; title: string; date: string }[];
+}> = ({
+  postData = { title: '', date: '', contentHtml: '' },
+  relatedPosts = [],
+}) => {
   const [{ loading }, setState] = useState<{ loading: boolean }>({
     loading: false,
   });
   return (
-    <div className="markdown-body min-h-screen bg-gray-900!">
-      <article className="container mx-auto p-8">
+    <div className="container mx-auto min-h-screen p-8">
+      <article className="markdown-body border-b border-gray-800 bg-gray-900!">
         <button
           className="w-full cursor-pointer rounded bg-red-500 py-2 font-semibold"
           disabled={loading}
@@ -103,6 +120,22 @@ const PostPage: NextPage<{
         <small>{postData.date}</small>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
+      <div>
+        {relatedPosts.map(({ id = '', title = '', date = '' }) => {
+          return (
+            <div
+              key={id}
+              className="flex flex-col gap-y-1 border-b border-gray-800 py-4">
+              <Link href={`/posts/${id}`}>
+                <p className="m-0 p-0">
+                  <b>{title}</b>
+                </p>
+              </Link>
+              <small>Date: {date}</small>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

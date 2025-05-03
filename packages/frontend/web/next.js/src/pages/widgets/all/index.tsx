@@ -1,3 +1,4 @@
+import { logger } from '@web/utils/log';
 import {
   WidgetBattery,
   WidgetBrowser,
@@ -129,7 +130,7 @@ const WidgetsAllPage: NextPage = () => {
     { id: 'weather-temperature', widget: <WidgetWeatherTemperature /> },
   ];
 
-  console.log(widgets.length);
+  logger.info(widgets.length);
 
   return (
     <div className="h-[1300vh] w-screen overflow-hidden bg-gray-100 lg:h-[550vh]">

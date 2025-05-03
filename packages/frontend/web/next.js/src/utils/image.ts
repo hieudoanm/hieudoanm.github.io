@@ -1,4 +1,5 @@
 import { recognize } from 'tesseract.js';
+import { logger } from './log';
 
 export const base64 = (file: File): Promise<string> => {
   return new Promise((resolve, reject) => {
@@ -27,7 +28,7 @@ export const ocr = (base64: string): Promise<string> => {
         resolve(data.text ?? 'No Text');
       })
       .catch((error) => {
-        console.error('error', error);
+        logger.error('error', error);
         resolve('Unable to Recognize');
       });
   });
@@ -95,7 +96,7 @@ export const svg2png = (base64: string): Promise<string> => {
 export const getMimeType = (base64: string): string | null => {
   const regexp: RegExp = /^data:(.*?);base64,/;
   const match = regexp.exec(base64);
-  console.info('match', match);
+  logger.info('match', match);
   return match ? match[1] : null;
 };
 

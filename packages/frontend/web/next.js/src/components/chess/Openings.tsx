@@ -1,5 +1,6 @@
 import { Chessboard } from '@web/components/chess/Board';
 import openings from '@web/json/chess/openings.json';
+import { logger } from '@web/utils/log';
 import { copyToClipboard } from '@web/utils/navigator';
 import { Chess } from 'chess.js';
 import { NextPage } from 'next';
@@ -46,7 +47,7 @@ export const ChessOpenings: NextPage = () => {
       }
       return result; // null if the move was illegal, the move object if the move was legal
     } catch (error) {
-      console.error(error);
+      logger.error(error);
     }
   };
 

@@ -1,6 +1,6 @@
 ---
-title: 'Degrees'
-date: '2025-05-01'
+title: 'Academic Degrees'
+date: '2025-05-03'
 ---
 
 ## Table of Contents

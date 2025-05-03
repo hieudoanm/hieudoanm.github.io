@@ -9,6 +9,7 @@ import {
 } from 'react-icons/fa6';
 import { Chessboard as ReactChessboard } from 'react-chessboard';
 import { Piece, Square } from 'react-chessboard/dist/chessboard/types';
+import { logger } from '@web/utils/log';
 
 export const Chessboard: FC<{
   id: string;
@@ -28,9 +29,9 @@ export const Chessboard: FC<{
     targetSquare: Square,
     piece: Piece
   ): boolean => {
-    console.info('sourceSquare', sourceSquare);
-    console.info('targetSquare', targetSquare);
-    console.info('piece', piece);
+    logger.info('sourceSquare', sourceSquare);
+    logger.info('targetSquare', targetSquare);
+    logger.info('piece', piece);
     return false;
   },
 }) => {

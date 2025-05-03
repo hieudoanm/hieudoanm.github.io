@@ -3,14 +3,14 @@ import { NextPage } from 'next';
 import Link from 'next/link';
 import { useState } from 'react';
 
-export async function getStaticProps() {
+export const getStaticProps = async () => {
   const posts = getSortedPostsData();
   return {
     props: {
       posts,
     },
   };
-}
+};
 
 const NotesPage: NextPage<{
   posts: { id: string; title: string; date: string }[];

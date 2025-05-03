@@ -45,7 +45,7 @@ import {
   png2ico,
   svg2png,
 } from '@web/utils/image';
-import { json2csv, jsonParse } from '@web/utils/json';
+import { json } from '@web/utils/json';
 import { morsify } from '@web/utils/morse';
 import { copyToClipboard } from '@web/utils/navigator';
 import {
@@ -423,13 +423,13 @@ const actJSON = ({ action, source }: { action: ActJSON; source: string }) => {
       output = (error as Error).message;
     }
   } else if (action === ActJSON.JSON_TO_CSV) {
-    output = json2csv(
-      jsonParse<Record<string, string | number | boolean | Date>[]>(source, [])
+    output = json.csv(
+      json.parse<Record<string, string | number | boolean | Date>[]>(source, [])
     );
   } else if (action === ActJSON.JSON_TO_XML) {
-    output = toXML(jsonParse(source, {}), { indent: '  ' });
+    output = toXML(json.parse(source, {}), { indent: '  ' });
   } else if (action === ActJSON.JSON_TO_YAML) {
-    output = stringify(jsonParse(source, {}));
+    output = stringify(json.parse(source, {}));
   }
   return output;
 };

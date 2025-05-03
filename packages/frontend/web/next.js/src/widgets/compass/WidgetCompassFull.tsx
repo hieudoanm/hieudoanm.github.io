@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { logger } from '@web/utils/log';
 import { FC, useEffect, useState } from 'react';
 
 export const WidgetCompassFull: FC = () => {
@@ -12,7 +13,7 @@ export const WidgetCompassFull: FC = () => {
 
   useEffect(() => {
     const handleOrientation = (event: DeviceOrientationEvent) => {
-      console.log('event', event);
+      logger.info('event', event);
       if (event.alpha !== null) {
         setCompass((previous) => ({
           ...previous,
@@ -30,7 +31,7 @@ export const WidgetCompassFull: FC = () => {
       if (
         typeof (DeviceOrientationEvent as any).requestPermission === 'function'
       ) {
-        console.log('requestPermission with permission');
+        logger.info('requestPermission with permission');
         try {
           const permissionState = await (
             DeviceOrientationEvent as any
@@ -48,14 +49,14 @@ export const WidgetCompassFull: FC = () => {
             }));
           }
         } catch (error) {
-          console.error(error);
+          logger.error(error);
           setCompass((previous) => ({
             ...previous,
             error: 'Error requesting device orientation permission.',
           }));
         }
       } else {
-        console.log('requestPermission without permission');
+        logger.info('requestPermission without permission');
         // For devices/browsers that don't require permission
         window.addEventListener('deviceorientation', handleOrientation, true);
       }
@@ -69,7 +70,7 @@ export const WidgetCompassFull: FC = () => {
   }, []);
 
   if (error) {
-    console.error('error', error);
+    logger.error('error', error);
   }
 
   return (

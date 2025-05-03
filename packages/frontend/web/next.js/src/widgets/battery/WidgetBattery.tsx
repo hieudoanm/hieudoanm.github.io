@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { logger } from '@web/utils/log';
 import { useEffect, useState } from 'react';
 import { FaPlug, FaPlugCircleBolt } from 'react-icons/fa6';
 
@@ -52,7 +53,7 @@ export const WidgetBattery = () => {
           );
         }
       } catch (error) {
-        console.error('Battery API not supported', error);
+        logger.error('Battery API not supported', error);
       }
     };
 

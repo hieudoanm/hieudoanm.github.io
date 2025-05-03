@@ -1,4 +1,5 @@
 import { chunkArray } from '@web/utils/array';
+import { logger } from '@web/utils/log';
 import {
   getNumberOfDaysPerMonth,
   getOrdinalSuffix,
@@ -97,7 +98,7 @@ export const WidgetCalendarMonthly: FC = () => {
                       <button
                         type="button"
                         onClick={() => {
-                          console.log(
+                          logger.info(
                             weekdays[clock.weekday],
                             month,
                             date,
