@@ -17,8 +17,10 @@ date: '2025-04-30'
 3. [MSNBC](https://www.msnbc.com/)
 4. [ABC News](https://abcnews.go.com/)
 5. [CBS News](https://www.cbsnews.com/)
+   1. CBS Sports Golazo
 6. [NBC News](https://www.nbcnews.com/)
 7. [The New York Times](https://www.nytimes.com/)
+   1. [The Athletic](https://www.nytimes.com/athletic/uk/)
 8. [The Washington Post](https://www.washingtonpost.com/)
 9. [USA TODAY](https://www.usatoday.com/)
 10. [The Wall Street Journal](https://www.wsj.com/)
