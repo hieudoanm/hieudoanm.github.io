@@ -27,6 +27,7 @@ date: '2025-04-30'
 13. [Associated Press](https://apnews.com/)
 14. [Politico](https://www.politico.com/)
 15. [NPR (National Public Radio)](https://www.npr.org/)
+16. [Newsweek](https://www.newsweek.com/)
 
 ## 🗞️ Local and Regional News Outlets
 
@@ -47,6 +48,11 @@ date: '2025-04-30'
 2. [BuzzFeed News](https://www.buzzfeednews.com/)
 3. [The Daily Beast](https://www.thedailybeast.com/)
 4. [Vox](https://www.vox.com/)
+   1. Cleo Abram
+   2. Johnny Harris
+   3. Joss Fong - HowTown
 5. [Slate](https://slate.com/)
 6. [Business Insider](https://www.businessinsider.com/)
 7. [The Verge](https://www.theverge.com/)
+8. [Morning Brew](https://www.morningbrew.com/)
+   1. [Good Work](https://morningbrewinc.com/brands/good-work)

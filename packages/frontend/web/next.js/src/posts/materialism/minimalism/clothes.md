@@ -31,10 +31,11 @@ date: '2025-05-03'
   - 01 Wallet
   - 01 Beanie (for cold weather)
   - 02 Hat
-- 04 Shoes
+- 04 Shoes (Biti's Hunter)
+  - 01 Trekking Shoes
   - 01 Running Shoes
   - 01 Dress Shoes
-  - 01 Sneakers
-  - 01 Boots
+  - 01 Everyday Sneakers
+  - 01 Boots (for Cold Weather)
 - Countless Football Jerseys (for home)
 - `85+` in Total

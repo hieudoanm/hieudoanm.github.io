@@ -10,6 +10,7 @@ date: '2025-05-01'
   - [List](#list)
 - [Fluency](#fluency)
   - [Vocabulary](#vocabulary)
+- [Software](#software)
 
 ## Learning
 
@@ -47,3 +48,7 @@ date: '2025-05-01'
 | B2    | Upper-Intermediate | 3,500  | 5,000  |
 | C1    | Advanced           | 5,000  | 10,000 |
 | C2    | Proficiency        | 10,000 | 20,000 |
+
+## Software
+
+- Duolingo

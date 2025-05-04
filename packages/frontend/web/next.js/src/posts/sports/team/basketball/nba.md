@@ -10,6 +10,7 @@ date: '2025-05-02'
 - [Conferences](#conferences)
   - [Eastern Conference](#eastern-conference)
   - [Western Conference](#western-conference)
+- [Players](#players)
 
 ## Champions
 
@@ -113,3 +114,8 @@ date: '2025-05-02'
 | 13  | United States | Texas      | San Antonio    | San Antonio Spurs                | AT&T Center                                |
 | 14  | United States | Utah       | Salt Lake City | Utah Jazz                        | Delta Center                               |
 | 15  | United States | Washington | Seattle        | Seattle SuperSonics (historical) | KeyArena (Now Climate Pledge Arena)        |
+
+## Players
+
+- LeBron James
+- Stephen Curry

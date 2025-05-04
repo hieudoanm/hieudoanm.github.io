@@ -6,9 +6,16 @@ date: '2025-05-01'
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
-- [Comics](#comics)
+- [Justice League](#justice-league)
+- [Characters](#characters)
 
-## Comics
+## Justice League
+
+- Superman
+- Batman
+- Flash
+
+## Characters
 
 | Publisher | Team                | Name               | Secret Identity  | Weapon  |
 | --------- | ------------------- | ------------------ | ---------------- | ------- |

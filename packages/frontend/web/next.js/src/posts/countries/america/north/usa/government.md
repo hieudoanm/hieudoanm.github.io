@@ -393,6 +393,8 @@ date: '2025-04-30'
 
 #### Department of Labor
 
+- Robert Reich
+
 ##### Secretaries of Labor
 
 ##### Deputy Secretaries of Labor

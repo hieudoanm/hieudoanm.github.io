@@ -6,8 +6,13 @@ date: '2025-05-01'
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
+- [Software](#software)
 - [Distances](#distances)
 - [World Marathon Majors](#world-marathon-majors)
+
+## Software
+
+- Strava
 
 ## Distances
 

@@ -36,10 +36,11 @@ date: '2025-05-01'
 | 10  | Ruby                                     |                        | Front-end    | Web                                                              | [Docker][docker-hub-ruby]    |                               |
 | 11  | [Java][oracle-java]                      | [Oracle][oracle]       | Back-end     |                                                                  | [Docker][docker-hub-openjdk] | Best for Enterprise           |
 | 12  | [Scala][scala]                           |                        | Back-end     |                                                                  |                              |                               |
-| 13  | [Python][python]                         |                        | Data Science | Machine Learning with [Jupyter][jupyter]                         | [Docker][docker-hub-python]  | Best for Machine Learning     |
-| 14  | [R][r]                                   |                        | Data Science | Mathematics                                                      |                              | Best for Statistics           |
-| 15  | [Docker][docker]                         |                        | DevOps       | Containerization                                                 |                              | Best for Deployment           |
-| 16  | [Terraform][terraform]                   |                        | DevOps       | Infrastructure as Code                                           |                              | Best for Cloud Infrastructure |
+| 13  | MATLAB                                   | MathWorks              | Data Science |                                                                  |                              |                               |
+| 14  | [Python][python]                         |                        | Data Science | Machine Learning with [Jupyter][jupyter]                         | [Docker][docker-hub-python]  | Best for Machine Learning     |
+| 15  | [R][r]                                   |                        | Data Science | Mathematics                                                      |                              | Best for Statistics           |
+| 16  | [Docker][docker]                         |                        | DevOps       | Containerization                                                 |                              | Best for Deployment           |
+| 17  | [Terraform][terraform]                   |                        | DevOps       | Infrastructure as Code                                           |                              | Best for Cloud Infrastructure |
 
 [apple]: https://www.apple.com/
 [apple-ios]: https://www.apple.com/ios/

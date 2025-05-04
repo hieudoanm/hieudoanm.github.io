@@ -7,12 +7,17 @@ date: '2025-05-01'
 
 - [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
+- [Artists](#artists)
 - [Grammy - Best Rap Album of the Year](#grammy---best-rap-album-of-the-year)
 - [Hamilton](#hamilton)
 
 ## Introduction
 
 > `Rap` is modern-day `Poetry` and `Rappers` are modern-day `Poets`
+
+## Artists
+
+- Kendrick Lamar
 
 ## Grammy - Best Rap Album of the Year
 

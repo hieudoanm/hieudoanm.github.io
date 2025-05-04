@@ -30,18 +30,19 @@ date: '2025-04-19'
 
 ### Mobile
 
-| No  | Country        | Company  | Name   |
-| --- | -------------- | -------- | ------ |
-| 01  | China          | OPPO     | Reno   |
-| 02  | China          | Xiaomi   |        |
-| 03  | China          | Huawei   |        |
-| 04  | China          | OnePlus  |        |
-| 05  | Korea          | Samsung  | Galaxy |
-| 06  | Taiwan         | Asus     |        |
-| 07  | United Kingdom | Nothing  |        |
-| 08  | United States  | Apple    | iPhone |
-| 09  | United States  | Google   | Pixel  |
-| 10  | United States  | Motorola |        |
+| No  | Country        | Company  | Name   | Founder    |
+| --- | -------------- | -------- | ------ | ---------- |
+| 01  | China          | OPPO     | Reno   |            |
+| 02  | China          | Xiaomi   |        |            |
+| 03  | China          | Huawei   |        |            |
+| 04  | China          | OnePlus  |        |            |
+| 05  | Japan          | Sony     | XPeria |            |
+| 06  | Korea          | Samsung  | Galaxy |            |
+| 07  | Taiwan         | ASUS     | ROG    |            |
+| 08  | United Kingdom | Nothing  | CMF    | Carl Pei   |
+| 10  | United States  | Apple    | iPhone | Steve Jobs |
+| 11  | United States  | Google   | Pixel  |            |
+| 12  | United States  | Motorola |        |            |
 
 ### Tablet
 
@@ -57,7 +58,7 @@ date: '2025-04-19'
 
 | No  | Country       | Company   | Name                      |
 | --- | ------------- | --------- | ------------------------- |
-| 01  | Taiwan        | Asus      | ZenBook                   |
+| 01  | Taiwan        | ASUS      | ZenBook                   |
 | 02  | United States | Apple     | Macbook Air & Macbook Pro |
 | 03  | United States | Dell      |                           |
 | 04  | United States | Microsoft | Surface                   |
