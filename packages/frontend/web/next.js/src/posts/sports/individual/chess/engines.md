@@ -16,12 +16,12 @@ date: '2025-04-19'
 
 ## Engines
 
-| No  | Name                       | GitHub                     | Maintainer                           |
-| --- | -------------------------- | -------------------------- | ------------------------------------ |
-| 1   | [AlphaZero][alpha-zero]    |                            | [Deepmind](https://deepmind.google/) |
-| 2   | [Komodo][komodo]           |                            | [chess.com](https://chess.com)       |
-| 3   | [Stockfish][stockfish]     | [GitHub][stockfish-github] |                                      |
-| 4   | [Leela Chess Zero][lczero] | [GitHub][lczero-github]    |                                      |
+| No  | Name                       | GitHub                     | Maintainer                                  |
+| --- | -------------------------- | -------------------------- | ------------------------------------------- |
+| 1   | [AlphaZero][alpha-zero]    |                            | [Google Deepmind](https://deepmind.google/) |
+| 2   | [Komodo][komodo]           |                            | [chess.com](https://chess.com)              |
+| 3   | [Stockfish][stockfish]     | [GitHub][stockfish-github] |                                             |
+| 4   | [Leela Chess Zero][lczero] | [GitHub][lczero-github]    |                                             |
 
 ## Closed-source
 

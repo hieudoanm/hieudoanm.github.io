@@ -10,4 +10,5 @@ date: '2025-05-01'
 
 ## Channels
 
-- National Geogrhphic
+- [Discovery](https://www.discovery.com/)
+- [National Geogrhphic](https://www.nationalgeographic.com/)
