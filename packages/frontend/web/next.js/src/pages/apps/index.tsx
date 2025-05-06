@@ -1270,6 +1270,54 @@ const StudioPage: NextPage = () => {
                       ActImage.IMAGE_OCR,
                     ],
                   },
+                  {
+                    label: 'json',
+                    actions: [
+                      ActJSON.JSON_EDITOR,
+                      ActJSON.JSON_MINIFY,
+                      ActJSON.JSON_TO_CSV,
+                      ActJSON.JSON_TO_XML,
+                      ActJSON.JSON_TO_YAML,
+                    ],
+                  },
+                  {
+                    label: 'manifest.json',
+                    actions: [
+                      ActManifestJSON.MANIFEST_JSON_EXTENSION,
+                      ActManifestJSON.MANIFEST_JSON_PWA,
+                    ],
+                  },
+                  {
+                    label: 'markdown',
+                    actions: [
+                      ActOther.MARKDOWN_DICTIONARY,
+                      ActOther.MARKDOWN_EDITOR,
+                    ],
+                  },
+                  {
+                    label: 'number',
+                    actions: [
+                      ActNumber.NUMBER_BASE_BINARY_FROM,
+                      ActNumber.NUMBER_BASE_BINARY_TO,
+                      ActNumber.NUMBER_BASE_OCTAL_FROM,
+                      ActNumber.NUMBER_BASE_OCTAL_TO,
+                      ActNumber.NUMBER_BASE_HEXADECIMAL_FROM,
+                      ActNumber.NUMBER_BASE_HEXADECIMAL_TO,
+                      ActNumber.NUMBER_ROMAN_FROM,
+                      ActNumber.NUMBER_ROMAN_TO,
+                    ],
+                  },
+                  {
+                    label: 'qrcode',
+                    actions: [ActQRCode.QRCODE_TO_IMAGE],
+                  },
+                  {
+                    label: 'yaml',
+                    actions: [
+                      ActYAML.YAML_TO_JSON,
+                      ActYAML.YAML_OPENAPI_TO_POSTMAN_V2,
+                    ],
+                  },
                 ].map(({ label = '', actions = [] }) => {
                   return (
                     <optgroup key={label} label={label}>
@@ -1283,70 +1331,6 @@ const StudioPage: NextPage = () => {
                     </optgroup>
                   );
                 })}
-                <optgroup label="json">
-                  <option value={ActJSON.JSON_EDITOR}>
-                    {ActJSON.JSON_EDITOR}
-                  </option>
-                  <option value={ActJSON.JSON_MINIFY}>
-                    {ActJSON.JSON_MINIFY}
-                  </option>
-                  <option value={ActJSON.JSON_TO_CSV}>
-                    {ActJSON.JSON_TO_CSV}
-                  </option>
-                  <option value={ActJSON.JSON_TO_XML}>
-                    {ActJSON.JSON_TO_XML}
-                  </option>
-                  <option value={ActJSON.JSON_TO_YAML}>
-                    {ActJSON.JSON_TO_YAML}
-                  </option>
-                </optgroup>
-                <optgroup label="manifest.json">
-                  <option value={ActManifestJSON.MANIFEST_JSON_EXTENSION}>
-                    {ActManifestJSON.MANIFEST_JSON_EXTENSION}
-                  </option>
-                  <option value={ActManifestJSON.MANIFEST_JSON_PWA}>
-                    {ActManifestJSON.MANIFEST_JSON_PWA}
-                  </option>
-                </optgroup>
-                <optgroup label="markdown">
-                  <option value={ActOther.MARKDOWN_DICTIONARY}>
-                    {ActOther.MARKDOWN_DICTIONARY}
-                  </option>
-                  <option value={ActOther.MARKDOWN_EDITOR}>
-                    {ActOther.MARKDOWN_EDITOR}
-                  </option>
-                </optgroup>
-                <optgroup label="number">
-                  <option value={ActNumber.NUMBER_BASE_BINARY_FROM}>
-                    {ActNumber.NUMBER_BASE_BINARY_FROM}
-                  </option>
-                  <option value={ActNumber.NUMBER_BASE_BINARY_TO}>
-                    {ActNumber.NUMBER_BASE_BINARY_TO}
-                  </option>
-                  <option value={ActNumber.NUMBER_BASE_OCTAL_FROM}>
-                    {ActNumber.NUMBER_BASE_OCTAL_FROM}
-                  </option>
-                  <option value={ActNumber.NUMBER_BASE_OCTAL_TO}>
-                    {ActNumber.NUMBER_BASE_OCTAL_TO}
-                  </option>
-                  <option value={ActNumber.NUMBER_BASE_HEXADECIMAL_FROM}>
-                    {ActNumber.NUMBER_BASE_HEXADECIMAL_FROM}
-                  </option>
-                  <option value={ActNumber.NUMBER_BASE_HEXADECIMAL_TO}>
-                    {ActNumber.NUMBER_BASE_HEXADECIMAL_TO}
-                  </option>
-                  <option value={ActNumber.NUMBER_ROMAN_FROM}>
-                    {ActNumber.NUMBER_ROMAN_FROM}
-                  </option>
-                  <option value={ActNumber.NUMBER_ROMAN_TO}>
-                    {ActNumber.NUMBER_ROMAN_TO}
-                  </option>
-                </optgroup>
-                <optgroup label="qrcode">
-                  <option value={ActQRCode.QRCODE_TO_IMAGE}>
-                    {ActQRCode.QRCODE_TO_IMAGE}
-                  </option>
-                </optgroup>
                 <optgroup label="string">
                   <option value={ActString.STRING_CAPITALISE}>
                     {ActString.STRING_CAPITALISE}
@@ -1395,14 +1379,6 @@ const StudioPage: NextPage = () => {
                   </option>
                   <option value={ActWidget.WIDGET_STATUS}>
                     {ActWidget.WIDGET_STATUS}
-                  </option>
-                </optgroup>
-                <optgroup label="yaml">
-                  <option value={ActYAML.YAML_TO_JSON}>
-                    {ActYAML.YAML_TO_JSON}
-                  </option>
-                  <option value={ActYAML.YAML_OPENAPI_TO_POSTMAN_V2}>
-                    {ActYAML.YAML_OPENAPI_TO_POSTMAN_V2}
                   </option>
                 </optgroup>
               </select>
