@@ -66,6 +66,42 @@ export const png2ico = (base64: string): Promise<string> => {
   });
 };
 
+export const png2jpg = (base64: string): Promise<string> => {
+  return new Promise((resolve, reject) => {
+    const image = new Image();
+    image.src = base64;
+    image.onload = async () => {
+      // Canvas
+      const canvas: HTMLCanvasElement = document.createElement('canvas');
+      canvas.width = 32;
+      canvas.height = 32;
+      // Context
+      const context = canvas.getContext('2d');
+      if (!context) return;
+      // Optional: set white background (since JPG has no transparency)
+      context.fillStyle = '#ffffff';
+      context.fillRect(0, 0, canvas.width, canvas.height);
+
+      context.drawImage(image, 0, 0, 32, 32);
+
+      // To Blob
+      canvas.toBlob(
+        (blob) => {
+          if (!blob) return;
+          resolve(URL.createObjectURL(blob));
+          canvas.remove();
+        },
+        'image/jpeg',
+        1
+      );
+    };
+
+    image.onerror = () => {
+      reject(new Error('error'));
+    };
+  });
+};
+
 export const svg2png = (base64: string): Promise<string> => {
   return new Promise((resolve, reject) => {
     const image = new Image();

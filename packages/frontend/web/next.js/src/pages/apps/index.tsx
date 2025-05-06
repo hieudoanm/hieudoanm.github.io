@@ -43,6 +43,7 @@ import {
   mimeToExtension,
   ocr,
   png2ico,
+  png2jpg,
   svg2png,
 } from '@web/utils/image';
 import { json } from '@web/utils/json';
@@ -115,6 +116,7 @@ pdfMake.fonts = {
 enum ActImage {
   IMAGE_BASE64 = 'Image - Base64',
   IMAGE_CONVERT_PNG_TO_ICO = 'Image - PNG to ICO',
+  IMAGE_CONVERT_PNG_TO_JPG = 'Image - PNG to JPG',
   IMAGE_CONVERT_SVG_TO_PNG = 'Image - SVG to PNG',
   IMAGE_FILTER_GOLDEN = 'Image - Filter - Golden',
   IMAGE_FILTER_GRAYSCALE = 'Image - Filter - Grayscale',
@@ -289,6 +291,8 @@ const actImage = ({
     return Promise.resolve(source);
   } else if (action === ActImage.IMAGE_CONVERT_PNG_TO_ICO) {
     return png2ico(source);
+  } else if (action === ActImage.IMAGE_CONVERT_PNG_TO_JPG) {
+    return png2jpg(source);
   } else if (action === ActImage.IMAGE_CONVERT_SVG_TO_PNG) {
     return svg2png(source);
   } else if (action === ActImage.IMAGE_FILTER_GOLDEN) {
@@ -640,6 +644,7 @@ const ActionButton: FC<{
       action === ActGitHub.GITHUB_LANGUAGES ||
       action === ActGitHub.GITHUB_SOCIAL_PREVIEW ||
       action === ActImage.IMAGE_CONVERT_PNG_TO_ICO ||
+      action === ActImage.IMAGE_CONVERT_PNG_TO_JPG ||
       action === ActImage.IMAGE_CONVERT_SVG_TO_PNG ||
       action === ActImage.IMAGE_FILTER_GOLDEN ||
       action === ActImage.IMAGE_FILTER_GRAYSCALE ||
@@ -686,6 +691,7 @@ const ActionButton: FC<{
           copyToClipboard(csvHtmlTable);
         } else if (
           action === ActImage.IMAGE_CONVERT_PNG_TO_ICO ||
+          action === ActImage.IMAGE_CONVERT_PNG_TO_JPG ||
           action === ActImage.IMAGE_CONVERT_SVG_TO_PNG ||
           action === ActImage.IMAGE_FILTER_GOLDEN ||
           action === ActImage.IMAGE_FILTER_GRAYSCALE ||
@@ -925,6 +931,7 @@ const Output: FC<{
 
   if (
     action === ActImage.IMAGE_CONVERT_PNG_TO_ICO ||
+    action === ActImage.IMAGE_CONVERT_PNG_TO_JPG ||
     action === ActImage.IMAGE_CONVERT_SVG_TO_PNG ||
     action === ActImage.IMAGE_FILTER_GOLDEN ||
     action === ActImage.IMAGE_FILTER_GRAYSCALE ||
@@ -1210,86 +1217,72 @@ const StudioPage: NextPage = () => {
                   }));
                   await submit({ action: nextAction, input: newText });
                 }}>
-                <optgroup label="chess">
-                  <option value={ActChess.CHESS_960}>
-                    {ActChess.CHESS_960}
-                  </option>
-                  <option value={ActChess.CHESS_CLOCK}>
-                    {ActChess.CHESS_CLOCK}
-                  </option>
-                  <option value={ActChess.CHESS_CONVERT_FEN_TO_PNG}>
-                    {ActChess.CHESS_CONVERT_FEN_TO_PNG}
-                  </option>
-                  <option value={ActChess.CHESS_CONVERT_PGN_TO_GIF}>
-                    {ActChess.CHESS_CONVERT_PGN_TO_GIF}
-                  </option>
-                  <option value={ActChess.CHESS_ELO_CALCULATOR}>
-                    {ActChess.CHESS_ELO_CALCULATOR}
-                  </option>
-                  <option value={ActChess.CHESS_OPENINGS}>
-                    {ActChess.CHESS_OPENINGS}
-                  </option>
-                </optgroup>
-                <optgroup label="code">
-                  <option value={ActOther.CODE_BRAILLIFY}>
-                    {ActOther.CODE_BRAILLIFY}
-                  </option>
-                  <option value={ActOther.CODE_MORSIFY}>
-                    {ActOther.CODE_MORSIFY}
-                  </option>
-                </optgroup>
-                <optgroup label="color">
-                  <option value={ActColor.HEX_TO_CMYK}>
-                    {ActColor.HEX_TO_CMYK}
-                  </option>
-                  <option value={ActColor.HEX_TO_HSL}>
-                    {ActColor.HEX_TO_HSL}
-                  </option>
-                  <option value={ActColor.HEX_TO_OKLCH}>
-                    {ActColor.HEX_TO_OKLCH}
-                  </option>
-                  <option value={ActColor.HEX_TO_RGB}>
-                    {ActColor.HEX_TO_RGB}
-                  </option>
-                </optgroup>
-                <optgroup label="csv">
-                  <option value={ActCSV.CSV_TO_HTML}>
-                    {ActCSV.CSV_TO_HTML}
-                  </option>
-                  <option value={ActCSV.CSV_TO_JSON}>
-                    {ActCSV.CSV_TO_JSON}
-                  </option>
-                  <option value={ActCSV.CSV_TO_MD}>{ActCSV.CSV_TO_MD}</option>
-                  <option value={ActCSV.CSV_TO_SQL}>{ActCSV.CSV_TO_SQL}</option>
-                </optgroup>
-                <optgroup label="github">
-                  <option value={ActGitHub.GITHUB_LANGUAGES}>
-                    {ActGitHub.GITHUB_LANGUAGES}
-                  </option>
-                  <option value={ActGitHub.GITHUB_SOCIAL_PREVIEW}>
-                    {ActGitHub.GITHUB_SOCIAL_PREVIEW}
-                  </option>
-                </optgroup>
-                <optgroup label="image">
-                  <option value={ActImage.IMAGE_BASE64}>
-                    {ActImage.IMAGE_BASE64}
-                  </option>
-                  <option value={ActImage.IMAGE_CONVERT_PNG_TO_ICO}>
-                    {ActImage.IMAGE_CONVERT_PNG_TO_ICO}
-                  </option>
-                  <option value={ActImage.IMAGE_CONVERT_SVG_TO_PNG}>
-                    {ActImage.IMAGE_CONVERT_SVG_TO_PNG}
-                  </option>
-                  <option value={ActImage.IMAGE_FILTER_GOLDEN}>
-                    {ActImage.IMAGE_FILTER_GOLDEN}
-                  </option>
-                  <option value={ActImage.IMAGE_FILTER_GRAYSCALE}>
-                    {ActImage.IMAGE_FILTER_GRAYSCALE}
-                  </option>
-                  <option value={ActImage.IMAGE_OCR}>
-                    {ActImage.IMAGE_OCR}
-                  </option>
-                </optgroup>
+                {[
+                  {
+                    label: 'chess',
+                    actions: [
+                      ActChess.CHESS_960,
+                      ActChess.CHESS_CLOCK,
+                      ActChess.CHESS_CONVERT_FEN_TO_PNG,
+                      ActChess.CHESS_CONVERT_PGN_TO_GIF,
+                      ActChess.CHESS_ELO_CALCULATOR,
+                      ActChess.CHESS_OPENINGS,
+                    ],
+                  },
+                  {
+                    label: 'code',
+                    actions: [ActOther.CODE_BRAILLIFY, ActOther.CODE_MORSIFY],
+                  },
+                  {
+                    label: 'color',
+                    actions: [
+                      ActColor.HEX_TO_CMYK,
+                      ActColor.HEX_TO_HSL,
+                      ActColor.HEX_TO_OKLCH,
+                      ActColor.HEX_TO_RGB,
+                    ],
+                  },
+                  {
+                    label: 'csv',
+                    actions: [
+                      ActCSV.CSV_TO_HTML,
+                      ActCSV.CSV_TO_JSON,
+                      ActCSV.CSV_TO_MD,
+                      ActCSV.CSV_TO_SQL,
+                    ],
+                  },
+                  {
+                    label: 'github',
+                    actions: [
+                      ActGitHub.GITHUB_LANGUAGES,
+                      ActGitHub.GITHUB_SOCIAL_PREVIEW,
+                    ],
+                  },
+                  {
+                    label: 'image',
+                    actions: [
+                      ActImage.IMAGE_BASE64,
+                      ActImage.IMAGE_CONVERT_PNG_TO_ICO,
+                      ActImage.IMAGE_CONVERT_PNG_TO_JPG,
+                      ActImage.IMAGE_CONVERT_SVG_TO_PNG,
+                      ActImage.IMAGE_FILTER_GOLDEN,
+                      ActImage.IMAGE_FILTER_GRAYSCALE,
+                      ActImage.IMAGE_OCR,
+                    ],
+                  },
+                ].map(({ label = '', actions = [] }) => {
+                  return (
+                    <optgroup key={label} label={label}>
+                      {actions.map((action) => {
+                        return (
+                          <option key={action} value={action}>
+                            {action}
+                          </option>
+                        );
+                      })}
+                    </optgroup>
+                  );
+                })}
                 <optgroup label="json">
                   <option value={ActJSON.JSON_EDITOR}>
                     {ActJSON.JSON_EDITOR}
@@ -1433,6 +1426,7 @@ const StudioPage: NextPage = () => {
                     const previousActionIsNotImage: boolean =
                       action !== ActImage.IMAGE_BASE64 &&
                       action !== ActImage.IMAGE_CONVERT_PNG_TO_ICO &&
+                      action !== ActImage.IMAGE_CONVERT_PNG_TO_JPG &&
                       action !== ActImage.IMAGE_CONVERT_SVG_TO_PNG &&
                       action !== ActImage.IMAGE_FILTER_GOLDEN &&
                       action !== ActImage.IMAGE_FILTER_GRAYSCALE &&
