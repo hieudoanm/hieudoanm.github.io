@@ -20,7 +20,7 @@ services:
       - '2181:2181'
 
   kafka:
-    image: confluentinc/cp-kafka:7.9.0
+    image: confluentinc/cp-kafka:7.9.1
     container_name: kafka
     restart: always
     depends_on:
