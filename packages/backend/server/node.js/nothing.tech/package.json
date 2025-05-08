@@ -32,7 +32,7 @@
     "start": "node ./dist/server.js"
   },
   "dependencies": {
-    "@distube/ytdl-core": "4.16.9",
+    "@distube/ytdl-core": "4.16.10",
     "html-to-pdfmake": "2.5.25",
     "jsdom": "26.1.0",
     "node-easyocr": "1.0.9",
