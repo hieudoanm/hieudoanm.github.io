@@ -1,10 +1,7 @@
-import { logger } from '../../utils/log';
+import { getPlayer, getStats } from '../../clients/chess.client';
 import { prismaClient } from '../../clients/prisma.client';
+import { logger } from '../../utils/log';
 import { tryCatch } from '../../utils/try-catch';
-import {
-  getPlayer,
-  getStats,
-} from '../../../../nothing.tech/src/clients/chess.client';
 
 export const addPlayer = async (player: string) => {
   const { data: playerData = {}, error: playerError } = await tryCatch(
