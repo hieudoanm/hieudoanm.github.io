@@ -16,7 +16,7 @@ Content-Type: image/png
 < ./image.png
 
 ## GraphQL
-POST http://localhost:5000/api/graphql
+POST {{host}}/api/graphql
 Content-Type: application/json
 
 {
