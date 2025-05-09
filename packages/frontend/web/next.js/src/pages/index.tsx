@@ -92,7 +92,9 @@ const HomePage: NextPage = () => {
           }}>
           {icons.at(index)}
         </button>
-        <p className="text-xl font-bold uppercase">Hieu Doan</p>
+        <p className="text-xl font-bold uppercase">
+          <Link href="/hieudoanm">Hieu Doan</Link>
+        </p>
         <div className="flex flex-col items-center justify-center gap-y-8">
           {appsByTarget.map(({ target, apps = [] }) => {
             return (
