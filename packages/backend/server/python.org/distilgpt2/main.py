@@ -2,7 +2,6 @@ from fastapi import FastAPI
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
 from transformers import AutoTokenizer, AutoModelForCausalLM
-import torch
 
 
 app = FastAPI(
@@ -42,16 +41,14 @@ async def generate(data: GenerateData):
     prompt = data.prompt
     max_tokens = data.max_new_tokens
     temperature = data.temperature
-
     inputs = tokenizer(prompt, return_tensors="pt")
-    with torch.no_grad():
-        outputs = model.generate(
-            **inputs,
-            max_new_tokens=max_tokens,
-            temperature=temperature,
-            do_sample=True,
-            top_p=0.95,
-            top_k=50
-        )
+    outputs = model.generate(
+        **inputs,
+        max_new_tokens=max_tokens,
+        temperature=temperature,
+        do_sample=True,
+        top_p=0.95,
+        top_k=50
+    )
     result = tokenizer.decode(outputs[0], skip_special_tokens=True)
     return {"generated": result}
