@@ -15,6 +15,14 @@ Content-Type: image/png
 
 < ./image.png
 
+## GraphQL
+POST http://localhost:5000/api/graphql
+Content-Type: application/json
+
+{
+  "query": "{ hello }"
+}
+
 ### Download Images from Instagram Post URL
 POST {{host}}/api/instagram/download
 Content-Type: application/json

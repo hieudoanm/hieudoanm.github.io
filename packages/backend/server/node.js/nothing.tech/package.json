@@ -43,6 +43,7 @@
   "dependencies": {
     "@distube/ytdl-core": "4.16.10",
     "@prisma/client": "6.7.0",
+    "graphql": "16.11.0",
     "html-to-pdfmake": "2.5.25",
     "jsdom": "26.1.0",
     "kafkajs": "2.2.4",
