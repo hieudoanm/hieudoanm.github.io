@@ -1,12 +1,6 @@
-import axios from 'axios';
 import { CoinRankingResponse } from './coin-ranking.dto';
 
 const BASE_URL = 'https://api.coinranking.com';
-
-const get = async <T>(url: string): Promise<T> => {
-  const response = await axios.get<T>(url);
-  return response.data;
-};
 
 export enum Tag {
   DEFI = 'defi',
@@ -38,7 +32,7 @@ export const getCoins = async ({
     const urlSearchParams = new URLSearchParams();
     if (tag) urlSearchParams.append('tags', tag);
     const url = `${BASE_URL}/v2/coins?${urlSearchParams.toString()}`;
-    return await get(url);
+    return await fetch(url).then((response) => response.json());
   } catch {
     return {
       status: 'error',

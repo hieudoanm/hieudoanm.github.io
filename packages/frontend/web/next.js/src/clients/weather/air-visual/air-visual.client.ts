@@ -1,4 +1,3 @@
-import axios from 'axios';
 import {
   AirQuality,
   CitiesResponse,
@@ -10,16 +9,11 @@ const AIR_VISUAL_KEY = process.env.AIR_VISUAL_KEY ?? '';
 
 const BASE_URL = 'http://api.airvisual.com/v2';
 
-const get = async <T>(url: string): Promise<T> => {
-  const response = await axios.get<T>(url);
-  return response.data;
-};
-
 export const getCountries = async (): Promise<CountriesResponse> => {
   const urlSearchParameters = new URLSearchParams();
   urlSearchParameters.set('key', AIR_VISUAL_KEY);
   const url = `${BASE_URL}/countries?${urlSearchParameters.toString()}`;
-  return get<CountriesResponse>(url);
+  return fetch(url).then((response) => response.json());
 };
 
 export const getStates = async (country: string): Promise<StatesResponse> => {
@@ -27,7 +21,7 @@ export const getStates = async (country: string): Promise<StatesResponse> => {
   urlSearchParameters.set('country', country);
   urlSearchParameters.set('key', AIR_VISUAL_KEY);
   const url = `${BASE_URL}/states?${urlSearchParameters.toString()}`;
-  return get<StatesResponse>(url);
+  return fetch(url).then((response) => response.json());
 };
 
 export const getCities = async ({
@@ -42,7 +36,7 @@ export const getCities = async ({
   urlSearchParameters.set('state', state);
   urlSearchParameters.set('key', AIR_VISUAL_KEY);
   const url = `${BASE_URL}/cities?${urlSearchParameters.toString()}`;
-  return get<CitiesResponse>(url);
+  return fetch(url).then((response) => response.json());
 };
 
 export const getAirQuality = async ({
@@ -60,5 +54,5 @@ export const getAirQuality = async ({
   urlSearchParameters.set('city', city);
   urlSearchParameters.set('key', AIR_VISUAL_KEY);
   const url = `${BASE_URL}/city?${urlSearchParameters.toString()}`;
-  return get<AirQuality>(url);
+  return fetch(url).then((response) => response.json());
 };

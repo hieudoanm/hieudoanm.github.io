@@ -1,15 +1,6 @@
-import axios, { AxiosRequestConfig } from 'axios';
 import { Competition, Match, Team } from './football.dto';
 
 const BASE_URL = 'https://api.football-data.org/v4';
-
-const get = async <T>(
-  url: string,
-  options: AxiosRequestConfig = {}
-): Promise<T> => {
-  const response = await axios.get<T>(url, options);
-  return response.data;
-};
 
 export const getCompetitions =
   (authToken: string) =>
@@ -19,9 +10,7 @@ export const getCompetitions =
   }> => {
     const url = `${BASE_URL}/competitions`;
     const headers = { 'X-Auth-Token': authToken };
-    return get<{ count: number; competitions: Competition[] }>(url, {
-      headers,
-    });
+    return fetch(url, { headers }).then((response) => response.json());
   };
 
 export const getCompetition =
@@ -29,7 +18,7 @@ export const getCompetition =
   async (id: number): Promise<Competition> => {
     const url = `${BASE_URL}/competitions/${id}`;
     const headers = { 'X-Auth-Token': authToken };
-    return get<Competition>(url, { headers });
+    return fetch(url, { headers }).then((response) => response.json());
   };
 
 export const getTeams =
@@ -45,7 +34,7 @@ export const getTeams =
     urlSearchParams.set('offset', offset.toString());
     const url = `${BASE_URL}/teams?${urlSearchParams.toString()}`;
     const headers = { 'X-Auth-Token': authToken };
-    return get<{ count: number; teams: Team[] }>(url, { headers });
+    return fetch(url, { headers }).then((response) => response.json());
   };
 
 export const getTeamsByCompetition =
@@ -53,7 +42,7 @@ export const getTeamsByCompetition =
   async (id: number): Promise<{ count: number; teams: Team[] }> => {
     const url = `${BASE_URL}/competitions/${id}/teams`;
     const headers = { 'X-Auth-Token': authToken };
-    return get<{ count: number; teams: Team[] }>(url, { headers });
+    return fetch(url, { headers }).then((response) => response.json());
   };
 
 export const getTeam =
@@ -61,7 +50,7 @@ export const getTeam =
   async (id: number): Promise<Team> => {
     const url = `${BASE_URL}/teams/${id}`;
     const headers = { 'X-Auth-Token': authToken };
-    return get<Team>(url, { headers });
+    return fetch(url, { headers }).then((response) => response.json());
   };
 
 export const getMatchesByTeam =
@@ -69,7 +58,7 @@ export const getMatchesByTeam =
   async (id: number): Promise<{ count: number; matches: Match[] }> => {
     const url = `${BASE_URL}/teams/${id}/matches`;
     const headers = { 'X-Auth-Token': authToken };
-    return get<{ count: number; matches: Match[] }>(url, { headers });
+    return fetch(url, { headers }).then((response) => response.json());
   };
 
 export const FootballClient = (authToken: string) => {

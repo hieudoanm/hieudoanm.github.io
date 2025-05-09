@@ -1,4 +1,3 @@
-import axios from 'axios';
 import {
   CurrenciesResponse,
   FrankfurterLatestRequest,
@@ -6,11 +5,6 @@ import {
 } from './frankfurter.dto';
 
 const BASE_URL: string = 'https://api.frankfurter.app';
-
-const get = async <T>(url: string): Promise<T> => {
-  const response = await axios.get<T>(url);
-  return response.data;
-};
 
 export const getLatest = async (
   { amount = 1, base = 'EUR', to = [] }: FrankfurterLatestRequest = {
@@ -26,10 +20,10 @@ export const getLatest = async (
     urlSearchParams.set('to', to.join(','));
   }
   const url = `${BASE_URL}/latest?${urlSearchParams.toString()}`;
-  return get(url);
+  return fetch(url).then((response) => response.json());
 };
 
 export const getCurrencies = async (): Promise<CurrenciesResponse> => {
   const url = `${BASE_URL}/currencies`;
-  return get<CurrenciesResponse>(url);
+  return fetch(url).then((response) => response.json());
 };

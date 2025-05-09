@@ -1,4 +1,3 @@
-import axios, { AxiosRequestConfig } from 'axios';
 import {
   ArticleResponse,
   Category,
@@ -14,14 +13,6 @@ import {
 const NEWS_API_KEY = process.env.NEWS_API_KEY ?? '';
 
 export const NEWS_V2_URL = 'https://newsapi.org/v2';
-
-export const get = async <T>(
-  url: string,
-  config: AxiosRequestConfig = {}
-): Promise<T> => {
-  const response = await axios.get<T>(url, config);
-  return response.data;
-};
 
 export const getSources = async (
   {
@@ -40,7 +31,9 @@ export const getSources = async (
   if (language) urlSearchParams.set('language', language);
   const sourcesUrl = `${NEWS_V2_URL}/sources?${urlSearchParams.toString()}`;
   const configs = { headers: { 'X-Api-Key': NEWS_API_KEY } };
-  const { status, sources } = await get<SourceResponse>(sourcesUrl, configs);
+  const { status, sources } = await fetch(sourcesUrl, configs).then(
+    (response) => response.json()
+  );
   return { status, sources };
 };
 
@@ -70,9 +63,8 @@ export const getTopHeadlines = async (
   if (sources.length > 0) urlSearchParams.set('sources', sources.join(','));
   const url = `${NEWS_V2_URL}/top-headlines?${urlSearchParams.toString()}`;
   const configs = { headers: { 'X-Api-Key': NEWS_API_KEY } };
-  const { status, totalResults, articles } = await get<ArticleResponse>(
-    url,
-    configs
+  const { status, totalResults, articles } = await fetch(url, configs).then(
+    (response) => response.json()
   );
   return { status, totalResults, articles };
 };
@@ -132,9 +124,8 @@ export const getEverything = async (
   }
   const url = `${NEWS_V2_URL}/everything?${urlSearchParams.toString()}`;
   const configs = { headers: { 'X-Api-Key': NEWS_API_KEY } };
-  const { status, totalResults, articles } = await get<ArticleResponse>(
-    url,
-    configs
+  const { status, totalResults, articles } = await fetch(url, configs).then(
+    (response) => response.json()
   );
   return { status, totalResults, articles };
 };
