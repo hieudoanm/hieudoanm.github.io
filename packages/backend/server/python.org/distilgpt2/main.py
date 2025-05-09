@@ -26,9 +26,14 @@ async def favicon():
     return FileResponse("favicon.ico")
 
 
+class HealthResponse(BaseModel):
+    status: str
+
+
 @app.get("/api/health")
-def health():
-    return {"status": "OK"}
+def health() -> HealthResponse:
+    response = HealthResponse(status="OK")
+    return response
 
 
 class GenerateData(BaseModel):
@@ -37,8 +42,12 @@ class GenerateData(BaseModel):
     temperature: float = 1.0
 
 
+class GenerateResponse(BaseModel):
+    generated: str
+
+
 @app.post("/api/chat/completions")
-async def generate(data: GenerateData):
+async def generate(data: GenerateData) -> GenerateResponse:
     prompt = data.prompt
     max_tokens = data.max_new_tokens
     temperature = data.temperature
@@ -53,4 +62,4 @@ async def generate(data: GenerateData):
             top_k=50
         )
     result = tokenizer.decode(outputs[0], skip_special_tokens=True)
-    return {"generated": result}
+    return GenerateResponse(generated=result)
