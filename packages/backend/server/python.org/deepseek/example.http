@@ -1,3 +1,0 @@
-POST http://localhost:8000/generate/
-
-{"prompt": "def quicksort(arr):", "max_length": 150}
