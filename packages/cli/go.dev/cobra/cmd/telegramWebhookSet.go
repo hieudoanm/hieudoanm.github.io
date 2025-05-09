@@ -38,7 +38,9 @@ to quickly create a Cobra application.`,
 		// Set webhook
 		var url string = fmt.Sprintf("https://api.telegram.org/bot%s/setWebhook", token)
 		requestBody := map[string]string{"url": webhook}
-		responseByte, postError := utils.Post(url, requestBody)
+		var options = utils.Options{}
+		options.Body = requestBody
+		responseByte, postError := utils.Post(url, options)
 		if postError != nil {
 			fmt.Println("Error:", postError)
 			return

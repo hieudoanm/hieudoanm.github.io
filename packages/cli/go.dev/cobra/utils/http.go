@@ -8,53 +8,153 @@ import (
 	"net/http"
 )
 
+const CONTENT_TYPE_HEADER = "Content-Type"
+const CONTENT_TYPE_APPLICATION_JSON = "application/json"
+const RESPONSE_ERROR = "Response Error"
+const RESPONSE_STATUS = "Response Status"
+const RESPONSE_BODY = "Response Body"
+
+// Options
+type Options struct {
+	Header http.Header
+	Query  map[string]string
+	Body   map[string]string
+}
+
 // Get ...
-func Get(url string, requestQuery map[string]string) ([]byte, error) {
+func Get(url string, options Options) ([]byte, error) {
 	// Make the GET request
-	resp, err := http.Get(url)
-	if err != nil {
-		fmt.Println("Error:", err)
-		return nil, err
+	request, requestError := http.NewRequest("GET", url, nil)
+	if requestError != nil {
+		fmt.Println("Error:", requestError)
+		return nil, requestError
 	}
-	defer resp.Body.Close() // Ensure response body is closed
-
+	// Set Headers
+	request.Header = options.Header
+	// Response
+	client := http.Client{}
+	response, responseError := client.Do(request)
+	if responseError != nil {
+		return nil, responseError
+	}
+	defer response.Body.Close() // Ensure response body is closed
 	// Read response body
-	body, err := io.ReadAll(resp.Body)
-	if err != nil {
-		fmt.Println("Error reading response:", err)
-		return nil, err
+	body, bodyError := io.ReadAll(response.Body)
+	if bodyError != nil {
+		fmt.Println(RESPONSE_ERROR, ":", bodyError)
+		return nil, bodyError
 	}
-
-	fmt.Println("Response Status:", resp.Status)
-	fmt.Println("Response Body:", string(body))
+	fmt.Println(RESPONSE_STATUS, ":", response.Status)
+	fmt.Println(RESPONSE_BODY, ":", string(body))
 
 	// Return response body
 	return body, nil
 }
 
 // Post ...
-func Post(url string, requestBody map[string]string) ([]byte, error) {
+func Post(url string, options Options) ([]byte, error) {
 	// JSON payload
-	requestData, _ := json.Marshal(requestBody)
+	requestData, jsonMarshalError := json.Marshal(options.Body)
+	if jsonMarshalError != nil {
+		return nil, jsonMarshalError
+	}
 
 	// Create request
-	req, _ := http.NewRequest("POST", url, bytes.NewBuffer(requestData))
-	req.Header.Set("Content-Type", "application/json")
-
+	request, requestError := http.NewRequest("POST", url, bytes.NewBuffer(requestData))
+	if requestError != nil {
+		return nil, requestError
+	}
+	// Set Headers
+	request.Header = options.Header
+	request.Header.Set(CONTENT_TYPE_HEADER, CONTENT_TYPE_APPLICATION_JSON)
 	// Send request
 	client := &http.Client{}
-	resp, err := client.Do(req)
-	if err != nil {
-		fmt.Println("Request error:", err)
-		return nil, err
+	response, responseError := client.Do(request)
+	if responseError != nil {
+		fmt.Println(RESPONSE_ERROR, ":", responseError)
+		return nil, responseError
 	}
-	defer resp.Body.Close()
+	defer response.Body.Close()
+	// Read response body
+	body, bodyError := io.ReadAll(response.Body)
+	if bodyError != nil {
+		fmt.Println(RESPONSE_ERROR, ":", bodyError)
+		return nil, bodyError
+	}
+	fmt.Println(RESPONSE_STATUS, ":", response.Status)
+	fmt.Println(RESPONSE_BODY, ":", string(body))
+	// Return response body
+	return body, nil
+}
 
-	// Read response
-	body, _ := io.ReadAll(resp.Body)
-	fmt.Println("Response Status:", resp.Status)
-	fmt.Println("Response Body:", string(body))
+// Put ...
+func Put(url string, options Options) ([]byte, error) {
+	// JSON payload
+	requestData, jsonMarshalError := json.Marshal(options.Body)
+	if jsonMarshalError != nil {
+		return nil, jsonMarshalError
+	}
 
+	// Create request
+	request, requestError := http.NewRequest("PUT", url, bytes.NewBuffer(requestData))
+	if requestError != nil {
+		return nil, requestError
+	}
+	// Set Headers
+	request.Header = options.Header
+	request.Header.Set(CONTENT_TYPE_HEADER, CONTENT_TYPE_APPLICATION_JSON)
+	// Send request
+	client := &http.Client{}
+	response, responseError := client.Do(request)
+	if responseError != nil {
+		fmt.Println("Request error:", responseError)
+		return nil, responseError
+	}
+	defer response.Body.Close()
+	// Read response body
+	body, bodyError := io.ReadAll(response.Body)
+	if bodyError != nil {
+		fmt.Println(RESPONSE_ERROR, ":", bodyError)
+		return nil, bodyError
+	}
+	fmt.Println(RESPONSE_STATUS, ":", response.Status)
+	fmt.Println(RESPONSE_BODY, ":", string(body))
+	// Return response body
+	return body, nil
+}
+
+// Delete ...
+func Delete(url string, options Options) ([]byte, error) {
+	// JSON payload
+	requestData, jsonMarshalError := json.Marshal(options.Body)
+	if jsonMarshalError != nil {
+		return nil, jsonMarshalError
+	}
+
+	// Create request
+	request, requestError := http.NewRequest("DELETE", url, bytes.NewBuffer(requestData))
+	if requestError != nil {
+		return nil, requestError
+	}
+	// Set Headers
+	request.Header = options.Header
+	request.Header.Set(CONTENT_TYPE_HEADER, CONTENT_TYPE_APPLICATION_JSON)
+	// Send request
+	client := &http.Client{}
+	response, responseError := client.Do(request)
+	if responseError != nil {
+		fmt.Println("Request error:", responseError)
+		return nil, responseError
+	}
+	defer response.Body.Close()
+	// Read response body
+	body, bodyError := io.ReadAll(response.Body)
+	if bodyError != nil {
+		fmt.Println(RESPONSE_ERROR, ":", bodyError)
+		return nil, bodyError
+	}
+	fmt.Println(RESPONSE_STATUS, ":", response.Status)
+	fmt.Println(RESPONSE_BODY, ":", string(body))
 	// Return response body
 	return body, nil
 }

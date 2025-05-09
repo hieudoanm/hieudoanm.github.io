@@ -37,7 +37,9 @@ to quickly create a Cobra application.`,
 		fmt.Println("Downloading")
 		var downloadURL string = "https://nothing-instagram.onrender.com/api/download"
 		requestBody := map[string]string{"url": url}
-		responseByte, postError := utils.Post(downloadURL, requestBody)
+		var options = utils.Options{}
+		options.Body = requestBody
+		responseByte, postError := utils.Post(downloadURL, options)
 		if postError != nil {
 			fmt.Println("Error: ", postError)
 			return

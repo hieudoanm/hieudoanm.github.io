@@ -1,10 +1,9 @@
 package libs
 
 import (
-	"api/utils"
 	"encoding/json"
 	"fmt"
-	"net/http"
+	"nothing-cli/utils"
 )
 
 const FIXER_BASE_URL = "http://data.fixer.io/api"
@@ -20,7 +19,7 @@ type LatestResponse struct {
 func GetLatest(accessKey string) (LatestResponse, error) {
 	var url string = fmt.Sprintf("%s/latest?access_key=%s", FIXER_BASE_URL, accessKey)
 
-	body, getError := utils.Get(url, http.Header{})
+	body, getError := utils.Get(url, utils.Options{})
 	if getError != nil {
 		return LatestResponse{}, getError
 	}
@@ -42,7 +41,7 @@ type SymbolsResponse struct {
 func GetSymbols(accessKey string) (SymbolsResponse, error) {
 	var url string = fmt.Sprintf("%s/symbols?access_key=%s", FIXER_BASE_URL, accessKey)
 
-	body, getError := utils.Get(url, http.Header{})
+	body, getError := utils.Get(url, utils.Options{})
 	if getError != nil {
 		return SymbolsResponse{}, getError
 	}

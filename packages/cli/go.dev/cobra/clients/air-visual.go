@@ -1,10 +1,9 @@
 package libs
 
 import (
-	"api/utils"
 	"encoding/json"
 	"fmt"
-	"net/http"
+	"nothing-cli/utils"
 )
 
 const AIR_VISUAL_BASE_URL = "http://api.airvisual.com/v2"
@@ -19,7 +18,7 @@ type CountriesResponse struct {
 func GetCountries(key string) (CountriesResponse, error) {
 	var url = fmt.Sprintf("%s/countries?key=%s", AIR_VISUAL_BASE_URL, key)
 
-	body, getError := utils.Get(url, http.Header{})
+	body, getError := utils.Get(url, utils.Options{})
 	if getError != nil {
 		return CountriesResponse{}, getError
 	}
@@ -43,7 +42,7 @@ type StatesResponse struct {
 func GetStates(key string, country string) (StatesResponse, error) {
 	var url = fmt.Sprintf("%s/states?key=%s&country=%s", AIR_VISUAL_BASE_URL, key, country)
 
-	body, getError := utils.Get(url, http.Header{})
+	body, getError := utils.Get(url, utils.Options{})
 	if getError != nil {
 		return StatesResponse{}, getError
 	}
@@ -67,7 +66,7 @@ type CitiesResponse struct {
 func GetCities(key string, country string, state string) (CitiesResponse, error) {
 	var url = fmt.Sprintf("%s/cities?key=%s&country=%s&state=%s", AIR_VISUAL_BASE_URL, key, country, state)
 
-	body, getError := utils.Get(url, http.Header{})
+	body, getError := utils.Get(url, utils.Options{})
 	if getError != nil {
 		return CitiesResponse{}, getError
 	}
@@ -166,7 +165,7 @@ type AirQualityResponse struct {
 func GetAirQuality(key string, country string, state string, city string) (AirQualityResponse, error) {
 	var url = fmt.Sprintf("%s/city?key=%s&country=%s&state=%s&city=%s", AIR_VISUAL_BASE_URL, key, country, state, city)
 
-	body, getError := utils.Get(url, http.Header{})
+	body, getError := utils.Get(url, utils.Options{})
 	if getError != nil {
 		return AirQualityResponse{}, getError
 	}

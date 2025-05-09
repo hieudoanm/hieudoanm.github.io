@@ -1,10 +1,10 @@
 package libs
 
 import (
-	"api/utils"
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"nothing-cli/utils"
 )
 
 const FOOTBALL_DATA_BASE_URL = "https://api.football-data.org/v4"
@@ -40,10 +40,12 @@ type CompetitionsResponse struct {
 
 func GetCompetitions(authToken string) (CompetitionsResponse, error) {
 	var url = fmt.Sprintf("%s/competitions", FOOTBALL_DATA_BASE_URL)
-	var headers = http.Header{}
-	headers.Add(X_AUTH_TOKEN_HEADER, authToken)
+	var header = http.Header{}
+	header.Add(X_AUTH_TOKEN_HEADER, authToken)
+	var options = utils.Options{}
+	options.Header = header
 	// Get
-	body, getError := utils.Get(url, headers)
+	body, getError := utils.Get(url, options)
 	if getError != nil {
 		return CompetitionsResponse{}, getError
 	}
@@ -59,10 +61,12 @@ func GetCompetitions(authToken string) (CompetitionsResponse, error) {
 
 func GetCompetition(authToken string, id int) (Competition, error) {
 	var url = fmt.Sprintf("%s/competitions/%d", FOOTBALL_DATA_BASE_URL, id)
-	var headers = http.Header{}
-	headers.Add(X_AUTH_TOKEN_HEADER, authToken)
+	var header = http.Header{}
+	header.Add(X_AUTH_TOKEN_HEADER, authToken)
+	var options = utils.Options{}
+	options.Header = header
 	// Get
-	body, getError := utils.Get(url, headers)
+	body, getError := utils.Get(url, options)
 	if getError != nil {
 		return Competition{}, getError
 	}
@@ -97,10 +101,12 @@ type TeamsResponse struct {
 
 func GetTeamsByCompetition(authToken string, id int) (TeamsResponse, error) {
 	var url = fmt.Sprintf("%s/competitions/%d/teams", FOOTBALL_DATA_BASE_URL, id)
-	var headers = http.Header{}
-	headers.Add(X_AUTH_TOKEN_HEADER, authToken)
+	var header = http.Header{}
+	header.Add(X_AUTH_TOKEN_HEADER, authToken)
+	var options = utils.Options{}
+	options.Header = header
 	// Get
-	body, getError := utils.Get(url, headers)
+	body, getError := utils.Get(url, options)
 	if getError != nil {
 		return TeamsResponse{}, getError
 	}
@@ -116,10 +122,12 @@ func GetTeamsByCompetition(authToken string, id int) (TeamsResponse, error) {
 
 func GetTeams(authToken string) (TeamsResponse, error) {
 	var url = fmt.Sprintf("%s/teams", FOOTBALL_DATA_BASE_URL)
-	var headers = http.Header{}
-	headers.Add(X_AUTH_TOKEN_HEADER, authToken)
+	var header = http.Header{}
+	header.Add(X_AUTH_TOKEN_HEADER, authToken)
+	var options = utils.Options{}
+	options.Header = header
 	// Get
-	body, getError := utils.Get(url, headers)
+	body, getError := utils.Get(url, options)
 	if getError != nil {
 		return TeamsResponse{}, getError
 	}
@@ -135,10 +143,12 @@ func GetTeams(authToken string) (TeamsResponse, error) {
 
 func GetTeam(authToken string, id int) (Team, error) {
 	var url = fmt.Sprintf("%s/teams/%d", FOOTBALL_DATA_BASE_URL, id)
-	var headers = http.Header{}
-	headers.Add(X_AUTH_TOKEN_HEADER, authToken)
+	var header = http.Header{}
+	header.Add(X_AUTH_TOKEN_HEADER, authToken)
+	var options = utils.Options{}
+	options.Header = header
 	// Get
-	body, getError := utils.Get(url, headers)
+	body, getError := utils.Get(url, options)
 	if getError != nil {
 		return Team{}, getError
 	}
@@ -191,10 +201,12 @@ type MatchesResponse struct {
 
 func GetMatchesByTeam(authToken string, id int) (MatchesResponse, error) {
 	var url = fmt.Sprintf("%s/teams/%d/matches", FOOTBALL_DATA_BASE_URL, id)
-	var headers = http.Header{}
-	headers.Add(X_AUTH_TOKEN_HEADER, authToken)
+	var header = http.Header{}
+	header.Add(X_AUTH_TOKEN_HEADER, authToken)
+	var options = utils.Options{}
+	options.Header = header
 	// Get
-	body, getError := utils.Get(url, headers)
+	body, getError := utils.Get(url, options)
 	if getError != nil {
 		return MatchesResponse{}, getError
 	}

@@ -32,8 +32,7 @@ to quickly create a Cobra application.`,
 		fmt.Scanln(&token)
 		// Delete Webhook
 		var url string = fmt.Sprintf("https://api.telegram.org/bot%s/deleteWebhook", token)
-		requestBody := map[string]string{}
-		responseByte, postError := utils.Post(url, requestBody)
+		responseByte, postError := utils.Post(url, utils.Options{})
 		if postError != nil {
 			fmt.Println("Error: ", postError)
 			return

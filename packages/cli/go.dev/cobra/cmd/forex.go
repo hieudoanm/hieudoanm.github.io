@@ -33,7 +33,9 @@ to quickly create a Cobra application.`,
 		var url string = "https://api.frankfurter.app/latest"
 		fmt.Println(url)
 		query := map[string]string{}
-		responseByte, getError := utils.Get(url, query)
+		var options = utils.Options{}
+		options.Query = query
+		responseByte, getError := utils.Get(url, options)
 		if getError != nil {
 			fmt.Println("Error: ", getError)
 			return

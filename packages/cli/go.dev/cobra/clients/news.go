@@ -1,11 +1,10 @@
 package libs
 
 import (
-	"api/utils"
 	"encoding/json"
 	"errors"
 	"fmt"
-	"net/http"
+	"nothing-cli/utils"
 	"strconv"
 	"strings"
 )
@@ -56,7 +55,7 @@ func GetSources(
 		strings.Join(queryParameters, "&"),
 	)
 
-	body, getError := utils.Get(url, http.Header{})
+	body, getError := utils.Get(url, utils.Options{})
 	if getError != nil {
 		return nil, getError
 	}
@@ -136,7 +135,7 @@ func GetTopHeadlines(
 		strings.Join(queryParameters, "&"),
 	)
 
-	body, getError := utils.Get(url, http.Header{})
+	body, getError := utils.Get(url, utils.Options{})
 	if getError != nil {
 		return nil, getError
 	}

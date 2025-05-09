@@ -34,8 +34,7 @@ to quickly create a Cobra application.`,
 		// Check Status
 		var url string = "https://status.supabase.com/api/v2/status.json"
 		fmt.Println(url)
-		query := map[string]string{}
-		responseByte, getError := utils.Get(url, query)
+		responseByte, getError := utils.Get(url, utils.Options{})
 		if getError != nil {
 			fmt.Println("Error: ", getError)
 			return

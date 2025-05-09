@@ -1,10 +1,9 @@
 package libs
 
 import (
-	"api/utils"
 	"encoding/json"
 	"fmt"
-	"net/http"
+	"nothing-cli/utils"
 	"strings"
 )
 
@@ -52,7 +51,7 @@ func GetVideoCategories(key string, regionCode string, part string) ([]VideoCate
 		strings.Join(queryParameters, "&"),
 	)
 
-	body, getError := utils.Get(url, http.Header{})
+	body, getError := utils.Get(url, utils.Options{})
 	if getError != nil {
 		return nil, getError
 	}
@@ -125,7 +124,7 @@ func GetVideos(key string, chart string, part string) ([]Video, error) {
 		strings.Join(queryParameters, "&"),
 	)
 
-	body, getError := utils.Get(url, http.Header{})
+	body, getError := utils.Get(url, utils.Options{})
 	if getError != nil {
 		return nil, getError
 	}

@@ -1,10 +1,9 @@
 package libs
 
 import (
-	"api/utils"
 	"encoding/json"
 	"fmt"
-	"net/http"
+	"nothing-cli/utils"
 	"strings"
 )
 
@@ -78,7 +77,7 @@ func GetWeather(appid string, q string, units string) (*OpenWeatherMap, error) {
 		strings.Join(queryParameters, "&"),
 	)
 
-	body, getError := utils.Get(url, http.Header{})
+	body, getError := utils.Get(url, utils.Options{})
 	if getError != nil {
 		return nil, getError
 	}
