@@ -1,0 +1,10 @@
+@host = http://localhost:10000
+
+POST {{host}}/api/generate
+Content-Type: application/json
+
+{
+  "prompt": "Once upon a time, there was a dragon who",
+  "max_new_tokens": 60,
+  "temperature": 0.8
+}
