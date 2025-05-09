@@ -1,5 +1,13 @@
 @host = http://localhost:10000
 
+## Get all/open/woman titled players
+GET {{host}}/api/titled?title=FM&limit=0
+Content-Type: application/json
+
+## Sync all/open/woman titled players
+POST {{host}}/api/titled?title=FM
+Content-Type: application/json
+
 ### OCR Read from Image
 POST {{host}}/api/easy-ocr/read HTTP/1.1
 Content-Disposition: form-data; name="file"; filename="image.png"

@@ -1,7 +1,7 @@
+import { getPlayers, TITLES_MAP } from '../../clients/chess.client';
 import { producer } from '../../clients/kafka.client';
 import { logger } from '../../utils/log';
 import { tryCatch } from '../../utils/try-catch';
-import { getPlayers, TITLES_MAP } from '../chess/chess.client';
 
 export const producePlayerMessage = async ({
   title,

@@ -1,7 +1,7 @@
 import { IncomingMessage, ServerResponse } from 'node:http';
-import { producePlayerMessage } from '../../../../services/kafka/kafka.service';
-import { logger } from '../../../../utils/log';
-import { tryCatch } from '../../../../utils/try-catch';
+import { producePlayerMessage } from '../../../../../services/kafka/kafka.service';
+import { logger } from '../../../../../utils/log';
+import { tryCatch } from '../../../../../utils/try-catch';
 
 export const postRoute = async (
   request: IncomingMessage,

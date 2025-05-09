@@ -1,6 +1,6 @@
 import { IncomingMessage, ServerResponse } from 'node:http';
-import { prismaClient } from '../../../../clients/prisma.client';
-import { logger } from '../../../../utils/log';
+import { prismaClient } from '../../../../../clients/prisma.client';
+import { logger } from '../../../../../utils/log';
 
 export const getRoute = async (
   request: IncomingMessage,
