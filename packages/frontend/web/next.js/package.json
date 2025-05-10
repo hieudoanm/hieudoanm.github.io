@@ -32,7 +32,7 @@
     "tauri:build": "./scripts/build-desktop.sh"
   },
   "dependencies": {
-    "@silvia-odwyer/photon": "0.3.2",
+    "@silvia-odwyer/photon": "0.3.3",
     "@tanstack/react-query": "5.75.7",
     "@tanstack/react-table": "8.21.3",
     "@tanstack/react-virtual": "3.13.8",
