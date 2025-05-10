@@ -8,7 +8,13 @@ WORKDIR /app
 COPY requirements.txt .
 
 # Install dependencies
-RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
+RUN pip install --upgrade pip
+
+RUN pip install --upgrade --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu
+
+RUN pip install --upgrade --no-cache-dir transformers
+
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy main
 COPY main.py .
