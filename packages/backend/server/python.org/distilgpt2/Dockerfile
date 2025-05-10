@@ -13,6 +13,9 @@ RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
 # Copy main
 COPY main.py .
 
+# Copy favicon.ico
+COPY favicon.ico .
+
 # Print virtual memory info and disk space info
 RUN free -m || cat /proc/meminfo && df -h
 
