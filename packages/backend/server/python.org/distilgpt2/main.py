@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
+import requests
+import socket
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
 
@@ -59,7 +61,31 @@ async def generate(data: GenerateData) -> GenerateResponse:
             temperature=temperature,
             do_sample=True,
             top_p=0.95,
-            top_k=50
+            top_k=50,
         )
     result = tokenizer.decode(outputs[0], skip_special_tokens=True)
     return GenerateResponse(generated=result)
+
+
+def get_public_ip():
+    try:
+        ip = requests.get("https://api.ipify.org").text
+        return ip
+    except requests.RequestException:
+        return ""
+
+
+def get_local_ip():
+    try:
+        # This doesn't need internet—just a trick to get your LAN IP
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        s.connect(("8.8.8.8", 80))
+        ip = s.getsockname()[0]
+        s.close()
+        return ip
+    except Exception:
+        return "Unable to retrieve local IP"
+
+
+print("Public IP :", f"http://{get_public_ip()}:10000")
+print("Local IP  :", f"http://{get_local_ip()}:10000")
