@@ -14,15 +14,17 @@ date: '2025-05-01'
   - [Packages Managers](#packages-managers)
   - [Monorepos](#monorepos)
   - [Linters](#linters)
-  - [Unit Tests](#unit-tests)
-  - [E2E Tests](#e2e-tests)
+  - [Test](#test)
+    - [Unit Test](#unit-test)
+    - [E2E Test](#e2e-test)
   - [Bundlers](#bundlers)
   - [CSS Components](#css-components)
   - [React Components](#react-components)
   - [Web Frameworks](#web-frameworks)
   - [Meta Frameworks](#meta-frameworks)
-  - [Mobile Frameworks](#mobile-frameworks)
-  - [Desktop Frameworks](#desktop-frameworks)
+  - [Native](#native)
+    - [Mobile Frameworks](#mobile-frameworks)
+    - [Desktop Frameworks](#desktop-frameworks)
   - [HTTP Frameworks](#http-frameworks)
   - [GraphQL Frameworks](#graphql-frameworks)
   - [Back-end Frameworks](#back-end-frameworks)
@@ -138,7 +140,9 @@ date: '2025-05-01'
 
 [⬆️ Back to Table of Contents](#table-of-contents)
 
-### Unit Tests
+### Test
+
+#### Unit Test
 
 | Industry    | Supersector       | Sector  | Subsector | Technology                         | Open Source                  | Maintainer        | Language | Recommended |
 | ----------- | ----------------- | ------- | --------- | ---------------------------------- | ---------------------------- | ----------------- | -------- | ----------- |
@@ -150,7 +154,7 @@ date: '2025-05-01'
 
 [⬆️ Back to Table of Contents](#table-of-contents)
 
-### E2E Tests
+#### E2E Test
 
 | Industry    | Supersector       | Sector  | Subsector | Technology               | Open Source                | Maintainer      | Language     | Recommended |
 | ----------- | ----------------- | ------- | --------- | ------------------------ | -------------------------- | --------------- | ------------ | ----------- |
@@ -230,7 +234,9 @@ date: '2025-05-01'
 
 [⬆️ Back to Table of Contents](#table-of-contents)
 
-### Mobile Frameworks
+### Native
+
+#### Mobile Frameworks
 
 | #   | Industry  | Supersector      | Sector              | Subsector | Technology                     | Open Source                | Maintainer             | Language | Recommended |
 | --- | --------- | ---------------- | ------------------- | --------- | ------------------------------ | -------------------------- | ---------------------- | -------- | ----------- |
@@ -243,7 +249,7 @@ date: '2025-05-01'
 
 [⬆️ Back to Table of Contents](#table-of-contents)
 
-### Desktop Frameworks
+#### Desktop Frameworks
 
 | Industry  | Supersector       | Sector   | Subsector | Technology                | Open Source           | Maintainer        | Language   | Recommended |
 | --------- | ----------------- | -------- | --------- | ------------------------- | --------------------- | ----------------- | ---------- | ----------- |

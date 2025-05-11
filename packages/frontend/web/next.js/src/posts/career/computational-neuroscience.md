@@ -1,4 +1,5 @@
 ---
+name: 'Computational Neuroscience'
 title: 'Computational Neuroscience'
 date: '2025-04-19'
 ---

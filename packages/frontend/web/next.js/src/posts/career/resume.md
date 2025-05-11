@@ -1,4 +1,5 @@
 ---
+name: 'Resume'
 title: 'Resume'
 date: '2025-05-01'
 ---
