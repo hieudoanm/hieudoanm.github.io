@@ -27,7 +27,7 @@
     "@eslint/json": "0.12.0",
     "@eslint/markdown": "6.4.0",
     "@types/chrome": "0.0.322",
-    "@types/node": "22.15.17",
+    "@types/node": "22.15.18",
     "@webpack-cli/generators": "3.0.7",
     "copy-webpack-plugin": "13.0.0",
     "eslint": "9.26.0",
