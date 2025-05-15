@@ -36,7 +36,7 @@
     "@tanstack/solid-table": "8.21.3",
     "@tanstack/solid-virtual": "3.13.8",
     "chess.js": "1.2.0",
-    "chessground": "9.1.1",
+    "chessground": "9.2.1",
     "gif.js": "0.2.0",
     "html2canvas-pro": "1.5.11",
     "jstoxml": "7.0.1",
