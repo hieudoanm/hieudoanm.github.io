@@ -51,10 +51,10 @@
     "yaml": "2.8.0"
   },
   "devDependencies": {
-    "@eslint/js": "9.26.0",
+    "@eslint/js": "9.27.0",
     "@tailwindcss/vite": "4.1.7",
     "@types/web-bluetooth": "0.0.21",
-    "eslint": "9.26.0",
+    "eslint": "9.27.0",
     "globals": "16.1.0",
     "kill-port": "2.0.1",
     "prettier": "3.5.3",
