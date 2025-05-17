@@ -7,10 +7,18 @@ date: '2025-05-01'
 
 - [Table of Contents](#table-of-contents)
 - [Teams](#teams)
-- [Best XI by Countries](#best-xi-by-countries)
-  - [Asia](#asia)
-    - [Japanese](#japanese)
-    - [Korean](#korean)
+- [Best XI](#best-xi)
+  - [Best XI - Africa](#best-xi---africa)
+  - [Best XI - Asia](#best-xi---asia)
+    - [Best XI - Japan](#best-xi---japan)
+    - [Best XI - Korea](#best-xi---korea)
+  - [Best XI - Europe](#best-xi---europe)
+    - [Best XI - England](#best-xi---england)
+    - [Best XI - France](#best-xi---france)
+    - [Best XI - Netherlands](#best-xi---netherlands)
+  - [Best XI - South America](#best-xi---south-america)
+    - [Best XI - Argentina](#best-xi---argentina)
+    - [Best XI - Brazil](#best-xi---brazil)
 
 ## Teams
 
@@ -42,11 +50,27 @@ date: '2025-05-01'
 | 24  | Other      | Nottingham Forest   |
 | 25  | Other      | Wolves              |
 
-## Best XI by Countries
+## Best XI
 
-### Asia
+### Best XI - Africa
 
-#### Japanese
+| No  | Pos | Name | Club | Note |
+| --- | --- | ---- | ---- | ---- |
+| 1   |     |      |      |      |
+| 2   |     |      |      |      |
+| 4   |     |      |      |      |
+| 5   |     |      |      |      |
+| 3   |     |      |      |      |
+| 6   |     |      |      |      |
+| 8   |     |      |      |      |
+| 10  |     |      |      |      |
+| 7   |     |      |      |      |
+| 9   |     |      |      |      |
+| 11  |     |      |      |      |
+
+### Best XI - Asia
+
+#### Best XI - Japan
 
 | No  | Pos | Name              | Club                   | Note     |
 | --- | --- | ----------------- | ---------------------- | -------- |
@@ -62,7 +86,7 @@ date: '2025-05-01'
 | 9   | ST  | Shinji Okazaki    | Leicester City         | Champion |
 | 11  | LW  | Kaoru Mitoma      | Brighton & Hove Albion |          |
 
-#### Korean
+#### Best XI - Korea
 
 | No  | Pos | Name           | Club                    | Note     |
 | --- | --- | -------------- | ----------------------- | -------- |
@@ -77,3 +101,115 @@ date: '2025-05-01'
 | 7   |     |                |                         |          |
 | 9   | ST  | Hwang Hee-Chan | Wolverhampton Wanderers |          |
 | 11  | LW  | Son Heung-Min  | Tottenham Hotspur       |          |
+
+### Best XI - Europe
+
+| No  | Pos | Name | Club | Note |
+| --- | --- | ---- | ---- | ---- |
+| 1   |     |      |      |      |
+| 2   |     |      |      |      |
+| 4   |     |      |      |      |
+| 5   |     |      |      |      |
+| 3   |     |      |      |      |
+| 6   |     |      |      |      |
+| 8   |     |      |      |      |
+| 10  |     |      |      |      |
+| 7   |     |      |      |      |
+| 9   |     |      |      |      |
+| 11  |     |      |      |      |
+
+#### Best XI - England
+
+| No  | Pos | Name           | Club(s)              | Note                                         |
+| --- | --- | -------------- | -------------------- | -------------------------------------------- |
+| 1   | GK  | David Seaman   | Arsenal              | Legendary Arsenal keeper                     |
+| 2   | RB  | Gary Neville   | Manchester United    | Longtime club captain                        |
+| 5   | CB  | John Terry     | Chelsea              | Club legend, top defender                    |
+| 4   | CB  | Rio Ferdinand  | Manchester United    | Dominant defender                            |
+| 3   | LB  | Ashley Cole    | Arsenal, Chelsea     | One of best English left-backs               |
+| 6   | CM  | Paul Scholes   | Manchester United    | Creative midfield maestro                    |
+| 8   | CM  | Frank Lampard  | Chelsea              | All-time top-scoring midfielder              |
+| 4   | CM  | Steven Gerrard | Liverpool            | Inspirational leader & box-to-box midfielder |
+| 7   | RW  | David Beckham  | Manchester United    | World-class passer & set-piece specialist    |
+| 9   | CF  | Alan Shearer   | Blackburn, Newcastle | Premier League’s top goalscorer              |
+| 11  | LW  | Michael Owen   | Liverpool, Newcastle | Pacey, clinical finisher                     |
+
+#### Best XI - France
+
+| No  | Pos | Name | Club | Note |
+| --- | --- | ---- | ---- | ---- |
+| 1   |     |      |      |      |
+| 2   |     |      |      |      |
+| 4   |     |      |      |      |
+| 5   |     |      |      |      |
+| 3   |     |      |      |      |
+| 6   |     |      |      |      |
+| 8   |     |      |      |      |
+| 10  |     |      |      |      |
+| 7   |     |      |      |      |
+| 9   |     |      |      |      |
+| 11  |     |      |      |      |
+
+#### Best XI - Netherlands
+
+| No  | Pos | Name | Club | Note |
+| --- | --- | ---- | ---- | ---- |
+| 1   |     |      |      |      |
+| 2   |     |      |      |      |
+| 4   |     |      |      |      |
+| 5   |     |      |      |      |
+| 3   |     |      |      |      |
+| 6   |     |      |      |      |
+| 8   |     |      |      |      |
+| 10  |     |      |      |      |
+| 7   |     |      |      |      |
+| 9   |     |      |      |      |
+| 11  |     |      |      |      |
+
+### Best XI - South America
+
+| No  | Pos | Name | Club | Note |
+| --- | --- | ---- | ---- | ---- |
+| 1   |     |      |      |      |
+| 2   |     |      |      |      |
+| 4   |     |      |      |      |
+| 5   |     |      |      |      |
+| 3   |     |      |      |      |
+| 6   |     |      |      |      |
+| 8   |     |      |      |      |
+| 10  |     |      |      |      |
+| 7   |     |      |      |      |
+| 9   |     |      |      |      |
+| 11  |     |      |      |      |
+
+#### Best XI - Argentina
+
+| No  | Pos | Name | Club | Note |
+| --- | --- | ---- | ---- | ---- |
+| 1   |     |      |      |      |
+| 2   |     |      |      |      |
+| 4   |     |      |      |      |
+| 5   |     |      |      |      |
+| 3   |     |      |      |      |
+| 6   |     |      |      |      |
+| 8   |     |      |      |      |
+| 10  |     |      |      |      |
+| 7   |     |      |      |      |
+| 9   |     |      |      |      |
+| 11  |     |      |      |      |
+
+#### Best XI - Brazil
+
+| No  | Pos | Name | Club | Note |
+| --- | --- | ---- | ---- | ---- |
+| 1   |     |      |      |      |
+| 2   |     |      |      |      |
+| 4   |     |      |      |      |
+| 5   |     |      |      |      |
+| 3   |     |      |      |      |
+| 6   |     |      |      |      |
+| 8   |     |      |      |      |
+| 10  |     |      |      |      |
+| 7   |     |      |      |      |
+| 9   |     |      |      |      |
+| 11  |     |      |      |      |
