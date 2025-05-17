@@ -1,6 +1,6 @@
 ---
 title: 'Liverpool FC'
-date: '2025-05-04'
+date: '2025-05-17'
 ---
 
 ## Table of Contents
@@ -11,17 +11,6 @@ date: '2025-05-04'
   - [Champions League 2018 / 2019 and Premier League 2019 / 2020 Winners](#champions-league-2018--2019-and-premier-league-2019--2020-winners)
   - [Premier League 2024 / 2025 Winners](#premier-league-2024--2025-winners)
 - [Best V](#best-v)
-  - [Best V - All-time](#best-v---all-time)
-  - [Best V - Europe](#best-v---europe)
-    - [Best V - England](#best-v---england)
-    - [Best V - Netherlands](#best-v---netherlands)
-    - [Best V - Scotland](#best-v---scotland)
-    - [Best V - Spain](#best-v---spain)
-  - [Best V - South America](#best-v---south-america)
-    - [Best V - Argentina](#best-v---argentina)
-    - [Best V - Brazil](#best-v---brazil)
-  - [Best V - Asia](#best-v---asia)
-  - [Best V - Africa](#best-v---africa)
 - [Best XI](#best-xi)
   - [Best XI - All-time](#best-xi---all-time)
   - [Best XI - Europe](#best-xi---europe)
@@ -82,115 +71,63 @@ date: '2025-05-04'
 
 ## Best V
 
-### Best V - All-time
-
-| No  | Pos   | Name            | Country     |
-| --- | ----- | --------------- | ----------- |
-| 1   | GK    | Alisson Becker  | Brazil      |
-| 5   | Fixo  | Virgil van Dijk | Netherlands |
-| 7   | Ala   | Mohamed Salah   | Egypt       |
-| 3   | Ala   | Steven Gerrard  | England     |
-| 9   | Pivot | Luis Suarez     | Uruguay     |
-
-### Best V - Europe
-
-| No  | Pos   | Name            | Country     |
-| --- | ----- | --------------- | ----------- |
-| 1   | GK    | Alisson Becker  | Brazil      |
-| 5   | Fixo  | Virgil van Dijk | Netherlands |
-| 3   | Ala   | Xabi Alonso     | Spain       |
-| 7   | Ala   | Steven Gerrard  | England     |
-| 9   | Pivot | Fernando Torres | Spain       |
-
-#### Best V - England
-
-| No  | Pos   | Name                   | Country |
-| --- | ----- | ---------------------- | ------- |
-| 1   | GK    | David James            | England |
-| 5   | Fixo  | Jamie Carragher        | England |
-| 7   | Ala   | Trent Alexander-Arnold | England |
-| 3   | Ala   | Steven Gerrard         | England |
-| 9   | Pivot | Michael Owen           | England |
-
-#### Best V - Netherlands
-
-| No  | Pos   | Name                | Country     |
-| --- | ----- | ------------------- | ----------- |
-| 1   | GK    |                     | Netherlands |
-| 5   | Fixo  | Virgil van Dijk     | Netherlands |
-| 7   | Ala   | Ryan Gravenberch    | Netherlands |
-| 3   | Ala   | Georginio Wijnaldum | Netherlands |
-| 9   | Pivot | Cody Gakpo          | Netherlands |
-
-#### Best V - Scotland
-
-| No  | Pos   | Name           | Country  |
-| --- | ----- | -------------- | -------- |
-| 1   | GK    |                | Scotland |
-| 5   | Fixo  | Alan Hansen    | Scotland |
-| 7   | Ala   | Graeme Souness | Scotland |
-| 3   | Ala   | Andy Robertson | Scotland |
-| 9   | Pivot | Kenny Dalglish | Scotland |
-
-#### Best V - Spain
-
-| No  | Pos   | Name             | Country |
-| --- | ----- | ---------------- | ------- |
-| 1   | GK    | Pepe Reina       | Spain   |
-| 5   | Fixo  | Xabi Alonso      | Spain   |
-| 7   | Ala   | Luis García      | Spain   |
-| 3   | Ala   | Thiago Alcântara | Spain   |
-| 9   | Pivot | Fernando Torres  | Spain   |
-
-### Best V - South America
-
-| No  | Pos   | Name                | Country   |
-| --- | ----- | ------------------- | --------- |
-| 1   | GK    | Alisson Becker      | Brazil    |
-| 5   | Fixo  | Fabinho             | Brazil    |
-| 7   | Ala   | Philippe Coutinho   | Brazil    |
-| 3   | Ala   | Alexis Mac Allister | Argentina |
-| 9   | Pivot | Luis Suárez         | Uruguay   |
-
-#### Best V - Argentina
-
-| No  | Pos   | Name                | Country   |
-| --- | ----- | ------------------- | --------- |
-| 1   | GK    |                     | Argentina |
-| 5   | Fixo  | Javier Mascherano   | Argentina |
-| 7   | Ala   | Maxi Rodríguez      | Argentina |
-| 3   | Ala   | Alexis Mac Allister | Argentina |
-| 9   | Pivot |                     | Argentina |
-
-#### Best V - Brazil
-
-| No  | Pos   | Name              | Country |
-| --- | ----- | ----------------- | ------- |
-| 1   | GK    | Alisson Becker    | Brazil  |
-| 5   | Fixo  | Fabinho           | Brazil  |
-| 7   | Ala   | Philippe Coutinho | Brazil  |
-| 3   | Ala   | Fabio Aurelio     | Brazil  |
-| 9   | Pivot | Roberto Firmino   | Brazil  |
-
-### Best V - Asia
-
-| No  | Pos   | Name            | Country |
-| --- | ----- | --------------- | ------- |
-| 1   | GK    |                 |         |
-| 5   | Fixo  | Wataru Endo     | Japan   |
-| 7   | Ala   | Takumi Minamino | Japan   |
-| 3   | Ala   |                 |         |
-| 9   | Pivot |                 |         |
-
-### Best V - Africa
-
-| No  | Pos   | Name          | Country  |
-| --- | ----- | ------------- | -------- |
-| 1   | GK    |               |          |
-| 5   | Fixo  | Joël Matip    | Cameroon |
-| 7   | Ala   | Mohamed Salah | Egypt    |
-| 3   | Ala   | Sadio Mané    | Senegal  |
-| 9   | Pivot |               |          |
+| Best   | Group   | Country       | No          | Pos        | Name            | Country                | Group         | Continent     |
+| ------ | ------- | ------------- | ----------- | ---------- | --------------- | ---------------------- | ------------- | ------------- |
+| Best V | World   |               | 1           | Goalkeeper | Alisson Becker  | Brazil                 | South America |               |
+| Best V | World   |               | 5           | Fixo       | Virgil van Dijk | Netherlands            | Europe        |               |
+| Best V | World   |               | 11          | Ala        | Mohamed Salah   | Egypt                  | Africa        |               |
+| Best V | World   |               | 7           | Ala        | Steven Gerrard  | England                | Europe        |               |
+| Best V | World   |               | 9           | Pivot      | Luis Suarez     | Uruguay                | South America |               |
+| Best V | Africa  |               | 1           | GK         |                 |                        | Africa        |               |
+| Best V | Africa  |               | 5           | Fixo       | Joël Matip      | Cameroon               | Africa        |               |
+| Best V | Africa  |               | 7           | Ala        | Mohamed Salah   | Egypt                  | Africa        |               |
+| Best V | Africa  |               | 11          | Ala        | Sadio Mané      | Senegal                | Africa        |               |
+| Best V | Africa  |               | 9           | Pivot      |                 |                        | Africa        |               |
+| Best V | Asia    |               | 1           | GK         |                 |                        | Asia          |               |
+| Best V | Asia    |               | 5           | Fixo       | Wataru Endo     | Japan                  | Asia          |               |
+| Best V | Asia    |               | 7           | Ala        | Takumi Minamino | Japan                  | Asia          |               |
+| Best V | Asia    |               | 11          | Ala        |                 |                        | Asia          |               |
+| Best V | Asia    |               | 9           | Pivot      |                 |                        | Asia          |               |
+| Best V | Europe  |               | 1           | GK         | Alisson Becker  | Brazil                 | Europe        |               |
+| Best V | Europe  |               | 5           | Fixo       | Virgil van Dijk | Netherlands            | Europe        |               |
+| Best V | Europe  |               | 7           | Ala        | Xabi Alonso     | Spain                  | Europe        |               |
+| Best V | Europe  |               | 11          | Ala        | Steven Gerrard  | England                | Europe        |               |
+| Best V | Europe  |               | 9           | Pivot      | Fernando Torres | Spain                  | Europe        |               |
+| Best V | Europe  | Great Britain | England     | 1          | GK              | David James            | England       | Europe        |
+| Best V | Europe  | Great Britain | England     | 5          | Fixo            | Jamie Carragher        | England       | Europe        |
+| Best V | Europe  | Great Britain | England     | 7          | Ala             | Trent Alexander-Arnold | England       | Europe        |
+| Best V | Europe  | Great Britain | England     | 11         | Ala             | Steven Gerrard         | England       | Europe        |
+| Best V | Europe  | Great Britain | England     | 9          | Pivot           | Michael Owen           | England       | Europe        |
+| Best V | Europe  | Great Britain | Scotland    | 1          | GK              |                        | Scotland      | Europe        |
+| Best V | Europe  | Great Britain | Scotland    | 5          | Fixo            | Alan Hansen            | Scotland      | Europe        |
+| Best V | Europe  | Great Britain | Scotland    | 7          | Ala             | Graeme Souness         | Scotland      | Europe        |
+| Best V | Europe  | Great Britain | Scotland    | 11         | Ala             | Andy Robertson         | Scotland      | Europe        |
+| Best V | Europe  | Great Britain | Scotland    | 9          | Pivot           | Kenny Dalglish         | Scotland      | Europe        |
+| Best V | Europe  | Southern      | Spain       | 1          | GK              | Pepe Reina             | Spain         | Europe        |
+| Best V | Europe  | Southern      | Spain       | 5          | Fixo            | Xabi Alonso            | Spain         | Europe        |
+| Best V | Europe  | Southern      | Spain       | 7          | Ala             | Luis García            | Spain         | Europe        |
+| Best V | Europe  | Southern      | Spain       | 11         | Ala             | Thiago Alcântara       | Spain         | Europe        |
+| Best V | Europe  | Southern      | Spain       | 9          | Pivot           | Fernando Torres        | Spain         | Europe        |
+| Best V | Europe  | Western       | Netherlands | 1          | GK              |                        | Netherlands   | Europe        |
+| Best V | Europe  | Western       | Netherlands | 5          | Fixo            | Virgil van Dijk        | Netherlands   | Europe        |
+| Best V | Europe  | Western       | Netherlands | 7          | Ala             | Ryan Gravenberch       | Netherlands   | Europe        |
+| Best V | Europe  | Western       | Netherlands | 11         | Ala             | Georginio Wijnaldum    | Netherlands   | Europe        |
+| Best V | Europe  | Western       | Netherlands | 9          | Pivot           | Cody Gakpo             | Netherlands   | Europe        |
+| Best V | America | South         |             | 1          | GK              | Alisson Becker         | Brazil        | South America |
+| Best V | America | South         |             | 5          | Fixo            | Fabinho                | Brazil        | South America |
+| Best V | America | South         |             | 7          | Ala             | Philippe Coutinho      | Brazil        | South America |
+| Best V | America | South         |             | 11         | Ala             | Alexis Mac Allister    | Argentina     | South America |
+| Best V | America | South         |             | 9          | Pivot           | Luis Suárez            | Uruguay       | South America |
+| Best V | America | South         | Argentina   | 1          | GK              |                        | Argentina     | South America |
+| Best V | America | South         | Argentina   | 5          | Fixo            | Javier Mascherano      | Argentina     | South America |
+| Best V | America | South         | Argentina   | 7          | Ala             | Maxi Rodríguez         | Argentina     | South America |
+| Best V | America | South         | Argentina   | 11         | Ala             | Alexis Mac Allister    | Argentina     | South America |
+| Best V | America | South         | Argentina   | 9          | Pivot           |                        | Argentina     | South America |
+| Best V | America | South         | Brazil      | 1          | GK              | Alisson Becker         | Brazil        | South America |
+| Best V | America | South         | Brazil      | 5          | Fixo            | Fabinho                | Brazil        | South America |
+| Best V | America | South         | Brazil      | 7          | Ala             | Philippe Coutinho      | Brazil        | South America |
+| Best V | America | South         | Brazil      | 11         | Ala             | Fabio Aurelio          | Brazil        | South America |
+| Best V | America | South         | Brazil      | 9          | Pivot           | Roberto Firmino        | Brazil        | South America |
 
 ## Best XI
 
