@@ -19,32 +19,32 @@ date: '2025-04-18'
 
 #### Leagues
 
-| No  | Tier | Region  | Country      | Competition                   |
-| --- | ---- | ------- | ------------ | ----------------------------- |
-| 01  | 1    | America | Argentina    | Argentine Primera División    |
-| 02  | 1    | America | Brazil       | Campeonato Brasileiro Série A |
-| 03  | 1    | America | Chile        | Chilean Primera División      |
-| 04  | 1    | America | Mexico       | Liga MX                       |
-| 05  | 1    | America | USA          | Major League Soccer (MLS)     |
-| 06  | 1    | Asia    | Japan        | J1 League                     |
-| 07  | 1    | Asia    | Korea        | K League 1                    |
-| 08  | 1    | Asia    | Saudi Arabia | Saudi Pro League              |
-| 09  | 1    | Asia    | Thailand     | Thai League 1                 |
-| 10  | 1    | Asia    | Vietnam      | V.League 1                    |
-| 11  | 1    | Europe  | England      | English Premier League (EPL)  |
-| 12  | 2    | Europe  | England      | EPL Championship              |
-| 13  | 3    | Europe  | England      | EPL League One                |
-| 14  | 4    | Europe  | England      | EPL League Two                |
-| 15  | 5    | Europe  | England      | National League               |
-| 16  | 1    | Europe  | France       | Ligue 1                       |
-| 17  | 2    | Europe  | France       | Ligue 2                       |
-| 18  | 1    | Europe  | Germany      | Bundesliga                    |
-| 19  | 2    | Europe  | Germany      | Bundesliga 2                  |
-| 20  | 1    | Europe  | Italy        | Serie A                       |
-| 21  | 2    | Europe  | Italy        | Serie B                       |
-| 22  | 1    | Europe  | Netherlands  | Eredivisie                    |
-| 23  | 1    | Europe  | Portugal     | Primeira Liga                 |
-| 24  | 1    | Europe  | Spain        | La Liga                       |
+| No  | Tier | Region  | Subregion     | Country      | Competition                   |
+| --- | ---- | ------- | ------------- | ------------ | ----------------------------- |
+| 01  | 1    | America | Northern      | Mexico       | Liga MX                       |
+| 02  | 1    | America | Northern      | USA & Canada | Major League Soccer (MLS)     |
+| 03  | 1    | America | Southern      | Argentina    | Argentine Primera División    |
+| 04  | 1    | America | Southern      | Brazil       | Campeonato Brasileiro Série A |
+| 05  | 1    | America | Southern      | Chile        | Chilean Primera División      |
+| 06  | 1    | Asia    | Eastern       | Japan        | J1 League                     |
+| 07  | 1    | Asia    | Eastern       | Korea        | K League 1                    |
+| 08  | 1    | Asia    | Southeastern  | Thailand     | Thai League 1                 |
+| 09  | 1    | Asia    | Southeastern  | Vietnam      | V.League 1                    |
+| 10  | 1    | Asia    | Saudi Arabia  | Western      | Saudi Pro League              |
+| 11  | 1    | Europe  | Great Britain | England      | English Premier League (EPL)  |
+| 12  | 2    | Europe  | Great Britain | England      | EPL Championship              |
+| 13  | 3    | Europe  | Great Britain | England      | EPL League One                |
+| 14  | 4    | Europe  | Great Britain | England      | EPL League Two                |
+| 15  | 5    | Europe  | Great Britain | England      | National League               |
+| 16  | 1    | Europe  | Northern      | Italy        | Serie A                       |
+| 17  | 2    | Europe  | Northern      | Italy        | Serie B                       |
+| 18  | 1    | Europe  | Northern      | Portugal     | Primeira Liga                 |
+| 19  | 1    | Europe  | Northern      | Spain        | La Liga                       |
+| 20  | 1    | Europe  | Western       | France       | Ligue 1                       |
+| 21  | 2    | Europe  | Western       | France       | Ligue 2                       |
+| 22  | 1    | Europe  | Western       | Germany      | Bundesliga                    |
+| 23  | 2    | Europe  | Western       | Germany      | Bundesliga 2                  |
+| 24  | 1    | Europe  | Western       | Netherlands  | Eredivisie                    |
 
 #### Cups
 

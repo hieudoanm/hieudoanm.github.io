@@ -7,9 +7,7 @@ date: '2025-05-02'
 
 - [Table of Contents](#table-of-contents)
 - [Champions](#champions)
-- [Conferences](#conferences)
-  - [Eastern Conference](#eastern-conference)
-  - [Western Conference](#western-conference)
+- [Teams](#teams)
 - [Players](#players)
 
 ## Champions
@@ -71,51 +69,49 @@ date: '2025-05-02'
 | 2022   | Golden State Warriors  | Stephen Curry         | Nikola Jokić          |
 | 2023   | Denver Nuggets         | Nikola Jokić          | Joel Embiid           |
 | 2024   | Boston Celtics         | Jaylen Brown          | Nikola Jokić          |
-| 2015   |                        |                       |                       |
+| 2025   |                        |                       |                       |
 
-## Conferences
+## Teams
 
-### Eastern Conference
-
-| No  | Country       | State          | City            | Team                | Stadium                    |
-| --- | ------------- | -------------- | --------------- | ------------------- | -------------------------- |
-| 01  | Canada        | Ontario        | Toronto         | Toronto Raptors     | Scotiabank Arena           |
-| 02  | United States | Florida        | Miami           | Miami Heat          | Kaseya Center              |
-| 03  | United States | Georgia        | Atlanta         | Atlanta Hawks       | State Farm Arena           |
-| 04  | United States | Illinois       | Chicago         | Chicago Bulls       | United Center              |
-| 05  | United States | Indiana        | Indianapolis    | Indiana Pacers      | Gainbridge Fieldhouse      |
-| 06  | United States | Massachusetts  | Boston          | Boston Celtics      | TD Garden                  |
-| 07  | United States | Michigan       | Detroit         | Detroit Pistons     | Little Caesars Arena       |
-| 08  | United States | North Carolina | Charlotte       | Charlotte Hornets   | Spectrum Center            |
-| 09  | United States | New York       | Brooklyn        | Brooklyn Nets       | Barclays Center            |
-| 10  | United States | New York       | New York        | New York Knicks     | Madison Square Garden      |
-| 11  | United States | Ohio           | Cleveland       | Cleveland Cavaliers | Rocket Mortgage FieldHouse |
-| 12  | United States | Pennsylvania   | Philadelphia    | Philadelphia 76ers  | Wells Fargo Center         |
-| 13  | United States | Tennessee      | Memphis         | Memphis Grizzlies   | FedExForum                 |
-| 14  | United States | Washington     | Washington D.C. | Washington Wizards  | Capital One Arena          |
-| 15  | United States | Wisconsin      | Milwaukee       | Milwaukee Bucks     | Fiserv Forum               |
-
-### Western Conference
-
-| No  | Country       | State      | City           | Team                             | Stadium                                    |
-| --- | ------------- | ---------- | -------------- | -------------------------------- | ------------------------------------------ |
-| 01  | United States | Arizona    | Phoenix        | Phoenix Suns                     | Footprint Center                           |
-| 02  | United States | California | Los Angeles    | Los Angeles Lakers               | Crypto.com Arena (formerly Staples Center) |
-| 03  | United States | California | Los Angeles    | Los Angeles Clippers             | Crypto.com Arena                           |
-| 04  | United States | California | San Francisco  | Golden State Warriors            | Chase Center                               |
-| 05  | United States | California | Sacramento     | Sacramento Kings                 | Golden 1 Center                            |
-| 06  | United States | Colorado   | Denver         | Denver Nuggets                   | Ball Arena                                 |
-| 07  | United States | Louisiana  | New Orleans    | New Orleans Pelicans             | Smoothie King Center                       |
-| 08  | United States | Minnesota  | Minneapolis    | Minnesota Timberwolves           | Target Center                              |
-| 09  | United States | Oklahoma   | Oklahoma City  | Oklahoma City Thunder            | Paycom Center                              |
-| 10  | United States | Oregon     | Portland       | Portland Trail Blazers           | Moda Center                                |
-| 11  | United States | Texas      | Dallas         | Dallas Mavericks                 | American Airlines Center                   |
-| 12  | United States | Texas      | Houston        | Houston Rockets                  | Toyota Center                              |
-| 13  | United States | Texas      | San Antonio    | San Antonio Spurs                | AT&T Center                                |
-| 14  | United States | Utah       | Salt Lake City | Utah Jazz                        | Delta Center                               |
-| 15  | United States | Washington | Seattle        | Seattle SuperSonics (historical) | KeyArena (Now Climate Pledge Arena)        |
+| No  | Conference | Country       | State          | City            | Team                             | Stadium                                    |
+| --- | ---------- | ------------- | -------------- | --------------- | -------------------------------- | ------------------------------------------ |
+| 01  | Eastern    | Canada        | Ontario        | Toronto         | Toronto Raptors                  | Scotiabank Arena                           |
+| 02  | Eastern    | United States | Florida        | Miami           | Miami Heat                       | Kaseya Center                              |
+| 03  | Eastern    | United States | Georgia        | Atlanta         | Atlanta Hawks                    | State Farm Arena                           |
+| 04  | Eastern    | United States | Illinois       | Chicago         | Chicago Bulls                    | United Center                              |
+| 05  | Eastern    | United States | Indiana        | Indianapolis    | Indiana Pacers                   | Gainbridge Fieldhouse                      |
+| 06  | Eastern    | United States | Massachusetts  | Boston          | Boston Celtics                   | TD Garden                                  |
+| 07  | Eastern    | United States | Michigan       | Detroit         | Detroit Pistons                  | Little Caesars Arena                       |
+| 08  | Eastern    | United States | North Carolina | Charlotte       | Charlotte Hornets                | Spectrum Center                            |
+| 09  | Eastern    | United States | New York       | Brooklyn        | Brooklyn Nets                    | Barclays Center                            |
+| 10  | Eastern    | United States | New York       | New York        | New York Knicks                  | Madison Square Garden                      |
+| 11  | Eastern    | United States | Ohio           | Cleveland       | Cleveland Cavaliers              | Rocket Mortgage FieldHouse                 |
+| 12  | Eastern    | United States | Pennsylvania   | Philadelphia    | Philadelphia 76ers               | Wells Fargo Center                         |
+| 13  | Eastern    | United States | Tennessee      | Memphis         | Memphis Grizzlies                | FedExForum                                 |
+| 14  | Eastern    | United States | Washington     | Washington D.C. | Washington Wizards               | Capital One Arena                          |
+| 15  | Eastern    | United States | Wisconsin      | Milwaukee       | Milwaukee Bucks                  | Fiserv Forum                               |
+| 01  | Western    | United States | Arizona        | Phoenix         | Phoenix Suns                     | Footprint Center                           |
+| 02  | Western    | United States | California     | Los Angeles     | Los Angeles Lakers               | Crypto.com Arena (formerly Staples Center) |
+| 03  | Western    | United States | California     | Los Angeles     | Los Angeles Clippers             | Crypto.com Arena                           |
+| 04  | Western    | United States | California     | San Francisco   | Golden State Warriors            | Chase Center                               |
+| 05  | Western    | United States | California     | Sacramento      | Sacramento Kings                 | Golden 1 Center                            |
+| 06  | Western    | United States | Colorado       | Denver          | Denver Nuggets                   | Ball Arena                                 |
+| 07  | Western    | United States | Louisiana      | New Orleans     | New Orleans Pelicans             | Smoothie King Center                       |
+| 08  | Western    | United States | Minnesota      | Minneapolis     | Minnesota Timberwolves           | Target Center                              |
+| 09  | Western    | United States | Oklahoma       | Oklahoma City   | Oklahoma City Thunder            | Paycom Center                              |
+| 10  | Western    | United States | Oregon         | Portland        | Portland Trail Blazers           | Moda Center                                |
+| 11  | Western    | United States | Texas          | Dallas          | Dallas Mavericks                 | American Airlines Center                   |
+| 12  | Western    | United States | Texas          | Houston         | Houston Rockets                  | Toyota Center                              |
+| 13  | Western    | United States | Texas          | San Antonio     | San Antonio Spurs                | AT&T Center                                |
+| 14  | Western    | United States | Utah           | Salt Lake City  | Utah Jazz                        | Delta Center                               |
+| 15  | Western    | United States | Washington     | Seattle         | Seattle SuperSonics (historical) | KeyArena (Now Climate Pledge Arena)        |
 
 ## Players
 
-- LeBron James
-- Stephen Curry
+| #   | Pos | Position       | 1st              | 2nd          |
+| --- | --- | -------------- | ---------------- | ------------ |
+| 1   | PG  | Point Guard    | Stephen Curry    | Luka Dončić  |
+| 2   | SG  | Shooting Guard | Michael Jordan   | Kobe Bryant  |
+| 3   | SF  | Small Forward  | LeBron James     |              |
+| 4   | PF  | Power Forward  | Dennis Rodman    |              |
+| 5   | C   | Center         | Shaquille O'Neal | Nikola Jokić |
