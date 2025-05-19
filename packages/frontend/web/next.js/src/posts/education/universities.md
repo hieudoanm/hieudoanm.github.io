@@ -1,23 +1,29 @@
 ---
 title: 'Universities'
-date: '2025-04-22'
+date: '2025-05-19'
 ---
 
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
 - [Notable Schools](#notable-schools)
-- [Australia](#australia)
-  - [Group of Eight (G8)](#group-of-eight-g8)
-  - [Notable Mentions](#notable-mentions)
-- [Canada](#canada)
-  - [U15](#u15)
-- [Singapore](#singapore)
-- [United Kingdom](#united-kingdom)
-  - [Russell Group (24)](#russell-group-24)
-- [United States](#united-states)
-  - [Ivy League (8)](#ivy-league-8)
-  - [Notable Mentions (USA)](#notable-mentions-usa)
+- [America - North America](#america---north-america)
+  - [Canada](#canada)
+    - [U15](#u15)
+  - [United States](#united-states)
+    - [Ivy League (8)](#ivy-league-8)
+    - [Notable Mentions (USA)](#notable-mentions-usa)
+- [Asia](#asia)
+  - [Singapore](#singapore)
+- [Europe](#europe)
+  - [Germany](#germany)
+  - [Netherlands](#netherlands)
+  - [United Kingdom](#united-kingdom)
+    - [Russell Group (24)](#russell-group-24)
+- [Oceania](#oceania)
+  - [Australia](#australia)
+    - [Group of Eight (G8)](#group-of-eight-g8)
+    - [Notable Mentions](#notable-mentions)
 
 ## Notable Schools
 
@@ -27,35 +33,11 @@ date: '2025-04-22'
 4. Engineering and Technology
 5. Natural and Social Sciences
 
-## Australia
+## America - North America
 
-### Group of Eight (G8)
+### Canada
 
-| #   | State                        | City      | Name                            | Medical                                                          |
-| --- | ---------------------------- | --------- | ------------------------------- | ---------------------------------------------------------------- |
-| 01  | Australian Capital Territory | Canberra  | Australian National University  | Australian National University School of Medicine and Psychology |
-| 02  | New South Wales              | Sydney    | University of New South Wales   | University of New South Wales School of Clinical Medicine        |
-| 03  | New South Wales              | Sydney    | University of Sydney            | University of Sydney School of Medicine                          |
-| 04  | Queensland                   | Brisbane  | University of Queensland        | University of QueenslandMedical School                           |
-| 05  | South Australia              | Adelaide  | University of Adelaide          | University of Adelaide Medical School                            |
-| 06  | Victoria                     | Melbourne | Monash University               | Monash University School of Medicine                             |
-| 07  | Victoria                     | Melbourne | University of Melbourne         | University of Melbourne Melbourne Medical School                 |
-| 08  | Western Australia            | Perth     | University of Western Australia | University of Western Australia Medical School                   |
-
-### Notable Mentions
-
-| #   | State           | City      | Name                                                |
-| --- | --------------- | --------- | --------------------------------------------------- |
-| 01  | Victoria        | Melbourne | [Deakin](https://www.deakin.edu.au/)                |
-| 02  | Victoria        | Melbourne | [La Trobe](https://www.latrobe.edu.au/)             |
-| 03  | Victoria        | Melbourne | [RMIT](https://www.rmit.edu.au/)                    |
-| 04  | New South Wales | Sydney    | University of Technology Sydney (UTS)               |
-| 05  | New South Wales | Sydney    | [Macquarie](https://www.mq.edu.au/)                 |
-| 06  | New South Wales | Sydney    | [Western Sydney](https://www.westernsydney.edu.au/) |
-
-## Canada
-
-### U15
+#### U15
 
 | #   | Province         | City        | University                     | Medical |
 | --- | ---------------- | ----------- | ------------------------------ | ------- |
@@ -75,7 +57,40 @@ date: '2025-04-22'
 | 14  | Quebec           | Quebec City | Université Laval               |         |
 | 15  | Saskatchewan     | Saskatoon   | University of Saskatchewan     |         |
 
-## Singapore
+### United States
+
+#### Ivy League (8)
+
+| #   | State         | City         | University                 | Business                      | Medical                                                        |
+| --- | ------------- | ------------ | -------------------------- | ----------------------------- | -------------------------------------------------------------- |
+| 1   | Connecticut   | New Haven    | Yale University            |                               | Yale School of Medicine                                        |
+| 2   | Massachusetts | Cambridge    | Harvard University         | Harvard Business School (HBS) | Harvard Medical School                                         |
+| 3   | New Hampshire | Hanover      | Dartmouth College          |                               | Geisel School of Medicine                                      |
+| 4   | New Jersey    | Princeton    | Princeton University       |                               |                                                                |
+| 5   | New York      | Ithaca       | Cornell University         |                               | Weill Cornell Medicine                                         |
+| 6   | New York      | New York     | Columbia University        |                               | Columbia University Vagelos College of Physicians and Surgeons |
+| 7   | Pennsylvania  | Philadelphia | University of Pennsylvania | The Wharton School            | Perelman School of Medicine                                    |
+| 8   | Rhode Island  | Providence   | Brown University           |                               | Alpert Medical School                                          |
+
+#### Notable Mentions (USA)
+
+| #   | State          | City          | University                                   | Medical                                      |
+| --- | -------------- | ------------- | -------------------------------------------- | -------------------------------------------- |
+| 1   | California     | Berkeley      | University of California, Berkeley           | University of California Schools of Medicine |
+| 2   | California     | Palo Alto     | Stanford University                          | Stanford University - School of Medicine     |
+| 3   | California     | Pasadena      | California Institute of Technology (Caltech) |                                              |
+| 4   | Illinois       | Chicago       | University of Chicago                        |                                              |
+| 5   | Maryland       | Baltimore     | Johns Hopkins University                     | Johns Hopkins - School of Medicine           |
+| 6   | Massachusetts  | Boston        | MIT                                          |                                              |
+| 7   | New York       | New York City | New York University                          | NYU Grossman School of Medicine              |
+| 8   | North Carolina | Durham        | Duke University                              |                                              |
+| 9   | Texas          | Austin        | University of Texas - Austin                 | Dell Medical School                          |
+| 10  | North Carolina | Durham        | Duke University                              | Duke University School of Medicine           |
+| 11  | Indiana        | South Bend    | University of Notre Dame                     |                                              |
+
+## Asia
+
+### Singapore
 
 | #   | Name                                                 | Medical School          | Law School       |
 | --- | ---------------------------------------------------- | ----------------------- | ---------------- |
@@ -86,9 +101,58 @@ date: '2025-04-22'
 | 05  | Singapore Institute of Technology (SIT)              |                         |                  |
 | 06  | Singapore University of Social Sciences (SUSS)       |                         |                  |
 
-## United Kingdom
+## Europe
 
-### Russell Group (24)
+### Germany
+
+| #   | Country | State/Province         | City                   | Name                                 | Medical |
+| --- | ------- | ---------------------- | ---------------------- | ------------------------------------ | ------- |
+| 1   | Germany | Bavaria                | Munich                 | Technical University of Munich       |         |
+| 2   | Germany | Bavaria                | Munich                 | LMU Munich                           |         |
+| 3   | Germany | Baden-Württemberg      | Heidelberg             | Universität Heidelberg               |         |
+| 4   | Germany | Berlin                 | Berlin                 | Humboldt University of Berlin        |         |
+| 5   | Germany | North Rhine-Westphalia | Bonn                   | University of Bonn                   |         |
+| 6   | Germany | North Rhine-Westphalia | Aachen                 | RWTH Aachen University               |         |
+| 7   | Germany | Berlin                 | Berlin                 | Charité - Universitätsmedizin Berlin |         |
+| 8   | Germany | Baden-Württemberg      | Tübingen               | University of Tübingen               |         |
+| 9   | Germany | Berlin                 | Berlin                 | Free University of Berlin            |         |
+| 10  | Germany | Lower Saxony           | Göttingen              | University of Göttingen              |         |
+| 11  | Germany | Baden-Württemberg      | Freiburg               | University of Freiburg               |         |
+| 12  | Germany | Hamburg                | Hamburg                | University of Hamburg                |         |
+| 13  | Germany | Berlin                 | Berlin                 | Technical University of Berlin       |         |
+| 14  | Germany | North Rhine-Westphalia | Cologne                | University of Cologne                |         |
+| 15  | Germany | Saxony                 | Dresden                | TU Dresden                           |         |
+| 16  | Germany | Bavaria                | Würzburg               | University of Würzburg               |         |
+| 17  | Germany | Baden-Württemberg      | Karlsruhe              | Karlsruhe Institute of Technology    |         |
+| 18  | Germany | North Rhine-Westphalia | Münster                | University of Münster                |         |
+| 19  | Germany | Baden-Württemberg      | Ulm                    | Ulm University                       |         |
+| 20  | Germany | Baden-Württemberg      | Mannheim               | University of Mannheim               |         |
+| 21  | Germany | Thuringia              | Jena                   | Friedrich Schiller University Jena   |         |
+| 22  | Germany | Hesse                  | Frankfurt              | Goethe University Frankfurt          |         |
+| 23  | Germany | Bavaria                | Erlangen and Nuremberg | University of Erlangen-Nuremberg     |         |
+| 24  | Germany | Brandenburg            | Potsdam                | University of Potsdam                |         |
+| 25  | Germany | North Rhine-Westphalia | Düsseldorf             | Heinrich Heine University Düsseldorf |         |
+
+### Netherlands
+
+| #   | Country     | State/Province | City       | Name                               | Medical |
+| --- | ----------- | -------------- | ---------- | ---------------------------------- | ------- |
+| 01  | Netherlands | South Holland  | Delft      | Delft University of Technology     |         |
+| 02  | Netherlands | North Holland  | Amsterdam  | University of Amsterdam            |         |
+| 03  | Netherlands | Gelderland     | Wageningen | Wageningen University & Research   |         |
+| 04  | Netherlands | South Holland  | Leiden     | Leiden University                  |         |
+| 05  | Netherlands | Groningen      | Groningen  | University of Groningen            |         |
+| 06  | Netherlands | South Holland  | Rotterdam  | Erasmus University Rotterdam       |         |
+| 07  | Netherlands | Limburg        | Maastricht | Maastricht University              |         |
+| 08  | Netherlands | North Holland  | Amsterdam  | Vrije Universiteit Amsterdam       |         |
+| 09  | Netherlands | Gelderland     | Nijmegen   | Radboud University Nijmegen        |         |
+| 10  | Netherlands | Overijssel     | Enschede   | University of Twente               |         |
+| 11  | Netherlands | North Brabant  | Eindhoven  | Eindhoven University of Technology |         |
+| 12  | Netherlands | North Brabant  | Tilburg    | Tilburg University                 |         |
+
+### United Kingdom
+
+#### Russell Group (24)
 
 | #   | Country          | State/Province     | City        | Name                             | Medical |
 | --- | ---------------- | ------------------ | ----------- | -------------------------------- | ------- |
@@ -117,33 +181,30 @@ date: '2025-04-22'
 | 23  | Scotland         | Glasgow            | Glasgow     | University of Glasgow            |         |
 | 24  | Wales            | Cardiff            | Cardiff     | Cardiff University               |         |
 
-## United States
+## Oceania
 
-### Ivy League (8)
+### Australia
 
-| #   | State         | City         | University                 | Business                      | Medical                                                        |
-| --- | ------------- | ------------ | -------------------------- | ----------------------------- | -------------------------------------------------------------- |
-| 1   | Connecticut   | New Haven    | Yale University            |                               | Yale School of Medicine                                        |
-| 2   | Massachusetts | Cambridge    | Harvard University         | Harvard Business School (HBS) | Harvard Medical School                                         |
-| 3   | New Hampshire | Hanover      | Dartmouth College          |                               | Geisel School of Medicine                                      |
-| 4   | New Jersey    | Princeton    | Princeton University       |                               |                                                                |
-| 5   | New York      | Ithaca       | Cornell University         |                               | Weill Cornell Medicine                                         |
-| 6   | New York      | New York     | Columbia University        |                               | Columbia University Vagelos College of Physicians and Surgeons |
-| 7   | Pennsylvania  | Philadelphia | University of Pennsylvania | The Wharton School            | Perelman School of Medicine                                    |
-| 8   | Rhode Island  | Providence   | Brown University           |                               | Alpert Medical School                                          |
+#### Group of Eight (G8)
 
-### Notable Mentions (USA)
+| #   | State                        | City      | Name                            | Medical                                                          |
+| --- | ---------------------------- | --------- | ------------------------------- | ---------------------------------------------------------------- |
+| 01  | Australian Capital Territory | Canberra  | Australian National University  | Australian National University School of Medicine and Psychology |
+| 02  | New South Wales              | Sydney    | University of New South Wales   | University of New South Wales School of Clinical Medicine        |
+| 03  | New South Wales              | Sydney    | University of Sydney            | University of Sydney School of Medicine                          |
+| 04  | Queensland                   | Brisbane  | University of Queensland        | University of QueenslandMedical School                           |
+| 05  | South Australia              | Adelaide  | University of Adelaide          | University of Adelaide Medical School                            |
+| 06  | Victoria                     | Melbourne | Monash University               | Monash University School of Medicine                             |
+| 07  | Victoria                     | Melbourne | University of Melbourne         | University of Melbourne Melbourne Medical School                 |
+| 08  | Western Australia            | Perth     | University of Western Australia | University of Western Australia Medical School                   |
 
-| #   | State          | City          | University                                   | Medical                                      |
-| --- | -------------- | ------------- | -------------------------------------------- | -------------------------------------------- |
-| 1   | California     | Berkeley      | University of California, Berkeley           | University of California Schools of Medicine |
-| 2   | California     | Palo Alto     | Stanford University                          | Stanford University - School of Medicine     |
-| 3   | California     | Pasadena      | California Institute of Technology (Caltech) |                                              |
-| 4   | Illinois       | Chicago       | University of Chicago                        |                                              |
-| 5   | Maryland       | Baltimore     | Johns Hopkins University                     | Johns Hopkins - School of Medicine           |
-| 6   | Massachusetts  | Boston        | MIT                                          |                                              |
-| 7   | New York       | New York City | New York University                          | NYU Grossman School of Medicine              |
-| 8   | North Carolina | Durham        | Duke University                              |                                              |
-| 9   | Texas          | Austin        | University of Texas - Austin                 | Dell Medical School                          |
-| 10  | North Carolina | Durham        | Duke University                              | Duke University School of Medicine           |
-| 11  | Indiana        | South Bend    | University of Notre Dame                     |                                              |
+#### Notable Mentions
+
+| #   | State           | City      | Name                                                |
+| --- | --------------- | --------- | --------------------------------------------------- |
+| 01  | Victoria        | Melbourne | [Deakin](https://www.deakin.edu.au/)                |
+| 02  | Victoria        | Melbourne | [La Trobe](https://www.latrobe.edu.au/)             |
+| 03  | Victoria        | Melbourne | [RMIT](https://www.rmit.edu.au/)                    |
+| 04  | New South Wales | Sydney    | University of Technology Sydney (UTS)               |
+| 05  | New South Wales | Sydney    | [Macquarie](https://www.mq.edu.au/)                 |
+| 06  | New South Wales | Sydney    | [Western Sydney](https://www.westernsydney.edu.au/) |
