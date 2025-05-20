@@ -165,6 +165,7 @@ enum ActCSV {
 enum ActJSON {
   JSON_EDITOR = 'JSON Editor',
   JSON_MINIFY = 'JSON Minify',
+  JSON_SORT = 'JSON Sort',
   JSON_TO_CSV = 'JSON to CSV',
   JSON_TO_XML = 'JSON to XML',
   JSON_TO_YAML = 'JSON to YAML',
@@ -414,7 +415,21 @@ const isActionString = (act: Act): act is ActString => {
 
 const actJSON = ({ action, source }: { action: ActJSON; source: string }) => {
   let output = '';
-  if (action === ActJSON.JSON_MINIFY) {
+  if (action === ActJSON.JSON_SORT) {
+    try {
+      const object = JSON.parse(source);
+      const keys: string[] = Object.keys(object).sort((a, b) =>
+        a > b ? 1 : -1
+      );
+      const sortedObject: Record<string, any> = {};
+      for (const key of keys) {
+        sortedObject[key] = object[key];
+      }
+      return JSON.stringify(sortedObject, null, 2);
+    } catch (error) {
+      output = (error as Error).message;
+    }
+  } else if (action === ActJSON.JSON_MINIFY) {
     try {
       output = JSON.stringify(JSON.parse(source));
     } catch (error) {
@@ -1106,12 +1121,14 @@ const StudioPage: NextPage = () => {
                   // Check JSON Convertor
                   const previousActionIsNotJSON: boolean =
                     action !== ActJSON.JSON_EDITOR &&
+                    action !== ActJSON.JSON_SORT &&
                     action !== ActJSON.JSON_MINIFY &&
                     action !== ActJSON.JSON_TO_CSV &&
                     action !== ActJSON.JSON_TO_XML &&
                     action !== ActJSON.JSON_TO_YAML;
                   const nextActionIsJSON =
                     nextAction === ActJSON.JSON_EDITOR ||
+                    nextAction === ActJSON.JSON_SORT ||
                     nextAction === ActJSON.JSON_MINIFY ||
                     nextAction === ActJSON.JSON_TO_CSV ||
                     nextAction === ActJSON.JSON_TO_XML ||
@@ -1274,6 +1291,7 @@ const StudioPage: NextPage = () => {
                     label: 'json',
                     actions: [
                       ActJSON.JSON_EDITOR,
+                      ActJSON.JSON_SORT,
                       ActJSON.JSON_MINIFY,
                       ActJSON.JSON_TO_CSV,
                       ActJSON.JSON_TO_XML,
