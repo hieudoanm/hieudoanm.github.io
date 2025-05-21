@@ -74,21 +74,270 @@ The suicide attempt occurred after Maria’s husband, Esteban, her high school s
 
 ### Week 06 - Objective 1: What is cultural diversity, its relevance to Australia and to professional psychology
 
+- Some authors equate culture with diversity. However, diversity includes a broad range of variables (Gender, Age [child, adolescent, adult, elderly], Sexual orientation [LGBTI], Socio-economic status [including homelessness], Religion-spirituality [Christian, Jewish, Muslim, other], Disability-ability [intellectual, motor, sensory, etc], Gender identity, Former prisoners, Ex-military)
+- Culture is defined as:
+  - The social behavior and norms found within a human society
+  - the set of customs, traditions, and values of a society [or nation]
+  - the set of [learned] knowledge acquired over time.
+- In this sense, multi-culturalism is the peaceful coexistence and mutual respect between different cultures inhabiting the same region/nation
+- In terms of psychology, it is the systematic cultural differences that exist in development, cognitive-language, social, personality, psychopathology and the needs/expectations associated with psychotherapy
+- Concepts
+  - Ethnocentrism: judging another culture by one’s own cultural standards – these are attitudes/beliefs about own (in-group) cultural norms and becomes a problem when it leads to [discriminative] behaviour toward another (out-group) culture – eg eye contact
+  - Cultural relativism: judging a culture by its own cultural standards – contextualize/understand behaviour within each culture – but does that make all behaviours acceptable – consider infanticide and male/female circumcision
+  - Cultural universals: aspects of culture common to all human cultures – these are norms of behaviour that are reality for people world-wide
+    - ETIC – what all cultures have in common
+    - EMIC – what is specific to each culture
+- Tripartite model
+  - Individual level – genetics and non-shared experiences – all individuals are unique and are not like other individuals [solely EMIC influences]
+  - Group level – all individuals are, in some respects, like other people [within a culture] [ETIC, but acknowledges EMIC influences]
+  - Universal level – all individuals are, in some respects, like all other individuals [across cultures] [solely ETIC influences]
+- Cultural diversity in Australia
+  - Australia has one of the most culturally and linguistically diverse (CALD) populations in the world.
+  - It is estimated that about 40% of the Australian population is made up of immigrants and their children, and that about 15% speak a language other than English at home
+  - Over 120 ethnic communities with over 120 languages [not including indigenous groups and languages]
+  - 23.3 per cent of the people born overseas
+  - 3.1 per cent of the people are Indigenous.
+  - The migrant population in Australia generally fit within one of two broad classifications:
+    - Immigrants ─ those who chose to migrate to Australia voluntarily. Immigrants choose when to leave their country, where they go and when they return.
+    - People displaced from their home country, such as refugees, because of persecution on the basis of their race, religion, nationality, membership of a particular social group or political opinion.
+  - APS has recognized that people with diverse cultural backgrounds will be seeking psychological help and psychologists need to make the effort to address issues of cultural sensitivity and competency
+- Issues for Professional Psychology
+  - Why should professional psychologists be concerned with diversity?
+  - Is cultural diversity in psychology great enough to require psychologists to be trained in cultural competence?
+  - [Problem with] Western psychology:
+    - Makes a universal assumption - all psychological theories [including the psychotherapies] apply to everyone [irrespective of their culture]
+    - Has an ethnocentric outloo
+      - the only psychology taught to trainee psychologists is Western-based psychology
+      - Only diagnostic tool for mental disorders [DSM 5] is Western-based
+      - Trained only in Western psychotherapies [primarily CBT]
+  - Western psychology:
+    - Makes a universal assumption [see previous slide]
+    - Has an ethnocentric outlook [see previous slide]
+    - Is individualistic – and therefore
+      - causation of mental illness [and subsequent psychotherapeutic change] comes from within the person
+      - the social environment and environmental [cultural] context do not play a significant role
+    - If these three assumptions are correct, then there is no need for cultural competence, cultural training nor culture-specific psychotherapies
+    - Evidence from cross-cultural psychology
+      - Are there significant cultural differences in the major areas of psychology?
+
 ### Week 06 - Objective 2: Explain causation from a multicultural perspective and discuss the role of the DSM 5 in terms of cultural diversity
 
 ### Week 06 - Objective 3: What is migration stress and evaluate acculturation strategies to decrease stress
+
+- Researchers have evaluated the role and impact on the high rates of schizophrenia found in migrants groups [including refugees]. Here are some hypotheses and some evidence
+  - Hypothesis One: High schizophrenia rates in migrants are due to high rates in their countries of origin — not supported by evidence.
+  - Hypothesis Two: Migrants self-select due to predisposition to mental illness — partially true but not the sole explanation.
+  - Hypothesis Three: Migration stress causes schizophrenia in vulnerable individuals — not supported, as onset is delayed.
+  - Hypothesis Four: Misdiagnosis by host clinicians explains high rates — unsupported, as studies measure symptoms directly.
+  - Hypothesis Five: Cultural incongruity and ethnic density cause stress and mental illness — somewhat supported by research.
+- Enculturation and acculturation
+  - Enculturation is the process whereby humans learn the cultural norms and behaviours of their (first) and original culture [see parenting and child development]
+  - Acculturation begins to occur when humans migrate to a new national culture and begin to permanently reside within this new (host) culture. Humans in this context can choose to adapt to this new culture.
+- Afghan (refugees) [as a population] have severe depression, extreme anxiety and moderate levels of stress
+  - Strategy choice
+    - Integration (support of both cultures) is the best strategy
+    - Least effective strategy is marginalization (rejecting both cultures) – note this is likely to occur when refugees are forced to move because of political reasons and are forced to relocate in a society they do not wish to integrate with
+  - Reasons for outcomes
+    - Integration leads to [own] community support and acceptance of host community health services
+    - Marginalization led to no community support and minimal access to mainstream [hot culture] psychotherapeutic help
+
+|                    | High Enculturation                                 | Low Enculturation                                       |
+| ------------------ | -------------------------------------------------- | ------------------------------------------------------- |
+| High Acculturation | Integration (accept both origin and host cultures) | Assimilation (reject origins and accept host only)      |
+| Low Acculturation  | Separation (reject host and accept cultures)       | Marginalisation (reject both origins and host cultures) |
 
 ### Week 06 - Objective 4: Discuss the impact of different service models and psychotherapies in a multicultural society
 
 ### Week 06 - Objective 5: What is cultural competence and explain its training and evaluation
 
+- Cultural competence is defined as a psychotherapist acquiring four skills: Admission, Awareness, Knowledge, Skills
+- Any form of psychotherapy requires the following non-therapeutic elements:
+  - Mobilization of hope
+  - Faith in the therapist
+  - Therapists being an authoritative figure [for that client]
+  - Therapist being knowledgeable in all areas
+- Thus, if a [multi-cultural] client perceives the therapist as understanding the basics of their culture, they are more likely to
+  - Form a strong therapeutic relationship
+  - Disclose more
+  - Be more trusting
+  - Be more likely to accept therapeutic advice and be adherent to treatment goals – therapy will be culturally sensible
+- Admit limitations
+  - One of the major problems with learners is they have the mistaken belief that they know everything – even when they only get 50% on a final exam
+  - The Dunning-Kruger effect
+    - explains that “the less people know, the more they think they know”
+    - explains a cognitive bias in which people mistakenly assess their ability as greater than it is
+    - Indicates that without self-awareness, people cannot objectively evaluate their level of competence [or incompetence]
+  - This has two consequences
+    - They are not effective and thus make “fools” out of themselves
+    - They offend and alienate clients who are then more likely to drop out [attrition] and develop learned helplessness [no-one can help me]
+- Cultural self-awareness
+  - Competence requires self-awareness
+  - Get to know oneself – Psychologists should explore their own worldview [see lecture 3]
+  - Learn and understand own culture values, assumptions and biases [that is, explore own enculturation].
+  - This involves two theoretical exercises
+    - The role of own culture through Bronfenbrenner's six systems [see next page]
+    - Understanding own culture value dimensions and how they impact on own behavior [see next slides] [Hofstede's Culture]
+  - Being self-aware of own culture values [subjective reality] allows:
+    - A good theoretical and practical knowledge of the way culture has shaped and influence own behavior
+    - Allows social comparison between own culture [and own cultural perspective] and the client’s culture and their perspective [objective reality]
+    - Allows for understanding the context of the client [and the client’s behavior] and helps explain [contextualize] their problem/issue
+    - Will reduce ethnocentrism [negative comparison about the person [client] and their culture
+- Culturally appropriate clinical skills
+  - With good knowledge of own and the client’s culture, psychologists can develop culturally appropriate skills:
+    - Determine if there are any cultural limitations to therapy or to the types of acceptable therapies
+    - This may include:
+      - Cultural norms
+      - Religious restrictions
+      - Attitudes to western psychotherapy [especially for people who have chosen separation or marginalization acculturation strategies]
+  - Diagnosis – DSM 5 {ETIC] or Culture-bound syndrome [EMIC] and assessment – Gold standard assessments or ones adapted for different cultures [clinicians need to seek out research that has adapted Western tests]
+  - Therapy – There are a range of therapies that can be modified to suit all clients [including clients from diverse cultural backgrounds]
+    - Learn about any cultural adaptations of Western treatments that have been demonstrated to be effective
+    - Adapt existing therapies:
+      - Talking [includes self-disclosure] versus action [doing/practical/skills-based]
+      - Specific [focus on simple skill development] versus broad [wider cultural consequences]
+      - Brief therapy [short term] versus standard sessions [long-term for more complex problems]
+- Training cultural competence
+  - Multi-cultural issues should be part of each psychology course [assessment; psychopathology; psychotherapy], rather than a single, isolated course [so students perceive it as integral to each topic]
+  - Actively recruit students from diverse backgrounds to contribute to multi-cultural debates in class. In fact, it is recommended that honours students applying for Masters programs should indicate their multicultural life experiences [at home and work] to enhance the cohort experience
+  - Make sure all students gain an awareness of their own worldview and the role that their culture played in its development [enculturation]
+  - Ensure that students are challenged in terms of ethnocentric beliefs to ensure they have sound cultural knowledge and are aware of any potential cultural biases
+  - Recruit teaching staff who have worked in [or researched in] multi-cultural settings and that they are encouraged to use this experience as part of their educational, academic role
+  - At the moment, all clinical psychologists have to complete a psychiatric placement. However, these courses should also ensure one of the other placements involves either multi-cultural or indigenous clients
+  - At the moment, all clinical psychologists have to demonstrate clinical competence [assessment, therapy, evaluation]. However, at least one of these end of the program assessments should also evaluate cultural competence
+  - This will also evaluate whether these particular programs are graduating psychologist who are culturally competent
+
 ## Week 08 - Explaining stigma
 
 ### Week 08 - Objective 1: Explain the emerging conceptualization of human behaviour
 
+- Conceptualization of human behaviour
+  - Step 1. The first step was to divide humans into categories [noting, that the initial division implied difference rather than any values [superior or inferior]
+    - Original categories adopted by western civilization
+      - Gender [originally the gender binary of male versus female]
+      - Age [originally child versus adult]
+      - Physical size [originally small versus large]
+    - At this stage, people excelled at what they did well at – in evolutionary terms adult males who were physically strong hunted for food and protected others and adult females gathered food and nurtured young
+  - Step 2. As psychology developed into a science it created hypothetical constructs [labels for a cluster of behaviours] and applied actions to these differences
+    - One of these original hypothetical constructs to be adopted by western civilization was intelligence. It was initially created by the French psychologist Alfred Binet, who, following the introduction of a law mandating universal education by the French Government began developing a method of identifying "slow" children, so that they could be placed in special education programs, instead of labelled sick and sent to asylums
+  - Step 3. As psychology evolved, assessments for these hypothetical constructs [labels] evolved so that they could be quantified along a continuum rather than just being types [categories]
+    - For example: Binet’s concept of intelligence divided: children into normal versus special, but soon, it was quantified along a continuum that was named the [statistical] normal curve
+  - Step 4. The next step was to equate statistically abnormal [two standard deviations above and below the mean] to cultural values [one was desirable and the other less desirable]
+  - Step 5. The final step was to provide labels [summaries]
+    - For intelligence, psychiatrists originally used the following terms
+      - Idiot = IQ between 0 – 25
+      - Imbecile = IQ between 26 – 50
+      - Moron = IQ = 51 – 70
+    - Then they used
+      - levels of mental retardation
+      - Then levels of intellectual handicap
+      - Then a shift to people with an intellectual disability
+    - Note, the labels changed as the general public began to use the terms in a derogatory manner [an insult to call someone a “moron”
+  - Conquense
+    - Hence, from an original attempt to differentiate between human behaviours using an objective statistical procedure, a normal range of behaviours changed into abnormal [with culture values]
+    - Thus a distinction between normal [average and above average] and abnormal/less desirable [below average]
+    - Society defines normal as any behaviour that is typical for a person and includes all behaviours that conform to the most common behaviours in society – note: all human behaviour is normal for that species
+    - However, psychologists and psychiatrists had [and still have] difficulty with trying to define “normal” and thus have focussed solely on attempting to define “abnormal”
+- Abnormal label and stigma
+  - Human behaviour varies
+  - Scientist measures this variation and quantifies normal/abnormal
+  - Scientist label those humans [not their behaviour] with titles
+  - Society adds values to the labels associated with abnormal [can be positive – genius or can be negative – moron]
+  - This label attracts sets of stereotypes [generalizations about people who have been assigned that label], and this then leads to a consistent response to the labelled individual
+    - For example, a stereotype that people with mental illness are dangerous, therefore [any one] people will avoid them [not give them a job, not interact with them socially, etc]
+  - Finally, [most of] society treats people differently depending on their label – under the guise of helping them – benevolent discrimination – By creating institutions for the feeble-minded – originally housing people with intellectual and psychiatric problems
+  - This lead to reduced opportunities for these individuals to learn and interact in society, and this leads
+    - To negative discrimination and ultimately leads to stigmatization
+  - Rest of lecture
+    - Role of DSM classification system
+    - Development, impact and potential amelioration of stigma
+
 ### Week 08 - Objective 2: Discuss DSM 5 in terms of development, general issues raised during development and the issue of pathologizing normal behaviour
 
+- Conceptualization of DSM
+  - History of DSM systems were to diagnose abnormal behaviour so the mental health professionals could better treat them [correct diagnoses would lead to targeted therapies]
+  - Originally used hypothetical constructs but early psychological research showed that the diagnoses were not reliable [poor inter-rater reliability – same case was given different diagnoses]
+  - From DSM III onward shifted to using statistical measures of behaviour [need to have X symptoms for Y time to be diagnoses as having Z] which was reliable, but questioning their validity
+  - The first challenge came from the anti-psychiatry movement of the 60s and 70s who claimed there was no such thing as mental disorder and that psychiatry was simply using medical power to control the normal variation in human behaviour
+  - DSM 5 had two pressures
+    - As psychiatry moved from asylums to hospitals to community care there was an extra challenge to distinguish disorder [abnormal behaviour] from the immense normal distress in the general community
+    - Pressure from pharmaceutical companies to use medication to treat a greater range of symptoms [over 50% of the DSM 5 development team indicated they had direct affiliations with pharmaceutical companies]
+  - As a consequence, there has been a continued expansion of disorders
+  - And thus, the reality that 45-50% of Australians will have a diagnosable mental health problem in their life-time [prevalence] and 15-20% will experience a mental health problem each year [incidence] [distortion of that normal curve]
+- General issues:
+  - DSM 5 and not DSM V – can easily update e.g. 5.1 then 5.2 etc
+  - It is still an EMIC-derived [US] system that is ETIC-imposed around the world
+  - Moved away from the original empirical basis to a more intuitive clinical basis – considered a political document rather than scientific [relied on opinion rather than scientific fact]
+  - Failure to appreciate individual differences [e.g. gender – see next slides]
+  - Diagnostic expansiveness [see future slides in this section]
+  - Gender issues
+    - Male dominated ADHD – in general, boys are more likely to
+      - Play actively
+      - Move from one activity to another
+      - Act aggressively if ignored by others and therefore more likely to be diagnosed as abnormal
+    - Female-dominated depression – in general females are more likely to
+      - Express discontent and distress in everyday life
+      - React negatively to difficulties in romantic relationships
+      - Be exposed to everyday stress and discrimination and therefore more likely [than males] to be diagnosed as abnormal
+  - DSM classification system fails to consider the statistical difference in the normal range of behaviours and thus any universal cut off will discriminate on the grounds of sexism
+  - Over-diagnosis – pathologizing normal behaviours
+    - Shyness or normal introversion is being diagnosed as “Social Phobia.”
+    - The individual process of healthy grieving at loss might be diagnosed as “Major Depressive Disorder.” [if it takes longer than six months]
+    - Healthy, strong willed or active children are often diagnosed as having “Oppositional Disorder.”
+    - Children who are restless, non-compliant or not academically oriented are diagnosed with “Attention Deficit Hyperactivity Disorder” [and medicated]
+    - Meaningful and healthy worry about life might be diagnosed as “General Anxiety Disorder” and medicated away
+    - Those with feelings of hopelessness and despair related to the burden of social injustice and poverty might be diagnosed with “Depression.”
+    - Gender
+      - Male behaviours [autonomy and individualism] are considered healthy but males with behaviour traditionally classified as feminine, such as valuing emotional attachment and interdependence and the tendency to be cautious in expressing disagreement with others, have been codified as personality disorders in males
+      - In a clear gender biased approach, which socially stigmatizes female, natural changes in cognition and emotions resulting from normal hormonal variations have now been codified as Premenstrual Dysphoric Disorder (PMDD) [with no parallel diagnoses for men]
+      - Research has shown that with the same symptoms, clinicians more readily, judge a female patient as being mentally ill [compared to a male]. [see next slide]
+      - Diagnostic gender bias: A study by Kaplan (2015) asked experienced clinicians to diagnose case studies [an antisocial personality case study and a histrionic personality case study].
+    - Socio-economic class
+      - The DSM ignores the reality of stress due to poverty and lack of social power and tends to pathologize/label the poor as antisocial, psychotic or paranoid [blame the victim].
+      - Research has demonstrated that with the same symptoms, members of the dominant class are more likely to receive a diagnosis of “Bi-polar disorder,” while those of lower socio-economic classes are diagnosed as “schizophrenic.”
+      - USA research has shown that psychotherapists are more likely to give a DSM diagnosis (i.e., to claim that the person is suffering from a mental disorder) to clients who have health insurance coverage, than to those who pay for services “out-of-pocket”
+    - Geriatric populations
+      - The elderly are often isolated and disempowered in our culture. As a result, their understandable reactions of low self-esteem, feelings of hopelessness, helplessness, etc., are often routinely diagnosed as a mental disorder (e.g., depression or organicity). They are medicated rather than viewed as experiencing a normal reaction to social isolation and stress due to valid concerns regarding lack of available basic necessities such as food, shelter and health care.
+      - The new DSM-5 diagnosis, Minor Neurocognitive Disorder, burdens a large false positive population of normal people, who experience natural minor decline in cognitive function, with a label of mental illness.
+    - LGBTI+ populations
+      - While homosexuality is no longer listed by name in the DSM, people with different sexual orientation/preferences/identities are still included in DSM-5, under the diagnosis of a generic label of Gender Dysphoria.
+      - This new label covers the emotional and psychological stress associated with both Sexual and Gender Identity issues
+      - This dysphoria could easily be considered as not a disorder, but a reality based “normal” discomfort for people growing up in a LGBTI+ phobic culture known for hate crimes against their population.[see next learning objective]
+  - Conclusion:
+    - Reliable and valid diagnostic tools can be very helpful in assisting people in healing and becoming healthier.
+    - The DSM is more of a political document then a scientifically based text.
+    - DSM is biased toward an intra-psychic-individual focus at the exclusion of environmental, societal, political and familial concerns.
+    - DSM discriminates against females, ethnic minorities, the lower class, the elderly, gender and sexual minorities or anyone who deviates from the dominate values held by upper class males who created it.
+    - DSM is constructed predominantly by biological psychiatrists with strong influences from pharmaceutical and managed care companies. As a result, the DSM focuses on individual pathologies that are supposedly “cured” by psychotropic drugs.
+    - DSM 5 has become a tool with which therapists can use their position of authority to distance themselves from their clients by labelling them as having specific mental disorders.[they have a diagnoses for every behaviour]
+    - Consequently, therapists can hide behind a professional façade, avoiding the reality that many clients are simply fellow human beings who are normally suffering from anxieties, sorrows and despairs, primarily related to the multiple imbalances of our modern culture [they can provide therapy but cannot address wider contextual causes]
+    - Finally, because of its dual role of legitimacy, the DSM perpetuates the problem of stigmatization at the cost of those who seek help for mental health problems
+
 ### Week 08 - Objective 3: Theoretically explain how DSM labels help create stigma toward people with mental health problems
+
+- A brief history
+  - While homosexuals have historically experienced many different forms and types of intolerance, perhaps some of the most harmful discrimination in recent decades can be said to have come from mental health and medical professionals.
+  - Historically these professionals have labelled homosexuals as abnormal, pathological, and deviant.
+  - In the 1950s, the American Psychiatric Association (APA) made this discrimination against homosexuals official when it classified homosexuality as a mental disorder.
+  - This label had a huge impact on the homosexual community, which was just then beginning its fight for acceptance in mainstream society.
+  - Classification of homosexuality underwent major changes in different editions DSM – without any scientific evidence to support theories of psychopathology – nor any evidence of efficacy for any form of conversion therapy [See next slides]
+- Removal
+  - The APA DSM IIIR diagnostic revision was the beginning of the end of organized medicine’s official participation in the social stigmatization of homosexuality.
+  - Similar shifts gradually took place in the international mental health community as well. In 1990, the World Health Organization removed homosexuality per se from the International Classification of Diseases (ICD-10)
+  - As a consequence, debates about homosexuality gradually shifted away from medicine and psychiatry and into the moral and political realms as religious, governmental, military, media, and educational institutions were deprived of medical or scientific rationalization for discrimination
+- However, since removing homosexuality from the DSM system, it has taken over 50 years to achieve [although still only in a minority of nations]
+  - the repeal of sodomy laws that criminalized homosexuality
+  - laws protecting the human rights of lesbian, gay, bisexual and transgender (LGBTI+) people in society and the workplace
+  - the ability of LGBTI+ personnel to serve openly in the military
+  - marriage equality and civil unions
+  - the facilitation of gay parents’ adoption rights and gay spouses’ rights of inheritance
+  - an ever increasing number of religious denominations that would allow openly gay people to serve as clergy.
+- Most importantly, in mental health professions, removing the diagnosis from the DSM led to an important shift from asking questions about “what causes homosexuality?” and “how can we treat it?” to focusing instead on the health and mental health needs of LGBTI+ patient populations – due to stigma which they jointly caused
+- Although researchers long ago documented that “illness” models regarding homosexuality lacked sufficient empirical support, there has been increasing concern that lesbians and gay males may be at elevated risk for some psychological disorders because of the harmful effects of social stigma
+- Researchers have shown
+  - that mental disorders, particularly anxiety, depression and substance use disorders, are influenced by the effects of social stress
+  - Homosexuality is still widely stigmatized
+  - Lesbians and gay males commonly report histories of victimization and discrimination
+- As a consequence, homosexuality appears to be a risk indicator for higher rates of psychological distress and some mental disorders
 
 ### Week 08 - Objective 4: Explain public and self-stigma and discuss strategies for changing stigma
 
@@ -159,11 +408,87 @@ The suicide attempt occurred after Maria’s husband, Esteban, her high school s
 
 ### Week 09 - Objective 2: What is a wicked problem: definition and parameters
 
+- A wicked problem
+  - is a problem that is difficult or impossible to solve
+  - has complex interdependencies and thus
+    - There are many determinants of the problem
+    - The problem is caused by many factors but may also be a factor or cause of other wicked problems
+    - the effort to solve one aspect of a wicked problem may reveal or create other problems
+  - is a problem whose social complexity means that it has no determinable stopping point
+- Rittel and Webber coined wicked problems in the context of large social issues [requiring involvement of social policy]
+- Psychology will be challenged because
+  - Wicked problems are applied, community problems
+  - More than a purely scientific approach [social policy]
+  - Lack of clear definition of the problem
+  - Many determinants – most not individual-based
+  - Lack of objective measures of variables
+  - Involvement of multiple stakeholders [in a pluralistic society]
+  - Lack of a clear simple [optimal] solution – eg, what is in the best interests of the public?
+- Wicked problems are characterised by the following:
+  - The solution depends on how the problem is framed and vice versa (i.e., the problem definition depends on the solution)
+  - Different stakeholders have radically different world views and different frames for understanding the problem. [see previous lecture]
+  - The constraints that the problem is subject to the resources needed to solve it change over time.
+  - The problem is never solved definitively.
+- Thus wicked problems cannot be solved by the application of standard (or known) methods; they demand creative solutions
+- Psychology successfully addresses tame problems [see next slides]
+
+| **Parameter**                | **Tame Problem**                                                                | **Wicked Problem**                                                                           |
+| ---------------------------- | ------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| **The problem**              | Clear definition (including cause) unveils the solution                         | No agreement exists on what the problem is; each attempt at a solution changes the problem   |
+| **Thought process**          | Linear                                                                          | Complex system                                                                               |
+| **Role of stakeholders**     | The cause of the problem is determined by (scientific) experts within the field | Many stakeholders with different perspectives on what the problem is and what the causes are |
+| **Outcomes**                 | Outcome is either true or false; successful or unsuccessful                     | Unknown outcome – may be better, worse, acceptable or not acceptable                         |
+| **The stopping role (time)** | The task is complete when the problem is solved                                 | The end is determined by stakeholders, political decisions, or resource limitations          |
+| **Nature of the problem**    | There is scientific methodology (best practice) to guide a solution             | No best practice; solutions are based on stakeholder judgments                               |
+| **Solution factors**         | Cause and effect analysis                                                       | Multiple feedback analysis (from stakeholders)                                               |
+| **Value system**             | Shared outcome values                                                           | Values remain in dispute or in conflict                                                      |
+
 ### Week 09 - Objective 3: Using the example of "Domestic violence“, explain the 10 characteristics of a wicked problem
 
 ### Week 09 - Objective 4: What is a mind map: definition and creation of mind maps
 
+- A mind map
+  - is used to visually organize information.
+  - is hierarchical and shows relationships among the parts of the whole
+  - is typically created around
+  - a single [central] concept/idea
+  - a surprising or impactful [distal] example/instance
+- For example:
+  - Central concept may be gender inequality
+  - Proximal notion: male gender toxicity
+  - Distal example: Males who committing domestic violence [murder/suicide]
+- Mind maps can be used
+  - to generate, order/structure, link concepts and classify ideas
+  - to write essays, make decisions, create/conceptualise [this] course and each of the lectures
+  - solve [tame] problems
+  - in conjunction with brainstorming to workshop wicked problems
+    - Different stakeholders create own mind maps and then these are integrated into a larger, complex mind map that may highlight solutions to the wicked problem
+- Research on undergraduate student use of mind maps have concluded that mind maps:
+  - Have helped them understand concepts and ideas better than just reading
+  - Will improved memory recall compared to their preferred study method
+  - are more effective in understanding material than attending lectures or participating in tute class discussions
+  - may benefit low-ability students more than high-ability students [who may only [visually] imagine these concepts and their relationship]
+
 ### Week 09 - Objective 5: Explain the three major strategies to progress the resolution of wicked problems
+
+- Wicked problems cannot be tackled by the traditional approach in which problems are defined, analysed and solved in sequential steps. The main reason for this is that there is no clear problem definition of wicked problems.
+- Three major strategies to progress the resolution of wicked problems/big issues are (Note, these are strategies to tackle wicked problems rather than strategies to resolve the wicked problem)
+  - Authoritative
+  - Competitive
+  - Collaborative
+- Authoritative [experts who know what is good for all of us]
+  - This strategy seeks to tame wicked problems by vesting the responsibility for solving the problems in the hands of a few people.
+  - Advantage: The reduction in the number of stakeholders reduces problem complexity, as many competing points of view are eliminated at the start.
+  - Disadvantage is that authorities and experts charged with solving the problem may not have an appreciation of all the perspectives needed to tackle the problem.
+  - Example: NT Intervention attempting to resolve domestic violence in indigenous communities – restrictions on Indigenous Australians in terms of spending welfare money and alcohol consumption
+- Competitive [use separate groups of experts to create unique solutions – that can be integrated by policy makers]
+  - These strategies attempt to solve wicked problems by pitting opposing points of view against each other, requiring parties that hold these views to come up with their preferred solutions.
+  - Advantage of this approach is that different solutions can be weighed up against each other and the best one [or combination] can be chosen.
+  - Disadvantage is that this adversarial approach creates a confrontational environment in which knowledge sharing is discouraged. Consequently, the parties involved may not have an incentive to come up with the best possible solution.[only a solution that is best for them]
+- Collaborative [nominated community group that democratically determine what is good for the community]
+  - These strategies aim to engage all stakeholders in order to find the best possible solution for all stakeholders. Typically these approaches involve meetings in which issues and ideas are discussed and a common, agreed approach is formulated
+  - Advantage: All stakeholders [who are being affected by the wicked problem] become participants of the planning process – the idea – being actively involved in the planning process leads to more commitment and improved implementation
+  - A disadvantage of this approach is that achieving a shared understanding and commitment to solving a wicked problem is a time-consuming process – and involvement of Governments has been shown to lead to collapse or breakdown of any collaboration
 
 ## Week 10 - Future challenges in professional psychology
 

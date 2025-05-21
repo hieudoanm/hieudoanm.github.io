@@ -74,25 +74,53 @@ The suicide attempt occurred after Maria’s husband, Esteban, her high school s
 
 ### Week 06 - Objective 1: What is cultural diversity, its relevance to Australia and to professional psychology
 
+Culture is distinct from diversity, though often confused with it. While diversity includes variables like gender, age, sexual orientation, disability, and socioeconomic status, culture refers to shared behaviors, customs, values, and learned knowledge within a society. Multiculturalism emphasizes peaceful coexistence and mutual respect among different cultural groups. In psychology, culture shapes development, cognition, personality, psychopathology, and therapeutic needs. Concepts such as ethnocentrism (judging others by one’s cultural standards), cultural relativism (understanding behaviors in their own cultural context), and cultural universals (traits common across all cultures) help contextualize cultural impacts. The tripartite model further explains how individuals are influenced at the unique, group, and universal levels.
+
+Australia exemplifies cultural diversity, with around 40% of its population being immigrants or their children, and 15% speaking a language other than English at home. This diversity challenges the ethnocentric assumptions of Western psychology, which often overlooks cultural context by focusing on individualism and internal causes of mental illness. Professional psychologists are increasingly called to develop cultural competence, acknowledging that Western-based theories, diagnostic tools like the DSM-5, and therapies like CBT may not universally apply. Cross-cultural psychology underscores the importance of training psychologists to address cultural differences to ensure equitable and effective psychological care.
+
 ### Week 06 - Objective 2: Explain causation from a multicultural perspective and discuss the role of the DSM 5 in terms of cultural diversity
 
 ### Week 06 - Objective 3: What is migration stress and evaluate acculturation strategies to decrease stress
+
+Researchers have proposed five hypotheses to explain the high rates of schizophrenia among migrant groups, including refugees. The first hypothesis—that countries of origin have high schizophrenia rates—lacks evidence. The second suggests self-selection, where individuals predisposed to mental illness are more likely to migrate; this is only partially true. The third hypothesis claims migration stress causes schizophrenia in vulnerable individuals, but data shows the onset peaks 10–12 years post-migration, not immediately. The fourth posits that high rates are due to misdiagnosis by host clinicians, but most studies assess symptoms directly, not diagnoses. The fifth hypothesis, which is somewhat supported, argues that cultural incongruity and ethnic density lead to acculturative stress, learned helplessness, and increased mental illness, particularly among marginalized migrant communities.
+
+Enculturation refers to learning and internalizing one’s original cultural norms, often from childhood. Acculturation occurs when individuals migrate and begin adapting to a new national culture. Acculturation strategies influence mental health outcomes. _Integration_—accepting both original and host cultures—is linked to better support and access to services. In contrast, _marginalization_—rejecting both cultures—is associated with poorer outcomes, including limited community support and reduced access to mental health care. Afghan refugees, for example, often report high levels of depression and anxiety, especially when they experience marginalization due to forced displacement and cultural disconnection.
 
 ### Week 06 - Objective 4: Discuss the impact of different service models and psychotherapies in a multicultural society
 
 ### Week 06 - Objective 5: What is cultural competence and explain its training and evaluation
 
+Cultural competence in psychotherapy involves four key skills: admission of limitations, self-awareness, cultural knowledge, and clinical application. For therapy to be effective, clients must perceive the therapist as culturally understanding, which strengthens the therapeutic relationship, encourages disclosure, and improves adherence to treatment. Therapists must recognize their limitations—highlighted by the Dunning-Kruger effect—since overestimating competence can alienate clients and reduce treatment success. Self-awareness is essential, requiring therapists to reflect on their own cultural values and biases shaped through enculturation. Tools like Bronfenbrenner's systems and Hofstede’s dimensions help psychologists understand their worldview and compare it to their clients', reducing ethnocentric judgments.
+
+Cultural knowledge enables therapists to develop culturally appropriate skills in assessment, diagnosis, and treatment. This includes adapting Western therapies and considering cultural or religious norms that affect therapy’s acceptability. Training programs must integrate multicultural content throughout all areas of psychology and evaluate cultural competence alongside clinical skills. Diverse student recruitment and culturally-informed teaching staff are also essential. Including multicultural or Indigenous placements ensures that graduates are prepared to provide competent and sensitive care in diverse settings.
+
 ## Week 08 - Explaining stigma
 
 ### Week 08 - Objective 1: Explain the emerging conceptualization of human behaviour
 
+The conceptualization of human behaviour began with categorizing people by traits like gender, age, and size—initially as neutral differences. As psychology developed, it introduced hypothetical constructs such as intelligence to better understand and assess behaviour. Alfred Binet pioneered intelligence testing to identify children needing special education, which evolved from binary categories into measurable continuums like the normal curve. Eventually, statistical deviations were culturally evaluated, with higher scores seen as desirable and lower scores as less desirable. This gave rise to labels like “idiot” or “moron,” which shifted over time to more neutral terms such as “intellectual disability” as public usage turned derogatory.
+
+These labels, while intended to objectively describe behaviour, became attached to individuals, attracting stereotypes that influence how society treats them. For example, people with mental illness may be stereotyped as dangerous, leading to social avoidance, reduced employment opportunities, or institutionalization. Such responses, even when framed as help, often result in benevolent discrimination, reinforcing stigma and limiting inclusion.
+
 ### Week 08 - Objective 2: Discuss DSM 5 in terms of development, general issues raised during development and the issue of pathologizing normal behaviour
 
+The DSM, originally developed to classify and diagnose abnormal behaviour for targeted treatment, has evolved from hypothetical constructs to symptom-based criteria for greater reliability. However, its validity remains debated, especially under pressures from the anti-psychiatry movement and pharmaceutical influence. DSM-5 faces criticism for expanding diagnoses to pathologize normal behaviours, contributing to high prevalence rates of mental illness in the population. Moreover, it operates as an EMIC (US-based) system imposed globally (ETIC), and is seen more as a political document than a scientific one. Its reliance on clinical opinion, rather than empirical evidence, undermines individual and cultural differences, reinforcing a biased and often exclusionary framework.
+
+Critiques highlight gender, socioeconomic, age, and LGBTI+ biases within the DSM. Females, the elderly, the poor, and sexual minorities often face misdiagnosis due to sociocultural prejudices codified as mental illness. These diagnostic practices favour a Western, male-dominated worldview, ignoring broader environmental or systemic factors. Ultimately, while the DSM offers clinical utility, it also reinforces stigmatization and marginalization, privileging pharmaceutical treatments and distancing therapists from clients’ lived realities.
+
 ### Week 08 - Objective 3: Theoretically explain how DSM labels help create stigma toward people with mental health problems
+
+Historically, mental health professionals significantly contributed to the stigmatization of homosexuality by labeling it as a disorder. In the 1950s, the American Psychiatric Association classified homosexuality as a mental illness, legitimizing discrimination. This label, lacking scientific evidence, harmed the emerging gay rights movement and justified harmful practices like conversion therapy. The APA’s eventual removal of this classification, followed by the World Health Organization’s 1990 decision to eliminate homosexuality from the ICD, marked a shift away from medicalized discrimination.
+
+Since then, progress has been made in repealing sodomy laws, securing workplace protections, enabling military service, marriage equality, and adoption rights for LGBTI+ people. The mental health field also shifted its focus toward understanding the needs of LGBTI+ individuals, recognizing that social stigma, not homosexuality, contributes to mental health risks. Research shows that ongoing discrimination leads to increased rates of depression, anxiety, and substance use disorders among lesbians and gay males, reflecting the enduring impact of stigma.
 
 ### Week 08 - Objective 4: Explain public and self-stigma and discuss strategies for changing stigma
 
 ### Week 08 - Objective 5: Discuss the future role of psychology in the area of stigma
+
+Most stigma research tends to focus on individual psychological factors—such as gender or literacy—particularly in the context of help-seeking behavior. This approach can unintentionally reinforce a “blame the victim” narrative and promote clinical interventions aimed solely at the individual. However, stigma is not just a personal issue; it is deeply embedded within the broader social structures that shape society, such as laws, social services, and the justice system. These structures influence how resources are distributed and often perpetuate systemic disadvantage.
+
+To address stigma effectively, research and interventions must shift toward examining and transforming these underlying social structures. Key challenges include evaluating the cost-benefit of labeling mental illness, understanding the risks of pathologizing normal behavior, and confronting the cultural norm in Western societies of avoiding discomfort—both physical and psychological. Moreover, the widespread use of medication to manage symptoms without tackling root causes contributes to the problem. A major priority is to develop and implement strategies that reduce stigma at both individual and societal levels.
 
 ## Week 09 - Big issues/Wicked problems
 
@@ -100,11 +128,27 @@ The suicide attempt occurred after Maria’s husband, Esteban, her high school s
 
 ### Week 09 - Objective 2: What is a wicked problem: definition and parameters
 
+Wicked problems are complex, socially embedded issues that are difficult or impossible to solve definitively. Coined by Rittel and Webber, the concept highlights that these problems have many causes and interdependencies—solving one part can reveal or create new problems. Wicked problems lack a clear definition, have no stopping point, and require more than scientific methods; they involve social policy, changing constraints, and conflicting stakeholder views in a pluralistic society.
+
+In contrast to tame problems—which are clearly defined, linear, and solvable through expert-driven analysis—wicked problems are dynamic and resist simple solutions. Their framing depends on the proposed solution, and outcomes are unpredictable or subjective. Psychology, traditionally successful with tame problems, struggles with wicked ones due to their applied, community-based nature, lack of objective variables, and the need for creative, interdisciplinary approaches. Addressing wicked problems requires ongoing collaboration, flexible thinking, and acknowledgment of competing values and interests.
+
 ### Week 09 - Objective 3: Using the example of "Domestic violence“, explain the 10 characteristics of a wicked problem
 
 ### Week 09 - Objective 4: What is a mind map: definition and creation of mind maps
 
+A mind map is a visual tool used to organize information hierarchically, highlighting the relationships between different ideas. It typically begins with a central concept—such as gender inequality—and branches into related ideas, like male gender toxicity, and more distal examples, such as domestic violence. Mind maps are useful for generating, linking, and classifying ideas, and are commonly used for tasks like essay writing, decision-making, and course planning. They are also valuable in addressing “tame” problems and brainstorming “wicked” problems, where multiple stakeholders contribute individual mind maps that are later integrated to explore complex solutions.
+
+Research on undergraduate students shows that mind maps significantly improve understanding and memory recall compared to traditional methods like reading or attending lectures. They help students engage more deeply with material and organize concepts more effectively. Interestingly, mind maps may be especially helpful for low-ability students who benefit from the visual structure, while high-ability students may already mentally visualize these connections without needing a physical map.
+
 ### Week 09 - Objective 5: Explain the three major strategies to progress the resolution of wicked problems
+
+Wicked problems are complex and lack clear definitions, making them unsuitable for traditional, step-by-step problem-solving methods. Instead, they require flexible approaches that can adapt to evolving challenges and multiple perspectives. Each strategy has trade-offs depending on the context of the wicked problem. Three main strategies are used to tackle wicked problems: authoritative, competitive, and collaborative. These aim to manage, not necessarily solve, the issues.
+
+The authoritative strategy places control in the hands of a few experts, reducing complexity by limiting stakeholder involvement. However, this can overlook important perspectives. An example is the Northern Territory Intervention, where top-down policies were applied to Indigenous communities.
+
+The competitive strategy pits groups against each other to generate solutions, encouraging variety but risking conflict and poor cooperation.
+
+The collaborative strategy involves all stakeholders in finding a shared solution, improving commitment and implementation. Yet, it is time-consuming and vulnerable to failure, especially with inconsistent government support.
 
 ## Week 10 - Future challenges in professional psychology
 
