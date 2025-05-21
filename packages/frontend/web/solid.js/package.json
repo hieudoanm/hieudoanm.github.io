@@ -34,7 +34,7 @@
     "@solidjs/start": "1.1.4",
     "@tanstack/solid-query": "5.76.0",
     "@tanstack/solid-table": "8.21.3",
-    "@tanstack/solid-virtual": "3.13.8",
+    "@tanstack/solid-virtual": "3.13.9",
     "chess.js": "1.2.0",
     "chessground": "9.2.1",
     "gif.js": "0.2.0",
