@@ -405,6 +405,59 @@ The suicide attempt occurred after Maria’s husband, Esteban, her high school s
     - Asch conformity
     - Milgram obedience
     - Zimbardo power of environment
+  - No true bio-psychosocial explanation of human behaviour
+    - No comprehensive theory of
+    - Normal human behaviour
+    - Abnormal human behaviour
+    - The cause and treatment of any big issues in society
+  - Ultimate
+    - Using quantitative [deductive] research that focuses on evaluating existing theories – no new theory of human behaviour since the 1950s
+    - Focusing on the individual and therefore ignoring half the problem
+    - [Actively] avoiding getting involved in resolving big issues in society – the profession of psychology tried to remain value-free
+    - Remained silent/inactive on major social issues
+    - Allow social injustice – e.g. stolen generation
+    - Do not address major issues such as domestic violence etc.[value-free]
+    - Cannot comprehensively address major issues [limited to abnormal personalities]
+  - Proposed resolution
+    - Shift from a stated policy of non-involvement – this, in itself, is a wicked problem for the psychology profession
+    - Shift from the bio-medical [treating the symptoms of individual – a reactive treatment strategy] to the bio-psychosocial [identifying and moderating the causes of problems – a pro-active, preventive health strategy]
+- Big issues
+  - Stigma associated with mental health problems
+  - Discrimination/harassment [racism, sexism, ageism etc]
+  - Persistence of mental health problems [depression, suicide]
+  - Poverty [intrinsic in capitalist countries – people make profits off others]
+  - Homelessness [linked to poverty, mental health, domestic violence]
+  - Obesity epidemic
+  - Terrorism
+  - Global climate change
+  - Global over-population and dismutation of natural resources [water, food]
+- Domestic violence is aggression by one person against another in a domestic setting
+  - Definitions
+    - It takes place in heterosexual or same sex relationships, or between former partners.
+    - It can involve violence against children, parents, or the elderly.
+    - It takes many forms including physical, verbal, emotional, economic and sexual abuse
+    - It can range from subtle, coercive forms to marital rape and to violent physical abuse such as choking, beating, disfigurement and death
+    - Ultimate forms include domestic murders, stoning, bride burning, honour killings and dowry deaths
+    - Globally males are overwhelmingly perpetrators and females overwhelmingly victims
+  - The victims are more likely to females and offenders are more likely to be males
+  - Some possible causes – list is not exhaustive
+    - Pathologizing the victim – why not just leave
+    - Pathologizing the offender – anti-social personality disorder
+    - Role of modern day stress
+    - Role of drugs [especially alcohol]
+    - Biology/evolution – testosterone toxicity
+    - Male gender role – enculturation in a patriarchal society
+    - Inter-generational – history of family abuse
+    - Family systems – nuclear families in individualist societies
+    - Criminal justice system failures: police, courts, legislation
+    - Gender inequality and male privilege – intrinsic in societies [androcentric]
+    - Inherent in the political framework of most societies
+  - Theoretically, all of these causes have a solution, but
+    - any single solution is unlikely to resolve the overall problem of domestic violence
+    - to be effective a number of solutions will rely on other interventions
+    - some solutions may create unintended effects
+    - the most solutions will be ineffective because that solution does not remove the ultimate cause
+    - due to such complexity, this can be defined as wicked problem
 
 ### Week 09 - Objective 2: What is a wicked problem: definition and parameters
 
@@ -444,6 +497,79 @@ The suicide attempt occurred after Maria’s husband, Esteban, her high school s
 | **Value system**             | Shared outcome values                                                           | Values remain in dispute or in conflict                                                      |
 
 ### Week 09 - Objective 3: Using the example of "Domestic violence“, explain the 10 characteristics of a wicked problem
+
+1. There is no definitive formulation of a wicked problem
+   - For any given tame problem, an exhaustive formulation can be stated containing all the information for the problem-solver needs to understand and resolve the problem. E.g., psychotherapists counselling a battered partner using CBT
+   - However, for a wicked problem, the information needed to understand the problem will depend on the theoretical background of the problem-solver – a psychologist will see a problem differently than a sociologist, a social worker, a criminologist, an economist etc
+   - The information needed to solve DOMESTIC VIOLENCE depends on the creation of an exhaustive list of possible solutions. The challenge of defining the problem of DOMESTIC VIOLENCE is the problem (Rittel & Webber, 1973; p 161). Therefore the successful resolution of DOMESTIC VIOLENCE is identical with the process of understanding its nature.
+   - The DOMESTIC VIOLENCE literature identifies many causal explanations based on a wide range of theoretical approaches. These include:
+     - individual approaches (personality disturbance [psychopathology] and criminogenic factors [violent, crime prone]);
+     - family approaches (developmental [role of families]);
+     - societal (social psychological [attitudes, stereotypes]
+     - sociological [gender roles, stress]);
+     - socio-cultural (societal-structural theories [gender income and power inequality]
+     - Political [eg., feminist] [male violence to control and limit independence of females].
+2. Wicked problems have no stopping rule.
+   - The problem-solver of a tame problem knows when the solution has been reached – a psychologist with treatment goals when working with a clients who has experienced domestic violence
+   - Being aware of multiple causes and not being able to identify an ultimate cause of a wicked problem, there is insufficient understanding to reach a equitable solution – problem solvers cease when resources [time, money and effort] run out [that is, within the limitations of the project]
+   - Narrow solutions to tame (simple, straightforward) problems have simple criteria for success. DOMESTIC VIOLENCE is a wicked problem as there is insufficient understanding of its (real) prevalence, its impact or scope within a community and its causation.
+   - The challenge in DOMESTIC VIOLENCE is in obtaining and interpreting the statistics on domestic violence, including a scarcity of national data on reported domestic violence, its prevalence and particularly its impact on victims.
+   - The Victorian Royal Commission said the greatest problem limiting the data on family violence was the widespread under-reporting, as well as failure to identify the issue and gaps in recorded data on particular groups.
+3. Solutions to wicked problems are not true or false, but better or worse.
+   - For tame problems, there are conventional criteria for objectively deciding whether a solution is correct or false. For a domestic abuse survivor, the ongoing lack [six months follow up] of psychological distress [depression, anxiety, insomnia, nightmares, etc] can be independently checked by other clinicians
+   - For wicked problems, other professionals [especially from other disciplines] will have different perspectives on causation and intervention and the criteria for “correct” solutions
+   - The solutions to most tame problems can be judged as successful or not. In wicked problems such as DOMESTIC VIOLENCE such tests are not possible.
+   - In DOMESTIC VIOLENCE there are many stakeholders that have vested interests and are entitled to judge solutions.
+   - Each of these stakeholders [for example, social workers, criminologists, psychologists] will all have different perspectives on the causes of DOMESTIC VIOLENCE and therefore will each have a different criteria to judge whether the solution is good [fair] or bad [inadequate]
+4. There is no immediate and no ultimate test of a solution to a wicked problem.
+   - For a tame problem, the problem-solver can immediately determine how a good a solution-attempt has been – as the solution is under the control of the professional involved who is also interested in the outcome – for example, a psychologist will have discussed treatment goals with the client and once those goals have been achieved, therapy can be terminated
+   - For wicked problems, any solution after being implemented will generate intended and unintended consequences over an extended period of time. Only after these consequences are evaluated can a judgement can be made
+   - Rittel & Webber (1973) postulate that the full consequences of solutions to wicked problems cannot be judged until all intended and unintended repercussions have been evaluated over time.
+   - For example, increased criminal penalties for DOMESTIC VIOLENCE may lead to less DOMESTIC VIOLENCE but also may lead to less reporting [already a problem] or increased use of lethal violence
+5. Every solution to a wicked problem is a "one-shot operation"; because there is no opportunity to learn by trial and error, every attempt counts significantly.
+   - At individual case interventions, psychologists can develop innovative techniques over time to improve the success rate [individual variation in recovery level only impact on the individual and their context].
+   - With wicked problems, every implemented solution is going to have consequences that will permeate through society and may have changes that are effectively irreversible
+   - DOMESTIC VIOLENCE as a wicked problem, however, and every implemented solution is likely to be less than adequate (complete) and may have irreversible consequences that will have potentially negative effects on a wide range of people.
+   - Innovative solutions applied to DOMESTIC VIOLENCE have a higher probability of having unintended negative impacts that are long-term and effectively irreversible [for example, increase criminal penalties may lead to an overall decrease domestic violence, but may increase lethal acts – that is, increase domestic murder rates]
+6. Wicked problems do not have an enumerable (or an exhaustively describable) set of potential solutions, nor is there a well-described set of permissible operations that may be incorporated into the plan.
+   - This proposition refers to the inevitable conclusion that for any complex (wicked) problem, there is no guarantee that every viable solution has been identified and considered.
+   - For example, in the area of DOMESTIC VIOLENCE, stake-holders have not been able to suggest innovative solutions for all the possible causes [see list in an earlier slide]. For example, how does society tackle the problem of gender inequality and male privilege – certainly increase criminal penalties [punishing offenders] will not resolve this cause
+   - In the area of DOMESTIC VIOLENCE, many diverse solutions have been proposed, but there certainly are still more viable solutions to be developed. It is only after that occurs, that decisions can be made on which combination of strategies are permissible and should be implemented.
+   - From a previous example, how can society increase reporting rates for domestic violence? [Estimated to be lower than 50% per case rather than incident]. And how would that strategy influence or be influenced by mandatory arrests and increasing penalties to offenders
+7. Every wicked problem is essentially unique.
+   - While the treatment of PTSD associated with DOMESTIC VIOLENCE would vary little between one case and the next, when it comes to resolution of a different wicked problems there is no or minimal overlap
+   - From a previous slide, it would not be possible to use the same strategy or same problem solving strategy to resolve climate change or over-population or DOMESTIC VIOLENCE.
+   - DOMESTIC VIOLENCE is unique. While it may share similarities with other wicked problems, there will be particular features of DOMESTIC VIOLENCE that are powerfully different. For example, DOMESTIC VIOLENCE has similarities with discrimination [sexism] and mental health problems including depression
+   - However, conceptualizing DOMESTIC VIOLENCE as a law and order issue may lead to proposed solutions that have been effective in other law and order issues (for example drink driving), but wider issues of privacy and gender relations may make such simple strategies inappropriate or non-applicable.
+8. Every wicked problem can be considered to be a symptom of another problem.
+   - If the psychological treatment of DOMESTIC VIOLENCE is psychotherapy [CBT] then that removes the symptoms from that one individual, but it does not remove the cause of that victim’s psychopathology.
+   - If the ultimate cause is due to gender relations or male gender role that is created during child development [enculturation], then all the psychotherapy for all victims in the world will not remove DOMESTIC VIOLENCE?
+   - A reflection on the possible causes of DOMESTIC VIOLENCE highlights this proposition. If DOMESTIC VIOLENCE is simplistically treated as a law and order issue, that is, by increasing punishments in a special category of violent crime, then any higher level causes (psychopathology of the abuser; development and role models of a patriarchal society; gender inequality in society) will be ignored and the intervention will be self-defeating in terms of long-term effectiveness.
+   - What is the ultimate cause of DOMESTIC VIOLENCE? And will identifying it lead to a viable intervention that will ultimately stop DOMESTIC VIOLENCE?
+9. The existence of a discrepancy representing a wicked problem can be explained in numerous ways. The choice of explanation determines the nature of the problem's resolution.
+   - A wicked problem can be conceptualized within many theoretical frameworks (psychological, legal, sociological, feminist) and at various levels within a complex society (individual, relationship, family, community, society-cultural).
+   - The choice of explanation is
+     - arbitrary in the logical sense
+     - typically driven by philosophical world views
+     - and this appears to be the strongest determining factor re choice of action
+   - There is no rule or procedure to determine the “correct” explanation (or combination of explanations). This complexity combined with the uniqueness of DOMESTIC VIOLENCE and the inability to (safely) experiment signifies that any choice of the “correct” solution is arbitrary,
+   - Under such circumstances, people choose solutions that are most plausible to them at that moment in time and will do the least damage [at all levels of society] if implemented.
+10. The social planner has no right to be wrong (i.e., planners are liable for the consequences of the actions they generate).
+    - As scientists, psychologists design experiments that attempt to disprove their hypotheses [falsification]. In a protected environment [laboratory], there are few ethical concerns to being wrong
+    - However, in the applied world, no such immunity is tolerated. That is, the aim of any intervention for a wicked problem is not to determine the truth, but to improve some aspect of individuals’ lives in a complex society [to minise the risk of doing harm]
+    - Getting things wrong is not acceptable and correctly leads to litigation
+    - As a consequence of the above nine propositions, wicked problems such as DOMESTIC VIOLENCE become impossible to resolve.
+    - Rittel & Webber (1973) indicated that proponents working in areas such as DOMESTIC VIOLENCE should not be aiming to “find the truth”, but to improve the conditions (on balance) of the world in which people live.
+    - This becomes a dilemma between the researcher who seeks the true cause of a problem and the practitioner who attempts to make the world a better place.
+11. Conclusion
+    - The world is becoming more diverse
+    - Each stakeholder group has its own interests/values and preferred solution
+    - Psychology, through epidemiology studies, is discovering more causal explanations of societal problems
+    - As a consequence, social issues [wicked problems] are becoming more complex and harder to resolve
+    - And there is one more paradox [best for society or best for the individual]
+    - A complex society requires solutions that can be effectively managed.
+    - However, as the plurality of society increases, there is also an expectation that individuals should have a choice
+    - Hence, a best solution to a wicked problem will be judged by whether it meets the needs of each “diverse” individual
 
 ### Week 09 - Objective 4: What is a mind map: definition and creation of mind maps
 

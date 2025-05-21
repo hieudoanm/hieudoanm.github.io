@@ -126,6 +126,10 @@ To address stigma effectively, research and interventions must shift toward exam
 
 ### Week 09 - Objective 1: Identifying and tackling big issues
 
+Psychology has traditionally defined itself as the science of human behaviour, focusing largely on the individual. From its early emphasis on the brain, information processing, and personality, psychology reinforced internal, universal explanations for behaviour while sidelining environmental and societal influences. As an applied field, it shifted from philosophical inquiry to assessments and diagnosis, especially from the 1920s onward. However, psychological interventions, dominated by medical models and personality theories, continued to treat symptoms rather than causes. With limited success, the field often stigmatized individuals as abnormal without addressing broader societal problems. Despite pivotal social experiments in the 1960s and 70s, psychology has lacked a comprehensive bio-psychosocial theory and remained mostly silent on major social issues like poverty and domestic violence.
+
+Domestic violence is a complex, multifaceted form of abuse occurring in both heterosexual and same-sex relationships, often involving physical, emotional, economic, or sexual harm. Women are disproportionately the victims, while men are typically the perpetrators. Root causes include patriarchal social structures, intergenerational abuse, drug and alcohol use, gender roles, and failures in the criminal justice system. Psychology often misattributes the issue to individual pathology, such as personality disorders or victim weakness, rather than confronting systemic inequalities. As a "wicked problem," domestic violence resists simple solutions—many interventions may have limited impact or unintended consequences unless they also target the broader societal and political structures that sustain gender inequality and power imbalances.
+
 ### Week 09 - Objective 2: What is a wicked problem: definition and parameters
 
 Wicked problems are complex, socially embedded issues that are difficult or impossible to solve definitively. Coined by Rittel and Webber, the concept highlights that these problems have many causes and interdependencies—solving one part can reveal or create new problems. Wicked problems lack a clear definition, have no stopping point, and require more than scientific methods; they involve social policy, changing constraints, and conflicting stakeholder views in a pluralistic society.
@@ -133,6 +137,17 @@ Wicked problems are complex, socially embedded issues that are difficult or impo
 In contrast to tame problems—which are clearly defined, linear, and solvable through expert-driven analysis—wicked problems are dynamic and resist simple solutions. Their framing depends on the proposed solution, and outcomes are unpredictable or subjective. Psychology, traditionally successful with tame problems, struggles with wicked ones due to their applied, community-based nature, lack of objective variables, and the need for creative, interdisciplinary approaches. Addressing wicked problems requires ongoing collaboration, flexible thinking, and acknowledgment of competing values and interests.
 
 ### Week 09 - Objective 3: Using the example of "Domestic violence“, explain the 10 characteristics of a wicked problem
+
+1. No definitive formulation: Domestic violence lacks a single definition—psychologists, sociologists, and legal experts each frame it differently based on their worldview.
+2. No stopping rule: There’s no clear point at which domestic violence is “solved”; efforts often stop due to limits in time or resources.
+3. Solutions are better or worse, not true or false: Responses are judged by varying standards across disciplines, not by objective correctness.
+4. No ultimate test: Effects of interventions (e.g., tougher laws) may take years to show, and unintended consequences may surface later.
+5. One-shot operation: Each policy has lasting impact—trial-and-error is too risky when human lives are involved.
+6. No full list of solutions: Not all causes or interventions are known; solutions must be flexible and evolving.
+7. Each is essentially unique: Domestic violence shares features with other problems but also presents unique sociocultural challenges.
+8. Symptom of another problem: It reflects broader issues like gender inequality or cultural norms.
+9. Explanations determine solutions: How the problem is framed influences proposed interventions.
+10. No right to be wrong: Practitioners and policymakers are accountable for outcomes—ethical caution is crucial.
 
 ### Week 09 - Objective 4: What is a mind map: definition and creation of mind maps
 
