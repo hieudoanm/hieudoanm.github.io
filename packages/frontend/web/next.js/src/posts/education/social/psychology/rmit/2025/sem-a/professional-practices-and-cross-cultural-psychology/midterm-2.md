@@ -9,6 +9,7 @@ date: '2025-05-19'
 - [Case Study](#case-study)
   - [Details](#details)
   - [Analysis](#analysis)
+  - [Answer](#answer)
 - [Week 06 - Multi-cultural issues](#week-06---multi-cultural-issues)
   - [Week 06 - Objective 1: What is cultural diversity, its relevance to Australia and to professional psychology](#week-06---objective-1-what-is-cultural-diversity-its-relevance-to-australia-and-to-professional-psychology)
   - [Week 06 - Objective 2: Explain causation from a multicultural perspective and discuss the role of the DSM 5 in terms of cultural diversity](#week-06---objective-2-explain-causation-from-a-multicultural-perspective-and-discuss-the-role-of-the-dsm-5-in-terms-of-cultural-diversity)
@@ -69,6 +70,12 @@ The suicide attempt occurred after Maria’s husband, Esteban, her high school s
 
 - A recent immigrant from rural Peru, likely experiencing acculturative stress and disruption of social support.
 - A strict Roman Catholic, which might influence her views on marriage, obedience, duty, and suicide (e.g., shame, guilt, spiritual conflict).
+
+### Answer
+
+Maria’s strict Roman Catholic faith may cause guilt and reluctance to seek help for suicidal thoughts. From rural Peru’s collectivist, high power distance culture, she likely accepts her husband’s controlling behavior due to traditional family roles. Recent migration adds stress, isolation, and language barriers. Her tiredness, appetite loss, and sleep problems reflect depression, possibly expressed somatically. Avoiding eye contact and difficulty sharing emotions align with cultural norms of modesty. Her hopelessness signals severe depression and powerlessness.
+
+Dr. C should respectfully integrate Maria’s strict Roman Catholic faith into therapy, exploring spirituality as a source of strength and, if appropriate, involving pastoral support. Utilizing culturally sensitive language and connecting her with Peruvian community or women’s groups can reduce stigma and enhance engagement. Therapy should prioritize trust, patience, and respect for her collectivist, rural background, empowering Maria within her cultural values while gently supporting her autonomy and recovery.
 
 ## Week 06 - Multi-cultural issues
 
