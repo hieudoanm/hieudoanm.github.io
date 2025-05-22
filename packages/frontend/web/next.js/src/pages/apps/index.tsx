@@ -26,6 +26,7 @@ import {
   INTIIAL_YAML,
   INTITAL_FEN,
 } from '@web/constants';
+import { useBattery } from '@web/hooks/window/navigator/use-battery';
 import { useWindowSize } from '@web/hooks/window/use-size';
 import { braillify } from '@web/utils/braille';
 import {
@@ -83,7 +84,14 @@ import {
   useState,
 } from 'react';
 import {
+  FaBatteryEmpty,
+  FaBatteryFull,
+  FaBatteryHalf,
+  FaBatteryQuarter,
+  FaBatteryThreeQuarters,
+  FaCarBattery,
   FaChevronLeft,
+  FaClosedCaptioning,
   FaCopy,
   FaDownload,
   FaImages,
@@ -1007,6 +1015,59 @@ const Output: FC<{
   );
 };
 
+const Battery: FC = () => {
+  const { charging, level } = useBattery();
+  const batteryLevel: string = Math.round(level * 100) + '%';
+
+  if (charging) {
+    return (
+      <div className="flex items-center gap-x-2">
+        <FaCarBattery title={batteryLevel} className="text-xl" />
+        <p>{batteryLevel}</p>
+      </div>
+    );
+  }
+
+  if (level < 0.25) {
+    return (
+      <div className="flex items-center gap-x-2">
+        <FaBatteryEmpty title={batteryLevel} className="text-xl" />
+        <p>{batteryLevel}</p>
+      </div>
+    );
+  } else if (level <= 0.25 && level < 0.5) {
+    return (
+      <div className="flex items-center gap-x-2">
+        <FaBatteryQuarter title={batteryLevel} className="text-xl" />
+        <p>{batteryLevel}</p>
+      </div>
+    );
+  } else if (level <= 0.5 && level < 0.75) {
+    return (
+      <div className="flex items-center gap-x-2">
+        <FaBatteryHalf title={batteryLevel} className="text-xl" />
+        <p>{batteryLevel}</p>
+      </div>
+    );
+  } else if (level <= 0.75 && level < 1) {
+    return (
+      <div className="flex items-center gap-x-2">
+        <FaBatteryThreeQuarters title={batteryLevel} className="text-xl" />
+        <p>{batteryLevel}</p>
+      </div>
+    );
+  } else if (level === 1) {
+    return (
+      <div className="flex items-center gap-x-2">
+        <FaBatteryFull title={batteryLevel} className="text-xl" />
+        <p>{batteryLevel}</p>
+      </div>
+    );
+  }
+
+  return <></>;
+};
+
 const StudioPage: NextPage = () => {
   // This is for textarea
   const textareaRef = useRef<HTMLTextAreaElement | null>(null);
@@ -1067,8 +1128,11 @@ const StudioPage: NextPage = () => {
             <p className="font-semibold">Studio</p>
           </div>
           <div className="flex items-center gap-x-2">
-            <p>Word Count: {countWords(output)}</p>
             <ActionButton action={action} ref={divRef} output={output} />
+            <div className="flex items-center gap-x-2">
+              <FaClosedCaptioning className="text-xl" /> {countWords(output)}
+            </div>
+            <Battery />
           </div>
         </div>
         <div className="flex w-full grow gap-x-2 overflow-hidden px-4">

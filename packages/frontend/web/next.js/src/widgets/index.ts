@@ -1,4 +1,3 @@
-export * from './battery';
 export * from './browser';
 export * from './calculator';
 export * from './calendar';

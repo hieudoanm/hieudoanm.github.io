@@ -1,6 +1,5 @@
 import { logger } from '@web/utils/log';
 import {
-  WidgetBattery,
   WidgetBrowser,
   WidgetBrowsers,
   WidgetCalculatorBasic,
@@ -57,10 +56,8 @@ import { NextPage } from 'next';
 
 const WidgetsAllPage: NextPage = () => {
   const widgets = [
-    { id: 'battery', widget: <WidgetBattery /> },
     { id: 'browser', widget: <WidgetBrowser /> },
     { id: 'browsers', widget: <WidgetBrowsers /> },
-
     { id: 'calculator-basic', widget: <WidgetCalculatorBasic /> },
     {
       id: 'calculator-convert-forex',

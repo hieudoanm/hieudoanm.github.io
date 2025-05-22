@@ -2,7 +2,6 @@ import { NothingApp } from '@web/types';
 import { NextPage } from 'next';
 import Link from 'next/link';
 import {
-  FaBatteryFull,
   FaBitcoin,
   FaBus,
   FaCalculator,
@@ -38,13 +37,6 @@ import {
 
 const WidgetsPage: NextPage = () => {
   const apps: NothingApp[] = [
-    {
-      id: 'battery',
-      href: 'battery',
-      name: 'battery',
-      shortName: 'battery',
-      icon: <FaBatteryFull className="text-2xl" />,
-    },
     {
       id: 'browser',
       href: 'browser',
