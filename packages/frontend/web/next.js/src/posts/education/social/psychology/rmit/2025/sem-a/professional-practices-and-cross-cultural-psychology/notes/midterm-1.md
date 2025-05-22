@@ -1,6 +1,6 @@
 ---
-title: 'Professional Practices and Cross Cultural Psychology - Midterm 1'
-date: '2025-05-19'
+title: 'Professional Practices and Cross Cultural Psychology - Midterm 1 - Notes'
+date: '2025-05-22'
 ---
 
 ## Table of Contents
