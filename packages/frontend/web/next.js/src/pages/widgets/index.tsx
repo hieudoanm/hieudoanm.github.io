@@ -2,7 +2,6 @@ import { NothingApp } from '@web/types';
 import { NextPage } from 'next';
 import Link from 'next/link';
 import {
-  FaBitcoin,
   FaBus,
   FaCalculator,
   FaCalendarDays,
@@ -85,13 +84,6 @@ const WidgetsPage: NextPage = () => {
       name: 'compass',
       shortName: 'compass',
       icon: <FaCompass className="text-2xl" />,
-    },
-    {
-      id: 'crypto',
-      href: 'crypto',
-      name: 'crypto',
-      shortName: 'crypto',
-      icon: <FaBitcoin className="text-2xl" />,
     },
     {
       id: 'devices',

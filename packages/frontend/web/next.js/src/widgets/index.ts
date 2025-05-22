@@ -4,7 +4,6 @@ export * from './calendar';
 export * from './clock';
 export * from './colors';
 export * from './compass';
-export * from './crypto';
 export * from './devices';
 export * from './files';
 export * from './fitness';

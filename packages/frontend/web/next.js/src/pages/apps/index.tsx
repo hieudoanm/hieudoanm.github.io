@@ -12,6 +12,7 @@ import { ChessClock } from '@web/components/chess/Clock';
 import { ChessEloCalculator } from '@web/components/chess/EloCalculator';
 import { ChessOpenings } from '@web/components/chess/Openings';
 import { ChessPGN2GIF } from '@web/components/chess/PGN2GIF';
+import { Crypto } from '@web/components/Crypto';
 import { FullScreen } from '@web/components/FullScreen';
 import { GitHubLanguages } from '@web/components/github/languages';
 import { MarkdownPreviewer } from '@web/components/MarkdownPreviewer';
@@ -200,6 +201,7 @@ enum ActTelegram {
 }
 
 enum ActWidget {
+  WIDGET_CRYPTO = 'Cypto',
   WIDGET_FULL_SCREEN = 'Full Screen',
   WIDGET_PERIODIC_TABLE = 'Periodic Table',
   WIDGET_STATUS = 'Status',
@@ -654,6 +656,7 @@ const ActionButton: FC<{
     action === ActChess.CHESS_CONVERT_PGN_TO_GIF ||
     action === ActChess.CHESS_ELO_CALCULATOR ||
     action === ActChess.CHESS_OPENINGS ||
+    action === ActWidget.WIDGET_CRYPTO ||
     action === ActWidget.WIDGET_FULL_SCREEN ||
     action === ActWidget.WIDGET_PERIODIC_TABLE ||
     action === ActWidget.WIDGET_STATUS
@@ -774,6 +777,7 @@ const Input: FC<{
     action === ActChess.CHESS_CLOCK ||
     action === ActChess.CHESS_OPENINGS ||
     action === ActOther.UUID ||
+    action === ActWidget.WIDGET_CRYPTO ||
     action === ActWidget.WIDGET_FULL_SCREEN ||
     action === ActWidget.WIDGET_PERIODIC_TABLE ||
     action === ActWidget.WIDGET_STATUS
@@ -979,6 +983,10 @@ const Output: FC<{
         <MarkdownPreviewer html={output} />
       </div>
     );
+  }
+
+  if (action === ActWidget.WIDGET_CRYPTO) {
+    return <Crypto />;
   }
 
   if (action === ActWidget.WIDGET_FULL_SCREEN) {
@@ -1453,6 +1461,9 @@ const StudioPage: NextPage = () => {
                   <option value={ActOther.UUID}>{ActOther.UUID}</option>
                 </optgroup>
                 <optgroup label="widgets">
+                  <option value={ActWidget.WIDGET_CRYPTO}>
+                    {ActWidget.WIDGET_CRYPTO}
+                  </option>
                   <option value={ActWidget.WIDGET_FULL_SCREEN}>
                     {ActWidget.WIDGET_FULL_SCREEN}
                   </option>
