@@ -164,11 +164,11 @@ enum ActCSV {
 
 enum ActJSON {
   JSON_EDITOR = 'JSON Editor',
-  JSON_MINIFY = 'JSON Minify',
-  JSON_SORT = 'JSON Sort',
-  JSON_TO_CSV = 'JSON to CSV',
-  JSON_TO_XML = 'JSON to XML',
-  JSON_TO_YAML = 'JSON to YAML',
+  JSON_CONVERT_TO_CSV = 'JSON Converter - CSV',
+  JSON_CONVERT_TO_XML = 'JSON Converter - XML',
+  JSON_CONVERT_TO_YAML = 'JSON Converter - YAML',
+  JSON_FORMATTER_MINIFY = 'JSON Formatter - Minify',
+  JSON_FORMATTER_SORT = 'JSON Formatter - Sort',
 }
 
 enum ActManifestJSON {
@@ -415,7 +415,7 @@ const isActionString = (act: Act): act is ActString => {
 
 const actJSON = ({ action, source }: { action: ActJSON; source: string }) => {
   let output = '';
-  if (action === ActJSON.JSON_SORT) {
+  if (action === ActJSON.JSON_FORMATTER_SORT) {
     try {
       const object = JSON.parse(source);
       const keys: string[] = Object.keys(object).sort((a, b) =>
@@ -429,7 +429,7 @@ const actJSON = ({ action, source }: { action: ActJSON; source: string }) => {
     } catch (error) {
       output = (error as Error).message;
     }
-  } else if (action === ActJSON.JSON_MINIFY) {
+  } else if (action === ActJSON.JSON_FORMATTER_MINIFY) {
     try {
       output = JSON.stringify(JSON.parse(source));
     } catch (error) {
@@ -441,13 +441,13 @@ const actJSON = ({ action, source }: { action: ActJSON; source: string }) => {
     } catch (error) {
       output = (error as Error).message;
     }
-  } else if (action === ActJSON.JSON_TO_CSV) {
+  } else if (action === ActJSON.JSON_CONVERT_TO_CSV) {
     output = json.csv(
       json.parse<Record<string, string | number | boolean | Date>[]>(source, [])
     );
-  } else if (action === ActJSON.JSON_TO_XML) {
+  } else if (action === ActJSON.JSON_CONVERT_TO_XML) {
     output = toXML(json.parse(source, {}), { indent: '  ' });
-  } else if (action === ActJSON.JSON_TO_YAML) {
+  } else if (action === ActJSON.JSON_CONVERT_TO_YAML) {
     output = stringify(json.parse(source, {}));
   }
   return output;
@@ -1121,18 +1121,18 @@ const StudioPage: NextPage = () => {
                   // Check JSON Convertor
                   const previousActionIsNotJSON: boolean =
                     action !== ActJSON.JSON_EDITOR &&
-                    action !== ActJSON.JSON_SORT &&
-                    action !== ActJSON.JSON_MINIFY &&
-                    action !== ActJSON.JSON_TO_CSV &&
-                    action !== ActJSON.JSON_TO_XML &&
-                    action !== ActJSON.JSON_TO_YAML;
+                    action !== ActJSON.JSON_FORMATTER_SORT &&
+                    action !== ActJSON.JSON_FORMATTER_MINIFY &&
+                    action !== ActJSON.JSON_CONVERT_TO_CSV &&
+                    action !== ActJSON.JSON_CONVERT_TO_XML &&
+                    action !== ActJSON.JSON_CONVERT_TO_YAML;
                   const nextActionIsJSON =
                     nextAction === ActJSON.JSON_EDITOR ||
-                    nextAction === ActJSON.JSON_SORT ||
-                    nextAction === ActJSON.JSON_MINIFY ||
-                    nextAction === ActJSON.JSON_TO_CSV ||
-                    nextAction === ActJSON.JSON_TO_XML ||
-                    nextAction === ActJSON.JSON_TO_YAML;
+                    nextAction === ActJSON.JSON_FORMATTER_SORT ||
+                    nextAction === ActJSON.JSON_FORMATTER_MINIFY ||
+                    nextAction === ActJSON.JSON_CONVERT_TO_CSV ||
+                    nextAction === ActJSON.JSON_CONVERT_TO_XML ||
+                    nextAction === ActJSON.JSON_CONVERT_TO_YAML;
                   // Check Telegram
                   const previousActionIsNotTelegram: boolean =
                     action !== ActTelegram.TELEGRAM_WEBHOOK_SET &&
@@ -1291,11 +1291,11 @@ const StudioPage: NextPage = () => {
                     label: 'json',
                     actions: [
                       ActJSON.JSON_EDITOR,
-                      ActJSON.JSON_SORT,
-                      ActJSON.JSON_MINIFY,
-                      ActJSON.JSON_TO_CSV,
-                      ActJSON.JSON_TO_XML,
-                      ActJSON.JSON_TO_YAML,
+                      ActJSON.JSON_CONVERT_TO_CSV,
+                      ActJSON.JSON_CONVERT_TO_XML,
+                      ActJSON.JSON_CONVERT_TO_YAML,
+                      ActJSON.JSON_FORMATTER_SORT,
+                      ActJSON.JSON_FORMATTER_MINIFY,
                     ],
                   },
                   {
