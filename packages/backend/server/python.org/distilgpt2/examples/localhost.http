@@ -1,6 +1,6 @@
 @host = "http://localhost:10000"
 
-POST {{host}}/api/generate
+POST {{host}}/api/chat/completions
 Content-Type: application/json
 
 {

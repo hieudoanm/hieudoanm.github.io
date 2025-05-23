@@ -1,6 +1,6 @@
 @host = "https://free-distilgpt2.onrender.com"
 
-POST {{host}}/api/generate
+POST {{host}}/api/chat/completions
 Content-Type: application/json
 
 {
