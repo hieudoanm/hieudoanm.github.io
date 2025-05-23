@@ -33,7 +33,10 @@ export const Crypto = () => {
       const { error, data } = await tryCatch(
         fetch(proxyUrl).then((response) => response.json())
       );
-      if (error) return {};
+      if (error) {
+        console.error('Error fetching data:', error);
+        return {};
+      }
       return data;
     },
   });
@@ -45,9 +48,8 @@ export const Crypto = () => {
   if (JSON.stringify(data) === '{}')
     return <p className="text-center">No Data</p>;
 
-  const {
-    data: { coins = [] },
-  } = data ?? { data: { coins: [] } };
+  const { data: responseData } = data ?? { data: { coins: [] } };
+  const { coins = [] } = responseData ?? { coins: [] };
 
   return (
     <div className="flex flex-col gap-2 border-t border-gray-800 pt-2">

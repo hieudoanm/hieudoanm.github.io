@@ -13,6 +13,7 @@ import { ChessEloCalculator } from '@web/components/chess/EloCalculator';
 import { ChessOpenings } from '@web/components/chess/Openings';
 import { ChessPGN2GIF } from '@web/components/chess/PGN2GIF';
 import { Crypto } from '@web/components/Crypto';
+import { Forex } from '@web/components/Forex';
 import { FullScreen } from '@web/components/FullScreen';
 import { GitHubLanguages } from '@web/components/github/languages';
 import { MarkdownPreviewer } from '@web/components/MarkdownPreviewer';
@@ -201,7 +202,8 @@ enum ActTelegram {
 }
 
 enum ActWidget {
-  WIDGET_CRYPTO = 'Cypto',
+  WIDGET_FINANCE_CRYPTO = 'Finance - Cypto',
+  WIDGET_FINANCE_FOREX = 'Finance - Forex',
   WIDGET_FULL_SCREEN = 'Full Screen',
   WIDGET_PERIODIC_TABLE = 'Periodic Table',
   WIDGET_STATUS = 'Status',
@@ -656,7 +658,8 @@ const ActionButton: FC<{
     action === ActChess.CHESS_CONVERT_PGN_TO_GIF ||
     action === ActChess.CHESS_ELO_CALCULATOR ||
     action === ActChess.CHESS_OPENINGS ||
-    action === ActWidget.WIDGET_CRYPTO ||
+    action === ActWidget.WIDGET_FINANCE_CRYPTO ||
+    action === ActWidget.WIDGET_FINANCE_FOREX ||
     action === ActWidget.WIDGET_FULL_SCREEN ||
     action === ActWidget.WIDGET_PERIODIC_TABLE ||
     action === ActWidget.WIDGET_STATUS
@@ -777,7 +780,8 @@ const Input: FC<{
     action === ActChess.CHESS_CLOCK ||
     action === ActChess.CHESS_OPENINGS ||
     action === ActOther.UUID ||
-    action === ActWidget.WIDGET_CRYPTO ||
+    action === ActWidget.WIDGET_FINANCE_CRYPTO ||
+    action === ActWidget.WIDGET_FINANCE_FOREX ||
     action === ActWidget.WIDGET_FULL_SCREEN ||
     action === ActWidget.WIDGET_PERIODIC_TABLE ||
     action === ActWidget.WIDGET_STATUS
@@ -985,8 +989,12 @@ const Output: FC<{
     );
   }
 
-  if (action === ActWidget.WIDGET_CRYPTO) {
+  if (action === ActWidget.WIDGET_FINANCE_CRYPTO) {
     return <Crypto />;
+  }
+
+  if (action === ActWidget.WIDGET_FINANCE_FOREX) {
+    return <Forex />;
   }
 
   if (action === ActWidget.WIDGET_FULL_SCREEN) {
@@ -1461,8 +1469,11 @@ const StudioPage: NextPage = () => {
                   <option value={ActOther.UUID}>{ActOther.UUID}</option>
                 </optgroup>
                 <optgroup label="widgets">
-                  <option value={ActWidget.WIDGET_CRYPTO}>
-                    {ActWidget.WIDGET_CRYPTO}
+                  <option value={ActWidget.WIDGET_FINANCE_CRYPTO}>
+                    {ActWidget.WIDGET_FINANCE_CRYPTO}
+                  </option>
+                  <option value={ActWidget.WIDGET_FINANCE_FOREX}>
+                    {ActWidget.WIDGET_FINANCE_FOREX}
                   </option>
                   <option value={ActWidget.WIDGET_FULL_SCREEN}>
                     {ActWidget.WIDGET_FULL_SCREEN}
