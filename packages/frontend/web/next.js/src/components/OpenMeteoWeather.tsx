@@ -117,8 +117,8 @@ export const OpenMeteoWeather: FC = () => {
       <div className="flex aspect-square w-64 items-center justify-center rounded-full bg-gray-800">
         <div className="flex flex-col items-center gap-y-2 text-center">
           {icon}
-          <p className="text-4xl">{temperature}°C</p>
           <p className="font-bold">{weather}</p>
+          <p className="text-4xl">{temperature}°C</p>
           <div className="flex items-center gap-x-1 text-xs">
             <FaMapPin />
             {Math.abs(latitude).toFixed(2)}°{latitude >= 0 ? 'N' : 'S'}
