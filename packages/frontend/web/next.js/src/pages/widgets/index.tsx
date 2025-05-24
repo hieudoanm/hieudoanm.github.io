@@ -8,7 +8,6 @@ import {
   FaCamera,
   FaChartLine,
   FaClock,
-  FaCloudSunRain,
   FaCompass,
   FaEnvelopesBulk,
   FaFileLines,
@@ -238,13 +237,6 @@ const WidgetsPage: NextPage = () => {
       name: 'wallet',
       shortName: 'wallet',
       icon: <FaWallet className="text-2xl" />,
-    },
-    {
-      id: 'weather',
-      href: 'weather',
-      name: 'weather',
-      shortName: 'weather',
-      icon: <FaCloudSunRain className="text-2xl" />,
     },
   ];
 

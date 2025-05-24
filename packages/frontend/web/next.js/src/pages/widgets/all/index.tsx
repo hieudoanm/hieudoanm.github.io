@@ -19,6 +19,7 @@ import {
   WidgetCompassFull,
   WidgetDevices,
   WidgetFiles,
+  WidgetFitnessRun,
   WidgetFitnessStepCount,
   WidgetGamesFlipism,
   WidgetGamesRockPaperScissors,
@@ -46,10 +47,7 @@ import {
   WidgetVideos,
   WidgetWalletBank,
   WidgetWalletPay,
-  WidgetWeatherDescription,
-  WidgetWeatherTemperature,
 } from '@web/widgets';
-import { WidgetFitnessRun } from '@web/widgets/fitness/WidgetFitnessRun';
 import { NextPage } from 'next';
 
 const WidgetsAllPage: NextPage = () => {
@@ -119,8 +117,6 @@ const WidgetsAllPage: NextPage = () => {
     { id: 'videos', widget: <WidgetVideos /> },
     { id: 'wallet-bank', widget: <WidgetWalletBank /> },
     { id: 'wallet-pay', widget: <WidgetWalletPay /> },
-    { id: 'weather-description', widget: <WidgetWeatherDescription /> },
-    { id: 'weather-temperature', widget: <WidgetWeatherTemperature /> },
   ];
 
   logger.info(widgets.length);

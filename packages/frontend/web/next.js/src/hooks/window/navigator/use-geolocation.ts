@@ -24,28 +24,25 @@ export const useGeolocation = (): GeolocationCoordinates => {
   });
 
   useEffect(() => {
-    (() => {
-      if (!navigator.geolocation) {
-        setCoordinates((prevState) => ({
-          ...prevState,
-          error: 'Geolocation is not supported by this browser.',
-        }));
-        return;
-      }
+    if (!navigator.geolocation) {
+      setCoordinates((prevState) => ({
+        ...prevState,
+        error: 'Geolocation is not supported by this browser.',
+      }));
+      return;
+    }
 
-      if (
-        typeof window !== 'undefined' &&
-        typeof window.navigator.geolocation.getCurrentPosition !== 'function'
-      ) {
-        return;
-      }
-      window.navigator.geolocation.getCurrentPosition((position) => {
-        const { coords } = position;
+    if (
+      typeof window !== 'undefined' &&
+      typeof window.navigator.geolocation.getCurrentPosition !== 'function'
+    ) {
+      return;
+    }
 
-        console.info('coords', coords);
-        setCoordinates({ ...coords, error: null });
-      });
-    })();
+    window.navigator.geolocation.getCurrentPosition((position) => {
+      const { coords } = position;
+      setCoordinates({ ...coords.toJSON(), error: null });
+    });
   }, []);
 
   return coordinates;

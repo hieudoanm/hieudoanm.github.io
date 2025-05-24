@@ -25,4 +25,3 @@ export * from './translate';
 export * from './transportation';
 export * from './videos';
 export * from './wallet';
-export * from './weather';

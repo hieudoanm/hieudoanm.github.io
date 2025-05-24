@@ -17,6 +17,7 @@ import { Forex } from '@web/components/Forex';
 import { FullScreen } from '@web/components/FullScreen';
 import { GitHubLanguages } from '@web/components/github/languages';
 import { MarkdownPreviewer } from '@web/components/MarkdownPreviewer';
+import { OpenMeteoWeather } from '@web/components/OpenMeteoWeather';
 import { Status } from '@web/components/Status';
 import {
   INITIAL_CSV,
@@ -202,11 +203,12 @@ enum ActTelegram {
 }
 
 enum ActWidget {
-  WIDGET_FINANCE_CRYPTO = 'Finance - Cypto',
+  WIDGET_FINANCE_CRYPTO = 'Finance - Crypto',
   WIDGET_FINANCE_FOREX = 'Finance - Forex',
   WIDGET_FULL_SCREEN = 'Full Screen',
   WIDGET_PERIODIC_TABLE = 'Periodic Table',
   WIDGET_STATUS = 'Status',
+  WIDGET_WEATHER = 'Weather',
 }
 
 enum ActQRCode {
@@ -662,7 +664,8 @@ const ActionButton: FC<{
     action === ActWidget.WIDGET_FINANCE_FOREX ||
     action === ActWidget.WIDGET_FULL_SCREEN ||
     action === ActWidget.WIDGET_PERIODIC_TABLE ||
-    action === ActWidget.WIDGET_STATUS
+    action === ActWidget.WIDGET_STATUS ||
+    action === ActWidget.WIDGET_WEATHER
   ) {
     return <></>;
   }
@@ -784,7 +787,8 @@ const Input: FC<{
     action === ActWidget.WIDGET_FINANCE_FOREX ||
     action === ActWidget.WIDGET_FULL_SCREEN ||
     action === ActWidget.WIDGET_PERIODIC_TABLE ||
-    action === ActWidget.WIDGET_STATUS
+    action === ActWidget.WIDGET_STATUS ||
+    action === ActWidget.WIDGET_WEATHER
   ) {
     return <></>;
   }
@@ -1015,6 +1019,10 @@ const Output: FC<{
         <Status />
       </div>
     );
+  }
+
+  if (action === ActWidget.WIDGET_WEATHER) {
+    return <OpenMeteoWeather />;
   }
 
   return (
@@ -1483,6 +1491,9 @@ const StudioPage: NextPage = () => {
                   </option>
                   <option value={ActWidget.WIDGET_STATUS}>
                     {ActWidget.WIDGET_STATUS}
+                  </option>
+                  <option value={ActWidget.WIDGET_WEATHER}>
+                    {ActWidget.WIDGET_WEATHER}
                   </option>
                 </optgroup>
               </select>
