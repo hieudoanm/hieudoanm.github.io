@@ -1,0 +1,24 @@
+@import 'tailwindcss';
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+}
+
+/* #1B1B1D */
+/* #D71921 */
+
+@font-face {
+  font-family: 'ndot-55';
+  src: url('/fonts/ndot-55.otf');
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.font-ndot-55 {
+  font-family: 'ndot-55', Arial, Helvetica, sans-serif;
+}
