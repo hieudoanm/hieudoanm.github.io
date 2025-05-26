@@ -1,6 +1,6 @@
 import { FC, ReactNode, useState } from 'react';
 import { Button } from './Button';
-import { H2 } from './Typography';
+import { H3 } from './Typography';
 
 export const Preview: FC<{
   name: string;
@@ -12,13 +12,13 @@ export const Preview: FC<{
   return (
     <div className="flex flex-col gap-y-8">
       <div className="flex items-center justify-between">
-        <H2>{name}</H2>
+        <H3>{name}</H3>
         <Button onClick={() => setPreview((previous: boolean) => !previous)}>
           {preview ? '👁️ Preview' : '👾 Code'}
         </Button>
       </div>
       {preview ? (
-        <div className="flex items-center justify-center rounded border border-neutral-900 bg-black p-4">
+        <div className="flex items-center justify-center rounded border border-neutral-200 p-4 shadow-sm">
           {component}
         </div>
       ) : (

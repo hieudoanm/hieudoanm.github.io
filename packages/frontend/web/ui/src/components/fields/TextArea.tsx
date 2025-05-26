@@ -23,7 +23,7 @@ export const TextArea: FC<{
       disabled={disabled}
       readOnly={readOnly}
       onChange={onChange}
-      className="w-full rounded border border-neutral-800 bg-neutral-900 px-4 py-2 text-neutral-300 focus:outline-none"
+      className="w-full rounded border border-neutral-200 px-4 py-2 focus:outline-none"
     />
   );
 };

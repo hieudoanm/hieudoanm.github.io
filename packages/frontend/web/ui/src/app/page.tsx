@@ -19,7 +19,7 @@ import { NextPage } from 'next';
 import Prism from 'prismjs';
 import 'prismjs/components/prism-markup';
 import 'prismjs/themes/prism-okaidia.css';
-import { ChangeEvent, useEffect, useState } from 'react';
+import { ChangeEvent, ReactNode, useEffect, useState } from 'react';
 import { FaGithub } from 'react-icons/fa6';
 import { TextArea } from '@nothing-ui/components/fields/TextArea';
 import { Checkbox } from '@nothing-ui/components/fields/Checkbox';
@@ -27,6 +27,7 @@ import { Radio } from '@nothing-ui/components/fields/Radio';
 import { FileUpload } from '@nothing-ui/components/fields/FileUpload';
 import { Toggle } from '@nothing-ui/components/fields/Toggle';
 import { Divider } from '@nothing-ui/components/Divider';
+import { Loading } from '@nothing-ui/components/Loading';
 
 const HomePage: NextPage = () => {
   const [{ query = '', toggle = false }, setState] = useState<{
@@ -41,9 +42,283 @@ const HomePage: NextPage = () => {
     Prism.highlightAll();
   }, []);
 
+  const components: {
+    id: string;
+    emoji: string;
+    name: string;
+    code: string;
+    component: ReactNode;
+    level: 'essentials' | 'starter';
+  }[] = [
+    {
+      id: 'alert',
+      emoji: '🚨',
+      name: 'Alert',
+      component: <></>,
+      code: '',
+      level: 'essentials',
+    },
+    {
+      id: 'avatar',
+      emoji: '🖼️',
+      name: 'Avatar',
+      component: <></>,
+      code: '',
+      level: 'starter',
+    },
+    {
+      id: 'badge',
+      emoji: '🏷️',
+      name: 'Badge',
+      component: <Badge>Badge</Badge>,
+      code: '',
+      level: 'starter',
+    },
+    {
+      id: 'breadcrumbs',
+      emoji: '🍞',
+      name: 'Breadcrumbs',
+      component: <></>,
+      code: '',
+      level: 'starter',
+    },
+    {
+      id: 'button',
+      emoji: '🔘',
+      name: 'Button',
+      component: <Button>Button</Button>,
+      code: '',
+      level: 'essentials',
+    },
+    {
+      id: 'button-group',
+      emoji: '🔘🔘',
+      name: 'Button Group',
+      component: <ButtonGroup />,
+      code: '',
+      level: 'starter',
+    },
+    {
+      id: 'card',
+      emoji: '💳',
+      name: 'Card',
+      code: '',
+      component: <></>,
+      level: 'essentials',
+    },
+    {
+      id: 'checkbox',
+      emoji: '☑️',
+      name: 'Checkbox',
+      component: (
+        <div>
+          <Checkbox label="Option 1" name={'checkbox'} />
+          <Checkbox label="Option 2" name={'checkbox'} />
+          <Checkbox label="Option 3" name={'checkbox'} />
+        </div>
+      ),
+      code: '',
+      level: 'essentials',
+    },
+    {
+      id: 'divider',
+      emoji: '➖',
+      name: 'Divider',
+      component: <Divider text="Divider" />,
+      code: '',
+      level: 'starter',
+    },
+    {
+      id: 'file-upload',
+      emoji: '📂',
+      name: 'File Upload',
+      component: <FileUpload id={'file'} name={'file'} />,
+      code: '',
+      level: 'starter',
+    },
+    {
+      id: 'input',
+      emoji: '⌨️',
+      name: 'Input',
+      code: '',
+      component: (
+        <Input
+          type={'text'}
+          placeholder={'Input Field'}
+          value={'Input Field'}
+          disabled={false}
+          readOnly={false}
+          onChange={function (event: ChangeEvent<HTMLInputElement>): void {
+            console.log(event.target.value);
+          }}
+        />
+      ),
+      level: 'essentials',
+    },
+    {
+      id: 'list',
+      emoji: '📋',
+      name: 'List',
+      code: '',
+      component: <></>,
+      level: 'starter',
+    },
+    {
+      id: 'modal',
+      emoji: '📦',
+      name: 'Modal',
+      code: '',
+      component: <></>,
+      level: 'essentials',
+    },
+    {
+      id: 'select',
+      emoji: '📑',
+      name: 'Select',
+      code: '',
+      component: (
+        <Select
+          placeholder={'Select Field'}
+          value={''}
+          disabled={false}
+          onChange={function (event: ChangeEvent<HTMLSelectElement>): void {
+            console.log(event.target.value);
+          }}></Select>
+      ),
+      level: 'essentials',
+    },
+    {
+      id: 'textarea',
+      emoji: '📝',
+      name: 'Textarea',
+      code: '',
+      component: (
+        <TextArea
+          rows={0}
+          placeholder={'Textarea Field'}
+          value={'Textarea Field'}
+          disabled={false}
+          readOnly={false}
+          onChange={function (event: ChangeEvent<HTMLTextAreaElement>): void {
+            console.log(event.target.value);
+          }}
+        />
+      ),
+      level: 'essentials',
+    },
+    {
+      id: 'pagination',
+      emoji: '📄',
+      name: 'Pagination',
+      component: <></>,
+      code: '',
+      level: 'starter',
+    },
+    {
+      id: 'radio',
+      emoji: '🔘',
+      name: 'Radio',
+      component: (
+        <div>
+          <Radio label="Option 1" name={'radio'} />
+          <Radio label="Option 2" name={'radio'} />
+          <Radio label="Option 3" name={'radio'} />
+        </div>
+      ),
+      code: '',
+      level: 'starter',
+    },
+    {
+      id: 'loading',
+      emoji: '⏳',
+      name: 'Loading',
+      component: <Loading />,
+      code: '',
+      level: 'starter',
+    },
+    {
+      id: 'stats',
+      emoji: '📊',
+      name: 'Stats',
+      component: <></>,
+      code: '',
+      level: 'starter',
+    },
+    {
+      id: 'table',
+      emoji: '📈',
+      name: 'Table',
+      component: <></>,
+      code: '',
+      level: 'starter',
+    },
+    {
+      id: 'timeline',
+      emoji: '⏱️',
+      name: 'Timeline',
+      component: <></>,
+      code: '',
+      level: 'starter',
+    },
+    {
+      id: 'tooltip',
+      emoji: '💬',
+      name: 'Tooltip',
+      component: <></>,
+      code: '',
+      level: 'starter',
+    },
+    {
+      id: 'toggle',
+      emoji: '🔄',
+      name: 'Toggle',
+      component: (
+        <Toggle
+          value={toggle}
+          onClick={() => {
+            setState((previous) => ({
+              ...previous,
+              toggle: !previous.toggle,
+            }));
+          }}
+        />
+      ),
+      code: '',
+      level: 'starter',
+    },
+    {
+      id: 'typography',
+      emoji: '🔤',
+      name: 'Typography',
+      component: (
+        <div className="text-center">
+          <H1>Heading 1</H1>
+          <H2>Heading 2</H2>
+          <H3>Heading 3</H3>
+          <H4>Heading 4</H4>
+          <H5>Heading 3</H5>
+          <H6>Heading 4</H6>
+          <Paragraph>Paragraph</Paragraph>
+        </div>
+      ),
+      code: '',
+      level: 'starter',
+    },
+  ];
+
+  const levels: string[] = [
+    ...new Set(components.map((component) => component.level)),
+  ].sort((a, b) => a.localeCompare(b));
+  const componentsByLevels = levels.map((level) => {
+    return {
+      level,
+      components: components.filter((component) => component.level === level),
+    };
+  });
+
   return (
     <>
-      <nav className="border-b border-gray-900">
+      <nav className="border-b border-neutral-200">
         <div className="container mx-auto px-8 py-4">
           <div className="flex items-center gap-x-4">
             <H3>Nothing UI</H3>
@@ -69,168 +344,56 @@ const HomePage: NextPage = () => {
         </div>
       </nav>
       <main className="flex flex-col gap-y-8 py-8">
-        <div className="flex flex-col gap-y-4 text-center">
-          <H1>Nothing UI</H1>
-          <p>Free Open Source TailwindCSS v4 Components</p>
+        <div className="flex h-screen flex-col justify-center gap-y-4 border-b border-neutral-200 text-center">
+          <div className="flex flex-col gap-y-4">
+            <H1>Nothing UI</H1>
+            <p>Free Open Source TailwindCSS v4 Components</p>
+          </div>
         </div>
-        <div className="container mx-auto px-8 pb-8">
-          <div className="flex flex-col gap-y-8">
-            {[
-              {
-                id: 'badge',
-                name: 'Badge',
-                component: <Badge>Badge</Badge>,
-                code: '',
-              },
-              {
-                id: 'button',
-                name: 'Button',
-                component: <Button>Button</Button>,
-                code: '',
-              },
-              {
-                id: 'button-group',
-                name: 'Button Group',
-                component: <ButtonGroup />,
-                code: '',
-              },
-              {
-                id: 'checkbox',
-                name: 'Checkbox',
-                component: (
-                  <div>
-                    <Checkbox label="Option 1" name={'checkbox'} />
-                    <Checkbox label="Option 2" name={'checkbox'} />
-                    <Checkbox label="Option 3" name={'checkbox'} />
-                  </div>
-                ),
-                code: '',
-              },
-              {
-                id: 'divider',
-                name: 'Divider',
-                component: <Divider text="Divider" />,
-                code: '',
-              },
-              {
-                id: 'file-upload',
-                name: 'File Upload',
-                component: <FileUpload id={'file'} name={'file'} />,
-                code: '',
-              },
-              {
-                id: 'input',
-                name: 'Input',
-                component: (
-                  <Input
-                    type={'text'}
-                    placeholder={'Input Field'}
-                    value={'Input Field'}
-                    disabled={false}
-                    readOnly={false}
-                    onChange={function (
-                      event: ChangeEvent<HTMLInputElement>
-                    ): void {
-                      console.log(event.target.value);
-                    }}
-                  />
-                ),
-                code: '',
-              },
-              {
-                id: 'select',
-                name: 'Select',
-                component: (
-                  <Select
-                    placeholder={'Select Field'}
-                    value={''}
-                    disabled={false}
-                    onChange={function (
-                      event: ChangeEvent<HTMLSelectElement>
-                    ): void {
-                      console.log(event.target.value);
-                    }}></Select>
-                ),
-                code: '',
-              },
-              {
-                id: 'textarea',
-                name: 'Textarea',
-                component: (
-                  <TextArea
-                    rows={0}
-                    placeholder={'Textarea Field'}
-                    value={'Textarea Field'}
-                    disabled={false}
-                    readOnly={false}
-                    onChange={function (
-                      event: ChangeEvent<HTMLTextAreaElement>
-                    ): void {
-                      console.log(event.target.value);
-                    }}
-                  />
-                ),
-                code: '',
-              },
-              {
-                id: 'radio',
-                name: 'Radio',
-                component: (
-                  <div>
-                    <Radio label="Option 1" name={'radio'} />
-                    <Radio label="Option 2" name={'radio'} />
-                    <Radio label="Option 3" name={'radio'} />
-                  </div>
-                ),
-                code: '',
-              },
-              {
-                id: 'toggle',
-                name: 'Toggle',
-                component: (
-                  <Toggle
-                    value={toggle}
-                    onClick={() => {
-                      setState((previous) => ({
-                        ...previous,
-                        toggle: !previous.toggle,
-                      }));
-                    }}
-                  />
-                ),
-                code: '',
-              },
-              {
-                id: 'typography',
-                name: 'Typography',
-                component: (
-                  <div className="text-center">
-                    <H1>Heading 1</H1>
-                    <H2>Heading 2</H2>
-                    <H3>Heading 3</H3>
-                    <H4>Heading 4</H4>
-                    <H5>Heading 3</H5>
-                    <H6>Heading 4</H6>
-                    <Paragraph>Paragraph</Paragraph>
-                  </div>
-                ),
-                code: '',
-              },
-            ].map(({ id, name, code, component = <></> }, index: number) => {
+        <div className="container mx-auto flex flex-col gap-y-8 px-8 pb-8">
+          <H2>
+            <span className="capitalize">Components</span> ({components.length})
+          </H2>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {components.map(({ id = '', emoji = '', name = '' }) => {
               return (
-                <div key={id} className="flex flex-col gap-y-4">
-                  <Preview
-                    name={`${index + 1}. ${name}`}
-                    code={code}
-                    component={component}
-                  />
+                <div key={id} className="col-span-1">
+                  <div className="flex items-center gap-x-2 rounded border border-neutral-200 p-4 shadow">
+                    <p className="text-2xl">{emoji}</p>
+                    <p className="font-semibold">{name}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          <div className="flex flex-col gap-y-8">
+            {componentsByLevels.map(({ level = '', components = [] }) => {
+              return (
+                <div key={level} className="flex flex-col gap-y-8">
+                  <H2>
+                    <span className="capitalize">{level}</span> (
+                    {components.length})
+                  </H2>
+                  {components.map(({ id, name, code, component = <>
+
+                      </> }, index: number) => {
+                    return (
+                      <div key={id} className="flex flex-col gap-y-4">
+                        <Preview
+                          name={`${index + 1}. ${name}`}
+                          code={code}
+                          component={component}
+                        />
+                      </div>
+                    );
+                  })}
                 </div>
               );
             })}
           </div>
         </div>
       </main>
-      <footer className="border border-t-gray-900">
+      <footer className="border-t border-neutral-200">
         <div className="container mx-auto px-8 py-4">
           &copy; 2025 Nothing UI
         </div>
