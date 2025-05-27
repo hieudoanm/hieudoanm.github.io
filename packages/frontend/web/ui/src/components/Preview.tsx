@@ -11,15 +11,15 @@ export const Preview: FC<{
   const [preview, setPreview] = useState<boolean>(true);
 
   return (
-    <div className="flex flex-col gap-y-8">
+    <div id={id} className="flex flex-col gap-y-8">
       <div className="flex items-center justify-between">
-        <H3 id={id}>{name}</H3>
+        <H3>{name}</H3>
         <Button onClick={() => setPreview((previous: boolean) => !previous)}>
           {preview ? 'Preview' : 'Code'}
         </Button>
       </div>
       {preview ? (
-        <div className="flex items-center justify-center rounded border border-neutral-200 p-4 shadow-xs">
+        <div className="flex items-center justify-center rounded-lg border border-neutral-200 p-4 shadow dark:border-neutral-800">
           {component}
         </div>
       ) : (

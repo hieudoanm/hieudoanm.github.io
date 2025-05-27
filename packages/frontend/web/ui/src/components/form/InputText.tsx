@@ -23,7 +23,7 @@ export const Input: FC<{
       disabled={disabled}
       readOnly={readOnly}
       onChange={onChange}
-      className="w-full rounded border border-neutral-200 px-4 py-2 shadow-sm focus:outline-none"
+      className="w-full rounded-lg border border-neutral-200 px-4 py-2 shadow focus:outline-none dark:border-neutral-800"
     />
   );
 };

@@ -9,7 +9,7 @@ export const Checkbox: FC<{ label: string; name: string }> = ({
       <input
         type="checkbox"
         name={name}
-        className="rounded border border-neutral-800 bg-transparent accent-red-500 shadow-none"
+        className="rounded-lg border border-neutral-800 bg-transparent accent-red-500 shadow-none"
       />
       <span>{label}</span>
     </label>

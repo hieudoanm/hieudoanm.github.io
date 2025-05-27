@@ -1,10 +1,10 @@
+import { H3, Paragraph } from '@atomic-ui/components/Typography';
+import { Button } from '@atomic-ui/components/form/Button';
 import { FC } from 'react';
-import { H3, Paragraph } from '../Typography';
-import { Button } from '../form/Button';
 
 export const Modal: FC = () => {
   return (
-    <div className="w-full max-w-md divide-y divide-neutral-200 overflow-hidden rounded border border-neutral-200 bg-white shadow-md">
+    <div className="w-full max-w-md divide-y divide-neutral-200 overflow-hidden rounded-lg border border-neutral-200 bg-white shadow dark:divide-neutral-800 dark:border-neutral-800 dark:bg-neutral-900">
       <div className="px-6 py-4">
         <H3>Modal Title</H3>
       </div>

@@ -2,8 +2,8 @@ import { FC } from 'react';
 
 export const Table: FC = () => {
   return (
-    <div className="overflow-x-auto rounded border border-neutral-200 shadow-sm">
-      <table className="min-w-full divide-y-2 divide-neutral-200">
+    <div className="overflow-x-auto rounded-lg border border-neutral-200 shadow dark:border-neutral-800">
+      <table className="min-w-full divide-y-2 divide-neutral-200 dark:divide-neutral-800">
         <thead>
           <tr>
             <th className="px-3 py-2 whitespace-nowrap">Column 1</th>
@@ -12,7 +12,7 @@ export const Table: FC = () => {
             <th className="px-3 py-2 whitespace-nowrap">Column 4</th>
           </tr>
         </thead>
-        <tbody className="divide-y divide-neutral-200">
+        <tbody className="divide-y divide-neutral-200 dark:divide-neutral-800">
           <tr>
             <td className="px-3 py-2 whitespace-nowrap">Value 1.1</td>
             <td className="px-3 py-2 whitespace-nowrap">Value 2.1</td>

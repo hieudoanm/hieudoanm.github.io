@@ -3,7 +3,7 @@
 import { Avatar } from '@atomic-ui/components/Avatar';
 import { Badge } from '@atomic-ui/components/Badge';
 import { Breadcrumbs } from '@atomic-ui/components/Breadcrumbs';
-import { Card } from '@atomic-ui/components/Card';
+import { Card } from '@atomic-ui/components/data/Card';
 import { List } from '@atomic-ui/components/data/List';
 import { Stats } from '@atomic-ui/components/data/Stats';
 import { Table } from '@atomic-ui/components/data/Table';
@@ -11,17 +11,17 @@ import { Accordian } from '@atomic-ui/components/data/Accordian';
 import { Divider } from '@atomic-ui/components/Divider';
 import { Button } from '@atomic-ui/components/form/Button';
 import { ButtonGroup } from '@atomic-ui/components/form/ButtonGroup';
-import { Checkbox } from '@atomic-ui/components/form/Checkbox';
-import { FileUpload } from '@atomic-ui/components/form/FileUpload';
-import { Input } from '@atomic-ui/components/form/Input';
-import { Radio } from '@atomic-ui/components/form/Radio';
-import { Select } from '@atomic-ui/components/form/Select';
+import { Checkbox } from '@atomic-ui/components/form/InputCheckbox';
+import { FileUpload } from '@atomic-ui/components/form/InputFile';
+import { Input } from '@atomic-ui/components/form/InputText';
+import { Radio } from '@atomic-ui/components/form/InputRadio';
+import { Select } from '@atomic-ui/components/form/InputSelect';
 import { TextArea } from '@atomic-ui/components/form/TextArea';
 import { Toggle } from '@atomic-ui/components/form/Toggle';
-import { Alert } from '@atomic-ui/components/info/Alert';
-import { Tooltip } from '@atomic-ui/components/info/Tooltip';
+import { Alert } from '@atomic-ui/components/popup/Alert';
+import { Tooltip } from '@atomic-ui/components/popup/Tooltip';
 import { Loading } from '@atomic-ui/components/Loading';
-import { Modal } from '@atomic-ui/components/info/Modal';
+import { Modal } from '@atomic-ui/components/popup/Modal';
 import { Pagination } from '@atomic-ui/components/Pagination';
 import { Preview } from '@atomic-ui/components/Preview';
 import {
@@ -39,15 +39,16 @@ import Prism from 'prismjs';
 import 'prismjs/components/prism-markup';
 import 'prismjs/themes/prism-okaidia.css';
 import { ChangeEvent, ReactNode, useEffect, useState } from 'react';
-import { FaGithub } from 'react-icons/fa6';
+import { useDarkMode } from '@atomic-ui/hooks/use-dark-mode';
 
 const HomePage: NextPage = () => {
-  const [{ query = '', toggle = false }, setState] = useState<{
+  const { darkMode = false, toggleDarkMode } = useDarkMode();
+  const [{ query = '' }, setState] = useState<{
     query: string;
-    toggle: boolean;
+    dark: boolean;
   }>({
     query: '',
-    toggle: false,
+    dark: false,
   });
 
   useEffect(() => {
@@ -60,7 +61,7 @@ const HomePage: NextPage = () => {
     name: string;
     code: string;
     component: ReactNode;
-    level: 'data' | 'form' | 'info' | 'starter';
+    level: 'data' | 'form' | 'popup' | 'starter';
   }[] = [
     {
       id: 'accordian',
@@ -76,7 +77,7 @@ const HomePage: NextPage = () => {
       name: 'Alert',
       component: <Alert />,
       code: '',
-      level: 'info',
+      level: 'popup',
     },
     {
       id: 'avatar',
@@ -219,7 +220,7 @@ const HomePage: NextPage = () => {
           <Modal />
         </div>
       ),
-      level: 'info',
+      level: 'popup',
     },
     {
       id: 'select',
@@ -332,7 +333,7 @@ const HomePage: NextPage = () => {
         </div>
       ),
       code: '',
-      level: 'info',
+      level: 'popup',
     },
     {
       id: 'toggle',
@@ -340,15 +341,7 @@ const HomePage: NextPage = () => {
       name: 'Toggle',
       component: (
         <div className="flex w-full max-w-md items-center justify-center">
-          <Toggle
-            value={toggle}
-            onClick={() => {
-              setState((previous) => ({
-                ...previous,
-                toggle: !previous.toggle,
-              }));
-            }}
-          />
+          <Toggle value={darkMode} onClick={() => toggleDarkMode()} />
         </div>
       ),
       code: '',
@@ -385,11 +378,11 @@ const HomePage: NextPage = () => {
   });
 
   return (
-    <>
-      <nav className="border-b border-neutral-200">
+    <div className="bg-white text-black dark:bg-neutral-900 dark:text-neutral-100">
+      <nav className="border-b border-neutral-200 dark:border-neutral-800">
         <div className="container mx-auto px-8 py-4">
           <div className="flex items-center gap-x-4">
-            <H3>Atomic UI</H3>
+            <H3>atomic/ui</H3>
             <div className="grow">
               <Input
                 type="text"
@@ -407,15 +400,36 @@ const HomePage: NextPage = () => {
                 }}
               />
             </div>
-            <FaGithub className="text-3xl" />
+            <Link
+              href="https://github.com/hieudoanm/atomic-ui"
+              target="_blank"
+              className="font-semibold">
+              GitHub
+            </Link>
+            <Toggle
+              value={darkMode}
+              onClick={() => {
+                toggleDarkMode();
+              }}
+            />
           </div>
         </div>
       </nav>
       <main className="flex flex-col gap-y-8">
-        <div className="flex flex-col justify-center gap-y-4 border-b border-neutral-200 py-8 text-center">
+        <div className="flex flex-col justify-center gap-y-4 border-b border-neutral-200 py-8 text-center dark:border-neutral-800">
           <div className="flex flex-col gap-y-4">
-            <H1>Atomic UI</H1>
-            <p>Free Open Source TailwindCSS v4 Components</p>
+            <H1>atomic/ui</H1>
+            <p className="text-neutral-800 dark:text-neutral-200">
+              Free and Open Source TailwindCSS v4 Components
+            </p>
+            <div className="flex justify-center gap-x-2">
+              <p>
+                <strong>✅ TailwindCSS</strong>
+              </p>
+              <p>
+                <strong>✅ No JS</strong>
+              </p>
+            </div>
           </div>
         </div>
         <div className="container mx-auto flex flex-col gap-y-8 px-8 pb-8">
@@ -427,7 +441,7 @@ const HomePage: NextPage = () => {
               return (
                 <Link href={`#${id}`} key={id}>
                   <div className="col-span-1">
-                    <div className="flex items-center gap-x-2 rounded border border-neutral-200 p-4 shadow">
+                    <div className="flex items-center gap-x-2 rounded-lg border border-neutral-200 p-4 shadow dark:border-neutral-800">
                       <p className="text-2xl">{emoji}</p>
                       <p className="font-semibold">{name}</p>
                     </div>
@@ -464,10 +478,12 @@ const HomePage: NextPage = () => {
           </div>
         </div>
       </main>
-      <footer className="border-t border-neutral-200">
-        <div className="container mx-auto px-8 py-4">&copy; 2025 Atomic UI</div>
+      <footer className="border-t border-neutral-200 dark:border-neutral-800">
+        <div className="container mx-auto px-8 py-4">
+          &copy; {new Date().getFullYear()} <strong>atomic/ui</strong>
+        </div>
       </footer>
-    </>
+    </div>
   );
 };
 

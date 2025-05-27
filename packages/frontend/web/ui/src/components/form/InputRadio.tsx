@@ -9,7 +9,7 @@ export const Radio: FC<{ label: string; name: string }> = ({
       <input
         type="radio"
         name={name}
-        className="rounded border border-neutral-800 bg-neutral-900 accent-red-500 shadow-none"
+        className="rounded-lg border border-neutral-800 bg-neutral-900 accent-red-500 shadow-none"
       />
       <span>{label}</span>
     </label>
