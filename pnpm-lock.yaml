@@ -1163,23 +1163,23 @@ importers:
         specifier: 0.6.11
         version: 0.6.11(prettier@3.5.3)
       react:
-        specifier: ^19.0.0
+        specifier: 19.1.0
         version: 19.1.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: 19.1.0
         version: 19.1.0(react@19.1.0)
       react-icons:
         specifier: 5.5.0
         version: 5.5.0(react@19.1.0)
     devDependencies:
       '@eslint/eslintrc':
-        specifier: ^3
+        specifier: 3.3.1
         version: 3.3.1
       '@tailwindcss/postcss':
-        specifier: ^4
+        specifier: 4.1.7
         version: 4.1.7
       '@types/node':
-        specifier: ^20
+        specifier: 20.17.50
         version: 20.17.50
       '@types/prismjs':
         specifier: 1.26.5
@@ -1191,7 +1191,7 @@ importers:
         specifier: 19.1.5
         version: 19.1.5(@types/react@19.1.5)
       eslint:
-        specifier: ^9
+        specifier: 9.27.0
         version: 9.27.0(jiti@2.4.2)
       eslint-config-next:
         specifier: 15.3.2
@@ -1200,10 +1200,10 @@ importers:
         specifier: 1.30.0
         version: 1.30.0
       tailwindcss:
-        specifier: ^4
+        specifier: 4.1.7
         version: 4.1.7
       typescript:
-        specifier: ^5
+        specifier: 5.8.3
         version: 5.8.3
 
 packages:
@@ -16753,7 +16753,7 @@ snapshots:
     dependencies:
       '@jest/fake-timers': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 20.17.50
+      '@types/node': 22.15.21
       jest-mock: 29.7.0
 
   '@jest/expect-utils@29.7.0':
@@ -16771,7 +16771,7 @@ snapshots:
     dependencies:
       '@jest/types': 29.6.3
       '@sinonjs/fake-timers': 10.3.0
-      '@types/node': 20.17.50
+      '@types/node': 22.15.21
       jest-message-util: 29.7.0
       jest-mock: 29.7.0
       jest-util: 29.7.0
@@ -18974,11 +18974,11 @@ snapshots:
   '@types/glob@7.2.0':
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 20.17.50
+      '@types/node': 22.15.21
 
   '@types/graceful-fs@4.1.9':
     dependencies:
-      '@types/node': 20.17.50
+      '@types/node': 22.15.21
 
   '@types/har-format@1.2.16': {}
 
@@ -19054,7 +19054,7 @@ snapshots:
 
   '@types/mute-stream@0.0.4':
     dependencies:
-      '@types/node': 20.17.50
+      '@types/node': 22.15.21
 
   '@types/next-pwa@5.6.9(@babel/core@7.27.1)(@opentelemetry/api@1.4.1)(@types/babel__core@7.20.5)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
@@ -19141,7 +19141,7 @@ snapshots:
 
   '@types/resolve@1.17.1':
     dependencies:
-      '@types/node': 20.17.50
+      '@types/node': 22.15.21
 
   '@types/resolve@1.20.2': {}
 
@@ -19193,7 +19193,7 @@ snapshots:
   '@types/vinyl@2.0.12':
     dependencies:
       '@types/expect': 1.20.4
-      '@types/node': 20.17.50
+      '@types/node': 22.15.21
 
   '@types/web-bluetooth@0.0.21': {}
 
@@ -19211,7 +19211,7 @@ snapshots:
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 20.17.50
+      '@types/node': 22.15.21
 
   '@typescript-eslint/eslint-plugin@8.32.1(@typescript-eslint/parser@8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)':
     dependencies:
@@ -20668,7 +20668,7 @@ snapshots:
 
   chrome-launcher@1.2.0:
     dependencies:
-      '@types/node': 20.17.50
+      '@types/node': 22.15.21
       escape-string-regexp: 4.0.0
       is-wsl: 2.2.0
       lighthouse-logger: 2.0.1
@@ -23805,7 +23805,7 @@ snapshots:
       '@jest/expect': 29.7.0
       '@jest/test-result': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 20.17.50
+      '@types/node': 22.15.21
       chalk: 4.1.2
       co: 4.6.0
       dedent: 1.6.0
@@ -23901,7 +23901,7 @@ snapshots:
       '@jest/environment': 29.7.0
       '@jest/fake-timers': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 20.17.50
+      '@types/node': 22.15.21
       jest-mock: 29.7.0
       jest-util: 29.7.0
 
@@ -23950,7 +23950,7 @@ snapshots:
   jest-mock@29.7.0:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 20.17.50
+      '@types/node': 22.15.21
       jest-util: 29.7.0
 
   jest-pnp-resolver@1.2.3(jest-resolve@29.7.0):
@@ -24087,7 +24087,7 @@ snapshots:
 
   jest-worker@26.6.2:
     dependencies:
-      '@types/node': 20.17.50
+      '@types/node': 22.15.21
       merge-stream: 2.0.0
       supports-color: 7.2.0
 
@@ -24099,7 +24099,7 @@ snapshots:
 
   jest-worker@29.7.0:
     dependencies:
-      '@types/node': 20.17.50
+      '@types/node': 22.15.21
       jest-util: 29.7.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
