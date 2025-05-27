@@ -1,11 +1,29 @@
 'use client';
 
-import { Badge } from '@nothing-ui/components/Badge';
-import { Button } from '@nothing-ui/components/Button';
-import { ButtonGroup } from '@nothing-ui/components/ButtonGroup';
-import { Input } from '@nothing-ui/components/fields/Input';
-import { Preview } from '@nothing-ui/components/Preview';
-import { Select } from '@nothing-ui/components/fields/Select';
+import { Alert } from '@atom-ui/components/Alert';
+import { Avatar } from '@atom-ui/components/Avatar';
+import { Badge } from '@atom-ui/components/Badge';
+import { Breadcrumbs } from '@atom-ui/components/Breadcrumbs';
+import { Button } from '@atom-ui/components/Button';
+import { ButtonGroup } from '@atom-ui/components/ButtonGroup';
+import { Card } from '@atom-ui/components/Card';
+import { Divider } from '@atom-ui/components/Divider';
+import { Checkbox } from '@atom-ui/components/fields/Checkbox';
+import { FileUpload } from '@atom-ui/components/fields/FileUpload';
+import { Input } from '@atom-ui/components/fields/Input';
+import { Radio } from '@atom-ui/components/fields/Radio';
+import { Select } from '@atom-ui/components/fields/Select';
+import { TextArea } from '@atom-ui/components/fields/TextArea';
+import { Toggle } from '@atom-ui/components/fields/Toggle';
+import { List } from '@atom-ui/components/List';
+import { Loading } from '@atom-ui/components/Loading';
+import { Modal } from '@atom-ui/components/Modal';
+import { Pagination } from '@atom-ui/components/Pagination';
+import { Preview } from '@atom-ui/components/Preview';
+import { Stats } from '@atom-ui/components/Stats';
+import { Table } from '@atom-ui/components/Table';
+import { Timeline } from '@atom-ui/components/Timeline';
+import { Tooltip } from '@atom-ui/components/Tooltip';
 import {
   H1,
   H2,
@@ -14,20 +32,14 @@ import {
   H5,
   H6,
   Paragraph,
-} from '@nothing-ui/components/Typography';
+} from '@atom-ui/components/Typography';
 import { NextPage } from 'next';
+import Link from 'next/link';
 import Prism from 'prismjs';
 import 'prismjs/components/prism-markup';
 import 'prismjs/themes/prism-okaidia.css';
 import { ChangeEvent, ReactNode, useEffect, useState } from 'react';
 import { FaGithub } from 'react-icons/fa6';
-import { TextArea } from '@nothing-ui/components/fields/TextArea';
-import { Checkbox } from '@nothing-ui/components/fields/Checkbox';
-import { Radio } from '@nothing-ui/components/fields/Radio';
-import { FileUpload } from '@nothing-ui/components/fields/FileUpload';
-import { Toggle } from '@nothing-ui/components/fields/Toggle';
-import { Divider } from '@nothing-ui/components/Divider';
-import { Loading } from '@nothing-ui/components/Loading';
 
 const HomePage: NextPage = () => {
   const [{ query = '', toggle = false }, setState] = useState<{
@@ -54,7 +66,7 @@ const HomePage: NextPage = () => {
       id: 'alert',
       emoji: '🚨',
       name: 'Alert',
-      component: <></>,
+      component: <Alert />,
       code: '',
       level: 'essentials',
     },
@@ -62,7 +74,7 @@ const HomePage: NextPage = () => {
       id: 'avatar',
       emoji: '🖼️',
       name: 'Avatar',
-      component: <></>,
+      component: <Avatar />,
       code: '',
       level: 'starter',
     },
@@ -70,7 +82,7 @@ const HomePage: NextPage = () => {
       id: 'badge',
       emoji: '🏷️',
       name: 'Badge',
-      component: <Badge>Badge</Badge>,
+      component: <Badge type="neutral">Badge</Badge>,
       code: '',
       level: 'starter',
     },
@@ -78,7 +90,7 @@ const HomePage: NextPage = () => {
       id: 'breadcrumbs',
       emoji: '🍞',
       name: 'Breadcrumbs',
-      component: <></>,
+      component: <Breadcrumbs />,
       code: '',
       level: 'starter',
     },
@@ -103,7 +115,7 @@ const HomePage: NextPage = () => {
       emoji: '💳',
       name: 'Card',
       code: '',
-      component: <></>,
+      component: <Card />,
       level: 'essentials',
     },
     {
@@ -132,7 +144,11 @@ const HomePage: NextPage = () => {
       id: 'file-upload',
       emoji: '📂',
       name: 'File Upload',
-      component: <FileUpload id={'file'} name={'file'} />,
+      component: (
+        <div className="w-full">
+          <FileUpload id={'file'} name={'file'} />
+        </div>
+      ),
       code: '',
       level: 'starter',
     },
@@ -160,7 +176,7 @@ const HomePage: NextPage = () => {
       emoji: '📋',
       name: 'List',
       code: '',
-      component: <></>,
+      component: <List />,
       level: 'starter',
     },
     {
@@ -168,7 +184,7 @@ const HomePage: NextPage = () => {
       emoji: '📦',
       name: 'Modal',
       code: '',
-      component: <></>,
+      component: <Modal />,
       level: 'essentials',
     },
     {
@@ -210,7 +226,7 @@ const HomePage: NextPage = () => {
       id: 'pagination',
       emoji: '📄',
       name: 'Pagination',
-      component: <></>,
+      component: <Pagination />,
       code: '',
       level: 'starter',
     },
@@ -240,7 +256,7 @@ const HomePage: NextPage = () => {
       id: 'stats',
       emoji: '📊',
       name: 'Stats',
-      component: <></>,
+      component: <Stats />,
       code: '',
       level: 'starter',
     },
@@ -248,7 +264,7 @@ const HomePage: NextPage = () => {
       id: 'table',
       emoji: '📈',
       name: 'Table',
-      component: <></>,
+      component: <Table />,
       code: '',
       level: 'starter',
     },
@@ -256,7 +272,7 @@ const HomePage: NextPage = () => {
       id: 'timeline',
       emoji: '⏱️',
       name: 'Timeline',
-      component: <></>,
+      component: <Timeline />,
       code: '',
       level: 'starter',
     },
@@ -264,7 +280,7 @@ const HomePage: NextPage = () => {
       id: 'tooltip',
       emoji: '💬',
       name: 'Tooltip',
-      component: <></>,
+      component: <Tooltip />,
       code: '',
       level: 'starter',
     },
@@ -321,7 +337,7 @@ const HomePage: NextPage = () => {
       <nav className="border-b border-neutral-200">
         <div className="container mx-auto px-8 py-4">
           <div className="flex items-center gap-x-4">
-            <H3>Nothing UI</H3>
+            <H3>Atom UI</H3>
             <div className="grow">
               <Input
                 type="text"
@@ -346,7 +362,7 @@ const HomePage: NextPage = () => {
       <main className="flex flex-col gap-y-8 py-8">
         <div className="flex h-screen flex-col justify-center gap-y-4 border-b border-neutral-200 text-center">
           <div className="flex flex-col gap-y-4">
-            <H1>Nothing UI</H1>
+            <H1>Atom UI</H1>
             <p>Free Open Source TailwindCSS v4 Components</p>
           </div>
         </div>
@@ -357,12 +373,14 @@ const HomePage: NextPage = () => {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {components.map(({ id = '', emoji = '', name = '' }) => {
               return (
-                <div key={id} className="col-span-1">
-                  <div className="flex items-center gap-x-2 rounded border border-neutral-200 p-4 shadow">
-                    <p className="text-2xl">{emoji}</p>
-                    <p className="font-semibold">{name}</p>
+                <Link href={`#${id}`} key={id}>
+                  <div className="col-span-1">
+                    <div className="flex items-center gap-x-2 rounded border border-neutral-200 p-4 shadow">
+                      <p className="text-2xl">{emoji}</p>
+                      <p className="font-semibold">{name}</p>
+                    </div>
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>
@@ -380,6 +398,7 @@ const HomePage: NextPage = () => {
                     return (
                       <div key={id} className="flex flex-col gap-y-4">
                         <Preview
+                          id={id}
                           name={`${index + 1}. ${name}`}
                           code={code}
                           component={component}
@@ -394,9 +413,7 @@ const HomePage: NextPage = () => {
         </div>
       </main>
       <footer className="border-t border-neutral-200">
-        <div className="container mx-auto px-8 py-4">
-          &copy; 2025 Nothing UI
-        </div>
+        <div className="container mx-auto px-8 py-4">&copy; 2025 Atom UI</div>
       </footer>
     </>
   );

@@ -7,7 +7,7 @@ export const Button: FC<{
 }> = ({ children = <></>, disabled = false, onClick = undefined }) => {
   return (
     <button
-      className="cursor-pointer rounded border border-neutral-200 px-4 py-2 shadow-sm"
+      className="cursor-pointer rounded bg-red-700 px-4 py-2 text-white shadow-sm transition-all hover:bg-red-800"
       disabled={disabled}
       onClick={onClick}>
       {children}

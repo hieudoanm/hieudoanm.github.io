@@ -19,7 +19,7 @@
       }
     ],
     "paths": {
-      "@nothing-ui/*": ["./src/*"]
+      "@atom-ui/*": ["./src/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
