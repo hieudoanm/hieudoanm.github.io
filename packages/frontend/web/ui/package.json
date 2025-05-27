@@ -1,7 +1,7 @@
 {
-  "name": "@nothing/ui",
+  "name": "@atom/ui",
   "version": "0.0.1",
-  "description": "Nothing UI",
+  "description": "Atom UI",
   "packageManager": "pnpm@10.11.0",
   "main": "index.js",
   "repository": {

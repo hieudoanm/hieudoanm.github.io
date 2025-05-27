@@ -1,29 +1,29 @@
 'use client';
 
-import { Alert } from '@atom-ui/components/Alert';
 import { Avatar } from '@atom-ui/components/Avatar';
 import { Badge } from '@atom-ui/components/Badge';
 import { Breadcrumbs } from '@atom-ui/components/Breadcrumbs';
-import { Button } from '@atom-ui/components/Button';
-import { ButtonGroup } from '@atom-ui/components/ButtonGroup';
 import { Card } from '@atom-ui/components/Card';
+import { List } from '@atom-ui/components/data/List';
+import { Stats } from '@atom-ui/components/data/Stats';
+import { Table } from '@atom-ui/components/data/Table';
+import { Timeline } from '@atom-ui/components/data/Timeline';
 import { Divider } from '@atom-ui/components/Divider';
-import { Checkbox } from '@atom-ui/components/fields/Checkbox';
-import { FileUpload } from '@atom-ui/components/fields/FileUpload';
-import { Input } from '@atom-ui/components/fields/Input';
-import { Radio } from '@atom-ui/components/fields/Radio';
-import { Select } from '@atom-ui/components/fields/Select';
-import { TextArea } from '@atom-ui/components/fields/TextArea';
-import { Toggle } from '@atom-ui/components/fields/Toggle';
-import { List } from '@atom-ui/components/List';
+import { Button } from '@atom-ui/components/form/Button';
+import { ButtonGroup } from '@atom-ui/components/form/ButtonGroup';
+import { Checkbox } from '@atom-ui/components/form/Checkbox';
+import { FileUpload } from '@atom-ui/components/form/FileUpload';
+import { Input } from '@atom-ui/components/form/Input';
+import { Radio } from '@atom-ui/components/form/Radio';
+import { Select } from '@atom-ui/components/form/Select';
+import { TextArea } from '@atom-ui/components/form/TextArea';
+import { Toggle } from '@atom-ui/components/form/Toggle';
+import { Alert } from '@atom-ui/components/info/Alert';
+import { Tooltip } from '@atom-ui/components/info/Tooltip';
 import { Loading } from '@atom-ui/components/Loading';
 import { Modal } from '@atom-ui/components/Modal';
 import { Pagination } from '@atom-ui/components/Pagination';
 import { Preview } from '@atom-ui/components/Preview';
-import { Stats } from '@atom-ui/components/Stats';
-import { Table } from '@atom-ui/components/Table';
-import { Timeline } from '@atom-ui/components/Timeline';
-import { Tooltip } from '@atom-ui/components/Tooltip';
 import {
   H1,
   H2,
@@ -60,7 +60,7 @@ const HomePage: NextPage = () => {
     name: string;
     code: string;
     component: ReactNode;
-    level: 'essentials' | 'starter';
+    level: 'data' | 'form' | 'info' | 'starter';
   }[] = [
     {
       id: 'alert',
@@ -68,7 +68,7 @@ const HomePage: NextPage = () => {
       name: 'Alert',
       component: <Alert />,
       code: '',
-      level: 'essentials',
+      level: 'info',
     },
     {
       id: 'avatar',
@@ -100,7 +100,7 @@ const HomePage: NextPage = () => {
       name: 'Button',
       component: <Button>Button</Button>,
       code: '',
-      level: 'essentials',
+      level: 'form',
     },
     {
       id: 'button-group',
@@ -108,7 +108,7 @@ const HomePage: NextPage = () => {
       name: 'Button Group',
       component: <ButtonGroup />,
       code: '',
-      level: 'starter',
+      level: 'form',
     },
     {
       id: 'card',
@@ -116,7 +116,7 @@ const HomePage: NextPage = () => {
       name: 'Card',
       code: '',
       component: <Card />,
-      level: 'essentials',
+      level: 'data',
     },
     {
       id: 'checkbox',
@@ -130,7 +130,7 @@ const HomePage: NextPage = () => {
         </div>
       ),
       code: '',
-      level: 'essentials',
+      level: 'form',
     },
     {
       id: 'divider',
@@ -150,7 +150,7 @@ const HomePage: NextPage = () => {
         </div>
       ),
       code: '',
-      level: 'starter',
+      level: 'form',
     },
     {
       id: 'input',
@@ -169,7 +169,7 @@ const HomePage: NextPage = () => {
           }}
         />
       ),
-      level: 'essentials',
+      level: 'form',
     },
     {
       id: 'list',
@@ -177,7 +177,7 @@ const HomePage: NextPage = () => {
       name: 'List',
       code: '',
       component: <List />,
-      level: 'starter',
+      level: 'data',
     },
     {
       id: 'modal',
@@ -185,7 +185,7 @@ const HomePage: NextPage = () => {
       name: 'Modal',
       code: '',
       component: <Modal />,
-      level: 'essentials',
+      level: 'data',
     },
     {
       id: 'select',
@@ -201,7 +201,7 @@ const HomePage: NextPage = () => {
             console.log(event.target.value);
           }}></Select>
       ),
-      level: 'essentials',
+      level: 'form',
     },
     {
       id: 'textarea',
@@ -220,7 +220,7 @@ const HomePage: NextPage = () => {
           }}
         />
       ),
-      level: 'essentials',
+      level: 'form',
     },
     {
       id: 'pagination',
@@ -242,7 +242,7 @@ const HomePage: NextPage = () => {
         </div>
       ),
       code: '',
-      level: 'starter',
+      level: 'form',
     },
     {
       id: 'loading',
@@ -258,7 +258,7 @@ const HomePage: NextPage = () => {
       name: 'Stats',
       component: <Stats />,
       code: '',
-      level: 'starter',
+      level: 'data',
     },
     {
       id: 'table',
@@ -266,7 +266,7 @@ const HomePage: NextPage = () => {
       name: 'Table',
       component: <Table />,
       code: '',
-      level: 'starter',
+      level: 'data',
     },
     {
       id: 'timeline',
@@ -274,7 +274,7 @@ const HomePage: NextPage = () => {
       name: 'Timeline',
       component: <Timeline />,
       code: '',
-      level: 'starter',
+      level: 'data',
     },
     {
       id: 'tooltip',
@@ -282,7 +282,7 @@ const HomePage: NextPage = () => {
       name: 'Tooltip',
       component: <Tooltip />,
       code: '',
-      level: 'starter',
+      level: 'info',
     },
     {
       id: 'toggle',
@@ -300,7 +300,7 @@ const HomePage: NextPage = () => {
         />
       ),
       code: '',
-      level: 'starter',
+      level: 'form',
     },
     {
       id: 'typography',

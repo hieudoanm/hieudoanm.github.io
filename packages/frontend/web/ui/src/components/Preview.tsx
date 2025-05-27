@@ -1,5 +1,5 @@
 import { FC, ReactNode, useState } from 'react';
-import { Button } from './Button';
+import { Button } from './form/Button';
 import { H3 } from './Typography';
 
 export const Preview: FC<{
