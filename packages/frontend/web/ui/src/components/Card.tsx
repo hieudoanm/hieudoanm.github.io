@@ -1,11 +1,11 @@
-import card from '@atom-ui/assets/card.jpg';
+import card from '@atomic-ui/assets/card.jpg';
 import { FC } from 'react';
 import { H3, H6, Paragraph } from './Typography';
 import { Button } from './form/Button';
 
 export const Card: FC = () => {
   return (
-    <div className="w-full max-w-md overflow-hidden rounded border border-neutral-200 bg-white shadow-md">
+    <div className="w-full max-w-md overflow-hidden rounded border border-neutral-200 bg-white shadow-lg">
       <div
         className="aspect-video w-full bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${card.src})` }}

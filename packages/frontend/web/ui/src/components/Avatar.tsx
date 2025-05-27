@@ -1,5 +1,5 @@
+import avatar from '@atomic-ui/assets/avatar.jpg';
 import { FC } from 'react';
-import avatar from '@atom-ui/assets/avatar.jpg';
 
 export const Avatar: FC = () => {
   return (

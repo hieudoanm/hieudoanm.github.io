@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Nothing UI',
-  description: 'Nothing UI created by Hieu Doan, inspired by Nothing Tech',
+  title: 'Atomic UI',
+  description: 'Atomic UI created by Hieu Doan',
 };
 
 const RootLayout: FC<

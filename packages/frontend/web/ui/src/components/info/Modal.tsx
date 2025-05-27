@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { H3, Paragraph } from './Typography';
-import { Button } from './form/Button';
+import { H3, Paragraph } from '../Typography';
+import { Button } from '../form/Button';
 
 export const Modal: FC = () => {
   return (
