@@ -19,7 +19,7 @@ export const Preview: FC<{
         </Button>
       </div>
       {preview ? (
-        <div className="flex items-center justify-center rounded-lg border border-neutral-200 p-4 shadow dark:border-neutral-800">
+        <div className="flex items-center justify-center rounded-lg border border-neutral-200 p-4 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">
           {component}
         </div>
       ) : (

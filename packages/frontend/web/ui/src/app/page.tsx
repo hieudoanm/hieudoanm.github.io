@@ -379,7 +379,7 @@ const HomePage: NextPage = () => {
 
   return (
     <div className="bg-white text-black dark:bg-neutral-900 dark:text-neutral-100">
-      <nav className="border-b border-neutral-200 dark:border-neutral-800">
+      <nav className="border-b border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">
         <div className="container mx-auto px-8 py-4">
           <div className="flex items-center gap-x-4">
             <H3>atomic/ui</H3>
@@ -441,7 +441,7 @@ const HomePage: NextPage = () => {
               return (
                 <Link href={`#${id}`} key={id}>
                   <div className="col-span-1">
-                    <div className="flex items-center gap-x-2 rounded-lg border border-neutral-200 p-4 shadow dark:border-neutral-800">
+                    <div className="flex items-center gap-x-2 rounded-lg border border-neutral-200 p-4 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">
                       <p className="text-2xl">{emoji}</p>
                       <p className="font-semibold">{name}</p>
                     </div>
@@ -478,7 +478,7 @@ const HomePage: NextPage = () => {
           </div>
         </div>
       </main>
-      <footer className="border-t border-neutral-200 dark:border-neutral-800">
+      <footer className="border-t border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">
         <div className="container mx-auto px-8 py-4">
           &copy; {new Date().getFullYear()} <strong>atomic/ui</strong>
         </div>

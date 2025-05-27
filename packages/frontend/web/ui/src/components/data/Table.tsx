@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 export const Table: FC = () => {
   return (
-    <div className="overflow-x-auto rounded-lg border border-neutral-200 shadow dark:border-neutral-800">
+    <div className="overflow-x-auto rounded-lg border border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">
       <table className="min-w-full divide-y-2 divide-neutral-200 dark:divide-neutral-800">
         <thead>
           <tr>
