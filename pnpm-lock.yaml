@@ -709,8 +709,8 @@ importers:
         specifier: 8.32.1
         version: 8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)
       web-ext:
-        specifier: 8.7.0
-        version: 8.7.0(body-parser@1.20.3)(express@4.21.2)
+        specifier: 8.7.1
+        version: 8.7.1(body-parser@1.20.3)(express@4.21.2)
       webpack:
         specifier: 5.99.9
         version: 5.99.9(webpack-cli@6.0.1)
@@ -811,8 +811,8 @@ importers:
         specifier: 8.32.1
         version: 8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)
       web-ext:
-        specifier: 8.7.0
-        version: 8.7.0(body-parser@1.20.3)(express@4.21.2)
+        specifier: 8.7.1
+        version: 8.7.1(body-parser@1.20.3)(express@4.21.2)
       webpack:
         specifier: 5.99.9
         version: 5.99.9(webpack-cli@6.0.1)
@@ -5668,8 +5668,8 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
 
-  addons-linter@7.12.0:
-    resolution: {integrity: sha512-nvVnLqZvLCtPlvLiiJx8s217k5UvXOMQ/Y2qDutBXu8I8CK3pL6uLr5KvZan4eqEY1c1iHekvb3fnvf86a/4fA==}
+  addons-linter@7.13.0:
+    resolution: {integrity: sha512-PCtnZtFfMw+7NSwHEsXPxlUC37ixvx4WBMUbT3T2WQ4N002lATRJQD4ixIXYbRNMDESrC8H2H91ReEE5jmS+Qg==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -13414,8 +13414,8 @@ packages:
   wcwidth@1.0.1:
     resolution: {integrity: sha512-XHPEwS0q6TaxcvG85+8EYkbiCux2XtWG2mkc47Ng2A77BQu9+DqIOJldST4HgPkuea7dvKSj5VgX3P1d4rW8Tg==}
 
-  web-ext@8.7.0:
-    resolution: {integrity: sha512-A0djEbKMcRhlWVQW0NMX8I8dQyEeXjnbWaDrJ/++v790BcCG5foHTDPdAC38pRfwGaToTqgehztzCiT+68kLYw==}
+  web-ext@8.7.1:
+    resolution: {integrity: sha512-erzzLemPynhFSmSavgQ92PJkFGlY0XQEMZOHbc85D2f+pKi2wk7edaAwa8GU1E9AbyVrdPaFk7wGLpRGfRw8zw==}
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
@@ -16742,7 +16742,7 @@ snapshots:
     dependencies:
       '@jest/fake-timers': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 22.15.21
+      '@types/node': 20.17.50
       jest-mock: 29.7.0
 
   '@jest/expect-utils@29.7.0':
@@ -16760,7 +16760,7 @@ snapshots:
     dependencies:
       '@jest/types': 29.6.3
       '@sinonjs/fake-timers': 10.3.0
-      '@types/node': 22.15.21
+      '@types/node': 20.17.50
       jest-message-util: 29.7.0
       jest-mock: 29.7.0
       jest-util: 29.7.0
@@ -18963,11 +18963,11 @@ snapshots:
   '@types/glob@7.2.0':
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 22.15.21
+      '@types/node': 20.17.50
 
   '@types/graceful-fs@4.1.9':
     dependencies:
-      '@types/node': 22.15.21
+      '@types/node': 20.17.50
 
   '@types/har-format@1.2.16': {}
 
@@ -19043,7 +19043,7 @@ snapshots:
 
   '@types/mute-stream@0.0.4':
     dependencies:
-      '@types/node': 22.15.21
+      '@types/node': 20.17.50
 
   '@types/next-pwa@5.6.9(@babel/core@7.27.1)(@opentelemetry/api@1.4.1)(@types/babel__core@7.20.5)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
@@ -19122,7 +19122,7 @@ snapshots:
 
   '@types/resolve@1.17.1':
     dependencies:
-      '@types/node': 22.15.21
+      '@types/node': 20.17.50
 
   '@types/resolve@1.20.2': {}
 
@@ -19174,7 +19174,7 @@ snapshots:
   '@types/vinyl@2.0.12':
     dependencies:
       '@types/expect': 1.20.4
-      '@types/node': 22.15.21
+      '@types/node': 20.17.50
 
   '@types/web-bluetooth@0.0.21': {}
 
@@ -19192,7 +19192,7 @@ snapshots:
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 22.15.21
+      '@types/node': 20.17.50
 
   '@typescript-eslint/eslint-plugin@8.32.1(@typescript-eslint/parser@8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)':
     dependencies:
@@ -19701,7 +19701,7 @@ snapshots:
 
   acorn@8.14.1: {}
 
-  addons-linter@7.12.0(body-parser@1.20.3)(express@4.21.2):
+  addons-linter@7.13.0(body-parser@1.20.3)(express@4.21.2):
     dependencies:
       '@fluent/syntax': 0.19.0
       '@fregante/relaxed-json': 2.0.0
@@ -20649,7 +20649,7 @@ snapshots:
 
   chrome-launcher@1.2.0:
     dependencies:
-      '@types/node': 22.15.21
+      '@types/node': 20.17.50
       escape-string-regexp: 4.0.0
       is-wsl: 2.2.0
       lighthouse-logger: 2.0.1
@@ -23786,7 +23786,7 @@ snapshots:
       '@jest/expect': 29.7.0
       '@jest/test-result': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 22.15.21
+      '@types/node': 20.17.50
       chalk: 4.1.2
       co: 4.6.0
       dedent: 1.6.0
@@ -23882,7 +23882,7 @@ snapshots:
       '@jest/environment': 29.7.0
       '@jest/fake-timers': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 22.15.21
+      '@types/node': 20.17.50
       jest-mock: 29.7.0
       jest-util: 29.7.0
 
@@ -23931,7 +23931,7 @@ snapshots:
   jest-mock@29.7.0:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 22.15.21
+      '@types/node': 20.17.50
       jest-util: 29.7.0
 
   jest-pnp-resolver@1.2.3(jest-resolve@29.7.0):
@@ -24068,7 +24068,7 @@ snapshots:
 
   jest-worker@26.6.2:
     dependencies:
-      '@types/node': 22.15.21
+      '@types/node': 20.17.50
       merge-stream: 2.0.0
       supports-color: 7.2.0
 
@@ -24080,7 +24080,7 @@ snapshots:
 
   jest-worker@29.7.0:
     dependencies:
-      '@types/node': 22.15.21
+      '@types/node': 20.17.50
       jest-util: 29.7.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
@@ -29076,11 +29076,11 @@ snapshots:
     dependencies:
       defaults: 1.0.4
 
-  web-ext@8.7.0(body-parser@1.20.3)(express@4.21.2):
+  web-ext@8.7.1(body-parser@1.20.3)(express@4.21.2):
     dependencies:
       '@babel/runtime': 7.27.1
       '@devicefarmer/adbkit': 3.3.8
-      addons-linter: 7.12.0(body-parser@1.20.3)(express@4.21.2)
+      addons-linter: 7.13.0(body-parser@1.20.3)(express@4.21.2)
       camelcase: 8.0.0
       chrome-launcher: 1.2.0
       debounce: 1.2.1
