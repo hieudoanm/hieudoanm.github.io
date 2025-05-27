@@ -37,8 +37,8 @@
     "turbo": "2.5.3"
   },
   "resolutions": {
-    "@babel/helpers": "7.27.1",
-    "@babel/runtime": "7.27.1",
+    "@babel/helpers": "7.27.3",
+    "@babel/runtime": "7.27.3",
     "@octokit/plugin-paginate-rest": "13.0.1",
     "@octokit/request-error": "7.0.0",
     "@octokit/request": "10.0.2",
