@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-export const TextArea: FC = () => {
+export const Textarea: FC = () => {
   return (
     <textarea
       placeholder="Textarea"

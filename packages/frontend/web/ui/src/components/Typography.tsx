@@ -1,85 +1,29 @@
 import { FC } from 'react';
 
-export const H1: FC<{
-  id?: string;
-  className?: string;
-  children: React.ReactNode;
-}> = ({ id = '', className = '', children = <></> }) => {
-  return (
-    <h1 id={id} className={`text-4xl font-black ${className}`}>
-      {children}
-    </h1>
-  );
+export const H1: FC = () => {
+  return <h1 className="text-4xl font-black">Heading 1</h1>;
 };
 
-export const H2: FC<{
-  id?: string;
-  className?: string;
-  children: React.ReactNode;
-}> = ({ id = '', className = '', children = <></> }) => {
-  return (
-    <h2 id={id} className={`text-3xl font-extrabold ${className}`}>
-      {children}
-    </h2>
-  );
+export const H2: FC = () => {
+  return <h2 className="text-3xl font-extrabold">Heading 2</h2>;
 };
 
-export const H3: FC<{
-  id?: string;
-  className?: string;
-  children: React.ReactNode;
-}> = ({ id = '', className = '', children = <></> }) => {
-  return (
-    <h3 id={id} className={`text-2xl font-bold ${className}`}>
-      {children}
-    </h3>
-  );
+export const H3: FC = () => {
+  return <h3 className="text-2xl font-bold">Heading 3</h3>;
 };
 
-export const H4: FC<{
-  id?: string;
-  className?: string;
-  children: React.ReactNode;
-}> = ({ id = '', className = '', children = <></> }) => {
-  return (
-    <h4 id={id} className={`text-xl font-semibold ${className}`}>
-      {children}
-    </h4>
-  );
+export const H4: FC = () => {
+  return <h4 className="text-xl font-semibold">Heading 4</h4>;
 };
 
-export const H5: FC<{
-  id?: string;
-  className?: string;
-  children: React.ReactNode;
-}> = ({ id = '', className = '', children = <></> }) => {
-  return (
-    <h5 id={id} className={`text-lg font-medium ${className}`}>
-      {children}
-    </h5>
-  );
+export const H5: FC = () => {
+  return <h5 className="text-lg font-medium">Heading 5</h5>;
 };
 
-export const H6: FC<{
-  id?: string;
-  className?: string;
-  children: React.ReactNode;
-}> = ({ id = '', className = '', children = <></> }) => {
-  return (
-    <h6 id={id} className={`text-base font-normal ${className}`}>
-      {children}
-    </h6>
-  );
+export const H6: FC = () => {
+  return <h6 className="text-base font-normal">Heading 6</h6>;
 };
 
-export const Paragraph: FC<{
-  id?: string;
-  className?: string;
-  children: React.ReactNode;
-}> = ({ id = '', className = '', children = <></> }) => {
-  return (
-    <p id={id} className={`text-base font-normal ${className}`}>
-      {children}
-    </p>
-  );
+export const Paragraph: FC = () => {
+  return <p className="text-base font-normal">Paragraph</p>;
 };

@@ -26,7 +26,7 @@ const RootLayout: FC<
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        className={`${geistMono.variable} ${geistSans.variable} antialiased`}>
         {children}
       </body>
     </html>

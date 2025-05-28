@@ -4,7 +4,7 @@ export const Divider: FC<{ text: string }> = ({ text = '' }) => {
   return (
     <span className="flex w-full items-center gap-x-2">
       <span className="h-px flex-1 bg-neutral-800 dark:bg-neutral-200"></span>
-      <span className="shrink-0 text-neutral-800 dark:text-neutral-200">
+      <span className="shrink-0 text-neutral-900 dark:text-neutral-100">
         {text}
       </span>
       <span className="h-px flex-1 bg-neutral-800 dark:bg-neutral-200"></span>

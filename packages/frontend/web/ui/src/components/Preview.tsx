@@ -15,13 +15,17 @@ export const Preview: FC<{
         <h3 className="text-2xl font-bold">{name}</h3>
         <button
           type="button"
-          className="cursor-pointer rounded-lg bg-red-500 px-4 py-2 text-white shadow hover:bg-red-800 focus:bg-red-800 focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:outline-none disabled:cursor-not-allowed disabled:bg-neutral-300 disabled:text-neutral-500 dark:bg-red-700 dark:shadow-neutral-100/10"
+          className="cursor-pointer rounded-lg bg-red-500 px-4 py-2 text-white shadow dark:bg-red-700 dark:shadow-neutral-100/10"
           onClick={() => setPreview((previous: boolean) => !previous)}>
           {preview ? 'Preview' : 'Code'}
         </button>
       </div>
-      <div className="flex items-center justify-center rounded-lg border border-neutral-200 p-8 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">
-        {preview ? <>{component}</> : <Code code={code} lang="html" />}{' '}
+      <div className="flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">
+        {preview ? (
+          <div className="w-full p-8">{component}</div>
+        ) : (
+          <Code code={code} lang="html" />
+        )}
       </div>
     </div>
   );

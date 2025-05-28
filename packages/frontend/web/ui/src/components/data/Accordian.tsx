@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 export const Accordian: FC = () => {
   return (
-    <div className="mx-auto w-full max-w-md divide-y divide-neutral-200 rounded-lg border border-neutral-200 bg-neutral-100 shadow dark:divide-neutral-800 dark:border-neutral-800 dark:bg-neutral-900 dark:shadow-neutral-100/10">
+    <div className="w-full max-w-md divide-y divide-neutral-200 rounded-lg border border-neutral-200 bg-white shadow dark:divide-neutral-800 dark:border-neutral-800 dark:bg-neutral-900 dark:shadow-neutral-100/10">
       <details className="group">
         <summary className="flex cursor-pointer list-none items-center justify-between px-4 py-3">
           <span className="font-semibold text-neutral-900 dark:text-neutral-100">
