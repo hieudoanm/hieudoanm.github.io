@@ -1,4 +1,3 @@
-import card from '@atomic-ui/assets/card.jpg';
 import { FC } from 'react';
 
 export const Card: FC = () => {
@@ -6,7 +5,7 @@ export const Card: FC = () => {
     <div className="w-full max-w-md divide-y divide-neutral-200 overflow-hidden rounded-lg border border-neutral-200 bg-white shadow dark:divide-neutral-800 dark:border-neutral-800 dark:bg-neutral-900 dark:shadow-neutral-100/10">
       <div
         className="aspect-video w-full bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${card.src})` }}
+        style={{ backgroundImage: `url("/assets/card.jpg")` }}
       />
       <div className="flex flex-col gap-y-2 p-6">
         <h3 className="text-2xl font-bold">Title</h3>

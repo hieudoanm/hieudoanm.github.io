@@ -1,5 +1,5 @@
 import { FC, ReactNode, useState } from 'react';
-import { Code } from './Code';
+import { Code } from './typography/Code';
 
 export const Preview: FC<{
   id: string;
@@ -10,9 +10,11 @@ export const Preview: FC<{
   const [preview, setPreview] = useState<boolean>(true);
 
   return (
-    <div id={id} className="flex flex-col gap-y-8">
-      <div className="flex items-center justify-between">
-        <h3 className="text-2xl font-bold">{name}</h3>
+    <div id={id} className="flex flex-col gap-y-4 md:gap-y-8">
+      <div className="flex items-center justify-between gap-x-2">
+        <h3 className="w-48 truncate text-xl font-bold whitespace-nowrap md:text-2xl">
+          {name}
+        </h3>
         <button
           type="button"
           className="cursor-pointer rounded-lg bg-red-500 px-4 py-2 text-white shadow dark:bg-red-700 dark:shadow-neutral-100/10"
@@ -22,7 +24,7 @@ export const Preview: FC<{
       </div>
       <div className="flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">
         {preview ? (
-          <div className="w-full p-8">{component}</div>
+          <div className="w-full p-4 md:p-8">{component}</div>
         ) : (
           <Code code={code} lang="html" />
         )}

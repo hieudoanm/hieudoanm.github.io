@@ -1,28 +1,31 @@
 'use client';
 
-import { Avatar } from '@atomic-ui/components/Avatar';
-import { Badge } from '@atomic-ui/components/Badge';
-import { Breadcrumbs } from '@atomic-ui/components/Breadcrumbs';
-import { Accordian } from '@atomic-ui/components/data/Accordian';
-import { Card } from '@atomic-ui/components/data/Card';
+import { Button } from '@atomic-ui/components/button/Button';
+import { ButtonGroup } from '@atomic-ui/components/button/ButtonGroup';
 import { List } from '@atomic-ui/components/data/List';
 import { Stats } from '@atomic-ui/components/data/Stats';
 import { Table } from '@atomic-ui/components/data/Table';
-import { Divider } from '@atomic-ui/components/Divider';
-import { Button } from '@atomic-ui/components/form/Button';
-import { ButtonGroup } from '@atomic-ui/components/form/ButtonGroup';
+import { Tooltip } from '@atomic-ui/components/data/Tooltip';
+import { Alert } from '@atomic-ui/components/feedback/Alert';
+import { Badge } from '@atomic-ui/components/feedback/Badge';
+import { Loading } from '@atomic-ui/components/feedback/Loading';
+import { Toast } from '@atomic-ui/components/feedback/Toast';
 import { Checkbox } from '@atomic-ui/components/form/InputCheckbox';
-import { FileUpload } from '@atomic-ui/components/form/InputFile';
 import { Radio } from '@atomic-ui/components/form/InputRadio';
 import { Select } from '@atomic-ui/components/form/InputSelect';
 import { Input } from '@atomic-ui/components/form/InputText';
 import { Textarea } from '@atomic-ui/components/form/InputTextarea';
 import { Toggle } from '@atomic-ui/components/form/InputToggle';
-import { Loading } from '@atomic-ui/components/Loading';
-import { Pagination } from '@atomic-ui/components/Pagination';
-import { Alert } from '@atomic-ui/components/popup/Alert';
-import { Modal } from '@atomic-ui/components/popup/Modal';
-import { Tooltip } from '@atomic-ui/components/popup/Tooltip';
+import { Accordian } from '@atomic-ui/components/layout/Accordian';
+import { Card } from '@atomic-ui/components/layout/Card';
+import { Divider } from '@atomic-ui/components/layout/Divider';
+import { Modal } from '@atomic-ui/components/layout/Modal';
+import { Avatar } from '@atomic-ui/components/media/Avatar';
+import { FileUpload } from '@atomic-ui/components/media/File';
+import { Breadcrumbs } from '@atomic-ui/components/navigation/Breadcrumbs';
+import { Menu } from '@atomic-ui/components/navigation/Menu';
+import { Pagination } from '@atomic-ui/components/navigation/Pagination';
+import { Steps } from '@atomic-ui/components/navigation/Steps';
 import { Preview } from '@atomic-ui/components/Preview';
 import {
   H1,
@@ -31,8 +34,8 @@ import {
   H4,
   H5,
   H6,
-  Paragraph,
-} from '@atomic-ui/components/Typography';
+} from '@atomic-ui/components/typography/Heading';
+import { Paragraph } from '@atomic-ui/components/typography/Paragraph';
 import { useDarkMode } from '@atomic-ui/hooks/use-dark-mode';
 import { NextPage } from 'next';
 import Link from 'next/link';
@@ -40,6 +43,16 @@ import Prism from 'prismjs';
 import 'prismjs/components/prism-markup';
 import 'prismjs/themes/prism-okaidia.css';
 import { ChangeEvent, ReactNode, useEffect, useState } from 'react';
+
+type Group =
+  | 'button'
+  | 'data'
+  | 'feedback'
+  | 'form'
+  | 'layout'
+  | 'media'
+  | 'navigation'
+  | 'typography';
 
 const HomePage: NextPage = () => {
   const { darkMode = false, toggleDarkMode } = useDarkMode();
@@ -61,68 +74,8 @@ const HomePage: NextPage = () => {
     name: string;
     code: string;
     component: ReactNode;
-    level: 'data' | 'form' | 'popup' | 'starter';
+    group: Group;
   }[] = [
-    {
-      id: 'accordian',
-      emoji: '📑',
-      name: 'Accordian',
-      component: (
-        <div className="flex w-full items-center justify-center">
-          <Accordian />
-        </div>
-      ),
-      code: '',
-      level: 'data',
-    },
-    {
-      id: 'alert',
-      emoji: '🚨',
-      name: 'Alert',
-      component: (
-        <div className="flex w-full items-center justify-center">
-          <Alert />
-        </div>
-      ),
-      code: '',
-      level: 'popup',
-    },
-    {
-      id: 'avatar',
-      emoji: '🖼️',
-      name: 'Avatar',
-      component: (
-        <div className="flex w-full items-center justify-center">
-          <Avatar />
-        </div>
-      ),
-      code: '',
-      level: 'starter',
-    },
-    {
-      id: 'badge',
-      emoji: '🏷️',
-      name: 'Badge',
-      component: (
-        <div className="flex w-full items-center justify-center">
-          <Badge />
-        </div>
-      ),
-      code: '',
-      level: 'starter',
-    },
-    {
-      id: 'breadcrumbs',
-      emoji: '🍞',
-      name: 'Breadcrumbs',
-      component: (
-        <div className="flex w-full items-center justify-center">
-          <Breadcrumbs />
-        </div>
-      ),
-      code: '',
-      level: 'starter',
-    },
     {
       id: 'button',
       emoji: '🔘',
@@ -133,11 +86,11 @@ const HomePage: NextPage = () => {
         </div>
       ),
       code: '',
-      level: 'form',
+      group: 'button' as Group,
     },
     {
       id: 'button-group',
-      emoji: '🔘🔘',
+      emoji: '👆',
       name: 'Button Group',
       component: (
         <div className="flex w-full items-center justify-center">
@@ -145,10 +98,58 @@ const HomePage: NextPage = () => {
         </div>
       ),
       code: '',
-      level: 'form',
+      group: 'button' as Group,
     },
     {
-      id: 'card',
+      id: 'media-avatar',
+      emoji: '🖼️',
+      name: 'Avatar',
+      component: (
+        <div className="flex w-full items-center justify-center">
+          <Avatar />
+        </div>
+      ),
+      code: '',
+      group: 'media' as Group,
+    },
+    {
+      id: 'feedback-badge',
+      emoji: '🏷️',
+      name: 'Badge',
+      component: (
+        <div className="flex w-full items-center justify-center">
+          <Badge />
+        </div>
+      ),
+      code: '',
+      group: 'feedback' as Group,
+    },
+    {
+      id: 'navigation-breadcrumbs',
+      emoji: '🥑',
+      name: 'Breadcrumbs',
+      component: (
+        <div className="flex w-full items-center justify-center">
+          <Breadcrumbs />
+        </div>
+      ),
+      code: '',
+      group: 'navigation' as Group,
+    },
+    {
+      id: 'navigation-tabs',
+      emoji: '📁',
+      name: 'Menu',
+      component: (
+        <div className="flex w-full items-center justify-center">
+          <Menu />
+        </div>
+      ),
+      code: '',
+      group: 'navigation' as Group,
+    },
+    {
+      id: 'layout-card',
       emoji: '💳',
       name: 'Card',
       code: '',
@@ -157,10 +158,10 @@ const HomePage: NextPage = () => {
           <Card />
         </div>
       ),
-      level: 'data',
+      group: 'layout' as Group,
     },
     {
-      id: 'divider',
+      id: 'layout-divider',
       emoji: '➖',
       name: 'Divider',
       component: (
@@ -169,94 +170,94 @@ const HomePage: NextPage = () => {
         </div>
       ),
       code: '',
-      level: 'starter',
+      group: 'layout' as Group,
     },
     {
       id: 'input-checkbox',
       emoji: '☑️',
-      name: 'Input - Checkbox',
+      name: 'Checkbox',
       component: (
         <div className="flex w-full items-center justify-center">
           <Checkbox />
         </div>
       ),
       code: '',
-      level: 'form',
+      group: 'form' as Group,
     },
     {
-      id: 'input-file',
+      id: 'media-file',
       emoji: '📂',
-      name: 'Input - File',
+      name: 'File',
       component: (
         <div className="flex w-full items-center justify-center">
           <FileUpload />
         </div>
       ),
       code: '',
-      level: 'form',
+      group: 'media' as Group,
     },
     {
       id: 'input-radio',
       emoji: '🔘',
-      name: 'Input - Radio',
+      name: 'Radio',
       component: (
         <div className="flex w-full items-center justify-center">
           <Radio />
         </div>
       ),
       code: '',
-      level: 'form',
+      group: 'form' as Group,
     },
     {
       id: 'input-select',
       emoji: '📑',
-      name: 'Input - Select',
+      name: 'Select',
       code: '',
       component: (
         <div className="flex w-full items-center justify-center">
           <Select />
         </div>
       ),
-      level: 'form',
+      group: 'form' as Group,
     },
     {
       id: 'input-text',
       emoji: '⌨️',
-      name: 'Input - Text',
+      name: 'Text',
       code: '',
       component: (
         <div className="flex w-full items-center justify-center">
           <Input />
         </div>
       ),
-      level: 'form',
+      group: 'form' as Group,
     },
     {
       id: 'input-textarea',
       emoji: '📝',
-      name: 'Input - Textarea',
+      name: 'Textarea',
       code: '',
       component: (
         <div className="flex w-full items-center justify-center">
           <Textarea />
         </div>
       ),
-      level: 'form',
+      group: 'form' as Group,
     },
     {
       id: 'input-toggle',
       emoji: '🔄',
-      name: 'Input - Toggle',
+      name: 'Toggle',
       component: (
         <div className="flex w-full items-center justify-center">
-          <Toggle value={darkMode} onClick={() => toggleDarkMode()} />
+          <Toggle />
         </div>
       ),
       code: '',
-      level: 'form',
+      group: 'form' as Group,
     },
     {
-      id: 'list',
+      id: 'data-list',
       emoji: '📋',
       name: 'List',
       code: '',
@@ -265,10 +266,22 @@ const HomePage: NextPage = () => {
           <List />
         </div>
       ),
-      level: 'data',
+      group: 'data' as Group,
     },
     {
-      id: 'modal',
+      id: 'layout-accordian',
+      emoji: '📑',
+      name: 'Accordian',
+      component: (
+        <div className="flex w-full items-center justify-center">
+          <Accordian />
+        </div>
+      ),
+      code: '',
+      group: 'layout' as Group,
+    },
+    {
+      id: 'layout-modal',
       emoji: '📦',
       name: 'Modal',
       code: '',
@@ -277,22 +290,34 @@ const HomePage: NextPage = () => {
           <Modal />
         </div>
       ),
-      level: 'popup',
+      group: 'layout' as Group,
     },
     {
-      id: 'pagination',
-      emoji: '📄',
-      name: 'Pagination',
+      id: 'feedback-alert',
+      emoji: '🚨',
+      name: 'Alert',
       component: (
         <div className="flex w-full items-center justify-center">
-          <Pagination />
+          <Alert />
         </div>
       ),
       code: '',
-      level: 'starter',
+      group: 'feedback' as Group,
     },
     {
-      id: 'loading',
+      id: 'feedback-toast',
+      emoji: '🍞',
+      name: 'Toast',
+      component: (
+        <div className="flex w-full items-center justify-center">
+          <Toast />
+        </div>
+      ),
+      code: '',
+      group: 'feedback' as Group,
+    },
+    {
+      id: 'feedback-loading',
       emoji: '⏳',
       name: 'Loading',
       component: (
@@ -301,10 +326,22 @@ const HomePage: NextPage = () => {
         </div>
       ),
       code: '',
-      level: 'starter',
+      group: 'feedback' as Group,
     },
     {
-      id: 'stats',
+      id: 'navigation-pagination',
+      emoji: '📄',
+      name: 'Pagination',
+      component: (
+        <div className="flex w-full items-center justify-center">
+          <Pagination />
+        </div>
+      ),
+      code: '',
+      group: 'navigation' as Group,
+    },
+    {
+      id: 'data-stats',
       emoji: '📊',
       name: 'Stats',
       component: (
@@ -313,22 +350,34 @@ const HomePage: NextPage = () => {
         </div>
       ),
       code: '',
-      level: 'data',
+      group: 'data' as Group,
     },
     {
-      id: 'table',
+      id: 'navigation-steps',
+      emoji: '🪜',
+      name: 'Steps',
+      component: (
+        <div className="flex w-full items-center justify-center">
+          <Steps />
+        </div>
+      ),
+      code: '',
+      group: 'navigation' as Group,
+    },
+    {
+      id: 'data-table',
       emoji: '📈',
       name: 'Table',
       component: (
-        <div className="flex w-full items-center justify-center">
+        <div className="mx-auto flex w-full max-w-md items-center justify-center">
           <Table />
         </div>
       ),
       code: '',
-      level: 'data',
+      group: 'data' as Group,
     },
     {
-      id: 'tooltip',
+      id: 'data-tooltip',
       emoji: '💬',
       name: 'Tooltip',
       component: (
@@ -337,120 +386,191 @@ const HomePage: NextPage = () => {
         </div>
       ),
       code: '',
-      level: 'popup',
+      group: 'data' as Group,
     },
     {
-      id: 'typography',
+      id: 'typography-heading',
       emoji: '🔤',
-      name: 'Typography',
+      name: 'Heading',
       component: (
-        <div className="flex w-full flex-col items-center justify-center">
+        <div className="flex w-full flex-col items-start justify-center">
           <H1 />
           <H2 />
           <H3 />
           <H4 />
           <H5 />
           <H6 />
+        </div>
+      ),
+      code: '',
+      group: 'typography' as Group,
+    },
+    {
+      id: 'typography-paragraph',
+      emoji: '🔤',
+      name: 'Paragraph',
+      component: (
+        <div className="flex w-full flex-col items-center justify-center">
           <Paragraph />
         </div>
       ),
       code: '',
-      level: 'starter',
+      group: 'typography' as Group,
     },
-  ];
+  ].sort((a, b) => {
+    if (a.group === b.group) {
+      return a.id > b.id ? 1 : -1;
+    }
+    return a.group > b.group ? 1 : -1;
+  });
+
+  const filteredComponent = components.filter(({ id, name }) => {
+    return (
+      id.toLowerCase().includes(query.toLowerCase()) ||
+      name.toLowerCase().includes(query.toLowerCase())
+    );
+  });
 
   return (
     <div className="flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100">
       <nav className="border-b border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">
-        <div className="container mx-auto px-8 py-4">
-          <div className="flex items-center gap-x-4">
+        <div className="container mx-auto flex flex-col gap-y-2 px-8 py-4">
+          <div className="flex items-center justify-between gap-x-4">
             <h3 className="text-2xl font-bold">atomic/ui</h3>
-            <div className="grow">
-              <input
-                type="text"
-                placeholder="Search Components"
-                value={query}
-                className="w-full rounded-lg border border-neutral-200 px-4 py-2 shadow focus:outline-none dark:border-neutral-800 dark:shadow-neutral-100/10"
-                onChange={(event: ChangeEvent<HTMLInputElement>): void => {
-                  setState((previous) => ({
-                    ...previous,
-                    query: event.target.value,
-                  }));
-                }}
-              />
+            <div className="flex items-center gap-x-4">
+              <div className="hidden grow md:block">
+                <input
+                  type="text"
+                  placeholder="Search Components"
+                  value={query}
+                  className="w-full rounded-lg border border-neutral-200 px-4 py-2 shadow focus:outline-none dark:border-neutral-800 dark:shadow-neutral-100/10"
+                  onChange={(event: ChangeEvent<HTMLInputElement>): void => {
+                    setState((previous) => ({
+                      ...previous,
+                      query: event.target.value,
+                    }));
+                  }}
+                />
+              </div>
+              <Link
+                href="https://github.com/hieudoanm/atomic-ui"
+                target="_blank"
+                className="font-semibold">
+                GitHub
+              </Link>
+              <label
+                className="relative block h-8 w-14 rounded-full bg-neutral-200 transition-colors [-webkit-tap-highlight-color:_transparent] has-checked:bg-red-500 dark:bg-neutral-800 dark:has-checked:bg-red-700"
+                aria-label="Toggle dark mode">
+                <input
+                  type="checkbox"
+                  checked={darkMode}
+                  className="peer sr-only"
+                  onChange={() => {
+                    toggleDarkMode();
+                  }}
+                />
+                <span className="absolute inset-y-0 start-0 m-1 size-6 rounded-full bg-white transition-[inset-inline-start] peer-checked:start-6 dark:bg-neutral-900"></span>
+              </label>
             </div>
-            <Link
-              href="https://github.com/hieudoanm/atomic-ui"
-              target="_blank"
-              className="font-semibold">
-              GitHub
-            </Link>
-            <Toggle
-              value={darkMode}
-              onClick={() => {
-                toggleDarkMode();
+          </div>
+          <div className="block md:hidden">
+            <input
+              type="text"
+              placeholder="Search Components"
+              value={query}
+              className="w-full rounded-lg border border-neutral-200 px-4 py-2 shadow focus:outline-none dark:border-neutral-800 dark:shadow-neutral-100/10"
+              onChange={(event: ChangeEvent<HTMLInputElement>): void => {
+                setState((previous) => ({
+                  ...previous,
+                  query: event.target.value,
+                }));
               }}
             />
           </div>
         </div>
       </nav>
       <div className="grow overflow-auto">
-        <main className="flex flex-col gap-y-8">
-          <section className="border-b border-neutral-200 py-8 dark:border-neutral-800">
+        <main className="divide-y divide-neutral-200 dark:divide-neutral-800">
+          <section className="py-8 md:py-16">
             <div className="container mx-auto flex flex-col items-center justify-center gap-y-4 px-8">
-              <div className="flex flex-col gap-y-4 text-center">
-                <h1 className="text-4xl font-black">atomic/ui</h1>
-                <p className="text-neutral-800 dark:text-neutral-200">
-                  Free and Open Source TailwindCSS v4 Components
+              <div className="flex w-full max-w-md flex-col gap-y-4 text-center md:gap-y-8">
+                <header className="flex flex-col gap-y-2">
+                  <h1 className="text-6xl font-black whitespace-nowrap md:text-7xl">
+                    atomic/ui
+                  </h1>
+                  <h5 className="text-base font-medium text-neutral-700 md:text-lg dark:text-neutral-300">
+                    Free and Open Source TailwindCSS v4 Components
+                  </h5>
+                </header>
+                <p className="text-neutral-900 dark:text-neutral-100">
+                  <code>atomic/ui</code> is a free collection of Tailwind CSS
+                  components designed with atomic design principles in mind. It
+                  offers a flexible set of building blocks to help you quickly
+                  build modern, responsive UIs for your next project.
                 </p>
-                <div className="flex justify-center gap-x-2">
-                  <p>
-                    <strong>✅ TailwindCSS</strong>
-                  </p>
-                  <p>
-                    <strong>✅ No JS</strong>
-                  </p>
+                <div className="flex justify-center gap-x-6 text-sm font-black text-neutral-900 dark:text-neutral-100">
+                  <p className="whitespace-nowrap">✅ No Install</p>
+                  <p className="whitespace-nowrap">✅ No Config</p>
+                  <p className="whitespace-nowrap">✅ No Setup</p>
                 </div>
               </div>
             </div>
           </section>
-          <section className="container mx-auto flex flex-col gap-y-8 p-8">
-            <h2 className="text-2xl font-bold">
-              <span className="capitalize">Components</span> (
-              {components.length})
-            </h2>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-              {components.map(({ id = '', emoji = '', name = '' }) => {
-                return (
-                  <Link href={`#${id}`} key={id}>
-                    <div className="col-span-1">
-                      <div className="flex items-center gap-x-2 rounded-lg border border-neutral-200 p-4 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">
-                        <p className="text-2xl">{emoji}</p>
-                        <p className="font-semibold">{name}</p>
-                      </div>
+          <section className="py-4 md:py-8">
+            <div className="container mx-auto px-8">
+              <div className="flex flex-col gap-y-4 md:gap-y-8">
+                <h2 className="text-2xl font-bold">
+                  <span className="capitalize">Components</span> (
+                  {filteredComponent.length})
+                </h2>
+                {filteredComponent.length > 0 && (
+                  <>
+                    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
+                      {filteredComponent.map(
+                        ({ id = '', emoji = '', name = '', group = '' }) => {
+                          return (
+                            <Link href={`#${id}`} key={id}>
+                              <div className="col-span-1">
+                                <div className="flex items-center gap-x-2 rounded-lg border border-neutral-200 p-4 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">
+                                  <p className="text-2xl">{emoji}</p>
+                                  <p className="font-semibold capitalize">
+                                    {group} - {name}
+                                  </p>
+                                </div>
+                              </div>
+                            </Link>
+                          );
+                        }
+                      )}
                     </div>
-                  </Link>
-                );
-              })}
-            </div>
-            <div className="flex flex-col gap-y-8">
-              {components.map(
-                ({ id, name, code, component }, index: number) => {
-                  return (
-                    <div key={id} className="flex flex-col gap-y-4">
-                      <Preview
-                        id={id}
-                        name={`${index + 1}. ${name}`}
-                        code={code}
-                        component={component}
-                      />
+                    <div className="flex flex-col gap-y-8">
+                      {filteredComponent.map(
+                        ({
+                          id = '',
+                          emoji = '',
+                          name = '',
+                          code = '',
+                          component,
+                        }) => {
+                          return (
+                            <div key={id} className="flex flex-col gap-y-4">
+                              <Preview
+                                id={id}
+                                name={`${emoji} ${name}`}
+                                code={code}
+                                component={component}
+                              />
+                            </div>
+                          );
+                        }
+                      )}
                     </div>
-                  );
-                }
-              )}
+                  </>
+                )}
+              </div>
             </div>
           </section>
-          <section className="border-t border-neutral-200 py-8 dark:border-neutral-800">
+          <section className="py-4 md:py-8">
             <div className="container mx-auto flex flex-col gap-y-8 px-8">
               <h2 className="text-2xl font-bold">
                 <span className="capitalize">Classes</span>
@@ -473,13 +593,6 @@ const HomePage: NextPage = () => {
                         lightClass: 'bg-white',
                         darkClass: 'dark:bg-neutral-900',
                       },
-                      {
-                        id: 'bg-secondary',
-                        name: 'bg-secondary',
-                        lightClass: 'bg-red-500',
-                        darkClass: 'dark:bg-red-700',
-                      },
-
                       {
                         id: 'text-primary',
                         name: 'text-primary',
