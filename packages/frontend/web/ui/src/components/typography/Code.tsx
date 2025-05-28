@@ -20,7 +20,7 @@ export const Code: FC<{
   return (
     <div
       dangerouslySetInnerHTML={{ __html: html }}
-      className="overflow-x-auto bg-neutral-900 p-4"
+      className="w-full overflow-x-auto bg-neutral-900 p-4"
     />
   );
 };

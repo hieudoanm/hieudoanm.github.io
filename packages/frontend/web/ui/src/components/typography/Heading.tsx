@@ -23,7 +23,3 @@ export const H5: FC = () => {
 export const H6: FC = () => {
   return <h6 className="text-base font-normal">Heading 6</h6>;
 };
-
-export const Paragraph: FC = () => {
-  return <p className="text-base font-normal">Paragraph</p>;
-};
