@@ -1,17 +1,40 @@
 import { FC } from 'react';
 
-export const Radio: FC<{ label: string; name: string }> = ({
-  label = '',
-  name = '',
-}) => {
+export const Radio: FC = () => {
   return (
-    <label className="flex items-center gap-x-2">
-      <input
-        type="radio"
-        name={name}
-        className="rounded-lg border border-neutral-800 bg-neutral-900 accent-red-500 shadow-none"
-      />
-      <span>{label}</span>
-    </label>
+    <div>
+      <label className="flex items-center gap-x-2">
+        <input
+          type="radio"
+          name="radio"
+          className="rounded-lg border border-neutral-800 bg-neutral-900 accent-red-500 shadow-none"
+        />
+        <span>Radio 1</span>
+      </label>
+      <label className="flex items-center gap-x-2">
+        <input
+          type="radio"
+          name="radio"
+          className="rounded-lg border border-neutral-800 bg-neutral-900 accent-red-500 shadow-none"
+        />
+        <span>Radio 2</span>
+      </label>
+      <label className="flex items-center gap-x-2">
+        <input
+          type="radio"
+          name="radio"
+          className="rounded-lg border border-neutral-800 bg-neutral-900 accent-red-500 shadow-none"
+        />
+        <span>Radio 3</span>
+      </label>
+      <label className="flex items-center gap-x-2">
+        <input
+          type="radio"
+          name="radio"
+          className="rounded-lg border border-neutral-800 bg-neutral-900 accent-red-500 shadow-none"
+        />
+        <span>Radio 4</span>
+      </label>
+    </div>
   );
 };

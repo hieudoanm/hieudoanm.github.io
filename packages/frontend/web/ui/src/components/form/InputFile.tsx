@@ -1,12 +1,13 @@
 import { FC } from 'react';
 
-export const FileUpload: FC<{ id: string; name: string }> = ({
-  id = '',
-  name = '',
-}) => {
+export const FileUpload: FC = () => {
   return (
     <label className="flex cursor-pointer items-center justify-center rounded-lg border border-dashed border-neutral-400 px-8 py-4">
-      <input id={id} name={name} className="hidden"></input>
+      <input
+        type="file"
+        id="file"
+        name="file-upload"
+        className="hidden"></input>
       <span>Upload file(s)</span>
     </label>
   );

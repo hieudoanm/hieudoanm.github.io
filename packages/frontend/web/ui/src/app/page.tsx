@@ -109,7 +109,7 @@ const HomePage: NextPage = () => {
       name: 'Button',
       component: (
         <div className="flex w-full max-w-md items-center justify-center">
-          <Button>Button</Button>
+          <Button />
         </div>
       ),
       code: '',
@@ -145,9 +145,7 @@ const HomePage: NextPage = () => {
       name: 'Checkbox',
       component: (
         <div className="w-full max-w-md">
-          <Checkbox label="Option 1" name={'checkbox'} />
-          <Checkbox label="Option 2" name={'checkbox'} />
-          <Checkbox label="Option 3" name={'checkbox'} />
+          <Checkbox />
         </div>
       ),
       code: '',
@@ -171,7 +169,7 @@ const HomePage: NextPage = () => {
       name: 'File Upload',
       component: (
         <div className="w-full max-w-md">
-          <FileUpload id="file" name="file" />
+          <FileUpload />
         </div>
       ),
       code: '',
@@ -184,16 +182,7 @@ const HomePage: NextPage = () => {
       code: '',
       component: (
         <div className="flex w-full max-w-md items-center justify-center">
-          <Input
-            type="text"
-            placeholder="Input Field"
-            value=""
-            disabled={false}
-            readOnly={false}
-            onChange={function (event: ChangeEvent<HTMLInputElement>): void {
-              console.log(event.target.value);
-            }}
-          />
+          <Input />
         </div>
       ),
       level: 'form',
@@ -229,13 +218,7 @@ const HomePage: NextPage = () => {
       code: '',
       component: (
         <div className="w-full max-w-md">
-          <Select
-            placeholder={'Select Field'}
-            value={''}
-            disabled={false}
-            onChange={function (event: ChangeEvent<HTMLSelectElement>): void {
-              console.log(event.target.value);
-            }}></Select>
+          <Select />
         </div>
       ),
       level: 'form',
@@ -247,16 +230,7 @@ const HomePage: NextPage = () => {
       code: '',
       component: (
         <div className="w-full max-w-md">
-          <TextArea
-            rows={0}
-            placeholder={'Textarea Field'}
-            value={'Textarea Field'}
-            disabled={false}
-            readOnly={false}
-            onChange={function (event: ChangeEvent<HTMLTextAreaElement>): void {
-              console.log(event.target.value);
-            }}
-          />
+          <TextArea />
         </div>
       ),
       level: 'form',
@@ -279,9 +253,7 @@ const HomePage: NextPage = () => {
       name: 'Radio',
       component: (
         <div className="w-full max-w-md">
-          <Radio label="Option 1" name={'radio'} />
-          <Radio label="Option 2" name={'radio'} />
-          <Radio label="Option 3" name={'radio'} />
+          <Radio />
         </div>
       ),
       code: '',
@@ -378,21 +350,18 @@ const HomePage: NextPage = () => {
   });
 
   return (
-    <div className="bg-white text-black dark:bg-neutral-900 dark:text-neutral-100">
+    <div className="flex h-screen flex-col bg-neutral-100 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100">
       <nav className="border-b border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">
         <div className="container mx-auto px-8 py-4">
           <div className="flex items-center gap-x-4">
             <H3>atomic/ui</H3>
             <div className="grow">
-              <Input
+              <input
                 type="text"
                 placeholder="Search Components"
                 value={query}
-                disabled={false}
-                readOnly={false}
-                onChange={function (
-                  event: ChangeEvent<HTMLInputElement>
-                ): void {
+                className="w-full rounded-lg border border-neutral-200 px-4 py-2 shadow focus:outline-none dark:border-neutral-800 dark:shadow-neutral-100/10"
+                onChange={(event: ChangeEvent<HTMLInputElement>): void => {
                   setState((previous) => ({
                     ...previous,
                     query: event.target.value,
@@ -415,74 +384,167 @@ const HomePage: NextPage = () => {
           </div>
         </div>
       </nav>
-      <main className="flex flex-col gap-y-8">
-        <div className="flex flex-col justify-center gap-y-4 border-b border-neutral-200 py-8 text-center dark:border-neutral-800">
-          <div className="flex flex-col gap-y-4">
-            <H1>atomic/ui</H1>
-            <p className="text-neutral-800 dark:text-neutral-200">
-              Free and Open Source TailwindCSS v4 Components
-            </p>
-            <div className="flex justify-center gap-x-2">
-              <p>
-                <strong>✅ TailwindCSS</strong>
-              </p>
-              <p>
-                <strong>✅ No JS</strong>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="container mx-auto flex flex-col gap-y-8 px-8 pb-8">
-          <H2>
-            <span className="capitalize">Components</span> ({components.length})
-          </H2>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {components.map(({ id = '', emoji = '', name = '' }) => {
-              return (
-                <Link href={`#${id}`} key={id}>
-                  <div className="col-span-1">
-                    <div className="flex items-center gap-x-2 rounded-lg border border-neutral-200 p-4 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">
-                      <p className="text-2xl">{emoji}</p>
-                      <p className="font-semibold">{name}</p>
-                    </div>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-          <div className="flex flex-col gap-y-8">
-            {componentsByLevels.map(({ level = '', components = [] }) => {
-              return (
-                <div key={level} className="flex flex-col gap-y-8">
-                  <H2>
-                    <span className="capitalize">{level}</span> (
-                    {components.length})
-                  </H2>
-                  {components.map(({ id, name, code, component = <>
-
-                      </> }, index: number) => {
-                    return (
-                      <div key={id} className="flex flex-col gap-y-4">
-                        <Preview
-                          id={id}
-                          name={`${index + 1}. ${name}`}
-                          code={code}
-                          component={component}
-                        />
-                      </div>
-                    );
-                  })}
+      <div className="grow overflow-auto">
+        <main className="flex flex-col gap-y-8">
+          <section className="border-b border-neutral-200 py-8 dark:border-neutral-800">
+            <div className="container mx-auto flex flex-col items-center justify-center gap-y-4 px-8">
+              <div className="flex flex-col gap-y-4 text-center">
+                <H1>atomic/ui</H1>
+                <p className="text-neutral-800 dark:text-neutral-200">
+                  Free and Open Source TailwindCSS v4 Components
+                </p>
+                <div className="flex justify-center gap-x-2">
+                  <p>
+                    <strong>✅ TailwindCSS</strong>
+                  </p>
+                  <p>
+                    <strong>✅ No JS</strong>
+                  </p>
                 </div>
-              );
-            })}
+              </div>
+            </div>
+          </section>
+          <section className="container mx-auto flex flex-col gap-y-8 p-8">
+            <H2>
+              <span className="capitalize">Components</span> (
+              {components.length})
+            </H2>
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+              {components.map(({ id = '', emoji = '', name = '' }) => {
+                return (
+                  <Link href={`#${id}`} key={id}>
+                    <div className="col-span-1">
+                      <div className="flex items-center gap-x-2 rounded-lg border border-neutral-200 p-4 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">
+                        <p className="text-2xl">{emoji}</p>
+                        <p className="font-semibold">{name}</p>
+                      </div>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+            <div className="flex flex-col gap-y-8">
+              {componentsByLevels.map(({ level = '', components = [] }) => {
+                return (
+                  <div key={level} className="flex flex-col gap-y-8">
+                    <H2>
+                      <span className="capitalize">{level}</span> (
+                      {components.length})
+                    </H2>
+                    {components.map(({ id, name, code, component = <>
+
+                        </> }, index: number) => {
+                      return (
+                        <div key={id} className="flex flex-col gap-y-4">
+                          <Preview
+                            id={id}
+                            name={`${index + 1}. ${name}`}
+                            code={code}
+                            component={component}
+                          />
+                        </div>
+                      );
+                    })}
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+          <section className="border-t border-neutral-200 py-8 dark:border-neutral-800">
+            <div className="container mx-auto flex flex-col gap-y-8 px-8">
+              <H2>
+                <span className="capitalize">Classes</span>
+              </H2>
+              <div className="overflow-x-auto rounded-lg border border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">
+                <table className="min-w-full divide-y-2 divide-neutral-200 dark:divide-neutral-800">
+                  <thead>
+                    <tr>
+                      <th className="px-3 py-2 whitespace-nowrap">#</th>
+                      <th className="px-3 py-2 whitespace-nowrap">Class</th>
+                      <th className="px-3 py-2 whitespace-nowrap">Light</th>
+                      <th className="px-3 py-2 whitespace-nowrap">Dark</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-neutral-200 dark:divide-neutral-800">
+                    {[
+                      {
+                        id: 'accent',
+                        name: 'accent',
+                        lightClass: 'bg-red-500',
+                        darkClass: 'dark:bg-red-700',
+                      },
+                      {
+                        id: 'bg',
+                        name: 'bg (background)',
+                        lightClass: 'bg-neutral-100',
+                        darkClass: 'dark:bg-neutral-900',
+                      },
+                      {
+                        id: 'text',
+                        name: 'text',
+                        lightClass: 'text-neutral-900',
+                        darkClass: 'dark:text-neutral-100',
+                      },
+                      {
+                        id: 'border',
+                        name: 'border',
+                        lightClass: 'border-neutral-200',
+                        darkClass: 'dark:border-neutral-800',
+                      },
+                      {
+                        id: 'shadow',
+                        name: 'shadow',
+                        lightClass: 'shadow',
+                        darkClass: 'dark:shadow-neutral-100/10',
+                      },
+                    ].map(
+                      (
+                        {
+                          id = '',
+                          name = 'Border',
+                          lightClass = '',
+                          darkClass = '',
+                        },
+                        index: number
+                      ) => {
+                        return (
+                          <tr key={id}>
+                            <td
+                              align="center"
+                              className="px-3 py-2 whitespace-nowrap">
+                              {index + 1}
+                            </td>
+                            <td
+                              align="center"
+                              className="px-3 py-2 whitespace-nowrap">
+                              {name}
+                            </td>
+                            <td
+                              align="center"
+                              className="px-3 py-2 whitespace-nowrap">
+                              <code>{lightClass}</code>
+                            </td>
+                            <td
+                              align="center"
+                              className="px-3 py-2 whitespace-nowrap">
+                              <code>{darkClass}</code>
+                            </td>
+                          </tr>
+                        );
+                      }
+                    )}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        </main>
+        <footer className="border-t border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">
+          <div className="container mx-auto px-8 py-4">
+            &copy; {new Date().getFullYear()} <strong>atomic/ui</strong>
           </div>
-        </div>
-      </main>
-      <footer className="border-t border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">
-        <div className="container mx-auto px-8 py-4">
-          &copy; {new Date().getFullYear()} <strong>atomic/ui</strong>
-        </div>
-      </footer>
+        </footer>
+      </div>
     </div>
   );
 };

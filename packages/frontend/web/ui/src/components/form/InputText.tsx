@@ -1,28 +1,9 @@
-import { ChangeEvent, FC, HTMLInputTypeAttribute } from 'react';
+import { FC } from 'react';
 
-export const Input: FC<{
-  type: HTMLInputTypeAttribute;
-  placeholder: string;
-  value: string;
-  disabled: boolean;
-  readOnly: boolean;
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
-}> = ({
-  type = 'text',
-  placeholder = 'placeholder',
-  value = '',
-  onChange,
-  readOnly = false,
-  disabled = false,
-}) => {
+export const Input: FC = () => {
   return (
     <input
-      type={type}
-      placeholder={placeholder}
-      value={value}
-      disabled={disabled}
-      readOnly={readOnly}
-      onChange={onChange}
+      type="text"
       className="w-full rounded-lg border border-neutral-200 px-4 py-2 shadow focus:outline-none dark:border-neutral-800 dark:shadow-neutral-100/10"
     />
   );

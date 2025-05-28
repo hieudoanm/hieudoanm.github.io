@@ -2,10 +2,10 @@ import { FC } from 'react';
 
 export const Accordian: FC = () => {
   return (
-    <div className="mx-auto w-full max-w-md divide-y divide-neutral-200 rounded-lg border border-neutral-200 bg-white shadow dark:divide-neutral-800 dark:border-neutral-800 dark:bg-neutral-900 dark:shadow-neutral-100/10">
+    <div className="mx-auto w-full max-w-md divide-y divide-neutral-200 rounded-lg border border-neutral-200 bg-neutral-100 shadow dark:divide-neutral-800 dark:border-neutral-800 dark:bg-neutral-900 dark:shadow-neutral-100/10">
       <details className="group">
         <summary className="flex cursor-pointer list-none items-center justify-between px-4 py-3">
-          <span className="font-semibold text-black dark:text-neutral-100">
+          <span className="font-semibold text-neutral-900 dark:text-neutral-100">
             What is Tailwind CSS?
           </span>
           <span className="text-lg text-neutral-600 transition-all duration-300 group-open:rotate-180 dark:text-neutral-400">
@@ -20,7 +20,7 @@ export const Accordian: FC = () => {
       </details>
       <details className="group">
         <summary className="flex cursor-pointer list-none items-center justify-between px-4 py-3">
-          <span className="font-semibold text-black dark:text-neutral-100">
+          <span className="font-semibold text-neutral-900 dark:text-neutral-100">
             Do I need JavaScript?
           </span>
           <span className="text-lg text-neutral-600 transition-all duration-300 group-open:rotate-180 dark:text-neutral-400">
