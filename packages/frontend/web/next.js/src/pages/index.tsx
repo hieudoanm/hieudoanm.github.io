@@ -14,6 +14,7 @@ import {
   FaPenToSquare,
   FaRobot,
   FaSquareGithub,
+  FaSquareInstagram,
   FaSquareTwitter,
   FaTwitter,
   FaWindowRestore,
@@ -41,7 +42,7 @@ const HomePage: NextPage = () => {
       href: '/atomic-ui',
       name: 'UI',
       icon: <FaAtom />,
-      target: '_blank',
+      target: '_self',
     },
     {
       id: 'notes',
@@ -89,7 +90,7 @@ const HomePage: NextPage = () => {
       id: 'instagram',
       href: 'https://www.instagram.com/hieudoanm.github.io',
       name: 'Instagram',
-      icon: <FaInstagram />,
+      icon: <FaSquareInstagram />,
       target: '_blank',
     },
   ];
