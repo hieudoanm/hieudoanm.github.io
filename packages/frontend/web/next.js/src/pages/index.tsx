@@ -3,9 +3,11 @@ import Link from 'next/link';
 import { useState } from 'react';
 import {
   FaAppStoreIos,
+  FaAtom,
   FaChessKnight,
   FaCode,
   FaGithub,
+  FaInstagram,
   FaLinkedin,
   FaLinkedinIn,
   FaPalette,
@@ -21,6 +23,7 @@ const HomePage: NextPage = () => {
   const [{ index = 0 }, setState] = useState<{ index: number }>({ index: 0 });
 
   const icons = [
+    <FaAtom key="atom" className="text-5xl" />,
     <FaCode key="code" className="text-5xl" />,
     <FaRobot key="robot" className="text-5xl" />,
     <FaGithub key="github" className="text-5xl" />,
@@ -29,9 +32,17 @@ const HomePage: NextPage = () => {
     <FaLinkedinIn key="github" className="text-5xl" />,
     <FaChessKnight key="chess" className="text-5xl" />,
     <FaPenToSquare key="notes" className="text-5xl" />,
+    <FaInstagram key="instagram" className="text-5xl" />,
   ];
 
   const apps = [
+    {
+      id: 'ui',
+      href: '/atomic-ui',
+      name: 'UI',
+      icon: <FaAtom />,
+      target: '_blank',
+    },
     {
       id: 'notes',
       href: '/posts',
@@ -72,6 +83,13 @@ const HomePage: NextPage = () => {
       href: 'https://www.linkedin.com/in/hieudoanm',
       name: 'LinkedIn',
       icon: <FaLinkedin />,
+      target: '_blank',
+    },
+    {
+      id: 'instagram',
+      href: 'https://www.instagram.com/hieudoanm.github.io',
+      name: 'Instagram',
+      icon: <FaInstagram />,
       target: '_blank',
     },
   ];
