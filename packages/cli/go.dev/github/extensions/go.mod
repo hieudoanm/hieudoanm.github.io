@@ -5,7 +5,7 @@ go 1.23.0
 toolchain go1.24.3
 
 require (
-	github.com/cli/go-gh/v2 v2.12.0
+	github.com/cli/go-gh/v2 v2.12.1
 	github.com/manifoldco/promptui v0.9.0
 )
 
