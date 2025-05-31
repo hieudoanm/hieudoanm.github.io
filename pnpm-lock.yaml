@@ -204,8 +204,8 @@ importers:
         specifier: 3.5.3
         version: 3.5.3
       prettier-plugin-tailwindcss:
-        specifier: 0.6.11
-        version: 0.6.11(prettier@3.5.3)
+        specifier: 0.6.12
+        version: 0.6.12(prettier@3.5.3)
       prisma:
         specifier: 6.8.2
         version: 6.8.2(typescript@5.8.3)
@@ -1030,8 +1030,8 @@ importers:
         specifier: 3.5.3
         version: 3.5.3
       prettier-plugin-tailwindcss:
-        specifier: 0.6.11
-        version: 0.6.11(prettier@3.5.3)
+        specifier: 0.6.12
+        version: 0.6.12(prettier@3.5.3)
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
@@ -11094,8 +11094,8 @@ packages:
     resolution: {integrity: sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==}
     engines: {node: '>=6.0.0'}
 
-  prettier-plugin-tailwindcss@0.6.11:
-    resolution: {integrity: sha512-YxaYSIvZPAqhrrEpRtonnrXdghZg1irNg4qrjboCXrpybLWVs55cW2N3juhspVJiO0JBvYJT8SYsJpc8OQSnsA==}
+  prettier-plugin-tailwindcss@0.6.12:
+    resolution: {integrity: sha512-OuTQKoqNwV7RnxTPwXWzOFXy6Jc4z8oeRZYGuMpRyG3WbuR3jjXdQFK8qFBMBx8UHWdHrddARz2fgUenild6aw==}
     engines: {node: '>=14.21.3'}
     peerDependencies:
       '@ianvs/prettier-plugin-sort-imports': '*'
@@ -19566,12 +19566,12 @@ snapshots:
   '@webpack-cli/configtest@3.0.1(webpack-cli@6.0.1)(webpack@5.99.9)':
     dependencies:
       webpack: 5.99.9(webpack-cli@6.0.1)
-      webpack-cli: 6.0.1(webpack-dev-server@5.2.1)(webpack@5.99.9)
+      webpack-cli: 6.0.1(webpack@5.99.9)
 
   '@webpack-cli/generators@3.0.7(mem-fs@2.3.0)(prettier@3.5.3)(webpack-cli@6.0.1)(webpack@5.99.9)':
     dependencies:
       webpack: 5.99.9(webpack-cli@6.0.1)
-      webpack-cli: 6.0.1(webpack-dev-server@5.2.1)(webpack@5.99.9)
+      webpack-cli: 6.0.1(webpack@5.99.9)
       yeoman-environment: 3.19.3
       yeoman-generator: 5.10.0(mem-fs@2.3.0)(yeoman-environment@3.19.3)
     optionalDependencies:
@@ -19584,7 +19584,7 @@ snapshots:
   '@webpack-cli/info@3.0.1(webpack-cli@6.0.1)(webpack@5.99.9)':
     dependencies:
       webpack: 5.99.9(webpack-cli@6.0.1)
-      webpack-cli: 6.0.1(webpack-dev-server@5.2.1)(webpack@5.99.9)
+      webpack-cli: 6.0.1(webpack@5.99.9)
 
   '@webpack-cli/serve@3.0.1(webpack-cli@6.0.1)(webpack-dev-server@5.2.1)(webpack@5.99.9)':
     dependencies:
@@ -21825,7 +21825,7 @@ snapshots:
       eslint: 9.28.0(jiti@2.4.2)
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.33.0(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.28.0(jiti@2.4.2)))(eslint@9.28.0(jiti@2.4.2))
-      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.33.0(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.33.0(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.28.0(jiti@2.4.2)))(eslint@9.28.0(jiti@2.4.2)))(eslint@9.28.0(jiti@2.4.2))
+      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.33.0(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-typescript@3.10.1)(eslint@9.28.0(jiti@2.4.2))
       eslint-plugin-jsx-a11y: 6.10.2(eslint@9.28.0(jiti@2.4.2))
       eslint-plugin-react: 7.37.5(eslint@9.28.0(jiti@2.4.2))
       eslint-plugin-react-hooks: 5.2.0(eslint@9.28.0(jiti@2.4.2))
@@ -21859,7 +21859,7 @@ snapshots:
       tinyglobby: 0.2.14
       unrs-resolver: 1.7.2
     optionalDependencies:
-      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.33.0(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.33.0(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.28.0(jiti@2.4.2)))(eslint@9.28.0(jiti@2.4.2)))(eslint@9.28.0(jiti@2.4.2))
+      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.33.0(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-typescript@3.10.1)(eslint@9.28.0(jiti@2.4.2))
     transitivePeerDependencies:
       - supports-color
 
@@ -21874,7 +21874,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.33.0(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.33.0(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.28.0(jiti@2.4.2)))(eslint@9.28.0(jiti@2.4.2)))(eslint@9.28.0(jiti@2.4.2)):
+  eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.33.0(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-typescript@3.10.1)(eslint@9.28.0(jiti@2.4.2)):
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.1.8
@@ -26469,7 +26469,7 @@ snapshots:
     dependencies:
       fast-diff: 1.3.0
 
-  prettier-plugin-tailwindcss@0.6.11(prettier@3.5.3):
+  prettier-plugin-tailwindcss@0.6.12(prettier@3.5.3):
     dependencies:
       prettier: 3.5.3
 
@@ -29264,7 +29264,7 @@ snapshots:
       watchpack: 2.4.2
       webpack-sources: 3.2.3
     optionalDependencies:
-      webpack-cli: 6.0.1(webpack-dev-server@5.2.1)(webpack@5.99.9)
+      webpack-cli: 6.0.1(webpack@5.99.9)
     transitivePeerDependencies:
       - '@swc/core'
       - esbuild
