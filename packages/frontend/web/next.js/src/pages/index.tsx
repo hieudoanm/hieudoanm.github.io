@@ -38,13 +38,6 @@ const HomePage: NextPage = () => {
 
   const apps = [
     {
-      id: 'ui',
-      href: '/atomic-ui',
-      name: 'UI',
-      icon: <FaAtom />,
-      target: '_self',
-    },
-    {
       id: 'notes',
       href: '/posts',
       name: 'Notes',
@@ -56,6 +49,13 @@ const HomePage: NextPage = () => {
       href: '/apps',
       name: 'studio',
       icon: <FaAppStoreIos />,
+      target: '_self',
+    },
+    {
+      id: 'atomic',
+      href: '/atomic',
+      name: 'Atomic',
+      icon: <FaAtom />,
       target: '_self',
     },
     {
