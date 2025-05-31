@@ -673,8 +673,8 @@ importers:
         specifier: 6.4.0
         version: 6.4.0
       '@types/chrome':
-        specifier: 0.0.325
-        version: 0.0.325
+        specifier: 0.0.326
+        version: 0.0.326
       '@types/node':
         specifier: 22.15.27
         version: 22.15.27
@@ -724,8 +724,8 @@ importers:
         specifier: 9.27.0
         version: 9.27.0
       '@types/chrome':
-        specifier: 0.0.325
-        version: 0.0.325
+        specifier: 0.0.326
+        version: 0.0.326
       '@types/node':
         specifier: 22.15.27
         version: 22.15.27
@@ -775,8 +775,8 @@ importers:
         specifier: 6.4.0
         version: 6.4.0
       '@types/chrome':
-        specifier: 0.0.325
-        version: 0.0.325
+        specifier: 0.0.326
+        version: 0.0.326
       '@types/node':
         specifier: 22.15.27
         version: 22.15.27
@@ -4860,8 +4860,8 @@ packages:
   '@types/braces@3.0.5':
     resolution: {integrity: sha512-SQFof9H+LXeWNz8wDe7oN5zu7ket0qwMu5vZubW4GCJ8Kkeh6nBWUz87+KTz/G3Kqsrp0j/W253XJb3KMEeg3w==}
 
-  '@types/chrome@0.0.325':
-    resolution: {integrity: sha512-iHsXfUeAjQ8a+zMGCRNHESApb/gBV6eRlukks5gqDjUP4atF/j4BLKnVVLxyG/6PARRrupwkZvULUI+ovR9luQ==}
+  '@types/chrome@0.0.326':
+    resolution: {integrity: sha512-WS7jKf3ZRZFHOX7dATCZwqNJgdfiSF0qBRFxaO0LhIOvTNBrfkab26bsZwp6EBpYtqp8loMHJTnD6vDTLWPKYw==}
 
   '@types/connect-history-api-fallback@1.5.4':
     resolution: {integrity: sha512-n6Cr2xS1h4uAulPRdlw6Jl6s1oG8KrVilPN2yUITEs+K48EzMJJ3W1xy8K5eWuFvjp3R74AOIGSmp2UfBJ8HFw==}
@@ -18726,7 +18726,7 @@ snapshots:
 
   '@types/braces@3.0.5': {}
 
-  '@types/chrome@0.0.325':
+  '@types/chrome@0.0.326':
     dependencies:
       '@types/filesystem': 0.0.36
       '@types/har-format': 1.2.16
