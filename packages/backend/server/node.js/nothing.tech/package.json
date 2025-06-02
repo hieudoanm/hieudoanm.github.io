@@ -48,7 +48,7 @@
     "jsdom": "26.1.0",
     "kafkajs": "2.2.4",
     "node-easyocr": "1.0.9",
-    "pdf2html": "4.0.0",
+    "pdf2html": "4.2.0",
     "pdfmake": "0.2.20",
     "pino": "9.7.0",
     "pino-pretty": "13.0.0",
