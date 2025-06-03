@@ -1,10 +1,9 @@
 import htmlToPdfmake from 'html-to-pdfmake';
 import { JSDOM } from 'jsdom';
 import { writeFileSync } from 'node:fs';
+import pdf2html from 'pdf2html';
 import pdfMake from 'pdfmake/build/pdfmake';
 import pdfFonts from 'pdfmake/build/vfs_fonts';
-// @ts-expect-error ...
-import pdf2html from 'pdf2html';
 
 const cwd = process.cwd();
 console.info(cwd);

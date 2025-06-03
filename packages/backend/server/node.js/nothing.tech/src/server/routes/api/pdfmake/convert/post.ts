@@ -3,7 +3,6 @@ import { JSDOM } from 'jsdom';
 import { createWriteStream } from 'node:fs';
 import { IncomingMessage, ServerResponse } from 'node:http';
 import path from 'node:path';
-// @ts-expect-error ...
 import pdf2html from 'pdf2html';
 import * as pdfMake from 'pdfmake/build/pdfmake';
 import * as pdfFonts from 'pdfmake/build/vfs_fonts';
