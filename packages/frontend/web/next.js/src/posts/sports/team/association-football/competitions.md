@@ -1,6 +1,6 @@
 ---
 title: 'Football Competitions'
-date: '2025-04-18'
+date: '2025-06-03'
 ---
 
 ## Table of Contents
@@ -171,7 +171,7 @@ date: '2025-04-18'
 | 2022 | Argentina    |                |              | Senegal               |              | Thailand           | Real Madrid       | Eintracht Frankfurt      | Manchester City         | Liverpool               | Real Madrid         | AC Milan      | Bayern Munich            | Paris Saint-Germain | Porto         | Ajax       |
 | 2023 |              |                |              |                       | Qatar        |                    | Manchester City   | Sevilla                  | Manchester City         | Manchester City         | Barcelona           | Napoli        | Bayern Munich            | Paris Saint-Germain | Benfica       | Feyenoord  |
 | 2024 |              | Spain          | Argentina    | Ivory Coast           |              |                    | Real Madrid       | Atalanta                 | Manchester City         | Manchester United       | Real Madrid         | Inter Milan   | Bayer Leverkusen         | Paris Saint-Germain | Sporting CP   | PSV        |
-| 2025 |              |                |              |                       |              |                    |                   |                          |                         |                         |                     |               |                          |                     |               |            |
+| 2025 |              |                |              |                       |              |                    | PSG               | Tottenham Hotspur        | Liverpool               | Crystal Palace          | Barcelona           | Napoli        | Bayern Munich            | Paris Saint-Germain | Sporting CP   | PSV        |
 | 2026 |              |                |              |                       |              |                    |                   |                          |                         |                         |                     |               |                          |                     |               |            |
 | 2027 |              |                |              |                       |              |                    |                   |                          |                         |                         |                     |               |                          |                     |               |            |
 | 2028 |              |                |              |                       |              |                    |                   |                          |                         |                         |                     |               |                          |                     |               |            |

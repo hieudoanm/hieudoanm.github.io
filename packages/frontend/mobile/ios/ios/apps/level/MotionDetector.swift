@@ -37,14 +37,11 @@ class MotionDetector: ObservableObject {
         UIDevice.current.beginGeneratingDeviceOrientationNotifications()
 
         orientationObserver = NotificationCenter.default.addObserver(forName: notification, object: nil, queue: .main) { [weak self] _ in
-
             switch UIDevice.current.orientation {
             case .faceUp, .faceDown, .unknown:
-
                 break
 
             default:
-
                 self?.currentOrientation = UIDevice.current.orientation
             }
         }
@@ -53,7 +50,6 @@ class MotionDetector: ObservableObject {
             motionManager.startDeviceMotionUpdates()
 
             timer = Timer.scheduledTimer(withTimeInterval: updateInterval, repeats: true) { _ in
-
                 self.updateMotionData()
             }
 
@@ -101,27 +97,21 @@ extension UIDeviceOrientation {
     func adjustedRollAndPitch(_ attitude: CMAttitude) -> (roll: Double, pitch: Double) {
         switch self {
         case .unknown, .faceUp, .faceDown:
-
             return (attitude.roll, -attitude.pitch)
 
         case .landscapeLeft:
-
             return (attitude.pitch, -attitude.roll)
 
         case .portrait:
-
             return (attitude.roll, attitude.pitch)
 
         case .portraitUpsideDown:
-
             return (-attitude.roll, -attitude.pitch)
 
         case .landscapeRight:
-
             return (-attitude.pitch, attitude.roll)
 
         @unknown default:
-
             return (attitude.roll, attitude.pitch)
         }
     }
