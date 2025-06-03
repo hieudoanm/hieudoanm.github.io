@@ -131,8 +131,8 @@ importers:
   packages/backend/server/node.js/nothing.tech:
     dependencies:
       '@distube/ytdl-core':
-        specifier: 4.16.10
-        version: 4.16.10
+        specifier: 4.16.11
+        version: 4.16.11
       '@prisma/client':
         specifier: 6.8.2
         version: 6.8.2(prisma@6.8.2(typescript@5.8.3))(typescript@5.8.3)
@@ -2218,8 +2218,8 @@ packages:
     resolution: {integrity: sha512-4B4OijXeVNOPZlYA2oEwWOTkzyltLao+xbotHQeqN++Rv27Y6s818+n2Qkp8q+Fxhn0t/5lA5X1Mxktud8eayQ==}
     engines: {node: '>=14.17.0'}
 
-  '@distube/ytdl-core@4.16.10':
-    resolution: {integrity: sha512-KFKZtNlynOO0PYxelUF5h2bKyAU1d8fe6aZmo+gxWt7H2MQbd0bUeyV4y9iWhI57nukjkSXXQGB625CfhrVdGQ==}
+  '@distube/ytdl-core@4.16.11':
+    resolution: {integrity: sha512-yMQiicS5CuuTBsROb1iCRM09VZVL98EJ40LEtC7dMrgOWaHuJIwaL1w/ddC9DTNOUEV90T/1xYYLqM6Oc7q9kQ==}
     engines: {node: '>=20.18.1'}
 
   '@emnapi/core@1.4.3':
@@ -15556,7 +15556,7 @@ snapshots:
 
   '@discoveryjs/json-ext@0.6.3': {}
 
-  '@distube/ytdl-core@4.16.10':
+  '@distube/ytdl-core@4.16.11':
     dependencies:
       http-cookie-agent: 7.0.1(tough-cookie@5.1.2)(undici@7.9.0)
       https-proxy-agent: 7.0.6
