@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "@distube/ytdl-core": "4.16.11",
-    "@prisma/client": "6.8.2",
+    "@prisma/client": "6.9.0",
     "graphql": "16.11.0",
     "html-to-pdfmake": "2.5.26",
     "jsdom": "26.1.0",
@@ -68,7 +68,7 @@
     "nodemon": "3.1.10",
     "prettier": "3.5.3",
     "prettier-plugin-tailwindcss": "0.6.12",
-    "prisma": "6.8.2",
+    "prisma": "6.9.0",
     "rimraf": "6.0.1",
     "ts-loader": "9.5.2",
     "ts-node": "10.9.2",
