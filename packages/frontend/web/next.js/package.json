@@ -68,7 +68,7 @@
     "tesseract.js": "6.0.1",
     "uuid": "11.1.0",
     "yaml": "2.8.0",
-    "zod": "3.25.50"
+    "zod": "3.25.51"
   },
   "devDependencies": {
     "@eslint/eslintrc": "3.3.1",
