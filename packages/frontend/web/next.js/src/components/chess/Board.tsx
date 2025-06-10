@@ -35,6 +35,9 @@ export const Chessboard: FC<{
     return false;
   },
 }) => {
+  const darkSquareColor: string = 'oklch(14.5% 0 0)';
+  const lightSquareColor: string = 'oklch(20.5% 0 0)';
+
   return (
     <ReactChessboard
       id={id}
@@ -42,11 +45,11 @@ export const Chessboard: FC<{
       arePiecesDraggable={arePiecesDraggable}
       onPieceDrop={onPieceDrop}
       customDarkSquareStyle={{
-        backgroundColor: 'oklch(12.9% 0.042 264.695)',
+        backgroundColor: darkSquareColor,
         text: 'white',
       }}
       customLightSquareStyle={{
-        backgroundColor: 'oklch(20.8% 0.042 265.755)',
+        backgroundColor: lightSquareColor,
         text: 'white',
       }}
       customPieces={{
