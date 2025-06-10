@@ -10,7 +10,7 @@ const NotFoundPage: NextPage = () => {
           <Link href="/">
             <button
               type="button"
-              className="btn w-full rounded border border-gray-800 py-4 uppercase">
+              className="btn w-full rounded border border-neutral-800 py-4 uppercase">
               Back to Home
             </button>
           </Link>

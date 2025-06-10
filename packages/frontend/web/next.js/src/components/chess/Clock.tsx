@@ -132,7 +132,7 @@ export const ChessClock: FC = () => {
           setClock((previous) => ({ ...previous, full: true }));
         }}
         className="flex w-full flex-col gap-y-4">
-        <div className="flex items-center rounded border border-gray-800">
+        <div className="flex items-center rounded border border-neutral-800">
           <label htmlFor="white" className="px-4">
             <strong>White</strong>
           </label>
@@ -193,7 +193,7 @@ export const ChessClock: FC = () => {
             </optgroup>
           </select>
         </div>
-        <div className="flex items-center rounded border border-gray-800">
+        <div className="flex items-center rounded border border-neutral-800">
           <label htmlFor="black" className="px-4">
             <strong>Black</strong>
           </label>
@@ -265,7 +265,7 @@ export const ChessClock: FC = () => {
         </button>
       </form>
       <div
-        className={`${clock.full ? 'fixed top-0 right-0 bottom-0 left-0 bg-gray-900' : 'hidden'} h-screen w-screen overflow-hidden`}>
+        className={`${clock.full ? 'fixed top-0 right-0 bottom-0 left-0 bg-neutral-900' : 'hidden'} h-screen w-screen overflow-hidden`}>
         <div className="flex h-full flex-row md:flex-col">
           <div className="order-3 md:order-1">
             <div className="grid h-full grid-cols-1 md:grid-cols-2">
@@ -277,7 +277,7 @@ export const ChessClock: FC = () => {
                 </div>
               </div>
               <div className="col-span-1">
-                <div className="flex h-full w-full items-center justify-center bg-gray-100 p-1 text-center text-gray-900 md:p-2">
+                <div className="flex h-full w-full items-center justify-center bg-neutral-100 p-1 text-center text-neutral-900 md:p-2">
                   <div className="rotate-90 md:rotate-0">
                     {clock.timeControl.black}
                   </div>
@@ -290,7 +290,7 @@ export const ChessClock: FC = () => {
               <div className="col-span-1 row-span-1">
                 <button
                   type="button"
-                  className={`${clock.current === 'white' ? 'bg-red-500 text-gray-100' : 'bg-gray-100 text-gray-900'} h-full w-full`}
+                  className={`${clock.current === 'white' ? 'bg-red-500 text-neutral-100' : 'bg-neutral-100 text-neutral-900'} h-full w-full`}
                   onClick={() => click('white')}>
                   <div className="rotate-90 text-5xl md:rotate-0 md:text-9xl">
                     {format(clock.milliseconds.white)}
@@ -300,7 +300,7 @@ export const ChessClock: FC = () => {
               <div className="col-span-1 row-span-1">
                 <button
                   type="button"
-                  className={`${clock.current === 'black' ? 'bg-red-500 text-gray-100' : 'bg-gray-900 text-gray-100'} h-full w-full`}
+                  className={`${clock.current === 'black' ? 'bg-red-500 text-neutral-100' : 'bg-neutral-900 text-neutral-100'} h-full w-full`}
                   onClick={() => click('black')}>
                   <div className="rotate-90 text-5xl md:rotate-0 md:text-9xl">
                     {format(clock.milliseconds.black)}
@@ -313,7 +313,7 @@ export const ChessClock: FC = () => {
             <div className="col-span-1 row-span-1">
               <button
                 type="button"
-                className="h-full w-full bg-gray-900 p-4 text-center text-gray-100"
+                className="h-full w-full bg-neutral-900 p-4 text-center text-neutral-100"
                 onClick={() => {
                   if (clock.current === '') {
                     setClock((previous) => ({ ...previous, full: false }));
@@ -339,7 +339,7 @@ export const ChessClock: FC = () => {
             <div className="col-span-1 row-span-1">
               <button
                 type="button"
-                className="h-full w-full bg-gray-100 p-4 text-center text-gray-900"
+                className="h-full w-full bg-neutral-100 p-4 text-center text-neutral-900"
                 onClick={() =>
                   setClock((previous) => {
                     const { timeControl } = previous;

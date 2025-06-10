@@ -104,7 +104,7 @@ const HomePage: NextPage = () => {
     <div className="h-screen w-screen p-8">
       <div className="flex h-full flex-col items-center justify-center gap-y-8">
         <button
-          className="flex aspect-square w-24 cursor-pointer items-center justify-center rounded-full bg-gray-100 text-gray-900"
+          className="flex aspect-square w-24 cursor-pointer items-center justify-center rounded-full bg-neutral-100 text-neutral-900"
           onClick={() => {
             const newIndex: number = Math.floor(Math.random() * icons.length);
             setState((previous) => ({ ...previous, index: newIndex }));

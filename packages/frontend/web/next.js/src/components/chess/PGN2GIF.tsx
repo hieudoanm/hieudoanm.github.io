@@ -83,7 +83,7 @@ export const ChessPGN2GIF: FC<{ pgn: string }> = ({ pgn = INITIAL_PGN }) => {
           <button
             type="button"
             disabled={loading}
-            className="cursor-pointer rounded-full bg-red-500 p-4 text-center text-gray-100"
+            className="cursor-pointer rounded-full bg-red-500 p-4 text-center text-neutral-100"
             onClick={async () => {
               // Start Loading
               setState((previous) => ({ ...previous, loading: true }));
@@ -125,7 +125,7 @@ export const ChessPGN2GIF: FC<{ pgn: string }> = ({ pgn = INITIAL_PGN }) => {
       )}
       <div
         ref={boardRef}
-        className="aspect-square w-full overflow-hidden rounded border border-gray-800">
+        className="aspect-square w-full overflow-hidden rounded border border-neutral-800">
         <Chessboard id="board" position={game.fen()} />
       </div>
     </div>

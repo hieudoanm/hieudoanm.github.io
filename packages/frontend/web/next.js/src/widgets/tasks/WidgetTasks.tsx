@@ -10,7 +10,7 @@ export const WidgetTasks = () => {
   ]);
 
   return (
-    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-gray-900 text-gray-100">
+    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-neutral-900 text-neutral-100">
       <div className="h-full w-full p-6">
         <div className="grid h-full grid-rows-6">
           <div className="col-span-1">
@@ -39,7 +39,7 @@ export const WidgetTasks = () => {
                     )}
                   </div>
                   <p
-                    className={`truncate whitespace-nowrap capitalize ${completed ? 'text-gray-500 line-through' : ''}`}>
+                    className={`truncate whitespace-nowrap capitalize ${completed ? 'text-neutral-500 line-through' : ''}`}>
                     {title}
                   </p>
                 </button>

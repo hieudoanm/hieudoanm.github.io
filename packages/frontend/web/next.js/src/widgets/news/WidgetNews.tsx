@@ -23,7 +23,7 @@ export const WidgetNews = () => {
   ];
 
   return (
-    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-gray-900 text-gray-100">
+    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-neutral-900 text-neutral-100">
       <div className="h-full w-full p-6">
         <div className="flex h-full flex-col">
           <div className="flex items-center justify-between pb-2">
@@ -34,14 +34,14 @@ export const WidgetNews = () => {
           </div>
           {articles.map(({ title, content, source }) => {
             return (
-              <div key={title} className="grow border-t border-gray-700">
+              <div key={title} className="grow border-t border-neutral-700">
                 <div className="flex h-full w-full items-center">
                   <div className="w-full">
                     <div className="flex w-full items-center justify-between">
                       <p className="text-sm font-bold">{title}</p>
                       <p className="text-xs">{source}</p>
                     </div>
-                    <p className="w-44 truncate text-sm text-gray-500">
+                    <p className="w-44 truncate text-sm text-neutral-500">
                       {content}
                     </p>
                   </div>

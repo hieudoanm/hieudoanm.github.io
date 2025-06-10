@@ -78,7 +78,7 @@ export const ChessOpenings: NextPage = () => {
   });
 
   return (
-    <div className="grid w-full max-w-md grid-cols-1 grid-rows-2 overflow-hidden rounded border border-gray-800 md:max-w-[896px] md:grid-cols-2 md:grid-rows-1">
+    <div className="grid w-full max-w-md grid-cols-1 grid-rows-2 overflow-hidden rounded border border-neutral-800 md:max-w-[896px] md:grid-cols-2 md:grid-rows-1">
       <div className="col-span-1">
         <div className="aspect-square w-full max-w-md">
           <Chessboard
@@ -92,7 +92,7 @@ export const ChessOpenings: NextPage = () => {
       <div className="col-span-1">
         <div className="aspect-square w-full max-w-md">
           <div className="flex h-full w-full flex-col">
-            <div className="flex justify-between gap-x-2 border-b border-gray-800 p-4">
+            <div className="flex justify-between gap-x-2 border-b border-neutral-800 p-4">
               {filterOpenings.length < openings.length && (
                 <button
                   type="button"
@@ -142,7 +142,7 @@ export const ChessOpenings: NextPage = () => {
                     key={pgn}
                     title={`${eco}. ${name}`}
                     type="button"
-                    className="flex w-full cursor-pointer flex-col gap-y-1 border-b border-gray-800 px-4 py-2 text-left"
+                    className="flex w-full cursor-pointer flex-col gap-y-1 border-b border-neutral-800 px-4 py-2 text-left"
                     onClick={async () => {
                       copyToClipboard(pgn);
                     }}>

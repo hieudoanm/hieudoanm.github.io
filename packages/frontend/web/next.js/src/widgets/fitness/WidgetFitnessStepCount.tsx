@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 export const WidgetFitnessStepCount: FC = () => {
   return (
-    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-gray-900 text-gray-100">
+    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-neutral-900 text-neutral-100">
       <div className="h-full w-full p-8">
         <div className="grid h-full grid-rows-5">
           <div className="row-span-1">

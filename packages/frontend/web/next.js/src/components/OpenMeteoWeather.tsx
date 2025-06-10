@@ -114,7 +114,7 @@ export const OpenMeteoWeather: FC = () => {
 
   return (
     <div className="flex h-full items-center justify-center">
-      <div className="flex aspect-square w-64 items-center justify-center rounded-full bg-gray-800">
+      <div className="flex aspect-square w-64 items-center justify-center rounded-full bg-neutral-800">
         <div className="flex flex-col items-center gap-y-2 text-center">
           {icon}
           <p className="font-bold">{weather}</p>

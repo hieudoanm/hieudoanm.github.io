@@ -9,7 +9,7 @@ const PhotosPage: NextPage = () => {
   return (
     <>
       {!full && (
-        <div className="fixed top-0 right-0 bottom-0 left-0 z-10 h-full w-full overflow-hidden bg-gray-100">
+        <div className="fixed top-0 right-0 bottom-0 left-0 z-10 h-full w-full overflow-hidden bg-neutral-100">
           <div className="flex h-full items-center justify-center">
             <button
               type="button"
@@ -24,7 +24,7 @@ const PhotosPage: NextPage = () => {
       )}
       {full && (
         <button
-          className="fixed top-4 right-4 z-10 cursor-pointer rounded-full bg-gray-900 p-4"
+          className="fixed top-4 right-4 z-10 cursor-pointer rounded-full bg-neutral-900 p-4"
           onClick={() => {
             setState({ full: false });
           }}>

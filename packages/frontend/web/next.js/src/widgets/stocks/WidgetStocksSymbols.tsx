@@ -6,7 +6,7 @@ export const WidgetStocksSymbols = () => {
   ];
 
   return (
-    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-gray-900 text-gray-100">
+    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-neutral-900 text-neutral-100">
       <div className="h-full w-full p-6">
         <div className="grid h-full grid-rows-3">
           {stocks.map(({ symbol, price, change }, index, array) => {
@@ -14,7 +14,7 @@ export const WidgetStocksSymbols = () => {
             return (
               <div
                 key={symbol}
-                className={`col-span-1 ${last ? '' : 'border-b border-gray-700'}`}>
+                className={`col-span-1 ${last ? '' : 'border-b border-neutral-700'}`}>
                 <div className="flex h-full items-center">
                   <div className="w-full">
                     <p>
@@ -22,7 +22,7 @@ export const WidgetStocksSymbols = () => {
                     </p>
                     <div className="flex w-full items-center justify-between">
                       <p
-                        className={`${change === 0 ? 'text-gray-500' : change > 0 ? 'text-green-500' : 'text-red-500'}`}>
+                        className={`${change === 0 ? 'text-neutral-500' : change > 0 ? 'text-green-500' : 'text-red-500'}`}>
                         {change === 0 ? '=' : change > 0 ? '+' : '-'}{' '}
                         {Math.abs(change).toFixed(2)}%
                       </p>

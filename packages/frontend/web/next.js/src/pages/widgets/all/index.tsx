@@ -122,7 +122,7 @@ const WidgetsAllPage: NextPage = () => {
   logger.info(widgets.length);
 
   return (
-    <div className="h-[1300vh] w-screen overflow-hidden bg-gray-100 lg:h-[550vh]">
+    <div className="h-[1300vh] w-screen overflow-hidden bg-neutral-100 lg:h-[550vh]">
       <div className="grid h-full grid-cols-2 lg:grid-cols-5">
         {widgets.map(({ id, widget }) => {
           return (

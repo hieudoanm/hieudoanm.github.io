@@ -44,7 +44,7 @@ export const WidgetCalculatorConvertWeight: FC = () => {
   const convert = convertRates(weightRates);
 
   return (
-    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-gray-900 text-gray-100">
+    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-neutral-900 text-neutral-100">
       <div className="h-full w-full p-6">
         <div className="flex h-full flex-col">
           <div className="flex h-full w-full items-center gap-x-1">
@@ -112,7 +112,7 @@ export const WidgetCalculatorConvertWeight: FC = () => {
               </select>
             </div>
           </div>
-          <div className="h-1 bg-gray-900" />
+          <div className="h-1 bg-neutral-900" />
           <div className="flex h-full items-center gap-x-1">
             <div className="grow text-left text-3xl text-red-500">
               <input
@@ -135,7 +135,7 @@ export const WidgetCalculatorConvertWeight: FC = () => {
             </div>
             <div className="text-xl">{fromUnit}</div>
           </div>
-          <div className="h-1 bg-gray-900" />
+          <div className="h-1 bg-neutral-900" />
           <div className="flex h-full items-center gap-x-1">
             <div className="grow truncate text-left text-3xl text-red-500">
               <input

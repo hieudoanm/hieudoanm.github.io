@@ -27,7 +27,7 @@ export const WidgetMail: FC = () => {
   ];
 
   return (
-    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-gray-900 text-gray-100">
+    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-neutral-900 text-neutral-100">
       <div className="h-full w-full p-6">
         <div className="flex h-full flex-col">
           <div className="flex items-center justify-between pb-2">
@@ -38,7 +38,7 @@ export const WidgetMail: FC = () => {
           </div>
           {mails.map(({ contact, message, dateTime, unread }) => {
             return (
-              <div key={contact} className="grow border-t border-gray-700">
+              <div key={contact} className="grow border-t border-neutral-700">
                 <div className="flex h-full w-full items-center gap-x-2 overflow-hidden">
                   {unread && (
                     <div>
@@ -50,7 +50,7 @@ export const WidgetMail: FC = () => {
                       <p className="text-sm font-bold">{contact}</p>
                       <p className="text-xs">{dateTime}</p>
                     </div>
-                    <p className="w-40 truncate text-sm text-gray-500">
+                    <p className="w-40 truncate text-sm text-neutral-500">
                       {message}
                     </p>
                   </div>

@@ -39,12 +39,12 @@ export const Forex = () => {
   } = data ?? { amount: 1, base: '', rates: {} };
 
   return (
-    <div className="flex flex-col gap-2 border-t border-gray-800 pt-2">
+    <div className="flex flex-col gap-2 border-t border-neutral-800 pt-2">
       {Object.entries(rates).map(([key, value]) => {
         return (
           <div
             key={key}
-            className="flex items-center justify-between gap-2 border-b border-gray-800 pb-2">
+            className="flex items-center justify-between gap-2 border-b border-neutral-800 pb-2">
             <span className="text-sm">
               {amount} {base} to {key}
             </span>

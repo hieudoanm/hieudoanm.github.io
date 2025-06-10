@@ -17,16 +17,16 @@ export const WidgetGamesWheelOfFortune: FC = () => {
   }, [degree, isSpinning]);
 
   return (
-    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-full bg-gray-900 text-gray-100">
+    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-full bg-neutral-900 text-neutral-100">
       <div className="relative h-full w-full p-4">
         <div className="relative h-full w-full">
           <div
             style={{ clipPath: 'polygon(0 0, 50% 100%, 100% 0)' }}
-            className="absolute top-0 right-0 left-0 z-20 mx-auto h-8 w-4 bg-gray-900"></div>
+            className="absolute top-0 right-0 left-0 z-20 mx-auto h-8 w-4 bg-neutral-900"></div>
           <div className="absolute top-0 right-0 bottom-0 left-0 z-20 m-auto flex items-center justify-center">
             <button
               type="button"
-              className="h-16 w-16 rounded-full bg-gray-900 text-gray-100"
+              className="h-16 w-16 rounded-full bg-neutral-900 text-neutral-100"
               onClick={() => {
                 setIsSpinning((previousIsSpinning) => {
                   setDegree((previous) =>

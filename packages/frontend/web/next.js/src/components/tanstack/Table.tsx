@@ -38,7 +38,7 @@ export const TanStackTable: FC<TanStackTableProps> = ({
   });
 
   return (
-    <div className="scroll-none h-full overflow-auto rounded-xl border bg-gray-900 text-gray-100">
+    <div className="scroll-none h-full overflow-auto rounded-xl border bg-neutral-900 text-neutral-100">
       <table className="w-full">
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (

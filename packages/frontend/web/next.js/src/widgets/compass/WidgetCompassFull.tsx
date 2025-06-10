@@ -74,20 +74,20 @@ export const WidgetCompassFull: FC = () => {
   }
 
   return (
-    <div className="shadow-3xl relative aspect-square w-full max-w-60 rounded-full bg-gray-900">
+    <div className="shadow-3xl relative aspect-square w-full max-w-60 rounded-full bg-neutral-900">
       <div className="absolute top-0 right-0 left-0 mx-auto flex justify-center py-4">
         <span className="font-black text-red-500">N</span>
       </div>
       <div className="absolute top-0 bottom-0 left-0 mx-auto flex items-center px-4">
-        <span className="font-black text-gray-100">W</span>
+        <span className="font-black text-neutral-100">W</span>
       </div>
       <div className="absolute right-0 bottom-0 left-0 mx-auto flex justify-center py-4">
-        <span className="font-black text-gray-100">S</span>
+        <span className="font-black text-neutral-100">S</span>
       </div>
       <div className="absolute top-0 right-0 bottom-0 mx-auto flex items-center px-4">
-        <span className="font-black text-gray-100">E</span>
+        <span className="font-black text-neutral-100">E</span>
       </div>
-      <div className="absolute top-0 right-0 bottom-0 left-0 z-10 m-auto aspect-square w-4 rounded-full bg-gray-900"></div>
+      <div className="absolute top-0 right-0 bottom-0 left-0 z-10 m-auto aspect-square w-4 rounded-full bg-neutral-900"></div>
       <div
         className="absolute top-0 right-0 bottom-0 left-0 m-auto aspect-square w-6"
         style={{ transform: `rotate(${alpha}deg)` }}>

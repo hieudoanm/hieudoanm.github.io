@@ -8,7 +8,7 @@ export const WidgetHealthBodyTemperature = () => {
   const unit: TemperatureUnit = units[unitIndex];
 
   return (
-    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-full bg-gray-900 text-gray-100">
+    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-full bg-neutral-900 text-neutral-100">
       <button
         type="button"
         className="flex h-full w-full items-center justify-center"

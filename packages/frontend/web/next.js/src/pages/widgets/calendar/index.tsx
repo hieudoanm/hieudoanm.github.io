@@ -5,7 +5,7 @@ import { NextPage } from 'next';
 
 const CalendarPage: NextPage = () => {
   return (
-    <div className="h-[150vh] w-screen overflow-hidden bg-gray-100 md:h-screen">
+    <div className="h-[150vh] w-screen overflow-hidden bg-neutral-100 md:h-screen">
       <div className="grid h-full grid-cols-1 md:grid-cols-3">
         <div className="col-span-1">
           <div className="flex h-full w-full items-center justify-center">

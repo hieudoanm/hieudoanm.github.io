@@ -52,7 +52,7 @@ export const Crypto = () => {
   const { coins = [] } = responseData ?? { coins: [] };
 
   return (
-    <div className="flex flex-col gap-2 border-t border-gray-800 pt-2">
+    <div className="flex flex-col gap-2 border-t border-neutral-800 pt-2">
       {coins.map((coin) => {
         const {
           rank = 0,
@@ -66,7 +66,7 @@ export const Crypto = () => {
         return (
           <div
             key={uuid}
-            className="flex items-center justify-between gap-2 border-b border-gray-800 pb-2">
+            className="flex items-center justify-between gap-2 border-b border-neutral-800 pb-2">
             <div>
               <p className="text-xs">
                 {rank}. {symbol}

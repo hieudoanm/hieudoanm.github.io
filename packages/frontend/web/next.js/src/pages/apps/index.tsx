@@ -606,7 +606,7 @@ const CSVTable: FC<{ csv: string }> = ({ csv = '' }) => {
   });
 
   return (
-    <div className="w-full overflow-auto rounded border border-gray-800">
+    <div className="w-full overflow-auto rounded border border-neutral-800">
       <table id="csv-html-table" className="w-full">
         {data[0] ? (
           <thead>
@@ -630,7 +630,7 @@ const CSVTable: FC<{ csv: string }> = ({ csv = '' }) => {
             return (
               <tr
                 key={`row-${JSON.stringify(item)}`}
-                className="border-t border-gray-800">
+                className="border-t border-neutral-800">
                 {Object.values(item).map((value: string) => {
                   return (
                     <td key={value}>
@@ -715,7 +715,7 @@ const ActionButton: FC<{
   return (
     <button
       type="button"
-      className="cursor-pointer rounded border border-gray-800 p-2"
+      className="cursor-pointer rounded border border-neutral-800 p-2"
       onClick={async () => {
         if (action === ActCSV.CSV_TO_HTML) {
           const csvHtmlTable: string =
@@ -868,7 +868,7 @@ const Output: FC<{
         className={`flex flex-col items-center justify-center ${width > height ? 'h-full' : 'w-full'}`}>
         <div
           ref={divRef}
-          className="w-full max-w-sm overflow-hidden border border-gray-800">
+          className="w-full max-w-sm overflow-hidden border border-neutral-800">
           <Chessboard id="fen2png" position={output} />
         </div>
       </div>
@@ -941,7 +941,7 @@ const Output: FC<{
       <div className={`${width > height ? 'h-full' : 'w-full'}`}>
         <div
           ref={divRef}
-          className={`flex aspect-[2/1] items-center justify-center border border-gray-800 bg-gray-900 ${width > height ? 'h-full' : 'w-full'} ${oleoScript.className} `}>
+          className={`flex aspect-[2/1] items-center justify-center border border-neutral-800 bg-neutral-900 ${width > height ? 'h-full' : 'w-full'} ${oleoScript.className} `}>
           <div className="flex flex-col gap-y-2">
             {name && (
               <p className="text-center text-6xl leading-none md:text-7xl lg:text-8xl xl:text-9xl">
@@ -1179,7 +1179,7 @@ const StudioPage: NextPage = () => {
               event.preventDefault();
               await submit({ action: action, input });
             }}
-            className="overflow-hidde flex grow flex-col rounded-none rounded-t-2xl bg-gray-800 md:rounded-2xl">
+            className="overflow-hidde flex grow flex-col rounded-none rounded-t-2xl bg-neutral-800 md:rounded-2xl">
             <Input
               action={action}
               input={input}
@@ -1499,7 +1499,7 @@ const StudioPage: NextPage = () => {
               </select>
               <label
                 htmlFor="upload-image"
-                className="cursor-pointer rounded-full bg-gray-700 p-2 p-3 text-center text-xs">
+                className="cursor-pointer rounded-full bg-neutral-700 p-2 p-3 text-center text-xs">
                 <input
                   type="file"
                   name="image"
@@ -1551,7 +1551,7 @@ const StudioPage: NextPage = () => {
               </label>
               <button
                 type="submit"
-                className="cursor-pointer rounded-full bg-gray-700 p-3 text-xs"
+                className="cursor-pointer rounded-full bg-neutral-700 p-3 text-xs"
                 disabled={loading}
                 onClick={async () => {
                   await submit({ action: action, input });

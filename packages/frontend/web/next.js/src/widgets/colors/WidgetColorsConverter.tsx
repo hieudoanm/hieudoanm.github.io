@@ -12,7 +12,7 @@ export const WidgetColorsConverter = () => {
   });
 
   return (
-    <div className="shadow-3xl aspect-square w-full max-w-60 overflow-hidden rounded-full border border-white bg-gray-900">
+    <div className="shadow-3xl aspect-square w-full max-w-60 overflow-hidden rounded-full border border-white bg-neutral-900">
       <div className="flex h-full w-full items-center justify-center">
         <div
           style={{ color: colors.hex ?? colors.rgb }}
@@ -63,7 +63,7 @@ export const WidgetColorsConverter = () => {
           <div className="flex items-center justify-center gap-x-4">
             <button
               type="button"
-              className="text-gray-100"
+              className="text-neutral-100"
               onClick={() => {
                 const newHex: string = randomHexColorCode();
                 const newRBG = hex2rgb(newHex);
@@ -79,7 +79,7 @@ export const WidgetColorsConverter = () => {
             </button>
             <button
               type="button"
-              className="text-gray-100"
+              className="text-neutral-100"
               onClick={() => copyToClipboard(colors.hex)}>
               <FaCopy className="mx-auto text-xl" />
             </button>

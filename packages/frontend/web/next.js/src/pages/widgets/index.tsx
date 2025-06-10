@@ -245,7 +245,7 @@ const WidgetsPage: NextPage = () => {
                   <Link
                     href={`/widgets/${href}`}
                     className="flex flex-col items-center gap-y-1 md:gap-y-2">
-                    <div className="flex aspect-square w-12 items-center justify-center overflow-hidden rounded-full border border-gray-800 md:w-16">
+                    <div className="flex aspect-square w-12 items-center justify-center overflow-hidden rounded-full border border-neutral-800 md:w-16">
                       {icon}
                     </div>
                     <p className="w-full truncate text-center text-xs font-semibold md:text-sm">

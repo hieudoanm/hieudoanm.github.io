@@ -23,7 +23,7 @@ export const ChessEloCalculator = () => {
   });
 
   return (
-    <div className="flex w-full max-w-sm flex-col gap-y-2 rounded border border-gray-700 p-4">
+    <div className="flex w-full max-w-sm flex-col gap-y-2 rounded border border-neutral-700 p-4">
       <div className="flex w-full items-center gap-x-2">
         <label htmlFor="ratingPlayer" className="text-sm font-bold">
           Your Rating
@@ -166,7 +166,7 @@ export const ChessEloCalculator = () => {
       </div>
       <button
         type="button"
-        className="w-full cursor-pointer rounded bg-red-500 py-2 font-semibold text-gray-100"
+        className="w-full cursor-pointer rounded bg-red-500 py-2 font-semibold text-neutral-100"
         onClick={() => {
           const ratingNew = calculate(formula);
           setFormula((previous) => ({ ...previous, ratingNew }));

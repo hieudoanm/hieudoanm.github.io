@@ -9,7 +9,7 @@ export const WidgetTranslate = () => {
   ];
 
   return (
-    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-gray-900 text-gray-100">
+    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-neutral-900 text-neutral-100">
       <div className="flex h-full w-full flex-col px-8 py-8">
         <div className="pb-8">
           <p className="text-center font-black">Translate</p>
@@ -19,7 +19,7 @@ export const WidgetTranslate = () => {
             return (
               <div key={'item' + index} className="col-span-2">
                 <div className="flex h-full w-full items-center justify-center">
-                  <div className="flex h-full w-full items-center justify-center rounded-full bg-white text-black hover:bg-red-500 hover:text-gray-100">
+                  <div className="flex h-full w-full items-center justify-center rounded-full bg-white text-black hover:bg-red-500 hover:text-neutral-100">
                     {icon}
                   </div>
                 </div>

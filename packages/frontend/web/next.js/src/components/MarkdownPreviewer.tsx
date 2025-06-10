@@ -6,7 +6,7 @@ export const MarkdownPreviewer: FC<{ html: string }> = ({ html = '' }) => {
 
   return (
     <div
-      className="markdown-body !bg-gray-900 !text-gray-100"
+      className="markdown-body !bg-neutral-900 !text-neutral-100"
       // Render the HTML safely
       dangerouslySetInnerHTML={{ __html }}
     />

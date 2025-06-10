@@ -100,7 +100,7 @@ const PostPage: NextPage<{
   });
   return (
     <div className="container mx-auto min-h-screen p-8">
-      <article className="markdown-body border-b border-gray-800 bg-gray-900!">
+      <article className="markdown-body border-b border-neutral-800 bg-neutral-900!">
         <button
           className="w-full cursor-pointer rounded bg-red-500 py-2 font-semibold"
           disabled={loading}
@@ -125,7 +125,7 @@ const PostPage: NextPage<{
           return (
             <div
               key={id}
-              className="flex flex-col gap-y-1 border-b border-gray-800 py-4">
+              className="flex flex-col gap-y-1 border-b border-neutral-800 py-4">
               <Link href={`/posts/${id}`}>
                 <p className="m-0 p-0">
                   <b>{title}</b>

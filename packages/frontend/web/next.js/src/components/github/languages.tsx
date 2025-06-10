@@ -54,7 +54,7 @@ export const GitHubLanguages: FC<{
           return (
             <div
               key={languageKey}
-              className="flex h-full w-full items-center justify-center py-2 text-center text-xs text-gray-100"
+              className="flex h-full w-full items-center justify-center py-2 text-center text-xs text-neutral-100"
               style={{ backgroundColor, color }}>
               <b>{languageKey}</b>
             </div>

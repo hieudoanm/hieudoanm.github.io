@@ -19,13 +19,13 @@ const NotesPage: NextPage<{
 
   return (
     <main className="flex h-screen flex-col overflow-hidden">
-      <div className="border-b border-gray-800">
+      <div className="border-b border-neutral-800">
         <div className="container mx-auto px-8 py-4">
           <input
             id="search"
             name="search"
             placeholder="Search"
-            className="w-full rounded border border-gray-800 px-4 py-2"
+            className="w-full rounded border border-neutral-800 px-4 py-2"
             value={search}
             onChange={(event) => {
               setState((previous) => ({
@@ -63,7 +63,7 @@ const NotesPage: NextPage<{
                 return (
                   <div
                     key={id}
-                    className="col-span-1 border-b border-gray-800 py-4">
+                    className="col-span-1 border-b border-neutral-800 py-4">
                     <div className="flex flex-col gap-y-2">
                       <div className="flex flex-col gap-y-1">
                         <Link href={`/posts/${id}`}>
@@ -78,7 +78,7 @@ const NotesPage: NextPage<{
                           <button
                             key={tag}
                             type="button"
-                            className="inline-block cursor-pointer rounded bg-gray-100 px-1 py-0.5 text-xs text-gray-900"
+                            className="inline-block cursor-pointer rounded bg-neutral-100 px-1 py-0.5 text-xs text-neutral-900"
                             onClick={() =>
                               setState((previous) => ({
                                 ...previous,

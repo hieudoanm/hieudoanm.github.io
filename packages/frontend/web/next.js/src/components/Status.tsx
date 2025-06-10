@@ -18,7 +18,7 @@ const ServiceStatus: FC<{ service: string; url: string }> = ({
   });
 
   return (
-    <div className="w-full rounded-full border border-gray-800 px-4 py-2">
+    <div className="w-full rounded-full border border-neutral-800 px-4 py-2">
       <div className="flex items-center justify-between">
         <p className="capitalize">
           <Link
@@ -29,7 +29,7 @@ const ServiceStatus: FC<{ service: string; url: string }> = ({
           </Link>
         </p>
         {isPending ? (
-          <div className="aspect-square w-4 rounded-full bg-gray-500" />
+          <div className="aspect-square w-4 rounded-full bg-neutral-500" />
         ) : (
           <>
             {(error || data?.status.indicator !== 'none') && (

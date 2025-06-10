@@ -12,11 +12,11 @@ export const WidgetMusicPlayer: FC = () => {
   const [status, setStatus] = useState(false);
 
   return (
-    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-gray-900 text-gray-100">
+    <div className="shadow-3xl relative aspect-square w-full max-w-60 overflow-hidden rounded-3xl bg-neutral-900 text-neutral-100">
       <div className="flex h-full w-full flex-col p-8">
         <div className="mb-2 text-center">
           <p className="truncate text-xl">
-            <span className="text-gray-300">Eminem</span> -{' '}
+            <span className="text-neutral-300">Eminem</span> -{' '}
             <span className="font-black">Lose Yourself</span>
           </p>
         </div>

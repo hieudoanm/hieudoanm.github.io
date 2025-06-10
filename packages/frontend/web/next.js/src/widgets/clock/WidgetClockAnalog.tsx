@@ -50,7 +50,7 @@ export const WidgetClockAnalog: FC = () => {
   const hoursAngle: number = (clock.hours / 12) * 360 + 90;
 
   return (
-    <div className="shadow-3xl aspect-square w-full max-w-60 rounded-full border border-white bg-gray-900">
+    <div className="shadow-3xl aspect-square w-full max-w-60 rounded-full border border-white bg-neutral-900">
       <div className="relative h-full w-full rounded-full">
         <div className="absolute top-0 right-0 bottom-0 left-0 m-auto aspect-square w-4 rounded-full bg-white">
           <div className="relative h-full w-full">
@@ -66,7 +66,7 @@ export const WidgetClockAnalog: FC = () => {
                 ) : (
                   <div
                     title={((index + 9) % 12).toString()}
-                    className={`aspect-square w-2 rounded-full ${activeHour ? 'bg-red-500' : 'bg-gray-500'}`}
+                    className={`aspect-square w-2 rounded-full ${activeHour ? 'bg-red-500' : 'bg-neutral-500'}`}
                   />
                 );
               return (

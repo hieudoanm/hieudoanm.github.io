@@ -64,7 +64,7 @@ export const WidgetCalendarMonthly: FC = () => {
   const daysByWeek: number[][] = chunkArray(array, 7);
 
   return (
-    <div className="shadow-3xl aspect-square w-full max-w-60 rounded-3xl bg-gray-900 p-6 text-gray-100">
+    <div className="shadow-3xl aspect-square w-full max-w-60 rounded-3xl bg-neutral-900 p-6 text-neutral-100">
       <div className="flex h-full flex-col items-center justify-center gap-y-2">
         <div className="flex w-full items-center justify-between">
           <p className="text-red-500">
@@ -110,7 +110,7 @@ export const WidgetCalendarMonthly: FC = () => {
                         ) : (
                           <>
                             {date <= 0 || date > numberOfDaysPerMonth ? (
-                              <div className="aspect-square w-2 rounded-full bg-gray-700" />
+                              <div className="aspect-square w-2 rounded-full bg-neutral-700" />
                             ) : (
                               <div className="aspect-square w-2 rounded-full bg-white" />
                             )}

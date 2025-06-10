@@ -70,7 +70,7 @@ const QuickSetting: FC<{
         })
       }>
       <div
-        className={`flex aspect-square w-16 items-center justify-center rounded-full ${settings[setting] ? 'bg-red-700' : 'bg-gray-900'} text-gray-100`}>
+        className={`flex aspect-square w-16 items-center justify-center rounded-full ${settings[setting] ? 'bg-red-700' : 'bg-neutral-900'} text-neutral-100`}>
         {settings[setting] ? activeIcon : inactiveIcon}
       </div>
     </button>
@@ -96,7 +96,7 @@ const SettingsPage: NextPage = () => {
   });
 
   return (
-    <div className="h-screen w-screen overflow-hidden bg-gray-100">
+    <div className="h-screen w-screen overflow-hidden bg-neutral-100">
       <div className="flex h-full items-center justify-center">
         <div className="grid grid-cols-3 gap-4 md:grid-cols-4 md:gap-8 lg:grid-cols-7">
           <div className="col-span-1">

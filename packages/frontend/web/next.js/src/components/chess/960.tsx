@@ -72,7 +72,7 @@ export const Chess960: FC = () => {
         </select>
       </h1>
       <button
-        className="aspect-square w-full overflow-hidden rounded border border-gray-800"
+        className="aspect-square w-full overflow-hidden rounded border border-neutral-800"
         onClick={randomisePosition}>
         <Chessboard id="board" position={fen} />
       </button>
