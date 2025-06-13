@@ -111,8 +111,8 @@ importers:
         specifier: 4.0.3
         version: 4.0.3
       html-to-pdfmake:
-        specifier: 2.5.26
-        version: 2.5.26
+        specifier: 2.5.27
+        version: 2.5.27
       html2canvas-pro:
         specifier: 1.5.11
         version: 1.5.11
@@ -3465,8 +3465,8 @@ packages:
   html-escaper@2.0.2:
     resolution: {integrity: sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==}
 
-  html-to-pdfmake@2.5.26:
-    resolution: {integrity: sha512-BN9fwSRMzlRuOyRLpPnIOOEKrVrncv54JlEk19oTNQGBBrvHMyAn3cpqjz5X0lWEGHKd/y7AaEHRdmCLcebKkQ==}
+  html-to-pdfmake@2.5.27:
+    resolution: {integrity: sha512-deLHqozr791YuYmLVq+QGSOCfrVg3OXeOcHfPE78uBJuQZXvu86qdiPCndmMgfi6mIQGJgMVKAmlZA9wZfeaQg==}
 
   html-void-elements@3.0.0:
     resolution: {integrity: sha512-bEqo66MRXsUGxWHV5IP0PUiAWwoEjba4VCzg0LjFJBpchPaTfyfCKTG6bc5F8ucKec3q5y6qOdGyYTSBEvhCrg==}
@@ -9582,7 +9582,7 @@ snapshots:
 
   html-escaper@2.0.2: {}
 
-  html-to-pdfmake@2.5.26: {}
+  html-to-pdfmake@2.5.27: {}
 
   html-void-elements@3.0.0: {}
 
