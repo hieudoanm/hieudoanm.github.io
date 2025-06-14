@@ -93,8 +93,8 @@ importers:
         specifier: 11.4.1
         version: 11.4.1(typescript@5.8.3)
       chess.js:
-        specifier: 1.3.1
-        version: 1.3.1
+        specifier: 1.4.0
+        version: 1.4.0
       d3:
         specifier: 7.9.0
         version: 7.9.0
@@ -2560,8 +2560,8 @@ packages:
     resolution: {integrity: sha512-6dVyOOYjpfFcL1Y4qChrAoQLRHvj2ziyhcm0QJlhOcAhykL/k1kTUPbeo+87MNRTRdk2OIIsIXbuF3x2wi5EXg==}
     engines: {node: '>=4.0.0'}
 
-  chess.js@1.3.1:
-    resolution: {integrity: sha512-gdMvss5QQNOQQKrglFxmGsb0ZMCMJ9sDVsGPXyW4EsQDo1dHBDjaatbuigqVrjoj9quTkTGzBWERXWAfjNT5fQ==}
+  chess.js@1.4.0:
+    resolution: {integrity: sha512-BBJgrrtKQOzFLonR0l+k64A98NLemPwNsCskwb+29bRwobUa4iTm51E1kwGPbWXAcfdDa18nad6vpPPKPWarqw==}
 
   chownr@3.0.0:
     resolution: {integrity: sha512-+IxzY9BZOQd/XuYPRmrvEVjF/nqj5kgT4kEq7VofrDoM1MxoRjEWkrCC3EtLi59TVawxTAn+orJwFQcrqEN1+g==}
@@ -8503,7 +8503,7 @@ snapshots:
 
   charset@1.0.1: {}
 
-  chess.js@1.3.1: {}
+  chess.js@1.4.0: {}
 
   chownr@3.0.0: {}
 
@@ -12314,7 +12314,7 @@ snapshots:
       '@webassemblyjs/ast': 1.14.1
       '@webassemblyjs/wasm-edit': 1.14.1
       '@webassemblyjs/wasm-parser': 1.14.1
-      acorn: 8.14.1
+      acorn: 8.15.0
       browserslist: 4.24.5
       chrome-trace-event: 1.0.4
       enhanced-resolve: 5.18.1
