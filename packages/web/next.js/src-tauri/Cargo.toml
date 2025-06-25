@@ -23,4 +23,4 @@ serde_json = { version = "=1.0.140" }
 serde = { version = "=1.0.219", features = ["derive"] }
 log = { version = "=0.4.27" }
 tauri = { version = "=2.6.0", features = [] }
-tauri-plugin-log = { version = "=2.5.0" }
+tauri-plugin-log = { version = "=2.5.1" }
