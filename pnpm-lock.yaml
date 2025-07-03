@@ -147,8 +147,8 @@ importers:
         specifier: 2.8.0
         version: 2.8.0
       zod:
-        specifier: 3.25.67
-        version: 3.25.67
+        specifier: 3.25.69
+        version: 3.25.69
     devDependencies:
       '@eslint/eslintrc':
         specifier: 3.3.1
@@ -5623,8 +5623,8 @@ packages:
   zlibjs@0.3.1:
     resolution: {integrity: sha512-+J9RrgTKOmlxFSDHo0pI1xM6BLVUv+o0ZT9ANtCxGkjIVCCUdx9alUF8Gm+dGLKbkkkidWIHFDZHDMpfITt4+w==}
 
-  zod@3.25.67:
-    resolution: {integrity: sha512-idA2YXwpCdqUSKRCACDE6ItZD9TZzy3OZMtpfLoh6oPR47lipysRrJfjzMqFxQ3uJuUPyUeWe1r9vLH33xO/Qw==}
+  zod@3.25.69:
+    resolution: {integrity: sha512-cjUx+boz8dfYGssYKLGNTF5VUF6NETpcZCDTN3knhUUXQTAAvErzRhV3pgeCZm2YsL4HOwtEHPonlsshPu2I0A==}
 
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
@@ -12082,6 +12082,6 @@ snapshots:
 
   zlibjs@0.3.1: {}
 
-  zod@3.25.67: {}
+  zod@3.25.69: {}
 
   zwitch@2.0.4: {}
