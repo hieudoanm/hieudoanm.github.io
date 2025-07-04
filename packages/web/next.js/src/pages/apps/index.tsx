@@ -6,12 +6,6 @@ import {
 } from '@web/clients/telegram.org/telegram.client';
 import { getWord, Word } from '@web/clients/wordsapi.com/wordsapi.client';
 import { PeriodicTable } from '@web/components/chemistry/PeriodicTable';
-import { Chess960 } from '@web/components/chess/960';
-import { Chessboard } from '@web/components/chess/Board';
-import { ChessClock } from '@web/components/chess/Clock';
-import { ChessEloCalculator } from '@web/components/chess/EloCalculator';
-import { ChessOpenings } from '@web/components/chess/Openings';
-import { ChessPGN2GIF } from '@web/components/chess/PGN2GIF';
 import { Crypto } from '@web/components/Crypto';
 import { Forex } from '@web/components/Forex';
 import { FullScreen } from '@web/components/FullScreen';
@@ -24,10 +18,8 @@ import {
   INITIAL_MANIFEST_EXTENSION,
   INITIAL_MANIFEST_PWA,
   INITIAL_MARKDOWN,
-  INITIAL_PGN,
   INITIAL_TELEGRAM_WEBHOOK,
   INTIIAL_YAML,
-  INTITAL_FEN,
 } from '@web/constants';
 import { useBattery } from '@web/hooks/window/navigator/use-battery';
 import { useWindowSize } from '@web/hooks/window/use-size';
@@ -134,15 +126,6 @@ enum ActImage {
   IMAGE_OCR = 'Image - OCR',
 }
 
-enum ActChess {
-  CHESS_960 = 'Chess960',
-  CHESS_CLOCK = 'Chess - Clock',
-  CHESS_CONVERT_FEN_TO_PNG = 'Chess - Convert FEN to PNG',
-  CHESS_CONVERT_PGN_TO_GIF = 'Chess - Convert PGN to GIF',
-  CHESS_ELO_CALCULATOR = 'Chess - Elo Calculator',
-  CHESS_OPENINGS = 'Chess - Openings',
-}
-
 enum ActColor {
   // CMYK
   CMYK_TO_HEX = 'CMYK to HEX',
@@ -246,7 +229,6 @@ enum ActGitHub {
 }
 
 type Act =
-  | ActChess
   | ActColor
   | ActCSV
   | ActJSON
@@ -499,9 +481,7 @@ const act = async ({
   source: string;
 }): Promise<string> => {
   let output: string = source;
-  if (action === ActChess.CHESS_960) {
-    output = source;
-  } else if (isActImage(action)) {
+  if (isActImage(action)) {
     output = await actImage({ action, source });
   } else if (isActionColor(action)) {
     output = actColor({ action, source });
@@ -655,11 +635,6 @@ const ActionButton: FC<{
   output: string;
 }> = ({ action, ref, output = '' }) => {
   if (
-    action === ActChess.CHESS_960 ||
-    action === ActChess.CHESS_CLOCK ||
-    action === ActChess.CHESS_CONVERT_PGN_TO_GIF ||
-    action === ActChess.CHESS_ELO_CALCULATOR ||
-    action === ActChess.CHESS_OPENINGS ||
     action === ActWidget.WIDGET_FINANCE_CRYPTO ||
     action === ActWidget.WIDGET_FINANCE_FOREX ||
     action === ActWidget.WIDGET_FULL_SCREEN ||
@@ -672,7 +647,6 @@ const ActionButton: FC<{
 
   const actionText = () => {
     if (
-      action === ActChess.CHESS_CONVERT_FEN_TO_PNG ||
       action === ActGitHub.GITHUB_LANGUAGES ||
       action === ActGitHub.GITHUB_SOCIAL_PREVIEW ||
       action === ActImage.IMAGE_CONVERT_PNG_TO_ICO ||
@@ -744,7 +718,6 @@ const ActionButton: FC<{
           };
           pdfMake.createPdf(docDefinition).download('markdown.pdf');
         } else if (
-          action === ActChess.CHESS_CONVERT_FEN_TO_PNG ||
           action === ActGitHub.GITHUB_LANGUAGES ||
           action === ActGitHub.GITHUB_SOCIAL_PREVIEW
         ) {
@@ -779,9 +752,6 @@ const Input: FC<{
   });
 
   if (
-    action === ActChess.CHESS_960 ||
-    action === ActChess.CHESS_CLOCK ||
-    action === ActChess.CHESS_OPENINGS ||
     action === ActOther.UUID ||
     action === ActWidget.WIDGET_FINANCE_CRYPTO ||
     action === ActWidget.WIDGET_FINANCE_FOREX ||
@@ -837,7 +807,7 @@ const Output: FC<{
   output: string;
   divRef: RefObject<HTMLDivElement | null>;
 }> = ({
-  action = ActChess.CHESS_960,
+  action = ActOther.MARKDOWN_EDITOR,
   input = '',
   output = '',
   divRef,
@@ -848,61 +818,6 @@ const Output: FC<{
   divRef: RefObject<HTMLDivElement | null>;
 }) => {
   const { width = 0, height = 0 } = useWindowSize();
-
-  if (action === ActChess.CHESS_960) {
-    return (
-      <div
-        className={`flex flex-col items-center justify-center ${width > height ? 'h-full' : 'w-full'}`}>
-        <Chess960 />
-      </div>
-    );
-  }
-
-  if (action === ActChess.CHESS_CLOCK) {
-    return <ChessClock />;
-  }
-
-  if (action === ActChess.CHESS_CONVERT_FEN_TO_PNG) {
-    return (
-      <div
-        className={`flex flex-col items-center justify-center ${width > height ? 'h-full' : 'w-full'}`}>
-        <div
-          ref={divRef}
-          className="w-full max-w-sm overflow-hidden border border-neutral-800">
-          <Chessboard id="fen2png" position={output} />
-        </div>
-      </div>
-    );
-  }
-
-  if (action === ActChess.CHESS_CONVERT_PGN_TO_GIF) {
-    return (
-      <div
-        className={`flex flex-col items-center justify-center ${width > height ? 'h-full' : 'w-full'}`}>
-        <ChessPGN2GIF pgn={input} />
-      </div>
-    );
-  }
-
-  if (action === ActChess.CHESS_ELO_CALCULATOR) {
-    return (
-      <div className="w-full">
-        <div className="m-auto size-fit">
-          <ChessEloCalculator />
-        </div>
-      </div>
-    );
-  }
-
-  if (action === ActChess.CHESS_OPENINGS) {
-    return (
-      <div className="w-full">
-        <div className="m-auto size-fit">
-          <ChessOpenings />
-        </div>
-      </div>
-    );
-  }
 
   if (action === ActCSV.CSV_TO_HTML) {
     return (
@@ -1104,7 +1019,7 @@ const StudioPage: NextPage = () => {
   const divRef = useRef<HTMLDivElement | null>(null);
   // Component States
   const [
-    { loading = false, action = ActChess.CHESS_960, input = '', output = '' },
+    { loading = false, action = ActOther.UUID, input = '', output = '' },
     setState,
   ] = useState<{
     loading: boolean;
@@ -1113,7 +1028,7 @@ const StudioPage: NextPage = () => {
     output: string;
   }>({
     loading: false,
-    action: ActChess.CHESS_960,
+    action: ActOther.UUID,
     input: '',
     output: '',
   });
@@ -1302,12 +1217,6 @@ const StudioPage: NextPage = () => {
                     nextAction === ActNumber.NUMBER_BASE_HEXADECIMAL_TO
                   ) {
                     newText = '10';
-                  } else if (nextAction === ActChess.CHESS_CONVERT_FEN_TO_PNG) {
-                    newText = INTITAL_FEN;
-                  } else if (nextAction === ActChess.CHESS_CONVERT_PGN_TO_GIF) {
-                    newText = INITIAL_PGN;
-                  } else if (nextAction === ActChess.CHESS_OPENINGS) {
-                    newText = '';
                   } else if (previousActionIsNotHEX && nextActionIsHEX) {
                     newText = '#000000';
                   } else if (nextAction === ActGitHub.GITHUB_LANGUAGES) {
@@ -1323,17 +1232,6 @@ const StudioPage: NextPage = () => {
                   await submit({ action: nextAction, input: newText });
                 }}>
                 {[
-                  {
-                    label: 'chess',
-                    actions: [
-                      ActChess.CHESS_960,
-                      ActChess.CHESS_CLOCK,
-                      ActChess.CHESS_CONVERT_FEN_TO_PNG,
-                      ActChess.CHESS_CONVERT_PGN_TO_GIF,
-                      ActChess.CHESS_ELO_CALCULATOR,
-                      ActChess.CHESS_OPENINGS,
-                    ],
-                  },
                   {
                     label: 'code',
                     actions: [ActOther.CODE_BRAILLIFY, ActOther.CODE_MORSIFY],
