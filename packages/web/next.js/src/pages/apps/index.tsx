@@ -1,9 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import {
-  deleteWebhook,
-  getWebhookInfo,
-  setWebhook,
-} from '@web/clients/telegram.org/telegram.client';
 import { getWord, Word } from '@web/clients/wordsapi.com/wordsapi.client';
 import { PeriodicTable } from '@web/components/chemistry/PeriodicTable';
 import { Crypto } from '@web/components/Crypto';
@@ -18,7 +13,6 @@ import {
   INITIAL_MANIFEST_EXTENSION,
   INITIAL_MANIFEST_PWA,
   INITIAL_MARKDOWN,
-  INITIAL_TELEGRAM_WEBHOOK,
   INTIIAL_YAML,
 } from '@web/constants';
 import { useBattery } from '@web/hooks/window/navigator/use-battery';
@@ -57,7 +51,6 @@ import { fromRoman, toRoman } from '@web/utils/number/roman';
 import { capitalise, deburr, kebabcase, snakecase } from '@web/utils/string';
 import { buildEpochString } from '@web/utils/time';
 import { trpcClient } from '@web/utils/trpc';
-import { tryCatch } from '@web/utils/try-catch';
 import { buildUuidString } from '@web/utils/uuid';
 import htmlToPdfmake from 'html-to-pdfmake';
 import html2canvas from 'html2canvas-pro';
@@ -179,12 +172,6 @@ enum ActString {
   STRING_UPPERCASE = 'String - UPPERCASE',
 }
 
-enum ActTelegram {
-  TELEGRAM_WEBHOOK_SET = 'Telegram - Webhook - Set',
-  TELEGRAM_WEBHOOK_DELETE = 'Telegram - Webhook - Delete',
-  TELEGRAM_WEBHOOK_GET_INFO = 'Telegram - Webhook - Get Info',
-}
-
 enum ActWidget {
   WIDGET_FINANCE_CRYPTO = 'Finance - Crypto',
   WIDGET_FINANCE_FOREX = 'Finance - Forex',
@@ -237,7 +224,6 @@ type Act =
   | ActOther
   | ActQRCode
   | ActString
-  | ActTelegram
   | ActWidget
   | ActGitHub
   | ActImage
@@ -335,50 +321,6 @@ const actNumber = ({
 
 const isActionNumber = (act: Act): act is ActNumber => {
   return Object.values(ActNumber).includes(act as ActNumber);
-};
-
-const actTelegram = async ({
-  action,
-  source,
-}: {
-  action: ActTelegram;
-  source: string;
-}) => {
-  let output = '';
-  const { data } = await tryCatch<{ token: string; webhook: string }>(
-    JSON.parse(source)
-  );
-  const { token = '', webhook = '' } = data ?? {};
-  if (token === '' || webhook === '') {
-    output = 'Missing Token or Webhook';
-  }
-  if (action === ActTelegram.TELEGRAM_WEBHOOK_GET_INFO) {
-    const { data, error } = await tryCatch(getWebhookInfo(token));
-    if (error) {
-      output = error.message;
-    } else {
-      output = JSON.stringify(data, null, 2);
-    }
-  } else if (action === ActTelegram.TELEGRAM_WEBHOOK_DELETE) {
-    const { data, error } = await tryCatch(deleteWebhook(token, webhook));
-    if (error) {
-      output = error.message;
-    } else {
-      output = JSON.stringify(data, null, 2);
-    }
-  } else if (action === ActTelegram.TELEGRAM_WEBHOOK_SET) {
-    const { data, error } = await tryCatch(setWebhook(token, webhook));
-    if (error) {
-      output = error.message;
-    } else {
-      output = JSON.stringify(data, null, 2);
-    }
-  }
-  return output;
-};
-
-const isActionTelegram = (act: Act): act is ActTelegram => {
-  return Object.values(ActTelegram).includes(act as ActTelegram);
 };
 
 const actString = ({
@@ -487,8 +429,6 @@ const act = async ({
     output = actColor({ action, source });
   } else if (isActionNumber(action)) {
     output = actNumber({ action, source });
-  } else if (isActionTelegram(action)) {
-    output = await actTelegram({ action, source });
   } else if (isActionCSV(action)) {
     output = actCSV({ action, source });
   } else if (isActionJSON(action)) {
@@ -1136,15 +1076,6 @@ const StudioPage: NextPage = () => {
                     nextAction === ActJSON.JSON_CONVERT_TO_CSV ||
                     nextAction === ActJSON.JSON_CONVERT_TO_XML ||
                     nextAction === ActJSON.JSON_CONVERT_TO_YAML;
-                  // Check Telegram
-                  const previousActionIsNotTelegram: boolean =
-                    action !== ActTelegram.TELEGRAM_WEBHOOK_SET &&
-                    action !== ActTelegram.TELEGRAM_WEBHOOK_DELETE &&
-                    action !== ActTelegram.TELEGRAM_WEBHOOK_GET_INFO;
-                  const nextActionIsTelegram =
-                    nextAction === ActTelegram.TELEGRAM_WEBHOOK_SET ||
-                    nextAction === ActTelegram.TELEGRAM_WEBHOOK_DELETE ||
-                    nextAction === ActTelegram.TELEGRAM_WEBHOOK_GET_INFO;
                   // Check HEX
                   const previousActionIsNotHEX: boolean =
                     action !== ActColor.HEX_TO_CMYK &&
@@ -1192,11 +1123,6 @@ const StudioPage: NextPage = () => {
                     );
                   } else if (nextAction === ActManifestJSON.MANIFEST_JSON_PWA) {
                     newText = JSON.stringify(INITIAL_MANIFEST_PWA, null, 2);
-                  } else if (
-                    previousActionIsNotTelegram &&
-                    nextActionIsTelegram
-                  ) {
-                    newText = JSON.stringify(INITIAL_TELEGRAM_WEBHOOK, null, 2);
                   } else if (nextAction === ActNumber.NUMBER_ROMAN_FROM) {
                     newText = 'MCMXCV';
                   } else if (nextAction === ActNumber.NUMBER_ROMAN_TO) {
@@ -1353,17 +1279,6 @@ const StudioPage: NextPage = () => {
                   </option>
                   <option value={ActString.STRING_UPPERCASE}>
                     {ActString.STRING_UPPERCASE}
-                  </option>
-                </optgroup>
-                <optgroup label="telegram">
-                  <option value={ActTelegram.TELEGRAM_WEBHOOK_SET}>
-                    {ActTelegram.TELEGRAM_WEBHOOK_SET}
-                  </option>
-                  <option value={ActTelegram.TELEGRAM_WEBHOOK_DELETE}>
-                    {ActTelegram.TELEGRAM_WEBHOOK_DELETE}
-                  </option>
-                  <option value={ActTelegram.TELEGRAM_WEBHOOK_GET_INFO}>
-                    {ActTelegram.TELEGRAM_WEBHOOK_GET_INFO}
                   </option>
                 </optgroup>
                 <optgroup label="time">

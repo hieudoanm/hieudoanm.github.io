@@ -241,11 +241,6 @@ export const INITIAL_MANIFEST_PWA = {
   background_color: '#ffffff',
 };
 
-export const INITIAL_TELEGRAM_WEBHOOK = {
-  token: '',
-  webhook: '',
-};
-
 export const INTITAL_FEN: string =
   'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
 

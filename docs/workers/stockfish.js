@@ -383,7 +383,7 @@ function setValue(ptr, value, type, noSafe) {
       HEAP32[ptr >> 2] = value;
       break;
     case 'i64':
-      (tempI64 = [
+      ((tempI64 = [
         value >>> 0,
         ((tempDouble = value),
         +Math_abs(tempDouble) >= +1
@@ -397,7 +397,7 @@ function setValue(ptr, value, type, noSafe) {
           : 0),
       ]),
         (HEAP32[ptr >> 2] = tempI64[0]),
-        (HEAP32[(ptr + 4) >> 2] = tempI64[1]);
+        (HEAP32[(ptr + 4) >> 2] = tempI64[1]));
       break;
     case 'float':
       HEAPF32[ptr >> 2] = value;
