@@ -8,7 +8,6 @@ import { GitHubLanguages } from '@web/components/github/languages';
 import { MarkdownPreviewer } from '@web/components/MarkdownPreviewer';
 import { OpenMeteoWeather } from '@web/components/OpenMeteoWeather';
 import {
-  INITIAL_CSV,
   INITIAL_MANIFEST_EXTENSION,
   INITIAL_MANIFEST_PWA,
   INITIAL_MARKDOWN,
@@ -23,7 +22,6 @@ import {
   hex2oklch,
   hex2rgb,
 } from '@web/utils/colors/code/hex';
-import { csv2json, csv2md, csv2sql } from '@web/utils/csv';
 import { downloadImage } from '@web/utils/download';
 import {
   base64,
@@ -132,13 +130,6 @@ enum ActColor {
   RGB_TO_OKLCH = 'RGB to OKLCH',
 }
 
-enum ActCSV {
-  CSV_TO_HTML = 'CSV to HTML',
-  CSV_TO_JSON = 'CSV to JSON',
-  CSV_TO_MD = 'CSV to Markdown',
-  CSV_TO_SQL = 'CSV to SQL',
-}
-
 enum ActJSON {
   JSON_EDITOR = 'JSON Editor',
   JSON_CONVERT_TO_CSV = 'JSON Converter - CSV',
@@ -191,7 +182,6 @@ enum ActGitHub {
 
 type Act =
   | ActColor
-  | ActCSV
   | ActJSON
   | ActManifestJSON
   | ActNumber
@@ -332,22 +322,6 @@ const isActionManifestJSON = (act: Act): act is ActManifestJSON => {
   return Object.values(ActManifestJSON).includes(act as ActManifestJSON);
 };
 
-const actCSV = ({ action, source }: { action: ActCSV; source: string }) => {
-  let output = '';
-  if (action === ActCSV.CSV_TO_JSON) {
-    output = JSON.stringify(csv2json(source), null, 2);
-  } else if (action === ActCSV.CSV_TO_MD) {
-    output = csv2md(source);
-  } else if (action === ActCSV.CSV_TO_SQL) {
-    output = csv2sql(source);
-  }
-  return output;
-};
-
-const isActionCSV = (act: Act): act is ActCSV => {
-  return Object.values(ActCSV).includes(act as ActCSV);
-};
-
 const act = async ({
   action,
   source,
@@ -362,8 +336,6 @@ const act = async ({
     output = actColor({ action, source });
   } else if (isActionNumber(action)) {
     output = actNumber({ action, source });
-  } else if (isActionCSV(action)) {
-    output = actCSV({ action, source });
   } else if (isActionJSON(action)) {
     output = actJSON({ action, source });
   } else if (action === ActOther.CODE_BRAILLIFY) {
@@ -449,57 +421,6 @@ const countWords = (str: string) => {
   return str.trim().split(/\s+/).length;
 };
 
-const DELIMITER: string = ',';
-
-const CSVTable: FC<{ csv: string }> = ({ csv = '' }) => {
-  const data: Record<string, string>[] = csv2json(csv, {
-    delimiter: DELIMITER,
-  });
-
-  return (
-    <div className="w-full overflow-auto rounded border border-neutral-800">
-      <table id="csv-html-table" className="w-full">
-        {data[0] ? (
-          <thead>
-            <tr>
-              {Object.keys(data[0]).map((key: string) => {
-                return (
-                  <th key={key} align="left">
-                    <p className="truncate p-2" title={key}>
-                      {key}
-                    </p>
-                  </th>
-                );
-              })}
-            </tr>
-          </thead>
-        ) : (
-          <></>
-        )}
-        <tbody>
-          {data.map((item: Record<string, string>) => {
-            return (
-              <tr
-                key={`row-${JSON.stringify(item)}`}
-                className="border-t border-neutral-800">
-                {Object.values(item).map((value: string) => {
-                  return (
-                    <td key={value}>
-                      <p className="truncate p-2" title={value}>
-                        {value}
-                      </p>
-                    </td>
-                  );
-                })}
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-    </div>
-  );
-};
-
 const ActionButton: FC<{
   action: Act;
   ref: RefObject<HTMLDivElement | null>;
@@ -561,11 +482,7 @@ const ActionButton: FC<{
       type="button"
       className="cursor-pointer rounded border border-neutral-800 p-2"
       onClick={async () => {
-        if (action === ActCSV.CSV_TO_HTML) {
-          const csvHtmlTable: string =
-            document.getElementById('csv-html-table')?.outerHTML ?? '';
-          copyToClipboard(csvHtmlTable);
-        } else if (
+        if (
           action === ActImage.IMAGE_CONVERT_PNG_TO_ICO ||
           action === ActImage.IMAGE_CONVERT_PNG_TO_JPG ||
           action === ActImage.IMAGE_CONVERT_SVG_TO_PNG ||
@@ -687,14 +604,6 @@ const Output: FC<{
   divRef: RefObject<HTMLDivElement | null>;
 }) => {
   const { width = 0, height = 0 } = useWindowSize();
-
-  if (action === ActCSV.CSV_TO_HTML) {
-    return (
-      <div className="w-full overflow-auto">
-        <CSVTable csv={input} />
-      </div>
-    );
-  }
 
   if (action === ActGitHub.GITHUB_LANGUAGES) {
     return (
@@ -971,17 +880,6 @@ const StudioPage: NextPage = () => {
                 onChange={async (event) => {
                   const nextAction: Act = event.target.value as Act;
                   let newText: string = input;
-                  // Check CSV Convertor
-                  const previousActionIsNotCSV: boolean =
-                    action !== ActCSV.CSV_TO_HTML &&
-                    action !== ActCSV.CSV_TO_JSON &&
-                    action !== ActCSV.CSV_TO_MD &&
-                    action !== ActCSV.CSV_TO_SQL;
-                  const nextActionIsCSV =
-                    nextAction === ActCSV.CSV_TO_HTML ||
-                    nextAction === ActCSV.CSV_TO_JSON ||
-                    nextAction === ActCSV.CSV_TO_MD ||
-                    nextAction === ActCSV.CSV_TO_SQL;
                   // Check JSON Convertor
                   const previousActionIsNotJSON: boolean =
                     action !== ActJSON.JSON_EDITOR &&
@@ -1020,8 +918,6 @@ const StudioPage: NextPage = () => {
                     newText = Math.floor(
                       new Date().getTime() / 1000
                     ).toString();
-                  } else if (previousActionIsNotCSV && nextActionIsCSV) {
-                    newText = INITIAL_CSV;
                   } else if (nextAction === ActQRCode.QRCODE_TO_IMAGE) {
                     newText = 'https://google.com';
                   } else if (previousActionIsNotJSON && nextActionIsJSON) {
@@ -1074,15 +970,6 @@ const StudioPage: NextPage = () => {
                       ActColor.HEX_TO_HSL,
                       ActColor.HEX_TO_OKLCH,
                       ActColor.HEX_TO_RGB,
-                    ],
-                  },
-                  {
-                    label: 'csv',
-                    actions: [
-                      ActCSV.CSV_TO_HTML,
-                      ActCSV.CSV_TO_JSON,
-                      ActCSV.CSV_TO_MD,
-                      ActCSV.CSV_TO_SQL,
                     ],
                   },
                   {
