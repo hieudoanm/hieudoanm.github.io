@@ -39,14 +39,6 @@ import {
 import { json } from '@web/utils/json';
 import { morsify } from '@web/utils/morse';
 import { copyToClipboard } from '@web/utils/navigator';
-import {
-  fromBinary,
-  fromHexadecimal,
-  fromOctal,
-  toBinary,
-  toHexadecimal,
-  toOctal,
-} from '@web/utils/number/base';
 import { fromRoman, toRoman } from '@web/utils/number/roman';
 import { capitalise, deburr, kebabcase, snakecase } from '@web/utils/string';
 import { buildEpochString } from '@web/utils/time';
@@ -200,12 +192,6 @@ enum ActOther {
 }
 
 enum ActNumber {
-  NUMBER_BASE_BINARY_FROM = 'Base - Binary - To Number',
-  NUMBER_BASE_BINARY_TO = 'Base - Binary - From Number',
-  NUMBER_BASE_OCTAL_FROM = 'Base - Octal - To Number',
-  NUMBER_BASE_OCTAL_TO = 'Base - Octal - From Number',
-  NUMBER_BASE_HEXADECIMAL_FROM = 'Base - Hexadecimal - To Number',
-  NUMBER_BASE_HEXADECIMAL_TO = 'Base - Hexadecimal - From Hexadecimal',
   NUMBER_ROMAN_FROM = 'Roman - To Number',
   NUMBER_ROMAN_TO = 'Roman - From Number',
 }
@@ -303,18 +289,6 @@ const actNumber = ({
     return fromRoman(source).toString();
   } else if (action === ActNumber.NUMBER_ROMAN_TO) {
     return toRoman(parseInt(source, 10));
-  } else if (action === ActNumber.NUMBER_BASE_BINARY_FROM) {
-    return fromBinary(source).toString();
-  } else if (action === ActNumber.NUMBER_BASE_BINARY_TO) {
-    return toBinary(parseInt(source, 10));
-  } else if (action === ActNumber.NUMBER_BASE_OCTAL_FROM) {
-    return fromOctal(source).toString();
-  } else if (action === ActNumber.NUMBER_BASE_OCTAL_TO) {
-    return toOctal(parseInt(source, 10));
-  } else if (action === ActNumber.NUMBER_BASE_HEXADECIMAL_FROM) {
-    return fromHexadecimal(source).toString().toUpperCase();
-  } else if (action === ActNumber.NUMBER_BASE_HEXADECIMAL_TO) {
-    return toHexadecimal(parseInt(source, 10));
   }
   return '';
 };
@@ -1127,22 +1101,6 @@ const StudioPage: NextPage = () => {
                     newText = 'MCMXCV';
                   } else if (nextAction === ActNumber.NUMBER_ROMAN_TO) {
                     newText = '1995';
-                  } else if (nextAction === ActNumber.NUMBER_BASE_BINARY_FROM) {
-                    newText = '1010';
-                  } else if (nextAction === ActNumber.NUMBER_BASE_BINARY_TO) {
-                    newText = '10';
-                  } else if (nextAction === ActNumber.NUMBER_BASE_OCTAL_FROM) {
-                    newText = '12';
-                  } else if (nextAction === ActNumber.NUMBER_BASE_OCTAL_TO) {
-                    newText = '7';
-                  } else if (
-                    nextAction === ActNumber.NUMBER_BASE_HEXADECIMAL_FROM
-                  ) {
-                    newText = 'A';
-                  } else if (
-                    nextAction === ActNumber.NUMBER_BASE_HEXADECIMAL_TO
-                  ) {
-                    newText = '10';
                   } else if (previousActionIsNotHEX && nextActionIsHEX) {
                     newText = '#000000';
                   } else if (nextAction === ActGitHub.GITHUB_LANGUAGES) {
@@ -1227,12 +1185,6 @@ const StudioPage: NextPage = () => {
                   {
                     label: 'number',
                     actions: [
-                      ActNumber.NUMBER_BASE_BINARY_FROM,
-                      ActNumber.NUMBER_BASE_BINARY_TO,
-                      ActNumber.NUMBER_BASE_OCTAL_FROM,
-                      ActNumber.NUMBER_BASE_OCTAL_TO,
-                      ActNumber.NUMBER_BASE_HEXADECIMAL_FROM,
-                      ActNumber.NUMBER_BASE_HEXADECIMAL_TO,
                       ActNumber.NUMBER_ROMAN_FROM,
                       ActNumber.NUMBER_ROMAN_TO,
                     ],
