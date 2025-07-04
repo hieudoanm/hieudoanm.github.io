@@ -28,7 +28,6 @@ import {
 } from '@web/utils/image';
 import { morsify } from '@web/utils/morse';
 import { copyToClipboard } from '@web/utils/navigator';
-import { fromRoman, toRoman } from '@web/utils/number/roman';
 import { buildEpochString } from '@web/utils/time';
 import { trpcClient } from '@web/utils/trpc';
 import { buildUuidString } from '@web/utils/uuid';
@@ -128,11 +127,6 @@ enum ActOther {
   UUID = 'UUID',
 }
 
-enum ActNumber {
-  NUMBER_ROMAN_FROM = 'Roman - To Number',
-  NUMBER_ROMAN_TO = 'Roman - From Number',
-}
-
 enum ActGitHub {
   GITHUB_LANGUAGES = 'GitHub - Languages',
   GITHUB_SOCIAL_PREVIEW = 'GitHub - Social Preview',
@@ -140,7 +134,6 @@ enum ActGitHub {
 
 type Act =
   | ActManifestJSON
-  | ActNumber
   | ActOther
   | ActQRCode
   | ActWidget
@@ -177,25 +170,6 @@ const actImage = ({
   return Promise.resolve('');
 };
 
-const actNumber = ({
-  action,
-  source,
-}: {
-  action: ActNumber;
-  source: string;
-}): string => {
-  if (action === ActNumber.NUMBER_ROMAN_FROM) {
-    return fromRoman(source).toString();
-  } else if (action === ActNumber.NUMBER_ROMAN_TO) {
-    return toRoman(parseInt(source, 10));
-  }
-  return '';
-};
-
-const isActionNumber = (act: Act): act is ActNumber => {
-  return Object.values(ActNumber).includes(act as ActNumber);
-};
-
 const isActionManifestJSON = (act: Act): act is ActManifestJSON => {
   return Object.values(ActManifestJSON).includes(act as ActManifestJSON);
 };
@@ -210,8 +184,6 @@ const act = async ({
   let output: string = source;
   if (isActImage(action)) {
     output = await actImage({ action, source });
-  } else if (isActionNumber(action)) {
-    output = actNumber({ action, source });
   } else if (action === ActOther.CODE_BRAILLIFY) {
     output = braillify(source);
   } else if (action === ActOther.CODE_MORSIFY) {
@@ -780,10 +752,6 @@ const StudioPage: NextPage = () => {
                     );
                   } else if (nextAction === ActManifestJSON.MANIFEST_JSON_PWA) {
                     newText = JSON.stringify(INITIAL_MANIFEST_PWA, null, 2);
-                  } else if (nextAction === ActNumber.NUMBER_ROMAN_FROM) {
-                    newText = 'MCMXCV';
-                  } else if (nextAction === ActNumber.NUMBER_ROMAN_TO) {
-                    newText = '1995';
                   } else if (nextAction === ActGitHub.GITHUB_LANGUAGES) {
                     newText = 'hieudoanm/hieudoanm.github.io';
                   } else if (nextAction === ActGitHub.GITHUB_SOCIAL_PREVIEW) {
@@ -832,13 +800,6 @@ const StudioPage: NextPage = () => {
                     actions: [
                       ActOther.MARKDOWN_DICTIONARY,
                       ActOther.MARKDOWN_EDITOR,
-                    ],
-                  },
-                  {
-                    label: 'number',
-                    actions: [
-                      ActNumber.NUMBER_ROMAN_FROM,
-                      ActNumber.NUMBER_ROMAN_TO,
                     ],
                   },
                   {
