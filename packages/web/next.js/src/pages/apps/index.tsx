@@ -14,10 +14,8 @@ import {
 } from '@web/constants';
 import { useBattery } from '@web/hooks/window/navigator/use-battery';
 import { useWindowSize } from '@web/hooks/window/use-size';
-import { braillify } from '@web/utils/braille';
 import { downloadImage } from '@web/utils/download';
 import { base64, getMimeType, mimeToExtension } from '@web/utils/image';
-import { morsify } from '@web/utils/morse';
 import { copyToClipboard } from '@web/utils/navigator';
 import { buildEpochString } from '@web/utils/time';
 import { trpcClient } from '@web/utils/trpc';
@@ -100,8 +98,6 @@ enum ActYAML {
 }
 
 enum ActOther {
-  CODE_BRAILLIFY = 'Braillify (⠃⠗⠁⠊⠇⠇⠊⠋⠽)',
-  CODE_MORSIFY = 'Morsify (-----.-........-.-.--)',
   MARKDOWN_DICTIONARY = 'Markdown Dictionary',
   MARKDOWN_EDITOR = 'Markdown Editor',
   TIME_EPOCH = 'Epoch',
@@ -133,11 +129,7 @@ const act = async ({
   source: string;
 }): Promise<string> => {
   let output: string = source;
-  if (action === ActOther.CODE_BRAILLIFY) {
-    output = braillify(source);
-  } else if (action === ActOther.CODE_MORSIFY) {
-    output = morsify(source);
-  } else if (action === ActQRCode.QRCODE_TO_IMAGE) {
+  if (action === ActQRCode.QRCODE_TO_IMAGE) {
     if (source === '') return '';
     output = await toDataURL(source, {
       errorCorrectionLevel: 'H',
@@ -685,10 +677,6 @@ const StudioPage: NextPage = () => {
                   await submit({ action: nextAction, input: newText });
                 }}>
                 {[
-                  {
-                    label: 'code',
-                    actions: [ActOther.CODE_BRAILLIFY, ActOther.CODE_MORSIFY],
-                  },
                   {
                     label: 'github',
                     actions: [
