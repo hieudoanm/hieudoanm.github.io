@@ -33,7 +33,6 @@ import {
   png2jpg,
   svg2png,
 } from '@web/utils/image';
-import { json } from '@web/utils/json';
 import { morsify } from '@web/utils/morse';
 import { copyToClipboard } from '@web/utils/navigator';
 import { fromRoman, toRoman } from '@web/utils/number/roman';
@@ -42,7 +41,6 @@ import { trpcClient } from '@web/utils/trpc';
 import { buildUuidString } from '@web/utils/uuid';
 import htmlToPdfmake from 'html-to-pdfmake';
 import html2canvas from 'html2canvas-pro';
-import { toXML } from 'jstoxml';
 import { marked } from 'marked';
 import { NextPage } from 'next';
 import { Oleo_Script } from 'next/font/google';
@@ -74,7 +72,7 @@ import {
   FaPaperPlane,
   FaSpinner,
 } from 'react-icons/fa6';
-import { parse, stringify } from 'yaml';
+import { parse } from 'yaml';
 
 const oleoScript = Oleo_Script({ weight: '400', subsets: ['latin'] });
 
@@ -130,15 +128,6 @@ enum ActColor {
   RGB_TO_OKLCH = 'RGB to OKLCH',
 }
 
-enum ActJSON {
-  JSON_EDITOR = 'JSON Editor',
-  JSON_CONVERT_TO_CSV = 'JSON Converter - CSV',
-  JSON_CONVERT_TO_XML = 'JSON Converter - XML',
-  JSON_CONVERT_TO_YAML = 'JSON Converter - YAML',
-  JSON_FORMATTER_MINIFY = 'JSON Formatter - Minify',
-  JSON_FORMATTER_SORT = 'JSON Formatter - Sort',
-}
-
 enum ActManifestJSON {
   MANIFEST_JSON_EXTENSION = 'manifest.json Extension',
   MANIFEST_JSON_PWA = 'manifest.json PWA',
@@ -182,7 +171,6 @@ enum ActGitHub {
 
 type Act =
   | ActColor
-  | ActJSON
   | ActManifestJSON
   | ActNumber
   | ActOther
@@ -191,13 +179,6 @@ type Act =
   | ActGitHub
   | ActImage
   | ActYAML;
-
-const INITIAL_JSON = [
-  { key1: 'value1', key2: 'value2', key3: 'value3', key4: 'value4' },
-  { key1: 'value1', key2: 'value2', key3: 'value3', key4: 'value4' },
-  { key1: 'value1', key2: 'value2', key3: 'value3', key4: 'value4' },
-  { key1: 'value1', key2: 'value2', key3: 'value3', key4: 'value4' },
-];
 
 const actColor = ({
   action,
@@ -274,50 +255,6 @@ const isActionNumber = (act: Act): act is ActNumber => {
   return Object.values(ActNumber).includes(act as ActNumber);
 };
 
-const actJSON = ({ action, source }: { action: ActJSON; source: string }) => {
-  let output = '';
-  if (action === ActJSON.JSON_FORMATTER_SORT) {
-    try {
-      const object = JSON.parse(source);
-      const keys: string[] = Object.keys(object).sort((a, b) =>
-        a > b ? 1 : -1
-      );
-      const sortedObject: Record<string, any> = {};
-      for (const key of keys) {
-        sortedObject[key] = object[key];
-      }
-      return JSON.stringify(sortedObject, null, 2);
-    } catch (error) {
-      output = (error as Error).message;
-    }
-  } else if (action === ActJSON.JSON_FORMATTER_MINIFY) {
-    try {
-      output = JSON.stringify(JSON.parse(source));
-    } catch (error) {
-      output = (error as Error).message;
-    }
-  } else if (action === ActJSON.JSON_EDITOR) {
-    try {
-      output = JSON.stringify(JSON.parse(source), null, 2);
-    } catch (error) {
-      output = (error as Error).message;
-    }
-  } else if (action === ActJSON.JSON_CONVERT_TO_CSV) {
-    output = json.csv(
-      json.parse<Record<string, string | number | boolean | Date>[]>(source, [])
-    );
-  } else if (action === ActJSON.JSON_CONVERT_TO_XML) {
-    output = toXML(json.parse(source, {}), { indent: '  ' });
-  } else if (action === ActJSON.JSON_CONVERT_TO_YAML) {
-    output = stringify(json.parse(source, {}));
-  }
-  return output;
-};
-
-const isActionJSON = (act: Act): act is ActJSON => {
-  return Object.values(ActJSON).includes(act as ActJSON);
-};
-
 const isActionManifestJSON = (act: Act): act is ActManifestJSON => {
   return Object.values(ActManifestJSON).includes(act as ActManifestJSON);
 };
@@ -336,8 +273,6 @@ const act = async ({
     output = actColor({ action, source });
   } else if (isActionNumber(action)) {
     output = actNumber({ action, source });
-  } else if (isActionJSON(action)) {
-    output = actJSON({ action, source });
   } else if (action === ActOther.CODE_BRAILLIFY) {
     output = braillify(source);
   } else if (action === ActOther.CODE_MORSIFY) {
@@ -880,21 +815,6 @@ const StudioPage: NextPage = () => {
                 onChange={async (event) => {
                   const nextAction: Act = event.target.value as Act;
                   let newText: string = input;
-                  // Check JSON Convertor
-                  const previousActionIsNotJSON: boolean =
-                    action !== ActJSON.JSON_EDITOR &&
-                    action !== ActJSON.JSON_FORMATTER_SORT &&
-                    action !== ActJSON.JSON_FORMATTER_MINIFY &&
-                    action !== ActJSON.JSON_CONVERT_TO_CSV &&
-                    action !== ActJSON.JSON_CONVERT_TO_XML &&
-                    action !== ActJSON.JSON_CONVERT_TO_YAML;
-                  const nextActionIsJSON =
-                    nextAction === ActJSON.JSON_EDITOR ||
-                    nextAction === ActJSON.JSON_FORMATTER_SORT ||
-                    nextAction === ActJSON.JSON_FORMATTER_MINIFY ||
-                    nextAction === ActJSON.JSON_CONVERT_TO_CSV ||
-                    nextAction === ActJSON.JSON_CONVERT_TO_XML ||
-                    nextAction === ActJSON.JSON_CONVERT_TO_YAML;
                   // Check HEX
                   const previousActionIsNotHEX: boolean =
                     action !== ActColor.HEX_TO_CMYK &&
@@ -920,8 +840,6 @@ const StudioPage: NextPage = () => {
                     ).toString();
                   } else if (nextAction === ActQRCode.QRCODE_TO_IMAGE) {
                     newText = 'https://google.com';
-                  } else if (previousActionIsNotJSON && nextActionIsJSON) {
-                    newText = JSON.stringify(INITIAL_JSON, null, 2);
                   } else if (nextAction === ActOther.MARKDOWN_EDITOR) {
                     newText = INITIAL_MARKDOWN;
                   } else if (nextAction === ActOther.MARKDOWN_DICTIONARY) {
@@ -989,17 +907,6 @@ const StudioPage: NextPage = () => {
                       ActImage.IMAGE_FILTER_GOLDEN,
                       ActImage.IMAGE_FILTER_GRAYSCALE,
                       ActImage.IMAGE_OCR,
-                    ],
-                  },
-                  {
-                    label: 'json',
-                    actions: [
-                      ActJSON.JSON_EDITOR,
-                      ActJSON.JSON_CONVERT_TO_CSV,
-                      ActJSON.JSON_CONVERT_TO_XML,
-                      ActJSON.JSON_CONVERT_TO_YAML,
-                      ActJSON.JSON_FORMATTER_SORT,
-                      ActJSON.JSON_FORMATTER_MINIFY,
                     ],
                   },
                   {
