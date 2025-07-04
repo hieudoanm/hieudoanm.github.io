@@ -7,7 +7,6 @@ import { FullScreen } from '@web/components/FullScreen';
 import { GitHubLanguages } from '@web/components/github/languages';
 import { MarkdownPreviewer } from '@web/components/MarkdownPreviewer';
 import { OpenMeteoWeather } from '@web/components/OpenMeteoWeather';
-import { Status } from '@web/components/Status';
 import {
   INITIAL_CSV,
   INITIAL_MANIFEST_EXTENSION,
@@ -159,7 +158,6 @@ enum ActWidget {
   WIDGET_FINANCE_FOREX = 'Finance - Forex',
   WIDGET_FULL_SCREEN = 'Full Screen',
   WIDGET_PERIODIC_TABLE = 'Periodic Table',
-  WIDGET_STATUS = 'Status',
   WIDGET_WEATHER = 'Weather',
 }
 
@@ -512,7 +510,6 @@ const ActionButton: FC<{
     action === ActWidget.WIDGET_FINANCE_FOREX ||
     action === ActWidget.WIDGET_FULL_SCREEN ||
     action === ActWidget.WIDGET_PERIODIC_TABLE ||
-    action === ActWidget.WIDGET_STATUS ||
     action === ActWidget.WIDGET_WEATHER
   ) {
     return <></>;
@@ -630,7 +627,6 @@ const Input: FC<{
     action === ActWidget.WIDGET_FINANCE_FOREX ||
     action === ActWidget.WIDGET_FULL_SCREEN ||
     action === ActWidget.WIDGET_PERIODIC_TABLE ||
-    action === ActWidget.WIDGET_STATUS ||
     action === ActWidget.WIDGET_WEATHER
   ) {
     return <></>;
@@ -797,14 +793,6 @@ const Output: FC<{
     return (
       <div className="scroll-none w-full overflow-auto">
         <PeriodicTable />
-      </div>
-    );
-  }
-
-  if (action === ActWidget.WIDGET_STATUS) {
-    return (
-      <div className="scroll-none w-full overflow-auto">
-        <Status />
       </div>
     );
   }
@@ -1192,9 +1180,6 @@ const StudioPage: NextPage = () => {
                   </option>
                   <option value={ActWidget.WIDGET_PERIODIC_TABLE}>
                     {ActWidget.WIDGET_PERIODIC_TABLE}
-                  </option>
-                  <option value={ActWidget.WIDGET_STATUS}>
-                    {ActWidget.WIDGET_STATUS}
                   </option>
                   <option value={ActWidget.WIDGET_WEATHER}>
                     {ActWidget.WIDGET_WEATHER}
