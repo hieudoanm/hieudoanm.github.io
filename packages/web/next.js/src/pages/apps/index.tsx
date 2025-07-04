@@ -3,7 +3,6 @@ import { getWord, Word } from '@web/clients/wordsapi.com/wordsapi.client';
 import { PeriodicTable } from '@web/components/chemistry/PeriodicTable';
 import { Crypto } from '@web/components/Crypto';
 import { Forex } from '@web/components/Forex';
-import { FullScreen } from '@web/components/FullScreen';
 import { GitHubLanguages } from '@web/components/github/languages';
 import { MarkdownPreviewer } from '@web/components/MarkdownPreviewer';
 import { OpenMeteoWeather } from '@web/components/OpenMeteoWeather';
@@ -16,12 +15,6 @@ import {
 import { useBattery } from '@web/hooks/window/navigator/use-battery';
 import { useWindowSize } from '@web/hooks/window/use-size';
 import { braillify } from '@web/utils/braille';
-import {
-  hex2cmyk,
-  hex2hsl,
-  hex2oklch,
-  hex2rgb,
-} from '@web/utils/colors/code/hex';
 import { downloadImage } from '@web/utils/download';
 import {
   base64,
@@ -105,29 +98,6 @@ enum ActImage {
   IMAGE_OCR = 'Image - OCR',
 }
 
-enum ActColor {
-  // CMYK
-  CMYK_TO_HEX = 'CMYK to HEX',
-  CMYK_TO_HSL = 'CMYK to HSL',
-  CMYK_TO_OKLCH = 'CMYK to OKLCH',
-  CMYK_TO_RGB = 'CMYK to RGB',
-  // HEX
-  HEX_TO_CMYK = 'HEX to CMYK',
-  HEX_TO_HSL = 'HEX to HSL',
-  HEX_TO_OKLCH = 'HEX to OKLCH',
-  HEX_TO_RGB = 'HEX to RGB',
-  // HSL
-  HSL_TO_CMYK = 'HSL to CMYK',
-  HSL_TO_HEX = 'HSL to HEX',
-  HSL_TO_OKLCH = 'HSL to OKLCH',
-  HSL_TO_RGB = 'HSL to RGB',
-  // RGB
-  RGB_TO_CMYK = 'RGB to CMYK',
-  RGB_TO_HEX = 'RGB to HEX',
-  RGB_TO_HSL = 'RGB to HSL',
-  RGB_TO_OKLCH = 'RGB to OKLCH',
-}
-
 enum ActManifestJSON {
   MANIFEST_JSON_EXTENSION = 'manifest.json Extension',
   MANIFEST_JSON_PWA = 'manifest.json PWA',
@@ -136,7 +106,6 @@ enum ActManifestJSON {
 enum ActWidget {
   WIDGET_FINANCE_CRYPTO = 'Finance - Crypto',
   WIDGET_FINANCE_FOREX = 'Finance - Forex',
-  WIDGET_FULL_SCREEN = 'Full Screen',
   WIDGET_PERIODIC_TABLE = 'Periodic Table',
   WIDGET_WEATHER = 'Weather',
 }
@@ -170,7 +139,6 @@ enum ActGitHub {
 }
 
 type Act =
-  | ActColor
   | ActManifestJSON
   | ActNumber
   | ActOther
@@ -179,29 +147,6 @@ type Act =
   | ActGitHub
   | ActImage
   | ActYAML;
-
-const actColor = ({
-  action,
-  source,
-}: {
-  action: ActColor;
-  source: string;
-}): string => {
-  if (action === ActColor.HEX_TO_CMYK) {
-    const { c = 0, m = 0, y = 0, k = 0 } = hex2cmyk(source);
-    return `cmyk(${c}%, ${m}%, ${y}%, ${k}%)`;
-  } else if (action === ActColor.HEX_TO_HSL) {
-    const { h, s, l } = hex2hsl(source);
-    return `hsl(${h}, ${s}, ${l}%)`;
-  } else if (action === ActColor.HEX_TO_OKLCH) {
-    const { l, c, h } = hex2oklch(source);
-    return `oklch(${l}% ${c} ${h})`;
-  } else if (action === ActColor.HEX_TO_RGB) {
-    const { r = 0, g = 0, b = 0 } = hex2rgb(source) ?? {};
-    return `rgb(${r}, ${g}, ${b})`;
-  }
-  return '';
-};
 
 const isActImage = (act: Act): act is ActImage => {
   return Object.values(ActImage).includes(act as ActImage);
@@ -230,10 +175,6 @@ const actImage = ({
     return ocr(source);
   }
   return Promise.resolve('');
-};
-
-const isActionColor = (act: Act): act is ActColor => {
-  return Object.values(ActColor).includes(act as ActColor);
 };
 
 const actNumber = ({
@@ -269,8 +210,6 @@ const act = async ({
   let output: string = source;
   if (isActImage(action)) {
     output = await actImage({ action, source });
-  } else if (isActionColor(action)) {
-    output = actColor({ action, source });
   } else if (isActionNumber(action)) {
     output = actNumber({ action, source });
   } else if (action === ActOther.CODE_BRAILLIFY) {
@@ -364,7 +303,6 @@ const ActionButton: FC<{
   if (
     action === ActWidget.WIDGET_FINANCE_CRYPTO ||
     action === ActWidget.WIDGET_FINANCE_FOREX ||
-    action === ActWidget.WIDGET_FULL_SCREEN ||
     action === ActWidget.WIDGET_PERIODIC_TABLE ||
     action === ActWidget.WIDGET_WEATHER
   ) {
@@ -477,7 +415,6 @@ const Input: FC<{
     action === ActOther.UUID ||
     action === ActWidget.WIDGET_FINANCE_CRYPTO ||
     action === ActWidget.WIDGET_FINANCE_FOREX ||
-    action === ActWidget.WIDGET_FULL_SCREEN ||
     action === ActWidget.WIDGET_PERIODIC_TABLE ||
     action === ActWidget.WIDGET_WEATHER
   ) {
@@ -627,10 +564,6 @@ const Output: FC<{
 
   if (action === ActWidget.WIDGET_FINANCE_FOREX) {
     return <Forex />;
-  }
-
-  if (action === ActWidget.WIDGET_FULL_SCREEN) {
-    return <FullScreen />;
   }
 
   if (action === ActWidget.WIDGET_PERIODIC_TABLE) {
@@ -815,17 +748,6 @@ const StudioPage: NextPage = () => {
                 onChange={async (event) => {
                   const nextAction: Act = event.target.value as Act;
                   let newText: string = input;
-                  // Check HEX
-                  const previousActionIsNotHEX: boolean =
-                    action !== ActColor.HEX_TO_CMYK &&
-                    action !== ActColor.HEX_TO_HSL &&
-                    action !== ActColor.HEX_TO_OKLCH &&
-                    action !== ActColor.HEX_TO_RGB;
-                  const nextActionIsHEX =
-                    nextAction === ActColor.HEX_TO_CMYK ||
-                    nextAction === ActColor.HEX_TO_HSL ||
-                    nextAction === ActColor.HEX_TO_OKLCH ||
-                    nextAction === ActColor.HEX_TO_RGB;
                   // Check YAML
                   const previousActionIsNotYAML: boolean =
                     action !== ActYAML.YAML_TO_JSON &&
@@ -862,8 +784,6 @@ const StudioPage: NextPage = () => {
                     newText = 'MCMXCV';
                   } else if (nextAction === ActNumber.NUMBER_ROMAN_TO) {
                     newText = '1995';
-                  } else if (previousActionIsNotHEX && nextActionIsHEX) {
-                    newText = '#000000';
                   } else if (nextAction === ActGitHub.GITHUB_LANGUAGES) {
                     newText = 'hieudoanm/hieudoanm.github.io';
                   } else if (nextAction === ActGitHub.GITHUB_SOCIAL_PREVIEW) {
@@ -880,15 +800,6 @@ const StudioPage: NextPage = () => {
                   {
                     label: 'code',
                     actions: [ActOther.CODE_BRAILLIFY, ActOther.CODE_MORSIFY],
-                  },
-                  {
-                    label: 'color',
-                    actions: [
-                      ActColor.HEX_TO_CMYK,
-                      ActColor.HEX_TO_HSL,
-                      ActColor.HEX_TO_OKLCH,
-                      ActColor.HEX_TO_RGB,
-                    ],
                   },
                   {
                     label: 'github',
@@ -969,9 +880,6 @@ const StudioPage: NextPage = () => {
                   <option value={ActWidget.WIDGET_FINANCE_FOREX}>
                     {ActWidget.WIDGET_FINANCE_FOREX}
                   </option>
-                  <option value={ActWidget.WIDGET_FULL_SCREEN}>
-                    {ActWidget.WIDGET_FULL_SCREEN}
-                  </option>
                   <option value={ActWidget.WIDGET_PERIODIC_TABLE}>
                     {ActWidget.WIDGET_PERIODIC_TABLE}
                   </option>
@@ -996,7 +904,7 @@ const StudioPage: NextPage = () => {
                     const file = files.item(0);
                     if (!file) return;
                     const base64Code = await base64(file);
-                    // Check HEX
+                    // Check Image
                     const previousActionIsNotImage: boolean =
                       action !== ActImage.IMAGE_BASE64 &&
                       action !== ActImage.IMAGE_CONVERT_PNG_TO_ICO &&
