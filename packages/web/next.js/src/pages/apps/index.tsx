@@ -40,7 +40,6 @@ import { json } from '@web/utils/json';
 import { morsify } from '@web/utils/morse';
 import { copyToClipboard } from '@web/utils/navigator';
 import { fromRoman, toRoman } from '@web/utils/number/roman';
-import { capitalise, deburr, kebabcase, snakecase } from '@web/utils/string';
 import { buildEpochString } from '@web/utils/time';
 import { trpcClient } from '@web/utils/trpc';
 import { buildUuidString } from '@web/utils/uuid';
@@ -155,15 +154,6 @@ enum ActManifestJSON {
   MANIFEST_JSON_PWA = 'manifest.json PWA',
 }
 
-enum ActString {
-  STRING_CAPITALISE = 'String - Capitalise',
-  STRING_DEBURR = 'String - deburr',
-  STRING_KEBABCASE = 'String - kebab-case',
-  STRING_LOWERCASE = 'String - lowercase',
-  STRING_SNAKECASE = 'String - snake_case',
-  STRING_UPPERCASE = 'String - UPPERCASE',
-}
-
 enum ActWidget {
   WIDGET_FINANCE_CRYPTO = 'Finance - Crypto',
   WIDGET_FINANCE_FOREX = 'Finance - Forex',
@@ -209,7 +199,6 @@ type Act =
   | ActNumber
   | ActOther
   | ActQRCode
-  | ActString
   | ActWidget
   | ActGitHub
   | ActImage
@@ -297,34 +286,6 @@ const isActionNumber = (act: Act): act is ActNumber => {
   return Object.values(ActNumber).includes(act as ActNumber);
 };
 
-const actString = ({
-  action,
-  source,
-}: {
-  action: ActString;
-  source: string;
-}) => {
-  let output = '';
-  if (action === ActString.STRING_CAPITALISE) {
-    output = capitalise(source);
-  } else if (action === ActString.STRING_DEBURR) {
-    output = deburr(source);
-  } else if (action === ActString.STRING_KEBABCASE) {
-    output = kebabcase(source);
-  } else if (action === ActString.STRING_LOWERCASE) {
-    output = source.toLowerCase();
-  } else if (action === ActString.STRING_SNAKECASE) {
-    output = snakecase(source);
-  } else if (action === ActString.STRING_UPPERCASE) {
-    output = source.toUpperCase();
-  }
-  return output;
-};
-
-const isActionString = (act: Act): act is ActString => {
-  return Object.values(ActString).includes(act as ActString);
-};
-
 const actJSON = ({ action, source }: { action: ActJSON; source: string }) => {
   let output = '';
   if (action === ActJSON.JSON_FORMATTER_SORT) {
@@ -407,8 +368,6 @@ const act = async ({
     output = actCSV({ action, source });
   } else if (isActionJSON(action)) {
     output = actJSON({ action, source });
-  } else if (isActionString(action)) {
-    output = actString({ action, source });
   } else if (action === ActOther.CODE_BRAILLIFY) {
     output = braillify(source);
   } else if (action === ActOther.CODE_MORSIFY) {
@@ -1213,26 +1172,6 @@ const StudioPage: NextPage = () => {
                     </optgroup>
                   );
                 })}
-                <optgroup label="string">
-                  <option value={ActString.STRING_CAPITALISE}>
-                    {ActString.STRING_CAPITALISE}
-                  </option>
-                  <option value={ActString.STRING_DEBURR}>
-                    {ActString.STRING_DEBURR}
-                  </option>
-                  <option value={ActString.STRING_KEBABCASE}>
-                    {ActString.STRING_KEBABCASE}
-                  </option>
-                  <option value={ActString.STRING_LOWERCASE}>
-                    {ActString.STRING_LOWERCASE}
-                  </option>
-                  <option value={ActString.STRING_SNAKECASE}>
-                    {ActString.STRING_SNAKECASE}
-                  </option>
-                  <option value={ActString.STRING_UPPERCASE}>
-                    {ActString.STRING_UPPERCASE}
-                  </option>
-                </optgroup>
                 <optgroup label="time">
                   <option value={ActOther.TIME_EPOCH}>
                     {ActOther.TIME_EPOCH}
