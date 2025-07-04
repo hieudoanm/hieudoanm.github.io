@@ -16,16 +16,7 @@ import { useBattery } from '@web/hooks/window/navigator/use-battery';
 import { useWindowSize } from '@web/hooks/window/use-size';
 import { braillify } from '@web/utils/braille';
 import { downloadImage } from '@web/utils/download';
-import {
-  base64,
-  filter,
-  getMimeType,
-  mimeToExtension,
-  ocr,
-  png2ico,
-  png2jpg,
-  svg2png,
-} from '@web/utils/image';
+import { base64, getMimeType, mimeToExtension } from '@web/utils/image';
 import { morsify } from '@web/utils/morse';
 import { copyToClipboard } from '@web/utils/navigator';
 import { buildEpochString } from '@web/utils/time';
@@ -87,16 +78,6 @@ pdfMake.fonts = {
   },
 };
 
-enum ActImage {
-  IMAGE_BASE64 = 'Image - Base64',
-  IMAGE_CONVERT_PNG_TO_ICO = 'Image - PNG to ICO',
-  IMAGE_CONVERT_PNG_TO_JPG = 'Image - PNG to JPG',
-  IMAGE_CONVERT_SVG_TO_PNG = 'Image - SVG to PNG',
-  IMAGE_FILTER_GOLDEN = 'Image - Filter - Golden',
-  IMAGE_FILTER_GRAYSCALE = 'Image - Filter - Grayscale',
-  IMAGE_OCR = 'Image - OCR',
-}
-
 enum ActManifestJSON {
   MANIFEST_JSON_EXTENSION = 'manifest.json Extension',
   MANIFEST_JSON_PWA = 'manifest.json PWA',
@@ -138,37 +119,7 @@ type Act =
   | ActQRCode
   | ActWidget
   | ActGitHub
-  | ActImage
   | ActYAML;
-
-const isActImage = (act: Act): act is ActImage => {
-  return Object.values(ActImage).includes(act as ActImage);
-};
-
-const actImage = ({
-  action,
-  source,
-}: {
-  action: ActImage;
-  source: string;
-}): Promise<string> => {
-  if (action === ActImage.IMAGE_BASE64) {
-    return Promise.resolve(source);
-  } else if (action === ActImage.IMAGE_CONVERT_PNG_TO_ICO) {
-    return png2ico(source);
-  } else if (action === ActImage.IMAGE_CONVERT_PNG_TO_JPG) {
-    return png2jpg(source);
-  } else if (action === ActImage.IMAGE_CONVERT_SVG_TO_PNG) {
-    return svg2png(source);
-  } else if (action === ActImage.IMAGE_FILTER_GOLDEN) {
-    return filter('golden', source);
-  } else if (action === ActImage.IMAGE_FILTER_GRAYSCALE) {
-    return filter('grayscale', source);
-  } else if (action === ActImage.IMAGE_OCR) {
-    return ocr(source);
-  }
-  return Promise.resolve('');
-};
 
 const isActionManifestJSON = (act: Act): act is ActManifestJSON => {
   return Object.values(ActManifestJSON).includes(act as ActManifestJSON);
@@ -182,9 +133,7 @@ const act = async ({
   source: string;
 }): Promise<string> => {
   let output: string = source;
-  if (isActImage(action)) {
-    output = await actImage({ action, source });
-  } else if (action === ActOther.CODE_BRAILLIFY) {
+  if (action === ActOther.CODE_BRAILLIFY) {
     output = braillify(source);
   } else if (action === ActOther.CODE_MORSIFY) {
     output = morsify(source);
@@ -285,11 +234,6 @@ const ActionButton: FC<{
     if (
       action === ActGitHub.GITHUB_LANGUAGES ||
       action === ActGitHub.GITHUB_SOCIAL_PREVIEW ||
-      action === ActImage.IMAGE_CONVERT_PNG_TO_ICO ||
-      action === ActImage.IMAGE_CONVERT_PNG_TO_JPG ||
-      action === ActImage.IMAGE_CONVERT_SVG_TO_PNG ||
-      action === ActImage.IMAGE_FILTER_GOLDEN ||
-      action === ActImage.IMAGE_FILTER_GRAYSCALE ||
       action === ActQRCode.QRCODE_TO_IMAGE ||
       action === ActOther.MARKDOWN_EDITOR
     ) {
@@ -327,14 +271,7 @@ const ActionButton: FC<{
       type="button"
       className="cursor-pointer rounded border border-neutral-800 p-2"
       onClick={async () => {
-        if (
-          action === ActImage.IMAGE_CONVERT_PNG_TO_ICO ||
-          action === ActImage.IMAGE_CONVERT_PNG_TO_JPG ||
-          action === ActImage.IMAGE_CONVERT_SVG_TO_PNG ||
-          action === ActImage.IMAGE_FILTER_GOLDEN ||
-          action === ActImage.IMAGE_FILTER_GRAYSCALE ||
-          action === ActQRCode.QRCODE_TO_IMAGE
-        ) {
+        if (action === ActQRCode.QRCODE_TO_IMAGE) {
           const mime: string = getMimeType(output) ?? '';
           const format: 'jpg' | 'png' | 'ico' | 'gif' = mimeToExtension[mime];
           downloadImage({
@@ -391,16 +328,6 @@ const Input: FC<{
     action === ActWidget.WIDGET_WEATHER
   ) {
     return <></>;
-  }
-
-  if (isActImage(action)) {
-    return (
-      <div className="h-full w-full px-4 pt-4">
-        <div
-          className="h-16 bg-contain bg-left bg-no-repeat md:h-32"
-          style={{ backgroundImage: `url(${input})` }}></div>
-      </div>
-    );
   }
 
   return (
@@ -501,14 +428,7 @@ const Output: FC<{
     );
   }
 
-  if (
-    action === ActImage.IMAGE_CONVERT_PNG_TO_ICO ||
-    action === ActImage.IMAGE_CONVERT_PNG_TO_JPG ||
-    action === ActImage.IMAGE_CONVERT_SVG_TO_PNG ||
-    action === ActImage.IMAGE_FILTER_GOLDEN ||
-    action === ActImage.IMAGE_FILTER_GRAYSCALE ||
-    action === ActQRCode.QRCODE_TO_IMAGE
-  ) {
+  if (action === ActQRCode.QRCODE_TO_IMAGE) {
     return (
       <div className="w-full overflow-auto">
         <div
@@ -777,18 +697,6 @@ const StudioPage: NextPage = () => {
                     ],
                   },
                   {
-                    label: 'image',
-                    actions: [
-                      ActImage.IMAGE_BASE64,
-                      ActImage.IMAGE_CONVERT_PNG_TO_ICO,
-                      ActImage.IMAGE_CONVERT_PNG_TO_JPG,
-                      ActImage.IMAGE_CONVERT_SVG_TO_PNG,
-                      ActImage.IMAGE_FILTER_GOLDEN,
-                      ActImage.IMAGE_FILTER_GRAYSCALE,
-                      ActImage.IMAGE_OCR,
-                    ],
-                  },
-                  {
                     label: 'manifest.json',
                     actions: [
                       ActManifestJSON.MANIFEST_JSON_EXTENSION,
@@ -865,19 +773,7 @@ const StudioPage: NextPage = () => {
                     const file = files.item(0);
                     if (!file) return;
                     const base64Code = await base64(file);
-                    // Check Image
-                    const previousActionIsNotImage: boolean =
-                      action !== ActImage.IMAGE_BASE64 &&
-                      action !== ActImage.IMAGE_CONVERT_PNG_TO_ICO &&
-                      action !== ActImage.IMAGE_CONVERT_PNG_TO_JPG &&
-                      action !== ActImage.IMAGE_CONVERT_SVG_TO_PNG &&
-                      action !== ActImage.IMAGE_FILTER_GOLDEN &&
-                      action !== ActImage.IMAGE_FILTER_GRAYSCALE &&
-                      action !== ActImage.IMAGE_OCR;
-                    let nextAction: Act = action;
-                    if (previousActionIsNotImage) {
-                      nextAction = ActImage.IMAGE_BASE64;
-                    }
+                    const nextAction: Act = action;
                     setState((previous) => ({
                       ...previous,
                       loading: true,
