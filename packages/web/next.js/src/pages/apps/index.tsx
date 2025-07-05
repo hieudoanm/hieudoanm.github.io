@@ -2,7 +2,6 @@
 import { getWord, Word } from '@web/clients/wordsapi.com/wordsapi.client';
 import { PeriodicTable } from '@web/components/chemistry/PeriodicTable';
 import { MarkdownPreviewer } from '@web/components/MarkdownPreviewer';
-import { OpenMeteoWeather } from '@web/components/OpenMeteoWeather';
 import { INTIIAL_YAML } from '@web/constants';
 import { useBattery } from '@web/hooks/window/navigator/use-battery';
 import { base64 } from '@web/utils/image';
@@ -59,7 +58,6 @@ enum Act {
   WIDGET_DICTIONARY = 'Dictionary',
   WIDGET_OPENAPI_TO_POSTMAN_V2 = 'OpenAPI to Postman V2',
   WIDGET_PERIODIC_TABLE = 'Periodic Table',
-  WIDGET_WEATHER = 'Weather',
 }
 
 const act = async ({
@@ -131,7 +129,7 @@ const ActionButton: FC<{
   action: Act;
   output: string;
 }> = ({ action, output = '' }) => {
-  if (action === Act.WIDGET_PERIODIC_TABLE || action === Act.WIDGET_WEATHER) {
+  if (action === Act.WIDGET_PERIODIC_TABLE) {
     return <></>;
   }
 
@@ -167,7 +165,7 @@ const Input: FC<{
     scrollTop: 0,
   });
 
-  if (action === Act.WIDGET_PERIODIC_TABLE || action === Act.WIDGET_WEATHER) {
+  if (action === Act.WIDGET_PERIODIC_TABLE) {
     return <></>;
   }
 
@@ -223,10 +221,6 @@ const Output: FC<{
         <PeriodicTable />
       </div>
     );
-  }
-
-  if (action === Act.WIDGET_WEATHER) {
-    return <OpenMeteoWeather />;
   }
 
   return (
@@ -420,13 +414,9 @@ const StudioPage: NextPage = () => {
                     label: 'widgets',
                     actions: [
                       Act.WIDGET_DICTIONARY,
+                      Act.WIDGET_OPENAPI_TO_POSTMAN_V2,
                       Act.WIDGET_PERIODIC_TABLE,
-                      Act.WIDGET_WEATHER,
                     ],
-                  },
-                  {
-                    label: 'yaml',
-                    actions: [Act.WIDGET_OPENAPI_TO_POSTMAN_V2],
                   },
                 ].map(({ label = '', actions = [] }) => {
                   return (
