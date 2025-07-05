@@ -1,27 +1,22 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { getWord, Word } from '@web/clients/wordsapi.com/wordsapi.client';
 import { PeriodicTable } from '@web/components/chemistry/PeriodicTable';
-import { GitHubLanguages } from '@web/components/github/languages';
 import { MarkdownPreviewer } from '@web/components/MarkdownPreviewer';
 import { OpenMeteoWeather } from '@web/components/OpenMeteoWeather';
 import { INITIAL_MARKDOWN, INTIIAL_YAML } from '@web/constants';
 import { useBattery } from '@web/hooks/window/navigator/use-battery';
-import { useWindowSize } from '@web/hooks/window/use-size';
 import { base64 } from '@web/utils/image';
 import { copyToClipboard } from '@web/utils/navigator';
 import { trpcClient } from '@web/utils/trpc';
 import htmlToPdfmake from 'html-to-pdfmake';
-import html2canvas from 'html2canvas-pro';
 import { marked } from 'marked';
 import { NextPage } from 'next';
-import { Oleo_Script } from 'next/font/google';
 import Link from 'next/link';
 import pdfMake from 'pdfmake/build/pdfmake';
 import {
   ChangeEvent,
   Dispatch,
   FC,
-  RefObject,
   SetStateAction,
   useLayoutEffect,
   useRef,
@@ -43,8 +38,6 @@ import {
   FaSpinner,
 } from 'react-icons/fa6';
 import { parse } from 'yaml';
-
-const oleoScript = Oleo_Script({ weight: '400', subsets: ['latin'] });
 
 const FONT_FOLDER: string = 'https://hieudoanm.github.io/fonts';
 const FONT_NAME_ROBOTO: string = 'Roboto';
@@ -80,12 +73,7 @@ enum ActOther {
   MARKDOWN_EDITOR = 'Markdown Editor',
 }
 
-enum ActGitHub {
-  GITHUB_LANGUAGES = 'GitHub - Languages',
-  GITHUB_SOCIAL_PREVIEW = 'GitHub - Social Preview',
-}
-
-type Act = ActOther | ActWidget | ActGitHub | ActYAML;
+type Act = ActOther | ActWidget | ActYAML;
 
 const act = async ({
   action,
@@ -158,9 +146,8 @@ const countWords = (str: string) => {
 
 const ActionButton: FC<{
   action: Act;
-  ref: RefObject<HTMLDivElement | null>;
   output: string;
-}> = ({ action, ref, output = '' }) => {
+}> = ({ action, output = '' }) => {
   if (
     action === ActWidget.WIDGET_PERIODIC_TABLE ||
     action === ActWidget.WIDGET_WEATHER
@@ -169,38 +156,11 @@ const ActionButton: FC<{
   }
 
   const actionText = () => {
-    if (
-      action === ActGitHub.GITHUB_LANGUAGES ||
-      action === ActGitHub.GITHUB_SOCIAL_PREVIEW ||
-      action === ActOther.MARKDOWN_EDITOR
-    ) {
+    if (action === ActOther.MARKDOWN_EDITOR) {
       return <FaDownload className="text-xs" />;
     }
 
     return <FaCopy className="text-xs" />;
-  };
-
-  const downloadHTML = async ({
-    ref,
-    output = '',
-  }: {
-    ref: RefObject<HTMLDivElement | null>;
-    output: string;
-  }) => {
-    if (ref.current) {
-      await new Promise((resolve) => requestAnimationFrame(resolve)); // Wait for rendering
-      const canvas = await html2canvas(ref.current, {
-        scale: 2,
-        useCORS: true,
-      });
-      const dataURL = canvas.toDataURL('image/png');
-      // Create a download link
-      const link = document.createElement('a');
-      link.href = dataURL;
-      link.download = `${output}.png`;
-      link.click();
-      link.remove();
-    }
   };
 
   return (
@@ -215,11 +175,6 @@ const ActionButton: FC<{
             defaultStyle: { font: 'Times' },
           };
           pdfMake.createPdf(docDefinition).download('markdown.pdf');
-        } else if (
-          action === ActGitHub.GITHUB_LANGUAGES ||
-          action === ActGitHub.GITHUB_SOCIAL_PREVIEW
-        ) {
-          await downloadHTML({ ref, output });
         } else {
           copyToClipboard(output);
         }
@@ -286,74 +241,14 @@ const Input: FC<{
 
 const Output: FC<{
   action: Act;
-  input: string;
   output: string;
-  divRef: RefObject<HTMLDivElement | null>;
 }> = ({
   action = ActOther.MARKDOWN_EDITOR,
-  input = '',
   output = '',
-  divRef,
 }: {
   action: Act;
-  input: string;
   output: string;
-  divRef: RefObject<HTMLDivElement | null>;
 }) => {
-  const { width = 0, height = 0 } = useWindowSize();
-
-  if (action === ActGitHub.GITHUB_LANGUAGES) {
-    return (
-      <div className="w-full overflow-auto">
-        <GitHubLanguages ref={divRef} repository={input} />
-      </div>
-    );
-  }
-
-  if (action === ActGitHub.GITHUB_SOCIAL_PREVIEW) {
-    const lines = input.split('\n');
-
-    let name = '';
-    let repository = '';
-    let description = '';
-    if (lines.length === 1) {
-      name = lines.at(0) ?? '';
-    } else if (lines.length === 2) {
-      name = lines.at(0) ?? '';
-      repository = lines.at(1) ?? '';
-    } else if (lines.length === 3) {
-      name = lines.at(0) ?? '';
-      repository = lines.at(1) ?? '';
-      description = lines.at(2) ?? '';
-    }
-
-    return (
-      <div className={`${width > height ? 'h-full' : 'w-full'}`}>
-        <div
-          ref={divRef}
-          className={`flex aspect-[2/1] items-center justify-center border border-neutral-800 bg-neutral-900 ${width > height ? 'h-full' : 'w-full'} ${oleoScript.className} `}>
-          <div className="flex flex-col gap-y-2">
-            {name && (
-              <p className="text-center text-6xl leading-none md:text-7xl lg:text-8xl xl:text-9xl">
-                {(name ?? '').trim()}
-              </p>
-            )}
-            {repository && (
-              <p className="text-center text-3xl leading-none md:text-4xl lg:text-5xl xl:text-6xl">
-                {(repository ?? '').trim()}{' '}
-              </p>
-            )}
-            {description && (
-              <p className="text-center text-base leading-none md:text-lg lg:text-xl xl:text-2xl">
-                {(description ?? '').trim()}{' '}
-              </p>
-            )}
-          </div>
-        </div>
-      </div>
-    );
-  }
-
   if (
     action === ActOther.MARKDOWN_EDITOR ||
     action === ActOther.MARKDOWN_DICTIONARY
@@ -452,8 +347,6 @@ const StudioPage: NextPage = () => {
     selectionEnd: 0,
     scrollTop: 0,
   });
-  // This is for div element
-  const divRef = useRef<HTMLDivElement | null>(null);
   // Component States
   const [
     {
@@ -509,7 +402,7 @@ const StudioPage: NextPage = () => {
             <p className="font-semibold">Studio</p>
           </div>
           <div className="flex items-center gap-x-2">
-            <ActionButton action={action} ref={divRef} output={output} />
+            <ActionButton action={action} output={output} />
             <div className="flex items-center gap-x-2">
               <FaClosedCaptioning className="text-xl" /> {countWords(output)}
             </div>
@@ -521,12 +414,7 @@ const StudioPage: NextPage = () => {
             {loading ? (
               <div className="h-full p-2">Loading</div>
             ) : (
-              <Output
-                action={action}
-                input={input}
-                output={output}
-                divRef={divRef}
-              />
+              <Output action={action} output={output} />
             )}
           </div>
         </div>
@@ -566,10 +454,6 @@ const StudioPage: NextPage = () => {
                     newText = 'example';
                   } else if (previousActionIsNotYAML && nextActionIsYAML) {
                     newText = INTIIAL_YAML;
-                  } else if (nextAction === ActGitHub.GITHUB_LANGUAGES) {
-                    newText = 'hieudoanm/hieudoanm.github.io';
-                  } else if (nextAction === ActGitHub.GITHUB_SOCIAL_PREVIEW) {
-                    newText = 'Hieu Doan';
                   }
                   setState((previous) => ({
                     ...previous,
@@ -579,13 +463,6 @@ const StudioPage: NextPage = () => {
                   await submit({ action: nextAction, input: newText });
                 }}>
                 {[
-                  {
-                    label: 'github',
-                    actions: [
-                      ActGitHub.GITHUB_LANGUAGES,
-                      ActGitHub.GITHUB_SOCIAL_PREVIEW,
-                    ],
-                  },
                   {
                     label: 'markdown',
                     actions: [
