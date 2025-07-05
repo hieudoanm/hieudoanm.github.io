@@ -1,8 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { getWord, Word } from '@web/clients/wordsapi.com/wordsapi.client';
 import { PeriodicTable } from '@web/components/chemistry/PeriodicTable';
-import { Crypto } from '@web/components/Crypto';
-import { Forex } from '@web/components/Forex';
 import { GitHubLanguages } from '@web/components/github/languages';
 import { MarkdownPreviewer } from '@web/components/MarkdownPreviewer';
 import { OpenMeteoWeather } from '@web/components/OpenMeteoWeather';
@@ -82,8 +80,6 @@ enum ActManifestJSON {
 }
 
 enum ActWidget {
-  WIDGET_FINANCE_CRYPTO = 'Finance - Crypto',
-  WIDGET_FINANCE_FOREX = 'Finance - Forex',
   WIDGET_PERIODIC_TABLE = 'Periodic Table',
   WIDGET_WEATHER = 'Weather',
 }
@@ -214,8 +210,6 @@ const ActionButton: FC<{
   output: string;
 }> = ({ action, ref, output = '' }) => {
   if (
-    action === ActWidget.WIDGET_FINANCE_CRYPTO ||
-    action === ActWidget.WIDGET_FINANCE_FOREX ||
     action === ActWidget.WIDGET_PERIODIC_TABLE ||
     action === ActWidget.WIDGET_WEATHER
   ) {
@@ -314,8 +308,6 @@ const Input: FC<{
 
   if (
     action === ActOther.UUID ||
-    action === ActWidget.WIDGET_FINANCE_CRYPTO ||
-    action === ActWidget.WIDGET_FINANCE_FOREX ||
     action === ActWidget.WIDGET_PERIODIC_TABLE ||
     action === ActWidget.WIDGET_WEATHER
   ) {
@@ -440,14 +432,6 @@ const Output: FC<{
         <MarkdownPreviewer html={output} />
       </div>
     );
-  }
-
-  if (action === ActWidget.WIDGET_FINANCE_CRYPTO) {
-    return <Crypto />;
-  }
-
-  if (action === ActWidget.WIDGET_FINANCE_FOREX) {
-    return <Forex />;
   }
 
   if (action === ActWidget.WIDGET_PERIODIC_TABLE) {
@@ -731,12 +715,6 @@ const StudioPage: NextPage = () => {
                   <option value={ActOther.UUID}>{ActOther.UUID}</option>
                 </optgroup>
                 <optgroup label="widgets">
-                  <option value={ActWidget.WIDGET_FINANCE_CRYPTO}>
-                    {ActWidget.WIDGET_FINANCE_CRYPTO}
-                  </option>
-                  <option value={ActWidget.WIDGET_FINANCE_FOREX}>
-                    {ActWidget.WIDGET_FINANCE_FOREX}
-                  </option>
                   <option value={ActWidget.WIDGET_PERIODIC_TABLE}>
                     {ActWidget.WIDGET_PERIODIC_TABLE}
                   </option>
