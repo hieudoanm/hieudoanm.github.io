@@ -17,7 +17,6 @@ import { base64, getMimeType, mimeToExtension } from '@web/utils/image';
 import { copyToClipboard } from '@web/utils/navigator';
 import { buildEpochString } from '@web/utils/time';
 import { trpcClient } from '@web/utils/trpc';
-import { buildUuidString } from '@web/utils/uuid';
 import htmlToPdfmake from 'html-to-pdfmake';
 import html2canvas from 'html2canvas-pro';
 import { marked } from 'marked';
@@ -97,7 +96,6 @@ enum ActOther {
   MARKDOWN_DICTIONARY = 'Markdown Dictionary',
   MARKDOWN_EDITOR = 'Markdown Editor',
   TIME_EPOCH = 'Epoch',
-  UUID = 'UUID',
 }
 
 enum ActGitHub {
@@ -155,8 +153,6 @@ const act = async ({
     output = JSON.stringify(newPostman, null, 2);
   } else if (action === ActOther.MARKDOWN_EDITOR) {
     output = await marked(source);
-  } else if (action === ActOther.UUID) {
-    output = buildUuidString();
   } else if (isActionManifestJSON(action)) {
     output = JSON.stringify(JSON.parse(source), null, 2);
   } else if (action === ActOther.MARKDOWN_DICTIONARY) {
@@ -307,7 +303,6 @@ const Input: FC<{
   });
 
   if (
-    action === ActOther.UUID ||
     action === ActWidget.WIDGET_PERIODIC_TABLE ||
     action === ActWidget.WIDGET_WEATHER
   ) {
@@ -525,7 +520,7 @@ const StudioPage: NextPage = () => {
   const divRef = useRef<HTMLDivElement | null>(null);
   // Component States
   const [
-    { loading = false, action = ActOther.UUID, input = '', output = '' },
+    { loading = false, action = ActOther.TIME_EPOCH, input = '', output = '' },
     setState,
   ] = useState<{
     loading: boolean;
@@ -534,7 +529,7 @@ const StudioPage: NextPage = () => {
     output: string;
   }>({
     loading: false,
-    action: ActOther.UUID,
+    action: ActOther.TIME_EPOCH,
     input: '',
     output: '',
   });
@@ -634,8 +629,6 @@ const StudioPage: NextPage = () => {
                     newText = INITIAL_MARKDOWN;
                   } else if (nextAction === ActOther.MARKDOWN_DICTIONARY) {
                     newText = 'example';
-                  } else if (nextAction === ActOther.UUID) {
-                    newText = '';
                   } else if (previousActionIsNotYAML && nextActionIsYAML) {
                     newText = INTIIAL_YAML;
                   } else if (
@@ -710,9 +703,6 @@ const StudioPage: NextPage = () => {
                   <option value={ActOther.TIME_EPOCH}>
                     {ActOther.TIME_EPOCH}
                   </option>
-                </optgroup>
-                <optgroup label="uuid">
-                  <option value={ActOther.UUID}>{ActOther.UUID}</option>
                 </optgroup>
                 <optgroup label="widgets">
                   <option value={ActWidget.WIDGET_PERIODIC_TABLE}>
