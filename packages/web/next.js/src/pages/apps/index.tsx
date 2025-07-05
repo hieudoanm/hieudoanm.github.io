@@ -35,7 +35,6 @@ import {
   FaPaperPlane,
   FaSpinner,
 } from 'react-icons/fa6';
-import { parse } from 'yaml';
 
 const FONT_FOLDER: string = 'https://hieudoanm.github.io/fonts';
 const FONT_NAME_ROBOTO: string = 'Roboto';
@@ -56,18 +55,12 @@ pdfMake.fonts = {
   },
 };
 
-enum ActWidget {
+enum Act {
   WIDGET_DICTIONARY = 'Dictionary',
+  WIDGET_OPENAPI_TO_POSTMAN_V2 = 'OpenAPI to Postman V2',
   WIDGET_PERIODIC_TABLE = 'Periodic Table',
   WIDGET_WEATHER = 'Weather',
 }
-
-enum ActYAML {
-  YAML_TO_JSON = 'YAML to JSON',
-  YAML_OPENAPI_TO_POSTMAN_V2 = 'OpenAPI to Postman V2',
-}
-
-type Act = ActWidget | ActYAML;
 
 const act = async ({
   action,
@@ -77,9 +70,7 @@ const act = async ({
   source: string;
 }): Promise<string> => {
   let output: string = source;
-  if (action === ActYAML.YAML_TO_JSON) {
-    output = JSON.stringify(parse(source), null, 2);
-  } else if (action === ActYAML.YAML_OPENAPI_TO_POSTMAN_V2) {
+  if (action === Act.WIDGET_OPENAPI_TO_POSTMAN_V2) {
     const postman: any = await trpcClient.openapi.postman.mutate({
       openapi: source,
     });
@@ -91,7 +82,7 @@ const act = async ({
       newPostman[key] = postman[key];
     }
     output = JSON.stringify(newPostman, null, 2);
-  } else if (action === ActWidget.WIDGET_DICTIONARY) {
+  } else if (action === Act.WIDGET_DICTIONARY) {
     const word: Word = await getWord(source);
     const { results = [] } = word;
     if (results.length === 0) {
@@ -140,10 +131,7 @@ const ActionButton: FC<{
   action: Act;
   output: string;
 }> = ({ action, output = '' }) => {
-  if (
-    action === ActWidget.WIDGET_PERIODIC_TABLE ||
-    action === ActWidget.WIDGET_WEATHER
-  ) {
+  if (action === Act.WIDGET_PERIODIC_TABLE || action === Act.WIDGET_WEATHER) {
     return <></>;
   }
 
@@ -179,10 +167,7 @@ const Input: FC<{
     scrollTop: 0,
   });
 
-  if (
-    action === ActWidget.WIDGET_PERIODIC_TABLE ||
-    action === ActWidget.WIDGET_WEATHER
-  ) {
+  if (action === Act.WIDGET_PERIODIC_TABLE || action === Act.WIDGET_WEATHER) {
     return <></>;
   }
 
@@ -218,13 +203,13 @@ const Output: FC<{
   action: Act;
   output: string;
 }> = ({
-  action = ActWidget.WIDGET_PERIODIC_TABLE,
+  action = Act.WIDGET_PERIODIC_TABLE,
   output = '',
 }: {
   action: Act;
   output: string;
 }) => {
-  if (action === ActWidget.WIDGET_DICTIONARY) {
+  if (action === Act.WIDGET_DICTIONARY) {
     return (
       <div className="w-full overflow-auto p-2">
         <MarkdownPreviewer html={output} />
@@ -232,7 +217,7 @@ const Output: FC<{
     );
   }
 
-  if (action === ActWidget.WIDGET_PERIODIC_TABLE) {
+  if (action === Act.WIDGET_PERIODIC_TABLE) {
     return (
       <div className="scroll-none w-full overflow-auto">
         <PeriodicTable />
@@ -240,7 +225,7 @@ const Output: FC<{
     );
   }
 
-  if (action === ActWidget.WIDGET_WEATHER) {
+  if (action === Act.WIDGET_WEATHER) {
     return <OpenMeteoWeather />;
   }
 
@@ -323,7 +308,7 @@ const StudioPage: NextPage = () => {
   const [
     {
       loading = false,
-      action = ActWidget.WIDGET_PERIODIC_TABLE,
+      action = Act.WIDGET_PERIODIC_TABLE,
       input = '',
       output = '',
     },
@@ -335,7 +320,7 @@ const StudioPage: NextPage = () => {
     output: string;
   }>({
     loading: false,
-    action: ActWidget.WIDGET_PERIODIC_TABLE,
+    action: Act.WIDGET_PERIODIC_TABLE,
     input: '',
     output: '',
   });
@@ -414,13 +399,11 @@ const StudioPage: NextPage = () => {
                   let newText: string = input;
                   // Check YAML
                   const previousActionIsNotYAML: boolean =
-                    action !== ActYAML.YAML_TO_JSON &&
-                    action !== ActYAML.YAML_OPENAPI_TO_POSTMAN_V2;
+                    action !== Act.WIDGET_OPENAPI_TO_POSTMAN_V2;
                   const nextActionIsYAML =
-                    nextAction === ActYAML.YAML_TO_JSON ||
-                    nextAction === ActYAML.YAML_OPENAPI_TO_POSTMAN_V2;
+                    nextAction === Act.WIDGET_OPENAPI_TO_POSTMAN_V2;
                   // Get Initial String
-                  if (nextAction === ActWidget.WIDGET_DICTIONARY) {
+                  if (nextAction === Act.WIDGET_DICTIONARY) {
                     newText = 'example';
                   } else if (previousActionIsNotYAML && nextActionIsYAML) {
                     newText = INTIIAL_YAML;
@@ -436,17 +419,14 @@ const StudioPage: NextPage = () => {
                   {
                     label: 'widgets',
                     actions: [
-                      ActWidget.WIDGET_DICTIONARY,
-                      ActWidget.WIDGET_PERIODIC_TABLE,
-                      ActWidget.WIDGET_WEATHER,
+                      Act.WIDGET_DICTIONARY,
+                      Act.WIDGET_PERIODIC_TABLE,
+                      Act.WIDGET_WEATHER,
                     ],
                   },
                   {
                     label: 'yaml',
-                    actions: [
-                      ActYAML.YAML_TO_JSON,
-                      ActYAML.YAML_OPENAPI_TO_POSTMAN_V2,
-                    ],
+                    actions: [Act.WIDGET_OPENAPI_TO_POSTMAN_V2],
                   },
                 ].map(({ label = '', actions = [] }) => {
                   return (
