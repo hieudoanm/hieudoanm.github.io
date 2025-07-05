@@ -3,12 +3,11 @@ import { getWord, Word } from '@web/clients/wordsapi.com/wordsapi.client';
 import { PeriodicTable } from '@web/components/chemistry/PeriodicTable';
 import { MarkdownPreviewer } from '@web/components/MarkdownPreviewer';
 import { OpenMeteoWeather } from '@web/components/OpenMeteoWeather';
-import { INITIAL_MARKDOWN, INTIIAL_YAML } from '@web/constants';
+import { INTIIAL_YAML } from '@web/constants';
 import { useBattery } from '@web/hooks/window/navigator/use-battery';
 import { base64 } from '@web/utils/image';
 import { copyToClipboard } from '@web/utils/navigator';
 import { trpcClient } from '@web/utils/trpc';
-import htmlToPdfmake from 'html-to-pdfmake';
 import { marked } from 'marked';
 import { NextPage } from 'next';
 import Link from 'next/link';
@@ -32,7 +31,6 @@ import {
   FaChevronLeft,
   FaClosedCaptioning,
   FaCopy,
-  FaDownload,
   FaImages,
   FaPaperPlane,
   FaSpinner,
@@ -59,6 +57,7 @@ pdfMake.fonts = {
 };
 
 enum ActWidget {
+  WIDGET_DICTIONARY = 'Dictionary',
   WIDGET_PERIODIC_TABLE = 'Periodic Table',
   WIDGET_WEATHER = 'Weather',
 }
@@ -68,12 +67,7 @@ enum ActYAML {
   YAML_OPENAPI_TO_POSTMAN_V2 = 'OpenAPI to Postman V2',
 }
 
-enum ActOther {
-  MARKDOWN_DICTIONARY = 'Markdown Dictionary',
-  MARKDOWN_EDITOR = 'Markdown Editor',
-}
-
-type Act = ActOther | ActWidget | ActYAML;
+type Act = ActWidget | ActYAML;
 
 const act = async ({
   action,
@@ -97,9 +91,7 @@ const act = async ({
       newPostman[key] = postman[key];
     }
     output = JSON.stringify(newPostman, null, 2);
-  } else if (action === ActOther.MARKDOWN_EDITOR) {
-    output = await marked(source);
-  } else if (action === ActOther.MARKDOWN_DICTIONARY) {
+  } else if (action === ActWidget.WIDGET_DICTIONARY) {
     const word: Word = await getWord(source);
     const { results = [] } = word;
     if (results.length === 0) {
@@ -155,31 +147,14 @@ const ActionButton: FC<{
     return <></>;
   }
 
-  const actionText = () => {
-    if (action === ActOther.MARKDOWN_EDITOR) {
-      return <FaDownload className="text-xs" />;
-    }
-
-    return <FaCopy className="text-xs" />;
-  };
-
   return (
     <button
       type="button"
       className="cursor-pointer rounded border border-neutral-800 p-2"
-      onClick={async () => {
-        if (action === ActOther.MARKDOWN_EDITOR) {
-          const converted = htmlToPdfmake(output);
-          const docDefinition = {
-            content: converted,
-            defaultStyle: { font: 'Times' },
-          };
-          pdfMake.createPdf(docDefinition).download('markdown.pdf');
-        } else {
-          copyToClipboard(output);
-        }
+      onClick={() => {
+        copyToClipboard(output);
       }}>
-      {actionText()}
+      <FaCopy className="text-xs" />
     </button>
   );
 };
@@ -243,16 +218,13 @@ const Output: FC<{
   action: Act;
   output: string;
 }> = ({
-  action = ActOther.MARKDOWN_EDITOR,
+  action = ActWidget.WIDGET_PERIODIC_TABLE,
   output = '',
 }: {
   action: Act;
   output: string;
 }) => {
-  if (
-    action === ActOther.MARKDOWN_EDITOR ||
-    action === ActOther.MARKDOWN_DICTIONARY
-  ) {
+  if (action === ActWidget.WIDGET_DICTIONARY) {
     return (
       <div className="w-full overflow-auto p-2">
         <MarkdownPreviewer html={output} />
@@ -448,9 +420,7 @@ const StudioPage: NextPage = () => {
                     nextAction === ActYAML.YAML_TO_JSON ||
                     nextAction === ActYAML.YAML_OPENAPI_TO_POSTMAN_V2;
                   // Get Initial String
-                  if (nextAction === ActOther.MARKDOWN_EDITOR) {
-                    newText = INITIAL_MARKDOWN;
-                  } else if (nextAction === ActOther.MARKDOWN_DICTIONARY) {
+                  if (nextAction === ActWidget.WIDGET_DICTIONARY) {
                     newText = 'example';
                   } else if (previousActionIsNotYAML && nextActionIsYAML) {
                     newText = INTIIAL_YAML;
@@ -464,10 +434,11 @@ const StudioPage: NextPage = () => {
                 }}>
                 {[
                   {
-                    label: 'markdown',
+                    label: 'widgets',
                     actions: [
-                      ActOther.MARKDOWN_DICTIONARY,
-                      ActOther.MARKDOWN_EDITOR,
+                      ActWidget.WIDGET_DICTIONARY,
+                      ActWidget.WIDGET_PERIODIC_TABLE,
+                      ActWidget.WIDGET_WEATHER,
                     ],
                   },
                   {
@@ -490,14 +461,6 @@ const StudioPage: NextPage = () => {
                     </optgroup>
                   );
                 })}
-                <optgroup label="widgets">
-                  <option value={ActWidget.WIDGET_PERIODIC_TABLE}>
-                    {ActWidget.WIDGET_PERIODIC_TABLE}
-                  </option>
-                  <option value={ActWidget.WIDGET_WEATHER}>
-                    {ActWidget.WIDGET_WEATHER}
-                  </option>
-                </optgroup>
               </select>
               <label
                 htmlFor="upload-image"
