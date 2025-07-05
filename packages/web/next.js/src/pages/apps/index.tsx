@@ -4,12 +4,7 @@ import { PeriodicTable } from '@web/components/chemistry/PeriodicTable';
 import { GitHubLanguages } from '@web/components/github/languages';
 import { MarkdownPreviewer } from '@web/components/MarkdownPreviewer';
 import { OpenMeteoWeather } from '@web/components/OpenMeteoWeather';
-import {
-  INITIAL_MANIFEST_EXTENSION,
-  INITIAL_MANIFEST_PWA,
-  INITIAL_MARKDOWN,
-  INTIIAL_YAML,
-} from '@web/constants';
+import { INITIAL_MARKDOWN, INTIIAL_YAML } from '@web/constants';
 import { useBattery } from '@web/hooks/window/navigator/use-battery';
 import { useWindowSize } from '@web/hooks/window/use-size';
 import { downloadImage } from '@web/utils/download';
@@ -73,11 +68,6 @@ pdfMake.fonts = {
   },
 };
 
-enum ActManifestJSON {
-  MANIFEST_JSON_EXTENSION = 'manifest.json Extension',
-  MANIFEST_JSON_PWA = 'manifest.json PWA',
-}
-
 enum ActWidget {
   WIDGET_PERIODIC_TABLE = 'Periodic Table',
   WIDGET_WEATHER = 'Weather',
@@ -103,17 +93,7 @@ enum ActGitHub {
   GITHUB_SOCIAL_PREVIEW = 'GitHub - Social Preview',
 }
 
-type Act =
-  | ActManifestJSON
-  | ActOther
-  | ActQRCode
-  | ActWidget
-  | ActGitHub
-  | ActYAML;
-
-const isActionManifestJSON = (act: Act): act is ActManifestJSON => {
-  return Object.values(ActManifestJSON).includes(act as ActManifestJSON);
-};
+type Act = ActOther | ActQRCode | ActWidget | ActGitHub | ActYAML;
 
 const act = async ({
   action,
@@ -153,8 +133,6 @@ const act = async ({
     output = JSON.stringify(newPostman, null, 2);
   } else if (action === ActOther.MARKDOWN_EDITOR) {
     output = await marked(source);
-  } else if (isActionManifestJSON(action)) {
-    output = JSON.stringify(JSON.parse(source), null, 2);
   } else if (action === ActOther.MARKDOWN_DICTIONARY) {
     const word: Word = await getWord(source);
     const { results = [] } = word;
@@ -631,16 +609,6 @@ const StudioPage: NextPage = () => {
                     newText = 'example';
                   } else if (previousActionIsNotYAML && nextActionIsYAML) {
                     newText = INTIIAL_YAML;
-                  } else if (
-                    nextAction === ActManifestJSON.MANIFEST_JSON_EXTENSION
-                  ) {
-                    newText = JSON.stringify(
-                      INITIAL_MANIFEST_EXTENSION,
-                      null,
-                      2
-                    );
-                  } else if (nextAction === ActManifestJSON.MANIFEST_JSON_PWA) {
-                    newText = JSON.stringify(INITIAL_MANIFEST_PWA, null, 2);
                   } else if (nextAction === ActGitHub.GITHUB_LANGUAGES) {
                     newText = 'hieudoanm/hieudoanm.github.io';
                   } else if (nextAction === ActGitHub.GITHUB_SOCIAL_PREVIEW) {
@@ -659,13 +627,6 @@ const StudioPage: NextPage = () => {
                     actions: [
                       ActGitHub.GITHUB_LANGUAGES,
                       ActGitHub.GITHUB_SOCIAL_PREVIEW,
-                    ],
-                  },
-                  {
-                    label: 'manifest.json',
-                    actions: [
-                      ActManifestJSON.MANIFEST_JSON_EXTENSION,
-                      ActManifestJSON.MANIFEST_JSON_PWA,
                     ],
                   },
                   {
