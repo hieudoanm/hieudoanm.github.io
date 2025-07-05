@@ -7,8 +7,7 @@ import { OpenMeteoWeather } from '@web/components/OpenMeteoWeather';
 import { INITIAL_MARKDOWN, INTIIAL_YAML } from '@web/constants';
 import { useBattery } from '@web/hooks/window/navigator/use-battery';
 import { useWindowSize } from '@web/hooks/window/use-size';
-import { downloadImage } from '@web/utils/download';
-import { base64, getMimeType, mimeToExtension } from '@web/utils/image';
+import { base64 } from '@web/utils/image';
 import { copyToClipboard } from '@web/utils/navigator';
 import { buildEpochString } from '@web/utils/time';
 import { trpcClient } from '@web/utils/trpc';
@@ -19,7 +18,6 @@ import { NextPage } from 'next';
 import { Oleo_Script } from 'next/font/google';
 import Link from 'next/link';
 import pdfMake from 'pdfmake/build/pdfmake';
-import { toDataURL } from 'qrcode';
 import {
   ChangeEvent,
   Dispatch,
@@ -73,10 +71,6 @@ enum ActWidget {
   WIDGET_WEATHER = 'Weather',
 }
 
-enum ActQRCode {
-  QRCODE_TO_IMAGE = 'QR Code - To Image',
-}
-
 enum ActYAML {
   YAML_TO_JSON = 'YAML to JSON',
   YAML_OPENAPI_TO_POSTMAN_V2 = 'OpenAPI to Postman V2',
@@ -93,7 +87,7 @@ enum ActGitHub {
   GITHUB_SOCIAL_PREVIEW = 'GitHub - Social Preview',
 }
 
-type Act = ActOther | ActQRCode | ActWidget | ActGitHub | ActYAML;
+type Act = ActOther | ActWidget | ActGitHub | ActYAML;
 
 const act = async ({
   action,
@@ -103,15 +97,7 @@ const act = async ({
   source: string;
 }): Promise<string> => {
   let output: string = source;
-  if (action === ActQRCode.QRCODE_TO_IMAGE) {
-    if (source === '') return '';
-    output = await toDataURL(source, {
-      errorCorrectionLevel: 'H',
-      type: 'image/jpeg',
-      width: 512,
-      margin: 1,
-    });
-  } else if (action === ActOther.TIME_EPOCH) {
+  if (action === ActOther.TIME_EPOCH) {
     source =
       source === ''
         ? Math.floor(new Date().getTime() / 1000).toString()
@@ -194,7 +180,6 @@ const ActionButton: FC<{
     if (
       action === ActGitHub.GITHUB_LANGUAGES ||
       action === ActGitHub.GITHUB_SOCIAL_PREVIEW ||
-      action === ActQRCode.QRCODE_TO_IMAGE ||
       action === ActOther.MARKDOWN_EDITOR
     ) {
       return <FaDownload className="text-xs" />;
@@ -231,15 +216,7 @@ const ActionButton: FC<{
       type="button"
       className="cursor-pointer rounded border border-neutral-800 p-2"
       onClick={async () => {
-        if (action === ActQRCode.QRCODE_TO_IMAGE) {
-          const mime: string = getMimeType(output) ?? '';
-          const format: 'jpg' | 'png' | 'ico' | 'gif' = mimeToExtension[mime];
-          downloadImage({
-            format,
-            content: output,
-            filename: 'output',
-          });
-        } else if (action === ActOther.MARKDOWN_EDITOR) {
+        if (action === ActOther.MARKDOWN_EDITOR) {
           const converted = htmlToPdfmake(output);
           const docDefinition = {
             content: converted,
@@ -381,17 +358,6 @@ const Output: FC<{
             )}
           </div>
         </div>
-      </div>
-    );
-  }
-
-  if (action === ActQRCode.QRCODE_TO_IMAGE) {
-    return (
-      <div className="w-full overflow-auto">
-        <div
-          className={`mx-auto aspect-square overflow-hidden rounded bg-cover bg-center ${width > height ? 'h-full' : 'w-full'}`}
-          style={{ backgroundImage: `url(${output})` }}
-        />
       </div>
     );
   }
@@ -601,8 +567,6 @@ const StudioPage: NextPage = () => {
                     newText = Math.floor(
                       new Date().getTime() / 1000
                     ).toString();
-                  } else if (nextAction === ActQRCode.QRCODE_TO_IMAGE) {
-                    newText = 'https://google.com';
                   } else if (nextAction === ActOther.MARKDOWN_EDITOR) {
                     newText = INITIAL_MARKDOWN;
                   } else if (nextAction === ActOther.MARKDOWN_DICTIONARY) {
@@ -635,10 +599,6 @@ const StudioPage: NextPage = () => {
                       ActOther.MARKDOWN_DICTIONARY,
                       ActOther.MARKDOWN_EDITOR,
                     ],
-                  },
-                  {
-                    label: 'qrcode',
-                    actions: [ActQRCode.QRCODE_TO_IMAGE],
                   },
                   {
                     label: 'yaml',
