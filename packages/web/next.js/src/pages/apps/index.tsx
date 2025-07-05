@@ -9,7 +9,6 @@ import { useBattery } from '@web/hooks/window/navigator/use-battery';
 import { useWindowSize } from '@web/hooks/window/use-size';
 import { base64 } from '@web/utils/image';
 import { copyToClipboard } from '@web/utils/navigator';
-import { buildEpochString } from '@web/utils/time';
 import { trpcClient } from '@web/utils/trpc';
 import htmlToPdfmake from 'html-to-pdfmake';
 import html2canvas from 'html2canvas-pro';
@@ -79,7 +78,6 @@ enum ActYAML {
 enum ActOther {
   MARKDOWN_DICTIONARY = 'Markdown Dictionary',
   MARKDOWN_EDITOR = 'Markdown Editor',
-  TIME_EPOCH = 'Epoch',
 }
 
 enum ActGitHub {
@@ -97,13 +95,7 @@ const act = async ({
   source: string;
 }): Promise<string> => {
   let output: string = source;
-  if (action === ActOther.TIME_EPOCH) {
-    source =
-      source === ''
-        ? Math.floor(new Date().getTime() / 1000).toString()
-        : source;
-    output = await buildEpochString(parseInt(source, 10));
-  } else if (action === ActYAML.YAML_TO_JSON) {
+  if (action === ActYAML.YAML_TO_JSON) {
     output = JSON.stringify(parse(source), null, 2);
   } else if (action === ActYAML.YAML_OPENAPI_TO_POSTMAN_V2) {
     const postman: any = await trpcClient.openapi.postman.mutate({
@@ -464,7 +456,12 @@ const StudioPage: NextPage = () => {
   const divRef = useRef<HTMLDivElement | null>(null);
   // Component States
   const [
-    { loading = false, action = ActOther.TIME_EPOCH, input = '', output = '' },
+    {
+      loading = false,
+      action = ActWidget.WIDGET_PERIODIC_TABLE,
+      input = '',
+      output = '',
+    },
     setState,
   ] = useState<{
     loading: boolean;
@@ -473,7 +470,7 @@ const StudioPage: NextPage = () => {
     output: string;
   }>({
     loading: false,
-    action: ActOther.TIME_EPOCH,
+    action: ActWidget.WIDGET_PERIODIC_TABLE,
     input: '',
     output: '',
   });
@@ -563,11 +560,7 @@ const StudioPage: NextPage = () => {
                     nextAction === ActYAML.YAML_TO_JSON ||
                     nextAction === ActYAML.YAML_OPENAPI_TO_POSTMAN_V2;
                   // Get Initial String
-                  if (nextAction === ActOther.TIME_EPOCH) {
-                    newText = Math.floor(
-                      new Date().getTime() / 1000
-                    ).toString();
-                  } else if (nextAction === ActOther.MARKDOWN_EDITOR) {
+                  if (nextAction === ActOther.MARKDOWN_EDITOR) {
                     newText = INITIAL_MARKDOWN;
                   } else if (nextAction === ActOther.MARKDOWN_DICTIONARY) {
                     newText = 'example';
@@ -620,11 +613,6 @@ const StudioPage: NextPage = () => {
                     </optgroup>
                   );
                 })}
-                <optgroup label="time">
-                  <option value={ActOther.TIME_EPOCH}>
-                    {ActOther.TIME_EPOCH}
-                  </option>
-                </optgroup>
                 <optgroup label="widgets">
                   <option value={ActWidget.WIDGET_PERIODIC_TABLE}>
                     {ActWidget.WIDGET_PERIODIC_TABLE}
