@@ -2,11 +2,9 @@
 import { getWord, Word } from '@web/clients/wordsapi.com/wordsapi.client';
 import { PeriodicTable } from '@web/components/chemistry/PeriodicTable';
 import { MarkdownPreviewer } from '@web/components/MarkdownPreviewer';
-import { INTIIAL_YAML } from '@web/constants';
 import { useBattery } from '@web/hooks/window/navigator/use-battery';
 import { base64 } from '@web/utils/image';
 import { copyToClipboard } from '@web/utils/navigator';
-import { trpcClient } from '@web/utils/trpc';
 import { marked } from 'marked';
 import { NextPage } from 'next';
 import Link from 'next/link';
@@ -56,7 +54,6 @@ pdfMake.fonts = {
 
 enum Act {
   WIDGET_DICTIONARY = 'Dictionary',
-  WIDGET_OPENAPI_TO_POSTMAN_V2 = 'OpenAPI to Postman V2',
   WIDGET_PERIODIC_TABLE = 'Periodic Table',
 }
 
@@ -68,19 +65,7 @@ const act = async ({
   source: string;
 }): Promise<string> => {
   let output: string = source;
-  if (action === Act.WIDGET_OPENAPI_TO_POSTMAN_V2) {
-    const postman: any = await trpcClient.openapi.postman.mutate({
-      openapi: source,
-    });
-    const keys: string[] = Object.keys(postman).sort((a, b) =>
-      a > b ? 1 : -1
-    );
-    const newPostman: any = {};
-    for (const key of keys) {
-      newPostman[key] = postman[key];
-    }
-    output = JSON.stringify(newPostman, null, 2);
-  } else if (action === Act.WIDGET_DICTIONARY) {
+  if (action === Act.WIDGET_DICTIONARY) {
     const word: Word = await getWord(source);
     const { results = [] } = word;
     if (results.length === 0) {
@@ -391,16 +376,9 @@ const StudioPage: NextPage = () => {
                 onChange={async (event) => {
                   const nextAction: Act = event.target.value as Act;
                   let newText: string = input;
-                  // Check YAML
-                  const previousActionIsNotYAML: boolean =
-                    action !== Act.WIDGET_OPENAPI_TO_POSTMAN_V2;
-                  const nextActionIsYAML =
-                    nextAction === Act.WIDGET_OPENAPI_TO_POSTMAN_V2;
                   // Get Initial String
                   if (nextAction === Act.WIDGET_DICTIONARY) {
                     newText = 'example';
-                  } else if (previousActionIsNotYAML && nextActionIsYAML) {
-                    newText = INTIIAL_YAML;
                   }
                   setState((previous) => ({
                     ...previous,
@@ -412,11 +390,7 @@ const StudioPage: NextPage = () => {
                 {[
                   {
                     label: 'widgets',
-                    actions: [
-                      Act.WIDGET_DICTIONARY,
-                      Act.WIDGET_OPENAPI_TO_POSTMAN_V2,
-                      Act.WIDGET_PERIODIC_TABLE,
-                    ],
+                    actions: [Act.WIDGET_DICTIONARY, Act.WIDGET_PERIODIC_TABLE],
                   },
                 ].map(({ label = '', actions = [] }) => {
                   return (
