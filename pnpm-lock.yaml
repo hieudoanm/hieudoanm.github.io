@@ -36,7 +36,7 @@ importers:
 
   packages/mobile/ios: {}
 
-  packages/web/next.js:
+  packages/web:
     dependencies:
       '@silvia-odwyer/photon':
         specifier: 0.3.3
@@ -1111,10 +1111,6 @@ packages:
 
   '@jest/environment@30.0.4':
     resolution: {integrity: sha512-5NT+sr7ZOb8wW7C4r7wOKnRQ8zmRWQT2gW4j73IXAKp5/PX1Z8MCStBLQDYfIG3n1Sw0NRfYGdp0iIPVooBAFQ==}
-    engines: {node: ^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0}
-
-  '@jest/expect-utils@30.0.2':
-    resolution: {integrity: sha512-FHF2YdtFBUQOo0/qdgt+6UdBFcNPF/TkVzcc+4vvf8uaBzUlONytGBeeudufIHHW1khRfM1sBbRT1VCK7n/0dQ==}
     engines: {node: ^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0}
 
   '@jest/expect-utils@30.0.4':
@@ -2983,10 +2979,6 @@ packages:
     resolution: {integrity: sha512-+I6B/IkJc1o/2tiURyz/ivu/O0nKNEArIUB5O7zBrlDVJr22SCLH3xTeEry428LvFhRzIA1g8izguxJ/gbNcVQ==}
     engines: {node: '>= 0.8.0'}
 
-  expect@30.0.2:
-    resolution: {integrity: sha512-YN9Mgv2mtTWXVmifQq3QT+ixCL/uLuLJw+fdp8MOjKqu8K3XQh3o5aulMM1tn+O2DdrWNxLZTeJsCY/VofUA0A==}
-    engines: {node: ^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0}
-
   expect@30.0.4:
     resolution: {integrity: sha512-dDLGjnP2cKbEppxVICxI/Uf4YemmGMPNy0QytCbfafbpYk9AFQsxb8Uyrxii0RPK7FWgLGlSem+07WirwS3cFQ==}
     engines: {node: ^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0}
@@ -3593,10 +3585,6 @@ packages:
       ts-node:
         optional: true
 
-  jest-diff@30.0.2:
-    resolution: {integrity: sha512-2UjrNvDJDn/oHFpPrUTVmvYYDNeNtw2DlY3er8bI6vJJb9Fb35ycp/jFLd5RdV59tJ8ekVXX3o/nwPcscgXZJQ==}
-    engines: {node: ^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0}
-
   jest-diff@30.0.4:
     resolution: {integrity: sha512-TSjceIf6797jyd+R64NXqicttROD+Qf98fex7CowmlSn7f8+En0da1Dglwr1AXxDtVizoxXYZBlUQwNhoOXkNw==}
     engines: {node: ^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0}
@@ -3619,10 +3607,6 @@ packages:
 
   jest-leak-detector@30.0.2:
     resolution: {integrity: sha512-U66sRrAYdALq+2qtKffBLDWsQ/XoNNs2Lcr83sc9lvE/hEpNafJlq2lXCPUBMNqamMECNxSIekLfe69qg4KMIQ==}
-    engines: {node: ^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0}
-
-  jest-matcher-utils@30.0.2:
-    resolution: {integrity: sha512-1FKwgJYECR8IT93KMKmjKHSLyru0DqguThov/aWpFccC0wbiXGOxYEu7SScderBD7ruDOpl7lc5NG6w3oxKfaA==}
     engines: {node: ^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0}
 
   jest-matcher-utils@30.0.4:
@@ -6652,10 +6636,6 @@ snapshots:
       '@types/node': 24.0.10
       jest-mock: 30.0.2
 
-  '@jest/expect-utils@30.0.2':
-    dependencies:
-      '@jest/get-type': 30.0.1
-
   '@jest/expect-utils@30.0.4':
     dependencies:
       '@jest/get-type': 30.0.1
@@ -7340,7 +7320,7 @@ snapshots:
 
   '@types/jest@30.0.0':
     dependencies:
-      expect: 30.0.2
+      expect: 30.0.4
       pretty-format: 30.0.2
 
   '@types/jsdom@21.1.7':
@@ -8803,15 +8783,6 @@ snapshots:
 
   exit-x@0.2.2: {}
 
-  expect@30.0.2:
-    dependencies:
-      '@jest/expect-utils': 30.0.2
-      '@jest/get-type': 30.0.1
-      jest-matcher-utils: 30.0.2
-      jest-message-util: 30.0.2
-      jest-mock: 30.0.2
-      jest-util: 30.0.2
-
   expect@30.0.4:
     dependencies:
       '@jest/expect-utils': 30.0.4
@@ -9515,13 +9486,6 @@ snapshots:
       - babel-plugin-macros
       - supports-color
 
-  jest-diff@30.0.2:
-    dependencies:
-      '@jest/diff-sequences': 30.0.1
-      '@jest/get-type': 30.0.1
-      chalk: 4.1.2
-      pretty-format: 30.0.2
-
   jest-diff@30.0.4:
     dependencies:
       '@jest/diff-sequences': 30.0.1
@@ -9569,13 +9533,6 @@ snapshots:
   jest-leak-detector@30.0.2:
     dependencies:
       '@jest/get-type': 30.0.1
-      pretty-format: 30.0.2
-
-  jest-matcher-utils@30.0.2:
-    dependencies:
-      '@jest/get-type': 30.0.1
-      chalk: 4.1.2
-      jest-diff: 30.0.2
       pretty-format: 30.0.2
 
   jest-matcher-utils@30.0.4:
