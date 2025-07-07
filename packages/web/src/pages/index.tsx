@@ -4,19 +4,11 @@ import { useState } from 'react';
 import {
   FaAppStoreIos,
   FaAtom,
-  FaChessKnight,
-  FaCode,
-  FaGithub,
-  FaInstagram,
   FaLinkedin,
-  FaLinkedinIn,
-  FaPalette,
   FaPenToSquare,
-  FaRobot,
   FaSquareGithub,
   FaSquareInstagram,
   FaSquareTwitter,
-  FaTwitter,
   FaWindowRestore,
 } from 'react-icons/fa6';
 
@@ -25,15 +17,9 @@ const HomePage: NextPage = () => {
 
   const icons = [
     <FaAtom key="atom" className="text-5xl" />,
-    <FaCode key="code" className="text-5xl" />,
-    <FaRobot key="robot" className="text-5xl" />,
-    <FaGithub key="github" className="text-5xl" />,
-    <FaTwitter key="github" className="text-5xl" />,
-    <FaPalette key="design" className="text-5xl" />,
-    <FaLinkedinIn key="github" className="text-5xl" />,
-    <FaChessKnight key="chess" className="text-5xl" />,
+    <FaWindowRestore key="code" className="text-5xl" />,
+    <FaAppStoreIos key="robot" className="text-5xl" />,
     <FaPenToSquare key="notes" className="text-5xl" />,
-    <FaInstagram key="instagram" className="text-5xl" />,
   ];
 
   const apps = [
@@ -41,103 +27,91 @@ const HomePage: NextPage = () => {
       id: 'notes',
       href: '/posts',
       name: 'Notes',
-      icon: <FaPenToSquare />,
+      icon: <FaPenToSquare className="text-2xl" />,
       target: '_self',
     },
     {
       id: 'store',
       href: '/store',
-      name: 'store',
-      icon: <FaAppStoreIos />,
+      name: 'Store',
+      icon: <FaAppStoreIos className="text-2xl" />,
       target: '_self',
     },
     {
       id: 'atomic',
       href: '/atomic',
       name: 'Atomic',
-      icon: <FaAtom />,
+      icon: <FaAtom className="text-2xl" />,
       target: '_self',
     },
     {
       id: 'widgets',
       href: '/widgets',
       name: 'Widgets',
-      icon: <FaWindowRestore />,
+      icon: <FaWindowRestore className="text-2xl" />,
       target: '_self',
     },
     {
       id: 'github',
       href: 'https://github.com/hieudoanm',
       name: 'GitHub',
-      icon: <FaSquareGithub />,
+      icon: <FaSquareGithub className="text-2xl" />,
       target: '_blank',
     },
     {
       id: 'twitter',
       href: 'https://x.com/hieudoanm',
       name: 'Twitter',
-      icon: <FaSquareTwitter />,
+      icon: <FaSquareTwitter className="text-2xl" />,
       target: '_blank',
     },
     {
       id: 'linkedin',
       href: 'https://www.linkedin.com/in/hieudoanm',
       name: 'LinkedIn',
-      icon: <FaLinkedin />,
+      icon: <FaLinkedin className="text-2xl" />,
       target: '_blank',
     },
     {
       id: 'instagram',
       href: 'https://www.instagram.com/hieudoanm.github.io',
       name: 'Instagram',
-      icon: <FaSquareInstagram />,
+      icon: <FaSquareInstagram className="text-2xl" />,
       target: '_blank',
     },
   ];
 
-  const targets: string[] = [...new Set(apps.map(({ target }) => target))];
-  const appsByTarget = targets.map((target: string) => {
-    return { target, apps: apps.filter((app) => app.target === target) };
-  });
-
   return (
-    <div className="h-screen w-screen p-8">
-      <div className="flex h-full flex-col items-center justify-center gap-y-8">
+    <div className="min-h-screen w-full bg-neutral-950 p-6 text-neutral-100">
+      <div className="mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center gap-y-12">
         <button
-          className="flex aspect-square w-24 cursor-pointer items-center justify-center rounded-full bg-neutral-100 text-neutral-900"
+          className="flex aspect-square w-24 items-center justify-center rounded-full bg-neutral-100 text-neutral-900 shadow-lg transition-transform duration-300 hover:rotate-12"
           onClick={() => {
             const newIndex: number = Math.floor(Math.random() * icons.length);
-            setState((previous) => ({ ...previous, index: newIndex }));
+            setState((prev) => ({ ...prev, index: newIndex }));
           }}>
           {icons.at(index)}
         </button>
-        <p className="text-xl font-bold uppercase">
+
+        <h1 className="text-3xl font-bold tracking-wide uppercase">
           <Link href="/hieudoanm">Hieu Doan</Link>
-        </p>
-        <div className="flex flex-col items-center justify-center gap-y-8">
-          {appsByTarget.map(({ target, apps = [] }) => {
-            return (
-              <div
-                key={target}
-                className="flex flex-col items-center justify-center gap-y-2">
-                {apps.map(({ id, href, name, icon, target = '_self' }) => {
-                  return (
-                    <div
-                      key={id}
-                      className="flex items-center gap-x-1 border-b border-dotted">
-                      {icon}
-                      <Link
-                        href={href}
-                        target={target}
-                        className="tracking-wide lowercase">
-                        {name}
-                      </Link>
-                    </div>
-                  );
-                })}
+        </h1>
+
+        <div className="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          {apps.map(({ id, name, href, icon, target }) => (
+            <Link
+              key={id}
+              href={href}
+              target={target}
+              className="group block rounded-2xl border border-neutral-800 bg-neutral-900 p-6 text-center transition hover:border-neutral-700 hover:shadow-xl">
+              <div className="mb-4 flex justify-center text-neutral-300 group-hover:text-white">
+                {icon}
               </div>
-            );
-          })}
+              <div className="text-lg font-semibold capitalize group-hover:text-white">
+                {name}
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </div>
