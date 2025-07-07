@@ -46,7 +46,7 @@ const HomePage: NextPage = () => {
     },
     {
       id: 'store',
-      href: '/mini-app-store',
+      href: '/store',
       name: 'store',
       icon: <FaAppStoreIos />,
       target: '_self',
