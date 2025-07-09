@@ -17,6 +17,32 @@ date: '2025-06-30'
 
 ### Data Science Basics
 
+- Behind every intelligent system - from recommendation engines to voice assistants - lies something crucial: data.
+  - Data is a collection of discrete or continuous values that convey information, or simply sequences of symbols that may be further interpreted formally.
+  - Types of data
+    - Tabular (e.g., CSV, Excel files with numbers and categories)
+    - Textual (tweets, emails)
+    - Audio (podcasts, voice commands)
+    - Visual (images, videos)
+- What is Data Science?
+  - But how do we make sense of data? How do we turn raw information into useful insights or actions? That’s where data science comes in.
+    - Data science combines maths and statistics, specialised programming, AI and machine learning to uncover insights hidden in an organisation's data. [IBM]
+  - In short, data science is about extracting insights and knowledge from data.
+    - We have learned from last week that powerful AI systems like deep learning needs a lot of data and computing power. That's when data science comes in - to help manage and make sense of the massive (unstructured) datasets needed to train these systems.
+    - Datasets
+      - MNIST
+        - 70,000 grayscale images of handwritten digits (0–9), each 28x28 pixels.
+        - Used for: Digit recognition and basic image classification tasks.
+      - CIFAR-10
+        - A dataset of 60,000 small (32x32) colour images across 10 categories (e.g., aeroplane, dog, truck).
+        - Used for: Image classification, object recognition, image retrieval, segmentation tasks.
+      - CheXpert
+        - A large dataset of chest X-rays and associated reports from Stanford Medicine (over 200,000 images).
+        - Used for: Medical AI development, especially for detecting lung and heart conditions.
+      - Waymo dataset
+        - High-resolution data collected from autonomous vehicles, including LiDAR, camera footage, and maps
+        - Used for: Self-driving car research — object detection, motion prediction, lane tracking.
+
 ### Review and Reflect
 
 - Woebot is an AI-powered chatbot designed to support mental health through conversation, making it a real-world example of AI used in healthcare and therapy.
