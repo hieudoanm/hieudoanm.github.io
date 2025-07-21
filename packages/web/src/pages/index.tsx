@@ -1,9 +1,10 @@
+import { Glass } from '@web/components/Glass';
+import { Linear } from '@web/components/Linear';
 import { NextPage } from 'next';
 import Link from 'next/link';
-import { useState } from 'react';
 import {
   FaAppStoreIos,
-  FaAtom,
+  FaH,
   FaLinkedin,
   FaPenToSquare,
   FaSquareGithub,
@@ -12,87 +13,75 @@ import {
 } from 'react-icons/fa6';
 
 const HomePage: NextPage = () => {
-  const [{ index = 0 }, setState] = useState<{ index: number }>({ index: 0 });
-
-  const icons = [
-    <FaAtom key="atom" className="text-5xl" />,
-    <FaWindowRestore key="code" className="text-5xl" />,
-    <FaAppStoreIos key="robot" className="text-5xl" />,
-    <FaPenToSquare key="notes" className="text-5xl" />,
-  ];
-
   const apps = [
     {
       id: 'notes',
       href: '/posts',
       name: 'Notes',
-      icon: <FaPenToSquare className="text-2xl" />,
+      icon: <FaPenToSquare className="text-4xl" />,
       target: '_self',
     },
     {
       id: 'store',
       href: '/store',
       name: 'Store',
-      icon: <FaAppStoreIos className="text-2xl" />,
+      icon: <FaAppStoreIos className="text-4xl" />,
       target: '_self',
     },
     {
       id: 'widgets',
       href: '/widgets',
       name: 'Widgets',
-      icon: <FaWindowRestore className="text-2xl" />,
+      icon: <FaWindowRestore className="text-4xl" />,
       target: '_self',
     },
     {
       id: 'github',
       href: 'https://github.com/hieudoanm',
       name: 'GitHub',
-      icon: <FaSquareGithub className="text-2xl" />,
+      icon: <FaSquareGithub className="text-4xl" />,
       target: '_blank',
     },
     {
-      id: 'twitter',
+      id: 'x',
       href: 'https://x.com/hieudoanm',
-      name: 'Twitter',
-      icon: <FaSquareTwitter className="text-2xl" />,
+      name: 'X (Twitter)',
+      icon: <FaSquareTwitter className="text-4xl" />,
       target: '_blank',
     },
     {
       id: 'linkedin',
       href: 'https://www.linkedin.com/in/hieudoanm',
       name: 'LinkedIn',
-      icon: <FaLinkedin className="text-2xl" />,
+      icon: <FaLinkedin className="text-4xl" />,
       target: '_blank',
     },
   ];
 
   return (
-    <div className="min-h-screen w-screen overflow-hidden bg-neutral-950 p-8 text-neutral-100 md:h-screen">
-      <div className="mx-auto flex h-full max-w-6xl flex-col items-center justify-center gap-y-12 overflow-auto">
-        <button
-          className="flex aspect-square w-24 items-center justify-center rounded-full bg-neutral-100 text-neutral-900 shadow-lg transition-transform duration-300 hover:rotate-12"
-          onClick={() => {
-            const newIndex: number = Math.floor(Math.random() * icons.length);
-            setState((prev) => ({ ...prev, index: newIndex }));
-          }}>
-          {icons.at(index)}
-        </button>
-        <h1 className="text-3xl font-bold tracking-wide uppercase">
-          <Link href="/hieudoanm">Hieu Doan</Link>
-        </h1>
+    <div className="min-h-screen w-screen overflow-hidden p-8 md:h-screen">
+      <Linear.Background />
+      <div className="relative z-10 mx-auto flex h-full max-w-6xl flex-col items-center justify-center gap-y-12 overflow-auto">
+        <Link href="/hieudoanm">
+          <Glass.Button className="flex aspect-square w-36 items-center justify-center gap-x-2 rounded-full hover:rotate-12">
+            <FaH key="H" className="text-6xl" />
+          </Glass.Button>
+        </Link>
         <div className="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
           {apps.map(({ id, name, href, icon, target }) => (
             <Link
               key={id}
               href={href}
               target={target}
-              className="group block rounded-2xl border border-neutral-800 bg-neutral-900 p-6 text-center transition hover:border-neutral-700 hover:shadow-xl">
-              <div className="mb-4 flex justify-center text-neutral-300 group-hover:text-white">
-                {icon}
-              </div>
-              <div className="text-lg font-semibold capitalize group-hover:text-white">
-                {name}
-              </div>
+              className="group text-neutral-500 transition-colors hover:text-white">
+              <Glass.Card className="flex flex-col items-center justify-center gap-2">
+                <div className="flex justify-center group-hover:rotate-12">
+                  {icon}
+                </div>
+                <div className="text-center text-lg font-semibold capitalize">
+                  {name}
+                </div>
+              </Glass.Card>
             </Link>
           ))}
         </div>
