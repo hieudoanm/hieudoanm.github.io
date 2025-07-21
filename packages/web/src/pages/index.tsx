@@ -7,7 +7,6 @@ import {
   FaLinkedin,
   FaPenToSquare,
   FaSquareGithub,
-  FaSquareInstagram,
   FaSquareTwitter,
   FaWindowRestore,
 } from 'react-icons/fa6';
@@ -38,13 +37,6 @@ const HomePage: NextPage = () => {
       target: '_self',
     },
     {
-      id: 'atomic',
-      href: '/atomic',
-      name: 'Atomic',
-      icon: <FaAtom className="text-2xl" />,
-      target: '_self',
-    },
-    {
       id: 'widgets',
       href: '/widgets',
       name: 'Widgets',
@@ -72,18 +64,11 @@ const HomePage: NextPage = () => {
       icon: <FaLinkedin className="text-2xl" />,
       target: '_blank',
     },
-    {
-      id: 'instagram',
-      href: 'https://www.instagram.com/hieudoanm.github.io',
-      name: 'Instagram',
-      icon: <FaSquareInstagram className="text-2xl" />,
-      target: '_blank',
-    },
   ];
 
   return (
-    <div className="min-h-screen w-full bg-neutral-950 p-6 text-neutral-100">
-      <div className="mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center gap-y-12">
+    <div className="min-h-screen w-screen overflow-hidden bg-neutral-950 p-8 text-neutral-100 md:h-screen">
+      <div className="mx-auto flex h-full max-w-6xl flex-col items-center justify-center gap-y-12 overflow-auto">
         <button
           className="flex aspect-square w-24 items-center justify-center rounded-full bg-neutral-100 text-neutral-900 shadow-lg transition-transform duration-300 hover:rotate-12"
           onClick={() => {
@@ -92,12 +77,10 @@ const HomePage: NextPage = () => {
           }}>
           {icons.at(index)}
         </button>
-
         <h1 className="text-3xl font-bold tracking-wide uppercase">
           <Link href="/hieudoanm">Hieu Doan</Link>
         </h1>
-
-        <div className="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
           {apps.map(({ id, name, href, icon, target }) => (
             <Link
               key={id}

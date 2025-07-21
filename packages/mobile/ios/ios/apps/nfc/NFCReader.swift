@@ -35,8 +35,8 @@ class NFCReader: NSObject, NFCNDEFReaderSessionDelegate {
             // successful read during a single-tag read session, or because the
             // user canceled a multiple-tag read session from the UI or
             // programmatically using the invalidate method call.
-            if (readerError.code != .readerSessionInvalidationErrorFirstNDEFTagRead)
-                && (readerError.code != .readerSessionInvalidationErrorUserCanceled)
+            if readerError.code != .readerSessionInvalidationErrorFirstNDEFTagRead,
+               readerError.code != .readerSessionInvalidationErrorUserCanceled
             {
                 let alertController = UIAlertController(
                     title: "Session Invalidated",

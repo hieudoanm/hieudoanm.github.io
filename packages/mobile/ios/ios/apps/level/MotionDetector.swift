@@ -25,7 +25,7 @@ class MotionDetector: ObservableObject {
 
     private var currentOrientation: UIDeviceOrientation = .landscapeLeft
 
-    private var orientationObserver: NSObjectProtocol? = nil
+    private var orientationObserver: NSObjectProtocol?
 
     let notification = UIDevice.orientationDidChangeNotification
 
