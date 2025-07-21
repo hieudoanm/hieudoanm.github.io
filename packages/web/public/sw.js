@@ -43,11 +43,11 @@ define(['./workbox-01fd22c6'], function (e) {
           revision: 'd751713988987e9331980363e24189ce',
         },
         {
-          url: '/_next/static/R4KlhCEnIVaLg-Y5jofYJ/_buildManifest.js',
-          revision: '93c320ab17945f390f1cb3c42538b6bd',
+          url: '/_next/static/_GCMOA5M7wI5r1L52F1eF/_buildManifest.js',
+          revision: '43b9b9d66aa8f93f3bf210f1363ea4b5',
         },
         {
-          url: '/_next/static/R4KlhCEnIVaLg-Y5jofYJ/_ssgManifest.js',
+          url: '/_next/static/_GCMOA5M7wI5r1L52F1eF/_ssgManifest.js',
           revision: 'b6652df95db52feb4daf4eca35380933',
         },
         {
@@ -107,8 +107,8 @@ define(['./workbox-01fd22c6'], function (e) {
           revision: '6178b9863727ab26',
         },
         {
-          url: '/_next/static/chunks/pages/_app-c5fdb553ae700534.js',
-          revision: 'c5fdb553ae700534',
+          url: '/_next/static/chunks/pages/_app-3f7bc65907a98f9c.js',
+          revision: '3f7bc65907a98f9c',
         },
         {
           url: '/_next/static/chunks/pages/_error-093e96323adfd93b.js',
@@ -129,6 +129,10 @@ define(['./workbox-01fd22c6'], function (e) {
         {
           url: '/_next/static/chunks/pages/posts/%5B...id%5D-d1d53e2189093afc.js',
           revision: 'd1d53e2189093afc',
+        },
+        {
+          url: '/_next/static/chunks/pages/store-fcd9d332cffd32e7.js',
+          revision: 'fcd9d332cffd32e7',
         },
         {
           url: '/_next/static/chunks/pages/widgets-c9f33b3fb58c0fbf.js',
@@ -259,8 +263,8 @@ define(['./workbox-01fd22c6'], function (e) {
           revision: 'c5d3e1342d2407ee',
         },
         {
-          url: '/_next/static/css/06a89b2e271c8db0.css',
-          revision: '06a89b2e271c8db0',
+          url: '/_next/static/css/69c8592e9728000c.css',
+          revision: '69c8592e9728000c',
         },
         {
           url: '/_next/static/media/01.75a04b34.jpg',
@@ -335,8 +339,16 @@ define(['./workbox-01fd22c6'], function (e) {
           revision: 'd169ac56e9e59f9877aebd451d3012b5',
         },
         {
+          url: '/_next/static/media/569ce4b8f30dc480-s.p.woff2',
+          revision: 'ef6cefb32024deac234e82f932a95cbd',
+        },
+        {
           url: '/_next/static/media/747892c23ea88013-s.woff2',
           revision: 'a0761690ccf4441ace5cec893b82d4ab',
+        },
+        {
+          url: '/_next/static/media/8d697b304b401681-s.woff2',
+          revision: 'cc728f6c0adb04da0dfcb0fc436a8ae5',
         },
         {
           url: '/_next/static/media/93f479601ee12b01-s.p.woff2',
@@ -345,6 +357,10 @@ define(['./workbox-01fd22c6'], function (e) {
         {
           url: '/_next/static/media/9610d9e46709d722-s.woff2',
           revision: '7b7c0ef93df188a852344fc272fc096b',
+        },
+        {
+          url: '/_next/static/media/ba015fad6dcf6784-s.woff2',
+          revision: '8ea4f719af3312a055caf09f34c89a77',
         },
         {
           url: '/data/csv/psychology/hofstede.csv',

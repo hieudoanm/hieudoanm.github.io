@@ -3,17 +3,20 @@ import '@web/styles/globals.css';
 import { trpc } from '@web/utils/trpc';
 import 'github-markdown-css/github-markdown.css';
 import type { AppProps } from 'next/app';
-import { Geist_Mono } from 'next/font/google';
+import { Geist, Geist_Mono } from 'next/font/google';
 import Head from 'next/head';
 import { FC, useEffect } from 'react';
 
 const queryClient = new QueryClient();
 
-const mono = Geist_Mono({
-  weight: ['100', '900'],
-  style: ['normal'],
+const geistSans = Geist({
+  variable: '--font-geist-sans',
   subsets: ['latin'],
-  display: 'swap',
+});
+
+const geistMono = Geist_Mono({
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
 });
 
 const App: FC<AppProps> = ({ Component, pageProps }) => {
@@ -33,7 +36,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
       <Head>
         <title>Hieu Doan</title>
       </Head>
-      <div className={mono.className}>
+      <div className={`${geistSans.className} ${geistMono.className}`}>
         <QueryClientProvider client={queryClient}>
           <Component {...pageProps} />
         </QueryClientProvider>
