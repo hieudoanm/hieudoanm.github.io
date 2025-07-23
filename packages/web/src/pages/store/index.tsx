@@ -23,12 +23,12 @@ const StorePage: NextPage = () => {
 
   const miniApps: MiniApp[] = [
     {
-      id: 'mark',
-      href: 'https://markzuck.vercel.app/',
-      github: 'https://github.com/hieudoanm/mark',
+      id: 'micro',
+      href: 'https://microscope.vercel.app/',
+      github: 'https://github.com/hieudoanm/micro',
       image:
-        'https://raw.githubusercontent.com/hieudoanm/mark/refs/heads/master/images/cover.png',
-      name: 'Mark',
+        'https://raw.githubusercontent.com/hieudoanm/micro/refs/heads/master/images/cover.png',
+      name: 'Micro',
       category: 'saas',
       tags: ['cli', 'extension', 'ios', 'macos', 'web'],
     },
