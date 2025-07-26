@@ -1,3 +1,4 @@
+import { Glass } from '@web/components/Glass';
 import { getSortedPostsData } from '@web/utils/posts';
 import { NextPage } from 'next';
 import Link from 'next/link';
@@ -18,27 +19,25 @@ const NotesPage: NextPage<{
   const [{ search }, setState] = useState<{ search: string }>({ search: '' });
 
   return (
-    <main className="flex h-screen flex-col overflow-hidden">
-      <div className="border-b border-neutral-800">
-        <div className="container mx-auto px-8 py-4">
-          <input
-            id="search"
-            name="search"
-            placeholder="Search"
-            className="w-full rounded border border-neutral-800 px-4 py-2"
-            value={search}
-            onChange={(event) => {
-              setState((previous) => ({
-                ...previous,
-                search: event.target.value,
-              }));
-            }}
-          />
-        </div>
+    <main className="flex h-screen flex-col gap-y-4 overflow-hidden md:gap-y-8">
+      <div className="container mx-auto px-4 md:px-8">
+        <Glass.Input
+          id="search"
+          name="search"
+          placeholder="Search"
+          className="w-full"
+          value={search}
+          onChange={(event) => {
+            setState((previous) => ({
+              ...previous,
+              search: event.target.value,
+            }));
+          }}
+        />
       </div>
       <div className="grow overflow-auto">
         <div className="container mx-auto px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3 xl:grid-cols-4">
             {posts
               .filter(({ id = '', title = '' }) => {
                 const tags: string[] = id
@@ -61,7 +60,7 @@ const NotesPage: NextPage<{
                 tags.pop();
 
                 return (
-                  <div
+                  <Glass.Card
                     key={id}
                     className="col-span-1 border-b border-neutral-800 py-4">
                     <div className="flex flex-col gap-y-2">
@@ -90,7 +89,7 @@ const NotesPage: NextPage<{
                         ))}
                       </div>
                     </div>
-                  </div>
+                  </Glass.Card>
                 );
               })}
           </div>

@@ -1,3 +1,4 @@
+import { Glass } from '@web/components/Glass';
 import { logger } from '@web/utils/log';
 import { getSortedPostsData } from '@web/utils/posts';
 import { isSubset } from '@web/utils/set';
@@ -101,8 +102,8 @@ const PostPage: NextPage<{
   return (
     <div className="container mx-auto min-h-screen p-8">
       <article className="markdown-body border-b border-neutral-800 bg-neutral-900!">
-        <button
-          className="w-full cursor-pointer rounded bg-red-500 py-2 font-semibold"
+        <Glass.Button
+          className="w-full"
           disabled={loading}
           onClick={() => {
             setState((previous) => ({ ...previous, loading: true }));
@@ -115,24 +116,23 @@ const PostPage: NextPage<{
             setState((previous) => ({ ...previous, loading: false }));
           }}>
           {loading ? 'Downloading ...' : 'Download PDF'}
-        </button>
+        </Glass.Button>
         <h1 className="text-xl font-black">{postData.title}</h1>
-        <small>{postData.date}</small>
+        <Glass.Badge>{postData.date}</Glass.Badge>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
-      <div>
+      <div className="flex flex-col gap-y-4 md:gap-y-8">
         {relatedPosts.map(({ id = '', title = '', date = '' }) => {
           return (
-            <div
-              key={id}
-              className="flex flex-col gap-y-1 border-b border-neutral-800 py-4">
-              <Link href={`/posts/${id}`}>
+            <Link key={id} href={`/posts/${id}`}>
+              <Glass.Card className="flex flex-col gap-y-1 border-b border-neutral-800 py-4">
                 <p className="m-0 p-0">
                   <b>{title}</b>
                 </p>
-              </Link>
-              <small>Date: {date}</small>
-            </div>
+
+                <small>Date: {date}</small>
+              </Glass.Card>
+            </Link>
           );
         })}
       </div>
