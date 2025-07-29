@@ -259,6 +259,14 @@ define(['./workbox-01fd22c6'], function (e) {
           revision: '4e1c4e2ceb5de610',
         },
         {
+          url: '/_next/static/e5LfaQUPlAuooVrw3dfjj/_buildManifest.js',
+          revision: '3dd7bf8c83dab0b8d73dbd6fdd5be8d6',
+        },
+        {
+          url: '/_next/static/e5LfaQUPlAuooVrw3dfjj/_ssgManifest.js',
+          revision: 'b6652df95db52feb4daf4eca35380933',
+        },
+        {
           url: '/_next/static/media/01.75a04b34.jpg',
           revision: 'e2e5459681f56ad6b604d93113efd941',
         },
@@ -353,14 +361,6 @@ define(['./workbox-01fd22c6'], function (e) {
         {
           url: '/_next/static/media/ba015fad6dcf6784-s.woff2',
           revision: '8ea4f719af3312a055caf09f34c89a77',
-        },
-        {
-          url: '/_next/static/qWH-k29_jSnh5LSXUk7er/_buildManifest.js',
-          revision: '3dd7bf8c83dab0b8d73dbd6fdd5be8d6',
-        },
-        {
-          url: '/_next/static/qWH-k29_jSnh5LSXUk7er/_ssgManifest.js',
-          revision: 'b6652df95db52feb4daf4eca35380933',
         },
         {
           url: '/data/csv/psychology/hofstede.csv',
