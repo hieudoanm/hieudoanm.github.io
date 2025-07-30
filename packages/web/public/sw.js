@@ -43,6 +43,14 @@ define(['./workbox-01fd22c6'], function (e) {
           revision: 'd751713988987e9331980363e24189ce',
         },
         {
+          url: '/_next/static/-2DK4TK9LssB4IiDGz28Z/_buildManifest.js',
+          revision: '3dd7bf8c83dab0b8d73dbd6fdd5be8d6',
+        },
+        {
+          url: '/_next/static/-2DK4TK9LssB4IiDGz28Z/_ssgManifest.js',
+          revision: 'b6652df95db52feb4daf4eca35380933',
+        },
+        {
           url: '/_next/static/chunks/2579-5606dba475b97845.js',
           revision: '5606dba475b97845',
         },
@@ -257,14 +265,6 @@ define(['./workbox-01fd22c6'], function (e) {
         {
           url: '/_next/static/css/4e1c4e2ceb5de610.css',
           revision: '4e1c4e2ceb5de610',
-        },
-        {
-          url: '/_next/static/e5LfaQUPlAuooVrw3dfjj/_buildManifest.js',
-          revision: '3dd7bf8c83dab0b8d73dbd6fdd5be8d6',
-        },
-        {
-          url: '/_next/static/e5LfaQUPlAuooVrw3dfjj/_ssgManifest.js',
-          revision: 'b6652df95db52feb4daf4eca35380933',
         },
         {
           url: '/_next/static/media/01.75a04b34.jpg',

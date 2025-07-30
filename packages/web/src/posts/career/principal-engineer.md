@@ -20,6 +20,10 @@ date: '2025-07-30'
   - [🔄 Harness CI/CD](#-harness-cicd)
   - [☁️ AWS](#️-aws)
   - [Solution Design](#solution-design)
+- [FAQs](#faqs)
+  - [SQL vs NoSQL](#sql-vs-nosql)
+  - [Monolith vs Microservices](#monolith-vs-microservices)
+  - [Vertical vs Horizontal](#vertical-vs-horizontal)
 
 ## 🔧 Back-end
 
@@ -427,3 +431,45 @@ class OrderService {
       - Protocols like Reactive Streams or frameworks like Project Reactor, Akka implement pull-based flow control:
     - Queue Length Monitoring
       - Monitor queue depth (Kafka lag, RabbitMQ queue length).
+
+## FAQs
+
+### SQL vs NoSQL
+
+| Aspect           | SQL (Relational)                                  | NoSQL (Non-relational)                                |
+| ---------------- | ------------------------------------------------- | ----------------------------------------------------- |
+| Data Model       | Tables with fixed schema                          | Document, key-value, columnar, or graph (flexible)    |
+| Consistency      | Strong ACID transactions                          | Often eventual consistency (tunable)                  |
+| Query Complexity | Supports joins, aggregations, complex queries     | Limited joins; optimized for specific access patterns |
+| Scalability      | Vertical scaling (scale-up)                       | Horizontal scaling (sharding, scale-out)              |
+| Schema Evolution | Rigid; migrations required                        | Flexible; schema-less or dynamic                      |
+| Use Cases        | Financial systems, ERP, strong consistency needed | Real-time analytics, IoT, flexible evolving data      |
+| Maturity/Tooling | Mature ecosystem (ORMs, tools, drivers)           | Newer, evolving ecosystem                             |
+| Cost/Complexity  | Can be costly to scale horizontally               | Operational complexity in sharding & consistency      |
+
+### Monolith vs Microservices
+
+| Aspect                 | Monolith                                             | Microservices                                          |
+| ---------------------- | ---------------------------------------------------- | ------------------------------------------------------ |
+| Architecture           | Single codebase & deployment                         | Multiple independent services                          |
+| Development Speed      | Fast to start; simple CI/CD                          | Independent teams; faster feature velocity at scale    |
+| Scalability            | Scale entire app together                            | Scale services independently                           |
+| Operational Complexity | Simple deployment, debugging, monitoring             | Requires service discovery, API Gateway, observability |
+| Team Size Fit          | Small teams (startup phase)                          | Large teams (clear domain boundaries)                  |
+| Data Consistency       | Single DB → easy consistency                         | Distributed data → eventual consistency (Saga)         |
+| Tech Stack Choice      | One tech stack                                       | Polyglot per service possible                          |
+| Failure Isolation      | Failure affects whole system                         | Failures isolated per service                          |
+| Migration Path         | Can evolve into modular monolith, then microservices | Start microservices only if domain is complex          |
+
+### Vertical vs Horizontal
+
+| Aspect               | Vertical Scaling (Scale Up)                             | Horizontal Scaling (Scale Out)                                 |
+| -------------------- | ------------------------------------------------------- | -------------------------------------------------------------- |
+| Definition           | Add more resources (CPU, RAM, disk) to a single machine | Add more machines/nodes to distribute the load                 |
+| Complexity           | Simple to implement; minimal code changes               | Requires distributed systems design (load balancing, sharding) |
+| Hardware Limitations | Limited by max capacity of a single machine             | Can scale almost infinitely by adding more nodes               |
+| Fault Tolerance      | Single point of failure; if server fails, system down   | High availability; other nodes handle failures                 |
+| Cost                 | Expensive for high-end hardware (diminishing returns)   | Cheaper commodity hardware; cost grows linearly                |
+| Data Management      | Centralized; no data distribution required              | Requires partitioning, replication, consistency management     |
+| Use Cases            | Small/medium apps, early-stage startups                 | Large-scale apps, microservices, cloud-native systems          |
+| Example              | Upgrading server from 8-core to 64-core CPU             | Adding 10 servers behind a load balancer                       |
