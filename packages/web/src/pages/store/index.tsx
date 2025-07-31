@@ -24,7 +24,7 @@ const StorePage: NextPage = () => {
   const miniApps: MiniApp[] = [
     {
       id: 'micro',
-      href: 'https://microscope.vercel.app/',
+      href: 'https://microscopes.vercel.app/',
       github: 'https://github.com/hieudoanm/micro',
       image:
         'https://raw.githubusercontent.com/hieudoanm/micro/refs/heads/master/images/cover.png',

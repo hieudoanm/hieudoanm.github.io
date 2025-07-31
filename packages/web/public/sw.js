@@ -43,11 +43,11 @@ define(['./workbox-01fd22c6'], function (e) {
           revision: 'd751713988987e9331980363e24189ce',
         },
         {
-          url: '/_next/static/-2DK4TK9LssB4IiDGz28Z/_buildManifest.js',
-          revision: '3dd7bf8c83dab0b8d73dbd6fdd5be8d6',
+          url: '/_next/static/GVbzjpbXvkRlql23M1jgB/_buildManifest.js',
+          revision: '10396b593f3128a29c26eb091c406c10',
         },
         {
-          url: '/_next/static/-2DK4TK9LssB4IiDGz28Z/_ssgManifest.js',
+          url: '/_next/static/GVbzjpbXvkRlql23M1jgB/_ssgManifest.js',
           revision: 'b6652df95db52feb4daf4eca35380933',
         },
         {
@@ -131,8 +131,8 @@ define(['./workbox-01fd22c6'], function (e) {
           revision: '63f736b88953fea9',
         },
         {
-          url: '/_next/static/chunks/pages/store-0aa0bc25eec1d03d.js',
-          revision: '0aa0bc25eec1d03d',
+          url: '/_next/static/chunks/pages/store-0fcae5408201e153.js',
+          revision: '0fcae5408201e153',
         },
         {
           url: '/_next/static/chunks/pages/widgets-c9f33b3fb58c0fbf.js',
