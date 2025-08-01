@@ -20,11 +20,11 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: '10.13.1'
+          version: '10.14.0'
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '24.4.1'
+          node-version: '24.5.0'
       - name: Install Dependencies
         run: pnpm install
       - name: Linting

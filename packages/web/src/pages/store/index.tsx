@@ -8,13 +8,18 @@ type TagMobile = 'android' | 'ios';
 type TagNative = 'cli' | 'linux' | 'macos' | 'windows';
 type Tag = TagBrowser | TagMobile | TagNative;
 
+enum Category {
+  SAAS = 'saas',
+  TEMPLATE = 'template',
+}
+
 type MiniApp = {
   id: string;
   href: string;
   github: string;
   image: string;
   name: string;
-  category: 'saas' | 'template';
+  category: Category;
   tags: Tag[];
 };
 
@@ -29,7 +34,7 @@ const StorePage: NextPage = () => {
       image:
         'https://raw.githubusercontent.com/hieudoanm/micro/refs/heads/master/images/cover.png',
       name: 'Micro',
-      category: 'saas',
+      category: Category.SAAS,
       tags: ['cli', 'extension', 'ios', 'macos', 'web'],
     },
     {
@@ -39,7 +44,7 @@ const StorePage: NextPage = () => {
       image:
         'https://raw.githubusercontent.com/hieudoanm/reverse-proxy/refs/heads/master/images/cover.png',
       name: 'Reverse Proxy',
-      category: 'saas',
+      category: Category.SAAS,
       tags: ['web'],
     },
     {
@@ -49,7 +54,7 @@ const StorePage: NextPage = () => {
       image:
         'https://raw.githubusercontent.com/hieudoanm/atomic/refs/heads/master/images/cover.png',
       name: 'Atomic',
-      category: 'template',
+      category: Category.TEMPLATE,
       tags: ['web'],
     },
     {
@@ -59,7 +64,7 @@ const StorePage: NextPage = () => {
       image:
         'https://raw.githubusercontent.com/hieudoanm/micro-saas/refs/heads/master/images/cover.png',
       name: 'Micro SaaS',
-      category: 'template',
+      category: Category.TEMPLATE,
       tags: ['web'],
     },
     {
@@ -69,7 +74,7 @@ const StorePage: NextPage = () => {
       image:
         'https://raw.githubusercontent.com/hieudoanm/telegram-mini-app/refs/heads/master/images/cover.png',
       name: 'Telegram Mini App',
-      category: 'template',
+      category: Category.TEMPLATE,
       tags: ['web'],
     },
   ];
