@@ -38,16 +38,6 @@ const StorePage: NextPage = () => {
       tags: ['cli', 'extension', 'ios', 'macos', 'web'],
     },
     {
-      id: 'reverse-proxy',
-      href: 'https://hieudoanm-reverse-proxy.vercel.app/',
-      github: 'https://github.com/hieudoanm/reverse-proxy',
-      image:
-        'https://raw.githubusercontent.com/hieudoanm/reverse-proxy/refs/heads/master/images/cover.png',
-      name: 'Reverse Proxy',
-      category: Category.SAAS,
-      tags: ['web'],
-    },
-    {
       id: 'atomic',
       href: 'https://hieudoanm.github.io/atomic',
       github: 'https://github.com/hieudoanm/atomic',
