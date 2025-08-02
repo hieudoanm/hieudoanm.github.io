@@ -43,6 +43,14 @@ define(['./workbox-01fd22c6'], function (e) {
           revision: 'd751713988987e9331980363e24189ce',
         },
         {
+          url: '/_next/static/8EEdaon2-lA9bC5BaKhso/_buildManifest.js',
+          revision: 'e9bb7b0991af9da9c5d73896b41fa283',
+        },
+        {
+          url: '/_next/static/8EEdaon2-lA9bC5BaKhso/_ssgManifest.js',
+          revision: 'b6652df95db52feb4daf4eca35380933',
+        },
+        {
           url: '/_next/static/chunks/2579-5606dba475b97845.js',
           revision: '5606dba475b97845',
         },
@@ -123,8 +131,8 @@ define(['./workbox-01fd22c6'], function (e) {
           revision: '63f736b88953fea9',
         },
         {
-          url: '/_next/static/chunks/pages/store-e279b5ae9fffe0c0.js',
-          revision: 'e279b5ae9fffe0c0',
+          url: '/_next/static/chunks/pages/store-c90c35cd60d0e4e2.js',
+          revision: 'c90c35cd60d0e4e2',
         },
         {
           url: '/_next/static/chunks/pages/widgets-c9f33b3fb58c0fbf.js',
@@ -257,14 +265,6 @@ define(['./workbox-01fd22c6'], function (e) {
         {
           url: '/_next/static/css/4e1c4e2ceb5de610.css',
           revision: '4e1c4e2ceb5de610',
-        },
-        {
-          url: '/_next/static/kmI-DEJGyjj_qX9Ur3MzG/_buildManifest.js',
-          revision: 'b8a41ee139ef315838be8b9b0d2c9cfe',
-        },
-        {
-          url: '/_next/static/kmI-DEJGyjj_qX9Ur3MzG/_ssgManifest.js',
-          revision: 'b6652df95db52feb4daf4eca35380933',
         },
         {
           url: '/_next/static/media/01.75a04b34.jpg',
