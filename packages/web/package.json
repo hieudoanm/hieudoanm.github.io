@@ -67,7 +67,7 @@
     "remark-html": "16.0.1",
     "tesseract.js": "6.0.1",
     "uuid": "11.1.0",
-    "yaml": "2.8.0",
+    "yaml": "2.8.1",
     "zod": "4.0.15"
   },
   "devDependencies": {
