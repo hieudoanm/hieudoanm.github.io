@@ -98,12 +98,12 @@ export const WidgetCalendarMonthly: FC = () => {
                       <button
                         type="button"
                         onClick={() => {
-                          logger.info(
-                            weekdays[clock.weekday],
+                          logger.info({
+                            weekday: weekdays[clock.weekday],
                             month,
                             date,
-                            clock.year
-                          );
+                            year: clock.year,
+                          });
                         }}>
                         {date === clock.date ? (
                           <div className="aspect-square w-2 rounded-full bg-red-500" />

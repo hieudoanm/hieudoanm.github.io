@@ -25,7 +25,7 @@ export const WidgetCompassCompact: FC = () => {
 
   useEffect(() => {
     const handleOrientation = (event: DeviceOrientationEvent) => {
-      logger.info('event', event);
+      logger.info(`event=${event}`);
       if (event.alpha !== null) {
         setCompass((previous) => ({
           ...previous,
@@ -82,7 +82,7 @@ export const WidgetCompassCompact: FC = () => {
   }, []);
 
   if (error) {
-    logger.error('error', error);
+    logger.error(`error=${error}`);
   }
 
   return (

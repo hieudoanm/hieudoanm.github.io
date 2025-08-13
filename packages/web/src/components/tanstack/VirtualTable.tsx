@@ -6,8 +6,7 @@ import {
   useReactTable,
 } from '@tanstack/react-table';
 import { useVirtualizer } from '@tanstack/react-virtual';
-import { logger } from '@web/utils/log';
-import { FC, RefObject, useEffect, useState } from 'react';
+import { FC, RefObject, useState } from 'react';
 
 const NODE_ENV = process.env.NODE_ENV ?? 'development';
 
@@ -49,10 +48,6 @@ export const TanStackVirtualTable: FC<TanstackVirtualTableProps> = ({
     estimateSize: () => 34,
     overscan: 20,
   });
-
-  useEffect(() => {
-    logger.info('current', parentRef.current);
-  }, [parentRef]);
 
   if (parentRef.current === null) {
     return <></>;

@@ -132,7 +132,6 @@ export const svg2png = (base64: string): Promise<string> => {
 export const getMimeType = (base64: string): string | null => {
   const regexp: RegExp = /^data:(.*?);base64,/;
   const match = regexp.exec(base64);
-  logger.info('match', match);
   return match ? match[1] : null;
 };
 

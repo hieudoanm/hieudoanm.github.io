@@ -16,7 +16,7 @@ export const appRouter = router({
         const { openapi } = options.input;
         const { data: postman, error } = await tryCatch(convert(openapi));
         if (error) {
-          logger.error('error', error);
+          logger.error(`error=${error}`);
           return {} as ConvertResult;
         }
         return postman;
