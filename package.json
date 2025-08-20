@@ -2,7 +2,7 @@
   "name": "hieudoanm.github.io",
   "version": "0.0.1",
   "description": "hieudoanm",
-  "packageManager": "pnpm@10.14.0",
+  "packageManager": "pnpm@10.15.0",
   "keywords": [
     "hieudoanm",
     "github"
