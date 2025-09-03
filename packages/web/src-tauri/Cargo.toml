@@ -21,6 +21,6 @@ tauri-build = { version = "=2.4.1", features = [] }
 glib = { version = "=0.21.1" }
 serde_json = { version = "=1.0.143" }
 serde = { version = "=1.0.219", features = ["derive"] }
-log = { version = "=0.4.27" }
+log = { version = "=0.4.28" }
 tauri = { version = "=2.8.4", features = [] }
 tauri-plugin-log = { version = "=2.7.0" }
