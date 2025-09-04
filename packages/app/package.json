@@ -1,0 +1,91 @@
+{
+  "name": "@hieudoanm.github.io/app",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Web - Next.js",
+  "main": "index.js",
+  "keywords": [
+    "next.js"
+  ],
+  "homepage": "https://hieudoanm.github.io",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hieudoanm/hieudoanm.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hieudoanm/hieudoanm.github.io/issues"
+  },
+  "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io/)",
+  "license": "GPL-3.0",
+  "packageManager": "pnpm@10.32.1",
+  "engines": {
+    "node": "25.8.1"
+  },
+  "scripts": {
+    "lint": "eslint . --fix",
+    "format": "prettier --cache --write .",
+    "predev": "rimraf .next && kill-port 3000",
+    "dev": "next dev --turbopack",
+    "pretest": "jest --clearCache",
+    "test": "jest",
+    "prebuild": "hd remove .next,../../docs",
+    "build": "next build --turbopack",
+    "postbuild": "touch ../../docs/.nojekyll",
+    "prestart": "hd kill 3000",
+    "start": "next start",
+    "tauri": "tauri",
+    "tauri:build": "./scripts/build-desktop.sh"
+  },
+  "dependencies": {
+    "@capacitor/android": "8.2.0",
+    "@capacitor/core": "8.2.0",
+    "@capacitor/ios": "8.2.0",
+    "@silvia-odwyer/photon": "0.3.3",
+    "@tanstack/react-query": "5.90.21",
+    "@tanstack/react-table": "8.21.3",
+    "@tanstack/react-virtual": "3.13.23",
+    "@trpc/client": "11.13.4",
+    "@trpc/next": "11.13.4",
+    "@trpc/react-query": "11.13.4",
+    "@trpc/server": "11.13.4",
+    "d3": "7.9.0",
+    "next": "16.1.6",
+    "next-pwa": "5.6.0",
+    "pino": "10.3.1",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "react-icons": "5.6.0",
+    "uuid": "13.0.0",
+    "zod": "4.3.6"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.2.0",
+    "@eslint/eslintrc": "3.3.5",
+    "@hieudoanm.github.io/tools": "workspace:*",
+    "@tailwindcss/postcss": "4.2.1",
+    "@tanstack/react-query": "5.90.21",
+    "@tauri-apps/cli": "2.10.1",
+    "@testing-library/jest-dom": "6.9.1",
+    "@testing-library/react": "16.3.2",
+    "@types/d3": "7.4.3",
+    "@types/jest": "30.0.0",
+    "@types/next-pwa": "5.6.9",
+    "@types/node": "25.5.0",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@types/web-bluetooth": "0.0.21",
+    "babel-plugin-react-compiler": "1.0.0",
+    "daisyui": "5.5.19",
+    "eslint": "10.0.3",
+    "eslint-config-next": "16.1.6",
+    "jest": "30.3.0",
+    "jest-environment-jsdom": "30.3.0",
+    "postcss": "8.5.8",
+    "prettier": "3.8.1",
+    "prettier-plugin-tailwindcss": "0.7.2",
+    "tailwindcss": "4.2.1",
+    "ts-jest": "29.4.6",
+    "ts-node": "10.9.2",
+    "typescript": "5.9.3"
+  }
+}

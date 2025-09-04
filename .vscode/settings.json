@@ -2,33 +2,16 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
-  "editor.wordWrap": "off",
-  "vsicons.presets.angular": true,
-  "[markdown]": {
-    "editor.unicodeHighlight.ambiguousCharacters": true,
-    "editor.unicodeHighlight.invisibleCharacters": true,
-    "editor.wordWrap": "off",
-    "diffEditor.ignoreTrimWhitespace": true,
-    "editor.quickSuggestions": {
-      "comments": "on",
-      "strings": "on",
-      "other": "on"
-    }
-  },
+  "editor.formatOnType": true,
+  "editor.insertSpaces": true,
+  "editor.wordWrap": "on",
   "[go]": {
-    "editor.defaultFormatter": "golang.go",
-    "editor.formatOnSave": true,
-    "editor.insertSpaces": true
-  },
-  "[monkeyc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnPaste": true,
-    "editor.formatOnSave": true
+    "editor.defaultFormatter": "golang.go"
   },
   "[python]": {
-    "editor.defaultFormatter": "ms-python.python"
+    "editor.defaultFormatter": "charliermarsh.ruff"
   },
-  "gopls": {
-    "experimentalWorkspaceModule": true
+  "[markdown]": {
+    "editor.wordWrap": "off"
   }
 }
