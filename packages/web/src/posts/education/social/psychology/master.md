@@ -18,23 +18,20 @@ date: '2025-05-01'
 
 ## Master of Computational NeuroScience
 
-| Country        | Group         | University                                       | Length  | Fee     |
-| -------------- | ------------- | ------------------------------------------------ | ------- | ------- |
-| United Kingdom | Russell Group | [Imperial College London][icl]                   | 1 year  | £40,900 |
-| United Kingdom | Russell Group | [University College London][ucl]                 | 2 years | £34,400 |
-| United Kingdom | Russell Group | [University of Edinburgh][edinburgh-phd]         | 1 year  | £35,300 |
-| United Kingdom | Russell Group | [University of Edinburgh][edinburgh-msc]         |         |         |
-| United Kingdom | Russell Group | [University of Sheffield][sheffield]             | 1 year  | 32,350  |
-| United Kingdom | Russell Group | [University of Birmingham][birmingham]           | 1 year  |         |
-| United Kingdom | Russell Group | [University of Nottingham][nottingham]           | 1 year  | £28,600 |
-| United Kingdom | Russell Group | [Newcastle University][newcastle]                |         |         |
-| United Kingdom |               | [Goldsmiths, University of London][goldsmith]    | 1 year  | £17,430 |
-| United Kingdom |               | [Middlesex University][middlesex]                |         |         |
-| United Kingdom |               | [Birkbeck, University of London][birkbeck]       |         |         |
-| Netherlands    |               | [University of Groningen][groningen]             | 2 years | €24,200 |
-| Netherlands    |               | [Radboud University][radboud]                    |         | €18,296 |
-| Germany        |               | [Technische Universität Berlin (TU Berlin)][tub] |         |         |
-| France         |               | [Université Paris-Saclay][saclay]                |         |         |
+| Country        | Group                | University                                       | Length  | Fee     |
+| -------------- | -------------------- | ------------------------------------------------ | ------- | ------- |
+| United Kingdom | Russell Group        | [Imperial College London][icl]                   | 1 year  | £40,900 |
+| United Kingdom | Russell Group        | [University College London][ucl]                 | 2 years | £34,400 |
+| United Kingdom | Russell Group        | [University of Sheffield][sheffield]             | 1 year  | £33,970 |
+| United Kingdom | Russell Group        | [University of Birmingham][birmingham]           | 1 year  | £30,370 |
+| United Kingdom | Russell Group        | [University of Nottingham][nottingham]           | 1 year  | £33,000 |
+| United Kingdom | University of London | [Goldsmiths, University of London][goldsmith]    | 1 year  | £20,000 |
+| United Kingdom | University of London | [Birkbeck, University of London][birkbeck]       | 1 year  | £20,340 |
+| United Kingdom |                      | [Middlesex University][middlesex]                |         | £15,100 |
+| Netherlands    |                      | [University of Groningen][groningen]             | 2 years | €24,200 |
+| Netherlands    |                      | [Radboud University][radboud]                    |         | €18,296 |
+| Germany        |                      | [Technische Universität Berlin (TU Berlin)][tub] |         |         |
+| France         |                      | [Université Paris-Saclay][saclay]                |         |         |
 
 ### Goldsmiths, University of London
 
@@ -111,18 +108,29 @@ Optional
 - Compulsory
 - Optional
 
-[birmingham]: https://www.birmingham.ac.uk/postgraduate/courses/taught/psych/computation-neuro-cognitive-robotics.aspx
-[edinburgh-phd]: https://www.ed.ac.uk/studying/postgraduate/degrees/index.php?r=site/view&id=489
-[edinburgh-msc]: https://www.ed.ac.uk/studying/postgraduate/degrees/index.php?r=site/view&edition=2024&id=2
+<!-- Russell -->
+
+[birmingham]: https://www.birmingham.ac.uk/study/postgraduate/subjects/psychology-courses/cognitive-neuroimaging-and-data-science-msc
+[nottingham]: https://www.nottingham.ac.uk/pgstudy/course/taught/computational-neuroscience-cognition-and-ai-msc
+[sheffield]: https://sheffield.ac.uk/postgraduate/taught/courses/2025/cognitive-and-computational-neuroscience-msc
+
+<!-- London -->
+
+[ucl]: https://www.ucl.ac.uk/prospective-students/graduate/research-degrees/gatsby-computational-neuroscience-unit-mphil-phd
 [goldsmith]: https://www.gold.ac.uk/pg/msc-computational-cognitive-neuroscience
+[birkbeck]: https://www.bbk.ac.uk/courses/postgraduate/cognitive-science-and-artificial-intelligence
+[middlesex]: https://digital.ucas.com/coursedisplay/courses/f61620d7-f07d-4764-905f-cf672801d292?academicYearId=2025&courseOptionId=5e80a922-271b-4c0e-a9fa-d90a7e279405#provider-information
+
+<!-- Netherlands -->
+
 [groningen]: https://www.rug.nl/masters/computational-cognitive-science
 [icl]: https://www.imperial.ac.uk/study/courses/postgraduate-taught/neurotechnology/
-[newcastle]: https://www.ncl.ac.uk/postgraduate/degrees/5199f/
-[nottingham]: https://www.nottingham.ac.uk/pgstudy/course/taught/computational-neuroscience-cognition-and-ai-msc
 [radboud]: https://www.ru.nl/en/education/masters/cognitive-neuroscience-research/natural-computing-and-neurotechnology
-[sheffield]: https://www.sheffield.ac.uk/postgraduate/taught/courses/2024/cognitive-and-computational-neuroscience-msc
-[ucl]: https://www.ucl.ac.uk/prospective-students/graduate/research-degrees/gatsby-computational-neuroscience-unit-mphil-phd
+
+<!-- German -->
+
 [tub]: https://www.bccn-berlin.de/master-program.html
+
+<!-- France -->
+
 [saclay]: https://www.universite-paris-saclay.fr/en/education/master/life-sciences-and-health/m2-computational-neurosciences-and-neuroengineering
-[middlesex]: https://digital.ucas.com/coursedisplay/courses/f61620d7-f07d-4764-905f-cf672801d292?academicYearId=2025&courseOptionId=5e80a922-271b-4c0e-a9fa-d90a7e279405#provider-information
-[birkbeck]: https://www.bbk.ac.uk/courses/postgraduate/cognitive-science-and-artificial-intelligence

@@ -43,8 +43,16 @@ define(['./workbox-01fd22c6'], function (e) {
           revision: 'd751713988987e9331980363e24189ce',
         },
         {
-          url: '/_next/static/chunks/1084-296aad5edd9a8364.js',
-          revision: '296aad5edd9a8364',
+          url: '/_next/static/CzET1cai2kbpt8nH9mW3w/_buildManifest.js',
+          revision: '35af3b2678f4aa2198fa99866ee8b5b4',
+        },
+        {
+          url: '/_next/static/CzET1cai2kbpt8nH9mW3w/_ssgManifest.js',
+          revision: 'b6652df95db52feb4daf4eca35380933',
+        },
+        {
+          url: '/_next/static/chunks/1084-3f3d85ce0ef17276.js',
+          revision: '3f3d85ce0ef17276',
         },
         {
           url: '/_next/static/chunks/4287-cb1a465f6be2732f.js',
@@ -199,8 +207,8 @@ define(['./workbox-01fd22c6'], function (e) {
           revision: 'c3f9dfe9394ce4bc',
         },
         {
-          url: '/_next/static/chunks/pages/widgets/news-0550c6c79c587d84.js',
-          revision: '0550c6c79c587d84',
+          url: '/_next/static/chunks/pages/widgets/news-2382572cbec282d0.js',
+          revision: '2382572cbec282d0',
         },
         {
           url: '/_next/static/chunks/pages/widgets/notes-793b58b8747b8e83.js',
@@ -219,8 +227,8 @@ define(['./workbox-01fd22c6'], function (e) {
           revision: 'e5e3e030395bfa8d',
         },
         {
-          url: '/_next/static/chunks/pages/widgets/sports-91f952682da7fb37.js',
-          revision: '91f952682da7fb37',
+          url: '/_next/static/chunks/pages/widgets/sports-edd91d7d47cd55d1.js',
+          revision: 'edd91d7d47cd55d1',
         },
         {
           url: '/_next/static/chunks/pages/widgets/stock-82e77f4b12ae4f7e.js',
@@ -257,14 +265,6 @@ define(['./workbox-01fd22c6'], function (e) {
         {
           url: '/_next/static/css/ab8325972a12a46d.css',
           revision: 'ab8325972a12a46d',
-        },
-        {
-          url: '/_next/static/eTFazW_dyD9zFx-yTot0z/_buildManifest.js',
-          revision: 'c6c4bb00df8318e57fbb8813a76bf414',
-        },
-        {
-          url: '/_next/static/eTFazW_dyD9zFx-yTot0z/_ssgManifest.js',
-          revision: 'b6652df95db52feb4daf4eca35380933',
         },
         {
           url: '/_next/static/media/01.75a04b34.jpg',
