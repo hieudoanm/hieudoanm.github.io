@@ -117,8 +117,8 @@ importers:
         specifier: 19.1.1
         version: 19.1.1
       react-chessboard:
-        specifier: 5.5.0
-        version: 5.5.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+        specifier: 5.6.0
+        version: 5.6.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       react-dom:
         specifier: 19.1.1
         version: 19.1.1(react@19.1.1)
@@ -4623,8 +4623,8 @@ packages:
   randombytes@2.1.0:
     resolution: {integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==}
 
-  react-chessboard@5.5.0:
-    resolution: {integrity: sha512-Nj24stOXAtcAQeXa27IxGBn7RmJl9hah+IqS9fdnMUlYmpeG58A6rwetfL1iXhVD5tFL2MIJIXLwgowkehS6dw==}
+  react-chessboard@5.6.0:
+    resolution: {integrity: sha512-/pqHX9A/a1/KrBCrqeb7Do9838BmZqJWLsf75FmcXlfaqcPJPvSBkLwi1+FuqRo/zggI5MLb6/BHzU8P2bILsA==}
     engines: {node: '>=20.11.0', pnpm: '>=9.4.0'}
     peerDependencies:
       react: ^19.0.0
@@ -10857,7 +10857,7 @@ snapshots:
     dependencies:
       safe-buffer: 5.2.1
 
-  react-chessboard@5.5.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1):
+  react-chessboard@5.6.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1):
     dependencies:
       '@dnd-kit/core': 6.3.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@dnd-kit/modifiers': 9.0.0(@dnd-kit/core@6.3.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react@19.1.1)
