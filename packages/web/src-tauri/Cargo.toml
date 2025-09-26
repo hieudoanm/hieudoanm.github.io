@@ -20,7 +20,7 @@ tauri-build = { version = "=2.4.1", features = [] }
 [dependencies]
 glib = { version = "=0.21.3" }
 serde_json = { version = "=1.0.145" }
-serde = { version = "=1.0.226", features = ["derive"] }
+serde = { version = "=1.0.227", features = ["derive"] }
 log = { version = "=0.4.28" }
 tauri = { version = "=2.8.5", features = [] }
 tauri-plugin-log = { version = "=2.7.0" }
