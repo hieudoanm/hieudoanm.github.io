@@ -7,9 +7,9 @@ settings:
 overrides:
   '@babel/helpers': 7.28.4
   '@babel/runtime': 7.28.4
-  '@octokit/plugin-paginate-rest': 13.1.1
-  '@octokit/request-error': 7.0.0
-  '@octokit/request': 10.0.3
+  '@octokit/plugin-paginate-rest': 13.2.0
+  '@octokit/request-error': 7.0.1
+  '@octokit/request': 10.0.5
   cookie: 1.0.2
   cross-spawn: 7.0.6
   esbuild: 0.25.10
