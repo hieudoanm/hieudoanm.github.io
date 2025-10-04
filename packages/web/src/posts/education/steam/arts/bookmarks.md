@@ -16,6 +16,7 @@ date: '2025-05-04'
 - [Duolingo](https://duolingo.com/)
 - [Fox Spirit](https://foxspirit.vn/)
 - [Hano Film](https://hanofilm.com/)
+- [LEGO](https://www.lego.com/en-us)
 - [LLAB](https://llab.vn/)
 - [National Geogrhphic](https://www.nationalgeographic.com/)
 - [NASA](https://www.nasa.gov/)
