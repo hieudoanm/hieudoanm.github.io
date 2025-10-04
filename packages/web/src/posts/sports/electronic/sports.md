@@ -22,6 +22,3 @@ date: '2025-05-01'
 | 05  | FPS           | Call of Duty (CoD)                       | Activision             |
 | 06  | FPS           | Counter-Strike: Global Offensive (CS:GO) | Valve Corporation      |
 | 07  | FPS           | Overwatch                                | Blizzard Entertainment |
-| 08  | FPS           | Valorant                                 | Riot Games             |
-| 09  | MOBA          | DotA 2                                   | Valve Corporation      |
-| 10  | MOBA          | League of Legends (LoL)                  | Riot Games             |

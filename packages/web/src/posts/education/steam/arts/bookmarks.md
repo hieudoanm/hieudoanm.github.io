@@ -11,6 +11,14 @@ date: '2025-05-04'
 ## Websites
 
 - [BBC](https://www.bbc.com/)
-- Duolingo
+- [CERN](https://home.cern/)
+- [Discovery](https://www.discovery.com/)
+- [Duolingo](https://duolingo.com/)
+- [Fox Spirit](https://foxspirit.vn/)
+- [Hano Film](https://hanofilm.com/)
+- [LLAB](https://llab.vn/)
+- [National Geogrhphic](https://www.nationalgeographic.com/)
+- [NASA](https://www.nasa.gov/)
 - [Nobel Prize](https://www.nobelprize.org/)
 - [Pantone](https://www.pantone.com/)
+- [SpaceX](https://www.spacex.com/)
