@@ -10,4 +10,5 @@ date: '2025-05-04'
 
 ## Websites
 
+- Duolingo
 - [Pantone](https://www.pantone.com/)
