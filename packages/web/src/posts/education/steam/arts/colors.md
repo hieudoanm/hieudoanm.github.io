@@ -10,5 +10,6 @@ date: '2025-05-04'
 
 ## Websites
 
+- [BBC](https://www.bbc.com/)
 - Duolingo
 - [Pantone](https://www.pantone.com/)
