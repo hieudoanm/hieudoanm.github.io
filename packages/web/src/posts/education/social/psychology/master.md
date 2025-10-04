@@ -35,17 +35,17 @@ date: '2025-05-01'
 
 ### Goldsmiths, University of London
 
-| Univerity | Semester (CATS) | Subjects                                                           |
-| --------- | --------------- | ------------------------------------------------------------------ |
-| Goldsmith | 1 (60)          | Foundations of Neuroscience (15 CATS)                              |
-| Goldsmith | 1 (60)          | Statistical Methods (15 CATS)                                      |
-| Goldsmith | 1 (60)          | Data Programming (15 CATS)                                         |
-| Goldsmith | 1 (60)          | _Optional_ (15 CATS)                                               |
-| Goldsmith | 2 (60)          | Advanced Quantitative Methods (15 CATS)                            |
-| Goldsmith | 2 (60)          | Cognitive Neuroscience (15 CATS)                                   |
-| Goldsmith | 2 (60)          | Cortical Modelling (15 CATS)                                       |
-| Goldsmith | 2 (60)          | Modelling Cognitive Functions (15 CATS)                            |
-| Goldsmith | 3 (60)          | Research Project in Computational Cognitive Neuroscience (60 CATS) |
+| University | Semester (CATS) | Subjects                                                           |
+| ---------- | --------------- | ------------------------------------------------------------------ |
+| Goldsmith  | 1 (60)          | Foundations of Neuroscience (15 CATS)                              |
+| Goldsmith  | 1 (60)          | Statistical Methods (15 CATS)                                      |
+| Goldsmith  | 1 (60)          | Data Programming (15 CATS)                                         |
+| Goldsmith  | 1 (60)          | _Optional_ (15 CATS)                                               |
+| Goldsmith  | 2 (60)          | Advanced Quantitative Methods (15 CATS)                            |
+| Goldsmith  | 2 (60)          | Cognitive Neuroscience (15 CATS)                                   |
+| Goldsmith  | 2 (60)          | Cortical Modelling (15 CATS)                                       |
+| Goldsmith  | 2 (60)          | Modelling Cognitive Functions (15 CATS)                            |
+| Goldsmith  | 3 (60)          | Research Project in Computational Cognitive Neuroscience (60 CATS) |
 
 Optional
 
