@@ -7,10 +7,6 @@ date: '2025-05-01'
 
 - [Table of Contents](#table-of-contents)
 - [Paradigms](#paradigms)
-  - [Key-Value](#key-value)
-  - [Documental](#documental)
-  - [Relational](#relational)
-  - [Other](#other)
 - [ORM](#orm)
   - [Drizzle](#drizzle)
   - [Prisma](#prisma)
@@ -18,50 +14,33 @@ date: '2025-05-01'
 
 ## Paradigms
 
-### Key-Value
-
-| #   | Technology                 | Open Source            | Maintainer             | Language | Recommended |
-| --- | -------------------------- | ---------------------- | ---------------------- | -------- | ----------- |
-| 1   | [Badger][hypermode-badger] |                        | [Hypermode][hypermode] | Go       |             |
-| 2   | LevelDB                    | [GitHub][gh-leveldb]   | [Google][google]       | C++      |             |
-| 3   | [Memcached][memcached]     | [GitHub][gh-memcached] |                        | C        |             |
-| 4   | [Redis][redis]             | [GitHub][gh-redis]     |                        | C        | Recommended |
-| 5   | [RocksDB][rocksdb]         |                        | [Meta][meta]           |          |             |
-| 6   | [Valkey][valkey]           | [GitHub][gh-valkey]    |                        | C        |             |
-
-### Documental
-
-| #   | Technology                             | Open Source                 | Maintainer       | Language         | Recommended |
-| --- | -------------------------------------- | --------------------------- | ---------------- | ---------------- | ----------- |
-| 1   | [CouchDB][apache-couchdb]              | [GitHub][gh-apache-couchdb] | [Apache][apache] | [Erlang][erlang] |             |
-| 2   | [Couchbase](https://www.couchbase.com) |                             |                  |                  |             |
-| 3   | [DynamoDB][aws-dynamodb]               |                             | [AWS][aws]       |                  |             |
-| 4   | [MongoDB][mongodb]                     | [GitHub][gh-mongodb]        |                  | C++              | Recommended |
-| 5   | [RethinkDB][rethinkdb]                 | [GitHub][gh-rethinkdb]      |                  | C++              |             |
-
-### Relational
-
-| #   | Technology                 | Open Source             | Maintainer | Language | Recommended |
-| --- | -------------------------- | ----------------------- | ---------- | -------- | ----------- |
-| 1   | [CockroachDB][cockroachdb] | [GitHub][gh-cockroach]  |            | [Go][go] |             |
-| 2   | libSQL                     |                         |            |          |             |
-| 3   | [MariaDB][mariadb]         | [GitHub][gh-mariadb]    |            | C++      |             |
-| 4   | MS SQL                     |                         |            |          |             |
-| 5   | [MySQL][mysql]             | [GitHub][gh-mysql]      |            | C++      |             |
-| 6   | [PostgreSQL][postgresql]   | [GitHub][gh-postgresql] |            | C        | Recommended |
-| 7   | [SQLite][sqlite]           | [GitHub][gh-sqlite]     |            | C        |             |
-
-### Other
-
-| Sector        | Technology                     | Open Source | Maintainer             | Language | Recommended |
-| ------------- | ------------------------------ | ----------- | ---------------------- | -------- | ----------- |
-| Wide Column   | [Cassandra][apache-cassandra]  |             | [Apache][apache]       |          |             |
-| Wide Column   | [HBase][apache-hbase]          |             | [Apache][apache]       |          |             |
-| Graph         | [DGraph][dgraph]               |             | [Hypermode][hypermode] |          |             |
-| Graph         | [neo4j][neo4j]                 |             |                        |          |             |
-| Search Engine | [ElasticSearch][elasticsearch] |             |                        |          |             |
-| Search Engine | [Solr][apache-solr]            |             | [Apache][apache]       |          |             |
-| Multi Model   | [Fauna][fauna]                 |             |                        |          |             |
+| #   | Paradigm      | Technology                             | Open Source                 | Maintainer             | Language         | Recommended |
+| --- | ------------- | -------------------------------------- | --------------------------- | ---------------------- | ---------------- | ----------- |
+| 1   | Key-Value     | [Badger][hypermode-badger]             |                             | [Hypermode][hypermode] | Go               |             |
+| 2   | Key-Value     | LevelDB                                | [GitHub][gh-leveldb]        | [Google][google]       | C++              |             |
+| 3   | Key-Value     | [Memcached][memcached]                 | [GitHub][gh-memcached]      |                        | C                |             |
+| 4   | Key-Value     | [Redis][redis]                         | [GitHub][gh-redis]          |                        | C                | Recommended |
+| 5   | Key-Value     | [RocksDB][rocksdb]                     |                             | [Meta][meta]           |                  |             |
+| 6   | Key-Value     | [Valkey][valkey]                       | [GitHub][gh-valkey]         |                        | C                |             |
+| 7   | Documental    | [CouchDB][apache-couchdb]              | [GitHub][gh-apache-couchdb] | [Apache][apache]       | [Erlang][erlang] |             |
+| 8   | Documental    | [Couchbase](https://www.couchbase.com) |                             |                        |                  |             |
+| 9   | Documental    | [DynamoDB][aws-dynamodb]               |                             | [AWS][aws]             |                  |             |
+| 10  | Documental    | [MongoDB][mongodb]                     | [GitHub][gh-mongodb]        |                        | C++              | Recommended |
+| 11  | Documental    | [RethinkDB][rethinkdb]                 | [GitHub][gh-rethinkdb]      |                        | C++              |             |
+| 12  | Relational    | [CockroachDB][cockroachdb]             | [GitHub][gh-cockroach]      |                        | [Go][go]         |             |
+| 13  | Relational    | libSQL                                 |                             |                        |                  |             |
+| 14  | Relational    | [MariaDB][mariadb]                     | [GitHub][gh-mariadb]        |                        | C++              |             |
+| 15  | Relational    | MS SQL                                 |                             |                        |                  |             |
+| 16  | Relational    | [MySQL][mysql]                         | [GitHub][gh-mysql]          |                        | C++              |             |
+| 17  | Relational    | [PostgreSQL][postgresql]               | [GitHub][gh-postgresql]     |                        | C                | Recommended |
+| 18  | Relational    | [SQLite][sqlite]                       | [GitHub][gh-sqlite]         |                        | C                |             |
+| 19  | Wide Column   | [Cassandra][apache-cassandra]          |                             | [Apache][apache]       |                  |             |
+| 20  | Wide Column   | [HBase][apache-hbase]                  |                             | [Apache][apache]       |                  |             |
+| 21  | Graph         | [DGraph][dgraph]                       |                             | [Hypermode][hypermode] |                  |             |
+| 22  | Graph         | [neo4j][neo4j]                         |                             |                        |                  |             |
+| 23  | Search Engine | [ElasticSearch][elasticsearch]         |                             |                        |                  |             |
+| 24  | Search Engine | [Solr][apache-solr]                    |                             | [Apache][apache]       |                  |             |
+| 25  | Multi Model   | [Fauna][fauna]                         |                             |                        |                  |             |
 
 ## ORM
 

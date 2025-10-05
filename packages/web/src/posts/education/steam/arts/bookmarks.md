@@ -23,3 +23,4 @@ date: '2025-05-04'
 - [Nobel Prize](https://www.nobelprize.org/)
 - [Pantone](https://www.pantone.com/)
 - [SpaceX](https://www.spacex.com/)
+- [Strava](https://www.strava.com/)
