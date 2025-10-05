@@ -6,20 +6,7 @@ date: '2025-05-05'
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
-- [Competitions](#competitions)
-  - [Freestyle Chess Grand Slam Tour](#freestyle-chess-grand-slam-tour)
 - [Positions](#positions)
-
-## Competitions
-
-### Freestyle Chess Grand Slam Tour
-
-| Year | Location                 | 1st            | 2nd             | 3rd             |
-| ---- | ------------------------ | -------------- | --------------- | --------------- |
-| 2025 | Wangels, Germany         | Vincent Keymer | Fabiano Caruana | Magnus Carlsen  |
-| 2025 | Paris, France            | Magnus Carlsen | Hikaru Nakamura | Fabiano Caruana |
-| 2025 | Las Vegas, United States |                |                 |                 |
-| 2025 | Cape Town, South Africa  |                |                 |                 |
 
 ## Positions
 

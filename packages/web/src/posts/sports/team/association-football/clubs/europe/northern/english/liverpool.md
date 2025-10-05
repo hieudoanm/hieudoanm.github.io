@@ -7,63 +7,12 @@ date: '2025-05-17'
 
 - [Table of Contents](#table-of-contents)
 - [Champions](#champions)
-  - [Champions League 2004 / 2005 Winners](#champions-league-2004--2005-winners)
-  - [Champions League 2018 / 2019 and Premier League 2019 / 2020 Winners](#champions-league-2018--2019-and-premier-league-2019--2020-winners)
-  - [Premier League 2024 / 2025 Winners](#premier-league-2024--2025-winners)
 - [Best](#best)
   - [Best V](#best-v)
   - [Best XI](#best-xi)
 - [Honours](#honours)
 
 ## Champions
-
-### Champions League 2004 / 2005 Winners
-
-| No  | Pos | Name            | Country        | Continent |
-| --- | --- | --------------- | -------------- | --------- |
-| 1   | GK  | Jerzy Dudek     | Poland         | Europe    |
-| 3   | RB  | Steve Finnan    | Ireland        | Europe    |
-| 4   | CB  | Sami Hyypiä     | Finland        | Europe    |
-| 23  | CB  | Jamie Carragher | England        | Europe    |
-| 6   | LB  | John Arne Riise | Norway         | Europe    |
-| 8   | CM  | Steven Gerrard  | England        | Europe    |
-| 14  | CM  | Xabi Alonso     | Spain          | Europe    |
-| 11  | CM  | Vladimir Smicer | Czech Republic | Europe    |
-| 10  | RW  | Luis García     | Spain          | Europe    |
-| 5   | CF  | Milan Baroš     | Czech Republic | Europe    |
-| 7   | LW  | Harry Kewell    | Australia      | Oceania   |
-
-### Champions League 2018 / 2019 and Premier League 2019 / 2020 Winners
-
-| No  | Pos | Name                   | Country     | Continent     |
-| --- | --- | ---------------------- | ----------- | ------------- |
-| 1   | GK  | Alisson Becker         | Brazil      | South America |
-| 66  | RB  | Trent Alexander-Arnold | England     | Europe        |
-| 32  | CB  | Joël Matip             | Cameroon    | Africa        |
-| 4   | CB  | Virgil van Dijk        | Netherlands | Europe        |
-| 26  | LB  | Andrew Robertson       | Scotland    | Europe        |
-| 3   | DM  | Fabinho                | Brazil      | South America |
-| 14  | CM  | Jorden Henderson       | England     | Europe        |
-| 5   | CM  | Georginio Wijnaldum    | Netherlands | Europe        |
-| 11  | RW  | Mohamed Salah          | Egypt       | Africa        |
-| 9   | CF  | Roberto Firmino        | Brazil      | Netherlands   |
-| 10  | LW  | Sadio Mané             | Senegal     | Africa        |
-
-### Premier League 2024 / 2025 Winners
-
-| No  | Pos | Name                   | Country     | Continent     |
-| --- | --- | ---------------------- | ----------- | ------------- |
-| 1   | GK  | Alisson Becker         | Brazil      | South America |
-| 66  | RB  | Trent Alexander-Arnold | England     | Europe        |
-| 5   | CB  | Ibrahima Konaté        | France      | Europe        |
-| 4   | CB  | Virgil van Dijk        | Netherlands | Europe        |
-| 26  | LB  | Andrew Robertson       | Scotland    | Europe        |
-| 38  | DM  | Ryan Gravenberch       | Netherlands | Europe        |
-| 8   | CM  | Dominik Szoboszlai     | Hungary     | Europe        |
-| 10  | CM  | Alexis Mac Allister    | Argentina   | South America |
-| 11  | RW  | Mohamed Salah          | Egypt       | Africa        |
-| 7   | CF  | Luis Díaz              | Colombia    | South America |
-| 18  | LW  | Cody Gakpo             | Netherlands | Europe        |
 
 ## Best
 
