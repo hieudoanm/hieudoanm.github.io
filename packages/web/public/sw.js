@@ -43,11 +43,11 @@ define(['./workbox-01fd22c6'], function (e) {
           revision: 'd751713988987e9331980363e24189ce',
         },
         {
-          url: '/_next/static/EE6zaQAnw-zm5grixhSJt/_buildManifest.js',
+          url: '/_next/static/0OA2DKURSwhxGEUrHW7Lq/_buildManifest.js',
           revision: '1631f09176c381d67c74301e1793201a',
         },
         {
-          url: '/_next/static/EE6zaQAnw-zm5grixhSJt/_ssgManifest.js',
+          url: '/_next/static/0OA2DKURSwhxGEUrHW7Lq/_ssgManifest.js',
           revision: 'b6652df95db52feb4daf4eca35380933',
         },
         {
@@ -263,8 +263,8 @@ define(['./workbox-01fd22c6'], function (e) {
           revision: 'c5d3e1342d2407ee',
         },
         {
-          url: '/_next/static/css/09a58a87327681b5.css',
-          revision: '09a58a87327681b5',
+          url: '/_next/static/css/4c819ab1b470e08b.css',
+          revision: '4c819ab1b470e08b',
         },
         {
           url: '/_next/static/media/01.75a04b34.jpg',
