@@ -26,7 +26,7 @@
     "build": "next build",
     "prestart": "kill-port 3000",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "test": "jest",
     "tauri": "tauri",
     "tauri:build": "./scripts/build-desktop.sh"

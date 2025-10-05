@@ -6,15 +6,108 @@ date: '2025-05-01'
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
-- [SaaS - Authentication](#saas---authentication)
-- [SaaS - Email](#saas---email)
-- [SaaS - Payment](#saas---payment)
+- [Databases](#databases)
+  - [ORM](#orm)
+    - [Drizzle](#drizzle)
+    - [Prisma](#prisma)
+    - [Supported](#supported)
+- [SaaS](#saas)
+  - [SaaS - Authentication](#saas---authentication)
+  - [SaaS - Email](#saas---email)
+  - [SaaS - Payment](#saas---payment)
 - [Serverless](#serverless)
-- [Platform as a Service](#platform-as-a-service)
-- [Back-end as a Service](#back-end-as-a-service)
-- [Infrastructure as a Service](#infrastructure-as-a-service)
+- [PaaS - Platform as a Service](#paas---platform-as-a-service)
+- [BaaS - Back-end as a Service](#baas---back-end-as-a-service)
+- [IaaS - Infrastructure as a Service](#iaas---infrastructure-as-a-service)
+- [API](#api)
+  - [GenAI](#genai)
+  - [Social](#social)
+  - [Other](#other)
 
-## SaaS - Authentication
+## Databases
+
+| #   | Paradigm      | Technology                             | Open Source                 | Maintainer             | Language         | Recommended |
+| --- | ------------- | -------------------------------------- | --------------------------- | ---------------------- | ---------------- | ----------- |
+| 1   | Key-Value     | [Badger][hypermode-badger]             |                             | [Hypermode][hypermode] | Go               |             |
+| 2   | Key-Value     | LevelDB                                | [GitHub][gh-leveldb]        | [Google][google]       | C++              |             |
+| 3   | Key-Value     | [Memcached][memcached]                 | [GitHub][gh-memcached]      |                        | C                |             |
+| 4   | Key-Value     | [Redis][redis]                         | [GitHub][gh-redis]          |                        | C                | Recommended |
+| 5   | Key-Value     | [RocksDB][rocksdb]                     |                             | [Meta][meta]           |                  |             |
+| 6   | Key-Value     | [Valkey][valkey]                       | [GitHub][gh-valkey]         |                        | C                |             |
+| 7   | Documental    | [CouchDB][apache-couchdb]              | [GitHub][gh-apache-couchdb] | [Apache][apache]       | [Erlang][erlang] |             |
+| 8   | Documental    | [Couchbase](https://www.couchbase.com) |                             |                        |                  |             |
+| 9   | Documental    | [DynamoDB][aws-dynamodb]               |                             | [AWS][aws]             |                  |             |
+| 10  | Documental    | [MongoDB][mongodb]                     | [GitHub][gh-mongodb]        |                        | C++              | Recommended |
+| 11  | Documental    | [RethinkDB][rethinkdb]                 | [GitHub][gh-rethinkdb]      |                        | C++              |             |
+| 12  | Relational    | [CockroachDB][cockroachdb]             | [GitHub][gh-cockroach]      |                        | [Go][go]         |             |
+| 13  | Relational    | libSQL                                 |                             |                        |                  |             |
+| 14  | Relational    | [MariaDB][mariadb]                     | [GitHub][gh-mariadb]        |                        | C++              |             |
+| 15  | Relational    | MS SQL                                 |                             |                        |                  |             |
+| 16  | Relational    | [MySQL][mysql]                         | [GitHub][gh-mysql]          |                        | C++              |             |
+| 17  | Relational    | [PostgreSQL][postgresql]               | [GitHub][gh-postgresql]     |                        | C                | Recommended |
+| 18  | Relational    | [SQLite][sqlite]                       | [GitHub][gh-sqlite]         |                        | C                |             |
+| 19  | Wide Column   | [Cassandra][apache-cassandra]          |                             | [Apache][apache]       |                  |             |
+| 20  | Wide Column   | [HBase][apache-hbase]                  |                             | [Apache][apache]       |                  |             |
+| 21  | Graph         | [DGraph][dgraph]                       |                             | [Hypermode][hypermode] |                  |             |
+| 22  | Graph         | [neo4j][neo4j]                         |                             |                        |                  |             |
+| 23  | Search Engine | [ElasticSearch][elasticsearch]         |                             |                        |                  |             |
+| 24  | Search Engine | [Solr][apache-solr]                    |                             | [Apache][apache]       |                  |             |
+| 25  | Multi Model   | [Fauna][fauna]                         |                             |                        |                  |             |
+
+### ORM
+
+#### [Drizzle][drizzle]
+
+```typescript
+import { integer, pgTable, varchar } from 'drizzle-orm/pg-core';
+
+export const usersTable = pgTable('users', {
+  id: integer().primaryKey().generatedAlwaysAsIdentity(),
+  name: varchar({ length: 255 }).notNull(),
+  age: integer().notNull(),
+  email: varchar({ length: 255 }).notNull().unique(),
+});
+```
+
+#### [Prisma][prisma]
+
+```prisma
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       String @id @default(uuid()) @map("id") @db.Uuid
+  username String @unique @default("") @map("username") @db.Text
+  email    String @unique @default("") @map("email") @db.Text
+
+  @@index([id])
+  @@map("users")
+}
+```
+
+#### Supported
+
+| No  | Paradigm   | Database    | [Prisma][prisma] | [Drizzle][drizzle] | Hosting          |
+| --- | ---------- | ----------- | ---------------- | ------------------ | ---------------- |
+| 01  | Documental | DynamoDB    |                  |                    | AWS DynamoDB     |
+| 02  | Documental | MongoDB     | `Supported`      |                    | MongoDB Atlas    |
+| 03  | Relational | CockroachDB | `Supported`      |                    | CockroachDB Labs |
+| 04  | Relational | libSQL      |                  | `Supported`        | Turso            |
+| 05  | Relational | MariaDB     | `Supported`      |                    |                  |
+| 06  | Relational | MS SQL      | `Supported`      |                    |                  |
+| 07  | Relational | MySQL       | `Supported`      | `Supported`        | PlanetScale      |
+| 08  | Relational | PostgreSQL  | `Supported`      | `Supported`        | Neon / Supabase  |
+| 09  | Relational | SQLite      | `Supported`      | `Supported`        | Cloudflare D1    |
+
+## SaaS
+
+### SaaS - Authentication
 
 | Supersector | Sector | Subsector      | Technology           | Open Source           | Maintainer | Language     | Recommended |
 | ----------- | ------ | -------------- | -------------------- | --------------------- | ---------- | ------------ | ----------- |
@@ -27,7 +120,7 @@ date: '2025-05-01'
 
 [⬆️ Back to Table of Contents](#table-of-contents)
 
-## SaaS - Email
+### SaaS - Email
 
 | Supersector | Sector | Subsector | Technology             | Open Source            | Maintainer | Language | Recommended |
 | ----------- | ------ | --------- | ---------------------- | ---------------------- | ---------- | -------- | ----------- |
@@ -37,7 +130,7 @@ date: '2025-05-01'
 | Application | SaaS   | Email     | [MailChimp][mailchimp] | [GitHub][gh-mailchimp] |            | [JS][js] |             |
 | Application | SaaS   | Email     | [Resend][resend]       | [GitHub][gh-resend]    |            | [TS][ts] |             |
 
-## SaaS - Payment
+### SaaS - Payment
 
 | Supersector | Sector | Subsector | Technology             | Open Source            | Maintainer | Language | Recommended |
 | ----------- | ------ | --------- | ---------------------- | ---------------------- | ---------- | -------- | ----------- |
@@ -61,7 +154,7 @@ date: '2025-05-01'
 
 [⬆️ Back to Table of Contents](#table-of-contents)
 
-## Platform as a Service
+## PaaS - Platform as a Service
 
 | Supersector | Sector | Subsector | Technology                      | Open Source             | Maintainer             | Language | Recommended |
 | ----------- | ------ | --------- | ------------------------------- | ----------------------- | ---------------------- | -------- | ----------- |
@@ -73,7 +166,7 @@ date: '2025-05-01'
 
 [⬆️ Back to Table of Contents](#table-of-contents)
 
-## Back-end as a Service
+## BaaS - Back-end as a Service
 
 | Supersector | Sector | Subsector | Technology               | Open Source             | Maintainer           | Language | Recommended |
 | ----------- | ------ | --------- | ------------------------ | ----------------------- | -------------------- | -------- | ----------- |
@@ -85,7 +178,7 @@ date: '2025-05-01'
 
 [⬆️ Back to Table of Contents](#table-of-contents)
 
-## Infrastructure as a Service
+## IaaS - Infrastructure as a Service
 
 | Supersector | Sector | Subsector | Technology                     | Open Source                | Maintainer           | Language | Recommended |
 | ----------- | ------ | --------- | ------------------------------ | -------------------------- | -------------------- | -------- | ----------- |
@@ -164,6 +257,49 @@ date: '2025-05-01'
 | Application     | IaaS                    |                | [IBM Cloud][ibm-cloud]                   | [GitHub][gh-ibm-cloud]     |                          |                  |             |
 | DaaS            | Serverless              | PostgreSQL     | [Neon][neon]                             | [GitHub][gh-neon]          |                          | [Rust][rs]       |             |
 | DaaS            | Serverless              | MySQL          | [PlanetScale][planetscale]               | [GitHub][gh-planetscale]   |                          | [Go][go]         |             |
+
+## API
+
+### GenAI
+
+| No  | Type  | Name                                      | Maintainer                           |
+| --- | ----- | ----------------------------------------- | ------------------------------------ |
+| 01  | Image | [Midjourney](https://www.midjourney.com)  |                                      |
+| 02  | Text  | [Perplexity](https://www.perplexity.ai/)  |                                      |
+| 03  | Text  | [Grok](https://grok.com/)                 | [X.Ai](https://x.ai/)                |
+| 04  | Text  | [Poe](https://www.poe.com/)               | [Quora](https://www.quora.com/)      |
+| 05  | Text  | [Claude](https://claude.ai/)              | [Anthropic](https://anthropic.com/)  |
+| 06  | Text  | [Deepseek](https://chat.deepseek.com/)    | [DeepSeek AI](https://deepseek.ai/)  |
+| 07  | Text  | [Gemini](https://gemini.google.com/)      | [Google](https://google.com/)        |
+| 08  | Text  | [Copilot](https://copilot.microsoft.com/) | [Microsoft](https://microsoft.com/)  |
+| 09  | Text  | [ChatGPT](https://chatgpt.com/)           | [OpenAI](https://openai.com/)        |
+| 10  | Text  | [Llama](https://www.llama.com/)           | [Meta](https://developers.meta.com/) |
+
+### Social
+
+| No  | Company | Category  | API                                                                   |
+| --- | ------- | --------- | --------------------------------------------------------------------- |
+| 01  | Google  | Videos    | [YouTube](https://developers.google.com/youtube/v3)                   |
+| 02  | Meta    | Posts     | [Facebook](https://developers.facebook.com/docs/graph-api/)           |
+| 03  | Meta    | Images    | [Instagram](https://developers.facebook.com/products/instagram/apis/) |
+| 04  | Meta    | Messaging | [Messenger](https://developers.facebook.com/docs/messenger-platform/) |
+| 05  | Meta    | Posts     | [Threads](https://developers.facebook.com/docs/threads/)              |
+| 06  | Reddit  | Posts     | [Reddit](https://www.reddit.com/dev/api/)                             |
+| 07  | Tiktok  | Videos    | [Tiktok](https://developers.tiktok.com/)                              |
+| 08  | X       | Posts     | [Twitter](https://developer.x.com/en/docs/x-api)                      |
+
+### Other
+
+| No  | Category  | API                                             |
+| --- | --------- | ----------------------------------------------- |
+| 01  | Forex     | [Fixer](https://fixer.io/)                      |
+| 02  | Forex     | [Frankfurter](https://frankfurter.dev/)         |
+| 03  | Messaging | [Telegram](https://core.telegram.org/)          |
+| 04  | News      | [News](https://newsapi.org/)                    |
+| 07  | Sports    | [Football Data](https://www.football-data.org/) |
+| 08  | Weather   | [Air Visual](https://api-docs.iqair.com/)       |
+| 09  | Weather   | [Open Meteo](https://open-meteo.com/)           |
+| 10  | Weather   | [Open Weather Map](https://openweathermap.org/) |
 
 [alphabet]: https://abc.xyz
 [aws]: https://aws.amazon.com
@@ -280,3 +416,46 @@ date: '2025-05-01'
 [gh-resend]: https://github.com/resend
 [gh-grafana]: https://github.com/grafana/grafana
 [gh-splunk]: https://github.com/splunk
+
+<!-- Database -->
+
+[apache]: https://apache.org
+[apache-cassandra]: https://cassandra.apache.org
+[apache-couchdb]: https://couchdb.apache.org
+[apache-hbase]: https://hbase.apache.org
+[apache-solr]: https://solr.apache.org
+[aws-dynamodb]: https://aws.amazon.com/dynamodb/
+[cockroachdb]: https://www.cockroachlabs.com
+[dgraph]: https://dgraph.io
+[drizzle]: https://orm.drizzle.team/
+[elasticsearch]: https://www.elastic.co/elasticsearch
+[erlang]: https://www.erlang.org
+[fauna]: https://fauna.com
+[google]: https://developers.google.com/
+[hypermode]: https://hypermode.com/
+[hypermode-badger]: https://docs.hypermode.com/badger/overview
+[mariadb]: https://mariadb.org
+[memcached]: https://memcached.org
+[meta]: https://opensource.fb.com/
+[mongodb]: https://www.mongodb.com
+[mysql]: https://www.mysql.com
+[neo4j]: https://neo4j.com
+[postgresql]: https://postgresql.org
+[prisma]: https://www.prisma.io/
+[redis]: https://redis.io
+[rocksdb]: https://rocksdb.org/
+[rethinkdb]: https://rethinkdb.com/
+[sqlite]: https://www.sqlite.org
+[valkey]: https://valkey.io
+[gh-redis]: https://github.com/redis/redis
+[gh-apache-couchdb]: https://github.com/apache/couchdb
+[gh-memcached]: https://github.com/memcached/memcached
+[gh-mongodb]: https://github.com/mongodb/mongo
+[gh-postgresql]: https://github.com/postgres/postgres
+[gh-valkey]: https://github.com/valkey-io/valkey
+[gh-cockroach]: https://github.com/cockroachdb/cockroach
+[gh-mysql]: https://github.com/mysql/mysql-server
+[gh-sqlite]: https://github.com/sqlite/sqlite
+[gh-mariadb]: https://github.com/MariaDB/server
+[gh-rethinkdb]: https://github.com/rethinkdb
+[gh-leveldb]: https://github.com/google/leveldb
