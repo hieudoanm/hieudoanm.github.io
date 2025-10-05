@@ -43,14 +43,6 @@ define(['./workbox-01fd22c6'], function (e) {
           revision: 'd751713988987e9331980363e24189ce',
         },
         {
-          url: '/_next/static/6erLikLQ3dK8Ai6FoMGPU/_buildManifest.js',
-          revision: '1631f09176c381d67c74301e1793201a',
-        },
-        {
-          url: '/_next/static/6erLikLQ3dK8Ai6FoMGPU/_ssgManifest.js',
-          revision: 'b6652df95db52feb4daf4eca35380933',
-        },
-        {
           url: '/_next/static/chunks/1048-3f59d8b22fb4760c.js',
           revision: '3f59d8b22fb4760c',
         },
@@ -265,6 +257,14 @@ define(['./workbox-01fd22c6'], function (e) {
         {
           url: '/_next/static/css/09a58a87327681b5.css',
           revision: '09a58a87327681b5',
+        },
+        {
+          url: '/_next/static/gLqV_iEwvBjKXEllpo__R/_buildManifest.js',
+          revision: '1631f09176c381d67c74301e1793201a',
+        },
+        {
+          url: '/_next/static/gLqV_iEwvBjKXEllpo__R/_ssgManifest.js',
+          revision: 'b6652df95db52feb4daf4eca35380933',
         },
         {
           url: '/_next/static/media/01.75a04b34.jpg',
