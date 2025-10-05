@@ -43,11 +43,11 @@ define(['./workbox-01fd22c6'], function (e) {
           revision: 'd751713988987e9331980363e24189ce',
         },
         {
-          url: '/_next/static/JftNulhSS0uwyXaO0Q8vI/_buildManifest.js',
-          revision: '1631f09176c381d67c74301e1793201a',
+          url: '/_next/static/ZAvRWmVqfHxlVWB8KHZiO/_buildManifest.js',
+          revision: '865e326751887b703021741ef3fe1b24',
         },
         {
-          url: '/_next/static/JftNulhSS0uwyXaO0Q8vI/_ssgManifest.js',
+          url: '/_next/static/ZAvRWmVqfHxlVWB8KHZiO/_ssgManifest.js',
           revision: 'b6652df95db52feb4daf4eca35380933',
         },
         {
@@ -123,8 +123,8 @@ define(['./workbox-01fd22c6'], function (e) {
           revision: 'a0cb52923afe65c3',
         },
         {
-          url: '/_next/static/chunks/pages/posts-217c1b6c0a4f4030.js',
-          revision: '217c1b6c0a4f4030',
+          url: '/_next/static/chunks/pages/posts-083c1cc72a81f242.js',
+          revision: '083c1cc72a81f242',
         },
         {
           url: '/_next/static/chunks/pages/posts/%5B...id%5D-7ae6450cdec8cfb8.js',

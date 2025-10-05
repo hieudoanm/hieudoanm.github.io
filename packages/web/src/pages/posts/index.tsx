@@ -19,7 +19,7 @@ const NotesPage: NextPage<{
   const [{ search }, setState] = useState<{ search: string }>({ search: '' });
 
   return (
-    <main className="flex h-screen flex-col gap-y-4 overflow-hidden md:gap-y-8">
+    <main className="flex h-screen flex-col gap-y-4 overflow-hidden py-8 md:gap-y-8">
       <div className="container mx-auto px-4 md:px-8">
         <Glass.Input
           id="search"
