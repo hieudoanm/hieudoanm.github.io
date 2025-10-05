@@ -14,6 +14,7 @@ date: '2025-05-11'
     - [`@next-stack/devops`](#next-stackdevops)
   - [Full-stack](#full-stack)
     - [`@next-stack/ui`](#next-stackui)
+      - [Components](#components)
     - [`@next-stack/auth`](#next-stackauth)
     - [`@next-stack/server`](#next-stackserver)
   - [Database](#database)
@@ -73,6 +74,26 @@ date: '2025-05-11'
   - [Ranger](https://tanstack.com/ranger/latest)
   - [Table](https://tanstack.com/table/latest)
   - [Virtual](https://tanstack.com/virtual/latest)
+
+##### Components
+
+| Group      | Component |
+| ---------- | --------- |
+| Form       | Button    |
+| Form       | Input     |
+| Form       | Textarea  |
+| Form       | Select    |
+| Form       | Checkbox  |
+| Form       | Radio     |
+| Form       | Toggle    |
+| Form       | Label     |
+| Typography | h1        |
+| Typography | h2        |
+| Typography | h3        |
+| Typography | h4        |
+| Typography | h5        |
+| Typography | h6        |
+| Typography | p         |
 
 #### `@next-stack/auth`
 
