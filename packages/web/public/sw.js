@@ -43,11 +43,11 @@ define(['./workbox-01fd22c6'], function (e) {
           revision: 'd751713988987e9331980363e24189ce',
         },
         {
-          url: '/_next/static/ZAvRWmVqfHxlVWB8KHZiO/_buildManifest.js',
+          url: '/_next/static/SWBaUVBQnx17vOfIeLvDr/_buildManifest.js',
           revision: '865e326751887b703021741ef3fe1b24',
         },
         {
-          url: '/_next/static/ZAvRWmVqfHxlVWB8KHZiO/_ssgManifest.js',
+          url: '/_next/static/SWBaUVBQnx17vOfIeLvDr/_ssgManifest.js',
           revision: 'b6652df95db52feb4daf4eca35380933',
         },
         {
