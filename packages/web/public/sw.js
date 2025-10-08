@@ -43,6 +43,14 @@ define(['./workbox-01fd22c6'], function (e) {
           revision: 'd751713988987e9331980363e24189ce',
         },
         {
+          url: '/_next/static/0votA5knHfapVOgjc5XYv/_buildManifest.js',
+          revision: '33c994fbfb2aa91eadb49145a3a53602',
+        },
+        {
+          url: '/_next/static/0votA5knHfapVOgjc5XYv/_ssgManifest.js',
+          revision: 'b6652df95db52feb4daf4eca35380933',
+        },
+        {
           url: '/_next/static/chunks/1810-4177f9415bf8ef9e.js',
           revision: '4177f9415bf8ef9e',
         },
@@ -257,14 +265,6 @@ define(['./workbox-01fd22c6'], function (e) {
         {
           url: '/_next/static/css/bacb1498baab1164.css',
           revision: 'bacb1498baab1164',
-        },
-        {
-          url: '/_next/static/kooEloboN6BUPMHPlQByz/_buildManifest.js',
-          revision: '33c994fbfb2aa91eadb49145a3a53602',
-        },
-        {
-          url: '/_next/static/kooEloboN6BUPMHPlQByz/_ssgManifest.js',
-          revision: 'b6652df95db52feb4daf4eca35380933',
         },
         {
           url: '/_next/static/media/01.75a04b34.jpg',
