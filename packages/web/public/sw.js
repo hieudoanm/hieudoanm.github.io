@@ -355,11 +355,11 @@ define(['./workbox-01fd22c6'], function (e) {
           revision: '8ea4f719af3312a055caf09f34c89a77',
         },
         {
-          url: '/_next/static/u-WgFIyGkQiGDhcU2Q45O/_buildManifest.js',
+          url: '/_next/static/zw9Vt7US8PWtInjK6Suuv/_buildManifest.js',
           revision: '33c994fbfb2aa91eadb49145a3a53602',
         },
         {
-          url: '/_next/static/u-WgFIyGkQiGDhcU2Q45O/_ssgManifest.js',
+          url: '/_next/static/zw9Vt7US8PWtInjK6Suuv/_ssgManifest.js',
           revision: 'b6652df95db52feb4daf4eca35380933',
         },
         {
@@ -443,10 +443,6 @@ define(['./workbox-01fd22c6'], function (e) {
         { url: '/next.svg', revision: '8e061864f388b47f33a1c3780831193e' },
         { url: '/vercel.svg', revision: 'c0af2f507b369b085b35ef4bbe3bcf1e' },
         { url: '/window.svg', revision: 'a2760511c65806022ad20adf74370ff3' },
-        {
-          url: '/workers/gif.worker.js',
-          revision: 'dae5d85b26ee82df7e25da09b187af8f',
-        },
         {
           url: '/workers/stockfish.js',
           revision: '94cb7fc83692d04a5072dc0e11cf2270',
