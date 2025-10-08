@@ -29,13 +29,6 @@ const HomePage: NextPage = () => {
       target: '_self',
     },
     {
-      id: 'widgets',
-      href: '/widgets',
-      name: 'Widgets',
-      icon: <FaWindowRestore className="text-4xl" />,
-      target: '_self',
-    },
-    {
       id: 'github',
       href: 'https://github.com/hieudoanm',
       name: 'GitHub',
