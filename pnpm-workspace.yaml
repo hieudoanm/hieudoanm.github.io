@@ -6,5 +6,4 @@ onlyBuiltDependencies:
   - '@prisma/engines'
   - pdf2html
   - prisma
-  - tesseract.js
   - workerd

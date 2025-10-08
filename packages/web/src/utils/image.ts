@@ -1,6 +1,3 @@
-import { recognize } from 'tesseract.js';
-import { logger } from './log';
-
 export const base64 = (file: File): Promise<string> => {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
@@ -18,19 +15,6 @@ export const base64 = (file: File): Promise<string> => {
       }
     };
     reader.onerror = (event) => reject(new Error(event.type));
-  });
-};
-
-export const ocr = (base64: string): Promise<string> => {
-  return new Promise((resolve) => {
-    recognize(base64, 'eng')
-      .then(({ data }) => {
-        resolve(data.text ?? 'No Text');
-      })
-      .catch((error) => {
-        logger.error('error', error);
-        resolve('Unable to Recognize');
-      });
   });
 };
 
