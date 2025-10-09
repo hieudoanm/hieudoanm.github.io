@@ -1,7 +1,6 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import '@web/styles/globals.css';
 import { trpc } from '@web/utils/trpc';
-import 'github-markdown-css/github-markdown.css';
 import type { AppProps } from 'next/app';
 import { Geist, Geist_Mono } from 'next/font/google';
 import Head from 'next/head';

@@ -6,21 +6,12 @@ import {
   FaAppStoreIos,
   FaH,
   FaLinkedin,
-  FaPenToSquare,
   FaSquareGithub,
   FaSquareTwitter,
-  FaWindowRestore,
 } from 'react-icons/fa6';
 
 const HomePage: NextPage = () => {
   const apps = [
-    {
-      id: 'notes',
-      href: '/posts',
-      name: 'Notes',
-      icon: <FaPenToSquare className="text-4xl" />,
-      target: '_self',
-    },
     {
       id: 'store',
       href: '/store',
@@ -60,7 +51,7 @@ const HomePage: NextPage = () => {
             <FaH key="H" className="text-6xl" />
           </Glass.Button>
         </Link>
-        <div className="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+        <div className="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
           {apps.map(({ id, name, href, icon, target }) => (
             <Link
               key={id}

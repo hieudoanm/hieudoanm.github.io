@@ -23,8 +23,8 @@ if (!self.define) {
     if (s[n]) return;
     let t = {};
     const o = (e) => a(e, n),
-      f = { module: { uri: n }, exports: t, require: o };
-    s[n] = Promise.all(c.map((e) => f[e] || o(e))).then((e) => (i(...e), t));
+      r = { module: { uri: n }, exports: t, require: o };
+    s[n] = Promise.all(c.map((e) => r[e] || o(e))).then((e) => (i(...e), t));
   };
 }
 define(['./workbox-01fd22c6'], function (e) {
@@ -43,20 +43,16 @@ define(['./workbox-01fd22c6'], function (e) {
           revision: 'd751713988987e9331980363e24189ce',
         },
         {
-          url: '/_next/static/5PZ5wuZ116PP_7nOt4yVY/_buildManifest.js',
-          revision: '38efb1d877da74c53accff0017d7b024',
+          url: '/_next/static/LLDQfiY1-2pcxO1E6aXYS/_buildManifest.js',
+          revision: '75afb4a9aa031a451ec74aa736e13d0e',
         },
         {
-          url: '/_next/static/5PZ5wuZ116PP_7nOt4yVY/_ssgManifest.js',
+          url: '/_next/static/LLDQfiY1-2pcxO1E6aXYS/_ssgManifest.js',
           revision: 'b6652df95db52feb4daf4eca35380933',
         },
         {
           url: '/_next/static/chunks/285-8d3bc4ea29910930.js',
           revision: '8d3bc4ea29910930',
-        },
-        {
-          url: '/_next/static/chunks/287-80743caa8d52c86b.js',
-          revision: '80743caa8d52c86b',
         },
         {
           url: '/_next/static/chunks/6d35888c-7de770205ebffd75.js',
@@ -67,12 +63,8 @@ define(['./workbox-01fd22c6'], function (e) {
           revision: 'cd0e7d39ce3c0a61',
         },
         {
-          url: '/_next/static/chunks/97b9228b-0af83d05470249b8.js',
-          revision: '0af83d05470249b8',
-        },
-        {
-          url: '/_next/static/chunks/ff3b2f09-38a089a9af10355d.js',
-          revision: '38a089a9af10355d',
+          url: '/_next/static/chunks/97b9228b-64031281c8556b35.js',
+          revision: '64031281c8556b35',
         },
         {
           url: '/_next/static/chunks/framework-188a1a148bb1929f.js',
@@ -95,28 +87,20 @@ define(['./workbox-01fd22c6'], function (e) {
           revision: 'b71d637d61e79fee',
         },
         {
-          url: '/_next/static/chunks/pages/_app-60f6d6f74edab3ea.js',
-          revision: '60f6d6f74edab3ea',
+          url: '/_next/static/chunks/pages/_app-7b682a34f7f57b9a.js',
+          revision: '7b682a34f7f57b9a',
         },
         {
           url: '/_next/static/chunks/pages/_error-3101926ac3a5c54b.js',
           revision: '3101926ac3a5c54b',
         },
         {
-          url: '/_next/static/chunks/pages/index-11985d6b311b6c2b.js',
-          revision: '11985d6b311b6c2b',
+          url: '/_next/static/chunks/pages/index-dae067a957c1076d.js',
+          revision: 'dae067a957c1076d',
         },
         {
           url: '/_next/static/chunks/pages/offline-230682c765e0add8.js',
           revision: '230682c765e0add8',
-        },
-        {
-          url: '/_next/static/chunks/pages/posts-23cf125012cb359f.js',
-          revision: '23cf125012cb359f',
-        },
-        {
-          url: '/_next/static/chunks/pages/posts/%5B...id%5D-9fdcc6b31d5f7bcd.js',
-          revision: '9fdcc6b31d5f7bcd',
         },
         {
           url: '/_next/static/chunks/pages/store-6c56774a6c5d35fe.js',
@@ -127,12 +111,12 @@ define(['./workbox-01fd22c6'], function (e) {
           revision: '846118c33b2c0e922d7b3a7676f81f6f',
         },
         {
-          url: '/_next/static/chunks/webpack-6150df3479b32b8d.js',
-          revision: '6150df3479b32b8d',
+          url: '/_next/static/chunks/webpack-30b9dd9193356b11.js',
+          revision: '30b9dd9193356b11',
         },
         {
-          url: '/_next/static/css/311433fa96677cd8.css',
-          revision: '311433fa96677cd8',
+          url: '/_next/static/css/3368231ddcfb615a.css',
+          revision: '3368231ddcfb615a',
         },
         {
           url: '/_next/static/media/4cf2300e9c8272f7-s.p.woff2',
