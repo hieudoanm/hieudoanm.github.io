@@ -130,9 +130,8 @@ const rustFilter = async (
   mask: 'golden' | 'grayscale',
   image: HTMLImageElement
 ): Promise<string> => {
-  const { golden, grayscale, open_image } = await import(
-    '@silvia-odwyer/photon'
-  );
+  const { golden, grayscale, open_image } =
+    await import('@silvia-odwyer/photon');
 
   const canvas = document.createElement('canvas');
   canvas.width = image.width;
