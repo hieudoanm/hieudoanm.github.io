@@ -22,5 +22,5 @@ glib = { version = "=0.21.5" }
 serde_json = { version = "=1.0.145" }
 serde = { version = "=1.0.228", features = ["derive"] }
 log = { version = "=0.4.29" }
-tauri = { version = "=2.9.4", features = [] }
+tauri = { version = "=2.9.5", features = [] }
 tauri-plugin-log = { version = "=2.7.1" }
