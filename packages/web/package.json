@@ -63,7 +63,7 @@
     "@types/react-dom": "19.2.3",
     "@types/web-bluetooth": "0.0.21",
     "cpr": "3.0.1",
-    "daisyui": "5.5.13",
+    "daisyui": "5.5.14",
     "eslint": "9.39.2",
     "eslint-config-next": "16.0.10",
     "husky": "9.1.7",
