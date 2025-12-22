@@ -14,9 +14,6 @@ self.__BUILD_MANIFEST = {
   "/offline": [
     "static/chunks/a2fc16b94f2f8059.js"
   ],
-  "/store": [
-    "static/chunks/607da91b4d637443.js"
-  ],
   "__rewrites": {
     "afterFiles": [],
     "beforeFiles": [],
@@ -28,7 +25,6 @@ self.__BUILD_MANIFEST = {
     "/500",
     "/_app",
     "/_error",
-    "/offline",
-    "/store"
+    "/offline"
   ]
 };self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
