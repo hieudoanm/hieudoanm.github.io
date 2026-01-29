@@ -62,18 +62,16 @@ const HomePage: NextPage = () => {
         {/* Header / Identity */}
         <div className="flex flex-1 flex-col justify-center gap-12 md:flex-row md:items-center md:gap-20">
           {/* Left: Identity */}
-          <div className="flex flex-col items-center gap-6 md:items-start">
+          <div className="flex flex-col items-center gap-6">
             <Link href="/hieudoanm">
               <Glass.Button className="flex aspect-square w-32 items-center justify-center rounded-full transition-transform hover:rotate-12">
                 <FaH className="text-6xl" aria-hidden />
               </Glass.Button>
             </Link>
 
-            <div className="text-center md:text-left">
+            <div className="text-center">
               <h1 className="text-2xl font-bold tracking-tight">Hieu Doan</h1>
-              <p className="mt-1 text-neutral-400">
-                Builder · Engineer · Thinker
-              </p>
+              <p className="mt-1 text-neutral-400">Builder · Engineer</p>
             </div>
           </div>
 
