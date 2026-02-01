@@ -2,14 +2,15 @@ import { Glass } from '@web/components/Glass';
 import { Linear } from '@web/components/Linear';
 import { NextPage } from 'next';
 import Link from 'next/link';
+import type { IconType } from 'react-icons';
 import {
   FaAppStoreIos,
   FaH,
+  FaLaptopCode,
   FaLinkedin,
   FaSquareGithub,
   FaSquareTwitter,
 } from 'react-icons/fa6';
-import type { IconType } from 'react-icons';
 
 type AppLink = {
   id: string;
@@ -20,6 +21,13 @@ type AppLink = {
 };
 
 const apps: AppLink[] = [
+  {
+    id: 'activities',
+    href: '/activities',
+    name: 'Activities',
+    Icon: FaLaptopCode,
+    target: '_self',
+  },
   {
     id: 'store',
     href: '/store',

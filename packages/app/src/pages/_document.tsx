@@ -1,8 +1,9 @@
 import { Html, Head, Main, NextScript } from 'next/document';
+import { FC } from 'react';
 
-export default function Document() {
+const Document: FC = () => {
   return (
-    <Html lang="en">
+    <Html lang="en" data-theme="luxury">
       <Head>
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="manifest" href="/manifest.json" />
@@ -18,4 +19,6 @@ export default function Document() {
       </body>
     </Html>
   );
-}
+};
+
+export default Document;

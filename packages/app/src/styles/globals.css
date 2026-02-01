@@ -1,4 +1,7 @@
 @import 'tailwindcss';
+@plugin 'daisyui' {
+  themes: all;
+}
 
 @layer base {
   input[type='number']::-webkit-outer-spin-button,
