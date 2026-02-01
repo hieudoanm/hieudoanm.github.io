@@ -35,17 +35,100 @@ enum View {
   MONTHLY = 'monthly',
 }
 
+const Dot: FC<{ index: number; date: Date }> = ({ index, date }) => {
+  const today = new Date();
+
+  const toDateString = date.toLocaleString().split(',').at(0);
+
+  const isToday =
+    date.getFullYear() === today.getFullYear() &&
+    date.getMonth() === today.getMonth() &&
+    date.getDate() === today.getDate();
+
+  const todayTime = today.getTime();
+  const toDateTime = date.getTime();
+  const isPast = todayTime - toDateTime > 0;
+  const isFuture = todayTime - toDateTime < 0;
+
+  if (index === 0) {
+    return (
+      <div
+        title={toDateString}
+        className="flex h-4 w-4 items-center justify-center">
+        <div className="bg-base-content/5 aspect-square w-2 rounded-full" />
+      </div>
+    );
+  }
+
+  if (isToday) {
+    return (
+      <div
+        title={toDateString}
+        className="flex h-4 w-4 items-center justify-center">
+        <div className="relative w-2">
+          <div className="bg-base-content absolute aspect-square w-2 rounded-full" />
+          <div className="bg-base-content aspect-square w-2 animate-ping rounded-full" />
+        </div>
+      </div>
+    );
+  }
+
+  if (isPast) {
+    return (
+      <div
+        title={toDateString}
+        className="flex h-4 w-4 items-center justify-center">
+        <div className="bg-base-content/75 aspect-square w-2 rounded-full" />
+      </div>
+    );
+  }
+
+  if (isFuture) {
+    return (
+      <div
+        title={toDateString}
+        className="flex h-4 w-4 items-center justify-center">
+        <div className="border-base-content/50 aspect-square w-2 rounded-full border" />
+      </div>
+    );
+  }
+
+  return <></>;
+};
+
+const Weekday: FC = () => {
+  const windowSize = useWindowSize();
+  const times = windowSize.width < 768 ? 3 : 4;
+  const daysPerRow = times * 7;
+  const weekday = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+
+  return (
+    <div
+      className="grid grid-rows-1"
+      style={{ gridTemplateColumns: `repeat(${daysPerRow}, minmax(0, 1fr))` }}>
+      {[
+        ...weekday, // Week 1
+        ...weekday, // Week 2
+        ...weekday, // Week 3
+        ...(times === 4 ? weekday : []), // Week 4
+      ].map((weekday, index) => (
+        <div
+          key={`${weekday}-${index}`}
+          className="text-base-content col-span-1 text-center text-xs">
+          {weekday}
+        </div>
+      ))}
+    </div>
+  );
+};
+
 const DailyView: FC<{ year: number; withWeekday: boolean }> = ({
   year,
   withWeekday,
 }) => {
   const windowSize = useWindowSize();
-
   const times = windowSize.width < 768 ? 3 : 4;
   const daysPerRow = times * 7;
-  const weekday = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
-
-  const today = new Date();
 
   const startDateOfYear = new Date(year, 0, 1);
   const startWeekDayOfYear = startDateOfYear.getDay();
@@ -75,64 +158,19 @@ const DailyView: FC<{ year: number; withWeekday: boolean }> = ({
 
   return (
     <div className="w-84 md:w-112">
+      {withWeekday && <Weekday />}
       <table className="w-full">
         <tbody>
-          {withWeekday && (
-            <tr>
-              {[
-                ...weekday, // Week 1
-                ...weekday, // Week 2
-                ...weekday, // Week 3
-                ...(times === 4 ? weekday : []), // Week 4
-              ].map((day) => (
-                <td key={day} className="text-center text-xs">
-                  {day}
-                </td>
-              ))}
-            </tr>
-          )}
           {daysByFourWeek.map((week, i) => (
             <tr key={i}>
               {week.map((day, j) => {
                 const toDate = new Date(
                   new Date(year, 0, 0).getTime() + day * 24 * 60 * 60 * 1000
                 );
-                const isToday =
-                  toDate.getFullYear() === today.getFullYear() &&
-                  toDate.getMonth() === today.getMonth() &&
-                  toDate.getDate() === today.getDate();
-                const timeZone = toDate.getTimezoneOffset() / -60;
-                const toDateString = toDate.toLocaleString().split(',').at(0);
+
                 return (
                   <td key={j} className="text-center text-xs">
-                    {isToday ? (
-                      <div
-                        data-day={day}
-                        data-timezone={timeZone}
-                        title={toDateString}
-                        className="relative m-1 w-2">
-                        <div className="bg-base-content absolute aspect-square w-2 rounded-full" />
-                        <div className="bg-base-content aspect-square w-2 animate-ping rounded-full" />
-                      </div>
-                    ) : (
-                      <>
-                        {day !== 0 ? (
-                          <div
-                            data-day={day}
-                            data-timezone={timeZone}
-                            title={toDateString}
-                            className="bg-base-content/50 m-1 aspect-square w-2 rounded-full"
-                          />
-                        ) : (
-                          <div
-                            data-day={day}
-                            data-timezone={timeZone}
-                            title={toDateString}
-                            className="bg-base-content/10 m-1 aspect-square w-2 rounded-full"
-                          />
-                        )}
-                      </>
-                    )}
+                    <Dot index={day} date={toDate} />
                   </td>
                 );
               })}
@@ -148,172 +186,156 @@ const WeeklyView: FC<{ year: number; withWeekday: boolean }> = ({
   year,
   withWeekday,
 }) => {
-  const today = new Date();
-
   return (
     <div className="w-84 md:w-112">
+      {withWeekday && <Weekday />}
       <div className="grid grid-cols-3 grid-rows-4 md:grid-cols-4 md:grid-rows-3">
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(
-          (month: number, index: number) => {
-            const numberOfDays: number =
-              isLeapYear(year) && month == 2 ? 29 : daysOfMonths[index];
-            const days: number[] = new Array(numberOfDays)
-              .fill(0)
-              .map((_, i) => i + 1);
-            // Start of the Month
-            const firstDayOfMonth: Date = new Date(year, month - 1, 1);
-            const firstWeekdayOfMonth: number = firstDayOfMonth.getDay();
-            const paddingStartDays: number[] = new Array(
-              firstWeekdayOfMonth
-            ).fill(0);
-            // End of the Month
-            const lastDayOfMonth: Date = new Date(
-              year,
-              month - 1,
-              numberOfDays
+        {months.map((month: string, monthIndex: number) => {
+          // First Date of the Month
+          const firstDateOfMonth: Date = new Date(year, monthIndex, 1);
+          const firstWeekdayOfMonth: number = firstDateOfMonth.getDay();
+          const paddingStartDays: Date[] = new Array(firstWeekdayOfMonth)
+            .fill(0)
+            .map(
+              (_, i) =>
+                new Date(
+                  new Date(year, monthIndex, 1).getTime() -
+                    (firstWeekdayOfMonth - i) * 24 * 60 * 60 * 1000
+                )
             );
-            const lastWeekdayOfMonth: number = lastDayOfMonth.getDay();
-            const paddingEndDays: number[] = new Array(
-              6 - lastWeekdayOfMonth
-            ).fill(0);
-            // Full Month
-            const daysWithPadding: number[] = [
-              ...paddingStartDays,
-              ...days,
-              ...paddingEndDays,
-            ];
+          // Dates of Month
+          const numberOfDays: number =
+            isLeapYear(year) && monthIndex === 1
+              ? 29
+              : daysOfMonths[monthIndex];
+          const dates: Date[] = new Array(numberOfDays)
+            .fill(0)
+            .map((_, i) => new Date(year, monthIndex, i + 1));
+          // Last Date of the Month
+          const lastDateOfMonth: Date = new Date(
+            year,
+            monthIndex,
+            numberOfDays
+          );
+          const lastWeekdayOfMonth: number = lastDateOfMonth.getDay();
+          const paddingEndDays: Date[] = new Array(6 - lastWeekdayOfMonth)
+            .fill(0)
+            .map((_, i) => new Date(year, monthIndex + 1, i + 1));
+          // Full Month
+          const datesWithPadding: Date[] = [
+            ...paddingStartDays,
+            ...dates,
+            ...paddingEndDays,
+          ];
 
-            const daysByWeek: number[][] = daysWithPadding.reduce(
-              (acc, day, index) => {
-                const weekIndex = Math.floor(index / 7);
-                if (!acc[weekIndex]) {
-                  acc[weekIndex] = [];
-                }
-                acc[weekIndex].push(day);
-                return acc;
-              },
-              [] as number[][]
+          const datesByWeek: Date[][] = datesWithPadding.reduce(
+            (acc, date, index) => {
+              const weekIndex = Math.floor(index / 7);
+              if (!acc[weekIndex]) {
+                acc[weekIndex] = [];
+              }
+              acc[weekIndex].push(date);
+              return acc;
+            },
+            [] as Date[][]
+          );
+
+          if (datesByWeek.length === 4) {
+            datesByWeek.push(
+              new Array(7)
+                .fill(0)
+                .map((_, i) => new Date(year, monthIndex + 1, i + 1))
             );
-            const numberOfWeeksByGroup: number = daysByWeek.length;
-            if (numberOfWeeksByGroup === 4) {
-              daysByWeek.push([0, 0, 0, 0, 0, 0, 0]);
-              daysByWeek.push([0, 0, 0, 0, 0, 0, 0]);
-            } else if (numberOfWeeksByGroup === 5) {
-              daysByWeek.push([0, 0, 0, 0, 0, 0, 0]);
+          } else if (datesByWeek.length === 6) {
+            if (firstWeekdayOfMonth === 6) {
+              datesByWeek.shift();
+            } else if (lastWeekdayOfMonth === 0) {
+              datesByWeek.pop();
             }
-
-            return (
-              <div key={month} className="col-span-1 row-span-1">
-                <table className="h-28 w-28">
-                  {withWeekday && (
-                    <caption className="text-xs">
-                      {months[month - 1].slice(0, 3)}
-                    </caption>
-                  )}
-                  <tbody>
-                    {withWeekday && (
-                      <tr>
-                        {['S', 'M', 'T', 'W', 'T', 'F', 'S'].map((day) => (
-                          <td key={day} className="text-center text-xs">
-                            {day}
-                          </td>
-                        ))}
-                      </tr>
-                    )}
-                    {daysByWeek.map((week: number[], weekIndex: number) => (
-                      <tr key={weekIndex}>
-                        {week.map((day: number, dayIndex: number) => {
-                          const isToday =
-                            day === today.getDate() &&
-                            month === today.getMonth() + 1 &&
-                            year === today.getFullYear();
-
-                          return (
-                            <td key={dayIndex} className="w-4 align-middle">
-                              {isToday ? (
-                                <div className="relative m-1 w-2">
-                                  <div className="bg-base-content absolute aspect-square w-2 rounded-full" />
-                                  <div className="bg-base-content aspect-square w-2 animate-ping rounded-full" />
-                                </div>
-                              ) : (
-                                <>
-                                  {day !== 0 ? (
-                                    <div className="bg-base-content/50 m-1 aspect-square w-2 rounded-full" />
-                                  ) : (
-                                    <div className="bg-base-content/10 m-1 aspect-square w-2 rounded-full" />
-                                  )}
-                                </>
-                              )}
-                            </td>
-                          );
-                        })}
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            );
           }
-        )}
+
+          return (
+            <div key={month} className="col-span-1 row-span-1">
+              <table className="h-28 w-28">
+                <tbody>
+                  {datesByWeek.map((week: Date[], weekIndex: number) => (
+                    <tr key={`week-${monthIndex}-${weekIndex}`}>
+                      {week.map((date: Date) => {
+                        const carriedOverFromLastMonth =
+                          date.getMonth() === monthIndex - 1 &&
+                          date.getDay() === 0 &&
+                          firstWeekdayOfMonth === 1;
+
+                        const pushOverToNextMonth =
+                          date.getMonth() === monthIndex + 1 &&
+                          date.getDay() === 6 &&
+                          lastWeekdayOfMonth === 5;
+
+                        const dotIndex =
+                          date.getMonth() === monthIndex ||
+                          carriedOverFromLastMonth ||
+                          pushOverToNextMonth;
+
+                        return (
+                          <td
+                            data-dot={dotIndex}
+                            data-weekday={date.getDay()}
+                            data-date={date.getDate()}
+                            data-month={date.getMonth() + 1}
+                            data-year={date.getFullYear()}
+                            data-month-index={monthIndex}
+                            key={date.toISOString()}>
+                            <Dot
+                              index={dotIndex ? date.getDate() : 0}
+                              date={date}
+                            />
+                          </td>
+                        );
+                      })}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
 };
 
-const MonthlyView: FC<{ year: number; withWeekday: boolean }> = ({
-  year,
-  withWeekday,
-}) => {
-  const today = new Date();
-
+const MonthlyView: FC<{ year: number }> = ({ year }) => {
   return (
-    <div
-      className={`grid grid-rows-12 ${withWeekday ? 'grid-cols-32' : 'grid-cols-31'}`}>
-      {months.map((month, monthIndex) => {
-        const daysOfMonth = daysOfMonths[monthIndex];
-        const days = Array.from({ length: daysOfMonth }, (_, i) => i + 1);
-        const paddingEndDays: number[] = Array.from(
-          { length: 31 - daysOfMonth },
-          () => 0
-        );
-        const fullDays = [...days, ...paddingEndDays];
+    <div className="w-84 md:w-112">
+      <div className="grid grid-cols-3 grid-rows-4 md:grid-cols-4 md:grid-rows-3">
+        {months.map((month, monthIndex) => {
+          const daysOfMonth = daysOfMonths[monthIndex];
+          const days = Array.from({ length: daysOfMonth }, (_, i) => i + 1);
+          const missingDays = 31 - daysOfMonth;
 
-        return (
-          <>
-            {withWeekday && (
-              <div
-                key={month}
-                className="col-span-1 row-span-1 flex items-center justify-center">
-                <span className="text-xs">{month.at(0)}</span>
+          const fullDays = [...Array(missingDays).fill(0), ...days];
+
+          return (
+            <div key={month} className="grid grid-cols-7">
+              <div className="text-base-content col-span-4 pl-1 text-left text-xs">
+                {month.slice(0, 3)}
               </div>
-            )}
-            {fullDays.map((day) => {
-              const isToday =
-                day === today.getDate() &&
-                monthIndex === today.getMonth() &&
-                year === today.getFullYear();
-              return (
-                <div key={day} className="col-span-1 row-span-1">
-                  {isToday ? (
-                    <div className="relative m-1 w-2">
-                      <div className="bg-base-content absolute aspect-square w-2 rounded-full" />
-                      <div className="bg-base-content aspect-square w-2 animate-ping rounded-full" />
-                    </div>
-                  ) : (
-                    <>
-                      {day !== 0 ? (
-                        <div className="bg-base-content/50 m-1 aspect-square w-2 rounded-full" />
-                      ) : (
-                        <div className="bg-base-content/10 m-1 aspect-square w-2 rounded-full" />
-                      )}
-                    </>
-                  )}
-                </div>
-              );
-            })}
-          </>
-        );
-      })}
+              {fullDays.map((date, dateIndex) => {
+                return (
+                  <div key={`date-${dateIndex}`}>
+                    {date !== 0 && (
+                      <Dot
+                        index={date}
+                        date={new Date(year, monthIndex, date)}
+                      />
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
@@ -331,46 +353,58 @@ const ActivitiesPage: NextPage = () => {
   }>({
     year: today.getFullYear(),
     view: View.DAILY,
-    withWeekday: false,
+    withWeekday: true,
   });
+
+  const showWeekday = view === View.DAILY || view === View.WEEKLY;
 
   return (
     <div className="flex h-screen w-screen flex-col p-4 md:p-8">
       <nav className="mx-auto flex w-84 items-center justify-between md:w-112">
         <span className="font-black">Activities</span>
         <div className="flex items-center">
-          <button
-            className={`btn btn-xs btn-ghost ${withWeekday ? '' : 'line-through'}`}
-            onClick={() => {
-              setState((previous) => ({
-                ...previous,
-                withWeekday: !previous.withWeekday,
-              }));
-            }}>
-            Weekday
-          </button>
-          <button
-            className="btn btn-xs btn-ghost"
-            onClick={() => {
-              setState((previous) => {
-                let newView = View.DAILY;
-                if (previous.view === View.DAILY) {
-                  newView = View.WEEKLY;
-                } else if (previous.view === View.WEEKLY) {
-                  newView = View.MONTHLY;
-                } else if (previous.view === View.MONTHLY) {
-                  newView = View.DAILY;
-                }
-                return {
+          {showWeekday && (
+            <button
+              className={`btn btn-xs btn-ghost ${withWeekday ? '' : 'line-through'}`}
+              onClick={() => {
+                setState((previous) => ({
                   ...previous,
-                  view: newView,
-                };
-              });
-            }}>
-            {view === View.DAILY && 'Daily'}
-            {view === View.WEEKLY && 'Weekly'}
-            {view === View.MONTHLY && 'Monthly'}
-          </button>
+                  withWeekday: !previous.withWeekday,
+                }));
+              }}>
+              Weekday
+            </button>
+          )}
+          <div className="dropdown dropdown-end">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-xs btn-ghost rounded-field">
+              {view === View.DAILY && 'Daily'}
+              {view === View.WEEKLY && 'Weekly'}
+              {view === View.MONTHLY && 'Monthly'}
+            </div>
+            <ul
+              tabIndex={-1}
+              className="menu dropdown-content border-base-content/10 bg-primary-content z-1 mt-1 rounded-lg border shadow-sm">
+              {[View.DAILY, View.WEEKLY, View.MONTHLY].map((v) => (
+                <li key={v}>
+                  <a
+                    className="btn btn-xs btn-ghost"
+                    onClick={() => {
+                      setState((previous) => ({
+                        ...previous,
+                        view: v,
+                      }));
+                    }}>
+                    {v === View.DAILY && 'Daily'}
+                    {v === View.WEEKLY && 'Weekly'}
+                    {v === View.MONTHLY && 'Monthly'}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </nav>
       <main className="flex grow items-center justify-center">
@@ -378,7 +412,7 @@ const ActivitiesPage: NextPage = () => {
           <form onSubmit={(e) => e.preventDefault()}>
             <select
               name="year"
-              className="select select-xs select-ghost m-0 w-full appearance-none bg-none p-0 text-center focus:bg-transparent focus:outline-none"
+              className="select select-xs select-ghost text-base-content m-0 w-full appearance-none bg-none p-0 text-center focus:bg-transparent focus:outline-none"
               value={year}
               onChange={(e) =>
                 setState((previous) => ({
@@ -401,9 +435,7 @@ const ActivitiesPage: NextPage = () => {
           {view === View.WEEKLY && (
             <WeeklyView year={year} withWeekday={withWeekday} />
           )}
-          {view === View.MONTHLY && (
-            <MonthlyView year={year} withWeekday={withWeekday} />
-          )}
+          {view === View.MONTHLY && <MonthlyView year={year} />}
         </div>
       </main>
     </div>
