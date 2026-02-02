@@ -276,3 +276,11 @@ export const buildEpochString = async (unixTimestamp: number) => {
   }
   return data;
 };
+
+export const isLeapYear = (year: number): boolean => {
+  return year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
+};
+
+export const daysOfMonths: number[] = [
+  31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31,
+];
