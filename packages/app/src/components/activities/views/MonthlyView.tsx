@@ -1,6 +1,6 @@
 import { daysOfMonths, months } from '@web/utils/time';
 import { FC } from 'react';
-import { Dot } from './Dot';
+import { Dot } from '../Dot';
 
 export const MonthlyView: FC<{ year: number }> = ({ year }) => {
   return (

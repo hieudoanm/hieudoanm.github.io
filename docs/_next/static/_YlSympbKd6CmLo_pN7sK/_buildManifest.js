@@ -12,7 +12,7 @@ self.__BUILD_MANIFEST = {
     "static/chunks/94e4416f5a377e37.js"
   ],
   "/activities": [
-    "static/chunks/5449fc0fb3a09099.js"
+    "static/chunks/983ba20ab9eef415.js"
   ],
   "/offline": [
     "static/chunks/6d9173789d633864.js"

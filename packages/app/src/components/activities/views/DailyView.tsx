@@ -1,8 +1,8 @@
 import { useWindowSize } from '@web/hooks/window/use-size';
 import { isLeapYear } from '@web/utils/time';
 import { FC } from 'react';
-import { Dot } from './Dot';
-import { Weekday } from './Weekday';
+import { Dot } from '../Dot';
+import { Weekday } from '../Weekday';
 
 export type DailyViewProps = {
   year: number;

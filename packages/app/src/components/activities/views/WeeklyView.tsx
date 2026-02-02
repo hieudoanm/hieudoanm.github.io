@@ -1,7 +1,7 @@
 import { daysOfMonths, isLeapYear, months } from '@web/utils/time';
 import { FC } from 'react';
-import { Dot } from './Dot';
-import { Weekday } from './Weekday';
+import { Dot } from '../Dot';
+import { Weekday } from '../Weekday';
 
 export const WeeklyView: FC<{ year: number; withWeekday: boolean }> = ({
   year,
