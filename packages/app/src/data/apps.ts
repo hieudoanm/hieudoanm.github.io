@@ -266,32 +266,12 @@ export const apps: App[] = [
   },
   {
     category: 'fun',
-    id: 'breaking-bad',
-    href: 'https://hieudoanm.github.io/breaking-bad',
-    github: 'https://github.com/hieudoanm/breaking-bad',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/breaking-bad/refs/heads/master/images/cover.png',
-    name: 'Breaking Bad',
-    tags: ['web'],
-  },
-  {
-    category: 'fun',
     id: 'countries',
     href: 'https://hieudoanm.github.io/countries',
     github: 'https://github.com/hieudoanm/countries',
     image:
       'https://raw.githubusercontent.com/hieudoanm/countries/refs/heads/master/images/cover.png',
     name: 'Countries',
-    tags: ['web'],
-  },
-  {
-    category: 'fun',
-    id: 'house.md',
-    href: 'https://hieudoanm.github.io/house.md',
-    github: 'https://github.com/hieudoanm/house.md',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/house.md/refs/heads/master/images/cover.png',
-    name: 'House, M.D.',
     tags: ['web'],
   },
   {
@@ -315,7 +295,7 @@ export const apps: App[] = [
     tags: ['web'],
   },
   {
-    category: 'game',
+    category: 'games',
     id: 'blackjack',
     href: 'https://hieudoanm.github.io/blackjack',
     github: 'https://github.com/hieudoanm/blackjack',
@@ -325,7 +305,7 @@ export const apps: App[] = [
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
-    category: 'game',
+    category: 'games',
     id: 'quiz',
     href: 'https://hieudoanm.github.io/quiz',
     github: 'https://github.com/hieudoanm/quiz',
@@ -335,7 +315,7 @@ export const apps: App[] = [
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
-    category: 'game',
+    category: 'games',
     id: 'recall',
     href: 'https://hieudoanm.github.io/recall',
     github: 'https://github.com/hieudoanm/recall',
@@ -345,7 +325,7 @@ export const apps: App[] = [
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
-    category: 'game',
+    category: 'games',
     id: 't3',
     href: 'https://hieudoanm.github.io/t3',
     github: 'https://github.com/hieudoanm/t3',
@@ -355,7 +335,7 @@ export const apps: App[] = [
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
-    category: 'game',
+    category: 'games',
     id: 'towers',
     href: 'https://hieudoanm.github.io/towers',
     github: 'https://github.com/hieudoanm/towers',
@@ -365,7 +345,7 @@ export const apps: App[] = [
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
-    category: 'game',
+    category: 'games',
     id: 'wordle',
     href: 'https://hieudoanm.github.io/wordle',
     github: 'https://github.com/hieudoanm/wordle',
@@ -373,6 +353,26 @@ export const apps: App[] = [
       'https://raw.githubusercontent.com/hieudoanm/wordle/refs/heads/master/images/cover.png',
     name: 'Wordle',
     tags: ['android', 'macos', 'web'],
+  },
+  {
+    category: 'movies',
+    id: 'breaking-bad',
+    href: 'https://hieudoanm.github.io/breaking-bad',
+    github: 'https://github.com/hieudoanm/breaking-bad',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/breaking-bad/refs/heads/master/images/cover.png',
+    name: 'Breaking Bad',
+    tags: ['web'],
+  },
+  {
+    category: 'movies',
+    id: 'house.md',
+    href: 'https://hieudoanm.github.io/house.md',
+    github: 'https://github.com/hieudoanm/house.md',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/house.md/refs/heads/master/images/cover.png',
+    name: 'House, M.D.',
+    tags: ['web'],
   },
   {
     category: 'numberphile',
