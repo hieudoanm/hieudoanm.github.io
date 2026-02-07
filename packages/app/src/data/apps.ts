@@ -286,6 +286,16 @@ export const apps: App[] = [
   },
   {
     category: 'fun',
+    id: 'house.md',
+    href: 'https://hieudoanm.github.io/house.md',
+    github: 'https://github.com/hieudoanm/house.md',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/house.md/refs/heads/master/images/cover.png',
+    name: 'House, M.D.',
+    tags: ['web'],
+  },
+  {
+    category: 'fun',
     id: 'palindrome',
     href: 'https://hieudoanm.github.io/palindrome',
     github: 'https://github.com/hieudoanm/palindrome',
