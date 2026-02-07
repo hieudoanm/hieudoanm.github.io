@@ -17,6 +17,9 @@ self.__BUILD_MANIFEST = {
   "/offline": [
     "static/chunks/6d9173789d633864.js"
   ],
+  "/store": [
+    "static/chunks/e85633d773dcfaa3.js"
+  ],
   "__rewrites": {
     "afterFiles": [],
     "beforeFiles": [],
@@ -29,6 +32,9 @@ self.__BUILD_MANIFEST = {
     "/_app",
     "/_error",
     "/activities",
-    "/offline"
+    "/api/checkout",
+    "/api/trpc/[trpc]",
+    "/offline",
+    "/store"
   ]
 };self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
