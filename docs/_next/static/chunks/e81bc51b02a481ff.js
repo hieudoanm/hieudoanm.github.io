@@ -3,7 +3,7 @@ __turbopack_load_page_chunks__("/_app", [
   "static/chunks/1eeb1f9f3402aa6a.js",
   "static/chunks/b0e514f265bffb45.js",
   "static/chunks/6bd1710a07e797c0.js",
-  "static/chunks/54aacf94e731c551.css",
+  "static/chunks/8e0cde1ec58408f2.css",
   "static/chunks/d782668ea84e48c1.css",
-  "static/chunks/turbopack-990f4409a35229e9.js"
+  "static/chunks/turbopack-3ffbe4bf58cfc2ab.js"
 ])

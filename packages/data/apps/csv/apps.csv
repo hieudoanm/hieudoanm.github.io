@@ -24,6 +24,7 @@ docs,simple-upload,https://hieudoanm.github.io/simple-upload,https://github.com/
 finance,inflation,https://hieudoanm.github.io/inflation,https://github.com/hieudoanm/inflation,https://raw.githubusercontent.com/hieudoanm/inflation/refs/heads/master/images/cover.png,Inflation,"cli,extension,android,macos,web"
 "finance","invoice","https://hieudoanm.github.io/invoice","https://github.com/hieudoanm/invoice","https://raw.githubusercontent.com/hieudoanm/invoice/refs/heads/master/images/cover.png","Invoice","cli,extension,android,macos,web"
 finance,tax,https://hieudoanm.github.io/tax,https://github.com/hieudoanm/tax,https://raw.githubusercontent.com/hieudoanm/tax/refs/heads/master/images/cover.png,Tax,"cli,extension,android,macos,web"
+fun,countdown,https://hieudoanm.github.io/countdown,https://github.com/hieudoanm/countdown,https://raw.githubusercontent.com/hieudoanm/countdown/refs/heads/master/images/cover.png,Countdown,web
 fun,countries,https://hieudoanm.github.io/countries,https://github.com/hieudoanm/countries,https://raw.githubusercontent.com/hieudoanm/countries/refs/heads/master/images/cover.png,Countries,web
 fun,palindrome,https://hieudoanm.github.io/palindrome,https://github.com/hieudoanm/palindrome,https://raw.githubusercontent.com/hieudoanm/palindrome/refs/heads/master/images/cover.png,Palindrome,web
 fun,typoglycemia,https://hieudoanm.github.io/typoglycemia,https://github.com/hieudoanm/typoglycemia,https://raw.githubusercontent.com/hieudoanm/typoglycemia/refs/heads/master/images/cover.png,Typoglycemia,web
