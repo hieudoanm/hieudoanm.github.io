@@ -45,6 +45,7 @@ productivity,calendar,https://hieudoanm.github.io/calendar,https://github.com/hi
 "social","ig","https://hieudoanm.github.io/ig","https://github.com/hieudoanm/ig","https://raw.githubusercontent.com/hieudoanm/ig/refs/heads/master/images/cover.png","IG","cli,extension,android,macos,web"
 "social","tg","https://hieudoanm.github.io/tg","https://github.com/hieudoanm/tg","https://raw.githubusercontent.com/hieudoanm/tg/refs/heads/master/images/cover.png","TG","cli,extension,android,macos,web"
 "social","ytb","https://hieudoanm.github.io/ytb","https://github.com/hieudoanm/ytb","https://raw.githubusercontent.com/hieudoanm/ytb/refs/heads/master/images/cover.png","YTB","cli,extension,android,macos,web"
+utilities,calculator,https://hieudoanm.github.io/calculator,https://github.com/hieudoanm/calculator,https://raw.githubusercontent.com/hieudoanm/calculator/refs/heads/master/images/cover.png,Calculator,"android,macos,web"
 "utilities","macosx","https://hieudoanm.github.io/macosx","https://github.com/hieudoanm/macosx","https://raw.githubusercontent.com/hieudoanm/macosx/refs/heads/master/images/cover.png","macOSX","cli,extension,android,macos,web"
 "template","atomic","https://hieudoanm.github.io/atomic","https://github.com/hieudoanm/atomic","https://raw.githubusercontent.com/hieudoanm/atomic/refs/heads/master/images/cover.png","Atomic","web"
 "template","micro-saas","https://hieudoanm.github.io/micro-saas","https://github.com/hieudoanm/micro-saas","https://raw.githubusercontent.com/hieudoanm/micro-saas/refs/heads/master/images/cover.png","Micro SaaS","web"

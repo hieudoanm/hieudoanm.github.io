@@ -476,6 +476,16 @@ export const apps: App[] = [
   },
   {
     category: 'utilities',
+    id: 'calculator',
+    href: 'https://hieudoanm.github.io/calculator',
+    github: 'https://github.com/hieudoanm/calculator',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/calculator/refs/heads/master/images/cover.png',
+    name: 'Calculator',
+    tags: ['android', 'macos', 'web'],
+  },
+  {
+    category: 'utilities',
     id: 'macosx',
     href: 'https://hieudoanm.github.io/macosx',
     github: 'https://github.com/hieudoanm/macosx',
