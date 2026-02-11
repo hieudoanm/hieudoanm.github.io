@@ -74,11 +74,25 @@
   },
   {
     "category": "chess",
+    "id": "chess.elo",
+    "href": "https://hieudoanm.github.io/chess.elo",
+    "github": "https://github.com/hieudoanm/chess.elo",
+    "image": "https://raw.githubusercontent.com/hieudoanm/chess.elo/refs/heads/master/images/cover.png",
+    "name": "Chess Elo",
+    "tags": [
+      "android",
+      "cli",
+      "macos",
+      "web"
+    ]
+  },
+  {
+    "category": "chess",
     "id": "chess.openings",
     "href": "https://hieudoanm.github.io/chess.openings",
     "github": "https://github.com/hieudoanm/chess.openings",
     "image": "https://raw.githubusercontent.com/hieudoanm/chess.openings/refs/heads/master/images/cover.png",
-    "name": "chess Openings",
+    "name": "Chess Openings",
     "tags": [
       "web"
     ]
