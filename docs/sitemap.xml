@@ -37,6 +37,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://hieudoanm.github.io/chess.clock</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://hieudoanm.github.io/chess.com</loc>
     <lastmod>2026-02-11</lastmod>
     <changefreq>weekly</changefreq>

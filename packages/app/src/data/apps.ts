@@ -46,6 +46,16 @@ export const apps: App[] = [
   },
   {
     category: 'chess',
+    id: 'chess.clock',
+    href: 'https://hieudoanm.github.io/chess.clock',
+    github: 'https://github.com/hieudoanm/chess.clock',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/chess.clock/refs/heads/master/images/cover.png',
+    name: 'Chess Clock',
+    tags: ['android', 'macos', 'web'],
+  },
+  {
+    category: 'chess',
     id: 'chess.com',
     href: 'https://hieudoanm.github.io/chess.com',
     github: 'https://github.com/hieudoanm/chess.com',
@@ -61,7 +71,7 @@ export const apps: App[] = [
     github: 'https://github.com/hieudoanm/chess.openings',
     image:
       'https://raw.githubusercontent.com/hieudoanm/chess.openings/refs/heads/master/images/cover.png',
-    name: 'chess.openings',
+    name: 'chess Openings',
     tags: ['web'],
   },
   {
@@ -72,7 +82,7 @@ export const apps: App[] = [
     image:
       'https://raw.githubusercontent.com/hieudoanm/chess960/refs/heads/master/images/cover.png',
     name: 'Chess960',
-    tags: ['android', 'macos', 'web'],
+    tags: ['android', 'cli', 'macos', 'web'],
   },
   {
     category: 'commerce',
