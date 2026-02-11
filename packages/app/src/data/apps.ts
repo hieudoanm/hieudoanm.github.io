@@ -65,6 +65,16 @@ export const apps: App[] = [
     tags: ['web'],
   },
   {
+    category: 'chess',
+    id: 'chess960',
+    href: 'https://hieudoanm.github.io/chess960',
+    github: 'https://github.com/hieudoanm/chess960',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/chess960/refs/heads/master/images/cover.png',
+    name: 'Chess960',
+    tags: ['android', 'macos', 'web'],
+  },
+  {
     category: 'commerce',
     id: 'shopify',
     href: 'https://hieudoanm.github.io/shopify',
