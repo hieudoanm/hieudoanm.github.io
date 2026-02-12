@@ -73,6 +73,20 @@
   },
   {
     "category": "chess",
+    "id": "chess.engine",
+    "href": "https://hieudoanm.github.io/chess.engine",
+    "github": "https://github.com/hieudoanm/chess.engine",
+    "image": "https://raw.githubusercontent.com/hieudoanm/chess.engine/refs/heads/master/images/cover.png",
+    "name": "Chess Engine",
+    "tags": [
+      "android",
+      "cli",
+      "macos",
+      "web"
+    ]
+  },
+  {
+    "category": "chess",
     "id": "chess.graphics",
     "href": "https://hieudoanm.github.io/chess.graphics",
     "github": "https://github.com/hieudoanm/chess.graphics",
