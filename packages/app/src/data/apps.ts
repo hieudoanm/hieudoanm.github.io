@@ -355,7 +355,7 @@ export const apps: App[] = [
     tags: ['web'],
   },
   {
-    category: 'games',
+    category: 'gambling',
     id: 'blackjack',
     href: 'https://hieudoanm.github.io/blackjack',
     github: 'https://github.com/hieudoanm/blackjack',
@@ -363,6 +363,16 @@ export const apps: App[] = [
       'https://raw.githubusercontent.com/hieudoanm/blackjack/refs/heads/master/images/cover.png',
     name: 'Blackjack',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
+  },
+  {
+    category: 'gambling',
+    id: 'poker',
+    href: 'https://hieudoanm.github.io/poker',
+    github: 'https://github.com/hieudoanm/poker',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/poker/refs/heads/master/images/cover.png',
+    name: 'Poker',
+    tags: ['android', 'macos', 'web'],
   },
   {
     category: 'games',
