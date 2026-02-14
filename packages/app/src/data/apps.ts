@@ -25,16 +25,6 @@ export const apps: App[] = [
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
-    category: 'artificial-intelligence',
-    id: 'words',
-    href: 'https://hieudoanm.github.io/words',
-    github: 'https://github.com/hieudoanm/words',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/words/refs/heads/master/images/cover.png',
-    name: 'Words',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
     category: 'chess',
     id: 'chess.clock',
     href: 'https://hieudoanm.github.io/chess.clock',
@@ -425,6 +415,26 @@ export const apps: App[] = [
     tags: ['android', 'macos', 'web'],
   },
   {
+    category: 'languages',
+    id: 'sign',
+    href: 'https://hieudoanm.github.io/sign',
+    github: 'https://github.com/hieudoanm/sign',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/sign/refs/heads/master/images/cover.png',
+    name: 'Sign',
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
+  },
+  {
+    category: 'languages',
+    id: 'words',
+    href: 'https://hieudoanm.github.io/words',
+    github: 'https://github.com/hieudoanm/words',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/words/refs/heads/master/images/cover.png',
+    name: 'Words',
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
+  },
+  {
     category: 'movies',
     id: 'breaking-bad',
     href: 'https://hieudoanm.github.io/breaking-bad',
@@ -566,22 +576,12 @@ export const apps: App[] = [
   },
   {
     category: 'template',
-    id: 'micro-saas',
-    href: 'https://hieudoanm.github.io/micro-saas',
-    github: 'https://github.com/hieudoanm/micro-saas',
+    id: 'start',
+    href: 'https://hieudoanm.github.io/start',
+    github: 'https://github.com/hieudoanm/start',
     image:
-      'https://raw.githubusercontent.com/hieudoanm/micro-saas/refs/heads/master/images/cover.png',
-    name: 'Micro SaaS',
-    tags: ['web'],
-  },
-  {
-    category: 'template',
-    id: 'starter',
-    href: 'https://hieudoanm.github.io/starter',
-    github: 'https://github.com/hieudoanm/starter',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/starter/refs/heads/master/images/cover.png',
-    name: 'Starter',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
+      'https://raw.githubusercontent.com/hieudoanm/start/refs/heads/master/images/cover.png',
+    name: 'Start',
+    tags: ['android', 'macos', 'web'],
   },
 ];
