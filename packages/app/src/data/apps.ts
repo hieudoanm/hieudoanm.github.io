@@ -296,13 +296,23 @@ export const apps: App[] = [
   },
   {
     category: 'fun',
+    id: 'attractors',
+    href: 'https://hieudoanm.github.io/attractors',
+    github: 'https://github.com/hieudoanm/attractors',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/attractors/refs/heads/master/images/cover.png',
+    name: 'Attractors',
+    tags: ['android', 'macos', 'web'],
+  },
+  {
+    category: 'fun',
     id: 'countdown',
     href: 'https://hieudoanm.github.io/countdown',
     github: 'https://github.com/hieudoanm/countdown',
     image:
       'https://raw.githubusercontent.com/hieudoanm/countdown/refs/heads/master/images/cover.png',
     name: 'Countdown',
-    tags: ['web'],
+    tags: ['android', 'macos', 'web'],
   },
   {
     category: 'fun',
@@ -312,7 +322,7 @@ export const apps: App[] = [
     image:
       'https://raw.githubusercontent.com/hieudoanm/countries/refs/heads/master/images/cover.png',
     name: 'Countries',
-    tags: ['web'],
+    tags: ['android', 'macos', 'web'],
   },
   {
     category: 'fun',
@@ -322,7 +332,7 @@ export const apps: App[] = [
     image:
       'https://raw.githubusercontent.com/hieudoanm/legislation/refs/heads/master/images/cover.png',
     name: 'Legislation',
-    tags: ['web'],
+    tags: ['android', 'macos', 'web'],
   },
   {
     category: 'fun',
@@ -332,7 +342,7 @@ export const apps: App[] = [
     image:
       'https://raw.githubusercontent.com/hieudoanm/palindrome/refs/heads/master/images/cover.png',
     name: 'Palindrome',
-    tags: ['web'],
+    tags: ['android', 'macos', 'web'],
   },
   {
     category: 'fun',
@@ -342,7 +352,7 @@ export const apps: App[] = [
     image:
       'https://raw.githubusercontent.com/hieudoanm/typoglycemia/refs/heads/master/images/cover.png',
     name: 'Typoglycemia',
-    tags: ['web'],
+    tags: ['android', 'macos', 'web'],
   },
   {
     category: 'gambling',
