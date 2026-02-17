@@ -1,14 +1,14 @@
-"category","id","href","github","image","name","tags"
-"artificial-intelligence","promptly","https://hieudoanm.github.io/promptly","https://github.com/hieudoanm/promptly","https://raw.githubusercontent.com/hieudoanm/promptly/refs/heads/master/images/cover.png","Promptly","cli,extension,android,macos,web"
+category,id,href,github,image,name,tags
+artificial-intelligence,promptly,https://hieudoanm.github.io/promptly,https://github.com/hieudoanm/promptly,https://raw.githubusercontent.com/hieudoanm/promptly/refs/heads/master/images/cover.png,Promptly,"cli,extension,android,macos,web"
 chess,chess.clock,https://hieudoanm.github.io/chess.clock,https://github.com/hieudoanm/chess.clock,https://raw.githubusercontent.com/hieudoanm/chess.clock/refs/heads/master/images/cover.png,Chess Clock,"android,macos,web"
 chess,chess.com,https://hieudoanm.github.io/chess.com,https://github.com/hieudoanm/chess.com,https://raw.githubusercontent.com/hieudoanm/chess.com/refs/heads/master/images/cover.png,chess.com,"cli,extension,android,macos,web"
 chess,chess.elo,https://hieudoanm.github.io/chess.elo,https://github.com/hieudoanm/chess.elo,https://raw.githubusercontent.com/hieudoanm/chess.elo/refs/heads/master/images/cover.png,Chess Elo,"android,cli,macos,web"
 chess,chess.engine,https://hieudoanm.github.io/chess.engine,https://github.com/hieudoanm/chess.engine,https://raw.githubusercontent.com/hieudoanm/chess.engine/refs/heads/master/images/cover.png,Chess Engine,"android,cli,macos,web"
-chess,chess.graphics,"https://hieudoanm.github.io/chess.graphics","https://github.com/hieudoanm/chess.graphics","https://raw.githubusercontent.com/hieudoanm/chess.graphics/refs/heads/master/images/cover.png","Chess Graphics","android,macos,web"
+chess,chess.graphics,https://hieudoanm.github.io/chess.graphics,https://github.com/hieudoanm/chess.graphics,https://raw.githubusercontent.com/hieudoanm/chess.graphics/refs/heads/master/images/cover.png,Chess Graphics,"android,macos,web"
 chess,chess.openings,https://hieudoanm.github.io/chess.openings,https://github.com/hieudoanm/chess.openings,https://raw.githubusercontent.com/hieudoanm/chess.openings/refs/heads/master/images/cover.png,Chess Openings,web
 chess,chess960,https://hieudoanm.github.io/chess960,https://github.com/hieudoanm/chess960,https://raw.githubusercontent.com/hieudoanm/chess960/refs/heads/master/images/cover.png,Chess960,"android,cli,macos,web"
 commerce,shopify,https://hieudoanm.github.io/shopify,https://github.com/hieudoanm/shopify,https://raw.githubusercontent.com/hieudoanm/shopify/refs/heads/master/images/cover.png,Shopify,"cli,extension,android,macos,web"
-"design","colors","https://hieudoanm.github.io/colors","https://github.com/hieudoanm/colors","https://raw.githubusercontent.com/hieudoanm/colors/refs/heads/master/images/cover.png","Colors","cli,extension,android,macos,web"
+design,"colors","https://hieudoanm.github.io/colors","https://github.com/hieudoanm/colors","https://raw.githubusercontent.com/hieudoanm/colors/refs/heads/master/images/cover.png","Colors","cli,extension,android,macos,web"
 "dev-tools","coditor","https://hieudoanm.github.io/coditor","https://github.com/hieudoanm/coditor","https://raw.githubusercontent.com/hieudoanm/coditor/refs/heads/master/images/cover.png","Coditor","cli,extension,android,macos,web"
 "dev-tools","converter","https://hieudoanm.github.io/converter","https://github.com/hieudoanm/converter","https://raw.githubusercontent.com/hieudoanm/converter/refs/heads/master/images/cover.png","Converter","cli,extension,android,macos,web"
 dev-tools,csv,https://hieudoanm.github.io/csv,https://github.com/hieudoanm/csv,https://raw.githubusercontent.com/hieudoanm/csv/refs/heads/master/images/cover.png,CSV,web
@@ -40,8 +40,8 @@ games,recall,https://hieudoanm.github.io/recall,https://github.com/hieudoanm/rec
 "games","t3","https://hieudoanm.github.io/t3","https://github.com/hieudoanm/t3","https://raw.githubusercontent.com/hieudoanm/t3/refs/heads/master/images/cover.png","T3","cli,extension,android,macos,web"
 games,towers,https://hieudoanm.github.io/towers,https://github.com/hieudoanm/towers,https://raw.githubusercontent.com/hieudoanm/towers/refs/heads/master/images/cover.png,Towers,"cli,extension,android,macos,web"
 games,wordle,https://hieudoanm.github.io/wordle,https://github.com/hieudoanm/wordle,https://raw.githubusercontent.com/hieudoanm/wordle/refs/heads/master/images/cover.png,Wordle,"android,macos,web"
+languages,english,https://hieudoanm.github.io/english,https://github.com/hieudoanm/english,https://raw.githubusercontent.com/hieudoanm/english/refs/heads/master/images/cover.png,English,"cli,extension,android,macos,web"
 languages,sign,https://hieudoanm.github.io/sign,https://github.com/hieudoanm/sign,https://raw.githubusercontent.com/hieudoanm/sign/refs/heads/master/images/cover.png,Sign,"cli,extension,android,macos,web"
-"languages","words","https://hieudoanm.github.io/words","https://github.com/hieudoanm/words","https://raw.githubusercontent.com/hieudoanm/words/refs/heads/master/images/cover.png","Words","cli,extension,android,macos,web"
 movies,breaking-bad,https://hieudoanm.github.io/breaking-bad,https://github.com/hieudoanm/breaking-bad,https://raw.githubusercontent.com/hieudoanm/breaking-bad/refs/heads/master/images/cover.png,Breaking Bad,web
 movies,house.md,https://hieudoanm.github.io/house.md,https://github.com/hieudoanm/house.md,https://raw.githubusercontent.com/hieudoanm/house.md/refs/heads/master/images/cover.png,"House, M.D.",web
 numberphile,kaprekar,https://hieudoanm.github.io/kaprekar,https://github.com/hieudoanm/kaprekar,https://raw.githubusercontent.com/hieudoanm/kaprekar/refs/heads/master/images/cover.png,Kaprekar,"android,macos,web"

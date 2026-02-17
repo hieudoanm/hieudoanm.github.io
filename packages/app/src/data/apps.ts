@@ -426,22 +426,22 @@ export const apps: App[] = [
   },
   {
     category: 'languages',
+    id: 'english',
+    href: 'https://hieudoanm.github.io/english',
+    github: 'https://github.com/hieudoanm/english',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/english/refs/heads/master/images/cover.png',
+    name: 'Words',
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
+  },
+  {
+    category: 'languages',
     id: 'sign',
     href: 'https://hieudoanm.github.io/sign',
     github: 'https://github.com/hieudoanm/sign',
     image:
       'https://raw.githubusercontent.com/hieudoanm/sign/refs/heads/master/images/cover.png',
     name: 'Sign',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
-    category: 'languages',
-    id: 'words',
-    href: 'https://hieudoanm.github.io/words',
-    github: 'https://github.com/hieudoanm/words',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/words/refs/heads/master/images/cover.png',
-    name: 'Words',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
