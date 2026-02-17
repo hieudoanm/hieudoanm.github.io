@@ -1,4 +1,5 @@
 import { DailyView } from '@web/components/activities/views/DailyView';
+import { HalfView } from '@web/components/activities/views/HalfView';
 import { MonthlyView } from '@web/components/activities/views/MonthlyView';
 import { QuarterlyView } from '@web/components/activities/views/QuarterlyView';
 import { WeeklyView } from '@web/components/activities/views/WeeklyView';
@@ -16,6 +17,7 @@ enum View {
   WEEKLY = 'weekly',
   MONTHLY = 'monthly',
   QUARTERLY = 'quarterly',
+  HALF = 'half',
 }
 
 const ActivitiesPage: NextPage = () => {
@@ -62,29 +64,35 @@ const ActivitiesPage: NextPage = () => {
               {view === View.WEEKLY && 'Weekly'}
               {view === View.MONTHLY && 'Monthly'}
               {view === View.QUARTERLY && 'Quarterly'}
+              {view === View.HALF && 'Half'}
             </div>
             <ul
               tabIndex={-1}
               className="menu dropdown-content border-base-content/10 bg-primary-content z-1 mt-1 rounded-lg border shadow-sm">
-              {[View.DAILY, View.WEEKLY, View.MONTHLY, View.QUARTERLY].map(
-                (v) => (
-                  <li key={v}>
-                    <a
-                      className="btn btn-xs btn-ghost"
-                      onClick={() => {
-                        setState((previous) => ({
-                          ...previous,
-                          view: v,
-                        }));
-                      }}>
-                      {v === View.DAILY && 'Daily'}
-                      {v === View.WEEKLY && 'Weekly'}
-                      {v === View.MONTHLY && 'Monthly'}
-                      {v === View.QUARTERLY && 'Quarterly'}
-                    </a>
-                  </li>
-                )
-              )}
+              {[
+                View.DAILY,
+                View.WEEKLY,
+                View.MONTHLY,
+                View.QUARTERLY,
+                View.HALF,
+              ].map((v) => (
+                <li key={v}>
+                  <a
+                    className="btn btn-xs btn-ghost"
+                    onClick={() => {
+                      setState((previous) => ({
+                        ...previous,
+                        view: v,
+                      }));
+                    }}>
+                    {v === View.DAILY && 'Daily'}
+                    {v === View.WEEKLY && 'Weekly'}
+                    {v === View.MONTHLY && 'Monthly'}
+                    {v === View.QUARTERLY && 'Quarterly'}
+                    {v === View.HALF && 'Half'}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -143,6 +151,7 @@ const ActivitiesPage: NextPage = () => {
           )}
           {view === View.MONTHLY && <MonthlyView year={year} />}
           {view === View.QUARTERLY && <QuarterlyView year={year} />}
+          {view === View.HALF && <HalfView year={year} />}
         </div>
       </main>
     </div>
