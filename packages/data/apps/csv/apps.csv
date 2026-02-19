@@ -41,6 +41,7 @@ games,recall,https://hieudoanm.github.io/recall,https://github.com/hieudoanm/rec
 games,towers,https://hieudoanm.github.io/towers,https://github.com/hieudoanm/towers,https://raw.githubusercontent.com/hieudoanm/towers/refs/heads/master/images/cover.png,Towers,"cli,extension,android,macos,web"
 games,wordle,https://hieudoanm.github.io/wordle,https://github.com/hieudoanm/wordle,https://raw.githubusercontent.com/hieudoanm/wordle/refs/heads/master/images/cover.png,Wordle,"android,macos,web"
 languages,english,https://hieudoanm.github.io/english,https://github.com/hieudoanm/english,https://raw.githubusercontent.com/hieudoanm/english/refs/heads/master/images/cover.png,English,"cli,extension,android,macos,web"
+languages,flashcards,https://hieudoanm.github.io/flashcards,https://github.com/hieudoanm/flashcards,https://raw.githubusercontent.com/hieudoanm/flashcards/refs/heads/master/images/cover.png,Flashcards,"android,macos,web"
 languages,sign,https://hieudoanm.github.io/sign,https://github.com/hieudoanm/sign,https://raw.githubusercontent.com/hieudoanm/sign/refs/heads/master/images/cover.png,Sign,"cli,extension,android,macos,web"
 movies,breaking-bad,https://hieudoanm.github.io/breaking-bad,https://github.com/hieudoanm/breaking-bad,https://raw.githubusercontent.com/hieudoanm/breaking-bad/refs/heads/master/images/cover.png,Breaking Bad,web
 movies,house.md,https://hieudoanm.github.io/house.md,https://github.com/hieudoanm/house.md,https://raw.githubusercontent.com/hieudoanm/house.md/refs/heads/master/images/cover.png,"House, M.D.",web

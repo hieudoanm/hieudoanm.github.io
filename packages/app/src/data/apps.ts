@@ -431,8 +431,18 @@ export const apps: App[] = [
     github: 'https://github.com/hieudoanm/english',
     image:
       'https://raw.githubusercontent.com/hieudoanm/english/refs/heads/master/images/cover.png',
-    name: 'Words',
+    name: 'English',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
+  },
+  {
+    category: 'languages',
+    id: 'flashcards',
+    href: 'https://hieudoanm.github.io/flashcards',
+    github: 'https://github.com/hieudoanm/flashcards',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/flashcards/refs/heads/master/images/cover.png',
+    name: 'Flashcards',
+    tags: ['android', 'macos', 'web'],
   },
   {
     category: 'languages',

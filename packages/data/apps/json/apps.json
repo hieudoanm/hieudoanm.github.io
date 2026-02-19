@@ -584,6 +584,19 @@
   },
   {
     "category": "languages",
+    "id": "flashcards",
+    "href": "https://hieudoanm.github.io/flashcards",
+    "github": "https://github.com/hieudoanm/flashcards",
+    "image": "https://raw.githubusercontent.com/hieudoanm/flashcards/refs/heads/master/images/cover.png",
+    "name": "Flashcards",
+    "tags": [
+      "android",
+      "macos",
+      "web"
+    ]
+  },
+  {
+    "category": "languages",
     "id": "sign",
     "href": "https://hieudoanm.github.io/sign",
     "github": "https://github.com/hieudoanm/sign",
