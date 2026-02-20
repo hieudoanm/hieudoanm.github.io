@@ -82,7 +82,7 @@ export const apps: App[] = [
     image:
       'https://raw.githubusercontent.com/hieudoanm/chess.openings/refs/heads/master/images/cover.png',
     name: 'Chess Openings',
-    tags: ['web'],
+    tags: ['android', 'macos', 'web'],
   },
   {
     category: 'chess',
@@ -142,7 +142,7 @@ export const apps: App[] = [
     image:
       'https://raw.githubusercontent.com/hieudoanm/csv/refs/heads/master/images/cover.png',
     name: 'CSV',
-    tags: ['web'],
+    tags: ['android', 'macos', 'web'],
   },
   {
     category: 'dev-tools',
@@ -151,8 +151,18 @@ export const apps: App[] = [
     github: 'https://github.com/hieudoanm/gh',
     image:
       'https://raw.githubusercontent.com/hieudoanm/gh/refs/heads/master/images/cover.png',
-    name: 'GH',
+    name: 'GitHub',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
+  },
+  {
+    category: 'dev-tools',
+    id: 'indexeddb',
+    href: 'https://hieudoanm.github.io/indexeddb',
+    github: 'https://github.com/hieudoanm/indexeddb',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/indexeddb/refs/heads/master/images/cover.png',
+    name: 'IndexedDB',
+    tags: ['android', 'macos', 'web'],
   },
   {
     category: 'dev-tools',
@@ -162,7 +172,7 @@ export const apps: App[] = [
     image:
       'https://raw.githubusercontent.com/hieudoanm/manifest.json/refs/heads/master/images/cover.png',
     name: 'manifest.json',
-    tags: ['web'],
+    tags: ['android', 'macos', 'web'],
   },
   {
     category: 'dev-tools',
