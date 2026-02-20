@@ -25,6 +25,26 @@ export const apps: App[] = [
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
+    category: 'browser',
+    id: 'console',
+    href: 'https://hieudoanm.github.io/console',
+    github: 'https://github.com/hieudoanm/console',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/console/refs/heads/master/images/cover.png',
+    name: 'Console',
+    tags: ['web'],
+  },
+  {
+    category: 'browser',
+    id: 'indexeddb',
+    href: 'https://hieudoanm.github.io/indexeddb',
+    github: 'https://github.com/hieudoanm/indexeddb',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/indexeddb/refs/heads/master/images/cover.png',
+    name: 'IndexedDB',
+    tags: ['android', 'macos', 'web'],
+  },
+  {
     category: 'chess',
     id: 'chess.clock',
     href: 'https://hieudoanm.github.io/chess.clock',
@@ -153,16 +173,6 @@ export const apps: App[] = [
       'https://raw.githubusercontent.com/hieudoanm/gh/refs/heads/master/images/cover.png',
     name: 'GitHub',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
-    category: 'dev-tools',
-    id: 'indexeddb',
-    href: 'https://hieudoanm.github.io/indexeddb',
-    github: 'https://github.com/hieudoanm/indexeddb',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/indexeddb/refs/heads/master/images/cover.png',
-    name: 'IndexedDB',
-    tags: ['android', 'macos', 'web'],
   },
   {
     category: 'dev-tools',

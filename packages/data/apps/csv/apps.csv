@@ -1,5 +1,7 @@
 category,id,href,github,image,name,tags
 artificial-intelligence,promptly,https://hieudoanm.github.io/promptly,https://github.com/hieudoanm/promptly,https://raw.githubusercontent.com/hieudoanm/promptly/refs/heads/master/images/cover.png,Promptly,"cli,extension,android,macos,web"
+browser,console,https://hieudoanm.github.io/console,https://github.com/hieudoanm/console,https://raw.githubusercontent.com/hieudoanm/console/refs/heads/master/images/cover.png,Console,web
+browser,indexeddb,https://hieudoanm.github.io/indexeddb,https://github.com/hieudoanm/indexeddb,https://raw.githubusercontent.com/hieudoanm/indexeddb/refs/heads/master/images/cover.png,IndexedDB,"android,macos,web"
 chess,chess.clock,https://hieudoanm.github.io/chess.clock,https://github.com/hieudoanm/chess.clock,https://raw.githubusercontent.com/hieudoanm/chess.clock/refs/heads/master/images/cover.png,Chess Clock,"android,macos,web"
 chess,chess.com,https://hieudoanm.github.io/chess.com,https://github.com/hieudoanm/chess.com,https://raw.githubusercontent.com/hieudoanm/chess.com/refs/heads/master/images/cover.png,chess.com,"cli,extension,android,macos,web"
 chess,chess.elo,https://hieudoanm.github.io/chess.elo,https://github.com/hieudoanm/chess.elo,https://raw.githubusercontent.com/hieudoanm/chess.elo/refs/heads/master/images/cover.png,Chess Elo,"android,cli,macos,web"
@@ -13,7 +15,6 @@ design,"colors","https://hieudoanm.github.io/colors","https://github.com/hieudoa
 "dev-tools","converter","https://hieudoanm.github.io/converter","https://github.com/hieudoanm/converter","https://raw.githubusercontent.com/hieudoanm/converter/refs/heads/master/images/cover.png","Converter","cli,extension,android,macos,web"
 dev-tools,csv,https://hieudoanm.github.io/csv,https://github.com/hieudoanm/csv,https://raw.githubusercontent.com/hieudoanm/csv/refs/heads/master/images/cover.png,CSV,"android,macos,web"
 "dev-tools","gh","https://hieudoanm.github.io/gh","https://github.com/hieudoanm/gh","https://raw.githubusercontent.com/hieudoanm/gh/refs/heads/master/images/cover.png","GitHub","cli,extension,android,macos,web"
-dev-tools,indexeddb,https://hieudoanm.github.io/indexeddb,https://github.com/hieudoanm/indexeddb,https://raw.githubusercontent.com/hieudoanm/indexeddb/refs/heads/master/images/cover.png,IndexedDB,"android,macos,web"
 dev-tools,manifest.json,https://hieudoanm.github.io/manifest.json,https://github.com/hieudoanm/manifest.json,https://raw.githubusercontent.com/hieudoanm/manifest.json/refs/heads/master/images/cover.png,manifest.json,"android,macos,web"
 "dev-tools","proxy","https://hieudoanm.github.io/proxy","https://github.com/hieudoanm/proxy","https://raw.githubusercontent.com/hieudoanm/proxy/refs/heads/master/images/cover.png","Proxy","cli,extension,android,macos,web"
 "dev-tools","qrcode","https://hieudoanm.github.io/qrcode","https://github.com/hieudoanm/qrcode","https://raw.githubusercontent.com/hieudoanm/qrcode/refs/heads/master/images/cover.png","QRCode","cli,extension,android,macos,web"
