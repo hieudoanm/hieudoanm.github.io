@@ -31,6 +31,7 @@ finance,tax,https://hieudoanm.github.io/tax,https://github.com/hieudoanm/tax,htt
 fun,attractors,https://hieudoanm.github.io/attractors,https://github.com/hieudoanm/attractors,https://raw.githubusercontent.com/hieudoanm/attractors/refs/heads/master/images/cover.png,Attractors,"android,macos,web"
 fun,countdown,https://hieudoanm.github.io/countdown,https://github.com/hieudoanm/countdown,https://raw.githubusercontent.com/hieudoanm/countdown/refs/heads/master/images/cover.png,Countdown,"android,macos,web"
 fun,countries,https://hieudoanm.github.io/countries,https://github.com/hieudoanm/countries,https://raw.githubusercontent.com/hieudoanm/countries/refs/heads/master/images/cover.png,Countries,"android,macos,web"
+"fun","eyes","https://hieudoanm.github.io/eyes","https://github.com/hieudoanm/eyes","https://raw.githubusercontent.com/hieudoanm/eyes/refs/heads/master/images/cover.png","Eyes","web"
 fun,legislation,https://hieudoanm.github.io/legislation,https://github.com/hieudoanm/legislation,https://raw.githubusercontent.com/hieudoanm/legislation/refs/heads/master/images/cover.png,Legislation,"android,macos,web"
 fun,palindrome,https://hieudoanm.github.io/palindrome,https://github.com/hieudoanm/palindrome,https://raw.githubusercontent.com/hieudoanm/palindrome/refs/heads/master/images/cover.png,Palindrome,"android,macos,web"
 fun,typoglycemia,https://hieudoanm.github.io/typoglycemia,https://github.com/hieudoanm/typoglycemia,https://raw.githubusercontent.com/hieudoanm/typoglycemia/refs/heads/master/images/cover.png,Typoglycemia,"android,macos,web"
@@ -57,5 +58,4 @@ productivity,calendar,https://hieudoanm.github.io/calendar,https://github.com/hi
 "social","ytb","https://hieudoanm.github.io/ytb","https://github.com/hieudoanm/ytb","https://raw.githubusercontent.com/hieudoanm/ytb/refs/heads/master/images/cover.png","YTB","cli,extension,android,macos,web"
 utilities,calculator,https://hieudoanm.github.io/calculator,https://github.com/hieudoanm/calculator,https://raw.githubusercontent.com/hieudoanm/calculator/refs/heads/master/images/cover.png,Calculator,"android,macos,web"
 "utilities","macosx","https://hieudoanm.github.io/macosx","https://github.com/hieudoanm/macosx","https://raw.githubusercontent.com/hieudoanm/macosx/refs/heads/master/images/cover.png","macOSX","cli,extension,android,macos,web"
-"template","atomic","https://hieudoanm.github.io/atomic","https://github.com/hieudoanm/atomic","https://raw.githubusercontent.com/hieudoanm/atomic/refs/heads/master/images/cover.png","Atomic","web"
 "template","start","https://hieudoanm.github.io/start","https://github.com/hieudoanm/start","https://raw.githubusercontent.com/hieudoanm/start/refs/heads/master/images/cover.png","Start","android,macos,web"

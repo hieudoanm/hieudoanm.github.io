@@ -336,6 +336,16 @@ export const apps: App[] = [
   },
   {
     category: 'fun',
+    id: 'eyes',
+    href: 'https://hieudoanm.github.io/eyes',
+    github: 'https://github.com/hieudoanm/eyes',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/eyes/refs/heads/master/images/cover.png',
+    name: 'Eyes',
+    tags: ['web'],
+  },
+  {
+    category: 'fun',
     id: 'legislation',
     href: 'https://hieudoanm.github.io/legislation',
     github: 'https://github.com/hieudoanm/legislation',
@@ -593,16 +603,6 @@ export const apps: App[] = [
       'https://raw.githubusercontent.com/hieudoanm/macosx/refs/heads/master/images/cover.png',
     name: 'macOSX',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
-    category: 'template',
-    id: 'atomic',
-    href: 'https://hieudoanm.github.io/atomic',
-    github: 'https://github.com/hieudoanm/atomic',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/atomic/refs/heads/master/images/cover.png',
-    name: 'Atomic',
-    tags: ['web'],
   },
   {
     category: 'template',
