@@ -139,6 +139,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://hieudoanm.github.io/garmin</loc>
+    <lastmod>2026-02-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://hieudoanm.github.io/gh</loc>
     <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>

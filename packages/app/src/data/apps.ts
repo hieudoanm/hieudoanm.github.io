@@ -346,6 +346,16 @@ export const apps: App[] = [
   },
   {
     category: 'fun',
+    id: 'garmin',
+    href: 'https://hieudoanm.github.io/garmin',
+    github: 'https://github.com/hieudoanm/garmin',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/garmin/refs/heads/master/images/cover.png',
+    name: 'Garmin',
+    tags: ['web'],
+  },
+  {
+    category: 'fun',
     id: 'legislation',
     href: 'https://hieudoanm.github.io/legislation',
     github: 'https://github.com/hieudoanm/legislation',
