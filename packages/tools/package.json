@@ -1,0 +1,70 @@
+{
+  "name": "@hieudoanm.github.io/tools",
+  "version": "0.0.1",
+  "description": "Toolchain",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "hd": "./bin/run.js"
+  },
+  "files": [
+    "./bin",
+    "./dist"
+  ],
+  "engines": {
+    "node": "25.7.0"
+  },
+  "oclif": {
+    "bin": "hd",
+    "dirname": "hd",
+    "commands": "./dist/commands",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "keywords": [
+    "eslint",
+    "prettier"
+  ],
+  "main": "dist/index.js",
+  "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
+  "license": "GPL-3.0",
+  "packageManager": "pnpm@10.30.2",
+  "scripts": {
+    "clean": "rimraf dist",
+    "prebuild": "pnpm clean",
+    "build": "tsc",
+    "test": "jest --runInBand",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "format": "prettier --cache --write .",
+    "format:check": "prettier --cache --check .",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "lint:check": "eslint . --max-warnings=0",
+    "typecheck": "tsc --noEmit",
+    "ci": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test",
+    "prepare": "pnpm build",
+    "prepublishOnly": "pnpm ci && pnpm build"
+  },
+  "dependencies": {
+    "@oclif/core": "4.8.1",
+    "@oclif/plugin-help": "^6.2.37"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/jest": "30.0.0",
+    "@types/kill-port": "2.0.3",
+    "@types/node": "25.3.0",
+    "eslint": "9.39.3",
+    "eslint-plugin-react": "7.37.5",
+    "globals": "17.3.0",
+    "jest": "30.2.0",
+    "kill-port": "2.0.1",
+    "prettier": "3.8.1",
+    "rimraf": "6.1.3",
+    "ts-jest": "29.4.6",
+    "ts-node": "10.9.2",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.56.1"
+  }
+}
