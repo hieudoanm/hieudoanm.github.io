@@ -5,6 +5,10 @@ export default class Format extends Command {
   static description = 'Run Prettier';
 
   static flags = {
+    cache: Flags.boolean({
+      char: 'c',
+      description: 'Enable cache',
+    }),
     write: Flags.boolean({
       char: 'w',
       description: 'Write changes to files',
@@ -24,7 +28,10 @@ export default class Format extends Command {
 
     const patterns = args.patterns ? [args.patterns] : ['.'];
 
-    const exitCode = await runFormat(patterns, flags.write ?? false);
+    const exitCode = await runFormat(patterns, {
+      cache: flags.cache ?? false,
+      write: flags.write ?? false,
+    });
 
     this.exit(exitCode);
   }

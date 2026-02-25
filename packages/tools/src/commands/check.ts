@@ -7,7 +7,7 @@ export default class Check extends Command {
 
   async run() {
     const lintExit = await runLint(['.'], false);
-    const formatExit = await runFormat(['.'], false);
+    const formatExit = await runFormat(['.'], { cache: false, write: false });
 
     const finalExit = lintExit || formatExit;
 

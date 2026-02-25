@@ -57,6 +57,7 @@
     "@types/node": "25.3.0",
     "eslint": "9.39.3",
     "eslint-plugin-react": "7.37.5",
+    "execa": "9.6.1",
     "globals": "17.3.0",
     "jest": "30.2.0",
     "kill-port": "2.0.1",
