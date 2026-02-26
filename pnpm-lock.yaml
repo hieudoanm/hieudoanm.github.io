@@ -142,7 +142,7 @@ importers:
         specifier: 4.8.1
         version: 4.8.1
       '@oclif/plugin-help':
-        specifier: ^6.2.37
+        specifier: 6.2.37
         version: 6.2.37
     devDependencies:
       '@eslint/js':
