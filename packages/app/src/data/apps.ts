@@ -115,6 +115,16 @@ export const apps: App[] = [
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
+    category: 'design',
+    id: 'composition',
+    href: 'https://hieudoanm.github.io/composition',
+    github: 'https://github.com/hieudoanm/composition',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/composition/refs/heads/master/images/cover.png',
+    name: 'Composition',
+    tags: ['android', 'macos', 'web'],
+  },
+  {
     category: 'dev-tools',
     id: 'browser',
     href: 'https://hieudoanm.github.io/browser',
