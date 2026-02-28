@@ -16,7 +16,7 @@
   },
   "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io/)",
   "license": "GPL-3.0",
-  "packageManager": "pnpm@10.30.2",
+  "packageManager": "pnpm@10.30.3",
   "private": true,
   "scripts": {
     "predev": "hd kill 3000",
