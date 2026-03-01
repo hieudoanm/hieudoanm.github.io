@@ -195,7 +195,7 @@
     "github": "https://github.com/hieudoanm/yaml",
     "image": "https://raw.githubusercontent.com/hieudoanm/yaml/refs/heads/master/images/cover.png",
     "name": "YAML",
-    "tags": ["web"]
+    "tags": ["android", "macos", "web"]
   },
   {
     "category": "docs",
@@ -213,7 +213,7 @@
     "github": "https://github.com/hieudoanm/pitch",
     "image": "https://raw.githubusercontent.com/hieudoanm/pitch/refs/heads/master/images/cover.png",
     "name": "Pitch",
-    "tags": ["web"]
+    "tags": ["android", "macos", "web"]
   },
   {
     "category": "docs",
@@ -240,7 +240,7 @@
     "github": "https://github.com/hieudoanm/simple-upload",
     "image": "https://raw.githubusercontent.com/hieudoanm/simple-upload/refs/heads/master/images/cover.png",
     "name": "Simple Upload",
-    "tags": ["web"]
+    "tags": ["android", "macos", "web"]
   },
   {
     "category": "finance",
@@ -303,7 +303,7 @@
     "github": "https://github.com/hieudoanm/eyes",
     "image": "https://raw.githubusercontent.com/hieudoanm/eyes/refs/heads/master/images/cover.png",
     "name": "Eyes",
-    "tags": ["web"]
+    "tags": ["android", "macos", "web"]
   },
   {
     "category": "fun",
@@ -312,7 +312,7 @@
     "github": "https://github.com/hieudoanm/garmin",
     "image": "https://raw.githubusercontent.com/hieudoanm/garmin/refs/heads/master/images/cover.png",
     "name": "Garmin",
-    "tags": ["web"]
+    "tags": ["android", "macos", "web"]
   },
   {
     "category": "fun",
@@ -432,13 +432,22 @@
     "tags": ["cli", "extension", "android", "macos", "web"]
   },
   {
+    "category": "messaging",
+    "id": "tg",
+    "href": "https://hieudoanm.github.io/tg",
+    "github": "https://github.com/hieudoanm/tg",
+    "image": "https://raw.githubusercontent.com/hieudoanm/tg/refs/heads/master/images/cover.png",
+    "name": "TG",
+    "tags": ["cli", "extension", "android", "macos", "web"]
+  },
+  {
     "category": "movies",
     "id": "breaking-bad",
     "href": "https://hieudoanm.github.io/breaking-bad",
     "github": "https://github.com/hieudoanm/breaking-bad",
     "image": "https://raw.githubusercontent.com/hieudoanm/breaking-bad/refs/heads/master/images/cover.png",
     "name": "Breaking Bad",
-    "tags": ["web"]
+    "tags": ["android", "macos", "web"]
   },
   {
     "category": "movies",
@@ -447,7 +456,16 @@
     "github": "https://github.com/hieudoanm/house.md",
     "image": "https://raw.githubusercontent.com/hieudoanm/house.md/refs/heads/master/images/cover.png",
     "name": "House, M.D.",
-    "tags": ["web"]
+    "tags": ["android", "macos", "web"]
+  },
+  {
+    "category": "music",
+    "id": "pitch.perfect",
+    "href": "https://hieudoanm.github.io/pitch.perfect",
+    "github": "https://github.com/hieudoanm/pitch.perfect",
+    "image": "https://raw.githubusercontent.com/hieudoanm/pitch.perfect/refs/heads/master/images/cover.png",
+    "name": "Pitch Perfect",
+    "tags": ["android", "macos", "web"]
   },
   {
     "category": "numberphile",
@@ -474,7 +492,7 @@
     "github": "https://github.com/hieudoanm/calendar",
     "image": "https://raw.githubusercontent.com/hieudoanm/calendar/refs/heads/master/images/cover.png",
     "name": "Calendar",
-    "tags": ["web"]
+    "tags": ["android", "macos", "web"]
   },
   {
     "category": "productivity",
@@ -510,15 +528,6 @@
     "github": "https://github.com/hieudoanm/ig",
     "image": "https://raw.githubusercontent.com/hieudoanm/ig/refs/heads/master/images/cover.png",
     "name": "IG",
-    "tags": ["cli", "extension", "android", "macos", "web"]
-  },
-  {
-    "category": "social",
-    "id": "tg",
-    "href": "https://hieudoanm.github.io/tg",
-    "github": "https://github.com/hieudoanm/tg",
-    "image": "https://raw.githubusercontent.com/hieudoanm/tg/refs/heads/master/images/cover.png",
-    "name": "TG",
     "tags": ["cli", "extension", "android", "macos", "web"]
   },
   {

@@ -232,7 +232,7 @@ export const apps: App[] = [
     image:
       'https://raw.githubusercontent.com/hieudoanm/yaml/refs/heads/master/images/cover.png',
     name: 'YAML',
-    tags: ['web'],
+    tags: ['android', 'macos', 'web'],
   },
   {
     category: 'docs',
@@ -252,7 +252,7 @@ export const apps: App[] = [
     image:
       'https://raw.githubusercontent.com/hieudoanm/pitch/refs/heads/master/images/cover.png',
     name: 'Pitch',
-    tags: ['web'],
+    tags: ['android', 'macos', 'web'],
   },
   {
     category: 'docs',
@@ -282,7 +282,7 @@ export const apps: App[] = [
     image:
       'https://raw.githubusercontent.com/hieudoanm/simple-upload/refs/heads/master/images/cover.png',
     name: 'Simple Upload',
-    tags: ['web'],
+    tags: ['android', 'macos', 'web'],
   },
   {
     category: 'finance',
@@ -352,7 +352,7 @@ export const apps: App[] = [
     image:
       'https://raw.githubusercontent.com/hieudoanm/eyes/refs/heads/master/images/cover.png',
     name: 'Eyes',
-    tags: ['web'],
+    tags: ['android', 'macos', 'web'],
   },
   {
     category: 'fun',
@@ -362,7 +362,7 @@ export const apps: App[] = [
     image:
       'https://raw.githubusercontent.com/hieudoanm/garmin/refs/heads/master/images/cover.png',
     name: 'Garmin',
-    tags: ['web'],
+    tags: ['android', 'macos', 'web'],
   },
   {
     category: 'fun',
@@ -495,6 +495,16 @@ export const apps: App[] = [
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
+    category: 'messaging',
+    id: 'tg',
+    href: 'https://hieudoanm.github.io/tg',
+    github: 'https://github.com/hieudoanm/tg',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/tg/refs/heads/master/images/cover.png',
+    name: 'TG',
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
+  },
+  {
     category: 'movies',
     id: 'breaking-bad',
     href: 'https://hieudoanm.github.io/breaking-bad',
@@ -502,7 +512,7 @@ export const apps: App[] = [
     image:
       'https://raw.githubusercontent.com/hieudoanm/breaking-bad/refs/heads/master/images/cover.png',
     name: 'Breaking Bad',
-    tags: ['web'],
+    tags: ['android', 'macos', 'web'],
   },
   {
     category: 'movies',
@@ -512,7 +522,17 @@ export const apps: App[] = [
     image:
       'https://raw.githubusercontent.com/hieudoanm/house.md/refs/heads/master/images/cover.png',
     name: 'House, M.D.',
-    tags: ['web'],
+    tags: ['android', 'macos', 'web'],
+  },
+  {
+    category: 'music',
+    id: 'pitch.perfect',
+    href: 'https://hieudoanm.github.io/pitch.perfect',
+    github: 'https://github.com/hieudoanm/pitch.perfect',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/pitch.perfect/refs/heads/master/images/cover.png',
+    name: 'Pitch Perfect',
+    tags: ['android', 'macos', 'web'],
   },
   {
     category: 'numberphile',
@@ -542,7 +562,7 @@ export const apps: App[] = [
     image:
       'https://raw.githubusercontent.com/hieudoanm/calendar/refs/heads/master/images/cover.png',
     name: 'Calendar',
-    tags: ['web'],
+    tags: ['android', 'macos', 'web'],
   },
   {
     category: 'productivity',
@@ -582,16 +602,6 @@ export const apps: App[] = [
     image:
       'https://raw.githubusercontent.com/hieudoanm/ig/refs/heads/master/images/cover.png',
     name: 'IG',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
-    category: 'social',
-    id: 'tg',
-    href: 'https://hieudoanm.github.io/tg',
-    github: 'https://github.com/hieudoanm/tg',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/tg/refs/heads/master/images/cover.png',
-    name: 'TG',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
