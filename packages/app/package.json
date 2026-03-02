@@ -1,6 +1,7 @@
 {
   "name": "@hieudoanm.github.io/app",
   "version": "0.0.1",
+  "private": true,
   "description": "Web - Next.js",
   "main": "index.js",
   "keywords": [
@@ -17,7 +18,9 @@
   "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io/)",
   "license": "GPL-3.0",
   "packageManager": "pnpm@10.30.3",
-  "private": true,
+  "engines": {
+    "node": "25.7.0"
+  },
   "scripts": {
     "predev": "hd kill 3000",
     "dev": "next dev",
