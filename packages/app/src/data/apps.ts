@@ -615,6 +615,16 @@ export const apps: App[] = [
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
+    category: 'template',
+    id: 'start',
+    href: 'https://hieudoanm.github.io/start',
+    github: 'https://github.com/hieudoanm/start',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/start/refs/heads/master/images/cover.png',
+    name: 'Start',
+    tags: ['android', 'macos', 'web'],
+  },
+  {
     category: 'utilities',
     id: 'calculator',
     href: 'https://hieudoanm.github.io/calculator',
@@ -626,6 +636,16 @@ export const apps: App[] = [
   },
   {
     category: 'utilities',
+    id: 'ip',
+    href: 'https://hieudoanm.github.io/ip',
+    github: 'https://github.com/hieudoanm/ip',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/ip/refs/heads/master/images/cover.png',
+    name: 'IP',
+    tags: ['android', 'macos', 'web'],
+  },
+  {
+    category: 'utilities',
     id: 'macosx',
     href: 'https://hieudoanm.github.io/macosx',
     github: 'https://github.com/hieudoanm/macosx',
@@ -633,15 +653,5 @@ export const apps: App[] = [
       'https://raw.githubusercontent.com/hieudoanm/macosx/refs/heads/master/images/cover.png',
     name: 'macOSX',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
-    category: 'template',
-    id: 'start',
-    href: 'https://hieudoanm.github.io/start',
-    github: 'https://github.com/hieudoanm/start',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/start/refs/heads/master/images/cover.png',
-    name: 'Start',
-    tags: ['android', 'macos', 'web'],
   },
 ];
