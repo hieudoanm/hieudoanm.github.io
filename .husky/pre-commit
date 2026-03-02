@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
-pnpm run lint --concurrency 1
-pnpm run build --concurrency 1
-pnpm run format --concurrency 1
+pnpm run lint
+pnpm run build
+pnpm run format
 git add -A
