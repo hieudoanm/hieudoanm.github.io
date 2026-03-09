@@ -2,7 +2,8 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
-  "editor.wordWrap": "off",
+  "editor.formatOnType": true,
+  "editor.wordWrap": "on",
   "vsicons.presets.angular": true,
   "[markdown]": {
     "editor.unicodeHighlight.ambiguousCharacters": true,
