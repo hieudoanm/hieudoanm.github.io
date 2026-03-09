@@ -156,16 +156,6 @@ export const apps: App[] = [
   },
   {
     category: 'dev-tools',
-    id: 'csv',
-    href: 'https://hieudoanm.github.io/csv',
-    github: 'https://github.com/hieudoanm/csv',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/csv/refs/heads/master/images/cover.png',
-    name: 'CSV',
-    tags: ['android', 'macos', 'web'],
-  },
-  {
-    category: 'dev-tools',
     id: 'gh',
     href: 'https://hieudoanm.github.io/gh',
     github: 'https://github.com/hieudoanm/gh',
@@ -236,42 +226,12 @@ export const apps: App[] = [
   },
   {
     category: 'docs',
-    id: 'mditor',
-    href: 'https://hieudoanm.github.io/mditor',
-    github: 'https://github.com/hieudoanm/mditor',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/mditor/refs/heads/master/images/cover.png',
-    name: 'MDitor',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
-    category: 'docs',
-    id: 'pitch',
-    href: 'https://hieudoanm.github.io/pitch',
-    github: 'https://github.com/hieudoanm/pitch',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/pitch/refs/heads/master/images/cover.png',
-    name: 'Pitch',
-    tags: ['android', 'macos', 'web'],
-  },
-  {
-    category: 'docs',
     id: 'redact',
     href: 'https://hieudoanm.github.io/redact',
     github: 'https://github.com/hieudoanm/redact',
     image:
       'https://raw.githubusercontent.com/hieudoanm/redact/refs/heads/master/images/cover.png',
     name: 'Redact',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
-    category: 'docs',
-    id: 'resume',
-    href: 'https://hieudoanm.github.io/resume',
-    github: 'https://github.com/hieudoanm/resume',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/resume/refs/heads/master/images/cover.png',
-    name: 'Resume',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
@@ -556,16 +516,6 @@ export const apps: App[] = [
   },
   {
     category: 'productivity',
-    id: 'calendar',
-    href: 'https://hieudoanm.github.io/calendar',
-    github: 'https://github.com/hieudoanm/calendar',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/calendar/refs/heads/master/images/cover.png',
-    name: 'Calendar',
-    tags: ['android', 'macos', 'web'],
-  },
-  {
-    category: 'productivity',
     id: 'doi',
     href: 'https://hieudoanm.github.io/doi',
     github: 'https://github.com/hieudoanm/doi',
@@ -582,16 +532,6 @@ export const apps: App[] = [
     image:
       'https://raw.githubusercontent.com/hieudoanm/pomodoro/refs/heads/master/images/cover.png',
     name: 'Pomodoro',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
-    category: 'productivity',
-    id: 'today.do',
-    href: 'https://hieudoanm.github.io/today.do',
-    github: 'https://github.com/hieudoanm/today.do',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/today.do/refs/heads/master/images/cover.png',
-    name: 'today.do',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
@@ -652,6 +592,66 @@ export const apps: App[] = [
     image:
       'https://raw.githubusercontent.com/hieudoanm/macosx/refs/heads/master/images/cover.png',
     name: 'macOSX',
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
+  },
+  {
+    category: 'workspace',
+    id: 'calendar',
+    href: 'https://hieudoanm.github.io/calendar',
+    github: 'https://github.com/hieudoanm/calendar',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/calendar/refs/heads/master/images/cover.png',
+    name: 'Calendar',
+    tags: ['android', 'macos', 'web'],
+  },
+  {
+    category: 'workspace',
+    id: 'csv',
+    href: 'https://hieudoanm.github.io/csv',
+    github: 'https://github.com/hieudoanm/csv',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/csv/refs/heads/master/images/cover.png',
+    name: 'CSV',
+    tags: ['android', 'macos', 'web'],
+  },
+  {
+    category: 'workspace',
+    id: 'mditor',
+    href: 'https://hieudoanm.github.io/mditor',
+    github: 'https://github.com/hieudoanm/mditor',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/mditor/refs/heads/master/images/cover.png',
+    name: 'MDitor',
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
+  },
+  {
+    category: 'workspace',
+    id: 'pitch.deck',
+    href: 'https://hieudoanm.github.io/pitch.deck',
+    github: 'https://github.com/hieudoanm/pitch.deck',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/pitch.deck/refs/heads/master/images/cover.png',
+    name: 'Pitch Deck',
+    tags: ['android', 'macos', 'web'],
+  },
+  {
+    category: 'workspace',
+    id: 'resume',
+    href: 'https://hieudoanm.github.io/resume',
+    github: 'https://github.com/hieudoanm/resume',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/resume/refs/heads/master/images/cover.png',
+    name: 'Resume',
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
+  },
+  {
+    category: 'workspace',
+    id: 'today.do',
+    href: 'https://hieudoanm.github.io/today.do',
+    github: 'https://github.com/hieudoanm/today.do',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/today.do/refs/heads/master/images/cover.png',
+    name: 'today.do',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
 ];
