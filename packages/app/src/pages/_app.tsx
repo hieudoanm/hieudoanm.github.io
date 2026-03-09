@@ -34,6 +34,9 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
     <>
       <Head>
         <title>Hieu Doan</title>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div
         className={`${geistSans.className} ${geistMono.className} bg-neutral-900 text-neutral-100`}>
