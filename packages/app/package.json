@@ -30,7 +30,7 @@
     "prestart": "hd kill 3000",
     "start": "next start",
     "format": "hd format --cache --write",
-    "lint": "eslint .",
+    "lint": "eslint . --fix",
     "test": "jest",
     "tauri": "tauri",
     "tauri:build": "./scripts/build-desktop.sh"
