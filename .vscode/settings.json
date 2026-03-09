@@ -12,14 +12,6 @@
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
   "[markdown]": {
-    "editor.unicodeHighlight.ambiguousCharacters": true,
-    "editor.unicodeHighlight.invisibleCharacters": true,
-    "editor.wordWrap": "off",
-    "diffEditor.ignoreTrimWhitespace": true,
-    "editor.quickSuggestions": {
-      "comments": "on",
-      "strings": "on",
-      "other": "on"
-    }
+    "editor.wordWrap": "off"
   }
 }

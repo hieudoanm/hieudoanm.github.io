@@ -3,6 +3,11 @@
     "charliermarsh.ruff",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
-    "golang.go"
+    "golang.go",
+    "ms-python.python",
+    "ms-vscode.cmake-tools",
+    "prisma.prisma",
+    "redhat.vscode-yaml",
+    "rust-lang.rust-analyzer"
   ]
 }
