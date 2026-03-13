@@ -62,4 +62,4 @@ workspace,csv,https://hieudoanm.github.io/csv,https://github.com/hieudoanm/csv,h
 workspace,mditor,https://hieudoanm.github.io/mditor,https://github.com/hieudoanm/mditor,https://raw.githubusercontent.com/hieudoanm/mditor/refs/heads/master/images/cover.png,MDitor,"cli,extension,android,macos,web"
 workspace,pitch.deck,https://hieudoanm.github.io/pitch.deck,https://github.com/hieudoanm/pitch.deck,https://raw.githubusercontent.com/hieudoanm/pitch.deck/refs/heads/master/images/cover.png,Pitch Deck,"android,macos,web"
 workspace,resume,https://hieudoanm.github.io/resume,https://github.com/hieudoanm/resume,https://raw.githubusercontent.com/hieudoanm/resume/refs/heads/master/images/cover.png,Resume,"cli,extension,android,macos,web"
-workspace,today.do,https://hieudoanm.github.io/today.do,https://github.com/hieudoanm/today.do,https://raw.githubusercontent.com/hieudoanm/today.do/refs/heads/master/images/cover.png,today.do,"cli,extension,android,macos,web"
+workspace,tasks,https://hieudoanm.github.io/tasks,https://github.com/hieudoanm/tasks,https://raw.githubusercontent.com/hieudoanm/tasks/refs/heads/master/images/cover.png,tasks,"cli,extension,android,macos,web"

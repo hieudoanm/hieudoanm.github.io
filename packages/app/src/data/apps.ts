@@ -646,12 +646,12 @@ export const apps: App[] = [
   },
   {
     category: 'workspace',
-    id: 'today.do',
-    href: 'https://hieudoanm.github.io/today.do',
-    github: 'https://github.com/hieudoanm/today.do',
+    id: 'tasks',
+    href: 'https://hieudoanm.github.io/tasks',
+    github: 'https://github.com/hieudoanm/tasks',
     image:
-      'https://raw.githubusercontent.com/hieudoanm/today.do/refs/heads/master/images/cover.png',
-    name: 'today.do',
+      'https://raw.githubusercontent.com/hieudoanm/tasks/refs/heads/master/images/cover.png',
+    name: 'tasks',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
 ];
