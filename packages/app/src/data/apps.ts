@@ -146,22 +146,22 @@ export const apps: App[] = [
   },
   {
     category: 'dev-tools',
-    id: 'converter',
-    href: 'https://hieudoanm.github.io/converter',
-    github: 'https://github.com/hieudoanm/converter',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/converter/refs/heads/master/images/cover.png',
-    name: 'Converter',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
-    category: 'dev-tools',
     id: 'gh',
     href: 'https://hieudoanm.github.io/gh',
     github: 'https://github.com/hieudoanm/gh',
     image:
       'https://raw.githubusercontent.com/hieudoanm/gh/refs/heads/master/images/cover.png',
     name: 'GitHub',
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
+  },
+  {
+    category: 'dev-tools',
+    id: 'json',
+    href: 'https://hieudoanm.github.io/json',
+    github: 'https://github.com/hieudoanm/json',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/json/refs/heads/master/images/cover.png',
+    name: 'JSON',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
@@ -202,6 +202,16 @@ export const apps: App[] = [
     image:
       'https://raw.githubusercontent.com/hieudoanm/status/refs/heads/master/images/cover.png',
     name: 'Status',
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
+  },
+  {
+    category: 'dev-tools',
+    id: 'string',
+    href: 'https://hieudoanm.github.io/string',
+    github: 'https://github.com/hieudoanm/string',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/string/refs/heads/master/images/cover.png',
+    name: 'String',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
