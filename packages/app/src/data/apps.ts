@@ -606,16 +606,6 @@ export const apps: App[] = [
   },
   {
     category: 'workspace',
-    id: 'csv',
-    href: 'https://hieudoanm.github.io/csv',
-    github: 'https://github.com/hieudoanm/csv',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/csv/refs/heads/master/images/cover.png',
-    name: 'CSV',
-    tags: ['android', 'macos', 'web'],
-  },
-  {
-    category: 'workspace',
     id: 'mditor',
     href: 'https://hieudoanm.github.io/mditor',
     github: 'https://github.com/hieudoanm/mditor',
@@ -643,6 +633,16 @@ export const apps: App[] = [
       'https://raw.githubusercontent.com/hieudoanm/resume/refs/heads/master/images/cover.png',
     name: 'Resume',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
+  },
+  {
+    category: 'workspace',
+    id: 'sheets',
+    href: 'https://hieudoanm.github.io/sheets',
+    github: 'https://github.com/hieudoanm/sheets',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/sheets/refs/heads/master/images/cover.png',
+    name: 'Sheets',
+    tags: ['android', 'macos', 'web'],
   },
   {
     category: 'workspace',
