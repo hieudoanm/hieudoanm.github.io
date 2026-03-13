@@ -606,12 +606,12 @@ export const apps: App[] = [
   },
   {
     category: 'workspace',
-    id: 'mditor',
-    href: 'https://hieudoanm.github.io/mditor',
-    github: 'https://github.com/hieudoanm/mditor',
+    id: 'keep',
+    href: 'https://hieudoanm.github.io/keep',
+    github: 'https://github.com/hieudoanm/keep',
     image:
-      'https://raw.githubusercontent.com/hieudoanm/mditor/refs/heads/master/images/cover.png',
-    name: 'MDitor',
+      'https://raw.githubusercontent.com/hieudoanm/keep/refs/heads/master/images/cover.png',
+    name: 'Keep',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {

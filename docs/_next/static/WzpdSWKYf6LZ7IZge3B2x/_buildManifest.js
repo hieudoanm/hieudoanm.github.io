@@ -21,7 +21,7 @@ self.__BUILD_MANIFEST = {
     "static/chunks/52a5ff7b3ceddfeb.js"
   ],
   "/store": [
-    "static/chunks/ad4b02a73c446330.js"
+    "static/chunks/52d39e2864e0137c.js"
   ],
   "/version": [
     "static/chunks/da67026aa178bb36.js"
