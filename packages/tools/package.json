@@ -45,7 +45,7 @@
     "prepublishOnly": "pnpm ci && pnpm build"
   },
   "dependencies": {
-    "@oclif/core": "4.8.4",
+    "@oclif/core": "4.9.0",
     "@oclif/plugin-help": "6.2.37"
   },
   "devDependencies": {
