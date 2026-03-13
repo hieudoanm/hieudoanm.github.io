@@ -1,6 +1,6 @@
 self.__BUILD_MANIFEST = {
   "/": [
-    "static/chunks/c7445e1845fea166.js"
+    "static/chunks/aaf58c6e3c4750d0.js"
   ],
   "/404": [
     "static/chunks/5f7f6d0c29f9b6a8.js"
@@ -13,6 +13,9 @@ self.__BUILD_MANIFEST = {
   ],
   "/activities": [
     "static/chunks/a1a913d9415c7321.js"
+  ],
+  "/app": [
+    "static/chunks/8a0d50e75e0a9af7.js"
   ],
   "/offline": [
     "static/chunks/52a5ff7b3ceddfeb.js"
@@ -37,6 +40,7 @@ self.__BUILD_MANIFEST = {
     "/activities",
     "/api/checkout",
     "/api/trpc/[trpc]",
+    "/app",
     "/offline",
     "/store",
     "/version"
