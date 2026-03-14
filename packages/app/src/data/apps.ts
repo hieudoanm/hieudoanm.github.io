@@ -612,7 +612,17 @@ export const apps: App[] = [
     image:
       'https://raw.githubusercontent.com/hieudoanm/calendar/refs/heads/master/images/cover.png',
     name: 'Calendar',
-    tags: ['android', 'macos', 'web'],
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
+  },
+  {
+    category: 'workspace',
+    id: 'docs',
+    href: 'https://hieudoanm.github.io/docs',
+    github: 'https://github.com/hieudoanm/docs',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/docs/refs/heads/master/images/cover.png',
+    name: 'Docs',
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
     category: 'workspace',
@@ -626,22 +636,12 @@ export const apps: App[] = [
   },
   {
     category: 'workspace',
-    id: 'pitch.deck',
-    href: 'https://hieudoanm.github.io/pitch.deck',
-    github: 'https://github.com/hieudoanm/pitch.deck',
+    id: 'slides',
+    href: 'https://hieudoanm.github.io/slides',
+    github: 'https://github.com/hieudoanm/slides',
     image:
-      'https://raw.githubusercontent.com/hieudoanm/pitch.deck/refs/heads/master/images/cover.png',
-    name: 'Pitch Deck',
-    tags: ['android', 'macos', 'web'],
-  },
-  {
-    category: 'workspace',
-    id: 'resume',
-    href: 'https://hieudoanm.github.io/resume',
-    github: 'https://github.com/hieudoanm/resume',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/resume/refs/heads/master/images/cover.png',
-    name: 'Resume',
+      'https://raw.githubusercontent.com/hieudoanm/slides/refs/heads/master/images/cover.png',
+    name: 'Slides',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
@@ -652,7 +652,7 @@ export const apps: App[] = [
     image:
       'https://raw.githubusercontent.com/hieudoanm/sheets/refs/heads/master/images/cover.png',
     name: 'Sheets',
-    tags: ['android', 'macos', 'web'],
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
     category: 'workspace',
@@ -661,7 +661,7 @@ export const apps: App[] = [
     github: 'https://github.com/hieudoanm/tasks',
     image:
       'https://raw.githubusercontent.com/hieudoanm/tasks/refs/heads/master/images/cover.png',
-    name: 'tasks',
+    name: 'Tasks',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
 ];
