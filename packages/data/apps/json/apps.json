@@ -136,12 +136,21 @@
   },
   {
     "category": "dev-tools",
+    "id": "kv",
+    "href": "https://hieudoanm.github.io/kv",
+    "github": "https://github.com/hieudoanm/kv",
+    "image": "https://raw.githubusercontent.com/hieudoanm/kv/refs/heads/master/images/cover.png",
+    "name": "KV",
+    "tags": ["cli", "extension", "android", "macos", "web"]
+  },
+  {
+    "category": "dev-tools",
     "id": "manifest.json",
     "href": "https://hieudoanm.github.io/manifest.json",
     "github": "https://github.com/hieudoanm/manifest.json",
     "image": "https://raw.githubusercontent.com/hieudoanm/manifest.json/refs/heads/master/images/cover.png",
     "name": "manifest.json",
-    "tags": ["android", "macos", "web"]
+    "tags": ["cli", "extension", "android", "macos", "web"]
   },
   {
     "category": "dev-tools",
@@ -267,15 +276,6 @@
     "github": "https://github.com/hieudoanm/countries",
     "image": "https://raw.githubusercontent.com/hieudoanm/countries/refs/heads/master/images/cover.png",
     "name": "Countries",
-    "tags": ["android", "macos", "web"]
-  },
-  {
-    "category": "fun",
-    "id": "eyes",
-    "href": "https://hieudoanm.github.io/eyes",
-    "github": "https://github.com/hieudoanm/eyes",
-    "image": "https://raw.githubusercontent.com/hieudoanm/eyes/refs/heads/master/images/cover.png",
-    "name": "Eyes",
     "tags": ["android", "macos", "web"]
   },
   {
