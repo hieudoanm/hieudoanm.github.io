@@ -46,7 +46,7 @@
   },
   "dependencies": {
     "@oclif/core": "4.9.0",
-    "@oclif/plugin-help": "6.2.37"
+    "@oclif/plugin-help": "6.2.38"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
