@@ -1,50 +1,50 @@
 export const jsonParse = <T = unknown>(text: string, defaultValue: T): T => {
-  try {
-    const data = JSON.parse(text);
-    return data;
-  } catch (error) {
-    console.error('error', error);
-    return defaultValue;
-  }
+	try {
+		const data = JSON.parse(text);
+		return data;
+	} catch (error) {
+		console.error('error', error);
+		return defaultValue;
+	}
 };
 
 type Options = { delimiter?: string; headers?: string[]; quote?: string };
 
 const defaultOptions = {
-  delimiter: ',',
-  headers: [],
-  quote: '"',
+	delimiter: ',',
+	headers: [],
+	quote: '"',
 };
 
 export const json2csv = <
-  T extends Record<string, string | number | boolean | Date>,
+	T extends Record<string, string | number | boolean | Date>,
 >(
-  data: T[],
-  { delimiter = ',', headers = [], quote = '"' }: Options = defaultOptions
+	data: T[],
+	{ delimiter = ',', headers = [], quote = '"' }: Options = defaultOptions,
 ): string => {
-  if (headers.length === 0) {
-    const keys: string[] = data.flatMap((item) => Object.keys(item));
-    const uniqueKeys: string[] = [...new Set(keys)];
-    headers = uniqueKeys;
-  }
+	if (headers.length === 0) {
+		const keys: string[] = data.flatMap((item) => Object.keys(item));
+		const uniqueKeys: string[] = [...new Set(keys)];
+		headers = uniqueKeys;
+	}
 
-  const headerRow: string = headers
-    .map((header: string) => `${quote}${header}${quote}`)
-    .join(delimiter);
-  const rows: string = data
-    .map((item: Record<string, string | number | boolean | Date>) =>
-      headers
-        .map((key: string) => {
-          const value: string = (item[key] || '').toString();
-          return `${quote}${value}${quote}`;
-        })
-        .join(delimiter)
-    )
-    .join('\n');
-  return `${headerRow}\n${rows}`;
+	const headerRow: string = headers
+		.map((header: string) => `${quote}${header}${quote}`)
+		.join(delimiter);
+	const rows: string = data
+		.map((item: Record<string, string | number | boolean | Date>) =>
+			headers
+				.map((key: string) => {
+					const value: string = (item[key] || '').toString();
+					return `${quote}${value}${quote}`;
+				})
+				.join(delimiter),
+		)
+		.join('\n');
+	return `${headerRow}\n${rows}`;
 };
 
 export const json = {
-  parse: jsonParse,
-  csv: json2csv,
+	parse: jsonParse,
+	csv: json2csv,
 };

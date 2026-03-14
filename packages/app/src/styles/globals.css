@@ -1,70 +1,70 @@
 @import 'tailwindcss';
 @plugin 'daisyui' {
-  themes: all;
+	themes: all;
 }
 
 @layer base {
-  input[type='number']::-webkit-outer-spin-button,
-  input[type='number']::-webkit-inner-spin-button,
-  input[type='number'] {
-    -webkit-appearance: none;
-    margin: 0;
-    -moz-appearance: textfield !important;
-  }
+	input[type='number']::-webkit-outer-spin-button,
+	input[type='number']::-webkit-inner-spin-button,
+	input[type='number'] {
+		-webkit-appearance: none;
+		margin: 0;
+		-moz-appearance: textfield !important;
+	}
 
-  select {
-    background: none;
-    padding: 0;
-  }
+	select {
+		background: none;
+		padding: 0;
+	}
 }
 
 body > div:last-child > span + img {
-  display: inline !important;
+	display: inline !important;
 }
 
 .animate-flip {
-  animation: flip 500ms linear infinite; /* Add flip animation */
-  transform-style: preserve-3d; /* Allows 3D transforms for the coin faces */
+	animation: flip 500ms linear infinite; /* Add flip animation */
+	transform-style: preserve-3d; /* Allows 3D transforms for the coin faces */
 }
 
 @keyframes flip {
-  0% {
-    transform: rotateY(0deg);
-  }
-  25% {
-    transform: rotateY(90deg);
-  }
-  50% {
-    transform: rotateY(180deg);
-  }
-  75% {
-    transform: rotateY(270deg);
-  }
-  100% {
-    transform: rotateY(360deg);
-  }
+	0% {
+		transform: rotateY(0deg);
+	}
+	25% {
+		transform: rotateY(90deg);
+	}
+	50% {
+		transform: rotateY(180deg);
+	}
+	75% {
+		transform: rotateY(270deg);
+	}
+	100% {
+		transform: rotateY(360deg);
+	}
 }
 
 body {
-  overflow-x: hidden;
+	overflow-x: hidden;
 }
 
 .clip-triangle {
-  clip-path: polygon(0 0, 100% 100%, 0 100%);
+	clip-path: polygon(0 0, 100% 100%, 0 100%);
 }
 
 @layer utilities {
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  .scroll-none::-webkit-scrollbar {
-    display: none;
-  }
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .scroll-none {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
+	/* Hide scrollbar for Chrome, Safari and Opera */
+	.scroll-none::-webkit-scrollbar {
+		display: none;
+	}
+	/* Hide scrollbar for IE, Edge and Firefox */
+	.scroll-none {
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
 }
 
 .markdown-body ul {
-  list-style: circle;
+	list-style: circle;
 }

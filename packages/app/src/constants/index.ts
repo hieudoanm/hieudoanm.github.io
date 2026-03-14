@@ -1,5 +1,5 @@
 export const INITIAL_STRING: string =
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in.';
+	'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in.';
 
 export const INITIAL_STRING_150: string = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel porta velit, at accumsan odio. Donec vitae blandit ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu magna sed lorem aliquet cursus. Sed consectetur sed diam nec porta. Duis placerat ligula quis nisi facilisis, in viverra risus interdum. Pellentesque blandit condimentum ex sit amet feugiat. Curabitur porttitor efficitur nisl, sed placerat eros dignissim in. Maecenas facilisis sapien in porta rutrum.
 
