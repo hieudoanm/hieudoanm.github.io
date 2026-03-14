@@ -22,15 +22,15 @@
     "node": "25.8.1"
   },
   "scripts": {
-    "predev": "hd kill 3000",
-    "dev": "next dev",
+    "lint": "eslint . --fix",
+    "format": "prettier --cache --write .",
+    "predev": "rimraf .next && kill-port 3000",
+    "dev": "next dev --turbopack",
     "prebuild": "hd remove .next,../../docs",
     "build": "next build",
     "postbuild": "touch ../../docs/.nojekyll",
     "prestart": "hd kill 3000",
     "start": "next start",
-    "format": "hd format --cache --write",
-    "lint": "eslint . --fix",
     "test": "jest",
     "tauri": "tauri",
     "tauri:build": "./scripts/build-desktop.sh"
