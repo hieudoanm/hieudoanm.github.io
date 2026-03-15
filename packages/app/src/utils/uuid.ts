@@ -1,7 +1,7 @@
 import { v1, v4, v7, NIL, MAX } from 'uuid';
 
 export const buildUuidString = () => {
-	return `NIL: ${NIL}
+  return `NIL: ${NIL}
 
 V01: ${v1()}
 
