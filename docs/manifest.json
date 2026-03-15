@@ -1,50 +1,50 @@
 {
-  "id": "hieudoan",
-  "name": "Hieu Doan",
-  "short_name": "HD",
-  "description": "Hieu Doan - Progressive Web App",
-  "display": "fullscreen",
-  "background_color": "#101828",
-  "theme_color": "#101828",
-  "orientation": "portrait",
-  "categories": ["apps", "notes", "widgets"],
-  "start_url": "https://hieudoanm.github.io/",
-  "scope": "https://hieudoanm.github.io/",
-  "shortcuts": [
-    {
-      "name": "Studio",
-      "short_name": "Studio",
-      "description": "Studio",
-      "url": "/apps",
-      "icons": [
-        {
-          "src": "/icons/icon-128x128.png",
-          "sizes": "128x128",
-          "type": "image/png"
-        }
-      ]
-    }
-  ],
-  "icons": [
-    {
-      "src": "/icons/icon-128x128.png",
-      "sizes": "128x128",
-      "type": "image/png"
-    },
-    {
-      "src": "/icons/icon-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/icons/icon-256x256.png",
-      "sizes": "256x256",
-      "type": "image/png"
-    },
-    {
-      "src": "/icons/icon-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ]
+	"id": "hieudoan",
+	"name": "Hieu Doan",
+	"short_name": "HD",
+	"description": "Hieu Doan - Progressive Web App",
+	"display": "fullscreen",
+	"background_color": "#101828",
+	"theme_color": "#101828",
+	"orientation": "portrait",
+	"categories": ["apps", "notes", "widgets"],
+	"start_url": "https://hieudoanm.github.io/",
+	"scope": "https://hieudoanm.github.io/",
+	"shortcuts": [
+		{
+			"name": "Studio",
+			"short_name": "Studio",
+			"description": "Studio",
+			"url": "/apps",
+			"icons": [
+				{
+					"src": "/icons/icon-128x128.png",
+					"sizes": "128x128",
+					"type": "image/png"
+				}
+			]
+		}
+	],
+	"icons": [
+		{
+			"src": "/icons/icon-128x128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "/icons/icon-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "/icons/icon-256x256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		},
+		{
+			"src": "/icons/icon-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	]
 }
