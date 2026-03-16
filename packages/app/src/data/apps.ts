@@ -196,16 +196,6 @@ export const apps: App[] = [
   },
   {
     category: 'dev-tools',
-    id: 'qrcode',
-    href: 'https://hieudoanm.github.io/qrcode',
-    github: 'https://github.com/hieudoanm/qrcode',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/qrcode/refs/heads/master/images/cover.png',
-    name: 'QRCode',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
-    category: 'dev-tools',
     id: 'status',
     href: 'https://hieudoanm.github.io/status',
     github: 'https://github.com/hieudoanm/status',
@@ -602,6 +592,26 @@ export const apps: App[] = [
     image:
       'https://raw.githubusercontent.com/hieudoanm/macosx/refs/heads/master/images/cover.png',
     name: 'macOSX',
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
+  },
+  {
+    category: 'utilities',
+    id: 'ocr',
+    href: 'https://hieudoanm.github.io/ocr',
+    github: 'https://github.com/hieudoanm/ocr',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/ocr/refs/heads/master/images/cover.png',
+    name: 'OCR',
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
+  },
+  {
+    category: 'utilities',
+    id: 'qrcode',
+    href: 'https://hieudoanm.github.io/qrcode',
+    github: 'https://github.com/hieudoanm/qrcode',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/qrcode/refs/heads/master/images/cover.png',
+    name: 'QRCode',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
