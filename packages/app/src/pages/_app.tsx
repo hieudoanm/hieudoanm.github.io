@@ -38,8 +38,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
         <link rel="manifest" href="/manifest.json" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <div
-        className={`${geistSans.className} ${geistMono.className} bg-neutral-900 text-neutral-100`}>
+      <div className={`${geistSans.className} ${geistMono.className}`}>
         <QueryClientProvider client={queryClient}>
           <Component {...pageProps} />
         </QueryClientProvider>
