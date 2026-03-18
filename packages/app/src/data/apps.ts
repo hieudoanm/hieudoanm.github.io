@@ -625,6 +625,16 @@ export const apps: App[] = [
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
+    category: 'utilities',
+    id: 'system',
+    href: 'https://hieudoanm.github.io/system',
+    github: 'https://github.com/hieudoanm/system',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/system/refs/heads/master/images/cover.png',
+    name: 'System',
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
+  },
+  {
     category: 'workspace',
     id: 'calendar',
     href: 'https://hieudoanm.github.io/calendar',
