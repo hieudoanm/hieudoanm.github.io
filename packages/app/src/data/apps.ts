@@ -346,6 +346,16 @@ export const apps: App[] = [
   },
   {
     category: 'fun',
+    id: 'eyes',
+    href: 'https://hieudoanm.github.io/eyes',
+    github: 'https://github.com/hieudoanm/eyes',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/eyes/refs/heads/master/images/cover.png',
+    name: 'Eyes',
+    tags: ['android', 'macos', 'web'],
+  },
+  {
+    category: 'fun',
     id: 'legislation',
     href: 'https://hieudoanm.github.io/legislation',
     github: 'https://github.com/hieudoanm/legislation',
