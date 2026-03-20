@@ -26,7 +26,8 @@
     "build": "rimraf ../../docs && docsify init ../../docs",
     "test": "true",
     "lint": "true",
-    "format": "true",
+    "format": "prettier --cache --write .",
+    "predev": "rimraf ./docs && docsify init ./docs",
     "dev": "docsify serve ./docs --theme pure"
   },
   "devDependencies": {
