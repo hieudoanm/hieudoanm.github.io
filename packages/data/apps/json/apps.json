@@ -1,6 +1,15 @@
 [
   {
     "category": "artificial-intelligence",
+    "id": "free-router",
+    "href": "https://hieudoanm.github.io/free.router",
+    "github": "https://github.com/hieudoanm/free.router",
+    "image": "https://raw.githubusercontent.com/hieudoanm/free.router/refs/heads/master/images/cover.png",
+    "name": "Free Router",
+    "tags": ["cli", "extension", "android", "macos", "web"]
+  },
+  {
+    "category": "artificial-intelligence",
     "id": "promptly",
     "href": "https://hieudoanm.github.io/promptly",
     "github": "https://github.com/hieudoanm/promptly",

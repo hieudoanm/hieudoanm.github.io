@@ -1,4 +1,5 @@
 category,id,href,github,image,name,tags
+artificial-intelligence,free-router,https://hieudoanm.github.io/free.router,https://github.com/hieudoanm/free.router,https://raw.githubusercontent.com/hieudoanm/free.router/refs/heads/master/images/cover.png,Free Router,"cli,extension,android,macos,web"
 artificial-intelligence,promptly,https://hieudoanm.github.io/promptly,https://github.com/hieudoanm/promptly,https://raw.githubusercontent.com/hieudoanm/promptly/refs/heads/master/images/cover.png,Promptly,"cli,extension,android,macos,web"
 chess,chess.clock,https://hieudoanm.github.io/chess.clock,https://github.com/hieudoanm/chess.clock,https://raw.githubusercontent.com/hieudoanm/chess.clock/refs/heads/master/images/cover.png,Chess Clock,"android,macos,web"
 chess,chess.com,https://hieudoanm.github.io/chess.com,https://github.com/hieudoanm/chess.com,https://raw.githubusercontent.com/hieudoanm/chess.com/refs/heads/master/images/cover.png,chess.com,"cli,extension,android,macos,web"
