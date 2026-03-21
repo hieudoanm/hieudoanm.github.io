@@ -656,6 +656,16 @@ export const apps: App[] = [
   },
   {
     category: 'utilities',
+    id: 'thumbnails',
+    href: 'https://hieudoanm.github.io/thumbnails',
+    github: 'https://github.com/hieudoanm/thumbnails',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/thumbnails/refs/heads/master/images/cover.png',
+    name: 'Thumbnails',
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
+  },
+  {
+    category: 'utilities',
     id: 'system',
     href: 'https://hieudoanm.github.io/system',
     github: 'https://github.com/hieudoanm/system',
