@@ -575,16 +575,6 @@ export const apps: App[] = [
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
-    category: 'social',
-    id: 'ig',
-    href: 'https://hieudoanm.github.io/ig',
-    github: 'https://github.com/hieudoanm/ig',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/ig/refs/heads/master/images/cover.png',
-    name: 'IG',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
     category: 'template',
     id: 'start',
     href: 'https://hieudoanm.github.io/start',
@@ -603,6 +593,16 @@ export const apps: App[] = [
       'https://raw.githubusercontent.com/hieudoanm/calculator/refs/heads/master/images/cover.png',
     name: 'Calculator',
     tags: ['android', 'macos', 'web'],
+  },
+  {
+    category: 'utilities',
+    id: 'instasize',
+    href: 'https://hieudoanm.github.io/instasize',
+    github: 'https://github.com/hieudoanm/instasize',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/instasize/refs/heads/master/images/cover.png',
+    name: 'InstaSize',
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
     category: 'utilities',
