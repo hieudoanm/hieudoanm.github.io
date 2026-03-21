@@ -217,12 +217,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hieudoanm.github.io/kv</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://hieudoanm.github.io/legislation</loc>
     <lastmod>2026-03-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -338,6 +332,12 @@
   </url>
   <url>
     <loc>https://hieudoanm.github.io/slides</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hieudoanm.github.io/sqlite</loc>
     <lastmod>2026-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

@@ -196,16 +196,6 @@ export const apps: App[] = [
   },
   {
     category: 'dev-tools',
-    id: 'kv',
-    href: 'https://hieudoanm.github.io/kv',
-    github: 'https://github.com/hieudoanm/kv',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/kv/refs/heads/master/images/cover.png',
-    name: 'KV',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
-    category: 'dev-tools',
     id: 'manifest.json',
     href: 'https://hieudoanm.github.io/manifest.json',
     github: 'https://github.com/hieudoanm/manifest.json',
@@ -222,6 +212,16 @@ export const apps: App[] = [
     image:
       'https://raw.githubusercontent.com/hieudoanm/proxy/refs/heads/master/images/cover.png',
     name: 'Proxy',
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
+  },
+  {
+    category: 'dev-tools',
+    id: 'sqlite',
+    href: 'https://hieudoanm.github.io/sqlite',
+    github: 'https://github.com/hieudoanm/sqlite',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/sqlite/refs/heads/master/images/cover.png',
+    name: 'SQLite',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
