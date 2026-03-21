@@ -166,12 +166,22 @@ export const apps: App[] = [
   },
   {
     category: 'dev-tools',
-    id: 'gh',
-    href: 'https://hieudoanm.github.io/gh',
-    github: 'https://github.com/hieudoanm/gh',
+    id: 'gh.cli',
+    href: 'https://hieudoanm.github.io/gh.cli',
+    github: 'https://github.com/hieudoanm/gh.cli',
     image:
       'https://raw.githubusercontent.com/hieudoanm/gh/refs/heads/master/images/cover.png',
-    name: 'GitHub',
+    name: 'GitHub Extensions',
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
+  },
+  {
+    category: 'dev-tools',
+    id: 'gh.ext',
+    href: 'https://hieudoanm.github.io/gh.ext',
+    github: 'https://github.com/hieudoanm/gh.ext',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/gh.ext/refs/heads/master/images/cover.png',
+    name: 'GitHub CLI',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
