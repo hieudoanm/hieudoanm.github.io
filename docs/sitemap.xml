@@ -175,13 +175,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hieudoanm.github.io/ig</loc>
+    <loc>https://hieudoanm.github.io/inflation</loc>
     <lastmod>2026-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hieudoanm.github.io/inflation</loc>
+    <loc>https://hieudoanm.github.io/instasize</loc>
     <lastmod>2026-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -391,7 +391,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://hieudoanm.github.io/thumbnails</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://hieudoanm.github.io/towers</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hieudoanm.github.io/transcript</loc>
     <lastmod>2026-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -416,12 +428,6 @@
   </url>
   <url>
     <loc>https://hieudoanm.github.io/yaml</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://hieudoanm.github.io/ytb</loc>
     <lastmod>2026-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
