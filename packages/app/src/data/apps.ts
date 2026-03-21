@@ -585,16 +585,6 @@ export const apps: App[] = [
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
-    category: 'social',
-    id: 'ytb',
-    href: 'https://hieudoanm.github.io/ytb',
-    github: 'https://github.com/hieudoanm/ytb',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/ytb/refs/heads/master/images/cover.png',
-    name: 'YTB',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
     category: 'template',
     id: 'start',
     href: 'https://hieudoanm.github.io/start',
@@ -662,6 +652,16 @@ export const apps: App[] = [
     image:
       'https://raw.githubusercontent.com/hieudoanm/thumbnails/refs/heads/master/images/cover.png',
     name: 'Thumbnails',
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
+  },
+  {
+    category: 'utilities',
+    id: 'transcript',
+    href: 'https://hieudoanm.github.io/transcript',
+    github: 'https://github.com/hieudoanm/transcript',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/transcript/refs/heads/master/images/cover.png',
+    name: 'Transcript',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
