@@ -244,6 +244,15 @@
   },
   {
     "category": "finance",
+    "id": "frankurter",
+    "href": "https://hieudoanm.github.io/frankurter",
+    "github": "https://github.com/hieudoanm/frankurter",
+    "image": "https://raw.githubusercontent.com/hieudoanm/frankurter/refs/heads/master/images/cover.png",
+    "name": "Frankurter",
+    "tags": ["cli", "extension", "android", "macos", "web"]
+  },
+  {
+    "category": "finance",
     "id": "inflation",
     "href": "https://hieudoanm.github.io/inflation",
     "github": "https://github.com/hieudoanm/inflation",
