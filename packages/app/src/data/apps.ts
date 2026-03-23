@@ -695,6 +695,16 @@ export const apps: App[] = [
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
+    category: 'utilities',
+    id: 'weather',
+    href: 'https://hieudoanm.github.io/weather',
+    github: 'https://github.com/hieudoanm/weather',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/weather/refs/heads/master/images/cover.png',
+    name: 'Weather',
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
+  },
+  {
     category: 'workspace',
     id: 'calendar',
     href: 'https://hieudoanm.github.io/calendar',
