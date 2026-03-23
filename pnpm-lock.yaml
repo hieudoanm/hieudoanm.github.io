@@ -166,8 +166,8 @@ importers:
         specifier: 4.10.2
         version: 4.10.2
       '@oclif/plugin-help':
-        specifier: 6.2.39
-        version: 6.2.39
+        specifier: 6.2.40
+        version: 6.2.40
     devDependencies:
       '@eslint/js':
         specifier: 10.0.1
@@ -1414,8 +1414,8 @@ packages:
     resolution: {integrity: sha512-3GvDh5nqpIE8566qUF5cBHKog9DFV9XgBeuR0nUrz0OMuz2FPYHat1AZHOwyQbvH9OKL4gJNQZHcsDOqDM/FRA==}
     engines: {node: '>=18.0.0'}
 
-  '@oclif/plugin-help@6.2.39':
-    resolution: {integrity: sha512-g/KQ5F68cLZWjm0f/bY2zKjrhYaz941++zp4xeWRtOPeu6U6pEfyBDxaOH5HncWw1qouJGsVQcGdU0ygN8eXTQ==}
+  '@oclif/plugin-help@6.2.40':
+    resolution: {integrity: sha512-sU/PMrz1LnnnNk4T3qvZU8dTUiSc0MZaL7woh2wfuNSXbCnxicJzx4kX1sYeY6eF0NmqFiYlpNEQJykBG0g1sA==}
     engines: {node: '>=18.0.0'}
 
   '@opentelemetry/api@1.4.1':
@@ -6905,7 +6905,7 @@ snapshots:
       wordwrap: 1.0.0
       wrap-ansi: 7.0.0
 
-  '@oclif/plugin-help@6.2.39':
+  '@oclif/plugin-help@6.2.40':
     dependencies:
       '@oclif/core': 4.10.2
 
