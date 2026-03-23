@@ -356,6 +356,16 @@ export const apps: App[] = [
   },
   {
     category: 'fun',
+    id: 'dot',
+    href: 'https://hieudoanm.github.io/dot',
+    github: 'https://github.com/hieudoanm/dot',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/dot/refs/heads/master/images/cover.png',
+    name: 'Dot',
+    tags: ['android', 'macos', 'web'],
+  },
+  {
+    category: 'fun',
     id: 'garmin',
     href: 'https://hieudoanm.github.io/garmin',
     github: 'https://github.com/hieudoanm/garmin',
