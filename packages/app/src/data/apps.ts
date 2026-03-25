@@ -145,6 +145,16 @@ export const apps: App[] = [
     tags: ['android', 'macos', 'web'],
   },
   {
+    category: 'design',
+    id: 'svg',
+    href: 'https://hieudoanm.github.io/svg',
+    github: 'https://github.com/hieudoanm/svg',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/svg/refs/heads/master/images/cover.png',
+    name: 'SVG',
+    tags: ['android', 'macos', 'web'],
+  },
+  {
     category: 'dev-tools',
     id: 'browser',
     href: 'https://hieudoanm.github.io/browser',

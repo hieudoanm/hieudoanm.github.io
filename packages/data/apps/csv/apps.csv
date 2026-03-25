@@ -12,6 +12,7 @@ commerce,shopify,https://hieudoanm.github.io/shopify,https://github.com/hieudoan
 design,colors,https://hieudoanm.github.io/colors,https://github.com/hieudoanm/colors,https://raw.githubusercontent.com/hieudoanm/colors/refs/heads/master/images/cover.png,Colors,"cli,extension,android,macos,web"
 design,composition,https://hieudoanm.github.io/composition,https://github.com/hieudoanm/composition,https://raw.githubusercontent.com/hieudoanm/composition/refs/heads/master/images/cover.png,Composition,"android,macos,web"
 design,filter,https://hieudoanm.github.io/filter,https://github.com/hieudoanm/filter,https://raw.githubusercontent.com/hieudoanm/filter/refs/heads/master/images/cover.png,Filter,"android,macos,web"
+design,svg,https://hieudoanm.github.io/svg,https://github.com/hieudoanm/svg,https://raw.githubusercontent.com/hieudoanm/svg/refs/heads/master/images/cover.png,SVG,"android,macos,web"
 dev-tools,browser,https://hieudoanm.github.io/browser,https://github.com/hieudoanm/browser,https://raw.githubusercontent.com/hieudoanm/browser/refs/heads/master/images/cover.png,Browser,"android,macos,web"
 dev-tools,coditor,https://hieudoanm.github.io/coditor,https://github.com/hieudoanm/coditor,https://raw.githubusercontent.com/hieudoanm/coditor/refs/heads/master/images/cover.png,Coditor,"cli,extension,android,macos,web"
 dev-tools,gh.cli,https://hieudoanm.github.io/gh.cli,https://github.com/hieudoanm/gh.cli,https://raw.githubusercontent.com/hieudoanm/gh/refs/heads/master/images/cover.png,GitHub Extensions,"cli,extension,android,macos,web"
