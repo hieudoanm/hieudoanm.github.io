@@ -163,8 +163,8 @@ importers:
   packages/tools:
     dependencies:
       '@oclif/core':
-        specifier: 4.10.2
-        version: 4.10.2
+        specifier: 4.10.3
+        version: 4.10.3
       '@oclif/plugin-help':
         specifier: 6.2.40
         version: 6.2.40
@@ -1410,8 +1410,8 @@ packages:
     resolution: {integrity: sha512-nn5ozdjYQpUCZlWGuxcJY/KpxkWQs4DcbMCmKojjyrYDEAGy4Ce19NN4v5MduafTwJlbKc99UA8YhSVqq9yPZA==}
     engines: {node: '>=12.4.0'}
 
-  '@oclif/core@4.10.2':
-    resolution: {integrity: sha512-3GvDh5nqpIE8566qUF5cBHKog9DFV9XgBeuR0nUrz0OMuz2FPYHat1AZHOwyQbvH9OKL4gJNQZHcsDOqDM/FRA==}
+  '@oclif/core@4.10.3':
+    resolution: {integrity: sha512-0mD8vcrrX5uRsxzvI8tbWmSVGngvZA/Qo6O0ZGvLPAWEauSf5GFniwgirhY0SkszuHwu0S1J1ivj/jHmqtIDuA==}
     engines: {node: '>=18.0.0'}
 
   '@oclif/plugin-help@6.2.40':
@@ -6950,7 +6950,7 @@ snapshots:
 
   '@nolyfill/is-core-module@1.0.39': {}
 
-  '@oclif/core@4.10.2':
+  '@oclif/core@4.10.3':
     dependencies:
       ansi-escapes: 4.3.2
       ansis: 3.17.0
@@ -6973,7 +6973,7 @@ snapshots:
 
   '@oclif/plugin-help@6.2.40':
     dependencies:
-      '@oclif/core': 4.10.2
+      '@oclif/core': 4.10.3
 
   '@opentelemetry/api@1.4.1':
     optional: true
