@@ -5,12 +5,16 @@ const eslintConfig = defineConfig([
     '.next/**',
     'build/**',
     'docs/**',
+    'jest.config.ts',
+    'jest.setup.ts',
     'mobile/**',
+    'next-env.d.ts',
     'node_modules/**',
     'out/**',
     'public/workers/**',
     'src-tauri/**',
-    'next-env.d.ts',
+    'src-tauri/target/**',
+    'src/generated/**',
   ]),
 ]);
 
