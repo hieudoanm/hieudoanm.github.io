@@ -26,6 +26,16 @@ export const apps: App[] = [
   },
   {
     category: 'artificial-intelligence',
+    id: 'lucid',
+    href: 'https://hieudoanm.github.io/lucid',
+    github: 'https://github.com/hieudoanm/lucid',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/lucid/refs/heads/master/images/cover.png',
+    name: 'Lucid',
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
+  },
+  {
+    category: 'artificial-intelligence',
     id: 'promptly',
     href: 'https://hieudoanm.github.io/promptly',
     github: 'https://github.com/hieudoanm/promptly',
