@@ -166,16 +166,6 @@ export const apps: App[] = [
   },
   {
     category: 'dev-tools',
-    id: 'coditor',
-    href: 'https://hieudoanm.github.io/coditor',
-    github: 'https://github.com/hieudoanm/coditor',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/coditor/refs/heads/master/images/cover.png',
-    name: 'Coditor',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
-    category: 'dev-tools',
     id: 'gh.cli',
     href: 'https://hieudoanm.github.io/gh.cli',
     github: 'https://github.com/hieudoanm/gh.cli',
@@ -423,6 +413,16 @@ export const apps: App[] = [
       'https://raw.githubusercontent.com/hieudoanm/palindrome/refs/heads/master/images/cover.png',
     name: 'Palindrome',
     tags: ['android', 'macos', 'web'],
+  },
+  {
+    category: 'fun',
+    id: 'pokedex',
+    href: 'https://hieudoanm.github.io/pokedex',
+    github: 'https://github.com/hieudoanm/pokedex',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/pokedex/refs/heads/master/images/cover.png',
+    name: 'Pokedex',
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
     category: 'fun',

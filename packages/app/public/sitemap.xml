@@ -79,12 +79,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hieudoanm.github.io/coditor</loc>
-    <lastmod>2026-04-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://hieudoanm.github.io/colors</loc>
     <lastmod>2026-04-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -266,6 +260,12 @@
   </url>
   <url>
     <loc>https://hieudoanm.github.io/pitch.perfect</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hieudoanm.github.io/pokedex</loc>
     <lastmod>2026-04-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
