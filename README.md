@@ -39,7 +39,7 @@
 ### 🛠️ DevTools
 
 1. 📄 [JSON](https://hieudoanm.github.io/json) - [GitHub](https://github.com/hieudoanm/json)  
-2. 🧾 [manifest.json](https://hieudoanm.github.io/manifest.json) - [GitHub](https://github.com/hieudoanm/manifest.json)  
+2. 🧾 [Manifest](https://hieudoanm.github.io/manifest) - [GitHub](https://github.com/hieudoanm/manifest)  
 3. 📬 [Postmanify](https://hieudoanm.github.io/postmanify) - [GitHub](https://github.com/hieudoanm/postmanify)  
 4. 🔌 [Proxy](https://hieudoanm.github.io/proxy) - [GitHub](https://github.com/hieudoanm/proxy)  
 5. 🗄️ [SQLite](https://hieudoanm.github.io/sqlite) - [GitHub](https://github.com/hieudoanm/sqlite)  
