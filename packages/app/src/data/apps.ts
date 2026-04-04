@@ -16,16 +16,6 @@ export type App = {
 export const apps: App[] = [
   {
     category: 'artificial-intelligence',
-    id: 'free-router',
-    href: 'https://hieudoanm.github.io/free.router',
-    github: 'https://github.com/hieudoanm/free.router',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/free.router/refs/heads/master/images/cover.png',
-    name: 'Free Router',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
-    category: 'artificial-intelligence',
     id: 'lucid',
     href: 'https://hieudoanm.github.io/lucid',
     github: 'https://github.com/hieudoanm/lucid',
@@ -222,6 +212,16 @@ export const apps: App[] = [
     image:
       'https://raw.githubusercontent.com/hieudoanm/manifest.json/refs/heads/master/images/cover.png',
     name: 'manifest.json',
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
+  },
+  {
+    category: 'devtools',
+    id: 'postmanify',
+    href: 'https://hieudoanm.github.io/postmanify',
+    github: 'https://github.com/hieudoanm/postmanify',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/postmanify/refs/heads/master/images/cover.png',
+    name: 'Postmanify',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
