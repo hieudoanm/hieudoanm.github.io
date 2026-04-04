@@ -1,15 +1,39 @@
 # 👨‍💻 I'm [HIEU DOAN][hieudoanm]
 
-## 🚀 Current Projects
+## 📚 Table of Contents
 
-### 🤖 Artificial Intelligence
+- [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
+  - [📚 Table of Contents](#-table-of-contents)
+  - [🚀 Current Projects (Total: 69)](#-current-projects-total-69)
+    - [🤖 Artificial Intelligence (2)](#-artificial-intelligence-2)
+    - [♟️ Chess (7)](#️-chess-7)
+    - [🛒 Commerce (1)](#-commerce-1)
+    - [🎨 Design (4)](#-design-4)
+    - [🛠️ DevTools (9)](#️-devtools-9)
+    - [💸 Finance (4)](#-finance-4)
+    - [🎉 Fun (10)](#-fun-10)
+    - [🎰 Gambling (2)](#-gambling-2)
+    - [🎮 Games (5)](#-games-5)
+    - [🌐 Languages (3)](#-languages-3)
+    - [🎬 Movies (2)](#-movies-2)
+    - [🎵 Music (1)](#-music-1)
+    - [🔢 Numberphile (2)](#-numberphile-2)
+    - [🚀 Productivity (2)](#-productivity-2)
+    - [🔧 Utilities (9)](#-utilities-9)
+    - [💼 Workspace (6)](#-workspace-6)
+
+---
+
+## 🚀 Current Projects (Total: 69)
+
+### 🤖 Artificial Intelligence (2)
 
 1. 🧠 [Lucid](https://hieudoanm.github.io/lucid) - [GitHub](https://github.com/hieudoanm/lucid)  
 2. ⚡ [Promptly](https://hieudoanm.github.io/promptly) - [GitHub](https://github.com/hieudoanm/promptly)
 
 ---
 
-### ♟️ Chess
+### ♟️ Chess (7)
 
 1. ⏲️ [Chess Clock](https://hieudoanm.github.io/chess.clock) - [GitHub](https://github.com/hieudoanm/chess.clock)  
 2. 🌐 [chess.com](https://hieudoanm.github.io/chess.com) - [GitHub](https://github.com/hieudoanm/chess.com)  
@@ -21,13 +45,13 @@
 
 ---
 
-### 🛒 Commerce
+### 🛒 Commerce (1)
 
 1. 🛍️ [Shopify](https://hieudoanm.github.io/shopify) - [GitHub](https://github.com/hieudoanm/shopify)
 
 ---
 
-### 🎨 Design
+### 🎨 Design (4)
 
 1. 🌈 [Colors](https://hieudoanm.github.io/colors) - [GitHub](https://github.com/hieudoanm/colors)  
 2. 📐 [Composition](https://hieudoanm.github.io/composition) - [GitHub](https://github.com/hieudoanm/composition)  
@@ -36,7 +60,7 @@
 
 ---
 
-### 🛠️ DevTools
+### 🛠️ DevTools (9)
 
 1. 📄 [JSON](https://hieudoanm.github.io/json) - [GitHub](https://github.com/hieudoanm/json)  
 2. 🧾 [Manifest](https://hieudoanm.github.io/manifest) - [GitHub](https://github.com/hieudoanm/manifest)  
@@ -50,7 +74,7 @@
 
 ---
 
-### 💸 Finance
+### 💸 Finance (4)
 
 1. 🏦 [Frankfurter](https://hieudoanm.github.io/frankfurter) - [GitHub](https://github.com/hieudoanm/frankfurter)  
 2. 📈 [Inflation](https://hieudoanm.github.io/inflation) - [GitHub](https://github.com/hieudoanm/inflation)  
@@ -59,7 +83,7 @@
 
 ---
 
-### 🎉 Fun
+### 🎉 Fun (10)
 
 1. 🌀 [Attractors](https://hieudoanm.github.io/attractors) - [GitHub](https://github.com/hieudoanm/attractors)  
 2. ⏳ [Countdown](https://hieudoanm.github.io/countdown) - [GitHub](https://github.com/hieudoanm/countdown)  
@@ -69,18 +93,19 @@
 6. ⌚ [Garmin](https://hieudoanm.github.io/garmin) - [GitHub](https://github.com/hieudoanm/garmin)  
 7. ⚖️ [Legislation](https://hieudoanm.github.io/legislation) - [GitHub](https://github.com/hieudoanm/legislation)  
 8. 🔁 [Palindrome](https://hieudoanm.github.io/palindrome) - [GitHub](https://github.com/hieudoanm/palindrome)  
-9. 🔀 [Typoglycemia](https://hieudoanm.github.io/typoglycemia) - [GitHub](https://github.com/hieudoanm/typoglycemia)
+9. 📕 [Pokedex](https://hieudoanm.github.io/pokedex) - [GitHub](https://github.com/hieudoanm/pokedex)  
+10. 🔀 [Typoglycemia](https://hieudoanm.github.io/typoglycemia) - [GitHub](https://github.com/hieudoanm/typoglycemia)
 
 ---
 
-### 🎰 Gambling
+### 🎰 Gambling (2)
 
 1. 🃏 [Blackjack](https://hieudoanm.github.io/blackjack) - [GitHub](https://github.com/hieudoanm/blackjack)  
 2. 🎴 [Poker](https://hieudoanm.github.io/poker) - [GitHub](https://github.com/hieudoanm/poker)
 
 ---
 
-### 🎮 Games
+### 🎮 Games (5)
 
 1. ❓ [Quiz](https://hieudoanm.github.io/quiz) - [GitHub](https://github.com/hieudoanm/quiz)  
 2. 🧠 [Recall](https://hieudoanm.github.io/recall) - [GitHub](https://github.com/hieudoanm/recall)  
@@ -90,7 +115,7 @@
 
 ---
 
-### 🌐 Languages
+### 🌐 Languages (3)
 
 1. 🇬🇧 [English](https://hieudoanm.github.io/english) - [GitHub](https://github.com/hieudoanm/english)  
 2. 🃏 [Flashcards](https://hieudoanm.github.io/flashcards) - [GitHub](https://github.com/hieudoanm/flashcards)  
@@ -98,32 +123,34 @@
 
 ---
 
-### 🎬 Movies
+### 🎬 Movies (2)
 
 1. 🎭 [Breaking Bad](https://hieudoanm.github.io/breaking.bad) - [GitHub](https://github.com/hieudoanm/breaking.bad)  
 2. 🩺 [House, M.D.](https://hieudoanm.github.io/house.md) - [GitHub](https://github.com/hieudoanm/house.md)
 
 ---
 
-### 🎵 Music
+### 🎵 Music (1)
 
 1. 🎤 [Pitch Perfect](https://hieudoanm.github.io/pitch.perfect) - [GitHub](https://github.com/hieudoanm/pitch.perfect)
 
-#### 🔢 Numberphile
+---
+
+### 🔢 Numberphile (2)
 
 1. 🔄 [Kaprekar](https://hieudoanm.github.io/kaprekar) - [GitHub](https://github.com/hieudoanm/kaprekar)  
 2. 🥧 [PI](https://hieudoanm.github.io/pi) - [GitHub](https://github.com/hieudoanm/pi)
 
 ---
 
-### 🚀 Productivity
+### 🚀 Productivity (2)
 
 1. 🔖 [DOI](https://hieudoanm.github.io/doi) - [GitHub](https://github.com/hieudoanm/doi)  
 2. 🍅 [Pomodoro](https://hieudoanm.github.io/pomodoro) - [GitHub](https://github.com/hieudoanm/pomodoro)
 
 ---
 
-### 🔧 Utilities
+### 🔧 Utilities (9)
 
 1. 🧮 [Calculator](https://hieudoanm.github.io/calculator) - [GitHub](https://github.com/hieudoanm/calculator)  
 2. 📱 [InstaSize](https://hieudoanm.github.io/instasize) - [GitHub](https://github.com/hieudoanm/instasize)  
@@ -137,7 +164,7 @@
 
 ---
 
-### 💼 Workspace
+### 💼 Workspace (6)
 
 1. 📅 [Calendar](https://hieudoanm.github.io/calendar) - [GitHub](https://github.com/hieudoanm/calendar)  
 2. 📑 [Docs](https://hieudoanm.github.io/docs) - [GitHub](https://github.com/hieudoanm/docs)  
