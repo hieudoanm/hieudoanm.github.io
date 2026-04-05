@@ -4,7 +4,7 @@
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
   - [📚 Table of Contents](#-table-of-contents)
-  - [🚀 Current Projects (Total: 76)](#-current-projects-total-76)
+  - [🚀 Current Projects (Total: 78)](#-current-projects-total-78)
     - [🤖 Artificial Intelligence (2)](#-artificial-intelligence-2)
     - [♟️ Chess (7)](#️-chess-7)
     - [🛒 Commerce (1)](#-commerce-1)
@@ -27,7 +27,7 @@
 
 ---
 
-## 🚀 Current Projects (Total: 76)
+## 🚀 Current Projects (Total: 78)
 
 ### 🤖 Artificial Intelligence (2)
 
@@ -178,14 +178,16 @@
 ### 🔧 Utilities (9)
 
 1. 🧮 [Calculator](https://hieudoanm.github.io/calculator) - [GitHub](https://github.com/hieudoanm/calculator)
-2. 📱 [InstaSize](https://hieudoanm.github.io/instasize) - [GitHub](https://github.com/hieudoanm/instasize)
-3. 🌐 [IP](https://hieudoanm.github.io/ip) - [GitHub](https://github.com/hieudoanm/ip)
-4. 🔍 [OCR](https://hieudoanm.github.io/ocr) - [GitHub](https://github.com/hieudoanm/ocr)
-5. 🔳 [QRCode](https://hieudoanm.github.io/qrcode) - [GitHub](https://github.com/hieudoanm/qrcode)
-6. 🖥️ [System](https://hieudoanm.github.io/system) - [GitHub](https://github.com/hieudoanm/system)
-7. 🖼️ [Thumbnails](https://hieudoanm.github.io/thumbnails) - [GitHub](https://github.com/hieudoanm/thumbnails)
-8. 📝 [Transcript](https://hieudoanm.github.io/transcript) - [GitHub](https://github.com/hieudoanm/transcript)
-9. 🌤️ [Weather](https://hieudoanm.github.io/weather) - [GitHub](https://github.com/hieudoanm/weather)
+2. 📋 [Clipboard](https://hieudoanm.github.io/clipboard) - [GitHub](https://github.com/hieudoanm/clipboard)
+3. 📱 [InstaSize](https://hieudoanm.github.io/instasize) - [GitHub](https://github.com/hieudoanm/instasize)
+4. 🌐 [IP](https://hieudoanm.github.io/ip) - [GitHub](https://github.com/hieudoanm/ip)
+5. 🔍 [OCR](https://hieudoanm.github.io/ocr) - [GitHub](https://github.com/hieudoanm/ocr)
+6. 🔳 [QRCode](https://hieudoanm.github.io/qrcode) - [GitHub](https://github.com/hieudoanm/qrcode)
+7. 🖥️ [System](https://hieudoanm.github.io/system) - [GitHub](https://github.com/hieudoanm/system)
+8. 🖼️ [Thumbnails](https://hieudoanm.github.io/thumbnails) - [GitHub](https://github.com/hieudoanm/thumbnails)
+9. 📝 [Transcript](https://hieudoanm.github.io/transcript) - [GitHub](https://github.com/hieudoanm/transcript)
+10. 🌤️ [Weather](https://hieudoanm.github.io/weather) - [GitHub](https://github.com/hieudoanm/weather)
+11. 📶 [Wifi](https://hieudoanm.github.io/wifi) - [GitHub](https://github.com/hieudoanm/wifi)
 
 ---
 
