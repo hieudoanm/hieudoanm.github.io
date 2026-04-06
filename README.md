@@ -12,7 +12,7 @@
     - [🛠️ DevTools (12)](#️-devtools-12)
     - [📄 Documents (2)](#-documents-2)
     - [💸 Finance (4)](#-finance-4)
-    - [🎉 Fun (10)](#-fun-10)
+    - [🎉 Fun (11)](#-fun-11)
     - [🎰 Gambling (2)](#-gambling-2)
     - [🎮 Games (5)](#-games-5)
     - [🌐 Languages (3)](#-languages-3)
@@ -22,7 +22,7 @@
     - [🔢 Numberphile (2)](#-numberphile-2)
     - [🚀 Productivity (2)](#-productivity-2)
     - [📦 Templates (1)](#-templates-1)
-    - [🔧 Utilities (9)](#-utilities-9)
+    - [🔧 Utilities (10)](#-utilities-10)
     - [💼 Workspace (6)](#-workspace-6)
 
 ---
@@ -96,18 +96,19 @@
 
 ---
 
-### 🎉 Fun (10)
+### 🎉 Fun (11)
 
 1. 🌀 [Attractors](https://hieudoanm.github.io/attractors) - [GitHub](https://github.com/hieudoanm/attractors)
 2. ⏳ [Countdown](https://hieudoanm.github.io/countdown) - [GitHub](https://github.com/hieudoanm/countdown)
 3. 🌍 [Countries](https://hieudoanm.github.io/countries) - [GitHub](https://github.com/hieudoanm/countries)
 4. ⚫ [Dot](https://hieudoanm.github.io/dot) - [GitHub](https://github.com/hieudoanm/dot)
-5. 👀 [Eyes](https://hieudoanm.github.io/eyes) - [GitHub](https://github.com/hieudoanm/eyes)
-6. ⌚ [Garmin](https://hieudoanm.github.io/garmin) - [GitHub](https://github.com/hieudoanm/garmin)
-7. ⚖️ [Legislation](https://hieudoanm.github.io/legislation) - [GitHub](https://github.com/hieudoanm/legislation)
-8. 🔁 [Palindrome](https://hieudoanm.github.io/palindrome) - [GitHub](https://github.com/hieudoanm/palindrome)
-9. 📕 [Pokedex](https://hieudoanm.github.io/pokedex) - [GitHub](https://github.com/hieudoanm/pokedex)
-10. 🔀 [Typoglycemia](https://hieudoanm.github.io/typoglycemia) - [GitHub](https://github.com/hieudoanm/typoglycemia)
+5. 🔍 [Emojis](https://hieudoanm.github.io/emojis) - [GitHub](https://github.com/hieudoanm/emojis)
+6. 👀 [Eyes](https://hieudoanm.github.io/eyes) - [GitHub](https://github.com/hieudoanm/eyes)
+7. ⌚ [Garmin](https://hieudoanm.github.io/garmin) - [GitHub](https://github.com/hieudoanm/garmin)
+8. ⚖️ [Legislation](https://hieudoanm.github.io/legislation) - [GitHub](https://github.com/hieudoanm/legislation)
+9. 🔁 [Palindrome](https://hieudoanm.github.io/palindrome) - [GitHub](https://github.com/hieudoanm/palindrome)
+10. 📕 [Pokedex](https://hieudoanm.github.io/pokedex) - [GitHub](https://github.com/hieudoanm/pokedex)
+11. 🔀 [Typoglycemia](https://hieudoanm.github.io/typoglycemia) - [GitHub](https://github.com/hieudoanm/typoglycemia)
 
 ---
 
@@ -175,19 +176,18 @@
 
 ---
 
-### 🔧 Utilities (9)
+### 🔧 Utilities (10)
 
 1. 🧮 [Calculator](https://hieudoanm.github.io/calculator) - [GitHub](https://github.com/hieudoanm/calculator)
 2. 📋 [Clipboard](https://hieudoanm.github.io/clipboard) - [GitHub](https://github.com/hieudoanm/clipboard)
 3. 📱 [InstaSize](https://hieudoanm.github.io/instasize) - [GitHub](https://github.com/hieudoanm/instasize)
 4. 🌐 [IP](https://hieudoanm.github.io/ip) - [GitHub](https://github.com/hieudoanm/ip)
-5. 🔍 [OCR](https://hieudoanm.github.io/ocr) - [GitHub](https://github.com/hieudoanm/ocr)
-6. 🔳 [QRCode](https://hieudoanm.github.io/qrcode) - [GitHub](https://github.com/hieudoanm/qrcode)
-7. 🖥️ [System](https://hieudoanm.github.io/system) - [GitHub](https://github.com/hieudoanm/system)
-8. 🖼️ [Thumbnails](https://hieudoanm.github.io/thumbnails) - [GitHub](https://github.com/hieudoanm/thumbnails)
-9. 📝 [Transcript](https://hieudoanm.github.io/transcript) - [GitHub](https://github.com/hieudoanm/transcript)
-10. 🌤️ [Weather](https://hieudoanm.github.io/weather) - [GitHub](https://github.com/hieudoanm/weather)
-11. 📶 [Wifi](https://hieudoanm.github.io/wifi) - [GitHub](https://github.com/hieudoanm/wifi)
+5. 🔳 [QRCode](https://hieudoanm.github.io/qrcode) - [GitHub](https://github.com/hieudoanm/qrcode)
+6. 🖥️ [System](https://hieudoanm.github.io/system) - [GitHub](https://github.com/hieudoanm/system)
+7. 🖼️ [Thumbnails](https://hieudoanm.github.io/thumbnails) - [GitHub](https://github.com/hieudoanm/thumbnails)
+8. 📝 [Transcript](https://hieudoanm.github.io/transcript) - [GitHub](https://github.com/hieudoanm/transcript)
+9. 🌤️ [Weather](https://hieudoanm.github.io/weather) - [GitHub](https://github.com/hieudoanm/weather)
+10. 📶 [Wifi](https://hieudoanm.github.io/wifi) - [GitHub](https://github.com/hieudoanm/wifi)
 
 ---
 
