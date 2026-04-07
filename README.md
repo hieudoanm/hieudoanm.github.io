@@ -31,177 +31,352 @@
 
 ### 🤖 Artificial Intelligence (2)
 
-1. 🧠 [Lucid](https://hieudoanm.github.io/lucid) - [GitHub](https://github.com/hieudoanm/lucid)  
-2. ⚡ [Promptly](https://hieudoanm.github.io/promptly) - [GitHub](https://github.com/hieudoanm/promptly)
+1. 🧠 [Lucid][lucid] - [GitHub][lucid-gh]  
+2. ⚡ [Promptly][promptly] - [GitHub][promptly-gh]
 
 ---
 
 ### ♟️ Chess (7)
 
-1. ⏲️ [Chess Clock](https://hieudoanm.github.io/chess.clock) - [GitHub](https://github.com/hieudoanm/chess.clock)  
-2. 🌐 [chess.com](https://hieudoanm.github.io/chess.com) - [GitHub](https://github.com/hieudoanm/chess.com)  
-3. 📊 [Chess Elo](https://hieudoanm.github.io/chess.elo) - [GitHub](https://github.com/hieudoanm/chess.elo)  
-4. 🤖 [Chess Engine](https://hieudoanm.github.io/chess.engine) - [GitHub](https://github.com/hieudoanm/chess.engine)  
-5. 🎨 [Chess Graphics](https://hieudoanm.github.io/chess.graphics) - [GitHub](https://github.com/hieudoanm/chess.graphics)  
-6. 📖 [Chess Openings](https://hieudoanm.github.io/chess.openings) - [GitHub](https://github.com/hieudoanm/chess.openings)  
-7. 🎲 [Chess960](https://hieudoanm.github.io/chess960) - [GitHub](https://github.com/hieudoanm/chess960)
+1. ⏲️ [Chess Clock][chess-clock] - [GitHub][chess-clock-gh]  
+2. 🌐 [Chess Insights][chess-insights] - [GitHub][chess-insights-gh]  
+3. 📊 [Chess Elo][chess-elo] - [GitHub][chess-elo-gh]  
+4. 🤖 [Chess Engine][chess-engine] - [GitHub][chess-engine-gh]  
+5. 🎨 [Chess Graphics][chess-graphics] - [GitHub][chess-graphics-gh]  
+6. 📖 [Chess Openings][chess-openings] - [GitHub][chess-openings-gh]  
+7. 🎲 [Chess960][chess960] - [GitHub][chess960-gh]
 
 ---
 
 ### 🛒 Commerce (1)
 
-1. 🛍️ [Shopify](https://hieudoanm.github.io/shopify) - [GitHub](https://github.com/hieudoanm/shopify)
+1. 🛍️ [Shopify][shopify] - [GitHub][shopify-gh]
 
 ---
 
 ### 🎨 Design (4)
 
-1. 🌈 [Colors](https://hieudoanm.github.io/colors) - [GitHub](https://github.com/hieudoanm/colors)  
-2. 📐 [Composition](https://hieudoanm.github.io/composition) - [GitHub](https://github.com/hieudoanm/composition)  
-3. ✨ [Filter](https://hieudoanm.github.io/filter) - [GitHub](https://github.com/hieudoanm/filter)  
-4. 🖼️ [SVG](https://hieudoanm.github.io/svg) - [GitHub](https://github.com/hieudoanm/svg)
+1. 🌈 [Colors][colors] - [GitHub][colors-gh]  
+2. 📐 [Composition][composition] - [GitHub][composition-gh]  
+3. ✨ [Filter][filter] - [GitHub][filter-gh]  
+4. 🖼️ [SVG][svg] - [GitHub][svg-gh]
 
 ---
 
 ### 🛠️ DevTools (12)
 
-1. 🌐 [Browser](https://hieudoanm.github.io/browser) - [GitHub](https://github.com/hieudoanm/browser)
-2. 🐙 [GitHub CLI](https://hieudoanm.github.io/gh.cli) - [GitHub](https://github.com/hieudoanm/gh.cli)
-3. 🐙 [GitHub Extensions](https://hieudoanm.github.io/gh.ext) - [GitHub](https://github.com/hieudoanm/gh.ext)
-4. 📄 [JSON](https://hieudoanm.github.io/json) - [GitHub](https://github.com/hieudoanm/json)
-5. 🧾 [Manifest](https://hieudoanm.github.io/manifest) - [GitHub](https://github.com/hieudoanm/manifest)
-6. 📬 [Postmanify](https://hieudoanm.github.io/postmanify) - [GitHub](https://github.com/hieudoanm/postmanify)
-7. 🔌 [Proxy](https://hieudoanm.github.io/proxy) - [GitHub](https://github.com/hieudoanm/proxy)
-8. 🗄️ [SQLite](https://hieudoanm.github.io/sqlite) - [GitHub](https://github.com/hieudoanm/sqlite)
-9. 🚦 [Status](https://hieudoanm.github.io/status) - [GitHub](https://github.com/hieudoanm/status)
-10. 🧵 [String](https://hieudoanm.github.io/string) - [GitHub](https://github.com/hieudoanm/string)
-11. 🆔 [UUID](https://hieudoanm.github.io/uuid) - [GitHub](https://github.com/hieudoanm/uuid)
-12. 📝 [YAML](https://hieudoanm.github.io/yaml) - [GitHub](https://github.com/hieudoanm/yaml)
+1. 🌐 [Browser][browser] - [GitHub][browser-gh]
+2. 🐙 [GitHub CLI][gh-cli] - [GitHub][gh-cli-gh]
+3. 🐙 [GitHub Extensions][gh-ext] - [GitHub][gh-ext-gh]
+4. 📄 [JSON][json] - [GitHub][json-gh]
+5. 🧾 [Manifest][manifest] - [GitHub][manifest-gh]
+6. 📬 [Postmanify][postmanify] - [GitHub][postmanify-gh]
+7. 🔌 [Proxy][proxy] - [GitHub][proxy-gh]
+8. 🗄️ [SQLite][sqlite] - [GitHub][sqlite-gh]
+9. 🚦 [Status][status] - [GitHub][status-gh]
+10. 🧵 [String][string] - [GitHub][string-gh]
+11. 🆔 [UUID][uuid] - [GitHub][uuid-gh]
+12. 📝 [YAML][yaml] - [GitHub][yaml-gh]
 
 ---
 
 ### 📄 Documents (2)
 
-1. 📄 [Redact](https://hieudoanm.github.io/redact) - [GitHub](https://github.com/hieudoanm/redact)
-2. 📤 [Simple Upload](https://hieudoanm.github.io/simple-upload) - [GitHub](https://github.com/hieudoanm/simple-upload)
+1. 📄 [Redact][redact] - [GitHub][redact-gh]
+2. 📤 [Simple Upload][simple-upload] - [GitHub][simple-upload-gh]
 
 ---
 
 ### 💸 Finance (4)
 
-1. 🏦 [Frankfurter](https://hieudoanm.github.io/frankfurter) - [GitHub](https://github.com/hieudoanm/frankfurter)
-2. 📈 [Inflation](https://hieudoanm.github.io/inflation) - [GitHub](https://github.com/hieudoanm/inflation)
-3. 🧾 [Invoice](https://hieudoanm.github.io/invoice) - [GitHub](https://github.com/hieudoanm/invoice)
-4. 💰 [Tax](https://hieudoanm.github.io/tax) - [GitHub](https://github.com/hieudoanm/tax)
+1. 🏦 [Frankfurter][frankfurter] - [GitHub][frankfurter-gh]
+2. 📈 [Inflation][inflation] - [GitHub][inflation-gh]
+3. 🧾 [Invoice][invoice] - [GitHub][invoice-gh]
+4. 💰 [Tax][tax] - [GitHub][tax-gh]
 
 ---
 
 ### 🎉 Fun (11)
 
-1. 🌀 [Attractors](https://hieudoanm.github.io/attractors) - [GitHub](https://github.com/hieudoanm/attractors)
-2. ⏳ [Countdown](https://hieudoanm.github.io/countdown) - [GitHub](https://github.com/hieudoanm/countdown)
-3. 🌍 [Countries](https://hieudoanm.github.io/countries) - [GitHub](https://github.com/hieudoanm/countries)
-4. ⚫ [Dot](https://hieudoanm.github.io/dot) - [GitHub](https://github.com/hieudoanm/dot)
-5. 🔍 [Emojis](https://hieudoanm.github.io/emojis) - [GitHub](https://github.com/hieudoanm/emojis)
-6. 👀 [Eyes](https://hieudoanm.github.io/eyes) - [GitHub](https://github.com/hieudoanm/eyes)
-7. ⌚ [Garmin](https://hieudoanm.github.io/garmin) - [GitHub](https://github.com/hieudoanm/garmin)
-8. ⚖️ [Legislation](https://hieudoanm.github.io/legislation) - [GitHub](https://github.com/hieudoanm/legislation)
-9. 🔁 [Palindrome](https://hieudoanm.github.io/palindrome) - [GitHub](https://github.com/hieudoanm/palindrome)
-10. 📕 [Pokedex](https://hieudoanm.github.io/pokedex) - [GitHub](https://github.com/hieudoanm/pokedex)
-11. 🔀 [Typoglycemia](https://hieudoanm.github.io/typoglycemia) - [GitHub](https://github.com/hieudoanm/typoglycemia)
+1. 🌀 [Attractors][attractors] - [GitHub][attractors-gh]
+2. ⏳ [Countdown][countdown] - [GitHub][countdown-gh]
+3. 🌍 [Countries][countries] - [GitHub][countries-gh]
+4. ⚫ [Dot][dot] - [GitHub][dot-gh]
+5. 🔍 [Emojis][emojis] - [GitHub][emojis-gh]
+6. 👀 [Eyes][eyes] - [GitHub][eyes-gh]
+7. ⌚ [Garmin][garmin] - [GitHub][garmin-gh]
+8. ⚖️ [Legislation][legislation] - [GitHub][legislation-gh]
+9. 🔁 [Palindrome][palindrome] - [GitHub][palindrome-gh]
+10. 📕 [Pokedex][pokedex] - [GitHub][pokedex-gh]
+11. 🔀 [Typoglycemia][typoglycemia] - [GitHub][typoglycemia-gh]
 
 ---
 
 ### 🎰 Gambling (2)
 
-1. 🃏 [Blackjack](https://hieudoanm.github.io/blackjack) - [GitHub](https://github.com/hieudoanm/blackjack)
-2. 🎴 [Poker](https://hieudoanm.github.io/poker) - [GitHub](https://github.com/hieudoanm/poker)
+1. 🃏 [Blackjack][blackjack] - [GitHub][blackjack-gh]
+2. 🎴 [Poker][poker] - [GitHub][poker-gh]
 
 ---
 
 ### 🎮 Games (5)
 
-1. ❓ [Quiz](https://hieudoanm.github.io/quiz) - [GitHub](https://github.com/hieudoanm/quiz)
-2. 🧠 [Recall](https://hieudoanm.github.io/recall) - [GitHub](https://github.com/hieudoanm/recall)
-3. ⭕ [T3](https://hieudoanm.github.io/t3) - [GitHub](https://github.com/hieudoanm/t3)
-4. 🏰 [Towers](https://hieudoanm.github.io/towers) - [GitHub](https://github.com/hieudoanm/towers)
-5. 🔤 [Wordle](https://hieudoanm.github.io/wordle) - [GitHub](https://github.com/hieudoanm/wordle)
+1. ❓ [Quiz][quiz] - [GitHub][quiz-gh]
+2. 🧠 [Recall][recall] - [GitHub][recall-gh]
+3. ⭕ [T3][t3] - [GitHub][t3-gh]
+4. 🏰 [Towers][towers] - [GitHub][towers-gh]
+5. 🔤 [Wordle][wordle] - [GitHub][wordle-gh]
 
 ---
 
 ### 🌐 Languages (3)
 
-1. 🇬🇧 [English](https://hieudoanm.github.io/english) - [GitHub](https://github.com/hieudoanm/english)
-2. 🃏 [Flashcards](https://hieudoanm.github.io/flashcards) - [GitHub](https://github.com/hieudoanm/flashcards)
-3. 🤟 [Sign](https://hieudoanm.github.io/sign) - [GitHub](https://github.com/hieudoanm/sign)
+1. 🇬🇧 [English][english] - [GitHub][english-gh]
+2. 🃏 [Flashcards][flashcards] - [GitHub][flashcards-gh]
+3. 🤟 [Sign][sign] - [GitHub][sign-gh]
 
 ---
 
 ### 💬 Messaging (1)
 
-1. 💬 [Telegram](https://hieudoanm.github.io/tg) - [GitHub](https://github.com/hieudoanm/tg)
+1. 💬 [Telegram][telegram] - [GitHub][telegram-gh]
 
 ---
 
 ### 🎬 Movies (2)
 
-1. 🎭 [Breaking Bad](https://hieudoanm.github.io/breaking.bad) - [GitHub](https://github.com/hieudoanm/breaking.bad)
-2. 🩺 [House, M.D.](https://hieudoanm.github.io/house.md) - [GitHub](https://github.com/hieudoanm/house.md)
+1. 🎭 [Breaking Bad][breaking-bad] - [GitHub][breaking-bad-gh]
+2. 🩺 [House, M.D.][house-md] - [GitHub][house-md-gh]
 
 ---
 
 ### 🎵 Music (1)
 
-1. 🎤 [Pitch Perfect](https://hieudoanm.github.io/pitch.perfect) - [GitHub](https://github.com/hieudoanm/pitch.perfect)
+1. 🎤 [Pitch Perfect][pitch-perfect] - [GitHub][pitch-perfect-gh]
 
 ---
 
 ### 🔢 Numberphile (2)
 
-1. 🔄 [Kaprekar](https://hieudoanm.github.io/kaprekar) - [GitHub](https://github.com/hieudoanm/kaprekar)
-2. 🥧 [PI](https://hieudoanm.github.io/pi) - [GitHub](https://github.com/hieudoanm/pi)
+1. 🔄 [Kaprekar][kaprekar] - [GitHub][kaprekar-gh]
+2. 🥧 [PI][pi] - [GitHub][pi-gh]
 
 ---
 
 ### 🚀 Productivity (2)
 
-1. 🔖 [DOI](https://hieudoanm.github.io/doi) - [GitHub](https://github.com/hieudoanm/doi)
-2. 🍅 [Pomodoro](https://hieudoanm.github.io/pomodoro) - [GitHub](https://github.com/hieudoanm/pomodoro)
+1. 🔖 [DOI][doi] - [GitHub][doi-gh]
+2. 🍅 [Pomodoro][pomodoro] - [GitHub][pomodoro-gh]
 
 ---
 
 ### 📦 Templates (1)
 
-1. 🚀 [Start](https://hieudoanm.github.io/start) - [GitHub](https://github.com/hieudoanm/start)
+1. 🚀 [Start][start] - [GitHub][start-gh]
 
 ---
 
 ### 🔧 Utilities (10)
 
-1. 🧮 [Calculator](https://hieudoanm.github.io/calculator) - [GitHub](https://github.com/hieudoanm/calculator)
-2. 📋 [Clipboard](https://hieudoanm.github.io/clipboard) - [GitHub](https://github.com/hieudoanm/clipboard)
-3. 📱 [InstaSize](https://hieudoanm.github.io/instasize) - [GitHub](https://github.com/hieudoanm/instasize)
-4. 🌐 [IP](https://hieudoanm.github.io/ip) - [GitHub](https://github.com/hieudoanm/ip)
-5. 🔳 [QRCode](https://hieudoanm.github.io/qrcode) - [GitHub](https://github.com/hieudoanm/qrcode)
-6. 🖥️ [System](https://hieudoanm.github.io/system) - [GitHub](https://github.com/hieudoanm/system)
-7. 🖼️ [Thumbnails](https://hieudoanm.github.io/thumbnails) - [GitHub](https://github.com/hieudoanm/thumbnails)
-8. 📝 [Transcript](https://hieudoanm.github.io/transcript) - [GitHub](https://github.com/hieudoanm/transcript)
-9. 🌤️ [Weather](https://hieudoanm.github.io/weather) - [GitHub](https://github.com/hieudoanm/weather)
-10. 📶 [Wifi](https://hieudoanm.github.io/wifi) - [GitHub](https://github.com/hieudoanm/wifi)
+1. 🧮 [Calculator][calculator] - [GitHub][calculator-gh]
+2. 📋 [Clipboard][clipboard] - [GitHub][clipboard-gh]
+3. 📱 [InstaSize][instasize] - [GitHub][instasize-gh]
+4. 🌐 [IP][ip] - [GitHub][ip-gh]
+5. 🔳 [QRCode][qrcode] - [GitHub][qrcode-gh]
+6. 🖥️ [System][system] - [GitHub][system-gh]
+7. 🖼️ [Thumbnails][thumbnails] - [GitHub][thumbnails-gh]
+8. 📝 [Transcript][transcript] - [GitHub][transcript-gh]
+9. 🌤️ [Weather][weather] - [GitHub][weather-gh]
+10. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
 
 ---
 
 ### 💼 Workspace (6)
 
-1. 📅 [Calendar](https://hieudoanm.github.io/calendar) - [GitHub](https://github.com/hieudoanm/calendar)
-2. 📑 [Docs](https://hieudoanm.github.io/docs) - [GitHub](https://github.com/hieudoanm/docs)
-3. 💡 [Keep](https://hieudoanm.github.io/keep) - [GitHub](https://github.com/hieudoanm/keep)
-4. 📊 [Sheets](https://hieudoanm.github.io/sheets) - [GitHub](https://github.com/hieudoanm/sheets)
-5. 🖥️ [Slides](https://hieudoanm.github.io/slides) - [GitHub](https://github.com/hieudoanm/slides)
-6. ✅ [Tasks](https://hieudoanm.github.io/tasks) - [GitHub](https://github.com/hieudoanm/tasks)
+1. 📅 [Calendar][calendar] - [GitHub][calendar-gh]
+2. 📑 [Docs][docs] - [GitHub][docs-gh]
+3. 💡 [Keep][keep] - [GitHub][keep-gh]
+4. 📊 [Sheets][sheets] - [GitHub][sheets-gh]
+5. 🖥️ [Slides][slides] - [GitHub][slides-gh]
+6. ✅ [Tasks][tasks] - [GitHub][tasks-gh]
 
 ---
 
-<!-- Other -->
+<!-- Links -->
 
 [hieudoanm]: https://hieudoanm.github.io
+
+[lucid]: https://hieudoanm.github.io/lucid
+[lucid-gh]: https://github.com/hieudoanm/lucid
+[promptly]: https://hieudoanm.github.io/promptly
+[promptly-gh]: https://github.com/hieudoanm/promptly
+
+[chess-clock]: https://hieudoanm.github.io/chess.clock
+[chess-clock-gh]: https://github.com/hieudoanm/chess.clock
+[chess-insights]: https://hieudoanm.github.io/chess.insights
+[chess-insights-gh]: https://github.com/hieudoanm/chess.insights
+[chess-elo]: https://hieudoanm.github.io/chess.elo
+[chess-elo-gh]: https://github.com/hieudoanm/chess.elo
+[chess-engine]: https://hieudoanm.github.io/chess.engine
+[chess-engine-gh]: https://github.com/hieudoanm/chess.engine
+[chess-graphics]: https://hieudoanm.github.io/chess.graphics
+[chess-graphics-gh]: https://github.com/hieudoanm/chess.graphics
+[chess-openings]: https://hieudoanm.github.io/chess.openings
+[chess-openings-gh]: https://github.com/hieudoanm/chess.openings
+[chess960]: https://hieudoanm.github.io/chess960
+[chess960-gh]: https://github.com/hieudoanm/chess960
+
+[shopify]: https://hieudoanm.github.io/shopify
+[shopify-gh]: https://github.com/hieudoanm/shopify
+
+[colors]: https://hieudoanm.github.io/colors
+[colors-gh]: https://github.com/hieudoanm/colors
+[composition]: https://hieudoanm.github.io/composition
+[composition-gh]: https://github.com/hieudoanm/composition
+[filter]: https://hieudoanm.github.io/filter
+[filter-gh]: https://github.com/hieudoanm/filter
+[svg]: https://hieudoanm.github.io/svg
+[svg-gh]: https://github.com/hieudoanm/svg
+
+[browser]: https://hieudoanm.github.io/browser
+[browser-gh]: https://github.com/hieudoanm/browser
+[gh-cli]: https://hieudoanm.github.io/gh.cli
+[gh-cli-gh]: https://github.com/hieudoanm/gh.cli
+[gh-ext]: https://hieudoanm.github.io/gh.ext
+[gh-ext-gh]: https://github.com/hieudoanm/gh.ext
+[json]: https://hieudoanm.github.io/json
+[json-gh]: https://github.com/hieudoanm/json
+[manifest]: https://hieudoanm.github.io/manifest
+[manifest-gh]: https://github.com/hieudoanm/manifest
+[postmanify]: https://hieudoanm.github.io/postmanify
+[postmanify-gh]: https://github.com/hieudoanm/postmanify
+[proxy]: https://hieudoanm.github.io/proxy
+[proxy-gh]: https://github.com/hieudoanm/proxy
+[sqlite]: https://hieudoanm.github.io/sqlite
+[sqlite-gh]: https://github.com/hieudoanm/sqlite
+[status]: https://hieudoanm.github.io/status
+[status-gh]: https://github.com/hieudoanm/status
+[string]: https://hieudoanm.github.io/string
+[string-gh]: https://github.com/hieudoanm/string
+[uuid]: https://hieudoanm.github.io/uuid
+[uuid-gh]: https://github.com/hieudoanm/uuid
+[yaml]: https://hieudoanm.github.io/yaml
+[yaml-gh]: https://github.com/hieudoanm/yaml
+
+[redact]: https://hieudoanm.github.io/redact
+[redact-gh]: https://github.com/hieudoanm/redact
+[simple-upload]: https://hieudoanm.github.io/simple-upload
+[simple-upload-gh]: https://github.com/hieudoanm/simple-upload
+
+[frankfurter]: https://hieudoanm.github.io/frankfurter
+[frankfurter-gh]: https://github.com/hieudoanm/frankfurter
+[inflation]: https://hieudoanm.github.io/inflation
+[inflation-gh]: https://github.com/hieudoanm/inflation
+[invoice]: https://hieudoanm.github.io/invoice
+[invoice-gh]: https://github.com/hieudoanm/invoice
+[tax]: https://hieudoanm.github.io/tax
+[tax-gh]: https://github.com/hieudoanm/tax
+
+[attractors]: https://hieudoanm.github.io/attractors
+[attractors-gh]: https://github.com/hieudoanm/attractors
+[countdown]: https://hieudoanm.github.io/countdown
+[countdown-gh]: https://github.com/hieudoanm/countdown
+[countries]: https://hieudoanm.github.io/countries
+[countries-gh]: https://github.com/hieudoanm/countries
+[dot]: https://hieudoanm.github.io/dot
+[dot-gh]: https://github.com/hieudoanm/dot
+[emojis]: https://hieudoanm.github.io/emojis
+[emojis-gh]: https://github.com/hieudoanm/emojis
+[eyes]: https://hieudoanm.github.io/eyes
+[eyes-gh]: https://github.com/hieudoanm/eyes
+[garmin]: https://hieudoanm.github.io/garmin
+[garmin-gh]: https://github.com/hieudoanm/garmin
+[legislation]: https://hieudoanm.github.io/legislation
+[legislation-gh]: https://github.com/hieudoanm/legislation
+[palindrome]: https://hieudoanm.github.io/palindrome
+[palindrome-gh]: https://github.com/hieudoanm/palindrome
+[pokedex]: https://hieudoanm.github.io/pokedex
+[pokedex-gh]: https://github.com/hieudoanm/pokedex
+[typoglycemia]: https://hieudoanm.github.io/typoglycemia
+[typoglycemia-gh]: https://github.com/hieudoanm/typoglycemia
+
+[blackjack]: https://hieudoanm.github.io/blackjack
+[blackjack-gh]: https://github.com/hieudoanm/blackjack
+[poker]: https://hieudoanm.github.io/poker
+[poker-gh]: https://github.com/hieudoanm/poker
+
+[quiz]: https://hieudoanm.github.io/quiz
+[quiz-gh]: https://github.com/hieudoanm/quiz
+[recall]: https://hieudoanm.github.io/recall
+[recall-gh]: https://github.com/hieudoanm/recall
+[t3]: https://hieudoanm.github.io/t3
+[t3-gh]: https://github.com/hieudoanm/t3
+[towers]: https://hieudoanm.github.io/towers
+[towers-gh]: https://github.com/hieudoanm/towers
+[wordle]: https://hieudoanm.github.io/wordle
+[wordle-gh]: https://github.com/hieudoanm/wordle
+
+[english]: https://hieudoanm.github.io/english
+[english-gh]: https://github.com/hieudoanm/english
+[flashcards]: https://hieudoanm.github.io/flashcards
+[flashcards-gh]: https://github.com/hieudoanm/flashcards
+[sign]: https://hieudoanm.github.io/sign
+[sign-gh]: https://github.com/hieudoanm/sign
+
+[telegram]: https://hieudoanm.github.io/tg
+[telegram-gh]: https://github.com/hieudoanm/tg
+
+[breaking-bad]: https://hieudoanm.github.io/breaking.bad
+[breaking-bad-gh]: https://github.com/hieudoanm/breaking.bad
+[house-md]: https://hieudoanm.github.io/house.md
+[house-md-gh]: https://github.com/hieudoanm/house.md
+
+[pitch-perfect]: https://hieudoanm.github.io/pitch.perfect
+[pitch-perfect-gh]: https://github.com/hieudoanm/pitch.perfect
+
+[kaprekar]: https://hieudoanm.github.io/kaprekar
+[kaprekar-gh]: https://github.com/hieudoanm/kaprekar
+[pi]: https://hieudoanm.github.io/pi
+[pi-gh]: https://github.com/hieudoanm/pi
+
+[doi]: https://hieudoanm.github.io/doi
+[doi-gh]: https://github.com/hieudoanm/doi
+[pomodoro]: https://hieudoanm.github.io/pomodoro
+[pomodoro-gh]: https://github.com/hieudoanm/pomodoro
+
+[start]: https://hieudoanm.github.io/start
+[start-gh]: https://github.com/hieudoanm/start
+
+[calculator]: https://hieudoanm.github.io/calculator
+[calculator-gh]: https://github.com/hieudoanm/calculator
+[clipboard]: https://hieudoanm.github.io/clipboard
+[clipboard-gh]: https://github.com/hieudoanm/clipboard
+[instasize]: https://hieudoanm.github.io/instasize
+[instasize-gh]: https://github.com/hieudoanm/instasize
+[ip]: https://hieudoanm.github.io/ip
+[ip-gh]: https://github.com/hieudoanm/ip
+[qrcode]: https://hieudoanm.github.io/qrcode
+[qrcode-gh]: https://github.com/hieudoanm/qrcode
+[system]: https://hieudoanm.github.io/system
+[system-gh]: https://github.com/hieudoanm/system
+[thumbnails]: https://hieudoanm.github.io/thumbnails
+[thumbnails-gh]: https://github.com/hieudoanm/thumbnails
+[transcript]: https://hieudoanm.github.io/transcript
+[transcript-gh]: https://github.com/hieudoanm/transcript
+[weather]: https://hieudoanm.github.io/weather
+[weather-gh]: https://github.com/hieudoanm/weather
+[wifi]: https://hieudoanm.github.io/wifi
+[wifi-gh]: https://github.com/hieudoanm/wifi
+
+[calendar]: https://hieudoanm.github.io/calendar
+[calendar-gh]: https://github.com/hieudoanm/calendar
+[docs]: https://hieudoanm.github.io/docs
+[docs-gh]: https://github.com/hieudoanm/docs
+[keep]: https://hieudoanm.github.io/keep
+[keep-gh]: https://github.com/hieudoanm/keep
+[sheets]: https://hieudoanm.github.io/sheets
+[sheets-gh]: https://github.com/hieudoanm/sheets
+[slides]: https://hieudoanm.github.io/slides
+[slides-gh]: https://github.com/hieudoanm/slides
+[tasks]: https://hieudoanm.github.io/tasks
+[tasks-gh]: https://github.com/hieudoanm/tasks
