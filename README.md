@@ -4,7 +4,7 @@
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
   - [📚 Table of Contents](#-table-of-contents)
-  - [🚀 Current Projects (Total: 78)](#-current-projects-total-78)
+  - [🚀 Current Projects (Total: 79)](#-current-projects-total-79)
     - [🤖 Artificial Intelligence (2)](#-artificial-intelligence-2)
     - [♟️ Chess (7)](#️-chess-7)
     - [🛒 Commerce (1)](#-commerce-1)
@@ -22,28 +22,28 @@
     - [🔢 Numberphile (2)](#-numberphile-2)
     - [🚀 Productivity (2)](#-productivity-2)
     - [📦 Templates (1)](#-templates-1)
-    - [🔧 Utilities (10)](#-utilities-10)
+    - [🔧 Utilities (11)](#-utilities-11)
     - [💼 Workspace (6)](#-workspace-6)
 
 ---
 
-## 🚀 Current Projects (Total: 78)
+## 🚀 Current Projects (Total: 79)
 
 ### 🤖 Artificial Intelligence (2)
 
-1. 🧠 [Lucid][lucid] - [GitHub][lucid-gh]  
+1. 🧠 [Lucid][lucid] - [GitHub][lucid-gh]
 2. ⚡ [Promptly][promptly] - [GitHub][promptly-gh]
 
 ---
 
 ### ♟️ Chess (7)
 
-1. ⏲️ [Chess Clock][chess-clock] - [GitHub][chess-clock-gh]  
-2. 🌐 [Chess Insights][chess-insights] - [GitHub][chess-insights-gh]  
-3. 📊 [Chess Elo][chess-elo] - [GitHub][chess-elo-gh]  
-4. 🤖 [Chess Engine][chess-engine] - [GitHub][chess-engine-gh]  
-5. 🎨 [Chess Graphics][chess-graphics] - [GitHub][chess-graphics-gh]  
-6. 📖 [Chess Openings][chess-openings] - [GitHub][chess-openings-gh]  
+1. ⏲️ [Chess Clock][chess-clock] - [GitHub][chess-clock-gh]
+2. 📊 [Chess Elo][chess-elo] - [GitHub][chess-elo-gh]
+3. 🤖 [Chess Engine][chess-engine] - [GitHub][chess-engine-gh]
+4. 🎨 [Chess Graphics][chess-graphics] - [GitHub][chess-graphics-gh]
+5. 🌐 [Chess Insights][chess-insights] - [GitHub][chess-insights-gh]
+6. 📖 [Chess Openings][chess-openings] - [GitHub][chess-openings-gh]
 7. 🎲 [Chess960][chess960] - [GitHub][chess960-gh]
 
 ---
@@ -56,9 +56,9 @@
 
 ### 🎨 Design (4)
 
-1. 🌈 [Colors][colors] - [GitHub][colors-gh]  
-2. 📐 [Composition][composition] - [GitHub][composition-gh]  
-3. ✨ [Filter][filter] - [GitHub][filter-gh]  
+1. 🌈 [Colors][colors] - [GitHub][colors-gh]
+2. 📐 [Composition][composition] - [GitHub][composition-gh]
+3. ✨ [Filter][filter] - [GitHub][filter-gh]
 4. 🖼️ [SVG][svg] - [GitHub][svg-gh]
 
 ---
@@ -176,18 +176,19 @@
 
 ---
 
-### 🔧 Utilities (10)
+### 🔧 Utilities (11)
 
 1. 🧮 [Calculator][calculator] - [GitHub][calculator-gh]
 2. 📋 [Clipboard][clipboard] - [GitHub][clipboard-gh]
 3. 📱 [InstaSize][instasize] - [GitHub][instasize-gh]
 4. 🌐 [IP][ip] - [GitHub][ip-gh]
 5. 🔳 [QRCode][qrcode] - [GitHub][qrcode-gh]
-6. 🖥️ [System][system] - [GitHub][system-gh]
-7. 🖼️ [Thumbnails][thumbnails] - [GitHub][thumbnails-gh]
-8. 📝 [Transcript][transcript] - [GitHub][transcript-gh]
-9. 🌤️ [Weather][weather] - [GitHub][weather-gh]
-10. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
+6. 📸 [Snapshot][snapshot] - [GitHub][snapshot-gh]
+7. 🖥️ [System][system] - [GitHub][system-gh]
+8. 🖼️ [Thumbnails][thumbnails] - [GitHub][thumbnails-gh]
+9. 📝 [Transcript][transcript] - [GitHub][transcript-gh]
+10. 🌤️ [Weather][weather] - [GitHub][weather-gh]
+11. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
 
 ---
 
@@ -357,6 +358,8 @@
 [ip-gh]: https://github.com/hieudoanm/ip
 [qrcode]: https://hieudoanm.github.io/qrcode
 [qrcode-gh]: https://github.com/hieudoanm/qrcode
+[snapshot]: https://hieudoanm.github.io/snapshot
+[snapshot-gh]: https://github.com/hieudoanm/snapshot
 [system]: https://hieudoanm.github.io/system
 [system-gh]: https://github.com/hieudoanm/system
 [thumbnails]: https://hieudoanm.github.io/thumbnails
