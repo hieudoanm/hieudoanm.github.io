@@ -178,7 +178,7 @@
 
 ### 🔧 Utilities (12)
 
-1. [Bash][bash] - [GitHub][bash-gh]
+1. 🐚 [Bash][bash] - [GitHub][bash-gh]
 2. 🧮 [Calculator][calculator] - [GitHub][calculator-gh]
 3. 📋 [Clipboard][clipboard] - [GitHub][clipboard-gh]
 4. 📱 [InstaSize][instasize] - [GitHub][instasize-gh]
