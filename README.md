@@ -324,8 +324,8 @@
 [sign]: https://hieudoanm.github.io/sign
 [sign-gh]: https://github.com/hieudoanm/sign
 
-[telegram]: https://hieudoanm.github.io/tg
-[telegram-gh]: https://github.com/hieudoanm/tg
+[telegram]: https://hieudoanm.github.io/telegram
+[telegram-gh]: https://github.com/hieudoanm/telegram
 
 [breaking-bad]: https://hieudoanm.github.io/breaking.bad
 [breaking-bad-gh]: https://github.com/hieudoanm/breaking.bad
