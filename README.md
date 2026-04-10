@@ -4,7 +4,7 @@
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
   - [📚 Table of Contents](#-table-of-contents)
-  - [🚀 Current Projects (Total: 79)](#-current-projects-total-79)
+  - [🚀 Current Projects (Total: 80)](#-current-projects-total-80)
     - [🤖 Artificial Intelligence (2)](#-artificial-intelligence-2)
     - [♟️ Chess (7)](#️-chess-7)
     - [🛒 Commerce (1)](#-commerce-1)
@@ -22,12 +22,12 @@
     - [🔢 Numberphile (2)](#-numberphile-2)
     - [🚀 Productivity (2)](#-productivity-2)
     - [📦 Templates (1)](#-templates-1)
-    - [🔧 Utilities (11)](#-utilities-11)
+    - [🔧 Utilities (12)](#-utilities-12)
     - [💼 Workspace (6)](#-workspace-6)
 
 ---
 
-## 🚀 Current Projects (Total: 79)
+## 🚀 Current Projects (Total: 80)
 
 ### 🤖 Artificial Intelligence (2)
 
@@ -176,19 +176,20 @@
 
 ---
 
-### 🔧 Utilities (11)
+### 🔧 Utilities (12)
 
-1. 🧮 [Calculator][calculator] - [GitHub][calculator-gh]
-2. 📋 [Clipboard][clipboard] - [GitHub][clipboard-gh]
-3. 📱 [InstaSize][instasize] - [GitHub][instasize-gh]
-4. 🌐 [IP][ip] - [GitHub][ip-gh]
-5. 🔳 [QRCode][qrcode] - [GitHub][qrcode-gh]
-6. 📸 [Snapshot][snapshot] - [GitHub][snapshot-gh]
-7. 🖥️ [System][system] - [GitHub][system-gh]
-8. 🖼️ [Thumbnails][thumbnails] - [GitHub][thumbnails-gh]
-9. 📝 [Transcript][transcript] - [GitHub][transcript-gh]
-10. 🌤️ [Weather][weather] - [GitHub][weather-gh]
-11. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
+1. [Bash][bash] - [GitHub][bash-gh]
+2. 🧮 [Calculator][calculator] - [GitHub][calculator-gh]
+3. 📋 [Clipboard][clipboard] - [GitHub][clipboard-gh]
+4. 📱 [InstaSize][instasize] - [GitHub][instasize-gh]
+5. 🌐 [IP][ip] - [GitHub][ip-gh]
+6. 🔳 [QRCode][qrcode] - [GitHub][qrcode-gh]
+7. 📸 [Snapshot][snapshot] - [GitHub][snapshot-gh]
+8. 🖥️ [System][system] - [GitHub][system-gh]
+9. 🖼️ [Thumbnails][thumbnails] - [GitHub][thumbnails-gh]
+10. 📝 [Transcript][transcript] - [GitHub][transcript-gh]
+11. 🌤️ [Weather][weather] - [GitHub][weather-gh]
+12. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
 
 ---
 
@@ -348,6 +349,8 @@
 [start]: https://hieudoanm.github.io/start
 [start-gh]: https://github.com/hieudoanm/start
 
+[bash]: https://hieudoanm.github.io/bash
+[bash-gh]: https://github.com/hieudoanm/bash
 [calculator]: https://hieudoanm.github.io/calculator
 [calculator-gh]: https://github.com/hieudoanm/calculator
 [clipboard]: https://hieudoanm.github.io/clipboard
