@@ -50,7 +50,7 @@
 
 ### 🛒 Commerce (1)
 
-1. 🛍️ [Shopify][shopify] - [GitHub][shopify-gh]
+1. 🛍️ [Shopify Detect][shopify-detect] - [GitHub][shopify-detect-gh]
 
 ---
 
@@ -228,8 +228,8 @@
 [chess960]: https://hieudoanm.github.io/chess960
 [chess960-gh]: https://github.com/hieudoanm/chess960
 
-[shopify]: https://hieudoanm.github.io/shopify
-[shopify-gh]: https://github.com/hieudoanm/shopify
+[shopify-detect]: https://hieudoanm.github.io/shopify.detect
+[shopify-detect-gh]: https://github.com/hieudoanm/shopify.detect
 
 [colors]: https://hieudoanm.github.io/colors
 [colors-gh]: https://github.com/hieudoanm/colors
