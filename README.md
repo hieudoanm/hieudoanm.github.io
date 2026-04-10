@@ -4,12 +4,12 @@
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
   - [📚 Table of Contents](#-table-of-contents)
-  - [🚀 Current Projects (Total: 80)](#-current-projects-total-80)
+  - [🚀 Current Projects (Total: 81)](#-current-projects-total-81)
     - [🤖 Artificial Intelligence (2)](#-artificial-intelligence-2)
     - [♟️ Chess (7)](#️-chess-7)
     - [🛒 Commerce (1)](#-commerce-1)
     - [🎨 Design (4)](#-design-4)
-    - [🛠️ DevTools (12)](#️-devtools-12)
+    - [🛠️ DevTools (13)](#️-devtools-13)
     - [📄 Documents (2)](#-documents-2)
     - [💸 Finance (4)](#-finance-4)
     - [🎉 Fun (11)](#-fun-11)
@@ -27,7 +27,7 @@
 
 ---
 
-## 🚀 Current Projects (Total: 80)
+## 🚀 Current Projects (Total: 81)
 
 ### 🤖 Artificial Intelligence (2)
 
@@ -63,20 +63,21 @@
 
 ---
 
-### 🛠️ DevTools (12)
+### 🛠️ DevTools (13)
 
 1. 🌐 [Browser][browser] - [GitHub][browser-gh]
-2. 🐙 [GitHub CLI][gh-cli] - [GitHub][gh-cli-gh]
-3. 🐙 [GitHub Extensions][gh-ext] - [GitHub][gh-ext-gh]
-4. 📄 [JSON][json] - [GitHub][json-gh]
-5. 🧾 [Manifest][manifest] - [GitHub][manifest-gh]
-6. 📬 [Postmanify][postmanify] - [GitHub][postmanify-gh]
-7. 🔌 [Proxy][proxy] - [GitHub][proxy-gh]
-8. 🗄️ [SQLite][sqlite] - [GitHub][sqlite-gh]
-9. 🚦 [Status][status] - [GitHub][status-gh]
-10. 🧵 [String][string] - [GitHub][string-gh]
-11. 🆔 [UUID][uuid] - [GitHub][uuid-gh]
-12. 📝 [YAML][yaml] - [GitHub][yaml-gh]
+2. 🐍 [Cobra MD][cobra-md] - [GitHub][cobra-md-gh]
+3. 🐙 [GitHub CLI][gh-cli] - [GitHub][gh-cli-gh]
+4. 🐙 [GitHub Extensions][gh-ext] - [GitHub][gh-ext-gh]
+5. 📄 [JSON][json] - [GitHub][json-gh]
+6. 🧾 [Manifest][manifest] - [GitHub][manifest-gh]
+7. 📬 [Postmanify][postmanify] - [GitHub][postmanify-gh]
+8. 🔌 [Proxy][proxy] - [GitHub][proxy-gh]
+9. 🗄️ [SQLite][sqlite] - [GitHub][sqlite-gh]
+10. 🚦 [Status][status] - [GitHub][status-gh]
+11. 🧵 [String][string] - [GitHub][string-gh]
+12. 🆔 [UUID][uuid] - [GitHub][uuid-gh]
+13. 📝 [YAML][yaml] - [GitHub][yaml-gh]
 
 ---
 
@@ -242,6 +243,8 @@
 
 [browser]: https://hieudoanm.github.io/browser
 [browser-gh]: https://github.com/hieudoanm/browser
+[cobra-md]: https://hieudoanm.github.io/cobra.md
+[cobra-md-gh]: https://github.com/hieudoanm/cobra.md
 [gh-cli]: https://hieudoanm.github.io/gh.cli
 [gh-cli-gh]: https://github.com/hieudoanm/gh.cli
 [gh-ext]: https://hieudoanm.github.io/gh.ext
