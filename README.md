@@ -4,7 +4,7 @@
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
   - [📚 Table of Contents](#-table-of-contents)
-  - [🚀 Current Projects (Total: 81)](#-current-projects-total-81)
+  - [🚀 Current Projects (Total: 82)](#-current-projects-total-82)
     - [🤖 Artificial Intelligence (2)](#-artificial-intelligence-2)
     - [♟️ Chess (7)](#️-chess-7)
     - [🛒 Commerce (1)](#-commerce-1)
@@ -12,7 +12,7 @@
     - [🛠️ DevTools (13)](#️-devtools-13)
     - [📄 Documents (2)](#-documents-2)
     - [💸 Finance (4)](#-finance-4)
-    - [🎉 Fun (11)](#-fun-11)
+    - [🎉 Fun (12)](#-fun-12)
     - [🎰 Gambling (2)](#-gambling-2)
     - [🎮 Games (5)](#-games-5)
     - [🌐 Languages (3)](#-languages-3)
@@ -27,7 +27,7 @@
 
 ---
 
-## 🚀 Current Projects (Total: 81)
+## 🚀 Current Projects (Total: 82)
 
 ### 🤖 Artificial Intelligence (2)
 
@@ -97,19 +97,20 @@
 
 ---
 
-### 🎉 Fun (11)
+### 🎉 Fun (12)
 
 1. 🌀 [Attractors][attractors] - [GitHub][attractors-gh]
-2. ⏳ [Countdown][countdown] - [GitHub][countdown-gh]
-3. 🌍 [Countries][countries] - [GitHub][countries-gh]
-4. ⚫ [Dot][dot] - [GitHub][dot-gh]
-5. 🔍 [Emojis][emojis] - [GitHub][emojis-gh]
-6. 👀 [Eyes][eyes] - [GitHub][eyes-gh]
-7. ⌚ [Garmin][garmin] - [GitHub][garmin-gh]
-8. ⚖️ [Legislation][legislation] - [GitHub][legislation-gh]
-9. 🔁 [Palindrome][palindrome] - [GitHub][palindrome-gh]
-10. 📕 [Pokedex][pokedex] - [GitHub][pokedex-gh]
-11. 🔀 [Typoglycemia][typoglycemia] - [GitHub][typoglycemia-gh]
+2. 🚹 [Braille][braille] - [GitHub][braille-gh]
+3. ⏳ [Countdown][countdown] - [GitHub][countdown-gh]
+4. 🌍 [Countries][countries] - [GitHub][countries-gh]
+5. ⚫ [Dot][dot] - [GitHub][dot-gh]
+6. 🔍 [Emojis][emojis] - [GitHub][emojis-gh]
+7. 👀 [Eyes][eyes] - [GitHub][eyes-gh]
+8. ⌚ [Garmin][garmin] - [GitHub][garmin-gh]
+9. ⚖️ [Legislation][legislation] - [GitHub][legislation-gh]
+10. 🔁 [Palindrome][palindrome] - [GitHub][palindrome-gh]
+11. 📕 [Pokedex][pokedex] - [GitHub][pokedex-gh]
+12. 🔀 [Typoglycemia][typoglycemia] - [GitHub][typoglycemia-gh]
 
 ---
 
@@ -284,6 +285,8 @@
 
 [attractors]: https://hieudoanm.github.io/attractors
 [attractors-gh]: https://github.com/hieudoanm/attractors
+[braille]: https://hieudoanm.github.io/braille
+[braille-gh]: https://github.com/hieudoanm/braille
 [countdown]: https://hieudoanm.github.io/countdown
 [countdown-gh]: https://github.com/hieudoanm/countdown
 [countries]: https://hieudoanm.github.io/countries
