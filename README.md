@@ -1,4 +1,4 @@
-# 👨‍💻 I'm [HIEU DOAN][hieudoanm]
+# 👨‍💻 I'm [HIEU DOAN][hieudoanm-gh-page]
 
 ## 📚 Table of Contents
 
@@ -210,7 +210,7 @@
 
 <!-- Links -->
 
-[hieudoanm]: https://hieudoanm.github.io
+[hieudoanm-gh-page]: https://hieudoanm.github.io
 
 [distilled]: https://hieudoanm.github.io/distilled
 [distilled-gh]: https://github.com/hieudoanm/distilled
