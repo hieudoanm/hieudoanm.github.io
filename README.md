@@ -4,15 +4,15 @@
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
   - [📚 Table of Contents](#-table-of-contents)
-  - [🚀 Current Projects (Total: 82)](#-current-projects-total-82)
-    - [🤖 Artificial Intelligence (2)](#-artificial-intelligence-2)
+  - [🚀 Current Projects (Total: 84)](#-current-projects-total-84)
+    - [🤖 Artificial Intelligence (3)](#-artificial-intelligence-3)
     - [♟️ Chess (7)](#️-chess-7)
     - [🛒 Commerce (1)](#-commerce-1)
     - [🎨 Design (4)](#-design-4)
     - [🛠️ DevTools (13)](#️-devtools-13)
     - [📄 Documents (2)](#-documents-2)
     - [💸 Finance (4)](#-finance-4)
-    - [🎉 Fun (12)](#-fun-12)
+    - [🎉 Fun (13)](#-fun-13)
     - [🎰 Gambling (2)](#-gambling-2)
     - [🎮 Games (5)](#-games-5)
     - [🌐 Languages (3)](#-languages-3)
@@ -27,12 +27,13 @@
 
 ---
 
-## 🚀 Current Projects (Total: 82)
+## 🚀 Current Projects (Total: 84)
 
-### 🤖 Artificial Intelligence (2)
+### 🤖 Artificial Intelligence (3)
 
-1. 🧠 [Lucid][lucid] - [GitHub][lucid-gh]
-2. ⚡ [Promptly][promptly] - [GitHub][promptly-gh]
+1. 🧠 [Distilled][distilled] - [GitHub][distilled-gh]
+2. 👨‍💻 [Hieu Doan][hieudoanm] - [GitHub][hieudoanm-gh]
+3. ⚡ [Promptly][promptly] - [GitHub][promptly-gh]
 
 ---
 
@@ -97,7 +98,7 @@
 
 ---
 
-### 🎉 Fun (12)
+### 🎉 Fun (13)
 
 1. 🌀 [Attractors][attractors] - [GitHub][attractors-gh]
 2. 🚹 [Braille][braille] - [GitHub][braille-gh]
@@ -108,9 +109,10 @@
 7. 👀 [Eyes][eyes] - [GitHub][eyes-gh]
 8. ⌚ [Garmin][garmin] - [GitHub][garmin-gh]
 9. ⚖️ [Legislation][legislation] - [GitHub][legislation-gh]
-10. 🔁 [Palindrome][palindrome] - [GitHub][palindrome-gh]
-11. 📕 [Pokedex][pokedex] - [GitHub][pokedex-gh]
-12. 🔀 [Typoglycemia][typoglycemia] - [GitHub][typoglycemia-gh]
+10. 🔤 [Morse][morse] - [GitHub][morse-gh]
+11. 🔁 [Palindrome][palindrome] - [GitHub][palindrome-gh]
+12. 📕 [Pokedex][pokedex] - [GitHub][pokedex-gh]
+13. 🔀 [Typoglycemia][typoglycemia] - [GitHub][typoglycemia-gh]
 
 ---
 
@@ -210,8 +212,10 @@
 
 [hieudoanm]: https://hieudoanm.github.io
 
-[lucid]: https://hieudoanm.github.io/lucid
-[lucid-gh]: https://github.com/hieudoanm/lucid
+[distilled]: https://hieudoanm.github.io/distilled
+[distilled-gh]: https://github.com/hieudoanm/distilled
+[hieudoanm]: https://hieudoanm.github.io/hieudoanm
+[hieudoanm-gh]: https://github.com/hieudoanm/hieudoanm
 [promptly]: https://hieudoanm.github.io/promptly
 [promptly-gh]: https://github.com/hieudoanm/promptly
 
@@ -301,6 +305,8 @@
 [garmin-gh]: https://github.com/hieudoanm/garmin
 [legislation]: https://hieudoanm.github.io/legislation
 [legislation-gh]: https://github.com/hieudoanm/legislation
+[morse]: https://hieudoanm.github.io/morse
+[morse-gh]: https://github.com/hieudoanm/morse
 [palindrome]: https://hieudoanm.github.io/palindrome
 [palindrome-gh]: https://github.com/hieudoanm/palindrome
 [pokedex]: https://hieudoanm.github.io/pokedex
