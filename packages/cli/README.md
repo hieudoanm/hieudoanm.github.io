@@ -1,8 +1,8 @@
-# 🚀 hieudoanm CLI
+# 🚀 Lucid CLI
 
 ## 📚 Table of Contents
 
-- [🚀 hieudoanm CLI](#-hieudoanm-cli)
+- [🚀 Lucid CLI](#-lucid-cli)
   - [📚 Table of Contents](#-table-of-contents)
   - [📦 Installation](#-installation)
   - [🚀 Usage](#-usage)
@@ -11,13 +11,16 @@
 ## 📦 Installation
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/hieudoanm/hieudoanm/master/packages/cli/scripts/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/hieudoanm/lucid/master/packages/cli/scripts/install.sh | bash
 ```
 
 ## 🚀 Usage
 
 ```bash
-hdm
+lucid setup
+lucid models
+lucid dreaming
+lucid version
 ```
 
 ## 📄 License
