@@ -6,7 +6,7 @@
   - [📚 Table of Contents](#-table-of-contents)
   - [🚀 Current Projects (Total: 84)](#-current-projects-total-84)
     - [🤖 Artificial Intelligence (3)](#-artificial-intelligence-3)
-    - [♟️ Chess (7)](#️-chess-7)
+    - [♟️ Chess (5)](#️-chess-5)
     - [🛒 Commerce (1)](#-commerce-1)
     - [🎨 Design (4)](#-design-4)
     - [🛠️ DevTools (13)](#️-devtools-13)
@@ -37,15 +37,13 @@
 
 ---
 
-### ♟️ Chess (7)
+### ♟️ Chess (5)
 
 1. ⏲️ [Chess Clock][chess-clock] - [GitHub][chess-clock-gh]
-2. 📊 [Chess Elo][chess-elo] - [GitHub][chess-elo-gh]
-3. 🤖 [Chess Engine][chess-engine] - [GitHub][chess-engine-gh]
-4. 🎨 [Chess Graphics][chess-graphics] - [GitHub][chess-graphics-gh]
-5. 🌐 [Chess Insights][chess-insights] - [GitHub][chess-insights-gh]
-6. 📖 [Chess Openings][chess-openings] - [GitHub][chess-openings-gh]
-7. 🎲 [Chess960][chess960] - [GitHub][chess960-gh]
+2. 🤖 [Chess Engine][chess-engine] - [GitHub][chess-engine-gh]
+3. 🎨 [Chess Graphics][chess-graphics] - [GitHub][chess-graphics-gh]
+4. 🌐 [Chess Insights][chess-insights] - [GitHub][chess-insights-gh]
+5. 📖 [Chess Openings][chess-openings] - [GitHub][chess-openings-gh]
 
 ---
 
