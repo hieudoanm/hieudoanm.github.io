@@ -4,7 +4,7 @@
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
   - [📚 Table of Contents](#-table-of-contents)
-  - [🚀 Current Projects (Total: 84)](#-current-projects-total-84)
+  - [🚀 Current Projects (Total: 82)](#-current-projects-total-82)
     - [🤖 Artificial Intelligence (3)](#-artificial-intelligence-3)
     - [♟️ Chess (5)](#️-chess-5)
     - [🛒 Commerce (1)](#-commerce-1)
@@ -27,7 +27,7 @@
 
 ---
 
-## 🚀 Current Projects (Total: 84)
+## 🚀 Current Projects (Total: 82)
 
 ### 🤖 Artificial Intelligence (3)
 
