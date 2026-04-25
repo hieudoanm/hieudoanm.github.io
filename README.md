@@ -4,7 +4,7 @@
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
   - [📚 Table of Contents](#-table-of-contents)
-  - [🚀 Current Projects (Total: 76)](#-current-projects-total-76)
+  - [🚀 Current Projects (Total: 75)](#-current-projects-total-75)
     - [🤖 Artificial Intelligence (3)](#-artificial-intelligence-3)
     - [♟️ Chess (2)](#️-chess-2)
     - [🛒 Commerce (1)](#-commerce-1)
@@ -18,7 +18,7 @@
     - [💬 Messaging (1)](#-messaging-1)
     - [🎬 Movies (2)](#-movies-2)
     - [🎵 Music (1)](#-music-1)
-    - [🔢 Numberphile (2)](#-numberphile-2)
+    - [🔢 Numberphile (1)](#-numberphile-1)
     - [🚀 Productivity (2)](#-productivity-2)
     - [📦 Templates (1)](#-templates-1)
     - [🔧 Utilities (11)](#-utilities-11)
@@ -26,7 +26,7 @@
 
 ---
 
-## 🚀 Current Projects (Total: 76)
+## 🚀 Current Projects (Total: 75)
 
 ### 🤖 Artificial Intelligence (3)
 
@@ -112,8 +112,8 @@
 ### 🎮 Games (6)
 
 1. 🃏 [Cards][cards] - [GitHub][cards-gh]
-2. ❓ [Quiz][quiz] - [GitHub][quiz-gh]
-3. 🧠 [Recall][recall] - [GitHub][recall-gh]
+2. 🧠 [Memory][memory] - [GitHub][memory-gh]
+3. ❓ [Quiz][quiz] - [GitHub][quiz-gh]
 4. ⭕ [T3][t3] - [GitHub][t3-gh]
 5. 🏰 [Towers][towers] - [GitHub][towers-gh]
 6. 🔤 [Wordle][wordle] - [GitHub][wordle-gh]
@@ -147,10 +147,9 @@
 
 ---
 
-### 🔢 Numberphile (2)
+### 🔢 Numberphile (1)
 
 1. 🔄 [Kaprekar][kaprekar] - [GitHub][kaprekar-gh]
-2. 🥧 [PI][pi] - [GitHub][pi-gh]
 
 ---
 
@@ -294,8 +293,8 @@
 [cards-gh]: https://github.com/hieudoanm/cards
 [quiz]: https://hieudoanm.github.io/quiz
 [quiz-gh]: https://github.com/hieudoanm/quiz
-[recall]: https://hieudoanm.github.io/recall
-[recall-gh]: https://github.com/hieudoanm/recall
+[memory]: https://hieudoanm.github.io/memory
+[memory-gh]: https://github.com/hieudoanm/memory
 [t3]: https://hieudoanm.github.io/t3
 [t3-gh]: https://github.com/hieudoanm/t3
 [towers]: https://hieudoanm.github.io/towers
@@ -323,8 +322,6 @@
 
 [kaprekar]: https://hieudoanm.github.io/kaprekar
 [kaprekar-gh]: https://github.com/hieudoanm/kaprekar
-[pi]: https://hieudoanm.github.io/pi
-[pi-gh]: https://github.com/hieudoanm/pi
 
 [doi]: https://hieudoanm.github.io/doi
 [doi-gh]: https://github.com/hieudoanm/doi
