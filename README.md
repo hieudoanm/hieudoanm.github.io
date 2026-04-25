@@ -4,7 +4,7 @@
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
   - [📚 Table of Contents](#-table-of-contents)
-  - [🚀 Current Projects (Total: 75)](#-current-projects-total-75)
+  - [🚀 Current Projects (Total: 74)](#-current-projects-total-74)
     - [🤖 Artificial Intelligence (3)](#-artificial-intelligence-3)
     - [♟️ Chess (2)](#️-chess-2)
     - [🛒 Commerce (1)](#-commerce-1)
@@ -17,7 +17,6 @@
     - [🌐 Languages (3)](#-languages-3)
     - [💬 Messaging (1)](#-messaging-1)
     - [🎬 Movies (2)](#-movies-2)
-    - [🎵 Music (1)](#-music-1)
     - [🔢 Numberphile (1)](#-numberphile-1)
     - [🚀 Productivity (2)](#-productivity-2)
     - [📦 Templates (1)](#-templates-1)
@@ -26,7 +25,7 @@
 
 ---
 
-## 🚀 Current Projects (Total: 75)
+## 🚀 Current Projects (Total: 74)
 
 ### 🤖 Artificial Intelligence (3)
 
@@ -138,12 +137,6 @@
 
 1. 🎭 [Breaking Bad][breaking-bad] - [GitHub][breaking-bad-gh]
 2. 🩺 [House, M.D.][house-md] - [GitHub][house-md-gh]
-
----
-
-### 🎵 Music (1)
-
-1. 🎤 [Pitch Perfect][pitch-perfect] - [GitHub][pitch-perfect-gh]
 
 ---
 
