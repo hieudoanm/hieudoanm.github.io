@@ -4,9 +4,9 @@
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
   - [📚 Table of Contents](#-table-of-contents)
-  - [🚀 Current Projects (Total: 80)](#-current-projects-total-80)
+  - [🚀 Current Projects (Total: 79)](#-current-projects-total-79)
     - [🤖 Artificial Intelligence (3)](#-artificial-intelligence-3)
-    - [♟️ Chess (3)](#️-chess-3)
+    - [♟️ Chess (2)](#️-chess-2)
     - [🛒 Commerce (1)](#-commerce-1)
     - [🎨 Design (4)](#-design-4)
     - [🛠️ DevTools (13)](#️-devtools-13)
@@ -27,7 +27,7 @@
 
 ---
 
-## 🚀 Current Projects (Total: 80)
+## 🚀 Current Projects (Total: 79)
 
 ### 🤖 Artificial Intelligence (3)
 
@@ -37,11 +37,10 @@
 
 ---
 
-### ♟️ Chess (3)
+### ♟️ Chess (2)
 
 1. ⏲️ [Chess Clock][chess-clock] - [GitHub][chess-clock-gh]
-2. 🤖 [Chess Engine][chess-engine] - [GitHub][chess-engine-gh]
-3. 🌐 [Chess Insights][chess-insights] - [GitHub][chess-insights-gh]
+2. 🌐 [Chess Insights][chess-insights] - [GitHub][chess-insights-gh]
 
 ---
 
@@ -219,10 +218,6 @@
 [chess-clock-gh]: https://github.com/hieudoanm/chess.clock
 [chess-insights]: https://hieudoanm.github.io/chess.insights
 [chess-insights-gh]: https://github.com/hieudoanm/chess.insights
-[chess-engine]: https://hieudoanm.github.io/chess.engine
-[chess-engine-gh]: https://github.com/hieudoanm/chess.engine
-[chess-openings]: https://hieudoanm.github.io/chess.openings
-[chess-openings-gh]: https://github.com/hieudoanm/chess.openings
 
 [shopify-detect]: https://hieudoanm.github.io/shopify.detect
 [shopify-detect-gh]: https://github.com/hieudoanm/shopify.detect
