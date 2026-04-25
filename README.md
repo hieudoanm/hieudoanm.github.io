@@ -4,9 +4,9 @@
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
   - [📚 Table of Contents](#-table-of-contents)
-  - [🚀 Current Projects (Total: 81)](#-current-projects-total-81)
+  - [🚀 Current Projects (Total: 80)](#-current-projects-total-80)
     - [🤖 Artificial Intelligence (3)](#-artificial-intelligence-3)
-    - [♟️ Chess (4)](#️-chess-4)
+    - [♟️ Chess (3)](#️-chess-3)
     - [🛒 Commerce (1)](#-commerce-1)
     - [🎨 Design (4)](#-design-4)
     - [🛠️ DevTools (13)](#️-devtools-13)
@@ -27,7 +27,7 @@
 
 ---
 
-## 🚀 Current Projects (Total: 81)
+## 🚀 Current Projects (Total: 80)
 
 ### 🤖 Artificial Intelligence (3)
 
@@ -37,12 +37,11 @@
 
 ---
 
-### ♟️ Chess (4)
+### ♟️ Chess (3)
 
 1. ⏲️ [Chess Clock][chess-clock] - [GitHub][chess-clock-gh]
 2. 🤖 [Chess Engine][chess-engine] - [GitHub][chess-engine-gh]
 3. 🌐 [Chess Insights][chess-insights] - [GitHub][chess-insights-gh]
-4. 📖 [Chess Openings][chess-openings] - [GitHub][chess-openings-gh]
 
 ---
 
