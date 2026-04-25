@@ -4,7 +4,7 @@
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
   - [📚 Table of Contents](#-table-of-contents)
-  - [🚀 Current Projects (Total: 79)](#-current-projects-total-79)
+  - [🚀 Current Projects (Total: 78)](#-current-projects-total-78)
     - [🤖 Artificial Intelligence (3)](#-artificial-intelligence-3)
     - [♟️ Chess (2)](#️-chess-2)
     - [🛒 Commerce (1)](#-commerce-1)
@@ -13,8 +13,7 @@
     - [📄 Documents (2)](#-documents-2)
     - [💸 Finance (4)](#-finance-4)
     - [🎉 Fun (13)](#-fun-13)
-    - [🎰 Gambling (2)](#-gambling-2)
-    - [🎮 Games (5)](#-games-5)
+    - [🎮 Games (6)](#-games-6)
     - [🌐 Languages (3)](#-languages-3)
     - [💬 Messaging (1)](#-messaging-1)
     - [🎬 Movies (2)](#-movies-2)
@@ -27,7 +26,7 @@
 
 ---
 
-## 🚀 Current Projects (Total: 79)
+## 🚀 Current Projects (Total: 78)
 
 ### 🤖 Artificial Intelligence (3)
 
@@ -111,20 +110,14 @@
 
 ---
 
-### 🎰 Gambling (2)
+### 🎮 Games (6)
 
-1. 🃏 [Blackjack][blackjack] - [GitHub][blackjack-gh]
-2. 🎴 [Poker][poker] - [GitHub][poker-gh]
-
----
-
-### 🎮 Games (5)
-
-1. ❓ [Quiz][quiz] - [GitHub][quiz-gh]
-2. 🧠 [Recall][recall] - [GitHub][recall-gh]
-3. ⭕ [T3][t3] - [GitHub][t3-gh]
-4. 🏰 [Towers][towers] - [GitHub][towers-gh]
-5. 🔤 [Wordle][wordle] - [GitHub][wordle-gh]
+1. 🃏 [Cards][cards] - [GitHub][cards-gh]
+2. ❓ [Quiz][quiz] - [GitHub][quiz-gh]
+3. 🧠 [Recall][recall] - [GitHub][recall-gh]
+4. ⭕ [T3][t3] - [GitHub][t3-gh]
+5. 🏰 [Towers][towers] - [GitHub][towers-gh]
+6. 🔤 [Wordle][wordle] - [GitHub][wordle-gh]
 
 ---
 
@@ -299,11 +292,8 @@
 [typoglycemia]: https://hieudoanm.github.io/typoglycemia
 [typoglycemia-gh]: https://github.com/hieudoanm/typoglycemia
 
-[blackjack]: https://hieudoanm.github.io/blackjack
-[blackjack-gh]: https://github.com/hieudoanm/blackjack
-[poker]: https://hieudoanm.github.io/poker
-[poker-gh]: https://github.com/hieudoanm/poker
-
+[cards]: https://hieudoanm.github.io/cards
+[cards-gh]: https://github.com/hieudoanm/cards
 [quiz]: https://hieudoanm.github.io/quiz
 [quiz-gh]: https://github.com/hieudoanm/quiz
 [recall]: https://hieudoanm.github.io/recall
