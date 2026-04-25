@@ -4,12 +4,12 @@
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
   - [📚 Table of Contents](#-table-of-contents)
-  - [🚀 Current Projects (Total: 78)](#-current-projects-total-78)
+  - [🚀 Current Projects (Total: 77)](#-current-projects-total-77)
     - [🤖 Artificial Intelligence (3)](#-artificial-intelligence-3)
     - [♟️ Chess (2)](#️-chess-2)
     - [🛒 Commerce (1)](#-commerce-1)
     - [🎨 Design (4)](#-design-4)
-    - [🛠️ DevTools (13)](#️-devtools-13)
+    - [🛠️ DevTools (12)](#️-devtools-12)
     - [📄 Documents (2)](#-documents-2)
     - [💸 Finance (4)](#-finance-4)
     - [🎉 Fun (13)](#-fun-13)
@@ -26,7 +26,7 @@
 
 ---
 
-## 🚀 Current Projects (Total: 78)
+## 🚀 Current Projects (Total: 77)
 
 ### 🤖 Artificial Intelligence (3)
 
@@ -58,7 +58,7 @@
 
 ---
 
-### 🛠️ DevTools (13)
+### 🛠️ DevTools (12)
 
 1. 🌐 [Browser][browser] - [GitHub][browser-gh]
 2. 🐍 [Cobra MD][cobra-md] - [GitHub][cobra-md-gh]
@@ -68,11 +68,10 @@
 6. 🧾 [Manifest][manifest] - [GitHub][manifest-gh]
 7. 📬 [Postmanify][postmanify] - [GitHub][postmanify-gh]
 8. 🔌 [Proxy][proxy] - [GitHub][proxy-gh]
-9. 🗄️ [SQLite][sqlite] - [GitHub][sqlite-gh]
-10. 🚦 [Status][status] - [GitHub][status-gh]
-11. 🧵 [String][string] - [GitHub][string-gh]
-12. 🆔 [UUID][uuid] - [GitHub][uuid-gh]
-13. 📝 [YAML][yaml] - [GitHub][yaml-gh]
+9. 🚦 [Status][status] - [GitHub][status-gh]
+10. 🧵 [String][string] - [GitHub][string-gh]
+11. 🆔 [UUID][uuid] - [GitHub][uuid-gh]
+12. 📝 [YAML][yaml] - [GitHub][yaml-gh]
 
 ---
 
