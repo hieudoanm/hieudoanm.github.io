@@ -4,7 +4,7 @@
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
   - [📚 Table of Contents](#-table-of-contents)
-  - [🚀 Current Projects (Total: 77)](#-current-projects-total-77)
+  - [🚀 Current Projects (Total: 76)](#-current-projects-total-76)
     - [🤖 Artificial Intelligence (3)](#-artificial-intelligence-3)
     - [♟️ Chess (2)](#️-chess-2)
     - [🛒 Commerce (1)](#-commerce-1)
@@ -21,12 +21,12 @@
     - [🔢 Numberphile (2)](#-numberphile-2)
     - [🚀 Productivity (2)](#-productivity-2)
     - [📦 Templates (1)](#-templates-1)
-    - [🔧 Utilities (12)](#-utilities-12)
+    - [🔧 Utilities (11)](#-utilities-11)
     - [💼 Workspace (6)](#-workspace-6)
 
 ---
 
-## 🚀 Current Projects (Total: 77)
+## 🚀 Current Projects (Total: 76)
 
 ### 🤖 Artificial Intelligence (3)
 
@@ -167,7 +167,7 @@
 
 ---
 
-### 🔧 Utilities (12)
+### 🔧 Utilities (11)
 
 1. 🐚 [Bash][bash] - [GitHub][bash-gh]
 2. 🧮 [Calculator][calculator] - [GitHub][calculator-gh]
@@ -177,10 +177,9 @@
 6. 🔳 [QRCode][qrcode] - [GitHub][qrcode-gh]
 7. 📸 [Snapshot][snapshot] - [GitHub][snapshot-gh]
 8. 🖥️ [System][system] - [GitHub][system-gh]
-9. 🖼️ [Thumbnails][thumbnails] - [GitHub][thumbnails-gh]
-10. 📝 [Transcript][transcript] - [GitHub][transcript-gh]
-11. 🌤️ [Weather][weather] - [GitHub][weather-gh]
-12. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
+9. 📝 [Transcript][transcript] - [GitHub][transcript-gh]
+10. 🌤️ [Weather][weather] - [GitHub][weather-gh]
+11. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
 
 ---
 
@@ -351,8 +350,6 @@
 [snapshot-gh]: https://github.com/hieudoanm/snapshot
 [system]: https://hieudoanm.github.io/system
 [system-gh]: https://github.com/hieudoanm/system
-[thumbnails]: https://hieudoanm.github.io/thumbnails
-[thumbnails-gh]: https://github.com/hieudoanm/thumbnails
 [transcript]: https://hieudoanm.github.io/transcript
 [transcript-gh]: https://github.com/hieudoanm/transcript
 [weather]: https://hieudoanm.github.io/weather
