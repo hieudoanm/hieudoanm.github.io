@@ -38,7 +38,7 @@
 
 ### ♟️ Chess (2)
 
-1. ⏲️ [Chess Clock][chess-clock] - [GitHub][chess-clock-gh]
+1. ⏲️ [Chess][chess] - [GitHub][chess-gh]
 2. 🌐 [Chess Insights][chess-insights] - [GitHub][chess-insights-gh]
 
 ---
@@ -207,8 +207,8 @@
 [promptly]: https://hieudoanm.github.io/promptly
 [promptly-gh]: https://github.com/hieudoanm/promptly
 
-[chess-clock]: https://hieudoanm.github.io/chess.clock
-[chess-clock-gh]: https://github.com/hieudoanm/chess.clock
+[chess]: https://hieudoanm.github.io/chess
+[chess-gh]: https://github.com/hieudoanm/chess
 [chess-insights]: https://hieudoanm.github.io/chess.insights
 [chess-insights-gh]: https://github.com/hieudoanm/chess.insights
 
