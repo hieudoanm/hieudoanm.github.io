@@ -230,8 +230,6 @@
 [postmanify-gh]: https://github.com/hieudoanm/postmanify
 [proxy]: https://hieudoanm.github.io/proxy
 [proxy-gh]: https://github.com/hieudoanm/proxy
-[sqlite]: https://hieudoanm.github.io/sqlite
-[sqlite-gh]: https://github.com/hieudoanm/sqlite
 [status]: https://hieudoanm.github.io/status
 [status-gh]: https://github.com/hieudoanm/status
 [string]: https://hieudoanm.github.io/string
@@ -309,9 +307,6 @@
 [breaking-bad-gh]: https://github.com/hieudoanm/breaking.bad
 [house-md]: https://hieudoanm.github.io/house.md
 [house-md-gh]: https://github.com/hieudoanm/house.md
-
-[pitch-perfect]: https://hieudoanm.github.io/pitch.perfect
-[pitch-perfect-gh]: https://github.com/hieudoanm/pitch.perfect
 
 [kaprekar]: https://hieudoanm.github.io/kaprekar
 [kaprekar-gh]: https://github.com/hieudoanm/kaprekar
