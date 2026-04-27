@@ -4,16 +4,15 @@
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
   - [📚 Table of Contents](#-table-of-contents)
-  - [🚀 Current Projects (Total: 74)](#-current-projects-total-74)
+  - [🚀 Current Projects (Total: 73)](#-current-projects-total-73)
     - [🤖 Artificial Intelligence (3)](#-artificial-intelligence-3)
-    - [♟️ Chess (2)](#️-chess-2)
     - [🛒 Commerce (1)](#-commerce-1)
     - [🎨 Design (4)](#-design-4)
     - [🛠️ DevTools (12)](#️-devtools-12)
     - [📄 Documents (2)](#-documents-2)
     - [💸 Finance (4)](#-finance-4)
     - [🎉 Fun (13)](#-fun-13)
-    - [🎮 Games (6)](#-games-6)
+    - [🎮 Games (7)](#-games-7)
     - [🌐 Languages (3)](#-languages-3)
     - [💬 Messaging (1)](#-messaging-1)
     - [🎬 Movies (2)](#-movies-2)
@@ -25,20 +24,13 @@
 
 ---
 
-## 🚀 Current Projects (Total: 74)
+## 🚀 Current Projects (Total: 73)
 
 ### 🤖 Artificial Intelligence (3)
 
 1. 🧠 [Distilled][distilled] - [GitHub][distilled-gh]
 2. 👨‍💻 [Hieu Doan][hieudoanm] - [GitHub][hieudoanm-gh]
 3. ⚡ [Promptly][promptly] - [GitHub][promptly-gh]
-
----
-
-### ♟️ Chess (2)
-
-1. ⏲️ [Chess][chess] - [GitHub][chess-gh]
-2. 🌐 [Chess Insights][chess-insights] - [GitHub][chess-insights-gh]
 
 ---
 
@@ -108,14 +100,15 @@
 
 ---
 
-### 🎮 Games (6)
+### 🎮 Games (7)
 
 1. 🃏 [Cards][cards] - [GitHub][cards-gh]
-2. 🧠 [Memory][memory] - [GitHub][memory-gh]
-3. ❓ [Quiz][quiz] - [GitHub][quiz-gh]
-4. ⭕ [T3][t3] - [GitHub][t3-gh]
-5. 🏰 [Towers][towers] - [GitHub][towers-gh]
-6. 🔤 [Wordle][wordle] - [GitHub][wordle-gh]
+2. ♟️ [Chess][chess] - [GitHub][chess-gh]
+3. 🧠 [Memory][memory] - [GitHub][memory-gh]
+4. ❓ [Quiz][quiz] - [GitHub][quiz-gh]
+5. ⭕ [T3][t3] - [GitHub][t3-gh]
+6. 🏰 [Towers][towers] - [GitHub][towers-gh]
+7. 🔤 [Wordle][wordle] - [GitHub][wordle-gh]
 
 ---
 
@@ -197,11 +190,6 @@
 [promptly]: https://hieudoanm.github.io/promptly
 [promptly-gh]: https://github.com/hieudoanm/promptly
 
-[chess]: https://hieudoanm.github.io/chess
-[chess-gh]: https://github.com/hieudoanm/chess
-[chess-insights]: https://hieudoanm.github.io/chess.insights
-[chess-insights-gh]: https://github.com/hieudoanm/chess.insights
-
 [shopify-detect]: https://hieudoanm.github.io/shopify.detect
 [shopify-detect-gh]: https://github.com/hieudoanm/shopify.detect
 
@@ -282,6 +270,8 @@
 
 [cards]: https://hieudoanm.github.io/cards
 [cards-gh]: https://github.com/hieudoanm/cards
+[chess]: https://hieudoanm.github.io/chess
+[chess-gh]: https://github.com/hieudoanm/chess
 [quiz]: https://hieudoanm.github.io/quiz
 [quiz-gh]: https://github.com/hieudoanm/quiz
 [memory]: https://hieudoanm.github.io/memory
