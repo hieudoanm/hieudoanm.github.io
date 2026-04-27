@@ -4,11 +4,11 @@
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
   - [📚 Table of Contents](#-table-of-contents)
-  - [🚀 Current Projects (Total: 73)](#-current-projects-total-73)
+  - [🚀 Current Projects (Total: 72)](#-current-projects-total-72)
     - [🤖 Artificial Intelligence (3)](#-artificial-intelligence-3)
     - [🛒 Commerce (1)](#-commerce-1)
     - [🎨 Design (4)](#-design-4)
-    - [🛠️ DevTools (12)](#️-devtools-12)
+    - [🛠️ DevTools (11)](#️-devtools-11)
     - [📄 Documents (2)](#-documents-2)
     - [💸 Finance (4)](#-finance-4)
     - [🎉 Fun (13)](#-fun-13)
@@ -24,7 +24,7 @@
 
 ---
 
-## 🚀 Current Projects (Total: 73)
+## 🚀 Current Projects (Total: 72)
 
 ### 🤖 Artificial Intelligence (3)
 
@@ -49,20 +49,19 @@
 
 ---
 
-### 🛠️ DevTools (12)
+### 🛠️ DevTools (11)
 
 1. 🌐 [Browser][browser] - [GitHub][browser-gh]
 2. 🐍 [Cobra MD][cobra-md] - [GitHub][cobra-md-gh]
 3. 🐙 [GitHub CLI][gh-cli] - [GitHub][gh-cli-gh]
 4. 🐙 [GitHub Extensions][gh-ext] - [GitHub][gh-ext-gh]
-5. 📄 [JSON][json] - [GitHub][json-gh]
+5. 📄 [JSON Schema][json-schema] - [GitHub][json-schema-gh]
 6. 🧾 [Manifest][manifest] - [GitHub][manifest-gh]
 7. 📬 [Postmanify][postmanify] - [GitHub][postmanify-gh]
 8. 🔌 [Proxy][proxy] - [GitHub][proxy-gh]
 9. 🚦 [Status][status] - [GitHub][status-gh]
 10. 🧵 [String][string] - [GitHub][string-gh]
 11. 🆔 [UUID][uuid] - [GitHub][uuid-gh]
-12. 📝 [YAML][yaml] - [GitHub][yaml-gh]
 
 ---
 
@@ -210,8 +209,8 @@
 [gh-cli-gh]: https://github.com/hieudoanm/gh.cli
 [gh-ext]: https://hieudoanm.github.io/gh.ext
 [gh-ext-gh]: https://github.com/hieudoanm/gh.ext
-[json]: https://hieudoanm.github.io/json
-[json-gh]: https://github.com/hieudoanm/json
+[json-schema]: https://hieudoanm.github.io/json-schema
+[json-schema-gh]: https://github.com/hieudoanm/json-schema
 [manifest]: https://hieudoanm.github.io/manifest
 [manifest-gh]: https://github.com/hieudoanm/manifest
 [postmanify]: https://hieudoanm.github.io/postmanify
@@ -224,8 +223,6 @@
 [string-gh]: https://github.com/hieudoanm/string
 [uuid]: https://hieudoanm.github.io/uuid
 [uuid-gh]: https://github.com/hieudoanm/uuid
-[yaml]: https://hieudoanm.github.io/yaml
-[yaml-gh]: https://github.com/hieudoanm/yaml
 
 [redact]: https://hieudoanm.github.io/redact
 [redact-gh]: https://github.com/hieudoanm/redact
