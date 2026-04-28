@@ -20,6 +20,13 @@ export const bookmarks = [
     emoji: '▶',
     color: '#ff0000',
   },
+  {
+    label: 'Google Maps',
+    url: 'https://maps.google.com',
+    description: 'Maps',
+    emoji: '🗺️',
+    color: '#4285f4',
+  },
 ];
 
 export const aiBookmarks = [
