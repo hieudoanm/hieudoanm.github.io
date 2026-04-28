@@ -1,7 +1,7 @@
 import { DownloadsTemplate } from '@hieudoanm/templates/DownloadsTemplate';
 import { NextPage } from 'next';
 
-const APP_NAME = 'hieudoanm';
+const APP_NAME = 'weather';
 const REPO = `https://github.com/hieudoanm/${APP_NAME}/releases/download`;
 const VERSION = '0.0.1';
 

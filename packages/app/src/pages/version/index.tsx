@@ -1,5 +1,5 @@
-import { GetStaticProps, NextPage } from 'next';
 import { VersionTemplate } from '@hieudoanm/templates/VersionTemplate';
+import { GetStaticProps, NextPage } from 'next';
 
 type Props = {
   version: string;

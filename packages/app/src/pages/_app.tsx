@@ -1,5 +1,6 @@
 import '@hieudoanm/styles/globals.css';
 import { HeadTemplate } from '../templates/HeadTemplate';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import type { AppProps } from 'next/app';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { FC } from 'react';
@@ -17,10 +18,12 @@ const geistMono = Geist_Mono({
 const App: FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <>
-      <HeadTemplate basic={{ title: 'Hieu Doan' }} />
-      <div className={`${geistSans.className} ${geistMono.className}`}>
-        <Component {...pageProps} />
-      </div>
+      <HeadTemplate basic={{ title: 'Weather' }} />
+      <QueryClientProvider client={new QueryClient()}>
+        <div className={`${geistSans.className} ${geistMono.className}`}>
+          <Component {...pageProps} />
+        </div>
+      </QueryClientProvider>
     </>
   );
 };
