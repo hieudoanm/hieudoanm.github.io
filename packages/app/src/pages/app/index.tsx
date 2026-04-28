@@ -423,7 +423,6 @@ const AIBookmarkCard: FC<{
 }: (typeof aiBookmarks)[number]) => (
   <a
     href={url}
-    target="_blank"
     rel="noopener noreferrer"
     className="card bg-base-200 border-base-300 hover:bg-base-300 group border transition-all duration-300 hover:scale-[1.03] hover:shadow-lg"
     style={{ '--ai-color': color } as React.CSSProperties}>

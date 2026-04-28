@@ -1,22 +1,22 @@
 # 👨‍💻 I'm [HIEU DOAN][hieudoanm-gh-page]
 
-## 📚 Table of Contents (Apps: 66)
+## 📚 Table of Contents (Apps: 64)
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
-  - [📚 Table of Contents (Apps: 66)](#-table-of-contents-apps-66)
+  - [📚 Table of Contents (Apps: 64)](#-table-of-contents-apps-64)
   - [🤖 Artificial Intelligence (3)](#-artificial-intelligence-3)
   - [🛒 Commerce (1)](#-commerce-1)
   - [🎨 Design (4)](#-design-4)
   - [🛠️ DevTools (9)](#️-devtools-9)
   - [📄 Documents (2)](#-documents-2)
   - [💸 Finance (3)](#-finance-3)
-  - [🎉 Fun (14)](#-fun-14)
+  - [🎉 Fun (13)](#-fun-13)
   - [🎮 Games (7)](#-games-7)
   - [🌐 Languages (3)](#-languages-3)
   - [💬 Messaging (1)](#-messaging-1)
   - [🚀 Productivity (2)](#-productivity-2)
   - [📦 Templates (1)](#-templates-1)
-  - [🔧 Utilities (10)](#-utilities-10)
+  - [🔧 Utilities (9)](#-utilities-9)
   - [💼 Workspace (6)](#-workspace-6)
 
 ---
@@ -73,7 +73,7 @@
 
 ---
 
-## 🎉 Fun (14)
+## 🎉 Fun (13)
 
 1. 🌀 [Attractors][attractors] - [GitHub][attractors-gh]
 2. 🚹 [Braille][braille] - [GitHub][braille-gh]
@@ -130,7 +130,7 @@
 
 ---
 
-## 🔧 Utilities (10)
+## 🔧 Utilities (9)
 
 1. 🐚 [Bash][bash] - [GitHub][bash-gh]
 2. 🧮 [Calculator][calculator] - [GitHub][calculator-gh]
