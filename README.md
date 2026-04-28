@@ -10,11 +10,10 @@
   - [🛠️ DevTools (9)](#️-devtools-9)
   - [📄 Documents (2)](#-documents-2)
   - [💸 Finance (3)](#-finance-3)
-  - [🎉 Fun (13)](#-fun-13)
+  - [🎉 Fun (14)](#-fun-14)
   - [🎮 Games (7)](#-games-7)
   - [🌐 Languages (3)](#-languages-3)
   - [💬 Messaging (1)](#-messaging-1)
-  - [🎬 Movies (1)](#-movies-1)
   - [🚀 Productivity (2)](#-productivity-2)
   - [📦 Templates (1)](#-templates-1)
   - [🔧 Utilities (10)](#-utilities-10)
@@ -74,21 +73,22 @@
 
 ---
 
-## 🎉 Fun (13)
+## 🎉 Fun (14)
 
 1. 🌀 [Attractors][attractors] - [GitHub][attractors-gh]
 2. 🚹 [Braille][braille] - [GitHub][braille-gh]
-3. ⏳ [Countdown][countdown] - [GitHub][countdown-gh]
-4. 🌍 [Countries][countries] - [GitHub][countries-gh]
-5. ⚫ [Dot][dot] - [GitHub][dot-gh]
-6. 🔍 [Emojis][emojis] - [GitHub][emojis-gh]
-7. 👀 [Eyes][eyes] - [GitHub][eyes-gh]
-8. ⌚ [Garmin][garmin] - [GitHub][garmin-gh]
-9. ⚖️ [Legislation][legislation] - [GitHub][legislation-gh]
-10. 🔤 [Morse][morse] - [GitHub][morse-gh]
-11. 🔁 [Palindrome][palindrome] - [GitHub][palindrome-gh]
-12. 📕 [Pokedex][pokedex] - [GitHub][pokedex-gh]
-13. 🔀 [Typoglycemia][typoglycemia] - [GitHub][typoglycemia-gh]
+3. 🎭 [Breaking Bad][breaking-bad] - [GitHub][breaking-bad-gh]4
+4. ⏳ [Countdown][countdown] - [GitHub][countdown-gh]
+5. 🌍 [Countries][countries] - [GitHub][countries-gh]
+6. ⚫ [Dot][dot] - [GitHub][dot-gh]
+7. 🔍 [Emojis][emojis] - [GitHub][emojis-gh]
+8. 👀 [Eyes][eyes] - [GitHub][eyes-gh]
+9. ⌚ [Garmin][garmin] - [GitHub][garmin-gh]
+10. ⚖️ [Legislation][legislation] - [GitHub][legislation-gh]
+11. 🔤 [Morse][morse] - [GitHub][morse-gh]
+12. 🔁 [Palindrome][palindrome] - [GitHub][palindrome-gh]
+13. 📕 [Pokedex][pokedex] - [GitHub][pokedex-gh]
+14. 🔀 [Typoglycemia][typoglycemia] - [GitHub][typoglycemia-gh]
 
 ---
 
@@ -115,12 +115,6 @@
 ## 💬 Messaging (1)
 
 1. 💬 [Telegram][telegram] - [GitHub][telegram-gh]
-
----
-
-## 🎬 Movies (1)
-
-1. 🎭 [Breaking Bad][breaking-bad] - [GitHub][breaking-bad-gh]
 
 ---
 
