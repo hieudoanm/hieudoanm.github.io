@@ -1,32 +1,29 @@
 # 👨‍💻 I'm [HIEU DOAN][hieudoanm-gh-page]
 
-## 📚 Table of Contents
+## 📚 Table of Contents (Total: 68)
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
-  - [📚 Table of Contents](#-table-of-contents)
-  - [🚀 Current Projects (Total: 69)](#-current-projects-total-69)
-    - [🤖 Artificial Intelligence (3)](#-artificial-intelligence-3)
-    - [🛒 Commerce (1)](#-commerce-1)
-    - [🎨 Design (4)](#-design-4)
-    - [🛠️ DevTools (9)](#️-devtools-9)
-    - [📄 Documents (2)](#-documents-2)
-    - [💸 Finance (3)](#-finance-3)
-    - [🎉 Fun (13)](#-fun-13)
-    - [🎮 Games (7)](#-games-7)
-    - [🌐 Languages (3)](#-languages-3)
-    - [💬 Messaging (1)](#-messaging-1)
-    - [🎬 Movies (2)](#-movies-2)
-    - [🔢 Numberphile (1)](#-numberphile-1)
-    - [🚀 Productivity (2)](#-productivity-2)
-    - [📦 Templates (1)](#-templates-1)
-    - [🔧 Utilities (11)](#-utilities-11)
-    - [💼 Workspace (6)](#-workspace-6)
+  - [📚 Table of Contents (Total: 68)](#-table-of-contents-total-68)
+  - [🤖 Artificial Intelligence (3)](#-artificial-intelligence-3)
+  - [🛒 Commerce (1)](#-commerce-1)
+  - [🎨 Design (4)](#-design-4)
+  - [🛠️ DevTools (9)](#️-devtools-9)
+  - [📄 Documents (2)](#-documents-2)
+  - [💸 Finance (3)](#-finance-3)
+  - [🎉 Fun (13)](#-fun-13)
+  - [🎮 Games (7)](#-games-7)
+  - [🌐 Languages (3)](#-languages-3)
+  - [💬 Messaging (1)](#-messaging-1)
+  - [🎬 Movies (2)](#-movies-2)
+  - [🔢 Numberphile (1)](#-numberphile-1)
+  - [🚀 Productivity (2)](#-productivity-2)
+  - [📦 Templates (1)](#-templates-1)
+  - [🔧 Utilities (10)](#-utilities-10)
+  - [💼 Workspace (6)](#-workspace-6)
 
 ---
 
-## 🚀 Current Projects (Total: 69)
-
-### 🤖 Artificial Intelligence (3)
+## 🤖 Artificial Intelligence (3)
 
 1. 🧠 [Distilled][distilled] - [GitHub][distilled-gh]
 2. 👨‍💻 [Hieu Doan][hieudoanm] - [GitHub][hieudoanm-gh]
@@ -34,13 +31,13 @@
 
 ---
 
-### 🛒 Commerce (1)
+## 🛒 Commerce (1)
 
 1. 🛍️ [Shopify Detect][shopify-detect] - [GitHub][shopify-detect-gh]
 
 ---
 
-### 🎨 Design (4)
+## 🎨 Design (4)
 
 1. 🌈 [Colors][colors] - [GitHub][colors-gh]
 2. 📐 [Composition][composition] - [GitHub][composition-gh]
@@ -49,7 +46,7 @@
 
 ---
 
-### 🛠️ DevTools (9)
+## 🛠️ DevTools (9)
 
 1. 🌐 [Browser][browser] - [GitHub][browser-gh]
 2. 🐍 [Cobra MD][cobra-md] - [GitHub][cobra-md-gh]
@@ -63,14 +60,14 @@
 
 ---
 
-### 📄 Documents (2)
+## 📄 Documents (2)
 
 1. 📄 [Redact][redact] - [GitHub][redact-gh]
 2. 📤 [Simple Upload][simple-upload] - [GitHub][simple-upload-gh]
 
 ---
 
-### 💸 Finance (3)
+## 💸 Finance (3)
 
 1. 📈 [Inflation][inflation] - [GitHub][inflation-gh]
 2. 🧾 [Invoice][invoice] - [GitHub][invoice-gh]
@@ -78,7 +75,7 @@
 
 ---
 
-### 🎉 Fun (13)
+## 🎉 Fun (13)
 
 1. 🌀 [Attractors][attractors] - [GitHub][attractors-gh]
 2. 🚹 [Braille][braille] - [GitHub][braille-gh]
@@ -96,7 +93,7 @@
 
 ---
 
-### 🎮 Games (7)
+## 🎮 Games (7)
 
 1. 🃏 [Cards][cards] - [GitHub][cards-gh]
 2. ♟️ [Chess][chess] - [GitHub][chess-gh]
@@ -108,7 +105,7 @@
 
 ---
 
-### 🌐 Languages (3)
+## 🌐 Languages (3)
 
 1. 🇬🇧 [English][english] - [GitHub][english-gh]
 2. 🃏 [Flashcards][flashcards] - [GitHub][flashcards-gh]
@@ -116,55 +113,54 @@
 
 ---
 
-### 💬 Messaging (1)
+## 💬 Messaging (1)
 
 1. 💬 [Telegram][telegram] - [GitHub][telegram-gh]
 
 ---
 
-### 🎬 Movies (2)
+## 🎬 Movies (2)
 
 1. 🎭 [Breaking Bad][breaking-bad] - [GitHub][breaking-bad-gh]
 2. 🩺 [House, M.D.][house-md] - [GitHub][house-md-gh]
 
 ---
 
-### 🔢 Numberphile (1)
+## 🔢 Numberphile (1)
 
 1. 🔄 [Kaprekar][kaprekar] - [GitHub][kaprekar-gh]
 
 ---
 
-### 🚀 Productivity (2)
+## 🚀 Productivity (2)
 
 1. 🔖 [DOI][doi] - [GitHub][doi-gh]
 2. 🍅 [Pomodoro][pomodoro] - [GitHub][pomodoro-gh]
 
 ---
 
-### 📦 Templates (1)
+## 📦 Templates (1)
 
 1. 🚀 [Start][start] - [GitHub][start-gh]
 
 ---
 
-### 🔧 Utilities (11)
+## 🔧 Utilities (10)
 
 1. 🐚 [Bash][bash] - [GitHub][bash-gh]
 2. 🧮 [Calculator][calculator] - [GitHub][calculator-gh]
 3. 📋 [Clipboard][clipboard] - [GitHub][clipboard-gh]
 4. 📱 [InstaSize][instasize] - [GitHub][instasize-gh]
 5. 🌐 [IP][ip] - [GitHub][ip-gh]
-6. 🔳 [QRCode][qrcode] - [GitHub][qrcode-gh]
-7. 📸 [Snapshot][snapshot] - [GitHub][snapshot-gh]
-8. 🖥️ [System][system] - [GitHub][system-gh]
-9. 📝 [Transcript][transcript] - [GitHub][transcript-gh]
-10. 🌤️ [Weather][weather] - [GitHub][weather-gh]
-11. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
+6. 📸 [Snapshot][snapshot] - [GitHub][snapshot-gh]
+7. 🖥️ [System][system] - [GitHub][system-gh]
+8. 📝 [Transcript][transcript] - [GitHub][transcript-gh]
+9. 🌤️ [Weather][weather] - [GitHub][weather-gh]
+10. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
 
 ---
 
-### 💼 Workspace (6)
+## 💼 Workspace (6)
 
 1. 📅 [Calendar][calendar] - [GitHub][calendar-gh]
 2. 📑 [Docs][docs] - [GitHub][docs-gh]
@@ -307,8 +303,6 @@
 [instasize-gh]: https://github.com/hieudoanm/instasize
 [ip]: https://hieudoanm.github.io/ip
 [ip-gh]: https://github.com/hieudoanm/ip
-[qrcode]: https://hieudoanm.github.io/qrcode
-[qrcode-gh]: https://github.com/hieudoanm/qrcode
 [snapshot]: https://hieudoanm.github.io/snapshot
 [snapshot-gh]: https://github.com/hieudoanm/snapshot
 [system]: https://hieudoanm.github.io/system
