@@ -4,13 +4,13 @@
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
   - [📚 Table of Contents](#-table-of-contents)
-  - [🚀 Current Projects (Total: 72)](#-current-projects-total-72)
+  - [🚀 Current Projects (Total: 71)](#-current-projects-total-71)
     - [🤖 Artificial Intelligence (3)](#-artificial-intelligence-3)
     - [🛒 Commerce (1)](#-commerce-1)
     - [🎨 Design (4)](#-design-4)
     - [🛠️ DevTools (11)](#️-devtools-11)
     - [📄 Documents (2)](#-documents-2)
-    - [💸 Finance (4)](#-finance-4)
+    - [💸 Finance (3)](#-finance-3)
     - [🎉 Fun (13)](#-fun-13)
     - [🎮 Games (7)](#-games-7)
     - [🌐 Languages (3)](#-languages-3)
@@ -24,7 +24,7 @@
 
 ---
 
-## 🚀 Current Projects (Total: 72)
+## 🚀 Current Projects (Total: 71)
 
 ### 🤖 Artificial Intelligence (3)
 
@@ -72,12 +72,11 @@
 
 ---
 
-### 💸 Finance (4)
+### 💸 Finance (3)
 
-1. 🏦 [Frankfurter][frankfurter] - [GitHub][frankfurter-gh]
-2. 📈 [Inflation][inflation] - [GitHub][inflation-gh]
-3. 🧾 [Invoice][invoice] - [GitHub][invoice-gh]
-4. 💰 [Tax][tax] - [GitHub][tax-gh]
+1. 📈 [Inflation][inflation] - [GitHub][inflation-gh]
+2. 🧾 [Invoice][invoice] - [GitHub][invoice-gh]
+3. 💰 [Tax][tax] - [GitHub][tax-gh]
 
 ---
 
@@ -229,8 +228,6 @@
 [simple-upload]: https://hieudoanm.github.io/simple-upload
 [simple-upload-gh]: https://github.com/hieudoanm/simple-upload
 
-[frankfurter]: https://hieudoanm.github.io/frankfurter
-[frankfurter-gh]: https://github.com/hieudoanm/frankfurter
 [inflation]: https://hieudoanm.github.io/inflation
 [inflation-gh]: https://github.com/hieudoanm/inflation
 [invoice]: https://hieudoanm.github.io/invoice
