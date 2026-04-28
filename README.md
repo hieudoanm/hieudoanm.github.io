@@ -141,8 +141,7 @@
 6. 📸 [Snapshot][snapshot] - [GitHub][snapshot-gh]
 7. 🖥️ [System][system] - [GitHub][system-gh]
 8. 📝 [Transcript][transcript] - [GitHub][transcript-gh]
-9. 🌤️ [Weather][weather] - [GitHub][weather-gh]
-10. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
+9. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
 
 ---
 
@@ -290,8 +289,6 @@
 [system-gh]: https://github.com/hieudoanm/system
 [transcript]: https://hieudoanm.github.io/transcript
 [transcript-gh]: https://github.com/hieudoanm/transcript
-[weather]: https://hieudoanm.github.io/weather
-[weather-gh]: https://github.com/hieudoanm/weather
 [wifi]: https://hieudoanm.github.io/wifi
 [wifi-gh]: https://github.com/hieudoanm/wifi
 
