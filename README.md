@@ -4,11 +4,11 @@
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
   - [📚 Table of Contents](#-table-of-contents)
-  - [🚀 Current Projects (Total: 71)](#-current-projects-total-71)
+  - [🚀 Current Projects (Total: 70)](#-current-projects-total-70)
     - [🤖 Artificial Intelligence (3)](#-artificial-intelligence-3)
     - [🛒 Commerce (1)](#-commerce-1)
     - [🎨 Design (4)](#-design-4)
-    - [🛠️ DevTools (11)](#️-devtools-11)
+    - [🛠️ DevTools (10)](#️-devtools-10)
     - [📄 Documents (2)](#-documents-2)
     - [💸 Finance (3)](#-finance-3)
     - [🎉 Fun (13)](#-fun-13)
@@ -24,7 +24,7 @@
 
 ---
 
-## 🚀 Current Projects (Total: 71)
+## 🚀 Current Projects (Total: 70)
 
 ### 🤖 Artificial Intelligence (3)
 
@@ -49,7 +49,7 @@
 
 ---
 
-### 🛠️ DevTools (11)
+### 🛠️ DevTools (10)
 
 1. 🌐 [Browser][browser] - [GitHub][browser-gh]
 2. 🐍 [Cobra MD][cobra-md] - [GitHub][cobra-md-gh]
@@ -59,9 +59,8 @@
 6. 🧾 [Manifest][manifest] - [GitHub][manifest-gh]
 7. 📬 [Postmanify][postmanify] - [GitHub][postmanify-gh]
 8. 🔌 [Proxy][proxy] - [GitHub][proxy-gh]
-9. 🚦 [Status][status] - [GitHub][status-gh]
-10. 🧵 [String][string] - [GitHub][string-gh]
-11. 🆔 [UUID][uuid] - [GitHub][uuid-gh]
+9. 🧵 [String][string] - [GitHub][string-gh]
+10. 🆔 [UUID][uuid] - [GitHub][uuid-gh]
 
 ---
 
