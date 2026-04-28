@@ -1,9 +1,9 @@
 # 👨‍💻 I'm [HIEU DOAN][hieudoanm-gh-page]
 
-## 📚 Table of Contents (Apps: 67)
+## 📚 Table of Contents (Apps: 66)
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
-  - [📚 Table of Contents (Apps: 67)](#-table-of-contents-apps-67)
+  - [📚 Table of Contents (Apps: 66)](#-table-of-contents-apps-66)
   - [🤖 Artificial Intelligence (3)](#-artificial-intelligence-3)
   - [🛒 Commerce (1)](#-commerce-1)
   - [🎨 Design (4)](#-design-4)
@@ -14,7 +14,7 @@
   - [🎮 Games (7)](#-games-7)
   - [🌐 Languages (3)](#-languages-3)
   - [💬 Messaging (1)](#-messaging-1)
-  - [🎬 Movies (2)](#-movies-2)
+  - [🎬 Movies (1)](#-movies-1)
   - [🚀 Productivity (2)](#-productivity-2)
   - [📦 Templates (1)](#-templates-1)
   - [🔧 Utilities (10)](#-utilities-10)
@@ -118,10 +118,9 @@
 
 ---
 
-## 🎬 Movies (2)
+## 🎬 Movies (1)
 
 1. 🎭 [Breaking Bad][breaking-bad] - [GitHub][breaking-bad-gh]
-2. 🩺 [House, M.D.][house-md] - [GitHub][house-md-gh]
 
 ---
 
@@ -272,8 +271,6 @@
 
 [breaking-bad]: https://hieudoanm.github.io/breaking.bad
 [breaking-bad-gh]: https://github.com/hieudoanm/breaking.bad
-[house-md]: https://hieudoanm.github.io/house.md
-[house-md-gh]: https://github.com/hieudoanm/house.md
 
 [doi]: https://hieudoanm.github.io/doi
 [doi-gh]: https://github.com/hieudoanm/doi
