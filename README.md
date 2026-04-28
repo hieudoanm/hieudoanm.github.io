@@ -4,11 +4,11 @@
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
   - [📚 Table of Contents](#-table-of-contents)
-  - [🚀 Current Projects (Total: 70)](#-current-projects-total-70)
+  - [🚀 Current Projects (Total: 69)](#-current-projects-total-69)
     - [🤖 Artificial Intelligence (3)](#-artificial-intelligence-3)
     - [🛒 Commerce (1)](#-commerce-1)
     - [🎨 Design (4)](#-design-4)
-    - [🛠️ DevTools (10)](#️-devtools-10)
+    - [🛠️ DevTools (9)](#️-devtools-9)
     - [📄 Documents (2)](#-documents-2)
     - [💸 Finance (3)](#-finance-3)
     - [🎉 Fun (13)](#-fun-13)
@@ -24,7 +24,7 @@
 
 ---
 
-## 🚀 Current Projects (Total: 70)
+## 🚀 Current Projects (Total: 69)
 
 ### 🤖 Artificial Intelligence (3)
 
@@ -49,7 +49,7 @@
 
 ---
 
-### 🛠️ DevTools (10)
+### 🛠️ DevTools (9)
 
 1. 🌐 [Browser][browser] - [GitHub][browser-gh]
 2. 🐍 [Cobra MD][cobra-md] - [GitHub][cobra-md-gh]
@@ -60,7 +60,6 @@
 7. 📬 [Postmanify][postmanify] - [GitHub][postmanify-gh]
 8. 🔌 [Proxy][proxy] - [GitHub][proxy-gh]
 9. 🧵 [String][string] - [GitHub][string-gh]
-10. 🆔 [UUID][uuid] - [GitHub][uuid-gh]
 
 ---
 
@@ -215,12 +214,8 @@
 [postmanify-gh]: https://github.com/hieudoanm/postmanify
 [proxy]: https://hieudoanm.github.io/proxy
 [proxy-gh]: https://github.com/hieudoanm/proxy
-[status]: https://hieudoanm.github.io/status
-[status-gh]: https://github.com/hieudoanm/status
 [string]: https://hieudoanm.github.io/string
 [string-gh]: https://github.com/hieudoanm/string
-[uuid]: https://hieudoanm.github.io/uuid
-[uuid-gh]: https://github.com/hieudoanm/uuid
 
 [redact]: https://hieudoanm.github.io/redact
 [redact-gh]: https://github.com/hieudoanm/redact
