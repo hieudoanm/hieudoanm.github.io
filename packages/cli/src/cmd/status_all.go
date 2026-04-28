@@ -5,8 +5,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/hieudoanm/weather/src/configs"
-	"github.com/hieudoanm/weather/src/services/status"
+	"github.com/hieudoanm/hieudoanm/src/configs"
+	"github.com/hieudoanm/hieudoanm/src/services/status"
 
 	"charm.land/bubbles/v2/spinner"
 	"charm.land/bubbles/v2/viewport"

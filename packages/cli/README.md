@@ -1,8 +1,8 @@
-# 🚀 Weather CLI
+# 🚀 `hieudoanm` CLI
 
 ## 📚 Table of Contents
 
-- [🚀 Weather CLI](#-weather-cli)
+- [🚀 `hieudoanm` CLI](#-hieudoanm-cli)
   - [📚 Table of Contents](#-table-of-contents)
   - [📦 Installation](#-installation)
   - [🚀 Usage](#-usage)
@@ -11,13 +11,13 @@
 ## 📦 Installation
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/hieudoanm/weather/master/packages/cli/scripts/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/hieudoanm/hieudoanm/master/packages/cli/scripts/install.sh | bash
 ```
 
 ## 🚀 Usage
 
 ```bash
-weather
+hieudoanm
 ```
 
 ## 📄 License

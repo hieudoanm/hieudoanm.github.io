@@ -7,7 +7,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	http "github.com/hieudoanm/weather/src/libs/http"
+	http "github.com/hieudoanm/hieudoanm/src/libs/http"
 	"github.com/spf13/cobra"
 )
 

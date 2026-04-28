@@ -1,4 +1,4 @@
-module github.com/hieudoanm/weather
+module github.com/hieudoanm/hieudoanm
 
 go 1.26.2
 

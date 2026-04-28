@@ -7,7 +7,7 @@ import (
 
 	"time"
 
-	"github.com/hieudoanm/weather/src/libs/requests"
+	"github.com/hieudoanm/hieudoanm/src/libs/requests"
 )
 
 // Page represents the status page info

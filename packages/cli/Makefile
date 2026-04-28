@@ -1,9 +1,9 @@
 .PHONY: clean format lint test build install
 
 BIN_DIR  := bin
-BIN_NAME := weather
+BIN_NAME := hieudoanm
 SRC      := ./main.go
-OWNER    := github.com/hieudoanm/weather
+OWNER    := github.com/hieudoanm/hieudoanm
 
 VERSION      := $(shell date +%Y.%m.%d.%H.%M.%S)
 COMMIT       := $(shell git rev-parse --short HEAD 2>/dev/null || echo "unknown")

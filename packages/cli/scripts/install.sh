@@ -3,8 +3,8 @@
 # Exit immediately if a command exits with a non-zero status
 set -e
 
-BIN_NAME="weather"
-REPO_URL="https://github.com/hieudoanm/weather/raw/refs/heads/master/packages/cli/bin/weather"
+BIN_NAME="hieudoanm"
+REPO_URL="https://github.com/hieudoanm/hieudoanm/raw/refs/heads/master/packages/cli/bin/hieudoanm"
 INSTALL_DIR="/usr/local/bin"
 
 echo "Downloading $BIN_NAME..."

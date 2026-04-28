@@ -8,8 +8,8 @@ import (
 	"log"
 
 	"github.com/AlecAivazis/survey/v2"
-	"github.com/hieudoanm/weather/src/configs"
-	"github.com/hieudoanm/weather/src/services/status"
+	"github.com/hieudoanm/hieudoanm/src/configs"
+	"github.com/hieudoanm/hieudoanm/src/services/status"
 	"github.com/spf13/cobra"
 )
 
