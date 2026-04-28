@@ -1,13 +1,13 @@
 # 👨‍💻 I'm [HIEU DOAN][hieudoanm-gh-page]
 
-## 📚 Table of Contents (Apps: 64)
+## 📚 Table of Contents (Apps: 63)
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
-  - [📚 Table of Contents (Apps: 64)](#-table-of-contents-apps-64)
+  - [📚 Table of Contents (Apps: 63)](#-table-of-contents-apps-63)
   - [🤖 Artificial Intelligence (3)](#-artificial-intelligence-3)
   - [🛒 Commerce (1)](#-commerce-1)
   - [🎨 Design (4)](#-design-4)
-  - [🛠️ DevTools (9)](#️-devtools-9)
+  - [🛠️ DevTools (8)](#️-devtools-8)
   - [📄 Documents (2)](#-documents-2)
   - [💸 Finance (3)](#-finance-3)
   - [🎉 Fun (13)](#-fun-13)
@@ -44,7 +44,7 @@
 
 ---
 
-## 🛠️ DevTools (9)
+## 🛠️ DevTools (8)
 
 1. 🌐 [Browser][browser] - [GitHub][browser-gh]
 2. 🐍 [Cobra MD][cobra-md] - [GitHub][cobra-md-gh]
@@ -54,7 +54,6 @@
 6. 🧾 [Manifest][manifest] - [GitHub][manifest-gh]
 7. 📬 [Postmanify][postmanify] - [GitHub][postmanify-gh]
 8. 🔌 [Proxy][proxy] - [GitHub][proxy-gh]
-9. 🧵 [String][string] - [GitHub][string-gh]
 
 ---
 
@@ -194,8 +193,6 @@
 [postmanify-gh]: https://github.com/hieudoanm/postmanify
 [proxy]: https://hieudoanm.github.io/proxy
 [proxy-gh]: https://github.com/hieudoanm/proxy
-[string]: https://hieudoanm.github.io/string
-[string-gh]: https://github.com/hieudoanm/string
 
 [redact]: https://hieudoanm.github.io/redact
 [redact-gh]: https://github.com/hieudoanm/redact
