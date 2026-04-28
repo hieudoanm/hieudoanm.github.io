@@ -1,9 +1,9 @@
 # 👨‍💻 I'm [HIEU DOAN][hieudoanm-gh-page]
 
-## 📚 Table of Contents (Total: 68)
+## 📚 Table of Contents (Apps: 67)
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
-  - [📚 Table of Contents (Total: 68)](#-table-of-contents-total-68)
+  - [📚 Table of Contents (Apps: 67)](#-table-of-contents-apps-67)
   - [🤖 Artificial Intelligence (3)](#-artificial-intelligence-3)
   - [🛒 Commerce (1)](#-commerce-1)
   - [🎨 Design (4)](#-design-4)
@@ -15,7 +15,6 @@
   - [🌐 Languages (3)](#-languages-3)
   - [💬 Messaging (1)](#-messaging-1)
   - [🎬 Movies (2)](#-movies-2)
-  - [🔢 Numberphile (1)](#-numberphile-1)
   - [🚀 Productivity (2)](#-productivity-2)
   - [📦 Templates (1)](#-templates-1)
   - [🔧 Utilities (10)](#-utilities-10)
@@ -123,12 +122,6 @@
 
 1. 🎭 [Breaking Bad][breaking-bad] - [GitHub][breaking-bad-gh]
 2. 🩺 [House, M.D.][house-md] - [GitHub][house-md-gh]
-
----
-
-## 🔢 Numberphile (1)
-
-1. 🔄 [Kaprekar][kaprekar] - [GitHub][kaprekar-gh]
 
 ---
 
@@ -281,9 +274,6 @@
 [breaking-bad-gh]: https://github.com/hieudoanm/breaking.bad
 [house-md]: https://hieudoanm.github.io/house.md
 [house-md-gh]: https://github.com/hieudoanm/house.md
-
-[kaprekar]: https://hieudoanm.github.io/kaprekar
-[kaprekar-gh]: https://github.com/hieudoanm/kaprekar
 
 [doi]: https://hieudoanm.github.io/doi
 [doi-gh]: https://github.com/hieudoanm/doi
