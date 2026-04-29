@@ -14,7 +14,7 @@ import { QRCodeModal } from '@hieudoanm/components/modals/QRCodeModal';
 import { StringModal } from '@hieudoanm/components/modals/StringModal';
 import { UUIDModal } from '@hieudoanm/components/modals/UUIDModal';
 import { RightSidebar } from '@hieudoanm/components/sidebars/RightSidebar';
-import { StatusSidebar } from '@hieudoanm/components/sidebars/StatusSidebar';
+import { LeftSidebar } from '@hieudoanm/components/sidebars/LeftSidebar';
 import {
   ai as aiBookmarks,
   websites as websiteBookmarks,
@@ -221,7 +221,7 @@ const AppPage: NextPage = () => {
       <div
         className="hidden h-screen overflow-hidden lg:grid"
         style={{ gridTemplateColumns: '280px 2fr 320px' }}>
-        <StatusSidebar />
+        <LeftSidebar />
         <MainContent today={today} tools={tools} />
         <RightSidebar times={times} weatherQueries={weatherQueries} />
       </div>
@@ -327,7 +327,7 @@ const AppPage: NextPage = () => {
                 </button>
               </div>
               <div className="p-4">
-                {activeSidebar === 'status' && <StatusSidebar />}
+                {activeSidebar === 'status' && <LeftSidebar />}
                 {activeSidebar === 'clock' && (
                   <RightSidebar times={times} weatherQueries={weatherQueries} />
                 )}

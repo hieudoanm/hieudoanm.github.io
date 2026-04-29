@@ -1,9 +1,9 @@
 # 👨‍💻 I'm [HIEU DOAN][hieudoanm-gh-page]
 
-## 📚 Table of Contents (Apps: 53)
+## 📚 Table of Contents (52)
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
-  - [📚 Table of Contents (Apps: 53)](#-table-of-contents-apps-53)
+  - [📚 Table of Contents (52)](#-table-of-contents-52)
   - [🤖 Artificial Intelligence (3)](#-artificial-intelligence-3)
   - [🛒 Commerce (1)](#-commerce-1)
   - [🎨 Design (3)](#-design-3)
@@ -16,7 +16,7 @@
   - [💬 Messaging (1)](#-messaging-1)
   - [📦 Templates (1)](#-templates-1)
   - [🔧 Utilities (7)](#-utilities-7)
-  - [💼 Workspace (5)](#-workspace-5)
+  - [💼 Workspace (4)](#-workspace-4)
 
 ---
 
@@ -128,13 +128,12 @@
 
 ---
 
-## 💼 Workspace (5)
+## 💼 Workspace (4)
 
 1. 📑 [Docs][docs] - [GitHub][docs-gh]
 2. 💡 [Keep][keep] - [GitHub][keep-gh]
 3. 📊 [Sheets][sheets] - [GitHub][sheets-gh]
 4. 🖥️ [Slides][slides] - [GitHub][slides-gh]
-5. ✅ [Tasks][tasks] - [GitHub][tasks-gh]
 
 ---
 
@@ -259,5 +258,3 @@
 [sheets-gh]: https://github.com/hieudoanm/sheets
 [slides]: https://hieudoanm.github.io/slides
 [slides-gh]: https://github.com/hieudoanm/slides
-[tasks]: https://hieudoanm.github.io/tasks
-[tasks-gh]: https://github.com/hieudoanm/tasks
