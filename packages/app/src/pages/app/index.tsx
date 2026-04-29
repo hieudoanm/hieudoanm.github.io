@@ -7,6 +7,7 @@ import { DOIModal } from '@hieudoanm/components/modals/DOIModal';
 import { HouseModal } from '@hieudoanm/components/modals/HouseModal';
 import { IPModal } from '@hieudoanm/components/modals/IPModal';
 import { KaprekarModal } from '@hieudoanm/components/modals/KaprekarModal';
+import { MorseModal } from '@hieudoanm/components/modals/MorseModal';
 import { PomodoroModal } from '@hieudoanm/components/modals/PomodoroModal';
 import { QRCodeModal } from '@hieudoanm/components/modals/QRCodeModal';
 import { StringModal } from '@hieudoanm/components/modals/StringModal';
@@ -73,6 +74,7 @@ type ModalId =
   | 'doi'
   | 'house'
   | 'ip'
+  | 'morse'
   | 'kaprekar'
   | 'pomodoro'
   | 'qr'
@@ -163,6 +165,13 @@ const AppPage: NextPage = () => {
       emoji: '🔢',
       color: '#f59e0b',
       onClick: () => setActiveModal('kaprekar'),
+    },
+    {
+      label: 'Morse Code',
+      description: 'Converter',
+      emoji: '🔣',
+      color: '#f59e0b',
+      onClick: () => setActiveModal('morse'),
     },
     {
       label: 'Pomodoro',
@@ -323,6 +332,7 @@ const AppPage: NextPage = () => {
       {activeModal === 'house' && <HouseModal onClose={close} />}
       {activeModal === 'ip' && <IPModal onClose={close} />}
       {activeModal === 'kaprekar' && <KaprekarModal onClose={close} />}
+      {activeModal === 'morse' && <MorseModal onClose={close} />}
       {activeModal === 'pomodoro' && <PomodoroModal onClose={close} />}
       {activeModal === 'qr' && <QRCodeModal onClose={close} />}
       {activeModal === 'string' && <StringModal onClose={close} />}

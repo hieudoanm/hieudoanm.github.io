@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`CountdownModal should render 1`] = `
+<div>
+  <div
+    class="fixed inset-0 z-50 flex items-center justify-center p-4"
+    style="background: rgba(0, 0, 0, 0.6);"
+  >
+    <div
+      class="card bg-base-100 border-base-300 w-full max-w-lg border shadow-2xl"
+    >
+      <div
+        class="card-body gap-5 p-6"
+      >
+        <div
+          class="flex items-start justify-between"
+        >
+          <div>
+            <h2
+              class="text-lg font-black tracking-tight"
+            >
+              Countdown
+            </h2>
+            <p
+              class="text-base-content/40 mt-0.5 font-mono text-[10px] tracking-widest uppercase"
+            >
+              My Countdown
+            </p>
+          </div>
+          <div
+            class="flex items-center gap-2"
+          >
+            <button
+              class="btn btn-outline btn-xs font-mono tracking-widest "
+            >
+              Edit
+            </button>
+            <button
+              class="btn btn-ghost btn-xs btn-square text-base"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+        <div
+          class="bg-base-200 border-base-300 rounded-xl border p-4"
+        >
+          <div
+            class="grid grid-cols-6 gap-2 text-center"
+          >
+            <div
+              class="flex flex-col items-center gap-1"
+            >
+              <span
+                class="font-mono text-2xl leading-none font-black tabular-nums"
+              >
+                00
+              </span>
+              <span
+                class="text-base-content/30 font-mono text-[9px] tracking-widest uppercase"
+              >
+                yrs
+              </span>
+            </div>
+            <div
+              class="flex flex-col items-center gap-1"
+            >
+              <span
+                class="font-mono text-2xl leading-none font-black tabular-nums"
+              >
+                00
+              </span>
+              <span
+                class="text-base-content/30 font-mono text-[9px] tracking-widest uppercase"
+              >
+                mo
+              </span>
+            </div>
+            <div
+              class="flex flex-col items-center gap-1"
+            >
+              <span
+                class="font-mono text-2xl leading-none font-black tabular-nums"
+              >
+                07
+              </span>
+              <span
+                class="text-base-content/30 font-mono text-[9px] tracking-widest uppercase"
+              >
+                days
+              </span>
+            </div>
+            <div
+              class="flex flex-col items-center gap-1"
+            >
+              <span
+                class="font-mono text-2xl leading-none font-black tabular-nums"
+              >
+                00
+              </span>
+              <span
+                class="text-base-content/30 font-mono text-[9px] tracking-widest uppercase"
+              >
+                hrs
+              </span>
+            </div>
+            <div
+              class="flex flex-col items-center gap-1"
+            >
+              <span
+                class="font-mono text-2xl leading-none font-black tabular-nums"
+              >
+                00
+              </span>
+              <span
+                class="text-base-content/30 font-mono text-[9px] tracking-widest uppercase"
+              >
+                min
+              </span>
+            </div>
+            <div
+              class="flex flex-col items-center gap-1"
+            >
+              <span
+                class="font-mono text-2xl leading-none font-black tabular-nums"
+              >
+                00
+              </span>
+              <span
+                class="text-base-content/30 font-mono text-[9px] tracking-widest uppercase"
+              >
+                sec
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col gap-1.5"
+        >
+          <progress
+            class="progress progress-primary w-full"
+            max="100"
+            value="0"
+          />
+          <div
+            class="flex justify-between font-mono text-[10px] opacity-30"
+          >
+            <span>
+              Wed Apr 29 2026
+            </span>
+            <span>
+              0.0
+              %
+            </span>
+            <span>
+              Wed May 06 2026
+            </span>
+          </div>
+        </div>
+        <p
+          class="text-base-content/20 text-center font-mono text-[10px] tracking-widest uppercase"
+        >
+          Click outside to close · Edit to change title and dates
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
