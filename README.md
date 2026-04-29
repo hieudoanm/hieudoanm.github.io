@@ -1,16 +1,16 @@
 # 👨‍💻 I'm [HIEU DOAN][hieudoanm-gh-page]
 
-## 📚 Table of Contents (52)
+## 📚 Table of Contents (51)
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
-  - [📚 Table of Contents (52)](#-table-of-contents-52)
+  - [📚 Table of Contents (51)](#-table-of-contents-51)
   - [🤖 Artificial Intelligence (3)](#-artificial-intelligence-3)
   - [🛒 Commerce (1)](#-commerce-1)
   - [🎨 Design (3)](#-design-3)
   - [🛠️ DevTools (7)](#️-devtools-7)
   - [📄 Documents (2)](#-documents-2)
   - [💸 Finance (3)](#-finance-3)
-  - [🎉 Fun (10)](#-fun-10)
+  - [🎉 Fun (9)](#-fun-9)
   - [🎮 Games (7)](#-games-7)
   - [🌐 Languages (3)](#-languages-3)
   - [💬 Messaging (1)](#-messaging-1)
@@ -69,18 +69,17 @@
 
 ---
 
-## 🎉 Fun (10)
+## 🎉 Fun (9)
 
 1. 🌀 [Attractors][attractors] - [GitHub][attractors-gh]
 2. 🎭 [Breaking Bad][breaking-bad] - [GitHub][breaking-bad-gh]
 3. ⚫ [Dot][dot] - [GitHub][dot-gh]
-4. 🔍 [Emojis][emojis] - [GitHub][emojis-gh]
-5. 👀 [Eyes][eyes] - [GitHub][eyes-gh]
-6. ⌚ [Garmin][garmin] - [GitHub][garmin-gh]
-7. ⚖️ [Legislation][legislation] - [GitHub][legislation-gh]
-8. 🔁 [Palindrome][palindrome] - [GitHub][palindrome-gh]
-9. 📕 [Pokedex][pokedex] - [GitHub][pokedex-gh]
-10. 🔀 [Typoglycemia][typoglycemia] - [GitHub][typoglycemia-gh]
+4. 👀 [Eyes][eyes] - [GitHub][eyes-gh]
+5. ⌚ [Garmin][garmin] - [GitHub][garmin-gh]
+6. ⚖️ [Legislation][legislation] - [GitHub][legislation-gh]
+7. 🔁 [Palindrome][palindrome] - [GitHub][palindrome-gh]
+8. 📕 [Pokedex][pokedex] - [GitHub][pokedex-gh]
+9. 🔀 [Typoglycemia][typoglycemia] - [GitHub][typoglycemia-gh]
 
 ---
 
@@ -189,8 +188,6 @@
 [attractors-gh]: https://github.com/hieudoanm/attractors
 [dot]: https://hieudoanm.github.io/dot
 [dot-gh]: https://github.com/hieudoanm/dot
-[emojis]: https://hieudoanm.github.io/emojis
-[emojis-gh]: https://github.com/hieudoanm/emojis
 [eyes]: https://hieudoanm.github.io/eyes
 [eyes-gh]: https://github.com/hieudoanm/eyes
 [garmin]: https://hieudoanm.github.io/garmin
