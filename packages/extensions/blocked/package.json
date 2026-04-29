@@ -19,7 +19,8 @@
     "node": "25.9.0"
   },
   "scripts": {
-    "prebuild": "rimraf dist download/*.zip && pnpm run lint && pnpm run format",
+    "clean": "rimraf dist && rimraf \"download/*.zip\"",
+    "prebuild": "pnpm run clean && pnpm run lint && pnpm run format",
     "build": "webpack --config webpack.config.ts",
     "postbuild": "make build",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",

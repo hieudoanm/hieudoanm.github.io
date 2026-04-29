@@ -2,7 +2,7 @@ lint:
 	pnpm web-ext lint --source-dir ./dist
 
 build:
-	pnpm web-ext build --source-dir ./dist --artifacts-dir ./download
+	pnpm web-ext build --source-dir ./dist --artifacts-dir ./download --overwrite-dest
 
 sign:
 	@read -p "Enter WEB_EXT_API_KEY (JWT issuer): " API_KEY; \
