@@ -2,6 +2,7 @@ import { BookmarkCard } from '@hieudoanm/components/cards/BookmarkCard';
 import { Tool, ToolCard } from '@hieudoanm/components/cards/ToolCard';
 import { ColorsModal } from '@hieudoanm/components/modals/ColorsModal';
 import { CountdownModal } from '@hieudoanm/components/modals/CountdownModal';
+import { DOIModal } from '@hieudoanm/components/modals/DOIModal';
 import { HouseModal } from '@hieudoanm/components/modals/HouseModal';
 import { KaprekarModal } from '@hieudoanm/components/modals/KaprekarModal';
 import { QRCodeModal } from '@hieudoanm/components/modals/QRCodeModal';
@@ -21,6 +22,7 @@ import { useEffect, useState } from 'react';
 type ModalId =
   | 'colors'
   | 'countdown'
+  | 'doi'
   | 'house'
   | 'kaprekar'
   | 'qr'
@@ -80,6 +82,13 @@ const AppPage: NextPage = () => {
       emoji: '⏳',
       color: '#06b6d4',
       onClick: () => setActiveModal('countdown'),
+    },
+    {
+      label: 'DOI',
+      description: 'Cite',
+      emoji: '📄',
+      color: '#3b82f6',
+      onClick: () => setActiveModal('doi'),
     },
     {
       label: 'House',
@@ -178,6 +187,7 @@ const AppPage: NextPage = () => {
       {/* ── Modals ── */}
       {activeModal === 'colors' && <ColorsModal onClose={close} />}
       {activeModal === 'countdown' && <CountdownModal onClose={close} />}
+      {activeModal === 'doi' && <DOIModal onClose={close} />}
       {activeModal === 'house' && <HouseModal onClose={close} />}
       {activeModal === 'kaprekar' && <KaprekarModal onClose={close} />}
       {activeModal === 'qr' && <QRCodeModal onClose={close} />}

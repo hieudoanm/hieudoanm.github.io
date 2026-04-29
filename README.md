@@ -1,9 +1,9 @@
 # 👨‍💻 I'm [HIEU DOAN][hieudoanm-gh-page]
 
-## 📚 Table of Contents (Apps: 62)
+## 📚 Table of Contents (Apps: 61)
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
-  - [📚 Table of Contents (Apps: 62)](#-table-of-contents-apps-62)
+  - [📚 Table of Contents (Apps: 61)](#-table-of-contents-apps-61)
   - [🤖 Artificial Intelligence (3)](#-artificial-intelligence-3)
   - [🛒 Commerce (1)](#-commerce-1)
   - [🎨 Design (3)](#-design-3)
@@ -14,9 +14,8 @@
   - [🎮 Games (7)](#-games-7)
   - [🌐 Languages (3)](#-languages-3)
   - [💬 Messaging (1)](#-messaging-1)
-  - [🚀 Productivity (2)](#-productivity-2)
   - [📦 Templates (1)](#-templates-1)
-  - [🔧 Utilities (9)](#-utilities-9)
+  - [🔧 Utilities (10)](#-utilities-10)
   - [💼 Workspace (6)](#-workspace-6)
 
 ---
@@ -115,30 +114,24 @@
 
 ---
 
-## 🚀 Productivity (2)
-
-1. 🔖 [DOI][doi] - [GitHub][doi-gh]
-2. 🍅 [Pomodoro][pomodoro] - [GitHub][pomodoro-gh]
-
----
-
 ## 📦 Templates (1)
 
 1. 🚀 [Start][start] - [GitHub][start-gh]
 
 ---
 
-## 🔧 Utilities (9)
+## 🔧 Utilities (10)
 
 1. 🐚 [Bash][bash] - [GitHub][bash-gh]
 2. 🧮 [Calculator][calculator] - [GitHub][calculator-gh]
 3. 📋 [Clipboard][clipboard] - [GitHub][clipboard-gh]
 4. 📱 [InstaSize][instasize] - [GitHub][instasize-gh]
 5. 🌐 [IP][ip] - [GitHub][ip-gh]
-6. 📸 [Snapshot][snapshot] - [GitHub][snapshot-gh]
-7. 🖥️ [System][system] - [GitHub][system-gh]
-8. 📝 [Transcript][transcript] - [GitHub][transcript-gh]
-9. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
+6. 🍅 [Pomodoro][pomodoro] - [GitHub][pomodoro-gh]
+7. 📸 [Snapshot][snapshot] - [GitHub][snapshot-gh]
+8. 🖥️ [System][system] - [GitHub][system-gh]
+9. 📝 [Transcript][transcript] - [GitHub][transcript-gh]
+10. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
 
 ---
 
@@ -167,8 +160,6 @@
 [shopify-detect]: https://hieudoanm.github.io/shopify.detect
 [shopify-detect-gh]: https://github.com/hieudoanm/shopify.detect
 
-[colors]: https://hieudoanm.github.io/colors
-[colors-gh]: https://github.com/hieudoanm/colors
 [composition]: https://hieudoanm.github.io/composition
 [composition-gh]: https://github.com/hieudoanm/composition
 [filter]: https://hieudoanm.github.io/filter
@@ -258,11 +249,6 @@
 [breaking-bad]: https://hieudoanm.github.io/breaking.bad
 [breaking-bad-gh]: https://github.com/hieudoanm/breaking.bad
 
-[doi]: https://hieudoanm.github.io/doi
-[doi-gh]: https://github.com/hieudoanm/doi
-[pomodoro]: https://hieudoanm.github.io/pomodoro
-[pomodoro-gh]: https://github.com/hieudoanm/pomodoro
-
 [start]: https://hieudoanm.github.io/start
 [start-gh]: https://github.com/hieudoanm/start
 
@@ -276,6 +262,8 @@
 [instasize-gh]: https://github.com/hieudoanm/instasize
 [ip]: https://hieudoanm.github.io/ip
 [ip-gh]: https://github.com/hieudoanm/ip
+[pomodoro]: https://hieudoanm.github.io/pomodoro
+[pomodoro-gh]: https://github.com/hieudoanm/pomodoro
 [snapshot]: https://hieudoanm.github.io/snapshot
 [snapshot-gh]: https://github.com/hieudoanm/snapshot
 [system]: https://hieudoanm.github.io/system
