@@ -7,6 +7,7 @@ import { DOIModal } from '@hieudoanm/components/modals/DOIModal';
 import { HouseModal } from '@hieudoanm/components/modals/HouseModal';
 import { IPModal } from '@hieudoanm/components/modals/IPModal';
 import { KaprekarModal } from '@hieudoanm/components/modals/KaprekarModal';
+import { PomodoroModal } from '@hieudoanm/components/modals/PomodoroModal';
 import { QRCodeModal } from '@hieudoanm/components/modals/QRCodeModal';
 import { StringModal } from '@hieudoanm/components/modals/StringModal';
 import { UUIDModal } from '@hieudoanm/components/modals/UUIDModal';
@@ -73,6 +74,7 @@ type ModalId =
   | 'house'
   | 'ip'
   | 'kaprekar'
+  | 'pomodoro'
   | 'qr'
   | 'string'
   | 'uuid'
@@ -161,6 +163,13 @@ const AppPage: NextPage = () => {
       emoji: '🔢',
       color: '#f59e0b',
       onClick: () => setActiveModal('kaprekar'),
+    },
+    {
+      label: 'Pomodoro',
+      description: 'Timer',
+      emoji: '🍅',
+      color: '#ef4444',
+      onClick: () => setActiveModal('pomodoro'),
     },
     {
       label: 'QR Code',
@@ -314,6 +323,7 @@ const AppPage: NextPage = () => {
       {activeModal === 'house' && <HouseModal onClose={close} />}
       {activeModal === 'ip' && <IPModal onClose={close} />}
       {activeModal === 'kaprekar' && <KaprekarModal onClose={close} />}
+      {activeModal === 'pomodoro' && <PomodoroModal onClose={close} />}
       {activeModal === 'qr' && <QRCodeModal onClose={close} />}
       {activeModal === 'string' && <StringModal onClose={close} />}
       {activeModal === 'uuid' && <UUIDModal onClose={close} />}

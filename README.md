@@ -1,9 +1,9 @@
 # 👨‍💻 I'm [HIEU DOAN][hieudoanm-gh-page]
 
-## 📚 Table of Contents (Apps: 60)
+## 📚 Table of Contents (Apps: 59)
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
-  - [📚 Table of Contents (Apps: 60)](#-table-of-contents-apps-60)
+  - [📚 Table of Contents (Apps: 59)](#-table-of-contents-apps-59)
   - [🤖 Artificial Intelligence (3)](#-artificial-intelligence-3)
   - [🛒 Commerce (1)](#-commerce-1)
   - [🎨 Design (3)](#-design-3)
@@ -15,7 +15,7 @@
   - [🌐 Languages (3)](#-languages-3)
   - [💬 Messaging (1)](#-messaging-1)
   - [📦 Templates (1)](#-templates-1)
-  - [🔧 Utilities (9)](#-utilities-9)
+  - [🔧 Utilities (8)](#-utilities-8)
   - [💼 Workspace (6)](#-workspace-6)
 
 ---
@@ -120,17 +120,16 @@
 
 ---
 
-## 🔧 Utilities (9)
+## 🔧 Utilities (8)
 
 1. 🐚 [Bash][bash] - [GitHub][bash-gh]
 2. 🧮 [Calculator][calculator] - [GitHub][calculator-gh]
 3. 📋 [Clipboard][clipboard] - [GitHub][clipboard-gh]
 4. 📱 [InstaSize][instasize] - [GitHub][instasize-gh]
-5. 🍅 [Pomodoro][pomodoro] - [GitHub][pomodoro-gh]
-6. 📸 [Snapshot][snapshot] - [GitHub][snapshot-gh]
-7. 🖥️ [System][system] - [GitHub][system-gh]
-8. 📝 [Transcript][transcript] - [GitHub][transcript-gh]
-9. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
+5. 📸 [Snapshot][snapshot] - [GitHub][snapshot-gh]
+6. 🖥️ [System][system] - [GitHub][system-gh]
+7. 📝 [Transcript][transcript] - [GitHub][transcript-gh]
+8. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
 
 ---
 
@@ -259,8 +258,6 @@
 [clipboard-gh]: https://github.com/hieudoanm/clipboard
 [instasize]: https://hieudoanm.github.io/instasize
 [instasize-gh]: https://github.com/hieudoanm/instasize
-[pomodoro]: https://hieudoanm.github.io/pomodoro
-[pomodoro-gh]: https://github.com/hieudoanm/pomodoro
 [snapshot]: https://hieudoanm.github.io/snapshot
 [snapshot-gh]: https://github.com/hieudoanm/snapshot
 [system]: https://hieudoanm.github.io/system
