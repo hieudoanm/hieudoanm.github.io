@@ -1,3 +1,5 @@
+import { BookmarkItem } from '@hieudoanm/components/cards/BookmarkCard';
+
 export const bookmarks = [
   {
     label: 'GitHub',
@@ -29,20 +31,14 @@ export const bookmarks = [
   },
 ];
 
-export const aiBookmarks = [
-  {
-    label: 'ChatGPT',
-    url: 'https://chatgpt.com',
-    description: 'OpenAI',
-    emoji: '🤖',
-    color: '#10a37f',
-  },
+export const aiBookmarks: BookmarkItem[] = [
   {
     label: 'Claude',
     url: 'https://claude.ai/',
     description: 'Anthropic',
     emoji: '✦',
     color: '#d97757',
+    badge: 'Coding',
   },
   {
     label: 'Perplexity',
@@ -50,6 +46,15 @@ export const aiBookmarks = [
     description: 'AI Search',
     emoji: '🔍',
     color: '#20b2aa',
+    badge: 'Research',
+  },
+  {
+    label: 'ChatGPT',
+    url: 'https://chatgpt.com',
+    description: 'OpenAI',
+    emoji: '🤖',
+    color: '#10a37f',
+    badge: 'Writing',
   },
   {
     label: 'Gemini',
