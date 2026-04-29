@@ -1,6 +1,7 @@
 // app/page.tsx (or pages/index.tsx)
 import { BookmarkCard } from '@hieudoanm/components/cards/BookmarkCard';
 import { Tool, ToolCard } from '@hieudoanm/components/cards/ToolCard';
+import { BrailleModal } from '@hieudoanm/components/modals/BrailleModal';
 import { ColorsModal } from '@hieudoanm/components/modals/ColorsModal';
 import { CountdownModal } from '@hieudoanm/components/modals/CountdownModal';
 import { DOIModal } from '@hieudoanm/components/modals/DOIModal';
@@ -72,6 +73,7 @@ const MainContent: FC<{ today: string; tools: Tool[] }> = ({
 );
 
 type ModalId =
+  | 'braille'
   | 'colors'
   | 'countdown'
   | 'doi'
@@ -127,6 +129,13 @@ const AppPage: NextPage = () => {
   });
 
   const tools: Tool[] = [
+    {
+      label: 'Braille',
+      description: 'Converter',
+      emoji: '⠿',
+      color: '#8b5cf6',
+      onClick: () => setActiveModal('braille'),
+    },
     {
       label: 'Colors',
       description: 'Picker',
@@ -329,6 +338,7 @@ const AppPage: NextPage = () => {
       </div>
 
       {/* ── Modals (shared across both layouts) ── */}
+      {activeModal === 'braille' && <BrailleModal onClose={close} />}
       {activeModal === 'colors' && <ColorsModal onClose={close} />}
       {activeModal === 'countdown' && <CountdownModal onClose={close} />}
       {activeModal === 'doi' && <DOIModal onClose={close} />}

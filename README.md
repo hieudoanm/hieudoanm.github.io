@@ -1,16 +1,16 @@
 # 👨‍💻 I'm [HIEU DOAN][hieudoanm-gh-page]
 
-## 📚 Table of Contents (Apps: 56)
+## 📚 Table of Contents (Apps: 55)
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
-  - [📚 Table of Contents (Apps: 56)](#-table-of-contents-apps-56)
+  - [📚 Table of Contents (Apps: 55)](#-table-of-contents-apps-55)
   - [🤖 Artificial Intelligence (3)](#-artificial-intelligence-3)
   - [🛒 Commerce (1)](#-commerce-1)
   - [🎨 Design (3)](#-design-3)
   - [🛠️ DevTools (7)](#️-devtools-7)
   - [📄 Documents (2)](#-documents-2)
   - [💸 Finance (3)](#-finance-3)
-  - [🎉 Fun (12)](#-fun-12)
+  - [🎉 Fun (11)](#-fun-11)
   - [🎮 Games (7)](#-games-7)
   - [🌐 Languages (3)](#-languages-3)
   - [💬 Messaging (1)](#-messaging-1)
@@ -69,20 +69,19 @@
 
 ---
 
-## 🎉 Fun (12)
+## 🎉 Fun (11)
 
 1. 🌀 [Attractors][attractors] - [GitHub][attractors-gh]
-2. 🚹 [Braille][braille] - [GitHub][braille-gh]
-3. 🎭 [Breaking Bad][breaking-bad] - [GitHub][breaking-bad-gh]
-4. 🌍 [Countries][countries] - [GitHub][countries-gh]
-5. ⚫ [Dot][dot] - [GitHub][dot-gh]
-6. 🔍 [Emojis][emojis] - [GitHub][emojis-gh]
-7. 👀 [Eyes][eyes] - [GitHub][eyes-gh]
-8. ⌚ [Garmin][garmin] - [GitHub][garmin-gh]
-9. ⚖️ [Legislation][legislation] - [GitHub][legislation-gh]
-10. 🔁 [Palindrome][palindrome] - [GitHub][palindrome-gh]
-11. 📕 [Pokedex][pokedex] - [GitHub][pokedex-gh]
-12. 🔀 [Typoglycemia][typoglycemia] - [GitHub][typoglycemia-gh]
+2. 🎭 [Breaking Bad][breaking-bad] - [GitHub][breaking-bad-gh]
+3. 🌍 [Countries][countries] - [GitHub][countries-gh]
+4. ⚫ [Dot][dot] - [GitHub][dot-gh]
+5. 🔍 [Emojis][emojis] - [GitHub][emojis-gh]
+6. 👀 [Eyes][eyes] - [GitHub][eyes-gh]
+7. ⌚ [Garmin][garmin] - [GitHub][garmin-gh]
+8. ⚖️ [Legislation][legislation] - [GitHub][legislation-gh]
+9. 🔁 [Palindrome][palindrome] - [GitHub][palindrome-gh]
+10. 📕 [Pokedex][pokedex] - [GitHub][pokedex-gh]
+11. 🔀 [Typoglycemia][typoglycemia] - [GitHub][typoglycemia-gh]
 
 ---
 
@@ -191,8 +190,6 @@
 
 [attractors]: https://hieudoanm.github.io/attractors
 [attractors-gh]: https://github.com/hieudoanm/attractors
-[braille]: https://hieudoanm.github.io/braille
-[braille-gh]: https://github.com/hieudoanm/braille
 [countries]: https://hieudoanm.github.io/countries
 [countries-gh]: https://github.com/hieudoanm/countries
 [dot]: https://hieudoanm.github.io/dot
