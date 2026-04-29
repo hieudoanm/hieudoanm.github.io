@@ -1,9 +1,9 @@
 # 👨‍💻 I'm [HIEU DOAN][hieudoanm-gh-page]
 
-## 📚 Table of Contents (Apps: 58)
+## 📚 Table of Contents (Apps: 57)
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
-  - [📚 Table of Contents (Apps: 58)](#-table-of-contents-apps-58)
+  - [📚 Table of Contents (Apps: 57)](#-table-of-contents-apps-57)
   - [🤖 Artificial Intelligence (3)](#-artificial-intelligence-3)
   - [🛒 Commerce (1)](#-commerce-1)
   - [🎨 Design (3)](#-design-3)
@@ -16,7 +16,7 @@
   - [💬 Messaging (1)](#-messaging-1)
   - [📦 Templates (1)](#-templates-1)
   - [🔧 Utilities (8)](#-utilities-8)
-  - [💼 Workspace (6)](#-workspace-6)
+  - [💼 Workspace (5)](#-workspace-5)
 
 ---
 
@@ -132,14 +132,13 @@
 
 ---
 
-## 💼 Workspace (6)
+## 💼 Workspace (5)
 
-1. 📅 [Calendar][calendar] - [GitHub][calendar-gh]
-2. 📑 [Docs][docs] - [GitHub][docs-gh]
-3. 💡 [Keep][keep] - [GitHub][keep-gh]
-4. 📊 [Sheets][sheets] - [GitHub][sheets-gh]
-5. 🖥️ [Slides][slides] - [GitHub][slides-gh]
-6. ✅ [Tasks][tasks] - [GitHub][tasks-gh]
+1. 📑 [Docs][docs] - [GitHub][docs-gh]
+2. 💡 [Keep][keep] - [GitHub][keep-gh]
+3. 📊 [Sheets][sheets] - [GitHub][sheets-gh]
+4. 🖥️ [Slides][slides] - [GitHub][slides-gh]
+5. ✅ [Tasks][tasks] - [GitHub][tasks-gh]
 
 ---
 
@@ -264,8 +263,6 @@
 [wifi]: https://hieudoanm.github.io/wifi
 [wifi-gh]: https://github.com/hieudoanm/wifi
 
-[calendar]: https://hieudoanm.github.io/calendar
-[calendar-gh]: https://github.com/hieudoanm/calendar
 [docs]: https://hieudoanm.github.io/docs
 [docs-gh]: https://github.com/hieudoanm/docs
 [keep]: https://hieudoanm.github.io/keep
