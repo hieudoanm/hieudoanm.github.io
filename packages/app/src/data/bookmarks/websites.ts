@@ -35,10 +35,24 @@ export const websites = [
     color: '#4285f4',
   },
   {
+    label: 'Gmail',
+    url: 'https://gmail.com',
+    description: 'Email',
+    emoji: '📧',
+    color: '#d93025',
+  },
+  {
     label: 'Google Maps',
     url: 'https://maps.google.com',
     description: 'Maps',
     emoji: '🗺️',
+    color: '#4285f4',
+  },
+  {
+    label: 'Google Tasks',
+    url: 'https://tasks.google.com',
+    description: 'Tasks',
+    emoji: '✅',
     color: '#4285f4',
   },
   {
