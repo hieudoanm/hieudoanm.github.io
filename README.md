@@ -1,9 +1,9 @@
 # 👨‍💻 I'm [HIEU DOAN][hieudoanm-gh-page]
 
-## 📚 Table of Contents (51)
+## 📚 Table of Contents (50)
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
-  - [📚 Table of Contents (51)](#-table-of-contents-51)
+  - [📚 Table of Contents (50)](#-table-of-contents-50)
   - [🤖 Artificial Intelligence (3)](#-artificial-intelligence-3)
   - [🛒 Commerce (1)](#-commerce-1)
   - [🎨 Design (3)](#-design-3)
@@ -11,7 +11,7 @@
   - [📄 Documents (2)](#-documents-2)
   - [💸 Finance (3)](#-finance-3)
   - [🎉 Fun (9)](#-fun-9)
-  - [🎮 Games (7)](#-games-7)
+  - [🎮 Games (6)](#-games-6)
   - [🌐 Languages (3)](#-languages-3)
   - [💬 Messaging (1)](#-messaging-1)
   - [📦 Templates (1)](#-templates-1)
@@ -83,15 +83,14 @@
 
 ---
 
-## 🎮 Games (7)
+## 🎮 Games (6)
 
 1. 🃏 [Cards][cards] - [GitHub][cards-gh]
 2. ♟️ [Chess][chess] - [GitHub][chess-gh]
 3. 🧠 [Memory][memory] - [GitHub][memory-gh]
 4. ❓ [Quiz][quiz] - [GitHub][quiz-gh]
-5. ⭕ [T3][t3] - [GitHub][t3-gh]
-6. 🏰 [Towers][towers] - [GitHub][towers-gh]
-7. 🔤 [Wordle][wordle] - [GitHub][wordle-gh]
+5. 🏰 [Towers][towers] - [GitHub][towers-gh]
+6. 🔤 [Wordle][wordle] - [GitHub][wordle-gh]
 
 ---
 
@@ -209,8 +208,6 @@
 [quiz-gh]: https://github.com/hieudoanm/quiz
 [memory]: https://hieudoanm.github.io/memory
 [memory-gh]: https://github.com/hieudoanm/memory
-[t3]: https://hieudoanm.github.io/t3
-[t3-gh]: https://github.com/hieudoanm/t3
 [towers]: https://hieudoanm.github.io/towers
 [towers-gh]: https://github.com/hieudoanm/towers
 [wordle]: https://hieudoanm.github.io/wordle

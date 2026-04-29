@@ -14,6 +14,7 @@ import { PomodoroModal } from '@hieudoanm/components/modals/apps/PomodoroModal';
 import { QRCodeModal } from '@hieudoanm/components/modals/apps/QRCodeModal';
 import { StringModal } from '@hieudoanm/components/modals/apps/StringModal';
 import { UUIDModal } from '@hieudoanm/components/modals/apps/UUIDModal';
+import { T3Modal } from '@hieudoanm/components/modals/games/T3Modal';
 import { LeftSidebar } from '@hieudoanm/components/sidebars/LeftSidebar';
 import { RightSidebar } from '@hieudoanm/components/sidebars/RightSidebar';
 import {
@@ -29,9 +30,10 @@ import { FC, useEffect, useState } from 'react';
 
 // ── Extracted to avoid duplicating the center column JSX ──────────────────────
 
-const MainContent: FC<{ today: string; tools: Tool[] }> = ({
+const MainContent: FC<{ today: string; tools: Tool[]; games: Tool[] }> = ({
   today = '',
   tools = [],
+  games = [],
 }) => (
   <main className="flex flex-col items-center overflow-y-auto px-8 py-12">
     <p className="text-base-content/30 mb-2 font-mono text-xs tracking-widest uppercase">
@@ -50,7 +52,7 @@ const MainContent: FC<{ today: string; tools: Tool[] }> = ({
       </div>
     </section>
 
-    <section aria-label="Google Workspace" className="w-full max-w-2xl">
+    <section aria-label="Google Workspace" className="mt-10 w-full max-w-2xl">
       <p className="text-base-content/30 mb-4 text-center font-mono text-xs tracking-widest uppercase">
         Google Workspace
       </p>
@@ -82,10 +84,21 @@ const MainContent: FC<{ today: string; tools: Tool[] }> = ({
         ))}
       </div>
     </section>
+
+    <section aria-label="Games" className="mt-10 w-full max-w-2xl">
+      <p className="text-base-content/30 mb-4 text-center font-mono text-xs tracking-widest uppercase">
+        Games
+      </p>
+      <div className="grid grid-cols-4 gap-4">
+        {games.map((game) => (
+          <ToolCard key={game.label} {...game} />
+        ))}
+      </div>
+    </section>
   </main>
 );
 
-type ModalId =
+type AppModalId =
   | 'braille'
   | 'colors'
   | 'countdown'
@@ -100,6 +113,10 @@ type ModalId =
   | 'string'
   | 'uuid'
   | null;
+
+type GameModalId = 't3';
+
+type ModalId = AppModalId | GameModalId;
 
 type SidebarTab = 'status' | 'clock' | null;
 
@@ -236,6 +253,16 @@ const AppPage: NextPage = () => {
     },
   ];
 
+  const games: Tool[] = [
+    {
+      label: 'T3',
+      description: 'Tic-Tac-Toe',
+      emoji: '❌',
+      color: '#f59e0b',
+      onClick: () => setActiveModal('t3'),
+    },
+  ];
+
   return (
     <div className="bg-base-100 text-base-content min-h-screen">
       {/* ── Desktop: 3-column grid, hidden on mobile ── */}
@@ -243,7 +270,7 @@ const AppPage: NextPage = () => {
         className="hidden h-screen overflow-hidden lg:grid"
         style={{ gridTemplateColumns: '280px 2fr 320px' }}>
         <LeftSidebar />
-        <MainContent today={today} tools={tools} />
+        <MainContent today={today} tools={tools} games={games} />
         <RightSidebar times={times} weatherQueries={weatherQueries} />
       </div>
 
@@ -273,7 +300,7 @@ const AppPage: NextPage = () => {
 
           <section
             aria-label="Google Workspace"
-            className="mx-auto w-full max-w-2xl">
+            className="mx-auto mt-8 w-full max-w-2xl">
             <p className="text-base-content/30 mb-4 text-center font-mono text-xs tracking-widest uppercase">
               Google Workspace
             </p>
@@ -304,6 +331,17 @@ const AppPage: NextPage = () => {
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
               {tools.map((tool) => (
                 <ToolCard key={tool.label} {...tool} />
+              ))}
+            </div>
+          </section>
+
+          <section aria-label="Games" className="mx-auto mt-8 w-full max-w-2xl">
+            <p className="text-base-content/30 mb-4 text-center font-mono text-xs tracking-widest uppercase">
+              Games
+            </p>
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+              {games.map((game) => (
+                <ToolCard key={game.label} {...game} />
               ))}
             </div>
           </section>
@@ -371,7 +409,7 @@ const AppPage: NextPage = () => {
         )}
       </div>
 
-      {/* ── Modals (shared across both layouts) ── */}
+      {/* ── App Modals (shared across both layouts) ── */}
       {activeModal === 'braille' && <BrailleModal onClose={close} />}
       {activeModal === 'colors' && <ColorsModal onClose={close} />}
       {activeModal === 'countdown' && <CountdownModal onClose={close} />}
@@ -385,6 +423,9 @@ const AppPage: NextPage = () => {
       {activeModal === 'qr' && <QRCodeModal onClose={close} />}
       {activeModal === 'string' && <StringModal onClose={close} />}
       {activeModal === 'uuid' && <UUIDModal onClose={close} />}
+
+      {/* ── Game Modals (shared across both layouts) ── */}
+      {activeModal === 't3' && <T3Modal onClose={close} />}
     </div>
   );
 };
