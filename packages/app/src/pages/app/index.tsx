@@ -18,6 +18,7 @@ import { LeftSidebar } from '@hieudoanm/components/sidebars/LeftSidebar';
 import { RightSidebar } from '@hieudoanm/components/sidebars/RightSidebar';
 import {
   ai as aiBookmarks,
+  google as googleBookmarks,
   websites as websiteBookmarks,
 } from '@hieudoanm/data/bookmarks';
 import { getTimeInZone, timezones } from '@hieudoanm/data/timezones';
@@ -44,6 +45,17 @@ const MainContent: FC<{ today: string; tools: Tool[] }> = ({
       </p>
       <div className="grid grid-cols-4 gap-4">
         {aiBookmarks.map((bm) => (
+          <BookmarkCard key={bm.label} {...bm} />
+        ))}
+      </div>
+    </section>
+
+    <section aria-label="Google Workspace" className="w-full max-w-2xl">
+      <p className="text-base-content/30 mb-4 text-center font-mono text-xs tracking-widest uppercase">
+        Google Workspace
+      </p>
+      <div className="grid grid-cols-4 gap-4">
+        {googleBookmarks.map((bm) => (
           <BookmarkCard key={bm.label} {...bm} />
         ))}
       </div>
@@ -254,6 +266,19 @@ const AppPage: NextPage = () => {
             </p>
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
               {aiBookmarks.map((bm) => (
+                <BookmarkCard key={bm.label} {...bm} />
+              ))}
+            </div>
+          </section>
+
+          <section
+            aria-label="Google Workspace"
+            className="mx-auto w-full max-w-2xl">
+            <p className="text-base-content/30 mb-4 text-center font-mono text-xs tracking-widest uppercase">
+              Google Workspace
+            </p>
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+              {googleBookmarks.map((bm) => (
                 <BookmarkCard key={bm.label} {...bm} />
               ))}
             </div>
