@@ -5,7 +5,6 @@
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
   - [📚 Table of Contents (49)](#-table-of-contents-49)
   - [🤖 Artificial Intelligence (3)](#-artificial-intelligence-3)
-  - [🛒 Commerce (1)](#-commerce-1)
   - [🎨 Design (3)](#-design-3)
   - [🛠️ DevTools (7)](#️-devtools-7)
   - [📄 Documents (2)](#-documents-2)
@@ -15,7 +14,7 @@
   - [🌐 Languages (3)](#-languages-3)
   - [💬 Messaging (1)](#-messaging-1)
   - [📦 Templates (1)](#-templates-1)
-  - [🔧 Utilities (7)](#-utilities-7)
+  - [🔧 Utilities (8)](#-utilities-8)
   - [💼 Workspace (4)](#-workspace-4)
 
 ---
@@ -25,12 +24,6 @@
 1. 🧠 [Distilled][distilled] - [GitHub][distilled-gh]
 2. 👨‍💻 [Hieu Doan][hieudoanm] - [GitHub][hieudoanm-gh]
 3. ⚡ [Promptly][promptly] - [GitHub][promptly-gh]
-
----
-
-## 🛒 Commerce (1)
-
-1. 🛍️ [Shopify Detect][shopify-detect] - [GitHub][shopify-detect-gh]
 
 ---
 
@@ -113,15 +106,16 @@
 
 ---
 
-## 🔧 Utilities (7)
+## 🔧 Utilities (8)
 
 1. 🧮 [Calculator][calculator] - [GitHub][calculator-gh]
 2. 📋 [Clipboard][clipboard] - [GitHub][clipboard-gh]
 3. 📱 [InstaSize][instasize] - [GitHub][instasize-gh]
-4. 📸 [Snapshot][snapshot] - [GitHub][snapshot-gh]
-5. 🖥️ [System][system] - [GitHub][system-gh]
-6. 📝 [Transcript][transcript] - [GitHub][transcript-gh]
-7. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
+4. 🛍️ [Shopify Detect][shopify-detect] - [GitHub][shopify-detect-gh]
+5. 📸 [Snapshot][snapshot] - [GitHub][snapshot-gh]
+6. 🖥️ [System][system] - [GitHub][system-gh]
+7. 📝 [Transcript][transcript] - [GitHub][transcript-gh]
+8. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
 
 ---
 
@@ -144,9 +138,6 @@
 [hieudoanm-gh]: https://github.com/hieudoanm/hieudoanm
 [promptly]: https://hieudoanm.github.io/promptly
 [promptly-gh]: https://github.com/hieudoanm/promptly
-
-[shopify-detect]: https://hieudoanm.github.io/shopify.detect
-[shopify-detect-gh]: https://github.com/hieudoanm/shopify.detect
 
 [composition]: https://hieudoanm.github.io/composition
 [composition-gh]: https://github.com/hieudoanm/composition
@@ -232,6 +223,8 @@
 [clipboard-gh]: https://github.com/hieudoanm/clipboard
 [instasize]: https://hieudoanm.github.io/instasize
 [instasize-gh]: https://github.com/hieudoanm/instasize
+[shopify-detect]: https://hieudoanm.github.io/shopify.detect
+[shopify-detect-gh]: https://github.com/hieudoanm/shopify.detect
 [snapshot]: https://hieudoanm.github.io/snapshot
 [snapshot-gh]: https://github.com/hieudoanm/snapshot
 [system]: https://hieudoanm.github.io/system
