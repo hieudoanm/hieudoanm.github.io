@@ -1,9 +1,9 @@
 # 👨‍💻 I'm [HIEU DOAN][hieudoanm-gh-page]
 
-## 📚 Table of Contents (49)
+## 📚 Table of Contents (48)
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
-  - [📚 Table of Contents (49)](#-table-of-contents-49)
+  - [📚 Table of Contents (48)](#-table-of-contents-48)
   - [🤖 Artificial Intelligence (3)](#-artificial-intelligence-3)
   - [🎨 Design (3)](#-design-3)
   - [🛠️ DevTools (7)](#️-devtools-7)
@@ -11,7 +11,7 @@
   - [💸 Finance (3)](#-finance-3)
   - [🎉 Fun (9)](#-fun-9)
   - [🎮 Games (5)](#-games-5)
-  - [🌐 Languages (3)](#-languages-3)
+  - [🌐 Languages (2)](#-languages-2)
   - [💬 Messaging (1)](#-messaging-1)
   - [📦 Templates (1)](#-templates-1)
   - [🔧 Utilities (8)](#-utilities-8)
@@ -86,11 +86,10 @@
 
 ---
 
-## 🌐 Languages (3)
+## 🌐 Languages (2)
 
 1. 🇬🇧 [English][english] - [GitHub][english-gh]
-2. 🃏 [Flashcards][flashcards] - [GitHub][flashcards-gh]
-3. 🤟 [Sign][sign] - [GitHub][sign-gh]
+2. 🤟 [Sign][sign] - [GitHub][sign-gh]
 
 ---
 
@@ -203,8 +202,6 @@
 
 [english]: https://hieudoanm.github.io/english
 [english-gh]: https://github.com/hieudoanm/english
-[flashcards]: https://hieudoanm.github.io/flashcards
-[flashcards-gh]: https://github.com/hieudoanm/flashcards
 [sign]: https://hieudoanm.github.io/sign
 [sign-gh]: https://github.com/hieudoanm/sign
 

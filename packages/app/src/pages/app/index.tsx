@@ -6,6 +6,7 @@ import { ColorsModal } from '@hieudoanm/components/modals/apps/ColorsModal';
 import { CountdownModal } from '@hieudoanm/components/modals/apps/CountdownModal';
 import { DOIModal } from '@hieudoanm/components/modals/apps/DOIModal';
 import { EmojisModal } from '@hieudoanm/components/modals/apps/EmojisModal';
+import { FlashcardsModal } from '@hieudoanm/components/modals/apps/FlashcardsModal';
 import { HouseModal } from '@hieudoanm/components/modals/apps/HouseModal';
 import { IPModal } from '@hieudoanm/components/modals/apps/IPModal';
 import { KaprekarModal } from '@hieudoanm/components/modals/apps/KaprekarModal';
@@ -105,6 +106,7 @@ type AppModalId =
   | 'countdown'
   | 'doi'
   | 'emojis'
+  | 'flashcards'
   | 'house'
   | 'ip'
   | 'morse'
@@ -194,6 +196,13 @@ const AppPage: NextPage = () => {
       emoji: '😀',
       color: '#f59e0b',
       onClick: () => setActiveModal('emojis'),
+    },
+    {
+      label: 'Flashcards',
+      description: 'Words',
+      emoji: '📓',
+      color: '#fefefe',
+      onClick: () => setActiveModal('flashcards'),
     },
     {
       label: 'House',
@@ -422,6 +431,7 @@ const AppPage: NextPage = () => {
       {activeModal === 'countdown' && <CountdownModal onClose={close} />}
       {activeModal === 'doi' && <DOIModal onClose={close} />}
       {activeModal === 'emojis' && <EmojisModal onClose={close} />}
+      {activeModal === 'flashcards' && <FlashcardsModal onClose={close} />}
       {activeModal === 'house' && <HouseModal onClose={close} />}
       {activeModal === 'ip' && <IPModal onClose={close} />}
       {activeModal === 'kaprekar' && <KaprekarModal onClose={close} />}
