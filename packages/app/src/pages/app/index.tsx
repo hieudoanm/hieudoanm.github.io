@@ -1,20 +1,21 @@
 // app/page.tsx (or pages/index.tsx)
 import { BookmarkCard } from '@hieudoanm/components/cards/BookmarkCard';
 import { Tool, ToolCard } from '@hieudoanm/components/cards/ToolCard';
-import { BrailleModal } from '@hieudoanm/components/modals/BrailleModal';
-import { ColorsModal } from '@hieudoanm/components/modals/ColorsModal';
-import { CountdownModal } from '@hieudoanm/components/modals/CountdownModal';
-import { DOIModal } from '@hieudoanm/components/modals/DOIModal';
-import { HouseModal } from '@hieudoanm/components/modals/HouseModal';
-import { IPModal } from '@hieudoanm/components/modals/IPModal';
-import { KaprekarModal } from '@hieudoanm/components/modals/KaprekarModal';
-import { MorseModal } from '@hieudoanm/components/modals/MorseModal';
-import { PomodoroModal } from '@hieudoanm/components/modals/PomodoroModal';
-import { QRCodeModal } from '@hieudoanm/components/modals/QRCodeModal';
-import { StringModal } from '@hieudoanm/components/modals/StringModal';
-import { UUIDModal } from '@hieudoanm/components/modals/UUIDModal';
-import { RightSidebar } from '@hieudoanm/components/sidebars/RightSidebar';
+import { BrailleModal } from '@hieudoanm/components/modals/apps/BrailleModal';
+import { ColorsModal } from '@hieudoanm/components/modals/apps/ColorsModal';
+import { CountdownModal } from '@hieudoanm/components/modals/apps/CountdownModal';
+import { DOIModal } from '@hieudoanm/components/modals/apps/DOIModal';
+import { EmojisModal } from '@hieudoanm/components/modals/apps/EmojisModal';
+import { HouseModal } from '@hieudoanm/components/modals/apps/HouseModal';
+import { IPModal } from '@hieudoanm/components/modals/apps/IPModal';
+import { KaprekarModal } from '@hieudoanm/components/modals/apps/KaprekarModal';
+import { MorseModal } from '@hieudoanm/components/modals/apps/MorseModal';
+import { PomodoroModal } from '@hieudoanm/components/modals/apps/PomodoroModal';
+import { QRCodeModal } from '@hieudoanm/components/modals/apps/QRCodeModal';
+import { StringModal } from '@hieudoanm/components/modals/apps/StringModal';
+import { UUIDModal } from '@hieudoanm/components/modals/apps/UUIDModal';
 import { LeftSidebar } from '@hieudoanm/components/sidebars/LeftSidebar';
+import { RightSidebar } from '@hieudoanm/components/sidebars/RightSidebar';
 import {
   ai as aiBookmarks,
   websites as websiteBookmarks,
@@ -24,7 +25,6 @@ import { WeatherData } from '@hieudoanm/data/weather';
 import { useQueries } from '@tanstack/react-query';
 import { NextPage } from 'next';
 import { FC, useEffect, useState } from 'react';
-import { EmojisModal } from '@hieudoanm/components/modals/EmojisModal';
 
 // ── Extracted to avoid duplicating the center column JSX ──────────────────────
 
