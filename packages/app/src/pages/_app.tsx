@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 const App: FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <>
-      <HeadTemplate basic={{ title: 'Weather' }} />
+      <HeadTemplate basic={{ title: 'Hieu Doan' }} />
       <QueryClientProvider client={new QueryClient()}>
         <div className={`${geistSans.className} ${geistMono.className}`}>
           <Component {...pageProps} />

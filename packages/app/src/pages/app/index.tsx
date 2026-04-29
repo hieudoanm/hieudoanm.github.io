@@ -38,7 +38,7 @@ const MainContent: FC<{ today: string; tools: Tool[] }> = ({
     </p>
     <h1 className="mb-10 text-3xl font-black tracking-tight">Start Page</h1>
 
-    <section aria-label="AI Bookmarks" className="w-full max-w-2xl">
+    <section aria-label="AI Assistants" className="w-full max-w-2xl">
       <p className="text-base-content/30 mb-4 text-center font-mono text-xs tracking-widest uppercase">
         AI Assistants
       </p>
@@ -49,9 +49,9 @@ const MainContent: FC<{ today: string; tools: Tool[] }> = ({
       </div>
     </section>
 
-    <section aria-label="Bookmarks" className="mt-10 w-full max-w-2xl">
+    <section aria-label="Websites" className="mt-10 w-full max-w-2xl">
       <p className="text-base-content/30 mb-4 text-center font-mono text-xs tracking-widest uppercase">
-        Bookmarks
+        Websites
       </p>
       <div className="grid grid-cols-4 gap-4">
         {websiteBookmarks.map((bm) => (
@@ -247,7 +247,7 @@ const AppPage: NextPage = () => {
           </h1>
 
           <section
-            aria-label="AI Bookmarks"
+            aria-label="AI Assistants"
             className="mx-auto w-full max-w-2xl">
             <p className="text-base-content/30 mb-4 text-center font-mono text-xs tracking-widest uppercase">
               AI Assistants
