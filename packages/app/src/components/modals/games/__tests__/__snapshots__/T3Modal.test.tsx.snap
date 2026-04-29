@@ -1,3 +1,149 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`T3Modal should render 1`] = `<div />`;
+exports[`T3Modal should render 1`] = `
+<div>
+  <dialog
+    class="modal modal-open"
+  >
+    <div
+      class="modal-box w-full max-w-sm"
+    >
+      <button
+        class="btn btn-sm btn-circle btn-ghost absolute top-2 right-2"
+      >
+        ✕
+      </button>
+      <h3
+        class="mb-1 text-lg font-bold"
+      >
+        T3 - Tic-Tac-Toe
+      </h3>
+      <p
+        class="mb-4 text-xs opacity-70"
+      >
+        Each player may have max 
+        <strong>
+          3
+        </strong>
+         active marks. When placing the 4th, the 
+        <em>
+          oldest
+        </em>
+         one disappears.
+      </p>
+      <div
+        class="mb-4 grid grid-cols-3 gap-2"
+      >
+        <div
+          class="aspect-square w-full"
+        >
+          <button
+            class="btn btn-square h-full w-full text-6xl transition-opacity duration-500 btn-neutral opacity-100 "
+          />
+        </div>
+        <div
+          class="aspect-square w-full"
+        >
+          <button
+            class="btn btn-square h-full w-full text-6xl transition-opacity duration-500 btn-neutral opacity-100 "
+          />
+        </div>
+        <div
+          class="aspect-square w-full"
+        >
+          <button
+            class="btn btn-square h-full w-full text-6xl transition-opacity duration-500 btn-neutral opacity-100 "
+          />
+        </div>
+        <div
+          class="aspect-square w-full"
+        >
+          <button
+            class="btn btn-square h-full w-full text-6xl transition-opacity duration-500 btn-neutral opacity-100 "
+          />
+        </div>
+        <div
+          class="aspect-square w-full"
+        >
+          <button
+            class="btn btn-square h-full w-full text-6xl transition-opacity duration-500 btn-neutral opacity-100 "
+          />
+        </div>
+        <div
+          class="aspect-square w-full"
+        >
+          <button
+            class="btn btn-square h-full w-full text-6xl transition-opacity duration-500 btn-neutral opacity-100 "
+          />
+        </div>
+        <div
+          class="aspect-square w-full"
+        >
+          <button
+            class="btn btn-square h-full w-full text-6xl transition-opacity duration-500 btn-neutral opacity-100 "
+          />
+        </div>
+        <div
+          class="aspect-square w-full"
+        >
+          <button
+            class="btn btn-square h-full w-full text-6xl transition-opacity duration-500 btn-neutral opacity-100 "
+          />
+        </div>
+        <div
+          class="aspect-square w-full"
+        >
+          <button
+            class="btn btn-square h-full w-full text-6xl transition-opacity duration-500 btn-neutral opacity-100 "
+          />
+        </div>
+      </div>
+      <div
+        class="flex flex-col gap-2"
+      >
+        <div
+          class="flex items-center justify-between text-sm"
+        >
+          <div>
+            Current:
+             
+            <span
+              class="text-info font-semibold"
+            >
+              X
+            </span>
+          </div>
+        </div>
+        <div
+          class="text-xs opacity-70"
+        >
+          X moves: 
+          —
+           
+          <br />
+          O moves:
+           
+          —
+        </div>
+        <div
+          class="flex gap-2"
+        >
+          <button
+            class="btn btn-primary btn-sm"
+          >
+            Reset
+          </button>
+          <button
+            class="btn btn-secondary btn-sm"
+          >
+            Undo
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal-backdrop"
+    />
+  </dialog>
+</div>
+`;

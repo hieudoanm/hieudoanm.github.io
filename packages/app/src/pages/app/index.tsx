@@ -15,6 +15,7 @@ import { QRCodeModal } from '@hieudoanm/components/modals/apps/QRCodeModal';
 import { StringModal } from '@hieudoanm/components/modals/apps/StringModal';
 import { UUIDModal } from '@hieudoanm/components/modals/apps/UUIDModal';
 import { T3Modal } from '@hieudoanm/components/modals/games/T3Modal';
+import { WordleModal } from '@hieudoanm/components/modals/games/WordleModal';
 import { LeftSidebar } from '@hieudoanm/components/sidebars/LeftSidebar';
 import { RightSidebar } from '@hieudoanm/components/sidebars/RightSidebar';
 import {
@@ -111,12 +112,11 @@ type AppModalId =
   | 'pomodoro'
   | 'qr'
   | 'string'
-  | 'uuid'
-  | null;
+  | 'uuid';
 
-type GameModalId = 't3';
+type GameModalId = 't3' | 'wordle';
 
-type ModalId = AppModalId | GameModalId;
+type ModalId = AppModalId | GameModalId | null;
 
 type SidebarTab = 'status' | 'clock' | null;
 
@@ -260,6 +260,13 @@ const AppPage: NextPage = () => {
       emoji: '❌',
       color: '#f59e0b',
       onClick: () => setActiveModal('t3'),
+    },
+    {
+      label: 'Wordle',
+      description: 'Guess the word',
+      emoji: '🟩',
+      color: '#f59e0b',
+      onClick: () => setActiveModal('wordle'),
     },
   ];
 
@@ -426,6 +433,7 @@ const AppPage: NextPage = () => {
 
       {/* ── Game Modals (shared across both layouts) ── */}
       {activeModal === 't3' && <T3Modal onClose={close} />}
+      {activeModal === 'wordle' && <WordleModal onClose={close} />}
     </div>
   );
 };
