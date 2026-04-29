@@ -1,12 +1,12 @@
 # 👨‍💻 I'm [HIEU DOAN][hieudoanm-gh-page]
 
-## 📚 Table of Contents (Apps: 63)
+## 📚 Table of Contents (Apps: 62)
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
-  - [📚 Table of Contents (Apps: 63)](#-table-of-contents-apps-63)
+  - [📚 Table of Contents (Apps: 62)](#-table-of-contents-apps-62)
   - [🤖 Artificial Intelligence (3)](#-artificial-intelligence-3)
   - [🛒 Commerce (1)](#-commerce-1)
-  - [🎨 Design (4)](#-design-4)
+  - [🎨 Design (3)](#-design-3)
   - [🛠️ DevTools (8)](#️-devtools-8)
   - [📄 Documents (2)](#-documents-2)
   - [💸 Finance (3)](#-finance-3)
@@ -35,12 +35,11 @@
 
 ---
 
-## 🎨 Design (4)
+## 🎨 Design (3)
 
-1. 🌈 [Colors][colors] - [GitHub][colors-gh]
-2. 📐 [Composition][composition] - [GitHub][composition-gh]
-3. ✨ [Filter][filter] - [GitHub][filter-gh]
-4. 🖼️ [SVG][svg] - [GitHub][svg-gh]
+1. 📐 [Composition][composition] - [GitHub][composition-gh]
+2. ✨ [Filter][filter] - [GitHub][filter-gh]
+3. 🖼️ [SVG][svg] - [GitHub][svg-gh]
 
 ---
 

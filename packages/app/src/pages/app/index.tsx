@@ -1,5 +1,6 @@
 import { BookmarkCard } from '@hieudoanm/components/cards/BookmarkCard';
 import { Tool, ToolCard } from '@hieudoanm/components/cards/ToolCard';
+import { ColorsModal } from '@hieudoanm/components/modals/ColorsModal';
 import { CountdownModal } from '@hieudoanm/components/modals/CountdownModal';
 import { HouseModal } from '@hieudoanm/components/modals/HouseModal';
 import { KaprekarModal } from '@hieudoanm/components/modals/KaprekarModal';
@@ -17,18 +18,24 @@ import { useEffect, useState } from 'react';
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
+type ModalId =
+  | 'colors'
+  | 'countdown'
+  | 'house'
+  | 'kaprekar'
+  | 'qr'
+  | 'string'
+  | 'uuid'
+  | null;
+
 const AppPage: NextPage = () => {
   const [times, setTimes] = useState(() =>
     timezones.map(({ tz }) => getTimeInZone(tz))
   );
   const [today, setToday] = useState('');
-  // Modals
-  const [countdownModalOpen, setCountdownModalOpen] = useState<boolean>(false);
-  const [houseModalOpen, setHouseModalOpen] = useState<boolean>(false);
-  const [kaprekarModalOpen, setKaprekarModalOpen] = useState<boolean>(false);
-  const [qrModalOpen, setQrModalOpen] = useState<boolean>(false);
-  const [stringModalOpen, setStringModalOpen] = useState<boolean>(false);
-  const [uuidModalOpen, setUuidModalOpen] = useState<boolean>(false);
+  const [activeModal, setActiveModal] = useState<ModalId>(null);
+
+  const close = () => setActiveModal(null);
 
   useEffect(() => {
     setToday(
@@ -61,46 +68,53 @@ const AppPage: NextPage = () => {
 
   const tools: Tool[] = [
     {
+      label: 'Colors',
+      description: 'Picker',
+      emoji: '🎨',
+      color: '#ec4899',
+      onClick: () => setActiveModal('colors'),
+    },
+    {
       label: 'Countdown',
       description: 'Timer',
       emoji: '⏳',
       color: '#06b6d4',
-      onClick: () => setCountdownModalOpen(true),
+      onClick: () => setActiveModal('countdown'),
     },
     {
       label: 'House',
       description: 'M.D.',
       emoji: '🏥',
       color: '#ef4444',
-      onClick: () => setHouseModalOpen(true),
+      onClick: () => setActiveModal('house'),
     },
     {
       label: 'Kaprekar',
       description: 'Routine',
       emoji: '🔢',
       color: '#f59e0b',
-      onClick: () => setKaprekarModalOpen(true),
+      onClick: () => setActiveModal('kaprekar'),
     },
     {
       label: 'QR Code',
       description: 'Generator',
       emoji: '▦',
       color: '#22d3ee',
-      onClick: () => setQrModalOpen(true),
+      onClick: () => setActiveModal('qr'),
     },
     {
       label: 'String',
       description: 'Formatter',
       emoji: '✏️',
       color: '#10b981',
-      onClick: () => setStringModalOpen(true),
+      onClick: () => setActiveModal('string'),
     },
     {
       label: 'UUID',
       description: 'Generator',
       emoji: '🔑',
       color: '#a855f7',
-      onClick: () => setUuidModalOpen(true),
+      onClick: () => setActiveModal('uuid'),
     },
   ];
 
@@ -162,20 +176,13 @@ const AppPage: NextPage = () => {
         <RightSidebar times={times} weatherQueries={weatherQueries} />
       </div>
       {/* ── Modals ── */}
-      {countdownModalOpen && (
-        <CountdownModal onClose={() => setCountdownModalOpen(false)} />
-      )}
-      {houseModalOpen && (
-        <HouseModal onClose={() => setHouseModalOpen(false)} />
-      )}
-      {kaprekarModalOpen && (
-        <KaprekarModal onClose={() => setKaprekarModalOpen(false)} />
-      )}
-      {qrModalOpen && <QRCodeModal onClose={() => setQrModalOpen(false)} />}
-      {stringModalOpen && (
-        <StringModal onClose={() => setStringModalOpen(false)} />
-      )}
-      {uuidModalOpen && <UUIDModal onClose={() => setUuidModalOpen(false)} />}
+      {activeModal === 'colors' && <ColorsModal onClose={close} />}
+      {activeModal === 'countdown' && <CountdownModal onClose={close} />}
+      {activeModal === 'house' && <HouseModal onClose={close} />}
+      {activeModal === 'kaprekar' && <KaprekarModal onClose={close} />}
+      {activeModal === 'qr' && <QRCodeModal onClose={close} />}
+      {activeModal === 'string' && <StringModal onClose={close} />}
+      {activeModal === 'uuid' && <UUIDModal onClose={close} />}
     </div>
   );
 };
