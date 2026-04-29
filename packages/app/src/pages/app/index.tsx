@@ -14,7 +14,10 @@ import { StringModal } from '@hieudoanm/components/modals/StringModal';
 import { UUIDModal } from '@hieudoanm/components/modals/UUIDModal';
 import { RightSidebar } from '@hieudoanm/components/sidebars/RightSidebar';
 import { StatusSidebar } from '@hieudoanm/components/sidebars/StatusSidebar';
-import { aiBookmarks, bookmarks } from '@hieudoanm/data/bookmarks';
+import {
+  ai as aiBookmarks,
+  websites as websiteBookmarks,
+} from '@hieudoanm/data/bookmarks';
 import { getTimeInZone, timezones } from '@hieudoanm/data/timezones';
 import { WeatherData } from '@hieudoanm/data/weather';
 import { useQueries } from '@tanstack/react-query';
@@ -49,7 +52,7 @@ const MainContent: FC<{ today: string; tools: Tool[] }> = ({
         Bookmarks
       </p>
       <div className="grid grid-cols-4 gap-4">
-        {bookmarks.map((bm) => (
+        {websiteBookmarks.map((bm) => (
           <BookmarkCard key={bm.label} {...bm} />
         ))}
       </div>
@@ -239,13 +242,13 @@ const AppPage: NextPage = () => {
           </section>
 
           <section
-            aria-label="Bookmarks"
+            aria-label="Websites"
             className="mx-auto mt-8 w-full max-w-2xl">
             <p className="text-base-content/30 mb-4 text-center font-mono text-xs tracking-widest uppercase">
-              Bookmarks
+              Websites
             </p>
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-              {bookmarks.map((bm) => (
+              {websiteBookmarks.map((bm) => (
                 <BookmarkCard key={bm.label} {...bm} />
               ))}
             </div>
