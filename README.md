@@ -1,16 +1,16 @@
 # 👨‍💻 I'm [HIEU DOAN][hieudoanm-gh-page]
 
-## 📚 Table of Contents (Apps: 54)
+## 📚 Table of Contents (Apps: 53)
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
-  - [📚 Table of Contents (Apps: 54)](#-table-of-contents-apps-54)
+  - [📚 Table of Contents (Apps: 53)](#-table-of-contents-apps-53)
   - [🤖 Artificial Intelligence (3)](#-artificial-intelligence-3)
   - [🛒 Commerce (1)](#-commerce-1)
   - [🎨 Design (3)](#-design-3)
   - [🛠️ DevTools (7)](#️-devtools-7)
   - [📄 Documents (2)](#-documents-2)
   - [💸 Finance (3)](#-finance-3)
-  - [🎉 Fun (11)](#-fun-11)
+  - [🎉 Fun (10)](#-fun-10)
   - [🎮 Games (7)](#-games-7)
   - [🌐 Languages (3)](#-languages-3)
   - [💬 Messaging (1)](#-messaging-1)
@@ -69,19 +69,18 @@
 
 ---
 
-## 🎉 Fun (11)
+## 🎉 Fun (10)
 
 1. 🌀 [Attractors][attractors] - [GitHub][attractors-gh]
 2. 🎭 [Breaking Bad][breaking-bad] - [GitHub][breaking-bad-gh]
-3. 🌍 [Countries][countries] - [GitHub][countries-gh]
-4. ⚫ [Dot][dot] - [GitHub][dot-gh]
-5. 🔍 [Emojis][emojis] - [GitHub][emojis-gh]
-6. 👀 [Eyes][eyes] - [GitHub][eyes-gh]
-7. ⌚ [Garmin][garmin] - [GitHub][garmin-gh]
-8. ⚖️ [Legislation][legislation] - [GitHub][legislation-gh]
-9. 🔁 [Palindrome][palindrome] - [GitHub][palindrome-gh]
-10. 📕 [Pokedex][pokedex] - [GitHub][pokedex-gh]
-11. 🔀 [Typoglycemia][typoglycemia] - [GitHub][typoglycemia-gh]
+3. ⚫ [Dot][dot] - [GitHub][dot-gh]
+4. 🔍 [Emojis][emojis] - [GitHub][emojis-gh]
+5. 👀 [Eyes][eyes] - [GitHub][eyes-gh]
+6. ⌚ [Garmin][garmin] - [GitHub][garmin-gh]
+7. ⚖️ [Legislation][legislation] - [GitHub][legislation-gh]
+8. 🔁 [Palindrome][palindrome] - [GitHub][palindrome-gh]
+9. 📕 [Pokedex][pokedex] - [GitHub][pokedex-gh]
+10. 🔀 [Typoglycemia][typoglycemia] - [GitHub][typoglycemia-gh]
 
 ---
 
@@ -189,8 +188,6 @@
 
 [attractors]: https://hieudoanm.github.io/attractors
 [attractors-gh]: https://github.com/hieudoanm/attractors
-[countries]: https://hieudoanm.github.io/countries
-[countries-gh]: https://github.com/hieudoanm/countries
 [dot]: https://hieudoanm.github.io/dot
 [dot-gh]: https://github.com/hieudoanm/dot
 [emojis]: https://hieudoanm.github.io/emojis
