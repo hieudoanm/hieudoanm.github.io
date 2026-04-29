@@ -1,13 +1,13 @@
 # 👨‍💻 I'm [HIEU DOAN][hieudoanm-gh-page]
 
-## 📚 Table of Contents (Apps: 57)
+## 📚 Table of Contents (Apps: 56)
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
-  - [📚 Table of Contents (Apps: 57)](#-table-of-contents-apps-57)
+  - [📚 Table of Contents (Apps: 56)](#-table-of-contents-apps-56)
   - [🤖 Artificial Intelligence (3)](#-artificial-intelligence-3)
   - [🛒 Commerce (1)](#-commerce-1)
   - [🎨 Design (3)](#-design-3)
-  - [🛠️ DevTools (8)](#️-devtools-8)
+  - [🛠️ DevTools (7)](#️-devtools-7)
   - [📄 Documents (2)](#-documents-2)
   - [💸 Finance (3)](#-finance-3)
   - [🎉 Fun (12)](#-fun-12)
@@ -42,16 +42,15 @@
 
 ---
 
-## 🛠️ DevTools (8)
+## 🛠️ DevTools (7)
 
 1. 🌐 [Browser][browser] - [GitHub][browser-gh]
 2. 🐍 [Cobra MD][cobra-md] - [GitHub][cobra-md-gh]
-3. 🐙 [GitHub CLI][gh-cli] - [GitHub][gh-cli-gh]
-4. 🐙 [GitHub Extensions][gh-ext] - [GitHub][gh-ext-gh]
-5. 📄 [JSON Schema][json-schema] - [GitHub][json-schema-gh]
-6. 🧾 [Manifest][manifest] - [GitHub][manifest-gh]
-7. 📬 [Postmanify][postmanify] - [GitHub][postmanify-gh]
-8. 🔌 [Proxy][proxy] - [GitHub][proxy-gh]
+3. 🐙 [GitHub Extensions][gh-ext] - [GitHub][gh-ext-gh]
+4. 📄 [JSON Schema][json-schema] - [GitHub][json-schema-gh]
+5. 🧾 [Manifest][manifest] - [GitHub][manifest-gh]
+6. 📬 [Postmanify][postmanify] - [GitHub][postmanify-gh]
+7. 🔌 [Proxy][proxy] - [GitHub][proxy-gh]
 
 ---
 
@@ -167,8 +166,6 @@
 [browser-gh]: https://github.com/hieudoanm/browser
 [cobra-md]: https://hieudoanm.github.io/cobra.md
 [cobra-md-gh]: https://github.com/hieudoanm/cobra.md
-[gh-cli]: https://hieudoanm.github.io/gh.cli
-[gh-cli-gh]: https://github.com/hieudoanm/gh.cli
 [gh-ext]: https://hieudoanm.github.io/gh.ext
 [gh-ext-gh]: https://github.com/hieudoanm/gh.ext
 [json-schema]: https://hieudoanm.github.io/json-schema
