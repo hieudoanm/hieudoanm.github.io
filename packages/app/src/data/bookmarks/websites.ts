@@ -14,6 +14,13 @@ export const websites = [
     color: '#e1306c',
   },
   {
+    label: 'Facebook',
+    url: 'https://facebook.com',
+    description: 'Social network',
+    emoji: '📘',
+    color: '#4267B2',
+  },
+  {
     label: 'YouTube',
     url: 'https://youtube.com',
     description: 'Videos',
@@ -21,10 +28,31 @@ export const websites = [
     color: '#ff0000',
   },
   {
+    label: 'Google Calendar',
+    url: 'https://calendar.google.com',
+    description: 'Calendar',
+    emoji: '📅',
+    color: '#4285f4',
+  },
+  {
     label: 'Google Maps',
     url: 'https://maps.google.com',
     description: 'Maps',
     emoji: '🗺️',
     color: '#4285f4',
+  },
+  {
+    label: 'Discord',
+    url: 'https://discord.com',
+    description: 'Chat',
+    emoji: '💬',
+    color: '#5865f2',
+  },
+  {
+    label: 'Telegram',
+    url: 'https://web.telegram.org/',
+    description: 'Messaging',
+    emoji: '💬',
+    color: '#0088cc',
   },
 ];
