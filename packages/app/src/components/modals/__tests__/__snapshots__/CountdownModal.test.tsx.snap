@@ -82,7 +82,7 @@ exports[`CountdownModal should render 1`] = `
               <span
                 class="font-mono text-2xl leading-none font-black tabular-nums"
               >
-                06
+                07
               </span>
               <span
                 class="text-base-content/30 font-mono text-[9px] tracking-widest uppercase"
@@ -96,7 +96,7 @@ exports[`CountdownModal should render 1`] = `
               <span
                 class="font-mono text-2xl leading-none font-black tabular-nums"
               >
-                23
+                00
               </span>
               <span
                 class="text-base-content/30 font-mono text-[9px] tracking-widest uppercase"
@@ -110,7 +110,7 @@ exports[`CountdownModal should render 1`] = `
               <span
                 class="font-mono text-2xl leading-none font-black tabular-nums"
               >
-                59
+                00
               </span>
               <span
                 class="text-base-content/30 font-mono text-[9px] tracking-widest uppercase"
@@ -124,7 +124,7 @@ exports[`CountdownModal should render 1`] = `
               <span
                 class="font-mono text-2xl leading-none font-black tabular-nums"
               >
-                59
+                00
               </span>
               <span
                 class="text-base-content/30 font-mono text-[9px] tracking-widest uppercase"
@@ -140,7 +140,7 @@ exports[`CountdownModal should render 1`] = `
           <progress
             class="progress progress-primary w-full"
             max="100"
-            value="1.6534391534391535e-7"
+            value="0"
           />
           <div
             class="flex justify-between font-mono text-[10px] opacity-30"

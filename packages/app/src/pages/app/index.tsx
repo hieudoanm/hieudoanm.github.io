@@ -24,6 +24,7 @@ import { WeatherData } from '@hieudoanm/data/weather';
 import { useQueries } from '@tanstack/react-query';
 import { NextPage } from 'next';
 import { FC, useEffect, useState } from 'react';
+import { EmojisModal } from '@hieudoanm/components/modals/EmojisModal';
 
 // ── Extracted to avoid duplicating the center column JSX ──────────────────────
 
@@ -77,6 +78,7 @@ type ModalId =
   | 'colors'
   | 'countdown'
   | 'doi'
+  | 'emojis'
   | 'house'
   | 'ip'
   | 'morse'
@@ -156,6 +158,13 @@ const AppPage: NextPage = () => {
       emoji: '📄',
       color: '#3b82f6',
       onClick: () => setActiveModal('doi'),
+    },
+    {
+      label: 'Emojis',
+      description: 'Explorer',
+      emoji: '😀',
+      color: '#f59e0b',
+      onClick: () => setActiveModal('emojis'),
     },
     {
       label: 'House',
@@ -342,6 +351,7 @@ const AppPage: NextPage = () => {
       {activeModal === 'colors' && <ColorsModal onClose={close} />}
       {activeModal === 'countdown' && <CountdownModal onClose={close} />}
       {activeModal === 'doi' && <DOIModal onClose={close} />}
+      {activeModal === 'emojis' && <EmojisModal onClose={close} />}
       {activeModal === 'house' && <HouseModal onClose={close} />}
       {activeModal === 'ip' && <IPModal onClose={close} />}
       {activeModal === 'kaprekar' && <KaprekarModal onClose={close} />}
