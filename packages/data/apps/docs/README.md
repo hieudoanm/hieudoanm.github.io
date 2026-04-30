@@ -1,6 +1,6 @@
 # Hieu Doan
 
-## Table of Contents (46)
+## Table of Contents (45)
 
 ## Artificial Intelligence (3)
 
@@ -15,16 +15,13 @@
 [promptly]: https://hieudoanm.github.io/promptly
 [promptly-gh]: https://github.com/hieudoanm/promptly
 
-## Design (3)
+## Design (2)
 
 1. 🧩 [Composition][composition] - [GitHub][composition-gh]
-2. 🧼 [Filter][filter] - [GitHub][filter-gh]
-3. 📐 [SVG][svg] - [GitHub][svg-gh]
+2. 📐 [SVG][svg] - [GitHub][svg-gh]
 
 [composition]: https://hieudoanm.github.io/composition
 [composition-gh]: https://github.com/hieudoanm/composition
-[filter]: https://hieudoanm.github.io/filter
-[filter-gh]: https://github.com/hieudoanm/filter
 [svg]: https://hieudoanm.github.io/svg
 [svg-gh]: https://github.com/hieudoanm/svg
 

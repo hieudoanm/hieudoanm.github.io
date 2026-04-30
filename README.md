@@ -1,11 +1,11 @@
 # 👨‍💻 I'm HIEU DOAN
 
-## Table of Contents (46)
+## Table of Contents (45)
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
-  - [Table of Contents (46)](#table-of-contents-46)
+  - [Table of Contents (45)](#table-of-contents-45)
   - [Artificial Intelligence (3)](#artificial-intelligence-3)
-  - [Design (3)](#design-3)
+  - [Design (2)](#design-2)
   - [Dev Tools (7)](#dev-tools-7)
   - [Docs (2)](#docs-2)
   - [Finance (3)](#finance-3)
@@ -30,16 +30,13 @@
 [promptly]: https://hieudoanm.github.io/promptly
 [promptly-gh]: https://github.com/hieudoanm/promptly
 
-## Design (3)
+## Design (2)
 
 1. 🧩 [Composition][composition] - [GitHub][composition-gh]
-2. 🧼 [Filter][filter] - [GitHub][filter-gh]
-3. 📐 [SVG][svg] - [GitHub][svg-gh]
+2. 📐 [SVG][svg] - [GitHub][svg-gh]
 
 [composition]: https://hieudoanm.github.io/composition
 [composition-gh]: https://github.com/hieudoanm/composition
-[filter]: https://hieudoanm.github.io/filter
-[filter-gh]: https://github.com/hieudoanm/filter
 [svg]: https://hieudoanm.github.io/svg
 [svg-gh]: https://github.com/hieudoanm/svg
 

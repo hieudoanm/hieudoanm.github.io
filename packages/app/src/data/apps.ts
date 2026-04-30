@@ -61,17 +61,6 @@ export const apps: App[] = [
   },
   {
     category: 'design',
-    emoji: '🧼',
-    id: 'filter',
-    name: 'Filter',
-    href: 'https://hieudoanm.github.io/filter',
-    github: 'https://github.com/hieudoanm/filter',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/filter/refs/heads/master/images/app.png',
-    tags: ['android', 'macos', 'web'],
-  },
-  {
-    category: 'design',
     emoji: '📐',
     id: 'svg',
     name: 'SVG',
