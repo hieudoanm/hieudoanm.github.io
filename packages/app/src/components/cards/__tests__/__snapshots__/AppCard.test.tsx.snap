@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`AppCard should render 1`] = `
+<div>
+  <a
+    href="https://example.com"
+    target="_blank"
+  >
+    <button
+      class="card bg-base-200 border-base-300 hover:bg-base-300 group w-full border text-left transition-all duration-300 hover:scale-[1.03] hover:shadow-lg"
+      type="button"
+    >
+      <div
+        class="card-body flex-col items-center justify-center gap-2 p-4 text-center"
+      >
+        <div
+          class="bg-neutral border-primary-content flex h-10 w-10 items-center justify-center rounded-xl border text-xl shadow-inner transition-transform duration-300 group-hover:scale-110"
+        >
+          🔥
+        </div>
+        <div>
+          <div
+            class="text-sm font-bold tracking-tight"
+          >
+            test
+          </div>
+          <div
+            class="text-base-content/40 mt-0.5 text-[10px] tracking-widest uppercase"
+          >
+            test
+          </div>
+        </div>
+      </div>
+    </button>
+  </a>
+</div>
+`;

@@ -1,4 +1,5 @@
 // app/page.tsx (or pages/index.tsx)
+import { AppCard } from '@hieudoanm/components/cards/AppCard';
 import { BookmarkCard } from '@hieudoanm/components/cards/BookmarkCard';
 import { Tool, ToolCard } from '@hieudoanm/components/cards/ToolCard';
 import { BrailleModal } from '@hieudoanm/components/modals/apps/BrailleModal';
@@ -19,6 +20,7 @@ import { T3Modal } from '@hieudoanm/components/modals/games/T3Modal';
 import { WordleModal } from '@hieudoanm/components/modals/games/WordleModal';
 import { LeftSidebar } from '@hieudoanm/components/sidebars/LeftSidebar';
 import { RightSidebar } from '@hieudoanm/components/sidebars/RightSidebar';
+import { apps } from '@hieudoanm/data/apps';
 import {
   ai as aiBookmarks,
   google as googleBookmarks,
@@ -94,6 +96,17 @@ const MainContent: FC<{ today: string; tools: Tool[]; games: Tool[] }> = ({
       <div className="grid grid-cols-4 gap-4">
         {games.map((game) => (
           <ToolCard key={game.label} {...game} />
+        ))}
+      </div>
+    </section>
+
+    <section aria-label="Apps" className="mt-10 w-full max-w-2xl">
+      <p className="text-base-content/30 mb-4 text-center font-mono text-xs tracking-widest uppercase">
+        Apps
+      </p>
+      <div className="grid grid-cols-4 gap-4">
+        {apps.map((app) => (
+          <AppCard key={app.id} {...app} />
         ))}
       </div>
     </section>
@@ -358,6 +371,17 @@ const AppPage: NextPage = () => {
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
               {games.map((game) => (
                 <ToolCard key={game.label} {...game} />
+              ))}
+            </div>
+          </section>
+
+          <section aria-label="Apps" className="mx-auto mt-8 w-full max-w-2xl">
+            <p className="text-base-content/30 mb-4 text-center font-mono text-xs tracking-widest uppercase">
+              Apps
+            </p>
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+              {apps.map((app) => (
+                <AppCard key={app.id} {...app} />
               ))}
             </div>
           </section>
