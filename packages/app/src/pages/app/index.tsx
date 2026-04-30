@@ -24,6 +24,7 @@ import { PiModal } from '@hieudoanm/components/modals/games/PIModal';
 import { RecallModal } from '@hieudoanm/components/modals/games/RecallModal';
 import { T3Modal } from '@hieudoanm/components/modals/games/T3Modal';
 import { TowersModal } from '@hieudoanm/components/modals/games/TowersModal';
+import { TypoglycemiaModal } from '@hieudoanm/components/modals/games/TypoglycemiaModal';
 import { WordleModal } from '@hieudoanm/components/modals/games/WordleModal';
 import { LeftSidebar } from '@hieudoanm/components/sidebars/LeftSidebar';
 import { RightSidebar } from '@hieudoanm/components/sidebars/RightSidebar';
@@ -67,6 +68,7 @@ type ModalId =
   | 'recall'
   | 't3'
   | 'towers'
+  | 'typoglycemia'
   | 'wordle';
 
 type SidebarTab = 'status' | 'clock' | null;
@@ -99,6 +101,7 @@ const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
   recall: RecallModal,
   t3: T3Modal,
   towers: TowersModal,
+  typoglycemia: TypoglycemiaModal,
   wordle: WordleModal,
 };
 
@@ -404,6 +407,13 @@ const AppPage: NextPage = () => {
       emoji: '🗼',
       color: '#f59e0b',
       onClick: open('towers'),
+    },
+    {
+      label: 'Typoglycemia',
+      description: 'Scrambled text',
+      emoji: '🔣',
+      color: '#f59e0b',
+      onClick: open('typoglycemia'),
     },
     {
       label: 'Wordle',
