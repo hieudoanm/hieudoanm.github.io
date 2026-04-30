@@ -1,6 +1,6 @@
 # Hieu Doan
 
-## Table of Contents (47)
+## Table of Contents (46)
 
 ## Artificial Intelligence (3)
 
@@ -147,19 +147,16 @@
 [start]: https://hieudoanm.github.io/start
 [start-gh]: https://github.com/hieudoanm/start
 
-## Utilities (8)
+## Utilities (7)
 
-1. 🧮 [Calculator][calculator] - [GitHub][calculator-gh]
-2. 📋 [Clipboard][clipboard] - [GitHub][clipboard-gh]
-3. 📱 [InstaSize][instasize] - [GitHub][instasize-gh]
-4. 🛍️ [Shopify Detect][shopify.detect] - [GitHub][shopify.detect-gh]
-5. 📸 [Snapshot][snapshot] - [GitHub][snapshot-gh]
-6. 🖥️ [System][system] - [GitHub][system-gh]
-7. 📝 [Transcript][transcript] - [GitHub][transcript-gh]
-8. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
+1. 📋 [Clipboard][clipboard] - [GitHub][clipboard-gh]
+2. 📱 [InstaSize][instasize] - [GitHub][instasize-gh]
+3. 🛍️ [Shopify Detect][shopify.detect] - [GitHub][shopify.detect-gh]
+4. 📸 [Snapshot][snapshot] - [GitHub][snapshot-gh]
+5. 🖥️ [System][system] - [GitHub][system-gh]
+6. 📝 [Transcript][transcript] - [GitHub][transcript-gh]
+7. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
 
-[calculator]: https://hieudoanm.github.io/calculator
-[calculator-gh]: https://github.com/hieudoanm/calculator
 [clipboard]: https://hieudoanm.github.io/clipboard
 [clipboard-gh]: https://github.com/hieudoanm/clipboard
 [instasize]: https://hieudoanm.github.io/instasize

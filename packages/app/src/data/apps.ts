@@ -402,17 +402,6 @@ export const apps: App[] = [
   },
   {
     category: 'utilities',
-    emoji: '🧮',
-    id: 'calculator',
-    name: 'Calculator',
-    href: 'https://hieudoanm.github.io/calculator',
-    github: 'https://github.com/hieudoanm/calculator',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/calculator/refs/heads/master/images/app.png',
-    tags: ['android', 'macos', 'web'],
-  },
-  {
-    category: 'utilities',
     emoji: '📋',
     id: 'clipboard',
     name: 'Clipboard',

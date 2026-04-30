@@ -5,6 +5,7 @@ import { Tool, ToolCard } from '@hieudoanm/components/cards/ToolCard';
 import { BrailleModal } from '@hieudoanm/components/modals/apps/BrailleModal';
 import { CalculatorModal } from '@hieudoanm/components/modals/apps/CalculatorModal';
 import { ColorsModal } from '@hieudoanm/components/modals/apps/ColorsModal';
+import { ConverterModal } from '@hieudoanm/components/modals/apps/ConverterModal';
 import { CountdownModal } from '@hieudoanm/components/modals/apps/CountdownModal';
 import { DOIModal } from '@hieudoanm/components/modals/apps/DOIModal';
 import { EmojisModal } from '@hieudoanm/components/modals/apps/EmojisModal';
@@ -119,6 +120,7 @@ type AppModalId =
   | 'braille'
   | 'calculator'
   | 'colors'
+  | 'converter'
   | 'countdown'
   | 'doi'
   | 'emojis'
@@ -198,6 +200,13 @@ const AppPage: NextPage = () => {
       emoji: '🎨',
       color: '#ec4899',
       onClick: () => setActiveModal('colors'),
+    },
+    {
+      label: 'Converter',
+      description: 'Converter',
+      emoji: '🔀',
+      color: '#8b5cf6',
+      onClick: () => setActiveModal('converter'),
     },
     {
       label: 'Countdown',
@@ -470,6 +479,7 @@ const AppPage: NextPage = () => {
       {activeModal === 'braille' && <BrailleModal onClose={close} />}
       {activeModal === 'calculator' && <CalculatorModal onClose={close} />}
       {activeModal === 'colors' && <ColorsModal onClose={close} />}
+      {activeModal === 'converter' && <ConverterModal onClose={close} />}
       {activeModal === 'countdown' && <CountdownModal onClose={close} />}
       {activeModal === 'doi' && <DOIModal onClose={close} />}
       {activeModal === 'emojis' && <EmojisModal onClose={close} />}
