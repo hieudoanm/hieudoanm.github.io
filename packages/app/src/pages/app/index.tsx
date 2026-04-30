@@ -1,4 +1,3 @@
-// app/page.tsx (or pages/index.tsx)
 import { AppCard } from '@hieudoanm/components/cards/AppCard';
 import { BookmarkCard } from '@hieudoanm/components/cards/BookmarkCard';
 import { Tool, ToolCard } from '@hieudoanm/components/cards/ToolCard';
@@ -40,100 +39,11 @@ import { useQueries } from '@tanstack/react-query';
 import { NextPage } from 'next';
 import { FC, useEffect, useState } from 'react';
 
-// ── Extracted to avoid duplicating the center column JSX ──────────────────────
+/* ------------------------------------------------------------------ */
+/* Types                                                                */
+/* ------------------------------------------------------------------ */
 
-const MainContent: FC<{
-  today: string;
-  tools: Tool[];
-  education: Tool[];
-  games: Tool[];
-}> = ({ today = '', tools = [], education = [], games = [] }) => (
-  <main className="flex flex-col items-center overflow-y-auto px-8 py-12">
-    <p className="text-base-content/30 mb-2 font-mono text-xs tracking-widest uppercase">
-      {today}
-    </p>
-    <h1 className="mb-10 text-3xl font-black tracking-tight">Start Page</h1>
-
-    <section aria-label="AI Assistants" className="w-full max-w-2xl">
-      <p className="text-base-content/30 mb-4 text-center font-mono text-xs tracking-widest uppercase">
-        AI Assistants
-      </p>
-      <div className="grid grid-cols-4 gap-4">
-        {aiBookmarks.map((bm) => (
-          <BookmarkCard key={bm.label} {...bm} />
-        ))}
-      </div>
-    </section>
-
-    <section aria-label="Google Workspace" className="mt-10 w-full max-w-2xl">
-      <p className="text-base-content/30 mb-4 text-center font-mono text-xs tracking-widest uppercase">
-        Google Workspace
-      </p>
-      <div className="grid grid-cols-4 gap-4">
-        {googleBookmarks.map((bm) => (
-          <BookmarkCard key={bm.label} {...bm} />
-        ))}
-      </div>
-    </section>
-
-    <section aria-label="Websites" className="mt-10 w-full max-w-2xl">
-      <p className="text-base-content/30 mb-4 text-center font-mono text-xs tracking-widest uppercase">
-        Websites
-      </p>
-      <div className="grid grid-cols-4 gap-4">
-        {websiteBookmarks.map((bm) => (
-          <BookmarkCard key={bm.label} {...bm} />
-        ))}
-      </div>
-    </section>
-
-    <section aria-label="Tools" className="mt-10 w-full max-w-2xl">
-      <p className="text-base-content/30 mb-4 text-center font-mono text-xs tracking-widest uppercase">
-        Tools
-      </p>
-      <div className="grid grid-cols-4 gap-4">
-        {tools.map((tool) => (
-          <ToolCard key={tool.label} {...tool} />
-        ))}
-      </div>
-    </section>
-
-    <section aria-label="Education" className="mt-10 w-full max-w-2xl">
-      <p className="text-base-content/30 mb-4 text-center font-mono text-xs tracking-widest uppercase">
-        Education
-      </p>
-      <div className="grid grid-cols-4 gap-4">
-        {education.map((item) => (
-          <ToolCard key={item.label} {...item} />
-        ))}
-      </div>
-    </section>
-
-    <section aria-label="Games" className="mt-10 w-full max-w-2xl">
-      <p className="text-base-content/30 mb-4 text-center font-mono text-xs tracking-widest uppercase">
-        Games
-      </p>
-      <div className="grid grid-cols-4 gap-4">
-        {games.map((game) => (
-          <ToolCard key={game.label} {...game} />
-        ))}
-      </div>
-    </section>
-
-    <section aria-label="Apps" className="mt-10 w-full max-w-2xl">
-      <p className="text-base-content/30 mb-4 text-center font-mono text-xs tracking-widest uppercase">
-        Apps
-      </p>
-      <div className="grid grid-cols-4 gap-4">
-        {apps.map((app) => (
-          <AppCard key={app.id} {...app} />
-        ))}
-      </div>
-    </section>
-  </main>
-);
-
-type AppModalId =
+type ModalId =
   | 'braille'
   | 'breaking-bad'
   | 'calculator'
@@ -144,27 +54,154 @@ type AppModalId =
   | 'emojis'
   | 'house'
   | 'ip'
-  | 'morse'
   | 'kaprekar'
+  | 'morse'
   | 'pomodoro'
   | 'qr'
   | 'string'
-  | 'uuid';
-
-type EducationModalId = 'flashcards' | 'periodic-table';
-
-type GameModalId = 'blackjack' | 'pi' | 'recall' | 't3' | 'towers' | 'wordle';
-
-type ModalId = AppModalId | EducationModalId | GameModalId | null;
+  | 'uuid'
+  | 'flashcards'
+  | 'periodic-table'
+  | 'blackjack'
+  | 'pi'
+  | 'recall'
+  | 't3'
+  | 'towers'
+  | 'wordle';
 
 type SidebarTab = 'status' | 'clock' | null;
+
+/* ------------------------------------------------------------------ */
+/* Modal registry — single source of truth                             */
+/* ------------------------------------------------------------------ */
+
+const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
+  braille: BrailleModal,
+  'breaking-bad': BreakingBadModal,
+  calculator: CalculatorModal,
+  colors: ColorsModal,
+  converter: ConverterModal,
+  countdown: CountdownModal,
+  doi: DOIModal,
+  emojis: EmojisModal,
+  house: HouseModal,
+  ip: IPModal,
+  kaprekar: KaprekarModal,
+  morse: MorseModal,
+  pomodoro: PomodoroModal,
+  qr: QRCodeModal,
+  string: StringModal,
+  uuid: UUIDModal,
+  flashcards: FlashcardsModal,
+  'periodic-table': PeriodicTableModal,
+  blackjack: BlackjackModal,
+  pi: PiModal,
+  recall: RecallModal,
+  t3: T3Modal,
+  towers: TowersModal,
+  wordle: WordleModal,
+};
+
+/* ------------------------------------------------------------------ */
+/* Shared section component                                            */
+/* ------------------------------------------------------------------ */
+
+const Section: FC<{ label: string; children: React.ReactNode }> = ({
+  label,
+  children,
+}) => (
+  <section aria-label={label} className="mt-10 w-full max-w-2xl">
+    <p className="text-base-content/30 mb-4 text-center font-mono text-xs tracking-widest uppercase">
+      {label}
+    </p>
+    {children}
+  </section>
+);
+
+/* ------------------------------------------------------------------ */
+/* Center column                                                        */
+/* ------------------------------------------------------------------ */
+
+const MainContent: FC<{
+  today: string;
+  tools: Tool[];
+  education: Tool[];
+  games: Tool[];
+}> = ({ today, tools, education, games }) => (
+  <main className="flex flex-col items-center overflow-y-auto px-8 py-12">
+    <p className="text-base-content/30 mb-2 font-mono text-xs tracking-widest uppercase">
+      {today}
+    </p>
+    <h1 className="mb-10 text-3xl font-black tracking-tight">Start Page</h1>
+
+    <Section label="AI Assistants">
+      <div className="grid grid-cols-4 gap-4">
+        {aiBookmarks.map((bm) => (
+          <BookmarkCard key={bm.label} {...bm} />
+        ))}
+      </div>
+    </Section>
+
+    <Section label="Google Workspace">
+      <div className="grid grid-cols-4 gap-4">
+        {googleBookmarks.map((bm) => (
+          <BookmarkCard key={bm.label} {...bm} />
+        ))}
+      </div>
+    </Section>
+
+    <Section label="Websites">
+      <div className="grid grid-cols-4 gap-4">
+        {websiteBookmarks.map((bm) => (
+          <BookmarkCard key={bm.label} {...bm} />
+        ))}
+      </div>
+    </Section>
+
+    <Section label="Tools">
+      <div className="grid grid-cols-4 gap-4">
+        {tools.map((t) => (
+          <ToolCard key={t.label} {...t} />
+        ))}
+      </div>
+    </Section>
+
+    <Section label="Education">
+      <div className="grid grid-cols-4 gap-4">
+        {education.map((t) => (
+          <ToolCard key={t.label} {...t} />
+        ))}
+      </div>
+    </Section>
+
+    <Section label="Games">
+      <div className="grid grid-cols-4 gap-4">
+        {games.map((t) => (
+          <ToolCard key={t.label} {...t} />
+        ))}
+      </div>
+    </Section>
+
+    <Section label="Apps">
+      <div className="grid grid-cols-4 gap-4">
+        {apps.map((a) => (
+          <AppCard key={a.id} {...a} />
+        ))}
+      </div>
+    </Section>
+  </main>
+);
+
+/* ------------------------------------------------------------------ */
+/* Page                                                                 */
+/* ------------------------------------------------------------------ */
 
 const AppPage: NextPage = () => {
   const [times, setTimes] = useState(() =>
     timezones.map(({ tz }) => getTimeInZone(tz))
   );
   const [today, setToday] = useState('');
-  const [activeModal, setActiveModal] = useState<ModalId>(null);
+  const [activeModal, setActiveModal] = useState<ModalId | null>(null);
   const [activeSidebar, setActiveSidebar] = useState<SidebarTab>(null);
 
   const close = () => setActiveModal(null);
@@ -178,9 +215,10 @@ const AppPage: NextPage = () => {
         day: 'numeric',
       })
     );
-    const interval = setInterval(() => {
-      setTimes(timezones.map(({ tz }) => getTimeInZone(tz)));
-    }, 1000);
+    const interval = setInterval(
+      () => setTimes(timezones.map(({ tz }) => getTimeInZone(tz))),
+      1000
+    );
     return () => clearInterval(interval);
   }, []);
 
@@ -191,12 +229,13 @@ const AppPage: NextPage = () => {
         const res = await fetch(
           `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weather_code`
         );
-        const data = await res.json();
-        return data.current as WeatherData;
+        return (await res.json()).current as WeatherData;
       },
       staleTime: 1000 * 60 * 10,
     })),
   });
+
+  const open = (id: ModalId) => () => setActiveModal(id);
 
   const tools: Tool[] = [
     {
@@ -204,112 +243,112 @@ const AppPage: NextPage = () => {
       description: 'Converter',
       emoji: '⠿',
       color: '#8b5cf6',
-      onClick: () => setActiveModal('braille'),
+      onClick: open('braille'),
     },
     {
       label: 'Breaking Bad',
       description: 'Element',
       emoji: '🧪',
       color: '#eab308',
-      onClick: () => setActiveModal('breaking-bad'),
+      onClick: open('breaking-bad'),
     },
     {
       label: 'Calculator',
       description: 'Math',
       emoji: '➗',
       color: '#8b5cf6',
-      onClick: () => setActiveModal('calculator'),
+      onClick: open('calculator'),
     },
     {
       label: 'Colors',
       description: 'Picker',
       emoji: '🎨',
       color: '#ec4899',
-      onClick: () => setActiveModal('colors'),
+      onClick: open('colors'),
     },
     {
       label: 'Converter',
       description: 'Converter',
       emoji: '🔀',
       color: '#8b5cf6',
-      onClick: () => setActiveModal('converter'),
+      onClick: open('converter'),
     },
     {
       label: 'Countdown',
       description: 'Timer',
       emoji: '⏳',
       color: '#06b6d4',
-      onClick: () => setActiveModal('countdown'),
+      onClick: open('countdown'),
     },
     {
       label: 'DOI',
       description: 'Cite',
       emoji: '📄',
       color: '#3b82f6',
-      onClick: () => setActiveModal('doi'),
+      onClick: open('doi'),
     },
     {
       label: 'Emojis',
       description: 'Explorer',
       emoji: '😀',
       color: '#f59e0b',
-      onClick: () => setActiveModal('emojis'),
+      onClick: open('emojis'),
     },
     {
       label: 'House',
       description: 'M.D.',
       emoji: '🏥',
       color: '#ef4444',
-      onClick: () => setActiveModal('house'),
+      onClick: open('house'),
     },
     {
       label: 'IP',
       description: 'Inspector',
       emoji: '🌐',
       color: '#f59e0b',
-      onClick: () => setActiveModal('ip'),
+      onClick: open('ip'),
     },
     {
       label: 'Kaprekar',
       description: 'Routine',
       emoji: '🔢',
       color: '#f59e0b',
-      onClick: () => setActiveModal('kaprekar'),
+      onClick: open('kaprekar'),
     },
     {
       label: 'Morse Code',
       description: 'Converter',
       emoji: '🔣',
       color: '#f59e0b',
-      onClick: () => setActiveModal('morse'),
+      onClick: open('morse'),
     },
     {
       label: 'Pomodoro',
       description: 'Timer',
       emoji: '🍅',
       color: '#ef4444',
-      onClick: () => setActiveModal('pomodoro'),
+      onClick: open('pomodoro'),
     },
     {
       label: 'QR Code',
       description: 'Generator',
       emoji: '▦',
       color: '#22d3ee',
-      onClick: () => setActiveModal('qr'),
+      onClick: open('qr'),
     },
     {
       label: 'String',
       description: 'Formatter',
       emoji: '✏️',
       color: '#10b981',
-      onClick: () => setActiveModal('string'),
+      onClick: open('string'),
     },
     {
       label: 'UUID',
       description: 'Generator',
       emoji: '🔑',
       color: '#a855f7',
-      onClick: () => setActiveModal('uuid'),
+      onClick: open('uuid'),
     },
   ];
 
@@ -319,14 +358,14 @@ const AppPage: NextPage = () => {
       description: 'Words',
       emoji: '📓',
       color: '#fefefe',
-      onClick: () => setActiveModal('flashcards'),
+      onClick: open('flashcards'),
     },
     {
       label: 'Periodic Table',
       description: 'Elements',
       emoji: '📊',
       color: '#f59e0b',
-      onClick: () => setActiveModal('periodic-table'),
+      onClick: open('periodic-table'),
     },
   ];
 
@@ -336,48 +375,56 @@ const AppPage: NextPage = () => {
       description: 'Cards Counter',
       emoji: '🃏',
       color: '#f59e0b',
-      onClick: () => setActiveModal('blackjack'),
+      onClick: open('blackjack'),
     },
     {
       label: 'PI',
       description: 'Memorization',
       emoji: 'π',
       color: '#f59e0b',
-      onClick: () => setActiveModal('pi'),
+      onClick: open('pi'),
     },
     {
       label: 'Recall',
       description: 'Memorization',
       emoji: '🔣',
       color: '#f59e0b',
-      onClick: () => setActiveModal('recall'),
+      onClick: open('recall'),
     },
     {
       label: 'T3',
       description: 'Tic-Tac-Toe',
       emoji: '❌',
       color: '#f59e0b',
-      onClick: () => setActiveModal('t3'),
+      onClick: open('t3'),
     },
     {
       label: 'Towers',
       description: 'Towers of Hanoi',
       emoji: '🗼',
       color: '#f59e0b',
-      onClick: () => setActiveModal('towers'),
+      onClick: open('towers'),
     },
     {
       label: 'Wordle',
       description: 'Guess the word',
       emoji: '🟩',
       color: '#f59e0b',
-      onClick: () => setActiveModal('wordle'),
+      onClick: open('wordle'),
     },
   ];
 
+  // Active modal component resolved from registry
+  const ActiveModal = activeModal ? MODAL_MAP[activeModal] : null;
+
+  const sidebarContent = {
+    status: <LeftSidebar />,
+    clock: <RightSidebar times={times} weatherQueries={weatherQueries} />,
+  };
+
   return (
     <div className="bg-base-100 text-base-content min-h-screen">
-      {/* ── Desktop: 3-column grid, hidden on mobile ── */}
+      {/* Desktop 3-column */}
       <div
         className="hidden h-screen overflow-hidden lg:grid"
         style={{ gridTemplateColumns: '280px 2fr 320px' }}>
@@ -391,9 +438,8 @@ const AppPage: NextPage = () => {
         <RightSidebar times={times} weatherQueries={weatherQueries} />
       </div>
 
-      {/* ── Mobile/tablet layout ── */}
+      {/* Mobile */}
       <div className="flex min-h-screen flex-col lg:hidden">
-        {/* Scrollable center content */}
         <main className="flex-1 overflow-y-auto px-4 py-8">
           <p className="text-base-content/30 mb-2 text-center font-mono text-xs tracking-widest uppercase">
             {today}
@@ -402,125 +448,92 @@ const AppPage: NextPage = () => {
             Start Page
           </h1>
 
-          <section
-            aria-label="AI Assistants"
-            className="mx-auto w-full max-w-2xl">
-            <p className="text-base-content/30 mb-4 text-center font-mono text-xs tracking-widest uppercase">
-              AI Assistants
-            </p>
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-              {aiBookmarks.map((bm) => (
-                <BookmarkCard key={bm.label} {...bm} />
-              ))}
-            </div>
-          </section>
-
-          <section
-            aria-label="Google Workspace"
-            className="mx-auto mt-8 w-full max-w-2xl">
-            <p className="text-base-content/30 mb-4 text-center font-mono text-xs tracking-widest uppercase">
-              Google Workspace
-            </p>
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-              {googleBookmarks.map((bm) => (
-                <BookmarkCard key={bm.label} {...bm} />
-              ))}
-            </div>
-          </section>
-
-          <section
-            aria-label="Websites"
-            className="mx-auto mt-8 w-full max-w-2xl">
-            <p className="text-base-content/30 mb-4 text-center font-mono text-xs tracking-widest uppercase">
-              Websites
-            </p>
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-              {websiteBookmarks.map((bm) => (
-                <BookmarkCard key={bm.label} {...bm} />
-              ))}
-            </div>
-          </section>
-
-          <section aria-label="Tools" className="mx-auto mt-8 w-full max-w-2xl">
-            <p className="text-base-content/30 mb-4 text-center font-mono text-xs tracking-widest uppercase">
-              Tools
-            </p>
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-              {tools.map((tool) => (
-                <ToolCard key={tool.label} {...tool} />
-              ))}
-            </div>
-          </section>
-
-          <section
-            aria-label="Education"
-            className="mx-auto mt-8 w-full max-w-2xl">
-            <p className="text-base-content/30 mb-4 text-center font-mono text-xs tracking-widest uppercase">
-              Education
-            </p>
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-              {education.map((item) => (
-                <ToolCard key={item.label} {...item} />
-              ))}
-            </div>
-          </section>
-
-          <section aria-label="Games" className="mx-auto mt-8 w-full max-w-2xl">
-            <p className="text-base-content/30 mb-4 text-center font-mono text-xs tracking-widest uppercase">
-              Games
-            </p>
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-              {games.map((game) => (
-                <ToolCard key={game.label} {...game} />
-              ))}
-            </div>
-          </section>
+          {[
+            {
+              label: 'AI Assistants',
+              items: aiBookmarks,
+              Card: BookmarkCard,
+              cols: 'grid-cols-2 sm:grid-cols-3',
+            },
+            {
+              label: 'Google Workspace',
+              items: googleBookmarks,
+              Card: BookmarkCard,
+              cols: 'grid-cols-2 sm:grid-cols-3',
+            },
+            {
+              label: 'Websites',
+              items: websiteBookmarks,
+              Card: BookmarkCard,
+              cols: 'grid-cols-2 sm:grid-cols-3',
+            },
+            {
+              label: 'Tools',
+              items: tools,
+              Card: ToolCard,
+              cols: 'grid-cols-2 sm:grid-cols-3',
+            },
+            {
+              label: 'Education',
+              items: education,
+              Card: ToolCard,
+              cols: 'grid-cols-2 sm:grid-cols-3',
+            },
+            {
+              label: 'Games',
+              items: games,
+              Card: ToolCard,
+              cols: 'grid-cols-2 sm:grid-cols-3',
+            },
+          ].map(({ label, items, Card, cols }) => (
+            <section
+              key={label}
+              aria-label={label}
+              className="mx-auto mt-8 w-full max-w-2xl">
+              <p className="text-base-content/30 mb-4 text-center font-mono text-xs tracking-widest uppercase">
+                {label}
+              </p>
+              <div className={`grid ${cols} gap-3`}>
+                {items.map((item: any) => (
+                  <Card key={item.label ?? item.id} {...item} />
+                ))}
+              </div>
+            </section>
+          ))}
 
           <section aria-label="Apps" className="mx-auto mt-8 w-full max-w-2xl">
             <p className="text-base-content/30 mb-4 text-center font-mono text-xs tracking-widest uppercase">
               Apps
             </p>
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-              {apps.map((app) => (
-                <AppCard key={app.id} {...app} />
+              {apps.map((a) => (
+                <AppCard key={a.id} {...a} />
               ))}
             </div>
           </section>
 
-          {/* Extra bottom padding so content clears the mobile nav bar */}
           <div className="h-20" />
         </main>
 
-        {/* ── Mobile bottom nav ── */}
+        {/* Mobile bottom nav */}
         <nav className="bg-base-100 border-base-300 fixed inset-x-0 bottom-0 z-40 flex border-t">
-          <button
-            className={`flex flex-1 flex-col items-center justify-center gap-1 py-3 text-xs transition-colors ${
-              activeSidebar === 'status'
-                ? 'text-primary'
-                : 'text-base-content/40 hover:text-base-content/70'
-            }`}
-            onClick={() =>
-              setActiveSidebar((p) => (p === 'status' ? null : 'status'))
-            }>
-            <span className="text-lg">📡</span>
-            Status
-          </button>
-          <button
-            className={`flex flex-1 flex-col items-center justify-center gap-1 py-3 text-xs transition-colors ${
-              activeSidebar === 'clock'
-                ? 'text-primary'
-                : 'text-base-content/40 hover:text-base-content/70'
-            }`}
-            onClick={() =>
-              setActiveSidebar((p) => (p === 'clock' ? null : 'clock'))
-            }>
-            <span className="text-lg">🕐</span>
-            Clock
-          </button>
+          {(['status', 'clock'] as const).map((tab) => (
+            <button
+              key={tab}
+              className={`flex flex-1 flex-col items-center justify-center gap-1 py-3 text-xs transition-colors ${
+                activeSidebar === tab
+                  ? 'text-primary'
+                  : 'text-base-content/40 hover:text-base-content/70'
+              }`}
+              onClick={() => setActiveSidebar((p) => (p === tab ? null : tab))}>
+              <span className="text-lg">{tab === 'status' ? '📡' : '🕐'}</span>
+              {tab === 'status' ? 'Status' : 'Clock'}
+            </button>
+          ))}
         </nav>
 
-        {/* ── Mobile sidebar drawers (slide up from bottom) ── */}
-        {activeSidebar !== null && (
+        {/* Mobile sidebar drawer */}
+        {activeSidebar && (
           <>
             <div
               className="fixed inset-0 z-40 bg-black/40"
@@ -539,48 +552,14 @@ const AppPage: NextPage = () => {
                   ✕
                 </button>
               </div>
-              <div className="p-4">
-                {activeSidebar === 'status' && <LeftSidebar />}
-                {activeSidebar === 'clock' && (
-                  <RightSidebar times={times} weatherQueries={weatherQueries} />
-                )}
-              </div>
+              <div className="p-4">{sidebarContent[activeSidebar]}</div>
             </div>
           </>
         )}
       </div>
 
-      {/* ── App Modals (shared across both layouts) ── */}
-      {activeModal === 'braille' && <BrailleModal onClose={close} />}
-      {activeModal === 'breaking-bad' && <BreakingBadModal onClose={close} />}
-      {activeModal === 'calculator' && <CalculatorModal onClose={close} />}
-      {activeModal === 'colors' && <ColorsModal onClose={close} />}
-      {activeModal === 'converter' && <ConverterModal onClose={close} />}
-      {activeModal === 'countdown' && <CountdownModal onClose={close} />}
-      {activeModal === 'doi' && <DOIModal onClose={close} />}
-      {activeModal === 'emojis' && <EmojisModal onClose={close} />}
-      {activeModal === 'house' && <HouseModal onClose={close} />}
-      {activeModal === 'ip' && <IPModal onClose={close} />}
-      {activeModal === 'kaprekar' && <KaprekarModal onClose={close} />}
-      {activeModal === 'morse' && <MorseModal onClose={close} />}
-      {activeModal === 'pomodoro' && <PomodoroModal onClose={close} />}
-      {activeModal === 'qr' && <QRCodeModal onClose={close} />}
-      {activeModal === 'string' && <StringModal onClose={close} />}
-      {activeModal === 'uuid' && <UUIDModal onClose={close} />}
-
-      {/* ── Game Modals (shared across both layouts) ── */}
-      {activeModal === 'flashcards' && <FlashcardsModal onClose={close} />}
-      {activeModal === 'periodic-table' && (
-        <PeriodicTableModal onClose={close} />
-      )}
-
-      {/* ── Game Modals (shared across both layouts) ── */}
-      {activeModal === 'blackjack' && <BlackjackModal onClose={close} />}
-      {activeModal === 'pi' && <PiModal onClose={close} />}
-      {activeModal === 'recall' && <RecallModal onClose={close} />}
-      {activeModal === 't3' && <T3Modal onClose={close} />}
-      {activeModal === 'towers' && <TowersModal onClose={close} />}
-      {activeModal === 'wordle' && <WordleModal onClose={close} />}
+      {/* Active modal — resolved from registry */}
+      {ActiveModal && <ActiveModal onClose={close} />}
     </div>
   );
 };
