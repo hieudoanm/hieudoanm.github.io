@@ -17,6 +17,7 @@ import { QRCodeModal } from '@hieudoanm/components/modals/apps/QRCodeModal';
 import { StringModal } from '@hieudoanm/components/modals/apps/StringModal';
 import { UUIDModal } from '@hieudoanm/components/modals/apps/UUIDModal';
 import { T3Modal } from '@hieudoanm/components/modals/games/T3Modal';
+import { TowersModal } from '@hieudoanm/components/modals/games/TowersModal';
 import { WordleModal } from '@hieudoanm/components/modals/games/WordleModal';
 import { LeftSidebar } from '@hieudoanm/components/sidebars/LeftSidebar';
 import { RightSidebar } from '@hieudoanm/components/sidebars/RightSidebar';
@@ -129,7 +130,7 @@ type AppModalId =
   | 'string'
   | 'uuid';
 
-type GameModalId = 't3' | 'wordle';
+type GameModalId = 't3' | 'towers' | 'wordle';
 
 type ModalId = AppModalId | GameModalId | null;
 
@@ -282,6 +283,13 @@ const AppPage: NextPage = () => {
       emoji: '❌',
       color: '#f59e0b',
       onClick: () => setActiveModal('t3'),
+    },
+    {
+      label: 'Towers',
+      description: 'Towers of Hanoi',
+      emoji: '🗼',
+      color: '#f59e0b',
+      onClick: () => setActiveModal('towers'),
     },
     {
       label: 'Wordle',
@@ -467,6 +475,7 @@ const AppPage: NextPage = () => {
 
       {/* ── Game Modals (shared across both layouts) ── */}
       {activeModal === 't3' && <T3Modal onClose={close} />}
+      {activeModal === 'towers' && <TowersModal onClose={close} />}
       {activeModal === 'wordle' && <WordleModal onClose={close} />}
     </div>
   );

@@ -4,7 +4,6 @@ exports[`AppCard should render 1`] = `
 <div>
   <a
     href="https://example.com"
-    target="_blank"
   >
     <button
       class="card bg-base-200 border-base-300 hover:bg-base-300 group w-full border text-left transition-all duration-300 hover:scale-[1.03] hover:shadow-lg"

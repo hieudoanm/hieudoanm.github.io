@@ -1,6 +1,6 @@
 # Hieu Doan
 
-## Table of Contents (48)
+## Table of Contents (47)
 
 ## Artificial Intelligence (3)
 
@@ -107,13 +107,12 @@
 [typoglycemia]: https://hieudoanm.github.io/typoglycemia
 [typoglycemia-gh]: https://github.com/hieudoanm/typoglycemia
 
-## Games (5)
+## Games (4)
 
 1. 🃏 [Cards][cards] - [GitHub][cards-gh]
 2. ♟ [Chess][chess] - [GitHub][chess-gh]
 3. 🧠 [Memory][memory] - [GitHub][memory-gh]
 4. ❓ [Quiz][quiz] - [GitHub][quiz-gh]
-5. 🗼 [Towers][towers] - [GitHub][towers-gh]
 
 [cards]: https://hieudoanm.github.io/cards
 [cards-gh]: https://github.com/hieudoanm/cards
@@ -123,8 +122,6 @@
 [memory-gh]: https://github.com/hieudoanm/memory
 [quiz]: https://hieudoanm.github.io/quiz
 [quiz-gh]: https://github.com/hieudoanm/quiz
-[towers]: https://hieudoanm.github.io/towers
-[towers-gh]: https://github.com/hieudoanm/towers
 
 ## Languages (2)
 

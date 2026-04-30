@@ -310,16 +310,6 @@
     "tags": ["cli", "extension", "android", "macos", "web"]
   },
   {
-    "category": "games",
-    "emoji": "🗼",
-    "id": "towers",
-    "name": "Towers",
-    "href": "https://hieudoanm.github.io/towers",
-    "github": "https://github.com/hieudoanm/towers",
-    "image": "https://raw.githubusercontent.com/hieudoanm/towers/refs/heads/master/images/app.png",
-    "tags": ["cli", "extension", "android", "macos", "web"]
-  },
-  {
     "category": "languages",
     "emoji": "🇬🇧",
     "id": "english",
