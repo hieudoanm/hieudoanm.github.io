@@ -1,4 +1,6 @@
-export const websites = [
+import { BookmarkItem } from '@hieudoanm/components/cards/BookmarkCard';
+
+export const websites: BookmarkItem[] = [
   {
     label: 'Discord',
     url: 'https://discord.com',
@@ -26,6 +28,13 @@ export const websites = [
     description: 'Photos',
     emoji: '📷',
     color: '#e1306c',
+  },
+  {
+    label: 'Spotify',
+    url: 'https://open.spotify.com',
+    description: 'Music',
+    emoji: '🎵',
+    color: '#1DB954',
   },
   {
     label: 'Telegram',

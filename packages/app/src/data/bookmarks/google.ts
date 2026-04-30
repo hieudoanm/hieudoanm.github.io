@@ -1,4 +1,6 @@
-export const google = [
+import { BookmarkItem } from '@hieudoanm/components/cards/BookmarkCard';
+
+export const google: BookmarkItem[] = [
   {
     label: 'Calendar',
     url: 'https://calendar.google.com',
