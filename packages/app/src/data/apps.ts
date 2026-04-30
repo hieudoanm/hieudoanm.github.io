@@ -280,17 +280,6 @@ export const apps: App[] = [
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
-    category: 'fun',
-    emoji: '🔀',
-    id: 'typoglycemia',
-    name: 'Typoglycemia',
-    href: 'https://hieudoanm.github.io/typoglycemia',
-    github: 'https://github.com/hieudoanm/typoglycemia',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/typoglycemia/refs/heads/master/images/app.png',
-    tags: ['android', 'macos', 'web'],
-  },
-  {
     category: 'games',
     emoji: '🃏',
     id: 'cards',

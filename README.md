@@ -1,15 +1,15 @@
 # 👨‍💻 I'm HIEU DOAN
 
-## Table of Contents (44)
+## Table of Contents (43)
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
-  - [Table of Contents (44)](#table-of-contents-44)
+  - [Table of Contents (43)](#table-of-contents-43)
   - [Artificial Intelligence (3)](#artificial-intelligence-3)
   - [Design (2)](#design-2)
   - [Dev Tools (7)](#dev-tools-7)
   - [Docs (2)](#docs-2)
   - [Finance (3)](#finance-3)
-  - [Fun (8)](#fun-8)
+  - [Fun (7)](#fun-7)
   - [Games (4)](#games-4)
   - [Languages (2)](#languages-2)
   - [Messaging (1)](#messaging-1)
@@ -88,7 +88,7 @@
 [tax]: https://hieudoanm.github.io/tax
 [tax-gh]: https://github.com/hieudoanm/tax
 
-## Fun (8)
+## Fun (7)
 
 1. 🌀 [Attractors][attractors] - [GitHub][attractors-gh]
 2. ⚫ [Dot][dot] - [GitHub][dot-gh]
@@ -97,7 +97,6 @@
 5. ⚖️ [Legislation][legislation] - [GitHub][legislation-gh]
 6. 🔁 [Palindrome][palindrome] - [GitHub][palindrome-gh]
 7. 📕 [Pokedex][pokedex] - [GitHub][pokedex-gh]
-8. 🔀 [Typoglycemia][typoglycemia] - [GitHub][typoglycemia-gh]
 
 [attractors]: https://hieudoanm.github.io/attractors
 [attractors-gh]: https://github.com/hieudoanm/attractors
@@ -113,8 +112,6 @@
 [palindrome-gh]: https://github.com/hieudoanm/palindrome
 [pokedex]: https://hieudoanm.github.io/pokedex
 [pokedex-gh]: https://github.com/hieudoanm/pokedex
-[typoglycemia]: https://hieudoanm.github.io/typoglycemia
-[typoglycemia-gh]: https://github.com/hieudoanm/typoglycemia
 
 ## Games (4)
 
