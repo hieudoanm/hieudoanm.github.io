@@ -10,7 +10,7 @@
   - [Docs (2)](#docs-2)
   - [Finance (3)](#finance-3)
   - [Fun (7)](#fun-7)
-  - [Games (4)](#games-4)
+  - [Games (3)](#games-3)
   - [Languages (2)](#languages-2)
   - [Messaging (1)](#messaging-1)
   - [Template (1)](#template-1)
@@ -113,19 +113,16 @@
 [pokedex]: https://hieudoanm.github.io/pokedex
 [pokedex-gh]: https://github.com/hieudoanm/pokedex
 
-## Games (4)
+## Games (3)
 
 1. 🃏 [Cards][cards] - [GitHub][cards-gh]
 2. ♟ [Chess][chess] - [GitHub][chess-gh]
-3. 🧠 [Memory][memory] - [GitHub][memory-gh]
-4. ❓ [Quiz][quiz] - [GitHub][quiz-gh]
+3. ❓ [Quiz][quiz] - [GitHub][quiz-gh]
 
 [cards]: https://hieudoanm.github.io/cards
 [cards-gh]: https://github.com/hieudoanm/cards
 [chess]: https://hieudoanm.github.io/chess
 [chess-gh]: https://github.com/hieudoanm/chess
-[memory]: https://hieudoanm.github.io/memory
-[memory-gh]: https://github.com/hieudoanm/memory
 [quiz]: https://hieudoanm.github.io/quiz
 [quiz-gh]: https://github.com/hieudoanm/quiz
 

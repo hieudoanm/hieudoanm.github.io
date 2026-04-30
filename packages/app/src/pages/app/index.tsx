@@ -13,6 +13,7 @@ import { HouseModal } from '@hieudoanm/components/modals/apps/HouseModal';
 import { IPModal } from '@hieudoanm/components/modals/apps/IPModal';
 import { KaprekarModal } from '@hieudoanm/components/modals/apps/KaprekarModal';
 import { MorseModal } from '@hieudoanm/components/modals/apps/MorseModal';
+import { PitchModal } from '@hieudoanm/components/modals/apps/PitchModal';
 import { PomodoroModal } from '@hieudoanm/components/modals/apps/PomodoroModal';
 import { QRCodeModal } from '@hieudoanm/components/modals/apps/QRCodeModal';
 import { StringModal } from '@hieudoanm/components/modals/apps/StringModal';
@@ -57,6 +58,7 @@ type ModalId =
   | 'ip'
   | 'kaprekar'
   | 'morse'
+  | 'pitch'
   | 'pomodoro'
   | 'qr'
   | 'string'
@@ -90,6 +92,7 @@ const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
   ip: IPModal,
   kaprekar: KaprekarModal,
   morse: MorseModal,
+  pitch: PitchModal,
   pomodoro: PomodoroModal,
   qr: QRCodeModal,
   string: StringModal,
@@ -362,6 +365,13 @@ const AppPage: NextPage = () => {
       emoji: '📓',
       color: '#fefefe',
       onClick: open('flashcards'),
+    },
+    {
+      label: 'Pitch',
+      description: 'Training',
+      emoji: '🎹',
+      color: '#8b5cf6',
+      onClick: open('pitch'),
     },
     {
       label: 'Periodic Table',

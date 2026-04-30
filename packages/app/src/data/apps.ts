@@ -303,17 +303,6 @@ export const apps: App[] = [
   },
   {
     category: 'games',
-    emoji: '🧠',
-    id: 'memory',
-    name: 'Memory',
-    href: 'https://hieudoanm.github.io/memory',
-    github: 'https://github.com/hieudoanm/memory',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/memory/refs/heads/master/images/app.png',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
-    category: 'games',
     emoji: '❓',
     id: 'quiz',
     name: 'Quiz',
