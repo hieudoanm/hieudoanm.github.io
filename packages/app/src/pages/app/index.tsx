@@ -3,6 +3,7 @@ import { AppCard } from '@hieudoanm/components/cards/AppCard';
 import { BookmarkCard } from '@hieudoanm/components/cards/BookmarkCard';
 import { Tool, ToolCard } from '@hieudoanm/components/cards/ToolCard';
 import { BrailleModal } from '@hieudoanm/components/modals/apps/BrailleModal';
+import { CalculatorModal } from '@hieudoanm/components/modals/apps/CalculatorModal';
 import { ColorsModal } from '@hieudoanm/components/modals/apps/ColorsModal';
 import { CountdownModal } from '@hieudoanm/components/modals/apps/CountdownModal';
 import { DOIModal } from '@hieudoanm/components/modals/apps/DOIModal';
@@ -116,6 +117,7 @@ const MainContent: FC<{ today: string; tools: Tool[]; games: Tool[] }> = ({
 
 type AppModalId =
   | 'braille'
+  | 'calculator'
   | 'colors'
   | 'countdown'
   | 'doi'
@@ -182,6 +184,13 @@ const AppPage: NextPage = () => {
       emoji: '⠿',
       color: '#8b5cf6',
       onClick: () => setActiveModal('braille'),
+    },
+    {
+      label: 'Calculator',
+      description: 'Math',
+      emoji: '➗',
+      color: '#8b5cf6',
+      onClick: () => setActiveModal('calculator'),
     },
     {
       label: 'Colors',
@@ -459,6 +468,7 @@ const AppPage: NextPage = () => {
 
       {/* ── App Modals (shared across both layouts) ── */}
       {activeModal === 'braille' && <BrailleModal onClose={close} />}
+      {activeModal === 'calculator' && <CalculatorModal onClose={close} />}
       {activeModal === 'colors' && <ColorsModal onClose={close} />}
       {activeModal === 'countdown' && <CountdownModal onClose={close} />}
       {activeModal === 'doi' && <DOIModal onClose={close} />}

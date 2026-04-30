@@ -1,5 +1,19 @@
 export const websites = [
   {
+    label: 'Discord',
+    url: 'https://discord.com',
+    description: 'Chat',
+    emoji: '💬',
+    color: '#5865f2',
+  },
+  {
+    label: 'Facebook',
+    url: 'https://facebook.com',
+    description: 'Social network',
+    emoji: '📘',
+    color: '#4267B2',
+  },
+  {
     label: 'GitHub',
     url: 'https://github.com',
     description: 'Code',
@@ -14,11 +28,18 @@ export const websites = [
     color: '#e1306c',
   },
   {
-    label: 'Facebook',
-    url: 'https://facebook.com',
+    label: 'Telegram',
+    url: 'https://web.telegram.org/',
+    description: 'Messaging',
+    emoji: '💬',
+    color: '#0088cc',
+  },
+  {
+    label: 'X',
+    url: 'https://x.com',
     description: 'Social network',
-    emoji: '📘',
-    color: '#4267B2',
+    emoji: '🐦',
+    color: '#0088cc',
   },
   {
     label: 'YouTube',
@@ -26,19 +47,5 @@ export const websites = [
     description: 'Videos',
     emoji: '▶',
     color: '#ff0000',
-  },
-  {
-    label: 'Discord',
-    url: 'https://discord.com',
-    description: 'Chat',
-    emoji: '💬',
-    color: '#5865f2',
-  },
-  {
-    label: 'Telegram',
-    url: 'https://web.telegram.org/',
-    description: 'Messaging',
-    emoji: '💬',
-    color: '#0088cc',
   },
 ];
