@@ -1,9 +1,9 @@
 # 👨‍💻 I'm HIEU DOAN
 
-## Table of Contents (45)
+## Table of Contents (44)
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
-  - [Table of Contents (45)](#table-of-contents-45)
+  - [Table of Contents (44)](#table-of-contents-44)
   - [Artificial Intelligence (3)](#artificial-intelligence-3)
   - [Design (2)](#design-2)
   - [Dev Tools (7)](#dev-tools-7)
