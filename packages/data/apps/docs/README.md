@@ -1,6 +1,6 @@
 # Hieu Doan
 
-## Table of Contents (45)
+## Table of Contents (44)
 
 ## Artificial Intelligence (3)
 
@@ -73,22 +73,19 @@
 [tax]: https://hieudoanm.github.io/tax
 [tax-gh]: https://github.com/hieudoanm/tax
 
-## Fun (9)
+## Fun (8)
 
 1. 🌀 [Attractors][attractors] - [GitHub][attractors-gh]
-2. 🧪 [Breaking Bad][breaking-bad] - [GitHub][breaking-bad-gh]
-3. ⚫ [Dot][dot] - [GitHub][dot-gh]
-4. ⌚ [Garmin][garmin] - [GitHub][garmin-gh]
-5. 👀 [Eyes][eyes] - [GitHub][eyes-gh]
-6. ⚖️ [Legislation][legislation] - [GitHub][legislation-gh]
-7. 🔁 [Palindrome][palindrome] - [GitHub][palindrome-gh]
-8. 📕 [Pokedex][pokedex] - [GitHub][pokedex-gh]
-9. 🔀 [Typoglycemia][typoglycemia] - [GitHub][typoglycemia-gh]
+2. ⚫ [Dot][dot] - [GitHub][dot-gh]
+3. ⌚ [Garmin][garmin] - [GitHub][garmin-gh]
+4. 👀 [Eyes][eyes] - [GitHub][eyes-gh]
+5. ⚖️ [Legislation][legislation] - [GitHub][legislation-gh]
+6. 🔁 [Palindrome][palindrome] - [GitHub][palindrome-gh]
+7. 📕 [Pokedex][pokedex] - [GitHub][pokedex-gh]
+8. 🔀 [Typoglycemia][typoglycemia] - [GitHub][typoglycemia-gh]
 
 [attractors]: https://hieudoanm.github.io/attractors
 [attractors-gh]: https://github.com/hieudoanm/attractors
-[breaking-bad]: https://hieudoanm.github.io/breaking-bad
-[breaking-bad-gh]: https://github.com/hieudoanm/breaking-bad
 [dot]: https://hieudoanm.github.io/dot
 [dot-gh]: https://github.com/hieudoanm/dot
 [garmin]: https://hieudoanm.github.io/garmin

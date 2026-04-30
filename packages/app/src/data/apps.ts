@@ -215,17 +215,6 @@ export const apps: App[] = [
   },
   {
     category: 'fun',
-    emoji: '🧪',
-    id: 'breaking-bad',
-    name: 'Breaking Bad',
-    href: 'https://hieudoanm.github.io/breaking-bad',
-    github: 'https://github.com/hieudoanm/breaking-bad',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/breaking-bad/refs/heads/master/images/app.png',
-    tags: ['android', 'macos', 'web'],
-  },
-  {
-    category: 'fun',
     emoji: '⚫',
     id: 'dot',
     name: 'Dot',

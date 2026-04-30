@@ -3,13 +3,13 @@ import { AppCard } from '@hieudoanm/components/cards/AppCard';
 import { BookmarkCard } from '@hieudoanm/components/cards/BookmarkCard';
 import { Tool, ToolCard } from '@hieudoanm/components/cards/ToolCard';
 import { BrailleModal } from '@hieudoanm/components/modals/apps/BrailleModal';
+import { BreakingBadModal } from '@hieudoanm/components/modals/apps/BreakingBadModal';
 import { CalculatorModal } from '@hieudoanm/components/modals/apps/CalculatorModal';
 import { ColorsModal } from '@hieudoanm/components/modals/apps/ColorsModal';
 import { ConverterModal } from '@hieudoanm/components/modals/apps/ConverterModal';
 import { CountdownModal } from '@hieudoanm/components/modals/apps/CountdownModal';
 import { DOIModal } from '@hieudoanm/components/modals/apps/DOIModal';
 import { EmojisModal } from '@hieudoanm/components/modals/apps/EmojisModal';
-import { FlashcardsModal } from '@hieudoanm/components/modals/apps/FlashcardsModal';
 import { HouseModal } from '@hieudoanm/components/modals/apps/HouseModal';
 import { IPModal } from '@hieudoanm/components/modals/apps/IPModal';
 import { KaprekarModal } from '@hieudoanm/components/modals/apps/KaprekarModal';
@@ -18,6 +18,8 @@ import { PomodoroModal } from '@hieudoanm/components/modals/apps/PomodoroModal';
 import { QRCodeModal } from '@hieudoanm/components/modals/apps/QRCodeModal';
 import { StringModal } from '@hieudoanm/components/modals/apps/StringModal';
 import { UUIDModal } from '@hieudoanm/components/modals/apps/UUIDModal';
+import { FlashcardsModal } from '@hieudoanm/components/modals/education/FlashcardsModal';
+import { PeriodicTableModal } from '@hieudoanm/components/modals/education/PeriodicTableModal';
 import { BlackjackModal } from '@hieudoanm/components/modals/games/BlackjackModal';
 import { PiModal } from '@hieudoanm/components/modals/games/PIModal';
 import { RecallModal } from '@hieudoanm/components/modals/games/RecallModal';
@@ -40,11 +42,12 @@ import { FC, useEffect, useState } from 'react';
 
 // ── Extracted to avoid duplicating the center column JSX ──────────────────────
 
-const MainContent: FC<{ today: string; tools: Tool[]; games: Tool[] }> = ({
-  today = '',
-  tools = [],
-  games = [],
-}) => (
+const MainContent: FC<{
+  today: string;
+  tools: Tool[];
+  education: Tool[];
+  games: Tool[];
+}> = ({ today = '', tools = [], education = [], games = [] }) => (
   <main className="flex flex-col items-center overflow-y-auto px-8 py-12">
     <p className="text-base-content/30 mb-2 font-mono text-xs tracking-widest uppercase">
       {today}
@@ -95,6 +98,17 @@ const MainContent: FC<{ today: string; tools: Tool[]; games: Tool[] }> = ({
       </div>
     </section>
 
+    <section aria-label="Education" className="mt-10 w-full max-w-2xl">
+      <p className="text-base-content/30 mb-4 text-center font-mono text-xs tracking-widest uppercase">
+        Education
+      </p>
+      <div className="grid grid-cols-4 gap-4">
+        {education.map((item) => (
+          <ToolCard key={item.label} {...item} />
+        ))}
+      </div>
+    </section>
+
     <section aria-label="Games" className="mt-10 w-full max-w-2xl">
       <p className="text-base-content/30 mb-4 text-center font-mono text-xs tracking-widest uppercase">
         Games
@@ -121,13 +135,13 @@ const MainContent: FC<{ today: string; tools: Tool[]; games: Tool[] }> = ({
 
 type AppModalId =
   | 'braille'
+  | 'breaking-bad'
   | 'calculator'
   | 'colors'
   | 'converter'
   | 'countdown'
   | 'doi'
   | 'emojis'
-  | 'flashcards'
   | 'house'
   | 'ip'
   | 'morse'
@@ -137,9 +151,11 @@ type AppModalId =
   | 'string'
   | 'uuid';
 
+type EducationModalId = 'flashcards' | 'periodic-table';
+
 type GameModalId = 'blackjack' | 'pi' | 'recall' | 't3' | 'towers' | 'wordle';
 
-type ModalId = AppModalId | GameModalId | null;
+type ModalId = AppModalId | EducationModalId | GameModalId | null;
 
 type SidebarTab = 'status' | 'clock' | null;
 
@@ -191,6 +207,13 @@ const AppPage: NextPage = () => {
       onClick: () => setActiveModal('braille'),
     },
     {
+      label: 'Breaking Bad',
+      description: 'Element',
+      emoji: '🧪',
+      color: '#eab308',
+      onClick: () => setActiveModal('breaking-bad'),
+    },
+    {
       label: 'Calculator',
       description: 'Math',
       emoji: '➗',
@@ -231,13 +254,6 @@ const AppPage: NextPage = () => {
       emoji: '😀',
       color: '#f59e0b',
       onClick: () => setActiveModal('emojis'),
-    },
-    {
-      label: 'Flashcards',
-      description: 'Words',
-      emoji: '📓',
-      color: '#fefefe',
-      onClick: () => setActiveModal('flashcards'),
     },
     {
       label: 'House',
@@ -297,6 +313,23 @@ const AppPage: NextPage = () => {
     },
   ];
 
+  const education: Tool[] = [
+    {
+      label: 'Flashcards',
+      description: 'Words',
+      emoji: '📓',
+      color: '#fefefe',
+      onClick: () => setActiveModal('flashcards'),
+    },
+    {
+      label: 'Periodic Table',
+      description: 'Elements',
+      emoji: '📊',
+      color: '#f59e0b',
+      onClick: () => setActiveModal('periodic-table'),
+    },
+  ];
+
   const games: Tool[] = [
     {
       label: 'Blackjack',
@@ -349,7 +382,12 @@ const AppPage: NextPage = () => {
         className="hidden h-screen overflow-hidden lg:grid"
         style={{ gridTemplateColumns: '280px 2fr 320px' }}>
         <LeftSidebar />
-        <MainContent today={today} tools={tools} games={games} />
+        <MainContent
+          today={today}
+          tools={tools}
+          education={education}
+          games={games}
+        />
         <RightSidebar times={times} weatherQueries={weatherQueries} />
       </div>
 
@@ -410,6 +448,19 @@ const AppPage: NextPage = () => {
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
               {tools.map((tool) => (
                 <ToolCard key={tool.label} {...tool} />
+              ))}
+            </div>
+          </section>
+
+          <section
+            aria-label="Education"
+            className="mx-auto mt-8 w-full max-w-2xl">
+            <p className="text-base-content/30 mb-4 text-center font-mono text-xs tracking-widest uppercase">
+              Education
+            </p>
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+              {education.map((item) => (
+                <ToolCard key={item.label} {...item} />
               ))}
             </div>
           </section>
@@ -501,13 +552,13 @@ const AppPage: NextPage = () => {
 
       {/* ── App Modals (shared across both layouts) ── */}
       {activeModal === 'braille' && <BrailleModal onClose={close} />}
+      {activeModal === 'breaking-bad' && <BreakingBadModal onClose={close} />}
       {activeModal === 'calculator' && <CalculatorModal onClose={close} />}
       {activeModal === 'colors' && <ColorsModal onClose={close} />}
       {activeModal === 'converter' && <ConverterModal onClose={close} />}
       {activeModal === 'countdown' && <CountdownModal onClose={close} />}
       {activeModal === 'doi' && <DOIModal onClose={close} />}
       {activeModal === 'emojis' && <EmojisModal onClose={close} />}
-      {activeModal === 'flashcards' && <FlashcardsModal onClose={close} />}
       {activeModal === 'house' && <HouseModal onClose={close} />}
       {activeModal === 'ip' && <IPModal onClose={close} />}
       {activeModal === 'kaprekar' && <KaprekarModal onClose={close} />}
@@ -516,6 +567,12 @@ const AppPage: NextPage = () => {
       {activeModal === 'qr' && <QRCodeModal onClose={close} />}
       {activeModal === 'string' && <StringModal onClose={close} />}
       {activeModal === 'uuid' && <UUIDModal onClose={close} />}
+
+      {/* ── Game Modals (shared across both layouts) ── */}
+      {activeModal === 'flashcards' && <FlashcardsModal onClose={close} />}
+      {activeModal === 'periodic-table' && (
+        <PeriodicTableModal onClose={close} />
+      )}
 
       {/* ── Game Modals (shared across both layouts) ── */}
       {activeModal === 'blackjack' && <BlackjackModal onClose={close} />}
