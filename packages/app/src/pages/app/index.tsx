@@ -18,6 +18,7 @@ import { PomodoroModal } from '@hieudoanm/components/modals/apps/PomodoroModal';
 import { QRCodeModal } from '@hieudoanm/components/modals/apps/QRCodeModal';
 import { StringModal } from '@hieudoanm/components/modals/apps/StringModal';
 import { UUIDModal } from '@hieudoanm/components/modals/apps/UUIDModal';
+import { BlackjackModal } from '@hieudoanm/components/modals/games/BlackjackModal';
 import { PiModal } from '@hieudoanm/components/modals/games/PIModal';
 import { RecallModal } from '@hieudoanm/components/modals/games/RecallModal';
 import { T3Modal } from '@hieudoanm/components/modals/games/T3Modal';
@@ -136,7 +137,7 @@ type AppModalId =
   | 'string'
   | 'uuid';
 
-type GameModalId = 'pi' | 'recall' | 't3' | 'towers' | 'wordle';
+type GameModalId = 'blackjack' | 'pi' | 'recall' | 't3' | 'towers' | 'wordle';
 
 type ModalId = AppModalId | GameModalId | null;
 
@@ -297,6 +298,13 @@ const AppPage: NextPage = () => {
   ];
 
   const games: Tool[] = [
+    {
+      label: 'Blackjack',
+      description: 'Cards Counter',
+      emoji: '🃏',
+      color: '#f59e0b',
+      onClick: () => setActiveModal('blackjack'),
+    },
     {
       label: 'PI',
       description: 'Memorization',
@@ -510,6 +518,7 @@ const AppPage: NextPage = () => {
       {activeModal === 'uuid' && <UUIDModal onClose={close} />}
 
       {/* ── Game Modals (shared across both layouts) ── */}
+      {activeModal === 'blackjack' && <BlackjackModal onClose={close} />}
       {activeModal === 'pi' && <PiModal onClose={close} />}
       {activeModal === 'recall' && <RecallModal onClose={close} />}
       {activeModal === 't3' && <T3Modal onClose={close} />}
