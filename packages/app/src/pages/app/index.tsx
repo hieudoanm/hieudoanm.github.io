@@ -18,6 +18,7 @@ import { PomodoroModal } from '@hieudoanm/components/modals/apps/PomodoroModal';
 import { QRCodeModal } from '@hieudoanm/components/modals/apps/QRCodeModal';
 import { StringModal } from '@hieudoanm/components/modals/apps/StringModal';
 import { UUIDModal } from '@hieudoanm/components/modals/apps/UUIDModal';
+import { PiModal } from '@hieudoanm/components/modals/games/PIModal';
 import { T3Modal } from '@hieudoanm/components/modals/games/T3Modal';
 import { TowersModal } from '@hieudoanm/components/modals/games/TowersModal';
 import { WordleModal } from '@hieudoanm/components/modals/games/WordleModal';
@@ -134,7 +135,7 @@ type AppModalId =
   | 'string'
   | 'uuid';
 
-type GameModalId = 't3' | 'towers' | 'wordle';
+type GameModalId = 'pi' | 't3' | 'towers' | 'wordle';
 
 type ModalId = AppModalId | GameModalId | null;
 
@@ -295,6 +296,13 @@ const AppPage: NextPage = () => {
   ];
 
   const games: Tool[] = [
+    {
+      label: 'PI',
+      description: 'Memorization',
+      emoji: 'π',
+      color: '#f59e0b',
+      onClick: () => setActiveModal('pi'),
+    },
     {
       label: 'T3',
       description: 'Tic-Tac-Toe',
@@ -494,6 +502,7 @@ const AppPage: NextPage = () => {
       {activeModal === 'uuid' && <UUIDModal onClose={close} />}
 
       {/* ── Game Modals (shared across both layouts) ── */}
+      {activeModal === 'pi' && <PiModal onClose={close} />}
       {activeModal === 't3' && <T3Modal onClose={close} />}
       {activeModal === 'towers' && <TowersModal onClose={close} />}
       {activeModal === 'wordle' && <WordleModal onClose={close} />}
