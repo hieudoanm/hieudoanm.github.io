@@ -19,6 +19,7 @@ import { QRCodeModal } from '@hieudoanm/components/modals/apps/QRCodeModal';
 import { StringModal } from '@hieudoanm/components/modals/apps/StringModal';
 import { UUIDModal } from '@hieudoanm/components/modals/apps/UUIDModal';
 import { PiModal } from '@hieudoanm/components/modals/games/PIModal';
+import { RecallModal } from '@hieudoanm/components/modals/games/RecallModal';
 import { T3Modal } from '@hieudoanm/components/modals/games/T3Modal';
 import { TowersModal } from '@hieudoanm/components/modals/games/TowersModal';
 import { WordleModal } from '@hieudoanm/components/modals/games/WordleModal';
@@ -135,7 +136,7 @@ type AppModalId =
   | 'string'
   | 'uuid';
 
-type GameModalId = 'pi' | 't3' | 'towers' | 'wordle';
+type GameModalId = 'pi' | 'recall' | 't3' | 'towers' | 'wordle';
 
 type ModalId = AppModalId | GameModalId | null;
 
@@ -302,6 +303,13 @@ const AppPage: NextPage = () => {
       emoji: 'π',
       color: '#f59e0b',
       onClick: () => setActiveModal('pi'),
+    },
+    {
+      label: 'Recall',
+      description: 'Memorization',
+      emoji: '🔣',
+      color: '#f59e0b',
+      onClick: () => setActiveModal('recall'),
     },
     {
       label: 'T3',
@@ -503,6 +511,7 @@ const AppPage: NextPage = () => {
 
       {/* ── Game Modals (shared across both layouts) ── */}
       {activeModal === 'pi' && <PiModal onClose={close} />}
+      {activeModal === 'recall' && <RecallModal onClose={close} />}
       {activeModal === 't3' && <T3Modal onClose={close} />}
       {activeModal === 'towers' && <TowersModal onClose={close} />}
       {activeModal === 'wordle' && <WordleModal onClose={close} />}
