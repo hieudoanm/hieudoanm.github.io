@@ -1,6 +1,6 @@
 # Hieu Doan
 
-## Table of Contents (42)
+## Table of Contents (41)
 
 ## Artificial Intelligence (3)
 
@@ -98,14 +98,11 @@
 [pokedex]: https://hieudoanm.github.io/pokedex
 [pokedex-gh]: https://github.com/hieudoanm/pokedex
 
-## Games (3)
+## Games (2)
 
-1. 🃏 [Cards][cards] - [GitHub][cards-gh]
-2. ♟ [Chess][chess] - [GitHub][chess-gh]
-3. ❓ [Quiz][quiz] - [GitHub][quiz-gh]
+1. ♟ [Chess][chess] - [GitHub][chess-gh]
+2. ❓ [Quiz][quiz] - [GitHub][quiz-gh]
 
-[cards]: https://hieudoanm.github.io/cards
-[cards-gh]: https://github.com/hieudoanm/cards
 [chess]: https://hieudoanm.github.io/chess
 [chess-gh]: https://github.com/hieudoanm/chess
 [quiz]: https://hieudoanm.github.io/quiz
