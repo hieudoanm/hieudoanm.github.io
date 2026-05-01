@@ -27,6 +27,7 @@ import { HouseModal } from '@hieudoanm/components/modals/tools/HouseModal';
 import { IPModal } from '@hieudoanm/components/modals/tools/IPModal';
 import { KaprekarModal } from '@hieudoanm/components/modals/tools/KaprekarModal';
 import { MorseModal } from '@hieudoanm/components/modals/tools/MorseModal';
+import { OpenAPI2Postman } from '@hieudoanm/components/modals/tools/OpenAPI2Postman';
 import { PomodoroModal } from '@hieudoanm/components/modals/tools/PomodoroModal';
 import { QRCodeModal } from '@hieudoanm/components/modals/tools/QRCodeModal';
 import { StringModal } from '@hieudoanm/components/modals/tools/StringModal';
@@ -79,7 +80,8 @@ type ModalId =
   | 'wordle'
   | 'tax'
   | 'elo'
-  | 'inflation';
+  | 'inflation'
+  | 'openapi';
 
 type SidebarTab = 'status' | 'clock' | null;
 
@@ -118,6 +120,7 @@ const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
   wordle: WordleModal,
   tax: TaxModal,
   elo: EloModal,
+  openapi: OpenAPI2Postman,
 };
 
 /* ------------------------------------------------------------------ */
@@ -450,6 +453,13 @@ const AppPage: NextPage = () => {
       emoji: '🔣',
       color: '#f59e0b',
       onClick: open('morse'),
+    },
+    {
+      label: 'OpenAPI',
+      description: 'to Postman',
+      emoji: '🔄',
+      color: '#ff6c37',
+      onClick: open('openapi'),
     },
     {
       label: 'Pomodoro',

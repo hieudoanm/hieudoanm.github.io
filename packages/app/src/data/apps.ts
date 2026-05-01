@@ -117,23 +117,12 @@ export const apps: App[] = [
   {
     category: 'dev-tools',
     emoji: '📦',
-    id: 'manifest.json',
-    name: 'manifest.json',
-    href: 'https://hieudoanm.github.io/manifest.json',
-    github: 'https://github.com/hieudoanm/manifest.json',
+    id: 'manifest',
+    name: 'Manifest',
+    href: 'https://hieudoanm.github.io/manifest',
+    github: 'https://github.com/hieudoanm/manifest',
     image:
-      'https://raw.githubusercontent.com/hieudoanm/manifest.json/refs/heads/master/images/app.png',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
-    category: 'dev-tools',
-    emoji: '📬',
-    id: 'postmanify',
-    name: 'Postmanify',
-    href: 'https://hieudoanm.github.io/postmanify',
-    github: 'https://github.com/hieudoanm/postmanify',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/postmanify/refs/heads/master/images/app.png',
+      'https://raw.githubusercontent.com/hieudoanm/manifest/refs/heads/master/images/app.png',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {

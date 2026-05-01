@@ -1,6 +1,6 @@
 # Hieu Doan
 
-## Table of Contents (39)
+## Table of Contents (38)
 
 ## Artificial Intelligence (3)
 
@@ -25,15 +25,14 @@
 [svg]: https://hieudoanm.github.io/svg
 [svg-gh]: https://github.com/hieudoanm/svg
 
-## Dev Tools (7)
+## Dev Tools (6)
 
 1. 🌐 [Browser][browser] - [GitHub][browser-gh]
 2. 📘 [Cobra MD][cobra.md] - [GitHub][cobra.md-gh]
 3. 💻 [GitHub Extensions][gh.ext] - [GitHub][gh.ext-gh]
 4. 🧾 [JSON Schema][json-schema] - [GitHub][json-schema-gh]
-5. 📦 [manifest.json][manifest.json] - [GitHub][manifest.json-gh]
-6. 📬 [Postmanify][postmanify] - [GitHub][postmanify-gh]
-7. 🛰️ [Proxy][proxy] - [GitHub][proxy-gh]
+5. 📦 [Manifest][manifest] - [GitHub][manifest-gh]
+6. 🛰️ [Proxy][proxy] - [GitHub][proxy-gh]
 
 [browser]: https://hieudoanm.github.io/browser
 [browser-gh]: https://github.com/hieudoanm/browser
@@ -43,10 +42,8 @@
 [gh.ext-gh]: https://github.com/hieudoanm/gh.ext
 [json-schema]: https://hieudoanm.github.io/json-schema
 [json-schema-gh]: https://github.com/hieudoanm/json-schema
-[manifest.json]: https://hieudoanm.github.io/manifest.json
-[manifest.json-gh]: https://github.com/hieudoanm/manifest.json
-[postmanify]: https://hieudoanm.github.io/postmanify
-[postmanify-gh]: https://github.com/hieudoanm/postmanify
+[manifest]: https://hieudoanm.github.io/manifest
+[manifest-gh]: https://github.com/hieudoanm/manifest
 [proxy]: https://hieudoanm.github.io/proxy
 [proxy-gh]: https://github.com/hieudoanm/proxy
 
