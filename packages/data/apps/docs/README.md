@@ -1,6 +1,6 @@
 # Hieu Doan
 
-## Table of Contents (41)
+## Table of Contents (40)
 
 ## Artificial Intelligence (3)
 
@@ -60,18 +60,15 @@
 [simple-upload]: https://hieudoanm.github.io/simple-upload
 [simple-upload-gh]: https://github.com/hieudoanm/simple-upload
 
-## Finance (3)
+## Finance (2)
 
 1. 📉 [Inflation][inflation] - [GitHub][inflation-gh]
 2. 🧾 [Invoice][invoice] - [GitHub][invoice-gh]
-3. 🏛️ [Tax][tax] - [GitHub][tax-gh]
 
 [inflation]: https://hieudoanm.github.io/inflation
 [inflation-gh]: https://github.com/hieudoanm/inflation
 [invoice]: https://hieudoanm.github.io/invoice
 [invoice-gh]: https://github.com/hieudoanm/invoice
-[tax]: https://hieudoanm.github.io/tax
-[tax-gh]: https://github.com/hieudoanm/tax
 
 ## Fun (7)
 

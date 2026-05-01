@@ -160,16 +160,6 @@
     "tags": ["cli", "extension", "android", "macos", "web"]
   },
   {
-    "category": "finance",
-    "emoji": "🏛️",
-    "id": "tax",
-    "name": "Tax",
-    "href": "https://hieudoanm.github.io/tax",
-    "github": "https://github.com/hieudoanm/tax",
-    "image": "https://raw.githubusercontent.com/hieudoanm/tax/refs/heads/master/images/app.png",
-    "tags": ["cli", "extension", "android", "macos", "web"]
-  },
-  {
     "category": "fun",
     "emoji": "🌀",
     "id": "attractors",

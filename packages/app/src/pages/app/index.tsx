@@ -4,6 +4,7 @@ import { Tool, ToolCard } from '@hieudoanm/components/cards/ToolCard';
 import { CalculatorModal } from '@hieudoanm/components/modals/calculators/CalculatorModal';
 import { ConverterModal } from '@hieudoanm/components/modals/calculators/ConverterModal';
 import { PokerModal } from '@hieudoanm/components/modals/calculators/PokerModal';
+import { TaxModal } from '@hieudoanm/components/modals/calculators/TaxModal';
 import { FlashcardsModal } from '@hieudoanm/components/modals/education/FlashcardsModal';
 import { PeriodicTableModal } from '@hieudoanm/components/modals/education/PeriodicTableModal';
 import { BlackjackModal } from '@hieudoanm/components/modals/games/BlackjackModal';
@@ -73,7 +74,8 @@ type ModalId =
   | 't3'
   | 'towers'
   | 'typoglycemia'
-  | 'wordle';
+  | 'wordle'
+  | 'tax';
 
 type SidebarTab = 'status' | 'clock' | null;
 
@@ -109,6 +111,7 @@ const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
   towers: TowersModal,
   typoglycemia: TypoglycemiaModal,
   wordle: WordleModal,
+  tax: TaxModal,
 };
 
 /* ------------------------------------------------------------------ */
@@ -493,6 +496,13 @@ const AppPage: NextPage = () => {
       emoji: '🃏',
       color: '#f59e0b',
       onClick: open('poker'),
+    },
+    {
+      label: 'Tax',
+      description: 'Vietnam PIT',
+      emoji: '🇻🇳',
+      color: '#ef4444',
+      onClick: open('tax'),
     },
   ];
 

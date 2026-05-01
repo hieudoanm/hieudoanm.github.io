@@ -1,14 +1,14 @@
 # 👨‍💻 I'm HIEU DOAN
 
-## Table of Contents (41)
+## Table of Contents (40)
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
-  - [Table of Contents (41)](#table-of-contents-41)
+  - [Table of Contents (40)](#table-of-contents-40)
   - [Artificial Intelligence (3)](#artificial-intelligence-3)
   - [Design (2)](#design-2)
   - [Dev Tools (7)](#dev-tools-7)
   - [Docs (2)](#docs-2)
-  - [Finance (3)](#finance-3)
+  - [Finance (2)](#finance-2)
   - [Fun (7)](#fun-7)
   - [Games (2)](#games-2)
   - [Languages (2)](#languages-2)
@@ -75,18 +75,15 @@
 [simple-upload]: https://hieudoanm.github.io/simple-upload
 [simple-upload-gh]: https://github.com/hieudoanm/simple-upload
 
-## Finance (3)
+## Finance (2)
 
 1. 📉 [Inflation][inflation] - [GitHub][inflation-gh]
 2. 🧾 [Invoice][invoice] - [GitHub][invoice-gh]
-3. 🏛️ [Tax][tax] - [GitHub][tax-gh]
 
 [inflation]: https://hieudoanm.github.io/inflation
 [inflation-gh]: https://github.com/hieudoanm/inflation
 [invoice]: https://hieudoanm.github.io/invoice
 [invoice-gh]: https://github.com/hieudoanm/invoice
-[tax]: https://hieudoanm.github.io/tax
-[tax-gh]: https://github.com/hieudoanm/tax
 
 ## Fun (7)
 
