@@ -3,10 +3,12 @@ import { BookmarkCard } from '@hieudoanm/components/cards/BookmarkCard';
 import { Tool, ToolCard } from '@hieudoanm/components/cards/ToolCard';
 import { CalculatorModal } from '@hieudoanm/components/modals/calculators/CalculatorModal';
 import { ConverterModal } from '@hieudoanm/components/modals/calculators/ConverterModal';
+import { EloModal } from '@hieudoanm/components/modals/calculators/EloModal';
 import { PokerModal } from '@hieudoanm/components/modals/calculators/PokerModal';
 import { TaxModal } from '@hieudoanm/components/modals/calculators/TaxModal';
 import { FlashcardsModal } from '@hieudoanm/components/modals/education/FlashcardsModal';
 import { PeriodicTableModal } from '@hieudoanm/components/modals/education/PeriodicTableModal';
+import { PitchModal } from '@hieudoanm/components/modals/education/PitchModal';
 import { BlackjackModal } from '@hieudoanm/components/modals/games/BlackjackModal';
 import { PiModal } from '@hieudoanm/components/modals/games/PiNumberModal';
 import { RecallModal } from '@hieudoanm/components/modals/games/RecallModal';
@@ -24,7 +26,6 @@ import { HouseModal } from '@hieudoanm/components/modals/tools/HouseModal';
 import { IPModal } from '@hieudoanm/components/modals/tools/IPModal';
 import { KaprekarModal } from '@hieudoanm/components/modals/tools/KaprekarModal';
 import { MorseModal } from '@hieudoanm/components/modals/tools/MorseModal';
-import { PitchModal } from '@hieudoanm/components/modals/education/PitchModal';
 import { PomodoroModal } from '@hieudoanm/components/modals/tools/PomodoroModal';
 import { QRCodeModal } from '@hieudoanm/components/modals/tools/QRCodeModal';
 import { StringModal } from '@hieudoanm/components/modals/tools/StringModal';
@@ -75,7 +76,8 @@ type ModalId =
   | 'towers'
   | 'typoglycemia'
   | 'wordle'
-  | 'tax';
+  | 'tax'
+  | 'elo';
 
 type SidebarTab = 'status' | 'clock' | null;
 
@@ -112,6 +114,7 @@ const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
   typoglycemia: TypoglycemiaModal,
   wordle: WordleModal,
   tax: TaxModal,
+  elo: EloModal,
 };
 
 /* ------------------------------------------------------------------ */
@@ -489,6 +492,13 @@ const AppPage: NextPage = () => {
       emoji: '🔀',
       color: '#8b5cf6',
       onClick: open('converter'),
+    },
+    {
+      label: 'Elo',
+      description: 'Calculator',
+      emoji: '♟️',
+      color: '#f59e0b',
+      onClick: open('elo'),
     },
     {
       label: 'Poker',
