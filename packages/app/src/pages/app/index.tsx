@@ -22,6 +22,7 @@ import { FlashcardsModal } from '@hieudoanm/components/modals/education/Flashcar
 import { PeriodicTableModal } from '@hieudoanm/components/modals/education/PeriodicTableModal';
 import { BlackjackModal } from '@hieudoanm/components/modals/games/BlackjackModal';
 import { PiModal } from '@hieudoanm/components/modals/games/PIModal';
+import { PokerModal } from '@hieudoanm/components/modals/games/PokerModal';
 import { RecallModal } from '@hieudoanm/components/modals/games/RecallModal';
 import { T3Modal } from '@hieudoanm/components/modals/games/T3Modal';
 import { TowersModal } from '@hieudoanm/components/modals/games/TowersModal';
@@ -39,7 +40,7 @@ import { getTimeInZone, timezones } from '@hieudoanm/data/timezones';
 import { WeatherData } from '@hieudoanm/data/weather';
 import { useQueries } from '@tanstack/react-query';
 import { NextPage } from 'next';
-import { FC, useEffect, useState } from 'react';
+import { FC, useEffect, useMemo, useRef, useState } from 'react';
 
 /* ------------------------------------------------------------------ */
 /* Types                                                                */
@@ -67,6 +68,7 @@ type ModalId =
   | 'periodic-table'
   | 'blackjack'
   | 'pi'
+  | 'poker'
   | 'recall'
   | 't3'
   | 'towers'
@@ -76,7 +78,7 @@ type ModalId =
 type SidebarTab = 'status' | 'clock' | null;
 
 /* ------------------------------------------------------------------ */
-/* Modal registry — single source of truth                             */
+/* Modal registry                                                       */
 /* ------------------------------------------------------------------ */
 
 const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
@@ -101,6 +103,7 @@ const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
   'periodic-table': PeriodicTableModal,
   blackjack: BlackjackModal,
   pi: PiModal,
+  poker: PokerModal,
   recall: RecallModal,
   t3: T3Modal,
   towers: TowersModal,
@@ -109,94 +112,197 @@ const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
 };
 
 /* ------------------------------------------------------------------ */
-/* Shared section component                                            */
+/* Filter helper                                                        */
 /* ------------------------------------------------------------------ */
 
-const Section: FC<{ label: string; children: React.ReactNode }> = ({
-  label,
-  children,
-}) => (
+const match = (label: string, q: string) =>
+  label.toLowerCase().includes(q.toLowerCase());
+
+/* ------------------------------------------------------------------ */
+/* SearchBar                                                            */
+/* ------------------------------------------------------------------ */
+
+const SearchBar: FC<{ query: string; onChange: (v: string) => void }> = ({
+  query,
+  onChange,
+}) => {
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const googleSearch = () => {
+    if (!query.trim()) return;
+    window.open(
+      `https://www.google.com/search?q=${encodeURIComponent(query.trim())}`,
+      '_blank'
+    );
+  };
+
+  const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') googleSearch();
+  };
+
+  return (
+    <div className="join w-full">
+      <input
+        ref={inputRef}
+        type="text"
+        value={query}
+        onChange={(e) => onChange(e.target.value)}
+        onKeyDown={onKeyDown}
+        placeholder="Search or filter…"
+        className="input input-bordered join-item w-full"
+      />
+      <button
+        className="btn join-item btn-neutral"
+        onClick={googleSearch}
+        aria-label="Search with Google">
+        🔍
+      </button>
+    </div>
+  );
+};
+
+/* ------------------------------------------------------------------ */
+/* Section                                                              */
+/* ------------------------------------------------------------------ */
+
+const Section: FC<{
+  label: string;
+  count?: number;
+  children: React.ReactNode;
+}> = ({ label, count, children }) => (
   <section aria-label={label} className="mt-10 w-full max-w-2xl">
-    <p className="text-base-content/30 mb-4 text-center font-mono text-xs tracking-widest uppercase">
+    <p className="text-base-content/30 mb-4 flex items-center justify-center gap-2 font-mono text-xs tracking-widest uppercase">
       {label}
+      {count !== undefined && (
+        <span className="badge badge-xs badge-neutral font-mono tracking-normal normal-case">
+          {count}
+        </span>
+      )}
     </p>
     {children}
   </section>
 );
 
 /* ------------------------------------------------------------------ */
-/* Center column                                                        */
+/* MainContent                                                          */
 /* ------------------------------------------------------------------ */
 
 const MainContent: FC<{
   today: string;
+  query: string;
+  onQueryChange: (v: string) => void;
   tools: Tool[];
   education: Tool[];
   games: Tool[];
-}> = ({ today, tools, education, games }) => (
-  <main className="flex flex-col items-center overflow-y-auto px-8 py-12">
-    <p className="text-base-content/30 mb-2 font-mono text-xs tracking-widest uppercase">
-      {today}
-    </p>
-    <h1 className="mb-10 text-3xl font-black tracking-tight">Start Page</h1>
+}> = ({ today, query, onQueryChange, tools, education, games }) => {
+  const filtering = query.trim().length > 0;
 
-    <Section label="AI Assistants">
-      <div className="grid grid-cols-4 gap-4">
-        {aiBookmarks.map((bm) => (
-          <BookmarkCard key={bm.label} {...bm} />
-        ))}
-      </div>
-    </Section>
+  const filteredAI = aiBookmarks.filter((b) => match(b.label, query));
+  const filteredGoogle = googleBookmarks.filter((b) => match(b.label, query));
+  const filteredWebsites = websiteBookmarks.filter((b) =>
+    match(b.label, query)
+  );
+  const filteredTools = tools.filter((t) => match(t.label, query));
+  const filteredEducation = education.filter((t) => match(t.label, query));
+  const filteredGames = games.filter((t) => match(t.label, query));
+  const filteredApps = apps.filter((a) => match(a.id, query));
 
-    <Section label="Google Workspace">
-      <div className="grid grid-cols-4 gap-4">
-        {googleBookmarks.map((bm) => (
-          <BookmarkCard key={bm.label} {...bm} />
-        ))}
-      </div>
-    </Section>
+  return (
+    <main className="flex flex-col items-center overflow-y-auto px-8 py-12">
+      <p className="text-base-content/30 mb-2 font-mono text-xs tracking-widest uppercase">
+        {today}
+      </p>
+      <h1 className="mb-6 text-3xl font-black tracking-tight">Start Page</h1>
 
-    <Section label="Websites">
-      <div className="grid grid-cols-4 gap-4">
-        {websiteBookmarks.map((bm) => (
-          <BookmarkCard key={bm.label} {...bm} />
-        ))}
+      <div className="mb-10 w-full max-w-2xl">
+        <SearchBar query={query} onChange={onQueryChange} />
       </div>
-    </Section>
 
-    <Section label="Tools">
-      <div className="grid grid-cols-4 gap-4">
-        {tools.map((t) => (
-          <ToolCard key={t.label} {...t} />
-        ))}
-      </div>
-    </Section>
+      {(!filtering || filteredAI.length > 0) && (
+        <Section label="AI Assistants" count={filteredAI.length}>
+          <div className="grid grid-cols-4 gap-4">
+            {filteredAI.map((bm) => (
+              <BookmarkCard key={bm.label} {...bm} />
+            ))}
+          </div>
+        </Section>
+      )}
 
-    <Section label="Education">
-      <div className="grid grid-cols-4 gap-4">
-        {education.map((t) => (
-          <ToolCard key={t.label} {...t} />
-        ))}
-      </div>
-    </Section>
+      {(!filtering || filteredGoogle.length > 0) && (
+        <Section label="Google Workspace" count={filteredGoogle.length}>
+          <div className="grid grid-cols-4 gap-4">
+            {filteredGoogle.map((bm) => (
+              <BookmarkCard key={bm.label} {...bm} />
+            ))}
+          </div>
+        </Section>
+      )}
 
-    <Section label="Games">
-      <div className="grid grid-cols-4 gap-4">
-        {games.map((t) => (
-          <ToolCard key={t.label} {...t} />
-        ))}
-      </div>
-    </Section>
+      {(!filtering || filteredWebsites.length > 0) && (
+        <Section label="Websites" count={filteredWebsites.length}>
+          <div className="grid grid-cols-4 gap-4">
+            {filteredWebsites.map((bm) => (
+              <BookmarkCard key={bm.label} {...bm} />
+            ))}
+          </div>
+        </Section>
+      )}
 
-    <Section label="Apps">
-      <div className="grid grid-cols-4 gap-4">
-        {apps.map((a) => (
-          <AppCard key={a.id} {...a} />
-        ))}
-      </div>
-    </Section>
-  </main>
-);
+      {(!filtering || filteredTools.length > 0) && (
+        <Section label="Tools" count={filteredTools.length}>
+          <div className="grid grid-cols-4 gap-4">
+            {filteredTools.map((t) => (
+              <ToolCard key={t.label} {...t} />
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {(!filtering || filteredEducation.length > 0) && (
+        <Section label="Education" count={filteredEducation.length}>
+          <div className="grid grid-cols-4 gap-4">
+            {filteredEducation.map((t) => (
+              <ToolCard key={t.label} {...t} />
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {(!filtering || filteredGames.length > 0) && (
+        <Section label="Games" count={filteredGames.length}>
+          <div className="grid grid-cols-4 gap-4">
+            {filteredGames.map((t) => (
+              <ToolCard key={t.label} {...t} />
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {(!filtering || filteredApps.length > 0) && (
+        <Section label="Apps" count={filteredApps.length}>
+          <div className="grid grid-cols-4 gap-4">
+            {filteredApps.map((a) => (
+              <AppCard key={a.id} {...a} />
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {filtering &&
+        filteredAI.length === 0 &&
+        filteredGoogle.length === 0 &&
+        filteredWebsites.length === 0 &&
+        filteredTools.length === 0 &&
+        filteredEducation.length === 0 &&
+        filteredGames.length === 0 &&
+        filteredApps.length === 0 && (
+          <p className="text-base-content/30 mt-20 text-sm">
+            No results for "{query}" — press 🔍 to search Google.
+          </p>
+        )}
+    </main>
+  );
+};
 
 /* ------------------------------------------------------------------ */
 /* Page                                                                 */
@@ -209,6 +315,7 @@ const AppPage: NextPage = () => {
   const [today, setToday] = useState('');
   const [activeModal, setActiveModal] = useState<ModalId | null>(null);
   const [activeSidebar, setActiveSidebar] = useState<SidebarTab>(null);
+  const [query, setQuery] = useState('');
 
   const close = () => setActiveModal(null);
 
@@ -398,6 +505,13 @@ const AppPage: NextPage = () => {
       onClick: open('pi'),
     },
     {
+      label: 'Poker',
+      description: 'Odds Calculator',
+      emoji: '🃏',
+      color: '#f59e0b',
+      onClick: open('poker'),
+    },
+    {
       label: 'Recall',
       description: 'Memorization',
       emoji: '🔣',
@@ -421,7 +535,7 @@ const AppPage: NextPage = () => {
     {
       label: 'Typoglycemia',
       description: 'Scrambled text',
-      emoji: '🔣',
+      emoji: '🔀',
       color: '#f59e0b',
       onClick: open('typoglycemia'),
     },
@@ -434,9 +548,62 @@ const AppPage: NextPage = () => {
     },
   ];
 
-  // Active modal component resolved from registry
-  const ActiveModal = activeModal ? MODAL_MAP[activeModal] : null;
+  // Mobile filtered lists
+  const filtering = query.trim().length > 0;
+  const mobileFilteredSections = useMemo(
+    () => [
+      {
+        label: 'AI Assistants',
+        items: aiBookmarks.filter((b) => !filtering || match(b.label, query)),
+        Card: BookmarkCard,
+        cols: 'grid-cols-2 sm:grid-cols-3',
+      },
+      {
+        label: 'Google Workspace',
+        items: googleBookmarks.filter(
+          (b) => !filtering || match(b.label, query)
+        ),
+        Card: BookmarkCard,
+        cols: 'grid-cols-2 sm:grid-cols-3',
+      },
+      {
+        label: 'Websites',
+        items: websiteBookmarks.filter(
+          (b) => !filtering || match(b.label, query)
+        ),
+        Card: BookmarkCard,
+        cols: 'grid-cols-2 sm:grid-cols-3',
+      },
+      {
+        label: 'Tools',
+        items: tools.filter((t) => !filtering || match(t.label, query)),
+        Card: ToolCard,
+        cols: 'grid-cols-2 sm:grid-cols-3',
+      },
+      {
+        label: 'Education',
+        items: education.filter((t) => !filtering || match(t.label, query)),
+        Card: ToolCard,
+        cols: 'grid-cols-2 sm:grid-cols-3',
+      },
+      {
+        label: 'Games',
+        items: games.filter((t) => !filtering || match(t.label, query)),
+        Card: ToolCard,
+        cols: 'grid-cols-2 sm:grid-cols-3',
+      },
+      {
+        label: 'Apps',
+        items: apps.filter((a) => !filtering || match(a.id, query)),
+        Card: AppCard,
+        cols: 'grid-cols-2 sm:grid-cols-3',
+      },
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    ],
+    [query]
+  );
 
+  const ActiveModal = activeModal ? MODAL_MAP[activeModal] : null;
   const sidebarContent = {
     status: <LeftSidebar />,
     clock: <RightSidebar times={times} weatherQueries={weatherQueries} />,
@@ -444,13 +611,15 @@ const AppPage: NextPage = () => {
 
   return (
     <div className="bg-base-100 text-base-content min-h-screen">
-      {/* Desktop 3-column */}
+      {/* Desktop */}
       <div
         className="hidden h-screen overflow-hidden lg:grid"
         style={{ gridTemplateColumns: '280px 2fr 320px' }}>
         <LeftSidebar />
         <MainContent
           today={today}
+          query={query}
+          onQueryChange={setQuery}
           tools={tools}
           education={education}
           games={games}
@@ -464,78 +633,46 @@ const AppPage: NextPage = () => {
           <p className="text-base-content/30 mb-2 text-center font-mono text-xs tracking-widest uppercase">
             {today}
           </p>
-          <h1 className="mb-8 text-center text-2xl font-black tracking-tight">
+          <h1 className="mb-6 text-center text-2xl font-black tracking-tight">
             Start Page
           </h1>
 
-          {[
-            {
-              label: 'AI Assistants',
-              items: aiBookmarks,
-              Card: BookmarkCard,
-              cols: 'grid-cols-2 sm:grid-cols-3',
-            },
-            {
-              label: 'Google Workspace',
-              items: googleBookmarks,
-              Card: BookmarkCard,
-              cols: 'grid-cols-2 sm:grid-cols-3',
-            },
-            {
-              label: 'Websites',
-              items: websiteBookmarks,
-              Card: BookmarkCard,
-              cols: 'grid-cols-2 sm:grid-cols-3',
-            },
-            {
-              label: 'Tools',
-              items: tools,
-              Card: ToolCard,
-              cols: 'grid-cols-2 sm:grid-cols-3',
-            },
-            {
-              label: 'Education',
-              items: education,
-              Card: ToolCard,
-              cols: 'grid-cols-2 sm:grid-cols-3',
-            },
-            {
-              label: 'Games',
-              items: games,
-              Card: ToolCard,
-              cols: 'grid-cols-2 sm:grid-cols-3',
-            },
-          ].map(({ label, items, Card, cols }) => (
-            <section
-              key={label}
-              aria-label={label}
-              className="mx-auto mt-8 w-full max-w-2xl">
-              <p className="text-base-content/30 mb-4 text-center font-mono text-xs tracking-widest uppercase">
-                {label}
-              </p>
-              <div className={`grid ${cols} gap-3`}>
-                {items.map((item: any) => (
-                  <Card key={item.label ?? item.id} {...item} />
-                ))}
-              </div>
-            </section>
-          ))}
+          <div className="mx-auto mb-6 w-full max-w-2xl">
+            <SearchBar query={query} onChange={setQuery} />
+          </div>
 
-          <section aria-label="Apps" className="mx-auto mt-8 w-full max-w-2xl">
-            <p className="text-base-content/30 mb-4 text-center font-mono text-xs tracking-widest uppercase">
-              Apps
-            </p>
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-              {apps.map((a) => (
-                <AppCard key={a.id} {...a} />
-              ))}
-            </div>
-          </section>
+          {mobileFilteredSections
+            .filter(({ items }) => items.length > 0)
+            .map(({ label, items, Card, cols }) => (
+              <section
+                key={label}
+                aria-label={label}
+                className="mx-auto mt-8 w-full max-w-2xl">
+                <p className="text-base-content/30 mb-4 flex items-center justify-center gap-2 font-mono text-xs tracking-widest uppercase">
+                  {label}
+                  <span className="badge badge-xs badge-neutral font-mono tracking-normal normal-case">
+                    {items.length}
+                  </span>
+                </p>
+                <div className={`grid ${cols} gap-3`}>
+                  {items.map((item: any) => (
+                    <Card key={item.label ?? item.id} {...item} />
+                  ))}
+                </div>
+              </section>
+            ))}
+
+          {filtering &&
+            mobileFilteredSections.every(({ items }) => items.length === 0) && (
+              <p className="text-base-content/30 mt-20 text-center text-sm">
+                No results for "{query}" — press 🔍 to search Google.
+              </p>
+            )}
 
           <div className="h-20" />
         </main>
 
-        {/* Mobile bottom nav */}
+        {/* Bottom nav */}
         <nav className="bg-base-100 border-base-300 fixed inset-x-0 bottom-0 z-40 flex border-t">
           {(['status', 'clock'] as const).map((tab) => (
             <button
@@ -552,7 +689,7 @@ const AppPage: NextPage = () => {
           ))}
         </nav>
 
-        {/* Mobile sidebar drawer */}
+        {/* Sidebar drawer */}
         {activeSidebar && (
           <>
             <div
@@ -578,7 +715,6 @@ const AppPage: NextPage = () => {
         )}
       </div>
 
-      {/* Active modal — resolved from registry */}
       {ActiveModal && <ActiveModal onClose={close} />}
     </div>
   );

@@ -1,16 +1,16 @@
 # 👨‍💻 I'm HIEU DOAN
 
-## Table of Contents (43)
+## Table of Contents (41)
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
-  - [Table of Contents (43)](#table-of-contents-43)
+  - [Table of Contents (41)](#table-of-contents-41)
   - [Artificial Intelligence (3)](#artificial-intelligence-3)
   - [Design (2)](#design-2)
   - [Dev Tools (7)](#dev-tools-7)
   - [Docs (2)](#docs-2)
   - [Finance (3)](#finance-3)
   - [Fun (7)](#fun-7)
-  - [Games (3)](#games-3)
+  - [Games (2)](#games-2)
   - [Languages (2)](#languages-2)
   - [Messaging (1)](#messaging-1)
   - [Template (1)](#template-1)
@@ -113,14 +113,11 @@
 [pokedex]: https://hieudoanm.github.io/pokedex
 [pokedex-gh]: https://github.com/hieudoanm/pokedex
 
-## Games (3)
+## Games (2)
 
-1. 🃏 [Cards][cards] - [GitHub][cards-gh]
-2. ♟ [Chess][chess] - [GitHub][chess-gh]
-3. ❓ [Quiz][quiz] - [GitHub][quiz-gh]
+1. ♟ [Chess][chess] - [GitHub][chess-gh]
+2. ❓ [Quiz][quiz] - [GitHub][quiz-gh]
 
-[cards]: https://hieudoanm.github.io/cards
-[cards-gh]: https://github.com/hieudoanm/cards
 [chess]: https://hieudoanm.github.io/chess
 [chess-gh]: https://github.com/hieudoanm/chess
 [quiz]: https://hieudoanm.github.io/quiz

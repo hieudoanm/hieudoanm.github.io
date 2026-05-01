@@ -281,17 +281,6 @@ export const apps: App[] = [
   },
   {
     category: 'games',
-    emoji: '🃏',
-    id: 'cards',
-    name: 'Cards',
-    href: 'https://hieudoanm.github.io/cards',
-    github: 'https://github.com/hieudoanm/cards',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/cards/refs/heads/master/images/app.png',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
-    category: 'games',
     emoji: '♟',
     id: 'chess',
     name: 'Chess',
