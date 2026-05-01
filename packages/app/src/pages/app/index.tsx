@@ -1,33 +1,33 @@
 import { AppCard } from '@hieudoanm/components/cards/AppCard';
 import { BookmarkCard } from '@hieudoanm/components/cards/BookmarkCard';
 import { Tool, ToolCard } from '@hieudoanm/components/cards/ToolCard';
-import { BrailleModal } from '@hieudoanm/components/modals/apps/BrailleModal';
-import { BreakingBadModal } from '@hieudoanm/components/modals/apps/BreakingBadModal';
-import { CalculatorModal } from '@hieudoanm/components/modals/apps/CalculatorModal';
-import { ColorsModal } from '@hieudoanm/components/modals/apps/ColorsModal';
-import { ConverterModal } from '@hieudoanm/components/modals/apps/ConverterModal';
-import { CountdownModal } from '@hieudoanm/components/modals/apps/CountdownModal';
-import { DOIModal } from '@hieudoanm/components/modals/apps/DOIModal';
-import { EmojisModal } from '@hieudoanm/components/modals/apps/EmojisModal';
-import { HouseModal } from '@hieudoanm/components/modals/apps/HouseModal';
-import { IPModal } from '@hieudoanm/components/modals/apps/IPModal';
-import { KaprekarModal } from '@hieudoanm/components/modals/apps/KaprekarModal';
-import { MorseModal } from '@hieudoanm/components/modals/apps/MorseModal';
-import { PitchModal } from '@hieudoanm/components/modals/apps/PitchModal';
-import { PomodoroModal } from '@hieudoanm/components/modals/apps/PomodoroModal';
-import { QRCodeModal } from '@hieudoanm/components/modals/apps/QRCodeModal';
-import { StringModal } from '@hieudoanm/components/modals/apps/StringModal';
-import { UUIDModal } from '@hieudoanm/components/modals/apps/UUIDModal';
+import { CalculatorModal } from '@hieudoanm/components/modals/calculators/CalculatorModal';
+import { ConverterModal } from '@hieudoanm/components/modals/calculators/ConverterModal';
+import { PokerModal } from '@hieudoanm/components/modals/calculators/PokerModal';
 import { FlashcardsModal } from '@hieudoanm/components/modals/education/FlashcardsModal';
 import { PeriodicTableModal } from '@hieudoanm/components/modals/education/PeriodicTableModal';
 import { BlackjackModal } from '@hieudoanm/components/modals/games/BlackjackModal';
-import { PiModal } from '@hieudoanm/components/modals/games/PIModal';
-import { PokerModal } from '@hieudoanm/components/modals/games/PokerModal';
+import { PiModal } from '@hieudoanm/components/modals/games/PiNumberModal';
 import { RecallModal } from '@hieudoanm/components/modals/games/RecallModal';
 import { T3Modal } from '@hieudoanm/components/modals/games/T3Modal';
 import { TowersModal } from '@hieudoanm/components/modals/games/TowersModal';
 import { TypoglycemiaModal } from '@hieudoanm/components/modals/games/TypoglycemiaModal';
 import { WordleModal } from '@hieudoanm/components/modals/games/WordleModal';
+import { BrailleModal } from '@hieudoanm/components/modals/tools/BrailleModal';
+import { BreakingBadModal } from '@hieudoanm/components/modals/tools/BreakingBadModal';
+import { ColorsModal } from '@hieudoanm/components/modals/tools/ColorsModal';
+import { CountdownModal } from '@hieudoanm/components/modals/tools/CountdownModal';
+import { DOIModal } from '@hieudoanm/components/modals/tools/DOIModal';
+import { EmojisModal } from '@hieudoanm/components/modals/tools/EmojisModal';
+import { HouseModal } from '@hieudoanm/components/modals/tools/HouseModal';
+import { IPModal } from '@hieudoanm/components/modals/tools/IPModal';
+import { KaprekarModal } from '@hieudoanm/components/modals/tools/KaprekarModal';
+import { MorseModal } from '@hieudoanm/components/modals/tools/MorseModal';
+import { PitchModal } from '@hieudoanm/components/modals/education/PitchModal';
+import { PomodoroModal } from '@hieudoanm/components/modals/tools/PomodoroModal';
+import { QRCodeModal } from '@hieudoanm/components/modals/tools/QRCodeModal';
+import { StringModal } from '@hieudoanm/components/modals/tools/StringModal';
+import { UUIDModal } from '@hieudoanm/components/modals/tools/UUIDModal';
 import { LeftSidebar } from '@hieudoanm/components/sidebars/LeftSidebar';
 import { RightSidebar } from '@hieudoanm/components/sidebars/RightSidebar';
 import { apps } from '@hieudoanm/data/apps';
@@ -192,9 +192,18 @@ const MainContent: FC<{
   query: string;
   onQueryChange: (v: string) => void;
   tools: Tool[];
+  calculators: Tool[];
   education: Tool[];
   games: Tool[];
-}> = ({ today, query, onQueryChange, tools, education, games }) => {
+}> = ({
+  today,
+  query,
+  onQueryChange,
+  tools,
+  calculators,
+  education,
+  games,
+}) => {
   const filtering = query.trim().length > 0;
 
   const filteredAI = aiBookmarks.filter((b) => match(b.label, query));
@@ -203,6 +212,7 @@ const MainContent: FC<{
     match(b.label, query)
   );
   const filteredTools = tools.filter((t) => match(t.label, query));
+  const filteredCalculators = calculators.filter((t) => match(t.label, query));
   const filteredEducation = education.filter((t) => match(t.label, query));
   const filteredGames = games.filter((t) => match(t.label, query));
   const filteredApps = apps.filter((a) => match(a.id, query));
@@ -258,6 +268,16 @@ const MainContent: FC<{
         </Section>
       )}
 
+      {(!filtering || filteredCalculators.length > 0) && (
+        <Section label="Calculators" count={filteredCalculators.length}>
+          <div className="grid grid-cols-4 gap-4">
+            {filteredCalculators.map((t) => (
+              <ToolCard key={t.label} {...t} />
+            ))}
+          </div>
+        </Section>
+      )}
+
       {(!filtering || filteredEducation.length > 0) && (
         <Section label="Education" count={filteredEducation.length}>
           <div className="grid grid-cols-4 gap-4">
@@ -293,6 +313,7 @@ const MainContent: FC<{
         filteredGoogle.length === 0 &&
         filteredWebsites.length === 0 &&
         filteredTools.length === 0 &&
+        filteredCalculators.length === 0 &&
         filteredEducation.length === 0 &&
         filteredGames.length === 0 &&
         filteredApps.length === 0 && (
@@ -366,25 +387,11 @@ const AppPage: NextPage = () => {
       onClick: open('breaking-bad'),
     },
     {
-      label: 'Calculator',
-      description: 'Math',
-      emoji: '➗',
-      color: '#8b5cf6',
-      onClick: open('calculator'),
-    },
-    {
       label: 'Colors',
       description: 'Picker',
       emoji: '🎨',
       color: '#ec4899',
       onClick: open('colors'),
-    },
-    {
-      label: 'Converter',
-      description: 'Converter',
-      emoji: '🔀',
-      color: '#8b5cf6',
-      onClick: open('converter'),
     },
     {
       label: 'Countdown',
@@ -465,6 +472,30 @@ const AppPage: NextPage = () => {
     },
   ];
 
+  const calculators: Tool[] = [
+    {
+      label: 'Calculator',
+      description: 'Math',
+      emoji: '➗',
+      color: '#8b5cf6',
+      onClick: open('calculator'),
+    },
+    {
+      label: 'Converter',
+      description: 'Converter',
+      emoji: '🔀',
+      color: '#8b5cf6',
+      onClick: open('converter'),
+    },
+    {
+      label: 'Poker',
+      description: 'Odds Calculator',
+      emoji: '🃏',
+      color: '#f59e0b',
+      onClick: open('poker'),
+    },
+  ];
+
   const education: Tool[] = [
     {
       label: 'Flashcards',
@@ -474,18 +505,18 @@ const AppPage: NextPage = () => {
       onClick: open('flashcards'),
     },
     {
-      label: 'Pitch',
-      description: 'Training',
-      emoji: '🎹',
-      color: '#8b5cf6',
-      onClick: open('pitch'),
-    },
-    {
       label: 'Periodic Table',
       description: 'Elements',
       emoji: '📊',
       color: '#f59e0b',
       onClick: open('periodic-table'),
+    },
+    {
+      label: 'Pitch',
+      description: 'Training',
+      emoji: '🎹',
+      color: '#8b5cf6',
+      onClick: open('pitch'),
     },
   ];
 
@@ -503,13 +534,6 @@ const AppPage: NextPage = () => {
       emoji: 'π',
       color: '#f59e0b',
       onClick: open('pi'),
-    },
-    {
-      label: 'Poker',
-      description: 'Odds Calculator',
-      emoji: '🃏',
-      color: '#f59e0b',
-      onClick: open('poker'),
     },
     {
       label: 'Recall',
@@ -581,6 +605,12 @@ const AppPage: NextPage = () => {
         cols: 'grid-cols-2 sm:grid-cols-3',
       },
       {
+        label: 'Calculators',
+        items: calculators.filter((t) => !filtering || match(t.label, query)),
+        Card: ToolCard,
+        cols: 'grid-cols-2 sm:grid-cols-3',
+      },
+      {
         label: 'Education',
         items: education.filter((t) => !filtering || match(t.label, query)),
         Card: ToolCard,
@@ -621,6 +651,7 @@ const AppPage: NextPage = () => {
           query={query}
           onQueryChange={setQuery}
           tools={tools}
+          calculators={calculators}
           education={education}
           games={games}
         />
