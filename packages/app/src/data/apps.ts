@@ -170,28 +170,6 @@ export const apps: App[] = [
     tags: ['android', 'macos', 'web'],
   },
   {
-    category: 'finance',
-    emoji: '📉',
-    id: 'inflation',
-    name: 'Inflation',
-    href: 'https://hieudoanm.github.io/inflation',
-    github: 'https://github.com/hieudoanm/inflation',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/inflation/refs/heads/master/images/app.png',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
-    category: 'finance',
-    emoji: '🧾',
-    id: 'invoice',
-    name: 'Invoice',
-    href: 'https://hieudoanm.github.io/invoice',
-    github: 'https://github.com/hieudoanm/invoice',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/invoice/refs/heads/master/images/app.png',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
     category: 'fun',
     emoji: '🌀',
     id: 'attractors',
@@ -354,6 +332,17 @@ export const apps: App[] = [
     github: 'https://github.com/hieudoanm/instasize',
     image:
       'https://raw.githubusercontent.com/hieudoanm/instasize/refs/heads/master/images/app.png',
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
+  },
+  {
+    category: 'utilities',
+    emoji: '🧾',
+    id: 'invoice',
+    name: 'Invoice',
+    href: 'https://hieudoanm.github.io/invoice',
+    github: 'https://github.com/hieudoanm/invoice',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/invoice/refs/heads/master/images/app.png',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {

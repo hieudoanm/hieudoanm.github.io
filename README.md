@@ -8,13 +8,12 @@
   - [Design (2)](#design-2)
   - [Dev Tools (7)](#dev-tools-7)
   - [Docs (2)](#docs-2)
-  - [Finance (2)](#finance-2)
   - [Fun (7)](#fun-7)
   - [Games (2)](#games-2)
   - [Languages (2)](#languages-2)
   - [Messaging (1)](#messaging-1)
   - [Template (1)](#template-1)
-  - [Utilities (7)](#utilities-7)
+  - [Utilities (8)](#utilities-8)
   - [Workspace (4)](#workspace-4)
 
 ## Artificial Intelligence (3)
@@ -75,16 +74,6 @@
 [simple-upload]: https://hieudoanm.github.io/simple-upload
 [simple-upload-gh]: https://github.com/hieudoanm/simple-upload
 
-## Finance (2)
-
-1. 📉 [Inflation][inflation] - [GitHub][inflation-gh]
-2. 🧾 [Invoice][invoice] - [GitHub][invoice-gh]
-
-[inflation]: https://hieudoanm.github.io/inflation
-[inflation-gh]: https://github.com/hieudoanm/inflation
-[invoice]: https://hieudoanm.github.io/invoice
-[invoice-gh]: https://github.com/hieudoanm/invoice
-
 ## Fun (7)
 
 1. 🌀 [Attractors][attractors] - [GitHub][attractors-gh]
@@ -144,20 +133,23 @@
 [start]: https://hieudoanm.github.io/start
 [start-gh]: https://github.com/hieudoanm/start
 
-## Utilities (7)
+## Utilities (8)
 
 1. 📋 [Clipboard][clipboard] - [GitHub][clipboard-gh]
 2. 📱 [InstaSize][instasize] - [GitHub][instasize-gh]
-3. 🛍️ [Shopify Detect][shopify.detect] - [GitHub][shopify.detect-gh]
-4. 📸 [Snapshot][snapshot] - [GitHub][snapshot-gh]
-5. 🖥️ [System][system] - [GitHub][system-gh]
-6. 📝 [Transcript][transcript] - [GitHub][transcript-gh]
-7. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
+3. 🧾 [Invoice][invoice] - [GitHub][invoice-gh]
+4. 🛍️ [Shopify Detect][shopify.detect] - [GitHub][shopify.detect-gh]
+5. 📸 [Snapshot][snapshot] - [GitHub][snapshot-gh]
+6. 🖥️ [System][system] - [GitHub][system-gh]
+7. 📝 [Transcript][transcript] - [GitHub][transcript-gh]
+8. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
 
 [clipboard]: https://hieudoanm.github.io/clipboard
 [clipboard-gh]: https://github.com/hieudoanm/clipboard
 [instasize]: https://hieudoanm.github.io/instasize
 [instasize-gh]: https://github.com/hieudoanm/instasize
+[invoice]: https://hieudoanm.github.io/invoice
+[invoice-gh]: https://github.com/hieudoanm/invoice
 [shopify.detect]: https://hieudoanm.github.io/shopify.detect
 [shopify.detect-gh]: https://github.com/hieudoanm/shopify.detect
 [snapshot]: https://hieudoanm.github.io/snapshot

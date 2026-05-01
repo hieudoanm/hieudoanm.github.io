@@ -4,6 +4,7 @@ import { Tool, ToolCard } from '@hieudoanm/components/cards/ToolCard';
 import { CalculatorModal } from '@hieudoanm/components/modals/calculators/CalculatorModal';
 import { ConverterModal } from '@hieudoanm/components/modals/calculators/ConverterModal';
 import { EloModal } from '@hieudoanm/components/modals/calculators/EloModal';
+import { InflationModal } from '@hieudoanm/components/modals/calculators/InflationModal';
 import { PokerModal } from '@hieudoanm/components/modals/calculators/PokerModal';
 import { TaxModal } from '@hieudoanm/components/modals/calculators/TaxModal';
 import { FlashcardsModal } from '@hieudoanm/components/modals/education/FlashcardsModal';
@@ -77,7 +78,8 @@ type ModalId =
   | 'typoglycemia'
   | 'wordle'
   | 'tax'
-  | 'elo';
+  | 'elo'
+  | 'inflation';
 
 type SidebarTab = 'status' | 'clock' | null;
 
@@ -95,6 +97,7 @@ const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
   doi: DOIModal,
   emojis: EmojisModal,
   house: HouseModal,
+  inflation: InflationModal,
   ip: IPModal,
   kaprekar: KaprekarModal,
   morse: MorseModal,
@@ -499,6 +502,13 @@ const AppPage: NextPage = () => {
       emoji: '♟️',
       color: '#f59e0b',
       onClick: open('elo'),
+    },
+    {
+      label: 'Inflation',
+      description: 'Calculator',
+      emoji: '💰',
+      color: '#f59e0b',
+      onClick: open('inflation'),
     },
     {
       label: 'Poker',
