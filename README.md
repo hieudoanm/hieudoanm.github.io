@@ -1,16 +1,16 @@
 # 👨‍💻 I'm HIEU DOAN
 
-## Table of Contents (38)
+## Table of Contents (37)
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
-  - [Table of Contents (38)](#table-of-contents-38)
+  - [Table of Contents (37)](#table-of-contents-37)
   - [Artificial Intelligence (3)](#artificial-intelligence-3)
   - [Design (2)](#design-2)
   - [Dev Tools (6)](#dev-tools-6)
   - [Docs (2)](#docs-2)
   - [Fun (7)](#fun-7)
   - [Games (2)](#games-2)
-  - [Languages (2)](#languages-2)
+  - [Languages (1)](#languages-1)
   - [Messaging (1)](#messaging-1)
   - [Template (1)](#template-1)
   - [Utilities (8)](#utilities-8)
@@ -106,13 +106,10 @@
 [quiz]: https://hieudoanm.github.io/quiz
 [quiz-gh]: https://github.com/hieudoanm/quiz
 
-## Languages (2)
+## Languages (1)
 
-1. 🇬🇧 [English][english] - [GitHub][english-gh]
-2. 🤟 [Sign][sign] - [GitHub][sign-gh]
+1. 🤟 [Sign][sign] - [GitHub][sign-gh]
 
-[english]: https://hieudoanm.github.io/english
-[english-gh]: https://github.com/hieudoanm/english
 [sign]: https://hieudoanm.github.io/sign
 [sign-gh]: https://github.com/hieudoanm/sign
 

@@ -1,6 +1,6 @@
 # Hieu Doan
 
-## Table of Contents (38)
+## Table of Contents (37)
 
 ## Artificial Intelligence (3)
 
@@ -92,13 +92,10 @@
 [quiz]: https://hieudoanm.github.io/quiz
 [quiz-gh]: https://github.com/hieudoanm/quiz
 
-## Languages (2)
+## Languages (1)
 
-1. 🇬🇧 [English][english] - [GitHub][english-gh]
-2. 🤟 [Sign][sign] - [GitHub][sign-gh]
+1. 🤟 [Sign][sign] - [GitHub][sign-gh]
 
-[english]: https://hieudoanm.github.io/english
-[english-gh]: https://github.com/hieudoanm/english
 [sign]: https://hieudoanm.github.io/sign
 [sign-gh]: https://github.com/hieudoanm/sign
 

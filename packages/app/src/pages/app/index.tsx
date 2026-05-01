@@ -7,6 +7,7 @@ import { EloModal } from '@hieudoanm/components/modals/calculators/EloModal';
 import { InflationModal } from '@hieudoanm/components/modals/calculators/InflationModal';
 import { PokerModal } from '@hieudoanm/components/modals/calculators/PokerModal';
 import { TaxModal } from '@hieudoanm/components/modals/calculators/TaxModal';
+import { EnglishModal } from '@hieudoanm/components/modals/education/EnglishModal';
 import { FlashcardsModal } from '@hieudoanm/components/modals/education/FlashcardsModal';
 import { PeriodicTableModal } from '@hieudoanm/components/modals/education/PeriodicTableModal';
 import { PitchModal } from '@hieudoanm/components/modals/education/PitchModal';
@@ -81,7 +82,8 @@ type ModalId =
   | 'tax'
   | 'elo'
   | 'inflation'
-  | 'openapi';
+  | 'openapi'
+  | 'english';
 
 type SidebarTab = 'status' | 'clock' | null;
 
@@ -121,6 +123,7 @@ const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
   tax: TaxModal,
   elo: EloModal,
   openapi: OpenAPI2Postman,
+  english: EnglishModal,
 };
 
 /* ------------------------------------------------------------------ */
@@ -537,6 +540,13 @@ const AppPage: NextPage = () => {
   ];
 
   const education: Tool[] = [
+    {
+      label: 'English',
+      description: 'Dictionary',
+      emoji: '📚',
+      color: '#3b82f6',
+      onClick: open('english'),
+    },
     {
       label: 'Flashcards',
       description: 'Words',

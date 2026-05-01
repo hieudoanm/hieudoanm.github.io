@@ -259,17 +259,6 @@ export const apps: App[] = [
   },
   {
     category: 'languages',
-    emoji: '🇬🇧',
-    id: 'english',
-    name: 'English',
-    href: 'https://hieudoanm.github.io/english',
-    github: 'https://github.com/hieudoanm/english',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/english/refs/heads/master/images/app.png',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
-    category: 'languages',
     emoji: '🤟',
     id: 'sign',
     name: 'Sign',
