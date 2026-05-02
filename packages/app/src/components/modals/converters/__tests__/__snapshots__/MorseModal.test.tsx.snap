@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`MorseModal should render 1`] = `
+<div>
+  <dialog
+    class="modal modal-open"
+    open=""
+  >
+    <div
+      class="modal-box flex w-full max-w-2xl flex-col gap-4"
+    >
+      <div
+        class="flex items-start justify-between"
+      >
+        <div>
+          <h3
+            class="text-lg font-bold"
+          >
+            Morse Code
+          </h3>
+          <p
+            class="text-base-content/50 text-sm"
+          >
+            ITU standard · Audio playback · .morse export
+          </p>
+        </div>
+        <button
+          class="btn btn-ghost btn-sm btn-circle"
+        >
+          ✕
+        </button>
+      </div>
+      <div
+        class="flex flex-col gap-2"
+      >
+        <div
+          class="flex items-center justify-between"
+        >
+          <span
+            class="text-base-content/50 text-xs tracking-widest uppercase"
+          >
+            Input
+          </span>
+          <span
+            class="badge badge-ghost font-mono text-xs"
+          >
+            0
+             chars
+          </span>
+        </div>
+        <textarea
+          class="textarea textarea-bordered h-24 w-full resize-none font-sans text-sm leading-relaxed"
+          placeholder="Type or paste text…"
+        />
+        <div
+          class="flex flex-wrap gap-2"
+        >
+          <button
+            class="btn btn-ghost btn-xs border-base-300 border"
+          >
+            Hello world
+          </button>
+          <button
+            class="btn btn-ghost btn-xs border-base-300 border"
+          >
+            SOS
+          </button>
+          <button
+            class="btn btn-ghost btn-xs border-base-300 border"
+          >
+            CQ CQ DE
+          </button>
+        </div>
+      </div>
+      <div
+        class="flex flex-col gap-2"
+      >
+        <div
+          class="flex items-center justify-between"
+        >
+          <span
+            class="text-base-content/50 text-xs tracking-widest uppercase"
+          >
+            Morse output
+          </span>
+          <span
+            class="badge badge-ghost font-mono text-xs"
+          >
+            0
+             symbols
+          </span>
+        </div>
+        <div
+          class="bg-base-200 border-base-300 min-h-[64px] overflow-auto rounded-xl border p-4"
+        >
+          <p
+            class="text-base-content/20 text-sm"
+          >
+            Morse output will appear here…
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex flex-wrap gap-2"
+      >
+        <button
+          class="btn btn-sm btn-primary"
+          disabled=""
+        >
+          ▶ Play
+        </button>
+        <button
+          class="btn btn-sm btn-ghost border-base-300 border"
+          disabled=""
+        >
+          Copy
+        </button>
+        <button
+          class="btn btn-ghost btn-sm border-base-300 border"
+          disabled=""
+        >
+          ↓ .morse
+        </button>
+      </div>
+    </div>
+    <div
+      class="modal-backdrop"
+    />
+  </dialog>
+</div>
+`;

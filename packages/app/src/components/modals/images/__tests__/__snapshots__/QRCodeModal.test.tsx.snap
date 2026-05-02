@@ -52,7 +52,7 @@ exports[`QRCodeModal should render 1`] = `
           class="border-base-300 flex aspect-square w-full max-w-[12rem] items-center justify-center self-center rounded-xl border border-dashed"
         >
           <p
-            class="text-base-content/20 font-mono text-[10px] tracking-widest uppercase"
+            class="text-base-content/20 text-center font-mono text-[10px] tracking-widest uppercase"
           >
             QR appears here
           </p>

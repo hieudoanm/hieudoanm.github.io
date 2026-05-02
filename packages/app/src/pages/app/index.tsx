@@ -7,6 +7,10 @@ import { EloModal } from '@hieudoanm/components/modals/calculators/EloModal';
 import { InflationModal } from '@hieudoanm/components/modals/calculators/InflationModal';
 import { PokerModal } from '@hieudoanm/components/modals/calculators/PokerModal';
 import { TaxModal } from '@hieudoanm/components/modals/calculators/TaxModal';
+import { BrailleModal } from '@hieudoanm/components/modals/converters/BrailleModal';
+import { ColorsModal } from '@hieudoanm/components/modals/converters/ColorsModal';
+import { MorseModal } from '@hieudoanm/components/modals/converters/MorseModal';
+import { OpenAPI2Postman } from '@hieudoanm/components/modals/converters/OpenAPI2Postman';
 import { EnglishModal } from '@hieudoanm/components/modals/education/EnglishModal';
 import { FlashcardsModal } from '@hieudoanm/components/modals/education/FlashcardsModal';
 import { PeriodicTableModal } from '@hieudoanm/components/modals/education/PeriodicTableModal';
@@ -22,16 +26,12 @@ import { BreakingBadModal } from '@hieudoanm/components/modals/images/BreakingBa
 import { GitHubSocialPreviewModal } from '@hieudoanm/components/modals/images/GitHubSocialPreviewModal';
 import { HouseModal } from '@hieudoanm/components/modals/images/HouseModal';
 import { QRCodeModal } from '@hieudoanm/components/modals/images/QRCodeModal';
-import { BrailleModal } from '@hieudoanm/components/modals/tools/BrailleModal';
-import { ColorsModal } from '@hieudoanm/components/modals/tools/ColorsModal';
 import { CountdownModal } from '@hieudoanm/components/modals/tools/CountdownModal';
 import { DOIModal } from '@hieudoanm/components/modals/tools/DOIModal';
 import { EmojisModal } from '@hieudoanm/components/modals/tools/EmojisModal';
 import { IPModal } from '@hieudoanm/components/modals/tools/IPModal';
 import { KaprekarModal } from '@hieudoanm/components/modals/tools/KaprekarModal';
 import { ManifestModal } from '@hieudoanm/components/modals/tools/ManifestModal';
-import { MorseModal } from '@hieudoanm/components/modals/tools/MorseModal';
-import { OpenAPI2Postman } from '@hieudoanm/components/modals/tools/OpenAPI2Postman';
 import { PomodoroModal } from '@hieudoanm/components/modals/tools/PomodoroModal';
 import { StringModal } from '@hieudoanm/components/modals/tools/StringModal';
 import { UUIDModal } from '@hieudoanm/components/modals/tools/UUIDModal';
@@ -215,6 +215,7 @@ const MainContent: FC<{
   onQueryChange: (v: string) => void;
   tools: Tool[];
   calculators: Tool[];
+  converters: Tool[];
   education: Tool[];
   games: Tool[];
   images: Tool[];
@@ -222,11 +223,12 @@ const MainContent: FC<{
   today,
   query,
   onQueryChange,
-  tools,
-  calculators,
-  education,
-  games,
-  images,
+  tools = [],
+  calculators = [],
+  converters = [],
+  education = [],
+  games = [],
+  images = [],
 }) => {
   const filtering = query.trim().length > 0;
 
@@ -240,6 +242,7 @@ const MainContent: FC<{
   );
   const filteredTools = tools.filter((t) => match(t.label, query));
   const filteredCalculators = calculators.filter((t) => match(t.label, query));
+  const filteredConverters = converters.filter((t) => match(t.label, query));
   const filteredEducation = education.filter((t) => match(t.label, query));
   const filteredGames = games.filter((t) => match(t.label, query));
   const filteredImages = images.filter((t) => match(t.label, query));
@@ -316,6 +319,16 @@ const MainContent: FC<{
         </Section>
       )}
 
+      {(!filtering || filteredConverters.length > 0) && (
+        <Section label="Converters" count={filteredConverters.length}>
+          <div className="grid grid-cols-4 gap-4">
+            {filteredConverters.map((t) => (
+              <ToolCard key={t.label} {...t} />
+            ))}
+          </div>
+        </Section>
+      )}
+
       {(!filtering || filteredEducation.length > 0) && (
         <Section label="Education" count={filteredEducation.length}>
           <div className="grid grid-cols-4 gap-4">
@@ -362,6 +375,7 @@ const MainContent: FC<{
         filteredWebsites.length === 0 &&
         filteredTools.length === 0 &&
         filteredCalculators.length === 0 &&
+        filteredConverters.length === 0 &&
         filteredEducation.length === 0 &&
         filteredGames.length === 0 &&
         filteredImages.length === 0 &&
@@ -422,20 +436,6 @@ const AppPage: NextPage = () => {
 
   const tools: Tool[] = [
     {
-      label: 'Braille',
-      description: 'Converter',
-      emoji: '⠿',
-      color: '#8b5cf6',
-      onClick: open('braille'),
-    },
-    {
-      label: 'Colors',
-      description: 'Picker',
-      emoji: '🎨',
-      color: '#ec4899',
-      onClick: open('colors'),
-    },
-    {
       label: 'Countdown',
       description: 'Timer',
       emoji: '⏳',
@@ -476,20 +476,6 @@ const AppPage: NextPage = () => {
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('manifest'),
-    },
-    {
-      label: 'Morse Code',
-      description: 'Converter',
-      emoji: '🔣',
-      color: '#f59e0b',
-      onClick: open('morse'),
-    },
-    {
-      label: 'OpenAPI',
-      description: 'to Postman',
-      emoji: '🔄',
-      color: '#ff6c37',
-      onClick: open('openapi'),
     },
     {
       label: 'Pomodoro',
@@ -556,6 +542,37 @@ const AppPage: NextPage = () => {
       emoji: '🇻🇳',
       color: '#ef4444',
       onClick: open('tax'),
+    },
+  ];
+
+  const converters: Tool[] = [
+    {
+      label: 'Braille',
+      description: 'From Text',
+      emoji: '⠿',
+      color: '#8b5cf6',
+      onClick: open('braille'),
+    },
+    {
+      label: 'Colors',
+      description: 'From HEX',
+      emoji: '🎨',
+      color: '#ec4899',
+      onClick: open('colors'),
+    },
+    {
+      label: 'Morse Code',
+      description: 'From Text',
+      emoji: '🔣',
+      color: '#f59e0b',
+      onClick: open('morse'),
+    },
+    {
+      label: 'OpenAPI',
+      description: 'to Postman',
+      emoji: '🔄',
+      color: '#ff6c37',
+      onClick: open('openapi'),
     },
   ];
 
@@ -720,6 +737,12 @@ const AppPage: NextPage = () => {
         cols: 'grid-cols-2 sm:grid-cols-3',
       },
       {
+        label: 'Converters',
+        items: converters.filter((t) => !filtering || match(t.label, query)),
+        Card: ToolCard,
+        cols: 'grid-cols-2 sm:grid-cols-3',
+      },
+      {
         label: 'Education',
         items: education.filter((t) => !filtering || match(t.label, query)),
         Card: ToolCard,
@@ -767,6 +790,7 @@ const AppPage: NextPage = () => {
           onQueryChange={setQuery}
           tools={tools}
           calculators={calculators}
+          converters={converters}
           education={education}
           games={games}
           images={images}
