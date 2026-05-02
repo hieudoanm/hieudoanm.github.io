@@ -2,7 +2,7 @@
   "name": "@hieudoanm/blocked",
   "version": "0.0.1",
   "private": true,
-  "description": "hieudoanm - Blocked",
+  "description": "Blocked",
   "main": "dist/background.js",
   "repository": {
     "type": "git",
