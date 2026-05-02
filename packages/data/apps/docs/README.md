@@ -1,6 +1,6 @@
 # Hieu Doan
 
-## Table of Contents (34)
+## Table of Contents (33)
 
 ## Artificial Intelligence (3)
 
@@ -135,15 +135,12 @@
 [wifi]: https://hieudoanm.github.io/wifi
 [wifi-gh]: https://github.com/hieudoanm/wifi
 
-## Workspace (3)
+## Workspace (2)
 
 1. 📚 [Docs][docs] - [GitHub][docs-gh]
 2. 📝 [Keep][keep] - [GitHub][keep-gh]
-3. 📈 [Sheets][sheets] - [GitHub][sheets-gh]
 
 [docs]: https://hieudoanm.github.io/docs
 [docs-gh]: https://github.com/hieudoanm/docs
 [keep]: https://hieudoanm.github.io/keep
 [keep-gh]: https://github.com/hieudoanm/keep
-[sheets]: https://hieudoanm.github.io/sheets
-[sheets-gh]: https://github.com/hieudoanm/sheets

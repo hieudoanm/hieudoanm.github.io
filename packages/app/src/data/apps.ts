@@ -378,15 +378,4 @@ export const apps: App[] = [
       'https://raw.githubusercontent.com/hieudoanm/keep/refs/heads/master/images/app.png',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
-  {
-    category: 'workspace',
-    emoji: '📈',
-    id: 'sheets',
-    name: 'Sheets',
-    href: 'https://hieudoanm.github.io/sheets',
-    github: 'https://github.com/hieudoanm/sheets',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/sheets/refs/heads/master/images/app.png',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
 ];
