@@ -116,17 +116,6 @@ export const apps: App[] = [
   },
   {
     category: 'dev-tools',
-    emoji: '📦',
-    id: 'manifest',
-    name: 'Manifest',
-    href: 'https://hieudoanm.github.io/manifest',
-    github: 'https://github.com/hieudoanm/manifest',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/manifest/refs/heads/master/images/app.png',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
-    category: 'dev-tools',
     emoji: '🛰️',
     id: 'proxy',
     name: 'Proxy',
