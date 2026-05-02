@@ -247,17 +247,6 @@ export const apps: App[] = [
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
-    category: 'messaging',
-    emoji: '✈️',
-    id: 'telegram',
-    name: 'Telegram',
-    href: 'https://hieudoanm.github.io/telegram',
-    github: 'https://github.com/hieudoanm/telegram',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/telegram/refs/heads/master/images/app.png',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
     category: 'template',
     emoji: '🚀',
     id: 'start',
@@ -267,6 +256,17 @@ export const apps: App[] = [
     image:
       'https://raw.githubusercontent.com/hieudoanm/start/refs/heads/master/images/app.png',
     tags: ['android', 'macos', 'web'],
+  },
+  {
+    category: 'template',
+    emoji: '✈️',
+    id: 'telegram',
+    name: 'Telegram',
+    href: 'https://hieudoanm.github.io/telegram',
+    github: 'https://github.com/hieudoanm/telegram',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/telegram/refs/heads/master/images/app.png',
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
     category: 'utilities',

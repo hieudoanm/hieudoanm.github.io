@@ -93,19 +93,15 @@
 [sign]: https://hieudoanm.github.io/sign
 [sign-gh]: https://github.com/hieudoanm/sign
 
-## Messaging (1)
-
-1. ✈️ [Telegram][telegram] - [GitHub][telegram-gh]
-
-[telegram]: https://hieudoanm.github.io/telegram
-[telegram-gh]: https://github.com/hieudoanm/telegram
-
-## Template (1)
+## Template (2)
 
 1. 🚀 [Start][start] - [GitHub][start-gh]
+2. ✈️ [Telegram][telegram] - [GitHub][telegram-gh]
 
 [start]: https://hieudoanm.github.io/start
 [start-gh]: https://github.com/hieudoanm/start
+[telegram]: https://hieudoanm.github.io/telegram
+[telegram-gh]: https://github.com/hieudoanm/telegram
 
 ## Utilities (8)
 

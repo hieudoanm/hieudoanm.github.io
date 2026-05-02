@@ -11,8 +11,7 @@
   - [Fun (7)](#fun-7)
   - [Games (2)](#games-2)
   - [Languages (1)](#languages-1)
-  - [Messaging (1)](#messaging-1)
-  - [Template (1)](#template-1)
+  - [Template (2)](#template-2)
   - [Utilities (8)](#utilities-8)
   - [Workspace (2)](#workspace-2)
 
@@ -107,19 +106,15 @@
 [sign]: https://hieudoanm.github.io/sign
 [sign-gh]: https://github.com/hieudoanm/sign
 
-## Messaging (1)
-
-1. ✈️ [Telegram][telegram] - [GitHub][telegram-gh]
-
-[telegram]: https://hieudoanm.github.io/telegram
-[telegram-gh]: https://github.com/hieudoanm/telegram
-
-## Template (1)
+## Template (2)
 
 1. 🚀 [Start][start] - [GitHub][start-gh]
+2. ✈️ [Telegram][telegram] - [GitHub][telegram-gh]
 
 [start]: https://hieudoanm.github.io/start
 [start-gh]: https://github.com/hieudoanm/start
+[telegram]: https://hieudoanm.github.io/telegram
+[telegram-gh]: https://github.com/hieudoanm/telegram
 
 ## Utilities (8)
 
