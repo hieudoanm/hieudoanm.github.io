@@ -41,6 +41,7 @@ import { apps } from '@hieudoanm/data/apps';
 import {
   ai as aiBookmarks,
   google as googleBookmarks,
+  messaging as messagingBookmarks,
   websites as websiteBookmarks,
 } from '@hieudoanm/data/bookmarks';
 import { getTimeInZone, timezones } from '@hieudoanm/data/timezones';
@@ -231,6 +232,9 @@ const MainContent: FC<{
 
   const filteredAI = aiBookmarks.filter((b) => match(b.label, query));
   const filteredGoogle = googleBookmarks.filter((b) => match(b.label, query));
+  const filteredMessaging = messagingBookmarks.filter((b) =>
+    match(b.label, query)
+  );
   const filteredWebsites = websiteBookmarks.filter((b) =>
     match(b.label, query)
   );
@@ -266,6 +270,16 @@ const MainContent: FC<{
         <Section label="Google Workspace" count={filteredGoogle.length}>
           <div className="grid grid-cols-4 gap-4">
             {filteredGoogle.map((bm) => (
+              <BookmarkCard key={bm.label} {...bm} />
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {(!filtering || filteredMessaging.length > 0) && (
+        <Section label="Messaging" count={filteredMessaging.length}>
+          <div className="grid grid-cols-4 gap-4">
+            {filteredMessaging.map((bm) => (
               <BookmarkCard key={bm.label} {...bm} />
             ))}
           </div>
@@ -672,6 +686,14 @@ const AppPage: NextPage = () => {
       {
         label: 'Google Workspace',
         items: googleBookmarks.filter(
+          (b) => !filtering || match(b.label, query)
+        ),
+        Card: BookmarkCard,
+        cols: 'grid-cols-2 sm:grid-cols-3',
+      },
+      {
+        label: 'Messaging',
+        items: messagingBookmarks.filter(
           (b) => !filtering || match(b.label, query)
         ),
         Card: BookmarkCard,

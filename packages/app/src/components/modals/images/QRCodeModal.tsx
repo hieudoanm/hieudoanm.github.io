@@ -94,7 +94,7 @@ export const QRCodeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             </div>
           ) : (
             <div className="border-base-300 flex aspect-square w-full max-w-[12rem] items-center justify-center self-center rounded-xl border border-dashed">
-              <p className="text-base-content/20 font-mono text-[10px] tracking-widest uppercase">
+              <p className="text-base-content/20 text-center font-mono text-[10px] tracking-widest uppercase">
                 QR appears here
               </p>
             </div>

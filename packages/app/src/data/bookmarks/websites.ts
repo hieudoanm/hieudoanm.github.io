@@ -2,13 +2,6 @@ import { BookmarkItem } from '@hieudoanm/components/cards/BookmarkCard';
 
 export const websites: BookmarkItem[] = [
   {
-    label: 'Discord',
-    url: 'https://discord.com',
-    description: 'Chat',
-    emoji: '💬',
-    color: '#5865f2',
-  },
-  {
     label: 'Facebook',
     url: 'https://facebook.com',
     description: 'Social network',
@@ -35,13 +28,6 @@ export const websites: BookmarkItem[] = [
     description: 'Music',
     emoji: '🎵',
     color: '#1DB954',
-  },
-  {
-    label: 'Telegram',
-    url: 'https://web.telegram.org/',
-    description: 'Messaging',
-    emoji: '💬',
-    color: '#0088cc',
   },
   {
     label: 'X',
