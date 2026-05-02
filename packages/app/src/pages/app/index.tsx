@@ -27,6 +27,7 @@ import { EmojisModal } from '@hieudoanm/components/modals/tools/EmojisModal';
 import { HouseModal } from '@hieudoanm/components/modals/tools/HouseModal';
 import { IPModal } from '@hieudoanm/components/modals/tools/IPModal';
 import { KaprekarModal } from '@hieudoanm/components/modals/tools/KaprekarModal';
+import { ManifestModal } from '@hieudoanm/components/modals/tools/ManifestModal';
 import { MorseModal } from '@hieudoanm/components/modals/tools/MorseModal';
 import { OpenAPI2Postman } from '@hieudoanm/components/modals/tools/OpenAPI2Postman';
 import { PomodoroModal } from '@hieudoanm/components/modals/tools/PomodoroModal';
@@ -83,7 +84,8 @@ type ModalId =
   | 'elo'
   | 'inflation'
   | 'openapi'
-  | 'english';
+  | 'english'
+  | 'manifest';
 
 type SidebarTab = 'status' | 'clock' | null;
 
@@ -104,6 +106,7 @@ const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
   inflation: InflationModal,
   ip: IPModal,
   kaprekar: KaprekarModal,
+  manifest: ManifestModal,
   morse: MorseModal,
   pitch: PitchModal,
   pomodoro: PomodoroModal,
@@ -449,6 +452,13 @@ const AppPage: NextPage = () => {
       emoji: '🔢',
       color: '#f59e0b',
       onClick: open('kaprekar'),
+    },
+    {
+      label: 'Manifest',
+      description: 'JSON Editor',
+      emoji: '📄',
+      color: '#3b82f6',
+      onClick: open('manifest'),
     },
     {
       label: 'Morse Code',
