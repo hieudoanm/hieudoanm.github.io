@@ -18,20 +18,21 @@ import { T3Modal } from '@hieudoanm/components/modals/games/T3Modal';
 import { TowersModal } from '@hieudoanm/components/modals/games/TowersModal';
 import { TypoglycemiaModal } from '@hieudoanm/components/modals/games/TypoglycemiaModal';
 import { WordleModal } from '@hieudoanm/components/modals/games/WordleModal';
+import { BreakingBadModal } from '@hieudoanm/components/modals/images/BreakingBadModal';
+import { GitHubSocialPreviewModal } from '@hieudoanm/components/modals/images/GitHubSocialPreviewModal';
+import { HouseModal } from '@hieudoanm/components/modals/images/HouseModal';
+import { QRCodeModal } from '@hieudoanm/components/modals/images/QRCodeModal';
 import { BrailleModal } from '@hieudoanm/components/modals/tools/BrailleModal';
-import { BreakingBadModal } from '@hieudoanm/components/modals/tools/BreakingBadModal';
 import { ColorsModal } from '@hieudoanm/components/modals/tools/ColorsModal';
 import { CountdownModal } from '@hieudoanm/components/modals/tools/CountdownModal';
 import { DOIModal } from '@hieudoanm/components/modals/tools/DOIModal';
 import { EmojisModal } from '@hieudoanm/components/modals/tools/EmojisModal';
-import { HouseModal } from '@hieudoanm/components/modals/tools/HouseModal';
 import { IPModal } from '@hieudoanm/components/modals/tools/IPModal';
 import { KaprekarModal } from '@hieudoanm/components/modals/tools/KaprekarModal';
 import { ManifestModal } from '@hieudoanm/components/modals/tools/ManifestModal';
 import { MorseModal } from '@hieudoanm/components/modals/tools/MorseModal';
 import { OpenAPI2Postman } from '@hieudoanm/components/modals/tools/OpenAPI2Postman';
 import { PomodoroModal } from '@hieudoanm/components/modals/tools/PomodoroModal';
-import { QRCodeModal } from '@hieudoanm/components/modals/tools/QRCodeModal';
 import { StringModal } from '@hieudoanm/components/modals/tools/StringModal';
 import { UUIDModal } from '@hieudoanm/components/modals/tools/UUIDModal';
 import { LeftSidebar } from '@hieudoanm/components/sidebars/LeftSidebar';
@@ -85,7 +86,8 @@ type ModalId =
   | 'inflation'
   | 'openapi'
   | 'english'
-  | 'manifest';
+  | 'manifest'
+  | 'github-social-preview';
 
 type SidebarTab = 'status' | 'clock' | null;
 
@@ -127,6 +129,7 @@ const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
   elo: EloModal,
   openapi: OpenAPI2Postman,
   english: EnglishModal,
+  'github-social-preview': GitHubSocialPreviewModal,
 };
 
 /* ------------------------------------------------------------------ */
@@ -213,6 +216,7 @@ const MainContent: FC<{
   calculators: Tool[];
   education: Tool[];
   games: Tool[];
+  images: Tool[];
 }> = ({
   today,
   query,
@@ -221,6 +225,7 @@ const MainContent: FC<{
   calculators,
   education,
   games,
+  images,
 }) => {
   const filtering = query.trim().length > 0;
 
@@ -233,6 +238,7 @@ const MainContent: FC<{
   const filteredCalculators = calculators.filter((t) => match(t.label, query));
   const filteredEducation = education.filter((t) => match(t.label, query));
   const filteredGames = games.filter((t) => match(t.label, query));
+  const filteredImages = images.filter((t) => match(t.label, query));
   const filteredApps = apps.filter((a) => match(a.id, query));
 
   return (
@@ -316,6 +322,16 @@ const MainContent: FC<{
         </Section>
       )}
 
+      {(!filtering || filteredImages.length > 0) && (
+        <Section label="Images" count={filteredImages.length}>
+          <div className="grid grid-cols-4 gap-4">
+            {filteredImages.map((t) => (
+              <ToolCard key={t.label} {...t} />
+            ))}
+          </div>
+        </Section>
+      )}
+
       {(!filtering || filteredApps.length > 0) && (
         <Section label="Apps" count={filteredApps.length}>
           <div className="grid grid-cols-4 gap-4">
@@ -334,6 +350,7 @@ const MainContent: FC<{
         filteredCalculators.length === 0 &&
         filteredEducation.length === 0 &&
         filteredGames.length === 0 &&
+        filteredImages.length === 0 &&
         filteredApps.length === 0 && (
           <p className="text-base-content/30 mt-20 text-sm">
             No results for "{query}" — press 🔍 to search Google.
@@ -398,13 +415,6 @@ const AppPage: NextPage = () => {
       onClick: open('braille'),
     },
     {
-      label: 'Breaking Bad',
-      description: 'Element',
-      emoji: '🧪',
-      color: '#eab308',
-      onClick: open('breaking-bad'),
-    },
-    {
       label: 'Colors',
       description: 'Picker',
       emoji: '🎨',
@@ -431,13 +441,6 @@ const AppPage: NextPage = () => {
       emoji: '😀',
       color: '#f59e0b',
       onClick: open('emojis'),
-    },
-    {
-      label: 'House',
-      description: 'M.D.',
-      emoji: '🏥',
-      color: '#ef4444',
-      onClick: open('house'),
     },
     {
       label: 'IP',
@@ -480,13 +483,6 @@ const AppPage: NextPage = () => {
       emoji: '🍅',
       color: '#ef4444',
       onClick: open('pomodoro'),
-    },
-    {
-      label: 'QR Code',
-      description: 'Generator',
-      emoji: '▦',
-      color: '#22d3ee',
-      onClick: open('qr'),
     },
     {
       label: 'String',
@@ -632,6 +628,37 @@ const AppPage: NextPage = () => {
     },
   ];
 
+  const images: Tool[] = [
+    {
+      label: 'Breaking Bad',
+      description: 'Element',
+      emoji: '🧪',
+      color: '#eab308',
+      onClick: open('breaking-bad'),
+    },
+    {
+      label: 'Social Preview',
+      description: 'GitHub',
+      emoji: '📸',
+      color: '#10b981',
+      onClick: open('github-social-preview'),
+    },
+    {
+      label: 'House',
+      description: 'M.D.',
+      emoji: '🏥',
+      color: '#ef4444',
+      onClick: open('house'),
+    },
+    {
+      label: 'QR Code',
+      description: 'Generator',
+      emoji: '▦',
+      color: '#22d3ee',
+      onClick: open('qr'),
+    },
+  ];
+
   // Mobile filtered lists
   const filtering = query.trim().length > 0;
   const mobileFilteredSections = useMemo(
@@ -683,6 +710,12 @@ const AppPage: NextPage = () => {
         cols: 'grid-cols-2 sm:grid-cols-3',
       },
       {
+        label: 'Images',
+        items: images.filter((t) => !filtering || match(t.label, query)),
+        Card: ToolCard,
+        cols: 'grid-cols-2 sm:grid-cols-3',
+      },
+      {
         label: 'Apps',
         items: apps.filter((a) => !filtering || match(a.id, query)),
         Card: AppCard,
@@ -714,6 +747,7 @@ const AppPage: NextPage = () => {
           calculators={calculators}
           education={education}
           games={games}
+          images={images}
         />
         <RightSidebar times={times} weatherQueries={weatherQueries} />
       </div>

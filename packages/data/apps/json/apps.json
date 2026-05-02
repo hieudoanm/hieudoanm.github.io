@@ -71,16 +71,6 @@
   },
   {
     "category": "dev-tools",
-    "emoji": "💻",
-    "id": "gh.ext",
-    "name": "GitHub Extensions",
-    "href": "https://hieudoanm.github.io/gh.ext",
-    "github": "https://github.com/hieudoanm/gh.ext",
-    "image": "https://raw.githubusercontent.com/hieudoanm/gh.ext/refs/heads/master/images/app.png",
-    "tags": ["cli", "extension", "android", "macos", "web"]
-  },
-  {
-    "category": "dev-tools",
     "emoji": "🧾",
     "id": "json-schema",
     "name": "JSON Schema",
