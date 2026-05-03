@@ -13,6 +13,7 @@ import { MorseModal } from '@hieudoanm/components/modals/converters/MorseModal';
 import { OpenAPI2Postman } from '@hieudoanm/components/modals/converters/OpenAPI2Postman';
 import { JSONSchemaModal } from '@hieudoanm/components/modals/editors/JSONSchemaModal';
 import { ManifestModal } from '@hieudoanm/components/modals/editors/ManifestModal';
+import { MarkdownModal } from '@hieudoanm/components/modals/editors/MarkdownModal';
 import { EnglishModal } from '@hieudoanm/components/modals/education/EnglishModal';
 import { FlashcardsModal } from '@hieudoanm/components/modals/education/FlashcardsModal';
 import { PeriodicTableModal } from '@hieudoanm/components/modals/education/PeriodicTableModal';
@@ -96,7 +97,8 @@ type ModalId =
   | 'json-schema'
   | 'shopify-detect'
   | 'pokedex'
-  | 'figlet';
+  | 'figlet'
+  | 'markdown';
 
 type SidebarTab = 'status' | 'clock' | null;
 
@@ -143,6 +145,7 @@ const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
   'shopify-detect': ShopifyDetectModal,
   pokedex: PokedexModal,
   figlet: FigletModal,
+  markdown: MarkdownModal,
 };
 
 /* ------------------------------------------------------------------ */
@@ -626,6 +629,13 @@ const AppPage: NextPage = () => {
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('manifest'),
+    },
+    {
+      label: 'Markdown',
+      description: 'Markdown Editor',
+      emoji: '📄',
+      color: '#3b82f6',
+      onClick: open('markdown'),
     },
   ];
 

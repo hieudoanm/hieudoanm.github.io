@@ -26,7 +26,7 @@ exports[`FigletModal should render 1`] = `
           maxlength="20"
           placeholder="Type something…"
           type="text"
-          value="Hello"
+          value="Hello, World!"
         />
         <select
           class="select select-bordered"
@@ -88,19 +88,19 @@ exports[`FigletModal should render 1`] = `
         <pre
           class="text-base-content/80 font-mono text-xs leading-tight whitespace-pre"
         >
-          |  ||‾‾|   |    /‾\\ 
-|  ||_ |   |   /   \\
-|__||   |   |   |   |
-|  ||   |   |   \\   /
-|  ||__|__|__ \\_ / 
-                    
+          |  ||‾‾|   |    /‾\\      \\    / /‾\\ |\\ |   |\\ |
+|  ||_ |   |   /   \\      \\  / /   \\| \\|   | \\|
+|__||   |   |   |   |       \\/  |   ||__/|   |  \\|
+|  ||   |   |   \\   / ,    /\\  /\\\\   /|\\ |   |  / 
+|  ||__|__|__ \\_ / ,/    /  \\/  \\ \\_ / | \\|__|_/ •
+                                                   
         </pre>
       </div>
       <div
         class="mb-3 flex items-center justify-between text-xs opacity-40"
       >
         <span>
-          5
+          13
           /20 chars · letters, digits, punctuation supported
         </span>
         <span>

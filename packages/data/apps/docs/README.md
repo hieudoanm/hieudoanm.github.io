@@ -1,6 +1,6 @@
 # Hieu Doan
 
-## Table of Contents (29)
+## Table of Contents (28)
 
 ## Artificial Intelligence (3)
 
@@ -87,7 +87,7 @@
 [telegram]: https://hieudoanm.github.io/telegram
 [telegram-gh]: https://github.com/hieudoanm/telegram
 
-## Utilities (8)
+## Utilities (9)
 
 1. 📋 [Clipboard][clipboard] - [GitHub][clipboard-gh]
 2. 📱 [InstaSize][instasize] - [GitHub][instasize-gh]
@@ -97,6 +97,7 @@
 6. 🖥️ [System][system] - [GitHub][system-gh]
 7. 📝 [Transcript][transcript] - [GitHub][transcript-gh]
 8. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
+9. 📚 [Docs][docs] - [GitHub][docs-gh]
 
 [clipboard]: https://hieudoanm.github.io/clipboard
 [clipboard-gh]: https://github.com/hieudoanm/clipboard
@@ -114,13 +115,5 @@
 [transcript-gh]: https://github.com/hieudoanm/transcript
 [wifi]: https://hieudoanm.github.io/wifi
 [wifi-gh]: https://github.com/hieudoanm/wifi
-
-## Workspace (2)
-
-1. 📚 [Docs][docs] - [GitHub][docs-gh]
-2. 📝 [Keep][keep] - [GitHub][keep-gh]
-
 [docs]: https://hieudoanm.github.io/docs
 [docs-gh]: https://github.com/hieudoanm/docs
-[keep]: https://hieudoanm.github.io/keep
-[keep-gh]: https://github.com/hieudoanm/keep

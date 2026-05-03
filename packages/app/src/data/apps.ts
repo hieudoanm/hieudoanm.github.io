@@ -313,7 +313,7 @@ export const apps: App[] = [
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
-    category: 'workspace',
+    category: 'utilities',
     emoji: '📚',
     id: 'docs',
     name: 'Docs',
@@ -321,17 +321,6 @@ export const apps: App[] = [
     github: 'https://github.com/hieudoanm/docs',
     image:
       'https://raw.githubusercontent.com/hieudoanm/docs/refs/heads/master/images/app.png',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
-    category: 'workspace',
-    emoji: '📝',
-    id: 'keep',
-    name: 'Keep',
-    href: 'https://hieudoanm.github.io/keep',
-    github: 'https://github.com/hieudoanm/keep',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/keep/refs/heads/master/images/app.png',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
 ];
