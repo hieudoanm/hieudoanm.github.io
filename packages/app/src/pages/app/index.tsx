@@ -12,6 +12,7 @@ import { ColorsModal } from '@hieudoanm/components/modals/converters/ColorsModal
 import { MorseModal } from '@hieudoanm/components/modals/converters/MorseModal';
 import { OpenAPI2Postman } from '@hieudoanm/components/modals/converters/OpenAPI2Postman';
 import { JSONSchemaModal } from '@hieudoanm/components/modals/editors/JSONSchemaModal';
+import { ManifestModal } from '@hieudoanm/components/modals/editors/ManifestModal';
 import { EnglishModal } from '@hieudoanm/components/modals/education/EnglishModal';
 import { FlashcardsModal } from '@hieudoanm/components/modals/education/FlashcardsModal';
 import { PeriodicTableModal } from '@hieudoanm/components/modals/education/PeriodicTableModal';
@@ -31,9 +32,9 @@ import { QRCodeModal } from '@hieudoanm/components/modals/images/QRCodeModal';
 import { CountdownModal } from '@hieudoanm/components/modals/tools/CountdownModal';
 import { DOIModal } from '@hieudoanm/components/modals/tools/DOIModal';
 import { EmojisModal } from '@hieudoanm/components/modals/tools/EmojisModal';
+import { FigletModal } from '@hieudoanm/components/modals/tools/FigletModal';
 import { IPModal } from '@hieudoanm/components/modals/tools/IPModal';
 import { KaprekarModal } from '@hieudoanm/components/modals/tools/KaprekarModal';
-import { ManifestModal } from '@hieudoanm/components/modals/tools/ManifestModal';
 import { PomodoroModal } from '@hieudoanm/components/modals/tools/PomodoroModal';
 import { ShopifyDetectModal } from '@hieudoanm/components/modals/tools/ShopifyDetectModal';
 import { StringModal } from '@hieudoanm/components/modals/tools/StringModal';
@@ -94,7 +95,8 @@ type ModalId =
   | 'github-social-preview'
   | 'json-schema'
   | 'shopify-detect'
-  | 'pokedex';
+  | 'pokedex'
+  | 'figlet';
 
 type SidebarTab = 'status' | 'clock' | null;
 
@@ -140,6 +142,7 @@ const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
   'json-schema': JSONSchemaModal,
   'shopify-detect': ShopifyDetectModal,
   pokedex: PokedexModal,
+  figlet: FigletModal,
 };
 
 /* ------------------------------------------------------------------ */
@@ -483,6 +486,13 @@ const AppPage: NextPage = () => {
       onClick: open('emojis'),
     },
     {
+      label: 'Figlet',
+      description: 'Text art',
+      emoji: '📝',
+      color: '#8b5cf6',
+      onClick: open('figlet'),
+    },
+    {
       label: 'IP',
       description: 'Inspector',
       emoji: '🌐',
@@ -659,18 +669,18 @@ const AppPage: NextPage = () => {
       onClick: open('blackjack'),
     },
     {
-      label: 'Pokedex',
-      description: 'Pokemon',
-      emoji: '🔴',
-      color: '#f59e0b',
-      onClick: open('pokedex'),
-    },
-    {
       label: 'PI',
       description: 'Memorization',
       emoji: 'π',
       color: '#f59e0b',
       onClick: open('pi'),
+    },
+    {
+      label: 'Pokedex',
+      description: 'Pokemon',
+      emoji: '📕',
+      color: '#f59e0b',
+      onClick: open('pokedex'),
     },
     {
       label: 'Recall',

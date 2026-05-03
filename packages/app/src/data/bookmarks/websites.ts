@@ -23,11 +23,25 @@ export const websites: BookmarkItem[] = [
     color: '#e1306c',
   },
   {
+    label: 'LinkedIn',
+    url: 'https://linkedin.com',
+    description: 'Social network',
+    emoji: '💼',
+    color: '#0077b5',
+  },
+  {
     label: 'Spotify',
     url: 'https://open.spotify.com',
     description: 'Music',
     emoji: '🎵',
     color: '#1DB954',
+  },
+  {
+    label: 'Threads',
+    url: 'https://threads.net',
+    description: 'Social network',
+    emoji: '🧵',
+    color: '#000000',
   },
   {
     label: 'X',
