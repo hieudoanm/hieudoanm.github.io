@@ -251,16 +251,6 @@
   },
   {
     "category": "utilities",
-    "emoji": "🛍️",
-    "id": "shopify.detect",
-    "name": "Shopify Detect",
-    "href": "https://hieudoanm.github.io/shopify.detect",
-    "github": "https://github.com/hieudoanm/shopify.detect",
-    "image": "https://raw.githubusercontent.com/hieudoanm/shopify.detect/refs/heads/master/images/app.png",
-    "tags": ["cli", "extension", "android", "macos", "web"]
-  },
-  {
-    "category": "utilities",
     "emoji": "📸",
     "id": "snapshot",
     "name": "Snapshot",

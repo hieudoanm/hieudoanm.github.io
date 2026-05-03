@@ -34,6 +34,7 @@ import { IPModal } from '@hieudoanm/components/modals/tools/IPModal';
 import { KaprekarModal } from '@hieudoanm/components/modals/tools/KaprekarModal';
 import { ManifestModal } from '@hieudoanm/components/modals/tools/ManifestModal';
 import { PomodoroModal } from '@hieudoanm/components/modals/tools/PomodoroModal';
+import { ShopifyDetectModal } from '@hieudoanm/components/modals/tools/ShopifyDetectModal';
 import { StringModal } from '@hieudoanm/components/modals/tools/StringModal';
 import { UUIDModal } from '@hieudoanm/components/modals/tools/UUIDModal';
 import { LeftSidebar } from '@hieudoanm/components/sidebars/LeftSidebar';
@@ -90,7 +91,8 @@ type ModalId =
   | 'english'
   | 'manifest'
   | 'github-social-preview'
-  | 'json-schema';
+  | 'json-schema'
+  | 'shopify-detect';
 
 type SidebarTab = 'status' | 'clock' | null;
 
@@ -134,6 +136,7 @@ const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
   english: EnglishModal,
   'github-social-preview': GitHubSocialPreviewModal,
   'json-schema': JSONSchemaModal,
+  'shopify-detect': ShopifyDetectModal,
 };
 
 /* ------------------------------------------------------------------ */
@@ -496,6 +499,13 @@ const AppPage: NextPage = () => {
       emoji: '🍅',
       color: '#ef4444',
       onClick: open('pomodoro'),
+    },
+    {
+      label: 'Shopify Detect',
+      description: 'Detect Shopify',
+      emoji: '🔍',
+      color: '#06b6d4',
+      onClick: open('shopify-detect'),
     },
     {
       label: 'String',

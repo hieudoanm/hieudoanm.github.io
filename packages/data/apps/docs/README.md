@@ -1,6 +1,6 @@
 # Hieu Doan
 
-## Table of Contents (32)
+## Table of Contents (31)
 
 ## Artificial Intelligence (3)
 
@@ -100,16 +100,15 @@
 [telegram]: https://hieudoanm.github.io/telegram
 [telegram-gh]: https://github.com/hieudoanm/telegram
 
-## Utilities (8)
+## Utilities (7)
 
 1. 📋 [Clipboard][clipboard] - [GitHub][clipboard-gh]
 2. 📱 [InstaSize][instasize] - [GitHub][instasize-gh]
 3. 🧾 [Invoice][invoice] - [GitHub][invoice-gh]
-4. 🛍️ [Shopify Detect][shopify.detect] - [GitHub][shopify.detect-gh]
-5. 📸 [Snapshot][snapshot] - [GitHub][snapshot-gh]
-6. 🖥️ [System][system] - [GitHub][system-gh]
-7. 📝 [Transcript][transcript] - [GitHub][transcript-gh]
-8. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
+4. 📸 [Snapshot][snapshot] - [GitHub][snapshot-gh]
+5. 🖥️ [System][system] - [GitHub][system-gh]
+6. 📝 [Transcript][transcript] - [GitHub][transcript-gh]
+7. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
 
 [clipboard]: https://hieudoanm.github.io/clipboard
 [clipboard-gh]: https://github.com/hieudoanm/clipboard
@@ -117,8 +116,6 @@
 [instasize-gh]: https://github.com/hieudoanm/instasize
 [invoice]: https://hieudoanm.github.io/invoice
 [invoice-gh]: https://github.com/hieudoanm/invoice
-[shopify.detect]: https://hieudoanm.github.io/shopify.detect
-[shopify.detect-gh]: https://github.com/hieudoanm/shopify.detect
 [snapshot]: https://hieudoanm.github.io/snapshot
 [snapshot-gh]: https://github.com/hieudoanm/snapshot
 [system]: https://hieudoanm.github.io/system
