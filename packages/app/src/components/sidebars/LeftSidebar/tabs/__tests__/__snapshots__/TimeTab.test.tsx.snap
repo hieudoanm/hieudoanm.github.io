@@ -199,7 +199,7 @@ exports[`TimeTab should render 1`] = `
           >
             <div
               class="bg-base-content/40 h-full rounded-lg transition-all duration-1000"
-              style="width: 87.2%;"
+              style="width: 88.9%;"
             />
           </div>
         </div>
@@ -216,7 +216,7 @@ exports[`TimeTab should render 1`] = `
          
         23
         :
-        37
+        40
       </p>
     </footer>
   </div>
