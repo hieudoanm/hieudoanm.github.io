@@ -45,6 +45,7 @@ import { RightSidebar } from '@hieudoanm/components/sidebars/RightSidebar';
 import { apps } from '@hieudoanm/data/apps';
 import {
   ai as aiBookmarks,
+  coding as codingBookmarks,
   google as googleBookmarks,
   messaging as messagingBookmarks,
   websites as websiteBookmarks,
@@ -252,6 +253,7 @@ const MainContent: FC<{
   const filtering = query.trim().length > 0;
 
   // Bookmarks
+  const filteredCoding = codingBookmarks.filter((b) => match(b.label, query));
   const filteredAI = aiBookmarks.filter((b) => match(b.label, query));
   const filteredGoogle = googleBookmarks.filter((b) => match(b.label, query));
   const filteredMessaging = messagingBookmarks.filter((b) =>
@@ -282,6 +284,16 @@ const MainContent: FC<{
       <div className="mb-10 w-full max-w-2xl">
         <SearchBar query={query} onChange={onQueryChange} />
       </div>
+
+      {(!filtering || filteredCoding.length > 0) && (
+        <Section label="Coding" count={filteredCoding.length}>
+          <div className="grid grid-cols-4 gap-4">
+            {filteredCoding.map((bm) => (
+              <BookmarkCard key={bm.label} {...bm} />
+            ))}
+          </div>
+        </Section>
+      )}
 
       {(!filtering || filteredAI.length > 0) && (
         <Section label="AI Assistants" count={filteredAI.length}>
@@ -414,6 +426,7 @@ const MainContent: FC<{
       )}
 
       {filtering &&
+        filteredCoding.length === 0 &&
         filteredAI.length === 0 &&
         filteredGoogle.length === 0 &&
         filteredWebsites.length === 0 &&
@@ -780,6 +793,14 @@ const AppPage: NextPage = () => {
   const filtering = query.trim().length > 0;
   const mobileFilteredSections = useMemo(
     () => [
+      {
+        label: 'Coding',
+        items: codingBookmarks.filter(
+          (b) => !filtering || match(b.label, query)
+        ),
+        Card: BookmarkCard,
+        cols: 'grid-cols-2 sm:grid-cols-3',
+      },
       {
         label: 'AI Assistants',
         items: aiBookmarks.filter((b) => !filtering || match(b.label, query)),
