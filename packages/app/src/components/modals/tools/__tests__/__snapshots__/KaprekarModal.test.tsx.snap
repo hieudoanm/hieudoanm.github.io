@@ -2,8 +2,9 @@
 
 exports[`KaprekarModal should render 1`] = `
 <div>
-  <div
-    class="fixed inset-0 z-50 flex items-center justify-center p-4"
+  <dialog
+    class="modal modal-open"
+    open=""
     style="background: rgba(0, 0, 0, 0.6);"
   >
     <div
@@ -104,6 +105,14 @@ exports[`KaprekarModal should render 1`] = `
         </p>
       </div>
     </div>
-  </div>
+    <form
+      class="modal-backdrop"
+      method="dialog"
+    >
+      <button>
+        close
+      </button>
+    </form>
+  </dialog>
 </div>
 `;

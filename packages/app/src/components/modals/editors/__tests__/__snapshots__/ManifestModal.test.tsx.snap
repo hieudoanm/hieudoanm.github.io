@@ -4,6 +4,7 @@ exports[`ManifestModal should render 1`] = `
 <div>
   <dialog
     class="modal modal-open"
+    style="background: rgba(0, 0, 0, 0.6);"
   >
     <div
       class="modal-box flex h-[85vh] w-full max-w-2xl flex-col overflow-hidden p-0"

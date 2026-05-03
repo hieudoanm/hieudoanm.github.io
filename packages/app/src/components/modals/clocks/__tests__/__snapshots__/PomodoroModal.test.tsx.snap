@@ -5,9 +5,10 @@ exports[`PomodoroModal should render 1`] = `
   <dialog
     class="modal modal-open"
     open=""
+    style="background: rgba(0, 0, 0, 0.6);"
   >
     <div
-      class="modal-box flex w-full max-w-sm flex-col gap-5"
+      class="modal-box border-base-300 flex w-full max-w-sm flex-col gap-5 border"
     >
       <div
         class="flex items-start justify-between"

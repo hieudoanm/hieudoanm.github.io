@@ -5,6 +5,7 @@ exports[`DOIModal should render 1`] = `
   <dialog
     class="modal modal-open"
     open=""
+    style="background: rgba(0, 0, 0, 0.6);"
   >
     <div
       class="modal-box flex w-full max-w-3xl flex-col gap-6"

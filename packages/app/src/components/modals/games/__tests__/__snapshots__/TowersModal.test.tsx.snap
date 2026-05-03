@@ -4,6 +4,7 @@ exports[`TowersModal should render 1`] = `
 <div>
   <dialog
     class="jsx-6a26d52748df6036 modal modal-open"
+    style="background: rgba(0, 0, 0, 0.6);"
   >
     <div
       class="jsx-6a26d52748df6036 modal-box w-full max-w-2xl outline-none"

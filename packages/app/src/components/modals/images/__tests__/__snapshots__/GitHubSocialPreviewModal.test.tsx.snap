@@ -4,6 +4,7 @@ exports[`GitHubSocialPreviewModal should render 1`] = `
 <div>
   <dialog
     class="modal modal-open"
+    style="background: rgba(0, 0, 0, 0.6);"
   >
     <div
       class="modal-box w-full max-w-2xl"
