@@ -1,6 +1,6 @@
 # Hieu Doan
 
-## Table of Contents (31)
+## Table of Contents (30)
 
 ## Artificial Intelligence (3)
 
@@ -41,7 +41,7 @@
 [simple-upload]: https://hieudoanm.github.io/simple-upload
 [simple-upload-gh]: https://github.com/hieudoanm/simple-upload
 
-## Fun (7)
+## Fun (6)
 
 1. 🌀 [Attractors][attractors] - [GitHub][attractors-gh]
 2. ⚫ [Dot][dot] - [GitHub][dot-gh]
@@ -49,7 +49,6 @@
 4. 👀 [Eyes][eyes] - [GitHub][eyes-gh]
 5. ⚖️ [Legislation][legislation] - [GitHub][legislation-gh]
 6. 🔁 [Palindrome][palindrome] - [GitHub][palindrome-gh]
-7. 📕 [Pokedex][pokedex] - [GitHub][pokedex-gh]
 
 [attractors]: https://hieudoanm.github.io/attractors
 [attractors-gh]: https://github.com/hieudoanm/attractors
@@ -63,8 +62,6 @@
 [legislation-gh]: https://github.com/hieudoanm/legislation
 [palindrome]: https://hieudoanm.github.io/palindrome
 [palindrome-gh]: https://github.com/hieudoanm/palindrome
-[pokedex]: https://hieudoanm.github.io/pokedex
-[pokedex-gh]: https://github.com/hieudoanm/pokedex
 
 ## Games (2)
 

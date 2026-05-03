@@ -1,13 +1,13 @@
 # 👨‍💻 I'm HIEU DOAN
 
-## Table of Contents (31)
+## Table of Contents (30)
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
-  - [Table of Contents (31)](#table-of-contents-31)
+  - [Table of Contents (30)](#table-of-contents-30)
   - [Artificial Intelligence (3)](#artificial-intelligence-3)
   - [Design (2)](#design-2)
   - [Dev Tools (4)](#dev-tools-4)
-  - [Fun (7)](#fun-7)
+  - [Fun (6)](#fun-6)
   - [Games (2)](#games-2)
   - [Languages (1)](#languages-1)
   - [Template (2)](#template-2)
@@ -53,7 +53,7 @@
 [simple-upload]: https://hieudoanm.github.io/simple-upload
 [simple-upload-gh]: https://github.com/hieudoanm/simple-upload
 
-## Fun (7)
+## Fun (6)
 
 1. 🌀 [Attractors][attractors] - [GitHub][attractors-gh]
 2. ⚫ [Dot][dot] - [GitHub][dot-gh]
@@ -61,7 +61,6 @@
 4. 👀 [Eyes][eyes] - [GitHub][eyes-gh]
 5. ⚖️ [Legislation][legislation] - [GitHub][legislation-gh]
 6. 🔁 [Palindrome][palindrome] - [GitHub][palindrome-gh]
-7. 📕 [Pokedex][pokedex] - [GitHub][pokedex-gh]
 
 [attractors]: https://hieudoanm.github.io/attractors
 [attractors-gh]: https://github.com/hieudoanm/attractors
@@ -75,8 +74,6 @@
 [legislation-gh]: https://github.com/hieudoanm/legislation
 [palindrome]: https://hieudoanm.github.io/palindrome
 [palindrome-gh]: https://github.com/hieudoanm/palindrome
-[pokedex]: https://hieudoanm.github.io/pokedex
-[pokedex-gh]: https://github.com/hieudoanm/pokedex
 
 ## Games (2)
 

@@ -181,17 +181,6 @@ export const apps: App[] = [
     tags: ['android', 'macos', 'web'],
   },
   {
-    category: 'fun',
-    emoji: '📕',
-    id: 'pokedex',
-    name: 'Pokedex',
-    href: 'https://hieudoanm.github.io/pokedex',
-    github: 'https://github.com/hieudoanm/pokedex',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/pokedex/refs/heads/master/images/app.png',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
     category: 'games',
     emoji: '♟',
     id: 'chess',

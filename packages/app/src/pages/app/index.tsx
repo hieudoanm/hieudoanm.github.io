@@ -18,6 +18,7 @@ import { PeriodicTableModal } from '@hieudoanm/components/modals/education/Perio
 import { PitchModal } from '@hieudoanm/components/modals/education/PitchModal';
 import { BlackjackModal } from '@hieudoanm/components/modals/games/BlackjackModal';
 import { PiModal } from '@hieudoanm/components/modals/games/PiNumberModal';
+import { PokedexModal } from '@hieudoanm/components/modals/games/PokedexModal';
 import { RecallModal } from '@hieudoanm/components/modals/games/RecallModal';
 import { T3Modal } from '@hieudoanm/components/modals/games/T3Modal';
 import { TowersModal } from '@hieudoanm/components/modals/games/TowersModal';
@@ -92,7 +93,8 @@ type ModalId =
   | 'manifest'
   | 'github-social-preview'
   | 'json-schema'
-  | 'shopify-detect';
+  | 'shopify-detect'
+  | 'pokedex';
 
 type SidebarTab = 'status' | 'clock' | null;
 
@@ -137,6 +139,7 @@ const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
   'github-social-preview': GitHubSocialPreviewModal,
   'json-schema': JSONSchemaModal,
   'shopify-detect': ShopifyDetectModal,
+  pokedex: PokedexModal,
 };
 
 /* ------------------------------------------------------------------ */
@@ -654,6 +657,13 @@ const AppPage: NextPage = () => {
       emoji: '🃏',
       color: '#f59e0b',
       onClick: open('blackjack'),
+    },
+    {
+      label: 'Pokedex',
+      description: 'Pokemon',
+      emoji: '🔴',
+      color: '#f59e0b',
+      onClick: open('pokedex'),
     },
     {
       label: 'PI',
