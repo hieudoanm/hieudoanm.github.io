@@ -36,7 +36,9 @@ export const ManifestModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const bytes = new Blob([manifest]).size;
 
   return (
-    <dialog className="modal modal-open">
+    <dialog
+      className="modal modal-open"
+      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
       <div className="modal-box flex h-[85vh] w-full max-w-2xl flex-col overflow-hidden p-0">
         {/* Header */}
         <div className="border-base-300 flex items-center justify-between border-b px-4 py-3">

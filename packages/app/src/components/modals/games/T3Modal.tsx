@@ -112,7 +112,9 @@ export const T3Modal: FC<{ onClose: () => void }> = ({ onClose }) => {
     history[current].length >= 3 ? history[current][0] : null;
 
   return (
-    <dialog className="modal modal-open">
+    <dialog
+      className="modal modal-open"
+      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
       <div className="modal-box w-full max-w-sm">
         <button
           onClick={onClose}

@@ -61,7 +61,9 @@ export const FlashcardsModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const currentCard = shuffledCards[currentIndex];
 
   return (
-    <dialog className="modal modal-open">
+    <dialog
+      className="modal modal-open"
+      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
       <div className="modal-box w-full max-w-md">
         <button
           onClick={onClose}

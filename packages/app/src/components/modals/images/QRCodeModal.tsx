@@ -35,13 +35,13 @@ export const QRCodeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   };
 
   return (
-    <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4"
-      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}
-      onClick={onClose}>
+    <dialog
+      open
+      className="modal modal-open"
+      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
       <div
         className="card bg-base-100 border-base-300 w-full max-w-sm border shadow-2xl"
-        onClick={(e) => e.stopPropagation()}>
+        z-10>
         <div className="card-body gap-5 p-6">
           <div className="flex items-start justify-between">
             <div>
@@ -105,6 +105,9 @@ export const QRCodeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           </p>
         </div>
       </div>
-    </div>
+      <form method="dialog" className="modal-backdrop">
+        <button onClick={onClose}>close</button>
+      </form>
+    </dialog>
   );
 };

@@ -88,7 +88,9 @@ export const BlackjackModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const cardsLeft = deck.length;
 
   return (
-    <dialog className="modal modal-open">
+    <dialog
+      className="modal modal-open"
+      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
       <div
         ref={containerRef}
         tabIndex={0}

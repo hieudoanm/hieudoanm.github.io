@@ -203,7 +203,9 @@ export const TowersModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     selectedTower !== null && canDrop(selectedTower, i);
 
   return (
-    <dialog className="modal modal-open">
+    <dialog
+      className="modal modal-open"
+      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
       <div
         ref={containerRef}
         tabIndex={0}

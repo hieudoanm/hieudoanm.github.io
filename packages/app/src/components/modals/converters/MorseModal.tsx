@@ -150,7 +150,10 @@ export const MorseModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   );
 
   return (
-    <dialog open className="modal modal-open">
+    <dialog
+      open
+      className="modal modal-open"
+      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
       <div className="modal-box flex w-full max-w-2xl flex-col gap-4">
         {/* Header */}
         <div className="flex items-start justify-between">

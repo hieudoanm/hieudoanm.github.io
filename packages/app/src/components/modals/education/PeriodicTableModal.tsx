@@ -77,7 +77,9 @@ export const PeriodicTableModal: FC<{ onClose: () => void }> = ({
   );
 
   return (
-    <dialog className="modal modal-open">
+    <dialog
+      className="modal modal-open"
+      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
       <div className="modal-box h-[90vh] w-full max-w-[98vw] overflow-auto">
         <button
           onClick={onClose}

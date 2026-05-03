@@ -133,7 +133,10 @@ export const DOIModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     setRefs((prev) => prev.filter((_, i) => i !== index));
 
   return (
-    <dialog open className="modal modal-open">
+    <dialog
+      open
+      className="modal modal-open"
+      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
       <div className="modal-box flex w-full max-w-3xl flex-col gap-6">
         {/* Header */}
         <div className="flex items-center justify-between">

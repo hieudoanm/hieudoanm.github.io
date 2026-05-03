@@ -172,7 +172,9 @@ export const TaxModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   }, [income, dependents, period, insuranceEnabled, salaryMode]);
 
   return (
-    <dialog className="modal modal-open">
+    <dialog
+      className="modal modal-open"
+      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
       <div className="modal-box w-full max-w-sm">
         <button
           onClick={onClose}

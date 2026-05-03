@@ -165,7 +165,9 @@ export const PitchModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   };
 
   return (
-    <dialog className="modal modal-open">
+    <dialog
+      className="modal modal-open"
+      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
       <div className="modal-box w-full max-w-xl pb-8">
         <button
           onClick={onClose}

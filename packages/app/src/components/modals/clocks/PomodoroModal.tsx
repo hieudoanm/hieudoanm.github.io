@@ -106,8 +106,11 @@ export const PomodoroModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const isWork = phase === 'work';
 
   return (
-    <dialog open className="modal modal-open">
-      <div className="modal-box flex w-full max-w-sm flex-col gap-5">
+    <dialog
+      open
+      className="modal modal-open"
+      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
+      <div className="modal-box border-base-300 flex w-full max-w-sm flex-col gap-5 border">
         {/* Header */}
         <div className="flex items-start justify-between">
           <div>

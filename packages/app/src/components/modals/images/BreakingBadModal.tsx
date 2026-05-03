@@ -235,7 +235,9 @@ export const BreakingBadModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   ) => setState((p) => ({ ...p, ...patch }));
 
   return (
-    <dialog className="modal modal-open">
+    <dialog
+      className="modal modal-open"
+      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
       <div className="modal-box w-full max-w-2xl">
         <button
           onClick={onClose}
