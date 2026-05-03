@@ -104,18 +104,7 @@ export const apps: App[] = [
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
-    category: 'docs',
-    emoji: '🕵️',
-    id: 'redact',
-    name: 'Redact',
-    href: 'https://hieudoanm.github.io/redact',
-    github: 'https://github.com/hieudoanm/redact',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/redact/refs/heads/master/images/app.png',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
-    category: 'docs',
+    category: 'dev-tools',
     emoji: '⬆️',
     id: 'simple-upload',
     name: 'Simple Upload',
@@ -288,6 +277,17 @@ export const apps: App[] = [
     github: 'https://github.com/hieudoanm/invoice',
     image:
       'https://raw.githubusercontent.com/hieudoanm/invoice/refs/heads/master/images/app.png',
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
+  },
+  {
+    category: 'utilities',
+    emoji: '🕵️',
+    id: 'redact',
+    name: 'Redact',
+    href: 'https://hieudoanm.github.io/redact',
+    github: 'https://github.com/hieudoanm/redact',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/redact/refs/heads/master/images/app.png',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {

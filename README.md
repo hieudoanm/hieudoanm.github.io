@@ -6,13 +6,12 @@
   - [Table of Contents (31)](#table-of-contents-31)
   - [Artificial Intelligence (3)](#artificial-intelligence-3)
   - [Design (2)](#design-2)
-  - [Dev Tools (3)](#dev-tools-3)
-  - [Docs (2)](#docs-2)
+  - [Dev Tools (4)](#dev-tools-4)
   - [Fun (7)](#fun-7)
   - [Games (2)](#games-2)
   - [Languages (1)](#languages-1)
   - [Template (2)](#template-2)
-  - [Utilities (7)](#utilities-7)
+  - [Utilities (8)](#utilities-8)
   - [Workspace (2)](#workspace-2)
 
 ## Artificial Intelligence (3)
@@ -38,11 +37,12 @@
 [svg]: https://hieudoanm.github.io/svg
 [svg-gh]: https://github.com/hieudoanm/svg
 
-## Dev Tools (3)
+## Dev Tools (4)
 
 1. 🌐 [Browser][browser] - [GitHub][browser-gh]
 2. 📘 [Cobra MD][cobra.md] - [GitHub][cobra.md-gh]
 3. 🛰️ [Proxy][proxy] - [GitHub][proxy-gh]
+4. ⬆️ [Simple Upload][simple-upload] - [GitHub][simple-upload-gh]
 
 [browser]: https://hieudoanm.github.io/browser
 [browser-gh]: https://github.com/hieudoanm/browser
@@ -50,14 +50,6 @@
 [cobra.md-gh]: https://github.com/hieudoanm/cobra.md
 [proxy]: https://hieudoanm.github.io/proxy
 [proxy-gh]: https://github.com/hieudoanm/proxy
-
-## Docs (2)
-
-1. 🕵️ [Redact][redact] - [GitHub][redact-gh]
-2. ⬆️ [Simple Upload][simple-upload] - [GitHub][simple-upload-gh]
-
-[redact]: https://hieudoanm.github.io/redact
-[redact-gh]: https://github.com/hieudoanm/redact
 [simple-upload]: https://hieudoanm.github.io/simple-upload
 [simple-upload-gh]: https://github.com/hieudoanm/simple-upload
 
@@ -113,15 +105,16 @@
 [telegram]: https://hieudoanm.github.io/telegram
 [telegram-gh]: https://github.com/hieudoanm/telegram
 
-## Utilities (7)
+## Utilities (8)
 
 1. 📋 [Clipboard][clipboard] - [GitHub][clipboard-gh]
 2. 📱 [InstaSize][instasize] - [GitHub][instasize-gh]
 3. 🧾 [Invoice][invoice] - [GitHub][invoice-gh]
-4. 📸 [Snapshot][snapshot] - [GitHub][snapshot-gh]
-5. 🖥️ [System][system] - [GitHub][system-gh]
-6. 📝 [Transcript][transcript] - [GitHub][transcript-gh]
-7. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
+4. 🕵️ [Redact][redact] - [GitHub][redact-gh]
+5. 📸 [Snapshot][snapshot] - [GitHub][snapshot-gh]
+6. 🖥️ [System][system] - [GitHub][system-gh]
+7. 📝 [Transcript][transcript] - [GitHub][transcript-gh]
+8. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
 
 [clipboard]: https://hieudoanm.github.io/clipboard
 [clipboard-gh]: https://github.com/hieudoanm/clipboard
@@ -129,6 +122,8 @@
 [instasize-gh]: https://github.com/hieudoanm/instasize
 [invoice]: https://hieudoanm.github.io/invoice
 [invoice-gh]: https://github.com/hieudoanm/invoice
+[redact]: https://hieudoanm.github.io/redact
+[redact-gh]: https://github.com/hieudoanm/redact
 [snapshot]: https://hieudoanm.github.io/snapshot
 [snapshot-gh]: https://github.com/hieudoanm/snapshot
 [system]: https://hieudoanm.github.io/system
