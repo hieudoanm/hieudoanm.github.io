@@ -11,6 +11,7 @@ import { BrailleModal } from '@hieudoanm/components/modals/converters/BrailleMod
 import { ColorsModal } from '@hieudoanm/components/modals/converters/ColorsModal';
 import { MorseModal } from '@hieudoanm/components/modals/converters/MorseModal';
 import { OpenAPI2Postman } from '@hieudoanm/components/modals/converters/OpenAPI2Postman';
+import { JSONSchemaModal } from '@hieudoanm/components/modals/editors/JSONSchemaModal';
 import { EnglishModal } from '@hieudoanm/components/modals/education/EnglishModal';
 import { FlashcardsModal } from '@hieudoanm/components/modals/education/FlashcardsModal';
 import { PeriodicTableModal } from '@hieudoanm/components/modals/education/PeriodicTableModal';
@@ -88,7 +89,8 @@ type ModalId =
   | 'openapi'
   | 'english'
   | 'manifest'
-  | 'github-social-preview';
+  | 'github-social-preview'
+  | 'json-schema';
 
 type SidebarTab = 'status' | 'clock' | null;
 
@@ -131,6 +133,7 @@ const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
   openapi: OpenAPI2Postman,
   english: EnglishModal,
   'github-social-preview': GitHubSocialPreviewModal,
+  'json-schema': JSONSchemaModal,
 };
 
 /* ------------------------------------------------------------------ */
@@ -216,6 +219,7 @@ const MainContent: FC<{
   tools: Tool[];
   calculators: Tool[];
   converters: Tool[];
+  editors: Tool[];
   education: Tool[];
   games: Tool[];
   images: Tool[];
@@ -226,12 +230,14 @@ const MainContent: FC<{
   tools = [],
   calculators = [],
   converters = [],
+  editors = [],
   education = [],
   games = [],
   images = [],
 }) => {
   const filtering = query.trim().length > 0;
 
+  // Bookmarks
   const filteredAI = aiBookmarks.filter((b) => match(b.label, query));
   const filteredGoogle = googleBookmarks.filter((b) => match(b.label, query));
   const filteredMessaging = messagingBookmarks.filter((b) =>
@@ -240,9 +246,12 @@ const MainContent: FC<{
   const filteredWebsites = websiteBookmarks.filter((b) =>
     match(b.label, query)
   );
+
+  // Tools
   const filteredTools = tools.filter((t) => match(t.label, query));
   const filteredCalculators = calculators.filter((t) => match(t.label, query));
   const filteredConverters = converters.filter((t) => match(t.label, query));
+  const filteredEditors = editors.filter((t) => match(t.label, query));
   const filteredEducation = education.filter((t) => match(t.label, query));
   const filteredGames = games.filter((t) => match(t.label, query));
   const filteredImages = images.filter((t) => match(t.label, query));
@@ -329,6 +338,16 @@ const MainContent: FC<{
         </Section>
       )}
 
+      {(!filtering || filteredEditors.length > 0) && (
+        <Section label="Editors" count={filteredEditors.length}>
+          <div className="grid grid-cols-4 gap-4">
+            {filteredEditors.map((t) => (
+              <ToolCard key={t.label} {...t} />
+            ))}
+          </div>
+        </Section>
+      )}
+
       {(!filtering || filteredEducation.length > 0) && (
         <Section label="Education" count={filteredEducation.length}>
           <div className="grid grid-cols-4 gap-4">
@@ -376,6 +395,7 @@ const MainContent: FC<{
         filteredTools.length === 0 &&
         filteredCalculators.length === 0 &&
         filteredConverters.length === 0 &&
+        filteredEditors.length === 0 &&
         filteredEducation.length === 0 &&
         filteredGames.length === 0 &&
         filteredImages.length === 0 &&
@@ -469,13 +489,6 @@ const AppPage: NextPage = () => {
       emoji: '🔢',
       color: '#f59e0b',
       onClick: open('kaprekar'),
-    },
-    {
-      label: 'Manifest',
-      description: 'JSON Editor',
-      emoji: '📄',
-      color: '#3b82f6',
-      onClick: open('manifest'),
     },
     {
       label: 'Pomodoro',
@@ -573,6 +586,23 @@ const AppPage: NextPage = () => {
       emoji: '🔄',
       color: '#ff6c37',
       onClick: open('openapi'),
+    },
+  ];
+
+  const editors: Tool[] = [
+    {
+      label: 'JSON Schema',
+      description: 'Validator',
+      emoji: '📄',
+      color: '#3b82f6',
+      onClick: open('json-schema'),
+    },
+    {
+      label: 'Manifest',
+      description: 'JSON Editor',
+      emoji: '📄',
+      color: '#3b82f6',
+      onClick: open('manifest'),
     },
   ];
 
@@ -743,6 +773,12 @@ const AppPage: NextPage = () => {
         cols: 'grid-cols-2 sm:grid-cols-3',
       },
       {
+        label: 'Editors',
+        items: editors.filter((t) => !filtering || match(t.label, query)),
+        Card: ToolCard,
+        cols: 'grid-cols-2 sm:grid-cols-3',
+      },
+      {
         label: 'Education',
         items: education.filter((t) => !filtering || match(t.label, query)),
         Card: ToolCard,
@@ -791,6 +827,7 @@ const AppPage: NextPage = () => {
           tools={tools}
           calculators={calculators}
           converters={converters}
+          editors={editors}
           education={education}
           games={games}
           images={images}

@@ -71,16 +71,6 @@
   },
   {
     "category": "dev-tools",
-    "emoji": "🧾",
-    "id": "json-schema",
-    "name": "JSON Schema",
-    "href": "https://hieudoanm.github.io/json-schema",
-    "github": "https://github.com/hieudoanm/json-schema",
-    "image": "https://raw.githubusercontent.com/hieudoanm/json-schema/refs/heads/master/images/app.png",
-    "tags": ["cli", "extension", "android", "macos", "web"]
-  },
-  {
-    "category": "dev-tools",
     "emoji": "🛰️",
     "id": "proxy",
     "name": "Proxy",

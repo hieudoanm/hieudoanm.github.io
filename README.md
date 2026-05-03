@@ -1,12 +1,12 @@
 # 👨‍💻 I'm HIEU DOAN
 
-## Table of Contents (33)
+## Table of Contents (32)
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
-  - [Table of Contents (33)](#table-of-contents-33)
+  - [Table of Contents (32)](#table-of-contents-32)
   - [Artificial Intelligence (3)](#artificial-intelligence-3)
   - [Design (2)](#design-2)
-  - [Dev Tools (4)](#dev-tools-4)
+  - [Dev Tools (3)](#dev-tools-3)
   - [Docs (2)](#docs-2)
   - [Fun (7)](#fun-7)
   - [Games (2)](#games-2)
@@ -38,19 +38,16 @@
 [svg]: https://hieudoanm.github.io/svg
 [svg-gh]: https://github.com/hieudoanm/svg
 
-## Dev Tools (4)
+## Dev Tools (3)
 
 1. 🌐 [Browser][browser] - [GitHub][browser-gh]
 2. 📘 [Cobra MD][cobra.md] - [GitHub][cobra.md-gh]
-3. 🧾 [JSON Schema][json-schema] - [GitHub][json-schema-gh]
-4. 🛰️ [Proxy][proxy] - [GitHub][proxy-gh]
+3. 🛰️ [Proxy][proxy] - [GitHub][proxy-gh]
 
 [browser]: https://hieudoanm.github.io/browser
 [browser-gh]: https://github.com/hieudoanm/browser
 [cobra.md]: https://hieudoanm.github.io/cobra.md
 [cobra.md-gh]: https://github.com/hieudoanm/cobra.md
-[json-schema]: https://hieudoanm.github.io/json-schema
-[json-schema-gh]: https://github.com/hieudoanm/json-schema
 [proxy]: https://hieudoanm.github.io/proxy
 [proxy-gh]: https://github.com/hieudoanm/proxy
 

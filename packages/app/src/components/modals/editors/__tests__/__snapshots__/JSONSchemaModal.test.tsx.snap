@@ -1,0 +1,634 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`JSONSchemaModal should render 1`] = `
+<div>
+  <dialog
+    class="modal modal-open"
+  >
+    <div
+      class="modal-box flex h-[90vh] w-full max-w-5xl flex-col overflow-hidden p-0"
+    >
+      <div
+        class="border-base-300 flex flex-wrap items-center justify-between gap-2 border-b px-4 py-3"
+      >
+        <div
+          class="flex items-center gap-3"
+        >
+          <span
+            class="text-sm font-bold"
+          >
+            JSON Schema
+          </span>
+          <div
+            class="tabs tabs-boxed tabs-sm"
+          >
+            <a
+              class="tab tab-active"
+              role="tab"
+            >
+              JSON
+            </a>
+            <a
+              class="tab "
+              role="tab"
+            >
+              YAML
+            </a>
+          </div>
+        </div>
+        <div
+          class="flex items-center gap-2"
+        >
+          <button
+            class="btn btn-xs btn-ghost"
+          >
+            Beautify
+          </button>
+          <button
+            class="btn btn-xs btn-ghost"
+          >
+            Minify
+          </button>
+          <button
+            class="btn btn-xs btn-ghost"
+          >
+            Sort
+          </button>
+          <button
+            class="btn btn-xs btn-ghost"
+          >
+            📋
+          </button>
+          <button
+            class="btn btn-sm btn-circle btn-ghost"
+          >
+            ✕
+          </button>
+        </div>
+      </div>
+      <div
+        class="border-base-300 border-b px-4"
+      >
+        <div
+          class="tabs tabs-bordered tabs-sm"
+          role="tablist"
+        >
+          <a
+            class="tab tab-active"
+            role="tab"
+          >
+            ✏️ Input
+          </a>
+          <a
+            class="tab "
+            role="tab"
+          >
+            📐 Schema
+          </a>
+          <a
+            class="tab "
+            role="tab"
+          >
+            🔀 Convert
+          </a>
+        </div>
+      </div>
+      <div
+        class="min-h-0 flex-1 overflow-hidden"
+      >
+        <div
+          class="h-full w-full"
+        >
+          <div
+            class="cm-editor ͼ1 ͼ3 ͼo ͼ16"
+          >
+            <div
+              aria-live="polite"
+              class="cm-announced"
+            />
+            <div
+              class="cm-scroller"
+              tabindex="-1"
+            >
+              <div
+                aria-multiline="true"
+                autocapitalize="off"
+                autocorrect="off"
+                class="cm-content cm-lineWrapping"
+                contenteditable="true"
+                data-language="json"
+                role="textbox"
+                spellcheck="false"
+                style="tab-size: 4;"
+                translate="no"
+                writingsuggestions="false"
+              >
+                <div
+                  class="cm-line"
+                >
+                  {
+                </div>
+                <div
+                  class="cm-line"
+                >
+                    
+                  <span
+                    class="ͼq"
+                  >
+                    "id"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    :
+                  </span>
+                   
+                  <span
+                    class="ͼu"
+                  >
+                    1
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    ,
+                  </span>
+                </div>
+                <div
+                  class="cm-line"
+                >
+                    
+                  <span
+                    class="ͼq"
+                  >
+                    "name"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    :
+                  </span>
+                   
+                  <span
+                    class="ͼ13"
+                  >
+                    "John Doe"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    ,
+                  </span>
+                </div>
+                <div
+                  class="cm-line"
+                >
+                    
+                  <span
+                    class="ͼq"
+                  >
+                    "active"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    :
+                  </span>
+                   
+                  <span
+                    class="ͼ12"
+                  >
+                    true
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    ,
+                  </span>
+                </div>
+                <div
+                  class="cm-line"
+                >
+                    
+                  <span
+                    class="ͼq"
+                  >
+                    "age"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    :
+                  </span>
+                   
+                  <span
+                    class="ͼu"
+                  >
+                    30
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    ,
+                  </span>
+                </div>
+                <div
+                  class="cm-line"
+                >
+                    
+                  <span
+                    class="ͼq"
+                  >
+                    "balance"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    :
+                  </span>
+                   
+                  <span
+                    class="ͼu"
+                  >
+                    1234.56
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    ,
+                  </span>
+                </div>
+                <div
+                  class="cm-line"
+                >
+                    
+                  <span
+                    class="ͼq"
+                  >
+                    "tags"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    :
+                  </span>
+                   [
+                </div>
+                <div
+                  class="cm-line"
+                >
+                      
+                  <span
+                    class="ͼ13"
+                  >
+                    "dev"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    ,
+                  </span>
+                </div>
+                <div
+                  class="cm-line"
+                >
+                      
+                  <span
+                    class="ͼ13"
+                  >
+                    "typescript"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    ,
+                  </span>
+                </div>
+                <div
+                  class="cm-line"
+                >
+                      
+                  <span
+                    class="ͼ13"
+                  >
+                    "json"
+                  </span>
+                </div>
+                <div
+                  class="cm-line"
+                >
+                    ]
+                  <span
+                    class="ͼt"
+                  >
+                    ,
+                  </span>
+                </div>
+                <div
+                  class="cm-line"
+                >
+                    
+                  <span
+                    class="ͼq"
+                  >
+                    "address"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    :
+                  </span>
+                   {
+                </div>
+                <div
+                  class="cm-line"
+                >
+                      
+                  <span
+                    class="ͼq"
+                  >
+                    "street"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    :
+                  </span>
+                   
+                  <span
+                    class="ͼ13"
+                  >
+                    "123 Main St"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    ,
+                  </span>
+                </div>
+                <div
+                  class="cm-line"
+                >
+                      
+                  <span
+                    class="ͼq"
+                  >
+                    "city"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    :
+                  </span>
+                   
+                  <span
+                    class="ͼ13"
+                  >
+                    "HCM"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    ,
+                  </span>
+                </div>
+                <div
+                  class="cm-line"
+                >
+                      
+                  <span
+                    class="ͼq"
+                  >
+                    "zip"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    :
+                  </span>
+                   
+                  <span
+                    class="ͼ13"
+                  >
+                    "700000"
+                  </span>
+                </div>
+                <div
+                  class="cm-line"
+                >
+                    }
+                  <span
+                    class="ͼt"
+                  >
+                    ,
+                  </span>
+                </div>
+                <div
+                  class="cm-line"
+                >
+                    
+                  <span
+                    class="ͼq"
+                  >
+                    "createdAt"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    :
+                  </span>
+                   
+                  <span
+                    class="ͼ13"
+                  >
+                    "2024-01-01T12:00:00Z"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    ,
+                  </span>
+                </div>
+                <div
+                  class="cm-line"
+                >
+                    
+                  <span
+                    class="ͼq"
+                  >
+                    "nullable"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    :
+                  </span>
+                   
+                  <span
+                    class="ͼp"
+                  >
+                    null
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    ,
+                  </span>
+                </div>
+                <div
+                  class="cm-line"
+                >
+                    
+                  <span
+                    class="ͼq"
+                  >
+                    "nested"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    :
+                  </span>
+                   [
+                </div>
+                <div
+                  class="cm-line"
+                >
+                      {
+                </div>
+                <div
+                  class="cm-line"
+                >
+                        
+                  <span
+                    class="ͼq"
+                  >
+                    "id"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    :
+                  </span>
+                   
+                  <span
+                    class="ͼu"
+                  >
+                    1
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    ,
+                  </span>
+                </div>
+                <div
+                  class="cm-line"
+                >
+                        
+                  <span
+                    class="ͼq"
+                  >
+                    "value"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    :
+                  </span>
+                   
+                  <span
+                    class="ͼ13"
+                  >
+                    "A"
+                  </span>
+                </div>
+                <div
+                  class="cm-line"
+                >
+                      }
+                  <span
+                    class="ͼt"
+                  >
+                    ,
+                  </span>
+                </div>
+                <div
+                  class="cm-line"
+                >
+                      {
+                </div>
+                <div
+                  class="cm-line"
+                >
+                        
+                  <span
+                    class="ͼq"
+                  >
+                    "id"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    :
+                  </span>
+                   
+                  <span
+                    class="ͼu"
+                  >
+                    2
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    ,
+                  </span>
+                </div>
+                <div
+                  class="cm-line"
+                >
+                        
+                  <span
+                    class="ͼq"
+                  >
+                    "value"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    :
+                  </span>
+                   
+                  <span
+                    class="ͼ13"
+                  >
+                    "B"
+                  </span>
+                </div>
+                <div
+                  class="cm-line"
+                >
+                      }
+                </div>
+                <div
+                  class="cm-line"
+                >
+                    ]
+                </div>
+                <div
+                  class="cm-line"
+                >
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal-backdrop"
+    />
+  </dialog>
+</div>
+`;
