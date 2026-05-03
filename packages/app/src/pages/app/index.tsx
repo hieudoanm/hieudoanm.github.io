@@ -101,7 +101,7 @@ type ModalId =
   | 'figlet'
   | 'markdown';
 
-type SidebarTab = 'status' | 'clock' | null;
+type SidebarTab = 'tasks' | 'clock' | null;
 
 /* ------------------------------------------------------------------ */
 /* Modal registry                                                       */
@@ -892,7 +892,7 @@ const AppPage: NextPage = () => {
 
   const ActiveModal = activeModal ? MODAL_MAP[activeModal] : null;
   const sidebarContent = {
-    status: <LeftSidebar />,
+    tasks: <LeftSidebar />,
     clock: <RightSidebar times={times} weatherQueries={weatherQueries} />,
   };
 
@@ -966,7 +966,7 @@ const AppPage: NextPage = () => {
 
         {/* Bottom nav */}
         <nav className="bg-base-100 border-base-300 fixed inset-x-0 bottom-0 z-40 flex border-t">
-          {(['status', 'clock'] as const).map((tab) => (
+          {(['tasks', 'clock'] as const).map((tab) => (
             <button
               key={tab}
               className={`flex flex-1 flex-col items-center justify-center gap-1 py-3 text-xs transition-colors ${
@@ -975,8 +975,8 @@ const AppPage: NextPage = () => {
                   : 'text-base-content/40 hover:text-base-content/70'
               }`}
               onClick={() => setActiveSidebar((p) => (p === tab ? null : tab))}>
-              <span className="text-lg">{tab === 'status' ? '📡' : '🕐'}</span>
-              {tab === 'status' ? 'Status' : 'Clock'}
+              <span className="text-lg">{tab === 'tasks' ? '📡' : '🕐'}</span>
+              {tab === 'tasks' ? 'Tasks' : 'Clock'}
             </button>
           ))}
         </nav>
@@ -991,9 +991,7 @@ const AppPage: NextPage = () => {
             <div className="bg-base-100 border-base-300 fixed inset-x-0 bottom-16 z-50 max-h-[70vh] overflow-y-auto rounded-t-2xl border-t">
               <div className="bg-base-100 border-base-300 sticky top-0 flex items-center justify-between border-b px-4 py-3">
                 <span className="text-sm font-semibold capitalize">
-                  {activeSidebar === 'status'
-                    ? 'Service Status'
-                    : 'Clock & Weather'}
+                  {activeSidebar === 'tasks' ? 'Tasks' : 'Clock'}
                 </span>
                 <button
                   className="btn btn-ghost btn-xs btn-circle"

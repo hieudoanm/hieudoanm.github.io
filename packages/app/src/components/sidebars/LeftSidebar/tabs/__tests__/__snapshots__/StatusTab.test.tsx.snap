@@ -1,0 +1,456 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`StatusTab should render 1`] = `
+<div>
+  <div
+    class="flex h-full flex-col"
+  >
+    <div
+      class="flex-1 overflow-y-auto"
+    >
+      <div
+        class="flex flex-col gap-4 p-3"
+      >
+        <div>
+          <p
+            class="text-base-content/30 mb-1.5 px-2 font-mono text-[10px] tracking-widest uppercase"
+          >
+            atlassian
+          </p>
+          <div
+            class="flex flex-col gap-0.5"
+          >
+            <div
+              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+            >
+              <span
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              >
+                analytics
+              </span>
+              <div
+                class="ml-2 shrink-0"
+              >
+                <div
+                  class="bg-base-content/20 h-2 w-2 animate-pulse rounded-full"
+                />
+              </div>
+            </div>
+            <div
+              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+            >
+              <span
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              >
+                atlas
+              </span>
+              <div
+                class="ml-2 shrink-0"
+              >
+                <div
+                  class="bg-base-content/20 h-2 w-2 animate-pulse rounded-full"
+                />
+              </div>
+            </div>
+            <div
+              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+            >
+              <span
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              >
+                compass
+              </span>
+              <div
+                class="ml-2 shrink-0"
+              >
+                <div
+                  class="bg-base-content/20 h-2 w-2 animate-pulse rounded-full"
+                />
+              </div>
+            </div>
+            <div
+              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+            >
+              <span
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              >
+                confluence
+              </span>
+              <div
+                class="ml-2 shrink-0"
+              >
+                <div
+                  class="bg-base-content/20 h-2 w-2 animate-pulse rounded-full"
+                />
+              </div>
+            </div>
+            <div
+              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+            >
+              <span
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              >
+                developer
+              </span>
+              <div
+                class="ml-2 shrink-0"
+              >
+                <div
+                  class="bg-base-content/20 h-2 w-2 animate-pulse rounded-full"
+                />
+              </div>
+            </div>
+            <div
+              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+            >
+              <span
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              >
+                jira service management
+              </span>
+              <div
+                class="ml-2 shrink-0"
+              >
+                <div
+                  class="bg-base-content/20 h-2 w-2 animate-pulse rounded-full"
+                />
+              </div>
+            </div>
+            <div
+              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+            >
+              <span
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              >
+                jira software
+              </span>
+              <div
+                class="ml-2 shrink-0"
+              >
+                <div
+                  class="bg-base-content/20 h-2 w-2 animate-pulse rounded-full"
+                />
+              </div>
+            </div>
+            <div
+              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+            >
+              <span
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              >
+                guard
+              </span>
+              <div
+                class="ml-2 shrink-0"
+              >
+                <div
+                  class="bg-base-content/20 h-2 w-2 animate-pulse rounded-full"
+                />
+              </div>
+            </div>
+            <div
+              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+            >
+              <span
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              >
+                opsgenie
+              </span>
+              <div
+                class="ml-2 shrink-0"
+              >
+                <div
+                  class="bg-base-content/20 h-2 w-2 animate-pulse rounded-full"
+                />
+              </div>
+            </div>
+            <div
+              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+            >
+              <span
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              >
+                partners
+              </span>
+              <div
+                class="ml-2 shrink-0"
+              >
+                <div
+                  class="bg-base-content/20 h-2 w-2 animate-pulse rounded-full"
+                />
+              </div>
+            </div>
+            <div
+              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+            >
+              <span
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              >
+                support
+              </span>
+              <div
+                class="ml-2 shrink-0"
+              >
+                <div
+                  class="bg-base-content/20 h-2 w-2 animate-pulse rounded-full"
+                />
+              </div>
+            </div>
+            <div
+              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+            >
+              <span
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              >
+                trello
+              </span>
+              <div
+                class="ml-2 shrink-0"
+              >
+                <div
+                  class="bg-base-content/20 h-2 w-2 animate-pulse rounded-full"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p
+            class="text-base-content/30 mb-1.5 px-2 font-mono text-[10px] tracking-widest uppercase"
+          >
+            server(less)
+          </p>
+          <div
+            class="flex flex-col gap-0.5"
+          >
+            <div
+              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+            >
+              <span
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              >
+                supabase
+              </span>
+              <div
+                class="ml-2 shrink-0"
+              >
+                <div
+                  class="bg-base-content/20 h-2 w-2 animate-pulse rounded-full"
+                />
+              </div>
+            </div>
+            <div
+              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+            >
+              <span
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              >
+                render
+              </span>
+              <div
+                class="ml-2 shrink-0"
+              >
+                <div
+                  class="bg-base-content/20 h-2 w-2 animate-pulse rounded-full"
+                />
+              </div>
+            </div>
+            <div
+              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+            >
+              <span
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              >
+                flyio
+              </span>
+              <div
+                class="ml-2 shrink-0"
+              >
+                <div
+                  class="bg-base-content/20 h-2 w-2 animate-pulse rounded-full"
+                />
+              </div>
+            </div>
+            <div
+              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+            >
+              <span
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              >
+                cloudflare
+              </span>
+              <div
+                class="ml-2 shrink-0"
+              >
+                <div
+                  class="bg-base-content/20 h-2 w-2 animate-pulse rounded-full"
+                />
+              </div>
+            </div>
+            <div
+              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+            >
+              <span
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              >
+                netlify
+              </span>
+              <div
+                class="ml-2 shrink-0"
+              >
+                <div
+                  class="bg-base-content/20 h-2 w-2 animate-pulse rounded-full"
+                />
+              </div>
+            </div>
+            <div
+              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+            >
+              <span
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              >
+                vercel
+              </span>
+              <div
+                class="ml-2 shrink-0"
+              >
+                <div
+                  class="bg-base-content/20 h-2 w-2 animate-pulse rounded-full"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p
+            class="text-base-content/30 mb-1.5 px-2 font-mono text-[10px] tracking-widest uppercase"
+          >
+            crypto
+          </p>
+          <div
+            class="flex flex-col gap-0.5"
+          >
+            <div
+              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+            >
+              <span
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              >
+                hedera
+              </span>
+              <div
+                class="ml-2 shrink-0"
+              >
+                <div
+                  class="bg-base-content/20 h-2 w-2 animate-pulse rounded-full"
+                />
+              </div>
+            </div>
+            <div
+              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+            >
+              <span
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              >
+                solana
+              </span>
+              <div
+                class="ml-2 shrink-0"
+              >
+                <div
+                  class="bg-base-content/20 h-2 w-2 animate-pulse rounded-full"
+                />
+              </div>
+            </div>
+            <div
+              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+            >
+              <span
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              >
+                polygon
+              </span>
+              <div
+                class="ml-2 shrink-0"
+              >
+                <div
+                  class="bg-base-content/20 h-2 w-2 animate-pulse rounded-full"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p
+            class="text-base-content/30 mb-1.5 px-2 font-mono text-[10px] tracking-widest uppercase"
+          >
+            version control
+          </p>
+          <div
+            class="flex flex-col gap-0.5"
+          >
+            <div
+              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+            >
+              <span
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              >
+                bitbucket
+              </span>
+              <div
+                class="ml-2 shrink-0"
+              >
+                <div
+                  class="bg-base-content/20 h-2 w-2 animate-pulse rounded-full"
+                />
+              </div>
+            </div>
+            <div
+              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+            >
+              <span
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              >
+                github
+              </span>
+              <div
+                class="ml-2 shrink-0"
+              >
+                <div
+                  class="bg-base-content/20 h-2 w-2 animate-pulse rounded-full"
+                />
+              </div>
+            </div>
+            <div
+              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+            >
+              <span
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              >
+                npm
+              </span>
+              <div
+                class="ml-2 shrink-0"
+              >
+                <div
+                  class="bg-base-content/20 h-2 w-2 animate-pulse rounded-full"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer
+      class="border-base-300 border-t px-4 py-4 text-center font-mono"
+    >
+      <p
+        class="text-xs tracking-widest uppercase opacity-20"
+      >
+        24
+         services · 2 min refresh
+      </p>
+    </footer>
+  </div>
+</div>
+`;

@@ -1,5 +1,3 @@
-// ── Types ─────────────────────────────────────────────────────────────────────
-
 import useIndexedDB from '@hieudoanm/hooks/useIndexedDB';
 import { FC, useState, useEffect } from 'react';
 
