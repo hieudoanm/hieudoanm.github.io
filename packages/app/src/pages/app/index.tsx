@@ -7,6 +7,8 @@ import { EloModal } from '@hieudoanm/components/modals/calculators/EloModal';
 import { InflationModal } from '@hieudoanm/components/modals/calculators/InflationModal';
 import { PokerModal } from '@hieudoanm/components/modals/calculators/PokerModal';
 import { TaxModal } from '@hieudoanm/components/modals/calculators/TaxModal';
+import { CountdownModal } from '@hieudoanm/components/modals/clocks/CountdownModal';
+import { PomodoroModal } from '@hieudoanm/components/modals/clocks/PomodoroModal';
 import { BrailleModal } from '@hieudoanm/components/modals/converters/BrailleModal';
 import { ColorsModal } from '@hieudoanm/components/modals/converters/ColorsModal';
 import { MorseModal } from '@hieudoanm/components/modals/converters/MorseModal';
@@ -30,13 +32,11 @@ import { BreakingBadModal } from '@hieudoanm/components/modals/images/BreakingBa
 import { GitHubSocialPreviewModal } from '@hieudoanm/components/modals/images/GitHubSocialPreviewModal';
 import { HouseModal } from '@hieudoanm/components/modals/images/HouseModal';
 import { QRCodeModal } from '@hieudoanm/components/modals/images/QRCodeModal';
-import { CountdownModal } from '@hieudoanm/components/modals/tools/CountdownModal';
 import { DOIModal } from '@hieudoanm/components/modals/tools/DOIModal';
 import { EmojisModal } from '@hieudoanm/components/modals/tools/EmojisModal';
 import { FigletModal } from '@hieudoanm/components/modals/tools/FigletModal';
 import { IPModal } from '@hieudoanm/components/modals/tools/IPModal';
 import { KaprekarModal } from '@hieudoanm/components/modals/tools/KaprekarModal';
-import { PomodoroModal } from '@hieudoanm/components/modals/tools/PomodoroModal';
 import { ShopifyDetectModal } from '@hieudoanm/components/modals/tools/ShopifyDetectModal';
 import { StringModal } from '@hieudoanm/components/modals/tools/StringModal';
 import { UUIDModal } from '@hieudoanm/components/modals/tools/UUIDModal';
@@ -230,6 +230,7 @@ const MainContent: FC<{
   onQueryChange: (v: string) => void;
   tools: Tool[];
   calculators: Tool[];
+  clocks: Tool[];
   converters: Tool[];
   editors: Tool[];
   education: Tool[];
@@ -241,6 +242,7 @@ const MainContent: FC<{
   onQueryChange,
   tools = [],
   calculators = [],
+  clocks = [],
   converters = [],
   editors = [],
   education = [],
@@ -262,6 +264,7 @@ const MainContent: FC<{
   // Tools
   const filteredTools = tools.filter((t) => match(t.label, query));
   const filteredCalculators = calculators.filter((t) => match(t.label, query));
+  const filteredClocks = clocks.filter((t) => match(t.label, query));
   const filteredConverters = converters.filter((t) => match(t.label, query));
   const filteredEditors = editors.filter((t) => match(t.label, query));
   const filteredEducation = education.filter((t) => match(t.label, query));
@@ -334,6 +337,16 @@ const MainContent: FC<{
         <Section label="Calculators" count={filteredCalculators.length}>
           <div className="grid grid-cols-4 gap-4">
             {filteredCalculators.map((t) => (
+              <ToolCard key={t.label} {...t} />
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {(!filtering || filteredClocks.length > 0) && (
+        <Section label="Clocks" count={filteredClocks.length}>
+          <div className="grid grid-cols-4 gap-4">
+            {filteredClocks.map((t) => (
               <ToolCard key={t.label} {...t} />
             ))}
           </div>
@@ -468,13 +481,6 @@ const AppPage: NextPage = () => {
 
   const tools: Tool[] = [
     {
-      label: 'Countdown',
-      description: 'Timer',
-      emoji: '⏳',
-      color: '#06b6d4',
-      onClick: open('countdown'),
-    },
-    {
       label: 'DOI',
       description: 'Cite',
       emoji: '📄',
@@ -508,13 +514,6 @@ const AppPage: NextPage = () => {
       emoji: '🔢',
       color: '#f59e0b',
       onClick: open('kaprekar'),
-    },
-    {
-      label: 'Pomodoro',
-      description: 'Timer',
-      emoji: '🍅',
-      color: '#ef4444',
-      onClick: open('pomodoro'),
     },
     {
       label: 'Shopify Detect',
@@ -581,6 +580,23 @@ const AppPage: NextPage = () => {
       emoji: '🇻🇳',
       color: '#ef4444',
       onClick: open('tax'),
+    },
+  ];
+
+  const clocks: Tool[] = [
+    {
+      label: 'Countdown',
+      description: 'Timer',
+      emoji: '⏳',
+      color: '#06b6d4',
+      onClick: open('countdown'),
+    },
+    {
+      label: 'Pomodoro',
+      description: 'Timer',
+      emoji: '🍅',
+      color: '#ef4444',
+      onClick: open('pomodoro'),
     },
   ];
 
@@ -807,6 +823,12 @@ const AppPage: NextPage = () => {
         cols: 'grid-cols-2 sm:grid-cols-3',
       },
       {
+        label: 'Clocks',
+        items: clocks.filter((t) => !filtering || match(t.label, query)),
+        Card: ToolCard,
+        cols: 'grid-cols-2 sm:grid-cols-3',
+      },
+      {
         label: 'Converters',
         items: converters.filter((t) => !filtering || match(t.label, query)),
         Card: ToolCard,
@@ -866,6 +888,7 @@ const AppPage: NextPage = () => {
           onQueryChange={setQuery}
           tools={tools}
           calculators={calculators}
+          clocks={clocks}
           converters={converters}
           editors={editors}
           education={education}
