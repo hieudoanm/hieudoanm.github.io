@@ -1,6 +1,6 @@
 # Hieu Doan
 
-## Table of Contents (28)
+## Table of Contents (27)
 
 ## Artificial Intelligence (3)
 
@@ -25,15 +25,12 @@
 [svg]: https://hieudoanm.github.io/svg
 [svg-gh]: https://github.com/hieudoanm/svg
 
-## Dev Tools (4)
+## Dev Tools (3)
 
-1. 🌐 [Browser][browser] - [GitHub][browser-gh]
-2. 📘 [Cobra MD][cobra.md] - [GitHub][cobra.md-gh]
-3. 🛰️ [Proxy][proxy] - [GitHub][proxy-gh]
-4. ⬆️ [Simple Upload][simple-upload] - [GitHub][simple-upload-gh]
+1. 📘 [Cobra MD][cobra.md] - [GitHub][cobra.md-gh]
+2. 🛰️ [Proxy][proxy] - [GitHub][proxy-gh]
+3. ⬆️ [Simple Upload][simple-upload] - [GitHub][simple-upload-gh]
 
-[browser]: https://hieudoanm.github.io/browser
-[browser-gh]: https://github.com/hieudoanm/browser
 [cobra.md]: https://hieudoanm.github.io/cobra.md
 [cobra.md-gh]: https://github.com/hieudoanm/cobra.md
 [proxy]: https://hieudoanm.github.io/proxy
