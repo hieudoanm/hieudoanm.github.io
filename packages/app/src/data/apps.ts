@@ -72,17 +72,6 @@ export const apps: App[] = [
   },
   {
     category: 'dev-tools',
-    emoji: '🌐',
-    id: 'browser',
-    name: 'Browser',
-    href: 'https://hieudoanm.github.io/browser',
-    github: 'https://github.com/hieudoanm/browser',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/browser/refs/heads/master/images/app.png',
-    tags: ['android', 'macos', 'web'],
-  },
-  {
-    category: 'dev-tools',
     emoji: '📘',
     id: 'cobra.md',
     name: 'Cobra MD',

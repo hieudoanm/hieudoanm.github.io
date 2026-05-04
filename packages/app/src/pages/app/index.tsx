@@ -52,11 +52,20 @@ import {
   websites as websiteBookmarks,
 } from '@hieudoanm/data/bookmarks';
 import { extensions } from '@hieudoanm/data/extensions';
+import { packages } from '@hieudoanm/data/packages';
 import { getTimeInZone, timezones } from '@hieudoanm/data/timezones';
-import { WeatherData } from '@hieudoanm/data/weather';
+import type { WeatherData } from '@hieudoanm/data/weather';
 import { useQueries } from '@tanstack/react-query';
 import { NextPage } from 'next';
-import { FC, useEffect, useMemo, useRef, useState } from 'react';
+import {
+  FC,
+  memo,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 
 /* ------------------------------------------------------------------ */
 /* Types                                                                */
@@ -104,10 +113,10 @@ type ModalId =
   | 'markdown'
   | 'youtube-thumbnails';
 
-type SidebarTab = 'tasks' | 'clock' | null;
+type SidebarTab = 'tasks' | 'clock';
 
 /* ------------------------------------------------------------------ */
-/* Modal registry                                                       */
+/* Modal registry — module-level constant, never recreated             */
 /* ------------------------------------------------------------------ */
 
 const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
@@ -154,365 +163,14 @@ const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
 };
 
 /* ------------------------------------------------------------------ */
-/* Filter helper                                                        */
+/* Tool definitions — module-level, keyed by section                   */
+/* Each entry is a factory that receives the open callback once.       */
 /* ------------------------------------------------------------------ */
 
-const match = (label: string, q: string) =>
-  label.toLowerCase().includes(q.toLowerCase());
-
-/* ------------------------------------------------------------------ */
-/* SearchBar                                                            */
-/* ------------------------------------------------------------------ */
-
-const SearchBar: FC<{ query: string; onChange: (v: string) => void }> = ({
-  query,
-  onChange,
-}) => {
-  const inputRef = useRef<HTMLInputElement>(null);
-
-  const googleSearch = () => {
-    if (!query.trim()) return;
-    window.open(
-      `https://www.google.com/search?q=${encodeURIComponent(query.trim())}`,
-      '_blank'
-    );
-  };
-
-  const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter') googleSearch();
-  };
-
-  return (
-    <div className="join w-full">
-      <input
-        ref={inputRef}
-        type="text"
-        value={query}
-        onChange={(e) => onChange(e.target.value)}
-        onKeyDown={onKeyDown}
-        placeholder="Search or filter…"
-        className="input input-bordered join-item w-full"
-      />
-      <button
-        className="btn join-item btn-neutral"
-        onClick={googleSearch}
-        aria-label="Search with Google">
-        🔍
-      </button>
-    </div>
-  );
-};
-
-/* ------------------------------------------------------------------ */
-/* Section                                                              */
-/* ------------------------------------------------------------------ */
-
-const Section: FC<{
-  label: string;
-  count?: number;
-  children: React.ReactNode;
-}> = ({ label, count, children }) => (
-  <section aria-label={label} className="mt-10 w-full max-w-2xl">
-    <p className="text-base-content/30 mb-4 flex items-center justify-center gap-2 font-mono text-xs tracking-widest uppercase">
-      {label}
-      {count !== undefined && (
-        <span className="badge badge-xs badge-neutral font-mono tracking-normal normal-case">
-          {count}
-        </span>
-      )}
-    </p>
-    {children}
-  </section>
-);
-
-/* ------------------------------------------------------------------ */
-/* MainContent                                                          */
-/* ------------------------------------------------------------------ */
-
-const MainContent: FC<{
-  today: string;
-  query: string;
-  onQueryChange: (v: string) => void;
-  tools: Tool[];
-  calculators: Tool[];
-  clocks: Tool[];
-  converters: Tool[];
-  editors: Tool[];
-  education: Tool[];
-  games: Tool[];
-  images: Tool[];
-}> = ({
-  today,
-  query,
-  onQueryChange,
-  tools = [],
-  calculators = [],
-  clocks = [],
-  converters = [],
-  editors = [],
-  education = [],
-  games = [],
-  images = [],
-}) => {
-  const filtering = query.trim().length > 0;
-
-  // Bookmarks
-  const filteredCoding = codingBookmarks.filter((b) => match(b.label, query));
-  const filteredAI = aiBookmarks.filter((b) => match(b.label, query));
-  const filteredGoogle = googleBookmarks.filter((b) => match(b.label, query));
-  const filteredMessaging = messagingBookmarks.filter((b) =>
-    match(b.label, query)
-  );
-  const filteredWebsites = websiteBookmarks.filter((b) =>
-    match(b.label, query)
-  );
-
-  // Tools
-  const filteredTools = tools.filter((t) => match(t.label, query));
-  const filteredCalculators = calculators.filter((t) => match(t.label, query));
-  const filteredClocks = clocks.filter((t) => match(t.label, query));
-  const filteredConverters = converters.filter((t) => match(t.label, query));
-  const filteredEditors = editors.filter((t) => match(t.label, query));
-  const filteredEducation = education.filter((t) => match(t.label, query));
-  const filteredGames = games.filter((t) => match(t.label, query));
-  const filteredImages = images.filter((t) => match(t.label, query));
-
-  // Downloads
-  const filteredExtensions = extensions.filter((a) => match(a.id, query));
-
-  // Standalone
-  const filteredApps = apps.filter((a) => match(a.id, query));
-
-  return (
-    <main className="flex flex-col items-center overflow-y-auto px-8 py-12">
-      <p className="text-base-content/30 mb-2 font-mono text-xs tracking-widest uppercase">
-        {today}
-      </p>
-      <h1 className="mb-6 text-3xl font-black tracking-tight">Start Page</h1>
-
-      <div className="mb-10 w-full max-w-2xl">
-        <SearchBar query={query} onChange={onQueryChange} />
-      </div>
-
-      {(!filtering || filteredCoding.length > 0) && (
-        <Section label="Coding" count={filteredCoding.length}>
-          <div className="grid grid-cols-4 gap-4">
-            {filteredCoding.map((bm) => (
-              <BookmarkCard key={bm.label} {...bm} />
-            ))}
-          </div>
-        </Section>
-      )}
-
-      {(!filtering || filteredAI.length > 0) && (
-        <Section label="AI Assistants" count={filteredAI.length}>
-          <div className="grid grid-cols-4 gap-4">
-            {filteredAI.map((bm) => (
-              <BookmarkCard key={bm.label} {...bm} />
-            ))}
-          </div>
-        </Section>
-      )}
-
-      {(!filtering || filteredGoogle.length > 0) && (
-        <Section label="Google Workspace" count={filteredGoogle.length}>
-          <div className="grid grid-cols-4 gap-4">
-            {filteredGoogle.map((bm) => (
-              <BookmarkCard key={bm.label} {...bm} />
-            ))}
-          </div>
-        </Section>
-      )}
-
-      {(!filtering || filteredMessaging.length > 0) && (
-        <Section label="Messaging" count={filteredMessaging.length}>
-          <div className="grid grid-cols-4 gap-4">
-            {filteredMessaging.map((bm) => (
-              <BookmarkCard key={bm.label} {...bm} />
-            ))}
-          </div>
-        </Section>
-      )}
-
-      {(!filtering || filteredWebsites.length > 0) && (
-        <Section label="Websites" count={filteredWebsites.length}>
-          <div className="grid grid-cols-4 gap-4">
-            {filteredWebsites.map((bm) => (
-              <BookmarkCard key={bm.label} {...bm} />
-            ))}
-          </div>
-        </Section>
-      )}
-
-      {(!filtering || filteredTools.length > 0) && (
-        <Section label="Tools" count={filteredTools.length}>
-          <div className="grid grid-cols-4 gap-4">
-            {filteredTools.map((t) => (
-              <ToolCard key={t.label} {...t} />
-            ))}
-          </div>
-        </Section>
-      )}
-
-      {(!filtering || filteredCalculators.length > 0) && (
-        <Section label="Calculators" count={filteredCalculators.length}>
-          <div className="grid grid-cols-4 gap-4">
-            {filteredCalculators.map((t) => (
-              <ToolCard key={t.label} {...t} />
-            ))}
-          </div>
-        </Section>
-      )}
-
-      {(!filtering || filteredClocks.length > 0) && (
-        <Section label="Clocks" count={filteredClocks.length}>
-          <div className="grid grid-cols-4 gap-4">
-            {filteredClocks.map((t) => (
-              <ToolCard key={t.label} {...t} />
-            ))}
-          </div>
-        </Section>
-      )}
-
-      {(!filtering || filteredConverters.length > 0) && (
-        <Section label="Converters" count={filteredConverters.length}>
-          <div className="grid grid-cols-4 gap-4">
-            {filteredConverters.map((t) => (
-              <ToolCard key={t.label} {...t} />
-            ))}
-          </div>
-        </Section>
-      )}
-
-      {(!filtering || filteredEditors.length > 0) && (
-        <Section label="Editors" count={filteredEditors.length}>
-          <div className="grid grid-cols-4 gap-4">
-            {filteredEditors.map((t) => (
-              <ToolCard key={t.label} {...t} />
-            ))}
-          </div>
-        </Section>
-      )}
-
-      {(!filtering || filteredEducation.length > 0) && (
-        <Section label="Education" count={filteredEducation.length}>
-          <div className="grid grid-cols-4 gap-4">
-            {filteredEducation.map((t) => (
-              <ToolCard key={t.label} {...t} />
-            ))}
-          </div>
-        </Section>
-      )}
-
-      {(!filtering || filteredGames.length > 0) && (
-        <Section label="Games" count={filteredGames.length}>
-          <div className="grid grid-cols-4 gap-4">
-            {filteredGames.map((t) => (
-              <ToolCard key={t.label} {...t} />
-            ))}
-          </div>
-        </Section>
-      )}
-
-      {(!filtering || filteredImages.length > 0) && (
-        <Section label="Images" count={filteredImages.length}>
-          <div className="grid grid-cols-4 gap-4">
-            {filteredImages.map((t) => (
-              <ToolCard key={t.label} {...t} />
-            ))}
-          </div>
-        </Section>
-      )}
-
-      {(!filtering || filteredExtensions.length > 0) && (
-        <Section label="Extensions" count={filteredExtensions.length}>
-          <div className="grid grid-cols-4 gap-4">
-            {filteredExtensions.map((t) => (
-              <AppCard key={t.name} {...t} />
-            ))}
-          </div>
-        </Section>
-      )}
-
-      {(!filtering || filteredApps.length > 0) && (
-        <Section label="Apps" count={filteredApps.length}>
-          <div className="grid grid-cols-4 gap-4">
-            {filteredApps.map((a) => (
-              <AppCard key={a.id} {...a} />
-            ))}
-          </div>
-        </Section>
-      )}
-
-      {filtering &&
-        filteredCoding.length === 0 &&
-        filteredAI.length === 0 &&
-        filteredGoogle.length === 0 &&
-        filteredWebsites.length === 0 &&
-        filteredTools.length === 0 &&
-        filteredCalculators.length === 0 &&
-        filteredConverters.length === 0 &&
-        filteredEditors.length === 0 &&
-        filteredEducation.length === 0 &&
-        filteredGames.length === 0 &&
-        filteredImages.length === 0 &&
-        filteredExtensions.length === 0 &&
-        filteredApps.length === 0 && (
-          <p className="text-base-content/30 mt-20 text-sm">
-            No results for "{query}" — press 🔍 to search Google.
-          </p>
-        )}
-    </main>
-  );
-};
-
-/* ------------------------------------------------------------------ */
-/* Page                                                                 */
-/* ------------------------------------------------------------------ */
-
-const AppPage: NextPage = () => {
-  const [times, setTimes] = useState(() =>
-    timezones.map(({ tz }) => getTimeInZone(tz))
-  );
-  const [today, setToday] = useState('');
-  const [activeModal, setActiveModal] = useState<ModalId | null>(null);
-  const [activeSidebar, setActiveSidebar] = useState<SidebarTab>(null);
-  const [query, setQuery] = useState('');
-
-  const close = () => setActiveModal(null);
-
-  useEffect(() => {
-    setToday(
-      new Date().toLocaleDateString('en-US', {
-        weekday: 'long',
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-      })
-    );
-    const interval = setInterval(
-      () => setTimes(timezones.map(({ tz }) => getTimeInZone(tz))),
-      1000
-    );
-    return () => clearInterval(interval);
-  }, []);
-
-  const weatherQueries = useQueries({
-    queries: timezones.map(({ lat, lon }) => ({
-      queryKey: ['open-meteo', lat, lon],
-      queryFn: async () => {
-        const res = await fetch(
-          `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weather_code`
-        );
-        return (await res.json()).current as WeatherData;
-      },
-      staleTime: 1000 * 60 * 10,
-    })),
-  });
-
-  const open = (id: ModalId) => () => setActiveModal(id);
-
-  const tools: Tool[] = [
+const makeTools = (
+  open: (id: ModalId) => () => void
+): Record<string, Tool[]> => ({
+  tools: [
     {
       label: 'DOI',
       description: 'Cite',
@@ -569,9 +227,8 @@ const AppPage: NextPage = () => {
       color: '#a855f7',
       onClick: open('uuid'),
     },
-  ];
-
-  const calculators: Tool[] = [
+  ],
+  calculators: [
     {
       label: 'Calculator',
       description: 'Math',
@@ -614,9 +271,8 @@ const AppPage: NextPage = () => {
       color: '#ef4444',
       onClick: open('tax'),
     },
-  ];
-
-  const clocks: Tool[] = [
+  ],
+  clocks: [
     {
       label: 'Countdown',
       description: 'Timer',
@@ -631,9 +287,8 @@ const AppPage: NextPage = () => {
       color: '#ef4444',
       onClick: open('pomodoro'),
     },
-  ];
-
-  const converters: Tool[] = [
+  ],
+  converters: [
     {
       label: 'Braille',
       description: 'From Text',
@@ -662,9 +317,8 @@ const AppPage: NextPage = () => {
       color: '#ff6c37',
       onClick: open('openapi'),
     },
-  ];
-
-  const editors: Tool[] = [
+  ],
+  editors: [
     {
       label: 'JSON Schema',
       description: 'Validator',
@@ -686,9 +340,8 @@ const AppPage: NextPage = () => {
       color: '#3b82f6',
       onClick: open('markdown'),
     },
-  ];
-
-  const education: Tool[] = [
+  ],
+  education: [
     {
       label: 'English',
       description: 'Dictionary',
@@ -717,9 +370,8 @@ const AppPage: NextPage = () => {
       color: '#8b5cf6',
       onClick: open('pitch'),
     },
-  ];
-
-  const games: Tool[] = [
+  ],
+  games: [
     {
       label: 'Blackjack',
       description: 'Cards Counter',
@@ -776,9 +428,8 @@ const AppPage: NextPage = () => {
       color: '#f59e0b',
       onClick: open('wordle'),
     },
-  ];
-
-  const images: Tool[] = [
+  ],
+  images: [
     {
       label: 'Breaking Bad',
       description: 'Element',
@@ -814,120 +465,393 @@ const AppPage: NextPage = () => {
       color: '#22d3ee',
       onClick: open('youtube-thumbnails'),
     },
-  ];
+  ],
+});
 
-  // Mobile filtered lists
-  const filtering = query.trim().length > 0;
-  const mobileFilteredSections = useMemo(
-    () => [
+/* ------------------------------------------------------------------ */
+/* Filter helper — module-level                                        */
+/* ------------------------------------------------------------------ */
+
+const match = (label: string, q: string) =>
+  label.toLowerCase().includes(q.toLowerCase());
+
+/* ------------------------------------------------------------------ */
+/* SearchBar                                                            */
+/* ------------------------------------------------------------------ */
+
+const SearchBar: FC<{ query: string; onChange: (v: string) => void }> = memo(
+  ({ query, onChange }) => {
+    const inputRef = useRef<HTMLInputElement>(null);
+
+    const googleSearch = useCallback(() => {
+      if (!query.trim()) return;
+      window.open(
+        `https://www.google.com/search?q=${encodeURIComponent(query.trim())}`,
+        '_blank'
+      );
+    }, [query]);
+
+    const onKeyDown = useCallback(
+      (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === 'Enter') googleSearch();
+      },
+      [googleSearch]
+    );
+
+    return (
+      <div className="join w-full">
+        <input
+          ref={inputRef}
+          type="text"
+          value={query}
+          onChange={(e) => onChange(e.target.value)}
+          onKeyDown={onKeyDown}
+          placeholder="Search or filter…"
+          className="input input-bordered join-item w-full"
+        />
+        <button
+          className="btn join-item btn-neutral"
+          onClick={googleSearch}
+          aria-label="Search with Google">
+          🔍
+        </button>
+      </div>
+    );
+  }
+);
+SearchBar.displayName = 'SearchBar';
+
+/* ------------------------------------------------------------------ */
+/* Section                                                              */
+/* ------------------------------------------------------------------ */
+
+const Section: FC<{
+  label: string;
+  count?: number;
+  children: React.ReactNode;
+}> = memo(({ label, count, children }) => (
+  <section aria-label={label} className="mt-10 w-full max-w-2xl">
+    <p className="text-base-content/30 mb-4 flex items-center justify-center gap-2 font-mono text-xs tracking-widest uppercase">
+      {label}
+      {count !== undefined && (
+        <span className="badge badge-xs badge-neutral font-mono tracking-normal normal-case">
+          {count}
+        </span>
+      )}
+    </p>
+    {children}
+  </section>
+));
+Section.displayName = 'Section';
+
+/* ------------------------------------------------------------------ */
+/* ToolGrid — shared grid wrapper                                      */
+/* ------------------------------------------------------------------ */
+
+const GRID_4 = 'grid grid-cols-4 gap-4';
+const GRID_MOBILE = 'grid grid-cols-2 sm:grid-cols-3 gap-3';
+
+/* ------------------------------------------------------------------ */
+/* MainContent                                                          */
+/* ------------------------------------------------------------------ */
+
+type MainContentProps = {
+  today: string;
+  query: string;
+  onQueryChange: (v: string) => void;
+  toolSections: ReturnType<typeof makeTools>;
+};
+
+const MainContent: FC<MainContentProps> = memo(
+  ({ today, query, onQueryChange, toolSections }) => {
+    const filtering = query.trim().length > 0;
+
+    const {
+      tools,
+      calculators,
+      clocks,
+      converters,
+      editors,
+      education,
+      games,
+      images,
+    } = toolSections;
+
+    // Bookmark sections
+    const bookmarkSections = useMemo(
+      () => [
+        { label: 'Coding', items: codingBookmarks },
+        { label: 'AI Assistants', items: aiBookmarks },
+        { label: 'Google Workspace', items: googleBookmarks },
+        { label: 'Messaging', items: messagingBookmarks },
+        { label: 'Websites', items: websiteBookmarks },
+      ],
+      []
+    );
+
+    // Tool sections
+    const toolSectionDefs = useMemo(
+      () => [
+        { label: 'Tools', items: tools },
+        { label: 'Calculators', items: calculators },
+        { label: 'Clocks', items: clocks },
+        { label: 'Converters', items: converters },
+        { label: 'Editors', items: editors },
+        { label: 'Education', items: education },
+        { label: 'Games', items: games },
+        { label: 'Images', items: images },
+      ],
+      [
+        tools,
+        calculators,
+        clocks,
+        converters,
+        editors,
+        education,
+        games,
+        images,
+      ]
+    );
+
+    // Download sections
+    const downloadSections = useMemo(
+      () => [
+        { label: 'Extensions', items: extensions, keyProp: 'id' as const },
+        { label: 'Packages', items: packages, keyProp: 'id' as const },
+        { label: 'Apps', items: apps, keyProp: 'id' as const },
+      ],
+      []
+    );
+
+    // Filtered counts
+    const filteredBookmarks = useMemo(
+      () =>
+        bookmarkSections.map((s) => ({
+          ...s,
+          filtered: filtering
+            ? s.items.filter((b) => match(b.label, query))
+            : s.items,
+        })),
+      [bookmarkSections, filtering, query]
+    );
+
+    const filteredTools = useMemo(
+      () =>
+        toolSectionDefs.map((s) => ({
+          ...s,
+          filtered: filtering
+            ? s.items.filter((t) => match(t.label, query))
+            : s.items,
+        })),
+      [toolSectionDefs, filtering, query]
+    );
+
+    const filteredDownloads = useMemo(
+      () =>
+        downloadSections.map((s) => ({
+          ...s,
+          filtered: filtering
+            ? s.items.filter((a) => match(a.id, query))
+            : s.items,
+        })),
+      [downloadSections, filtering, query]
+    );
+
+    const hasAnyResult =
+      filteredBookmarks.some((s) => s.filtered.length > 0) ||
+      filteredTools.some((s) => s.filtered.length > 0) ||
+      filteredDownloads.some((s) => s.filtered.length > 0);
+
+    return (
+      <main className="flex flex-col items-center overflow-y-auto px-8 py-12">
+        <p className="text-base-content/30 mb-2 font-mono text-xs tracking-widest uppercase">
+          {today}
+        </p>
+        <h1 className="mb-6 text-3xl font-black tracking-tight">Start Page</h1>
+
+        <div className="mb-10 w-full max-w-2xl">
+          <SearchBar query={query} onChange={onQueryChange} />
+        </div>
+
+        {filteredBookmarks.map(({ label, filtered }) =>
+          !filtering || filtered.length > 0 ? (
+            <Section key={label} label={label} count={filtered.length}>
+              <div className={GRID_4}>
+                {filtered.map((bm) => (
+                  <BookmarkCard key={bm.label} {...bm} />
+                ))}
+              </div>
+            </Section>
+          ) : null
+        )}
+
+        {filteredTools.map(({ label, filtered }) =>
+          !filtering || filtered.length > 0 ? (
+            <Section key={label} label={label} count={filtered.length}>
+              <div className={GRID_4}>
+                {filtered.map((t) => (
+                  <ToolCard key={t.label} {...t} />
+                ))}
+              </div>
+            </Section>
+          ) : null
+        )}
+
+        {filteredDownloads.map(({ label, filtered }) =>
+          !filtering || filtered.length > 0 ? (
+            <Section key={label} label={label} count={filtered.length}>
+              <div className={GRID_4}>
+                {filtered.map((a) => (
+                  <AppCard key={a.id} {...a} />
+                ))}
+              </div>
+            </Section>
+          ) : null
+        )}
+
+        {filtering && !hasAnyResult && (
+          <p className="text-base-content/30 mt-20 text-sm">
+            No results for "{query}" — press 🔍 to search Google.
+          </p>
+        )}
+      </main>
+    );
+  }
+);
+MainContent.displayName = 'MainContent';
+
+/* ------------------------------------------------------------------ */
+/* Page                                                                 */
+/* ------------------------------------------------------------------ */
+
+const AppPage: NextPage = () => {
+  const [times, setTimes] = useState(() =>
+    timezones.map(({ tz }) => getTimeInZone(tz))
+  );
+  const [today, setToday] = useState('');
+  const [activeModal, setActiveModal] = useState<ModalId | null>(null);
+  const [activeSidebar, setActiveSidebar] = useState<SidebarTab | null>(null);
+  const [query, setQuery] = useState('');
+
+  const close = useCallback(() => setActiveModal(null), []);
+
+  // Stable open factory — memoized once
+  const open = useCallback((id: ModalId) => () => setActiveModal(id), []);
+
+  // Tool sections derived once from the stable open callback
+  const toolSections = useMemo(() => makeTools(open), [open]);
+
+  useEffect(() => {
+    setToday(
+      new Date().toLocaleDateString('en-US', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      })
+    );
+    const interval = setInterval(
+      () => setTimes(timezones.map(({ tz }) => getTimeInZone(tz))),
+      1000
+    );
+    return () => clearInterval(interval);
+  }, []);
+
+  const weatherQueries = useQueries({
+    queries: timezones.map(({ lat, lon }) => ({
+      queryKey: ['open-meteo', lat, lon],
+      queryFn: async () => {
+        const res = await fetch(
+          `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weather_code`
+        );
+        return (await res.json()).current as WeatherData;
+      },
+      staleTime: 1000 * 60 * 10,
+    })),
+  });
+
+  const toggleSidebar = useCallback(
+    (tab: SidebarTab) =>
+      setActiveSidebar((prev) => (prev === tab ? null : tab)),
+    []
+  );
+
+  // Mobile filtered sections — single source of truth
+  const allSections = useMemo(() => {
+    const filtering = query.trim().length > 0;
+    const f = <T extends { label?: string; id?: string }>(
+      items: T[],
+      key: keyof T & ('label' | 'id')
+    ) =>
+      filtering
+        ? items.filter((item) => match(String(item[key] ?? ''), query))
+        : items;
+
+    return [
       {
         label: 'Coding',
-        items: codingBookmarks.filter(
-          (b) => !filtering || match(b.label, query)
-        ),
+        items: f(codingBookmarks, 'label'),
         Card: BookmarkCard,
-        cols: 'grid-cols-2 sm:grid-cols-3',
       },
       {
         label: 'AI Assistants',
-        items: aiBookmarks.filter((b) => !filtering || match(b.label, query)),
+        items: f(aiBookmarks, 'label'),
         Card: BookmarkCard,
-        cols: 'grid-cols-2 sm:grid-cols-3',
       },
       {
         label: 'Google Workspace',
-        items: googleBookmarks.filter(
-          (b) => !filtering || match(b.label, query)
-        ),
+        items: f(googleBookmarks, 'label'),
         Card: BookmarkCard,
-        cols: 'grid-cols-2 sm:grid-cols-3',
       },
       {
         label: 'Messaging',
-        items: messagingBookmarks.filter(
-          (b) => !filtering || match(b.label, query)
-        ),
+        items: f(messagingBookmarks, 'label'),
         Card: BookmarkCard,
-        cols: 'grid-cols-2 sm:grid-cols-3',
       },
       {
         label: 'Websites',
-        items: websiteBookmarks.filter(
-          (b) => !filtering || match(b.label, query)
-        ),
+        items: f(websiteBookmarks, 'label'),
         Card: BookmarkCard,
-        cols: 'grid-cols-2 sm:grid-cols-3',
       },
-      {
-        label: 'Tools',
-        items: tools.filter((t) => !filtering || match(t.label, query)),
-        Card: ToolCard,
-        cols: 'grid-cols-2 sm:grid-cols-3',
-      },
+      { label: 'Tools', items: f(toolSections.tools, 'label'), Card: ToolCard },
       {
         label: 'Calculators',
-        items: calculators.filter((t) => !filtering || match(t.label, query)),
+        items: f(toolSections.calculators, 'label'),
         Card: ToolCard,
-        cols: 'grid-cols-2 sm:grid-cols-3',
       },
       {
         label: 'Clocks',
-        items: clocks.filter((t) => !filtering || match(t.label, query)),
+        items: f(toolSections.clocks, 'label'),
         Card: ToolCard,
-        cols: 'grid-cols-2 sm:grid-cols-3',
       },
       {
         label: 'Converters',
-        items: converters.filter((t) => !filtering || match(t.label, query)),
+        items: f(toolSections.converters, 'label'),
         Card: ToolCard,
-        cols: 'grid-cols-2 sm:grid-cols-3',
       },
       {
         label: 'Editors',
-        items: editors.filter((t) => !filtering || match(t.label, query)),
+        items: f(toolSections.editors, 'label'),
         Card: ToolCard,
-        cols: 'grid-cols-2 sm:grid-cols-3',
       },
       {
         label: 'Education',
-        items: education.filter((t) => !filtering || match(t.label, query)),
+        items: f(toolSections.education, 'label'),
         Card: ToolCard,
-        cols: 'grid-cols-2 sm:grid-cols-3',
       },
-      {
-        label: 'Games',
-        items: games.filter((t) => !filtering || match(t.label, query)),
-        Card: ToolCard,
-        cols: 'grid-cols-2 sm:grid-cols-3',
-      },
+      { label: 'Games', items: f(toolSections.games, 'label'), Card: ToolCard },
       {
         label: 'Images',
-        items: images.filter((t) => !filtering || match(t.label, query)),
+        items: f(toolSections.images, 'label'),
         Card: ToolCard,
-        cols: 'grid-cols-2 sm:grid-cols-3',
       },
-      {
-        label: 'Extensions',
-        items: extensions.filter((a) => !filtering || match(a.id, query)),
-        Card: AppCard,
-        cols: 'grid-cols-2 sm:grid-cols-3',
-      },
-      {
-        label: 'Apps',
-        items: apps.filter((a) => !filtering || match(a.id, query)),
-        Card: AppCard,
-        cols: 'grid-cols-2 sm:grid-cols-3',
-      },
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-    ],
-    [query]
-  );
+      { label: 'Extensions', items: f(extensions, 'id'), Card: AppCard },
+      { label: 'Packages', items: f(packages, 'id'), Card: AppCard },
+      { label: 'Apps', items: f(apps, 'id'), Card: AppCard },
+    ];
+  }, [query, toolSections]);
 
   const ActiveModal = activeModal ? MODAL_MAP[activeModal] : null;
-  const sidebarContent = {
-    tasks: <LeftSidebar />,
-    clock: <RightSidebar times={times} weatherQueries={weatherQueries} />,
-  };
 
   return (
     <div className="bg-base-100 text-base-content min-h-screen">
@@ -940,14 +864,7 @@ const AppPage: NextPage = () => {
           today={today}
           query={query}
           onQueryChange={setQuery}
-          tools={tools}
-          calculators={calculators}
-          clocks={clocks}
-          converters={converters}
-          editors={editors}
-          education={education}
-          games={games}
-          images={images}
+          toolSections={toolSections}
         />
         <RightSidebar times={times} weatherQueries={weatherQueries} />
       </div>
@@ -966,9 +883,9 @@ const AppPage: NextPage = () => {
             <SearchBar query={query} onChange={setQuery} />
           </div>
 
-          {mobileFilteredSections
+          {allSections
             .filter(({ items }) => items.length > 0)
-            .map(({ label, items, Card, cols }) => (
+            .map(({ label, items, Card }) => (
               <section
                 key={label}
                 aria-label={label}
@@ -979,7 +896,7 @@ const AppPage: NextPage = () => {
                     {items.length}
                   </span>
                 </p>
-                <div className={`grid ${cols} gap-3`}>
+                <div className={GRID_MOBILE}>
                   {items.map((item: any) => (
                     <Card key={item.label ?? item.id} {...item} />
                   ))}
@@ -987,8 +904,8 @@ const AppPage: NextPage = () => {
               </section>
             ))}
 
-          {filtering &&
-            mobileFilteredSections.every(({ items }) => items.length === 0) && (
+          {query.trim().length > 0 &&
+            allSections.every(({ items }) => items.length === 0) && (
               <p className="text-base-content/30 mt-20 text-center text-sm">
                 No results for "{query}" — press 🔍 to search Google.
               </p>
@@ -1007,7 +924,7 @@ const AppPage: NextPage = () => {
                   ? 'text-primary'
                   : 'text-base-content/40 hover:text-base-content/70'
               }`}
-              onClick={() => setActiveSidebar((p) => (p === tab ? null : tab))}>
+              onClick={() => toggleSidebar(tab)}>
               <span className="text-lg">{tab === 'tasks' ? '📡' : '🕐'}</span>
               {tab === 'tasks' ? 'Tasks' : 'Clock'}
             </button>
@@ -1032,7 +949,13 @@ const AppPage: NextPage = () => {
                   ✕
                 </button>
               </div>
-              <div className="p-4">{sidebarContent[activeSidebar]}</div>
+              <div className="p-4">
+                {activeSidebar === 'tasks' ? (
+                  <LeftSidebar />
+                ) : (
+                  <RightSidebar times={times} weatherQueries={weatherQueries} />
+                )}
+              </div>
             </div>
           </>
         )}
