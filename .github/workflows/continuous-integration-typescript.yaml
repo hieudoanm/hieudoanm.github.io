@@ -3,12 +3,12 @@ name: Continuous Integration (TypeScript)
 on:
   push:
     branches:
-      - "master"
-      - "develop"
-      - "hotfix/**"
-      - "feature/**"
-      - "renovate/**"
-      - "dependabot/**"
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -25,17 +25,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-
       - name: Install pnpm
         uses: pnpm/action-setup@v6
         with:
-          version: "10.33.2"
+          version: '10.33.2'
 
       - name: Install Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: "25.9.0"
-          cache: "pnpm"
+          node-version: '25.9.0'
+          cache: 'pnpm'
 
       - name: Install Dependencies
         run: pnpm install
@@ -71,17 +70,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-
+        with:
+          sparse-checkout: 'packages/app'
       - name: Install pnpm
         uses: pnpm/action-setup@v6
         with:
-          version: "10.33.2"
+          version: '10.33.2'
 
       - name: Install Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: "25.9.0"
-          cache: "pnpm"
+          node-version: '25.9.0'
+          cache: 'pnpm'
 
       - name: Install Dependencies
         run: pnpm install
@@ -101,7 +101,7 @@ jobs:
         with:
           tag_name: ${{ matrix.platform }}
           name: ${{ matrix.platform }} Release
-          body: "Automated Build for ${{ matrix.platform }} latest commit on master."
+          body: 'Automated Build for ${{ matrix.platform }} latest commit on master.'
           draft: false
           prerelease: false
           overwrite: true
