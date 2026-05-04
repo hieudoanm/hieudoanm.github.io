@@ -19,12 +19,12 @@ exports[`AppCard should render 1`] = `
         </div>
         <div>
           <div
-            class="text-sm font-bold tracking-tight"
+            class="truncate text-sm font-bold tracking-tight"
           >
             test
           </div>
           <div
-            class="text-base-content/40 mt-0.5 text-[10px] tracking-widest uppercase"
+            class="text-base-content/40 mt-0.5 truncate text-[10px] tracking-widest uppercase"
           >
             test
           </div>
