@@ -17,8 +17,10 @@ export const AppCard: FC<AppCardProps> = ({ href, name, emoji }) => (
           {emoji}
         </div>
         <div>
-          <div className="text-sm font-bold tracking-tight">{name}</div>
-          <div className="text-base-content/40 mt-0.5 text-[10px] tracking-widest uppercase">
+          <div className="truncate text-sm font-bold tracking-tight">
+            {name}
+          </div>
+          <div className="text-base-content/40 mt-0.5 truncate text-[10px] tracking-widest uppercase">
             {name}
           </div>
         </div>
