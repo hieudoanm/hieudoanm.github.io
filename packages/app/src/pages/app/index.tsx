@@ -51,6 +51,7 @@ import {
   messaging as messagingBookmarks,
   websites as websiteBookmarks,
 } from '@hieudoanm/data/bookmarks';
+import { extensions } from '@hieudoanm/data/extensions';
 import { getTimeInZone, timezones } from '@hieudoanm/data/timezones';
 import { WeatherData } from '@hieudoanm/data/weather';
 import { useQueries } from '@tanstack/react-query';
@@ -275,6 +276,11 @@ const MainContent: FC<{
   const filteredEducation = education.filter((t) => match(t.label, query));
   const filteredGames = games.filter((t) => match(t.label, query));
   const filteredImages = images.filter((t) => match(t.label, query));
+
+  // Downloads
+  const filteredExtensions = extensions.filter((a) => match(a.id, query));
+
+  // Standalone
   const filteredApps = apps.filter((a) => match(a.id, query));
 
   return (
@@ -418,6 +424,16 @@ const MainContent: FC<{
         </Section>
       )}
 
+      {(!filtering || filteredExtensions.length > 0) && (
+        <Section label="Extensions" count={filteredExtensions.length}>
+          <div className="grid grid-cols-4 gap-4">
+            {filteredExtensions.map((t) => (
+              <AppCard key={t.name} {...t} />
+            ))}
+          </div>
+        </Section>
+      )}
+
       {(!filtering || filteredApps.length > 0) && (
         <Section label="Apps" count={filteredApps.length}>
           <div className="grid grid-cols-4 gap-4">
@@ -440,6 +456,7 @@ const MainContent: FC<{
         filteredEducation.length === 0 &&
         filteredGames.length === 0 &&
         filteredImages.length === 0 &&
+        filteredExtensions.length === 0 &&
         filteredApps.length === 0 && (
           <p className="text-base-content/30 mt-20 text-sm">
             No results for "{query}" — press 🔍 to search Google.
@@ -887,6 +904,12 @@ const AppPage: NextPage = () => {
         label: 'Images',
         items: images.filter((t) => !filtering || match(t.label, query)),
         Card: ToolCard,
+        cols: 'grid-cols-2 sm:grid-cols-3',
+      },
+      {
+        label: 'Extensions',
+        items: extensions.filter((a) => !filtering || match(a.id, query)),
+        Card: AppCard,
         cols: 'grid-cols-2 sm:grid-cols-3',
       },
       {

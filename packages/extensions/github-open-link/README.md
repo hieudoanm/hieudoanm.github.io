@@ -1,1 +1,1 @@
-# GitHub Link Opener
+# GitHub Open Link
