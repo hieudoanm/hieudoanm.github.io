@@ -32,6 +32,7 @@ import { BreakingBadModal } from '@hieudoanm/components/modals/images/BreakingBa
 import { GitHubSocialPreviewModal } from '@hieudoanm/components/modals/images/GitHubSocialPreviewModal';
 import { HouseModal } from '@hieudoanm/components/modals/images/HouseModal';
 import { QRCodeModal } from '@hieudoanm/components/modals/images/QRCodeModal';
+import { YouTubeThumbnailsModal } from '@hieudoanm/components/modals/images/YouTubeThumbnailsModal';
 import { DOIModal } from '@hieudoanm/components/modals/tools/DOIModal';
 import { EmojisModal } from '@hieudoanm/components/modals/tools/EmojisModal';
 import { FigletModal } from '@hieudoanm/components/modals/tools/FigletModal';
@@ -99,7 +100,8 @@ type ModalId =
   | 'shopify-detect'
   | 'pokedex'
   | 'figlet'
-  | 'markdown';
+  | 'markdown'
+  | 'youtube-thumbnails';
 
 type SidebarTab = 'tasks' | 'clock' | null;
 
@@ -147,6 +149,7 @@ const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
   pokedex: PokedexModal,
   figlet: FigletModal,
   markdown: MarkdownModal,
+  'youtube-thumbnails': YouTubeThumbnailsModal,
 };
 
 /* ------------------------------------------------------------------ */
@@ -786,6 +789,13 @@ const AppPage: NextPage = () => {
       emoji: '▦',
       color: '#22d3ee',
       onClick: open('qr'),
+    },
+    {
+      label: 'Thumbnails',
+      description: 'YouTube',
+      emoji: '📸',
+      color: '#22d3ee',
+      onClick: open('youtube-thumbnails'),
     },
   ];
 
