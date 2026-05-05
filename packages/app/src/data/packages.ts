@@ -9,12 +9,12 @@ type Package = {
 
 export const packages: Package[] = [
   {
-    id: 'browser',
-    name: '@hieudoanm/browser',
-    href: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/modules/browser',
+    id: 'browser-native',
+    name: '@browser/native',
+    href: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/modules/browser/native',
     emoji: '🌐',
     color: '#3b82f6',
-    description: 'Browser Core',
+    description: 'Browser Native',
   },
   {
     id: 'chess-elo',

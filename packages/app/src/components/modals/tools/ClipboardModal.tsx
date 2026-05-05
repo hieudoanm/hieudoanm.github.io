@@ -1,4 +1,4 @@
-import { createClipboard, createStorage } from '@hieudoanm/browser';
+import { createClipboard, createStorage } from '@browser/native';
 import { FC, useEffect, useState } from 'react';
 
 type ClipItem = {
