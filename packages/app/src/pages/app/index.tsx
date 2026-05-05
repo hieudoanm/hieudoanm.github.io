@@ -21,6 +21,7 @@ import { FlashcardsModal } from '@hieudoanm/components/modals/education/Flashcar
 import { PeriodicTableModal } from '@hieudoanm/components/modals/education/PeriodicTableModal';
 import { PitchModal } from '@hieudoanm/components/modals/education/PitchModal';
 import { BlackjackModal } from '@hieudoanm/components/modals/games/BlackjackModal';
+import { PalindromeModal } from '@hieudoanm/components/modals/games/PalindromeModal';
 import { PiModal } from '@hieudoanm/components/modals/games/PiNumberModal';
 import { PokedexModal } from '@hieudoanm/components/modals/games/PokedexModal';
 import { RecallModal } from '@hieudoanm/components/modals/games/RecallModal';
@@ -111,7 +112,8 @@ type ModalId =
   | 'pokedex'
   | 'figlet'
   | 'markdown'
-  | 'youtube-thumbnails';
+  | 'youtube-thumbnails'
+  | 'palindrome';
 
 type SidebarTab = 'tasks' | 'clock';
 
@@ -160,6 +162,7 @@ const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
   figlet: FigletModal,
   markdown: MarkdownModal,
   'youtube-thumbnails': YouTubeThumbnailsModal,
+  palindrome: PalindromeModal,
 };
 
 /* ------------------------------------------------------------------ */
@@ -378,6 +381,13 @@ const makeTools = (
       emoji: '🃏',
       color: '#f59e0b',
       onClick: open('blackjack'),
+    },
+    {
+      label: 'Palindrome',
+      description: 'Palindrome',
+      emoji: '🔁',
+      color: '#f59e0b',
+      onClick: open('palindrome'),
     },
     {
       label: 'PI',

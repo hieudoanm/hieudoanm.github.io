@@ -1,13 +1,13 @@
 # 👨‍💻 I'm [HIEU DOAN](https://hieudoanm.github.io)
 
-## Table of Contents (27)
+## Table of Contents (26)
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
-  - [Table of Contents (27)](#table-of-contents-27)
+  - [Table of Contents (26)](#table-of-contents-26)
   - [Artificial Intelligence (3)](#artificial-intelligence-3)
   - [Design (2)](#design-2)
   - [Dev Tools (3)](#dev-tools-3)
-  - [Fun (5)](#fun-5)
+  - [Fun (4)](#fun-4)
   - [Games (2)](#games-2)
   - [Languages (1)](#languages-1)
   - [Template (2)](#template-2)
@@ -49,13 +49,12 @@
 [simple-upload]: https://hieudoanm.github.io/simple-upload
 [simple-upload-gh]: https://github.com/hieudoanm/simple-upload
 
-## Fun (5)
+## Fun (4)
 
 1. 🌀 [Attractors][attractors] - [GitHub][attractors-gh]
 2. ⌚ [Garmin][garmin] - [GitHub][garmin-gh]
 3. 👀 [Eyes][eyes] - [GitHub][eyes-gh]
 4. ⚖️ [Legislation][legislation] - [GitHub][legislation-gh]
-5. 🔁 [Palindrome][palindrome] - [GitHub][palindrome-gh]
 
 [attractors]: https://hieudoanm.github.io/attractors
 [attractors-gh]: https://github.com/hieudoanm/attractors
@@ -65,8 +64,6 @@
 [eyes-gh]: https://github.com/hieudoanm/eyes
 [legislation]: https://hieudoanm.github.io/legislation
 [legislation-gh]: https://github.com/hieudoanm/legislation
-[palindrome]: https://hieudoanm.github.io/palindrome
-[palindrome-gh]: https://github.com/hieudoanm/palindrome
 
 ## Games (2)
 

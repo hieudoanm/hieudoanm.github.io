@@ -120,16 +120,6 @@
     "tags": ["android", "macos", "web"]
   },
   {
-    "category": "fun",
-    "emoji": "🔁",
-    "id": "palindrome",
-    "name": "Palindrome",
-    "href": "https://hieudoanm.github.io/palindrome",
-    "github": "https://github.com/hieudoanm/palindrome",
-    "image": "https://raw.githubusercontent.com/hieudoanm/palindrome/refs/heads/master/images/app.png",
-    "tags": ["android", "macos", "web"]
-  },
-  {
     "category": "games",
     "emoji": "♟",
     "id": "chess",
