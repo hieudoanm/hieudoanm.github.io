@@ -1,167 +1,151 @@
-type Level = 'debug' | 'info' | 'warn' | 'error';
+type LogLevel = 'debug' | 'info' | 'warn' | 'error';
 
-type LevelPriority = Record<Level, number>;
-type StyleMap = Record<Level, string>;
-
-interface Options {
-  enabled?: boolean;
-  showTimestamp?: boolean;
-  minLevel?: Level;
-  styles?: Partial<StyleMap>;
+interface LoggerConfig {
+  level?: LogLevel;
+  timestamp?: boolean;
   scope?: string;
 }
 
-const LEVEL_PRIORITY: LevelPriority = {
+/* =========================
+   Level priority
+   ========================= */
+
+const levelOrder: Record<LogLevel, number> = {
   debug: 0,
   info: 1,
   warn: 2,
   error: 3,
 };
 
-const DEFAULT_STYLES: StyleMap = {
+/* =========================
+   Detect environment
+   ========================= */
+
+const isBrowser =
+  typeof window !== 'undefined' && typeof window.document !== 'undefined';
+
+/* =========================
+   Node colors (ANSI)
+   ========================= */
+
+const nodeColors: Record<LogLevel, string> = {
+  debug: '\x1b[36m',
+  info: '\x1b[32m',
+  warn: '\x1b[33m',
+  error: '\x1b[31m',
+};
+
+const reset = '\x1b[0m';
+
+/* =========================
+   Browser styles
+   ========================= */
+
+const browserStyles: Record<LogLevel, string> = {
   debug: 'background:#4b5563;color:white;padding:2px 6px;border-radius:4px;',
   info: 'background:#2563eb;color:white;padding:2px 6px;border-radius:4px;',
   warn: 'background:#f59e0b;color:black;padding:2px 6px;border-radius:4px;',
   error: 'background:#dc2626;color:white;padding:2px 6px;border-radius:4px;',
 };
 
-/* =========================================
-   Logger Type (NO circular reference)
-   ========================================= */
+/* =========================
+   Logger factory
+   ========================= */
 
-export type Logger = {
-  info: (message?: string, ...data: unknown[]) => void;
-  warn: (message?: string, ...data: unknown[]) => void;
-  error: (message?: string, ...data: unknown[]) => void;
-  debug: (message?: string, ...data: unknown[]) => void;
+export const createLogger = (config: LoggerConfig = {}) => {
+  const level = config.level ?? 'info';
+  const timestamp = config.timestamp ?? true;
+  const scope = config.scope ?? '';
 
-  table: (data: unknown, columns?: string[]) => void;
+  const shouldLog = (msgLevel: LogLevel) =>
+    levelOrder[msgLevel] >= levelOrder[level];
 
-  group: (
-    label: string,
-    callback: (logger: Logger) => void,
-    collapsed?: boolean
-  ) => void;
+  /* =========================
+     Core formatter
+     ========================= */
 
-  time: (label: string) => void;
-  timeEnd: (label: string) => void;
-  count: (label: string) => void;
-  clear: () => void;
+  const formatNode = (msgLevel: LogLevel, message: string): string => {
+    const time = timestamp ? `[${new Date().toISOString()}] ` : '';
+    const scopeStr = scope ? `[${scope}] ` : '';
 
-  withScope: (scope: string) => Logger;
-};
-
-/* =========================================
-   Factory
-   ========================================= */
-
-export const createLogger = (userOptions: Options = {}): Logger => {
-  const options: Required<Options> = {
-    enabled: userOptions.enabled ?? true,
-    showTimestamp: userOptions.showTimestamp ?? true,
-    minLevel: userOptions.minLevel ?? 'debug',
-    styles: { ...DEFAULT_STYLES, ...userOptions.styles },
-    scope: userOptions.scope ?? '',
+    return `${nodeColors[msgLevel]}${time}${scopeStr}${msgLevel.toUpperCase()}: ${message}${reset}`;
   };
 
-  const shouldPrint = (level: Level): boolean =>
-    options.enabled &&
-    LEVEL_PRIORITY[level] >= LEVEL_PRIORITY[options.minLevel];
-
-  const format = (level: Level, message?: string) => {
+  const formatBrowser = (msgLevel: LogLevel, message: string) => {
     const parts: string[] = [];
     const styles: string[] = [];
 
-    parts.push(`%c ${level.toUpperCase()} `);
-    styles.push(options.styles[level] ?? '');
+    parts.push(`%c ${msgLevel.toUpperCase()} `);
+    styles.push(browserStyles[msgLevel]);
 
-    if (options.scope) {
-      parts.push(`%c ${options.scope} `);
+    if (scope) {
+      parts.push(`%c ${scope} `);
       styles.push(
         'background:#111827;color:white;padding:2px 6px;border-radius:4px;'
       );
     }
 
-    if (options.showTimestamp) {
+    if (timestamp) {
       parts.push(`%c ${new Date().toISOString()} `);
       styles.push('color:#6b7280;');
     }
 
-    parts.push(`%c ${message ?? ''}`);
+    parts.push(`%c ${message}`);
     styles.push('color:inherit;');
 
-    return { text: parts.join(''), styles };
+    return {
+      text: parts.join(''),
+      styles,
+    };
   };
 
-  const print = (level: Level, message?: string, ...data: unknown[]): void => {
-    if (!shouldPrint(level)) return;
+  /* =========================
+     Logger core
+     ========================= */
 
-    const method = console[level].bind(console);
-    const { text, styles } = format(level, message);
+  const log = (msgLevel: LogLevel, message: string, ...data: unknown[]) => {
+    if (!shouldLog(msgLevel)) return;
 
-    method(text, ...styles, ...data);
+    if (isBrowser) {
+      const { text, styles } = formatBrowser(msgLevel, message);
+      console.log(text, ...styles, ...data);
+    } else {
+      console.log(formatNode(msgLevel, message), ...data);
+    }
   };
 
-  const api: Logger = {
-    info: (message?: string, ...data: unknown[]) =>
-      print('info', message, ...data),
+  /* =========================
+     API
+     ========================= */
 
-    warn: (message?: string, ...data: unknown[]) =>
-      print('warn', message, ...data),
+  return {
+    debug: (msg: string, ...data: unknown[]) => log('debug', msg, ...data),
 
-    error: (message?: string, ...data: unknown[]) =>
-      print('error', message, ...data),
+    info: (msg: string, ...data: unknown[]) => log('info', msg, ...data),
 
-    debug: (message?: string, ...data: unknown[]) =>
-      print('debug', message, ...data),
+    warn: (msg: string, ...data: unknown[]) => log('warn', msg, ...data),
 
-    table: (data: unknown, columns?: string[]) => {
-      if (!options.enabled) return;
-      console.table(data, columns);
-    },
+    error: (msg: string, ...data: unknown[]) => log('error', msg, ...data),
 
-    group: (
-      label: string,
-      callback: (logger: Logger) => void,
-      collapsed = false
-    ) => {
-      if (!options.enabled) return;
-
-      if (collapsed) {
-        console.groupCollapsed(label);
-      } else {
+    /* useful extras */
+    group: (label: string, fn: () => void) => {
+      if (isBrowser) {
         console.group(label);
-      }
-
-      try {
-        callback(api);
-      } finally {
+        fn();
         console.groupEnd();
+      } else {
+        console.log(`\n=== ${label} ===`);
+        fn();
+        console.log(`=== /${label} ===\n`);
       }
     },
 
-    time: (label: string) => {
-      if (!options.enabled) return;
-      console.time(label);
-    },
+    time: (label: string) => console.time(label),
+    timeEnd: (label: string) => console.timeEnd(label),
+    table: (data: unknown) => console.table(data),
+    clear: () => console.clear(),
 
-    timeEnd: (label: string) => {
-      if (!options.enabled) return;
-      console.timeEnd(label);
-    },
-
-    count: (label: string) => {
-      if (!options.enabled) return;
-      console.count(label);
-    },
-
-    clear: () => {
-      if (!options.enabled) return;
-      console.clear();
-    },
-
-    withScope: (scope: string): Logger => createLogger({ ...options, scope }),
+    withScope: (newScope: string) =>
+      createLogger({ ...config, scope: newScope }),
   };
-
-  return api;
 };
