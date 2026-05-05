@@ -62,6 +62,9 @@ importers:
       '@codemirror/view':
         specifier: 6.41.1
         version: 6.41.1
+      '@hieudoanm/browser':
+        specifier: workspace:*
+        version: link:../modules/browser
       '@tanstack/react-query':
         specifier: 5.100.9
         version: 5.100.9(react@19.2.5)

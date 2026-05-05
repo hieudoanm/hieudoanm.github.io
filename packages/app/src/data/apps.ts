@@ -204,13 +204,13 @@ export const apps: App[] = [
   },
   {
     category: 'utilities',
-    emoji: '📋',
-    id: 'clipboard',
-    name: 'Clipboard',
-    href: 'https://hieudoanm.github.io/clipboard',
-    github: 'https://github.com/hieudoanm/clipboard',
+    emoji: '📚',
+    id: 'docs',
+    name: 'Docs',
+    href: 'https://hieudoanm.github.io/docs',
+    github: 'https://github.com/hieudoanm/docs',
     image:
-      'https://raw.githubusercontent.com/hieudoanm/clipboard/refs/heads/master/images/app.png',
+      'https://raw.githubusercontent.com/hieudoanm/docs/refs/heads/master/images/app.png',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
@@ -288,17 +288,6 @@ export const apps: App[] = [
     github: 'https://github.com/hieudoanm/wifi',
     image:
       'https://raw.githubusercontent.com/hieudoanm/wifi/refs/heads/master/images/app.png',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
-    category: 'utilities',
-    emoji: '📚',
-    id: 'docs',
-    name: 'Docs',
-    href: 'https://hieudoanm.github.io/docs',
-    github: 'https://github.com/hieudoanm/docs',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/docs/refs/heads/master/images/app.png',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
 ];

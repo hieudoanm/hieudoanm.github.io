@@ -1,9 +1,9 @@
 # 👨‍💻 I'm [HIEU DOAN](https://hieudoanm.github.io)
 
-## Table of Contents (26)
+## Table of Contents (25)
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
-  - [Table of Contents (26)](#table-of-contents-26)
+  - [Table of Contents (25)](#table-of-contents-25)
   - [Artificial Intelligence (3)](#artificial-intelligence-3)
   - [Design (2)](#design-2)
   - [Dev Tools (3)](#dev-tools-3)
@@ -11,7 +11,7 @@
   - [Games (2)](#games-2)
   - [Languages (1)](#languages-1)
   - [Template (2)](#template-2)
-  - [Utilities (9)](#utilities-9)
+  - [Utilities (8)](#utilities-8)
 
 ## Artificial Intelligence (3)
 
@@ -92,9 +92,9 @@
 [telegram]: https://hieudoanm.github.io/telegram
 [telegram-gh]: https://github.com/hieudoanm/telegram
 
-## Utilities (9)
+## Utilities (8)
 
-1. 📋 [Clipboard][clipboard] - [GitHub][clipboard-gh]
+1. 📚 [Docs][docs] - [GitHub][docs-gh]
 2. 📱 [InstaSize][instasize] - [GitHub][instasize-gh]
 3. 🧾 [Invoice][invoice] - [GitHub][invoice-gh]
 4. 🕵️ [Redact][redact] - [GitHub][redact-gh]
@@ -102,10 +102,9 @@
 6. 🖥️ [System][system] - [GitHub][system-gh]
 7. 📝 [Transcript][transcript] - [GitHub][transcript-gh]
 8. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
-9. 📚 [Docs][docs] - [GitHub][docs-gh]
 
-[clipboard]: https://hieudoanm.github.io/clipboard
-[clipboard-gh]: https://github.com/hieudoanm/clipboard
+[docs]: https://hieudoanm.github.io/docs
+[docs-gh]: https://github.com/hieudoanm/docs
 [instasize]: https://hieudoanm.github.io/instasize
 [instasize-gh]: https://github.com/hieudoanm/instasize
 [invoice]: https://hieudoanm.github.io/invoice
@@ -120,5 +119,3 @@
 [transcript-gh]: https://github.com/hieudoanm/transcript
 [wifi]: https://hieudoanm.github.io/wifi
 [wifi-gh]: https://github.com/hieudoanm/wifi
-[docs]: https://hieudoanm.github.io/docs
-[docs-gh]: https://github.com/hieudoanm/docs

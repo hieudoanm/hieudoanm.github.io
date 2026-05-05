@@ -34,6 +34,7 @@ import { GitHubSocialPreviewModal } from '@hieudoanm/components/modals/images/Gi
 import { HouseModal } from '@hieudoanm/components/modals/images/HouseModal';
 import { QRCodeModal } from '@hieudoanm/components/modals/images/QRCodeModal';
 import { YouTubeThumbnailsModal } from '@hieudoanm/components/modals/images/YouTubeThumbnailsModal';
+import { ClipboardModal } from '@hieudoanm/components/modals/tools/ClipboardModal';
 import { DOIModal } from '@hieudoanm/components/modals/tools/DOIModal';
 import { EmojisModal } from '@hieudoanm/components/modals/tools/EmojisModal';
 import { FigletModal } from '@hieudoanm/components/modals/tools/FigletModal';
@@ -113,7 +114,8 @@ type ModalId =
   | 'figlet'
   | 'markdown'
   | 'youtube-thumbnails'
-  | 'palindrome';
+  | 'palindrome'
+  | 'clipboard';
 
 type SidebarTab = 'tasks' | 'clock';
 
@@ -163,6 +165,7 @@ const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
   markdown: MarkdownModal,
   'youtube-thumbnails': YouTubeThumbnailsModal,
   palindrome: PalindromeModal,
+  clipboard: ClipboardModal,
 };
 
 /* ------------------------------------------------------------------ */
@@ -174,6 +177,13 @@ const makeTools = (
   open: (id: ModalId) => () => void
 ): Record<string, Tool[]> => ({
   tools: [
+    {
+      label: 'Clipboard',
+      description: 'Clipboard',
+      emoji: '📋',
+      color: '#3b82f6',
+      onClick: open('clipboard'),
+    },
     {
       label: 'DOI',
       description: 'Cite',
