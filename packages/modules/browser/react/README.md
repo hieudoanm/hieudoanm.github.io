@@ -2,6 +2,29 @@
 
 ## Table of Contents
 
+- [`@browser/react`](#browserreact)
+  - [Table of Contents](#table-of-contents)
+  - [`clipboard`](#clipboard)
+  - [`storage`](#storage)
+
+## `clipboard`
+
+```tsx
+import { useClipboard } from '@browser/react';
+
+const Component = () => {
+  const { copied, copy, paste } = useClipboard();
+
+  return (
+    <div>
+      <button onClick={() => copy('Hello world!')}>Copy</button>
+      <button onClick={paste}>Paste</button>
+      {copied && <p>Copied!</p>}
+    </div>
+  );
+};
+```
+
 ## `storage`
 
 ```tsx
