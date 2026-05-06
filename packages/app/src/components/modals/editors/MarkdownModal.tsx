@@ -7,6 +7,20 @@ import DOMPurify from 'dompurify';
 import 'github-markdown-css/github-markdown.css';
 import htmlToPdfmake from 'html-to-pdfmake';
 import { marked } from 'marked';
+import {
+  Be_Vietnam_Pro,
+  Fira_Code,
+  Inter,
+  JetBrains_Mono,
+  Lato,
+  Merriweather,
+  Noto_Sans,
+  Open_Sans,
+  Roboto,
+  Roboto_Mono,
+  Source_Code_Pro,
+  Ubuntu_Mono,
+} from 'next/font/google';
 import pdfMake from 'pdfmake/build/pdfmake';
 import {
   Content,
@@ -16,6 +30,55 @@ import {
 } from 'pdfmake/interfaces';
 import { ChangeEvent, FC, useEffect, useRef, useState } from 'react';
 import Tesseract from 'tesseract.js';
+
+/* =========================
+   Fonts
+========================= */
+const beVietnamPro = Be_Vietnam_Pro({ subsets: ['latin'], weight: '400' });
+const firaCode = Fira_Code({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'] });
+const jetBrainsMono = JetBrains_Mono({ subsets: ['latin'] });
+const lato = Lato({ subsets: ['latin'], weight: '400' });
+const merriweather = Merriweather({ subsets: ['latin'], weight: '400' });
+const notoSans = Noto_Sans({ subsets: ['latin'], weight: '400' });
+const openSans = Open_Sans({ subsets: ['latin'] });
+const roboto = Roboto({ subsets: ['latin'] });
+const robotoMono = Roboto_Mono({ subsets: ['latin'] });
+const sourceCodePro = Source_Code_Pro({ subsets: ['latin'] });
+const ubuntuMono = Ubuntu_Mono({ subsets: ['latin'], weight: '400' });
+
+const FONTS = [
+  {
+    id: 'be-vietnam-pro',
+    name: 'Be Vietnam Pro',
+    className: beVietnamPro.className,
+  },
+  { id: 'fira-code', name: 'Fira Code', className: firaCode.className },
+  { id: 'inter', name: 'Inter', className: inter.className },
+  {
+    id: 'jetbrains-mono',
+    name: 'JetBrains Mono',
+    className: jetBrainsMono.className,
+  },
+  { id: 'lato', name: 'Lato', className: lato.className },
+  {
+    id: 'merriweather',
+    name: 'Merriweather',
+    className: merriweather.className,
+  },
+  { id: 'noto-sans', name: 'Noto Sans', className: notoSans.className },
+  { id: 'open-sans', name: 'Open Sans', className: openSans.className },
+  { id: 'roboto', name: 'Roboto', className: roboto.className },
+  { id: 'roboto-mono', name: 'Roboto Mono', className: robotoMono.className },
+  {
+    id: 'source-code-pro',
+    name: 'Source Code Pro',
+    className: sourceCodePro.className,
+  },
+  { id: 'ubuntu-mono', name: 'Ubuntu Mono', className: ubuntuMono.className },
+];
+
+const DEFAULT_FONT_ID = 'roboto';
 
 /* =========================
    Constants
@@ -154,7 +217,10 @@ X^2^
 /* =========================
    Previewer
 ========================= */
-const MarkdownPreviewer: FC<{ html: string }> = ({ html = '' }) => {
+const MarkdownPreviewer: FC<{ html: string; fontClassName: string }> = ({
+  html = '',
+  fontClassName = '',
+}) => {
   const [innerHTML, setInnerHTML] = useState<string>('');
 
   useEffect(() => {
@@ -165,7 +231,7 @@ const MarkdownPreviewer: FC<{ html: string }> = ({ html = '' }) => {
   return (
     <div
       dangerouslySetInnerHTML={{ __html: innerHTML }}
-      className="markdown-body !bg-base-100 !text-base-content h-full w-full"
+      className={`markdown-body !bg-base-100 !text-base-content h-full w-full ${fontClassName}`}
     />
   );
 };
@@ -180,6 +246,7 @@ export const MarkdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       loading = false,
       markdown = INITIAL_MARKDOWN,
       ocrLoading = false,
+      fontId = DEFAULT_FONT_ID,
     },
     setState,
   ] = useState<{
@@ -187,19 +254,22 @@ export const MarkdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     loading: boolean;
     markdown: string;
     ocrLoading: boolean;
+    fontId: string;
   }>({
     html: '',
     loading: false,
     markdown: INITIAL_MARKDOWN,
     ocrLoading: false,
+    fontId: DEFAULT_FONT_ID,
   });
+
+  const selectedFont = FONTS.find((f) => f.id === fontId) ?? FONTS[0];
 
   /* =========================
      CodeMirror
   ========================= */
   const editorRef = useRef<HTMLDivElement | null>(null);
   const viewRef = useRef<EditorView | null>(null);
-
   const editableCompartment = useRef(new Compartment()).current;
 
   useEffect(() => {
@@ -226,11 +296,7 @@ export const MarkdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       ],
     });
 
-    viewRef.current = new EditorView({
-      state,
-      parent: editorRef.current,
-    });
-
+    viewRef.current = new EditorView({ state, parent: editorRef.current });
     return () => viewRef.current?.destroy();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -238,7 +304,6 @@ export const MarkdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   useEffect(() => {
     const view = viewRef.current;
     if (!view) return;
-
     view.dispatch({
       effects: editableCompartment.reconfigure(
         EditorView.editable.of(!ocrLoading)
@@ -249,7 +314,6 @@ export const MarkdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   useEffect(() => {
     const view = viewRef.current;
     if (!view) return;
-
     const current = view.state.doc.toString();
     if (current !== markdown) {
       view.dispatch({
@@ -258,9 +322,6 @@ export const MarkdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     }
   }, [markdown]);
 
-  /* =========================
-     Markdown → HTML
-  ========================= */
   useEffect(() => {
     const setHTML = async () => {
       const newHTML = await marked(markdown);
@@ -274,36 +335,24 @@ export const MarkdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   ========================= */
   const handleOCRFile = async (e: ChangeEvent<HTMLInputElement>) => {
     setState((prev) => ({ ...prev, ocrLoading: true }));
-
     const file = e.target.files?.item(0);
     if (!file) {
       setState((prev) => ({ ...prev, ocrLoading: false }));
       return;
     }
-
     const { data = { data: { text: '' } }, error } = await tryCatch(
-      Tesseract.recognize(file, 'eng', {
-        logger: (m) => console.log(m),
-      })
+      Tesseract.recognize(file, 'eng', { logger: (m) => console.log(m) })
     );
-
     if (error) {
       setState((prev) => ({ ...prev, ocrLoading: false }));
       return;
     }
-
     const text = data?.data?.text?.trim();
-
     if (!text) {
       setState((prev) => ({ ...prev, ocrLoading: false }));
       return;
     }
-
-    setState((prev) => ({
-      ...prev,
-      markdown: text,
-      ocrLoading: false,
-    }));
+    setState((prev) => ({ ...prev, markdown: text, ocrLoading: false }));
   };
 
   /* =========================
@@ -311,9 +360,7 @@ export const MarkdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   ========================= */
   const handleDownload = () => {
     setState((prev) => ({ ...prev, loading: true }));
-
     const origin = window.location.origin;
-
     pdfMake.fonts = {
       Times: {
         normal: `${origin}/fonts/${FONT_NAME_TIMES}/${FONT_NAME_TIMES}-Regular.ttf`,
@@ -322,13 +369,10 @@ export const MarkdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
         bolditalics: `${origin}/fonts/${FONT_NAME_TIMES}/${FONT_NAME_TIMES}-Bold-Italic.ttf`,
       },
     };
-
     const converted: Content[] = htmlToPdfmake(html) as Content[];
-
     const filteredContent = converted.filter(
       (content) => (content as ContentText).text !== ' '
     );
-
     const documentDefinitions: TDocumentDefinitions = {
       pageSize: 'A4' as PageSize,
       pageMargins: A4_MARGIN,
@@ -381,9 +425,7 @@ export const MarkdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
         margin: ZERO_MARGIN,
       },
     };
-
     pdfMake.createPdf(documentDefinitions).download('download.pdf');
-
     setState((prev) => ({ ...prev, loading: false }));
   };
 
@@ -398,9 +440,7 @@ export const MarkdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       <div className="modal-box flex h-[90vh] w-full max-w-6xl flex-col overflow-hidden p-0">
         {/* Header */}
         <div className="border-base-300 flex items-center justify-between border-b px-4 py-3">
-          <div className="flex items-center gap-3">
-            <h3 className="text-sm font-bold">Markdown Editor</h3>
-          </div>
+          <h3 className="text-sm font-bold">Markdown Editor</h3>
           <button className="btn btn-sm btn-circle btn-ghost" onClick={onClose}>
             ✕
           </button>
@@ -412,9 +452,7 @@ export const MarkdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           <div className="flex h-full flex-col overflow-hidden">
             <div className="border-base-300 flex gap-2 border-b p-2">
               <label
-                className={`btn btn-secondary btn-sm cursor-pointer ${
-                  ocrLoading ? 'btn-disabled' : ''
-                }`}>
+                className={`btn btn-secondary btn-sm cursor-pointer ${ocrLoading ? 'btn-disabled' : ''}`}>
                 <span>{ocrLoading ? 'Processing OCR...' : 'Upload Image'}</span>
                 <input
                   type="file"
@@ -425,7 +463,6 @@ export const MarkdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                 />
               </label>
             </div>
-
             <div
               ref={editorRef}
               className={`${ocrLoading ? 'pointer-events-none opacity-50' : ''} h-full w-full flex-1 overflow-auto text-sm`}
@@ -434,7 +471,7 @@ export const MarkdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
 
           {/* RIGHT: Preview */}
           <div className="bg-base-100 flex h-full flex-col overflow-hidden">
-            <div className="border-base-300 border-b p-2">
+            <div className="border-base-300 flex items-center gap-2 border-b p-2">
               <button
                 type="button"
                 className="btn btn-primary btn-sm"
@@ -446,10 +483,27 @@ export const MarkdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                   'Download PDF'
                 )}
               </button>
+
+              {/* Font picker */}
+              <select
+                className="select select-sm border-base-300 min-w-0 flex-1 border"
+                value={fontId}
+                onChange={(e) =>
+                  setState((prev) => ({ ...prev, fontId: e.target.value }))
+                }>
+                {FONTS.map(({ id, name }) => (
+                  <option key={id} value={id}>
+                    {name}
+                  </option>
+                ))}
+              </select>
             </div>
 
             <div className="h-full w-full flex-1 overflow-auto p-4">
-              <MarkdownPreviewer html={html} />
+              <MarkdownPreviewer
+                html={html}
+                fontClassName={selectedFont.className}
+              />
             </div>
           </div>
         </div>
