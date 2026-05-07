@@ -566,10 +566,10 @@ importers:
     dependencies:
       '@simple-upload/react':
         specifier: workspace:*
-        version: link:../upload/frontend/react
+        version: link:../packages/upload/frontend/react
       '@simple-upload/server':
         specifier: workspace:*
-        version: link:../upload/server
+        version: link:../packages/upload/server
       '@tanstack/react-query':
         specifier: 5.100.9
         version: 5.100.9(react@19.2.6)
@@ -671,7 +671,7 @@ importers:
         specifier: 6.0.3
         version: 6.0.3
 
-  packages/modules/simple/upload/frontend/react:
+  packages/modules/simple/packages/upload/frontend/react:
     dependencies:
       react:
         specifier: 19.2.6
@@ -726,7 +726,7 @@ importers:
         specifier: 8.59.2
         version: 8.59.2(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.3)
 
-  packages/modules/simple/upload/frontend/solid:
+  packages/modules/simple/packages/upload/frontend/solid:
     dependencies:
       solid-js:
         specifier: 1.9.12
@@ -772,7 +772,7 @@ importers:
         specifier: 8.59.2
         version: 8.59.2(eslint@10.3.0(jiti@2.7.0))(typescript@6.0.3)
 
-  packages/modules/simple/upload/server:
+  packages/modules/simple/packages/upload/server:
     dependencies:
       '@aws-sdk/client-s3':
         specifier: 3.1044.0
@@ -5687,10 +5687,6 @@ packages:
     peerDependenciesMeta:
       node-notifier:
         optional: true
-
-  jiti@2.6.1:
-    resolution: {integrity: sha512-ekilCSN1jwRvIbgeg/57YFh8qQDNbwDb9xT/qu2DAHbFFZUicIl4ygVaAvzveMhMVr3LnpSKTNnwt8PoOfmKhQ==}
-    hasBin: true
 
   jiti@2.7.0:
     resolution: {integrity: sha512-AC/7JofJvZGrrneWNaEnJeOLUx+JlGt7tNa0wZiRPT4MY1wmfKjt2+6O2p2uz2+skll8OZZmJMNqeke7kKbNgQ==}
@@ -11048,7 +11044,7 @@ snapshots:
     dependencies:
       '@jridgewell/remapping': 2.3.5
       enhanced-resolve: 5.20.1
-      jiti: 2.6.1
+      jiti: 2.7.0
       lightningcss: 1.32.0
       magic-string: 0.30.21
       source-map-js: 1.2.1
@@ -12289,7 +12285,7 @@ snapshots:
       dotenv: 17.4.2
       exsolve: 1.0.8
       giget: 3.2.0
-      jiti: 2.6.1
+      jiti: 2.7.0
       ohash: 2.0.11
       pathe: 2.0.3
       perfect-debounce: 2.1.0
@@ -14653,8 +14649,6 @@ snapshots:
       - esbuild-register
       - supports-color
       - ts-node
-
-  jiti@2.6.1: {}
 
   jiti@2.7.0: {}
 

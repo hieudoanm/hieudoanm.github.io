@@ -93,17 +93,6 @@ export const apps: App[] = [
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
-    category: 'dev-tools',
-    emoji: '⬆️',
-    id: 'simple-upload',
-    name: 'Simple Upload',
-    href: 'https://hieudoanm.github.io/simple-upload',
-    github: 'https://github.com/hieudoanm/simple-upload',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/simple-upload/refs/heads/master/images/app.png',
-    tags: ['android', 'macos', 'web'],
-  },
-  {
     category: 'fun',
     emoji: '🌀',
     id: 'attractors',
