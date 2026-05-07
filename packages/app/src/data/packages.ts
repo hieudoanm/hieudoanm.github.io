@@ -17,6 +17,14 @@ export const packages: Package[] = [
     description: 'Browser Native',
   },
   {
+    id: 'browser-react',
+    name: '@browser/react',
+    href: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/modules/browser/react',
+    emoji: '🌐',
+    color: '#3b82f6',
+    description: 'Browser Native',
+  },
+  {
     id: 'chess-elo',
     name: '@chess/elo',
     href: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/modules/chess/elo',

@@ -1,5 +1,3 @@
-// components/sidebars/RightSidebar.tsx
-import { WeatherData } from '@hieudoanm/data/weather';
 import { FC, useState } from 'react';
 import { CurrencyTab } from './tabs/CurrencyTab';
 import { DateTimeTab } from './tabs/DateTimeTab';
@@ -13,10 +11,7 @@ const TABS: { id: RightTab; label: string }[] = [
   { id: 'passport', label: 'Passport' },
 ];
 
-export const RightSidebar: FC<{
-  times: string[];
-  weatherQueries: { data: WeatherData | undefined }[];
-}> = ({ times, weatherQueries }) => {
+export const RightSidebar: FC<{ times: string[] }> = ({ times }) => {
   const [tab, setTab] = useState<RightTab>('date-time');
 
   return (
@@ -37,9 +32,7 @@ export const RightSidebar: FC<{
       </div>
       <div className="flex-1 overflow-y-auto">
         {tab === 'currency' && <CurrencyTab />}
-        {tab === 'date-time' && (
-          <DateTimeTab times={times} weatherQueries={weatherQueries} />
-        )}
+        {tab === 'date-time' && <DateTimeTab times={times} />}
         {tab === 'passport' && <PassportTab />}
       </div>
     </aside>

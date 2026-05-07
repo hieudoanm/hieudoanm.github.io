@@ -886,7 +886,7 @@ const AppPage: NextPage = () => {
           onQueryChange={setQuery}
           toolSections={toolSections}
         />
-        <RightSidebar times={times} weatherQueries={weatherQueries} />
+        <RightSidebar times={times} />
       </div>
 
       {/* Mobile */}
@@ -973,7 +973,7 @@ const AppPage: NextPage = () => {
                 {activeSidebar === 'tasks' ? (
                   <LeftSidebar />
                 ) : (
-                  <RightSidebar times={times} weatherQueries={weatherQueries} />
+                  <RightSidebar times={times} />
                 )}
               </div>
             </div>

@@ -4,12 +4,13 @@ import { Event, events } from '@hieudoanm/data/calendar/events';
 import { months, monthsByQuarters } from '@hieudoanm/data/calendar/months';
 import { yearsByDecades } from '@hieudoanm/data/calendar/years';
 import { timezones } from '@hieudoanm/data/timezones';
-import { WeatherData } from '@hieudoanm/data/weather';
+import type { WeatherData } from '@hieudoanm/data/weather';
 import {
   generateFullCalendar,
   getWeekOfYear,
   LunarCalendar,
 } from '@hieudoanm/utils/calendar';
+import { useQueries } from '@tanstack/react-query';
 import { FC, useState } from 'react';
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
@@ -38,14 +39,24 @@ const getEventsForDate = (date: Date): Event[] =>
 
 // ── Tab ───────────────────────────────────────────────────────────────────────
 
-export const DateTimeTab: FC<{
-  times: string[];
-  weatherQueries: { data: WeatherData | undefined }[];
-}> = ({ times, weatherQueries }) => {
+export const DateTimeTab: FC<{ times: string[] }> = ({ times }) => {
   const today = new Date();
   const [month, setMonth] = useState(today.getMonth());
   const [year, setYear] = useState(today.getFullYear());
   const [chosenDate, setChosenDate] = useState(today);
+
+  const weatherQueries = useQueries({
+    queries: timezones.map(({ lat, lon }) => ({
+      queryKey: ['open-meteo', lat, lon],
+      queryFn: async () => {
+        const res = await fetch(
+          `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weather_code`
+        );
+        return (await res.json()).current as WeatherData;
+      },
+      staleTime: 1000 * 60 * 10,
+    })),
+  });
 
   const calendar = generateFullCalendar(year, month);
   const chosenEvents = getEventsForDate(chosenDate);
