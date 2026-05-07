@@ -32,4 +32,28 @@ export const packages: Package[] = [
     color: '#1f2937',
     description: 'Chess Elo Calculator',
   },
+  {
+    id: 'simple-upload-react',
+    name: '@simple-upload/react',
+    href: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/modules/simple/upload/frontend/react',
+    emoji: '📤',
+    color: '#3b82f6',
+    description: 'Simple Upload - React',
+  },
+  {
+    id: 'simple-upload-solid',
+    name: '@simple-upload/solid',
+    href: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/modules/simple/upload/frontend/solid',
+    emoji: '📤',
+    color: '#3b82f6',
+    description: 'Simple Upload - Solid',
+  },
+  {
+    id: 'simple-upload-server',
+    name: '@simple-upload/server',
+    href: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/modules/simple/upload/server',
+    emoji: '📤',
+    color: '#3b82f6',
+    description: 'Simple Upload - Server',
+  },
 ];
