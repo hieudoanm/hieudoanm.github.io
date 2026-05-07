@@ -222,8 +222,8 @@ importers:
         specifier: 8.0.1
         version: 8.0.1
       '@types/chrome':
-        specifier: 0.1.40
-        version: 0.1.40
+        specifier: 0.1.42
+        version: 0.1.42
       '@types/firefox-webext-browser':
         specifier: 143.0.0
         version: 143.0.0
@@ -282,8 +282,8 @@ importers:
         specifier: 8.0.1
         version: 8.0.1
       '@types/chrome':
-        specifier: 0.1.40
-        version: 0.1.40
+        specifier: 0.1.42
+        version: 0.1.42
       '@types/firefox-webext-browser':
         specifier: 143.0.0
         version: 143.0.0
@@ -339,8 +339,8 @@ importers:
         specifier: 7.0.0
         version: 7.0.0
       '@types/chrome':
-        specifier: 0.1.40
-        version: 0.1.40
+        specifier: 0.1.42
+        version: 0.1.42
       '@types/firefox-webext-browser':
         specifier: 143.0.0
         version: 143.0.0
@@ -384,8 +384,8 @@ importers:
         specifier: 8.0.1
         version: 8.0.1
       '@types/chrome':
-        specifier: 0.1.40
-        version: 0.1.40
+        specifier: 0.1.42
+        version: 0.1.42
       '@types/firefox-webext-browser':
         specifier: 143.0.0
         version: 143.0.0
@@ -2104,8 +2104,8 @@ packages:
   '@types/babel__traverse@7.28.0':
     resolution: {integrity: sha512-8PvcXf70gTDZBgt9ptxJ8elBeBjcLOAcOtoO/mPJjtji1+CdGbHgm77om1GrsPxsiE+uXIpNSK64UYaIwQXd4Q==}
 
-  '@types/chrome@0.1.40':
-    resolution: {integrity: sha512-UnfyRAe8ORu9HSuTH0EqyOEUin3JrWW9Nl/gDXezNfTUrfIoxw+WRZgKOxGz0t5BnjbfXBnS2eCYfW2PxH1wcA==}
+  '@types/chrome@0.1.42':
+    resolution: {integrity: sha512-tdT2roFqGecZZDjA9fUEAINb2STxSPifHMDvY6EfRjNRCjdrs/0FwKt5RCIA9MKMd1arAYZZL3nwEkp6ZLZu2w==}
 
   '@types/cross-spawn@6.0.2':
     resolution: {integrity: sha512-KuwNhp3eza+Rhu8IFI5HUXRP0LIhqH5cAjubUvGXXthh4YYBuP2ntwEX+Cz8GJoZUHlKo247wPWOfA9LYEq4cw==}
@@ -9732,7 +9732,7 @@ snapshots:
     dependencies:
       '@babel/types': 7.29.0
 
-  '@types/chrome@0.1.40':
+  '@types/chrome@0.1.42':
     dependencies:
       '@types/filesystem': 0.0.36
       '@types/har-format': 1.2.16
