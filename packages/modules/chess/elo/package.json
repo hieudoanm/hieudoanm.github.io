@@ -17,7 +17,7 @@
   "license": "GPL-3.0",
   "packageManager": "pnpm@11.0.8",
   "engines": {
-    "node": "25.9.0"
+    "node": "26.1.0"
   },
   "scripts": {
     "format": "prettier --cache --write .",
