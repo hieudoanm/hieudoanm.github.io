@@ -71,7 +71,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
         with:
-          sparse-checkout: 'packages/app'
+          sparse-checkout: |
+            'packages/app'
+            'packages/modules/**'
       - name: Install pnpm
         uses: pnpm/action-setup@v6
         with:
