@@ -71,28 +71,6 @@ export const apps: App[] = [
     tags: ['android', 'macos', 'web'],
   },
   {
-    category: 'dev-tools',
-    emoji: '📘',
-    id: 'cobra.md',
-    name: 'Cobra MD',
-    href: 'https://hieudoanm.github.io/cobra.md',
-    github: 'https://github.com/hieudoanm/cobra.md',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/cobra.md/refs/heads/master/images/app.png',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
-    category: 'dev-tools',
-    emoji: '🛰️',
-    id: 'proxy',
-    name: 'Proxy',
-    href: 'https://hieudoanm.github.io/proxy',
-    github: 'https://github.com/hieudoanm/proxy',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/proxy/refs/heads/master/images/app.png',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
     category: 'fun',
     emoji: '🌀',
     id: 'attractors',
@@ -222,6 +200,17 @@ export const apps: App[] = [
     github: 'https://github.com/hieudoanm/invoice',
     image:
       'https://raw.githubusercontent.com/hieudoanm/invoice/refs/heads/master/images/app.png',
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
+  },
+  {
+    category: 'utilities',
+    emoji: '🛰️',
+    id: 'proxy',
+    name: 'Proxy',
+    href: 'https://hieudoanm.github.io/proxy',
+    github: 'https://github.com/hieudoanm/proxy',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/proxy/refs/heads/master/images/app.png',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {

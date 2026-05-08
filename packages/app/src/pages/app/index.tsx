@@ -53,8 +53,9 @@ import {
   messaging as messagingBookmarks,
   websites as websiteBookmarks,
 } from '@hieudoanm/data/bookmarks';
-import { extensions } from '@hieudoanm/data/extensions';
-import { packages } from '@hieudoanm/data/packages';
+import { clis } from '@hieudoanm/data/downloads/cli';
+import { extensions } from '@hieudoanm/data/downloads/extensions';
+import { packages } from '@hieudoanm/data/downloads/packages';
 import { getTimeInZone, timezones } from '@hieudoanm/data/timezones';
 import type { WeatherData } from '@hieudoanm/data/weather';
 import { useQueries } from '@tanstack/react-query';
@@ -636,6 +637,7 @@ const MainContent: FC<MainContentProps> = memo(
     // Download sections
     const downloadSections = useMemo(
       () => [
+        { label: 'CLI', items: clis, keyProp: 'id' as const },
         { label: 'Extensions', items: extensions, keyProp: 'id' as const },
         { label: 'Packages', items: packages, keyProp: 'id' as const },
         { label: 'Apps', items: apps, keyProp: 'id' as const },

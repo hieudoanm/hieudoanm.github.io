@@ -1,17 +1,16 @@
 # 👨‍💻 I'm [HIEU DOAN](https://hieudoanm.github.io)
 
-## Table of Contents (25)
+## Table of Contents (23)
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
-  - [Table of Contents (25)](#table-of-contents-25)
+  - [Table of Contents (23)](#table-of-contents-23)
   - [Artificial Intelligence (3)](#artificial-intelligence-3)
   - [Design (2)](#design-2)
-  - [Dev Tools (2)](#dev-tools-2)
   - [Fun (4)](#fun-4)
   - [Games (2)](#games-2)
   - [Languages (1)](#languages-1)
   - [Template (2)](#template-2)
-  - [Utilities (8)](#utilities-8)
+  - [Utilities (9)](#utilities-9)
 
 ## Artificial Intelligence (3)
 
@@ -35,16 +34,6 @@
 [composition-gh]: https://github.com/hieudoanm/composition
 [svg]: https://hieudoanm.github.io/svg
 [svg-gh]: https://github.com/hieudoanm/svg
-
-## Dev Tools (2)
-
-1. 📘 [Cobra MD][cobra.md] - [GitHub][cobra.md-gh]
-2. 🛰️ [Proxy][proxy] - [GitHub][proxy-gh]
-
-[cobra.md]: https://hieudoanm.github.io/cobra.md
-[cobra.md-gh]: https://github.com/hieudoanm/cobra.md
-[proxy]: https://hieudoanm.github.io/proxy
-[proxy-gh]: https://github.com/hieudoanm/proxy
 
 ## Fun (4)
 
@@ -89,16 +78,17 @@
 [telegram]: https://hieudoanm.github.io/telegram
 [telegram-gh]: https://github.com/hieudoanm/telegram
 
-## Utilities (8)
+## Utilities (9)
 
 1. 📚 [Docs][docs] - [GitHub][docs-gh]
 2. 📱 [InstaSize][instasize] - [GitHub][instasize-gh]
 3. 🧾 [Invoice][invoice] - [GitHub][invoice-gh]
-4. 🕵️ [Redact][redact] - [GitHub][redact-gh]
-5. 📸 [Snapshot][snapshot] - [GitHub][snapshot-gh]
-6. 🖥️ [System][system] - [GitHub][system-gh]
-7. 📝 [Transcript][transcript] - [GitHub][transcript-gh]
-8. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
+4. 🛰️ [Proxy][proxy] - [GitHub][proxy-gh]
+5. 🕵️ [Redact][redact] - [GitHub][redact-gh]
+6. 📸 [Snapshot][snapshot] - [GitHub][snapshot-gh]
+7. 🖥️ [System][system] - [GitHub][system-gh]
+8. 📝 [Transcript][transcript] - [GitHub][transcript-gh]
+9. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
 
 [docs]: https://hieudoanm.github.io/docs
 [docs-gh]: https://github.com/hieudoanm/docs
@@ -106,6 +96,8 @@
 [instasize-gh]: https://github.com/hieudoanm/instasize
 [invoice]: https://hieudoanm.github.io/invoice
 [invoice-gh]: https://github.com/hieudoanm/invoice
+[proxy]: https://hieudoanm.github.io/proxy
+[proxy-gh]: https://github.com/hieudoanm/proxy
 [redact]: https://hieudoanm.github.io/redact
 [redact-gh]: https://github.com/hieudoanm/redact
 [snapshot]: https://hieudoanm.github.io/snapshot
