@@ -1,18 +1,14 @@
 import '@hieudoanm/styles/globals.css';
-import { HeadTemplate } from '../templates/HeadTemplate';
+import { HeadTemplate } from '@hieudoanm/templates/HeadTemplate';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import type { AppProps } from 'next/app';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Be_Vietnam_Pro } from 'next/font/google';
 import { FC } from 'react';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const beVietnamPro = Be_Vietnam_Pro({
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
   subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
+  variable: '--font-be-vietnam-pro',
 });
 
 const App: FC<AppProps> = ({ Component, pageProps }) => {
@@ -20,7 +16,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
     <>
       <HeadTemplate basic={{ title: 'Hieu Doan' }} />
       <QueryClientProvider client={new QueryClient()}>
-        <div className={`${geistSans.className} ${geistMono.className}`}>
+        <div className={beVietnamPro.className}>
           <Component {...pageProps} />
         </div>
       </QueryClientProvider>
