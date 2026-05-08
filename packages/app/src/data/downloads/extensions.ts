@@ -18,6 +18,14 @@ export const extensions: Download[] = [
     description: 'GitHub',
   },
   {
+    id: 'instagram-download',
+    label: 'Download Images',
+    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/instagram/download/download',
+    emoji: '📸',
+    color: '#e10600',
+    description: 'Instagram',
+  },
+  {
     id: 'shopify-detect',
     label: 'Shopify Detect',
     url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/shopify/detect/download',
