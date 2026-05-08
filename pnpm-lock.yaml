@@ -273,7 +273,7 @@ importers:
         specifier: 7.0.2
         version: 7.0.2(webpack@5.106.2)
 
-  packages/extensions/github-open-link:
+  packages/extensions/github/open-link:
     devDependencies:
       '@eslint/js':
         specifier: 10.0.1
@@ -327,7 +327,7 @@ importers:
         specifier: 7.0.2
         version: 7.0.2(webpack@5.106.2)
 
-  packages/extensions/shopify-detect:
+  packages/extensions/shopify/detect:
     devDependencies:
       '@eslint/js':
         specifier: 10.0.1
@@ -381,7 +381,7 @@ importers:
         specifier: 7.0.2
         version: 7.0.2(webpack@5.106.2)
 
-  packages/extensions/youtube-transcript:
+  packages/extensions/youtube/transcript:
     devDependencies:
       '@eslint/js':
         specifier: 10.0.1
@@ -11514,7 +11514,7 @@ snapshots:
   '@types/vinyl@2.0.12':
     dependencies:
       '@types/expect': 1.20.4
-      '@types/node': 15.14.9
+      '@types/node': 25.6.0
 
   '@types/yargs-parser@21.0.3': {}
 
@@ -15781,7 +15781,7 @@ snapshots:
   normalize-package-data@2.5.0:
     dependencies:
       hosted-git-info: 2.8.9
-      resolve: 1.22.2
+      resolve: 1.22.12
       semver: 5.7.2
       validate-npm-package-license: 3.0.4
 

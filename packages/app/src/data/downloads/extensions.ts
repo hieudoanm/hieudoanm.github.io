@@ -12,7 +12,7 @@ export const extensions: Download[] = [
   {
     id: 'github-open-link',
     label: 'Open Link',
-    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/github-open-link/download',
+    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/github/open-link/download',
     emoji: '🔗',
     color: '#111827',
     description: 'GitHub',
@@ -20,7 +20,7 @@ export const extensions: Download[] = [
   {
     id: 'shopify-detect',
     label: 'Shopify Detect',
-    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/shopify-detect/download',
+    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/shopify/detect/download',
     emoji: '🛍️',
     color: '#10b981',
     description: 'Shopify',
@@ -28,7 +28,7 @@ export const extensions: Download[] = [
   {
     id: 'youtube-transcript',
     label: 'YouTube Transcript',
-    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/youtube-transcript/download',
+    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/youtube/transcript/download',
     emoji: '📜',
     color: '#ef4444',
     description: 'YouTube',
