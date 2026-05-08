@@ -1,9 +1,9 @@
 packages:
   - packages/**
 allowBuilds:
-  '@prisma/engines': true
-  prisma: true
-  sharp: true
-  spawn-sync: true
-  tesseract.js: true
-  unrs-resolver: true
+  '@prisma/engines': set this to true or false
+  prisma: set this to true or false
+  sharp: set this to true or false
+  spawn-sync: set this to true or false
+  tesseract.js: set this to true or false
+  unrs-resolver: set this to true or false
