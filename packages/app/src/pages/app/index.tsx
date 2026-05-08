@@ -53,9 +53,7 @@ import {
   messaging as messagingBookmarks,
   websites as websiteBookmarks,
 } from '@hieudoanm/data/bookmarks';
-import { clis } from '@hieudoanm/data/downloads/cli';
-import { extensions } from '@hieudoanm/data/downloads/extensions';
-import { packages } from '@hieudoanm/data/downloads/packages';
+import { clis, extensions, packages } from '@hieudoanm/data/downloads';
 import { getTimeInZone, timezones } from '@hieudoanm/data/timezones';
 import type { WeatherData } from '@hieudoanm/data/weather';
 import { useQueries } from '@tanstack/react-query';
@@ -640,8 +638,12 @@ const MainContent: FC<MainContentProps> = memo(
         { label: 'CLI', items: clis, keyProp: 'id' as const },
         { label: 'Extensions', items: extensions, keyProp: 'id' as const },
         { label: 'Packages', items: packages, keyProp: 'id' as const },
-        { label: 'Apps', items: apps, keyProp: 'id' as const },
       ],
+      []
+    );
+
+    const appSections = useMemo(
+      () => [{ label: 'Apps', items: apps, keyProp: 'id' as const }],
       []
     );
 
@@ -677,6 +679,17 @@ const MainContent: FC<MainContentProps> = memo(
             : s.items,
         })),
       [downloadSections, filtering, query]
+    );
+
+    const filteredApps = useMemo(
+      () =>
+        appSections.map((s) => ({
+          ...s,
+          filtered: filtering
+            ? s.items.filter((a) => match(a.id, query))
+            : s.items,
+        })),
+      [appSections, filtering, query]
     );
 
     const hasAnyResult =
@@ -720,6 +733,18 @@ const MainContent: FC<MainContentProps> = memo(
         )}
 
         {filteredDownloads.map(({ label, filtered }) =>
+          !filtering || filtered.length > 0 ? (
+            <Section key={label} label={label} count={filtered.length}>
+              <div className={GRID_4}>
+                {filtered.map((a) => (
+                  <BookmarkCard key={a.id} {...a} />
+                ))}
+              </div>
+            </Section>
+          ) : null
+        )}
+
+        {filteredApps.map(({ label, filtered }) =>
           !filtering || filtered.length > 0 ? (
             <Section key={label} label={label} count={filtered.length}>
               <div className={GRID_4}>
@@ -867,8 +892,9 @@ const AppPage: NextPage = () => {
         items: f(toolSections.images, 'label'),
         Card: ToolCard,
       },
-      { label: 'Extensions', items: f(extensions, 'id'), Card: AppCard },
-      { label: 'Packages', items: f(packages, 'id'), Card: AppCard },
+      { label: 'CLIs', items: f(clis, 'id'), Card: BookmarkCard },
+      { label: 'Extensions', items: f(extensions, 'id'), Card: BookmarkCard },
+      { label: 'Packages', items: f(packages, 'id'), Card: BookmarkCard },
       { label: 'Apps', items: f(apps, 'id'), Card: AppCard },
     ];
   }, [query, toolSections]);

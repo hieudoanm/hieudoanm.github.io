@@ -1,43 +1,36 @@
-type Extension = {
-  id: string;
-  name: string;
-  href: string;
-  emoji: string;
-  color: string;
-  description: string;
-};
+import { Download } from './types';
 
-export const extensions: Extension[] = [
+export const extensions: Download[] = [
   {
     id: 'blocked',
-    name: 'Blocked',
-    href: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/blocked/download',
+    label: 'Blocked',
+    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/blocked/download',
     emoji: '🚫',
     color: '#ef4444',
-    description: 'Block distracting or unwanted websites',
+    description: 'Blocked',
   },
   {
     id: 'github-open-link',
-    name: 'GitHub Open Link',
-    href: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/github-open-link/download',
+    label: 'Open Link',
+    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/github-open-link/download',
     emoji: '🔗',
     color: '#111827',
-    description: 'Open GitHub links directly in the correct view',
+    description: 'GitHub',
   },
   {
     id: 'shopify-detect',
-    name: 'Shopify Detect',
-    href: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/shopify-detect/download',
+    label: 'Shopify Detect',
+    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/shopify-detect/download',
     emoji: '🛍️',
     color: '#10b981',
-    description: 'Detect if a website is powered by Shopify',
+    description: 'Shopify',
   },
   {
     id: 'youtube-transcript',
-    name: 'YouTube Transcript',
-    href: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/youtube-transcript/download',
+    label: 'YouTube Transcript',
+    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/youtube-transcript/download',
     emoji: '📜',
     color: '#ef4444',
-    description: 'Extract and view YouTube video transcripts',
+    description: 'YouTube',
   },
 ];
