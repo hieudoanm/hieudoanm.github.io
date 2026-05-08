@@ -9,7 +9,15 @@ export default defineConfig([
     files: ['**/*.{js,mjs,cjs,ts,mts,cts}'],
     plugins: { js },
     extends: ['js/recommended'],
-    languageOptions: { globals: { ...globals.browser, ...globals.node } },
+    languageOptions: {
+      globals: { ...globals.browser, ...globals.node },
+      parserOptions: {
+        project: './tsconfig.json',
+        tsconfigRootDir:
+          (globalThis as { process?: { cwd: () => string } }).process?.cwd() ??
+          '.',
+      },
+    },
   },
   tseslint.configs.recommended,
 ]);

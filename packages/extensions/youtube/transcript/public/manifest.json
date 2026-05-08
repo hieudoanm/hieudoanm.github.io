@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "YouTube Transcript",
-  "version": "1.0",
+  "version": "0.0.1",
   "description": "Fetch transcript of current YouTube video",
   "permissions": ["tabs", "*://www.youtube.com/*"],
   "browser_action": {

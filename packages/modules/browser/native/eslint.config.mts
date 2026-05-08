@@ -11,6 +11,12 @@ export default defineConfig([
     extends: ['js/recommended'],
     languageOptions: {
       globals: { ...globals.browser, ...globals.node },
+      parserOptions: {
+        project: './tsconfig.json',
+        tsconfigRootDir:
+          (globalThis as { process?: { cwd: () => string } }).process?.cwd() ??
+          '.',
+      },
     },
   },
   tseslint.configs.recommended,

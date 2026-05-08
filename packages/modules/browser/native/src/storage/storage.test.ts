@@ -93,14 +93,16 @@ describe('createStorage', () => {
   });
 
   describe('SSR (no window)', () => {
-    const originalWindow = globalThis.window;
+    let windowGetterSpy: jest.SpyInstance<Window & typeof globalThis, []>;
 
     beforeAll(() => {
-      delete (globalThis as { window?: unknown }).window;
+      windowGetterSpy = jest
+        .spyOn(globalThis, 'window', 'get')
+        .mockReturnValue(undefined as unknown as Window & typeof globalThis);
     });
 
     afterAll(() => {
-      globalThis.window = originalWindow;
+      windowGetterSpy.mockRestore();
     });
 
     it('gracefully no-ops when window is undefined', () => {

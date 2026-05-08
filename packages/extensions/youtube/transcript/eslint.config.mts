@@ -17,6 +17,12 @@ export default defineConfig([
         ...globals.node,
         ...globals.webextensions,
       },
+      parserOptions: {
+        project: './tsconfig.json',
+        tsconfigRootDir:
+          (globalThis as { process?: { cwd: () => string } }).process?.cwd() ??
+          '.',
+      },
     },
   },
   tseslint.configs.recommended,
