@@ -43,7 +43,7 @@ jobs:
         run: pnpm run lint
 
       - name: Test
-        run: pnpm run test
+        run: pnpm turbo run test --concurrency=1
 
   # ── Build & Release (master only, all 3 platforms, after quality passes) ─
   build:
