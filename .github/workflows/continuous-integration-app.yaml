@@ -93,7 +93,7 @@ jobs:
           sudo apt-get install -y libgtk-3-dev libwebkit2gtk-4.1-dev libayatana-appindicator3-dev librsvg2-dev
 
       - name: Build Production
-        run: pnpm run build
+        run: pnpm run build --concurrency=1
         shell: bash
 
       - name: Create / Update Platform Release

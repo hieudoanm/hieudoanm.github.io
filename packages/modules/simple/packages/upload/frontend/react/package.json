@@ -26,7 +26,8 @@
     "lint": "eslint . --fix",
     "build": "tsc -p tsconfig.build.json",
     "pretest": "jest --clearCache",
-    "test": "jest"
+    "test": "jest",
+    "prepare": "pnpm run build"
   },
   "dependencies": {
     "react": "19.2.6"
