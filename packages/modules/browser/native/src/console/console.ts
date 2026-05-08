@@ -1,9 +1,28 @@
 type LogLevel = 'debug' | 'info' | 'warn' | 'error';
 
 interface LoggerConfig {
-  level?: LogLevel;
-  timestamp?: boolean;
+  minLevel?: LogLevel;
+  showTimestamp?: boolean;
   scope?: string;
+  enabled?: boolean;
+}
+
+export interface Logger {
+  debug: (msg: string, ...data: unknown[]) => void;
+  info: (msg: string, ...data: unknown[]) => void;
+  warn: (msg: string, ...data: unknown[]) => void;
+  error: (msg: string, ...data: unknown[]) => void;
+  group: (
+    label: string,
+    fn: (log: Logger) => void,
+    collapsed?: boolean
+  ) => void;
+  time: (label: string) => void;
+  timeEnd: (label: string) => void;
+  table: (data: unknown) => void;
+  count: (label: string) => void;
+  clear: () => void;
+  withScope: (newScope: string) => Logger;
 }
 
 /* =========================
@@ -49,26 +68,38 @@ const browserStyles: Record<LogLevel, string> = {
 };
 
 /* =========================
+   Console method map
+   ========================= */
+
+const consoleMethods: Record<LogLevel, 'debug' | 'info' | 'warn' | 'error'> = {
+  debug: 'debug',
+  info: 'info',
+  warn: 'warn',
+  error: 'error',
+};
+
+/* =========================
    Logger factory
    ========================= */
 
 export const createLogger = (config: LoggerConfig = {}) => {
-  const level = config.level ?? 'info';
-  const timestamp = config.timestamp ?? true;
+  const minLevel = config.minLevel ?? 'info';
+  const showTimestamp = config.showTimestamp ?? true;
   const scope = config.scope ?? '';
+  const enabled = config.enabled ?? true;
 
   const shouldLog = (msgLevel: LogLevel) =>
-    levelOrder[msgLevel] >= levelOrder[level];
+    enabled && levelOrder[msgLevel] >= levelOrder[minLevel];
 
   /* =========================
      Core formatter
      ========================= */
 
   const formatNode = (msgLevel: LogLevel, message: string): string => {
-    const time = timestamp ? `[${new Date().toISOString()}] ` : '';
-    const scopeStr = scope ? `[${scope}] ` : '';
+    const time = showTimestamp ? `${new Date().toISOString()}  ` : '';
+    const scopeStr = scope ? `${scope}  ` : '';
 
-    return `${nodeColors[msgLevel]}${time}${scopeStr}${msgLevel.toUpperCase()}: ${message}${reset}`;
+    return `${nodeColors[msgLevel]} ${msgLevel.toUpperCase()}  ${scopeStr}${time}${message}${reset}`;
   };
 
   const formatBrowser = (msgLevel: LogLevel, message: string) => {
@@ -85,7 +116,7 @@ export const createLogger = (config: LoggerConfig = {}) => {
       );
     }
 
-    if (timestamp) {
+    if (showTimestamp) {
       parts.push(`%c ${new Date().toISOString()} `);
       styles.push('color:#6b7280;');
     }
@@ -108,9 +139,9 @@ export const createLogger = (config: LoggerConfig = {}) => {
 
     if (isBrowser) {
       const { text, styles } = formatBrowser(msgLevel, message);
-      console.log(text, ...styles, ...data);
+      console[consoleMethods[msgLevel]](text, ...styles, ...data);
     } else {
-      console.log(formatNode(msgLevel, message), ...data);
+      console[consoleMethods[msgLevel]](formatNode(msgLevel, message), ...data);
     }
   };
 
@@ -118,7 +149,7 @@ export const createLogger = (config: LoggerConfig = {}) => {
      API
      ========================= */
 
-  return {
+  const logger: Logger = {
     debug: (msg: string, ...data: unknown[]) => log('debug', msg, ...data),
 
     info: (msg: string, ...data: unknown[]) => log('info', msg, ...data),
@@ -128,24 +159,25 @@ export const createLogger = (config: LoggerConfig = {}) => {
     error: (msg: string, ...data: unknown[]) => log('error', msg, ...data),
 
     /* useful extras */
-    group: (label: string, fn: () => void) => {
-      if (isBrowser) {
-        console.group(label);
-        fn();
-        console.groupEnd();
+    group: (label: string, fn: (log: Logger) => void, collapsed = false) => {
+      if (collapsed) {
+        console.groupCollapsed(label);
       } else {
-        console.log(`\n=== ${label} ===`);
-        fn();
-        console.log(`=== /${label} ===\n`);
+        console.group(label);
       }
+      fn(logger);
+      console.groupEnd();
     },
 
     time: (label: string) => console.time(label),
     timeEnd: (label: string) => console.timeEnd(label),
     table: (data: unknown) => console.table(data),
+    count: (label: string) => console.count(label),
     clear: () => console.clear(),
 
     withScope: (newScope: string) =>
       createLogger({ ...config, scope: newScope }),
   };
+
+  return logger;
 };
