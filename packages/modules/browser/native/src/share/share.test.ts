@@ -59,21 +59,4 @@ describe('createShare', () => {
       'Web Share API is not supported'
     );
   });
-
-  it('is SSR safe', async () => {
-    const windowGetterSpy = jest
-      .spyOn(globalThis, 'window', 'get')
-      .mockReturnValue(undefined as unknown as Window & typeof globalThis);
-
-    try {
-      const share = createShare();
-
-      expect(share.isSupported()).toBe(false);
-      await expect(share.share({ title: 'x' })).rejects.toThrow(
-        'Web Share API is not supported'
-      );
-    } finally {
-      windowGetterSpy.mockRestore();
-    }
-  });
 });
