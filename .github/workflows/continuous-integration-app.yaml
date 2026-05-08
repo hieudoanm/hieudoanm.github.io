@@ -99,12 +99,12 @@ jobs:
       - name: Create / Update Platform Release
         uses: softprops/action-gh-release@v3
         with:
-          tag_name: ${{ matrix.platform }}
-          name: ${{ matrix.platform }} Release
+          tag_name: 'app-${{ matrix.platform }}'
+          name: 'App (${{ matrix.platform }}) Release'
           body: 'Automated Build for ${{ matrix.platform }} latest commit on master.'
           draft: false
           prerelease: false
-          overwrite: true
+          overwrite_files: true
           files: ${{ matrix.bundle_path }}
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}

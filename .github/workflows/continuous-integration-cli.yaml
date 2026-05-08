@@ -87,7 +87,7 @@ jobs:
           body: 'Automated Build for ${{ matrix.package }} CLI latest commit on master.'
           draft: false
           prerelease: false
-          overwrite: true
+          overwrite_files: true
           files: packages/cli/go/cobra/${{ matrix.package }}/bin/*
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
