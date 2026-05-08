@@ -1,4 +1,4 @@
-name: Continuous Integration (TypeScript)
+name: Continuous Integration (App)
 
 on:
   push:

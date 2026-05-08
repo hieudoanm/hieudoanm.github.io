@@ -1,4 +1,4 @@
-name: Continuous Integration (Go)
+name: Continuous Integration (CLI)
 
 on:
   push:

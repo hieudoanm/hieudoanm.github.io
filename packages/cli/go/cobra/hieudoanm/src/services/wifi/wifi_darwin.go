@@ -61,7 +61,7 @@ import (
 	"unsafe"
 )
 
-func ScanWifiDarwin() (string, error) {
+func ScanWifi() (string, error) {
 	out := C.scanWifi()
 	defer C.free(unsafe.Pointer(out))
 
