@@ -11,16 +11,6 @@
   },
   {
     "category": "artificial-intelligence",
-    "emoji": "👨‍💻",
-    "id": "hieudoanm",
-    "name": "Hieu Doan",
-    "href": "https://hieudoanm.github.io/hieudoanm",
-    "github": "https://github.com/hieudoanm/hieudoanm",
-    "image": "https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/images/app.png",
-    "tags": ["cli", "extension", "android", "macos", "web"]
-  },
-  {
-    "category": "artificial-intelligence",
     "emoji": "⚡",
     "id": "promptly",
     "name": "Promptly",

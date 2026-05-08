@@ -1,10 +1,10 @@
 # 👨‍💻 I'm [HIEU DOAN](https://hieudoanm.github.io)
 
-## Table of Contents (23)
+## Table of Contents (22)
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
-  - [Table of Contents (23)](#table-of-contents-23)
-  - [Artificial Intelligence (3)](#artificial-intelligence-3)
+  - [Table of Contents (22)](#table-of-contents-22)
+  - [Artificial Intelligence (2)](#artificial-intelligence-2)
   - [Design (2)](#design-2)
   - [Fun (4)](#fun-4)
   - [Games (2)](#games-2)
@@ -12,16 +12,13 @@
   - [Template (2)](#template-2)
   - [Utilities (9)](#utilities-9)
 
-## Artificial Intelligence (3)
+## Artificial Intelligence (2)
 
 1. 🧪 [Distilled][distilled] - [GitHub][distilled-gh]
-2. 👨‍💻 [Hieu Doan][hieudoanm] - [GitHub][hieudoanm-gh]
-3. ⚡ [Promptly][promptly] - [GitHub][promptly-gh]
+2. ⚡ [Promptly][promptly] - [GitHub][promptly-gh]
 
 [distilled]: https://hieudoanm.github.io/distilled
 [distilled-gh]: https://github.com/hieudoanm/distilled
-[hieudoanm]: https://hieudoanm.github.io/hieudoanm
-[hieudoanm-gh]: https://github.com/hieudoanm/hieudoanm
 [promptly]: https://hieudoanm.github.io/promptly
 [promptly-gh]: https://github.com/hieudoanm/promptly
 

@@ -1,17 +1,14 @@
 # Hieu Doan
 
-## Table of Contents (23)
+## Table of Contents (22)
 
-## Artificial Intelligence (3)
+## Artificial Intelligence (2)
 
 1. 🧪 [Distilled][distilled] - [GitHub][distilled-gh]
-2. 👨‍💻 [Hieu Doan][hieudoanm] - [GitHub][hieudoanm-gh]
-3. ⚡ [Promptly][promptly] - [GitHub][promptly-gh]
+2. ⚡ [Promptly][promptly] - [GitHub][promptly-gh]
 
 [distilled]: https://hieudoanm.github.io/distilled
 [distilled-gh]: https://github.com/hieudoanm/distilled
-[hieudoanm]: https://hieudoanm.github.io/hieudoanm
-[hieudoanm-gh]: https://github.com/hieudoanm/hieudoanm
 [promptly]: https://hieudoanm.github.io/promptly
 [promptly-gh]: https://github.com/hieudoanm/promptly
 
