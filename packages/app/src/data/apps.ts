@@ -226,17 +226,6 @@ export const apps: App[] = [
   },
   {
     category: 'utilities',
-    emoji: '📝',
-    id: 'transcript',
-    name: 'Transcript',
-    href: 'https://hieudoanm.github.io/transcript',
-    github: 'https://github.com/hieudoanm/transcript',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/transcript/refs/heads/master/images/app.png',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
-    category: 'utilities',
     emoji: '📶',
     id: 'wifi',
     name: 'Wifi',
