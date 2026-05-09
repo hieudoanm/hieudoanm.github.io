@@ -40,6 +40,7 @@ import { EmojisModal } from '@hieudoanm/components/modals/tools/EmojisModal';
 import { FigletModal } from '@hieudoanm/components/modals/tools/FigletModal';
 import { IPModal } from '@hieudoanm/components/modals/tools/IPModal';
 import { KaprekarModal } from '@hieudoanm/components/modals/tools/KaprekarModal';
+import { LegislationModal } from '@hieudoanm/components/modals/visualization/LegislationModal';
 import { ShopifyDetectModal } from '@hieudoanm/components/modals/tools/ShopifyDetectModal';
 import { StringModal } from '@hieudoanm/components/modals/tools/StringModal';
 import { UUIDModal } from '@hieudoanm/components/modals/tools/UUIDModal';
@@ -114,7 +115,8 @@ type ModalId =
   | 'markdown'
   | 'youtube-thumbnails'
   | 'palindrome'
-  | 'clipboard';
+  | 'clipboard'
+  | 'legislation';
 
 type SidebarTab = 'tasks' | 'clock';
 
@@ -165,6 +167,7 @@ const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
   'youtube-thumbnails': YouTubeThumbnailsModal,
   palindrome: PalindromeModal,
   clipboard: ClipboardModal,
+  legislation: LegislationModal,
 };
 
 /* ------------------------------------------------------------------ */
@@ -485,6 +488,15 @@ const makeTools = (
       onClick: open('youtube-thumbnails'),
     },
   ],
+  visualization: [
+    {
+      label: 'Legislation',
+      description: 'Visualization',
+      emoji: '🏛️',
+      color: '#ef4444',
+      onClick: open('legislation'),
+    },
+  ],
 });
 
 /* ------------------------------------------------------------------ */
@@ -538,6 +550,7 @@ const SearchBar: FC<{ query: string; onChange: (v: string) => void }> = memo(
     );
   }
 );
+
 SearchBar.displayName = 'SearchBar';
 
 /* ------------------------------------------------------------------ */
@@ -594,6 +607,7 @@ const MainContent: FC<MainContentProps> = memo(
       education,
       games,
       images,
+      visualization,
     } = toolSections;
 
     // Bookmark sections
@@ -619,6 +633,7 @@ const MainContent: FC<MainContentProps> = memo(
         { label: 'Education', items: education },
         { label: 'Games', items: games },
         { label: 'Images', items: images },
+        { label: 'Visualization', items: visualization },
       ],
       [
         tools,
@@ -629,6 +644,7 @@ const MainContent: FC<MainContentProps> = memo(
         education,
         games,
         images,
+        visualization,
       ]
     );
 
@@ -804,19 +820,6 @@ const AppPage: NextPage = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const weatherQueries = useQueries({
-    queries: timezones.map(({ lat, lon }) => ({
-      queryKey: ['open-meteo', lat, lon],
-      queryFn: async () => {
-        const res = await fetch(
-          `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weather_code`
-        );
-        return (await res.json()).current as WeatherData;
-      },
-      staleTime: 1000 * 60 * 10,
-    })),
-  });
-
   const toggleSidebar = useCallback(
     (tab: SidebarTab) =>
       setActiveSidebar((prev) => (prev === tab ? null : tab)),
@@ -891,6 +894,11 @@ const AppPage: NextPage = () => {
         label: 'Images',
         items: f(toolSections.images, 'label'),
         Card: ToolCard,
+      },
+      {
+        label: 'Visualization',
+        items: f(toolSections.visualization, 'label'),
+        Card: BookmarkCard,
       },
       { label: 'CLIs', items: f(clis, 'id'), Card: BookmarkCard },
       { label: 'Extensions', items: f(extensions, 'id'), Card: BookmarkCard },

@@ -93,17 +93,6 @@ export const apps: App[] = [
     tags: ['android', 'macos', 'web'],
   },
   {
-    category: 'fun',
-    emoji: '⚖️',
-    id: 'legislation',
-    name: 'Legislation',
-    href: 'https://hieudoanm.github.io/legislation',
-    github: 'https://github.com/hieudoanm/legislation',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/legislation/refs/heads/master/images/app.png',
-    tags: ['android', 'macos', 'web'],
-  },
-  {
     category: 'games',
     emoji: '♟',
     id: 'chess',

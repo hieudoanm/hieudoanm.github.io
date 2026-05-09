@@ -1,6 +1,6 @@
 # Hieu Doan
 
-## Table of Contents (22)
+## Table of Contents (21)
 
 ## Artificial Intelligence (2)
 
@@ -22,12 +22,11 @@
 [svg]: https://hieudoanm.github.io/svg
 [svg-gh]: https://github.com/hieudoanm/svg
 
-## Fun (4)
+## Fun (3)
 
 1. 🌀 [Attractors][attractors] - [GitHub][attractors-gh]
 2. ⌚ [Garmin][garmin] - [GitHub][garmin-gh]
 3. 👀 [Eyes][eyes] - [GitHub][eyes-gh]
-4. ⚖️ [Legislation][legislation] - [GitHub][legislation-gh]
 
 [attractors]: https://hieudoanm.github.io/attractors
 [attractors-gh]: https://github.com/hieudoanm/attractors
@@ -35,8 +34,6 @@
 [garmin-gh]: https://github.com/hieudoanm/garmin
 [eyes]: https://hieudoanm.github.io/eyes
 [eyes-gh]: https://github.com/hieudoanm/eyes
-[legislation]: https://hieudoanm.github.io/legislation
-[legislation-gh]: https://github.com/hieudoanm/legislation
 
 ## Games (2)
 
