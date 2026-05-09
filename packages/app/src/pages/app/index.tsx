@@ -7,6 +7,7 @@ import { EloModal } from '@hieudoanm/components/modals/calculators/EloModal';
 import { InflationModal } from '@hieudoanm/components/modals/calculators/InflationModal';
 import { PokerModal } from '@hieudoanm/components/modals/calculators/PokerModal';
 import { TaxModal } from '@hieudoanm/components/modals/calculators/TaxModal';
+import { ChessClockModal } from '@hieudoanm/components/modals/clocks/ChessClockModal';
 import { CountdownModal } from '@hieudoanm/components/modals/clocks/CountdownModal';
 import { PomodoroModal } from '@hieudoanm/components/modals/clocks/PomodoroModal';
 import { BrailleModal } from '@hieudoanm/components/modals/converters/BrailleModal';
@@ -40,10 +41,10 @@ import { EmojisModal } from '@hieudoanm/components/modals/tools/EmojisModal';
 import { FigletModal } from '@hieudoanm/components/modals/tools/FigletModal';
 import { IPModal } from '@hieudoanm/components/modals/tools/IPModal';
 import { KaprekarModal } from '@hieudoanm/components/modals/tools/KaprekarModal';
-import { LegislationModal } from '@hieudoanm/components/modals/visualization/LegislationModal';
 import { ShopifyDetectModal } from '@hieudoanm/components/modals/tools/ShopifyDetectModal';
 import { StringModal } from '@hieudoanm/components/modals/tools/StringModal';
 import { UUIDModal } from '@hieudoanm/components/modals/tools/UUIDModal';
+import { LegislationModal } from '@hieudoanm/components/modals/visualization/LegislationModal';
 import { LeftSidebar } from '@hieudoanm/components/sidebars/LeftSidebar';
 import { RightSidebar } from '@hieudoanm/components/sidebars/RightSidebar';
 import { apps } from '@hieudoanm/data/apps';
@@ -56,8 +57,6 @@ import {
 } from '@hieudoanm/data/bookmarks';
 import { clis, extensions, packages } from '@hieudoanm/data/downloads';
 import { getTimeInZone, timezones } from '@hieudoanm/data/timezones';
-import type { WeatherData } from '@hieudoanm/data/weather';
-import { useQueries } from '@tanstack/react-query';
 import { NextPage } from 'next';
 import {
   FC,
@@ -116,7 +115,8 @@ type ModalId =
   | 'youtube-thumbnails'
   | 'palindrome'
   | 'clipboard'
-  | 'legislation';
+  | 'legislation'
+  | 'chess-clock';
 
 type SidebarTab = 'tasks' | 'clock';
 
@@ -168,6 +168,7 @@ const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
   palindrome: PalindromeModal,
   clipboard: ClipboardModal,
   legislation: LegislationModal,
+  'chess-clock': ChessClockModal,
 };
 
 /* ------------------------------------------------------------------ */
@@ -288,6 +289,13 @@ const makeTools = (
     },
   ],
   clocks: [
+    {
+      label: 'Chess Clock',
+      description: 'Chess Timer',
+      emoji: '♟️',
+      color: '#8b5cf6',
+      onClick: open('chess-clock'),
+    },
     {
       label: 'Countdown',
       description: 'Timer',

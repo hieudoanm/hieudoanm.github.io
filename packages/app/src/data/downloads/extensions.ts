@@ -10,6 +10,14 @@ export const extensions: Download[] = [
     description: 'Blocked',
   },
   {
+    id: 'chess-focus',
+    label: 'Focus',
+    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/chess/focus/download',
+    emoji: '♟️',
+    color: '#6f6f6f',
+    description: 'Chess',
+  },
+  {
     id: 'github-open-link',
     label: 'Open Link',
     url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/github/open-link/download',

@@ -26,8 +26,7 @@
     "lint": "eslint . --fix",
     "build": "tsc -p tsconfig.build.json",
     "pretest": "jest --clearCache",
-    "test": "jest",
-    "prepare": "pnpm run build"
+    "test": "jest"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "3.1045.0",

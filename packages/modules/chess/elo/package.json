@@ -24,8 +24,7 @@
     "lint": "eslint . --fix",
     "build": "tsc -p tsconfig.build.json",
     "pretest": "jest --clearCache",
-    "test": "jest --detectOpenHandles",
-    "prepare": "pnpm run build"
+    "test": "jest --detectOpenHandles"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
