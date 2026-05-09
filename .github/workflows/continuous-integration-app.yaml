@@ -40,10 +40,10 @@ jobs:
         run: pnpm install
 
       - name: Lint
-        run: pnpm run lint
+        run: pnpm run lint --concurrency 1
 
       - name: Test
-        run: pnpm turbo run test --concurrency=1
+        run: pnpm run test --concurrency=1
 
   # ── Build & Release (master only) ────────────────────────────────────
   build:
