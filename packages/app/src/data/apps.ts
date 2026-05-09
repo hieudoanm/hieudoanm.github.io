@@ -126,17 +126,6 @@ export const apps: App[] = [
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
-    category: 'languages',
-    emoji: '🤟',
-    id: 'sign',
-    name: 'Sign',
-    href: 'https://hieudoanm.github.io/sign',
-    github: 'https://github.com/hieudoanm/sign',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/sign/refs/heads/master/images/app.png',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
     category: 'template',
     emoji: '🚀',
     id: 'start',
@@ -211,6 +200,17 @@ export const apps: App[] = [
     github: 'https://github.com/hieudoanm/redact',
     image:
       'https://raw.githubusercontent.com/hieudoanm/redact/refs/heads/master/images/app.png',
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
+  },
+  {
+    category: 'utilities',
+    emoji: '🤟',
+    id: 'sign',
+    name: 'Sign',
+    href: 'https://hieudoanm.github.io/sign',
+    github: 'https://github.com/hieudoanm/sign',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/sign/refs/heads/master/images/app.png',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
