@@ -73,6 +73,7 @@ jobs:
         with:
           sparse-checkout-cone-mode: false
           sparse-checkout: |
+            /*
             !/packages/data/english/words/aux.json
       - name: Install pnpm
         uses: pnpm/action-setup@v6
