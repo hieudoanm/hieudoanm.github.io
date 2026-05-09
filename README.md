@@ -1,12 +1,12 @@
 # 👨‍💻 I'm [HIEU DOAN](https://hieudoanm.github.io)
 
-## Table of Contents (20)
+## Table of Contents (19)
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
-  - [Table of Contents (20)](#table-of-contents-20)
+  - [Table of Contents (19)](#table-of-contents-19)
   - [Artificial Intelligence (2)](#artificial-intelligence-2)
   - [Design (2)](#design-2)
-  - [Fun (3)](#fun-3)
+  - [Fun (2)](#fun-2)
   - [Games (2)](#games-2)
   - [Template (2)](#template-2)
   - [Utilities (9)](#utilities-9)
@@ -31,16 +31,13 @@
 [svg]: https://hieudoanm.github.io/svg
 [svg-gh]: https://github.com/hieudoanm/svg
 
-## Fun (3)
+## Fun (2)
 
 1. 🌀 [Attractors][attractors] - [GitHub][attractors-gh]
-2. ⌚ [Garmin][garmin] - [GitHub][garmin-gh]
-3. 👀 [Eyes][eyes] - [GitHub][eyes-gh]
+2. 👀 [Eyes][eyes] - [GitHub][eyes-gh]
 
 [attractors]: https://hieudoanm.github.io/attractors
 [attractors-gh]: https://github.com/hieudoanm/attractors
-[garmin]: https://hieudoanm.github.io/garmin
-[garmin-gh]: https://github.com/hieudoanm/garmin
 [eyes]: https://hieudoanm.github.io/eyes
 [eyes-gh]: https://github.com/hieudoanm/eyes
 

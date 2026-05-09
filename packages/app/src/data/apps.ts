@@ -72,17 +72,6 @@ export const apps: App[] = [
   },
   {
     category: 'fun',
-    emoji: '⌚',
-    id: 'garmin',
-    name: 'Garmin',
-    href: 'https://hieudoanm.github.io/garmin',
-    github: 'https://github.com/hieudoanm/garmin',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/garmin/refs/heads/master/images/app.png',
-    tags: ['android', 'macos', 'web'],
-  },
-  {
-    category: 'fun',
     emoji: '👀',
     id: 'eyes',
     name: 'Eyes',

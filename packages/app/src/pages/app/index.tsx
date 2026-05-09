@@ -10,6 +10,7 @@ import { TaxModal } from '@hieudoanm/components/modals/calculators/TaxModal';
 import { ChessClockModal } from '@hieudoanm/components/modals/clocks/ChessClockModal';
 import { CountdownModal } from '@hieudoanm/components/modals/clocks/CountdownModal';
 import { PomodoroModal } from '@hieudoanm/components/modals/clocks/PomodoroModal';
+import { WatchFaceModal } from '@hieudoanm/components/modals/clocks/WatchfaceModal';
 import { BrailleModal } from '@hieudoanm/components/modals/converters/BrailleModal';
 import { ColorsModal } from '@hieudoanm/components/modals/converters/ColorsModal';
 import { MorseModal } from '@hieudoanm/components/modals/converters/MorseModal';
@@ -116,7 +117,8 @@ type ModalId =
   | 'palindrome'
   | 'clipboard'
   | 'legislation'
-  | 'chess-clock';
+  | 'chess-clock'
+  | 'watchface';
 
 type SidebarTab = 'tasks' | 'clock';
 
@@ -169,6 +171,7 @@ const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
   clipboard: ClipboardModal,
   legislation: LegislationModal,
   'chess-clock': ChessClockModal,
+  watchface: WatchFaceModal,
 };
 
 /* ------------------------------------------------------------------ */
@@ -309,6 +312,13 @@ const makeTools = (
       emoji: '🍅',
       color: '#ef4444',
       onClick: open('pomodoro'),
+    },
+    {
+      label: 'Watchface',
+      description: 'Garmin',
+      emoji: '⌚',
+      color: '#ef4444',
+      onClick: open('watchface'),
     },
   ],
   converters: [
