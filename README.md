@@ -8,9 +8,8 @@
   - [Design (2)](#design-2)
   - [Fun (4)](#fun-4)
   - [Games (2)](#games-2)
-  - [Languages (1)](#languages-1)
   - [Template (2)](#template-2)
-  - [Utilities (9)](#utilities-9)
+  - [Utilities (10)](#utilities-10)
 
 ## Artificial Intelligence (2)
 
@@ -58,13 +57,6 @@
 [quiz]: https://hieudoanm.github.io/quiz
 [quiz-gh]: https://github.com/hieudoanm/quiz
 
-## Languages (1)
-
-1. 🤟 [Sign][sign] - [GitHub][sign-gh]
-
-[sign]: https://hieudoanm.github.io/sign
-[sign-gh]: https://github.com/hieudoanm/sign
-
 ## Template (2)
 
 1. 🚀 [Start][start] - [GitHub][start-gh]
@@ -75,17 +67,18 @@
 [telegram]: https://hieudoanm.github.io/telegram
 [telegram-gh]: https://github.com/hieudoanm/telegram
 
-## Utilities (9)
+## Utilities (10)
 
 1. 📚 [Docs][docs] - [GitHub][docs-gh]
 2. 📱 [InstaSize][instasize] - [GitHub][instasize-gh]
 3. 🧾 [Invoice][invoice] - [GitHub][invoice-gh]
 4. 🛰️ [Proxy][proxy] - [GitHub][proxy-gh]
 5. 🕵️ [Redact][redact] - [GitHub][redact-gh]
-6. 📸 [Snapshot][snapshot] - [GitHub][snapshot-gh]
-7. 🖥️ [System][system] - [GitHub][system-gh]
-8. 📝 [Transcript][transcript] - [GitHub][transcript-gh]
-9. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
+6. 🤟 [Sign][sign] - [GitHub][sign-gh]
+7. 📸 [Snapshot][snapshot] - [GitHub][snapshot-gh]
+8. 🖥️ [System][system] - [GitHub][system-gh]
+9. 📝 [Transcript][transcript] - [GitHub][transcript-gh]
+10. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
 
 [docs]: https://hieudoanm.github.io/docs
 [docs-gh]: https://github.com/hieudoanm/docs
@@ -97,6 +90,8 @@
 [proxy-gh]: https://github.com/hieudoanm/proxy
 [redact]: https://hieudoanm.github.io/redact
 [redact-gh]: https://github.com/hieudoanm/redact
+[sign]: https://hieudoanm.github.io/sign
+[sign-gh]: https://github.com/hieudoanm/sign
 [snapshot]: https://hieudoanm.github.io/snapshot
 [snapshot-gh]: https://github.com/hieudoanm/snapshot
 [system]: https://hieudoanm.github.io/system
