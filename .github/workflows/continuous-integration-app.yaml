@@ -28,7 +28,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v6
         with:
-          version: '11.0.8'
+          version: '11.0.9'
 
       - name: Install Node.js
         uses: actions/setup-node@v6
@@ -73,7 +73,10 @@ jobs:
         with:
           sparse-checkout-cone-mode: false
           sparse-checkout: |
+            package.json
             pnpm-lock.yaml
+            pnpm-workspace.yaml
+            turbo.json
             packages/app
             packages/modules/browser/native
             packages/modules/chess/elo
@@ -81,7 +84,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v6
         with:
-          version: '11.0.8'
+          version: '11.0.9'
 
       - name: Install Node.js
         uses: actions/setup-node@v6
