@@ -34,6 +34,7 @@ import { WordleModal } from '@hieudoanm/components/modals/games/WordleModal';
 import { BreakingBadModal } from '@hieudoanm/components/modals/images/BreakingBadModal';
 import { GitHubSocialPreviewModal } from '@hieudoanm/components/modals/images/GitHubSocialPreviewModal';
 import { HouseModal } from '@hieudoanm/components/modals/images/HouseModal';
+import { InvoiceParserModal } from '@hieudoanm/components/modals/images/InvoiceParserModal';
 import { QRCodeModal } from '@hieudoanm/components/modals/images/QRCodeModal';
 import { YouTubeThumbnailsModal } from '@hieudoanm/components/modals/images/YouTubeThumbnailsModal';
 import { ClipboardModal } from '@hieudoanm/components/modals/tools/ClipboardModal';
@@ -118,7 +119,8 @@ type ModalId =
   | 'clipboard'
   | 'legislation'
   | 'chess-clock'
-  | 'watchface';
+  | 'watchface'
+  | 'invoice-parser';
 
 type SidebarTab = 'tasks' | 'clock';
 
@@ -172,6 +174,7 @@ const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
   legislation: LegislationModal,
   'chess-clock': ChessClockModal,
   watchface: WatchFaceModal,
+  'invoice-parser': InvoiceParserModal,
 };
 
 /* ------------------------------------------------------------------ */
@@ -490,6 +493,13 @@ const makeTools = (
       emoji: '🏥',
       color: '#ef4444',
       onClick: open('house'),
+    },
+    {
+      label: 'Invoice Parser',
+      description: 'OCR',
+      emoji: '📄',
+      color: '#ef4444',
+      onClick: open('invoice-parser'),
     },
     {
       label: 'QR Code',

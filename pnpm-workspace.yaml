@@ -3,6 +3,7 @@ packages:
 allowBuilds:
   '@prisma/engines': true
   prisma: true
+  protobufjs: true
   sharp: true
   spawn-sync: true
   tesseract.js: true

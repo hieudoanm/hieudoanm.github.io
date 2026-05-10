@@ -1,15 +1,15 @@
 # 👨‍💻 I'm [HIEU DOAN](https://hieudoanm.github.io)
 
-## Table of Contents (19)
+## Table of Contents (18)
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
-  - [Table of Contents (19)](#table-of-contents-19)
+  - [Table of Contents (18)](#table-of-contents-18)
   - [Artificial Intelligence (2)](#artificial-intelligence-2)
   - [Design (2)](#design-2)
   - [Fun (2)](#fun-2)
   - [Games (2)](#games-2)
   - [Template (2)](#template-2)
-  - [Utilities (9)](#utilities-9)
+  - [Utilities (8)](#utilities-8)
 
 ## Artificial Intelligence (2)
 
@@ -61,24 +61,21 @@
 [telegram]: https://hieudoanm.github.io/telegram
 [telegram-gh]: https://github.com/hieudoanm/telegram
 
-## Utilities (9)
+## Utilities (8)
 
 1. 📚 [Docs][docs] - [GitHub][docs-gh]
 2. 📱 [InstaSize][instasize] - [GitHub][instasize-gh]
-3. 🧾 [Invoice][invoice] - [GitHub][invoice-gh]
-4. 🛰️ [Proxy][proxy] - [GitHub][proxy-gh]
-5. 🕵️ [Redact][redact] - [GitHub][redact-gh]
-6. 🤟 [Sign][sign] - [GitHub][sign-gh]
-7. 📸 [Snapshot][snapshot] - [GitHub][snapshot-gh]
-8. 🖥️ [System][system] - [GitHub][system-gh]
-9. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
+3. 🛰️ [Proxy][proxy] - [GitHub][proxy-gh]
+4. 🕵️ [Redact][redact] - [GitHub][redact-gh]
+5. 🤟 [Sign][sign] - [GitHub][sign-gh]
+6. 📸 [Snapshot][snapshot] - [GitHub][snapshot-gh]
+7. 🖥️ [System][system] - [GitHub][system-gh]
+8. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
 
 [docs]: https://hieudoanm.github.io/docs
 [docs-gh]: https://github.com/hieudoanm/docs
 [instasize]: https://hieudoanm.github.io/instasize
 [instasize-gh]: https://github.com/hieudoanm/instasize
-[invoice]: https://hieudoanm.github.io/invoice
-[invoice-gh]: https://github.com/hieudoanm/invoice
 [proxy]: https://hieudoanm.github.io/proxy
 [proxy-gh]: https://github.com/hieudoanm/proxy
 [redact]: https://hieudoanm.github.io/redact

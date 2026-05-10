@@ -121,16 +121,6 @@
   },
   {
     "category": "utilities",
-    "emoji": "🧾",
-    "id": "invoice",
-    "name": "Invoice",
-    "href": "https://hieudoanm.github.io/invoice",
-    "github": "https://github.com/hieudoanm/invoice",
-    "image": "https://raw.githubusercontent.com/hieudoanm/invoice/refs/heads/master/images/app.png",
-    "tags": ["cli", "extension", "android", "macos", "web"]
-  },
-  {
-    "category": "utilities",
     "emoji": "🛰️",
     "id": "proxy",
     "name": "Proxy",
