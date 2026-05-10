@@ -1,11 +1,13 @@
 import { FC, useState } from 'react';
+import { FreeModelsTab } from './tabs/FreeModelsTab';
 import { StatusTab } from './tabs/StatusTab';
 import { TasksTab } from './tabs/TasksTab';
 import { TimeTab } from './tabs/TimeTab';
 
-type LeftTab = 'status' | 'tasks' | 'time';
+type LeftTab = 'free' | 'status' | 'tasks' | 'time';
 
 const TABS: { id: LeftTab; label: string }[] = [
+  { id: 'free', label: 'Free' },
   { id: 'status', label: 'Status' },
   { id: 'tasks', label: 'Tasks' },
   { id: 'time', label: 'Time' },
@@ -33,6 +35,7 @@ export const LeftSidebar: FC = () => {
 
       {/* Tab content */}
       <div className="min-h-0 flex-1">
+        {tab === 'free' && <FreeModelsTab />}
         {tab === 'status' && <StatusTab />}
         {tab === 'tasks' && <TasksTab />}
         {tab === 'time' && <TimeTab />}

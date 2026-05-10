@@ -42,7 +42,7 @@ exports[`WatchFaceModal should render 1`] = `
           >
             <div
               class="absolute h-full w-full transition-transform duration-[1000ms] ease-linear"
-              style="transform: rotate(177.5deg);"
+              style="transform: rotate(304.5deg);"
             >
               <div
                 class="bg-primary shadow-primary absolute top-10 left-1/2 h-6 w-6 -translate-x-1/2 rounded-full shadow-[0_0_15px_-3px_rgba(0,0,0,0.3)]"
@@ -50,7 +50,7 @@ exports[`WatchFaceModal should render 1`] = `
             </div>
             <div
               class="absolute h-full w-full transition-transform duration-[1000ms] ease-linear"
-              style="transform: rotate(334.9deg);"
+              style="transform: rotate(56.6deg);"
             >
               <div
                 class="bg-secondary shadow-secondary absolute top-8 left-1/2 h-4 w-4 -translate-x-1/2 rounded-full shadow-[0_0_15px_-3px_rgba(0,0,0,0.3)]"
@@ -58,7 +58,7 @@ exports[`WatchFaceModal should render 1`] = `
             </div>
             <div
               class="absolute h-full w-full transition-transform duration-[1000ms] ease-linear"
-              style="transform: rotate(294deg);"
+              style="transform: rotate(156deg);"
             >
               <div
                 class="bg-accent shadow-accent absolute top-5 left-1/2 h-2 w-2 -translate-x-1/2 rounded-full shadow-[0_0_15px_-3px_rgba(0,0,0,0.3)]"
