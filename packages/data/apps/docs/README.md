@@ -1,6 +1,6 @@
 # Hieu Doan
 
-## Table of Contents (17)
+## Table of Contents (16)
 
 ## Artificial Intelligence (2)
 
@@ -22,16 +22,6 @@
 [svg]: https://hieudoanm.github.io/svg
 [svg-gh]: https://github.com/hieudoanm/svg
 
-## Fun (2)
-
-1. 🌀 [Attractors][attractors] - [GitHub][attractors-gh]
-2. 👀 [Eyes][eyes] - [GitHub][eyes-gh]
-
-[attractors]: https://hieudoanm.github.io/attractors
-[attractors-gh]: https://github.com/hieudoanm/attractors
-[eyes]: https://hieudoanm.github.io/eyes
-[eyes-gh]: https://github.com/hieudoanm/eyes
-
 ## Games (2)
 
 1. ♟ [Chess][chess] - [GitHub][chess-gh]
@@ -52,16 +42,19 @@
 [telegram]: https://hieudoanm.github.io/telegram
 [telegram-gh]: https://github.com/hieudoanm/telegram
 
-## Utilities (7)
+## Utilities (8)
 
-1. 📚 [Docs][docs] - [GitHub][docs-gh]
-2. 📱 [InstaSize][instasize] - [GitHub][instasize-gh]
-3. 🛰️ [Proxy][proxy] - [GitHub][proxy-gh]
-4. 🕵️ [Redact][redact] - [GitHub][redact-gh]
-5. 🤟 [Sign][sign] - [GitHub][sign-gh]
-6. 🖥️ [System][system] - [GitHub][system-gh]
-7. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
+1. 🌀 [Attractors][attractors] - [GitHub][attractors-gh]
+2. 📚 [Docs][docs] - [GitHub][docs-gh]
+3. 📱 [InstaSize][instasize] - [GitHub][instasize-gh]
+4. 🛰️ [Proxy][proxy] - [GitHub][proxy-gh]
+5. 🕵️ [Redact][redact] - [GitHub][redact-gh]
+6. 🤟 [Sign][sign] - [GitHub][sign-gh]
+7. 🖥️ [System][system] - [GitHub][system-gh]
+8. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
 
+[attractors]: https://hieudoanm.github.io/attractors
+[attractors-gh]: https://github.com/hieudoanm/attractors
 [docs]: https://hieudoanm.github.io/docs
 [docs-gh]: https://github.com/hieudoanm/docs
 [instasize]: https://hieudoanm.github.io/instasize

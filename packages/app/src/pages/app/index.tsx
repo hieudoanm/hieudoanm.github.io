@@ -22,6 +22,9 @@ import { EnglishModal } from '@hieudoanm/components/modals/education/EnglishModa
 import { FlashcardsModal } from '@hieudoanm/components/modals/education/FlashcardsModal';
 import { PeriodicTableModal } from '@hieudoanm/components/modals/education/PeriodicTableModal';
 import { PitchModal } from '@hieudoanm/components/modals/education/PitchModal';
+import { LogMARChartModal } from '@hieudoanm/components/modals/eyes/LogMARChartModal';
+import { SnellenChartModal } from '@hieudoanm/components/modals/eyes/SnellenChartModal';
+import { TumblingEChartModal } from '@hieudoanm/components/modals/eyes/TumblingEChartModal';
 import { BlackjackModal } from '@hieudoanm/components/modals/games/BlackjackModal';
 import { PalindromeModal } from '@hieudoanm/components/modals/games/PalindromeModal';
 import { PiModal } from '@hieudoanm/components/modals/games/PiNumberModal';
@@ -120,7 +123,10 @@ type ModalId =
   | 'legislation'
   | 'chess-clock'
   | 'watchface'
-  | 'invoice-parser';
+  | 'invoice-parser'
+  | 'logmar'
+  | 'snellen'
+  | 'tumbling-e';
 
 type SidebarTab = 'tasks' | 'clock';
 
@@ -175,6 +181,9 @@ const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
   'chess-clock': ChessClockModal,
   watchface: WatchFaceModal,
   'invoice-parser': InvoiceParserModal,
+  logmar: LogMARChartModal,
+  snellen: SnellenChartModal,
+  'tumbling-e': TumblingEChartModal,
 };
 
 /* ------------------------------------------------------------------ */
@@ -407,6 +416,29 @@ const makeTools = (
       onClick: open('pitch'),
     },
   ],
+  eyes: [
+    {
+      label: 'LogMAR Chart',
+      description: 'LogMAR Chart',
+      emoji: '👀',
+      color: '#3b82f6',
+      onClick: open('logmar'),
+    },
+    {
+      label: 'Snellen Chart',
+      description: 'Snellen Chart',
+      emoji: '👀',
+      color: '#3b82f6',
+      onClick: open('snellen'),
+    },
+    {
+      label: 'Tumbling E Chart',
+      description: 'Tumbling E Chart',
+      emoji: '👀',
+      color: '#3b82f6',
+      onClick: open('tumbling-e'),
+    },
+  ],
   games: [
     {
       label: 'Blackjack',
@@ -633,6 +665,7 @@ const MainContent: FC<MainContentProps> = memo(
       converters,
       editors,
       education,
+      eyes,
       games,
       images,
       visualization,
@@ -659,6 +692,7 @@ const MainContent: FC<MainContentProps> = memo(
         { label: 'Converters', items: converters },
         { label: 'Editors', items: editors },
         { label: 'Education', items: education },
+        { label: 'Eyes', items: eyes },
         { label: 'Games', items: games },
         { label: 'Images', items: images },
         { label: 'Visualization', items: visualization },
@@ -670,6 +704,7 @@ const MainContent: FC<MainContentProps> = memo(
         converters,
         editors,
         education,
+        eyes,
         games,
         images,
         visualization,
@@ -915,6 +950,11 @@ const AppPage: NextPage = () => {
       {
         label: 'Education',
         items: f(toolSections.education, 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Eyes',
+        items: f(toolSections.eyes, 'label'),
         Card: ToolCard,
       },
       { label: 'Games', items: f(toolSections.games, 'label'), Card: ToolCard },

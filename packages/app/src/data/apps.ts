@@ -60,28 +60,6 @@ export const apps: App[] = [
     tags: ['android', 'macos', 'web'],
   },
   {
-    category: 'fun',
-    emoji: '🌀',
-    id: 'attractors',
-    name: 'Attractors',
-    href: 'https://hieudoanm.github.io/attractors',
-    github: 'https://github.com/hieudoanm/attractors',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/attractors/refs/heads/master/images/app.png',
-    tags: ['android', 'macos', 'web'],
-  },
-  {
-    category: 'fun',
-    emoji: '👀',
-    id: 'eyes',
-    name: 'Eyes',
-    href: 'https://hieudoanm.github.io/eyes',
-    github: 'https://github.com/hieudoanm/eyes',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/eyes/refs/heads/master/images/app.png',
-    tags: ['android', 'macos', 'web'],
-  },
-  {
     category: 'games',
     emoji: '♟',
     id: 'chess',
@@ -124,6 +102,17 @@ export const apps: App[] = [
     image:
       'https://raw.githubusercontent.com/hieudoanm/telegram/refs/heads/master/images/app.png',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
+  },
+  {
+    category: 'utilities',
+    emoji: '🌀',
+    id: 'attractors',
+    name: 'Attractors',
+    href: 'https://hieudoanm.github.io/attractors',
+    github: 'https://github.com/hieudoanm/attractors',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/attractors/refs/heads/master/images/app.png',
+    tags: ['android', 'macos', 'web'],
   },
   {
     category: 'utilities',
