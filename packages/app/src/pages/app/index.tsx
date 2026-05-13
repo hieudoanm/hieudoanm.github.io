@@ -640,12 +640,15 @@ Section.displayName = 'Section';
 /* ToolGrid — shared grid wrapper                                      */
 /* ------------------------------------------------------------------ */
 
-const GRID_4 = 'grid grid-cols-4 gap-4';
+const GRID =
+  'grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 gap-3';
 const GRID_MOBILE = 'grid grid-cols-2 sm:grid-cols-3 gap-3';
 
 /* ------------------------------------------------------------------ */
 /* MainContent                                                          */
 /* ------------------------------------------------------------------ */
+
+type MainTab = 'bookmarks' | 'downloads' | 'tools' | 'apps';
 
 type MainContentProps = {
   today: string;
@@ -656,6 +659,7 @@ type MainContentProps = {
 
 const MainContent: FC<MainContentProps> = memo(
   ({ today, query, onQueryChange, toolSections }) => {
+    const [tab, setTab] = useState<MainTab>('bookmarks');
     const filtering = query.trim().length > 0;
 
     const {
@@ -714,19 +718,16 @@ const MainContent: FC<MainContentProps> = memo(
     // Download sections
     const downloadSections = useMemo(
       () => [
-        { label: 'CLI', items: clis, keyProp: 'id' as const },
-        { label: 'Extensions', items: extensions, keyProp: 'id' as const },
-        { label: 'Packages', items: packages, keyProp: 'id' as const },
+        { label: 'CLI', items: clis },
+        { label: 'Extensions', items: extensions },
+        { label: 'Packages', items: packages },
       ],
       []
     );
 
-    const appSections = useMemo(
-      () => [{ label: 'Apps', items: apps, keyProp: 'id' as const }],
-      []
-    );
+    const appSections = useMemo(() => [{ label: 'Apps', items: apps }], []);
 
-    // Filtered counts
+    // Filtered helpers
     const filteredBookmarks = useMemo(
       () =>
         bookmarkSections.map((s) => ({
@@ -771,10 +772,34 @@ const MainContent: FC<MainContentProps> = memo(
       [appSections, filtering, query]
     );
 
+    // Auto-switch tab when filtering produces results in another tab
+    useEffect(() => {
+      if (!filtering) return;
+      const hasTools = filteredTools.some((s) => s.filtered.length > 0);
+      const hasBookmarks = filteredBookmarks.some((s) => s.filtered.length > 0);
+      const hasDownloads = filteredDownloads.some((s) => s.filtered.length > 0);
+      const hasApps = filteredApps.some((s) => s.filtered.length > 0);
+      if (tab === 'tools' && !hasTools && hasBookmarks) setTab('bookmarks');
+      else if (tab === 'bookmarks' && !hasBookmarks && hasTools)
+        setTab('tools');
+      else if (tab === 'downloads' && !hasDownloads && hasTools)
+        setTab('tools');
+      else if (tab === 'apps' && !hasApps && hasTools) setTab('tools');
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [query]);
+
     const hasAnyResult =
       filteredBookmarks.some((s) => s.filtered.length > 0) ||
       filteredTools.some((s) => s.filtered.length > 0) ||
-      filteredDownloads.some((s) => s.filtered.length > 0);
+      filteredDownloads.some((s) => s.filtered.length > 0) ||
+      filteredApps.some((s) => s.filtered.length > 0);
+
+    const TABS: { id: MainTab; label: string; emoji: string }[] = [
+      { id: 'bookmarks', label: 'Bookmarks', emoji: '🔖' },
+      { id: 'downloads', label: 'Downloads', emoji: '📦' },
+      { id: 'tools', label: 'Tools', emoji: '🔧' },
+      { id: 'apps', label: 'Apps', emoji: '📱' },
+    ];
 
     return (
       <main className="flex flex-col items-center overflow-y-auto px-8 py-12">
@@ -783,56 +808,113 @@ const MainContent: FC<MainContentProps> = memo(
         </p>
         <h1 className="mb-6 text-3xl font-black tracking-tight">Start Page</h1>
 
-        <div className="mb-10 w-full max-w-2xl">
+        <div className="mb-6 w-full max-w-3xl">
           <SearchBar query={query} onChange={onQueryChange} />
         </div>
 
-        {filteredBookmarks.map(({ label, filtered }) =>
-          !filtering || filtered.length > 0 ? (
-            <Section key={label} label={label} count={filtered.length}>
-              <div className={GRID_4}>
-                {filtered.map((bm) => (
-                  <BookmarkCard key={bm.label} {...bm} />
-                ))}
-              </div>
-            </Section>
-          ) : null
+        {/* Tab bar */}
+        <div className="mb-8 w-full max-w-3xl">
+          <div className="tabs tabs-boxed w-full justify-center">
+            {TABS.map(({ id, label, emoji }) => (
+              <button
+                key={id}
+                className={`tab flex-1 gap-1.5 ${tab === id ? 'tab-active' : ''}`}
+                onClick={() => setTab(id)}>
+                <span>{emoji}</span>
+                <span>{label}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* ── Tools tab ── */}
+        {tab === 'tools' && (
+          <>
+            {filteredTools.map(({ label, filtered }) =>
+              !filtering || filtered.length > 0 ? (
+                <Section key={label} label={label} count={filtered.length}>
+                  <div className={GRID}>
+                    {filtered.map((t) => (
+                      <ToolCard key={t.label} {...t} />
+                    ))}
+                  </div>
+                </Section>
+              ) : null
+            )}
+            {filtering && !filteredTools.some((s) => s.filtered.length > 0) && (
+              <p className="text-base-content/30 mt-20 text-sm">
+                No tools match "{query}".
+              </p>
+            )}
+          </>
         )}
 
-        {filteredTools.map(({ label, filtered }) =>
-          !filtering || filtered.length > 0 ? (
-            <Section key={label} label={label} count={filtered.length}>
-              <div className={GRID_4}>
-                {filtered.map((t) => (
-                  <ToolCard key={t.label} {...t} />
-                ))}
-              </div>
-            </Section>
-          ) : null
+        {/* ── Bookmarks tab ── */}
+        {tab === 'bookmarks' && (
+          <>
+            {filteredBookmarks.map(({ label, filtered }) =>
+              !filtering || filtered.length > 0 ? (
+                <Section key={label} label={label} count={filtered.length}>
+                  <div className={GRID}>
+                    {filtered.map((bm) => (
+                      <BookmarkCard key={bm.label} {...bm} />
+                    ))}
+                  </div>
+                </Section>
+              ) : null
+            )}
+            {filtering &&
+              !filteredBookmarks.some((s) => s.filtered.length > 0) && (
+                <p className="text-base-content/30 mt-20 text-sm">
+                  No bookmarks match "{query}".
+                </p>
+              )}
+          </>
         )}
 
-        {filteredDownloads.map(({ label, filtered }) =>
-          !filtering || filtered.length > 0 ? (
-            <Section key={label} label={label} count={filtered.length}>
-              <div className={GRID_4}>
-                {filtered.map((a) => (
-                  <BookmarkCard key={a.id} {...a} />
-                ))}
-              </div>
-            </Section>
-          ) : null
+        {/* ── Downloads tab ── */}
+        {tab === 'downloads' && (
+          <>
+            {filteredDownloads.map(({ label, filtered }) =>
+              !filtering || filtered.length > 0 ? (
+                <Section key={label} label={label} count={filtered.length}>
+                  <div className={GRID}>
+                    {filtered.map((a) => (
+                      <BookmarkCard key={a.id} {...a} />
+                    ))}
+                  </div>
+                </Section>
+              ) : null
+            )}
+            {filtering &&
+              !filteredDownloads.some((s) => s.filtered.length > 0) && (
+                <p className="text-base-content/30 mt-20 text-sm">
+                  No downloads match "{query}".
+                </p>
+              )}
+          </>
         )}
 
-        {filteredApps.map(({ label, filtered }) =>
-          !filtering || filtered.length > 0 ? (
-            <Section key={label} label={label} count={filtered.length}>
-              <div className={GRID_4}>
-                {filtered.map((a) => (
-                  <AppCard key={a.id} {...a} />
-                ))}
-              </div>
-            </Section>
-          ) : null
+        {/* ── Apps tab ── */}
+        {tab === 'apps' && (
+          <>
+            {filteredApps.map(({ label, filtered }) =>
+              !filtering || filtered.length > 0 ? (
+                <Section key={label} label={label} count={filtered.length}>
+                  <div className={GRID}>
+                    {filtered.map((a) => (
+                      <AppCard key={a.id} {...a} />
+                    ))}
+                  </div>
+                </Section>
+              ) : null
+            )}
+            {filtering && !filteredApps.some((s) => s.filtered.length > 0) && (
+              <p className="text-base-content/30 mt-20 text-sm">
+                No apps match "{query}".
+              </p>
+            )}
+          </>
         )}
 
         {filtering && !hasAnyResult && (
@@ -844,6 +926,7 @@ const MainContent: FC<MainContentProps> = memo(
     );
   }
 );
+
 MainContent.displayName = 'MainContent';
 
 /* ------------------------------------------------------------------ */
