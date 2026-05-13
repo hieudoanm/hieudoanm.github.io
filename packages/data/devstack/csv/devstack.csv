@@ -1,0 +1,23 @@
+category,"supergroup","group","subgroup","name",url
+Application,"Web","Dev Tools","Language",TypeScript,https://www.typescriptlang.org/
+Application,"Web","Dev Tools","Packages Manger",pnpm,https://pnpm.io/
+Application,Web,Dev Tools,Monorepo,turborepo,https://turborepo.com/
+Application,"Web","Dev Tools","Linter",ESLint,https://eslint.org/
+Application,"Web","Dev Tools","Formatter",Prettier,https://prettier.io/
+Application,"Web","Dev Tools","Testing",Jest,https://jestjs.io/
+Application,"Web","Framework",,Next.js,https://nextjs.org/
+Application,"Web","Styling","CSS Utilities",TailwindCSS,https://tailwindcss.com/
+Application,"Web","Styling","CSS Components",DaisyUI,https://daisyui.com/
+Application,"Native","Desktop","Language",Rust,https://rust-lang.org/
+Application,"Native","Desktop","Framework",Tauri,https://v2.tauri.app/
+Application,"Native","Mobile","Framework",Capacitor,https://capacitorjs.com/
+Application,"Server","Framework",,tRPC,https://trpc.io/
+Application,"Server","ORM",,Prisma,https://www.prisma.io/
+Application,"Server","Database",,SQLite,https://sqlite.org/
+CLI,,,"Language",Go,https://go.dev/
+CLI,,,"Framework",Cobra,https://cobra.dev/
+CLI,,,"Framework",Bubble Tea,https://github.com/charmbracelet/bubbletea
+Data,,Dev Tools,"Language",Python,https://python.org
+Data,,Dev Tools,Packages Manger,uv,https://docs.astral.sh/uv/
+Data,,,,pandas,https://pandas.pydata.org/
+DevOps,,,,GitHub Actions,https://github.com/features/actions

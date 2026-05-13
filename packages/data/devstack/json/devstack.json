@@ -1,0 +1,178 @@
+[
+  {
+    "category": "Application",
+    "supergroup": "Web",
+    "group": "Dev Tools",
+    "subgroup": "Language",
+    "name": "TypeScript",
+    "url": "https://www.typescriptlang.org/"
+  },
+  {
+    "category": "Application",
+    "supergroup": "Web",
+    "group": "Dev Tools",
+    "subgroup": "Packages Manger",
+    "name": "pnpm",
+    "url": "https://pnpm.io/"
+  },
+  {
+    "category": "Application",
+    "supergroup": "Web",
+    "group": "Dev Tools",
+    "subgroup": "Monorepo",
+    "name": "turborepo",
+    "url": "https://turborepo.com/"
+  },
+  {
+    "category": "Application",
+    "supergroup": "Web",
+    "group": "Dev Tools",
+    "subgroup": "Linter",
+    "name": "ESLint",
+    "url": "https://eslint.org/"
+  },
+  {
+    "category": "Application",
+    "supergroup": "Web",
+    "group": "Dev Tools",
+    "subgroup": "Formatter",
+    "name": "Prettier",
+    "url": "https://prettier.io/"
+  },
+  {
+    "category": "Application",
+    "supergroup": "Web",
+    "group": "Dev Tools",
+    "subgroup": "Testing",
+    "name": "Jest",
+    "url": "https://jestjs.io/"
+  },
+  {
+    "category": "Application",
+    "supergroup": "Web",
+    "group": "Framework",
+    "subgroup": "",
+    "name": "Next.js",
+    "url": "https://nextjs.org/"
+  },
+  {
+    "category": "Application",
+    "supergroup": "Web",
+    "group": "Styling",
+    "subgroup": "CSS Utilities",
+    "name": "TailwindCSS",
+    "url": "https://tailwindcss.com/"
+  },
+  {
+    "category": "Application",
+    "supergroup": "Web",
+    "group": "Styling",
+    "subgroup": "CSS Components",
+    "name": "DaisyUI",
+    "url": "https://daisyui.com/"
+  },
+  {
+    "category": "Application",
+    "supergroup": "Native",
+    "group": "Desktop",
+    "subgroup": "Language",
+    "name": "Rust",
+    "url": "https://rust-lang.org/"
+  },
+  {
+    "category": "Application",
+    "supergroup": "Native",
+    "group": "Desktop",
+    "subgroup": "Framework",
+    "name": "Tauri",
+    "url": "https://v2.tauri.app/"
+  },
+  {
+    "category": "Application",
+    "supergroup": "Native",
+    "group": "Mobile",
+    "subgroup": "Framework",
+    "name": "Capacitor",
+    "url": "https://capacitorjs.com/"
+  },
+  {
+    "category": "Application",
+    "supergroup": "Server",
+    "group": "Framework",
+    "subgroup": "",
+    "name": "tRPC",
+    "url": "https://trpc.io/"
+  },
+  {
+    "category": "Application",
+    "supergroup": "Server",
+    "group": "ORM",
+    "subgroup": "",
+    "name": "Prisma",
+    "url": "https://www.prisma.io/"
+  },
+  {
+    "category": "Application",
+    "supergroup": "Server",
+    "group": "Database",
+    "subgroup": "",
+    "name": "SQLite",
+    "url": "https://sqlite.org/"
+  },
+  {
+    "category": "CLI",
+    "supergroup": "",
+    "group": "",
+    "subgroup": "Language",
+    "name": "Go",
+    "url": "https://go.dev/"
+  },
+  {
+    "category": "CLI",
+    "supergroup": "",
+    "group": "",
+    "subgroup": "Framework",
+    "name": "Cobra",
+    "url": "https://cobra.dev/"
+  },
+  {
+    "category": "CLI",
+    "supergroup": "",
+    "group": "",
+    "subgroup": "Framework",
+    "name": "Bubble Tea",
+    "url": "https://github.com/charmbracelet/bubbletea"
+  },
+  {
+    "category": "Data",
+    "supergroup": "",
+    "group": "Dev Tools",
+    "subgroup": "Language",
+    "name": "Python",
+    "url": "https://python.org"
+  },
+  {
+    "category": "Data",
+    "supergroup": "",
+    "group": "Dev Tools",
+    "subgroup": "Packages Manger",
+    "name": "uv",
+    "url": "https://docs.astral.sh/uv/"
+  },
+  {
+    "category": "Data",
+    "supergroup": "",
+    "group": "",
+    "subgroup": "",
+    "name": "pandas",
+    "url": "https://pandas.pydata.org/"
+  },
+  {
+    "category": "DevOps",
+    "supergroup": "",
+    "group": "",
+    "subgroup": "",
+    "name": "GitHub Actions",
+    "url": "https://github.com/features/actions"
+  }
+]
