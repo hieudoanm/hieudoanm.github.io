@@ -1,6 +1,6 @@
 # Hieu Doan
 
-## Table of Contents (16)
+## Table of Contents (15)
 
 ## Artificial Intelligence (2)
 
@@ -42,7 +42,7 @@
 [telegram]: https://hieudoanm.github.io/telegram
 [telegram-gh]: https://github.com/hieudoanm/telegram
 
-## Utilities (8)
+## Utilities (7)
 
 1. 🌀 [Attractors][attractors] - [GitHub][attractors-gh]
 2. 📚 [Docs][docs] - [GitHub][docs-gh]
@@ -51,7 +51,6 @@
 5. 🕵️ [Redact][redact] - [GitHub][redact-gh]
 6. 🤟 [Sign][sign] - [GitHub][sign-gh]
 7. 🖥️ [System][system] - [GitHub][system-gh]
-8. 📶 [Wifi][wifi] - [GitHub][wifi-gh]
 
 [attractors]: https://hieudoanm.github.io/attractors
 [attractors-gh]: https://github.com/hieudoanm/attractors
@@ -67,5 +66,3 @@
 [sign-gh]: https://github.com/hieudoanm/sign
 [system]: https://hieudoanm.github.io/system
 [system-gh]: https://github.com/hieudoanm/system
-[wifi]: https://hieudoanm.github.io/wifi
-[wifi-gh]: https://github.com/hieudoanm/wifi

@@ -180,15 +180,4 @@ export const apps: App[] = [
       'https://raw.githubusercontent.com/hieudoanm/system/refs/heads/master/images/app.png',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
-  {
-    category: 'utilities',
-    emoji: '📶',
-    id: 'wifi',
-    name: 'Wifi',
-    href: 'https://hieudoanm.github.io/wifi',
-    github: 'https://github.com/hieudoanm/wifi',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/wifi/refs/heads/master/images/app.png',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
 ];
