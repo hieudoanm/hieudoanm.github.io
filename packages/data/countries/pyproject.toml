@@ -3,7 +3,7 @@ name = "countries"
 version = "0.0.1"
 description = "Query Countries Ranking"
 readme = "README.md"
-requires-python = "==3.14.4"
+requires-python = "==3.14.5"
 dependencies = [
     "playwright==1.59.0",
     "requests==2.33.1",
