@@ -1,5 +1,9 @@
 // components/modals/DOIModal.tsx
-import { getId, getWork, Reference } from '@hieudoanm/clients/crossref.client';
+import {
+  getId,
+  getWork,
+  Reference,
+} from '@hieudoanm/clients/crossref/crossref.client';
 import { tryCatch } from '@hieudoanm/utils/try-catch';
 import { ChangeEvent, FC, SubmitEvent, useState } from 'react';
 
