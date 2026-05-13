@@ -38,9 +38,9 @@
   },
   "dependencies": {
     "@browser/native": "workspace:*",
-    "@capacitor/android": "8.3.3",
-    "@capacitor/core": "8.3.3",
-    "@capacitor/ios": "8.3.3",
+    "@capacitor/android": "8.3.4",
+    "@capacitor/core": "8.3.4",
+    "@capacitor/ios": "8.3.4",
     "@chess/elo": "workspace:*",
     "@codemirror/lang-java": "6.0.2",
     "@codemirror/lang-javascript": "6.2.5",
@@ -74,7 +74,7 @@
     "yaml": "2.9.0"
   },
   "devDependencies": {
-    "@capacitor/cli": "8.3.3",
+    "@capacitor/cli": "8.3.4",
     "@tailwindcss/postcss": "4.3.0",
     "@tauri-apps/cli": "2.11.1",
     "@testing-library/jest-dom": "6.9.1",
