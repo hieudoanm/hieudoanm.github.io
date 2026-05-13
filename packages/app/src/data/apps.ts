@@ -182,17 +182,6 @@ export const apps: App[] = [
   },
   {
     category: 'utilities',
-    emoji: '📸',
-    id: 'snapshot',
-    name: 'Snapshot',
-    href: 'https://hieudoanm.github.io/snapshot',
-    github: 'https://github.com/hieudoanm/snapshot',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/snapshot/refs/heads/master/images/app.png',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
-    category: 'utilities',
     emoji: '🖥️',
     id: 'system',
     name: 'System',

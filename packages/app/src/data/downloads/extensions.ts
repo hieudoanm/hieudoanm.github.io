@@ -42,6 +42,14 @@ export const extensions: Download[] = [
     description: 'Shopify',
   },
   {
+    id: 'snapshot',
+    label: 'Snapshot',
+    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/snapshot/download',
+    emoji: '📸',
+    color: '#0065b3',
+    description: 'Snapshot',
+  },
+  {
     id: 'youtube-transcript',
     label: 'YouTube Transcript',
     url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/youtube/transcript/download',
