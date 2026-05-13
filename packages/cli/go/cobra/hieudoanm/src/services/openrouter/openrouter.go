@@ -92,6 +92,11 @@ func ResolveModel(query string, models []Model) *Model {
 	}
 	if len(idMatches) > 1 {
 		sort.Slice(idMatches, func(i, j int) bool {
+			iFree := strings.HasSuffix(idMatches[i].ID, ":free")
+			jFree := strings.HasSuffix(idMatches[j].ID, ":free")
+			if iFree != jFree {
+				return iFree
+			}
 			return len(idMatches[i].ID) < len(idMatches[j].ID)
 		})
 		return &idMatches[0]
@@ -190,7 +195,7 @@ func extractMessage(raw []byte) string {
 	if err := json.Unmarshal(raw, &envelope); err == nil && envelope.Error.Message != "" {
 		msg := envelope.Error.Message
 		if len(msg) > 80 {
-			msg = msg[:79] + "…"
+			msg = msg[:77] + "..."
 		}
 		return msg
 	}

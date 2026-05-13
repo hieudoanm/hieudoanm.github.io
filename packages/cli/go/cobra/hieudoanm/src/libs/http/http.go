@@ -22,35 +22,47 @@ type Options struct {
 	Debug  bool
 }
 
-func debugLog(debug bool, label, value string) {
+func debugLog(debug bool, label string, value interface{}) {
 	if debug {
-		fmt.Println(label, ":", value)
+		fmt.Printf("%s: %+v\n", label, value)
+	}
+}
+
+func setHeadersAndQuery(req *http.Request, options Options) {
+	if options.Header != nil {
+		req.Header = options.Header
+	}
+	if options.Query != nil {
+		q := req.URL.Query()
+		for k, v := range options.Query {
+			q.Add(k, v)
+		}
+		req.URL.RawQuery = q.Encode()
 	}
 }
 
 // Get ...
 func Get(url string, options Options) ([]byte, error) {
-	// Make the GET request
-	request, requestError := http.NewRequest("GET", url, nil)
-	if requestError != nil {
-		fmt.Println("Error:", requestError)
-		return nil, requestError
+	request, err := http.NewRequest("GET", url, nil)
+	if err != nil {
+		return nil, err
 	}
-	// Set Headers
-	request.Header = options.Header
-	// Response
-	client := http.Client{}
-	response, responseError := client.Do(request)
-	if responseError != nil {
-		return nil, responseError
+
+	setHeadersAndQuery(request, options)
+
+	client := &http.Client{}
+	response, err := client.Do(request)
+	if err != nil {
+		return nil, err
 	}
 	defer response.Body.Close()
-	// Read response body
-	body, bodyError := io.ReadAll(response.Body)
-	if bodyError != nil {
-		fmt.Println(RESPONSE_ERROR, ":", bodyError)
-		return nil, bodyError
+
+	body, err := io.ReadAll(response.Body)
+	if err != nil {
+		debugLog(options.Debug, RESPONSE_ERROR, err)
+		return nil, err
 	}
+
 	debugLog(options.Debug, RESPONSE_STATUS, response.Status)
 	debugLog(options.Debug, RESPONSE_BODY, string(body))
 	return body, nil
@@ -58,33 +70,32 @@ func Get(url string, options Options) ([]byte, error) {
 
 // Post ...
 func Post(url string, options Options) ([]byte, error) {
-	// JSON payload
-	requestData, jsonMarshalError := json.Marshal(options.Body)
-	if jsonMarshalError != nil {
-		return nil, jsonMarshalError
+	requestData, err := json.Marshal(options.Body)
+	if err != nil {
+		return nil, err
 	}
-	// Create request
-	request, requestError := http.NewRequest("POST", url, bytes.NewBuffer(requestData))
-	if requestError != nil {
-		return nil, requestError
+
+	request, err := http.NewRequest("POST", url, bytes.NewBuffer(requestData))
+	if err != nil {
+		return nil, err
 	}
-	// Set Headers
-	request.Header = options.Header
+
+	setHeadersAndQuery(request, options)
 	request.Header.Set(CONTENT_TYPE_HEADER, CONTENT_TYPE_APPLICATION_JSON)
-	// Send request
+
 	client := &http.Client{}
-	response, responseError := client.Do(request)
-	if responseError != nil {
-		fmt.Println(RESPONSE_ERROR, ":", responseError)
-		return nil, responseError
+	response, err := client.Do(request)
+	if err != nil {
+		return nil, err
 	}
 	defer response.Body.Close()
-	// Read response body
-	body, bodyError := io.ReadAll(response.Body)
-	if bodyError != nil {
-		fmt.Println(RESPONSE_ERROR, ":", bodyError)
-		return nil, bodyError
+
+	body, err := io.ReadAll(response.Body)
+	if err != nil {
+		debugLog(options.Debug, RESPONSE_ERROR, err)
+		return nil, err
 	}
+
 	debugLog(options.Debug, RESPONSE_STATUS, response.Status)
 	debugLog(options.Debug, RESPONSE_BODY, string(body))
 	return body, nil
@@ -92,33 +103,32 @@ func Post(url string, options Options) ([]byte, error) {
 
 // Put ...
 func Put(url string, options Options) ([]byte, error) {
-	// JSON payload
-	requestData, jsonMarshalError := json.Marshal(options.Body)
-	if jsonMarshalError != nil {
-		return nil, jsonMarshalError
+	requestData, err := json.Marshal(options.Body)
+	if err != nil {
+		return nil, err
 	}
-	// Create request
-	request, requestError := http.NewRequest("PUT", url, bytes.NewBuffer(requestData))
-	if requestError != nil {
-		return nil, requestError
+
+	request, err := http.NewRequest("PUT", url, bytes.NewBuffer(requestData))
+	if err != nil {
+		return nil, err
 	}
-	// Set Headers
-	request.Header = options.Header
+
+	setHeadersAndQuery(request, options)
 	request.Header.Set(CONTENT_TYPE_HEADER, CONTENT_TYPE_APPLICATION_JSON)
-	// Send request
+
 	client := &http.Client{}
-	response, responseError := client.Do(request)
-	if responseError != nil {
-		fmt.Println("Request error:", responseError)
-		return nil, responseError
+	response, err := client.Do(request)
+	if err != nil {
+		return nil, err
 	}
 	defer response.Body.Close()
-	// Read response body
-	body, bodyError := io.ReadAll(response.Body)
-	if bodyError != nil {
-		fmt.Println(RESPONSE_ERROR, ":", bodyError)
-		return nil, bodyError
+
+	body, err := io.ReadAll(response.Body)
+	if err != nil {
+		debugLog(options.Debug, RESPONSE_ERROR, err)
+		return nil, err
 	}
+
 	debugLog(options.Debug, RESPONSE_STATUS, response.Status)
 	debugLog(options.Debug, RESPONSE_BODY, string(body))
 	return body, nil
@@ -126,33 +136,32 @@ func Put(url string, options Options) ([]byte, error) {
 
 // Delete ...
 func Delete(url string, options Options) ([]byte, error) {
-	// JSON payload
-	requestData, jsonMarshalError := json.Marshal(options.Body)
-	if jsonMarshalError != nil {
-		return nil, jsonMarshalError
+	requestData, err := json.Marshal(options.Body)
+	if err != nil {
+		return nil, err
 	}
-	// Create request
-	request, requestError := http.NewRequest("DELETE", url, bytes.NewBuffer(requestData))
-	if requestError != nil {
-		return nil, requestError
+
+	request, err := http.NewRequest("DELETE", url, bytes.NewBuffer(requestData))
+	if err != nil {
+		return nil, err
 	}
-	// Set Headers
-	request.Header = options.Header
+
+	setHeadersAndQuery(request, options)
 	request.Header.Set(CONTENT_TYPE_HEADER, CONTENT_TYPE_APPLICATION_JSON)
-	// Send request
+
 	client := &http.Client{}
-	response, responseError := client.Do(request)
-	if responseError != nil {
-		fmt.Println("Request error:", responseError)
-		return nil, responseError
+	response, err := client.Do(request)
+	if err != nil {
+		return nil, err
 	}
 	defer response.Body.Close()
-	// Read response body
-	body, bodyError := io.ReadAll(response.Body)
-	if bodyError != nil {
-		fmt.Println(RESPONSE_ERROR, ":", bodyError)
-		return nil, bodyError
+
+	body, err := io.ReadAll(response.Body)
+	if err != nil {
+		debugLog(options.Debug, RESPONSE_ERROR, err)
+		return nil, err
 	}
+
 	debugLog(options.Debug, RESPONSE_STATUS, response.Status)
 	debugLog(options.Debug, RESPONSE_BODY, string(body))
 	return body, nil
