@@ -20,26 +20,6 @@
     "tags": ["cli", "extension", "android", "macos", "web"]
   },
   {
-    "category": "design",
-    "emoji": "🧩",
-    "id": "composition",
-    "name": "Composition",
-    "href": "https://hieudoanm.github.io/composition",
-    "github": "https://github.com/hieudoanm/composition",
-    "image": "https://raw.githubusercontent.com/hieudoanm/composition/refs/heads/master/images/app.png",
-    "tags": ["android", "macos", "web"]
-  },
-  {
-    "category": "design",
-    "emoji": "📐",
-    "id": "svg",
-    "name": "SVG",
-    "href": "https://hieudoanm.github.io/svg",
-    "github": "https://github.com/hieudoanm/svg",
-    "image": "https://raw.githubusercontent.com/hieudoanm/svg/refs/heads/master/images/app.png",
-    "tags": ["android", "macos", "web"]
-  },
-  {
     "category": "games",
     "emoji": "♟",
     "id": "chess",
@@ -87,6 +67,16 @@
     "href": "https://hieudoanm.github.io/attractors",
     "github": "https://github.com/hieudoanm/attractors",
     "image": "https://raw.githubusercontent.com/hieudoanm/attractors/refs/heads/master/images/app.png",
+    "tags": ["android", "macos", "web"]
+  },
+  {
+    "category": "utilities",
+    "emoji": "🧩",
+    "id": "composition",
+    "name": "Composition",
+    "href": "https://hieudoanm.github.io/composition",
+    "github": "https://github.com/hieudoanm/composition",
+    "image": "https://raw.githubusercontent.com/hieudoanm/composition/refs/heads/master/images/app.png",
     "tags": ["android", "macos", "web"]
   },
   {

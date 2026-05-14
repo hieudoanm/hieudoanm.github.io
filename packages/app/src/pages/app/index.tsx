@@ -49,6 +49,7 @@ import { IPModal } from '@hieudoanm/components/modals/tools/IPModal';
 import { KaprekarModal } from '@hieudoanm/components/modals/tools/KaprekarModal';
 import { ShopifyDetectModal } from '@hieudoanm/components/modals/tools/ShopifyDetectModal';
 import { StringModal } from '@hieudoanm/components/modals/tools/StringModal';
+import { SVGModal } from '@hieudoanm/components/modals/tools/SVGModal';
 import { UUIDModal } from '@hieudoanm/components/modals/tools/UUIDModal';
 import { LegislationModal } from '@hieudoanm/components/modals/visualization/LegislationModal';
 import { LeftSidebar } from '@hieudoanm/components/sidebars/LeftSidebar';
@@ -127,6 +128,7 @@ type ModalId =
   | 'invoice-parser'
   | 'logmar'
   | 'snellen'
+  | 'svg'
   | 'tumbling-e';
 
 type SidebarTab = 'tasks' | 'clock';
@@ -184,6 +186,7 @@ const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
   'invoice-parser': InvoiceParserModal,
   logmar: LogMARChartModal,
   snellen: SnellenChartModal,
+  svg: SVGModal,
   'tumbling-e': TumblingEChartModal,
 };
 
@@ -251,6 +254,13 @@ const makeTools = (
       emoji: '✏️',
       color: '#10b981',
       onClick: open('string'),
+    },
+    {
+      label: 'SVG',
+      description: 'Editor',
+      emoji: '🎨',
+      color: '#8b5cf6',
+      onClick: open('svg'),
     },
     {
       label: 'UUID',

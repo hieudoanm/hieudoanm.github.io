@@ -1,14 +1,13 @@
 # 👨‍💻 I'm [HIEU DOAN](https://hieudoanm.github.io)
 
-## Table of Contents (15)
+## Table of Contents (14)
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
-  - [Table of Contents (15)](#table-of-contents-15)
+  - [Table of Contents (14)](#table-of-contents-14)
   - [Artificial Intelligence (2)](#artificial-intelligence-2)
-  - [Design (2)](#design-2)
   - [Games (2)](#games-2)
   - [Template (2)](#template-2)
-  - [Utilities (7)](#utilities-7)
+  - [Utilities (8)](#utilities-8)
 
 ## Artificial Intelligence (2)
 
@@ -19,16 +18,6 @@
 [distilled-gh]: https://github.com/hieudoanm/distilled
 [promptly]: https://hieudoanm.github.io/promptly
 [promptly-gh]: https://github.com/hieudoanm/promptly
-
-## Design (2)
-
-1. 🧩 [Composition][composition] - [GitHub][composition-gh]
-2. 📐 [SVG][svg] - [GitHub][svg-gh]
-
-[composition]: https://hieudoanm.github.io/composition
-[composition-gh]: https://github.com/hieudoanm/composition
-[svg]: https://hieudoanm.github.io/svg
-[svg-gh]: https://github.com/hieudoanm/svg
 
 ## Games (2)
 
@@ -50,18 +39,21 @@
 [telegram]: https://hieudoanm.github.io/telegram
 [telegram-gh]: https://github.com/hieudoanm/telegram
 
-## Utilities (7)
+## Utilities (8)
 
 1. 🌀 [Attractors][attractors] - [GitHub][attractors-gh]
-2. 📚 [Docs][docs] - [GitHub][docs-gh]
-3. 📱 [InstaSize][instasize] - [GitHub][instasize-gh]
-4. 🛰️ [Proxy][proxy] - [GitHub][proxy-gh]
-5. 🕵️ [Redact][redact] - [GitHub][redact-gh]
-6. 🤟 [Sign][sign] - [GitHub][sign-gh]
-7. 🖥️ [System][system] - [GitHub][system-gh]
+2. 🧩 [Composition][composition] - [GitHub][composition-gh]
+3. 📚 [Docs][docs] - [GitHub][docs-gh]
+4. 📱 [InstaSize][instasize] - [GitHub][instasize-gh]
+5. 🛰️ [Proxy][proxy] - [GitHub][proxy-gh]
+6. 🕵️ [Redact][redact] - [GitHub][redact-gh]
+7. 🤟 [Sign][sign] - [GitHub][sign-gh]
+8. 🖥️ [System][system] - [GitHub][system-gh]
 
 [attractors]: https://hieudoanm.github.io/attractors
 [attractors-gh]: https://github.com/hieudoanm/attractors
+[composition]: https://hieudoanm.github.io/composition
+[composition-gh]: https://github.com/hieudoanm/composition
 [docs]: https://hieudoanm.github.io/docs
 [docs-gh]: https://github.com/hieudoanm/docs
 [instasize]: https://hieudoanm.github.io/instasize
