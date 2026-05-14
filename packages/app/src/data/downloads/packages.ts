@@ -8,6 +8,12 @@ export const packages: Download[] = [
     emoji: '🌐',
     color: '#3b82f6',
     description: 'Native',
+    downloads: [
+      {
+        label: 'Download NPM',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/modules/browser/native',
+      },
+    ],
   },
   {
     id: 'browser-react',
@@ -16,6 +22,12 @@ export const packages: Download[] = [
     emoji: '🌐',
     color: '#3b82f6',
     description: 'React',
+    downloads: [
+      {
+        label: 'Download NPM',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/modules/browser/react',
+      },
+    ],
   },
   {
     id: 'chess-elo',
@@ -24,6 +36,12 @@ export const packages: Download[] = [
     emoji: '♞',
     color: '#1f2937',
     description: 'Elo',
+    downloads: [
+      {
+        label: 'Download NPM',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/modules/chess/elo',
+      },
+    ],
   },
   {
     id: 'simple-upload-react',
@@ -32,6 +50,12 @@ export const packages: Download[] = [
     emoji: '📤',
     color: '#3b82f6',
     description: '@simple-upload/react',
+    downloads: [
+      {
+        label: 'Download NPM',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/modules/simple/upload/frontend/react',
+      },
+    ],
   },
   {
     id: 'simple-upload-solid',
@@ -40,6 +64,12 @@ export const packages: Download[] = [
     emoji: '📤',
     color: '#3b82f6',
     description: '@simple-upload/solid',
+    downloads: [
+      {
+        label: 'Download NPM',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/modules/simple/upload/frontend/solid',
+      },
+    ],
   },
   {
     id: 'simple-upload-server',
@@ -48,5 +78,11 @@ export const packages: Download[] = [
     emoji: '📤',
     color: '#3b82f6',
     description: '@simple-upload/server',
+    downloads: [
+      {
+        label: 'Download NPM',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/modules/simple/upload/server',
+      },
+    ],
   },
 ];

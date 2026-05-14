@@ -8,6 +8,16 @@ export const extensions: Download[] = [
     emoji: '🚫',
     color: '#ef4444',
     description: 'Blocked',
+    downloads: [
+      {
+        label: 'Download XPI',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/blocked/download/blocked.xpi',
+      },
+      {
+        label: 'Download ZIP',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/blocked/download/blocked.zip',
+      },
+    ],
   },
   {
     id: 'chess-focus',
@@ -16,6 +26,16 @@ export const extensions: Download[] = [
     emoji: '♟️',
     color: '#6f6f6f',
     description: 'Chess',
+    downloads: [
+      {
+        label: 'Download XPI',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/chess/focus/download/chess-focus.xpi',
+      },
+      {
+        label: 'Download ZIP',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/chess/focus/download/chess-focus.zip',
+      },
+    ],
   },
   {
     id: 'github-open-link',
@@ -24,6 +44,16 @@ export const extensions: Download[] = [
     emoji: '🔗',
     color: '#111827',
     description: 'GitHub',
+    downloads: [
+      {
+        label: 'Download XPI',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/github/open-link/download/github-open-link.xpi',
+      },
+      {
+        label: 'Download ZIP',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/github/open-link/download/github-open-link.zip',
+      },
+    ],
   },
   {
     id: 'instagram-download',
@@ -32,6 +62,16 @@ export const extensions: Download[] = [
     emoji: '📸',
     color: '#e10600',
     description: 'Instagram',
+    downloads: [
+      {
+        label: 'Download XPI',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/instagram/download/instagram-download.xpi',
+      },
+      {
+        label: 'Download ZIP',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/instagram/download/instagram-download.zip',
+      },
+    ],
   },
   {
     id: 'shopify-detect',
@@ -40,6 +80,16 @@ export const extensions: Download[] = [
     emoji: '🛍️',
     color: '#10b981',
     description: 'Shopify',
+    downloads: [
+      {
+        label: 'Download XPI',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/shopify/detect/download/shopify-detect.xpi',
+      },
+      {
+        label: 'Download ZIP',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/shopify/detect/download/shopify-detect.zip',
+      },
+    ],
   },
   {
     id: 'snapshot',
@@ -48,6 +98,16 @@ export const extensions: Download[] = [
     emoji: '📸',
     color: '#0065b3',
     description: 'Snapshot',
+    downloads: [
+      {
+        label: 'Download XPI',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/snapshot/download/snapshot.xpi',
+      },
+      {
+        label: 'Download ZIP',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/snapshot/download/snapshot.zip',
+      },
+    ],
   },
   {
     id: 'youtube-transcript',
@@ -56,5 +116,15 @@ export const extensions: Download[] = [
     emoji: '📜',
     color: '#ef4444',
     description: 'YouTube',
+    downloads: [
+      {
+        label: 'Download XPI',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/youtube/transcript/download/youtube-transcript.xpi',
+      },
+      {
+        label: 'Download ZIP',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/youtube/transcript/download/youtube-transcript.zip',
+      },
+    ],
   },
 ];

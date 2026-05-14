@@ -8,6 +8,12 @@ export const clis: Download[] = [
     emoji: '🐚',
     color: '#4ade80',
     description: 'Aliases',
+    downloads: [
+      {
+        label: 'Download BIN',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/cli/bash/download/bash/dist',
+      },
+    ],
   },
   {
     id: 'cobra.md',
@@ -16,6 +22,12 @@ export const clis: Download[] = [
     emoji: '🐍',
     color: '#3b82f6',
     description: 'Markdown',
+    downloads: [
+      {
+        label: 'Download BIN',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/cli/go/cobra/cobra.md/bin/cobra-md',
+      },
+    ],
   },
   {
     id: 'hieudoanm',
@@ -24,6 +36,12 @@ export const clis: Download[] = [
     emoji: '👨‍💻',
     color: '#1f2937',
     description: 'Skills',
+    downloads: [
+      {
+        label: 'Download BIN',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/cli/go/cobra/hieudoanm/bin/hieudoanm',
+      },
+    ],
   },
   {
     id: 'gh',
@@ -32,5 +50,11 @@ export const clis: Download[] = [
     emoji: '🐙',
     color: '#24292f',
     description: 'GitHub CLI',
+    downloads: [
+      {
+        label: 'Download BIN',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/cli/go/gh/bin',
+      },
+    ],
   },
 ];

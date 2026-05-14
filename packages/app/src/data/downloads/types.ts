@@ -5,4 +5,5 @@ export type Download = {
   emoji: string;
   color: string;
   description: string;
+  downloads: { label: string; url: string }[];
 };

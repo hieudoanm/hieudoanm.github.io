@@ -1,5 +1,6 @@
 import { AppCard } from '@hieudoanm/components/cards/AppCard';
 import { BookmarkCard } from '@hieudoanm/components/cards/BookmarkCard';
+import { DownloadCard } from '@hieudoanm/components/cards/DownloadCard';
 import { Tool, ToolCard } from '@hieudoanm/components/cards/ToolCard';
 import { CalculatorModal } from '@hieudoanm/components/modals/calculators/CalculatorModal';
 import { ConverterModal } from '@hieudoanm/components/modals/calculators/ConverterModal';
@@ -880,7 +881,7 @@ const MainContent: FC<MainContentProps> = memo(
                 <Section key={label} label={label} count={filtered.length}>
                   <div className={GRID}>
                     {filtered.map((a) => (
-                      <BookmarkCard key={a.id} {...a} />
+                      <DownloadCard key={a.id} {...a} />
                     ))}
                   </div>
                 </Section>
@@ -1051,9 +1052,9 @@ const AppPage: NextPage = () => {
         items: f(toolSections.visualization, 'label'),
         Card: BookmarkCard,
       },
-      { label: 'CLIs', items: f(clis, 'id'), Card: BookmarkCard },
-      { label: 'Extensions', items: f(extensions, 'id'), Card: BookmarkCard },
-      { label: 'Packages', items: f(packages, 'id'), Card: BookmarkCard },
+      { label: 'CLIs', items: f(clis, 'id'), Card: DownloadCard },
+      { label: 'Extensions', items: f(extensions, 'id'), Card: DownloadCard },
+      { label: 'Packages', items: f(packages, 'id'), Card: DownloadCard },
       { label: 'Apps', items: f(apps, 'id'), Card: AppCard },
     ];
   }, [query, toolSections]);
