@@ -5,7 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = "==3.14.5"
 dependencies = [
-    "black==26.3.1",
+    "black==26.5.0",
     "pandas==3.0.3",
     "requests==2.34.2",
 ]
