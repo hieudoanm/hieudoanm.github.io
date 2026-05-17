@@ -1,11 +1,11 @@
 {
-  "name": "@hieudoanm/workspace",
+  "name": "@hieudoanm.github.io/workspace",
   "version": "0.0.1",
   "description": "hieudoanm",
   "keywords": [
     "hieudoanm"
   ],
-  "homepage": "https://hieudoanm.github.io/hieudoanm/",
+  "homepage": "https://hieudoanm.github.io/hieudoanm",
   "bugs": {
     "url": "https://github.com/hieudoanm/hieudoanm/issues"
   },

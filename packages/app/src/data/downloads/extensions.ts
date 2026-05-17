@@ -38,6 +38,24 @@ export const extensions: Download[] = [
     ],
   },
   {
+    id: 'claude-limit',
+    label: 'Claude Limit',
+    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/claude/limit/download',
+    emoji: '🧠',
+    color: '#2166f3',
+    description: 'Claude',
+    downloads: [
+      {
+        label: 'Download XPI',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/claude/limit/download/claude-limit.xpi',
+      },
+      {
+        label: 'Download ZIP',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/claude/limit/download/claude-limit.zip',
+      },
+    ],
+  },
+  {
     id: 'github-open-link',
     label: 'Open Link',
     url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/github/open-link/download',

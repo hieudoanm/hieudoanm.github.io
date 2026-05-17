@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Claude Limit",
+  "version": "1.0.0",
+  "description": "Automatically limit Claude chat messages to prevent overusing the free tier",
+  "author": "Hieu Doan",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://claude.com/*"
+      ],
+      "js": [
+        "background.js",
+        "content.js"
+      ]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "claude-limit@hieudoanm.github.io"
+    }
+  },
+  "homepage_url": "https://hieudoanm.github.io",
+  "offline_enabled": true
+}
