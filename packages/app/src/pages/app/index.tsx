@@ -51,16 +51,19 @@ import { ShopifyDetectModal } from '@hieudoanm/components/modals/tools/ShopifyDe
 import { StringModal } from '@hieudoanm/components/modals/tools/StringModal';
 import { SVGModal } from '@hieudoanm/components/modals/tools/SVGModal';
 import { UUIDModal } from '@hieudoanm/components/modals/tools/UUIDModal';
+import { CalendarTrackerModal } from '@hieudoanm/components/modals/visualization/CalendarTracker';
 import { LegislationModal } from '@hieudoanm/components/modals/visualization/LegislationModal';
 import { LeftSidebar } from '@hieudoanm/components/sidebars/LeftSidebar';
 import { RightSidebar } from '@hieudoanm/components/sidebars/RightSidebar';
 import { apps } from '@hieudoanm/data/apps';
 import {
+  agents as agentsBookmarks,
   ai as aiBookmarks,
-  coding as codingBookmarks,
+  code as codeBookmarks,
   google as googleBookmarks,
   messaging as messagingBookmarks,
-  websites as websiteBookmarks,
+  music as musicBookmarks,
+  social as socialBookmarks,
 } from '@hieudoanm/data/bookmarks';
 import { clis, extensions, packages } from '@hieudoanm/data/downloads';
 import { getTimeInZone, timezones } from '@hieudoanm/data/timezones';
@@ -122,6 +125,7 @@ type ModalId =
   | 'youtube-thumbnails'
   | 'palindrome'
   | 'clipboard'
+  | 'calendar-tracker'
   | 'legislation'
   | 'chess-clock'
   | 'watchface'
@@ -179,6 +183,7 @@ const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
   markdown: MarkdownModal,
   'youtube-thumbnails': YouTubeThumbnailsModal,
   palindrome: PalindromeModal,
+  'calendar-tracker': CalendarTrackerModal,
   clipboard: ClipboardModal,
   legislation: LegislationModal,
   'chess-clock': ChessClockModal,
@@ -561,6 +566,13 @@ const makeTools = (
   ],
   visualization: [
     {
+      label: 'Calendar Tracker',
+      description: 'Activities',
+      emoji: '📅',
+      color: '#10b981',
+      onClick: open('calendar-tracker'),
+    },
+    {
       label: 'Legislation',
       description: 'Visualization',
       emoji: '🏛️',
@@ -689,11 +701,13 @@ const MainContent: FC<MainContentProps> = memo(
     // Bookmark sections
     const bookmarkSections = useMemo(
       () => [
-        { label: 'Coding', items: codingBookmarks },
+        { label: 'Agents', items: agentsBookmarks },
         { label: 'AI Assistants', items: aiBookmarks },
+        { label: 'Code', items: codeBookmarks },
         { label: 'Google Workspace', items: googleBookmarks },
         { label: 'Messaging', items: messagingBookmarks },
-        { label: 'Websites', items: websiteBookmarks },
+        { label: 'Music', items: musicBookmarks },
+        { label: 'Websites', items: socialBookmarks },
       ],
       []
     );
@@ -996,13 +1010,18 @@ const AppPage: NextPage = () => {
 
     return [
       {
-        label: 'Coding',
-        items: f(codingBookmarks, 'label'),
+        label: 'Agents',
+        items: f(agentsBookmarks, 'label'),
         Card: BookmarkCard,
       },
       {
         label: 'AI Assistants',
         items: f(aiBookmarks, 'label'),
+        Card: BookmarkCard,
+      },
+      {
+        label: 'Code',
+        items: f(codeBookmarks, 'label'),
         Card: BookmarkCard,
       },
       {
@@ -1016,8 +1035,13 @@ const AppPage: NextPage = () => {
         Card: BookmarkCard,
       },
       {
+        label: 'Music',
+        items: f(musicBookmarks, 'label'),
+        Card: BookmarkCard,
+      },
+      {
         label: 'Websites',
-        items: f(websiteBookmarks, 'label'),
+        items: f(socialBookmarks, 'label'),
         Card: BookmarkCard,
       },
       { label: 'Tools', items: f(toolSections.tools, 'label'), Card: ToolCard },
