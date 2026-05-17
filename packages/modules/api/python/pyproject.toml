@@ -1,0 +1,7 @@
+[project]
+name = "api"
+version = "0.0.1"
+description = "API client library for various external APIs"
+readme = "README.md"
+requires-python = "==3.14.5"
+dependencies = ["httpx"]

@@ -1,0 +1,15 @@
+# Browsers
+
+1. [Firefox](https://www.mozilla.org/en-US/firefox/download/)
+2. [Tor](https://www.torproject.org/)
+3. [DuckDuckGo](https://duckduckgo.com/)
+4. [Safari](https://www.apple.com/safari/download/)
+5. [Chromium](https://www.chromium.org/)
+6. [Arc](https://arc.net)
+7. [Brave](https://brave.com)
+8. [Chrome](https://www.google.com/chrome/download/)
+9. [Edge](https://www.microsoft.com/en-us/edge/download)
+10. [Vivaldi](https://vivaldi.com/download/)
+11. [Opera](https://www.opera.com/download)
+12. [Whale](https://whale.naver.com/)
+13. [Yandex](https://browser.yandex.com/)

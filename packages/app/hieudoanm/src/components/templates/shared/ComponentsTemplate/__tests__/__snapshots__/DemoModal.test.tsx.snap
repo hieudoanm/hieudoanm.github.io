@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`DemoModal to match snapshot 1`] = `
+<div>
+  <input
+    class="modal-toggle"
+    id="demo-modal"
+    type="checkbox"
+  />
+  <div
+    class="modal modal-bottom sm:modal-middle"
+    role="dialog"
+  >
+    <div
+      class="modal-box bg-base-200 border-base-300 border"
+    >
+      <h3
+        class="mb-4 font-serif text-xl font-bold"
+      >
+        Modal component
+      </h3>
+      <p
+        class="text-base-content/50 mb-7 text-sm leading-relaxed"
+      >
+        This is a modal dialog. It traps focus, supports Escape key dismissal, and renders in a portal to avoid z-index collisions. Use it for confirmations, forms, and contextual detail views.
+      </p>
+      <div
+        class="modal-action"
+      >
+        <label
+          class="btn btn-ghost border-base-300 border"
+          for="demo-modal"
+        >
+          Cancel
+        </label>
+        <label
+          class="btn btn-primary"
+          for="demo-modal"
+        >
+          Confirm
+        </label>
+      </div>
+    </div>
+    <label
+      class="modal-backdrop"
+      for="demo-modal"
+    />
+  </div>
+</div>
+`;

@@ -1,0 +1,443 @@
+[
+  {
+    "level": "province",
+    "name": "Gia Lai",
+    "capital": "Pleiku",
+    "macroregion": "Central",
+    "region": "Central Highlands"
+  },
+  {
+    "level": "province",
+    "name": "Kon Tum",
+    "capital": "Kon Tum",
+    "macroregion": "Central",
+    "region": "Central Highlands"
+  },
+  {
+    "level": "province",
+    "name": "Lâm Đồng",
+    "capital": "Đà Lạt",
+    "macroregion": "Central",
+    "region": "Central Highlands"
+  },
+  {
+    "level": "province",
+    "name": "Đắc Lắk",
+    "capital": "Buôn Ma Thuột",
+    "macroregion": "Central",
+    "region": "Central Highlands"
+  },
+  {
+    "level": "province",
+    "name": "Đắk Nông",
+    "capital": "Gia Nghĩa",
+    "macroregion": "Central",
+    "region": "Central Highlands"
+  },
+  {
+    "level": "province",
+    "name": "An Giang",
+    "capital": "Long Xuyên",
+    "macroregion": "Southern",
+    "region": "Mekong River Delta"
+  },
+  {
+    "level": "province",
+    "name": "Bạc Liêu",
+    "capital": "Bạc Liêu",
+    "macroregion": "Southern",
+    "region": "Mekong River Delta"
+  },
+  {
+    "level": "province",
+    "name": "Bến Tre",
+    "capital": "Bến Tre",
+    "macroregion": "Southern",
+    "region": "Mekong River Delta"
+  },
+  {
+    "level": "province",
+    "name": "Cà Mau",
+    "capital": "Cà Mau",
+    "macroregion": "Southern",
+    "region": "Mekong River Delta"
+  },
+  {
+    "level": "municipality",
+    "name": "Cần Thơ",
+    "capital": "Ninh Kiều",
+    "macroregion": "Southern",
+    "region": "Mekong River Delta"
+  },
+  {
+    "level": "province",
+    "name": "Hậu Giang",
+    "capital": "Vị Thanh",
+    "macroregion": "Southern",
+    "region": "Mekong River Delta"
+  },
+  {
+    "level": "province",
+    "name": "Kiên Giang",
+    "capital": "Rạch Giá",
+    "macroregion": "Southern",
+    "region": "Mekong River Delta"
+  },
+  {
+    "level": "province",
+    "name": "Long An",
+    "capital": "Tân An",
+    "macroregion": "Southern",
+    "region": "Mekong River Delta"
+  },
+  {
+    "level": "province",
+    "name": "Sóc Trăng",
+    "capital": "Sóc Trăng",
+    "macroregion": "Southern",
+    "region": "Mekong River Delta"
+  },
+  {
+    "level": "province",
+    "name": "Tiền Giang",
+    "capital": "Mỹ Tho",
+    "macroregion": "Southern",
+    "region": "Mekong River Delta"
+  },
+  {
+    "level": "province",
+    "name": "Trà Vinh",
+    "capital": "Trà Vinh",
+    "macroregion": "Southern",
+    "region": "Mekong River Delta"
+  },
+  {
+    "level": "province",
+    "name": "Vĩnh Long",
+    "capital": "Vĩnh Long",
+    "macroregion": "Southern",
+    "region": "Mekong River Delta"
+  },
+  {
+    "level": "province",
+    "name": "Đồng Tháp",
+    "capital": "Cao Lãnh",
+    "macroregion": "Southern",
+    "region": "Mekong River Delta"
+  },
+  {
+    "level": "province",
+    "name": "Hà Tĩnh",
+    "capital": "Hà Tĩnh",
+    "macroregion": "Central",
+    "region": "North Central"
+  },
+  {
+    "level": "province",
+    "name": "Nghệ An",
+    "capital": "Vinh",
+    "macroregion": "Central",
+    "region": "North Central"
+  },
+  {
+    "level": "province",
+    "name": "Quảng Bình",
+    "capital": "Đồng Hới",
+    "macroregion": "Central",
+    "region": "North Central"
+  },
+  {
+    "level": "province",
+    "name": "Quảng Trị",
+    "capital": "Đông Hà",
+    "macroregion": "Central",
+    "region": "North Central"
+  },
+  {
+    "level": "province",
+    "name": "Thanh Hóa",
+    "capital": "Thanh Hóa",
+    "macroregion": "Central",
+    "region": "North Central"
+  },
+  {
+    "level": "province",
+    "name": "Thừa Thiên - Huế",
+    "capital": "Huế",
+    "macroregion": "Central",
+    "region": "North Central"
+  },
+  {
+    "level": "province",
+    "name": "Bắc Giang",
+    "capital": "Bắc Giang",
+    "macroregion": "Northern",
+    "region": "Northeast"
+  },
+  {
+    "level": "province",
+    "name": "Bắc Kạn",
+    "capital": "Bắc Kạn",
+    "macroregion": "Northern",
+    "region": "Northeast"
+  },
+  {
+    "level": "province",
+    "name": "Cao Bằng",
+    "capital": "Cao Bằng",
+    "macroregion": "Northern",
+    "region": "Northeast"
+  },
+  {
+    "level": "province",
+    "name": "Hà Giang",
+    "capital": "Hà Giang",
+    "macroregion": "Northern",
+    "region": "Northeast"
+  },
+  {
+    "level": "province",
+    "name": "Lạng Sơn",
+    "capital": "Lạng Sơn",
+    "macroregion": "Northern",
+    "region": "Northeast"
+  },
+  {
+    "level": "province",
+    "name": "Phú Thọ",
+    "capital": "Việt Trì",
+    "macroregion": "Northern",
+    "region": "Northeast"
+  },
+  {
+    "level": "province",
+    "name": "Quảng Ninh",
+    "capital": "Hạ Long",
+    "macroregion": "Northern",
+    "region": "Northeast"
+  },
+  {
+    "level": "province",
+    "name": "Thái Nguyên",
+    "capital": "Thái Nguyên",
+    "macroregion": "Northern",
+    "region": "Northeast"
+  },
+  {
+    "level": "province",
+    "name": "Tuyên Quang",
+    "capital": "Tuyên Quang",
+    "macroregion": "Northern",
+    "region": "Northeast"
+  },
+  {
+    "level": "province",
+    "name": "Hòa Bình",
+    "capital": "Hòa Bình",
+    "macroregion": "Northern",
+    "region": "Northwest"
+  },
+  {
+    "level": "province",
+    "name": "Lai Châu",
+    "capital": "Lai Châu",
+    "macroregion": "Northern",
+    "region": "Northwest"
+  },
+  {
+    "level": "province",
+    "name": "Lào Cai",
+    "capital": "Lào Cai",
+    "macroregion": "Northern",
+    "region": "Northwest"
+  },
+  {
+    "level": "province",
+    "name": "Sơn La",
+    "capital": "Sơn La",
+    "macroregion": "Northern",
+    "region": "Northwest"
+  },
+  {
+    "level": "province",
+    "name": "Yên Bái",
+    "capital": "Yên Bái",
+    "macroregion": "Northern",
+    "region": "Northwest"
+  },
+  {
+    "level": "province",
+    "name": "Điện Biên",
+    "capital": "Điện Biên Phủ",
+    "macroregion": "Northern",
+    "region": "Northwest"
+  },
+  {
+    "level": "province",
+    "name": "Bắc Ninh",
+    "capital": "Bắc Ninh",
+    "macroregion": "Northern",
+    "region": "Red River Delta"
+  },
+  {
+    "level": "province",
+    "name": "Hà Nam",
+    "capital": "Phủ Lý",
+    "macroregion": "Northern",
+    "region": "Red River Delta"
+  },
+  {
+    "level": "municipality",
+    "name": "Hà Nội",
+    "capital": "Hoàn Kiếm",
+    "macroregion": "Northern",
+    "region": "Red River Delta"
+  },
+  {
+    "level": "province",
+    "name": "Hưng Yên",
+    "capital": "Hưng Yên",
+    "macroregion": "Northern",
+    "region": "Red River Delta"
+  },
+  {
+    "level": "province",
+    "name": "Hải Dương",
+    "capital": "Hải Dương",
+    "macroregion": "Northern",
+    "region": "Red River Delta"
+  },
+  {
+    "level": "municipality",
+    "name": "Hải Phòng",
+    "capital": "Hồng Bàng",
+    "macroregion": "Northern",
+    "region": "Red River Delta"
+  },
+  {
+    "level": "province",
+    "name": "Nam Định",
+    "capital": "Nam Định",
+    "macroregion": "Northern",
+    "region": "Red River Delta"
+  },
+  {
+    "level": "province",
+    "name": "Ninh Bình",
+    "capital": "Ninh Bình",
+    "macroregion": "Northern",
+    "region": "Red River Delta"
+  },
+  {
+    "level": "province",
+    "name": "Thái Bình",
+    "capital": "Thái Bình",
+    "macroregion": "Northern",
+    "region": "Red River Delta"
+  },
+  {
+    "level": "province",
+    "name": "Vĩnh Phúc",
+    "capital": "Vĩnh Yên",
+    "macroregion": "Northern",
+    "region": "Red River Delta"
+  },
+  {
+    "level": "province",
+    "name": "Bình Thuận",
+    "capital": "Phan Thiết",
+    "macroregion": "Central",
+    "region": "South Central Coast"
+  },
+  {
+    "level": "province",
+    "name": "Bình Định",
+    "capital": "Quy Nhon",
+    "macroregion": "Central",
+    "region": "South Central Coast"
+  },
+  {
+    "level": "province",
+    "name": "Khánh Hòa",
+    "capital": "Nha Trang",
+    "macroregion": "Central",
+    "region": "South Central Coast"
+  },
+  {
+    "level": "province",
+    "name": "Ninh Thuận",
+    "capital": "Phan Rang - Tháp Chàm",
+    "macroregion": "Central",
+    "region": "South Central Coast"
+  },
+  {
+    "level": "province",
+    "name": "Phú Yên",
+    "capital": "Tuy Hòa",
+    "macroregion": "Central",
+    "region": "South Central Coast"
+  },
+  {
+    "level": "province",
+    "name": "Quảng Nam",
+    "capital": "Tam Kỳ",
+    "macroregion": "Central",
+    "region": "South Central Coast"
+  },
+  {
+    "level": "province",
+    "name": "Quảng Ngãi",
+    "capital": "Quảng Ngãi",
+    "macroregion": "Central",
+    "region": "South Central Coast"
+  },
+  {
+    "level": "municipality",
+    "name": "Đà Nẵng",
+    "capital": "Hải Châu",
+    "macroregion": "Central",
+    "region": "South Central Coast"
+  },
+  {
+    "level": "province",
+    "name": "Bà Rịa - Vũng Tàu",
+    "capital": "Bà Rịa",
+    "macroregion": "Southern",
+    "region": "Southeast"
+  },
+  {
+    "level": "province",
+    "name": "Bình Dương",
+    "capital": "Thủ Dầu Một",
+    "macroregion": "Southern",
+    "region": "Southeast"
+  },
+  {
+    "level": "province",
+    "name": "Bình Phước",
+    "capital": "Đồng Xoài",
+    "macroregion": "Southern",
+    "region": "Southeast"
+  },
+  {
+    "level": "municipality",
+    "name": "Hồ Chí Minh",
+    "capital": "Quận 1",
+    "macroregion": "Southern",
+    "region": "Southeast"
+  },
+  {
+    "level": "province",
+    "name": "Tây Ninh",
+    "capital": "Tây Ninh",
+    "macroregion": "Southern",
+    "region": "Southeast"
+  },
+  {
+    "level": "province",
+    "name": "Đồng Nai",
+    "capital": "Biên Hòa",
+    "macroregion": "Southern",
+    "region": "Southeast"
+  }
+]

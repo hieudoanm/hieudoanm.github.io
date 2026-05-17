@@ -1,0 +1,846 @@
+year,stage,group,type,match_date,home,home_id,home_score,home_pens,away,away_id,away_score,away_pens,extra_time,stadium,city,host,result
+1957,Knock Out,,Semi Final,1957-02-10,Sudan,SDN,1,,Egypt,EGY,2,,,,Khartoum,Sudan,away
+1957,Knock Out,,Final,1957-02-16,Egypt,EGY,4,,Ethiopia,ETH,0,,,,Khartoum,Sudan,home
+1959,Group,,Round 1,1959-05-22,United Arab Republic,UNA,4,,Ethiopia,ETH,0,,,,Cairo,United Arab Republic,home
+1959,Group,,Round 1,1959-05-25,Ethiopia,ETH,0,,Sudan,SDN,1,,,,Cairo,United Arab Republic,away
+1959,Group,,Round 1,1959-05-29,United Arab Republic,UNA,2,,Sudan,SDN,1,,,,Cairo,United Arab Republic,home
+1962,Knock Out,,Semi Final,1962-01-14,Ethiopia,ETH,4,,Tunisia,TUN,2,,,,Addis Ababa,Ethiopia,home
+1962,Knock Out,,Semi Final,1962-01-18,United Arab Republic,UNA,2,,Uganda,UGA,1,,,,Addis Ababa,Ethiopia,home
+1962,Knock Out,,Third Place,1962-01-20,Tunisia,TUN,3,,Uganda,UGA,0,,,,Addis Ababa,Ethiopia,home
+1962,Knock Out,,Final,1962-01-21,Ethiopia,ETH,4,,United Arab Republic,UNA,2,,,,Addis Ababa,Ethiopia,home
+1963,Group,A,Round 1,1963-11-24,Ghana,GHA,1,,Tunisia,TUN,1,,,,Accra,Ghana,draw
+1963,Group,A,Round 1,1963-11-26,Ghana,GHA,2,,Ethiopia,ETH,0,,,,Accra,Ghana,home
+1963,Group,A,Round 1,1963-11-28,Ethiopia,ETH,4,,Tunisia,TUN,2,,,,Accra,Ghana,home
+1963,Group,B,Round 1,1963-11-24,United Arab Republic,UNA,6,,Nigeria,NGA,3,,,,Kumasi,Ghana,home
+1963,Group,B,Round 1,1963-11-26,United Arab Republic,UNA,2,,Sudan,SDN,2,,,,Kumasi,Ghana,draw
+1963,Group,B,Round 1,1963-11-28,Nigeria,NGA,0,,Sudan,SDN,4,,,,Kumasi,Ghana,away
+1963,Knock Out,,Third Place,1963-11-30,United Arab Republic,UNA,3,,Ethiopia,ETH,0,,,,Accra,Ghana,home
+1963,Knock Out,,Final,1963-12-01,Ghana,GHA,3,,Sudan,SDN,0,,,,Accra,Ghana,home
+1965,Group,A,Round 1,1965-11-12,Tunisia,TUN,4,,Ethiopia,ETH,0,,,,Tunis,Tunisia,home
+1965,Group,A,Round 1,1965-11-14,Tunisia,TUN,0,,Senegal,SEN,0,,,,Tunis,Tunisia,draw
+1965,Group,A,Round 1,1965-11-19,Ethiopia,ETH,1,,Senegal,SEN,5,,,,Tunis,Tunisia,away
+1965,Group,B,Round 1,1965-11-12,Congo-Kinshasa,CON,2,,Ghana,GHA,5,,,,Sousse,Tunisia,away
+1965,Group,B,Round 1,1965-11-14,Congo-Kinshasa,CON,0,,Ivory Coast,CIV,3,,,,Sfax,Tunisia,away
+1965,Group,B,Round 1,1965-11-19,Ghana,GHA,4,,Ivory Coast,CIV,1,,,,Bizerte,Tunisia,home
+1965,Knock Out,,Third Place,1965-11-21,Ivory Coast,CIV,1,,Senegal,SEN,0,,,,Tunis,Tunisia,home
+1965,Knock Out,,Final,1965-11-21,Tunisia,TUN,2,,Ghana,GHA,3,,,,Tunis,Tunisia,away
+1968,Group,A,Round 1,1968-01-12,Ethiopia,ETH,2,,Uganda,UGA,1,,,,Addis Ababa,Ethiopia,home
+1968,Group,A,Round 1,1968-01-12,Algeria,ALG,0,,Ivory Coast,CIV,3,,,,Addis Ababa,Ethiopia,away
+1968,Group,A,Round 1,1968-01-14,Ethiopia,ETH,1,,Ivory Coast,CIV,0,,,,Addis Ababa,Ethiopia,home
+1968,Group,A,Round 1,1968-01-14,Algeria,ALG,4,,Uganda,UGA,0,,,,Addis Ababa,Ethiopia,home
+1968,Group,A,Round 1,1968-01-16,Ethiopia,ETH,3,,Algeria,ALG,1,,,,Addis Ababa,Ethiopia,home
+1968,Group,A,Round 1,1968-01-16,Ivory Coast,CIV,2,,Uganda,UGA,1,,,,Addis Ababa,Ethiopia,home
+1968,Group,B,Round 1,1968-01-12,Ghana,GHA,2,,Senegal,SEN,2,,,,Asmara,Ethiopia,draw
+1968,Group,B,Round 1,1968-01-12,Congo,CGO,0,,Congo-Kinshasa,CON,3,,,,Asmara,Ethiopia,away
+1968,Group,B,Round 1,1968-01-14,Congo-Kinshasa,CON,1,,Ghana,GHA,2,,,,Asmara,Ethiopia,away
+1968,Group,B,Round 1,1968-01-14,Congo,CGO,1,,Senegal,SEN,2,,,,Asmara,Ethiopia,away
+1968,Group,B,Round 1,1968-01-16,Congo-Kinshasa,CON,2,,Senegal,SEN,1,,,,Asmara,Ethiopia,home
+1968,Group,B,Round 1,1968-01-16,Congo,CGO,1,,Ghana,GHA,3,,,,Asmara,Ethiopia,away
+1968,Knock Out,,Semi Final,1968-01-19,Ethiopia,ETH,2,,Congo-Kinshasa,CON,3,,,,Addis Ababa,Ethiopia,away
+1968,Knock Out,,Semi Final,1968-01-19,Ghana,GHA,4,,Ivory Coast,CIV,3,,,,Asmara,Ethiopia,home
+1968,Knock Out,,Final,1968-01-21,Congo-Kinshasa,CON,1,,Ghana,GHA,0,,,,Addis Ababa,Ethiopia,home
+1968,Knock Out,,Third Place,1968-01-21,Ethiopia,ETH,0,,Ivory Coast,CIV,1,,,,Addis Ababa,Ethiopia,away
+1970,Group,A,Round 1,1970-02-06,Sudan,SDN,3,,Ethiopia,ETH,0,,,,Khartoum,Sudan,home
+1970,Group,A,Round 1,1970-02-06,Cameroon,CMR,3,,Ivory Coast,CIV,2,,,,Khartoum,Sudan,home
+1970,Group,A,Round 1,1970-02-08,Cameroon,CMR,3,,Ethiopia,ETH,2,,,,Khartoum,Sudan,home
+1970,Group,A,Round 1,1970-02-08,Sudan,SDN,0,,Ivory Coast,CIV,1,,,,Khartoum,Sudan,away
+1970,Group,A,Round 1,1970-02-10,Ethiopia,ETH,1,,Ivory Coast,CIV,6,,,,Khartoum,Sudan,away
+1970,Group,A,Round 1,1970-02-10,Sudan,SDN,2,,Cameroon,CMR,1,,,,Khartoum,Sudan,home
+1970,Group,B,Round 1,1970-02-07,United Arab Republic,UNA,4,,Guinea,GUI,1,,,,Wad Madani,Sudan,home
+1970,Group,B,Round 1,1970-02-07,Congo-Kinshasa,CON,0,,Ghana,GHA,2,,,,Wad Madani,Sudan,away
+1970,Group,B,Round 1,1970-02-09,United Arab Republic,UNA,1,,Ghana,GHA,1,,,,Wad Madani,Sudan,draw
+1970,Group,B,Round 1,1970-02-09,Congo-Kinshasa,CON,2,,Guinea,GUI,2,,,,Wad Madani,Sudan,draw
+1970,Group,B,Round 1,1970-02-11,Congo-Kinshasa,CON,0,,United Arab Republic,UNA,1,,,,Wad Madani,Sudan,away
+1970,Group,B,Round 1,1970-02-11,Ghana,GHA,1,,Guinea,GUI,1,,,,Wad Madani,Sudan,draw
+1970,Knock Out,,Semi Final,1970-02-14,Ghana,GHA,2,,Ivory Coast,CIV,1,,,,Khartoum,Sudan,home
+1970,Knock Out,,Semi Final,1970-02-14,Sudan,SDN,2,,United Arab Republic,UNA,1,,,,Khartoum,Sudan,home
+1970,Knock Out,,Third Place,1970-02-16,United Arab Republic,UNA,3,,Ivory Coast,CIV,1,,,,Khartoum,Sudan,home
+1970,Knock Out,,Final,1970-02-16,Sudan,SDN,1,,Ghana,GHA,0,,,,Khartoum,Sudan,home
+1972,Group,A,Round 1,1972-02-23,Cameroon,CMR,2,,Kenya,KEN,1,,,,Yaoundé,Cameroon,home
+1972,Group,A,Round 1,1972-02-24,Mali,MLI,3,,Togo,TOG,3,,,,Yaoundé,Cameroon,draw
+1972,Group,A,Round 1,1972-02-26,Cameroon,CMR,2,,Togo,TOG,0,,,,Yaoundé,Cameroon,home
+1972,Group,A,Round 1,1972-02-26,Kenya,KEN,1,,Mali,MLI,1,,,,Yaoundé,Cameroon,draw
+1972,Group,A,Round 1,1972-02-28,Cameroon,CMR,1,,Mali,MLI,1,,,,Yaoundé,Cameroon,draw
+1972,Group,A,Round 1,1972-02-28,Kenya,KEN,1,,Togo,TOG,1,,,,Yaoundé,Cameroon,draw
+1972,Group,B,Round 1,1972-02-25,Sudan,SDN,1,,Zaïre,ZAÏ,1,,,,Douala,Cameroon,draw
+1972,Group,B,Round 1,1972-02-25,Congo,CGO,1,,Morocco,MAR,1,,,,Douala,Cameroon,draw
+1972,Group,B,Round 1,1972-02-27,Morocco,MAR,1,,Sudan,SDN,1,,,,Douala,Cameroon,draw
+1972,Group,B,Round 1,1972-02-27,Congo,CGO,0,,Zaïre,ZAÏ,2,,,,Douala,Cameroon,away
+1972,Group,B,Round 1,1972-02-29,Congo,CGO,4,,Sudan,SDN,2,,,,Douala,Cameroon,home
+1972,Group,B,Round 1,1972-02-29,Morocco,MAR,1,,Zaïre,ZAÏ,1,,,,Douala,Cameroon,draw
+1972,Knock Out,,Semi Final,1972-03-02,Cameroon,CMR,0,,Congo,CGO,1,,,,Yaoundé,Cameroon,away
+1972,Knock Out,,Semi Final,1972-03-02,Mali,MLI,4,,Zaïre,ZAÏ,3,,,,Douala,Cameroon,home
+1972,Knock Out,,Third Place,1972-03-04,Cameroon,CMR,5,,Zaïre,ZAÏ,2,,,,Yaoundé,Cameroon,home
+1972,Knock Out,,Final,1972-03-05,Congo,CGO,3,,Mali,MLI,2,,,,Yaoundé,Cameroon,home
+1974,Group,A,Round 1,1974-03-01,Egypt,EGY,2,,Uganda,UGA,1,,,,Cairo,Egypt,home
+1974,Group,A,Round 1,1974-03-02,Ivory Coast,CIV,0,,Zambia,ZAM,1,,,,El Mahalla El Kubra,Egypt,away
+1974,Group,A,Round 1,1974-03-04,Egypt,EGY,3,,Zambia,ZAM,1,,,,Cairo,Egypt,home
+1974,Group,A,Round 1,1974-03-04,Ivory Coast,CIV,2,,Uganda,UGA,2,,,,El Mahalla El Kubra,Egypt,draw
+1974,Group,A,Round 1,1974-03-06,Egypt,EGY,2,,Ivory Coast,CIV,0,,,,Cairo,Egypt,home
+1974,Group,A,Round 1,1974-03-06,Uganda,UGA,0,,Zambia,ZAM,1,,,,El Mahalla El Kubra,Egypt,away
+1974,Group,B,Round 1,1974-03-03,Guinea,GUI,1,,Zaïre,ZAÏ,2,,,,Damanhur,Egypt,away
+1974,Group,B,Round 1,1974-03-03,Congo,CGO,2,,Mauritius,MRI,0,,,,Alexandria,Egypt,home
+1974,Group,B,Round 1,1974-03-05,Guinea,GUI,2,,Mauritius,MRI,1,,,,Damanhur,Egypt,home
+1974,Group,B,Round 1,1974-03-05,Congo,CGO,2,,Zaïre,ZAÏ,1,,,,Alexandria,Egypt,home
+1974,Group,B,Round 1,1974-03-07,Congo,CGO,1,,Guinea,GUI,1,,,,Alexandria,Egypt,draw
+1974,Group,B,Round 1,1974-03-07,Mauritius,MRI,1,,Zaïre,ZAÏ,4,,,,Damanhur,Egypt,away
+1974,Knock Out,,Semi Final,1974-03-09,Congo,CGO,2,,Zambia,ZAM,4,,,,Alexandria,Egypt,away
+1974,Knock Out,,Semi Final,1974-03-09,Egypt,EGY,2,,Zaïre,ZAÏ,3,,,,Cairo,Egypt,away
+1974,Knock Out,,Third Place,1974-03-11,Egypt,EGY,4,,Congo,CGO,0,,,,Cairo,Egypt,home
+1974,Knock Out,,Final,1974-03-12,Zaïre,ZAÏ,2,,Zambia,ZAM,2,,,,Cairo,Egypt,draw
+1974,Knock Out,,Final,1974-03-14,Zaïre,ZAÏ,2,,Zambia,ZAM,0,,,,Cairo,Egypt,home
+1976,Group,A,Round 1,1976-02-29,Ethiopia,ETH,2,,Uganda,UGA,0,,,,Addis Ababa,Ethiopia,home
+1976,Group,A,Round 1,1976-02-29,Egypt,EGY,1,,Guinea,GUI,1,,,,Addis Ababa,Ethiopia,draw
+1976,Group,A,Round 1,1976-03-03,Egypt,EGY,2,,Uganda,UGA,1,,,,Addis Ababa,Ethiopia,home
+1976,Group,A,Round 1,1976-03-03,Ethiopia,ETH,1,,Guinea,GUI,2,,,,Addis Ababa,Ethiopia,away
+1976,Group,A,Round 1,1976-03-05,Ethiopia,ETH,1,,Egypt,EGY,1,,,,Addis Ababa,Ethiopia,draw
+1976,Group,A,Round 1,1976-03-05,Guinea,GUI,2,,Uganda,UGA,1,,,,Addis Ababa,Ethiopia,home
+1976,Group,B,Round 1,1976-03-01,Nigeria,NGA,4,,Zaïre,ZAÏ,2,,,,Dire Dawa,Ethiopia,home
+1976,Group,B,Round 1,1976-03-01,Morocco,MAR,2,,Sudan,SDN,2,,,,Dire Dawa,Ethiopia,draw
+1976,Group,B,Round 1,1976-03-04,Nigeria,NGA,1,,Sudan,SDN,0,,,,Dire Dawa,Ethiopia,home
+1976,Group,B,Round 1,1976-03-04,Morocco,MAR,1,,Zaïre,ZAÏ,0,,,,Dire Dawa,Ethiopia,home
+1976,Group,B,Round 1,1976-03-06,Sudan,SDN,1,,Zaïre,ZAÏ,1,,,,Dire Dawa,Ethiopia,draw
+1976,Group,B,Round 1,1976-03-06,Morocco,MAR,3,,Nigeria,NGA,1,,,,Dire Dawa,Ethiopia,home
+1976,Group,,Round 1,1976-03-09,Egypt,EGY,1,,Morocco,MAR,2,,,,Addis Ababa,Ethiopia,away
+1976,Group,,Round 1,1976-03-09,Guinea,GUI,1,,Nigeria,NGA,1,,,,Addis Ababa,Ethiopia,draw
+1976,Group,,Round 1,1976-03-11,Egypt,EGY,2,,Guinea,GUI,4,,,,Addis Ababa,Ethiopia,away
+1976,Group,,Round 1,1976-03-11,Morocco,MAR,2,,Nigeria,NGA,1,,,,Addis Ababa,Ethiopia,home
+1976,Group,,Round 1,1976-03-14,Egypt,EGY,2,,Nigeria,NGA,3,,,,Addis Ababa,Ethiopia,away
+1976,Group,,Round 1,1976-03-14,Guinea,GUI,1,,Morocco,MAR,1,,,,Addis Ababa,Ethiopia,draw
+1978,Group,A,Round 1,1978-03-05,Nigeria,NGA,4,,Upper Volta,HVO,2,,,,Accra,Ghana,home
+1978,Group,A,Round 1,1978-03-05,Ghana,GHA,2,,Zambia,ZAM,1,,,,Accra,Ghana,home
+1978,Group,A,Round 1,1978-03-08,Ghana,GHA,1,,Nigeria,NGA,1,,,,Accra,Ghana,draw
+1978,Group,A,Round 1,1978-03-08,Upper Volta,HVO,0,,Zambia,ZAM,2,,,,Accra,Ghana,away
+1978,Group,A,Round 1,1978-03-10,Nigeria,NGA,0,,Zambia,ZAM,0,,,,Accra,Ghana,draw
+1978,Group,A,Round 1,1978-03-10,Ghana,GHA,3,,Upper Volta,HVO,0,,,,Accra,Ghana,home
+1978,Group,B,Round 1,1978-03-06,Congo,CGO,1,,Uganda,UGA,3,,,,Kumasi,Ghana,away
+1978,Group,B,Round 1,1978-03-06,Morocco,MAR,1,,Tunisia,TUN,1,,,,Kumasi,Ghana,draw
+1978,Group,B,Round 1,1978-03-09,Tunisia,TUN,3,,Uganda,UGA,1,,,,Kumasi,Ghana,home
+1978,Group,B,Round 1,1978-03-09,Congo,CGO,0,,Morocco,MAR,1,,,,Kumasi,Ghana,away
+1978,Group,B,Round 1,1978-03-11,Morocco,MAR,0,,Uganda,UGA,3,,,,Kumasi,Ghana,away
+1978,Group,B,Round 1,1978-03-11,Congo,CGO,0,,Tunisia,TUN,0,,,,Kumasi,Ghana,draw
+1978,Knock Out,,Semi Final,1978-03-14,Ghana,GHA,1,,Tunisia,TUN,0,,,,Accra,Ghana,home
+1978,Knock Out,,Semi Final,1978-03-14,Nigeria,NGA,1,,Uganda,UGA,2,,,,Kumasi,Ghana,away
+1978,Knock Out,,Third Place,1978-03-16,Ghana,GHA,2,,Uganda,UGA,0,,,,Accra,Ghana,home
+1980,Group,A,Round 1,1980-03-08,Nigeria,NGA,3,,Tanzania,TAN,1,,,,Lagos,Nigeria,home
+1980,Group,A,Round 1,1980-03-08,Egypt,EGY,2,,Ivory Coast,CIV,1,,,,Lagos,Nigeria,home
+1980,Group,A,Round 1,1980-03-12,Egypt,EGY,2,,Tanzania,TAN,1,,,,Lagos,Nigeria,home
+1980,Group,A,Round 1,1980-03-12,Nigeria,NGA,0,,Ivory Coast,CIV,0,,,,Lagos,Nigeria,draw
+1980,Group,A,Round 1,1980-03-15,Ivory Coast,CIV,1,,Tanzania,TAN,1,,,,Lagos,Nigeria,draw
+1980,Group,A,Round 1,1980-03-15,Nigeria,NGA,1,,Egypt,EGY,0,,,,Lagos,Nigeria,home
+1980,Group,B,Round 1,1980-03-09,Guinea,GUI,1,,Morocco,MAR,1,,,,Ibadan,Nigeria,draw
+1980,Group,B,Round 1,1980-03-09,Algeria,ALG,0,,Ghana,GHA,0,,,,Ibadan,Nigeria,draw
+1980,Group,B,Round 1,1980-03-13,Ghana,GHA,1,,Guinea,GUI,0,,,,Ibadan,Nigeria,home
+1980,Group,B,Round 1,1980-03-13,Algeria,ALG,1,,Morocco,MAR,0,,,,Ibadan,Nigeria,home
+1980,Group,B,Round 1,1980-03-16,Algeria,ALG,3,,Guinea,GUI,2,,,,Ibadan,Nigeria,home
+1980,Group,B,Round 1,1980-03-16,Ghana,GHA,0,,Morocco,MAR,1,,,,Ibadan,Nigeria,away
+1980,Knock Out,,Semi Final,1980-03-19,Algeria,ALG,2,1,Egypt,EGY,2,0,1,,Ibadan,Nigeria,draw
+1980,Knock Out,,Semi Final,1980-03-19,Nigeria,NGA,1,,Morocco,MAR,0,,,,Lagos,Nigeria,home
+1980,Knock Out,,Third Place,1980-03-21,Egypt,EGY,0,,Morocco,MAR,2,,,,Lagos,Nigeria,away
+1980,Knock Out,,Final,1980-03-22,Nigeria,NGA,3,,Algeria,ALG,0,,,,Lagos,Nigeria,home
+1982,Group,A,Round 1,1982-03-05,Libya,LBY,2,,Ghana,GHA,2,,,,Tripoli,Libya,draw
+1982,Group,A,Round 1,1982-03-05,Cameroon,CMR,1,,Tunisia,TUN,1,,,,Tripoli,Libya,draw
+1982,Group,A,Round 1,1982-03-09,Cameroon,CMR,0,,Ghana,GHA,0,,,,Tripoli,Libya,draw
+1982,Group,A,Round 1,1982-03-09,Libya,LBY,2,,Tunisia,TUN,0,,,,Tripoli,Libya,home
+1982,Group,A,Round 1,1982-03-12,Ghana,GHA,1,,Tunisia,TUN,0,,,,Tripoli,Libya,home
+1982,Group,A,Round 1,1982-03-12,Libya,LBY,0,,Cameroon,CMR,0,,,,Tripoli,Libya,draw
+1982,Group,B,Round 1,1982-03-07,Ethiopia,ETH,0,,Nigeria,NGA,3,,,,Benghazi,Libya,away
+1982,Group,B,Round 1,1982-03-07,Algeria,ALG,1,,Zambia,ZAM,0,,,,Benghazi,Libya,home
+1982,Group,B,Round 1,1982-03-10,Ethiopia,ETH,0,,Zambia,ZAM,1,,,,Benghazi,Libya,away
+1982,Group,B,Round 1,1982-03-10,Algeria,ALG,2,,Nigeria,NGA,1,,,,Benghazi,Libya,home
+1982,Group,B,Round 1,1982-03-13,Algeria,ALG,0,,Ethiopia,ETH,0,,,,Benghazi,Libya,draw
+1982,Group,B,Round 1,1982-03-13,Nigeria,NGA,0,,Zambia,ZAM,3,,,,Benghazi,Libya,away
+1982,Knock Out,,Semi Final,1982-03-16,Algeria,ALG,2,,Ghana,GHA,3,,,,Benghazi,Libya,away
+1982,Knock Out,,Semi Final,1982-03-16,Libya,LBY,2,,Zambia,ZAM,1,,,,Tripoli,Libya,home
+1982,Knock Out,,Third Place,1982-03-18,Algeria,ALG,0,,Zambia,ZAM,2,,,,Tripoli,Libya,away
+1982,Knock Out,,Final,1982-03-19,Libya,LBY,1,0,Ghana,GHA,1,1,1,,Tripoli,Libya,draw
+1984,Group,A,Round 1,1984-03-04,Ivory Coast,CIV,3,,Togo,TOG,0,,,,Abidjan,Ivory Coast,home
+1984,Group,A,Round 1,1984-03-04,Cameroon,CMR,0,,Egypt,EGY,1,,,,Abidjan,Ivory Coast,away
+1984,Group,A,Round 1,1984-03-07,Cameroon,CMR,4,,Togo,TOG,1,,,,Abidjan,Ivory Coast,home
+1984,Group,A,Round 1,1984-03-07,Ivory Coast,CIV,1,,Egypt,EGY,2,,,,Abidjan,Ivory Coast,away
+1984,Group,A,Round 1,1984-03-10,Egypt,EGY,0,,Togo,TOG,0,,,,Abidjan,Ivory Coast,draw
+1984,Group,A,Round 1,1984-03-10,Ivory Coast,CIV,0,,Cameroon,CMR,2,,,,Abidjan,Ivory Coast,away
+1984,Group,B,Round 1,1984-03-05,Ghana,GHA,1,,Nigeria,NGA,2,,,,Bouaké,Ivory Coast,away
+1984,Group,B,Round 1,1984-03-05,Algeria,ALG,3,,Malawi,MWI,0,,,,Bouaké,Ivory Coast,home
+1984,Group,B,Round 1,1984-03-08,Malawi,MWI,2,,Nigeria,NGA,2,,,,Bouaké,Ivory Coast,draw
+1984,Group,B,Round 1,1984-03-08,Algeria,ALG,2,,Ghana,GHA,0,,,,Bouaké,Ivory Coast,home
+1984,Group,B,Round 1,1984-03-11,Algeria,ALG,0,,Nigeria,NGA,0,,,,Bouaké,Ivory Coast,draw
+1984,Group,B,Round 1,1984-03-11,Ghana,GHA,1,,Malawi,MWI,0,,,,Bouaké,Ivory Coast,home
+1984,Knock Out,,Semi Final,1984-03-14,Algeria,ALG,0,0,Cameroon,CMR,0,1,1,,Bouaké,Ivory Coast,draw
+1984,Knock Out,,Semi Final,1984-03-14,Egypt,EGY,2,0,Nigeria,NGA,2,1,1,,Abidjan,Ivory Coast,draw
+1984,Knock Out,,Third Place,1984-03-17,Algeria,ALG,3,,Egypt,EGY,1,,,,Abidjan,Ivory Coast,home
+1984,Knock Out,,Final,1984-03-18,Cameroon,CMR,3,,Nigeria,NGA,1,,,,Abidjan,Ivory Coast,home
+1986,Group,A,Round 1,1986-03-07,Ivory Coast,CIV,3,,Mozambique,MOZ,0,,,,Cairo,Egypt,home
+1986,Group,A,Round 1,1986-03-07,Egypt,EGY,0,,Senegal,SEN,1,,,,Cairo,Egypt,away
+1986,Group,A,Round 1,1986-03-10,Egypt,EGY,2,,Ivory Coast,CIV,0,,,,Cairo,Egypt,home
+1986,Group,A,Round 1,1986-03-10,Mozambique,MOZ,0,,Senegal,SEN,2,,,,Cairo,Egypt,away
+1986,Group,A,Round 1,1986-03-13,Egypt,EGY,2,,Mozambique,MOZ,0,,,,Cairo,Egypt,home
+1986,Group,A,Round 1,1986-03-13,Ivory Coast,CIV,1,,Senegal,SEN,0,,,,Cairo,Egypt,home
+1986,Group,B,Round 1,1986-03-08,Cameroon,CMR,3,,Zambia,ZAM,2,,,,Alexandria,Egypt,home
+1986,Group,B,Round 1,1986-03-08,Algeria,ALG,0,,Morocco,MAR,0,,,,Alexandria,Egypt,draw
+1986,Group,B,Round 1,1986-03-11,Cameroon,CMR,1,,Morocco,MAR,1,,,,Alexandria,Egypt,draw
+1986,Group,B,Round 1,1986-03-11,Algeria,ALG,0,,Zambia,ZAM,0,,,,Alexandria,Egypt,draw
+1986,Group,B,Round 1,1986-03-14,Algeria,ALG,2,,Cameroon,CMR,3,,,,Alexandria,Egypt,away
+1986,Group,B,Round 1,1986-03-14,Morocco,MAR,1,,Zambia,ZAM,0,,,,Alexandria,Egypt,home
+1986,Knock Out,,Semi Final,1986-03-17,Cameroon,CMR,1,,Ivory Coast,CIV,0,,,,Alexandria,Egypt,home
+1986,Knock Out,,Semi Final,1986-03-17,Egypt,EGY,1,,Morocco,MAR,0,,,,Cairo,Egypt,home
+1986,Knock Out,,Third Place,1986-03-20,Ivory Coast,CIV,3,,Morocco,MAR,2,,,,Cairo,Egypt,home
+1986,Knock Out,,Final,1986-03-21,Egypt,EGY,0,1,Cameroon,CMR,0,0,1,,Cairo,Egypt,draw
+1988,Group,A,Round 1,1988-03-13,Morocco,MAR,1,,Zaïre,ZAÏ,1,,,,Casablanca,Morocco,draw
+1988,Group,A,Round 1,1988-03-13,Algeria,ALG,1,,Ivory Coast,CIV,1,,,,Casablanca,Morocco,draw
+1988,Group,A,Round 1,1988-03-16,Ivory Coast,CIV,1,,Zaïre,ZAÏ,1,,,,Casablanca,Morocco,draw
+1988,Group,A,Round 1,1988-03-16,Morocco,MAR,1,,Algeria,ALG,0,,,,Casablanca,Morocco,home
+1988,Group,A,Round 1,1988-03-19,Algeria,ALG,1,,Zaïre,ZAÏ,0,,,,Casablanca,Morocco,home
+1988,Group,A,Round 1,1988-03-19,Morocco,MAR,0,,Ivory Coast,CIV,0,,,,Casablanca,Morocco,draw
+1988,Group,B,Round 1,1988-03-14,Kenya,KEN,0,,Nigeria,NGA,3,,,,Rabat,Morocco,away
+1988,Group,B,Round 1,1988-03-14,Cameroon,CMR,1,,Egypt,EGY,0,,,,Rabat,Morocco,home
+1988,Group,B,Round 1,1988-03-17,Egypt,EGY,3,,Kenya,KEN,0,,,,Rabat,Morocco,home
+1988,Group,B,Round 1,1988-03-17,Cameroon,CMR,1,,Nigeria,NGA,1,,,,Rabat,Morocco,draw
+1988,Group,B,Round 1,1988-03-20,Cameroon,CMR,0,,Kenya,KEN,0,,,,Rabat,Morocco,draw
+1988,Group,B,Round 1,1988-03-20,Egypt,EGY,0,,Nigeria,NGA,0,,,,Rabat,Morocco,draw
+1988,Knock Out,,Semi Final,1988-03-23,Algeria,ALG,1,0,Nigeria,NGA,1,1,1,,Rabat,Morocco,draw
+1988,Knock Out,,Semi Final,1988-03-23,Morocco,MAR,0,,Cameroon,CMR,1,,,,Casablanca,Morocco,away
+1988,Knock Out,,Third Place,1988-03-26,Morocco,MAR,1,0,Algeria,ALG,1,1,1,,Casablanca,Morocco,draw
+1988,Knock Out,,Final,1988-03-27,Cameroon,CMR,1,,Nigeria,NGA,0,,,,Casablanca,Morocco,home
+1990,Group,A,Round 1,1990-03-02,Ivory Coast,CIV,3,,Egypt,EGY,1,,,,Algiers,Algeria,home
+1990,Group,A,Round 1,1990-03-02,Algeria,ALG,5,,Nigeria,NGA,1,,,,Algiers,Algeria,home
+1990,Group,A,Round 1,1990-03-05,Algeria,ALG,3,,Ivory Coast,CIV,0,,,,Algiers,Algeria,home
+1990,Group,A,Round 1,1990-03-05,Nigeria,NGA,1,,Egypt,EGY,0,,,,Algiers,Algeria,home
+1990,Group,A,Round 1,1990-03-08,Algeria,ALG,2,,Egypt,EGY,0,,,,Algiers,Algeria,home
+1990,Group,A,Round 1,1990-03-08,Nigeria,NGA,1,,Ivory Coast,CIV,0,,,,Algiers,Algeria,home
+1990,Group,B,Round 1,1990-03-03,Senegal,SEN,0,,Kenya,KEN,0,,,,Annaba,Algeria,draw
+1990,Group,B,Round 1,1990-03-03,Cameroon,CMR,0,,Zambia,ZAM,1,,,,Annaba,Algeria,away
+1990,Group,B,Round 1,1990-03-06,Zambia,ZAM,1,,Kenya,KEN,0,,,,Annaba,Algeria,home
+1990,Group,B,Round 1,1990-03-06,Cameroon,CMR,0,,Senegal,SEN,2,,,,Annaba,Algeria,away
+1990,Group,B,Round 1,1990-03-09,Cameroon,CMR,2,,Kenya,KEN,0,,,,Annaba,Algeria,home
+1990,Group,B,Round 1,1990-03-09,Zambia,ZAM,0,,Senegal,SEN,0,,,,Annaba,Algeria,draw
+1990,Knock Out,,Semi Final,1990-03-12,Algeria,ALG,2,,Senegal,SEN,1,,,,Algiers,Algeria,home
+1990,Knock Out,,Semi Final,1990-03-12,Nigeria,NGA,2,,Zambia,ZAM,0,,,,Annaba,Algeria,home
+1990,Knock Out,,Third Place,1990-03-15,Senegal,SEN,0,,Zambia,ZAM,1,,,,Algiers,Algeria,away
+1990,Knock Out,,Final,1990-03-16,Algeria,ALG,1,,Nigeria,NGA,0,,,,Algiers,Algeria,home
+1992,Group,A,Round 1,1992-01-12,Senegal,SEN,1,,Nigeria,NGA,2,,,,Dakar,Senegal,away
+1992,Group,A,Round 1,1992-01-14,Nigeria,NGA,2,,Kenya,KEN,1,,,,Dakar,Senegal,home
+1992,Group,A,Round 1,1992-01-16,Senegal,SEN,3,,Kenya,KEN,0,,,,Dakar,Senegal,home
+1992,Group,B,Round 1,1992-01-12,Cameroon,CMR,1,,Morocco,MAR,0,,,,Dakar,Senegal,home
+1992,Group,B,Round 1,1992-01-14,Morocco,MAR,1,,Zaïre,ZAÏ,1,,,,Dakar,Senegal,draw
+1992,Group,B,Round 1,1992-01-16,Cameroon,CMR,1,,Zaïre,ZAÏ,1,,,,Dakar,Senegal,draw
+1992,Group,C,Round 1,1992-01-13,Egypt,EGY,0,,Zambia,ZAM,1,,,,Ziguinchor,Senegal,away
+1992,Group,C,Round 1,1992-01-15,Zambia,ZAM,0,,Ghana,GHA,1,,,,Ziguinchor,Senegal,away
+1992,Group,C,Round 1,1992-01-17,Egypt,EGY,0,,Ghana,GHA,1,,,,Ziguinchor,Senegal,away
+1992,Group,D,Round 1,1992-01-13,Algeria,ALG,0,,Ivory Coast,CIV,3,,,,Ziguinchor,Senegal,away
+1992,Group,D,Round 1,1992-01-15,Ivory Coast,CIV,0,,Congo,CGO,0,,,,Ziguinchor,Senegal,draw
+1992,Group,D,Round 1,1992-01-17,Algeria,ALG,1,,Congo,CGO,1,,,,Ziguinchor,Senegal,draw
+1992,Knock Out,,Quarter Final,1992-01-19,Nigeria,NGA,1,,Zaïre,ZAÏ,0,,,,Dakar,Senegal,home
+1992,Knock Out,,Quarter Final,1992-01-19,Senegal,SEN,0,,Cameroon,CMR,1,,,,Dakar,Senegal,away
+1992,Knock Out,,Quarter Final,1992-01-20,Ghana,GHA,2,,Congo,CGO,1,,,,Dakar,Senegal,home
+1992,Knock Out,,Quarter Final,1992-01-20,Ivory Coast,CIV,1,,Zambia,ZAM,0,,,,Dakar,Senegal,home
+1992,Knock Out,,Semi Final,1992-01-23,Cameroon,CMR,0,0,Ivory Coast,CIV,0,1,1,,Dakar,Senegal,draw
+1992,Knock Out,,Semi Final,1992-01-23,Nigeria,NGA,1,,Ghana,GHA,2,,,,Dakar,Senegal,away
+1992,Knock Out,,Third Place,1992-01-25,Cameroon,CMR,1,,Nigeria,NGA,2,,,,Dakar,Senegal,away
+1992,Knock Out,,Final,1992-01-26,Ghana,GHA,0,0,Ivory Coast,CIV,0,1,1,,Dakar,Senegal,draw
+1994,Group,A,Round 1,1994-03-26,Tunisia,TUN,0,,Mali,MLI,2,,,,Tunis,Tunisia,away
+1994,Group,A,Round 1,1994-03-28,Mali,MLI,0,,Zaïre,ZAÏ,1,,,,Tunis,Tunisia,away
+1994,Group,A,Round 1,1994-03-30,Tunisia,TUN,1,,Zaïre,ZAÏ,1,,,,Tunis,Tunisia,draw
+1994,Group,B,Round 1,1994-03-26,Nigeria,NGA,3,,Gabon,GAB,0,,,,Tunis,Tunisia,home
+1994,Group,B,Round 1,1994-03-28,Egypt,EGY,4,,Gabon,GAB,0,,,,Tunis,Tunisia,home
+1994,Group,B,Round 1,1994-03-30,Nigeria,NGA,0,,Egypt,EGY,0,,,,Tunis,Tunisia,draw
+1994,Group,C,Round 1,1994-03-27,Ivory Coast,CIV,4,,Sierra Leone,SLE,0,,,,Sousse,Tunisia,home
+1994,Group,C,Round 1,1994-03-29,Zambia,ZAM,0,,Sierra Leone,SLE,0,,,,Sousse,Tunisia,draw
+1994,Group,C,Round 1,1994-03-31,Zambia,ZAM,1,,Ivory Coast,CIV,0,,,,Sousse,Tunisia,home
+1994,Group,D,Round 1,1994-03-27,Ghana,GHA,1,,Guinea,GUI,0,,,,Sousse,Tunisia,home
+1994,Group,D,Round 1,1994-03-29,Senegal,SEN,2,,Guinea,GUI,1,,,,Sousse,Tunisia,home
+1994,Group,D,Round 1,1994-03-31,Ghana,GHA,1,,Senegal,SEN,0,,,,Sousse,Tunisia,home
+1994,Knock Out,,Quarter Final,1994-04-02,Zaïre,ZAÏ,0,,Nigeria,NGA,2,,,,Tunis,Tunisia,away
+1994,Knock Out,,Quarter Final,1994-04-02,Egypt,EGY,0,,Mali,MLI,1,,,,Tunis,Tunisia,away
+1994,Knock Out,,Quarter Final,1994-04-03,Ghana,GHA,1,,Ivory Coast,CIV,2,,,,Sousse,Tunisia,away
+1994,Knock Out,,Quarter Final,1994-04-03,Zambia,ZAM,1,,Senegal,SEN,0,,,,Sousse,Tunisia,home
+1994,Knock Out,,Semi Final,1994-04-06,Nigeria,NGA,2,1,Ivory Coast,CIV,2,0,1,,Tunis,Tunisia,draw
+1994,Knock Out,,Semi Final,1994-04-06,Zambia,ZAM,4,,Mali,MLI,0,,,,Tunis,Tunisia,home
+1994,Knock Out,,Third Place,1994-04-10,Ivory Coast,CIV,3,,Mali,MLI,1,,,,Tunis,Tunisia,home
+1994,Knock Out,,Final,1994-04-10,Nigeria,NGA,2,,Zambia,ZAM,1,,,,Tunis,Tunisia,home
+1996,Group,A,Round 1,1996-01-13,South Africa,RSA,3,,Cameroon,CMR,0,,,,Johannesburg,South Africa,home
+1996,Group,A,Round 1,1996-01-15,Egypt,EGY,2,,Angola,ANG,1,,,,Johannesburg,South Africa,home
+1996,Group,A,Round 1,1996-01-18,Cameroon,CMR,2,,Egypt,EGY,1,,,,Johannesburg,South Africa,home
+1996,Group,A,Round 1,1996-01-20,South Africa,RSA,1,,Angola,ANG,0,,,,Johannesburg,South Africa,home
+1996,Group,A,Round 1,1996-01-24,Angola,ANG,3,,Cameroon,CMR,3,,,,Durban,South Africa,draw
+1996,Group,A,Round 1,1996-01-24,South Africa,RSA,0,,Egypt,EGY,1,,,,Johannesburg,South Africa,away
+1996,Group,B,Round 1,1996-01-14,Zambia,ZAM,0,,Algeria,ALG,0,,,,Bloemfontein,South Africa,draw
+1996,Group,B,Round 1,1996-01-15,Sierra Leone,SLE,2,,Burkina Faso,BFA,1,,,,Bloemfontein,South Africa,home
+1996,Group,B,Round 1,1996-01-18,Algeria,ALG,2,,Sierra Leone,SLE,0,,,,Bloemfontein,South Africa,home
+1996,Group,B,Round 1,1996-01-20,Burkina Faso,BFA,1,,Zambia,ZAM,5,,,,Bloemfontein,South Africa,away
+1996,Group,B,Round 1,1996-01-24,Burkina Faso,BFA,1,,Algeria,ALG,2,,,,Port Elizabeth,South Africa,away
+1996,Group,B,Round 1,1996-01-24,Sierra Leone,SLE,0,,Zambia,ZAM,4,,,,Bloemfontein,South Africa,away
+1996,Group,C,Round 1,1996-01-16,Gabon,GAB,1,,Liberia,LBR,2,,,,Durban,South Africa,away
+1996,Group,C,Round 1,1996-01-19,Zaïre,ZAÏ,0,,Gabon,GAB,2,,,,Durban,South Africa,away
+1996,Group,C,Round 1,1996-01-25,Liberia,LBR,0,,Zaïre,ZAÏ,2,,,,Johannesburg,South Africa,away
+1996,Group,D,Round 1,1996-01-14,Ivory Coast,CIV,0,,Ghana,GHA,2,,,,Port Elizabeth,South Africa,away
+1996,Group,D,Round 1,1996-01-16,Tunisia,TUN,1,,Mozambique,MOZ,1,,,,Port Elizabeth,South Africa,draw
+1996,Group,D,Round 1,1996-01-19,Ghana,GHA,2,,Tunisia,TUN,1,,,,Port Elizabeth,South Africa,home
+1996,Group,D,Round 1,1996-01-21,Mozambique,MOZ,0,,Ivory Coast,CIV,1,,,,Port Elizabeth,South Africa,away
+1996,Group,D,Round 1,1996-01-25,Tunisia,TUN,3,,Ivory Coast,CIV,1,,,,Port Elizabeth,South Africa,home
+1996,Group,D,Round 1,1996-01-25,Mozambique,MOZ,0,,Ghana,GHA,2,,,,Bloemfontein,South Africa,away
+1996,Knock Out,,Quarter Final,1996-01-27,South Africa,RSA,2,,Algeria,ALG,1,,,,Johannesburg,South Africa,home
+1996,Knock Out,,Quarter Final,1996-01-27,Zambia,ZAM,3,,Egypt,EGY,1,,,,Bloemfontein,South Africa,home
+1996,Knock Out,,Quarter Final,1996-01-28,Gabon,GAB,1,0,Tunisia,TUN,1,1,1,,Durban,South Africa,draw
+1996,Knock Out,,Quarter Final,1996-01-28,Ghana,GHA,1,,Zaïre,ZAÏ,0,,,,Port Elizabeth,South Africa,home
+1996,Knock Out,,Semi Final,1996-01-31,South Africa,RSA,3,,Ghana,GHA,0,,,,Johannesburg,South Africa,home
+1996,Knock Out,,Semi Final,1996-01-31,Zambia,ZAM,2,,Tunisia,TUN,4,,,,Durban,South Africa,away
+1996,Knock Out,,Final,1996-02-03,South Africa,RSA,2,,Tunisia,TUN,0,,,,Johannesburg,South Africa,home
+1996,Knock Out,,Third Place,1996-02-03,Zambia,ZAM,1,,Ghana,GHA,0,,,,Johannesburg,South Africa,home
+1998,Group,A,Round 1,1998-02-07,Burkina Faso,BFA,0,,Cameroon,CMR,1,,,,Ouagadougou,Burkina Faso,away
+1998,Group,A,Round 1,1998-02-08,Algeria,ALG,0,,Guinea,GUI,1,,,,Ouagadougou,Burkina Faso,away
+1998,Group,A,Round 1,1998-02-11,Cameroon,CMR,2,,Guinea,GUI,2,,,,Ouagadougou,Burkina Faso,draw
+1998,Group,A,Round 1,1998-02-11,Burkina Faso,BFA,2,,Algeria,ALG,1,,,,Ouagadougou,Burkina Faso,home
+1998,Group,A,Round 1,1998-02-15,Burkina Faso,BFA,1,,Guinea,GUI,0,,,,Ouagadougou,Burkina Faso,home
+1998,Group,A,Round 1,1998-02-15,Cameroon,CMR,2,,Algeria,ALG,1,,,,Ouagadougou,Burkina Faso,home
+1998,Group,B,Round 1,1998-02-09,Ghana,GHA,2,,Tunisia,TUN,0,,,,Ouagadougou,Burkina Faso,home
+1998,Group,B,Round 1,1998-02-09,DR Congo,COD,2,,Togo,TOG,1,,,,Ouagadougou,Burkina Faso,home
+1998,Group,B,Round 1,1998-02-12,Tunisia,TUN,2,,DR Congo,COD,1,,,,Ouagadougou,Burkina Faso,home
+1998,Group,B,Round 1,1998-02-12,Ghana,GHA,1,,Togo,TOG,2,,,,Ouagadougou,Burkina Faso,away
+1998,Group,B,Round 1,1998-02-16,Tunisia,TUN,3,,Togo,TOG,1,,,,Ouagadougou,Burkina Faso,home
+1998,Group,B,Round 1,1998-02-16,Ghana,GHA,0,,DR Congo,COD,1,,,,Ouagadougou,Burkina Faso,away
+1998,Group,C,Round 1,1998-02-08,Ivory Coast,CIV,4,,Namibia,NAM,3,,,,Bobo Dioulasso,Burkina Faso,home
+1998,Group,C,Round 1,1998-02-08,South Africa,RSA,0,,Angola,ANG,0,,,,Bobo Dioulasso,Burkina Faso,draw
+1998,Group,C,Round 1,1998-02-11,South Africa,RSA,1,,Ivory Coast,CIV,1,,,,Bobo Dioulasso,Burkina Faso,draw
+1998,Group,C,Round 1,1998-02-12,Angola,ANG,3,,Namibia,NAM,3,,,,Bobo Dioulasso,Burkina Faso,draw
+1998,Group,C,Round 1,1998-02-16,Ivory Coast,CIV,5,,Angola,ANG,2,,,,Ouagadougou,Burkina Faso,home
+1998,Group,C,Round 1,1998-02-16,South Africa,RSA,4,,Namibia,NAM,1,,,,Bobo Dioulasso,Burkina Faso,home
+1998,Group,D,Round 1,1998-02-09,Zambia,ZAM,1,,Morocco,MAR,1,,,,Bobo Dioulasso,Burkina Faso,draw
+1998,Group,D,Round 1,1998-02-10,Egypt,EGY,2,,Mozambique,MOZ,0,,,,Bobo Dioulasso,Burkina Faso,home
+1998,Group,D,Round 1,1998-02-13,Morocco,MAR,3,,Mozambique,MOZ,0,,,,Bobo Dioulasso,Burkina Faso,home
+1998,Group,D,Round 1,1998-02-13,Zambia,ZAM,0,,Egypt,EGY,4,,,,Bobo Dioulasso,Burkina Faso,away
+1998,Group,D,Round 1,1998-02-17,Zambia,ZAM,3,,Mozambique,MOZ,1,,,,Bobo Dioulasso,Burkina Faso,home
+1998,Group,D,Round 1,1998-02-17,Egypt,EGY,0,,Morocco,MAR,1,,,,Ouagadougou,Burkina Faso,away
+1998,Knock Out,,Quarter Final,1998-02-20,Cameroon,CMR,0,,DR Congo,COD,1,,,,Bobo Dioulasso,Burkina Faso,away
+1998,Knock Out,,Quarter Final,1998-02-21,Burkina Faso,BFA,1,1,Tunisia,TUN,1,0,1,,Ouagadougou,Burkina Faso,draw
+1998,Knock Out,,Quarter Final,1998-02-21,Ivory Coast,CIV,0,0,Egypt,EGY,0,1,1,,Ouagadougou,Burkina Faso,draw
+1998,Knock Out,,Quarter Final,1998-02-22,Morocco,MAR,1,,South Africa,RSA,2,,,,Ouagadougou,Burkina Faso,away
+1998,Knock Out,,Semi Final,1998-02-25,Burkina Faso,BFA,0,,Egypt,EGY,2,,,,Bobo Dioulasso,Burkina Faso,away
+1998,Knock Out,,Semi Final,1998-02-25,DR Congo,COD,1,,South Africa,RSA,2,,,,Ouagadougou,Burkina Faso,away
+1998,Knock Out,,Third Place,1998-02-27,Burkina Faso,BFA,4,0,DR Congo,COD,4,1,1,,Ouagadougou,Burkina Faso,draw
+1998,Knock Out,,Final,1998-02-28,South Africa,RSA,0,,Egypt,EGY,2,,,,Ouagadougou,Burkina Faso,away
+2000,Group,A,Round 1,2000-01-22,Ghana,GHA,1,,Cameroon,CMR,1,,,,Accra,Ghana,draw
+2000,Group,A,Round 1,2000-01-24,Ivory Coast,CIV,1,,Togo,TOG,1,,,,Accra,Ghana,draw
+2000,Group,A,Round 1,2000-01-27,Ghana,GHA,2,,Togo,TOG,0,,,,Accra,Ghana,home
+2000,Group,A,Round 1,2000-01-28,Cameroon,CMR,3,,Ivory Coast,CIV,0,,,,Accra,Ghana,home
+2000,Group,A,Round 1,2000-01-31,Cameroon,CMR,0,,Togo,TOG,1,,,,Kumasi,Ghana,away
+2000,Group,A,Round 1,2000-01-31,Ghana,GHA,0,,Ivory Coast,CIV,2,,,,Accra,Ghana,away
+2000,Group,B,Round 1,2000-01-23,South Africa,RSA,3,,Gabon,GAB,1,,,,Kumasi,Ghana,home
+2000,Group,B,Round 1,2000-01-24,DR Congo,COD,0,,Algeria,ALG,0,,,,Kumasi,Ghana,draw
+2000,Group,B,Round 1,2000-01-27,South Africa,RSA,1,,DR Congo,COD,0,,,,Kumasi,Ghana,home
+2000,Group,B,Round 1,2000-01-29,Algeria,ALG,3,,Gabon,GAB,1,,,,Kumasi,Ghana,home
+2000,Group,B,Round 1,2000-02-02,South Africa,RSA,1,,Algeria,ALG,1,,,,Kumasi,Ghana,draw
+2000,Group,B,Round 1,2000-02-02,DR Congo,COD,0,,Gabon,GAB,0,,,,Accra,Ghana,draw
+2000,Group,C,Round 1,2000-01-23,Egypt,EGY,2,,Zambia,ZAM,0,,,,Kano,Nigeria,home
+2000,Group,C,Round 1,2000-01-25,Burkina Faso,BFA,1,,Senegal,SEN,3,,,,Kano,Nigeria,away
+2000,Group,C,Round 1,2000-01-28,Egypt,EGY,1,,Senegal,SEN,0,,,,Kano,Nigeria,home
+2000,Group,C,Round 1,2000-01-29,Zambia,ZAM,1,,Burkina Faso,BFA,1,,,,Kano,Nigeria,draw
+2000,Group,C,Round 1,2000-02-01,Egypt,EGY,4,,Burkina Faso,BFA,2,,,,Kano,Nigeria,home
+2000,Group,C,Round 1,2000-02-01,Zambia,ZAM,2,,Senegal,SEN,2,,,,Lagos,Nigeria,draw
+2000,Group,D,Round 1,2000-01-23,Nigeria,NGA,4,,Tunisia,TUN,2,,,,Lagos,Nigeria,home
+2000,Group,D,Round 1,2000-01-25,Morocco,MAR,1,,Congo,CGO,0,,,,Lagos,Nigeria,home
+2000,Group,D,Round 1,2000-01-28,Nigeria,NGA,0,,Congo,CGO,0,,,,Lagos,Nigeria,draw
+2000,Group,D,Round 1,2000-01-29,Tunisia,TUN,0,,Morocco,MAR,0,,,,Lagos,Nigeria,draw
+2000,Group,D,Round 1,2000-02-03,Tunisia,TUN,1,,Congo,CGO,0,,,,Kano,Nigeria,home
+2000,Group,D,Round 1,2000-02-03,Nigeria,NGA,2,,Morocco,MAR,0,,,,Lagos,Nigeria,home
+2000,Knock Out,,Quarter Final,2000-02-06,Cameroon,CMR,2,,Algeria,ALG,1,,,,Accra,Ghana,home
+2000,Knock Out,,Quarter Final,2000-02-06,Ghana,GHA,0,,South Africa,RSA,1,,,,Kumasi,Ghana,away
+2000,Knock Out,,Quarter Final,2000-02-07,Egypt,EGY,0,,Tunisia,TUN,1,,,,Kano,Nigeria,away
+2000,Knock Out,,Quarter Final,2000-02-07,Nigeria,NGA,2,,Senegal,SEN,1,,,,Lagos,Nigeria,home
+2000,Knock Out,,Semi Final,2000-02-10,Cameroon,CMR,3,,Tunisia,TUN,0,,,,Accra,Ghana,home
+2000,Knock Out,,Semi Final,2000-02-10,Nigeria,NGA,2,,South Africa,RSA,0,,,,Lagos,Nigeria,home
+2000,Knock Out,,Third Place,2000-02-12,South Africa,RSA,2,1,Tunisia,TUN,2,0,1,,Accra,Ghana,draw
+2000,Knock Out,,Final,2000-02-13,Nigeria,NGA,2,0,Cameroon,CMR,2,1,1,,Lagos,Nigeria,draw
+2002,Group,A,Round 1,2002-01-19,Mali,MLI,1,,Liberia,LBR,1,,,,Bamako,Mali,draw
+2002,Group,A,Round 1,2002-01-21,Algeria,ALG,0,,Nigeria,NGA,1,,,,Bamako,Mali,away
+2002,Group,A,Round 1,2002-01-24,Mali,MLI,0,,Nigeria,NGA,0,,,,Bamako,Mali,draw
+2002,Group,A,Round 1,2002-01-25,Liberia,LBR,2,,Algeria,ALG,2,,,,Bamako,Mali,draw
+2002,Group,A,Round 1,2002-01-28,Liberia,LBR,0,,Nigeria,NGA,1,,,,Mopti,Mali,away
+2002,Group,A,Round 1,2002-01-28,Mali,MLI,2,,Algeria,ALG,0,,,,Bamako,Mali,home
+2002,Group,B,Round 1,2002-01-20,South Africa,RSA,0,,Burkina Faso,BFA,0,,,,Ségou,Mali,draw
+2002,Group,B,Round 1,2002-01-21,Morocco,MAR,0,,Ghana,GHA,0,,,,Ségou,Mali,draw
+2002,Group,B,Round 1,2002-01-24,South Africa,RSA,0,,Ghana,GHA,0,,,,Ségou,Mali,draw
+2002,Group,B,Round 1,2002-01-26,Burkina Faso,BFA,1,,Morocco,MAR,2,,,,Ségou,Mali,away
+2002,Group,B,Round 1,2002-01-30,Burkina Faso,BFA,1,,Ghana,GHA,2,,,,Mopti,Mali,away
+2002,Group,B,Round 1,2002-01-30,South Africa,RSA,3,,Morocco,MAR,1,,,,Ségou,Mali,home
+2002,Group,C,Round 1,2002-01-20,Cameroon,CMR,1,,DR Congo,COD,0,,,,Sikasso,Mali,home
+2002,Group,C,Round 1,2002-01-21,Togo,TOG,0,,Ivory Coast,CIV,0,,,,Sikasso,Mali,draw
+2002,Group,C,Round 1,2002-01-25,Cameroon,CMR,1,,Ivory Coast,CIV,0,,,,Sikasso,Mali,home
+2002,Group,C,Round 1,2002-01-26,DR Congo,COD,0,,Togo,TOG,0,,,,Sikasso,Mali,draw
+2002,Group,C,Round 1,2002-01-29,Cameroon,CMR,3,,Togo,TOG,0,,,,Sikasso,Mali,home
+2002,Group,C,Round 1,2002-01-29,DR Congo,COD,3,,Ivory Coast,CIV,1,,,,Kayes,Mali,home
+2002,Group,D,Round 1,2002-01-20,Egypt,EGY,0,,Senegal,SEN,1,,,,Bamako,Mali,away
+2002,Group,D,Round 1,2002-01-21,Zambia,ZAM,0,,Tunisia,TUN,0,,,,Bamako,Mali,draw
+2002,Group,D,Round 1,2002-01-25,Egypt,EGY,1,,Tunisia,TUN,0,,,,Bamako,Mali,home
+2002,Group,D,Round 1,2002-01-26,Senegal,SEN,1,,Zambia,ZAM,0,,,,Bamako,Mali,home
+2002,Group,D,Round 1,2002-01-31,Senegal,SEN,0,,Tunisia,TUN,0,,,,Kayes,Mali,draw
+2002,Group,D,Round 1,2002-01-31,Egypt,EGY,2,,Zambia,ZAM,1,,,,Bamako,Mali,home
+2002,Knock Out,,Quarter Final,2002-02-03,Mali,MLI,2,,South Africa,RSA,0,,,,Kayes,Mali,home
+2002,Knock Out,,Quarter Final,2002-02-03,Nigeria,NGA,1,,Ghana,GHA,0,,,,Bamako,Mali,home
+2002,Knock Out,,Quarter Final,2002-02-04,Cameroon,CMR,1,,Egypt,EGY,0,,,,Sikasso,Mali,home
+2002,Knock Out,,Quarter Final,2002-02-04,Senegal,SEN,2,,DR Congo,COD,0,,,,Bamako,Mali,home
+2002,Knock Out,,Semi Final,2002-02-07,Mali,MLI,0,,Cameroon,CMR,3,,,,Bamako,Mali,away
+2002,Knock Out,,Semi Final,2002-02-07,Nigeria,NGA,1,,Senegal,SEN,2,,,,Bamako,Mali,away
+2002,Knock Out,,Third Place,2002-02-09,Mali,MLI,0,,Nigeria,NGA,1,,,,Mopti,Mali,away
+2002,Knock Out,,Final,2002-02-10,Senegal,SEN,0,0,Cameroon,CMR,0,1,1,,Bamako,Mali,draw
+2004,Group,A,Round 1,2004-01-24,Tunisia,TUN,2,,Rwanda,RWA,1,,,,Radès,Tunisia,home
+2004,Group,A,Round 1,2004-01-25,DR Congo,COD,1,,Guinea,GUI,2,,,,Tunis,Tunisia,away
+2004,Group,A,Round 1,2004-01-28,Tunisia,TUN,3,,DR Congo,COD,0,,,,Radès,Tunisia,home
+2004,Group,A,Round 1,2004-01-28,Rwanda,RWA,1,,Guinea,GUI,1,,,,Bizerte,Tunisia,draw
+2004,Group,A,Round 1,2004-02-01,Rwanda,RWA,1,,DR Congo,COD,0,,,,Bizerte,Tunisia,home
+2004,Group,A,Round 1,2004-02-01,Tunisia,TUN,1,,Guinea,GUI,1,,,,Radès,Tunisia,draw
+2004,Group,B,Round 1,2004-01-26,Senegal,SEN,0,,Burkina Faso,BFA,0,,,,Tunis,Tunisia,draw
+2004,Group,B,Round 1,2004-01-26,Kenya,KEN,1,,Mali,MLI,3,,,,Bizerte,Tunisia,away
+2004,Group,B,Round 1,2004-01-30,Senegal,SEN,3,,Kenya,KEN,0,,,,Bizerte,Tunisia,home
+2004,Group,B,Round 1,2004-01-30,Burkina Faso,BFA,1,,Mali,MLI,3,,,,Tunis,Tunisia,away
+2004,Group,B,Round 1,2004-02-02,Senegal,SEN,1,,Mali,MLI,1,,,,Tunis,Tunisia,draw
+2004,Group,B,Round 1,2004-02-02,Burkina Faso,BFA,0,,Kenya,KEN,3,,,,Bizerte,Tunisia,away
+2004,Group,C,Round 1,2004-01-25,Cameroon,CMR,1,,Algeria,ALG,1,,,,Sousse,Tunisia,draw
+2004,Group,C,Round 1,2004-01-25,Zimbabwe,ZIM,1,,Egypt,EGY,2,,,,Sfax,Tunisia,away
+2004,Group,C,Round 1,2004-01-29,Algeria,ALG,2,,Egypt,EGY,1,,,,Sousse,Tunisia,home
+2004,Group,C,Round 1,2004-01-29,Cameroon,CMR,5,,Zimbabwe,ZIM,3,,,,Sfax,Tunisia,home
+2004,Group,C,Round 1,2004-02-03,Algeria,ALG,1,,Zimbabwe,ZIM,2,,,,Sousse,Tunisia,away
+2004,Group,C,Round 1,2004-02-03,Cameroon,CMR,0,,Egypt,EGY,0,,,,Monastir,Tunisia,draw
+2004,Group,D,Round 1,2004-01-27,South Africa,RSA,2,,Benin,BEN,0,,,,Sfax,Tunisia,home
+2004,Group,D,Round 1,2004-01-27,Nigeria,NGA,0,,Morocco,MAR,1,,,,Monastir,Tunisia,away
+2004,Group,D,Round 1,2004-01-31,Morocco,MAR,4,,Benin,BEN,0,,,,Sfax,Tunisia,home
+2004,Group,D,Round 1,2004-01-31,Nigeria,NGA,4,,South Africa,RSA,0,,,,Monastir,Tunisia,home
+2004,Group,D,Round 1,2004-02-04,Nigeria,NGA,2,,Benin,BEN,1,,,,Sfax,Tunisia,home
+2004,Group,D,Round 1,2004-02-04,Morocco,MAR,1,,South Africa,RSA,1,,,,Sousse,Tunisia,draw
+2004,Knock Out,,Quarter Final,2004-02-07,Mali,MLI,2,,Guinea,GUI,1,,,,Tunis,Tunisia,home
+2004,Knock Out,,Quarter Final,2004-02-07,Tunisia,TUN,1,,Senegal,SEN,0,,,,Radès,Tunisia,home
+2004,Knock Out,,Quarter Final,2004-02-08,Cameroon,CMR,1,,Nigeria,NGA,2,,,,Monastir,Tunisia,away
+2004,Knock Out,,Quarter Final,2004-02-08,Morocco,MAR,3,,Algeria,ALG,1,,,,Sfax,Tunisia,home
+2004,Knock Out,,Semi Final,2004-02-11,Morocco,MAR,4,,Mali,MLI,0,,,,Sousse,Tunisia,home
+2004,Knock Out,,Semi Final,2004-02-11,Tunisia,TUN,1,1,Nigeria,NGA,1,0,1,,Radès,Tunisia,draw
+2004,Knock Out,,Third Place,2004-02-13,Nigeria,NGA,2,,Mali,MLI,1,,,,Monastir,Tunisia,home
+2004,Knock Out,,Final,2004-02-14,Tunisia,TUN,2,,Morocco,MAR,1,,,,Radès,Tunisia,home
+2006,Group,A,Round 1,2006-01-20,Egypt,EGY,3,,Libya,LBY,0,,,,Cairo,Egypt,home
+2006,Group,A,Round 1,2006-01-21,Morocco,MAR,0,,Ivory Coast,CIV,1,,,,Cairo,Egypt,away
+2006,Group,A,Round 1,2006-01-24,Libya,LBY,1,,Ivory Coast,CIV,2,,,,Cairo,Egypt,away
+2006,Group,A,Round 1,2006-01-24,Egypt,EGY,0,,Morocco,MAR,0,,,,Cairo,Egypt,draw
+2006,Group,A,Round 1,2006-01-28,Egypt,EGY,3,,Ivory Coast,CIV,1,,,,Cairo,Egypt,home
+2006,Group,A,Round 1,2006-01-28,Libya,LBY,0,,Morocco,MAR,0,,,,Cairo,Egypt,draw
+2006,Group,B,Round 1,2006-01-21,Cameroon,CMR,3,,Angola,ANG,1,,,,Cairo,Egypt,home
+2006,Group,B,Round 1,2006-01-21,Togo,TOG,0,,DR Congo,COD,2,,,,Cairo,Egypt,away
+2006,Group,B,Round 1,2006-01-25,Angola,ANG,0,,DR Congo,COD,0,,,,Cairo,Egypt,draw
+2006,Group,B,Round 1,2006-01-25,Cameroon,CMR,2,,Togo,TOG,0,,,,Cairo,Egypt,home
+2006,Group,B,Round 1,2006-01-29,Angola,ANG,3,,Togo,TOG,2,,,,Cairo,Egypt,home
+2006,Group,B,Round 1,2006-01-29,Cameroon,CMR,2,,DR Congo,COD,0,,,,Cairo,Egypt,home
+2006,Group,C,Round 1,2006-01-22,Tunisia,TUN,4,,Zambia,ZAM,1,,,,Alexandria,Egypt,home
+2006,Group,C,Round 1,2006-01-22,South Africa,RSA,0,,Guinea,GUI,2,,,,Alexandria,Egypt,away
+2006,Group,C,Round 1,2006-01-26,Tunisia,TUN,2,,South Africa,RSA,0,,,,Alexandria,Egypt,home
+2006,Group,C,Round 1,2006-01-26,Zambia,ZAM,1,,Guinea,GUI,2,,,,Alexandria,Egypt,away
+2006,Group,C,Round 1,2006-01-30,Tunisia,TUN,0,,Guinea,GUI,3,,,,Alexandria,Egypt,away
+2006,Group,C,Round 1,2006-01-30,Zambia,ZAM,1,,South Africa,RSA,0,,,,Alexandria,Egypt,home
+2006,Group,D,Round 1,2006-01-23,Zimbabwe,ZIM,0,,Senegal,SEN,2,,,,Port Said,Egypt,away
+2006,Group,D,Round 1,2006-01-23,Nigeria,NGA,1,,Ghana,GHA,0,,,,Port Said,Egypt,home
+2006,Group,D,Round 1,2006-01-27,Ghana,GHA,1,,Senegal,SEN,0,,,,Port Said,Egypt,home
+2006,Group,D,Round 1,2006-01-27,Nigeria,NGA,2,,Zimbabwe,ZIM,0,,,,Port Said,Egypt,home
+2006,Group,D,Round 1,2006-01-31,Nigeria,NGA,2,,Senegal,SEN,1,,,,Port Said,Egypt,home
+2006,Group,D,Round 1,2006-01-31,Ghana,GHA,1,,Zimbabwe,ZIM,2,,,,Ismailia,Egypt,away
+2006,Knock Out,,Quarter Final,2006-02-03,Egypt,EGY,4,,DR Congo,COD,1,,,,Cairo,Egypt,home
+2006,Knock Out,,Quarter Final,2006-02-03,Guinea,GUI,2,,Senegal,SEN,3,,,,Alexandria,Egypt,away
+2006,Knock Out,,Quarter Final,2006-02-04,Cameroon,CMR,1,0,Ivory Coast,CIV,1,1,1,,Cairo,Egypt,draw
+2006,Knock Out,,Quarter Final,2006-02-04,Nigeria,NGA,1,1,Tunisia,TUN,1,0,1,,Port Said,Egypt,draw
+2006,Knock Out,,Semi Final,2006-02-07,Egypt,EGY,2,,Senegal,SEN,1,,,,Cairo,Egypt,home
+2006,Knock Out,,Semi Final,2006-02-07,Nigeria,NGA,0,,Ivory Coast,CIV,1,,,,Alexandria,Egypt,away
+2006,Knock Out,,Third Place,2006-02-09,Senegal,SEN,0,,Nigeria,NGA,1,,,,Cairo,Egypt,away
+2006,Knock Out,,Final,2006-02-10,Egypt,EGY,0,1,Ivory Coast,CIV,0,0,1,,Cairo,Egypt,draw
+2008,Group,A,Round 1,2008-01-20,Ghana,GHA,2,,Guinea,GUI,1,,,,Accra,Ghana,home
+2008,Group,A,Round 1,2008-01-21,Namibia,NAM,1,,Morocco,MAR,5,,,,Accra,Ghana,away
+2008,Group,A,Round 1,2008-01-24,Guinea,GUI,3,,Morocco,MAR,2,,,,Accra,Ghana,home
+2008,Group,A,Round 1,2008-01-24,Ghana,GHA,1,,Namibia,NAM,0,,,,Accra,Ghana,home
+2008,Group,A,Round 1,2008-01-28,Ghana,GHA,2,,Morocco,MAR,0,,,,Accra,Ghana,home
+2008,Group,A,Round 1,2008-01-28,Guinea,GUI,1,,Namibia,NAM,1,,,,Sekondi,Ghana,draw
+2008,Group,B,Round 1,2008-01-21,Mali,MLI,1,,Benin,BEN,0,,,,Sekondi,Ghana,home
+2008,Group,B,Round 1,2008-01-21,Nigeria,NGA,0,,Ivory Coast,CIV,1,,,,Sekondi,Ghana,away
+2008,Group,B,Round 1,2008-01-25,Ivory Coast,CIV,4,,Benin,BEN,1,,,,Sekondi,Ghana,home
+2008,Group,B,Round 1,2008-01-25,Nigeria,NGA,0,,Mali,MLI,0,,,,Sekondi,Ghana,draw
+2008,Group,B,Round 1,2008-01-29,Ivory Coast,CIV,3,,Mali,MLI,0,,,,Accra,Ghana,home
+2008,Group,B,Round 1,2008-01-29,Nigeria,NGA,2,,Benin,BEN,0,,,,Sekondi,Ghana,home
+2008,Group,C,Round 1,2008-01-22,Sudan,SDN,0,,Zambia,ZAM,3,,,,Kumasi,Ghana,away
+2008,Group,C,Round 1,2008-01-22,Egypt,EGY,4,,Cameroon,CMR,2,,,,Kumasi,Ghana,home
+2008,Group,C,Round 1,2008-01-26,Cameroon,CMR,5,,Zambia,ZAM,1,,,,Kumasi,Ghana,home
+2008,Group,C,Round 1,2008-01-26,Egypt,EGY,3,,Sudan,SDN,0,,,,Kumasi,Ghana,home
+2008,Group,C,Round 1,2008-01-30,Cameroon,CMR,3,,Sudan,SDN,0,,,,Tamale,Ghana,home
+2008,Group,C,Round 1,2008-01-30,Egypt,EGY,1,,Zambia,ZAM,1,,,,Kumasi,Ghana,draw
+2008,Group,D,Round 1,2008-01-23,Tunisia,TUN,2,,Senegal,SEN,2,,,,Tamale,Ghana,draw
+2008,Group,D,Round 1,2008-01-23,South Africa,RSA,1,,Angola,ANG,1,,,,Tamale,Ghana,draw
+2008,Group,D,Round 1,2008-01-27,Senegal,SEN,1,,Angola,ANG,3,,,,Tamale,Ghana,away
+2008,Group,D,Round 1,2008-01-27,Tunisia,TUN,3,,South Africa,RSA,1,,,,Tamale,Ghana,home
+2008,Group,D,Round 1,2008-01-31,Tunisia,TUN,0,,Angola,ANG,0,,,,Tamale,Ghana,draw
+2008,Group,D,Round 1,2008-01-31,Senegal,SEN,1,,South Africa,RSA,1,,,,Kumasi,Ghana,draw
+2008,Knock Out,,Quarter Final,2008-02-03,Ghana,GHA,2,,Nigeria,NGA,1,,,,Accra,Ghana,home
+2008,Knock Out,,Quarter Final,2008-02-03,Ivory Coast,CIV,5,,Guinea,GUI,0,,,,Sekondi,Ghana,home
+2008,Knock Out,,Quarter Final,2008-02-04,Egypt,EGY,2,,Angola,ANG,1,,,,Kumasi,Ghana,home
+2008,Knock Out,,Quarter Final,2008-02-04,Tunisia,TUN,2,,Cameroon,CMR,3,,,,Tamale,Ghana,away
+2008,Knock Out,,Semi Final,2008-02-07,Ghana,GHA,0,,Cameroon,CMR,1,,,,Accra,Ghana,away
+2008,Knock Out,,Semi Final,2008-02-07,Ivory Coast,CIV,1,,Egypt,EGY,4,,,,Kumasi,Ghana,away
+2008,Knock Out,,Third Place,2008-02-09,Ghana,GHA,4,,Ivory Coast,CIV,2,,,,Kumasi,Ghana,home
+2008,Knock Out,,Final,2008-02-10,Cameroon,CMR,0,,Egypt,EGY,1,,,,Accra,Ghana,away
+2010,Group,A,Round 1,2010-01-10,Angola,ANG,4,,Mali,MLI,4,,,,Luanda,Angola,draw
+2010,Group,A,Round 1,2010-01-11,Malawi,MWI,3,,Algeria,ALG,0,,,,Luanda,Angola,home
+2010,Group,A,Round 1,2010-01-14,Mali,MLI,0,,Algeria,ALG,1,,,,Luanda,Angola,away
+2010,Group,A,Round 1,2010-01-14,Angola,ANG,2,,Malawi,MWI,0,,,,Luanda,Angola,home
+2010,Group,A,Round 1,2010-01-18,Angola,ANG,0,,Algeria,ALG,0,,,,Luanda,Angola,draw
+2010,Group,A,Round 1,2010-01-18,Mali,MLI,3,,Malawi,MWI,1,,,,Cabinda,Angola,home
+2010,Group,B,Round 1,2010-01-11,Ivory Coast,CIV,0,,Burkina Faso,BFA,0,,,,Cabinda,Angola,draw
+2010,Group,B,Round 1,2010-01-15,Ivory Coast,CIV,3,,Ghana,GHA,1,,,,Cabinda,Angola,home
+2010,Group,B,Round 1,2010-01-19,Burkina Faso,BFA,0,,Ghana,GHA,1,,,,Luanda,Angola,away
+2010,Group,C,Round 1,2010-01-12,Egypt,EGY,3,,Nigeria,NGA,1,,,,Benguela,Angola,home
+2010,Group,C,Round 1,2010-01-12,Mozambique,MOZ,2,,Benin,BEN,2,,,,Benguela,Angola,draw
+2010,Group,C,Round 1,2010-01-16,Nigeria,NGA,1,,Benin,BEN,0,,,,Benguela,Angola,home
+2010,Group,C,Round 1,2010-01-16,Egypt,EGY,2,,Mozambique,MOZ,0,,,,Benguela,Angola,home
+2010,Group,C,Round 1,2010-01-20,Nigeria,NGA,3,,Mozambique,MOZ,0,,,,Lubango,Angola,home
+2010,Group,C,Round 1,2010-01-20,Egypt,EGY,2,,Benin,BEN,0,,,,Benguela,Angola,home
+2010,Group,D,Round 1,2010-01-13,Cameroon,CMR,0,,Gabon,GAB,1,,,,Lubango,Angola,away
+2010,Group,D,Round 1,2010-01-13,Zambia,ZAM,1,,Tunisia,TUN,1,,,,Lubango,Angola,draw
+2010,Group,D,Round 1,2010-01-17,Cameroon,CMR,3,,Zambia,ZAM,2,,,,Lubango,Angola,home
+2010,Group,D,Round 1,2010-01-17,Gabon,GAB,0,,Tunisia,TUN,0,,,,Lubango,Angola,draw
+2010,Group,D,Round 1,2010-01-21,Gabon,GAB,1,,Zambia,ZAM,2,,,,Benguela,Angola,away
+2010,Group,D,Round 1,2010-01-21,Cameroon,CMR,2,,Tunisia,TUN,2,,,,Lubango,Angola,draw
+2010,Knock Out,,Quarter Final,2010-01-24,Angola,ANG,0,,Ghana,GHA,1,,,,Luanda,Angola,away
+2010,Knock Out,,Quarter Final,2010-01-24,Ivory Coast,CIV,2,,Algeria,ALG,3,,,,Cabinda,Angola,away
+2010,Knock Out,,Quarter Final,2010-01-25,Egypt,EGY,3,,Cameroon,CMR,1,,,,Benguela,Angola,home
+2010,Knock Out,,Quarter Final,2010-01-25,Zambia,ZAM,0,0,Nigeria,NGA,0,1,1,,Lubango,Angola,draw
+2010,Knock Out,,Semi Final,2010-01-28,Algeria,ALG,0,,Egypt,EGY,4,,,,Benguela,Angola,away
+2010,Knock Out,,Semi Final,2010-01-28,Ghana,GHA,1,,Nigeria,NGA,0,,,,Luanda,Angola,home
+2010,Knock Out,,Third Place,2010-01-30,Nigeria,NGA,1,,Algeria,ALG,0,,,,Benguela,Angola,home
+2010,Knock Out,,Final,2010-01-31,Ghana,GHA,0,,Egypt,EGY,1,,,,Luanda,Angola,away
+2012,Group,A,Round 1,2012-01-21,Senegal,SEN,1,,Zambia,ZAM,2,,,,Bata,Equatorial Guinea,away
+2012,Group,A,Round 1,2012-01-21,Equatorial Guinea,EQG,1,,Libya,LBY,0,,,,Bata,Equatorial Guinea,home
+2012,Group,A,Round 1,2012-01-25,Libya,LBY,2,,Zambia,ZAM,2,,,,Bata,Equatorial Guinea,draw
+2012,Group,A,Round 1,2012-01-25,Equatorial Guinea,EQG,2,,Senegal,SEN,1,,,,Bata,Equatorial Guinea,home
+2012,Group,A,Round 1,2012-01-29,Equatorial Guinea,EQG,0,,Zambia,ZAM,1,,,,Malabo,Equatorial Guinea,away
+2012,Group,A,Round 1,2012-01-29,Libya,LBY,2,,Senegal,SEN,1,,,,Bata,Equatorial Guinea,home
+2012,Group,B,Round 1,2012-01-22,Burkina Faso,BFA,1,,Angola,ANG,2,,,,Malabo,Equatorial Guinea,away
+2012,Group,B,Round 1,2012-01-22,Ivory Coast,CIV,1,,Sudan,SDN,0,,,,Malabo,Equatorial Guinea,home
+2012,Group,B,Round 1,2012-01-26,Ivory Coast,CIV,2,,Burkina Faso,BFA,0,,,,Malabo,Equatorial Guinea,home
+2012,Group,B,Round 1,2012-01-26,Sudan,SDN,2,,Angola,ANG,2,,,,Malabo,Equatorial Guinea,draw
+2012,Group,B,Round 1,2012-01-30,Ivory Coast,CIV,2,,Angola,ANG,0,,,,Malabo,Equatorial Guinea,home
+2012,Group,B,Round 1,2012-01-30,Sudan,SDN,2,,Burkina Faso,BFA,1,,,,Bata,Equatorial Guinea,home
+2012,Group,C,Round 1,2012-01-23,Morocco,MAR,1,,Tunisia,TUN,2,,,,Libreville,Gabon,away
+2012,Group,C,Round 1,2012-01-23,Gabon,GAB,2,,Niger,NIG,0,,,,Libreville,Gabon,home
+2012,Group,C,Round 1,2012-01-27,Gabon,GAB,3,,Morocco,MAR,2,,,,Libreville,Gabon,home
+2012,Group,C,Round 1,2012-01-27,Niger,NIG,1,,Tunisia,TUN,2,,,,Libreville,Gabon,away
+2012,Group,C,Round 1,2012-01-31,Gabon,GAB,1,,Tunisia,TUN,0,,,,Franceville,Gabon,home
+2012,Group,C,Round 1,2012-01-31,Niger,NIG,0,,Morocco,MAR,1,,,,Libreville,Gabon,away
+2012,Group,D,Round 1,2012-01-24,Mali,MLI,1,,Guinea,GUI,0,,,,Franceville,Gabon,home
+2012,Group,D,Round 1,2012-01-24,Ghana,GHA,1,,Botswana,BOT,0,,,,Franceville,Gabon,home
+2012,Group,D,Round 1,2012-01-28,Botswana,BOT,1,,Guinea,GUI,6,,,,Franceville,Gabon,away
+2012,Group,D,Round 1,2012-01-28,Ghana,GHA,2,,Mali,MLI,0,,,,Franceville,Gabon,home
+2012,Group,D,Round 1,2012-02-01,Ghana,GHA,1,,Guinea,GUI,1,,,,Franceville,Gabon,draw
+2012,Group,D,Round 1,2012-02-01,Botswana,BOT,1,,Mali,MLI,2,,,,Libreville,Gabon,away
+2012,Knock Out,,Quarter Final,2012-02-04,Equatorial Guinea,EQG,0,,Ivory Coast,CIV,3,,,,Malabo,Equatorial Guinea,away
+2012,Knock Out,,Quarter Final,2012-02-04,Zambia,ZAM,3,,Sudan,SDN,0,,,,Bata,Equatorial Guinea,home
+2012,Knock Out,,Quarter Final,2012-02-05,Gabon,GAB,1,0,Mali,MLI,1,1,1,,Libreville,Gabon,draw
+2012,Knock Out,,Quarter Final,2012-02-05,Ghana,GHA,2,,Tunisia,TUN,1,,,,Franceville,Gabon,home
+2012,Knock Out,,Semi Final,2012-02-08,Mali,MLI,0,,Ivory Coast,CIV,1,,,,Libreville,Gabon,away
+2012,Knock Out,,Semi Final,2012-02-08,Zambia,ZAM,1,,Ghana,GHA,0,,,,Bata,Equatorial Guinea,home
+2012,Knock Out,,Third Place,2012-02-11,Ghana,GHA,0,,Mali,MLI,2,,,,Malabo,Equatorial Guinea,away
+2012,Knock Out,,Final,2012-02-12,Zambia,ZAM,0,1,Ivory Coast,CIV,0,0,1,,Libreville,Gabon,draw
+2013,Group,A,Round 1,2013-01-19,South Africa,RSA,0,,Cape Verde,CPV,0,,,,Johannesburg,South Africa,draw
+2013,Group,A,Round 1,2013-01-19,Angola,ANG,0,,Morocco,MAR,0,,,,Johannesburg,South Africa,draw
+2013,Group,A,Round 1,2013-01-23,South Africa,RSA,2,,Angola,ANG,0,,,,Durban,South Africa,home
+2013,Group,A,Round 1,2013-01-23,Morocco,MAR,1,,Cape Verde,CPV,1,,,,Durban,South Africa,draw
+2013,Group,A,Round 1,2013-01-27,Cape Verde,CPV,2,,Angola,ANG,1,,,,Port Elizabeth,South Africa,home
+2013,Group,A,Round 1,2013-01-27,South Africa,RSA,2,,Morocco,MAR,2,,,,Durban,South Africa,draw
+2013,Group,B,Round 1,2013-01-20,Ghana,GHA,2,,DR Congo,COD,2,,,,Port Elizabeth,South Africa,draw
+2013,Group,B,Round 1,2013-01-20,Mali,MLI,1,,Niger,NIG,0,,,,Port Elizabeth,South Africa,home
+2013,Group,B,Round 1,2013-01-24,Ghana,GHA,1,,Mali,MLI,0,,,,Port Elizabeth,South Africa,home
+2013,Group,B,Round 1,2013-01-24,Niger,NIG,0,,DR Congo,COD,0,,,,Port Elizabeth,South Africa,draw
+2013,Group,B,Round 1,2013-01-28,DR Congo,COD,1,,Mali,MLI,1,,,,Durban,South Africa,draw
+2013,Group,B,Round 1,2013-01-28,Niger,NIG,0,,Ghana,GHA,3,,,,Port Elizabeth,South Africa,away
+2013,Group,C,Round 1,2013-01-21,Zambia,ZAM,1,,Ethiopia,ETH,1,,,,Nelspruit,South Africa,draw
+2013,Group,C,Round 1,2013-01-21,Nigeria,NGA,1,,Burkina Faso,BFA,1,,,,Nelspruit,South Africa,draw
+2013,Group,C,Round 1,2013-01-25,Burkina Faso,BFA,4,,Ethiopia,ETH,0,,,,Nelspruit,South Africa,home
+2013,Group,C,Round 1,2013-01-25,Zambia,ZAM,1,,Nigeria,NGA,1,,,,Nelspruit,South Africa,draw
+2013,Group,C,Round 1,2013-01-29,Burkina Faso,BFA,0,,Zambia,ZAM,0,,,,Nelspruit,South Africa,draw
+2013,Group,C,Round 1,2013-01-29,Ethiopia,ETH,0,,Nigeria,NGA,2,,,,Rustenburg,South Africa,away
+2013,Group,D,Round 1,2013-01-22,Tunisia,TUN,1,,Algeria,ALG,0,,,,Rustenburg,South Africa,home
+2013,Group,D,Round 1,2013-01-22,Ivory Coast,CIV,2,,Togo,TOG,1,,,,Rustenburg,South Africa,home
+2013,Group,D,Round 1,2013-01-26,Algeria,ALG,0,,Togo,TOG,2,,,,Rustenburg,South Africa,away
+2013,Group,D,Round 1,2013-01-26,Ivory Coast,CIV,3,,Tunisia,TUN,0,,,,Rustenburg,South Africa,home
+2013,Group,D,Round 1,2013-01-30,Togo,TOG,1,,Tunisia,TUN,1,,,,Nelspruit,South Africa,draw
+2013,Group,D,Round 1,2013-01-30,Algeria,ALG,2,,Ivory Coast,CIV,2,,,,Rustenburg,South Africa,draw
+2013,Knock Out,,Quarter Final,2013-02-02,Ghana,GHA,2,,Cape Verde,CPV,0,,,,Port Elizabeth,South Africa,home
+2013,Knock Out,,Quarter Final,2013-02-02,South Africa,RSA,1,0,Mali,MLI,1,1,1,,Durban,South Africa,draw
+2013,Knock Out,,Quarter Final,2013-02-03,Burkina Faso,BFA,1,,Togo,TOG,0,,,,Nelspruit,South Africa,home
+2013,Knock Out,,Quarter Final,2013-02-03,Ivory Coast,CIV,1,,Nigeria,NGA,2,,,,Rustenburg,South Africa,away
+2013,Knock Out,,Semi Final,2013-02-06,Burkina Faso,BFA,1,1,Ghana,GHA,1,0,1,,Nelspruit,South Africa,draw
+2013,Knock Out,,Semi Final,2013-02-06,Mali,MLI,1,,Nigeria,NGA,4,,,,Durban,South Africa,away
+2013,Knock Out,,Third Place,2013-02-09,Mali,MLI,3,,Ghana,GHA,1,,,,Port Elizabeth,South Africa,home
+2013,Knock Out,,Final,2013-02-10,Nigeria,NGA,1,,Burkina Faso,BFA,0,,,,Johannesburg,South Africa,home
+2015,Group,A,Round 1,2015-01-17,Equatorial Guinea,EQG,1,,Congo,CGO,1,,,,Bata,Equatorial Guinea,draw
+2015,Group,A,Round 1,2015-01-17,Burkina Faso,BFA,0,,Gabon,GAB,2,,,,Bata,Equatorial Guinea,away
+2015,Group,A,Round 1,2015-01-21,Gabon,GAB,0,,Congo,CGO,1,,,,Bata,Equatorial Guinea,away
+2015,Group,A,Round 1,2015-01-21,Equatorial Guinea,EQG,0,,Burkina Faso,BFA,0,,,,Bata,Equatorial Guinea,draw
+2015,Group,A,Round 1,2015-01-25,Congo,CGO,2,,Burkina Faso,BFA,1,,,,Ebebiyín,Equatorial Guinea,home
+2015,Group,A,Round 1,2015-01-25,Equatorial Guinea,EQG,2,,Gabon,GAB,0,,,,Bata,Equatorial Guinea,home
+2015,Group,B,Round 1,2015-01-18,Tunisia,TUN,1,,Cape Verde,CPV,1,,,,Ebebiyín,Equatorial Guinea,draw
+2015,Group,B,Round 1,2015-01-18,Zambia,ZAM,1,,DR Congo,COD,1,,,,Ebebiyín,Equatorial Guinea,draw
+2015,Group,B,Round 1,2015-01-22,Cape Verde,CPV,0,,DR Congo,COD,0,,,,Ebebiyín,Equatorial Guinea,draw
+2015,Group,B,Round 1,2015-01-22,Zambia,ZAM,1,,Tunisia,TUN,2,,,,Ebebiyín,Equatorial Guinea,away
+2015,Group,B,Round 1,2015-01-26,Cape Verde,CPV,0,,Zambia,ZAM,0,,,,Ebebiyín,Equatorial Guinea,draw
+2015,Group,B,Round 1,2015-01-26,DR Congo,COD,1,,Tunisia,TUN,1,,,,Bata,Equatorial Guinea,draw
+2015,Group,C,Round 1,2015-01-19,Ghana,GHA,1,,Senegal,SEN,2,,,,Mongomo,Equatorial Guinea,away
+2015,Group,C,Round 1,2015-01-19,Algeria,ALG,3,,South Africa,RSA,1,,,,Mongomo,Equatorial Guinea,home
+2015,Group,C,Round 1,2015-01-23,Ghana,GHA,1,,Algeria,ALG,0,,,,Mongomo,Equatorial Guinea,home
+2015,Group,C,Round 1,2015-01-23,South Africa,RSA,1,,Senegal,SEN,1,,,,Mongomo,Equatorial Guinea,draw
+2015,Group,C,Round 1,2015-01-27,Senegal,SEN,0,,Algeria,ALG,2,,,,Malabo,Equatorial Guinea,away
+2015,Group,C,Round 1,2015-01-27,South Africa,RSA,1,,Ghana,GHA,2,,,,Mongomo,Equatorial Guinea,away
+2015,Group,D,Round 1,2015-01-20,Mali,MLI,1,,Cameroon,CMR,1,,,,Malabo,Equatorial Guinea,draw
+2015,Group,D,Round 1,2015-01-20,Ivory Coast,CIV,1,,Guinea,GUI,1,,,,Malabo,Equatorial Guinea,draw
+2015,Group,D,Round 1,2015-01-24,Cameroon,CMR,1,,Guinea,GUI,1,,,,Malabo,Equatorial Guinea,draw
+2015,Group,D,Round 1,2015-01-24,Ivory Coast,CIV,1,,Mali,MLI,1,,,,Malabo,Equatorial Guinea,draw
+2015,Group,D,Round 1,2015-01-28,Guinea,GUI,1,,Mali,MLI,1,,,,Mongomo,Equatorial Guinea,draw
+2015,Group,D,Round 1,2015-01-28,Cameroon,CMR,0,,Ivory Coast,CIV,1,,,,Malabo,Equatorial Guinea,away
+2015,Knock Out,,Quarter Final,2015-01-31,Congo,CGO,2,,DR Congo,COD,4,,,,Bata,Equatorial Guinea,away
+2015,Knock Out,,Quarter Final,2015-01-31,Equatorial Guinea,EQG,2,,Tunisia,TUN,1,,,,Bata,Equatorial Guinea,home
+2015,Knock Out,,Quarter Final,2015-02-01,Ghana,GHA,3,,Guinea,GUI,0,,,,Malabo,Equatorial Guinea,home
+2015,Knock Out,,Quarter Final,2015-02-01,Ivory Coast,CIV,3,,Algeria,ALG,1,,,,Malabo,Equatorial Guinea,home
+2015,Knock Out,,Semi Final,2015-02-04,DR Congo,COD,1,,Ivory Coast,CIV,3,,,,Bata,Equatorial Guinea,away
+2015,Knock Out,,Semi Final,2015-02-05,Equatorial Guinea,EQG,0,,Ghana,GHA,3,,,,Malabo,Equatorial Guinea,away
+2015,Knock Out,,Third Place,2015-02-07,Equatorial Guinea,EQG,0,0,DR Congo,COD,0,1,1,,Malabo,Equatorial Guinea,draw
+2015,Knock Out,,Final,2015-02-08,Ivory Coast,CIV,0,1,Ghana,GHA,0,0,1,,Bata,Equatorial Guinea,draw
+2017,Group,A,Round 1,2017-01-14,Gabon,GAB,1,,Guinea-Bissau,GNB,1,,,,Libreville,Gabon,draw
+2017,Group,A,Round 1,2017-01-14,Burkina Faso,BFA,1,,Cameroon,CMR,1,,,,Libreville,Gabon,draw
+2017,Group,A,Round 1,2017-01-18,Gabon,GAB,1,,Burkina Faso,BFA,1,,,,Libreville,Gabon,draw
+2017,Group,A,Round 1,2017-01-18,Cameroon,CMR,2,,Guinea-Bissau,GNB,1,,,,Libreville,Gabon,home
+2017,Group,A,Round 1,2017-01-22,Gabon,GAB,0,,Cameroon,CMR,0,,,,Libreville,Gabon,draw
+2017,Group,A,Round 1,2017-01-22,Guinea-Bissau,GNB,0,,Burkina Faso,BFA,2,,,,Franceville,Gabon,away
+2017,Group,B,Round 1,2017-01-15,Algeria,ALG,2,,Zimbabwe,ZIM,2,,,,Franceville,Gabon,draw
+2017,Group,B,Round 1,2017-01-15,Tunisia,TUN,0,,Senegal,SEN,2,,,,Franceville,Gabon,away
+2017,Group,B,Round 1,2017-01-19,Algeria,ALG,1,,Tunisia,TUN,2,,,,Franceville,Gabon,away
+2017,Group,B,Round 1,2017-01-19,Senegal,SEN,2,,Zimbabwe,ZIM,0,,,,Franceville,Gabon,home
+2017,Group,B,Round 1,2017-01-23,Senegal,SEN,2,,Algeria,ALG,2,,,,Franceville,Gabon,draw
+2017,Group,B,Round 1,2017-01-23,Zimbabwe,ZIM,2,,Tunisia,TUN,4,,,,Libreville,Gabon,away
+2017,Group,C,Round 1,2017-01-16,Ivory Coast,CIV,0,,Togo,TOG,0,,,,Oyem,Gabon,draw
+2017,Group,C,Round 1,2017-01-16,DR Congo,COD,1,,Morocco,MAR,0,,,,Oyem,Gabon,home
+2017,Group,C,Round 1,2017-01-20,Ivory Coast,CIV,2,,DR Congo,COD,2,,,,Oyem,Gabon,draw
+2017,Group,C,Round 1,2017-01-20,Morocco,MAR,3,,Togo,TOG,1,,,,Oyem,Gabon,home
+2017,Group,C,Round 1,2017-01-24,Morocco,MAR,1,,Ivory Coast,CIV,0,,,,Oyem,Gabon,home
+2017,Group,C,Round 1,2017-01-24,Togo,TOG,1,,DR Congo,COD,3,,,,Port-Gentil,Gabon,away
+2017,Group,D,Round 1,2017-01-17,Mali,MLI,0,,Egypt,EGY,0,,,,Port-Gentil,Gabon,draw
+2017,Group,D,Round 1,2017-01-17,Ghana,GHA,1,,Uganda,UGA,0,,,,Port-Gentil,Gabon,home
+2017,Group,D,Round 1,2017-01-21,Egypt,EGY,1,,Uganda,UGA,0,,,,Port-Gentil,Gabon,home
+2017,Group,D,Round 1,2017-01-21,Ghana,GHA,1,,Mali,MLI,0,,,,Port-Gentil,Gabon,home
+2017,Group,D,Round 1,2017-01-25,Uganda,UGA,1,,Mali,MLI,1,,,,Oyem,Gabon,draw
+2017,Group,D,Round 1,2017-01-25,Egypt,EGY,1,,Ghana,GHA,0,,,,Port-Gentil,Gabon,home
+2017,Knock Out,,Quarter Final,2017-01-28,Burkina Faso,BFA,2,,Tunisia,TUN,0,,,,Libreville,Gabon,home
+2017,Knock Out,,Quarter Final,2017-01-28,Senegal,SEN,0,0,Cameroon,CMR,0,1,1,,Franceville,Gabon,draw
+2017,Knock Out,,Quarter Final,2017-01-29,DR Congo,COD,1,,Ghana,GHA,2,,,,Oyem,Gabon,away
+2017,Knock Out,,Quarter Final,2017-01-29,Egypt,EGY,1,,Morocco,MAR,0,,,,Port-Gentil,Gabon,home
+2017,Knock Out,,Semi Final,2017-02-01,Burkina Faso,BFA,1,0,Egypt,EGY,1,1,1,,Libreville,Gabon,draw
+2017,Knock Out,,Semi Final,2017-02-02,Cameroon,CMR,2,,Ghana,GHA,0,,,,Franceville,Gabon,home
+2017,Knock Out,,Third Place,2017-02-04,Burkina Faso,BFA,1,,Ghana,GHA,0,,,,Port-Gentil,Gabon,home
+2017,Knock Out,,Final,2017-02-05,Egypt,EGY,1,,Cameroon,CMR,2,,,,Libreville,Gabon,away
+2019,Group,A,Round 1,2019-06-21,Egypt,EGY,1,,Zimbabwe,ZIM,0,,,,Cairo,Egypt,home
+2019,Group,A,Round 1,2019-06-22,DR Congo,COD,0,,Uganda,UGA,2,,,,Cairo,Egypt,away
+2019,Group,A,Round 1,2019-06-26,Egypt,EGY,2,,DR Congo,COD,0,,,,Cairo,Egypt,home
+2019,Group,A,Round 1,2019-06-26,Uganda,UGA,1,,Zimbabwe,ZIM,1,,,,Cairo,Egypt,draw
+2019,Group,A,Round 1,2019-06-30,Egypt,EGY,2,,Uganda,UGA,0,,,,Cairo,Egypt,home
+2019,Group,A,Round 1,2019-06-30,Zimbabwe,ZIM,0,,DR Congo,COD,4,,,,Cairo,Egypt,away
+2019,Group,B,Round 1,2019-06-22,Guinea,GUI,2,,Madagascar,MAD,2,,,,Alexandria,Egypt,draw
+2019,Group,B,Round 1,2019-06-22,Nigeria,NGA,1,,Burundi,BDI,0,,,,Alexandria,Egypt,home
+2019,Group,B,Round 1,2019-06-26,Nigeria,NGA,1,,Guinea,GUI,0,,,,Alexandria,Egypt,home
+2019,Group,B,Round 1,2019-06-27,Madagascar,MAD,1,,Burundi,BDI,0,,,,Alexandria,Egypt,home
+2019,Group,B,Round 1,2019-06-30,Burundi,BDI,0,,Guinea,GUI,2,,,,Cairo,Egypt,away
+2019,Group,B,Round 1,2019-06-30,Madagascar,MAD,2,,Nigeria,NGA,0,,,,Alexandria,Egypt,home
+2019,Group,C,Round 1,2019-06-23,Senegal,SEN,2,,Tanzania,TAN,0,,,,Cairo,Egypt,home
+2019,Group,C,Round 1,2019-06-23,Algeria,ALG,2,,Kenya,KEN,0,,,,Cairo,Egypt,home
+2019,Group,C,Round 1,2019-06-27,Senegal,SEN,0,,Algeria,ALG,1,,,,Cairo,Egypt,away
+2019,Group,C,Round 1,2019-06-27,Kenya,KEN,3,,Tanzania,TAN,2,,,,Cairo,Egypt,home
+2019,Group,C,Round 1,2019-07-01,Tanzania,TAN,0,,Algeria,ALG,3,,,,Cairo,Egypt,away
+2019,Group,C,Round 1,2019-07-01,Kenya,KEN,0,,Senegal,SEN,3,,,,Cairo,Egypt,away
+2019,Group,D,Round 1,2019-06-23,Morocco,MAR,1,,Namibia,NAM,0,,,,Cairo,Egypt,home
+2019,Group,D,Round 1,2019-06-24,Ivory Coast,CIV,1,,South Africa,RSA,0,,,,Cairo,Egypt,home
+2019,Group,D,Round 1,2019-06-28,South Africa,RSA,1,,Namibia,NAM,0,,,,Cairo,Egypt,home
+2019,Group,D,Round 1,2019-06-28,Morocco,MAR,1,,Ivory Coast,CIV,0,,,,Cairo,Egypt,home
+2019,Group,D,Round 1,2019-07-01,South Africa,RSA,0,,Morocco,MAR,1,,,,Cairo,Egypt,away
+2019,Group,D,Round 1,2019-07-01,Namibia,NAM,1,,Ivory Coast,CIV,4,,,,Cairo,Egypt,away
+2019,Group,E,Round 1,2019-06-24,Mali,MLI,4,,Mauritania,MTN,1,,,,Suez,Egypt,home
+2019,Group,E,Round 1,2019-06-24,Tunisia,TUN,1,,Angola,ANG,1,,,,Suez,Egypt,draw
+2019,Group,E,Round 1,2019-06-28,Tunisia,TUN,1,,Mali,MLI,1,,,,Suez,Egypt,draw
+2019,Group,E,Round 1,2019-06-29,Mauritania,MTN,0,,Angola,ANG,0,,,,Suez,Egypt,draw
+2019,Group,E,Round 1,2019-07-02,Mauritania,MTN,0,,Tunisia,TUN,0,,,,Suez,Egypt,draw
+2019,Group,E,Round 1,2019-07-02,Angola,ANG,0,,Mali,MLI,1,,,,Ismailia,Egypt,away
+2019,Group,F,Round 1,2019-06-25,Cameroon,CMR,2,,Guinea-Bissau,GNB,0,,,,Ismailia,Egypt,home
+2019,Group,F,Round 1,2019-06-25,Ghana,GHA,2,,Benin,BEN,2,,,,Ismailia,Egypt,draw
+2019,Group,F,Round 1,2019-06-29,Cameroon,CMR,0,,Ghana,GHA,0,,,,Ismailia,Egypt,draw
+2019,Group,F,Round 1,2019-06-29,Benin,BEN,0,,Guinea-Bissau,GNB,0,,,,Ismailia,Egypt,draw
+2019,Group,F,Round 1,2019-07-02,Guinea-Bissau,GNB,0,,Ghana,GHA,2,,,,Suez,Egypt,away
+2019,Group,F,Round 1,2019-07-02,Benin,BEN,0,,Cameroon,CMR,0,,,,Ismailia,Egypt,draw
+2019,Knock Out,,Round of 16,2019-07-05,Morocco,MAR,1,0,Benin,BEN,1,1,1,,Cairo,Egypt,draw
+2019,Knock Out,,Round of 16,2019-07-05,Uganda,UGA,0,,Senegal,SEN,1,,,,Cairo,Egypt,away
+2019,Knock Out,,Round of 16,2019-07-06,Egypt,EGY,0,,South Africa,RSA,1,,,,Cairo,Egypt,away
+2019,Knock Out,,Round of 16,2019-07-06,Nigeria,NGA,3,,Cameroon,CMR,2,,,,Alexandria,Egypt,home
+2019,Knock Out,,Round of 16,2019-07-07,Algeria,ALG,3,,Guinea,GUI,0,,,,Cairo,Egypt,home
+2019,Knock Out,,Round of 16,2019-07-07,Madagascar,MAD,2,1,DR Congo,COD,2,0,1,,Alexandria,Egypt,draw
+2019,Knock Out,,Round of 16,2019-07-08,Ghana,GHA,1,0,Tunisia,TUN,1,1,1,,Ismailia,Egypt,draw
+2019,Knock Out,,Round of 16,2019-07-08,Mali,MLI,0,,Ivory Coast,CIV,1,,,,Suez,Egypt,away
+2019,Knock Out,,Quarter Final,2019-07-10,Nigeria,NGA,2,,South Africa,RSA,1,,,,Cairo,Egypt,home
+2019,Knock Out,,Quarter Final,2019-07-10,Senegal,SEN,1,,Benin,BEN,0,,,,Cairo,Egypt,home
+2019,Knock Out,,Quarter Final,2019-07-11,Ivory Coast,CIV,1,0,Algeria,ALG,1,1,1,,Suez,Egypt,draw
+2019,Knock Out,,Quarter Final,2019-07-11,Madagascar,MAD,0,,Tunisia,TUN,3,,,,Cairo,Egypt,away
+2019,Knock Out,,Semi Final,2019-07-14,Algeria,ALG,2,,Nigeria,NGA,1,,,,Cairo,Egypt,home
+2019,Knock Out,,Semi Final,2019-07-14,Senegal,SEN,1,,Tunisia,TUN,0,,,,Cairo,Egypt,home
+2019,Knock Out,,Third Place,2019-07-17,Tunisia,TUN,0,,Nigeria,NGA,1,,,,Cairo,Egypt,away
+2019,Knock Out,,Final,2019-07-19,Senegal,SEN,0,,Algeria,ALG,1,,,,Cairo,Egypt,away
+2022,Group,A,Round 1,2022-01-09,Ethiopia,ETH,0,,Cape Verde,CPV,1,,,,Yaoundé,Cameroon,away
+2022,Group,A,Round 1,2022-01-09,Cameroon,CMR,2,,Burkina Faso,BFA,1,,,,Yaoundé,Cameroon,home
+2022,Group,A,Round 1,2022-01-13,Cape Verde,CPV,0,,Burkina Faso,BFA,1,,,,Yaoundé,Cameroon,away
+2022,Group,A,Round 1,2022-01-13,Cameroon,CMR,4,,Ethiopia,ETH,1,,,,Yaoundé,Cameroon,home
+2022,Group,A,Round 1,2022-01-17,Burkina Faso,BFA,1,,Ethiopia,ETH,1,,,,Bafoussam,Cameroon,draw
+2022,Group,A,Round 1,2022-01-17,Cameroon,CMR,1,,Cape Verde,CPV,1,,,,Yaoundé,Cameroon,draw
+2022,Group,B,Round 1,2022-01-10,Guinea,GUI,1,,Malawi,MWI,0,,,,Bafoussam,Cameroon,home
+2022,Group,B,Round 1,2022-01-10,Senegal,SEN,1,,Zimbabwe,ZIM,0,,,,Bafoussam,Cameroon,home
+2022,Group,B,Round 1,2022-01-14,Senegal,SEN,0,,Guinea,GUI,0,,,,Bafoussam,Cameroon,draw
+2022,Group,B,Round 1,2022-01-14,Malawi,MWI,2,,Zimbabwe,ZIM,1,,,,Bafoussam,Cameroon,home
+2022,Group,B,Round 1,2022-01-18,Malawi,MWI,0,,Senegal,SEN,0,,,,Bafoussam,Cameroon,draw
+2022,Group,B,Round 1,2022-01-18,Zimbabwe,ZIM,2,,Guinea,GUI,1,,,,Yaoundé,Cameroon,home
+2022,Group,C,Round 1,2022-01-10,Morocco,MAR,1,,Ghana,GHA,0,,,,Yaoundé,Cameroon,home
+2022,Group,C,Round 1,2022-01-10,Comoros,COM,0,,Gabon,GAB,1,,,,Yaoundé,Cameroon,away
+2022,Group,C,Round 1,2022-01-14,Morocco,MAR,2,,Comoros,COM,0,,,,Yaoundé,Cameroon,home
+2022,Group,C,Round 1,2022-01-14,Gabon,GAB,1,,Ghana,GHA,1,,,,Yaoundé,Cameroon,draw
+2022,Group,C,Round 1,2022-01-18,Ghana,GHA,2,,Comoros,COM,3,,,,Garoua,Cameroon,away
+2022,Group,C,Round 1,2022-01-18,Gabon,GAB,2,,Morocco,MAR,2,,,,Yaoundé,Cameroon,draw
+2022,Group,D,Round 1,2022-01-11,Sudan,SDN,0,,Guinea-Bissau,GNB,0,,,,Garoua,Cameroon,draw
+2022,Group,D,Round 1,2022-01-11,Nigeria,NGA,1,,Egypt,EGY,0,,,,Garoua,Cameroon,home
+2022,Group,D,Round 1,2022-01-15,Guinea-Bissau,GNB,0,,Egypt,EGY,1,,,,Garoua,Cameroon,away
+2022,Group,D,Round 1,2022-01-15,Nigeria,NGA,3,,Sudan,SDN,1,,,,Garoua,Cameroon,home
+2022,Group,D,Round 1,2022-01-19,Guinea-Bissau,GNB,0,,Nigeria,NGA,2,,,,Garoua,Cameroon,away
+2022,Group,D,Round 1,2022-01-19,Egypt,EGY,1,,Sudan,SDN,0,,,,Yaoundé,Cameroon,home
+2022,Group,E,Round 1,2022-01-11,Algeria,ALG,0,,Sierra Leone,SLE,0,,,,Douala,Cameroon,draw
+2022,Group,E,Round 1,2022-01-12,Equatorial Guinea,EQG,0,,Ivory Coast,CIV,1,,,,Douala,Cameroon,away
+2022,Group,E,Round 1,2022-01-16,Algeria,ALG,0,,Equatorial Guinea,EQG,1,,,,Douala,Cameroon,away
+2022,Group,E,Round 1,2022-01-16,Ivory Coast,CIV,2,,Sierra Leone,SLE,2,,,,Douala,Cameroon,draw
+2022,Group,E,Round 1,2022-01-20,Sierra Leone,SLE,0,,Equatorial Guinea,EQG,1,,,,Limbé,Cameroon,away
+2022,Group,E,Round 1,2022-01-20,Ivory Coast,CIV,3,,Algeria,ALG,1,,,,Douala,Cameroon,home
+2022,Group,F,Round 1,2022-01-12,Tunisia,TUN,0,,Mali,MLI,1,,,,Limbé,Cameroon,away
+2022,Group,F,Round 1,2022-01-12,Mauritania,MTN,0,,Gambia,GAM,1,,,,Limbé,Cameroon,away
+2022,Group,F,Round 1,2022-01-16,Gambia,GAM,1,,Mali,MLI,1,,,,Limbé,Cameroon,draw
+2022,Group,F,Round 1,2022-01-16,Tunisia,TUN,4,,Mauritania,MTN,0,,,,Limbé,Cameroon,home
+2022,Group,F,Round 1,2022-01-20,Mali,MLI,2,,Mauritania,MTN,0,,,,Douala,Cameroon,home
+2022,Group,F,Round 1,2022-01-20,Gambia,GAM,1,,Tunisia,TUN,0,,,,Limbé,Cameroon,home
+2022,Knock Out,,Round of 16,2022-01-23,Burkina Faso,BFA,1,1,Gabon,GAB,1,0,1,,Limbé,Cameroon,draw
+2022,Knock Out,,Round of 16,2022-01-23,Nigeria,NGA,0,,Tunisia,TUN,1,,,,Garoua,Cameroon,away
+2022,Knock Out,,Round of 16,2022-01-24,Cameroon,CMR,2,,Comoros,COM,1,,,,Yaoundé,Cameroon,home
+2022,Knock Out,,Round of 16,2022-01-24,Guinea,GUI,0,,Gambia,GAM,1,,,,Bafoussam,Cameroon,away
+2022,Knock Out,,Round of 16,2022-01-25,Morocco,MAR,2,,Malawi,MWI,1,,,,Yaoundé,Cameroon,home
+2022,Knock Out,,Round of 16,2022-01-25,Senegal,SEN,2,,Cape Verde,CPV,0,,,,Bafoussam,Cameroon,home
+2022,Knock Out,,Round of 16,2022-01-26,Ivory Coast,CIV,0,0,Egypt,EGY,0,1,1,,Douala,Cameroon,draw
+2022,Knock Out,,Round of 16,2022-01-26,Mali,MLI,0,0,Equatorial Guinea,EQG,0,1,1,,Limbé,Cameroon,draw
+2022,Knock Out,,Quarter Final,2022-01-29,Burkina Faso,BFA,1,,Tunisia,TUN,0,,,,Garoua,Cameroon,home
+2022,Knock Out,,Quarter Final,2022-01-29,Cameroon,CMR,2,,Gambia,GAM,0,,,,Douala,Cameroon,home
+2022,Knock Out,,Quarter Final,2022-01-30,Egypt,EGY,2,,Morocco,MAR,1,,,,Yaoundé,Cameroon,home
+2022,Knock Out,,Quarter Final,2022-01-30,Senegal,SEN,3,,Equatorial Guinea,EQG,1,,,,Yaoundé,Cameroon,home
+2022,Knock Out,,Semi Final,2022-02-02,Burkina Faso,BFA,1,,Senegal,SEN,3,,,,Yaoundé,Cameroon,away
+2022,Knock Out,,Semi Final,2022-02-03,Cameroon,CMR,0,0,Egypt,EGY,0,1,1,,Yaoundé,Cameroon,draw
+2022,Knock Out,,Third Place,2022-02-05,Cameroon,CMR,3,1,Burkina Faso,BFA,3,0,1,,Yaoundé,Cameroon,draw
+2022,Knock Out,,Final,2022-02-06,Senegal,SEN,0,1,Egypt,EGY,0,0,1,,Yaoundé,Cameroon,draw
+2024,Group,A,Round 1,2024-01-13,Ivory Coast,CIV,2,,Guinea-Bissau,GNB,0,,,,Ebimpé,Ivory Coast,home
+2024,Group,A,Round 1,2024-01-14,Nigeria,NGA,1,,Equatorial Guinea,EQG,1,,,,Ebimpé,Ivory Coast,draw
+2024,Group,A,Round 1,2024-01-18,Ivory Coast,CIV,0,,Nigeria,NGA,1,,,,Ebimpé,Ivory Coast,away
+2024,Group,A,Round 1,2024-01-18,Equatorial Guinea,EQG,4,,Guinea-Bissau,GNB,2,,,,Ebimpé,Ivory Coast,home
+2024,Group,A,Round 1,2024-01-22,Guinea-Bissau,GNB,0,,Nigeria,NGA,1,,,,Abidjan,Ivory Coast,away
+2024,Group,A,Round 1,2024-01-22,Ivory Coast,CIV,0,,Equatorial Guinea,EQG,4,,,,Ebimpé,Ivory Coast,away
+2024,Group,B,Round 1,2024-01-14,Ghana,GHA,1,,Cape Verde,CPV,2,,,,Abidjan,Ivory Coast,away
+2024,Group,B,Round 1,2024-01-14,Egypt,EGY,2,,Mozambique,MOZ,2,,,,Abidjan,Ivory Coast,draw
+2024,Group,B,Round 1,2024-01-18,Egypt,EGY,2,,Ghana,GHA,2,,,,Abidjan,Ivory Coast,draw
+2024,Group,B,Round 1,2024-01-19,Cape Verde,CPV,3,,Mozambique,MOZ,0,,,,Abidjan,Ivory Coast,home
+2024,Group,B,Round 1,2024-01-22,Cape Verde,CPV,2,,Egypt,EGY,2,,,,Abidjan,Ivory Coast,draw
+2024,Group,B,Round 1,2024-01-22,Mozambique,MOZ,2,,Ghana,GHA,2,,,,Ebimpé,Ivory Coast,draw
+2024,Group,C,Round 1,2024-01-15,Senegal,SEN,3,,Gambia,GAM,0,,,,Yamoussoukro,Ivory Coast,home
+2024,Group,C,Round 1,2024-01-15,Cameroon,CMR,1,,Guinea,GUI,1,,,,Yamoussoukro,Ivory Coast,draw
+2024,Group,C,Round 1,2024-01-19,Senegal,SEN,3,,Cameroon,CMR,1,,,,Yamoussoukro,Ivory Coast,home
+2024,Group,C,Round 1,2024-01-19,Guinea,GUI,1,,Gambia,GAM,0,,,,Yamoussoukro,Ivory Coast,home
+2024,Group,C,Round 1,2024-01-23,Guinea,GUI,0,,Senegal,SEN,2,,,,Yamoussoukro,Ivory Coast,away
+2024,Group,C,Round 1,2024-01-23,Gambia,GAM,2,,Cameroon,CMR,3,,,,Bouaké,Ivory Coast,away
+2024,Group,D,Round 1,2024-01-15,Algeria,ALG,1,,Angola,ANG,1,,,,Bouaké,Ivory Coast,draw
+2024,Group,D,Round 1,2024-01-16,Burkina Faso,BFA,1,,Mauritania,MTN,0,,,,Bouaké,Ivory Coast,home
+2024,Group,D,Round 1,2024-01-20,Mauritania,MTN,2,,Angola,ANG,3,,,,Bouaké,Ivory Coast,away
+2024,Group,D,Round 1,2024-01-20,Algeria,ALG,2,,Burkina Faso,BFA,2,,,,Bouaké,Ivory Coast,draw
+2024,Group,D,Round 1,2024-01-23,Mauritania,MTN,1,,Algeria,ALG,0,,,,Bouaké,Ivory Coast,home
+2024,Group,D,Round 1,2024-01-23,Angola,ANG,2,,Burkina Faso,BFA,0,,,,Yamoussoukro,Ivory Coast,home
+2024,Group,E,Round 1,2024-01-16,Mali,MLI,2,,South Africa,RSA,0,,,,Korhogo,Ivory Coast,home
+2024,Group,E,Round 1,2024-01-16,Tunisia,TUN,0,,Namibia,NAM,1,,,,Korhogo,Ivory Coast,away
+2024,Group,E,Round 1,2024-01-20,Tunisia,TUN,1,,Mali,MLI,1,,,,Korhogo,Ivory Coast,draw
+2024,Group,E,Round 1,2024-01-21,South Africa,RSA,4,,Namibia,NAM,0,,,,Korhogo,Ivory Coast,home
+2024,Group,E,Round 1,2024-01-24,South Africa,RSA,0,,Tunisia,TUN,0,,,,Korhogo,Ivory Coast,draw
+2024,Group,E,Round 1,2024-01-24,Namibia,NAM,0,,Mali,MLI,0,,,,San-Pédro,Ivory Coast,draw
+2024,Group,F,Round 1,2024-01-17,Morocco,MAR,3,,Tanzania,TAN,0,,,,San-Pédro,Ivory Coast,home
+2024,Group,F,Round 1,2024-01-17,DR Congo,COD,1,,Zambia,ZAM,1,,,,San-Pédro,Ivory Coast,draw
+2024,Group,F,Round 1,2024-01-21,Morocco,MAR,1,,DR Congo,COD,1,,,,San-Pédro,Ivory Coast,draw
+2024,Group,F,Round 1,2024-01-21,Zambia,ZAM,1,,Tanzania,TAN,1,,,,San-Pédro,Ivory Coast,draw
+2024,Group,F,Round 1,2024-01-24,Zambia,ZAM,0,,Morocco,MAR,1,,,,San-Pédro,Ivory Coast,away
+2024,Group,F,Round 1,2024-01-24,Tanzania,TAN,0,,DR Congo,COD,0,,,,Korhogo,Ivory Coast,draw
+2024,Knock Out,,Round of 16,2024-01-27,Angola,ANG,3,,Namibia,NAM,0,,,,Bouaké,Ivory Coast,home
+2024,Knock Out,,Round of 16,2024-01-27,Nigeria,NGA,2,,Cameroon,CMR,0,,,,Abidjan,Ivory Coast,home
+2024,Knock Out,,Round of 16,2024-01-28,Egypt,EGY,1,0,DR Congo,COD,1,1,1,,San-Pédro,Ivory Coast,draw
+2024,Knock Out,,Round of 16,2024-01-28,Equatorial Guinea,EQG,0,,Guinea,GUI,1,,,,Ebimpé,Ivory Coast,away
+2024,Knock Out,,Round of 16,2024-01-29,Cape Verde,CPV,1,,Mauritania,MTN,0,,,,Abidjan,Ivory Coast,home
+2024,Knock Out,,Round of 16,2024-01-29,Ivory Coast,CIV,1,1,Senegal,SEN,1,0,1,,Yamoussoukro,Ivory Coast,draw
+2024,Knock Out,,Round of 16,2024-01-30,Mali,MLI,2,,Burkina Faso,BFA,1,,,,Korhogo,Ivory Coast,home
+2024,Knock Out,,Round of 16,2024-01-30,Morocco,MAR,0,,South Africa,RSA,2,,,,San-Pédro,Ivory Coast,away
+2024,Knock Out,,Quarter Final,2024-02-02,DR Congo,COD,3,,Guinea,GUI,1,,,,Ebimpé,Ivory Coast,home
+2024,Knock Out,,Quarter Final,2024-02-02,Nigeria,NGA,1,,Angola,ANG,0,,,,Abidjan,Ivory Coast,home
+2024,Knock Out,,Quarter Final,2024-02-03,Cape Verde,CPV,0,0,South Africa,RSA,0,1,1,,Yamoussoukro,Ivory Coast,draw
+2024,Knock Out,,Quarter Final,2024-02-03,Ivory Coast,CIV,2,,Mali,MLI,1,,,,Bouaké,Ivory Coast,home
+2024,Knock Out,,Semi Final,2024-02-07,Ivory Coast,CIV,1,,DR Congo,COD,0,,,,Ebimpé,Ivory Coast,home
+2024,Knock Out,,Semi Final,2024-02-07,Nigeria,NGA,1,1,South Africa,RSA,1,0,1,,Bouaké,Ivory Coast,draw
+2024,Knock Out,,Third Place,2024-02-10,South Africa,RSA,0,,DR Congo,COD,0,,,,Abidjan,Ivory Coast,draw
+2024,Knock Out,,Final,2024-02-11,Ivory Coast,CIV,2,,Nigeria,NGA,1,,,,Ebimpé,Ivory Coast,home
+2025,,,,2025-12-21,Morocco,MAR,2,,Comoros,COM,0,,,,Rabat,Morocco,home
+2025,,,,2025-12-22,Mali,MLI,1,,Zambia,ZAM,1,,,,Casablanca,Morocco,draw
+2025,,,,2025-12-22,South Africa,RSA,2,,Angola,ANG,1,,,,Marrakesh,Morocco,home
+2025,,,,2025-12-22,Egypt,EGY,2,,Zimbabwe,ZIM,1,,,,Agadir,Morocco,home
+2025,,,,2025-12-23,Nigeria,NGA,2,,Tanzania,TAN,1,,,,Fez,Morocco,home
+2025,,,,2025-12-23,Tunisia,TUN,3,,Uganda,UGA,1,,,,Rabat,Morocco,home
+2025,,,,2025-12-23,DR Congo,COD,1,,Benin,BEN,0,,,,Rabat,Morocco,home
+2025,,,,2025-12-23,Senegal,SEN,3,,Botswana,BOT,0,,,,Tangier,Morocco,home
+2025,,,,2025-12-24,Burkina Faso,BFA,2,,Equatorial Guinea,EQG,1,,,,Casablanca,Morocco,home
+2025,,,,2025-12-24,Algeria,ALG,3,,Sudan,SDN,0,,,,Rabat,Morocco,home
+2025,,,,2025-12-24,Ivory Coast,CIV,1,,Mozambique,MOZ,0,,,,Marrakesh,Morocco,home
+2025,,,,2025-12-24,Cameroon,CMR,1,,Gabon,GAB,0,,,,Agadir,Morocco,home
+2025,,,,2025-12-26,Zambia,ZAM,0,,Comoros,COM,0,,,,Casablanca,Morocco,draw
+2025,,,,2025-12-26,Morocco,MAR,1,,Mali,MLI,1,,,,Rabat,Morocco,draw
+2025,,,,2025-12-26,Angola,ANG,1,,Zimbabwe,ZIM,1,,,,Marrakesh,Morocco,draw
+2025,,,,2025-12-26,Egypt,EGY,1,,South Africa,RSA,0,,,,Agadir,Morocco,home
+2025,,,,2025-12-27,Uganda,UGA,1,,Tanzania,TAN,1,,,,Rabat,Morocco,draw
+2025,,,,2025-12-27,Nigeria,NGA,3,,Tunisia,TUN,2,,,,Fez,Morocco,home
+2025,,,,2025-12-27,Benin,BEN,1,,Botswana,BOT,0,,,,Rabat,Morocco,home
+2025,,,,2025-12-27,Senegal,SEN,1,,DR Congo,COD,1,,,,Tangier,Morocco,draw
+2025,,,,2025-12-28,Equatorial Guinea,EQG,0,,Sudan,SDN,1,,,,Casablanca,Morocco,away
+2025,,,,2025-12-28,Algeria,ALG,1,,Burkina Faso,BFA,0,,,,Rabat,Morocco,home
+2025,,,,2025-12-28,Gabon,GAB,2,,Mozambique,MOZ,3,,,,Agadir,Morocco,away
+2025,,,,2025-12-28,Ivory Coast,CIV,1,,Cameroon,CMR,1,,,,Marrakesh,Morocco,draw
+2025,,,,2025-12-29,Morocco,MAR,3,,Zambia,ZAM,0,,,,Rabat,Morocco,home
+2025,,,,2025-12-29,Comoros,COM,0,,Mali,MLI,0,,,,Casablanca,Morocco,draw
+2025,,,,2025-12-29,Angola,ANG,0,,Egypt,EGY,0,,,,Agadir,Morocco,draw
+2025,,,,2025-12-29,Zimbabwe,ZIM,2,,South Africa,RSA,3,,,,Marrakesh,Morocco,away
+2025,,,,2025-12-30,Uganda,UGA,1,,Nigeria,NGA,3,,,,Fez,Morocco,away
+2025,,,,2025-12-30,Tanzania,TAN,1,,Tunisia,TUN,1,,,,Rabat,Morocco,draw
+2025,,,,2025-12-30,Benin,BEN,0,,Senegal,SEN,3,,,,Tangier,Morocco,away
+2025,,,,2025-12-30,Botswana,BOT,0,,DR Congo,COD,3,,,,Rabat,Morocco,away
+2025,,,,2025-12-31,Equatorial Guinea,EQG,1,,Algeria,ALG,3,,,,Rabat,Morocco,away
+2025,,,,2025-12-31,Sudan,SDN,0,,Burkina Faso,BFA,2,,,,Casablanca,Morocco,away
+2025,,,,2025-12-31,Gabon,GAB,2,,Ivory Coast,CIV,3,,,,Marrakesh,Morocco,away
+2025,,,,2025-12-31,Mozambique,MOZ,1,,Cameroon,CMR,2,,,,Agadir,Morocco,away
+2026,,,,2026-01-03,Senegal,SEN,3,,Sudan,SDN,1,,,,Tangier,Morocco,home
+2026,,,,2026-01-03,Mali,MLI,1,1,Tunisia,TUN,1,0,1,,Casablanca,Morocco,draw
+2026,,,,2026-01-04,Morocco,MAR,1,,Tanzania,TAN,0,,,,Rabat,Morocco,home
+2026,,,,2026-01-04,South Africa,RSA,1,,Cameroon,CMR,2,,,,Rabat,Morocco,away
+2026,,,,2026-01-05,Egypt,EGY,3,,Benin,BEN,1,,,,Agadir,Morocco,home
+2026,,,,2026-01-05,Nigeria,NGA,4,,Mozambique,MOZ,0,,,,Fez,Morocco,home
+2026,,,,2026-01-06,Algeria,ALG,1,,DR Congo,COD,0,,,,Rabat,Morocco,home
+2026,,,,2026-01-06,Ivory Coast,CIV,3,,Burkina Faso,BFA,0,,,,Marrakesh,Morocco,home
+2026,,,,2026-01-09,Mali,MLI,0,,Senegal,SEN,1,,,,Tangier,Morocco,away
+2026,,,,2026-01-09,Morocco,MAR,2,,Cameroon,CMR,0,,,,Rabat,Morocco,home
+2026,,,,2026-01-10,Algeria,ALG,0,,Nigeria,NGA,2,,,,Marrakesh,Morocco,away
+2026,,,,2026-01-10,Egypt,EGY,3,,Ivory Coast,CIV,2,,,,Agadir,Morocco,home
+2026,,,,2026-01-14,Senegal,SEN,1,,Egypt,EGY,0,,,,Tangier,Morocco,home
+2026,,,,2026-01-14,Morocco,MAR,0,1,Nigeria,NGA,0,0,1,,Rabat,Morocco,draw
+2026,,,,2026-01-17,Egypt,EGY,0,0,Nigeria,NGA,0,1,1,,Casablanca,Morocco,draw
+2026,,,,2026-01-18,Morocco,MAR,3,,Senegal,SEN,0,,,,Rabat,Morocco,home

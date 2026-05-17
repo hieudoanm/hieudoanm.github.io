@@ -1,0 +1,1020 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`ResumeTimelineModal should render 1`] = `
+<div>
+  <dialog
+    class="modal modal-open"
+    open=""
+    style="background: rgba(0, 0, 0, 0.6);"
+  >
+    <div
+      class="modal-box border-base-content/15 flex h-[90vh] w-full max-w-[min(48rem,90vw)] flex-col overflow-hidden border p-0"
+    >
+      <div
+        class="border-base-300 flex items-center justify-between border-b px-4 py-3"
+      >
+        <h3
+          class="text-sm font-normal"
+        >
+          Resume Timeline
+        </h3>
+        <button
+          class="btn btn-sm btn-circle btn-ghost opacity-60 hover:opacity-100"
+        >
+          ✕
+        </button>
+      </div>
+      <div
+        class="flex-1 overflow-y-auto"
+      >
+        <div
+          class="mx-auto max-w-2xl p-6 pb-0"
+        >
+          <div
+            class="mb-4 grid grid-cols-[1fr_auto_1fr] gap-0"
+          >
+            <div
+              class="pr-2 text-right md:pr-4"
+            >
+              <p
+                class="text-sm font-normal tracking-tight"
+              >
+                🎓 Education
+              </p>
+            </div>
+            <div />
+            <div
+              class="pl-2 md:pl-4"
+            >
+              <p
+                class="text-sm font-normal tracking-tight"
+              >
+                💼 Experience
+              </p>
+            </div>
+          </div>
+        </div>
+        <ul
+          class="timeline timeline-vertical mx-auto max-w-2xl px-6 pb-6"
+        >
+          <li>
+            <hr
+              class="bg-base-content/10"
+            />
+            <div
+              class="timeline-start self-center pr-2 md:pr-4 md:text-right"
+            >
+              <div
+                class="invisible rounded-lg border border-transparent p-2 md:p-3"
+              >
+                <div
+                  class="mb-0.5 h-4"
+                />
+                <div
+                  class="h-12"
+                />
+              </div>
+            </div>
+            <div
+              class="timeline-middle self-center"
+            >
+              <div
+                class="flex flex-col items-center gap-1"
+              >
+                <div
+                  class="font-mono text-[11px] font-normal tracking-tight opacity-60"
+                >
+                  2026
+                </div>
+                <div
+                  class="flex items-center gap-1"
+                >
+                  <div
+                    class="bg-base-100 ring-base-content/10 flex h-7 w-7 items-center justify-center rounded-full ring-4"
+                  >
+                    <span
+                      class="text-xs"
+                    >
+                      💼
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="timeline-end self-center pl-2 md:pl-4"
+            >
+              <div
+                class="border-base-content/10 rounded-lg border p-2 md:p-3"
+              >
+                <span
+                  class="mb-0.5 block font-mono text-[10px] opacity-40"
+                >
+                  Jan 2026 - Present
+                </span>
+                <div
+                  class="min-w-0"
+                >
+                  <p
+                    class="text-sm leading-tight font-normal"
+                  >
+                    Engineer, Lead
+                  </p>
+                  <p
+                    class="text-base-content/60 text-xs leading-tight"
+                  >
+                    NAB
+                  </p>
+                  <p
+                    class="text-base-content/30 mt-0.5 text-[10px]"
+                  >
+                    Ho Chi Minh City, Vietnam
+                  </p>
+                </div>
+              </div>
+            </div>
+            <hr
+              class="bg-base-content/10"
+            />
+          </li>
+          <li>
+            <hr
+              class="bg-base-content/10"
+            />
+            <div
+              class="timeline-start self-center pr-2 md:pr-4 md:text-right"
+            >
+              <div
+                class="invisible rounded-lg border border-transparent p-2 md:p-3"
+              >
+                <div
+                  class="mb-0.5 h-4"
+                />
+                <div
+                  class="h-12"
+                />
+              </div>
+            </div>
+            <div
+              class="timeline-middle self-center"
+            >
+              <div
+                class="flex flex-col items-center gap-1"
+              >
+                <div
+                  class="font-mono text-[11px] font-normal tracking-tight opacity-60"
+                >
+                  2025
+                </div>
+                <div
+                  class="flex items-center gap-1"
+                />
+              </div>
+            </div>
+            <div
+              class="timeline-end self-center pl-2 md:pl-4"
+            >
+              <div
+                class="invisible rounded-lg border border-transparent p-2 md:p-3"
+              >
+                <div
+                  class="mb-0.5 h-4"
+                />
+                <div
+                  class="h-12"
+                />
+              </div>
+            </div>
+            <hr
+              class="bg-base-content/10"
+            />
+          </li>
+          <li>
+            <hr
+              class="bg-base-content/10"
+            />
+            <div
+              class="timeline-start self-center pr-2 md:pr-4 md:text-right"
+            >
+              <div
+                class="invisible rounded-lg border border-transparent p-2 md:p-3"
+              >
+                <div
+                  class="mb-0.5 h-4"
+                />
+                <div
+                  class="h-12"
+                />
+              </div>
+            </div>
+            <div
+              class="timeline-middle self-center"
+            >
+              <div
+                class="flex flex-col items-center gap-1"
+              >
+                <div
+                  class="font-mono text-[11px] font-normal tracking-tight opacity-60"
+                >
+                  2024
+                </div>
+                <div
+                  class="flex items-center gap-1"
+                >
+                  <div
+                    class="bg-base-100 ring-base-content/10 flex h-7 w-7 items-center justify-center rounded-full ring-4"
+                  >
+                    <span
+                      class="text-xs"
+                    >
+                      💼
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="timeline-end self-center pl-2 md:pl-4"
+            >
+              <div
+                class="border-base-content/10 rounded-lg border p-2 md:p-3"
+              >
+                <span
+                  class="mb-0.5 block font-mono text-[10px] opacity-40"
+                >
+                  Jan 2024 - Dec 2025
+                </span>
+                <div
+                  class="min-w-0"
+                >
+                  <p
+                    class="text-sm leading-tight font-normal"
+                  >
+                    Engineer, Senior Analyst
+                  </p>
+                  <p
+                    class="text-base-content/60 text-xs leading-tight"
+                  >
+                    NAB
+                  </p>
+                  <p
+                    class="text-base-content/30 mt-0.5 text-[10px]"
+                  >
+                    Ho Chi Minh City, Vietnam
+                  </p>
+                </div>
+              </div>
+            </div>
+            <hr
+              class="bg-base-content/10"
+            />
+          </li>
+          <li>
+            <hr
+              class="bg-base-content/10"
+            />
+            <div
+              class="timeline-start self-center pr-2 md:pr-4 md:text-right"
+            >
+              <div
+                class="invisible rounded-lg border border-transparent p-2 md:p-3"
+              >
+                <div
+                  class="mb-0.5 h-4"
+                />
+                <div
+                  class="h-12"
+                />
+              </div>
+            </div>
+            <div
+              class="timeline-middle self-center"
+            >
+              <div
+                class="flex flex-col items-center gap-1"
+              >
+                <div
+                  class="font-mono text-[11px] font-normal tracking-tight opacity-60"
+                >
+                  2023
+                </div>
+                <div
+                  class="flex items-center gap-1"
+                />
+              </div>
+            </div>
+            <div
+              class="timeline-end self-center pl-2 md:pl-4"
+            >
+              <div
+                class="invisible rounded-lg border border-transparent p-2 md:p-3"
+              >
+                <div
+                  class="mb-0.5 h-4"
+                />
+                <div
+                  class="h-12"
+                />
+              </div>
+            </div>
+            <hr
+              class="bg-base-content/10"
+            />
+          </li>
+          <li>
+            <hr
+              class="bg-base-content/10"
+            />
+            <div
+              class="timeline-start self-center pr-2 md:pr-4 md:text-right"
+            >
+              <div
+                class="border-base-content/10 rounded-lg border p-2 md:p-3"
+              >
+                <span
+                  class="mb-0.5 block font-mono text-[10px] opacity-40"
+                >
+                  Oct 2022 - Sep 2025
+                </span>
+                <div
+                  class="min-w-0"
+                >
+                  <p
+                    class="text-sm leading-tight font-normal"
+                  >
+                    Bachelor of Psychology
+                  </p>
+                  <p
+                    class="text-base-content/60 text-xs leading-tight"
+                  >
+                    RMIT University
+                  </p>
+                  <p
+                    class="text-base-content/30 mt-0.5 text-[10px]"
+                  >
+                    Ho Chi Minh City, Vietnam
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="timeline-middle self-center"
+            >
+              <div
+                class="flex flex-col items-center gap-1"
+              >
+                <div
+                  class="font-mono text-[11px] font-normal tracking-tight opacity-60"
+                >
+                  2022
+                </div>
+                <div
+                  class="flex items-center gap-1"
+                >
+                  <div
+                    class="bg-base-100 ring-base-content/10 flex h-7 w-7 items-center justify-center rounded-full ring-4"
+                  >
+                    <span
+                      class="text-xs"
+                    >
+                      🎓
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="timeline-end self-center pl-2 md:pl-4"
+            >
+              <div
+                class="invisible rounded-lg border border-transparent p-2 md:p-3"
+              >
+                <div
+                  class="mb-0.5 h-4"
+                />
+                <div
+                  class="h-12"
+                />
+              </div>
+            </div>
+            <hr
+              class="bg-base-content/10"
+            />
+          </li>
+          <li>
+            <hr
+              class="bg-base-content/10"
+            />
+            <div
+              class="timeline-start self-center pr-2 md:pr-4 md:text-right"
+            >
+              <div
+                class="invisible rounded-lg border border-transparent p-2 md:p-3"
+              >
+                <div
+                  class="mb-0.5 h-4"
+                />
+                <div
+                  class="h-12"
+                />
+              </div>
+            </div>
+            <div
+              class="timeline-middle self-center"
+            >
+              <div
+                class="flex flex-col items-center gap-1"
+              >
+                <div
+                  class="font-mono text-[11px] font-normal tracking-tight opacity-60"
+                >
+                  2021
+                </div>
+                <div
+                  class="flex items-center gap-1"
+                >
+                  <div
+                    class="bg-base-100 ring-base-content/10 flex h-7 w-7 items-center justify-center rounded-full ring-4"
+                  >
+                    <span
+                      class="text-xs"
+                    >
+                      💼
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="timeline-end self-center pl-2 md:pl-4"
+            >
+              <div
+                class="border-base-content/10 rounded-lg border p-2 md:p-3"
+              >
+                <span
+                  class="mb-0.5 block font-mono text-[10px] opacity-40"
+                >
+                  Aug 2021 - Dec 2023
+                </span>
+                <div
+                  class="min-w-0"
+                >
+                  <p
+                    class="text-sm leading-tight font-normal"
+                  >
+                    Engineer, Analyst
+                  </p>
+                  <p
+                    class="text-base-content/60 text-xs leading-tight"
+                  >
+                    NAB
+                  </p>
+                  <p
+                    class="text-base-content/30 mt-0.5 text-[10px]"
+                  >
+                    Ho Chi Minh City, Vietnam
+                  </p>
+                </div>
+              </div>
+            </div>
+            <hr
+              class="bg-base-content/10"
+            />
+          </li>
+          <li>
+            <hr
+              class="bg-base-content/10"
+            />
+            <div
+              class="timeline-start self-center pr-2 md:pr-4 md:text-right"
+            >
+              <div
+                class="invisible rounded-lg border border-transparent p-2 md:p-3"
+              >
+                <div
+                  class="mb-0.5 h-4"
+                />
+                <div
+                  class="h-12"
+                />
+              </div>
+            </div>
+            <div
+              class="timeline-middle self-center"
+            >
+              <div
+                class="flex flex-col items-center gap-1"
+              >
+                <div
+                  class="font-mono text-[11px] font-normal tracking-tight opacity-60"
+                >
+                  2020
+                </div>
+                <div
+                  class="flex items-center gap-1"
+                />
+              </div>
+            </div>
+            <div
+              class="timeline-end self-center pl-2 md:pl-4"
+            >
+              <div
+                class="invisible rounded-lg border border-transparent p-2 md:p-3"
+              >
+                <div
+                  class="mb-0.5 h-4"
+                />
+                <div
+                  class="h-12"
+                />
+              </div>
+            </div>
+            <hr
+              class="bg-base-content/10"
+            />
+          </li>
+          <li>
+            <hr
+              class="bg-base-content/10"
+            />
+            <div
+              class="timeline-start self-center pr-2 md:pr-4 md:text-right"
+            >
+              <div
+                class="invisible rounded-lg border border-transparent p-2 md:p-3"
+              >
+                <div
+                  class="mb-0.5 h-4"
+                />
+                <div
+                  class="h-12"
+                />
+              </div>
+            </div>
+            <div
+              class="timeline-middle self-center"
+            >
+              <div
+                class="flex flex-col items-center gap-1"
+              >
+                <div
+                  class="font-mono text-[11px] font-normal tracking-tight opacity-60"
+                >
+                  2019
+                </div>
+                <div
+                  class="flex items-center gap-1"
+                >
+                  <div
+                    class="bg-base-100 ring-base-content/10 flex h-7 w-7 items-center justify-center rounded-full ring-4"
+                  >
+                    <span
+                      class="text-xs"
+                    >
+                      💼
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="timeline-end self-center pl-2 md:pl-4"
+            >
+              <div
+                class="border-base-content/10 rounded-lg border p-2 md:p-3"
+              >
+                <span
+                  class="mb-0.5 block font-mono text-[10px] opacity-40"
+                >
+                  Mar 2019 - Apr 2021
+                </span>
+                <div
+                  class="min-w-0"
+                >
+                  <p
+                    class="text-sm leading-tight font-normal"
+                  >
+                    Back-end Engineer
+                  </p>
+                  <p
+                    class="text-base-content/60 text-xs leading-tight"
+                  >
+                    BoostCommerce
+                  </p>
+                  <p
+                    class="text-base-content/30 mt-0.5 text-[10px]"
+                  >
+                    Hanoi, Vietnam
+                  </p>
+                </div>
+              </div>
+            </div>
+            <hr
+              class="bg-base-content/10"
+            />
+          </li>
+          <li>
+            <hr
+              class="bg-base-content/10"
+            />
+            <div
+              class="timeline-start self-center pr-2 md:pr-4 md:text-right"
+            >
+              <div
+                class="invisible rounded-lg border border-transparent p-2 md:p-3"
+              >
+                <div
+                  class="mb-0.5 h-4"
+                />
+                <div
+                  class="h-12"
+                />
+              </div>
+            </div>
+            <div
+              class="timeline-middle self-center"
+            >
+              <div
+                class="flex flex-col items-center gap-1"
+              >
+                <div
+                  class="font-mono text-[11px] font-normal tracking-tight opacity-60"
+                >
+                  2018
+                </div>
+                <div
+                  class="flex items-center gap-1"
+                />
+              </div>
+            </div>
+            <div
+              class="timeline-end self-center pl-2 md:pl-4"
+            >
+              <div
+                class="invisible rounded-lg border border-transparent p-2 md:p-3"
+              >
+                <div
+                  class="mb-0.5 h-4"
+                />
+                <div
+                  class="h-12"
+                />
+              </div>
+            </div>
+            <hr
+              class="bg-base-content/10"
+            />
+          </li>
+          <li>
+            <hr
+              class="bg-base-content/10"
+            />
+            <div
+              class="timeline-start self-center pr-2 md:pr-4 md:text-right"
+            >
+              <div
+                class="invisible rounded-lg border border-transparent p-2 md:p-3"
+              >
+                <div
+                  class="mb-0.5 h-4"
+                />
+                <div
+                  class="h-12"
+                />
+              </div>
+            </div>
+            <div
+              class="timeline-middle self-center"
+            >
+              <div
+                class="flex flex-col items-center gap-1"
+              >
+                <div
+                  class="font-mono text-[11px] font-normal tracking-tight opacity-60"
+                >
+                  2017
+                </div>
+                <div
+                  class="flex items-center gap-1"
+                >
+                  <div
+                    class="bg-base-100 ring-base-content/10 flex h-7 w-7 items-center justify-center rounded-full ring-4"
+                  >
+                    <span
+                      class="text-xs"
+                    >
+                      💼
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="timeline-end self-center pl-2 md:pl-4"
+            >
+              <div
+                class="border-base-content/10 rounded-lg border p-2 md:p-3"
+              >
+                <span
+                  class="mb-0.5 block font-mono text-[10px] opacity-40"
+                >
+                  Mar 2017 - Jan 2019
+                </span>
+                <div
+                  class="min-w-0"
+                >
+                  <p
+                    class="text-sm leading-tight font-normal"
+                  >
+                    Front-end Engineer
+                  </p>
+                  <p
+                    class="text-base-content/60 text-xs leading-tight"
+                  >
+                    admetrics
+                  </p>
+                  <p
+                    class="text-base-content/30 mt-0.5 text-[10px]"
+                  >
+                    Frankfurt am Main, Germany
+                  </p>
+                </div>
+              </div>
+            </div>
+            <hr
+              class="bg-base-content/10"
+            />
+          </li>
+          <li>
+            <hr
+              class="bg-base-content/10"
+            />
+            <div
+              class="timeline-start self-center pr-2 md:pr-4 md:text-right"
+            >
+              <div
+                class="invisible rounded-lg border border-transparent p-2 md:p-3"
+              >
+                <div
+                  class="mb-0.5 h-4"
+                />
+                <div
+                  class="h-12"
+                />
+              </div>
+            </div>
+            <div
+              class="timeline-middle self-center"
+            >
+              <div
+                class="flex flex-col items-center gap-1"
+              >
+                <div
+                  class="font-mono text-[11px] font-normal tracking-tight opacity-60"
+                >
+                  2016
+                </div>
+                <div
+                  class="flex items-center gap-1"
+                />
+              </div>
+            </div>
+            <div
+              class="timeline-end self-center pl-2 md:pl-4"
+            >
+              <div
+                class="invisible rounded-lg border border-transparent p-2 md:p-3"
+              >
+                <div
+                  class="mb-0.5 h-4"
+                />
+                <div
+                  class="h-12"
+                />
+              </div>
+            </div>
+            <hr
+              class="bg-base-content/10"
+            />
+          </li>
+          <li>
+            <hr
+              class="bg-base-content/10"
+            />
+            <div
+              class="timeline-start self-center pr-2 md:pr-4 md:text-right"
+            >
+              <div
+                class="invisible rounded-lg border border-transparent p-2 md:p-3"
+              >
+                <div
+                  class="mb-0.5 h-4"
+                />
+                <div
+                  class="h-12"
+                />
+              </div>
+            </div>
+            <div
+              class="timeline-middle self-center"
+            >
+              <div
+                class="flex flex-col items-center gap-1"
+              >
+                <div
+                  class="font-mono text-[11px] font-normal tracking-tight opacity-60"
+                >
+                  2015
+                </div>
+                <div
+                  class="flex items-center gap-1"
+                >
+                  <div
+                    class="bg-base-100 ring-base-content/10 flex h-7 w-7 items-center justify-center rounded-full ring-4"
+                  >
+                    <span
+                      class="text-xs"
+                    >
+                      💼
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="timeline-end self-center pl-2 md:pl-4"
+            >
+              <div
+                class="border-base-content/10 rounded-lg border p-2 md:p-3"
+              >
+                <span
+                  class="mb-0.5 block font-mono text-[10px] opacity-40"
+                >
+                  Jan 2015 - Feb 2017
+                </span>
+                <div
+                  class="min-w-0"
+                >
+                  <p
+                    class="text-sm leading-tight font-normal"
+                  >
+                    Front-end Engineer
+                  </p>
+                  <p
+                    class="text-base-content/60 text-xs leading-tight"
+                  >
+                    Witrafi
+                  </p>
+                  <p
+                    class="text-base-content/30 mt-0.5 text-[10px]"
+                  >
+                    Helsinki, Finland
+                  </p>
+                </div>
+              </div>
+            </div>
+            <hr
+              class="bg-base-content/10"
+            />
+          </li>
+          <li>
+            <hr
+              class="bg-base-content/10"
+            />
+            <div
+              class="timeline-start self-center pr-2 md:pr-4 md:text-right"
+            >
+              <div
+                class="invisible rounded-lg border border-transparent p-2 md:p-3"
+              >
+                <div
+                  class="mb-0.5 h-4"
+                />
+                <div
+                  class="h-12"
+                />
+              </div>
+            </div>
+            <div
+              class="timeline-middle self-center"
+            >
+              <div
+                class="flex flex-col items-center gap-1"
+              >
+                <div
+                  class="font-mono text-[11px] font-normal tracking-tight opacity-60"
+                >
+                  2014
+                </div>
+                <div
+                  class="flex items-center gap-1"
+                />
+              </div>
+            </div>
+            <div
+              class="timeline-end self-center pl-2 md:pl-4"
+            >
+              <div
+                class="invisible rounded-lg border border-transparent p-2 md:p-3"
+              >
+                <div
+                  class="mb-0.5 h-4"
+                />
+                <div
+                  class="h-12"
+                />
+              </div>
+            </div>
+            <hr
+              class="bg-base-content/10"
+            />
+          </li>
+          <li>
+            <hr
+              class="bg-base-content/10"
+            />
+            <div
+              class="timeline-start self-center pr-2 md:pr-4 md:text-right"
+            >
+              <div
+                class="border-base-content/10 rounded-lg border p-2 md:p-3"
+              >
+                <span
+                  class="mb-0.5 block font-mono text-[10px] opacity-40"
+                >
+                  Sep 2013 - Dec 2016
+                </span>
+                <div
+                  class="min-w-0"
+                >
+                  <p
+                    class="text-sm leading-tight font-normal"
+                  >
+                    Bachelor of BIT
+                  </p>
+                  <p
+                    class="text-base-content/60 text-xs leading-tight"
+                  >
+                    LAB University of Applied Sciences
+                  </p>
+                  <p
+                    class="text-base-content/30 mt-0.5 text-[10px]"
+                  >
+                    Lahti, Finland
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="timeline-middle self-center"
+            >
+              <div
+                class="flex flex-col items-center gap-1"
+              >
+                <div
+                  class="font-mono text-[11px] font-normal tracking-tight opacity-60"
+                >
+                  2013
+                </div>
+                <div
+                  class="flex items-center gap-1"
+                >
+                  <div
+                    class="bg-base-100 ring-base-content/10 flex h-7 w-7 items-center justify-center rounded-full ring-4"
+                  >
+                    <span
+                      class="text-xs"
+                    >
+                      🎓
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="timeline-end self-center pl-2 md:pl-4"
+            >
+              <div
+                class="invisible rounded-lg border border-transparent p-2 md:p-3"
+              >
+                <div
+                  class="mb-0.5 h-4"
+                />
+                <div
+                  class="h-12"
+                />
+              </div>
+            </div>
+            <hr
+              class="bg-base-content/10"
+            />
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="modal-backdrop"
+    />
+  </dialog>
+</div>
+`;

@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`CityCard should render with label and time 1`] = `
+<div>
+  <div
+    class="bg-base-200 border-base-300 hover:border-base-content/20 hover:bg-base-300 group flex items-center justify-between gap-3 rounded-lg border p-3 transition-all duration-300"
+    style="animation-delay: 0ms;"
+  >
+    <div
+      class="min-w-0"
+    >
+      <div
+        class="mb-1 flex items-center gap-1.5"
+      >
+        <div
+          class="bg-primary h-1.5 w-1.5 rounded-full opacity-70 transition-opacity group-hover:opacity-100"
+        />
+        <span
+          class="text-base-content/60 truncate text-xs font-normal tracking-widest uppercase"
+        >
+          Tokyo
+        </span>
+      </div>
+      <div
+        class="flex items-baseline gap-0.5 font-mono text-lg font-normal tracking-tight tabular-nums"
+      >
+        <span
+          class="text-base-content"
+        >
+          12
+        </span>
+        <span
+          class="text-base-content/30 animate-pulse"
+        >
+          :
+        </span>
+        <span
+          class="text-base-content"
+        >
+          30
+        </span>
+        <span
+          class="text-base-content/30 animate-pulse"
+        >
+          :
+        </span>
+        <span
+          class="text-base-content/50 text-sm"
+        >
+          45
+        </span>
+      </div>
+    </div>
+    <div
+      class="shrink-0"
+    >
+      <span
+        class="badge badge-ghost badge-sm text-base-content/40 italic"
+      >
+        …
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`CityCard should render with weather data 1`] = `
+<div>
+  <div
+    class="bg-base-200 border-base-300 hover:border-base-content/20 hover:bg-base-300 group flex items-center justify-between gap-3 rounded-lg border p-3 transition-all duration-300"
+    style="animation-delay: 60ms;"
+  >
+    <div
+      class="min-w-0"
+    >
+      <div
+        class="mb-1 flex items-center gap-1.5"
+      >
+        <div
+          class="bg-primary h-1.5 w-1.5 rounded-full opacity-70 transition-opacity group-hover:opacity-100"
+        />
+        <span
+          class="text-base-content/60 truncate text-xs font-normal tracking-widest uppercase"
+        >
+          London
+        </span>
+      </div>
+      <div
+        class="flex items-baseline gap-0.5 font-mono text-lg font-normal tracking-tight tabular-nums"
+      >
+        <span
+          class="text-base-content"
+        >
+          08
+        </span>
+        <span
+          class="text-base-content/30 animate-pulse"
+        >
+          :
+        </span>
+        <span
+          class="text-base-content"
+        >
+          15
+        </span>
+        <span
+          class="text-base-content/30 animate-pulse"
+        >
+          :
+        </span>
+        <span
+          class="text-base-content/50 text-sm"
+        >
+          00
+        </span>
+      </div>
+    </div>
+    <div
+      class="shrink-0"
+    >
+      <div
+        class="flex flex-col items-end gap-0.5"
+      >
+        <span
+          class="badge badge-ghost badge-sm font-mono font-normal tracking-wider"
+        >
+          15
+          °C
+        </span>
+        <span
+          class="text-base-content/50 text-xs whitespace-nowrap"
+        >
+          ☁️ Overcast
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;

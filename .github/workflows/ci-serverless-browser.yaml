@@ -1,0 +1,76 @@
+name: CI - Serverless Browser
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/serverless/browser/rust/**'
+
+permissions:
+  contents: write
+
+jobs:
+  rust:
+    name: Rust
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/serverless/browser/rust
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.3
+      - name: Install Rust
+        uses: actions-rust-lang/setup-rust-toolchain@v1.11.0
+        with:
+          components: clippy
+      - name: Lint
+        run: cargo clippy -- -D warnings
+      - name: Test
+        run: cargo test
+      - name: Build
+        run: cargo build --release
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: serverless-browser-rust
+          path: packages/serverless/browser/rust/target/release/browserverless
+
+  publish:
+    name: Publish to GitHub Release
+    needs: [rust]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.3
+        with:
+          fetch-depth: 0
+      - name: Download Build Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+      - name: Collect Release Artifacts
+        run: |
+          mkdir -p release
+          for dir in artifacts/*/; do
+            artifact_name=$(basename "$dir")
+            for file in "$dir"*; do
+              cp "$file" "release/${artifact_name}-$(basename "$file")"
+            done
+          done
+      - name: Publish Release
+        run: |
+          gh release delete serverless-browser-latest --yes --cleanup-tag 2>/dev/null || true
+          gh release create serverless-browser-latest \
+            --title "Serverless - Browser (latest)" \
+            --notes "Auto-built Serverless Browser from commit ${{ github.sha }}" \
+            release/*
+        env:
+          GH_TOKEN: ${{ github.token }}

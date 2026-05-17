@@ -1,0 +1,5 @@
+# Watching
+
+- [[Anime]]
+- [[Movies]]
+- [[Series]]

@@ -1,0 +1,225 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`SignUpTemplate to match snapshot 1`] = `
+<div>
+  <div
+    class="bg-base-100 text-base-content min-h-screen font-sans"
+    data-theme="luxury"
+  >
+    <div
+      class="navbar bg-base-100/85 border-base-300 sticky top-0 z-50 min-h-[60px] border-b px-4 backdrop-blur-xl lg:px-12"
+    >
+      <div
+        class="navbar-start"
+      >
+        <a
+          class="text-primary font-serif text-2xl font-bold tracking-widest"
+          href="/"
+        >
+          DaisyX
+        </a>
+      </div>
+      <div
+        class="navbar-end"
+      >
+        <a
+          class="btn btn-ghost btn-sm"
+          href="/"
+        >
+          Home
+        </a>
+      </div>
+    </div>
+    <main
+      class="mx-auto flex min-h-[calc(100vh-140px)] max-w-lg items-center justify-center px-4 py-16"
+    >
+      <div
+        class="bg-base-100 border-base-300 mx-auto max-w-sm rounded-2xl border p-8"
+      >
+        <div
+          class="mb-8 text-center"
+        >
+          <p
+            class="text-primary mb-1 font-serif text-3xl font-bold tracking-widest"
+          >
+            DaisyX
+          </p>
+          <p
+            class="text-base-content/50 text-sm"
+          >
+            Create your free account
+          </p>
+        </div>
+        <form
+          class="flex flex-col gap-5"
+        >
+          <div
+            class="grid grid-cols-2 gap-4"
+          >
+            <div
+              class="form-control"
+            >
+              <label
+                class="label"
+              >
+                <span
+                  class="label-text text-base-content/50 text-xs"
+                >
+                  First name
+                </span>
+              </label>
+              <input
+                class="input input-bordered w-full"
+                placeholder="Jane"
+                type="text"
+                value=""
+              />
+            </div>
+            <div
+              class="form-control"
+            >
+              <label
+                class="label"
+              >
+                <span
+                  class="label-text text-base-content/50 text-xs"
+                >
+                  Last name
+                </span>
+              </label>
+              <input
+                class="input input-bordered w-full"
+                placeholder="Doe"
+                type="text"
+              />
+            </div>
+          </div>
+          <div
+            class="form-control"
+          >
+            <label
+              class="label"
+            >
+              <span
+                class="label-text text-base-content/50 text-xs"
+              >
+                Email
+              </span>
+            </label>
+            <input
+              class="input input-bordered w-full "
+              placeholder="jane@forma.io"
+              type="email"
+              value=""
+            />
+          </div>
+          <div
+            class="form-control"
+          >
+            <label
+              class="label"
+            >
+              <span
+                class="label-text text-base-content/50 text-xs"
+              >
+                Password
+              </span>
+            </label>
+            <input
+              class="input input-bordered w-full "
+              placeholder="At least 8 characters"
+              type="password"
+              value=""
+            />
+            <label
+              class="label"
+            >
+              <span
+                class="label-text-alt text-base-content/40"
+              >
+                Must be at least 8 characters
+              </span>
+            </label>
+          </div>
+          <label
+            class="flex cursor-pointer items-start gap-3 text-sm"
+          >
+            <input
+              class="checkbox checkbox-primary checkbox-sm mt-0.5"
+              type="checkbox"
+            />
+            <span
+              class="text-base-content/50 leading-relaxed"
+            >
+              I agree to the
+               
+              <a
+                class="text-primary hover:underline"
+                href="#"
+              >
+                Terms of Service
+              </a>
+               
+              and
+               
+              <a
+                class="text-primary hover:underline"
+                href="#"
+              >
+                Privacy Policy
+              </a>
+            </span>
+          </label>
+          <button
+            class="btn btn-primary w-full "
+            type="submit"
+          >
+            Create account
+          </button>
+        </form>
+        <div
+          class="divider text-base-content/20 my-6 text-xs"
+        >
+          or
+        </div>
+        <button
+          class="btn btn-ghost border-base-300 w-full gap-2 border text-sm"
+        >
+          <span
+            class="font-bold tracking-tight"
+          >
+            G
+          </span>
+          Sign up with Google
+        </button>
+        <p
+          class="text-base-content/40 mt-6 text-center text-xs"
+        >
+          Already have an account?
+           
+          <button
+            class="text-primary hover:underline"
+            type="button"
+          >
+            Sign in
+          </button>
+        </p>
+      </div>
+    </main>
+    <footer
+      class="border-base-300 border-t py-12 text-center"
+    >
+      <p
+        class="text-primary mb-3 font-serif text-2xl font-bold tracking-widest"
+      >
+        DaisyX
+      </p>
+      <p
+        class="text-base-content/30 text-sm"
+      >
+        © 2026 · Built with care
+      </p>
+    </footer>
+  </div>
+</div>
+`;
