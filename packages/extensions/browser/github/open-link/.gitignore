@@ -7,7 +7,6 @@ package-lock.json
 yarn.lock
 
 # Build artifacts
-*.crx
 *.pem
 dist/
 build/
@@ -21,7 +20,6 @@ build/
 Thumbs.db
 
 # Chrome extension packaging
-*.crx
 *.pem
 
 # Temporary files

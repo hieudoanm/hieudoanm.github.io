@@ -1,3 +1,5 @@
+const TARGET_URL = 'https://hieudoanm.github.io/app/';
+
 function isNewTab(url: string | undefined): boolean {
   if (!url) return false;
   return (
@@ -8,18 +10,19 @@ function isNewTab(url: string | undefined): boolean {
   );
 }
 
+function redirectToTarget(tabId: number) {
+  chrome.tabs.update(tabId, { url: TARGET_URL });
+}
+
 chrome.tabs.onCreated.addListener((tab) => {
   if (tab.id && (isNewTab(tab.url) || isNewTab(tab.pendingUrl))) {
-    chrome.tabs.update(tab.id, { url: 'https://hieudoanm.github.io/app/' });
+    redirectToTarget(tab.id);
   }
 });
 
-chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-  if (
-    isNewTab(changeInfo.url) ||
-    isNewTab(tab.url) ||
-    isNewTab(tab.pendingUrl)
-  ) {
-    chrome.tabs.update(tabId, { url: 'https://hieudoanm.github.io/app/' });
+chrome.tabs.onUpdated.addListener((tabId, changeInfo) => {
+  // Only redirect if the new URL being loaded is explicitly a new tab page
+  if (changeInfo.url && isNewTab(changeInfo.url)) {
+    redirectToTarget(tabId);
   }
 });

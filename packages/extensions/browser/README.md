@@ -23,18 +23,18 @@
 
 ## Browsers
 
-| No  | Engine               | Browser                                           |
-| --- | -------------------- | ------------------------------------------------- |
-| 01  | [Chromium][chromium] | [Chrome](https://www.google.com/chrome/)          |
-| 02  | [Chromium][chromium] | [Microsoft Edge](https://www.microsoft.com/edge/) |
-| 03  | [Chromium][chromium] | [Brave](https://brave.com/)                       |
-| 04  | [Chromium][chromium] | [Opera](https://www.opera.com/)                   |
-| 05  | [Chromium][chromium] | [Vivaldi](https://vivaldi.com/)                   |
-| 06  | [Chromium][chromium] | [Arc](https://arc.net/)                           |
-| 07  | [Gecko][gecko]       | [Firefox](https://www.mozilla.org/firefox/)       |
-| 08  | [Gecko][gecko]       | [Tor Browser](https://www.torproject.org/)        |
-| 09  | [Gecko][gecko]       | [Zed Browser](https://zed.dev/)                   |
-| 10  | [WebKit][webkit]     | [Safari](https://www.apple.com/safari/)           |
+| No  | Ext   | Engine               | Browser                                           |
+| --- | ----- | -------------------- | ------------------------------------------------- |
+| 01  | `crx` | [Chromium][chromium] | [Chrome](https://www.google.com/chrome/)          |
+| 02  | `crx` | [Chromium][chromium] | [Microsoft Edge](https://www.microsoft.com/edge/) |
+| 03  | `crx` | [Chromium][chromium] | [Brave](https://brave.com/)                       |
+| 04  | `crx` | [Chromium][chromium] | [Opera](https://www.opera.com/)                   |
+| 05  | `crx` | [Chromium][chromium] | [Vivaldi](https://vivaldi.com/)                   |
+| 06  | `crx` | [Chromium][chromium] | [Arc](https://arc.net/)                           |
+| 07  | `xpi` | [Gecko][gecko]       | [Firefox](https://www.mozilla.org/firefox/)       |
+| 08  | `xpi` | [Gecko][gecko]       | [Tor Browser](https://www.torproject.org/)        |
+| 09  | `xpi` | [Gecko][gecko]       | [Zed Browser](https://zed.dev/)                   |
+| 10  |       | [WebKit][webkit]     | [Safari](https://www.apple.com/safari/)           |
 
 [chromium]: https://www.chromium.org/
 [gecko]: https://developer.mozilla.org/en-US/docs/Glossary/Gecko
