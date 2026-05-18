@@ -1,9 +1,5 @@
 import CopyPlugin from 'copy-webpack-plugin';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+import path from 'node:path';
 
 const isProduction = process.env.NODE_ENV === 'production';
 const mode = isProduction ? 'production' : 'development';
@@ -12,11 +8,11 @@ const baseConfig = {
   mode,
   devtool: isProduction ? 'source-map' : 'inline-source-map',
   entry: {
-    content: './src/content.ts',
     background: './src/background.ts',
+    content: './src/content.ts',
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.jsx', '.js', '...'],
+    extensions: ['.ts', '.js'],
   },
   module: {
     rules: [

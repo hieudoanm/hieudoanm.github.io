@@ -1,5 +1,5 @@
 import CopyPlugin from 'copy-webpack-plugin';
-import path from 'path';
+import path from 'node:path';
 
 const isProduction = process.env.NODE_ENV === 'production';
 const mode = isProduction ? 'production' : 'development';

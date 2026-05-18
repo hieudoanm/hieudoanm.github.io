@@ -10,7 +10,11 @@ export default defineConfig([
     plugins: { js },
     extends: ['js/recommended'],
     languageOptions: {
-      globals: { ...globals.browser, ...globals.node },
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        ...globals.webextensions,
+      },
       parserOptions: {
         project: './tsconfig.json',
         tsconfigRootDir:

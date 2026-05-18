@@ -1,11 +1,12 @@
 import CopyPlugin from 'copy-webpack-plugin';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const isProduction = process.env.NODE_ENV === 'production';
+const mode = isProduction ? 'production' : 'development';
 
 const baseConfig = {
+  mode,
+  devtool: isProduction ? 'source-map' : 'inline-source-map',
   entry: {
     background: './src/background.ts',
   },

@@ -1,7 +1,6 @@
 {
   "name": "@tab/new",
   "version": "0.0.1",
-  "type": "module",
   "private": true,
   "description": "New Tab",
   "main": "dist/index.js",

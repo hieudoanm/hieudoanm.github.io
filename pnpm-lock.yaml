@@ -353,6 +353,9 @@ importers:
       '@types/chrome':
         specifier: 0.1.42
         version: 0.1.42
+      '@types/firefox-webext-browser':
+        specifier: 143.0.0
+        version: 143.0.0
       '@types/node':
         specifier: 25.8.0
         version: 25.8.0

@@ -8,6 +8,9 @@
   - [Browsers](#browsers)
   - [Structure](#structure)
     - [Script \& Folder Descriptions](#script--folder-descriptions)
+  - [Manifest](#manifest)
+    - [Manifest V2](#manifest-v2)
+    - [Manifest V3](#manifest-v3)
 
 ## Extensions
 
@@ -63,9 +66,9 @@ extension/
 │   ├── popup.html
 │   ├── options.html
 │   └── icons/
-│       ├── icon16.png
-│       ├── icon48.png
-│       └── icon128.png
+│       ├── 16x16.png
+│       ├── 48x48.png
+│       └── 128x128.png
 │
 ├── src/
 │   ├── background.ts
@@ -111,3 +114,48 @@ extension/
   - `utils.ts`: Generic string, DOM, or array utility functions.
 - **`src/components/`**: Reusable component views (React or web elements) used by the popup or options interfaces.
 - **`src/types/`**: Ambient types, namespaces, and typescript definitions.
+
+## Manifest
+
+### Manifest V2
+
+```json
+{
+  "manifest_version": 2,
+  "name": "Name of the extension",
+  "version": "1.0.0",
+  "description": "Description of the extension",
+  "icons": {
+    "48": "icons/48x48.png",
+    "128": "icons/128x128.png"
+  },
+  "permissions": [
+    "tabs",
+    "<all_urls>"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/48x48.png"
+  }
+}
+```
+
+### Manifest V3
+
+```json
+{
+  "manifest_version": 3,
+  "name": "Name of the extension",
+  "version": "1.0.0",
+  "description": "Description of the extension",
+  "icons": {
+    "48": "icons/48x48.png",
+    "128": "icons/128x128.png"
+  },
+  "permissions": ["scripting", "activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/48x48.png"
+  }
+}
+```
