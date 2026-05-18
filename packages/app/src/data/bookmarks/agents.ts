@@ -9,14 +9,7 @@ export const agents: BookmarkItem[] = [
     color: '#d97757',
     badge: 'Coding',
   },
-  {
-    label: 'Claude',
-    url: 'https://claude.ai/',
-    description: 'Anthropic',
-    emoji: '✦',
-    color: '#d97757',
-    badge: 'Chat',
-  },
+
   {
     label: 'Codex',
     url: 'https://openai.com/codex/',
@@ -24,14 +17,6 @@ export const agents: BookmarkItem[] = [
     emoji: '✦',
     color: '#10a37f',
     badge: 'Coding',
-  },
-  {
-    label: 'ChatGPT',
-    url: 'https://chatgpt.com',
-    description: 'OpenAI',
-    emoji: '✦',
-    color: '#10a37f',
-    badge: 'Chat',
   },
   {
     label: 'Qwen Code',
@@ -42,27 +27,11 @@ export const agents: BookmarkItem[] = [
     badge: 'Coding',
   },
   {
-    label: 'Qwen',
-    url: 'https://qwen.ai',
-    description: 'Alibaba Cloud',
-    emoji: '✦',
-    color: '#615ced',
-    badge: 'Chat',
-  },
-  {
     label: 'Kimi Code',
     url: 'https://www.kimi.com/code',
     description: 'Moonshot AI',
     emoji: '🌙',
     color: '#39d353',
     badge: 'Coding',
-  },
-  {
-    label: 'Kimi',
-    url: 'https://kimi.moonshot.cn',
-    description: 'Moonshot AI',
-    emoji: '🌙',
-    color: '#39d353',
-    badge: 'Chat',
   },
 ];

@@ -58,12 +58,13 @@ import { RightSidebar } from '@hieudoanm/components/sidebars/RightSidebar';
 import { apps } from '@hieudoanm/data/apps';
 import {
   agents as agentsBookmarks,
-  ai as aiBookmarks,
+  chat as chatBookmarks,
   code as codeBookmarks,
   google as googleBookmarks,
   messaging as messagingBookmarks,
   music as musicBookmarks,
   social as socialBookmarks,
+  work as workBookmarks,
 } from '@hieudoanm/data/bookmarks';
 import { clis, extensions, packages } from '@hieudoanm/data/downloads';
 import { getTimeInZone, timezones } from '@hieudoanm/data/timezones';
@@ -702,12 +703,13 @@ const MainContent: FC<MainContentProps> = memo(
     const bookmarkSections = useMemo(
       () => [
         { label: 'Agents', items: agentsBookmarks },
-        { label: 'AI Assistants', items: aiBookmarks },
+        { label: 'AI Assistants', items: chatBookmarks },
         { label: 'Code', items: codeBookmarks },
         { label: 'Google Workspace', items: googleBookmarks },
         { label: 'Messaging', items: messagingBookmarks },
         { label: 'Music', items: musicBookmarks },
-        { label: 'Websites', items: socialBookmarks },
+        { label: 'Social', items: socialBookmarks },
+        { label: 'Work', items: workBookmarks },
       ],
       []
     );
@@ -1016,7 +1018,7 @@ const AppPage: NextPage = () => {
       },
       {
         label: 'AI Assistants',
-        items: f(aiBookmarks, 'label'),
+        items: f(chatBookmarks, 'label'),
         Card: BookmarkCard,
       },
       {
@@ -1040,8 +1042,13 @@ const AppPage: NextPage = () => {
         Card: BookmarkCard,
       },
       {
-        label: 'Websites',
+        label: 'Social',
         items: f(socialBookmarks, 'label'),
+        Card: BookmarkCard,
+      },
+      {
+        label: 'Work',
+        items: f(workBookmarks, 'label'),
         Card: BookmarkCard,
       },
       { label: 'Tools', items: f(toolSections.tools, 'label'), Card: ToolCard },

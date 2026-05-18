@@ -1,6 +1,38 @@
 import { BookmarkItem } from '@hieudoanm/components/cards/BookmarkCard';
 
-export const ai: BookmarkItem[] = [
+export const chat: BookmarkItem[] = [
+  {
+    label: 'Claude',
+    url: 'https://claude.ai/',
+    description: 'Anthropic',
+    emoji: '✦',
+    color: '#d97757',
+    badge: 'Chat',
+  },
+  {
+    label: 'ChatGPT',
+    url: 'https://chatgpt.com',
+    description: 'OpenAI',
+    emoji: '✦',
+    color: '#10a37f',
+    badge: 'Chat',
+  },
+  {
+    label: 'Qwen',
+    url: 'https://qwen.ai',
+    description: 'Alibaba Cloud',
+    emoji: '✦',
+    color: '#615ced',
+    badge: 'Chat',
+  },
+  {
+    label: 'Kimi',
+    url: 'https://kimi.moonshot.cn',
+    description: 'Moonshot AI',
+    emoji: '🌙',
+    color: '#39d353',
+    badge: 'Chat',
+  },
   {
     label: 'Perplexity',
     url: 'https://www.perplexity.ai',

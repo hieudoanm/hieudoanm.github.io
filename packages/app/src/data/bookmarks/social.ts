@@ -16,11 +16,11 @@ export const social: BookmarkItem[] = [
     color: '#e1306c',
   },
   {
-    label: 'LinkedIn',
-    url: 'https://linkedin.com',
+    label: 'Reddit',
+    url: 'https://reddit.com',
     description: 'Social network',
-    emoji: '💼',
-    color: '#0077b5',
+    emoji: '👽',
+    color: '#ff4500',
   },
   {
     label: 'Threads',
