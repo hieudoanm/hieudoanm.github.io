@@ -18,12 +18,12 @@ export const apps: App[] = [
   {
     category: 'artificial-intelligence',
     emoji: '🧪',
-    id: 'distilled',
-    name: 'Distilled',
-    href: 'https://hieudoanm.github.io/distilled',
-    github: 'https://github.com/hieudoanm/distilled',
+    id: 'hieudoanm',
+    name: 'Hieu Doan',
+    href: 'https://hieudoanm.github.io/hieudoanm',
+    github: 'https://github.com/hieudoanm/hieudoanm',
     image:
-      'https://raw.githubusercontent.com/hieudoanm/distilled/refs/heads/master/images/app.png',
+      'https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/images/app.png',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
