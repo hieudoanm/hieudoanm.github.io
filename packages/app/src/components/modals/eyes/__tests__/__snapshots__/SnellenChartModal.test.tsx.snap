@@ -53,7 +53,7 @@ exports[`SnellenChartModal should render 1`] = `
         <div
           class="text-[9rem] font-serif leading-none font-bold tracking-widest text-base-content select-none transition-opacity duration-300 opacity-10"
         >
-          K
+          N
         </div>
         <button
           class="btn btn-outline btn-primary btn-xs rounded-none px-5 text-[0.6rem] tracking-[0.25em] uppercase"

@@ -105,7 +105,7 @@ exports[`LogMARChartModal should render 1`] = `
         <div
           class="text-[9rem] font-serif leading-none font-bold tracking-widest text-base-content select-none transition-opacity duration-300 opacity-10"
         >
-          H N Z E F
+          C D E F H
         </div>
         <div
           class="flex flex-col items-center gap-3"
