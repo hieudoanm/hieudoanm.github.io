@@ -54,7 +54,7 @@ exports[`TumblingEChartModal should render 1`] = `
           class="flex items-center justify-center gap-[0.5em]"
         >
           <span
-            class="text-[9rem] font-serif leading-none font-bold text-base-content select-none inline-block transition-all duration-300 rotate-180 opacity-10"
+            class="text-[9rem] font-serif leading-none font-bold text-base-content select-none inline-block transition-all duration-300 -rotate-90 opacity-10"
           >
             E
           </span>

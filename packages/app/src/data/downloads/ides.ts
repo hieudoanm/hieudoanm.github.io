@@ -21,4 +21,13 @@ export const ides: Download[] = [
       { label: 'Download', url: 'https://antigravity.google/download' },
     ],
   },
+  {
+    id: 'zed',
+    label: 'Zed',
+    url: 'https://zed.dev',
+    emoji: '⚡',
+    color: '#7c3aed',
+    description: 'A high-performance code editor by the Zed team.',
+    downloads: [{ label: 'Download', url: 'https://zed.dev/download' }],
+  },
 ];

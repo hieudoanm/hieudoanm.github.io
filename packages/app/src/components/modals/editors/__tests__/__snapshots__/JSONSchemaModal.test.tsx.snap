@@ -101,7 +101,7 @@ exports[`JSONSchemaModal should render 1`] = `
           class="h-full w-full"
         >
           <div
-            class="cm-editor ͼ15 ͼ16 ͼ1a"
+            class="cm-editor ͼ1 ͼ3 ͼo ͼ16"
           >
             <div
               aria-live="polite"
@@ -117,6 +117,7 @@ exports[`JSONSchemaModal should render 1`] = `
                 autocorrect="off"
                 class="cm-content cm-lineWrapping"
                 contenteditable="true"
+                data-language="json"
                 role="textbox"
                 spellcheck="false"
                 style="tab-size: 4;"
@@ -131,92 +132,365 @@ exports[`JSONSchemaModal should render 1`] = `
                 <div
                   class="cm-line"
                 >
-                    "id": 1,
+                    
+                  <span
+                    class="ͼq"
+                  >
+                    "id"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    :
+                  </span>
+                   
+                  <span
+                    class="ͼu"
+                  >
+                    1
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    ,
+                  </span>
                 </div>
                 <div
                   class="cm-line"
                 >
-                    "name": "John Doe",
+                    
+                  <span
+                    class="ͼq"
+                  >
+                    "name"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    :
+                  </span>
+                   
+                  <span
+                    class="ͼ13"
+                  >
+                    "John Doe"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    ,
+                  </span>
                 </div>
                 <div
                   class="cm-line"
                 >
-                    "active": true,
+                    
+                  <span
+                    class="ͼq"
+                  >
+                    "active"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    :
+                  </span>
+                   
+                  <span
+                    class="ͼ12"
+                  >
+                    true
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    ,
+                  </span>
                 </div>
                 <div
                   class="cm-line"
                 >
-                    "age": 30,
+                    
+                  <span
+                    class="ͼq"
+                  >
+                    "age"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    :
+                  </span>
+                   
+                  <span
+                    class="ͼu"
+                  >
+                    30
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    ,
+                  </span>
                 </div>
                 <div
                   class="cm-line"
                 >
-                    "balance": 1234.56,
+                    
+                  <span
+                    class="ͼq"
+                  >
+                    "balance"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    :
+                  </span>
+                   
+                  <span
+                    class="ͼu"
+                  >
+                    1234.56
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    ,
+                  </span>
                 </div>
                 <div
                   class="cm-line"
                 >
-                    "tags": [
+                    
+                  <span
+                    class="ͼq"
+                  >
+                    "tags"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    :
+                  </span>
+                   [
                 </div>
                 <div
                   class="cm-line"
                 >
-                      "dev",
+                      
+                  <span
+                    class="ͼ13"
+                  >
+                    "dev"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    ,
+                  </span>
                 </div>
                 <div
                   class="cm-line"
                 >
-                      "typescript",
+                      
+                  <span
+                    class="ͼ13"
+                  >
+                    "typescript"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    ,
+                  </span>
                 </div>
                 <div
                   class="cm-line"
                 >
-                      "json"
+                      
+                  <span
+                    class="ͼ13"
+                  >
+                    "json"
+                  </span>
                 </div>
                 <div
                   class="cm-line"
                 >
-                    ],
+                    ]
+                  <span
+                    class="ͼt"
+                  >
+                    ,
+                  </span>
                 </div>
                 <div
                   class="cm-line"
                 >
-                    "address": {
+                    
+                  <span
+                    class="ͼq"
+                  >
+                    "address"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    :
+                  </span>
+                   {
                 </div>
                 <div
                   class="cm-line"
                 >
-                      "street": "123 Main St",
+                      
+                  <span
+                    class="ͼq"
+                  >
+                    "street"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    :
+                  </span>
+                   
+                  <span
+                    class="ͼ13"
+                  >
+                    "123 Main St"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    ,
+                  </span>
                 </div>
                 <div
                   class="cm-line"
                 >
-                      "city": "HCM",
+                      
+                  <span
+                    class="ͼq"
+                  >
+                    "city"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    :
+                  </span>
+                   
+                  <span
+                    class="ͼ13"
+                  >
+                    "HCM"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    ,
+                  </span>
                 </div>
                 <div
                   class="cm-line"
                 >
-                      "zip": "700000"
+                      
+                  <span
+                    class="ͼq"
+                  >
+                    "zip"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    :
+                  </span>
+                   
+                  <span
+                    class="ͼ13"
+                  >
+                    "700000"
+                  </span>
                 </div>
                 <div
                   class="cm-line"
                 >
-                    },
+                    }
+                  <span
+                    class="ͼt"
+                  >
+                    ,
+                  </span>
                 </div>
                 <div
                   class="cm-line"
                 >
-                    "createdAt": "2024-01-01T12:00:00Z",
+                    
+                  <span
+                    class="ͼq"
+                  >
+                    "createdAt"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    :
+                  </span>
+                   
+                  <span
+                    class="ͼ13"
+                  >
+                    "2024-01-01T12:00:00Z"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    ,
+                  </span>
                 </div>
                 <div
                   class="cm-line"
                 >
-                    "nullable": null,
+                    
+                  <span
+                    class="ͼq"
+                  >
+                    "nullable"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    :
+                  </span>
+                   
+                  <span
+                    class="ͼp"
+                  >
+                    null
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    ,
+                  </span>
                 </div>
                 <div
                   class="cm-line"
                 >
-                    "nested": [
+                    
+                  <span
+                    class="ͼq"
+                  >
+                    "nested"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    :
+                  </span>
+                   [
                 </div>
                 <div
                   class="cm-line"
@@ -226,17 +500,59 @@ exports[`JSONSchemaModal should render 1`] = `
                 <div
                   class="cm-line"
                 >
-                        "id": 1,
+                        
+                  <span
+                    class="ͼq"
+                  >
+                    "id"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    :
+                  </span>
+                   
+                  <span
+                    class="ͼu"
+                  >
+                    1
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    ,
+                  </span>
                 </div>
                 <div
                   class="cm-line"
                 >
-                        "value": "A"
+                        
+                  <span
+                    class="ͼq"
+                  >
+                    "value"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    :
+                  </span>
+                   
+                  <span
+                    class="ͼ13"
+                  >
+                    "A"
+                  </span>
                 </div>
                 <div
                   class="cm-line"
                 >
-                      },
+                      }
+                  <span
+                    class="ͼt"
+                  >
+                    ,
+                  </span>
                 </div>
                 <div
                   class="cm-line"
@@ -246,12 +562,49 @@ exports[`JSONSchemaModal should render 1`] = `
                 <div
                   class="cm-line"
                 >
-                        "id": 2,
+                        
+                  <span
+                    class="ͼq"
+                  >
+                    "id"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    :
+                  </span>
+                   
+                  <span
+                    class="ͼu"
+                  >
+                    2
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    ,
+                  </span>
                 </div>
                 <div
                   class="cm-line"
                 >
-                        "value": "B"
+                        
+                  <span
+                    class="ͼq"
+                  >
+                    "value"
+                  </span>
+                  <span
+                    class="ͼt"
+                  >
+                    :
+                  </span>
+                   
+                  <span
+                    class="ͼ13"
+                  >
+                    "B"
+                  </span>
                 </div>
                 <div
                   class="cm-line"
