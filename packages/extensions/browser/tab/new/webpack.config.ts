@@ -1,12 +1,9 @@
 import CopyPlugin from 'copy-webpack-plugin';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
-const isProduction = process.env.NODE_ENV === 'production';
-const mode = isProduction ? 'production' : 'development';
 
 const baseConfig = {
   entry: {
@@ -43,6 +40,7 @@ export default [
       new CopyPlugin({
         patterns: [
           { from: 'public/manifest/v2/manifest.json', to: 'manifest.json' },
+          { from: 'public/icons', to: 'icons' },
         ],
       }),
     ],
@@ -59,6 +57,7 @@ export default [
       new CopyPlugin({
         patterns: [
           { from: 'public/manifest/v3/manifest.json', to: 'manifest.json' },
+          { from: 'public/icons', to: 'icons' },
         ],
       }),
     ],

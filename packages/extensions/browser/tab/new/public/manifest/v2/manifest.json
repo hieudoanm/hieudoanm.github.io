@@ -3,14 +3,21 @@
   "name": "New Tab",
   "version": "0.0.1",
   "description": "Overwrites new tab page to hieudoanm.github.io/app/ via background script.",
-  "permissions": ["tabs"],
+  "permissions": [
+    "tabs"
+  ],
   "background": {
-    "scripts": ["background.js"],
+    "scripts": [
+      "background.js"
+    ],
     "persistent": false
   },
   "browser_specific_settings": {
     "gecko": {
       "id": "new-tab@hieudoanm.github.io"
     }
+  },
+  "icons": {
+    "128": "icons/128x128.png"
   }
 }

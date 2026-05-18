@@ -1,5 +1,5 @@
 import CopyPlugin from 'copy-webpack-plugin';
-import path from 'path';
+import path from 'node:path';
 
 const isProduction = process.env.NODE_ENV === 'production';
 const mode = isProduction ? 'production' : 'development';
@@ -44,6 +44,7 @@ export default [
             globOptions: { ignore: ['**/v2/**', '**/v3/**'] },
           },
           { from: 'public/manifest/v2/manifest.json', to: 'manifest.json' },
+          { from: 'public/icons', to: 'icons' },
         ],
       }),
     ],
@@ -65,6 +66,7 @@ export default [
             globOptions: { ignore: ['**/v2/**', '**/v3/**'] },
           },
           { from: 'public/manifest/v3/manifest.json', to: 'manifest.json' },
+          { from: 'public/icons', to: 'icons' },
         ],
       }),
     ],

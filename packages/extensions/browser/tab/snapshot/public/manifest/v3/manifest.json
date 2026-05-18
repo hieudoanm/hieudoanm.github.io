@@ -2,7 +2,6 @@
   "name": "SnapShot",
   "version": "1.0.0",
   "description": "Capture the current browser tab as a PNG with one click.",
-
   "browser_specific_settings": {
     "gecko": {
       "id": "snapshot-ext@hieudoanm.github.io"
@@ -19,7 +18,10 @@
   ],
   "action": {
     "default_popup": "popup.html",
-    "default_title": "SnapShot \u2013 Capture Tab"
+    "default_title": "SnapShot – Capture Tab",
+    "default_icon": {
+      "128": "icons/128x128.png"
+    }
   },
   "background": {
     "service_worker": "background.js",
@@ -27,5 +29,8 @@
       "background.js"
     ]
   },
-  "manifest_version": 3
+  "manifest_version": 3,
+  "icons": {
+    "128": "icons/128x128.png"
+  }
 }

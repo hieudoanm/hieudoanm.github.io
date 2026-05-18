@@ -13,7 +13,10 @@
   ],
   "browser_action": {
     "default_popup": "popup.html",
-    "default_title": "YouTube Transcript"
+    "default_title": "YouTube Transcript",
+    "default_icon": {
+      "128": "icons/128x128.png"
+    }
   },
   "background": {
     "scripts": [
@@ -32,5 +35,8 @@
       "run_at": "document_idle"
     }
   ],
-  "manifest_version": 2
+  "manifest_version": 2,
+  "icons": {
+    "128": "icons/128x128.png"
+  }
 }

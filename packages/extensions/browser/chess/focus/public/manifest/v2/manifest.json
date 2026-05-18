@@ -4,7 +4,7 @@
   "description": "Hide Username and Ratings on chess.com",
   "author": "Hieu Doan",
   "icons": {
-    "512": "icons/512x512.png"
+    "128": "icons/128x128.png"
   },
   "browser_specific_settings": {
     "gecko": {
@@ -18,7 +18,7 @@
   ],
   "browser_action": {
     "default_icon": {
-      "512": "icons/512x512.png"
+      "128": "icons/128x128.png"
     }
   },
   "content_scripts": [
