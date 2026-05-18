@@ -57,7 +57,6 @@ import { LeftSidebar } from '@hieudoanm/components/sidebars/LeftSidebar';
 import { RightSidebar } from '@hieudoanm/components/sidebars/RightSidebar';
 import { apps } from '@hieudoanm/data/apps';
 import {
-  agents as agentsBookmarks,
   chat as chatBookmarks,
   code as codeBookmarks,
   google as googleBookmarks,
@@ -66,7 +65,13 @@ import {
   social as socialBookmarks,
   work as workBookmarks,
 } from '@hieudoanm/data/bookmarks';
-import { clis, extensions, packages } from '@hieudoanm/data/downloads';
+import {
+  agents,
+  clis,
+  ides,
+  extensions,
+  packages,
+} from '@hieudoanm/data/downloads';
 import { getTimeInZone, timezones } from '@hieudoanm/data/timezones';
 import { NextPage } from 'next';
 import {
@@ -702,8 +707,7 @@ const MainContent: FC<MainContentProps> = memo(
     // Bookmark sections
     const bookmarkSections = useMemo(
       () => [
-        { label: 'Agents', items: agentsBookmarks },
-        { label: 'AI Assistants', items: chatBookmarks },
+        { label: 'Chatbot', items: chatBookmarks },
         { label: 'Code', items: codeBookmarks },
         { label: 'Google Workspace', items: googleBookmarks },
         { label: 'Messaging', items: messagingBookmarks },
@@ -745,8 +749,10 @@ const MainContent: FC<MainContentProps> = memo(
     // Download sections
     const downloadSections = useMemo(
       () => [
-        { label: 'CLI', items: clis },
+        { label: 'Agents', items: agents },
+        { label: 'CLIs', items: clis },
         { label: 'Extensions', items: extensions },
+        { label: 'IDEs', items: ides },
         { label: 'Packages', items: packages },
       ],
       []
@@ -1012,12 +1018,7 @@ const AppPage: NextPage = () => {
 
     return [
       {
-        label: 'Agents',
-        items: f(agentsBookmarks, 'label'),
-        Card: BookmarkCard,
-      },
-      {
-        label: 'AI Assistants',
+        label: 'Chatbot',
         items: f(chatBookmarks, 'label'),
         Card: BookmarkCard,
       },
@@ -1093,8 +1094,18 @@ const AppPage: NextPage = () => {
         items: f(toolSections.visualization, 'label'),
         Card: BookmarkCard,
       },
+      {
+        label: 'Agents',
+        items: f(agents, 'label'),
+        Card: DownloadCard,
+      },
       { label: 'CLIs', items: f(clis, 'id'), Card: DownloadCard },
       { label: 'Extensions', items: f(extensions, 'id'), Card: DownloadCard },
+      {
+        label: 'IDEs',
+        items: f(ides, 'label'),
+        Card: DownloadCard,
+      },
       { label: 'Packages', items: f(packages, 'id'), Card: DownloadCard },
       { label: 'Apps', items: f(apps, 'id'), Card: AppCard },
     ];

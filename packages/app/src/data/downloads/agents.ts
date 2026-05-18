@@ -1,37 +1,40 @@
-import { BookmarkItem } from '@hieudoanm/components/cards/BookmarkCard';
+import { Download } from './types';
 
-export const agents: BookmarkItem[] = [
+export const agents: Download[] = [
   {
+    id: 'claude-code',
     label: 'Claude Code',
     url: 'https://claude.com/product/claude-code',
     description: 'Anthropic',
     emoji: '✦',
     color: '#d97757',
-    badge: 'Coding',
+    downloads: [],
   },
-
   {
+    id: 'codex',
     label: 'Codex',
     url: 'https://openai.com/codex/',
     description: 'OpenAI',
     emoji: '✦',
     color: '#10a37f',
-    badge: 'Coding',
+    downloads: [],
   },
   {
+    id: 'qwen-code',
     label: 'Qwen Code',
     url: 'https://qwen.ai/qwencode',
     description: 'Alibaba Cloud',
     emoji: '✦',
     color: '#615ced',
-    badge: 'Coding',
+    downloads: [],
   },
   {
+    id: 'kimi-code',
     label: 'Kimi Code',
     url: 'https://www.kimi.com/code',
     description: 'Moonshot AI',
     emoji: '🌙',
     color: '#39d353',
-    badge: 'Coding',
+    downloads: [],
   },
 ];
