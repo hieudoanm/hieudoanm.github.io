@@ -37,4 +37,13 @@ export const agents: Download[] = [
     color: '#39d353',
     downloads: [],
   },
+  {
+    id: 'open-code',
+    label: 'OpenCode',
+    url: 'https://opencode.ai/',
+    description: 'Anomaly',
+    emoji: '✦',
+    color: '#615ced',
+    downloads: [],
+  },
 ];
