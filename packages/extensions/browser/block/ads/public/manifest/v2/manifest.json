@@ -1,0 +1,34 @@
+{
+  "name": "Block Ads and Banners",
+  "version": "1.0.0",
+  "description": "A simple extension to block advertisements and banners from loading in your browser.",
+  "icons": {
+    "16": "icons/16x16.png",
+    "48": "icons/48x48.png",
+    "128": "icons/128x128.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "block-ads-ext@hieudoanm.github.io"
+    }
+  },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "manifest_version": 2
+}

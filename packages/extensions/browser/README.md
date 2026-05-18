@@ -13,22 +13,24 @@
 
 | No  | Group                               | Extension                                |
 | --- | ----------------------------------- | ---------------------------------------- |
-| 1   | [Chess](https://chess.com)          | [chess/focus][chess-focus]               |
-| 2   | [Claude](https://claude.ai)         | [claude/limit][claude-limit]             |
-| 3   | [GitHub](https://github.com)        | [github/open-link][github-open-link]     |
-| 4   | [Instagram](https://instagram.com)  | [instagram/download][instagram-download] |
-| 5   | [Shopify](https://shopify.com)      | [shopify/detect][shopify-detect]         |
-| 6   | Tab                                 | [tab/blocked][tab-blocked]               |
-| 7   | Tab                                 | [tab/new][tab-new]                       |
-| 8   | Tab                                 | [tab/snapshot][tab-snapshot]             |
-| 9   | [Youtube](https://www.youtube.com/) | [youtube/transcript][youtube-transcript] |
+| 1   | Block                               | [block/ads][block-ads]                   |
+| 2   | Block                               | [block/sites][block-sites]               |
+| 3   | [Chess](https://chess.com)          | [chess/focus][chess-focus]               |
+| 4   | [Claude](https://claude.ai)         | [claude/limit][claude-limit]             |
+| 5   | [GitHub](https://github.com)        | [github/open-link][github-open-link]     |
+| 6   | [Instagram](https://instagram.com)  | [instagram/download][instagram-download] |
+| 7   | [Shopify](https://shopify.com)      | [shopify/detect][shopify-detect]         |
+| 8   | Tab                                 | [tab/new][tab-new]                       |
+| 9   | Tab                                 | [tab/snapshot][tab-snapshot]             |
+| 10  | [Youtube](https://www.youtube.com/) | [youtube/transcript][youtube-transcript] |
 
+[block-ads]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/block/ads
+[block-sites]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/block/sites
 [chess-focus]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/chess/focus
 [claude-limit]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/claude/limit
 [github-open-link]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/github/open-link
 [instagram-download]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/instagram/download
 [shopify-detect]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/shopify/detect
-[tab-blocked]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/tab/blocked
 [tab-new]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/tab/new
 [tab-snapshot]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/snapshot
 [youtube-transcript]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/youtube/transcript

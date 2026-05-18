@@ -41,7 +41,9 @@ export default [
     },
     plugins: [
       new CopyPlugin({
-        patterns: [{ from: 'public/v2/manifest.json', to: 'manifest.json' }],
+        patterns: [
+          { from: 'public/manifest/v2/manifest.json', to: 'manifest.json' },
+        ],
       }),
     ],
   },
@@ -55,7 +57,9 @@ export default [
     },
     plugins: [
       new CopyPlugin({
-        patterns: [{ from: 'public/v3/manifest.json', to: 'manifest.json' }],
+        patterns: [
+          { from: 'public/manifest/v3/manifest.json', to: 'manifest.json' },
+        ],
       }),
     ],
   },

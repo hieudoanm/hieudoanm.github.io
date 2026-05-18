@@ -2,6 +2,50 @@ import { Download } from './types';
 
 export const extensions: Download[] = [
   {
+    id: 'block-ads',
+    label: 'BlockAds',
+    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/block/ads/download',
+    emoji: '🚫',
+    color: '#ef4444',
+    description: 'AdsBlocker',
+    downloads: [
+      {
+        label: 'Download CRX',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/block/ads/download/block-ads.crx',
+      },
+      {
+        label: 'Download XPI',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/block/ads/download/block-ads.xpi',
+      },
+      {
+        label: 'Download ZIP',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/block/ads/download/block-ads.zip',
+      },
+    ],
+  },
+  {
+    id: 'block-sites',
+    label: 'BlockSites',
+    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/block/sites/download',
+    emoji: '🚫',
+    color: '#ef4444',
+    description: 'SiteBlocker',
+    downloads: [
+      {
+        label: 'Download CRX',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/block/sites/download/block-sites.crx',
+      },
+      {
+        label: 'Download XPI',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/block/sites/download/block-sites.xpi',
+      },
+      {
+        label: 'Download ZIP',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/block/sites/download/block-sites.zip',
+      },
+    ],
+  },
+  {
     id: 'chess-focus',
     label: 'Focus',
     url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/chess/focus/download',
@@ -108,28 +152,6 @@ export const extensions: Download[] = [
       {
         label: 'Download ZIP',
         url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/shopify/detect/download/shopify-detect.zip',
-      },
-    ],
-  },
-  {
-    id: 'tab-blocked',
-    label: 'Blocked',
-    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/tab/blocked/download',
-    emoji: '🚫',
-    color: '#ef4444',
-    description: 'Tab',
-    downloads: [
-      {
-        label: 'Download CRX',
-        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/tab/blocked/download/tab-blocked.crx',
-      },
-      {
-        label: 'Download XPI',
-        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/tab/blocked/download/tab-blocked.xpi',
-      },
-      {
-        label: 'Download ZIP',
-        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/tab/blocked/download/tab-blocked.zip',
       },
     ],
   },
