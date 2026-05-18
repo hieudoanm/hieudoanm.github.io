@@ -20,7 +20,7 @@
     "node": "26.1.0"
   },
   "scripts": {
-    "clean": "rimraf dist && rimraf --glob \"download/*.zip\"",
+    "clean": "rimraf dist && rimraf download",
     "prebuild": "pnpm run clean && pnpm run lint && pnpm run format",
     "build": "webpack --mode=production",
     "postbuild": "make build",

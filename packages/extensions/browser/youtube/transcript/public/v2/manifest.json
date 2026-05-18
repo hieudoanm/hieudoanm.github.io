@@ -1,0 +1,36 @@
+{
+  "name": "YouTube Transcript",
+  "version": "0.0.1",
+  "description": "Fetch transcript of current YouTube video",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "youtube-transcript-ext@hieudoanm.github.io"
+    }
+  },
+  "permissions": [
+    "tabs",
+    "*://www.youtube.com/*"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "YouTube Transcript"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.youtube.com/watch*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "manifest_version": 2
+}

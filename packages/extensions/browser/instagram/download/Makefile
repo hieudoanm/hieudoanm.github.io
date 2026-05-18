@@ -1,40 +1,33 @@
 .PHONY: lint build zip xpi sign clean
 
-EXTENSION_NAME := instagram-download
-SOURCE_DIR := ./dist
-ARTIFACTS_DIR := ./download
+EXTENSION_NAME := download
+SOURCE_DIR_V2 := ./dist/v2
+SOURCE_DIR_V3 := ./dist/v3
+ARTIFACTS_DIR := $(CURDIR)/download
+ARTIFACTS_DIR_V2 := $(ARTIFACTS_DIR)/v2
+ARTIFACTS_DIR_V3 := $(ARTIFACTS_DIR)/v3
 
-ZIP_FILE := $(ARTIFACTS_DIR)/$(EXTENSION_NAME).zip
-XPI_FILE := $(ARTIFACTS_DIR)/$(EXTENSION_NAME).xpi
+ZIP_FILE_V2 := $(ARTIFACTS_DIR_V2)/$(EXTENSION_NAME).zip
+ZIP_FILE_V3 := $(ARTIFACTS_DIR_V3)/$(EXTENSION_NAME).zip
 
 lint:
-	pnpm web-ext lint --source-dir $(SOURCE_DIR)
+	pnpm web-ext lint --source-dir $(SOURCE_DIR_V2)
+	pnpm web-ext lint --source-dir $(SOURCE_DIR_V3)
 
 build: zip xpi
+	cp README.md $(ARTIFACTS_DIR)/README.md
 
 zip:
-	mkdir -p $(ARTIFACTS_DIR)
-	cd $(SOURCE_DIR) && zip -r ../$(ZIP_FILE) .
+	mkdir -p $(ARTIFACTS_DIR_V2)
+	mkdir -p $(ARTIFACTS_DIR_V3)
+	cd $(SOURCE_DIR_V2) && zip -r $(ZIP_FILE_V2) .
+	cd $(SOURCE_DIR_V3) && zip -r $(ZIP_FILE_V3) .
 
 xpi:
-	mkdir -p $(ARTIFACTS_DIR)
-	pnpm web-ext build \
-		--source-dir $(SOURCE_DIR) \
-		--artifacts-dir $(ARTIFACTS_DIR) \
-		--filename $(EXTENSION_NAME).xpi \
-		--overwrite-dest
-
-sign:
-	@read -p "Enter WEB_EXT_API_KEY (JWT issuer): " API_KEY; \
-	read -s -p "Enter WEB_EXT_API_SECRET (JWT secret): " API_SECRET; \
-	echo ""; \
-	mkdir -p $(ARTIFACTS_DIR); \
-	WEB_EXT_API_KEY="$$API_KEY" \
-	WEB_EXT_API_SECRET="$$API_SECRET" \
-	pnpm web-ext sign \
-		--source-dir $(SOURCE_DIR) \
-		--artifacts-dir $(ARTIFACTS_DIR) \
-		--channel unlisted
+	mkdir -p $(ARTIFACTS_DIR_V2)
+	mkdir -p $(ARTIFACTS_DIR_V3)
+	pnpm web-ext build 		--source-dir $(SOURCE_DIR_V2) 		--artifacts-dir $(ARTIFACTS_DIR_V2) 		--filename $(EXTENSION_NAME).xpi 		--overwrite-dest
+	pnpm web-ext build 		--source-dir $(SOURCE_DIR_V3) 		--artifacts-dir $(ARTIFACTS_DIR_V3) 		--filename $(EXTENSION_NAME).xpi 		--overwrite-dest
 
 clean:
 	rm -rf $(ARTIFACTS_DIR)

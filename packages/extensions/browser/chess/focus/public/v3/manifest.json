@@ -1,0 +1,35 @@
+{
+  "name": "Chess Focus",
+  "version": "0.0.1",
+  "description": "Hide Username and Ratings on chess.com",
+  "author": "Hieu Doan",
+  "icons": {
+    "512": "icons/512x512.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "nothing-chess@hieudoanm.github.io"
+    }
+  },
+  "homepage_url": "https://hieudoanm.github.io",
+  "offline_enabled": true,
+  "host_permissions": [
+    "*://chess.com/*"
+  ],
+  "action": {
+    "default_icon": {
+      "512": "icons/512x512.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.chess.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "manifest_version": 3
+}

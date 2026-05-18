@@ -1,44 +1,85 @@
-// Generated using webpack-cli https://github.com/webpack/webpack-cli
-
 import CopyPlugin from 'copy-webpack-plugin';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-export default {
+const isProduction = process.env.NODE_ENV === 'production';
+const mode = isProduction ? 'production' : 'development';
+
+const baseConfig = {
+  mode,
+  devtool: isProduction ? 'source-map' : 'inline-source-map',
   entry: {
-    content: './src/content/index.ts',
-    background: './src/background/index.ts',
-  },
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js',
-    clean: true,
+    content: './src/content.ts',
+    background: './src/background.ts',
   },
   resolve: {
-    extensions: ['.ts', '.js'],
+    extensions: ['.tsx', '.ts', '.jsx', '.js', '...'],
   },
   module: {
     rules: [
       {
-        test: /\.ts$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
+        test: /\.(ts|tsx)$/i,
+        loader: 'ts-loader',
+        exclude: ['/node_modules/'],
       },
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
+        type: 'asset',
+      },
     ],
   },
-  plugins: [
-    new CopyPlugin({
-      patterns: [
-        { from: 'public', to: '.' },
-        { from: 'src/popup/popup.html', to: 'popup.html' },
-      ],
-    }),
-  ],
 };
+
+export default [
+  // Manifest V2 Configuration
+  {
+    ...baseConfig,
+    output: {
+      path: path.resolve(__dirname, 'dist/v2'),
+      filename: '[name].js',
+      clean: true,
+    },
+    plugins: [
+      new CopyPlugin({
+        patterns: [
+          {
+            from: 'public',
+            to: '.',
+            globOptions: { ignore: ['**/v2/**', '**/v3/**'] },
+          },
+          { from: 'src/popup/popup.html', to: 'popup.html' },
+          { from: 'public/v2/manifest.json', to: 'manifest.json' },
+        ],
+      }),
+    ],
+  },
+  // Manifest V3 Configuration
+  {
+    ...baseConfig,
+    output: {
+      path: path.resolve(__dirname, 'dist/v3'),
+      filename: '[name].js',
+      clean: true,
+    },
+    plugins: [
+      new CopyPlugin({
+        patterns: [
+          {
+            from: 'public',
+            to: '.',
+            globOptions: { ignore: ['**/v2/**', '**/v3/**'] },
+          },
+          { from: 'src/popup/popup.html', to: 'popup.html' },
+          { from: 'public/v3/manifest.json', to: 'manifest.json' },
+        ],
+      }),
+    ],
+  },
+];

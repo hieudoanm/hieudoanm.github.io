@@ -1,30 +1,19 @@
-// Generated using webpack-cli
 import CopyPlugin from 'copy-webpack-plugin';
 import path from 'path';
 
 const isProduction = process.env.NODE_ENV === 'production';
 const mode = isProduction ? 'production' : 'development';
 
-export default {
+const baseConfig = {
   mode,
   devtool: isProduction ? 'source-map' : 'inline-source-map',
   entry: {
     background: './src/background.ts',
     content: './src/content.ts',
   },
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js',
-    clean: true,
+  resolve: {
+    extensions: ['.tsx', '.ts', '.jsx', '.js', '...'],
   },
-  plugins: [
-    new CopyPlugin({
-      patterns: [
-        // Copy manifest and static files (icons, etc.)
-        { from: '.', to: '.', context: 'public' },
-      ],
-    }),
-  ],
   module: {
     rules: [
       {
@@ -38,7 +27,49 @@ export default {
       },
     ],
   },
-  resolve: {
-    extensions: ['.tsx', '.ts', '.jsx', '.js', '...'],
-  },
 };
+
+export default [
+  // Manifest V2 Configuration
+  {
+    ...baseConfig,
+    output: {
+      path: path.resolve(__dirname, 'dist/v2'),
+      filename: '[name].js',
+      clean: true,
+    },
+    plugins: [
+      new CopyPlugin({
+        patterns: [
+          {
+            from: 'public',
+            to: '.',
+            globOptions: { ignore: ['**/v2/**', '**/v3/**'] },
+          },
+          { from: 'public/v2/manifest.json', to: 'manifest.json' },
+        ],
+      }),
+    ],
+  },
+  // Manifest V3 Configuration
+  {
+    ...baseConfig,
+    output: {
+      path: path.resolve(__dirname, 'dist/v3'),
+      filename: '[name].js',
+      clean: true,
+    },
+    plugins: [
+      new CopyPlugin({
+        patterns: [
+          {
+            from: 'public',
+            to: '.',
+            globOptions: { ignore: ['**/v2/**', '**/v3/**'] },
+          },
+          { from: 'public/v3/manifest.json', to: 'manifest.json' },
+        ],
+      }),
+    ],
+  },
+];

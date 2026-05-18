@@ -92,6 +92,24 @@ export const extensions: Download[] = [
     ],
   },
   {
+    id: 'new-tab',
+    label: 'New Tab',
+    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/new-tab/download',
+    emoji: '🆕',
+    color: '#2166f3',
+    description: 'New Tab',
+    downloads: [
+      {
+        label: 'Download XPI',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/new-tab/download/new-tab.xpi',
+      },
+      {
+        label: 'Download ZIP',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/new-tab/download/new-tab.zip',
+      },
+    ],
+  },
+  {
     id: 'shopify-detect',
     label: 'Shopify Detect',
     url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/shopify/detect/download',

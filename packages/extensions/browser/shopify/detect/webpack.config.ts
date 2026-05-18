@@ -1,26 +1,19 @@
-// Generated using webpack-cli https://github.com/webpack/webpack-cli
-
 import CopyPlugin from 'copy-webpack-plugin';
-import path from 'node:path';
+import path from 'path';
 
-const isProduction = process.env.NODE_ENV == 'production';
+const isProduction = process.env.NODE_ENV === 'production';
 const mode = isProduction ? 'production' : 'development';
 
-export default {
+const baseConfig = {
   mode,
+  devtool: isProduction ? 'source-map' : 'inline-source-map',
   entry: {
     content: './src/content.ts',
     popup: './src/popup.ts',
   },
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js',
+  resolve: {
+    extensions: ['.tsx', '.ts', '.jsx', '.js', '...'],
   },
-  plugins: [
-    new CopyPlugin({
-      patterns: [{ from: '.', to: '.', context: 'public' }],
-    }),
-  ],
   module: {
     rules: [
       {
@@ -32,11 +25,51 @@ export default {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
         type: 'asset',
       },
-      // Add your rules for custom modules here
-      // Learn more about loaders from https://webpack.js.org/loaders/
     ],
   },
-  resolve: {
-    extensions: ['.tsx', '.ts', '.jsx', '.js', '...'],
-  },
 };
+
+export default [
+  // Manifest V2 Configuration
+  {
+    ...baseConfig,
+    output: {
+      path: path.resolve(__dirname, 'dist/v2'),
+      filename: '[name].js',
+      clean: true,
+    },
+    plugins: [
+      new CopyPlugin({
+        patterns: [
+          {
+            from: 'public',
+            to: '.',
+            globOptions: { ignore: ['**/v2/**', '**/v3/**'] },
+          },
+          { from: 'public/v2/manifest.json', to: 'manifest.json' },
+        ],
+      }),
+    ],
+  },
+  // Manifest V3 Configuration
+  {
+    ...baseConfig,
+    output: {
+      path: path.resolve(__dirname, 'dist/v3'),
+      filename: '[name].js',
+      clean: true,
+    },
+    plugins: [
+      new CopyPlugin({
+        patterns: [
+          {
+            from: 'public',
+            to: '.',
+            globOptions: { ignore: ['**/v2/**', '**/v3/**'] },
+          },
+          { from: 'public/v3/manifest.json', to: 'manifest.json' },
+        ],
+      }),
+    ],
+  },
+];
