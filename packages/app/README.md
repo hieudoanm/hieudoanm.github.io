@@ -1,62 +1,118 @@
-# Next.js
+# Application
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with
-[`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+## Table of Contents
 
-## Getting Started
+- [Application](#application)
+  - [Table of Contents](#table-of-contents)
+  - [Tech Stack](#tech-stack)
+  - [Structure](#structure)
+  - [Platform Distribution](#platform-distribution)
 
-First, run the development server:
+## Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+| No  | Group     | Category        | Type           | Tools                            |
+| --- | --------- | --------------- | -------------- | -------------------------------- |
+| 01  | DevTools  | Language        |                | [TypeScript][typescript]         |
+| 02  | DevTools  | Package Manager |                | [pnpm][pnpm]                     |
+| 03  | DevTools  | Linter          |                | [ESLint][eslint]                 |
+| 04  | DevTools  | Formatter       |                | [Prettier][prettier]             |
+| 05  | DevTools  | Test            | Unit           | [Jest][jest]                     |
+| 06  | DevTools  | Test            | E2E            | [Playwright][playwright]         |
+| 07  | Front-end | Framework       | Web            | [Next.js][nextjs]                |
+| 08  | Front-end | Framework       | Mobile         | [Capacitor][capacitor]           |
+| 09  | Front-end | Framework       | Desktop        | [Tauri][tauri]                   |
+| 10  | Front-end | CSS             | CSS Utilities  | [Tailwind CSS][tailwind-css]     |
+| 11  | Front-end | CSS             | CSS Components | [DaisyUI][daisyui]               |
+| 12  | Back-end  | API             |                | [tRPC][trpc]                     |
+| 13  | Back-end  | ORM             |                | [Prisma][prisma]                 |
+| 14  | Back-end  | Database        | Lightweight    | [SQLite][sqlite]                 |
+| 15  | Back-end  | Database        | General        | [PostgreSQL][postgresql]         |
+| 16  | Back-end  | Auth            |                | [Supabase][supabase]             |
+| 17  | Back-end  | Email           |                | [Resend][resend]                 |
+| 18  | Back-end  | Payment         |                | [LemonSqueezy][lemonsqueezy]     |
+| 19  | DevOps    | CI/CD           |                | [GitHub Actions][github-actions] |
+| 20  | DevOps    | Static Hosting  |                | [GitHub Pages][github-pages]     |
+| 21  | DevOps    | Dynamic Hosting |                | [Vercel][vercel]                 |
+
+[typescript]: https://www.typescriptlang.org/
+[pnpm]: https://pnpm.io/
+[eslint]: https://eslint.org/
+[prettier]: https://prettier.io/
+[jest]: https://jestjs.io/
+[playwright]: https://playwright.dev/
+[nextjs]: https://nextjs.org/
+[capacitor]: https://capacitorjs.com/
+[tauri]: https://v2.tauri.app/
+[tailwind-css]: https://tailwindcss.com/
+[daisyui]: https://daisyui.com/
+[trpc]: https://trpc.io/
+[prisma]: https://prisma.io/
+[sqlite]: https://www.sqlite.org/
+[postgresql]: https://www.postgresql.org/
+[supabase]: https://supabase.com/
+[resend]: https://resend.com/
+[lemonsqueezy]: https://www.lemonsqueezy.com/
+[github-actions]: https://github.com/features/actions/
+[github-pages]: https://pages.github.com/
+[vercel]: https://vercel.com/
+
+## Structure
+
+```text
+packages/app/
+├── public/
+│   ├── audio/
+│   ├── fonts/
+│   ├── icons/
+│   ├── images/
+│   ├── favicon.ico
+│   ├── manifest.json
+│   ├── robots.txt
+│   ├── sitemap.xml
+│   └── sw.js
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── atoms/
+│   │   ├── molecules/
+│   │   ├── organisms/
+│   │   └── templates/
+│   ├── data/
+│   ├── hooks/
+│   ├── layouts/
+│   ├── pages/
+│   ├── services/
+│   ├── store/
+│   ├── styles/
+│   ├── utils/
+│   └── ...
+├── pnpm-lock.yaml
+├── README.md
+├── tailwind.config.js
+├── tsconfig.json
+└── next.config.js
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the
-result.
+## Platform Distribution
 
-You can start editing the page by modifying `pages/index.tsx`. The page
-auto-updates as you edit the file.
+| No  | Device  | OS                 | Package     |
+| --- | ------- | ------------------ | ----------- |
+| 01  | Mobile  | [Android][android] | `.aab`      |
+| 02  | Mobile  | [Android][android] | `.apk`      |
+| 03  | Mobile  | [iOS][ios]         | `.ipa`      |
+| 04  | Desktop | [Windows][windows] | `.exe`      |
+| 05  | Desktop | [Windows][windows] | `.msi`      |
+| 06  | Desktop | [macOS][macos]     | `.app`      |
+| 07  | Desktop | [macOS][macos]     | `.dmg`      |
+| 08  | Desktop | [macOS][macos]     | `.pkg`      |
+| 09  | Desktop | [Linux][linux]     | `.AppImage` |
+| 10  | Desktop | [Linux][linux]     | `.deb`      |
+| 11  | Desktop | [Linux][linux]     | `.rpm`      |
+| 12  | Desktop | [Linux][linux]     | `.snap`     |
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes)
-can be accessed on
-[http://localhost:3000/api/hello](http://localhost:3000/api/hello). This
-endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are
-treated as
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes)
-instead of React pages.
-
-This project uses
-[`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts)
-to automatically optimize and load [Geist](https://vercel.com/font), a new font
-family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js
-  features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive
-  Next.js tutorial.
-
-You can check out
-[the Next.js GitHub repository](https://github.com/vercel/next.js) - your
-feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the
-[Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
-from the creators of Next.js.
-
-Check out our
-[Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying)
-for more details.
+[android]: https://www.android.com/
+[ios]: https://www.apple.com/ios/
+[windows]: https://www.microsoft.com/windows/
+[macos]: https://www.apple.com/macos/
+[linux]: https://www.linux.org/

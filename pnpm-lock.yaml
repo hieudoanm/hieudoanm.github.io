@@ -15,11 +15,11 @@ importers:
         specifier: 2.9.14
         version: 2.9.14
 
-  packages/app:
+  packages/app/next.js:
     dependencies:
       '@browser/native':
         specifier: workspace:*
-        version: link:../modules/browser/native
+        version: link:../../modules/browser/native
       '@capacitor/android':
         specifier: 8.3.4
         version: 8.3.4(@capacitor/core@8.3.4)
@@ -31,7 +31,7 @@ importers:
         version: 8.3.4(@capacitor/core@8.3.4)
       '@chess/elo':
         specifier: workspace:*
-        version: link:../modules/chess/elo
+        version: link:../../modules/chess/elo
       '@codemirror/lang-java':
         specifier: 6.0.2
         version: 6.0.2
@@ -3901,7 +3901,6 @@ packages:
 
   better-result@2.9.2:
     resolution: {integrity: sha512-WIFoBPCdnTOdk9inkE1ZRvCZ4P0CpSkAiLlchC65N7n9DcjZ3NhqkBOlafzpOVnO8ixyi37kicmSJ3ENhPZl7Q==}
-    hasBin: true
 
   big-integer@1.6.52:
     resolution: {integrity: sha512-QxD8cf2eVqJOOz63z6JIN9BzvVs/dlySa5HGSBH5xtR8dPteIRQnBxxKqkNTiT6jbDTF6jAfrd4oMcND9RGbQg==}
