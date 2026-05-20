@@ -50,21 +50,21 @@
 ### [BoostCommerce](https://boostcommerce.net)
 
 - Location: Hanoi, [[Vietnam]]
-- Title: Back-end Developer
+- Title: [[back-end|Back-end]] Developer
   - Start Year: March 2019
   - End Year: April 2021
 
 ### [admetrics](https://www.admetrics.io/en/)
 
-- Location: Frankfurt am Main, [[germany]]
-- Title: Front-end Developer
+- Location: Frankfurt am Main, [[Germany]]
+- Title: [[front-end|Front-end]] Developer
   - Start Year: March 2017
   - End Year: January 2019
 
 ### [Witrafi](https://witrafi.com/en)
 
-- Location: Helsinki, [[finland]]
-- Title: Front-end Developer
+- Location: Helsinki, [[Finland]]
+- Title: [[front-end|Front-end]] Developer
   - Start Year: January 2015
   - End Year: February 2017
 
