@@ -6,6 +6,7 @@
   - [Table of Contents](#table-of-contents)
   - [Champions](#champions)
   - [Teams](#teams)
+  - [Players](#players)
 
 ## Champions
 
@@ -102,3 +103,13 @@
 | 28  | Western    | United States | Texas          | San Antonio     | San Antonio Spurs      | AT&T Center                                |
 | 29  | Western    | United States | Utah           | Salt Lake City  | Utah Jazz              | Delta Center                               |
 | 30  | Western    | United States | Washington     | Seattle         | Seattle SuperSonics    | KeyArena (Now Climate Pledge Arena)        |
+
+## Players
+
+| No  | Pos | Position       | 1st              | 2nd          |
+| --- | --- | -------------- | ---------------- | ------------ |
+| 1   | PG  | Point Guard    | Stephen Curry    | Luka Dončić  |
+| 2   | SG  | Shooting Guard | Michael Jordan   | Kobe Bryant  |
+| 3   | SF  | Small Forward  | LeBron James     |              |
+| 4   | PF  | Power Forward  | Dennis Rodman    |              |
+| 5   | C   | Center         | Shaquille O'Neal | Nikola Jokić |

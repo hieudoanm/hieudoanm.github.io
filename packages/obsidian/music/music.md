@@ -1,5 +1,0 @@
-# Music
-
-- [[Grammy]]
-- [[Hamilton]]
-- [[Instruments]]

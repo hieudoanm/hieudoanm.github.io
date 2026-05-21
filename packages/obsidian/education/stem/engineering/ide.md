@@ -4,8 +4,22 @@
 
 - [IDE (Integrated Development Environment)](#ide-integrated-development-environment)
   - [Table of Contents](#table-of-contents)
+  - [Editors](#editors)
+  - [Mobile](#mobile)
   - [AI](#ai)
   - [JetBrains](#jetbrains)
+  - [Game Engines](#game-engines)
+
+## Editors
+
+- [VSCode](https://code.visualstudio.com)
+- [Zed](https://zed.dev)
+- [Neovim](https://neovim.io/)
+
+## Mobile
+
+- [Android Studio](https://developer.android.com/studio)
+- [XCode](https://developer.apple.com/xcode/)
 
 ## AI
 
@@ -26,5 +40,12 @@
 - [PhpStorm](https://www.jetbrains.com/phpstorm/)
 - [AppCode](https://www.jetbrains.com/appcode/)
 - [CLion](https://www.jetbrains.com/clion/)
+
+## Game Engines
+
+- [Unity](https://unity.com/download)
+- [Unreal Engine](https://www.unrealengine.com/download)
+- [Godot Engine](https://godotengine.org/download/)
+- [Photon](https://www.photonengine.com/)
 
 [Back to Table of Contents](#table-of-contents)

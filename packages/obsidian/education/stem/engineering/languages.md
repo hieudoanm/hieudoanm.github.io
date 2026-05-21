@@ -1,6 +1,6 @@
 # Languages
 
-1. JavaScript / TypeScript
+1. [[JavaScript]] / TypeScript
 2. Python
 3. Go
 4. Java
