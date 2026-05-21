@@ -5,6 +5,7 @@
 - [Germany](#germany)
   - [Table of Contents](#table-of-contents)
   - [States](#states)
+  - [Football Clubs](#football-clubs)
 
 ## States
 
@@ -26,5 +27,22 @@
 | 14  | Sachsen-Anhalt         | Saxony-Anhalt                 |         |
 | 15  | Schleswig-Holstein     | Schleswig-Holstein            |         |
 | 16  | Thüringen              | Thuringia                     |         |
+
+[Back to Table of Contents](#table-of-contents)
+
+## Football Clubs
+
+| City            | Club                |
+| --------------- | ------------------- |
+| Augsburg        | FC Augsburg         |
+| Berlin          | Union Berlin        |
+| Bochum          | VfL Bochum          |
+| Dortmund        | Borussia Dortmund   |
+| Frankfurt       | Eintracht Frankfurt |
+| Freiburg        | SC Freiburg         |
+| Leverkusen      | Bayer Leverkusen    |
+| Mönchengladbach | Borussia M'gladbach |
+| Munich          | Bayern Munich       |
+| Stuttgart       | VfB Stuttgart       |
 
 [Back to Table of Contents](#table-of-contents)

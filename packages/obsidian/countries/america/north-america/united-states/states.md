@@ -1,8 +1,8 @@
-# United States
+# List of United States
 
 ## Table of Contents
 
-- [United States](#united-states)
+- [List of United States](#list-of-united-states)
   - [Table of Contents](#table-of-contents)
   - [States](#states)
   - [Territories](#territories)
