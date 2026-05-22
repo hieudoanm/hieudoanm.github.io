@@ -1,0 +1,312 @@
+[
+  {
+    "question": "Who won the UEFA Champions League in the 1992–93 season?",
+    "answers": {
+      "red": "AC Milan",
+      "yellow": "Juventus",
+      "blue": "Marseille",
+      "green": "Barcelona"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the UEFA Champions League in the 1993–94 season?",
+    "answers": {
+      "red": "AC Milan",
+      "yellow": "Bayern Munich",
+      "blue": "Barcelona",
+      "green": "Juventus"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the UEFA Champions League in the 1994–95 season?",
+    "answers": {
+      "red": "Ajax",
+      "yellow": "Juventus",
+      "blue": "AC Milan",
+      "green": "Benfica"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the UEFA Champions League in the 1995–96 season?",
+    "answers": {
+      "red": "Ajax",
+      "yellow": "AC Milan",
+      "blue": "Juventus",
+      "green": "Borussia Dortmund"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the UEFA Champions League in the 1996–97 season?",
+    "answers": {
+      "red": "Juventus",
+      "yellow": "Ajax",
+      "blue": "Borussia Dortmund",
+      "green": "Real Madrid"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the UEFA Champions League in the 1997–98 season?",
+    "answers": {
+      "red": "Real Madrid",
+      "yellow": "Manchester United",
+      "blue": "Juventus",
+      "green": "Bayern Munich"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the UEFA Champions League in the 1998–99 season?",
+    "answers": {
+      "red": "Manchester United",
+      "yellow": "Barcelona",
+      "blue": "Bayern Munich",
+      "green": "Juventus"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the UEFA Champions League in the 1999–2000 season?",
+    "answers": {
+      "red": "Real Madrid",
+      "yellow": "Bayern Munich",
+      "blue": "Valencia",
+      "green": "AC Milan"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the UEFA Champions League in the 2000–01 season?",
+    "answers": {
+      "red": "Bayern Munich",
+      "yellow": "Manchester United",
+      "blue": "Valencia",
+      "green": "Real Madrid"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the UEFA Champions League in the 2001–02 season?",
+    "answers": {
+      "red": "Real Madrid",
+      "yellow": "Bayern Munich",
+      "blue": "Bayer Leverkusen",
+      "green": "Manchester United"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the UEFA Champions League in the 2002–03 season?",
+    "answers": {
+      "red": "AC Milan",
+      "yellow": "Ajax",
+      "blue": "Juventus",
+      "green": "Real Madrid"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the UEFA Champions League in the 2003–04 season?",
+    "answers": {
+      "red": "Porto",
+      "yellow": "Real Madrid",
+      "blue": "Monaco",
+      "green": "AC Milan"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the UEFA Champions League in the 2004–05 season?",
+    "answers": {
+      "red": "Liverpool",
+      "yellow": "Juventus",
+      "blue": "AC Milan",
+      "green": "Chelsea"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the UEFA Champions League in the 2005–06 season?",
+    "answers": {
+      "red": "Barcelona",
+      "yellow": "Real Madrid",
+      "blue": "Arsenal",
+      "green": "AC Milan"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the UEFA Champions League in the 2006–07 season?",
+    "answers": {
+      "red": "AC Milan",
+      "yellow": "Chelsea",
+      "blue": "Liverpool",
+      "green": "Manchester United"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the UEFA Champions League in the 2007–08 season?",
+    "answers": {
+      "red": "Manchester United",
+      "yellow": "AC Milan",
+      "blue": "Chelsea",
+      "green": "Barcelona"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the UEFA Champions League in the 2008–09 season?",
+    "answers": {
+      "red": "Barcelona",
+      "yellow": "Arsenal",
+      "blue": "Manchester United",
+      "green": "Chelsea"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the UEFA Champions League in the 2009–10 season?",
+    "answers": {
+      "red": "Inter Milan",
+      "yellow": "Real Madrid",
+      "blue": "Bayern Munich",
+      "green": "Barcelona"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the UEFA Champions League in the 2010–11 season?",
+    "answers": {
+      "red": "Barcelona",
+      "yellow": "Chelsea",
+      "blue": "Manchester United",
+      "green": "Real Madrid"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the UEFA Champions League in the 2011–12 season?",
+    "answers": {
+      "red": "Chelsea",
+      "yellow": "Real Madrid",
+      "blue": "Bayern Munich",
+      "green": "Barcelona"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the UEFA Champions League in the 2012–13 season?",
+    "answers": {
+      "red": "Bayern Munich",
+      "yellow": "Barcelona",
+      "blue": "Borussia Dortmund",
+      "green": "Real Madrid"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the UEFA Champions League in the 2013–14 season?",
+    "answers": {
+      "red": "Real Madrid",
+      "yellow": "Chelsea",
+      "blue": "Atletico Madrid",
+      "green": "Bayern Munich"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the UEFA Champions League in the 2014–15 season?",
+    "answers": {
+      "red": "Barcelona",
+      "yellow": "Bayern Munich",
+      "blue": "Juventus",
+      "green": "Real Madrid"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the UEFA Champions League in the 2015–16 season?",
+    "answers": {
+      "red": "Real Madrid",
+      "yellow": "Juventus",
+      "blue": "Atletico Madrid",
+      "green": "Bayern Munich"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the UEFA Champions League in the 2016–17 season?",
+    "answers": {
+      "red": "Real Madrid",
+      "yellow": "Atletico Madrid",
+      "blue": "Juventus",
+      "green": "Monaco"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the UEFA Champions League in the 2017–18 season?",
+    "answers": {
+      "red": "Real Madrid",
+      "yellow": "Roma",
+      "blue": "Liverpool",
+      "green": "Bayern Munich"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the UEFA Champions League in the 2018–19 season?",
+    "answers": {
+      "red": "Liverpool",
+      "yellow": "Ajax",
+      "blue": "Tottenham Hotspur",
+      "green": "Barcelona"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the UEFA Champions League in the 2019–20 season?",
+    "answers": {
+      "red": "Bayern Munich",
+      "yellow": "Manchester City",
+      "blue": "Paris Saint-Germain",
+      "green": "Barcelona"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the UEFA Champions League in the 2020–21 season?",
+    "answers": {
+      "red": "Chelsea",
+      "yellow": "Paris Saint-Germain",
+      "blue": "Manchester City",
+      "green": "Real Madrid"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the UEFA Champions League in the 2021–22 season?",
+    "answers": {
+      "red": "Real Madrid",
+      "yellow": "Chelsea",
+      "blue": "Liverpool",
+      "green": "Manchester City"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the UEFA Champions League in the 2022–23 season?",
+    "answers": {
+      "red": "Manchester City",
+      "yellow": "Bayern Munich",
+      "blue": "Inter Milan",
+      "green": "Real Madrid"
+    },
+    "correct": "red"
+  }
+]

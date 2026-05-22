@@ -1,0 +1,202 @@
+[
+  {
+    "question": "What is the capital of France?",
+    "answers": {
+      "red": "Berlin",
+      "yellow": "Rome",
+      "blue": "Madrid",
+      "green": "Paris"
+    },
+    "correct": "green"
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "answers": {
+      "red": "Seoul",
+      "yellow": "Bangkok",
+      "blue": "Tokyo",
+      "green": "Beijing"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "What is the capital of Australia?",
+    "answers": {
+      "red": "Sydney",
+      "yellow": "Perth",
+      "blue": "Melbourne",
+      "green": "Canberra"
+    },
+    "correct": "green"
+  },
+  {
+    "question": "What is the capital of Canada?",
+    "answers": {
+      "red": "Toronto",
+      "yellow": "Montreal",
+      "blue": "Vancouver",
+      "green": "Ottawa"
+    },
+    "correct": "green"
+  },
+  {
+    "question": "What is the capital of Brazil?",
+    "answers": {
+      "red": "Rio de Janeiro",
+      "yellow": "Belo Horizonte",
+      "blue": "Brasília",
+      "green": "São Paulo"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "What is the capital of Germany?",
+    "answers": {
+      "red": "Munich",
+      "yellow": "Hamburg",
+      "blue": "Berlin",
+      "green": "Frankfurt"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "What is the capital of Italy?",
+    "answers": {
+      "red": "Milan",
+      "yellow": "Naples",
+      "blue": "Venice",
+      "green": "Rome"
+    },
+    "correct": "green"
+  },
+  {
+    "question": "What is the capital of Spain?",
+    "answers": {
+      "red": "Barcelona",
+      "yellow": "Valencia",
+      "blue": "Seville",
+      "green": "Madrid"
+    },
+    "correct": "green"
+  },
+  {
+    "question": "What is the capital of the United Kingdom?",
+    "answers": {
+      "red": "Manchester",
+      "yellow": "Liverpool",
+      "blue": "Birmingham",
+      "green": "London"
+    },
+    "correct": "green"
+  },
+  {
+    "question": "What is the capital of the United States?",
+    "answers": {
+      "red": "New York",
+      "yellow": "Chicago",
+      "blue": "Washington D.C.",
+      "green": "Los Angeles"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "What is the capital of China?",
+    "answers": {
+      "red": "Shanghai",
+      "yellow": "Shenzhen",
+      "blue": "Guangzhou",
+      "green": "Beijing"
+    },
+    "correct": "green"
+  },
+  {
+    "question": "What is the capital of Russia?",
+    "answers": {
+      "red": "Saint Petersburg",
+      "yellow": "Sochi",
+      "blue": "Moscow",
+      "green": "Kazan"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "What is the capital of South Korea?",
+    "answers": {
+      "red": "Busan",
+      "yellow": "Daegu",
+      "blue": "Incheon",
+      "green": "Seoul"
+    },
+    "correct": "green"
+  },
+  {
+    "question": "What is the capital of India?",
+    "answers": {
+      "red": "Mumbai",
+      "yellow": "Chennai",
+      "blue": "New Delhi",
+      "green": "Bangalore"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "What is the capital of Thailand?",
+    "answers": {
+      "red": "Phuket",
+      "yellow": "Pattaya",
+      "blue": "Chiang Mai",
+      "green": "Bangkok"
+    },
+    "correct": "green"
+  },
+  {
+    "question": "What is the capital of Vietnam?",
+    "answers": {
+      "red": "Ho Chi Minh City",
+      "yellow": "Hai Phong",
+      "blue": "Da Nang",
+      "green": "Hanoi"
+    },
+    "correct": "green"
+  },
+  {
+    "question": "What is the capital of Egypt?",
+    "answers": {
+      "red": "Alexandria",
+      "yellow": "Luxor",
+      "blue": "Giza",
+      "green": "Cairo"
+    },
+    "correct": "green"
+  },
+  {
+    "question": "What is the capital of Turkey?",
+    "answers": {
+      "red": "Istanbul",
+      "yellow": "Bursa",
+      "blue": "Izmir",
+      "green": "Ankara"
+    },
+    "correct": "green"
+  },
+  {
+    "question": "What is the capital of Argentina?",
+    "answers": {
+      "red": "Rosario",
+      "yellow": "Mendoza",
+      "blue": "Córdoba",
+      "green": "Buenos Aires"
+    },
+    "correct": "green"
+  },
+  {
+    "question": "What is the capital of South Africa?",
+    "answers": {
+      "red": "Cape Town",
+      "yellow": "Durban",
+      "blue": "Johannesburg",
+      "green": "Pretoria"
+    },
+    "correct": "green"
+  }
+]

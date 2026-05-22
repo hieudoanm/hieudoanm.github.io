@@ -1,0 +1,70 @@
+{
+  "totalFiles": 10,
+  "totalQuestions": 266,
+  "categories": {
+    "geography": {
+      "quizCount": 1,
+      "questionCount": 20,
+      "quizzes": [
+        {
+          "file": "json/geography/capitals.json",
+          "questions": 20
+        }
+      ]
+    },
+    "united-states": {
+      "quizCount": 2,
+      "questionCount": 80,
+      "quizzes": [
+        {
+          "file": "json/history/united-states/presidents.json",
+          "questions": 46
+        },
+        {
+          "file": "json/history/united-states/vice-presidents.json",
+          "questions": 34
+        }
+      ]
+    },
+    "football": {
+      "quizCount": 3,
+      "questionCount": 84,
+      "quizzes": [
+        {
+          "file": "json/sports/football/world-cup.json",
+          "questions": 22
+        },
+        {
+          "file": "json/sports/football/champions-league.json",
+          "questions": 31
+        },
+        {
+          "file": "json/sports/football/premier-league.json",
+          "questions": 31
+        }
+      ]
+    },
+    "tennis": {
+      "quizCount": 4,
+      "questionCount": 82,
+      "quizzes": [
+        {
+          "file": "json/sports/tennis/us-open.json",
+          "questions": 46
+        },
+        {
+          "file": "json/sports/tennis/french-open.json",
+          "questions": 10
+        },
+        {
+          "file": "json/sports/tennis/winbledon.json",
+          "questions": 13
+        },
+        {
+          "file": "json/sports/tennis/australia-open.json",
+          "questions": 13
+        }
+      ]
+    }
+  }
+}

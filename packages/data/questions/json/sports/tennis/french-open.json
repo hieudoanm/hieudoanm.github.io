@@ -1,0 +1,102 @@
+[
+  {
+    "question": "Who won the French Open (Men's Singles) in 1968?",
+    "answers": {
+      "red": "Rod Laver",
+      "yellow": "Manuel Santana",
+      "blue": "Ken Rosewall",
+      "green": "Ilie Năstase"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the French Open (Men's Singles) in 1974?",
+    "answers": {
+      "red": "Björn Borg",
+      "yellow": "Jimmy Connors",
+      "blue": "Guillermo Vilas",
+      "green": "Ilie Năstase"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the French Open (Men's Singles) in 1983?",
+    "answers": {
+      "red": "Ivan Lendl",
+      "yellow": "John McEnroe",
+      "blue": "Guillermo Vilas",
+      "green": "Mats Wilander"
+    },
+    "correct": "green"
+  },
+  {
+    "question": "Who won the French Open (Men's Singles) in 1990?",
+    "answers": {
+      "red": "Andre Agassi",
+      "yellow": "Stefan Edberg",
+      "blue": "Ivan Lendl",
+      "green": "Andrés Gómez"
+    },
+    "correct": "green"
+  },
+  {
+    "question": "Who won the French Open (Men's Singles) in 2000?",
+    "answers": {
+      "red": "Andre Agassi",
+      "yellow": "Carlos Moyá",
+      "blue": "Gustavo Kuerten",
+      "green": "Marat Safin"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the French Open (Men's Singles) in 2005?",
+    "answers": {
+      "red": "Roger Federer",
+      "yellow": "Gastón Gaudio",
+      "blue": "Rafael Nadal",
+      "green": "Juan Carlos Ferrero"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the French Open (Men's Singles) in 2008?",
+    "answers": {
+      "red": "Rafael Nadal",
+      "yellow": "Andy Murray",
+      "blue": "Roger Federer",
+      "green": "Novak Djokovic"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the French Open (Men's Singles) in 2015?",
+    "answers": {
+      "red": "Stan Wawrinka",
+      "yellow": "Andy Murray",
+      "blue": "Novak Djokovic",
+      "green": "Rafael Nadal"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the French Open (Men's Singles) in 2020?",
+    "answers": {
+      "red": "Rafael Nadal",
+      "yellow": "Alexander Zverev",
+      "blue": "Novak Djokovic",
+      "green": "Dominic Thiem"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the French Open (Men's Singles) in 2023?",
+    "answers": {
+      "red": "Novak Djokovic",
+      "yellow": "Casper Ruud",
+      "blue": "Carlos Alcaraz",
+      "green": "Rafael Nadal"
+    },
+    "correct": "red"
+  }
+]

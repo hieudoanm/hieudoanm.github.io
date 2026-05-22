@@ -38,28 +38,6 @@ export const apps: App[] = [
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
-    category: 'games',
-    emoji: '♟',
-    id: 'chess',
-    name: 'Chess',
-    href: 'https://hieudoanm.github.io/chess',
-    github: 'https://github.com/hieudoanm/chess',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/chess/refs/heads/master/images/app.png',
-    tags: ['android', 'macos', 'web'],
-  },
-  {
-    category: 'games',
-    emoji: '❓',
-    id: 'quiz',
-    name: 'Quiz',
-    href: 'https://hieudoanm.github.io/quiz',
-    github: 'https://github.com/hieudoanm/quiz',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/quiz/refs/heads/master/images/app.png',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
     category: 'template',
     emoji: '🚀',
     id: 'start',
@@ -80,6 +58,17 @@ export const apps: App[] = [
     image:
       'https://raw.githubusercontent.com/hieudoanm/telegram/refs/heads/master/images/app.png',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
+  },
+  {
+    category: 'utilities',
+    emoji: '♟',
+    id: 'chess',
+    name: 'Chess',
+    href: 'https://hieudoanm.github.io/chess',
+    github: 'https://github.com/hieudoanm/chess',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/chess/refs/heads/master/images/app.png',
+    tags: ['android', 'macos', 'web'],
   },
   {
     category: 'utilities',

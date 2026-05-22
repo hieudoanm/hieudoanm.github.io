@@ -1,0 +1,222 @@
+[
+  {
+    "question": "Who won the 1930 FIFA World Cup?",
+    "answers": {
+      "red": "Brazil",
+      "yellow": "Italy",
+      "blue": "Argentina",
+      "green": "Uruguay"
+    },
+    "correct": "green"
+  },
+  {
+    "question": "Who won the 1934 FIFA World Cup?",
+    "answers": {
+      "red": "Italy",
+      "yellow": "Argentina",
+      "blue": "Czechoslovakia",
+      "green": "Germany"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the 1938 FIFA World Cup?",
+    "answers": {
+      "red": "Hungary",
+      "yellow": "France",
+      "blue": "Brazil",
+      "green": "Italy"
+    },
+    "correct": "green"
+  },
+  {
+    "question": "Who won the 1950 FIFA World Cup?",
+    "answers": {
+      "red": "Brazil",
+      "yellow": "Italy",
+      "blue": "Uruguay",
+      "green": "Spain"
+    },
+    "correct": "yellow"
+  },
+  {
+    "question": "Who won the 1954 FIFA World Cup?",
+    "answers": {
+      "red": "Hungary",
+      "yellow": "Uruguay",
+      "blue": "Germany",
+      "green": "Brazil"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the 1958 FIFA World Cup?",
+    "answers": {
+      "red": "Brazil",
+      "yellow": "Germany",
+      "blue": "Sweden",
+      "green": "France"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the 1962 FIFA World Cup?",
+    "answers": {
+      "red": "Chile",
+      "yellow": "Czechoslovakia",
+      "blue": "Brazil",
+      "green": "Yugoslavia"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the 1966 FIFA World Cup?",
+    "answers": {
+      "red": "Germany",
+      "yellow": "England",
+      "blue": "Portugal",
+      "green": "Italy"
+    },
+    "correct": "yellow"
+  },
+  {
+    "question": "Who won the 1970 FIFA World Cup?",
+    "answers": {
+      "red": "Italy",
+      "yellow": "Uruguay",
+      "blue": "West Germany",
+      "green": "Brazil"
+    },
+    "correct": "green"
+  },
+  {
+    "question": "Who won the 1974 FIFA World Cup?",
+    "answers": {
+      "red": "Brazil",
+      "yellow": "West Germany",
+      "blue": "Netherlands",
+      "green": "Italy"
+    },
+    "correct": "yellow"
+  },
+  {
+    "question": "Who won the 1978 FIFA World Cup?",
+    "answers": {
+      "red": "Netherlands",
+      "yellow": "Argentina",
+      "blue": "Italy",
+      "green": "Brazil"
+    },
+    "correct": "yellow"
+  },
+  {
+    "question": "Who won the 1982 FIFA World Cup?",
+    "answers": {
+      "red": "Germany",
+      "yellow": "France",
+      "blue": "Italy",
+      "green": "Brazil"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the 1986 FIFA World Cup?",
+    "answers": {
+      "red": "Brazil",
+      "yellow": "France",
+      "blue": "Argentina",
+      "green": "Germany"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the 1990 FIFA World Cup?",
+    "answers": {
+      "red": "Argentina",
+      "yellow": "Brazil",
+      "blue": "Italy",
+      "green": "West Germany"
+    },
+    "correct": "green"
+  },
+  {
+    "question": "Who won the 1994 FIFA World Cup?",
+    "answers": {
+      "red": "Italy",
+      "yellow": "Sweden",
+      "blue": "Brazil",
+      "green": "Germany"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the 1998 FIFA World Cup?",
+    "answers": {
+      "red": "Brazil",
+      "yellow": "Italy",
+      "blue": "Croatia",
+      "green": "France"
+    },
+    "correct": "green"
+  },
+  {
+    "question": "Who won the 2002 FIFA World Cup?",
+    "answers": {
+      "red": "Germany",
+      "yellow": "Brazil",
+      "blue": "Turkey",
+      "green": "South Korea"
+    },
+    "correct": "yellow"
+  },
+  {
+    "question": "Who won the 2006 FIFA World Cup?",
+    "answers": {
+      "red": "France",
+      "yellow": "Italy",
+      "blue": "Portugal",
+      "green": "Germany"
+    },
+    "correct": "yellow"
+  },
+  {
+    "question": "Who won the 2010 FIFA World Cup?",
+    "answers": {
+      "red": "Netherlands",
+      "yellow": "Uruguay",
+      "blue": "Germany",
+      "green": "Spain"
+    },
+    "correct": "green"
+  },
+  {
+    "question": "Who won the 2014 FIFA World Cup?",
+    "answers": {
+      "red": "Brazil",
+      "yellow": "Netherlands",
+      "blue": "Argentina",
+      "green": "Germany"
+    },
+    "correct": "green"
+  },
+  {
+    "question": "Who won the 2018 FIFA World Cup?",
+    "answers": {
+      "red": "Croatia",
+      "yellow": "England",
+      "blue": "Belgium",
+      "green": "France"
+    },
+    "correct": "green"
+  },
+  {
+    "question": "Who won the 2022 FIFA World Cup?",
+    "answers": {
+      "red": "France",
+      "yellow": "Morocco",
+      "blue": "Croatia",
+      "green": "Argentina"
+    },
+    "correct": "green"
+  }
+]

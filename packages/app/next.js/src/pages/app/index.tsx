@@ -30,6 +30,7 @@ import { BlackjackModal } from '@hieudoanm/components/modals/games/BlackjackModa
 import { PalindromeModal } from '@hieudoanm/components/modals/games/PalindromeModal';
 import { PiModal } from '@hieudoanm/components/modals/games/PiNumberModal';
 import { PokedexModal } from '@hieudoanm/components/modals/games/PokedexModal';
+import { QuizifyModal } from '@hieudoanm/components/modals/games/QuizifyModal';
 import { RecallModal } from '@hieudoanm/components/modals/games/RecallModal';
 import { T3Modal } from '@hieudoanm/components/modals/games/T3Modal';
 import { TowersModal } from '@hieudoanm/components/modals/games/TowersModal';
@@ -139,7 +140,8 @@ type ModalId =
   | 'logmar'
   | 'snellen'
   | 'svg'
-  | 'tumbling-e';
+  | 'tumbling-e'
+  | 'quizify';
 
 type SidebarTab = 'tasks' | 'clock';
 
@@ -199,6 +201,7 @@ const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
   snellen: SnellenChartModal,
   svg: SVGModal,
   'tumbling-e': TumblingEChartModal,
+  quizify: QuizifyModal,
 };
 
 /* ------------------------------------------------------------------ */
@@ -489,6 +492,13 @@ const makeTools = (
       emoji: '📕',
       color: '#f59e0b',
       onClick: open('pokedex'),
+    },
+    {
+      label: 'Quizify',
+      description: 'Quiz',
+      emoji: '❓',
+      color: '#f59e0b',
+      onClick: open('quizify'),
     },
     {
       label: 'Recall',

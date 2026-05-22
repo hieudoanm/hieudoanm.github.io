@@ -1,0 +1,132 @@
+[
+  {
+    "question": "Who won Wimbledon (Men's Singles) in 1969?",
+    "answers": {
+      "red": "Rod Laver",
+      "yellow": "Stan Smith",
+      "blue": "Ken Rosewall",
+      "green": "John Newcombe"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won Wimbledon (Men's Singles) in 1976?",
+    "answers": {
+      "red": "Björn Borg",
+      "yellow": "Arthur Ashe",
+      "blue": "Jimmy Connors",
+      "green": "John McEnroe"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won Wimbledon (Men's Singles) in 1980?",
+    "answers": {
+      "red": "Björn Borg",
+      "yellow": "Ivan Lendl",
+      "blue": "John McEnroe",
+      "green": "Jimmy Connors"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won Wimbledon (Men's Singles) in 1985?",
+    "answers": {
+      "red": "Boris Becker",
+      "yellow": "Ivan Lendl",
+      "blue": "Stefan Edberg",
+      "green": "John McEnroe"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won Wimbledon (Men's Singles) in 1990?",
+    "answers": {
+      "red": "Ivan Lendl",
+      "yellow": "Pete Sampras",
+      "blue": "Stefan Edberg",
+      "green": "Boris Becker"
+    },
+    "correct": "yellow"
+  },
+  {
+    "question": "Who won Wimbledon (Men's Singles) in 1995?",
+    "answers": {
+      "red": "Andre Agassi",
+      "yellow": "Michael Chang",
+      "blue": "Pete Sampras",
+      "green": "Boris Becker"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "Who won Wimbledon (Men's Singles) in 2001?",
+    "answers": {
+      "red": "Pete Sampras",
+      "yellow": "Patrick Rafter",
+      "blue": "Andre Agassi",
+      "green": "Lleyton Hewitt"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won Wimbledon (Men's Singles) in 2004?",
+    "answers": {
+      "red": "Andy Roddick",
+      "yellow": "Marat Safin",
+      "blue": "Roger Federer",
+      "green": "Lleyton Hewitt"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "Who won Wimbledon (Men's Singles) in 2008?",
+    "answers": {
+      "red": "Roger Federer",
+      "yellow": "Andy Murray",
+      "blue": "Rafael Nadal",
+      "green": "Novak Djokovic"
+    },
+    "correct": "yellow"
+  },
+  {
+    "question": "Who won Wimbledon (Men's Singles) in 2012?",
+    "answers": {
+      "red": "Andy Murray",
+      "yellow": "Rafael Nadal",
+      "blue": "Roger Federer",
+      "green": "Novak Djokovic"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "Who won Wimbledon (Men's Singles) in 2016?",
+    "answers": {
+      "red": "Andy Murray",
+      "yellow": "Stan Wawrinka",
+      "blue": "Novak Djokovic",
+      "green": "Roger Federer"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won Wimbledon (Men's Singles) in 2019?",
+    "answers": {
+      "red": "Novak Djokovic",
+      "yellow": "Andy Murray",
+      "blue": "Roger Federer",
+      "green": "Rafael Nadal"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won Wimbledon (Men's Singles) in 2023?",
+    "answers": {
+      "red": "Novak Djokovic",
+      "yellow": "Nick Kyrgios",
+      "blue": "Carlos Alcaraz",
+      "green": "Daniil Medvedev"
+    },
+    "correct": "blue"
+  }
+]

@@ -1,0 +1,462 @@
+[
+  {
+    "question": "Who won the US Open in 1978 (Men’s Singles)?",
+    "answers": {
+      "red": "John McEnroe",
+      "yellow": "Guillermo Vilas",
+      "blue": "Björn Borg",
+      "green": "Jimmy Connors"
+    },
+    "correct": "green"
+  },
+  {
+    "question": "Who won the US Open in 1979 (Men’s Singles)?",
+    "answers": {
+      "red": "Björn Borg",
+      "yellow": "Guillermo Vilas",
+      "blue": "John McEnroe",
+      "green": "Jimmy Connors"
+    },
+    "correct": "yellow"
+  },
+  {
+    "question": "Who won the US Open in 1980 (Men’s Singles)?",
+    "answers": {
+      "red": "John McEnroe",
+      "yellow": "Guillermo Vilas",
+      "blue": "Jimmy Connors",
+      "green": "Björn Borg"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the US Open in 1981 (Men’s Singles)?",
+    "answers": {
+      "red": "Jimmy Connors",
+      "yellow": "Ivan Lendl",
+      "blue": "John McEnroe",
+      "green": "Björn Borg"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the US Open in 1982 (Men’s Singles)?",
+    "answers": {
+      "red": "Jimmy Connors",
+      "yellow": "Guillermo Vilas",
+      "blue": "Ivan Lendl",
+      "green": "John McEnroe"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the US Open in 1983 (Men’s Singles)?",
+    "answers": {
+      "red": "Ivan Lendl",
+      "yellow": "Mats Wilander",
+      "blue": "John McEnroe",
+      "green": "Jimmy Connors"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the US Open in 1984 (Men’s Singles)?",
+    "answers": {
+      "red": "John McEnroe",
+      "yellow": "Mats Wilander",
+      "blue": "Ivan Lendl",
+      "green": "Jimmy Connors"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the US Open in 1985 (Men’s Singles)?",
+    "answers": {
+      "red": "Ivan Lendl",
+      "yellow": "Boris Becker",
+      "blue": "John McEnroe",
+      "green": "Mats Wilander"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the US Open in 1986 (Men’s Singles)?",
+    "answers": {
+      "red": "Ivan Lendl",
+      "yellow": "Mats Wilander",
+      "blue": "Stefan Edberg",
+      "green": "Boris Becker"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the US Open in 1987 (Men’s Singles)?",
+    "answers": {
+      "red": "Ivan Lendl",
+      "yellow": "Stefan Edberg",
+      "blue": "John McEnroe",
+      "green": "Mats Wilander"
+    },
+    "correct": "yellow"
+  },
+  {
+    "question": "Who won the US Open in 1988 (Men’s Singles)?",
+    "answers": {
+      "red": "Mats Wilander",
+      "yellow": "Boris Becker",
+      "blue": "Ivan Lendl",
+      "green": "Stefan Edberg"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the US Open in 1989 (Men’s Singles)?",
+    "answers": {
+      "red": "Boris Becker",
+      "yellow": "Andre Agassi",
+      "blue": "Ivan Lendl",
+      "green": "Stefan Edberg"
+    },
+    "correct": "green"
+  },
+  {
+    "question": "Who won the US Open in 1990 (Men’s Singles)?",
+    "answers": {
+      "red": "Andre Agassi",
+      "yellow": "Stefan Edberg",
+      "blue": "Ivan Lendl",
+      "green": "Pete Sampras"
+    },
+    "correct": "green"
+  },
+  {
+    "question": "Who won the US Open in 1991 (Men’s Singles)?",
+    "answers": {
+      "red": "Jim Courier",
+      "yellow": "Stefan Edberg",
+      "blue": "Pete Sampras",
+      "green": "Andre Agassi"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the US Open in 1992 (Men’s Singles)?",
+    "answers": {
+      "red": "Jim Courier",
+      "yellow": "Stefan Edberg",
+      "blue": "Pete Sampras",
+      "green": "Andre Agassi"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the US Open in 1993 (Men’s Singles)?",
+    "answers": {
+      "red": "Pete Sampras",
+      "yellow": "Stefan Edberg",
+      "blue": "Andre Agassi",
+      "green": "Jim Courier"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the US Open in 1994 (Men’s Singles)?",
+    "answers": {
+      "red": "Andre Agassi",
+      "yellow": "Stefan Edberg",
+      "blue": "Pete Sampras",
+      "green": "Jim Courier"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the US Open in 1995 (Men’s Singles)?",
+    "answers": {
+      "red": "Andre Agassi",
+      "yellow": "Boris Becker",
+      "blue": "Pete Sampras",
+      "green": "Jim Courier"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the US Open in 1996 (Men’s Singles)?",
+    "answers": {
+      "red": "Andre Agassi",
+      "yellow": "Boris Becker",
+      "blue": "Pete Sampras",
+      "green": "Michael Chang"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the US Open in 1997 (Men’s Singles)?",
+    "answers": {
+      "red": "Patrick Rafter",
+      "yellow": "Michael Chang",
+      "blue": "Pete Sampras",
+      "green": "Andre Agassi"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the US Open in 1998 (Men’s Singles)?",
+    "answers": {
+      "red": "Patrick Rafter",
+      "yellow": "Marcelo Rios",
+      "blue": "Pete Sampras",
+      "green": "Andre Agassi"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the US Open in 1999 (Men’s Singles)?",
+    "answers": {
+      "red": "Andre Agassi",
+      "yellow": "Marat Safin",
+      "blue": "Pete Sampras",
+      "green": "Patrick Rafter"
+    },
+    "correct": "green"
+  },
+  {
+    "question": "Who won the US Open in 2000 (Men’s Singles)?",
+    "answers": {
+      "red": "Andre Agassi",
+      "yellow": "Gustavo Kuerten",
+      "blue": "Pete Sampras",
+      "green": "Marat Safin"
+    },
+    "correct": "green"
+  },
+  {
+    "question": "Who won the US Open in 2001 (Men’s Singles)?",
+    "answers": {
+      "red": "Lleyton Hewitt",
+      "yellow": "Marat Safin",
+      "blue": "Pete Sampras",
+      "green": "Andre Agassi"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the US Open in 2002 (Men’s Singles)?",
+    "answers": {
+      "red": "Pete Sampras",
+      "yellow": "Marat Safin",
+      "blue": "Andre Agassi",
+      "green": "Lleyton Hewitt"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the US Open in 2003 (Men’s Singles)?",
+    "answers": {
+      "red": "Andre Agassi",
+      "yellow": "Roger Federer",
+      "blue": "Pete Sampras",
+      "green": "Andy Roddick"
+    },
+    "correct": "green"
+  },
+  {
+    "question": "Who won the US Open in 2004 (Men’s Singles)?",
+    "answers": {
+      "red": "Andy Roddick",
+      "yellow": "Andre Agassi",
+      "blue": "Roger Federer",
+      "green": "Lleyton Hewitt"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the US Open in 2005 (Men’s Singles)?",
+    "answers": {
+      "red": "Andy Roddick",
+      "yellow": "Rafael Nadal",
+      "blue": "Roger Federer",
+      "green": "Andre Agassi"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the US Open in 2006 (Men’s Singles)?",
+    "answers": {
+      "red": "Andy Roddick",
+      "yellow": "Rafael Nadal",
+      "blue": "Roger Federer",
+      "green": "Andre Agassi"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the US Open in 2007 (Men’s Singles)?",
+    "answers": {
+      "red": "Novak Djokovic",
+      "yellow": "Andy Roddick",
+      "blue": "Roger Federer",
+      "green": "Rafael Nadal"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the US Open in 2008 (Men’s Singles)?",
+    "answers": {
+      "red": "Novak Djokovic",
+      "yellow": "Andy Roddick",
+      "blue": "Roger Federer",
+      "green": "Rafael Nadal"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the US Open in 2009 (Men’s Singles)?",
+    "answers": {
+      "red": "Novak Djokovic",
+      "yellow": "Juan Martin del Potro",
+      "blue": "Roger Federer",
+      "green": "Rafael Nadal"
+    },
+    "correct": "yellow"
+  },
+  {
+    "question": "Who won the US Open in 2010 (Men’s Singles)?",
+    "answers": {
+      "red": "Novak Djokovic",
+      "yellow": "Andy Murray",
+      "blue": "Rafael Nadal",
+      "green": "Roger Federer"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the US Open in 2011 (Men’s Singles)?",
+    "answers": {
+      "red": "Novak Djokovic",
+      "yellow": "Andy Murray",
+      "blue": "Rafael Nadal",
+      "green": "Roger Federer"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the US Open in 2012 (Men’s Singles)?",
+    "answers": {
+      "red": "Novak Djokovic",
+      "yellow": "Rafael Nadal",
+      "blue": "Andy Murray",
+      "green": "Roger Federer"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the US Open in 2013 (Men’s Singles)?",
+    "answers": {
+      "red": "Novak Djokovic",
+      "yellow": "Andy Murray",
+      "blue": "Rafael Nadal",
+      "green": "Roger Federer"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the US Open in 2014 (Men’s Singles)?",
+    "answers": {
+      "red": "Marin Cilic",
+      "yellow": "Roger Federer",
+      "blue": "Kei Nishikori",
+      "green": "Novak Djokovic"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the US Open in 2015 (Men’s Singles)?",
+    "answers": {
+      "red": "Novak Djokovic",
+      "yellow": "Stan Wawrinka",
+      "blue": "Roger Federer",
+      "green": "Andy Murray"
+    },
+    "correct": "yellow"
+  },
+  {
+    "question": "Who won the US Open in 2016 (Men’s Singles)?",
+    "answers": {
+      "red": "Novak Djokovic",
+      "yellow": "Rafael Nadal",
+      "blue": "Andy Murray",
+      "green": "Stan Wawrinka"
+    },
+    "correct": "green"
+  },
+  {
+    "question": "Who won the US Open in 2017 (Men’s Singles)?",
+    "answers": {
+      "red": "Rafael Nadal",
+      "yellow": "Juan Martin del Potro",
+      "blue": "Roger Federer",
+      "green": "Novak Djokovic"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the US Open in 2018 (Men’s Singles)?",
+    "answers": {
+      "red": "Novak Djokovic",
+      "yellow": "Juan Martin del Potro",
+      "blue": "Roger Federer",
+      "green": "Rafael Nadal"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the US Open in 2019 (Men’s Singles)?",
+    "answers": {
+      "red": "Rafael Nadal",
+      "yellow": "Roger Federer",
+      "blue": "Novak Djokovic",
+      "green": "Daniil Medvedev"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the US Open in 2020 (Men’s Singles)?",
+    "answers": {
+      "red": "Novak Djokovic",
+      "yellow": "Andy Murray",
+      "blue": "Daniil Medvedev",
+      "green": "Alexander Zverev"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the US Open in 2021 (Men’s Singles)?",
+    "answers": {
+      "red": "Novak Djokovic",
+      "yellow": "Stefanos Tsitsipas",
+      "blue": "Daniil Medvedev",
+      "green": "Alexander Zverev"
+    },
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the US Open in 2022 (Men’s Singles)?",
+    "answers": {
+      "red": "Carlos Alcaraz",
+      "yellow": "Novak Djokovic",
+      "blue": "Daniil Medvedev",
+      "green": "Rafael Nadal"
+    },
+    "correct": "red"
+  },
+  {
+    "question": "Who won the US Open in 2023 (Men’s Singles)?",
+    "answers": {
+      "red": "Novak Djokovic",
+      "yellow": "Stefanos Tsitsipas",
+      "blue": "Daniil Medvedev",
+      "green": "Carlos Alcaraz"
+    },
+    "correct": "red"
+  }
+]
