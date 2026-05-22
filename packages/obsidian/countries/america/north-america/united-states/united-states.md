@@ -1,4 +1,10 @@
 # United States
 
-1. [[countries/america/north-america/united-states/sports/basketball|Basketball]]
-2. [[States]]
+## Sports
+
+1. [[NBA]]
+2. [[NFL]]
+
+## Administrative Divisions
+
+1. [[States]]
