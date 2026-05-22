@@ -2,6 +2,10 @@
 
 ## Table of Contents
 
+- [United Kingdom](#united-kingdom)
+  - [Table of Contents](#table-of-contents)
+  - [Premier League](#premier-league)
+
 ## Premier League
 
 | County                   | City                | Club                    | Stadium                       |
