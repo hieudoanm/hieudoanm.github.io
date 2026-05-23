@@ -1,10 +1,24 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`StatusTab should render 1`] = `
+exports[`StatusTab should match snapshot 1`] = `
 <div>
   <div
     class="flex h-full flex-col"
   >
+    <div
+      class="border-base-300 border-b p-3"
+    >
+      <div
+        class="relative"
+      >
+        <input
+          class="input input-bordered input-xs w-full pr-6"
+          placeholder="Search services…"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
     <div
       class="flex-1 overflow-y-auto"
     >
@@ -23,11 +37,13 @@ exports[`StatusTab should render 1`] = `
             <div
               class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
             >
-              <span
-                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              <a
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
+                href="https://analytics.status.atlassian.com/api/v2/status.json"
+                target="_blank"
               >
                 analytics
-              </span>
+              </a>
               <div
                 class="ml-2 shrink-0"
               >
@@ -39,11 +55,13 @@ exports[`StatusTab should render 1`] = `
             <div
               class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
             >
-              <span
-                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              <a
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
+                href="https://atlas.status.atlassian.com/api/v2/status.json"
+                target="_blank"
               >
                 atlas
-              </span>
+              </a>
               <div
                 class="ml-2 shrink-0"
               >
@@ -55,11 +73,13 @@ exports[`StatusTab should render 1`] = `
             <div
               class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
             >
-              <span
-                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              <a
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
+                href="https://compass.status.atlassian.com/api/v2/status.json"
+                target="_blank"
               >
                 compass
-              </span>
+              </a>
               <div
                 class="ml-2 shrink-0"
               >
@@ -71,11 +91,13 @@ exports[`StatusTab should render 1`] = `
             <div
               class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
             >
-              <span
-                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              <a
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
+                href="https://confluence.status.atlassian.com/api/v2/status.json"
+                target="_blank"
               >
                 confluence
-              </span>
+              </a>
               <div
                 class="ml-2 shrink-0"
               >
@@ -87,11 +109,13 @@ exports[`StatusTab should render 1`] = `
             <div
               class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
             >
-              <span
-                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              <a
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
+                href="https://developer.status.atlassian.com/api/v2/status.json"
+                target="_blank"
               >
                 developer
-              </span>
+              </a>
               <div
                 class="ml-2 shrink-0"
               >
@@ -103,11 +127,13 @@ exports[`StatusTab should render 1`] = `
             <div
               class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
             >
-              <span
-                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              <a
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
+                href="https://jira-service-management.status.atlassian.com/api/v2/status.json"
+                target="_blank"
               >
                 jira service management
-              </span>
+              </a>
               <div
                 class="ml-2 shrink-0"
               >
@@ -119,11 +145,13 @@ exports[`StatusTab should render 1`] = `
             <div
               class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
             >
-              <span
-                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              <a
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
+                href="https://jira-software.status.atlassian.com/api/v2/status.json"
+                target="_blank"
               >
                 jira software
-              </span>
+              </a>
               <div
                 class="ml-2 shrink-0"
               >
@@ -135,11 +163,13 @@ exports[`StatusTab should render 1`] = `
             <div
               class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
             >
-              <span
-                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              <a
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
+                href="https://guard.status.atlassian.com/api/v2/status.json"
+                target="_blank"
               >
                 guard
-              </span>
+              </a>
               <div
                 class="ml-2 shrink-0"
               >
@@ -151,11 +181,13 @@ exports[`StatusTab should render 1`] = `
             <div
               class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
             >
-              <span
-                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              <a
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
+                href="https://opsgenie.status.atlassian.com/api/v2/status.json"
+                target="_blank"
               >
                 opsgenie
-              </span>
+              </a>
               <div
                 class="ml-2 shrink-0"
               >
@@ -167,11 +199,13 @@ exports[`StatusTab should render 1`] = `
             <div
               class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
             >
-              <span
-                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              <a
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
+                href="https://partners.status.atlassian.com/api/v2/status.json"
+                target="_blank"
               >
                 partners
-              </span>
+              </a>
               <div
                 class="ml-2 shrink-0"
               >
@@ -183,11 +217,13 @@ exports[`StatusTab should render 1`] = `
             <div
               class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
             >
-              <span
-                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              <a
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
+                href="https://support.status.atlassian.com/api/v2/status.json"
+                target="_blank"
               >
                 support
-              </span>
+              </a>
               <div
                 class="ml-2 shrink-0"
               >
@@ -199,11 +235,13 @@ exports[`StatusTab should render 1`] = `
             <div
               class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
             >
-              <span
-                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              <a
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
+                href="https://trello.status.atlassian.com/api/v2/status.json"
+                target="_blank"
               >
                 trello
-              </span>
+              </a>
               <div
                 class="ml-2 shrink-0"
               >
@@ -226,11 +264,13 @@ exports[`StatusTab should render 1`] = `
             <div
               class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
             >
-              <span
-                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              <a
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
+                href="https://status.supabase.com/api/v2/status.json"
+                target="_blank"
               >
                 supabase
-              </span>
+              </a>
               <div
                 class="ml-2 shrink-0"
               >
@@ -242,11 +282,13 @@ exports[`StatusTab should render 1`] = `
             <div
               class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
             >
-              <span
-                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              <a
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
+                href="https://status.render.com/api/v2/status.json"
+                target="_blank"
               >
                 render
-              </span>
+              </a>
               <div
                 class="ml-2 shrink-0"
               >
@@ -258,11 +300,13 @@ exports[`StatusTab should render 1`] = `
             <div
               class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
             >
-              <span
-                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              <a
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
+                href="https://status.flyio.net/api/v2/status.json"
+                target="_blank"
               >
                 flyio
-              </span>
+              </a>
               <div
                 class="ml-2 shrink-0"
               >
@@ -274,11 +318,13 @@ exports[`StatusTab should render 1`] = `
             <div
               class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
             >
-              <span
-                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              <a
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
+                href="https://www.cloudflarestatus.com/api/v2/status.json"
+                target="_blank"
               >
                 cloudflare
-              </span>
+              </a>
               <div
                 class="ml-2 shrink-0"
               >
@@ -290,11 +336,13 @@ exports[`StatusTab should render 1`] = `
             <div
               class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
             >
-              <span
-                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              <a
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
+                href="https://www.netlifystatus.com/api/v2/status.json"
+                target="_blank"
               >
                 netlify
-              </span>
+              </a>
               <div
                 class="ml-2 shrink-0"
               >
@@ -306,11 +354,13 @@ exports[`StatusTab should render 1`] = `
             <div
               class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
             >
-              <span
-                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              <a
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
+                href="https://www.vercel-status.com/api/v2/status.json"
+                target="_blank"
               >
                 vercel
-              </span>
+              </a>
               <div
                 class="ml-2 shrink-0"
               >
@@ -333,11 +383,13 @@ exports[`StatusTab should render 1`] = `
             <div
               class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
             >
-              <span
-                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              <a
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
+                href="https://status.hedera.com/api/v2/status.json"
+                target="_blank"
               >
                 hedera
-              </span>
+              </a>
               <div
                 class="ml-2 shrink-0"
               >
@@ -349,11 +401,13 @@ exports[`StatusTab should render 1`] = `
             <div
               class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
             >
-              <span
-                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              <a
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
+                href="https://status.solana.com/api/v2/status.json"
+                target="_blank"
               >
                 solana
-              </span>
+              </a>
               <div
                 class="ml-2 shrink-0"
               >
@@ -365,11 +419,13 @@ exports[`StatusTab should render 1`] = `
             <div
               class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
             >
-              <span
-                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              <a
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
+                href="https://status.polygon.technology/api/v2/status.json"
+                target="_blank"
               >
                 polygon
-              </span>
+              </a>
               <div
                 class="ml-2 shrink-0"
               >
@@ -392,11 +448,13 @@ exports[`StatusTab should render 1`] = `
             <div
               class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
             >
-              <span
-                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              <a
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
+                href="https://bitbucket.status.atlassian.com/api/v2/status.json"
+                target="_blank"
               >
                 bitbucket
-              </span>
+              </a>
               <div
                 class="ml-2 shrink-0"
               >
@@ -408,11 +466,13 @@ exports[`StatusTab should render 1`] = `
             <div
               class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
             >
-              <span
-                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              <a
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
+                href="https://www.githubstatus.com/api/v2/status.json"
+                target="_blank"
               >
                 github
-              </span>
+              </a>
               <div
                 class="ml-2 shrink-0"
               >
@@ -424,11 +484,13 @@ exports[`StatusTab should render 1`] = `
             <div
               class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
             >
-              <span
-                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize transition-colors"
+              <a
+                class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
+                href="https://status.npmjs.org/api/v2/status.json"
+                target="_blank"
               >
                 npm
-              </span>
+              </a>
               <div
                 class="ml-2 shrink-0"
               >
@@ -447,8 +509,7 @@ exports[`StatusTab should render 1`] = `
       <p
         class="text-xs tracking-widest uppercase opacity-20"
       >
-        24
-         services · 2 min refresh
+        24 services · 2 min refresh
       </p>
     </footer>
   </div>
