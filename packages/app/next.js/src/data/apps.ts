@@ -16,6 +16,17 @@ export type App = {
 
 export const apps: App[] = [
   {
+    category: 'ai',
+    emoji: '🧪',
+    id: 'hieudoanm',
+    name: 'Hieu Doan',
+    href: 'https://hieudoanm.github.io/hieudoanm',
+    github: 'https://github.com/hieudoanm/hieudoanm',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/images/app.png',
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
+  },
+  {
     category: 'template',
     emoji: '🚀',
     id: 'start',
@@ -24,7 +35,7 @@ export const apps: App[] = [
     github: 'https://github.com/hieudoanm/start',
     image:
       'https://raw.githubusercontent.com/hieudoanm/start/refs/heads/master/images/app.png',
-    tags: ['android', 'macos', 'web'],
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
     category: 'template',
@@ -46,7 +57,7 @@ export const apps: App[] = [
     github: 'https://github.com/hieudoanm/attractors',
     image:
       'https://raw.githubusercontent.com/hieudoanm/attractors/refs/heads/master/images/app.png',
-    tags: ['android', 'macos', 'web'],
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
     category: 'utilities',
@@ -57,18 +68,7 @@ export const apps: App[] = [
     github: 'https://github.com/hieudoanm/chess',
     image:
       'https://raw.githubusercontent.com/hieudoanm/chess/refs/heads/master/images/app.png',
-    tags: ['android', 'macos', 'web'],
-  },
-  {
-    category: 'utilities',
-    emoji: '🧩',
-    id: 'composition',
-    name: 'Composition',
-    href: 'https://hieudoanm.github.io/composition',
-    github: 'https://github.com/hieudoanm/composition',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/composition/refs/heads/master/images/app.png',
-    tags: ['android', 'macos', 'web'],
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
     category: 'utilities',
@@ -79,17 +79,6 @@ export const apps: App[] = [
     github: 'https://github.com/hieudoanm/docs',
     image:
       'https://raw.githubusercontent.com/hieudoanm/docs/refs/heads/master/images/app.png',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
-    category: 'utilities',
-    emoji: '🧪',
-    id: 'hieudoanm',
-    name: 'Hieu Doan',
-    href: 'https://hieudoanm.github.io/hieudoanm',
-    github: 'https://github.com/hieudoanm/hieudoanm',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/images/app.png',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {

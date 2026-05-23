@@ -116,6 +116,14 @@ const InvoiceParserModal = dynamic(
   { ssr: false }
 );
 
+const CameraModal = dynamic(
+  () =>
+    import('@hieudoanm/components/modals/images/CameraModal').then(
+      (mod) => mod.CameraModal
+    ),
+  { ssr: false }
+);
+
 /* ------------------------------------------------------------------ */
 /* Types                                                                */
 /* ------------------------------------------------------------------ */
@@ -130,6 +138,7 @@ type ModalId =
   | 'doi'
   | 'emojis'
   | 'house'
+  | 'camera'
   | 'ip'
   | 'kaprekar'
   | 'morse'
@@ -224,6 +233,7 @@ const MODAL_MAP: Record<
   english: EnglishModal,
   'github-social-preview': GitHubSocialPreviewModal,
   redact: RedactModal,
+  camera: CameraModal,
   'json-schema': JSONSchemaModal,
   'shopify-detect': ShopifyDetectModal,
   pokedex: PokedexModal,
@@ -606,6 +616,13 @@ const makeTools = (
       emoji: '🧪',
       color: '#eab308',
       onClick: open('breaking-bad'),
+    },
+    {
+      label: 'Camera',
+      description: 'Composition',
+      emoji: '📸',
+      color: '#ef4444',
+      onClick: open('camera'),
     },
     {
       label: 'Social Preview',

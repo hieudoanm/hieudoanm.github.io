@@ -1,11 +1,19 @@
 # 👨‍💻 I'm [HIEU DOAN](https://hieudoanm.github.io)
 
-## Table of Contents (9)
+## Table of Contents (8)
 
 - [👨‍💻 I'm HIEU DOAN](#-im-hieu-doan)
-  - [Table of Contents (9)](#table-of-contents-9)
+  - [Table of Contents (8)](#table-of-contents-8)
+  - [AI (1)](#ai-1)
   - [Template (2)](#template-2)
-  - [Utilities (7)](#utilities-7)
+  - [Utilities (5)](#utilities-5)
+
+## AI (1)
+
+1. 🧪 [Hieu Doan][hieudoanm] - [GitHub][hieudoanm-gh]
+
+[hieudoanm]: https://hieudoanm.github.io/hieudoanm
+[hieudoanm-gh]: https://github.com/hieudoanm/hieudoanm
 
 ## Template (2)
 
@@ -17,26 +25,20 @@
 [telegram]: https://hieudoanm.github.io/telegram
 [telegram-gh]: https://github.com/hieudoanm/telegram
 
-## Utilities (7)
+## Utilities (5)
 
 1. 🌀 [Attractors][attractors] - [GitHub][attractors-gh]
 2. ♟ [Chess][chess] - [GitHub][chess-gh]
-3. 🧩 [Composition][composition] - [GitHub][composition-gh]
-4. 📚 [Docs][docs] - [GitHub][docs-gh]
-5. 🧪 [Hieu Doan][hieudoanm] - [GitHub][hieudoanm-gh]
-6. 🤟 [Sign][sign] - [GitHub][sign-gh]
-7. 🖥️ [System][system] - [GitHub][system-gh]
+3. 📚 [Docs][docs] - [GitHub][docs-gh]
+4. 🤟 [Sign][sign] - [GitHub][sign-gh]
+5. 🖥️ [System][system] - [GitHub][system-gh]
 
 [attractors]: https://hieudoanm.github.io/attractors
 [attractors-gh]: https://github.com/hieudoanm/attractors
 [chess]: https://hieudoanm.github.io/chess
 [chess-gh]: https://github.com/hieudoanm/chess
-[composition]: https://hieudoanm.github.io/composition
-[composition-gh]: https://github.com/hieudoanm/composition
 [docs]: https://hieudoanm.github.io/docs
 [docs-gh]: https://github.com/hieudoanm/docs
-[hieudoanm]: https://hieudoanm.github.io/hieudoanm
-[hieudoanm-gh]: https://github.com/hieudoanm/hieudoanm
 [sign]: https://hieudoanm.github.io/sign
 [sign-gh]: https://github.com/hieudoanm/sign
 [system]: https://hieudoanm.github.io/system

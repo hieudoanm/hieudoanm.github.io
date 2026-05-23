@@ -1,5 +1,15 @@
 [
   {
+    "category": "ai",
+    "emoji": "🧪",
+    "id": "hieudoanm",
+    "name": "Hieu Doan",
+    "href": "https://hieudoanm.github.io/hieudoanm",
+    "github": "https://github.com/hieudoanm/hieudoanm",
+    "image": "https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/images/app.png",
+    "tags": ["cli", "extension", "android", "macos", "web"]
+  },
+  {
     "category": "template",
     "emoji": "🚀",
     "id": "start",
@@ -7,7 +17,7 @@
     "href": "https://hieudoanm.github.io/start",
     "github": "https://github.com/hieudoanm/start",
     "image": "https://raw.githubusercontent.com/hieudoanm/start/refs/heads/master/images/app.png",
-    "tags": ["android", "macos", "web"]
+    "tags": ["cli", "extension", "android", "macos", "web"]
   },
   {
     "category": "template",
@@ -27,7 +37,7 @@
     "href": "https://hieudoanm.github.io/attractors",
     "github": "https://github.com/hieudoanm/attractors",
     "image": "https://raw.githubusercontent.com/hieudoanm/attractors/refs/heads/master/images/app.png",
-    "tags": ["android", "macos", "web"]
+    "tags": ["cli", "extension", "android", "macos", "web"]
   },
   {
     "category": "utilities",
@@ -37,17 +47,7 @@
     "href": "https://hieudoanm.github.io/chess",
     "github": "https://github.com/hieudoanm/chess",
     "image": "https://raw.githubusercontent.com/hieudoanm/chess/refs/heads/master/images/app.png",
-    "tags": ["android", "macos", "web"]
-  },
-  {
-    "category": "utilities",
-    "emoji": "🧩",
-    "id": "composition",
-    "name": "Composition",
-    "href": "https://hieudoanm.github.io/composition",
-    "github": "https://github.com/hieudoanm/composition",
-    "image": "https://raw.githubusercontent.com/hieudoanm/composition/refs/heads/master/images/app.png",
-    "tags": ["android", "macos", "web"]
+    "tags": ["cli", "extension", "android", "macos", "web"]
   },
   {
     "category": "utilities",
@@ -57,16 +57,6 @@
     "href": "https://hieudoanm.github.io/docs",
     "github": "https://github.com/hieudoanm/docs",
     "image": "https://raw.githubusercontent.com/hieudoanm/docs/refs/heads/master/images/app.png",
-    "tags": ["cli", "extension", "android", "macos", "web"]
-  },
-  {
-    "category": "utilities",
-    "emoji": "🧪",
-    "id": "hieudoanm",
-    "name": "Hieu Doan",
-    "href": "https://hieudoanm.github.io/hieudoanm",
-    "github": "https://github.com/hieudoanm/hieudoanm",
-    "image": "https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/images/app.png",
     "tags": ["cli", "extension", "android", "macos", "web"]
   },
   {
