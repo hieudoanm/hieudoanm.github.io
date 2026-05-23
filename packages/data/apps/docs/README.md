@@ -1,6 +1,6 @@
 # Hieu Doan
 
-## Table of Contents (10)
+## Table of Contents (9)
 
 ## Template (2)
 
@@ -12,16 +12,15 @@
 [telegram]: https://hieudoanm.github.io/telegram
 [telegram-gh]: https://github.com/hieudoanm/telegram
 
-## Utilities (8)
+## Utilities (7)
 
 1. 🌀 [Attractors][attractors] - [GitHub][attractors-gh]
 2. ♟ [Chess][chess] - [GitHub][chess-gh]
 3. 🧩 [Composition][composition] - [GitHub][composition-gh]
 4. 📚 [Docs][docs] - [GitHub][docs-gh]
 5. 🧪 [Hieu Doan][hieudoanm] - [GitHub][hieudoanm-gh]
-6. 🕵️ [Redact][redact] - [GitHub][redact-gh]
-7. 🤟 [Sign][sign] - [GitHub][sign-gh]
-8. 🖥️ [System][system] - [GitHub][system-gh]
+6. 🤟 [Sign][sign] - [GitHub][sign-gh]
+7. 🖥️ [System][system] - [GitHub][system-gh]
 
 [attractors]: https://hieudoanm.github.io/attractors
 [attractors-gh]: https://github.com/hieudoanm/attractors
@@ -33,8 +32,6 @@
 [docs-gh]: https://github.com/hieudoanm/docs
 [hieudoanm]: https://hieudoanm.github.io/hieudoanm
 [hieudoanm-gh]: https://github.com/hieudoanm/hieudoanm
-[redact]: https://hieudoanm.github.io/redact
-[redact-gh]: https://github.com/hieudoanm/redact
 [sign]: https://hieudoanm.github.io/sign
 [sign-gh]: https://github.com/hieudoanm/sign
 [system]: https://hieudoanm.github.io/system

@@ -39,8 +39,6 @@ import { WordleModal } from '@hieudoanm/components/modals/games/WordleModal';
 import { BreakingBadModal } from '@hieudoanm/components/modals/images/BreakingBadModal';
 import { GitHubSocialPreviewModal } from '@hieudoanm/components/modals/images/GitHubSocialPreviewModal';
 import { HouseModal } from '@hieudoanm/components/modals/images/HouseModal';
-import { InstaSizeModal } from '@hieudoanm/components/modals/images/InstaSizeModal';
-import { InvoiceParserModal } from '@hieudoanm/components/modals/images/InvoiceParserModal';
 import { QRCodeModal } from '@hieudoanm/components/modals/images/QRCodeModal';
 import { YouTubeThumbnailsModal } from '@hieudoanm/components/modals/images/YouTubeThumbnailsModal';
 import { ClipboardModal } from '@hieudoanm/components/modals/tools/ClipboardModal';
@@ -78,7 +76,9 @@ import {
 } from '@hieudoanm/data/downloads';
 import { getTimeInZone, timezones } from '@hieudoanm/data/timezones';
 import { NextPage } from 'next';
+import dynamic from 'next/dynamic';
 import {
+  ComponentType,
   FC,
   memo,
   useCallback,
@@ -87,6 +87,34 @@ import {
   useRef,
   useState,
 } from 'react';
+
+/* ------------------------------------------------------------------ */
+/* Dynamic Modals (SSR: false)                                        */
+/* ------------------------------------------------------------------ */
+
+const RedactModal = dynamic(
+  () =>
+    import('@hieudoanm/components/modals/editors/RedactModal').then(
+      (mod) => mod.RedactModal
+    ),
+  { ssr: false }
+);
+
+const InstaSizeModal = dynamic(
+  () =>
+    import('@hieudoanm/components/modals/images/InstaSizeModal').then(
+      (mod) => mod.InstaSizeModal
+    ),
+  { ssr: false }
+);
+
+const InvoiceParserModal = dynamic(
+  () =>
+    import('@hieudoanm/components/modals/images/InvoiceParserModal').then(
+      (mod) => mod.InvoiceParserModal
+    ),
+  { ssr: false }
+);
 
 /* ------------------------------------------------------------------ */
 /* Types                                                                */
@@ -127,6 +155,7 @@ type ModalId =
   | 'openapi'
   | 'english'
   | 'manifest'
+  | 'redact'
   | 'github-social-preview'
   | 'json-schema'
   | 'shopify-detect'
@@ -155,7 +184,10 @@ type SidebarTab = 'tasks' | 'clock';
 /* Modal registry — module-level constant, never recreated             */
 /* ------------------------------------------------------------------ */
 
-const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
+const MODAL_MAP: Record<
+  ModalId,
+  FC<{ onClose: () => void }> | ComponentType<{ onClose: () => void }>
+> = {
   braille: BrailleModal,
   'breaking-bad': BreakingBadModal,
   calculator: CalculatorModal,
@@ -191,6 +223,7 @@ const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
   openapi: OpenAPI2Postman,
   english: EnglishModal,
   'github-social-preview': GitHubSocialPreviewModal,
+  redact: RedactModal,
   'json-schema': JSONSchemaModal,
   'shopify-detect': ShopifyDetectModal,
   pokedex: PokedexModal,
@@ -432,6 +465,13 @@ const makeTools = (
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('markdown'),
+    },
+    {
+      label: 'Redact',
+      description: 'PDF Redactor',
+      emoji: '🖋️',
+      color: '#3b82f6',
+      onClick: open('redact'),
     },
   ],
   education: [
