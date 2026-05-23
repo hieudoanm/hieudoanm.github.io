@@ -29,6 +29,13 @@ func Yellow(s string) string {
 	return "\033[33m" + s + "\033[0m"
 }
 
+func Cyan(s string) string {
+	if !enableColor {
+		return s
+	}
+	return "\033[36m" + s + "\033[0m"
+}
+
 func Dim(s string) string {
 	if !enableColor {
 		return s

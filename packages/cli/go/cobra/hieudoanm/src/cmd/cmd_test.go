@@ -21,7 +21,7 @@ func TestVersionCmd(t *testing.T) {
 }
 
 func TestRootCmd(t *testing.T) {
-	if rootCmd.Use != "weather" {
-		t.Errorf("expected root command use 'weather', got %q", rootCmd.Use)
+	if rootCmd.Use != "hieudoanm" {
+		t.Errorf("expected root command use 'hieudoanm', got %q", rootCmd.Use)
 	}
 }

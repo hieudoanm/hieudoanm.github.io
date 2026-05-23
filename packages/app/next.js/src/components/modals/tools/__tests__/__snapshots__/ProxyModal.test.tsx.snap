@@ -82,7 +82,7 @@ exports[`ProxyModal should render and match snapshot 1`] = `
           class="relative"
         >
           <pre
-            class="bg-base-300 min-h-[120px] overflow-x-auto rounded-lg p-4 font-mono text-sm whitespace-pre-wrap break-all"
+            class="bg-base-300 min-h-[120px] overflow-x-auto rounded-lg p-4 font-mono text-sm break-all whitespace-pre-wrap"
           >
             curl "https://hieudoanm-proxy.vercel.app/api?url=https%3A%2F%2Fjsonplaceholder.typicode.com%2Ftodos%2F1"
           </pre>

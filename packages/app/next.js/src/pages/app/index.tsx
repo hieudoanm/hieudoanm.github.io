@@ -39,6 +39,7 @@ import { WordleModal } from '@hieudoanm/components/modals/games/WordleModal';
 import { BreakingBadModal } from '@hieudoanm/components/modals/images/BreakingBadModal';
 import { GitHubSocialPreviewModal } from '@hieudoanm/components/modals/images/GitHubSocialPreviewModal';
 import { HouseModal } from '@hieudoanm/components/modals/images/HouseModal';
+import { InstaSizeModal } from '@hieudoanm/components/modals/images/InstaSizeModal';
 import { InvoiceParserModal } from '@hieudoanm/components/modals/images/InvoiceParserModal';
 import { QRCodeModal } from '@hieudoanm/components/modals/images/QRCodeModal';
 import { YouTubeThumbnailsModal } from '@hieudoanm/components/modals/images/YouTubeThumbnailsModal';
@@ -133,6 +134,7 @@ type ModalId =
   | 'figlet'
   | 'markdown'
   | 'youtube-thumbnails'
+  | 'instasize'
   | 'palindrome'
   | 'clipboard'
   | 'calendar-tracker'
@@ -195,6 +197,7 @@ const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
   figlet: FigletModal,
   markdown: MarkdownModal,
   'youtube-thumbnails': YouTubeThumbnailsModal,
+  instasize: InstaSizeModal,
   palindrome: PalindromeModal,
   'calendar-tracker': CalendarTrackerModal,
   clipboard: ClipboardModal,
@@ -577,6 +580,13 @@ const makeTools = (
       emoji: '🏥',
       color: '#ef4444',
       onClick: open('house'),
+    },
+    {
+      label: 'InstaSize',
+      description: 'Square Fit',
+      emoji: '📸',
+      color: '#3b82f6',
+      onClick: open('instasize'),
     },
     {
       label: 'Invoice Parser',

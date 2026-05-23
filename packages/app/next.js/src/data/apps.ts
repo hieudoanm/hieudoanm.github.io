@@ -94,17 +94,6 @@ export const apps: App[] = [
   },
   {
     category: 'utilities',
-    emoji: '📱',
-    id: 'instasize',
-    name: 'InstaSize',
-    href: 'https://hieudoanm.github.io/instasize',
-    github: 'https://github.com/hieudoanm/instasize',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/instasize/refs/heads/master/images/app.png',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
-    category: 'utilities',
     emoji: '🕵️',
     id: 'redact',
     name: 'Redact',
