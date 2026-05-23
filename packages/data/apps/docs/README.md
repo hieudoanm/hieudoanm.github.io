@@ -1,16 +1,6 @@
 # Hieu Doan
 
-## Table of Contents (13)
-
-## Artificial Intelligence (2)
-
-1. 🧪 [Hieu Doan][hieudoanm] - [GitHub][hieudoanm-gh]
-2. ⚡ [Promptly][promptly] - [GitHub][promptly-gh]
-
-[hieudoanm]: https://hieudoanm.github.io/hieudoanm
-[hieudoanm-gh]: https://github.com/hieudoanm/hieudoanm
-[promptly]: https://hieudoanm.github.io/promptly
-[promptly-gh]: https://github.com/hieudoanm/promptly
+## Table of Contents (12)
 
 ## Template (2)
 
@@ -22,26 +12,29 @@
 [telegram]: https://hieudoanm.github.io/telegram
 [telegram-gh]: https://github.com/hieudoanm/telegram
 
-## Utilities (9)
+## Utilities (10)
 
-1. ♟ [Chess][chess] - [GitHub][chess-gh]
-2. 🌀 [Attractors][attractors] - [GitHub][attractors-gh]
+1. 🌀 [Attractors][attractors] - [GitHub][attractors-gh]
+2. ♟ [Chess][chess] - [GitHub][chess-gh]
 3. 🧩 [Composition][composition] - [GitHub][composition-gh]
 4. 📚 [Docs][docs] - [GitHub][docs-gh]
-5. 📱 [InstaSize][instasize] - [GitHub][instasize-gh]
-6. 🛰️ [Proxy][proxy] - [GitHub][proxy-gh]
-7. 🕵️ [Redact][redact] - [GitHub][redact-gh]
-8. 🤟 [Sign][sign] - [GitHub][sign-gh]
-9. 🖥️ [System][system] - [GitHub][system-gh]
+5. 🧪 [Hieu Doan][hieudoanm] - [GitHub][hieudoanm-gh]
+6. 📱 [InstaSize][instasize] - [GitHub][instasize-gh]
+7. 🛰️ [Proxy][proxy] - [GitHub][proxy-gh]
+8. 🕵️ [Redact][redact] - [GitHub][redact-gh]
+9. 🤟 [Sign][sign] - [GitHub][sign-gh]
+10. 🖥️ [System][system] - [GitHub][system-gh]
 
-[chess]: https://hieudoanm.github.io/chess
-[chess-gh]: https://github.com/hieudoanm/chess
 [attractors]: https://hieudoanm.github.io/attractors
 [attractors-gh]: https://github.com/hieudoanm/attractors
+[chess]: https://hieudoanm.github.io/chess
+[chess-gh]: https://github.com/hieudoanm/chess
 [composition]: https://hieudoanm.github.io/composition
 [composition-gh]: https://github.com/hieudoanm/composition
 [docs]: https://hieudoanm.github.io/docs
 [docs-gh]: https://github.com/hieudoanm/docs
+[hieudoanm]: https://hieudoanm.github.io/hieudoanm
+[hieudoanm-gh]: https://github.com/hieudoanm/hieudoanm
 [instasize]: https://hieudoanm.github.io/instasize
 [instasize-gh]: https://github.com/hieudoanm/instasize
 [proxy]: https://hieudoanm.github.io/proxy

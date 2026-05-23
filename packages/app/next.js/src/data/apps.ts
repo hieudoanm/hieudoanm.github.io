@@ -16,28 +16,6 @@ export type App = {
 
 export const apps: App[] = [
   {
-    category: 'artificial-intelligence',
-    emoji: '🧪',
-    id: 'hieudoanm',
-    name: 'Hieu Doan',
-    href: 'https://hieudoanm.github.io/hieudoanm',
-    github: 'https://github.com/hieudoanm/hieudoanm',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/images/app.png',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
-    category: 'artificial-intelligence',
-    emoji: '⚡',
-    id: 'promptly',
-    name: 'Promptly',
-    href: 'https://hieudoanm.github.io/promptly',
-    github: 'https://github.com/hieudoanm/promptly',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/promptly/refs/heads/master/images/app.png',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
     category: 'template',
     emoji: '🚀',
     id: 'start',
@@ -61,17 +39,6 @@ export const apps: App[] = [
   },
   {
     category: 'utilities',
-    emoji: '♟',
-    id: 'chess',
-    name: 'Chess',
-    href: 'https://hieudoanm.github.io/chess',
-    github: 'https://github.com/hieudoanm/chess',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/chess/refs/heads/master/images/app.png',
-    tags: ['android', 'macos', 'web'],
-  },
-  {
-    category: 'utilities',
     emoji: '🌀',
     id: 'attractors',
     name: 'Attractors',
@@ -79,6 +46,17 @@ export const apps: App[] = [
     github: 'https://github.com/hieudoanm/attractors',
     image:
       'https://raw.githubusercontent.com/hieudoanm/attractors/refs/heads/master/images/app.png',
+    tags: ['android', 'macos', 'web'],
+  },
+  {
+    category: 'utilities',
+    emoji: '♟',
+    id: 'chess',
+    name: 'Chess',
+    href: 'https://hieudoanm.github.io/chess',
+    github: 'https://github.com/hieudoanm/chess',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/chess/refs/heads/master/images/app.png',
     tags: ['android', 'macos', 'web'],
   },
   {
@@ -101,6 +79,17 @@ export const apps: App[] = [
     github: 'https://github.com/hieudoanm/docs',
     image:
       'https://raw.githubusercontent.com/hieudoanm/docs/refs/heads/master/images/app.png',
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
+  },
+  {
+    category: 'utilities',
+    emoji: '🧪',
+    id: 'hieudoanm',
+    name: 'Hieu Doan',
+    href: 'https://hieudoanm.github.io/hieudoanm',
+    github: 'https://github.com/hieudoanm/hieudoanm',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/images/app.png',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {

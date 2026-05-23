@@ -48,6 +48,7 @@ import { EmojisModal } from '@hieudoanm/components/modals/tools/EmojisModal';
 import { FigletModal } from '@hieudoanm/components/modals/tools/FigletModal';
 import { IPModal } from '@hieudoanm/components/modals/tools/IPModal';
 import { KaprekarModal } from '@hieudoanm/components/modals/tools/KaprekarModal';
+import { NoSleepModal } from '@hieudoanm/components/modals/tools/NoSleepModal';
 import { ShopifyDetectModal } from '@hieudoanm/components/modals/tools/ShopifyDetectModal';
 import { StringModal } from '@hieudoanm/components/modals/tools/StringModal';
 import { SVGModal } from '@hieudoanm/components/modals/tools/SVGModal';
@@ -102,6 +103,7 @@ type ModalId =
   | 'ip'
   | 'kaprekar'
   | 'morse'
+  | 'no-sleep'
   | 'pitch'
   | 'pomodoro'
   | 'qr'
@@ -164,6 +166,7 @@ const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
   kaprekar: KaprekarModal,
   manifest: ManifestModal,
   morse: MorseModal,
+  'no-sleep': NoSleepModal,
   pitch: PitchModal,
   pomodoro: PomodoroModal,
   qr: QRCodeModal,
@@ -254,6 +257,13 @@ const makeTools = (
       emoji: '🔢',
       color: '#f59e0b',
       onClick: open('kaprekar'),
+    },
+    {
+      label: 'No Sleep',
+      description: 'Timer',
+      emoji: '😴',
+      color: '#3b82f6',
+      onClick: open('no-sleep'),
     },
     {
       label: 'Shopify Detect',
