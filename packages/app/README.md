@@ -10,29 +10,29 @@
 
 ## Tech Stack
 
-| No  | Group     | Category        | Type           | Tools                            |
-| --- | --------- | --------------- | -------------- | -------------------------------- |
-| 01  | DevTools  | Language        |                | [TypeScript][typescript]         |
-| 02  | DevTools  | Package Manager |                | [pnpm][pnpm]                     |
-| 03  | DevTools  | Linter          |                | [ESLint][eslint]                 |
-| 04  | DevTools  | Formatter       |                | [Prettier][prettier]             |
-| 05  | DevTools  | Test            | Unit           | [Jest][jest]                     |
-| 06  | DevTools  | Test            | E2E            | [Playwright][playwright]         |
-| 07  | Front-end | Framework       | Web            | [Next.js][nextjs]                |
-| 08  | Front-end | Framework       | Mobile         | [Capacitor][capacitor]           |
-| 09  | Front-end | Framework       | Desktop        | [Tauri][tauri]                   |
-| 10  | Front-end | CSS             | CSS Utilities  | [Tailwind CSS][tailwind-css]     |
-| 11  | Front-end | CSS             | CSS Components | [DaisyUI][daisyui]               |
-| 12  | Back-end  | API             |                | [tRPC][trpc]                     |
-| 13  | Back-end  | ORM             |                | [Prisma][prisma]                 |
-| 14  | Back-end  | Database        | Lightweight    | [SQLite][sqlite]                 |
-| 15  | Back-end  | Database        | General        | [PostgreSQL][postgresql]         |
-| 16  | Back-end  | Auth            |                | [Supabase][supabase]             |
-| 17  | Back-end  | Email           |                | [Resend][resend]                 |
-| 18  | Back-end  | Payment         |                | [LemonSqueezy][lemonsqueezy]     |
-| 19  | DevOps    | CI/CD           |                | [GitHub Actions][github-actions] |
-| 20  | DevOps    | Static Hosting  |                | [GitHub Pages][github-pages]     |
-| 21  | DevOps    | Dynamic Hosting |                | [Vercel][vercel]                 |
+| No  | Group     | Category        | Type           | Tools                            | Alternative         |
+| --- | --------- | --------------- | -------------- | -------------------------------- | ------------------- |
+| 01  | DevTools  | Language        |                | [TypeScript][typescript]         |                     |
+| 02  | DevTools  | Package Manager |                | [pnpm][pnpm]                     |                     |
+| 03  | DevTools  | Linter          |                | [ESLint][eslint]                 |                     |
+| 04  | DevTools  | Formatter       |                | [Prettier][prettier]             |                     |
+| 05  | DevTools  | Test            | Unit           | [Jest][jest]                     |                     |
+| 06  | DevTools  | Test            | E2E            | [Playwright][playwright]         |                     |
+| 07  | Front-end | Framework       | Web            | [Next.js][nextjs]                | [Solid.js][solidjs] |
+| 08  | Front-end | Framework       | Mobile         | [Capacitor][capacitor]           |                     |
+| 09  | Front-end | Framework       | Desktop        | [Tauri][tauri]                   |                     |
+| 10  | Front-end | CSS             | CSS Utilities  | [Tailwind CSS][tailwind-css]     |                     |
+| 11  | Front-end | CSS             | CSS Components | [DaisyUI][daisyui]               |                     |
+| 12  | Back-end  | API             |                | [tRPC][trpc]                     |                     |
+| 13  | Back-end  | ORM             |                | [Prisma][prisma]                 |                     |
+| 14  | Back-end  | Database        | Lightweight    | [SQLite][sqlite]                 |                     |
+| 15  | Back-end  | Database        | General        | [PostgreSQL][postgresql]         |                     |
+| 16  | Back-end  | Auth            |                | [Supabase][supabase]             |                     |
+| 17  | Back-end  | Email           |                | [Resend][resend]                 |                     |
+| 18  | Back-end  | Payment         |                | [LemonSqueezy][lemonsqueezy]     |                     |
+| 19  | DevOps    | CI/CD           |                | [GitHub Actions][github-actions] |                     |
+| 20  | DevOps    | Static Hosting  |                | [GitHub Pages][github-pages]     |                     |
+| 21  | DevOps    | Dynamic Hosting |                | [Vercel][vercel]                 | [Netlify][netlify]  |
 
 [typescript]: https://www.typescriptlang.org/
 [pnpm]: https://pnpm.io/
@@ -41,6 +41,7 @@
 [jest]: https://jestjs.io/
 [playwright]: https://playwright.dev/
 [nextjs]: https://nextjs.org/
+[solidjs]: https://solidjs.com/
 [capacitor]: https://capacitorjs.com/
 [tauri]: https://v2.tauri.app/
 [tailwind-css]: https://tailwindcss.com/
@@ -55,6 +56,7 @@
 [github-actions]: https://github.com/features/actions/
 [github-pages]: https://pages.github.com/
 [vercel]: https://vercel.com/
+[netlify]: https://www.netlify.com/
 
 ## Structure
 
