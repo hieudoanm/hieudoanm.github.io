@@ -105,17 +105,6 @@ export const apps: App[] = [
   },
   {
     category: 'utilities',
-    emoji: '🛰️',
-    id: 'proxy',
-    name: 'Proxy',
-    href: 'https://hieudoanm.github.io/proxy',
-    github: 'https://github.com/hieudoanm/proxy',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/proxy/refs/heads/master/images/app.png',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
-    category: 'utilities',
     emoji: '🕵️',
     id: 'redact',
     name: 'Redact',

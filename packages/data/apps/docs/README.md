@@ -1,6 +1,6 @@
 # Hieu Doan
 
-## Table of Contents (12)
+## Table of Contents (11)
 
 ## Template (2)
 
@@ -12,7 +12,7 @@
 [telegram]: https://hieudoanm.github.io/telegram
 [telegram-gh]: https://github.com/hieudoanm/telegram
 
-## Utilities (10)
+## Utilities (9)
 
 1. 🌀 [Attractors][attractors] - [GitHub][attractors-gh]
 2. ♟ [Chess][chess] - [GitHub][chess-gh]
@@ -20,10 +20,9 @@
 4. 📚 [Docs][docs] - [GitHub][docs-gh]
 5. 🧪 [Hieu Doan][hieudoanm] - [GitHub][hieudoanm-gh]
 6. 📱 [InstaSize][instasize] - [GitHub][instasize-gh]
-7. 🛰️ [Proxy][proxy] - [GitHub][proxy-gh]
-8. 🕵️ [Redact][redact] - [GitHub][redact-gh]
-9. 🤟 [Sign][sign] - [GitHub][sign-gh]
-10. 🖥️ [System][system] - [GitHub][system-gh]
+7. 🕵️ [Redact][redact] - [GitHub][redact-gh]
+8. 🤟 [Sign][sign] - [GitHub][sign-gh]
+9. 🖥️ [System][system] - [GitHub][system-gh]
 
 [attractors]: https://hieudoanm.github.io/attractors
 [attractors-gh]: https://github.com/hieudoanm/attractors
@@ -37,8 +36,6 @@
 [hieudoanm-gh]: https://github.com/hieudoanm/hieudoanm
 [instasize]: https://hieudoanm.github.io/instasize
 [instasize-gh]: https://github.com/hieudoanm/instasize
-[proxy]: https://hieudoanm.github.io/proxy
-[proxy-gh]: https://github.com/hieudoanm/proxy
 [redact]: https://hieudoanm.github.io/redact
 [redact-gh]: https://github.com/hieudoanm/redact
 [sign]: https://hieudoanm.github.io/sign

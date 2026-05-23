@@ -49,6 +49,7 @@ import { FigletModal } from '@hieudoanm/components/modals/tools/FigletModal';
 import { IPModal } from '@hieudoanm/components/modals/tools/IPModal';
 import { KaprekarModal } from '@hieudoanm/components/modals/tools/KaprekarModal';
 import { NoSleepModal } from '@hieudoanm/components/modals/tools/NoSleepModal';
+import { ProxyModal } from '@hieudoanm/components/modals/tools/ProxyModal';
 import { ShopifyDetectModal } from '@hieudoanm/components/modals/tools/ShopifyDetectModal';
 import { StringModal } from '@hieudoanm/components/modals/tools/StringModal';
 import { SVGModal } from '@hieudoanm/components/modals/tools/SVGModal';
@@ -143,7 +144,8 @@ type ModalId =
   | 'snellen'
   | 'svg'
   | 'tumbling-e'
-  | 'quizify';
+  | 'quizify'
+  | 'proxy';
 
 type SidebarTab = 'tasks' | 'clock';
 
@@ -205,6 +207,7 @@ const MODAL_MAP: Record<ModalId, FC<{ onClose: () => void }>> = {
   svg: SVGModal,
   'tumbling-e': TumblingEChartModal,
   quizify: QuizifyModal,
+  proxy: ProxyModal,
 };
 
 /* ------------------------------------------------------------------ */
@@ -264,6 +267,13 @@ const makeTools = (
       emoji: '😴',
       color: '#3b82f6',
       onClick: open('no-sleep'),
+    },
+    {
+      label: 'Proxy',
+      description: 'CORS Proxy',
+      emoji: '🔗',
+      color: '#3b82f6',
+      onClick: open('proxy'),
     },
     {
       label: 'Shopify Detect',
