@@ -1,0 +1,655 @@
+# Nobel
+
+## Table of Contents
+
+- [Nobel](#nobel)
+  - [Table of Contents](#table-of-contents)
+  - [\[\[Physics\]\]](#physics)
+  - [\[\[Chemistry\]\]](#chemistry)
+  - [\[\[biology|Biology or Medicine\]\]](#biologybiology-or-medicine)
+  - [\[\[Literature\]\]](#literature)
+  - [Peace](#peace)
+  - [\[\[Economics\]\]](#economics)
+
+## [[Physics]]
+
+- **2025**: John Clarke, John M. Martinis, Michel H. Devoret
+- **2024**: Geoffrey Hinton, John J. Hopfield
+- **2023**: Anne L'Huillier, Ferenc Krausz, Pierre Agostini
+- **2022**: Alain Aspect, Anton Zeilinger, John Clauser
+- **2021**: Giorgio Parisi, Klaus Hasselmann, Syukuro Manabe
+- **2020**: Andrea Ghez, Reinhard Genzel, Roger Penrose
+- **2019**: Didier Queloz, James Peebles, Michel Mayor
+- **2018**: Arthur Ashkin, Donna Strickland, Gérard Mourou
+- **2017**: Barry C. Barish, Kip S. Thorne, Rainer Weiss
+- **2016**: David J. Thouless, F. Duncan M. Haldane, J. Michael Kosterlitz
+- **2015**: Arthur B. McDonald, Takaaki Kajita
+- **2014**: Hiroshi Amano, Isamu Akasaki, Shuji Nakamura
+- **2013**: François Englert, Peter Higgs
+- **2012**: David J. Wineland, Serge Haroche
+- **2011**: Adam G. Riess, Brian P. Schmidt, Saul Perlmutter
+- **2010**: Andre Geim, Konstantin Novoselov
+- **2009**: Charles K. Kao, George E. Smith, Willard S. Boyle
+- **2008**: Makoto Kobayashi, Toshihide Maskawa
+- **2007**: Albert Fert, Peter Grünberg
+- **2006**: George F. Smoot, John C. Mather
+- **2005**: John L. Hall, Roy J. Glauber, Theodor W. Hänsch
+- **2004**: David J. Gross, Frank Wilczek, H. David Politzer
+- **2003**: Alexei Abrikosov, Anthony J. Leggett, Vitaly L. Ginzburg
+- **2002**: Masatoshi Koshiba, Raymond Davis Jr., Riccardo Giacconi
+- **2001**: Carl Wieman, Eric Cornell
+- **2000**: Herbert Kroemer, Jack Kilby
+- **1999**: Gerardus 't Hooft, Martinus J.G. Veltman
+- **1998**: Daniel C. Tsui, Horst L. Störmer, Robert B. Laughlin
+- **1997**: Claude Cohen-Tannoudji, Steven Chu, William D. Phillips
+- **1996**: David M. Lee, Douglas D. Osheroff, Robert C. Richardson
+- **1995**: Frederick Reines, Martin L. Perl
+- **1994**: Bertram N. Brockhouse, Clifford G. Shull
+- **1993**: Joseph H. Taylor Jr., Russell A. Hulse
+- **1992**: Georges Charpak
+- **1991**: Pierre-Gilles de Gennes
+- **1990**: Henry W. Kendall, Jerome I. Friedman, Richard E. Taylor
+- **1989**: Hans G. Dehmelt, Norman F. Ramsey
+- **1988**: Jack Steinberger, Leon M. Lederman, Melvin Schwartz
+- **1987**: J. Georg Bednorz, K. Alex Müller
+- **1986**: Ernst Ruska, Gerd Binnig, Heinrich Rohrer
+- **1985**: Klaus von Klitzing
+- **1984**: Carlo Rubbia, Simon van der Meer
+- **1983**: Subrahmanyan Chandrasekhar, William A. Fowler
+- **1982**: Kenneth G. Wilson
+- **1981**: Arthur L. Schawlow, Kai M. Siegbahn, Nicolaas Bloembergen
+- **1980**: James Cronin, Val Fitch
+- **1979**: Abdus Salam, Sheldon Glashow, Steven Weinberg
+- **1978**: Arno Penzias, Pyotr Kapitsa, Robert Woodrow Wilson
+- **1977**: John H. Van Vleck, Philip W. Anderson, Sir Nevill F. Mott
+- **1976**: Burton Richter, Samuel C.C. Ting
+- **1975**: Aage N. Bohr, Ben R. Mottelson, James Rainwater
+- **1974**: Antony Hewish, Martin Ryle
+- **1973**: Brian D. Josephson, Ivar Giaever, Leo Esaki
+- **1972**: John Bardeen, Leon N. Cooper, Robert Schrieffer
+- **1971**: Dennis Gabor
+- **1970**: Hannes Alfvén, Louis Néel
+- **1969**: Murray Gell-Mann
+- **1968**: Luis Alvarez
+- **1967**: Hans Bethe
+- **1966**: Alfred Kastler
+- **1965**: Julian Schwinger, Richard P. Feynman, Sin-Itiro Tomonaga
+- **1964**: Aleksandr M. Prokhorov, Charles H. Townes, Nicolay G. Basov
+- **1963**: Eugene Wigner, J. Hans D. Jensen, Maria Goeppert Mayer
+- **1962**: Lev Landau
+- **1961**: Robert Hofstadter, Rudolf Mössbauer
+- **1960**: Donald A. Glaser
+- **1959**: Emilio Segrè, Owen Chamberlain
+- **1958**: Igor Y. Tamm, Il'ja M. Frank, Pavel A. Cherenkov
+- **1957**: Chen Ning Yang, Tsung-Dao Lee
+- **1956**: John Bardeen, Walter H. Brattain, William B. Shockley
+- **1955**: Polykarp Kusch, Willis E. Lamb
+- **1954**: Max Born, Walther Bothe
+- **1953**: Frits Zernike
+- **1952**: E. M. Purcell, Felix Bloch
+- **1951**: Ernest T.S. Walton, John Cockcroft
+- **1950**: Cecil Powell
+- **1949**: Hideki Yukawa
+- **1948**: Patrick M.S. Blackett
+- **1947**: Edward V. Appleton
+- **1946**: Percy W. Bridgman
+- **1944**: Isidor Isaac Rabi
+- **1943**: Otto Stern
+- **1939**: Ernest Lawrence
+- **1938**: Enrico Fermi
+- **1937**: Clinton Davisson, George Paget Thomson
+- **1936**: Carl D. Anderson, Victor F. Hess
+- **1935**: James Chadwick
+- **1933**: Erwin Schrödinger, Paul A.M. Dirac
+- **1932**: Werner Heisenberg
+- **1930**: Sir Chandrasekhara Venkata Raman
+- **1929**: Louis de Broglie
+- **1928**: Owen Willans Richardson
+- **1927**: Arthur H. Compton, C.T.R. Wilson
+- **1926**: Jean Baptiste Perrin
+- **1925**: Gustav Hertz, James Franck
+- **1924**: Manne Siegbahn
+- **1923**: Robert A. Millikan
+- **1922**: Niels Bohr
+- **1921**: Albert Einstein
+- **1920**: Charles Edouard Guillaume
+- **1919**: Johannes Stark
+- **1918**: Max Planck
+- **1917**: Charles Glover Barkla
+- **1915**: Lawrence Bragg, William Bragg
+- **1914**: Max von Laue
+- **1913**: Heike Kamerlingh Onnes
+- **1912**: Gustaf Dalén
+- **1911**: Wilhelm Wien
+- **1910**: Johannes Diderik van der Waals
+- **1909**: Ferdinand Braun, Guglielmo Marconi
+- **1908**: Gabriel Lippmann
+- **1907**: Albert A. Michelson
+- **1906**: J.J. Thomson
+- **1905**: Philipp Lenard
+- **1904**: Lord Rayleigh
+- **1903**: Henri Becquerel, Marie Curie, Pierre Curie
+- **1902**: Hendrik A. Lorentz, Pieter Zeeman
+- **1901**: Wilhelm Conrad Röntgen
+
+## [[Chemistry]]
+
+- **2025**: Omar M. Yaghi, Richard Robson, Susumu Kitagawa
+- **2024**: David Baker, Demis Hassabis, John Jumper
+- **2023**: Aleksey Yekimov, Louis Brus, Moungi Bawendi
+- **2022**: Carolyn Bertozzi, K. Barry Sharpless, Morten Meldal
+- **2021**: Benjamin List, David W.C. MacMillan
+- **2020**: Emmanuelle Charpentier, Jennifer A. Doudna
+- **2019**: Akira Yoshino, John B. Goodenough, M. Stanley Whittingham
+- **2018**: Frances H. Arnold, George P. Smith, Sir Gregory P. Winter
+- **2017**: Jacques Dubochet, Joachim Frank, Richard Henderson
+- **2016**: Bernard L. Feringa, Jean-Pierre Sauvage, Sir J. Fraser Stoddart
+- **2015**: Aziz Sancar, Paul Modrich, Tomas Lindahl
+- **2014**: Eric Betzig, Stefan W. Hell, William E. Moerner
+- **2013**: Arieh Warshel, Martin Karplus, Michael Levitt
+- **2012**: Brian Kobilka, Robert J. Lefkowitz
+- **2011**: Dan Shechtman
+- **2010**: Akira Suzuki, Ei-ichi Negishi, Richard F. Heck
+- **2009**: Ada E. Yonath, Thomas A. Steitz, Venkatraman Ramakrishnan
+- **2008**: Martin Chalfie, Osamu Shimomura, Roger Y. Tsien
+- **2007**: Gerhard Ertl
+- **2006**: Roger D. Kornberg
+- **2005**: Richard R. Schrock, Robert H. Grubbs
+- **2004**: Aaron Ciechanover, Avram Hershko, Irwin Rose
+- **2003**: Peter Agre, Roderick MacKinnon
+- **2002**: John B. Fenn, Koichi Tanaka, Kurt Wüthrich
+- **2001**: K. Barry Sharpless, Ryoji Noyori, William Knowles
+- **2000**: Alan Heeger, Alan MacDiarmid, Hideki Shirakawa
+- **1999**: Ahmed Zewail
+- **1998**: John Pople, Walter Kohn
+- **1997**: Jens C. Skou, John E. Walker, Paul D. Boyer
+- **1996**: Richard E. Smalley, Robert F. Curl Jr., Sir Harold Kroto
+- **1995**: F. Sherwood Rowland, Mario J. Molina, Paul J. Crutzen
+- **1994**: George A. Olah
+- **1993**: Kary B. Mullis, Michael Smith
+- **1992**: Rudolph A. Marcus
+- **1991**: Richard R. Ernst
+- **1990**: Elias James Corey
+- **1989**: Sidney Altman, Thomas R. Cech
+- **1988**: Hartmut Michel, Johann Deisenhofer, Robert Huber
+- **1987**: Charles J. Pedersen, Donald J. Cram, Jean-Marie Lehn
+- **1986**: Dudley R. Herschbach, John C. Polanyi
+- **1985**: Herbert A. Hauptman, Jerome Karle
+- **1984**: Bruce Merrifield
+- **1983**: Henry Taube
+- **1982**: Aaron Klug
+- **1981**: Kenichi Fukui, Roald Hoffmann
+- **1980**: Frederick Sanger, Paul Berg, Walter Gilbert
+- **1979**: Georg Wittig, Herbert C. Brown
+- **1978**: Peter Mitchell
+- **1977**: Ilya Prigogine
+- **1976**: William Lipscomb
+- **1975**: John Cornforth, Vladimir Prelog
+- **1974**: Paul J. Flory
+- **1973**: Ernst Otto Fischer, Geoffrey Wilkinson
+- **1972**: Christian Anfinsen, Stanford Moore, William H. Stein
+- **1971**: Gerhard Herzberg
+- **1970**: Luis Leloir
+- **1969**: Derek Barton, Odd Hassel
+- **1968**: Lars Onsager
+- **1967**: George Porter, Manfred Eigen, Ronald G.W. Norrish
+- **1966**: Robert S. Mulliken
+- **1965**: Robert B. Woodward
+- **1964**: Dorothy Crowfoot Hodgkin
+- **1963**: Giulio Natta, Karl Ziegler
+- **1962**: John C. Kendrew, Max F. Perutz
+- **1961**: Melvin Calvin
+- **1960**: Willard F. Libby
+- **1959**: Jaroslav Heyrovsky
+- **1958**: Frederick Sanger
+- **1957**: Lord Todd
+- **1956**: Nikolay Semenov, Sir Cyril Hinshelwood
+- **1955**: Vincent du Vigneaud
+- **1954**: Linus Pauling
+- **1953**: Hermann Staudinger
+- **1952**: Archer J.P. Martin, Richard L.M. Synge
+- **1951**: Edwin M. McMillan, Glenn T. Seaborg
+- **1950**: Kurt Alder, Otto Diels
+- **1949**: William F. Giauque
+- **1948**: Arne Tiselius
+- **1947**: Sir Robert Robinson
+- **1946**: James B. Sumner, John H. Northrop, Wendell M. Stanley
+- **1945**: Artturi Virtanen
+- **1944**: Otto Hahn
+- **1943**: George de Hevesy
+- **1939**: Adolf Butenandt, Leopold Ruzicka
+- **1938**: Richard Kuhn
+- **1937**: Norman Haworth, Paul Karrer
+- **1936**: Peter Debye
+- **1935**: Frédéric Joliot, Irène Joliot-Curie
+- **1934**: Harold C. Urey
+- **1932**: Irving Langmuir
+- **1931**: Carl Bosch, Friedrich Bergius
+- **1930**: Hans Fischer
+- **1929**: Arthur Harden, Hans von Euler-Chelpin
+- **1928**: Adolf Windaus
+- **1927**: Heinrich Wieland
+- **1926**: The Svedberg
+- **1925**: Richard Zsigmondy
+- **1923**: Fritz Pregl
+- **1922**: Francis W. Aston
+- **1921**: Frederick Soddy
+- **1920**: Walther Nernst
+- **1918**: Fritz Haber
+- **1915**: Richard Willstätter
+- **1914**: Theodore W. Richards
+- **1913**: Alfred Werner
+- **1912**: Paul Sabatier, Victor Grignard
+- **1911**: Marie Curie
+- **1910**: Otto Wallach
+- **1909**: Wilhelm Ostwald
+- **1908**: Ernest Rutherford
+- **1907**: Eduard Buchner
+- **1906**: Henri Moissan
+- **1905**: Adolf von Baeyer
+- **1904**: Sir William Ramsay
+- **1903**: Svante Arrhenius
+- **1902**: Emil Fischer
+- **1901**: Jacobus H. van 't Hoff
+
+## [[biology|Biology or Medicine]]
+
+- **2025**: Fred Ramsdell, Mary E. Brunkow, Shimon Sakaguchi
+- **2024**: Gary Ruvkun, Victor Ambros
+- **2023**: Drew Weissman, Katalin Karikó
+- **2022**: Svante Pääbo
+- **2021**: Ardem Patapoutian, David Julius
+- **2020**: Charles M. Rice, Harvey J. Alter, Michael Houghton
+- **2019**: Gregg L. Semenza, Sir Peter J. Ratcliffe, William G. Kaelin Jr
+- **2018**: James P. Allison, Tasuku Honjo
+- **2017**: Jeffrey C. Hall, Michael Rosbash, Michael W. Young
+- **2015**: Satoshi Ōmura, Tu Youyou, William C. Campbell
+- **2014**: Edvard I. Moser, John O'Keefe, May-Britt Moser
+- **2013**: James E. Rothman, Randy W. Schekman, Thomas C. Südhof
+- **2012**: Shinya Yamanaka, Sir John B. Gurdon
+- **2011**: Bruce A. Beutler, Jules A. Hoffmann, Ralph M. Steinman
+- **2010**: Robert G. Edwards
+- **2009**: Carol W. Greider, Elizabeth H. Blackburn, Jack W. Szostak
+- **2008**: Françoise Barré-Sinoussi, Harald zur Hausen, Luc Montagnier
+- **2007**: Mario R. Capecchi, Oliver Smithies, Sir Martin J. Evans
+- **2006**: Andrew Z. Fire, Craig C. Mello
+- **2005**: Barry J. Marshall, J. Robin Warren
+- **2004**: Linda B. Buck, Richard Axel
+- **2003**: Paul C. Lauterbur, Sir Peter Mansfield
+- **2002**: H. Robert Horvitz, John E. Sulston, Sydney Brenner
+- **2001**: Leland Hartwell, Sir Paul Nurse, Tim Hunt
+- **2000**: Arvid Carlsson, Eric Kandel, Paul Greengard
+- **1999**: Günter Blobel
+- **1998**: Ferid Murad, Louis J. Ignarro, Robert F. Furchgott
+- **1997**: Stanley B. Prusiner
+- **1996**: Peter C. Doherty, Rolf M. Zinkernagel
+- **1995**: Christiane Nüsslein-Volhard, Edward B. Lewis, Eric F. Wieschaus
+- **1994**: Alfred G. Gilman, Martin Rodbell
+- **1993**: Phillip A. Sharp, Richard J. Roberts
+- **1992**: Edmond H. Fischer, Edwin G. Krebs
+- **1991**: Bert Sakmann, Erwin Neher
+- **1990**: E. Donnall Thomas, Joseph E. Murray
+- **1989**: Harold E. Varmus, J. Michael Bishop
+- **1988**: George H. Hitchings, Gertrude B. Elion, Sir James W. Black
+- **1987**: Susumu Tonegawa
+- **1986**: Rita Levi-Montalcini, Stanley Cohen
+- **1985**: Joseph L. Goldstein, Michael S. Brown
+- **1984**: César Milstein, Georges J.F. Köhler, Niels K. Jerne
+- **1983**: Barbara McClintock
+- **1982**: Bengt I. Samuelsson, John R. Vane, Sune K. Bergström
+- **1981**: David H. Hubel, Roger W. Sperry, Torsten N. Wiesel
+- **1980**: Baruj Benacerraf, George D. Snell, Jean Dausset
+- **1979**: Allan M. Cormack, Godfrey N. Hounsfield
+- **1978**: Daniel Nathans, Hamilton O. Smith, Werner Arber
+- **1977**: Andrew V. Schally, Roger Guillemin, Rosalyn Yalow
+- **1976**: Baruch S. Blumberg, D. Carleton Gajdusek
+- **1975**: David Baltimore, Howard M. Temin, Renato Dulbecco
+- **1974**: Albert Claude, Christian de Duve, George E. Palade
+- **1973**: Karl von Frisch, Konrad Lorenz, Nikolaas Tinbergen
+- **1972**: Gerald M. Edelman, Rodney R. Porter
+- **1971**: Earl W. Sutherland, Jr.
+- **1970**: Julius Axelrod, Sir Bernard Katz, Ulf von Euler
+- **1969**: Alfred D. Hershey, Max Delbrück, Salvador E. Luria
+- **1968**: H. Gobind Khorana, Marshall W. Nirenberg, Robert W. Holley
+- **1967**: George Wald, Keffer Hartline, Ragnar Granit
+- **1966**: Charles B. Huggins, Peyton Rous
+- **1965**: André Lwoff, François Jacob, Jacques Monod
+- **1964**: Feodor Lynen, Konrad Bloch
+- **1963**: Alan Hodgkin, Andrew Huxley, Sir John Eccles
+- **1962**: Francis Crick, James Watson, Maurice Wilkins
+- **1961**: Georg von Békésy
+- **1960**: Peter Medawar, Sir Frank Macfarlane Burnet
+- **1959**: Arthur Kornberg, Severo Ochoa
+- **1958**: Edward Tatum, George Beadle, Joshua Lederberg
+- **1957**: Daniel Bovet
+- **1956**: André F. Cournand, Dickinson W. Richards, Werner Forssmann
+- **1955**: Hugo Theorell
+- **1954**: Frederick C. Robbins, John F. Enders, Thomas H. Weller
+- **1953**: Fritz Lipmann, Hans Krebs
+- **1952**: Selman A. Waksman
+- **1951**: Max Theiler
+- **1950**: Edward C. Kendall, Philip S. Hench, Tadeus Reichstein
+- **1949**: Egas Moniz, Walter Hess
+- **1948**: Paul Müller
+- **1947**: Bernardo Houssay, Carl Cori, Gerty Cori
+- **1946**: Hermann J. Muller
+- **1945**: Ernst B. Chain, Sir Alexander Fleming, Sir Howard Florey
+- **1944**: Herbert S. Gasser, Joseph Erlanger
+- **1943**: Edward A. Doisy, Henrik Dam
+- **1939**: Gerhard Domagk
+- **1938**: Corneille Heymans
+- **1937**: Albert Szent-Györgyi
+- **1936**: Otto Loewi, Sir Henry Dale
+- **1935**: Hans Spemann
+- **1934**: George H. Whipple, George R. Minot, William P. Murphy
+- **1933**: Thomas H. Morgan
+- **1932**: Edgar Adrian, Sir Charles Sherrington
+- **1931**: Otto Warburg
+- **1930**: Karl Landsteiner
+- **1929**: Christiaan Eijkman, Sir Frederick Hopkins
+- **1928**: Charles Nicolle
+- **1927**: Julius Wagner-Jauregg
+- **1926**: Johannes Fibiger
+- **1924**: Willem Einthoven
+- **1923**: Frederick G. Banting, John Macleod
+- **1922**: Archibald V. Hill, Otto Meyerhof
+- **1920**: August Krogh
+- **1919**: Jules Bordet
+- **1914**: Robert Bárány
+- **1913**: Charles Richet
+- **1912**: Alexis Carrel
+- **1911**: Allvar Gullstrand
+- **1910**: Albrecht Kossel
+- **1909**: Theodor Kocher
+- **1908**: Ilya Mechnikov, Paul Ehrlich
+- **1907**: Alphonse Laveran
+- **1906**: Camillo Golgi, Santiago Ramón y Cajal
+- **1905**: Robert Koch
+- **1904**: Ivan Pavlov
+- **1903**: Niels Ryberg Finsen
+- **1902**: Ronald Ross
+- **1901**: Emil von Behring
+
+## [[Literature]]
+
+- **2025**: László Krasznahorkai
+- **2024**: Han Kang
+- **2023**: Jon Fosse
+- **2022**: Annie Ernaux
+- **2021**: Abdulrazak Gurnah
+- **2020**: Louise Glück
+- **2019**: Peter Handke
+- **2018**: Olga Tokarczuk
+- **2017**: Kazuo Ishiguro
+- **2016**: Bob Dylan
+- **2015**: Svetlana Alexievich
+- **2014**: Patrick Modiano
+- **2013**: Alice Munro
+- **2012**: Mo Yan
+- **2011**: Tomas Tranströmer
+- **2010**: Mario Vargas Llosa
+- **2009**: Herta Müller
+- **2008**: Jean-Marie Gustave Le Clézio
+- **2007**: Doris Lessing
+- **2006**: Orhan Pamuk
+- **2005**: Harold Pinter
+- **2004**: Elfriede Jelinek
+- **2003**: J. M. Coetzee
+- **2002**: Imre Kertész
+- **2001**: V. S. Naipaul
+- **2000**: Gao Xingjian
+- **1999**: Günter Grass
+- **1998**: José Saramago
+- **1997**: Dario Fo
+- **1995**: Seamus Heaney
+- **1994**: Kenzaburo Oe
+- **1993**: Toni Morrison
+- **1992**: Derek Walcott
+- **1991**: Nadine Gordimer
+- **1990**: Octavio Paz
+- **1989**: Camilo José Cela
+- **1988**: Naguib Mahfouz
+- **1987**: Joseph Brodsky
+- **1985**: Claude Simon
+- **1984**: Jaroslav Seifert
+- **1983**: William Golding
+- **1982**: Gabriel García Márquez
+- **1981**: Elias Canetti
+- **1980**: Czesław Miłosz
+- **1979**: Odysseus Elytis
+- **1978**: Isaac Bashevis Singer
+- **1977**: Vicente Aleixandre
+- **1976**: Saul Bellow
+- **1975**: Eugenio Montale
+- **1974**: Eyvind Johnson, Harry Martinson
+- **1973**: Patrick White
+- **1972**: Heinrich Böll
+- **1971**: Pablo Neruda
+- **1970**: Aleksandr Solzhenitsyn
+- **1969**: Samuel Beckett
+- **1967**: Miguel Angel Asturias
+- **1966**: Nelly Sachs, Shmuel Agnon
+- **1965**: Mikhail Sholokhov
+- **1964**: Jean-Paul Sartre
+- **1963**: Giorgos Seferis
+- **1962**: John Steinbeck
+- **1961**: Ivo Andrić
+- **1960**: Saint-John Perse
+- **1959**: Salvatore Quasimodo
+- **1958**: Boris Pasternak
+- **1957**: Albert Camus
+- **1956**: Juan Ramón Jiménez
+- **1955**: Halldór Laxness
+- **1954**: Ernest Hemingway
+- **1952**: François Mauriac
+- **1951**: Pär Lagerkvist
+- **1950**: Bertrand Russell
+- **1949**: William Faulkner
+- **1948**: T.S. Eliot
+- **1947**: André Gide
+- **1946**: Hermann Hesse
+- **1945**: Gabriela Mistral
+- **1944**: Johannes V. Jensen
+- **1939**: Frans Eemil Sillanpää
+- **1938**: Pearl Buck
+- **1937**: Roger Martin du Gard
+- **1936**: Eugene O'Neill
+- **1934**: Luigi Pirandello
+- **1933**: Ivan Bunin
+- **1932**: John Galsworthy
+- **1931**: Erik Axel Karlfeldt
+- **1930**: Sinclair Lewis
+- **1929**: Thomas Mann
+- **1928**: Sigrid Undset
+- **1927**: Henri Bergson
+- **1926**: Grazia Deledda
+- **1925**: George Bernard Shaw
+- **1923**: William Butler Yeats
+- **1922**: Jacinto Benavente
+- **1921**: Anatole France
+- **1920**: Knut Hamsun
+- **1919**: Carl Spitteler
+- **1917**: Henrik Pontoppidan, Karl Gjellerup
+- **1916**: Verner von Heidenstam
+- **1915**: Romain Rolland
+- **1913**: Rabindranath Tagore
+- **1912**: Gerhart Hauptmann
+- **1911**: Maurice Maeterlinck
+- **1910**: Paul Heyse
+- **1909**: Selma Lagerlöf
+- **1908**: Rudolf Eucken
+- **1907**: Rudyard Kipling
+- **1906**: Giosuè Carducci
+- **1905**: Henryk Sienkiewicz
+- **1904**: Frédéric Mistral, José Echegaray
+- **1903**: Bjørnstjerne Bjørnson
+- **1902**: Theodor Mommsen
+- **1901**: Sully Prudhomme
+
+## Peace
+
+- **2025**: Maria Corina Machado
+- **2024**: Nihon Hidankyo
+- **2023**: Narges Mohammadi
+- **2022**: Ales Bialiatski, Center for Civil Liberties, Memorial
+- **2021**: Dmitry Muratov, Maria Ressa
+- **2019**: Abiy Ahmed Ali
+- **2018**: Denis Mukwege, Nadia Murad
+- **2017**: International Campaign to Abolish Nuclear Weapons
+- **2016**: Juan Manuel Santos
+- **2015**: National Dialogue Quartet
+- **2014**: Kailash Satyarthi, Malala Yousafzai
+- **2013**: Organisation for the Prohibition of Chemical Weapons
+- **2012**: European Union
+- **2011**: Ellen Johnson Sirleaf, Leymah Gbowee, Tawakkol Karman
+- **2010**: Liu Xiaobo
+- **2009**: Barack H. Obama
+- **2008**: Martti Ahtisaari
+- **2007**: Al Gore, Intergovernmental Panel on Climate Change
+- **2006**: Grameen Bank, Muhammad Yunus
+- **2005**: International Atomic Energy Agency, Mohamed ElBaradei
+- **2004**: Wangari Maathai
+- **2003**: Shirin Ebadi
+- **2002**: Jimmy Carter
+- **2001**: Kofi Annan, United Nations
+- **2000**: Kim Dae-jung
+- **1999**: Doctors Without Borders
+- **1998**: David Trimble, John Hume
+- **1997**: International Campaign to Ban Landmines, Jody Williams
+- **1996**: Carlos Filipe Ximenes Belo, José Ramos-Horta
+- **1995**: Joseph Rotblat, Pugwash Conferences on Science and World Affairs
+- **1994**: Shimon Peres
+- **1993**: F.W. de Klerk, Nelson Mandela
+- **1992**: Rigoberta Menchú Tum
+- **1991**: Aung San Suu Kyi
+- **1990**: Mikhail Gorbachev
+- **1989**: The 14th Dalai Lama
+- **1988**: United Nations Peacekeeping Forces
+- **1987**: Oscar Arias Sánchez
+- **1986**: Elie Wiesel
+- **1985**: International Physicians for the Prevention of Nuclear War
+- **1984**: Desmond Tutu
+- **1983**: Lech Wałęsa
+- **1982**: Alfonso García Robles, Alva Myrdal
+- **1981**: Office of the United Nations High Commissioner for Refugees
+- **1980**: Adolfo Pérez Esquivel
+- **1979**: Mother Teresa
+- **1978**: Anwar al-Sadat, Menachem Begin
+- **1977**: Amnesty International
+- **1976**: Betty Williams, Mairead Corrigan
+- **1975**: Andrei Sakharov
+- **1974**: Eisaku Satō, Seán MacBride
+- **1973**: Henry Kissinger, Le Duc Tho
+- **1970**: Norman Borlaug
+- **1969**: International Labour Organization
+- **1968**: René Cassin
+- **1965**: United Nations Children's Fund
+- **1964**: Martin Luther King Jr.
+- **1963**: International Committee of the Red Cross, League of Red Cross Societies
+- **1962**: Linus Pauling
+- **1961**: Dag Hammarskjöld
+- **1960**: Albert Lutuli
+- **1959**: Philip Noel-Baker
+- **1958**: Georges Pire
+- **1957**: Lester Bowles Pearson
+- **1954**: Office of the United Nations High Commissioner for Refugees
+- **1953**: George C. Marshall
+- **1952**: Albert Schweitzer
+- **1951**: Léon Jouhaux
+- **1950**: Ralph Bunche
+- **1949**: Lord Boyd Orr
+- **1947**: American Friends Service Committee, Friends Service Council
+- **1946**: Emily Greene Balch, John R. Mott
+- **1945**: Cordell Hull
+- **1944**: International Committee of the Red Cross
+- **1938**: Nansen International Office for Refugees
+- **1937**: Robert Cecil, Viscount Cecil of Chelwood
+- **1936**: Carlos Saavedra Lamas
+- **1935**: Carl von Ossietzky
+- **1934**: Arthur Henderson
+- **1933**: Sir Norman Angell
+- **1931**: Jane Addams, Nicholas Murray Butler
+- **1930**: Nathan Söderblom
+- **1929**: Frank B. Kellogg
+- **1927**: Ferdinand Buisson, Ludwig Quidde
+- **1926**: Aristide Briand, Gustav Stresemann
+- **1925**: Charles G. Dawes, Sir Austen Chamberlain
+- **1922**: Fridtjof Nansen
+- **1921**: Christian Lange, Hjalmar Branting
+- **1920**: Léon Bourgeois
+- **1917**: International Committee of the Red Cross
+- **1913**: Henri La Fontaine
+- **1912**: Elihu Root
+- **1911**: Alfred Fried, Tobias Asser
+- **1910**: Permanent International Peace Bureau
+- **1909**: Auguste Beernaert, Paul Henri d'Estournelles de Constant
+- **1908**: Fredrik Bajer, Klas Pontus Arnoldson
+- **1907**: Ernesto Teodoro Moneta, Louis Renault
+- **1906**: Theodore Roosevelt
+- **1905**: Bertha von Suttner
+- **1904**: Institute of International Law
+- **1903**: Randal Cremer
+- **1902**: Albert Gobat, Élie Ducommun
+- **1901**: Frédéric Passy, Henry Dunant
+
+## [[Economics]]
+
+- **2025**: Joel Mokyr, Peter Howitt, Philippe Aghion
+- **2024**: Daron Acemoglu, James A. Robinson, Simon Johnson
+- **2023**: Claudia Goldin
+- **2022**: Ben Bernanke, Douglas Diamond, Philip Dybvig
+- **2021**: David Card, Guido W. Imbens, Joshua D. Angrist
+- **2020**: Paul R. Milgrom, Robert B. Wilson
+- **2019**: Abhijit Banerjee, Esther Duflo, Michael Kremer
+- **2018**: Paul M. Romer, William D. Nordhaus
+- **2017**: Richard H. Thaler
+- **2016**: Bengt Holmström, Oliver Hart
+- **2015**: Angus Deaton
+- **2014**: Jean Tirole
+- **2013**: Eugene F. Fama, Lars Peter Hansen, Robert J. Shiller
+- **2012**: Alvin E. Roth, Lloyd S. Shapley
+- **2011**: Christopher A. Sims, Thomas J. Sargent
+- **2010**: Christopher A. Pissarides, Dale T. Mortensen, Peter A. Diamond
+- **2009**: Elinor Ostrom, Oliver E. Williamson
+- **2008**: Paul Krugman
+- **2007**: Eric S. Maskin, Leonid Hurwicz, Roger B. Myerson
+- **2006**: Edmund S. Phelps
+- **2005**: Robert J. Aumann, Thomas C. Schelling
+- **2004**: Edward C. Prescott, Finn E. Kydland
+- **2003**: Clive W.J. Granger, Robert F. Engle III
+- **2002**: Daniel Kahneman, Vernon L. Smith
+- **2001**: A. Michael Spence, George A. Akerlof, Joseph E. Stiglitz
+- **2000**: Daniel L. McFadden, James J. Heckman
+- **1999**: Robert Mundell
+- **1998**: Amartya Sen
+- **1997**: Myron Scholes, Robert C. Merton
+- **1996**: James A. Mirrlees, William Vickrey
+- **1995**: Robert E. Lucas Jr.
+- **1994**: John C. Harsanyi, John F. Nash Jr., Reinhard Selten
+- **1993**: Douglass C. North, Robert W. Fogel
+- **1992**: Gary Becker
+- **1991**: Ronald H. Coase
+- **1990**: Harry M. Markowitz, Merton H. Miller, William F. Sharpe
+- **1989**: Trygve Haavelmo
+- **1988**: Maurice Allais
+- **1987**: Robert M. Solow
+- **1986**: James M. Buchanan Jr.
+- **1985**: Franco Modigliani
+- **1984**: Richard Stone
+- **1983**: Gerard Debreu
+- **1982**: George J. Stigler
+- **1981**: James Tobin
+- **1980**: Lawrence R. Klein
+- **1979**: Sir Arthur Lewis, Theodore W. Schultz
+- **1978**: Herbert Simon
+- **1977**: Bertil Ohlin, James E. Meade
+- **1976**: Milton Friedman
+- **1975**: Leonid Vitaliyevich Kantorovich, Tjalling C. Koopmans
+- **1974**: Friedrich von Hayek, Gunnar Myrdal
+- **1973**: Wassily Leontief
+- **1972**: John R. Hicks, Kenneth J. Arrow
+- **1971**: Simon Kuznets
+- **1970**: Paul A. Samuelson
+- **1969**: Jan Tinbergen, Ragnar Frisch
+
+---

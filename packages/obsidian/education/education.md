@@ -1,4 +1,0 @@
-# Education
-
-- [[STEM]]
-- [[University]]

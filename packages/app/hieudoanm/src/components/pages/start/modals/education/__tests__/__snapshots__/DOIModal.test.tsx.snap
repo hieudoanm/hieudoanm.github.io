@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`DOIModal should render 1`] = `
+<div>
+  <dialog
+    class="modal modal-open"
+    open=""
+    style="background: rgba(0, 0, 0, 0.6);"
+  >
+    <div
+      class="card bg-base-100 border-base-300 w-full max-w-3xl border shadow-2xl"
+    >
+      <div
+        class="card-body gap-5 p-6"
+      >
+        <div
+          class="flex items-start justify-between"
+        >
+          <div>
+            <h2
+              class="text-lg font-normal tracking-tight"
+            >
+              DOI Lookup
+            </h2>
+            <p
+              class="text-base-content/40 mt-0.5 font-mono text-[10px] tracking-widest uppercase"
+            >
+              Fetch and collect citations via Crossref
+            </p>
+          </div>
+          <button
+            class="btn btn-ghost btn-xs btn-square text-base opacity-60 hover:opacity-100"
+          >
+            ✕
+          </button>
+        </div>
+        <form
+          class="flex gap-3"
+        >
+          <input
+            class="input input-bordered grow font-mono text-sm"
+            placeholder="https://doi.org/10.xxxx/..."
+            required=""
+            value="https://doi.org/10.1016/j.smrv.2009.04.001"
+          />
+          <button
+            class="btn btn-primary min-w-[80px]"
+            type="submit"
+          >
+            Fetch
+          </button>
+        </form>
+        <p
+          class="text-base-content/30 py-6 text-center text-sm"
+        >
+          No references yet — enter a DOI above to get started.
+        </p>
+      </div>
+    </div>
+    <form
+      class="modal-backdrop"
+      method="dialog"
+    >
+      <button>
+        close
+      </button>
+    </form>
+  </dialog>
+</div>
+`;

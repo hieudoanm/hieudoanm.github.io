@@ -1,0 +1,8 @@
+{
+  "label": "🖥️ Payment",
+  "position": 1,
+  "link": {
+    "slug": "/engineering/software/services/payment",
+    "type": "generated-index"
+  }
+}

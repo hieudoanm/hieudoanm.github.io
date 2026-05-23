@@ -1,0 +1,15 @@
+export const LANGUAGES: Record<string, string> = {
+  en: 'English',
+  vi: 'Vietnamese',
+  ja: 'Japanese',
+  ko: 'Korean',
+  zh: 'Chinese',
+  fr: 'French',
+  de: 'German',
+  es: 'Spanish',
+  it: 'Italian',
+  pt: 'Portuguese',
+  ru: 'Russian',
+  ar: 'Arabic',
+  th: 'Thai',
+};

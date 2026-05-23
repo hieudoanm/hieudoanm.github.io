@@ -15,20 +15,21 @@
   },
   "license": "GPL-3.0",
   "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
-  "packageManager": "pnpm@11.1.2",
+  "packageManager": "pnpm@11.9.0",
   "engines": {
-    "node": "26.2.0"
+    "node": "26.4.0"
   },
   "scripts": {
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "test": "turbo run test",
     "build": "turbo run build",
+    "postbuild": "turbo run build --graph=images/svg/graph.svg",
     "format": "turbo run format",
     "prepare": "husky || true"
   },
   "devDependencies": {
     "husky": "9.1.7",
-    "turbo": "2.9.14"
+    "turbo": "2.10.2"
   }
 }

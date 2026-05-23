@@ -1,4 +1,4 @@
-# Gemini Project Instructions
+# Claude Project Instructions
 
 ## Overview
 

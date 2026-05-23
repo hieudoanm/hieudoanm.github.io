@@ -1,0 +1,174 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`ItemCard should render as a bookmark link 1`] = `
+<div>
+  <div
+    class="card bg-base-200 border-base-300 hover:bg-base-300 group relative w-full border text-left transition-all duration-300 hover:scale-[1.03] hover:shadow-lg"
+  >
+    <a
+      class="block"
+      href="https://example.com"
+      rel="noopener noreferrer"
+    >
+      <div
+        class="card-body flex-col items-center justify-center gap-2 p-4 text-center"
+      >
+        <div
+          class="bg-primary/20 border-primary/30 flex h-10 w-10 items-center justify-center rounded-full text-xl shadow-inner transition-transform duration-300 group-hover:scale-110"
+        >
+          <svg
+            class="text-xl"
+            fill="currentColor"
+            height="24"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 256 256"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M229.5,113,166.06,89.94,143,26.5a16,16,0,0,0-30,0L89.94,89.94,26.5,113a16,16,0,0,0,0,30l63.44,23.07L113,229.5a16,16,0,0,0,30,0l23.07-63.44L229.5,143a16,16,0,0,0,0-30ZM157.08,152.3a8,8,0,0,0-4.78,4.78L128,223.9l-24.3-66.82a8,8,0,0,0-4.78-4.78L32.1,128l66.82-24.3a8,8,0,0,0,4.78-4.78L128,32.1l24.3,66.82a8,8,0,0,0,4.78,4.78L223.9,128Z"
+            />
+          </svg>
+        </div>
+        <div>
+          <div
+            class="truncate text-sm font-normal tracking-tight"
+          >
+            test
+          </div>
+          <div
+            class="text-base-content/40 mt-0.5 truncate text-[10px] tracking-widest uppercase"
+          >
+            test
+          </div>
+        </div>
+        <button
+          aria-label="Open test in new tab"
+          class="btn btn-primary btn-xs w-full no-underline transition-all"
+          type="button"
+        >
+          Open in new tab
+        </button>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`ItemCard should render with a badge 1`] = `
+<div>
+  <div
+    class="card bg-base-200 border-base-300 hover:bg-base-300 group relative w-full border text-left transition-all duration-300 hover:scale-[1.03] hover:shadow-lg"
+  >
+    <a
+      class="block"
+      href="/test"
+      rel="noopener noreferrer"
+    >
+      <span
+        class="bg-primary/20 text-primary border-primary/30 absolute -top-2 right-0 rounded-full px-1.5 py-0.5 font-mono text-[9px] leading-none font-bold tracking-widest uppercase"
+      >
+        AI
+      </span>
+      <div
+        class="card-body flex-col items-center justify-center gap-2 p-4 text-center"
+      >
+        <div
+          class="bg-primary/20 border-primary/30 flex h-10 w-10 items-center justify-center rounded-full text-xl shadow-inner transition-transform duration-300 group-hover:scale-110"
+        >
+          <svg
+            class="text-xl"
+            fill="currentColor"
+            height="24"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 256 256"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M229.5,113,166.06,89.94,143,26.5a16,16,0,0,0-30,0L89.94,89.94,26.5,113a16,16,0,0,0,0,30l63.44,23.07L113,229.5a16,16,0,0,0,30,0l23.07-63.44L229.5,143a16,16,0,0,0,0-30ZM157.08,152.3a8,8,0,0,0-4.78,4.78L128,223.9l-24.3-66.82a8,8,0,0,0-4.78-4.78L32.1,128l66.82-24.3a8,8,0,0,0,4.78-4.78L128,32.1l24.3,66.82a8,8,0,0,0,4.78,4.78L223.9,128Z"
+            />
+          </svg>
+        </div>
+        <div>
+          <div
+            class="truncate text-sm font-normal tracking-tight"
+          >
+            test
+          </div>
+          <div
+            class="text-base-content/40 mt-0.5 truncate text-[10px] tracking-widest uppercase"
+          >
+            test description
+          </div>
+        </div>
+        <button
+          aria-label="Open test in new tab"
+          class="btn btn-primary btn-xs w-full no-underline transition-all"
+          type="button"
+        >
+          Open in new tab
+        </button>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`ItemCard should render with action buttons 1`] = `
+<div>
+  <div
+    class="card bg-base-200 border-base-300 hover:bg-base-300 group relative w-full border text-left transition-all duration-300 hover:scale-[1.03] hover:shadow-lg"
+  >
+    <a
+      class="block"
+      href="/test"
+      rel="noopener noreferrer"
+    >
+      <div
+        class="card-body flex-col items-center justify-center gap-2 p-4 text-center"
+      >
+        <div
+          class="bg-primary/20 border-primary/30 flex h-10 w-10 items-center justify-center rounded-full text-xl shadow-inner transition-transform duration-300 group-hover:scale-110"
+        >
+          <svg
+            class="text-xl"
+            fill="currentColor"
+            height="24"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 256 256"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M229.5,113,166.06,89.94,143,26.5a16,16,0,0,0-30,0L89.94,89.94,26.5,113a16,16,0,0,0,0,30l63.44,23.07L113,229.5a16,16,0,0,0,30,0l23.07-63.44L229.5,143a16,16,0,0,0,0-30ZM157.08,152.3a8,8,0,0,0-4.78,4.78L128,223.9l-24.3-66.82a8,8,0,0,0-4.78-4.78L32.1,128l66.82-24.3a8,8,0,0,0,4.78-4.78L128,32.1l24.3,66.82a8,8,0,0,0,4.78,4.78L223.9,128Z"
+            />
+          </svg>
+        </div>
+        <div>
+          <div
+            class="truncate text-sm font-normal tracking-tight"
+          >
+            test
+          </div>
+          <div
+            class="text-base-content/40 mt-0.5 truncate text-[10px] tracking-widest uppercase"
+          >
+            test description
+          </div>
+        </div>
+        <button
+          aria-label="Open test in new tab"
+          class="btn btn-primary btn-xs w-full no-underline transition-all"
+          type="button"
+        >
+          Custom action
+        </button>
+      </div>
+    </a>
+  </div>
+</div>
+`;

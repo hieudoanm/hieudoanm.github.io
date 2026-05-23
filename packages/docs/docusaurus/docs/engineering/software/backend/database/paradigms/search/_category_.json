@@ -1,0 +1,8 @@
+{
+  "label": "🔍 Search",
+  "position": 4,
+  "link": {
+    "slug": "/engineering/software/backend/database/paradigms/search",
+    "type": "generated-index"
+  }
+}

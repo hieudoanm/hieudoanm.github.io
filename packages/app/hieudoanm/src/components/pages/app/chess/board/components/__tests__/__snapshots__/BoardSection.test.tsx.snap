@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`BoardSection to match snapshot 1`] = `
+<div>
+  <div
+    class="flex items-stretch gap-2"
+  >
+    <div
+      class="border-base-content/20 flex-1 overflow-hidden rounded border"
+    >
+      <div
+        data-testid="chessboard"
+      />
+    </div>
+    <div
+      class="border-base-content/20 bg-base-100 relative w-6 overflow-hidden rounded border transition-opacity duration-300 pointer-events-none opacity-0"
+      style="min-height: 320px;"
+    >
+      <div
+        class="absolute bottom-0 w-full bg-white transition-all duration-300"
+        style="height: 50%;"
+      />
+      <div
+        class="bg-base-content/40 absolute inset-x-0 top-1/2 h-[2px] -translate-y-1/2"
+      />
+      <div
+        class="absolute bottom-1 left-1/2 -translate-x-1/2 text-[8px] font-bold"
+      >
+        +0.00
+      </div>
+    </div>
+  </div>
+</div>
+`;

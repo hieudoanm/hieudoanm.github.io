@@ -1,0 +1,375 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`DataSection to match snapshot 1`] = `
+<div>
+  <section
+    class="mx-auto max-w-5xl px-12 py-24"
+    id="data"
+  >
+    <p
+      class="text-primary mb-3 text-xs font-medium tracking-[0.14em] uppercase"
+    >
+      Data display
+    </p>
+    <h2
+      class="mb-4 font-serif text-4xl leading-snug font-bold "
+    >
+      Make data legible
+    </h2>
+    <p
+      class="text-base-content/60 mb-12 max-w-xl text-base leading-relaxed "
+    >
+      Tables, charts, and lists that scale from a handful of records to millions — without sacrificing clarity.
+    </p>
+    <div
+      class="card bg-base-200 border-base-300 mb-8 border"
+    >
+      <div
+        class="card-body p-7"
+      >
+        <p
+          class="mb-1 text-sm font-medium"
+        >
+          Monthly revenue
+        </p>
+        <p
+          class="text-base-content/40 mb-6 text-xs"
+        >
+          Q1 · Q2 2026
+        </p>
+        <div
+          class="relative flex h-36 items-end gap-2"
+        >
+          <div
+            class="bg-base-content/10 absolute right-0 bottom-7 left-0 h-px"
+          />
+          <div
+            class="flex h-full flex-1 flex-col items-center justify-end gap-1"
+          >
+            <span
+              class="text-base-content/30 text-[11px]"
+            >
+              $42k
+            </span>
+            <div
+              class="w-full cursor-pointer rounded-t opacity-85 transition-opacity hover:opacity-100 bg-base-300"
+              style="height: 58%;"
+            />
+            <span
+              class="text-base-content/30 text-[11px]"
+            >
+              Jan
+            </span>
+          </div>
+          <div
+            class="flex h-full flex-1 flex-col items-center justify-end gap-1"
+          >
+            <span
+              class="text-base-content/30 text-[11px]"
+            >
+              $55k
+            </span>
+            <div
+              class="w-full cursor-pointer rounded-t opacity-85 transition-opacity hover:opacity-100 bg-base-300"
+              style="height: 72%;"
+            />
+            <span
+              class="text-base-content/30 text-[11px]"
+            >
+              Feb
+            </span>
+          </div>
+          <div
+            class="flex h-full flex-1 flex-col items-center justify-end gap-1"
+          >
+            <span
+              class="text-base-content/30 text-[11px]"
+            >
+              $49k
+            </span>
+            <div
+              class="w-full cursor-pointer rounded-t opacity-85 transition-opacity hover:opacity-100 bg-base-300"
+              style="height: 65%;"
+            />
+            <span
+              class="text-base-content/30 text-[11px]"
+            >
+              Mar
+            </span>
+          </div>
+          <div
+            class="flex h-full flex-1 flex-col items-center justify-end gap-1"
+          >
+            <span
+              class="text-base-content/30 text-[11px]"
+            >
+              $78k
+            </span>
+            <div
+              class="w-full cursor-pointer rounded-t opacity-85 transition-opacity hover:opacity-100 bg-primary"
+              style="height: 100%;"
+            />
+            <span
+              class="text-base-content/30 text-[11px]"
+            >
+              Apr
+            </span>
+          </div>
+          <div
+            class="flex h-full flex-1 flex-col items-center justify-end gap-1"
+          >
+            <span
+              class="text-base-content/30 text-[11px]"
+            >
+              $61k
+            </span>
+            <div
+              class="w-full cursor-pointer rounded-t opacity-85 transition-opacity hover:opacity-100 bg-base-300"
+              style="height: 80%;"
+            />
+            <span
+              class="text-base-content/30 text-[11px]"
+            >
+              May
+            </span>
+          </div>
+          <div
+            class="flex h-full flex-1 flex-col items-center justify-end gap-1"
+          >
+            <span
+              class="text-base-content/30 text-[11px]"
+            >
+              $70k
+            </span>
+            <div
+              class="w-full cursor-pointer rounded-t opacity-85 transition-opacity hover:opacity-100 bg-base-300"
+              style="height: 92%;"
+            />
+            <span
+              class="text-base-content/30 text-[11px]"
+            >
+              Jun
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="border-base-300 overflow-hidden rounded-2xl border"
+    >
+      <table
+        class="table-sm table w-full text-sm"
+      >
+        <thead
+          class="bg-base-300 text-base-content/40 text-xs tracking-wider uppercase"
+        >
+          <tr>
+            <th>
+              <input
+                class="checkbox checkbox-primary checkbox-xs"
+                type="checkbox"
+              />
+            </th>
+            <th
+              class="hover:text-primary cursor-pointer"
+            >
+              Component ↑
+            </th>
+            <th
+              class="hover:text-primary cursor-pointer"
+            >
+              Category
+            </th>
+            <th>
+              Status
+            </th>
+            <th
+              class="hover:text-primary cursor-pointer"
+            >
+              Version
+            </th>
+            <th>
+              Actions
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="hover:bg-base-content/[0.02] border-base-300 border-t"
+          >
+            <td>
+              <input
+                checked=""
+                class="checkbox checkbox-primary checkbox-xs"
+                type="checkbox"
+              />
+            </td>
+            <td
+              class="font-medium"
+            >
+              Button
+            </td>
+            <td>
+              <span
+                class="badge badge-info badge-sm"
+              >
+                Primitive
+              </span>
+            </td>
+            <td>
+              <span
+                class="badge badge-success badge-sm"
+              >
+                ● Stable
+              </span>
+            </td>
+            <td>
+              <span
+                class="text-primary font-mono text-xs"
+              >
+                2.4.0
+              </span>
+            </td>
+            <td>
+              <button
+                class="btn btn-ghost btn-xs border-base-300 border"
+              >
+                View
+              </button>
+            </td>
+          </tr>
+          <tr
+            class="hover:bg-base-content/[0.02] border-base-300 border-t"
+          >
+            <td>
+              <input
+                class="checkbox checkbox-primary checkbox-xs"
+                type="checkbox"
+              />
+            </td>
+            <td
+              class="font-medium"
+            >
+              DataTable
+            </td>
+            <td>
+              <span
+                class="badge badge-warning badge-sm"
+              >
+                Data
+              </span>
+            </td>
+            <td>
+              <span
+                class="badge badge-success badge-sm"
+              >
+                ● Stable
+              </span>
+            </td>
+            <td>
+              <span
+                class="text-primary font-mono text-xs"
+              >
+                2.3.1
+              </span>
+            </td>
+            <td>
+              <button
+                class="btn btn-ghost btn-xs border-base-300 border"
+              >
+                View
+              </button>
+            </td>
+          </tr>
+          <tr
+            class="hover:bg-base-content/[0.02] border-base-300 border-t"
+          >
+            <td>
+              <input
+                class="checkbox checkbox-primary checkbox-xs"
+                type="checkbox"
+              />
+            </td>
+            <td
+              class="font-medium"
+            >
+              CommandMenu
+            </td>
+            <td>
+              <span
+                class="badge badge-neutral badge-sm"
+              >
+                Navigation
+              </span>
+            </td>
+            <td>
+              <span
+                class="badge badge-warning badge-sm"
+              >
+                ● Beta
+              </span>
+            </td>
+            <td>
+              <span
+                class="text-primary font-mono text-xs"
+              >
+                0.9.2
+              </span>
+            </td>
+            <td>
+              <button
+                class="btn btn-ghost btn-xs border-base-300 border"
+              >
+                View
+              </button>
+            </td>
+          </tr>
+          <tr
+            class="hover:bg-base-content/[0.02] border-base-300 border-t"
+          >
+            <td>
+              <input
+                class="checkbox checkbox-primary checkbox-xs"
+                type="checkbox"
+              />
+            </td>
+            <td
+              class="font-medium"
+            >
+              DateRangePicker
+            </td>
+            <td>
+              <span
+                class="badge badge-neutral badge-sm"
+              >
+                Form
+              </span>
+            </td>
+            <td>
+              <span
+                class="badge badge-error badge-sm"
+              >
+                ● Deprecated
+              </span>
+            </td>
+            <td>
+              <span
+                class="text-primary font-mono text-xs"
+              >
+                1.8.0
+              </span>
+            </td>
+            <td>
+              <button
+                class="btn btn-ghost btn-xs border-base-300 border"
+              >
+                View
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+`;

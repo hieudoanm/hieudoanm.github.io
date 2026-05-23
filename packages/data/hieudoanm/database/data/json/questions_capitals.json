@@ -1,0 +1,162 @@
+[
+  {
+    "question": "What is the capital of France?",
+    "red": "Berlin",
+    "blue": "Madrid",
+    "green": "Paris",
+    "yellow": "Rome",
+    "correct": "green"
+  },
+  {
+    "question": "What is the capital of Japan?",
+    "red": "Seoul",
+    "blue": "Tokyo",
+    "green": "Beijing",
+    "yellow": "Bangkok",
+    "correct": "blue"
+  },
+  {
+    "question": "What is the capital of Australia?",
+    "red": "Sydney",
+    "blue": "Melbourne",
+    "green": "Canberra",
+    "yellow": "Perth",
+    "correct": "green"
+  },
+  {
+    "question": "What is the capital of Canada?",
+    "red": "Toronto",
+    "blue": "Vancouver",
+    "green": "Ottawa",
+    "yellow": "Montreal",
+    "correct": "green"
+  },
+  {
+    "question": "What is the capital of Brazil?",
+    "red": "Rio de Janeiro",
+    "blue": "Brasília",
+    "green": "São Paulo",
+    "yellow": "Belo Horizonte",
+    "correct": "blue"
+  },
+  {
+    "question": "What is the capital of Germany?",
+    "red": "Munich",
+    "blue": "Berlin",
+    "green": "Frankfurt",
+    "yellow": "Hamburg",
+    "correct": "blue"
+  },
+  {
+    "question": "What is the capital of Italy?",
+    "red": "Milan",
+    "blue": "Venice",
+    "green": "Rome",
+    "yellow": "Naples",
+    "correct": "green"
+  },
+  {
+    "question": "What is the capital of Spain?",
+    "red": "Barcelona",
+    "blue": "Seville",
+    "green": "Madrid",
+    "yellow": "Valencia",
+    "correct": "green"
+  },
+  {
+    "question": "What is the capital of the United Kingdom?",
+    "red": "Manchester",
+    "blue": "Birmingham",
+    "green": "London",
+    "yellow": "Liverpool",
+    "correct": "green"
+  },
+  {
+    "question": "What is the capital of the United States?",
+    "red": "New York",
+    "blue": "Washington D.C.",
+    "green": "Los Angeles",
+    "yellow": "Chicago",
+    "correct": "blue"
+  },
+  {
+    "question": "What is the capital of China?",
+    "red": "Shanghai",
+    "blue": "Guangzhou",
+    "green": "Beijing",
+    "yellow": "Shenzhen",
+    "correct": "green"
+  },
+  {
+    "question": "What is the capital of Russia?",
+    "red": "Saint Petersburg",
+    "blue": "Moscow",
+    "green": "Kazan",
+    "yellow": "Sochi",
+    "correct": "blue"
+  },
+  {
+    "question": "What is the capital of South Korea?",
+    "red": "Busan",
+    "blue": "Incheon",
+    "green": "Seoul",
+    "yellow": "Daegu",
+    "correct": "green"
+  },
+  {
+    "question": "What is the capital of India?",
+    "red": "Mumbai",
+    "blue": "New Delhi",
+    "green": "Bangalore",
+    "yellow": "Chennai",
+    "correct": "blue"
+  },
+  {
+    "question": "What is the capital of Thailand?",
+    "red": "Phuket",
+    "blue": "Chiang Mai",
+    "green": "Bangkok",
+    "yellow": "Pattaya",
+    "correct": "green"
+  },
+  {
+    "question": "What is the capital of Vietnam?",
+    "red": "Ho Chi Minh City",
+    "blue": "Da Nang",
+    "green": "Hanoi",
+    "yellow": "Hai Phong",
+    "correct": "green"
+  },
+  {
+    "question": "What is the capital of Egypt?",
+    "red": "Alexandria",
+    "blue": "Giza",
+    "green": "Cairo",
+    "yellow": "Luxor",
+    "correct": "green"
+  },
+  {
+    "question": "What is the capital of Turkey?",
+    "red": "Istanbul",
+    "blue": "Izmir",
+    "green": "Ankara",
+    "yellow": "Bursa",
+    "correct": "green"
+  },
+  {
+    "question": "What is the capital of Argentina?",
+    "red": "Rosario",
+    "blue": "Córdoba",
+    "green": "Buenos Aires",
+    "yellow": "Mendoza",
+    "correct": "green"
+  },
+  {
+    "question": "What is the capital of South Africa?",
+    "red": "Cape Town",
+    "blue": "Johannesburg",
+    "green": "Pretoria",
+    "yellow": "Durban",
+    "correct": "green"
+  }
+]

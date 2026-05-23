@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`JSONSchemaModal should render with JSON input by default 1`] = `
+<div>
+  <dialog
+    class="modal modal-open"
+    open=""
+    style="background: rgba(0, 0, 0, 0.6);"
+  >
+    <div
+      class="modal-box border-base-content/15 flex h-[90vh] w-full max-w-5xl flex-col overflow-hidden border p-0"
+    >
+      <div
+        class="border-base-300 flex items-center justify-between border-b px-4 py-3"
+      >
+        <h3
+          class="text-sm font-normal"
+        >
+          JSON Schema
+        </h3>
+        <button
+          class="btn btn-sm btn-circle btn-ghost opacity-60 hover:opacity-100"
+        >
+          ✕
+        </button>
+      </div>
+      <div
+        class="border-base-300 flex flex-wrap items-center justify-between gap-2 border-b px-4 py-3"
+      >
+        <div
+          class="flex items-center gap-3"
+        >
+          <div
+            class="flex gap-0"
+          >
+            <button
+              class="border-b-2 px-2 py-1 text-xs transition-colors border-primary text-primary"
+            >
+              JSON
+            </button>
+            <button
+              class="border-b-2 px-2 py-1 text-xs transition-colors text-base-content/40 border-transparent"
+            >
+              YAML
+            </button>
+          </div>
+        </div>
+        <div
+          class="flex items-center gap-2"
+        >
+          <button
+            class="btn btn-xs btn-ghost"
+          >
+            Beautify
+          </button>
+          <button
+            class="btn btn-xs btn-ghost"
+          >
+            Minify
+          </button>
+          <button
+            class="btn btn-xs btn-ghost"
+          >
+            Sort
+          </button>
+          <button
+            class="btn btn-xs btn-ghost"
+          >
+            📋
+          </button>
+        </div>
+      </div>
+      <div
+        class="border-base-300 border-b px-4"
+      >
+        <div
+          class="tabs tabs-bordered tabs-sm"
+          role="tablist"
+        >
+          <a
+            class="tab tab-active"
+            role="tab"
+          >
+            ✏️ Input
+          </a>
+          <a
+            class="tab "
+            role="tab"
+          >
+            📐 Schema
+          </a>
+          <a
+            class="tab "
+            role="tab"
+          >
+            🔀 Convert
+          </a>
+        </div>
+      </div>
+      <div
+        class="min-h-0 flex-1 overflow-hidden"
+      >
+        <div
+          class="h-full w-full"
+        />
+      </div>
+    </div>
+    <div
+      class="modal-backdrop"
+    />
+  </dialog>
+</div>
+`;

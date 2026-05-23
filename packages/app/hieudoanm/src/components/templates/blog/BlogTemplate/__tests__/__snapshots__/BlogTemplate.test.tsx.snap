@@ -1,0 +1,304 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`BlogTemplate to match snapshot 1`] = `
+<div>
+  <div
+    class="bg-base-100 text-base-content min-h-screen font-sans"
+    data-theme="luxury"
+  >
+    <div
+      class="border-base-300 border-b"
+    >
+      <div
+        class="mx-auto flex max-w-5xl items-start px-12 py-6"
+      >
+        <a
+          class="text-base-content/40 hover:text-primary btn btn-ghost btn-sm transition-colors"
+          href="/blog"
+        >
+          ← Back to blog
+        </a>
+      </div>
+    </div>
+    <article
+      class="mx-auto max-w-5xl px-12 py-16"
+    >
+      <div
+        class="mx-auto max-w-3xl"
+      >
+        <header
+          class="mb-12"
+        >
+          <div
+            class="mb-4 flex flex-wrap gap-2"
+          >
+            <span
+              class="badge badge-sm badge-ghost border-base-300 text-base-content/60"
+            >
+              react
+            </span>
+            <span
+              class="badge badge-sm badge-ghost border-base-300 text-base-content/60"
+            >
+              typescript
+            </span>
+          </div>
+          <h1
+            class="mb-4 font-serif text-4xl leading-[1.15] font-black tracking-tight"
+          >
+            Hello World
+          </h1>
+          <p
+            class="text-base-content/60 mb-6 text-lg leading-relaxed"
+          >
+            A test post description.
+          </p>
+          <div
+            class="flex items-center gap-4 text-sm"
+          >
+            <div
+              class="avatar placeholder"
+            >
+              <div
+                class="bg-primary/20 text-primary w-9 rounded-full"
+              >
+                <span
+                  class="text-xs font-medium"
+                >
+                  JD
+                </span>
+              </div>
+            </div>
+            <div>
+              <p
+                class="text-base-content font-medium"
+              >
+                Jane Doe
+              </p>
+              <div
+                class="text-base-content/40 flex items-center gap-2 text-xs"
+              >
+                <time
+                  class="text-base-content/40 text-xs"
+                  datetime="2024-01-15"
+                >
+                  January 15, 2024
+                </time>
+                <span
+                  class="text-base-content/20"
+                >
+                  ·
+                </span>
+                <span>
+                  5
+                   min read
+                </span>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div
+          class="bg-base-300 mb-12 overflow-hidden rounded-2xl"
+        >
+          <img
+            alt="Hello World"
+            class="w-full object-cover"
+            loading="lazy"
+            src="/cover.jpg"
+          />
+        </div>
+        <div
+          class="text-base-content/80 prose prose-sm max-w-none leading-relaxed"
+        >
+          Full article content goes here.
+        </div>
+      </div>
+    </article>
+    <div
+      class="border-base-300 mx-12 border-t"
+    />
+    <section
+      class="mx-auto max-w-5xl px-12 py-16"
+    >
+      <div
+        class="mx-auto flex max-w-3xl items-start gap-16"
+      >
+        <div
+          class="min-w-0 flex-1"
+        >
+          <h2
+            class="mb-6 font-serif text-2xl font-bold"
+          >
+            Continue reading
+          </h2>
+          <div
+            class="flex flex-col gap-4"
+          >
+            <a
+              class="card bg-base-200 border-base-300 hover:border-primary/40 group border transition-colors"
+              href="/blog/post-2"
+            >
+              <div
+                class="card-body p-5"
+              >
+                <div
+                  class="text-base-content/40 mb-1 text-xs"
+                >
+                  2024-02-01
+                </div>
+                <h3
+                  class="card-title group-hover:text-primary text-sm font-medium transition-colors"
+                >
+                  Post Two
+                </h3>
+              </div>
+            </a>
+            <a
+              class="card bg-base-200 border-base-300 hover:border-primary/40 group border transition-colors"
+              href="/blog/post-3"
+            >
+              <div
+                class="card-body p-5"
+              >
+                <div
+                  class="text-base-content/40 mb-1 text-xs"
+                >
+                  2024-03-10
+                </div>
+                <h3
+                  class="card-title group-hover:text-primary text-sm font-medium transition-colors"
+                >
+                  Post Three
+                </h3>
+              </div>
+            </a>
+          </div>
+        </div>
+        <aside
+          class="hidden w-64 shrink-0 lg:block"
+        >
+          <div
+            class="bg-base-200 border-base-300 sticky top-24 rounded-2xl border p-6"
+          >
+            <aside
+              class="flex flex-col gap-8"
+            >
+              <div>
+                <p
+                  class="text-base-content/50 mb-3 text-xs font-medium tracking-[0.14em] uppercase"
+                >
+                  Tags
+                </p>
+                <div
+                  class="flex flex-wrap gap-2"
+                >
+                  <div
+                    class="flex items-center gap-1"
+                  >
+                    <span
+                      class="badge badge-sm badge-ghost border-base-300 text-base-content/60"
+                    >
+                      react
+                    </span>
+                    <span
+                      class="text-base-content/20 text-xs"
+                    >
+                      2
+                    </span>
+                  </div>
+                  <div
+                    class="flex items-center gap-1"
+                  >
+                    <span
+                      class="badge badge-sm badge-ghost border-base-300 text-base-content/60"
+                    >
+                      typescript
+                    </span>
+                    <span
+                      class="text-base-content/20 text-xs"
+                    >
+                      2
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p
+                  class="text-base-content/50 mb-3 text-xs font-medium tracking-[0.14em] uppercase"
+                >
+                  Recent posts
+                </p>
+                <div
+                  class="flex flex-col gap-3"
+                >
+                  <a
+                    class="text-base-content/60 hover:text-base-content group text-sm leading-relaxed transition-colors"
+                    href="/blog/hello-world"
+                  >
+                    <span
+                      class="group-hover:text-primary transition-colors"
+                    >
+                      Hello World
+                    </span>
+                    <span
+                      class="text-base-content/30 ml-2 text-xs"
+                    >
+                      2024-01-15
+                    </span>
+                  </a>
+                  <a
+                    class="text-base-content/60 hover:text-base-content group text-sm leading-relaxed transition-colors"
+                    href="/blog/post-2"
+                  >
+                    <span
+                      class="group-hover:text-primary transition-colors"
+                    >
+                      Post Two
+                    </span>
+                    <span
+                      class="text-base-content/30 ml-2 text-xs"
+                    >
+                      2024-02-01
+                    </span>
+                  </a>
+                  <a
+                    class="text-base-content/60 hover:text-base-content group text-sm leading-relaxed transition-colors"
+                    href="/blog/post-3"
+                  >
+                    <span
+                      class="group-hover:text-primary transition-colors"
+                    >
+                      Post Three
+                    </span>
+                    <span
+                      class="text-base-content/30 ml-2 text-xs"
+                    >
+                      2024-03-10
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </aside>
+      </div>
+    </section>
+    <footer
+      class="border-base-300 border-t py-12 text-center"
+    >
+      <p
+        class="text-primary mb-3 font-serif text-2xl font-bold tracking-widest"
+      >
+        Blog
+      </p>
+      <p
+        class="text-base-content/30 text-sm"
+      >
+        © 
+        2026
+        · Built with care
+      </p>
+    </footer>
+  </div>
+</div>
+`;

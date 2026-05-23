@@ -1,0 +1,103 @@
+name: CI - Server Backbone
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/server/backbone/**'
+      - '.github/workflows/ci-server-backbone.yaml'
+
+permissions:
+  contents: write
+
+jobs:
+  rust:
+    name: Rust
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/server/backbone/rust
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.3
+      - name: Install Rust
+        uses: actions-rust-lang/setup-rust-toolchain@v1.11.0
+        with:
+          components: clippy
+      - name: Lint
+        run: cargo clippy -- -D warnings
+      - name: Test
+        run: cargo test
+      - name: Build
+        run: cargo build --release
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: backbone-rust
+          path: packages/server/backbone/rust/target/release/backbone
+
+  go:
+    name: Go
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/server/backbone/go
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.3
+      - name: Install Go
+        uses: actions/setup-go@v6.4.0
+        with:
+          go-version: '1.26.3'
+          cache-dependency-path: packages/server/backbone/go/go.sum
+      - name: Lint
+        run: go vet ./...
+      - name: Test
+        run: go test ./... -v -count=1
+      - name: Build
+        run: mkdir -p bin && CGO_ENABLED=0 go build -o bin/backbone ./src
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: backbone-go
+          path: packages/server/backbone/go/bin/backbone
+
+  publish:
+    name: Publish to GitHub Release
+    needs: [rust, go]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.3
+        with:
+          fetch-depth: 0
+      - name: Download Build Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+      - name: Collect Release Artifacts
+        run: |
+          mkdir -p release
+          for dir in artifacts/*/; do
+            artifact_name=$(basename "$dir")
+            for file in "$dir"*; do
+              cp "$file" "release/${artifact_name}-$(basename "$file")"
+            done
+          done
+      - name: Publish Release
+        run: |
+          gh release delete backbone-latest --yes --cleanup-tag 2>/dev/null || true
+          gh release create backbone-latest \
+            --title "Server - Backbone (latest)" \
+            --notes "Auto-built server binaries from commit ${{ github.sha }}" \
+            release/*
+        env:
+          GH_TOKEN: ${{ github.token }}
