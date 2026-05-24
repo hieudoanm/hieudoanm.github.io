@@ -16,30 +16,16 @@ export const clis: Download[] = [
     ],
   },
   {
-    id: 'cobra.md',
-    label: 'cobra.md',
-    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/cli/go/cobra/cobra.md',
-    emoji: '🐍',
-    color: '#3b82f6',
-    description: 'Markdown',
-    downloads: [
-      {
-        label: 'Download BIN',
-        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/cli/go/cobra/cobra.md/bin/cobra-md',
-      },
-    ],
-  },
-  {
     id: 'hieudoanm',
     label: 'hieudoanm',
-    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/cli/go/cobra/hieudoanm',
+    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/cli/go/hieudoanm',
     emoji: '👨‍💻',
     color: '#1f2937',
     description: 'Skills',
     downloads: [
       {
         label: 'Download BIN',
-        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/cli/go/cobra/hieudoanm/bin/hieudoanm',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/cli/go/hieudoanm/bin/hieudoanm',
       },
     ],
   },
