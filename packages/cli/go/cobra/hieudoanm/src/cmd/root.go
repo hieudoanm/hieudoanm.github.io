@@ -6,6 +6,16 @@ package cmd
 import (
 	"os"
 
+	"github.com/hieudoanm/hieudoanm/src/cmd/colors"
+	"github.com/hieudoanm/hieudoanm/src/cmd/doi"
+	"github.com/hieudoanm/hieudoanm/src/cmd/instagram"
+	"github.com/hieudoanm/hieudoanm/src/cmd/ip"
+	"github.com/hieudoanm/hieudoanm/src/cmd/openapi"
+	"github.com/hieudoanm/hieudoanm/src/cmd/openrouter"
+	"github.com/hieudoanm/hieudoanm/src/cmd/shopify"
+	stringcmd "github.com/hieudoanm/hieudoanm/src/cmd/string"
+	"github.com/hieudoanm/hieudoanm/src/cmd/telegram"
+	"github.com/hieudoanm/hieudoanm/src/cmd/youtube"
 	"github.com/spf13/cobra"
 )
 
@@ -34,5 +44,14 @@ func Execute() {
 }
 
 func init() {
-	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	rootCmd.AddCommand(colors.NewCommand())
+	rootCmd.AddCommand(doi.NewCommand())
+	rootCmd.AddCommand(instagram.NewCommand())
+	rootCmd.AddCommand(ip.NewCommand())
+	rootCmd.AddCommand(openapi.NewCommand())
+	rootCmd.AddCommand(openrouter.NewCommand())
+	rootCmd.AddCommand(shopify.NewCommand())
+	rootCmd.AddCommand(stringcmd.NewCommand())
+	rootCmd.AddCommand(telegram.NewCommand())
+	rootCmd.AddCommand(youtube.NewCommand())
 }
