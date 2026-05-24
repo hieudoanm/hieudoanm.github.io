@@ -1,7 +1,7 @@
 /*
 Copyright © 2025 NAME HERE <EMAIL ADDRESS>
 */
-package cmd
+package chess
 
 import (
 	"bufio"
@@ -64,8 +64,4 @@ As a component of the chess tools, this command empowers you to interact directl
 		fmt.Printf("\nYour new rating: %.0f\n", newRating)
 		return nil
 	},
-}
-
-func init() {
-	rootCmd.AddCommand(eloCmd)
 }

@@ -6,6 +6,7 @@ package cmd
 import (
 	"os"
 
+	"github.com/hieudoanm/hieudoanm/src/cmd/chess"
 	"github.com/hieudoanm/hieudoanm/src/cmd/colors"
 	"github.com/hieudoanm/hieudoanm/src/cmd/doi"
 	"github.com/hieudoanm/hieudoanm/src/cmd/instagram"
@@ -44,6 +45,7 @@ func Execute() {
 }
 
 func init() {
+	rootCmd.AddCommand(chess.NewCommand())
 	rootCmd.AddCommand(colors.NewCommand())
 	rootCmd.AddCommand(doi.NewCommand())
 	rootCmd.AddCommand(instagram.NewCommand())
