@@ -7,3 +7,5 @@
 5. [[Messaging]]
 6. [[NeuroScience]]
 7. [[Workspaces]]
+8. [[Devices]]
+9. [[Vehicles]]

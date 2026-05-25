@@ -2,4 +2,5 @@
 
 - [[Humanity]]
 - [[STEM]]
+- [[Degrees]]
 - [[University]]

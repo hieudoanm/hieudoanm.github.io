@@ -1,6 +1,6 @@
 .PHONY: lint build zip xpi crx sign clean
 
-EXTENSION_NAME := limit
+EXTENSION_NAME := claude-limit
 SOURCE_DIR_V2 := ./dist/v2
 SOURCE_DIR_V3 := ./dist/v3
 ARTIFACTS_DIR := $(CURDIR)/download

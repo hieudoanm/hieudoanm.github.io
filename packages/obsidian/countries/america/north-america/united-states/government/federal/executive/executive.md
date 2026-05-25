@@ -1,8 +1,8 @@
-# Executive
+# [[Executive]]
 
 ## Cabinet
 
-1. [[presidents]]
+1. [[Presidents]]
 2. [[vice|Vice Presidents]]
 3. [[state|Secretaries of State]]
 4. [[treasury|Secretaries of the Treasury]]
