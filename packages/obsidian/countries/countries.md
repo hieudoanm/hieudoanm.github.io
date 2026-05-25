@@ -6,13 +6,13 @@
 
 - [Countries](#countries)
   - [Table of Contents](#table-of-contents)
-  - [Africa](#africa)
-  - [America](#america)
-  - [Asia](#asia)
+  - [\[\[Africa\]\]](#africa)
+  - [\[\[America\]\]](#america)
+  - [\[\[Asia\]\]](#asia)
   - [Europe](#europe)
-  - [Oceania](#oceania)
+  - [\[\[Oceania\]\]](#oceania)
 
-## Africa
+## [[Africa]]
 
 | No. | Country                                                                      | Region          |
 | --- | ---------------------------------------------------------------------------- | --------------- |
@@ -71,7 +71,11 @@
 | 53  | [[africa/southern-africa/namibia\|Namibia]]                                  | Southern Africa |
 | 54  | [[africa/southern-africa/south-africa\|South Africa]]                        | Southern Africa |
 
-## America
+[Back to Table of Contents](#table-of-contents)
+
+---
+
+## [[America]]
 
 | No. | Country                                                                                  | Region           |
 | --- | ---------------------------------------------------------------------------------------- | ---------------- |
@@ -111,7 +115,11 @@
 | 88  | [[america/south-america/uruguay\|Uruguay]]                                               | South America    |
 | 89  | [[america/south-america/venezuela\|Venezuela]]                                           | South America    |
 
-## Asia
+[Back to Table of Contents](#table-of-contents)
+
+---
+
+## [[Asia]]
 
 | No. | Country                                                                    | Region             |
 | --- | -------------------------------------------------------------------------- | ------------------ |
@@ -161,6 +169,10 @@
 | 133 | [[asia/western-asia/syria\|Syria]]                                         | Western Asia       |
 | 134 | [[asia/western-asia/united-arab-emirates\|United Arab Emirates]]           | Western Asia       |
 | 135 | [[asia/western-asia/yemen\|Yemen]]                                         | Western Asia       |
+
+[Back to Table of Contents](#table-of-contents)
+
+---
 
 ## Europe
 
@@ -213,7 +225,11 @@
 | 180 | [[europe/western-europe/central/monaco\|Monaco]]                                 | Western Europe  |
 | 181 | [[europe/western-europe/central/switzerland\|Switzerland]]                       | Western Europe  |
 
-## Oceania
+[Back to Table of Contents](#table-of-contents)
+
+---
+
+## [[Oceania]]
 
 | No. | Country                                        | Region  |
 | --- | ---------------------------------------------- | ------- |
@@ -231,3 +247,7 @@
 | 193 | [[oceania/tonga\|Tonga]]                       | Oceania |
 | 194 | [[oceania/tuvalu\|Tuvalu]]                     | Oceania |
 | 195 | [[oceania/vanuatu\|Vanuatu]]                   | Oceania |
+
+[Back to Table of Contents](#table-of-contents)
+
+---
