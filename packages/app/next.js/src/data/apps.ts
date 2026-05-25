@@ -50,17 +50,6 @@ export const apps: App[] = [
   },
   {
     category: 'utilities',
-    emoji: '🌀',
-    id: 'attractors',
-    name: 'Attractors',
-    href: 'https://hieudoanm.github.io/attractors',
-    github: 'https://github.com/hieudoanm/attractors',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/attractors/refs/heads/master/images/app.png',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
-    category: 'utilities',
     emoji: '♟',
     id: 'chess',
     name: 'Chess',

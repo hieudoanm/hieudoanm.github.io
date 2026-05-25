@@ -1,6 +1,12 @@
 # Hieu Doan
 
-## Table of Contents (7)
+## Table of Contents (6)
+
+- [Hieu Doan](#hieu-doan)
+  - [Table of Contents (6)](#table-of-contents-6)
+  - [AI (1)](#ai-1)
+  - [Template (2)](#template-2)
+  - [Utilities (3)](#utilities-3)
 
 ## AI (1)
 
@@ -19,15 +25,12 @@
 [telegram]: https://hieudoanm.github.io/telegram
 [telegram-gh]: https://github.com/hieudoanm/telegram
 
-## Utilities (4)
+## Utilities (3)
 
-1. 🌀 [Attractors][attractors] - [GitHub][attractors-gh]
-2. ♟ [Chess][chess] - [GitHub][chess-gh]
-3. 📚 [Docs][docs] - [GitHub][docs-gh]
-4. 🖥️ [System][system] - [GitHub][system-gh]
+1. ♟ [Chess][chess] - [GitHub][chess-gh]
+2. 📚 [Docs][docs] - [GitHub][docs-gh]
+3. 🖥️ [System][system] - [GitHub][system-gh]
 
-[attractors]: https://hieudoanm.github.io/attractors
-[attractors-gh]: https://github.com/hieudoanm/attractors
 [chess]: https://hieudoanm.github.io/chess
 [chess-gh]: https://github.com/hieudoanm/chess
 [docs]: https://hieudoanm.github.io/docs
