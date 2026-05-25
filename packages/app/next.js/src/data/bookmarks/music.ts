@@ -1,4 +1,4 @@
-import { BookmarkItem } from '@hieudoanm/components/cards/BookmarkCard';
+import { BookmarkItem } from '@hieudoanm/components/pages/start/cards/BookmarkCard';
 
 export const music: BookmarkItem[] = [
   {

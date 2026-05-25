@@ -1,0 +1,6112 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`PeriodicTableModal should render 1`] = `
+<div>
+  <dialog
+    class="modal modal-open"
+    style="background: rgba(0, 0, 0, 0.6);"
+  >
+    <div
+      class="modal-box h-[90vh] w-full max-w-[98vw] overflow-auto"
+    >
+      <button
+        class="btn btn-sm btn-circle btn-ghost absolute top-2 right-2 z-10"
+      >
+        ✕
+      </button>
+      <h3
+        class="mb-4 text-center text-lg font-bold"
+      >
+        Periodic Table
+      </h3>
+      <div
+        class="mb-4 grid grid-cols-3 gap-2 md:grid-cols-6"
+      >
+        <button
+          class="btn btn-sm w-full font-semibold text-white shadow-md transition hover:cursor-pointer bg-yellow-900 "
+        >
+          Nonmetal
+        </button>
+        <button
+          class="btn btn-sm w-full font-semibold text-white shadow-md transition hover:cursor-pointer bg-cyan-900 "
+        >
+          Noble Gas
+        </button>
+        <button
+          class="btn btn-sm w-full font-semibold text-white shadow-md transition hover:cursor-pointer bg-red-900 "
+        >
+          Alkali Metal
+        </button>
+        <button
+          class="btn btn-sm w-full font-semibold text-white shadow-md transition hover:cursor-pointer bg-green-900 "
+        >
+          Alkaline Earth Metal
+        </button>
+        <button
+          class="btn btn-sm w-full font-semibold text-white shadow-md transition hover:cursor-pointer bg-purple-900 "
+        >
+          Metalloid
+        </button>
+        <button
+          class="btn btn-sm w-full font-semibold text-white shadow-md transition hover:cursor-pointer bg-indigo-900 "
+        >
+          Halogen
+        </button>
+        <button
+          class="btn btn-sm w-full font-semibold text-white shadow-md transition hover:cursor-pointer bg-gray-900 "
+        >
+          Post-transition Metal
+        </button>
+        <button
+          class="btn btn-sm w-full font-semibold text-white shadow-md transition hover:cursor-pointer bg-blue-900 "
+        >
+          Transition Metal
+        </button>
+        <button
+          class="btn btn-sm w-full font-semibold text-white shadow-md transition hover:cursor-pointer bg-orange-900 "
+        >
+          Lanthanide
+        </button>
+        <button
+          class="btn btn-sm w-full font-semibold text-white shadow-md transition hover:cursor-pointer bg-pink-900 "
+        >
+          Actinide
+        </button>
+      </div>
+      <div
+        class="hidden md:block"
+      >
+        <div
+          class="grid grid-cols-18 gap-1"
+        >
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-yellow-900 opacity-100"
+            style="grid-column: 1 / span 1; grid-row: 1;"
+          >
+            <span
+              class="text-xs"
+            >
+              1
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              H
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Hydrogen"
+            >
+              Hydrogen
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              1.008
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-cyan-900 opacity-100"
+            style="grid-column: 18 / span 1; grid-row: 1;"
+          >
+            <span
+              class="text-xs"
+            >
+              2
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              He
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Helium"
+            >
+              Helium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              4.0026
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-red-900 opacity-100"
+            style="grid-column: 1 / span 1; grid-row: 2;"
+          >
+            <span
+              class="text-xs"
+            >
+              3
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Li
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Lithium"
+            >
+              Lithium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              6.94
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-green-900 opacity-100"
+            style="grid-column: 2 / span 1; grid-row: 2;"
+          >
+            <span
+              class="text-xs"
+            >
+              4
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Be
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Beryllium"
+            >
+              Beryllium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              9.0122
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-purple-900 opacity-100"
+            style="grid-column: 13 / span 1; grid-row: 2;"
+          >
+            <span
+              class="text-xs"
+            >
+              5
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              B
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Boron"
+            >
+              Boron
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              10.81
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-yellow-900 opacity-100"
+            style="grid-column: 14 / span 1; grid-row: 2;"
+          >
+            <span
+              class="text-xs"
+            >
+              6
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              C
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Carbon"
+            >
+              Carbon
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              12.011
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-yellow-900 opacity-100"
+            style="grid-column: 15 / span 1; grid-row: 2;"
+          >
+            <span
+              class="text-xs"
+            >
+              7
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              N
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Nitrogen"
+            >
+              Nitrogen
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              14.007
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-yellow-900 opacity-100"
+            style="grid-column: 16 / span 1; grid-row: 2;"
+          >
+            <span
+              class="text-xs"
+            >
+              8
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              O
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Oxygen"
+            >
+              Oxygen
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              15.999
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-indigo-900 opacity-100"
+            style="grid-column: 17 / span 1; grid-row: 2;"
+          >
+            <span
+              class="text-xs"
+            >
+              9
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              F
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Fluorine"
+            >
+              Fluorine
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              18.998
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-cyan-900 opacity-100"
+            style="grid-column: 18 / span 1; grid-row: 2;"
+          >
+            <span
+              class="text-xs"
+            >
+              10
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Ne
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Neon"
+            >
+              Neon
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              20.18
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-red-900 opacity-100"
+            style="grid-column: 1 / span 1; grid-row: 3;"
+          >
+            <span
+              class="text-xs"
+            >
+              11
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Na
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Sodium"
+            >
+              Sodium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              22.99
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-green-900 opacity-100"
+            style="grid-column: 2 / span 1; grid-row: 3;"
+          >
+            <span
+              class="text-xs"
+            >
+              12
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Mg
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Magnesium"
+            >
+              Magnesium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              24.305
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-gray-900 opacity-100"
+            style="grid-column: 13 / span 1; grid-row: 3;"
+          >
+            <span
+              class="text-xs"
+            >
+              13
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Al
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Aluminum"
+            >
+              Aluminum
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              26.982
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-purple-900 opacity-100"
+            style="grid-column: 14 / span 1; grid-row: 3;"
+          >
+            <span
+              class="text-xs"
+            >
+              14
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Si
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Silicon"
+            >
+              Silicon
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              28.085
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-yellow-900 opacity-100"
+            style="grid-column: 15 / span 1; grid-row: 3;"
+          >
+            <span
+              class="text-xs"
+            >
+              15
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              P
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Phosphorus"
+            >
+              Phosphorus
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              30.974
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-yellow-900 opacity-100"
+            style="grid-column: 16 / span 1; grid-row: 3;"
+          >
+            <span
+              class="text-xs"
+            >
+              16
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              S
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Sulfur"
+            >
+              Sulfur
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              32.06
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-indigo-900 opacity-100"
+            style="grid-column: 17 / span 1; grid-row: 3;"
+          >
+            <span
+              class="text-xs"
+            >
+              17
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Cl
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Chlorine"
+            >
+              Chlorine
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              35.45
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-cyan-900 opacity-100"
+            style="grid-column: 18 / span 1; grid-row: 3;"
+          >
+            <span
+              class="text-xs"
+            >
+              18
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Ar
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Argon"
+            >
+              Argon
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              39.948
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-red-900 opacity-100"
+            style="grid-column: 1 / span 1; grid-row: 4;"
+          >
+            <span
+              class="text-xs"
+            >
+              19
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              K
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Potassium"
+            >
+              Potassium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              39.098
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-green-900 opacity-100"
+            style="grid-column: 2 / span 1; grid-row: 4;"
+          >
+            <span
+              class="text-xs"
+            >
+              20
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Ca
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Calcium"
+            >
+              Calcium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              40.078
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 3 / span 1; grid-row: 4;"
+          >
+            <span
+              class="text-xs"
+            >
+              21
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Sc
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Scandium"
+            >
+              Scandium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              44.956
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 4 / span 1; grid-row: 4;"
+          >
+            <span
+              class="text-xs"
+            >
+              22
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Ti
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Titanium"
+            >
+              Titanium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              47.867
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 5 / span 1; grid-row: 4;"
+          >
+            <span
+              class="text-xs"
+            >
+              23
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              V
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Vanadium"
+            >
+              Vanadium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              50.942
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 6 / span 1; grid-row: 4;"
+          >
+            <span
+              class="text-xs"
+            >
+              24
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Cr
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Chromium"
+            >
+              Chromium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              51.996
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 7 / span 1; grid-row: 4;"
+          >
+            <span
+              class="text-xs"
+            >
+              25
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Mn
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Manganese"
+            >
+              Manganese
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              54.938
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 8 / span 1; grid-row: 4;"
+          >
+            <span
+              class="text-xs"
+            >
+              26
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Fe
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Iron"
+            >
+              Iron
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              55.845
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 9 / span 1; grid-row: 4;"
+          >
+            <span
+              class="text-xs"
+            >
+              27
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Co
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Cobalt"
+            >
+              Cobalt
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              58.933
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 10 / span 1; grid-row: 4;"
+          >
+            <span
+              class="text-xs"
+            >
+              28
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Ni
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Nickel"
+            >
+              Nickel
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              58.693
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 11 / span 1; grid-row: 4;"
+          >
+            <span
+              class="text-xs"
+            >
+              29
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Cu
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Copper"
+            >
+              Copper
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              63.546
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 12 / span 1; grid-row: 4;"
+          >
+            <span
+              class="text-xs"
+            >
+              30
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Zn
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Zinc"
+            >
+              Zinc
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              65.38
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-gray-900 opacity-100"
+            style="grid-column: 13 / span 1; grid-row: 4;"
+          >
+            <span
+              class="text-xs"
+            >
+              31
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Ga
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Gallium"
+            >
+              Gallium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              69.723
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-purple-900 opacity-100"
+            style="grid-column: 14 / span 1; grid-row: 4;"
+          >
+            <span
+              class="text-xs"
+            >
+              32
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Ge
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Germanium"
+            >
+              Germanium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              72.63
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-purple-900 opacity-100"
+            style="grid-column: 15 / span 1; grid-row: 4;"
+          >
+            <span
+              class="text-xs"
+            >
+              33
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              As
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Arsenic"
+            >
+              Arsenic
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              74.922
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-yellow-900 opacity-100"
+            style="grid-column: 16 / span 1; grid-row: 4;"
+          >
+            <span
+              class="text-xs"
+            >
+              34
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Se
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Selenium"
+            >
+              Selenium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              78.971
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-indigo-900 opacity-100"
+            style="grid-column: 17 / span 1; grid-row: 4;"
+          >
+            <span
+              class="text-xs"
+            >
+              35
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Br
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Bromine"
+            >
+              Bromine
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              79.904
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-cyan-900 opacity-100"
+            style="grid-column: 18 / span 1; grid-row: 4;"
+          >
+            <span
+              class="text-xs"
+            >
+              36
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Kr
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Krypton"
+            >
+              Krypton
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              83.798
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-red-900 opacity-100"
+            style="grid-column: 1 / span 1; grid-row: 5;"
+          >
+            <span
+              class="text-xs"
+            >
+              37
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Rb
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Rubidium"
+            >
+              Rubidium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              85.468
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-green-900 opacity-100"
+            style="grid-column: 2 / span 1; grid-row: 5;"
+          >
+            <span
+              class="text-xs"
+            >
+              38
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Sr
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Strontium"
+            >
+              Strontium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              87.62
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 3 / span 1; grid-row: 5;"
+          >
+            <span
+              class="text-xs"
+            >
+              39
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Y
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Yttrium"
+            >
+              Yttrium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              88.906
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 4 / span 1; grid-row: 5;"
+          >
+            <span
+              class="text-xs"
+            >
+              40
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Zr
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Zirconium"
+            >
+              Zirconium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              91.224
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 5 / span 1; grid-row: 5;"
+          >
+            <span
+              class="text-xs"
+            >
+              41
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Nb
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Niobium"
+            >
+              Niobium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              92.906
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 6 / span 1; grid-row: 5;"
+          >
+            <span
+              class="text-xs"
+            >
+              42
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Mo
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Molybdenum"
+            >
+              Molybdenum
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              95.95
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 7 / span 1; grid-row: 5;"
+          >
+            <span
+              class="text-xs"
+            >
+              43
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Tc
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Technetium"
+            >
+              Technetium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              98
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 8 / span 1; grid-row: 5;"
+          >
+            <span
+              class="text-xs"
+            >
+              44
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Ru
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Ruthenium"
+            >
+              Ruthenium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              101.07
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 9 / span 1; grid-row: 5;"
+          >
+            <span
+              class="text-xs"
+            >
+              45
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Rh
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Rhodium"
+            >
+              Rhodium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              102.91
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 10 / span 1; grid-row: 5;"
+          >
+            <span
+              class="text-xs"
+            >
+              46
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Pd
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Palladium"
+            >
+              Palladium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              106.42
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 11 / span 1; grid-row: 5;"
+          >
+            <span
+              class="text-xs"
+            >
+              47
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Ag
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Silver"
+            >
+              Silver
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              107.87
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 12 / span 1; grid-row: 5;"
+          >
+            <span
+              class="text-xs"
+            >
+              48
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Cd
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Cadmium"
+            >
+              Cadmium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              112.41
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-gray-900 opacity-100"
+            style="grid-column: 13 / span 1; grid-row: 5;"
+          >
+            <span
+              class="text-xs"
+            >
+              49
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              In
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Indium"
+            >
+              Indium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              114.82
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-gray-900 opacity-100"
+            style="grid-column: 14 / span 1; grid-row: 5;"
+          >
+            <span
+              class="text-xs"
+            >
+              50
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Sn
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Tin"
+            >
+              Tin
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              118.71
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-purple-900 opacity-100"
+            style="grid-column: 15 / span 1; grid-row: 5;"
+          >
+            <span
+              class="text-xs"
+            >
+              51
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Sb
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Antimony"
+            >
+              Antimony
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              121.76
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-purple-900 opacity-100"
+            style="grid-column: 16 / span 1; grid-row: 5;"
+          >
+            <span
+              class="text-xs"
+            >
+              52
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Te
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Tellurium"
+            >
+              Tellurium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              127.6
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-indigo-900 opacity-100"
+            style="grid-column: 17 / span 1; grid-row: 5;"
+          >
+            <span
+              class="text-xs"
+            >
+              53
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              I
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Iodine"
+            >
+              Iodine
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              126.9
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-cyan-900 opacity-100"
+            style="grid-column: 18 / span 1; grid-row: 5;"
+          >
+            <span
+              class="text-xs"
+            >
+              54
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Xe
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Xenon"
+            >
+              Xenon
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              131.29
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-red-900 opacity-100"
+            style="grid-column: 1 / span 1; grid-row: 6;"
+          >
+            <span
+              class="text-xs"
+            >
+              55
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Cs
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Cesium"
+            >
+              Cesium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              132.91
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-green-900 opacity-100"
+            style="grid-column: 2 / span 1; grid-row: 6;"
+          >
+            <span
+              class="text-xs"
+            >
+              56
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Ba
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Barium"
+            >
+              Barium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              137.33
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-orange-900 opacity-100"
+            style="grid-column: 3 / span 1; grid-row: 8;"
+          >
+            <span
+              class="text-xs"
+            >
+              57
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              La
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Lanthanum"
+            >
+              Lanthanum
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              138.91
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-orange-900 opacity-100"
+            style="grid-column: 4 / span 1; grid-row: 8;"
+          >
+            <span
+              class="text-xs"
+            >
+              58
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Ce
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Cerium"
+            >
+              Cerium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              140.12
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-orange-900 opacity-100"
+            style="grid-column: 5 / span 1; grid-row: 8;"
+          >
+            <span
+              class="text-xs"
+            >
+              59
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Pr
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Praseodymium"
+            >
+              Praseodymium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              140.91
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-orange-900 opacity-100"
+            style="grid-column: 6 / span 1; grid-row: 8;"
+          >
+            <span
+              class="text-xs"
+            >
+              60
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Nd
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Neodymium"
+            >
+              Neodymium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              144.24
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-orange-900 opacity-100"
+            style="grid-column: 7 / span 1; grid-row: 8;"
+          >
+            <span
+              class="text-xs"
+            >
+              61
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Pm
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Promethium"
+            >
+              Promethium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              145
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-orange-900 opacity-100"
+            style="grid-column: 8 / span 1; grid-row: 8;"
+          >
+            <span
+              class="text-xs"
+            >
+              62
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Sm
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Samarium"
+            >
+              Samarium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              150.36
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-orange-900 opacity-100"
+            style="grid-column: 9 / span 1; grid-row: 8;"
+          >
+            <span
+              class="text-xs"
+            >
+              63
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Eu
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Europium"
+            >
+              Europium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              151.96
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-orange-900 opacity-100"
+            style="grid-column: 10 / span 1; grid-row: 8;"
+          >
+            <span
+              class="text-xs"
+            >
+              64
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Gd
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Gadolinium"
+            >
+              Gadolinium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              157.25
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-orange-900 opacity-100"
+            style="grid-column: 11 / span 1; grid-row: 8;"
+          >
+            <span
+              class="text-xs"
+            >
+              65
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Tb
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Terbium"
+            >
+              Terbium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              158.93
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-orange-900 opacity-100"
+            style="grid-column: 12 / span 1; grid-row: 8;"
+          >
+            <span
+              class="text-xs"
+            >
+              66
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Dy
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Dysprosium"
+            >
+              Dysprosium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              162.5
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-orange-900 opacity-100"
+            style="grid-column: 13 / span 1; grid-row: 8;"
+          >
+            <span
+              class="text-xs"
+            >
+              67
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Ho
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Holmium"
+            >
+              Holmium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              164.93
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-orange-900 opacity-100"
+            style="grid-column: 14 / span 1; grid-row: 8;"
+          >
+            <span
+              class="text-xs"
+            >
+              68
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Er
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Erbium"
+            >
+              Erbium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              167.26
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-orange-900 opacity-100"
+            style="grid-column: 15 / span 1; grid-row: 8;"
+          >
+            <span
+              class="text-xs"
+            >
+              69
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Tm
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Thulium"
+            >
+              Thulium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              168.93
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-orange-900 opacity-100"
+            style="grid-column: 16 / span 1; grid-row: 8;"
+          >
+            <span
+              class="text-xs"
+            >
+              70
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Yb
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Ytterbium"
+            >
+              Ytterbium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              173.05
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 3 / span 1; grid-row: 6;"
+          >
+            <span
+              class="text-xs"
+            >
+              71
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Lu
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Lutetium"
+            >
+              Lutetium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              174.97
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 4 / span 1; grid-row: 6;"
+          >
+            <span
+              class="text-xs"
+            >
+              72
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Hf
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Hafnium"
+            >
+              Hafnium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              178.49
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 5 / span 1; grid-row: 6;"
+          >
+            <span
+              class="text-xs"
+            >
+              73
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Ta
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Tantalum"
+            >
+              Tantalum
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              180.95
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 6 / span 1; grid-row: 6;"
+          >
+            <span
+              class="text-xs"
+            >
+              74
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              W
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Tungsten"
+            >
+              Tungsten
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              183.84
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 7 / span 1; grid-row: 6;"
+          >
+            <span
+              class="text-xs"
+            >
+              75
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Re
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Rhenium"
+            >
+              Rhenium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              186.21
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 8 / span 1; grid-row: 6;"
+          >
+            <span
+              class="text-xs"
+            >
+              76
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Os
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Osmium"
+            >
+              Osmium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              190.23
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 9 / span 1; grid-row: 6;"
+          >
+            <span
+              class="text-xs"
+            >
+              77
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Ir
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Iridium"
+            >
+              Iridium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              192.22
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 10 / span 1; grid-row: 6;"
+          >
+            <span
+              class="text-xs"
+            >
+              78
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Pt
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Platinum"
+            >
+              Platinum
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              195.08
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 11 / span 1; grid-row: 6;"
+          >
+            <span
+              class="text-xs"
+            >
+              79
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Au
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Gold"
+            >
+              Gold
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              196.97
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 12 / span 1; grid-row: 6;"
+          >
+            <span
+              class="text-xs"
+            >
+              80
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Hg
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Mercury"
+            >
+              Mercury
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              200.59
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-gray-900 opacity-100"
+            style="grid-column: 13 / span 1; grid-row: 6;"
+          >
+            <span
+              class="text-xs"
+            >
+              81
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Tl
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Thallium"
+            >
+              Thallium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              204.38
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-gray-900 opacity-100"
+            style="grid-column: 14 / span 1; grid-row: 6;"
+          >
+            <span
+              class="text-xs"
+            >
+              82
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Pb
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Lead"
+            >
+              Lead
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              207.2
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-gray-900 opacity-100"
+            style="grid-column: 15 / span 1; grid-row: 6;"
+          >
+            <span
+              class="text-xs"
+            >
+              83
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Bi
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Bismuth"
+            >
+              Bismuth
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              208.98
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-purple-900 opacity-100"
+            style="grid-column: 16 / span 1; grid-row: 6;"
+          >
+            <span
+              class="text-xs"
+            >
+              84
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Po
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Polonium"
+            >
+              Polonium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              209
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-indigo-900 opacity-100"
+            style="grid-column: 17 / span 1; grid-row: 6;"
+          >
+            <span
+              class="text-xs"
+            >
+              85
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              At
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Astatine"
+            >
+              Astatine
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              210
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-cyan-900 opacity-100"
+            style="grid-column: 18 / span 1; grid-row: 6;"
+          >
+            <span
+              class="text-xs"
+            >
+              86
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Rn
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Radon"
+            >
+              Radon
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              222
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-red-900 opacity-100"
+            style="grid-column: 1 / span 1; grid-row: 7;"
+          >
+            <span
+              class="text-xs"
+            >
+              87
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Fr
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Francium"
+            >
+              Francium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              223
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-green-900 opacity-100"
+            style="grid-column: 2 / span 1; grid-row: 7;"
+          >
+            <span
+              class="text-xs"
+            >
+              88
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Ra
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Radium"
+            >
+              Radium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              226
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-pink-900 opacity-100"
+            style="grid-column: 3 / span 1; grid-row: 9;"
+          >
+            <span
+              class="text-xs"
+            >
+              89
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Ac
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Actinium"
+            >
+              Actinium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              227
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-pink-900 opacity-100"
+            style="grid-column: 4 / span 1; grid-row: 9;"
+          >
+            <span
+              class="text-xs"
+            >
+              90
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Th
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Thorium"
+            >
+              Thorium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              232.04
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-pink-900 opacity-100"
+            style="grid-column: 5 / span 1; grid-row: 9;"
+          >
+            <span
+              class="text-xs"
+            >
+              91
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Pa
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Protactinium"
+            >
+              Protactinium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              231.04
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-pink-900 opacity-100"
+            style="grid-column: 6 / span 1; grid-row: 9;"
+          >
+            <span
+              class="text-xs"
+            >
+              92
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              U
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Uranium"
+            >
+              Uranium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              238.03
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-pink-900 opacity-100"
+            style="grid-column: 7 / span 1; grid-row: 9;"
+          >
+            <span
+              class="text-xs"
+            >
+              93
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Np
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Neptunium"
+            >
+              Neptunium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              237
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-pink-900 opacity-100"
+            style="grid-column: 8 / span 1; grid-row: 9;"
+          >
+            <span
+              class="text-xs"
+            >
+              94
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Pu
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Plutonium"
+            >
+              Plutonium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              244
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-pink-900 opacity-100"
+            style="grid-column: 9 / span 1; grid-row: 9;"
+          >
+            <span
+              class="text-xs"
+            >
+              95
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Am
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Americium"
+            >
+              Americium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              243
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-pink-900 opacity-100"
+            style="grid-column: 10 / span 1; grid-row: 9;"
+          >
+            <span
+              class="text-xs"
+            >
+              96
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Cm
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Curium"
+            >
+              Curium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              247
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-pink-900 opacity-100"
+            style="grid-column: 11 / span 1; grid-row: 9;"
+          >
+            <span
+              class="text-xs"
+            >
+              97
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Bk
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Berkelium"
+            >
+              Berkelium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              247
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-pink-900 opacity-100"
+            style="grid-column: 12 / span 1; grid-row: 9;"
+          >
+            <span
+              class="text-xs"
+            >
+              98
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Cf
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Californium"
+            >
+              Californium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              251
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-pink-900 opacity-100"
+            style="grid-column: 13 / span 1; grid-row: 9;"
+          >
+            <span
+              class="text-xs"
+            >
+              99
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Es
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Einsteinium"
+            >
+              Einsteinium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              252
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-pink-900 opacity-100"
+            style="grid-column: 14 / span 1; grid-row: 9;"
+          >
+            <span
+              class="text-xs"
+            >
+              100
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Fm
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Fermium"
+            >
+              Fermium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              257
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-pink-900 opacity-100"
+            style="grid-column: 15 / span 1; grid-row: 9;"
+          >
+            <span
+              class="text-xs"
+            >
+              101
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Md
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Mendelevium"
+            >
+              Mendelevium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              258
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-pink-900 opacity-100"
+            style="grid-column: 16 / span 1; grid-row: 9;"
+          >
+            <span
+              class="text-xs"
+            >
+              102
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              No
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Nobelium"
+            >
+              Nobelium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              259
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 3 / span 1; grid-row: 7;"
+          >
+            <span
+              class="text-xs"
+            >
+              103
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Lr
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Lawrencium"
+            >
+              Lawrencium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              266
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 4 / span 1; grid-row: 7;"
+          >
+            <span
+              class="text-xs"
+            >
+              104
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Rf
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Rutherfordium"
+            >
+              Rutherfordium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              267
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 5 / span 1; grid-row: 7;"
+          >
+            <span
+              class="text-xs"
+            >
+              105
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Db
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Dubnium"
+            >
+              Dubnium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              268
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 6 / span 1; grid-row: 7;"
+          >
+            <span
+              class="text-xs"
+            >
+              106
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Sg
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Seaborgium"
+            >
+              Seaborgium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              269
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 7 / span 1; grid-row: 7;"
+          >
+            <span
+              class="text-xs"
+            >
+              107
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Bh
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Bohrium"
+            >
+              Bohrium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              270
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 8 / span 1; grid-row: 7;"
+          >
+            <span
+              class="text-xs"
+            >
+              108
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Hs
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Hassium"
+            >
+              Hassium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              269
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 9 / span 1; grid-row: 7;"
+          >
+            <span
+              class="text-xs"
+            >
+              109
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Mt
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Meitnerium"
+            >
+              Meitnerium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              278
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 10 / span 1; grid-row: 7;"
+          >
+            <span
+              class="text-xs"
+            >
+              110
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Ds
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Darmstadtium"
+            >
+              Darmstadtium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              281
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 11 / span 1; grid-row: 7;"
+          >
+            <span
+              class="text-xs"
+            >
+              111
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Rg
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Roentgenium"
+            >
+              Roentgenium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              282
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+            style="grid-column: 12 / span 1; grid-row: 7;"
+          >
+            <span
+              class="text-xs"
+            >
+              112
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Cn
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Copernicium"
+            >
+              Copernicium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              285
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-gray-900 opacity-100"
+            style="grid-column: 13 / span 1; grid-row: 7;"
+          >
+            <span
+              class="text-xs"
+            >
+              113
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Nh
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Nihonium"
+            >
+              Nihonium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              286
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-gray-900 opacity-100"
+            style="grid-column: 14 / span 1; grid-row: 7;"
+          >
+            <span
+              class="text-xs"
+            >
+              114
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Fl
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Flerovium"
+            >
+              Flerovium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              289
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-gray-900 opacity-100"
+            style="grid-column: 15 / span 1; grid-row: 7;"
+          >
+            <span
+              class="text-xs"
+            >
+              115
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Mc
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Moscovium"
+            >
+              Moscovium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              288
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-gray-900 opacity-100"
+            style="grid-column: 16 / span 1; grid-row: 7;"
+          >
+            <span
+              class="text-xs"
+            >
+              116
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Lv
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Livermorium"
+            >
+              Livermorium
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              293
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-indigo-900 opacity-100"
+            style="grid-column: 17 / span 1; grid-row: 7;"
+          >
+            <span
+              class="text-xs"
+            >
+              117
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Ts
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Tennessine"
+            >
+              Tennessine
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              294
+            </span>
+          </div>
+          <div
+            class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-cyan-900 opacity-100"
+            style="grid-column: 18 / span 1; grid-row: 7;"
+          >
+            <span
+              class="text-xs"
+            >
+              118
+            </span>
+            <span
+              class="my-1 text-xl font-bold"
+            >
+              Og
+            </span>
+            <span
+              class="w-full truncate text-center text-[10px]"
+              title="Oganesson"
+            >
+              Oganesson
+            </span>
+            <span
+              class="mt-0.5 text-[10px]"
+            >
+              294
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="grid grid-cols-3 gap-2 md:hidden"
+      >
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-yellow-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            1
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            H
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Hydrogen"
+          >
+            Hydrogen
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            1.008
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-cyan-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            2
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            He
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Helium"
+          >
+            Helium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            4.0026
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-red-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            3
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Li
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Lithium"
+          >
+            Lithium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            6.94
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-green-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            4
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Be
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Beryllium"
+          >
+            Beryllium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            9.0122
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-purple-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            5
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            B
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Boron"
+          >
+            Boron
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            10.81
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-yellow-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            6
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            C
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Carbon"
+          >
+            Carbon
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            12.011
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-yellow-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            7
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            N
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Nitrogen"
+          >
+            Nitrogen
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            14.007
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-yellow-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            8
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            O
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Oxygen"
+          >
+            Oxygen
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            15.999
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-indigo-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            9
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            F
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Fluorine"
+          >
+            Fluorine
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            18.998
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-cyan-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            10
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Ne
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Neon"
+          >
+            Neon
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            20.18
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-red-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            11
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Na
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Sodium"
+          >
+            Sodium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            22.99
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-green-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            12
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Mg
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Magnesium"
+          >
+            Magnesium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            24.305
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-gray-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            13
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Al
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Aluminum"
+          >
+            Aluminum
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            26.982
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-purple-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            14
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Si
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Silicon"
+          >
+            Silicon
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            28.085
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-yellow-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            15
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            P
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Phosphorus"
+          >
+            Phosphorus
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            30.974
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-yellow-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            16
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            S
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Sulfur"
+          >
+            Sulfur
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            32.06
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-indigo-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            17
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Cl
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Chlorine"
+          >
+            Chlorine
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            35.45
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-cyan-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            18
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Ar
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Argon"
+          >
+            Argon
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            39.948
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-red-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            19
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            K
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Potassium"
+          >
+            Potassium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            39.098
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-green-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            20
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Ca
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Calcium"
+          >
+            Calcium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            40.078
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            21
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Sc
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Scandium"
+          >
+            Scandium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            44.956
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            22
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Ti
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Titanium"
+          >
+            Titanium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            47.867
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            23
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            V
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Vanadium"
+          >
+            Vanadium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            50.942
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            24
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Cr
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Chromium"
+          >
+            Chromium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            51.996
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            25
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Mn
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Manganese"
+          >
+            Manganese
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            54.938
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            26
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Fe
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Iron"
+          >
+            Iron
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            55.845
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            27
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Co
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Cobalt"
+          >
+            Cobalt
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            58.933
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            28
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Ni
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Nickel"
+          >
+            Nickel
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            58.693
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            29
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Cu
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Copper"
+          >
+            Copper
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            63.546
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            30
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Zn
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Zinc"
+          >
+            Zinc
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            65.38
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-gray-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            31
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Ga
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Gallium"
+          >
+            Gallium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            69.723
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-purple-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            32
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Ge
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Germanium"
+          >
+            Germanium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            72.63
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-purple-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            33
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            As
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Arsenic"
+          >
+            Arsenic
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            74.922
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-yellow-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            34
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Se
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Selenium"
+          >
+            Selenium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            78.971
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-indigo-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            35
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Br
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Bromine"
+          >
+            Bromine
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            79.904
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-cyan-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            36
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Kr
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Krypton"
+          >
+            Krypton
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            83.798
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-red-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            37
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Rb
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Rubidium"
+          >
+            Rubidium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            85.468
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-green-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            38
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Sr
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Strontium"
+          >
+            Strontium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            87.62
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            39
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Y
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Yttrium"
+          >
+            Yttrium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            88.906
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            40
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Zr
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Zirconium"
+          >
+            Zirconium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            91.224
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            41
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Nb
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Niobium"
+          >
+            Niobium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            92.906
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            42
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Mo
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Molybdenum"
+          >
+            Molybdenum
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            95.95
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            43
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Tc
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Technetium"
+          >
+            Technetium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            98
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            44
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Ru
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Ruthenium"
+          >
+            Ruthenium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            101.07
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            45
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Rh
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Rhodium"
+          >
+            Rhodium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            102.91
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            46
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Pd
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Palladium"
+          >
+            Palladium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            106.42
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            47
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Ag
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Silver"
+          >
+            Silver
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            107.87
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            48
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Cd
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Cadmium"
+          >
+            Cadmium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            112.41
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-gray-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            49
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            In
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Indium"
+          >
+            Indium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            114.82
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-gray-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            50
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Sn
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Tin"
+          >
+            Tin
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            118.71
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-purple-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            51
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Sb
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Antimony"
+          >
+            Antimony
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            121.76
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-purple-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            52
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Te
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Tellurium"
+          >
+            Tellurium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            127.6
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-indigo-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            53
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            I
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Iodine"
+          >
+            Iodine
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            126.9
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-cyan-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            54
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Xe
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Xenon"
+          >
+            Xenon
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            131.29
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-red-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            55
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Cs
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Cesium"
+          >
+            Cesium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            132.91
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-green-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            56
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Ba
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Barium"
+          >
+            Barium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            137.33
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-orange-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            57
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            La
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Lanthanum"
+          >
+            Lanthanum
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            138.91
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-orange-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            58
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Ce
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Cerium"
+          >
+            Cerium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            140.12
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-orange-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            59
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Pr
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Praseodymium"
+          >
+            Praseodymium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            140.91
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-orange-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            60
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Nd
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Neodymium"
+          >
+            Neodymium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            144.24
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-orange-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            61
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Pm
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Promethium"
+          >
+            Promethium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            145
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-orange-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            62
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Sm
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Samarium"
+          >
+            Samarium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            150.36
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-orange-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            63
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Eu
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Europium"
+          >
+            Europium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            151.96
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-orange-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            64
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Gd
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Gadolinium"
+          >
+            Gadolinium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            157.25
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-orange-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            65
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Tb
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Terbium"
+          >
+            Terbium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            158.93
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-orange-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            66
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Dy
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Dysprosium"
+          >
+            Dysprosium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            162.5
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-orange-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            67
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Ho
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Holmium"
+          >
+            Holmium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            164.93
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-orange-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            68
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Er
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Erbium"
+          >
+            Erbium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            167.26
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-orange-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            69
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Tm
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Thulium"
+          >
+            Thulium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            168.93
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-orange-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            70
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Yb
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Ytterbium"
+          >
+            Ytterbium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            173.05
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            71
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Lu
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Lutetium"
+          >
+            Lutetium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            174.97
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            72
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Hf
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Hafnium"
+          >
+            Hafnium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            178.49
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            73
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Ta
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Tantalum"
+          >
+            Tantalum
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            180.95
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            74
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            W
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Tungsten"
+          >
+            Tungsten
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            183.84
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            75
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Re
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Rhenium"
+          >
+            Rhenium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            186.21
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            76
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Os
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Osmium"
+          >
+            Osmium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            190.23
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            77
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Ir
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Iridium"
+          >
+            Iridium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            192.22
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            78
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Pt
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Platinum"
+          >
+            Platinum
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            195.08
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            79
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Au
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Gold"
+          >
+            Gold
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            196.97
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            80
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Hg
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Mercury"
+          >
+            Mercury
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            200.59
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-gray-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            81
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Tl
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Thallium"
+          >
+            Thallium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            204.38
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-gray-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            82
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Pb
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Lead"
+          >
+            Lead
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            207.2
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-gray-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            83
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Bi
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Bismuth"
+          >
+            Bismuth
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            208.98
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-purple-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            84
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Po
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Polonium"
+          >
+            Polonium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            209
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-indigo-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            85
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            At
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Astatine"
+          >
+            Astatine
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            210
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-cyan-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            86
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Rn
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Radon"
+          >
+            Radon
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            222
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-red-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            87
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Fr
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Francium"
+          >
+            Francium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            223
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-green-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            88
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Ra
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Radium"
+          >
+            Radium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            226
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-pink-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            89
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Ac
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Actinium"
+          >
+            Actinium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            227
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-pink-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            90
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Th
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Thorium"
+          >
+            Thorium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            232.04
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-pink-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            91
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Pa
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Protactinium"
+          >
+            Protactinium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            231.04
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-pink-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            92
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            U
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Uranium"
+          >
+            Uranium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            238.03
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-pink-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            93
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Np
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Neptunium"
+          >
+            Neptunium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            237
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-pink-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            94
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Pu
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Plutonium"
+          >
+            Plutonium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            244
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-pink-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            95
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Am
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Americium"
+          >
+            Americium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            243
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-pink-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            96
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Cm
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Curium"
+          >
+            Curium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            247
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-pink-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            97
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Bk
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Berkelium"
+          >
+            Berkelium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            247
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-pink-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            98
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Cf
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Californium"
+          >
+            Californium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            251
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-pink-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            99
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Es
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Einsteinium"
+          >
+            Einsteinium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            252
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-pink-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            100
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Fm
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Fermium"
+          >
+            Fermium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            257
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-pink-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            101
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Md
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Mendelevium"
+          >
+            Mendelevium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            258
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-pink-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            102
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            No
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Nobelium"
+          >
+            Nobelium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            259
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            103
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Lr
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Lawrencium"
+          >
+            Lawrencium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            266
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            104
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Rf
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Rutherfordium"
+          >
+            Rutherfordium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            267
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            105
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Db
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Dubnium"
+          >
+            Dubnium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            268
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            106
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Sg
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Seaborgium"
+          >
+            Seaborgium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            269
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            107
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Bh
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Bohrium"
+          >
+            Bohrium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            270
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            108
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Hs
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Hassium"
+          >
+            Hassium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            269
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            109
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Mt
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Meitnerium"
+          >
+            Meitnerium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            278
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            110
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Ds
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Darmstadtium"
+          >
+            Darmstadtium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            281
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            111
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Rg
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Roentgenium"
+          >
+            Roentgenium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            282
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-blue-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            112
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Cn
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Copernicium"
+          >
+            Copernicium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            285
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-gray-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            113
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Nh
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Nihonium"
+          >
+            Nihonium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            286
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-gray-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            114
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Fl
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Flerovium"
+          >
+            Flerovium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            289
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-gray-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            115
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Mc
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Moscovium"
+          >
+            Moscovium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            288
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-gray-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            116
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Lv
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Livermorium"
+          >
+            Livermorium
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            293
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-indigo-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            117
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Ts
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Tennessine"
+          >
+            Tennessine
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            294
+          </span>
+        </div>
+        <div
+          class="flex min-h-[70px] min-w-[60px] flex-col items-center justify-center rounded p-2 text-white shadow-lg transition-opacity bg-cyan-900 opacity-100"
+        >
+          <span
+            class="text-xs"
+          >
+            118
+          </span>
+          <span
+            class="my-1 text-xl font-bold"
+          >
+            Og
+          </span>
+          <span
+            class="w-full truncate text-center text-[10px]"
+            title="Oganesson"
+          >
+            Oganesson
+          </span>
+          <span
+            class="mt-0.5 text-[10px]"
+          >
+            294
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal-backdrop"
+    />
+  </dialog>
+</div>
+`;

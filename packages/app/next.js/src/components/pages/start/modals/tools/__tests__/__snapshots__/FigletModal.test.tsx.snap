@@ -1,0 +1,132 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`FigletModal should render 1`] = `
+<div>
+  <dialog
+    class="modal modal-open"
+    style="background: rgba(0, 0, 0, 0.6);"
+  >
+    <div
+      class="modal-box w-full max-w-2xl"
+    >
+      <button
+        class="btn btn-sm btn-circle btn-ghost absolute top-2 right-2"
+      >
+        ✕
+      </button>
+      <h3
+        class="mb-4 text-center text-lg font-bold"
+      >
+        FIGlet Generator
+      </h3>
+      <div
+        class="mb-3 flex gap-2"
+      >
+        <input
+          class="input input-bordered flex-1 font-mono"
+          maxlength="20"
+          placeholder="Type something…"
+          type="text"
+          value="Hello, World!"
+        />
+        <select
+          class="select select-bordered"
+        >
+          <option
+            value="Standard"
+          >
+            Standard
+          </option>
+          <option
+            value="Block"
+          >
+            Block
+          </option>
+          <option
+            value="Small"
+          >
+            Small
+          </option>
+          <option
+            value="Banner"
+          >
+            Banner
+          </option>
+        </select>
+      </div>
+      <div
+        class="tabs tabs-boxed mb-4"
+        role="tablist"
+      >
+        <a
+          class="tab tab-active"
+          role="tab"
+        >
+          Standard
+        </a>
+        <a
+          class="tab "
+          role="tab"
+        >
+          Block
+        </a>
+        <a
+          class="tab "
+          role="tab"
+        >
+          Small
+        </a>
+        <a
+          class="tab "
+          role="tab"
+        >
+          Banner
+        </a>
+      </div>
+      <div
+        class="bg-base-200 mb-3 overflow-x-auto rounded-xl p-4"
+      >
+        <pre
+          class="text-base-content/80 font-mono text-xs leading-tight whitespace-pre"
+        >
+          |  ||‾‾|   |    /‾\\      \\    / /‾\\ |\\ |   |\\ |
+|  ||_ |   |   /   \\      \\  / /   \\| \\|   | \\|
+|__||   |   |   |   |       \\/  |   ||__/|   |  \\|
+|  ||   |   |   \\   / ,    /\\  /\\\\   /|\\ |   |  / 
+|  ||__|__|__ \\_ / ,/    /  \\/  \\ \\_ / | \\|__|_/ •
+                                                   
+        </pre>
+      </div>
+      <div
+        class="mb-3 flex items-center justify-between text-xs opacity-40"
+      >
+        <span>
+          13
+          /20 chars · letters, digits, punctuation supported
+        </span>
+        <span>
+          Rendered in 
+          Standard
+        </span>
+      </div>
+      <div
+        class="flex gap-2"
+      >
+        <button
+          class="btn btn-sm flex-1 btn-primary"
+        >
+          📋 Copy ASCII
+        </button>
+        <button
+          class="btn btn-ghost btn-sm"
+        >
+          Clear
+        </button>
+      </div>
+    </div>
+    <div
+      class="modal-backdrop"
+    />
+  </dialog>
+</div>
+`;

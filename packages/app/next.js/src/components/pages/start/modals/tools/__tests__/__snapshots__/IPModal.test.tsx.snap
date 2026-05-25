@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`IPModal should render 1`] = `
+<div>
+  <dialog
+    class="modal modal-open"
+    open=""
+    style="background: rgba(0, 0, 0, 0.6);"
+  >
+    <div
+      class="modal-box flex w-full max-w-2xl flex-col gap-4"
+    >
+      <div
+        class="flex items-start justify-between"
+      >
+        <div>
+          <h3
+            class="text-lg font-bold"
+          >
+            IP Inspector
+          </h3>
+          <p
+            class="text-base-content/50 text-sm"
+          >
+            Pure frontend · Fallback enabled · No data stored
+          </p>
+        </div>
+        <button
+          class="btn btn-ghost btn-sm btn-circle"
+        >
+          ✕
+        </button>
+      </div>
+      <div
+        class="flex items-center gap-3"
+      >
+        <button
+          class="btn btn-ghost btn-xs ml-auto"
+        >
+          ↺ Refresh
+        </button>
+      </div>
+      <div
+        class="alert alert-error py-2 text-sm"
+      >
+        fetch is not defined
+      </div>
+      <div
+        class="tabs tabs-bordered"
+      >
+        <button
+          class="tab tab-bordered capitalize tab-active"
+        >
+          network
+        </button>
+        <button
+          class="tab tab-bordered capitalize "
+        >
+          location
+        </button>
+        <button
+          class="tab tab-bordered capitalize "
+        >
+          dns
+        </button>
+      </div>
+      <div
+        class="flex flex-col gap-2"
+      />
+    </div>
+    <div
+      class="modal-backdrop"
+    />
+  </dialog>
+</div>
+`;

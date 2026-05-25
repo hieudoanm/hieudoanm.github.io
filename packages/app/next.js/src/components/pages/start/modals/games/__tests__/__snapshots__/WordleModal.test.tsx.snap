@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`WordleModal should render 1`] = `
+<div>
+  <dialog
+    class="modal modal-open"
+    style="background: rgba(0, 0, 0, 0.6);"
+  >
+    <div
+      class="modal-box w-full max-w-xs"
+    >
+      <button
+        class="btn btn-sm btn-circle btn-ghost absolute top-2 right-2"
+      >
+        ✕
+      </button>
+      <h3
+        class="mb-4 text-center text-lg font-bold"
+      >
+        Wordle
+      </h3>
+      <div
+        class="mb-4 flex flex-col items-center gap-1"
+      >
+        <div
+          class="flex gap-1"
+        >
+          <div
+            class="flex h-11 w-11 items-center justify-center rounded font-bold uppercase transition-colors duration-300 bg-base-200"
+          />
+          <div
+            class="flex h-11 w-11 items-center justify-center rounded font-bold uppercase transition-colors duration-300 bg-base-200"
+          />
+          <div
+            class="flex h-11 w-11 items-center justify-center rounded font-bold uppercase transition-colors duration-300 bg-base-200"
+          />
+          <div
+            class="flex h-11 w-11 items-center justify-center rounded font-bold uppercase transition-colors duration-300 bg-base-200"
+          />
+          <div
+            class="flex h-11 w-11 items-center justify-center rounded font-bold uppercase transition-colors duration-300 bg-base-200"
+          />
+        </div>
+        <div
+          class="flex gap-1"
+        >
+          <div
+            class="flex h-11 w-11 items-center justify-center rounded font-bold uppercase transition-colors duration-300 bg-base-200"
+          />
+          <div
+            class="flex h-11 w-11 items-center justify-center rounded font-bold uppercase transition-colors duration-300 bg-base-200"
+          />
+          <div
+            class="flex h-11 w-11 items-center justify-center rounded font-bold uppercase transition-colors duration-300 bg-base-200"
+          />
+          <div
+            class="flex h-11 w-11 items-center justify-center rounded font-bold uppercase transition-colors duration-300 bg-base-200"
+          />
+          <div
+            class="flex h-11 w-11 items-center justify-center rounded font-bold uppercase transition-colors duration-300 bg-base-200"
+          />
+        </div>
+        <div
+          class="flex gap-1"
+        >
+          <div
+            class="flex h-11 w-11 items-center justify-center rounded font-bold uppercase transition-colors duration-300 bg-base-200"
+          />
+          <div
+            class="flex h-11 w-11 items-center justify-center rounded font-bold uppercase transition-colors duration-300 bg-base-200"
+          />
+          <div
+            class="flex h-11 w-11 items-center justify-center rounded font-bold uppercase transition-colors duration-300 bg-base-200"
+          />
+          <div
+            class="flex h-11 w-11 items-center justify-center rounded font-bold uppercase transition-colors duration-300 bg-base-200"
+          />
+          <div
+            class="flex h-11 w-11 items-center justify-center rounded font-bold uppercase transition-colors duration-300 bg-base-200"
+          />
+        </div>
+        <div
+          class="flex gap-1"
+        >
+          <div
+            class="flex h-11 w-11 items-center justify-center rounded font-bold uppercase transition-colors duration-300 bg-base-200"
+          />
+          <div
+            class="flex h-11 w-11 items-center justify-center rounded font-bold uppercase transition-colors duration-300 bg-base-200"
+          />
+          <div
+            class="flex h-11 w-11 items-center justify-center rounded font-bold uppercase transition-colors duration-300 bg-base-200"
+          />
+          <div
+            class="flex h-11 w-11 items-center justify-center rounded font-bold uppercase transition-colors duration-300 bg-base-200"
+          />
+          <div
+            class="flex h-11 w-11 items-center justify-center rounded font-bold uppercase transition-colors duration-300 bg-base-200"
+          />
+        </div>
+        <div
+          class="flex gap-1"
+        >
+          <div
+            class="flex h-11 w-11 items-center justify-center rounded font-bold uppercase transition-colors duration-300 bg-base-200"
+          />
+          <div
+            class="flex h-11 w-11 items-center justify-center rounded font-bold uppercase transition-colors duration-300 bg-base-200"
+          />
+          <div
+            class="flex h-11 w-11 items-center justify-center rounded font-bold uppercase transition-colors duration-300 bg-base-200"
+          />
+          <div
+            class="flex h-11 w-11 items-center justify-center rounded font-bold uppercase transition-colors duration-300 bg-base-200"
+          />
+          <div
+            class="flex h-11 w-11 items-center justify-center rounded font-bold uppercase transition-colors duration-300 bg-base-200"
+          />
+        </div>
+        <div
+          class="flex gap-1"
+        >
+          <div
+            class="flex h-11 w-11 items-center justify-center rounded font-bold uppercase transition-colors duration-300 bg-base-200"
+          />
+          <div
+            class="flex h-11 w-11 items-center justify-center rounded font-bold uppercase transition-colors duration-300 bg-base-200"
+          />
+          <div
+            class="flex h-11 w-11 items-center justify-center rounded font-bold uppercase transition-colors duration-300 bg-base-200"
+          />
+          <div
+            class="flex h-11 w-11 items-center justify-center rounded font-bold uppercase transition-colors duration-300 bg-base-200"
+          />
+          <div
+            class="flex h-11 w-11 items-center justify-center rounded font-bold uppercase transition-colors duration-300 bg-base-200"
+          />
+        </div>
+      </div>
+      <input
+        class="input input-bordered input-sm mb-3 w-full text-center tracking-widest uppercase"
+        maxlength="5"
+        placeholder="5-letter word"
+        type="text"
+        value=""
+      />
+      <div
+        class="flex justify-center gap-2"
+      >
+        <button
+          class="btn btn-accent btn-sm"
+        >
+          Enter
+        </button>
+        <button
+          class="btn btn-primary btn-sm"
+        >
+          New Game
+        </button>
+      </div>
+    </div>
+    <div
+      class="modal-backdrop"
+    />
+  </dialog>
+</div>
+`;

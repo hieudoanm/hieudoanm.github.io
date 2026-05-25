@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`RecallModal should render 1`] = `
+<div>
+  <dialog
+    class="modal modal-open"
+    style="background: rgba(0, 0, 0, 0.6);"
+  >
+    <div
+      class="modal-box w-full max-w-sm outline-none"
+      tabindex="0"
+    >
+      <button
+        class="btn btn-sm btn-circle btn-ghost absolute top-2 right-2"
+      >
+        ✕
+      </button>
+      <h3
+        class="mb-4 text-center text-lg font-bold"
+      >
+        Memory Recall
+      </h3>
+      <div
+        class="mb-4 flex justify-center gap-2"
+      >
+        <span
+          class="badge badge-secondary"
+        >
+          Level 
+          1
+        </span>
+        <span
+          class="badge badge-accent"
+        >
+          🏆 Best 
+          0
+        </span>
+      </div>
+      <div
+        class="space-y-3 text-center"
+      >
+        <p
+          class="text-base-content/70 text-sm"
+        >
+          Memorize the number and type it back.
+        </p>
+        <button
+          class="btn btn-primary w-full"
+        >
+          Start
+        </button>
+        <p
+          class="text-xs opacity-50"
+        >
+          Press Enter
+        </p>
+      </div>
+    </div>
+    <div
+      class="modal-backdrop"
+    />
+  </dialog>
+</div>
+`;

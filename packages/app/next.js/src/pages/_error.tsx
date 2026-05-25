@@ -1,4 +1,4 @@
-import { ErrorTemplate } from '@hieudoanm/templates/ErrorTemplate';
+import { ErrorTemplate } from '@hieudoanm/components/templates/ErrorTemplate';
 import { NextPage } from 'next';
 
 const messages = [

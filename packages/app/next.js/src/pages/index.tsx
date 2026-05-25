@@ -1,4 +1,4 @@
-import { LandingTemplate } from '@hieudoanm/templates/LandingTemplate';
+import { LandingTemplate } from '@hieudoanm/components/templates/LandingTemplate';
 import { NextPage } from 'next';
 
 const HomePage: NextPage = () => {

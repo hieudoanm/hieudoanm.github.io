@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`InstaSizeModal should render 1`] = `
+<div>
+  <dialog
+    class="modal modal-open"
+    open=""
+    style="background: rgba(0, 0, 0, 0.6);"
+  >
+    <div
+      class="modal-box flex w-full max-w-5xl flex-col gap-6"
+    >
+      <div
+        class="flex items-start justify-between"
+      >
+        <div
+          class="flex items-center gap-3"
+        >
+          <div
+            class="bg-neutral flex h-8 w-8 items-center justify-center rounded-lg text-white"
+          >
+            <svg
+              fill="none"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <rect
+                height="14"
+                rx="2"
+                stroke="currentColor"
+                stroke-width="1.5"
+                width="14"
+                x="1"
+                y="1"
+              />
+              <rect
+                fill="currentColor"
+                height="6"
+                opacity="0.7"
+                rx="1"
+                width="8"
+                x="4"
+                y="5"
+              />
+            </svg>
+          </div>
+          <div>
+            <h3
+              class="text-xl font-bold"
+            >
+              InstaSize
+            </h3>
+            <p
+              class="text-base-content/50 text-sm"
+            >
+              Square Fit + Filters
+            </p>
+          </div>
+        </div>
+        <button
+          class="btn btn-ghost btn-sm btn-circle"
+        >
+          ✕
+        </button>
+      </div>
+      <div
+        class="min-h-[400px]"
+      >
+        <div
+          class="cursor-pointer rounded-2xl border-2 border-dashed transition-all duration-200 border-base-300 hover:border-base-400 hover:bg-base-200/50"
+        >
+          <div
+            class="flex flex-col items-center justify-center gap-5 px-8 py-24 select-none"
+          >
+            <div
+              class="flex h-16 w-16 items-center justify-center rounded-2xl transition-colors duration-200 bg-base-200"
+            >
+              <svg
+                class="transition-colors duration-200 text-base-content/40"
+                fill="none"
+                height="28"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                width="28"
+              >
+                <path
+                  d="M4 16l4-4 4 4 4-8 4 8"
+                />
+                <rect
+                  height="18"
+                  rx="2"
+                  width="18"
+                  x="3"
+                  y="3"
+                />
+              </svg>
+            </div>
+            <div
+              class="text-center"
+            >
+              <p
+                class="text-base-content text-lg font-semibold"
+              >
+                Upload an image
+              </p>
+              <p
+                class="text-base-content/50 mt-1 text-sm"
+              >
+                Drag & drop, or click to browse — PNG, JPG, WEBP
+              </p>
+            </div>
+            <button
+              class="btn btn-primary btn-sm pointer-events-none rounded-full px-6"
+            >
+              Choose File
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <canvas
+      class="hidden"
+    />
+    <input
+      accept="image/*"
+      class="hidden"
+      type="file"
+    />
+    <div
+      class="modal-backdrop"
+    />
+  </dialog>
+</div>
+`;
