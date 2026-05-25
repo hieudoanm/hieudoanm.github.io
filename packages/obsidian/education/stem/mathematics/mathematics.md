@@ -10,7 +10,7 @@
 - Number Theory: Properties of integers
 - Set Theory: Study of sets (collections of objects)
 - Linear Algebra: Vector spaces and linear equations
-- Analysis		
+- Analysis
 
 ## Prime Numbers
 

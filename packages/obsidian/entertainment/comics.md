@@ -26,6 +26,13 @@
 | DC        | Greek Gods          | God of Messenger   | Hermes           |         |
 | DC        | Greek Gods          | God of Sky         | Zeus             |         |
 | DC        | Greek Gods          | God of Sea         | Poseidon         | Trident |
+| DC        | The Endless         | Destiny            |                  |         |
+| DC        | The Endless         | Death              |                  |         |
+| DC        | The Endless         | Dream              |                  |         |
+| DC        | The Endless         | Destruction        |                  |         |
+| DC        | The Endless         | Desire             |                  |         |
+| DC        | The Endless         | Despair            |                  |         |
+| DC        | The Endless         | Delirium           |                  |         |
 | Marvel    | Avengers            | Captain American   | Steve Rogers     | Shield  |
 | Marvel    | Avengers            | Black Panther      | T'Challa         | Suit    |
 | Marvel    | Avengers            | Doctor Strange     | Stephen Strange  |         |

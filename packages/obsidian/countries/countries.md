@@ -1,5 +1,7 @@
 # Countries
 
+[[Cities]]
+
 ## Table of Contents
 
 - [Countries](#countries)

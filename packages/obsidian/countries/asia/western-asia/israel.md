@@ -1,4 +1,12 @@
-# Prime Ministers
+# Israel
+
+## Table of Contents
+
+- [Israel](#israel)
+  - [Table of Contents](#table-of-contents)
+  - [Prime Ministers](#prime-ministers)
+
+## Prime Ministers
 
 | No. | Name                 | Political Party     | Start Date | End Date    |
 | --- | -------------------- | ------------------- | ---------- | ----------- |
