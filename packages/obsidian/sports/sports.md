@@ -3,6 +3,7 @@
 - [[sports/american-football|American Football]]
 - [[Badminton]]
 - [[Baseball]]
+- [[Basketball]]
 - [[Bicycling]]
 - [[Checker]]
 - [[Chess]]

@@ -2,8 +2,8 @@
 
 | Type          | Sport                                    | Publisher              |
 | ------------- | ---------------------------------------- | ---------------------- |
-| MOBA          | DotA                                     | Valve Corporation      |
-| MOBA          | League of Legends                        | Riot Games             |
+| MOBA          | [[DotA]]                                 | Valve Corporation      |
+| MOBA          | [[league-of-legends\|League of Legends]] | Riot Games             |
 | Battle Royale | Fortnite                                 | Epic Games             |
 | Battle Royale | PUBG: Battlegrounds                      | PUBG Studios (Krafton) |
 | Card Game     | Hearthstone                              | Blizzard Entertainment |

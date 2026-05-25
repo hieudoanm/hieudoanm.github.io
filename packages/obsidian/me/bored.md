@@ -23,9 +23,9 @@
 | 19  | Education    | Programming  | Learn Swift for iOS Development            |
 | 20  | Education    | Programming  | Build a [[Chess]] Engine                   |
 | 21  | Education    | Science      | Learn [[Mathematics]]                      |
-| 22  | Education    | Science      | Learn [[Physics]]                          |
-| 23  | Education    | Science      | Learn [[Chemistry]]                        |
-| 24  | Education    | Science      | Learn [[Biology]]                          |
+| 22  | Education    | Science      | Learn [[physics]]                          |
+| 23  | Education    | Science      | Learn [[chemistry]]                        |
+| 24  | Education    | Science      | Learn [[biology]]                          |
 | 25  | Education    | Design       | Learn Illustrator                          |
 | 26  | Recreational |              | Practive writing with non-dominant hand    |
 | 27  | Recreational |              | Museum Visit                               |

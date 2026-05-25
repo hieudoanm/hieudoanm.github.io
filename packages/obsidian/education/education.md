@@ -1,4 +1,5 @@
 # Education
 
+- [[Humanity]]
 - [[STEM]]
 - [[University]]

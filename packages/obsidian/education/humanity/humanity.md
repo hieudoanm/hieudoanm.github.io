@@ -1,4 +1,5 @@
 # Humanity
 
-1. [[Languages]]
-2. [[Psychology]]
+1. [[Arts]]
+2. [[Languages]]
+3. [[Psychology]]
