@@ -61,16 +61,6 @@
   },
   {
     "category": "utilities",
-    "emoji": "🤟",
-    "id": "sign",
-    "name": "Sign",
-    "href": "https://hieudoanm.github.io/sign",
-    "github": "https://github.com/hieudoanm/sign",
-    "image": "https://raw.githubusercontent.com/hieudoanm/sign/refs/heads/master/images/app.png",
-    "tags": ["cli", "extension", "android", "macos", "web"]
-  },
-  {
-    "category": "utilities",
     "emoji": "🖥️",
     "id": "system",
     "name": "System",

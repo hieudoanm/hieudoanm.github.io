@@ -19,10 +19,10 @@ import { OpenAPI2Postman } from '@hieudoanm/components/modals/converters/OpenAPI
 import { JSONSchemaModal } from '@hieudoanm/components/modals/editors/JSONSchemaModal';
 import { ManifestModal } from '@hieudoanm/components/modals/editors/ManifestModal';
 import { MarkdownModal } from '@hieudoanm/components/modals/editors/MarkdownModal';
-import { EnglishModal } from '@hieudoanm/components/modals/education/EnglishModal';
-import { FlashcardsModal } from '@hieudoanm/components/modals/education/FlashcardsModal';
-import { PeriodicTableModal } from '@hieudoanm/components/modals/education/PeriodicTableModal';
-import { PitchModal } from '@hieudoanm/components/modals/education/PitchModal';
+import { LanguagesEnglishModal } from '@hieudoanm/components/modals/education/languages/EnglishModal';
+import { FlashcardsModal } from '@hieudoanm/components/modals/education/languages/FlashcardsModal';
+import { PeriodicTableModal } from '@hieudoanm/components/modals/education/chemistry/PeriodicTableModal';
+import { PitchModal } from '@hieudoanm/components/modals/education/music/PitchModal';
 import { LogMARChartModal } from '@hieudoanm/components/modals/eyes/LogMARChartModal';
 import { SnellenChartModal } from '@hieudoanm/components/modals/eyes/SnellenChartModal';
 import { TumblingEChartModal } from '@hieudoanm/components/modals/eyes/TumblingEChartModal';
@@ -124,6 +124,14 @@ const CameraModal = dynamic(
   { ssr: false }
 );
 
+const SignModal = dynamic(
+  () =>
+    import('@hieudoanm/components/modals/education/languages/SignModal').then(
+      (mod) => mod.SignModal
+    ),
+  { ssr: false }
+);
+
 /* ------------------------------------------------------------------ */
 /* Types                                                                */
 /* ------------------------------------------------------------------ */
@@ -146,6 +154,7 @@ type ModalId =
   | 'pitch'
   | 'pomodoro'
   | 'qr'
+  | 'sign'
   | 'string'
   | 'uuid'
   | 'flashcards'
@@ -230,7 +239,7 @@ const MODAL_MAP: Record<
   tax: TaxModal,
   elo: EloModal,
   openapi: OpenAPI2Postman,
-  english: EnglishModal,
+  english: LanguagesEnglishModal,
   'github-social-preview': GitHubSocialPreviewModal,
   redact: RedactModal,
   camera: CameraModal,
@@ -248,6 +257,7 @@ const MODAL_MAP: Record<
   'chess-clock': ChessClockModal,
   watchface: WatchFaceModal,
   'invoice-parser': InvoiceParserModal,
+  sign: SignModal,
   logmar: LogMARChartModal,
   snellen: SnellenChartModal,
   svg: SVGModal,
@@ -512,6 +522,13 @@ const makeTools = (
       emoji: '🎹',
       color: '#8b5cf6',
       onClick: open('pitch'),
+    },
+    {
+      label: 'Sign Language',
+      description: 'Detection',
+      emoji: '🤟',
+      color: '#3b82f6',
+      onClick: open('sign'),
     },
   ],
   eyes: [

@@ -65,6 +65,15 @@ importers:
       '@codemirror/view':
         specifier: 6.43.0
         version: 6.43.0
+      '@mediapipe/camera_utils':
+        specifier: 0.3.1675466862
+        version: 0.3.1675466862
+      '@mediapipe/drawing_utils':
+        specifier: 0.3.1675466124
+        version: 0.3.1675466124
+      '@mediapipe/hands':
+        specifier: 0.4.1675469240
+        version: 0.4.1675469240
       '@silvia-odwyer/photon':
         specifier: 0.3.3
         version: 0.3.3
@@ -2262,6 +2271,15 @@ packages:
 
   '@mdn/browser-compat-data@7.3.9':
     resolution: {integrity: sha512-ARxwDFfq4uhRSd9Wr1FMaxeKKIFDPyMnSoLe/8WX+nNXbKDILf1H8KDJW9nzu2QTR0hQ37jDCzAgyaNYdLzACQ==}
+
+  '@mediapipe/camera_utils@0.3.1675466862':
+    resolution: {integrity: sha512-siuXBoUxWo9WL0MeAxIxvxY04bvbtdNl7uCxoJxiAiRtNnCYrurr7Vl5VYQ94P7Sq0gVq6PxIDhWWeZ/pLnSzw==}
+
+  '@mediapipe/drawing_utils@0.3.1675466124':
+    resolution: {integrity: sha512-/IWIB/iYRMtiUKe3k7yGqvwseWHCOqzVpRDfMgZ6gv9z7EEimg6iZbRluoPbcNKHbYSxN5yOvYTzUYb8KVf22Q==}
+
+  '@mediapipe/hands@0.4.1675469240':
+    resolution: {integrity: sha512-GxoZvL1mmhJxFxjuyj7vnC++JIuInGznHBin5c7ZSq/RbcnGyfEcJrkM/bMu5K1Mz/2Ko+vEX6/+wewmEHPrHg==}
 
   '@napi-rs/canvas-android-arm64@0.1.100':
     resolution: {integrity: sha512-hjhCKhntPv9+t4ckHymdx0phYNcVW+GKQR6Lzw2zE+pOVjOplSmtx9nNNknTjbEDLcuLZqA1y8ufKg1XfgftzQ==}
@@ -10912,6 +10930,12 @@ snapshots:
   '@marijn/find-cluster-break@1.0.2': {}
 
   '@mdn/browser-compat-data@7.3.9': {}
+
+  '@mediapipe/camera_utils@0.3.1675466862': {}
+
+  '@mediapipe/drawing_utils@0.3.1675466124': {}
+
+  '@mediapipe/hands@0.4.1675469240': {}
 
   '@napi-rs/canvas-android-arm64@0.1.100':
     optional: true
