@@ -6,7 +6,7 @@
   - [Table of Contents](#table-of-contents)
   - [Prime Ministers](#prime-ministers)
   - [Provinces](#provinces)
-  - [Football Clubs](#football-clubs)
+  - [Sports](#sports)
 
 ## Prime Ministers
 
@@ -36,18 +36,6 @@
 | Utrecht       | Province | Utrecht         | Utrecht      |
 | Zeeland       | Province | Middelburg      | Terneuzen    |
 
-## Football Clubs
+## Sports
 
-| City       | Club            |
-| ---------- | --------------- |
-| Alkmaar    | AZ Alkmaar      |
-| Amsterdam  | Ajax            |
-| Arnhem     | Vitesse         |
-| Eindhoven  | PSV Eindhoven   |
-| Enschede   | FC Twente       |
-| Heerenveen | SC Heerenveen   |
-| Nijmegen   | NEC Nijmegen    |
-| Rotterdam  | Feyenoord       |
-| Sittard    | Fortuna Sittard |
-| Tilburg    | Willem II       |
-| Utrecht    | FC Utrecht      |
+- [[Eredivisie]]

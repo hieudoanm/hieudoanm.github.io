@@ -27,17 +27,8 @@
 | 14  | António Costa               | 2015-11-26 | 2024-04-02 | Socialist         |
 | 15  | Luís Montenegro             | 2024-04-02 | Incumbent  | Social Democratic |
 
-## Football Clubs
+## Sports
 
-| City              | Club                              |
-| ----------------- | --------------------------------- |
-| Barcelos          | Gil Vicente FC                    |
-| Braga             | SC Braga                          |
-| Funchal (Madeira) | Marítimo                          |
-| Guimarães         | Vitória SC (Vitória de Guimarães) |
-| Lisbon            | SL Benfica                        |
-| Lisbon            | Sporting CP                       |
-| Lisbon            | Casa Pia AC                       |
-| Porto             | FC Porto                          |
-| Porto             | Boavista FC                       |
-| Vila do Conde     | Rio Ave FC                        |
+- [[primeira-liga|Primeira Liga]]
+
+

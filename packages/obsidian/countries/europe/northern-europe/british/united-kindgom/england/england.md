@@ -1,50 +1,66 @@
 # England
 
-## Premier League
+## Table of Contents
 
-| County                   | City                | Club                    | Stadium                       |
-| ------------------------ | ------------------- | ----------------------- | ----------------------------- |
-| Greater London           | London              | Chelsea                 | Stamford Bridge               |
-| Greater Manchester       | Manchester          | Manchester United       | Old Trafford                  |
-| Greater London           | London              | Arsenal                 | Emirates Stadium              |
-| Merseyside               | Liverpool           | Liverpool FC            | Anfield                       |
-| Greater Manchester       | Manchester          | Manchester City         | Etihad Stadium                |
-| Greater London           | London              | Tottenham Hotspur       | Tottenham Hotspur Stadium     |
-| Merseyside               | Liverpool           | Everton                 | Goodison Park                 |
-| Tyne and Wear            | Newcastle upon Tyne | Newcastle United        | St James’ Park                |
-| Greater London           | London              | West Ham United         | London Stadium                |
-| West Midlands            | Birmingham          | Aston Villa             | Villa Park                    |
-| Greater London           | London              | Fulham                  | Craven Cottage                |
-| Greater London           | London              | Crystal Palace          | Selhurst Park                 |
-| Hampshire                | Southampton         | Southampton             | St Mary’s Stadium             |
-| Leicestershire           | Leicester           | Leicester City          | King Power Stadium            |
-| West Midlands            | West Bromwich       | West Bromwich Albion    | The Hawthorns                 |
-| Staffordshire            | Stoke-on-Trent      | Stoke City              | bet365 Stadium                |
-| Tyne and Wear            | Sunderland          | Sunderland              | Stadium of Light              |
-| West Midlands            | Wolverhampton       | Wolverhampton Wanderers | Molineux Stadium              |
-| East Sussex              | Brighton & Hove     | Brighton & Hove Albion  | Falmer Stadium (Amex Stadium) |
-| Lancashire               | Blackburn           | Blackburn Rovers        | Ewood Park                    |
-| Dorset                   | Bournemouth         | Bournemouth             | Vitality Stadium              |
-| Lancashire               | Burnley             | Burnley                 | Turf Moor                     |
-| Swansea                  | Swansea             | Swansea City            | Swansea.com Stadium           |
-| Greater Manchester       | Wigan               | Wigan Athletic          | DW Stadium                    |
-| Greater Manchester       | Bolton              | Bolton Wanderers        | Toughsheet Community Stadium  |
-| Hertfordshire            | Watford             | Watford                 | Vicarage Road                 |
-| Hampshire                | Portsmouth          | Portsmouth              | Fratton Park                  |
-| North Yorkshire          | Middlesbrough       | Middlesbrough           | Riverside Stadium             |
-| Norfolk                  | Norwich             | Norwich City            | Carrow Road                   |
-| West Midlands            | Birmingham          | Birmingham City         | St Andrew’s                   |
-| Greater London           | London              | Brentford               | Gtech Community Stadium       |
-| East Riding of Yorkshire | Hull                | Hull City               | MKM Stadium                   |
-| South Yorkshire          | Sheffield           | Sheffield United        | Bramall Lane                  |
-| Nottinghamshire          | Nottingham          | Nottingham Forest       | City Ground                   |
-| Greater London           | London              | Charlton Athletic       | The Valley                    |
-| West Yorkshire           | Leeds               | Leeds United            | Elland Road                   |
-| Berkshire                | Reading             | Reading                 | Select Car Leasing Stadium    |
-| Greater London           | London              | Queens Park Rangers     | Loftus Road                   |
-| West Yorkshire           | Huddersfield        | Huddersfield Town       | John Smith’s Stadium          |
-| Cardiff                  | Cardiff             | Cardiff City            | Cardiff City Stadium          |
-| Bedfordshire             | Luton               | Luton Town              | Kenilworth Road               |
-| Suffolk                  | Ipswich             | Ipswich Town            | Portman Road                  |
-| Lancashire               | Blackpool           | Blackpool               | Bloomfield Road               |
-| Derbyshire               | Derby               | Derby County            | Pride Park Stadium            |
+- [England](#england)
+  - [Table of Contents](#table-of-contents)
+  - [Counties](#counties)
+  - [Sports](#sports)
+
+## Counties
+
+| County                   | Region                   | County Town          |
+| ------------------------ | ------------------------ | -------------------- |
+| Bedfordshire             | East of England          | Bedford              |
+| Berkshire                | South East               | Reading              |
+| Bristol                  | South West               | Bristol              |
+| Buckinghamshire          | South East               | Aylesbury            |
+| Cambridgeshire           | East of England          | Cambridge            |
+| Cheshire                 | North West               | Chester              |
+| City of London           | Greater London           | London               |
+| Cornwall                 | South West               | Truro                |
+| Cumbria                  | North West               | Carlisle             |
+| Derbyshire               | East Midlands            | Matlock              |
+| Devon                    | South West               | Exeter               |
+| Dorset                   | South West               | Dorchester           |
+| Durham                   | North East               | Durham               |
+| East Riding of Yorkshire | Yorkshire and the Humber | Beverley             |
+| East Sussex              | South East               | Lewes                |
+| Essex                    | East of England          | Chelmsford           |
+| Gloucestershire          | South West               | Gloucester           |
+| Greater London           | Greater London           | London               |
+| Greater Manchester       | North West               | Manchester           |
+| Hampshire                | South East               | Winchester           |
+| Herefordshire            | West Midlands            | Hereford             |
+| Hertfordshire            | East of England          | Hertford             |
+| Isle of Wight            | South East               | Newport              |
+| Kent                     | South East               | Maidstone            |
+| Lancashire               | North West               | Preston              |
+| Leicestershire           | East Midlands            | Leicester            |
+| Lincolnshire             | East Midlands            | Lincoln              |
+| Merseyside               | North West               | Liverpool            |
+| Norfolk                  | East of England          | Norwich              |
+| North Yorkshire          | Yorkshire and the Humber | Northallerton        |
+| Northamptonshire         | East Midlands            | Northampton          |
+| Northumberland           | North East               | Morpeth              |
+| Nottinghamshire          | East Midlands            | Nottingham           |
+| Oxfordshire              | South East               | Oxford               |
+| Rutland                  | East Midlands            | Oakham               |
+| Shropshire               | West Midlands            | Shrewsbury           |
+| Somerset                 | South West               | Taunton              |
+| South Yorkshire          | Yorkshire and the Humber | Barnsley             |
+| Staffordshire            | West Midlands            | Stafford             |
+| Suffolk                  | East of England          | Ipswich              |
+| Surrey                   | South East               | Kingston upon Thames |
+| Tyne and Wear            | North East               | Newcastle upon Tyne  |
+| Warwickshire             | West Midlands            | Warwick              |
+| West Midlands            | West Midlands            | Birmingham           |
+| West Sussex              | South East               | Chichester           |
+| West Yorkshire           | Yorkshire and the Humber | Wakefield            |
+| Wiltshire                | South West               | Trowbridge           |
+| Worcestershire           | West Midlands            | Worcester            |
+
+## Sports
+
+- [[premier-league|Premier League]]
+- [[fa-cup|FA Cup]]

@@ -2,8 +2,9 @@
 
 ## Sports
 
-1. [[NBA]]
-2. [[NFL]]
+1. [[MLS]]
+2. [[NBA]]
+3. [[NFL]]
 
 ## Administrative Divisions
 

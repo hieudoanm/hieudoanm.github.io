@@ -5,7 +5,7 @@
 - [Spain](#spain)
   - [Table of Contents](#table-of-contents)
   - [Prime Ministers](#prime-ministers)
-  - [Football Clubs](#football-clubs)
+  - [Sports](#sports)
 
 ## Prime Ministers
 
@@ -19,17 +19,6 @@
 | 6   | Mariano Rajoy                | 2011-12-21 | 2018-06-01 | People's                       |
 | 7   | Pedro Sánchez                | 2018-06-02 | Incumbent  | Spanish Socialist Workers'     |
 
-## Football Clubs
+## Sports
 
-| City          | Club            |
-| ------------- | --------------- |
-| Bilbao        | Athletic Bilbao |
-| Barcelona     | FC Barcelona    |
-| Cádiz         | Cádiz CF        |
-| Madrid        | Atlético Madrid |
-| Madrid        | Real Madrid     |
-| Pamplona      | Osasuna         |
-| San Sebastián | Real Sociedad   |
-| Seville       | Sevilla FC      |
-| Valencia      | Valencia CF     |
-| Villarreal    | Villarreal CF   |
+- [[la-liga|La Liga]]

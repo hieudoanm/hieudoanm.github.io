@@ -6,7 +6,7 @@
   - [Table of Contents](#table-of-contents)
   - [Presidents](#presidents)
   - [Regions](#regions)
-  - [Football Clubs](#football-clubs)
+  - [Sports](#sports)
 
 ## Presidents
 
@@ -39,18 +39,6 @@
 | Pays de la Loire           | Region | Nantes     | Nantes       |
 | Provence-Alpes-Côte d'Azur | Region | Marseille  | Marseille    |
 
-## Football Clubs
+## Sports
 
-| City        | Club                |
-| ----------- | ------------------- |
-| Angers      | Angers SCO          |
-| Brest       | Stade Brestois 29   |
-| Lens        | RC Lens             |
-| Lille       | Lille OSC           |
-| Lyon        | Olympique Lyonnais  |
-| Marseille   | Olympique Marseille |
-| Metz        | FC Metz             |
-| Monaco      | AS Monaco           |
-| Montpellier | Montpellier HSC     |
-| Paris       | Paris Saint-Germain |
-| Reims       | Stade de Reims      |
+- [[ligue-1|Ligue 1]]

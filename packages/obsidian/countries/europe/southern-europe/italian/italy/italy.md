@@ -5,7 +5,7 @@
 - [Italy](#italy)
   - [Table of Contents](#table-of-contents)
   - [Prime Ministers](#prime-ministers)
-  - [Football Clubs](#football-clubs)
+  - [Sports](#sports)
 
 ## Prime Ministers
 
@@ -30,17 +30,6 @@
 | 17  | Mario Draghi         | 2021-02-13 | 2022-10-22 | Independent           |
 | 18  | Giorgia Meloni       | 2022-10-22 | Incumbent  | Brothers of Italy     |
 
-## Football Clubs
+## Sports
 
-| City     | Club        |
-| -------- | ----------- |
-| Bergamo  | Atalanta    |
-| Bologna  | Bologna     |
-| Florence | Fiorentina  |
-| Milan    | AC Milan    |
-| Milan    | Inter Milan |
-| Naples   | Napoli      |
-| Rome     | Lazio       |
-| Rome     | AS Roma     |
-| Turin    | Juventus    |
-| Udine    | Udinese     |
+- [[serie-a|Serie A]]

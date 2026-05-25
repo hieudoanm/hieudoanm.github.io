@@ -6,7 +6,7 @@
   - [Table of Contents](#table-of-contents)
   - [Chancellors](#chancellors)
   - [States](#states)
-  - [Football Clubs](#football-clubs)
+  - [Sports](#sports)
 
 ## Chancellors
 
@@ -45,19 +45,6 @@
 
 [Back to Table of Contents](#table-of-contents)
 
-## Football Clubs
+## Sports
 
-| City            | Club                |
-| --------------- | ------------------- |
-| Augsburg        | FC Augsburg         |
-| Berlin          | Union Berlin        |
-| Bochum          | VfL Bochum          |
-| Dortmund        | Borussia Dortmund   |
-| Frankfurt       | Eintracht Frankfurt |
-| Freiburg        | SC Freiburg         |
-| Leverkusen      | Bayer Leverkusen    |
-| Mönchengladbach | Borussia M'gladbach |
-| Munich          | Bayern Munich       |
-| Stuttgart       | VfB Stuttgart       |
-
-[Back to Table of Contents](#table-of-contents)
+- [[Bundesliga]]

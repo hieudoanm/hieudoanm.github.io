@@ -209,7 +209,7 @@
 | 164 | [[europe/southern-europe/iberian/andorra\|Andorra]]                              | Southern Europe |
 | 165 | [[europe/southern-europe/iberian/portugal\|Portugal]]                            | Southern Europe |
 | 166 | [[europe/southern-europe/iberian/spain\|Spain]]                                  | Southern Europe |
-| 167 | [[europe/southern-europe/italian/italy\|Italy]]                                  | Southern Europe |
+| 167 | [[Italy]]                                                                        | Southern Europe |
 | 168 | [[europe/southern-europe/italian/san-marino\|San Marino]]                        | Southern Europe |
 | 169 | [[europe/southern-europe/italian/vatican-city\|Vatican City]]                    | Southern Europe |
 | 170 | [[europe/southern-europe/mediterranean/cyprus\|Cyprus]]                          | Southern Europe |
