@@ -1,0 +1,15 @@
+# Caribbean
+
+1. [[antigua-and-barbuda|Antigua and Barbuda]]
+2. [[bahamas|Bahamas]]
+3. [[barbados|Barbados]]
+4. [[cuba|Cuba]]
+5. [[dominica|Dominica]]
+6. [[dominica-republic|Dominican Republic]]
+7. [[grenada|Grenada]]
+8. [[haiti|Haiti]]
+9. [[jamaica|Jamaica]]
+10. [[saint-kitts-and-nevis|Saint Kitts and Nevis]]
+11. [[saint-lucia|Saint Lucia]]
+12. [[saint-vincent-and-the-grenadines|Saint Vincent and the Grenadines]]
+13. [[trinidad-and-tobago|Trinidad and Tobago]]

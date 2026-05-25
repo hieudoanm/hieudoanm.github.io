@@ -1,3 +1,16 @@
 # Oceania
 
-1. [[Australia]]
+1. [[australia|Australia]]
+2. [[new-zealand|New Zealand]]
+3. [[papua-new-guinea|Papua New Guinea]]
+4. [[fiji|Fiji]]
+5. [[solomon-islands|Solomon Islands]]
+6. [[vanuatu|Vanuatu]]
+7. [[samoa|Samoa]]
+8. [[tonga|Tonga]]
+9. [[kiribati|Kiribati]]
+10. [[micronesia|Micronesia]]
+11. [[marshall-islands|Marshall Islands]]
+12. [[palau|Palau]]
+13. [[nauru|Nauru]]
+14. [[tuvalu|Tuvalu]]
