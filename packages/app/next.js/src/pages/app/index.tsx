@@ -1,9 +1,67 @@
-import { LegislationModal } from '@hieudoanm/components/pages/start/modals/visualization/LegislationModal';
-import { LeftSidebar } from '@hieudoanm/components/pages/start/sidebars/LeftSidebar';
-import { RightSidebar } from '@hieudoanm/components/pages/start/sidebars/RightSidebar';
 import { AppCard } from '@hieudoanm/components/pages/start/cards/AppCard';
 import { BookmarkCard } from '@hieudoanm/components/pages/start/cards/BookmarkCard';
 import { DownloadCard } from '@hieudoanm/components/pages/start/cards/DownloadCard';
+import {
+  Tool,
+  ToolCard,
+} from '@hieudoanm/components/pages/start/cards/ToolCard';
+import { CalculatorModal } from '@hieudoanm/components/pages/start/modals/calculators/CalculatorModal';
+import { ConverterModal } from '@hieudoanm/components/pages/start/modals/calculators/ConverterModal';
+import { EloModal } from '@hieudoanm/components/pages/start/modals/calculators/EloModal';
+import { InflationModal } from '@hieudoanm/components/pages/start/modals/calculators/InflationModal';
+import { PokerModal } from '@hieudoanm/components/pages/start/modals/calculators/PokerModal';
+import { TaxModal } from '@hieudoanm/components/pages/start/modals/calculators/TaxModal';
+import { ChessClockModal } from '@hieudoanm/components/pages/start/modals/clocks/ChessClockModal';
+import { CountdownModal } from '@hieudoanm/components/pages/start/modals/clocks/CountdownModal';
+import { PomodoroModal } from '@hieudoanm/components/pages/start/modals/clocks/PomodoroModal';
+import { WatchFaceModal } from '@hieudoanm/components/pages/start/modals/clocks/WatchfaceModal';
+import { BrailleModal } from '@hieudoanm/components/pages/start/modals/converters/BrailleModal';
+import { ColorsModal } from '@hieudoanm/components/pages/start/modals/converters/ColorsModal';
+import { MorseModal } from '@hieudoanm/components/pages/start/modals/converters/MorseModal';
+import { OpenAPI2Postman } from '@hieudoanm/components/pages/start/modals/converters/OpenAPI2Postman';
+import { JSONSchemaModal } from '@hieudoanm/components/pages/start/modals/editors/JSONSchemaModal';
+import { ManifestModal } from '@hieudoanm/components/pages/start/modals/editors/ManifestModal';
+import { MarkdownModal } from '@hieudoanm/components/pages/start/modals/editors/MarkdownModal';
+import { ResumeModal } from '@hieudoanm/components/pages/start/modals/editors/ResumeModal';
+import { DOIModal } from '@hieudoanm/components/pages/start/modals/education/academic/DOIModal';
+import { PeriodicTableModal } from '@hieudoanm/components/pages/start/modals/education/chemistry/PeriodicTableModal';
+import { LanguagesEnglishModal } from '@hieudoanm/components/pages/start/modals/education/languages/EnglishModal';
+import { FlashcardsModal } from '@hieudoanm/components/pages/start/modals/education/languages/FlashcardsModal';
+import { PitchModal } from '@hieudoanm/components/pages/start/modals/education/music/PitchModal';
+import { LogMARChartModal } from '@hieudoanm/components/pages/start/modals/eyes/LogMARChartModal';
+import { SnellenChartModal } from '@hieudoanm/components/pages/start/modals/eyes/SnellenChartModal';
+import { TumblingEChartModal } from '@hieudoanm/components/pages/start/modals/eyes/TumblingEChartModal';
+import { BlackjackModal } from '@hieudoanm/components/pages/start/modals/games/BlackjackModal';
+import { PalindromeModal } from '@hieudoanm/components/pages/start/modals/games/PalindromeModal';
+import { PiModal } from '@hieudoanm/components/pages/start/modals/games/PiNumberModal';
+import { PokedexModal } from '@hieudoanm/components/pages/start/modals/games/PokedexModal';
+import { QuizifyModal } from '@hieudoanm/components/pages/start/modals/games/QuizifyModal';
+import { RecallModal } from '@hieudoanm/components/pages/start/modals/games/RecallModal';
+import { T3Modal } from '@hieudoanm/components/pages/start/modals/games/T3Modal';
+import { TowersModal } from '@hieudoanm/components/pages/start/modals/games/TowersModal';
+import { TypoglycemiaModal } from '@hieudoanm/components/pages/start/modals/games/TypoglycemiaModal';
+import { WordleModal } from '@hieudoanm/components/pages/start/modals/games/WordleModal';
+import { BreakingBadModal } from '@hieudoanm/components/pages/start/modals/images/BreakingBadModal';
+import { GitHubSocialPreviewModal } from '@hieudoanm/components/pages/start/modals/images/GitHubSocialPreviewModal';
+import { HouseModal } from '@hieudoanm/components/pages/start/modals/images/HouseModal';
+import { QRCodeModal } from '@hieudoanm/components/pages/start/modals/images/QRCodeModal';
+import { YouTubeThumbnailsModal } from '@hieudoanm/components/pages/start/modals/images/YouTubeThumbnailsModal';
+import { ChatModal } from '@hieudoanm/components/pages/start/modals/tools/ChatModal/ChatModal';
+import { ClipboardModal } from '@hieudoanm/components/pages/start/modals/tools/ClipboardModal';
+import { EmojisModal } from '@hieudoanm/components/pages/start/modals/tools/EmojisModal';
+import { FigletModal } from '@hieudoanm/components/pages/start/modals/tools/FigletModal';
+import { IPModal } from '@hieudoanm/components/pages/start/modals/tools/IPModal';
+import { KaprekarModal } from '@hieudoanm/components/pages/start/modals/tools/KaprekarModal';
+import { NoSleepModal } from '@hieudoanm/components/pages/start/modals/tools/NoSleepModal';
+import { ProxyModal } from '@hieudoanm/components/pages/start/modals/tools/ProxyModal';
+import { SVGModal } from '@hieudoanm/components/pages/start/modals/tools/SVGModal';
+import { ShopifyDetectModal } from '@hieudoanm/components/pages/start/modals/tools/ShopifyDetectModal';
+import { StringModal } from '@hieudoanm/components/pages/start/modals/tools/StringModal';
+import { UUIDModal } from '@hieudoanm/components/pages/start/modals/tools/UUIDModal';
+import { CalendarTrackerModal } from '@hieudoanm/components/pages/start/modals/visualization/CalendarTracker';
+import { LegislationModal } from '@hieudoanm/components/pages/start/modals/visualization/LegislationModal';
+import { LeftSidebar } from '@hieudoanm/components/pages/start/sidebars/LeftSidebar';
+import { RightSidebar } from '@hieudoanm/components/pages/start/sidebars/RightSidebar';
 import { apps } from '@hieudoanm/data/apps';
 import {
   chat as chatBookmarks,
@@ -34,63 +92,6 @@ import {
   useRef,
   useState,
 } from 'react';
-import {
-  Tool,
-  ToolCard,
-} from '@hieudoanm/components/pages/start/cards/ToolCard';
-import { CalculatorModal } from '@hieudoanm/components/pages/start/modals/calculators/CalculatorModal';
-import { ConverterModal } from '@hieudoanm/components/pages/start/modals/calculators/ConverterModal';
-import { EloModal } from '@hieudoanm/components/pages/start/modals/calculators/EloModal';
-import { InflationModal } from '@hieudoanm/components/pages/start/modals/calculators/InflationModal';
-import { PokerModal } from '@hieudoanm/components/pages/start/modals/calculators/PokerModal';
-import { TaxModal } from '@hieudoanm/components/pages/start/modals/calculators/TaxModal';
-import { ChessClockModal } from '@hieudoanm/components/pages/start/modals/clocks/ChessClockModal';
-import { CountdownModal } from '@hieudoanm/components/pages/start/modals/clocks/CountdownModal';
-import { PomodoroModal } from '@hieudoanm/components/pages/start/modals/clocks/PomodoroModal';
-import { BrailleModal } from '@hieudoanm/components/pages/start/modals/converters/BrailleModal';
-import { ColorsModal } from '@hieudoanm/components/pages/start/modals/converters/ColorsModal';
-import { MorseModal } from '@hieudoanm/components/pages/start/modals/converters/MorseModal';
-import { OpenAPI2Postman } from '@hieudoanm/components/pages/start/modals/converters/OpenAPI2Postman';
-import { JSONSchemaModal } from '@hieudoanm/components/pages/start/modals/editors/JSONSchemaModal';
-import { ManifestModal } from '@hieudoanm/components/pages/start/modals/editors/ManifestModal';
-import { MarkdownModal } from '@hieudoanm/components/pages/start/modals/editors/MarkdownModal';
-import { PeriodicTableModal } from '@hieudoanm/components/pages/start/modals/education/chemistry/PeriodicTableModal';
-import { LanguagesEnglishModal } from '@hieudoanm/components/pages/start/modals/education/languages/EnglishModal';
-import { FlashcardsModal } from '@hieudoanm/components/pages/start/modals/education/languages/FlashcardsModal';
-import { PitchModal } from '@hieudoanm/components/pages/start/modals/education/music/PitchModal';
-import { LogMARChartModal } from '@hieudoanm/components/pages/start/modals/eyes/LogMARChartModal';
-import { SnellenChartModal } from '@hieudoanm/components/pages/start/modals/eyes/SnellenChartModal';
-import { TumblingEChartModal } from '@hieudoanm/components/pages/start/modals/eyes/TumblingEChartModal';
-import { BlackjackModal } from '@hieudoanm/components/pages/start/modals/games/BlackjackModal';
-import { PiModal } from '@hieudoanm/components/pages/start/modals/games/PiNumberModal';
-import { QuizifyModal } from '@hieudoanm/components/pages/start/modals/games/QuizifyModal';
-import { RecallModal } from '@hieudoanm/components/pages/start/modals/games/RecallModal';
-import { T3Modal } from '@hieudoanm/components/pages/start/modals/games/T3Modal';
-import { TowersModal } from '@hieudoanm/components/pages/start/modals/games/TowersModal';
-import { TypoglycemiaModal } from '@hieudoanm/components/pages/start/modals/games/TypoglycemiaModal';
-import { WordleModal } from '@hieudoanm/components/pages/start/modals/games/WordleModal';
-import { BreakingBadModal } from '@hieudoanm/components/pages/start/modals/images/BreakingBadModal';
-import { GitHubSocialPreviewModal } from '@hieudoanm/components/pages/start/modals/images/GitHubSocialPreviewModal';
-import { HouseModal } from '@hieudoanm/components/pages/start/modals/images/HouseModal';
-import { QRCodeModal } from '@hieudoanm/components/pages/start/modals/images/QRCodeModal';
-import { YouTubeThumbnailsModal } from '@hieudoanm/components/pages/start/modals/images/YouTubeThumbnailsModal';
-import { ClipboardModal } from '@hieudoanm/components/pages/start/modals/tools/ClipboardModal';
-import { DOIModal } from '@hieudoanm/components/pages/start/modals/tools/DOIModal';
-import { EmojisModal } from '@hieudoanm/components/pages/start/modals/tools/EmojisModal';
-import { FigletModal } from '@hieudoanm/components/pages/start/modals/tools/FigletModal';
-import { IPModal } from '@hieudoanm/components/pages/start/modals/tools/IPModal';
-import { KaprekarModal } from '@hieudoanm/components/pages/start/modals/tools/KaprekarModal';
-import { NoSleepModal } from '@hieudoanm/components/pages/start/modals/tools/NoSleepModal';
-import { ProxyModal } from '@hieudoanm/components/pages/start/modals/tools/ProxyModal';
-import { SVGModal } from '@hieudoanm/components/pages/start/modals/tools/SVGModal';
-import { ShopifyDetectModal } from '@hieudoanm/components/pages/start/modals/tools/ShopifyDetectModal';
-import { StringModal } from '@hieudoanm/components/pages/start/modals/tools/StringModal';
-import { UUIDModal } from '@hieudoanm/components/pages/start/modals/tools/UUIDModal';
-import { CalendarTrackerModal } from '@hieudoanm/components/pages/start/modals/visualization/CalendarTracker';
-import { start } from 'repl';
-import { WatchFaceModal } from '@hieudoanm/components/pages/start/modals/clocks/WatchfaceModal';
-import { PalindromeModal } from '@hieudoanm/components/pages/start/modals/games/PalindromeModal';
-import { PokedexModal } from '@hieudoanm/components/pages/start/modals/games/PokedexModal';
 
 /* ------------------------------------------------------------------ */
 /* Dynamic Modals (SSR: false)                                        */
@@ -138,6 +139,7 @@ const SignModal = dynamic(
 /* ------------------------------------------------------------------ */
 
 type ModalId =
+  | 'chat'
   | 'braille'
   | 'breaking-bad'
   | 'calculator'
@@ -175,6 +177,7 @@ type ModalId =
   | 'english'
   | 'manifest'
   | 'redact'
+  | 'resume'
   | 'github-social-preview'
   | 'json-schema'
   | 'shopify-detect'
@@ -207,6 +210,7 @@ const MODAL_MAP: Record<
   ModalId,
   FC<{ onClose: () => void }> | ComponentType<{ onClose: () => void }>
 > = {
+  chat: ChatModal,
   braille: BrailleModal,
   'breaking-bad': BreakingBadModal,
   calculator: CalculatorModal,
@@ -249,6 +253,7 @@ const MODAL_MAP: Record<
   pokedex: PokedexModal,
   figlet: FigletModal,
   markdown: MarkdownModal,
+  resume: ResumeModal,
   'youtube-thumbnails': YouTubeThumbnailsModal,
   instasize: InstaSizeModal,
   palindrome: PalindromeModal,
@@ -277,18 +282,18 @@ const makeTools = (
 ): Record<string, Tool[]> => ({
   tools: [
     {
+      label: 'Chat',
+      description: 'AI Assistant',
+      emoji: '💬',
+      color: '#3b82f6',
+      onClick: open('chat'),
+    },
+    {
       label: 'Clipboard',
       description: 'Clipboard',
       emoji: '📋',
       color: '#3b82f6',
       onClick: open('clipboard'),
-    },
-    {
-      label: 'DOI',
-      description: 'Cite',
-      emoji: '📄',
-      color: '#3b82f6',
-      onClick: open('doi'),
     },
     {
       label: 'Emojis',
@@ -488,6 +493,13 @@ const makeTools = (
       onClick: open('markdown'),
     },
     {
+      label: 'Resume',
+      description: 'Resume Builder',
+      emoji: '📄',
+      color: '#3b82f6',
+      onClick: open('resume'),
+    },
+    {
       label: 'Redact',
       description: 'PDF Redactor',
       emoji: '🖋️',
@@ -511,6 +523,13 @@ const makeTools = (
       onClick: open('flashcards'),
     },
     {
+      label: 'Sign Language',
+      description: 'Detection',
+      emoji: '🤟',
+      color: '#3b82f6',
+      onClick: open('sign'),
+    },
+    {
       label: 'Periodic Table',
       description: 'Elements',
       emoji: '📊',
@@ -525,11 +544,11 @@ const makeTools = (
       onClick: open('pitch'),
     },
     {
-      label: 'Sign Language',
-      description: 'Detection',
-      emoji: '🤟',
+      label: 'DOI',
+      description: 'Cite',
+      emoji: '📄',
       color: '#3b82f6',
-      onClick: open('sign'),
+      onClick: open('doi'),
     },
   ],
   eyes: [
