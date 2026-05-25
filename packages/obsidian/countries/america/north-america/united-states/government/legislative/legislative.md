@@ -1,3 +1,0 @@
-# Legislative
-
-- [[Speakers]]

@@ -1,6 +1,6 @@
 # Sports
 
-- [[sports/american-football|American Football]]
+- [[american-football|American Football]]
 - [[Badminton]]
 - [[Baseball]]
 - [[Basketball]]

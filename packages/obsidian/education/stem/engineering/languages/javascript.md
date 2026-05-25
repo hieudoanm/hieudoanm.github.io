@@ -1,8 +1,8 @@
-# Javascript
+# Javascript / TypeScript
 
 ## Table of Contents
 
-- [Javascript](#javascript)
+- [Javascript / TypeScript](#javascript--typescript)
   - [Table of Contents](#table-of-contents)
   - [Runtimes](#runtimes)
   - [Package Registries](#package-registries)

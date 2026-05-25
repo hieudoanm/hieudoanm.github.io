@@ -1,4 +1,8 @@
 # Government
 
-- [[Legislative]]
-- [[Executive]]
+- Federal
+  - [[Legislative]]
+  - [[Executive]]
+  - [[Judicial]]
+- State
+  - [[Governors]]
