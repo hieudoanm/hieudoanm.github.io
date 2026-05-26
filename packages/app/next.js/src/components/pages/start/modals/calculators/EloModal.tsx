@@ -118,7 +118,7 @@ export const EloModal: FC<{ onClose: () => void }> = ({ onClose }) => {
               onChange={(e) =>
                 setFormula({
                   ...formula,
-                  score: Number.parseFloat(e.target.value) as Score,
+                  score: e.target.value as Score,
                 })
               }>
               <option value={Score.WIN}>Win</option>
@@ -174,13 +174,7 @@ export const EloModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                 <select
                   className="select select-sm select-bordered flex-1"
                   value={g.score}
-                  onChange={(e) =>
-                    updateGame(
-                      index,
-                      'score',
-                      Number.parseFloat(e.target.value)
-                    )
-                  }>
+                  onChange={(e) => updateGame(index, 'score', e.target.value)}>
                   <option value={Score.WIN}>Win</option>
                   <option value={Score.DRAW}>Draw</option>
                   <option value={Score.LOSS}>Loss</option>

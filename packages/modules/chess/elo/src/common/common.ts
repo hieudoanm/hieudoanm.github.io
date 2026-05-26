@@ -5,7 +5,18 @@ export enum TimeClass {
 }
 
 export enum Score {
-  WIN = 1,
-  DRAW = 0.5,
-  LOSS = 0,
+  WIN = 'WIN',
+  DRAW = 'DRAW',
+  LOSS = 'LOSS',
 }
+
+export const getScoreValue = (score: Score): number => {
+  switch (score) {
+    case Score.WIN:
+      return 1;
+    case Score.DRAW:
+      return 0.5;
+    case Score.LOSS:
+      return 0;
+  }
+};

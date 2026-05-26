@@ -1,4 +1,4 @@
-import { Score, TimeClass } from '../common/common';
+import { getScoreValue, Score, TimeClass } from '../common/common';
 
 export type DevelopmentCoefficient = 10 | 20 | 40;
 
@@ -34,7 +34,7 @@ const getDelta = ({
     overAge18,
     timeClass,
   });
-  return Math.round(K * (score - chanceToWin));
+  return Math.round(K * (getScoreValue(score) - chanceToWin));
 };
 
 export const calculateRating = ({

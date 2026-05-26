@@ -1,0 +1,224 @@
+import { Download } from './types';
+
+export const extensions: Download[] = [
+  {
+    id: 'block-ads',
+    label: 'BlockAds',
+    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/block/ads/download',
+    emoji: '🚫',
+    color: '#ef4444',
+    description: 'AdsBlocker',
+    downloads: [
+      {
+        label: 'Download CRX',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/block/ads/download/block-ads.crx',
+      },
+      {
+        label: 'Download XPI',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/block/ads/download/block-ads.xpi',
+      },
+      {
+        label: 'Download ZIP',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/block/ads/download/block-ads.zip',
+      },
+    ],
+  },
+  {
+    id: 'block-sites',
+    label: 'BlockSites',
+    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/block/sites/download',
+    emoji: '🚫',
+    color: '#ef4444',
+    description: 'SiteBlocker',
+    downloads: [
+      {
+        label: 'Download CRX',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/block/sites/download/block-sites.crx',
+      },
+      {
+        label: 'Download XPI',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/block/sites/download/block-sites.xpi',
+      },
+      {
+        label: 'Download ZIP',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/block/sites/download/block-sites.zip',
+      },
+    ],
+  },
+  {
+    id: 'chess-focus',
+    label: 'Focus',
+    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/chess/focus/download',
+    emoji: '♟️',
+    color: '#6f6f6f',
+    description: 'Chess',
+    downloads: [
+      {
+        label: 'Download CRX',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/chess/focus/download/chess-focus.crx',
+      },
+      {
+        label: 'Download XPI',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/chess/focus/download/chess-focus.xpi',
+      },
+      {
+        label: 'Download ZIP',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/chess/focus/download/chess-focus.zip',
+      },
+    ],
+  },
+  {
+    id: 'claude-limit',
+    label: 'Claude Limit',
+    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/claude/limit/download',
+    emoji: '🧠',
+    color: '#2166f3',
+    description: 'Claude',
+    downloads: [
+      {
+        label: 'Download CRX',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/claude/limit/download/claude-limit.crx',
+      },
+      {
+        label: 'Download XPI',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/claude/limit/download/claude-limit.xpi',
+      },
+      {
+        label: 'Download ZIP',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/claude/limit/download/claude-limit.zip',
+      },
+    ],
+  },
+  {
+    id: 'github-open-link',
+    label: 'Open Link',
+    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/github/open-link/download',
+    emoji: '🔗',
+    color: '#111827',
+    description: 'GitHub',
+    downloads: [
+      {
+        label: 'Download CRX',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/github/open-link/download/github-open-link.crx',
+      },
+      {
+        label: 'Download XPI',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/github/open-link/download/github-open-link.xpi',
+      },
+      {
+        label: 'Download ZIP',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/github/open-link/download/github-open-link.zip',
+      },
+    ],
+  },
+  {
+    id: 'instagram-download',
+    label: 'Download Images',
+    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/instagram/download/download',
+    emoji: '📸',
+    color: '#e10600',
+    description: 'Instagram',
+    downloads: [
+      {
+        label: 'Download CRX',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/instagram/download/instagram-download.crx',
+      },
+      {
+        label: 'Download XPI',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/instagram/download/instagram-download.xpi',
+      },
+      {
+        label: 'Download ZIP',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/instagram/download/instagram-download.zip',
+      },
+    ],
+  },
+  {
+    id: 'shopify-detect',
+    label: 'Shopify Detect',
+    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/shopify/detect/download',
+    emoji: '🛍️',
+    color: '#10b981',
+    description: 'Shopify',
+    downloads: [
+      {
+        label: 'Download CRX',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/shopify/detect/download/shopify-detect.crx',
+      },
+      {
+        label: 'Download XPI',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/shopify/detect/download/shopify-detect.xpi',
+      },
+      {
+        label: 'Download ZIP',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/shopify/detect/download/shopify-detect.zip',
+      },
+    ],
+  },
+  {
+    id: 'tab-new',
+    label: 'New Tab',
+    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/tab/new/download',
+    emoji: '🆕',
+    color: '#2166f3',
+    description: 'Override',
+    downloads: [
+      {
+        label: 'Download CRX',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/tab/new/download/tab-new.crx',
+      },
+      {
+        label: 'Download XPI',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/tab/new/download/tab-new.xpi',
+      },
+      {
+        label: 'Download ZIP',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/tab/new/download/tab-new.zip',
+      },
+    ],
+  },
+  {
+    id: 'tab-snapshot',
+    label: 'Snapshot',
+    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/tab/snapshot/download',
+    emoji: '📸',
+    color: '#0065b3',
+    description: 'Tab',
+    downloads: [
+      {
+        label: 'Download CRX',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/tab/snapshot/download/tab-snapshot.crx',
+      },
+      {
+        label: 'Download XPI',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/tab/snapshot/download/tab-snapshot.xpi',
+      },
+      {
+        label: 'Download ZIP',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/tab/snapshot/download/tab-snapshot.zip',
+      },
+    ],
+  },
+  {
+    id: 'youtube-transcript',
+    label: 'Transcript',
+    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/youtube/transcript/download',
+    emoji: '📜',
+    color: '#ef4444',
+    description: 'YouTube',
+    downloads: [
+      {
+        label: 'Download CRX',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/youtube/transcript/download/youtube-transcript.crx',
+      },
+      {
+        label: 'Download XPI',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/youtube/transcript/download/youtube-transcript.xpi',
+      },
+      {
+        label: 'Download ZIP',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/extensions/browser/youtube/transcript/download/youtube-transcript.zip',
+      },
+    ],
+  },
+];

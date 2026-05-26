@@ -1,9 +1,11 @@
 packages:
   - packages/**
 allowBuilds:
+  '@parcel/watcher': true
   '@prisma/engines': true
   '@vscode/vsce-sign': true
   canvas: true
+  esbuild: true
   keytar: true
   prisma: true
   protobufjs: true

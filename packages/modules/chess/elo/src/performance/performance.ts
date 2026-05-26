@@ -1,6 +1,6 @@
 /* ---------------- Types ---------------- */
 
-import { Score } from '../common/common';
+import { getScoreValue, Score } from '../common/common';
 
 export type Game = {
   ratingOpponent: number;
@@ -27,7 +27,7 @@ const getAverageOpponentRating = (games: Game[]): number => {
  */
 const getScorePercentage = (games: Game[]): number => {
   if (!games.length) return 0;
-  const totalScore = games.reduce((sum, g) => sum + g.score, 0);
+  const totalScore = games.reduce((sum, g) => sum + getScoreValue(g.score), 0);
   return totalScore / games.length;
 };
 
