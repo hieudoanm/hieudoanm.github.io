@@ -1,4 +1,5 @@
 import { FC, useState } from 'react';
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 
 /* ------------------------------------------------------------------ */
 /* Types                                                                */
@@ -484,105 +485,93 @@ export const LegislationModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const largest = [...chamber.parties].sort((a, b) => b.seats - a.seats)[0];
 
   return (
-    <dialog className="modal modal-open">
-      <div className="modal-box w-full max-w-xl">
-        <button
-          onClick={onClose}
-          className="btn btn-sm btn-circle btn-ghost absolute top-2 right-2">
-          ✕
-        </button>
-
-        <h3 className="mb-3 text-center text-lg font-bold">Parliament Seats</h3>
-
-        {/* Country selector */}
-        <div className="mb-3 flex flex-wrap justify-center gap-1">
-          {COUNTRIES.map((c, i) => (
-            <button
-              key={c.name}
-              onClick={() => selectCountry(i)}
-              className={`btn btn-xs ${countryIdx === i ? 'btn-primary' : 'btn-ghost'}`}>
-              {c.flag} {c.name}
-            </button>
-          ))}
-        </div>
-
-        {/* Chamber tabs */}
-        {chamberKeys.length > 1 && (
-          <div role="tablist" className="tabs tabs-boxed mb-4 w-full">
-            {chamberKeys.map((key) => (
-              <a
-                key={key}
-                role="tab"
-                className={`tab flex-1 text-xs ${chamberKey === key ? 'tab-active' : ''}`}
-                onClick={() => setChamberKey(key)}>
-                {key}
-              </a>
-            ))}
-          </div>
-        )}
-
-        {/* Hemicycle */}
-        <div className="bg-base-200 rounded-xl px-4 pt-3 pb-1">
-          <Hemicycle chamber={chamber} />
-        </div>
-
-        {/* Stats row */}
-        <div className="mt-3 mb-4 flex justify-center gap-6 text-xs">
-          <div className="text-center">
-            <p className="text-2xl font-black">{chamber.totalSeats}</p>
-            <p className="opacity-40">Total seats</p>
-          </div>
-          <div className="text-center">
-            <p className="text-2xl font-black">{majority}</p>
-            <p className="opacity-40">For majority</p>
-          </div>
-          <div className="text-center">
-            <p className="text-2xl font-black" style={{ color: largest.color }}>
-              {largest.seats}
-            </p>
-            <p className="opacity-40">Largest party</p>
-          </div>
-        </div>
-
-        {/* Legend */}
-        <div className="space-y-1.5">
-          {chamber.parties.map((p) => {
-            const pct = ((p.seats / chamber.totalSeats) * 100).toFixed(1);
-            const hasMajority = p.seats >= majority;
-            return (
-              <div key={p.name} className="flex items-center gap-2 text-xs">
-                <div
-                  className="h-3 w-3 shrink-0 rounded-full"
-                  style={{ backgroundColor: p.color }}
-                />
-                <span className="min-w-0 flex-1 truncate">
-                  {p.name}
-                  {hasMajority && (
-                    <span className="badge badge-xs badge-success ml-1">
-                      Majority
-                    </span>
-                  )}
-                </span>
-                <div className="bg-base-200 relative h-2 w-24 overflow-hidden rounded-full">
-                  <div
-                    className="h-2 rounded-full transition-all duration-500"
-                    style={{ width: `${pct}%`, backgroundColor: p.color }}
-                  />
-                </div>
-                <span className="w-14 text-right font-mono">
-                  {p.seats} <span className="opacity-40">({pct}%)</span>
-                </span>
-              </div>
-            );
-          })}
-        </div>
-
-        <p className="mt-3 text-center text-xs opacity-30">
-          Data approximate — last updated 2024–2025
-        </p>
+    <ModalWrapper onClose={onClose} title="Parliament Seats" size="max-w-xl">
+      {/* Country selector */}
+      <div className="mb-3 flex flex-wrap justify-center gap-1">
+        {COUNTRIES.map((c, i) => (
+          <button
+            key={c.name}
+            onClick={() => selectCountry(i)}
+            className={`btn btn-xs ${countryIdx === i ? 'btn-primary' : 'btn-ghost'}`}>
+            {c.flag} {c.name}
+          </button>
+        ))}
       </div>
 
-      <div className="modal-backdrop" onClick={onClose} />
-    </dialog>
+      {/* Chamber tabs */}
+      {chamberKeys.length > 1 && (
+        <div role="tablist" className="tabs tabs-boxed mb-4 w-full">
+          {chamberKeys.map((key) => (
+            <a
+              key={key}
+              role="tab"
+              className={`tab flex-1 text-xs ${chamberKey === key ? 'tab-active' : ''}`}
+              onClick={() => setChamberKey(key)}>
+              {key}
+            </a>
+          ))}
+        </div>
+      )}
+
+      {/* Hemicycle */}
+      <div className="bg-base-200 rounded-xl px-4 pt-3 pb-1">
+        <Hemicycle chamber={chamber} />
+      </div>
+
+      {/* Stats row */}
+      <div className="mt-3 mb-4 flex justify-center gap-6 text-xs">
+        <div className="text-center">
+          <p className="text-2xl font-black">{chamber.totalSeats}</p>
+          <p className="opacity-40">Total seats</p>
+        </div>
+        <div className="text-center">
+          <p className="text-2xl font-black">{majority}</p>
+          <p className="opacity-40">For majority</p>
+        </div>
+        <div className="text-center">
+          <p className="text-2xl font-black" style={{ color: largest.color }}>
+            {largest.seats}
+          </p>
+          <p className="opacity-40">Largest party</p>
+        </div>
+      </div>
+
+      {/* Legend */}
+      <div className="space-y-1.5">
+        {chamber.parties.map((p) => {
+          const pct = ((p.seats / chamber.totalSeats) * 100).toFixed(1);
+          const hasMajority = p.seats >= majority;
+          return (
+            <div key={p.name} className="flex items-center gap-2 text-xs">
+              <div
+                className="h-3 w-3 shrink-0 rounded-full"
+                style={{ backgroundColor: p.color }}
+              />
+              <span className="min-w-0 flex-1 truncate">
+                {p.name}
+                {hasMajority && (
+                  <span className="badge badge-xs badge-success ml-1">
+                    Majority
+                  </span>
+                )}
+              </span>
+              <div className="bg-base-200 relative h-2 w-24 overflow-hidden rounded-full">
+                <div
+                  className="h-2 rounded-full transition-all duration-500"
+                  style={{ width: `${pct}%`, backgroundColor: p.color }}
+                />
+              </div>
+              <span className="w-14 text-right font-mono">
+                {p.seats} <span className="opacity-40">({pct}%)</span>
+              </span>
+            </div>
+          );
+        })}
+      </div>
+
+      <p className="mt-3 text-center text-xs opacity-30">
+        Data approximate — last updated 2024–2025
+      </p>
+    </ModalWrapper>
   );
 };

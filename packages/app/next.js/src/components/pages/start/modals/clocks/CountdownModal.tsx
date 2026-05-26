@@ -1,3 +1,4 @@
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 import { FC, useEffect, useState } from 'react';
 
 type TimeLeft = {
@@ -93,119 +94,91 @@ export const CountdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   ];
 
   return (
-    <dialog
-      open
-      className="modal modal-open"
-      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
-      <div
-        className="card bg-base-100 border-base-300 w-full max-w-lg border shadow-2xl"
-        z-10>
-        <div className="card-body gap-5 p-6">
-          <div className="flex items-start justify-between">
-            <div>
-              <h2 className="text-lg font-black tracking-tight">Countdown</h2>
-              <p className="text-base-content/40 mt-0.5 font-mono text-[10px] tracking-widest uppercase">
-                {title}
+    <ModalWrapper
+      onClose={onClose}
+      title="Countdown"
+      subtitle={title}
+      size="max-w-lg"
+      footerNote="Click outside to close · Edit to change title and dates">
+      <button
+        onClick={() => setEditing((v) => !v)}
+        className={`btn btn-outline btn-xs mb-2 font-mono tracking-widest ${editing ? 'btn-primary' : ''}`}>
+        {editing ? 'Cancel' : 'Edit'}
+      </button>
+
+      {editing ? (
+        <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-1">
+            <p className="text-base-content/40 font-mono text-[10px] tracking-widest uppercase">
+              Title
+            </p>
+            <input
+              type="text"
+              value={titleInput}
+              onChange={(e) => setTitleInput(e.target.value)}
+              className="input input-bordered input-sm w-full font-mono"
+            />
+          </div>
+          <div className="grid grid-cols-2 gap-3">
+            <div className="flex flex-col gap-1">
+              <p className="text-base-content/40 font-mono text-[10px] tracking-widest uppercase">
+                Start
               </p>
+              <input
+                type="date"
+                value={startInput}
+                onChange={(e) => setStartInput(e.target.value)}
+                className="input input-bordered input-sm w-full font-mono"
+              />
             </div>
-            <div className="flex items-center gap-2">
-              <button
-                onClick={() => setEditing((v) => !v)}
-                className={`btn btn-outline btn-xs font-mono tracking-widest ${editing ? 'btn-primary' : ''}`}>
-                {editing ? 'Cancel' : 'Edit'}
-              </button>
-              <button
-                onClick={onClose}
-                className="btn btn-ghost btn-xs btn-square text-base">
-                ✕
-              </button>
+            <div className="flex flex-col gap-1">
+              <p className="text-base-content/40 font-mono text-[10px] tracking-widest uppercase">
+                End
+              </p>
+              <input
+                type="date"
+                value={endInput}
+                onChange={(e) => setEndInput(e.target.value)}
+                className="input input-bordered input-sm w-full font-mono"
+              />
             </div>
           </div>
-
-          {editing ? (
-            <div className="flex flex-col gap-3">
-              <div className="flex flex-col gap-1">
-                <p className="text-base-content/40 font-mono text-[10px] tracking-widest uppercase">
-                  Title
-                </p>
-                <input
-                  type="text"
-                  value={titleInput}
-                  onChange={(e) => setTitleInput(e.target.value)}
-                  className="input input-bordered input-sm w-full font-mono"
-                />
-              </div>
-              <div className="grid grid-cols-2 gap-3">
-                <div className="flex flex-col gap-1">
-                  <p className="text-base-content/40 font-mono text-[10px] tracking-widest uppercase">
-                    Start
-                  </p>
-                  <input
-                    type="date"
-                    value={startInput}
-                    onChange={(e) => setStartInput(e.target.value)}
-                    className="input input-bordered input-sm w-full font-mono"
-                  />
-                </div>
-                <div className="flex flex-col gap-1">
-                  <p className="text-base-content/40 font-mono text-[10px] tracking-widest uppercase">
-                    End
-                  </p>
-                  <input
-                    type="date"
-                    value={endInput}
-                    onChange={(e) => setEndInput(e.target.value)}
-                    className="input input-bordered input-sm w-full font-mono"
-                  />
-                </div>
-              </div>
-              <button
-                onClick={handleSave}
-                className="btn btn-primary btn-sm w-full font-mono tracking-widest">
-                Save
-              </button>
-            </div>
-          ) : (
-            <>
-              <div className="bg-base-200 border-base-300 rounded-xl border p-4">
-                <div className="grid grid-cols-6 gap-2 text-center">
-                  {units.map(([label, value]) => (
-                    <div
-                      key={label}
-                      className="flex flex-col items-center gap-1">
-                      <span className="font-mono text-2xl leading-none font-black tabular-nums">
-                        {String(value).padStart(2, '0')}
-                      </span>
-                      <span className="text-base-content/30 font-mono text-[9px] tracking-widest uppercase">
-                        {label}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="flex flex-col gap-1.5">
-                <progress
-                  className="progress progress-primary w-full"
-                  value={progress}
-                  max="100"
-                />
-                <div className="flex justify-between font-mono text-[10px] opacity-30">
-                  <span>{start.toDateString()}</span>
-                  <span>{progress.toFixed(1)}%</span>
-                  <span>{end.toDateString()}</span>
-                </div>
-              </div>
-            </>
-          )}
-
-          <p className="text-base-content/20 text-center font-mono text-[10px] tracking-widest uppercase">
-            Click outside to close · Edit to change title and dates
-          </p>
+          <button
+            onClick={handleSave}
+            className="btn btn-primary btn-sm w-full font-mono tracking-widest">
+            Save
+          </button>
         </div>
-      </div>
-      <form method="dialog" className="modal-backdrop">
-        <button onClick={onClose}>close</button>
-      </form>
-    </dialog>
+      ) : (
+        <>
+          <div className="bg-base-200 border-base-300 rounded-xl border p-4">
+            <div className="grid grid-cols-6 gap-2 text-center">
+              {units.map(([label, value]) => (
+                <div key={label} className="flex flex-col items-center gap-1">
+                  <span className="font-mono text-2xl leading-none font-black tabular-nums">
+                    {String(value).padStart(2, '0')}
+                  </span>
+                  <span className="text-base-content/30 font-mono text-[9px] tracking-widest uppercase">
+                    {label}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="flex flex-col gap-1.5">
+            <progress
+              className="progress progress-primary w-full"
+              value={progress}
+              max="100"
+            />
+            <div className="flex justify-between font-mono text-[10px] opacity-30">
+              <span>{start.toDateString()}</span>
+              <span>{progress.toFixed(1)}%</span>
+              <span>{end.toDateString()}</span>
+            </div>
+          </div>
+        </>
+      )}
+    </ModalWrapper>
   );
 };

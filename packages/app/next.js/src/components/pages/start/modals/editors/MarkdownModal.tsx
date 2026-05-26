@@ -29,6 +29,7 @@ import {
   TDocumentDefinitions,
 } from 'pdfmake/interfaces';
 import { ChangeEvent, FC, useEffect, useRef, useState } from 'react';
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 import Tesseract from 'tesseract.js';
 
 /* =========================
@@ -433,21 +434,14 @@ export const MarkdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
      UI
   ========================= */
   return (
-    <dialog
-      open
-      className="modal modal-open"
-      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
-      <div className="modal-box flex h-[90vh] w-full max-w-6xl flex-col overflow-hidden p-0">
-        {/* Header */}
-        <div className="border-base-300 flex items-center justify-between border-b px-4 py-3">
-          <h3 className="text-sm font-bold">Markdown Editor</h3>
-          <button className="btn btn-sm btn-circle btn-ghost" onClick={onClose}>
-            ✕
-          </button>
-        </div>
-
-        {/* Body */}
-        <div className="divide-base-300 grid min-h-0 flex-1 divide-x overflow-hidden md:grid-cols-2">
+    <ModalWrapper
+      onClose={onClose}
+      title="Markdown Editor"
+      size="max-w-6xl"
+      fullHeight>
+      {/* Body */}
+      <div className="divide-base-300 grid min-h-0 flex-1 divide-x overflow-hidden md:grid-cols-2">
+        <div>
           {/* LEFT: Editor */}
           <div className="flex h-full flex-col overflow-hidden">
             <div className="border-base-300 flex gap-2 border-b p-2">
@@ -508,7 +502,6 @@ export const MarkdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           </div>
         </div>
       </div>
-      <div className="modal-backdrop" onClick={onClose} />
-    </dialog>
+    </ModalWrapper>
   );
 };

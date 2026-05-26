@@ -1,7 +1,6 @@
-'use client';
-
-import { FC, useEffect, useRef, useState } from 'react';
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 import { InferenceSession, Tensor } from 'onnxruntime-web';
+import { FC, useEffect, useRef, useState } from 'react';
 
 const NODE_ENV = process.env.NODE_ENV ?? 'development';
 
@@ -255,47 +254,41 @@ export const SignModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   }, []);
 
   return (
-    <dialog
-      className="modal modal-open"
-      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
-      <div className="modal-box relative h-[80vh] w-11/12 max-w-5xl overflow-hidden p-0">
-        <button
-          onClick={onClose}
-          className="btn btn-sm btn-circle btn-ghost absolute top-2 right-2 z-50 text-white">
-          ✕
-        </button>
-
-        <div ref={containerRef} className="relative h-full w-full bg-black">
-          {!isReady && (
-            <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur transition-opacity duration-500">
-              <div className="flex flex-col items-center gap-4 text-white">
-                <div className="h-16 w-16 animate-spin rounded-full border-4 border-white border-t-transparent" />
-                <p className="text-lg opacity-80">{loadingText}</p>
-              </div>
+    <ModalWrapper
+      onClose={onClose}
+      title="Sign Language"
+      size="max-w-5xl"
+      fullHeight>
+      <div ref={containerRef} className="relative h-full w-full bg-black">
+        {!isReady && (
+          <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur transition-opacity duration-500">
+            <div className="flex flex-col items-center gap-4 text-white">
+              <div className="h-16 w-16 animate-spin rounded-full border-4 border-white border-t-transparent" />
+              <p className="text-lg opacity-80">{loadingText}</p>
             </div>
-          )}
-
-          <video ref={videoRef} className="hidden" autoPlay playsInline />
-          <canvas ref={canvasRef} className="h-full w-full" />
-
-          {sign !== '' && (
-            <div className="pointer-events-none absolute top-6 left-1/2 z-40 -translate-x-1/2">
-              <div className="relative flex min-w-[120px] items-center justify-center rounded-2xl border border-white/30 bg-gradient-to-b from-white/25 via-white/10 to-white/5 px-8 py-4 shadow-[0_10px_60px_rgba(0,0,0,0.65)] backdrop-blur-3xl backdrop-contrast-125 backdrop-saturate-[1.8] transition-all duration-300 before:absolute before:inset-0 before:rounded-2xl before:shadow-[inset_0_2px_12px_rgba(255,255,255,0.35),inset_0_-2px_18px_rgba(0,0,0,0.55)] before:content-['']">
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-green-400/25 via-emerald-300/25 to-green-400/25 blur-xl" />
-                <span
-                  key={sign}
-                  className="animate-in fade-in zoom-in-50 relative text-5xl font-extrabold text-cyan-300 drop-shadow-[0_0_24px_rgba(34,211,238,0.95)]">
-                  {sign}
-                </span>
-              </div>
-            </div>
-          )}
-
-          <div className="pointer-events-none absolute bottom-4 left-1/2 -translate-x-1/2 text-[10px] tracking-widest text-white/50 uppercase">
-            Mirrored • Single Hand Tracking
           </div>
+        )}
+
+        <video ref={videoRef} className="hidden" autoPlay playsInline />
+        <canvas ref={canvasRef} className="h-full w-full" />
+
+        {sign !== '' && (
+          <div className="pointer-events-none absolute top-6 left-1/2 z-40 -translate-x-1/2">
+            <div className="relative flex min-w-[120px] items-center justify-center rounded-2xl border border-white/30 bg-gradient-to-b from-white/25 via-white/10 to-white/5 px-8 py-4 shadow-[0_10px_60px_rgba(0,0,0,0.65)] backdrop-blur-3xl backdrop-contrast-125 backdrop-saturate-[1.8] transition-all duration-300 before:absolute before:inset-0 before:rounded-2xl before:shadow-[inset_0_2px_12px_rgba(255,255,255,0.35),inset_0_-2px_18px_rgba(0,0,0,0.55)] before:content-['']">
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-green-400/25 via-emerald-300/25 to-green-400/25 blur-xl" />
+              <span
+                key={sign}
+                className="animate-in fade-in zoom-in-50 relative text-5xl font-extrabold text-cyan-300 drop-shadow-[0_0_24px_rgba(34,211,238,0.95)]">
+                {sign}
+              </span>
+            </div>
+          </div>
+        )}
+
+        <div className="pointer-events-none absolute bottom-4 left-1/2 -translate-x-1/2 text-[10px] tracking-widest text-white/50 uppercase">
+          Mirrored • Single Hand Tracking
         </div>
       </div>
-    </dialog>
+    </ModalWrapper>
   );
 };

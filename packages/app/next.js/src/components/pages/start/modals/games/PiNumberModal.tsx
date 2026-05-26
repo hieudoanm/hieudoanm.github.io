@@ -1,5 +1,6 @@
 import { PI } from '@hieudoanm/data/pi';
 import { FC, useEffect, useMemo, useRef, useState } from 'react';
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 
 const DIGIT_WIDTH = 24;
 const VIEWPORT_OFFSET = 4 * DIGIT_WIDTH;
@@ -96,22 +97,12 @@ export const PiModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   };
 
   return (
-    <dialog
-      className="modal modal-open"
-      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
+    <ModalWrapper onClose={onClose} title="π Memory">
       <div
         ref={containerRef}
         tabIndex={0}
         onKeyDown={onKeyDown}
-        className="modal-box w-full max-w-sm outline-none">
-        <button
-          onClick={onClose}
-          className="btn btn-sm btn-circle btn-ghost absolute top-2 right-2">
-          ✕
-        </button>
-
-        <h3 className="mb-4 text-center text-lg font-bold">π Memory</h3>
-
+        className="outline-none">
         {/* Mode tabs */}
         <div className="tabs tabs-boxed mb-4 w-full">
           <a
@@ -226,8 +217,6 @@ export const PiModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             : 'Type digits · Esc close'}
         </p>
       </div>
-
-      <div className="modal-backdrop" onClick={onClose} />
-    </dialog>
+    </ModalWrapper>
   );
 };

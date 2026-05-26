@@ -1,3 +1,4 @@
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 import { FC, useEffect, useRef, useState } from 'react';
 
 export const CalculatorModal: FC<{ onClose: () => void }> = ({ onClose }) => {
@@ -12,7 +13,6 @@ export const CalculatorModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const append = (value: string) => setExpression((prev) => prev + value);
   const del = () => setExpression((prev) => prev.slice(0, -1));
   const clear = () => setExpression('');
-
   const calculate = () => {
     try {
       const sanitized = expression
@@ -93,23 +93,12 @@ export const CalculatorModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const isError = expression === 'Error';
 
   return (
-    <dialog
-      className="modal modal-open"
-      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
+    <ModalWrapper onClose={onClose} title="Calculator">
       <div
         ref={containerRef}
         tabIndex={0}
         onKeyDown={onKeyDown}
-        className="modal-box w-full max-w-sm outline-none">
-        <button
-          onClick={onClose}
-          className="btn btn-sm btn-circle btn-ghost absolute top-2 right-2">
-          ✕
-        </button>
-
-        <h3 className="mb-3 text-center text-lg font-bold">Calculator</h3>
-
-        {/* Display */}
+        className="outline-none">
         <input
           type="text"
           value={expression}
@@ -118,14 +107,12 @@ export const CalculatorModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           placeholder="0"
         />
 
-        {/* Scientific toggle */}
         <button
           className="btn btn-accent btn-sm mb-3 w-full"
           onClick={() => setScientific((s) => !s)}>
           {scientific ? 'Basic Mode' : 'Scientific Mode'}
         </button>
 
-        {/* Scientific panel */}
         {scientific && (
           <div className="mb-3 grid grid-cols-4 gap-2">
             {sciButtons.map((btn) => (
@@ -139,7 +126,6 @@ export const CalculatorModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           </div>
         )}
 
-        {/* Basic panel */}
         <div className="grid grid-cols-4 gap-2">
           {basicButtons.map((btn) => (
             <button
@@ -164,8 +150,6 @@ export const CalculatorModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           Type directly · Enter = · Backspace del · Esc close
         </p>
       </div>
-
-      <div className="modal-backdrop" onClick={onClose} />
-    </dialog>
+    </ModalWrapper>
   );
 };

@@ -1,3 +1,4 @@
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 import { FC, useEffect, useRef, useState } from 'react';
 
 type Preset = { label: string; work: number; break: number };
@@ -106,112 +107,91 @@ export const PomodoroModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const isWork = phase === 'work';
 
   return (
-    <dialog
-      open
-      className="modal modal-open"
-      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
-      <div className="modal-box border-base-300 flex w-full max-w-sm flex-col gap-5 border">
-        {/* Header */}
-        <div className="flex items-start justify-between">
-          <div>
-            <h3 className="text-lg font-bold">Pomodoro</h3>
-            <p className="text-base-content/50 text-sm">
-              Round {round} · {isWork ? 'Focus' : 'Break'} phase
-            </p>
+    <ModalWrapper onClose={onClose} title="Pomodoro">
+      <p className="text-base-content/50 mb-2 text-sm">
+        Round {round} · {isWork ? 'Focus' : 'Break'} phase
+      </p>
+
+      <div className="grid grid-cols-3 gap-2">
+        {PRESETS.map((p) => (
+          <button
+            key={p.label}
+            className={`btn btn-sm ${
+              preset.label === p.label ? 'btn-primary' : 'btn-ghost'
+            }`}
+            onClick={() => applyPreset(p)}>
+            {p.label}
+          </button>
+        ))}
+      </div>
+
+      <div className="flex flex-col items-center gap-4">
+        <div className="relative flex items-center justify-center">
+          <svg width="160" height="160" viewBox="0 0 160 160">
+            <circle
+              cx="80"
+              cy="80"
+              r={radius}
+              fill="none"
+              strokeWidth="8"
+              className="stroke-base-300"
+            />
+            <circle
+              cx="80"
+              cy="80"
+              r={radius}
+              fill="none"
+              strokeWidth="8"
+              strokeLinecap="round"
+              className={isWork ? 'stroke-primary' : 'stroke-success'}
+              strokeDasharray={circumference}
+              strokeDashoffset={strokeDashoffset}
+              transform="rotate(-90 80 80)"
+              style={{ transition: 'stroke-dashoffset 0.5s ease' }}
+            />
+          </svg>
+          <div className="absolute flex flex-col items-center">
+            <span className="font-mono text-3xl font-bold tabular-nums">
+              {fmt(remaining)}
+            </span>
+            <span
+              className={`text-xs font-medium tracking-widest uppercase ${isWork ? 'text-primary' : 'text-success'}`}>
+              {isWork ? 'focus' : 'break'}
+            </span>
           </div>
-          <button className="btn btn-ghost btn-sm btn-circle" onClick={onClose}>
-            ✕
+        </div>
+
+        <div className="flex items-center gap-3">
+          <button
+            className="btn btn-ghost btn-sm btn-circle"
+            onClick={reset}
+            title="Reset">
+            ↺
+          </button>
+          <button
+            className={`btn btn-lg btn-circle ${running ? 'btn-error' : 'btn-primary'}`}
+            onClick={() => setRunning((r) => !r)}>
+            {running ? '⏸' : '▶'}
+          </button>
+          <button
+            className="btn btn-ghost btn-sm btn-circle"
+            onClick={togglePhase}
+            title={isWork ? 'Skip to break' : 'Skip to focus'}>
+            ⏭
           </button>
         </div>
-
-        {/* Preset selector */}
-        <div className="grid grid-cols-3 gap-2">
-          {PRESETS.map((p) => (
-            <button
-              key={p.label}
-              className={`btn btn-sm ${
-                preset.label === p.label ? 'btn-primary' : 'btn-ghost'
-              }`}
-              onClick={() => applyPreset(p)}>
-              {p.label}
-            </button>
-          ))}
-        </div>
-
-        {/* Ring timer */}
-        <div className="flex flex-col items-center gap-4">
-          <div className="relative flex items-center justify-center">
-            <svg width="160" height="160" viewBox="0 0 160 160">
-              {/* track */}
-              <circle
-                cx="80"
-                cy="80"
-                r={radius}
-                fill="none"
-                strokeWidth="8"
-                className="stroke-base-300"
-              />
-              {/* progress */}
-              <circle
-                cx="80"
-                cy="80"
-                r={radius}
-                fill="none"
-                strokeWidth="8"
-                strokeLinecap="round"
-                className={isWork ? 'stroke-primary' : 'stroke-success'}
-                strokeDasharray={circumference}
-                strokeDashoffset={strokeDashoffset}
-                transform="rotate(-90 80 80)"
-                style={{ transition: 'stroke-dashoffset 0.5s ease' }}
-              />
-            </svg>
-            <div className="absolute flex flex-col items-center">
-              <span className="font-mono text-3xl font-bold tabular-nums">
-                {fmt(remaining)}
-              </span>
-              <span
-                className={`text-xs font-medium tracking-widest uppercase ${isWork ? 'text-primary' : 'text-success'}`}>
-                {isWork ? 'focus' : 'break'}
-              </span>
-            </div>
-          </div>
-
-          {/* Controls */}
-          <div className="flex items-center gap-3">
-            <button
-              className="btn btn-ghost btn-sm btn-circle"
-              onClick={reset}
-              title="Reset">
-              ↺
-            </button>
-            <button
-              className={`btn btn-lg btn-circle ${running ? 'btn-error' : 'btn-primary'}`}
-              onClick={() => setRunning((r) => !r)}>
-              {running ? '⏸' : '▶'}
-            </button>
-            <button
-              className="btn btn-ghost btn-sm btn-circle"
-              onClick={togglePhase}
-              title={isWork ? 'Skip to break' : 'Skip to focus'}>
-              ⏭
-            </button>
-          </div>
-        </div>
-
-        {/* Phase indicator pills */}
-        <div className="flex justify-center gap-2">
-          <span
-            className={`badge badge-sm ${isWork ? 'badge-primary' : 'badge-ghost'}`}>
-            Focus {preset.work}m
-          </span>
-          <span
-            className={`badge badge-sm ${!isWork ? 'badge-success' : 'badge-ghost'}`}>
-            Break {preset.break}m
-          </span>
-        </div>
       </div>
-      <div className="modal-backdrop" onClick={onClose} />
-    </dialog>
+
+      <div className="flex justify-center gap-2">
+        <span
+          className={`badge badge-sm ${isWork ? 'badge-primary' : 'badge-ghost'}`}>
+          Focus {preset.work}m
+        </span>
+        <span
+          className={`badge badge-sm ${!isWork ? 'badge-success' : 'badge-ghost'}`}>
+          Break {preset.break}m
+        </span>
+      </div>
+    </ModalWrapper>
   );
 };

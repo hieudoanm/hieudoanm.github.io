@@ -1,4 +1,5 @@
 import { FC, useCallback, useEffect, useState } from 'react';
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 
 /* ------------------------------------------------------------------ */
 /* Utilities                                                            */
@@ -477,16 +478,8 @@ export const CalendarTrackerModal: FC<{ onClose: () => void }> = ({
   const showWeekday = view === View.DAILY || view === View.WEEKLY;
 
   return (
-    <dialog className="modal modal-open">
-      <div className="modal-box w-full max-w-fit">
-        <button
-          onClick={onClose}
-          className="btn btn-sm btn-circle btn-ghost absolute top-2 right-2">
-          ✕
-        </button>
-
-        <h3 className="mb-3 text-center text-lg font-bold">Calendar Tracker</h3>
-
+    <ModalWrapper onClose={onClose} title="Calendar Tracker" size="max-w-fit">
+      <div>
         {/* Controls */}
         <nav className="mx-auto mb-3 flex w-84 items-center justify-between md:w-112">
           <div className="flex items-center gap-1">
@@ -593,8 +586,6 @@ export const CalendarTrackerModal: FC<{ onClose: () => void }> = ({
           {view === View.HALF && <HalfView year={year} />}
         </div>
       </div>
-
-      <div className="modal-backdrop" onClick={onClose} />
-    </dialog>
+    </ModalWrapper>
   );
 };

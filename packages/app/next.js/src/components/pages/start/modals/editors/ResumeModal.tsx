@@ -1,5 +1,3 @@
-'use client';
-
 import { yaml as yamlLang } from '@codemirror/lang-yaml';
 import { EditorState, Extension } from '@codemirror/state';
 import { oneDark } from '@codemirror/theme-one-dark';
@@ -9,6 +7,7 @@ import { yaml2pdfMake } from '@hieudoanm/services/yaml2pdfmake/yaml2pdfmake.serv
 import pdfMake from 'pdfmake/build/pdfmake';
 import pdfFonts from 'pdfmake/build/vfs_fonts';
 import { FC, useEffect, useMemo, useRef, useState } from 'react';
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 
 (pdfMake as any).vfs = pdfFonts.vfs;
 
@@ -147,41 +146,23 @@ export const ResumeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   }, [parseResult]);
 
   return (
-    <div className="bg-base-100 fixed inset-0 z-[60] flex flex-col font-sans">
-      {/* ── NAV ── */}
-      <div className="navbar border-base-300 bg-base-100 min-h-[4rem] border-b px-4">
-        <div className="navbar-start">
-          <button onClick={onClose} className="btn btn-circle btn-ghost">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
-          <span className="text-primary ml-2 font-serif text-xl font-bold tracking-widest">
-            Resume Builder
-          </span>
-        </div>
-        <div className="navbar-end">
-          <button
-            className="btn btn-primary btn-sm"
-            onClick={() => {
-              if (parseResult.ok) {
-                pdfMake.createPdf(parseResult.doc).download('resume.pdf');
-              }
-            }}
-            disabled={!parseResult.ok}>
-            Export PDF
-          </button>
-        </div>
+    <ModalWrapper
+      onClose={onClose}
+      title="Resume Builder"
+      size="max-w-6xl"
+      fullHeight>
+      {/* Export button */}
+      <div className="border-base-300 flex justify-end border-b px-4 py-2">
+        <button
+          className="btn btn-primary btn-sm"
+          onClick={() => {
+            if (parseResult.ok) {
+              pdfMake.createPdf(parseResult.doc).download('resume.pdf');
+            }
+          }}
+          disabled={!parseResult.ok}>
+          Export PDF
+        </button>
       </div>
 
       {/* ── MAIN ── */}
@@ -233,7 +214,7 @@ export const ResumeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           Structured writing · Real-time PDF · Inspired by Forma
         </p>
       </footer>
-    </div>
+    </ModalWrapper>
   );
 };
 

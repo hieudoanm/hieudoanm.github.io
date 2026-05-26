@@ -4,22 +4,32 @@ exports[`JSONSchemaModal should render 1`] = `
 <div>
   <dialog
     class="modal modal-open"
+    open=""
     style="background: rgba(0, 0, 0, 0.6);"
   >
     <div
       class="modal-box flex h-[90vh] w-full max-w-5xl flex-col overflow-hidden p-0"
     >
       <div
+        class="border-base-300 flex items-center justify-between border-b px-4 py-3"
+      >
+        <h3
+          class="text-sm font-bold"
+        >
+          JSON Schema
+        </h3>
+        <button
+          class="btn btn-sm btn-circle btn-ghost opacity-60 hover:opacity-100"
+        >
+          ✕
+        </button>
+      </div>
+      <div
         class="border-base-300 flex flex-wrap items-center justify-between gap-2 border-b px-4 py-3"
       >
         <div
           class="flex items-center gap-3"
         >
-          <span
-            class="text-sm font-bold"
-          >
-            JSON Schema
-          </span>
           <div
             class="tabs tabs-boxed tabs-sm"
           >
@@ -59,11 +69,6 @@ exports[`JSONSchemaModal should render 1`] = `
             class="btn btn-xs btn-ghost"
           >
             📋
-          </button>
-          <button
-            class="btn btn-sm btn-circle btn-ghost"
-          >
-            ✕
           </button>
         </div>
       </div>

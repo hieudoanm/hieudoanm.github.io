@@ -1,5 +1,6 @@
 // components/modals/BrailleModal.tsx
 import { FC, useCallback, useState } from 'react';
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 
 // ── BRAILLE MAP ──────────────────────────────────────────────────────────────
 
@@ -103,147 +104,128 @@ export const BrailleModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   }, [output]);
 
   return (
-    <dialog
-      open
-      className="modal modal-open"
-      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
-      <div className="modal-box flex w-full max-w-2xl flex-col gap-4">
-        {/* Header */}
-        <div className="flex items-start justify-between">
-          <div>
-            <h3 className="text-lg font-bold">Braille</h3>
-            <p className="text-base-content/50 text-sm">
-              Grade 1 · Unicode · BRF export
-            </p>
-          </div>
-          <button className="btn btn-ghost btn-sm btn-circle" onClick={onClose}>
-            ✕
-          </button>
+    <ModalWrapper
+      onClose={onClose}
+      title="Braille"
+      subtitle="Grade 1 · Unicode · BRF export"
+      size="max-w-2xl">
+      <div className="flex flex-col gap-2">
+        <div className="flex items-center justify-between">
+          <span className="text-base-content/50 text-xs tracking-widest uppercase">
+            Input
+          </span>
+          <span className="badge badge-ghost font-mono text-xs">
+            {input.length} chars
+          </span>
         </div>
-
-        {/* Input */}
-        <div className="flex flex-col gap-2">
-          <div className="flex items-center justify-between">
-            <span className="text-base-content/50 text-xs tracking-widest uppercase">
-              Input
-            </span>
-            <span className="badge badge-ghost font-mono text-xs">
-              {input.length} chars
-            </span>
-          </div>
-          <textarea
-            className="textarea textarea-bordered h-24 w-full resize-none text-sm leading-relaxed"
-            placeholder="Type or paste text…"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-          />
-          <div className="flex flex-wrap gap-2">
-            {SAMPLES.map((s) => (
-              <button
-                key={s}
-                className="btn btn-ghost btn-xs border-base-300 border"
-                onClick={() => setInput(s)}>
-                {s}
-              </button>
-            ))}
-            {input && (
-              <button
-                className="btn btn-ghost btn-xs border-base-300 ml-auto border"
-                onClick={() => setInput('')}>
-                Clear
-              </button>
-            )}
-          </div>
-        </div>
-
-        {/* Output */}
-        <div className="flex flex-col gap-2">
-          <div className="flex items-center justify-between">
-            <span className="text-base-content/50 text-xs tracking-widest uppercase">
-              Braille output
-            </span>
-            <span className="badge badge-ghost font-mono text-xs">
-              {output.length} chars
-            </span>
-          </div>
-          <div className="bg-base-200 border-base-300 min-h-[64px] overflow-auto rounded-xl border p-4">
-            {output.trim() ? (
-              <p className="text-primary font-mono text-2xl leading-loose tracking-widest break-all">
-                {output}
-              </p>
-            ) : (
-              <p className="text-base-content/20 text-sm">
-                Braille output will appear here…
-              </p>
-            )}
-          </div>
-        </div>
-
-        {/* Actions */}
+        <textarea
+          className="textarea textarea-bordered h-24 w-full resize-none text-sm leading-relaxed"
+          placeholder="Type or paste text…"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
         <div className="flex flex-wrap gap-2">
-          <button
-            className={`btn btn-sm ${copied ? 'btn-success' : 'btn-primary'}`}
-            onClick={copy}
-            disabled={!output.trim()}>
-            {copied ? '✓ Copied' : 'Copy'}
-          </button>
-          <button
-            className="btn btn-ghost btn-sm border-base-300 border"
-            onClick={() => downloadBrf(input)}
-            disabled={!input}>
-            ↓ .brf
-          </button>
-          {uniqueChars.length > 0 && (
+          {SAMPLES.map((s) => (
             <button
-              className="btn btn-ghost btn-sm border-base-300 ml-auto border"
-              onClick={() => setShowMap((v) => !v)}>
-              {showMap ? '▲ Hide map' : '▼ Char map'}
+              key={s}
+              className="btn btn-ghost btn-xs border-base-300 border"
+              onClick={() => setInput(s)}>
+              {s}
+            </button>
+          ))}
+          {input && (
+            <button
+              className="btn btn-ghost btn-xs border-base-300 ml-auto border"
+              onClick={() => setInput('')}>
+              Clear
             </button>
           )}
         </div>
+      </div>
 
-        {/* Character map */}
-        {showMap && uniqueChars.length > 0 && (
-          <div className="border-base-300 overflow-hidden rounded-xl border">
-            <table className="table-sm table w-full text-sm">
-              <thead className="bg-base-200">
-                <tr>
-                  <th className="text-base-content/40 font-medium">Char</th>
-                  <th className="text-base-content/40 font-medium">Braille</th>
-                  <th className="text-base-content/40 hidden font-medium sm:table-cell">
-                    Unicode
-                  </th>
-                  <th className="text-base-content/40 hidden font-medium sm:table-cell">
-                    Dots
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {uniqueChars.map((ch) => {
-                  const entry = braille[ch];
-                  return (
-                    <tr key={ch} className="border-base-300 border-t">
-                      <td className="font-mono font-medium uppercase">
-                        {ch === ' ' ? '␣' : ch}
-                      </td>
-                      <td className="text-primary font-mono text-xl">
-                        {entry.character}
-                      </td>
-                      <td className="text-base-content/40 hidden font-mono text-xs sm:table-cell">
-                        {entry.unicode}
-                      </td>
-                      <td className="text-base-content/40 hidden font-mono text-xs sm:table-cell">
-                        {entry.dots || '—'}
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
+      <div className="flex flex-col gap-2">
+        <div className="flex items-center justify-between">
+          <span className="text-base-content/50 text-xs tracking-widest uppercase">
+            Braille output
+          </span>
+          <span className="badge badge-ghost font-mono text-xs">
+            {output.length} chars
+          </span>
+        </div>
+        <div className="bg-base-200 border-base-300 min-h-[64px] overflow-auto rounded-xl border p-4">
+          {output.trim() ? (
+            <p className="text-primary font-mono text-2xl leading-loose tracking-widest break-all">
+              {output}
+            </p>
+          ) : (
+            <p className="text-base-content/20 text-sm">
+              Braille output will appear here…
+            </p>
+          )}
+        </div>
+      </div>
+
+      <div className="flex flex-wrap gap-2">
+        <button
+          className={`btn btn-sm ${copied ? 'btn-success' : 'btn-primary'}`}
+          onClick={copy}
+          disabled={!output.trim()}>
+          {copied ? '✓ Copied' : 'Copy'}
+        </button>
+        <button
+          className="btn btn-ghost btn-sm border-base-300 border"
+          onClick={() => downloadBrf(input)}
+          disabled={!input}>
+          ↓ .brf
+        </button>
+        {uniqueChars.length > 0 && (
+          <button
+            className="btn btn-ghost btn-sm border-base-300 ml-auto border"
+            onClick={() => setShowMap((v) => !v)}>
+            {showMap ? '▲ Hide map' : '▼ Char map'}
+          </button>
         )}
       </div>
-      <div className="modal-backdrop" onClick={onClose} />
-    </dialog>
+
+      {showMap && uniqueChars.length > 0 && (
+        <div className="border-base-300 overflow-hidden rounded-xl border">
+          <table className="table-sm table w-full text-sm">
+            <thead className="bg-base-200">
+              <tr>
+                <th className="text-base-content/40 font-medium">Char</th>
+                <th className="text-base-content/40 font-medium">Braille</th>
+                <th className="text-base-content/40 hidden font-medium sm:table-cell">
+                  Unicode
+                </th>
+                <th className="text-base-content/40 hidden font-medium sm:table-cell">
+                  Dots
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {uniqueChars.map((ch) => {
+                const entry = braille[ch];
+                return (
+                  <tr key={ch} className="border-base-300 border-t">
+                    <td className="font-mono font-medium uppercase">
+                      {ch === ' ' ? '␣' : ch}
+                    </td>
+                    <td className="text-primary font-mono text-xl">
+                      {entry.character}
+                    </td>
+                    <td className="text-base-content/40 hidden font-mono text-xs sm:table-cell">
+                      {entry.unicode}
+                    </td>
+                    <td className="text-base-content/40 hidden font-mono text-xs sm:table-cell">
+                      {entry.dots || '—'}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      )}
+    </ModalWrapper>
   );
 };

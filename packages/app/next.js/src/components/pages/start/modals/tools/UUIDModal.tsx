@@ -1,4 +1,5 @@
 import { FC, useState } from 'react';
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 import { v1, v4, v7 } from 'uuid';
 
 type UUIDVersion = 'v1' | 'v4' | 'v7';
@@ -28,82 +29,56 @@ export const UUIDModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   };
 
   return (
-    <dialog
-      open
-      className="modal modal-open"
-      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
-      <div
-        className="card bg-base-100 border-base-300 w-full max-w-lg border shadow-2xl"
-        z-10>
-        <div className="card-body gap-5 p-6">
-          <div className="flex items-start justify-between">
-            <div>
-              <h2 className="text-lg font-black tracking-tight">
-                UUID Generator
-              </h2>
-              <p className="text-base-content/40 mt-0.5 font-mono text-[10px] tracking-widest uppercase">
-                v1 · v4 · v7
-              </p>
+    <ModalWrapper
+      onClose={onClose}
+      title="UUID Generator"
+      subtitle="v1 · v4 · v7"
+      footerNote="Click outside to close · Regenerate any version independently"
+      size="max-w-lg">
+      <div className="mb-2 flex justify-end">
+        <button
+          onClick={regenerateAll}
+          className="btn btn-outline btn-xs font-mono tracking-widest">
+          ↺ All
+        </button>
+      </div>
+
+      <div className="flex flex-col gap-3">
+        {UUID_ITEMS.map(({ key, label, description }) => (
+          <div
+            key={key}
+            className="bg-base-200 border-base-300 rounded-xl border p-3">
+            <div className="mb-2 flex items-center justify-between">
+              <div>
+                <span className="text-xs font-bold tracking-widest uppercase">
+                  {label}
+                </span>
+                <span className="text-base-content/30 ml-2 font-mono text-[10px]">
+                  {description}
+                </span>
+              </div>
             </div>
             <div className="flex items-center gap-2">
+              <input
+                readOnly
+                value={uuids[key]}
+                className="input input-bordered input-xs flex-1 font-mono text-xs tracking-wider"
+              />
               <button
-                onClick={regenerateAll}
-                className="btn btn-outline btn-xs font-mono tracking-widest">
-                ↺ All
+                onClick={() => regenerate(key)}
+                className="btn btn-ghost btn-xs btn-square"
+                title="Regenerate">
+                ↺
               </button>
               <button
-                onClick={onClose}
-                className="btn btn-ghost btn-xs btn-square text-base">
-                ✕
+                onClick={() => copy(uuids[key], key)}
+                className={`btn btn-xs font-mono ${copied === key ? 'btn-success' : 'btn-primary'}`}>
+                {copied === key ? '✓' : 'Copy'}
               </button>
             </div>
           </div>
-
-          <div className="flex flex-col gap-3">
-            {UUID_ITEMS.map(({ key, label, description }) => (
-              <div
-                key={key}
-                className="bg-base-200 border-base-300 rounded-xl border p-3">
-                <div className="mb-2 flex items-center justify-between">
-                  <div>
-                    <span className="text-xs font-bold tracking-widest uppercase">
-                      {label}
-                    </span>
-                    <span className="text-base-content/30 ml-2 font-mono text-[10px]">
-                      {description}
-                    </span>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2">
-                  <input
-                    readOnly
-                    value={uuids[key]}
-                    className="input input-bordered input-xs flex-1 font-mono text-xs tracking-wider"
-                  />
-                  <button
-                    onClick={() => regenerate(key)}
-                    className="btn btn-ghost btn-xs btn-square"
-                    title="Regenerate">
-                    ↺
-                  </button>
-                  <button
-                    onClick={() => copy(uuids[key], key)}
-                    className={`btn btn-xs font-mono ${copied === key ? 'btn-success' : 'btn-primary'}`}>
-                    {copied === key ? '✓' : 'Copy'}
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <p className="text-base-content/20 text-center font-mono text-[10px] tracking-widest uppercase">
-            Click outside to close · Regenerate any version independently
-          </p>
-        </div>
+        ))}
       </div>
-      <form method="dialog" className="modal-backdrop">
-        <button onClick={onClose}>close</button>
-      </form>
-    </dialog>
+    </ModalWrapper>
   );
 };

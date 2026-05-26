@@ -1,3 +1,4 @@
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 import words from '@hieudoanm/json/words.json';
 import { FC, useEffect, useState } from 'react';
 
@@ -61,75 +62,61 @@ export const FlashcardsModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const currentCard = shuffledCards[currentIndex];
 
   return (
-    <dialog
-      className="modal modal-open"
-      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
-      <div className="modal-box w-full max-w-md">
-        <button
-          onClick={onClose}
-          className="btn btn-sm btn-circle btn-ghost absolute top-2 right-2">
-          ✕
-        </button>
+    <ModalWrapper onClose={onClose} title="Flash Cards" size="max-w-md">
+      <select
+        value={language}
+        onChange={(e) => setLanguage(e.target.value)}
+        className="select select-bordered select-sm mb-4 w-full capitalize">
+        {allLanguages.map((lang) => (
+          <option key={lang} value={lang}>
+            {lang}
+          </option>
+        ))}
+      </select>
 
-        <h3 className="mb-4 text-center text-lg font-bold">Flash Cards</h3>
-
-        <select
-          value={language}
-          onChange={(e) => setLanguage(e.target.value)}
-          className="select select-bordered select-sm mb-4 w-full capitalize">
-          {allLanguages.map((lang) => (
-            <option key={lang} value={lang}>
-              {lang}
-            </option>
-          ))}
-        </select>
-
-        {currentCard ? (
-          <>
+      {currentCard ? (
+        <>
+          <div
+            className="bg-base-200 relative mb-4 flex h-44 w-full cursor-pointer items-center justify-center rounded-xl shadow-inner transition-all duration-300"
+            onClick={flipCard}>
             <div
-              className="bg-base-200 relative mb-4 flex h-44 w-full cursor-pointer items-center justify-center rounded-xl shadow-inner transition-all duration-300"
-              onClick={flipCard}>
-              <div
-                className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${flipped ? 'opacity-0' : 'opacity-100'}`}>
-                <p className="text-center text-2xl font-semibold">
-                  {currentCard.front}
-                </p>
-              </div>
-              <div
-                className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${flipped ? 'opacity-100' : 'opacity-0'}`}>
-                <p className="text-center text-2xl font-semibold">
-                  {currentCard.back}
-                </p>
-              </div>
-              <span className="absolute right-3 bottom-2 text-xs opacity-40">
-                {flipped ? 'english' : language}
-              </span>
+              className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${flipped ? 'opacity-0' : 'opacity-100'}`}>
+              <p className="text-center text-2xl font-semibold">
+                {currentCard.front}
+              </p>
             </div>
-
-            <div className="mb-3 flex items-center justify-between">
-              <button className="btn btn-outline btn-sm" onClick={prevCard}>
-                Previous
-              </button>
-              <span className="text-xs opacity-50">
-                {currentIndex + 1} / {shuffledCards.length}
-              </span>
-              <button className="btn btn-primary btn-sm" onClick={nextCard}>
-                Next
-              </button>
+            <div
+              className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${flipped ? 'opacity-100' : 'opacity-0'}`}>
+              <p className="text-center text-2xl font-semibold">
+                {currentCard.back}
+              </p>
             </div>
+            <span className="absolute right-3 bottom-2 text-xs opacity-40">
+              {flipped ? 'english' : language}
+            </span>
+          </div>
 
-            <p className="text-center text-xs opacity-40">
-              ← / → navigate · Space / Enter flip · Esc close
-            </p>
-          </>
-        ) : (
-          <p className="py-8 text-center text-sm opacity-50">
-            No flashcards available for {language}.
+          <div className="mb-3 flex items-center justify-between">
+            <button className="btn btn-outline btn-sm" onClick={prevCard}>
+              Previous
+            </button>
+            <span className="text-xs opacity-50">
+              {currentIndex + 1} / {shuffledCards.length}
+            </span>
+            <button className="btn btn-primary btn-sm" onClick={nextCard}>
+              Next
+            </button>
+          </div>
+
+          <p className="text-center text-xs opacity-40">
+            ← / → navigate · Space / Enter flip · Esc close
           </p>
-        )}
-      </div>
-
-      <div className="modal-backdrop" onClick={onClose} />
-    </dialog>
+        </>
+      ) : (
+        <p className="py-8 text-center text-sm opacity-50">
+          No flashcards available for {language}.
+        </p>
+      )}
+    </ModalWrapper>
   );
 };

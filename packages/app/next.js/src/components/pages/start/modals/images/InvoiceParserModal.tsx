@@ -1,6 +1,7 @@
 import * as ort from 'onnxruntime-web';
 import { FC, useState } from 'react';
 import Tesseract from 'tesseract.js';
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 
 type ExtractedFields = {
   vendor: string;
@@ -80,84 +81,75 @@ export const InvoiceParserModal: FC<{ onClose: () => void }> = ({
   };
 
   return (
-    <dialog
-      className="modal modal-open"
-      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
-      <div className="modal-box flex h-[85vh] w-full max-w-2xl flex-col overflow-hidden p-0">
-        {/* Header */}
-        <div className="border-base-300 flex items-center justify-between border-b px-4 py-3">
-          <h2 className="text-lg font-bold">📄 Smart Invoice Scanner</h2>
-          <button onClick={onClose} className="btn btn-sm btn-circle btn-ghost">
-            ✕
+    <ModalWrapper
+      onClose={onClose}
+      title="📄 Smart Invoice Scanner"
+      size="max-w-2xl"
+      fullHeight>
+      {/* Content */}
+      <div className="flex min-h-0 flex-1 flex-col overflow-y-auto p-6">
+        <div className="card bg-base-200 p-6 shadow-sm">
+          <h2 className="mb-4 text-xl font-semibold">Upload Invoice</h2>
+
+          <input
+            type="file"
+            accept="image/*"
+            className="file-input file-input-bordered w-full"
+            onChange={handleUpload}
+          />
+
+          {image && (
+            <div className="mt-4">
+              <h3 className="font-semibold">Preview</h3>
+              <img
+                src={image}
+                alt="Invoice"
+                className="mt-2 max-w-full rounded-xl border shadow"
+              />
+            </div>
+          )}
+
+          <button
+            className={`btn btn-primary mt-6 ${loading ? 'btn-disabled' : ''}`}
+            onClick={runOCR}
+            disabled={!image}>
+            {loading ? (
+              <span className="loading loading-spinner loading-sm"></span>
+            ) : null}
+            {loading ? 'Processing...' : 'Run OCR + AI'}
           </button>
         </div>
 
-        {/* Content */}
-        <div className="flex min-h-0 flex-1 flex-col overflow-y-auto p-6">
-          <div className="card bg-base-200 p-6 shadow-sm">
-            <h2 className="mb-4 text-xl font-semibold">Upload Invoice</h2>
-
-            <input
-              type="file"
-              accept="image/*"
-              className="file-input file-input-bordered w-full"
-              onChange={handleUpload}
-            />
-
-            {image && (
-              <div className="mt-4">
-                <h3 className="font-semibold">Preview</h3>
-                <img
-                  src={image}
-                  alt="Invoice"
-                  className="mt-2 max-w-full rounded-xl border shadow"
-                />
+        {fields && (
+          <div className="card bg-base-200 mt-6 p-6 shadow-sm">
+            <h2 className="mb-4 text-xl font-semibold">Extracted Fields</h2>
+            <div className="grid grid-cols-1 gap-4">
+              <div className="alert alert-info">
+                <span>
+                  <b>Vendor:</b> {fields.vendor}
+                </span>
               </div>
-            )}
-
-            <button
-              className={`btn btn-primary mt-6 ${loading ? 'btn-disabled' : ''}`}
-              onClick={runOCR}
-              disabled={!image}>
-              {loading ? (
-                <span className="loading loading-spinner loading-sm"></span>
-              ) : null}
-              {loading ? 'Processing...' : 'Run OCR + AI'}
-            </button>
+              <div className="alert alert-success">
+                <span>
+                  <b>Total:</b> {fields.total}
+                </span>
+              </div>
+              <div className="alert alert-warning">
+                <span>
+                  <b>Date:</b> {fields.date}
+                </span>
+              </div>
+            </div>
           </div>
+        )}
 
-          {fields && (
-            <div className="card bg-base-200 mt-6 p-6 shadow-sm">
-              <h2 className="mb-4 text-xl font-semibold">Extracted Fields</h2>
-              <div className="grid grid-cols-1 gap-4">
-                <div className="alert alert-info">
-                  <span>
-                    <b>Vendor:</b> {fields.vendor}
-                  </span>
-                </div>
-                <div className="alert alert-success">
-                  <span>
-                    <b>Total:</b> {fields.total}
-                  </span>
-                </div>
-                <div className="alert alert-warning">
-                  <span>
-                    <b>Date:</b> {fields.date}
-                  </span>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {ocrText && (
-            <div className="card bg-base-200 mt-6 p-6 shadow-sm">
-              <h2 className="text-xl font-semibold">OCR Output</h2>
-              <pre className="mt-3 text-xs whitespace-pre-wrap">{ocrText}</pre>
-            </div>
-          )}
-        </div>
+        {ocrText && (
+          <div className="card bg-base-200 mt-6 p-6 shadow-sm">
+            <h2 className="text-xl font-semibold">OCR Output</h2>
+            <pre className="mt-3 text-xs whitespace-pre-wrap">{ocrText}</pre>
+          </div>
+        )}
       </div>
-      <div className="modal-backdrop" onClick={onClose} />
-    </dialog>
+    </ModalWrapper>
   );
 };

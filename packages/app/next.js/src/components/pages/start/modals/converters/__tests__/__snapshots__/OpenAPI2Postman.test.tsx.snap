@@ -8,94 +8,80 @@ exports[`OpenAPI2Postman should render 1`] = `
     style="background: rgba(0, 0, 0, 0.6);"
   >
     <div
-      class="card bg-base-100 border-base-300 flex h-[90vh] w-full max-w-5xl flex-col border shadow-2xl"
+      class="modal-box flex h-[90vh] w-full max-w-5xl flex-col overflow-hidden p-0"
     >
       <div
-        class="card-body flex h-full flex-col gap-5 overflow-hidden p-6"
+        class="border-base-300 flex items-center justify-between border-b px-4 py-3"
+      >
+        <h3
+          class="text-sm font-bold"
+        >
+          OpenAPI to Postman
+        </h3>
+        <button
+          class="btn btn-sm btn-circle btn-ghost opacity-60 hover:opacity-100"
+        >
+          ✕
+        </button>
+      </div>
+      <button
+        class="btn btn-ghost btn-xs text-base-content/50"
+      >
+        🗑️ Clear
+      </button>
+      <div
+        class="tabs tabs-boxed bg-base-200 border-base-300 w-full self-center border sm:w-auto"
+      >
+        <button
+          class="tab font-mono text-[10px] tracking-wider uppercase tab-active"
+        >
+          OpenAPI Input
+        </button>
+        <button
+          class="tab font-mono text-[10px] tracking-wider uppercase "
+        >
+          Postman Output
+        </button>
+      </div>
+      <div
+        class="flex min-h-0 grow overflow-hidden"
       >
         <div
-          class="flex shrink-0 items-start justify-between"
-        >
-          <div>
-            <h2
-              class="text-lg font-black tracking-tight"
-            >
-              OpenAPI to Postman
-            </h2>
-            <p
-              class="text-base-content/40 mt-0.5 font-mono text-[10px] tracking-widest uppercase"
-            >
-              Converts automatically as you type
-            </p>
-          </div>
-          <div
-            class="flex items-center gap-2"
-          >
-            <button
-              class="btn btn-ghost btn-xs text-base-content/50"
-            >
-              🗑️ Clear
-            </button>
-            <button
-              class="btn btn-ghost btn-xs btn-square text-base"
-            >
-              ✕
-            </button>
-          </div>
-        </div>
-        <div
-          class="tabs tabs-boxed bg-base-200 border-base-300 mb-2 w-full self-center border sm:w-auto"
-        >
-          <button
-            class="tab font-mono text-[10px] tracking-wider uppercase tab-active"
-          >
-            OpenAPI Input
-          </button>
-          <button
-            class="tab font-mono text-[10px] tracking-wider uppercase "
-          >
-            Postman Output
-          </button>
-        </div>
-        <div
-          class="flex min-h-0 grow overflow-hidden"
+          class="bg-base-200 border-base-300 flex w-full flex-col rounded-xl border"
         >
           <div
-            class="bg-base-200 border-base-300 flex w-full flex-col rounded-xl border"
+            class="border-base-300 flex shrink-0 items-center justify-between border-b px-4 py-2"
           >
             <div
-              class="border-base-300 flex shrink-0 items-center justify-between border-b px-4 py-2"
+              class="flex items-center gap-2"
             >
-              <div
-                class="flex items-center gap-2"
-              >
-                <span
-                  class="badge badge-outline badge-sm text-primary border-primary/30 font-mono text-[10px] tracking-wider uppercase"
-                >
-                  OpenAPI
-                </span>
-                <span
-                  class="text-base-content/40 font-mono text-[10px] tracking-wider uppercase"
-                >
-                  JSON/YAML
-                </span>
-              </div>
               <span
-                class="text-base-content/30 font-mono text-[10px] tracking-wider uppercase"
+                class="badge badge-outline badge-sm text-primary border-primary/30 font-mono text-[10px] tracking-wider uppercase"
               >
-                62
-                 lines
+                OpenAPI
+              </span>
+              <span
+                class="text-base-content/40 font-mono text-[10px] tracking-wider uppercase"
+              >
+                JSON/YAML
               </span>
             </div>
-            <div
-              class="relative flex min-h-0 flex-1 flex-col"
+            <span
+              class="text-base-content/30 font-mono text-[10px] tracking-wider uppercase"
             >
-              <textarea
-                class="textarea bg-base-100 text-base-content w-full flex-1 resize-none rounded-none rounded-b-xl border-0 p-4 font-mono text-xs leading-relaxed focus:outline-none"
-                placeholder="Paste your OpenAPI 3.x spec here (JSON or YAML)..."
-                spellcheck="false"
-              >
-                {
+              62
+               lines
+            </span>
+          </div>
+          <div
+            class="relative flex min-h-0 flex-1 flex-col"
+          >
+            <textarea
+              class="textarea bg-base-100 text-base-content w-full flex-1 resize-none rounded-none rounded-b-xl border-0 p-4 font-mono text-xs leading-relaxed focus:outline-none"
+              placeholder="Paste your OpenAPI 3.x spec here (JSON or YAML)..."
+              spellcheck="false"
+            >
+              {
   "openapi": "3.0.0",
   "info": {
     "title": "Pet Store API",
@@ -157,29 +143,14 @@ exports[`OpenAPI2Postman should render 1`] = `
     }
   }
 }
-              </textarea>
-            </div>
+            </textarea>
           </div>
-        </div>
-        <div
-          class="mt-2 shrink-0"
-        >
-          <p
-            class="text-base-content/20 text-center font-mono text-[10px] tracking-widest uppercase"
-          >
-            Click outside to close · Supports OpenAPI 3.x (JSON & YAML)
-          </p>
         </div>
       </div>
     </div>
-    <form
+    <div
       class="modal-backdrop"
-      method="dialog"
-    >
-      <button>
-        close
-      </button>
-    </form>
+    />
   </dialog>
 </div>
 `;

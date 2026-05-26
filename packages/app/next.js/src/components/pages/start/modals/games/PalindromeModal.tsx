@@ -1,6 +1,7 @@
 import { FC, useCallback, useEffect, useRef, useState } from 'react';
 import palindromes from '@hieudoanm/json/palindrome/palindrome.json';
 import emordnilaps from '@hieudoanm/json/palindrome/emordnilap.json';
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 
 type PuzzleType = 'palindrome' | 'emordnilap';
 
@@ -217,23 +218,14 @@ export const PalindromeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const timerClass = timer <= 10 ? 'text-error' : 'text-base-content';
 
   return (
-    <dialog
-      className="modal modal-open"
-      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
+    <ModalWrapper onClose={onClose} title="🔤 Palindrome">
       <div
         ref={containerRef}
         tabIndex={0}
         onKeyDown={onKeyDown}
-        className="modal-box w-full max-w-sm outline-none">
-        <button
-          onClick={onClose}
-          className="btn btn-sm btn-circle btn-ghost absolute top-2 right-2">
-          ✕
-        </button>
-
+        className="outline-none">
         {/* Header */}
         <div className="mb-4 flex items-center justify-between">
-          <h3 className="text-lg font-bold">🔤 Palindrome</h3>
           <div className="flex items-center gap-2">
             <span className="text-xs opacity-50">Score</span>
             <span className="badge badge-neutral font-bold">{score}</span>
@@ -356,8 +348,6 @@ export const PalindromeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           <span className="text-xs opacity-30">{solvedCount} solved</span>
         </div>
       </div>
-
-      <div className="modal-backdrop" onClick={onClose} />
-    </dialog>
+    </ModalWrapper>
   );
 };

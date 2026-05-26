@@ -1,5 +1,3 @@
-'use client';
-
 import { FC, useState } from 'react';
 
 export const VersionTemplate: FC<{

@@ -4,65 +4,81 @@ exports[`GitHubSocialPreviewModal should render 1`] = `
 <div>
   <dialog
     class="modal modal-open"
+    open=""
     style="background: rgba(0, 0, 0, 0.6);"
   >
     <div
-      class="modal-box w-full max-w-2xl"
+      class="card bg-base-100 border-base-300 w-full max-w-2xl border shadow-2xl"
     >
-      <button
-        class="btn btn-sm btn-circle btn-ghost absolute top-2 right-2"
-      >
-        ✕
-      </button>
-      <h3
-        class="mb-4 text-center text-lg font-bold"
-      >
-        GitHub Social Preview
-      </h3>
       <div
-        class="join mb-4 w-full"
+        class="card-body gap-5 p-6"
       >
-        <input
-          class="input input-bordered join-item w-full font-mono text-sm"
-          placeholder="owner/repo or github.com/owner/repo"
-          type="text"
-          value=""
-        />
-        <button
-          class="btn join-item btn-primary"
-          disabled=""
+        <div
+          class="flex items-start justify-between"
         >
-          Generate
-        </button>
+          <div>
+            <h2
+              class="text-lg font-black tracking-tight"
+            >
+              GitHub Social Preview
+            </h2>
+          </div>
+          <button
+            class="btn btn-ghost btn-xs btn-square text-base opacity-60 hover:opacity-100"
+          >
+            ✕
+          </button>
+        </div>
+        <div
+          class="join mb-4 w-full"
+        >
+          <input
+            class="input input-bordered join-item w-full font-mono text-sm"
+            placeholder="owner/repo or github.com/owner/repo"
+            type="text"
+            value=""
+          />
+          <button
+            class="btn join-item btn-primary"
+            disabled=""
+          >
+            Generate
+          </button>
+        </div>
+        <div
+          class="mb-4 flex flex-wrap gap-2"
+        >
+          <button
+            class="btn btn-xs btn-ghost font-mono"
+          >
+            vercel/next.js
+          </button>
+          <button
+            class="btn btn-xs btn-ghost font-mono"
+          >
+            facebook/react
+          </button>
+          <button
+            class="btn btn-xs btn-ghost font-mono"
+          >
+            hieudoanm/hieudoanm
+          </button>
+        </div>
+        <p
+          class="py-6 text-center text-xs opacity-30"
+        >
+          Enter a GitHub repository to generate its social preview image
+        </p>
       </div>
-      <div
-        class="mb-4 flex flex-wrap gap-2"
-      >
-        <button
-          class="btn btn-xs btn-ghost font-mono"
-        >
-          vercel/next.js
-        </button>
-        <button
-          class="btn btn-xs btn-ghost font-mono"
-        >
-          facebook/react
-        </button>
-        <button
-          class="btn btn-xs btn-ghost font-mono"
-        >
-          hieudoanm/hieudoanm
-        </button>
-      </div>
-      <p
-        class="py-6 text-center text-xs opacity-30"
-      >
-        Enter a GitHub repository to generate its social preview image
-      </p>
     </div>
-    <div
+    <form
       class="modal-backdrop"
-    />
+      method="dialog"
+    >
+      <button>
+        close
+      </button>
+    </form>
   </dialog>
 </div>
 `;

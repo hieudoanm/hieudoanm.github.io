@@ -1,5 +1,6 @@
 import { words } from '@hieudoanm/data/wordle';
 import { FC, useEffect, useRef, useState } from 'react';
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 
 const WORD_SET = new Set(words);
 const MAX_ATTEMPTS: number = 6;
@@ -100,54 +101,40 @@ export const WordleModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     });
 
   return (
-    <dialog
-      className="modal modal-open"
-      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
-      <div className="modal-box w-full max-w-xs">
-        <button
-          onClick={onClose}
-          className="btn btn-sm btn-circle btn-ghost absolute top-2 right-2">
-          ✕
-        </button>
-
-        <h3 className="mb-4 text-center text-lg font-bold">Wordle</h3>
-
-        <div className="mb-4 flex flex-col items-center gap-1">
-          {renderGrid()}
-        </div>
-
-        {!isGameOver ? (
-          <input
-            ref={inputRef}
-            type="text"
-            className="input input-bordered input-sm mb-3 w-full text-center tracking-widest uppercase"
-            maxLength={targetWord.length}
-            value={currentGuess}
-            onChange={(e) => setCurrentGuess(e.target.value.toLowerCase())}
-            onKeyDown={handleKeyDown}
-            placeholder={`${targetWord.length}-letter word`}
-          />
-        ) : (
-          <div className="mb-3" />
-        )}
-
-        {message && (
-          <p className="mb-3 text-center text-sm font-semibold">{message}</p>
-        )}
-
-        <div className="flex justify-center gap-2">
-          {!isGameOver && (
-            <button className="btn btn-accent btn-sm" onClick={submitGuess}>
-              Enter
-            </button>
-          )}
-          <button className="btn btn-primary btn-sm" onClick={startNewGame}>
-            New Game
-          </button>
-        </div>
+    <ModalWrapper onClose={onClose} title="Wordle" size="max-w-xs">
+      <div className="mb-4 flex flex-col items-center gap-1">
+        {renderGrid()}
       </div>
 
-      <div className="modal-backdrop" onClick={onClose} />
-    </dialog>
+      {!isGameOver ? (
+        <input
+          ref={inputRef}
+          type="text"
+          className="input input-bordered input-sm mb-3 w-full text-center tracking-widest uppercase"
+          maxLength={targetWord.length}
+          value={currentGuess}
+          onChange={(e) => setCurrentGuess(e.target.value.toLowerCase())}
+          onKeyDown={handleKeyDown}
+          placeholder={`${targetWord.length}-letter word`}
+        />
+      ) : (
+        <div className="mb-3" />
+      )}
+
+      {message && (
+        <p className="mb-3 text-center text-sm font-semibold">{message}</p>
+      )}
+
+      <div className="flex justify-center gap-2">
+        {!isGameOver && (
+          <button className="btn btn-accent btn-sm" onClick={submitGuess}>
+            Enter
+          </button>
+        )}
+        <button className="btn btn-primary btn-sm" onClick={startNewGame}>
+          New Game
+        </button>
+      </div>
+    </ModalWrapper>
   );
 };

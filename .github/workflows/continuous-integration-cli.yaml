@@ -19,17 +19,11 @@ permissions:
 
 jobs:
   quality:
-    name: Quality (${{ matrix.package }})
+    name: Quality
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        package:
-          - cobra.md
-          - hieudoanm
     defaults:
       run:
-        working-directory: packages/cli/go/cobra/${{ matrix.package }}
+        working-directory: packages/cli/go/hieudoanm
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -38,7 +32,7 @@ jobs:
         uses: actions/setup-go@v6
         with:
           go-version: '1.26.3'
-          cache-dependency-path: packages/cli/go/cobra/${{ matrix.package }}/go.sum
+          cache-dependency-path: packages/cli/go/hieudoanm/go.sum
 
       - name: Install Dependencies
         run: go mod download
@@ -62,7 +56,7 @@ jobs:
           - hieudoanm
     defaults:
       run:
-        working-directory: packages/cli/go/cobra/${{ matrix.package }}
+        working-directory: packages/cli/go/hieudoanm
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -71,7 +65,7 @@ jobs:
         uses: actions/setup-go@v6
         with:
           go-version: '1.26.3'
-          cache-dependency-path: packages/cli/go/cobra/${{ matrix.package }}/go.sum
+          cache-dependency-path: packages/cli/go/hieudoanm/go.sum
 
       - name: Install Dependencies
         run: go mod download
@@ -88,6 +82,6 @@ jobs:
           draft: false
           prerelease: false
           overwrite_files: true
-          files: packages/cli/go/cobra/${{ matrix.package }}/bin/*
+          files: packages/cli/go/hieudoanm/bin/*
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}

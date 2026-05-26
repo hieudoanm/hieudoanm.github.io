@@ -9,6 +9,7 @@ import { yaml as yamlLang } from '@codemirror/lang-yaml';
 import { EditorState, Extension } from '@codemirror/state';
 import { oneDark } from '@codemirror/theme-one-dark';
 import { EditorView } from '@codemirror/view';
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 import { json, jsonParse } from '@hieudoanm/utils/json/json';
 import jsonSchemaGenerator from 'json-schema-generator';
 import { FC, useEffect, useMemo, useRef, useState } from 'react';
@@ -250,127 +251,118 @@ export const JSONSchemaModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   };
 
   return (
-    <dialog
-      className="modal modal-open"
-      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
-      <div className="modal-box flex h-[90vh] w-full max-w-5xl flex-col overflow-hidden p-0">
-        {/* ── Header ── */}
-        <div className="border-base-300 flex flex-wrap items-center justify-between gap-2 border-b px-4 py-3">
-          <div className="flex items-center gap-3">
-            <span className="text-sm font-bold">JSON Schema</span>
-            {/* Input mode */}
-            <div className="tabs tabs-boxed tabs-sm">
-              {(['json', 'yaml'] as InputMode[]).map((m) => (
-                <a
-                  key={m}
-                  role="tab"
-                  className={`tab ${inputMode === m ? 'tab-active' : ''}`}
-                  onClick={() => setInputMode(m)}>
-                  {m.toUpperCase()}
-                </a>
-              ))}
-            </div>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <button className="btn btn-xs btn-ghost" onClick={beautify}>
-              Beautify
-            </button>
-            <button
-              className="btn btn-xs btn-ghost"
-              onClick={minify}
-              disabled={inputMode === 'yaml'}>
-              Minify
-            </button>
-            <button className="btn btn-xs btn-ghost" onClick={sort}>
-              Sort
-            </button>
-            <button className="btn btn-xs btn-ghost" onClick={copyActive}>
-              📋
-            </button>
-            <button
-              onClick={onClose}
-              className="btn btn-sm btn-circle btn-ghost">
-              ✕
-            </button>
-          </div>
-        </div>
-
-        {/* ── Panel tabs ── */}
-        <div className="border-base-300 border-b px-4">
-          <div role="tablist" className="tabs tabs-bordered tabs-sm">
-            {(
-              [
-                { id: 'input', label: '✏️ Input' },
-                { id: 'schema', label: '📐 Schema' },
-                { id: 'convert', label: '🔀 Convert' },
-              ] as { id: PanelTab; label: string }[]
-            ).map((t) => (
+    <ModalWrapper
+      onClose={onClose}
+      title="JSON Schema"
+      size="max-w-5xl"
+      fullHeight>
+      {/* Input mode and actions */}
+      <div className="border-base-300 flex flex-wrap items-center justify-between gap-2 border-b px-4 py-3">
+        <div className="flex items-center gap-3">
+          <div className="tabs tabs-boxed tabs-sm">
+            {(['json', 'yaml'] as InputMode[]).map((m) => (
               <a
-                key={t.id}
+                key={m}
                 role="tab"
-                className={`tab ${panelTab === t.id ? 'tab-active' : ''}`}
-                onClick={() => setPanelTab(t.id)}>
-                {t.label}
+                className={`tab ${inputMode === m ? 'tab-active' : ''}`}
+                onClick={() => setInputMode(m)}>
+                {m.toUpperCase()}
               </a>
             ))}
           </div>
         </div>
 
-        {/* ── Convert sub-tabs (only when convert tab is active) ── */}
-        {panelTab === 'convert' && (
-          <div className="border-base-300 flex flex-wrap items-center gap-3 border-b px-4 py-2">
-            <div className="flex items-center gap-2">
-              <span className="text-base-content/40 text-[10px] tracking-widest uppercase">
-                Lang
-              </span>
-              <div className="tabs tabs-boxed tabs-sm">
-                {LANGUAGE_TABS.map((t) => (
-                  <a
-                    key={t}
-                    role="tab"
-                    className={`tab ${convertTab === t ? 'tab-active' : ''}`}
-                    onClick={() => setConvertTab(t)}>
-                    {TAB_LABELS[t]}
-                  </a>
-                ))}
-              </div>
-            </div>
-            <div className="bg-base-300 h-4 w-px" />
-            <div className="flex items-center gap-2">
-              <span className="text-base-content/40 text-[10px] tracking-widest uppercase">
-                Format
-              </span>
-              <div className="tabs tabs-boxed tabs-sm">
-                {DATA_FORMAT_TABS.map((t) => (
-                  <a
-                    key={t}
-                    role="tab"
-                    className={`tab ${convertTab === t ? 'tab-active' : ''}`}
-                    onClick={() => setConvertTab(t)}>
-                    {TAB_LABELS[t]}
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* ── Editor body ── */}
-        <div className="min-h-0 flex-1 overflow-hidden">
-          {panelTab === 'input' && (
-            <div ref={inputEditor.ref} className="h-full w-full" />
-          )}
-          {panelTab === 'schema' && (
-            <div ref={schemaEditor.ref} className="h-full w-full" />
-          )}
-          {panelTab === 'convert' && (
-            <div ref={convertEditor.ref} className="h-full w-full" />
-          )}
+        <div className="flex items-center gap-2">
+          <button className="btn btn-xs btn-ghost" onClick={beautify}>
+            Beautify
+          </button>
+          <button
+            className="btn btn-xs btn-ghost"
+            onClick={minify}
+            disabled={inputMode === 'yaml'}>
+            Minify
+          </button>
+          <button className="btn btn-xs btn-ghost" onClick={sort}>
+            Sort
+          </button>
+          <button className="btn btn-xs btn-ghost" onClick={copyActive}>
+            📋
+          </button>
         </div>
       </div>
 
-      <div className="modal-backdrop" onClick={onClose} />
-    </dialog>
+      {/* ── Panel tabs ── */}
+      <div className="border-base-300 border-b px-4">
+        <div role="tablist" className="tabs tabs-bordered tabs-sm">
+          {(
+            [
+              { id: 'input', label: '✏️ Input' },
+              { id: 'schema', label: '📐 Schema' },
+              { id: 'convert', label: '🔀 Convert' },
+            ] as { id: PanelTab; label: string }[]
+          ).map((t) => (
+            <a
+              key={t.id}
+              role="tab"
+              className={`tab ${panelTab === t.id ? 'tab-active' : ''}`}
+              onClick={() => setPanelTab(t.id)}>
+              {t.label}
+            </a>
+          ))}
+        </div>
+      </div>
+
+      {/* ── Convert sub-tabs (only when convert tab is active) ── */}
+      {panelTab === 'convert' && (
+        <div className="border-base-300 flex flex-wrap items-center gap-3 border-b px-4 py-2">
+          <div className="flex items-center gap-2">
+            <span className="text-base-content/40 text-[10px] tracking-widest uppercase">
+              Lang
+            </span>
+            <div className="tabs tabs-boxed tabs-sm">
+              {LANGUAGE_TABS.map((t) => (
+                <a
+                  key={t}
+                  role="tab"
+                  className={`tab ${convertTab === t ? 'tab-active' : ''}`}
+                  onClick={() => setConvertTab(t)}>
+                  {TAB_LABELS[t]}
+                </a>
+              ))}
+            </div>
+          </div>
+          <div className="bg-base-300 h-4 w-px" />
+          <div className="flex items-center gap-2">
+            <span className="text-base-content/40 text-[10px] tracking-widest uppercase">
+              Format
+            </span>
+            <div className="tabs tabs-boxed tabs-sm">
+              {DATA_FORMAT_TABS.map((t) => (
+                <a
+                  key={t}
+                  role="tab"
+                  className={`tab ${convertTab === t ? 'tab-active' : ''}`}
+                  onClick={() => setConvertTab(t)}>
+                  {TAB_LABELS[t]}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ── Editor body ── */}
+      <div className="min-h-0 flex-1 overflow-hidden">
+        {panelTab === 'input' && (
+          <div ref={inputEditor.ref} className="h-full w-full" />
+        )}
+        {panelTab === 'schema' && (
+          <div ref={schemaEditor.ref} className="h-full w-full" />
+        )}
+        {panelTab === 'convert' && (
+          <div ref={convertEditor.ref} className="h-full w-full" />
+        )}
+      </div>
+    </ModalWrapper>
   );
 };

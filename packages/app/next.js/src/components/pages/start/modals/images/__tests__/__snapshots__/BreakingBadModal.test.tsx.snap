@@ -4,201 +4,217 @@ exports[`BreakingBadModal should render 1`] = `
 <div>
   <dialog
     class="modal modal-open"
+    open=""
     style="background: rgba(0, 0, 0, 0.6);"
   >
     <div
-      class="modal-box w-full max-w-2xl"
+      class="card bg-base-100 border-base-300 w-full max-w-2xl border shadow-2xl"
     >
-      <button
-        class="btn btn-sm btn-circle btn-ghost absolute top-2 right-2"
-      >
-        ✕
-      </button>
-      <h3
-        class="mb-4 text-center text-lg font-bold"
-      >
-        Breaking Bad Text
-      </h3>
       <div
-        class="mb-4 flex flex-wrap gap-2"
-      >
-        <button
-          class="btn btn-xs btn-primary"
-        >
-          Breaking Bad
-        </button>
-        <button
-          class="btn btn-xs btn-outline"
-        >
-          Walter White
-        </button>
-        <button
-          class="btn btn-xs btn-outline"
-        >
-          Jesse Pinkman
-        </button>
-        <button
-          class="btn btn-xs btn-outline"
-        >
-          Heisenberg
-        </button>
-        <button
-          class="btn btn-xs btn-outline"
-        >
-          Saul Goodman
-        </button>
-        <button
-          class="btn btn-xs btn-outline"
-        >
-          Los Pollos
-        </button>
-      </div>
-      <input
-        class="input input-bordered mb-4 w-full"
-        placeholder="✨ Your Name"
-        value="Breaking Bad"
-      />
-      <div
-        class="mb-4 flex flex-wrap items-center gap-4"
-      >
-        <label
-          class="label cursor-pointer justify-start gap-2"
-        >
-          <input
-            checked=""
-            class="toggle toggle-primary toggle-sm"
-            type="checkbox"
-          />
-          Colored
-        </label>
-        <label
-          class="label cursor-pointer justify-start gap-2"
-        >
-          <input
-            class="toggle toggle-primary toggle-sm"
-            type="checkbox"
-          />
-          Multiline
-        </label>
-      </div>
-      <div
-        class="bg-base-200 flex min-h-40 items-center justify-center overflow-auto rounded-xl p-4"
+        class="card-body gap-5 p-6"
       >
         <div
-          class="flex flex-col gap-y-2"
+          class="flex items-start justify-between"
+        >
+          <div>
+            <h2
+              class="text-lg font-black tracking-tight"
+            >
+              Breaking Bad Text
+            </h2>
+          </div>
+          <button
+            class="btn btn-ghost btn-xs btn-square text-base opacity-60 hover:opacity-100"
+          >
+            ✕
+          </button>
+        </div>
+        <div
+          class="mb-4 flex flex-wrap gap-2"
+        >
+          <button
+            class="btn btn-xs btn-primary"
+          >
+            Breaking Bad
+          </button>
+          <button
+            class="btn btn-xs btn-outline"
+          >
+            Walter White
+          </button>
+          <button
+            class="btn btn-xs btn-outline"
+          >
+            Jesse Pinkman
+          </button>
+          <button
+            class="btn btn-xs btn-outline"
+          >
+            Heisenberg
+          </button>
+          <button
+            class="btn btn-xs btn-outline"
+          >
+            Saul Goodman
+          </button>
+          <button
+            class="btn btn-xs btn-outline"
+          >
+            Los Pollos
+          </button>
+        </div>
+        <input
+          class="input input-bordered mb-4 w-full"
+          placeholder="✨ Your Name"
+          value="Breaking Bad"
+        />
+        <div
+          class="mb-4 flex flex-wrap items-center gap-4"
+        >
+          <label
+            class="label cursor-pointer justify-start gap-2"
+          >
+            <input
+              checked=""
+              class="toggle toggle-primary toggle-sm"
+              type="checkbox"
+            />
+            Colored
+          </label>
+          <label
+            class="label cursor-pointer justify-start gap-2"
+          >
+            <input
+              class="toggle toggle-primary toggle-sm"
+              type="checkbox"
+            />
+            Multiline
+          </label>
+        </div>
+        <div
+          class="bg-base-200 flex min-h-40 items-center justify-center overflow-auto rounded-xl p-4"
         >
           <div
-            class="flex h-fit w-fit gap-2 p-4 flex-row flex-wrap gap-x-4 items-center text-center"
+            class="flex flex-col gap-y-2"
           >
             <div
-              class="flex flex-wrap items-center gap-1 text-4xl font-bold"
+              class="flex h-fit w-fit gap-2 p-4 flex-row flex-wrap gap-x-4 items-center text-center"
             >
               <div
-                class="bg-indigo-900 text-base-content relative flex h-16 w-16 flex-col items-center justify-center rounded"
+                class="flex flex-wrap items-center gap-1 text-4xl font-bold"
               >
-                <span
-                  class="absolute top-1 right-1 text-xs"
+                <div
+                  class="bg-indigo-900 text-base-content relative flex h-16 w-16 flex-col items-center justify-center rounded"
                 >
-                  35
+                  <span
+                    class="absolute top-1 right-1 text-xs"
+                  >
+                    35
+                  </span>
+                  <span
+                    class="text-4xl"
+                  >
+                    Br
+                  </span>
+                </div>
+                <span
+                  class="text-base-content text-4xl font-semibold"
+                >
+                  e
                 </span>
                 <span
-                  class="text-4xl"
+                  class="text-base-content text-4xl font-semibold"
                 >
-                  Br
+                  a
+                </span>
+                <span
+                  class="text-base-content text-4xl font-semibold"
+                >
+                  k
+                </span>
+                <span
+                  class="text-base-content text-4xl font-semibold"
+                >
+                  i
+                </span>
+                <span
+                  class="text-base-content text-4xl font-semibold"
+                >
+                  n
+                </span>
+                <span
+                  class="text-base-content text-4xl font-semibold"
+                >
+                  g
                 </span>
               </div>
-              <span
-                class="text-base-content text-4xl font-semibold"
+              <div
+                class="flex flex-wrap items-center gap-1 text-4xl font-bold"
               >
-                e
-              </span>
-              <span
-                class="text-base-content text-4xl font-semibold"
-              >
-                a
-              </span>
-              <span
-                class="text-base-content text-4xl font-semibold"
-              >
-                k
-              </span>
-              <span
-                class="text-base-content text-4xl font-semibold"
-              >
-                i
-              </span>
-              <span
-                class="text-base-content text-4xl font-semibold"
-              >
-                n
-              </span>
-              <span
-                class="text-base-content text-4xl font-semibold"
-              >
-                g
-              </span>
+                <div
+                  class="bg-green-900 text-base-content relative flex h-16 w-16 flex-col items-center justify-center rounded"
+                >
+                  <span
+                    class="absolute top-1 right-1 text-xs"
+                  >
+                    56
+                  </span>
+                  <span
+                    class="text-4xl"
+                  >
+                    Ba
+                  </span>
+                </div>
+                <span
+                  class="text-base-content text-4xl font-semibold"
+                >
+                  d
+                </span>
+              </div>
             </div>
             <div
-              class="flex flex-wrap items-center gap-1 text-4xl font-bold"
+              class="dropdown mx-auto"
             >
-              <div
-                class="bg-green-900 text-base-content relative flex h-16 w-16 flex-col items-center justify-center rounded"
+              <label
+                class="btn btn-ghost btn-sm"
+                tabindex="0"
               >
-                <span
-                  class="absolute top-1 right-1 text-xs"
-                >
-                  56
-                </span>
-                <span
-                  class="text-4xl"
-                >
-                  Ba
-                </span>
-              </div>
-              <span
-                class="text-base-content text-4xl font-semibold"
+                💾 Download
+              </label>
+              <ul
+                class="menu dropdown-content rounded-box bg-neutral z-50 w-56 p-2 shadow"
+                tabindex="0"
               >
-                d
-              </span>
+                <li>
+                  <button
+                    class="btn btn-ghost justify-start"
+                    type="button"
+                  >
+                    💾 With Background
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="btn btn-ghost justify-start"
+                    type="button"
+                  >
+                    💾 Without Background
+                  </button>
+                </li>
+              </ul>
             </div>
-          </div>
-          <div
-            class="dropdown mx-auto"
-          >
-            <label
-              class="btn btn-ghost btn-sm"
-              tabindex="0"
-            >
-              💾 Download
-            </label>
-            <ul
-              class="menu dropdown-content rounded-box bg-neutral z-50 w-56 p-2 shadow"
-              tabindex="0"
-            >
-              <li>
-                <button
-                  class="btn btn-ghost justify-start"
-                  type="button"
-                >
-                  💾 With Background
-                </button>
-              </li>
-              <li>
-                <button
-                  class="btn btn-ghost justify-start"
-                  type="button"
-                >
-                  💾 Without Background
-                </button>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
     </div>
-    <div
+    <form
       class="modal-backdrop"
-    />
+      method="dialog"
+    >
+      <button>
+        close
+      </button>
+    </form>
   </dialog>
 </div>
 `;

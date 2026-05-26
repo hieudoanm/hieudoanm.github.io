@@ -1,4 +1,5 @@
 import { FC, useEffect, useRef, useState } from 'react';
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 
 /* ------------------------------------------------------------------ */
 /* Types                                                                */
@@ -357,109 +358,96 @@ export const GitHubSocialPreviewModal: FC<{ onClose: () => void }> = ({
   };
 
   return (
-    <dialog
-      className="modal modal-open"
-      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
-      <div className="modal-box w-full max-w-2xl">
+    <ModalWrapper
+      onClose={onClose}
+      title="GitHub Social Preview"
+      size="max-w-2xl">
+      {/* Input */}
+      <div className="join mb-4 w-full">
+        <input
+          ref={inputRef}
+          type="text"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          onKeyDown={onKeyDown}
+          placeholder="owner/repo or github.com/owner/repo"
+          className="input input-bordered join-item w-full font-mono text-sm"
+        />
         <button
-          onClick={onClose}
-          className="btn btn-sm btn-circle btn-ghost absolute top-2 right-2">
-          ✕
-        </button>
-
-        <h3 className="mb-4 text-center text-lg font-bold">
-          GitHub Social Preview
-        </h3>
-
-        {/* Input */}
-        <div className="join mb-4 w-full">
-          <input
-            ref={inputRef}
-            type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={onKeyDown}
-            placeholder="owner/repo or github.com/owner/repo"
-            className="input input-bordered join-item w-full font-mono text-sm"
-          />
-          <button
-            className="btn join-item btn-primary"
-            disabled={loading || !input.trim()}
-            onClick={() => fetch_(input)}>
-            {loading ? (
-              <span className="loading loading-spinner loading-xs" />
-            ) : (
-              'Generate'
-            )}
-          </button>
-        </div>
-
-        {/* Quick examples */}
-        <div className="mb-4 flex flex-wrap gap-2">
-          {['vercel/next.js', 'facebook/react', 'hieudoanm/hieudoanm'].map(
-            (ex) => (
-              <button
-                key={ex}
-                className="btn btn-xs btn-ghost font-mono"
-                onClick={() => {
-                  setInput(ex);
-                  fetch_(ex);
-                }}>
-                {ex}
-              </button>
-            )
+          className="btn join-item btn-primary"
+          disabled={loading || !input.trim()}
+          onClick={() => fetch_(input)}>
+          {loading ? (
+            <span className="loading loading-spinner loading-xs" />
+          ) : (
+            'Generate'
           )}
-        </div>
+        </button>
+      </div>
 
-        {/* Error */}
-        {error && <div className="alert alert-error mb-4 text-sm">{error}</div>}
-
-        {/* Canvas preview */}
-        {repo && (
-          <>
-            <div className="bg-base-200 mb-3 overflow-hidden rounded-xl">
-              <canvas
-                ref={canvasRef}
-                className="w-full"
-                style={{ aspectRatio: '1200/630' }}
-              />
-            </div>
-
-            {/* Meta */}
-            <div className="mb-4 flex items-center gap-3 text-xs opacity-50">
-              <span>1200 × 630 px</span>
-              <span>·</span>
-              <span>{repo.full_name}</span>
-              {repo.language && (
-                <>
-                  <span>·</span>
-                  <span>{repo.language}</span>
-                </>
-              )}
-            </div>
-
-            {/* Actions */}
-            <div className="flex gap-2">
-              <button
-                className="btn btn-primary btn-sm flex-1"
-                onClick={download}>
-                ⬇ Download PNG
-              </button>
-              <button className="btn btn-ghost btn-sm" onClick={copy}>
-                📋 Copy
-              </button>
-            </div>
-          </>
-        )}
-
-        {!repo && !loading && !error && (
-          <p className="py-6 text-center text-xs opacity-30">
-            Enter a GitHub repository to generate its social preview image
-          </p>
+      {/* Quick examples */}
+      <div className="mb-4 flex flex-wrap gap-2">
+        {['vercel/next.js', 'facebook/react', 'hieudoanm/hieudoanm'].map(
+          (ex) => (
+            <button
+              key={ex}
+              className="btn btn-xs btn-ghost font-mono"
+              onClick={() => {
+                setInput(ex);
+                fetch_(ex);
+              }}>
+              {ex}
+            </button>
+          )
         )}
       </div>
 
-      <div className="modal-backdrop" onClick={onClose} />
-    </dialog>
+      {/* Error */}
+      {error && <div className="alert alert-error mb-4 text-sm">{error}</div>}
+
+      {/* Canvas preview */}
+      {repo && (
+        <>
+          <div className="bg-base-200 mb-3 overflow-hidden rounded-xl">
+            <canvas
+              ref={canvasRef}
+              className="w-full"
+              style={{ aspectRatio: '1200/630' }}
+            />
+          </div>
+
+          {/* Meta */}
+          <div className="mb-4 flex items-center gap-3 text-xs opacity-50">
+            <span>1200 × 630 px</span>
+            <span>·</span>
+            <span>{repo.full_name}</span>
+            {repo.language && (
+              <>
+                <span>·</span>
+                <span>{repo.language}</span>
+              </>
+            )}
+          </div>
+
+          {/* Actions */}
+          <div className="flex gap-2">
+            <button
+              className="btn btn-primary btn-sm flex-1"
+              onClick={download}>
+              ⬇ Download PNG
+            </button>
+            <button className="btn btn-ghost btn-sm" onClick={copy}>
+              📋 Copy
+            </button>
+          </div>
+        </>
+      )}
+
+      {!repo && !loading && !error && (
+        <p className="py-6 text-center text-xs opacity-30">
+          Enter a GitHub repository to generate its social preview image
+        </p>
+      )}
+    </ModalWrapper>
   );
 };

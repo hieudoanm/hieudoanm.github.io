@@ -12,7 +12,7 @@ exports[`SnellenChartModal should render 1`] = `
       data-theme="luxury"
     >
       <button
-        class="btn btn-sm btn-circle btn-ghost absolute top-2 right-2 z-20"
+        class="btn btn-ghost btn-xs btn-square text-base opacity-60 hover:opacity-100 absolute top-2 right-2 z-20"
       >
         ✕
       </button>

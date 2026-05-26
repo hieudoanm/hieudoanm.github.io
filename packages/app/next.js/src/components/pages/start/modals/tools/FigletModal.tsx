@@ -1,4 +1,5 @@
-import { FC, useEffect, useState } from 'react';
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { FC, useState } from 'react';
 
 /* ------------------------------------------------------------------ */
 /* Figlet engine — subset of standard fonts rendered in JS             */
@@ -488,18 +489,8 @@ export const FigletModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   };
 
   return (
-    <dialog
-      className="modal modal-open"
-      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
-      <div className="modal-box w-full max-w-2xl" onKeyDown={onKeyDown}>
-        <button
-          onClick={onClose}
-          className="btn btn-sm btn-circle btn-ghost absolute top-2 right-2">
-          ✕
-        </button>
-
-        <h3 className="mb-4 text-center text-lg font-bold">FIGlet Generator</h3>
-
+    <ModalWrapper onClose={onClose} title="FIGlet Generator" size="max-w-2xl">
+      <div onKeyDown={onKeyDown}>
         {/* Input */}
         <div className="mb-3 flex gap-2">
           <input
@@ -563,8 +554,6 @@ export const FigletModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           </button>
         </div>
       </div>
-
-      <div className="modal-backdrop" onClick={onClose} />
-    </dialog>
+    </ModalWrapper>
   );
 };

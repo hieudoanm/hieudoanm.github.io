@@ -1,3 +1,5 @@
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { FC, useState } from 'react';
 import { Angle } from './tabs/math/Angle';
 import { Base } from './tabs/math/Base';
 import { Data } from './tabs/math/Data';
@@ -6,7 +8,6 @@ import { Length } from './tabs/physical/Length';
 import { Temperature } from './tabs/physical/Temperature';
 import { Time } from './tabs/physical/Time';
 import { Weight } from './tabs/physical/Weight';
-import { FC, useState } from 'react';
 
 enum Measurement {
   Angle = 'angle',
@@ -40,62 +41,48 @@ export const ConverterModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   );
 
   return (
-    <dialog
-      className="modal modal-open"
-      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
-      <div className="modal-box w-full max-w-lg">
-        <button
-          onClick={onClose}
-          className="btn btn-sm btn-circle btn-ghost absolute top-2 right-2">
-          ✕
-        </button>
-
-        <h3 className="mb-4 text-center text-lg font-bold">Converter</h3>
-
-        {/* Math tabs */}
-        <p className="mb-1 text-xs font-semibold uppercase opacity-40">Math</p>
-        <div role="tablist" className="tabs tabs-boxed mb-2">
-          {TABS.filter((t) => t.group === 'Math').map((t) => (
-            <a
-              key={t.value}
-              role="tab"
-              className={`tab ${measurement === t.value ? 'tab-active' : ''}`}
-              onClick={() => setMeasurement(t.value)}>
-              {t.label}
-            </a>
-          ))}
-        </div>
-
-        {/* Physical tabs */}
-        <p className="mb-1 text-xs font-semibold uppercase opacity-40">
-          Physical
-        </p>
-        <div role="tablist" className="tabs tabs-boxed mb-4">
-          {TABS.filter((t) => t.group === 'Physical').map((t) => (
-            <a
-              key={t.value}
-              role="tab"
-              className={`tab ${measurement === t.value ? 'tab-active' : ''}`}
-              onClick={() => setMeasurement(t.value)}>
-              {t.label}
-            </a>
-          ))}
-        </div>
-
-        {/* Panel */}
-        <div className="rounded-box bg-base-200 p-4">
-          {measurement === Measurement.Angle && <Angle />}
-          {measurement === Measurement.Base && <Base />}
-          {measurement === Measurement.Data && <Data />}
-          {measurement === Measurement.Length && <Length />}
-          {measurement === Measurement.Roman && <Roman />}
-          {measurement === Measurement.Temperature && <Temperature />}
-          {measurement === Measurement.Time && <Time />}
-          {measurement === Measurement.Weight && <Weight />}
-        </div>
+    <ModalWrapper onClose={onClose} title="Converter" size="max-w-lg">
+      {/* Math tabs */}
+      <p className="mb-1 text-xs font-semibold uppercase opacity-40">Math</p>
+      <div role="tablist" className="tabs tabs-boxed mb-2">
+        {TABS.filter((t) => t.group === 'Math').map((t) => (
+          <a
+            key={t.value}
+            role="tab"
+            className={`tab ${measurement === t.value ? 'tab-active' : ''}`}
+            onClick={() => setMeasurement(t.value)}>
+            {t.label}
+          </a>
+        ))}
       </div>
 
-      <div className="modal-backdrop" onClick={onClose} />
-    </dialog>
+      {/* Physical tabs */}
+      <p className="mb-1 text-xs font-semibold uppercase opacity-40">
+        Physical
+      </p>
+      <div role="tablist" className="tabs tabs-boxed mb-4">
+        {TABS.filter((t) => t.group === 'Physical').map((t) => (
+          <a
+            key={t.value}
+            role="tab"
+            className={`tab ${measurement === t.value ? 'tab-active' : ''}`}
+            onClick={() => setMeasurement(t.value)}>
+            {t.label}
+          </a>
+        ))}
+      </div>
+
+      {/* Panel */}
+      <div className="rounded-box bg-base-200 p-4">
+        {measurement === Measurement.Angle && <Angle />}
+        {measurement === Measurement.Base && <Base />}
+        {measurement === Measurement.Data && <Data />}
+        {measurement === Measurement.Length && <Length />}
+        {measurement === Measurement.Roman && <Roman />}
+        {measurement === Measurement.Temperature && <Temperature />}
+        {measurement === Measurement.Time && <Time />}
+        {measurement === Measurement.Weight && <Weight />}
+      </div>
+    </ModalWrapper>
   );
 };

@@ -1,7 +1,6 @@
-'use client';
-
 import { pokedex } from '@hieudoanm/data/pokedex';
 import { FC, useMemo, useState } from 'react';
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 import {
   Radar,
   RadarChart,
@@ -207,98 +206,85 @@ export const PokedexModal: FC<{ onClose: () => void }> = ({ onClose }) => {
 
   return (
     <>
-      <dialog
-        className="modal modal-open"
-        style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
-        <div className="modal-box flex h-[90vh] w-full max-w-3xl flex-col overflow-hidden p-0">
-          {/* Header */}
-          <div className="border-base-300 flex items-center justify-between border-b px-4 py-3">
-            <h3 className="font-bold">Pokédex</h3>
-            <button
-              onClick={onClose}
-              className="btn btn-sm btn-circle btn-ghost">
-              ✕
-            </button>
-          </div>
+      <ModalWrapper
+        onClose={onClose}
+        title="Pokédex"
+        size="max-w-3xl"
+        fullHeight>
+        {/* Toolbar */}
+        <div className="border-base-300 flex flex-wrap items-center gap-2 border-b px-4 py-2">
+          <input
+            className="input input-bordered input-sm w-40"
+            placeholder="Search…"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
 
-          {/* Toolbar */}
-          <div className="border-base-300 flex flex-wrap items-center gap-2 border-b px-4 py-2">
-            <input
-              className="input input-bordered input-sm w-40"
-              placeholder="Search…"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
+          <select
+            className="select select-bordered select-sm"
+            value={typeFilter}
+            onChange={(e) => setTypeFilter(e.target.value)}>
+            <option value="">All types</option>
+            {allTypes.map((t) => (
+              <option key={t} value={t}>
+                {t}
+              </option>
+            ))}
+          </select>
 
-            <select
-              className="select select-bordered select-sm"
-              value={typeFilter}
-              onChange={(e) => setTypeFilter(e.target.value)}>
-              <option value="">All types</option>
-              {allTypes.map((t) => (
-                <option key={t} value={t}>
-                  {t}
-                </option>
-              ))}
-            </select>
-
-            <div className="flex gap-1">
-              {(['id', 'hp', 'attack', 'speed'] as SortKey[]).map((key) => (
-                <button
-                  key={key}
-                  onClick={() => toggleSort(key)}
-                  className={`btn btn-xs ${sortKey === key ? 'btn-primary' : 'btn-ghost'}`}>
-                  {key.toUpperCase()}
-                  {sortKey === key && (
-                    <span className="ml-0.5">
-                      {sortOrder === 'asc' ? '↑' : '↓'}
-                    </span>
-                  )}
-                </button>
-              ))}
-            </div>
-
-            <span className="ml-auto text-xs opacity-40">
-              {filtered.length} Pokémon
-            </span>
-          </div>
-
-          {/* Grid */}
-          <div className="min-h-0 flex-1 overflow-y-auto p-4">
-            <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5">
-              {filtered.map((p) => (
-                <div
-                  key={p.id}
-                  onClick={() => setSelected(p)}
-                  className="bg-base-200 hover:bg-base-300 flex cursor-pointer flex-col items-center rounded-xl p-2 text-center transition hover:-translate-y-0.5">
-                  <img
-                    src={`https://raw.githubusercontent.com/hieudoanm/pokedex/master/packages/data/pokemon/images/${p.name}.png`}
-                    className="h-12 w-12"
-                    alt={p.name}
-                    loading="lazy"
-                  />
-                  <p className="text-[10px] opacity-40">#{p.id}</p>
-                  <p className="text-xs leading-tight capitalize">
-                    {p.name.replaceAll('-', ' ')}
-                  </p>
-                  <span
-                    className={`badge badge-xs mt-1 ${getTypeColor(p.type)}`}>
-                    {p.type}
+          <div className="flex gap-1">
+            {(['id', 'hp', 'attack', 'speed'] as SortKey[]).map((key) => (
+              <button
+                key={key}
+                onClick={() => toggleSort(key)}
+                className={`btn btn-xs ${sortKey === key ? 'btn-primary' : 'btn-ghost'}`}>
+                {key.toUpperCase()}
+                {sortKey === key && (
+                  <span className="ml-0.5">
+                    {sortOrder === 'asc' ? '↑' : '↓'}
                   </span>
-                </div>
-              ))}
-            </div>
-
-            {filtered.length === 0 && (
-              <p className="py-12 text-center text-xs opacity-30">
-                No Pokémon found
-              </p>
-            )}
+                )}
+              </button>
+            ))}
           </div>
+
+          <span className="ml-auto text-xs opacity-40">
+            {filtered.length} Pokémon
+          </span>
         </div>
 
-        <div className="modal-backdrop" onClick={onClose} />
-      </dialog>
+        {/* Grid */}
+        <div className="min-h-0 flex-1 overflow-y-auto p-4">
+          <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5">
+            {filtered.map((p) => (
+              <div
+                key={p.id}
+                onClick={() => setSelected(p)}
+                className="bg-base-200 hover:bg-base-300 flex cursor-pointer flex-col items-center rounded-xl p-2 text-center transition hover:-translate-y-0.5">
+                <img
+                  src={`https://raw.githubusercontent.com/hieudoanm/pokedex/master/packages/data/pokemon/images/${p.name}.png`}
+                  className="h-12 w-12"
+                  alt={p.name}
+                  loading="lazy"
+                />
+                <p className="text-[10px] opacity-40">#{p.id}</p>
+                <p className="text-xs leading-tight capitalize">
+                  {p.name.replaceAll('-', ' ')}
+                </p>
+                <span className={`badge badge-xs mt-1 ${getTypeColor(p.type)}`}>
+                  {p.type}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          {filtered.length === 0 && (
+            <p className="py-12 text-center text-xs opacity-30">
+              No Pokémon found
+            </p>
+          )}
+        </div>
+      </ModalWrapper>
 
       {selected && (
         <PokemonDetail p={selected} onClose={() => setSelected(null)} />

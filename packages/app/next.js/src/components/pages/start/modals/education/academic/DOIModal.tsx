@@ -4,6 +4,7 @@ import {
   getWork,
   Reference,
 } from '@hieudoanm/clients/crossref/crossref.client';
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 import { tryCatch } from '@hieudoanm/utils/try-catch';
 import { ChangeEvent, FC, SubmitEvent, useState } from 'react';
 
@@ -137,91 +138,75 @@ export const DOIModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     setRefs((prev) => prev.filter((_, i) => i !== index));
 
   return (
-    <dialog
-      open
-      className="modal modal-open"
-      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
-      <div className="modal-box flex w-full max-w-3xl flex-col gap-6">
-        {/* Header */}
-        <div className="flex items-center justify-between">
-          <div>
-            <h3 className="text-lg font-bold">DOI Lookup</h3>
-            <p className="text-base-content/50 text-sm">
-              Fetch and collect citations via Crossref
-            </p>
+    <ModalWrapper
+      onClose={onClose}
+      title="DOI Lookup"
+      subtitle="Fetch and collect citations via Crossref"
+      size="max-w-3xl">
+      {/* Input */}
+      <form onSubmit={onSubmit} className="flex gap-3">
+        <input
+          className="input input-bordered grow font-mono text-sm"
+          value={doi}
+          onChange={(e: ChangeEvent<HTMLInputElement>) =>
+            setDoi(e.target.value)
+          }
+          placeholder="https://doi.org/10.xxxx/..."
+          required
+        />
+        <button
+          type="submit"
+          className="btn btn-primary min-w-[80px]"
+          disabled={loading}>
+          {loading ? (
+            <span className="loading loading-spinner loading-sm" />
+          ) : (
+            'Fetch'
+          )}
+        </button>
+      </form>
+
+      {error && <p className="text-error text-sm">{error}</p>}
+
+      {/* Tabs */}
+      {refs.length > 0 && (
+        <>
+          <div className="tabs tabs-bordered">
+            {(['references', 'table'] as const).map((t) => (
+              <button
+                key={t}
+                className={`tab tab-bordered capitalize ${tab === t ? 'tab-active' : ''}`}
+                onClick={() => setTab(t)}>
+                {t === 'references' ? `References (${refs.length})` : 'Table'}
+              </button>
+            ))}
           </div>
-          <button className="btn btn-ghost btn-sm btn-circle" onClick={onClose}>
-            ✕
-          </button>
-        </div>
 
-        {/* Input */}
-        <form onSubmit={onSubmit} className="flex gap-3">
-          <input
-            className="input input-bordered grow font-mono text-sm"
-            value={doi}
-            onChange={(e: ChangeEvent<HTMLInputElement>) =>
-              setDoi(e.target.value)
-            }
-            placeholder="https://doi.org/10.xxxx/..."
-            required
-          />
-          <button
-            type="submit"
-            className="btn btn-primary min-w-[80px]"
-            disabled={loading}>
-            {loading ? (
-              <span className="loading loading-spinner loading-sm" />
-            ) : (
-              'Fetch'
-            )}
-          </button>
-        </form>
-
-        {error && <p className="text-error -mt-4 text-sm">{error}</p>}
-
-        {/* Tabs */}
-        {refs.length > 0 && (
-          <>
-            <div className="tabs tabs-bordered -mb-4">
-              {(['references', 'table'] as const).map((t) => (
-                <button
-                  key={t}
-                  className={`tab tab-bordered capitalize ${tab === t ? 'tab-active' : ''}`}
-                  onClick={() => setTab(t)}>
-                  {t === 'references' ? `References (${refs.length})` : 'Table'}
-                </button>
+          {tab === 'references' && (
+            <div className="flex max-h-96 flex-col gap-3 overflow-y-auto">
+              {refs.map((ref, i) => (
+                <ReferenceCard
+                  key={ref.id}
+                  reference={ref}
+                  onDelete={() => deleteRef(i)}
+                />
               ))}
             </div>
+          )}
 
-            {tab === 'references' && (
-              <div className="flex max-h-96 flex-col gap-3 overflow-y-auto">
-                {refs.map((ref, i) => (
-                  <ReferenceCard
-                    key={ref.id}
-                    reference={ref}
-                    onDelete={() => deleteRef(i)}
-                  />
-                ))}
-              </div>
-            )}
+          {tab === 'table' && (
+            <div className="max-h-96 overflow-y-auto">
+              <ReferenceTable references={refs} onDelete={deleteRef} />
+            </div>
+          )}
+        </>
+      )}
 
-            {tab === 'table' && (
-              <div className="max-h-96 overflow-y-auto">
-                <ReferenceTable references={refs} onDelete={deleteRef} />
-              </div>
-            )}
-          </>
-        )}
-
-        {refs.length === 0 && !loading && (
-          <p className="text-base-content/30 py-6 text-center text-sm">
-            No references yet — enter a DOI above to get started.
-          </p>
-        )}
-      </div>
-
-      <div className="modal-backdrop" onClick={onClose} />
-    </dialog>
+      {refs.length === 0 && !loading && (
+        <p className="text-base-content/30 py-6 text-center text-sm">
+          No references yet — enter a DOI above to get started.
+        </p>
+      )}
+    </ModalWrapper>
   );
 };

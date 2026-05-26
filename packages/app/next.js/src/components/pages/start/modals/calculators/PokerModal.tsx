@@ -1,3 +1,4 @@
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 import { FC, useState } from 'react';
 
 /* ------------------------------------------------------------------ */
@@ -425,143 +426,125 @@ export const PokerModal: FC<{ onClose: () => void }> = ({ onClose }) => {
 
   return (
     <>
-      <dialog
-        className="modal modal-open"
-        style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
-        <div className="modal-box w-full max-w-sm">
-          <button
-            onClick={onClose}
-            className="btn btn-sm btn-circle btn-ghost absolute top-2 right-2">
-            ✕
-          </button>
-
-          <h3 className="mb-4 text-center text-lg font-bold">Poker Odds</h3>
-
-          {/* Hero */}
-          <div className="mb-3">
-            <p className="mb-1 text-xs opacity-50">Your hand</p>
-            <div className="flex gap-2">
-              {[0, 1].map((i) => (
-                <CardChip
-                  key={i}
-                  card={hero[i]}
-                  onClick={() => openPicker('hero', i)}
-                  onRemove={() => {
-                    setCard('hero', i, null);
-                    setResults(null);
-                  }}
-                />
-              ))}
-            </div>
+      <ModalWrapper onClose={onClose} title="Poker Odds">
+        {/* Hero */}
+        <div className="mb-3">
+          <p className="mb-1 text-xs opacity-50">Your hand</p>
+          <div className="flex gap-2">
+            {[0, 1].map((i) => (
+              <CardChip
+                key={i}
+                card={hero[i]}
+                onClick={() => openPicker('hero', i)}
+                onRemove={() => {
+                  setCard('hero', i, null);
+                  setResults(null);
+                }}
+              />
+            ))}
           </div>
-
-          {/* Villain */}
-          <div className="mb-3">
-            <p className="mb-1 text-xs opacity-50">Opponent's hand</p>
-            <div className="flex gap-2">
-              {[0, 1].map((i) => (
-                <CardChip
-                  key={i}
-                  card={villain[i]}
-                  onClick={() => openPicker('villain', i)}
-                  onRemove={() => {
-                    setCard('villain', i, null);
-                    setResults(null);
-                  }}
-                />
-              ))}
-            </div>
-          </div>
-
-          {/* Community */}
-          <div className="mb-4">
-            <p className="mb-1 flex items-center gap-2 text-xs opacity-50">
-              Community
-              {streetLabel && (
-                <span className="badge badge-xs badge-neutral">
-                  {streetLabel}
-                </span>
-              )}
-            </p>
-            <div className="flex gap-1.5">
-              {[0, 1, 2, 3, 4].map((i) => (
-                <CardChip
-                  key={i}
-                  card={community[i]}
-                  onClick={() => openPicker('community', i)}
-                  onRemove={() => {
-                    setCard('community', i, null);
-                    setResults(null);
-                  }}
-                />
-              ))}
-            </div>
-          </div>
-
-          {/* Actions */}
-          <div className="mb-4 flex gap-2">
-            <button
-              className="btn btn-primary btn-sm flex-1"
-              disabled={!canSimulate || simulating}
-              onClick={simulate}>
-              {simulating ? 'Simulating…' : 'Calculate'}
-            </button>
-            <button className="btn btn-ghost btn-sm" onClick={reset}>
-              Reset
-            </button>
-          </div>
-
-          {/* Results */}
-          {results && (
-            <div className="bg-base-200 rounded-xl p-3">
-              <div className="mb-3 grid grid-cols-2 gap-2 text-center">
-                <div>
-                  <p className="text-xs opacity-50">You win</p>
-                  <p className="text-2xl font-black">
-                    {results.heroWin.toFixed(1)}%
-                  </p>
-                  {results.heroHand && (
-                    <p className="text-xs opacity-40">{results.heroHand}</p>
-                  )}
-                </div>
-                <div>
-                  <p className="text-xs opacity-50">Opponent wins</p>
-                  <p className="text-2xl font-black">
-                    {results.villainWin.toFixed(1)}%
-                  </p>
-                  {results.villainHand && (
-                    <p className="text-xs opacity-40">{results.villainHand}</p>
-                  )}
-                </div>
-              </div>
-              <div className="flex flex-col gap-1.5">
-                <MeterBar
-                  label="Win"
-                  pct={results.heroWin}
-                  color="bg-success"
-                />
-                <MeterBar label="Tie" pct={results.tie} color="bg-warning" />
-                <MeterBar
-                  label="Lose"
-                  pct={results.villainWin}
-                  color="bg-error"
-                />
-              </div>
-              <p className="mt-2 text-center text-xs opacity-30">
-                10,000 Monte Carlo simulations
-              </p>
-            </div>
-          )}
-
-          {!canSimulate && (
-            <p className="text-center text-xs opacity-30">
-              Add both hole cards for each player
-            </p>
-          )}
         </div>
 
-        <div className="modal-backdrop" onClick={onClose} />
-      </dialog>
+        {/* Villain */}
+        <div className="mb-3">
+          <p className="mb-1 text-xs opacity-50">Opponent's hand</p>
+          <div className="flex gap-2">
+            {[0, 1].map((i) => (
+              <CardChip
+                key={i}
+                card={villain[i]}
+                onClick={() => openPicker('villain', i)}
+                onRemove={() => {
+                  setCard('villain', i, null);
+                  setResults(null);
+                }}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Community */}
+        <div className="mb-4">
+          <p className="mb-1 flex items-center gap-2 text-xs opacity-50">
+            Community
+            {streetLabel && (
+              <span className="badge badge-xs badge-neutral">
+                {streetLabel}
+              </span>
+            )}
+          </p>
+          <div className="flex gap-1.5">
+            {[0, 1, 2, 3, 4].map((i) => (
+              <CardChip
+                key={i}
+                card={community[i]}
+                onClick={() => openPicker('community', i)}
+                onRemove={() => {
+                  setCard('community', i, null);
+                  setResults(null);
+                }}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Actions */}
+        <div className="mb-4 flex gap-2">
+          <button
+            className="btn btn-primary btn-sm flex-1"
+            disabled={!canSimulate || simulating}
+            onClick={simulate}>
+            {simulating ? 'Simulating…' : 'Calculate'}
+          </button>
+          <button className="btn btn-ghost btn-sm" onClick={reset}>
+            Reset
+          </button>
+        </div>
+
+        {/* Results */}
+        {results && (
+          <div className="bg-base-200 rounded-xl p-3">
+            <div className="mb-3 grid grid-cols-2 gap-2 text-center">
+              <div>
+                <p className="text-xs opacity-50">You win</p>
+                <p className="text-2xl font-black">
+                  {results.heroWin.toFixed(1)}%
+                </p>
+                {results.heroHand && (
+                  <p className="text-xs opacity-40">{results.heroHand}</p>
+                )}
+              </div>
+              <div>
+                <p className="text-xs opacity-50">Opponent wins</p>
+                <p className="text-2xl font-black">
+                  {results.villainWin.toFixed(1)}%
+                </p>
+                {results.villainHand && (
+                  <p className="text-xs opacity-40">{results.villainHand}</p>
+                )}
+              </div>
+            </div>
+            <div className="flex flex-col gap-1.5">
+              <MeterBar label="Win" pct={results.heroWin} color="bg-success" />
+              <MeterBar label="Tie" pct={results.tie} color="bg-warning" />
+              <MeterBar
+                label="Lose"
+                pct={results.villainWin}
+                color="bg-error"
+              />
+            </div>
+            <p className="mt-2 text-center text-xs opacity-30">
+              10,000 Monte Carlo simulations
+            </p>
+          </div>
+        )}
+
+        {!canSimulate && (
+          <p className="text-center text-xs opacity-30">
+            Add both hole cards for each player
+          </p>
+        )}
+      </ModalWrapper>
 
       {picker && (
         <CardPicker

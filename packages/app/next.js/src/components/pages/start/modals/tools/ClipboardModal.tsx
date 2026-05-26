@@ -1,5 +1,6 @@
 import { createClipboard, createStorage } from '@browser/native';
 import { FC, useEffect, useState } from 'react';
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 
 type ClipItem = {
   id: string;
@@ -101,132 +102,114 @@ export const ClipboardModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   }, []);
 
   return (
-    <dialog
-      open
-      className="modal modal-open"
-      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
-      <div className="modal-box flex w-full max-w-2xl flex-col gap-4">
-        {/* Header */}
-        <div className="flex items-start justify-between">
-          <div>
-            <h3 className="text-lg font-bold">Clipboard Manager</h3>
-            <p className="text-base-content/50 text-sm">
-              Local history · Sync storage · navigator.clipboard
-            </p>
-          </div>
-          <button className="btn btn-ghost btn-sm btn-circle" onClick={onClose}>
-            ✕
-          </button>
-        </div>
+    <ModalWrapper
+      onClose={onClose}
+      title="Clipboard Manager"
+      subtitle="Local history · Sync storage · navigator.clipboard"
+      size="max-w-2xl">
+      {/* Actions */}
+      <div className="flex items-center gap-2">
+        <button
+          className="btn btn-xs btn-primary"
+          onClick={capture}
+          disabled={loading}>
+          {loading ? (
+            <span className="loading loading-spinner loading-xs" />
+          ) : (
+            'Capture'
+          )}
+        </button>
 
-        {/* Actions */}
-        <div className="flex items-center gap-2">
+        <button
+          className="btn btn-xs btn-ghost"
+          onClick={clearAll}
+          disabled={!clips.length}>
+          Clear
+        </button>
+
+        <span className="ml-auto text-xs opacity-50">{clips.length} items</span>
+      </div>
+
+      {error && <div className="alert alert-error py-2 text-sm">{error}</div>}
+
+      {/* Tabs */}
+      <div className="tabs tabs-bordered">
+        {(['history', 'preview'] as const).map((t) => (
           <button
-            className="btn btn-xs btn-primary"
-            onClick={capture}
-            disabled={loading}>
-            {loading ? (
-              <span className="loading loading-spinner loading-xs" />
-            ) : (
-              'Capture'
-            )}
+            key={t}
+            className={`tab tab-bordered capitalize ${tab === t ? 'tab-active' : ''}`}
+            onClick={() => setTab(t)}>
+            {t}
           </button>
+        ))}
+      </div>
 
-          <button
-            className="btn btn-xs btn-ghost"
-            onClick={clearAll}
-            disabled={!clips.length}>
-            Clear
-          </button>
+      {/* HISTORY */}
+      {tab === 'history' && (
+        <div className="flex max-h-80 flex-col gap-2 overflow-auto">
+          {clips.map((c) => (
+            <div
+              key={c.id}
+              className="bg-base-200 flex items-center gap-2 rounded-lg p-2">
+              <button
+                className="flex-1 truncate text-left text-sm"
+                onClick={() => {
+                  setSelected(c);
+                  setTab('preview');
+                }}>
+                {c.content}
+              </button>
 
-          <span className="ml-auto text-xs opacity-50">
-            {clips.length} items
-          </span>
-        </div>
+              <button className="btn btn-xs" onClick={() => copy(c.content)}>
+                Copy
+              </button>
 
-        {error && <div className="alert alert-error py-2 text-sm">{error}</div>}
-
-        {/* Tabs */}
-        <div className="tabs tabs-bordered">
-          {(['history', 'preview'] as const).map((t) => (
-            <button
-              key={t}
-              className={`tab tab-bordered capitalize ${tab === t ? 'tab-active' : ''}`}
-              onClick={() => setTab(t)}>
-              {t}
-            </button>
+              <button
+                className="btn btn-xs btn-ghost"
+                onClick={() => remove(c.id)}>
+                ✕
+              </button>
+            </div>
           ))}
+
+          {!clips.length && (
+            <p className="text-base-content/30 py-8 text-center text-sm">
+              Clipboard is empty
+            </p>
+          )}
         </div>
+      )}
 
-        {/* HISTORY */}
-        {tab === 'history' && (
-          <div className="flex max-h-80 flex-col gap-2 overflow-auto">
-            {clips.map((c) => (
-              <div
-                key={c.id}
-                className="bg-base-200 flex items-center gap-2 rounded-lg p-2">
+      {/* PREVIEW */}
+      {tab === 'preview' && (
+        <div className="flex flex-col gap-3">
+          {selected ? (
+            <>
+              <pre className="bg-base-200 max-h-64 overflow-auto rounded-lg p-3 text-xs">
+                {selected.content}
+              </pre>
+
+              <div className="flex gap-2">
                 <button
-                  className="flex-1 truncate text-left text-sm"
-                  onClick={() => {
-                    setSelected(c);
-                    setTab('preview');
-                  }}>
-                  {c.content}
-                </button>
-
-                <button className="btn btn-xs" onClick={() => copy(c.content)}>
+                  className="btn btn-sm btn-primary"
+                  onClick={() => copy(selected.content)}>
                   Copy
                 </button>
 
                 <button
-                  className="btn btn-xs btn-ghost"
-                  onClick={() => remove(c.id)}>
-                  ✕
+                  className="btn btn-sm btn-ghost"
+                  onClick={() => setTab('history')}>
+                  Back
                 </button>
               </div>
-            ))}
-
-            {!clips.length && (
-              <p className="text-base-content/30 py-8 text-center text-sm">
-                Clipboard is empty
-              </p>
-            )}
-          </div>
-        )}
-
-        {/* PREVIEW */}
-        {tab === 'preview' && (
-          <div className="flex flex-col gap-3">
-            {selected ? (
-              <>
-                <pre className="bg-base-200 max-h-64 overflow-auto rounded-lg p-3 text-xs">
-                  {selected.content}
-                </pre>
-
-                <div className="flex gap-2">
-                  <button
-                    className="btn btn-sm btn-primary"
-                    onClick={() => copy(selected.content)}>
-                    Copy
-                  </button>
-
-                  <button
-                    className="btn btn-sm btn-ghost"
-                    onClick={() => setTab('history')}>
-                    Back
-                  </button>
-                </div>
-              </>
-            ) : (
-              <p className="text-base-content/30 py-8 text-center text-sm">
-                Select an item to preview
-              </p>
-            )}
-          </div>
-        )}
-      </div>
-
-      <div className="modal-backdrop" onClick={onClose} />
-    </dialog>
+            </>
+          ) : (
+            <p className="text-base-content/30 py-8 text-center text-sm">
+              Select an item to preview
+            </p>
+          )}
+        </div>
+      )}
+    </ModalWrapper>
   );
 };

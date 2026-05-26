@@ -1,3 +1,4 @@
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 import { FC, useEffect, useRef, useState } from 'react';
 
 const GearIcon = () => (
@@ -254,314 +255,282 @@ export const ChessClockModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   /* ---------------- UI ---------------- */
 
   return (
-    <dialog
-      open
-      className="modal modal-open"
-      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
-      <div className="card bg-base-100 border-base-300 z-10 flex h-[90vh] w-full max-w-2xl flex-col overflow-hidden border p-0 shadow-2xl md:h-[600px]">
-        {showModal ? (
-          <div className="card-body gap-6 overflow-y-auto">
-            <div className="flex items-start justify-between">
-              <div>
-                <h2 className="text-lg font-black tracking-tight">
-                  Chess Clock Settings
-                </h2>
-                <p className="text-base-content/40 mt-0.5 font-mono text-[10px] tracking-widest uppercase">
-                  Time Control
+    <ModalWrapper
+      onClose={onClose}
+      title={showModal ? 'Chess Clock Settings' : 'Chess Clock'}
+      subtitle={showModal ? 'Time Control' : undefined}
+      size="max-w-2xl"
+      fullHeight>
+      {showModal ? (
+        <div className="flex flex-col gap-6 overflow-y-auto p-6">
+          <div className="space-y-3">
+            {Object.entries(PRESETS).map(([group, list]) => (
+              <div key={group}>
+                <p className="text-base-content/40 mb-1 font-mono text-[10px] tracking-widest uppercase">
+                  {group}
                 </p>
-              </div>
-              <button
-                onClick={onClose}
-                className="btn btn-ghost btn-xs btn-square text-base">
-                ✕
-              </button>
-            </div>
-
-            {/* Presets */}
-            <div className="space-y-3">
-              {Object.entries(PRESETS).map(([group, list]) => (
-                <div key={group}>
-                  <p className="text-base-content/40 mb-1 font-mono text-[10px] tracking-widest uppercase">
-                    {group}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {list.map((tc) => (
-                      <button
-                        type="button"
-                        key={tc}
-                        className={`btn btn-sm ${clock.timeControl.white === tc && clock.timeControl.black === tc ? 'btn-primary' : 'btn-outline'}`}
-                        onClick={() => {
-                          const c = convert(tc);
-                          setClock((p) => ({
-                            ...p,
-                            timeControl: { white: tc, black: tc },
-                            milliseconds: {
-                              white: c.milliseconds,
-                              black: c.milliseconds,
-                            },
-                            increment: {
-                              white: c.increment,
-                              black: c.increment,
-                            },
-                          }));
-                        }}>
-                        {tc}
-                      </button>
-                    ))}
-                  </div>
+                <div className="flex flex-wrap gap-2">
+                  {list.map((tc) => (
+                    <button
+                      type="button"
+                      key={tc}
+                      className={`btn btn-sm ${clock.timeControl.white === tc && clock.timeControl.black === tc ? 'btn-primary' : 'btn-outline'}`}
+                      onClick={() => {
+                        const c = convert(tc);
+                        setClock((p) => ({
+                          ...p,
+                          timeControl: { white: tc, black: tc },
+                          milliseconds: {
+                            white: c.milliseconds,
+                            black: c.milliseconds,
+                          },
+                          increment: {
+                            white: c.increment,
+                            black: c.increment,
+                          },
+                        }));
+                      }}>
+                      {tc}
+                    </button>
+                  ))}
                 </div>
-              ))}
+              </div>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div className="form-control">
+              <label className="label mb-1 p-0">
+                <span className="text-base-content/40 font-mono text-[10px] tracking-widest uppercase">
+                  White minutes
+                </span>
+              </label>
+              <input
+                type="number"
+                placeholder="White minutes"
+                className="input input-sm input-bordered font-mono"
+                value={Math.floor(clock.milliseconds.white / ONE_MINUTE)}
+                onChange={(e) => {
+                  const m = parseInt(e.target.value || '0');
+                  setClock((p) => ({
+                    ...p,
+                    milliseconds: {
+                      ...p.milliseconds,
+                      white: m * ONE_MINUTE,
+                    },
+                  }));
+                }}
+              />
             </div>
 
-            {/* Separate Custom Inputs */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="form-control">
-                <label className="label mb-1 p-0">
-                  <span className="text-base-content/40 font-mono text-[10px] tracking-widest uppercase">
-                    White minutes
-                  </span>
-                </label>
-                <input
-                  type="number"
-                  placeholder="White minutes"
-                  className="input input-sm input-bordered font-mono"
-                  value={Math.floor(clock.milliseconds.white / ONE_MINUTE)}
-                  onChange={(e) => {
-                    const m = parseInt(e.target.value || '0');
-                    setClock((p) => ({
-                      ...p,
-                      milliseconds: {
-                        ...p.milliseconds,
-                        white: m * ONE_MINUTE,
-                      },
-                    }));
-                  }}
-                />
-              </div>
-
-              <div className="form-control">
-                <label className="label mb-1 p-0">
-                  <span className="text-base-content/40 font-mono text-[10px] tracking-widest uppercase">
-                    Black minutes
-                  </span>
-                </label>
-                <input
-                  type="number"
-                  placeholder="Black minutes"
-                  className="input input-sm input-bordered font-mono"
-                  value={Math.floor(clock.milliseconds.black / ONE_MINUTE)}
-                  onChange={(e) => {
-                    const m = Number.parseInt(e.target.value || '0');
-                    setClock((p) => ({
-                      ...p,
-                      milliseconds: {
-                        ...p.milliseconds,
-                        black: m * ONE_MINUTE,
-                      },
-                    }));
-                  }}
-                />
-              </div>
-
-              <div className="form-control">
-                <label className="label mb-1 p-0">
-                  <span className="text-base-content/40 font-mono text-[10px] tracking-widest uppercase">
-                    White increment
-                  </span>
-                </label>
-                <input
-                  type="number"
-                  placeholder="White increment"
-                  className="input input-sm input-bordered font-mono"
-                  value={clock.increment.white}
-                  onChange={(e) => {
-                    const v = Number.parseInt(e.target.value || '0');
-                    setClock((p) => ({
-                      ...p,
-                      increment: { ...p.increment, white: v },
-                    }));
-                  }}
-                />
-              </div>
-
-              <div className="form-control">
-                <label className="label mb-1 p-0">
-                  <span className="text-base-content/40 font-mono text-[10px] tracking-widest uppercase">
-                    Black increment
-                  </span>
-                </label>
-                <input
-                  type="number"
-                  placeholder="Black increment"
-                  className="input input-sm input-bordered font-mono"
-                  value={clock.increment.black}
-                  onChange={(e) => {
-                    const v = Number.parseInt(e.target.value || '0');
-                    setClock((p) => ({
-                      ...p,
-                      increment: { ...p.increment, black: v },
-                    }));
-                  }}
-                />
-              </div>
+            <div className="form-control">
+              <label className="label mb-1 p-0">
+                <span className="text-base-content/40 font-mono text-[10px] tracking-widest uppercase">
+                  Black minutes
+                </span>
+              </label>
+              <input
+                type="number"
+                placeholder="Black minutes"
+                className="input input-sm input-bordered font-mono"
+                value={Math.floor(clock.milliseconds.black / ONE_MINUTE)}
+                onChange={(e) => {
+                  const m = Number.parseInt(e.target.value || '0');
+                  setClock((p) => ({
+                    ...p,
+                    milliseconds: {
+                      ...p.milliseconds,
+                      black: m * ONE_MINUTE,
+                    },
+                  }));
+                }}
+              />
             </div>
 
-            {/* Delay */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="form-control">
-                <label className="label mb-1 p-0">
-                  <span className="text-base-content/40 font-mono text-[10px] tracking-widest uppercase">
-                    Delay Type
-                  </span>
-                </label>
-                <select
-                  className="select select-sm select-bordered w-full font-mono"
-                  value={clock.delayType}
-                  onChange={(e) =>
-                    setClock((p) => ({
-                      ...p,
-                      delayType: e.target.value as DelayType,
-                    }))
-                  }>
-                  <option value="none">No Delay</option>
-                  <option value="bronstein">Bronstein</option>
-                  <option value="fischer">Fischer</option>
-                </select>
-              </div>
-
-              <div className="form-control">
-                <label className="label mb-1 p-0">
-                  <span className="text-base-content/40 font-mono text-[10px] tracking-widest uppercase">
-                    Delay (sec)
-                  </span>
-                </label>
-                <input
-                  type="number"
-                  placeholder="Delay sec"
-                  className="input input-sm input-bordered font-mono"
-                  value={clock.delay}
-                  onChange={(e) =>
-                    setClock((p) => ({
-                      ...p,
-                      delay: Number.parseInt(e.target.value || '0'),
-                    }))
-                  }
-                />
-              </div>
+            <div className="form-control">
+              <label className="label mb-1 p-0">
+                <span className="text-base-content/40 font-mono text-[10px] tracking-widest uppercase">
+                  White increment
+                </span>
+              </label>
+              <input
+                type="number"
+                placeholder="White increment"
+                className="input input-sm input-bordered font-mono"
+                value={clock.increment.white}
+                onChange={(e) => {
+                  const v = Number.parseInt(e.target.value || '0');
+                  setClock((p) => ({
+                    ...p,
+                    increment: { ...p.increment, white: v },
+                  }));
+                }}
+              />
             </div>
+
+            <div className="form-control">
+              <label className="label mb-1 p-0">
+                <span className="text-base-content/40 font-mono text-[10px] tracking-widest uppercase">
+                  Black increment
+                </span>
+              </label>
+              <input
+                type="number"
+                placeholder="Black increment"
+                className="input input-sm input-bordered font-mono"
+                value={clock.increment.black}
+                onChange={(e) => {
+                  const v = Number.parseInt(e.target.value || '0');
+                  setClock((p) => ({
+                    ...p,
+                    increment: { ...p.increment, black: v },
+                  }));
+                }}
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div className="form-control">
+              <label className="label mb-1 p-0">
+                <span className="text-base-content/40 font-mono text-[10px] tracking-widest uppercase">
+                  Delay Type
+                </span>
+              </label>
+              <select
+                className="select select-sm select-bordered w-full font-mono"
+                value={clock.delayType}
+                onChange={(e) =>
+                  setClock((p) => ({
+                    ...p,
+                    delayType: e.target.value as DelayType,
+                  }))
+                }>
+                <option value="none">No Delay</option>
+                <option value="bronstein">Bronstein</option>
+                <option value="fischer">Fischer</option>
+              </select>
+            </div>
+
+            <div className="form-control">
+              <label className="label mb-1 p-0">
+                <span className="text-base-content/40 font-mono text-[10px] tracking-widest uppercase">
+                  Delay (sec)
+                </span>
+              </label>
+              <input
+                type="number"
+                placeholder="Delay sec"
+                className="input input-sm input-bordered font-mono"
+                value={clock.delay}
+                onChange={(e) =>
+                  setClock((p) => ({
+                    ...p,
+                    delay: Number.parseInt(e.target.value || '0'),
+                  }))
+                }
+              />
+            </div>
+          </div>
+
+          <button
+            className="btn btn-primary mt-2 font-mono tracking-widest"
+            onClick={(e) => {
+              e.preventDefault();
+              setShowModal(false);
+            }}>
+            START
+          </button>
+        </div>
+      ) : (
+        <div className="flex h-full flex-col">
+          <div className="border-base-300 flex items-center justify-between border-b px-4 py-3">
+            <button
+              className="btn btn-ghost btn-sm btn-square"
+              onClick={() => {
+                pause();
+                setShowModal(true);
+              }}>
+              <GearIcon />
+            </button>
+            <div className="font-mono text-xs font-bold tracking-widest uppercase opacity-50">
+              Move {clock.moves}
+            </div>
+          </div>
+
+          <div className="flex flex-1 flex-col gap-4 p-4 md:flex-row">
+            <button
+              className={`flex flex-1 items-center justify-center rounded-2xl p-6 text-6xl font-black tabular-nums transition-all duration-300 ${
+                clock.timeout === 'white'
+                  ? 'bg-error text-error-content scale-[0.98]'
+                  : clock.current === 'white'
+                    ? 'bg-secondary text-secondary-content shadow-secondary scale-[1.02] shadow-[0_0_40px_-10px_rgba(0,0,0,0.3)]'
+                    : 'bg-base-200 hover:bg-base-300'
+              }`}
+              onClick={() => click('white')}>
+              <div
+                className={
+                  clock.current === 'black' ? 'rotate-180 md:rotate-0' : ''
+                }>
+                {format(clock.milliseconds.white)}
+              </div>
+            </button>
 
             <button
-              className="btn btn-primary mt-2 font-mono tracking-widest"
-              onClick={(e) => {
-                e.preventDefault();
-                setShowModal(false);
-              }}>
-              START
+              className={`flex flex-1 items-center justify-center rounded-2xl p-6 text-6xl font-black tabular-nums transition-all duration-300 ${
+                clock.timeout === 'black'
+                  ? 'bg-error text-error-content scale-[0.98]'
+                  : clock.current === 'black'
+                    ? 'bg-primary text-primary-content shadow-primary scale-[1.02] shadow-[0_0_40px_-10px_rgba(0,0,0,0.3)]'
+                    : 'bg-base-200 hover:bg-base-300'
+              }`}
+              onClick={() => click('black')}>
+              <div
+                className={
+                  clock.current === 'white' ? 'rotate-180 md:rotate-0' : ''
+                }>
+                {format(clock.milliseconds.black)}
+              </div>
             </button>
           </div>
-        ) : (
-          <div className="bg-base-100 flex h-full flex-col">
-            {/* Header */}
-            <div className="border-base-300 flex items-center justify-between border-b p-4">
-              <button
-                className="btn btn-ghost btn-sm btn-square"
-                onClick={() => {
+
+          <div className="border-base-300 flex justify-center gap-4 border-t p-4">
+            <button
+              className="btn btn-circle btn-lg shadow-sm"
+              onClick={() => {
+                if (clock.timeout) {
+                  reset();
+                  return;
+                }
+                if (clock.running) {
                   pause();
-                  setShowModal(true);
-                }}>
-                <GearIcon />
-              </button>
-              <div className="font-mono text-xs font-bold tracking-widest uppercase opacity-50">
-                Move {clock.moves}
-              </div>
-              <button
-                onClick={onClose}
-                className="btn btn-ghost btn-xs btn-square text-base">
-                ✕
-              </button>
-            </div>
-
-            {/* Times */}
-            <div className="flex flex-1 flex-col gap-4 p-4 md:flex-row">
-              <button
-                className={`flex flex-1 items-center justify-center rounded-2xl p-6 text-6xl font-black tabular-nums transition-all duration-300 ${
-                  clock.timeout === 'white'
-                    ? 'bg-error text-error-content scale-[0.98]'
-                    : clock.current === 'white'
-                      ? 'bg-secondary text-secondary-content shadow-secondary scale-[1.02] shadow-[0_0_40px_-10px_rgba(0,0,0,0.3)]'
-                      : 'bg-base-200 hover:bg-base-300'
-                }`}
-                onClick={() => click('white')}>
-                <div
-                  className={
-                    clock.current === 'black' ? 'rotate-180 md:rotate-0' : ''
-                  }>
-                  {format(clock.milliseconds.white)}
-                </div>
-              </button>
-
-              <button
-                className={`flex flex-1 items-center justify-center rounded-2xl p-6 text-6xl font-black tabular-nums transition-all duration-300 ${
-                  clock.timeout === 'black'
-                    ? 'bg-error text-error-content scale-[0.98]'
-                    : clock.current === 'black'
-                      ? 'bg-primary text-primary-content shadow-primary scale-[1.02] shadow-[0_0_40px_-10px_rgba(0,0,0,0.3)]'
-                      : 'bg-base-200 hover:bg-base-300'
-                }`}
-                onClick={() => click('black')}>
-                <div
-                  className={
-                    clock.current === 'white' ? 'rotate-180 md:rotate-0' : ''
-                  }>
-                  {format(clock.milliseconds.black)}
-                </div>
-              </button>
-            </div>
-
-            {/* Bottom Controls */}
-            <div className="border-base-300 flex justify-center gap-4 border-t p-4">
-              <button
-                className="btn btn-circle btn-lg shadow-sm"
-                onClick={() => {
-                  if (clock.timeout) {
-                    reset();
-                    return;
-                  }
-                  if (clock.running) {
-                    pause();
-                    return;
-                  }
-                  if (!clock.running && clock.current !== '') {
-                    click(clock.current === 'white' ? 'black' : 'white');
-                  }
-                }}>
-                {clock.timeout ? (
-                  <ResetIcon />
-                ) : clock.running ? (
-                  <PauseIcon />
-                ) : (
-                  <PlayIcon />
-                )}
-              </button>
-
-              <button
-                className="btn btn-circle btn-lg shadow-sm"
-                onClick={reset}>
+                  return;
+                }
+                if (!clock.running && clock.current !== '') {
+                  click(clock.current === 'white' ? 'black' : 'white');
+                }
+              }}>
+              {clock.timeout ? (
                 <ResetIcon />
-              </button>
+              ) : clock.running ? (
+                <PauseIcon />
+              ) : (
+                <PlayIcon />
+              )}
+            </button>
 
-              <button
-                className="btn btn-circle btn-lg shadow-sm"
-                onClick={exportPGN}>
-                <DownloadIcon />
-              </button>
-            </div>
+            <button className="btn btn-circle btn-lg shadow-sm" onClick={reset}>
+              <ResetIcon />
+            </button>
+
+            <button
+              className="btn btn-circle btn-lg shadow-sm"
+              onClick={exportPGN}>
+              <DownloadIcon />
+            </button>
           </div>
-        )}
-      </div>
-      <form method="dialog" className="modal-backdrop">
-        <button onClick={onClose}>close</button>
-      </form>
-    </dialog>
+        </div>
+      )}
+    </ModalWrapper>
   );
 };

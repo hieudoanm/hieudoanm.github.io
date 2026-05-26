@@ -1,3 +1,4 @@
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 import { FC, useMemo, useState } from 'react';
 
 /* =======================
@@ -172,197 +173,183 @@ export const TaxModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   }, [income, dependents, period, insuranceEnabled, salaryMode]);
 
   return (
-    <dialog
-      className="modal modal-open"
-      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
-      <div className="modal-box w-full max-w-sm">
+    <ModalWrapper onClose={onClose} title="Tính Thuế TNCN">
+      <div role="tablist" className="tabs tabs-boxed mb-4 w-full">
         <button
-          onClick={onClose}
-          className="btn btn-sm btn-circle btn-ghost absolute top-2 right-2">
-          ✕
+          role="tab"
+          className={`tab w-[50%] ${activeTab === 'input' ? 'tab-active' : ''}`}
+          onClick={() => setActiveTab('input')}>
+          Input
         </button>
-
-        <h3 className="mb-4 text-center text-lg font-bold">Tính Thuế TNCN</h3>
-
-        <div role="tablist" className="tabs tabs-boxed mb-4 w-full">
-          <button
-            role="tab"
-            className={`tab w-[50%] ${activeTab === 'input' ? 'tab-active' : ''}`}
-            onClick={() => setActiveTab('input')}>
-            Input
-          </button>
-          <button
-            role="tab"
-            className={`tab w-[50%] ${activeTab === 'results' ? 'tab-active' : ''}`}
-            onClick={() => setActiveTab('results')}>
-            Results
-          </button>
-        </div>
-
-        {activeTab === 'input' && (
-          <div className="space-y-3">
-            <div className="form-control">
-              <label className="label mb-1 p-0">
-                <span className="label-text text-xs font-medium opacity-70">
-                  Kỳ tính thuế
-                </span>
-              </label>
-              <select
-                className="select select-bordered select-sm w-full"
-                value={period}
-                onChange={(e) => setPeriod(e.target.value as Period)}>
-                <option value="monthly">📅 Tháng</option>
-                <option value="annual">🗓️ Năm</option>
-              </select>
-            </div>
-
-            <div className="flex justify-center">
-              <button
-                className="btn btn-primary btn-sm flex w-full items-center gap-2"
-                onClick={() =>
-                  setSalaryMode((m) => (m === 'gross' ? 'net' : 'gross'))
-                }>
-                {salaryMode === 'gross' ? (
-                  <span>Gross → Net</span>
-                ) : (
-                  <span>Net → Gross</span>
-                )}
-              </button>
-            </div>
-
-            <div className="form-control">
-              <label className="label mb-1 p-0">
-                <span className="label-text text-xs font-medium opacity-70">
-                  {salaryMode === 'gross'
-                    ? '💼 Thu nhập gộp (Gross)'
-                    : '💰 Thu nhập thực lĩnh (Net)'}
-                </span>
-              </label>
-              <input
-                type="number"
-                className="input input-sm input-bordered w-full"
-                value={income}
-                onChange={(e) => setIncome(+e.target.value)}
-              />
-            </div>
-
-            <div className="form-control">
-              <label className="label mb-1 p-0">
-                <span className="label-text text-xs font-medium opacity-70">
-                  👨‍👩‍👧 Người phụ thuộc
-                </span>
-              </label>
-              <input
-                type="number"
-                className="input input-sm input-bordered w-full"
-                value={dependents}
-                onChange={(e) => setDependents(+e.target.value)}
-              />
-            </div>
-
-            <div className="form-control">
-              <label className="label cursor-pointer p-0">
-                <span className="label-text text-xs font-medium opacity-70">
-                  🛡️ Tính bảo hiểm
-                </span>
-                <input
-                  type="checkbox"
-                  className="toggle toggle-primary toggle-sm"
-                  checked={insuranceEnabled}
-                  onChange={() => setInsuranceEnabled((v) => !v)}
-                />
-              </label>
-            </div>
-          </div>
-        )}
-
-        {activeTab === 'results' && (
-          <div className="space-y-4">
-            {/* Deductions */}
-            <div className="bg-base-200 rounded-xl p-3 text-sm">
-              <h4 className="mb-2 font-semibold">🧾 Khấu trừ</h4>
-              <div className="space-y-1 text-xs">
-                <div className="flex justify-between">
-                  <span className="opacity-70">👤 Cá nhân:</span>
-                  <span>{data.personalDeduction.toLocaleString()} VND</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="opacity-70">👨‍👩‍👧 Phụ thuộc:</span>
-                  <span>{data.dependentDeduction.toLocaleString()} VND</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="opacity-70">💼 Bảo hiểm NLĐ:</span>
-                  <span>{data.employeeInsurance.toLocaleString()} VND</span>
-                </div>
-                <div className="divider my-1 h-1" />
-                <div className="flex justify-between font-bold">
-                  <span>Tổng:</span>
-                  <span>{data.totalDeductions.toLocaleString()} VND</span>
-                </div>
-              </div>
-              {insuranceEnabled && data.insuranceBase < data.grossMonthly && (
-                <p className="text-warning mt-2 text-xs">
-                  ⚠ Áp dụng trần bảo hiểm
-                </p>
-              )}
-            </div>
-
-            {/* Results */}
-            <div className="bg-base-200 rounded-xl p-3 text-sm">
-              <div className="space-y-1">
-                <div className="flex justify-between text-xs">
-                  <span className="opacity-70">🧾 Thu nhập chịu thuế:</span>
-                  <span>{data.taxableIncome.toLocaleString()} VND</span>
-                </div>
-                <div className="flex justify-between text-xs">
-                  <span className="opacity-70">📉 Thuế hiệu dụng:</span>
-                  <span>{(data.effectiveTaxRate * 100).toFixed(2)}%</span>
-                </div>
-                <div className="divider my-1 h-1" />
-                <div className="text-primary flex justify-between font-bold">
-                  <span>💰 Thực lĩnh:</span>
-                  <span>{data.netMonthly.toLocaleString()} VND</span>
-                </div>
-                <div className="flex justify-between text-[10px] opacity-70">
-                  <span>Tổng chi phí DN:</span>
-                  <span>{data.totalLaborCost.toLocaleString()} VND</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Breakdown */}
-            {data.breakdown.length > 0 && (
-              <div className="bg-base-200 rounded-xl p-3">
-                <h4 className="mb-2 text-xs font-semibold">🧮 Chi tiết thuế</h4>
-                <table className="table-sm table w-full text-[10px]">
-                  <thead>
-                    <tr>
-                      <th className="px-0">Thuế suất</th>
-                      <th className="px-0 text-right">Chịu thuế</th>
-                      <th className="px-0 text-right">Thuế</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {data.breakdown.map((b, i) => (
-                      <tr key={i}>
-                        <td className="px-0">{b.rate * 100}%</td>
-                        <td className="px-0 text-right">
-                          {b.taxable.toLocaleString()}
-                        </td>
-                        <td className="px-0 text-right">
-                          {b.tax.toLocaleString()}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            )}
-          </div>
-        )}
+        <button
+          role="tab"
+          className={`tab w-[50%] ${activeTab === 'results' ? 'tab-active' : ''}`}
+          onClick={() => setActiveTab('results')}>
+          Results
+        </button>
       </div>
 
-      <div className="modal-backdrop" onClick={onClose} />
-    </dialog>
+      {activeTab === 'input' && (
+        <div className="space-y-3">
+          <div className="form-control">
+            <label className="label mb-1 p-0">
+              <span className="label-text text-xs font-medium opacity-70">
+                Kỳ tính thuế
+              </span>
+            </label>
+            <select
+              className="select select-bordered select-sm w-full"
+              value={period}
+              onChange={(e) => setPeriod(e.target.value as Period)}>
+              <option value="monthly">📅 Tháng</option>
+              <option value="annual">🗓️ Năm</option>
+            </select>
+          </div>
+
+          <div className="flex justify-center">
+            <button
+              className="btn btn-primary btn-sm flex w-full items-center gap-2"
+              onClick={() =>
+                setSalaryMode((m) => (m === 'gross' ? 'net' : 'gross'))
+              }>
+              {salaryMode === 'gross' ? (
+                <span>Gross → Net</span>
+              ) : (
+                <span>Net → Gross</span>
+              )}
+            </button>
+          </div>
+
+          <div className="form-control">
+            <label className="label mb-1 p-0">
+              <span className="label-text text-xs font-medium opacity-70">
+                {salaryMode === 'gross'
+                  ? '💼 Thu nhập gộp (Gross)'
+                  : '💰 Thu nhập thực lĩnh (Net)'}
+              </span>
+            </label>
+            <input
+              type="number"
+              className="input input-sm input-bordered w-full"
+              value={income}
+              onChange={(e) => setIncome(+e.target.value)}
+            />
+          </div>
+
+          <div className="form-control">
+            <label className="label mb-1 p-0">
+              <span className="label-text text-xs font-medium opacity-70">
+                👨‍👩‍👧 Người phụ thuộc
+              </span>
+            </label>
+            <input
+              type="number"
+              className="input input-sm input-bordered w-full"
+              value={dependents}
+              onChange={(e) => setDependents(+e.target.value)}
+            />
+          </div>
+
+          <div className="form-control">
+            <label className="label cursor-pointer p-0">
+              <span className="label-text text-xs font-medium opacity-70">
+                🛡️ Tính bảo hiểm
+              </span>
+              <input
+                type="checkbox"
+                className="toggle toggle-primary toggle-sm"
+                checked={insuranceEnabled}
+                onChange={() => setInsuranceEnabled((v) => !v)}
+              />
+            </label>
+          </div>
+        </div>
+      )}
+
+      {activeTab === 'results' && (
+        <div className="space-y-4">
+          {/* Deductions */}
+          <div className="bg-base-200 rounded-xl p-3 text-sm">
+            <h4 className="mb-2 font-semibold">🧾 Khấu trừ</h4>
+            <div className="space-y-1 text-xs">
+              <div className="flex justify-between">
+                <span className="opacity-70">👤 Cá nhân:</span>
+                <span>{data.personalDeduction.toLocaleString()} VND</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="opacity-70">👨‍👩‍👧 Phụ thuộc:</span>
+                <span>{data.dependentDeduction.toLocaleString()} VND</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="opacity-70">💼 Bảo hiểm NLĐ:</span>
+                <span>{data.employeeInsurance.toLocaleString()} VND</span>
+              </div>
+              <div className="divider my-1 h-1" />
+              <div className="flex justify-between font-bold">
+                <span>Tổng:</span>
+                <span>{data.totalDeductions.toLocaleString()} VND</span>
+              </div>
+            </div>
+            {insuranceEnabled && data.insuranceBase < data.grossMonthly && (
+              <p className="text-warning mt-2 text-xs">
+                ⚠ Áp dụng trần bảo hiểm
+              </p>
+            )}
+          </div>
+
+          {/* Results */}
+          <div className="bg-base-200 rounded-xl p-3 text-sm">
+            <div className="space-y-1">
+              <div className="flex justify-between text-xs">
+                <span className="opacity-70">🧾 Thu nhập chịu thuế:</span>
+                <span>{data.taxableIncome.toLocaleString()} VND</span>
+              </div>
+              <div className="flex justify-between text-xs">
+                <span className="opacity-70">📉 Thuế hiệu dụng:</span>
+                <span>{(data.effectiveTaxRate * 100).toFixed(2)}%</span>
+              </div>
+              <div className="divider my-1 h-1" />
+              <div className="text-primary flex justify-between font-bold">
+                <span>💰 Thực lĩnh:</span>
+                <span>{data.netMonthly.toLocaleString()} VND</span>
+              </div>
+              <div className="flex justify-between text-[10px] opacity-70">
+                <span>Tổng chi phí DN:</span>
+                <span>{data.totalLaborCost.toLocaleString()} VND</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Breakdown */}
+          {data.breakdown.length > 0 && (
+            <div className="bg-base-200 rounded-xl p-3">
+              <h4 className="mb-2 text-xs font-semibold">🧮 Chi tiết thuế</h4>
+              <table className="table-sm table w-full text-[10px]">
+                <thead>
+                  <tr>
+                    <th className="px-0">Thuế suất</th>
+                    <th className="px-0 text-right">Chịu thuế</th>
+                    <th className="px-0 text-right">Thuế</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {data.breakdown.map((b, i) => (
+                    <tr key={i}>
+                      <td className="px-0">{b.rate * 100}%</td>
+                      <td className="px-0 text-right">
+                        {b.taxable.toLocaleString()}
+                      </td>
+                      <td className="px-0 text-right">
+                        {b.tax.toLocaleString()}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </div>
+      )}
+    </ModalWrapper>
   );
 };

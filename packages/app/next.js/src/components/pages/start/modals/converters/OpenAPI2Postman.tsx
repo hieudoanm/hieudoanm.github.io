@@ -1,4 +1,5 @@
 import { FC, useState, useCallback, useEffect } from 'react';
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 type JsonValue = string | number | boolean | null | JsonValue[] | JsonObject;
@@ -516,148 +517,119 @@ export const OpenAPI2Postman: FC<{ onClose: () => void }> = ({ onClose }) => {
   };
 
   return (
-    <dialog
-      open
-      className="modal modal-open"
-      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
-      <div
-        className="card bg-base-100 border-base-300 flex h-[90vh] w-full max-w-5xl flex-col border shadow-2xl"
-        z-10>
-        <div className="card-body flex h-full flex-col gap-5 overflow-hidden p-6">
-          <div className="flex shrink-0 items-start justify-between">
-            <div>
-              <h2 className="text-lg font-black tracking-tight">
-                OpenAPI to Postman
-              </h2>
-              <p className="text-base-content/40 mt-0.5 font-mono text-[10px] tracking-widest uppercase">
-                Converts automatically as you type
-              </p>
-            </div>
-            <div className="flex items-center gap-2">
-              <button
-                className="btn btn-ghost btn-xs text-base-content/50"
-                onClick={clearInput}>
-                🗑️ Clear
-              </button>
-              <button
-                onClick={onClose}
-                className="btn btn-ghost btn-xs btn-square text-base">
-                ✕
-              </button>
-            </div>
-          </div>
+    <ModalWrapper
+      onClose={onClose}
+      title="OpenAPI to Postman"
+      subtitle="Converts automatically as you type"
+      size="max-w-5xl"
+      fullHeight>
+      <button
+        className="btn btn-ghost btn-xs text-base-content/50"
+        onClick={clearInput}>
+        🗑️ Clear
+      </button>
 
-          <div className="tabs tabs-boxed bg-base-200 border-base-300 mb-2 w-full self-center border sm:w-auto">
-            <button
-              className={`tab font-mono text-[10px] tracking-wider uppercase ${activeTab === 'openapi' ? 'tab-active' : ''}`}
-              onClick={() => setActiveTab('openapi')}>
-              OpenAPI Input
-            </button>
-            <button
-              className={`tab font-mono text-[10px] tracking-wider uppercase ${activeTab === 'postman' ? 'tab-active' : ''}`}
-              onClick={() => setActiveTab('postman')}>
-              Postman Output
-            </button>
-          </div>
-
-          <div className="flex min-h-0 grow overflow-hidden">
-            {activeTab === 'openapi' && (
-              <div className="bg-base-200 border-base-300 flex w-full flex-col rounded-xl border">
-                <div className="border-base-300 flex shrink-0 items-center justify-between border-b px-4 py-2">
-                  <div className="flex items-center gap-2">
-                    <span className="badge badge-outline badge-sm text-primary border-primary/30 font-mono text-[10px] tracking-wider uppercase">
-                      OpenAPI
-                    </span>
-                    <span className="text-base-content/40 font-mono text-[10px] tracking-wider uppercase">
-                      JSON/YAML
-                    </span>
-                  </div>
-                  <span className="text-base-content/30 font-mono text-[10px] tracking-wider uppercase">
-                    {lineCount(input)} lines
-                  </span>
-                </div>
-                <div className="relative flex min-h-0 flex-1 flex-col">
-                  <textarea
-                    className="textarea bg-base-100 text-base-content w-full flex-1 resize-none rounded-none rounded-b-xl border-0 p-4 font-mono text-xs leading-relaxed focus:outline-none"
-                    placeholder="Paste your OpenAPI 3.x spec here (JSON or YAML)..."
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
-                    spellCheck={false}
-                  />
-                </div>
-              </div>
-            )}
-
-            {activeTab === 'postman' && (
-              <div className="bg-base-200 border-base-300 flex w-full flex-col rounded-xl border">
-                <div className="border-base-300 flex shrink-0 items-center justify-between border-b px-4 py-2">
-                  <div className="flex items-center gap-2">
-                    <span className="badge badge-outline badge-sm text-warning border-warning/30 font-mono text-[10px] tracking-wider uppercase">
-                      Postman
-                    </span>
-                    <span className="text-base-content/40 font-mono text-[10px] tracking-wider uppercase">
-                      Collection v2.1
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    {output && (
-                      <>
-                        <span className="text-base-content/30 font-mono text-[10px] tracking-wider uppercase">
-                          {lineCount(output)} lines
-                        </span>
-                        <button
-                          className="btn btn-ghost btn-xs gap-1 font-mono text-[10px] uppercase"
-                          onClick={copyOutput}>
-                          {copied ? '✅ Copied' : '📋 Copy'}
-                        </button>
-                        <button
-                          className="btn btn-ghost btn-xs gap-1 font-mono text-[10px] uppercase"
-                          onClick={downloadOutput}>
-                          💾 Download
-                        </button>
-                      </>
-                    )}
-                  </div>
-                </div>
-
-                <div className="relative min-h-0 flex-1">
-                  {error && (
-                    <div className="alert alert-error m-4 rounded-lg text-sm">
-                      <span>⚠️ {error}</span>
-                    </div>
-                  )}
-
-                  {!output && !error && (
-                    <div className="text-base-content/25 flex h-full flex-col items-center justify-center gap-3">
-                      <span className="text-5xl">📄</span>
-                      <p className="text-sm">
-                        Start typing to generate your Postman collection
-                      </p>
-                    </div>
-                  )}
-
-                  {output && (
-                    <textarea
-                      readOnly
-                      className="textarea bg-base-100 text-base-content h-full w-full resize-none rounded-none rounded-b-xl border-0 p-4 font-mono text-xs leading-relaxed focus:outline-none"
-                      value={output}
-                      spellCheck={false}
-                    />
-                  )}
-                </div>
-              </div>
-            )}
-          </div>
-          <div className="mt-2 shrink-0">
-            <p className="text-base-content/20 text-center font-mono text-[10px] tracking-widest uppercase">
-              Click outside to close · Supports OpenAPI 3.x (JSON & YAML)
-            </p>
-          </div>
-        </div>
+      <div className="tabs tabs-boxed bg-base-200 border-base-300 w-full self-center border sm:w-auto">
+        <button
+          className={`tab font-mono text-[10px] tracking-wider uppercase ${activeTab === 'openapi' ? 'tab-active' : ''}`}
+          onClick={() => setActiveTab('openapi')}>
+          OpenAPI Input
+        </button>
+        <button
+          className={`tab font-mono text-[10px] tracking-wider uppercase ${activeTab === 'postman' ? 'tab-active' : ''}`}
+          onClick={() => setActiveTab('postman')}>
+          Postman Output
+        </button>
       </div>
-      <form method="dialog" className="modal-backdrop">
-        <button onClick={onClose}>close</button>
-      </form>
-    </dialog>
+
+      <div className="flex min-h-0 grow overflow-hidden">
+        {activeTab === 'openapi' && (
+          <div className="bg-base-200 border-base-300 flex w-full flex-col rounded-xl border">
+            <div className="border-base-300 flex shrink-0 items-center justify-between border-b px-4 py-2">
+              <div className="flex items-center gap-2">
+                <span className="badge badge-outline badge-sm text-primary border-primary/30 font-mono text-[10px] tracking-wider uppercase">
+                  OpenAPI
+                </span>
+                <span className="text-base-content/40 font-mono text-[10px] tracking-wider uppercase">
+                  JSON/YAML
+                </span>
+              </div>
+              <span className="text-base-content/30 font-mono text-[10px] tracking-wider uppercase">
+                {lineCount(input)} lines
+              </span>
+            </div>
+            <div className="relative flex min-h-0 flex-1 flex-col">
+              <textarea
+                className="textarea bg-base-100 text-base-content w-full flex-1 resize-none rounded-none rounded-b-xl border-0 p-4 font-mono text-xs leading-relaxed focus:outline-none"
+                placeholder="Paste your OpenAPI 3.x spec here (JSON or YAML)..."
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                spellCheck={false}
+              />
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'postman' && (
+          <div className="bg-base-200 border-base-300 flex w-full flex-col rounded-xl border">
+            <div className="border-base-300 flex shrink-0 items-center justify-between border-b px-4 py-2">
+              <div className="flex items-center gap-2">
+                <span className="badge badge-outline badge-sm text-warning border-warning/30 font-mono text-[10px] tracking-wider uppercase">
+                  Postman
+                </span>
+                <span className="text-base-content/40 font-mono text-[10px] tracking-wider uppercase">
+                  Collection v2.1
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                {output && (
+                  <>
+                    <span className="text-base-content/30 font-mono text-[10px] tracking-wider uppercase">
+                      {lineCount(output)} lines
+                    </span>
+                    <button
+                      className="btn btn-ghost btn-xs gap-1 font-mono text-[10px] uppercase"
+                      onClick={copyOutput}>
+                      {copied ? '✅ Copied' : '📋 Copy'}
+                    </button>
+                    <button
+                      className="btn btn-ghost btn-xs gap-1 font-mono text-[10px] uppercase"
+                      onClick={downloadOutput}>
+                      💾 Download
+                    </button>
+                  </>
+                )}
+              </div>
+            </div>
+
+            <div className="relative min-h-0 flex-1">
+              {error && (
+                <div className="alert alert-error m-4 rounded-lg text-sm">
+                  <span>⚠️ {error}</span>
+                </div>
+              )}
+
+              {!output && !error && (
+                <div className="text-base-content/25 flex h-full flex-col items-center justify-center gap-3">
+                  <span className="text-5xl">📄</span>
+                  <p className="text-sm">
+                    Start typing to generate your Postman collection
+                  </p>
+                </div>
+              )}
+
+              {output && (
+                <textarea
+                  readOnly
+                  className="textarea bg-base-100 text-base-content h-full w-full resize-none rounded-none rounded-b-xl border-0 p-4 font-mono text-xs leading-relaxed focus:outline-none"
+                  value={output}
+                  spellCheck={false}
+                />
+              )}
+            </div>
+          </div>
+        )}
+      </div>
+    </ModalWrapper>
   );
 };

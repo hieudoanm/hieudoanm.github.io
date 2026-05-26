@@ -1,6 +1,7 @@
 // components/modals/EmojisModal.tsx
 import { emojis } from '@hieudoanm/data/emojis';
 import { FC, useMemo, useState } from 'react';
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 
 type EmojiMap = Record<string, string>;
 
@@ -30,85 +31,68 @@ export const EmojisModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   };
 
   return (
-    <dialog
-      open
-      className="modal modal-open"
-      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
-      <div className="modal-box flex max-h-[90vh] w-full max-w-3xl flex-col gap-0 overflow-hidden p-0">
-        {/* ── Header ── */}
-        <div className="border-base-300 flex shrink-0 items-center justify-between border-b px-4 py-3">
-          <div>
-            <h3 className="text-sm font-bold">Emoji Explorer</h3>
-            <p className="text-base-content/40 text-[11px]">
-              {filtered.length} emoji{filtered.length !== 1 ? 's' : ''}
-            </p>
-          </div>
-          <button className="btn btn-ghost btn-sm btn-circle" onClick={onClose}>
-            ✕
-          </button>
-        </div>
+    <ModalWrapper onClose={onClose} title="Emoji Explorer" size="max-w-3xl">
+      <p className="text-base-content/40 -mt-2 mb-1 text-[11px]">
+        {filtered.length} emoji{filtered.length !== 1 ? 's' : ''}
+      </p>
 
-        {/* ── Search ── */}
-        <div className="border-base-300 shrink-0 border-b px-4 py-3">
-          <input
-            type="text"
-            placeholder="Search emoji…"
-            className="input input-bordered input-sm w-full"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            autoFocus
-          />
-        </div>
-
-        {/* ── Grid ── */}
-        <div className="overflow-y-auto p-3">
-          {filtered.length === 0 ? (
-            <p className="text-base-content/25 py-12 text-center text-sm">
-              No emojis found.
-            </p>
-          ) : (
-            <div
-              className="grid gap-1"
-              style={{
-                gridTemplateColumns: 'repeat(auto-fill, minmax(56px, 1fr))',
-              }}>
-              {filtered.map(([key, value]) => {
-                const isUnicode = !value.startsWith('http');
-                const isCopied = copied === key;
-                return (
-                  <button
-                    key={key}
-                    title={`:${key}:`}
-                    onClick={() => handleCopy(value, key)}
-                    className={`hover:bg-base-300 flex flex-col items-center gap-1 rounded-lg p-2 text-center transition-colors ${
-                      isCopied ? 'bg-success/10' : ''
-                    }`}>
-                    {/* Emoji */}
-                    <span className="text-2xl leading-none">
-                      {isUnicode ? (
-                        value
-                      ) : (
-                        <img
-                          src={`${IMAGES_BASE}/${key}.png`}
-                          alt={key}
-                          className="h-6 w-6"
-                        />
-                      )}
-                    </span>
-                    {/* Copied flash */}
-                    {isCopied && (
-                      <span className="text-success text-[9px] font-bold">
-                        ✓
-                      </span>
-                    )}
-                  </button>
-                );
-              })}
-            </div>
-          )}
-        </div>
+      {/* ── Search ── */}
+      <div className="border-base-300 -mx-6 shrink-0 border-b px-4 py-3">
+        <input
+          type="text"
+          placeholder="Search emoji…"
+          className="input input-bordered input-sm w-full"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          autoFocus
+        />
       </div>
-      <div className="modal-backdrop" onClick={onClose} />
-    </dialog>
+
+      {/* ── Grid ── */}
+      <div className="-mx-6 overflow-y-auto px-4 py-3">
+        {filtered.length === 0 ? (
+          <p className="text-base-content/25 py-12 text-center text-sm">
+            No emojis found.
+          </p>
+        ) : (
+          <div
+            className="grid gap-1"
+            style={{
+              gridTemplateColumns: 'repeat(auto-fill, minmax(56px, 1fr))',
+            }}>
+            {filtered.map(([key, value]) => {
+              const isUnicode = !value.startsWith('http');
+              const isCopied = copied === key;
+              return (
+                <button
+                  key={key}
+                  title={`:${key}:`}
+                  onClick={() => handleCopy(value, key)}
+                  className={`hover:bg-base-300 flex flex-col items-center gap-1 rounded-lg p-2 text-center transition-colors ${
+                    isCopied ? 'bg-success/10' : ''
+                  }`}>
+                  {/* Emoji */}
+                  <span className="text-2xl leading-none">
+                    {isUnicode ? (
+                      value
+                    ) : (
+                      <img
+                        src={`${IMAGES_BASE}/${key}.png`}
+                        alt={key}
+                        className="h-6 w-6"
+                      />
+                    )}
+                  </span>
+                  {/* Copied flash */}
+                  {isCopied && (
+                    <span className="text-success text-[9px] font-bold">✓</span>
+                  )}
+                </button>
+              );
+            })}
+          </div>
+        )}
+      </div>
+    </ModalWrapper>
   );
 };

@@ -1,4 +1,5 @@
 import { FC, useCallback, useEffect, useRef, useState } from 'react';
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 
 /* ============================= */
 /* Types & Constants */
@@ -185,38 +186,8 @@ export const CameraModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   };
 
   return (
-    <dialog
-      open
-      className="modal modal-open"
-      style={{ background: 'rgba(0,0,0,0.7)', backdropFilter: 'blur(8px)' }}>
-      <div className="modal-box flex w-full max-w-2xl flex-col gap-6 bg-neutral-900 text-white">
-        {/* Header */}
-        <div className="flex items-start justify-between">
-          <div className="flex items-center gap-3">
-            <div className="bg-primary text-primary-content flex h-8 w-8 items-center justify-center rounded-lg">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2">
-                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
-                <circle cx="12" cy="13" r="4" />
-              </svg>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold tracking-tight">Camera</h3>
-              <p className="text-sm text-white/50">Composition & Ratios</p>
-            </div>
-          </div>
-          <button
-            className="btn btn-ghost btn-sm btn-circle text-white/50 hover:text-white"
-            onClick={onClose}>
-            ✕
-          </button>
-        </div>
-
+    <ModalWrapper onClose={onClose} title="Camera" size="max-w-2xl" fullHeight>
+      <div className="flex flex-col gap-6 bg-neutral-900 p-4 text-white">
         {error ? (
           <div className="alert alert-error">
             <svg
@@ -324,7 +295,6 @@ export const CameraModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       </div>
 
       <canvas ref={canvasRef} className="hidden" />
-      <div className="modal-backdrop" onClick={onClose} />
-    </dialog>
+    </ModalWrapper>
   );
 };

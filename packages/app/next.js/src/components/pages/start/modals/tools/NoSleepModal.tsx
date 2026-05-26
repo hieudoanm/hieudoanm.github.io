@@ -1,4 +1,5 @@
 import { FC, useEffect, useRef, useState } from 'react';
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 
 interface TimeUnit {
   value: number;
@@ -77,58 +78,44 @@ export const NoSleepModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const visible = units.filter((u) => u.value > 0);
 
   return (
-    <dialog
-      open
-      className="modal modal-open"
-      style={{ background: 'rgba(0,0,0,0.8)', backdropFilter: 'blur(8px)' }}>
-      <div className="card bg-base-100 border-base-300 w-full max-w-2xl border shadow-2xl">
-        <div className="card-body items-center justify-center gap-12 py-16">
-          <button
-            onClick={onClose}
-            className="btn btn-ghost btn-sm btn-square absolute top-4 right-4">
-            ✕
-          </button>
+    <ModalWrapper onClose={onClose} title="No Sleep" size="max-w-2xl">
+      <div className="flex flex-col items-center justify-center gap-12 py-8">
+        <p
+          className="text-base-content/50 text-xs font-semibold tracking-[0.35em] uppercase"
+          style={{ fontFamily: "'DM Mono', monospace" }}>
+          Have not slept for
+        </p>
 
-          <p
-            className="text-base-content/50 text-xs font-semibold tracking-[0.35em] uppercase"
-            style={{ fontFamily: "'DM Mono', monospace" }}>
-            Have not slept for
-          </p>
-
-          <div className="flex flex-wrap items-end justify-center gap-x-8 gap-y-6">
-            {visible.length === 0 ? (
-              <div className="flex flex-col items-center gap-1">
+        <div className="flex flex-wrap items-end justify-center gap-x-8 gap-y-6">
+          {visible.length === 0 ? (
+            <div className="flex flex-col items-center gap-1">
+              <span className="text-primary text-6xl leading-none font-black tabular-nums md:text-8xl">
+                00
+              </span>
+              <span className="text-base-content/40 text-xs font-semibold tracking-[0.25em] uppercase">
+                seconds
+              </span>
+            </div>
+          ) : (
+            visible.map((u) => (
+              <div key={u.label} className="flex flex-col items-center gap-1">
                 <span className="text-primary text-6xl leading-none font-black tabular-nums md:text-8xl">
-                  00
+                  {u.value.toString().padStart(2, '0')}
                 </span>
                 <span className="text-base-content/40 text-xs font-semibold tracking-[0.25em] uppercase">
-                  seconds
+                  {u.label}
                 </span>
               </div>
-            ) : (
-              visible.map((u) => (
-                <div key={u.label} className="flex flex-col items-center gap-1">
-                  <span className="text-primary text-6xl leading-none font-black tabular-nums md:text-8xl">
-                    {u.value.toString().padStart(2, '0')}
-                  </span>
-                  <span className="text-base-content/40 text-xs font-semibold tracking-[0.25em] uppercase">
-                    {u.label}
-                  </span>
-                </div>
-              ))
-            )}
-          </div>
-
-          <div className="bg-primary/30 h-px w-24" />
-
-          <p className="text-base-content/20 text-xs tracking-widest uppercase">
-            Screen kept awake
-          </p>
+            ))
+          )}
         </div>
+
+        <div className="bg-primary/30 h-px w-24" />
+
+        <p className="text-base-content/20 text-xs tracking-widest uppercase">
+          Screen kept awake
+        </p>
       </div>
-      <form method="dialog" className="modal-backdrop">
-        <button onClick={onClose}>close</button>
-      </form>
-    </dialog>
+    </ModalWrapper>
   );
 };

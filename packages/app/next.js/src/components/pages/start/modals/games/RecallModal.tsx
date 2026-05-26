@@ -1,4 +1,5 @@
 import { FC, useEffect, useRef, useState } from 'react';
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 
 type Phase = 'ready' | 'show' | 'input' | 'result';
 
@@ -136,22 +137,12 @@ export const RecallModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   };
 
   return (
-    <dialog
-      className="modal modal-open"
-      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
+    <ModalWrapper onClose={onClose} title="Memory Recall">
       <div
         ref={containerRef}
         tabIndex={0}
         onKeyDown={onKeyDown}
-        className="modal-box w-full max-w-sm outline-none">
-        <button
-          onClick={onClose}
-          className="btn btn-sm btn-circle btn-ghost absolute top-2 right-2">
-          ✕
-        </button>
-
-        <h3 className="mb-4 text-center text-lg font-bold">Memory Recall</h3>
-
+        className="outline-none">
         {/* Badges */}
         <div className="mb-4 flex justify-center gap-2">
           <span className="badge badge-secondary">Level {level}</span>
@@ -228,8 +219,6 @@ export const RecallModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           </div>
         )}
       </div>
-
-      <div className="modal-backdrop" onClick={onClose} />
-    </dialog>
+    </ModalWrapper>
   );
 };

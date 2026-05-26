@@ -4,133 +4,149 @@ exports[`ConverterModal should render 1`] = `
 <div>
   <dialog
     class="modal modal-open"
+    open=""
     style="background: rgba(0, 0, 0, 0.6);"
   >
     <div
-      class="modal-box w-full max-w-lg"
+      class="card bg-base-100 border-base-300 w-full max-w-lg border shadow-2xl"
     >
-      <button
-        class="btn btn-sm btn-circle btn-ghost absolute top-2 right-2"
-      >
-        ✕
-      </button>
-      <h3
-        class="mb-4 text-center text-lg font-bold"
-      >
-        Converter
-      </h3>
-      <p
-        class="mb-1 text-xs font-semibold uppercase opacity-40"
-      >
-        Math
-      </p>
       <div
-        class="tabs tabs-boxed mb-2"
-        role="tablist"
-      >
-        <a
-          class="tab tab-active"
-          role="tab"
-        >
-          Angle
-        </a>
-        <a
-          class="tab "
-          role="tab"
-        >
-          Base
-        </a>
-        <a
-          class="tab "
-          role="tab"
-        >
-          Roman
-        </a>
-        <a
-          class="tab "
-          role="tab"
-        >
-          Data
-        </a>
-      </div>
-      <p
-        class="mb-1 text-xs font-semibold uppercase opacity-40"
-      >
-        Physical
-      </p>
-      <div
-        class="tabs tabs-boxed mb-4"
-        role="tablist"
-      >
-        <a
-          class="tab "
-          role="tab"
-        >
-          Length
-        </a>
-        <a
-          class="tab "
-          role="tab"
-        >
-          Weight
-        </a>
-        <a
-          class="tab "
-          role="tab"
-        >
-          Temperature
-        </a>
-        <a
-          class="tab "
-          role="tab"
-        >
-          Time
-        </a>
-      </div>
-      <div
-        class="rounded-box bg-base-200 p-4"
+        class="card-body gap-5 p-6"
       >
         <div
-          class="card flex w-full max-w-sm flex-col gap-y-2 divide-y divide-white/10"
+          class="flex items-start justify-between"
+        >
+          <div>
+            <h2
+              class="text-lg font-black tracking-tight"
+            >
+              Converter
+            </h2>
+          </div>
+          <button
+            class="btn btn-ghost btn-xs btn-square text-base opacity-60 hover:opacity-100"
+          >
+            ✕
+          </button>
+        </div>
+        <p
+          class="mb-1 text-xs font-semibold uppercase opacity-40"
+        >
+          Math
+        </p>
+        <div
+          class="tabs tabs-boxed mb-2"
+          role="tablist"
+        >
+          <a
+            class="tab tab-active"
+            role="tab"
+          >
+            Angle
+          </a>
+          <a
+            class="tab "
+            role="tab"
+          >
+            Base
+          </a>
+          <a
+            class="tab "
+            role="tab"
+          >
+            Roman
+          </a>
+          <a
+            class="tab "
+            role="tab"
+          >
+            Data
+          </a>
+        </div>
+        <p
+          class="mb-1 text-xs font-semibold uppercase opacity-40"
+        >
+          Physical
+        </p>
+        <div
+          class="tabs tabs-boxed mb-4"
+          role="tablist"
+        >
+          <a
+            class="tab "
+            role="tab"
+          >
+            Length
+          </a>
+          <a
+            class="tab "
+            role="tab"
+          >
+            Weight
+          </a>
+          <a
+            class="tab "
+            role="tab"
+          >
+            Temperature
+          </a>
+          <a
+            class="tab "
+            role="tab"
+          >
+            Time
+          </a>
+        </div>
+        <div
+          class="rounded-box bg-base-200 p-4"
         >
           <div
-            class="flex items-center justify-center gap-x-2 px-4 py-2"
+            class="card flex w-full max-w-sm flex-col gap-y-2 divide-y divide-white/10"
           >
-            <span
-              class="capitalize"
+            <div
+              class="flex items-center justify-center gap-x-2 px-4 py-2"
             >
-              degrees
-            </span>
-            <input
-              class="grow text-right focus:outline-none"
-              id="degrees"
-              placeholder="degrees"
-              type="text"
-              value="0"
-            />
-          </div>
-          <div
-            class="flex items-center justify-center gap-x-2 px-4 py-2"
-          >
-            <span
-              class="capitalize"
+              <span
+                class="capitalize"
+              >
+                degrees
+              </span>
+              <input
+                class="grow text-right focus:outline-none"
+                id="degrees"
+                placeholder="degrees"
+                type="text"
+                value="0"
+              />
+            </div>
+            <div
+              class="flex items-center justify-center gap-x-2 px-4 py-2"
             >
-              radians
-            </span>
-            <input
-              class="grow text-right focus:outline-none"
-              id="radians"
-              placeholder="radians"
-              type="text"
-              value="0"
-            />
+              <span
+                class="capitalize"
+              >
+                radians
+              </span>
+              <input
+                class="grow text-right focus:outline-none"
+                id="radians"
+                placeholder="radians"
+                type="text"
+                value="0"
+              />
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div
+    <form
       class="modal-backdrop"
-    />
+      method="dialog"
+    >
+      <button>
+        close
+      </button>
+    </form>
   </dialog>
 </div>
 `;

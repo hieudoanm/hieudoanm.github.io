@@ -3,162 +3,182 @@
 exports[`TowersModal should render 1`] = `
 <div>
   <dialog
-    class="jsx-6a26d52748df6036 modal modal-open"
+    class="modal modal-open"
+    open=""
     style="background: rgba(0, 0, 0, 0.6);"
   >
     <div
-      class="jsx-6a26d52748df6036 modal-box w-full max-w-2xl outline-none"
-      tabindex="0"
+      class="card bg-base-100 border-base-300 w-full max-w-2xl border shadow-2xl"
     >
-      <button
-        class="jsx-6a26d52748df6036 btn btn-sm btn-circle btn-ghost absolute top-2 right-2"
-      >
-        ✕
-      </button>
-      <h3
-        class="jsx-6a26d52748df6036 mb-3 text-center text-lg font-bold"
-      >
-        Towers of Hanoi
-      </h3>
       <div
-        class="jsx-6a26d52748df6036 mb-3 flex flex-wrap items-center justify-between gap-3"
+        class="card-body gap-5 p-6"
       >
         <div
-          class="jsx-6a26d52748df6036 flex gap-4 text-sm"
+          class="flex items-start justify-between"
         >
-          <span
-            class="jsx-6a26d52748df6036"
-          >
-            Moves: 
-            <strong
-              class="jsx-6a26d52748df6036"
+          <div>
+            <h2
+              class="text-lg font-black tracking-tight"
             >
-              0
-            </strong>
-          </span>
-          <span
-            class="jsx-6a26d52748df6036"
+              Towers of Hanoi
+            </h2>
+          </div>
+          <button
+            class="btn btn-ghost btn-xs btn-square text-base opacity-60 hover:opacity-100"
           >
-            Optimal: 
-            <strong
-              class="jsx-6a26d52748df6036"
-            >
-              7
-            </strong>
-          </span>
+            ✕
+          </button>
         </div>
         <div
-          class="jsx-6a26d52748df6036 flex items-center gap-2 text-sm"
-        >
-          <span
-            class="jsx-6a26d52748df6036"
-          >
-            Disks
-          </span>
-          <input
-            class="jsx-6a26d52748df6036 range range-primary range-xs w-28"
-            max="7"
-            min="3"
-            type="range"
-            value="3"
-          />
-          <span
-            class="jsx-6a26d52748df6036 font-semibold"
-          >
-            3
-          </span>
-        </div>
-      </div>
-      <div
-        class="jsx-6a26d52748df6036 grid grid-cols-3 gap-3"
-      >
-        <div
-          class="jsx-6a26d52748df6036 relative flex h-48 cursor-pointer flex-col-reverse items-center transition-all "
+          class="jsx-6a26d52748df6036 outline-none"
+          tabindex="0"
         >
           <div
-            class="jsx-6a26d52748df6036 absolute bottom-2 h-full w-2 rounded transition-all bg-base-300"
-          />
-          <div
-            class="jsx-6a26d52748df6036 rounded-box relative mb-1.5 h-7 bg-gradient-to-r from-yellow-400 to-yellow-600 transition-transform "
-            style="width: 108px;"
+            class="jsx-6a26d52748df6036 mb-3 flex flex-wrap items-center justify-between gap-3"
           >
-            <span
-              class="jsx-6a26d52748df6036 absolute inset-0 flex items-center justify-center text-xs font-extrabold text-black"
+            <div
+              class="jsx-6a26d52748df6036 flex gap-4 text-sm"
             >
-              3
-            </span>
+              <span
+                class="jsx-6a26d52748df6036"
+              >
+                Moves: 
+                <strong
+                  class="jsx-6a26d52748df6036"
+                >
+                  0
+                </strong>
+              </span>
+              <span
+                class="jsx-6a26d52748df6036"
+              >
+                Optimal: 
+                <strong
+                  class="jsx-6a26d52748df6036"
+                >
+                  7
+                </strong>
+              </span>
+            </div>
+            <div
+              class="jsx-6a26d52748df6036 flex items-center gap-2 text-sm"
+            >
+              <span
+                class="jsx-6a26d52748df6036"
+              >
+                Disks
+              </span>
+              <input
+                class="jsx-6a26d52748df6036 range range-primary range-xs w-28"
+                max="7"
+                min="3"
+                type="range"
+                value="3"
+              />
+              <span
+                class="jsx-6a26d52748df6036 font-semibold"
+              >
+                3
+              </span>
+            </div>
           </div>
           <div
-            class="jsx-6a26d52748df6036 rounded-box relative mb-1.5 h-7 bg-gradient-to-r from-orange-400 to-orange-600 transition-transform "
-            style="width: 72px;"
+            class="jsx-6a26d52748df6036 grid grid-cols-3 gap-3"
           >
-            <span
-              class="jsx-6a26d52748df6036 absolute inset-0 flex items-center justify-center text-xs font-extrabold text-black"
+            <div
+              class="jsx-6a26d52748df6036 relative flex h-48 cursor-pointer flex-col-reverse items-center transition-all "
             >
-              2
-            </span>
+              <div
+                class="jsx-6a26d52748df6036 absolute bottom-2 h-full w-2 rounded transition-all bg-base-300"
+              />
+              <div
+                class="jsx-6a26d52748df6036 rounded-box relative mb-1.5 h-7 bg-gradient-to-r from-yellow-400 to-yellow-600 transition-transform "
+                style="width: 108px;"
+              >
+                <span
+                  class="jsx-6a26d52748df6036 absolute inset-0 flex items-center justify-center text-xs font-extrabold text-black"
+                >
+                  3
+                </span>
+              </div>
+              <div
+                class="jsx-6a26d52748df6036 rounded-box relative mb-1.5 h-7 bg-gradient-to-r from-orange-400 to-orange-600 transition-transform "
+                style="width: 72px;"
+              >
+                <span
+                  class="jsx-6a26d52748df6036 absolute inset-0 flex items-center justify-center text-xs font-extrabold text-black"
+                >
+                  2
+                </span>
+              </div>
+              <div
+                class="jsx-6a26d52748df6036 rounded-box relative mb-1.5 h-7 bg-gradient-to-r from-red-500 to-red-700 transition-transform "
+                style="width: 36px;"
+              >
+                <span
+                  class="jsx-6a26d52748df6036 absolute inset-0 flex items-center justify-center text-xs font-extrabold text-white"
+                >
+                  1
+                </span>
+              </div>
+            </div>
+            <div
+              class="jsx-6a26d52748df6036 relative flex h-48 cursor-pointer flex-col-reverse items-center transition-all "
+            >
+              <div
+                class="jsx-6a26d52748df6036 absolute bottom-2 h-full w-2 rounded transition-all bg-base-300"
+              />
+            </div>
+            <div
+              class="jsx-6a26d52748df6036 relative flex h-48 cursor-pointer flex-col-reverse items-center transition-all "
+            >
+              <div
+                class="jsx-6a26d52748df6036 absolute bottom-2 h-full w-2 rounded transition-all bg-base-300"
+              />
+            </div>
           </div>
           <div
-            class="jsx-6a26d52748df6036 rounded-box relative mb-1.5 h-7 bg-gradient-to-r from-red-500 to-red-700 transition-transform "
-            style="width: 36px;"
+            class="jsx-6a26d52748df6036 mt-3 flex flex-wrap justify-center gap-2"
           >
-            <span
-              class="jsx-6a26d52748df6036 absolute inset-0 flex items-center justify-center text-xs font-extrabold text-white"
+            <button
+              class="jsx-6a26d52748df6036 btn btn-sm"
+              disabled=""
             >
-              1
-            </span>
+              Undo
+            </button>
+            <button
+              class="jsx-6a26d52748df6036 btn btn-sm"
+              disabled=""
+            >
+              Redo
+            </button>
+            <button
+              class="jsx-6a26d52748df6036 btn btn-sm btn-secondary"
+            >
+              Auto Solve
+            </button>
+            <button
+              class="jsx-6a26d52748df6036 btn btn-sm btn-primary"
+            >
+              Reset
+            </button>
           </div>
-        </div>
-        <div
-          class="jsx-6a26d52748df6036 relative flex h-48 cursor-pointer flex-col-reverse items-center transition-all "
-        >
-          <div
-            class="jsx-6a26d52748df6036 absolute bottom-2 h-full w-2 rounded transition-all bg-base-300"
-          />
-        </div>
-        <div
-          class="jsx-6a26d52748df6036 relative flex h-48 cursor-pointer flex-col-reverse items-center transition-all "
-        >
-          <div
-            class="jsx-6a26d52748df6036 absolute bottom-2 h-full w-2 rounded transition-all bg-base-300"
-          />
+          <p
+            class="jsx-6a26d52748df6036 mt-3 text-center text-xs opacity-40"
+          >
+            1 / 2 / 3 select tower · U undo · R redo · A auto solve · Esc close
+          </p>
         </div>
       </div>
-      <div
-        class="jsx-6a26d52748df6036 mt-3 flex flex-wrap justify-center gap-2"
-      >
-        <button
-          class="jsx-6a26d52748df6036 btn btn-sm"
-          disabled=""
-        >
-          Undo
-        </button>
-        <button
-          class="jsx-6a26d52748df6036 btn btn-sm"
-          disabled=""
-        >
-          Redo
-        </button>
-        <button
-          class="jsx-6a26d52748df6036 btn btn-sm btn-secondary"
-        >
-          Auto Solve
-        </button>
-        <button
-          class="jsx-6a26d52748df6036 btn btn-sm btn-primary"
-        >
-          Reset
-        </button>
-      </div>
-      <p
-        class="jsx-6a26d52748df6036 mt-3 text-center text-xs opacity-40"
-      >
-        1 / 2 / 3 select tower · U undo · R redo · A auto solve · Esc close
-      </p>
     </div>
-    <div
-      class="jsx-6a26d52748df6036 modal-backdrop"
-    />
+    <form
+      class="modal-backdrop"
+      method="dialog"
+    >
+      <button>
+        close
+      </button>
+    </form>
   </dialog>
 </div>
 `;

@@ -28,20 +28,20 @@ exports[`HouseModal should render 1`] = `
               Name → Badge
             </p>
           </div>
-          <div
-            class="flex items-center gap-2"
+          <button
+            class="btn btn-ghost btn-xs btn-square text-base opacity-60 hover:opacity-100"
           >
-            <button
-              class="btn btn-outline btn-xs font-mono tracking-widest"
-            >
-              Reset
-            </button>
-            <button
-              class="btn btn-ghost btn-xs btn-square text-base"
-            >
-              ✕
-            </button>
-          </div>
+            ✕
+          </button>
+        </div>
+        <div
+          class="flex items-center gap-2 mb-2"
+        >
+          <button
+            class="btn btn-outline btn-xs font-mono tracking-widest"
+          >
+            Reset
+          </button>
         </div>
         <input
           class="input input-bordered input-sm w-full font-mono tracking-widest"

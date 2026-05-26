@@ -1,5 +1,6 @@
 import { FC, useRef, useState } from 'react';
 import html2canvas from 'html2canvas-pro';
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 
 /* ------------------------------------------------------------------ */
 /* Data — inline minimal periodic table types                           */
@@ -235,87 +236,71 @@ export const BreakingBadModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   ) => setState((p) => ({ ...p, ...patch }));
 
   return (
-    <dialog
-      className="modal modal-open"
-      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
-      <div className="modal-box w-full max-w-2xl">
-        <button
-          onClick={onClose}
-          className="btn btn-sm btn-circle btn-ghost absolute top-2 right-2">
-          ✕
-        </button>
-
-        <h3 className="mb-4 text-center text-lg font-bold">
-          Breaking Bad Text
-        </h3>
-
-        {/* Presets */}
-        <div className="mb-4 flex flex-wrap gap-2">
-          {PRESETS.map((preset) => (
-            <button
-              key={preset}
-              className={`btn btn-xs ${name === preset ? 'btn-primary' : 'btn-outline'}`}
-              onClick={() => set({ name: preset })}>
-              {preset}
-            </button>
-          ))}
-        </div>
-
-        {/* Input */}
-        <input
-          placeholder="✨ Your Name"
-          className="input input-bordered mb-4 w-full"
-          value={name}
-          onChange={(e) => set({ name: e.target.value })}
-        />
-
-        {/* Toggles + alignment */}
-        <div className="mb-4 flex flex-wrap items-center gap-4">
-          <label className="label cursor-pointer justify-start gap-2">
-            <input
-              type="checkbox"
-              checked={isColored}
-              className="toggle toggle-primary toggle-sm"
-              onChange={(e) => set({ isColored: e.target.checked })}
-            />
-            Colored
-          </label>
-          <label className="label cursor-pointer justify-start gap-2">
-            <input
-              type="checkbox"
-              checked={isMultiline}
-              className="toggle toggle-primary toggle-sm"
-              onChange={(e) => set({ isMultiline: e.target.checked })}
-            />
-            Multiline
-          </label>
-          {isMultiline && (
-            <div className="join">
-              {(['left', 'center', 'right'] as Align[]).map((a) => (
-                <button
-                  key={a}
-                  type="button"
-                  className={`join-item btn btn-sm btn-soft ${align === a ? 'btn-primary' : ''}`}
-                  onClick={() => set({ align: a })}>
-                  {a.charAt(0).toUpperCase() + a.slice(1)}
-                </button>
-              ))}
-            </div>
-          )}
-        </div>
-
-        {/* Preview */}
-        <div className="bg-base-200 flex min-h-40 items-center justify-center overflow-auto rounded-xl p-4">
-          <Preview
-            align={align}
-            isColored={isColored}
-            isMultiline={isMultiline}
-            text={name}
-          />
-        </div>
+    <ModalWrapper onClose={onClose} title="Breaking Bad Text" size="max-w-2xl">
+      {/* Presets */}
+      <div className="mb-4 flex flex-wrap gap-2">
+        {PRESETS.map((preset) => (
+          <button
+            key={preset}
+            className={`btn btn-xs ${name === preset ? 'btn-primary' : 'btn-outline'}`}
+            onClick={() => set({ name: preset })}>
+            {preset}
+          </button>
+        ))}
       </div>
 
-      <div className="modal-backdrop" onClick={onClose} />
-    </dialog>
+      {/* Input */}
+      <input
+        placeholder="✨ Your Name"
+        className="input input-bordered mb-4 w-full"
+        value={name}
+        onChange={(e) => set({ name: e.target.value })}
+      />
+
+      {/* Toggles + alignment */}
+      <div className="mb-4 flex flex-wrap items-center gap-4">
+        <label className="label cursor-pointer justify-start gap-2">
+          <input
+            type="checkbox"
+            checked={isColored}
+            className="toggle toggle-primary toggle-sm"
+            onChange={(e) => set({ isColored: e.target.checked })}
+          />
+          Colored
+        </label>
+        <label className="label cursor-pointer justify-start gap-2">
+          <input
+            type="checkbox"
+            checked={isMultiline}
+            className="toggle toggle-primary toggle-sm"
+            onChange={(e) => set({ isMultiline: e.target.checked })}
+          />
+          Multiline
+        </label>
+        {isMultiline && (
+          <div className="join">
+            {(['left', 'center', 'right'] as Align[]).map((a) => (
+              <button
+                key={a}
+                type="button"
+                className={`join-item btn btn-sm btn-soft ${align === a ? 'btn-primary' : ''}`}
+                onClick={() => set({ align: a })}>
+                {a.charAt(0).toUpperCase() + a.slice(1)}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* Preview */}
+      <div className="bg-base-200 flex min-h-40 items-center justify-center overflow-auto rounded-xl p-4">
+        <Preview
+          align={align}
+          isColored={isColored}
+          isMultiline={isMultiline}
+          text={name}
+        />
+      </div>
+    </ModalWrapper>
   );
 };

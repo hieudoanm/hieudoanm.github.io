@@ -1,4 +1,5 @@
 import { FC, useCallback, useRef, useState } from 'react';
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 
@@ -207,246 +208,236 @@ export const SVGModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   };
 
   return (
-    <dialog
-      open
-      className="modal modal-open"
-      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
-      <div className="modal-box flex h-[90vh] w-full max-w-5xl flex-col overflow-hidden p-0">
-        {/* Header */}
-        <div className="border-base-300 flex items-center justify-between border-b px-4 py-3">
-          <div className="flex items-center gap-3"></div>
-          <button className="btn btn-sm btn-circle btn-ghost" onClick={onClose}>
-            ✕
-          </button>
-        </div>
+    <ModalWrapper
+      onClose={onClose}
+      title="SVG Editor"
+      size="max-w-5xl"
+      fullHeight>
+      {/* Tabs */}
+      <div className="bg-base-200 border-base-300 flex border-b px-4">
+        <button
+          onClick={() => setActiveTab('editor')}
+          className={`px-4 py-2 text-sm font-medium transition-all ${activeTab === 'editor' ? 'border-primary text-primary border-b-2' : 'text-base-content/60 hover:text-base-content'}`}>
+          ✏️ Editor
+        </button>
+        <button
+          onClick={() => setActiveTab('icons')}
+          className={`px-4 py-2 text-sm font-medium transition-all ${activeTab === 'icons' ? 'border-primary text-primary border-b-2' : 'text-base-content/60 hover:text-base-content'}`}>
+          🖼️ Icons
+        </button>
+      </div>
 
-        {/* Tabs */}
-        <div className="bg-base-200 border-base-300 flex border-b px-4">
-          <button
-            onClick={() => setActiveTab('editor')}
-            className={`px-4 py-2 text-sm font-medium transition-all ${activeTab === 'editor' ? 'border-primary text-primary border-b-2' : 'text-base-content/60 hover:text-base-content'}`}>
-            ✏️ Editor
-          </button>
-          <button
-            onClick={() => setActiveTab('icons')}
-            className={`px-4 py-2 text-sm font-medium transition-all ${activeTab === 'icons' ? 'border-primary text-primary border-b-2' : 'text-base-content/60 hover:text-base-content'}`}>
-            🖼️ Icons
-          </button>
-        </div>
-
-        {/* Content */}
-        <div className="min-h-0 flex-1 overflow-hidden">
-          {activeTab === 'editor' ? (
-            <div className="flex h-full flex-col lg:flex-row">
-              {/* Left: Editor */}
-              <div className="border-base-300 bg-base-100 flex flex-1 flex-col border-r">
-                <div className="border-base-300 bg-base-200/50 flex items-center justify-between border-b px-4 py-2">
-                  <span className="text-base-content/40 text-[10px] font-bold tracking-widest uppercase">
-                    SVG Source
-                  </span>
-                  <div className="flex gap-2">
-                    <button
-                      onClick={handleFormat}
-                      className="btn btn-ghost btn-xs tooltip"
-                      data-tip="Format">
-                      Format
-                    </button>
-                    <button
-                      onClick={() => setSvgCode(DEFAULT_SVG)}
-                      className="btn btn-ghost btn-xs tooltip"
-                      data-tip="Reset">
-                      Reset
-                    </button>
-                  </div>
+      {/* Content */}
+      <div className="min-h-0 flex-1 overflow-hidden">
+        {activeTab === 'editor' ? (
+          <div className="flex h-full flex-col lg:flex-row">
+            {/* Left: Editor */}
+            <div className="border-base-300 bg-base-100 flex flex-1 flex-col border-r">
+              <div className="border-base-300 bg-base-200/50 flex items-center justify-between border-b px-4 py-2">
+                <span className="text-base-content/40 text-[10px] font-bold tracking-widest uppercase">
+                  SVG Source
+                </span>
+                <div className="flex gap-2">
+                  <button
+                    onClick={handleFormat}
+                    className="btn btn-ghost btn-xs tooltip"
+                    data-tip="Format">
+                    Format
+                  </button>
+                  <button
+                    onClick={() => setSvgCode(DEFAULT_SVG)}
+                    className="btn btn-ghost btn-xs tooltip"
+                    data-tip="Reset">
+                    Reset
+                  </button>
                 </div>
-                <textarea
-                  value={svgCode}
-                  onChange={(e) => setSvgCode(e.target.value)}
-                  className="h-full w-full resize-none bg-transparent p-4 font-mono text-sm leading-relaxed outline-none"
-                  spellCheck={false}
-                  placeholder="Paste your SVG code here..."
+              </div>
+              <textarea
+                value={svgCode}
+                onChange={(e) => setSvgCode(e.target.value)}
+                className="h-full w-full resize-none bg-transparent p-4 font-mono text-sm leading-relaxed outline-none"
+                spellCheck={false}
+                placeholder="Paste your SVG code here..."
+              />
+              <div className="border-base-300 bg-base-200/30 flex items-center gap-2 overflow-x-auto border-t p-2">
+                <span className="text-base-content/40 text-[9px] font-bold tracking-widest uppercase">
+                  Presets:
+                </span>
+                {PRESETS.map((p) => (
+                  <button
+                    key={p.name}
+                    onClick={() => setSvgCode(p.code)}
+                    className="btn btn-xs border-base-content/10 rounded-full lowercase italic">
+                    {p.name}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Right: Preview */}
+            <div className="bg-base-300 flex flex-1 flex-col">
+              <div className="border-base-300 bg-base-200/50 flex items-center justify-between border-b px-4 py-2">
+                <span className="text-base-content/40 text-[10px] font-bold tracking-widest uppercase">
+                  Preview
+                </span>
+                <div className="flex gap-1">
+                  {(['grid', 'white', 'black', 'transparent'] as const).map(
+                    (mode) => (
+                      <button
+                        key={mode}
+                        onClick={() => setBgMode(mode)}
+                        className={`btn btn-xs ${bgMode === mode ? 'btn-primary' : 'btn-ghost'}`}>
+                        {mode.charAt(0).toUpperCase()}
+                      </button>
+                    )
+                  )}
+                </div>
+              </div>
+              <div
+                className={`flex flex-1 items-center justify-center overflow-auto p-8 transition-colors duration-500 ${bgMode === 'grid' ? 'bg-[radial-gradient(circle,rgba(0,0,0,0.1)_1px,transparent_1px)] bg-[length:20px_20px]' : ''} ${bgMode === 'white' ? 'bg-white' : ''} ${bgMode === 'black' ? 'bg-zinc-950' : ''} ${bgMode === 'transparent' ? 'bg-transparent' : ''}`}>
+                <div className="relative shadow-2xl">
+                  <div
+                    className="flex h-full w-full items-center justify-center"
+                    dangerouslySetInnerHTML={{ __html: svgCode }}
+                  />
+                </div>
+              </div>
+              <div className="border-base-300 bg-base-200/50 flex items-center justify-between border-t p-3">
+                <span className="text-base-content/40 font-mono text-[10px]">
+                  {svgCode.length} BYTES
+                </span>
+                <div className="flex gap-2">
+                  <button
+                    onClick={handleCopy}
+                    className={`btn btn-sm ${isCopied ? 'btn-success' : 'btn-primary'} min-w-[80px]`}>
+                    {isCopied ? 'Copied' : 'Copy'}
+                  </button>
+                  <button
+                    onClick={handleDownloadSvg}
+                    className="btn btn-outline btn-sm">
+                    Export SVG
+                  </button>
+                  <button
+                    onClick={() => {
+                      generateFromEditor();
+                      setActiveTab('icons');
+                    }}
+                    className="btn btn-secondary btn-sm">
+                    Generate Icons
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div className="bg-base-100 flex h-full flex-col gap-6 overflow-y-auto p-6">
+            {/* Import Area */}
+            <div className="flex flex-col gap-3">
+              <div className="flex items-center justify-between">
+                <span className="text-base-content/40 text-[10px] font-bold tracking-widest uppercase">
+                  Icon Generation Source
+                </span>
+                <button
+                  onClick={generateFromEditor}
+                  disabled={processing}
+                  className="btn btn-outline btn-xs">
+                  {processing ? '⏳ Rendering…' : '✏️ Use current editor SVG'}
+                </button>
+              </div>
+
+              <div
+                onClick={() => !processing && inputRef.current?.click()}
+                onDragOver={(e) => {
+                  e.preventDefault();
+                  setDragging(true);
+                }}
+                onDragLeave={() => setDragging(false)}
+                onDrop={(e) => {
+                  e.preventDefault();
+                  setDragging(false);
+                  handleFiles(e.dataTransfer.files);
+                }}
+                className={`border-base-content/10 flex cursor-pointer flex-col items-center justify-center gap-2 rounded-xl border-2 border-dashed py-8 transition-all ${processing ? 'bg-base-200 cursor-wait' : dragging ? 'bg-primary/5 border-primary/40' : 'bg-base-200/50 hover:bg-base-200'}`}>
+                <input
+                  ref={inputRef}
+                  type="file"
+                  accept="image/svg+xml,.svg"
+                  className="hidden"
+                  onChange={(e) => handleFiles(e.target.files)}
                 />
-                <div className="border-base-300 bg-base-200/30 flex items-center gap-2 overflow-x-auto border-t p-2">
-                  <span className="text-base-content/40 text-[9px] font-bold tracking-widest uppercase">
-                    Presets:
+                <span className="text-3xl">
+                  {processing ? '⏳' : dragging ? '📂' : '📁'}
+                </span>
+                <div className="flex flex-col items-center gap-1 text-center">
+                  <span className="text-sm font-medium">
+                    {processing
+                      ? 'Generating...'
+                      : 'Drop SVG or Click to Upload'}
                   </span>
-                  {PRESETS.map((p) => (
+                  <span className="text-base-content/40 text-[10px] tracking-widest uppercase">
+                    SVG only · Generates PNG: 72px to 512px
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Error */}
+            {iconError && (
+              <div className="alert alert-error py-2 text-sm">
+                <span>{iconError}</span>
+              </div>
+            )}
+
+            {/* Results Grid */}
+            {icons.length > 0 && (
+              <div className="flex flex-col gap-4">
+                <div className="border-base-300 flex items-center justify-between border-b pb-2">
+                  <div>
+                    <h4 className="font-bold">Generated Icons</h4>
+                    <p className="text-base-content/40 text-[10px]">
+                      Source: {sourceName}
+                    </p>
+                  </div>
+                  <button
+                    onClick={downloadAll}
+                    className="btn btn-primary btn-sm">
+                    Download ZIP (All Sizes)
+                  </button>
+                </div>
+
+                <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
+                  {icons.map((icon) => (
                     <button
-                      key={p.name}
-                      onClick={() => setSvgCode(p.code)}
-                      className="btn btn-xs border-base-content/10 rounded-full lowercase italic">
-                      {p.name}
+                      key={icon.size}
+                      onClick={() => downloadSingle(icon)}
+                      className="group bg-base-200 hover:bg-base-300 border-base-300 flex flex-col items-center gap-2 rounded-xl border p-3 transition-all">
+                      <img
+                        src={icon.dataUrl}
+                        alt={`${icon.size}x${icon.size}`}
+                        className="h-12 w-12 object-contain"
+                      />
+                      <div className="flex flex-col items-center gap-0.5">
+                        <span className="text-[10px] font-bold">
+                          {icon.size}px
+                        </span>
+                        <span className="text-primary text-[9px] opacity-0 transition-opacity group-hover:opacity-100">
+                          Download ↓
+                        </span>
+                      </div>
                     </button>
                   ))}
                 </div>
               </div>
+            )}
 
-              {/* Right: Preview */}
-              <div className="bg-base-300 flex flex-1 flex-col">
-                <div className="border-base-300 bg-base-200/50 flex items-center justify-between border-b px-4 py-2">
-                  <span className="text-base-content/40 text-[10px] font-bold tracking-widest uppercase">
-                    Preview
-                  </span>
-                  <div className="flex gap-1">
-                    {(['grid', 'white', 'black', 'transparent'] as const).map(
-                      (mode) => (
-                        <button
-                          key={mode}
-                          onClick={() => setBgMode(mode)}
-                          className={`btn btn-xs ${bgMode === mode ? 'btn-primary' : 'btn-ghost'}`}>
-                          {mode.charAt(0).toUpperCase()}
-                        </button>
-                      )
-                    )}
-                  </div>
-                </div>
-                <div
-                  className={`flex flex-1 items-center justify-center overflow-auto p-8 transition-colors duration-500 ${bgMode === 'grid' ? 'bg-[radial-gradient(circle,rgba(0,0,0,0.1)_1px,transparent_1px)] bg-[length:20px_20px]' : ''} ${bgMode === 'white' ? 'bg-white' : ''} ${bgMode === 'black' ? 'bg-zinc-950' : ''} ${bgMode === 'transparent' ? 'bg-transparent' : ''}`}>
-                  <div className="relative shadow-2xl">
-                    <div
-                      className="flex h-full w-full items-center justify-center"
-                      dangerouslySetInnerHTML={{ __html: svgCode }}
-                    />
-                  </div>
-                </div>
-                <div className="border-base-300 bg-base-200/50 flex items-center justify-between border-t p-3">
-                  <span className="text-base-content/40 font-mono text-[10px]">
-                    {svgCode.length} BYTES
-                  </span>
-                  <div className="flex gap-2">
-                    <button
-                      onClick={handleCopy}
-                      className={`btn btn-sm ${isCopied ? 'btn-success' : 'btn-primary'} min-w-[80px]`}>
-                      {isCopied ? 'Copied' : 'Copy'}
-                    </button>
-                    <button
-                      onClick={handleDownloadSvg}
-                      className="btn btn-outline btn-sm">
-                      Export SVG
-                    </button>
-                    <button
-                      onClick={() => {
-                        generateFromEditor();
-                        setActiveTab('icons');
-                      }}
-                      className="btn btn-secondary btn-sm">
-                      Generate Icons
-                    </button>
-                  </div>
-                </div>
+            {icons.length === 0 && !processing && (
+              <div className="flex flex-1 flex-col items-center justify-center text-center opacity-30">
+                <p className="text-sm italic">No icons generated yet.</p>
               </div>
-            </div>
-          ) : (
-            <div className="bg-base-100 flex h-full flex-col gap-6 overflow-y-auto p-6">
-              {/* Import Area */}
-              <div className="flex flex-col gap-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-base-content/40 text-[10px] font-bold tracking-widest uppercase">
-                    Icon Generation Source
-                  </span>
-                  <button
-                    onClick={generateFromEditor}
-                    disabled={processing}
-                    className="btn btn-outline btn-xs">
-                    {processing ? '⏳ Rendering…' : '✏️ Use current editor SVG'}
-                  </button>
-                </div>
-
-                <div
-                  onClick={() => !processing && inputRef.current?.click()}
-                  onDragOver={(e) => {
-                    e.preventDefault();
-                    setDragging(true);
-                  }}
-                  onDragLeave={() => setDragging(false)}
-                  onDrop={(e) => {
-                    e.preventDefault();
-                    setDragging(false);
-                    handleFiles(e.dataTransfer.files);
-                  }}
-                  className={`border-base-content/10 flex cursor-pointer flex-col items-center justify-center gap-2 rounded-xl border-2 border-dashed py-8 transition-all ${processing ? 'bg-base-200 cursor-wait' : dragging ? 'bg-primary/5 border-primary/40' : 'bg-base-200/50 hover:bg-base-200'}`}>
-                  <input
-                    ref={inputRef}
-                    type="file"
-                    accept="image/svg+xml,.svg"
-                    className="hidden"
-                    onChange={(e) => handleFiles(e.target.files)}
-                  />
-                  <span className="text-3xl">
-                    {processing ? '⏳' : dragging ? '📂' : '📁'}
-                  </span>
-                  <div className="flex flex-col items-center gap-1 text-center">
-                    <span className="text-sm font-medium">
-                      {processing
-                        ? 'Generating...'
-                        : 'Drop SVG or Click to Upload'}
-                    </span>
-                    <span className="text-base-content/40 text-[10px] tracking-widest uppercase">
-                      SVG only · Generates PNG: 72px to 512px
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Error */}
-              {iconError && (
-                <div className="alert alert-error py-2 text-sm">
-                  <span>{iconError}</span>
-                </div>
-              )}
-
-              {/* Results Grid */}
-              {icons.length > 0 && (
-                <div className="flex flex-col gap-4">
-                  <div className="border-base-300 flex items-center justify-between border-b pb-2">
-                    <div>
-                      <h4 className="font-bold">Generated Icons</h4>
-                      <p className="text-base-content/40 text-[10px]">
-                        Source: {sourceName}
-                      </p>
-                    </div>
-                    <button
-                      onClick={downloadAll}
-                      className="btn btn-primary btn-sm">
-                      Download ZIP (All Sizes)
-                    </button>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
-                    {icons.map((icon) => (
-                      <button
-                        key={icon.size}
-                        onClick={() => downloadSingle(icon)}
-                        className="group bg-base-200 hover:bg-base-300 border-base-300 flex flex-col items-center gap-2 rounded-xl border p-3 transition-all">
-                        <img
-                          src={icon.dataUrl}
-                          alt={`${icon.size}x${icon.size}`}
-                          className="h-12 w-12 object-contain"
-                        />
-                        <div className="flex flex-col items-center gap-0.5">
-                          <span className="text-[10px] font-bold">
-                            {icon.size}px
-                          </span>
-                          <span className="text-primary text-[9px] opacity-0 transition-opacity group-hover:opacity-100">
-                            Download ↓
-                          </span>
-                        </div>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {icons.length === 0 && !processing && (
-                <div className="flex flex-1 flex-col items-center justify-center text-center opacity-30">
-                  <p className="text-sm italic">No icons generated yet.</p>
-                </div>
-              )}
-            </div>
-          )}
-        </div>
+            )}
+          </div>
+        )}
       </div>
-      <div className="modal-backdrop" onClick={onClose} />
-    </dialog>
+    </ModalWrapper>
   );
 };

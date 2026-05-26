@@ -8,10 +8,10 @@ exports[`ColorsModal should render 1`] = `
     style="background: rgba(0, 0, 0, 0.6);"
   >
     <div
-      class="card border-base-300 w-full max-w-sm border shadow-2xl"
+      class="card bg-base-100 border-base-300 w-full max-w-sm border shadow-2xl"
     >
       <div
-        class="card-body bg-base-100 gap-5 p-6"
+        class="card-body gap-5 p-6"
       >
         <div
           class="flex items-start justify-between"
@@ -23,26 +23,22 @@ exports[`ColorsModal should render 1`] = `
               Colors
             </h2>
             <p
-              class="mt-0.5 font-mono text-[10px] tracking-widest uppercase opacity-40"
+              class="text-base-content/40 mt-0.5 font-mono text-[10px] tracking-widest uppercase"
             >
               HEX · RGB · HSL · OKLCH
             </p>
           </div>
-          <div
-            class="flex items-center gap-2"
+          <button
+            class="btn btn-ghost btn-xs btn-square text-base opacity-60 hover:opacity-100"
           >
-            <button
-              class="btn btn-ghost btn-xs font-mono tracking-widest opacity-60 hover:opacity-100"
-            >
-              Random
-            </button>
-            <button
-              class="btn btn-ghost btn-xs btn-square text-base opacity-60 hover:opacity-100"
-            >
-              ✕
-            </button>
-          </div>
+            ✕
+          </button>
         </div>
+        <button
+          class="btn btn-ghost btn-xs font-mono tracking-widest opacity-60 hover:opacity-100"
+        >
+          Random
+        </button>
         <div
           class="border-base-300 flex items-center gap-3 rounded-xl border p-4 transition-colors duration-200"
         >
@@ -125,7 +121,6 @@ exports[`ColorsModal should render 1`] = `
             class="grid grid-cols-[4rem_repeat(11,1fr)] gap-0.5"
           >
             <div />
-             
             <div
               class="pb-1 text-center font-mono text-[8px] leading-none opacity-30"
             >
@@ -1596,7 +1591,7 @@ exports[`ColorsModal should render 1`] = `
           </div>
         </div>
         <p
-          class="text-center font-mono text-[10px] tracking-widest uppercase opacity-20"
+          class="text-base-content/20 text-center font-mono text-[10px] tracking-widest uppercase"
         >
           Click outside to close · Space for random
         </p>

@@ -1,7 +1,8 @@
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 import {
+  Element,
   periodicTable,
   specificNameColorMap,
-  Element,
 } from '@hieudoanm/data/periodic-table';
 import { FC, useState } from 'react';
 
@@ -77,60 +78,46 @@ export const PeriodicTableModal: FC<{ onClose: () => void }> = ({
   );
 
   return (
-    <dialog
-      className="modal modal-open"
-      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
-      <div className="modal-box h-[90vh] w-full max-w-[98vw] overflow-auto">
-        <button
-          onClick={onClose}
-          className="btn btn-sm btn-circle btn-ghost absolute top-2 right-2 z-10">
-          ✕
-        </button>
-
-        <h3 className="mb-4 text-center text-lg font-bold">Periodic Table</h3>
-
-        {/* Filter buttons */}
-        <div className="mb-4 grid grid-cols-3 gap-2 md:grid-cols-6">
-          {specificNames.map((name) => {
-            const backgroundColor =
-              selectedType === null || selectedType === name
-                ? specificNameColorMap[name]
-                : 'bg-gray-100/10';
-            return (
-              <button
-                key={name}
-                className={`btn btn-sm w-full font-semibold text-white shadow-md transition hover:cursor-pointer ${backgroundColor} ${
-                  selectedType === name ? 'ring-2 ring-white' : ''
-                }`}
-                onClick={() =>
-                  setSelectedType(selectedType === name ? null : name)
-                }>
-                {name}
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Full grid — desktop */}
-        <div className="hidden md:block">
-          <PeriodicTable selectedType={selectedType} />
-        </div>
-
-        {/* Card grid — mobile */}
-        <div className="grid grid-cols-3 gap-2 md:hidden">
-          {elements.map(([symbol, element]) => (
-            <Block
-              key={symbol}
-              selectedType={selectedType}
-              symbol={symbol}
-              element={element}
-              style={{}}
-            />
-          ))}
-        </div>
+    <ModalWrapper onClose={onClose} title="Periodic Table" size="max-w-[98vw]">
+      {/* Filter buttons */}
+      <div className="mb-4 grid grid-cols-3 gap-2 md:grid-cols-6">
+        {specificNames.map((name) => {
+          const backgroundColor =
+            selectedType === null || selectedType === name
+              ? specificNameColorMap[name]
+              : 'bg-gray-100/10';
+          return (
+            <button
+              key={name}
+              className={`btn btn-sm w-full font-semibold text-white shadow-md transition hover:cursor-pointer ${backgroundColor} ${
+                selectedType === name ? 'ring-2 ring-white' : ''
+              }`}
+              onClick={() =>
+                setSelectedType(selectedType === name ? null : name)
+              }>
+              {name}
+            </button>
+          );
+        })}
       </div>
 
-      <div className="modal-backdrop" onClick={onClose} />
-    </dialog>
+      {/* Full grid — desktop */}
+      <div className="hidden md:block">
+        <PeriodicTable selectedType={selectedType} />
+      </div>
+
+      {/* Card grid — mobile */}
+      <div className="grid grid-cols-3 gap-2 md:hidden">
+        {elements.map(([symbol, element]) => (
+          <Block
+            key={symbol}
+            selectedType={selectedType}
+            symbol={symbol}
+            element={element}
+            style={{}}
+          />
+        ))}
+      </div>
+    </ModalWrapper>
   );
 };

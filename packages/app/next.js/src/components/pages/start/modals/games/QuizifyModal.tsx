@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 
 type QuizData = {
   question: string;
@@ -54,7 +55,9 @@ const colorClassMap: Record<keyof QuizData['answers'], string> = {
   green: 'btn-success',
 };
 
-export const QuizifyModal: React.FC = () => {
+export const QuizifyModal: React.FC<{ onClose: () => void }> = ({
+  onClose,
+}) => {
   const [questions, setQuestions] = useState<QuizData[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selected, setSelected] = useState<keyof QuizData['answers'] | null>(
@@ -135,122 +138,107 @@ export const QuizifyModal: React.FC = () => {
   };
 
   return (
-    <div className="modal modal-open">
-      <div className="modal-box relative max-w-2xl">
-        <h3 className="mb-4 text-center text-xl font-bold">Quizify</h3>
-        {questions.length === 0 ? (
-          <div className="space-y-4">
-            <input
-              type="file"
-              accept=".csv"
-              onChange={handleFileChange}
-              className="file-input file-input-bordered w-full"
-            />
-            {csvError && <div className="text-error">{csvError}</div>}
-          </div>
-        ) : (
-          <main className="bg-base-100 text-base-content flex flex-col items-center">
-            <div className="card bg-base-100 border-base-300 w-full max-w-md border shadow-xl">
-              <div className="card-body space-y-4">
-                {/* Progress */}
-                <div className="space-y-1">
-                  <progress
-                    className="progress progress-primary w-full"
-                    value={progress}
-                    max={100}
-                  />
-                  <div className="flex justify-between text-xs opacity-60">
-                    <span>
-                      Question {currentIndex + 1} / {questions.length}
-                    </span>
-                    <span>{Math.round(progress)}%</span>
-                  </div>
+    <ModalWrapper onClose={onClose} title="Quizify" size="max-w-2xl">
+      {questions.length === 0 ? (
+        <div className="space-y-4">
+          <input
+            type="file"
+            accept=".csv"
+            onChange={handleFileChange}
+            className="file-input file-input-bordered w-full"
+          />
+          {csvError && <div className="text-error">{csvError}</div>}
+        </div>
+      ) : (
+        <main className="bg-base-100 text-base-content flex flex-col items-center">
+          <div className="card bg-base-100 border-base-300 w-full max-w-md border shadow-xl">
+            <div className="card-body space-y-4">
+              {/* Progress */}
+              <div className="space-y-1">
+                <progress
+                  className="progress progress-primary w-full"
+                  value={progress}
+                  max={100}
+                />
+                <div className="flex justify-between text-xs opacity-60">
+                  <span>
+                    Question {currentIndex + 1} / {questions.length}
+                  </span>
+                  <span>{Math.round(progress)}%</span>
                 </div>
-
-                {/* Question */}
-                <div className="space-y-1 text-center">
-                  <h2 className="card-title justify-center text-lg">
-                    {quiz.question}
-                  </h2>
-                </div>
-
-                {/* Answers */}
-                <div className="grid grid-cols-2 gap-3">
-                  {(
-                    Object.keys(quiz.answers) as Array<
-                      keyof QuizData['answers']
-                    >
-                  ).map((key) => (
-                    <button
-                      key={key}
-                      disabled={
-                        !!selected && key !== quiz.correct && key !== selected
-                      }
-                      className={`btn h-20 text-white transition-all ${getButtonClass(key)}`}
-                      onClick={() => handleSelect(key)}>
-                      {quiz.answers[key]}
-                      <span className="ml-1 opacity-60">
-                        ({key[0].toUpperCase()})
-                      </span>
-                    </button>
-                  ))}
-                </div>
-
-                {/* Feedback */}
-                {selected && (
-                  <div className="alert">
-                    {selected === quiz.correct ? (
-                      <span>✅ Correct answer!</span>
-                    ) : (
-                      <span>❌ Wrong answer</span>
-                    )}
-                  </div>
-                )}
-
-                {/* Navigation */}
-                {selected && !isLastQuestion && (
-                  <button
-                    className="btn btn-primary w-full"
-                    onClick={handleNext}>
-                    Next Question →
-                  </button>
-                )}
-
-                {/* Completed */}
-                {selected && isLastQuestion && (
-                  <div className="space-y-3 text-center">
-                    <div className="text-lg font-semibold">
-                      🎉 Quiz completed!
-                    </div>
-                    <div>
-                      Score:{' '}
-                      <span className="font-bold">
-                        {score} / {questions.length}
-                      </span>
-                    </div>
-                    <button
-                      className="btn btn-outline w-full"
-                      onClick={() => resetQuiz(questions)}>
-                      🔄 Reset Quiz
-                    </button>
-                    <div className="text-xs opacity-60">
-                      Keyboard: R Y B G • → Next
-                    </div>
-                  </div>
-                )}
               </div>
+
+              {/* Question */}
+              <div className="space-y-1 text-center">
+                <h2 className="card-title justify-center text-lg">
+                  {quiz.question}
+                </h2>
+              </div>
+
+              {/* Answers */}
+              <div className="grid grid-cols-2 gap-3">
+                {(
+                  Object.keys(quiz.answers) as Array<keyof QuizData['answers']>
+                ).map((key) => (
+                  <button
+                    key={key}
+                    disabled={
+                      !!selected && key !== quiz.correct && key !== selected
+                    }
+                    className={`btn h-20 text-white transition-all ${getButtonClass(key)}`}
+                    onClick={() => handleSelect(key)}>
+                    {quiz.answers[key]}
+                    <span className="ml-1 opacity-60">
+                      ({key[0].toUpperCase()})
+                    </span>
+                  </button>
+                ))}
+              </div>
+
+              {/* Feedback */}
+              {selected && (
+                <div className="alert">
+                  {selected === quiz.correct ? (
+                    <span>✅ Correct answer!</span>
+                  ) : (
+                    <span>❌ Wrong answer</span>
+                  )}
+                </div>
+              )}
+
+              {/* Navigation */}
+              {selected && !isLastQuestion && (
+                <button className="btn btn-primary w-full" onClick={handleNext}>
+                  Next Question →
+                </button>
+              )}
+
+              {/* Completed */}
+              {selected && isLastQuestion && (
+                <div className="space-y-3 text-center">
+                  <div className="text-lg font-semibold">
+                    🎉 Quiz completed!
+                  </div>
+                  <div>
+                    Score:{' '}
+                    <span className="font-bold">
+                      {score} / {questions.length}
+                    </span>
+                  </div>
+                  <button
+                    className="btn btn-outline w-full"
+                    onClick={() => resetQuiz(questions)}>
+                    🔄 Reset Quiz
+                  </button>
+                  <div className="text-xs opacity-60">
+                    Keyboard: R Y B G • → Next
+                  </div>
+                </div>
+              )}
             </div>
-          </main>
-        )}
-        {/* Close button */}
-        <button
-          className="btn btn-sm btn-circle absolute top-2 right-2"
-          onClick={() => {
-            /* placeholder for close logic */
-          }}>
-          ✕
-        </button>
-      </div>
-    </div>
+          </div>
+        </main>
+      )}
+    </ModalWrapper>
   );
 };

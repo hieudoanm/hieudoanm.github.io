@@ -1,4 +1,5 @@
 import { FC, useEffect, useRef, useState } from 'react';
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 
 type Card = { rank: string; suit: string; value: number };
 
@@ -88,22 +89,12 @@ export const BlackjackModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const cardsLeft = deck.length;
 
   return (
-    <dialog
-      className="modal modal-open"
-      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
+    <ModalWrapper onClose={onClose} title="🃏 Card Counting">
       <div
         ref={containerRef}
         tabIndex={0}
         onKeyDown={onKeyDown}
-        className="modal-box w-full max-w-sm outline-none">
-        <button
-          onClick={onClose}
-          className="btn btn-sm btn-circle btn-ghost absolute top-2 right-2">
-          ✕
-        </button>
-
-        <h3 className="mb-4 text-center text-lg font-bold">🃏 Card Counting</h3>
-
+        className="outline-none">
         {/* Card display */}
         <div className="bg-base-200 mb-4 flex flex-col items-center justify-center rounded-xl py-6">
           {currentCard ? (
@@ -158,8 +149,6 @@ export const BlackjackModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           <kbd className="kbd kbd-xs">R</kbd> Reset
         </p>
       </div>
-
-      <div className="modal-backdrop" onClick={onClose} />
-    </dialog>
+    </ModalWrapper>
   );
 };

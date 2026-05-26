@@ -73,7 +73,7 @@ export const SnellenChartModal: FC<{ onClose: () => void }> = ({ onClose }) => {
         className="modal-box bg-base-100 relative flex h-[90vh] w-full max-w-4xl flex-col items-center justify-center overflow-hidden p-0">
         {/* Close Button */}
         <button
-          className="btn btn-sm btn-circle btn-ghost absolute top-2 right-2 z-20"
+          className="btn btn-ghost btn-xs btn-square absolute top-2 right-2 z-20 text-base opacity-60 hover:opacity-100"
           onClick={onClose}>
           ✕
         </button>

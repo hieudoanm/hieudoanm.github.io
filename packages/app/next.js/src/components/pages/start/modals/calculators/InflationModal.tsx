@@ -1,3 +1,4 @@
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 import countriesCurrencies from '@hieudoanm/json/inflation/countries_currencies.json';
 import currencies from '@hieudoanm/json/inflation/currencies.json';
 import history from '@hieudoanm/json/inflation/history.json';
@@ -227,254 +228,241 @@ export const InflationModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const hc = result ? healthConfig[result.health] : null;
 
   return (
-    <dialog
-      className="modal modal-open"
-      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
-      <div className="modal-box w-full max-w-md">
-        <button
-          onClick={onClose}
-          className="btn btn-sm btn-circle btn-ghost absolute top-2 right-2">
-          ✕
-        </button>
+    <ModalWrapper
+      onClose={onClose}
+      title="💸 Inflation Calculator"
+      size="max-w-md">
+      {/* Tabs */}
+      <div role="tablist" className="tabs tabs-boxed mb-4">
+        <a
+          role="tab"
+          className={`tab flex-1 ${tab === 'options' ? 'tab-active' : ''}`}
+          onClick={() => setTab('options')}>
+          ⚙️ Options
+        </a>
+        <a
+          role="tab"
+          className={`tab flex-1 ${tab === 'result' ? 'tab-active' : ''}`}
+          onClick={() => setTab('result')}>
+          📊 Result
+        </a>
+      </div>
 
-        <h3 className="mb-4 text-center text-lg font-bold">
-          💸 Inflation Calculator
-        </h3>
+      {/* ── Options tab ── */}
+      {tab === 'options' && (
+        <div className="space-y-4">
+          {/* Country */}
+          <div className="form-control">
+            <label className="label pb-1">
+              <span className="label-text font-semibold">🌍 Country</span>
+            </label>
+            <select
+              className="select select-bordered w-full"
+              value={selectedCountry?.countryName ?? ''}
+              onChange={(e) => onCountryChange(e.target.value)}>
+              <option value="" disabled>
+                Select a country
+              </option>
+              {countries
+                .sort((a, b) => a.countryName.localeCompare(b.countryName))
+                .map((c) => (
+                  <option key={c.countryCode} value={c.countryName}>
+                    {c.countryName}
+                  </option>
+                ))}
+            </select>
+          </div>
 
-        {/* Tabs */}
-        <div role="tablist" className="tabs tabs-boxed mb-4">
-          <a
-            role="tab"
-            className={`tab flex-1 ${tab === 'options' ? 'tab-active' : ''}`}
-            onClick={() => setTab('options')}>
-            ⚙️ Options
-          </a>
-          <a
-            role="tab"
-            className={`tab flex-1 ${tab === 'result' ? 'tab-active' : ''}`}
-            onClick={() => setTab('result')}>
-            📊 Result
-          </a>
-        </div>
-
-        {/* ── Options tab ── */}
-        {tab === 'options' && (
-          <div className="space-y-4">
-            {/* Country */}
-            <div className="form-control">
-              <label className="label pb-1">
-                <span className="label-text font-semibold">🌍 Country</span>
-              </label>
-              <select
-                className="select select-bordered w-full"
-                value={selectedCountry?.countryName ?? ''}
-                onChange={(e) => onCountryChange(e.target.value)}>
-                <option value="" disabled>
-                  Select a country
+          {/* Currency */}
+          <div className="form-control">
+            <label className="label pb-1">
+              <span className="label-text font-semibold">💰 Currency</span>
+            </label>
+            <select
+              className="select select-bordered w-full"
+              value={currency}
+              onChange={(e) =>
+                recalc(
+                  selectedCountry,
+                  e.target.value,
+                  selectedYear,
+                  targetYear,
+                  amount
+                )
+              }>
+              {(currencies as string[]).map((c) => (
+                <option key={c} value={c}>
+                  {c}
                 </option>
-                {countries
-                  .sort((a, b) => a.countryName.localeCompare(b.countryName))
-                  .map((c) => (
-                    <option key={c.countryCode} value={c.countryName}>
-                      {c.countryName}
-                    </option>
-                  ))}
-              </select>
-            </div>
+              ))}
+            </select>
+          </div>
 
-            {/* Currency */}
+          {/* Years */}
+          <div className="grid grid-cols-2 gap-3">
             <div className="form-control">
               <label className="label pb-1">
-                <span className="label-text font-semibold">💰 Currency</span>
+                <span className="label-text font-semibold">📅 From</span>
               </label>
               <select
                 className="select select-bordered w-full"
-                value={currency}
+                value={selectedYear}
                 onChange={(e) =>
                   recalc(
                     selectedCountry,
+                    currency,
                     e.target.value,
-                    selectedYear,
                     targetYear,
                     amount
                   )
                 }>
-                {(currencies as string[]).map((c) => (
-                  <option key={c} value={c}>
-                    {c}
+                <option value="" disabled>
+                  Year
+                </option>
+                {availableYears.map((y) => (
+                  <option key={y} value={y}>
+                    {y}
                   </option>
                 ))}
               </select>
             </div>
-
-            {/* Years */}
-            <div className="grid grid-cols-2 gap-3">
-              <div className="form-control">
-                <label className="label pb-1">
-                  <span className="label-text font-semibold">📅 From</span>
-                </label>
-                <select
-                  className="select select-bordered w-full"
-                  value={selectedYear}
-                  onChange={(e) =>
-                    recalc(
-                      selectedCountry,
-                      currency,
-                      e.target.value,
-                      targetYear,
-                      amount
-                    )
-                  }>
-                  <option value="" disabled>
-                    Year
-                  </option>
-                  {availableYears.map((y) => (
-                    <option key={y} value={y}>
-                      {y}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <div className="form-control">
-                <label className="label pb-1">
-                  <span className="label-text font-semibold">📅 To</span>
-                </label>
-                <select
-                  className="select select-bordered w-full"
-                  value={targetYear}
-                  onChange={(e) =>
-                    recalc(
-                      selectedCountry,
-                      currency,
-                      selectedYear,
-                      e.target.value,
-                      amount
-                    )
-                  }>
-                  <option value="" disabled>
-                    Year
-                  </option>
-                  {availableYears
-                    .sort((a, b) => Number(b) - Number(a))
-                    .map((y) => (
-                      <option key={y} value={y}>
-                        {y}
-                      </option>
-                    ))}
-                </select>
-              </div>
-            </div>
-
-            {/* Amount */}
             <div className="form-control">
               <label className="label pb-1">
-                <span className="label-text font-semibold">💵 Amount</span>
+                <span className="label-text font-semibold">📅 To</span>
               </label>
-              <input
-                type="number"
-                className="input input-bordered w-full"
-                value={amount}
-                min={0}
-                onChange={(e) => {
-                  const amt = Number(e.target.value);
-                  if (amt < 0) return;
+              <select
+                className="select select-bordered w-full"
+                value={targetYear}
+                onChange={(e) =>
                   recalc(
                     selectedCountry,
                     currency,
                     selectedYear,
-                    targetYear,
-                    amt
-                  );
-                }}
-              />
+                    e.target.value,
+                    amount
+                  )
+                }>
+                <option value="" disabled>
+                  Year
+                </option>
+                {availableYears
+                  .sort((a, b) => Number(b) - Number(a))
+                  .map((y) => (
+                    <option key={y} value={y}>
+                      {y}
+                    </option>
+                  ))}
+              </select>
             </div>
-
-            <button
-              className="btn btn-primary w-full"
-              onClick={() => setTab('result')}>
-              Calculate →
-            </button>
           </div>
-        )}
 
-        {/* ── Result tab ── */}
-        {tab === 'result' && (
-          <div>
-            {result && hc ? (
-              <div
-                className={`rounded-xl border-2 p-4 ${hc.border} ${hc.bg} ${hc.text}`}>
-                <h2 className="mb-3 flex items-center gap-2 font-bold">
-                  {hc.emoji} {selectedCountry?.countryName} · {selectedYear}–
-                  {targetYear}
-                </h2>
-                <table className="w-full table-auto text-sm">
-                  <tbody>
-                    <tr>
-                      <td className="py-1 font-semibold">💵 Original</td>
-                      <td className="py-1 text-right">
-                        {amount.toLocaleString(locale, {
-                          style: 'currency',
-                          currency,
-                        })}
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="py-1 font-semibold">➡️ Adjusted</td>
-                      <td className="py-1 text-right">
-                        {result.adjustedAmount.toLocaleString(locale, {
-                          style: 'currency',
-                          currency,
-                          minimumFractionDigits: 2,
-                          maximumFractionDigits: 2,
-                        })}
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="py-1 font-semibold">📊 Cumulative</td>
-                      <td className="py-1 text-right">
-                        {result.cumulativeRate.toLocaleString(locale, {
-                          minimumFractionDigits: 2,
-                          maximumFractionDigits: 2,
-                        })}
-                        %
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="py-1 font-semibold">📈 Average/yr</td>
-                      <td className="py-1 text-right">
-                        {result.averageRate.toLocaleString(locale, {
-                          minimumFractionDigits: 2,
-                          maximumFractionDigits: 2,
-                        })}
-                        %
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="py-1 font-semibold">🩺 Health</td>
-                      <td className="py-1 text-right font-bold capitalize">
-                        {result.health}
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            ) : (
-              <div className="py-8 text-center text-sm opacity-50">
-                ⚠️ No data available for <em>{selectedCountry?.countryName}</em>{' '}
-                in the selected year range.
-                <br />
-                <button
-                  className="btn btn-ghost btn-sm mt-4"
-                  onClick={() => setTab('options')}>
-                  ← Back to options
-                </button>
-              </div>
-            )}
+          {/* Amount */}
+          <div className="form-control">
+            <label className="label pb-1">
+              <span className="label-text font-semibold">💵 Amount</span>
+            </label>
+            <input
+              type="number"
+              className="input input-bordered w-full"
+              value={amount}
+              min={0}
+              onChange={(e) => {
+                const amt = Number(e.target.value);
+                if (amt < 0) return;
+                recalc(
+                  selectedCountry,
+                  currency,
+                  selectedYear,
+                  targetYear,
+                  amt
+                );
+              }}
+            />
           </div>
-        )}
-      </div>
 
-      <div className="modal-backdrop" onClick={onClose} />
-    </dialog>
+          <button
+            className="btn btn-primary w-full"
+            onClick={() => setTab('result')}>
+            Calculate →
+          </button>
+        </div>
+      )}
+
+      {/* ── Result tab ── */}
+      {tab === 'result' && (
+        <div>
+          {result && hc ? (
+            <div
+              className={`rounded-xl border-2 p-4 ${hc.border} ${hc.bg} ${hc.text}`}>
+              <h2 className="mb-3 flex items-center gap-2 font-bold">
+                {hc.emoji} {selectedCountry?.countryName} · {selectedYear}–
+                {targetYear}
+              </h2>
+              <table className="w-full table-auto text-sm">
+                <tbody>
+                  <tr>
+                    <td className="py-1 font-semibold">💵 Original</td>
+                    <td className="py-1 text-right">
+                      {amount.toLocaleString(locale, {
+                        style: 'currency',
+                        currency,
+                      })}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="py-1 font-semibold">➡️ Adjusted</td>
+                    <td className="py-1 text-right">
+                      {result.adjustedAmount.toLocaleString(locale, {
+                        style: 'currency',
+                        currency,
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 2,
+                      })}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="py-1 font-semibold">📊 Cumulative</td>
+                    <td className="py-1 text-right">
+                      {result.cumulativeRate.toLocaleString(locale, {
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 2,
+                      })}
+                      %
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="py-1 font-semibold">📈 Average/yr</td>
+                    <td className="py-1 text-right">
+                      {result.averageRate.toLocaleString(locale, {
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 2,
+                      })}
+                      %
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="py-1 font-semibold">🩺 Health</td>
+                    <td className="py-1 text-right font-bold capitalize">
+                      {result.health}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          ) : (
+            <div className="py-8 text-center text-sm opacity-50">
+              ⚠️ No data available for <em>{selectedCountry?.countryName}</em>{' '}
+              in the selected year range.
+              <br />
+              <button
+                className="btn btn-ghost btn-sm mt-4"
+                onClick={() => setTab('options')}>
+                ← Back to options
+              </button>
+            </div>
+          )}
+        </div>
+      )}
+    </ModalWrapper>
   );
 };

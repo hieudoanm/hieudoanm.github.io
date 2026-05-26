@@ -1,4 +1,5 @@
 import { FC, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 
 type Tower = number[];
 type Move = [number, number];
@@ -203,22 +204,12 @@ export const TowersModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     selectedTower !== null && canDrop(selectedTower, i);
 
   return (
-    <dialog
-      className="modal modal-open"
-      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
+    <ModalWrapper onClose={onClose} title="Towers of Hanoi" size="max-w-2xl">
       <div
         ref={containerRef}
         tabIndex={0}
         onKeyDown={onKeyDown}
-        className="modal-box w-full max-w-2xl outline-none">
-        <button
-          onClick={onClose}
-          className="btn btn-sm btn-circle btn-ghost absolute top-2 right-2">
-          ✕
-        </button>
-
-        <h3 className="mb-3 text-center text-lg font-bold">Towers of Hanoi</h3>
-
+        className="outline-none">
         {/* Stats + disk slider */}
         <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
           <div className="flex gap-4 text-sm">
@@ -328,8 +319,6 @@ export const TowersModal: FC<{ onClose: () => void }> = ({ onClose }) => {
         </p>
       </div>
 
-      <div className="modal-backdrop" onClick={onClose} />
-
       <style jsx global>{`
         @keyframes shake {
           0%,
@@ -344,6 +333,6 @@ export const TowersModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           }
         }
       `}</style>
-    </dialog>
+    </ModalWrapper>
   );
 };

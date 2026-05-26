@@ -29,7 +29,7 @@ exports[`StringModal should render 1`] = `
             </p>
           </div>
           <button
-            class="btn btn-ghost btn-xs btn-square text-base"
+            class="btn btn-ghost btn-xs btn-square text-base opacity-60 hover:opacity-100"
           >
             ✕
           </button>

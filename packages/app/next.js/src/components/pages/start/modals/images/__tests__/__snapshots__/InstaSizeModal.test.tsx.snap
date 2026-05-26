@@ -8,58 +8,18 @@ exports[`InstaSizeModal should render 1`] = `
     style="background: rgba(0, 0, 0, 0.6);"
   >
     <div
-      class="modal-box flex w-full max-w-5xl flex-col gap-6"
+      class="modal-box flex h-[90vh] w-full max-w-5xl flex-col overflow-hidden p-0"
     >
       <div
-        class="flex items-start justify-between"
+        class="border-base-300 flex items-center justify-between border-b px-4 py-3"
       >
-        <div
-          class="flex items-center gap-3"
+        <h3
+          class="text-sm font-bold"
         >
-          <div
-            class="bg-neutral flex h-8 w-8 items-center justify-center rounded-lg text-white"
-          >
-            <svg
-              fill="none"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
-            >
-              <rect
-                height="14"
-                rx="2"
-                stroke="currentColor"
-                stroke-width="1.5"
-                width="14"
-                x="1"
-                y="1"
-              />
-              <rect
-                fill="currentColor"
-                height="6"
-                opacity="0.7"
-                rx="1"
-                width="8"
-                x="4"
-                y="5"
-              />
-            </svg>
-          </div>
-          <div>
-            <h3
-              class="text-xl font-bold"
-            >
-              InstaSize
-            </h3>
-            <p
-              class="text-base-content/50 text-sm"
-            >
-              Square Fit + Filters
-            </p>
-          </div>
-        </div>
+          InstaSize
+        </h3>
         <button
-          class="btn btn-ghost btn-sm btn-circle"
+          class="btn btn-sm btn-circle btn-ghost opacity-60 hover:opacity-100"
         >
           ✕
         </button>
@@ -119,15 +79,15 @@ exports[`InstaSizeModal should render 1`] = `
           </div>
         </div>
       </div>
+      <canvas
+        class="hidden"
+      />
+      <input
+        accept="image/*"
+        class="hidden"
+        type="file"
+      />
     </div>
-    <canvas
-      class="hidden"
-    />
-    <input
-      accept="image/*"
-      class="hidden"
-      type="file"
-    />
     <div
       class="modal-backdrop"
     />

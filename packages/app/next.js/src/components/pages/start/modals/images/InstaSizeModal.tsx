@@ -1,4 +1,5 @@
 import { FC, useCallback, useEffect, useRef, useState } from 'react';
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 
 // ---------------------------------------------------------------------------
 // Filter definitions — each is a CSS filter string applied via canvas
@@ -140,277 +141,239 @@ export const InstaSizeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   };
 
   return (
-    <dialog
-      open
-      className="modal modal-open"
-      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
-      <div className="modal-box flex w-full max-w-5xl flex-col gap-6">
-        {/* Header */}
-        <div className="flex items-start justify-between">
-          <div className="flex items-center gap-3">
-            <div className="bg-neutral flex h-8 w-8 items-center justify-center rounded-lg text-white">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <rect
-                  x="1"
-                  y="1"
-                  width="14"
-                  height="14"
-                  rx="2"
+    <ModalWrapper
+      onClose={onClose}
+      title="InstaSize"
+      size="max-w-5xl"
+      fullHeight>
+      <div className="min-h-[400px]">
+        {!imageSrc ? (
+          /* Upload Zone */
+          <div
+            className={`cursor-pointer rounded-2xl border-2 border-dashed transition-all duration-200 ${
+              isDragging
+                ? 'border-primary bg-primary/5 scale-[1.01]'
+                : 'border-base-300 hover:border-base-400 hover:bg-base-200/50'
+            }`}
+            onDragOver={(e) => {
+              e.preventDefault();
+              setIsDragging(true);
+            }}
+            onDragLeave={() => setIsDragging(false)}
+            onDrop={handleDrop}
+            onClick={() => fileInputRef.current?.click()}>
+            <div className="flex flex-col items-center justify-center gap-5 px-8 py-24 select-none">
+              <div
+                className={`flex h-16 w-16 items-center justify-center rounded-2xl transition-colors duration-200 ${isDragging ? 'bg-primary/10' : 'bg-base-200'}`}>
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className={`transition-colors duration-200 ${isDragging ? 'text-primary' : 'text-base-content/40'}`}
                   stroke="currentColor"
-                  strokeWidth="1.5"
-                />
-                <rect
-                  x="4"
-                  y="5"
-                  width="8"
-                  height="6"
-                  rx="1"
-                  fill="currentColor"
-                  opacity="0.7"
-                />
-              </svg>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold">InstaSize</h3>
-              <p className="text-base-content/50 text-sm">
-                Square Fit + Filters
-              </p>
-            </div>
-          </div>
-          <button className="btn btn-ghost btn-sm btn-circle" onClick={onClose}>
-            ✕
-          </button>
-        </div>
-
-        <div className="min-h-[400px]">
-          {!imageSrc ? (
-            /* Upload Zone */
-            <div
-              className={`cursor-pointer rounded-2xl border-2 border-dashed transition-all duration-200 ${
-                isDragging
-                  ? 'border-primary bg-primary/5 scale-[1.01]'
-                  : 'border-base-300 hover:border-base-400 hover:bg-base-200/50'
-              }`}
-              onDragOver={(e) => {
-                e.preventDefault();
-                setIsDragging(true);
-              }}
-              onDragLeave={() => setIsDragging(false)}
-              onDrop={handleDrop}
-              onClick={() => fileInputRef.current?.click()}>
-              <div className="flex flex-col items-center justify-center gap-5 px-8 py-24 select-none">
-                <div
-                  className={`flex h-16 w-16 items-center justify-center rounded-2xl transition-colors duration-200 ${isDragging ? 'bg-primary/10' : 'bg-base-200'}`}>
-                  <svg
-                    width="28"
-                    height="28"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    className={`transition-colors duration-200 ${isDragging ? 'text-primary' : 'text-base-content/40'}`}
-                    stroke="currentColor"
-                    strokeWidth="1.5">
-                    <path d="M4 16l4-4 4 4 4-8 4 8" />
-                    <rect x="3" y="3" width="18" height="18" rx="2" />
-                  </svg>
-                </div>
-                <div className="text-center">
-                  <p className="text-base-content text-lg font-semibold">
-                    {isDragging ? 'Drop your image here' : 'Upload an image'}
-                  </p>
-                  <p className="text-base-content/50 mt-1 text-sm">
-                    Drag & drop, or click to browse — PNG, JPG, WEBP
-                  </p>
-                </div>
-                <button className="btn btn-primary btn-sm pointer-events-none rounded-full px-6">
-                  Choose File
-                </button>
+                  strokeWidth="1.5">
+                  <path d="M4 16l4-4 4 4 4-8 4 8" />
+                  <rect x="3" y="3" width="18" height="18" rx="2" />
+                </svg>
               </div>
-            </div>
-          ) : (
-            /* Editor — 3-column on large screens */
-            <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[1fr_260px_220px]">
-              {/* ── Preview ── */}
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <h2 className="text-base-content/60 text-xs font-semibold tracking-widest uppercase">
-                    Preview
-                  </h2>
-                  <button
-                    className="btn btn-ghost btn-xs text-base-content/40 hover:text-base-content"
-                    onClick={() => {
-                      setImageSrc(null);
-                      setOutputUrl(null);
-                      setPadding(10);
-                      setSelectedFilter(FILTERS[0]);
-                    }}>
-                    ✕ Clear
-                  </button>
-                </div>
-
-                <div className="bg-base-200 relative flex aspect-square items-center justify-center overflow-hidden rounded-2xl shadow-inner">
-                  {isProcessing && (
-                    <div className="bg-base-100/60 absolute inset-0 z-10 flex items-center justify-center rounded-2xl backdrop-blur-sm">
-                      <span className="loading loading-spinner loading-md text-primary" />
-                    </div>
-                  )}
-                  {outputUrl ? (
-                    <img
-                      src={outputUrl}
-                      alt="Preview"
-                      className="h-full w-full rounded-xl object-contain"
-                    />
-                  ) : (
-                    <span className="loading loading-spinner loading-md text-primary" />
-                  )}
-                </div>
-                <p className="text-base-content/40 text-center text-[10px]">
-                  White fill shown — your download will be pure white
+              <div className="text-center">
+                <p className="text-base-content text-lg font-semibold">
+                  {isDragging ? 'Drop your image here' : 'Upload an image'}
+                </p>
+                <p className="text-base-content/50 mt-1 text-sm">
+                  Drag & drop, or click to browse — PNG, JPG, WEBP
                 </p>
               </div>
-
-              {/* ── Padding ── */}
-              <div className="space-y-5">
+              <button className="btn btn-primary btn-sm pointer-events-none rounded-full px-6">
+                Choose File
+              </button>
+            </div>
+          </div>
+        ) : (
+          /* Editor — 3-column on large screens */
+          <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[1fr_260px_220px]">
+            {/* ── Preview ── */}
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
                 <h2 className="text-base-content/60 text-xs font-semibold tracking-widest uppercase">
-                  Padding
+                  Preview
                 </h2>
-                <div className="card bg-base-200/60 space-y-5 rounded-2xl p-5">
-                  <div className="flex items-end justify-between">
-                    <div>
-                      <p className="text-base-content text-4xl font-bold tabular-nums">
-                        {padding}
-                        <span className="text-base-content/40 ml-1 text-xl font-normal">
-                          %
-                        </span>
-                      </p>
-                      <p className="text-base-content/40 mt-1 text-xs">
-                        white border
-                      </p>
-                    </div>
-                    <div className="text-base-content/40 space-y-0.5 text-right text-xs">
-                      <p>0% → tight</p>
-                      <p>50% → max</p>
-                    </div>
+                <button
+                  className="btn btn-ghost btn-xs text-base-content/40 hover:text-base-content"
+                  onClick={() => {
+                    setImageSrc(null);
+                    setOutputUrl(null);
+                    setPadding(10);
+                    setSelectedFilter(FILTERS[0]);
+                  }}>
+                  ✕ Clear
+                </button>
+              </div>
+
+              <div className="bg-base-200 relative flex aspect-square items-center justify-center overflow-hidden rounded-2xl shadow-inner">
+                {isProcessing && (
+                  <div className="bg-base-100/60 absolute inset-0 z-10 flex items-center justify-center rounded-2xl backdrop-blur-sm">
+                    <span className="loading loading-spinner loading-md text-primary" />
                   </div>
-                  <div className="space-y-2">
-                    <input
-                      type="range"
-                      min={0}
-                      max={50}
-                      value={padding}
-                      onChange={(e) => setPadding(Number(e.target.value))}
-                      className="range range-primary range-sm w-full"
-                    />
-                    <div className="text-base-content/30 flex justify-between px-0.5 text-xs">
-                      {[0, 10, 20, 30, 40, 50].map((n) => (
-                        <span key={n}>{n}</span>
-                      ))}
-                    </div>
+                )}
+                {outputUrl ? (
+                  <img
+                    src={outputUrl}
+                    alt="Preview"
+                    className="h-full w-full rounded-xl object-contain"
+                  />
+                ) : (
+                  <span className="loading loading-spinner loading-md text-primary" />
+                )}
+              </div>
+              <p className="text-base-content/40 text-center text-[10px]">
+                White fill shown — your download will be pure white
+              </p>
+            </div>
+
+            {/* ── Padding ── */}
+            <div className="space-y-5">
+              <h2 className="text-base-content/60 text-xs font-semibold tracking-widest uppercase">
+                Padding
+              </h2>
+              <div className="card bg-base-200/60 space-y-5 rounded-2xl p-5">
+                <div className="flex items-end justify-between">
+                  <div>
+                    <p className="text-base-content text-4xl font-bold tabular-nums">
+                      {padding}
+                      <span className="text-base-content/40 ml-1 text-xl font-normal">
+                        %
+                      </span>
+                    </p>
+                    <p className="text-base-content/40 mt-1 text-xs">
+                      white border
+                    </p>
                   </div>
-                  <div className="flex flex-wrap gap-2">
-                    {[0, 5, 10, 20, 30].map((p) => (
-                      <button
-                        key={p}
-                        onClick={() => setPadding(p)}
-                        className={`btn btn-xs rounded-full px-3 transition-all ${padding === p ? 'btn-primary' : 'btn-ghost border-base-300 border'}`}>
-                        {p}%
-                      </button>
+                  <div className="text-base-content/40 space-y-0.5 text-right text-xs">
+                    <p>0% → tight</p>
+                    <p>50% → max</p>
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <input
+                    type="range"
+                    min={0}
+                    max={50}
+                    value={padding}
+                    onChange={(e) => setPadding(Number(e.target.value))}
+                    className="range range-primary range-sm w-full"
+                  />
+                  <div className="text-base-content/30 flex justify-between px-0.5 text-xs">
+                    {[0, 10, 20, 30, 40, 50].map((n) => (
+                      <span key={n}>{n}</span>
                     ))}
                   </div>
                 </div>
-
-                {/* Download */}
-                <div className="space-y-2 pt-2">
-                  <button
-                    onClick={handleDownload}
-                    disabled={!outputUrl || isProcessing}
-                    className="btn btn-neutral h-12 w-full gap-2 rounded-xl text-sm font-semibold">
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.8">
-                      <path d="M8 2v8M5 7l3 3 3-3M2 12v1a1 1 0 001 1h10a1 1 0 001-1v-1" />
-                    </svg>
-                    Download PNG
-                  </button>
-                  <button
-                    onClick={() => fileInputRef.current?.click()}
-                    className="btn btn-ghost text-base-content/50 h-10 w-full rounded-xl text-sm">
-                    Upload different image
-                  </button>
-                </div>
-
-                {/* Info */}
-                <div className="bg-base-200/40 border-base-300/50 space-y-1.5 rounded-xl border p-4">
-                  <p className="text-base-content/50 text-[10px] font-semibold tracking-wider uppercase">
-                    Output
-                  </p>
-                  <div className="text-base-content/40 space-y-0.5 text-[10px]">
-                    <p>Format: PNG (lossless)</p>
-                    <p>Background: #FFFFFF</p>
-                    <p>Aspect: 1:1 square</p>
-                    <p>Filter: {selectedFilter.label}</p>
-                  </div>
+                <div className="flex flex-wrap gap-2">
+                  {[0, 5, 10, 20, 30].map((p) => (
+                    <button
+                      key={p}
+                      onClick={() => setPadding(p)}
+                      className={`btn btn-xs rounded-full px-3 transition-all ${padding === p ? 'btn-primary' : 'btn-ghost border-base-300 border'}`}>
+                      {p}%
+                    </button>
+                  ))}
                 </div>
               </div>
 
-              {/* ── Filters ── */}
-              <div className="space-y-5">
-                <h2 className="text-base-content/60 text-xs font-semibold tracking-widest uppercase">
-                  Filter
-                </h2>
-                <div className="card bg-base-200/60 rounded-2xl p-4">
-                  <div className="flex max-h-[400px] flex-col gap-1.5 overflow-y-auto pr-1">
-                    {FILTERS.map((f) => (
-                      <button
-                        key={f.label}
-                        onClick={() => setSelectedFilter(f)}
-                        className={`flex items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm transition-all ${
-                          selectedFilter.label === f.label
-                            ? 'bg-primary text-primary-content font-semibold'
-                            : 'hover:bg-base-300 text-base-content/70'
-                        }`}>
-                        <span
-                          className="h-5 w-5 shrink-0 rounded-md border border-white/10"
-                          style={{
-                            background:
-                              f.label === 'None'
-                                ? '#aaa'
-                                : f.label === 'Grayscale' ||
-                                    f.label === 'Radio' ||
-                                    f.label === 'Obsidian' ||
-                                    f.label === 'Twenties'
-                                  ? '#888'
-                                  : f.label === 'Sepia' ||
-                                      f.label === 'Vintage' ||
-                                      f.label === 'Golden' ||
-                                      f.label === 'Firenze'
-                                    ? '#c9a86c'
-                                    : f.label === 'Marine' ||
-                                        f.label === 'Oceanic' ||
-                                        f.label === 'Liquid'
-                                      ? '#3b82f6'
-                                      : f.label === 'Rosetint' ||
-                                          f.label === 'Mauve'
-                                        ? '#c084fc'
-                                        : f.label === 'Pastel'
-                                          ? '#f9a8d4'
-                                          : f.label === 'Lofi'
-                                            ? '#374151'
-                                            : '#6b7280',
-                          }}
-                        />
-                        {f.label}
-                      </button>
-                    ))}
-                  </div>
+              {/* Download */}
+              <div className="space-y-2 pt-2">
+                <button
+                  onClick={handleDownload}
+                  disabled={!outputUrl || isProcessing}
+                  className="btn btn-neutral h-12 w-full gap-2 rounded-xl text-sm font-semibold">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8">
+                    <path d="M8 2v8M5 7l3 3 3-3M2 12v1a1 1 0 001 1h10a1 1 0 001-1v-1" />
+                  </svg>
+                  Download PNG
+                </button>
+                <button
+                  onClick={() => fileInputRef.current?.click()}
+                  className="btn btn-ghost text-base-content/50 h-10 w-full rounded-xl text-sm">
+                  Upload different image
+                </button>
+              </div>
+
+              {/* Info */}
+              <div className="bg-base-200/40 border-base-300/50 space-y-1.5 rounded-xl border p-4">
+                <p className="text-base-content/50 text-[10px] font-semibold tracking-wider uppercase">
+                  Output
+                </p>
+                <div className="text-base-content/40 space-y-0.5 text-[10px]">
+                  <p>Format: PNG (lossless)</p>
+                  <p>Background: #FFFFFF</p>
+                  <p>Aspect: 1:1 square</p>
+                  <p>Filter: {selectedFilter.label}</p>
                 </div>
               </div>
             </div>
-          )}
-        </div>
+
+            {/* ── Filters ── */}
+            <div className="space-y-5">
+              <h2 className="text-base-content/60 text-xs font-semibold tracking-widest uppercase">
+                Filter
+              </h2>
+              <div className="card bg-base-200/60 rounded-2xl p-4">
+                <div className="flex max-h-[400px] flex-col gap-1.5 overflow-y-auto pr-1">
+                  {FILTERS.map((f) => (
+                    <button
+                      key={f.label}
+                      onClick={() => setSelectedFilter(f)}
+                      className={`flex items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm transition-all ${
+                        selectedFilter.label === f.label
+                          ? 'bg-primary text-primary-content font-semibold'
+                          : 'hover:bg-base-300 text-base-content/70'
+                      }`}>
+                      <span
+                        className="h-5 w-5 shrink-0 rounded-md border border-white/10"
+                        style={{
+                          background:
+                            f.label === 'None'
+                              ? '#aaa'
+                              : f.label === 'Grayscale' ||
+                                  f.label === 'Radio' ||
+                                  f.label === 'Obsidian' ||
+                                  f.label === 'Twenties'
+                                ? '#888'
+                                : f.label === 'Sepia' ||
+                                    f.label === 'Vintage' ||
+                                    f.label === 'Golden' ||
+                                    f.label === 'Firenze'
+                                  ? '#c9a86c'
+                                  : f.label === 'Marine' ||
+                                      f.label === 'Oceanic' ||
+                                      f.label === 'Liquid'
+                                    ? '#3b82f6'
+                                    : f.label === 'Rosetint' ||
+                                        f.label === 'Mauve'
+                                      ? '#c084fc'
+                                      : f.label === 'Pastel'
+                                        ? '#f9a8d4'
+                                        : f.label === 'Lofi'
+                                          ? '#374151'
+                                          : '#6b7280',
+                        }}
+                      />
+                      {f.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Hidden canvas for processing */}
@@ -428,7 +391,6 @@ export const InstaSizeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           e.target.value = '';
         }}
       />
-      <div className="modal-backdrop" onClick={onClose} />
-    </dialog>
+    </ModalWrapper>
   );
 };

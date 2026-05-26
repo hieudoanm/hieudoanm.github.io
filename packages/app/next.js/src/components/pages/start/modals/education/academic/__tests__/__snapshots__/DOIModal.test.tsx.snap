@@ -8,54 +8,63 @@ exports[`DOIModal should render 1`] = `
     style="background: rgba(0, 0, 0, 0.6);"
   >
     <div
-      class="modal-box flex w-full max-w-3xl flex-col gap-6"
+      class="card bg-base-100 border-base-300 w-full max-w-3xl border shadow-2xl"
     >
       <div
-        class="flex items-center justify-between"
+        class="card-body gap-5 p-6"
       >
-        <div>
-          <h3
-            class="text-lg font-bold"
+        <div
+          class="flex items-start justify-between"
+        >
+          <div>
+            <h2
+              class="text-lg font-black tracking-tight"
+            >
+              DOI Lookup
+            </h2>
+            <p
+              class="text-base-content/40 mt-0.5 font-mono text-[10px] tracking-widest uppercase"
+            >
+              Fetch and collect citations via Crossref
+            </p>
+          </div>
+          <button
+            class="btn btn-ghost btn-xs btn-square text-base opacity-60 hover:opacity-100"
           >
-            DOI Lookup
-          </h3>
-          <p
-            class="text-base-content/50 text-sm"
-          >
-            Fetch and collect citations via Crossref
-          </p>
+            ✕
+          </button>
         </div>
-        <button
-          class="btn btn-ghost btn-sm btn-circle"
+        <form
+          class="flex gap-3"
         >
-          ✕
-        </button>
+          <input
+            class="input input-bordered grow font-mono text-sm"
+            placeholder="https://doi.org/10.xxxx/..."
+            required=""
+            value="https://doi.org/10.1016/j.smrv.2009.04.001"
+          />
+          <button
+            class="btn btn-primary min-w-[80px]"
+            type="submit"
+          >
+            Fetch
+          </button>
+        </form>
+        <p
+          class="text-base-content/30 py-6 text-center text-sm"
+        >
+          No references yet — enter a DOI above to get started.
+        </p>
       </div>
-      <form
-        class="flex gap-3"
-      >
-        <input
-          class="input input-bordered grow font-mono text-sm"
-          placeholder="https://doi.org/10.xxxx/..."
-          required=""
-          value="https://doi.org/10.1016/j.smrv.2009.04.001"
-        />
-        <button
-          class="btn btn-primary min-w-[80px]"
-          type="submit"
-        >
-          Fetch
-        </button>
-      </form>
-      <p
-        class="text-base-content/30 py-6 text-center text-sm"
-      >
-        No references yet — enter a DOI above to get started.
-      </p>
     </div>
-    <div
+    <form
       class="modal-backdrop"
-    />
+      method="dialog"
+    >
+      <button>
+        close
+      </button>
+    </form>
   </dialog>
 </div>
 `;

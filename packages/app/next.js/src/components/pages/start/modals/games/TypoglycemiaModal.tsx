@@ -1,5 +1,3 @@
-'use client';
-
 import createDOMPurify from 'dompurify';
 import 'github-markdown-css/github-markdown.css';
 import html2canvas from 'html2canvas-pro';
@@ -12,6 +10,7 @@ import {
   useRef,
   useState,
 } from 'react';
+import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 
 /* ------------------------------------------------------------------ */
 /* Helpers                                                              */
@@ -230,41 +229,32 @@ export const TypoglycemiaModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   }, [input]);
 
   return (
-    <dialog
-      className="modal modal-open"
-      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
-      <div className="modal-box flex h-[80vh] w-full max-w-2xl flex-col overflow-hidden p-0">
-        {/* Header */}
-        <div className="border-base-300 flex items-center justify-between border-b px-4 py-3">
-          <div className="tabs tabs-boxed">
-            {(['editor', 'view'] as Tab[]).map((t) => (
-              <a
-                key={t}
-                role="tab"
-                className={`tab tab-sm capitalize ${tab === t ? 'tab-active' : ''}`}
-                onClick={() => setTab(t)}>
-                {t === 'editor' ? '✏️ Editor' : '👁 View'}
-              </a>
-            ))}
-          </div>
-          <button onClick={onClose} className="btn btn-sm btn-circle btn-ghost">
-            ✕
-          </button>
-        </div>
-
-        {/* Body */}
-        <div className="min-h-0 flex-1 overflow-hidden">
-          {tab === 'editor' && (
-            <EditorTab
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-            />
-          )}
-          {tab === 'view' && <ViewTab html={output} />}
+    <ModalWrapper
+      onClose={onClose}
+      title="Typoglycemia"
+      size="max-w-2xl"
+      fullHeight>
+      <div className="border-base-300 flex items-center justify-between border-b px-4 py-3">
+        <div className="tabs tabs-boxed">
+          {(['editor', 'view'] as Tab[]).map((t) => (
+            <a
+              key={t}
+              role="tab"
+              className={`tab tab-sm capitalize ${tab === t ? 'tab-active' : ''}`}
+              onClick={() => setTab(t)}>
+              {t === 'editor' ? '✏️ Editor' : '👁 View'}
+            </a>
+          ))}
         </div>
       </div>
 
-      <div className="modal-backdrop" onClick={onClose} />
-    </dialog>
+      {/* Body */}
+      <div className="min-h-0 flex-1 overflow-hidden">
+        {tab === 'editor' && (
+          <EditorTab value={input} onChange={(e) => setInput(e.target.value)} />
+        )}
+        {tab === 'view' && <ViewTab html={output} />}
+      </div>
+    </ModalWrapper>
   );
 };
