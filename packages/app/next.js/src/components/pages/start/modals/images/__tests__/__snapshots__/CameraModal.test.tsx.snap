@@ -25,7 +25,7 @@ exports[`CameraModal should render 1`] = `
         </button>
       </div>
       <div
-        class="flex flex-col gap-6 bg-neutral-900 text-white p-4"
+        class="flex flex-col gap-6 bg-neutral-900 p-4 text-white"
       >
         <div
           class="flex flex-col gap-8"

@@ -35,7 +35,7 @@ exports[`HouseModal should render 1`] = `
           </button>
         </div>
         <div
-          class="flex items-center gap-2 mb-2"
+          class="mb-2 flex items-center gap-2"
         >
           <button
             class="btn btn-outline btn-xs font-mono tracking-widest"

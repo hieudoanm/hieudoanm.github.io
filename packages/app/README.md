@@ -74,11 +74,13 @@ packages/app/
 │   └── sw.js
 ├── src/
 │   ├── assets/
+│   │   ├── images/
 │   ├── components/
 │   │   ├── atoms/
 │   │   ├── molecules/
 │   │   ├── organisms/
-│   │   └── templates/
+│   │   ├── templates/
+│   │   └── pages/
 │   ├── data/
 │   ├── hooks/
 │   ├── layouts/
@@ -88,12 +90,11 @@ packages/app/
 │   ├── styles/
 │   ├── utils/
 │   └── ...
-├── pnpm-lock.yaml
+├── package.json
 ├── README.md
 ├── tailwind.config.js
 ├── tsconfig.json
 └── next.config.js
-
 ```
 
 ## Platform Distribution

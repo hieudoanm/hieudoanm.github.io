@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/hieudoanm/hieudoanm/src/clients/chat"
+	"github.com/hieudoanm/hieudoanm/src/services/chat"
 	"github.com/spf13/cobra"
 
 	markdown "github.com/MichaelMure/go-term-markdown"

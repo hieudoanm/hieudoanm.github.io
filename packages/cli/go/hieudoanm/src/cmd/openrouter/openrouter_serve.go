@@ -7,7 +7,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/hieudoanm/hieudoanm/src/clients/chat"
+	"github.com/hieudoanm/hieudoanm/src/services/chat"
 	"github.com/spf13/cobra"
 )
 

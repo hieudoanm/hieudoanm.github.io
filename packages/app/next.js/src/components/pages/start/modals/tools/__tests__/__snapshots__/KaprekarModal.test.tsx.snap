@@ -35,7 +35,7 @@ exports[`KaprekarModal should render 1`] = `
           </button>
         </div>
         <div
-          class="flex justify-end -mt-2 mb-1"
+          class="-mt-2 mb-1 flex justify-end"
         >
           <button
             class="btn btn-outline btn-xs font-mono tracking-widest"
