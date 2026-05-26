@@ -23,6 +23,7 @@ import { JSONSchemaModal } from '@hieudoanm/components/pages/start/modals/editor
 import { ManifestModal } from '@hieudoanm/components/pages/start/modals/editors/ManifestModal';
 import { MarkdownModal } from '@hieudoanm/components/pages/start/modals/editors/MarkdownModal';
 import { ResumeModal } from '@hieudoanm/components/pages/start/modals/editors/ResumeModal';
+import { SlidesModal } from '@hieudoanm/components/pages/start/modals/editors/SlidesModal';
 import { DOIModal } from '@hieudoanm/components/pages/start/modals/education/academic/DOIModal';
 import { PeriodicTableModal } from '@hieudoanm/components/pages/start/modals/education/chemistry/PeriodicTableModal';
 import { LanguagesEnglishModal } from '@hieudoanm/components/pages/start/modals/education/languages/EnglishModal';
@@ -56,6 +57,7 @@ import { NoSleepModal } from '@hieudoanm/components/pages/start/modals/tools/NoS
 import { ProxyModal } from '@hieudoanm/components/pages/start/modals/tools/ProxyModal';
 import { SVGModal } from '@hieudoanm/components/pages/start/modals/tools/SVGModal';
 import { ShopifyDetectModal } from '@hieudoanm/components/pages/start/modals/tools/ShopifyDetectModal';
+import { SheetsModal } from '@hieudoanm/components/pages/start/modals/tools/SheetsModal';
 import { StringModal } from '@hieudoanm/components/pages/start/modals/tools/StringModal';
 import { UUIDModal } from '@hieudoanm/components/pages/start/modals/tools/UUIDModal';
 import { CalendarTrackerModal } from '@hieudoanm/components/pages/start/modals/visualization/CalendarTracker';
@@ -139,66 +141,68 @@ const SignModal = dynamic(
 /* ------------------------------------------------------------------ */
 
 type ModalId =
-  | 'chat'
+  | 'blackjack'
   | 'braille'
   | 'breaking-bad'
   | 'calculator'
+  | 'calendar-tracker'
+  | 'camera'
+  | 'chat'
+  | 'chess-clock'
+  | 'clipboard'
   | 'colors'
   | 'converter'
   | 'countdown'
   | 'doi'
+  | 'elo'
   | 'emojis'
+  | 'english'
+  | 'figlet'
+  | 'flashcards'
+  | 'github-social-preview'
   | 'house'
-  | 'camera'
+  | 'inflation'
+  | 'instasize'
+  | 'invoice-parser'
   | 'ip'
+  | 'json-schema'
   | 'kaprekar'
+  | 'legislation'
+  | 'logmar'
+  | 'manifest'
+  | 'markdown'
   | 'morse'
   | 'no-sleep'
-  | 'pitch'
-  | 'pomodoro'
-  | 'qr'
-  | 'sign'
-  | 'string'
-  | 'uuid'
-  | 'flashcards'
-  | 'periodic-table'
-  | 'blackjack'
-  | 'pi'
-  | 'poker'
-  | 'recall'
-  | 't3'
-  | 'towers'
-  | 'typoglycemia'
-  | 'wordle'
-  | 'tax'
-  | 'elo'
-  | 'inflation'
   | 'openapi'
-  | 'english'
-  | 'manifest'
+  | 'palindrome'
+  | 'periodic-table'
+  | 'pi'
+  | 'pitch'
+  | 'pokedex'
+  | 'poker'
+  | 'pomodoro'
+  | 'proxy'
+  | 'qr'
+  | 'quizify'
+  | 'recall'
   | 'redact'
   | 'resume'
-  | 'github-social-preview'
-  | 'json-schema'
+  | 'sheets'
   | 'shopify-detect'
-  | 'pokedex'
-  | 'figlet'
-  | 'markdown'
-  | 'youtube-thumbnails'
-  | 'instasize'
-  | 'palindrome'
-  | 'clipboard'
-  | 'calendar-tracker'
-  | 'legislation'
-  | 'chess-clock'
-  | 'watchface'
-  | 'invoice-parser'
-  | 'logmar'
+  | 'sign'
+  | 'slides'
   | 'snellen'
+  | 'string'
   | 'svg'
+  | 't3'
+  | 'tax'
+  | 'towers'
   | 'tumbling-e'
-  | 'quizify'
-  | 'proxy';
+  | 'typoglycemia'
+  | 'uuid'
+  | 'watchface'
+  | 'wordle'
+  | 'youtube-thumbnails';
 
 type SidebarTab = 'tasks' | 'clock';
 
@@ -210,66 +214,68 @@ const MODAL_MAP: Record<
   ModalId,
   FC<{ onClose: () => void }> | ComponentType<{ onClose: () => void }>
 > = {
-  chat: ChatModal,
+  blackjack: BlackjackModal,
   braille: BrailleModal,
   'breaking-bad': BreakingBadModal,
   calculator: CalculatorModal,
+  'calendar-tracker': CalendarTrackerModal,
+  camera: CameraModal,
+  chat: ChatModal,
+  'chess-clock': ChessClockModal,
+  clipboard: ClipboardModal,
   colors: ColorsModal,
   converter: ConverterModal,
   countdown: CountdownModal,
   doi: DOIModal,
+  elo: EloModal,
   emojis: EmojisModal,
+  english: LanguagesEnglishModal,
+  figlet: FigletModal,
+  flashcards: FlashcardsModal,
+  'github-social-preview': GitHubSocialPreviewModal,
   house: HouseModal,
   inflation: InflationModal,
+  instasize: InstaSizeModal,
+  'invoice-parser': InvoiceParserModal,
   ip: IPModal,
+  'json-schema': JSONSchemaModal,
   kaprekar: KaprekarModal,
+  legislation: LegislationModal,
+  logmar: LogMARChartModal,
   manifest: ManifestModal,
+  markdown: MarkdownModal,
   morse: MorseModal,
   'no-sleep': NoSleepModal,
-  pitch: PitchModal,
-  pomodoro: PomodoroModal,
-  qr: QRCodeModal,
-  string: StringModal,
-  uuid: UUIDModal,
-  flashcards: FlashcardsModal,
-  'periodic-table': PeriodicTableModal,
-  blackjack: BlackjackModal,
-  pi: PiModal,
-  poker: PokerModal,
-  recall: RecallModal,
-  t3: T3Modal,
-  towers: TowersModal,
-  typoglycemia: TypoglycemiaModal,
-  wordle: WordleModal,
-  tax: TaxModal,
-  elo: EloModal,
   openapi: OpenAPI2Postman,
-  english: LanguagesEnglishModal,
-  'github-social-preview': GitHubSocialPreviewModal,
-  redact: RedactModal,
-  camera: CameraModal,
-  'json-schema': JSONSchemaModal,
-  'shopify-detect': ShopifyDetectModal,
-  pokedex: PokedexModal,
-  figlet: FigletModal,
-  markdown: MarkdownModal,
-  resume: ResumeModal,
-  'youtube-thumbnails': YouTubeThumbnailsModal,
-  instasize: InstaSizeModal,
   palindrome: PalindromeModal,
-  'calendar-tracker': CalendarTrackerModal,
-  clipboard: ClipboardModal,
-  legislation: LegislationModal,
-  'chess-clock': ChessClockModal,
-  watchface: WatchFaceModal,
-  'invoice-parser': InvoiceParserModal,
-  sign: SignModal,
-  logmar: LogMARChartModal,
-  snellen: SnellenChartModal,
-  svg: SVGModal,
-  'tumbling-e': TumblingEChartModal,
-  quizify: QuizifyModal,
+  'periodic-table': PeriodicTableModal,
+  pi: PiModal,
+  pitch: PitchModal,
+  pokedex: PokedexModal,
+  poker: PokerModal,
+  pomodoro: PomodoroModal,
   proxy: ProxyModal,
+  qr: QRCodeModal,
+  quizify: QuizifyModal,
+  recall: RecallModal,
+  redact: RedactModal,
+  resume: ResumeModal,
+  sheets: SheetsModal,
+  'shopify-detect': ShopifyDetectModal,
+  sign: SignModal,
+  slides: SlidesModal,
+  snellen: SnellenChartModal,
+  string: StringModal,
+  svg: SVGModal,
+  t3: T3Modal,
+  tax: TaxModal,
+  towers: TowersModal,
+  'tumbling-e': TumblingEChartModal,
+  typoglycemia: TypoglycemiaModal,
+  uuid: UUIDModal,
+  watchface: WatchFaceModal,
+  wordle: WordleModal,
+  'youtube-thumbnails': YouTubeThumbnailsModal,
 };
 
 /* ------------------------------------------------------------------ */
@@ -364,6 +370,13 @@ const makeTools = (
       emoji: '🔑',
       color: '#a855f7',
       onClick: open('uuid'),
+    },
+    {
+      label: 'Sheets',
+      description: 'SQLite Browser',
+      emoji: '🗄️',
+      color: '#3b82f6',
+      onClick: open('sheets'),
     },
   ],
   calculators: [
@@ -505,6 +518,13 @@ const makeTools = (
       emoji: '🖋️',
       color: '#3b82f6',
       onClick: open('redact'),
+    },
+    {
+      label: 'Slides',
+      description: 'Pitch Deck',
+      emoji: '📽️',
+      color: '#3b82f6',
+      onClick: open('slides'),
     },
   ],
   education: [
