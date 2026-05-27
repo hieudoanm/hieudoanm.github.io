@@ -1,0 +1,15 @@
+# API
+
+1. [AirVisual](http://api.airvisual.com/)
+2. [chess.com](https://www.chess.com/news/view/published-data-api)
+3. [CoinRanking](https://www.coinranking.com/)
+4. [CrossRef](https://www.crossref.org/)
+5. [Deepseek](https://deepseek.com/)
+6. [Fixer](https://fixer.io/)
+7. [Football-Data](https://www.football-data.co.uk/)
+8. [Frankfurter](https://www.frankfurter.app/)
+9. [Lichess](https://lichess.org/api)
+10. [NewsAPI](https://newsapi.org/)
+11. [OpenWeatherMap](https://openweathermap.org/api)
+12. [OpenAI](https://openai.com/api)
+13. [Telegram](https://core.telegram.org/bots/api)

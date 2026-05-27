@@ -1,0 +1,13 @@
+pub mod airvisual;
+pub mod chess;
+pub mod coinranking;
+pub mod crossref;
+pub mod deepseek;
+pub mod fixer;
+pub mod football_data;
+pub mod frankfurter;
+pub mod lichess;
+pub mod newsapi;
+pub mod openai;
+pub mod openweathermap;
+pub mod telegram;

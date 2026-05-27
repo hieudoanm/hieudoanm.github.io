@@ -67,7 +67,7 @@ importers:
         version: 6.43.0
       '@crossref.org/api':
         specifier: workspace:*
-        version: link:../../modules/api/crossref.org
+        version: link:../../modules/api/typescript/crossref.org
       '@hieudoanm/calendar':
         specifier: workspace:*
         version: link:../../modules/utilities/calendar
@@ -329,7 +329,7 @@ importers:
         version: 6.43.0
       '@crossref.org/api':
         specifier: workspace:*
-        version: link:../../modules/api/crossref.org
+        version: link:../../modules/api/typescript/crossref.org
       '@hieudoanm/calendar':
         specifier: workspace:*
         version: link:../../modules/utilities/calendar
@@ -1105,7 +1105,7 @@ importers:
         specifier: 6.1.3
         version: 6.1.3
 
-  packages/modules/api/airvisual.com:
+  packages/modules/api/typescript/airvisual.com:
     devDependencies:
       '@eslint/js':
         specifier: 10.0.1
@@ -1147,7 +1147,7 @@ importers:
         specifier: 8.59.3
         version: 8.59.3(eslint@10.4.0(jiti@2.7.0))(typescript@6.0.3)
 
-  packages/modules/api/chess.com:
+  packages/modules/api/typescript/chess.com:
     devDependencies:
       '@eslint/js':
         specifier: 10.0.1
@@ -1189,7 +1189,7 @@ importers:
         specifier: 8.59.3
         version: 8.59.3(eslint@10.4.0(jiti@2.7.0))(typescript@6.0.3)
 
-  packages/modules/api/coinranking.com:
+  packages/modules/api/typescript/coinranking.com:
     devDependencies:
       '@eslint/js':
         specifier: 10.0.1
@@ -1231,7 +1231,7 @@ importers:
         specifier: 8.59.3
         version: 8.59.3(eslint@10.4.0(jiti@2.7.0))(typescript@6.0.3)
 
-  packages/modules/api/crossref.org:
+  packages/modules/api/typescript/crossref.org:
     devDependencies:
       '@eslint/js':
         specifier: 10.0.1
@@ -1273,7 +1273,7 @@ importers:
         specifier: 8.59.3
         version: 8.59.3(eslint@10.4.0(jiti@2.7.0))(typescript@6.0.3)
 
-  packages/modules/api/deepseek.com:
+  packages/modules/api/typescript/deepseek.com:
     devDependencies:
       '@eslint/js':
         specifier: 10.0.1
@@ -1315,7 +1315,7 @@ importers:
         specifier: 8.59.3
         version: 8.59.3(eslint@10.4.0(jiti@2.7.0))(typescript@6.0.3)
 
-  packages/modules/api/fixer.io:
+  packages/modules/api/typescript/fixer.io:
     devDependencies:
       '@eslint/js':
         specifier: 10.0.1
@@ -1357,7 +1357,7 @@ importers:
         specifier: 8.59.3
         version: 8.59.3(eslint@10.4.0(jiti@2.7.0))(typescript@6.0.3)
 
-  packages/modules/api/football-data.org:
+  packages/modules/api/typescript/football-data.org:
     devDependencies:
       '@eslint/js':
         specifier: 10.0.1
@@ -1399,7 +1399,7 @@ importers:
         specifier: 8.59.3
         version: 8.59.3(eslint@10.4.0(jiti@2.7.0))(typescript@6.0.3)
 
-  packages/modules/api/frankfurter.app:
+  packages/modules/api/typescript/frankfurter.app:
     devDependencies:
       '@eslint/js':
         specifier: 10.0.1
@@ -1441,7 +1441,7 @@ importers:
         specifier: 8.59.3
         version: 8.59.3(eslint@10.4.0(jiti@2.7.0))(typescript@6.0.3)
 
-  packages/modules/api/lichess.org:
+  packages/modules/api/typescript/lichess.org:
     devDependencies:
       '@eslint/js':
         specifier: 10.0.1
@@ -1483,7 +1483,7 @@ importers:
         specifier: 8.59.3
         version: 8.59.3(eslint@10.4.0(jiti@2.7.0))(typescript@6.0.3)
 
-  packages/modules/api/newsapi.org:
+  packages/modules/api/typescript/newsapi.org:
     devDependencies:
       '@eslint/js':
         specifier: 10.0.1
@@ -1525,7 +1525,7 @@ importers:
         specifier: 8.59.3
         version: 8.59.3(eslint@10.4.0(jiti@2.7.0))(typescript@6.0.3)
 
-  packages/modules/api/openai.com:
+  packages/modules/api/typescript/openai.com:
     devDependencies:
       '@eslint/js':
         specifier: 10.0.1
@@ -1567,7 +1567,7 @@ importers:
         specifier: 8.59.3
         version: 8.59.3(eslint@10.4.0(jiti@2.7.0))(typescript@6.0.3)
 
-  packages/modules/api/openweathermap.org:
+  packages/modules/api/typescript/openweathermap.org:
     devDependencies:
       '@eslint/js':
         specifier: 10.0.1
@@ -1609,7 +1609,7 @@ importers:
         specifier: 8.59.3
         version: 8.59.3(eslint@10.4.0(jiti@2.7.0))(typescript@6.0.3)
 
-  packages/modules/api/telegram.org:
+  packages/modules/api/typescript/telegram.org:
     devDependencies:
       '@eslint/js':
         specifier: 10.0.1
