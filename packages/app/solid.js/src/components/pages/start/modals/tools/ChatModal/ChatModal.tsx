@@ -2,12 +2,12 @@ import { createSignal } from 'solid-js';
 import { GeminiModel } from '@hieudoanm.github.io/clients/gemini/gemini.enums';
 import { OpenRouterModel } from '@hieudoanm.github.io/clients/openrouter/openrouter.enums';
 import { Model, models } from '@hieudoanm.github.io/data/models';
-import { scrollToBottom } from '@hieudoanm.github.io/utils/scroll';
 import { trpcClient } from '@hieudoanm.github.io/utils/trpc';
-import { tryCatch } from '@hieudoanm.github.io/utils/try-catch';
+import { tryCatch } from '@hieudoanm/try-catch';
 import Tesseract from 'tesseract.js';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 import { Message, Messages } from './ChatMessages';
+import { scrollToBottom } from '@browser/native';
 
 const groupModels = (models: Model[]) => {
   const ids: string[] = models.map(({ id }) => id);

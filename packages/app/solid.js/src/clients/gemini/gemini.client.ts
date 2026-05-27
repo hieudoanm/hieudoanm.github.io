@@ -1,4 +1,4 @@
-import { tryCatch } from '@hieudoanm.github.io/utils/try-catch';
+import { tryCatch } from '@hieudoanm/try-catch';
 import { GeminiModel } from './gemini.enums';
 
 const GOOGLE_GEMINI_API_KEY = process.env.GOOGLE_GEMINI_API_KEY ?? '';

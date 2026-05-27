@@ -83,6 +83,9 @@ importers:
       '@hieudoanm/string':
         specifier: workspace:*
         version: link:../../modules/utilities/string
+      '@hieudoanm/try-catch':
+        specifier: workspace:*
+        version: link:../../modules/utilities/try-catch
       '@mediapipe/camera_utils':
         specifier: 0.3.1675466862
         version: 0.3.1675466862
@@ -342,6 +345,9 @@ importers:
       '@hieudoanm/string':
         specifier: workspace:*
         version: link:../../modules/utilities/string
+      '@hieudoanm/try-catch':
+        specifier: workspace:*
+        version: link:../../modules/utilities/try-catch
       '@mediapipe/camera_utils':
         specifier: 0.3.1675466862
         version: 0.3.1675466862
@@ -1125,6 +1131,9 @@ importers:
       prettier:
         specifier: 3.8.3
         version: 3.8.3
+      rimraf:
+        specifier: 6.1.3
+        version: 6.1.3
       ts-jest:
         specifier: 29.4.9
         version: 29.4.9(@babel/core@7.29.0)(@jest/transform@30.4.1)(@jest/types@30.4.1)(babel-jest@30.4.1(@babel/core@7.29.0))(jest-util@30.4.1)(jest@30.4.2(@types/node@25.8.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@25.8.0)(typescript@6.0.3)))(typescript@6.0.3)
@@ -1164,6 +1173,9 @@ importers:
       prettier:
         specifier: 3.8.3
         version: 3.8.3
+      rimraf:
+        specifier: 6.1.3
+        version: 6.1.3
       ts-jest:
         specifier: 29.4.9
         version: 29.4.9(@babel/core@7.29.0)(@jest/transform@30.4.1)(@jest/types@30.4.1)(babel-jest@30.4.1(@babel/core@7.29.0))(jest-util@30.4.1)(jest@30.4.2(@types/node@25.8.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@25.8.0)(typescript@6.0.3)))(typescript@6.0.3)
@@ -1203,6 +1215,9 @@ importers:
       prettier:
         specifier: 3.8.3
         version: 3.8.3
+      rimraf:
+        specifier: 6.1.3
+        version: 6.1.3
       ts-jest:
         specifier: 29.4.9
         version: 29.4.9(@babel/core@7.29.0)(@jest/transform@30.4.1)(@jest/types@30.4.1)(babel-jest@30.4.1(@babel/core@7.29.0))(jest-util@30.4.1)(jest@30.4.2(@types/node@25.8.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@25.8.0)(typescript@6.0.3)))(typescript@6.0.3)
@@ -1242,6 +1257,9 @@ importers:
       prettier:
         specifier: 3.8.3
         version: 3.8.3
+      rimraf:
+        specifier: 6.1.3
+        version: 6.1.3
       ts-jest:
         specifier: 29.4.9
         version: 29.4.9(@babel/core@7.29.0)(@jest/transform@30.4.1)(@jest/types@30.4.1)(babel-jest@30.4.1(@babel/core@7.29.0))(jest-util@30.4.1)(jest@30.4.2(@types/node@25.8.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@25.8.0)(typescript@6.0.3)))(typescript@6.0.3)
@@ -1281,6 +1299,9 @@ importers:
       prettier:
         specifier: 3.8.3
         version: 3.8.3
+      rimraf:
+        specifier: 6.1.3
+        version: 6.1.3
       ts-jest:
         specifier: 29.4.9
         version: 29.4.9(@babel/core@7.29.0)(@jest/transform@30.4.1)(@jest/types@30.4.1)(babel-jest@30.4.1(@babel/core@7.29.0))(jest-util@30.4.1)(jest@30.4.2(@types/node@25.8.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@25.8.0)(typescript@6.0.3)))(typescript@6.0.3)
@@ -1320,6 +1341,9 @@ importers:
       prettier:
         specifier: 3.8.3
         version: 3.8.3
+      rimraf:
+        specifier: 6.1.3
+        version: 6.1.3
       ts-jest:
         specifier: 29.4.9
         version: 29.4.9(@babel/core@7.29.0)(@jest/transform@30.4.1)(@jest/types@30.4.1)(babel-jest@30.4.1(@babel/core@7.29.0))(jest-util@30.4.1)(jest@30.4.2(@types/node@25.8.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@25.8.0)(typescript@6.0.3)))(typescript@6.0.3)
@@ -1359,6 +1383,9 @@ importers:
       prettier:
         specifier: 3.8.3
         version: 3.8.3
+      rimraf:
+        specifier: 6.1.3
+        version: 6.1.3
       ts-jest:
         specifier: 29.4.9
         version: 29.4.9(@babel/core@7.29.0)(@jest/transform@30.4.1)(@jest/types@30.4.1)(babel-jest@30.4.1(@babel/core@7.29.0))(jest-util@30.4.1)(jest@30.4.2(@types/node@25.8.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@25.8.0)(typescript@6.0.3)))(typescript@6.0.3)
@@ -1398,6 +1425,9 @@ importers:
       prettier:
         specifier: 3.8.3
         version: 3.8.3
+      rimraf:
+        specifier: 6.1.3
+        version: 6.1.3
       ts-jest:
         specifier: 29.4.9
         version: 29.4.9(@babel/core@7.29.0)(@jest/transform@30.4.1)(@jest/types@30.4.1)(babel-jest@30.4.1(@babel/core@7.29.0))(jest-util@30.4.1)(jest@30.4.2(@types/node@25.8.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@25.8.0)(typescript@6.0.3)))(typescript@6.0.3)
@@ -1437,6 +1467,9 @@ importers:
       prettier:
         specifier: 3.8.3
         version: 3.8.3
+      rimraf:
+        specifier: 6.1.3
+        version: 6.1.3
       ts-jest:
         specifier: 29.4.9
         version: 29.4.9(@babel/core@7.29.0)(@jest/transform@30.4.1)(@jest/types@30.4.1)(babel-jest@30.4.1(@babel/core@7.29.0))(jest-util@30.4.1)(jest@30.4.2(@types/node@25.8.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@25.8.0)(typescript@6.0.3)))(typescript@6.0.3)
@@ -1476,6 +1509,9 @@ importers:
       prettier:
         specifier: 3.8.3
         version: 3.8.3
+      rimraf:
+        specifier: 6.1.3
+        version: 6.1.3
       ts-jest:
         specifier: 29.4.9
         version: 29.4.9(@babel/core@7.29.0)(@jest/transform@30.4.1)(@jest/types@30.4.1)(babel-jest@30.4.1(@babel/core@7.29.0))(jest-util@30.4.1)(jest@30.4.2(@types/node@25.8.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@25.8.0)(typescript@6.0.3)))(typescript@6.0.3)
@@ -1515,6 +1551,9 @@ importers:
       prettier:
         specifier: 3.8.3
         version: 3.8.3
+      rimraf:
+        specifier: 6.1.3
+        version: 6.1.3
       ts-jest:
         specifier: 29.4.9
         version: 29.4.9(@babel/core@7.29.0)(@jest/transform@30.4.1)(@jest/types@30.4.1)(babel-jest@30.4.1(@babel/core@7.29.0))(jest-util@30.4.1)(jest@30.4.2(@types/node@25.8.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@25.8.0)(typescript@6.0.3)))(typescript@6.0.3)
@@ -1554,6 +1593,9 @@ importers:
       prettier:
         specifier: 3.8.3
         version: 3.8.3
+      rimraf:
+        specifier: 6.1.3
+        version: 6.1.3
       ts-jest:
         specifier: 29.4.9
         version: 29.4.9(@babel/core@7.29.0)(@jest/transform@30.4.1)(@jest/types@30.4.1)(babel-jest@30.4.1(@babel/core@7.29.0))(jest-util@30.4.1)(jest@30.4.2(@types/node@25.8.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@25.8.0)(typescript@6.0.3)))(typescript@6.0.3)
@@ -1593,6 +1635,9 @@ importers:
       prettier:
         specifier: 3.8.3
         version: 3.8.3
+      rimraf:
+        specifier: 6.1.3
+        version: 6.1.3
       ts-jest:
         specifier: 29.4.9
         version: 29.4.9(@babel/core@7.29.0)(@jest/transform@30.4.1)(@jest/types@30.4.1)(babel-jest@30.4.1(@babel/core@7.29.0))(jest-util@30.4.1)(jest@30.4.2(@types/node@25.8.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@25.8.0)(typescript@6.0.3)))(typescript@6.0.3)
@@ -1635,6 +1680,9 @@ importers:
       prettier:
         specifier: 3.8.3
         version: 3.8.3
+      rimraf:
+        specifier: 6.1.3
+        version: 6.1.3
       ts-jest:
         specifier: 29.4.9
         version: 29.4.9(@babel/core@7.29.0)(@jest/transform@30.4.1)(@jest/types@30.4.1)(babel-jest@30.4.1(@babel/core@7.29.0))(jest-util@30.4.1)(jest@30.4.2(@types/node@25.8.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@25.8.0)(typescript@6.0.3)))(typescript@6.0.3)
@@ -1687,6 +1735,9 @@ importers:
       prettier:
         specifier: 3.8.3
         version: 3.8.3
+      rimraf:
+        specifier: 6.1.3
+        version: 6.1.3
       ts-jest:
         specifier: 29.4.9
         version: 29.4.9(@babel/core@7.29.0)(@jest/transform@30.4.1)(@jest/types@30.4.1)(babel-jest@30.4.1(@babel/core@7.29.0))(jest-util@30.4.1)(jest@30.4.2(@types/node@25.8.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@25.8.0)(typescript@6.0.3)))(typescript@6.0.3)
@@ -1723,6 +1774,51 @@ importers:
       prettier:
         specifier: 3.8.3
         version: 3.8.3
+      rimraf:
+        specifier: 6.1.3
+        version: 6.1.3
+      ts-jest:
+        specifier: 29.4.9
+        version: 29.4.9(@babel/core@7.29.0)(@jest/transform@30.4.1)(@jest/types@30.4.1)(babel-jest@30.4.1(@babel/core@7.29.0))(jest-util@30.4.1)(jest@30.4.2(@types/node@25.8.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@25.8.0)(typescript@6.0.3)))(typescript@6.0.3)
+      ts-node:
+        specifier: 10.9.2
+        version: 10.9.2(@types/node@25.8.0)(typescript@6.0.3)
+      typescript:
+        specifier: 6.0.3
+        version: 6.0.3
+      typescript-eslint:
+        specifier: 8.59.3
+        version: 8.59.3(eslint@10.4.0(jiti@2.7.0))(typescript@6.0.3)
+
+  packages/modules/lodash/typescript:
+    devDependencies:
+      '@eslint/js':
+        specifier: 10.0.1
+        version: 10.0.1(eslint@10.4.0(jiti@2.7.0))
+      '@types/jest':
+        specifier: 30.0.0
+        version: 30.0.0
+      '@types/node':
+        specifier: 25.8.0
+        version: 25.8.0
+      eslint:
+        specifier: 10.4.0
+        version: 10.4.0(jiti@2.7.0)
+      globals:
+        specifier: 17.6.0
+        version: 17.6.0
+      jest:
+        specifier: 30.4.2
+        version: 30.4.2(@types/node@25.8.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@25.8.0)(typescript@6.0.3))
+      jest-environment-jsdom:
+        specifier: 30.4.1
+        version: 30.4.1(canvas@3.2.3)
+      prettier:
+        specifier: 3.8.3
+        version: 3.8.3
+      rimraf:
+        specifier: 6.1.3
+        version: 6.1.3
       ts-jest:
         specifier: 29.4.9
         version: 29.4.9(@babel/core@7.29.0)(@jest/transform@30.4.1)(@jest/types@30.4.1)(babel-jest@30.4.1(@babel/core@7.29.0))(jest-util@30.4.1)(jest@30.4.2(@types/node@25.8.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@25.8.0)(typescript@6.0.3)))(typescript@6.0.3)
@@ -1887,6 +1983,9 @@ importers:
       prettier:
         specifier: 3.8.3
         version: 3.8.3
+      rimraf:
+        specifier: 6.1.3
+        version: 6.1.3
       ts-jest:
         specifier: 29.4.9
         version: 29.4.9(@babel/core@7.29.0)(@jest/transform@30.4.1)(@jest/types@30.4.1)(babel-jest@30.4.1(@babel/core@7.29.0))(jest-util@30.4.1)(jest@30.4.2(@types/node@25.8.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@25.8.0)(typescript@6.0.3)))(typescript@6.0.3)
@@ -1933,6 +2032,9 @@ importers:
       prettier:
         specifier: 3.8.3
         version: 3.8.3
+      rimraf:
+        specifier: 6.1.3
+        version: 6.1.3
       ts-jest:
         specifier: 29.4.9
         version: 29.4.9(@babel/core@7.29.0)(@jest/transform@30.4.1)(@jest/types@30.4.1)(babel-jest@30.4.1(@babel/core@7.29.0))(jest-util@30.4.1)(jest@30.4.2(@types/node@25.8.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@25.8.0)(typescript@6.0.3)))(typescript@6.0.3)
@@ -1982,6 +2084,9 @@ importers:
       prettier:
         specifier: 3.8.3
         version: 3.8.3
+      rimraf:
+        specifier: 6.1.3
+        version: 6.1.3
       ts-jest:
         specifier: 29.4.9
         version: 29.4.9(@babel/core@7.29.0)(@jest/transform@30.4.1)(@jest/types@30.4.1)(babel-jest@30.4.1(@babel/core@7.29.0))(jest-util@30.4.1)(jest@30.4.2(@types/node@25.8.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@25.8.0)(typescript@6.0.3)))(typescript@6.0.3)
@@ -2021,6 +2126,9 @@ importers:
       prettier:
         specifier: 3.8.3
         version: 3.8.3
+      rimraf:
+        specifier: 6.1.3
+        version: 6.1.3
       ts-jest:
         specifier: 29.4.9
         version: 29.4.9(@babel/core@7.29.0)(@jest/transform@30.4.1)(@jest/types@30.4.1)(babel-jest@30.4.1(@babel/core@7.29.0))(jest-util@30.4.1)(jest@30.4.2(@types/node@25.8.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@25.8.0)(typescript@6.0.3)))(typescript@6.0.3)
@@ -2060,6 +2168,9 @@ importers:
       prettier:
         specifier: 3.8.3
         version: 3.8.3
+      rimraf:
+        specifier: 6.1.3
+        version: 6.1.3
       ts-jest:
         specifier: 29.4.9
         version: 29.4.9(@babel/core@7.29.0)(@jest/transform@30.4.1)(@jest/types@30.4.1)(babel-jest@30.4.1(@babel/core@7.29.0))(jest-util@30.4.1)(jest@30.4.2(@types/node@25.8.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@25.8.0)(typescript@6.0.3)))(typescript@6.0.3)
@@ -2103,6 +2214,9 @@ importers:
       prettier:
         specifier: 3.8.3
         version: 3.8.3
+      rimraf:
+        specifier: 6.1.3
+        version: 6.1.3
       ts-jest:
         specifier: 29.4.9
         version: 29.4.9(@babel/core@7.29.0)(@jest/transform@30.4.1)(@jest/types@30.4.1)(babel-jest@30.4.1(@babel/core@7.29.0))(jest-util@30.4.1)(jest@30.4.2(@types/node@25.8.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@25.8.0)(typescript@6.0.3)))(typescript@6.0.3)
@@ -2142,6 +2256,9 @@ importers:
       prettier:
         specifier: 3.8.3
         version: 3.8.3
+      rimraf:
+        specifier: 6.1.3
+        version: 6.1.3
       ts-jest:
         specifier: 29.4.9
         version: 29.4.9(@babel/core@7.29.0)(@jest/transform@30.4.1)(@jest/types@30.4.1)(babel-jest@30.4.1(@babel/core@7.29.0))(jest-util@30.4.1)(jest@30.4.2(@types/node@25.8.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@25.8.0)(typescript@6.0.3)))(typescript@6.0.3)
@@ -2181,6 +2298,51 @@ importers:
       prettier:
         specifier: 3.8.3
         version: 3.8.3
+      rimraf:
+        specifier: 6.1.3
+        version: 6.1.3
+      ts-jest:
+        specifier: 29.4.9
+        version: 29.4.9(@babel/core@7.29.0)(@jest/transform@30.4.1)(@jest/types@30.4.1)(babel-jest@30.4.1(@babel/core@7.29.0))(jest-util@30.4.1)(jest@30.4.2(@types/node@25.8.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@25.8.0)(typescript@6.0.3)))(typescript@6.0.3)
+      ts-node:
+        specifier: 10.9.2
+        version: 10.9.2(@types/node@25.8.0)(typescript@6.0.3)
+      typescript:
+        specifier: 6.0.3
+        version: 6.0.3
+      typescript-eslint:
+        specifier: 8.59.3
+        version: 8.59.3(eslint@10.4.0(jiti@2.7.0))(typescript@6.0.3)
+
+  packages/modules/utilities/try-catch:
+    devDependencies:
+      '@eslint/js':
+        specifier: 10.0.1
+        version: 10.0.1(eslint@10.4.0(jiti@2.7.0))
+      '@types/jest':
+        specifier: 30.0.0
+        version: 30.0.0
+      '@types/node':
+        specifier: 25.8.0
+        version: 25.8.0
+      eslint:
+        specifier: 10.4.0
+        version: 10.4.0(jiti@2.7.0)
+      globals:
+        specifier: 17.6.0
+        version: 17.6.0
+      jest:
+        specifier: 30.4.2
+        version: 30.4.2(@types/node@25.8.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@25.8.0)(typescript@6.0.3))
+      jest-environment-jsdom:
+        specifier: 30.4.1
+        version: 30.4.1(canvas@3.2.3)
+      prettier:
+        specifier: 3.8.3
+        version: 3.8.3
+      rimraf:
+        specifier: 6.1.3
+        version: 6.1.3
       ts-jest:
         specifier: 29.4.9
         version: 29.4.9(@babel/core@7.29.0)(@jest/transform@30.4.1)(@jest/types@30.4.1)(babel-jest@30.4.1(@babel/core@7.29.0))(jest-util@30.4.1)(jest@30.4.2(@types/node@25.8.0)(node-notifier@10.0.1)(ts-node@10.9.2(@types/node@25.8.0)(typescript@6.0.3)))(typescript@6.0.3)
@@ -18352,7 +18514,7 @@ snapshots:
       tinyglobby: 0.2.16
       unrs-resolver: 1.11.1
     optionalDependencies:
-      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.59.4(eslint@10.4.0(jiti@2.7.0))(typescript@6.0.3))(eslint-import-resolver-typescript@3.10.1)(eslint@10.4.0(jiti@2.7.0))
+      eslint-plugin-import: 2.32.0(eslint-import-resolver-typescript@3.10.1)(eslint@10.4.0(jiti@2.7.0))
     transitivePeerDependencies:
       - supports-color
 

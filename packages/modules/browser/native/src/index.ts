@@ -4,5 +4,6 @@ export * from './clipboard';
 export * from './console';
 export * from './geolocation';
 export * from './indexeddb';
+export * from './scroll';
 export * from './share';
 export * from './storage';

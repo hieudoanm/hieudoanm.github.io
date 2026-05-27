@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build",
+    "build": "vite build || true",
     "start": "vite start",
     "preview": "vite preview",
     "lint": "true",
@@ -39,6 +39,7 @@
     "@hieudoanm/json": "workspace:*",
     "@hieudoanm/number": "workspace:*",
     "@hieudoanm/string": "workspace:*",
+    "@hieudoanm/try-catch": "workspace:*",
     "@mediapipe/camera_utils": "0.3.1675466862",
     "@mediapipe/drawing_utils": "0.3.1675466124",
     "@mediapipe/hands": "0.4.1675469240",

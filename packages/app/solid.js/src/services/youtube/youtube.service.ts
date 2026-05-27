@@ -1,4 +1,4 @@
-import { tryCatch } from '@hieudoanm.github.io/utils/try-catch';
+import { tryCatch } from '@hieudoanm/try-catch';
 
 const NODE_ENV = process.env.NODE_ENV ?? 'development';
 const BASE_URL =

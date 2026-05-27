@@ -24,6 +24,7 @@
   "scripts": {
     "format": "prettier --cache --write .",
     "lint": "eslint . --fix",
+    "prebuild": "rimraf dist",
     "build": "tsc -p tsconfig.build.json",
     "pretest": "jest --clearCache",
     "test": "jest"
@@ -42,6 +43,7 @@
     "jest": "30.4.2",
     "jiti": "2.7.0",
     "prettier": "3.8.3",
+    "rimraf": "6.1.3",
     "ts-jest": "29.4.9",
     "ts-node": "10.9.2",
     "typescript": "6.0.3",

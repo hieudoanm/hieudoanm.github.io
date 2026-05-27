@@ -2,7 +2,7 @@ import { GeminiModel } from '@hieudoanm.github.io/clients/gemini/gemini.enums';
 import { OpenRouterModel } from '@hieudoanm.github.io/clients/openrouter/openrouter.enums';
 import { generate } from '@hieudoanm.github.io/services/openrouter/openrouter.service';
 import { summariseTranscript } from '@hieudoanm.github.io/services/youtube/youtube.service';
-import { tryCatch } from '@hieudoanm.github.io/utils/try-catch';
+import { tryCatch } from '@hieudoanm/try-catch';
 import { z } from 'zod';
 import { procedure, router } from '../trpc';
 

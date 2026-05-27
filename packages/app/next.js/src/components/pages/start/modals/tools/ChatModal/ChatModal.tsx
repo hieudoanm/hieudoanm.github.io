@@ -1,10 +1,10 @@
+import { scrollToBottom } from '@browser/native';
 import { GeminiModel } from '@hieudoanm.github.io/clients/gemini/gemini.enums';
 import { OpenRouterModel } from '@hieudoanm.github.io/clients/openrouter/openrouter.enums';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 import { Model, models } from '@hieudoanm.github.io/data/models';
-import { scrollToBottom } from '@hieudoanm.github.io/utils/scroll';
 import { trpcClient } from '@hieudoanm.github.io/utils/trpc';
-import { tryCatch } from '@hieudoanm.github.io/utils/try-catch';
+import { tryCatch } from '@hieudoanm/try-catch';
 import { ChangeEvent, FC, SubmitEvent, useRef, useState } from 'react';
 import Tesseract from 'tesseract.js';
 import { Message, Messages } from './ChatMessages';

@@ -2,11 +2,11 @@
 
 | No  | Language       | Usage                           |
 | --- | -------------- | ------------------------------- |
-| 1   | [[Go]]         | CLI                             |
-| 2   | [[JavaScript]] | Front-end                       |
+| 1   | [[c\|C/C++]]   |                                 |
+| 2   | [[Go]]         | CLI                             |
 | 3   | [[Java]]       | Back-end                        |
-| 4   | [[Python]]     | Machine Learning                |
+| 4   | [[JavaScript]] | Front-end                       |
 | 5   | [[Kotlin]]     | [Android](https://android.com)  |
-| 6   | [[Swift]]      | [iOS](https://apple.com/os/ios) |
+| 6   | [[Python]]     | Machine Learning                |
 | 7   | [[Rust]]       | System                          |
-| 8   | [[c\|C/C++]]   |                                 |
+| 8   | [[Swift]]      | [iOS](https://apple.com/os/ios) |

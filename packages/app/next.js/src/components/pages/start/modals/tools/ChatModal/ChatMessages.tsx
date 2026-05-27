@@ -1,11 +1,12 @@
+import { createClipboard, scrollToBottom } from '@browser/native';
 import { GeminiModel } from '@hieudoanm.github.io/clients/gemini/gemini.enums';
 import { OpenRouterModel } from '@hieudoanm.github.io/clients/openrouter/openrouter.enums';
 import { MODELS } from '@hieudoanm.github.io/constants/models';
-import { copy } from '@hieudoanm.github.io/utils/copy';
-import { scrollToBottom } from '@hieudoanm.github.io/utils/scroll';
 import { marked } from 'marked';
 import { FC, useEffect } from 'react';
 import { Counter } from './ChatCounter';
+
+const clipboard = createClipboard();
 
 type Role = 'ai' | 'user';
 
@@ -71,7 +72,7 @@ export const Messages: FC<{ messages: Message[] }> = ({ messages = [] }) => {
                     <p className="text-xs">{model}</p>
                     <button
                       className="cursor-pointer text-lg"
-                      onClick={() => copy(text)}>
+                      onClick={() => clipboard.copy(text)}>
                       Copy
                     </button>
                   </div>

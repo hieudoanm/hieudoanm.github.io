@@ -1,12 +1,12 @@
-import { createEffect } from 'solid-js';
-import type { JSX } from 'solid-js';
+import { createClipboard, scrollToBottom } from '@browser/native';
 import { GeminiModel } from '@hieudoanm.github.io/clients/gemini/gemini.enums';
 import { OpenRouterModel } from '@hieudoanm.github.io/clients/openrouter/openrouter.enums';
-import { Counter } from './ChatCounter';
 import { MODELS } from '@hieudoanm.github.io/constants/models';
-import { copy } from '@hieudoanm.github.io/utils/copy';
-import { scrollToBottom } from '@hieudoanm.github.io/utils/scroll';
 import { marked } from 'marked';
+import { createEffect } from 'solid-js';
+import { Counter } from './ChatCounter';
+
+const clipboard = createClipboard();
 
 type Role = 'ai' | 'user';
 
@@ -74,7 +74,7 @@ export const Messages = (props: { messages: Message[] }) => {
                     <p class="text-xs">{model}</p>
                     <button
                       class="cursor-pointer text-lg"
-                      onClick={() => copy(text)}>
+                      onClick={() => clipboard.copy(text)}>
                       Copy
                     </button>
                   </div>

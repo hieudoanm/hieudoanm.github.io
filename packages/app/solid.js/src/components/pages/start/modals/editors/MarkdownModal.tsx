@@ -2,7 +2,8 @@ import { markdown as markdownLang } from '@codemirror/lang-markdown';
 import { Compartment, EditorState } from '@codemirror/state';
 import { oneDark } from '@codemirror/theme-one-dark';
 import { EditorView } from '@codemirror/view';
-import { tryCatch } from '@hieudoanm.github.io/utils/try-catch';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { tryCatch } from '@hieudoanm/try-catch';
 import DOMPurify from 'dompurify';
 import 'github-markdown-css/github-markdown.css';
 import htmlToPdfmake from 'html-to-pdfmake';
@@ -14,15 +15,12 @@ import {
   PageSize,
   TDocumentDefinitions,
 } from 'pdfmake/interfaces';
-import { createSignal, createEffect, onCleanup, onMount } from 'solid-js';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { createEffect, createSignal, onCleanup, onMount } from 'solid-js';
 import Tesseract from 'tesseract.js';
 
 /* =========================
    Fonts
 ========================= */
-
-const INITIAL_FONT_CLASS = 'font-roboto';
 
 const FONTS = [
   { id: 'inter', name: 'Inter' },

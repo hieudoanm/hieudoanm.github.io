@@ -20,18 +20,19 @@ A modern JavaScript utility library delivering modularity, performance & extras.
     - [Seq](#seq)
     - [String](#string)
     - [Util](#util)
-  - [Documentation](#documentation)
 
 ## Languages
 
-| No  | Language       | Usage   | Other Usage |
-| --- | -------------- | ------- | ----------- |
-| 1   | [C][c]         | System  |             |
-| 2   | [Go][go]       | CLI     | Server      |
-| 3   | [Kotlin][kt]   | Android | Server      |
-| 4   | [Python][py]   | AI      | Server      |
-| 5   | [Rust][rs]     | Desktop |             |
-| 6   | [Swift][swift] | iOS     |             |
+| No  | Language         | Usage   | Other Usage |
+| --- | ---------------- | ------- | ----------- |
+| 1   | [C][c]           | System  |             |
+| 2   | [C++][cpp]       | Game    |             |
+| 3   | [Go][go]         | CLI     | Server      |
+| 4   | [Kotlin][kt]     | Android | Server      |
+| 5   | [Python][py]     | AI      | Server      |
+| 6   | [Rust][rs]       | Desktop |             |
+| 7   | [Swift][swift]   | iOS     |             |
+| 8   | [TypeScript][ts] | Web     |             |
 
 ## Categories
 
@@ -412,15 +413,13 @@ A modern JavaScript utility library delivering modularity, performance & extras.
 | 305 | Util     | `_.toPath`          |          |        | ✓        | ✓        | ✓        |
 | 306 | Util     | `_.uniqueId`        |    ✓     | ✓      | ✓        | ✓        | ✓        |
 
+> Note: Aliases (e.g., `_.first` → `_.head`, `_.each` → `_.forEach`, `_.entries` → `_.toPairs`) are not listed separately. Properties (`_.VERSION`, `_.templateSettings`) are excluded from the count.
+
 [c]: https://www.c-language.org/
+[cpp]: https://www.isocpp.org/
 [go]: https://go.dev/
 [kt]: https://kotlinlang.org/
 [py]: https://python.org/
 [rs]: https://rust-lang.org/
 [swift]: https://developer.apple.com/swift/
-
-> Note: Aliases (e.g., `_.first` → `_.head`, `_.each` → `_.forEach`, `_.entries` → `_.toPairs`) are not listed separately. Properties (`_.VERSION`, `_.templateSettings`) are excluded from the count.
-
-## Documentation
-
-Full documentation at [lodash.com/docs/4.18.1](https://lodash.com/docs/4.18.1)
+[ts]: https://www.typescriptlang.org/
