@@ -30,7 +30,7 @@
     "@eslint/js": "10.0.1",
     "@types/chrome": "0.1.42",
     "@types/firefox-webext-browser": "143.0.0",
-    "@types/node": "25.8.0",
+    "@types/node": "25.9.1",
     "@webpack-cli/generators": "3.0.7",
     "copy-webpack-plugin": "14.0.0",
     "eslint": "10.4.0",
@@ -40,9 +40,9 @@
     "ts-loader": "9.5.7",
     "ts-node": "10.9.2",
     "typescript": "6.0.3",
-    "typescript-eslint": "8.59.3",
-    "web-ext": "10.1.0",
-    "webpack": "5.106.2",
+    "typescript-eslint": "8.60.0",
+    "web-ext": "10.2.0",
+    "webpack": "5.107.2",
     "webpack-cli": "7.0.2"
   },
   "keywords": [

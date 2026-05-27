@@ -5,12 +5,10 @@
 - [Chess](#chess)
   - [Table of Contents](#table-of-contents)
   - [`chess/elo`](#chesselo)
-    - [Installation](#installation)
-    - [Usage](#usage)
+  - [`@chess/fen`](#chessfen)
+  - [`@chess/pgn`](#chesspgn)
 
 ## `chess/elo`
-
-### Installation
 
 ```bash
 yarn add @chess/elo
@@ -18,25 +16,18 @@ npm install @chess/elo
 pnpm install @chess/elo
 ```
 
-### Usage
+## `@chess/fen`
 
-```typescript
-import { calculatePerformance, calculateRating, Score } from '@chess/elo';
+```bash
+yarn add @chess/fen
+npm install @chess/fen
+pnpm install @chess/fen
+```
 
-const newRating = calculateRating({
-  ratingPlayer: 1500,
-  ratingOpponent: 1500,
-  score: Score.WIN,
-  timeClass: 'classical',
-  lessThan30Games: true,
-  overRating2400: false,
-  overAge18: true,
-});
+## `@chess/pgn`
 
-const performanceRating = calculatePerformance({
-  games: [
-    { ratingOpponent: 1700, score: Score.WIN },
-    { ratingOpponent: 1900, score: Score.LOSS },
-  ],
-});
+```bash
+yarn add @chess/pgn
+npm install @chess/pgn
+pnpm install @chess/pgn
 ```

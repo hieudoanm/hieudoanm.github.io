@@ -38,7 +38,7 @@
   "dependencies": {
     "@simple-upload/react": "workspace:*",
     "@simple-upload/server": "workspace:*",
-    "@tanstack/react-query": "5.100.10",
+    "@tanstack/react-query": "5.100.14",
     "@trpc/client": "11.17.0",
     "@trpc/next": "11.17.0",
     "@trpc/react-query": "11.17.0",
@@ -53,11 +53,11 @@
     "@testing-library/jest-dom": "6.9.1",
     "@testing-library/react": "16.3.2",
     "@types/jest": "30.0.0",
-    "@types/node": "25.8.0",
-    "@types/react": "19.2.14",
+    "@types/node": "25.9.1",
+    "@types/react": "19.2.15",
     "@types/react-dom": "19.2.3",
     "babel-plugin-react-compiler": "1.0.0",
-    "daisyui": "5.5.19",
+    "daisyui": "5.5.20",
     "eslint": "10.4.0",
     "eslint-config-next": "16.2.6",
     "jest": "30.4.2",
@@ -70,7 +70,7 @@
     "prisma-json-schema-generator": "5.1.5",
     "rimraf": "6.1.3",
     "tailwindcss": "4.3.0",
-    "ts-jest": "29.4.9",
+    "ts-jest": "29.4.11",
     "ts-node": "10.9.2",
     "typescript": "6.0.3"
   }
