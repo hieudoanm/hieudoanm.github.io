@@ -1,0 +1,465 @@
+# Tree
+
+```bash
+├── countries
+│   ├── africa
+│   │   ├── africa.md
+│   │   ├── central-africa
+│   │   │   ├── angola.md
+│   │   │   ├── cameroon.md
+│   │   │   ├── central-africa.md
+│   │   │   ├── central-african-republic.md
+│   │   │   ├── chad.md
+│   │   │   ├── congo.md
+│   │   │   ├── dr-congo.md
+│   │   │   ├── equatorial-guinea.md
+│   │   │   ├── gabon.md
+│   │   │   └── sao-tome-and-principe.md
+│   │   ├── eastern-africa
+│   │   │   ├── burundi.md
+│   │   │   ├── comoros.md
+│   │   │   ├── djibouti.md
+│   │   │   ├── eastern-africa.md
+│   │   │   ├── eritrea.md
+│   │   │   ├── ethiopia.md
+│   │   │   ├── kenya.md
+│   │   │   ├── madagascar.md
+│   │   │   ├── malawi.md
+│   │   │   ├── mauritius.md
+│   │   │   ├── mozambique.md
+│   │   │   ├── rwanda.md
+│   │   │   ├── seychelles.md
+│   │   │   ├── somalia.md
+│   │   │   ├── south-sudan.md
+│   │   │   ├── tanzania.md
+│   │   │   ├── uganda.md
+│   │   │   ├── zambia.md
+│   │   │   └── zimbabwe.md
+│   │   ├── northern-africa
+│   │   │   ├── algeria.md
+│   │   │   ├── egypt.md
+│   │   │   ├── libya.md
+│   │   │   ├── mauritania.md
+│   │   │   ├── morocco.md
+│   │   │   ├── northern-africa.md
+│   │   │   ├── sudan.md
+│   │   │   └── tunisia.md
+│   │   ├── southern-africa
+│   │   │   ├── botswana.md
+│   │   │   ├── eswatini.md
+│   │   │   ├── lesotho.md
+│   │   │   ├── namibia.md
+│   │   │   ├── south-africa.md
+│   │   │   └── southern-africa.md
+│   │   └── western-africa
+│   │       ├── benin.md
+│   │       ├── burkina-faso.md
+│   │       ├── cape-verde.md
+│   │       ├── cote-d-ivoire.md
+│   │       ├── gambia.md
+│   │       ├── ghana.md
+│   │       ├── guinea-bissau.md
+│   │       ├── guinea.md
+│   │       ├── liberia.md
+│   │       ├── mali.md
+│   │       ├── niger.md
+│   │       ├── nigeria.md
+│   │       ├── senegal.md
+│   │       ├── sierra-leone.md
+│   │       ├── togo.md
+│   │       └── western-africa.md
+│   ├── america
+│   │   ├── america.md
+│   │   ├── caribbean
+│   │   │   ├── antigua-and-barbuda.md
+│   │   │   ├── bahamas.md
+│   │   │   ├── barbados.md
+│   │   │   ├── caribbean.md
+│   │   │   ├── cuba.md
+│   │   │   ├── dominica-republic.md
+│   │   │   ├── dominica.md
+│   │   │   ├── grenada.md
+│   │   │   ├── haiti.md
+│   │   │   ├── jamaica.md
+│   │   │   ├── saint-kitts-and-nevis.md
+│   │   │   ├── saint-lucia.md
+│   │   │   ├── saint-vincent-and-the-grenadines.md
+│   │   │   └── trinidad-and-tobago.md
+│   │   ├── central-america
+│   │   │   ├── belize.md
+│   │   │   ├── central-america.md
+│   │   │   ├── costa-rica.md
+│   │   │   ├── el-salvador.md
+│   │   │   ├── guatemala.md
+│   │   │   ├── honduras.md
+│   │   │   ├── nicaragua.md
+│   │   │   └── panama.md
+│   │   ├── north-america
+│   │   │   ├── canada.md
+│   │   │   ├── mexico.md
+│   │   │   ├── north-america.md
+│   │   │   └── united-states
+│   │   │       ├── government
+│   │   │       │   ├── federal
+│   │   │       │   │   ├── executive
+│   │   │       │   │   │   ├── cabinet
+│   │   │       │   │   │   │   ├── presidents.md
+│   │   │       │   │   │   │   ├── secretaries
+│   │   │       │   │   │   │   │   ├── agriculture.md
+│   │   │       │   │   │   │   │   ├── commerce.md
+│   │   │       │   │   │   │   │   ├── defense.md
+│   │   │       │   │   │   │   │   ├── education.md
+│   │   │       │   │   │   │   │   ├── energy.md
+│   │   │       │   │   │   │   │   ├── hhs.md
+│   │   │       │   │   │   │   │   ├── homeland-security.md
+│   │   │       │   │   │   │   │   ├── hud.md
+│   │   │       │   │   │   │   │   ├── interior.md
+│   │   │       │   │   │   │   │   ├── justice.md
+│   │   │       │   │   │   │   │   ├── labor.md
+│   │   │       │   │   │   │   │   ├── state.md
+│   │   │       │   │   │   │   │   ├── transportation.md
+│   │   │       │   │   │   │   │   ├── treasury.md
+│   │   │       │   │   │   │   │   └── veterans-affairs.md
+│   │   │       │   │   │   │   └── vice.md
+│   │   │       │   │   │   ├── chiefs-of-staff.md
+│   │   │       │   │   │   └── executive.md
+│   │   │       │   │   ├── judicial
+│   │   │       │   │   │   ├── courts.md
+│   │   │       │   │   │   ├── judicial.md
+│   │   │       │   │   │   └── supreme-court-justices.md
+│   │   │       │   │   └── legislative
+│   │   │       │   │       ├── house.md
+│   │   │       │   │       ├── legislative.md
+│   │   │       │   │       └── senate.md
+│   │   │       │   ├── government.md
+│   │   │       │   └── states
+│   │   │       │       ├── governors.md
+│   │   │       │       └── states.md
+│   │   │       ├── sports
+│   │   │       │   ├── mls.md
+│   │   │       │   ├── nba.md
+│   │   │       │   └── nfl.md
+│   │   │       └── united-states.md
+│   │   └── south-america
+│   │       ├── argentina.md
+│   │       ├── bolivia.md
+│   │       ├── brazil.md
+│   │       ├── chile.md
+│   │       ├── colombia.md
+│   │       ├── ecuador.md
+│   │       ├── guyana.md
+│   │       ├── paraguay.md
+│   │       ├── peru.md
+│   │       ├── south-america.md
+│   │       ├── suriname.md
+│   │       ├── uruguay.md
+│   │       └── venezuela.md
+│   ├── asia
+│   │   ├── asia.md
+│   │   ├── central-asia
+│   │   │   ├── central-asia.md
+│   │   │   ├── kazakhstan.md
+│   │   │   ├── kyrgyzstan.md
+│   │   │   ├── tajikistan.md
+│   │   │   ├── turkmenistan.md
+│   │   │   └── uzbekistan.md
+│   │   ├── eastern-asia
+│   │   │   ├── china.md
+│   │   │   ├── eastern-asia.md
+│   │   │   ├── japan.md
+│   │   │   ├── mongolia.md
+│   │   │   ├── north-korea.md
+│   │   │   └── south-korea.md
+│   │   ├── south-eastern-asia
+│   │   │   ├── mainland
+│   │   │   │   ├── cambodia.md
+│   │   │   │   ├── laos.md
+│   │   │   │   ├── myanmar.md
+│   │   │   │   ├── thailand.md
+│   │   │   │   └── vietnam
+│   │   │   │       └── vietnam.md
+│   │   │   ├── maritime
+│   │   │   │   ├── brunei.md
+│   │   │   │   ├── east-timor.md
+│   │   │   │   ├── indonesia.md
+│   │   │   │   ├── malaysia.md
+│   │   │   │   ├── philippines.md
+│   │   │   │   └── singapore.md
+│   │   │   └── south-eastern-asia.md
+│   │   ├── southern-asia
+│   │   │   ├── afghanistan.md
+│   │   │   ├── bangladesh.md
+│   │   │   ├── bhutan.md
+│   │   │   ├── india.md
+│   │   │   ├── maldives.md
+│   │   │   ├── nepal.md
+│   │   │   ├── northern-asia.md
+│   │   │   ├── pakistan.md
+│   │   │   └── sri-lanka.md
+│   │   └── western-asia
+│   │       ├── arabian-peninsula
+│   │       │   ├── bahrain.md
+│   │       │   ├── kuwait.md
+│   │       │   ├── oman.md
+│   │       │   ├── qatar.md
+│   │       │   ├── saudi-arabia.md
+│   │       │   ├── united-arab-emirates.md
+│   │       │   └── yemen.md
+│   │       ├── caucasus
+│   │       │   ├── armenia.md
+│   │       │   ├── azerbaijan.md
+│   │       │   └── georgia.md
+│   │       ├── iran.md
+│   │       ├── israel.md
+│   │       ├── levant
+│   │       │   ├── iraq.md
+│   │       │   ├── jordan.md
+│   │       │   ├── lebanon.md
+│   │       │   ├── palestine.md
+│   │       │   └── syria.md
+│   │       └── western-asia.md
+│   ├── cities.md
+│   ├── countries.md
+│   ├── europe
+│   │   ├── eastern-europe
+│   │   │   ├── belarus.md
+│   │   │   ├── bulgaria.md
+│   │   │   ├── czech.md
+│   │   │   ├── eastern-europe.md
+│   │   │   ├── hungary.md
+│   │   │   ├── moldova.md
+│   │   │   ├── poland.md
+│   │   │   ├── romania.md
+│   │   │   ├── russia.md
+│   │   │   ├── slovakia.md
+│   │   │   └── ukraine.md
+│   │   ├── europe.md
+│   │   ├── northern-europe
+│   │   │   ├── baltic
+│   │   │   │   ├── estonia.md
+│   │   │   │   ├── latvia.md
+│   │   │   │   └── lithuania.md
+│   │   │   ├── british
+│   │   │   │   ├── irish.md
+│   │   │   │   └── united-kindgom
+│   │   │   │       ├── england
+│   │   │   │       │   ├── england.md
+│   │   │   │       │   └── football
+│   │   │   │       │       ├── fa-cup.md
+│   │   │   │       │       └── premier-league.md
+│   │   │   │       ├── northern-ireland.md
+│   │   │   │       ├── scotland.md
+│   │   │   │       ├── united-kingdom.md
+│   │   │   │       └── wales.md
+│   │   │   ├── nordic
+│   │   │   │   ├── denmark.md
+│   │   │   │   ├── finland.md
+│   │   │   │   ├── iceland.md
+│   │   │   │   ├── norway.md
+│   │   │   │   └── sweden.md
+│   │   │   └── nothern-europe.md
+│   │   ├── southern-europe
+│   │   │   ├── balkan
+│   │   │   │   ├── albania.md
+│   │   │   │   ├── bosnia-and-herzegovina.md
+│   │   │   │   ├── bulgaria.md
+│   │   │   │   ├── croatia.md
+│   │   │   │   ├── greece.md
+│   │   │   │   ├── montenegro.md
+│   │   │   │   ├── north-macedonia.md
+│   │   │   │   ├── serbia.md
+│   │   │   │   └── slovenia.md
+│   │   │   ├── iberian
+│   │   │   │   ├── andorra.md
+│   │   │   │   ├── portugal
+│   │   │   │   │   ├── portugal.md
+│   │   │   │   │   └── primeira-liga.md
+│   │   │   │   └── spain
+│   │   │   │       ├── la-liga.md
+│   │   │   │       └── spain.md
+│   │   │   ├── italian
+│   │   │   │   ├── italy
+│   │   │   │   │   ├── italy.md
+│   │   │   │   │   └── serie-a.md
+│   │   │   │   ├── san-marino.md
+│   │   │   │   └── vatican-city.md
+│   │   │   ├── mediterranean
+│   │   │   │   ├── cyprus.md
+│   │   │   │   ├── malta.md
+│   │   │   │   └── turkey.md
+│   │   │   └── southern-europe.md
+│   │   ├── sports
+│   │   │   └── football.md
+│   │   └── western-europe
+│   │       ├── benelux
+│   │       │   ├── belgium.md
+│   │       │   ├── france
+│   │       │   │   ├── france.md
+│   │       │   │   └── ligue-1.md
+│   │       │   ├── luxembourg.md
+│   │       │   └── netherlands
+│   │       │       ├── eredivisie.md
+│   │       │       └── netherlands.md
+│   │       ├── central
+│   │       │   ├── austria.md
+│   │       │   ├── germany
+│   │       │   │   ├── bundesliga.md
+│   │       │   │   └── germany.md
+│   │       │   ├── liechtenstein.md
+│   │       │   ├── monaco.md
+│   │       │   └── switzerland.md
+│   │       └── western-europe.md
+│   └── oceania
+│       ├── australasia
+│       │   ├── australia.md
+│       │   └── new-zealand.md
+│       ├── melanesia
+│       │   ├── fiji.md
+│       │   ├── papua-new-guinea.md
+│       │   ├── solomon-islands.md
+│       │   └── vanuatu.md
+│       ├── micronesia
+│       │   ├── kiribati.md
+│       │   ├── marshall-islands.md
+│       │   ├── micronesia.md
+│       │   ├── nauru.md
+│       │   └── palau.md
+│       ├── oceania.md
+│       └── polynesia
+│           ├── samoa.md
+│           ├── tonga.md
+│           └── tuvalu.md
+├── education
+│   ├── degrees.md
+│   ├── education.md
+│   ├── humanity
+│   │   ├── arts.md
+│   │   ├── economics.md
+│   │   ├── humanity.md
+│   │   ├── languages.md
+│   │   ├── literature.md
+│   │   └── psychology.md
+│   ├── stem
+│   │   ├── engineering
+│   │   │   ├── api.md
+│   │   │   ├── back-end.md
+│   │   │   ├── cli.md
+│   │   │   ├── databases.md
+│   │   │   ├── dsa
+│   │   │   │   ├── algorithms.md
+│   │   │   │   ├── data-structures-and-algorithms.md
+│   │   │   │   └── data-structures.md
+│   │   │   ├── engineering.md
+│   │   │   ├── front-end
+│   │   │   │   ├── front-end.md
+│   │   │   │   └── ui-components.md
+│   │   │   ├── game-engines.md
+│   │   │   ├── hosting.md
+│   │   │   ├── ide.md
+│   │   │   ├── languages
+│   │   │   │   ├── c.md
+│   │   │   │   ├── go.md
+│   │   │   │   ├── java.md
+│   │   │   │   ├── javascript.md
+│   │   │   │   ├── kotlin.md
+│   │   │   │   ├── languages.md
+│   │   │   │   ├── python.md
+│   │   │   │   ├── rust.md
+│   │   │   │   └── swift.md
+│   │   │   ├── languages.md
+│   │   │   ├── os.md
+│   │   │   └── system-design.md
+│   │   ├── mathematics
+│   │   │   └── mathematics.md
+│   │   ├── sciences
+│   │   │   ├── prizes
+│   │   │   │   ├── fields.md
+│   │   │   │   └── nobel.md
+│   │   │   ├── sciences.md
+│   │   │   └── subjects
+│   │   │       ├── biology.md
+│   │   │       ├── chemistry.md
+│   │   │       ├── geography.md
+│   │   │       └── physics.md
+│   │   ├── stem.md
+│   │   └── technology
+│   │       ├── blockchain.md
+│   │       ├── browsers.md
+│   │       ├── design.md
+│   │       ├── devices
+│   │       │   ├── devices.md
+│   │       │   ├── gaming-consoles.md
+│   │       │   ├── headphones.md
+│   │       │   ├── laptops.md
+│   │       │   ├── phones.md
+│   │       │   ├── tablets.md
+│   │       │   └── watches.md
+│   │       ├── llm.md
+│   │       ├── messaging.md
+│   │       ├── neuroscience.md
+│   │       ├── technology.md
+│   │       ├── vehicles
+│   │       │   ├── cars.md
+│   │       │   ├── motorcycles.md
+│   │       │   └── vehicles.md
+│   │       └── workspaces.md
+│   └── university.md
+├── entertainment
+│   ├── entertainment.md
+│   ├── music
+│   │   ├── grammy.md
+│   │   ├── hamilton.md
+│   │   ├── instruments.md
+│   │   ├── music.md
+│   │   └── podcasts.md
+│   ├── reading
+│   │   ├── books.md
+│   │   └── comics.md
+│   └── watching
+│       └── movies.md
+├── me
+│   ├── bored.md
+│   ├── f&b.md
+│   ├── me.md
+│   ├── minimalism.md
+│   └── resolutions.md
+├── README.md
+└── sports
+    ├── basket
+    │   ├── basketball.md
+    │   └── netball.md
+    ├── bat
+    │   ├── baseball.md
+    │   └── cricket.md
+    ├── board
+    │   ├── checker.md
+    │   ├── chess.md
+    │   ├── go.md
+    │   ├── shogi.md
+    │   └── xiangqi.md
+    ├── e-sports
+    │   ├── dota.md
+    │   ├── e-sports.md
+    │   └── league-of-legends.md
+    ├── football
+    │   ├── football.md
+    │   └── futsal.md
+    ├── racing
+    │   ├── bicycling.md
+    │   ├── f1.md
+    │   ├── marathon.md
+    │   ├── motorcycle.md
+    │   └── swimming.md
+    ├── rackets
+    │   ├── badminton.md
+    │   ├── pickleball.md
+    │   ├── squash.md
+    │   ├── table-tennis.md
+    │   └── tennis.md
+    ├── rugby
+    │   ├── american-football.md
+    │   └── rugby.md
+    └── sports.md
+
+92 directories, 368 files
+```

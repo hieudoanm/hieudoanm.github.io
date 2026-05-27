@@ -74,6 +74,6 @@
 
 1. [[Technology]]
 2. [[Chess]]
-3. [[music]]
+3. [[Music]]
 
 [Back to Table of Contents](#table-of-contents)
