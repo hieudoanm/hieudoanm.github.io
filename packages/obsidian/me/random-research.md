@@ -10,6 +10,11 @@
     - [Productivity (3)](#productivity-3)
     - [Mental Health (10)](#mental-health-10)
   - [Resources](#resources)
+  - [Structure (300 Words)](#structure-300-words)
+    - [Introduction (50 Words)](#introduction-50-words)
+    - [Statement 1 (100 Words)](#statement-1-100-words)
+    - [Statement 2 (100 Words)](#statement-2-100-words)
+    - [Conclusion (50 Words)](#conclusion-50-words)
 
 ## Ideas
 
@@ -122,3 +127,29 @@
 2. [PubMed](https://pubmed.ncbi.nlm.nih.gov/)
 3. [JSTOR](https://www.jstor.org/)
 4. [ScienceDirect](https://www.sciencedirect.com/)
+
+## Structure (300 Words)
+
+- Maxium 25 Words per Sentence
+
+### Introduction (50 Words)
+
+- First Sentence (25 Words): What is the topic?
+- Second Sentence (25 Words): Why is it important?
+
+### Statement 1 (100 Words)
+
+- First Sentence (25 Words): What is the first statement?
+- Second Sentence (25 Words): Provide arguments for the first statement (references)
+- Third Sentence (50 Words): Provide first evidence for the first statement (references)
+
+### Statement 2 (100 Words)
+
+- First Sentence (25 Words): What is the second statement?
+- Second Sentence (25 Words): Provide arguments for the second statement (references)
+- Third Sentence (50 Words): Provide evidences for the second statement (references)
+
+### Conclusion (50 Words)
+
+- First Sentence (25 Words): What is the conclusion?
+- Second Sentence (25 Words): Why is it true?

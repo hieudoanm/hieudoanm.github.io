@@ -14,6 +14,7 @@ func NewCommand() *cobra.Command {
 
 	cmd.AddCommand(docsifyCobraCmd)
 	cmd.AddCommand(docsifyScanCmd)
+	cmd.AddCommand(docsifyTreeCmd)
 
 	return cmd
 }
