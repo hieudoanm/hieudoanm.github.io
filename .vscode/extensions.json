@@ -9,6 +9,7 @@
     "GraphQL.vscode-graphql",
     "GraphQL.vscode-graphql-syntax",
     "hashicorp.terraform",
+    "JetBrains.kotlin-server",
     "mechatroner.rainbow-csv",
     "ms-python.python",
     "ms-vscode.cmake-tools",

@@ -1,16 +1,18 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -std=c99 -I src -g -O2
 
+OUT_DIR = out
 SRC = $(wildcard src/*.c)
-OBJ = $(SRC:.c=.o)
+OBJ = $(patsubst src/%.c, $(OUT_DIR)/%.o, $(SRC))
 
-all: src/*.o
+all: $(OBJ)
 	@echo "C lodash built successfully"
 
-src/%.o: src/%.c src/lodash.h
+$(OUT_DIR)/%.o: src/%.c src/lodash.h
+	@mkdir -p $(OUT_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f src/*.o
+	rm -rf $(OUT_DIR)
 
 .PHONY: all clean

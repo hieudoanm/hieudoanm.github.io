@@ -41,8 +41,10 @@
 
 ## [Lodash](https://lodash.com)
 
-1. `@lodash/go`
-2. `@lodash/py`
+1. `@lodash/c`
+2. `@lodash/go`
+3. `@lodash/py`
+4. `@lodash/rs`
 
 ## Simple
 
