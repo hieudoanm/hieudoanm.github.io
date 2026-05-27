@@ -1,8 +1,5 @@
-import {
-  getId,
-  getWork,
-  Reference,
-} from '@hieudoanm/clients/crossref/crossref.client';
+import { getId, getWork } from '@crossref.org/api';
+import type { Reference } from '@crossref.org/api';
 import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 import { tryCatch } from '@hieudoanm/utils/try-catch';
 import { createSignal } from 'solid-js';

@@ -39,7 +39,7 @@ async function fetchCaptionUrl(videoId: string): Promise<string | null> {
     throw new Error('ytInitialPlayerResponse not found in page');
 
   let depth = 0;
-  let jsonStart = start + marker.length;
+  const jsonStart = start + marker.length;
   let jsonEnd = jsonStart;
   for (let i = jsonStart; i < html.length; i++) {
     if (html[i] === '{') depth++;

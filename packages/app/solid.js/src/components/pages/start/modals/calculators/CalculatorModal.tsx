@@ -27,7 +27,7 @@ export const CalculatorModal = (props: { onClose: () => void }) => {
         .replace(/sin\(([^)]+)\)/g, 'Math.sin(($1) * Math.PI / 180)')
         .replace(/cos\(([^)]+)\)/g, 'Math.cos(($1) * Math.PI / 180)')
         .replace(/tan\(([^)]+)\)/g, 'Math.tan(($1) * Math.PI / 180)');
-      // eslint-disable-next-line no-new-func
+
       const result = Function(`"use strict"; return (${sanitized})`)();
       setExpression(String(result));
     } catch {

@@ -31,7 +31,7 @@ export const RedactModal = ({ onClose }: { onClose: () => void }) => {
   const scale = () => state().scale;
   const pdfDoc = () => state().pdfDoc;
 
-  let fabricRefs: Record<number, FabricCanvas> = {};
+  const fabricRefs: Record<number, FabricCanvas> = {};
 
   const handleFile = async (e: Event) => {
     const f = (e.target as HTMLInputElement).files?.[0];

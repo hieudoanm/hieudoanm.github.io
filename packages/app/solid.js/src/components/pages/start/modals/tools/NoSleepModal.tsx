@@ -35,7 +35,7 @@ function getElapsed(startTime: number): TimeUnit[] {
 }
 
 export const NoSleepModal = (props: { onClose: () => void }) => {
-  let startTime = Date.now();
+  const startTime = Date.now();
   const [units, setUnits] = createSignal<TimeUnit[]>(getElapsed(startTime));
   let wakeLockRef: WakeLockSentinel | null = null;
 
