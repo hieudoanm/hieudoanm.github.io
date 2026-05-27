@@ -43,8 +43,10 @@
 
 1. `@lodash/c`
 2. `@lodash/go`
-3. `@lodash/py`
-4. `@lodash/rs`
+3. `@lodash/kt`
+4. `@lodash/py`
+5. `@lodash/rs`
+6. `@lodash/swift`
 
 ## Simple
 

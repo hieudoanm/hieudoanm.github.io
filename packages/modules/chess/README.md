@@ -37,6 +37,6 @@ const performanceRating = calculatePerformance({
   games: [
     { ratingOpponent: 1700, score: Score.WIN },
     { ratingOpponent: 1900, score: Score.LOSS },
-  ]
+  ],
 });
 ```
