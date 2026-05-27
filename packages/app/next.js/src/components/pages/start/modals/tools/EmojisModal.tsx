@@ -1,7 +1,7 @@
 // components/modals/EmojisModal.tsx
-import { emojis } from '@hieudoanm/data/emojis';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { emojis } from '@hieudoanm.github.io/data/emojis';
 import { FC, useMemo, useState } from 'react';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 
 type EmojiMap = Record<string, string>;
 

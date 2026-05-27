@@ -1,4 +1,7 @@
-import { WeatherData, weatherCodeToText } from '@hieudoanm/data/weather';
+import {
+  WeatherData,
+  weatherCodeToText,
+} from '@hieudoanm.github.io/data/weather';
 
 export const WeatherBadge = (props: { weather: WeatherData | undefined }) => {
   if (!props.weather)

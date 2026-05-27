@@ -1,5 +1,5 @@
 import { createSignal } from 'solid-js';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
 const DEFAULT_SVG = `<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
   <defs>

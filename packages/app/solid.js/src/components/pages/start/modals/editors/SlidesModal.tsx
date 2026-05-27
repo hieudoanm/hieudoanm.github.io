@@ -2,7 +2,7 @@ import { yaml as yamlLang } from '@codemirror/lang-yaml';
 import { EditorState } from '@codemirror/state';
 import { oneDark } from '@codemirror/theme-one-dark';
 import { EditorView } from '@codemirror/view';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 import { saveAs } from 'file-saver';
 import html2canvas from 'html2canvas-pro';
 import { PDFDocument } from 'pdf-lib';

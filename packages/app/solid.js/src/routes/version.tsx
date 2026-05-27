@@ -1,4 +1,4 @@
-import { VersionTemplate } from '@hieudoanm/components/templates/VersionTemplate';
+import { VersionTemplate } from '@hieudoanm.github.io/components/templates/VersionTemplate';
 
 const VersionPage = () => {
   const now = new Date();

@@ -1,7 +1,7 @@
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
-import countriesCurrencies from '@hieudoanm/json/inflation/countries_currencies.json';
-import currencies from '@hieudoanm/json/inflation/currencies.json';
-import history from '@hieudoanm/json/inflation/history.json';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import countriesCurrencies from '@hieudoanm.github.io/json/inflation/countries_currencies.json';
+import currencies from '@hieudoanm.github.io/json/inflation/currencies.json';
+import history from '@hieudoanm.github.io/json/inflation/history.json';
 import { FC, useState } from 'react';
 
 /* ------------------------------------------------------------------ */

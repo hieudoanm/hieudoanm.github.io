@@ -1,5 +1,5 @@
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 import { FC, useEffect, useState } from 'react';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 
 const KAPREKAR_CONSTANT_3 = 495;
 const KAPREKAR_CONSTANT_4 = 6174;

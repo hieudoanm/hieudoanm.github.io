@@ -5,7 +5,7 @@ collection
 import copy
 import random as rand
 
-from .array import flatten, flattenDeep, flattenDepth
+from .array import flatten, flatten_deep, flatten_depth
 
 
 def count_by(array, callback):
@@ -84,7 +84,7 @@ def flat_map_deep(collection, callback):
     for item in collection:
         new_value = callback(item)
         new_array.append(new_value)
-    return flattenDeep(new_array)
+    return flatten_deep(new_array)
 
 
 def flat_map_depth(collection, callback, depth=1):
@@ -95,7 +95,7 @@ def flat_map_depth(collection, callback, depth=1):
     for item in collection:
         new_value = callback(item)
         new_array.append(new_value)
-    return flattenDepth(new_array, depth)
+    return flatten_depth(new_array, depth)
 
 
 def for_each(array, callback):
@@ -271,3 +271,53 @@ def sort_by(array, key):
     sort_by
     """
     return sorted(array, key=lambda d: d[key])
+
+
+class _Descending:
+    def __init__(self, value):
+        self.value = value
+    def __lt__(self, other):
+        if isinstance(other, _Descending):
+            return self.value > other.value
+        return self.value > other
+    def __le__(self, other):
+        if isinstance(other, _Descending):
+            return self.value >= other.value
+        return self.value >= other
+    def __gt__(self, other):
+        if isinstance(other, _Descending):
+            return self.value < other.value
+        return self.value < other
+    def __ge__(self, other):
+        if isinstance(other, _Descending):
+            return self.value <= other.value
+        return self.value <= other
+    def __eq__(self, other):
+        if isinstance(other, _Descending):
+            return self.value == other.value
+        return self.value == other
+
+
+def _order_key(item, iteratees, orders):
+    result = []
+    for i, iteratee in enumerate(iteratees):
+        if callable(iteratee):
+            value = iteratee(item)
+        else:
+            value = item[iteratee]
+        if i < len(orders) and orders[i] == "desc":
+            if isinstance(value, (int, float)):
+                value = -value
+            else:
+                value = _Descending(value)
+        result.append(value)
+    return tuple(result)
+
+
+def order_by(collection, iteratees, orders=None):
+    """
+    order_by
+    """
+    if orders is None:
+        orders = ["asc"] * len(iteratees)
+    return sorted(collection, key=lambda item: _order_key(item, iteratees, orders))

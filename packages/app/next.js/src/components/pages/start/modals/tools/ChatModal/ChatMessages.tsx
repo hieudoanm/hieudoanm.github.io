@@ -1,11 +1,11 @@
-import { GeminiModel } from '@hieudoanm/clients/gemini/gemini.enums';
-import { OpenRouterModel } from '@hieudoanm/clients/openrouter/openrouter.enums';
-import { Counter } from './ChatCounter';
-import { MODELS } from '@hieudoanm/constants/models';
-import { copy } from '@hieudoanm/utils/copy';
-import { scrollToBottom } from '@hieudoanm/utils/scroll';
+import { GeminiModel } from '@hieudoanm.github.io/clients/gemini/gemini.enums';
+import { OpenRouterModel } from '@hieudoanm.github.io/clients/openrouter/openrouter.enums';
+import { MODELS } from '@hieudoanm.github.io/constants/models';
+import { copy } from '@hieudoanm.github.io/utils/copy';
+import { scrollToBottom } from '@hieudoanm.github.io/utils/scroll';
 import { marked } from 'marked';
 import { FC, useEffect } from 'react';
+import { Counter } from './ChatCounter';
 
 type Role = 'ai' | 'user';
 

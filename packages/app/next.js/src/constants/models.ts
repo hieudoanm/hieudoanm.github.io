@@ -1,5 +1,5 @@
-import { GeminiModel } from '@hieudoanm/clients/gemini/gemini.enums';
-import { OpenRouterModel } from '@hieudoanm/clients/openrouter/openrouter.enums';
+import { GeminiModel } from '@hieudoanm.github.io/clients/gemini/gemini.enums';
+import { OpenRouterModel } from '@hieudoanm.github.io/clients/openrouter/openrouter.enums';
 
 type Model = {
   company: string;

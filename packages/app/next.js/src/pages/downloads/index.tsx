@@ -1,4 +1,4 @@
-import { DownloadsTemplate } from '@hieudoanm/components/templates/DownloadsTemplate';
+import { DownloadsTemplate } from '@hieudoanm.github.io/components/templates/DownloadsTemplate';
 import { NextPage } from 'next';
 
 const APP_NAME = 'weather';

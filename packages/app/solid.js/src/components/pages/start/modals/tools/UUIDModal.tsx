@@ -1,5 +1,5 @@
 import { createSignal } from 'solid-js';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 import { v1, v4, v7 } from 'uuid';
 
 type UUIDVersion = 'v1' | 'v4' | 'v7';

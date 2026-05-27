@@ -1,4 +1,4 @@
-import { BookmarkItem } from '@hieudoanm/components/pages/start/cards/BookmarkCard';
+import { BookmarkItem } from '@hieudoanm.github.io/components/pages/start/cards/BookmarkCard';
 
 export const google: BookmarkItem[] = [
   {

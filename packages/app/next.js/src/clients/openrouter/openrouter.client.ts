@@ -1,4 +1,4 @@
-import { tryCatch } from '@hieudoanm/utils/try-catch';
+import { tryCatch } from '@hieudoanm.github.io/utils/try-catch';
 import OpenAI from 'openai';
 import { OpenRouterModel } from './openrouter.enums';
 

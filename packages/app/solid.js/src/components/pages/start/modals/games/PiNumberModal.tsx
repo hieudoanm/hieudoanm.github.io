@@ -1,6 +1,6 @@
-import { PI } from '@hieudoanm/data/pi';
+import { PI } from '@hieudoanm.github.io/data/pi';
 import { createMemo, createSignal, onMount } from 'solid-js';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
 const DIGIT_WIDTH = 24;
 const VIEWPORT_OFFSET = 4 * DIGIT_WIDTH;

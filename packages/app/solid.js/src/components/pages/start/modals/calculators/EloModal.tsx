@@ -5,7 +5,7 @@ import {
   Score,
   TimeClass,
 } from '@chess/elo';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
 type Formula = {
   ratingPlayer: number;

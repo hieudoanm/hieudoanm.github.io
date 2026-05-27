@@ -1,5 +1,5 @@
 import { createSignal } from 'solid-js';
-import { arabic2roman, roman2arabic } from '@hieudoanm/utils/number/roman';
+import { arabic2roman, roman2arabic } from '@hieudoanm/number';
 
 const INITIAL_NUMBER = 10;
 

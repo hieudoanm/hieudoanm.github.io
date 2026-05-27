@@ -1,5 +1,5 @@
-import { createSignal, createEffect, onCleanup } from 'solid-js';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { createEffect, createSignal, onCleanup } from 'solid-js';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 type JsonValue = string | number | boolean | null | JsonValue[] | JsonObject;

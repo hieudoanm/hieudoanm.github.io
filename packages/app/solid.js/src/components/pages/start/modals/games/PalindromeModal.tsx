@@ -1,7 +1,7 @@
 import { createSignal, createEffect, onCleanup } from 'solid-js';
-import palindromes from '@hieudoanm/json/palindrome/palindrome.json';
-import emordnilaps from '@hieudoanm/json/palindrome/emordnilap.json';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import palindromes from '@hieudoanm.github.io/json/palindrome/palindrome.json';
+import emordnilaps from '@hieudoanm.github.io/json/palindrome/emordnilap.json';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
 type PuzzleType = 'palindrome' | 'emordnilap';
 

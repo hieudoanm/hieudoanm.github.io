@@ -553,3 +553,343 @@ def zip_object(props, values):
             value = values[index]
         obj[prop] = value
     return obj
+
+
+def _iteratee_value(item, iteratee):
+    if iteratee is None:
+        return item
+    if callable(iteratee):
+        return iteratee(item)
+    return item[iteratee]
+
+
+def _is_iteratee(value):
+    return callable(value) or isinstance(value, str)
+
+
+def difference_with(array, values, comparator=None):
+    """
+    difference_with
+    """
+    result = []
+    for item in array:
+        found = False
+        for val in values:
+            if comparator is None:
+                if item == val:
+                    found = True
+                    break
+            elif comparator(item, val):
+                found = True
+                break
+        if not found:
+            result.append(item)
+    return result
+
+
+def intersection_by(*arrays):
+    """
+    intersection_by
+    """
+    if not arrays:
+        return []
+    iteratee = arrays[-1] if len(arrays) > 1 and _is_iteratee(arrays[-1]) else None
+    if iteratee is not None:
+        arrays = arrays[:-1]
+    if not arrays:
+        return []
+    result = []
+    seen = set()
+    for item in arrays[0]:
+        key = _iteratee_value(item, iteratee)
+        if key not in seen:
+            if all(any(_iteratee_value(x, iteratee) == key for x in arr) for arr in arrays[1:]):
+                seen.add(key)
+                result.append(item)
+    return result
+
+
+def intersection_with(*arrays):
+    """
+    intersection_with
+    """
+    comparator = arrays[-1] if len(arrays) > 1 and callable(arrays[-1]) else None
+    if comparator is not None:
+        arrays = arrays[:-1]
+    if not arrays:
+        return []
+    result = []
+    for item in arrays[0]:
+        if all(any(comparator(item, x) for x in arr) for arr in arrays[1:]):
+            if not any(comparator(item, r) for r in result):
+                result.append(item)
+    return result
+
+
+def pull_all_by(array, values, iteratee=None):
+    """
+    pull_all_by
+    """
+    result = []
+    for item in array:
+        key = _iteratee_value(item, iteratee)
+        if not any(_iteratee_value(v, iteratee) == key for v in values):
+            result.append(item)
+    return result
+
+
+def pull_all_with(array, values, comparator=None):
+    """
+    pull_all_with
+    """
+    result = []
+    for item in array:
+        if not any(
+            item == v if comparator is None else comparator(item, v) for v in values
+        ):
+            result.append(item)
+    return result
+
+
+def sorted_index_by(array, value, iteratee=None):
+    """
+    sorted_index_by
+    """
+    key = _iteratee_value(value, iteratee)
+    for i, item in enumerate(array):
+        if _iteratee_value(item, iteratee) >= key:
+            return i
+    return len(array)
+
+
+def sorted_index_of(array, value):
+    """
+    sorted_index_of
+    """
+    for i, item in enumerate(array):
+        if item == value:
+            return i
+        if item > value:
+            return -1
+    return -1
+
+
+def sorted_last_index_by(array, value, iteratee=None):
+    """
+    sorted_last_index_by
+    """
+    key = _iteratee_value(value, iteratee)
+    idx = len(array)
+    for i in range(len(array) - 1, -1, -1):
+        if _iteratee_value(array[i], iteratee) == key:
+            return i + 1
+        if _iteratee_value(array[i], iteratee) < key:
+            break
+    return max(idx, 0)
+
+
+def sorted_last_index_of(array, value):
+    """
+    sorted_last_index_of
+    """
+    idx = -1
+    for i, item in enumerate(array):
+        if item == value:
+            idx = i
+        elif item > value:
+            break
+    return idx
+
+
+def sorted_uniq_by(array, iteratee=None):
+    """
+    sorted_uniq_by
+    """
+    result = []
+    seen = set()
+    for item in array:
+        key = _iteratee_value(item, iteratee)
+        if key not in seen:
+            seen.add(key)
+            result.append(item)
+    return result
+
+
+def union_by(*arrays):
+    """
+    union_by
+    """
+    if not arrays:
+        return []
+    iteratee = arrays[-1] if len(arrays) > 1 and _is_iteratee(arrays[-1]) else None
+    if iteratee is not None:
+        arrays = arrays[:-1]
+    result = []
+    seen = set()
+    for arr in arrays:
+        for item in arr:
+            key = _iteratee_value(item, iteratee)
+            if key not in seen:
+                seen.add(key)
+                result.append(item)
+    return result
+
+
+def union_with(*arrays):
+    """
+    union_with
+    """
+    comparator = arrays[-1] if len(arrays) > 1 and callable(arrays[-1]) else None
+    if comparator is not None:
+        arrays = arrays[:-1]
+    result = []
+    for arr in arrays:
+        for item in arr:
+            if not any(
+                item == r if comparator is None else comparator(item, r) for r in result
+            ):
+                result.append(item)
+    return result
+
+
+def uniq_by(array, iteratee=None):
+    """
+    uniq_by
+    """
+    result = []
+    seen = set()
+    for item in array:
+        key = _iteratee_value(item, iteratee)
+        if key not in seen:
+            seen.add(key)
+            result.append(item)
+    return result
+
+
+def uniq_with(array, comparator=None):
+    """
+    uniq_with
+    """
+    result = []
+    for item in array:
+        if not any(
+            item == r if comparator is None else comparator(item, r) for r in result
+        ):
+            result.append(item)
+    return result
+
+
+def xor_by(*arrays):
+    """
+    xor_by
+    """
+    if not arrays:
+        return []
+    iteratee = arrays[-1] if len(arrays) > 1 and _is_iteratee(arrays[-1]) else None
+    if iteratee is not None:
+        arrays = arrays[:-1]
+    counts = {}
+    for arr in arrays:
+        seen_in_arr = set()
+        for item in arr:
+            key = _iteratee_value(item, iteratee)
+            if key not in seen_in_arr:
+                counts[key] = counts.get(key, 0) + 1
+                seen_in_arr.add(key)
+    result = []
+    seen = set()
+    for arr in arrays:
+        for item in arr:
+            key = _iteratee_value(item, iteratee)
+            if counts[key] == 1 and key not in seen:
+                seen.add(key)
+                result.append(item)
+    return result
+
+
+def xor_with(*arrays):
+    """
+    xor_with
+    """
+    comparator = arrays[-1] if len(arrays) > 1 and callable(arrays[-1]) else None
+    if comparator is not None:
+        arrays = arrays[:-1]
+    counts = []
+    for arr in arrays:
+        arr_group = []
+        for item in arr:
+            found = False
+            for existing, _ in arr_group:
+                if comparator is not None and comparator(item, existing):
+                    found = True
+                    break
+                if comparator is None and item == existing:
+                    found = True
+                    break
+            if not found:
+                arr_group.append([item, 1])
+            else:
+                arr_group[-1][1] += 1
+        counts.append(arr_group)
+    result = []
+    for i, arr in enumerate(arrays):
+        for item in arr:
+            total = 0
+            for j, arr_group in enumerate(counts):
+                for existing, count in arr_group:
+                    match = comparator(item, existing) if comparator else item == existing
+                    if match:
+                        total += count
+                        break
+            if total == 1:
+                if not any(
+                    r == item if comparator is None else comparator(r, item) for r in result
+                ):
+                    result.append(item)
+    return result
+
+
+def zip_object_deep(props, values):
+    """
+    zip_object_deep
+    """
+    obj = {}
+    for i, prop in enumerate(props):
+        value = None
+        if i < len(values):
+            value = values[i]
+        keys = prop.split(".") if isinstance(prop, str) else [prop]
+        current = obj
+        for j, key in enumerate(keys):
+            if j == len(keys) - 1:
+                if isinstance(value, dict) and isinstance(current.get(key), dict):
+                    current[key].update(value)
+                else:
+                    current[key] = value
+            else:
+                if key not in current:
+                    current[key] = {}
+                current = current[key]
+    return obj
+
+
+def zip_with(*arrays):
+    """
+    zip_with
+    """
+    if not arrays:
+        return []
+    iteratee = arrays[-1] if len(arrays) > 1 and _is_iteratee(arrays[-1]) else None
+    if iteratee is not None:
+        arrays = arrays[:-1]
+    if not arrays:
+        return []
+    max_len = max(len(arr) for arr in arrays)
+    result = []
+    for i in range(max_len):
+        values = [arr[i] if i < len(arr) else None for arr in arrays]
+        if iteratee is not None:
+            result.append(iteratee(*values))
+        else:
+            result.append(values)
+    return result

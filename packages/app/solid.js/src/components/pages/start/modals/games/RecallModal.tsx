@@ -1,5 +1,5 @@
 import { createEffect, createSignal, onCleanup, onMount } from 'solid-js';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
 type Phase = 'ready' | 'show' | 'input' | 'result';
 

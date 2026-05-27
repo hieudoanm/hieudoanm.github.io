@@ -1,6 +1,6 @@
 import { FC, useRef, useState } from 'react';
 import html2canvas from 'html2canvas-pro';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
 /* ------------------------------------------------------------------ */
 /* Data — inline minimal periodic table types                           */
@@ -10,8 +10,8 @@ import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 import {
   periodicTable,
   specificNameColorMap,
-} from '@hieudoanm/data/periodic-table';
-import { capitalise, kebabcase } from '@hieudoanm/utils/string';
+} from '@hieudoanm.github.io/data/periodic-table';
+import { capitalise, kebabcase } from '@hieudoanm/string';
 
 /* ------------------------------------------------------------------ */
 /* Types                                                                */

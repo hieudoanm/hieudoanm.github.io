@@ -2,7 +2,7 @@ import * as fabric from 'fabric';
 import { saveAs } from 'file-saver';
 import { PDFDocument, rgb } from 'pdf-lib';
 import { FC, useCallback, useRef, useState } from 'react';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 import { Document, Page, pdfjs } from 'react-pdf';
 
 const NODE_ENV: 'development' | 'production' | 'test' =

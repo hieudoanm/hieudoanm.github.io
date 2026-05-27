@@ -14,8 +14,7 @@
     "jsx": "react-jsx",
     "incremental": true,
     "paths": {
-      "@hieudoanm/*": ["./src/*"],
-      "@chess/elo": ["../modules/chess/elo/src/index.ts"]
+      "@hieudoanm.github.io/*": ["./src/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.mts"],

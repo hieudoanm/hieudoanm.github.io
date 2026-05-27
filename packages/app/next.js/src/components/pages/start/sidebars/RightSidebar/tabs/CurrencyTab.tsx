@@ -3,7 +3,7 @@ import {
   CURRENCIES,
   CURRENCY_NAMES,
   QUICK_PAIRS,
-} from '@hieudoanm/data/currencies';
+} from '@hieudoanm.github.io/data/currencies';
 import { FC, useCallback, useState } from 'react';
 
 export const CurrencyTab: FC = () => {

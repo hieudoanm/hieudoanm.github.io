@@ -1,6 +1,6 @@
 import { createSignal } from 'solid-js';
 import { toDataURL } from 'qrcode';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
 export const QRCodeModal = ({ onClose }: { onClose: () => void }) => {
   const [url, setUrl] = createSignal('https://');

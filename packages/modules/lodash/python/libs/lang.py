@@ -4,7 +4,10 @@ lang
 
 import copy
 import math
+import re
 import sys
+import weakref
+from datetime import date, datetime
 
 
 def cast_array(value):
@@ -323,3 +326,130 @@ def to_string(value):
     if value is None:
         return ""
     return str(value)
+
+
+def is_arguments(value):
+    """
+    is_arguments
+    """
+    return isinstance(value, dict) and all(isinstance(k, str) for k in value.keys())
+
+
+def is_array_buffer(value):
+    """
+    is_array_buffer
+    """
+    return isinstance(value, memoryview)
+
+
+def is_buffer(value):
+    """
+    is_buffer
+    """
+    return False
+
+
+def is_date(value):
+    """
+    is_date
+    """
+    return isinstance(value, (date, datetime))
+
+
+def is_element(value):
+    """
+    is_element
+    """
+    return False
+
+
+def is_error(value):
+    """
+    is_error
+    """
+    return isinstance(value, BaseException)
+
+
+def is_map(value):
+    """
+    is_map
+    """
+    return isinstance(value, dict)
+
+
+def is_nan(value):
+    """
+    is_nan
+    """
+    return isinstance(value, float) and math.isnan(value)
+
+
+def is_native(value):
+    """
+    is_native
+    """
+    return False
+
+
+def is_plain_object(value):
+    """
+    is_plain_object
+    """
+    return isinstance(value, dict) and type(value) is dict
+
+
+def is_regexp(value):
+    """
+    is_regexp
+    """
+    return isinstance(value, re.Pattern)
+
+
+def is_symbol(value):
+    """
+    is_symbol
+    """
+    return False
+
+
+def is_typed_array(value):
+    """
+    is_typed_array
+    """
+    return isinstance(value, (bytes, bytearray, memoryview))
+
+
+def is_weak_map(value):
+    """
+    is_weak_map
+    """
+    return isinstance(value, weakref.WeakValueDictionary)
+
+
+def is_weak_set(value):
+    """
+    is_weak_set
+    """
+    return isinstance(value, weakref.WeakSet)
+
+
+def to_finite(value):
+    """
+    to_finite
+    """
+    try:
+        num = float(value)
+        if math.isinf(num) or math.isnan(num):
+            return 0.0
+        return num
+    except (ValueError, TypeError):
+        return 0.0
+
+
+def to_plain_object(value):
+    """
+    to_plain_object
+    """
+    if isinstance(value, dict):
+        return {k: to_plain_object(v) if isinstance(v, dict) else v for k, v in value.items()}
+    return value

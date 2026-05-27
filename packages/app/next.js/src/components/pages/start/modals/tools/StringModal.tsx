@@ -1,6 +1,6 @@
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { FormatStyle, strings } from '@hieudoanm/string';
 import { FC, useState } from 'react';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
-import { FormatStyle, strings } from '@hieudoanm/utils/string';
 
 const STRING_STYLES: { value: FormatStyle; label: string }[] = [
   { value: FormatStyle.Capitalise, label: 'Capitalise' },

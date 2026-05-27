@@ -1,4 +1,4 @@
-import useIndexedDB from '@hieudoanm/hooks/useIndexedDB';
+import useIndexedDB from '@hieudoanm.github.io/hooks/useIndexedDB';
 import { FC, useState, useEffect } from 'react';
 
 export interface Task {

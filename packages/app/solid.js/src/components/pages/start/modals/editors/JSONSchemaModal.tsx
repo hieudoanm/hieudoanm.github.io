@@ -9,13 +9,13 @@ import { yaml as yamlLang } from '@codemirror/lang-yaml';
 import { EditorState, Extension } from '@codemirror/state';
 import { oneDark } from '@codemirror/theme-one-dark';
 import { EditorView } from '@codemirror/view';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
-import { json, jsonParse } from '@hieudoanm/utils/json/json';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { json, jsonParse } from '@hieudoanm/json';
 import jsonSchemaGenerator from 'json-schema-generator';
 import {
-  createSignal,
   createEffect,
   createMemo,
+  createSignal,
   onCleanup,
   onMount,
 } from 'solid-js';

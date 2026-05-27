@@ -1,7 +1,7 @@
 import { getId, getWork } from '@crossref.org/api';
 import type { Reference } from '@crossref.org/api';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
-import { tryCatch } from '@hieudoanm/utils/try-catch';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { tryCatch } from '@hieudoanm.github.io/utils/try-catch';
 import { createSignal } from 'solid-js';
 
 const ReferenceCard = ({

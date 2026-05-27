@@ -1,10 +1,12 @@
-import { hex2hsl, hex2oklch, hex2rgb } from '@hieudoanm/utils/colors/code/hex';
 import {
   getBrightness,
-  randomHexColorCode,
-} from '@hieudoanm/utils/colors/utils';
+  hex2hsl,
+  hex2oklch,
+  hex2rgb,
+  randomHEX,
+} from '@hieudoanm/colors';
 import { FC, useEffect, useState } from 'react';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
 /* =========================
    Tailwind v4 palette
@@ -326,7 +328,7 @@ export const ColorsModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === ' ') {
         e.preventDefault();
-        update(randomHexColorCode());
+        update(randomHEX());
       }
     };
     window.addEventListener('keydown', handleKeyDown);
@@ -342,7 +344,7 @@ export const ColorsModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       subtitle="HEX · RGB · HSL · OKLCH"
       footerNote="Click outside to close · Space for random">
       <button
-        onClick={() => update(randomHexColorCode())}
+        onClick={() => update(randomHEX())}
         className="btn btn-ghost btn-xs font-mono tracking-widest opacity-60 hover:opacity-100">
         Random
       </button>

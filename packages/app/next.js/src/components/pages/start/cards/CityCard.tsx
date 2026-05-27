@@ -1,4 +1,7 @@
-import { WeatherData, weatherCodeToText } from '@hieudoanm/data/weather';
+import {
+  WeatherData,
+  weatherCodeToText,
+} from '@hieudoanm.github.io/data/weather';
 import { FC } from 'react';
 
 export const WeatherBadge: FC<{ weather: WeatherData | undefined }> = ({

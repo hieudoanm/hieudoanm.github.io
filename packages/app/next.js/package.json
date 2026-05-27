@@ -1,5 +1,5 @@
 {
-  "name": "@hieudoanm.github.io/app",
+  "name": "@hieudoanm.github.io/next",
   "version": "0.0.1",
   "private": true,
   "description": "Hieu Doan",
@@ -63,6 +63,11 @@
     "@trpc/client": "11.17.0",
     "@trpc/next": "11.17.0",
     "@trpc/server": "11.17.0",
+    "@hieudoanm/calendar": "workspace:*",
+    "@hieudoanm/colors": "workspace:*",
+    "@hieudoanm/json": "workspace:*",
+    "@hieudoanm/number": "workspace:*",
+    "@hieudoanm/string": "workspace:*",
     "dompurify": "3.4.3",
     "fabric": "7.3.1",
     "file-saver": "2.0.5",

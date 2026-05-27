@@ -1,6 +1,6 @@
-import { pokedex } from '@hieudoanm/data/pokedex';
+import { pokedex } from '@hieudoanm.github.io/data/pokedex';
 import { createMemo, createSignal } from 'solid-js';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
 /* ------------------------------------------------------------------ */
 /* Types                                                                */

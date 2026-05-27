@@ -1,4 +1,4 @@
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 import { FC, useEffect, useRef, useState } from 'react';
 
 type Preset = { label: string; work: number; break: number };

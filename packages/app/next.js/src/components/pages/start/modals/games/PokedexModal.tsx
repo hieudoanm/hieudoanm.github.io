@@ -1,12 +1,12 @@
-import { pokedex } from '@hieudoanm/data/pokedex';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { pokedex } from '@hieudoanm.github.io/data/pokedex';
 import { FC, useMemo, useState } from 'react';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 import {
+  PolarAngleAxis,
+  PolarGrid,
+  PolarRadiusAxis,
   Radar,
   RadarChart,
-  PolarGrid,
-  PolarAngleAxis,
-  PolarRadiusAxis,
   ResponsiveContainer,
 } from 'recharts';
 

@@ -1,7 +1,7 @@
-import { tryCatch } from '@hieudoanm/utils/try-catch';
+import { tryCatch } from '@hieudoanm.github.io/utils/try-catch';
 import { createSignal } from 'solid-js';
 import { useQuery } from '@tanstack/solid-query';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
 export type Word = {
   word: string;

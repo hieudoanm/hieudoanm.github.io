@@ -1,5 +1,5 @@
 import { FC, useState, useCallback, useEffect } from 'react';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 type JsonValue = string | number | boolean | null | JsonValue[] | JsonObject;

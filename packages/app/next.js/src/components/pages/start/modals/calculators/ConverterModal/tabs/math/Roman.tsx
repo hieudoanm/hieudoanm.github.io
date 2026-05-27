@@ -1,4 +1,4 @@
-import { arabic2roman, roman2arabic } from '@hieudoanm/utils/number/roman';
+import { arabic2roman, roman2arabic } from '@hieudoanm/number';
 import { FC, useState } from 'react';
 
 const INITIAL_NUMBER: number = 10;

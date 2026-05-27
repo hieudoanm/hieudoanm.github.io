@@ -1,5 +1,5 @@
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 import { createEffect, createMemo, createSignal, onCleanup } from 'solid-js';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 
 type QuizData = {
   question: string;

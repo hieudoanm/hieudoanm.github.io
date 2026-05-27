@@ -2,7 +2,9 @@
 object
 """
 
-from .lang import isFunction
+import copy
+
+from .lang import is_function
 
 
 def assign(obj, *args):
@@ -60,7 +62,7 @@ def find_last_key(object_var, callback):
     """
     find_last_key
     """
-    _keys = keys(object)
+    _keys = keys(object_var)
     _keys.reverse()
     new_keys = []
     for key in _keys:
@@ -181,7 +183,7 @@ def invert_by(obj, callback=None):
     for key in _keys:
         value = obj[key]
         new_key = str(value)
-        if isFunction(callback):
+        if is_function(callback):
             new_key = callback(value)
         if new_key in new_obj:
             new_obj[new_key].append(key)
@@ -350,3 +352,199 @@ def values_in(obj):
     values_in
     """
     return values(obj)
+
+
+def assign_in(obj, *args):
+    """
+    assign_in
+    """
+    return assign(obj, *args)
+
+
+def assign_with(obj, *args, customizer=None):
+    """
+    assign_with
+    """
+    if customizer is None:
+        return assign(obj, *args)
+    for arg in args:
+        for key in arg:
+            value = arg[key]
+            new_value = customizer(obj.get(key), value, key, obj, arg)
+            if new_value is not None:
+                obj[key] = new_value
+            else:
+                obj[key] = value
+    return obj
+
+
+def assign_in_with(obj, *args, customizer=None):
+    """
+    assign_in_with
+    """
+    return assign_with(obj, *args, customizer=customizer)
+
+
+def create(prototype, props=None):
+    """
+    create
+    """
+    obj = {}
+    if isinstance(prototype, dict):
+        for key in prototype:
+            obj[key] = prototype[key]
+    if props is not None:
+        for key in props:
+            obj[key] = props[key]
+    return obj
+
+
+def defaults_deep(*args):
+    """
+    defaults_deep
+    """
+    objects = list(args)
+    objects.reverse()
+    result = {}
+    for item in objects:
+        for key in item.keys():
+            if key not in result:
+                result[key] = copy.deepcopy(item[key])
+            else:
+                existing = result[key]
+                incoming = item[key]
+                if isinstance(existing, dict) and isinstance(incoming, dict):
+                    result[key] = defaults_deep(existing, incoming)
+    return result
+
+
+def has_in(obj, path):
+    """
+    has_in
+    """
+    return has(obj, path)
+
+
+def get_value(obj, path):
+    """
+    get_value
+    """
+    _keys = path.split(".")
+    value = obj
+    for key in _keys:
+        if isinstance(value, dict) and key in value:
+            value = value[key]
+        else:
+            return None
+    return value
+
+
+def invoke(obj, path, *args):
+    """
+    invoke
+    """
+    _keys = path.split(".")
+    method_name = _keys[-1]
+    target = obj
+    for key in _keys[:-1]:
+        if isinstance(target, dict) and key in target:
+            target = target[key]
+        else:
+            return None
+    method = getattr(target, method_name, None)
+    if not callable(method):
+        return None
+    return method(*args)
+
+
+def merge(obj, *sources):
+    """
+    merge
+    """
+    for source in sources:
+        for key in source:
+            if key in obj and isinstance(obj[key], dict) and isinstance(source[key], dict):
+                obj[key] = merge(obj[key], source[key])
+            else:
+                obj[key] = copy.deepcopy(source[key])
+    return obj
+
+
+def merge_with(obj, *sources, customizer=None):
+    """
+    merge_with
+    """
+    if customizer is None:
+        return merge(obj, *sources)
+    for source in sources:
+        for key in source:
+            result_value = customizer(obj.get(key), source[key], key, obj, source)
+            if result_value is not None:
+                obj[key] = result_value
+            elif key in obj and isinstance(obj[key], dict) and isinstance(source[key], dict):
+                obj[key] = merge_with(obj[key], source[key], customizer=customizer)
+            else:
+                obj[key] = copy.deepcopy(source[key])
+    return obj
+
+
+def set_with(obj, path, value, customizer=None):
+    """
+    set_with
+    """
+    _keys = path.split(".")
+    if customizer is not None:
+        nested = obj
+        for i, key in enumerate(_keys[:-1]):
+            if key not in nested:
+                nested[key] = {}
+            nested = nested[key]
+        last_key = _keys[-1]
+        new_value = customizer(nested.get(last_key), value, last_key, obj, path)
+        nested[last_key] = new_value if new_value is not None else value
+        return obj
+    return set_object(obj, path, value)
+
+
+def transform(obj, callback, accumulator=None):
+    """
+    transform
+    """
+    if accumulator is None:
+        accumulator = {}
+    _keys = keys(obj)
+    for key in _keys:
+        value = obj[key]
+        callback(accumulator, value, key)
+    return accumulator
+
+
+def unset(obj, path):
+    """
+    unset
+    """
+    _keys = path.split(".")
+    nested = obj
+    for key in _keys[:-1]:
+        if not isinstance(nested, dict) or key not in nested:
+            return False
+        nested = nested[key]
+    last_key = _keys[-1]
+    if last_key in nested:
+        del nested[last_key]
+        return True
+    return False
+
+
+def update_with(obj, path, updater, customizer=None):
+    """
+    update_with
+    """
+    _keys = path.split(".")
+    value = get_value(obj, path)
+    if value is None:
+        return obj
+    new_value = updater(value)
+    if customizer is not None:
+        return set_with(obj, path, new_value, customizer=customizer)
+    return set_object(obj, path, new_value)

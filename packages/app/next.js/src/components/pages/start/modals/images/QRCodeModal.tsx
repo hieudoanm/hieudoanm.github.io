@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
 import { toDataURL } from 'qrcode';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
 export const QRCodeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [url, setUrl] = useState('https://');

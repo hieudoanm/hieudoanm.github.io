@@ -1,5 +1,5 @@
 import { FC, useCallback, useMemo, useState } from 'react';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
 const PROXY_BASE_URL = 'https://hieudoanm-proxy.vercel.app/api?url=';
 

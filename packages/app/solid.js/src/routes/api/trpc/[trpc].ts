@@ -1,5 +1,5 @@
 import type { APIEvent } from '@solidjs/start/server';
-import { appRouter } from '@hieudoanm/server/routers/_app';
+import { appRouter } from '@hieudoanm.github.io/server/routers/_app';
 
 /**
  * tRPC handler for SolidStart.

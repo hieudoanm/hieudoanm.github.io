@@ -3,7 +3,7 @@ import 'github-markdown-css/github-markdown.css';
 import html2canvas from 'html2canvas-pro';
 import { marked } from 'marked';
 import { createEffect, createMemo, createSignal, onCleanup } from 'solid-js';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
 /* ------------------------------------------------------------------ */
 /* Helpers                                                              */

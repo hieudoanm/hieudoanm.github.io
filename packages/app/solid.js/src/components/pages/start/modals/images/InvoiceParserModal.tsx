@@ -1,7 +1,7 @@
 import * as ort from 'onnxruntime-web';
 import { createSignal } from 'solid-js';
 import Tesseract from 'tesseract.js';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
 type ExtractedFields = {
   vendor: string;

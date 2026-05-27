@@ -2,7 +2,7 @@ import { MetaProvider, Title, Meta } from '@solidjs/meta';
 import { Router } from '@solidjs/router';
 import { FileRoutes } from '@solidjs/start/router';
 import { Suspense } from 'solid-js';
-import '@hieudoanm/styles/globals.css';
+import '@hieudoanm.github.io/styles/globals.css';
 
 export default function App() {
   return (

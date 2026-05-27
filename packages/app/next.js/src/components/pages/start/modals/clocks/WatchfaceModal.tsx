@@ -1,4 +1,4 @@
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 import { FC, useEffect, useState } from 'react';
 
 const addZero = (num: number) => (num < 10 ? `0${num}` : num);

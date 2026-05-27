@@ -1,9 +1,9 @@
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 import {
   Element,
   periodicTable,
   specificNameColorMap,
-} from '@hieudoanm/data/periodic-table';
+} from '@hieudoanm.github.io/data/periodic-table';
 import { createSignal } from 'solid-js';
 
 const elements = Object.entries(periodicTable);

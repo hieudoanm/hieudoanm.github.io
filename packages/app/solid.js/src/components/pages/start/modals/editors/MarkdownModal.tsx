@@ -2,7 +2,7 @@ import { markdown as markdownLang } from '@codemirror/lang-markdown';
 import { Compartment, EditorState } from '@codemirror/state';
 import { oneDark } from '@codemirror/theme-one-dark';
 import { EditorView } from '@codemirror/view';
-import { tryCatch } from '@hieudoanm/utils/try-catch';
+import { tryCatch } from '@hieudoanm.github.io/utils/try-catch';
 import DOMPurify from 'dompurify';
 import 'github-markdown-css/github-markdown.css';
 import htmlToPdfmake from 'html-to-pdfmake';
@@ -15,7 +15,7 @@ import {
   TDocumentDefinitions,
 } from 'pdfmake/interfaces';
 import { createSignal, createEffect, onCleanup, onMount } from 'solid-js';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 import Tesseract from 'tesseract.js';
 
 /* =========================

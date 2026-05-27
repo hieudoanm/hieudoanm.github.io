@@ -68,6 +68,21 @@ importers:
       '@crossref.org/api':
         specifier: workspace:*
         version: link:../../modules/api/crossref.org
+      '@hieudoanm/calendar':
+        specifier: workspace:*
+        version: link:../../modules/utilities/calendar
+      '@hieudoanm/colors':
+        specifier: workspace:*
+        version: link:../../modules/utilities/colors
+      '@hieudoanm/json':
+        specifier: workspace:*
+        version: link:../../modules/utilities/json
+      '@hieudoanm/number':
+        specifier: workspace:*
+        version: link:../../modules/utilities/number
+      '@hieudoanm/string':
+        specifier: workspace:*
+        version: link:../../modules/utilities/string
       '@mediapipe/camera_utils':
         specifier: 0.3.1675466862
         version: 0.3.1675466862
@@ -312,6 +327,21 @@ importers:
       '@crossref.org/api':
         specifier: workspace:*
         version: link:../../modules/api/crossref.org
+      '@hieudoanm/calendar':
+        specifier: workspace:*
+        version: link:../../modules/utilities/calendar
+      '@hieudoanm/colors':
+        specifier: workspace:*
+        version: link:../../modules/utilities/colors
+      '@hieudoanm/json':
+        specifier: workspace:*
+        version: link:../../modules/utilities/json
+      '@hieudoanm/number':
+        specifier: workspace:*
+        version: link:../../modules/utilities/number
+      '@hieudoanm/string':
+        specifier: workspace:*
+        version: link:../../modules/utilities/string
       '@mediapipe/camera_utils':
         specifier: 0.3.1675466862
         version: 0.3.1675466862
@@ -2044,6 +2074,10 @@ importers:
         version: 8.59.3(eslint@10.4.0(jiti@2.7.0))(typescript@6.0.3)
 
   packages/modules/utilities/json:
+    dependencies:
+      yaml:
+        specifier: ^2.7.0
+        version: 2.9.0
     devDependencies:
       '@eslint/js':
         specifier: 10.0.1
@@ -18318,7 +18352,7 @@ snapshots:
       tinyglobby: 0.2.16
       unrs-resolver: 1.11.1
     optionalDependencies:
-      eslint-plugin-import: 2.32.0(eslint-import-resolver-typescript@3.10.1)(eslint@10.4.0(jiti@2.7.0))
+      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.59.4(eslint@10.4.0(jiti@2.7.0))(typescript@6.0.3))(eslint-import-resolver-typescript@3.10.1)(eslint@10.4.0(jiti@2.7.0))
     transitivePeerDependencies:
       - supports-color
 

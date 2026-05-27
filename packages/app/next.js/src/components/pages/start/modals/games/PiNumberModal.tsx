@@ -1,6 +1,6 @@
-import { PI } from '@hieudoanm/data/pi';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { PI } from '@hieudoanm.github.io/data/pi';
 import { FC, useEffect, useMemo, useRef, useState } from 'react';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 
 const DIGIT_WIDTH = 24;
 const VIEWPORT_OFFSET = 4 * DIGIT_WIDTH;

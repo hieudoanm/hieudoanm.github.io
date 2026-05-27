@@ -3,6 +3,29 @@ string
 """
 
 import math
+import re
+import unicodedata
+
+
+_ESCAPE_RE = re.compile(r'[&<>"\'`]')
+_ESCAPE_MAP = {
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;",
+    "`": "&#96;",
+}
+_UNESCAPE_RE = re.compile(r"&(?:amp|lt|gt|quot|#39|#96);")
+_UNESCAPE_MAP = {
+    "&amp;": "&",
+    "&lt;": "<",
+    "&gt;": ">",
+    "&quot;": '"',
+    "&#39;": "'",
+    "&#96;": "`",
+}
+_DEBURR_RE = re.compile(r"[\u0300-\u036f]")
 
 
 def camel_case(string):
@@ -238,3 +261,51 @@ def words(string):
         new_array.append(new_item)
     result = "".join(new_array).strip()
     return result.split()
+
+
+def deburr(string):
+    """
+    deburr
+    """
+    normalized = unicodedata.normalize("NFD", string)
+    return _DEBURR_RE.sub("", normalized)
+
+
+def escape(string):
+    """
+    escape
+    """
+    return _ESCAPE_RE.sub(lambda m: _ESCAPE_MAP[m.group()], string)
+
+
+def escape_regexp(string):
+    """
+    escape_regexp
+    """
+    return re.escape(string)
+
+
+def template(string, data=None):
+    """
+    template
+    """
+    def render(data=None, **kwargs):
+        merged = {}
+        if data is not None:
+            merged.update(data)
+        merged.update(kwargs)
+        result = string
+        for key, value in merged.items():
+            result = result.replace("{{" + key + "}}", str(value))
+            result = result.replace("{" + key + "}", str(value))
+        return result
+    if data is not None:
+        return render(data)
+    return render
+
+
+def unescape(string):
+    """
+    unescape
+    """
+    return _UNESCAPE_RE.sub(lambda m: _UNESCAPE_MAP[m.group()], string)

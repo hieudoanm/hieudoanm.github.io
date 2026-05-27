@@ -1,4 +1,4 @@
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 import { FC, useCallback, useEffect, useRef, useState } from 'react';
 
 /* =========================
@@ -17,9 +17,7 @@ type SqlJsStatic = {
   Database: new (data?: ArrayLike<number> | Buffer | null) => SqlDatabase;
 };
 type SqlDatabase = {
-  exec: (
-    sql: string
-  ) => {
+  exec: (sql: string) => {
     columns: string[];
     values: (string | number | null | Uint8Array)[][];
   }[];

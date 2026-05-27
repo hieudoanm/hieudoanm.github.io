@@ -1,8 +1,8 @@
 test:
-	python3 -m unittest tests
+	uv run pytest tests
 
 lint:
-	ruff check libs
+	uv run ruff check libs
 
 format:
-	black libs
+	uv run ruff format libs

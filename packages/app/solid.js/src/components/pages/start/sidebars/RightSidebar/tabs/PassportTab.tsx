@@ -1,4 +1,4 @@
-import { countries } from '@hieudoanm/data/countries';
+import { countries } from '@hieudoanm.github.io/data/countries';
 import { createSignal } from 'solid-js';
 
 type Country = {

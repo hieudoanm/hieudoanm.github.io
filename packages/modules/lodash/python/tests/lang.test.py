@@ -98,8 +98,8 @@ class TestLangMethods(unittest.TestCase):
         def a():
             return
 
-        self.assertTrue(_.isFunction(a))
-        self.assertTrue(_.isFunction(lambda a: a))
+        self.assertTrue(_.is_function(a))
+        self.assertTrue(_.is_function(lambda a: a))
 
     def test_is_integer(self):
         self.assertTrue(_.is_integer(3))

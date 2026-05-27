@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
 type QuizData = {
   question: string;

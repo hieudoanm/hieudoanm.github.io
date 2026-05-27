@@ -1,4 +1,4 @@
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 import { createSignal, createEffect, onCleanup } from 'solid-js';
 
 type TimeLeft = {

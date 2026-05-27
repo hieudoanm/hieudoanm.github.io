@@ -3,7 +3,7 @@ import { saveAs } from 'file-saver';
 import { PDFDocument, rgb } from 'pdf-lib';
 import * as pdfjsLib from 'pdfjs-dist';
 import { createSignal, onMount } from 'solid-js';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
 const NODE_ENV: 'development' | 'production' | 'test' =
   process.env.NODE_ENV ?? 'development';

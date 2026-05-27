@@ -1,8 +1,8 @@
 import type { APIEvent } from '@solidjs/start/server';
-import { GeminiModel } from '@hieudoanm/clients/gemini/gemini.enums';
-import { OpenRouterModel } from '@hieudoanm/clients/openrouter/openrouter.enums';
-import { generate } from '@hieudoanm/services/openrouter/openrouter.service';
-import { tryCatch } from '@hieudoanm/utils/try-catch';
+import { GeminiModel } from '@hieudoanm.github.io/clients/gemini/gemini.enums';
+import { OpenRouterModel } from '@hieudoanm.github.io/clients/openrouter/openrouter.enums';
+import { generate } from '@hieudoanm.github.io/services/openrouter/openrouter.service';
+import { tryCatch } from '@hieudoanm.github.io/utils/try-catch';
 
 const validateModel = (model: GeminiModel | OpenRouterModel): boolean => {
   return (

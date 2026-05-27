@@ -1,8 +1,8 @@
-import { GeminiModel } from '@hieudoanm/clients/gemini/gemini.enums';
-import { OpenRouterModel } from '@hieudoanm/clients/openrouter/openrouter.enums';
-import rateLimitMiddleware from '@hieudoanm/middlewares/rate-limit';
-import { generate } from '@hieudoanm/services/openrouter/openrouter.service';
-import { tryCatch } from '@hieudoanm/utils/try-catch';
+import { GeminiModel } from '@hieudoanm.github.io/clients/gemini/gemini.enums';
+import { OpenRouterModel } from '@hieudoanm.github.io/clients/openrouter/openrouter.enums';
+import rateLimitMiddleware from '@hieudoanm.github.io/middlewares/rate-limit';
+import { generate } from '@hieudoanm.github.io/services/openrouter/openrouter.service';
+import { tryCatch } from '@hieudoanm.github.io/utils/try-catch';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 const validateModel = (model: GeminiModel | OpenRouterModel): boolean => {

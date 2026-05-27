@@ -1,6 +1,6 @@
-import { words } from '@hieudoanm/data/wordle';
+import { words } from '@hieudoanm.github.io/data/wordle';
 import { createSignal, onMount } from 'solid-js';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
 const WORD_SET = new Set(words);
 const MAX_ATTEMPTS: number = 6;

@@ -1,5 +1,5 @@
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
-import { twinkleTwinkle } from '@hieudoanm/data/twinkle-twinkle-little-star';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { twinkleTwinkle } from '@hieudoanm.github.io/data/twinkle-twinkle-little-star';
 import { FC, useEffect, useRef, useState } from 'react';
 
 const NODE_ENV = process.env.NODE_ENV ?? 'development';

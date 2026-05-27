@@ -1,6 +1,6 @@
-import { words } from '@hieudoanm/data/wordle';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { words } from '@hieudoanm.github.io/data/wordle';
 import { FC, useEffect, useRef, useState } from 'react';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 
 const WORD_SET = new Set(words);
 const MAX_ATTEMPTS: number = 6;

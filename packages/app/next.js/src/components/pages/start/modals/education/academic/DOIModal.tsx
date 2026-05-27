@@ -1,6 +1,6 @@
 import { getId, getWork, Reference } from '@crossref.org/api';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
-import { tryCatch } from '@hieudoanm/utils/try-catch';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { tryCatch } from '@hieudoanm.github.io/utils/try-catch';
 import { ChangeEvent, FC, SubmitEvent, useState } from 'react';
 
 const ReferenceCard: FC<{ reference: Reference; onDelete: () => void }> = ({

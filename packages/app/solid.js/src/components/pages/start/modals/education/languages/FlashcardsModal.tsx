@@ -1,5 +1,5 @@
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
-import words from '@hieudoanm/json/words.json';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import words from '@hieudoanm.github.io/json/words.json';
 import { createSignal, createEffect, onCleanup } from 'solid-js';
 
 export type FlashCard = {

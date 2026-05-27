@@ -1,7 +1,7 @@
-import { manifest as pwaManifest } from '@hieudoanm/data/manifest/pwa';
-import { manifest as extensionManifest } from '@hieudoanm/data/manifest/extension';
+import { manifest as pwaManifest } from '@hieudoanm.github.io/data/manifest/pwa';
+import { manifest as extensionManifest } from '@hieudoanm.github.io/data/manifest/extension';
 import { FC, useState } from 'react';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
 type ManifestType = 'pwa' | 'extension';
 

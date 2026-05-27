@@ -1,15 +1,15 @@
 import {
   GeminiRole,
   generateContent,
-} from '@hieudoanm/clients/gemini/gemini.client';
-import { GeminiModel } from '@hieudoanm/clients/gemini/gemini.enums';
+} from '@hieudoanm.github.io/clients/gemini/gemini.client';
+import { GeminiModel } from '@hieudoanm.github.io/clients/gemini/gemini.enums';
 import {
   complete,
   OpenRouterRole,
-} from '@hieudoanm/clients/openrouter/openrouter.client';
-import { OpenRouterModel } from '@hieudoanm/clients/openrouter/openrouter.enums';
-import { models } from '@hieudoanm/data/models';
-import { tryCatch } from '@hieudoanm/utils/try-catch';
+} from '@hieudoanm.github.io/clients/openrouter/openrouter.client';
+import { OpenRouterModel } from '@hieudoanm.github.io/clients/openrouter/openrouter.enums';
+import { models } from '@hieudoanm.github.io/data/models';
+import { tryCatch } from '@hieudoanm.github.io/utils/try-catch';
 
 const ids: string[] = models.map(({ id }) => id);
 

@@ -1,5 +1,5 @@
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 import { createRenderEffect, createSignal, onMount } from 'solid-js';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 
 type Tower = number[];
 type Move = [number, number];

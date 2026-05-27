@@ -1,8 +1,8 @@
-import { GeminiModel } from '@hieudoanm/clients/gemini/gemini.enums';
-import { OpenRouterModel } from '@hieudoanm/clients/openrouter/openrouter.enums';
-import { generate } from '@hieudoanm/services/openrouter/openrouter.service';
-import { summariseTranscript } from '@hieudoanm/services/youtube/youtube.service';
-import { tryCatch } from '@hieudoanm/utils/try-catch';
+import { GeminiModel } from '@hieudoanm.github.io/clients/gemini/gemini.enums';
+import { OpenRouterModel } from '@hieudoanm.github.io/clients/openrouter/openrouter.enums';
+import { generate } from '@hieudoanm.github.io/services/openrouter/openrouter.service';
+import { summariseTranscript } from '@hieudoanm.github.io/services/youtube/youtube.service';
+import { tryCatch } from '@hieudoanm.github.io/utils/try-catch';
 import { z } from 'zod';
 import { procedure, router } from '../trpc';
 

@@ -1,6 +1,6 @@
 import { createClipboard, createStorage } from '@browser/native';
 import { FC, useEffect, useState } from 'react';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
 type ClipItem = {
   id: string;

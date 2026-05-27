@@ -1,5 +1,5 @@
 import { FC, useState } from 'react';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
 export const HouseModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [name, setName] = useState('House');

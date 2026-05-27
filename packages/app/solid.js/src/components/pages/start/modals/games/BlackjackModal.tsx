@@ -1,5 +1,5 @@
 import { createSignal, onMount } from 'solid-js';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
 type Card = { rank: string; suit: string; value: number };
 

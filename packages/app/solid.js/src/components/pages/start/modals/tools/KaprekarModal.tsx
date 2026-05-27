@@ -1,5 +1,5 @@
 import { createSignal, createEffect, onCleanup } from 'solid-js';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
 const KAPREKAR_CONSTANT_3 = 495;
 const KAPREKAR_CONSTANT_4 = 6174;

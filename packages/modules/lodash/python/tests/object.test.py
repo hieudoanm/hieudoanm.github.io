@@ -141,5 +141,78 @@ class TestObjectMethods(unittest.TestCase):
         self.assertEqual(_.values_in(obj), [1, 2, 3])
 
 
+    def test_assign_in(self):
+        obj = {"a": 1}
+        _.assign_in(obj, {"b": 2}, {"c": 3})
+        self.assertEqual(obj, {"a": 1, "b": 2, "c": 3})
+
+    def test_assign_with(self):
+        obj = {"a": 1}
+        _.assign_with(obj, {"a": 2, "b": 3}, customizer=lambda o, n, k, *_: o + n if k == "a" else None)
+        self.assertEqual(obj, {"a": 3, "b": 3})
+
+    def test_assign_in_with(self):
+        obj = {"a": 1}
+        _.assign_in_with(obj, {"a": 2}, customizer=lambda o, n, *_: o + n)
+        self.assertEqual(obj, {"a": 3})
+
+    def test_create(self):
+        prototype = {"a": 1}
+        obj = _.create(prototype, {"b": 2})
+        self.assertEqual(obj, {"a": 1, "b": 2})
+
+    def test_defaults_deep(self):
+        result = _.defaults_deep({"a": {"b": 2}}, {"a": {"b": 1, "c": 3}})
+        self.assertEqual(result, {"a": {"b": 2, "c": 3}})
+
+    def test_has_in(self):
+        obj = {"a": {"b": 2}}
+        self.assertTrue(_.has_in(obj, "a"))
+        self.assertTrue(_.has_in(obj, "a.b"))
+        self.assertFalse(_.has_in(obj, "c"))
+
+    def test_invoke(self):
+        obj = {"a": {"b": [1, 2, 3]}}
+        result = _.invoke(obj, "a.b.pop")
+        self.assertEqual(result, 3)
+        self.assertEqual(obj, {"a": {"b": [1, 2]}})
+
+    def test_invoke_with_args(self):
+        obj = {"a": "hello world"}
+        result = _.invoke(obj, "a.split", " ")
+        self.assertEqual(result, ["hello", "world"])
+
+    def test_merge(self):
+        obj = {"a": {"b": 1}, "c": 2}
+        _.merge(obj, {"a": {"d": 3}, "e": 4})
+        self.assertEqual(obj, {"a": {"b": 1, "d": 3}, "c": 2, "e": 4})
+
+    def test_merge_with(self):
+        obj = {"a": 1, "b": 2}
+        _.merge_with(obj, {"a": 3, "b": 4, "c": 5}, customizer=lambda o, n, *_: n if o is None else o + n)
+        self.assertEqual(obj, {"a": 4, "b": 6, "c": 5})
+
+    def test_set_with(self):
+        obj = {"a": {"b": 1}}
+        _.set_with(obj, "a.b", 2, customizer=lambda o, n, *_: o + n)
+        self.assertEqual(obj, {"a": {"b": 3}})
+
+    def test_transform(self):
+        obj = {"a": 1, "b": 2, "c": 1}
+        result = _.transform(obj, lambda acc, val, key: acc.update({val: acc.get(val, []) + [key]}) or acc, {})
+        self.assertEqual(result, {1: ["a", "c"], 2: ["b"]})
+
+    def test_unset(self):
+        obj = {"a": {"b": 1, "c": 2}}
+        self.assertTrue(_.unset(obj, "a.b"))
+        self.assertEqual(obj, {"a": {"c": 2}})
+        self.assertFalse(_.unset(obj, "x"))
+
+    def test_update_with(self):
+        obj = {"a": {"b": 1}}
+        _.update_with(obj, "a.b", lambda n: n * 2, customizer=lambda o, n, *_: o + n)
+        self.assertEqual(obj, {"a": {"b": 3}})
+
+
 if __name__ == "__main__":
     unittest.main()

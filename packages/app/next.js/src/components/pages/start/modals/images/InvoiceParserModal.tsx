@@ -1,7 +1,7 @@
 import * as ort from 'onnxruntime-web';
 import { FC, useState } from 'react';
 import Tesseract from 'tesseract.js';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
 type ExtractedFields = {
   vendor: string;

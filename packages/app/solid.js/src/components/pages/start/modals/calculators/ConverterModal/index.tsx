@@ -1,5 +1,5 @@
 import { createSignal } from 'solid-js';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 import { Angle } from './tabs/math/Angle';
 import { Base } from './tabs/math/Base';
 import { Data } from './tabs/math/Data';

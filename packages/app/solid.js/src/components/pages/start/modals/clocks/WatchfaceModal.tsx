@@ -1,4 +1,4 @@
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 import { createSignal, onMount, onCleanup } from 'solid-js';
 
 const addZero = (num: number) => (num < 10 ? `0${num}` : num);

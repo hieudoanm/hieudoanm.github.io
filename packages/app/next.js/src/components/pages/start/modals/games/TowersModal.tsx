@@ -1,5 +1,5 @@
+import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 import { FC, useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { ModalWrapper } from '@hieudoanm/components/atoms/ModalWrapper';
 
 type Tower = number[];
 type Move = [number, number];

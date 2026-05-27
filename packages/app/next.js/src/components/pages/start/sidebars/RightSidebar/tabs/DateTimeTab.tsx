@@ -1,15 +1,18 @@
 // components/sidebars/DateTimeTab.tsx
-import { CityCard } from '@hieudoanm/components/pages/start/cards/CityCard';
-import { Event, events } from '@hieudoanm/data/calendar/events';
-import { months, monthsByQuarters } from '@hieudoanm/data/calendar/months';
-import { yearsByDecades } from '@hieudoanm/data/calendar/years';
-import { timezones } from '@hieudoanm/data/timezones';
-import type { WeatherData } from '@hieudoanm/data/weather';
+import { CityCard } from '@hieudoanm.github.io/components/pages/start/cards/CityCard';
+import { Event, events } from '@hieudoanm.github.io/data/calendar/events';
 import {
+  months,
+  monthsByQuarters,
+} from '@hieudoanm.github.io/data/calendar/months';
+import { yearsByDecades } from '@hieudoanm.github.io/data/calendar/years';
+import { timezones } from '@hieudoanm.github.io/data/timezones';
+import type { WeatherData } from '@hieudoanm.github.io/data/weather';
+import {
+  LunarCalendar,
   generateFullCalendar,
   getWeekOfYear,
-  LunarCalendar,
-} from '@hieudoanm/utils/calendar';
+} from '@hieudoanm/calendar';
 import { useQueries } from '@tanstack/react-query';
 import { FC, useState } from 'react';
 
