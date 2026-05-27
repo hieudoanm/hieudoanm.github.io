@@ -74,3 +74,4 @@
 3. `@hieudoanm/json`
 4. `@hieudoanm/number`
 5. `@hieudoanm/string`
+6. `@hieudoanm/try-catch`

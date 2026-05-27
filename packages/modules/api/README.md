@@ -20,8 +20,9 @@
 ## Languages
 
 1. [Go](https://go.dev)
-2. [Rust](https://rust-lang.org)
-3. [TypeScript](https://typescriptlang.org)
+2. [Python](https://python.org)
+3. [Rust](https://rust-lang.org)
+4. [TypeScript](https://typescriptlang.org)
 
 ## API Clients
 
