@@ -35,7 +35,6 @@
     "verbatimModuleSyntax": false,
     "isolatedModules": true,
     "moduleDetection": "force",
-    "noUncheckedSideEffectImports": true,
 
     /* ========================
        Quality of Life
