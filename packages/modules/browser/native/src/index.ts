@@ -1,5 +1,6 @@
 export * from './battery';
 export * from './boardcast-channel';
+export * from './cookie';
 export * from './clipboard';
 export * from './console';
 export * from './geolocation';

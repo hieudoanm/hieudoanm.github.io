@@ -126,9 +126,9 @@ export function methodOf(
 export function mixin<T extends Record<string, any>>(
   object: T,
   source: Record<string, any>,
-  _options?: { chain?: boolean }
+  options?: { chain?: boolean }
 ): T {
-  // eslint-disable-line @typescript-eslint/no-unused-vars
+  void options;
   for (const key of Object.keys(source)) {
     if (typeof source[key] === 'function') {
       (object as any)[key] = source[key];
@@ -137,8 +137,8 @@ export function mixin<T extends Record<string, any>>(
   return object;
 }
 
-export function noop(..._args: any[]): undefined {
-  // eslint-disable-line @typescript-eslint/no-unused-vars
+export function noop(...args: any[]): undefined {
+  void args;
   return undefined;
 }
 

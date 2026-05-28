@@ -69,8 +69,9 @@ describe('gt/gte/lt/lte', () => {
 describe('isArguments', () => {
   it('should detect arguments', () => {
     function argsFn() {
+      // eslint-disable-next-line prefer-rest-params
       return arguments;
-    } // eslint-disable-line prefer-rest-params
+    }
     expect(isArguments(argsFn())).toBe(true);
     expect(isArguments([1, 2, 3])).toBe(false);
   });

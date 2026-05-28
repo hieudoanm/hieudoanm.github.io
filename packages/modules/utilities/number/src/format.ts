@@ -26,3 +26,8 @@ export const formatCurrency = (amount: number, currency: string = 'USD') => {
   }).format(amount);
   return formatted;
 };
+
+export const commas = (number: number | bigint) => {
+  if (typeof number !== 'number' && typeof number !== 'bigint') return '';
+  return number.toLocaleString('en-US');
+};
