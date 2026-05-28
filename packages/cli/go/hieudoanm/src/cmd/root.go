@@ -8,6 +8,7 @@ import (
 
 	"github.com/hieudoanm/hieudoanm/src/cmd/chess"
 	"github.com/hieudoanm/hieudoanm/src/cmd/colors"
+	"github.com/hieudoanm/hieudoanm/src/cmd/docsify"
 	"github.com/hieudoanm/hieudoanm/src/cmd/doi"
 	"github.com/hieudoanm/hieudoanm/src/cmd/instagram"
 	"github.com/hieudoanm/hieudoanm/src/cmd/ip"
@@ -48,6 +49,7 @@ func init() {
 	rootCmd.AddCommand(chess.NewCommand())
 	rootCmd.AddCommand(colors.NewCommand())
 	rootCmd.AddCommand(doi.NewCommand())
+	rootCmd.AddCommand(docsify.NewCommand())
 	rootCmd.AddCommand(instagram.NewCommand())
 	rootCmd.AddCommand(ip.NewCommand())
 	rootCmd.AddCommand(openapi.NewCommand())
