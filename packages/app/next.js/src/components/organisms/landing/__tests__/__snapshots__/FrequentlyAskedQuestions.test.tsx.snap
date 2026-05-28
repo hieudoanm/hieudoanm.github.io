@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`FrequentlyAskedQuestions to match snapshot 1`] = `
+<div>
+  <section
+    class="mx-auto max-w-3xl px-12 py-24"
+  >
+    <p
+      class="text-primary mb-3 text-center text-xs font-medium tracking-[0.14em] uppercase"
+    >
+      FAQ
+    </p>
+    <h2
+      class="mb-4 text-center font-serif text-4xl leading-snug font-bold"
+    >
+      Frequently asked questions
+    </h2>
+    <p
+      class="text-base-content/60 mb-12 mx-auto max-w-xl text-center text-base leading-relaxed"
+    >
+      Everything you need to know about Forma.
+    </p>
+    <div
+      class="border-base-300 overflow-hidden rounded-2xl border"
+    >
+      <div
+        class="collapse-arrow collapse border-base-300 border-b bg-transparent last:border-b-0"
+      >
+        <input
+          checked=""
+          name="faq"
+          type="radio"
+        />
+        <div
+          class="collapse-title text-base-content px-5 py-4 text-sm font-medium"
+        >
+          What tokens does Forma export?
+        </div>
+        <div
+          class="collapse-content px-5"
+        >
+          <p
+            class="text-base-content/50 pb-2 text-sm leading-relaxed"
+          >
+            Forma exports CSS custom properties for color, spacing, radius, shadow, and typography — plus a JS token object for use in styled-components or Tailwind configs.
+          </p>
+        </div>
+      </div>
+      <div
+        class="collapse-arrow collapse border-base-300 border-b bg-transparent last:border-b-0"
+      >
+        <input
+          name="faq"
+          type="radio"
+        />
+        <div
+          class="collapse-title text-base-content px-5 py-4 text-sm font-medium"
+        >
+          Is it framework-agnostic?
+        </div>
+        <div
+          class="collapse-content px-5"
+        >
+          <p
+            class="text-base-content/50 pb-2 text-sm leading-relaxed"
+          >
+            The core tokens and CSS utilities work anywhere. React components are available via @forma/react, with Vue and Svelte packages coming soon.
+          </p>
+        </div>
+      </div>
+      <div
+        class="collapse-arrow collapse border-base-300 border-b bg-transparent last:border-b-0"
+      >
+        <input
+          name="faq"
+          type="radio"
+        />
+        <div
+          class="collapse-title text-base-content px-5 py-4 text-sm font-medium"
+        >
+          How are accessibility levels tested?
+        </div>
+        <div
+          class="collapse-content px-5"
+        >
+          <p
+            class="text-base-content/50 pb-2 text-sm leading-relaxed"
+          >
+            We run automated axe-core tests in CI and manual audits with NVDA and VoiceOver on every major release. All interactive components meet WCAG 2.1 AA criteria.
+          </p>
+        </div>
+      </div>
+      <div
+        class="collapse-arrow collapse border-base-300 border-b bg-transparent last:border-b-0"
+      >
+        <input
+          name="faq"
+          type="radio"
+        />
+        <div
+          class="collapse-title text-base-content px-5 py-4 text-sm font-medium"
+        >
+          Can I use Forma in a commercial project?
+        </div>
+        <div
+          class="collapse-content px-5"
+        >
+          <p
+            class="text-base-content/50 pb-2 text-sm leading-relaxed"
+          >
+            Yes — Forma is MIT licensed. You can use it in personal, open-source, and commercial projects with no restrictions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

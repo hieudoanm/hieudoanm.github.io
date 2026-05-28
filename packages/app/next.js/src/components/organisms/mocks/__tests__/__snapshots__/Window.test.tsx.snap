@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Window to match screenshot 1`] = `
+<div>
+  <div
+    class="mockup-window border-base-300 w-full border bg-base-100 "
+  >
+    <div
+      class="border-base-300 border-t"
+    />
+  </div>
+</div>
+`;

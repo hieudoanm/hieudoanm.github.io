@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Browser to match snapshot 1`] = `
+<div>
+  <div
+    class="mockup-browser border-base-300 w-full border bg-base-100 "
+  >
+    <div
+      class="mockup-browser-toolbar"
+    >
+      <div
+        class="input"
+      >
+        https://daisyui.com
+      </div>
+    </div>
+    <div
+      class="border-base-300 grid border-t"
+    />
+  </div>
+</div>
+`;
