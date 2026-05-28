@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`ChatSidebar to match snapshot 1`] = `
+<div>
+  <div
+    class="bg-base-200 border-base-300 flex w-72 shrink-0 flex-col border-r"
+  >
+    <div
+      class="border-base-300 flex items-center justify-between border-b px-4 py-4"
+    >
+      <span
+        class="text-base-content/50 text-xs font-medium tracking-[0.14em] uppercase"
+      >
+        Conversations
+      </span>
+      <button
+        class="btn btn-ghost btn-xs text-base-content/50 hover:text-base-content"
+        type="button"
+      >
+        + New
+      </button>
+    </div>
+    <div
+      class="flex-1 overflow-y-auto"
+    >
+      <button
+        class="w-full px-4 py-3 text-left text-sm transition-colors bg-primary/10 border-primary/30 text-base-content border-l-2"
+        type="button"
+      >
+        <span
+          class="line-clamp-1"
+        >
+          First Chat
+        </span>
+        <span
+          class="text-base-content/20 mt-0.5 block text-xs"
+        >
+          1
+           messages
+        </span>
+      </button>
+      <button
+        class="w-full px-4 py-3 text-left text-sm transition-colors text-base-content/60 hover:bg-base-300/50 hover:text-base-content border-l-2 border-transparent"
+        type="button"
+      >
+        <span
+          class="line-clamp-1"
+        >
+          Second Chat
+        </span>
+        <span
+          class="text-base-content/20 mt-0.5 block text-xs"
+        >
+          2
+           messages
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;

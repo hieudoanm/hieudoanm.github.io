@@ -12,7 +12,7 @@ exports[`CallToAction to match snapshot 1`] = `
         class="card-body items-center py-16"
       >
         <h2
-          class="font-serif text-4xl leading-snug font-bold mb-4"
+          class="mb-4 font-serif text-4xl leading-snug font-bold"
         >
           Ready to build?
         </h2>

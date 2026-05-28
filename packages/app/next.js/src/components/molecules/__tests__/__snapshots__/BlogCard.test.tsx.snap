@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`BlogCard to match snapshot 1`] = `
+<div>
+  <a
+    class="card bg-base-200 border-base-300 hover:border-primary/40 group border transition-colors"
+    href="/blog/hello-world"
+  >
+    <div
+      class="card-body p-7"
+    >
+      <div
+        class="mb-3 flex items-center gap-3"
+      >
+        <time
+          class="text-base-content/40 text-xs"
+          datetime="2024-01-15"
+        >
+          Jan 15, 2024
+        </time>
+        <span
+          class="text-base-content/30 text-xs"
+        >
+          5
+           min read
+        </span>
+      </div>
+      <h3
+        class="card-title text-base-content group-hover:text-primary mb-2 text-sm font-medium transition-colors"
+      >
+        Hello World
+      </h3>
+      <p
+        class="text-base-content/50 mb-4 text-sm leading-relaxed line-clamp-2"
+      >
+        A test post description.
+      </p>
+      <div
+        class="mt-auto flex flex-wrap gap-2"
+      >
+        <span
+          class="badge badge-sm badge-ghost border-base-300 text-base-content/60"
+        >
+          react
+        </span>
+        <span
+          class="badge badge-sm badge-ghost border-base-300 text-base-content/60"
+        >
+          typescript
+        </span>
+      </div>
+    </div>
+  </a>
+</div>
+`;

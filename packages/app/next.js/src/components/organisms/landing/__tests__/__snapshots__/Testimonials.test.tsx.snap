@@ -16,7 +16,7 @@ exports[`Testimonials to match snapshot 1`] = `
       Loved by teams
     </h2>
     <p
-      class="text-base-content/60 mb-12 mx-auto max-w-xl text-center text-base leading-relaxed"
+      class="text-base-content/60 mx-auto mb-12 max-w-xl text-center text-base leading-relaxed"
     >
       See what our community says about building with Forma.
     </p>

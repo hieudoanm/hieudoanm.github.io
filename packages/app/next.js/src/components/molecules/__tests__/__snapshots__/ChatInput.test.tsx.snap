@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`ChatInput to match snapshot 1`] = `
+<div>
+  <form
+    class="flex items-end gap-3 px-6 py-4"
+  >
+    <div
+      class="relative flex-1"
+    >
+      <textarea
+        class="textarea textarea-bordered border-base-300 bg-base-200 text-base-content placeholder:text-base-content/30 scrollbar-none w-full resize-none rounded-2xl px-5 py-3 pr-12 text-sm leading-relaxed focus:outline-none"
+        placeholder="Type a message..."
+        rows="1"
+        style="height: 0px;"
+      />
+    </div>
+    <button
+      class="btn btn-primary btn-square flex h-11 w-11 shrink-0 items-center justify-center rounded-xl disabled:opacity-40"
+      disabled=""
+      type="submit"
+    >
+      <svg
+        class="h-5 w-5"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M3.478 2.404a.75.75 0 0 0-.926.941l2.432 7.905H13.5a.75.75 0 0 1 0 1.5H4.984l-2.432 7.905a.75.75 0 0 0 .926.94 60.519 60.519 0 0 0 18.445-8.986.75.75 0 0 0 0-1.218A60.517 60.517 0 0 0 3.478 2.404Z"
+        />
+      </svg>
+    </button>
+  </form>
+</div>
+`;

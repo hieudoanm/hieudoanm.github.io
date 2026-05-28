@@ -24,7 +24,6 @@
     "lint": "eslint . --fix",
     "prebuild": "rimraf dist",
     "build": "tsc -p tsconfig.build.json",
-    "pretest": "jest --clearCache",
     "test": "true"
   },
   "dependencies": {

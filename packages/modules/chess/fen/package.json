@@ -24,7 +24,6 @@
     "format": "prettier --cache --write .",
     "lint": "eslint . --fix",
     "build": "tsc -p tsconfig.build.json",
-    "pretest": "jest --clearCache",
     "test": "jest"
   },
   "devDependencies": {

@@ -17,7 +17,7 @@ exports[`Pricing to match snapshot 1`] = `
       Simple, honest pricing
     </h2>
     <p
-      class="text-base-content/60 mb-12 mx-auto max-w-xl text-base leading-relaxed"
+      class="text-base-content/60 mx-auto mb-12 max-w-xl text-base leading-relaxed"
     >
       No hidden fees. Cancel anytime. Every plan includes the full component library.
     </p>

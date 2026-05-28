@@ -16,7 +16,7 @@ exports[`FrequentlyAskedQuestions to match snapshot 1`] = `
       Frequently asked questions
     </h2>
     <p
-      class="text-base-content/60 mb-12 mx-auto max-w-xl text-center text-base leading-relaxed"
+      class="text-base-content/60 mx-auto mb-12 max-w-xl text-center text-base leading-relaxed"
     >
       Everything you need to know about Forma.
     </p>
@@ -24,7 +24,7 @@ exports[`FrequentlyAskedQuestions to match snapshot 1`] = `
       class="border-base-300 overflow-hidden rounded-2xl border"
     >
       <div
-        class="collapse-arrow collapse border-base-300 border-b bg-transparent last:border-b-0"
+        class="collapse-arrow border-base-300 collapse border-b bg-transparent last:border-b-0"
       >
         <input
           checked=""
@@ -47,7 +47,7 @@ exports[`FrequentlyAskedQuestions to match snapshot 1`] = `
         </div>
       </div>
       <div
-        class="collapse-arrow collapse border-base-300 border-b bg-transparent last:border-b-0"
+        class="collapse-arrow border-base-300 collapse border-b bg-transparent last:border-b-0"
       >
         <input
           name="faq"
@@ -69,7 +69,7 @@ exports[`FrequentlyAskedQuestions to match snapshot 1`] = `
         </div>
       </div>
       <div
-        class="collapse-arrow collapse border-base-300 border-b bg-transparent last:border-b-0"
+        class="collapse-arrow border-base-300 collapse border-b bg-transparent last:border-b-0"
       >
         <input
           name="faq"
@@ -91,7 +91,7 @@ exports[`FrequentlyAskedQuestions to match snapshot 1`] = `
         </div>
       </div>
       <div
-        class="collapse-arrow collapse border-base-300 border-b bg-transparent last:border-b-0"
+        class="collapse-arrow border-base-300 collapse border-b bg-transparent last:border-b-0"
       >
         <input
           name="faq"
