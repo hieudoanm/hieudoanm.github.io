@@ -45,9 +45,14 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
         println!("Net Income:     {:>14.0} VND", result.net);
         println!();
         println!("Breakdown:");
-            for b in &result.breakdown {
-                println!("  Rate: {:<5.1}%  Taxable: {:>10.0}  Tax: {:>10.0} VND", b.rate * 100.0, b.taxable, b.tax);
-            }
+        for b in &result.breakdown {
+            println!(
+                "  Rate: {:<5.1}%  Taxable: {:>10.0}  Tax: {:>10.0} VND",
+                b.rate * 100.0,
+                b.taxable,
+                b.tax
+            );
+        }
     } else {
         println!("Tax calculator");
         println!("Use --income <amount> to calculate tax. Example:");

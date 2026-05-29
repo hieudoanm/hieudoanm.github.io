@@ -35,15 +35,18 @@ pub fn fetch_free_models() -> Result<Vec<Model>> {
 
     let payload: ModelsResponse = resp.json().context("decode error")?;
 
-    let mut free: Vec<Model> = payload.data.into_iter().filter(|m| is_free(&m.pricing)).collect();
+    let mut free: Vec<Model> = payload
+        .data
+        .into_iter()
+        .filter(|m| is_free(&m.pricing))
+        .collect();
     free.sort_by(|a, b| a.id.cmp(&b.id));
 
     Ok(free)
 }
 
 fn is_free(p: &Pricing) -> bool {
-    (p.prompt == "0" || p.prompt.is_empty())
-        && (p.completion == "0" || p.completion.is_empty())
+    (p.prompt == "0" || p.prompt.is_empty()) && (p.completion == "0" || p.completion.is_empty())
 }
 
 pub fn resolve_model(query: &str, models: &[Model]) -> Option<Model> {
@@ -65,7 +68,10 @@ pub fn resolve_model(query: &str, models: &[Model]) -> Option<Model> {
     }
 
     // Partial match on ID
-    let id_matches: Vec<&Model> = models.iter().filter(|m| m.id.to_lowercase().contains(&q)).collect();
+    let id_matches: Vec<&Model> = models
+        .iter()
+        .filter(|m| m.id.to_lowercase().contains(&q))
+        .collect();
     if id_matches.len() == 1 {
         return Some(id_matches[0].clone());
     }
@@ -83,7 +89,10 @@ pub fn resolve_model(query: &str, models: &[Model]) -> Option<Model> {
     }
 
     // Partial match on Name
-    let name_matches: Vec<&Model> = models.iter().filter(|m| m.name.to_lowercase().contains(&q)).collect();
+    let name_matches: Vec<&Model> = models
+        .iter()
+        .filter(|m| m.name.to_lowercase().contains(&q))
+        .collect();
     if !name_matches.is_empty() {
         let mut sorted = name_matches.clone();
         sorted.sort_by(|a, b| a.id.len().cmp(&b.id.len()));
@@ -172,7 +181,11 @@ pub fn probe_model(model: &Model, api_key: &str) -> ProbeResult {
             ProbeResult {
                 model: model.clone(),
                 status: ProbeStatus::Error,
-                message: if msg.is_empty() { format!("HTTP {}", code) } else { msg },
+                message: if msg.is_empty() {
+                    format!("HTTP {}", code)
+                } else {
+                    msg
+                },
                 latency_ms: elapsed,
             }
         }
@@ -181,7 +194,11 @@ pub fn probe_model(model: &Model, api_key: &str) -> ProbeResult {
 
 fn extract_error_message(body: &str) -> String {
     if let Ok(envelope) = serde_json::from_str::<serde_json::Value>(body) {
-        if let Some(msg) = envelope.get("error").and_then(|e| e.get("message")).and_then(|m| m.as_str()) {
+        if let Some(msg) = envelope
+            .get("error")
+            .and_then(|e| e.get("message"))
+            .and_then(|m| m.as_str())
+        {
             let mut s = msg.to_string();
             if s.len() > 80 {
                 s.truncate(77);

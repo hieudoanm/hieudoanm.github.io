@@ -21,7 +21,14 @@ pub fn scan_wifi() -> Result<String> {
 #[cfg(target_os = "linux")]
 pub fn scan_wifi() -> Result<String> {
     let output = std::process::Command::new("nmcli")
-        .args(["--terse", "--fields", "SSID,SIGNAL,SECURITY", "device", "wifi", "list"])
+        .args([
+            "--terse",
+            "--fields",
+            "SSID,SIGNAL,SECURITY",
+            "device",
+            "wifi",
+            "list",
+        ])
         .output()
         .context("failed to run nmcli command")?;
 
@@ -38,7 +45,11 @@ pub fn scan_wifi() -> Result<String> {
         if parts.len() != 3 {
             continue;
         }
-        let ssid = if parts[0].is_empty() { "<hidden>" } else { parts[0] };
+        let ssid = if parts[0].is_empty() {
+            "<hidden>"
+        } else {
+            parts[0]
+        };
         let signal = parts[1];
         let security = parts[2];
         result.push_str(&format!("{} | RSSI: {} | {}\n", ssid, signal, security));

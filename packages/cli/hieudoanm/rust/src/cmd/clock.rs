@@ -103,9 +103,9 @@ fn countdown(seconds: u64) -> anyhow::Result<()> {
         // Check for Ctrl+C (non-blocking)
         #[cfg(unix)]
         {
-            use std::sync::atomic::{AtomicBool, Ordering};
-            use std::sync::Arc;
-            static INTERRUPTED: AtomicBool = AtomicBool::new(false);
+            // use std::sync::atomic::{AtomicBool, Ordering};
+            // use std::sync::Arc;
+            // static INTERRUPTED: AtomicBool = AtomicBool::new(false);
             // Simple polling approach
         }
     }

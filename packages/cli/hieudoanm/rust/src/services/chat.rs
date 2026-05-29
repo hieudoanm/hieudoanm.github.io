@@ -36,9 +36,7 @@ pub fn generate(model: &str, prompt: &str) -> Result<String> {
         .send()
         .context("failed to send chat request")?;
 
-    let response: ResponsePayload = resp
-        .json()
-        .context("failed to parse chat response")?;
+    let response: ResponsePayload = resp.json().context("failed to parse chat response")?;
 
     Ok(response.output)
 }

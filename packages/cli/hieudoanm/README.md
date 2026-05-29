@@ -4,46 +4,51 @@
 
 | No  | Language                 | Framework      |
 | --- | ------------------------ | -------------- |
-| 1   | [Go][go]                 | [Cobra][cobra] |
-| 2   | [Rust][rust]             | [Clap][clap]   |
-| 3   | [TypeScript][typescript] | [OCLIF][oclif] |
+| 1   | [Go][go]                 | [cobra][cobra] |
+| 2   | [Rust][rust]             | [clap][clap]   |
+| 3   | [TypeScript][typescript] | [oclif][oclif] |
 
 ## Commands
 
-| Command          | [cobra] | [clap] |
-| ---------------- | ------- | ------ |
-| version          | ✅      | ✅     |
-| blackjack        | ✅      | ⬜     |
-| braille          | ✅      | ✅     |
-| clipboard        | ✅      | ✅     |
-| define (english) | ✅      | ✅     |
-| cc (frankfurter) | ✅      | ✅     |
-| morse            | ✅      | ✅     |
-| qrcode           | ✅      | ✅     |
-| snapshot         | ✅      | ⬜     |
-| status           | ✅      | ✅     |
-| status-all       | ✅      | ✅     |
-| tax              | ✅      | ✅     |
-| uuid             | ✅      | ✅     |
-| wifi             | ✅      | ✅     |
-| chess            | ✅      | ⬜     |
-| clock            | ✅      | ✅     |
-| colors           | ✅      | ✅     |
-| docsify          | ✅      | ✅     |
-| doi              | ✅      | ✅     |
-| instagram        | ✅      | ⬜     |
-| ip               | ✅      | ✅     |
-| openapi          | ✅      | ⬜     |
-| openrouter       | ✅      | ✅     |
-| shopify | ✅ | ✅ |
-| string | ✅ | ✅ |
-| system | ✅ | ✅ |
-| telegram         | ✅      | ✅     |
-| youtube          | ✅      | ✅     |
+| No  | Command          | [cobra] | [clap] | [oclif][oclif] |
+| --- | ---------------- | ------- | ------ | -------------- |
+| 1   | version          | ✅      | ✅     |                |
+| 2   | blackjack        | ✅      | ⬜     |                |
+| 3   | braille          | ✅      | ✅     |                |
+| 4   | clipboard        | ✅      | ✅     |                |
+| 5   | define (english) | ✅      | ✅     |                |
+| 6   | cc (frankfurter) | ✅      | ✅     |                |
+| 7   | morse            | ✅      | ✅     |                |
+| 8   | qrcode           | ✅      | ✅     |                |
+| 9   | snapshot         | ✅      | ⬜     |                |
+| 10  | status           | ✅      | ✅     |                |
+| 11  | status-all       | ✅      | ✅     |                |
+| 12  | tax              | ✅      | ✅     |                |
+| 13  | uuid             | ✅      | ✅     |                |
+| 14  | wifi             | ✅      | ✅     |                |
+| 15  | chess            | ✅      | ⬜     |                |
+| 16  | clock            | ✅      | ✅     |                |
+| 17  | colors           | ✅      | ✅     |                |
+| 18  | docsify          | ✅      | ✅     |                |
+| 19  | doi              | ✅      | ✅     |                |
+| 20  | instagram        | ✅      | ⬜     |                |
+| 21  | ip               | ✅      | ✅     |                |
+| 22  | openapi          | ✅      | ⬜     |                |
+| 23  | openrouter       | ✅      | ✅     |                |
+| 24  | shopify          | ✅      | ✅     |                |
+| 25  | string           | ✅      | ✅     |                |
+| 26  | system           | ✅      | ✅     |                |
+| 27  | telegram         | ✅      | ✅     |                |
+| 28  | youtube          | ✅      | ✅     |                |
+
+<!-- Languages -->
 
 [go]: https://go.dev
 [rust]: https://rust-lang.org
 [typescript]: https://typescriptlang.org
+
+<!-- Frameworks -->
+
 [cobra]: https://cobra.dev
 [clap]: https://docs.rs/clap
 [oclif]: https://oclif.io/

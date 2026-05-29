@@ -80,13 +80,19 @@ fn monitor(watch_secs: u64, top_n: usize) -> anyhow::Result<()> {
         println!("┌─────────────────────────────────────────────┐");
         println!("│           SYSTEM MONITOR                    │");
         println!("├─────────────────────────────────────────────┤");
-        println!("│ CPU:  {cpu_total:>5.1}%  ({} cores)                    │", cpu_per_core.len());
+        println!(
+            "│ CPU:  {cpu_total:>5.1}%  ({} cores)                    │",
+            cpu_per_core.len()
+        );
         println!("│ RAM:  {ram_pct:>5.1}%  ({ram_used:.1}/{ram_total:.1} GB)              │");
         println!("│ Uptime: {uptime_str:<20}          │");
         println!("├─────────────────────────────────────────────┤");
         println!("│ Top {top_n} Processes (by CPU)                  │");
         println!("├─────────────────────────────────────────────┤");
-        println!("│ {:<7} {:<20} {:>6} {:>8} │", "PID", "NAME", "CPU%", "MEM(KB)");
+        println!(
+            "│ {:<7} {:<20} {:>6} {:>8} │",
+            "PID", "NAME", "CPU%", "MEM(KB)"
+        );
         println!("│{:-<7}-{:-<20}-{:-<6}-{:-<8}│", "", "", "", "");
 
         for (pid, name, cpu, mem) in &procs {

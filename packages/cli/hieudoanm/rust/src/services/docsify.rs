@@ -45,22 +45,23 @@ fn ext_lang(ext: &str) -> Language {
 pub fn walk(root: &str, exclude: &HashMap<String, bool>) -> Result<Vec<File>, anyhow::Error> {
     let mut files = Vec::new();
 
-    for entry in walkdir::WalkDir::new(root)
-        .into_iter()
-        .filter_entry(|e| {
-            let name = e.file_name().to_string_lossy().to_string();
-            if name.starts_with('.') || exclude.contains_key(&name) {
-                return false;
-            }
-            true
-        })
-    {
+    for entry in walkdir::WalkDir::new(root).into_iter().filter_entry(|e| {
+        let name = e.file_name().to_string_lossy().to_string();
+        if name.starts_with('.') || exclude.contains_key(&name) {
+            return false;
+        }
+        true
+    }) {
         let entry = entry?;
         if !entry.file_type().is_file() {
             continue;
         }
         let path = entry.path();
-        let ext = path.extension().and_then(|e| e.to_str()).map(|e| format!(".{e}")).unwrap_or_default();
+        let ext = path
+            .extension()
+            .and_then(|e| e.to_str())
+            .map(|e| format!(".{e}"))
+            .unwrap_or_default();
         let lang = ext_lang(&ext);
         if matches!(lang, Language::Unknown) {
             continue;
@@ -71,7 +72,11 @@ pub fn walk(root: &str, exclude: &HashMap<String, bool>) -> Result<Vec<File>, an
             .map(|p| p.to_string_lossy().to_string())
             .unwrap_or_else(|_| abs_path.clone());
 
-        files.push(File { abs_path, rel_path, lang });
+        files.push(File {
+            abs_path,
+            rel_path,
+            lang,
+        });
     }
 
     Ok(files)
@@ -114,7 +119,11 @@ pub struct FileInfo {
 pub fn extract(f: &File) -> Result<FileInfo, anyhow::Error> {
     let src = std::fs::read_to_string(&f.abs_path)?;
     let mut info = FileInfo {
-        file: File { abs_path: f.abs_path.clone(), rel_path: f.rel_path.clone(), lang: f.lang },
+        file: File {
+            abs_path: f.abs_path.clone(),
+            rel_path: f.rel_path.clone(),
+            lang: f.lang,
+        },
         symbols: Vec::new(),
         calls: Vec::new(),
     };
@@ -134,23 +143,130 @@ fn is_exported(name: &str) -> bool {
     if name.is_empty() {
         return false;
     }
-    name.chars().next().map(|c| c.is_ascii_uppercase()).unwrap_or(false)
+    name.chars()
+        .next()
+        .map(|c| c.is_ascii_uppercase())
+        .unwrap_or(false)
 }
 
 fn is_go_builtin(name: &str) -> bool {
-    matches!(name, "append" | "cap" | "close" | "complex" | "copy" | "delete" | "imag" | "len" | "make" | "new" | "panic" | "print" | "println" | "real" | "recover" | "string" | "int" | "bool" | "byte" | "rune" | "error" | "float64" | "int64" | "uint64" | "fmt" | "os" | "err")
+    matches!(
+        name,
+        "append"
+            | "cap"
+            | "close"
+            | "complex"
+            | "copy"
+            | "delete"
+            | "imag"
+            | "len"
+            | "make"
+            | "new"
+            | "panic"
+            | "print"
+            | "println"
+            | "real"
+            | "recover"
+            | "string"
+            | "int"
+            | "bool"
+            | "byte"
+            | "rune"
+            | "error"
+            | "float64"
+            | "int64"
+            | "uint64"
+            | "fmt"
+            | "os"
+            | "err"
+    )
 }
 
 fn is_ts_builtin(name: &str) -> bool {
-    matches!(name, "console" | "setTimeout" | "setInterval" | "clearTimeout" | "parseInt" | "parseFloat" | "isNaN" | "isFinite" | "String" | "Number" | "Boolean" | "Array" | "Object" | "Promise" | "JSON" | "Math" | "Date" | "Error" | "require" | "if" | "for" | "while" | "switch" | "return")
+    matches!(
+        name,
+        "console"
+            | "setTimeout"
+            | "setInterval"
+            | "clearTimeout"
+            | "parseInt"
+            | "parseFloat"
+            | "isNaN"
+            | "isFinite"
+            | "String"
+            | "Number"
+            | "Boolean"
+            | "Array"
+            | "Object"
+            | "Promise"
+            | "JSON"
+            | "Math"
+            | "Date"
+            | "Error"
+            | "require"
+            | "if"
+            | "for"
+            | "while"
+            | "switch"
+            | "return"
+    )
 }
 
 fn is_py_builtin(name: &str) -> bool {
-    matches!(name, "print" | "len" | "range" | "type" | "isinstance" | "int" | "str" | "float" | "bool" | "list" | "dict" | "set" | "tuple" | "enumerate" | "zip" | "map" | "filter" | "sorted" | "reversed" | "open" | "super")
+    matches!(
+        name,
+        "print"
+            | "len"
+            | "range"
+            | "type"
+            | "isinstance"
+            | "int"
+            | "str"
+            | "float"
+            | "bool"
+            | "list"
+            | "dict"
+            | "set"
+            | "tuple"
+            | "enumerate"
+            | "zip"
+            | "map"
+            | "filter"
+            | "sorted"
+            | "reversed"
+            | "open"
+            | "super"
+    )
 }
 
 fn is_rs_builtin(name: &str) -> bool {
-    matches!(name, "println" | "print" | "eprintln" | "eprint" | "vec" | "format" | "panic" | "assert" | "todo" | "unimplemented" | "unreachable" | "dbg" | "Some" | "None" | "Ok" | "Err" | "Box" | "String" | "Vec" | "if" | "for" | "while" | "match" | "return")
+    matches!(
+        name,
+        "println"
+            | "print"
+            | "eprintln"
+            | "eprint"
+            | "vec"
+            | "format"
+            | "panic"
+            | "assert"
+            | "todo"
+            | "unimplemented"
+            | "unreachable"
+            | "dbg"
+            | "Some"
+            | "None"
+            | "Ok"
+            | "Err"
+            | "Box"
+            | "String"
+            | "Vec"
+            | "if"
+            | "for"
+            | "while"
+            | "match"
+            | "return"
+    )
 }
 
 fn extract_go(src: &str, info: &mut FileInfo) {
@@ -167,9 +283,16 @@ fn extract_go(src: &str, info: &mut FileInfo) {
         let line_no = i + 1;
 
         if let Some(caps) = re_func.captures(trimmed) {
-            let receiver = caps.get(1).map(|m| m.as_str().to_string()).unwrap_or_default();
+            let receiver = caps
+                .get(1)
+                .map(|m| m.as_str().to_string())
+                .unwrap_or_default();
             let name = caps[2].to_string();
-            let kind = if receiver.is_empty() { SymbolKind::Function } else { SymbolKind::Method };
+            let kind = if receiver.is_empty() {
+                SymbolKind::Function
+            } else {
+                SymbolKind::Method
+            };
             info.symbols.push(Symbol {
                 name: name.clone(),
                 kind,
@@ -182,7 +305,11 @@ fn extract_go(src: &str, info: &mut FileInfo) {
         }
 
         if let Some(caps) = re_type.captures(trimmed) {
-            let kind = if &caps[2] == "interface" { SymbolKind::Interface } else { SymbolKind::Type };
+            let kind = if &caps[2] == "interface" {
+                SymbolKind::Interface
+            } else {
+                SymbolKind::Type
+            };
             info.symbols.push(Symbol {
                 name: caps[1].to_string(),
                 kind,
@@ -221,9 +348,11 @@ fn extract_go(src: &str, info: &mut FileInfo) {
 }
 
 fn extract_ts(src: &str, info: &mut FileInfo) {
-    let re_func = regex::Regex::new(r"(?:^|\s)(?:export\s+)?(?:async\s+)?function\s+(\w+)\s*[(<]").unwrap();
+    let re_func =
+        regex::Regex::new(r"(?:^|\s)(?:export\s+)?(?:async\s+)?function\s+(\w+)\s*[(<]").unwrap();
     let re_arrow = regex::Regex::new(r"(?:^|\s)(?:export\s+)?(?:const|let|var)\s+(\w+)\s*=\s*(?:async\s*)?\(|\s*=\s*(?:async\s*)?\(?").unwrap();
-    let re_class = regex::Regex::new(r"(?:^|\s)(?:export\s+)?(?:abstract\s+)?class\s+(\w+)\b").unwrap();
+    let re_class =
+        regex::Regex::new(r"(?:^|\s)(?:export\s+)?(?:abstract\s+)?class\s+(\w+)\b").unwrap();
     let re_iface = regex::Regex::new(r"(?:^|\s)(?:export\s+)?interface\s+(\w+)\b").unwrap();
     let re_type = regex::Regex::new(r"(?:^|\s)(?:export\s+)?type\s+(\w+)\s*=").unwrap();
     let re_const = regex::Regex::new(r"(?:^|\s)(?:export\s+)?const\s+(\w+)\s*[=:]").unwrap();
@@ -464,7 +593,9 @@ fn extract_rust(src: &str, info: &mut FileInfo) {
 
 pub fn file_base_name(path: &str) -> String {
     let p = Path::new(path);
-    p.file_stem().map(|s| s.to_string_lossy().to_string()).unwrap_or_default()
+    p.file_stem()
+        .map(|s| s.to_string_lossy().to_string())
+        .unwrap_or_default()
 }
 
 #[derive(Debug, Clone)]
@@ -562,7 +693,10 @@ impl Graph {
         self.add_node(file_node);
 
         for sym in &info.symbols {
-            let sym_id = sanitize_id(&format!("sym:{}:{}:{}", info.file.rel_path, sym.name, sym.line));
+            let sym_id = sanitize_id(&format!(
+                "sym:{}:{}:{}",
+                info.file.rel_path, sym.name, sym.line
+            ));
             let sym_node = Node {
                 id: sym_id.clone(),
                 kind: symbol_to_node_kind(&sym.kind),
@@ -574,10 +708,13 @@ impl Graph {
             };
             self.add_node(sym_node);
 
-            self.symbol_index.entry(sym.name.clone()).or_default().push(sym_id.clone());
+            self.symbol_index
+                .entry(sym.name.clone())
+                .or_default()
+                .push(sym_id.clone());
 
             let edge_id = format!("e{}", self.next_edge_id());
-        self.edges.push(Edge {
+            self.edges.push(Edge {
                 id: edge_id,
                 source: file_id.clone(),
                 target: sym_id,
@@ -614,7 +751,12 @@ impl Graph {
             let callee_name = e.target.trim_start_matches("UNRESOLVED:");
             if let Some(targets) = self.symbol_index.get(callee_name) {
                 for (i, t) in targets.iter().enumerate() {
-                    let edge_id = if i == 0 { e.id.clone() } else { counter += 1; format!("e{counter}") };
+                    let edge_id = if i == 0 {
+                        e.id.clone()
+                    } else {
+                        counter += 1;
+                        format!("e{counter}")
+                    };
                     resolved.push(Edge {
                         id: edge_id,
                         source: e.source.clone(),
@@ -688,7 +830,6 @@ fn sanitize_id(s: &str) -> String {
 use quick_xml::events::{BytesDecl, BytesEnd, BytesStart, BytesText, Event};
 use quick_xml::Writer;
 
-
 pub fn write_graphml<W: std::io::Write>(g: &Graph, writer: W) -> Result<(), anyhow::Error> {
     let mut w = Writer::new_with_indent(writer, b' ', 2);
 
@@ -750,10 +891,7 @@ pub fn write_graphml<W: std::io::Write>(g: &Graph, writer: W) -> Result<(), anyh
     w.write_event(Event::Start(graph))?;
 
     let generated = chrono::Utc::now().format("%Y-%m-%dT%H:%M:%SZ").to_string();
-    let graph_data = [
-        ("g_generated", generated.as_str()),
-        ("g_version", "1"),
-    ];
+    let graph_data = [("g_generated", generated.as_str()), ("g_version", "1")];
     for (key, val) in &graph_data {
         let mut data = BytesStart::new("data");
         data.push_attribute(("key", *key));
@@ -793,10 +931,7 @@ pub fn write_graphml<W: std::io::Write>(g: &Graph, writer: W) -> Result<(), anyh
         edge.push_attribute(("target", e.target.as_str()));
         w.write_event(Event::Start(edge))?;
 
-        let edge_data = [
-            ("e_kind", e.kind.as_str()),
-            ("e_line", &e.line.to_string()),
-        ];
+        let edge_data = [("e_kind", e.kind.as_str()), ("e_line", &e.line.to_string())];
         for (key, val) in &edge_data {
             let mut data = BytesStart::new("data");
             data.push_attribute(("key", *key));

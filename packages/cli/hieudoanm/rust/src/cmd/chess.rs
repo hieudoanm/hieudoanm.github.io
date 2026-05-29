@@ -2,30 +2,12 @@ pub fn command() -> clap::Command {
     clap::Command::new("chess")
         .about("Chess related tools")
         .subcommand_required(true)
-        .subcommand(
-            clap::Command::new("play")
-                .about("Play chess against the engine"),
-        )
-        .subcommand(
-            clap::Command::new("fen")
-                .about("FEN string utilities"),
-        )
-        .subcommand(
-            clap::Command::new("pgn")
-                .about("PGN file utilities"),
-        )
-        .subcommand(
-            clap::Command::new("elo")
-                .about("Calculate Elo ratings"),
-        )
-        .subcommand(
-            clap::Command::new("random")
-                .about("Generate random chess positions"),
-        )
-        .subcommand(
-            clap::Command::new("setup")
-                .about("Set up a chess position"),
-        )
+        .subcommand(clap::Command::new("play").about("Play chess against the engine"))
+        .subcommand(clap::Command::new("fen").about("FEN string utilities"))
+        .subcommand(clap::Command::new("pgn").about("PGN file utilities"))
+        .subcommand(clap::Command::new("elo").about("Calculate Elo ratings"))
+        .subcommand(clap::Command::new("random").about("Generate random chess positions"))
+        .subcommand(clap::Command::new("setup").about("Set up a chess position"))
 }
 
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {

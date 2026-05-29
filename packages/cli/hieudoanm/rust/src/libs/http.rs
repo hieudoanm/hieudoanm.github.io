@@ -20,7 +20,10 @@ fn debug_log(debug: bool, label: &str, value: &str) {
     }
 }
 
-fn set_headers_and_query(req: reqwest::RequestBuilder, options: &Options) -> reqwest::RequestBuilder {
+fn set_headers_and_query(
+    req: reqwest::RequestBuilder,
+    options: &Options,
+) -> reqwest::RequestBuilder {
     let mut req = req;
     for (k, v) in &options.headers {
         req = req.header(k, v);
@@ -39,8 +42,16 @@ pub async fn get(url: &str, options: Options) -> Result<Vec<u8>, anyhow::Error> 
     let response = req.send().await?;
     let body = response.bytes().await?.to_vec();
 
-    debug_log(options.debug, RESPONSE_STATUS, &String::from_utf8_lossy(&body));
-    debug_log(options.debug, RESPONSE_BODY, &String::from_utf8_lossy(&body));
+    debug_log(
+        options.debug,
+        RESPONSE_STATUS,
+        &String::from_utf8_lossy(&body),
+    );
+    debug_log(
+        options.debug,
+        RESPONSE_BODY,
+        &String::from_utf8_lossy(&body),
+    );
     Ok(body)
 }
 
@@ -58,8 +69,16 @@ pub async fn post(url: &str, options: Options) -> Result<Vec<u8>, anyhow::Error>
     let response = req.send().await?;
     let body = response.bytes().await?.to_vec();
 
-    debug_log(options.debug, RESPONSE_STATUS, &String::from_utf8_lossy(&body));
-    debug_log(options.debug, RESPONSE_BODY, &String::from_utf8_lossy(&body));
+    debug_log(
+        options.debug,
+        RESPONSE_STATUS,
+        &String::from_utf8_lossy(&body),
+    );
+    debug_log(
+        options.debug,
+        RESPONSE_BODY,
+        &String::from_utf8_lossy(&body),
+    );
     Ok(body)
 }
 
@@ -77,8 +96,16 @@ pub async fn put(url: &str, options: Options) -> Result<Vec<u8>, anyhow::Error> 
     let response = req.send().await?;
     let body = response.bytes().await?.to_vec();
 
-    debug_log(options.debug, RESPONSE_STATUS, &String::from_utf8_lossy(&body));
-    debug_log(options.debug, RESPONSE_BODY, &String::from_utf8_lossy(&body));
+    debug_log(
+        options.debug,
+        RESPONSE_STATUS,
+        &String::from_utf8_lossy(&body),
+    );
+    debug_log(
+        options.debug,
+        RESPONSE_BODY,
+        &String::from_utf8_lossy(&body),
+    );
     Ok(body)
 }
 
@@ -96,7 +123,15 @@ pub async fn delete(url: &str, options: Options) -> Result<Vec<u8>, anyhow::Erro
     let response = req.send().await?;
     let body = response.bytes().await?.to_vec();
 
-    debug_log(options.debug, RESPONSE_STATUS, &String::from_utf8_lossy(&body));
-    debug_log(options.debug, RESPONSE_BODY, &String::from_utf8_lossy(&body));
+    debug_log(
+        options.debug,
+        RESPONSE_STATUS,
+        &String::from_utf8_lossy(&body),
+    );
+    debug_log(
+        options.debug,
+        RESPONSE_BODY,
+        &String::from_utf8_lossy(&body),
+    );
     Ok(body)
 }

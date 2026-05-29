@@ -40,7 +40,12 @@ pub fn send_message(token: &str, chat_id: &str, text: &str) -> Result<TelegramRe
 }
 
 pub fn set_webhook(token: &str, webhook_url: &str) -> Result<TelegramResponse> {
-    let url = format!("{}{}/setWebhook?url={}", TELEGRAM_API, token, urlencoding(webhook_url));
+    let url = format!(
+        "{}{}/setWebhook?url={}",
+        TELEGRAM_API,
+        token,
+        urlencoding(webhook_url)
+    );
 
     let client = reqwest::blocking::Client::new();
     let resp = client

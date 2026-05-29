@@ -21,7 +21,10 @@ fn create_table(conn: &Connection) -> anyhow::Result<()> {
 }
 
 fn insert_clip(conn: &Connection, content: &str) -> anyhow::Result<()> {
-    conn.execute("INSERT INTO clips (content) VALUES (?1)", rusqlite::params![content])?;
+    conn.execute(
+        "INSERT INTO clips (content) VALUES (?1)",
+        rusqlite::params![content],
+    )?;
     Ok(())
 }
 
@@ -58,8 +61,7 @@ fn read_clipboard() -> anyhow::Result<String> {
 }
 
 pub fn command() -> clap::Command {
-    clap::Command::new("clipboard")
-        .about("Listen to clipboard changes and store them")
+    clap::Command::new("clipboard").about("Listen to clipboard changes and store them")
 }
 
 pub fn run(_matches: &clap::ArgMatches) -> anyhow::Result<()> {

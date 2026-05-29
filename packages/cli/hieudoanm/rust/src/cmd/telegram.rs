@@ -25,19 +25,11 @@ pub fn command() -> clap::Command {
                 .subcommand(
                     clap::Command::new("set")
                         .about("Set webhook URL")
-                        .arg(
-                            clap::Arg::new("url")
-                                .help("Webhook URL")
-                                .required(true),
-                        ),
+                        .arg(clap::Arg::new("url").help("Webhook URL").required(true)),
                 )
                 .subcommand_required(false)
-                .subcommand(
-                    clap::Command::new("info").about("Get webhook info"),
-                )
-                .subcommand(
-                    clap::Command::new("delete").about("Delete webhook"),
-                ),
+                .subcommand(clap::Command::new("info").about("Get webhook info"))
+                .subcommand(clap::Command::new("delete").about("Delete webhook")),
         )
 }
 

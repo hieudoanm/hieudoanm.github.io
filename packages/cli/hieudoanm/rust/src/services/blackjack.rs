@@ -49,8 +49,7 @@ fn hi_lo_value(rank: &str) -> i32 {
 
 fn new_deck() -> Vec<Card> {
     let ranks = [
-        "A", "2", "3", "4", "5", "6",
-        "7", "8", "9", "10", "J", "Q", "K",
+        "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K",
     ];
 
     let mut deck: Vec<Card> = ranks
@@ -91,7 +90,10 @@ mod tests {
         let initial_count = bj.count;
         bj.deal();
         assert!(bj.current_card.is_some());
-        assert_eq!(bj.count, initial_count + bj.current_card.as_ref().unwrap().value);
+        assert_eq!(
+            bj.count,
+            initial_count + bj.current_card.as_ref().unwrap().value
+        );
     }
 
     #[test]

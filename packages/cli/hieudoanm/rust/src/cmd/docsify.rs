@@ -112,7 +112,11 @@ fn load_gitignore(dir: &str) -> Result<Box<dyn Fn(&str, bool) -> bool>, anyhow::
             pat = pat.trim_end_matches('/');
         }
         pat = pat.trim_start_matches('/');
-        rules.push(Rule { pattern: pat.to_string(), negate, dir_only });
+        rules.push(Rule {
+            pattern: pat.to_string(),
+            negate,
+            dir_only,
+        });
     }
 
     Ok(Box::new(move |rel_path: &str, is_dir: bool| -> bool {
@@ -123,7 +127,11 @@ fn load_gitignore(dir: &str) -> Result<Box<dyn Fn(&str, bool) -> bool>, anyhow::
             }
             let path = Path::new(rel_path);
             let matched = path.to_string_lossy().contains(&r.pattern)
-                || path.file_name().and_then(|n| n.to_str()).map(|n| n.contains(&r.pattern)).unwrap_or(false);
+                || path
+                    .file_name()
+                    .and_then(|n| n.to_str())
+                    .map(|n| n.contains(&r.pattern))
+                    .unwrap_or(false);
             if matched {
                 ignored = !r.negate;
             }
@@ -169,14 +177,22 @@ fn write_tree<W: Write>(
     let total_dirs = dir_names.len();
     let total_files = file_names.len();
 
-    let ordered: Vec<String> = dir_names.iter().cloned().chain(file_names.iter().cloned()).collect();
+    let ordered: Vec<String> = dir_names
+        .iter()
+        .cloned()
+        .chain(file_names.iter().cloned())
+        .collect();
 
     for (i, name) in ordered.iter().enumerate() {
         let is_last = i == ordered.len() - 1;
         let is_dir = i < dir_names.len();
 
         let connector = if is_last { "└── " } else { "├── " };
-        let child_prefix = if is_last { format!("{prefix}    ") } else { format!("{prefix}│   ") };
+        let child_prefix = if is_last {
+            format!("{prefix}    ")
+        } else {
+            format!("{prefix}│   ")
+        };
 
         if is_dir {
             writeln!(w, "{prefix}{connector}{name}/")?;
@@ -294,7 +310,11 @@ async fn run_scan(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     crate::services::docsify::write_graphml(&graph, out_file)?;
 
     println!("graph written to {out}");
-    println!("  nodes: {}  edges: {}", graph.node_count(), graph.edge_count());
+    println!(
+        "  nodes: {}  edges: {}",
+        graph.node_count(),
+        graph.edge_count()
+    );
 
     Ok(())
 }

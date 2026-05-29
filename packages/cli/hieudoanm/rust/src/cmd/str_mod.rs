@@ -5,30 +5,12 @@ pub fn command() -> clap::Command {
         .about("String manipulation tools")
         .alias("str")
         .subcommand_required(true)
-        .subcommand(
-            clap::Command::new("capitalise")
-                .about("Capitalise a string"),
-        )
-        .subcommand(
-            clap::Command::new("deburr")
-                .about("Remove diacritics from a string"),
-        )
-        .subcommand(
-            clap::Command::new("kebabcase")
-                .about("Convert to kebab-case"),
-        )
-        .subcommand(
-            clap::Command::new("lowercase")
-                .about("Convert to lowercase"),
-        )
-        .subcommand(
-            clap::Command::new("snakecase")
-                .about("Convert to snake_case"),
-        )
-        .subcommand(
-            clap::Command::new("uppercase")
-                .about("Convert to UPPERCASE"),
-        )
+        .subcommand(clap::Command::new("capitalise").about("Capitalise a string"))
+        .subcommand(clap::Command::new("deburr").about("Remove diacritics from a string"))
+        .subcommand(clap::Command::new("kebabcase").about("Convert to kebab-case"))
+        .subcommand(clap::Command::new("lowercase").about("Convert to lowercase"))
+        .subcommand(clap::Command::new("snakecase").about("Convert to snake_case"))
+        .subcommand(clap::Command::new("uppercase").about("Convert to UPPERCASE"))
 }
 
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {

@@ -75,7 +75,13 @@ struct IpapiResponse {
 
 fn detect_vpn(org: &str) -> bool {
     let lower = org.to_lowercase();
-    let keywords = ["cloudflare", "amazon", "google", "digitalocean", "microsoft"];
+    let keywords = [
+        "cloudflare",
+        "amazon",
+        "google",
+        "digitalocean",
+        "microsoft",
+    ];
     keywords.iter().any(|kw| lower.contains(kw))
 }
 
@@ -124,9 +130,11 @@ pub fn command() -> clap::Command {
                 .help("Output raw JSON"),
         )
         .subcommand(
-            clap::Command::new("dns")
-                .about("DNS lookup")
-                .arg(clap::Arg::new("domain").help("Domain to look up").required(true)),
+            clap::Command::new("dns").about("DNS lookup").arg(
+                clap::Arg::new("domain")
+                    .help("Domain to look up")
+                    .required(true),
+            ),
         )
 }
 

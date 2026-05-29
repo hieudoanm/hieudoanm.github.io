@@ -1,14 +1,8 @@
 pub fn command() -> clap::Command {
     clap::Command::new("colors")
         .about("Color conversion and palette tools")
-        .subcommand(
-            clap::Command::new("random")
-                .about("Generate random colors"),
-        )
-        .subcommand(
-            clap::Command::new("palette")
-                .about("Show a color palette"),
-        )
+        .subcommand(clap::Command::new("random").about("Generate random colors"))
+        .subcommand(clap::Command::new("palette").about("Show a color palette"))
         .subcommand(
             clap::Command::new("convert-hex")
                 .about("Convert hex color to other formats")
@@ -54,9 +48,7 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
             for _ in 0..8 {
                 let hex = colors::generate_random_hex_color();
                 let (r, g, b) = colors::hex_to_rgb(&hex).unwrap();
-                println!(
-                    "\x1b[48;2;{r};{g};{b}m      \x1b[0m  #{hex}  RGB({r},{g},{b})"
-                );
+                println!("\x1b[48;2;{r};{g};{b}m      \x1b[0m  #{hex}  RGB({r},{g},{b})");
             }
         }
         Some(("convert-hex", sub_m)) => {
@@ -82,9 +74,7 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
             let (c_val, m, y, k) = colors::hex_to_cmyk(hex).unwrap();
 
             println!("Color: #{hex}");
-            println!(
-                "\x1b[48;2;{r};{g};{b_val}m     \x1b[0m  preview"
-            );
+            println!("\x1b[48;2;{r};{g};{b_val}m     \x1b[0m  preview");
             println!("HEX:  #{hex}");
             println!("RGB:  ({r}, {g}, {b_val})");
             println!("HSL:  ({h:.1}, {s:.1}%, {l:.1}%)");

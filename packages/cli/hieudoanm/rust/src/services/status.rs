@@ -24,11 +24,8 @@ pub struct Response {
 }
 
 pub fn get_status(url: &str) -> Result<Response> {
-    let resp = reqwest::blocking::get(url)
-        .context("failed to fetch status page")?;
-    let response: Response = resp
-        .json()
-        .context("failed to parse status response")?;
+    let resp = reqwest::blocking::get(url).context("failed to fetch status page")?;
+    let response: Response = resp.json().context("failed to parse status response")?;
     Ok(response)
 }
 

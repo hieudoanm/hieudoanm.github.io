@@ -26,5 +26,7 @@ pub fn default_options() -> Options {
 }
 
 pub fn capture(_url: &str, _opts: Options) -> Result<Vec<u8>, anyhow::Error> {
-    anyhow::bail!("headless browser capture requires the `headless_chrome` crate which is not yet integrated")
+    anyhow::bail!(
+        "headless browser capture requires the `headless_chrome` crate which is not yet integrated"
+    )
 }

@@ -23,7 +23,11 @@ pub struct TaxBreakdown {
 }
 
 pub fn calculate_insurance(income: f64) -> (f64, f64, f64) {
-    let base = if income > INSURANCE_CAP { INSURANCE_CAP } else { income };
+    let base = if income > INSURANCE_CAP {
+        INSURANCE_CAP
+    } else {
+        income
+    };
     let social = base * SOCIAL_INSURANCE_RATE;
     let health = base * HEALTH_INSURANCE_RATE;
     let unemployment = base * UNEMPLOYMENT_INSURANCE_RATE;
@@ -45,7 +49,11 @@ pub fn calculate_tax(taxable: f64) -> (Vec<TaxBreakdown>, f64) {
         }
         let apply = if limit < remain { limit } else { remain };
         let tax = apply * rate;
-        out.push(TaxBreakdown { rate, taxable: apply, tax });
+        out.push(TaxBreakdown {
+            rate,
+            taxable: apply,
+            tax,
+        });
         total += tax;
         remain -= apply;
     }
@@ -57,13 +65,21 @@ pub fn solve_gross_from_net(target_net: f64, dependents: u32, insurance: bool) -
     let mut gross = target_net;
     for _ in 0..20 {
         let base = if insurance {
-            if gross > INSURANCE_CAP { INSURANCE_CAP } else { gross }
+            if gross > INSURANCE_CAP {
+                INSURANCE_CAP
+            } else {
+                gross
+            }
         } else {
             0.0
         };
         let ins = base * sum_insurance_rate();
         let deductions = PERSONAL_DEDUCTION + dependents as f64 * DEPENDENT_DEDUCTION + ins;
-        let taxable = if gross > deductions { gross - deductions } else { 0.0 };
+        let taxable = if gross > deductions {
+            gross - deductions
+        } else {
+            0.0
+        };
         let (_, tax) = calculate_tax(taxable);
         let net = gross - ins - tax;
         gross += target_net - net;
@@ -73,14 +89,22 @@ pub fn solve_gross_from_net(target_net: f64, dependents: u32, insurance: bool) -
 
 pub fn calculate_tax_full(income: f64, dependents: u32, insurance_enabled: bool) -> TaxResult {
     let base = if insurance_enabled {
-        if income > INSURANCE_CAP { INSURANCE_CAP } else { income }
+        if income > INSURANCE_CAP {
+            INSURANCE_CAP
+        } else {
+            income
+        }
     } else {
         0.0
     };
     let (social, health, unemployment) = calculate_insurance(base);
     let total_ins = social + health + unemployment;
     let deductions = PERSONAL_DEDUCTION + dependents as f64 * DEPENDENT_DEDUCTION + total_ins;
-    let taxable = if income > deductions { income - deductions } else { 0.0 };
+    let taxable = if income > deductions {
+        income - deductions
+    } else {
+        0.0
+    };
     let (breakdown, tax) = calculate_tax(taxable);
     let net = income - total_ins - tax;
 

@@ -30,8 +30,7 @@ fn scan() -> anyhow::Result<String> {
 }
 
 pub fn command() -> clap::Command {
-    clap::Command::new("wifi")
-        .about("Scan for Wi-Fi networks")
+    clap::Command::new("wifi").about("Scan for Wi-Fi networks")
 }
 
 pub async fn run(_matches: &clap::ArgMatches) -> anyhow::Result<()> {

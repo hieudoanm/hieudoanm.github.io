@@ -16,7 +16,12 @@ pub fn hex_to_rgb(hex: &str) -> Result<(u8, u8, u8), String> {
     let h = if h.len() == 3 {
         format!(
             "{}{}{}{}{}{}",
-            &h[0..1], &h[0..1], &h[1..2], &h[1..2], &h[2..3], &h[2..3]
+            &h[0..1],
+            &h[0..1],
+            &h[1..2],
+            &h[1..2],
+            &h[2..3],
+            &h[2..3]
         )
     } else {
         h.to_string()
@@ -52,7 +57,12 @@ pub fn hex_to_cmyk(hex: &str) -> Result<(f64, f64, f64, f64), String> {
 
 pub fn generate_random_hex_color() -> String {
     let mut rng = rand::thread_rng();
-    format!("#{:02X}{:02X}{:02X}", rng.gen_range(0..=255), rng.gen_range(0..=255), rng.gen_range(0..=255))
+    format!(
+        "#{:02X}{:02X}{:02X}",
+        rng.gen_range(0..=255),
+        rng.gen_range(0..=255),
+        rng.gen_range(0..=255)
+    )
 }
 
 // ── RGB ─────────────────────────────────────────────────────────────
@@ -87,7 +97,11 @@ impl RGB {
         }
 
         let d = max - min;
-        let s = if l > 0.5 { d / (2.0 - max - min) } else { d / (max + min) };
+        let s = if l > 0.5 {
+            d / (2.0 - max - min)
+        } else {
+            d / (max + min)
+        };
 
         let h = match max {
             x if x == r => {
@@ -349,10 +363,14 @@ impl CMYK {
     }
 
     pub fn is_valid(&self) -> bool {
-        self.c >= 0.0 && self.c <= 100.0
-            && self.m >= 0.0 && self.m <= 100.0
-            && self.y >= 0.0 && self.y <= 100.0
-            && self.k >= 0.0 && self.k <= 100.0
+        self.c >= 0.0
+            && self.c <= 100.0
+            && self.m >= 0.0
+            && self.m <= 100.0
+            && self.y >= 0.0
+            && self.y <= 100.0
+            && self.k >= 0.0
+            && self.k <= 100.0
     }
 
     pub fn to_rgb(&self) -> Result<(u8, u8, u8), String> {

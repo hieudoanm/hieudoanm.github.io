@@ -2,8 +2,7 @@ use std::io::{self, Write};
 use std::path::Path;
 
 pub fn command() -> clap::Command {
-    clap::Command::new("qrcode")
-        .about("Generate a QR code from a URL and save as PNG")
+    clap::Command::new("qrcode").about("Generate a QR code from a URL and save as PNG")
 }
 
 pub async fn run(_matches: &clap::ArgMatches) -> anyhow::Result<()> {

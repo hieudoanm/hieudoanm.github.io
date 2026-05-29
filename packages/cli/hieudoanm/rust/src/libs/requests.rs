@@ -33,7 +33,12 @@ pub struct Options {
     pub debug: bool,
 }
 
-fn should_retry(err: Option<&anyhow::Error>, status: u16, attempt: usize, max_retries: usize) -> bool {
+fn should_retry(
+    err: Option<&anyhow::Error>,
+    status: u16,
+    attempt: usize,
+    max_retries: usize,
+) -> bool {
     if attempt >= max_retries {
         return false;
     }
@@ -94,14 +99,31 @@ fn log_response(resp: &reqwest::Response, body: &[u8], options: &Options) {
 
     let headers_str = format!("{:?}", resp.headers());
 
-    println!("{}===== HTTP Response Debug ====={}", colors::blue(""), colors::blue(""));
+    println!(
+        "{}===== HTTP Response Debug ====={}",
+        colors::blue(""),
+        colors::blue("")
+    );
     println!("Status: {}{}{}", status_color(&status.to_string()), "", "");
     println!("Headers: {headers_str}");
-    println!("Body: {}{}{}", colors::gray(""), colors::gray(&body_str), "");
-    println!("{}==============================={}", colors::blue(""), colors::blue(""));
+    println!(
+        "Body: {}{}{}",
+        colors::gray(""),
+        colors::gray(&body_str),
+        ""
+    );
+    println!(
+        "{}==============================={}",
+        colors::blue(""),
+        colors::blue("")
+    );
 }
 
-pub async fn do_request(method: reqwest::Method, url: &str, options: Options) -> Result<Vec<u8>, anyhow::Error> {
+pub async fn do_request(
+    method: reqwest::Method,
+    url: &str,
+    options: Options,
+) -> Result<Vec<u8>, anyhow::Error> {
     let max_retries = options.retries;
     let timeout = if options.timeout.as_secs() == 0 {
         Duration::from_secs(10)
@@ -112,7 +134,8 @@ pub async fn do_request(method: reqwest::Method, url: &str, options: Options) ->
     let mut last_err: Option<anyhow::Error> = None;
 
     for attempt in 0..=max_retries {
-        let result = tokio::time::timeout(timeout, attempt_request(method.clone(), url, &options)).await;
+        let result =
+            tokio::time::timeout(timeout, attempt_request(method.clone(), url, &options)).await;
 
         match result {
             Ok(Ok(resp)) => {
@@ -147,7 +170,10 @@ pub async fn do_request(method: reqwest::Method, url: &str, options: Options) ->
         }
     }
 
-    Err(anyhow::anyhow!("request failed after retries: {:?}", last_err))
+    Err(anyhow::anyhow!(
+        "request failed after retries: {:?}",
+        last_err
+    ))
 }
 
 fn log_response_raw(status: &reqwest::StatusCode, body: &[u8], options: &Options) {
@@ -170,10 +196,23 @@ fn log_response_raw(status: &reqwest::StatusCode, body: &[u8], options: &Options
         colors::green
     };
 
-    println!("{}===== HTTP Response Debug ====={}", colors::blue(""), colors::blue(""));
+    println!(
+        "{}===== HTTP Response Debug ====={}",
+        colors::blue(""),
+        colors::blue("")
+    );
     println!("Status: {}", status_color(&status.to_string()));
-    println!("Body: {}{}{}", colors::gray(""), colors::gray(&body_str), "");
-    println!("{}==============================={}", colors::blue(""), colors::blue(""));
+    println!(
+        "Body: {}{}{}",
+        colors::gray(""),
+        colors::gray(&body_str),
+        ""
+    );
+    println!(
+        "{}==============================={}",
+        colors::blue(""),
+        colors::blue("")
+    );
 }
 
 pub async fn get(url: &str, options: Options) -> Result<Vec<u8>, anyhow::Error> {

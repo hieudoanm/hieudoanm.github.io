@@ -41,7 +41,9 @@ pub fn check_shopify(url: &str) -> Result<ShopifyResult> {
         if let Ok(v) = value.to_str() {
             if v.to_lowercase().contains("shopify") {
                 result.is_shopify = true;
-                result.signals.push(format!("Header value: {}", key.as_str()));
+                result
+                    .signals
+                    .push(format!("Header value: {}", key.as_str()));
             }
         }
     }

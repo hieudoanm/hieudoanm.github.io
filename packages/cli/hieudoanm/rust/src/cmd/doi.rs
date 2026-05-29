@@ -9,7 +9,11 @@ pub fn command() -> clap::Command {
         .subcommand(
             clap::Command::new("ref")
                 .about("Get reference from DOI")
-                .arg(clap::Arg::new("doi").help("DOI to reference").required(true)),
+                .arg(
+                    clap::Arg::new("doi")
+                        .help("DOI to reference")
+                        .required(true),
+                ),
         )
 }
 

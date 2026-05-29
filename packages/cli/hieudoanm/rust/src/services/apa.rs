@@ -73,7 +73,11 @@ pub fn format_reference(data: &CrossRefData) -> String {
         for (i, a) in authors.iter().enumerate() {
             let family = a.family.as_deref().unwrap_or("Unknown");
             let given = a.given.as_deref().unwrap_or("");
-            let initial = given.chars().next().map(|c| c.to_string()).unwrap_or_default();
+            let initial = given
+                .chars()
+                .next()
+                .map(|c| c.to_string())
+                .unwrap_or_default();
             let part = format!("{}, {}.", family, initial);
             if i == 0 {
                 parts.push(part);

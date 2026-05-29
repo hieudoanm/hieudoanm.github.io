@@ -65,7 +65,9 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
 fn extract_video_id(input: &str) -> &str {
     if let Some(pos) = input.find("v=") {
         let start = pos + 2;
-        let end = input[start..].find(|c: char| c == '&' || c == ' ').map_or(input.len(), |e| start + e);
+        let end = input[start..]
+            .find(|c: char| c == '&' || c == ' ')
+            .map_or(input.len(), |e| start + e);
         &input[start..end]
     } else if let Some(pos) = input.find("youtu.be/") {
         &input[pos + 9..]

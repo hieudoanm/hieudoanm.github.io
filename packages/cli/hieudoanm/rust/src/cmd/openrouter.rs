@@ -4,11 +4,7 @@ pub fn command() -> clap::Command {
         .subcommand(
             clap::Command::new("chat")
                 .about("Send a chat message to an AI model")
-                .arg(
-                    clap::Arg::new("prompt")
-                        .help("Your message")
-                        .required(true),
-                )
+                .arg(clap::Arg::new("prompt").help("Your message").required(true))
                 .arg(
                     clap::Arg::new("model")
                         .short('m')
@@ -16,22 +12,10 @@ pub fn command() -> clap::Command {
                         .help("Model name or ID"),
                 ),
         )
-        .subcommand(
-            clap::Command::new("models")
-                .about("List available free models"),
-        )
-        .subcommand(
-            clap::Command::new("status")
-                .about("Check OpenRouter API status"),
-        )
-        .subcommand(
-            clap::Command::new("hook")
-                .about("Manage webhooks"),
-        )
-        .subcommand(
-            clap::Command::new("serve")
-                .about("Start the OpenRouter server"),
-        )
+        .subcommand(clap::Command::new("models").about("List available free models"))
+        .subcommand(clap::Command::new("status").about("Check OpenRouter API status"))
+        .subcommand(clap::Command::new("hook").about("Manage webhooks"))
+        .subcommand(clap::Command::new("serve").about("Start the OpenRouter server"))
 }
 
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
@@ -57,7 +41,6 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
                 .get_one::<String>("prompt")
                 .ok_or_else(|| anyhow::anyhow!("prompt required"))?;
 
-            let api_key = crate::services::openrouter_config::load_api_key();
             let models = openrouter::fetch_free_models()?;
 
             let model_id = sub_m
