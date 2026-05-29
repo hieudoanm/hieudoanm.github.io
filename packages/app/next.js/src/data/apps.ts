@@ -17,6 +17,17 @@ export type App = {
 export const apps: App[] = [
   {
     category: 'ai',
+    emoji: '♟',
+    id: 'chess',
+    name: 'Chess',
+    href: 'https://hieudoanm.github.io/chess',
+    github: 'https://github.com/hieudoanm/chess',
+    image:
+      'https://raw.githubusercontent.com/hieudoanm/chess/refs/heads/master/images/app.png',
+    tags: ['cli', 'extension', 'android', 'macos', 'web'],
+  },
+  {
+    category: 'ai',
     emoji: '🧪',
     id: 'hieudoanm',
     name: 'Hieu Doan',
@@ -46,28 +57,6 @@ export const apps: App[] = [
     github: 'https://github.com/hieudoanm/telegram',
     image:
       'https://raw.githubusercontent.com/hieudoanm/telegram/refs/heads/master/images/app.png',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
-    category: 'utilities',
-    emoji: '♟',
-    id: 'chess',
-    name: 'Chess',
-    href: 'https://hieudoanm.github.io/chess',
-    github: 'https://github.com/hieudoanm/chess',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/chess/refs/heads/master/images/app.png',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
-    category: 'utilities',
-    emoji: '🖥️',
-    id: 'system',
-    name: 'System',
-    href: 'https://hieudoanm.github.io/system',
-    github: 'https://github.com/hieudoanm/system',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/system/refs/heads/master/images/app.png',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
 ];
