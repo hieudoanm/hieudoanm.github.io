@@ -41,3 +41,13 @@
 | Marvel    | Avengers            | Spider-man         | Peter Parker     |         |
 | Marvel    | Avengers            | Thor               |                  | Hammer  |
 | Marvel    | X-Men               | Cyclops            | Scott Summers    |         |
+
+## Sandman
+
+1. Destiny vs Free Will
+2. Death vs Life
+3. Dream vs Reality
+4. Destruction vs Creation
+5. Desire vs Hatred
+6. Despair vs Hope
+7. Delirium vs Sanity

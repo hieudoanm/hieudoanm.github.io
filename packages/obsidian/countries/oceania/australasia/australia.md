@@ -63,3 +63,10 @@
 | 08  | Territory | Northern Territory           |              | Darwin    | Darwin    |
 
 [Back to Table of Contents](#table-of-contents)
+
+## Banks
+
+1. Commonwealth Bank of Australia (CBA)
+2. Westpac Banking Corporation (WBC)
+3. National Australia Bank (NAB)
+4. Australia and New Zealand Banking Group (ANZ)

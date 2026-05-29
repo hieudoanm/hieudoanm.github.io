@@ -21,7 +21,7 @@
 | 18  | Education    | Programming  | Learn Kotlin for Android Development       |
 | 16  | Education    | Programming  | Learn C# for Game Development              |
 | 19  | Education    | Programming  | Learn Swift for iOS Development            |
-| 20  | Education    | Programming  | Build a [[Chess]] Engine                   |
+| 20  | Education    | Programming  | Build a [[chess]] Engine                   |
 | 21  | Education    | Science      | Learn [[Mathematics]]                      |
 | 22  | Education    | Science      | Learn [[physics]]                          |
 | 23  | Education    | Science      | Learn [[chemistry]]                        |
@@ -29,13 +29,13 @@
 | 25  | Education    | Design       | Learn Illustrator                          |
 | 26  | Recreational |              | Practive writing with non-dominant hand    |
 | 27  | Recreational |              | Museum Visit                               |
-| 28  | Recreational |              | Listen to [[Hamilton]]                     |
+| 28  | Recreational |              | Listen to [[hamilton]]                     |
 | 29  | Recreational |              | Go to the Arcade                           |
 | 30  | Recreational |              | Go stargazing                              |
 | 31  | Recreational |              | Film Photography                           |
-| 32  | Sports       | [[Chess]]    | Play Chess                                 |
+| 32  | Sports       | [[chess]]    | Play Chess                                 |
 | 33  | Sports       |              | Play Football                              |
-| 34  | Sports       | [[Marathon]] | Run 5km                                    |
+| 34  | Sports       | [[marathon]] | Run 5km                                    |
 | 35  | Sports       |              | Bike 20km                                  |
 | 36  | Work         |              | Update Resume                              |
 | 37  | Work         |              | Update LinkedIn                            |

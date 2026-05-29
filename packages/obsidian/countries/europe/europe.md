@@ -1,6 +1,13 @@
 # Europe
 
-## Eastern Europe
+- [Europe](#europe)
+  - [\[\[eastern-europe|Eastern Europe\]\]](#eastern-europeeastern-europe)
+  - [\[\[northern-europe|Northern Europe\]\]](#northern-europenorthern-europe)
+  - [\[\[southern-europe|Southern Europe\]\]](#southern-europesouthern-europe)
+  - [\[\[western-europe|Western Europe\]\]](#western-europewestern-europe)
+  - [Sports](#sports)
+
+## [[eastern-europe|Eastern Europe]]
 
 1. [[belarus|Belarus]]
 2. [[bulgaria|Bulgaria]]
@@ -13,7 +20,7 @@
 9. [[slovakia|Slovakia]]
 10. [[ukraine|Ukraine]]
 
-## Northern Europe
+## [[northern-europe|Northern Europe]]
 
 1. [[denmark|Denmark]]
 2. [[estonia|Estonia]]
@@ -26,7 +33,7 @@
 9. [[sweden|Sweden]]
 10. [[united-kingdom|United Kingdom]]
 
-## Southern Europe
+## [[southern-europe|Southern Europe]]
 
 1. [[albania|Albania]]
 2. [[andorra|Andorra]]
@@ -47,7 +54,7 @@
 17. [[turkey|Turkey]]
 18. [[vatican-city|Vatican City]]
 
-## Western Europe
+## [[western-europe|Western Europe]]
 
 1. [[austria|Austria]]
 2. [[belgium|Belgium]]

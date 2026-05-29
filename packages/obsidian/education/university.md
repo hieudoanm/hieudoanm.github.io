@@ -19,6 +19,7 @@
   - [Asia](#asia)
     - [\[\[Singapore\]\]](#singapore)
       - [Other (Singapore)](#other-singapore)
+    - [\[\[Vietnam\]\]](#vietnam)
   - [North America](#north-america)
     - [\[\[united-states|United States\]\]](#united-statesunited-states)
       - [Ivy League](#ivy-league)
@@ -196,6 +197,14 @@
 [Back to Table of Contents](#table-of-contents)
 
 ---
+
+### [[Vietnam]]
+
+| No  | University                       | Type          |
+| --- | -------------------------------- | ------------- |
+| 1   | RMIT University                  | International |
+| 2   | VinUni (VinUniversity)           | International |
+| 3   | British University Vietnam (BUV) | International |
 
 ## North America
 

@@ -98,3 +98,11 @@
 | 78  | Liz Truss                        | 2022-09-06 | 2022-10-25 | Conservative |
 | 79  | Rishi Sunak                      | 2022-10-25 | 2024-07-05 | Conservative |
 | 80  | Keir Starmer                     | 2024-07-05 | Incumbent  | Labour       |
+
+## Banks
+
+1. HSBC Holdings
+2. Barclays
+3. Lloyds Banking Group
+4. NatWest Group
+5. Standard Chartered

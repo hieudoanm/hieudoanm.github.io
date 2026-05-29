@@ -1,15 +1,33 @@
 # Entertainment
 
-## Listening
+## Table of Contents
 
-1. [[Music]]
-2. [[Podcasts]]
+- [Entertainment](#entertainment)
+  - [Table of Contents](#table-of-contents)
+  - [\[\[Listening\]\]](#listening)
+  - [\[\[Reading\]\]](#reading)
+  - [\[\[Sports\]\]](#sports)
+  - [\[\[Watching\]\]](#watching)
 
-## Reading
+## [[Listening]]
+
+1. [[Grammy]]
+2. [[Hamilton]]
+3. [[Instruments]]
+4. [[Podcasts]]
+
+## [[Reading]]
 
 1. [[Books]]
 2. [[Comics]]
 
-## Watching
+## [[Sports]]
+
+1. [[Chess]]
+2. [[entertainment/sports/football/football|Football]]
+3. [[Marathon]]
+
+## [[Watching]]
 
 1. [[Movies]]
+2. [[TV]]

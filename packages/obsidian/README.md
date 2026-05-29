@@ -73,7 +73,7 @@
 ## Interests
 
 1. [[Technology]]
-2. [[Chess]]
-3. [[Music]]
+2. [[chess]]
+3. [[listening]]
 
 [Back to Table of Contents](#table-of-contents)
