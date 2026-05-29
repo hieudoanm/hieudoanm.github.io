@@ -1,0 +1,15 @@
+pub mod apa;
+pub mod blackjack;
+pub mod chat;
+pub mod colors;
+pub mod lichess;
+pub mod openrouter;
+pub mod openrouter_config;
+pub mod pomodoro;
+pub mod shopify;
+pub mod status;
+pub mod tax;
+pub mod telegram;
+pub mod transcript;
+pub mod wifi;
+pub mod docsify;
