@@ -4,10 +4,13 @@
 
 - [Entertainment](#entertainment)
   - [Table of Contents](#table-of-contents)
+  - [\[\[Games\]\]](#games)
   - [\[\[Listening\]\]](#listening)
   - [\[\[Reading\]\]](#reading)
   - [\[\[Sports\]\]](#sports)
   - [\[\[Watching\]\]](#watching)
+
+## [[Games]]
 
 ## [[Listening]]
 

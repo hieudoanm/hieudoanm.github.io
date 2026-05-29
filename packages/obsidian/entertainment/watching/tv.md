@@ -6,6 +6,7 @@
   - [Table of Contents](#table-of-contents)
   - [Drama](#drama)
   - [Late Night](#late-night)
+  - [Stand Up](#stand-up)
 
 ## Drama
 
@@ -43,3 +44,14 @@
 | 6   | United States | HBO            | Real Time         | Bill Maher      |
 | 7   | United States | NBC            | Late Night        | Seth Meyers     |
 | 8   | United States | TBS            | Conan             | Conan           |
+
+## Stand Up
+
+| No  | Country        | Name           |
+| --- | -------------- | -------------- |
+| 1   | United States  | Bill Burr      |
+| 2   | United Kingdom | Jimmy Carr     |
+| 3   | United Kingdom | Ricky Gervais  |
+| 4   | United States  | George Carlin  |
+| 5   | United States  | Dave Chappelle |
+| 6   | United States  | Louis C.K.     |
