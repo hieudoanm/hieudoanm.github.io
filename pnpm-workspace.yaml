@@ -3,8 +3,10 @@ packages:
 allowBuilds:
   '@parcel/watcher': true
   '@prisma/engines': true
+  '@swc/core': true
   '@vscode/vsce-sign': true
   canvas: true
+  core-js: true
   esbuild: true
   keytar: true
   prisma: true

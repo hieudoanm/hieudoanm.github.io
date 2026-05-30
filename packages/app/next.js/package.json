@@ -26,7 +26,7 @@
     "predev": "rimraf .next && kill-port 3000",
     "dev": "next dev --turbopack",
     "test": "jest",
-    "prebuild": "rimraf .next ../../docs",
+    "prebuild": "rimraf .next ../../../docs",
     "build": "next build --turbopack",
     "postbuild": "bash ./scripts/sh/post-build.sh",
     "prestart": "kill-port 3000",
