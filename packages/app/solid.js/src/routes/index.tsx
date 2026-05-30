@@ -1,4 +1,4 @@
-import { LandingTemplate } from '@hieudoanm.github.io/components/templates/LandingTemplate';
+import { LandingTemplate } from '@hieudoanm.github.io/components/templates/app/LandingTemplate';
 
 const HomePage = () => {
   return <LandingTemplate />;

@@ -1,4 +1,4 @@
-import { ErrorTemplate } from '@hieudoanm.github.io/components/templates/ErrorTemplate';
+import { ErrorTemplate } from '@hieudoanm.github.io/components/templates/shared/ErrorTemplate';
 import { HttpStatusCode } from '@solidjs/start';
 
 const messages = [

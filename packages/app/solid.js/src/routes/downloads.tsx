@@ -1,4 +1,4 @@
-import { DownloadsTemplate } from '@hieudoanm.github.io/components/templates/DownloadsTemplate';
+import { DownloadsTemplate } from '@hieudoanm.github.io/components/templates/app/DownloadsTemplate';
 
 const APP_NAME = 'weather';
 const REPO = `https://github.com/hieudoanm/${APP_NAME}/releases/download`;

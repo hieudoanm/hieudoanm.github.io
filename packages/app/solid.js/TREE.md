@@ -62,6 +62,10 @@
 │   │   ├── organisms/
 │   │   │   ├── auth/
 │   │   │   │   ├── __tests__/
+│   │   │   │   │   ├── PasswordForget.test.tsx
+│   │   │   │   │   ├── PasswordReset.test.tsx
+│   │   │   │   │   ├── SignInForm.test.tsx
+│   │   │   │   │   └── SignUpForm.test.tsx
 │   │   │   │   ├── PasswordForget.tsx
 │   │   │   │   ├── PasswordReset.tsx
 │   │   │   │   ├── SignInForm.tsx
@@ -80,8 +84,18 @@
 │   │   │   │   ├── ChatFooter.tsx
 │   │   │   │   ├── ChatHeader.tsx
 │   │   │   │   └── ChatSidebar.tsx
+│   │   │   ├── common/
+│   │   │   │   └── PhotosGrid.tsx
 │   │   │   ├── landing/
 │   │   │   │   ├── __tests__/
+│   │   │   │   │   ├── CallToAction.test.tsx
+│   │   │   │   │   ├── Features.test.tsx
+│   │   │   │   │   ├── Footer.test.tsx
+│   │   │   │   │   ├── FrequentlyAskedQuestions.test.tsx
+│   │   │   │   │   ├── Header.test.tsx
+│   │   │   │   │   ├── Hero.test.tsx
+│   │   │   │   │   ├── Pricing.test.tsx
+│   │   │   │   │   └── Testimonials.test.tsx
 │   │   │   │   ├── CallToAction.tsx
 │   │   │   │   ├── Features.tsx
 │   │   │   │   ├── Footer.tsx
@@ -92,6 +106,10 @@
 │   │   │   │   └── Testimonials.tsx
 │   │   │   ├── mocks/
 │   │   │   │   ├── __tests__/
+│   │   │   │   │   ├── Browser.test.tsx
+│   │   │   │   │   ├── Phone.test.tsx
+│   │   │   │   │   ├── Terminal.test.tsx
+│   │   │   │   │   └── Window.test.tsx
 │   │   │   │   ├── Browser.tsx
 │   │   │   │   ├── Phone.tsx
 │   │   │   │   ├── Terminal.tsx
@@ -213,38 +231,64 @@
 │   │   │               │   └── PassportTab.tsx
 │   │   │               └── index.tsx
 │   │   └── templates/
-│   │       ├── BlogTemplate/
-│   │       │   ├── BlogTemplate.tsx
-│   │       │   └── index.ts
-│   │       ├── BlogsTemplate/
-│   │       │   ├── BlogsTemplate.tsx
-│   │       │   └── index.ts
-│   │       ├── ChatTemplate/
-│   │       │   ├── ChatTemplate.tsx
-│   │       │   └── index.ts
-│   │       ├── ComponentsTemplate/
-│   │       │   ├── ComponentsTemplate.tsx
-│   │       │   └── index.ts
-│   │       ├── DashboardTemplate/
-│   │       │   ├── __tests__/
-│   │       │   │   └── DashboardTemplate.test.tsx
-│   │       │   ├── DashboardTemplate.tsx
-│   │       │   └── index.ts
-│   │       ├── DownloadsTemplate/
-│   │       │   ├── DownloadsTemplate.tsx
-│   │       │   └── index.ts
-│   │       ├── ErrorTemplate/
-│   │       │   ├── ErrorTemplate.tsx
-│   │       │   └── index.ts
-│   │       ├── HeadTemplate/
-│   │       │   ├── HeadTemplate.tsx
-│   │       │   └── index.ts
-│   │       ├── LandingTemplate/
-│   │       │   ├── LandingTemplate.tsx
-│   │       │   └── index.ts
-│   │       └── VersionTemplate/
-│   │           ├── VersionTemplate.tsx
-│   │           └── index.ts
+│   │       ├── app/
+│   │       │   ├── ChatTemplate/
+│   │       │   │   ├── ChatTemplate.tsx
+│   │       │   │   └── index.ts
+│   │       │   ├── DashboardTemplate/
+│   │       │   │   ├── __tests__/
+│   │       │   │   │   └── DashboardTemplate.test.tsx
+│   │       │   │   ├── DashboardTemplate.tsx
+│   │       │   │   └── index.ts
+│   │       │   ├── DownloadsTemplate/
+│   │       │   │   ├── DownloadsTemplate.tsx
+│   │       │   │   └── index.ts
+│   │       │   ├── LandingTemplate/
+│   │       │   │   ├── LandingTemplate.tsx
+│   │       │   │   └── index.ts
+│   │       │   └── VersionTemplate/
+│   │       │       ├── VersionTemplate.tsx
+│   │       │       └── index.ts
+│   │       ├── auth/
+│   │       │   ├── PasswordForgetTemplate/
+│   │       │   │   ├── PasswordForgetTemplate.tsx
+│   │       │   │   └── index.ts
+│   │       │   ├── PasswordResetTemplate/
+│   │       │   │   ├── PasswordResetTemplate.tsx
+│   │       │   │   └── index.ts
+│   │       │   ├── ProfileTemplate/
+│   │       │   │   ├── ProfileTemplate.tsx
+│   │       │   │   └── index.ts
+│   │       │   ├── SignInTemplate/
+│   │       │   │   ├── SignInTemplate.tsx
+│   │       │   │   └── index.ts
+│   │       │   └── SignUpTemplate/
+│   │       │       ├── SignUpTemplate.tsx
+│   │       │       └── index.ts
+│   │       ├── blog/
+│   │       │   ├── BlogTemplate/
+│   │       │   │   ├── BlogTemplate.tsx
+│   │       │   │   └── index.ts
+│   │       │   └── BlogsTemplate/
+│   │       │       ├── BlogsTemplate.tsx
+│   │       │       └── index.ts
+│   │       ├── shared/
+│   │       │   ├── ComponentsTemplate/
+│   │       │   │   ├── ComponentsTemplate.tsx
+│   │       │   │   └── index.ts
+│   │       │   ├── ErrorTemplate/
+│   │       │   │   ├── ErrorTemplate.tsx
+│   │       │   │   └── index.ts
+│   │       │   └── HeadTemplate/
+│   │       │       ├── HeadTemplate.tsx
+│   │       │       └── index.ts
+│   │       └── store/
+│   │           ├── StoreFrontTemplate/
+│   │           │   ├── StoreFrontTemplate.tsx
+│   │           │   └── index.ts
+│   │           └── StoreItemTemplate/
+│   │               ├── StoreItemTemplate.tsx
+│   │               └── index.ts
 │   ├── constants/
 │   │   └── models.ts
 │   ├── contexts/
@@ -252,6 +296,7 @@
 │   │   ├── ModalContext.tsx
 │   │   ├── NotificationContext.tsx
 │   │   ├── SettingsContext.tsx
+│   │   ├── TelegramContext.tsx
 │   │   ├── ThemeContext.tsx
 │   │   └── index.ts
 │   ├── data/
@@ -395,4 +440,4 @@
 └── vitest.setup.ts
 ```
 
-111 directories, 281 files
+124 directories, 313 files

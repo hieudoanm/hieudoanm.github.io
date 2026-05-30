@@ -1,4 +1,4 @@
-import { VersionTemplate } from '@hieudoanm.github.io/components/templates/VersionTemplate';
+import { VersionTemplate } from '@hieudoanm.github.io/components/templates/app/VersionTemplate';
 import { GetStaticProps, NextPage } from 'next';
 
 type Props = {

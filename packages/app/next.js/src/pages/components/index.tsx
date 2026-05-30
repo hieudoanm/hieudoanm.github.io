@@ -1,8 +1,8 @@
-import { ComponentsTemplate } from '@hieudoanm.github.io/components/templates/ComponentsTemplate';
+import { ComponentsTemplate } from '@hieudoanm.github.io/components/templates/shared/ComponentsTemplate';
 import { NextPage } from 'next';
 
-const HomePage: NextPage = () => {
+const ComponentsPage: NextPage = () => {
   return <ComponentsTemplate />;
 };
 
-export default HomePage;
+export default ComponentsPage;

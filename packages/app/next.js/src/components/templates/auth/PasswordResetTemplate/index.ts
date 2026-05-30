@@ -1,0 +1,1 @@
+export { PasswordResetTemplate } from './PasswordResetTemplate';

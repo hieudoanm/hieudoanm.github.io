@@ -443,72 +443,127 @@
 │   │   │       │       └── index.tsx
 │   │   │       └── Start.tsx
 │   │   └── templates/
-│   │       ├── BlogTemplate/
-│   │       │   ├── __tests__/
-│   │       │   │   ├── __snapshots__/
-│   │       │   │   │   └── BlogTemplate.test.tsx.snap
-│   │       │   │   └── BlogTemplate.test.tsx
-│   │       │   ├── BlogTemplate.tsx
-│   │       │   └── index.ts
-│   │       ├── BlogsTemplate/
-│   │       │   ├── __tests__/
-│   │       │   │   ├── __snapshots__/
-│   │       │   │   │   └── BlogsTemplate.test.tsx.snap
-│   │       │   │   └── BlogsTemplate.test.tsx
-│   │       │   ├── BlogsTemplate.tsx
-│   │       │   └── index.ts
-│   │       ├── ChatTemplate/
-│   │       │   ├── __tests__/
-│   │       │   │   ├── __snapshots__/
-│   │       │   │   │   └── ChatTemplate.test.tsx.snap
-│   │       │   │   └── ChatTemplate.test.tsx
-│   │       │   ├── ChatTemplate.tsx
-│   │       │   └── index.ts
-│   │       ├── ComponentsTemplate/
-│   │       │   ├── __tests__/
-│   │       │   │   ├── __snapshots__/
-│   │       │   │   │   └── ComponentsTemplate.test.tsx.snap
-│   │       │   │   └── ComponentsTemplate.test.tsx
-│   │       │   ├── ComponentsTemplate.tsx
-│   │       │   └── index.ts
-│   │       ├── DashboardTemplate/
-│   │       │   ├── __tests__/
-│   │       │   │   ├── __snapshots__/
-│   │       │   │   │   └── DashboardTemplate.test.tsx.snap
-│   │       │   │   └── DashboardTemplate.test.tsx
-│   │       │   ├── DashboardTemplate.tsx
-│   │       │   └── index.ts
-│   │       ├── DownloadsTemplate/
-│   │       │   ├── __tests__/
-│   │       │   │   ├── __snapshots__/
-│   │       │   │   │   └── DownloadsTemplate.test.tsx.snap
-│   │       │   │   └── DownloadsTemplate.test.tsx
-│   │       │   ├── DownloadsTemplate.tsx
-│   │       │   └── index.ts
-│   │       ├── ErrorTemplate/
-│   │       │   ├── __tests__/
-│   │       │   │   ├── __snapshots__/
-│   │       │   │   │   └── ErrorTemplate.test.tsx.snap
-│   │       │   │   └── ErrorTemplate.test.tsx
-│   │       │   ├── ErrorTemplate.tsx
-│   │       │   └── index.ts
-│   │       ├── HeadTemplate/
-│   │       │   ├── HeadTemplate.tsx
-│   │       │   └── index.ts
-│   │       ├── LandingTemplate/
-│   │       │   ├── __tests__/
-│   │       │   │   ├── __snapshots__/
-│   │       │   │   │   └── LandingTemplate.test.tsx.snap
-│   │       │   │   └── LandingTemplate.test.tsx
-│   │       │   ├── LandingTemplate.tsx
-│   │       │   └── index.ts
-│   │       └── VersionTemplate/
-│   │           ├── __tests__/
-│   │           │   ├── __snapshots__/
-│   │           │   │   └── VersionTemplate.test.tsx.snap
-│   │           │   └── VersionTemplate.test.tsx
-│   │           ├── VersionTemplate.tsx
-│   │           └── index.ts
+│   │       ├── app/
+│   │       │   ├── ChatTemplate/
+│   │       │   │   ├── __tests__/
+│   │       │   │   │   ├── __snapshots__/
+│   │       │   │   │   │   └── ChatTemplate.test.tsx.snap
+│   │       │   │   │   └── ChatTemplate.test.tsx
+│   │       │   │   ├── ChatTemplate.tsx
+│   │       │   │   └── index.ts
+│   │       │   ├── DashboardTemplate/
+│   │       │   │   ├── __tests__/
+│   │       │   │   │   ├── __snapshots__/
+│   │       │   │   │   │   └── DashboardTemplate.test.tsx.snap
+│   │       │   │   │   └── DashboardTemplate.test.tsx
+│   │       │   │   ├── DashboardTemplate.tsx
+│   │       │   │   └── index.ts
+│   │       │   ├── DownloadsTemplate/
+│   │       │   │   ├── __tests__/
+│   │       │   │   │   ├── __snapshots__/
+│   │       │   │   │   │   └── DownloadsTemplate.test.tsx.snap
+│   │       │   │   │   └── DownloadsTemplate.test.tsx
+│   │       │   │   ├── DownloadsTemplate.tsx
+│   │       │   │   └── index.ts
+│   │       │   ├── LandingTemplate/
+│   │       │   │   ├── __tests__/
+│   │       │   │   │   ├── __snapshots__/
+│   │       │   │   │   │   └── LandingTemplate.test.tsx.snap
+│   │       │   │   │   └── LandingTemplate.test.tsx
+│   │       │   │   ├── LandingTemplate.tsx
+│   │       │   │   └── index.ts
+│   │       │   └── VersionTemplate/
+│   │       │       ├── __tests__/
+│   │       │       │   ├── __snapshots__/
+│   │       │       │   │   └── VersionTemplate.test.tsx.snap
+│   │       │       │   └── VersionTemplate.test.tsx
+│   │       │       ├── VersionTemplate.tsx
+│   │       │       └── index.ts
+│   │       ├── auth/
+│   │       │   ├── PasswordForgetTemplate/
+│   │       │   │   ├── __tests__/
+│   │       │   │   │   ├── __snapshots__/
+│   │       │   │   │   │   └── PasswordForgetTemplate.test.tsx.snap
+│   │       │   │   │   └── PasswordForgetTemplate.test.tsx
+│   │       │   │   ├── PasswordForgetTemplate.tsx
+│   │       │   │   └── index.ts
+│   │       │   ├── PasswordResetTemplate/
+│   │       │   │   ├── __tests__/
+│   │       │   │   │   ├── __snapshots__/
+│   │       │   │   │   │   └── PasswordResetTemplate.test.tsx.snap
+│   │       │   │   │   └── PasswordResetTemplate.test.tsx
+│   │       │   │   ├── PasswordResetTemplate.tsx
+│   │       │   │   └── index.ts
+│   │       │   ├── ProfileTemplate/
+│   │       │   │   ├── __tests__/
+│   │       │   │   │   ├── __snapshots__/
+│   │       │   │   │   │   └── ProfileTemplate.test.tsx.snap
+│   │       │   │   │   └── ProfileTemplate.test.tsx
+│   │       │   │   ├── ProfileTemplate.tsx
+│   │       │   │   └── index.ts
+│   │       │   ├── SignInTemplate/
+│   │       │   │   ├── __tests__/
+│   │       │   │   │   ├── __snapshots__/
+│   │       │   │   │   │   └── SignInTemplate.test.tsx.snap
+│   │       │   │   │   └── SignInTemplate.test.tsx
+│   │       │   │   ├── SignInTemplate.tsx
+│   │       │   │   └── index.ts
+│   │       │   └── SignUpTemplate/
+│   │       │       ├── __tests__/
+│   │       │       │   ├── __snapshots__/
+│   │       │       │   │   └── SignUpTemplate.test.tsx.snap
+│   │       │       │   └── SignUpTemplate.test.tsx
+│   │       │       ├── SignUpTemplate.tsx
+│   │       │       └── index.ts
+│   │       ├── blog/
+│   │       │   ├── BlogTemplate/
+│   │       │   │   ├── __tests__/
+│   │       │   │   │   ├── __snapshots__/
+│   │       │   │   │   │   └── BlogTemplate.test.tsx.snap
+│   │       │   │   │   └── BlogTemplate.test.tsx
+│   │       │   │   ├── BlogTemplate.tsx
+│   │       │   │   └── index.ts
+│   │       │   └── BlogsTemplate/
+│   │       │       ├── __tests__/
+│   │       │       │   ├── __snapshots__/
+│   │       │       │   │   └── BlogsTemplate.test.tsx.snap
+│   │       │       │   └── BlogsTemplate.test.tsx
+│   │       │       ├── BlogsTemplate.tsx
+│   │       │       └── index.ts
+│   │       ├── components/
+│   │       ├── shared/
+│   │       │   ├── ComponentsTemplate/
+│   │       │   │   ├── __tests__/
+│   │       │   │   │   ├── __snapshots__/
+│   │       │   │   │   │   └── ComponentsTemplate.test.tsx.snap
+│   │       │   │   │   └── ComponentsTemplate.test.tsx
+│   │       │   │   ├── ComponentsTemplate.tsx
+│   │       │   │   └── index.ts
+│   │       │   ├── ErrorTemplate/
+│   │       │   │   ├── __tests__/
+│   │       │   │   │   ├── __snapshots__/
+│   │       │   │   │   │   └── ErrorTemplate.test.tsx.snap
+│   │       │   │   │   └── ErrorTemplate.test.tsx
+│   │       │   │   ├── ErrorTemplate.tsx
+│   │       │   │   └── index.ts
+│   │       │   └── HeadTemplate/
+│   │       │       ├── HeadTemplate.tsx
+│   │       │       └── index.ts
+│   │       └── store/
+│   │           ├── StoreFrontTemplate/
+│   │           │   ├── __tests__/
+│   │           │   │   ├── __snapshots__/
+│   │           │   │   │   └── StoreFrontTemplate.test.tsx.snap
+│   │           │   │   └── StoreFrontTemplate.test.tsx
+│   │           │   ├── StoreFrontTemplate.tsx
+│   │           │   └── index.ts
+│   │           └── StoreItemTemplate/
+│   │               ├── __tests__/
+│   │               │   ├── __snapshots__/
+│   │               │   │   └── StoreItemTemplate.test.tsx.snap
+│   │               │   └── StoreItemTemplate.test.tsx
+│   │               ├── StoreItemTemplate.tsx
+│   │               └── index.ts
 │   ├── constants/
 │   │   └── models.ts
 │   ├── contexts/
@@ -516,6 +571,7 @@
 │   │   ├── ModalContext.tsx
 │   │   ├── NotificationContext.tsx
 │   │   ├── SettingsContext.tsx
+│   │   ├── TelegramContext.tsx
 │   │   └── ThemeContext.tsx
 │   ├── data/
 │   │   ├── bookmarks/
@@ -677,4 +733,4 @@
 └── tsconfig.json
 ```
 
-177 directories, 497 files
+204 directories, 526 files

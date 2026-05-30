@@ -1,5 +1,5 @@
 import '@hieudoanm.github.io/styles/globals.css';
-import { HeadTemplate } from '@hieudoanm.github.io/components/templates/HeadTemplate';
+import { HeadTemplate } from '@hieudoanm.github.io/components/templates/shared/HeadTemplate';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import type { AppProps } from 'next/app';
 import { Be_Vietnam_Pro } from 'next/font/google';

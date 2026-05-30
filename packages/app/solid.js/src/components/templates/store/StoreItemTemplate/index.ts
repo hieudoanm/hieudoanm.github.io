@@ -1,0 +1,1 @@
+export { StoreItemTemplate } from './StoreItemTemplate';

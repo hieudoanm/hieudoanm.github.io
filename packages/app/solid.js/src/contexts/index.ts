@@ -18,3 +18,5 @@ export {
 } from './NotificationContext';
 
 export { UserProvider, useUser } from './UserContext';
+
+export { TelegramProvider, useTelegram } from './TelegramContext';
