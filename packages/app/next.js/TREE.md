@@ -532,8 +532,33 @@
 │   ├── examples/
 │   │   └── example.yaml
 │   ├── hooks/
+│   │   ├── boolean/
+│   │   │   ├── use-boolean.tsx
+│   │   │   └── use-toggle.tsx
+│   │   ├── events/
+│   │   │   ├── use-keyboard.tsx
+│   │   │   ├── use-media-query.tsx
+│   │   │   ├── use-resize.tsx
+│   │   │   └── use-scroll.tsx
+│   │   ├── info/
+│   │   │   ├── use-browser.tsx
+│   │   │   ├── use-language.tsx
+│   │   │   └── use-screen.tsx
+│   │   ├── navigator/
+│   │   │   ├── use-bluetooth.tsx
+│   │   │   └── use-camera.tsx
+│   │   ├── network/
+│   │   │   ├── use-fetch.tsx
+│   │   │   └── use-online.tsx
+│   │   ├── ssr/
+│   │   │   └── use-isomorphic-layout-effect.tsx
+│   │   ├── time/
+│   │   │   ├── use-countdown.tsx
+│   │   │   ├── use-interval.tsx
+│   │   │   └── use-timeout.tsx
+│   │   ├── use-dark-mode.ts
 │   │   ├── use-debounce.ts
-│   │   └── useIndexedDB.ts
+│   │   └── use-indexed-db.ts
 │   ├── json/
 │   │   ├── inflation/
 │   │   │   ├── countries_currencies.json
@@ -623,4 +648,4 @@
 └── tsconfig.json
 ```
 
-158 directories, 462 files
+165 directories, 480 files

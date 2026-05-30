@@ -1,5 +1,5 @@
-import useIndexedDB from '@hieudoanm.github.io/hooks/useIndexedDB';
-import { FC, useState, useEffect } from 'react';
+import useIndexedDB from '@hieudoanm.github.io/hooks/use-indexed-db';
+import { FC, useEffect, useState } from 'react';
 
 export interface Task {
   id: number;

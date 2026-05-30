@@ -30,7 +30,49 @@
 │   │       └── wordsapi.client.ts
 │   ├── components/
 │   │   ├── atoms/
-│   │   │   └── ModalWrapper.tsx
+│   │   │   ├── BlogDate.tsx
+│   │   │   ├── ChatBubble.tsx
+│   │   │   ├── ChatTimestamp.tsx
+│   │   │   ├── ModalWrapper.tsx
+│   │   │   ├── TagBadge.tsx
+│   │   │   └── index.ts
+│   │   ├── molecules/
+│   │   │   ├── BlogCard.tsx
+│   │   │   ├── BlogCardList.tsx
+│   │   │   ├── BlogSidebar.tsx
+│   │   │   ├── ChatInput.tsx
+│   │   │   ├── ChatMessageList.tsx
+│   │   │   ├── ChatModelSelect.tsx
+│   │   │   ├── VirtualTable.tsx
+│   │   │   └── index.ts
+│   │   ├── organisms/
+│   │   │   ├── auth/
+│   │   │   │   ├── PasswordForget.tsx
+│   │   │   │   ├── PasswordReset.tsx
+│   │   │   │   ├── SignInForm.tsx
+│   │   │   │   └── SignUpForm.tsx
+│   │   │   ├── blog/
+│   │   │   │   ├── BlogFooter.tsx
+│   │   │   │   └── BlogHeader.tsx
+│   │   │   ├── chat/
+│   │   │   │   ├── ChatFooter.tsx
+│   │   │   │   ├── ChatHeader.tsx
+│   │   │   │   └── ChatSidebar.tsx
+│   │   │   ├── landing/
+│   │   │   │   ├── CallToAction.tsx
+│   │   │   │   ├── Features.tsx
+│   │   │   │   ├── Footer.tsx
+│   │   │   │   ├── FrequentlyAskedQuestions.tsx
+│   │   │   │   ├── Header.tsx
+│   │   │   │   ├── Hero.tsx
+│   │   │   │   ├── Pricing.tsx
+│   │   │   │   └── Testimonials.tsx
+│   │   │   ├── mocks/
+│   │   │   │   ├── Browser.tsx
+│   │   │   │   ├── Phone.tsx
+│   │   │   │   ├── Terminal.tsx
+│   │   │   │   └── Window.tsx
+│   │   │   └── index.ts
 │   │   ├── pages/
 │   │   │   └── start/
 │   │   │       ├── cards/
@@ -147,6 +189,18 @@
 │   │   │               │   └── PassportTab.tsx
 │   │   │               └── index.tsx
 │   │   └── templates/
+│   │       ├── BlogTemplate/
+│   │       │   ├── BlogTemplate.tsx
+│   │       │   └── index.ts
+│   │       ├── BlogsTemplate/
+│   │       │   ├── BlogsTemplate.tsx
+│   │       │   └── index.ts
+│   │       ├── ChatTemplate/
+│   │       │   ├── ChatTemplate.tsx
+│   │       │   └── index.ts
+│   │       ├── ComponentsTemplate/
+│   │       │   ├── ComponentsTemplate.tsx
+│   │       │   └── index.ts
 │   │       ├── DownloadsTemplate/
 │   │       │   ├── DownloadsTemplate.tsx
 │   │       │   └── index.ts
@@ -190,6 +244,8 @@
 │   │   │   ├── extension.ts
 │   │   │   └── pwa.ts
 │   │   ├── apps.ts
+│   │   ├── blog.ts
+│   │   ├── chat.ts
 │   │   ├── countries.ts
 │   │   ├── currencies.ts
 │   │   ├── emojis.ts
@@ -204,8 +260,6 @@
 │   ├── examples/
 │   │   └── example.yaml
 │   ├── hooks/
-│   │   ├── use-debounce.ts
-│   │   └── useIndexedDB.ts
 │   ├── json/
 │   │   ├── inflation/
 │   │   │   ├── countries_currencies.json
@@ -216,7 +270,6 @@
 │   │   │   └── palindrome.json
 │   │   ├── currency.json
 │   │   └── words.json
-│   ├── lib/
 │   ├── middlewares/
 │   │   └── rate-limit.ts
 │   ├── pages/
@@ -250,6 +303,33 @@
 │   │   │   └── yaml2pdfmake.types.ts
 │   │   └── youtube/
 │   │       └── youtube.service.ts
+│   ├── signals/
+│   │   ├── boolean/
+│   │   │   ├── create-boolean.ts
+│   │   │   └── create-toggle.ts
+│   │   ├── events/
+│   │   │   ├── create-keyboard.ts
+│   │   │   ├── create-media-query.ts
+│   │   │   ├── create-resize.ts
+│   │   │   └── create-scroll.ts
+│   │   ├── info/
+│   │   │   ├── create-browser.ts
+│   │   │   ├── create-language.ts
+│   │   │   └── create-screen.ts
+│   │   ├── navigator/
+│   │   │   ├── create-bluetooth.ts
+│   │   │   └── create-camera.ts
+│   │   ├── network/
+│   │   │   ├── create-fetch.ts
+│   │   │   └── create-online.ts
+│   │   ├── time/
+│   │   │   ├── create-countdown.ts
+│   │   │   ├── create-interval.ts
+│   │   │   └── create-timeout.ts
+│   │   ├── create-dark-mode.ts
+│   │   ├── create-debounce.ts
+│   │   ├── create-indexed-db.ts
+│   │   └── index.ts
 │   ├── styles/
 │   │   └── globals.css
 │   ├── utils/
@@ -277,4 +357,4 @@
 └── vite.config.ts
 ```
 
-84 directories, 190 files
+101 directories, 253 files

@@ -1,4 +1,4 @@
-import useIndexedDB from '@hieudoanm.github.io/hooks/useIndexedDB';
+import useIndexedDB from '@hieudoanm.github.io/signals/create-indexed-db';
 import { createSignal, onMount } from 'solid-js';
 
 export interface Task {
