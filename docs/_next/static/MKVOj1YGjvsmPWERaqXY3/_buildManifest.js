@@ -14,6 +14,12 @@ self.__BUILD_MANIFEST = {
   "/app/attractors": [
     "static/chunks/12.t20tv8ejn..js"
   ],
+  "/app/chess/board": [
+    "static/chunks/0ie24w9kcfg~~.js"
+  ],
+  "/app/chess/stats": [
+    "static/chunks/0pta06n9vppv8.js"
+  ],
   "/components": [
     "static/chunks/0rck0ojcfso7c.js"
   ],
@@ -44,6 +50,8 @@ self.__BUILD_MANIFEST = {
     "/api/trpc/[trpc]",
     "/api/youtube/transcript/[id]",
     "/app/attractors",
+    "/app/chess/board",
+    "/app/chess/stats",
     "/components",
     "/downloads",
     "/templates",
