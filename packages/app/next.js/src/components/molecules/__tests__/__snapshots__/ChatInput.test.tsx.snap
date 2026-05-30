@@ -9,7 +9,7 @@ exports[`ChatInput to match snapshot 1`] = `
       class="relative flex-1"
     >
       <textarea
-        class="textarea textarea-bordered border-base-300 bg-base-200 text-base-content placeholder:text-base-content/30 scrollbar-none w-full resize-none rounded-2xl px-5 py-3 pr-12 text-sm leading-relaxed focus:outline-none"
+        class="textarea textarea-bordered border-base-300 bg-base-200 text-base-content placeholder:text-base-content/30 w-full resize-none scrollbar-none rounded-2xl px-5 py-3 pr-12 text-sm leading-relaxed focus:outline-none"
         placeholder="Type a message..."
         rows="1"
         style="height: 0px;"

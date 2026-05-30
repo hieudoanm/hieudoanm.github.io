@@ -146,7 +146,7 @@ exports[`BlogTemplate to match snapshot 1`] = `
                   2024-02-01
                 </div>
                 <h3
-                  class="card-title text-sm font-medium group-hover:text-primary transition-colors"
+                  class="card-title group-hover:text-primary text-sm font-medium transition-colors"
                 >
                   Post Two
                 </h3>
@@ -165,7 +165,7 @@ exports[`BlogTemplate to match snapshot 1`] = `
                   2024-03-10
                 </div>
                 <h3
-                  class="card-title text-sm font-medium group-hover:text-primary transition-colors"
+                  class="card-title group-hover:text-primary text-sm font-medium transition-colors"
                 >
                   Post Three
                 </h3>

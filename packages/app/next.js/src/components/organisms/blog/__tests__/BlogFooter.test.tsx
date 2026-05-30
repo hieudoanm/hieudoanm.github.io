@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { BlogFooter } from '../blog/BlogFooter';
+import { BlogFooter } from '../BlogFooter';
 
 describe('BlogFooter', () => {
   it('to match snapshot', () => {

@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import { ChatHeader } from '../chat/ChatHeader';
+import { ChatHeader } from '../ChatHeader';
 
 const mockModels = [
   { company: 'Test', label: 'Model A', value: 'model-a' },

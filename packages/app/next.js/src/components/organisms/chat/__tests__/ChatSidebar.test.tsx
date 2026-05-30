@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import { ChatSidebar } from '../chat/ChatSidebar';
+import { ChatSidebar } from '../ChatSidebar';
 
 const mockConversations = [
   {

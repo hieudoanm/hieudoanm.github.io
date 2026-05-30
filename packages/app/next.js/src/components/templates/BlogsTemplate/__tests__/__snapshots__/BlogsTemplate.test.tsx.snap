@@ -87,7 +87,7 @@ exports[`BlogsTemplate to match snapshot 1`] = `
                 Post One
               </h3>
               <p
-                class="text-base-content/50 mb-4 text-sm leading-relaxed line-clamp-2"
+                class="text-base-content/50 mb-4 line-clamp-2 text-sm leading-relaxed"
               >
                 Description one.
               </p>
@@ -131,7 +131,7 @@ exports[`BlogsTemplate to match snapshot 1`] = `
                 Post Two
               </h3>
               <p
-                class="text-base-content/50 mb-4 text-sm leading-relaxed line-clamp-2"
+                class="text-base-content/50 mb-4 line-clamp-2 text-sm leading-relaxed"
               >
                 Description two.
               </p>
@@ -175,7 +175,7 @@ exports[`BlogsTemplate to match snapshot 1`] = `
                 Post Three
               </h3>
               <p
-                class="text-base-content/50 mb-4 text-sm leading-relaxed line-clamp-2"
+                class="text-base-content/50 mb-4 line-clamp-2 text-sm leading-relaxed"
               >
                 Description three.
               </p>

@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { ChatFooter } from '../chat/ChatFooter';
+import { ChatFooter } from '../ChatFooter';
 
 describe('ChatFooter', () => {
   it('to match snapshot', () => {

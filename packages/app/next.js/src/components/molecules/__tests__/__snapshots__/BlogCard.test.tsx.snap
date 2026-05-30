@@ -31,7 +31,7 @@ exports[`BlogCard to match snapshot 1`] = `
         Hello World
       </h3>
       <p
-        class="text-base-content/50 mb-4 text-sm leading-relaxed line-clamp-2"
+        class="text-base-content/50 mb-4 line-clamp-2 text-sm leading-relaxed"
       >
         A test post description.
       </p>

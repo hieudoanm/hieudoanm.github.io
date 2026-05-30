@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { BlogHeader } from '../blog/BlogHeader';
+import { BlogHeader } from '../BlogHeader';
 
 describe('BlogHeader', () => {
   it('to match snapshot', () => {
