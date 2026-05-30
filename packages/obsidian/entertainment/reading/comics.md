@@ -44,10 +44,12 @@
 
 ## Sandman
 
-1. Destiny vs Free Will
-2. Death vs Life
-3. Dream vs Reality
-4. Destruction vs Creation
-5. Desire vs Hatred
-6. Despair vs Hope
-7. Delirium vs Sanity
+| No  | Name        | Representation |
+| --- | ----------- | -------------- |
+| 1   | Destiny     | Free Will      |
+| 2   | Death       | Life           |
+| 3   | Dream       | Reality        |
+| 4   | Destruction | Creation       |
+| 5   | Desire      | Hatred         |
+| 6   | Despair     | Hope           |
+| 7   | Delirium    | Sanity         |

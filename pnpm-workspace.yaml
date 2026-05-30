@@ -13,3 +13,5 @@ allowBuilds:
   spawn-sync: true
   tesseract.js: true
   unrs-resolver: true
+patchedDependencies:
+  '@solidjs/start@2.0.0-alpha.2': patches/@solidjs__start@2.0.0-alpha.2.patch

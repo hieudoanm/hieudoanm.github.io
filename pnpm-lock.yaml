@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  '@solidjs/start@2.0.0-alpha.2': 51c04b2589131774074e05bb49b2fb527dd08b5706a9d688624bb3db427cb043
+
 importers:
 
   .:
@@ -368,7 +371,7 @@ importers:
         version: 0.16.1(solid-js@1.9.13)
       '@solidjs/start':
         specifier: 2.0.0-alpha.2
-        version: 2.0.0-alpha.2(@testing-library/jest-dom@6.9.1)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.48.0)(yaml@2.9.0))
+        version: 2.0.0-alpha.2(patch_hash=51c04b2589131774074e05bb49b2fb527dd08b5706a9d688624bb3db427cb043)(@testing-library/jest-dom@6.9.1)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.48.0)(yaml@2.9.0))
       '@tanstack/solid-query':
         specifier: 5.100.14
         version: 5.100.14(solid-js@1.9.13)
@@ -4976,6 +4979,7 @@ packages:
 
   '@swc/helpers@0.5.22':
     resolution: {integrity: sha512-/e2Ly3Docn9kYByap6TV4oquJ3wQuz3c+kC74riqtkwU9CwTMeuj6t2rW+bRr4pyOx/CYQM4wr0RgaKQwGEz0A==}
+    deprecated: This version contains a decorator helper regression from swc-project/swc#11847. Please upgrade to @swc/helpers@0.5.23 or newer.
 
   '@tailwindcss/node@4.3.0':
     resolution: {integrity: sha512-aFb4gUhFOgdh9AXo4IzBEOzBkkAxm9VigwDJnMIYv3lcfXCJVesNfbEaBl4BNgVRyid92AmdviqwBUBRKSeY3g==}
@@ -15267,7 +15271,7 @@ snapshots:
     dependencies:
       solid-js: 1.9.13
 
-  '@solidjs/start@2.0.0-alpha.2(@testing-library/jest-dom@6.9.1)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.48.0)(yaml@2.9.0))':
+  '@solidjs/start@2.0.0-alpha.2(patch_hash=51c04b2589131774074e05bb49b2fb527dd08b5706a9d688624bb3db427cb043)(@testing-library/jest-dom@6.9.1)(vite@8.0.14(@types/node@25.9.1)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.48.0)(yaml@2.9.0))':
     dependencies:
       '@babel/core': 7.29.7
       '@babel/traverse': 7.29.7

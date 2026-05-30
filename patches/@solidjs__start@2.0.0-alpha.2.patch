@@ -1,0 +1,32 @@
+diff --git a/dist/config/manifest.js b/dist/config/manifest.js
+index 3bcdc386f8c487a2197441f8625a0b283263153f..996248e37560f1f17ae8ebc5bcb2e167f46f324c 100644
+--- a/dist/config/manifest.js
++++ b/dist/config/manifest.js
+@@ -1,6 +1,8 @@
+ import { findStylesInModuleGraph } from "../server/collect-styles.js";
+ import { VIRTUAL_MODULES } from "./constants.js";
+ import { wrapId } from "./vite-utils.js";
++import { readFileSync } from "node:fs";
++import { resolve } from "node:path";
+ export function manifest(start) {
+     let devServer = undefined;
+     return {
+@@ -32,10 +34,14 @@ export function manifest(start) {
+                     clientViteManifest = {};
+                 }
+                 else {
+-                    const entry = Object.values(globalThis.START_CLIENT_BUNDLE).find(v => "isEntry" in v && v.isEntry);
+-                    if (!entry)
+-                        throw new Error("No client entry found");
+-                    clientViteManifest = JSON.parse(globalThis.START_CLIENT_BUNDLE[".vite/manifest.json"].source);
++                    const manifestInBundle = globalThis.START_CLIENT_BUNDLE?.[".vite/manifest.json"];
++                    if (manifestInBundle) {
++                        clientViteManifest = JSON.parse(manifestInBundle.source);
++                    }
++                    else {
++                        const manifestPath = resolve(process.cwd(), "dist/client/.vite/manifest.json");
++                        clientViteManifest = JSON.parse(readFileSync(manifestPath, "utf-8"));
++                    }
+                 }
+                 return `export const clientViteManifest = ${JSON.stringify(clientViteManifest)};`;
+             }
