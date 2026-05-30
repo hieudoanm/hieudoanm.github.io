@@ -115,18 +115,6 @@
 │   │   │   ├── VirtualTable.tsx
 │   │   │   └── index.ts
 │   │   ├── organisms/
-│   │   │   ├── __tests__/
-│   │   │   │   ├── __snapshots__/
-│   │   │   │   │   ├── BlogFooter.test.tsx.snap
-│   │   │   │   │   ├── BlogHeader.test.tsx.snap
-│   │   │   │   │   ├── ChatFooter.test.tsx.snap
-│   │   │   │   │   ├── ChatHeader.test.tsx.snap
-│   │   │   │   │   └── ChatSidebar.test.tsx.snap
-│   │   │   │   ├── BlogFooter.test.tsx
-│   │   │   │   ├── BlogHeader.test.tsx
-│   │   │   │   ├── ChatFooter.test.tsx
-│   │   │   │   ├── ChatHeader.test.tsx
-│   │   │   │   └── ChatSidebar.test.tsx
 │   │   │   ├── auth/
 │   │   │   │   ├── __tests__/
 │   │   │   │   │   ├── __snapshots__/
@@ -143,12 +131,28 @@
 │   │   │   │   ├── SignInForm.tsx
 │   │   │   │   └── SignUpForm.tsx
 │   │   │   ├── blog/
+│   │   │   │   ├── __tests__/
+│   │   │   │   │   ├── __snapshots__/
+│   │   │   │   │   │   ├── BlogFooter.test.tsx.snap
+│   │   │   │   │   │   └── BlogHeader.test.tsx.snap
+│   │   │   │   │   ├── BlogFooter.test.tsx
+│   │   │   │   │   └── BlogHeader.test.tsx
 │   │   │   │   ├── BlogFooter.tsx
 │   │   │   │   └── BlogHeader.tsx
 │   │   │   ├── chat/
+│   │   │   │   ├── __tests__/
+│   │   │   │   │   ├── __snapshots__/
+│   │   │   │   │   │   ├── ChatFooter.test.tsx.snap
+│   │   │   │   │   │   ├── ChatHeader.test.tsx.snap
+│   │   │   │   │   │   └── ChatSidebar.test.tsx.snap
+│   │   │   │   │   ├── ChatFooter.test.tsx
+│   │   │   │   │   ├── ChatHeader.test.tsx
+│   │   │   │   │   └── ChatSidebar.test.tsx
 │   │   │   │   ├── ChatFooter.tsx
 │   │   │   │   ├── ChatHeader.tsx
 │   │   │   │   └── ChatSidebar.tsx
+│   │   │   ├── common/
+│   │   │   │   └── PhotosGrid.tsx
 │   │   │   ├── landing/
 │   │   │   │   ├── __tests__/
 │   │   │   │   │   ├── __snapshots__/
@@ -193,6 +197,8 @@
 │   │   │   │   └── Window.tsx
 │   │   │   └── index.ts
 │   │   ├── pages/
+│   │   │   ├── attractors/
+│   │   │   │   └── Attractors.tsx
 │   │   │   └── start/
 │   │   │       ├── cards/
 │   │   │       │   ├── __tests__/
@@ -411,30 +417,31 @@
 │   │   │       │       │   └── LegislationModal.test.tsx
 │   │   │       │       ├── CalendarTracker.tsx
 │   │   │       │       └── LegislationModal.tsx
-│   │   │       └── sidebars/
-│   │   │           ├── LeftSidebar/
-│   │   │           │   ├── tabs/
-│   │   │           │   │   ├── __tests__/
-│   │   │           │   │   │   ├── __snapshots__/
-│   │   │           │   │   │   │   └── StatusTab.test.tsx.snap
-│   │   │           │   │   │   └── StatusTab.test.tsx
-│   │   │           │   │   ├── FreeModelsTab.tsx
-│   │   │           │   │   ├── StatusTab.tsx
-│   │   │           │   │   ├── TasksTab.tsx
-│   │   │           │   │   └── TimeTab.tsx
-│   │   │           │   └── index.tsx
-│   │   │           └── RightSidebar/
-│   │   │               ├── tabs/
-│   │   │               │   ├── __tests__/
-│   │   │               │   │   ├── __snapshots__/
-│   │   │               │   │   │   ├── CurrencyTab.test.tsx.snap
-│   │   │               │   │   │   └── PassportTab.test.tsx.snap
-│   │   │               │   │   ├── CurrencyTab.test.tsx
-│   │   │               │   │   └── PassportTab.test.tsx
-│   │   │               │   ├── CurrencyTab.tsx
-│   │   │               │   ├── DateTimeTab.tsx
-│   │   │               │   └── PassportTab.tsx
-│   │   │               └── index.tsx
+│   │   │       ├── sidebars/
+│   │   │       │   ├── LeftSidebar/
+│   │   │       │   │   ├── tabs/
+│   │   │       │   │   │   ├── __tests__/
+│   │   │       │   │   │   │   ├── __snapshots__/
+│   │   │       │   │   │   │   │   └── StatusTab.test.tsx.snap
+│   │   │       │   │   │   │   └── StatusTab.test.tsx
+│   │   │       │   │   │   ├── FreeModelsTab.tsx
+│   │   │       │   │   │   ├── StatusTab.tsx
+│   │   │       │   │   │   ├── TasksTab.tsx
+│   │   │       │   │   │   └── TimeTab.tsx
+│   │   │       │   │   └── index.tsx
+│   │   │       │   └── RightSidebar/
+│   │   │       │       ├── tabs/
+│   │   │       │       │   ├── __tests__/
+│   │   │       │       │   │   ├── __snapshots__/
+│   │   │       │       │   │   │   ├── CurrencyTab.test.tsx.snap
+│   │   │       │       │   │   │   └── PassportTab.test.tsx.snap
+│   │   │       │       │   │   ├── CurrencyTab.test.tsx
+│   │   │       │       │   │   └── PassportTab.test.tsx
+│   │   │       │       │   ├── CurrencyTab.tsx
+│   │   │       │       │   ├── DateTimeTab.tsx
+│   │   │       │       │   └── PassportTab.tsx
+│   │   │       │       └── index.tsx
+│   │   │       └── Start.tsx
 │   │   └── templates/
 │   │       ├── BlogTemplate/
 │   │       │   ├── __tests__/
@@ -464,6 +471,13 @@
 │   │       │   │   └── ComponentsTemplate.test.tsx
 │   │       │   ├── ComponentsTemplate.tsx
 │   │       │   └── index.ts
+│   │       ├── DashboardTemplate/
+│   │       │   ├── __tests__/
+│   │       │   │   ├── __snapshots__/
+│   │       │   │   │   └── DashboardTemplate.test.tsx.snap
+│   │       │   │   └── DashboardTemplate.test.tsx
+│   │       │   ├── DashboardTemplate.tsx
+│   │       │   └── index.ts
 │   │       ├── DownloadsTemplate/
 │   │       │   ├── __tests__/
 │   │       │   │   ├── __snapshots__/
@@ -481,6 +495,13 @@
 │   │       ├── HeadTemplate/
 │   │       │   ├── HeadTemplate.tsx
 │   │       │   └── index.ts
+│   │       ├── LandingTemplate/
+│   │       │   ├── __tests__/
+│   │       │   │   ├── __snapshots__/
+│   │       │   │   │   └── LandingTemplate.test.tsx.snap
+│   │       │   │   └── LandingTemplate.test.tsx
+│   │       │   ├── LandingTemplate.tsx
+│   │       │   └── index.ts
 │   │       └── VersionTemplate/
 │   │           ├── __tests__/
 │   │           │   ├── __snapshots__/
@@ -495,8 +516,7 @@
 │   │   ├── ModalContext.tsx
 │   │   ├── NotificationContext.tsx
 │   │   ├── SettingsContext.tsx
-│   │   ├── ThemeContext.tsx
-│   │   └── UserContext.tsx
+│   │   └── ThemeContext.tsx
 │   ├── data/
 │   │   ├── bookmarks/
 │   │   │   ├── chat.ts
@@ -589,6 +609,8 @@
 │   │   │           └── [id]/
 │   │   │               └── index.ts
 │   │   ├── app/
+│   │   │   └── attractors/
+│   │   │       └── index.tsx
 │   │   ├── components/
 │   │   │   └── index.tsx
 │   │   ├── downloads/
@@ -655,4 +677,4 @@
 └── tsconfig.json
 ```
 
-166 directories, 486 files
+177 directories, 497 files

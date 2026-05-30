@@ -30,6 +30,12 @@
 │   │       └── wordsapi.client.ts
 │   ├── components/
 │   │   ├── atoms/
+│   │   │   ├── __tests__/
+│   │   │   │   ├── BlogDate.test.tsx
+│   │   │   │   ├── ChatBubble.test.tsx
+│   │   │   │   ├── ChatTimestamp.test.tsx
+│   │   │   │   ├── ModalWrapper.test.tsx
+│   │   │   │   └── TagBadge.test.tsx
 │   │   │   ├── BlogDate.tsx
 │   │   │   ├── ChatBubble.tsx
 │   │   │   ├── ChatTimestamp.tsx
@@ -37,6 +43,14 @@
 │   │   │   ├── TagBadge.tsx
 │   │   │   └── index.ts
 │   │   ├── molecules/
+│   │   │   ├── __tests__/
+│   │   │   │   ├── BlogCard.test.tsx
+│   │   │   │   ├── BlogCardList.test.tsx
+│   │   │   │   ├── BlogSidebar.test.tsx
+│   │   │   │   ├── ChatInput.test.tsx
+│   │   │   │   ├── ChatMessageList.test.tsx
+│   │   │   │   ├── ChatModelSelect.test.tsx
+│   │   │   │   └── VirtualTable.test.tsx
 │   │   │   ├── BlogCard.tsx
 │   │   │   ├── BlogCardList.tsx
 │   │   │   ├── BlogSidebar.tsx
@@ -47,18 +61,27 @@
 │   │   │   └── index.ts
 │   │   ├── organisms/
 │   │   │   ├── auth/
+│   │   │   │   ├── __tests__/
 │   │   │   │   ├── PasswordForget.tsx
 │   │   │   │   ├── PasswordReset.tsx
 │   │   │   │   ├── SignInForm.tsx
 │   │   │   │   └── SignUpForm.tsx
 │   │   │   ├── blog/
+│   │   │   │   ├── __tests__/
+│   │   │   │   │   ├── BlogFooter.test.tsx
+│   │   │   │   │   └── BlogHeader.test.tsx
 │   │   │   │   ├── BlogFooter.tsx
 │   │   │   │   └── BlogHeader.tsx
 │   │   │   ├── chat/
+│   │   │   │   ├── __tests__/
+│   │   │   │   │   ├── ChatFooter.test.tsx
+│   │   │   │   │   ├── ChatHeader.test.tsx
+│   │   │   │   │   └── ChatSidebar.test.tsx
 │   │   │   │   ├── ChatFooter.tsx
 │   │   │   │   ├── ChatHeader.tsx
 │   │   │   │   └── ChatSidebar.tsx
 │   │   │   ├── landing/
+│   │   │   │   ├── __tests__/
 │   │   │   │   ├── CallToAction.tsx
 │   │   │   │   ├── Features.tsx
 │   │   │   │   ├── Footer.tsx
@@ -68,6 +91,7 @@
 │   │   │   │   ├── Pricing.tsx
 │   │   │   │   └── Testimonials.tsx
 │   │   │   ├── mocks/
+│   │   │   │   ├── __tests__/
 │   │   │   │   ├── Browser.tsx
 │   │   │   │   ├── Phone.tsx
 │   │   │   │   ├── Terminal.tsx
@@ -201,6 +225,11 @@
 │   │       ├── ComponentsTemplate/
 │   │       │   ├── ComponentsTemplate.tsx
 │   │       │   └── index.ts
+│   │       ├── DashboardTemplate/
+│   │       │   ├── __tests__/
+│   │       │   │   └── DashboardTemplate.test.tsx
+│   │       │   ├── DashboardTemplate.tsx
+│   │       │   └── index.ts
 │   │       ├── DownloadsTemplate/
 │   │       │   ├── DownloadsTemplate.tsx
 │   │       │   └── index.ts
@@ -224,7 +253,6 @@
 │   │   ├── NotificationContext.tsx
 │   │   ├── SettingsContext.tsx
 │   │   ├── ThemeContext.tsx
-│   │   ├── UserContext.tsx
 │   │   └── index.ts
 │   ├── data/
 │   │   ├── bookmarks/
@@ -362,7 +390,9 @@
 ├── eslint.config.ts
 ├── package.json
 ├── tsconfig.json
-└── vite.config.ts
+├── vite.config.ts
+├── vitest.config.ts
+└── vitest.setup.ts
 ```
 
-102 directories, 260 files
+111 directories, 281 files
