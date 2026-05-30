@@ -218,6 +218,14 @@
 │   │           └── index.ts
 │   ├── constants/
 │   │   └── models.ts
+│   ├── contexts/
+│   │   ├── LanguageContext.tsx
+│   │   ├── ModalContext.tsx
+│   │   ├── NotificationContext.tsx
+│   │   ├── SettingsContext.tsx
+│   │   ├── ThemeContext.tsx
+│   │   ├── UserContext.tsx
+│   │   └── index.ts
 │   ├── data/
 │   │   ├── bookmarks/
 │   │   │   ├── chat.ts
@@ -357,4 +365,4 @@
 └── vite.config.ts
 ```
 
-101 directories, 253 files
+102 directories, 260 files

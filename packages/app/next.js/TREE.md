@@ -490,6 +490,13 @@
 │   │           └── index.ts
 │   ├── constants/
 │   │   └── models.ts
+│   ├── contexts/
+│   │   ├── LanguageContext.tsx
+│   │   ├── ModalContext.tsx
+│   │   ├── NotificationContext.tsx
+│   │   ├── SettingsContext.tsx
+│   │   ├── ThemeContext.tsx
+│   │   └── UserContext.tsx
 │   ├── data/
 │   │   ├── bookmarks/
 │   │   │   ├── chat.ts
@@ -648,4 +655,4 @@
 └── tsconfig.json
 ```
 
-165 directories, 480 files
+166 directories, 486 files
