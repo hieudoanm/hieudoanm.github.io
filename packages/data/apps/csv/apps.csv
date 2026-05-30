@@ -1,4 +1,3 @@
 category,emoji,id,name,href,github,image,tags
 project,🧪,hieudoanm,Hieu Doan,https://hieudoanm.github.io/hieudoanm,https://github.com/hieudoanm/hieudoanm,https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/images/app.png,"cli,extension,android,macos,web"
 project,🚀,start,Start,https://hieudoanm.github.io/start,https://github.com/hieudoanm/start,https://raw.githubusercontent.com/hieudoanm/start/refs/heads/master/images/app.png,"cli,extension,android,macos,web"
-project,✈️,telegram,Telegram,https://hieudoanm.github.io/telegram,https://github.com/hieudoanm/telegram,https://raw.githubusercontent.com/hieudoanm/telegram/refs/heads/master/images/app.png,"cli,extension,android,macos,web"

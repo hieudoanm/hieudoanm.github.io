@@ -37,15 +37,4 @@ export const apps: App[] = [
       'https://raw.githubusercontent.com/hieudoanm/start/refs/heads/master/images/app.png',
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
-  {
-    category: 'project',
-    emoji: '✈️',
-    id: 'telegram',
-    name: 'Telegram',
-    href: 'https://hieudoanm.github.io/telegram',
-    github: 'https://github.com/hieudoanm/telegram',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/telegram/refs/heads/master/images/app.png',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
 ];
