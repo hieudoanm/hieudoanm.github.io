@@ -16,18 +16,7 @@ export type App = {
 
 export const apps: App[] = [
   {
-    category: 'ai',
-    emoji: '♟',
-    id: 'chess',
-    name: 'Chess',
-    href: 'https://hieudoanm.github.io/chess',
-    github: 'https://github.com/hieudoanm/chess',
-    image:
-      'https://raw.githubusercontent.com/hieudoanm/chess/refs/heads/master/images/app.png',
-    tags: ['cli', 'extension', 'android', 'macos', 'web'],
-  },
-  {
-    category: 'ai',
+    category: 'project',
     emoji: '🧪',
     id: 'hieudoanm',
     name: 'Hieu Doan',
@@ -38,7 +27,7 @@ export const apps: App[] = [
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
-    category: 'template',
+    category: 'project',
     emoji: '🚀',
     id: 'start',
     name: 'Start',
@@ -49,7 +38,7 @@ export const apps: App[] = [
     tags: ['cli', 'extension', 'android', 'macos', 'web'],
   },
   {
-    category: 'template',
+    category: 'project',
     emoji: '✈️',
     id: 'telegram',
     name: 'Telegram',
