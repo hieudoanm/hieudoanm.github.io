@@ -79,6 +79,7 @@ export const EmojisModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                       <img
                         src={`${IMAGES_BASE}/${key}.png`}
                         alt={key}
+                        loading="lazy"
                         className="h-6 w-6"
                       />
                     )}

@@ -5,63 +5,6 @@ import {
   Tool,
   ToolCard,
 } from '@hieudoanm.github.io/components/pages/start/cards/ToolCard';
-import { CalculatorModal } from '@hieudoanm.github.io/components/pages/start/modals/calculators/CalculatorModal';
-import { ConverterModal } from '@hieudoanm.github.io/components/pages/start/modals/calculators/ConverterModal';
-import { EloModal } from '@hieudoanm.github.io/components/pages/start/modals/calculators/EloModal';
-import { InflationModal } from '@hieudoanm.github.io/components/pages/start/modals/calculators/InflationModal';
-import { PokerModal } from '@hieudoanm.github.io/components/pages/start/modals/calculators/PokerModal';
-import { TaxModal } from '@hieudoanm.github.io/components/pages/start/modals/calculators/TaxModal';
-import { ChessClockModal } from '@hieudoanm.github.io/components/pages/start/modals/clocks/ChessClockModal';
-import { CountdownModal } from '@hieudoanm.github.io/components/pages/start/modals/clocks/CountdownModal';
-import { PomodoroModal } from '@hieudoanm.github.io/components/pages/start/modals/clocks/PomodoroModal';
-import { WatchFaceModal } from '@hieudoanm.github.io/components/pages/start/modals/clocks/WatchfaceModal';
-import { BrailleModal } from '@hieudoanm.github.io/components/pages/start/modals/converters/BrailleModal';
-import { ColorsModal } from '@hieudoanm.github.io/components/pages/start/modals/converters/ColorsModal';
-import { MorseModal } from '@hieudoanm.github.io/components/pages/start/modals/converters/MorseModal';
-import { OpenAPI2Postman } from '@hieudoanm.github.io/components/pages/start/modals/converters/OpenAPI2Postman';
-import { JSONSchemaModal } from '@hieudoanm.github.io/components/pages/start/modals/editors/JSONSchemaModal';
-import { ManifestModal } from '@hieudoanm.github.io/components/pages/start/modals/editors/ManifestModal';
-import { MarkdownModal } from '@hieudoanm.github.io/components/pages/start/modals/editors/MarkdownModal';
-import { ResumeModal } from '@hieudoanm.github.io/components/pages/start/modals/editors/ResumeModal';
-import { SlidesModal } from '@hieudoanm.github.io/components/pages/start/modals/editors/SlidesModal';
-import { DOIModal } from '@hieudoanm.github.io/components/pages/start/modals/education/academic/DOIModal';
-import { PeriodicTableModal } from '@hieudoanm.github.io/components/pages/start/modals/education/chemistry/PeriodicTableModal';
-import { LanguagesEnglishModal } from '@hieudoanm.github.io/components/pages/start/modals/education/languages/EnglishModal';
-import { FlashcardsModal } from '@hieudoanm.github.io/components/pages/start/modals/education/languages/FlashcardsModal';
-import { PitchModal } from '@hieudoanm.github.io/components/pages/start/modals/education/music/PitchModal';
-import { LogMARChartModal } from '@hieudoanm.github.io/components/pages/start/modals/eyes/LogMARChartModal';
-import { SnellenChartModal } from '@hieudoanm.github.io/components/pages/start/modals/eyes/SnellenChartModal';
-import { TumblingEChartModal } from '@hieudoanm.github.io/components/pages/start/modals/eyes/TumblingEChartModal';
-import { BlackjackModal } from '@hieudoanm.github.io/components/pages/start/modals/games/BlackjackModal';
-import { PalindromeModal } from '@hieudoanm.github.io/components/pages/start/modals/games/PalindromeModal';
-import { PiModal } from '@hieudoanm.github.io/components/pages/start/modals/games/PiNumberModal';
-import { PokedexModal } from '@hieudoanm.github.io/components/pages/start/modals/games/PokedexModal';
-import { QuizifyModal } from '@hieudoanm.github.io/components/pages/start/modals/games/QuizifyModal';
-import { RecallModal } from '@hieudoanm.github.io/components/pages/start/modals/games/RecallModal';
-import { T3Modal } from '@hieudoanm.github.io/components/pages/start/modals/games/T3Modal';
-import { TowersModal } from '@hieudoanm.github.io/components/pages/start/modals/games/TowersModal';
-import { TypoglycemiaModal } from '@hieudoanm.github.io/components/pages/start/modals/games/TypoglycemiaModal';
-import { WordleModal } from '@hieudoanm.github.io/components/pages/start/modals/games/WordleModal';
-import { BreakingBadModal } from '@hieudoanm.github.io/components/pages/start/modals/images/BreakingBadModal';
-import { GitHubSocialPreviewModal } from '@hieudoanm.github.io/components/pages/start/modals/images/GitHubSocialPreviewModal';
-import { HouseModal } from '@hieudoanm.github.io/components/pages/start/modals/images/HouseModal';
-import { QRCodeModal } from '@hieudoanm.github.io/components/pages/start/modals/images/QRCodeModal';
-import { YouTubeThumbnailsModal } from '@hieudoanm.github.io/components/pages/start/modals/images/YouTubeThumbnailsModal';
-import { ChatModal } from '@hieudoanm.github.io/components/pages/start/modals/tools/ChatModal/ChatModal';
-import { ClipboardModal } from '@hieudoanm.github.io/components/pages/start/modals/tools/ClipboardModal';
-import { EmojisModal } from '@hieudoanm.github.io/components/pages/start/modals/tools/EmojisModal';
-import { FigletModal } from '@hieudoanm.github.io/components/pages/start/modals/tools/FigletModal';
-import { IPModal } from '@hieudoanm.github.io/components/pages/start/modals/tools/IPModal';
-import { KaprekarModal } from '@hieudoanm.github.io/components/pages/start/modals/tools/KaprekarModal';
-import { NoSleepModal } from '@hieudoanm.github.io/components/pages/start/modals/tools/NoSleepModal';
-import { ProxyModal } from '@hieudoanm.github.io/components/pages/start/modals/tools/ProxyModal';
-import { SVGModal } from '@hieudoanm.github.io/components/pages/start/modals/tools/SVGModal';
-import { ShopifyDetectModal } from '@hieudoanm.github.io/components/pages/start/modals/tools/ShopifyDetectModal';
-import { SheetsModal } from '@hieudoanm.github.io/components/pages/start/modals/tools/SheetsModal';
-import { StringModal } from '@hieudoanm.github.io/components/pages/start/modals/tools/StringModal';
-import { UUIDModal } from '@hieudoanm.github.io/components/pages/start/modals/tools/UUIDModal';
-import { CalendarTrackerModal } from '@hieudoanm.github.io/components/pages/start/modals/visualization/CalendarTracker';
-import { LegislationModal } from '@hieudoanm.github.io/components/pages/start/modals/visualization/LegislationModal';
 import { LeftSidebar } from '@hieudoanm.github.io/components/pages/start/sidebars/LeftSidebar';
 import { RightSidebar } from '@hieudoanm.github.io/components/pages/start/sidebars/RightSidebar';
 import { apps } from '@hieudoanm.github.io/data/apps';
@@ -132,6 +75,462 @@ const SignModal = dynamic(
   () =>
     import('@hieudoanm.github.io/components/pages/start/modals/education/languages/SignModal').then(
       (mod) => mod.SignModal
+    ),
+  { ssr: false }
+);
+
+const BlackjackModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/games/BlackjackModal').then(
+      (mod) => mod.BlackjackModal
+    ),
+  { ssr: false }
+);
+
+const BrailleModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/converters/BrailleModal').then(
+      (mod) => mod.BrailleModal
+    ),
+  { ssr: false }
+);
+
+const BreakingBadModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/images/BreakingBadModal').then(
+      (mod) => mod.BreakingBadModal
+    ),
+  { ssr: false }
+);
+
+const CalculatorModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/calculators/CalculatorModal').then(
+      (mod) => mod.CalculatorModal
+    ),
+  { ssr: false }
+);
+
+const CalendarTrackerModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/visualization/CalendarTracker').then(
+      (mod) => mod.CalendarTrackerModal
+    ),
+  { ssr: false }
+);
+
+const ChatModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/tools/ChatModal/ChatModal').then(
+      (mod) => mod.ChatModal
+    ),
+  { ssr: false }
+);
+
+const ChessClockModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/clocks/ChessClockModal').then(
+      (mod) => mod.ChessClockModal
+    ),
+  { ssr: false }
+);
+
+const ClipboardModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/tools/ClipboardModal').then(
+      (mod) => mod.ClipboardModal
+    ),
+  { ssr: false }
+);
+
+const ColorsModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/converters/ColorsModal').then(
+      (mod) => mod.ColorsModal
+    ),
+  { ssr: false }
+);
+
+const ConverterModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/calculators/ConverterModal').then(
+      (mod) => mod.ConverterModal
+    ),
+  { ssr: false }
+);
+
+const CountdownModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/clocks/CountdownModal').then(
+      (mod) => mod.CountdownModal
+    ),
+  { ssr: false }
+);
+
+const DOIModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/education/academic/DOIModal').then(
+      (mod) => mod.DOIModal
+    ),
+  { ssr: false }
+);
+
+const EloModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/calculators/EloModal').then(
+      (mod) => mod.EloModal
+    ),
+  { ssr: false }
+);
+
+const EmojisModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/tools/EmojisModal').then(
+      (mod) => mod.EmojisModal
+    ),
+  { ssr: false }
+);
+
+const FigletModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/tools/FigletModal').then(
+      (mod) => mod.FigletModal
+    ),
+  { ssr: false }
+);
+
+const FlashcardsModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/education/languages/FlashcardsModal').then(
+      (mod) => mod.FlashcardsModal
+    ),
+  { ssr: false }
+);
+
+const GitHubSocialPreviewModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/images/GitHubSocialPreviewModal').then(
+      (mod) => mod.GitHubSocialPreviewModal
+    ),
+  { ssr: false }
+);
+
+const HouseModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/images/HouseModal').then(
+      (mod) => mod.HouseModal
+    ),
+  { ssr: false }
+);
+
+const InflationModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/calculators/InflationModal').then(
+      (mod) => mod.InflationModal
+    ),
+  { ssr: false }
+);
+
+const IPModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/tools/IPModal').then(
+      (mod) => mod.IPModal
+    ),
+  { ssr: false }
+);
+
+const JSONSchemaModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/editors/JSONSchemaModal').then(
+      (mod) => mod.JSONSchemaModal
+    ),
+  { ssr: false }
+);
+
+const KaprekarModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/tools/KaprekarModal').then(
+      (mod) => mod.KaprekarModal
+    ),
+  { ssr: false }
+);
+
+const LegislationModal = dynamic(
+  () =>
+    import('./modals/visualization/LegislationModal').then(
+      (mod) => mod.LegislationModal
+    ),
+  { ssr: false }
+);
+
+const LanguagesEnglishModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/education/languages/EnglishModal').then(
+      (mod) => mod.LanguagesEnglishModal
+    ),
+  { ssr: false }
+);
+
+const LogMARChartModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/eyes/LogMARChartModal').then(
+      (mod) => mod.LogMARChartModal
+    ),
+  { ssr: false }
+);
+
+const ManifestModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/editors/ManifestModal').then(
+      (mod) => mod.ManifestModal
+    ),
+  { ssr: false }
+);
+
+const MarkdownModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/editors/MarkdownModal').then(
+      (mod) => mod.MarkdownModal
+    ),
+  { ssr: false }
+);
+
+const MorseModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/converters/MorseModal').then(
+      (mod) => mod.MorseModal
+    ),
+  { ssr: false }
+);
+
+const NoSleepModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/tools/NoSleepModal').then(
+      (mod) => mod.NoSleepModal
+    ),
+  { ssr: false }
+);
+
+const OpenAPI2Postman = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/converters/OpenAPI2Postman').then(
+      (mod) => mod.OpenAPI2Postman
+    ),
+  { ssr: false }
+);
+
+const PalindromeModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/games/PalindromeModal').then(
+      (mod) => mod.PalindromeModal
+    ),
+  { ssr: false }
+);
+
+const PeriodicTableModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/education/chemistry/PeriodicTableModal').then(
+      (mod) => mod.PeriodicTableModal
+    ),
+  { ssr: false }
+);
+
+const PiModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/games/PiNumberModal').then(
+      (mod) => mod.PiModal
+    ),
+  { ssr: false }
+);
+
+const PitchModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/education/music/PitchModal').then(
+      (mod) => mod.PitchModal
+    ),
+  { ssr: false }
+);
+
+const PokedexModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/games/PokedexModal').then(
+      (mod) => mod.PokedexModal
+    ),
+  { ssr: false }
+);
+
+const PokerModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/calculators/PokerModal').then(
+      (mod) => mod.PokerModal
+    ),
+  { ssr: false }
+);
+
+const PomodoroModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/clocks/PomodoroModal').then(
+      (mod) => mod.PomodoroModal
+    ),
+  { ssr: false }
+);
+
+const ProxyModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/tools/ProxyModal').then(
+      (mod) => mod.ProxyModal
+    ),
+  { ssr: false }
+);
+
+const QRCodeModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/images/QRCodeModal').then(
+      (mod) => mod.QRCodeModal
+    ),
+  { ssr: false }
+);
+
+const QuizifyModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/games/QuizifyModal').then(
+      (mod) => mod.QuizifyModal
+    ),
+  { ssr: false }
+);
+
+const RecallModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/games/RecallModal').then(
+      (mod) => mod.RecallModal
+    ),
+  { ssr: false }
+);
+
+const ResumeModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/editors/ResumeModal').then(
+      (mod) => mod.ResumeModal
+    ),
+  { ssr: false }
+);
+
+const SheetsModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/tools/SheetsModal').then(
+      (mod) => mod.SheetsModal
+    ),
+  { ssr: false }
+);
+
+const ShopifyDetectModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/tools/ShopifyDetectModal').then(
+      (mod) => mod.ShopifyDetectModal
+    ),
+  { ssr: false }
+);
+
+const SlidesModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/editors/SlidesModal').then(
+      (mod) => mod.SlidesModal
+    ),
+  { ssr: false }
+);
+
+const SnellenChartModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/eyes/SnellenChartModal').then(
+      (mod) => mod.SnellenChartModal
+    ),
+  { ssr: false }
+);
+
+const StringModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/tools/StringModal').then(
+      (mod) => mod.StringModal
+    ),
+  { ssr: false }
+);
+
+const SVGModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/tools/SVGModal').then(
+      (mod) => mod.SVGModal
+    ),
+  { ssr: false }
+);
+
+const T3Modal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/games/T3Modal').then(
+      (mod) => mod.T3Modal
+    ),
+  { ssr: false }
+);
+
+const TaxModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/calculators/TaxModal').then(
+      (mod) => mod.TaxModal
+    ),
+  { ssr: false }
+);
+
+const TowersModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/games/TowersModal').then(
+      (mod) => mod.TowersModal
+    ),
+  { ssr: false }
+);
+
+const TumblingEChartModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/eyes/TumblingEChartModal').then(
+      (mod) => mod.TumblingEChartModal
+    ),
+  { ssr: false }
+);
+
+const TypoglycemiaModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/games/TypoglycemiaModal').then(
+      (mod) => mod.TypoglycemiaModal
+    ),
+  { ssr: false }
+);
+
+const UUIDModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/tools/UUIDModal').then(
+      (mod) => mod.UUIDModal
+    ),
+  { ssr: false }
+);
+
+const WatchFaceModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/clocks/WatchfaceModal').then(
+      (mod) => mod.WatchFaceModal
+    ),
+  { ssr: false }
+);
+
+const WordleModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/games/WordleModal').then(
+      (mod) => mod.WordleModal
+    ),
+  { ssr: false }
+);
+
+const YouTubeThumbnailsModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/images/YouTubeThumbnailsModal').then(
+      (mod) => mod.YouTubeThumbnailsModal
     ),
   { ssr: false }
 );

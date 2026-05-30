@@ -103,6 +103,7 @@ exports[`BlogTemplate to match snapshot 1`] = `
           <img
             alt="Hello World"
             class="w-full object-cover"
+            loading="lazy"
             src="/cover.jpg"
           />
         </div>

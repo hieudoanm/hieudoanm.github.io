@@ -64,6 +64,7 @@ export const BlogTemplate: FC<BlogPostProps> = ({ post, meta }) => (
             <img
               src={post.coverImage}
               alt={post.title}
+              loading="lazy"
               className="w-full object-cover"
             />
           </div>

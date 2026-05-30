@@ -248,6 +248,7 @@ export const YouTubeThumbnailsModal: FC<{ onClose: () => void }> = ({
                   <img
                     src={url}
                     alt={q.label}
+                    loading="lazy"
                     className="aspect-video w-full object-cover"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src =

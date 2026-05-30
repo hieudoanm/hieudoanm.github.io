@@ -203,6 +203,7 @@ exports[`EmojisModal should render 1`] = `
                 <img
                   alt="accessibility"
                   class="h-6 w-6"
+                  loading="lazy"
                   src="https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/packages/data/emojis/images/accessibility.png"
                 />
               </span>
@@ -847,6 +848,7 @@ exports[`EmojisModal should render 1`] = `
                 <img
                   alt="atom"
                   class="h-6 w-6"
+                  loading="lazy"
                   src="https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/packages/data/emojis/images/atom.png"
                 />
               </span>
@@ -1241,6 +1243,7 @@ exports[`EmojisModal should render 1`] = `
                 <img
                   alt="basecamp"
                   class="h-6 w-6"
+                  loading="lazy"
                   src="https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/packages/data/emojis/images/basecamp.png"
                 />
               </span>
@@ -1255,6 +1258,7 @@ exports[`EmojisModal should render 1`] = `
                 <img
                   alt="basecampy"
                   class="h-6 w-6"
+                  loading="lazy"
                   src="https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/packages/data/emojis/images/basecampy.png"
                 />
               </span>
@@ -2169,6 +2173,7 @@ exports[`EmojisModal should render 1`] = `
                 <img
                   alt="bowtie"
                   class="h-6 w-6"
+                  loading="lazy"
                   src="https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/packages/data/emojis/images/bowtie.png"
                 />
               </span>
@@ -4003,6 +4008,7 @@ exports[`EmojisModal should render 1`] = `
                 <img
                   alt="copilot"
                   class="h-6 w-6"
+                  loading="lazy"
                   src="https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/packages/data/emojis/images/copilot.png"
                 />
               </span>
@@ -4737,6 +4743,7 @@ exports[`EmojisModal should render 1`] = `
                 <img
                   alt="dependabot"
                   class="h-6 w-6"
+                  loading="lazy"
                   src="https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/packages/data/emojis/images/dependabot.png"
                 />
               </span>
@@ -5351,6 +5358,7 @@ exports[`EmojisModal should render 1`] = `
                 <img
                   alt="electron"
                   class="h-6 w-6"
+                  loading="lazy"
                   src="https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/packages/data/emojis/images/electron.png"
                 />
               </span>
@@ -6165,6 +6173,7 @@ exports[`EmojisModal should render 1`] = `
                 <img
                   alt="feelsgood"
                   class="h-6 w-6"
+                  loading="lazy"
                   src="https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/packages/data/emojis/images/feelsgood.png"
                 />
               </span>
@@ -6299,6 +6308,7 @@ exports[`EmojisModal should render 1`] = `
                 <img
                   alt="finnadie"
                   class="h-6 w-6"
+                  loading="lazy"
                   src="https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/packages/data/emojis/images/finnadie.png"
                 />
               </span>
@@ -6423,6 +6433,7 @@ exports[`EmojisModal should render 1`] = `
                 <img
                   alt="fishsticks"
                   class="h-6 w-6"
+                  loading="lazy"
                   src="https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/packages/data/emojis/images/fishsticks.png"
                 />
               </span>
@@ -7237,6 +7248,7 @@ exports[`EmojisModal should render 1`] = `
                 <img
                   alt="goberserk"
                   class="h-6 w-6"
+                  loading="lazy"
                   src="https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/packages/data/emojis/images/goberserk.png"
                 />
               </span>
@@ -7251,6 +7263,7 @@ exports[`EmojisModal should render 1`] = `
                 <img
                   alt="godmode"
                   class="h-6 w-6"
+                  loading="lazy"
                   src="https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/packages/data/emojis/images/godmode.png"
                 />
               </span>
@@ -8375,6 +8388,7 @@ exports[`EmojisModal should render 1`] = `
                 <img
                   alt="hurtrealbad"
                   class="h-6 w-6"
+                  loading="lazy"
                   src="https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/packages/data/emojis/images/hurtrealbad.png"
                 />
               </span>
@@ -11469,6 +11483,7 @@ exports[`EmojisModal should render 1`] = `
                 <img
                   alt="neckbeard"
                   class="h-6 w-6"
+                  loading="lazy"
                   src="https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/packages/data/emojis/images/neckbeard.png"
                 />
               </span>
@@ -11983,6 +11998,7 @@ exports[`EmojisModal should render 1`] = `
                 <img
                   alt="octocat"
                   class="h-6 w-6"
+                  loading="lazy"
                   src="https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/packages/data/emojis/images/octocat.png"
                 />
               </span>
@@ -13897,6 +13913,7 @@ exports[`EmojisModal should render 1`] = `
                 <img
                   alt="rage1"
                   class="h-6 w-6"
+                  loading="lazy"
                   src="https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/packages/data/emojis/images/rage1.png"
                 />
               </span>
@@ -13911,6 +13928,7 @@ exports[`EmojisModal should render 1`] = `
                 <img
                   alt="rage2"
                   class="h-6 w-6"
+                  loading="lazy"
                   src="https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/packages/data/emojis/images/rage2.png"
                 />
               </span>
@@ -13925,6 +13943,7 @@ exports[`EmojisModal should render 1`] = `
                 <img
                   alt="rage3"
                   class="h-6 w-6"
+                  loading="lazy"
                   src="https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/packages/data/emojis/images/rage3.png"
                 />
               </span>
@@ -13939,6 +13958,7 @@ exports[`EmojisModal should render 1`] = `
                 <img
                   alt="rage4"
                   class="h-6 w-6"
+                  loading="lazy"
                   src="https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/packages/data/emojis/images/rage4.png"
                 />
               </span>
@@ -15273,6 +15293,7 @@ exports[`EmojisModal should render 1`] = `
                 <img
                   alt="shipit"
                   class="h-6 w-6"
+                  loading="lazy"
                   src="https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/packages/data/emojis/images/shipit.png"
                 />
               </span>
@@ -16707,6 +16728,7 @@ exports[`EmojisModal should render 1`] = `
                 <img
                   alt="suspect"
                   class="h-6 w-6"
+                  loading="lazy"
                   src="https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/packages/data/emojis/images/suspect.png"
                 />
               </span>
@@ -17631,6 +17653,7 @@ exports[`EmojisModal should render 1`] = `
                 <img
                   alt="trollface"
                   class="h-6 w-6"
+                  loading="lazy"
                   src="https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/packages/data/emojis/images/trollface.png"
                 />
               </span>

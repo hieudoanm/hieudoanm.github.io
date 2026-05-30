@@ -680,6 +680,9 @@
 │   │   │   └── index.tsx
 │   │   ├── downloads/
 │   │   │   └── index.tsx
+│   │   ├── templates/
+│   │   │   ├── [slug].tsx
+│   │   │   └── index.tsx
 │   │   ├── version/
 │   │   │   └── index.tsx
 │   │   ├── 404.tsx
@@ -742,4 +745,4 @@
 └── tsconfig.json
 ```
 
-205 directories, 534 files
+206 directories, 536 files

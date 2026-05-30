@@ -104,6 +104,7 @@ export const InvoiceParserModal: FC<{ onClose: () => void }> = ({
               <img
                 src={image}
                 alt="Invoice"
+                loading="lazy"
                 className="mt-2 max-w-full rounded-xl border shadow"
               />
             </div>

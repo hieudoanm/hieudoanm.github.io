@@ -414,6 +414,7 @@ export const SVGModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                       <img
                         src={icon.dataUrl}
                         alt={`${icon.size}x${icon.size}`}
+                        loading="lazy"
                         className="h-12 w-12 object-contain"
                       />
                       <div className="flex flex-col items-center gap-0.5">

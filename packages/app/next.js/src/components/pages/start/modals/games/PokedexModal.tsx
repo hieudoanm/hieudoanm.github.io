@@ -115,6 +115,7 @@ const PokemonDetail: FC<{ p: Pokemon; onClose: () => void }> = ({
             src={`https://raw.githubusercontent.com/hieudoanm/hieudoanm/master/packages/data/pokemon/images/${p.name}.png`}
             className="h-16 w-16"
             alt={p.name}
+            loading="lazy"
           />
           <div>
             <p className="text-xs opacity-40">#{p.id}</p>

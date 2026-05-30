@@ -221,6 +221,7 @@ export const InstaSizeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                   <img
                     src={outputUrl}
                     alt="Preview"
+                    loading="lazy"
                     className="h-full w-full rounded-xl object-contain"
                   />
                 ) : (
