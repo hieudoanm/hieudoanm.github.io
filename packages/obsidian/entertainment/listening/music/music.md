@@ -1,5 +1,15 @@
 # Music
 
+## Table of Contents
+
+- [Music](#music)
+  - [Table of Contents](#table-of-contents)
+  - [Artists](#artists)
+  - [Awards](#awards)
+  - [\[\[Musical\]\]](#musical)
+
+## Artists
+
 | No  | Country                            | Artist         |
 | --- | ---------------------------------- | -------------- |
 | 1   | [[Vietnam]]                        | Lâm Bảo Ngọc   |
@@ -20,7 +30,7 @@
 | 16  | [[united-states\|United States]]   | Mike Shinoda   |
 | 17  | [[united-states\|United States]]   | Kanye West     |
 | 18  | [[united-states\|United States]]   | Jay-Z          |
-| 19  |                                    |                |
+| 19  | [[south-korea\|South Korea]]       | NMIXX          |
 | 20  |                                    |                |
 | 21  |                                    |                |
 | 22  |                                    |                |
@@ -34,3 +44,9 @@
 | 30  |                                    |                |
 | 31  |                                    |                |
 | 32  |                                    |                |
+
+## Awards
+
+- [[Grammy]]
+
+## [[Musical]]

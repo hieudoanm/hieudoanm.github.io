@@ -340,7 +340,6 @@
 │   │   └── wordle.ts
 │   ├── examples/
 │   │   └── example.yaml
-│   ├── hooks/
 │   ├── json/
 │   │   ├── inflation/
 │   │   │   ├── countries_currencies.json
@@ -371,7 +370,6 @@
 │   │   ├── downloads.tsx
 │   │   ├── index.tsx
 │   │   └── version.tsx
-│   ├── scripts/
 │   ├── server/
 │   │   ├── routers/
 │   │   │   └── _app.ts
@@ -440,4 +438,4 @@
 └── vitest.setup.ts
 ```
 
-124 directories, 313 files
+122 directories, 313 files

@@ -567,12 +567,21 @@
 │   ├── constants/
 │   │   └── models.ts
 │   ├── contexts/
+│   │   ├── __tests__/
+│   │   │   ├── LanguageContext.test.tsx
+│   │   │   ├── ModalContext.test.tsx
+│   │   │   ├── NotificationContext.test.tsx
+│   │   │   ├── SettingsContext.test.tsx
+│   │   │   ├── TelegramContext.test.tsx
+│   │   │   ├── ThemeContext.test.tsx
+│   │   │   └── TonWalletContext.test.tsx
 │   │   ├── LanguageContext.tsx
 │   │   ├── ModalContext.tsx
 │   │   ├── NotificationContext.tsx
 │   │   ├── SettingsContext.tsx
 │   │   ├── TelegramContext.tsx
-│   │   └── ThemeContext.tsx
+│   │   ├── ThemeContext.tsx
+│   │   └── TonWalletContext.tsx
 │   ├── data/
 │   │   ├── bookmarks/
 │   │   │   ├── chat.ts
@@ -733,4 +742,4 @@
 └── tsconfig.json
 ```
 
-204 directories, 526 files
+205 directories, 534 files
