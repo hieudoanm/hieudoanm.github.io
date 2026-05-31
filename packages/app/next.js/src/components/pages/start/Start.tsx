@@ -25,7 +25,6 @@ import {
   packages,
 } from '@hieudoanm.github.io/data/downloads';
 import { getTimeInZone, timezones } from '@hieudoanm.github.io/data/timezones';
-import { NextPage } from 'next';
 import dynamic from 'next/dynamic';
 import {
   ComponentType,
@@ -535,6 +534,14 @@ const YouTubeThumbnailsModal = dynamic(
   { ssr: false }
 );
 
+const ResumeTimelineModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/visualization/ResumeTimelineModal').then(
+      (mod) => mod.ResumeTimelineModal
+    ),
+  { ssr: false }
+);
+
 /* ------------------------------------------------------------------ */
 /* Types                                                                */
 /* ------------------------------------------------------------------ */
@@ -601,7 +608,8 @@ type ModalId =
   | 'uuid'
   | 'watchface'
   | 'wordle'
-  | 'youtube-thumbnails';
+  | 'youtube-thumbnails'
+  | 'resume-timeline';
 
 type SidebarTab = 'tasks' | 'clock';
 
@@ -675,6 +683,7 @@ const MODAL_MAP: Record<
   watchface: WatchFaceModal,
   wordle: WordleModal,
   'youtube-thumbnails': YouTubeThumbnailsModal,
+  'resume-timeline': ResumeTimelineModal,
 };
 
 /* ------------------------------------------------------------------ */
@@ -1137,6 +1146,13 @@ const makeTools = (
       emoji: '🏛️',
       color: '#ef4444',
       onClick: open('legislation'),
+    },
+    {
+      label: 'Resume',
+      description: 'Timeline',
+      emoji: '⏳',
+      color: '#ef4444',
+      onClick: open('resume-timeline'),
     },
   ],
 });

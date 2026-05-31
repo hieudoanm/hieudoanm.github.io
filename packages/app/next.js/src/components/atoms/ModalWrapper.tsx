@@ -26,7 +26,7 @@ export const ModalWrapper: FC<ModalWrapperProps> = ({
         className="modal modal-open"
         style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}>
         <div
-          className={`modal-box flex h-[90vh] w-full ${size} flex-col overflow-hidden p-0`}>
+          className={`modal-box border-base-content/15 flex h-[90vh] w-full ${size} flex-col overflow-hidden border p-0`}>
           <div className="border-base-300 flex items-center justify-between border-b px-4 py-3">
             <h3 className="text-sm font-bold">{title}</h3>
             <button
