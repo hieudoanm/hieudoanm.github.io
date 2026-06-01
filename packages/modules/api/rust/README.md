@@ -1,15 +1,17 @@
 # API
 
-1. [AirVisual](http://api.airvisual.com/)
-2. [chess.com](https://www.chess.com/news/view/published-data-api)
-3. [CoinRanking](https://www.coinranking.com/)
-4. [CrossRef](https://www.crossref.org/)
-5. [Deepseek](https://deepseek.com/)
-6. [Fixer](https://fixer.io/)
-7. [Football-Data](https://www.football-data.co.uk/)
-8. [Frankfurter](https://www.frankfurter.app/)
-9. [Lichess](https://lichess.org/api)
-10. [NewsAPI](https://newsapi.org/)
-11. [OpenWeatherMap](https://openweathermap.org/api)
-12. [OpenAI](https://openai.com/api)
-13. [Telegram](https://core.telegram.org/bots/api)
+| No  | Category          | Client                                                          |
+| --- | ----------------- | --------------------------------------------------------------- |
+| 01  | Chess             | [chess.com](https://www.chess.com/news/view/published-data-api) |
+| 02  | Chess             | [Lichess](https://lichess.org/api)                              |
+| 03  | Crypto            | [CoinRanking](https://www.coinranking.com/)                     |
+| 04  | Currency Exchange | [Fixer](https://fixer.io/)                                      |
+| 05  | Currency Exchange | [Frankfurter](https://www.frankfurter.app/)                     |
+| 06  | Football          | [Football-Data](https://www.football-data.co.uk/)               |
+| 07  | GenAI             | [DeepSeek](https://deepseek.com/)                               |
+| 08  | GenAI             | [OpenAI](https://openai.com/api)                                |
+| 09  | News              | [NewsAPI](https://newsapi.org/)                                 |
+| 10  | References        | [CrossRef](https://www.crossref.org/)                           |
+| 11  | Telegram          | [Telegram](https://core.telegram.org/bots/api)                  |
+| 12  | Weather           | [AirVisual](http://api.airvisual.com/)                          |
+| 13  | Weather           | [OpenWeatherMap](https://openweathermap.org/api)                |
