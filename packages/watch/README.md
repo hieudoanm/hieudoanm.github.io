@@ -1,4 +1,4 @@
-# Smart Watch
+# (Smart) Watch
 
 - [Apple Watch](https://apple.com/watch)
 - [Garmin](https://garmin.com)

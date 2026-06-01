@@ -2564,49 +2564,6 @@ importers:
         specifier: 8.60.0
         version: 8.60.0(eslint@10.4.0(jiti@2.7.0))(typescript@6.0.3)
 
-  packages/serverless/proxy:
-    dependencies:
-      hono:
-        specifier: 4.12.23
-        version: 4.12.23
-      next:
-        specifier: 16.2.6
-        version: 16.2.6(@babel/core@7.29.7)(@opentelemetry/api@1.4.1)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
-      react:
-        specifier: 19.2.6
-        version: 19.2.6
-      react-dom:
-        specifier: 19.2.6
-        version: 19.2.6(react@19.2.6)
-    devDependencies:
-      '@eslint/eslintrc':
-        specifier: 3.3.5
-        version: 3.3.5
-      '@types/node':
-        specifier: 25.9.1
-        version: 25.9.1
-      '@types/react':
-        specifier: 19.2.15
-        version: 19.2.15
-      '@types/react-dom':
-        specifier: 19.2.3
-        version: 19.2.3(@types/react@19.2.15)
-      eslint:
-        specifier: 10.4.0
-        version: 10.4.0(jiti@2.7.0)
-      eslint-config-next:
-        specifier: 16.2.6
-        version: 16.2.6(eslint@10.4.0(jiti@2.7.0))(typescript@6.0.3)
-      prettier:
-        specifier: 3.8.3
-        version: 3.8.3
-      typescript:
-        specifier: 6.0.3
-        version: 6.0.3
-      typescript-eslint:
-        specifier: 8.60.0
-        version: 8.60.0(eslint@10.4.0(jiti@2.7.0))(typescript@6.0.3)
-
 packages:
 
   '@adobe/css-tools@4.5.0':
