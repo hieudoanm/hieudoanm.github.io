@@ -16,19 +16,7 @@
 
 ## API
 
-1. `@airvisual.com/api`
-2. `@chess.com/api`
-3. `@coinranking.com/api`
-4. `@crossref.org/api`
-5. `@deepseek.com/api`
-6. `@fixer.io/api`
-7. `@football-data.org/api`
-8. `@frankfurter.app/api`
-9. `@lichess.org/api`
-10. `@newsapi.org/api`
-11. `@openai.com/api`
-12. `@openweathermap.org/api`
-13. `@telegram.org/api`
+1. `@hieudoanm/api`
 
 ## Browser
 
