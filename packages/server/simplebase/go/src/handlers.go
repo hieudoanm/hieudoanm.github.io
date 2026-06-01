@@ -1,0 +1,579 @@
+package main
+
+import (
+	"database/sql"
+	"encoding/json"
+	"fmt"
+	"io"
+	"log"
+	"net/http"
+	"os"
+	"path/filepath"
+	"strconv"
+	"strings"
+)
+
+type Server struct {
+	db      *sql.DB
+	dataDir string
+}
+
+func errorJSON(w http.ResponseWriter, msg string, code int) {
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(code)
+	json.NewEncoder(w).Encode(map[string]string{"error": msg})
+}
+
+func jsonResponse(w http.ResponseWriter, data any) {
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(data)
+}
+
+func (s *Server) handleCollectionsList(w http.ResponseWriter, r *http.Request) {
+	cols, err := listCollections(s.db)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	jsonResponse(w, cols)
+}
+
+func (s *Server) handleCollectionsCreate(w http.ResponseWriter, r *http.Request) {
+	var body struct {
+		Name   string `json:"name"`
+		Schema string `json:"schema"`
+	}
+	if err := json.NewDecoder(r.Body).Decode(&body); err != nil {
+		errorJSON(w, "invalid json", http.StatusBadRequest)
+		return
+	}
+	if body.Name == "" {
+		errorJSON(w, "name is required", http.StatusBadRequest)
+		return
+	}
+	if body.Schema == "" {
+		body.Schema = "{}"
+	}
+	if err := createCollection(s.db, body.Name, body.Schema); err != nil {
+		if strings.Contains(err.Error(), "UNIQUE") {
+			errorJSON(w, "collection already exists", http.StatusConflict)
+			return
+		}
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	c, _ := getCollection(s.db, body.Name)
+	jsonResponse(w, c)
+}
+
+func (s *Server) handleCollectionsGet(w http.ResponseWriter, r *http.Request) {
+	name := r.PathValue("name")
+	c, err := getCollection(s.db, name)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	if c == nil {
+		errorJSON(w, "not found", http.StatusNotFound)
+		return
+	}
+	jsonResponse(w, c)
+}
+
+func (s *Server) handleCollectionsDelete(w http.ResponseWriter, r *http.Request) {
+	name := r.PathValue("name")
+	c, err := getCollection(s.db, name)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	if c == nil {
+		errorJSON(w, "not found", http.StatusNotFound)
+		return
+	}
+	if err := deleteCollection(s.db, name); err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	w.WriteHeader(http.StatusNoContent)
+}
+
+func (s *Server) handleRecordsCreate(w http.ResponseWriter, r *http.Request) {
+	name := r.PathValue("name")
+	c, err := getCollection(s.db, name)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	if c == nil {
+		errorJSON(w, "collection not found", http.StatusNotFound)
+		return
+	}
+
+	var body struct {
+		ID   string          `json:"id"`
+		Data json.RawMessage `json:"data"`
+	}
+	if err := json.NewDecoder(r.Body).Decode(&body); err != nil {
+		errorJSON(w, "invalid json", http.StatusBadRequest)
+		return
+	}
+	if body.Data == nil {
+		body.Data = json.RawMessage("{}")
+	}
+	id := body.ID
+	if id == "" {
+		id = generateID()
+	}
+	rec, err := createRecord(s.db, name, id, body.Data)
+	if err != nil {
+		if strings.Contains(err.Error(), "UNIQUE") {
+			errorJSON(w, "record with this id already exists", http.StatusConflict)
+			return
+		}
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	jsonResponse(w, rec)
+}
+
+func (s *Server) handleRecordsList(w http.ResponseWriter, r *http.Request) {
+	name := r.PathValue("name")
+	c, err := getCollection(s.db, name)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	if c == nil {
+		errorJSON(w, "collection not found", http.StatusNotFound)
+		return
+	}
+
+	page, _ := strconv.Atoi(r.URL.Query().Get("page"))
+	if page < 1 {
+		page = 1
+	}
+	perPage, _ := strconv.Atoi(r.URL.Query().Get("per_page"))
+	if perPage < 1 || perPage > 100 {
+		perPage = 20
+	}
+
+	pageData, err := listRecords(s.db, name, page, perPage)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	jsonResponse(w, pageData)
+}
+
+func (s *Server) handleRecordsGet(w http.ResponseWriter, r *http.Request) {
+	name := r.PathValue("name")
+	recID := r.PathValue("id")
+
+	rec, err := getRecord(s.db, name, recID)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	if rec == nil {
+		errorJSON(w, "not found", http.StatusNotFound)
+		return
+	}
+	jsonResponse(w, rec)
+}
+
+func (s *Server) handleRecordsUpdate(w http.ResponseWriter, r *http.Request) {
+	name := r.PathValue("name")
+	recID := r.PathValue("id")
+
+	c, err := getCollection(s.db, name)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	if c == nil {
+		errorJSON(w, "collection not found", http.StatusNotFound)
+		return
+	}
+
+	existing, err := getRecord(s.db, name, recID)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	if existing == nil {
+		errorJSON(w, "not found", http.StatusNotFound)
+		return
+	}
+
+	var body struct {
+		Data json.RawMessage `json:"data"`
+	}
+	if err := json.NewDecoder(r.Body).Decode(&body); err != nil {
+		errorJSON(w, "invalid json", http.StatusBadRequest)
+		return
+	}
+	if body.Data == nil {
+		errorJSON(w, "data is required", http.StatusBadRequest)
+		return
+	}
+
+	rec, err := updateRecord(s.db, name, recID, body.Data)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	jsonResponse(w, rec)
+}
+
+func (s *Server) handleRecordsDelete(w http.ResponseWriter, r *http.Request) {
+	name := r.PathValue("name")
+	recID := r.PathValue("id")
+
+	rec, err := getRecord(s.db, name, recID)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	if rec == nil {
+		errorJSON(w, "not found", http.StatusNotFound)
+		return
+	}
+	if err := deleteRecord(s.db, name, recID); err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	w.WriteHeader(http.StatusNoContent)
+}
+
+func (s *Server) handleRegister(w http.ResponseWriter, r *http.Request) {
+	var body struct {
+		Email    string `json:"email"`
+		Password string `json:"password"`
+	}
+	if err := json.NewDecoder(r.Body).Decode(&body); err != nil {
+		errorJSON(w, "invalid json", http.StatusBadRequest)
+		return
+	}
+	if body.Email == "" || body.Password == "" {
+		errorJSON(w, "email and password are required", http.StatusBadRequest)
+		return
+	}
+	if len(body.Password) < 6 {
+		errorJSON(w, "password must be at least 6 characters", http.StatusBadRequest)
+		return
+	}
+
+	user, err := registerUser(s.db, body.Email, body.Password)
+	if err != nil {
+		if strings.Contains(err.Error(), "UNIQUE") {
+			errorJSON(w, "email already registered", http.StatusConflict)
+			return
+		}
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	jsonResponse(w, user)
+}
+
+func (s *Server) handleLogin(w http.ResponseWriter, r *http.Request) {
+	var body struct {
+		Email    string `json:"email"`
+		Password string `json:"password"`
+	}
+	if err := json.NewDecoder(r.Body).Decode(&body); err != nil {
+		errorJSON(w, "invalid json", http.StatusBadRequest)
+		return
+	}
+	if body.Email == "" || body.Password == "" {
+		errorJSON(w, "email and password are required", http.StatusBadRequest)
+		return
+	}
+
+	user, token, err := loginUser(s.db, body.Email, body.Password)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusUnauthorized)
+		return
+	}
+	jsonResponse(w, map[string]any{
+		"user":  user,
+		"token": token,
+	})
+}
+
+func (s *Server) handleBucketsList(w http.ResponseWriter, r *http.Request) {
+	buckets, err := listBuckets(s.db)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	jsonResponse(w, buckets)
+}
+
+func (s *Server) handleBucketsCreate(w http.ResponseWriter, r *http.Request) {
+	var body struct {
+		Name     string `json:"name"`
+		IsPublic bool   `json:"is_public"`
+	}
+	if err := json.NewDecoder(r.Body).Decode(&body); err != nil {
+		errorJSON(w, "invalid json", http.StatusBadRequest)
+		return
+	}
+	if body.Name == "" {
+		errorJSON(w, "name is required", http.StatusBadRequest)
+		return
+	}
+	b, err := createBucket(s.db, body.Name, body.IsPublic)
+	if err != nil {
+		if strings.Contains(err.Error(), "UNIQUE") {
+			errorJSON(w, "bucket already exists", http.StatusConflict)
+			return
+		}
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	dir := filepath.Join(s.dataDir, "storage", body.Name)
+	if err := os.MkdirAll(dir, 0755); err != nil {
+		errorJSON(w, "create storage dir: "+err.Error(), http.StatusInternalServerError)
+		return
+	}
+	jsonResponse(w, b)
+}
+
+func (s *Server) handleBucketsGet(w http.ResponseWriter, r *http.Request) {
+	name := r.PathValue("name")
+	b, err := getBucket(s.db, name)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	if b == nil {
+		errorJSON(w, "not found", http.StatusNotFound)
+		return
+	}
+	jsonResponse(w, b)
+}
+
+func (s *Server) handleBucketsDelete(w http.ResponseWriter, r *http.Request) {
+	name := r.PathValue("name")
+	b, err := getBucket(s.db, name)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	if b == nil {
+		errorJSON(w, "not found", http.StatusNotFound)
+		return
+	}
+	files, err := deleteBucket(s.db, name)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	// Delete all files from disk
+	dir := filepath.Join(s.dataDir, "storage", name)
+	for _, f := range files {
+		os.Remove(filepath.Join(dir, f.ID))
+	}
+	os.RemoveAll(dir)
+	w.WriteHeader(http.StatusNoContent)
+}
+
+func (s *Server) handleFilesUpload(w http.ResponseWriter, r *http.Request) {
+	name := r.PathValue("name")
+	b, err := getBucket(s.db, name)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	if b == nil {
+		errorJSON(w, "bucket not found", http.StatusNotFound)
+		return
+	}
+	r.Body = http.MaxBytesReader(w, r.Body, 10<<20)
+	if err := r.ParseMultipartForm(10 << 20); err != nil {
+		errorJSON(w, "file too large or invalid multipart", http.StatusBadRequest)
+		return
+	}
+	file, header, err := r.FormFile("file")
+	if err != nil {
+		errorJSON(w, "file field required", http.StatusBadRequest)
+		return
+	}
+	defer file.Close()
+
+	data, err := io.ReadAll(file)
+	if err != nil {
+		errorJSON(w, "failed to read file", http.StatusInternalServerError)
+		return
+	}
+	if len(data) == 0 {
+		errorJSON(w, "file is empty", http.StatusBadRequest)
+		return
+	}
+
+	mimeType := header.Header.Get("Content-Type")
+	if mimeType == "" || mimeType == "application/octet-stream" {
+		mimeType = http.DetectContentType(data)
+	}
+
+	id := generateID()
+	fileDir := filepath.Join(s.dataDir, "storage", name)
+	os.MkdirAll(fileDir, 0755)
+	filePath := filepath.Join(fileDir, id)
+	if err := os.WriteFile(filePath, data, 0644); err != nil {
+		errorJSON(w, "failed to save file", http.StatusInternalServerError)
+		return
+	}
+	f, err := insertFile(s.db, name, id, header.Filename, mimeType, int64(len(data)))
+	if err != nil {
+		os.Remove(filePath)
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	jsonResponse(w, f)
+}
+
+func (s *Server) handleFilesList(w http.ResponseWriter, r *http.Request) {
+	name := r.PathValue("name")
+	b, err := getBucket(s.db, name)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	if b == nil {
+		errorJSON(w, "bucket not found", http.StatusNotFound)
+		return
+	}
+	page, _ := strconv.Atoi(r.URL.Query().Get("page"))
+	if page < 1 {
+		page = 1
+	}
+	perPage, _ := strconv.Atoi(r.URL.Query().Get("per_page"))
+	if perPage < 1 || perPage > 100 {
+		perPage = 20
+	}
+	pageData, err := listFiles(s.db, name, page, perPage)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	jsonResponse(w, pageData)
+}
+
+func (s *Server) handleFilesDownload(w http.ResponseWriter, r *http.Request) {
+	name := r.PathValue("name")
+	fileID := r.PathValue("id")
+	f, err := getFile(s.db, fileID)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	if f == nil {
+		errorJSON(w, "not found", http.StatusNotFound)
+		return
+	}
+	// Verify the file belongs to the specified bucket
+	if f.Bucket != name {
+		errorJSON(w, "not found", http.StatusNotFound)
+		return
+	}
+	filePath := filepath.Join(s.dataDir, "storage", name, fileID)
+	data, err := os.ReadFile(filePath)
+	if err != nil {
+		errorJSON(w, "file not found on disk", http.StatusNotFound)
+		return
+	}
+	w.Header().Set("Content-Type", f.MimeType)
+	w.Header().Set("Content-Disposition", fmt.Sprintf(`attachment; filename="%s"`, f.Filename))
+	w.Header().Set("Content-Length", strconv.FormatInt(f.Size, 10))
+	w.Write(data)
+}
+
+func (s *Server) handleFilesDelete(w http.ResponseWriter, r *http.Request) {
+	name := r.PathValue("name")
+	fileID := r.PathValue("id")
+	f, err := getFile(s.db, fileID)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	if f == nil || f.Bucket != name {
+		errorJSON(w, "not found", http.StatusNotFound)
+		return
+	}
+	deleted, err := deleteFile(s.db, fileID)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	if deleted != nil {
+		os.Remove(filepath.Join(s.dataDir, "storage", name, fileID))
+	}
+	w.WriteHeader(http.StatusNoContent)
+}
+
+func authMiddleware(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		auth := r.Header.Get("Authorization")
+		if auth == "" {
+			errorJSON(w, "authorization header required", http.StatusUnauthorized)
+			return
+		}
+		tokenStr := strings.TrimPrefix(auth, "Bearer ")
+		if tokenStr == auth {
+			errorJSON(w, "bearer token required", http.StatusUnauthorized)
+			return
+		}
+		claims, err := validateToken(tokenStr)
+		if err != nil {
+			errorJSON(w, "invalid token", http.StatusUnauthorized)
+			return
+		}
+		r.Header.Set("X-User-ID", claims.UserID)
+		r.Header.Set("X-User-Email", claims.Email)
+		next.ServeHTTP(w, r)
+	})
+}
+
+func (s *Server) routes() http.Handler {
+	mux := http.NewServeMux()
+
+	mux.HandleFunc("GET /api/health", func(w http.ResponseWriter, r *http.Request) {
+		jsonResponse(w, map[string]string{"status": "ok"})
+	})
+
+	mux.HandleFunc("POST /api/auth/register", s.handleRegister)
+	mux.HandleFunc("POST /api/auth/login", s.handleLogin)
+
+	protected := http.NewServeMux()
+	protected.HandleFunc("GET /api/collections", s.handleCollectionsList)
+	protected.HandleFunc("POST /api/collections", s.handleCollectionsCreate)
+	protected.HandleFunc("GET /api/collections/{name}", s.handleCollectionsGet)
+	protected.HandleFunc("DELETE /api/collections/{name}", s.handleCollectionsDelete)
+
+	protected.HandleFunc("POST /api/collections/{name}/records", s.handleRecordsCreate)
+	protected.HandleFunc("GET /api/collections/{name}/records", s.handleRecordsList)
+	protected.HandleFunc("GET /api/collections/{name}/records/{id}", s.handleRecordsGet)
+	protected.HandleFunc("PATCH /api/collections/{name}/records/{id}", s.handleRecordsUpdate)
+	protected.HandleFunc("DELETE /api/collections/{name}/records/{id}", s.handleRecordsDelete)
+
+	protected.HandleFunc("GET /api/buckets", s.handleBucketsList)
+	protected.HandleFunc("POST /api/buckets", s.handleBucketsCreate)
+	protected.HandleFunc("GET /api/buckets/{name}", s.handleBucketsGet)
+	protected.HandleFunc("DELETE /api/buckets/{name}", s.handleBucketsDelete)
+
+	protected.HandleFunc("POST /api/buckets/{name}/files", s.handleFilesUpload)
+	protected.HandleFunc("GET /api/buckets/{name}/files", s.handleFilesList)
+	protected.HandleFunc("GET /api/buckets/{name}/files/{id}", s.handleFilesDownload)
+	protected.HandleFunc("DELETE /api/buckets/{name}/files/{id}", s.handleFilesDelete)
+
+	mux.Handle("/api/", authMiddleware(protected))
+
+	return mux
+}
+
+func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	s.routes().ServeHTTP(w, r)
+	log.Printf("%s %s %s", r.Method, r.URL.Path, r.RemoteAddr)
+}
