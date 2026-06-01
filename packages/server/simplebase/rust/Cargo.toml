@@ -13,7 +13,7 @@ jsonwebtoken = "9"
 bcrypt = "0.17"
 uuid = { version = "1", features = ["v4"] }
 chrono = { version = "0.4", features = ["serde"] }
-tower-http = { version = "0.6", features = ["cors"] }
+tower-http = { version = "0.6", features = ["cors", "fs"] }
 tower = "0.5"
 multer = "3"
 http-body-util = "0.1"

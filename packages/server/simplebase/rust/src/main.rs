@@ -11,9 +11,10 @@ use axum::{
 };
 use handlers::AppState;
 use tower_http::cors::CorsLayer;
+use tower_http::services::ServeDir;
 
 fn app(state: Arc<AppState>) -> Router {
-    Router::new()
+    let api = Router::new()
         .route("/api/health", get(handlers::get_health))
         .route("/api/auth/register", post(handlers::post_register))
         .route("/api/auth/login", post(handlers::post_login))
@@ -52,7 +53,13 @@ fn app(state: Arc<AppState>) -> Router {
             get(handlers::download_file).delete(handlers::delete_file),
         )
         .layer(CorsLayer::permissive())
-        .with_state(state)
+        .with_state(state);
+
+    Router::new()
+        .merge(api)
+        .fallback_service(
+            ServeDir::new("public").append_index_html_on_directories(true),
+        )
 }
 
 #[tokio::main]

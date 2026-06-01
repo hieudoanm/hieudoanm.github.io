@@ -546,6 +546,8 @@ func (s *Server) routes() http.Handler {
 	mux.HandleFunc("POST /api/auth/register", s.handleRegister)
 	mux.HandleFunc("POST /api/auth/login", s.handleLogin)
 
+	mux.Handle("/", http.FileServer(http.Dir("public")))
+
 	protected := http.NewServeMux()
 	protected.HandleFunc("GET /api/collections", s.handleCollectionsList)
 	protected.HandleFunc("POST /api/collections", s.handleCollectionsCreate)

@@ -5,11 +5,14 @@
 - [SimpleBase](#simplebase)
   - [Table of Contents](#table-of-contents)
   - [Quick start](#quick-start)
+  - [Admin Dashboard](#admin-dashboard)
   - [API](#api)
     - [Health](#health)
     - [Auth](#auth)
     - [Collections](#collections)
     - [Records](#records)
+    - [Buckets](#buckets)
+    - [Files](#files)
   - [Config](#config)
   - [Build](#build)
   - [Docker](#docker)
@@ -22,6 +25,22 @@ A lightweight Supabase/PocketBase-like backend in Go with SQLite.
 make build
 ./bin/simplebase
 ```
+
+Open [http://localhost:8080](http://localhost:8080) for the admin dashboard.
+
+## Admin Dashboard
+
+A web-based admin UI is served at the root URL (`/`). Built with HTMX and Tailwind CSS (loaded via CDN).
+
+Features:
+
+- Login/authentication with JWT
+- Manage collections (create, browse, delete)
+- Manage records within collections (create, edit, delete, pagination)
+- Manage buckets (create, delete)
+- Manage files within buckets (upload, download, delete)
+
+No build step required — the dashboard is a single static HTML file served by the Go server.
 
 ## API
 
@@ -71,6 +90,32 @@ PATCH /api/collections/notes/records/<id>
 {"data":{"title":"Updated"}}
 
 DELETE /api/collections/notes/records/<id>
+```
+
+### Buckets
+
+```bash
+POST /api/buckets
+{"name":"avatars","is_public":false}
+
+GET /api/buckets
+# => [{"name":"avatars","is_public":false,"created_at":"...","updated_at":"..."}]
+
+GET /api/buckets/avatars
+DELETE /api/buckets/avatars
+```
+
+### Files
+
+```bash
+# Upload (multipart/form-data with "file" field)
+POST /api/buckets/avatars/files
+
+GET /api/buckets/avatars/files?page=1&per_page=20
+# => {"files":[...],"total":1,"page":1,"per_page":20,"total_pages":1}
+
+GET /api/buckets/avatars/files/<id>
+DELETE /api/buckets/avatars/files/<id>
 ```
 
 ## Config
