@@ -1,4 +1,4 @@
-import { chess960 } from '../data/chess960';
+import { chess960 } from '../data/chess/chess960';
 import { chess960BackRankToInitialFEN } from '../utils/chess/fen';
 import { Chess } from 'chess.js';
 

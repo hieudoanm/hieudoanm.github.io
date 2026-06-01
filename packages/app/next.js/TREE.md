@@ -21,6 +21,7 @@
 │   │   └── 4/
 │   │       └── c.mp3
 │   ├── db/
+│   │   ├── chess.db
 │   │   └── hieudoanm.db
 │   ├── fonts/
 │   │   ├── Roboto/
@@ -151,6 +152,8 @@
 │   │   │   │   ├── ChatFooter.tsx
 │   │   │   │   ├── ChatHeader.tsx
 │   │   │   │   └── ChatSidebar.tsx
+│   │   │   ├── chess/
+│   │   │   │   └── ChessBoard.tsx
 │   │   │   ├── common/
 │   │   │   │   └── PhotosGrid.tsx
 │   │   │   ├── landing/
@@ -413,10 +416,13 @@
 │   │   │       │   └── visualization/
 │   │   │       │       ├── __tests__/
 │   │   │       │       │   ├── __snapshots__/
-│   │   │       │       │   │   └── LegislationModal.test.tsx.snap
-│   │   │       │       │   └── LegislationModal.test.tsx
+│   │   │       │       │   │   ├── LegislationModal.test.tsx.snap
+│   │   │       │       │   │   └── ResumeTimelineModal.test.tsx.snap
+│   │   │       │       │   ├── LegislationModal.test.tsx
+│   │   │       │       │   └── ResumeTimelineModal.test.tsx
 │   │   │       │       ├── CalendarTracker.tsx
-│   │   │       │       └── LegislationModal.tsx
+│   │   │       │       ├── LegislationModal.tsx
+│   │   │       │       └── ResumeTimelineModal.tsx
 │   │   │       ├── sidebars/
 │   │   │       │   ├── LeftSidebar/
 │   │   │       │   │   ├── tabs/
@@ -530,7 +536,6 @@
 │   │       │       │   └── BlogsTemplate.test.tsx
 │   │       │       ├── BlogsTemplate.tsx
 │   │       │       └── index.ts
-│   │       ├── components/
 │   │       ├── shared/
 │   │       │   ├── ComponentsTemplate/
 │   │       │   │   ├── __tests__/
@@ -565,6 +570,7 @@
 │   │               ├── StoreItemTemplate.tsx
 │   │               └── index.ts
 │   ├── constants/
+│   │   ├── app.ts
 │   │   └── models.ts
 │   ├── contexts/
 │   │   ├── __tests__/
@@ -596,6 +602,9 @@
 │   │   │   ├── events.ts
 │   │   │   ├── months.ts
 │   │   │   └── years.ts
+│   │   ├── chess/
+│   │   │   ├── chess960.ts
+│   │   │   └── openings.ts
 │   │   ├── downloads/
 │   │   │   ├── agents.ts
 │   │   │   ├── clis.ts
@@ -607,7 +616,6 @@
 │   │   ├── manifest/
 │   │   │   ├── extension.ts
 │   │   │   └── pwa.ts
-│   │   ├── apps.ts
 │   │   ├── blog.ts
 │   │   ├── chat.ts
 │   │   ├── countries.ts
@@ -650,8 +658,11 @@
 │   │   │   └── use-timeout.tsx
 │   │   ├── use-dark-mode.ts
 │   │   ├── use-debounce.ts
-│   │   └── use-indexed-db.ts
+│   │   ├── use-indexed-db.ts
+│   │   └── use-stockfish.ts
 │   ├── json/
+│   │   ├── chess/
+│   │   │   └── analysis.json
 │   │   ├── inflation/
 │   │   │   ├── countries_currencies.json
 │   │   │   ├── currencies.json
@@ -667,6 +678,8 @@
 │   │   ├── api/
 │   │   │   ├── openrouter/
 │   │   │   │   └── index.ts
+│   │   │   ├── proxy/
+│   │   │   │   └── index.ts
 │   │   │   ├── trpc/
 │   │   │   │   └── [trpc].ts
 │   │   │   └── youtube/
@@ -674,8 +687,13 @@
 │   │   │           └── [id]/
 │   │   │               └── index.ts
 │   │   ├── app/
-│   │   │   └── attractors/
-│   │   │       └── index.tsx
+│   │   │   ├── attractors/
+│   │   │   │   └── index.tsx
+│   │   │   └── chess/
+│   │   │       ├── board/
+│   │   │       │   └── index.tsx
+│   │   │       └── stats/
+│   │   │           └── index.tsx
 │   │   ├── components/
 │   │   │   └── index.tsx
 │   │   ├── downloads/
@@ -706,6 +724,11 @@
 │   ├── styles/
 │   │   └── globals.css
 │   └── utils/
+│       ├── chess/
+│       │   ├── fen.ts
+│       │   └── pgn.ts
+│       ├── canvas.ts
+│       ├── number.ts
 │       └── trpc.ts
 ├── src-tauri/
 │   ├── capabilities/
@@ -745,4 +768,4 @@
 └── tsconfig.json
 ```
 
-206 directories, 536 files
+213 directories, 552 files

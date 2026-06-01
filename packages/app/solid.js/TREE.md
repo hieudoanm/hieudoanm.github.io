@@ -4,12 +4,6 @@
 ├── prisma/
 │   └── schema.prisma
 ├── public/
-│   ├── audio/
-│   ├── db/
-│   ├── fonts/
-│   ├── icons/
-│   ├── models/
-│   ├── workers/
 │   ├── favicon.ico
 │   ├── manifest.json
 │   ├── robots.txt
@@ -352,10 +346,6 @@
 │   │   └── words.json
 │   ├── middlewares/
 │   │   └── rate-limit.ts
-│   ├── pages/
-│   │   ├── app/
-│   │   ├── downloads/
-│   │   └── version/
 │   ├── routes/
 │   │   ├── api/
 │   │   │   ├── trpc/
@@ -438,4 +428,4 @@
 └── vitest.setup.ts
 ```
 
-122 directories, 313 files
+112 directories, 313 files

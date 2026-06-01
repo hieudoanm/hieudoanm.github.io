@@ -1,4 +1,4 @@
-import analysis from '@hieudoanm.github.io/chess/json/analysis.json';
+import analysis from '@hieudoanm.github.io/json/chess/analysis.json';
 import {
   BarElement,
   CategoryScale,

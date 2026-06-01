@@ -1,19 +1,16 @@
-import { Chessboard } from '@hieudoanm.github.io/chess/components/ChessBoard';
-import {
-  INITIAL_FEN,
-  INITIAL_ID,
-} from '@hieudoanm.github.io/chess/constants/app';
-import { chess960 } from '@hieudoanm.github.io/chess/data/chess960';
-import { Opening, openings } from '@hieudoanm.github.io/chess/data/openings';
-import { useStockfish } from '@hieudoanm.github.io/chess/hooks/use-stockfish';
-import { download } from '@hieudoanm.github.io/chess/utils/canvas';
-import { chess960BackRankToInitialFEN } from '@hieudoanm.github.io/chess/utils/chess/fen';
+import { download } from '@hieudoanm.github.io/utils/canvas';
+import { chess960BackRankToInitialFEN } from '@hieudoanm.github.io/utils/chess/fen';
 import {
   getHeaders,
   getMoves,
   simplifyPGN,
-} from '@hieudoanm.github.io/chess/utils/chess/pgn';
-import { addZero, range } from '@hieudoanm.github.io/chess/utils/number';
+} from '@hieudoanm.github.io/utils/chess/pgn';
+import { addZero, range } from '@hieudoanm.github.io/utils/number';
+import { Chessboard } from '@hieudoanm.github.io/components/organisms/chess/ChessBoard';
+import { INITIAL_FEN, INITIAL_ID } from '@hieudoanm.github.io/constants/app';
+import { chess960 } from '@hieudoanm.github.io/data/chess/chess960';
+import { Opening, openings } from '@hieudoanm.github.io/data/chess/openings';
+import { useStockfish } from '@hieudoanm.github.io/hooks/use-stockfish';
 import { Chess } from 'chess.js';
 import GIF from 'gif.js';
 import html2canvas from 'html2canvas-pro';

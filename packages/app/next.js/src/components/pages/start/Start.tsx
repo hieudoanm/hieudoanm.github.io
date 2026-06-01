@@ -7,7 +7,6 @@ import {
 } from '@hieudoanm.github.io/components/pages/start/cards/ToolCard';
 import { LeftSidebar } from '@hieudoanm.github.io/components/pages/start/sidebars/LeftSidebar';
 import { RightSidebar } from '@hieudoanm.github.io/components/pages/start/sidebars/RightSidebar';
-import { apps } from '@hieudoanm.github.io/data/apps';
 import {
   chat as chatBookmarks,
   code as codeBookmarks,
@@ -1246,7 +1245,7 @@ const GRID_MOBILE = 'grid grid-cols-2 sm:grid-cols-3 gap-3';
 /* MainContent                                                          */
 /* ------------------------------------------------------------------ */
 
-type MainTab = 'bookmarks' | 'downloads' | 'tools' | 'apps';
+type MainTab = 'bookmarks' | 'downloads' | 'tools';
 
 type MainContentProps = {
   today: string;
@@ -1327,8 +1326,6 @@ const MainContent: FC<MainContentProps> = memo(
       []
     );
 
-    const appSections = useMemo(() => [{ label: 'Apps', items: apps }], []);
-
     // Filtered helpers
     const filteredBookmarks = useMemo(
       () =>
@@ -1363,44 +1360,30 @@ const MainContent: FC<MainContentProps> = memo(
       [downloadSections, filtering, query]
     );
 
-    const filteredApps = useMemo(
-      () =>
-        appSections.map((s) => ({
-          ...s,
-          filtered: filtering
-            ? s.items.filter((a) => match(a.id, query))
-            : s.items,
-        })),
-      [appSections, filtering, query]
-    );
-
     // Auto-switch tab when filtering produces results in another tab
     useEffect(() => {
       if (!filtering) return;
       const hasTools = filteredTools.some((s) => s.filtered.length > 0);
       const hasBookmarks = filteredBookmarks.some((s) => s.filtered.length > 0);
       const hasDownloads = filteredDownloads.some((s) => s.filtered.length > 0);
-      const hasApps = filteredApps.some((s) => s.filtered.length > 0);
       if (tab === 'tools' && !hasTools && hasBookmarks) setTab('bookmarks');
       else if (tab === 'bookmarks' && !hasBookmarks && hasTools)
         setTab('tools');
       else if (tab === 'downloads' && !hasDownloads && hasTools)
         setTab('tools');
-      else if (tab === 'apps' && !hasApps && hasTools) setTab('tools');
+
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [query]);
 
     const hasAnyResult =
       filteredBookmarks.some((s) => s.filtered.length > 0) ||
       filteredTools.some((s) => s.filtered.length > 0) ||
-      filteredDownloads.some((s) => s.filtered.length > 0) ||
-      filteredApps.some((s) => s.filtered.length > 0);
+      filteredDownloads.some((s) => s.filtered.length > 0);
 
     const TABS: { id: MainTab; label: string; emoji: string }[] = [
       { id: 'bookmarks', label: 'Bookmarks', emoji: '🔖' },
       { id: 'downloads', label: 'Downloads', emoji: '📦' },
       { id: 'tools', label: 'Tools', emoji: '🔧' },
-      { id: 'apps', label: 'Apps', emoji: '📱' },
     ];
 
     return (
@@ -1494,28 +1477,6 @@ const MainContent: FC<MainContentProps> = memo(
                   No downloads match "{query}".
                 </p>
               )}
-          </>
-        )}
-
-        {/* ── Apps tab ── */}
-        {tab === 'apps' && (
-          <>
-            {filteredApps.map(({ label, filtered }) =>
-              !filtering || filtered.length > 0 ? (
-                <Section key={label} label={label} count={filtered.length}>
-                  <div className={GRID}>
-                    {filtered.map((a) => (
-                      <AppCard key={a.id} {...a} />
-                    ))}
-                  </div>
-                </Section>
-              ) : null
-            )}
-            {filtering && !filteredApps.some((s) => s.filtered.length > 0) && (
-              <p className="text-base-content/30 mt-20 text-sm">
-                No apps match "{query}".
-              </p>
-            )}
           </>
         )}
 
@@ -1676,7 +1637,6 @@ export const Start: FC = () => {
         Card: DownloadCard,
       },
       { label: 'Packages', items: f(packages, 'id'), Card: DownloadCard },
-      { label: 'Apps', items: f(apps, 'id'), Card: AppCard },
     ];
   }, [query, toolSections]);
 

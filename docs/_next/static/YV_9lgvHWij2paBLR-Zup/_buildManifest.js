@@ -1,6 +1,6 @@
 self.__BUILD_MANIFEST = {
   "/": [
-    "static/chunks/040d8kxn7dw0r.js"
+    "static/chunks/0k4s77uub1j.i.js"
   ],
   "/404": [
     "static/chunks/03o_2r1xgxs48.js"
@@ -15,10 +15,10 @@ self.__BUILD_MANIFEST = {
     "static/chunks/12.t20tv8ejn..js"
   ],
   "/app/chess/board": [
-    "static/chunks/0ie24w9kcfg~~.js"
+    "static/chunks/123scf4n0m28q.js"
   ],
   "/app/chess/stats": [
-    "static/chunks/0pta06n9vppv8.js"
+    "static/chunks/16qtdve9jv5z_.js"
   ],
   "/components": [
     "static/chunks/0rck0ojcfso7c.js"
@@ -47,6 +47,7 @@ self.__BUILD_MANIFEST = {
     "/_app",
     "/_error",
     "/api/openrouter",
+    "/api/proxy",
     "/api/trpc/[trpc]",
     "/api/youtube/transcript/[id]",
     "/app/attractors",
