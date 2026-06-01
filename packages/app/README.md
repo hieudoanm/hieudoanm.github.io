@@ -5,7 +5,6 @@
 - [Application](#application)
   - [Table of Contents](#table-of-contents)
   - [Tech Stack](#tech-stack)
-  - [Structure](#structure)
   - [Platform Distribution](#platform-distribution)
 
 ## Tech Stack
@@ -19,20 +18,21 @@
 | 05  | DevTools  | Test            | Unit           | [Jest][jest]                     |                                 |
 | 06  | DevTools  | Test            | E2E            | [Playwright][playwright]         |                                 |
 | 07  | Front-end | Framework       | Web            | [Next.js][nextjs]                | [Solid.js][solidjs]             |
-| 08  | Front-end | Framework       | Mobile         | [Capacitor][capacitor]           |                                 |
-| 09  | Front-end | Framework       | Desktop        | [Tauri][tauri]                   |                                 |
+| 08  | Front-end | Framework       | Mobile         | [Capacitor][capacitor]           | [Expo][expo]                    |
+| 09  | Front-end | Framework       | Desktop        | [Tauri][tauri]                   | [Electron][electron]            |
 | 10  | Front-end | CSS             | CSS Utilities  | [Tailwind CSS][tailwind-css]     |                                 |
 | 11  | Front-end | CSS             | CSS Components | [DaisyUI][daisyui]               |                                 |
 | 12  | Back-end  | API             |                | [tRPC][trpc]                     | [Apollo GraphQL][apollographql] |
 | 13  | Back-end  | ORM             |                | [Prisma][prisma]                 | [Drizzle][drizzle]              |
-| 14  | Back-end  | Database        | Lightweight    | [SQLite][sqlite]                 |                                 |
-| 15  | Back-end  | Database        | General        | [PostgreSQL][postgresql]         |                                 |
-| 16  | Back-end  | Auth            |                | [Supabase][supabase]             | [PocketBase][pocketbase]        |
-| 17  | Back-end  | Email           |                | [Resend][resend]                 |                                 |
-| 18  | Back-end  | Payment         |                | [LemonSqueezy][lemonsqueezy]     |                                 |
-| 19  | DevOps    | CI/CD           |                | [GitHub Actions][github-actions] |                                 |
-| 20  | DevOps    | Static Hosting  |                | [GitHub Pages][github-pages]     |                                 |
-| 21  | DevOps    | Dynamic Hosting |                | [Vercel][vercel]                 | [Netlify][netlify]              |
+| 14  | Back-end  | Database        | Memory         | [Redis][redis]                   |                                 |
+| 15  | Back-end  | Database        | Lightweight    | [SQLite][sqlite]                 |                                 |
+| 16  | Back-end  | Database        | General        | [PostgreSQL][postgresql]         |                                 |
+| 17  | Back-end  | Auth            |                | [Supabase][supabase]             | [PocketBase][pocketbase]        |
+| 18  | Back-end  | Email           |                | [Resend][resend]                 |                                 |
+| 19  | Back-end  | Payment         |                | [LemonSqueezy][lemonsqueezy]     |                                 |
+| 20  | DevOps    | CI/CD           |                | [GitHub Actions][github-actions] |                                 |
+| 21  | DevOps    | Static Hosting  |                | [GitHub Pages][github-pages]     |                                 |
+| 22  | DevOps    | Dynamic Hosting |                | [Vercel][vercel]                 | [Netlify][netlify]              |
 
 [typescript]: https://www.typescriptlang.org/
 [pnpm]: https://pnpm.io/
@@ -44,13 +44,16 @@
 [nextjs]: https://nextjs.org/
 [solidjs]: https://solidjs.com/
 [capacitor]: https://capacitorjs.com/
+[expo]: https://expo.dev/
 [tauri]: https://v2.tauri.app/
+[electron]: https://www.electronjs.org/
 [tailwind-css]: https://tailwindcss.com/
 [daisyui]: https://daisyui.com/
 [trpc]: https://trpc.io/
 [apollographql]: https://www.apollographql.com/
 [prisma]: https://prisma.io/
 [drizzle]: https://orm.drizzle.team/
+[redis]: https://redis.io/
 [sqlite]: https://www.sqlite.org/
 [postgresql]: https://www.postgresql.org/
 [supabase]: https://supabase.com/
@@ -61,45 +64,6 @@
 [github-pages]: https://pages.github.com/
 [vercel]: https://vercel.com/
 [netlify]: https://www.netlify.com/
-
-## Structure
-
-```text
-packages/app/
-├── public/
-│   ├── audio/
-│   ├── fonts/
-│   ├── icons/
-│   ├── images/
-│   ├── favicon.ico
-│   ├── manifest.json
-│   ├── robots.txt
-│   ├── sitemap.xml
-│   └── sw.js
-├── src/
-│   ├── assets/
-│   │   ├── images/
-│   ├── components/
-│   │   ├── atoms/
-│   │   ├── molecules/
-│   │   ├── organisms/
-│   │   ├── templates/
-│   │   └── pages/
-│   ├── data/
-│   ├── hooks/
-│   ├── layouts/
-│   ├── pages/
-│   ├── services/
-│   ├── store/
-│   ├── styles/
-│   ├── utils/
-│   └── ...
-├── package.json
-├── README.md
-├── tailwind.config.js
-├── tsconfig.json
-└── next.config.js
-```
 
 ## Platform Distribution
 
