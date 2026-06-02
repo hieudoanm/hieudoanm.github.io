@@ -10,13 +10,13 @@ RUN cargo build --release
 
 FROM scratch
 
-COPY --from=builder /app/target/release/simplebase /simplebase
+COPY --from=builder /app/target/release/simple /simple
 COPY --from=builder /app/public /public
 
 EXPOSE 8080
 
-ENV SIMPLEBASE_DATA=/data
+ENV SIMPLE_DATA=/data
 
 VOLUME ["/data"]
 
-ENTRYPOINT ["/simplebase"]
+ENTRYPOINT ["/simple"]

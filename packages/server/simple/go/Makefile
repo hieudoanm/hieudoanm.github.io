@@ -1,6 +1,6 @@
 GO=go
 BUILD_DIR=bin
-BINARY=simplebase
+BINARY=simple
 
 .PHONY: all build clean test format lint tidy
 
@@ -24,3 +24,6 @@ lint:
 
 tidy:
 	$(GO) mod tidy
+
+start:
+	./bin/simple

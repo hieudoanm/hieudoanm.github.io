@@ -61,24 +61,25 @@
       </div>
       <nav class="flex-1 p-3 space-y-1">
         <button onclick="showView('dashboard')" class="sidebar-link active w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition-colors text-sm" data-view="dashboard">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
-          Dashboard
+          🏠 Dashboard
         </button>
         <button onclick="showView('collections')" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition-colors text-sm" data-view="collections">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
-          Collections
+          📚 Collections
         </button>
         <button onclick="showView('buckets')" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition-colors text-sm" data-view="buckets">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
-          Buckets
+          🗄️ Buckets
         </button>
         <button onclick="showView('webhooks')" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition-colors text-sm" data-view="webhooks">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
-          Webhooks
+          🔔 Webhooks
         </button>
         <button onclick="showView('secrets')" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition-colors text-sm" data-view="secrets">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-          Secrets
+          🔑 Secrets
+        </button>
+        <button onclick="showView('websockets')" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition-colors text-sm" data-view="websockets">
+          🔌 WebSockets
+        </button>
+        <button onclick="showView('cache')" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition-colors text-sm" data-view="cache">
+          📦 Cache
         </button>
       </nav>
       <div class="p-3 border-t border-gray-800">
@@ -350,6 +351,98 @@
           </div>
         </div>
       </div>
+
+      <!-- WebSockets View -->
+      <div id="view-websockets" class="view p-6">
+        <div class="max-w-6xl mx-auto">
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="text-2xl font-bold">WebSocket Connections</h2>
+            <div class="flex gap-3">
+              <button onclick="viewAllWSMessages()" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg text-sm">All Messages</button>
+              <button onclick="openModal('modal-ws-broadcast')" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium rounded-lg transition-colors">Broadcast Message</button>
+            </div>
+          </div>
+          <div class="bg-gray-900/80 rounded-xl border border-gray-800 overflow-hidden">
+            <table class="w-full">
+              <thead>
+                <tr class="text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
+                  <th class="px-6 py-3">ID</th>
+                  <th class="px-6 py-3">Remote Address</th>
+                  <th class="px-6 py-3">Path</th>
+                  <th class="px-6 py-3">User Agent</th>
+                  <th class="px-6 py-3">Status</th>
+                  <th class="px-6 py-3">Connected At</th>
+                  <th class="px-6 py-3">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="websockets-list"
+                hx-get="/api/websockets" hx-trigger="websockets-ready" hx-ext="client-side-templates"
+                mustache-template="tmpl-websockets" hx-swap="innerHTML">
+                <tr><td colspan="7" class="px-6 py-8 text-center text-gray-500">Loading...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- WebSocket Messages View -->
+      <div id="view-ws-messages" class="view p-6">
+        <div class="max-w-6xl mx-auto">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <button onclick="showView('websockets')" class="text-sm text-gray-400 hover:text-white transition-colors">&larr; WebSockets</button>
+              <h2 class="text-2xl font-bold mt-1">WebSocket Messages</h2>
+              <p class="text-sm text-gray-400 mt-1" id="ws-messages-header">Connection messages</p>
+            </div>
+          </div>
+          <div class="bg-gray-900/80 rounded-xl border border-gray-800 overflow-hidden">
+            <table class="w-full">
+              <thead>
+                <tr class="text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
+                  <th class="px-6 py-3">Direction</th>
+                  <th class="px-6 py-3">Content</th>
+                  <th class="px-6 py-3">Time</th>
+                </tr>
+              </thead>
+              <tbody id="ws-messages-list"
+                hx-ext="client-side-templates" mustache-template="tmpl-ws-messages" hx-swap="innerHTML">
+                <tr><td colspan="3" class="px-6 py-8 text-center text-gray-500">Select a connection to view messages</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cache View -->
+      <div id="view-cache" class="view">
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <h2 class="text-2xl font-bold">Cache</h2>
+              <p class="text-sm text-gray-400 mt-1">Key-Value Store with TTL</p>
+            </div>
+            <div class="flex gap-3">
+              <button onclick="openCacheCreateModal()" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 rounded-lg text-sm font-medium">+ Set Key</button>
+              <button onclick="flushCache()" class="px-4 py-2 bg-red-600/20 hover:bg-red-600/30 text-red-400 rounded-lg text-sm font-medium border border-red-800/30">Flush All</button>
+            </div>
+          </div>
+          <div class="bg-gray-900/80 rounded-xl border border-gray-800 overflow-hidden">
+            <table class="w-full">
+              <thead>
+                <tr class="border-b border-gray-800 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
+                  <th class="px-6 py-3">Key</th>
+                  <th class="px-6 py-3">Value</th>
+                  <th class="px-6 py-3">TTL</th>
+                  <th class="px-6 py-3">Expires</th>
+                  <th class="px-6 py-3">Updated</th>
+                  <th class="px-6 py-3">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="cache-list" hx-get="/api/cache" hx-trigger="cache-ready" hx-ext="client-side-templates" mustache-template="tmpl-cache" hx-swap="innerHTML"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </main>
   </div>
 
@@ -561,6 +654,62 @@
     {{/.}}
   </script>
 
+  <!-- WebSockets list -->
+  <script type="x-tmpl-mustache" id="tmpl-websockets">
+    {{#.}}
+    <tr class="border-b border-gray-800 hover:bg-white/[0.02] transition-colors">
+      <td class="px-6 py-4 text-sm font-mono text-gray-300">{{id}}</td>
+      <td class="px-6 py-4 text-sm text-gray-400">{{remote_addr}}</td>
+      <td class="px-6 py-4 text-sm text-gray-400">{{path}}</td>
+      <td class="px-6 py-4 text-sm text-gray-400 max-w-[150px] truncate">{{user_agent}}</td>
+      <td class="px-6 py-4 text-sm">{{#is_active}}<span class="text-green-400">Active</span>{{/is_active}}{{^is_active}}<span class="text-red-400">Inactive</span>{{/is_active}}</td>
+      <td class="px-6 py-4 text-sm text-gray-500">{{connected_at}}</td>
+      <td class="px-6 py-4 text-sm">
+        <button onclick="viewWSMessages('{{id}}')" class="text-indigo-400 hover:text-indigo-300 mr-3">📋 Messages</button>
+        {{#is_active}}<button onclick="openWSSendModal('{{id}}')" class="text-indigo-400 hover:text-indigo-300 mr-3">💬 Send</button>{{/is_active}}
+        <button onclick="deleteWSConnection('{{id}}')" class="text-red-400 hover:text-red-300">🗑️</button>
+      </td>
+    </tr>
+    {{/.}}
+    {{^.}}
+    <tr><td colspan="7" class="px-6 py-8 text-center text-gray-500">No WebSocket connections</td></tr>
+    {{/.}}
+  </script>
+
+  <!-- WebSocket Messages list -->
+  <script type="x-tmpl-mustache" id="tmpl-ws-messages">
+    {{#.}}
+    <tr class="border-b border-gray-800 hover:bg-white/[0.02] transition-colors">
+      <td class="px-6 py-4 text-sm">{{direction}}</td>
+      <td class="px-6 py-4 text-sm font-mono text-gray-300 max-w-md truncate">{{content}}</td>
+      <td class="px-6 py-4 text-sm text-gray-500">{{created_at}}</td>
+    </tr>
+    {{/.}}
+    {{^.}}
+    <tr><td colspan="3" class="px-6 py-8 text-center text-gray-500">No messages yet</td></tr>
+    {{/.}}
+  </script>
+
+  <!-- Cache list -->
+  <script type="x-tmpl-mustache" id="tmpl-cache">
+{{#.}}
+<tr class="border-b border-gray-800 hover:bg-gray-800/50">
+  <td class="px-6 py-4 text-sm font-mono text-indigo-300">{{key}}</td>
+  <td class="px-6 py-4 text-sm font-mono text-gray-300 max-w-xs truncate">{{value}}</td>
+  <td class="px-6 py-4 text-sm">{{#ttl}}{{ttl}}s{{/ttl}}{{^ttl}}<span class="text-gray-500">∞</span>{{/ttl}}</td>
+  <td class="px-6 py-4 text-sm text-gray-400">{{#expires_at}}{{expires_at}}{{/expires_at}}{{^expires_at}}<span class="text-gray-500">-</span>{{/expires_at}}</td>
+  <td class="px-6 py-4 text-sm text-gray-500">{{updated_at}}</td>
+  <td class="px-6 py-4 text-sm">
+    <button onclick="editCacheEntry('{{key}}')" class="text-indigo-400 hover:text-indigo-300 mr-2">✏️</button>
+    <button onclick="deleteCacheEntry('{{key}}')" class="text-red-400 hover:text-red-300">🗑️</button>
+  </td>
+</tr>
+{{/.}}
+{{^.}}
+<tr><td colspan="6" class="px-6 py-8 text-center text-gray-500">No cache entries</td></tr>
+{{/.}}
+</script>
+
   <!-- ==================== JAVASCRIPT ==================== -->
   <script>
     // ---- Auth ----
@@ -665,6 +814,10 @@
         document.getElementById('webhooks-list').dispatchEvent(new Event('webhooks-ready'));
       } else if (view === 'secrets') {
         document.getElementById('secrets-list').dispatchEvent(new Event('secrets-ready'));
+      } else if (view === 'websockets') {
+        document.getElementById('websockets-list').dispatchEvent(new Event('websockets-ready'));
+      } else if (view === 'cache') {
+        document.getElementById('cache-list').dispatchEvent(new Event('cache-ready'));
       }
     }
 
@@ -1274,6 +1427,73 @@
       }
     }
 
+    // ---- WebSockets ----
+    let currentWSConnectionId = '';
+
+    function loadWebSockets() {
+      showView('websockets');
+      document.getElementById('websockets-list').dispatchEvent(new Event('websockets-ready'));
+    }
+
+    function viewWSMessages(id) {
+      currentWSConnectionId = id;
+      document.getElementById('ws-messages-header').textContent = 'Messages for connection ' + id;
+      document.getElementById('ws-messages-list').setAttribute('hx-get', '/api/websockets/' + id + '/messages');
+      document.getElementById('ws-messages-list').dispatchEvent(new Event('load'));
+      showView('ws-messages');
+    }
+
+    function viewAllWSMessages() {
+      document.getElementById('ws-messages-header').textContent = 'All WebSocket Messages';
+      document.getElementById('ws-messages-list').setAttribute('hx-get', '/api/websockets/messages');
+      document.getElementById('ws-messages-list').dispatchEvent(new Event('load'));
+      showView('ws-messages');
+    }
+
+    function openWSSendModal(id) {
+      document.getElementById('ws-send-id').value = id;
+      document.getElementById('ws-send-target').textContent = id;
+      openModal('modal-ws-send');
+    }
+
+    function broadcastWSMessage(event) {
+      event.preventDefault();
+      const form = event.target;
+      const fd = new FormData(form);
+      fetch('/api/websockets/broadcast', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer ' + getToken()},
+        body: JSON.stringify({content: fd.get('content')})
+      }).then(r => r.json()).then(() => {
+        closeModal(null);
+        loadWebSockets();
+      }).catch(err => alert('Error: ' + err.message));
+    }
+
+    function sendWSMessage(event) {
+      event.preventDefault();
+      const form = event.target;
+      const fd = new FormData(form);
+      const id = fd.get('connection_id');
+      fetch('/api/websockets/' + id + '/send', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer ' + getToken()},
+        body: JSON.stringify({content: fd.get('content')})
+      }).then(r => r.json()).then(() => {
+        closeModal(null);
+      }).catch(err => alert('Error: ' + err.message));
+    }
+
+    function deleteWSConnection(id) {
+      if (!confirm('Disconnect this WebSocket connection?')) return;
+      fetch('/api/websockets/' + id, {
+        method: 'DELETE',
+        headers: {'Authorization': 'Bearer ' + getToken()}
+      }).then(() => {
+        document.getElementById('websockets-list').dispatchEvent(new Event('websockets-ready'));
+      }).catch(err => alert('Error: ' + err.message));
+    }
+
     // Handle HTMX error for pagination (when we go past last page, reset)
     document.addEventListener('htmx:beforeSwap', (e) => {
       if (e.detail.xhr.status === 404 || e.detail.xhr.status === 500) {
@@ -1286,6 +1506,72 @@
         }
       }
     });
+
+    // ---- Cache ----
+    function openCacheCreateModal() {
+      document.getElementById('cache-key-input').value = '';
+      document.getElementById('cache-value-input').value = '';
+      document.getElementById('cache-ttl-input').value = '0';
+      openModal('modal-create-cache');
+    }
+
+    function setCacheEntry(event) {
+      event.preventDefault();
+      const fd = new FormData(event.target);
+      fetch('/api/cache', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer ' + getToken()},
+        body: JSON.stringify({key: fd.get('key'), value: fd.get('value'), ttl: parseInt(fd.get('ttl')) || 0})
+      }).then(r => r.json()).then(() => {
+        closeModal(null);
+        document.getElementById('cache-list').dispatchEvent(new Event('cache-ready'));
+      }).catch(err => alert('Error: ' + err.message));
+    }
+
+    function editCacheEntry(key) {
+      fetch('/api/cache/' + encodeURIComponent(key), {
+        headers: {'Authorization': 'Bearer ' + getToken()}
+      }).then(r => r.json()).then(entry => {
+        document.getElementById('cache-edit-key-display').textContent = key;
+        document.getElementById('cache-edit-key-input').value = key;
+        document.getElementById('cache-edit-value-input').value = entry.value;
+        document.getElementById('cache-edit-ttl-input').value = entry.ttl || 0;
+        openModal('modal-edit-cache');
+      }).catch(err => alert('Error: ' + err.message));
+    }
+
+    function updateCacheEntry(event) {
+      event.preventDefault();
+      const fd = new FormData(event.target);
+      fetch('/api/cache', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer ' + getToken()},
+        body: JSON.stringify({key: fd.get('key'), value: fd.get('value'), ttl: parseInt(fd.get('ttl')) || 0})
+      }).then(r => r.json()).then(() => {
+        closeModal(null);
+        document.getElementById('cache-list').dispatchEvent(new Event('cache-ready'));
+      }).catch(err => alert('Error: ' + err.message));
+    }
+
+    function deleteCacheEntry(key) {
+      if (!confirm('Delete cache key "' + key + '"?')) return;
+      fetch('/api/cache/' + encodeURIComponent(key), {
+        method: 'DELETE',
+        headers: {'Authorization': 'Bearer ' + getToken()}
+      }).then(() => {
+        document.getElementById('cache-list').dispatchEvent(new Event('cache-ready'));
+      }).catch(err => alert('Error: ' + err.message));
+    }
+
+    function flushCache() {
+      if (!confirm('Delete ALL cache entries?')) return;
+      fetch('/api/cache', {
+        method: 'DELETE',
+        headers: {'Authorization': 'Bearer ' + getToken()}
+      }).then(() => {
+        document.getElementById('cache-list').dispatchEvent(new Event('cache-ready'));
+      }).catch(err => alert('Error: ' + err.message));
+    }
   </script>
 
   <!-- ==================== MODAL TEMPLATES ==================== -->
@@ -1590,6 +1876,95 @@
         <div class="flex justify-end gap-3">
           <button type="button" onclick="closeModal(null)" class="px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors">Cancel</button>
           <button type="submit" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium rounded-lg transition-colors">Save</button>
+        </div>
+      </form>
+    </div>
+  </template>
+
+  <!-- Broadcast Message Modal -->
+  <template id="modal-ws-broadcast">
+    <div class="p-6">
+      <h3 class="text-lg font-semibold mb-4">Broadcast Message</h3>
+      <form onsubmit="broadcastWSMessage(event)">
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-300 mb-1">Message</label>
+          <textarea name="content" rows="3" required class="w-full px-4 py-2.5 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Enter message to broadcast to all connections"></textarea>
+        </div>
+        <div class="flex justify-end gap-3">
+          <button type="button" onclick="closeModal(null)" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg text-sm">Cancel</button>
+          <button type="submit" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 rounded-lg text-sm font-medium">Broadcast</button>
+        </div>
+      </form>
+    </div>
+  </template>
+
+  <!-- Send Message Modal -->
+  <template id="modal-ws-send">
+    <div class="p-6">
+      <h3 class="text-lg font-semibold mb-4">Send Message to <span id="ws-send-target" class="text-indigo-400"></span></h3>
+      <form onsubmit="sendWSMessage(event)">
+        <input type="hidden" name="connection_id" id="ws-send-id">
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-300 mb-1">Message</label>
+          <textarea name="content" rows="3" required class="w-full px-4 py-2.5 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Enter message to send"></textarea>
+        </div>
+        <div class="flex justify-end gap-3">
+          <button type="button" onclick="closeModal(null)" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg text-sm">Cancel</button>
+          <button type="submit" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 rounded-lg text-sm font-medium">Send</button>
+        </div>
+      </form>
+    </div>
+  </template>
+
+  <!-- Create Cache Entry Modal -->
+  <template id="modal-create-cache">
+    <div class="p-6">
+      <h3 class="text-lg font-semibold mb-4">Set Cache Key</h3>
+      <form onsubmit="setCacheEntry(event)">
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-300 mb-1">Key</label>
+          <input type="text" name="key" id="cache-key-input" required
+            class="w-full px-4 py-2.5 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            placeholder="my-key">
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-300 mb-1">Value</label>
+          <textarea name="value" id="cache-value-input" rows="2" required
+            class="w-full px-4 py-2.5 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            placeholder="my-value"></textarea>
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-300 mb-1">TTL (seconds, 0 = no expiry)</label>
+          <input type="number" name="ttl" id="cache-ttl-input" value="0" min="0"
+            class="w-full px-4 py-2.5 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </div>
+        <div class="flex justify-end gap-3">
+          <button type="button" onclick="closeModal(null)" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg text-sm">Cancel</button>
+          <button type="submit" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 rounded-lg text-sm font-medium">Save</button>
+        </div>
+      </form>
+    </div>
+  </template>
+
+  <!-- Edit Cache Entry Modal -->
+  <template id="modal-edit-cache">
+    <div class="p-6">
+      <h3 class="text-lg font-semibold mb-4">Edit Cache Entry: <span id="cache-edit-key-display" class="text-indigo-400"></span></h3>
+      <form onsubmit="updateCacheEntry(event)">
+        <input type="hidden" name="key" id="cache-edit-key-input">
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-300 mb-1">Value</label>
+          <textarea name="value" id="cache-edit-value-input" rows="2" required
+            class="w-full px-4 py-2.5 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-300 mb-1">TTL (seconds, 0 = no expiry)</label>
+          <input type="number" name="ttl" id="cache-edit-ttl-input" value="0" min="0"
+            class="w-full px-4 py-2.5 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </div>
+        <div class="flex justify-end gap-3">
+          <button type="button" onclick="closeModal(null)" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg text-sm">Cancel</button>
+          <button type="submit" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 rounded-lg text-sm font-medium">Update</button>
         </div>
       </form>
     </div>

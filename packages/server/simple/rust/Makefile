@@ -1,6 +1,6 @@
 CARGO=cargo
 BUILD_DIR=target/release
-BINARY=simplebase
+BINARY=simple
 
 .PHONY: all build clean test format lint
 

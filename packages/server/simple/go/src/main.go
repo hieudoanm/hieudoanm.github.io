@@ -43,6 +43,9 @@ func main() {
 	srv := &Server{db: db, dataDir: dataDir(), secretsKey: key}
 	srv.cronScheduler = startCronScheduler(db)
 	defer srv.cronScheduler.Stop()
+	srv.wsHub = NewWSHub(db)
+	go srv.wsHub.Run()
+	srv.cache = NewCacheStore(db)
 	log.Printf("SimpleBase listening on %s", addr)
 	if err := http.ListenAndServe(addr, srv); err != nil {
 		log.Fatalf("server: %v", err)

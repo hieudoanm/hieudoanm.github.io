@@ -103,6 +103,34 @@ type Secret struct {
 	UpdatedAt string `json:"updated_at"`
 }
 
+type WSConnection struct {
+	ID             string `json:"id"`
+	RemoteAddr     string `json:"remote_addr"`
+	Path           string `json:"path"`
+	UserAgent      string `json:"user_agent"`
+	ConnectedAt    string `json:"connected_at"`
+	DisconnectedAt string `json:"disconnected_at"`
+	IsActive       bool   `json:"is_active"`
+	CreatedAt      string `json:"created_at"`
+}
+
+type WSMessage struct {
+	ID           string `json:"id"`
+	ConnectionID string `json:"connection_id"`
+	Direction    string `json:"direction"`
+	Content      string `json:"content"`
+	CreatedAt    string `json:"created_at"`
+}
+
+type CacheEntry struct {
+	Key        string `json:"key"`
+	Value      string `json:"value"`
+	TTL        int    `json:"ttl"`
+	ExpiresAt  string `json:"expires_at"`
+	CreatedAt  string `json:"created_at"`
+	UpdatedAt  string `json:"updated_at"`
+}
+
 type FilesPage struct {
 	Files      []FileRecord `json:"files"`
 	Total      int          `json:"total"`
@@ -194,6 +222,31 @@ func migrateDB(db *sql.DB) error {
 		status      TEXT NOT NULL DEFAULT '',
 		output      TEXT NOT NULL DEFAULT '',
 		error       TEXT NOT NULL DEFAULT ''
+	);
+	CREATE TABLE IF NOT EXISTS _ws_connections (
+		id              TEXT PRIMARY KEY,
+		remote_addr     TEXT NOT NULL,
+		path            TEXT NOT NULL DEFAULT '/',
+		user_agent      TEXT NOT NULL DEFAULT '',
+		connected_at    TEXT NOT NULL,
+		disconnected_at TEXT NOT NULL DEFAULT '',
+		is_active       INTEGER NOT NULL DEFAULT 1,
+		created_at      TEXT NOT NULL DEFAULT (datetime('now'))
+	);
+	CREATE TABLE IF NOT EXISTS _ws_messages (
+		id            TEXT PRIMARY KEY,
+		connection_id TEXT,
+		direction     TEXT NOT NULL,
+		content       TEXT NOT NULL,
+		created_at    TEXT NOT NULL DEFAULT (datetime('now'))
+	);
+	CREATE TABLE IF NOT EXISTS _cache (
+		key        TEXT PRIMARY KEY,
+		value      TEXT NOT NULL,
+		ttl        INTEGER NOT NULL DEFAULT 0,
+		expires_at TEXT NOT NULL DEFAULT '',
+		created_at TEXT NOT NULL DEFAULT (datetime('now')),
+		updated_at TEXT NOT NULL DEFAULT (datetime('now'))
 	);
 	`
 	_, err := db.Exec(schema)
@@ -782,4 +835,179 @@ func insertCronJobLog(db *sql.DB, log *CronJobLog) error {
 		log.ID, log.CronJobID, log.StartedAt, log.FinishedAt, log.DurationMs, log.Status, log.Output, log.Error,
 	)
 	return err
+}
+
+func insertWSConnection(db *sql.DB, id, remoteAddr, path, userAgent string) {
+	now := time.Now().UTC().Format(time.RFC3339)
+	db.Exec(`INSERT INTO _ws_connections (id, remote_addr, path, user_agent, connected_at) VALUES (?, ?, ?, ?, ?)`,
+		id, remoteAddr, path, userAgent, now)
+}
+
+func updateWSDisconnect(db *sql.DB, id string) {
+	now := time.Now().UTC().Format(time.RFC3339)
+	db.Exec(`UPDATE _ws_connections SET is_active = 0, disconnected_at = ? WHERE id = ?`, now, id)
+}
+
+func listWSConnections(db *sql.DB) ([]WSConnection, error) {
+	rows, err := db.Query(`SELECT id, remote_addr, path, user_agent, connected_at, disconnected_at, is_active, created_at FROM _ws_connections ORDER BY created_at DESC`)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var conns []WSConnection
+	for rows.Next() {
+		var c WSConnection
+		var isActive int
+		if err := rows.Scan(&c.ID, &c.RemoteAddr, &c.Path, &c.UserAgent, &c.ConnectedAt, &c.DisconnectedAt, &isActive, &c.CreatedAt); err != nil {
+			return nil, err
+		}
+		c.IsActive = isActive == 1
+		conns = append(conns, c)
+	}
+	return conns, rows.Err()
+}
+
+func getWSConnection(db *sql.DB, id string) (*WSConnection, error) {
+	row := db.QueryRow(`SELECT id, remote_addr, path, user_agent, connected_at, disconnected_at, is_active, created_at FROM _ws_connections WHERE id = ?`, id)
+	var c WSConnection
+	var isActive int
+	if err := row.Scan(&c.ID, &c.RemoteAddr, &c.Path, &c.UserAgent, &c.ConnectedAt, &c.DisconnectedAt, &isActive, &c.CreatedAt); err != nil {
+		if err == sql.ErrNoRows {
+			return nil, nil
+		}
+		return nil, err
+	}
+	c.IsActive = isActive == 1
+	return &c, nil
+}
+
+func deleteWSConnection(db *sql.DB, id string) error {
+	_, err := db.Exec(`DELETE FROM _ws_connections WHERE id = ?`, id)
+	return err
+}
+
+func insertWSMessage(db *sql.DB, connectionID, direction, content string) {
+	now := time.Now().UTC().Format(time.RFC3339)
+	id := generateID()
+	db.Exec(`INSERT INTO _ws_messages (id, connection_id, direction, content, created_at) VALUES (?, ?, ?, ?, ?)`,
+		id, connectionID, direction, content, now)
+}
+
+func listWSMessages(db *sql.DB, connectionID string) ([]WSMessage, error) {
+	rows, err := db.Query(`SELECT id, connection_id, direction, content, created_at FROM _ws_messages WHERE connection_id = ? ORDER BY created_at DESC LIMIT 100`, connectionID)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var msgs []WSMessage
+	for rows.Next() {
+		var m WSMessage
+		if err := rows.Scan(&m.ID, &m.ConnectionID, &m.Direction, &m.Content, &m.CreatedAt); err != nil {
+			return nil, err
+		}
+		msgs = append(msgs, m)
+	}
+	return msgs, rows.Err()
+}
+
+func listAllWSMessages(db *sql.DB) ([]WSMessage, error) {
+	rows, err := db.Query(`SELECT id, connection_id, direction, content, created_at FROM _ws_messages ORDER BY created_at DESC LIMIT 200`)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var msgs []WSMessage
+	for rows.Next() {
+		var m WSMessage
+		if err := rows.Scan(&m.ID, &m.ConnectionID, &m.Direction, &m.Content, &m.CreatedAt); err != nil {
+			return nil, err
+		}
+		msgs = append(msgs, m)
+	}
+	return msgs, rows.Err()
+}
+
+func setCacheEntry(db *sql.DB, key, value string, ttl int) (*CacheEntry, error) {
+	now := time.Now().UTC()
+	nowStr := now.Format(time.RFC3339)
+	expiresAt := ""
+	if ttl > 0 {
+		expiresAt = now.Add(time.Duration(ttl) * time.Second).Format(time.RFC3339)
+	}
+	_, err := db.Exec(`INSERT INTO _cache (key, value, ttl, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)
+		ON CONFLICT(key) DO UPDATE SET value = excluded.value, ttl = excluded.ttl, expires_at = excluded.expires_at, updated_at = excluded.updated_at`,
+		key, value, ttl, expiresAt, nowStr, nowStr)
+	if err != nil {
+		return nil, err
+	}
+	return &CacheEntry{
+		Key:       key,
+		Value:     value,
+		TTL:       ttl,
+		ExpiresAt: expiresAt,
+		CreatedAt: nowStr,
+		UpdatedAt: nowStr,
+	}, nil
+}
+
+func getCacheEntry(db *sql.DB, key string) (*CacheEntry, error) {
+	row := db.QueryRow(`SELECT key, value, ttl, expires_at, created_at, updated_at FROM _cache WHERE key = ?`, key)
+	var e CacheEntry
+	if err := row.Scan(&e.Key, &e.Value, &e.TTL, &e.ExpiresAt, &e.CreatedAt, &e.UpdatedAt); err != nil {
+		if err == sql.ErrNoRows {
+			return nil, nil
+		}
+		return nil, err
+	}
+	if e.TTL > 0 && e.ExpiresAt != "" {
+		expires, err := time.Parse(time.RFC3339, e.ExpiresAt)
+		if err == nil && time.Now().UTC().After(expires) {
+			db.Exec(`DELETE FROM _cache WHERE key = ?`, key)
+			return nil, nil
+		}
+	}
+	return &e, nil
+}
+
+func deleteCacheEntry(db *sql.DB, key string) (bool, error) {
+	res, err := db.Exec(`DELETE FROM _cache WHERE key = ?`, key)
+	if err != nil {
+		return false, err
+	}
+	n, _ := res.RowsAffected()
+	return n > 0, nil
+}
+
+func listCacheEntries(db *sql.DB) ([]CacheEntry, error) {
+	now := time.Now().UTC().Format(time.RFC3339)
+	rows, err := db.Query(`SELECT key, value, ttl, expires_at, created_at, updated_at FROM _cache WHERE ttl = 0 OR expires_at > ? ORDER BY updated_at DESC`, now)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var entries []CacheEntry
+	for rows.Next() {
+		var e CacheEntry
+		if err := rows.Scan(&e.Key, &e.Value, &e.TTL, &e.ExpiresAt, &e.CreatedAt, &e.UpdatedAt); err != nil {
+			return nil, err
+		}
+		entries = append(entries, e)
+	}
+	return entries, rows.Err()
+}
+
+func flushCache(db *sql.DB) error {
+	_, err := db.Exec(`DELETE FROM _cache`)
+	return err
+}
+
+func getCacheStats(db *sql.DB) (map[string]any, error) {
+	var total, expired int
+	db.QueryRow(`SELECT COUNT(*) FROM _cache`).Scan(&total)
+	now := time.Now().UTC().Format(time.RFC3339)
+	db.QueryRow(`SELECT COUNT(*) FROM _cache WHERE ttl > 0 AND expires_at <= ?`, now).Scan(&expired)
+	return map[string]any{
+		"total_entries":   total,
+		"expired_entries": expired,
+	}, nil
 }

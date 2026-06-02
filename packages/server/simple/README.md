@@ -20,13 +20,31 @@
 
 ## Features
 
-| No  | Feature         | Description    | Stack   | Roadmap |
-| --- | --------------- | -------------- | ------- | ------- |
-| 1   | `SimpleAuth`    | Email/Password |         | x       |
-| 2   | `SimpleBase`    | Database       | SQLite  | x       |
-| 3   | `SimpleFiles`   | File Upload    |         | x       |
-| 4   | `SimpleHooks`   | Webhooks       | RESTful | x       |
-| 5   | `SimpleJobs`    | CronJobs       | Cron    | x       |
-| 6   | `SimpleQueues`  | Queues         |         |         |
-| 7   | `SimpleSecrets` | Secrets        |         | x       |
-| 8   | `SimpleSockets` | WebSockets     |         |         |
+| No  | Alphabet | Feature         | Description  | Stack   | Roadmap |
+| --- | -------- | --------------- | ------------ | ------- | ------- |
+| 1   | A        | `SimpleAuth`    | AuthZ        |         | x       |
+| 2   | B        | `SimpleBase`    | Database     | SQLite  | x       |
+| 3   | C        | `SimpleCache`   | In-memory    | Redis   | x       |
+| 4   | D        |                 |              |         |         |
+| 5   | E        |                 |              |         |         |
+| 6   | F        | `SimpleFiles`   | File Storage |         | x       |
+| 7   | G        |                 |              |         |         |
+| 8   | H        | `SimpleHooks`   | Webhooks     | RESTful | x       |
+| 9   | I        |                 |              |         |         |
+| 10  | J        | `SimpleJobs`    | CronJobs     | Cron    | x       |
+| 11  | K        |                 |              |         |         |
+| 12  | L        |                 |              |         |         |
+| 13  | M        |                 |              |         |         |
+| 14  | N        |                 |              |         |         |
+| 15  | O        |                 |              |         |         |
+| 16  | P        |                 |              |         |         |
+| 17  | Q        | `SimpleQueues`  | Queues       |         |         |
+| 18  | R        | `SimpleSecrets` | Secrets      |         | x       |
+| 19  | S        | `SimpleSockets` | WebSockets   |         |         |
+| 20  | T        |                 |              |         |         |
+| 21  | U        |                 |              |         |         |
+| 22  | V        |                 |              |         |         |
+| 23  | W        |                 |              |         |         |
+| 24  | X        |                 |              |         |         |
+| 23  | Y        |                 |              |         |         |
+| 24  | Z        |                 |              |         |         |

@@ -4,23 +4,28 @@ use std::sync::Mutex;
 use axum::{
     body::Body,
     extract::{Path, Query, State},
+    extract::ws::Message,
     http::{HeaderMap, StatusCode},
     Json,
 };
 use rusqlite::Connection;
 use serde::Serialize;
+use serde_json::Value;
 
 use crate::auth;
 use crate::db;
 use crate::models::*;
 use crate::secrets;
 use crate::webhook;
+use crate::websocket;
 
 pub struct AppState {
     pub db: Mutex<Connection>,
     pub storage_dir: PathBuf,
     pub http_client: reqwest::Client,
     pub secrets_key: Vec<u8>,
+    pub ws_hub: std::sync::Arc<tokio::sync::RwLock<websocket::WSHub>>,
+    pub cache: std::sync::Arc<crate::cache::CacheStore>,
 }
 
 fn extract_token(headers: &HeaderMap) -> std::result::Result<String, AppError> {
@@ -634,4 +639,202 @@ pub async fn delete_secret(
     db::delete_secret(&conn, &id)?;
     webhook::dispatch_event(&state, secrets::EVENT_SECRET_DELETE, secrets::webhook_secret_data(&existing.unwrap()));
     Ok(StatusCode::NO_CONTENT)
+}
+
+// --- WebSocket Handlers ---
+
+pub async fn list_ws_connections(
+    headers: HeaderMap,
+    State(state): State<std::sync::Arc<AppState>>,
+) -> std::result::Result<Json<Vec<WSConnection>>, AppError> {
+    let _token = extract_token(&headers)?;
+    auth::validate_token(&_token)?;
+    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    let connections = db::list_ws_connections(&conn)?;
+    Ok(Json(connections))
+}
+
+pub async fn get_ws_connection(
+    headers: HeaderMap,
+    State(state): State<std::sync::Arc<AppState>>,
+    Path(id): Path<String>,
+) -> std::result::Result<Json<WSConnection>, AppError> {
+    let _token = extract_token(&headers)?;
+    auth::validate_token(&_token)?;
+    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    let connection = db::get_ws_connection(&conn, &id)?
+        .ok_or_else(|| AppError::NotFound("not found".into()))?;
+    Ok(Json(connection))
+}
+
+pub async fn delete_ws_connection(
+    headers: HeaderMap,
+    State(state): State<std::sync::Arc<AppState>>,
+    Path(id): Path<String>,
+) -> std::result::Result<StatusCode, AppError> {
+    let _token = extract_token(&headers)?;
+    auth::validate_token(&_token)?;
+    let _ = websocket::close_client(&state.ws_hub, &id).await;
+    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    let existing = db::get_ws_connection(&conn, &id)?;
+    if existing.is_none() {
+        return Err(AppError::NotFound("not found".into()));
+    }
+    db::delete_ws_connection(&conn, &id)?;
+    Ok(StatusCode::NO_CONTENT)
+}
+
+pub async fn broadcast_ws_message(
+    headers: HeaderMap,
+    State(state): State<std::sync::Arc<AppState>>,
+    Json(req): Json<WSSendRequest>,
+) -> std::result::Result<Json<Value>, AppError> {
+    let _token = extract_token(&headers)?;
+    auth::validate_token(&_token)?;
+    let content = req.content;
+
+    let ids: Vec<String> = {
+        let hub = state.ws_hub.read().await;
+        hub.clients.keys().cloned().collect()
+    };
+
+    for id in &ids {
+        let sender = {
+            let hub = state.ws_hub.read().await;
+            hub.clients.get(id).map(|c| c.sender.clone())
+        };
+        if let Some(sender) = sender {
+            let msg = Message::Text(content.clone().into());
+            sender.send(msg).ok();
+        }
+        if let Ok(conn) = state.db.lock() {
+            db::insert_ws_message(&conn, id, "sent", &content).ok();
+        }
+    }
+
+    Ok(Json(serde_json::json!({"sent": ids.len()})))
+}
+
+pub async fn send_ws_message(
+    headers: HeaderMap,
+    State(state): State<std::sync::Arc<AppState>>,
+    Path(id): Path<String>,
+    Json(req): Json<WSSendRequest>,
+) -> std::result::Result<Json<Value>, AppError> {
+    let _token = extract_token(&headers)?;
+    auth::validate_token(&_token)?;
+    let content = req.content;
+
+    let sent = websocket::send_to_client(&state.ws_hub, &id, Message::Text(content.clone().into())).await;
+    if let Ok(conn) = state.db.lock() {
+        db::insert_ws_message(&conn, &id, "sent", &content).ok();
+    }
+
+    if sent {
+        Ok(Json(serde_json::json!({"sent": true})))
+    } else {
+        Err(AppError::NotFound("connection not found".into()))
+    }
+}
+
+pub async fn list_ws_messages(
+    headers: HeaderMap,
+    State(state): State<std::sync::Arc<AppState>>,
+    Path(id): Path<String>,
+) -> std::result::Result<Json<Vec<WSMessage>>, AppError> {
+    let _token = extract_token(&headers)?;
+    auth::validate_token(&_token)?;
+    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    let existing = db::get_ws_connection(&conn, &id)?;
+    if existing.is_none() {
+        return Err(AppError::NotFound("not found".into()));
+    }
+    let messages = db::list_ws_messages(&conn, &id)?;
+    Ok(Json(messages))
+}
+
+pub async fn list_all_ws_messages(
+    headers: HeaderMap,
+    State(state): State<std::sync::Arc<AppState>>,
+) -> std::result::Result<Json<Vec<WSMessage>>, AppError> {
+    let _token = extract_token(&headers)?;
+    auth::validate_token(&_token)?;
+    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    let messages = db::list_all_ws_messages(&conn)?;
+    Ok(Json(messages))
+}
+
+// --- Cache ---
+
+pub async fn list_cache(
+    headers: HeaderMap,
+    State(state): State<std::sync::Arc<AppState>>,
+) -> std::result::Result<Json<Vec<CacheEntry>>, AppError> {
+    let _token = extract_token(&headers)?;
+    auth::validate_token(&_token)?;
+    Ok(Json(state.cache.list()))
+}
+
+pub async fn set_cache(
+    headers: HeaderMap,
+    State(state): State<std::sync::Arc<AppState>>,
+    Json(req): Json<SetCacheRequest>,
+) -> std::result::Result<Json<CacheEntry>, AppError> {
+    let _token = extract_token(&headers)?;
+    auth::validate_token(&_token)?;
+    if req.key.is_empty() || req.value.is_empty() {
+        return Err(AppError::BadRequest("key and value are required".into()));
+    }
+    let ttl = req.ttl.unwrap_or(0);
+    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    let entry = state.cache.set(&conn, &req.key, &req.value, ttl)?;
+    Ok(Json(entry))
+}
+
+pub async fn get_cache(
+    headers: HeaderMap,
+    State(state): State<std::sync::Arc<AppState>>,
+    Path(key): Path<String>,
+) -> std::result::Result<Json<CacheEntry>, AppError> {
+    let _token = extract_token(&headers)?;
+    auth::validate_token(&_token)?;
+    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    let entry = state.cache.get(&conn, &key)?
+        .ok_or_else(|| AppError::NotFound("not found".into()))?;
+    Ok(Json(entry))
+}
+
+pub async fn delete_cache(
+    headers: HeaderMap,
+    State(state): State<std::sync::Arc<AppState>>,
+    Path(key): Path<String>,
+) -> std::result::Result<StatusCode, AppError> {
+    let _token = extract_token(&headers)?;
+    auth::validate_token(&_token)?;
+    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    let ok = state.cache.delete(&conn, &key)?;
+    if !ok {
+        return Err(AppError::NotFound("not found".into()));
+    }
+    Ok(StatusCode::NO_CONTENT)
+}
+
+pub async fn flush_cache(
+    headers: HeaderMap,
+    State(state): State<std::sync::Arc<AppState>>,
+) -> std::result::Result<Json<Value>, AppError> {
+    let _token = extract_token(&headers)?;
+    auth::validate_token(&_token)?;
+    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    state.cache.flush(&conn)?;
+    Ok(Json(serde_json::json!({"status": "flushed"})))
+}
+
+pub async fn get_cache_stats(
+    headers: HeaderMap,
+    State(state): State<std::sync::Arc<AppState>>,
+) -> std::result::Result<Json<Value>, AppError> {
+    let _token = extract_token(&headers)?;
+    auth::validate_token(&_token)?;
+    Ok(Json(state.cache.stats()))
 }

@@ -35,7 +35,10 @@ func newTestServer(t *testing.T) *Server {
 	if err != nil {
 		t.Fatal(err)
 	}
-	return &Server{db: db, dataDir: storageDir, secretsKey: key, cronScheduler: nil}
+	wsHub := NewWSHub(db)
+	go wsHub.Run()
+	cache := NewCacheStore(db)
+	return &Server{db: db, dataDir: storageDir, secretsKey: key, cronScheduler: nil, wsHub: wsHub, cache: cache}
 }
 
 func request(t *testing.T, h http.Handler, method, path, body string) *http.Response {
@@ -1018,6 +1021,257 @@ func TestSecretsAuthRequired(t *testing.T) {
 
 	// Without auth token, secrets endpoints should return 401
 	resp := request(t, h, "GET", "/api/secrets", "")
+	if resp.StatusCode != 401 {
+		t.Fatalf("expected 401, got %d", resp.StatusCode)
+	}
+}
+
+// --- WebSocket Tests ---
+
+func TestWebSocketCRUD(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	// List initially empty
+	resp := request(t, h, "GET", "/api/websockets", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("list: expected 200, got %d", resp.StatusCode)
+	}
+	var list []any
+	if err := json.NewDecoder(resp.Body).Decode(&list); err != nil {
+		t.Fatal(err)
+	}
+	resp.Body.Close()
+
+	// List all messages
+	resp = request(t, h, "GET", "/api/websockets/messages", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("messages: expected 200, got %d", resp.StatusCode)
+	}
+	var msgs []any
+	if err := json.NewDecoder(resp.Body).Decode(&msgs); err != nil {
+		t.Fatal(err)
+	}
+	resp.Body.Close()
+}
+
+func TestWebSocketBroadcast(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	// Broadcast a message
+	resp := request(t, h, "POST", "/api/websockets/broadcast", `{"content":"hello all"}`)
+	if resp.StatusCode != 200 {
+		t.Fatalf("broadcast: expected 200, got %d", resp.StatusCode)
+	}
+	body := readBody(t, resp)
+	if body["status"] != "broadcasted" {
+		t.Fatalf("expected status 'broadcasted', got %v", body["status"])
+	}
+
+	// Verify message appears in all messages
+	resp = request(t, h, "GET", "/api/websockets/messages", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("messages: expected 200, got %d", resp.StatusCode)
+	}
+	var msgs []map[string]any
+	if err := json.NewDecoder(resp.Body).Decode(&msgs); err != nil {
+		t.Fatal(err)
+	}
+	resp.Body.Close()
+	if len(msgs) == 0 {
+		t.Fatal("expected at least 1 message")
+	}
+	if msgs[0]["direction"] != "sent" {
+		t.Fatalf("expected direction 'sent', got %v", msgs[0]["direction"])
+	}
+}
+
+func TestWebSocketNotFound(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "GET", "/api/websockets/nonexistent", "")
+	if resp.StatusCode != 404 {
+		t.Fatalf("expected 404, got %d", resp.StatusCode)
+	}
+
+	resp = request(t, h, "DELETE", "/api/websockets/nonexistent", "")
+	if resp.StatusCode != 404 {
+		t.Fatalf("expected 404, got %d", resp.StatusCode)
+	}
+}
+
+func TestWebSocketAuthRequired(t *testing.T) {
+	srv := newTestServer(t)
+	h := srv.routes()
+
+	resp := request(t, h, "GET", "/api/websockets", "")
+	if resp.StatusCode != 401 {
+		t.Fatalf("expected 401, got %d", resp.StatusCode)
+	}
+}
+
+// --- Cache Tests ---
+
+func TestCacheSetGetDelete(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	// Set a key
+	resp := request(t, h, "POST", "/api/cache", `{"key":"hello","value":"world"}`)
+	if resp.StatusCode != 200 {
+		t.Fatalf("set: expected 200, got %d", resp.StatusCode)
+	}
+	entry := readBody(t, resp)
+	if entry["key"] != "hello" || entry["value"] != "world" {
+		t.Fatalf("unexpected entry: %v", entry)
+	}
+
+	// Get the key
+	resp = request(t, h, "GET", "/api/cache/hello", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("get: expected 200, got %d", resp.StatusCode)
+	}
+	entry = readBody(t, resp)
+	if entry["value"] != "world" {
+		t.Fatalf("expected 'world', got %v", entry["value"])
+	}
+
+	// Delete the key
+	resp = request(t, h, "DELETE", "/api/cache/hello", "")
+	if resp.StatusCode != 204 {
+		t.Fatalf("delete: expected 204, got %d", resp.StatusCode)
+	}
+
+	// Get deleted key
+	resp = request(t, h, "GET", "/api/cache/hello", "")
+	if resp.StatusCode != 404 {
+		t.Fatalf("get after delete: expected 404, got %d", resp.StatusCode)
+	}
+}
+
+func TestCacheList(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/cache", `{"key":"a","value":"1"}`)
+	request(t, h, "POST", "/api/cache", `{"key":"b","value":"2"}`)
+
+	resp := request(t, h, "GET", "/api/cache", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("list: expected 200, got %d", resp.StatusCode)
+	}
+	var list []map[string]any
+	if err := json.NewDecoder(resp.Body).Decode(&list); err != nil {
+		t.Fatal(err)
+	}
+	resp.Body.Close()
+	if len(list) != 2 {
+		t.Fatalf("expected 2 entries, got %d", len(list))
+	}
+}
+
+func TestCacheTTL(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	// Set with 1-second TTL
+	resp := request(t, h, "POST", "/api/cache", `{"key":"temp","value":"data","ttl":1}`)
+	if resp.StatusCode != 200 {
+		t.Fatalf("set ttl: expected 200, got %d", resp.StatusCode)
+	}
+
+	// Should exist immediately
+	resp = request(t, h, "GET", "/api/cache/temp", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("get before ttl: expected 200, got %d", resp.StatusCode)
+	}
+
+	// Wait for expiry
+	time.Sleep(1100 * time.Millisecond)
+
+	// Should be gone
+	resp = request(t, h, "GET", "/api/cache/temp", "")
+	if resp.StatusCode != 404 {
+		t.Fatalf("get after ttl: expected 404, got %d", resp.StatusCode)
+	}
+}
+
+func TestCacheOverwrite(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/cache", `{"key":"k","value":"v1"}`)
+	request(t, h, "POST", "/api/cache", `{"key":"k","value":"v2"}`)
+
+	resp := request(t, h, "GET", "/api/cache/k", "")
+	entry := readBody(t, resp)
+	if entry["value"] != "v2" {
+		t.Fatalf("expected 'v2', got %v", entry["value"])
+	}
+}
+
+func TestCacheFlush(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/cache", `{"key":"x","value":"1"}`)
+	request(t, h, "POST", "/api/cache", `{"key":"y","value":"2"}`)
+
+	resp := request(t, h, "DELETE", "/api/cache", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("flush: expected 200, got %d", resp.StatusCode)
+	}
+
+	resp = request(t, h, "GET", "/api/cache", "")
+	var list []any
+	if err := json.NewDecoder(resp.Body).Decode(&list); err != nil {
+		t.Fatal(err)
+	}
+	resp.Body.Close()
+	if len(list) != 0 {
+		t.Fatalf("expected 0 entries after flush, got %d", len(list))
+	}
+}
+
+func TestCacheValidation(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	// Missing key
+	resp := request(t, h, "POST", "/api/cache", `{"value":"v"}`)
+	if resp.StatusCode != 400 {
+		t.Fatalf("expected 400 for missing key, got %d", resp.StatusCode)
+	}
+
+	// Missing value
+	resp = request(t, h, "POST", "/api/cache", `{"key":"k"}`)
+	if resp.StatusCode != 400 {
+		t.Fatalf("expected 400 for missing value, got %d", resp.StatusCode)
+	}
+
+	// Not found
+	resp = request(t, h, "GET", "/api/cache/nonexistent", "")
+	if resp.StatusCode != 404 {
+		t.Fatalf("expected 404, got %d", resp.StatusCode)
+	}
+}
+
+func TestCacheAuthRequired(t *testing.T) {
+	srv := newTestServer(t)
+	h := srv.routes()
+
+	resp := request(t, h, "GET", "/api/cache", "")
 	if resp.StatusCode != 401 {
 		t.Fatalf("expected 401, got %d", resp.StatusCode)
 	}

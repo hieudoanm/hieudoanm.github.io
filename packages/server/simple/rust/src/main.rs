@@ -1,9 +1,11 @@
 mod auth;
+mod cache;
 mod db;
 mod handlers;
 mod models;
 mod secrets;
 mod webhook;
+mod websocket;
 
 use std::sync::Arc;
 
@@ -78,14 +80,33 @@ fn app(state: Arc<AppState>) -> Router {
                 .patch(handlers::update_secret)
                 .delete(handlers::delete_secret),
         )
-        .layer(CorsLayer::permissive())
-        .with_state(state);
+        .route("/api/websockets", get(handlers::list_ws_connections))
+        .route(
+            "/api/websockets/{id}",
+            get(handlers::get_ws_connection).delete(handlers::delete_ws_connection),
+        )
+        .route("/api/websockets/broadcast", post(handlers::broadcast_ws_message))
+        .route("/api/websockets/{id}/send", post(handlers::send_ws_message))
+        .route("/api/websockets/{id}/messages", get(handlers::list_ws_messages))
+        .route("/api/websockets/messages", get(handlers::list_all_ws_messages))
+        .route(
+            "/api/cache",
+            get(handlers::list_cache).post(handlers::set_cache).delete(handlers::flush_cache),
+        )
+        .route("/api/cache/stats", get(handlers::get_cache_stats))
+        .route(
+            "/api/cache/{key}",
+            get(handlers::get_cache).delete(handlers::delete_cache),
+        );
 
     Router::new()
         .merge(api)
+        .route("/ws", get(crate::websocket::handle_ws_upgrade))
+        .layer(CorsLayer::permissive())
         .fallback_service(
             ServeDir::new("public").append_index_html_on_directories(true),
         )
+        .with_state(state)
 }
 
 #[tokio::main]
@@ -95,11 +116,18 @@ async fn main() {
 
     let key = secrets::get_or_create_secrets_key(&db::data_dir())
         .expect("secrets key");
+    let ws_hub = websocket::new_ws_hub();
+    tokio::spawn(websocket::ws_hub_run(ws_hub.clone()));
+    let cache_arc = std::sync::Arc::new(cache::CacheStore::new());
+    cache_arc.load_from_db(&conn);
+    cache::start_eviction_loop(cache_arc.clone());
     let state = Arc::new(AppState {
         db: std::sync::Mutex::new(conn),
         storage_dir: db::data_dir(),
         http_client: reqwest::Client::new(),
         secrets_key: key,
+        ws_hub,
+        cache: cache_arc,
     });
 
     let addr = std::env::var("PORT").unwrap_or_else(|_| "8080".to_string());
@@ -129,11 +157,15 @@ mod tests {
         let tmp_dir = std::env::temp_dir().join(format!("simplebase-test-{}", uuid::Uuid::new_v4()));
         std::fs::create_dir_all(&tmp_dir).ok();
         let key = secrets::get_or_create_secrets_key(&tmp_dir).unwrap();
+        let ws_hub = websocket::new_ws_hub();
+        let cache = std::sync::Arc::new(cache::CacheStore::new());
         let state = Arc::new(AppState {
             db: std::sync::Mutex::new(conn),
             storage_dir: tmp_dir,
             http_client: reqwest::Client::new(),
             secrets_key: key,
+            ws_hub,
+            cache,
         });
         app(state)
     }
@@ -775,6 +807,87 @@ mod tests {
     async fn test_secrets_auth_required() {
         let app = test_app();
         let (status, _) = get_json(&app, "/api/secrets", None).await;
+        assert_eq!(status, StatusCode::UNAUTHORIZED);
+    }
+
+    // --- Cache Tests ---
+
+    #[tokio::test]
+    async fn test_cache_set_get_delete() {
+        let app = test_app();
+        let token = register_token(&app).await;
+
+        let (status, val) = request(&app, "POST", "/api/cache", Some(&token), Some(serde_json::json!({"key": "hello", "value": "world"}))).await;
+        assert_eq!(status, StatusCode::OK);
+        assert_eq!(val["key"], "hello");
+        assert_eq!(val["value"], "world");
+
+        let (status, val) = get_json(&app, "/api/cache/hello", Some(&token)).await;
+        assert_eq!(status, StatusCode::OK);
+        assert_eq!(val["value"], "world");
+
+        let (status, _) = request(&app, "DELETE", "/api/cache/hello", Some(&token), None).await;
+        assert_eq!(status, StatusCode::NO_CONTENT);
+
+        let (status, _) = get_json(&app, "/api/cache/hello", Some(&token)).await;
+        assert_eq!(status, StatusCode::NOT_FOUND);
+    }
+
+    #[tokio::test]
+    async fn test_cache_list() {
+        let app = test_app();
+        let token = register_token(&app).await;
+
+        request(&app, "POST", "/api/cache", Some(&token), Some(serde_json::json!({"key": "a", "value": "1"}))).await;
+        request(&app, "POST", "/api/cache", Some(&token), Some(serde_json::json!({"key": "b", "value": "2"}))).await;
+
+        let (status, val) = get_json(&app, "/api/cache", Some(&token)).await;
+        assert_eq!(status, StatusCode::OK);
+        assert!(val.as_array().unwrap().len() >= 2);
+    }
+
+    #[tokio::test]
+    async fn test_cache_overwrite() {
+        let app = test_app();
+        let token = register_token(&app).await;
+
+        request(&app, "POST", "/api/cache", Some(&token), Some(serde_json::json!({"key": "k", "value": "v1"}))).await;
+        request(&app, "POST", "/api/cache", Some(&token), Some(serde_json::json!({"key": "k", "value": "v2"}))).await;
+
+        let (_, val) = get_json(&app, "/api/cache/k", Some(&token)).await;
+        assert_eq!(val["value"], "v2");
+    }
+
+    #[tokio::test]
+    async fn test_cache_flush() {
+        let app = test_app();
+        let token = register_token(&app).await;
+
+        request(&app, "POST", "/api/cache", Some(&token), Some(serde_json::json!({"key": "x", "value": "1"}))).await;
+
+        let (status, _) = request(&app, "DELETE", "/api/cache", Some(&token), None).await;
+        assert_eq!(status, StatusCode::OK);
+
+        let (_, val) = get_json(&app, "/api/cache", Some(&token)).await;
+        assert_eq!(val.as_array().unwrap().len(), 0);
+    }
+
+    #[tokio::test]
+    async fn test_cache_validation() {
+        let app = test_app();
+        let token = register_token(&app).await;
+
+        let (status, _) = request(&app, "POST", "/api/cache", Some(&token), Some(serde_json::json!({"key": "k"}))).await;
+        assert_eq!(status, StatusCode::BAD_REQUEST);
+
+        let (status, _) = get_json(&app, "/api/cache/nonexistent", Some(&token)).await;
+        assert_eq!(status, StatusCode::NOT_FOUND);
+    }
+
+    #[tokio::test]
+    async fn test_cache_auth_required() {
+        let app = test_app();
+        let (status, _) = get_json(&app, "/api/cache", None).await;
         assert_eq!(status, StatusCode::UNAUTHORIZED);
     }
 }

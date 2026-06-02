@@ -6,17 +6,17 @@ COPY go.mod go.sum ./
 COPY src/ src/
 COPY public/ public/
 
-RUN CGO_ENABLED=0 go build -o /app/simplebase ./src
+RUN CGO_ENABLED=0 go build -o /app/simple ./src
 
 FROM scratch
 
-COPY --from=builder /app/simplebase /simplebase
+COPY --from=builder /app/simple /simple
 COPY --from=builder /app/public /public
 
 EXPOSE 8080
 
-ENV SIMPLEBASE_DATA=/data
+ENV SIMPLE_DATA=/data
 
 VOLUME ["/data"]
 
-ENTRYPOINT ["/simplebase"]
+ENTRYPOINT ["/simple"]

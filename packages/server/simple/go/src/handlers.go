@@ -20,6 +20,8 @@ type Server struct {
 	dataDir       string
 	secretsKey    []byte
 	cronScheduler *cron.Cron
+	wsHub         *WSHub
+	cache         *CacheStore
 }
 
 func errorJSON(w http.ResponseWriter, msg string, code int) {
@@ -1002,6 +1004,114 @@ func (s *Server) handleCronJobsDelete(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusNoContent)
 }
 
+// --- WebSockets ---
+
+func (s *Server) handleWSList(w http.ResponseWriter, r *http.Request) {
+	conns, err := listWSConnections(s.db)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	jsonResponse(w, conns)
+}
+
+func (s *Server) handleWSGet(w http.ResponseWriter, r *http.Request) {
+	id := r.PathValue("id")
+	conn, err := getWSConnection(s.db, id)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	if conn == nil {
+		errorJSON(w, "not found", http.StatusNotFound)
+		return
+	}
+	jsonResponse(w, conn)
+}
+
+func (s *Server) handleWSDelete(w http.ResponseWriter, r *http.Request) {
+	id := r.PathValue("id")
+	conn, err := getWSConnection(s.db, id)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	if conn == nil {
+		errorJSON(w, "not found", http.StatusNotFound)
+		return
+	}
+	if s.wsHub != nil {
+		s.wsHub.CloseClient(id)
+	}
+	if err := deleteWSConnection(s.db, id); err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	w.WriteHeader(http.StatusNoContent)
+}
+
+func (s *Server) handleWSBroadcast(w http.ResponseWriter, r *http.Request) {
+	var body struct {
+		Content string `json:"content"`
+	}
+	if err := json.NewDecoder(r.Body).Decode(&body); err != nil {
+		errorJSON(w, "invalid json", http.StatusBadRequest)
+		return
+	}
+	if body.Content == "" {
+		errorJSON(w, "content is required", http.StatusBadRequest)
+		return
+	}
+	if s.wsHub != nil {
+		s.wsHub.broadcast <- []byte(body.Content)
+	}
+	// Store broadcast message
+	insertWSMessage(s.db, "", "sent", body.Content)
+	jsonResponse(w, map[string]string{"status": "broadcasted"})
+}
+
+func (s *Server) handleWSSend(w http.ResponseWriter, r *http.Request) {
+	id := r.PathValue("id")
+	var body struct {
+		Content string `json:"content"`
+	}
+	if err := json.NewDecoder(r.Body).Decode(&body); err != nil {
+		errorJSON(w, "invalid json", http.StatusBadRequest)
+		return
+	}
+	if body.Content == "" {
+		errorJSON(w, "content is required", http.StatusBadRequest)
+		return
+	}
+	if s.wsHub != nil {
+		if !s.wsHub.SendToClient(id, []byte(body.Content)) {
+			errorJSON(w, "client not found or disconnected", http.StatusNotFound)
+			return
+		}
+	}
+	insertWSMessage(s.db, id, "sent", body.Content)
+	jsonResponse(w, map[string]string{"status": "sent"})
+}
+
+func (s *Server) handleWSMessages(w http.ResponseWriter, r *http.Request) {
+	id := r.PathValue("id")
+	msgs, err := listWSMessages(s.db, id)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	jsonResponse(w, msgs)
+}
+
+func (s *Server) handleWSAllMessages(w http.ResponseWriter, r *http.Request) {
+	msgs, err := listAllWSMessages(s.db)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	jsonResponse(w, msgs)
+}
+
 func (s *Server) handleCronJobsRun(w http.ResponseWriter, r *http.Request) {
 	id := r.PathValue("id")
 	job, err := getCronJob(s.db, id)
@@ -1037,6 +1147,59 @@ func (s *Server) handleCronJobsLogs(w http.ResponseWriter, r *http.Request) {
 		logs = []CronJobLog{}
 	}
 	jsonResponse(w, logs)
+}
+
+// --- Cache ---
+
+func (s *Server) handleCacheList(w http.ResponseWriter, r *http.Request) {
+	entries := s.cache.List()
+	jsonResponse(w, entries)
+}
+
+func (s *Server) handleCacheSet(w http.ResponseWriter, r *http.Request) {
+	var body struct {
+		Key   string `json:"key"`
+		Value string `json:"value"`
+		TTL   int    `json:"ttl"`
+	}
+	if err := json.NewDecoder(r.Body).Decode(&body); err != nil {
+		errorJSON(w, "invalid json", http.StatusBadRequest)
+		return
+	}
+	if body.Key == "" || body.Value == "" {
+		errorJSON(w, "key and value are required", http.StatusBadRequest)
+		return
+	}
+	entry := s.cache.Set(body.Key, body.Value, body.TTL)
+	jsonResponse(w, entry)
+}
+
+func (s *Server) handleCacheGet(w http.ResponseWriter, r *http.Request) {
+	key := r.PathValue("key")
+	entry := s.cache.Get(key)
+	if entry == nil {
+		errorJSON(w, "not found", http.StatusNotFound)
+		return
+	}
+	jsonResponse(w, entry)
+}
+
+func (s *Server) handleCacheDelete(w http.ResponseWriter, r *http.Request) {
+	key := r.PathValue("key")
+	if !s.cache.Delete(key) {
+		errorJSON(w, "not found", http.StatusNotFound)
+		return
+	}
+	w.WriteHeader(http.StatusNoContent)
+}
+
+func (s *Server) handleCacheFlush(w http.ResponseWriter, r *http.Request) {
+	s.cache.Flush()
+	jsonResponse(w, map[string]string{"status": "flushed"})
+}
+
+func (s *Server) handleCacheStats(w http.ResponseWriter, r *http.Request) {
+	jsonResponse(w, s.cache.Stats())
 }
 
 func (s *Server) routes() http.Handler {
@@ -1094,7 +1257,24 @@ func (s *Server) routes() http.Handler {
 	protected.HandleFunc("POST /api/cronjobs/{id}/run", s.handleCronJobsRun)
 	protected.HandleFunc("GET /api/cronjobs/{id}/logs", s.handleCronJobsLogs)
 
+	protected.HandleFunc("GET /api/websockets", s.handleWSList)
+	protected.HandleFunc("GET /api/websockets/{id}", s.handleWSGet)
+	protected.HandleFunc("DELETE /api/websockets/{id}", s.handleWSDelete)
+	protected.HandleFunc("POST /api/websockets/broadcast", s.handleWSBroadcast)
+	protected.HandleFunc("POST /api/websockets/{id}/send", s.handleWSSend)
+	protected.HandleFunc("GET /api/websockets/{id}/messages", s.handleWSMessages)
+	protected.HandleFunc("GET /api/websockets/messages", s.handleWSAllMessages)
+
+	protected.HandleFunc("GET /api/cache", s.handleCacheList)
+	protected.HandleFunc("POST /api/cache", s.handleCacheSet)
+	protected.HandleFunc("GET /api/cache/{key}", s.handleCacheGet)
+	protected.HandleFunc("DELETE /api/cache/{key}", s.handleCacheDelete)
+	protected.HandleFunc("DELETE /api/cache", s.handleCacheFlush)
+	protected.HandleFunc("GET /api/cache/stats", s.handleCacheStats)
+
 	mux.Handle("/api/", authMiddleware(protected))
+
+	mux.HandleFunc("GET /ws", s.wsHub.ServeWS)
 
 	return mux
 }
