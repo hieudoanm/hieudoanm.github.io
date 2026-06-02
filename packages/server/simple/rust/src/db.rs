@@ -1,16 +1,16 @@
 use std::path::PathBuf;
 
 use chrono::Utc;
-use rusqlite::{params, Connection};
+use rusqlite::{Connection, params};
 use serde_json::Value;
 
 use crate::models::*;
 
 pub fn data_dir() -> PathBuf {
-    let dir = std::env::var("SIMPLEBASE_DATA").unwrap_or_default();
+    let dir = std::env::var("SIMPLE_DATA").unwrap_or_default();
     if dir.is_empty() {
         let home = std::env::var("HOME").unwrap_or_else(|_| "/tmp".to_string());
-        PathBuf::from(home).join(".simplebase")
+        PathBuf::from(home).join(".simple")
     } else {
         PathBuf::from(dir)
     }
@@ -18,7 +18,8 @@ pub fn data_dir() -> PathBuf {
 
 pub fn open_db() -> Result<Connection> {
     let dir = data_dir();
-    std::fs::create_dir_all(&dir).map_err(|e| AppError::Internal(format!("create data dir: {e}")))?;
+    std::fs::create_dir_all(&dir)
+        .map_err(|e| AppError::Internal(format!("create data dir: {e}")))?;
     let path = dir.join("data.db");
     Connection::open(&path).map_err(|e| AppError::Internal(format!("open db: {e}")))
 }
@@ -110,6 +111,32 @@ pub fn migrate_db(conn: &Connection) -> Result<()> {
         );",
     )
     .map_err(|e| AppError::Internal(format!("migrate: {e}")))?;
+
+    conn.execute(
+        "CREATE TABLE IF NOT EXISTS _notifications (
+            id         TEXT PRIMARY KEY,
+            title      TEXT NOT NULL,
+            body       TEXT NOT NULL DEFAULT '',
+            type       TEXT NOT NULL DEFAULT 'info',
+            is_read    INTEGER NOT NULL DEFAULT 0,
+            created_at TEXT NOT NULL DEFAULT (datetime('now'))
+        );",
+        [],
+    )
+    .map_err(|e| AppError::Internal(format!("migrate: {e}")))?;
+
+    conn.execute(
+        "CREATE TABLE IF NOT EXISTS _logs (
+            id         TEXT PRIMARY KEY,
+            level      TEXT NOT NULL DEFAULT 'info',
+            message    TEXT NOT NULL,
+            meta       TEXT NOT NULL DEFAULT '{}',
+            created_at TEXT NOT NULL DEFAULT (datetime('now'))
+        );",
+        [],
+    )
+    .map_err(|e| AppError::Internal(format!("migrate: {e}")))?;
+
     Ok(())
 }
 
@@ -193,7 +220,12 @@ pub fn delete_collection(conn: &Connection, name: &str) -> Result<()> {
     Ok(())
 }
 
-pub fn insert_record(conn: &Connection, collection: &str, id: &str, data: &Value) -> Result<Record> {
+pub fn insert_record(
+    conn: &Connection,
+    collection: &str,
+    id: &str,
+    data: &Value,
+) -> Result<Record> {
     let now = Utc::now().to_rfc3339();
     let raw = data.to_string();
     let sql = format!(
@@ -228,8 +260,7 @@ pub fn get_record(conn: &Connection, collection: &str, id: &str) -> Result<Optio
             let data_str: String = row.get(1)?;
             let created_at: String = row.get(2)?;
             let updated_at: String = row.get(3)?;
-            let data: Value =
-                serde_json::from_str(&data_str).unwrap_or(serde_json::json!({}));
+            let data: Value = serde_json::from_str(&data_str).unwrap_or(serde_json::json!({}));
             Ok(Record {
                 id,
                 data,
@@ -272,8 +303,7 @@ pub fn list_records(
             let data_str: String = row.get(1)?;
             let created_at: String = row.get(2)?;
             let updated_at: String = row.get(3)?;
-            let data: Value =
-                serde_json::from_str(&data_str).unwrap_or(serde_json::json!({}));
+            let data: Value = serde_json::from_str(&data_str).unwrap_or(serde_json::json!({}));
             Ok(Record {
                 id,
                 data,
@@ -305,9 +335,7 @@ pub fn update_record(
 ) -> Result<Record> {
     let now = Utc::now().to_rfc3339();
     let raw = data.to_string();
-    let sql = format!(
-        "UPDATE \"_data_{collection}\" SET data = ?1, updated_at = ?2 WHERE id = ?3"
-    );
+    let sql = format!("UPDATE \"_data_{collection}\" SET data = ?1, updated_at = ?2 WHERE id = ?3");
     conn.execute(&sql, params![raw, now, id])
         .map_err(|e| AppError::Internal(e.to_string()))?;
 
@@ -323,7 +351,10 @@ pub fn delete_record(conn: &Connection, collection: &str, id: &str) -> Result<()
 }
 
 #[allow(clippy::type_complexity)]
-pub fn find_user_by_email(conn: &Connection, email: &str) -> Result<Option<(String, String, String, String, String)>> {
+pub fn find_user_by_email(
+    conn: &Connection,
+    email: &str,
+) -> Result<Option<(String, String, String, String, String)>> {
     let mut stmt = conn
         .prepare("SELECT id, email, created_at, updated_at, password FROM _users WHERE email = ?1")
         .map_err(|e| AppError::Internal(e.to_string()))?;
@@ -490,12 +521,7 @@ pub fn get_file(conn: &Connection, id: &str) -> Result<Option<FileRecord>> {
     }
 }
 
-pub fn list_files(
-    conn: &Connection,
-    bucket: &str,
-    page: i64,
-    per_page: i64,
-) -> Result<FilesPage> {
+pub fn list_files(conn: &Connection, bucket: &str, page: i64, per_page: i64) -> Result<FilesPage> {
     let total: i64 = conn
         .query_row(
             "SELECT COUNT(*) FROM _files WHERE bucket = ?1",
@@ -604,7 +630,14 @@ pub fn get_webhook(conn: &Connection, id: &str) -> Result<Option<Webhook>> {
     }
 }
 
-pub fn insert_webhook(conn: &Connection, id: &str, name: &str, url: &str, events: &[String], secret: &str) -> Result<Webhook> {
+pub fn insert_webhook(
+    conn: &Connection,
+    id: &str,
+    name: &str,
+    url: &str,
+    events: &[String],
+    secret: &str,
+) -> Result<Webhook> {
     let now = Utc::now().to_rfc3339();
     let events_str = serde_json::to_string(events).unwrap_or_else(|_| "[]".to_string());
     conn.execute(
@@ -654,8 +687,11 @@ pub fn update_webhook(
 }
 
 pub fn delete_webhook(conn: &Connection, id: &str) -> Result<()> {
-    conn.execute("DELETE FROM _webhook_logs WHERE webhook_id = ?1", params![id])
-        .map_err(|e| AppError::Internal(e.to_string()))?;
+    conn.execute(
+        "DELETE FROM _webhook_logs WHERE webhook_id = ?1",
+        params![id],
+    )
+    .map_err(|e| AppError::Internal(e.to_string()))?;
     conn.execute("DELETE FROM _webhooks WHERE id = ?1", params![id])
         .map_err(|e| AppError::Internal(e.to_string()))?;
     Ok(())
@@ -701,7 +737,9 @@ pub fn insert_webhook_log(conn: &Connection, log: &WebhookLog) -> Result<()> {
 
 pub fn list_secrets(conn: &Connection) -> Result<Vec<Secret>> {
     let mut stmt = conn
-        .prepare("SELECT id, name, value, scope, created_at, updated_at FROM _secrets ORDER BY name")
+        .prepare(
+            "SELECT id, name, value, scope, created_at, updated_at FROM _secrets ORDER BY name",
+        )
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let rows = stmt
         .query_map(params![], |row| {
@@ -724,7 +762,9 @@ pub fn list_secrets(conn: &Connection) -> Result<Vec<Secret>> {
 
 pub fn get_secret(conn: &Connection, id: &str) -> Result<Option<Secret>> {
     let mut stmt = conn
-        .prepare("SELECT id, name, value, scope, created_at, updated_at FROM _secrets WHERE id = ?1")
+        .prepare(
+            "SELECT id, name, value, scope, created_at, updated_at FROM _secrets WHERE id = ?1",
+        )
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let mut rows = stmt
         .query_map(params![id], |row| {
@@ -744,7 +784,13 @@ pub fn get_secret(conn: &Connection, id: &str) -> Result<Option<Secret>> {
     }
 }
 
-pub fn insert_secret(conn: &Connection, id: &str, name: &str, value: &str, scope: &str) -> Result<Secret> {
+pub fn insert_secret(
+    conn: &Connection,
+    id: &str,
+    name: &str,
+    value: &str,
+    scope: &str,
+) -> Result<Secret> {
     let now = Utc::now().to_rfc3339();
     conn.execute(
         "INSERT INTO _secrets (id, name, value, scope, created_at, updated_at) VALUES (?1, ?2, ?3, ?4, ?5, ?6)",
@@ -761,7 +807,13 @@ pub fn insert_secret(conn: &Connection, id: &str, name: &str, value: &str, scope
     })
 }
 
-pub fn update_secret(conn: &Connection, id: &str, name: &str, value: &str, scope: &str) -> Result<Secret> {
+pub fn update_secret(
+    conn: &Connection,
+    id: &str,
+    name: &str,
+    value: &str,
+    scope: &str,
+) -> Result<Secret> {
     let now = Utc::now().to_rfc3339();
     conn.execute(
         "UPDATE _secrets SET name = ?1, value = ?2, scope = ?3, updated_at = ?4 WHERE id = ?5",
@@ -784,12 +836,7 @@ pub fn delete_secret(conn: &Connection, id: &str) -> Result<()> {
     Ok(())
 }
 
-pub fn insert_user(
-    conn: &Connection,
-    id: &str,
-    email: &str,
-    password: &str,
-) -> Result<()> {
+pub fn insert_user(conn: &Connection, id: &str, email: &str, password: &str) -> Result<()> {
     let now = Utc::now().to_rfc3339();
     conn.execute(
         "INSERT INTO _users (id, email, password, created_at, updated_at) VALUES (?1, ?2, ?3, ?4, ?5)",
@@ -807,7 +854,13 @@ pub fn insert_user(
 
 // --- WebSocket ---
 
-pub fn insert_ws_connection(conn: &Connection, id: &str, remote_addr: &str, path: &str, user_agent: &str) -> Result<()> {
+pub fn insert_ws_connection(
+    conn: &Connection,
+    id: &str,
+    remote_addr: &str,
+    path: &str,
+    user_agent: &str,
+) -> Result<()> {
     let now = Utc::now().to_rfc3339();
     conn.execute(
         "INSERT INTO _ws_connections (id, remote_addr, path, user_agent, connected_at) VALUES (?1, ?2, ?3, ?4, ?5)",
@@ -878,14 +931,22 @@ pub fn get_ws_connection(conn: &Connection, id: &str) -> Result<Option<WSConnect
 }
 
 pub fn delete_ws_connection(conn: &Connection, id: &str) -> Result<()> {
-    conn.execute("DELETE FROM _ws_messages WHERE connection_id = ?1", params![id])
-        .map_err(|e| AppError::Internal(e.to_string()))?;
+    conn.execute(
+        "DELETE FROM _ws_messages WHERE connection_id = ?1",
+        params![id],
+    )
+    .map_err(|e| AppError::Internal(e.to_string()))?;
     conn.execute("DELETE FROM _ws_connections WHERE id = ?1", params![id])
         .map_err(|e| AppError::Internal(e.to_string()))?;
     Ok(())
 }
 
-pub fn insert_ws_message(conn: &Connection, connection_id: &str, direction: &str, content: &str) -> Result<()> {
+pub fn insert_ws_message(
+    conn: &Connection,
+    connection_id: &str,
+    direction: &str,
+    content: &str,
+) -> Result<()> {
     let id = uuid::Uuid::new_v4().to_string().replace('-', "");
     conn.execute(
         "INSERT INTO _ws_messages (id, connection_id, direction, content) VALUES (?1, ?2, ?3, ?4)",
@@ -966,7 +1027,9 @@ pub fn set_cache_entry(conn: &Connection, key: &str, value: &str, ttl: i64) -> R
 
 pub fn get_cache_entry(conn: &Connection, key: &str) -> Result<Option<CacheEntry>> {
     let mut stmt = conn
-        .prepare("SELECT key, value, ttl, expires_at, created_at, updated_at FROM _cache WHERE key = ?1")
+        .prepare(
+            "SELECT key, value, ttl, expires_at, created_at, updated_at FROM _cache WHERE key = ?1",
+        )
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let mut rows = stmt
         .query_map(params![key], |row| {
@@ -1051,4 +1114,149 @@ pub fn get_cache_stats(conn: &Connection) -> Result<serde_json::Value> {
         "total_entries": total,
         "expired_entries": expired,
     }))
+}
+
+pub fn insert_notification(
+    conn: &Connection,
+    id: &str,
+    title: &str,
+    body: &str,
+    ntype: &str,
+) -> Result<Notification> {
+    let now = Utc::now().to_rfc3339();
+    conn.execute(
+        "INSERT INTO _notifications (id, title, body, type, created_at) VALUES (?1, ?2, ?3, ?4, ?5)",
+        params![id, title, body, ntype, now],
+    )
+    .map_err(|e| AppError::Internal(e.to_string()))?;
+    Ok(Notification {
+        id: id.to_string(),
+        title: title.to_string(),
+        body: body.to_string(),
+        ntype: ntype.to_string(),
+        is_read: false,
+        created_at: now,
+    })
+}
+
+pub fn list_notifications(conn: &Connection) -> Result<Vec<Notification>> {
+    let mut stmt = conn
+        .prepare("SELECT id, title, body, type, is_read, created_at FROM _notifications ORDER BY created_at DESC")
+        .map_err(|e| AppError::Internal(e.to_string()))?;
+    let rows = stmt
+        .query_map([], |row| {
+            let is_read_int: i64 = row.get(4)?;
+            Ok(Notification {
+                id: row.get(0)?,
+                title: row.get(1)?,
+                body: row.get(2)?,
+                ntype: row.get(3)?,
+                is_read: is_read_int != 0,
+                created_at: row.get(5)?,
+            })
+        })
+        .map_err(|e| AppError::Internal(e.to_string()))?;
+    let mut notifications = Vec::new();
+    for row in rows {
+        notifications.push(row.map_err(|e| AppError::Internal(e.to_string()))?);
+    }
+    Ok(notifications)
+}
+
+pub fn get_notification(conn: &Connection, id: &str) -> Result<Option<Notification>> {
+    let mut stmt = conn
+        .prepare(
+            "SELECT id, title, body, type, is_read, created_at FROM _notifications WHERE id = ?1",
+        )
+        .map_err(|e| AppError::Internal(e.to_string()))?;
+    let mut rows = stmt
+        .query_map(params![id], |row| {
+            let is_read_int: i64 = row.get(4)?;
+            Ok(Notification {
+                id: row.get(0)?,
+                title: row.get(1)?,
+                body: row.get(2)?,
+                ntype: row.get(3)?,
+                is_read: is_read_int != 0,
+                created_at: row.get(5)?,
+            })
+        })
+        .map_err(|e| AppError::Internal(e.to_string()))?;
+    match rows.next() {
+        Some(Ok(notification)) => Ok(Some(notification)),
+        Some(Err(e)) => Err(AppError::Internal(e.to_string())),
+        None => Ok(None),
+    }
+}
+
+pub fn update_notification_read(conn: &Connection, id: &str) -> Result<Notification> {
+    conn.execute(
+        "UPDATE _notifications SET is_read = 1 WHERE id = ?1",
+        params![id],
+    )
+    .map_err(|e| AppError::Internal(e.to_string()))?;
+    get_notification(conn, id)?.ok_or_else(|| AppError::NotFound("not found".into()))
+}
+
+pub fn delete_notification(conn: &Connection, id: &str) -> Result<bool> {
+    let affected = conn
+        .execute("DELETE FROM _notifications WHERE id = ?1", params![id])
+        .map_err(|e| AppError::Internal(e.to_string()))?;
+    Ok(affected > 0)
+}
+
+pub fn clear_notifications(conn: &Connection) -> Result<()> {
+    conn.execute("DELETE FROM _notifications", [])
+        .map_err(|e| AppError::Internal(e.to_string()))?;
+    Ok(())
+}
+
+pub fn insert_log(
+    conn: &Connection,
+    id: &str,
+    level: &str,
+    message: &str,
+    meta: &str,
+) -> Result<LogEntry> {
+    let now = Utc::now().to_rfc3339();
+    conn.execute(
+        "INSERT INTO _logs (id, level, message, meta, created_at) VALUES (?1, ?2, ?3, ?4, ?5)",
+        params![id, level, message, meta, now],
+    )
+    .map_err(|e| AppError::Internal(e.to_string()))?;
+    Ok(LogEntry {
+        id: id.to_string(),
+        level: level.to_string(),
+        message: message.to_string(),
+        meta: meta.to_string(),
+        created_at: now,
+    })
+}
+
+pub fn list_logs(conn: &Connection) -> Result<Vec<LogEntry>> {
+    let mut stmt = conn
+        .prepare("SELECT id, level, message, meta, created_at FROM _logs ORDER BY created_at DESC")
+        .map_err(|e| AppError::Internal(e.to_string()))?;
+    let rows = stmt
+        .query_map([], |row| {
+            Ok(LogEntry {
+                id: row.get(0)?,
+                level: row.get(1)?,
+                message: row.get(2)?,
+                meta: row.get(3)?,
+                created_at: row.get(4)?,
+            })
+        })
+        .map_err(|e| AppError::Internal(e.to_string()))?;
+    let mut logs = Vec::new();
+    for row in rows {
+        logs.push(row.map_err(|e| AppError::Internal(e.to_string()))?);
+    }
+    Ok(logs)
+}
+
+pub fn clear_logs(conn: &Connection) -> Result<()> {
+    conn.execute("DELETE FROM _logs", [])
+        .map_err(|e| AppError::Internal(e.to_string()))?;
+    Ok(())
 }

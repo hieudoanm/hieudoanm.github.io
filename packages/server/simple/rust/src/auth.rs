@@ -1,8 +1,8 @@
 use std::sync::Mutex;
 
-use bcrypt::{hash, verify, DEFAULT_COST};
+use bcrypt::{DEFAULT_COST, hash, verify};
 use chrono::Utc;
-use jsonwebtoken::{decode, encode, DecodingKey, EncodingKey, Header, Validation};
+use jsonwebtoken::{DecodingKey, EncodingKey, Header, Validation, decode, encode};
 use rusqlite::Connection;
 use serde::{Deserialize, Serialize};
 use uuid::Uuid;
@@ -66,7 +66,10 @@ pub fn login_user(db: &Mutex<Connection>, email: &str, password: &str) -> Result
     }
 }
 
-fn generate_token(user_id: &str, email: &str) -> std::result::Result<String, jsonwebtoken::errors::Error> {
+fn generate_token(
+    user_id: &str,
+    email: &str,
+) -> std::result::Result<String, jsonwebtoken::errors::Error> {
     let now = Utc::now().timestamp() as usize;
     let claims = Claims {
         user_id: user_id.to_string(),

@@ -13,9 +13,10 @@ FROM scratch
 COPY --from=builder /app/simple /simple
 COPY --from=builder /app/public /public
 
-EXPOSE 8080
-
+ENV PORT=8080
 ENV SIMPLE_DATA=/data
+
+EXPOSE 8080
 
 VOLUME ["/data"]
 

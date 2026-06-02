@@ -22,6 +22,8 @@ type Server struct {
 	cronScheduler *cron.Cron
 	wsHub         *WSHub
 	cache         *CacheStore
+	sseHub        *SSEHub
+	logHub        *SSEHub
 }
 
 func errorJSON(w http.ResponseWriter, msg string, code int) {
@@ -1272,9 +1274,27 @@ func (s *Server) routes() http.Handler {
 	protected.HandleFunc("DELETE /api/cache", s.handleCacheFlush)
 	protected.HandleFunc("GET /api/cache/stats", s.handleCacheStats)
 
+	protected.HandleFunc("GET /api/notifications", s.handleNotificationsList)
+	protected.HandleFunc("POST /api/notifications", s.handleNotificationsCreate)
+	protected.HandleFunc("GET /api/notifications/{id}", s.handleNotificationsGet)
+	protected.HandleFunc("PATCH /api/notifications/{id}", s.handleNotificationsMarkRead)
+	protected.HandleFunc("DELETE /api/notifications/{id}", s.handleNotificationsDelete)
+	protected.HandleFunc("DELETE /api/notifications", s.handleNotificationsClear)
+
+	protected.HandleFunc("GET /api/logs", s.handleLogsList)
+	protected.HandleFunc("POST /api/logs", s.handleLogsCreate)
+	protected.HandleFunc("DELETE /api/logs", s.handleLogsClear)
+
 	mux.Handle("/api/", authMiddleware(protected))
 
 	mux.HandleFunc("GET /ws", s.wsHub.ServeWS)
+
+	if s.sseHub != nil {
+		mux.HandleFunc("GET /api/notifications/stream", s.sseHub.handleStream)
+	}
+	if s.logHub != nil {
+		mux.HandleFunc("GET /api/logs/stream", s.logHub.handleStream)
+	}
 
 	return mux
 }

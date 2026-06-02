@@ -1,6 +1,6 @@
 use aes_gcm::{
-    aead::{Aead, KeyInit, OsRng},
     Aes256Gcm, Nonce,
+    aead::{Aead, KeyInit, OsRng},
 };
 use rand::RngCore;
 use serde_json::Value;
@@ -13,7 +13,7 @@ pub const EVENT_SECRET_UPDATE: &str = "secret.update";
 pub const EVENT_SECRET_DELETE: &str = "secret.delete";
 
 pub fn get_or_create_secrets_key(data_dir: &PathBuf) -> Result<Vec<u8>, String> {
-    if let Ok(env_key) = std::env::var("SIMPLEBASE_SECRETS_KEY") {
+    if let Ok(env_key) = std::env::var("SIMPLE_SECRETS_KEY") {
         return hex::decode(&env_key).map_err(|e| format!("decode env key: {e}"));
     }
     let key_path = data_dir.join("secrets.key");
@@ -43,12 +43,9 @@ pub fn decrypt_secret(key: &[u8], encrypted: &str) -> Result<String, String> {
     if parts.len() != 2 {
         return Err("invalid encrypted format".into());
     }
-    let nonce_bytes =
-        hex::decode(parts[0]).map_err(|e| format!("decode nonce: {e}"))?;
-    let ciphertext =
-        hex::decode(parts[1]).map_err(|e| format!("decode ciphertext: {e}"))?;
-    let cipher =
-        Aes256Gcm::new_from_slice(key).map_err(|e| format!("new cipher: {e}"))?;
+    let nonce_bytes = hex::decode(parts[0]).map_err(|e| format!("decode nonce: {e}"))?;
+    let ciphertext = hex::decode(parts[1]).map_err(|e| format!("decode ciphertext: {e}"))?;
+    let cipher = Aes256Gcm::new_from_slice(key).map_err(|e| format!("new cipher: {e}"))?;
     let nonce = Nonce::from_slice(&nonce_bytes);
     let plaintext = cipher
         .decrypt(nonce, ciphertext.as_slice())

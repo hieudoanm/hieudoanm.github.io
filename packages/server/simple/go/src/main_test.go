@@ -16,12 +16,12 @@ import (
 
 func newTestServer(t *testing.T) *Server {
 	t.Helper()
-	dir, err := os.MkdirTemp("", "simplebase-test-*")
+	dir, err := os.MkdirTemp("", "simple-test-*")
 	if err != nil {
 		t.Fatal(err)
 	}
 	t.Cleanup(func() { os.RemoveAll(dir) })
-	os.Setenv("SIMPLEBASE_DATA", dir)
+	os.Setenv("SIMPLE_DATA", dir)
 	db, err := openDB()
 	if err != nil {
 		t.Fatal(err)
@@ -29,7 +29,7 @@ func newTestServer(t *testing.T) *Server {
 	if err := migrateDB(db); err != nil {
 		t.Fatal(err)
 	}
-	storageDir, _ := os.MkdirTemp("", "simplebase-storage-*")
+	storageDir, _ := os.MkdirTemp("", "simple-storage-*")
 	t.Cleanup(func() { os.RemoveAll(storageDir) })
 	key, err := getOrCreateSecretsKey(storageDir)
 	if err != nil {
@@ -38,7 +38,9 @@ func newTestServer(t *testing.T) *Server {
 	wsHub := NewWSHub(db)
 	go wsHub.Run()
 	cache := NewCacheStore(db)
-	return &Server{db: db, dataDir: storageDir, secretsKey: key, cronScheduler: nil, wsHub: wsHub, cache: cache}
+	sseHub := NewSSEHub(db)
+	logHub := NewSSEHub(db)
+	return &Server{db: db, dataDir: storageDir, secretsKey: key, cronScheduler: nil, wsHub: wsHub, cache: cache, sseHub: sseHub, logHub: logHub}
 }
 
 func request(t *testing.T, h http.Handler, method, path, body string) *http.Response {
@@ -1272,6 +1274,246 @@ func TestCacheAuthRequired(t *testing.T) {
 	h := srv.routes()
 
 	resp := request(t, h, "GET", "/api/cache", "")
+	if resp.StatusCode != 401 {
+		t.Fatalf("expected 401, got %d", resp.StatusCode)
+	}
+}
+
+// --- Notification Tests ---
+
+func TestNotificationCreate(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "POST", "/api/notifications", `{"title":"Test Notice","body":"Hello","type":"info"}`)
+	if resp.StatusCode != 201 {
+		t.Fatalf("expected 201, got %d", resp.StatusCode)
+	}
+	data := readBody(t, resp)
+	if data["title"] != "Test Notice" {
+		t.Fatalf("expected title Test Notice, got %v", data["title"])
+	}
+	if data["type"] != "info" {
+		t.Fatalf("expected type info, got %v", data["type"])
+	}
+}
+
+func TestNotificationList(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/notifications", `{"title":"N1","body":"B1","type":"info"}`)
+	request(t, h, "POST", "/api/notifications", `{"title":"N2","body":"B2","type":"warning"}`)
+
+	resp := request(t, h, "GET", "/api/notifications", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.StatusCode)
+	}
+	var list []map[string]any
+	if err := json.NewDecoder(resp.Body).Decode(&list); err != nil {
+		t.Fatal(err)
+	}
+	resp.Body.Close()
+	if len(list) < 2 {
+		t.Fatalf("expected at least 2 notifications, got %d", len(list))
+	}
+}
+
+func TestNotificationMarkRead(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "POST", "/api/notifications", `{"title":"Read Me","body":"Body","type":"info"}`)
+	data := readBody(t, resp)
+	id := data["id"].(string)
+
+	resp = request(t, h, "PATCH", "/api/notifications/"+id, "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.StatusCode)
+	}
+	data = readBody(t, resp)
+	if data["is_read"] != true {
+		t.Fatalf("expected is_read true, got %v", data["is_read"])
+	}
+}
+
+func TestNotificationDelete(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "POST", "/api/notifications", `{"title":"Delete Me","body":"Body","type":"error"}`)
+	data := readBody(t, resp)
+	id := data["id"].(string)
+
+	resp = request(t, h, "DELETE", "/api/notifications/"+id, "")
+	if resp.StatusCode != 204 {
+		t.Fatalf("expected 204, got %d", resp.StatusCode)
+	}
+
+	resp = request(t, h, "GET", "/api/notifications/"+id, "")
+	if resp.StatusCode != 404 {
+		t.Fatalf("expected 404 after delete, got %d", resp.StatusCode)
+	}
+}
+
+func TestNotificationValidation(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	// Missing title
+	resp := request(t, h, "POST", "/api/notifications", `{"body":"B","type":"info"}`)
+	if resp.StatusCode != 400 {
+		t.Fatalf("expected 400 for missing title, got %d", resp.StatusCode)
+	}
+
+	// Invalid type
+	resp = request(t, h, "POST", "/api/notifications", `{"title":"T","body":"B","type":"invalid"}`)
+	if resp.StatusCode != 400 {
+		t.Fatalf("expected 400 for invalid type, got %d", resp.StatusCode)
+	}
+}
+
+func TestNotificationClear(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/notifications", `{"title":"N1","body":"B1","type":"info"}`)
+
+	resp := request(t, h, "DELETE", "/api/notifications", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.StatusCode)
+	}
+
+	resp = request(t, h, "GET", "/api/notifications", "")
+	var list []map[string]any
+	if err := json.NewDecoder(resp.Body).Decode(&list); err != nil {
+		t.Fatal(err)
+	}
+	resp.Body.Close()
+	if len(list) != 0 {
+		t.Fatalf("expected 0 notifications after clear, got %d", len(list))
+	}
+}
+
+func TestNotificationAuthRequired(t *testing.T) {
+	srv := newTestServer(t)
+	h := srv.routes()
+
+	resp := request(t, h, "GET", "/api/notifications", "")
+	if resp.StatusCode != 401 {
+		t.Fatalf("expected 401, got %d", resp.StatusCode)
+	}
+}
+
+func TestLogCreate(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "POST", "/api/logs", `{"level":"info","message":"test log","meta":"{\"key\":\"val\"}"}`)
+	if resp.StatusCode != 201 {
+		t.Fatalf("expected 201, got %d: %s", resp.StatusCode, readBody(t, resp))
+	}
+	var log LogEntry
+	if err := json.NewDecoder(resp.Body).Decode(&log); err != nil {
+		t.Fatal(err)
+	}
+	if log.Message != "test log" {
+		t.Fatalf("expected 'test log', got %q", log.Message)
+	}
+	if log.Level != "info" {
+		t.Fatalf("expected 'info', got %q", log.Level)
+	}
+	if log.ID == "" {
+		t.Fatal("expected non-empty id")
+	}
+}
+
+func TestLogList(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	for i := 0; i < 3; i++ {
+		body := fmt.Sprintf(`{"level":"info","message":"log %d"}`, i)
+		resp := request(t, h, "POST", "/api/logs", body)
+		if resp.StatusCode != 201 {
+			t.Fatalf("create failed: %d", resp.StatusCode)
+		}
+	}
+
+	resp := request(t, h, "GET", "/api/logs", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.StatusCode)
+	}
+	var logs []LogEntry
+	if err := json.NewDecoder(resp.Body).Decode(&logs); err != nil {
+		t.Fatal(err)
+	}
+	if len(logs) != 3 {
+		t.Fatalf("expected 3 logs, got %d", len(logs))
+	}
+}
+
+func TestLogValidation(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "POST", "/api/logs", `{"level":"info","message":""}`)
+	if resp.StatusCode != 400 {
+		t.Fatalf("expected 400 for empty message, got %d", resp.StatusCode)
+	}
+
+	resp = request(t, h, "POST", "/api/logs", `{"level":"invalid","message":"test"}`)
+	if resp.StatusCode != 400 {
+		t.Fatalf("expected 400 for invalid level, got %d", resp.StatusCode)
+	}
+}
+
+func TestLogClear(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "POST", "/api/logs", `{"level":"info","message":"test"}`)
+	if resp.StatusCode != 201 {
+		t.Fatalf("create failed: %d", resp.StatusCode)
+	}
+
+	resp = request(t, h, "DELETE", "/api/logs", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.StatusCode)
+	}
+
+	resp = request(t, h, "GET", "/api/logs", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.StatusCode)
+	}
+	var logs []LogEntry
+	if err := json.NewDecoder(resp.Body).Decode(&logs); err != nil {
+		t.Fatal(err)
+	}
+	if len(logs) != 0 {
+		t.Fatalf("expected 0 logs after clear, got %d", len(logs))
+	}
+}
+
+func TestLogAuthRequired(t *testing.T) {
+	srv := newTestServer(t)
+	h := srv.routes()
+
+	resp := request(t, h, "GET", "/api/logs", "")
+	if resp.StatusCode != 401 {
+		t.Fatalf("expected 401, got %d", resp.StatusCode)
+	}
+	resp = request(t, h, "POST", "/api/logs", `{"message":"x","level":"info"}`)
 	if resp.StatusCode != 401 {
 		t.Fatalf("expected 401, got %d", resp.StatusCode)
 	}

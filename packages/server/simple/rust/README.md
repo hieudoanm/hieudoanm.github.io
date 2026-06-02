@@ -23,7 +23,7 @@ A lightweight Supabase/PocketBase-like backend in Go with SQLite.
 
 ```bash
 make build
-./bin/simplebase
+./bin/simple
 ```
 
 Open [http://localhost:8080](http://localhost:8080) for the admin dashboard.
@@ -120,11 +120,11 @@ DELETE /api/buckets/avatars/files/<id>
 
 ## Config
 
-| Env               | Default                           | Description     |
-| ----------------- | --------------------------------- | --------------- |
-| `PORT`            | `8080`                            | Server port     |
-| `JWT_SECRET`      | `dev-secret-change-in-production` | JWT signing key |
-| `SIMPLEBASE_DATA` | `~/.simplebase`                   | Data directory  |
+| Env           | Default                           | Description     |
+| ------------- | --------------------------------- | --------------- |
+| `PORT`        | `8080`                            | Server port     |
+| `JWT_SECRET`  | `dev-secret-change-in-production` | JWT signing key |
+| `SIMPLE_DATA` | `~/.simple`                       | Data directory  |
 
 ## Build
 
@@ -140,6 +140,6 @@ make all        # format + lint + test + build
 ## Docker
 
 ```bash
-docker build -t simplebase .
-docker run -p 8080:8080 -v simplebase-data:/data simplebase
+docker build -t simple .
+docker run -p 8080:8080 -v simple-data:/data simple
 ```

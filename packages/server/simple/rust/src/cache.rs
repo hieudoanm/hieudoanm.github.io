@@ -27,13 +27,7 @@ impl CacheStore {
         }
     }
 
-    pub fn set(
-        &self,
-        conn: &Connection,
-        key: &str,
-        value: &str,
-        ttl: i64,
-    ) -> Result<CacheEntry> {
+    pub fn set(&self, conn: &Connection, key: &str, value: &str, ttl: i64) -> Result<CacheEntry> {
         let entry = db::set_cache_entry(conn, key, value, ttl)?;
         let mut data = self.data.write().unwrap();
         data.insert(key.to_string(), entry.clone());

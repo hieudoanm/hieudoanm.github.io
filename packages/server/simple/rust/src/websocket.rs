@@ -2,12 +2,12 @@ use std::collections::HashMap;
 use std::sync::Arc;
 use std::time::Duration;
 
-use axum::extract::ws::{Message, WebSocket, WebSocketUpgrade};
 use axum::extract::State;
+use axum::extract::ws::{Message, WebSocket, WebSocketUpgrade};
 use axum::http::HeaderMap;
 use axum::response::IntoResponse;
 use chrono::Utc;
-use tokio::sync::{mpsc, RwLock};
+use tokio::sync::{RwLock, mpsc};
 use uuid::Uuid;
 
 use crate::db;
@@ -67,7 +67,12 @@ async fn handle_socket(mut socket: WebSocket, state: Arc<AppState>, user_agent: 
         connected_at: connected_at.clone(),
     };
 
-    state.ws_hub.write().await.clients.insert(id.clone(), consumer);
+    state
+        .ws_hub
+        .write()
+        .await
+        .clients
+        .insert(id.clone(), consumer);
     if let Ok(conn) = state.db.lock() {
         db::insert_ws_connection(&conn, &id, &remote_addr, &path, &user_agent).ok();
     }

@@ -12,13 +12,13 @@ import (
 )
 
 func openDB() (*sql.DB, error) {
-	dir := os.Getenv("SIMPLEBASE_DATA")
+	dir := os.Getenv("SIMPLE_DATA")
 	if dir == "" {
 		home, err := os.UserHomeDir()
 		if err != nil {
 			return nil, fmt.Errorf("get home dir: %w", err)
 		}
-		dir = filepath.Join(home, ".simplebase")
+		dir = filepath.Join(home, ".simple")
 	}
 	if err := os.MkdirAll(dir, 0755); err != nil {
 		return nil, fmt.Errorf("create data dir: %w", err)
@@ -60,39 +60,39 @@ type Bucket struct {
 	UpdatedAt string `json:"updated_at"`
 }
 
-	type FileRecord struct {
-		ID        string `json:"id"`
-		Bucket    string `json:"bucket"`
-		Filename  string `json:"filename"`
-		MimeType  string `json:"mime_type"`
-		Size      int64  `json:"size"`
-		CreatedAt string `json:"created_at"`
-		UpdatedAt string `json:"updated_at"`
-	}
+type FileRecord struct {
+	ID        string `json:"id"`
+	Bucket    string `json:"bucket"`
+	Filename  string `json:"filename"`
+	MimeType  string `json:"mime_type"`
+	Size      int64  `json:"size"`
+	CreatedAt string `json:"created_at"`
+	UpdatedAt string `json:"updated_at"`
+}
 
-	type Webhook struct {
-		ID        string   `json:"id"`
-		Name      string   `json:"name"`
-		URL       string   `json:"url"`
-		Events    []string `json:"events"`
-		Secret    string   `json:"secret,omitempty"`
-		IsActive  bool     `json:"is_active"`
-		CreatedAt string   `json:"created_at"`
-		UpdatedAt string   `json:"updated_at"`
-	}
+type Webhook struct {
+	ID        string   `json:"id"`
+	Name      string   `json:"name"`
+	URL       string   `json:"url"`
+	Events    []string `json:"events"`
+	Secret    string   `json:"secret,omitempty"`
+	IsActive  bool     `json:"is_active"`
+	CreatedAt string   `json:"created_at"`
+	UpdatedAt string   `json:"updated_at"`
+}
 
-	type WebhookLog struct {
-		ID             string `json:"id"`
-		WebhookID      string `json:"webhook_id"`
-		Event          string `json:"event"`
-		URL            string `json:"url"`
-		RequestBody    string `json:"request_body"`
-		ResponseStatus int    `json:"response_status"`
-		ResponseBody   string `json:"response_body"`
-		Error          string `json:"error,omitempty"`
-		Status         string `json:"status"`
-		CreatedAt      string `json:"created_at"`
-	}
+type WebhookLog struct {
+	ID             string `json:"id"`
+	WebhookID      string `json:"webhook_id"`
+	Event          string `json:"event"`
+	URL            string `json:"url"`
+	RequestBody    string `json:"request_body"`
+	ResponseStatus int    `json:"response_status"`
+	ResponseBody   string `json:"response_body"`
+	Error          string `json:"error,omitempty"`
+	Status         string `json:"status"`
+	CreatedAt      string `json:"created_at"`
+}
 
 type Secret struct {
 	ID        string `json:"id"`
@@ -123,12 +123,29 @@ type WSMessage struct {
 }
 
 type CacheEntry struct {
-	Key        string `json:"key"`
-	Value      string `json:"value"`
-	TTL        int    `json:"ttl"`
-	ExpiresAt  string `json:"expires_at"`
-	CreatedAt  string `json:"created_at"`
-	UpdatedAt  string `json:"updated_at"`
+	Key       string `json:"key"`
+	Value     string `json:"value"`
+	TTL       int    `json:"ttl"`
+	ExpiresAt string `json:"expires_at"`
+	CreatedAt string `json:"created_at"`
+	UpdatedAt string `json:"updated_at"`
+}
+
+type Notification struct {
+	ID        string `json:"id"`
+	Title     string `json:"title"`
+	Body      string `json:"body"`
+	Type      string `json:"type"`
+	IsRead    bool   `json:"is_read"`
+	CreatedAt string `json:"created_at"`
+}
+
+type LogEntry struct {
+	ID        string `json:"id"`
+	Level     string `json:"level"`
+	Message   string `json:"message"`
+	Meta      string `json:"meta"`
+	CreatedAt string `json:"created_at"`
 }
 
 type FilesPage struct {
@@ -247,6 +264,22 @@ func migrateDB(db *sql.DB) error {
 		expires_at TEXT NOT NULL DEFAULT '',
 		created_at TEXT NOT NULL DEFAULT (datetime('now')),
 		updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+	);
+	CREATE TABLE IF NOT EXISTS _notifications (
+		id         TEXT PRIMARY KEY,
+		title      TEXT NOT NULL,
+		body       TEXT NOT NULL DEFAULT '',
+		type       TEXT NOT NULL DEFAULT 'info',
+		is_read    INTEGER NOT NULL DEFAULT 0,
+		created_at TEXT NOT NULL DEFAULT (datetime('now'))
+	);
+
+	CREATE TABLE IF NOT EXISTS _logs (
+		id         TEXT PRIMARY KEY,
+		level      TEXT NOT NULL DEFAULT 'info',
+		message    TEXT NOT NULL,
+		meta       TEXT NOT NULL DEFAULT '{}',
+		created_at TEXT NOT NULL DEFAULT (datetime('now'))
 	);
 	`
 	_, err := db.Exec(schema)

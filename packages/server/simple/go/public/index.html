@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SimpleBase Admin</title>
+  <title>SimpleServer Admin</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/htmx.org@1.9.12"></script>
   <script src="https://unpkg.com/htmx.org@1.9.12/dist/ext/client-side-templates.js"></script>
@@ -23,7 +23,7 @@
   <div id="login-view" class="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-indigo-950">
     <div class="w-full max-w-md p-8">
       <div class="text-center mb-8">
-        <h1 class="text-3xl font-bold text-white">SimpleBase</h1>
+        <h1 class="text-3xl font-bold text-white">SimpleServer</h1>
         <p class="text-gray-400 mt-2">Admin Dashboard</p>
       </div>
       <div class="bg-gray-900/80 backdrop-blur rounded-2xl shadow-2xl border border-gray-800 p-8">
@@ -56,7 +56,7 @@
     <!-- Sidebar -->
     <aside id="sidebar" class="w-64 bg-gray-900/90 border-r border-gray-800 flex-shrink-0 hidden lg:flex flex-col">
       <div class="p-5 border-b border-gray-800">
-        <h1 class="text-xl font-bold text-white">SimpleBase</h1>
+        <h1 class="text-xl font-bold text-white">SimpleServer</h1>
         <p class="text-xs text-gray-500 mt-0.5">Admin Dashboard</p>
       </div>
       <nav class="flex-1 p-3 space-y-1">
@@ -81,6 +81,12 @@
         <button onclick="showView('cache')" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition-colors text-sm" data-view="cache">
           📦 Cache
         </button>
+        <button onclick="showView('notifications')" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition-colors text-sm" data-view="notifications">
+          🔔 Notifications <span id="notif-badge" class="ml-auto text-xs bg-red-600 text-white px-2 py-0.5 rounded-full hidden">0</span>
+        </button>
+        <button onclick="showView('logs')" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition-colors text-sm" data-view="logs">
+          📋 Logs <span id="log-badge" class="ml-auto text-xs bg-yellow-600 text-white px-2 py-0.5 rounded-full hidden">0</span>
+        </button>
       </nav>
       <div class="p-3 border-t border-gray-800">
         <button onclick="handleLogout()" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-400 hover:text-red-400 hover:bg-red-500/10 transition-colors text-sm">
@@ -93,7 +99,7 @@
     <!-- Mobile header -->
     <div class="fixed top-0 left-0 right-0 z-50 bg-gray-900 border-b border-gray-800 lg:hidden">
       <div class="flex items-center justify-between px-4 py-3">
-        <h1 class="text-lg font-bold">SimpleBase</h1>
+        <h1 class="text-lg font-bold">SimpleServer</h1>
         <button onclick="toggleMobileMenu()" class="p-2 rounded-lg hover:bg-gray-800">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
@@ -443,6 +449,66 @@
           </div>
         </div>
       </div>
+
+      <!-- Notifications View -->
+      <div id="view-notifications" class="view p-6">
+        <div class="max-w-6xl mx-auto">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <h2 class="text-2xl font-bold">Notifications</h2>
+              <p class="text-sm text-gray-400 mt-1">Real-time notifications via Server-Sent Events</p>
+            </div>
+            <div class="flex gap-3">
+              <button onclick="clearAllNotifications()" class="px-4 py-2 bg-red-600/20 hover:bg-red-600/30 text-red-400 rounded-lg text-sm font-medium border border-red-800/30">Clear All</button>
+              <button onclick="openNotifCreateModal()" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 rounded-lg text-sm font-medium">+ New Notification</button>
+            </div>
+          </div>
+          <div class="bg-gray-900/80 rounded-xl border border-gray-800 overflow-hidden">
+            <table class="w-full">
+              <thead>
+                <tr class="border-b border-gray-800 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
+                  <th class="px-6 py-3">Type</th>
+                  <th class="px-6 py-3">Title</th>
+                  <th class="px-6 py-3">Body</th>
+                  <th class="px-6 py-3">Status</th>
+                  <th class="px-6 py-3">Created</th>
+                  <th class="px-6 py-3">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="notifications-list" hx-get="/api/notifications" hx-trigger="notifications-ready" hx-ext="client-side-templates" mustache-template="tmpl-notifications" hx-swap="innerHTML">
+                <tr><td colspan="6" class="px-6 py-8 text-center text-gray-500">Loading...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Logs view -->
+      <div id="view-logs" class="view p-6">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-xl font-semibold text-gray-200">System Logs</h2>
+          <div class="flex gap-3">
+            <button onclick="clearAllLogs()" class="px-4 py-2 bg-red-600/20 text-red-400 hover:bg-red-600/30 rounded-lg text-sm transition-colors">Clear All</button>
+          </div>
+        </div>
+        <div class="bg-gray-900/50 rounded-xl border border-gray-800 overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="w-full">
+              <thead>
+                <tr class="text-xs uppercase tracking-wider text-gray-500 border-b border-gray-800">
+                  <th class="px-6 py-3 text-left">Level</th>
+                  <th class="px-6 py-3 text-left">Message</th>
+                  <th class="px-6 py-3 text-left">Meta</th>
+                  <th class="px-6 py-3 text-left">Created At</th>
+                </tr>
+              </thead>
+              <tbody id="logs-list" hx-get="/api/logs" hx-trigger="logs-ready" hx-ext="client-side-templates" mustache-template="tmpl-logs" hx-swap="innerHTML">
+                <tr><td colspan="4" class="px-6 py-8 text-center text-gray-500">Loading...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </main>
   </div>
 
@@ -710,10 +776,44 @@
 {{/.}}
 </script>
 
+  <script type="x-tmpl-mustache" id="tmpl-notifications">
+{{#.}}
+<tr class="border-b border-gray-800 hover:bg-gray-800/50">
+  <td class="px-6 py-4 text-sm">{{type}}</td>
+  <td class="px-6 py-4 font-medium text-gray-200">{{title}}</td>
+  <td class="px-6 py-4 text-sm text-gray-400 max-w-xs truncate">{{body}}</td>
+  <td class="px-6 py-4 text-sm">{{#is_read}}<span class="text-gray-500">Read</span>{{/is_read}}{{^is_read}}<span class="text-yellow-400">New</span>{{/is_read}}</td>
+  <td class="px-6 py-4 text-sm text-gray-500">{{created_at}}</td>
+  <td class="px-6 py-4 text-sm">
+    {{^is_read}}<button onclick="markNotifRead('{{id}}')" class="text-indigo-400 hover:text-indigo-300 mr-2">Read</button>{{/is_read}}
+    <button onclick="deleteNotification('{{id}}')" class="text-red-400 hover:text-red-300">🗑️</button>
+  </td>
+</tr>
+{{/.}}
+{{^.}}
+<tr><td colspan="6" class="px-6 py-8 text-center text-gray-500">No notifications</td></tr>
+{{/.}}
+</script>
+
+<!-- Logs list -->
+<script type="x-tmpl-mustache" id="tmpl-logs">
+{{#.}}
+<tr class="border-b border-gray-800 hover:bg-gray-800/50">
+  <td class="px-6 py-4 text-sm log-level-cell" data-level="{{level}}">{{level}}</td>
+  <td class="px-6 py-4 text-sm font-mono text-gray-200 max-w-md truncate">{{message}}</td>
+  <td class="px-6 py-4 text-sm text-gray-400 max-w-xs truncate">{{meta}}</td>
+  <td class="px-6 py-4 text-sm text-gray-500">{{created_at}}</td>
+</tr>
+{{/.}}
+{{^.}}
+<tr><td colspan="4" class="px-6 py-8 text-center text-gray-500">No logs</td></tr>
+{{/.}}
+</script>
+
   <!-- ==================== JAVASCRIPT ==================== -->
   <script>
     // ---- Auth ----
-    const TOKEN_KEY = 'simplebase_token';
+    const TOKEN_KEY = 'simple_server_token';
 
     function getToken() {
       return localStorage.getItem(TOKEN_KEY);
@@ -791,6 +891,8 @@
       document.getElementById('app-view').classList.remove('hidden');
       loadDashboard();
       showView('dashboard');
+      startNotifStream();
+      startLogStream();
     }
 
     function loadDashboard() {
@@ -818,6 +920,10 @@
         document.getElementById('websockets-list').dispatchEvent(new Event('websockets-ready'));
       } else if (view === 'cache') {
         document.getElementById('cache-list').dispatchEvent(new Event('cache-ready'));
+      } else if (view === 'notifications') {
+        document.getElementById('notifications-list').dispatchEvent(new Event('notifications-ready'));
+      } else if (view === 'logs') {
+        document.getElementById('logs-list').dispatchEvent(new Event('logs-ready'));
       }
     }
 
@@ -917,6 +1023,29 @@
       }
       if (e.detail.target.id === 'files-list') {
         updateFilesPagination();
+      }
+      if (e.detail.target.id === 'notifications-list') {
+        const rows = e.detail.target.querySelectorAll('tr');
+        rows.forEach(row => {
+          const typeCell = row.querySelector('td:first-child');
+          if (typeCell) {
+            const type = typeCell.textContent.trim();
+            typeCell.innerHTML = renderNotifType(type);
+          }
+        });
+      }
+      if (e.detail.target.id === 'logs-list') {
+        const rows = e.detail.target.querySelectorAll('tr');
+        rows.forEach(row => {
+          const levelCell = row.querySelector('.log-level-cell');
+          if (levelCell) {
+            const level = levelCell.dataset.level || levelCell.textContent.trim();
+            const map = {debug: '🔍 DEBUG', info: 'ℹ️ INFO', warn: '⚠️ WARN', error: '❌ ERROR'};
+            const colors = {debug: 'text-gray-400', info: 'text-blue-400', warn: 'text-yellow-400', error: 'text-red-400'};
+            levelCell.textContent = map[level] || level;
+            levelCell.className = `px-6 py-4 text-sm log-level-cell ${colors[level] || 'text-gray-400'}`;
+          }
+        });
       }
     });
 
@@ -1572,6 +1701,150 @@
         document.getElementById('cache-list').dispatchEvent(new Event('cache-ready'));
       }).catch(err => alert('Error: ' + err.message));
     }
+
+    // ---- Notifications ----
+    let notifStream = null;
+
+    function startNotifStream() {
+      const token = getToken();
+      if (!token) return;
+      if (notifStream) notifStream.close();
+      notifStream = new EventSource('/api/notifications/stream');
+      notifStream.onmessage = function(e) {
+        try {
+          const notif = JSON.parse(e.data);
+          const badge = document.getElementById('notif-badge');
+          if (badge) {
+            const count = parseInt(badge.textContent || '0');
+            badge.textContent = count + 1;
+            badge.classList.remove('hidden');
+          }
+          loadNotifications();
+        } catch(err) {}
+      };
+      notifStream.onerror = function() {
+        setTimeout(startNotifStream, 3000);
+      };
+    }
+
+    function renderNotifType(type) {
+      switch(type) {
+        case 'info': return 'ℹ️ Info';
+        case 'success': return '✅ Success';
+        case 'warning': return '⚠️ Warning';
+        case 'error': return '❌ Error';
+        default: return type;
+      }
+    }
+
+    function loadNotifications() {
+      const tbody = document.getElementById('notifications-list');
+      if (tbody) htmx.trigger(tbody, 'notifications-ready');
+    }
+
+    function openNotifCreateModal() {
+      openModal('modal-create-notification');
+    }
+
+    async function createNotification(event) {
+      event.preventDefault();
+      const form = event.target;
+      const data = Object.fromEntries(new FormData(form));
+      try {
+        const res = await fetch('/api/notifications', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + getToken() },
+          body: JSON.stringify(data)
+        });
+        const result = await res.json();
+        if (!res.ok) throw new Error(result.error || 'Create failed');
+        closeModal(null);
+        loadNotifications();
+      } catch (err) {
+        alert('Error: ' + err.message);
+      }
+    }
+
+    async function markNotifRead(id) {
+      try {
+        const res = await fetch('/api/notifications/' + encodeURIComponent(id), {
+          method: 'PATCH',
+          headers: { 'Authorization': 'Bearer ' + getToken() }
+        });
+        if (!res.ok) {
+          const data = await res.json();
+          throw new Error(data.error || 'Mark read failed');
+        }
+        loadNotifications();
+      } catch (err) {
+        alert('Error: ' + err.message);
+      }
+    }
+
+    async function deleteNotification(id) {
+      if (!confirm('Delete this notification?')) return;
+      try {
+        const res = await fetch('/api/notifications/' + encodeURIComponent(id), {
+          method: 'DELETE',
+          headers: { 'Authorization': 'Bearer ' + getToken() }
+        });
+        if (!res.ok) {
+          const data = await res.json();
+          throw new Error(data.error || 'Delete failed');
+        }
+        loadNotifications();
+      } catch (err) {
+        alert('Error: ' + err.message);
+      }
+    }
+
+    async function clearAllNotifications() {
+      if (!confirm('Delete all notifications?')) return;
+      try {
+        const res = await fetch('/api/notifications', {
+          method: 'DELETE',
+          headers: { 'Authorization': 'Bearer ' + getToken() }
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || 'Clear failed');
+        document.getElementById('notif-badge').classList.add('hidden');
+        loadNotifications();
+      } catch (err) {
+        alert('Error: ' + err.message);
+      }
+    }
+
+    // ---- Logs SSE + CRUD ----
+    let logEventSource = null;
+
+    function startLogStream() {
+      if (logEventSource) logEventSource.close();
+      logEventSource = new EventSource('/api/logs/stream');
+      logEventSource.onmessage = () => {
+        if (document.getElementById('view-logs').classList.contains('active')) {
+          document.getElementById('logs-list').dispatchEvent(new Event('logs-ready'));
+        }
+      };
+      logEventSource.onerror = () => {
+        logEventSource.close();
+        setTimeout(startLogStream, 3000);
+      };
+    }
+
+    async function clearAllLogs() {
+      if (!confirm('Delete ALL logs?')) return;
+      try {
+        const res = await fetch('/api/logs', {
+          method: 'DELETE',
+          headers: { 'Authorization': 'Bearer ' + getToken() }
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || 'Clear failed');
+        document.getElementById('logs-list').dispatchEvent(new Event('logs-ready'));
+      } catch (err) {
+        alert('Error: ' + err.message);
+      }
+    }
   </script>
 
   <!-- ==================== MODAL TEMPLATES ==================== -->
@@ -1969,5 +2242,35 @@
       </form>
     </div>
   </template>
+
+  <script type="x-tmpl-mustache" id="modal-create-notification">
+      <h3 class="text-lg font-semibold mb-4">Create Notification</h3>
+      <form onsubmit="createNotification(event)" class="p-6 space-y-4">
+        <div>
+          <label class="block text-sm font-medium text-gray-300 mb-1">Title</label>
+          <input type="text" name="title" required placeholder="e.g. Server Maintenance"
+            class="w-full px-4 py-2.5 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-300 mb-1">Body</label>
+          <textarea name="body" rows="3" placeholder="Notification details..."
+            class="w-full px-4 py-2.5 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-300 mb-1">Type</label>
+          <select name="type"
+            class="w-full px-4 py-2.5 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            <option value="info">Info</option>
+            <option value="success">Success</option>
+            <option value="warning">Warning</option>
+            <option value="error">Error</option>
+          </select>
+        </div>
+        <div class="flex justify-end gap-3 pt-2">
+          <button type="button" onclick="closeModal(null)" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg text-sm">Cancel</button>
+          <button type="submit" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 rounded-lg text-sm font-medium">Create</button>
+        </div>
+      </form>
+  </script>
 </body>
 </html>

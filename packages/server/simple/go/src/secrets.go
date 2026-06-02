@@ -18,7 +18,7 @@ const (
 )
 
 func getOrCreateSecretsKey(dataDir string) ([]byte, error) {
-	envKey := os.Getenv("SIMPLEBASE_SECRETS_KEY")
+	envKey := os.Getenv("SIMPLE_SECRETS_KEY")
 	if envKey != "" {
 		return hex.DecodeString(envKey)
 	}

@@ -1,6 +1,6 @@
+use axum::Json;
 use axum::http::StatusCode;
 use axum::response::{IntoResponse, Response};
-use axum::Json;
 use serde::{Deserialize, Serialize};
 use serde_json::Value;
 
@@ -272,4 +272,46 @@ pub struct SetCacheRequest {
     #[serde(default)]
     pub value: String,
     pub ttl: Option<i64>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct Notification {
+    pub id: String,
+    pub title: String,
+    #[serde(default)]
+    pub body: String,
+    #[serde(rename = "type")]
+    pub ntype: String,
+    pub is_read: bool,
+    pub created_at: String,
+}
+
+#[derive(Debug, Deserialize)]
+pub struct CreateNotificationRequest {
+    #[serde(default)]
+    pub title: String,
+    #[serde(default)]
+    pub body: String,
+    #[serde(rename = "type")]
+    pub ntype: String,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct LogEntry {
+    pub id: String,
+    pub level: String,
+    pub message: String,
+    #[serde(default)]
+    pub meta: String,
+    pub created_at: String,
+}
+
+#[derive(Debug, Deserialize)]
+pub struct CreateLogRequest {
+    #[serde(default)]
+    pub level: String,
+    #[serde(default)]
+    pub message: String,
+    #[serde(default)]
+    pub meta: String,
 }

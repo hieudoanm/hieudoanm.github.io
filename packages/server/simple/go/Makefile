@@ -2,7 +2,7 @@ GO=go
 BUILD_DIR=bin
 BINARY=simple
 
-.PHONY: all build clean test format lint tidy
+.PHONY: all build clean test format lint tidy start docker-start
 
 all: format lint test build
 
@@ -25,5 +25,11 @@ lint:
 tidy:
 	$(GO) mod tidy
 
-start:
-	./bin/simple
+PORT ?= 8080
+
+start: build
+	PORT=$(PORT) ./bin/simple
+
+docker-start:
+	docker build -t simple-server .
+	docker run --rm -p $(PORT):$(PORT) -e PORT=$(PORT) -v simple-data:/data simple-server

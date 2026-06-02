@@ -2,19 +2,21 @@ use std::path::PathBuf;
 use std::sync::Mutex;
 
 use axum::{
-    body::Body,
-    extract::{Path, Query, State},
-    extract::ws::Message,
-    http::{HeaderMap, StatusCode},
     Json,
+    body::Body,
+    extract::ws::Message,
+    extract::{Path, Query, State},
+    http::{HeaderMap, StatusCode},
 };
 use rusqlite::Connection;
 use serde::Serialize;
 use serde_json::Value;
+use uuid::Uuid;
 
 use crate::auth;
 use crate::db;
 use crate::models::*;
+use crate::notification;
 use crate::secrets;
 use crate::webhook;
 use crate::websocket;
@@ -26,9 +28,11 @@ pub struct AppState {
     pub secrets_key: Vec<u8>,
     pub ws_hub: std::sync::Arc<tokio::sync::RwLock<websocket::WSHub>>,
     pub cache: std::sync::Arc<crate::cache::CacheStore>,
+    pub sse_hub: std::sync::Arc<tokio::sync::RwLock<crate::notification::SSEHub>>,
+    pub log_hub: std::sync::Arc<tokio::sync::RwLock<crate::log::SSEHub>>,
 }
 
-fn extract_token(headers: &HeaderMap) -> std::result::Result<String, AppError> {
+pub(crate) fn extract_token(headers: &HeaderMap) -> std::result::Result<String, AppError> {
     let auth = headers
         .get("Authorization")
         .ok_or_else(|| AppError::Unauthorized("authorization header required".into()))?
@@ -49,7 +53,9 @@ pub async fn post_register(
     Json(req): Json<RegisterRequest>,
 ) -> std::result::Result<Json<UserResponse>, AppError> {
     if req.email.is_empty() || req.password.is_empty() {
-        return Err(AppError::BadRequest("email and password are required".into()));
+        return Err(AppError::BadRequest(
+            "email and password are required".into(),
+        ));
     }
     let user = auth::register_user(&state.db, &req.email, &req.password)?;
     Ok(Json(user))
@@ -60,7 +66,9 @@ pub async fn post_login(
     Json(req): Json<LoginRequest>,
 ) -> std::result::Result<Json<LoginResponse>, AppError> {
     if req.email.is_empty() || req.password.is_empty() {
-        return Err(AppError::BadRequest("email and password are required".into()));
+        return Err(AppError::BadRequest(
+            "email and password are required".into(),
+        ));
     }
     let resp = auth::login_user(&state.db, &req.email, &req.password)?;
     Ok(Json(resp))
@@ -72,7 +80,10 @@ pub async fn list_collections(
 ) -> std::result::Result<Json<Vec<Collection>>, AppError> {
     let _token = extract_token(&headers)?;
     auth::validate_token(&_token)?;
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
     let cols = db::list_collections(&conn)?;
     Ok(Json(cols))
 }
@@ -87,12 +98,19 @@ pub async fn create_collection(
     if req.name.is_empty() {
         return Err(AppError::BadRequest("name is required".into()));
     }
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
     db::insert_collection(&conn, &req.name, &req.schema)?;
     db::create_collection_table(&conn, &req.name)?;
     let c = db::get_collection(&conn, &req.name)?
         .ok_or_else(|| AppError::Internal("collection not found after create".into()))?;
-    webhook::dispatch_event(&state, webhook::EVENT_COLLECTION_CREATE, webhook::webhook_collection_data(&c));
+    webhook::dispatch_event(
+        &state,
+        webhook::EVENT_COLLECTION_CREATE,
+        webhook::webhook_collection_data(&c),
+    );
     Ok(Json(c))
 }
 
@@ -103,9 +121,12 @@ pub async fn get_collection(
 ) -> std::result::Result<Json<Collection>, AppError> {
     let _token = extract_token(&headers)?;
     auth::validate_token(&_token)?;
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
-    let c = db::get_collection(&conn, &name)?
-        .ok_or_else(|| AppError::NotFound("not found".into()))?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
+    let c =
+        db::get_collection(&conn, &name)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
     Ok(Json(c))
 }
 
@@ -116,13 +137,20 @@ pub async fn delete_collection(
 ) -> std::result::Result<StatusCode, AppError> {
     let _token = extract_token(&headers)?;
     auth::validate_token(&_token)?;
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
     let existing = db::get_collection(&conn, &name)?;
     if existing.is_none() {
         return Err(AppError::NotFound("not found".into()));
     }
     let c = existing.unwrap();
-    webhook::dispatch_event(&state, webhook::EVENT_COLLECTION_DELETE, webhook::webhook_collection_data(&c));
+    webhook::dispatch_event(
+        &state,
+        webhook::EVENT_COLLECTION_DELETE,
+        webhook::webhook_collection_data(&c),
+    );
     db::delete_collection(&conn, &name)?;
     Ok(StatusCode::NO_CONTENT)
 }
@@ -135,14 +163,23 @@ pub async fn create_record(
 ) -> std::result::Result<Json<Record>, AppError> {
     let _token = extract_token(&headers)?;
     auth::validate_token(&_token)?;
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
     let existing = db::get_collection(&conn, &name)?;
     if existing.is_none() {
         return Err(AppError::NotFound("collection not found".into()));
     }
-    let id = req.id.unwrap_or_else(|| uuid::Uuid::new_v4().to_string().replace('-', ""));
+    let id = req
+        .id
+        .unwrap_or_else(|| uuid::Uuid::new_v4().to_string().replace('-', ""));
     let rec = db::insert_record(&conn, &name, &id, &req.data)?;
-    webhook::dispatch_event(&state, webhook::EVENT_RECORD_CREATE, webhook::webhook_record_data(&name, &rec));
+    webhook::dispatch_event(
+        &state,
+        webhook::EVENT_RECORD_CREATE,
+        webhook::webhook_record_data(&name, &rec),
+    );
     Ok(Json(rec))
 }
 
@@ -154,7 +191,10 @@ pub async fn list_records(
 ) -> std::result::Result<Json<RecordsPage>, AppError> {
     let _token = extract_token(&headers)?;
     auth::validate_token(&_token)?;
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
     let existing = db::get_collection(&conn, &name)?;
     if existing.is_none() {
         return Err(AppError::NotFound("collection not found".into()));
@@ -172,9 +212,12 @@ pub async fn get_record(
 ) -> std::result::Result<Json<Record>, AppError> {
     let _token = extract_token(&headers)?;
     auth::validate_token(&_token)?;
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
-    let rec = db::get_record(&conn, &name, &id)?
-        .ok_or_else(|| AppError::NotFound("not found".into()))?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
+    let rec =
+        db::get_record(&conn, &name, &id)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
     Ok(Json(rec))
 }
 
@@ -186,13 +229,20 @@ pub async fn update_record(
 ) -> std::result::Result<Json<Record>, AppError> {
     let _token = extract_token(&headers)?;
     auth::validate_token(&_token)?;
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
     let existing = db::get_collection(&conn, &name)?;
     if existing.is_none() {
         return Err(AppError::NotFound("collection not found".into()));
     }
     let rec = db::update_record(&conn, &name, &id, &req.data)?;
-    webhook::dispatch_event(&state, webhook::EVENT_RECORD_UPDATE, webhook::webhook_record_data(&name, &rec));
+    webhook::dispatch_event(
+        &state,
+        webhook::EVENT_RECORD_UPDATE,
+        webhook::webhook_record_data(&name, &rec),
+    );
     Ok(Json(rec))
 }
 
@@ -203,13 +253,20 @@ pub async fn delete_record(
 ) -> std::result::Result<StatusCode, AppError> {
     let _token = extract_token(&headers)?;
     auth::validate_token(&_token)?;
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
     let existing = db::get_record(&conn, &name, &id)?;
     if existing.is_none() {
         return Err(AppError::NotFound("not found".into()));
     }
     let rec = existing.unwrap();
-    webhook::dispatch_event(&state, webhook::EVENT_RECORD_DELETE, webhook::webhook_record_data(&name, &rec));
+    webhook::dispatch_event(
+        &state,
+        webhook::EVENT_RECORD_DELETE,
+        webhook::webhook_record_data(&name, &rec),
+    );
     db::delete_record(&conn, &name, &id)?;
     Ok(StatusCode::NO_CONTENT)
 }
@@ -220,7 +277,10 @@ pub async fn list_buckets(
 ) -> std::result::Result<Json<Vec<Bucket>>, AppError> {
     let _token = extract_token(&headers)?;
     auth::validate_token(&_token)?;
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
     let buckets = db::list_buckets(&conn)?;
     Ok(Json(buckets))
 }
@@ -235,12 +295,19 @@ pub async fn create_bucket(
     if req.name.is_empty() {
         return Err(AppError::BadRequest("name is required".into()));
     }
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
     let bucket = db::insert_bucket(&conn, &req.name, req.is_public)?;
     let dir = state.storage_dir.join("storage").join(&req.name);
     std::fs::create_dir_all(&dir)
         .map_err(|e| AppError::Internal(format!("create storage dir: {e}")))?;
-    webhook::dispatch_event(&state, webhook::EVENT_BUCKET_CREATE, webhook::webhook_bucket_data(&bucket));
+    webhook::dispatch_event(
+        &state,
+        webhook::EVENT_BUCKET_CREATE,
+        webhook::webhook_bucket_data(&bucket),
+    );
     Ok(Json(bucket))
 }
 
@@ -251,9 +318,12 @@ pub async fn get_bucket(
 ) -> std::result::Result<Json<Bucket>, AppError> {
     let _token = extract_token(&headers)?;
     auth::validate_token(&_token)?;
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
-    let bucket = db::get_bucket(&conn, &name)?
-        .ok_or_else(|| AppError::NotFound("not found".into()))?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
+    let bucket =
+        db::get_bucket(&conn, &name)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
     Ok(Json(bucket))
 }
 
@@ -264,13 +334,20 @@ pub async fn delete_bucket(
 ) -> std::result::Result<StatusCode, AppError> {
     let _token = extract_token(&headers)?;
     auth::validate_token(&_token)?;
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
     let existing = db::get_bucket(&conn, &name)?;
     if existing.is_none() {
         return Err(AppError::NotFound("not found".into()));
     }
     let b = existing.unwrap();
-    webhook::dispatch_event(&state, webhook::EVENT_BUCKET_DELETE, webhook::webhook_bucket_data(&b));
+    webhook::dispatch_event(
+        &state,
+        webhook::EVENT_BUCKET_DELETE,
+        webhook::webhook_bucket_data(&b),
+    );
     let files = db::delete_bucket(&conn, &name)?;
     let dir = state.storage_dir.join("storage").join(&name);
     for f in &files {
@@ -300,7 +377,10 @@ pub async fn upload_file(
         .map_err(|_| AppError::BadRequest("could not parse multipart boundary".into()))?;
 
     {
-        let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+        let conn = state
+            .db
+            .lock()
+            .map_err(|e| AppError::Internal(e.to_string()))?;
         let existing = db::get_bucket(&conn, &bucket)?;
         if existing.is_none() {
             return Err(AppError::NotFound("bucket not found".into()));
@@ -331,7 +411,9 @@ pub async fn upload_file(
         return Err(AppError::BadRequest("file is empty".into()));
     }
 
-    if mime_type == "application/octet-stream" && let Some(t) = infer::get(&data) {
+    if mime_type == "application/octet-stream"
+        && let Some(t) = infer::get(&data)
+    {
         mime_type = t.mime_type().to_string();
     }
 
@@ -344,9 +426,18 @@ pub async fn upload_file(
         .await
         .map_err(|e| AppError::Internal(format!("write file: {e}")))?;
 
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
-    let record =
-        db::insert_file(&conn, &bucket, &id, &file_name, &mime_type, data.len() as i64)?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
+    let record = db::insert_file(
+        &conn,
+        &bucket,
+        &id,
+        &file_name,
+        &mime_type,
+        data.len() as i64,
+    )?;
     Ok(Json(record))
 }
 
@@ -358,7 +449,10 @@ pub async fn list_files(
 ) -> std::result::Result<Json<FilesPage>, AppError> {
     let _token = extract_token(&headers)?;
     auth::validate_token(&_token)?;
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
     let existing = db::get_bucket(&conn, &bucket)?;
     if existing.is_none() {
         return Err(AppError::NotFound("bucket not found".into()));
@@ -378,16 +472,23 @@ pub async fn download_file(
     auth::validate_token(&_token)?;
 
     let f = {
-        let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
-        let f = db::get_file(&conn, &file_id)?
-            .ok_or_else(|| AppError::NotFound("not found".into()))?;
+        let conn = state
+            .db
+            .lock()
+            .map_err(|e| AppError::Internal(e.to_string()))?;
+        let f =
+            db::get_file(&conn, &file_id)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
         if f.bucket != bucket {
             return Err(AppError::NotFound("not found".into()));
         }
         f
     };
 
-    let file_path = state.storage_dir.join("storage").join(&bucket).join(&file_id);
+    let file_path = state
+        .storage_dir
+        .join("storage")
+        .join(&bucket)
+        .join(&file_id);
     let data = tokio::fs::read(&file_path)
         .await
         .map_err(|_| AppError::NotFound("file not found on disk".into()))?;
@@ -411,7 +512,10 @@ pub async fn delete_file(
 ) -> std::result::Result<StatusCode, AppError> {
     let _token = extract_token(&headers)?;
     auth::validate_token(&_token)?;
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
     let f = db::get_file(&conn, &file_id)?;
     match f {
         Some(ref f) if f.bucket == bucket => {}
@@ -419,7 +523,11 @@ pub async fn delete_file(
     }
     let deleted = db::delete_file(&conn, &file_id)?;
     if deleted.is_some() {
-        let file_path = state.storage_dir.join("storage").join(&bucket).join(&file_id);
+        let file_path = state
+            .storage_dir
+            .join("storage")
+            .join(&bucket)
+            .join(&file_id);
         let _ = std::fs::remove_file(&file_path);
     }
     Ok(StatusCode::NO_CONTENT)
@@ -431,7 +539,10 @@ pub async fn list_webhooks(
 ) -> std::result::Result<Json<Vec<Webhook>>, AppError> {
     let _token = extract_token(&headers)?;
     auth::validate_token(&_token)?;
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
     let hooks = db::list_webhooks(&conn)?;
     Ok(Json(hooks))
 }
@@ -450,13 +561,18 @@ pub async fn create_webhook(
         return Err(AppError::BadRequest("url is required".into()));
     }
     if req.events.is_empty() {
-        return Err(AppError::BadRequest("at least one event is required".into()));
+        return Err(AppError::BadRequest(
+            "at least one event is required".into(),
+        ));
     }
     if let Err(e) = webhook::validate_events(&req.events) {
         return Err(AppError::BadRequest(e));
     }
     let id = uuid::Uuid::new_v4().to_string().replace('-', "");
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
     let h = db::insert_webhook(&conn, &id, &req.name, &req.url, &req.events, &req.secret)?;
     Ok(Json(h))
 }
@@ -468,9 +584,11 @@ pub async fn get_webhook(
 ) -> std::result::Result<Json<Webhook>, AppError> {
     let _token = extract_token(&headers)?;
     auth::validate_token(&_token)?;
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
-    let h = db::get_webhook(&conn, &id)?
-        .ok_or_else(|| AppError::NotFound("not found".into()))?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
+    let h = db::get_webhook(&conn, &id)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
     Ok(Json(h))
 }
 
@@ -482,9 +600,12 @@ pub async fn update_webhook(
 ) -> std::result::Result<Json<Webhook>, AppError> {
     let _token = extract_token(&headers)?;
     auth::validate_token(&_token)?;
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
-    let existing = db::get_webhook(&conn, &id)?
-        .ok_or_else(|| AppError::NotFound("not found".into()))?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
+    let existing =
+        db::get_webhook(&conn, &id)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
 
     let name = req.name.unwrap_or(existing.name);
     let url = req.url.unwrap_or(existing.url);
@@ -507,7 +628,10 @@ pub async fn delete_webhook(
 ) -> std::result::Result<StatusCode, AppError> {
     let _token = extract_token(&headers)?;
     auth::validate_token(&_token)?;
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
     let existing = db::get_webhook(&conn, &id)?;
     if existing.is_none() {
         return Err(AppError::NotFound("not found".into()));
@@ -523,7 +647,10 @@ pub async fn list_webhook_logs(
 ) -> std::result::Result<Json<Vec<WebhookLog>>, AppError> {
     let _token = extract_token(&headers)?;
     auth::validate_token(&_token)?;
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
     let existing = db::get_webhook(&conn, &id)?;
     if existing.is_none() {
         return Err(AppError::NotFound("not found".into()));
@@ -549,7 +676,10 @@ pub async fn list_secrets(
 ) -> std::result::Result<Json<Vec<SecretListItem>>, AppError> {
     let _token = extract_token(&headers)?;
     auth::validate_token(&_token)?;
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
     let secrets = db::list_secrets(&conn)?;
     let items: Vec<SecretListItem> = secrets
         .into_iter()
@@ -574,13 +704,24 @@ pub async fn create_secret(
     if req.name.is_empty() {
         return Err(AppError::BadRequest("name is required".into()));
     }
-    let scope = if req.scope.is_empty() { "general".to_string() } else { req.scope };
+    let scope = if req.scope.is_empty() {
+        "general".to_string()
+    } else {
+        req.scope
+    };
     let encrypted = secrets::encrypt_secret(&state.secrets_key, &req.value)
         .map_err(|e| AppError::Internal(e))?;
     let id = uuid::Uuid::new_v4().to_string().replace('-', "");
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
     let secret = db::insert_secret(&conn, &id, &req.name, &encrypted, &scope)?;
-    webhook::dispatch_event(&state, secrets::EVENT_SECRET_CREATE, secrets::webhook_secret_data(&secret));
+    webhook::dispatch_event(
+        &state,
+        secrets::EVENT_SECRET_CREATE,
+        secrets::webhook_secret_data(&secret),
+    );
     Ok((StatusCode::CREATED, Json(secret)))
 }
 
@@ -591,9 +732,12 @@ pub async fn get_secret(
 ) -> std::result::Result<Json<Secret>, AppError> {
     let _token = extract_token(&headers)?;
     auth::validate_token(&_token)?;
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
-    let mut secret = db::get_secret(&conn, &id)?
-        .ok_or_else(|| AppError::NotFound("not found".into()))?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
+    let mut secret =
+        db::get_secret(&conn, &id)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
     secret.value = secrets::decrypt_secret(&state.secrets_key, &secret.value)
         .map_err(|e| AppError::Internal(e))?;
     Ok(Json(secret))
@@ -607,9 +751,12 @@ pub async fn update_secret(
 ) -> std::result::Result<Json<Secret>, AppError> {
     let _token = extract_token(&headers)?;
     auth::validate_token(&_token)?;
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
-    let existing = db::get_secret(&conn, &id)?
-        .ok_or_else(|| AppError::NotFound("not found".into()))?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
+    let existing =
+        db::get_secret(&conn, &id)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
 
     let name = req.name.unwrap_or(existing.name);
     let scope = req.scope.unwrap_or(existing.scope);
@@ -620,7 +767,11 @@ pub async fn update_secret(
     let encrypted = secrets::encrypt_secret(&state.secrets_key, &plaintext)
         .map_err(|e| AppError::Internal(e))?;
     let secret = db::update_secret(&conn, &id, &name, &encrypted, &scope)?;
-    webhook::dispatch_event(&state, secrets::EVENT_SECRET_UPDATE, secrets::webhook_secret_data(&secret));
+    webhook::dispatch_event(
+        &state,
+        secrets::EVENT_SECRET_UPDATE,
+        secrets::webhook_secret_data(&secret),
+    );
     Ok(Json(secret))
 }
 
@@ -631,13 +782,20 @@ pub async fn delete_secret(
 ) -> std::result::Result<StatusCode, AppError> {
     let _token = extract_token(&headers)?;
     auth::validate_token(&_token)?;
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
     let existing = db::get_secret(&conn, &id)?;
     if existing.is_none() {
         return Err(AppError::NotFound("not found".into()));
     }
     db::delete_secret(&conn, &id)?;
-    webhook::dispatch_event(&state, secrets::EVENT_SECRET_DELETE, secrets::webhook_secret_data(&existing.unwrap()));
+    webhook::dispatch_event(
+        &state,
+        secrets::EVENT_SECRET_DELETE,
+        secrets::webhook_secret_data(&existing.unwrap()),
+    );
     Ok(StatusCode::NO_CONTENT)
 }
 
@@ -649,7 +807,10 @@ pub async fn list_ws_connections(
 ) -> std::result::Result<Json<Vec<WSConnection>>, AppError> {
     let _token = extract_token(&headers)?;
     auth::validate_token(&_token)?;
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
     let connections = db::list_ws_connections(&conn)?;
     Ok(Json(connections))
 }
@@ -661,9 +822,12 @@ pub async fn get_ws_connection(
 ) -> std::result::Result<Json<WSConnection>, AppError> {
     let _token = extract_token(&headers)?;
     auth::validate_token(&_token)?;
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
-    let connection = db::get_ws_connection(&conn, &id)?
-        .ok_or_else(|| AppError::NotFound("not found".into()))?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
+    let connection =
+        db::get_ws_connection(&conn, &id)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
     Ok(Json(connection))
 }
 
@@ -675,7 +839,10 @@ pub async fn delete_ws_connection(
     let _token = extract_token(&headers)?;
     auth::validate_token(&_token)?;
     let _ = websocket::close_client(&state.ws_hub, &id).await;
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
     let existing = db::get_ws_connection(&conn, &id)?;
     if existing.is_none() {
         return Err(AppError::NotFound("not found".into()));
@@ -725,7 +892,8 @@ pub async fn send_ws_message(
     auth::validate_token(&_token)?;
     let content = req.content;
 
-    let sent = websocket::send_to_client(&state.ws_hub, &id, Message::Text(content.clone().into())).await;
+    let sent =
+        websocket::send_to_client(&state.ws_hub, &id, Message::Text(content.clone().into())).await;
     if let Ok(conn) = state.db.lock() {
         db::insert_ws_message(&conn, &id, "sent", &content).ok();
     }
@@ -744,7 +912,10 @@ pub async fn list_ws_messages(
 ) -> std::result::Result<Json<Vec<WSMessage>>, AppError> {
     let _token = extract_token(&headers)?;
     auth::validate_token(&_token)?;
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
     let existing = db::get_ws_connection(&conn, &id)?;
     if existing.is_none() {
         return Err(AppError::NotFound("not found".into()));
@@ -759,7 +930,10 @@ pub async fn list_all_ws_messages(
 ) -> std::result::Result<Json<Vec<WSMessage>>, AppError> {
     let _token = extract_token(&headers)?;
     auth::validate_token(&_token)?;
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
     let messages = db::list_all_ws_messages(&conn)?;
     Ok(Json(messages))
 }
@@ -786,7 +960,10 @@ pub async fn set_cache(
         return Err(AppError::BadRequest("key and value are required".into()));
     }
     let ttl = req.ttl.unwrap_or(0);
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
     let entry = state.cache.set(&conn, &req.key, &req.value, ttl)?;
     Ok(Json(entry))
 }
@@ -798,8 +975,13 @@ pub async fn get_cache(
 ) -> std::result::Result<Json<CacheEntry>, AppError> {
     let _token = extract_token(&headers)?;
     auth::validate_token(&_token)?;
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
-    let entry = state.cache.get(&conn, &key)?
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
+    let entry = state
+        .cache
+        .get(&conn, &key)?
         .ok_or_else(|| AppError::NotFound("not found".into()))?;
     Ok(Json(entry))
 }
@@ -811,7 +993,10 @@ pub async fn delete_cache(
 ) -> std::result::Result<StatusCode, AppError> {
     let _token = extract_token(&headers)?;
     auth::validate_token(&_token)?;
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
     let ok = state.cache.delete(&conn, &key)?;
     if !ok {
         return Err(AppError::NotFound("not found".into()));
@@ -825,7 +1010,10 @@ pub async fn flush_cache(
 ) -> std::result::Result<Json<Value>, AppError> {
     let _token = extract_token(&headers)?;
     auth::validate_token(&_token)?;
-    let conn = state.db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
     state.cache.flush(&conn)?;
     Ok(Json(serde_json::json!({"status": "flushed"})))
 }
@@ -837,4 +1025,198 @@ pub async fn get_cache_stats(
     let _token = extract_token(&headers)?;
     auth::validate_token(&_token)?;
     Ok(Json(state.cache.stats()))
+}
+
+pub async fn handle_notifications_list(
+    headers: HeaderMap,
+    State(state): State<std::sync::Arc<AppState>>,
+) -> std::result::Result<Json<Vec<Notification>>, AppError> {
+    let _token = extract_token(&headers)?;
+    auth::validate_token(&_token)?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
+    let n = db::list_notifications(&conn)?;
+    Ok(Json(n))
+}
+
+pub async fn handle_notifications_create(
+    headers: HeaderMap,
+    State(state): State<std::sync::Arc<AppState>>,
+    Json(req): Json<CreateNotificationRequest>,
+) -> std::result::Result<Json<Notification>, AppError> {
+    let _token = extract_token(&headers)?;
+    auth::validate_token(&_token)?;
+
+    if req.title.is_empty() {
+        return Err(AppError::BadRequest("title is required".into()));
+    }
+    let ntype = if req.ntype.is_empty() {
+        "info".to_string()
+    } else {
+        req.ntype.clone()
+    };
+    if !notification::validate_notification_type(&ntype) {
+        return Err(AppError::BadRequest(
+            "type must be info, success, warning, or error".into(),
+        ));
+    }
+
+    let id = Uuid::new_v4().to_string().replace('-', "");
+    let notification_entry = {
+        let conn = state
+            .db
+            .lock()
+            .map_err(|e| AppError::Internal(e.to_string()))?;
+        db::insert_notification(&conn, &id, &req.title, &req.body, &ntype)?
+    };
+
+    notification::broadcast_notification(&state, &notification_entry).await;
+
+    webhook::dispatch_event(
+        &state,
+        webhook::EVENT_NOTIFICATION_CREATE,
+        serde_json::to_value(&notification_entry).unwrap_or_default(),
+    );
+
+    Ok(Json(notification_entry))
+}
+
+pub async fn handle_notifications_get(
+    headers: HeaderMap,
+    State(state): State<std::sync::Arc<AppState>>,
+    Path(id): Path<String>,
+) -> std::result::Result<Json<Notification>, AppError> {
+    let _token = extract_token(&headers)?;
+    auth::validate_token(&_token)?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
+    let n =
+        db::get_notification(&conn, &id)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
+    Ok(Json(n))
+}
+
+pub async fn handle_notifications_mark_read(
+    headers: HeaderMap,
+    State(state): State<std::sync::Arc<AppState>>,
+    Path(id): Path<String>,
+) -> std::result::Result<Json<Notification>, AppError> {
+    let _token = extract_token(&headers)?;
+    auth::validate_token(&_token)?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
+    let n = db::update_notification_read(&conn, &id)?;
+    Ok(Json(n))
+}
+
+pub async fn handle_notifications_delete(
+    headers: HeaderMap,
+    State(state): State<std::sync::Arc<AppState>>,
+    Path(id): Path<String>,
+) -> std::result::Result<StatusCode, AppError> {
+    let _token = extract_token(&headers)?;
+    auth::validate_token(&_token)?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
+    let ok = db::delete_notification(&conn, &id)?;
+    if !ok {
+        return Err(AppError::NotFound("not found".into()));
+    }
+    Ok(StatusCode::NO_CONTENT)
+}
+
+pub async fn handle_notifications_clear(
+    headers: HeaderMap,
+    State(state): State<std::sync::Arc<AppState>>,
+) -> std::result::Result<Json<Value>, AppError> {
+    let _token = extract_token(&headers)?;
+    auth::validate_token(&_token)?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
+    db::clear_notifications(&conn)?;
+    Ok(Json(serde_json::json!({"status": "cleared"})))
+}
+
+pub async fn handle_logs_list(
+    headers: HeaderMap,
+    State(state): State<std::sync::Arc<AppState>>,
+) -> std::result::Result<Json<Vec<LogEntry>>, AppError> {
+    let _token = extract_token(&headers)?;
+    auth::validate_token(&_token)?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
+    let logs = db::list_logs(&conn)?;
+    Ok(Json(logs))
+}
+
+pub async fn handle_logs_create(
+    headers: HeaderMap,
+    State(state): State<std::sync::Arc<AppState>>,
+    Json(req): Json<CreateLogRequest>,
+) -> std::result::Result<Json<LogEntry>, AppError> {
+    let _token = extract_token(&headers)?;
+    auth::validate_token(&_token)?;
+
+    if req.message.is_empty() {
+        return Err(AppError::BadRequest("message is required".into()));
+    }
+    let level = if req.level.is_empty() {
+        "info".to_string()
+    } else {
+        req.level.clone()
+    };
+    if !crate::log::validate_log_level(&level) {
+        return Err(AppError::BadRequest(
+            "level must be debug, info, warn, or error".into(),
+        ));
+    }
+    let meta = if req.meta.is_empty() {
+        "{}".to_string()
+    } else {
+        req.meta.clone()
+    };
+
+    let id = Uuid::new_v4().to_string().replace('-', "");
+    let entry = {
+        let conn = state
+            .db
+            .lock()
+            .map_err(|e| AppError::Internal(e.to_string()))?;
+        db::insert_log(&conn, &id, &level, &req.message, &meta)?
+    };
+
+    crate::log::broadcast_log(&state, &entry).await;
+
+    webhook::dispatch_event(
+        &state,
+        webhook::EVENT_LOG_CREATE,
+        serde_json::to_value(&entry).unwrap_or_default(),
+    );
+
+    Ok(Json(entry))
+}
+
+pub async fn handle_logs_clear(
+    headers: HeaderMap,
+    State(state): State<std::sync::Arc<AppState>>,
+) -> std::result::Result<Json<Value>, AppError> {
+    let _token = extract_token(&headers)?;
+    auth::validate_token(&_token)?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
+    db::clear_logs(&conn)?;
+    Ok(Json(serde_json::json!({"status": "cleared"})))
 }

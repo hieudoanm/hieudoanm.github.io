@@ -1,13 +1,15 @@
 # Server
 
 1. Key/Value Memory Storage
-2. Simple Server
-   1. Simple Auth
-   2. Simple Base (Database)
-   3. Simple Cache
-   4. Simple Files
-   5. Simple Hooks
-   6. Simple Jobs
-   7. Simple Queues
-   8. Simple Secrets
-   9. Simple Sockets
+2. `SimpleServer`
+   1. `SimpleAuth`
+   2. `SimpleBase` (Database)
+   3. `SimpleCache`
+   4. `SimpleFiles`
+   5. `SimpleHooks`
+   6. `SimpleJobs`
+   7. `SimpleLogs`
+   8. `SimpleNotify`
+   9. `SimpleQueues`
+   10. `SimpleSockets`
+   11. `SimpleVault`
