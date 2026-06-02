@@ -94,6 +94,15 @@ type Bucket struct {
 		CreatedAt      string `json:"created_at"`
 	}
 
+type Secret struct {
+	ID        string `json:"id"`
+	Name      string `json:"name"`
+	Value     string `json:"value"`
+	Scope     string `json:"scope"`
+	CreatedAt string `json:"created_at"`
+	UpdatedAt string `json:"updated_at"`
+}
+
 type FilesPage struct {
 	Files      []FileRecord `json:"files"`
 	Total      int          `json:"total"`
@@ -153,6 +162,38 @@ func migrateDB(db *sql.DB) error {
 		error           TEXT NOT NULL DEFAULT '',
 		status          TEXT NOT NULL DEFAULT 'pending',
 		created_at      TEXT NOT NULL DEFAULT (datetime('now'))
+	);
+	CREATE TABLE IF NOT EXISTS _secrets (
+		id         TEXT PRIMARY KEY,
+		name       TEXT NOT NULL,
+		value      TEXT NOT NULL,
+		scope      TEXT NOT NULL DEFAULT 'general',
+		created_at TEXT NOT NULL DEFAULT (datetime('now')),
+		updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+	);
+	CREATE TABLE IF NOT EXISTS _cronjobs (
+		id              TEXT PRIMARY KEY,
+		name            TEXT NOT NULL,
+		schedule        TEXT NOT NULL,
+		command         TEXT NOT NULL,
+		method          TEXT NOT NULL DEFAULT 'GET',
+		headers         TEXT NOT NULL DEFAULT '',
+		body            TEXT NOT NULL DEFAULT '',
+		is_active       INTEGER NOT NULL DEFAULT 1,
+		last_run_at     TEXT NOT NULL DEFAULT '',
+		last_run_status TEXT NOT NULL DEFAULT '',
+		created_at      TEXT NOT NULL DEFAULT (datetime('now')),
+		updated_at      TEXT NOT NULL DEFAULT (datetime('now'))
+	);
+	CREATE TABLE IF NOT EXISTS _cronjob_logs (
+		id          TEXT PRIMARY KEY,
+		cronjob_id  TEXT NOT NULL,
+		started_at  TEXT NOT NULL,
+		finished_at TEXT NOT NULL,
+		duration_ms INTEGER NOT NULL DEFAULT 0,
+		status      TEXT NOT NULL DEFAULT '',
+		output      TEXT NOT NULL DEFAULT '',
+		error       TEXT NOT NULL DEFAULT ''
 	);
 	`
 	_, err := db.Exec(schema)
@@ -577,6 +618,168 @@ func insertWebhookLog(db *sql.DB, log *WebhookLog) error {
 	_, err := db.Exec(
 		`INSERT INTO _webhook_logs (id, webhook_id, event, url, request_body, response_status, response_body, error, status, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
 		log.ID, log.WebhookID, log.Event, log.URL, log.RequestBody, log.ResponseStatus, log.ResponseBody, log.Error, log.Status, log.CreatedAt,
+	)
+	return err
+}
+
+// --- Secrets ---
+
+func listSecrets(db *sql.DB) ([]Secret, error) {
+	rows, err := db.Query(`SELECT id, name, value, scope, created_at, updated_at FROM _secrets ORDER BY name`)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var secrets []Secret
+	for rows.Next() {
+		var s Secret
+		if err := rows.Scan(&s.ID, &s.Name, &s.Value, &s.Scope, &s.CreatedAt, &s.UpdatedAt); err != nil {
+			return nil, err
+		}
+		secrets = append(secrets, s)
+	}
+	return secrets, rows.Err()
+}
+
+func getSecret(db *sql.DB, id string) (*Secret, error) {
+	s := &Secret{}
+	err := db.QueryRow(
+		`SELECT id, name, value, scope, created_at, updated_at FROM _secrets WHERE id = ?`, id,
+	).Scan(&s.ID, &s.Name, &s.Value, &s.Scope, &s.CreatedAt, &s.UpdatedAt)
+	if err != nil {
+		if err == sql.ErrNoRows {
+			return nil, nil
+		}
+		return nil, err
+	}
+	return s, nil
+}
+
+func createSecret(db *sql.DB, id, name, value, scope string) (*Secret, error) {
+	now := time.Now().UTC().Format(time.RFC3339)
+	_, err := db.Exec(
+		`INSERT INTO _secrets (id, name, value, scope, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)`,
+		id, name, value, scope, now, now,
+	)
+	if err != nil {
+		return nil, fmt.Errorf("create secret: %w", err)
+	}
+	return &Secret{ID: id, Name: name, Value: value, Scope: scope, CreatedAt: now, UpdatedAt: now}, nil
+}
+
+func updateSecret(db *sql.DB, id, name, value, scope string) (*Secret, error) {
+	now := time.Now().UTC().Format(time.RFC3339)
+	_, err := db.Exec(
+		`UPDATE _secrets SET name = ?, value = ?, scope = ?, updated_at = ? WHERE id = ?`,
+		name, value, scope, now, id,
+	)
+	if err != nil {
+		return nil, fmt.Errorf("update secret: %w", err)
+	}
+	return &Secret{ID: id, Name: name, Value: value, Scope: scope, UpdatedAt: now}, nil
+}
+
+func deleteSecret(db *sql.DB, id string) error {
+	_, err := db.Exec(`DELETE FROM _secrets WHERE id = ?`, id)
+	return err
+}
+
+// --- CronJobs ---
+
+func listCronJobs(db *sql.DB) ([]CronJob, error) {
+	rows, err := db.Query(`SELECT id, name, schedule, command, method, headers, body, is_active, last_run_at, last_run_status, created_at, updated_at FROM _cronjobs ORDER BY name`)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var jobs []CronJob
+	for rows.Next() {
+		var j CronJob
+		if err := rows.Scan(&j.ID, &j.Name, &j.Schedule, &j.Command, &j.Method, &j.Headers, &j.Body, &j.IsActive, &j.LastRunAt, &j.LastRunStatus, &j.CreatedAt, &j.UpdatedAt); err != nil {
+			return nil, err
+		}
+		jobs = append(jobs, j)
+	}
+	return jobs, rows.Err()
+}
+
+func getCronJob(db *sql.DB, id string) (*CronJob, error) {
+	j := &CronJob{}
+	err := db.QueryRow(
+		`SELECT id, name, schedule, command, method, headers, body, is_active, last_run_at, last_run_status, created_at, updated_at FROM _cronjobs WHERE id = ?`, id,
+	).Scan(&j.ID, &j.Name, &j.Schedule, &j.Command, &j.Method, &j.Headers, &j.Body, &j.IsActive, &j.LastRunAt, &j.LastRunStatus, &j.CreatedAt, &j.UpdatedAt)
+	if err != nil {
+		if err == sql.ErrNoRows {
+			return nil, nil
+		}
+		return nil, err
+	}
+	return j, nil
+}
+
+func insertCronJob(db *sql.DB, id, name, schedule, command, method, headers, body string, isActive bool) (*CronJob, error) {
+	now := time.Now().UTC().Format(time.RFC3339)
+	active := 0
+	if isActive {
+		active = 1
+	}
+	_, err := db.Exec(
+		`INSERT INTO _cronjobs (id, name, schedule, command, method, headers, body, is_active, last_run_at, last_run_status, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, '', '', ?, ?)`,
+		id, name, schedule, command, method, headers, body, active, now, now,
+	)
+	if err != nil {
+		return nil, fmt.Errorf("create cronjob: %w", err)
+	}
+	return &CronJob{ID: id, Name: name, Schedule: schedule, Command: command, Method: method, Headers: headers, Body: body, IsActive: isActive, CreatedAt: now, UpdatedAt: now}, nil
+}
+
+func updateCronJob(db *sql.DB, id, name, schedule, command, method, headers, body string, isActive bool) (*CronJob, error) {
+	now := time.Now().UTC().Format(time.RFC3339)
+	active := 0
+	if isActive {
+		active = 1
+	}
+	_, err := db.Exec(
+		`UPDATE _cronjobs SET name = ?, schedule = ?, command = ?, method = ?, headers = ?, body = ?, is_active = ?, updated_at = ? WHERE id = ?`,
+		name, schedule, command, method, headers, body, active, now, id,
+	)
+	if err != nil {
+		return nil, fmt.Errorf("update cronjob: %w", err)
+	}
+	return &CronJob{ID: id, Name: name, Schedule: schedule, Command: command, Method: method, Headers: headers, Body: body, IsActive: isActive, UpdatedAt: now}, nil
+}
+
+func updateCronJobLastRun(db *sql.DB, id, lastRunAt, lastRunStatus string) {
+	db.Exec(`UPDATE _cronjobs SET last_run_at = ?, last_run_status = ? WHERE id = ?`, lastRunAt, lastRunStatus, id)
+}
+
+func deleteCronJob(db *sql.DB, id string) error {
+	db.Exec(`DELETE FROM _cronjob_logs WHERE cronjob_id = ?`, id)
+	_, err := db.Exec(`DELETE FROM _cronjobs WHERE id = ?`, id)
+	return err
+}
+
+func listCronJobLogs(db *sql.DB, cronjobID string) ([]CronJobLog, error) {
+	rows, err := db.Query(`SELECT id, cronjob_id, started_at, finished_at, duration_ms, status, output, error FROM _cronjob_logs WHERE cronjob_id = ? ORDER BY started_at DESC LIMIT 50`, cronjobID)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var logs []CronJobLog
+	for rows.Next() {
+		var l CronJobLog
+		if err := rows.Scan(&l.ID, &l.CronJobID, &l.StartedAt, &l.FinishedAt, &l.DurationMs, &l.Status, &l.Output, &l.Error); err != nil {
+			return nil, err
+		}
+		logs = append(logs, l)
+	}
+	return logs, rows.Err()
+}
+
+func insertCronJobLog(db *sql.DB, log *CronJobLog) error {
+	_, err := db.Exec(
+		`INSERT INTO _cronjob_logs (id, cronjob_id, started_at, finished_at, duration_ms, status, output, error) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+		log.ID, log.CronJobID, log.StartedAt, log.FinishedAt, log.DurationMs, log.Status, log.Output, log.Error,
 	)
 	return err
 }

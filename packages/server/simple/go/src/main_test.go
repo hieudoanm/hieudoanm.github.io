@@ -31,7 +31,11 @@ func newTestServer(t *testing.T) *Server {
 	}
 	storageDir, _ := os.MkdirTemp("", "simplebase-storage-*")
 	t.Cleanup(func() { os.RemoveAll(storageDir) })
-	return &Server{db: db, dataDir: storageDir}
+	key, err := getOrCreateSecretsKey(storageDir)
+	if err != nil {
+		t.Fatal(err)
+	}
+	return &Server{db: db, dataDir: storageDir, secretsKey: key, cronScheduler: nil}
 }
 
 func request(t *testing.T, h http.Handler, method, path, body string) *http.Response {
@@ -751,5 +755,270 @@ func TestWebhookNoDeliveryOnInactive(t *testing.T) {
 		t.Fatal("received webhook on inactive webhook")
 	case <-time.After(500 * time.Millisecond):
 		// expected
+	}
+}
+
+func TestSecretsCRUD(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	// Create
+	resp := request(t, h, "POST", "/api/secrets", `{"name":"db_pass","value":"s3cret!","scope":"db"}`)
+	if resp.StatusCode != 201 {
+		t.Fatalf("create: expected 201, got %d", resp.StatusCode)
+	}
+	created := readBody(t, resp)
+	id := created["id"].(string)
+	if created["name"].(string) != "db_pass" {
+		t.Fatalf("expected name db_pass, got %v", created["name"])
+	}
+	if created["scope"].(string) != "db" {
+		t.Fatalf("expected scope db, got %v", created["scope"])
+	}
+
+	// List (value should NOT be returned in list)
+	resp = request(t, h, "GET", "/api/secrets", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("list: expected 200, got %d", resp.StatusCode)
+	}
+	var list []map[string]any
+	if err := json.NewDecoder(resp.Body).Decode(&list); err != nil {
+		t.Fatal(err)
+	}
+	resp.Body.Close()
+	if len(list) != 1 {
+		t.Fatalf("expected 1 secret, got %d", len(list))
+	}
+	if _, ok := list[0]["value"]; ok {
+		t.Fatal("value should not be in list response")
+	}
+
+	// Get (decrypted value)
+	resp = request(t, h, "GET", "/api/secrets/"+id, "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("get: expected 200, got %d", resp.StatusCode)
+	}
+	item := readBody(t, resp)
+	if item["value"].(string) != "s3cret!" {
+		t.Fatalf("expected value s3cret!, got %v", item["value"])
+	}
+
+	// Update
+	resp = request(t, h, "PATCH", "/api/secrets/"+id, `{"name":"db_pass_v2","value":"newpass","scope":"prod"}`)
+	if resp.StatusCode != 200 {
+		t.Fatalf("update: expected 200, got %d", resp.StatusCode)
+	}
+	resp = request(t, h, "GET", "/api/secrets/"+id, "")
+	item = readBody(t, resp)
+	if item["value"].(string) != "newpass" {
+		t.Fatalf("expected value newpass, got %v", item["value"])
+	}
+
+	// Delete
+	resp = request(t, h, "DELETE", "/api/secrets/"+id, "")
+	if resp.StatusCode != 204 {
+		t.Fatalf("delete: expected 204, got %d", resp.StatusCode)
+	}
+	resp = request(t, h, "GET", "/api/secrets/"+id, "")
+	if resp.StatusCode != 404 {
+		t.Fatalf("get after delete: expected 404, got %d", resp.StatusCode)
+	}
+}
+
+func TestSecretsValidation(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	// Missing name
+	resp := request(t, h, "POST", "/api/secrets", `{"value":"x"}`)
+	if resp.StatusCode != 400 {
+		t.Fatalf("expected 400 for missing name, got %d", resp.StatusCode)
+	}
+
+	// Not found
+	resp = request(t, h, "GET", "/api/secrets/nonexistent", "")
+	if resp.StatusCode != 404 {
+		t.Fatalf("expected 404, got %d", resp.StatusCode)
+	}
+
+	// Update not found
+	resp = request(t, h, "PATCH", "/api/secrets/nonexistent", `{"name":"x","value":"y"}`)
+	if resp.StatusCode != 404 {
+		t.Fatalf("expected 404 on update not found, got %d", resp.StatusCode)
+	}
+}
+
+// --- CronJob Tests ---
+
+func TestCronJobsCRUD(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	// Create
+	resp := request(t, h, "POST", "/api/cronjobs", `{"name":"ping google","schedule":"*/5 * * * *","command":"https://google.com","method":"GET"}`)
+	if resp.StatusCode != 201 {
+		t.Fatalf("create: expected 201, got %d", resp.StatusCode)
+	}
+	created := readBody(t, resp)
+	id := created["id"].(string)
+	if created["name"].(string) != "ping google" {
+		t.Fatalf("expected name 'ping google', got %v", created["name"])
+	}
+	if created["schedule"].(string) != "*/5 * * * *" {
+		t.Fatalf("expected schedule '*/5 * * * *', got %v", created["schedule"])
+	}
+
+	// List
+	resp = request(t, h, "GET", "/api/cronjobs", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("list: expected 200, got %d", resp.StatusCode)
+	}
+	var list []map[string]any
+	if err := json.NewDecoder(resp.Body).Decode(&list); err != nil {
+		t.Fatal(err)
+	}
+	resp.Body.Close()
+	if len(list) != 1 {
+		t.Fatalf("expected 1 cronjob, got %d", len(list))
+	}
+
+	// Get
+	resp = request(t, h, "GET", "/api/cronjobs/"+id, "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("get: expected 200, got %d", resp.StatusCode)
+	}
+	item := readBody(t, resp)
+	if item["name"].(string) != "ping google" {
+		t.Fatalf("expected name 'ping google', got %v", item["name"])
+	}
+
+	// Update
+	resp = request(t, h, "PATCH", "/api/cronjobs/"+id, `{"name":"ping google v2","schedule":"*/10 * * * *","is_active":false}`)
+	if resp.StatusCode != 200 {
+		t.Fatalf("update: expected 200, got %d", resp.StatusCode)
+	}
+	resp = request(t, h, "GET", "/api/cronjobs/"+id, "")
+	item = readBody(t, resp)
+	if item["name"].(string) != "ping google v2" {
+		t.Fatalf("expected name 'ping google v2', got %v", item["name"])
+	}
+	if item["is_active"] != false {
+		t.Fatal("expected is_active false")
+	}
+
+	// Delete
+	resp = request(t, h, "DELETE", "/api/cronjobs/"+id, "")
+	if resp.StatusCode != 204 {
+		t.Fatalf("delete: expected 204, got %d", resp.StatusCode)
+	}
+	resp = request(t, h, "GET", "/api/cronjobs/"+id, "")
+	if resp.StatusCode != 404 {
+		t.Fatalf("get after delete: expected 404, got %d", resp.StatusCode)
+	}
+}
+
+func TestCronJobsValidation(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	// Missing name
+	resp := request(t, h, "POST", "/api/cronjobs", `{"schedule":"*/5 * * * *","command":"https://example.com"}`)
+	if resp.StatusCode != 400 {
+		t.Fatalf("expected 400 for missing name, got %d", resp.StatusCode)
+	}
+
+	// Missing schedule
+	resp = request(t, h, "POST", "/api/cronjobs", `{"name":"test","command":"https://example.com"}`)
+	if resp.StatusCode != 400 {
+		t.Fatalf("expected 400 for missing schedule, got %d", resp.StatusCode)
+	}
+
+	// Missing command
+	resp = request(t, h, "POST", "/api/cronjobs", `{"name":"test","schedule":"*/5 * * * *"}`)
+	if resp.StatusCode != 400 {
+		t.Fatalf("expected 400 for missing command, got %d", resp.StatusCode)
+	}
+
+	// Invalid schedule
+	resp = request(t, h, "POST", "/api/cronjobs", `{"name":"test","schedule":"not-a-cron","command":"https://example.com"}`)
+	if resp.StatusCode != 400 {
+		t.Fatalf("expected 400 for invalid schedule, got %d", resp.StatusCode)
+	}
+
+	// Not found
+	resp = request(t, h, "GET", "/api/cronjobs/nonexistent", "")
+	if resp.StatusCode != 404 {
+		t.Fatalf("expected 404, got %d", resp.StatusCode)
+	}
+}
+
+func TestCronJobsAuthRequired(t *testing.T) {
+	srv := newTestServer(t)
+	h := srv.routes()
+
+	resp := request(t, h, "GET", "/api/cronjobs", "")
+	if resp.StatusCode != 401 {
+		t.Fatalf("expected 401, got %d", resp.StatusCode)
+	}
+}
+
+func TestCronJobsRunAndLogs(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	// Create cronjob pointing at a test server
+	ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(http.StatusOK)
+		w.Write([]byte("pong"))
+	}))
+	defer ts.Close()
+
+	resp := request(t, h, "POST", "/api/cronjobs", `{"name":"test ping","schedule":"*/5 * * * *","command":"`+ts.URL+`","method":"GET"}`)
+	if resp.StatusCode != 201 {
+		t.Fatalf("create: expected 201, got %d", resp.StatusCode)
+	}
+	created := readBody(t, resp)
+	id := created["id"].(string)
+
+	// Manual run
+	resp = request(t, h, "POST", "/api/cronjobs/"+id+"/run", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("run: expected 200, got %d", resp.StatusCode)
+	}
+
+	// Wait for execution
+	time.Sleep(500 * time.Millisecond)
+
+	// Get logs
+	resp = request(t, h, "GET", "/api/cronjobs/"+id+"/logs", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("logs: expected 200, got %d", resp.StatusCode)
+	}
+	var logs []map[string]any
+	if err := json.NewDecoder(resp.Body).Decode(&logs); err != nil {
+		t.Fatal(err)
+	}
+	resp.Body.Close()
+	if len(logs) == 0 {
+		t.Fatal("expected at least 1 log entry")
+	}
+	if logs[0]["status"] != "success" {
+		t.Fatalf("expected status 'success', got %v", logs[0]["status"])
+	}
+}
+
+func TestSecretsAuthRequired(t *testing.T) {
+	srv := newTestServer(t)
+	h := srv.routes()
+
+	// Without auth token, secrets endpoints should return 401
+	resp := request(t, h, "GET", "/api/secrets", "")
+	if resp.StatusCode != 401 {
+		t.Fatalf("expected 401, got %d", resp.StatusCode)
 	}
 }

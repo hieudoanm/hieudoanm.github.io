@@ -2,6 +2,7 @@ mod auth;
 mod db;
 mod handlers;
 mod models;
+mod secrets;
 mod webhook;
 
 use std::sync::Arc;
@@ -67,6 +68,16 @@ fn app(state: Arc<AppState>) -> Router {
             "/api/webhooks/{id}/logs",
             get(handlers::list_webhook_logs),
         )
+        .route(
+            "/api/secrets",
+            get(handlers::list_secrets).post(handlers::create_secret),
+        )
+        .route(
+            "/api/secrets/{id}",
+            get(handlers::get_secret)
+                .patch(handlers::update_secret)
+                .delete(handlers::delete_secret),
+        )
         .layer(CorsLayer::permissive())
         .with_state(state);
 
@@ -82,10 +93,13 @@ async fn main() {
     let conn = db::open_db().expect("open db");
     db::migrate_db(&conn).expect("migrate db");
 
+    let key = secrets::get_or_create_secrets_key(&db::data_dir())
+        .expect("secrets key");
     let state = Arc::new(AppState {
         db: std::sync::Mutex::new(conn),
         storage_dir: db::data_dir(),
         http_client: reqwest::Client::new(),
+        secrets_key: key,
     });
 
     let addr = std::env::var("PORT").unwrap_or_else(|_| "8080".to_string());
@@ -114,10 +128,12 @@ mod tests {
         db::migrate_db(&conn).expect("migrate");
         let tmp_dir = std::env::temp_dir().join(format!("simplebase-test-{}", uuid::Uuid::new_v4()));
         std::fs::create_dir_all(&tmp_dir).ok();
+        let key = secrets::get_or_create_secrets_key(&tmp_dir).unwrap();
         let state = Arc::new(AppState {
             db: std::sync::Mutex::new(conn),
             storage_dir: tmp_dir,
             http_client: reqwest::Client::new(),
+            secrets_key: key,
         });
         app(state)
     }
@@ -688,5 +704,77 @@ mod tests {
             tokio::time::sleep(std::time::Duration::from_millis(200)).await;
         }
         assert!(received.load(Ordering::SeqCst) > 0, "webhook was not delivered");
+    }
+
+    // --- Secret Tests ---
+
+    #[tokio::test]
+    async fn test_secrets_crud() {
+        let app = test_app();
+        let token = register_token(&app).await;
+
+        // Create
+        let body = serde_json::json!({"name": "db_pass", "value": "s3cret!", "scope": "db"});
+        let (status, value) = request(&app, "POST", "/api/secrets", Some(&token), Some(body)).await;
+        assert_eq!(status, StatusCode::CREATED, "create secret");
+        let id = value["id"].as_str().unwrap_or("").to_string();
+        assert!(!id.is_empty());
+        assert_eq!(value["name"], "db_pass");
+        assert_eq!(value["scope"], "db");
+
+        // List (value should not be present)
+        let (status, value) = get_json(&app, "/api/secrets", Some(&token)).await;
+        assert_eq!(status, StatusCode::OK);
+        let list = value.as_array().unwrap();
+        assert_eq!(list.len(), 1);
+        assert!(list[0].get("value").is_none(), "value should not be in list");
+
+        // Get (decrypted value)
+        let (status, value) = request(&app, "GET", &format!("/api/secrets/{id}"), Some(&token), None).await;
+        assert_eq!(status, StatusCode::OK);
+        assert_eq!(value["value"], "s3cret!");
+
+        // Update
+        let body = serde_json::json!({"name": "db_pass_v2", "value": "newpass", "scope": "prod"});
+        let (status, _) = request(&app, "PATCH", &format!("/api/secrets/{id}"), Some(&token), Some(body)).await;
+        assert_eq!(status, StatusCode::OK);
+
+        let (status, value) = request(&app, "GET", &format!("/api/secrets/{id}"), Some(&token), None).await;
+        assert_eq!(status, StatusCode::OK);
+        assert_eq!(value["value"], "newpass");
+
+        // Delete
+        let (status, _) = request(&app, "DELETE", &format!("/api/secrets/{id}"), Some(&token), None).await;
+        assert_eq!(status, StatusCode::NO_CONTENT);
+
+        let (status, _) = request(&app, "GET", &format!("/api/secrets/{id}"), Some(&token), None).await;
+        assert_eq!(status, StatusCode::NOT_FOUND);
+    }
+
+    #[tokio::test]
+    async fn test_secrets_validation() {
+        let app = test_app();
+        let token = register_token(&app).await;
+
+        // Missing name
+        let body = serde_json::json!({"value": "x"});
+        let (status, _) = request(&app, "POST", "/api/secrets", Some(&token), Some(body)).await;
+        assert_eq!(status, StatusCode::BAD_REQUEST);
+
+        // Not found
+        let (status, _) = request(&app, "GET", "/api/secrets/nonexistent", Some(&token), None).await;
+        assert_eq!(status, StatusCode::NOT_FOUND);
+
+        // Update not found
+        let body = serde_json::json!({"name": "x", "value": "y"});
+        let (status, _) = request(&app, "PATCH", "/api/secrets/nonexistent", Some(&token), Some(body)).await;
+        assert_eq!(status, StatusCode::NOT_FOUND);
+    }
+
+    #[tokio::test]
+    async fn test_secrets_auth_required() {
+        let app = test_app();
+        let (status, _) = get_json(&app, "/api/secrets", None).await;
+        assert_eq!(status, StatusCode::UNAUTHORIZED);
     }
 }

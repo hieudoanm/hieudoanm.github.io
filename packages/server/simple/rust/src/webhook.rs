@@ -19,13 +19,17 @@ pub const EVENT_COLLECTION_CREATE: &str = "collection.create";
 pub const EVENT_COLLECTION_DELETE: &str = "collection.delete";
 pub const EVENT_BUCKET_CREATE: &str = "bucket.create";
 pub const EVENT_BUCKET_DELETE: &str = "bucket.delete";
+pub const EVENT_SECRET_CREATE: &str = "secret.create";
+pub const EVENT_SECRET_UPDATE: &str = "secret.update";
+pub const EVENT_SECRET_DELETE: &str = "secret.delete";
 
 pub fn validate_events(events: &[String]) -> std::result::Result<(), String> {
     for e in events {
         match e.as_str() {
             EVENT_RECORD_CREATE | EVENT_RECORD_UPDATE | EVENT_RECORD_DELETE
             | EVENT_COLLECTION_CREATE | EVENT_COLLECTION_DELETE
-            | EVENT_BUCKET_CREATE | EVENT_BUCKET_DELETE => {}
+            | EVENT_BUCKET_CREATE | EVENT_BUCKET_DELETE
+            | EVENT_SECRET_CREATE | EVENT_SECRET_UPDATE | EVENT_SECRET_DELETE => {}
             _ => return Err(format!("unknown event: {e}")),
         }
     }

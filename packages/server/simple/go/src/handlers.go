@@ -11,11 +11,15 @@ import (
 	"path/filepath"
 	"strconv"
 	"strings"
+
+	"github.com/robfig/cron/v3"
 )
 
 type Server struct {
-	db      *sql.DB
-	dataDir string
+	db            *sql.DB
+	dataDir       string
+	secretsKey    []byte
+	cronScheduler *cron.Cron
 }
 
 func errorJSON(w http.ResponseWriter, msg string, code int) {
@@ -698,6 +702,343 @@ func (s *Server) handleWebhookLogs(w http.ResponseWriter, r *http.Request) {
 	jsonResponse(w, logs)
 }
 
+// --- Secrets ---
+
+func (s *Server) handleSecretsList(w http.ResponseWriter, r *http.Request) {
+	secrets, err := listSecrets(s.db)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	type secretItem struct {
+		ID        string `json:"id"`
+		Name      string `json:"name"`
+		Scope     string `json:"scope"`
+		CreatedAt string `json:"created_at"`
+		UpdatedAt string `json:"updated_at"`
+	}
+	items := make([]secretItem, 0, len(secrets))
+	for _, s := range secrets {
+		items = append(items, secretItem{ID: s.ID, Name: s.Name, Scope: s.Scope, CreatedAt: s.CreatedAt, UpdatedAt: s.UpdatedAt})
+	}
+	jsonResponse(w, items)
+}
+
+func (s *Server) handleSecretsCreate(w http.ResponseWriter, r *http.Request) {
+	var body struct {
+		Name  string `json:"name"`
+		Value string `json:"value"`
+		Scope string `json:"scope"`
+	}
+	if err := json.NewDecoder(r.Body).Decode(&body); err != nil {
+		errorJSON(w, "invalid json", http.StatusBadRequest)
+		return
+	}
+	if body.Name == "" {
+		errorJSON(w, "name is required", http.StatusBadRequest)
+		return
+	}
+	if body.Scope == "" {
+		body.Scope = "general"
+	}
+	encrypted, err := encryptSecret(s.secretsKey, body.Value)
+	if err != nil {
+		errorJSON(w, "encryption error", http.StatusInternalServerError)
+		return
+	}
+	id := generateID()
+	secret, err := createSecret(s.db, id, body.Name, encrypted, body.Scope)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	go s.dispatchEvent(EventSecretCreate, webhookSecretData(secret))
+	w.WriteHeader(http.StatusCreated)
+	jsonResponse(w, secret)
+}
+
+func (s *Server) handleSecretsGet(w http.ResponseWriter, r *http.Request) {
+	id := r.PathValue("id")
+	secret, err := getSecret(s.db, id)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	if secret == nil {
+		errorJSON(w, "not found", http.StatusNotFound)
+		return
+	}
+	decrypted, err := decryptSecret(s.secretsKey, secret.Value)
+	if err != nil {
+		errorJSON(w, "decryption error", http.StatusInternalServerError)
+		return
+	}
+	secret.Value = decrypted
+	jsonResponse(w, secret)
+}
+
+func (s *Server) handleSecretsUpdate(w http.ResponseWriter, r *http.Request) {
+	id := r.PathValue("id")
+	existing, err := getSecret(s.db, id)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	if existing == nil {
+		errorJSON(w, "not found", http.StatusNotFound)
+		return
+	}
+	var body struct {
+		Name  string `json:"name"`
+		Value string `json:"value"`
+		Scope string `json:"scope"`
+	}
+	if err := json.NewDecoder(r.Body).Decode(&body); err != nil {
+		errorJSON(w, "invalid json", http.StatusBadRequest)
+		return
+	}
+	if body.Name == "" {
+		body.Name = existing.Name
+	}
+	if body.Scope == "" {
+		body.Scope = existing.Scope
+	}
+	plaintext := body.Value
+	if plaintext == "" {
+		if v, err := decryptSecret(s.secretsKey, existing.Value); err == nil {
+			plaintext = v
+		}
+	}
+	encrypted, err := encryptSecret(s.secretsKey, plaintext)
+	if err != nil {
+		errorJSON(w, "encryption error", http.StatusInternalServerError)
+		return
+	}
+	secret, err := updateSecret(s.db, id, body.Name, encrypted, body.Scope)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	go s.dispatchEvent(EventSecretUpdate, webhookSecretData(secret))
+	jsonResponse(w, secret)
+}
+
+func (s *Server) handleSecretsDelete(w http.ResponseWriter, r *http.Request) {
+	id := r.PathValue("id")
+	secret, err := getSecret(s.db, id)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	if secret == nil {
+		errorJSON(w, "not found", http.StatusNotFound)
+		return
+	}
+	if err := deleteSecret(s.db, id); err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	go s.dispatchEvent(EventSecretDelete, webhookSecretData(secret))
+	w.WriteHeader(http.StatusNoContent)
+}
+
+// --- CronJobs ---
+
+func (s *Server) handleCronJobsList(w http.ResponseWriter, r *http.Request) {
+	jobs, err := listCronJobs(s.db)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	jsonResponse(w, jobs)
+}
+
+func (s *Server) handleCronJobsCreate(w http.ResponseWriter, r *http.Request) {
+	var body struct {
+		Name     string `json:"name"`
+		Schedule string `json:"schedule"`
+		Command  string `json:"command"`
+		Method   string `json:"method"`
+		Headers  string `json:"headers"`
+		Body     string `json:"body"`
+		IsActive *bool  `json:"is_active"`
+	}
+	if err := json.NewDecoder(r.Body).Decode(&body); err != nil {
+		errorJSON(w, "invalid json", http.StatusBadRequest)
+		return
+	}
+	if body.Name == "" {
+		errorJSON(w, "name is required", http.StatusBadRequest)
+		return
+	}
+	if body.Schedule == "" {
+		errorJSON(w, "schedule is required", http.StatusBadRequest)
+		return
+	}
+	if body.Command == "" {
+		errorJSON(w, "command is required", http.StatusBadRequest)
+		return
+	}
+	if _, err := cron.ParseStandard(body.Schedule); err != nil {
+		errorJSON(w, "invalid cron schedule: "+err.Error(), http.StatusBadRequest)
+		return
+	}
+	method := body.Method
+	if method == "" {
+		method = "GET"
+	}
+	isActive := true
+	if body.IsActive != nil {
+		isActive = *body.IsActive
+	}
+	id := generateID()
+	job, err := insertCronJob(s.db, id, body.Name, body.Schedule, body.Command, method, body.Headers, body.Body, isActive)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	go s.dispatchEvent(EventCronjobCreate, webhookCronjobData(job))
+	w.WriteHeader(http.StatusCreated)
+	jsonResponse(w, job)
+}
+
+func (s *Server) handleCronJobsGet(w http.ResponseWriter, r *http.Request) {
+	id := r.PathValue("id")
+	job, err := getCronJob(s.db, id)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	if job == nil {
+		errorJSON(w, "not found", http.StatusNotFound)
+		return
+	}
+	jsonResponse(w, job)
+}
+
+func (s *Server) handleCronJobsUpdate(w http.ResponseWriter, r *http.Request) {
+	id := r.PathValue("id")
+	existing, err := getCronJob(s.db, id)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	if existing == nil {
+		errorJSON(w, "not found", http.StatusNotFound)
+		return
+	}
+	var body struct {
+		Name     *string `json:"name"`
+		Schedule *string `json:"schedule"`
+		Command  *string `json:"command"`
+		Method   *string `json:"method"`
+		Headers  *string `json:"headers"`
+		Body     *string `json:"body"`
+		IsActive *bool   `json:"is_active"`
+	}
+	if err := json.NewDecoder(r.Body).Decode(&body); err != nil {
+		errorJSON(w, "invalid json", http.StatusBadRequest)
+		return
+	}
+	name := existing.Name
+	if body.Name != nil {
+		name = *body.Name
+	}
+	schedule := existing.Schedule
+	if body.Schedule != nil {
+		schedule = *body.Schedule
+	}
+	command := existing.Command
+	if body.Command != nil {
+		command = *body.Command
+	}
+	method := existing.Method
+	if body.Method != nil {
+		method = *body.Method
+	}
+	headers := existing.Headers
+	if body.Headers != nil {
+		headers = *body.Headers
+	}
+	jobBody := existing.Body
+	if body.Body != nil {
+		jobBody = *body.Body
+	}
+	isActive := existing.IsActive
+	if body.IsActive != nil {
+		isActive = *body.IsActive
+	}
+	if schedule != existing.Schedule || (body.Schedule != nil && *body.Schedule != "") {
+		if _, err := cron.ParseStandard(schedule); err != nil {
+			errorJSON(w, "invalid cron schedule: "+err.Error(), http.StatusBadRequest)
+			return
+		}
+	}
+	job, err := updateCronJob(s.db, id, name, schedule, command, method, headers, jobBody, isActive)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	go s.dispatchEvent(EventCronjobUpdate, webhookCronjobData(job))
+	jsonResponse(w, job)
+}
+
+func (s *Server) handleCronJobsDelete(w http.ResponseWriter, r *http.Request) {
+	id := r.PathValue("id")
+	job, err := getCronJob(s.db, id)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	if job == nil {
+		errorJSON(w, "not found", http.StatusNotFound)
+		return
+	}
+	if err := deleteCronJob(s.db, id); err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	go s.dispatchEvent(EventCronjobDelete, webhookCronjobData(job))
+	w.WriteHeader(http.StatusNoContent)
+}
+
+func (s *Server) handleCronJobsRun(w http.ResponseWriter, r *http.Request) {
+	id := r.PathValue("id")
+	job, err := getCronJob(s.db, id)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	if job == nil {
+		errorJSON(w, "not found", http.StatusNotFound)
+		return
+	}
+	executeCronJob(s.db, *job)
+	jsonResponse(w, map[string]string{"status": "triggered"})
+}
+
+func (s *Server) handleCronJobsLogs(w http.ResponseWriter, r *http.Request) {
+	id := r.PathValue("id")
+	job, err := getCronJob(s.db, id)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	if job == nil {
+		errorJSON(w, "not found", http.StatusNotFound)
+		return
+	}
+	logs, err := listCronJobLogs(s.db, id)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	if logs == nil {
+		logs = []CronJobLog{}
+	}
+	jsonResponse(w, logs)
+}
+
 func (s *Server) routes() http.Handler {
 	mux := http.NewServeMux()
 
@@ -738,6 +1079,20 @@ func (s *Server) routes() http.Handler {
 	protected.HandleFunc("PATCH /api/webhooks/{id}", s.handleWebhooksUpdate)
 	protected.HandleFunc("DELETE /api/webhooks/{id}", s.handleWebhooksDelete)
 	protected.HandleFunc("GET /api/webhooks/{id}/logs", s.handleWebhookLogs)
+
+	protected.HandleFunc("GET /api/secrets", s.handleSecretsList)
+	protected.HandleFunc("POST /api/secrets", s.handleSecretsCreate)
+	protected.HandleFunc("GET /api/secrets/{id}", s.handleSecretsGet)
+	protected.HandleFunc("PATCH /api/secrets/{id}", s.handleSecretsUpdate)
+	protected.HandleFunc("DELETE /api/secrets/{id}", s.handleSecretsDelete)
+
+	protected.HandleFunc("GET /api/cronjobs", s.handleCronJobsList)
+	protected.HandleFunc("POST /api/cronjobs", s.handleCronJobsCreate)
+	protected.HandleFunc("GET /api/cronjobs/{id}", s.handleCronJobsGet)
+	protected.HandleFunc("PATCH /api/cronjobs/{id}", s.handleCronJobsUpdate)
+	protected.HandleFunc("DELETE /api/cronjobs/{id}", s.handleCronJobsDelete)
+	protected.HandleFunc("POST /api/cronjobs/{id}/run", s.handleCronJobsRun)
+	protected.HandleFunc("GET /api/cronjobs/{id}/logs", s.handleCronJobsLogs)
 
 	mux.Handle("/api/", authMiddleware(protected))
 

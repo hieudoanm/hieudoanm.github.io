@@ -36,7 +36,13 @@ func main() {
 	}
 	addr = ":" + addr
 
-	srv := &Server{db: db, dataDir: dataDir()}
+	key, err := getOrCreateSecretsKey(dataDir())
+	if err != nil {
+		log.Fatalf("secrets key: %v", err)
+	}
+	srv := &Server{db: db, dataDir: dataDir(), secretsKey: key}
+	srv.cronScheduler = startCronScheduler(db)
+	defer srv.cronScheduler.Stop()
 	log.Printf("SimpleBase listening on %s", addr)
 	if err := http.ListenAndServe(addr, srv); err != nil {
 		log.Fatalf("server: %v", err)

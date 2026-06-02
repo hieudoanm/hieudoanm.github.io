@@ -76,6 +76,10 @@
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
           Webhooks
         </button>
+        <button onclick="showView('secrets')" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition-colors text-sm" data-view="secrets">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+          Secrets
+        </button>
       </nav>
       <div class="p-3 border-t border-gray-800">
         <button onclick="handleLogout()" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-400 hover:text-red-400 hover:bg-red-500/10 transition-colors text-sm">
@@ -250,6 +254,38 @@
             </div>
           </div>
           <div id="files-pagination" class="mt-4 flex items-center justify-between text-sm"></div>
+        </div>
+      </div>
+
+      <!-- Secrets View -->
+      <div id="view-secrets" class="view p-6">
+        <div class="max-w-6xl mx-auto">
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="text-2xl font-bold">Secrets</h2>
+            <button onclick="openSecretCreateModal()" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium rounded-lg transition-colors">
+              + New Secret
+            </button>
+          </div>
+          <div class="bg-gray-900/80 rounded-xl border border-gray-800 overflow-hidden">
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr class="text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
+                    <th class="px-6 py-3">Name</th>
+                    <th class="px-6 py-3">Scope</th>
+                    <th class="px-6 py-3">Created</th>
+                    <th class="px-6 py-3">Updated</th>
+                    <th class="px-6 py-3">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="secrets-list"
+                  hx-get="/api/secrets" hx-trigger="secrets-ready" hx-ext="client-side-templates"
+                  mustache-template="tmpl-secrets" hx-swap="innerHTML">
+                  <tr><td colspan="5" class="px-6 py-8 text-center text-gray-500">Loading...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -443,6 +479,26 @@
     {{/files}}
   </script>
 
+  <!-- Secrets list -->
+  <script type="x-tmpl-mustache" id="tmpl-secrets">
+    {{#.}}
+    <tr class="border-b border-gray-800 hover:bg-white/[0.02] transition-colors">
+      <td class="px-6 py-4 font-medium text-gray-200">{{name}}</td>
+      <td class="px-6 py-4 text-sm text-gray-400">{{scope}}</td>
+      <td class="px-6 py-4 text-sm text-gray-500">{{created_at}}</td>
+      <td class="px-6 py-4 text-sm text-gray-500">{{updated_at}}</td>
+      <td class="px-6 py-4">
+        <button onclick="showSecretValue('{{id}}','{{name}}')" class="text-indigo-400 hover:text-indigo-300 text-sm mr-3">Show</button>
+        <button onclick="editSecret('{{id}}')" class="text-indigo-400 hover:text-indigo-300 text-sm mr-3">Edit</button>
+        <button onclick="deleteSecret('{{id}}','{{name}}')" class="text-red-400 hover:text-red-300 text-sm">Delete</button>
+      </td>
+    </tr>
+    {{/.}}
+    {{^.}}
+    <tr><td colspan="5" class="px-6 py-8 text-center text-gray-500">No secrets configured</td></tr>
+    {{/.}}
+  </script>
+
   <!-- Webhooks list -->
   <script type="x-tmpl-mustache" id="tmpl-webhooks">
     {{#.}}
@@ -607,6 +663,8 @@
         loadDashboard();
       } else if (view === 'webhooks') {
         document.getElementById('webhooks-list').dispatchEvent(new Event('webhooks-ready'));
+      } else if (view === 'secrets') {
+        document.getElementById('secrets-list').dispatchEvent(new Event('secrets-ready'));
       }
     }
 
@@ -1105,6 +1163,117 @@
       }
     }
 
+    // ---- Secrets ----
+    function openSecretCreateModal() {
+      openModal('modal-create-secret');
+    }
+
+    async function createSecret(event) {
+      event.preventDefault();
+      const form = event.target;
+      const fd = new FormData(form);
+      const data = {
+        name: fd.get('name'),
+        value: fd.get('value'),
+        scope: fd.get('scope') || 'general'
+      };
+      if (!data.name || !data.value) { alert('Name and value are required'); return; }
+      try {
+        const res = await fetch('/api/secrets', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + getToken()
+          },
+          body: JSON.stringify(data)
+        });
+        const result = await res.json();
+        if (!res.ok) throw new Error(result.error || 'Create failed');
+        closeModal(null);
+        htmx.trigger('#secrets-list', 'secrets-ready');
+      } catch (err) {
+        alert('Error: ' + err.message);
+      }
+    }
+
+    async function editSecret(id) {
+      try {
+        const res = await fetch('/api/secrets/' + encodeURIComponent(id), {
+          headers: { 'Authorization': 'Bearer ' + getToken() }
+        });
+        const secret = await res.json();
+        if (!res.ok) throw new Error(secret.error || 'Fetch failed');
+        openModal('modal-edit-secret');
+        document.getElementById('edit-secret-id').value = secret.id;
+        document.getElementById('edit-secret-name').value = secret.name;
+        document.getElementById('edit-secret-value').value = '';
+        document.getElementById('edit-secret-scope').value = secret.scope || 'general';
+      } catch (err) {
+        alert('Error: ' + err.message);
+      }
+    }
+
+    async function updateSecret(event) {
+      event.preventDefault();
+      const form = event.target;
+      const id = form.querySelector('[name="id"]').value;
+      const data = {
+        name: form.querySelector('[name="name"]').value,
+        value: form.querySelector('[name="value"]').value,
+        scope: form.querySelector('[name="scope"]').value || 'general'
+      };
+      if (!data.name) { alert('Name is required'); return; }
+      try {
+        const res = await fetch('/api/secrets/' + encodeURIComponent(id), {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + getToken()
+          },
+          body: JSON.stringify(data)
+        });
+        const result = await res.json();
+        if (!res.ok) throw new Error(result.error || 'Update failed');
+        closeModal(null);
+        htmx.trigger('#secrets-list', 'secrets-ready');
+      } catch (err) {
+        alert('Error: ' + err.message);
+      }
+    }
+
+    async function deleteSecret(id, name) {
+      if (!confirm('Delete secret "' + name + '"?')) return;
+      try {
+        const res = await fetch('/api/secrets/' + encodeURIComponent(id), {
+          method: 'DELETE',
+          headers: { 'Authorization': 'Bearer ' + getToken() }
+        });
+        if (!res.ok) {
+          const data = await res.json();
+          throw new Error(data.error || 'Delete failed');
+        }
+        htmx.trigger('#secrets-list', 'secrets-ready');
+      } catch (err) {
+        alert('Error: ' + err.message);
+      }
+    }
+
+    async function showSecretValue(id, name) {
+      try {
+        const res = await fetch('/api/secrets/' + encodeURIComponent(id), {
+          headers: { 'Authorization': 'Bearer ' + getToken() }
+        });
+        const secret = await res.json();
+        if (!res.ok) throw new Error(secret.error || 'Fetch failed');
+        openModal('modal-show-secret');
+        document.getElementById('show-secret-name').textContent = name;
+        document.getElementById('show-secret-value').textContent = secret.value;
+        document.getElementById('show-secret-scope').textContent = secret.scope || 'general';
+      } catch (err) {
+        alert('Error: ' + err.message);
+      }
+    }
+
     // Handle HTMX error for pagination (when we go past last page, reset)
     document.addEventListener('htmx:beforeSwap', (e) => {
       if (e.detail.xhr.status === 404 || e.detail.xhr.status === 500) {
@@ -1283,6 +1452,94 @@
         <div class="flex justify-end gap-3">
           <button type="button" onclick="closeModal(null)" class="px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors">Cancel</button>
           <button type="submit" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium rounded-lg transition-colors">Create</button>
+        </div>
+      </form>
+    </div>
+  </template>
+
+  <!-- Show Secret Modal -->
+  <template id="modal-show-secret">
+    <div class="p-6">
+      <div class="flex items-center justify-between mb-6">
+        <h3 class="text-lg font-semibold">Secret: <span id="show-secret-name" class="text-indigo-400"></span></h3>
+        <button onclick="closeModal(null)" class="text-gray-400 hover:text-white">&times;</button>
+      </div>
+      <div class="mb-4">
+        <label class="block text-sm font-medium text-gray-300 mb-1">Scope</label>
+        <p id="show-secret-scope" class="text-gray-400 text-sm"></p>
+      </div>
+      <div class="mb-6">
+        <label class="block text-sm font-medium text-gray-300 mb-1">Value</label>
+        <pre id="show-secret-value" class="bg-gray-800 rounded-lg p-3 text-sm font-mono text-gray-100 overflow-x-auto"></pre>
+      </div>
+      <div class="flex justify-end gap-3">
+        <button type="button" onclick="closeModal(null)" class="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white text-sm font-medium rounded-lg transition-colors">Close</button>
+      </div>
+    </div>
+  </template>
+
+  <!-- Create Secret Modal -->
+  <template id="modal-create-secret">
+    <div class="p-6">
+      <div class="flex items-center justify-between mb-6">
+        <h3 class="text-lg font-semibold">Create Secret</h3>
+        <button onclick="closeModal(null)" class="text-gray-400 hover:text-white">&times;</button>
+      </div>
+      <form onsubmit="createSecret(event)">
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-300 mb-1">Name</label>
+          <input type="text" name="name" required
+            class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            placeholder="DATABASE_URL">
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-300 mb-1">Value</label>
+          <textarea name="value" rows="4" required
+            class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 font-mono text-sm placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            placeholder="postgresql://user:pass@localhost:5432/db"></textarea>
+        </div>
+        <div class="mb-6">
+          <label class="block text-sm font-medium text-gray-300 mb-1">Scope</label>
+          <input type="text" name="scope"
+            class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            placeholder="general">
+        </div>
+        <div class="flex justify-end gap-3">
+          <button type="button" onclick="closeModal(null)" class="px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors">Cancel</button>
+          <button type="submit" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium rounded-lg transition-colors">Create</button>
+        </div>
+      </form>
+    </div>
+  </template>
+
+  <!-- Edit Secret Modal -->
+  <template id="modal-edit-secret">
+    <div class="p-6">
+      <div class="flex items-center justify-between mb-6">
+        <h3 class="text-lg font-semibold">Edit Secret</h3>
+        <button onclick="closeModal(null)" class="text-gray-400 hover:text-white">&times;</button>
+      </div>
+      <form onsubmit="updateSecret(event)">
+        <input type="hidden" name="id" id="edit-secret-id">
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-300 mb-1">Name</label>
+          <input type="text" name="name" id="edit-secret-name" required
+            class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-300 mb-1">Value (leave empty to keep current)</label>
+          <textarea name="value" id="edit-secret-value" rows="4"
+            class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 font-mono text-sm placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            placeholder="Leave empty to keep current value"></textarea>
+        </div>
+        <div class="mb-6">
+          <label class="block text-sm font-medium text-gray-300 mb-1">Scope</label>
+          <input type="text" name="scope" id="edit-secret-scope"
+            class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </div>
+        <div class="flex justify-end gap-3">
+          <button type="button" onclick="closeModal(null)" class="px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors">Cancel</button>
+          <button type="submit" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium rounded-lg transition-colors">Save</button>
         </div>
       </form>
     </div>

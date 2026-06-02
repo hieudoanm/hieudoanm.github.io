@@ -26,7 +26,7 @@
 | 2   | `SimpleBase`    | Database       | SQLite  | x       |
 | 3   | `SimpleFiles`   | File Upload    |         | x       |
 | 4   | `SimpleHooks`   | Webhooks       | RESTful | x       |
-| 5   | `SimpleJobs`    | CronJobs       | Cron    |         |
+| 5   | `SimpleJobs`    | CronJobs       | Cron    | x       |
 | 6   | `SimpleQueues`  | Queues         |         |         |
-| 7   | `SimpleSecrets` | Secrets        |         |         |
+| 7   | `SimpleSecrets` | Secrets        |         | x       |
 | 8   | `SimpleSockets` | WebSockets     |         |         |
