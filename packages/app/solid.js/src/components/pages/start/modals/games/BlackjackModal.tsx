@@ -133,7 +133,7 @@ export const BlackjackModal = ({ onClose }: { onClose: () => void }) => {
           <button
             class="btn btn-secondary btn-sm"
             onClick={() => setReveal(true)}
-            disabled={reveal}>
+            disabled={reveal()}>
             Reveal
           </button>
           <button class="btn btn-accent btn-sm" onClick={resetDeck}>

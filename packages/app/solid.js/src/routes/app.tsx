@@ -13,6 +13,7 @@ import { PokerModal } from '@hieudoanm.github.io/components/pages/start/modals/c
 import { TaxModal } from '@hieudoanm.github.io/components/pages/start/modals/calculators/TaxModal';
 import { ChessClockModal } from '@hieudoanm.github.io/components/pages/start/modals/clocks/ChessClockModal';
 import { CountdownModal } from '@hieudoanm.github.io/components/pages/start/modals/clocks/CountdownModal';
+import { CronModal } from '@hieudoanm.github.io/components/pages/start/modals/clocks/CronModal';
 import { PomodoroModal } from '@hieudoanm.github.io/components/pages/start/modals/clocks/PomodoroModal';
 import { WatchFaceModal } from '@hieudoanm.github.io/components/pages/start/modals/clocks/WatchfaceModal';
 import { BrailleModal } from '@hieudoanm.github.io/components/pages/start/modals/converters/BrailleModal';
@@ -134,6 +135,7 @@ type ModalId =
   | 'colors'
   | 'converter'
   | 'countdown'
+  | 'cron'
   | 'doi'
   | 'elo'
   | 'emojis'
@@ -207,6 +209,7 @@ const MODAL_MAP: Record<
   colors: ColorsModal,
   converter: ConverterModal,
   countdown: CountdownModal,
+  cron: CronModal,
   doi: DOIModal,
   elo: EloModal,
   emojis: EmojisModal,
@@ -417,6 +420,13 @@ const makeTools = (
       emoji: '⏳',
       color: '#06b6d4',
       onClick: open('countdown'),
+    },
+    {
+      label: 'Cron',
+      description: 'Expression',
+      emoji: '⏰',
+      color: '#8b5cf6',
+      onClick: open('cron'),
     },
     {
       label: 'Pomodoro',

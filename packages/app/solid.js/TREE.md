@@ -112,6 +112,12 @@
 │   │   ├── pages/
 │   │   │   └── start/
 │   │   │       ├── cards/
+│   │   │       │   ├── __tests__/
+│   │   │       │   │   ├── AppCard.test.tsx
+│   │   │       │   │   ├── BookmarkCard.test.tsx
+│   │   │       │   │   ├── CityCard.test.tsx
+│   │   │       │   │   ├── DownloadCard.test.tsx
+│   │   │       │   │   └── ToolCard.test.tsx
 │   │   │       │   ├── AppCard.tsx
 │   │   │       │   ├── BookmarkCard.tsx
 │   │   │       │   ├── CityCard.tsx
@@ -132,22 +138,32 @@
 │   │   │       │   │   │   │       ├── Time.tsx
 │   │   │       │   │   │   │       └── Weight.tsx
 │   │   │       │   │   │   └── index.tsx
+│   │   │       │   │   ├── __tests__/
+│   │   │       │   │   │   ├── CalculatorModal.test.tsx
+│   │   │       │   │   │   ├── EloModal.test.tsx
+│   │   │       │   │   │   ├── InflationModal.test.tsx
+│   │   │       │   │   │   ├── PokerModal.test.tsx
+│   │   │       │   │   │   └── TaxModal.test.tsx
 │   │   │       │   │   ├── CalculatorModal.tsx
 │   │   │       │   │   ├── EloModal.tsx
 │   │   │       │   │   ├── InflationModal.tsx
 │   │   │       │   │   ├── PokerModal.tsx
 │   │   │       │   │   └── TaxModal.tsx
 │   │   │       │   ├── clocks/
+│   │   │       │   │   ├── __tests__/
 │   │   │       │   │   ├── ChessClockModal.tsx
 │   │   │       │   │   ├── CountdownModal.tsx
+│   │   │       │   │   ├── CronModal.tsx
 │   │   │       │   │   ├── PomodoroModal.tsx
 │   │   │       │   │   └── WatchfaceModal.tsx
 │   │   │       │   ├── converters/
+│   │   │       │   │   ├── __tests__/
 │   │   │       │   │   ├── BrailleModal.tsx
 │   │   │       │   │   ├── ColorsModal.tsx
 │   │   │       │   │   ├── MorseModal.tsx
 │   │   │       │   │   └── OpenAPI2Postman.tsx
 │   │   │       │   ├── editors/
+│   │   │       │   │   ├── __tests__/
 │   │   │       │   │   ├── JSONSchemaModal.tsx
 │   │   │       │   │   ├── ManifestModal.tsx
 │   │   │       │   │   ├── MarkdownModal.tsx
@@ -170,6 +186,11 @@
 │   │   │       │   │   ├── SnellenChartModal.tsx
 │   │   │       │   │   └── TumblingEChartModal.tsx
 │   │   │       │   ├── games/
+│   │   │       │   │   ├── __tests__/
+│   │   │       │   │   │   ├── BlackjackModal.test.tsx
+│   │   │       │   │   │   ├── T3Modal.test.tsx
+│   │   │       │   │   │   ├── TowersModal.test.tsx
+│   │   │       │   │   │   └── WordleModal.test.tsx
 │   │   │       │   │   ├── BlackjackModal.tsx
 │   │   │       │   │   ├── PalindromeModal.tsx
 │   │   │       │   │   ├── PiNumberModal.tsx
@@ -181,6 +202,8 @@
 │   │   │       │   │   ├── TypoglycemiaModal.tsx
 │   │   │       │   │   └── WordleModal.tsx
 │   │   │       │   ├── images/
+│   │   │       │   │   ├── __tests__/
+│   │   │       │   │   │   └── HouseModal.test.tsx
 │   │   │       │   │   ├── BreakingBadModal.tsx
 │   │   │       │   │   ├── CameraModal.tsx
 │   │   │       │   │   ├── GitHubSocialPreviewModal.tsx
@@ -195,6 +218,11 @@
 │   │   │       │   │   │   ├── ChatMessages.tsx
 │   │   │       │   │   │   ├── ChatModal.tsx
 │   │   │       │   │   │   └── index.ts
+│   │   │       │   │   ├── __tests__/
+│   │   │       │   │   │   ├── EmojisModal.test.tsx
+│   │   │       │   │   │   ├── KaprekarModal.test.tsx
+│   │   │       │   │   │   ├── ProxyModal.test.tsx
+│   │   │       │   │   │   └── StringModal.test.tsx
 │   │   │       │   │   ├── ClipboardModal.tsx
 │   │   │       │   │   ├── EmojisModal.tsx
 │   │   │       │   │   ├── FigletModal.tsx
@@ -208,10 +236,13 @@
 │   │   │       │   │   ├── StringModal.tsx
 │   │   │       │   │   └── UUIDModal.tsx
 │   │   │       │   └── visualization/
+│   │   │       │       ├── __tests__/
 │   │   │       │       ├── CalendarTracker.tsx
 │   │   │       │       └── LegislationModal.tsx
 │   │   │       └── sidebars/
 │   │   │           ├── LeftSidebar/
+│   │   │           │   ├── __tests__/
+│   │   │           │   │   └── LeftSidebar.test.tsx
 │   │   │           │   ├── tabs/
 │   │   │           │   │   ├── FreeModelsTab.tsx
 │   │   │           │   │   ├── StatusTab.tsx
@@ -219,6 +250,8 @@
 │   │   │           │   │   └── TimeTab.tsx
 │   │   │           │   └── index.tsx
 │   │   │           └── RightSidebar/
+│   │   │               ├── __tests__/
+│   │   │               │   └── RightSidebar.test.tsx
 │   │   │               ├── tabs/
 │   │   │               │   ├── CurrencyTab.tsx
 │   │   │               │   ├── DateTimeTab.tsx
@@ -428,4 +461,4 @@
 └── vitest.setup.ts
 ```
 
-112 directories, 313 files
+123 directories, 335 files
