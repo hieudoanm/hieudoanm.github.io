@@ -23,8 +23,8 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
-    "prebuild": "rimraf ../../docs/docs .docusaurus && ts-node ./scripts/ts/slugify.ts",
-    "build": "docusaurus build --out-dir ../../docs/docs",
+    "prebuild": "rimraf ../../docs .docusaurus && ts-node ./scripts/ts/slugify.ts",
+    "build": "docusaurus build --out-dir ../../docs",
     "postbuild": "./scripts/sh/postbuild.sh",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
