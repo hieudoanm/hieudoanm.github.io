@@ -10,10 +10,6 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-
 permissions:
   contents: write
 
@@ -23,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: packages/cli/go/hieudoanm
+        working-directory: packages/cli/hieudoanm/go
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -32,56 +28,11 @@ jobs:
         uses: actions/setup-go@v6
         with:
           go-version: '1.26.3'
-          cache-dependency-path: packages/cli/go/hieudoanm/go.sum
+          cache-dependency-path: packages/cli/hieudoanm/go/go.sum
 
       - name: Install Dependencies
         run: go mod download
-
       - name: Lint
         run: go vet ./...
-
       - name: Test
         run: go test ./...
-
-  build:
-    name: Build (${{ matrix.package }})
-    needs: quality
-    if: github.ref == 'refs/heads/master'
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        package:
-          - cobra.md
-          - hieudoanm
-    defaults:
-      run:
-        working-directory: packages/cli/go/hieudoanm
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v6
-
-      - name: Install Go
-        uses: actions/setup-go@v6
-        with:
-          go-version: '1.26.3'
-          cache-dependency-path: packages/cli/go/hieudoanm/go.sum
-
-      - name: Install Dependencies
-        run: go mod download
-
-      - name: Build
-        run: make build
-
-      - name: Create / Update CLI Release
-        uses: softprops/action-gh-release@v3
-        with:
-          tag_name: 'cli-${{ matrix.package }}-latest'
-          name: Latest CLI Release (${{ matrix.package }})
-          body: 'Automated Build for ${{ matrix.package }} CLI latest commit on master.'
-          draft: false
-          prerelease: false
-          overwrite_files: true
-          files: packages/cli/go/hieudoanm/bin/*
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}

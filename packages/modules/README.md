@@ -26,15 +26,19 @@
 ## Chess
 
 1. `@chess/elo`
+2. `@chess/fen`
+3. `@chess/pgn`
 
 ## [Lodash](https://lodash.com)
 
 1. `@lodash/c`
-2. `@lodash/go`
-3. `@lodash/kt`
-4. `@lodash/py`
-5. `@lodash/rs`
-6. `@lodash/swift`
+2. `@lodash/cpp`
+3. `@lodash/go`
+4. `@lodash/kt`
+5. `@lodash/py`
+6. `@lodash/rs`
+7. `@lodash/swift`
+8. `@lodash/ts`
 
 ## Simple
 

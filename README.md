@@ -20,7 +20,7 @@
 
 ## 📖 1. Overview
 
-Private is a focused project in this monorepo that delivers a practical tool with a clean user experience across platforms.
+Hieudoanm.github.io is a focused project in this monorepo that delivers a practical tool with a clean user experience across platforms.
 
 | No  | Metadata         | Value                           |
 | --- | ---------------- | ------------------------------- |
@@ -41,17 +41,17 @@ Private is a focused project in this monorepo that delivers a practical tool wit
 
 ## 🎥 3. Demo
 
-- 🌐 [Live Demo](https://hieudoanm.github.io/private/)
+- 🌐 [Live Demo](https://hieudoanm.github.io/)
 
 ## 🚀 4. Usage
 
-- 🌐 [Web](https://hieudoanm.github.io/private/)
-- 💻 [CLI](https://github.com/hieudoanm/private/releases)
-- 📱 [Mobile](https://github.com/hieudoanm/private/releases)
-- 🖥️ [Desktop](https://github.com/hieudoanm/private/releases)
-  - 🍎 [MacOS](https://github.com/hieudoanm/private/releases/tag/macos-latest)
-  - 🐧 [Ubuntu](https://github.com/hieudoanm/private/releases/tag/ubuntu-latest)
-  - 🪟 [Windows](https://github.com/hieudoanm/private/releases/tag/windows-latest)
+- 🌐 [Web](https://hieudoanm.github.io/)
+- 💻 [CLI](https://github.com/hieudoanm/hieudoanm.github.io/releases)
+- 📱 [Mobile](https://github.com/hieudoanm/hieudoanm.github.io/releases)
+- 🖥️ [Desktop](https://github.com/hieudoanm/hieudoanm.github.io/releases)
+  - 🍎 [MacOS](https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/macos-latest)
+  - 🐧 [Ubuntu](https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/ubuntu-latest)
+  - 🪟 [Windows](https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/windows-latest)
 
 ## 🛠️ 5. Development Stack
 
