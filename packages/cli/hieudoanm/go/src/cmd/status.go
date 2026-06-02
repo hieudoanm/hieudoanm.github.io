@@ -1,97 +1,436 @@
-/*
-Copyright © 2025 NAME HERE <EMAIL ADDRESS>
-*/
 package cmd
 
 import (
+	"encoding/json"
 	"fmt"
 	"log"
+	"os"
+	"strings"
+	"time"
 
-	"github.com/AlecAivazis/survey/v2"
-	"github.com/hieudoanm/hieudoanm/src/configs"
-	"github.com/hieudoanm/hieudoanm/src/services/status"
+	"charm.land/bubbles/v2/spinner"
+	"charm.land/bubbles/v2/viewport"
+	tea "charm.land/bubbletea/v2"
+	"charm.land/lipgloss/v2"
+	"github.com/hieudoanm/hieudoanm/src/libs/requests"
 	"github.com/spf13/cobra"
 )
 
-// statusCmd represents the "one" status command
-var statusCmd = &cobra.Command{
-	Use:   "status",
-	Short: "Run the one operation for the status app",
-	Long: `The one command is a specific utility to execute operations related to one within the status application.
+// -------------------- Config --------------------
 
-As a component of the devtools tools, this command empowers you to interact directly with status's one features via the CLI.`,
-	Run: func(cmd *cobra.Command, args []string) {
+var Services = map[string]map[string]string{
+	"atlassian": {
+		"analytics":               "https://analytics.status.atlassian.com/api/v2/status.json",
+		"atlas":                   "https://atlas.status.atlassian.com/api/v2/status.json",
+		"compass":                 "https://compass.status.atlassian.com/api/v2/status.json",
+		"confluence":              "https://confluence.status.atlassian.com/api/v2/status.json",
+		"developer":               "https://developer.status.atlassian.com/api/v2/status.json",
+		"guard":                   "https://guard.status.atlassian.com/api/v2/status.json",
+		"jira-service-management": "https://jira-service-management.status.atlassian.com/api/v2/status.json",
+		"jira-software":           "https://jira-software.status.atlassian.com/api/v2/status.json",
+		"opsgenie":                "https://opsgenie.status.atlassian.com/api/v2/status.json",
+		"partners":                "https://partners.status.atlassian.com/api/v2/status.json",
+		"support":                 "https://support.status.atlassian.com/api/v2/status.json",
+		"trello":                  "https://trello.status.atlassian.com/api/v2/status.json",
+	},
+	"crypto": {
+		"hedera":  "https://status.hedera.com/api/v2/status.json",
+		"polygon": "https://status.polygon.technology/api/v2/status.json",
+		"solana":  "https://status.solana.com/api/v2/status.json",
+	},
+	"serverless": {
+		"cloudflare": "https://www.cloudflarestatus.com/api/v2/status.json",
+		"flyio":      "https://status.flyio.net/api/v2/status.json",
+		"netlify":    "https://www.netlifystatus.com/api/v2/status.json",
+		"render":     "https://status.render.com/api/v2/status.json",
+		"supabase":   "https://status.supabase.com/api/v2/status.json",
+		"vercel":     "https://www.vercel-status.com/api/v2/status.json",
+	},
+	"saas": {
+		"bitbucket": "https://bitbucket.status.atlassian.com/api/v2/status.json",
+		"github":    "https://www.githubstatus.com/api/v2/status.json",
+		"npm":       "https://status.npmjs.org/api/v2/status.json",
+		"canva":     "https://www.canvastatus.com/api/v2/status.json",
+		"figma":     "https://status.figma.com/api/v2/status.json",
+	},
+}
 
-		/* ---------------- Service reference ---------------- */
+// -------------------- Types --------------------
 
-		type serviceRef struct {
-			Name string
-			URL  string
+type Page struct {
+	Id        string `json:"id"`
+	Name      string `json:"name"`
+	Url       string `json:"url"`
+	TimeZone  string `json:"time_zone"`
+	UpdatedAt string `json:"updated_at"`
+}
+
+type Status struct {
+	Indicator   string `json:"indicator"`
+	Description string `json:"description"`
+}
+
+type Response struct {
+	Page   Page   `json:"page"`
+	Status Status `json:"status"`
+}
+
+// -------------------- HTTP --------------------
+
+func GetStatus(url string, debug bool) (Response, error) {
+	responseByte, getError := requests.Get(url, requests.Options{Debug: debug})
+	if getError != nil {
+		return Response{}, getError
+	}
+	var response Response
+	jsonError := json.Unmarshal(responseByte, &response)
+	if jsonError != nil {
+		return Response{}, jsonError
+	}
+	return response, nil
+}
+
+func PrintFullStatus(url string, debug bool) {
+	resp, err := GetStatus(url, debug)
+	if err != nil {
+		log.Printf("[%s] \033[31mError:\033[0m %v\n", time.Now().Format(time.RFC3339), err)
+		return
+	}
+
+	const (
+		ColorReset  = "\033[0m"
+		ColorBlue   = "\033[34m"
+		ColorGreen  = "\033[32m"
+		ColorYellow = "\033[33m"
+		ColorCyan   = "\033[36m"
+	)
+
+	timestamp := time.Now().Format(time.RFC3339)
+	border := fmt.Sprintf("%s==================== STATUS PAGE ==================== [%s]%s", ColorBlue, timestamp, ColorReset)
+
+	fmt.Println(border)
+	fmt.Printf("%sPage Name    :%s %s\n", ColorCyan, ColorReset, resp.Page.Name)
+	fmt.Printf("%sPage ID      :%s %s\n", ColorCyan, ColorReset, resp.Page.Id)
+	fmt.Printf("%sURL          :%s %s\n", ColorCyan, ColorReset, resp.Page.Url)
+	fmt.Printf("%sTime Zone    :%s %s\n", ColorCyan, ColorReset, resp.Page.TimeZone)
+	fmt.Printf("%sUpdated At   :%s %s\n", ColorCyan, ColorReset, resp.Page.UpdatedAt)
+	fmt.Printf("%sIndicator    :%s %s\n", ColorGreen, ColorReset, resp.Status.Indicator)
+	fmt.Printf("%sDescription  :%s %s\n", ColorYellow, ColorReset, resp.Status.Description)
+	fmt.Println(border)
+}
+
+func GetDescriptiveStatus(name string, url string, debug bool) string {
+	resp, err := GetStatus(url, debug)
+	if err != nil {
+		return fmt.Sprintf("\033[31mError:\033[0m %v", err)
+	}
+
+	if resp.Status.Indicator == "none" {
+		return "✅ Healthy"
+	}
+
+	return "❌ Offline"
+}
+
+func PrintDescriptiveStatus(name string, url string, debug bool) {
+	resp, err := GetStatus(url, debug)
+	if err != nil {
+		log.Printf("[%s] \033[31mError:\033[0m %v\n", time.Now().Format(time.RFC3339), err)
+		return
+	}
+	const (
+		ColorYellow = "\033[33m"
+		ColorReset  = "\033[0m"
+	)
+	timestamp := time.Now().Format(time.RFC3339)
+	fmt.Printf("[%s] %s%s : %s%s\n", timestamp, ColorYellow, name, resp.Status.Description, ColorReset)
+}
+
+// -------------------- TUI Styles --------------------
+
+var (
+	boxStyle = lipgloss.NewStyle().
+			Border(lipgloss.RoundedBorder()).
+			Padding(0, 1).
+			BorderForeground(lipgloss.Color("62"))
+
+	headerStyle = lipgloss.NewStyle().
+			Bold(true).
+			Foreground(lipgloss.Color("205")).
+			Padding(0, 1)
+
+	footerStyle = lipgloss.NewStyle().
+			Foreground(lipgloss.Color("241")).
+			Padding(0, 1)
+
+	rowStyle = lipgloss.NewStyle().Padding(0, 1)
+
+	selectedRowStyle = lipgloss.NewStyle().
+				Padding(0, 1).
+				Background(lipgloss.Color("62")).
+				Foreground(lipgloss.Color("230")).
+				Bold(true)
+
+	greenDot  = lipgloss.NewStyle().Foreground(lipgloss.Color("42")).Render("●")
+	redDot    = lipgloss.NewStyle().Foreground(lipgloss.Color("196")).Render("●")
+	yellowDot = lipgloss.NewStyle().Foreground(lipgloss.Color("226")).Render("●")
+)
+
+// -------------------- TUI Types --------------------
+
+type ServiceStatus struct {
+	Name   string
+	URL    string
+	Output string
+}
+
+type statusMsg ServiceStatus
+
+type model struct {
+	services []ServiceStatus
+	cursor   int
+
+	width  int
+	height int
+
+	viewport viewport.Model
+
+	loading bool
+	checked int
+	total   int
+	spinner spinner.Model
+}
+
+// -------------------- TUI Init --------------------
+
+func (m model) Init() tea.Cmd {
+	return tea.Batch(
+		m.spinner.Tick,
+		fetchStatuses(m.services),
+	)
+}
+
+// -------------------- TUI Fetch --------------------
+
+func fetchStatuses(services []ServiceStatus) tea.Cmd {
+	return func() tea.Msg {
+		if len(services) == 0 {
+			return nil
 		}
 
-		/* ---------------- Build options ---------------- */
+		s := services[0]
 
-		serviceMap := make(map[string]serviceRef)
-		options := []string{}
+		out := GetDescriptiveStatus(s.Name, s.URL, debug)
 
-		for group, services := range configs.Services {
-			for name, url := range services {
+		return statusMsg(ServiceStatus{
+			Name:   s.Name,
+			URL:    s.URL,
+			Output: out,
+		})
+	}
+}
 
-				// Display label with group prefix
-				label := fmt.Sprintf("%s / %s", group, name)
+// -------------------- TUI Update --------------------
 
-				options = append(options, label)
+func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
+	switch msg := msg.(type) {
 
-				serviceMap[label] = serviceRef{
+	case tea.WindowSizeMsg:
+		m.width = msg.Width
+		m.height = msg.Height
+
+		headerH := 1
+		footerH := 1
+		boxPadding := 2
+
+		vpHeight := m.height - headerH - footerH - boxPadding - 4
+		if vpHeight < 5 {
+			vpHeight = 5
+		}
+
+		m.viewport = viewport.New(
+			viewport.WithWidth(m.width-6),
+			viewport.WithHeight(vpHeight),
+		)
+
+		m.viewport.SetContent(m.renderRows())
+		return m, nil
+
+	case spinner.TickMsg:
+		var cmd tea.Cmd
+		m.spinner, cmd = m.spinner.Update(msg)
+		return m, cmd
+
+	case statusMsg:
+		m.services[m.checked].Output = msg.Output
+		m.checked++
+
+		if m.checked == m.total {
+			m.loading = false
+			m.viewport.SetContent(m.renderRows())
+			return m, nil
+		}
+
+		m.viewport.SetContent(m.renderRows())
+		return m, fetchStatuses(m.services[m.checked:])
+
+	case tea.KeyMsg:
+		switch msg.String() {
+		case "ctrl+c", "q":
+			return m, tea.Quit
+		case "up", "k":
+			if m.cursor > 0 {
+				m.cursor--
+				m.syncScroll()
+			}
+		case "down", "j":
+			if m.cursor < len(m.services)-1 {
+				m.cursor++
+				m.syncScroll()
+			}
+		}
+	}
+
+	return m, nil
+}
+
+// -------------------- TUI Scroll --------------------
+
+func (m *model) syncScroll() {
+	offset := m.viewport.YOffset()
+	height := m.viewport.Height()
+
+	if m.cursor < offset {
+		m.viewport.SetYOffset(m.cursor)
+		return
+	}
+
+	if m.cursor >= offset+height {
+		m.viewport.SetYOffset(m.cursor - height + 1)
+	}
+}
+
+// -------------------- TUI Helpers --------------------
+
+func statusDot(output string) string {
+	l := strings.ToLower(output)
+
+	switch {
+	case strings.Contains(l, "healthy"),
+		strings.Contains(l, "up"),
+		strings.Contains(l, "ok"):
+		return greenDot
+	case strings.Contains(l, "down"),
+		strings.Contains(l, "error"),
+		strings.Contains(l, "fail"):
+		return redDot
+	default:
+		return yellowDot
+	}
+}
+
+func renderRow(name, status string, width int) string {
+	left := name
+	right := statusDot(status) + " " + status
+
+	gap := width - lipgloss.Width(left) - lipgloss.Width(right) - 2
+	if gap < 1 {
+		gap = 1
+	}
+
+	return left + strings.Repeat(" ", gap) + right
+}
+
+func (m model) renderRows() string {
+	var b strings.Builder
+
+	for i, svc := range m.services {
+		row := renderRow(svc.Name, svc.Output, m.viewport.Width())
+
+		if i == m.cursor {
+			b.WriteString(selectedRowStyle.Render(row))
+		} else {
+			b.WriteString(rowStyle.Render(row))
+		}
+
+		b.WriteRune('\n')
+	}
+
+	return b.String()
+}
+
+// -------------------- TUI View --------------------
+
+func (m model) View() tea.View {
+	if m.loading {
+		return tea.NewView(boxStyle.Render(fmt.Sprintf(
+			"%s Checking services... (%d/%d)",
+			m.spinner.View(),
+			m.checked,
+			m.total,
+		)))
+	}
+
+	header := headerStyle.Render("Service Status")
+	body := m.viewport.View()
+	footer := footerStyle.Render(fmt.Sprintf(
+		"↑/↓ Navigate • q Quit • %d services",
+		len(m.services),
+	))
+
+	layout := lipgloss.JoinVertical(
+		lipgloss.Left,
+		header,
+		body,
+		footer,
+	)
+
+	return tea.NewView(
+		boxStyle.
+			Width(m.width - 2).
+			Height(m.height - 2).
+			Render(layout),
+	)
+}
+
+// -------------------- debug flag --------------------
+
+var debug bool
+
+var statusCmd = &cobra.Command{
+	Use:   "status",
+	Short: "Run the status operation for the status app",
+	Run: func(cmd *cobra.Command, args []string) {
+		var services []ServiceStatus
+
+		for _, servicesByGroup := range Services {
+			for name, url := range servicesByGroup {
+				services = append(services, ServiceStatus{
 					Name: name,
 					URL:  url,
-				}
+				})
 			}
 		}
 
-		/* ---------------- Prompt ---------------- */
+		sp := spinner.New()
+		sp.Spinner = spinner.Dot
 
-		var choice string
-
-		servicePrompt := &survey.Select{
-			Message:  "Choose a service:",
-			Options:  options,
-			PageSize: 10,
+		m := model{
+			services: services,
+			loading:  true,
+			total:    len(services),
+			spinner:  sp,
 		}
 
-		if err := survey.AskOne(servicePrompt, &choice); err != nil {
-			log.Fatalf("Failed to choose service: %v", err)
+		if _, err := tea.NewProgram(m).Run(); err != nil {
+			fmt.Println("Error running TUI:", err)
+			os.Exit(1)
 		}
-
-		/* ---------------- Resolve selection ---------------- */
-
-		ref, ok := serviceMap[choice]
-		if !ok {
-			log.Fatalf("Service not found: %s", choice)
-		}
-
-		/* ---------------- Safety guard ---------------- */
-
-		if ref.URL == "" {
-			log.Fatalf("Service URL is empty for %s", ref.Name)
-		}
-
-		/* ---------------- Print status ---------------- */
-
-		// Updated call: pass URL explicitly
-		status.PrintDescriptiveStatus(ref.Name, ref.URL, debug)
 	},
 }
 
 func init() {
 	rootCmd.AddCommand(statusCmd)
 
-	// Local debug flag
-	statusCmd.Flags().BoolVarP(
-		&debug,
-		"debug",
-		"d",
-		false,
-		"Enable debug logging for HTTP requests",
-	)
+	statusCmd.Flags().BoolVarP(&debug, "debug", "d", false, "Enable debug logging")
 }

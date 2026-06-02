@@ -6,7 +6,6 @@ import (
 	"math/rand"
 	"strings"
 
-	"github.com/hieudoanm/hieudoanm/src/data"
 	"github.com/hieudoanm/hieudoanm/src/services/lichess"
 
 	"github.com/spf13/cobra"
@@ -20,11 +19,11 @@ var randomCmd = &cobra.Command{
 
 As a component of the chess tools, this command empowers you to interact directly with chess960's random features via the CLI.`,
 	RunE: func(cmd *cobra.Command, args []string) error {
-		n := len(data.Positions)
+		n := len(Positions)
 
 		// ---- pick random position from data.Positions ----
 		positionIndex := rand.Intn(n)
-		position := data.Positions[positionIndex]
+		position := Positions[positionIndex]
 		fmt.Printf("Position %d: %s\n", positionIndex+1, position)
 
 		// ---- convert to FEN ----

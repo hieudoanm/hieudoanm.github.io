@@ -3,6 +3,7 @@ package docsify
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"os"
 	"path/filepath"
 	"sort"
@@ -37,7 +38,7 @@ var docsifyTreeCmd = &cobra.Command{
 
 		fmt.Fprintln(out, "# TREE")
 		fmt.Fprintln(out)
-		fmt.Fprintln(out, "```bash")
+		fmt.Fprintln(out, "```text")
 		dirs, files, err := writeTree(out, absDir, absDir, "", ignore)
 		if err != nil {
 			return err
@@ -133,7 +134,8 @@ func matchAnySegment(pattern, path string) bool {
 }
 
 // writeTree walks dir and writes a markdown tree to w, returning dir and file counts.
-func writeTree(w *os.File, root, dir string, prefix string, ignore func(string, bool) bool) (int, int, error) {
+// Files are rendered as [name](./relative/path) links.
+func writeTree(w io.Writer, root, dir string, prefix string, ignore func(string, bool) bool) (int, int, error) {
 	entries, err := os.ReadDir(dir)
 	if err != nil {
 		return 0, 0, err
@@ -187,7 +189,8 @@ func writeTree(w *os.File, root, dir string, prefix string, ignore func(string, 
 			totalDirs += subDirs
 			totalFiles += subFiles
 		} else {
-			fmt.Fprintf(w, "%s%s%s\n", prefix, connector, name)
+			rel, _ := filepath.Rel(root, filepath.Join(dir, name))
+			fmt.Fprintf(w, "%s%s[%s](./%s)\n", prefix, connector, name, rel)
 		}
 	}
 	return totalDirs, totalFiles, nil

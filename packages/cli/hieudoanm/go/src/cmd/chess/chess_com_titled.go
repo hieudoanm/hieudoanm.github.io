@@ -8,7 +8,6 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/hieudoanm/hieudoanm/src/data"
 	"github.com/hieudoanm/hieudoanm/src/libs/number"
 	"github.com/hieudoanm/hieudoanm/src/libs/requests"
 )
@@ -50,7 +49,7 @@ As a component of the chess tools, this command empowers you to interact directl
 		fmt.Printf("| %-6s | %7s |\n", "Titled", "Players")
 		fmt.Printf("| %-6s | %7s |\n", strings.Repeat("-", 6), strings.Repeat("-", 7))
 
-		for _, title := range data.Titles {
+		for _, title := range Titles {
 			count, err := fetchTitleCount(title)
 			if err != nil {
 				fmt.Fprintf(os.Stderr, "❌ Failed to fetch %s: %v\n", title, err)

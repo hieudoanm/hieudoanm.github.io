@@ -1,4 +1,4 @@
-package data
+package chess
 
 type Opening struct {
 	Eco      string

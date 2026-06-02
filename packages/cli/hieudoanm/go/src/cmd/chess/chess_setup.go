@@ -8,7 +8,6 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/hieudoanm/hieudoanm/src/data"
 	"github.com/hieudoanm/hieudoanm/src/services/lichess"
 
 	"github.com/spf13/cobra"
@@ -43,11 +42,11 @@ As a component of the chess tools, this command empowers you to interact directl
 		}
 
 		// Validate range
-		if positionIndex < 1 || positionIndex > len(data.Positions) {
-			return fmt.Errorf("❌ position must be between 1 and %d", len(data.Positions))
+		if positionIndex < 1 || positionIndex > len(Positions) {
+			return fmt.Errorf("❌ position must be between 1 and %d", len(Positions))
 		}
 
-		var position = data.Positions[positionIndex-1]
+		var position = Positions[positionIndex-1]
 		fmt.Printf("Position %d: %s\n", positionIndex, position)
 
 		// ---- convert to FEN ----
