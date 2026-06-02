@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_hieudoanm_github_io_docs=self.webpackChunk_hieudoanm_github_io_docs||[]).push([["3186"],{68070(e){e.exports=JSON.parse('{"tags":[{"label":"Hello","permalink":"/blog/tags/hello","description":"Hello tag description","count":1}]}')}}]);

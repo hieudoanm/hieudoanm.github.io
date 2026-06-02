@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk_hieudoanm_github_io_docs=self.webpackChunk_hieudoanm_github_io_docs||[]).push([["61833"],{55513(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Prompt Framework","permalink":"/promptly/blog/prompt-framework","unlisted":false,"date":"2026-01-13T00:00:00.000Z"}]}')}}]);

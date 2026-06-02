@@ -1,4 +1,3 @@
-import { AppCard } from '@hieudoanm.github.io/components/pages/start/cards/AppCard';
 import { BookmarkCard } from '@hieudoanm.github.io/components/pages/start/cards/BookmarkCard';
 import { DownloadCard } from '@hieudoanm.github.io/components/pages/start/cards/DownloadCard';
 import {
@@ -161,6 +160,14 @@ const CountdownModal = dynamic(
   () =>
     import('@hieudoanm.github.io/components/pages/start/modals/clocks/CountdownModal').then(
       (mod) => mod.CountdownModal
+    ),
+  { ssr: false }
+);
+
+const CronModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/clocks/CronModal').then(
+      (mod) => mod.CronModal
     ),
   { ssr: false }
 );
@@ -558,6 +565,7 @@ type ModalId =
   | 'colors'
   | 'converter'
   | 'countdown'
+  | 'cron'
   | 'doi'
   | 'elo'
   | 'emojis'
@@ -632,6 +640,7 @@ const MODAL_MAP: Record<
   colors: ColorsModal,
   converter: ConverterModal,
   countdown: CountdownModal,
+  cron: CronModal,
   doi: DOIModal,
   elo: EloModal,
   emojis: EmojisModal,
@@ -844,6 +853,13 @@ const makeTools = (
       emoji: '⏳',
       color: '#06b6d4',
       onClick: open('countdown'),
+    },
+    {
+      label: 'Cron',
+      description: 'Expression Builder',
+      emoji: '🕒',
+      color: '#8b5cf6',
+      onClick: open('cron'),
     },
     {
       label: 'Pomodoro',

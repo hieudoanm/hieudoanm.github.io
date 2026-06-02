@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk_hieudoanm_github_io_docs=self.webpackChunk_hieudoanm_github_io_docs||[]).push([["93220"],{1912(o){o.exports=JSON.parse('{"blogBasePath":"/promptly/blog","blogTitle":"Blog","authorsListPath":"/promptly/blog/authors"}')}}]);

@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SimpleBase Admin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+  <script src="https://unpkg.com/htmx.org@1.9.12/dist/ext/client-side-templates.js"></script>
+  <script src="https://unpkg.com/mustache@4.2.0/mustache.min.js"></script>
+  <style>
+    [x-cloak] { display: none !important; }
+    .view { display: none; }
+    .view.active { display: block; }
+    .modal-overlay { display: none; }
+    .modal-overlay.open { display: flex; }
+    .sidebar-link.active { background-color: rgba(255,255,255,0.1); }
+    pre { white-space: pre-wrap; word-break: break-word; }
+  </style>
+</head>
+<body class="bg-gray-950 text-gray-100 min-h-screen">
+  <!-- ==================== LOGIN VIEW ==================== -->
+  <div id="login-view" class="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-indigo-950">
+    <div class="w-full max-w-md p-8">
+      <div class="text-center mb-8">
+        <h1 class="text-3xl font-bold text-white">SimpleBase</h1>
+        <p class="text-gray-400 mt-2">Admin Dashboard</p>
+      </div>
+      <div class="bg-gray-900/80 backdrop-blur rounded-2xl shadow-2xl border border-gray-800 p-8">
+        <h2 class="text-xl font-semibold mb-6">Sign In</h2>
+        <form id="login-form" onsubmit="handleLogin(event)">
+          <div class="mb-4">
+            <label class="block text-sm font-medium text-gray-300 mb-1" for="email">Email</label>
+            <input type="email" id="email" name="email" required
+              class="w-full px-4 py-2.5 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+              placeholder="admin@example.com">
+          </div>
+          <div class="mb-6">
+            <label class="block text-sm font-medium text-gray-300 mb-1" for="password">Password</label>
+            <input type="password" id="password" name="password" required
+              class="w-full px-4 py-2.5 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+              placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;">
+          </div>
+          <div id="login-error" class="text-red-400 text-sm mb-4 hidden"></div>
+          <button type="submit" id="login-btn"
+            class="w-full py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-900">
+            Sign In
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== APP VIEW ==================== -->
+  <div id="app-view" class="hidden min-h-screen flex">
+    <!-- Sidebar -->
+    <aside id="sidebar" class="w-64 bg-gray-900/90 border-r border-gray-800 flex-shrink-0 hidden lg:flex flex-col">
+      <div class="p-5 border-b border-gray-800">
+        <h1 class="text-xl font-bold text-white">SimpleBase</h1>
+        <p class="text-xs text-gray-500 mt-0.5">Admin Dashboard</p>
+      </div>
+      <nav class="flex-1 p-3 space-y-1">
+        <button onclick="showView('dashboard')" class="sidebar-link active w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition-colors text-sm" data-view="dashboard">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Dashboard
+        </button>
+        <button onclick="showView('collections')" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition-colors text-sm" data-view="collections">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+          Collections
+        </button>
+        <button onclick="showView('buckets')" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition-colors text-sm" data-view="buckets">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
+          Buckets
+        </button>
+        <button onclick="showView('webhooks')" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition-colors text-sm" data-view="webhooks">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+          Webhooks
+        </button>
+      </nav>
+      <div class="p-3 border-t border-gray-800">
+        <button onclick="handleLogout()" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-400 hover:text-red-400 hover:bg-red-500/10 transition-colors text-sm">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
+          Sign Out
+        </button>
+      </div>
+    </aside>
+
+    <!-- Mobile header -->
+    <div class="fixed top-0 left-0 right-0 z-50 bg-gray-900 border-b border-gray-800 lg:hidden">
+      <div class="flex items-center justify-between px-4 py-3">
+        <h1 class="text-lg font-bold">SimpleBase</h1>
+        <button onclick="toggleMobileMenu()" class="p-2 rounded-lg hover:bg-gray-800">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main content -->
+    <main class="flex-1 min-w-0 lg:pt-0 pt-14">
+      <!-- Dashboard View -->
+      <div id="view-dashboard" class="view active p-6">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-2xl font-bold mb-6">Dashboard</h2>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div class="bg-gray-900/80 rounded-xl border border-gray-800 p-5">
+              <h3 class="text-lg font-semibold mb-4">Collections</h3>
+              <div id="dash-colls-trigger" hx-get="/api/collections" hx-trigger="dash-ready" hx-ext="client-side-templates"
+                mustache-template="tmpl-dashboard-collections"
+                hx-target="#recent-collections" hx-swap="innerHTML">
+                <div id="recent-collections" class="text-gray-500 text-sm">Loading...</div>
+              </div>
+            </div>
+            <div class="bg-gray-900/80 rounded-xl border border-gray-800 p-5">
+              <h3 class="text-lg font-semibold mb-4">Buckets</h3>
+              <div id="dash-buckets-trigger" hx-get="/api/buckets" hx-trigger="dash-ready" hx-ext="client-side-templates"
+                mustache-template="tmpl-dashboard-buckets"
+                hx-target="#recent-buckets" hx-swap="innerHTML">
+                <div id="recent-buckets" class="text-gray-500 text-sm">Loading...</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Collections View -->
+      <div id="view-collections" class="view p-6">
+        <div class="max-w-6xl mx-auto">
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="text-2xl font-bold">Collections</h2>
+            <button onclick="openModal('create-collection')" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium rounded-lg transition-colors">
+              + New Collection
+            </button>
+          </div>
+          <div class="bg-gray-900/80 rounded-xl border border-gray-800 overflow-hidden">
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr class="text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
+                    <th class="px-6 py-3">Name</th>
+                    <th class="px-6 py-3">Schema</th>
+                    <th class="px-6 py-3">Created</th>
+                    <th class="px-6 py-3">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="collections-list"
+                  hx-get="/api/collections" hx-trigger="cols-ready" hx-ext="client-side-templates"
+                  mustache-template="tmpl-collections" hx-swap="innerHTML">
+                  <tr><td colspan="4" class="px-6 py-8 text-center text-gray-500">Loading...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Records View -->
+      <div id="view-records" class="view p-6">
+        <div class="max-w-6xl mx-auto">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <button onclick="showView('collections')" class="text-sm text-gray-400 hover:text-white transition-colors">&larr; Collections</button>
+              <h2 class="text-2xl font-bold mt-1">Records: <span id="records-collection-name" class="text-indigo-400"></span></h2>
+            </div>
+            <button onclick="openRecordCreateModal()" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium rounded-lg transition-colors">
+              + New Record
+            </button>
+          </div>
+          <div class="bg-gray-900/80 rounded-xl border border-gray-800 overflow-hidden">
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr class="text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
+                    <th class="px-6 py-3">ID</th>
+                    <th class="px-6 py-3">Data</th>
+                    <th class="px-6 py-3">Created</th>
+                    <th class="px-6 py-3">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="records-list"
+                  hx-ext="client-side-templates" mustache-template="tmpl-records" hx-swap="innerHTML">
+                  <tr><td colspan="4" class="px-6 py-8 text-center text-gray-500">Select a collection to view records</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div id="records-pagination" class="mt-4 flex items-center justify-between text-sm"></div>
+        </div>
+      </div>
+
+      <!-- Buckets View -->
+      <div id="view-buckets" class="view p-6">
+        <div class="max-w-6xl mx-auto">
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="text-2xl font-bold">Buckets</h2>
+            <button onclick="openModal('create-bucket')" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium rounded-lg transition-colors">
+              + New Bucket
+            </button>
+          </div>
+          <div class="bg-gray-900/80 rounded-xl border border-gray-800 overflow-hidden">
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr class="text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
+                    <th class="px-6 py-3">Name</th>
+                    <th class="px-6 py-3">Public</th>
+                    <th class="px-6 py-3">Created</th>
+                    <th class="px-6 py-3">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="buckets-list"
+                  hx-get="/api/buckets" hx-trigger="buckets-ready" hx-ext="client-side-templates"
+                  mustache-template="tmpl-buckets" hx-swap="innerHTML">
+                  <tr><td colspan="4" class="px-6 py-8 text-center text-gray-500">Loading...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Files View -->
+      <div id="view-files" class="view p-6">
+        <div class="max-w-6xl mx-auto">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <button onclick="showView('buckets')" class="text-sm text-gray-400 hover:text-white transition-colors">&larr; Buckets</button>
+              <h2 class="text-2xl font-bold mt-1">Files: <span id="files-bucket-name" class="text-indigo-400"></span></h2>
+            </div>
+            <button onclick="openFileUploadModal()" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium rounded-lg transition-colors">
+              + Upload File
+            </button>
+          </div>
+          <div class="bg-gray-900/80 rounded-xl border border-gray-800 overflow-hidden">
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr class="text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
+                    <th class="px-6 py-3">Filename</th>
+                    <th class="px-6 py-3">Type</th>
+                    <th class="px-6 py-3">Size</th>
+                    <th class="px-6 py-3">Created</th>
+                    <th class="px-6 py-3">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="files-list"
+                  hx-ext="client-side-templates" mustache-template="tmpl-files" hx-swap="innerHTML">
+                  <tr><td colspan="5" class="px-6 py-8 text-center text-gray-500">Select a bucket to view files</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div id="files-pagination" class="mt-4 flex items-center justify-between text-sm"></div>
+        </div>
+      </div>
+
+      <!-- Webhooks View -->
+      <div id="view-webhooks" class="view p-6">
+        <div class="max-w-6xl mx-auto">
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="text-2xl font-bold">Webhooks</h2>
+            <button onclick="openWebhookCreateModal()" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium rounded-lg transition-colors">
+              + New Webhook
+            </button>
+          </div>
+          <div class="bg-gray-900/80 rounded-xl border border-gray-800 overflow-hidden">
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr class="text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
+                    <th class="px-6 py-3">Name</th>
+                    <th class="px-6 py-3">URL</th>
+                    <th class="px-6 py-3">Events</th>
+                    <th class="px-6 py-3">Status</th>
+                    <th class="px-6 py-3">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="webhooks-list"
+                  hx-get="/api/webhooks" hx-trigger="webhooks-ready" hx-ext="client-side-templates"
+                  mustache-template="tmpl-webhooks" hx-swap="innerHTML">
+                  <tr><td colspan="5" class="px-6 py-8 text-center text-gray-500">Loading...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Webhook Logs View -->
+      <div id="view-webhook-logs" class="view p-6">
+        <div class="max-w-6xl mx-auto">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <button onclick="showView('webhooks')" class="text-sm text-gray-400 hover:text-white transition-colors">&larr; Webhooks</button>
+              <h2 class="text-2xl font-bold mt-1">Logs: <span id="webhook-logs-name" class="text-indigo-400"></span></h2>
+            </div>
+          </div>
+          <div class="bg-gray-900/80 rounded-xl border border-gray-800 overflow-hidden">
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr class="text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
+                    <th class="px-6 py-3">Event</th>
+                    <th class="px-6 py-3">Status</th>
+                    <th class="px-6 py-3">Response</th>
+                    <th class="px-6 py-3">Delivered</th>
+                  </tr>
+                </thead>
+                <tbody id="webhook-logs-list"
+                  hx-ext="client-side-templates" mustache-template="tmpl-webhook-logs" hx-swap="innerHTML">
+                  <tr><td colspan="4" class="px-6 py-8 text-center text-gray-500">Select a webhook to view logs</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- ==================== MODALS ==================== -->
+  <div id="modal-overlay" class="modal-overlay fixed inset-0 z-50 bg-black/60 backdrop-blur-sm items-center justify-center p-4" onclick="closeModal(event)">
+    <div class="bg-gray-900 rounded-2xl border border-gray-800 shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
+      <div id="modal-body">
+        <!-- Dynamic content -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== HTMX TEMPLATES ==================== -->
+
+  <!-- Dashboard Stats -->
+  <script type="x-tmpl-mustache" id="tmpl-dashboard-stats"></script>
+
+  <!-- Dashboard collections recent -->
+  <script type="x-tmpl-mustache" id="tmpl-dashboard-collections">
+    {{#.}}
+    <div class="flex items-center justify-between py-2 border-b border-gray-800 last:border-0">
+      <span class="font-medium text-sm">{{name}}</span>
+      <span class="text-xs text-gray-500">{{created_at}}</span>
+    </div>
+    {{/.}}
+    {{^.}}
+    <div class="text-gray-500 text-sm py-4 text-center">No collections yet</div>
+    {{/.}}
+  </script>
+
+  <!-- Dashboard buckets recent -->
+  <script type="x-tmpl-mustache" id="tmpl-dashboard-buckets">
+    {{#.}}
+    <div class="flex items-center justify-between py-2 border-b border-gray-800 last:border-0">
+      <span class="font-medium text-sm">{{name}}</span>
+      <span class="text-xs text-gray-500">{{created_at}}</span>
+    </div>
+    {{/.}}
+    {{^.}}
+    <div class="text-gray-500 text-sm py-4 text-center">No buckets yet</div>
+    {{/.}}
+  </script>
+
+  <!-- Collections list -->
+  <script type="x-tmpl-mustache" id="tmpl-collections">
+    {{#.}}
+    <tr class="border-b border-gray-800 hover:bg-white/[0.02] transition-colors">
+      <td class="px-6 py-4">
+        <button onclick="viewCollectionRecords('{{name}}')" class="font-medium text-indigo-400 hover:text-indigo-300">{{name}}</button>
+      </td>
+      <td class="px-6 py-4 text-sm text-gray-400 font-mono max-w-[200px] truncate">{{schema}}</td>
+      <td class="px-6 py-4 text-sm text-gray-500">{{created_at}}</td>
+      <td class="px-6 py-4">
+        <button onclick="deleteCollection('{{name}}')" class="text-red-400 hover:text-red-300 text-sm">Delete</button>
+      </td>
+    </tr>
+    {{/.}}
+    {{^.}}
+    <tr><td colspan="4" class="px-6 py-8 text-center text-gray-500">No collections found</td></tr>
+    {{/.}}
+  </script>
+
+  <!-- Records list -->
+  <script type="x-tmpl-mustache" id="tmpl-records">
+    {{#records}}
+    <tr class="border-b border-gray-800 hover:bg-white/[0.02] transition-colors">
+      <td class="px-6 py-4 text-sm font-mono text-gray-300">{{id}}</td>
+      <td class="px-6 py-4 text-sm text-gray-400 max-w-[300px]"><pre>{{data}}</pre></td>
+      <td class="px-6 py-4 text-sm text-gray-500">{{created_at}}</td>
+      <td class="px-6 py-4">
+        <button onclick="editRecord('{{id}}')" class="text-indigo-400 hover:text-indigo-300 text-sm mr-3">Edit</button>
+        <button onclick="deleteRecord('{{id}}')" class="text-red-400 hover:text-red-300 text-sm">Delete</button>
+      </td>
+    </tr>
+    {{/.}}
+    {{^records}}
+    <tr><td colspan="4" class="px-6 py-8 text-center text-gray-500">No records found</td></tr>
+    {{/records}}
+  </script>
+
+  <!-- Buckets list -->
+  <script type="x-tmpl-mustache" id="tmpl-buckets">
+    {{#.}}
+    <tr class="border-b border-gray-800 hover:bg-white/[0.02] transition-colors">
+      <td class="px-6 py-4">
+        <button onclick="viewBucketFiles('{{name}}')" class="font-medium text-indigo-400 hover:text-indigo-300">{{name}}</button>
+      </td>
+      <td class="px-6 py-4">
+        {{#is_public}}
+        <span class="text-xs px-2 py-0.5 bg-green-900/50 text-green-400 rounded-full">public</span>
+        {{/is_public}}
+        {{^is_public}}
+        <span class="text-xs px-2 py-0.5 bg-gray-800 text-gray-400 rounded-full">private</span>
+        {{/is_public}}
+      </td>
+      <td class="px-6 py-4 text-sm text-gray-500">{{created_at}}</td>
+      <td class="px-6 py-4">
+        <button onclick="deleteBucket('{{name}}')" class="text-red-400 hover:text-red-300 text-sm">Delete</button>
+      </td>
+    </tr>
+    {{/.}}
+    {{^.}}
+    <tr><td colspan="4" class="px-6 py-8 text-center text-gray-500">No buckets found</td></tr>
+    {{/.}}
+  </script>
+
+  <!-- Files list -->
+  <script type="x-tmpl-mustache" id="tmpl-files">
+    {{#files}}
+    <tr class="border-b border-gray-800 hover:bg-white/[0.02] transition-colors">
+      <td class="px-6 py-4 text-sm text-gray-300">{{filename}}</td>
+      <td class="px-6 py-4 text-sm text-gray-500">{{mime_type}}</td>
+      <td class="px-6 py-4 text-sm text-gray-500" data-size="{{size}}">
+        <script>
+          document.currentScript.parentElement.textContent = formatSize({{size}});
+        </script>
+      </td>
+      <td class="px-6 py-4 text-sm text-gray-500">{{created_at}}</td>
+      <td class="px-6 py-4">
+        <button onclick="downloadFile('{{bucket}}','{{id}}','{{filename}}')" class="text-indigo-400 hover:text-indigo-300 text-sm mr-3">Download</button>
+        <button onclick="deleteFile('{{bucket}}','{{id}}')" class="text-red-400 hover:text-red-300 text-sm">Delete</button>
+      </td>
+    </tr>
+    {{/.}}
+    {{^files}}
+    <tr><td colspan="5" class="px-6 py-8 text-center text-gray-500">No files found</td></tr>
+    {{/files}}
+  </script>
+
+  <!-- Webhooks list -->
+  <script type="x-tmpl-mustache" id="tmpl-webhooks">
+    {{#.}}
+    <tr class="border-b border-gray-800 hover:bg-white/[0.02] transition-colors">
+      <td class="px-6 py-4 font-medium text-gray-200">{{name}}</td>
+      <td class="px-6 py-4 text-sm text-gray-400 font-mono max-w-[200px] truncate">{{url}}</td>
+      <td class="px-6 py-4 text-sm text-gray-400">
+        {{#events}}
+        <span class="text-xs px-1.5 py-0.5 bg-gray-800 rounded mr-1">{{.}}</span>
+        {{/events}}
+      </td>
+      <td class="px-6 py-4">
+        {{#is_active}}
+        <span class="text-xs px-2 py-0.5 bg-green-900/50 text-green-400 rounded-full">active</span>
+        {{/is_active}}
+        {{^is_active}}
+        <span class="text-xs px-2 py-0.5 bg-gray-800 text-gray-400 rounded-full">inactive</span>
+        {{/is_active}}
+      </td>
+      <td class="px-6 py-4">
+        <button onclick="viewWebhookLogs('{{id}}','{{name}}')" class="text-indigo-400 hover:text-indigo-300 text-sm mr-3">Logs</button>
+        <button onclick="editWebhook('{{id}}')" class="text-indigo-400 hover:text-indigo-300 text-sm mr-3">Edit</button>
+        <button onclick="deleteWebhook('{{id}}','{{name}}')" class="text-red-400 hover:text-red-300 text-sm">Delete</button>
+      </td>
+    </tr>
+    {{/.}}
+    {{^.}}
+    <tr><td colspan="5" class="px-6 py-8 text-center text-gray-500">No webhooks configured</td></tr>
+    {{/.}}
+  </script>
+
+  <!-- Webhook Logs list -->
+  <script type="x-tmpl-mustache" id="tmpl-webhook-logs">
+    {{#.}}
+    <tr class="border-b border-gray-800 hover:bg-white/[0.02] transition-colors">
+      <td class="px-6 py-4 text-sm font-mono text-gray-300">{{event}}</td>
+      <td class="px-6 py-4">
+        <span class="text-xs px-2 py-0.5 rounded-full" id="wh-status-{{id}}">{{status}}</span>
+        <script>
+          (function(){
+            var el = document.getElementById('wh-status-{{id}}');
+            if (el.textContent.trim() === 'success') {
+              el.className = 'text-xs px-2 py-0.5 rounded-full bg-green-900/50 text-green-400';
+            } else if (el.textContent.trim() === 'failure') {
+              el.className = 'text-xs px-2 py-0.5 rounded-full bg-red-900/50 text-red-400';
+            }
+          })();
+        </script>
+      </td>
+      <td class="px-6 py-4 text-sm text-gray-400 font-mono">
+        {{#response_status}}{{.}}{{/response_status}}
+        {{^response_status}}<span class="text-gray-600">-</span>{{/response_status}}
+        {{#error}}<span class="text-red-400 text-xs">{{error}}</span>{{/error}}
+      </td>
+      <td class="px-6 py-4 text-sm text-gray-500">{{created_at}}</td>
+    </tr>
+    {{/.}}
+    {{^.}}
+    <tr><td colspan="4" class="px-6 py-8 text-center text-gray-500">No delivery logs yet</td></tr>
+    {{/.}}
+  </script>
+
+  <!-- ==================== JAVASCRIPT ==================== -->
+  <script>
+    // ---- Auth ----
+    const TOKEN_KEY = 'simplebase_token';
+
+    function getToken() {
+      return localStorage.getItem(TOKEN_KEY);
+    }
+
+    function setToken(token) {
+      localStorage.setItem(TOKEN_KEY, token);
+    }
+
+    function clearToken() {
+      localStorage.removeItem(TOKEN_KEY);
+    }
+
+    // Auto-add auth header to all HTMX requests
+    document.addEventListener('htmx:configRequest', (e) => {
+      const token = getToken();
+      if (token) {
+        e.detail.headers['Authorization'] = 'Bearer ' + token;
+      }
+    });
+
+    // Redirect to login on 401
+    document.addEventListener('htmx:responseError', (e) => {
+      if (e.detail.xhr.status === 401 && getToken()) {
+        clearToken();
+        showLogin();
+      }
+    });
+
+    async function handleLogin(event) {
+      event.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const btn = document.getElementById('login-btn');
+      const errEl = document.getElementById('login-error');
+
+      btn.disabled = true;
+      btn.textContent = 'Signing in...';
+      errEl.classList.add('hidden');
+
+      try {
+        const res = await fetch('/api/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, password })
+        });
+        const data = await res.json();
+        if (!res.ok) {
+          throw new Error(data.error || 'Login failed');
+        }
+        setToken(data.token);
+        showApp();
+      } catch (err) {
+        errEl.textContent = err.message;
+        errEl.classList.remove('hidden');
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Sign In';
+      }
+    }
+
+    function handleLogout() {
+      clearToken();
+      showLogin();
+    }
+
+    // ---- Navigation ----
+    function showLogin() {
+      document.getElementById('login-view').classList.remove('hidden');
+      document.getElementById('app-view').classList.add('hidden');
+    }
+
+    function showApp() {
+      document.getElementById('login-view').classList.add('hidden');
+      document.getElementById('app-view').classList.remove('hidden');
+      loadDashboard();
+      showView('dashboard');
+    }
+
+    function loadDashboard() {
+      document.getElementById('dash-colls-trigger').dispatchEvent(new Event('dash-ready'));
+      document.getElementById('dash-buckets-trigger').dispatchEvent(new Event('dash-ready'));
+    }
+
+    function showView(view) {
+      document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+      document.getElementById('view-' + view).classList.add('active');
+      document.querySelectorAll('.sidebar-link').forEach(l => l.classList.remove('active'));
+      const link = document.querySelector(`.sidebar-link[data-view="${view}"]`);
+      if (link) link.classList.add('active');
+      if (view === 'collections') {
+        document.getElementById('collections-list').dispatchEvent(new Event('cols-ready'));
+      } else if (view === 'buckets') {
+        document.getElementById('buckets-list').dispatchEvent(new Event('buckets-ready'));
+      } else if (view === 'dashboard') {
+        loadDashboard();
+      } else if (view === 'webhooks') {
+        document.getElementById('webhooks-list').dispatchEvent(new Event('webhooks-ready'));
+      }
+    }
+
+    function toggleMobileMenu() {
+      document.getElementById('sidebar').classList.toggle('hidden');
+      document.getElementById('sidebar').classList.toggle('flex');
+    }
+
+    // Check auth on load
+    if (getToken()) {
+      showApp();
+    }
+
+    // ---- Modal ----
+    function openModal(contentId) {
+      const overlay = document.getElementById('modal-overlay');
+      const body = document.getElementById('modal-body');
+      body.innerHTML = document.getElementById(contentId).innerHTML;
+      overlay.classList.add('open');
+    }
+
+    function closeModal(event) {
+      if (event && event.target !== event.currentTarget) return;
+      document.getElementById('modal-overlay').classList.remove('open');
+    }
+
+    // Close on escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.getElementById('modal-overlay').classList.remove('open');
+      }
+    });
+
+    // ---- Collections ----
+    async function deleteCollection(name) {
+      if (!confirm('Delete collection "' + name + '" and all its records?')) return;
+      try {
+        const res = await fetch('/api/collections/' + encodeURIComponent(name), {
+          method: 'DELETE',
+          headers: { 'Authorization': 'Bearer ' + getToken() }
+        });
+        if (!res.ok) {
+          const data = await res.json();
+          throw new Error(data.error || 'Delete failed');
+        }
+        htmx.trigger('#collections-list', 'cols-ready');
+      } catch (err) {
+        alert('Error: ' + err.message);
+      }
+    }
+
+    async function createCollection(event) {
+      event.preventDefault();
+      const form = event.target;
+      const data = Object.fromEntries(new FormData(form));
+      try {
+        const res = await fetch('/api/collections', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + getToken()
+          },
+          body: JSON.stringify(data)
+        });
+        const result = await res.json();
+        if (!res.ok) throw new Error(result.error || 'Create failed');
+        closeModal(null);
+        htmx.trigger('#collections-list', 'cols-ready');
+      } catch (err) {
+        alert('Error: ' + err.message);
+      }
+    }
+
+    // ---- Records ----
+    let currentCollection = '';
+    let currentRecordsPage = 1;
+
+    function viewCollectionRecords(name) {
+      currentCollection = name;
+      currentRecordsPage = 1;
+      document.getElementById('records-collection-name').textContent = name;
+      loadRecords();
+      showView('records');
+    }
+
+    function loadRecords() {
+      const tbody = document.getElementById('records-list');
+      tbody.setAttribute('hx-get', '/api/collections/' + encodeURIComponent(currentCollection) + '/records?page=' + currentRecordsPage + '&per_page=20');
+      htmx.trigger(tbody, 'load');
+      // Also handle pagination via after swap
+    }
+
+    // HTMX swap handler for records to update pagination
+    document.addEventListener('htmx:afterSwap', (e) => {
+      if (e.detail.target.id === 'records-list') {
+        updateRecordsPagination();
+      }
+      if (e.detail.target.id === 'files-list') {
+        updateFilesPagination();
+      }
+    });
+
+    function updateRecordsPagination() {
+      // We store pagination data via a temporary approach: read from the API response
+      // Since HTMX with client-side-templates renders the content, we need to track the page.
+      // Use a simpler approach: re-fetch with HTMX but handle pagination manually.
+      renderRecordsPagination();
+    }
+
+    function renderRecordsPagination() {
+      const el = document.getElementById('records-pagination');
+      el.innerHTML = `
+        <span class="text-gray-400">Page ${currentRecordsPage}</span>
+        <div class="flex gap-2">
+          <button onclick="prevRecordsPage()" class="px-3 py-1.5 bg-gray-800 hover:bg-gray-700 rounded-lg text-sm ${currentRecordsPage <= 1 ? 'opacity-50 cursor-not-allowed' : ''}" ${currentRecordsPage <= 1 ? 'disabled' : ''}>Prev</button>
+          <button onclick="nextRecordsPage()" class="px-3 py-1.5 bg-gray-800 hover:bg-gray-700 rounded-lg text-sm">Next</button>
+        </div>
+      `;
+    }
+
+    function prevRecordsPage() {
+      if (currentRecordsPage > 1) {
+        currentRecordsPage--;
+        loadRecords();
+      }
+    }
+
+    function nextRecordsPage() {
+      currentRecordsPage++;
+      loadRecords();
+    }
+
+    async function createRecord(event) {
+      event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
+      let data;
+      try {
+        data = JSON.parse(formData.get('data'));
+      } catch (e) {
+        alert('Invalid JSON data');
+        return;
+      }
+      try {
+        const res = await fetch('/api/collections/' + encodeURIComponent(currentCollection) + '/records', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + getToken()
+          },
+          body: JSON.stringify({ data })
+        });
+        const result = await res.json();
+        if (!res.ok) throw new Error(result.error || 'Create failed');
+        closeModal(null);
+        loadRecords();
+      } catch (err) {
+        alert('Error: ' + err.message);
+      }
+    }
+
+    async function deleteRecord(id) {
+      if (!confirm('Delete record ' + id.substring(0, 8) + '...?')) return;
+      try {
+        const res = await fetch('/api/collections/' + encodeURIComponent(currentCollection) + '/records/' + encodeURIComponent(id), {
+          method: 'DELETE',
+          headers: { 'Authorization': 'Bearer ' + getToken() }
+        });
+        if (!res.ok) {
+          const data = await res.json();
+          throw new Error(data.error || 'Delete failed');
+        }
+        loadRecords();
+      } catch (err) {
+        alert('Error: ' + err.message);
+      }
+    }
+
+    function openRecordCreateModal() {
+      openModal('modal-create-record');
+    }
+
+    async function editRecord(id) {
+      try {
+        const res = await fetch('/api/collections/' + encodeURIComponent(currentCollection) + '/records/' + encodeURIComponent(id), {
+          headers: { 'Authorization': 'Bearer ' + getToken() }
+        });
+        const record = await res.json();
+        if (!res.ok) throw new Error(record.error || 'Fetch failed');
+        openModal('modal-edit-prefill');
+        document.getElementById('edit-record-id').value = record.id;
+        document.getElementById('edit-record-data').value = JSON.stringify(JSON.parse(record.data), null, 2);
+      } catch (err) {
+        alert('Error: ' + err.message);
+      }
+    }
+
+    async function updateRecord(event) {
+      event.preventDefault();
+      const form = event.target;
+      const id = form.querySelector('[name="id"]').value;
+      let data;
+      try {
+        data = JSON.parse(form.querySelector('[name="data"]').value);
+      } catch (e) {
+        alert('Invalid JSON data');
+        return;
+      }
+      try {
+        const res = await fetch('/api/collections/' + encodeURIComponent(currentCollection) + '/records/' + encodeURIComponent(id), {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + getToken()
+          },
+          body: JSON.stringify({ data })
+        });
+        const result = await res.json();
+        if (!res.ok) throw new Error(result.error || 'Update failed');
+        closeModal(null);
+        loadRecords();
+      } catch (err) {
+        alert('Error: ' + err.message);
+      }
+    }
+
+    // ---- Buckets ----
+    async function deleteBucket(name) {
+      if (!confirm('Delete bucket "' + name + '" and all its files?')) return;
+      try {
+        const res = await fetch('/api/buckets/' + encodeURIComponent(name), {
+          method: 'DELETE',
+          headers: { 'Authorization': 'Bearer ' + getToken() }
+        });
+        if (!res.ok) {
+          const data = await res.json();
+          throw new Error(data.error || 'Delete failed');
+        }
+        htmx.trigger('#buckets-list', 'buckets-ready');
+      } catch (err) {
+        alert('Error: ' + err.message);
+      }
+    }
+
+    async function createBucket(event) {
+      event.preventDefault();
+      const form = event.target;
+      const data = Object.fromEntries(new FormData(form));
+      data.is_public = data.is_public === 'on';
+      try {
+        const res = await fetch('/api/buckets', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + getToken()
+          },
+          body: JSON.stringify(data)
+        });
+        const result = await res.json();
+        if (!res.ok) throw new Error(result.error || 'Create failed');
+        closeModal(null);
+        htmx.trigger('#buckets-list', 'buckets-ready');
+      } catch (err) {
+        alert('Error: ' + err.message);
+      }
+    }
+
+    // ---- Files ----
+    let currentBucket = '';
+    let currentFilesPage = 1;
+
+    function viewBucketFiles(name) {
+      currentBucket = name;
+      currentFilesPage = 1;
+      document.getElementById('files-bucket-name').textContent = name;
+      loadFiles();
+      showView('files');
+    }
+
+    function loadFiles() {
+      const tbody = document.getElementById('files-list');
+      tbody.setAttribute('hx-get', '/api/buckets/' + encodeURIComponent(currentBucket) + '/files?page=' + currentFilesPage + '&per_page=20');
+      htmx.trigger(tbody, 'load');
+    }
+
+    function updateFilesPagination() {
+      const el = document.getElementById('files-pagination');
+      el.innerHTML = `
+        <span class="text-gray-400">Page ${currentFilesPage}</span>
+        <div class="flex gap-2">
+          <button onclick="prevFilesPage()" class="px-3 py-1.5 bg-gray-800 hover:bg-gray-700 rounded-lg text-sm ${currentFilesPage <= 1 ? 'opacity-50 cursor-not-allowed' : ''}" ${currentFilesPage <= 1 ? 'disabled' : ''}>Prev</button>
+          <button onclick="nextFilesPage()" class="px-3 py-1.5 bg-gray-800 hover:bg-gray-700 rounded-lg text-sm">Next</button>
+        </div>
+      `;
+    }
+
+    function prevFilesPage() {
+      if (currentFilesPage > 1) {
+        currentFilesPage--;
+        loadFiles();
+      }
+    }
+
+    function nextFilesPage() {
+      currentFilesPage++;
+      loadFiles();
+    }
+
+    function formatSize(bytes) {
+      if (!bytes) return '0 B';
+      const units = ['B', 'KB', 'MB', 'GB'];
+      let i = 0;
+      let size = bytes;
+      while (size >= 1024 && i < units.length - 1) {
+        size /= 1024;
+        i++;
+      }
+      return size.toFixed(i > 0 ? 1 : 0) + ' ' + units[i];
+    }
+
+    function openFileUploadModal() {
+      openModal('modal-upload-file');
+    }
+
+    async function uploadFile(event) {
+      event.preventDefault();
+      const form = event.target;
+      const fileInput = form.querySelector('[type="file"]');
+      const file = fileInput.files[0];
+      if (!file) { alert('Please select a file'); return; }
+      const fd = new FormData();
+      fd.append('file', file);
+      try {
+        const res = await fetch('/api/buckets/' + encodeURIComponent(currentBucket) + '/files', {
+          method: 'POST',
+          headers: { 'Authorization': 'Bearer ' + getToken() },
+          body: fd
+        });
+        const result = await res.json();
+        if (!res.ok) throw new Error(result.error || 'Upload failed');
+        closeModal(null);
+        loadFiles();
+      } catch (err) {
+        alert('Error: ' + err.message);
+      }
+    }
+
+    function downloadFile(bucket, id, filename) {
+      const a = document.createElement('a');
+      a.href = '/api/buckets/' + encodeURIComponent(bucket) + '/files/' + encodeURIComponent(id);
+      a.download = filename;
+      a.style.display = 'none';
+      fetch(a.href, {
+        headers: { 'Authorization': 'Bearer ' + getToken() }
+      }).then(res => {
+        if (!res.ok) throw new Error('Download failed');
+        return res.blob();
+      }).then(blob => {
+        a.href = URL.createObjectURL(blob);
+        a.click();
+        URL.revokeObjectURL(a.href);
+      }).catch(err => alert('Error: ' + err.message));
+    }
+
+    async function deleteFile(bucket, id) {
+      if (!confirm('Delete this file?')) return;
+      try {
+        const res = await fetch('/api/buckets/' + encodeURIComponent(bucket) + '/files/' + encodeURIComponent(id), {
+          method: 'DELETE',
+          headers: { 'Authorization': 'Bearer ' + getToken() }
+        });
+        if (!res.ok) {
+          const data = await res.json();
+          throw new Error(data.error || 'Delete failed');
+        }
+        loadFiles();
+      } catch (err) {
+        alert('Error: ' + err.message);
+      }
+    }
+
+    // ---- Webhooks ----
+    let currentWebhookID = '';
+    let currentWebhookName = '';
+
+    function openWebhookCreateModal() {
+      openModal('modal-create-webhook');
+    }
+
+    async function createWebhook(event) {
+      event.preventDefault();
+      const form = event.target;
+      const fd = new FormData(form);
+      const data = {
+        name: fd.get('name'),
+        url: fd.get('url'),
+        secret: fd.get('secret'),
+        events: fd.getAll('events')
+      };
+      if (data.events.length === 0) { alert('Select at least one event'); return; }
+      try {
+        const res = await fetch('/api/webhooks', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + getToken()
+          },
+          body: JSON.stringify(data)
+        });
+        const result = await res.json();
+        if (!res.ok) throw new Error(result.error || 'Create failed');
+        closeModal(null);
+        htmx.trigger('#webhooks-list', 'webhooks-ready');
+      } catch (err) {
+        alert('Error: ' + err.message);
+      }
+    }
+
+    function viewWebhookLogs(id, name) {
+      currentWebhookID = id;
+      currentWebhookName = name;
+      document.getElementById('webhook-logs-name').textContent = name;
+      const tbody = document.getElementById('webhook-logs-list');
+      tbody.setAttribute('hx-get', '/api/webhooks/' + encodeURIComponent(id) + '/logs');
+      htmx.trigger(tbody, 'load');
+      showView('webhook-logs');
+    }
+
+    async function editWebhook(id) {
+      try {
+        const res = await fetch('/api/webhooks/' + encodeURIComponent(id), {
+          headers: { 'Authorization': 'Bearer ' + getToken() }
+        });
+        const hook = await res.json();
+        if (!res.ok) throw new Error(hook.error || 'Fetch failed');
+        openModal('modal-edit-webhook');
+        document.getElementById('edit-webhook-id').value = hook.id;
+        document.getElementById('edit-webhook-name').value = hook.name;
+        document.getElementById('edit-webhook-url').value = hook.url;
+        document.getElementById('edit-webhook-secret').value = hook.secret || '';
+        document.getElementById('edit-webhook-active').checked = hook.is_active;
+        document.querySelectorAll('#modal-edit-webhook input[name="edit-events"]').forEach(cb => {
+          cb.checked = hook.events && hook.events.includes(cb.value);
+        });
+      } catch (err) {
+        alert('Error: ' + err.message);
+      }
+    }
+
+    async function updateWebhook(event) {
+      event.preventDefault();
+      const form = event.target;
+      const id = form.querySelector('[name="id"]').value;
+      const events = [];
+      form.querySelectorAll('input[name="edit-events"]:checked').forEach(cb => events.push(cb.value));
+      const data = {
+        name: form.querySelector('[name="name"]').value,
+        url: form.querySelector('[name="url"]').value,
+        secret: form.querySelector('[name="secret"]').value,
+        is_active: form.querySelector('[name="is_active"]').checked,
+        events: events
+      };
+      if (data.name === '' || data.url === '') { alert('Name and URL are required'); return; }
+      try {
+        const res = await fetch('/api/webhooks/' + encodeURIComponent(id), {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + getToken()
+          },
+          body: JSON.stringify(data)
+        });
+        const result = await res.json();
+        if (!res.ok) throw new Error(result.error || 'Update failed');
+        closeModal(null);
+        htmx.trigger('#webhooks-list', 'webhooks-ready');
+      } catch (err) {
+        alert('Error: ' + err.message);
+      }
+    }
+
+    async function deleteWebhook(id, name) {
+      if (!confirm('Delete webhook "' + name + '"?')) return;
+      try {
+        const res = await fetch('/api/webhooks/' + encodeURIComponent(id), {
+          method: 'DELETE',
+          headers: { 'Authorization': 'Bearer ' + getToken() }
+        });
+        if (!res.ok) {
+          const data = await res.json();
+          throw new Error(data.error || 'Delete failed');
+        }
+        htmx.trigger('#webhooks-list', 'webhooks-ready');
+      } catch (err) {
+        alert('Error: ' + err.message);
+      }
+    }
+
+    // Handle HTMX error for pagination (when we go past last page, reset)
+    document.addEventListener('htmx:beforeSwap', (e) => {
+      if (e.detail.xhr.status === 404 || e.detail.xhr.status === 500) {
+        // Don't swap if error
+        if (e.detail.target.id === 'records-list' && currentRecordsPage > 1) {
+          currentRecordsPage--;
+        }
+        if (e.detail.target.id === 'files-list' && currentFilesPage > 1) {
+          currentFilesPage--;
+        }
+      }
+    });
+  </script>
+
+  <!-- ==================== MODAL TEMPLATES ==================== -->
+
+  <!-- Create Collection Modal -->
+  <template id="modal-create-collection">
+    <div class="p-6">
+      <div class="flex items-center justify-between mb-6">
+        <h3 class="text-lg font-semibold">Create Collection</h3>
+        <button onclick="closeModal(null)" class="text-gray-400 hover:text-white">&times;</button>
+      </div>
+      <form onsubmit="createCollection(event)">
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-300 mb-1">Name</label>
+          <input type="text" name="name" required
+            class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            placeholder="my_collection">
+        </div>
+        <div class="mb-6">
+          <label class="block text-sm font-medium text-gray-300 mb-1">Schema (JSON)</label>
+          <textarea name="schema" rows="4"
+            class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 font-mono text-sm placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            placeholder='{"title": "string", "count": "number"}'>{}</textarea>
+        </div>
+        <div class="flex justify-end gap-3">
+          <button type="button" onclick="closeModal(null)" class="px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors">Cancel</button>
+          <button type="submit" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium rounded-lg transition-colors">Create</button>
+        </div>
+      </form>
+    </div>
+  </template>
+
+  <!-- Create Record Modal -->
+  <template id="modal-create-record">
+    <div class="p-6">
+      <div class="flex items-center justify-between mb-6">
+        <h3 class="text-lg font-semibold">Create Record</h3>
+        <button onclick="closeModal(null)" class="text-gray-400 hover:text-white">&times;</button>
+      </div>
+      <form onsubmit="createRecord(event)">
+        <div class="mb-6">
+          <label class="block text-sm font-medium text-gray-300 mb-1">Data (JSON)</label>
+          <textarea name="data" rows="8" required
+            class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 font-mono text-sm placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            placeholder='{"key": "value"}'>{}</textarea>
+        </div>
+        <div class="flex justify-end gap-3">
+          <button type="button" onclick="closeModal(null)" class="px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors">Cancel</button>
+          <button type="submit" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium rounded-lg transition-colors">Create</button>
+        </div>
+      </form>
+    </div>
+  </template>
+
+  <!-- Edit Record Modal -->
+  <template id="modal-edit-prefill">
+    <div class="p-6">
+      <div class="flex items-center justify-between mb-6">
+        <h3 class="text-lg font-semibold">Edit Record</h3>
+        <button onclick="closeModal(null)" class="text-gray-400 hover:text-white">&times;</button>
+      </div>
+      <form onsubmit="updateRecord(event)">
+        <input type="hidden" name="id" id="edit-record-id">
+        <div class="mb-6">
+          <label class="block text-sm font-medium text-gray-300 mb-1">Data (JSON)</label>
+          <textarea name="data" id="edit-record-data" rows="8" required
+            class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 font-mono text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+        </div>
+        <div class="flex justify-end gap-3">
+          <button type="button" onclick="closeModal(null)" class="px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors">Cancel</button>
+          <button type="submit" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium rounded-lg transition-colors">Save</button>
+        </div>
+      </form>
+    </div>
+  </template>
+
+  <!-- Create Bucket Modal -->
+  <template id="modal-create-bucket">
+    <div class="p-6">
+      <div class="flex items-center justify-between mb-6">
+        <h3 class="text-lg font-semibold">Create Bucket</h3>
+        <button onclick="closeModal(null)" class="text-gray-400 hover:text-white">&times;</button>
+      </div>
+      <form onsubmit="createBucket(event)">
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-300 mb-1">Name</label>
+          <input type="text" name="name" required
+            class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            placeholder="my_bucket">
+        </div>
+        <div class="mb-6">
+          <label class="flex items-center gap-3 text-sm text-gray-300">
+            <input type="checkbox" name="is_public" class="w-4 h-4 rounded bg-gray-800 border-gray-600 text-indigo-600 focus:ring-indigo-500">
+            Public bucket
+          </label>
+        </div>
+        <div class="flex justify-end gap-3">
+          <button type="button" onclick="closeModal(null)" class="px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors">Cancel</button>
+          <button type="submit" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium rounded-lg transition-colors">Create</button>
+        </div>
+      </form>
+    </div>
+  </template>
+
+  <!-- Upload File Modal -->
+  <template id="modal-upload-file">
+    <div class="p-6">
+      <div class="flex items-center justify-between mb-6">
+        <h3 class="text-lg font-semibold">Upload File</h3>
+        <button onclick="closeModal(null)" class="text-gray-400 hover:text-white">&times;</button>
+      </div>
+      <form onsubmit="uploadFile(event)">
+        <div class="mb-6">
+          <label class="block text-sm font-medium text-gray-300 mb-2">Select file</label>
+          <input type="file" name="file" required
+            class="w-full text-sm text-gray-300 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-indigo-600 file:text-white hover:file:bg-indigo-500 file:cursor-pointer">
+        </div>
+        <div class="flex justify-end gap-3">
+          <button type="button" onclick="closeModal(null)" class="px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors">Cancel</button>
+          <button type="submit" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium rounded-lg transition-colors">Upload</button>
+        </div>
+      </form>
+    </div>
+  </template>
+
+  <!-- Create Webhook Modal -->
+  <template id="modal-create-webhook">
+    <div class="p-6">
+      <div class="flex items-center justify-between mb-6">
+        <h3 class="text-lg font-semibold">Create Webhook</h3>
+        <button onclick="closeModal(null)" class="text-gray-400 hover:text-white">&times;</button>
+      </div>
+      <form onsubmit="createWebhook(event)">
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-300 mb-1">Name</label>
+          <input type="text" name="name" required
+            class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            placeholder="My Webhook">
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-300 mb-1">URL</label>
+          <input type="url" name="url" required
+            class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            placeholder="https://example.com/webhook">
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-300 mb-1">Secret (optional, for HMAC signing)</label>
+          <input type="text" name="secret"
+            class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            placeholder="my-signing-secret">
+        </div>
+        <div class="mb-6">
+          <label class="block text-sm font-medium text-gray-300 mb-2">Events</label>
+          <div class="grid grid-cols-2 gap-2">
+            <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="events" value="record.create" class="rounded bg-gray-800 border-gray-600"> record.create</label>
+            <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="events" value="record.update" class="rounded bg-gray-800 border-gray-600"> record.update</label>
+            <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="events" value="record.delete" class="rounded bg-gray-800 border-gray-600"> record.delete</label>
+            <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="events" value="collection.create" class="rounded bg-gray-800 border-gray-600"> collection.create</label>
+            <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="events" value="collection.delete" class="rounded bg-gray-800 border-gray-600"> collection.delete</label>
+            <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="events" value="bucket.create" class="rounded bg-gray-800 border-gray-600"> bucket.create</label>
+            <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="events" value="bucket.delete" class="rounded bg-gray-800 border-gray-600"> bucket.delete</label>
+          </div>
+        </div>
+        <div class="flex justify-end gap-3">
+          <button type="button" onclick="closeModal(null)" class="px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors">Cancel</button>
+          <button type="submit" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium rounded-lg transition-colors">Create</button>
+        </div>
+      </form>
+    </div>
+  </template>
+
+  <!-- Edit Webhook Modal -->
+  <template id="modal-edit-webhook">
+    <div class="p-6">
+      <div class="flex items-center justify-between mb-6">
+        <h3 class="text-lg font-semibold">Edit Webhook</h3>
+        <button onclick="closeModal(null)" class="text-gray-400 hover:text-white">&times;</button>
+      </div>
+      <form onsubmit="updateWebhook(event)">
+        <input type="hidden" name="id" id="edit-webhook-id">
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-300 mb-1">Name</label>
+          <input type="text" name="name" id="edit-webhook-name" required
+            class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-300 mb-1">URL</label>
+          <input type="url" name="url" id="edit-webhook-url" required
+            class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-300 mb-1">Secret</label>
+          <input type="text" name="secret" id="edit-webhook-secret"
+            class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </div>
+        <div class="mb-4">
+          <label class="flex items-center gap-3 text-sm text-gray-300">
+            <input type="checkbox" name="is_active" id="edit-webhook-active" class="w-4 h-4 rounded bg-gray-800 border-gray-600 text-indigo-600">
+            Active
+          </label>
+        </div>
+        <div class="mb-6">
+          <label class="block text-sm font-medium text-gray-300 mb-2">Events</label>
+          <div class="grid grid-cols-2 gap-2">
+            <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="edit-events" value="record.create" class="rounded bg-gray-800 border-gray-600"> record.create</label>
+            <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="edit-events" value="record.update" class="rounded bg-gray-800 border-gray-600"> record.update</label>
+            <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="edit-events" value="record.delete" class="rounded bg-gray-800 border-gray-600"> record.delete</label>
+            <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="edit-events" value="collection.create" class="rounded bg-gray-800 border-gray-600"> collection.create</label>
+            <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="edit-events" value="collection.delete" class="rounded bg-gray-800 border-gray-600"> collection.delete</label>
+            <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="edit-events" value="bucket.create" class="rounded bg-gray-800 border-gray-600"> bucket.create</label>
+            <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="edit-events" value="bucket.delete" class="rounded bg-gray-800 border-gray-600"> bucket.delete</label>
+          </div>
+        </div>
+        <div class="flex justify-end gap-3">
+          <button type="button" onclick="closeModal(null)" class="px-4 py-2 text-sm text-gray-300 hover:text-white transition-colors">Cancel</button>
+          <button type="submit" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium rounded-lg transition-colors">Save</button>
+        </div>
+      </form>
+    </div>
+  </template>
+</body>
+</html>
