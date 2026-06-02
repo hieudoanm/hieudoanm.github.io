@@ -24,11 +24,12 @@
     "lint": "turbo run lint",
     "test": "turbo run test",
     "build": "turbo run build",
+    "postbuild": "turbo run build --graph=images/svg/graph.svg",
     "format": "turbo run format",
     "prepare": "husky || true"
   },
   "devDependencies": {
     "husky": "9.1.7",
-    "turbo": "2.9.14"
+    "turbo": "2.9.16"
   }
 }

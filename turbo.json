@@ -3,7 +3,11 @@
   "tasks": {
     "deploy": { "cache": true, "dependsOn": ["build", "test", "lint"] },
     "format": { "cache": true, "dependsOn": ["^format"] },
-    "build": { "cache": true, "dependsOn": ["^build"] },
+    "build": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
+    },
     "check": { "cache": true, "dependsOn": ["^check"] },
     "lint": { "cache": true, "dependsOn": ["^lint"] },
     "test": { "cache": true, "dependsOn": ["^test"] },
