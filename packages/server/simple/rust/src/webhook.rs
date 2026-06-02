@@ -24,6 +24,9 @@ pub const EVENT_SECRET_UPDATE: &str = "secret.update";
 pub const EVENT_SECRET_DELETE: &str = "secret.delete";
 pub const EVENT_NOTIFICATION_CREATE: &str = "notification.create";
 pub const EVENT_LOG_CREATE: &str = "log.create";
+pub const EVENT_PUBSUB_TOPIC_CREATE: &str = "pubsub.topic.create";
+pub const EVENT_PUBSUB_TOPIC_DELETE: &str = "pubsub.topic.delete";
+pub const EVENT_PUBSUB_MESSAGE_CREATE: &str = "pubsub.message.create";
 
 pub fn validate_events(events: &[String]) -> std::result::Result<(), String> {
     for e in events {
@@ -39,7 +42,10 @@ pub fn validate_events(events: &[String]) -> std::result::Result<(), String> {
             | EVENT_SECRET_UPDATE
             | EVENT_SECRET_DELETE
             | EVENT_NOTIFICATION_CREATE
-            | EVENT_LOG_CREATE => {}
+            | EVENT_LOG_CREATE
+            | EVENT_PUBSUB_TOPIC_CREATE
+            | EVENT_PUBSUB_TOPIC_DELETE
+            | EVENT_PUBSUB_MESSAGE_CREATE => {}
             _ => return Err(format!("unknown event: {e}")),
         }
     }

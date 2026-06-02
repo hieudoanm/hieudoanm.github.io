@@ -10,6 +10,7 @@
    6. `SimpleJobs`
    7. `SimpleLogs`
    8. `SimpleNotify`
-   9. `SimpleQueues`
-   10. `SimpleSockets`
-   11. `SimpleVault`
+   9. `SimplePubSub`
+   10. `SimpleQueues`
+   11. `SimpleSockets`
+   12. `SimpleVault`

@@ -172,7 +172,8 @@ func (s *Server) validateWebhookEvents(events any) ([]string, error) {
 			EventSecretCreate, EventSecretUpdate, EventSecretDelete,
 			EventCronjobCreate, EventCronjobUpdate, EventCronjobDelete,
 			EventNotificationCreate,
-			EventLogCreate:
+			EventLogCreate,
+			EventPubSubTopicCreate, EventPubSubTopicDelete, EventPubSubMessageCreate:
 			result = append(result, s)
 		default:
 			return nil, fmt.Errorf("unknown event: %s", s)

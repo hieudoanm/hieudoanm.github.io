@@ -24,6 +24,7 @@ type Server struct {
 	cache         *CacheStore
 	sseHub        *SSEHub
 	logHub        *SSEHub
+	pubsubHub     *SSEHub
 }
 
 func errorJSON(w http.ResponseWriter, msg string, code int) {
@@ -1285,7 +1286,18 @@ func (s *Server) routes() http.Handler {
 	protected.HandleFunc("POST /api/logs", s.handleLogsCreate)
 	protected.HandleFunc("DELETE /api/logs", s.handleLogsClear)
 
+	protected.HandleFunc("GET /api/pubsub/topics", s.handlePubSubTopicsList)
+	protected.HandleFunc("POST /api/pubsub/topics", s.handlePubSubTopicsCreate)
+	protected.HandleFunc("GET /api/pubsub/topics/{name}", s.handlePubSubTopicsGet)
+	protected.HandleFunc("DELETE /api/pubsub/topics/{name}", s.handlePubSubTopicsDelete)
+	protected.HandleFunc("GET /api/pubsub/topics/{name}/messages", s.handlePubSubMessagesList)
+	protected.HandleFunc("POST /api/pubsub/topics/{name}/messages", s.handlePubSubMessagesCreate)
+
 	mux.Handle("/api/", authMiddleware(protected))
+
+	if s.pubsubHub != nil {
+		mux.HandleFunc("GET /api/pubsub/{name}/stream", s.handlePubSubStream)
+	}
 
 	mux.HandleFunc("GET /ws", s.wsHub.ServeWS)
 

@@ -64,6 +64,7 @@ func main() {
 	srv.cache = NewCacheStore(db)
 	srv.sseHub = NewSSEHub(db)
 	srv.logHub = NewSSEHub(db)
+	srv.pubsubHub = NewSSEHub(db)
 
 	localURL := fmt.Sprintf("http://localhost:%s", port)
 	netURL := fmt.Sprintf("http://%s:%s", getLocalIP(), port)

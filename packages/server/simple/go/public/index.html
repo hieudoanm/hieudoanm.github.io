@@ -87,6 +87,9 @@
         <button onclick="showView('logs')" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition-colors text-sm" data-view="logs">
           📋 Logs <span id="log-badge" class="ml-auto text-xs bg-yellow-600 text-white px-2 py-0.5 rounded-full hidden">0</span>
         </button>
+        <button onclick="showView('pubsub')" class="sidebar-link w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition-colors text-sm" data-view="pubsub">
+          📡 Pub/Sub <span id="pubsub-badge" class="ml-auto text-xs bg-purple-600 text-white px-2 py-0.5 rounded-full hidden">0</span>
+        </button>
       </nav>
       <div class="p-3 border-t border-gray-800">
         <button onclick="handleLogout()" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-400 hover:text-red-400 hover:bg-red-500/10 transition-colors text-sm">
@@ -509,6 +512,63 @@
           </div>
         </div>
       </div>
+
+      <!-- PubSub Topics View -->
+      <div id="view-pubsub" class="view p-6">
+        <div class="max-w-6xl mx-auto">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <h2 class="text-2xl font-bold">Pub/Sub Topics</h2>
+              <p class="text-sm text-gray-400 mt-1">Publish and subscribe to real-time message topics</p>
+            </div>
+            <button onclick="openPubSubCreateTopicModal()" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 rounded-lg text-sm font-medium">+ New Topic</button>
+          </div>
+          <div class="bg-gray-900/80 rounded-xl border border-gray-800 overflow-hidden">
+            <table class="w-full">
+              <thead>
+                <tr class="border-b border-gray-800 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
+                  <th class="px-6 py-3">Name</th>
+                  <th class="px-6 py-3">Created</th>
+                  <th class="px-6 py-3">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="pubsub-topics-list" hx-get="/api/pubsub/topics" hx-trigger="pubsub-ready" hx-ext="client-side-templates" mustache-template="tmpl-pubsub-topics" hx-swap="innerHTML">
+                <tr><td colspan="3" class="px-6 py-8 text-center text-gray-500">Loading...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- PubSub Topic Detail View -->
+      <div id="view-pubsub-topic" class="view p-6">
+        <div class="max-w-6xl mx-auto">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <button onclick="showView('pubsub')" class="text-sm text-gray-400 hover:text-white transition-colors">&larr; Topics</button>
+              <h2 class="text-2xl font-bold mt-1">Topic: <span id="pubsub-topic-name" class="text-indigo-400"></span></h2>
+              <p class="text-sm text-gray-400 mt-1">Live stream of messages via Server-Sent Events</p>
+            </div>
+            <button onclick="openPubSubPublishModal()" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 rounded-lg text-sm font-medium">+ Publish Message</button>
+          </div>
+          <div class="bg-gray-900/80 rounded-xl border border-gray-800 overflow-hidden">
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr class="border-b border-gray-800 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
+                    <th class="px-6 py-3">Body</th>
+                    <th class="px-6 py-3">Published At</th>
+                  </tr>
+                </thead>
+                <tbody id="pubsub-messages-list"
+                  hx-ext="client-side-templates" mustache-template="tmpl-pubsub-messages" hx-swap="innerHTML">
+                  <tr><td colspan="2" class="px-6 py-8 text-center text-gray-500">No messages yet</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   </div>
 
@@ -810,6 +870,35 @@
 {{/.}}
 </script>
 
+<script type="x-tmpl-mustache" id="tmpl-pubsub-topics">
+{{#.}}
+<tr class="border-b border-gray-800 hover:bg-gray-800/50">
+  <td class="px-6 py-4">
+    <button onclick="viewPubSubTopic('{{name}}')" class="font-medium text-indigo-400 hover:text-indigo-300">{{name}}</button>
+  </td>
+  <td class="px-6 py-4 text-sm text-gray-500">{{created_at}}</td>
+  <td class="px-6 py-4 text-sm">
+    <button onclick="deletePubSubTopic('{{name}}')" class="text-red-400 hover:text-red-300">Delete</button>
+  </td>
+</tr>
+{{/.}}
+{{^.}}
+<tr><td colspan="3" class="px-6 py-8 text-center text-gray-500">No topics created yet</td></tr>
+{{/.}}
+</script>
+
+<script type="x-tmpl-mustache" id="tmpl-pubsub-messages">
+{{#.}}
+<tr class="border-b border-gray-800 hover:bg-gray-800/50">
+  <td class="px-6 py-4 text-sm font-mono text-gray-200 max-w-lg truncate">{{body}}</td>
+  <td class="px-6 py-4 text-sm text-gray-500">{{created_at}}</td>
+</tr>
+{{/.}}
+{{^.}}
+<tr><td colspan="2" class="px-6 py-8 text-center text-gray-500">No messages yet</td></tr>
+{{/.}}
+</script>
+
   <!-- ==================== JAVASCRIPT ==================== -->
   <script>
     // ---- Auth ----
@@ -924,6 +1013,8 @@
         document.getElementById('notifications-list').dispatchEvent(new Event('notifications-ready'));
       } else if (view === 'logs') {
         document.getElementById('logs-list').dispatchEvent(new Event('logs-ready'));
+      } else if (view === 'pubsub') {
+        document.getElementById('pubsub-topics-list').dispatchEvent(new Event('pubsub-ready'));
       }
     }
 
@@ -1845,6 +1936,113 @@
         alert('Error: ' + err.message);
       }
     }
+
+    // ---- PubSub ----
+    let pubsubEventSources = {};
+
+    function loadPubSubTopics() {
+      htmx.trigger('#pubsub-topics-list', 'pubsub-ready');
+    }
+
+    function viewPubSubTopic(name) {
+      document.getElementById('pubsub-topic-name').textContent = name;
+      const tbody = document.getElementById('pubsub-messages-list');
+      tbody.setAttribute('hx-get', '/api/pubsub/topics/' + encodeURIComponent(name) + '/messages');
+      htmx.trigger(tbody, 'load');
+      showView('pubsub-topic');
+      startPubSubStream(name);
+    }
+
+    function startPubSubStream(name) {
+      if (pubsubEventSources[name]) pubsubEventSources[name].close();
+      const es = new EventSource('/api/pubsub/' + encodeURIComponent(name) + '/stream');
+      pubsubEventSources[name] = es;
+      es.onmessage = function(e) {
+        try {
+          const msg = JSON.parse(e.data);
+          const tbody = document.getElementById('pubsub-messages-list');
+          if (tbody && document.getElementById('view-pubsub-topic').classList.contains('active')) {
+            htmx.trigger(tbody, 'load');
+          }
+          const badge = document.getElementById('pubsub-badge');
+          if (badge) {
+            const count = parseInt(badge.textContent || '0');
+            badge.textContent = count + 1;
+            badge.classList.remove('hidden');
+          }
+        } catch(err) {}
+      };
+      es.onerror = function() {
+        es.close();
+        setTimeout(() => startPubSubStream(name), 3000);
+      };
+    }
+
+    function openPubSubCreateTopicModal() {
+      openModal('modal-create-pubsub-topic');
+    }
+
+    async function createPubSubTopic(event) {
+      event.preventDefault();
+      const form = event.target;
+      const data = Object.fromEntries(new FormData(form));
+      if (!data.name) { alert('Topic name is required'); return; }
+      try {
+        const res = await fetch('/api/pubsub/topics', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + getToken() },
+          body: JSON.stringify(data)
+        });
+        const result = await res.json();
+        if (!res.ok) throw new Error(result.error || 'Create failed');
+        closeModal(null);
+        loadPubSubTopics();
+      } catch (err) {
+        alert('Error: ' + err.message);
+      }
+    }
+
+    async function deletePubSubTopic(name) {
+      if (!confirm('Delete topic "' + name + '" and all its messages?')) return;
+      try {
+        const res = await fetch('/api/pubsub/topics/' + encodeURIComponent(name), {
+          method: 'DELETE',
+          headers: { 'Authorization': 'Bearer ' + getToken() }
+        });
+        if (!res.ok) {
+          const data = await res.json();
+          throw new Error(data.error || 'Delete failed');
+        }
+        loadPubSubTopics();
+      } catch (err) {
+        alert('Error: ' + err.message);
+      }
+    }
+
+    function openPubSubPublishModal() {
+      openModal('modal-publish-pubsub-message');
+    }
+
+    async function publishPubSubMessage(event) {
+      event.preventDefault();
+      const form = event.target;
+      const fd = new FormData(form);
+      const name = document.getElementById('pubsub-topic-name').textContent;
+      const data = { body: fd.get('body') };
+      if (!data.body) { alert('Message body is required'); return; }
+      try {
+        const res = await fetch('/api/pubsub/topics/' + encodeURIComponent(name) + '/messages', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + getToken() },
+          body: JSON.stringify(data)
+        });
+        const result = await res.json();
+        if (!res.ok) throw new Error(result.error || 'Publish failed');
+        closeModal(null);
+      } catch (err) {
+        alert('Error: ' + err.message);
+      }
+    }
   </script>
 
   <!-- ==================== MODAL TEMPLATES ==================== -->
@@ -2006,6 +2204,9 @@
             <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="events" value="collection.delete" class="rounded bg-gray-800 border-gray-600"> collection.delete</label>
             <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="events" value="bucket.create" class="rounded bg-gray-800 border-gray-600"> bucket.create</label>
             <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="events" value="bucket.delete" class="rounded bg-gray-800 border-gray-600"> bucket.delete</label>
+            <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="events" value="pubsub.topic.create" class="rounded bg-gray-800 border-gray-600"> pubsub.topic.create</label>
+            <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="events" value="pubsub.topic.delete" class="rounded bg-gray-800 border-gray-600"> pubsub.topic.delete</label>
+            <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="events" value="pubsub.message.create" class="rounded bg-gray-800 border-gray-600"> pubsub.message.create</label>
           </div>
         </div>
         <div class="flex justify-end gap-3">
@@ -2144,6 +2345,9 @@
             <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="edit-events" value="collection.delete" class="rounded bg-gray-800 border-gray-600"> collection.delete</label>
             <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="edit-events" value="bucket.create" class="rounded bg-gray-800 border-gray-600"> bucket.create</label>
             <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="edit-events" value="bucket.delete" class="rounded bg-gray-800 border-gray-600"> bucket.delete</label>
+            <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="edit-events" value="pubsub.topic.create" class="rounded bg-gray-800 border-gray-600"> pubsub.topic.create</label>
+            <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="edit-events" value="pubsub.topic.delete" class="rounded bg-gray-800 border-gray-600"> pubsub.topic.delete</label>
+            <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="edit-events" value="pubsub.message.create" class="rounded bg-gray-800 border-gray-600"> pubsub.message.create</label>
           </div>
         </div>
         <div class="flex justify-end gap-3">
@@ -2272,5 +2476,47 @@
         </div>
       </form>
   </script>
+
+  <!-- Create PubSub Topic Modal -->
+  <template id="modal-create-pubsub-topic">
+    <div class="p-6">
+      <div class="flex items-center justify-between mb-6">
+        <h3 class="text-lg font-semibold">Create Pub/Sub Topic</h3>
+        <button onclick="closeModal(null)" class="text-gray-400 hover:text-white">&times;</button>
+      </div>
+      <form onsubmit="createPubSubTopic(event)">
+        <div class="mb-6">
+          <label class="block text-sm font-medium text-gray-300 mb-1">Topic Name</label>
+          <input type="text" name="name" required placeholder="e.g. chat.room1"
+            class="w-full px-4 py-2.5 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </div>
+        <div class="flex justify-end gap-3">
+          <button type="button" onclick="closeModal(null)" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg text-sm">Cancel</button>
+          <button type="submit" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 rounded-lg text-sm font-medium">Create</button>
+        </div>
+      </form>
+    </div>
+  </template>
+
+  <!-- Publish PubSub Message Modal -->
+  <template id="modal-publish-pubsub-message">
+    <div class="p-6">
+      <div class="flex items-center justify-between mb-6">
+        <h3 class="text-lg font-semibold">Publish Message</h3>
+        <button onclick="closeModal(null)" class="text-gray-400 hover:text-white">&times;</button>
+      </div>
+      <form onsubmit="publishPubSubMessage(event)">
+        <div class="mb-6">
+          <label class="block text-sm font-medium text-gray-300 mb-1">Message Body</label>
+          <textarea name="body" rows="4" required placeholder="Enter message content..."
+            class="w-full px-4 py-2.5 bg-gray-800 border border-gray-700 rounded-lg text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+        </div>
+        <div class="flex justify-end gap-3">
+          <button type="button" onclick="closeModal(null)" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg text-sm">Cancel</button>
+          <button type="submit" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 rounded-lg text-sm font-medium">Publish</button>
+        </div>
+      </form>
+    </div>
+  </template>
 </body>
 </html>

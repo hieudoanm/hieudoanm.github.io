@@ -5,6 +5,7 @@ mod handlers;
 mod log;
 mod models;
 mod notification;
+mod pubsub;
 mod secrets;
 mod webhook;
 mod websocket;
@@ -147,6 +148,25 @@ fn app(state: Arc<AppState>) -> Router {
             get(notification::handle_notification_stream),
         )
         .route("/api/logs/stream", get(crate::log::handle_log_stream))
+        .route(
+            "/api/pubsub/topics",
+            get(handlers::handle_pubsub_topics_list)
+                .post(handlers::handle_pubsub_topics_create),
+        )
+        .route(
+            "/api/pubsub/topics/{name}",
+            get(handlers::handle_pubsub_topics_get)
+                .delete(handlers::handle_pubsub_topics_delete),
+        )
+        .route(
+            "/api/pubsub/topics/{name}/messages",
+            get(handlers::handle_pubsub_messages_list)
+                .post(handlers::handle_pubsub_messages_create),
+        )
+        .route(
+            "/api/pubsub/{name}/stream",
+            get(crate::pubsub::handle_pubsub_stream),
+        )
         .layer(CorsLayer::permissive())
         .fallback_service(ServeDir::new("public").append_index_html_on_directories(true))
         .with_state(state)
@@ -165,6 +185,7 @@ async fn main() {
     cache::start_eviction_loop(cache_arc.clone());
     let sse_hub = notification::new_sse_hub();
     let log_hub = crate::log::new_log_hub();
+    let pubsub_hub = pubsub::new_pubsub_hub();
     let state = Arc::new(AppState {
         db: std::sync::Mutex::new(conn),
         storage_dir: db::data_dir(),
@@ -174,6 +195,7 @@ async fn main() {
         cache: cache_arc,
         sse_hub,
         log_hub,
+        pubsub_hub,
     });
 
     let port = std::env::var("PORT").unwrap_or_else(|_| "8080".to_string());
@@ -223,6 +245,7 @@ mod tests {
         let cache = std::sync::Arc::new(cache::CacheStore::new());
         let sse_hub = notification::new_sse_hub();
         let log_hub = crate::log::new_log_hub();
+        let pubsub_hub = pubsub::new_pubsub_hub();
         let state = Arc::new(AppState {
             db: std::sync::Mutex::new(conn),
             storage_dir: tmp_dir,
@@ -232,6 +255,7 @@ mod tests {
             cache,
             sse_hub,
             log_hub,
+            pubsub_hub,
         });
         app(state)
     }
@@ -1389,5 +1413,216 @@ mod tests {
         )
         .await;
         assert_eq!(status, StatusCode::UNAUTHORIZED);
+    }
+
+    #[tokio::test]
+    async fn test_pubsub_topic_crud() {
+        let app = test_app();
+        let token = register_token(&app).await;
+
+        let body = serde_json::json!({"name": "mytopic"});
+        let (status, value) =
+            request(&app, "POST", "/api/pubsub/topics", Some(&token), Some(body)).await;
+        assert_eq!(status, StatusCode::CREATED);
+        assert_eq!(value["name"], "mytopic");
+
+        let (status, value) = get_json(&app, "/api/pubsub/topics", Some(&token)).await;
+        assert_eq!(status, StatusCode::OK);
+        assert_eq!(value.as_array().unwrap().len(), 1);
+
+        let (status, _) = request(
+            &app,
+            "GET",
+            "/api/pubsub/topics/mytopic",
+            Some(&token),
+            None,
+        )
+        .await;
+        assert_eq!(status, StatusCode::OK);
+
+        let (status, _) = request(
+            &app,
+            "DELETE",
+            "/api/pubsub/topics/mytopic",
+            Some(&token),
+            None,
+        )
+        .await;
+        assert_eq!(status, StatusCode::NO_CONTENT);
+
+        let (status, _) = request(
+            &app,
+            "GET",
+            "/api/pubsub/topics/mytopic",
+            Some(&token),
+            None,
+        )
+        .await;
+        assert_eq!(status, StatusCode::NOT_FOUND);
+    }
+
+    #[tokio::test]
+    async fn test_pubsub_topic_duplicate() {
+        let app = test_app();
+        let token = register_token(&app).await;
+        let body = serde_json::json!({"name": "dup"});
+        request(&app, "POST", "/api/pubsub/topics", Some(&token), Some(body)).await;
+        let body = serde_json::json!({"name": "dup"});
+        let (status, _) =
+            request(&app, "POST", "/api/pubsub/topics", Some(&token), Some(body)).await;
+        assert_eq!(status, StatusCode::CONFLICT);
+    }
+
+    #[tokio::test]
+    async fn test_pubsub_topic_missing_name() {
+        let app = test_app();
+        let token = register_token(&app).await;
+        let body = serde_json::json!({});
+        let (status, _) =
+            request(&app, "POST", "/api/pubsub/topics", Some(&token), Some(body)).await;
+        assert_eq!(status, StatusCode::BAD_REQUEST);
+    }
+
+    #[tokio::test]
+    async fn test_pubsub_topic_auth_required() {
+        let app = test_app();
+        let (status, _) = get_json(&app, "/api/pubsub/topics", None).await;
+        assert_eq!(status, StatusCode::UNAUTHORIZED);
+    }
+
+    #[tokio::test]
+    async fn test_pubsub_message_publish_list() {
+        let app = test_app();
+        let token = register_token(&app).await;
+
+        let body = serde_json::json!({"name": "chat"});
+        request(
+            &app,
+            "POST",
+            "/api/pubsub/topics",
+            Some(&token),
+            Some(body),
+        )
+        .await;
+
+        let body = serde_json::json!({"body": "hello world"});
+        let (status, value) = request(
+            &app,
+            "POST",
+            "/api/pubsub/topics/chat/messages",
+            Some(&token),
+            Some(body),
+        )
+        .await;
+        assert_eq!(status, StatusCode::CREATED);
+        assert_eq!(value["body"], "hello world");
+        assert!(!value["topic_id"].as_str().unwrap_or("").is_empty());
+
+        let (status, value) = request(
+            &app,
+            "GET",
+            "/api/pubsub/topics/chat/messages",
+            Some(&token),
+            None,
+        )
+        .await;
+        assert_eq!(status, StatusCode::OK);
+        assert_eq!(value.as_array().unwrap().len(), 1);
+    }
+
+    #[tokio::test]
+    async fn test_pubsub_message_to_unknown_topic() {
+        let app = test_app();
+        let token = register_token(&app).await;
+        let body = serde_json::json!({"body": "x"});
+        let (status, _) = request(
+            &app,
+            "POST",
+            "/api/pubsub/topics/nonexistent/messages",
+            Some(&token),
+            Some(body),
+        )
+        .await;
+        assert_eq!(status, StatusCode::NOT_FOUND);
+    }
+
+    #[tokio::test]
+    async fn test_pubsub_message_missing_body() {
+        let app = test_app();
+        let token = register_token(&app).await;
+        let body = serde_json::json!({"name": "t"});
+        request(
+            &app,
+            "POST",
+            "/api/pubsub/topics",
+            Some(&token),
+            Some(body),
+        )
+        .await;
+        let body = serde_json::json!({});
+        let (status, _) = request(
+            &app,
+            "POST",
+            "/api/pubsub/topics/t/messages",
+            Some(&token),
+            Some(body),
+        )
+        .await;
+        assert_eq!(status, StatusCode::BAD_REQUEST);
+    }
+
+    #[tokio::test]
+    async fn test_pubsub_delete_cascade() {
+        let app = test_app();
+        let token = register_token(&app).await;
+
+        let body = serde_json::json!({"name": "tmp"});
+        request(
+            &app,
+            "POST",
+            "/api/pubsub/topics",
+            Some(&token),
+            Some(body),
+        )
+        .await;
+
+        let body = serde_json::json!({"body": "m1"});
+        request(
+            &app,
+            "POST",
+            "/api/pubsub/topics/tmp/messages",
+            Some(&token),
+            Some(body),
+        )
+        .await;
+
+        let body = serde_json::json!({"body": "m2"});
+        request(
+            &app,
+            "POST",
+            "/api/pubsub/topics/tmp/messages",
+            Some(&token),
+            Some(body),
+        )
+        .await;
+
+        request(
+            &app,
+            "DELETE",
+            "/api/pubsub/topics/tmp",
+            Some(&token),
+            None,
+        )
+        .await;
+
+        let (status, _) = request(
+            &app,
+            "GET",
+            "/api/pubsub/topics/tmp/messages",
+            Some(&token),
+            None,
+        )
+        .await;
+        assert_eq!(status, StatusCode::NOT_FOUND);
     }
 }

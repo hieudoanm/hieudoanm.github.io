@@ -37,8 +37,8 @@
 | 13  | M        |                 |               |             |               |         |
 | 14  | N        | `SimpleNotify`  | Notifications | Server-Sent | `SNS`         | x       |
 | 15  | O        |                 |               |             |               |         |
-| 16  | P        |                 |               |             |               |         |
-| 17  | Q        | `SimpleQueues`  | Queues        |             | `SQS`         |         |
+| 16  | P        | `SimplePubSub`  |               | PubSub      | `SNS`         | x       |
+| 17  | Q        | `SimpleQueues`  | Queues        |             | `SQS`         | x       |
 | 18  | R        |                 |               |             |               |         |
 | 19  | S        | `SimpleSockets` | WebSockets    |             |               | x       |
 | 20  | T        |                 |               |             |               |         |

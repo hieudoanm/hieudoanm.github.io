@@ -281,6 +281,18 @@ func migrateDB(db *sql.DB) error {
 		meta       TEXT NOT NULL DEFAULT '{}',
 		created_at TEXT NOT NULL DEFAULT (datetime('now'))
 	);
+	CREATE TABLE IF NOT EXISTS _pubsub_topics (
+		id         TEXT PRIMARY KEY,
+		name       TEXT UNIQUE NOT NULL,
+		created_at TEXT NOT NULL DEFAULT (datetime('now'))
+	);
+	CREATE TABLE IF NOT EXISTS _pubsub_messages (
+		id         TEXT PRIMARY KEY,
+		topic_id   TEXT NOT NULL,
+		body       TEXT NOT NULL,
+		created_at TEXT NOT NULL DEFAULT (datetime('now')),
+		FOREIGN KEY (topic_id) REFERENCES _pubsub_topics(id) ON DELETE CASCADE
+	);
 	`
 	_, err := db.Exec(schema)
 	return err

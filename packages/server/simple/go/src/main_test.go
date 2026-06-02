@@ -40,7 +40,8 @@ func newTestServer(t *testing.T) *Server {
 	cache := NewCacheStore(db)
 	sseHub := NewSSEHub(db)
 	logHub := NewSSEHub(db)
-	return &Server{db: db, dataDir: storageDir, secretsKey: key, cronScheduler: nil, wsHub: wsHub, cache: cache, sseHub: sseHub, logHub: logHub}
+	pubsubHub := NewSSEHub(db)
+	return &Server{db: db, dataDir: storageDir, secretsKey: key, cronScheduler: nil, wsHub: wsHub, cache: cache, sseHub: sseHub, logHub: logHub, pubsubHub: pubsubHub}
 }
 
 func request(t *testing.T, h http.Handler, method, path, body string) *http.Response {
@@ -1516,5 +1517,157 @@ func TestLogAuthRequired(t *testing.T) {
 	resp = request(t, h, "POST", "/api/logs", `{"message":"x","level":"info"}`)
 	if resp.StatusCode != 401 {
 		t.Fatalf("expected 401, got %d", resp.StatusCode)
+	}
+}
+
+func TestPubSubTopicCRUD(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "POST", "/api/pubsub/topics", `{"name":"mytopic"}`)
+	if resp.StatusCode != 201 {
+		t.Fatalf("expected 201, got %d", resp.StatusCode)
+	}
+	data := readBody(t, resp)
+	if data["name"] != "mytopic" {
+		t.Fatalf("expected mytopic, got %v", data["name"])
+	}
+
+	resp = request(t, h, "GET", "/api/pubsub/topics", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.StatusCode)
+	}
+	var topics []map[string]any
+	if err := json.NewDecoder(resp.Body).Decode(&topics); err != nil {
+		t.Fatal(err)
+	}
+	resp.Body.Close()
+	if len(topics) != 1 {
+		t.Fatalf("expected 1 topic, got %d", len(topics))
+	}
+
+	resp = request(t, h, "GET", "/api/pubsub/topics/mytopic", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.StatusCode)
+	}
+
+	resp = request(t, h, "DELETE", "/api/pubsub/topics/mytopic", "")
+	if resp.StatusCode != 204 {
+		t.Fatalf("expected 204, got %d", resp.StatusCode)
+	}
+
+	resp = request(t, h, "GET", "/api/pubsub/topics/mytopic", "")
+	if resp.StatusCode != 404 {
+		t.Fatalf("expected 404, got %d", resp.StatusCode)
+	}
+}
+
+func TestPubSubTopicDuplicate(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/pubsub/topics", `{"name":"dup"}`)
+	resp := request(t, h, "POST", "/api/pubsub/topics", `{"name":"dup"}`)
+	if resp.StatusCode != 409 {
+		t.Fatalf("expected 409, got %d", resp.StatusCode)
+	}
+}
+
+func TestPubSubTopicMissingName(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "POST", "/api/pubsub/topics", `{}`)
+	if resp.StatusCode != 400 {
+		t.Fatalf("expected 400, got %d", resp.StatusCode)
+	}
+}
+
+func TestPubSubTopicAuthRequired(t *testing.T) {
+	srv := newTestServer(t)
+	h := srv.routes()
+
+	resp := request(t, h, "GET", "/api/pubsub/topics", "")
+	if resp.StatusCode != 401 {
+		t.Fatalf("expected 401, got %d", resp.StatusCode)
+	}
+	resp = request(t, h, "POST", "/api/pubsub/topics", `{"name":"x"}`)
+	if resp.StatusCode != 401 {
+		t.Fatalf("expected 401, got %d", resp.StatusCode)
+	}
+}
+
+func TestPubSubMessagePublishList(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/pubsub/topics", `{"name":"chat"}`)
+
+	resp := request(t, h, "POST", "/api/pubsub/topics/chat/messages", `{"body":"hello world"}`)
+	if resp.StatusCode != 201 {
+		t.Fatalf("expected 201, got %d", resp.StatusCode)
+	}
+	msg := readBody(t, resp)
+	if msg["body"] != "hello world" {
+		t.Fatalf("expected 'hello world', got %v", msg["body"])
+	}
+	if msg["topic_id"] == "" {
+		t.Fatal("expected topic_id")
+	}
+
+	resp = request(t, h, "GET", "/api/pubsub/topics/chat/messages", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.StatusCode)
+	}
+	var msgs []map[string]any
+	if err := json.NewDecoder(resp.Body).Decode(&msgs); err != nil {
+		t.Fatal(err)
+	}
+	resp.Body.Close()
+	if len(msgs) != 1 {
+		t.Fatalf("expected 1 message, got %d", len(msgs))
+	}
+}
+
+func TestPubSubMessageToUnknownTopic(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "POST", "/api/pubsub/topics/nonexistent/messages", `{"body":"x"}`)
+	if resp.StatusCode != 404 {
+		t.Fatalf("expected 404, got %d", resp.StatusCode)
+	}
+}
+
+func TestPubSubMessageMissingBody(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/pubsub/topics", `{"name":"t"}`)
+	resp := request(t, h, "POST", "/api/pubsub/topics/t/messages", `{}`)
+	if resp.StatusCode != 400 {
+		t.Fatalf("expected 400, got %d", resp.StatusCode)
+	}
+}
+
+func TestPubSubDeleteCascade(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/pubsub/topics", `{"name":"tmp"}`)
+	request(t, h, "POST", "/api/pubsub/topics/tmp/messages", `{"body":"m1"}`)
+	request(t, h, "POST", "/api/pubsub/topics/tmp/messages", `{"body":"m2"}`)
+	request(t, h, "DELETE", "/api/pubsub/topics/tmp", "")
+
+	resp := request(t, h, "GET", "/api/pubsub/topics/tmp/messages", "")
+	if resp.StatusCode != 404 {
+		t.Fatalf("expected 404 after delete, got %d", resp.StatusCode)
 	}
 }
