@@ -7,4 +7,5 @@ convert:
 
 query:
 	python3 scripts/query-quotes.py
+	python3 scripts/query-timezones.py
 	python3 scripts/query-visas.py
