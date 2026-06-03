@@ -1,5 +1,4 @@
 use std::path::PathBuf;
-use std::sync::Mutex;
 
 use axum::{
     Json,
@@ -8,7 +7,6 @@ use axum::{
     extract::{Path, Query, State},
     http::{HeaderMap, StatusCode},
 };
-use rusqlite::Connection;
 use serde::Serialize;
 use serde_json::Value;
 use uuid::Uuid;
@@ -56,7 +54,7 @@ pub async fn get_swagger_ui() -> impl axum::response::IntoResponse {
 }
 
 pub struct AppState {
-    pub db: Mutex<Connection>,
+    pub db: deadpool::managed::Pool<db::ConnectionManager>,
     pub storage_dir: PathBuf,
     pub http_client: reqwest::Client,
     pub secrets_key: Vec<u8>,
@@ -93,7 +91,8 @@ pub async fn get_backup(
     {
         let conn = state
             .db
-            .lock()
+            .get()
+            .await
             .map_err(|e| AppError::Internal(e.to_string()))?;
         conn.execute("VACUUM INTO ?1", rusqlite::params![path.to_str().unwrap()])
             .map_err(|e| AppError::Internal(format!("backup: {e}")))?;
@@ -122,7 +121,8 @@ pub async fn post_register(
             "email and password are required".into(),
         ));
     }
-    let user = auth::register_user(&state.db, &req.email, &req.password)?;
+    let conn = state.db.get().await.map_err(|e| AppError::Internal(e.to_string()))?;
+    let user = auth::register_user(&conn, &req.email, &req.password)?;
     Ok(Json(user))
 }
 
@@ -135,7 +135,8 @@ pub async fn post_login(
             "email and password are required".into(),
         ));
     }
-    let resp = auth::login_user(&state.db, &req.email, &req.password)?;
+    let conn = state.db.get().await.map_err(|e| AppError::Internal(e.to_string()))?;
+    let resp = auth::login_user(&conn, &req.email, &req.password)?;
     Ok(Json(resp))
 }
 
@@ -147,7 +148,8 @@ pub async fn list_collections(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let cols = db::list_collections(&conn)?;
     Ok(Json(cols))
@@ -165,7 +167,8 @@ pub async fn create_collection(
     }
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     db::insert_collection(&conn, &req.name, &req.schema)?;
     db::create_collection_table(&conn, &req.name, &req.schema)?;
@@ -188,7 +191,8 @@ pub async fn get_collection(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let c =
         db::get_collection(&conn, &name)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
@@ -204,7 +208,8 @@ pub async fn delete_collection(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let existing = db::get_collection(&conn, &name)?;
     if existing.is_none() {
@@ -230,7 +235,8 @@ pub async fn update_collection(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let c = db::update_collection(&conn, &name, req.schema.as_deref())?;
     Ok(Json(c))
@@ -246,7 +252,8 @@ pub async fn create_record(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let existing = db::get_collection(&conn, &name)?;
     if existing.is_none() {
@@ -276,7 +283,8 @@ pub async fn list_records(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let existing = db::get_collection(&conn, &name)?;
     if existing.is_none() {
@@ -298,7 +306,8 @@ pub async fn get_record(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let rec =
         db::get_record(&conn, &name, &id)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
@@ -315,7 +324,8 @@ pub async fn update_record(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let existing = db::get_collection(&conn, &name)?;
     if existing.is_none() {
@@ -341,7 +351,8 @@ pub async fn delete_record(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let existing = db::get_record(&conn, &name, &id)?;
     if existing.is_none() {
@@ -365,7 +376,8 @@ pub async fn list_buckets(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let buckets = db::list_buckets(&conn)?;
     Ok(Json(buckets))
@@ -383,7 +395,8 @@ pub async fn create_bucket(
     }
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let bucket = db::insert_bucket(&conn, &req.name, req.is_public)?;
     let dir = state.storage_dir.join("storage").join(&req.name);
@@ -406,7 +419,8 @@ pub async fn get_bucket(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let bucket =
         db::get_bucket(&conn, &name)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
@@ -422,7 +436,8 @@ pub async fn delete_bucket(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let existing = db::get_bucket(&conn, &name)?;
     if existing.is_none() {
@@ -465,7 +480,8 @@ pub async fn upload_file(
     {
         let conn = state
             .db
-            .lock()
+            .get()
+            .await
             .map_err(|e| AppError::Internal(e.to_string()))?;
         let existing = db::get_bucket(&conn, &bucket)?;
         if existing.is_none() {
@@ -518,7 +534,8 @@ pub async fn upload_file(
 
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let record = db::insert_file(
         &conn,
@@ -541,7 +558,8 @@ pub async fn list_files(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let existing = db::get_bucket(&conn, &bucket)?;
     if existing.is_none() {
@@ -564,7 +582,8 @@ pub async fn download_file(
     let f = {
         let conn = state
             .db
-            .lock()
+            .get()
+            .await
             .map_err(|e| AppError::Internal(e.to_string()))?;
         let f =
             db::get_file(&conn, &file_id)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
@@ -604,7 +623,8 @@ pub async fn delete_file(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let f = db::get_file(&conn, &file_id)?;
     match f {
@@ -623,6 +643,43 @@ pub async fn delete_file(
     Ok(StatusCode::NO_CONTENT)
 }
 
+pub async fn get_thumbnail(
+    headers: HeaderMap,
+    State(state): State<std::sync::Arc<AppState>>,
+    Path((bucket, file_id)): Path<(String, String)>,
+) -> std::result::Result<axum::response::Response<Body>, AppError> {
+    let _token = extract_token(&headers)?;
+    auth::validate_token(&_token)?;
+    let f = {
+        let conn = state
+            .db
+            .get()
+            .await
+            .map_err(|e| AppError::Internal(e.to_string()))?;
+        let f = db::get_file(&conn, &file_id)?
+            .ok_or_else(|| AppError::NotFound("not found".into()))?;
+        if f.bucket != bucket {
+            return Err(AppError::NotFound("not found".into()));
+        }
+        f
+    };
+    if !crate::image::is_supported_image(&f.mime_type) {
+        return Err(AppError::BadRequest("unsupported image type".into()));
+    }
+    let file_path = state
+        .storage_dir
+        .join("storage")
+        .join(&bucket)
+        .join(&file_id);
+    let thumb_data =
+        crate::image::generate_thumbnail(&file_path, 256).map_err(|e| AppError::Internal(e))?;
+    let response = axum::response::Response::builder()
+        .header(axum::http::header::CONTENT_TYPE, "image/jpeg")
+        .body(Body::from(thumb_data))
+        .map_err(|e| AppError::Internal(e.to_string()))?;
+    Ok(response)
+}
+
 pub async fn list_webhooks(
     headers: HeaderMap,
     State(state): State<std::sync::Arc<AppState>>,
@@ -631,7 +688,8 @@ pub async fn list_webhooks(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let hooks = db::list_webhooks(&conn)?;
     Ok(Json(hooks))
@@ -661,7 +719,8 @@ pub async fn create_webhook(
     let id = uuid::Uuid::new_v4().to_string().replace('-', "");
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let h = db::insert_webhook(&conn, &id, &req.name, &req.url, &req.events, &req.secret)?;
     Ok(Json(h))
@@ -676,7 +735,8 @@ pub async fn get_webhook(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let h = db::get_webhook(&conn, &id)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
     Ok(Json(h))
@@ -692,7 +752,8 @@ pub async fn update_webhook(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let existing =
         db::get_webhook(&conn, &id)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
@@ -720,7 +781,8 @@ pub async fn delete_webhook(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let existing = db::get_webhook(&conn, &id)?;
     if existing.is_none() {
@@ -739,7 +801,8 @@ pub async fn list_webhook_logs(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let existing = db::get_webhook(&conn, &id)?;
     if existing.is_none() {
@@ -768,7 +831,8 @@ pub async fn list_secrets(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let secrets = db::list_secrets(&conn)?;
     let items: Vec<SecretListItem> = secrets
@@ -804,7 +868,8 @@ pub async fn create_secret(
     let id = uuid::Uuid::new_v4().to_string().replace('-', "");
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let secret = db::insert_secret(&conn, &id, &req.name, &encrypted, &scope)?;
     webhook::dispatch_event(
@@ -824,7 +889,8 @@ pub async fn get_secret(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let mut secret =
         db::get_secret(&conn, &id)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
@@ -843,7 +909,8 @@ pub async fn update_secret(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let existing =
         db::get_secret(&conn, &id)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
@@ -874,7 +941,8 @@ pub async fn delete_secret(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let existing = db::get_secret(&conn, &id)?;
     if existing.is_none() {
@@ -899,7 +967,8 @@ pub async fn list_ws_connections(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let connections = db::list_ws_connections(&conn)?;
     Ok(Json(connections))
@@ -914,7 +983,8 @@ pub async fn get_ws_connection(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let connection =
         db::get_ws_connection(&conn, &id)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
@@ -931,7 +1001,8 @@ pub async fn delete_ws_connection(
     let _ = websocket::close_client(&state.ws_hub, &id).await;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let existing = db::get_ws_connection(&conn, &id)?;
     if existing.is_none() {
@@ -964,7 +1035,7 @@ pub async fn broadcast_ws_message(
             let msg = Message::Text(content.clone().into());
             sender.send(msg).ok();
         }
-        if let Ok(conn) = state.db.lock() {
+        if let Ok(conn) = state.db.get().await {
             db::insert_ws_message(&conn, id, "sent", &content).ok();
         }
     }
@@ -984,7 +1055,7 @@ pub async fn send_ws_message(
 
     let sent =
         websocket::send_to_client(&state.ws_hub, &id, Message::Text(content.clone().into())).await;
-    if let Ok(conn) = state.db.lock() {
+    if let Ok(conn) = state.db.get().await {
         db::insert_ws_message(&conn, &id, "sent", &content).ok();
     }
 
@@ -1004,7 +1075,8 @@ pub async fn list_ws_messages(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let existing = db::get_ws_connection(&conn, &id)?;
     if existing.is_none() {
@@ -1022,7 +1094,8 @@ pub async fn list_all_ws_messages(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let messages = db::list_all_ws_messages(&conn)?;
     Ok(Json(messages))
@@ -1052,7 +1125,8 @@ pub async fn set_cache(
     let ttl = req.ttl.unwrap_or(0);
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let entry = state.cache.set(&conn, &req.key, &req.value, ttl)?;
     Ok(Json(entry))
@@ -1067,7 +1141,8 @@ pub async fn get_cache(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let entry = state
         .cache
@@ -1085,7 +1160,8 @@ pub async fn delete_cache(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let ok = state.cache.delete(&conn, &key)?;
     if !ok {
@@ -1102,7 +1178,8 @@ pub async fn flush_cache(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     state.cache.flush(&conn)?;
     Ok(Json(serde_json::json!({"status": "flushed"})))
@@ -1125,7 +1202,8 @@ pub async fn handle_notifications_list(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let n = db::list_notifications(&conn)?;
     Ok(Json(n))
@@ -1157,7 +1235,8 @@ pub async fn handle_notifications_create(
     let notification_entry = {
         let conn = state
             .db
-            .lock()
+            .get()
+            .await
             .map_err(|e| AppError::Internal(e.to_string()))?;
         db::insert_notification(&conn, &id, &req.title, &req.body, &ntype)?
     };
@@ -1182,7 +1261,8 @@ pub async fn handle_notifications_get(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let n =
         db::get_notification(&conn, &id)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
@@ -1198,7 +1278,8 @@ pub async fn handle_notifications_mark_read(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let n = db::update_notification_read(&conn, &id)?;
     Ok(Json(n))
@@ -1213,7 +1294,8 @@ pub async fn handle_notifications_delete(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let ok = db::delete_notification(&conn, &id)?;
     if !ok {
@@ -1230,7 +1312,8 @@ pub async fn handle_notifications_clear(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     db::clear_notifications(&conn)?;
     Ok(Json(serde_json::json!({"status": "cleared"})))
@@ -1244,7 +1327,8 @@ pub async fn handle_logs_list(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let logs = db::list_logs(&conn)?;
     Ok(Json(logs))
@@ -1281,7 +1365,8 @@ pub async fn handle_logs_create(
     let entry = {
         let conn = state
             .db
-            .lock()
+            .get()
+            .await
             .map_err(|e| AppError::Internal(e.to_string()))?;
         db::insert_log(&conn, &id, &level, &req.message, &meta)?
     };
@@ -1305,7 +1390,8 @@ pub async fn handle_logs_clear(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     db::clear_logs(&conn)?;
     Ok(Json(serde_json::json!({"status": "cleared"})))
@@ -1321,7 +1407,8 @@ pub async fn handle_pubsub_topics_list(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let topics = db::list_pubsub_topics(&conn)?;
     Ok(Json(topics))
@@ -1340,7 +1427,8 @@ pub async fn handle_pubsub_topics_create(
     let existing = {
         let conn = state
             .db
-            .lock()
+            .get()
+            .await
             .map_err(|e| AppError::Internal(e.to_string()))?;
         db::get_pubsub_topic_by_name(&conn, &req.name)?
     };
@@ -1351,7 +1439,8 @@ pub async fn handle_pubsub_topics_create(
     let topic = {
         let conn = state
             .db
-            .lock()
+            .get()
+            .await
             .map_err(|e| AppError::Internal(e.to_string()))?;
         db::insert_pubsub_topic(&conn, &id, &req.name)?
     };
@@ -1372,7 +1461,8 @@ pub async fn handle_pubsub_topics_get(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let topic = db::get_pubsub_topic_by_name(&conn, &name)?
         .ok_or_else(|| AppError::NotFound("not found".into()))?;
@@ -1389,7 +1479,8 @@ pub async fn handle_pubsub_topics_delete(
     let existing = {
         let conn = state
             .db
-            .lock()
+            .get()
+            .await
             .map_err(|e| AppError::Internal(e.to_string()))?;
         db::get_pubsub_topic_by_name(&conn, &name)?
     };
@@ -1399,7 +1490,8 @@ pub async fn handle_pubsub_topics_delete(
     {
         let conn = state
             .db
-            .lock()
+            .get()
+            .await
             .map_err(|e| AppError::Internal(e.to_string()))?;
         db::delete_pubsub_topic(&conn, &name)?;
     }
@@ -1423,7 +1515,8 @@ pub async fn handle_pubsub_messages_list(
     let (topic_id,) = {
         let conn = state
             .db
-            .lock()
+            .get()
+            .await
             .map_err(|e| AppError::Internal(e.to_string()))?;
         let topic = db::get_pubsub_topic_by_name(&conn, &name)?
             .ok_or_else(|| AppError::NotFound("topic not found".into()))?;
@@ -1432,7 +1525,8 @@ pub async fn handle_pubsub_messages_list(
     let msg_list = {
         let conn = state
             .db
-            .lock()
+            .get()
+            .await
             .map_err(|e| AppError::Internal(e.to_string()))?;
         db::list_pubsub_messages(&conn, &topic_id)?
     };
@@ -1453,7 +1547,8 @@ pub async fn handle_pubsub_messages_create(
     let topic = {
         let conn = state
             .db
-            .lock()
+            .get()
+            .await
             .map_err(|e| AppError::Internal(e.to_string()))?;
         db::get_pubsub_topic_by_name(&conn, &name)?
             .ok_or_else(|| AppError::NotFound("topic not found".into()))?
@@ -1462,7 +1557,8 @@ pub async fn handle_pubsub_messages_create(
     let msg = {
         let conn = state
             .db
-            .lock()
+            .get()
+            .await
             .map_err(|e| AppError::Internal(e.to_string()))?;
         db::insert_pubsub_message(&conn, &id, &topic.id, &req.body)?
     };
@@ -1485,7 +1581,8 @@ pub async fn list_cron_jobs(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let jobs = db::list_cron_jobs(&conn)?;
     Ok(Json(jobs))
@@ -1515,7 +1612,8 @@ pub async fn create_cron_job(
     };
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let job = db::insert_cron_job(&conn, &id, &req.name, &req.schedule, &req.command, &method, &req.headers, &req.body)?;
     webhook::dispatch_event(
@@ -1535,7 +1633,8 @@ pub async fn get_cron_job(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let job = db::get_cron_job(&conn, &id)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
     Ok(Json(job))
@@ -1551,7 +1650,8 @@ pub async fn update_cron_job(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let existing = db::get_cron_job(&conn, &id)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
 
@@ -1581,7 +1681,8 @@ pub async fn delete_cron_job(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let existing = db::get_cron_job(&conn, &id)?;
     if existing.is_none() {
@@ -1607,7 +1708,8 @@ pub async fn run_cron_job(
     let job = {
         let conn = state
             .db
-            .lock()
+            .get()
+            .await
             .map_err(|e| AppError::Internal(e.to_string()))?;
         db::get_cron_job(&conn, &id)?.ok_or_else(|| AppError::NotFound("not found".into()))?
     };
@@ -1624,7 +1726,8 @@ pub async fn list_cron_job_logs(
     auth::validate_token(&_token)?;
     let conn = state
         .db
-        .lock()
+        .get()
+        .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let existing = db::get_cron_job(&conn, &id)?;
     if existing.is_none() {

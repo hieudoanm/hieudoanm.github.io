@@ -24,7 +24,7 @@ pub async fn start_cron_scheduler(state: Arc<AppState>) {
         loop {
             interval.tick().await;
             let jobs = {
-                let conn = match state.db.lock() {
+                let conn = match state.db.get().await {
                     Ok(c) => c,
                     Err(_) => continue,
                 };
@@ -119,7 +119,7 @@ pub async fn execute_cron_job(state: Arc<AppState>, job: CronJob) {
     };
 
     {
-        let conn = match state.db.lock() {
+        let conn = match state.db.get().await {
             Ok(c) => c,
             Err(_) => return,
         };

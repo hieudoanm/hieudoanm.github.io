@@ -17,12 +17,25 @@ pub fn data_dir() -> PathBuf {
     }
 }
 
-pub fn open_db() -> Result<Connection> {
-    let dir = data_dir();
-    std::fs::create_dir_all(&dir)
-        .map_err(|e| AppError::Internal(format!("create data dir: {e}")))?;
-    let path = dir.join("data.db");
-    Connection::open(&path).map_err(|e| AppError::Internal(format!("open db: {e}")))
+pub struct ConnectionManager {
+    pub path: PathBuf,
+}
+
+impl deadpool::managed::Manager for ConnectionManager {
+    type Type = rusqlite::Connection;
+    type Error = rusqlite::Error;
+
+    async fn create(&self) -> std::result::Result<Self::Type, Self::Error> {
+        rusqlite::Connection::open(&self.path)
+    }
+
+    async fn recycle(
+        &self,
+        _: &mut Self::Type,
+        _: &deadpool::managed::Metrics,
+    ) -> deadpool::managed::RecycleResult<Self::Error> {
+        Ok(())
+    }
 }
 
 pub fn migrate_db(conn: &Connection) -> Result<()> {
@@ -157,6 +170,19 @@ pub fn migrate_db(conn: &Connection) -> Result<()> {
             FOREIGN KEY (topic_id) REFERENCES _pubsub_topics(id) ON DELETE CASCADE
         );",
         [],
+    )
+    .map_err(|e| AppError::Internal(format!("migrate: {e}")))?;
+
+    conn.execute_batch(
+        "CREATE TABLE IF NOT EXISTS _permissions (
+            id         TEXT PRIMARY KEY,
+            user_id    TEXT NOT NULL,
+            collection TEXT NOT NULL,
+            role       TEXT NOT NULL,
+            created_at TEXT NOT NULL DEFAULT (datetime('now')),
+            updated_at TEXT NOT NULL DEFAULT (datetime('now')),
+            UNIQUE(user_id, collection)
+        );",
     )
     .map_err(|e| AppError::Internal(format!("migrate: {e}")))?;
 
@@ -1377,24 +1403,6 @@ pub fn flush_cache(conn: &Connection) -> Result<()> {
     Ok(())
 }
 
-pub fn get_cache_stats(conn: &Connection) -> Result<serde_json::Value> {
-    let total: i64 = conn
-        .query_row("SELECT COUNT(*) FROM _cache", [], |row| row.get(0))
-        .map_err(|e| AppError::Internal(e.to_string()))?;
-    let now = chrono::Utc::now().to_rfc3339();
-    let expired: i64 = conn
-        .query_row(
-            "SELECT COUNT(*) FROM _cache WHERE ttl > 0 AND expires_at <= ?1",
-            params![now],
-            |row| row.get(0),
-        )
-        .map_err(|e| AppError::Internal(e.to_string()))?;
-    Ok(serde_json::json!({
-        "total_entries": total,
-        "expired_entries": expired,
-    }))
-}
-
 pub fn insert_notification(
     conn: &Connection,
     id: &str,
@@ -1582,25 +1590,6 @@ pub fn get_pubsub_topic_by_name(conn: &Connection, name: &str) -> Result<Option<
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let mut rows = stmt
         .query_map(params![name], |row| {
-            Ok(PubSubTopic {
-                id: row.get(0)?,
-                name: row.get(1)?,
-                created_at: row.get(2)?,
-            })
-        })
-        .map_err(|e| AppError::Internal(e.to_string()))?;
-    match rows.next() {
-        Some(Ok(t)) => Ok(Some(t)),
-        _ => Ok(None),
-    }
-}
-
-pub fn get_pubsub_topic_by_id(conn: &Connection, id: &str) -> Result<Option<PubSubTopic>> {
-    let mut stmt = conn
-        .prepare("SELECT id, name, created_at FROM _pubsub_topics WHERE id = ?1")
-        .map_err(|e| AppError::Internal(e.to_string()))?;
-    let mut rows = stmt
-        .query_map(params![id], |row| {
             Ok(PubSubTopic {
                 id: row.get(0)?,
                 name: row.get(1)?,

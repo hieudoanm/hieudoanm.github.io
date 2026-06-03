@@ -79,7 +79,7 @@ pub fn dispatch_event(state: &Arc<AppState>, event: &str, data: Value) {
     let event = event.to_string();
     tokio::spawn(async move {
         let hooks = {
-            let conn = state.db.lock().unwrap();
+            let conn = state.db.get().await.unwrap();
             db::list_webhooks(&conn).unwrap_or_default()
         };
 
@@ -150,7 +150,7 @@ async fn send_webhook(state: &Arc<AppState>, hook: &Webhook, event: &str, body_s
         created_at: Utc::now().to_rfc3339(),
     };
 
-    if let Ok(conn) = state.db.lock() {
+    if let Ok(conn) = state.db.get().await {
         let _ = db::insert_webhook_log(&conn, &log);
     }
 }

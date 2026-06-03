@@ -10,6 +10,8 @@ pub enum AppError {
     NotFound(String),
     Conflict(String),
     Unauthorized(String),
+    #[allow(dead_code)]
+    Forbidden(String),
     Internal(String),
 }
 
@@ -20,6 +22,7 @@ impl IntoResponse for AppError {
             AppError::NotFound(m) => (StatusCode::NOT_FOUND, m),
             AppError::Conflict(m) => (StatusCode::CONFLICT, m),
             AppError::Unauthorized(m) => (StatusCode::UNAUTHORIZED, m),
+            AppError::Forbidden(m) => (StatusCode::FORBIDDEN, m),
             AppError::Internal(m) => (StatusCode::INTERNAL_SERVER_ERROR, m),
         };
         (code, Json(serde_json::json!({"error": msg}))).into_response()
@@ -128,7 +131,7 @@ pub struct UpdateCollectionRequest {
     pub schema: Option<String>,
 }
 
-#[derive(Debug, Serialize)]
+#[derive(Debug, Serialize, Deserialize)]
 pub struct Bucket {
     pub name: String,
     pub is_public: bool,
@@ -325,11 +328,13 @@ pub struct PubSubMessage {
 
 #[derive(Debug, Deserialize)]
 pub struct CreatePubSubTopicRequest {
+    #[serde(default)]
     pub name: String,
 }
 
 #[derive(Debug, Deserialize)]
 pub struct CreatePubSubMessageRequest {
+    #[serde(default)]
     pub body: String,
 }
 

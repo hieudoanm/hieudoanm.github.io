@@ -6,7 +6,6 @@ use axum::extract::State;
 use axum::extract::ws::{Message, WebSocket, WebSocketUpgrade};
 use axum::http::HeaderMap;
 use axum::response::IntoResponse;
-use chrono::Utc;
 use tokio::sync::{RwLock, mpsc};
 use uuid::Uuid;
 
@@ -15,10 +14,6 @@ use crate::handlers::AppState;
 
 pub struct WSConsumer {
     pub sender: mpsc::UnboundedSender<Message>,
-    pub remote_addr: String,
-    pub user_agent: String,
-    pub path: String,
-    pub connected_at: String,
 }
 
 pub struct WSHub {
@@ -54,17 +49,12 @@ pub async fn handle_ws_upgrade(
 async fn handle_socket(mut socket: WebSocket, state: Arc<AppState>, user_agent: String) {
     let id = Uuid::new_v4().to_string().replace('-', "");
     let path = "/ws".to_string();
-    let connected_at = Utc::now().to_rfc3339();
     let remote_addr = String::new();
 
     let (msg_sender, mut msg_receiver) = mpsc::unbounded_channel::<Message>();
 
     let consumer = WSConsumer {
         sender: msg_sender,
-        remote_addr: remote_addr.clone(),
-        path: path.clone(),
-        user_agent: user_agent.clone(),
-        connected_at: connected_at.clone(),
     };
 
     state
@@ -73,7 +63,7 @@ async fn handle_socket(mut socket: WebSocket, state: Arc<AppState>, user_agent: 
         .await
         .clients
         .insert(id.clone(), consumer);
-    if let Ok(conn) = state.db.lock() {
+    if let Ok(conn) = state.db.get().await {
         db::insert_ws_connection(&conn, &id, &remote_addr, &path, &user_agent).ok();
     }
 
@@ -83,7 +73,7 @@ async fn handle_socket(mut socket: WebSocket, state: Arc<AppState>, user_agent: 
             msg = socket.recv() => {
                 match msg {
                     Some(Ok(Message::Text(text))) => {
-                        if let Ok(conn) = state.db.lock() {
+                        if let Ok(conn) = state.db.get().await {
                             db::insert_ws_message(&conn, &id, "received", &text).ok();
                         }
                     }
@@ -114,7 +104,7 @@ async fn handle_socket(mut socket: WebSocket, state: Arc<AppState>, user_agent: 
     }
 
     state.ws_hub.write().await.clients.remove(&id);
-    if let Ok(conn) = state.db.lock() {
+    if let Ok(conn) = state.db.get().await {
         db::update_ws_disconnect(&conn, &id).ok();
     }
 }
@@ -138,7 +128,4 @@ pub async fn close_client(hub: &RwLock<WSHub>, id: &str) -> bool {
     }
 }
 
-pub async fn active_count(hub: &RwLock<WSHub>) -> usize {
-    let hub = hub.read().await;
-    hub.clients.len()
-}
+

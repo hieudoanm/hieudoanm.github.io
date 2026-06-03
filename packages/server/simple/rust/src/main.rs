@@ -2,14 +2,19 @@
 
 mod auth;
 mod cache;
+mod content_type;
 mod cronjobs;
 mod db;
 mod handlers;
+mod image;
+mod import_export;
 mod log;
 mod models;
 mod notification;
 mod openapi;
 mod pubsub;
+mod rate_limit;
+mod rbac;
 mod secrets;
 mod webhook;
 mod websocket;
@@ -18,7 +23,7 @@ use std::sync::Arc;
 
 use axum::{
     Router,
-    routing::{get, post},
+    routing::{delete, get, post},
 };
 use handlers::AppState;
 use rust_embed::RustEmbed;
@@ -182,7 +187,12 @@ fn app(state: Arc<AppState>) -> Router {
         )
         .route("/api/cronjobs/{id}/run", post(handlers::run_cron_job))
         .route("/api/cronjobs/{id}/logs", get(handlers::list_cron_job_logs))
-        .route("/api/backup", get(handlers::get_backup));
+        .route("/api/backup", get(handlers::get_backup))
+        .route("/api/export", get(crate::import_export::handle_export))
+        .route("/api/import", post(crate::import_export::handle_import))
+        .route("/api/permissions", get(crate::rbac::handle_list_permissions).post(crate::rbac::handle_create_permission))
+        .route("/api/permissions/{id}", delete(crate::rbac::handle_delete_permission))
+        .route("/api/buckets/{name}/files/{id}/thumb", get(handlers::get_thumbnail));
 
     Router::new()
         .merge(api)
@@ -221,20 +231,31 @@ fn app(state: Arc<AppState>) -> Router {
 
 #[tokio::main]
 async fn main() {
-    let conn = db::open_db().expect("open db");
-    db::migrate_db(&conn).expect("migrate db");
+    let db_path = db::data_dir().join("data.db");
+    let pool: deadpool::managed::Pool<db::ConnectionManager> =
+        deadpool::managed::Pool::builder(db::ConnectionManager { path: db_path })
+            .build()
+            .unwrap();
+
+    {
+        let conn = pool.get().await.expect("get db connection for migration");
+        db::migrate_db(&conn).expect("migrate db");
+    }
 
     let key = secrets::get_or_create_secrets_key(&db::data_dir()).expect("secrets key");
     let ws_hub = websocket::new_ws_hub();
     tokio::spawn(websocket::ws_hub_run(ws_hub.clone()));
     let cache_arc = std::sync::Arc::new(cache::CacheStore::new());
-    cache_arc.load_from_db(&conn);
+    {
+        let conn = pool.get().await.expect("get db for cache init");
+        cache_arc.load_from_db(&conn);
+    }
     cache::start_eviction_loop(cache_arc.clone());
     let sse_hub = notification::new_sse_hub();
     let log_hub = crate::log::new_log_hub();
     let pubsub_hub = pubsub::new_pubsub_hub();
     let state = Arc::new(AppState {
-        db: std::sync::Mutex::new(conn),
+        db: pool,
         storage_dir: db::data_dir(),
         http_client: reqwest::Client::new(),
         secrets_key: key,
@@ -269,8 +290,28 @@ async fn main() {
     println!();
 
     axum::serve(listener, app(state))
+        .with_graceful_shutdown(shutdown_signal())
         .await
         .expect("server error");
+}
+
+async fn shutdown_signal() {
+    let sigint = async {
+        tokio::signal::unix::signal(tokio::signal::unix::SignalKind::interrupt())
+            .expect("install sigint handler")
+            .recv()
+            .await;
+    };
+    let sigterm = async {
+        tokio::signal::unix::signal(tokio::signal::unix::SignalKind::terminate())
+            .expect("install sigterm handler")
+            .recv()
+            .await;
+    };
+    tokio::select! {
+        _ = sigint => {},
+        _ = sigterm => {},
+    }
 }
 
 #[cfg(test)]
@@ -283,12 +324,18 @@ mod tests {
     use serde_json::Value;
     use tower::ServiceExt;
 
-    fn test_app() -> Router {
-        let conn = rusqlite::Connection::open_in_memory().expect("open in memory");
-        db::migrate_db(&conn).expect("migrate");
+    async fn test_app() -> Router {
         let tmp_dir =
             std::env::temp_dir().join(format!("simple-test-{}", uuid::Uuid::new_v4()));
         std::fs::create_dir_all(&tmp_dir).ok();
+        let db_path = tmp_dir.join("test.db");
+        let pool: deadpool::managed::Pool<db::ConnectionManager> =
+            deadpool::managed::Pool::builder(db::ConnectionManager { path: db_path })
+                .build()
+                .unwrap();
+        let conn = pool.get().await.unwrap();
+        db::migrate_db(&conn).expect("migrate");
+        drop(conn);
         let key = secrets::get_or_create_secrets_key(&tmp_dir).unwrap();
         let ws_hub = websocket::new_ws_hub();
         let cache = std::sync::Arc::new(cache::CacheStore::new());
@@ -296,7 +343,7 @@ mod tests {
         let log_hub = crate::log::new_log_hub();
         let pubsub_hub = pubsub::new_pubsub_hub();
         let state = Arc::new(AppState {
-            db: std::sync::Mutex::new(conn),
+            db: pool,
             storage_dir: tmp_dir,
             http_client: reqwest::Client::new(),
             secrets_key: key,
@@ -380,7 +427,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_health() {
-        let app = test_app();
+        let app = test_app().await;
         let (status, value) = get_json(&app, "/api/health", None).await;
         assert_eq!(status, StatusCode::OK);
         assert_eq!(value["status"], "ok");
@@ -388,7 +435,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_auth_register_and_login() {
-        let app = test_app();
+        let app = test_app().await;
         let body = serde_json::json!({"email": "test@example.com", "password": "password123"});
         let (status, value) = post_json(&app, "/api/auth/register", body).await;
         assert_eq!(status, StatusCode::OK);
@@ -403,14 +450,14 @@ mod tests {
 
     #[tokio::test]
     async fn test_auth_requires_token() {
-        let app = test_app();
+        let app = test_app().await;
         let (status, _) = get_json(&app, "/api/collections", None).await;
         assert_eq!(status, StatusCode::UNAUTHORIZED);
     }
 
     #[tokio::test]
     async fn test_collection_crud() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
 
         let body = serde_json::json!({"name": "posts", "schema": "{\"title\":\"string\"}"});
@@ -437,7 +484,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_record_crud() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
 
         let body = serde_json::json!({"name": "items"});
@@ -511,7 +558,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_duplicate_email() {
-        let app = test_app();
+        let app = test_app().await;
         let body = serde_json::json!({"email": "dup@test.com", "password": "password123"});
         let (status, _) = post_json(&app, "/api/auth/register", body.clone()).await;
         assert_eq!(status, StatusCode::OK);
@@ -522,7 +569,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_missing_auth_fields() {
-        let app = test_app();
+        let app = test_app().await;
         let cases = vec![
             (serde_json::json!({}), StatusCode::BAD_REQUEST),
             (
@@ -546,7 +593,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_collection_not_found() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
 
         let (status, _) = request(
@@ -573,7 +620,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_invalid_token() {
-        let app = test_app();
+        let app = test_app().await;
         let (status, _) = get_json(&app, "/api/collections", Some("invalid-token")).await;
         assert_eq!(status, StatusCode::UNAUTHORIZED);
     }
@@ -623,7 +670,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_bucket_crud() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
 
         let body = serde_json::json!({"name": "avatars"});
@@ -650,7 +697,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_file_upload_download_delete() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
 
         let body = serde_json::json!({"name": "photos"});
@@ -716,7 +763,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_file_no_bucket() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
 
         let (status, _) = upload_file(&app, "nonexistent", "f.txt", b"data", &token).await;
@@ -728,7 +775,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_bucket_duplicate() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
 
         let body = serde_json::json!({"name": "dup"});
@@ -750,7 +797,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_webhook_crud() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
 
         let body = serde_json::json!({
@@ -816,7 +863,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_webhook_validation() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
 
         let cases = vec![
@@ -861,7 +908,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_webhook_logs() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
 
         let body = serde_json::json!({
@@ -888,14 +935,14 @@ mod tests {
 
     #[tokio::test]
     async fn test_webhook_auth_required() {
-        let app = test_app();
+        let app = test_app().await;
         let (status, _) = get_json(&app, "/api/webhooks", None).await;
         assert_eq!(status, StatusCode::UNAUTHORIZED);
     }
 
     #[tokio::test]
     async fn test_webhook_event_validation() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
 
         let body = serde_json::json!({
@@ -916,7 +963,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_webhook_events_dispatch_on_record_create() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
 
         // Use a test HTTP server to verify webhook delivery
@@ -1000,7 +1047,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_secrets_crud() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
 
         // Create
@@ -1081,7 +1128,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_secrets_validation() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
 
         // Missing name
@@ -1109,7 +1156,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_secrets_auth_required() {
-        let app = test_app();
+        let app = test_app().await;
         let (status, _) = get_json(&app, "/api/secrets", None).await;
         assert_eq!(status, StatusCode::UNAUTHORIZED);
     }
@@ -1118,7 +1165,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_cache_set_get_delete() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
 
         let (status, val) = request(
@@ -1146,7 +1193,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_cache_list() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
 
         request(
@@ -1173,7 +1220,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_cache_overwrite() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
 
         request(
@@ -1199,7 +1246,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_cache_flush() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
 
         request(
@@ -1220,7 +1267,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_cache_validation() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
 
         let (status, _) = request(
@@ -1239,14 +1286,14 @@ mod tests {
 
     #[tokio::test]
     async fn test_cache_auth_required() {
-        let app = test_app();
+        let app = test_app().await;
         let (status, _) = get_json(&app, "/api/cache", None).await;
         assert_eq!(status, StatusCode::UNAUTHORIZED);
     }
 
     #[tokio::test]
     async fn test_notification_create() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
 
         let body =
@@ -1262,7 +1309,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_notification_list() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
 
         let body = serde_json::json!({"title": "N1", "type": "success"});
@@ -1283,7 +1330,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_notification_mark_read() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
 
         let body = serde_json::json!({"title": "Read Me", "type": "info"});
@@ -1311,7 +1358,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_notification_delete() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
 
         let body = serde_json::json!({"title": "To Delete", "type": "info"});
@@ -1336,7 +1383,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_notification_validation() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
 
         let body = serde_json::json!({"title": "", "type": "info"});
@@ -1352,7 +1399,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_notification_clear() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
 
         let body = serde_json::json!({"title": "N1", "type": "info"});
@@ -1375,7 +1422,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_notification_auth_required() {
-        let app = test_app();
+        let app = test_app().await;
         let (status, _) = get_json(&app, "/api/notifications", None).await;
         assert_eq!(status, StatusCode::UNAUTHORIZED);
 
@@ -1390,7 +1437,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_log_create() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
 
         let body = serde_json::json!({"level": "info", "message": "test log", "meta": "{\"key\":\"val\"}"});
@@ -1403,7 +1450,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_log_list() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
 
         for i in 0..3 {
@@ -1420,7 +1467,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_log_validation() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
 
         let body = serde_json::json!({"level": "info", "message": ""});
@@ -1434,7 +1481,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_log_clear() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
 
         let body = serde_json::json!({"level": "info", "message": "test"});
@@ -1451,7 +1498,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_log_auth_required() {
-        let app = test_app();
+        let app = test_app().await;
         let (status, _) = get_json(&app, "/api/logs", None).await;
         assert_eq!(status, StatusCode::UNAUTHORIZED);
 
@@ -1466,7 +1513,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_pubsub_topic_crud() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
 
         let body = serde_json::json!({"name": "mytopic"});
@@ -1512,7 +1559,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_pubsub_topic_duplicate() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
         let body = serde_json::json!({"name": "dup"});
         request(&app, "POST", "/api/pubsub/topics", Some(&token), Some(body)).await;
@@ -1524,7 +1571,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_pubsub_topic_missing_name() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
         let body = serde_json::json!({});
         let (status, _) =
@@ -1534,14 +1581,14 @@ mod tests {
 
     #[tokio::test]
     async fn test_pubsub_topic_auth_required() {
-        let app = test_app();
+        let app = test_app().await;
         let (status, _) = get_json(&app, "/api/pubsub/topics", None).await;
         assert_eq!(status, StatusCode::UNAUTHORIZED);
     }
 
     #[tokio::test]
     async fn test_pubsub_message_publish_list() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
 
         let body = serde_json::json!({"name": "chat"});
@@ -1581,7 +1628,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_pubsub_message_to_unknown_topic() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
         let body = serde_json::json!({"body": "x"});
         let (status, _) = request(
@@ -1597,7 +1644,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_pubsub_message_missing_body() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
         let body = serde_json::json!({"name": "t"});
         request(
@@ -1622,7 +1669,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_pubsub_delete_cascade() {
-        let app = test_app();
+        let app = test_app().await;
         let token = register_token(&app).await;
 
         let body = serde_json::json!({"name": "tmp"});

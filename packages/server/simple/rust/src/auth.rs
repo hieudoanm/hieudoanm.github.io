@@ -1,5 +1,3 @@
-use std::sync::Mutex;
-
 use bcrypt::{DEFAULT_COST, hash, verify};
 use chrono::Utc;
 use jsonwebtoken::{DecodingKey, EncodingKey, Header, Validation, decode, encode};
@@ -22,7 +20,7 @@ fn jwt_secret() -> String {
     std::env::var("JWT_SECRET").unwrap_or_else(|_| "dev-secret-change-in-production".to_string())
 }
 
-pub fn register_user(db: &Mutex<Connection>, email: &str, password: &str) -> Result<UserResponse> {
+pub fn register_user(conn: &Connection, email: &str, password: &str) -> Result<UserResponse> {
     if password.len() < 6 {
         return Err(AppError::BadRequest(
             "password must be at least 6 characters".into(),
@@ -32,8 +30,7 @@ pub fn register_user(db: &Mutex<Connection>, email: &str, password: &str) -> Res
         hash(password, DEFAULT_COST).map_err(|e| AppError::Internal(format!("hash: {e}")))?;
     let id = Uuid::new_v4().to_string().replace('-', "");
     let now = Utc::now().to_rfc3339();
-    let conn = db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
-    db::insert_user(&conn, &id, email, &hashed)?;
+    db::insert_user(conn, &id, email, &hashed)?;
     Ok(UserResponse {
         id,
         email: email.to_string(),
@@ -42,9 +39,8 @@ pub fn register_user(db: &Mutex<Connection>, email: &str, password: &str) -> Res
     })
 }
 
-pub fn login_user(db: &Mutex<Connection>, email: &str, password: &str) -> Result<LoginResponse> {
-    let conn = db.lock().map_err(|e| AppError::Internal(e.to_string()))?;
-    let user = db::find_user_by_email(&conn, email)?;
+pub fn login_user(conn: &Connection, email: &str, password: &str) -> Result<LoginResponse> {
+    let user = db::find_user_by_email(conn, email)?;
     match user {
         Some((id, email, created_at, updated_at, hashed_pwd)) => {
             if !verify(password, &hashed_pwd).unwrap_or(false) {
