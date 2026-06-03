@@ -46,7 +46,7 @@ exports[`StringModal should render 1`] = `
             class="select select-bordered select-sm w-full font-mono text-sm font-bold"
           >
             <option
-              value="capitalise"
+              value="capitalize"
             >
               Capitalise
             </option>
@@ -56,22 +56,22 @@ exports[`StringModal should render 1`] = `
               deburr
             </option>
             <option
-              value="kebabcase"
+              value="kebabCase"
             >
               kebab-case
             </option>
             <option
-              value="lowercase"
+              value="lowerCase"
             >
               lowercase
             </option>
             <option
-              value="snakecase"
+              value="snakeCase"
             >
               snake_case
             </option>
             <option
-              value="uppercase"
+              value="upperCase"
             >
               UPPERCASE
             </option>
@@ -117,7 +117,7 @@ exports[`StringModal should render 1`] = `
               placeholder="Formatted result..."
               readonly=""
             >
-              Hello, World!
+              Hello, world!
             </textarea>
           </div>
         </div>

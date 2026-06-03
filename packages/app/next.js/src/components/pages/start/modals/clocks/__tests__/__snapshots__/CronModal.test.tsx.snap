@@ -35,7 +35,7 @@ exports[`CronModal should render 1`] = `
           </button>
         </div>
         <div
-          class="flex items-center gap-2 mb-3"
+          class="mb-3 flex items-center gap-2"
         >
           <button
             class="btn btn-outline btn-xs font-mono tracking-widest "
@@ -47,7 +47,7 @@ exports[`CronModal should render 1`] = `
           />
         </div>
         <div
-          class="flex flex-wrap gap-1.5 mb-3"
+          class="mb-3 flex flex-wrap gap-1.5"
         >
           <button
             class="btn btn-xs font-mono btn-primary"
@@ -86,7 +86,7 @@ exports[`CronModal should render 1`] = `
           </button>
         </div>
         <div
-          class="bg-base-200 border-base-300 rounded-xl border p-4 mb-3"
+          class="bg-base-200 border-base-300 mb-3 rounded-xl border p-4"
         >
           <div
             class="flex items-center justify-center gap-3"

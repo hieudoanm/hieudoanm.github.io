@@ -53,7 +53,7 @@
     "@hieudoanm/colors": "workspace:*",
     "@hieudoanm/json": "workspace:*",
     "@hieudoanm/number": "workspace:*",
-    "@hieudoanm/string": "workspace:*",
+    "@lodash/ts": "workspace:*",
     "@hieudoanm/try-catch": "workspace:*",
     "@mediapipe/camera_utils": "0.3.1675466862",
     "@mediapipe/drawing_utils": "0.3.1675466124",

@@ -1,22 +1,46 @@
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
-import { FormatStyle, strings } from '@hieudoanm/string';
+import {
+  capitalize,
+  deburr,
+  kebabCase,
+  lowerCase,
+  snakeCase,
+  upperCase,
+} from '@lodash/ts';
 import { FC, useState } from 'react';
 
-const STRING_STYLES: { value: FormatStyle; label: string }[] = [
-  { value: FormatStyle.Capitalise, label: 'Capitalise' },
-  { value: FormatStyle.Deburr, label: 'deburr' },
-  { value: FormatStyle.Kebabcase, label: 'kebab-case' },
-  { value: FormatStyle.Lowercase, label: 'lowercase' },
-  { value: FormatStyle.Snakecase, label: 'snake_case' },
-  { value: FormatStyle.Uppercase, label: 'UPPERCASE' },
+type Style =
+  | 'capitalize'
+  | 'deburr'
+  | 'kebabCase'
+  | 'lowerCase'
+  | 'snakeCase'
+  | 'upperCase';
+
+const STRING_STYLES: { value: Style; label: string }[] = [
+  { value: 'capitalize', label: 'Capitalise' },
+  { value: 'deburr', label: 'deburr' },
+  { value: 'kebabCase', label: 'kebab-case' },
+  { value: 'lowerCase', label: 'lowercase' },
+  { value: 'snakeCase', label: 'snake_case' },
+  { value: 'upperCase', label: 'UPPERCASE' },
 ];
+
+const STYLE_FN: Record<Style, (s: string) => string> = {
+  capitalize,
+  deburr,
+  kebabCase,
+  lowerCase,
+  snakeCase,
+  upperCase,
+};
 
 export const StringModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [from, setFrom] = useState('Hello, World!');
-  const [style, setStyle] = useState<FormatStyle>(FormatStyle.Capitalise);
+  const [style, setStyle] = useState<Style>('capitalize');
   const [copied, setCopied] = useState(false);
 
-  const to = strings(from).format(style);
+  const to = STYLE_FN[style](from);
 
   const copy = () => {
     navigator.clipboard.writeText(to);
@@ -38,7 +62,7 @@ export const StringModal: FC<{ onClose: () => void }> = ({ onClose }) => {
         <select
           className="select select-bordered select-sm w-full font-mono text-sm font-bold"
           value={style}
-          onChange={(e) => setStyle(e.target.value as FormatStyle)}>
+          onChange={(e) => setStyle(e.target.value as Style)}>
           {STRING_STYLES.map(({ value, label }) => (
             <option key={value} value={value}>
               {label}

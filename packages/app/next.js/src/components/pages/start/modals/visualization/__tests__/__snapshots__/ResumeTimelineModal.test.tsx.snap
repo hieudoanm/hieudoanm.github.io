@@ -168,49 +168,21 @@ exports[`ResumeTimelineModal should render 1`] = `
                 </div>
                 <div
                   class="flex items-center gap-1"
-                >
-                  <div
-                    class="bg-base-100 ring-base-content/10 flex h-7 w-7 items-center justify-center rounded-full ring-4"
-                  >
-                    <span
-                      class="text-xs"
-                    >
-                      💼
-                    </span>
-                  </div>
-                </div>
+                />
               </div>
             </div>
             <div
               class="timeline-end self-center pl-2 md:pl-4"
             >
               <div
-                class="border-base-content/10 rounded-lg border p-2 md:p-3"
+                class="invisible rounded-lg border border-transparent p-2 md:p-3"
               >
-                <span
-                  class="mb-0.5 block font-mono text-[10px] opacity-40"
-                >
-                  Jan 2024 - Dec 2025
-                </span>
                 <div
-                  class="min-w-0"
-                >
-                  <p
-                    class="text-sm leading-tight font-bold"
-                  >
-                    Engineer, Senior Analyst
-                  </p>
-                  <p
-                    class="text-base-content/60 text-xs leading-tight"
-                  >
-                    NAB
-                  </p>
-                  <p
-                    class="text-base-content/30 mt-0.5 text-[10px]"
-                  >
-                    Ho Chi Minh City, Vietnam
-                  </p>
-                </div>
+                  class="mb-0.5 h-4"
+                />
+                <div
+                  class="h-12"
+                />
               </div>
             </div>
             <hr
@@ -328,49 +300,21 @@ exports[`ResumeTimelineModal should render 1`] = `
                 </div>
                 <div
                   class="flex items-center gap-1"
-                >
-                  <div
-                    class="bg-base-100 ring-base-content/10 flex h-7 w-7 items-center justify-center rounded-full ring-4"
-                  >
-                    <span
-                      class="text-xs"
-                    >
-                      💼
-                    </span>
-                  </div>
-                </div>
+                />
               </div>
             </div>
             <div
               class="timeline-end self-center pl-2 md:pl-4"
             >
               <div
-                class="border-base-content/10 rounded-lg border p-2 md:p-3"
+                class="invisible rounded-lg border border-transparent p-2 md:p-3"
               >
-                <span
-                  class="mb-0.5 block font-mono text-[10px] opacity-40"
-                >
-                  Aug 2021 - Dec 2023
-                </span>
                 <div
-                  class="min-w-0"
-                >
-                  <p
-                    class="text-sm leading-tight font-bold"
-                  >
-                    Engineer, Analyst
-                  </p>
-                  <p
-                    class="text-base-content/60 text-xs leading-tight"
-                  >
-                    NAB
-                  </p>
-                  <p
-                    class="text-base-content/30 mt-0.5 text-[10px]"
-                  >
-                    Ho Chi Minh City, Vietnam
-                  </p>
-                </div>
+                  class="mb-0.5 h-4"
+                />
+                <div
+                  class="h-12"
+                />
               </div>
             </div>
             <hr
@@ -436,15 +380,6 @@ exports[`ResumeTimelineModal should render 1`] = `
                       🎓
                     </span>
                   </div>
-                  <div
-                    class="bg-base-100 ring-base-content/10 flex h-7 w-7 items-center justify-center rounded-full ring-4"
-                  >
-                    <span
-                      class="text-xs"
-                    >
-                      💼
-                    </span>
-                  </div>
                 </div>
               </div>
             </div>
@@ -452,32 +387,14 @@ exports[`ResumeTimelineModal should render 1`] = `
               class="timeline-end self-center pl-2 md:pl-4"
             >
               <div
-                class="border-base-content/10 rounded-lg border p-2 md:p-3"
+                class="invisible rounded-lg border border-transparent p-2 md:p-3"
               >
-                <span
-                  class="mb-0.5 block font-mono text-[10px] opacity-40"
-                >
-                  Aug 2021 - Dec 2023
-                </span>
                 <div
-                  class="min-w-0"
-                >
-                  <p
-                    class="text-sm leading-tight font-bold"
-                  >
-                    Engineer, Analyst
-                  </p>
-                  <p
-                    class="text-base-content/60 text-xs leading-tight"
-                  >
-                    NAB
-                  </p>
-                  <p
-                    class="text-base-content/30 mt-0.5 text-[10px]"
-                  >
-                    Ho Chi Minh City, Vietnam
-                  </p>
-                </div>
+                  class="mb-0.5 h-4"
+                />
+                <div
+                  class="h-12"
+                />
               </div>
             </div>
             <hr
@@ -595,49 +512,21 @@ exports[`ResumeTimelineModal should render 1`] = `
                 </div>
                 <div
                   class="flex items-center gap-1"
-                >
-                  <div
-                    class="bg-base-100 ring-base-content/10 flex h-7 w-7 items-center justify-center rounded-full ring-4"
-                  >
-                    <span
-                      class="text-xs"
-                    >
-                      💼
-                    </span>
-                  </div>
-                </div>
+                />
               </div>
             </div>
             <div
               class="timeline-end self-center pl-2 md:pl-4"
             >
               <div
-                class="border-base-content/10 rounded-lg border p-2 md:p-3"
+                class="invisible rounded-lg border border-transparent p-2 md:p-3"
               >
-                <span
-                  class="mb-0.5 block font-mono text-[10px] opacity-40"
-                >
-                  Mar 2019 - Apr 2021
-                </span>
                 <div
-                  class="min-w-0"
-                >
-                  <p
-                    class="text-sm leading-tight font-bold"
-                  >
-                    Back-end Engineer
-                  </p>
-                  <p
-                    class="text-base-content/60 text-xs leading-tight"
-                  >
-                    BoostCommerce
-                  </p>
-                  <p
-                    class="text-base-content/30 mt-0.5 text-[10px]"
-                  >
-                    Hanoi, Vietnam
-                  </p>
-                </div>
+                  class="mb-0.5 h-4"
+                />
+                <div
+                  class="h-12"
+                />
               </div>
             </div>
             <hr
@@ -755,49 +644,21 @@ exports[`ResumeTimelineModal should render 1`] = `
                 </div>
                 <div
                   class="flex items-center gap-1"
-                >
-                  <div
-                    class="bg-base-100 ring-base-content/10 flex h-7 w-7 items-center justify-center rounded-full ring-4"
-                  >
-                    <span
-                      class="text-xs"
-                    >
-                      💼
-                    </span>
-                  </div>
-                </div>
+                />
               </div>
             </div>
             <div
               class="timeline-end self-center pl-2 md:pl-4"
             >
               <div
-                class="border-base-content/10 rounded-lg border p-2 md:p-3"
+                class="invisible rounded-lg border border-transparent p-2 md:p-3"
               >
-                <span
-                  class="mb-0.5 block font-mono text-[10px] opacity-40"
-                >
-                  Mar 2017 - Jan 2019
-                </span>
                 <div
-                  class="min-w-0"
-                >
-                  <p
-                    class="text-sm leading-tight font-bold"
-                  >
-                    Front-end Engineer
-                  </p>
-                  <p
-                    class="text-base-content/60 text-xs leading-tight"
-                  >
-                    admetrics
-                  </p>
-                  <p
-                    class="text-base-content/30 mt-0.5 text-[10px]"
-                  >
-                    Frankfurt am Main, Germany
-                  </p>
-                </div>
+                  class="mb-0.5 h-4"
+                />
+                <div
+                  class="h-12"
+                />
               </div>
             </div>
             <hr
@@ -892,32 +753,14 @@ exports[`ResumeTimelineModal should render 1`] = `
               class="timeline-start self-center pr-2 md:pr-4 md:text-right"
             >
               <div
-                class="border-base-content/10 rounded-lg border p-2 md:p-3"
+                class="invisible rounded-lg border border-transparent p-2 md:p-3"
               >
-                <span
-                  class="mb-0.5 block font-mono text-[10px] opacity-40"
-                >
-                  Sep 2013 - Dec 2016
-                </span>
                 <div
-                  class="min-w-0"
-                >
-                  <p
-                    class="text-sm leading-tight font-bold"
-                  >
-                    Bachelor of Business Information Technology
-                  </p>
-                  <p
-                    class="text-base-content/60 text-xs leading-tight"
-                  >
-                    LAB University of Applied Sciences
-                  </p>
-                  <p
-                    class="text-base-content/30 mt-0.5 text-[10px]"
-                  >
-                    Lahti, Finland
-                  </p>
-                </div>
+                  class="mb-0.5 h-4"
+                />
+                <div
+                  class="h-12"
+                />
               </div>
             </div>
             <div
@@ -933,58 +776,21 @@ exports[`ResumeTimelineModal should render 1`] = `
                 </div>
                 <div
                   class="flex items-center gap-1"
-                >
-                  <div
-                    class="bg-base-100 ring-base-content/10 flex h-7 w-7 items-center justify-center rounded-full ring-4"
-                  >
-                    <span
-                      class="text-xs"
-                    >
-                      🎓
-                    </span>
-                  </div>
-                  <div
-                    class="bg-base-100 ring-base-content/10 flex h-7 w-7 items-center justify-center rounded-full ring-4"
-                  >
-                    <span
-                      class="text-xs"
-                    >
-                      💼
-                    </span>
-                  </div>
-                </div>
+                />
               </div>
             </div>
             <div
               class="timeline-end self-center pl-2 md:pl-4"
             >
               <div
-                class="border-base-content/10 rounded-lg border p-2 md:p-3"
+                class="invisible rounded-lg border border-transparent p-2 md:p-3"
               >
-                <span
-                  class="mb-0.5 block font-mono text-[10px] opacity-40"
-                >
-                  Jan 2015 - Feb 2017
-                </span>
                 <div
-                  class="min-w-0"
-                >
-                  <p
-                    class="text-sm leading-tight font-bold"
-                  >
-                    Front-end Engineer
-                  </p>
-                  <p
-                    class="text-base-content/60 text-xs leading-tight"
-                  >
-                    Witrafi
-                  </p>
-                  <p
-                    class="text-base-content/30 mt-0.5 text-[10px]"
-                  >
-                    Helsinki, Finland
-                  </p>
-                </div>
+                  class="mb-0.5 h-4"
+                />
+                <div
+                  class="h-12"
+                />
               </div>
             </div>
             <hr
@@ -999,32 +805,14 @@ exports[`ResumeTimelineModal should render 1`] = `
               class="timeline-start self-center pr-2 md:pr-4 md:text-right"
             >
               <div
-                class="border-base-content/10 rounded-lg border p-2 md:p-3"
+                class="invisible rounded-lg border border-transparent p-2 md:p-3"
               >
-                <span
-                  class="mb-0.5 block font-mono text-[10px] opacity-40"
-                >
-                  Sep 2013 - Dec 2016
-                </span>
                 <div
-                  class="min-w-0"
-                >
-                  <p
-                    class="text-sm leading-tight font-bold"
-                  >
-                    Bachelor of Business Information Technology
-                  </p>
-                  <p
-                    class="text-base-content/60 text-xs leading-tight"
-                  >
-                    LAB University of Applied Sciences
-                  </p>
-                  <p
-                    class="text-base-content/30 mt-0.5 text-[10px]"
-                  >
-                    Lahti, Finland
-                  </p>
-                </div>
+                  class="mb-0.5 h-4"
+                />
+                <div
+                  class="h-12"
+                />
               </div>
             </div>
             <div
@@ -1047,15 +835,6 @@ exports[`ResumeTimelineModal should render 1`] = `
                     <span
                       class="text-xs"
                     >
-                      🎓
-                    </span>
-                  </div>
-                  <div
-                    class="bg-base-100 ring-base-content/10 flex h-7 w-7 items-center justify-center rounded-full ring-4"
-                  >
-                    <span
-                      class="text-xs"
-                    >
                       💼
                     </span>
                   </div>
@@ -1106,32 +885,14 @@ exports[`ResumeTimelineModal should render 1`] = `
               class="timeline-start self-center pr-2 md:pr-4 md:text-right"
             >
               <div
-                class="border-base-content/10 rounded-lg border p-2 md:p-3"
+                class="invisible rounded-lg border border-transparent p-2 md:p-3"
               >
-                <span
-                  class="mb-0.5 block font-mono text-[10px] opacity-40"
-                >
-                  Sep 2013 - Dec 2016
-                </span>
                 <div
-                  class="min-w-0"
-                >
-                  <p
-                    class="text-sm leading-tight font-bold"
-                  >
-                    Bachelor of Business Information Technology
-                  </p>
-                  <p
-                    class="text-base-content/60 text-xs leading-tight"
-                  >
-                    LAB University of Applied Sciences
-                  </p>
-                  <p
-                    class="text-base-content/30 mt-0.5 text-[10px]"
-                  >
-                    Lahti, Finland
-                  </p>
-                </div>
+                  class="mb-0.5 h-4"
+                />
+                <div
+                  class="h-12"
+                />
               </div>
             </div>
             <div
@@ -1147,17 +908,7 @@ exports[`ResumeTimelineModal should render 1`] = `
                 </div>
                 <div
                   class="flex items-center gap-1"
-                >
-                  <div
-                    class="bg-base-100 ring-base-content/10 flex h-7 w-7 items-center justify-center rounded-full ring-4"
-                  >
-                    <span
-                      class="text-xs"
-                    >
-                      🎓
-                    </span>
-                  </div>
-                </div>
+                />
               </div>
             </div>
             <div
@@ -1199,7 +950,7 @@ exports[`ResumeTimelineModal should render 1`] = `
                   <p
                     class="text-sm leading-tight font-bold"
                   >
-                    Bachelor of Business Information Technology
+                    Bachelor of BIT
                   </p>
                   <p
                     class="text-base-content/60 text-xs leading-tight"

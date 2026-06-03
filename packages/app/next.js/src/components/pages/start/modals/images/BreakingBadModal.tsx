@@ -11,7 +11,7 @@ import {
   periodicTable,
   specificNameColorMap,
 } from '@hieudoanm.github.io/data/periodic-table';
-import { capitalise, kebabcase } from '@hieudoanm/string';
+import { capitalize, kebabCase } from '@lodash/ts';
 
 /* ------------------------------------------------------------------ */
 /* Types                                                                */
@@ -59,7 +59,7 @@ const highlightElement = (
   const { idx, symbol } = bestMatch;
   return {
     before: word.slice(0, idx).toLowerCase().split(''),
-    tile: capitalise(word.slice(idx, idx + symbol.length)),
+    tile: capitalize(word.slice(idx, idx + symbol.length)),
     after: word
       .slice(idx + symbol.length)
       .toLowerCase()
@@ -107,7 +107,7 @@ const Preview: FC<{
       });
       const a = document.createElement('a');
       a.href = canvas.toDataURL('image/png');
-      a.download = `${kebabcase(text)}.png`;
+      a.download = `${kebabCase(text)}.png`;
       a.click();
     } catch (err) {
       console.error('Failed to capture image', err);
