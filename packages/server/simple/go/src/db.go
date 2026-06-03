@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"strings"
 	"time"
 
 	_ "modernc.org/sqlite"
@@ -46,11 +47,12 @@ type Record struct {
 }
 
 type RecordsPage struct {
-	Records    []Record `json:"records"`
-	Total      int      `json:"total"`
-	Page       int      `json:"page"`
-	PerPage    int      `json:"per_page"`
-	TotalPages int      `json:"total_pages"`
+	Records    []Record                   `json:"records"`
+	Total      int                        `json:"total"`
+	Page       int                        `json:"page"`
+	PerPage    int                        `json:"per_page"`
+	TotalPages int                        `json:"total_pages"`
+	Expand     map[string]map[string]any `json:"expand,omitempty"`
 }
 
 type Bucket struct {
@@ -293,6 +295,15 @@ func migrateDB(db *sql.DB) error {
 		created_at TEXT NOT NULL DEFAULT (datetime('now')),
 		FOREIGN KEY (topic_id) REFERENCES _pubsub_topics(id) ON DELETE CASCADE
 	);
+	CREATE TABLE IF NOT EXISTS _permissions (
+		id         TEXT PRIMARY KEY,
+		user_id    TEXT NOT NULL,
+		collection TEXT NOT NULL,
+		role       TEXT NOT NULL DEFAULT 'viewer',
+		created_at TEXT NOT NULL DEFAULT (datetime('now')),
+		updated_at TEXT NOT NULL DEFAULT (datetime('now')),
+		UNIQUE(user_id, collection)
+	);
 	`
 	_, err := db.Exec(schema)
 	return err
@@ -389,11 +400,148 @@ func getRecord(db *sql.DB, collection, id string) (*Record, error) {
 	return r, nil
 }
 
-func listRecords(db *sql.DB, collection string, page, perPage int) (*RecordsPage, error) {
+func buildFilterClause(filters []string) (string, []any) {
+	if len(filters) == 0 {
+		return "", nil
+	}
+	var clauses []string
+	var args []any
+	for _, f := range filters {
+		var op string
+		if strings.Contains(f, "!=") {
+			op = "!="
+		} else if strings.Contains(f, ">=") {
+			op = ">="
+		} else if strings.Contains(f, "<=") {
+			op = "<="
+		} else if strings.Contains(f, ">") {
+			op = ">"
+		} else if strings.Contains(f, "<") {
+			op = "<"
+		} else if strings.Contains(f, "=") {
+			op = "="
+		} else {
+			continue
+		}
+		parts := strings.SplitN(f, op, 2)
+		if len(parts) != 2 {
+			continue
+		}
+		field := strings.TrimSpace(parts[0])
+		value := strings.TrimSpace(parts[1])
+		clauses = append(clauses, fmt.Sprintf("json_extract(data, '$.%s') %s ?", field, op))
+		args = append(args, value)
+	}
+	if len(clauses) == 0 {
+		return "", nil
+	}
+	return " WHERE " + strings.Join(clauses, " AND "), args
+}
+
+func buildSortClause(sort string) string {
+	if sort == "" {
+		return "ORDER BY created_at DESC"
+	}
+	var fields []string
+	for _, f := range strings.Split(sort, ",") {
+		f = strings.TrimSpace(f)
+		if f == "" {
+			continue
+		}
+		if strings.HasPrefix(f, "-") {
+			fields = append(fields, fmt.Sprintf("json_extract(data, '$.%s') DESC", f[1:]))
+		} else {
+			fields = append(fields, fmt.Sprintf("json_extract(data, '$.%s') ASC", f))
+		}
+	}
+	if len(fields) == 0 {
+		return "ORDER BY created_at DESC"
+	}
+	return "ORDER BY " + strings.Join(fields, ", ")
+}
+
+func resolveExpands(db *sql.DB, records []Record, expandFields []string) (map[string]map[string]any, error) {
+	if len(expandFields) == 0 || len(records) == 0 {
+		return nil, nil
+	}
+
+	cols, err := listCollections(db)
+	if err != nil {
+		return nil, err
+	}
+
+	referencedIDs := make(map[string]map[string]bool)
+	for _, field := range expandFields {
+		referencedIDs[field] = make(map[string]bool)
+		for _, rec := range records {
+			var data map[string]any
+			if err := json.Unmarshal(rec.Data, &data); err != nil {
+				continue
+			}
+			if val, ok := data[field]; ok {
+				if id, ok := val.(string); ok {
+					referencedIDs[field][id] = true
+				}
+			}
+		}
+	}
+
+	type refEntry struct {
+		collection string
+		record     *Record
+	}
+	lookup := make(map[string]refEntry)
+
+	for _, col := range cols {
+		for _, ids := range referencedIDs {
+			for id := range ids {
+				if _, ok := lookup[id]; ok {
+					continue
+				}
+				rec, err := getRecord(db, col.Name, id)
+				if err != nil {
+					continue
+				}
+				if rec != nil {
+					lookup[id] = refEntry{col.Name, rec}
+				}
+			}
+		}
+	}
+
+	result := make(map[string]map[string]any)
+	for _, rec := range records {
+		var data map[string]any
+		if err := json.Unmarshal(rec.Data, &data); err != nil {
+			continue
+		}
+		expandMap := make(map[string]any)
+		for _, field := range expandFields {
+			if val, ok := data[field]; ok {
+				if id, ok := val.(string); ok {
+					if found, ok := lookup[id]; ok {
+						expandMap[field] = map[string]any{
+							"collection": found.collection,
+							"record":     found.record,
+						}
+					}
+				}
+			}
+		}
+		if len(expandMap) > 0 {
+			result[rec.ID] = expandMap
+		}
+	}
+
+	return result, nil
+}
+
+func listRecords(db *sql.DB, collection string, page, perPage int, filter []string, sort string, expand []string) (*RecordsPage, error) {
+	filterClause, filterArgs := buildFilterClause(filter)
+
 	var total int
-	err := db.QueryRow(
-		fmt.Sprintf(`SELECT COUNT(*) FROM "_data_%s"`, collection),
-	).Scan(&total)
+	countQuery := fmt.Sprintf(`SELECT COUNT(*) FROM "_data_%s"%s`, collection, filterClause)
+	err := db.QueryRow(countQuery, filterArgs...).Scan(&total)
 	if err != nil {
 		return nil, err
 	}
@@ -403,10 +551,14 @@ func listRecords(db *sql.DB, collection string, page, perPage int) (*RecordsPage
 	}
 
 	offset := (page - 1) * perPage
-	rows, err := db.Query(
-		fmt.Sprintf(`SELECT id, data, created_at, updated_at FROM "_data_%s" ORDER BY created_at DESC LIMIT ? OFFSET ?`, collection),
-		perPage, offset,
-	)
+	sortClause := buildSortClause(sort)
+
+	args := make([]any, 0, len(filterArgs)+2)
+	args = append(args, filterArgs...)
+	args = append(args, perPage, offset)
+
+	query := fmt.Sprintf(`SELECT id, data, created_at, updated_at FROM "_data_%s"%s %s LIMIT ? OFFSET ?`, collection, filterClause, sortClause)
+	rows, err := db.Query(query, args...)
 	if err != nil {
 		return nil, err
 	}
@@ -426,12 +578,21 @@ func listRecords(db *sql.DB, collection string, page, perPage int) (*RecordsPage
 		return nil, err
 	}
 
+	var expandResult map[string]map[string]any
+	if len(expand) > 0 {
+		expandResult, err = resolveExpands(db, records, expand)
+		if err != nil {
+			return nil, err
+		}
+	}
+
 	return &RecordsPage{
 		Records:    records,
 		Total:      total,
 		Page:       page,
 		PerPage:    perPage,
 		TotalPages: totalPages,
+		Expand:     expandResult,
 	}, nil
 }
 

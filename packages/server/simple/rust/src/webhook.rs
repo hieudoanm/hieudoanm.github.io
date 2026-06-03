@@ -45,7 +45,10 @@ pub fn validate_events(events: &[String]) -> std::result::Result<(), String> {
             | EVENT_LOG_CREATE
             | EVENT_PUBSUB_TOPIC_CREATE
             | EVENT_PUBSUB_TOPIC_DELETE
-            | EVENT_PUBSUB_MESSAGE_CREATE => {}
+            | EVENT_PUBSUB_MESSAGE_CREATE
+            | crate::cronjobs::EVENT_CRONJOB_CREATE
+            | crate::cronjobs::EVENT_CRONJOB_UPDATE
+            | crate::cronjobs::EVENT_CRONJOB_DELETE => {}
             _ => return Err(format!("unknown event: {e}")),
         }
     }

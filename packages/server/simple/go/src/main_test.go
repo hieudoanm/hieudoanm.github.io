@@ -1671,3 +1671,245 @@ func TestPubSubDeleteCascade(t *testing.T) {
 		t.Fatalf("expected 404 after delete, got %d", resp.StatusCode)
 	}
 }
+
+// --- Cache Stats ---
+
+func TestCacheStats(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "GET", "/api/cache/stats", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.StatusCode)
+	}
+	stats := readBody(t, resp)
+	if _, ok := stats["total_entries"]; !ok {
+		t.Fatal("expected total_entries in stats")
+	}
+	if _, ok := stats["expired_entries"]; !ok {
+		t.Fatal("expected expired_entries in stats")
+	}
+
+	request(t, h, "POST", "/api/cache", `{"key":"a","value":"1"}`)
+	resp = request(t, h, "GET", "/api/cache/stats", "")
+	stats = readBody(t, resp)
+	total, _ := stats["total_entries"].(float64)
+	if total != 1 {
+		t.Fatalf("expected 1 total_entry, got %v", total)
+	}
+}
+
+func TestCacheStatsAuthRequired(t *testing.T) {
+	srv := newTestServer(t)
+	resp := request(t, srv.routes(), "GET", "/api/cache/stats", "")
+	if resp.StatusCode != 401 {
+		t.Fatalf("expected 401, got %d", resp.StatusCode)
+	}
+}
+
+// --- Notification Get ---
+
+func TestNotificationGet(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "POST", "/api/notifications", `{"title":"Get Me","body":"Find me","type":"info"}`)
+	created := readBody(t, resp)
+	id := created["id"].(string)
+
+	resp = request(t, h, "GET", "/api/notifications/"+id, "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.StatusCode)
+	}
+	item := readBody(t, resp)
+	if item["title"] != "Get Me" {
+		t.Fatalf("expected title 'Get Me', got %v", item["title"])
+	}
+	if item["body"] != "Find me" {
+		t.Fatalf("expected body 'Find me', got %v", item["body"])
+	}
+}
+
+func TestNotificationGetNotFound(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "GET", "/api/notifications/nonexistent", "")
+	if resp.StatusCode != 404 {
+		t.Fatalf("expected 404, got %d", resp.StatusCode)
+	}
+}
+
+func TestNotificationAuthRequiredForCreate(t *testing.T) {
+	srv := newTestServer(t)
+	resp := request(t, srv.routes(), "POST", "/api/notifications", `{"title":"X","body":"Y","type":"info"}`)
+	if resp.StatusCode != 401 {
+		t.Fatalf("expected 401, got %d", resp.StatusCode)
+	}
+}
+
+// --- WebSocket Send To Nonexistent Client ---
+
+func TestWebSocketSendNotFound(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "POST", "/api/websockets/nonexistent/send", `{"content":"hello"}`)
+	if resp.StatusCode != 404 {
+		t.Fatalf("expected 404, got %d", resp.StatusCode)
+	}
+}
+
+func TestWebSocketMessagesList(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	// List messages for nonexistent client
+	resp := request(t, h, "GET", "/api/websockets/nonexistent/messages", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.StatusCode)
+	}
+	var msgs []any
+	if err := json.NewDecoder(resp.Body).Decode(&msgs); err != nil {
+		t.Fatal(err)
+	}
+	resp.Body.Close()
+}
+
+// --- Collection Validation Edge Cases ---
+
+func TestCollectionCreateMissingName(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "POST", "/api/collections", `{}`)
+	if resp.StatusCode != 400 {
+		t.Fatalf("expected 400, got %d", resp.StatusCode)
+	}
+}
+
+func TestCollectionCreateDuplicate(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "POST", "/api/collections", `{"name":"dup"}`)
+	if resp.StatusCode != 200 {
+		t.Fatalf("first create: expected 200, got %d", resp.StatusCode)
+	}
+	resp = request(t, h, "POST", "/api/collections", `{"name":"dup"}`)
+	if resp.StatusCode != 409 {
+		t.Fatalf("duplicate: expected 409, got %d", resp.StatusCode)
+	}
+}
+
+// --- Bucket Validation Edge Cases ---
+
+func TestBucketCreateMissingName(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "POST", "/api/buckets", `{}`)
+	if resp.StatusCode != 400 {
+		t.Fatalf("expected 400, got %d", resp.StatusCode)
+	}
+}
+
+// --- Record Conflict ---
+
+func TestRecordCreateDuplicateID(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/collections", `{"name":"items"}`)
+
+	// Create record with explicit ID
+	resp := request(t, h, "POST", "/api/collections/items/records", `{"id":"myid","data":{"x":1}}`)
+	if resp.StatusCode != 200 {
+		t.Fatalf("first create: expected 200, got %d", resp.StatusCode)
+	}
+
+	// Duplicate ID should fail
+	resp = request(t, h, "POST", "/api/collections/items/records", `{"id":"myid","data":{"x":2}}`)
+	if resp.StatusCode != 409 {
+		t.Fatalf("duplicate id: expected 409, got %d", resp.StatusCode)
+	}
+}
+
+// --- Webhook Update Edge Cases ---
+
+func TestWebhookUpdateNotFound(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authHandler(srv, token)
+
+	resp := request(t, h, "PATCH", "/api/webhooks/nonexistent", `{"name":"nope"}`)
+	if resp.StatusCode != 404 {
+		t.Fatalf("expected 404, got %d", resp.StatusCode)
+	}
+}
+
+func TestWebhookDeleteNotFound(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authHandler(srv, token)
+
+	resp := request(t, h, "DELETE", "/api/webhooks/nonexistent", "")
+	if resp.StatusCode != 404 {
+		t.Fatalf("expected 404, got %d", resp.StatusCode)
+	}
+}
+
+// --- PubSub Auth Required For Topics ---
+
+func TestPubSubTopicNotFound(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "GET", "/api/pubsub/topics/nonexistent", "")
+	if resp.StatusCode != 404 {
+		t.Fatalf("expected 404, got %d", resp.StatusCode)
+	}
+}
+
+// --- Record Update Edge Cases ---
+
+func TestRecordUpdateNotFound(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/collections", `{"name":"items"}`)
+
+	// Update nonexistent record
+	resp := request(t, h, "PATCH", "/api/collections/items/records/nonexistent", `{"data":{"x":1}}`)
+	if resp.StatusCode != 404 {
+		t.Fatalf("expected 404, got %d", resp.StatusCode)
+	}
+}
+
+func TestRecordUpdateMissingData(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/collections", `{"name":"items"}`)
+	resp := request(t, h, "POST", "/api/collections/items/records", `{"data":{"x":1}}`)
+	result := readBody(t, resp)
+	id := result["id"].(string)
+
+	// Update with no data
+	resp = request(t, h, "PATCH", "/api/collections/items/records/"+id, `{}`)
+	if resp.StatusCode != 400 {
+		t.Fatalf("expected 400 for missing data, got %d", resp.StatusCode)
+	}
+}

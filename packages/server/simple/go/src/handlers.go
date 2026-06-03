@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"database/sql"
 	"encoding/json"
 	"fmt"
@@ -11,9 +12,72 @@ import (
 	"path/filepath"
 	"strconv"
 	"strings"
+	"sync"
+	"time"
 
 	"github.com/robfig/cron/v3"
 )
+
+type ipRateLimiter struct {
+	mu     sync.Mutex
+	tokens float64
+	last   time.Time
+}
+
+var rateLimiters sync.Map
+
+func rateLimitMiddleware(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		ip := r.RemoteAddr
+		if idx := strings.LastIndex(ip, ":"); idx != -1 {
+			ip = ip[:idx]
+		}
+		val, _ := rateLimiters.LoadOrStore(ip, &ipRateLimiter{
+			tokens: 200,
+			last:   time.Now(),
+		})
+		rl := val.(*ipRateLimiter)
+		rl.mu.Lock()
+		now := time.Now()
+		elapsed := now.Sub(rl.last).Seconds()
+		rl.tokens += elapsed * 100
+		if rl.tokens > 200 {
+			rl.tokens = 200
+		}
+		rl.last = now
+		if rl.tokens < 1 {
+			rl.mu.Unlock()
+			errorJSON(w, "rate limit exceeded", http.StatusTooManyRequests)
+			return
+		}
+		rl.tokens--
+		rl.mu.Unlock()
+		next.ServeHTTP(w, r)
+	})
+}
+
+func validateContentType(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		if r.Method == "POST" || r.Method == "PATCH" || r.Method == "PUT" {
+			ct := r.Header.Get("Content-Type")
+			if !strings.HasPrefix(ct, "application/json") {
+				errorJSON(w, "content-type must be application/json", http.StatusUnsupportedMediaType)
+				return
+			}
+			data, err := io.ReadAll(r.Body)
+			if err != nil {
+				errorJSON(w, "invalid body", http.StatusBadRequest)
+				return
+			}
+			if !json.Valid(data) {
+				errorJSON(w, "invalid json body", http.StatusBadRequest)
+				return
+			}
+			r.Body = io.NopCloser(bytes.NewReader(data))
+		}
+		next.ServeHTTP(w, r)
+	})
+}
 
 type Server struct {
 	db            *sql.DB
@@ -170,7 +234,20 @@ func (s *Server) handleRecordsList(w http.ResponseWriter, r *http.Request) {
 		perPage = 20
 	}
 
-	pageData, err := listRecords(s.db, name, page, perPage)
+	filter := r.URL.Query()["filter"]
+	sort := r.URL.Query().Get("sort")
+	expandParam := r.URL.Query().Get("expand")
+	var expand []string
+	if expandParam != "" {
+		for _, f := range strings.Split(expandParam, ",") {
+			f = strings.TrimSpace(f)
+			if f != "" {
+				expand = append(expand, f)
+			}
+		}
+	}
+
+	pageData, err := listRecords(s.db, name, page, perPage, filter, sort, expand)
 	if err != nil {
 		errorJSON(w, err.Error(), http.StatusInternalServerError)
 		return
@@ -1218,44 +1295,50 @@ func (s *Server) routes() http.Handler {
 	mux.Handle("/", http.FileServer(http.Dir("public")))
 
 	protected := http.NewServeMux()
-	protected.HandleFunc("GET /api/collections", s.handleCollectionsList)
-	protected.HandleFunc("POST /api/collections", s.handleCollectionsCreate)
-	protected.HandleFunc("GET /api/collections/{name}", s.handleCollectionsGet)
-	protected.HandleFunc("DELETE /api/collections/{name}", s.handleCollectionsDelete)
 
-	protected.HandleFunc("POST /api/collections/{name}/records", s.handleRecordsCreate)
-	protected.HandleFunc("GET /api/collections/{name}/records", s.handleRecordsList)
-	protected.HandleFunc("GET /api/collections/{name}/records/{id}", s.handleRecordsGet)
-	protected.HandleFunc("PATCH /api/collections/{name}/records/{id}", s.handleRecordsUpdate)
-	protected.HandleFunc("DELETE /api/collections/{name}/records/{id}", s.handleRecordsDelete)
+	contentHandler := func(h http.HandlerFunc) http.HandlerFunc {
+		return validateContentType(h).ServeHTTP
+	}
+
+	protected.HandleFunc("GET /api/collections", s.handleCollectionsList)
+	protected.Handle("POST /api/collections", s.rbacMiddleware("admin")(contentHandler(s.handleCollectionsCreate)))
+	protected.HandleFunc("GET /api/collections/{name}", s.handleCollectionsGet)
+	protected.Handle("DELETE /api/collections/{name}", s.rbacMiddleware("admin")(http.HandlerFunc(s.handleCollectionsDelete)))
+
+	protected.Handle("POST /api/collections/{name}/records", s.rbacMiddleware("admin", "editor")(contentHandler(s.handleRecordsCreate)))
+	protected.Handle("GET /api/collections/{name}/records", s.rbacMiddleware("admin", "editor", "viewer")(http.HandlerFunc(s.handleRecordsList)))
+	protected.Handle("GET /api/collections/{name}/records/{id}", s.rbacMiddleware("admin", "editor", "viewer")(http.HandlerFunc(s.handleRecordsGet)))
+	protected.Handle("PATCH /api/collections/{name}/records/{id}", s.rbacMiddleware("admin", "editor")(contentHandler(s.handleRecordsUpdate)))
+	protected.Handle("DELETE /api/collections/{name}/records/{id}", s.rbacMiddleware("admin")(http.HandlerFunc(s.handleRecordsDelete)))
 
 	protected.HandleFunc("GET /api/buckets", s.handleBucketsList)
-	protected.HandleFunc("POST /api/buckets", s.handleBucketsCreate)
+	protected.Handle("POST /api/buckets", contentHandler(s.handleBucketsCreate))
 	protected.HandleFunc("GET /api/buckets/{name}", s.handleBucketsGet)
 	protected.HandleFunc("DELETE /api/buckets/{name}", s.handleBucketsDelete)
 
 	protected.HandleFunc("POST /api/buckets/{name}/files", s.handleFilesUpload)
 	protected.HandleFunc("GET /api/buckets/{name}/files", s.handleFilesList)
 	protected.HandleFunc("GET /api/buckets/{name}/files/{id}", s.handleFilesDownload)
+	protected.HandleFunc("GET /api/buckets/{name}/files/{id}/thumb", s.handleFileThumbnail)
 	protected.HandleFunc("DELETE /api/buckets/{name}/files/{id}", s.handleFilesDelete)
 
 	protected.HandleFunc("GET /api/webhooks", s.handleWebhooksList)
-	protected.HandleFunc("POST /api/webhooks", s.handleWebhooksCreate)
+	protected.Handle("POST /api/webhooks", contentHandler(s.handleWebhooksCreate))
 	protected.HandleFunc("GET /api/webhooks/{id}", s.handleWebhooksGet)
-	protected.HandleFunc("PATCH /api/webhooks/{id}", s.handleWebhooksUpdate)
+	protected.Handle("PATCH /api/webhooks/{id}", contentHandler(s.handleWebhooksUpdate))
 	protected.HandleFunc("DELETE /api/webhooks/{id}", s.handleWebhooksDelete)
 	protected.HandleFunc("GET /api/webhooks/{id}/logs", s.handleWebhookLogs)
 
 	protected.HandleFunc("GET /api/secrets", s.handleSecretsList)
-	protected.HandleFunc("POST /api/secrets", s.handleSecretsCreate)
+	protected.Handle("POST /api/secrets", contentHandler(s.handleSecretsCreate))
 	protected.HandleFunc("GET /api/secrets/{id}", s.handleSecretsGet)
-	protected.HandleFunc("PATCH /api/secrets/{id}", s.handleSecretsUpdate)
+	protected.Handle("PATCH /api/secrets/{id}", contentHandler(s.handleSecretsUpdate))
 	protected.HandleFunc("DELETE /api/secrets/{id}", s.handleSecretsDelete)
 
 	protected.HandleFunc("GET /api/cronjobs", s.handleCronJobsList)
-	protected.HandleFunc("POST /api/cronjobs", s.handleCronJobsCreate)
+	protected.Handle("POST /api/cronjobs", contentHandler(s.handleCronJobsCreate))
 	protected.HandleFunc("GET /api/cronjobs/{id}", s.handleCronJobsGet)
-	protected.HandleFunc("PATCH /api/cronjobs/{id}", s.handleCronJobsUpdate)
+	protected.Handle("PATCH /api/cronjobs/{id}", contentHandler(s.handleCronJobsUpdate))
 	protected.HandleFunc("DELETE /api/cronjobs/{id}", s.handleCronJobsDelete)
 	protected.HandleFunc("POST /api/cronjobs/{id}/run", s.handleCronJobsRun)
 	protected.HandleFunc("GET /api/cronjobs/{id}/logs", s.handleCronJobsLogs)
@@ -1263,37 +1346,44 @@ func (s *Server) routes() http.Handler {
 	protected.HandleFunc("GET /api/websockets", s.handleWSList)
 	protected.HandleFunc("GET /api/websockets/{id}", s.handleWSGet)
 	protected.HandleFunc("DELETE /api/websockets/{id}", s.handleWSDelete)
-	protected.HandleFunc("POST /api/websockets/broadcast", s.handleWSBroadcast)
-	protected.HandleFunc("POST /api/websockets/{id}/send", s.handleWSSend)
+	protected.Handle("POST /api/websockets/broadcast", contentHandler(s.handleWSBroadcast))
+	protected.Handle("POST /api/websockets/{id}/send", contentHandler(s.handleWSSend))
 	protected.HandleFunc("GET /api/websockets/{id}/messages", s.handleWSMessages)
 	protected.HandleFunc("GET /api/websockets/messages", s.handleWSAllMessages)
 
 	protected.HandleFunc("GET /api/cache", s.handleCacheList)
-	protected.HandleFunc("POST /api/cache", s.handleCacheSet)
+	protected.Handle("POST /api/cache", contentHandler(s.handleCacheSet))
 	protected.HandleFunc("GET /api/cache/{key}", s.handleCacheGet)
 	protected.HandleFunc("DELETE /api/cache/{key}", s.handleCacheDelete)
 	protected.HandleFunc("DELETE /api/cache", s.handleCacheFlush)
 	protected.HandleFunc("GET /api/cache/stats", s.handleCacheStats)
 
 	protected.HandleFunc("GET /api/notifications", s.handleNotificationsList)
-	protected.HandleFunc("POST /api/notifications", s.handleNotificationsCreate)
+	protected.Handle("POST /api/notifications", contentHandler(s.handleNotificationsCreate))
 	protected.HandleFunc("GET /api/notifications/{id}", s.handleNotificationsGet)
 	protected.HandleFunc("PATCH /api/notifications/{id}", s.handleNotificationsMarkRead)
 	protected.HandleFunc("DELETE /api/notifications/{id}", s.handleNotificationsDelete)
 	protected.HandleFunc("DELETE /api/notifications", s.handleNotificationsClear)
 
 	protected.HandleFunc("GET /api/logs", s.handleLogsList)
-	protected.HandleFunc("POST /api/logs", s.handleLogsCreate)
+	protected.Handle("POST /api/logs", contentHandler(s.handleLogsCreate))
 	protected.HandleFunc("DELETE /api/logs", s.handleLogsClear)
 
 	protected.HandleFunc("GET /api/pubsub/topics", s.handlePubSubTopicsList)
-	protected.HandleFunc("POST /api/pubsub/topics", s.handlePubSubTopicsCreate)
+	protected.Handle("POST /api/pubsub/topics", contentHandler(s.handlePubSubTopicsCreate))
 	protected.HandleFunc("GET /api/pubsub/topics/{name}", s.handlePubSubTopicsGet)
 	protected.HandleFunc("DELETE /api/pubsub/topics/{name}", s.handlePubSubTopicsDelete)
 	protected.HandleFunc("GET /api/pubsub/topics/{name}/messages", s.handlePubSubMessagesList)
-	protected.HandleFunc("POST /api/pubsub/topics/{name}/messages", s.handlePubSubMessagesCreate)
+	protected.Handle("POST /api/pubsub/topics/{name}/messages", contentHandler(s.handlePubSubMessagesCreate))
 
-	mux.Handle("/api/", authMiddleware(protected))
+	protected.HandleFunc("GET /api/export", s.handleExport)
+	protected.Handle("POST /api/import", contentHandler(s.handleImport))
+
+	protected.Handle("GET /api/permissions", s.rbacMiddleware("admin")(http.HandlerFunc(s.handlePermissionsList)))
+	protected.Handle("POST /api/permissions", s.rbacMiddleware("admin")(contentHandler(s.handlePermissionsCreate)))
+	protected.Handle("DELETE /api/permissions/{id}", s.rbacMiddleware("admin")(http.HandlerFunc(s.handlePermissionsDelete)))
+
+	mux.Handle("/api/", rateLimitMiddleware(authMiddleware(protected)))
 
 	if s.pubsubHub != nil {
 		mux.HandleFunc("GET /api/pubsub/{name}/stream", s.handlePubSubStream)

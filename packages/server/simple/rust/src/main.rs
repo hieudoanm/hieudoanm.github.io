@@ -1,5 +1,6 @@
 mod auth;
 mod cache;
+mod cronjobs;
 mod db;
 mod handlers;
 mod log;
@@ -17,9 +18,14 @@ use axum::{
     routing::{get, post},
 };
 use handlers::AppState;
+use rust_embed::RustEmbed;
 use std::net::UdpSocket;
+use tower::service_fn;
 use tower_http::cors::CorsLayer;
-use tower_http::services::ServeDir;
+
+#[derive(RustEmbed)]
+#[folder = "public/"]
+struct Assets;
 
 fn get_local_ip() -> String {
     if let Ok(socket) = UdpSocket::bind("0.0.0.0:0") {
@@ -30,6 +36,26 @@ fn get_local_ip() -> String {
         }
     }
     "127.0.0.1".to_string()
+}
+
+async fn embedded_handler(
+    req: axum::http::Request<axum::body::Body>,
+) -> Result<axum::response::Response<axum::body::Body>, std::convert::Infallible> {
+    let path = req.uri().path().trim_start_matches('/');
+    let filename = if path.is_empty() { "index.html" } else { path };
+    match Assets::get(filename) {
+        Some(content) => {
+            let mime = mime_guess::from_path(filename).first_or_octet_stream();
+            Ok(axum::response::Response::builder()
+                .header("Content-Type", mime.as_ref())
+                .body(axum::body::Body::from(content.data))
+                .unwrap())
+        }
+        None => Ok(axum::response::Response::builder()
+            .status(axum::http::StatusCode::NOT_FOUND)
+            .body(axum::body::Body::from("404 Not Found"))
+            .unwrap()),
+    }
 }
 
 fn app(state: Arc<AppState>) -> Router {
@@ -138,7 +164,19 @@ fn app(state: Arc<AppState>) -> Router {
             get(handlers::handle_logs_list)
                 .post(handlers::handle_logs_create)
                 .delete(handlers::handle_logs_clear),
-        );
+        )
+        .route(
+            "/api/cronjobs",
+            get(handlers::list_cron_jobs).post(handlers::create_cron_job),
+        )
+        .route(
+            "/api/cronjobs/{id}",
+            get(handlers::get_cron_job)
+                .patch(handlers::update_cron_job)
+                .delete(handlers::delete_cron_job),
+        )
+        .route("/api/cronjobs/{id}/run", post(handlers::run_cron_job))
+        .route("/api/cronjobs/{id}/logs", get(handlers::list_cron_job_logs));
 
     Router::new()
         .merge(api)
@@ -168,7 +206,7 @@ fn app(state: Arc<AppState>) -> Router {
             get(crate::pubsub::handle_pubsub_stream),
         )
         .layer(CorsLayer::permissive())
-        .fallback_service(ServeDir::new("public").append_index_html_on_directories(true))
+        .fallback_service(service_fn(embedded_handler))
         .with_state(state)
 }
 
@@ -197,6 +235,8 @@ async fn main() {
         log_hub,
         pubsub_hub,
     });
+
+    cronjobs::start_cron_scheduler(state.clone()).await;
 
     let port = std::env::var("PORT").unwrap_or_else(|_| "8080".to_string());
     let addr = format!("0.0.0.0:{port}");

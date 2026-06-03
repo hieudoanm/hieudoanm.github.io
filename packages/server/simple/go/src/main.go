@@ -1,13 +1,17 @@
 package main
 
 import (
+	"context"
 	"fmt"
 	"log"
 	"net"
 	"net/http"
 	"os"
+	"os/signal"
 	"path/filepath"
 	"strings"
+	"syscall"
+	"time"
 )
 
 func dataDir() string {
@@ -80,7 +84,18 @@ func main() {
 	fmt.Println("  └─────────────────────────────────────────────┘")
 	fmt.Println()
 
-	if err := http.ListenAndServe(addr, srv); err != nil {
+	httpServer := &http.Server{Addr: addr, Handler: srv}
+
+	go func() {
+		sig := make(chan os.Signal, 1)
+		signal.Notify(sig, syscall.SIGINT, syscall.SIGTERM)
+		<-sig
+		ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+		defer cancel()
+		httpServer.Shutdown(ctx)
+	}()
+
+	if err := httpServer.ListenAndServe(); err != nil && err != http.ErrServerClosed {
 		log.Fatalf("server: %v", err)
 	}
 }
