@@ -1,19 +1,32 @@
 use axum::{
-    http::{HeaderMap, StatusCode},
-    response::Json,
+    http::{Method, StatusCode},
+    middleware::Next,
+    response::{IntoResponse, Response},
+    Json,
+    extract::Request,
 };
 
-#[allow(dead_code)]
-pub fn require_json_content_type(headers: &HeaderMap) -> Result<(), (StatusCode, Json<serde_json::Value>)> {
-    if let Some(content_type) = headers.get("content-type") {
-        if let Ok(val) = content_type.to_str() {
-            if val.starts_with("application/json") {
-                return Ok(());
-            }
+pub async fn require_json_content_type(
+    request: Request,
+    next: Next,
+) -> Response {
+    if request.method() == Method::POST
+        || request.method() == Method::PATCH
+        || request.method() == Method::PUT
+    {
+        let content_type = request
+            .headers()
+            .get("content-type")
+            .and_then(|v| v.to_str().ok())
+            .unwrap_or("");
+        if !content_type.starts_with("application/json")
+            && !content_type.starts_with("multipart/form-data")
+        {
+            return (
+                StatusCode::UNSUPPORTED_MEDIA_TYPE,
+                Json(serde_json::json!({"error": "content-type must be application/json or multipart/form-data"})),
+            ).into_response();
         }
     }
-    Err((
-        StatusCode::UNSUPPORTED_MEDIA_TYPE,
-        Json(serde_json::json!({"error": "content-type must be application/json"})),
-    ))
+    next.run(request).await
 }

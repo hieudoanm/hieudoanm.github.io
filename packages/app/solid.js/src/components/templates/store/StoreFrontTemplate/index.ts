@@ -1,1 +1,0 @@
-export { StoreFrontTemplate } from './StoreFrontTemplate';

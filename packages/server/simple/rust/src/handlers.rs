@@ -17,6 +17,7 @@ use crate::models::*;
 use crate::notification;
 use crate::openapi;
 use crate::pubsub;
+use crate::rbac;
 use crate::secrets;
 use crate::webhook;
 use crate::websocket;
@@ -63,6 +64,7 @@ pub struct AppState {
     pub sse_hub: std::sync::Arc<tokio::sync::RwLock<crate::notification::SSEHub>>,
     pub log_hub: std::sync::Arc<tokio::sync::RwLock<crate::log::SSEHub>>,
     pub pubsub_hub: std::sync::Arc<tokio::sync::RwLock<crate::pubsub::SSEHub>>,
+    pub rate_limiter: std::sync::Arc<crate::rate_limit::RateLimiter>,
 }
 
 pub(crate) fn extract_token(headers: &HeaderMap) -> std::result::Result<String, AppError> {
@@ -77,6 +79,11 @@ pub(crate) fn extract_token(headers: &HeaderMap) -> std::result::Result<String, 
     Ok(token.to_string())
 }
 
+pub(crate) fn extract_claims(headers: &HeaderMap) -> std::result::Result<auth::Claims, AppError> {
+    let token = extract_token(headers)?;
+    auth::validate_token(&token)
+}
+
 pub async fn get_health() -> Json<serde_json::Value> {
     Json(serde_json::json!({"status": "ok"}))
 }
@@ -84,9 +91,12 @@ pub async fn get_health() -> Json<serde_json::Value> {
 pub async fn get_backup(
     headers: HeaderMap,
     State(state): State<std::sync::Arc<AppState>>,
-) -> std::result::Result<axum::response::Response<Body>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+) -> std::result::Result<(HeaderMap, Vec<u8>), AppError> {
+    let claims = extract_claims(&headers)?;
+    {
+        let conn = state.db.get().await.map_err(|e| AppError::Internal(e.to_string()))?;
+        rbac::require_role(&conn, &claims.user_id, "*", "admin")?;
+    }
     let path = std::env::temp_dir().join(format!("simple-backup-{}.db", uuid::Uuid::new_v4()));
     {
         let conn = state
@@ -101,15 +111,18 @@ pub async fn get_backup(
         .await
         .map_err(|e| AppError::Internal(format!("read backup: {e}")))?;
     tokio::fs::remove_file(&path).await.ok();
-    let response = axum::response::Response::builder()
-        .header("Content-Type", "application/octet-stream")
-        .header(
-            "Content-Disposition",
-            "attachment; filename=\"simple-backup.db\"",
-        )
-        .body(Body::from(data))
-        .map_err(|e| AppError::Internal(e.to_string()))?;
-    Ok(response)
+    let headers = axum::http::HeaderMap::from_iter([
+        (
+            axum::http::header::CONTENT_TYPE,
+            axum::http::HeaderValue::from_static("application/octet-stream"),
+        ),
+        (
+            axum::http::header::CONTENT_DISPOSITION,
+            axum::http::HeaderValue::from_str("attachment; filename=\"simple-backup.db\"")
+                .map_err(|e| AppError::Internal(e.to_string()))?,
+        ),
+    ]);
+    Ok((headers, data))
 }
 
 pub async fn post_register(
@@ -144,8 +157,7 @@ pub async fn list_collections(
     headers: HeaderMap,
     State(state): State<std::sync::Arc<AppState>>,
 ) -> std::result::Result<Json<Vec<Collection>>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -160,8 +172,7 @@ pub async fn create_collection(
     State(state): State<std::sync::Arc<AppState>>,
     Json(req): Json<CreateCollectionRequest>,
 ) -> std::result::Result<Json<Collection>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    let claims = extract_claims(&headers)?;
     if req.name.is_empty() {
         return Err(AppError::BadRequest("name is required".into()));
     }
@@ -170,6 +181,7 @@ pub async fn create_collection(
         .get()
         .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
+    rbac::require_role(&conn, &claims.user_id, &req.name, "admin")?;
     db::insert_collection(&conn, &req.name, &req.schema)?;
     db::create_collection_table(&conn, &req.name, &req.schema)?;
     let c = db::get_collection(&conn, &req.name)?
@@ -187,8 +199,7 @@ pub async fn get_collection(
     State(state): State<std::sync::Arc<AppState>>,
     Path(name): Path<String>,
 ) -> std::result::Result<Json<Collection>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -204,13 +215,13 @@ pub async fn delete_collection(
     State(state): State<std::sync::Arc<AppState>>,
     Path(name): Path<String>,
 ) -> std::result::Result<StatusCode, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    let claims = extract_claims(&headers)?;
     let conn = state
         .db
         .get()
         .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
+    rbac::require_role(&conn, &claims.user_id, &name, "admin")?;
     let existing = db::get_collection(&conn, &name)?;
     if existing.is_none() {
         return Err(AppError::NotFound("not found".into()));
@@ -231,13 +242,13 @@ pub async fn update_collection(
     Path(name): Path<String>,
     Json(req): Json<UpdateCollectionRequest>,
 ) -> std::result::Result<Json<Collection>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    let claims = extract_claims(&headers)?;
     let conn = state
         .db
         .get()
         .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
+    rbac::require_role(&conn, &claims.user_id, &name, "admin")?;
     let c = db::update_collection(&conn, &name, req.schema.as_deref())?;
     Ok(Json(c))
 }
@@ -248,13 +259,13 @@ pub async fn create_record(
     Path(name): Path<String>,
     Json(req): Json<CreateRecordRequest>,
 ) -> std::result::Result<Json<Record>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    let claims = extract_claims(&headers)?;
     let conn = state
         .db
         .get()
         .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
+    rbac::require_role(&conn, &claims.user_id, &name, "editor")?;
     let existing = db::get_collection(&conn, &name)?;
     if existing.is_none() {
         return Err(AppError::NotFound("collection not found".into()));
@@ -279,13 +290,13 @@ pub async fn list_records(
     Path(name): Path<String>,
     Query(params): Query<RecordListParams>,
 ) -> std::result::Result<Json<RecordsPage>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    let claims = extract_claims(&headers)?;
     let conn = state
         .db
         .get()
         .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
+    rbac::require_role(&conn, &claims.user_id, &name, "viewer")?;
     let existing = db::get_collection(&conn, &name)?;
     if existing.is_none() {
         return Err(AppError::NotFound("collection not found".into()));
@@ -302,13 +313,13 @@ pub async fn get_record(
     State(state): State<std::sync::Arc<AppState>>,
     Path((name, id)): Path<(String, String)>,
 ) -> std::result::Result<Json<Record>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    let claims = extract_claims(&headers)?;
     let conn = state
         .db
         .get()
         .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
+    rbac::require_role(&conn, &claims.user_id, &name, "viewer")?;
     let rec =
         db::get_record(&conn, &name, &id)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
     Ok(Json(rec))
@@ -320,13 +331,13 @@ pub async fn update_record(
     Path((name, id)): Path<(String, String)>,
     Json(req): Json<UpdateRecordRequest>,
 ) -> std::result::Result<Json<Record>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    let claims = extract_claims(&headers)?;
     let conn = state
         .db
         .get()
         .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
+    rbac::require_role(&conn, &claims.user_id, &name, "editor")?;
     let existing = db::get_collection(&conn, &name)?;
     if existing.is_none() {
         return Err(AppError::NotFound("collection not found".into()));
@@ -347,13 +358,13 @@ pub async fn delete_record(
     State(state): State<std::sync::Arc<AppState>>,
     Path((name, id)): Path<(String, String)>,
 ) -> std::result::Result<StatusCode, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    let claims = extract_claims(&headers)?;
     let conn = state
         .db
         .get()
         .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
+    rbac::require_role(&conn, &claims.user_id, &name, "admin")?;
     let existing = db::get_record(&conn, &name, &id)?;
     if existing.is_none() {
         return Err(AppError::NotFound("not found".into()));
@@ -372,8 +383,7 @@ pub async fn list_buckets(
     headers: HeaderMap,
     State(state): State<std::sync::Arc<AppState>>,
 ) -> std::result::Result<Json<Vec<Bucket>>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -388,8 +398,7 @@ pub async fn create_bucket(
     State(state): State<std::sync::Arc<AppState>>,
     Json(req): Json<CreateBucketRequest>,
 ) -> std::result::Result<Json<Bucket>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     if req.name.is_empty() {
         return Err(AppError::BadRequest("name is required".into()));
     }
@@ -415,8 +424,7 @@ pub async fn get_bucket(
     State(state): State<std::sync::Arc<AppState>>,
     Path(name): Path<String>,
 ) -> std::result::Result<Json<Bucket>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -432,8 +440,7 @@ pub async fn delete_bucket(
     State(state): State<std::sync::Arc<AppState>>,
     Path(name): Path<String>,
 ) -> std::result::Result<StatusCode, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -464,8 +471,7 @@ pub async fn upload_file(
     Path(bucket): Path<String>,
     req: axum::extract::Request,
 ) -> std::result::Result<Json<FileRecord>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
 
     let content_type = headers
         .get(axum::http::header::CONTENT_TYPE)
@@ -554,8 +560,7 @@ pub async fn list_files(
     Path(bucket): Path<String>,
     Query(params): Query<PaginationParams>,
 ) -> std::result::Result<Json<FilesPage>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -576,8 +581,7 @@ pub async fn download_file(
     State(state): State<std::sync::Arc<AppState>>,
     Path((bucket, file_id)): Path<(String, String)>,
 ) -> std::result::Result<axum::response::Response<Body>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
 
     let f = {
         let conn = state
@@ -619,8 +623,7 @@ pub async fn delete_file(
     State(state): State<std::sync::Arc<AppState>>,
     Path((bucket, file_id)): Path<(String, String)>,
 ) -> std::result::Result<StatusCode, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -648,8 +651,7 @@ pub async fn get_thumbnail(
     State(state): State<std::sync::Arc<AppState>>,
     Path((bucket, file_id)): Path<(String, String)>,
 ) -> std::result::Result<axum::response::Response<Body>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let f = {
         let conn = state
             .db
@@ -684,8 +686,7 @@ pub async fn list_webhooks(
     headers: HeaderMap,
     State(state): State<std::sync::Arc<AppState>>,
 ) -> std::result::Result<Json<Vec<Webhook>>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -700,8 +701,7 @@ pub async fn create_webhook(
     State(state): State<std::sync::Arc<AppState>>,
     Json(req): Json<CreateWebhookRequest>,
 ) -> std::result::Result<Json<Webhook>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     if req.name.is_empty() {
         return Err(AppError::BadRequest("name is required".into()));
     }
@@ -731,8 +731,7 @@ pub async fn get_webhook(
     State(state): State<std::sync::Arc<AppState>>,
     Path(id): Path<String>,
 ) -> std::result::Result<Json<Webhook>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -748,8 +747,7 @@ pub async fn update_webhook(
     Path(id): Path<String>,
     Json(req): Json<UpdateWebhookRequest>,
 ) -> std::result::Result<Json<Webhook>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -777,8 +775,7 @@ pub async fn delete_webhook(
     State(state): State<std::sync::Arc<AppState>>,
     Path(id): Path<String>,
 ) -> std::result::Result<StatusCode, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -797,8 +794,7 @@ pub async fn list_webhook_logs(
     State(state): State<std::sync::Arc<AppState>>,
     Path(id): Path<String>,
 ) -> std::result::Result<Json<Vec<WebhookLog>>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -827,8 +823,7 @@ pub async fn list_secrets(
     headers: HeaderMap,
     State(state): State<std::sync::Arc<AppState>>,
 ) -> std::result::Result<Json<Vec<SecretListItem>>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -853,8 +848,7 @@ pub async fn create_secret(
     State(state): State<std::sync::Arc<AppState>>,
     Json(req): Json<CreateSecretRequest>,
 ) -> std::result::Result<(StatusCode, Json<Secret>), AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     if req.name.is_empty() {
         return Err(AppError::BadRequest("name is required".into()));
     }
@@ -885,8 +879,7 @@ pub async fn get_secret(
     State(state): State<std::sync::Arc<AppState>>,
     Path(id): Path<String>,
 ) -> std::result::Result<Json<Secret>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -905,8 +898,7 @@ pub async fn update_secret(
     Path(id): Path<String>,
     Json(req): Json<UpdateSecretRequest>,
 ) -> std::result::Result<Json<Secret>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -937,8 +929,7 @@ pub async fn delete_secret(
     State(state): State<std::sync::Arc<AppState>>,
     Path(id): Path<String>,
 ) -> std::result::Result<StatusCode, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -963,8 +954,7 @@ pub async fn list_ws_connections(
     headers: HeaderMap,
     State(state): State<std::sync::Arc<AppState>>,
 ) -> std::result::Result<Json<Vec<WSConnection>>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -979,8 +969,7 @@ pub async fn get_ws_connection(
     State(state): State<std::sync::Arc<AppState>>,
     Path(id): Path<String>,
 ) -> std::result::Result<Json<WSConnection>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -996,8 +985,7 @@ pub async fn delete_ws_connection(
     State(state): State<std::sync::Arc<AppState>>,
     Path(id): Path<String>,
 ) -> std::result::Result<StatusCode, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let _ = websocket::close_client(&state.ws_hub, &id).await;
     let conn = state
         .db
@@ -1017,8 +1005,7 @@ pub async fn broadcast_ws_message(
     State(state): State<std::sync::Arc<AppState>>,
     Json(req): Json<WSSendRequest>,
 ) -> std::result::Result<Json<Value>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let content = req.content;
 
     let ids: Vec<String> = {
@@ -1049,8 +1036,7 @@ pub async fn send_ws_message(
     Path(id): Path<String>,
     Json(req): Json<WSSendRequest>,
 ) -> std::result::Result<Json<Value>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let content = req.content;
 
     let sent =
@@ -1071,8 +1057,7 @@ pub async fn list_ws_messages(
     State(state): State<std::sync::Arc<AppState>>,
     Path(id): Path<String>,
 ) -> std::result::Result<Json<Vec<WSMessage>>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -1090,8 +1075,7 @@ pub async fn list_all_ws_messages(
     headers: HeaderMap,
     State(state): State<std::sync::Arc<AppState>>,
 ) -> std::result::Result<Json<Vec<WSMessage>>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -1107,8 +1091,7 @@ pub async fn list_cache(
     headers: HeaderMap,
     State(state): State<std::sync::Arc<AppState>>,
 ) -> std::result::Result<Json<Vec<CacheEntry>>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     Ok(Json(state.cache.list()))
 }
 
@@ -1117,8 +1100,7 @@ pub async fn set_cache(
     State(state): State<std::sync::Arc<AppState>>,
     Json(req): Json<SetCacheRequest>,
 ) -> std::result::Result<Json<CacheEntry>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     if req.key.is_empty() || req.value.is_empty() {
         return Err(AppError::BadRequest("key and value are required".into()));
     }
@@ -1137,8 +1119,7 @@ pub async fn get_cache(
     State(state): State<std::sync::Arc<AppState>>,
     Path(key): Path<String>,
 ) -> std::result::Result<Json<CacheEntry>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -1156,8 +1137,7 @@ pub async fn delete_cache(
     State(state): State<std::sync::Arc<AppState>>,
     Path(key): Path<String>,
 ) -> std::result::Result<StatusCode, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -1174,8 +1154,7 @@ pub async fn flush_cache(
     headers: HeaderMap,
     State(state): State<std::sync::Arc<AppState>>,
 ) -> std::result::Result<Json<Value>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -1189,8 +1168,7 @@ pub async fn get_cache_stats(
     headers: HeaderMap,
     State(state): State<std::sync::Arc<AppState>>,
 ) -> std::result::Result<Json<Value>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     Ok(Json(state.cache.stats()))
 }
 
@@ -1198,8 +1176,7 @@ pub async fn handle_notifications_list(
     headers: HeaderMap,
     State(state): State<std::sync::Arc<AppState>>,
 ) -> std::result::Result<Json<Vec<Notification>>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -1214,8 +1191,7 @@ pub async fn handle_notifications_create(
     State(state): State<std::sync::Arc<AppState>>,
     Json(req): Json<CreateNotificationRequest>,
 ) -> std::result::Result<Json<Notification>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
 
     if req.title.is_empty() {
         return Err(AppError::BadRequest("title is required".into()));
@@ -1257,8 +1233,7 @@ pub async fn handle_notifications_get(
     State(state): State<std::sync::Arc<AppState>>,
     Path(id): Path<String>,
 ) -> std::result::Result<Json<Notification>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -1274,8 +1249,7 @@ pub async fn handle_notifications_mark_read(
     State(state): State<std::sync::Arc<AppState>>,
     Path(id): Path<String>,
 ) -> std::result::Result<Json<Notification>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -1290,8 +1264,7 @@ pub async fn handle_notifications_delete(
     State(state): State<std::sync::Arc<AppState>>,
     Path(id): Path<String>,
 ) -> std::result::Result<StatusCode, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -1308,8 +1281,7 @@ pub async fn handle_notifications_clear(
     headers: HeaderMap,
     State(state): State<std::sync::Arc<AppState>>,
 ) -> std::result::Result<Json<Value>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -1323,8 +1295,7 @@ pub async fn handle_logs_list(
     headers: HeaderMap,
     State(state): State<std::sync::Arc<AppState>>,
 ) -> std::result::Result<Json<Vec<LogEntry>>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -1339,8 +1310,7 @@ pub async fn handle_logs_create(
     State(state): State<std::sync::Arc<AppState>>,
     Json(req): Json<CreateLogRequest>,
 ) -> std::result::Result<Json<LogEntry>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
 
     if req.message.is_empty() {
         return Err(AppError::BadRequest("message is required".into()));
@@ -1386,8 +1356,7 @@ pub async fn handle_logs_clear(
     headers: HeaderMap,
     State(state): State<std::sync::Arc<AppState>>,
 ) -> std::result::Result<Json<Value>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -1403,8 +1372,7 @@ pub async fn handle_pubsub_topics_list(
     headers: HeaderMap,
     State(state): State<std::sync::Arc<AppState>>,
 ) -> std::result::Result<Json<Vec<PubSubTopic>>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -1419,8 +1387,7 @@ pub async fn handle_pubsub_topics_create(
     State(state): State<std::sync::Arc<AppState>>,
     Json(req): Json<CreatePubSubTopicRequest>,
 ) -> std::result::Result<(StatusCode, Json<PubSubTopic>), AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     if req.name.is_empty() {
         return Err(AppError::BadRequest("name is required".into()));
     }
@@ -1457,8 +1424,7 @@ pub async fn handle_pubsub_topics_get(
     State(state): State<std::sync::Arc<AppState>>,
     Path(name): Path<String>,
 ) -> std::result::Result<Json<PubSubTopic>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -1474,8 +1440,7 @@ pub async fn handle_pubsub_topics_delete(
     State(state): State<std::sync::Arc<AppState>>,
     Path(name): Path<String>,
 ) -> std::result::Result<StatusCode, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let existing = {
         let conn = state
             .db
@@ -1510,8 +1475,7 @@ pub async fn handle_pubsub_messages_list(
     State(state): State<std::sync::Arc<AppState>>,
     Path(name): Path<String>,
 ) -> std::result::Result<Json<Vec<PubSubMessage>>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let (topic_id,) = {
         let conn = state
             .db
@@ -1539,8 +1503,7 @@ pub async fn handle_pubsub_messages_create(
     Path(name): Path<String>,
     Json(req): Json<CreatePubSubMessageRequest>,
 ) -> std::result::Result<(StatusCode, Json<PubSubMessage>), AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     if req.body.is_empty() {
         return Err(AppError::BadRequest("body is required".into()));
     }
@@ -1577,8 +1540,7 @@ pub async fn list_cron_jobs(
     headers: HeaderMap,
     State(state): State<std::sync::Arc<AppState>>,
 ) -> std::result::Result<Json<Vec<CronJob>>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -1593,8 +1555,7 @@ pub async fn create_cron_job(
     State(state): State<std::sync::Arc<AppState>>,
     Json(req): Json<CreateCronJobRequest>,
 ) -> std::result::Result<(StatusCode, Json<CronJob>), AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     if req.name.is_empty() {
         return Err(AppError::BadRequest("name is required".into()));
     }
@@ -1629,8 +1590,7 @@ pub async fn get_cron_job(
     State(state): State<std::sync::Arc<AppState>>,
     Path(id): Path<String>,
 ) -> std::result::Result<Json<CronJob>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -1646,8 +1606,7 @@ pub async fn update_cron_job(
     Path(id): Path<String>,
     Json(req): Json<UpdateCronJobRequest>,
 ) -> std::result::Result<Json<CronJob>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -1677,8 +1636,7 @@ pub async fn delete_cron_job(
     State(state): State<std::sync::Arc<AppState>>,
     Path(id): Path<String>,
 ) -> std::result::Result<StatusCode, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()
@@ -1703,8 +1661,7 @@ pub async fn run_cron_job(
     State(state): State<std::sync::Arc<AppState>>,
     Path(id): Path<String>,
 ) -> std::result::Result<Json<Value>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let job = {
         let conn = state
             .db
@@ -1722,8 +1679,7 @@ pub async fn list_cron_job_logs(
     State(state): State<std::sync::Arc<AppState>>,
     Path(id): Path<String>,
 ) -> std::result::Result<Json<Vec<CronJobLog>>, AppError> {
-    let _token = extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    extract_claims(&headers)?;
     let conn = state
         .db
         .get()

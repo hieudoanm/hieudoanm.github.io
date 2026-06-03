@@ -1,0 +1,165 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`CalculatorModal should render 1`] = `
+<div>
+  <dialog
+    class="modal modal-open"
+    open=""
+    style="background: rgba(0, 0, 0, 0.6);"
+  >
+    <div
+      class="card bg-base-100 border-base-300 w-full max-w-sm border shadow-2xl"
+    >
+      <div
+        class="card-body gap-5 p-6"
+      >
+        <div
+          class="flex items-start justify-between"
+        >
+          <div>
+            <h2
+              class="text-lg font-black tracking-tight"
+            >
+              Calculator
+            </h2>
+          </div>
+          <button
+            class="btn btn-ghost btn-xs btn-square text-base opacity-60 hover:opacity-100"
+          >
+            ✕
+          </button>
+        </div>
+        <div
+          class="outline-none"
+          tabindex="0"
+        >
+          <input
+            class="input input-bordered mb-3 w-full text-right font-mono text-lg "
+            placeholder="0"
+            readonly=""
+            type="text"
+            value=""
+          />
+          <button
+            class="btn btn-accent btn-sm mb-3 w-full"
+          >
+            Scientific Mode
+          </button>
+          <div
+            class="grid grid-cols-4 gap-2"
+          >
+            <button
+              class="btn btn-sm"
+            >
+              7
+            </button>
+            <button
+              class="btn btn-sm"
+            >
+              8
+            </button>
+            <button
+              class="btn btn-sm"
+            >
+              9
+            </button>
+            <button
+              class="btn btn-sm"
+            >
+              ÷
+            </button>
+            <button
+              class="btn btn-sm"
+            >
+              4
+            </button>
+            <button
+              class="btn btn-sm"
+            >
+              5
+            </button>
+            <button
+              class="btn btn-sm"
+            >
+              6
+            </button>
+            <button
+              class="btn btn-sm"
+            >
+              ×
+            </button>
+            <button
+              class="btn btn-sm"
+            >
+              1
+            </button>
+            <button
+              class="btn btn-sm"
+            >
+              2
+            </button>
+            <button
+              class="btn btn-sm"
+            >
+              3
+            </button>
+            <button
+              class="btn btn-sm"
+            >
+              -
+            </button>
+            <button
+              class="btn btn-sm"
+            >
+              0
+            </button>
+            <button
+              class="btn btn-sm"
+            >
+              .
+            </button>
+            <button
+              class="btn btn-sm"
+            >
+              %
+            </button>
+            <button
+              class="btn btn-sm"
+            >
+              +
+            </button>
+            <button
+              class="btn btn-warning btn-sm col-span-2"
+            >
+              Delete
+            </button>
+            <button
+              class="btn btn-error btn-sm"
+            >
+              C
+            </button>
+            <button
+              class="btn btn-primary btn-sm"
+            >
+              =
+            </button>
+          </div>
+          <p
+            class="mt-3 text-center text-xs opacity-40"
+          >
+            Type directly · Enter = · Backspace del · Esc close
+          </p>
+        </div>
+      </div>
+    </div>
+    <form
+      class="modal-backdrop"
+      method="dialog"
+    >
+      <button>
+        close
+      </button>
+    </form>
+  </dialog>
+</div>
+`;

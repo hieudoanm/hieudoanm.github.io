@@ -5,11 +5,9 @@ use axum::{
 };
 use rusqlite::{Connection, params};
 
-use crate::auth;
 use crate::handlers::AppState;
 use crate::models::*;
 
-#[allow(dead_code)]
 pub fn require_role(conn: &Connection, user_id: &str, collection: &str, required: &str) -> std::result::Result<(), AppError> {
     let mut stmt = conn
         .prepare("SELECT role FROM _permissions WHERE user_id = ?1 AND (collection = ?2 OR collection = '*')")
@@ -46,8 +44,7 @@ pub async fn handle_list_permissions(
     headers: HeaderMap,
     State(state): State<std::sync::Arc<AppState>>,
 ) -> std::result::Result<Json<Vec<Permission>>, AppError> {
-    let _token = crate::handlers::extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    crate::handlers::extract_claims(&headers)?;
     let conn = state.db.get().await.map_err(|e| AppError::Internal(e.to_string()))?;
     let mut stmt = conn
         .prepare("SELECT id, user_id, collection, role, created_at, updated_at FROM _permissions ORDER BY collection")
@@ -76,8 +73,7 @@ pub async fn handle_create_permission(
     State(state): State<std::sync::Arc<AppState>>,
     Json(req): Json<PermissionRequest>,
 ) -> std::result::Result<(StatusCode, Json<Permission>), AppError> {
-    let _token = crate::handlers::extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    crate::handlers::extract_claims(&headers)?;
     if req.user_id.is_empty() || req.collection.is_empty() || req.role.is_empty() {
         return Err(AppError::BadRequest("user_id, collection, and role are required".into()));
     }
@@ -100,8 +96,7 @@ pub async fn handle_delete_permission(
     State(state): State<std::sync::Arc<AppState>>,
     Path(id): Path<String>,
 ) -> std::result::Result<StatusCode, AppError> {
-    let _token = crate::handlers::extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    crate::handlers::extract_claims(&headers)?;
     let conn = state.db.get().await.map_err(|e| AppError::Internal(e.to_string()))?;
     let n = conn
         .execute("DELETE FROM _permissions WHERE id = ?1", params![id])

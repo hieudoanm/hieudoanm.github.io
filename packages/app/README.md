@@ -18,7 +18,7 @@
 | 05  | DevTools  | Test            | Unit           | [Jest][jest]                     |                                 |
 | 06  | DevTools  | Test            | E2E            | [Playwright][playwright]         |                                 |
 | 07  | Front-end | Framework       | Web            | [Next.js][nextjs]                | [Solid.js][solidjs]             |
-| 08  | Front-end | Framework       | Mobile         | [Capacitor][capacitor]           | [Expo][expo]                    |
+| 08  | Front-end | Framework       | Mobile         | [Expo][expo]                     | [Capacitor][capacitor]          |
 | 09  | Front-end | Framework       | Desktop        | [Tauri][tauri]                   | [Electron][electron]            |
 | 10  | Front-end | CSS             | CSS Utilities  | [Tailwind CSS][tailwind-css]     |                                 |
 | 11  | Front-end | CSS             | CSS Components | [DaisyUI][daisyui]               |                                 |

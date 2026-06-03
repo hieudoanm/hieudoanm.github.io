@@ -8,7 +8,6 @@ use axum::{
 use serde::{Deserialize, Serialize};
 use serde_json::Value;
 
-use crate::auth;
 use crate::db;
 use crate::handlers::AppState;
 use crate::models::*;
@@ -30,8 +29,7 @@ pub async fn handle_export(
     headers: HeaderMap,
     State(state): State<std::sync::Arc<AppState>>,
 ) -> std::result::Result<Json<ExportData>, AppError> {
-    let _token = crate::handlers::extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    crate::handlers::extract_claims(&headers)?;
     let conn = state.db.get().await.map_err(|e| AppError::Internal(e.to_string()))?;
 
     let collections = db::list_collections(&conn)?;
@@ -60,8 +58,7 @@ pub async fn handle_import(
     Query(query): Query<ImportQuery>,
     Json(data): Json<ExportData>,
 ) -> std::result::Result<Json<Value>, AppError> {
-    let _token = crate::handlers::extract_token(&headers)?;
-    auth::validate_token(&_token)?;
+    crate::handlers::extract_claims(&headers)?;
     let skip_existing = query.skip_existing.unwrap_or(false);
     let conn = state.db.get().await.map_err(|e| AppError::Internal(e.to_string()))?;
 

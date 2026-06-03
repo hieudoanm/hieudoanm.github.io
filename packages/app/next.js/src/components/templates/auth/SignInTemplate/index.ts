@@ -1,1 +1,0 @@
-export { SignInTemplate } from './SignInTemplate';

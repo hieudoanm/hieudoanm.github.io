@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`TagBadge to match snapshot 1`] = `
+<div>
+  <span
+    class="badge badge-sm badge-ghost border-base-300 text-base-content/60"
+  >
+    react
+  </span>
+</div>
+`;

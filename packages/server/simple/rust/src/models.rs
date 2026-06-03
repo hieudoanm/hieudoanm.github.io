@@ -10,7 +10,6 @@ pub enum AppError {
     NotFound(String),
     Conflict(String),
     Unauthorized(String),
-    #[allow(dead_code)]
     Forbidden(String),
     Internal(String),
 }
@@ -110,6 +109,7 @@ fn default_data() -> Value {
 
 #[derive(Debug, Deserialize)]
 pub struct UpdateRecordRequest {
+    #[serde(default)]
     pub data: Value,
 }
 

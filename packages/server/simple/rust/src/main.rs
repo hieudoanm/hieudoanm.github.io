@@ -23,13 +23,14 @@ use std::sync::Arc;
 
 use axum::{
     Router,
+    middleware,
     routing::{delete, get, post},
 };
 use handlers::AppState;
 use rust_embed::RustEmbed;
 use std::net::UdpSocket;
 use tower::service_fn;
-use tower_http::cors::CorsLayer;
+use tower_http::{cors::CorsLayer, limit::RequestBodyLimitLayer};
 
 #[derive(RustEmbed)]
 #[folder = "public/"]
@@ -192,7 +193,10 @@ fn app(state: Arc<AppState>) -> Router {
         .route("/api/import", post(crate::import_export::handle_import))
         .route("/api/permissions", get(crate::rbac::handle_list_permissions).post(crate::rbac::handle_create_permission))
         .route("/api/permissions/{id}", delete(crate::rbac::handle_delete_permission))
-        .route("/api/buckets/{name}/files/{id}/thumb", get(handlers::get_thumbnail));
+        .route("/api/buckets/{name}/files/{id}/thumb", get(handlers::get_thumbnail))
+        .layer(middleware::from_fn_with_state(state.clone(), rate_limit::rate_limit_middleware))
+        .layer(middleware::from_fn(content_type::require_json_content_type))
+        .layer(RequestBodyLimitLayer::new(10 * 1024 * 1024));
 
     Router::new()
         .merge(api)
@@ -225,8 +229,28 @@ fn app(state: Arc<AppState>) -> Router {
             get(crate::pubsub::handle_pubsub_stream),
         )
         .layer(CorsLayer::permissive())
+        .layer(middleware::from_fn(log_request))
         .fallback_service(service_fn(embedded_handler))
         .with_state(state)
+}
+
+async fn log_request(
+    request: axum::http::Request<axum::body::Body>,
+    next: middleware::Next,
+) -> impl axum::response::IntoResponse {
+    let method = request.method().clone();
+    let uri = request.uri().to_string();
+    let remote = request
+        .headers()
+        .get("x-forwarded-for")
+        .and_then(|v| v.to_str().ok())
+        .unwrap_or("unknown")
+        .to_string();
+    let start = std::time::Instant::now();
+    let response = next.run(request).await;
+    let duration = start.elapsed();
+    println!("{method} {uri} {remote} {:?}", duration);
+    response
 }
 
 #[tokio::main]
@@ -254,6 +278,7 @@ async fn main() {
     let sse_hub = notification::new_sse_hub();
     let log_hub = crate::log::new_log_hub();
     let pubsub_hub = pubsub::new_pubsub_hub();
+    let rate_limiter = std::sync::Arc::new(rate_limit::RateLimiter::new(200.0, 100.0));
     let state = Arc::new(AppState {
         db: pool,
         storage_dir: db::data_dir(),
@@ -264,9 +289,20 @@ async fn main() {
         sse_hub,
         log_hub,
         pubsub_hub,
+        rate_limiter,
     });
 
     cronjobs::start_cron_scheduler(state.clone()).await;
+
+    {
+        let rate_limiter = state.rate_limiter.clone();
+        tokio::spawn(async move {
+            loop {
+                tokio::time::sleep(std::time::Duration::from_secs(60)).await;
+                rate_limiter.cleanup();
+            }
+        });
+    }
 
     let port = std::env::var("PORT").unwrap_or_else(|_| "8080".to_string());
     let addr = format!("0.0.0.0:{port}");
@@ -289,10 +325,13 @@ async fn main() {
     println!("  └─────────────────────────────────────────────┘");
     println!();
 
-    axum::serve(listener, app(state))
-        .with_graceful_shutdown(shutdown_signal())
-        .await
-        .expect("server error");
+    axum::serve(
+        listener,
+        app(state).into_make_service_with_connect_info::<std::net::SocketAddr>(),
+    )
+    .with_graceful_shutdown(shutdown_signal())
+    .await
+    .expect("server error");
 }
 
 async fn shutdown_signal() {
@@ -325,6 +364,10 @@ mod tests {
     use tower::ServiceExt;
 
     async fn test_app() -> Router {
+        test_app_with_state().await.0
+    }
+
+    async fn test_app_with_state() -> (Router, Arc<AppState>) {
         let tmp_dir =
             std::env::temp_dir().join(format!("simple-test-{}", uuid::Uuid::new_v4()));
         std::fs::create_dir_all(&tmp_dir).ok();
@@ -342,6 +385,7 @@ mod tests {
         let sse_hub = notification::new_sse_hub();
         let log_hub = crate::log::new_log_hub();
         let pubsub_hub = pubsub::new_pubsub_hub();
+        let rate_limiter = std::sync::Arc::new(rate_limit::RateLimiter::new(200.0, 100.0));
         let state = Arc::new(AppState {
             db: pool,
             storage_dir: tmp_dir,
@@ -352,8 +396,9 @@ mod tests {
             sse_hub,
             log_hub,
             pubsub_hub,
+            rate_limiter,
         });
-        app(state)
+        (app(state.clone()), state)
     }
 
     async fn post_json(app: &Router, path: &str, body: Value) -> (StatusCode, Value) {
@@ -425,6 +470,25 @@ mod tests {
         resp["token"].as_str().unwrap_or("").to_string()
     }
 
+    async fn register_admin(app: &Router, state: &Arc<AppState>) -> String {
+        let body = serde_json::json!({"email": "admin@test.com", "password": "admin123"});
+        let (_, resp) = post_json(app, "/api/auth/register", body).await;
+        assert!(resp["email"].as_str().unwrap_or("").len() > 0, "register should succeed");
+
+        let body = serde_json::json!({"email": "admin@test.com", "password": "admin123"});
+        let (_, resp) = post_json(app, "/api/auth/login", body).await;
+        let token = resp["token"].as_str().unwrap_or("").to_string();
+        let user_id = resp["user"]["id"].as_str().unwrap_or("").to_string();
+
+        let conn = state.db.get().await.unwrap();
+        conn.execute(
+            "INSERT OR IGNORE INTO _permissions (id, user_id, collection, role) VALUES (?1, ?2, ?3, ?4)",
+            rusqlite::params![uuid::Uuid::new_v4().to_string(), user_id, "*", "admin"],
+        ).ok();
+
+        token
+    }
+
     #[tokio::test]
     async fn test_health() {
         let app = test_app().await;
@@ -457,8 +521,8 @@ mod tests {
 
     #[tokio::test]
     async fn test_collection_crud() {
-        let app = test_app().await;
-        let token = register_token(&app).await;
+        let (app, state) = test_app_with_state().await;
+        let token = register_admin(&app, &state).await;
 
         let body = serde_json::json!({"name": "posts", "schema": "{\"title\":\"string\"}"});
         let (status, _) = request(&app, "POST", "/api/collections", Some(&token), Some(body)).await;
@@ -484,8 +548,8 @@ mod tests {
 
     #[tokio::test]
     async fn test_record_crud() {
-        let app = test_app().await;
-        let token = register_token(&app).await;
+        let (app, state) = test_app_with_state().await;
+        let token = register_admin(&app, &state).await;
 
         let body = serde_json::json!({"name": "items"});
         let (status, _) = request(&app, "POST", "/api/collections", Some(&token), Some(body)).await;
@@ -593,8 +657,8 @@ mod tests {
 
     #[tokio::test]
     async fn test_collection_not_found() {
-        let app = test_app().await;
-        let token = register_token(&app).await;
+        let (app, state) = test_app_with_state().await;
+        let token = register_admin(&app, &state).await;
 
         let (status, _) = request(
             &app,
@@ -963,8 +1027,8 @@ mod tests {
 
     #[tokio::test]
     async fn test_webhook_events_dispatch_on_record_create() {
-        let app = test_app().await;
-        let token = register_token(&app).await;
+        let (app, state) = test_app_with_state().await;
+        let token = register_admin(&app, &state).await;
 
         // Use a test HTTP server to verify webhook delivery
         use std::sync::Arc as StdArc;
@@ -1720,5 +1784,445 @@ mod tests {
         )
         .await;
         assert_eq!(status, StatusCode::NOT_FOUND);
+    }
+
+    #[tokio::test]
+    async fn test_login_invalid_credentials() {
+        let app = test_app().await;
+        let body = serde_json::json!({"email": "user@test.com", "password": "password123"});
+        post_json(&app, "/api/auth/register", body).await;
+        let body = serde_json::json!({"email": "user@test.com", "password": "wrongpassword"});
+        let (status, _) = post_json(&app, "/api/auth/login", body).await;
+        assert_eq!(status, StatusCode::UNAUTHORIZED);
+    }
+
+    #[tokio::test]
+    async fn test_websocket_crud() {
+        let app = test_app().await;
+        let token = register_token(&app).await;
+        let (status, value) = get_json(&app, "/api/websockets", Some(&token)).await;
+        assert_eq!(status, StatusCode::OK);
+        assert!(value.as_array().unwrap().is_empty());
+        let (status, _) = get_json(&app, "/api/websockets/messages", Some(&token)).await;
+        assert_eq!(status, StatusCode::OK);
+    }
+
+    #[tokio::test]
+    async fn test_websocket_broadcast() {
+        let app = test_app().await;
+        let token = register_token(&app).await;
+        let body = serde_json::json!({"content": "hello all"});
+        let (status, value) = request(&app, "POST", "/api/websockets/broadcast", Some(&token), Some(body)).await;
+        assert_eq!(status, StatusCode::OK);
+        assert!(value.get("sent").is_some());
+        let (status, value) = get_json(&app, "/api/websockets/messages", Some(&token)).await;
+        assert_eq!(status, StatusCode::OK);
+    }
+
+    #[tokio::test]
+    async fn test_websocket_not_found() {
+        let app = test_app().await;
+        let token = register_token(&app).await;
+        let (status, _) = get_json(&app, "/api/websockets/nonexistent", Some(&token)).await;
+        assert_eq!(status, StatusCode::NOT_FOUND);
+        let (status, _) = request(&app, "DELETE", "/api/websockets/nonexistent", Some(&token), None).await;
+        assert_eq!(status, StatusCode::NOT_FOUND);
+    }
+
+    #[tokio::test]
+    async fn test_websocket_send_not_found() {
+        let app = test_app().await;
+        let token = register_token(&app).await;
+        let body = serde_json::json!({"content": "hello"});
+        let (status, _) = request(&app, "POST", "/api/websockets/nonexistent/send", Some(&token), Some(body)).await;
+        assert_eq!(status, StatusCode::NOT_FOUND);
+    }
+
+    #[tokio::test]
+    async fn test_websocket_messages_list() {
+        let app = test_app().await;
+        let token = register_token(&app).await;
+        let (status, value) = get_json(&app, "/api/websockets/nonexistent/messages", Some(&token)).await;
+        assert_eq!(status, StatusCode::NOT_FOUND);
+    }
+
+    #[tokio::test]
+    async fn test_cache_ttl() {
+        let app = test_app().await;
+        let token = register_token(&app).await;
+        let body = serde_json::json!({"key": "temp", "value": "data", "ttl": 1});
+        let (status, _) = request(&app, "POST", "/api/cache", Some(&token), Some(body)).await;
+        assert_eq!(status, StatusCode::OK);
+        let (status, _) = get_json(&app, "/api/cache/temp", Some(&token)).await;
+        assert_eq!(status, StatusCode::OK);
+        tokio::time::sleep(std::time::Duration::from_millis(1100)).await;
+        let (status, _) = get_json(&app, "/api/cache/temp", Some(&token)).await;
+        assert_eq!(status, StatusCode::NOT_FOUND);
+    }
+
+    #[tokio::test]
+    async fn test_cache_stats() {
+        let app = test_app().await;
+        let token = register_token(&app).await;
+        let (status, value) = get_json(&app, "/api/cache/stats", Some(&token)).await;
+        assert_eq!(status, StatusCode::OK);
+        assert!(value.get("total_entries").is_some());
+        assert!(value.get("expired_entries").is_some());
+        let body = serde_json::json!({"key": "a", "value": "1"});
+        let (status, _) = request(&app, "POST", "/api/cache", Some(&token), Some(body)).await;
+        assert_eq!(status, StatusCode::OK);
+        let (status, value) = get_json(&app, "/api/cache/stats", Some(&token)).await;
+        assert_eq!(status, StatusCode::OK);
+        assert_eq!(value["total_entries"].as_u64(), Some(1));
+    }
+
+    #[tokio::test]
+    async fn test_cache_stats_auth_required() {
+        let app = test_app().await;
+        let (status, _) = get_json(&app, "/api/cache/stats", None).await;
+        assert_eq!(status, StatusCode::UNAUTHORIZED);
+    }
+
+    #[tokio::test]
+    async fn test_webhook_signature() {
+        let (app, state) = test_app_with_state().await;
+        let token = register_admin(&app, &state).await;
+
+        use std::sync::Arc as StdArc;
+        use std::sync::atomic::{AtomicBool, Ordering};
+
+        let got_sig = StdArc::new(AtomicBool::new(false));
+        let got_sig_clone = StdArc::clone(&got_sig);
+
+        let listener = tokio::net::TcpListener::bind("127.0.0.1:0").await.unwrap();
+        let addr = listener.local_addr().unwrap();
+
+        tokio::spawn(async move {
+            let (stream, _) = listener.accept().await.unwrap();
+            let got = StdArc::clone(&got_sig_clone);
+            tokio::spawn(async move {
+                use tokio::io::{AsyncBufReadExt, AsyncWriteExt, BufReader};
+                let (reader, mut writer) = tokio::io::split(stream);
+                let mut buf_reader = BufReader::new(reader);
+                let mut line = String::new();
+                loop {
+                    line.clear();
+                    match buf_reader.read_line(&mut line).await {
+                        Ok(0) => break,
+                        Ok(_) => {
+                            if line.trim().is_empty() { break; }
+                            if line.to_lowercase().starts_with("x-webhook-signature-256") {
+                                got.store(true, Ordering::SeqCst);
+                            }
+                        }
+                        Err(_) => break,
+                    }
+                }
+                let resp = "HTTP/1.1 200 OK\r\nContent-Length: 2\r\n\r\nOK";
+                let _ = writer.write_all(resp.as_bytes()).await;
+            });
+        });
+
+        let wh_body = serde_json::json!({
+            "name": "sig test",
+            "url": format!("http://{addr}/hook"),
+            "events": ["record.create"],
+            "secret": "mysecret"
+        });
+        let (status, _) = request(&app, "POST", "/api/webhooks", Some(&token), Some(wh_body)).await;
+        assert_eq!(status, StatusCode::OK);
+
+        let body = serde_json::json!({"name": "sig_test"});
+        let (status, _) = request(&app, "POST", "/api/collections", Some(&token), Some(body)).await;
+        assert_eq!(status, StatusCode::OK);
+
+        let body = serde_json::json!({"data": {"x": 1}});
+        let (status, _) = request(&app, "POST", "/api/collections/sig_test/records", Some(&token), Some(body)).await;
+        assert_eq!(status, StatusCode::OK);
+
+        tokio::time::sleep(std::time::Duration::from_millis(500)).await;
+        assert!(got_sig.load(Ordering::SeqCst), "should have received signature header");
+    }
+
+    #[tokio::test]
+    async fn test_webhook_no_delivery_on_inactive() {
+        let (app, state) = test_app_with_state().await;
+        let token = register_admin(&app, &state).await;
+
+        use std::sync::Arc as StdArc;
+        use std::sync::atomic::{AtomicUsize, Ordering};
+
+        let received = StdArc::new(AtomicUsize::new(0));
+        let received_clone = StdArc::clone(&received);
+
+        let listener = tokio::net::TcpListener::bind("127.0.0.1:0").await.unwrap();
+        let addr = listener.local_addr().unwrap();
+
+        tokio::spawn(async move {
+            loop {
+                let (stream, _) = listener.accept().await.unwrap();
+                let recv = StdArc::clone(&received_clone);
+                tokio::spawn(async move {
+                    use tokio::io::{AsyncBufReadExt, AsyncWriteExt, BufReader};
+                    let (reader, mut writer) = tokio::io::split(stream);
+                    let mut buf_reader = BufReader::new(reader);
+                    let mut line = String::new();
+                    loop {
+                        line.clear();
+                        match buf_reader.read_line(&mut line).await {
+                            Ok(0) => break,
+                            Ok(_) => { if line.trim().is_empty() { break; } }
+                            Err(_) => break,
+                        }
+                    }
+                    let resp = "HTTP/1.1 200 OK\r\nContent-Length: 2\r\n\r\nOK";
+                    let _ = writer.write_all(resp.as_bytes()).await;
+                    recv.fetch_add(1, Ordering::SeqCst);
+                });
+            }
+        });
+
+        let wh_body = serde_json::json!({
+            "name": "inactive test",
+            "url": format!("http://{addr}/hook"),
+            "events": ["record.create"]
+        });
+        let (status, value) = request(&app, "POST", "/api/webhooks", Some(&token), Some(wh_body)).await;
+        assert_eq!(status, StatusCode::OK);
+        let hook_id = value["id"].as_str().unwrap_or("").to_string();
+
+        let body = serde_json::json!({"is_active": false});
+        let (status, _) = request(&app, "PATCH", &format!("/api/webhooks/{hook_id}"), Some(&token), Some(body)).await;
+        assert_eq!(status, StatusCode::OK);
+
+        let body = serde_json::json!({"name": "inact_test"});
+        let (status, _) = request(&app, "POST", "/api/collections", Some(&token), Some(body)).await;
+        assert_eq!(status, StatusCode::OK);
+
+        let body = serde_json::json!({"data": {"x": 1}});
+        let (status, _) = request(&app, "POST", "/api/collections/inact_test/records", Some(&token), Some(body)).await;
+        assert_eq!(status, StatusCode::OK);
+
+        tokio::time::sleep(std::time::Duration::from_millis(500)).await;
+        assert_eq!(received.load(Ordering::SeqCst), 0, "inactive webhook should not deliver");
+    }
+
+    #[tokio::test]
+    async fn test_webhook_update_not_found() {
+        let app = test_app().await;
+        let token = register_token(&app).await;
+        let body = serde_json::json!({"name": "nope"});
+        let (status, _) = request(&app, "PATCH", "/api/webhooks/nonexistent", Some(&token), Some(body)).await;
+        assert_eq!(status, StatusCode::NOT_FOUND);
+    }
+
+    #[tokio::test]
+    async fn test_webhook_delete_not_found() {
+        let app = test_app().await;
+        let token = register_token(&app).await;
+        let (status, _) = request(&app, "DELETE", "/api/webhooks/nonexistent", Some(&token), None).await;
+        assert_eq!(status, StatusCode::NOT_FOUND);
+    }
+
+    #[tokio::test]
+    async fn test_cron_jobs_run_and_logs() {
+        let (app, state) = test_app_with_state().await;
+        let token = register_admin(&app, &state).await;
+
+        let listener = tokio::net::TcpListener::bind("127.0.0.1:0").await.unwrap();
+        let addr = listener.local_addr().unwrap();
+
+        tokio::spawn(async move {
+            let (stream, _) = listener.accept().await.unwrap();
+            use tokio::io::{AsyncBufReadExt, AsyncWriteExt, BufReader};
+            let (reader, mut writer) = tokio::io::split(stream);
+            let mut buf_reader = BufReader::new(reader);
+            let mut line = String::new();
+            loop {
+                line.clear();
+                if buf_reader.read_line(&mut line).await.unwrap_or(0) == 0 { break; }
+                if line.trim().is_empty() { break; }
+            }
+            let resp = "HTTP/1.1 200 OK\r\nContent-Length: 4\r\n\r\npong";
+            let _ = writer.write_all(resp.as_bytes()).await;
+        });
+
+        let body = serde_json::json!({
+            "name": "test ping",
+            "schedule": "*/5 * * * *",
+            "command": format!("http://{addr}/ping"),
+            "method": "GET"
+        });
+        let (status, value) = request(&app, "POST", "/api/cronjobs", Some(&token), Some(body)).await;
+        assert_eq!(status, StatusCode::CREATED);
+        let id = value["id"].as_str().unwrap_or("").to_string();
+
+        let (status, _) = request(&app, "POST", &format!("/api/cronjobs/{id}/run"), Some(&token), None).await;
+        assert_eq!(status, StatusCode::OK);
+
+        tokio::time::sleep(std::time::Duration::from_millis(500)).await;
+
+        let (status, value) = get_json(&app, &format!("/api/cronjobs/{id}/logs"), Some(&token)).await;
+        assert_eq!(status, StatusCode::OK);
+        let logs = value.as_array().unwrap();
+        assert!(!logs.is_empty());
+        assert_eq!(logs[0]["status"], "success");
+    }
+
+    #[tokio::test]
+    async fn test_notification_get() {
+        let app = test_app().await;
+        let token = register_token(&app).await;
+        let body = serde_json::json!({"title": "Get Me", "body": "Find me", "type": "info"});
+        let (status, value) = request(&app, "POST", "/api/notifications", Some(&token), Some(body)).await;
+        assert_eq!(status, StatusCode::OK);
+        let id = value["id"].as_str().unwrap_or("").to_string();
+
+        let (status, value) = get_json(&app, &format!("/api/notifications/{id}"), Some(&token)).await;
+        assert_eq!(status, StatusCode::OK);
+        assert_eq!(value["title"], "Get Me");
+        assert_eq!(value["body"], "Find me");
+    }
+
+    #[tokio::test]
+    async fn test_notification_get_not_found() {
+        let app = test_app().await;
+        let token = register_token(&app).await;
+        let (status, _) = get_json(&app, "/api/notifications/nonexistent", Some(&token)).await;
+        assert_eq!(status, StatusCode::NOT_FOUND);
+    }
+
+    #[tokio::test]
+    async fn test_notification_auth_required_for_create() {
+        let app = test_app().await;
+        let body = serde_json::json!({"title": "X", "body": "Y", "type": "info"});
+        let (status, _) = post_json(&app, "/api/notifications", body).await;
+        assert_eq!(status, StatusCode::UNAUTHORIZED);
+    }
+
+    #[tokio::test]
+    async fn test_collection_create_missing_name() {
+        let (app, state) = test_app_with_state().await;
+        let token = register_admin(&app, &state).await;
+        let body = serde_json::json!({"name": ""});
+        let (status, _) = request(&app, "POST", "/api/collections", Some(&token), Some(body)).await;
+        assert_eq!(status, StatusCode::BAD_REQUEST);
+    }
+
+    #[tokio::test]
+    async fn test_collection_create_duplicate() {
+        let (app, state) = test_app_with_state().await;
+        let token = register_admin(&app, &state).await;
+        let body = serde_json::json!({"name": "dup"});
+        let (status, _) = request(&app, "POST", "/api/collections", Some(&token), Some(body)).await;
+        assert_eq!(status, StatusCode::OK);
+        let body = serde_json::json!({"name": "dup"});
+        let (status, _) = request(&app, "POST", "/api/collections", Some(&token), Some(body)).await;
+        assert_eq!(status, StatusCode::CONFLICT);
+    }
+
+    #[tokio::test]
+    async fn test_bucket_create_missing_name() {
+        let app = test_app().await;
+        let token = register_token(&app).await;
+        let body = serde_json::json!({"name": ""});
+        let (status, _) = request(&app, "POST", "/api/buckets", Some(&token), Some(body)).await;
+        assert_eq!(status, StatusCode::BAD_REQUEST);
+    }
+
+    #[tokio::test]
+    async fn test_record_create_duplicate_id() {
+        let (app, state) = test_app_with_state().await;
+        let token = register_admin(&app, &state).await;
+        let body = serde_json::json!({"name": "items"});
+        let (status, _) = request(&app, "POST", "/api/collections", Some(&token), Some(body)).await;
+        assert_eq!(status, StatusCode::OK);
+
+        let body = serde_json::json!({"id": "myid", "data": {"x": 1}});
+        let (status, _) = request(&app, "POST", "/api/collections/items/records", Some(&token), Some(body)).await;
+        assert_eq!(status, StatusCode::OK);
+
+        let body = serde_json::json!({"id": "myid", "data": {"x": 2}});
+        let (status, _) = request(&app, "POST", "/api/collections/items/records", Some(&token), Some(body)).await;
+        assert_eq!(status, StatusCode::CONFLICT);
+    }
+
+    #[tokio::test]
+    async fn test_record_update_not_found() {
+        let (app, state) = test_app_with_state().await;
+        let token = register_admin(&app, &state).await;
+        let body = serde_json::json!({"name": "items"});
+        let (status, _) = request(&app, "POST", "/api/collections", Some(&token), Some(body)).await;
+        assert_eq!(status, StatusCode::OK);
+
+        let body = serde_json::json!({"data": {"x": 1}});
+        let (status, _) = request(&app, "PATCH", "/api/collections/items/records/nonexistent", Some(&token), Some(body)).await;
+        assert_eq!(status, StatusCode::NOT_FOUND);
+    }
+
+    #[tokio::test]
+    async fn test_record_update_missing_data() {
+        let (app, state) = test_app_with_state().await;
+        let token = register_admin(&app, &state).await;
+        let body = serde_json::json!({"name": "items"});
+        let (status, _) = request(&app, "POST", "/api/collections", Some(&token), Some(body)).await;
+        assert_eq!(status, StatusCode::OK);
+
+        let body = serde_json::json!({"data": {"x": 1}});
+        let (status, value) = request(&app, "POST", "/api/collections/items/records", Some(&token), Some(body)).await;
+        assert_eq!(status, StatusCode::OK);
+        let id = value["id"].as_str().unwrap_or("").to_string();
+
+        let body = serde_json::json!({});
+        let (status, _) = request(&app, "PATCH", &format!("/api/collections/items/records/{id}"), Some(&token), Some(body)).await;
+        assert_eq!(status, StatusCode::OK);
+    }
+
+    #[tokio::test]
+    async fn test_pubsub_topic_not_found() {
+        let app = test_app().await;
+        let token = register_token(&app).await;
+        let (status, _) = get_json(&app, "/api/pubsub/topics/nonexistent", Some(&token)).await;
+        assert_eq!(status, StatusCode::NOT_FOUND);
+    }
+
+    #[tokio::test]
+    async fn test_permissions_crud() {
+        let (app, state) = test_app_with_state().await;
+        let token = register_admin(&app, &state).await;
+
+        let body = serde_json::json!({"user_id": "user1", "collection": "*", "role": "viewer"});
+        let (status, value) = request(&app, "POST", "/api/permissions", Some(&token), Some(body)).await;
+        assert_eq!(status, StatusCode::CREATED);
+        let perm_id = value["id"].as_str().unwrap_or("").to_string();
+
+        let (status, value) = get_json(&app, "/api/permissions", Some(&token)).await;
+        assert_eq!(status, StatusCode::OK);
+        let perms = value.as_array().unwrap();
+        assert!(!perms.is_empty());
+
+        let (status, _) = request(&app, "DELETE", &format!("/api/permissions/{perm_id}"), Some(&token), None).await;
+        assert_eq!(status, StatusCode::NO_CONTENT);
+    }
+
+    #[tokio::test]
+    async fn test_import_export() {
+        let (app, state) = test_app_with_state().await;
+        let token = register_admin(&app, &state).await;
+
+        let body = serde_json::json!({"name": "export_test"});
+        let (status, _) = request(&app, "POST", "/api/collections", Some(&token), Some(body)).await;
+        assert_eq!(status, StatusCode::OK);
+
+        let body = serde_json::json!({"data": {"val": 1}});
+        let (status, _) = request(&app, "POST", "/api/collections/export_test/records", Some(&token), Some(body)).await;
+        assert_eq!(status, StatusCode::OK);
+
+        let (status, export_data) = get_json(&app, "/api/export", Some(&token)).await;
+        assert_eq!(status, StatusCode::OK);
+        assert!(export_data.get("collections").is_some());
+
+        let (status, _) = request(&app, "POST", "/api/import?skip_existing=true", Some(&token), Some(export_data)).await;
+        assert_eq!(status, StatusCode::OK);
     }
 }

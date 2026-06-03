@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`FigletModal should render 1`] = `
+<div>
+  <dialog
+    class="modal modal-open"
+    open=""
+    style="background: rgba(0, 0, 0, 0.6);"
+  >
+    <div
+      class="card bg-base-100 border-base-300 w-full max-w-2xl border shadow-2xl"
+    >
+      <div
+        class="card-body gap-5 p-6"
+      >
+        <div
+          class="flex items-start justify-between"
+        >
+          <div>
+            <h2
+              class="text-lg font-black tracking-tight"
+            >
+              FIGlet Generator
+            </h2>
+          </div>
+          <button
+            class="btn btn-ghost btn-xs btn-square text-base opacity-60 hover:opacity-100"
+          >
+            ✕
+          </button>
+        </div>
+        <div>
+          <div
+            class="mb-3 flex gap-2"
+          >
+            <input
+              class="input input-bordered flex-1 font-mono"
+              maxlength="20"
+              placeholder="Type something…"
+              type="text"
+              value="Hello, World!"
+            />
+            <select
+              class="select select-bordered"
+            >
+              <option
+                value="Standard"
+              >
+                Standard
+              </option>
+              <option
+                value="Block"
+              >
+                Block
+              </option>
+              <option
+                value="Small"
+              >
+                Small
+              </option>
+              <option
+                value="Banner"
+              >
+                Banner
+              </option>
+            </select>
+          </div>
+          <div
+            class="tabs tabs-boxed mb-4"
+            role="tablist"
+          >
+            <a
+              class="tab tab-active"
+              role="tab"
+            >
+              Standard
+            </a>
+            <a
+              class="tab "
+              role="tab"
+            >
+              Block
+            </a>
+            <a
+              class="tab "
+              role="tab"
+            >
+              Small
+            </a>
+            <a
+              class="tab "
+              role="tab"
+            >
+              Banner
+            </a>
+          </div>
+          <div
+            class="bg-base-200 mb-3 overflow-x-auto rounded-xl p-4"
+          >
+            <pre
+              class="text-base-content/80 font-mono text-xs leading-tight whitespace-pre"
+            >
+              |  ||‾‾|   |    /‾\\      \\    / /‾\\ |\\ |   |\\ |
+|  ||_ |   |   /   \\      \\  / /   \\| \\|   | \\|
+|__||   |   |   |   |       \\/  |   ||__/|   |  \\|
+|  ||   |   |   \\   / ,    /\\  /\\\\   /|\\ |   |  / 
+|  ||__|__|__ \\_ / ,/    /  \\/  \\ \\_ / | \\|__|_/ •
+                                                   
+            </pre>
+          </div>
+          <div
+            class="mb-3 flex items-center justify-between text-xs opacity-40"
+          >
+            <span>
+              13
+              /20 chars · letters, digits, punctuation supported
+            </span>
+            <span>
+              Rendered in 
+              Standard
+            </span>
+          </div>
+          <div
+            class="flex gap-2"
+          >
+            <button
+              class="btn btn-sm flex-1 btn-primary"
+            >
+              📋 Copy ASCII
+            </button>
+            <button
+              class="btn btn-ghost btn-sm"
+            >
+              Clear
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form
+      class="modal-backdrop"
+      method="dialog"
+    >
+      <button>
+        close
+      </button>
+    </form>
+  </dialog>
+</div>
+`;

@@ -1,0 +1,184 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`PokerModal should render 1`] = `
+<div>
+  <dialog
+    class="modal modal-open"
+    open=""
+    style="background: rgba(0, 0, 0, 0.6);"
+  >
+    <div
+      class="card bg-base-100 border-base-300 w-full max-w-sm border shadow-2xl"
+    >
+      <div
+        class="card-body gap-5 p-6"
+      >
+        <div
+          class="flex items-start justify-between"
+        >
+          <div>
+            <h2
+              class="text-lg font-black tracking-tight"
+            >
+              Poker Odds
+            </h2>
+          </div>
+          <button
+            class="btn btn-ghost btn-xs btn-square text-base opacity-60 hover:opacity-100"
+          >
+            ✕
+          </button>
+        </div>
+        <div
+          class="mb-3"
+        >
+          <p
+            class="mb-1 text-xs opacity-50"
+          >
+            Your hand
+          </p>
+          <div
+            class="flex gap-2"
+          >
+            <div
+              class="border-base-300 bg-base-200 hover:border-base-content/30 relative flex h-14 w-10 cursor-pointer items-center justify-center rounded border-2 border-dashed text-center text-xs font-bold transition-colors"
+            >
+              <span
+                class="text-base-content/30 text-lg"
+              >
+                +
+              </span>
+            </div>
+            <div
+              class="border-base-300 bg-base-200 hover:border-base-content/30 relative flex h-14 w-10 cursor-pointer items-center justify-center rounded border-2 border-dashed text-center text-xs font-bold transition-colors"
+            >
+              <span
+                class="text-base-content/30 text-lg"
+              >
+                +
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mb-3"
+        >
+          <p
+            class="mb-1 text-xs opacity-50"
+          >
+            Opponent's hand
+          </p>
+          <div
+            class="flex gap-2"
+          >
+            <div
+              class="border-base-300 bg-base-200 hover:border-base-content/30 relative flex h-14 w-10 cursor-pointer items-center justify-center rounded border-2 border-dashed text-center text-xs font-bold transition-colors"
+            >
+              <span
+                class="text-base-content/30 text-lg"
+              >
+                +
+              </span>
+            </div>
+            <div
+              class="border-base-300 bg-base-200 hover:border-base-content/30 relative flex h-14 w-10 cursor-pointer items-center justify-center rounded border-2 border-dashed text-center text-xs font-bold transition-colors"
+            >
+              <span
+                class="text-base-content/30 text-lg"
+              >
+                +
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mb-4"
+        >
+          <p
+            class="mb-1 flex items-center gap-2 text-xs opacity-50"
+          >
+            Community
+          </p>
+          <div
+            class="flex gap-1.5"
+          >
+            <div
+              class="border-base-300 bg-base-200 hover:border-base-content/30 relative flex h-14 w-10 cursor-pointer items-center justify-center rounded border-2 border-dashed text-center text-xs font-bold transition-colors"
+            >
+              <span
+                class="text-base-content/30 text-lg"
+              >
+                +
+              </span>
+            </div>
+            <div
+              class="border-base-300 bg-base-200 hover:border-base-content/30 relative flex h-14 w-10 cursor-pointer items-center justify-center rounded border-2 border-dashed text-center text-xs font-bold transition-colors"
+            >
+              <span
+                class="text-base-content/30 text-lg"
+              >
+                +
+              </span>
+            </div>
+            <div
+              class="border-base-300 bg-base-200 hover:border-base-content/30 relative flex h-14 w-10 cursor-pointer items-center justify-center rounded border-2 border-dashed text-center text-xs font-bold transition-colors"
+            >
+              <span
+                class="text-base-content/30 text-lg"
+              >
+                +
+              </span>
+            </div>
+            <div
+              class="border-base-300 bg-base-200 hover:border-base-content/30 relative flex h-14 w-10 cursor-pointer items-center justify-center rounded border-2 border-dashed text-center text-xs font-bold transition-colors"
+            >
+              <span
+                class="text-base-content/30 text-lg"
+              >
+                +
+              </span>
+            </div>
+            <div
+              class="border-base-300 bg-base-200 hover:border-base-content/30 relative flex h-14 w-10 cursor-pointer items-center justify-center rounded border-2 border-dashed text-center text-xs font-bold transition-colors"
+            >
+              <span
+                class="text-base-content/30 text-lg"
+              >
+                +
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mb-4 flex gap-2"
+        >
+          <button
+            class="btn btn-primary btn-sm flex-1"
+            disabled=""
+          >
+            Calculate
+          </button>
+          <button
+            class="btn btn-ghost btn-sm"
+          >
+            Reset
+          </button>
+        </div>
+        <p
+          class="text-center text-xs opacity-30"
+        >
+          Add both hole cards for each player
+        </p>
+      </div>
+    </div>
+    <form
+      class="modal-backdrop"
+      method="dialog"
+    >
+      <button>
+        close
+      </button>
+    </form>
+  </dialog>
+</div>
+`;

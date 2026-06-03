@@ -1,0 +1,1 @@
+export { PasswordForgetTemplate } from './PasswordForgetTemplate';

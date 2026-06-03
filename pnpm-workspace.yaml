@@ -9,6 +9,7 @@ allowBuilds:
   core-js: true
   esbuild: true
   keytar: true
+  msgpackr-extract: true
   prisma: true
   protobufjs: true
   sharp: true

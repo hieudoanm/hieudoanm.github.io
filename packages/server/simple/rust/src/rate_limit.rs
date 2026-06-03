@@ -2,20 +2,27 @@ use std::collections::HashMap;
 use std::sync::Mutex;
 use std::time::Instant;
 
-#[allow(dead_code)]
+use axum::{
+    Json,
+    extract::{Request, State},
+    http::StatusCode,
+    middleware::Next,
+    response::{IntoResponse, Response},
+};
+
+use crate::handlers::AppState;
+
 pub struct RateLimiter {
     buckets: Mutex<HashMap<String, TokenBucket>>,
     capacity: f64,
     refill_rate: f64,
 }
 
-#[allow(dead_code)]
 struct TokenBucket {
     tokens: f64,
     last_refill: Instant,
 }
 
-#[allow(dead_code)]
 impl RateLimiter {
     pub fn new(capacity: f64, refill_rate: f64) -> Self {
         Self {
@@ -47,4 +54,30 @@ impl RateLimiter {
         let mut buckets = self.buckets.lock().unwrap();
         buckets.retain(|_, b| b.tokens < self.capacity);
     }
+}
+
+pub async fn rate_limit_middleware(
+    State(state): State<std::sync::Arc<AppState>>,
+    request: Request,
+    next: Next,
+) -> Response {
+    let ip = request
+        .headers()
+        .get("x-forwarded-for")
+        .and_then(|v| v.to_str().ok())
+        .and_then(|v| v.split(',').next())
+        .map(|s| s.trim().to_string())
+        .unwrap_or_else(|| {
+            request
+                .extensions()
+                .get::<axum::extract::connect_info::ConnectInfo<std::net::SocketAddr>>()
+                .map(|ci| ci.0.ip().to_string())
+                .unwrap_or_else(|| "127.0.0.1".to_string())
+        });
+
+    if !state.rate_limiter.check(&ip) {
+        return (StatusCode::TOO_MANY_REQUESTS, Json(serde_json::json!({"error": "rate limit exceeded"}))).into_response();
+    }
+
+    next.run(request).await
 }

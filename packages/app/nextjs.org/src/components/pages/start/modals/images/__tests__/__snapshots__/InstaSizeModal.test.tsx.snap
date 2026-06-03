@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`InstaSizeModal should render 1`] = `
+<div>
+  <dialog
+    class="modal modal-open"
+    open=""
+    style="background: rgba(0, 0, 0, 0.6);"
+  >
+    <div
+      class="modal-box border-base-content/15 flex h-[90vh] w-full max-w-5xl flex-col overflow-hidden border p-0"
+    >
+      <div
+        class="border-base-300 flex items-center justify-between border-b px-4 py-3"
+      >
+        <h3
+          class="text-sm font-bold"
+        >
+          InstaSize
+        </h3>
+        <button
+          class="btn btn-sm btn-circle btn-ghost opacity-60 hover:opacity-100"
+        >
+          ✕
+        </button>
+      </div>
+      <div
+        class="min-h-[400px]"
+      >
+        <div
+          class="cursor-pointer rounded-2xl border-2 border-dashed transition-all duration-200 border-base-300 hover:border-base-400 hover:bg-base-200/50"
+        >
+          <div
+            class="flex flex-col items-center justify-center gap-5 px-8 py-24 select-none"
+          >
+            <div
+              class="flex h-16 w-16 items-center justify-center rounded-2xl transition-colors duration-200 bg-base-200"
+            >
+              <svg
+                class="transition-colors duration-200 text-base-content/40"
+                fill="none"
+                height="28"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                width="28"
+              >
+                <path
+                  d="M4 16l4-4 4 4 4-8 4 8"
+                />
+                <rect
+                  height="18"
+                  rx="2"
+                  width="18"
+                  x="3"
+                  y="3"
+                />
+              </svg>
+            </div>
+            <div
+              class="text-center"
+            >
+              <p
+                class="text-base-content text-lg font-semibold"
+              >
+                Upload an image
+              </p>
+              <p
+                class="text-base-content/50 mt-1 text-sm"
+              >
+                Drag & drop, or click to browse — PNG, JPG, WEBP
+              </p>
+            </div>
+            <button
+              class="btn btn-primary btn-sm pointer-events-none rounded-full px-6"
+            >
+              Choose File
+            </button>
+          </div>
+        </div>
+      </div>
+      <canvas
+        class="hidden"
+      />
+      <input
+        accept="image/*"
+        class="hidden"
+        type="file"
+      />
+    </div>
+    <div
+      class="modal-backdrop"
+    />
+  </dialog>
+</div>
+`;

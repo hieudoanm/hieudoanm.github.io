@@ -1,0 +1,347 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`ProfileTemplate to match snapshot 1`] = `
+<div>
+  <div
+    class="bg-base-100 text-base-content min-h-screen font-sans"
+    data-theme="luxury"
+  >
+    <div
+      class="navbar bg-base-100/85 border-base-300 sticky top-0 z-50 min-h-[60px] border-b px-4 backdrop-blur-xl lg:px-12"
+    >
+      <div
+        class="navbar-start"
+      >
+        <a
+          class="text-primary font-serif text-2xl font-bold tracking-widest"
+          href="/"
+        >
+          Forma
+        </a>
+      </div>
+      <div
+        class="navbar-end"
+      >
+        <a
+          class="btn btn-ghost btn-sm"
+          href="/"
+        >
+          Home
+        </a>
+      </div>
+    </div>
+    <main
+      class="mx-auto max-w-2xl px-4 py-12 lg:px-8"
+    >
+      <div
+        class="mb-10 flex items-center gap-5"
+      >
+        <div
+          class="bg-primary/20 text-primary flex h-16 w-16 items-center justify-center rounded-full text-xl font-bold"
+        >
+          GU
+        </div>
+        <div>
+          <h1
+            class="text-2xl font-bold tracking-tight"
+          >
+            Guest User
+          </h1>
+          <p
+            class="text-base-content/50 text-sm"
+          >
+            guest@example.com
+          </p>
+          <p
+            class="text-base-content/40 mt-0.5 text-xs"
+          >
+            Member since 
+            January 2024
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex flex-col gap-6"
+      >
+        <div
+          class="card bg-base-200 border-base-300 border"
+        >
+          <div
+            class="card-body p-6"
+          >
+            <h2
+              class="mb-1 font-serif text-lg font-bold"
+            >
+              Account settings
+            </h2>
+            <p
+              class="text-base-content/50 mb-5 text-sm leading-relaxed"
+            >
+              Update your name and email address.
+            </p>
+            <div
+              class="mb-4 grid grid-cols-2 gap-4"
+            >
+              <div
+                class="form-control"
+              >
+                <label
+                  class="label"
+                >
+                  <span
+                    class="label-text text-base-content/50 text-xs"
+                  >
+                    Name
+                  </span>
+                </label>
+                <input
+                  class="input input-bordered w-full"
+                  type="text"
+                  value="Guest User"
+                />
+              </div>
+              <div
+                class="form-control"
+              >
+                <label
+                  class="label"
+                >
+                  <span
+                    class="label-text text-base-content/50 text-xs"
+                  >
+                    Email
+                  </span>
+                </label>
+                <input
+                  class="input input-bordered w-full"
+                  type="email"
+                  value="guest@example.com"
+                />
+              </div>
+            </div>
+            <button
+              class="btn btn-primary btn-sm"
+            >
+              Save changes
+            </button>
+          </div>
+        </div>
+        <div
+          class="card bg-base-200 border-base-300 border"
+        >
+          <div
+            class="card-body p-6"
+          >
+            <h2
+              class="mb-1 font-serif text-lg font-bold"
+            >
+              Change password
+            </h2>
+            <p
+              class="text-base-content/50 mb-5 text-sm leading-relaxed"
+            >
+              Set a new password for your account.
+            </p>
+            <div
+              class="mb-4 flex flex-col gap-4"
+            >
+              <div
+                class="form-control"
+              >
+                <label
+                  class="label"
+                >
+                  <span
+                    class="label-text text-base-content/50 text-xs"
+                  >
+                    Current password
+                  </span>
+                </label>
+                <input
+                  class="input input-bordered w-full"
+                  placeholder="••••••••"
+                  type="password"
+                  value=""
+                />
+              </div>
+              <div
+                class="grid grid-cols-2 gap-4"
+              >
+                <div
+                  class="form-control"
+                >
+                  <label
+                    class="label"
+                  >
+                    <span
+                      class="label-text text-base-content/50 text-xs"
+                    >
+                      New password
+                    </span>
+                  </label>
+                  <input
+                    class="input input-bordered w-full"
+                    placeholder="At least 8 characters"
+                    type="password"
+                    value=""
+                  />
+                </div>
+                <div
+                  class="form-control"
+                >
+                  <label
+                    class="label"
+                  >
+                    <span
+                      class="label-text text-base-content/50 text-xs"
+                    >
+                      Confirm
+                    </span>
+                  </label>
+                  <input
+                    class="input input-bordered w-full"
+                    placeholder="Repeat password"
+                    type="password"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <button
+              class="btn btn-primary btn-sm"
+            >
+              Update password
+            </button>
+          </div>
+        </div>
+        <div
+          class="card bg-base-200 border-base-300 border"
+        >
+          <div
+            class="card-body p-6"
+          >
+            <h2
+              class="mb-1 font-serif text-lg font-bold"
+            >
+              Notifications
+            </h2>
+            <p
+              class="text-base-content/50 mb-5 text-sm leading-relaxed"
+            >
+              Choose what updates you receive.
+            </p>
+            <div
+              class="flex flex-col gap-3"
+            >
+              <label
+                class="flex cursor-pointer items-start gap-3 text-sm"
+              >
+                <input
+                  checked=""
+                  class="checkbox checkbox-primary checkbox-sm mt-0.5"
+                  type="checkbox"
+                />
+                <div>
+                  <p
+                    class="font-medium"
+                  >
+                    Send email notifications
+                  </p>
+                  <p
+                    class="text-base-content/40 text-xs"
+                  >
+                    Get notified via email for important updates.
+                  </p>
+                </div>
+              </label>
+              <label
+                class="flex cursor-pointer items-start gap-3 text-sm"
+              >
+                <input
+                  checked=""
+                  class="checkbox checkbox-primary checkbox-sm mt-0.5"
+                  type="checkbox"
+                />
+                <div>
+                  <p
+                    class="font-medium"
+                  >
+                    Weekly digest
+                  </p>
+                  <p
+                    class="text-base-content/40 text-xs"
+                  >
+                    Receive a weekly summary of your activity.
+                  </p>
+                </div>
+              </label>
+              <label
+                class="flex cursor-pointer items-start gap-3 text-sm"
+              >
+                <input
+                  class="checkbox checkbox-primary checkbox-sm mt-0.5"
+                  type="checkbox"
+                />
+                <div>
+                  <p
+                    class="font-medium"
+                  >
+                    Product updates
+                  </p>
+                  <p
+                    class="text-base-content/40 text-xs"
+                  >
+                    Learn about new features and improvements.
+                  </p>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card bg-base-200 border-base-300 border"
+        >
+          <div
+            class="card-body p-6"
+          >
+            <h2
+              class="mb-1 font-serif text-lg font-bold"
+            >
+              Danger zone
+            </h2>
+            <p
+              class="text-base-content/50 mb-5 text-sm leading-relaxed"
+            >
+              Irreversible actions for your account.
+            </p>
+            <p
+              class="text-base-content/50 mb-4 text-sm leading-relaxed"
+            >
+              Once you delete your account, there is no going back. Please be certain.
+            </p>
+            <button
+              class="btn btn-error btn-sm"
+            >
+              Delete account
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer
+      class="border-base-300 border-t py-12 text-center"
+    >
+      <p
+        class="text-primary mb-3 font-serif text-2xl font-bold tracking-widest"
+      >
+        Forma
+      </p>
+      <p
+        class="text-base-content/30 text-sm"
+      >
+        © 2026 · Built with care
+      </p>
+    </footer>
+  </div>
+</div>
+`;
