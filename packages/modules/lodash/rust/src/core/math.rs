@@ -108,10 +108,10 @@ pub fn multiply(a: f64, b: f64) -> f64 {
 pub fn round(n: f64, precision: i32) -> f64 {
     if precision >= 0 {
         let factor = 10.0_f64.powi(precision);
-        (n * factor).round() / factor
+        ((n * factor) + 0.5).floor() / factor
     } else {
         let factor = 10.0_f64.powi(-precision);
-        (n / factor).round() * factor
+        ((n / factor) + 0.5).floor() * factor
     }
 }
 
