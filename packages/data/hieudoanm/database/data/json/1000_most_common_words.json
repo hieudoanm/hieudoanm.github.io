@@ -1,0 +1,8002 @@
+[
+  {
+    "number": "1",
+    "category": "Core Function Words",
+    "subcategory": "Pronouns",
+    "english": "I",
+    "germany": "ich",
+    "korean": "나/저"
+  },
+  {
+    "number": "2",
+    "category": "Core Function Words",
+    "subcategory": "Pronouns",
+    "english": "you",
+    "germany": "du/sie",
+    "korean": "너/당신"
+  },
+  {
+    "number": "3",
+    "category": "Core Function Words",
+    "subcategory": "Pronouns",
+    "english": "he",
+    "germany": "er",
+    "korean": "그"
+  },
+  {
+    "number": "4",
+    "category": "Core Function Words",
+    "subcategory": "Pronouns",
+    "english": "she",
+    "germany": "sie",
+    "korean": "그녀"
+  },
+  {
+    "number": "5",
+    "category": "Core Function Words",
+    "subcategory": "Pronouns",
+    "english": "it",
+    "germany": "es",
+    "korean": "그것"
+  },
+  {
+    "number": "6",
+    "category": "Core Function Words",
+    "subcategory": "Pronouns",
+    "english": "we",
+    "germany": "wir",
+    "korean": "우리"
+  },
+  {
+    "number": "7",
+    "category": "Core Function Words",
+    "subcategory": "Pronouns",
+    "english": "they",
+    "germany": "sie",
+    "korean": "그들"
+  },
+  {
+    "number": "8",
+    "category": "Core Function Words",
+    "subcategory": "Pronouns",
+    "english": "me",
+    "germany": "mich/mir",
+    "korean": "나를/나에게"
+  },
+  {
+    "number": "9",
+    "category": "Core Function Words",
+    "subcategory": "Pronouns",
+    "english": "him",
+    "germany": "ihn/ihm",
+    "korean": "그를/그에게"
+  },
+  {
+    "number": "10",
+    "category": "Core Function Words",
+    "subcategory": "Pronouns",
+    "english": "her",
+    "germany": "sie/ihr",
+    "korean": "그녀를/그녀에게"
+  },
+  {
+    "number": "11",
+    "category": "Core Function Words",
+    "subcategory": "Possessives",
+    "english": "my",
+    "germany": "mein",
+    "korean": "나의"
+  },
+  {
+    "number": "12",
+    "category": "Core Function Words",
+    "subcategory": "Possessives",
+    "english": "your",
+    "germany": "dein/ihr",
+    "korean": "너의/당신의"
+  },
+  {
+    "number": "13",
+    "category": "Core Function Words",
+    "subcategory": "Possessives",
+    "english": "his",
+    "germany": "sein",
+    "korean": "그의"
+  },
+  {
+    "number": "14",
+    "category": "Core Function Words",
+    "subcategory": "Possessives",
+    "english": "her",
+    "germany": "ihr",
+    "korean": "그녀의"
+  },
+  {
+    "number": "15",
+    "category": "Core Function Words",
+    "subcategory": "Possessives",
+    "english": "its",
+    "germany": "sein/ihr",
+    "korean": "그것의"
+  },
+  {
+    "number": "16",
+    "category": "Core Function Words",
+    "subcategory": "Possessives",
+    "english": "our",
+    "germany": "unser",
+    "korean": "우리의"
+  },
+  {
+    "number": "17",
+    "category": "Core Function Words",
+    "subcategory": "Possessives",
+    "english": "their",
+    "germany": "ihr",
+    "korean": "그들의"
+  },
+  {
+    "number": "18",
+    "category": "Core Function Words",
+    "subcategory": "Possessives",
+    "english": "mine",
+    "germany": "meins",
+    "korean": "나의 것"
+  },
+  {
+    "number": "19",
+    "category": "Core Function Words",
+    "subcategory": "Possessives",
+    "english": "yours",
+    "germany": "deins/ihres",
+    "korean": "너의 것/당신의 것"
+  },
+  {
+    "number": "20",
+    "category": "Core Function Words",
+    "subcategory": "Possessives",
+    "english": "hers",
+    "germany": "ihres",
+    "korean": "그녀의 것"
+  },
+  {
+    "number": "21",
+    "category": "Core Function Words",
+    "subcategory": "Articles",
+    "english": "a",
+    "germany": "ein",
+    "korean": "하나의"
+  },
+  {
+    "number": "22",
+    "category": "Core Function Words",
+    "subcategory": "Articles",
+    "english": "an",
+    "germany": "ein",
+    "korean": "하나의"
+  },
+  {
+    "number": "23",
+    "category": "Core Function Words",
+    "subcategory": "Articles",
+    "english": "the",
+    "germany": "der/die/das",
+    "korean": "그"
+  },
+  {
+    "number": "24",
+    "category": "Core Function Words",
+    "subcategory": "Articles",
+    "english": "this",
+    "germany": "dieser",
+    "korean": "이"
+  },
+  {
+    "number": "25",
+    "category": "Core Function Words",
+    "subcategory": "Articles",
+    "english": "that",
+    "germany": "jener",
+    "korean": "저"
+  },
+  {
+    "number": "26",
+    "category": "Core Function Words",
+    "subcategory": "Articles",
+    "english": "these",
+    "germany": "diese",
+    "korean": "이것들"
+  },
+  {
+    "number": "27",
+    "category": "Core Function Words",
+    "subcategory": "Articles",
+    "english": "those",
+    "germany": "jene",
+    "korean": "저것들"
+  },
+  {
+    "number": "28",
+    "category": "Core Function Words",
+    "subcategory": "Articles",
+    "english": "each",
+    "germany": "jeder",
+    "korean": "각각"
+  },
+  {
+    "number": "29",
+    "category": "Core Function Words",
+    "subcategory": "Articles",
+    "english": "every",
+    "germany": "jeder",
+    "korean": "모든"
+  },
+  {
+    "number": "30",
+    "category": "Core Function Words",
+    "subcategory": "Articles",
+    "english": "all",
+    "germany": "alle",
+    "korean": "모든"
+  },
+  {
+    "number": "31",
+    "category": "Core Function Words",
+    "subcategory": "Prepositions (basic)",
+    "english": "in",
+    "germany": "in",
+    "korean": "안에"
+  },
+  {
+    "number": "32",
+    "category": "Core Function Words",
+    "subcategory": "Prepositions (basic)",
+    "english": "on",
+    "germany": "auf",
+    "korean": "위에"
+  },
+  {
+    "number": "33",
+    "category": "Core Function Words",
+    "subcategory": "Prepositions (basic)",
+    "english": "at",
+    "germany": "an/bei",
+    "korean": "에"
+  },
+  {
+    "number": "34",
+    "category": "Core Function Words",
+    "subcategory": "Prepositions (basic)",
+    "english": "by",
+    "germany": "bei/von",
+    "korean": "옆에/에 의해"
+  },
+  {
+    "number": "35",
+    "category": "Core Function Words",
+    "subcategory": "Prepositions (basic)",
+    "english": "for",
+    "germany": "für",
+    "korean": "위해"
+  },
+  {
+    "number": "36",
+    "category": "Core Function Words",
+    "subcategory": "Prepositions (basic)",
+    "english": "with",
+    "germany": "mit",
+    "korean": "함께"
+  },
+  {
+    "number": "37",
+    "category": "Core Function Words",
+    "subcategory": "Prepositions (basic)",
+    "english": "about",
+    "germany": "über",
+    "korean": "대해"
+  },
+  {
+    "number": "38",
+    "category": "Core Function Words",
+    "subcategory": "Prepositions (basic)",
+    "english": "above",
+    "germany": "über",
+    "korean": "보다 위에"
+  },
+  {
+    "number": "39",
+    "category": "Core Function Words",
+    "subcategory": "Prepositions (basic)",
+    "english": "under",
+    "germany": "unter",
+    "korean": "아래에"
+  },
+  {
+    "number": "40",
+    "category": "Core Function Words",
+    "subcategory": "Prepositions (basic)",
+    "english": "between",
+    "germany": "zwischen",
+    "korean": "사이에"
+  },
+  {
+    "number": "41",
+    "category": "Core Function Words",
+    "subcategory": "Prepositions (movement)",
+    "english": "to",
+    "germany": "zu/nach",
+    "korean": "로"
+  },
+  {
+    "number": "42",
+    "category": "Core Function Words",
+    "subcategory": "Prepositions (movement)",
+    "english": "from",
+    "germany": "von/aus",
+    "korean": "부터"
+  },
+  {
+    "number": "43",
+    "category": "Core Function Words",
+    "subcategory": "Prepositions (movement)",
+    "english": "into",
+    "germany": "in",
+    "korean": "안으로"
+  },
+  {
+    "number": "44",
+    "category": "Core Function Words",
+    "subcategory": "Prepositions (movement)",
+    "english": "onto",
+    "germany": "auf",
+    "korean": "위로"
+  },
+  {
+    "number": "45",
+    "category": "Core Function Words",
+    "subcategory": "Prepositions (movement)",
+    "english": "out",
+    "germany": "aus",
+    "korean": "밖으로"
+  },
+  {
+    "number": "46",
+    "category": "Core Function Words",
+    "subcategory": "Prepositions (movement)",
+    "english": "through",
+    "germany": "durch",
+    "korean": "통해"
+  },
+  {
+    "number": "47",
+    "category": "Core Function Words",
+    "subcategory": "Prepositions (movement)",
+    "english": "across",
+    "germany": "über",
+    "korean": "가로질러"
+  },
+  {
+    "number": "48",
+    "category": "Core Function Words",
+    "subcategory": "Prepositions (movement)",
+    "english": "along",
+    "germany": "entlang",
+    "korean": "따라"
+  },
+  {
+    "number": "49",
+    "category": "Core Function Words",
+    "subcategory": "Prepositions (movement)",
+    "english": "past",
+    "germany": "vorbei",
+    "korean": "지나"
+  },
+  {
+    "number": "50",
+    "category": "Core Function Words",
+    "subcategory": "Prepositions (movement)",
+    "english": "towards",
+    "germany": "zu",
+    "korean": "향해"
+  },
+  {
+    "number": "51",
+    "category": "Core Function Words",
+    "subcategory": "Conjunctions",
+    "english": "and",
+    "germany": "und",
+    "korean": "그리고"
+  },
+  {
+    "number": "52",
+    "category": "Core Function Words",
+    "subcategory": "Conjunctions",
+    "english": "but",
+    "germany": "aber",
+    "korean": "하지만"
+  },
+  {
+    "number": "53",
+    "category": "Core Function Words",
+    "subcategory": "Conjunctions",
+    "english": "or",
+    "germany": "oder",
+    "korean": "또는"
+  },
+  {
+    "number": "54",
+    "category": "Core Function Words",
+    "subcategory": "Conjunctions",
+    "english": "so",
+    "germany": "so/daher",
+    "korean": "그래서"
+  },
+  {
+    "number": "55",
+    "category": "Core Function Words",
+    "subcategory": "Conjunctions",
+    "english": "because",
+    "germany": "weil",
+    "korean": "때문에"
+  },
+  {
+    "number": "56",
+    "category": "Core Function Words",
+    "subcategory": "Conjunctions",
+    "english": "if",
+    "germany": "wenn/falls",
+    "korean": "만약"
+  },
+  {
+    "number": "57",
+    "category": "Core Function Words",
+    "subcategory": "Conjunctions",
+    "english": "when",
+    "germany": "wenn/als",
+    "korean": "언제/때"
+  },
+  {
+    "number": "58",
+    "category": "Core Function Words",
+    "subcategory": "Conjunctions",
+    "english": "while",
+    "germany": "während",
+    "korean": "동안"
+  },
+  {
+    "number": "59",
+    "category": "Core Function Words",
+    "subcategory": "Conjunctions",
+    "english": "though",
+    "germany": "obwohl",
+    "korean": "에도 불구하고"
+  },
+  {
+    "number": "60",
+    "category": "Core Function Words",
+    "subcategory": "Conjunctions",
+    "english": "since",
+    "germany": "seit/da",
+    "korean": "이래로/때문에"
+  },
+  {
+    "number": "61",
+    "category": "Core Function Words",
+    "subcategory": "Auxiliary verbs",
+    "english": "be",
+    "germany": "sein",
+    "korean": "이다/있다"
+  },
+  {
+    "number": "62",
+    "category": "Core Function Words",
+    "subcategory": "Auxiliary verbs",
+    "english": "do",
+    "germany": "tun/machen",
+    "korean": "하다"
+  },
+  {
+    "number": "63",
+    "category": "Core Function Words",
+    "subcategory": "Auxiliary verbs",
+    "english": "have",
+    "germany": "haben",
+    "korean": "가지다"
+  },
+  {
+    "number": "64",
+    "category": "Core Function Words",
+    "subcategory": "Auxiliary verbs",
+    "english": "am",
+    "germany": "bin",
+    "korean": "이다"
+  },
+  {
+    "number": "65",
+    "category": "Core Function Words",
+    "subcategory": "Auxiliary verbs",
+    "english": "is",
+    "germany": "ist",
+    "korean": "이다"
+  },
+  {
+    "number": "66",
+    "category": "Core Function Words",
+    "subcategory": "Auxiliary verbs",
+    "english": "are",
+    "germany": "sind",
+    "korean": "이다"
+  },
+  {
+    "number": "67",
+    "category": "Core Function Words",
+    "subcategory": "Auxiliary verbs",
+    "english": "was",
+    "germany": "war",
+    "korean": "이었다"
+  },
+  {
+    "number": "68",
+    "category": "Core Function Words",
+    "subcategory": "Auxiliary verbs",
+    "english": "were",
+    "germany": "waren",
+    "korean": "이었다"
+  },
+  {
+    "number": "69",
+    "category": "Core Function Words",
+    "subcategory": "Auxiliary verbs",
+    "english": "been",
+    "germany": "gewesen",
+    "korean": "었다"
+  },
+  {
+    "number": "70",
+    "category": "Core Function Words",
+    "subcategory": "Auxiliary verbs",
+    "english": "being",
+    "germany": "seiend",
+    "korean": "존재"
+  },
+  {
+    "number": "71",
+    "category": "Core Function Words",
+    "subcategory": "Modals",
+    "english": "can",
+    "germany": "kann",
+    "korean": "할 수 있다"
+  },
+  {
+    "number": "72",
+    "category": "Core Function Words",
+    "subcategory": "Modals",
+    "english": "could",
+    "germany": "könnte",
+    "korean": "할 수 있었다"
+  },
+  {
+    "number": "73",
+    "category": "Core Function Words",
+    "subcategory": "Modals",
+    "english": "will",
+    "germany": "wird",
+    "korean": "할 것이다"
+  },
+  {
+    "number": "74",
+    "category": "Core Function Words",
+    "subcategory": "Modals",
+    "english": "would",
+    "germany": "würde",
+    "korean": "할 것이다"
+  },
+  {
+    "number": "75",
+    "category": "Core Function Words",
+    "subcategory": "Modals",
+    "english": "shall",
+    "germany": "soll",
+    "korean": "해야 한다"
+  },
+  {
+    "number": "76",
+    "category": "Core Function Words",
+    "subcategory": "Modals",
+    "english": "should",
+    "germany": "sollte",
+    "korean": "해야 한다"
+  },
+  {
+    "number": "77",
+    "category": "Core Function Words",
+    "subcategory": "Modals",
+    "english": "may",
+    "germany": "darf",
+    "korean": "해도 된다"
+  },
+  {
+    "number": "78",
+    "category": "Core Function Words",
+    "subcategory": "Modals",
+    "english": "might",
+    "germany": "könnte",
+    "korean": "할지도 모른다"
+  },
+  {
+    "number": "79",
+    "category": "Core Function Words",
+    "subcategory": "Modals",
+    "english": "must",
+    "germany": "muss",
+    "korean": "해야만 한다"
+  },
+  {
+    "number": "80",
+    "category": "Core Function Words",
+    "subcategory": "Modals",
+    "english": "ought",
+    "germany": "sollte",
+    "korean": "해야 한다"
+  },
+  {
+    "number": "81",
+    "category": "Core Function Words",
+    "subcategory": "Quantifiers",
+    "english": "some",
+    "germany": "einige",
+    "korean": "약간의"
+  },
+  {
+    "number": "82",
+    "category": "Core Function Words",
+    "subcategory": "Quantifiers",
+    "english": "many",
+    "germany": "viele",
+    "korean": "많은"
+  },
+  {
+    "number": "83",
+    "category": "Core Function Words",
+    "subcategory": "Quantifiers",
+    "english": "few",
+    "germany": "wenige",
+    "korean": "적은"
+  },
+  {
+    "number": "84",
+    "category": "Core Function Words",
+    "subcategory": "Quantifiers",
+    "english": "much",
+    "germany": "viel",
+    "korean": "많은"
+  },
+  {
+    "number": "85",
+    "category": "Core Function Words",
+    "subcategory": "Quantifiers",
+    "english": "little",
+    "germany": "wenig",
+    "korean": "작은/적은"
+  },
+  {
+    "number": "86",
+    "category": "Core Function Words",
+    "subcategory": "Quantifiers",
+    "english": "most",
+    "germany": "die meisten",
+    "korean": "대부분의"
+  },
+  {
+    "number": "87",
+    "category": "Core Function Words",
+    "subcategory": "Quantifiers",
+    "english": "several",
+    "germany": "mehrere",
+    "korean": "여러"
+  },
+  {
+    "number": "88",
+    "category": "Core Function Words",
+    "subcategory": "Quantifiers",
+    "english": "no",
+    "germany": "kein",
+    "korean": "없는"
+  },
+  {
+    "number": "89",
+    "category": "Core Function Words",
+    "subcategory": "Quantifiers",
+    "english": "any",
+    "germany": "irgendwelche",
+    "korean": "어떤"
+  },
+  {
+    "number": "90",
+    "category": "Core Function Words",
+    "subcategory": "Quantifiers",
+    "english": "both",
+    "germany": "beide",
+    "korean": "둘 다"
+  },
+  {
+    "number": "91",
+    "category": "Core Function Words",
+    "subcategory": "Particles / fillers",
+    "english": "just",
+    "germany": "nur/gerade",
+    "korean": "그냥"
+  },
+  {
+    "number": "92",
+    "category": "Core Function Words",
+    "subcategory": "Particles / fillers",
+    "english": "even",
+    "germany": "sogar",
+    "korean": "심지어"
+  },
+  {
+    "number": "93",
+    "category": "Core Function Words",
+    "subcategory": "Particles / fillers",
+    "english": "already",
+    "germany": "bereits",
+    "korean": "이미"
+  },
+  {
+    "number": "94",
+    "category": "Core Function Words",
+    "subcategory": "Particles / fillers",
+    "english": "still",
+    "germany": "noch",
+    "korean": "여전히"
+  },
+  {
+    "number": "95",
+    "category": "Core Function Words",
+    "subcategory": "Particles / fillers",
+    "english": "well",
+    "germany": "gut/nun",
+    "korean": "잘/음"
+  },
+  {
+    "number": "96",
+    "category": "Core Function Words",
+    "subcategory": "Particles / fillers",
+    "english": "now",
+    "germany": "jetzt",
+    "korean": "지금"
+  },
+  {
+    "number": "97",
+    "category": "Core Function Words",
+    "subcategory": "Particles / fillers",
+    "english": "then",
+    "germany": "dann",
+    "korean": "그때"
+  },
+  {
+    "number": "98",
+    "category": "Core Function Words",
+    "subcategory": "Particles / fillers",
+    "english": "very",
+    "germany": "sehr",
+    "korean": "매우"
+  },
+  {
+    "number": "99",
+    "category": "Core Function Words",
+    "subcategory": "Particles / fillers",
+    "english": "too",
+    "germany": "zu/auch",
+    "korean": "너무/또한"
+  },
+  {
+    "number": "100",
+    "category": "Core Function Words",
+    "subcategory": "Particles / fillers",
+    "english": "also",
+    "germany": "auch",
+    "korean": "또한"
+  },
+  {
+    "number": "101",
+    "category": "Common Verbs",
+    "subcategory": "Basic actions",
+    "english": "eat",
+    "germany": "essen",
+    "korean": "먹다"
+  },
+  {
+    "number": "102",
+    "category": "Common Verbs",
+    "subcategory": "Basic actions",
+    "english": "drink",
+    "germany": "trinken",
+    "korean": "마시다"
+  },
+  {
+    "number": "103",
+    "category": "Common Verbs",
+    "subcategory": "Basic actions",
+    "english": "go",
+    "germany": "gehen",
+    "korean": "가다"
+  },
+  {
+    "number": "104",
+    "category": "Common Verbs",
+    "subcategory": "Basic actions",
+    "english": "come",
+    "germany": "kommen",
+    "korean": "오다"
+  },
+  {
+    "number": "105",
+    "category": "Common Verbs",
+    "subcategory": "Basic actions",
+    "english": "do",
+    "germany": "tun",
+    "korean": "하다"
+  },
+  {
+    "number": "106",
+    "category": "Common Verbs",
+    "subcategory": "Basic actions",
+    "english": "make",
+    "germany": "machen",
+    "korean": "만들다"
+  },
+  {
+    "number": "107",
+    "category": "Common Verbs",
+    "subcategory": "Basic actions",
+    "english": "get",
+    "germany": "bekommen",
+    "korean": "얻다"
+  },
+  {
+    "number": "108",
+    "category": "Common Verbs",
+    "subcategory": "Basic actions",
+    "english": "take",
+    "germany": "nehmen",
+    "korean": "가지다"
+  },
+  {
+    "number": "109",
+    "category": "Common Verbs",
+    "subcategory": "Basic actions",
+    "english": "give",
+    "germany": "geben",
+    "korean": "주다"
+  },
+  {
+    "number": "110",
+    "category": "Common Verbs",
+    "subcategory": "Basic actions",
+    "english": "keep",
+    "germany": "behalten",
+    "korean": "유지하다"
+  },
+  {
+    "number": "111",
+    "category": "Common Verbs",
+    "subcategory": "Movement",
+    "english": "walk",
+    "germany": "gehen/laufen",
+    "korean": "걷다"
+  },
+  {
+    "number": "112",
+    "category": "Common Verbs",
+    "subcategory": "Movement",
+    "english": "run",
+    "germany": "rennen",
+    "korean": "달리다"
+  },
+  {
+    "number": "113",
+    "category": "Common Verbs",
+    "subcategory": "Movement",
+    "english": "travel",
+    "germany": "reisen",
+    "korean": "여행하다"
+  },
+  {
+    "number": "114",
+    "category": "Common Verbs",
+    "subcategory": "Movement",
+    "english": "fly",
+    "germany": "fliegen",
+    "korean": "날다"
+  },
+  {
+    "number": "115",
+    "category": "Common Verbs",
+    "subcategory": "Movement",
+    "english": "drive",
+    "germany": "fahren",
+    "korean": "운전하다"
+  },
+  {
+    "number": "116",
+    "category": "Common Verbs",
+    "subcategory": "Movement",
+    "english": "ride",
+    "germany": "reiten/fahren",
+    "korean": "타다"
+  },
+  {
+    "number": "117",
+    "category": "Common Verbs",
+    "subcategory": "Movement",
+    "english": "swim",
+    "germany": "schwimmen",
+    "korean": "수영하다"
+  },
+  {
+    "number": "118",
+    "category": "Common Verbs",
+    "subcategory": "Movement",
+    "english": "jump",
+    "germany": "springen",
+    "korean": "뛰다"
+  },
+  {
+    "number": "119",
+    "category": "Common Verbs",
+    "subcategory": "Movement",
+    "english": "climb",
+    "germany": "klettern",
+    "korean": "오르다"
+  },
+  {
+    "number": "120",
+    "category": "Common Verbs",
+    "subcategory": "Movement",
+    "english": "shake",
+    "germany": "schütteln",
+    "korean": "흔들다"
+  },
+  {
+    "number": "121",
+    "category": "Common Verbs",
+    "subcategory": "Communication",
+    "english": "say",
+    "germany": "sagen",
+    "korean": "말하다"
+  },
+  {
+    "number": "122",
+    "category": "Common Verbs",
+    "subcategory": "Communication",
+    "english": "tell",
+    "germany": "erzählen",
+    "korean": "말해주다"
+  },
+  {
+    "number": "123",
+    "category": "Common Verbs",
+    "subcategory": "Communication",
+    "english": "ask",
+    "germany": "fragen",
+    "korean": "묻다"
+  },
+  {
+    "number": "124",
+    "category": "Common Verbs",
+    "subcategory": "Communication",
+    "english": "speak",
+    "germany": "sprechen",
+    "korean": "말하다"
+  },
+  {
+    "number": "125",
+    "category": "Common Verbs",
+    "subcategory": "Communication",
+    "english": "talk",
+    "germany": "reden",
+    "korean": "이야기하다"
+  },
+  {
+    "number": "126",
+    "category": "Common Verbs",
+    "subcategory": "Communication",
+    "english": "shout",
+    "germany": "schreien",
+    "korean": "외치다"
+  },
+  {
+    "number": "127",
+    "category": "Common Verbs",
+    "subcategory": "Communication",
+    "english": "whisper",
+    "germany": "flüstern",
+    "korean": "속삭이다"
+  },
+  {
+    "number": "128",
+    "category": "Common Verbs",
+    "subcategory": "Communication",
+    "english": "call",
+    "germany": "rufen/anrufen",
+    "korean": "부르다/전화하다"
+  },
+  {
+    "number": "129",
+    "category": "Common Verbs",
+    "subcategory": "Communication",
+    "english": "write",
+    "germany": "schreiben",
+    "korean": "쓰다"
+  },
+  {
+    "number": "130",
+    "category": "Common Verbs",
+    "subcategory": "Communication",
+    "english": "read",
+    "germany": "lesen",
+    "korean": "읽다"
+  },
+  {
+    "number": "131",
+    "category": "Common Verbs",
+    "subcategory": "Thinking",
+    "english": "think",
+    "germany": "denken",
+    "korean": "생각하다"
+  },
+  {
+    "number": "132",
+    "category": "Common Verbs",
+    "subcategory": "Thinking",
+    "english": "know",
+    "germany": "wissen",
+    "korean": "알다"
+  },
+  {
+    "number": "133",
+    "category": "Common Verbs",
+    "subcategory": "Thinking",
+    "english": "believe",
+    "germany": "glauben",
+    "korean": "믿다"
+  },
+  {
+    "number": "134",
+    "category": "Common Verbs",
+    "subcategory": "Thinking",
+    "english": "understand",
+    "germany": "verstehen",
+    "korean": "이해하다"
+  },
+  {
+    "number": "135",
+    "category": "Common Verbs",
+    "subcategory": "Thinking",
+    "english": "remember",
+    "germany": "erinnern",
+    "korean": "기억하다"
+  },
+  {
+    "number": "136",
+    "category": "Common Verbs",
+    "subcategory": "Thinking",
+    "english": "forget",
+    "germany": "vergessen",
+    "korean": "잊다"
+  },
+  {
+    "number": "137",
+    "category": "Common Verbs",
+    "subcategory": "Thinking",
+    "english": "mean",
+    "germany": "bedeuten",
+    "korean": "의미하다"
+  },
+  {
+    "number": "138",
+    "category": "Common Verbs",
+    "subcategory": "Thinking",
+    "english": "suppose",
+    "germany": "vermuten",
+    "korean": "가정하다"
+  },
+  {
+    "number": "139",
+    "category": "Common Verbs",
+    "subcategory": "Thinking",
+    "english": "guess",
+    "germany": "raten",
+    "korean": "추측하다"
+  },
+  {
+    "number": "140",
+    "category": "Common Verbs",
+    "subcategory": "Thinking",
+    "english": "wonder",
+    "germany": "wundern",
+    "korean": "궁금해하다"
+  },
+  {
+    "number": "141",
+    "category": "Common Verbs",
+    "subcategory": "Emotion",
+    "english": "love",
+    "germany": "lieben",
+    "korean": "사랑하다"
+  },
+  {
+    "number": "142",
+    "category": "Common Verbs",
+    "subcategory": "Emotion",
+    "english": "hate",
+    "germany": "hassen",
+    "korean": "미워하다"
+  },
+  {
+    "number": "143",
+    "category": "Common Verbs",
+    "subcategory": "Emotion",
+    "english": "like",
+    "germany": "mögen",
+    "korean": "좋아하다"
+  },
+  {
+    "number": "144",
+    "category": "Common Verbs",
+    "subcategory": "Emotion",
+    "english": "want",
+    "germany": "wollen",
+    "korean": "원하다"
+  },
+  {
+    "number": "145",
+    "category": "Common Verbs",
+    "subcategory": "Emotion",
+    "english": "hope",
+    "germany": "hoffen",
+    "korean": "바라다"
+  },
+  {
+    "number": "146",
+    "category": "Common Verbs",
+    "subcategory": "Emotion",
+    "english": "fear",
+    "germany": "fürchten",
+    "korean": "두려워하다"
+  },
+  {
+    "number": "147",
+    "category": "Common Verbs",
+    "subcategory": "Emotion",
+    "english": "enjoy",
+    "germany": "genießen",
+    "korean": "즐기다"
+  },
+  {
+    "number": "148",
+    "category": "Common Verbs",
+    "subcategory": "Emotion",
+    "english": "prefer",
+    "germany": "bevorzugen",
+    "korean": "선호하다"
+  },
+  {
+    "number": "149",
+    "category": "Common Verbs",
+    "subcategory": "Emotion",
+    "english": "miss",
+    "germany": "vermissen",
+    "korean": "그리워하다"
+  },
+  {
+    "number": "150",
+    "category": "Common Verbs",
+    "subcategory": "Emotion",
+    "english": "worry",
+    "germany": "sorgen",
+    "korean": "걱정하다"
+  },
+  {
+    "number": "151",
+    "category": "Common Verbs",
+    "subcategory": "Daily routine",
+    "english": "wake",
+    "germany": "aufwachen",
+    "korean": "깨다"
+  },
+  {
+    "number": "152",
+    "category": "Common Verbs",
+    "subcategory": "Daily routine",
+    "english": "sleep",
+    "germany": "schlafen",
+    "korean": "자다"
+  },
+  {
+    "number": "153",
+    "category": "Common Verbs",
+    "subcategory": "Daily routine",
+    "english": "work",
+    "germany": "arbeiten",
+    "korean": "일하다"
+  },
+  {
+    "number": "154",
+    "category": "Common Verbs",
+    "subcategory": "Daily routine",
+    "english": "play",
+    "germany": "spielen",
+    "korean": "놀다"
+  },
+  {
+    "number": "155",
+    "category": "Common Verbs",
+    "subcategory": "Daily routine",
+    "english": "wash",
+    "germany": "waschen",
+    "korean": "씻다"
+  },
+  {
+    "number": "156",
+    "category": "Common Verbs",
+    "subcategory": "Daily routine",
+    "english": "clean",
+    "germany": "putzen",
+    "korean": "청소하다"
+  },
+  {
+    "number": "157",
+    "category": "Common Verbs",
+    "subcategory": "Daily routine",
+    "english": "cook",
+    "germany": "kochen",
+    "korean": "요리하다"
+  },
+  {
+    "number": "158",
+    "category": "Common Verbs",
+    "subcategory": "Daily routine",
+    "english": "brush",
+    "germany": "bürsten",
+    "korean": "닦다"
+  },
+  {
+    "number": "159",
+    "category": "Common Verbs",
+    "subcategory": "Daily routine",
+    "english": "dress",
+    "germany": "anziehen",
+    "korean": "옷을 입다"
+  },
+  {
+    "number": "160",
+    "category": "Common Verbs",
+    "subcategory": "Daily routine",
+    "english": "relax",
+    "germany": "entspannen",
+    "korean": "쉬다"
+  },
+  {
+    "number": "161",
+    "category": "Common Verbs",
+    "subcategory": "Work/study",
+    "english": "learn",
+    "germany": "lernen",
+    "korean": "배우다"
+  },
+  {
+    "number": "162",
+    "category": "Common Verbs",
+    "subcategory": "Work/study",
+    "english": "write",
+    "germany": "schreiben",
+    "korean": "쓰다"
+  },
+  {
+    "number": "163",
+    "category": "Common Verbs",
+    "subcategory": "Work/study",
+    "english": "read",
+    "germany": "lesen",
+    "korean": "읽다"
+  },
+  {
+    "number": "164",
+    "category": "Common Verbs",
+    "subcategory": "Work/study",
+    "english": "study",
+    "germany": "studieren",
+    "korean": "공부하다"
+  },
+  {
+    "number": "165",
+    "category": "Common Verbs",
+    "subcategory": "Work/study",
+    "english": "teach",
+    "germany": "lehren",
+    "korean": "가르치다"
+  },
+  {
+    "number": "166",
+    "category": "Common Verbs",
+    "subcategory": "Work/study",
+    "english": "test",
+    "germany": "prüfen",
+    "korean": "시험하다"
+  },
+  {
+    "number": "167",
+    "category": "Common Verbs",
+    "subcategory": "Work/study",
+    "english": "check",
+    "germany": "prüfen",
+    "korean": "확인하다"
+  },
+  {
+    "number": "168",
+    "category": "Common Verbs",
+    "subcategory": "Work/study",
+    "english": "point",
+    "germany": "zeigen",
+    "korean": "가리키다"
+  },
+  {
+    "number": "169",
+    "category": "Common Verbs",
+    "subcategory": "Work/study",
+    "english": "finish",
+    "germany": "beenden",
+    "korean": "끝내다"
+  },
+  {
+    "number": "170",
+    "category": "Common Verbs",
+    "subcategory": "Work/study",
+    "english": "start",
+    "germany": "beginnen",
+    "korean": "시작하다"
+  },
+  {
+    "number": "171",
+    "category": "Common Verbs",
+    "subcategory": "Social",
+    "english": "meet",
+    "germany": "treffen",
+    "korean": "만나다"
+  },
+  {
+    "number": "172",
+    "category": "Common Verbs",
+    "subcategory": "Social",
+    "english": "call",
+    "germany": "anrufen",
+    "korean": "전화하다"
+  },
+  {
+    "number": "173",
+    "category": "Common Verbs",
+    "subcategory": "Social",
+    "english": "invite",
+    "germany": "einladen",
+    "korean": "초대하다"
+  },
+  {
+    "number": "174",
+    "category": "Common Verbs",
+    "subcategory": "Social",
+    "english": "help",
+    "germany": "helfen",
+    "korean": "돕다"
+  },
+  {
+    "number": "175",
+    "category": "Common Verbs",
+    "subcategory": "Social",
+    "english": "visit",
+    "germany": "besuchen",
+    "korean": "방문하다"
+  },
+  {
+    "number": "176",
+    "category": "Common Verbs",
+    "subcategory": "Social",
+    "english": "share",
+    "germany": "teilen",
+    "korean": "공유하다"
+  },
+  {
+    "number": "177",
+    "category": "Common Verbs",
+    "subcategory": "Social",
+    "english": "agree",
+    "germany": "zustimmen",
+    "korean": "동의하다"
+  },
+  {
+    "number": "178",
+    "category": "Common Verbs",
+    "subcategory": "Social",
+    "english": "allow",
+    "germany": "erlauben",
+    "korean": "허용하다"
+  },
+  {
+    "number": "179",
+    "category": "Common Verbs",
+    "subcategory": "Social",
+    "english": "promise",
+    "germany": "versprechen",
+    "korean": "약속하다"
+  },
+  {
+    "number": "180",
+    "category": "Common Verbs",
+    "subcategory": "Social",
+    "english": "thank",
+    "germany": "danken",
+    "korean": "감사하다"
+  },
+  {
+    "number": "181",
+    "category": "Common Verbs",
+    "subcategory": "Change",
+    "english": "start",
+    "germany": "beginnen",
+    "korean": "시작하다"
+  },
+  {
+    "number": "182",
+    "category": "Common Verbs",
+    "subcategory": "Change",
+    "english": "stop",
+    "germany": "stoppen",
+    "korean": "멈추다"
+  },
+  {
+    "number": "183",
+    "category": "Common Verbs",
+    "subcategory": "Change",
+    "english": "build",
+    "germany": "bauen",
+    "korean": "짓다"
+  },
+  {
+    "number": "184",
+    "category": "Common Verbs",
+    "subcategory": "Change",
+    "english": "break",
+    "germany": "brechen",
+    "korean": "부수다"
+  },
+  {
+    "number": "185",
+    "category": "Common Verbs",
+    "subcategory": "Change",
+    "english": "change",
+    "germany": "ändern",
+    "korean": "변화하다"
+  },
+  {
+    "number": "186",
+    "category": "Common Verbs",
+    "subcategory": "Change",
+    "english": "grow",
+    "germany": "wachsen",
+    "korean": "성장하다"
+  },
+  {
+    "number": "187",
+    "category": "Common Verbs",
+    "subcategory": "Change",
+    "english": "become",
+    "germany": "werden",
+    "korean": "되다"
+  },
+  {
+    "number": "188",
+    "category": "Common Verbs",
+    "subcategory": "Change",
+    "english": "happen",
+    "germany": "geschehen",
+    "korean": "일어나다"
+  },
+  {
+    "number": "189",
+    "category": "Common Verbs",
+    "subcategory": "Change",
+    "english": "create",
+    "germany": "erschaffen",
+    "korean": "창조하다"
+  },
+  {
+    "number": "190",
+    "category": "Common Verbs",
+    "subcategory": "Change",
+    "english": "fix",
+    "germany": "reparieren",
+    "korean": "고치다"
+  },
+  {
+    "number": "191",
+    "category": "Common Verbs",
+    "subcategory": "Helper phrases",
+    "english": "try",
+    "germany": "versuchen",
+    "korean": "시도하다"
+  },
+  {
+    "number": "192",
+    "category": "Common Verbs",
+    "subcategory": "Helper phrases",
+    "english": "plan",
+    "germany": "planen",
+    "korean": "계획하다"
+  },
+  {
+    "number": "193",
+    "category": "Common Verbs",
+    "subcategory": "Helper phrases",
+    "english": "decide",
+    "germany": "entscheiden",
+    "korean": "결정하다"
+  },
+  {
+    "number": "194",
+    "category": "Common Verbs",
+    "subcategory": "Helper phrases",
+    "english": "choose",
+    "germany": "wählen",
+    "korean": "선택하다"
+  },
+  {
+    "number": "195",
+    "category": "Common Verbs",
+    "subcategory": "Helper phrases",
+    "english": "need",
+    "germany": "brauchen",
+    "korean": "필요하다"
+  },
+  {
+    "number": "196",
+    "category": "Common Verbs",
+    "subcategory": "Helper phrases",
+    "english": "seem",
+    "germany": "scheinen",
+    "korean": "보이다"
+  },
+  {
+    "number": "197",
+    "category": "Common Verbs",
+    "subcategory": "Helper phrases",
+    "english": "look",
+    "germany": "schauen",
+    "korean": "보다"
+  },
+  {
+    "number": "198",
+    "category": "Common Verbs",
+    "subcategory": "Helper phrases",
+    "english": "sound",
+    "germany": "klingen",
+    "korean": "들리다"
+  },
+  {
+    "number": "199",
+    "category": "Common Verbs",
+    "subcategory": "Helper phrases",
+    "english": "feel",
+    "germany": "fühlen",
+    "korean": "느끼다"
+  },
+  {
+    "number": "200",
+    "category": "Common Verbs",
+    "subcategory": "Helper phrases",
+    "english": "appear",
+    "germany": "erscheinen",
+    "korean": "나타나다"
+  },
+  {
+    "number": "201",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Family",
+    "english": "mother",
+    "germany": "Mutter",
+    "korean": "어머니"
+  },
+  {
+    "number": "202",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Family",
+    "english": "father",
+    "germany": "Vater",
+    "korean": "아버지"
+  },
+  {
+    "number": "203",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Family",
+    "english": "parent",
+    "germany": "Elternteil",
+    "korean": "부모"
+  },
+  {
+    "number": "204",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Family",
+    "english": "brother",
+    "germany": "Bruder",
+    "korean": "형제"
+  },
+  {
+    "number": "205",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Family",
+    "english": "sister",
+    "germany": "Schwester",
+    "korean": "자매"
+  },
+  {
+    "number": "206",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Family",
+    "english": "son",
+    "germany": "Sohn",
+    "korean": "아들"
+  },
+  {
+    "number": "207",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Family",
+    "english": "daughter",
+    "germany": "Tochter",
+    "korean": "딸"
+  },
+  {
+    "number": "208",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Family",
+    "english": "baby",
+    "germany": "Baby",
+    "korean": "아기"
+  },
+  {
+    "number": "209",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Family",
+    "english": "grandfather",
+    "germany": "Großvater",
+    "korean": "할아버지"
+  },
+  {
+    "number": "210",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Family",
+    "english": "grandmother",
+    "germany": "Großmutter",
+    "korean": "할머니"
+  },
+  {
+    "number": "211",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Relationships",
+    "english": "friend",
+    "germany": "Freund",
+    "korean": "친구"
+  },
+  {
+    "number": "212",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Relationships",
+    "english": "partner",
+    "germany": "Partner",
+    "korean": "동반자"
+  },
+  {
+    "number": "213",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Relationships",
+    "english": "wife",
+    "germany": "Ehefrau",
+    "korean": "아내"
+  },
+  {
+    "number": "214",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Relationships",
+    "english": "husband",
+    "germany": "Ehemann",
+    "korean": "남편"
+  },
+  {
+    "number": "215",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Relationships",
+    "english": "neighbor",
+    "germany": "Nachbar",
+    "korean": "이웃"
+  },
+  {
+    "number": "216",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Relationships",
+    "english": "enemy",
+    "germany": "Feind",
+    "korean": "적"
+  },
+  {
+    "number": "217",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Relationships",
+    "english": "couple",
+    "germany": "Paar",
+    "korean": "커플"
+  },
+  {
+    "number": "218",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Relationships",
+    "english": "group",
+    "germany": "Gruppe",
+    "korean": "그룹"
+  },
+  {
+    "number": "219",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Relationships",
+    "english": "community",
+    "germany": "Gemeinschaft",
+    "korean": "지역사회"
+  },
+  {
+    "number": "220",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Relationships",
+    "english": "team",
+    "germany": "Team",
+    "korean": "팀"
+  },
+  {
+    "number": "221",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Jobs",
+    "english": "teacher",
+    "germany": "Lehrer",
+    "korean": "선생님"
+  },
+  {
+    "number": "222",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Jobs",
+    "english": "doctor",
+    "germany": "Arzt",
+    "korean": "의사"
+  },
+  {
+    "number": "223",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Jobs",
+    "english": "nurse",
+    "germany": "Krankenschwester",
+    "korean": "간호사"
+  },
+  {
+    "number": "224",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Jobs",
+    "english": "pilot",
+    "germany": "Pilot",
+    "korean": "조종사"
+  },
+  {
+    "number": "225",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Jobs",
+    "english": "driver",
+    "germany": "Fahrer",
+    "korean": "운전사"
+  },
+  {
+    "number": "226",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Jobs",
+    "english": "engineer",
+    "germany": "Ingenieur",
+    "korean": "엔지니어"
+  },
+  {
+    "number": "227",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Jobs",
+    "english": "worker",
+    "germany": "Arbeiter",
+    "korean": "노동자"
+  },
+  {
+    "number": "228",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Jobs",
+    "english": "artist",
+    "germany": "Künstler",
+    "korean": "예술가"
+  },
+  {
+    "number": "229",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Jobs",
+    "english": "farmer",
+    "germany": "Bauer",
+    "korean": "농부"
+  },
+  {
+    "number": "230",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Jobs",
+    "english": "cook",
+    "germany": "Koch",
+    "korean": "요리사"
+  },
+  {
+    "number": "231",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Roles",
+    "english": "boss",
+    "germany": "Chef",
+    "korean": "상사"
+  },
+  {
+    "number": "232",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Roles",
+    "english": "student",
+    "germany": "Student/Schüler",
+    "korean": "학생"
+  },
+  {
+    "number": "233",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Roles",
+    "english": "leader",
+    "germany": "Anführer",
+    "korean": "지도자"
+  },
+  {
+    "number": "234",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Roles",
+    "english": "captain",
+    "germany": "Kapitän",
+    "korean": "선장"
+  },
+  {
+    "number": "235",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Roles",
+    "english": "member",
+    "germany": "Mitglied",
+    "korean": "회원"
+  },
+  {
+    "number": "236",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Roles",
+    "english": "guest",
+    "germany": "Gast",
+    "korean": "손님"
+  },
+  {
+    "number": "237",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Roles",
+    "english": "client",
+    "germany": "Klient",
+    "korean": "고객"
+  },
+  {
+    "number": "238",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Roles",
+    "english": "player",
+    "germany": "Spieler",
+    "korean": "선수"
+  },
+  {
+    "number": "239",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Roles",
+    "english": "expert",
+    "germany": "Experte",
+    "korean": "전문가"
+  },
+  {
+    "number": "240",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Roles",
+    "english": "beginner",
+    "germany": "Anfänger",
+    "korean": "초보자"
+  },
+  {
+    "number": "241",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Body parts",
+    "english": "hand",
+    "germany": "Hand",
+    "korean": "손"
+  },
+  {
+    "number": "242",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Body parts",
+    "english": "head",
+    "germany": "Kopf",
+    "korean": "머리"
+  },
+  {
+    "number": "243",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Body parts",
+    "english": "eye",
+    "germany": "Auge",
+    "korean": "눈"
+  },
+  {
+    "number": "244",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Body parts",
+    "english": "ear",
+    "germany": "Ohr",
+    "korean": "귀"
+  },
+  {
+    "number": "245",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Body parts",
+    "english": "nose",
+    "germany": "Nase",
+    "korean": "코"
+  },
+  {
+    "number": "246",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Body parts",
+    "english": "mouth",
+    "germany": "Mund",
+    "korean": "입"
+  },
+  {
+    "number": "247",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Body parts",
+    "english": "arm",
+    "germany": "Arm",
+    "korean": "팔"
+  },
+  {
+    "number": "248",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Body parts",
+    "english": "leg",
+    "germany": "Bein",
+    "korean": "다리"
+  },
+  {
+    "number": "249",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Body parts",
+    "english": "foot",
+    "germany": "Fuß",
+    "korean": "발"
+  },
+  {
+    "number": "250",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Body parts",
+    "english": "body",
+    "germany": "Körper",
+    "korean": "몸"
+  },
+  {
+    "number": "251",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Health",
+    "english": "pain",
+    "germany": "Schmerz",
+    "korean": "통증"
+  },
+  {
+    "number": "252",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Health",
+    "english": "fever",
+    "germany": "Fieber",
+    "korean": "열"
+  },
+  {
+    "number": "253",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Health",
+    "english": "cold",
+    "germany": "Erkältung",
+    "korean": "감기"
+  },
+  {
+    "number": "254",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Health",
+    "english": "medicine",
+    "germany": "Medizin",
+    "korean": "약"
+  },
+  {
+    "number": "255",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Health",
+    "english": "hospital",
+    "germany": "Krankenhaus",
+    "korean": "병원"
+  },
+  {
+    "number": "256",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Health",
+    "english": "clinic",
+    "germany": "Klinik",
+    "korean": "진료소"
+  },
+  {
+    "number": "257",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Health",
+    "english": "health",
+    "germany": "Gesundheit",
+    "korean": "건강"
+  },
+  {
+    "number": "258",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Health",
+    "english": "doctor",
+    "germany": "Arzt",
+    "korean": "의사"
+  },
+  {
+    "number": "259",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Health",
+    "english": "pill",
+    "germany": "Pille",
+    "korean": "알약"
+  },
+  {
+    "number": "260",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Health",
+    "english": "rest",
+    "germany": "Ruhe",
+    "korean": "휴식"
+  },
+  {
+    "number": "261",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Life stages",
+    "english": "child",
+    "germany": "Kind",
+    "korean": "아이"
+  },
+  {
+    "number": "262",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Life stages",
+    "english": "adult",
+    "germany": "Erwachsener",
+    "korean": "성인"
+  },
+  {
+    "number": "263",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Life stages",
+    "english": "young",
+    "germany": "jung",
+    "korean": "어린"
+  },
+  {
+    "number": "264",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Life stages",
+    "english": "old",
+    "germany": "alt",
+    "korean": "나이 든"
+  },
+  {
+    "number": "265",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Life stages",
+    "english": "teenager",
+    "germany": "Teenager",
+    "korean": "십대"
+  },
+  {
+    "number": "266",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Life stages",
+    "english": "senior",
+    "germany": "Senior",
+    "korean": "어르신"
+  },
+  {
+    "number": "267",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Life stages",
+    "english": "birth",
+    "germany": "Geburt",
+    "korean": "탄생"
+  },
+  {
+    "number": "268",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Life stages",
+    "english": "death",
+    "germany": "Tod",
+    "korean": "죽음"
+  },
+  {
+    "number": "269",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Life stages",
+    "english": "life",
+    "germany": "Leben",
+    "korean": "삶"
+  },
+  {
+    "number": "270",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Life stages",
+    "english": "future",
+    "germany": "Zukunft",
+    "korean": "미래"
+  },
+  {
+    "number": "271",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Personality",
+    "english": "hero",
+    "germany": "Held",
+    "korean": "영웅"
+  },
+  {
+    "number": "272",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Personality",
+    "english": "leader",
+    "germany": "Anführer",
+    "korean": "지도자"
+  },
+  {
+    "number": "273",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Personality",
+    "english": "brave",
+    "germany": "mutig",
+    "korean": "용감한"
+  },
+  {
+    "number": "274",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Personality",
+    "english": "kind",
+    "germany": "nett",
+    "korean": "친절한"
+  },
+  {
+    "number": "275",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Personality",
+    "english": "smart",
+    "germany": "intelligent",
+    "korean": "똑똑한"
+  },
+  {
+    "number": "276",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Personality",
+    "english": "funny",
+    "germany": "lustig",
+    "korean": "재미있는"
+  },
+  {
+    "number": "277",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Personality",
+    "english": "honest",
+    "germany": "ehrlich",
+    "korean": "정직한"
+  },
+  {
+    "number": "278",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Personality",
+    "english": "strong",
+    "germany": "stark",
+    "korean": "강한"
+  },
+  {
+    "number": "279",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Personality",
+    "english": "weak",
+    "germany": "schwach",
+    "korean": "약한"
+  },
+  {
+    "number": "280",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Personality",
+    "english": "calm",
+    "germany": "ruhig",
+    "korean": "차분한"
+  },
+  {
+    "number": "281",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Social",
+    "english": "neighbor",
+    "germany": "Nachbar",
+    "korean": "이웃"
+  },
+  {
+    "number": "282",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Social",
+    "english": "guest",
+    "germany": "Gast",
+    "korean": "손님"
+  },
+  {
+    "number": "283",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Social",
+    "english": "crowd",
+    "germany": "Menge",
+    "korean": "군중"
+  },
+  {
+    "number": "284",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Social",
+    "english": "person",
+    "germany": "Person",
+    "korean": "사람"
+  },
+  {
+    "number": "285",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Social",
+    "english": "human",
+    "germany": "Mensch",
+    "korean": "인간"
+  },
+  {
+    "number": "286",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Social",
+    "english": "people",
+    "germany": "Leute",
+    "korean": "사람들"
+  },
+  {
+    "number": "287",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Social",
+    "english": "man",
+    "germany": "Mann",
+    "korean": "남자"
+  },
+  {
+    "number": "288",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Social",
+    "english": "woman",
+    "germany": "Frau",
+    "korean": "여자"
+  },
+  {
+    "number": "289",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Social",
+    "english": "boy",
+    "germany": "Junge",
+    "korean": "소년"
+  },
+  {
+    "number": "290",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Social",
+    "english": "girl",
+    "germany": "Mädchen",
+    "korean": "소녀"
+  },
+  {
+    "number": "291",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Abstract people",
+    "english": "someone",
+    "germany": "jemand",
+    "korean": "누군가"
+  },
+  {
+    "number": "292",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Abstract people",
+    "english": "nobody",
+    "germany": "niemand",
+    "korean": "아무도"
+  },
+  {
+    "number": "293",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Abstract people",
+    "english": "everyone",
+    "germany": "jeder",
+    "korean": "모든 사람"
+  },
+  {
+    "number": "294",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Abstract people",
+    "english": "anyone",
+    "germany": "jemand",
+    "korean": "누구든지"
+  },
+  {
+    "number": "295",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Abstract people",
+    "english": "anybody",
+    "germany": "jemand",
+    "korean": "누구든지"
+  },
+  {
+    "number": "296",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Abstract people",
+    "english": "somebody",
+    "germany": "jemand",
+    "korean": "누군가"
+  },
+  {
+    "number": "297",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Abstract people",
+    "english": "no one",
+    "germany": "niemand",
+    "korean": "아무도 없음"
+  },
+  {
+    "number": "298",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Abstract people",
+    "english": "everybody",
+    "germany": "alle",
+    "korean": "모두"
+  },
+  {
+    "number": "299",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Abstract people",
+    "english": "them",
+    "germany": "sie",
+    "korean": "그들"
+  },
+  {
+    "number": "300",
+    "category": "Everyday Nouns – People & Life",
+    "subcategory": "Abstract people",
+    "english": "us",
+    "germany": "uns",
+    "korean": "우리"
+  },
+  {
+    "number": "301",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Home",
+    "english": "bed",
+    "germany": "Bett",
+    "korean": "침대"
+  },
+  {
+    "number": "302",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Home",
+    "english": "table",
+    "germany": "Tisch",
+    "korean": "테이블"
+  },
+  {
+    "number": "303",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Home",
+    "english": "chair",
+    "germany": "Stuhl",
+    "korean": "의자"
+  },
+  {
+    "number": "304",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Home",
+    "english": "door",
+    "germany": "Tür",
+    "korean": "문"
+  },
+  {
+    "number": "305",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Home",
+    "english": "window",
+    "germany": "Fenster",
+    "korean": "창문"
+  },
+  {
+    "number": "306",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Home",
+    "english": "floor",
+    "germany": "Boden",
+    "korean": "바닥"
+  },
+  {
+    "number": "307",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Home",
+    "english": "wall",
+    "germany": "Wand",
+    "korean": "벽"
+  },
+  {
+    "number": "308",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Home",
+    "english": "room",
+    "germany": "Zimmer",
+    "korean": "방"
+  },
+  {
+    "number": "309",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Home",
+    "english": "house",
+    "germany": "Haus",
+    "korean": "집"
+  },
+  {
+    "number": "310",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Home",
+    "english": "light",
+    "germany": "Licht",
+    "korean": "빛/전등"
+  },
+  {
+    "number": "311",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Kitchen",
+    "english": "spoon",
+    "germany": "Löffel",
+    "korean": "스푼"
+  },
+  {
+    "number": "312",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Kitchen",
+    "english": "plate",
+    "germany": "Teller",
+    "korean": "접시"
+  },
+  {
+    "number": "313",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Kitchen",
+    "english": "fork",
+    "germany": "Gabel",
+    "korean": "포크"
+  },
+  {
+    "number": "314",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Kitchen",
+    "english": "knife",
+    "germany": "Messer",
+    "korean": "칼"
+  },
+  {
+    "number": "315",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Kitchen",
+    "english": "cup",
+    "germany": "Tasse",
+    "korean": "컵"
+  },
+  {
+    "number": "316",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Kitchen",
+    "english": "bowl",
+    "germany": "Schüssel",
+    "korean": "그릇"
+  },
+  {
+    "number": "317",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Kitchen",
+    "english": "stove",
+    "germany": "Herd",
+    "korean": "가스레인지"
+  },
+  {
+    "number": "318",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Kitchen",
+    "english": "fridge",
+    "germany": "Kühlschrank",
+    "korean": "냉장고"
+  },
+  {
+    "number": "319",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Kitchen",
+    "english": "pot",
+    "germany": "Topf",
+    "korean": "냄비"
+  },
+  {
+    "number": "320",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Kitchen",
+    "english": "pan",
+    "germany": "Pfanne",
+    "korean": "팬"
+  },
+  {
+    "number": "321",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Technology",
+    "english": "phone",
+    "germany": "Telefon",
+    "korean": "전화기"
+  },
+  {
+    "number": "322",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Technology",
+    "english": "laptop",
+    "germany": "Laptop",
+    "korean": "노트북"
+  },
+  {
+    "number": "323",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Technology",
+    "english": "computer",
+    "germany": "Computer",
+    "korean": "컴퓨터"
+  },
+  {
+    "number": "324",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Technology",
+    "english": "internet",
+    "germany": "Internet",
+    "korean": "인터넷"
+  },
+  {
+    "number": "325",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Technology",
+    "english": "screen",
+    "germany": "Bildschirm",
+    "korean": "화면"
+  },
+  {
+    "number": "326",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Technology",
+    "english": "keyboard",
+    "germany": "Tastatur",
+    "korean": "키보드"
+  },
+  {
+    "number": "327",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Technology",
+    "english": "mouse",
+    "germany": "Maus",
+    "korean": "마우스"
+  },
+  {
+    "number": "328",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Technology",
+    "english": "charger",
+    "germany": "Ladegerät",
+    "korean": "충전기"
+  },
+  {
+    "number": "329",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Technology",
+    "english": "battery",
+    "germany": "Batterie",
+    "korean": "배터리"
+  },
+  {
+    "number": "330",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Technology",
+    "english": "camera",
+    "germany": "Kamera",
+    "korean": "카메라"
+  },
+  {
+    "number": "331",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "School",
+    "english": "book",
+    "germany": "Buch",
+    "korean": "책"
+  },
+  {
+    "number": "332",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "School",
+    "english": "pen",
+    "germany": "Stift",
+    "korean": "펜"
+  },
+  {
+    "number": "333",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "School",
+    "english": "pencil",
+    "germany": "Bleistift",
+    "korean": "연필"
+  },
+  {
+    "number": "334",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "School",
+    "english": "paper",
+    "germany": "Papier",
+    "korean": "종이"
+  },
+  {
+    "number": "335",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "School",
+    "english": "notebook",
+    "germany": "Notizbuch",
+    "korean": "노트"
+  },
+  {
+    "number": "336",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "School",
+    "english": "classroom",
+    "germany": "Klassenzimmer",
+    "korean": "교실"
+  },
+  {
+    "number": "337",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "School",
+    "english": "student",
+    "germany": "Student",
+    "korean": "학생"
+  },
+  {
+    "number": "338",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "School",
+    "english": "teacher",
+    "germany": "Lehrer",
+    "korean": "선생님"
+  },
+  {
+    "number": "339",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "School",
+    "english": "desk",
+    "germany": "Schreibtisch",
+    "korean": "책상"
+  },
+  {
+    "number": "340",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "School",
+    "english": "blackboard",
+    "germany": "Tafel",
+    "korean": "칠판"
+  },
+  {
+    "number": "341",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Office",
+    "english": "desk",
+    "germany": "Schreibtisch",
+    "korean": "책상"
+  },
+  {
+    "number": "342",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Office",
+    "english": "file",
+    "germany": "Datei",
+    "korean": "파일"
+  },
+  {
+    "number": "343",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Office",
+    "english": "folder",
+    "germany": "Ordner",
+    "korean": "폴더"
+  },
+  {
+    "number": "344",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Office",
+    "english": "email",
+    "germany": "E-Mail",
+    "korean": "이메일"
+  },
+  {
+    "number": "345",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Office",
+    "english": "meeting",
+    "germany": "Meeting",
+    "korean": "회의"
+  },
+  {
+    "number": "346",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Office",
+    "english": "project",
+    "germany": "Projekt",
+    "korean": "프로젝트"
+  },
+  {
+    "number": "347",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Office",
+    "english": "report",
+    "germany": "Bericht",
+    "korean": "보고서"
+  },
+  {
+    "number": "348",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Office",
+    "english": "printer",
+    "germany": "Drucker",
+    "korean": "프린터"
+  },
+  {
+    "number": "349",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Office",
+    "english": "paperclip",
+    "germany": "Büroklammer",
+    "korean": "클립"
+  },
+  {
+    "number": "350",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Office",
+    "english": "stapler",
+    "germany": "Hefter",
+    "korean": "스테이플러"
+  },
+  {
+    "number": "351",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Buildings",
+    "english": "house",
+    "germany": "Haus",
+    "korean": "집"
+  },
+  {
+    "number": "352",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Buildings",
+    "english": "store",
+    "germany": "Laden",
+    "korean": "가게"
+  },
+  {
+    "number": "353",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Buildings",
+    "english": "shop",
+    "germany": "Geschäft",
+    "korean": "상점"
+  },
+  {
+    "number": "354",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Buildings",
+    "english": "office",
+    "germany": "Büro",
+    "korean": "사무실"
+  },
+  {
+    "number": "355",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Buildings",
+    "english": "bank",
+    "germany": "Bank",
+    "korean": "은행"
+  },
+  {
+    "number": "356",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Buildings",
+    "english": "library",
+    "germany": "Bibliothek",
+    "korean": "도서관"
+  },
+  {
+    "number": "357",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Buildings",
+    "english": "museum",
+    "germany": "Museum",
+    "korean": "박물관"
+  },
+  {
+    "number": "358",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Buildings",
+    "english": "hotel",
+    "germany": "Hotel",
+    "korean": "호텔"
+  },
+  {
+    "number": "359",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Buildings",
+    "english": "restaurant",
+    "germany": "Restaurant",
+    "korean": "레스토랑"
+  },
+  {
+    "number": "360",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Buildings",
+    "english": "station",
+    "germany": "Bahnhof",
+    "korean": "역"
+  },
+  {
+    "number": "361",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "City",
+    "english": "road",
+    "germany": "Straße",
+    "korean": "도로"
+  },
+  {
+    "number": "362",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "City",
+    "english": "park",
+    "germany": "Park",
+    "korean": "공원"
+  },
+  {
+    "number": "363",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "City",
+    "english": "street",
+    "germany": "Straße",
+    "korean": "거리"
+  },
+  {
+    "number": "364",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "City",
+    "english": "bridge",
+    "germany": "Brücke",
+    "korean": "다리"
+  },
+  {
+    "number": "365",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "City",
+    "english": "river",
+    "germany": "Fluss",
+    "korean": "강"
+  },
+  {
+    "number": "366",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "City",
+    "english": "center",
+    "germany": "Zentrum",
+    "korean": "중심"
+  },
+  {
+    "number": "367",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "City",
+    "english": "square",
+    "germany": "Platz",
+    "korean": "광장"
+  },
+  {
+    "number": "368",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "City",
+    "english": "garden",
+    "germany": "Garten",
+    "korean": "정원"
+  },
+  {
+    "number": "369",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "City",
+    "english": "market",
+    "germany": "Markt",
+    "korean": "시장"
+  },
+  {
+    "number": "370",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "City",
+    "english": "area",
+    "germany": "Bereich",
+    "korean": "지역"
+  },
+  {
+    "number": "371",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Transport",
+    "english": "bus",
+    "germany": "Bus",
+    "korean": "버스"
+  },
+  {
+    "number": "372",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Transport",
+    "english": "train",
+    "germany": "Zug",
+    "korean": "기차"
+  },
+  {
+    "number": "373",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Transport",
+    "english": "car",
+    "germany": "Auto",
+    "korean": "자동차"
+  },
+  {
+    "number": "374",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Transport",
+    "english": "bicycle",
+    "germany": "Fahrrad",
+    "korean": "자전거"
+  },
+  {
+    "number": "375",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Transport",
+    "english": "plane",
+    "germany": "Flugzeug",
+    "korean": "비행기"
+  },
+  {
+    "number": "376",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Transport",
+    "english": "boat",
+    "germany": "Boot",
+    "korean": "보트"
+  },
+  {
+    "number": "377",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Transport",
+    "english": "ship",
+    "germany": "Schiff",
+    "korean": "배"
+  },
+  {
+    "number": "378",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Transport",
+    "english": "taxi",
+    "germany": "Taxi",
+    "korean": "택시"
+  },
+  {
+    "number": "379",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Transport",
+    "english": "ticket",
+    "germany": "Ticket",
+    "korean": "티켓"
+  },
+  {
+    "number": "380",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Transport",
+    "english": "station",
+    "germany": "Station",
+    "korean": "정류장/역"
+  },
+  {
+    "number": "381",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Nature",
+    "english": "tree",
+    "germany": "Baum",
+    "korean": "나무"
+  },
+  {
+    "number": "382",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Nature",
+    "english": "river",
+    "germany": "Fluss",
+    "korean": "강"
+  },
+  {
+    "number": "383",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Nature",
+    "english": "mountain",
+    "germany": "Berg",
+    "korean": "산"
+  },
+  {
+    "number": "384",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Nature",
+    "english": "sea",
+    "germany": "Meer",
+    "korean": "바다"
+  },
+  {
+    "number": "385",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Nature",
+    "english": "ocean",
+    "germany": "Ozean",
+    "korean": "대양"
+  },
+  {
+    "number": "386",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Nature",
+    "english": "flower",
+    "germany": "Blume",
+    "korean": "꽃"
+  },
+  {
+    "number": "387",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Nature",
+    "english": "sun",
+    "germany": "Sonne",
+    "korean": "태양"
+  },
+  {
+    "number": "388",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Nature",
+    "english": "moon",
+    "germany": "Mond",
+    "korean": "달"
+  },
+  {
+    "number": "389",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Nature",
+    "english": "star",
+    "germany": "Stern",
+    "korean": "별"
+  },
+  {
+    "number": "390",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Nature",
+    "english": "earth",
+    "germany": "Erde",
+    "korean": "지구"
+  },
+  {
+    "number": "391",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Misc objects",
+    "english": "box",
+    "germany": "Box",
+    "korean": "상자"
+  },
+  {
+    "number": "392",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Misc objects",
+    "english": "key",
+    "germany": "Schlüssel",
+    "korean": "열쇠"
+  },
+  {
+    "number": "393",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Misc objects",
+    "english": "bag",
+    "germany": "Tasche",
+    "korean": "가방"
+  },
+  {
+    "number": "394",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Misc objects",
+    "english": "clock",
+    "germany": "Uhr",
+    "korean": "시계"
+  },
+  {
+    "number": "395",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Misc objects",
+    "english": "watch",
+    "germany": "Armbanduhr",
+    "korean": "손목시계"
+  },
+  {
+    "number": "396",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Misc objects",
+    "english": "mirror",
+    "germany": "Spiegel",
+    "korean": "거울"
+  },
+  {
+    "number": "397",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Misc objects",
+    "english": "wallet",
+    "germany": "Brieftasche",
+    "korean": "지갑"
+  },
+  {
+    "number": "398",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Misc objects",
+    "english": "card",
+    "germany": "Karte",
+    "korean": "카드"
+  },
+  {
+    "number": "399",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Misc objects",
+    "english": "coin",
+    "germany": "Münze",
+    "korean": "동전"
+  },
+  {
+    "number": "400",
+    "category": "Everyday Nouns – Objects & Places",
+    "subcategory": "Misc objects",
+    "english": "brush",
+    "germany": "Bürste",
+    "korean": "브러시"
+  },
+  {
+    "number": "401",
+    "category": "Adjectives",
+    "subcategory": "Size",
+    "english": "big",
+    "germany": "groß",
+    "korean": "큰"
+  },
+  {
+    "number": "402",
+    "category": "Adjectives",
+    "subcategory": "Size",
+    "english": "small",
+    "germany": "klein",
+    "korean": "작은"
+  },
+  {
+    "number": "403",
+    "category": "Adjectives",
+    "subcategory": "Size",
+    "english": "large",
+    "germany": "groß",
+    "korean": "거대한/큰"
+  },
+  {
+    "number": "404",
+    "category": "Adjectives",
+    "subcategory": "Size",
+    "english": "tiny",
+    "germany": "winzig",
+    "korean": "아주 작은"
+  },
+  {
+    "number": "405",
+    "category": "Adjectives",
+    "subcategory": "Size",
+    "english": "huge",
+    "germany": "riesig",
+    "korean": "거대한"
+  },
+  {
+    "number": "406",
+    "category": "Adjectives",
+    "subcategory": "Size",
+    "english": "wide",
+    "germany": "weit",
+    "korean": "넓은"
+  },
+  {
+    "number": "407",
+    "category": "Adjectives",
+    "subcategory": "Size",
+    "english": "narrow",
+    "germany": "eng",
+    "korean": "좁은"
+  },
+  {
+    "number": "408",
+    "category": "Adjectives",
+    "subcategory": "Size",
+    "english": "tall",
+    "germany": "hoch/groß",
+    "korean": "키가 큰"
+  },
+  {
+    "number": "409",
+    "category": "Adjectives",
+    "subcategory": "Size",
+    "english": "short",
+    "germany": "kurz/klein",
+    "korean": "짧은/키가 작은"
+  },
+  {
+    "number": "410",
+    "category": "Adjectives",
+    "subcategory": "Size",
+    "english": "long",
+    "germany": "lang",
+    "korean": "긴"
+  },
+  {
+    "number": "411",
+    "category": "Adjectives",
+    "subcategory": "Quality",
+    "english": "good",
+    "germany": "gut",
+    "korean": "좋은"
+  },
+  {
+    "number": "412",
+    "category": "Adjectives",
+    "subcategory": "Quality",
+    "english": "bad",
+    "germany": "schlecht",
+    "korean": "나쁜"
+  },
+  {
+    "number": "413",
+    "category": "Adjectives",
+    "subcategory": "Quality",
+    "english": "great",
+    "germany": "großartig",
+    "korean": "대단한"
+  },
+  {
+    "number": "414",
+    "category": "Adjectives",
+    "subcategory": "Quality",
+    "english": "nice",
+    "germany": "nett",
+    "korean": "멋진/친절한"
+  },
+  {
+    "number": "415",
+    "category": "Adjectives",
+    "subcategory": "Quality",
+    "english": "terrible",
+    "germany": "schrecklich",
+    "korean": "끔찍한"
+  },
+  {
+    "number": "416",
+    "category": "Adjectives",
+    "subcategory": "Quality",
+    "english": "excellent",
+    "germany": "ausgezeichnet",
+    "korean": "뛰어난"
+  },
+  {
+    "number": "417",
+    "category": "Adjectives",
+    "subcategory": "Quality",
+    "english": "poor",
+    "germany": "arm/schlecht",
+    "korean": "가난한/형편없는"
+  },
+  {
+    "number": "418",
+    "category": "Adjectives",
+    "subcategory": "Quality",
+    "english": "perfect",
+    "germany": "perfekt",
+    "korean": "완벽한"
+  },
+  {
+    "number": "419",
+    "category": "Adjectives",
+    "subcategory": "Quality",
+    "english": "okay",
+    "germany": "okay",
+    "korean": "괜찮은"
+  },
+  {
+    "number": "420",
+    "category": "Adjectives",
+    "subcategory": "Quality",
+    "english": "fine",
+    "germany": "gut/fein",
+    "korean": "좋은/미세한"
+  },
+  {
+    "number": "421",
+    "category": "Adjectives",
+    "subcategory": "Speed",
+    "english": "fast",
+    "germany": "schnell",
+    "korean": "빠른"
+  },
+  {
+    "number": "422",
+    "category": "Adjectives",
+    "subcategory": "Speed",
+    "english": "slow",
+    "germany": "langsam",
+    "korean": "느린"
+  },
+  {
+    "number": "423",
+    "category": "Adjectives",
+    "subcategory": "Speed",
+    "english": "quick",
+    "germany": "schnell",
+    "korean": "신속한"
+  },
+  {
+    "number": "424",
+    "category": "Adjectives",
+    "subcategory": "Speed",
+    "english": "rapid",
+    "germany": "schnell",
+    "korean": "급속한"
+  },
+  {
+    "number": "425",
+    "category": "Adjectives",
+    "subcategory": "Speed",
+    "english": "steady",
+    "germany": "stetig",
+    "korean": "꾸준한"
+  },
+  {
+    "number": "426",
+    "category": "Adjectives",
+    "subcategory": "Speed",
+    "english": "sudden",
+    "germany": "plötzlich",
+    "korean": "갑작스러운"
+  },
+  {
+    "number": "427",
+    "category": "Adjectives",
+    "subcategory": "Speed",
+    "english": "immediate",
+    "germany": "sofortig",
+    "korean": "즉각적인"
+  },
+  {
+    "number": "428",
+    "category": "Adjectives",
+    "subcategory": "Speed",
+    "english": "brief",
+    "germany": "kurz",
+    "korean": "잠깐의"
+  },
+  {
+    "number": "429",
+    "category": "Adjectives",
+    "subcategory": "Speed",
+    "english": "long",
+    "germany": "lang",
+    "korean": "긴"
+  },
+  {
+    "number": "430",
+    "category": "Adjectives",
+    "subcategory": "Speed",
+    "english": "short",
+    "germany": "kurz",
+    "korean": "짧은"
+  },
+  {
+    "number": "431",
+    "category": "Adjectives",
+    "subcategory": "Emotion",
+    "english": "happy",
+    "germany": "glücklich",
+    "korean": "행복한"
+  },
+  {
+    "number": "432",
+    "category": "Adjectives",
+    "subcategory": "Emotion",
+    "english": "sad",
+    "germany": "traurig",
+    "korean": "슬픈"
+  },
+  {
+    "number": "433",
+    "category": "Adjectives",
+    "subcategory": "Emotion",
+    "english": "angry",
+    "germany": "wütend",
+    "korean": "화난"
+  },
+  {
+    "number": "434",
+    "category": "Adjectives",
+    "subcategory": "Emotion",
+    "english": "scared",
+    "germany": "verängstigt",
+    "korean": "무서워하는"
+  },
+  {
+    "number": "435",
+    "category": "Adjectives",
+    "subcategory": "Emotion",
+    "english": "excited",
+    "germany": "aufgeregt",
+    "korean": "신난"
+  },
+  {
+    "number": "436",
+    "category": "Adjectives",
+    "subcategory": "Emotion",
+    "english": "bored",
+    "germany": "gelangweilt",
+    "korean": "지루한"
+  },
+  {
+    "number": "437",
+    "category": "Adjectives",
+    "subcategory": "Emotion",
+    "english": "calm",
+    "germany": "ruhig",
+    "korean": "차분한"
+  },
+  {
+    "number": "438",
+    "category": "Adjectives",
+    "subcategory": "Emotion",
+    "english": "nervous",
+    "germany": "nervös",
+    "korean": "긴장한"
+  },
+  {
+    "number": "439",
+    "category": "Adjectives",
+    "subcategory": "Emotion",
+    "english": "tired",
+    "germany": "müde",
+    "korean": "피곤한"
+  },
+  {
+    "number": "440",
+    "category": "Adjectives",
+    "subcategory": "Emotion",
+    "english": "surprised",
+    "germany": "überrascht",
+    "korean": "놀란"
+  },
+  {
+    "number": "441",
+    "category": "Adjectives",
+    "subcategory": "Physical",
+    "english": "hot",
+    "germany": "heiß",
+    "korean": "뜨거운"
+  },
+  {
+    "number": "442",
+    "category": "Adjectives",
+    "subcategory": "Physical",
+    "english": "cold",
+    "germany": "kalt",
+    "korean": "추운"
+  },
+  {
+    "number": "443",
+    "category": "Adjectives",
+    "subcategory": "Physical",
+    "english": "warm",
+    "germany": "warm",
+    "korean": "따뜻한"
+  },
+  {
+    "number": "444",
+    "category": "Adjectives",
+    "subcategory": "Physical",
+    "english": "cool",
+    "germany": "kühl",
+    "korean": "시원한"
+  },
+  {
+    "number": "445",
+    "category": "Adjectives",
+    "subcategory": "Physical",
+    "english": "dry",
+    "germany": "trocken",
+    "korean": "건조한"
+  },
+  {
+    "number": "446",
+    "category": "Adjectives",
+    "subcategory": "Physical",
+    "english": "wet",
+    "germany": "nass",
+    "korean": "젖은"
+  },
+  {
+    "number": "447",
+    "category": "Adjectives",
+    "subcategory": "Physical",
+    "english": "soft",
+    "germany": "weich",
+    "korean": "부드러운"
+  },
+  {
+    "number": "448",
+    "category": "Adjectives",
+    "subcategory": "Physical",
+    "english": "hard",
+    "germany": "hart",
+    "korean": "딱딱한"
+  },
+  {
+    "number": "449",
+    "category": "Adjectives",
+    "subcategory": "Physical",
+    "english": "smooth",
+    "germany": "glatt",
+    "korean": "매끄러운"
+  },
+  {
+    "number": "450",
+    "category": "Adjectives",
+    "subcategory": "Physical",
+    "english": "rough",
+    "germany": "rau",
+    "korean": "거친"
+  },
+  {
+    "number": "451",
+    "category": "Adjectives",
+    "subcategory": "Difficulty",
+    "english": "easy",
+    "germany": "einfach",
+    "korean": "쉬운"
+  },
+  {
+    "number": "452",
+    "category": "Adjectives",
+    "subcategory": "Difficulty",
+    "english": "hard",
+    "germany": "schwer",
+    "korean": "어려운"
+  },
+  {
+    "number": "453",
+    "category": "Adjectives",
+    "subcategory": "Difficulty",
+    "english": "difficult",
+    "germany": "schwierig",
+    "korean": "어려운"
+  },
+  {
+    "number": "454",
+    "category": "Adjectives",
+    "subcategory": "Difficulty",
+    "english": "simple",
+    "germany": "einfach",
+    "korean": "단순한"
+  },
+  {
+    "number": "455",
+    "category": "Adjectives",
+    "subcategory": "Difficulty",
+    "english": "complex",
+    "germany": "komplex",
+    "korean": "복잡한"
+  },
+  {
+    "number": "456",
+    "category": "Adjectives",
+    "subcategory": "Difficulty",
+    "english": "clear",
+    "germany": "klar",
+    "korean": "명확한"
+  },
+  {
+    "number": "457",
+    "category": "Adjectives",
+    "subcategory": "Difficulty",
+    "english": "tough",
+    "germany": "zäh/hart",
+    "korean": "힘든"
+  },
+  {
+    "number": "458",
+    "category": "Adjectives",
+    "subcategory": "Difficulty",
+    "english": "heavy",
+    "germany": "schwer",
+    "korean": "무거운"
+  },
+  {
+    "number": "459",
+    "category": "Adjectives",
+    "subcategory": "Difficulty",
+    "english": "light",
+    "germany": "leicht",
+    "korean": "가벼운"
+  },
+  {
+    "number": "460",
+    "category": "Adjectives",
+    "subcategory": "Difficulty",
+    "english": "possible",
+    "germany": "möglich",
+    "korean": "가능한"
+  },
+  {
+    "number": "461",
+    "category": "Adjectives",
+    "subcategory": "Appearance",
+    "english": "beautiful",
+    "germany": "schön",
+    "korean": "아름다운"
+  },
+  {
+    "number": "462",
+    "category": "Adjectives",
+    "subcategory": "Appearance",
+    "english": "ugly",
+    "germany": "hässlich",
+    "korean": "못생긴"
+  },
+  {
+    "number": "463",
+    "category": "Adjectives",
+    "subcategory": "Appearance",
+    "english": "clean",
+    "germany": "sauber",
+    "korean": "깨끗한"
+  },
+  {
+    "number": "464",
+    "category": "Adjectives",
+    "subcategory": "Appearance",
+    "english": "dirty",
+    "germany": "schmutzig",
+    "korean": "더러운"
+  },
+  {
+    "number": "465",
+    "category": "Adjectives",
+    "subcategory": "Appearance",
+    "english": "straight",
+    "germany": "gerade",
+    "korean": "직선의/똑바른"
+  },
+  {
+    "number": "466",
+    "category": "Adjectives",
+    "subcategory": "Appearance",
+    "english": "curly",
+    "germany": "lockig",
+    "korean": "곱슬거리는"
+  },
+  {
+    "number": "467",
+    "category": "Adjectives",
+    "subcategory": "Appearance",
+    "english": "bright",
+    "germany": "hell",
+    "korean": "밝은"
+  },
+  {
+    "number": "468",
+    "category": "Adjectives",
+    "subcategory": "Appearance",
+    "english": "dark",
+    "germany": "dunkel",
+    "korean": "어두운"
+  },
+  {
+    "number": "469",
+    "category": "Adjectives",
+    "subcategory": "Appearance",
+    "english": "colorful",
+    "germany": "bunt",
+    "korean": "다채로운"
+  },
+  {
+    "number": "470",
+    "category": "Adjectives",
+    "subcategory": "Appearance",
+    "english": "pale",
+    "germany": "blass",
+    "korean": "창백한"
+  },
+  {
+    "number": "471",
+    "category": "Adjectives",
+    "subcategory": "Age",
+    "english": "new",
+    "germany": "neu",
+    "korean": "새로운"
+  },
+  {
+    "number": "472",
+    "category": "Adjectives",
+    "subcategory": "Age",
+    "english": "old",
+    "germany": "alt",
+    "korean": "오래된/나이 든"
+  },
+  {
+    "number": "473",
+    "category": "Adjectives",
+    "subcategory": "Age",
+    "english": "young",
+    "germany": "jung",
+    "korean": "어린"
+  },
+  {
+    "number": "474",
+    "category": "Adjectives",
+    "subcategory": "Age",
+    "english": "recent",
+    "germany": "kürzlich",
+    "korean": "최근의"
+  },
+  {
+    "number": "475",
+    "category": "Adjectives",
+    "subcategory": "Age",
+    "english": "modern",
+    "germany": "modern",
+    "korean": "현대적인"
+  },
+  {
+    "number": "476",
+    "category": "Adjectives",
+    "subcategory": "Age",
+    "english": "ancient",
+    "germany": "alt/antik",
+    "korean": "고대의"
+  },
+  {
+    "number": "477",
+    "category": "Adjectives",
+    "subcategory": "Age",
+    "english": "early",
+    "germany": "früh",
+    "korean": "이른"
+  },
+  {
+    "number": "478",
+    "category": "Adjectives",
+    "subcategory": "Age",
+    "english": "late",
+    "germany": "spät",
+    "korean": "늦은"
+  },
+  {
+    "number": "479",
+    "category": "Adjectives",
+    "subcategory": "Age",
+    "english": "past",
+    "germany": "vergangen",
+    "korean": "과거의"
+  },
+  {
+    "number": "480",
+    "category": "Adjectives",
+    "subcategory": "Age",
+    "english": "future",
+    "germany": "zukünftig",
+    "korean": "미래의"
+  },
+  {
+    "number": "481",
+    "category": "Adjectives",
+    "subcategory": "Importance",
+    "english": "important",
+    "germany": "wichtig",
+    "korean": "중요한"
+  },
+  {
+    "number": "482",
+    "category": "Adjectives",
+    "subcategory": "Importance",
+    "english": "trivial",
+    "germany": "trivial",
+    "korean": "사소한"
+  },
+  {
+    "number": "483",
+    "category": "Adjectives",
+    "subcategory": "Importance",
+    "english": "main",
+    "germany": "Haupt-",
+    "korean": "주요한"
+  },
+  {
+    "number": "484",
+    "category": "Adjectives",
+    "subcategory": "Importance",
+    "english": "major",
+    "germany": "groß/wichtig",
+    "korean": "중대한"
+  },
+  {
+    "number": "485",
+    "category": "Adjectives",
+    "subcategory": "Importance",
+    "english": "minor",
+    "germany": "klein/unwichtig",
+    "korean": "사소한/부차적인"
+  },
+  {
+    "number": "486",
+    "category": "Adjectives",
+    "subcategory": "Importance",
+    "english": "special",
+    "germany": "speziell",
+    "korean": "특별한"
+  },
+  {
+    "number": "487",
+    "category": "Adjectives",
+    "subcategory": "Importance",
+    "english": "normal",
+    "germany": "normal",
+    "korean": "일반적인"
+  },
+  {
+    "number": "488",
+    "category": "Adjectives",
+    "subcategory": "Importance",
+    "english": "common",
+    "germany": "häufig/gemeinsam",
+    "korean": "흔한"
+  },
+  {
+    "number": "489",
+    "category": "Adjectives",
+    "subcategory": "Importance",
+    "english": "rare",
+    "germany": "selten",
+    "korean": "희귀한"
+  },
+  {
+    "number": "490",
+    "category": "Adjectives",
+    "subcategory": "Importance",
+    "english": "necessary",
+    "germany": "notwendig",
+    "korean": "필요한"
+  },
+  {
+    "number": "491",
+    "category": "Adjectives",
+    "subcategory": "Quantity",
+    "english": "full",
+    "germany": "voll",
+    "korean": "가득 찬"
+  },
+  {
+    "number": "492",
+    "category": "Adjectives",
+    "subcategory": "Quantity",
+    "english": "empty",
+    "germany": "leer",
+    "korean": "비어 있는"
+  },
+  {
+    "number": "493",
+    "category": "Adjectives",
+    "subcategory": "Quantity",
+    "english": "whole",
+    "germany": "ganz",
+    "korean": "전체의"
+  },
+  {
+    "number": "494",
+    "category": "Adjectives",
+    "subcategory": "Quantity",
+    "english": "part",
+    "germany": "Teil",
+    "korean": "부분적인"
+  },
+  {
+    "number": "495",
+    "category": "Adjectives",
+    "subcategory": "Quantity",
+    "english": "half",
+    "germany": "halb",
+    "korean": "절반의"
+  },
+  {
+    "number": "496",
+    "category": "Adjectives",
+    "subcategory": "Quantity",
+    "english": "double",
+    "germany": "doppelt",
+    "korean": "이중의"
+  },
+  {
+    "number": "497",
+    "category": "Adjectives",
+    "subcategory": "Quantity",
+    "english": "single",
+    "germany": "einzeln",
+    "korean": "단일의"
+  },
+  {
+    "number": "498",
+    "category": "Adjectives",
+    "subcategory": "Quantity",
+    "english": "extra",
+    "germany": "zusätzlich",
+    "korean": "추가의"
+  },
+  {
+    "number": "499",
+    "category": "Adjectives",
+    "subcategory": "Quantity",
+    "english": "enough",
+    "germany": "genug",
+    "korean": "충분한"
+  },
+  {
+    "number": "500",
+    "category": "Adjectives",
+    "subcategory": "Quantity",
+    "english": "too many",
+    "germany": "zu viele",
+    "korean": "너무 많은"
+  },
+  {
+    "number": "501",
+    "category": "Time & Numbers",
+    "subcategory": "Numbers 1-10",
+    "english": "one",
+    "germany": "eins",
+    "korean": "일(하나)"
+  },
+  {
+    "number": "502",
+    "category": "Time & Numbers",
+    "subcategory": "Numbers 1-10",
+    "english": "two",
+    "germany": "zwei",
+    "korean": "이(둘)"
+  },
+  {
+    "number": "503",
+    "category": "Time & Numbers",
+    "subcategory": "Numbers 1-10",
+    "english": "three",
+    "germany": "drei",
+    "korean": "삼(셋)"
+  },
+  {
+    "number": "504",
+    "category": "Time & Numbers",
+    "subcategory": "Numbers 1-10",
+    "english": "four",
+    "germany": "vier",
+    "korean": "사(넷)"
+  },
+  {
+    "number": "505",
+    "category": "Time & Numbers",
+    "subcategory": "Numbers 1-10",
+    "english": "five",
+    "germany": "fünf",
+    "korean": "오(다섯)"
+  },
+  {
+    "number": "506",
+    "category": "Time & Numbers",
+    "subcategory": "Numbers 1-10",
+    "english": "six",
+    "germany": "sechs",
+    "korean": "육(여섯)"
+  },
+  {
+    "number": "507",
+    "category": "Time & Numbers",
+    "subcategory": "Numbers 1-10",
+    "english": "seven",
+    "germany": "sieben",
+    "korean": "칠(일곱)"
+  },
+  {
+    "number": "508",
+    "category": "Time & Numbers",
+    "subcategory": "Numbers 1-10",
+    "english": "eight",
+    "germany": "acht",
+    "korean": "팔(여덟)"
+  },
+  {
+    "number": "509",
+    "category": "Time & Numbers",
+    "subcategory": "Numbers 1-10",
+    "english": "nine",
+    "germany": "neun",
+    "korean": "구(아홉)"
+  },
+  {
+    "number": "510",
+    "category": "Time & Numbers",
+    "subcategory": "Numbers 1-10",
+    "english": "ten",
+    "germany": "zehn",
+    "korean": "십(열)"
+  },
+  {
+    "number": "511",
+    "category": "Time & Numbers",
+    "subcategory": "Numbers 11-20",
+    "english": "eleven",
+    "germany": "elf",
+    "korean": "십일"
+  },
+  {
+    "number": "512",
+    "category": "Time & Numbers",
+    "subcategory": "Numbers 11-20",
+    "english": "twelve",
+    "germany": "zwölf",
+    "korean": "십이"
+  },
+  {
+    "number": "513",
+    "category": "Time & Numbers",
+    "subcategory": "Numbers 11-20",
+    "english": "thirteen",
+    "germany": "dreizehn",
+    "korean": "십삼"
+  },
+  {
+    "number": "514",
+    "category": "Time & Numbers",
+    "subcategory": "Numbers 11-20",
+    "english": "fourteen",
+    "germany": "vierzehn",
+    "korean": "십사"
+  },
+  {
+    "number": "515",
+    "category": "Time & Numbers",
+    "subcategory": "Numbers 11-20",
+    "english": "fifteen",
+    "germany": "fünfzehn",
+    "korean": "십오"
+  },
+  {
+    "number": "516",
+    "category": "Time & Numbers",
+    "subcategory": "Numbers 11-20",
+    "english": "sixteen",
+    "germany": "sechzehn",
+    "korean": "십육"
+  },
+  {
+    "number": "517",
+    "category": "Time & Numbers",
+    "subcategory": "Numbers 11-20",
+    "english": "seventeen",
+    "germany": "siebzehn",
+    "korean": "십칠"
+  },
+  {
+    "number": "518",
+    "category": "Time & Numbers",
+    "subcategory": "Numbers 11-20",
+    "english": "eighteen",
+    "germany": "achtzehn",
+    "korean": "십팔"
+  },
+  {
+    "number": "519",
+    "category": "Time & Numbers",
+    "subcategory": "Numbers 11-20",
+    "english": "nineteen",
+    "germany": "neunzehn",
+    "korean": "십구"
+  },
+  {
+    "number": "520",
+    "category": "Time & Numbers",
+    "subcategory": "Numbers 11-20",
+    "english": "twenty",
+    "germany": "zwanzig",
+    "korean": "이십"
+  },
+  {
+    "number": "521",
+    "category": "Time & Numbers",
+    "subcategory": "Tens",
+    "english": "thirty",
+    "germany": "dreißig",
+    "korean": "삼십"
+  },
+  {
+    "number": "522",
+    "category": "Time & Numbers",
+    "subcategory": "Tens",
+    "english": "forty",
+    "germany": "vierzig",
+    "korean": "사십"
+  },
+  {
+    "number": "523",
+    "category": "Time & Numbers",
+    "subcategory": "Tens",
+    "english": "fifty",
+    "germany": "fünfzig",
+    "korean": "오십"
+  },
+  {
+    "number": "524",
+    "category": "Time & Numbers",
+    "subcategory": "Tens",
+    "english": "sixty",
+    "germany": "sechzig",
+    "korean": "육십"
+  },
+  {
+    "number": "525",
+    "category": "Time & Numbers",
+    "subcategory": "Tens",
+    "english": "seventy",
+    "germany": "siebzig",
+    "korean": "칠십"
+  },
+  {
+    "number": "526",
+    "category": "Time & Numbers",
+    "subcategory": "Tens",
+    "english": "eighty",
+    "germany": "achtzig",
+    "korean": "팔십"
+  },
+  {
+    "number": "527",
+    "category": "Time & Numbers",
+    "subcategory": "Tens",
+    "english": "ninety",
+    "germany": "neunzig",
+    "korean": "구십"
+  },
+  {
+    "number": "528",
+    "category": "Time & Numbers",
+    "subcategory": "Tens",
+    "english": "hundred",
+    "germany": "hundert",
+    "korean": "백"
+  },
+  {
+    "number": "529",
+    "category": "Time & Numbers",
+    "subcategory": "Tens",
+    "english": "thousand",
+    "germany": "tausend",
+    "korean": "천"
+  },
+  {
+    "number": "530",
+    "category": "Time & Numbers",
+    "subcategory": "Tens",
+    "english": "million",
+    "germany": "Million",
+    "korean": "백만"
+  },
+  {
+    "number": "531",
+    "category": "Time & Numbers",
+    "subcategory": "Large numbers",
+    "english": "hundred",
+    "germany": "hundert",
+    "korean": "백"
+  },
+  {
+    "number": "532",
+    "category": "Time & Numbers",
+    "subcategory": "Large numbers",
+    "english": "thousand",
+    "germany": "tausend",
+    "korean": "천"
+  },
+  {
+    "number": "533",
+    "category": "Time & Numbers",
+    "subcategory": "Large numbers",
+    "english": "million",
+    "germany": "Million",
+    "korean": "백만"
+  },
+  {
+    "number": "534",
+    "category": "Time & Numbers",
+    "subcategory": "Large numbers",
+    "english": "billion",
+    "germany": "Milliarde",
+    "korean": "십억"
+  },
+  {
+    "number": "535",
+    "category": "Time & Numbers",
+    "subcategory": "Large numbers",
+    "english": "trillion",
+    "germany": "Billion",
+    "korean": "일조"
+  },
+  {
+    "number": "536",
+    "category": "Time & Numbers",
+    "subcategory": "Large numbers",
+    "english": "many",
+    "germany": "viele",
+    "korean": "많은"
+  },
+  {
+    "number": "537",
+    "category": "Time & Numbers",
+    "subcategory": "Large numbers",
+    "english": "countless",
+    "germany": "unzählig",
+    "korean": "셀 수 없는"
+  },
+  {
+    "number": "538",
+    "category": "Time & Numbers",
+    "subcategory": "Large numbers",
+    "english": "huge",
+    "germany": "riesig",
+    "korean": "거대한"
+  },
+  {
+    "number": "539",
+    "category": "Time & Numbers",
+    "subcategory": "Large numbers",
+    "english": "large",
+    "germany": "groß",
+    "korean": "큰"
+  },
+  {
+    "number": "540",
+    "category": "Time & Numbers",
+    "subcategory": "Large numbers",
+    "english": "infinite",
+    "germany": "unendlich",
+    "korean": "무한한"
+  },
+  {
+    "number": "541",
+    "category": "Time & Numbers",
+    "subcategory": "Days",
+    "english": "Monday",
+    "germany": "Montag",
+    "korean": "월요일"
+  },
+  {
+    "number": "542",
+    "category": "Time & Numbers",
+    "subcategory": "Days",
+    "english": "Tuesday",
+    "germany": "Dienstag",
+    "korean": "화요일"
+  },
+  {
+    "number": "543",
+    "category": "Time & Numbers",
+    "subcategory": "Days",
+    "english": "Wednesday",
+    "germany": "Mittwoch",
+    "korean": "수요일"
+  },
+  {
+    "number": "544",
+    "category": "Time & Numbers",
+    "subcategory": "Days",
+    "english": "Thursday",
+    "germany": "Donnerstag",
+    "korean": "목요일"
+  },
+  {
+    "number": "545",
+    "category": "Time & Numbers",
+    "subcategory": "Days",
+    "english": "Friday",
+    "germany": "Freitag",
+    "korean": "금요일"
+  },
+  {
+    "number": "546",
+    "category": "Time & Numbers",
+    "subcategory": "Days",
+    "english": "Saturday",
+    "germany": "Samstag",
+    "korean": "토요일"
+  },
+  {
+    "number": "547",
+    "category": "Time & Numbers",
+    "subcategory": "Days",
+    "english": "Sunday",
+    "germany": "Sonntag",
+    "korean": "일요일"
+  },
+  {
+    "number": "548",
+    "category": "Time & Numbers",
+    "subcategory": "Days",
+    "english": "today",
+    "germany": "heute",
+    "korean": "오늘"
+  },
+  {
+    "number": "549",
+    "category": "Time & Numbers",
+    "subcategory": "Days",
+    "english": "tomorrow",
+    "germany": "morgen",
+    "korean": "내일"
+  },
+  {
+    "number": "550",
+    "category": "Time & Numbers",
+    "subcategory": "Days",
+    "english": "yesterday",
+    "germany": "gestern",
+    "korean": "어제"
+  },
+  {
+    "number": "551",
+    "category": "Time & Numbers",
+    "subcategory": "Months",
+    "english": "January",
+    "germany": "Januar",
+    "korean": "일월"
+  },
+  {
+    "number": "552",
+    "category": "Time & Numbers",
+    "subcategory": "Months",
+    "english": "February",
+    "germany": "Februar",
+    "korean": "이월"
+  },
+  {
+    "number": "553",
+    "category": "Time & Numbers",
+    "subcategory": "Months",
+    "english": "March",
+    "germany": "März",
+    "korean": "삼월"
+  },
+  {
+    "number": "554",
+    "category": "Time & Numbers",
+    "subcategory": "Months",
+    "english": "April",
+    "germany": "April",
+    "korean": "사월"
+  },
+  {
+    "number": "555",
+    "category": "Time & Numbers",
+    "subcategory": "Months",
+    "english": "May",
+    "germany": "Mai",
+    "korean": "오월"
+  },
+  {
+    "number": "556",
+    "category": "Time & Numbers",
+    "subcategory": "Months",
+    "english": "June",
+    "germany": "Juni",
+    "korean": "유월"
+  },
+  {
+    "number": "557",
+    "category": "Time & Numbers",
+    "subcategory": "Months",
+    "english": "July",
+    "germany": "Juli",
+    "korean": "칠월"
+  },
+  {
+    "number": "558",
+    "category": "Time & Numbers",
+    "subcategory": "Months",
+    "english": "August",
+    "germany": "August",
+    "korean": "팔월"
+  },
+  {
+    "number": "559",
+    "category": "Time & Numbers",
+    "subcategory": "Months",
+    "english": "September",
+    "germany": "September",
+    "korean": "구월"
+  },
+  {
+    "number": "560",
+    "category": "Time & Numbers",
+    "subcategory": "Months",
+    "english": "October",
+    "germany": "Oktober",
+    "korean": "시월"
+  },
+  {
+    "number": "561",
+    "category": "Time & Numbers",
+    "subcategory": "Time",
+    "english": "hour",
+    "germany": "Stunde",
+    "korean": "시간"
+  },
+  {
+    "number": "562",
+    "category": "Time & Numbers",
+    "subcategory": "Time",
+    "english": "minute",
+    "germany": "Minute",
+    "korean": "분"
+  },
+  {
+    "number": "563",
+    "category": "Time & Numbers",
+    "subcategory": "Time",
+    "english": "second",
+    "germany": "Sekunde",
+    "korean": "초"
+  },
+  {
+    "number": "564",
+    "category": "Time & Numbers",
+    "subcategory": "Time",
+    "english": "moment",
+    "germany": "Moment",
+    "korean": "순간"
+  },
+  {
+    "number": "565",
+    "category": "Time & Numbers",
+    "subcategory": "Time",
+    "english": "clock",
+    "germany": "Uhr",
+    "korean": "시계"
+  },
+  {
+    "number": "566",
+    "category": "Time & Numbers",
+    "subcategory": "Time",
+    "english": "watch",
+    "germany": "Armbanduhr",
+    "korean": "손목시계"
+  },
+  {
+    "number": "567",
+    "category": "Time & Numbers",
+    "subcategory": "Time",
+    "english": "time",
+    "germany": "Zeit",
+    "korean": "시간/때"
+  },
+  {
+    "number": "568",
+    "category": "Time & Numbers",
+    "subcategory": "Time",
+    "english": "date",
+    "germany": "Datum",
+    "korean": "날짜"
+  },
+  {
+    "number": "569",
+    "category": "Time & Numbers",
+    "subcategory": "Time",
+    "english": "year",
+    "germany": "Jahr",
+    "korean": "년"
+  },
+  {
+    "number": "570",
+    "category": "Time & Numbers",
+    "subcategory": "Time",
+    "english": "week",
+    "germany": "Woche",
+    "korean": "주"
+  },
+  {
+    "number": "571",
+    "category": "Time & Numbers",
+    "subcategory": "Frequency",
+    "english": "always",
+    "germany": "immer",
+    "korean": "항상"
+  },
+  {
+    "number": "572",
+    "category": "Time & Numbers",
+    "subcategory": "Frequency",
+    "english": "often",
+    "germany": "oft",
+    "korean": "자주"
+  },
+  {
+    "number": "573",
+    "category": "Time & Numbers",
+    "subcategory": "Frequency",
+    "english": "usually",
+    "germany": "normalerweise",
+    "korean": "보통"
+  },
+  {
+    "number": "574",
+    "category": "Time & Numbers",
+    "subcategory": "Frequency",
+    "english": "sometimes",
+    "germany": "manchmal",
+    "korean": "때때로"
+  },
+  {
+    "number": "575",
+    "category": "Time & Numbers",
+    "subcategory": "Frequency",
+    "english": "rarely",
+    "germany": "selten",
+    "korean": "드물게"
+  },
+  {
+    "number": "576",
+    "category": "Time & Numbers",
+    "subcategory": "Frequency",
+    "english": "never",
+    "germany": "nie",
+    "korean": "결코 ~않다"
+  },
+  {
+    "number": "577",
+    "category": "Time & Numbers",
+    "subcategory": "Frequency",
+    "english": "daily",
+    "germany": "täglich",
+    "korean": "매일"
+  },
+  {
+    "number": "578",
+    "category": "Time & Numbers",
+    "subcategory": "Frequency",
+    "english": "weekly",
+    "germany": "wöchentlich",
+    "korean": "매주"
+  },
+  {
+    "number": "579",
+    "category": "Time & Numbers",
+    "subcategory": "Frequency",
+    "english": "monthly",
+    "germany": "monatlich",
+    "korean": "매달"
+  },
+  {
+    "number": "580",
+    "category": "Time & Numbers",
+    "subcategory": "Frequency",
+    "english": "yearly",
+    "germany": "jährlich",
+    "korean": "매년"
+  },
+  {
+    "number": "581",
+    "category": "Time & Numbers",
+    "subcategory": "Sequence",
+    "english": "first",
+    "germany": "erstes",
+    "korean": "첫 번째"
+  },
+  {
+    "number": "582",
+    "category": "Time & Numbers",
+    "subcategory": "Sequence",
+    "english": "next",
+    "germany": "nächstes",
+    "korean": "다음"
+  },
+  {
+    "number": "583",
+    "category": "Time & Numbers",
+    "subcategory": "Sequence",
+    "english": "last",
+    "germany": "letztes",
+    "korean": "마지막"
+  },
+  {
+    "number": "584",
+    "category": "Time & Numbers",
+    "subcategory": "Sequence",
+    "english": "finally",
+    "germany": "schließlich",
+    "korean": "마침내"
+  },
+  {
+    "number": "585",
+    "category": "Time & Numbers",
+    "subcategory": "Sequence",
+    "english": "second",
+    "germany": "zweites",
+    "korean": "두 번째"
+  },
+  {
+    "number": "586",
+    "category": "Time & Numbers",
+    "subcategory": "Sequence",
+    "english": "third",
+    "germany": "drittes",
+    "korean": "세 번째"
+  },
+  {
+    "number": "587",
+    "category": "Time & Numbers",
+    "subcategory": "Sequence",
+    "english": "then",
+    "germany": "dann",
+    "korean": "그때/그다음"
+  },
+  {
+    "number": "588",
+    "category": "Time & Numbers",
+    "subcategory": "Sequence",
+    "english": "after",
+    "germany": "nach",
+    "korean": "후에"
+  },
+  {
+    "number": "589",
+    "category": "Time & Numbers",
+    "subcategory": "Sequence",
+    "english": "before",
+    "germany": "vor",
+    "korean": "전에"
+  },
+  {
+    "number": "590",
+    "category": "Time & Numbers",
+    "subcategory": "Sequence",
+    "english": "step",
+    "germany": "Schritt",
+    "korean": "단계/걸음"
+  },
+  {
+    "number": "591",
+    "category": "Time & Numbers",
+    "subcategory": "Duration",
+    "english": "long",
+    "germany": "lang",
+    "korean": "긴"
+  },
+  {
+    "number": "592",
+    "category": "Time & Numbers",
+    "subcategory": "Duration",
+    "english": "short",
+    "germany": "kurz",
+    "korean": "짧은"
+  },
+  {
+    "number": "593",
+    "category": "Time & Numbers",
+    "subcategory": "Duration",
+    "english": "forever",
+    "germany": "ewig",
+    "korean": "영원히"
+  },
+  {
+    "number": "594",
+    "category": "Time & Numbers",
+    "subcategory": "Duration",
+    "english": "temporary",
+    "germany": "vorübergehend",
+    "korean": "임시의"
+  },
+  {
+    "number": "595",
+    "category": "Time & Numbers",
+    "subcategory": "Duration",
+    "english": "brief",
+    "germany": "kurz",
+    "korean": "잠깐의"
+  },
+  {
+    "number": "596",
+    "category": "Time & Numbers",
+    "subcategory": "Duration",
+    "english": "while",
+    "germany": "während",
+    "korean": "동안"
+  },
+  {
+    "number": "597",
+    "category": "Time & Numbers",
+    "subcategory": "Duration",
+    "english": "period",
+    "germany": "Zeitraum",
+    "korean": "기간"
+  },
+  {
+    "number": "598",
+    "category": "Time & Numbers",
+    "subcategory": "Duration",
+    "english": "instant",
+    "germany": "sofort",
+    "korean": "즉각적인"
+  },
+  {
+    "number": "599",
+    "category": "Time & Numbers",
+    "subcategory": "Duration",
+    "english": "decade",
+    "germany": "Jahrzehnt",
+    "korean": "십 년"
+  },
+  {
+    "number": "600",
+    "category": "Time & Numbers",
+    "subcategory": "Duration",
+    "english": "century",
+    "germany": "Jahrhundert",
+    "korean": "세기"
+  },
+  {
+    "number": "601",
+    "category": "Question & Conversation Words",
+    "subcategory": "Question words",
+    "english": "what",
+    "germany": "was",
+    "korean": "무엇"
+  },
+  {
+    "number": "602",
+    "category": "Question & Conversation Words",
+    "subcategory": "Question words",
+    "english": "why",
+    "germany": "warum",
+    "korean": "왜"
+  },
+  {
+    "number": "603",
+    "category": "Question & Conversation Words",
+    "subcategory": "Question words",
+    "english": "who",
+    "germany": "wer",
+    "korean": "누구"
+  },
+  {
+    "number": "604",
+    "category": "Question & Conversation Words",
+    "subcategory": "Question words",
+    "english": "where",
+    "germany": "wo",
+    "korean": "어디"
+  },
+  {
+    "number": "605",
+    "category": "Question & Conversation Words",
+    "subcategory": "Question words",
+    "english": "when",
+    "germany": "wann",
+    "korean": "언제"
+  },
+  {
+    "number": "606",
+    "category": "Question & Conversation Words",
+    "subcategory": "Question words",
+    "english": "how",
+    "germany": "wie",
+    "korean": "어떻게"
+  },
+  {
+    "number": "607",
+    "category": "Question & Conversation Words",
+    "subcategory": "Question words",
+    "english": "which",
+    "germany": "welches",
+    "korean": "어느 것"
+  },
+  {
+    "number": "608",
+    "category": "Question & Conversation Words",
+    "subcategory": "Question words",
+    "english": "whose",
+    "germany": "wessen",
+    "korean": "누구의"
+  },
+  {
+    "number": "609",
+    "category": "Question & Conversation Words",
+    "subcategory": "Question words",
+    "english": "whom",
+    "germany": "wen/wem",
+    "korean": "누구를"
+  },
+  {
+    "number": "610",
+    "category": "Question & Conversation Words",
+    "subcategory": "Question words",
+    "english": "whether",
+    "germany": "ob",
+    "korean": "~인지 아닌지"
+  },
+  {
+    "number": "611",
+    "category": "Question & Conversation Words",
+    "subcategory": "Asking help",
+    "english": "help",
+    "germany": "Hilfe",
+    "korean": "도움"
+  },
+  {
+    "number": "612",
+    "category": "Question & Conversation Words",
+    "subcategory": "Asking help",
+    "english": "please",
+    "germany": "bitte",
+    "korean": "부디/제발"
+  },
+  {
+    "number": "613",
+    "category": "Question & Conversation Words",
+    "subcategory": "Asking help",
+    "english": "can you",
+    "germany": "kannst du",
+    "korean": "할 수 있나요"
+  },
+  {
+    "number": "614",
+    "category": "Question & Conversation Words",
+    "subcategory": "Asking help",
+    "english": "could you",
+    "germany": "könntest du",
+    "korean": "해줄 수 있나요"
+  },
+  {
+    "number": "615",
+    "category": "Question & Conversation Words",
+    "subcategory": "Asking help",
+    "english": "would you",
+    "germany": "würdest du",
+    "korean": "해주시겠어요"
+  },
+  {
+    "number": "616",
+    "category": "Question & Conversation Words",
+    "subcategory": "Asking help",
+    "english": "may I",
+    "germany": "darf ich",
+    "korean": "해도 될까요"
+  },
+  {
+    "number": "617",
+    "category": "Question & Conversation Words",
+    "subcategory": "Asking help",
+    "english": "excuse me",
+    "germany": "Entschuldigung",
+    "korean": "실례합니다"
+  },
+  {
+    "number": "618",
+    "category": "Question & Conversation Words",
+    "subcategory": "Asking help",
+    "english": "assist",
+    "germany": "unterstützen",
+    "korean": "돕다"
+  },
+  {
+    "number": "619",
+    "category": "Question & Conversation Words",
+    "subcategory": "Asking help",
+    "english": "guide",
+    "germany": "führen",
+    "korean": "안내하다"
+  },
+  {
+    "number": "620",
+    "category": "Question & Conversation Words",
+    "subcategory": "Asking help",
+    "english": "show",
+    "germany": "zeigen",
+    "korean": "보여주다"
+  },
+  {
+    "number": "621",
+    "category": "Question & Conversation Words",
+    "subcategory": "Clarification",
+    "english": "repeat",
+    "germany": "wiederholen",
+    "korean": "반복하다"
+  },
+  {
+    "number": "622",
+    "category": "Question & Conversation Words",
+    "subcategory": "Clarification",
+    "english": "explain",
+    "germany": "erklären",
+    "korean": "설명하다"
+  },
+  {
+    "number": "623",
+    "category": "Question & Conversation Words",
+    "subcategory": "Clarification",
+    "english": "understand",
+    "germany": "verstehen",
+    "korean": "이해하다"
+  },
+  {
+    "number": "624",
+    "category": "Question & Conversation Words",
+    "subcategory": "Clarification",
+    "english": "clarify",
+    "germany": "klären",
+    "korean": "명확히 하다"
+  },
+  {
+    "number": "625",
+    "category": "Question & Conversation Words",
+    "subcategory": "Clarification",
+    "english": "mean",
+    "germany": "meinen",
+    "korean": "의미하다"
+  },
+  {
+    "number": "626",
+    "category": "Question & Conversation Words",
+    "subcategory": "Clarification",
+    "english": "say again",
+    "germany": "nochmal sagen",
+    "korean": "다시 말하다"
+  },
+  {
+    "number": "627",
+    "category": "Question & Conversation Words",
+    "subcategory": "Clarification",
+    "english": "slow",
+    "germany": "langsam",
+    "korean": "느린/천천히"
+  },
+  {
+    "number": "628",
+    "category": "Question & Conversation Words",
+    "subcategory": "Clarification",
+    "english": "simple",
+    "germany": "einfach",
+    "korean": "단순한"
+  },
+  {
+    "number": "629",
+    "category": "Question & Conversation Words",
+    "subcategory": "Clarification",
+    "english": "clear",
+    "germany": "klar",
+    "korean": "명확한"
+  },
+  {
+    "number": "630",
+    "category": "Question & Conversation Words",
+    "subcategory": "Clarification",
+    "english": "check",
+    "germany": "prüfen",
+    "korean": "확인하다"
+  },
+  {
+    "number": "631",
+    "category": "Question & Conversation Words",
+    "subcategory": "Agreement",
+    "english": "yes",
+    "germany": "ja",
+    "korean": "예"
+  },
+  {
+    "number": "632",
+    "category": "Question & Conversation Words",
+    "subcategory": "Agreement",
+    "english": "okay",
+    "germany": "okay",
+    "korean": "오케이"
+  },
+  {
+    "number": "633",
+    "category": "Question & Conversation Words",
+    "subcategory": "Agreement",
+    "english": "true",
+    "germany": "wahr",
+    "korean": "진실인"
+  },
+  {
+    "number": "634",
+    "category": "Question & Conversation Words",
+    "subcategory": "Agreement",
+    "english": "correct",
+    "germany": "richtig",
+    "korean": "옳은"
+  },
+  {
+    "number": "635",
+    "category": "Question & Conversation Words",
+    "subcategory": "Agreement",
+    "english": "agree",
+    "germany": "zustimmen",
+    "korean": "동의하다"
+  },
+  {
+    "number": "636",
+    "category": "Question & Conversation Words",
+    "subcategory": "Agreement",
+    "english": "sure",
+    "germany": "sicher",
+    "korean": "확실한"
+  },
+  {
+    "number": "637",
+    "category": "Question & Conversation Words",
+    "subcategory": "Agreement",
+    "english": "fine",
+    "germany": "gut",
+    "korean": "좋은/괜찮은"
+  },
+  {
+    "number": "638",
+    "category": "Question & Conversation Words",
+    "subcategory": "Agreement",
+    "english": "right",
+    "germany": "richtig",
+    "korean": "맞는"
+  },
+  {
+    "number": "639",
+    "category": "Question & Conversation Words",
+    "subcategory": "Agreement",
+    "english": "good",
+    "germany": "gut",
+    "korean": "좋은"
+  },
+  {
+    "number": "640",
+    "category": "Question & Conversation Words",
+    "subcategory": "Agreement",
+    "english": "absolutely",
+    "germany": "absolut",
+    "korean": "절대적으로"
+  },
+  {
+    "number": "641",
+    "category": "Question & Conversation Words",
+    "subcategory": "Disagreement",
+    "english": "no",
+    "germany": "nein",
+    "korean": "아니오"
+  },
+  {
+    "number": "642",
+    "category": "Question & Conversation Words",
+    "subcategory": "Disagreement",
+    "english": "not",
+    "germany": "nicht",
+    "korean": "않다"
+  },
+  {
+    "number": "643",
+    "category": "Question & Conversation Words",
+    "subcategory": "Disagreement",
+    "english": "false",
+    "germany": "falsch",
+    "korean": "거짓인"
+  },
+  {
+    "number": "644",
+    "category": "Question & Conversation Words",
+    "subcategory": "Disagreement",
+    "english": "wrong",
+    "germany": "falsch",
+    "korean": "틀린"
+  },
+  {
+    "number": "645",
+    "category": "Question & Conversation Words",
+    "subcategory": "Disagreement",
+    "english": "disagree",
+    "germany": "nicht zustimmen",
+    "korean": "반의하다"
+  },
+  {
+    "number": "646",
+    "category": "Question & Conversation Words",
+    "subcategory": "Disagreement",
+    "english": "refuse",
+    "germany": "ablehnen",
+    "korean": "거절하다"
+  },
+  {
+    "number": "647",
+    "category": "Question & Conversation Words",
+    "subcategory": "Disagreement",
+    "english": "impossible",
+    "germany": "unmöglich",
+    "korean": "불가능한"
+  },
+  {
+    "number": "648",
+    "category": "Question & Conversation Words",
+    "subcategory": "Disagreement",
+    "english": "deny",
+    "germany": "leugnen",
+    "korean": "부인하다"
+  },
+  {
+    "number": "649",
+    "category": "Question & Conversation Words",
+    "subcategory": "Disagreement",
+    "english": "untrue",
+    "germany": "unwahr",
+    "korean": "사실이 아닌"
+  },
+  {
+    "number": "650",
+    "category": "Question & Conversation Words",
+    "subcategory": "Disagreement",
+    "english": "never",
+    "germany": "nie",
+    "korean": "절대 ~않다"
+  },
+  {
+    "number": "651",
+    "category": "Question & Conversation Words",
+    "subcategory": "Politeness",
+    "english": "please",
+    "germany": "bitte",
+    "korean": "부디"
+  },
+  {
+    "number": "652",
+    "category": "Question & Conversation Words",
+    "subcategory": "Politeness",
+    "english": "thank you",
+    "germany": "danke",
+    "korean": "감사합니다"
+  },
+  {
+    "number": "653",
+    "category": "Question & Conversation Words",
+    "subcategory": "Politeness",
+    "english": "thanks",
+    "germany": "danke",
+    "korean": "고마워"
+  },
+  {
+    "number": "654",
+    "category": "Question & Conversation Words",
+    "subcategory": "Politeness",
+    "english": "welcome",
+    "germany": "bitte",
+    "korean": "천만에요/환영"
+  },
+  {
+    "number": "655",
+    "category": "Question & Conversation Words",
+    "subcategory": "Politeness",
+    "english": "gladly",
+    "germany": "gerne",
+    "korean": "기꺼이"
+  },
+  {
+    "number": "656",
+    "category": "Question & Conversation Words",
+    "subcategory": "Politeness",
+    "english": "pleasure",
+    "germany": "Vergnügen",
+    "korean": "기쁨"
+  },
+  {
+    "number": "657",
+    "category": "Question & Conversation Words",
+    "subcategory": "Politeness",
+    "english": "kind",
+    "germany": "nett",
+    "korean": "친절한"
+  },
+  {
+    "number": "658",
+    "category": "Question & Conversation Words",
+    "subcategory": "Politeness",
+    "english": "polite",
+    "germany": "höflich",
+    "korean": "공손한"
+  },
+  {
+    "number": "659",
+    "category": "Question & Conversation Words",
+    "subcategory": "Politeness",
+    "english": "courtesy",
+    "germany": "Höflichkeit",
+    "korean": "예의"
+  },
+  {
+    "number": "660",
+    "category": "Question & Conversation Words",
+    "subcategory": "Politeness",
+    "english": "respect",
+    "germany": "Respekt",
+    "korean": "존경"
+  },
+  {
+    "number": "661",
+    "category": "Question & Conversation Words",
+    "subcategory": "Apologies",
+    "english": "sorry",
+    "germany": "Entschuldigung",
+    "korean": "미안한"
+  },
+  {
+    "number": "662",
+    "category": "Question & Conversation Words",
+    "subcategory": "Apologies",
+    "english": "excuse me",
+    "germany": "Entschuldigen Sie mich",
+    "korean": "실례합니다"
+  },
+  {
+    "number": "663",
+    "category": "Question & Conversation Words",
+    "subcategory": "Apologies",
+    "english": "pardon",
+    "germany": "Verzeihung",
+    "korean": "용서"
+  },
+  {
+    "number": "664",
+    "category": "Question & Conversation Words",
+    "subcategory": "Apologies",
+    "english": "apologize",
+    "germany": "entschuldigen",
+    "korean": "사과하다"
+  },
+  {
+    "number": "665",
+    "category": "Question & Conversation Words",
+    "subcategory": "Apologies",
+    "english": "forgive",
+    "germany": "vergeben",
+    "korean": "용서하다"
+  },
+  {
+    "number": "666",
+    "category": "Question & Conversation Words",
+    "subcategory": "Apologies",
+    "english": "mistake",
+    "germany": "Fehler",
+    "korean": "실수"
+  },
+  {
+    "number": "667",
+    "category": "Question & Conversation Words",
+    "subcategory": "Apologies",
+    "english": "regret",
+    "germany": "bedauern",
+    "korean": "후회하다"
+  },
+  {
+    "number": "668",
+    "category": "Question & Conversation Words",
+    "subcategory": "Apologies",
+    "english": "fault",
+    "germany": "Schuld",
+    "korean": "잘못/책임"
+  },
+  {
+    "number": "669",
+    "category": "Question & Conversation Words",
+    "subcategory": "Apologies",
+    "english": "guilt",
+    "germany": "Schuld",
+    "korean": "죄책감"
+  },
+  {
+    "number": "670",
+    "category": "Question & Conversation Words",
+    "subcategory": "Apologies",
+    "english": "shame",
+    "germany": "Schande",
+    "korean": "부끄러움"
+  },
+  {
+    "number": "671",
+    "category": "Question & Conversation Words",
+    "subcategory": "Opinions",
+    "english": "think",
+    "germany": "denken",
+    "korean": "생각하다"
+  },
+  {
+    "number": "672",
+    "category": "Question & Conversation Words",
+    "subcategory": "Opinions",
+    "english": "feel",
+    "germany": "fühlen",
+    "korean": "느끼다"
+  },
+  {
+    "number": "673",
+    "category": "Question & Conversation Words",
+    "subcategory": "Opinions",
+    "english": "believe",
+    "germany": "glauben",
+    "korean": "믿다"
+  },
+  {
+    "number": "674",
+    "category": "Question & Conversation Words",
+    "subcategory": "Opinions",
+    "english": "opinion",
+    "germany": "Meinung",
+    "korean": "의견"
+  },
+  {
+    "number": "675",
+    "category": "Question & Conversation Words",
+    "subcategory": "Opinions",
+    "english": "view",
+    "germany": "Sicht",
+    "korean": "관점"
+  },
+  {
+    "number": "676",
+    "category": "Question & Conversation Words",
+    "subcategory": "Opinions",
+    "english": "thought",
+    "germany": "Gedanke",
+    "korean": "생각"
+  },
+  {
+    "number": "677",
+    "category": "Question & Conversation Words",
+    "subcategory": "Opinions",
+    "english": "mind",
+    "germany": "Geist",
+    "korean": "마음"
+  },
+  {
+    "number": "678",
+    "category": "Question & Conversation Words",
+    "subcategory": "Opinions",
+    "english": "idea",
+    "germany": "Idee",
+    "korean": "아이디어"
+  },
+  {
+    "number": "679",
+    "category": "Question & Conversation Words",
+    "subcategory": "Opinions",
+    "english": "guess",
+    "germany": "vermuten",
+    "korean": "추측"
+  },
+  {
+    "number": "680",
+    "category": "Question & Conversation Words",
+    "subcategory": "Opinions",
+    "english": "sure",
+    "germany": "sicher",
+    "korean": "확실한"
+  },
+  {
+    "number": "681",
+    "category": "Question & Conversation Words",
+    "subcategory": "Reactions",
+    "english": "wow",
+    "germany": "wow",
+    "korean": "와"
+  },
+  {
+    "number": "682",
+    "category": "Question & Conversation Words",
+    "subcategory": "Reactions",
+    "english": "really",
+    "germany": "wirklich",
+    "korean": "정말"
+  },
+  {
+    "number": "683",
+    "category": "Question & Conversation Words",
+    "subcategory": "Reactions",
+    "english": "great",
+    "germany": "toll",
+    "korean": "대단한"
+  },
+  {
+    "number": "684",
+    "category": "Question & Conversation Words",
+    "subcategory": "Reactions",
+    "english": "nice",
+    "germany": "nett",
+    "korean": "멋진"
+  },
+  {
+    "number": "685",
+    "category": "Question & Conversation Words",
+    "subcategory": "Reactions",
+    "english": "cool",
+    "germany": "cool",
+    "korean": "멋진/시원한"
+  },
+  {
+    "number": "686",
+    "category": "Question & Conversation Words",
+    "subcategory": "Reactions",
+    "english": "oh",
+    "germany": "oh",
+    "korean": "오"
+  },
+  {
+    "number": "687",
+    "category": "Question & Conversation Words",
+    "subcategory": "Reactions",
+    "english": "ah",
+    "germany": "ah",
+    "korean": "아"
+  },
+  {
+    "number": "688",
+    "category": "Question & Conversation Words",
+    "subcategory": "Reactions",
+    "english": "amazing",
+    "germany": "erstaunlich",
+    "korean": "놀라운"
+  },
+  {
+    "number": "689",
+    "category": "Question & Conversation Words",
+    "subcategory": "Reactions",
+    "english": "surprising",
+    "germany": "überraschend",
+    "korean": "놀라운"
+  },
+  {
+    "number": "690",
+    "category": "Question & Conversation Words",
+    "subcategory": "Reactions",
+    "english": "strange",
+    "germany": "seltsam",
+    "korean": "이상한"
+  },
+  {
+    "number": "691",
+    "category": "Question & Conversation Words",
+    "subcategory": "Fillers",
+    "english": "um",
+    "germany": "ähm",
+    "korean": "음"
+  },
+  {
+    "number": "692",
+    "category": "Question & Conversation Words",
+    "subcategory": "Fillers",
+    "english": "well",
+    "germany": "nun",
+    "korean": "음/글쎄"
+  },
+  {
+    "number": "693",
+    "category": "Question & Conversation Words",
+    "subcategory": "Fillers",
+    "english": "like",
+    "germany": "wie",
+    "korean": "~처럼"
+  },
+  {
+    "number": "694",
+    "category": "Question & Conversation Words",
+    "subcategory": "Fillers",
+    "english": "so",
+    "germany": "also",
+    "korean": "그래서"
+  },
+  {
+    "number": "695",
+    "category": "Question & Conversation Words",
+    "subcategory": "Fillers",
+    "english": "basically",
+    "germany": "im Grunde",
+    "korean": "기본적으로"
+  },
+  {
+    "number": "696",
+    "category": "Question & Conversation Words",
+    "subcategory": "Fillers",
+    "english": "actually",
+    "germany": "eigentlich",
+    "korean": "사실은"
+  },
+  {
+    "number": "697",
+    "category": "Question & Conversation Words",
+    "subcategory": "Fillers",
+    "english": "honestly",
+    "germany": "ehrlich gesagt",
+    "korean": "정직하게"
+  },
+  {
+    "number": "698",
+    "category": "Question & Conversation Words",
+    "subcategory": "Fillers",
+    "english": "meanwhile",
+    "germany": "währenddessen",
+    "korean": "그 동안에"
+  },
+  {
+    "number": "699",
+    "category": "Question & Conversation Words",
+    "subcategory": "Fillers",
+    "english": "anyway",
+    "germany": "jedenfalls",
+    "korean": "어쨌든"
+  },
+  {
+    "number": "700",
+    "category": "Question & Conversation Words",
+    "subcategory": "Fillers",
+    "english": "perhaps",
+    "germany": "vielleicht",
+    "korean": "어쩌면"
+  },
+  {
+    "number": "701",
+    "category": "Food & Daily Life",
+    "subcategory": "Food basics",
+    "english": "rice",
+    "germany": "Reis",
+    "korean": "쌀"
+  },
+  {
+    "number": "702",
+    "category": "Food & Daily Life",
+    "subcategory": "Food basics",
+    "english": "bread",
+    "germany": "Brot",
+    "korean": "빵"
+  },
+  {
+    "number": "703",
+    "category": "Food & Daily Life",
+    "subcategory": "Food basics",
+    "english": "meat",
+    "germany": "Fleisch",
+    "korean": "고기"
+  },
+  {
+    "number": "704",
+    "category": "Food & Daily Life",
+    "subcategory": "Food basics",
+    "english": "fish",
+    "germany": "Fisch",
+    "korean": "생선"
+  },
+  {
+    "number": "705",
+    "category": "Food & Daily Life",
+    "subcategory": "Food basics",
+    "english": "egg",
+    "germany": "Ei",
+    "korean": "계란"
+  },
+  {
+    "number": "706",
+    "category": "Food & Daily Life",
+    "subcategory": "Food basics",
+    "english": "milk",
+    "germany": "Milch",
+    "korean": "우유"
+  },
+  {
+    "number": "707",
+    "category": "Food & Daily Life",
+    "subcategory": "Food basics",
+    "english": "cheese",
+    "germany": "Käse",
+    "korean": "치즈"
+  },
+  {
+    "number": "708",
+    "category": "Food & Daily Life",
+    "subcategory": "Food basics",
+    "english": "butter",
+    "germany": "Butter",
+    "korean": "버터"
+  },
+  {
+    "number": "709",
+    "category": "Food & Daily Life",
+    "subcategory": "Food basics",
+    "english": "sugar",
+    "germany": "Zucker",
+    "korean": "설탕"
+  },
+  {
+    "number": "710",
+    "category": "Food & Daily Life",
+    "subcategory": "Food basics",
+    "english": "salt",
+    "germany": "Salz",
+    "korean": "소금"
+  },
+  {
+    "number": "711",
+    "category": "Food & Daily Life",
+    "subcategory": "Drinks",
+    "english": "water",
+    "germany": "Wasser",
+    "korean": "물"
+  },
+  {
+    "number": "712",
+    "category": "Food & Daily Life",
+    "subcategory": "Drinks",
+    "english": "coffee",
+    "germany": "Kaffee",
+    "korean": "커피"
+  },
+  {
+    "number": "713",
+    "category": "Food & Daily Life",
+    "subcategory": "Drinks",
+    "english": "tea",
+    "germany": "Tee",
+    "korean": "차"
+  },
+  {
+    "number": "714",
+    "category": "Food & Daily Life",
+    "subcategory": "Drinks",
+    "english": "juice",
+    "germany": "Saft",
+    "korean": "주스"
+  },
+  {
+    "number": "715",
+    "category": "Food & Daily Life",
+    "subcategory": "Drinks",
+    "english": "milk",
+    "germany": "Milch",
+    "korean": "우유"
+  },
+  {
+    "number": "716",
+    "category": "Food & Daily Life",
+    "subcategory": "Drinks",
+    "english": "beer",
+    "germany": "Bier",
+    "korean": "맥주"
+  },
+  {
+    "number": "717",
+    "category": "Food & Daily Life",
+    "subcategory": "Drinks",
+    "english": "wine",
+    "germany": "Wein",
+    "korean": "와인"
+  },
+  {
+    "number": "718",
+    "category": "Food & Daily Life",
+    "subcategory": "Drinks",
+    "english": "soda",
+    "germany": "Limo",
+    "korean": "탄산음료"
+  },
+  {
+    "number": "719",
+    "category": "Food & Daily Life",
+    "subcategory": "Drinks",
+    "english": "drink",
+    "germany": "Getränk",
+    "korean": "음료"
+  },
+  {
+    "number": "720",
+    "category": "Food & Daily Life",
+    "subcategory": "Drinks",
+    "english": "cup",
+    "germany": "Tasse",
+    "korean": "컵"
+  },
+  {
+    "number": "721",
+    "category": "Food & Daily Life",
+    "subcategory": "Fruits",
+    "english": "apple",
+    "germany": "Apfel",
+    "korean": "사과"
+  },
+  {
+    "number": "722",
+    "category": "Food & Daily Life",
+    "subcategory": "Fruits",
+    "english": "banana",
+    "germany": "Banane",
+    "korean": "바나나"
+  },
+  {
+    "number": "723",
+    "category": "Food & Daily Life",
+    "subcategory": "Fruits",
+    "english": "orange",
+    "germany": "Orange",
+    "korean": "오렌지"
+  },
+  {
+    "number": "724",
+    "category": "Food & Daily Life",
+    "subcategory": "Fruits",
+    "english": "grape",
+    "germany": "Traube",
+    "korean": "포도"
+  },
+  {
+    "number": "725",
+    "category": "Food & Daily Life",
+    "subcategory": "Fruits",
+    "english": "lemon",
+    "germany": "Zitrone",
+    "korean": "레몬"
+  },
+  {
+    "number": "726",
+    "category": "Food & Daily Life",
+    "subcategory": "Fruits",
+    "english": "strawberry",
+    "germany": "Erdbeere",
+    "korean": "딸기"
+  },
+  {
+    "number": "727",
+    "category": "Food & Daily Life",
+    "subcategory": "Fruits",
+    "english": "mango",
+    "germany": "Mango",
+    "korean": "망고"
+  },
+  {
+    "number": "728",
+    "category": "Food & Daily Life",
+    "subcategory": "Fruits",
+    "english": "berry",
+    "germany": "Beere",
+    "korean": "베리"
+  },
+  {
+    "number": "729",
+    "category": "Food & Daily Life",
+    "subcategory": "Fruits",
+    "english": "melon",
+    "germany": "Melone",
+    "korean": "멜론"
+  },
+  {
+    "number": "730",
+    "category": "Food & Daily Life",
+    "subcategory": "Fruits",
+    "english": "peach",
+    "germany": "Pfirsich",
+    "korean": "복숭아"
+  },
+  {
+    "number": "731",
+    "category": "Food & Daily Life",
+    "subcategory": "Vegetables",
+    "english": "carrot",
+    "germany": "Karotte",
+    "korean": "당근"
+  },
+  {
+    "number": "732",
+    "category": "Food & Daily Life",
+    "subcategory": "Vegetables",
+    "english": "onion",
+    "germany": "Zwiebel",
+    "korean": "양파"
+  },
+  {
+    "number": "733",
+    "category": "Food & Daily Life",
+    "subcategory": "Vegetables",
+    "english": "potato",
+    "germany": "Kartoffel",
+    "korean": "감자"
+  },
+  {
+    "number": "734",
+    "category": "Food & Daily Life",
+    "subcategory": "Vegetables",
+    "english": "tomato",
+    "germany": "Tomate",
+    "korean": "토마토"
+  },
+  {
+    "number": "735",
+    "category": "Food & Daily Life",
+    "subcategory": "Vegetables",
+    "english": "salad",
+    "germany": "Salat",
+    "korean": "샐러드"
+  },
+  {
+    "number": "736",
+    "category": "Food & Daily Life",
+    "subcategory": "Vegetables",
+    "english": "pepper",
+    "germany": "Pfeffer/Paprika",
+    "korean": "고추/피망"
+  },
+  {
+    "number": "737",
+    "category": "Food & Daily Life",
+    "subcategory": "Vegetables",
+    "english": "cabbage",
+    "germany": "Kohl",
+    "korean": "양배추"
+  },
+  {
+    "number": "738",
+    "category": "Food & Daily Life",
+    "subcategory": "Vegetables",
+    "english": "corn",
+    "germany": "Mais",
+    "korean": "옥수수"
+  },
+  {
+    "number": "739",
+    "category": "Food & Daily Life",
+    "subcategory": "Vegetables",
+    "english": "bean",
+    "germany": "Bohne",
+    "korean": "콩"
+  },
+  {
+    "number": "740",
+    "category": "Food & Daily Life",
+    "subcategory": "Vegetables",
+    "english": "garlic",
+    "germany": "Knoblauch",
+    "korean": "마늘"
+  },
+  {
+    "number": "741",
+    "category": "Food & Daily Life",
+    "subcategory": "Meals",
+    "english": "breakfast",
+    "germany": "Frühstück",
+    "korean": "아침 식사"
+  },
+  {
+    "number": "742",
+    "category": "Food & Daily Life",
+    "subcategory": "Meals",
+    "english": "lunch",
+    "germany": "Mittagessen",
+    "korean": "점심 식사"
+  },
+  {
+    "number": "743",
+    "category": "Food & Daily Life",
+    "subcategory": "Meals",
+    "english": "dinner",
+    "germany": "Abendessen",
+    "korean": "저녁 식사"
+  },
+  {
+    "number": "744",
+    "category": "Food & Daily Life",
+    "subcategory": "Meals",
+    "english": "snack",
+    "germany": "Snack",
+    "korean": "간식"
+  },
+  {
+    "number": "745",
+    "category": "Food & Daily Life",
+    "subcategory": "Meals",
+    "english": "meal",
+    "germany": "Mahlzeit",
+    "korean": "식사"
+  },
+  {
+    "number": "746",
+    "category": "Food & Daily Life",
+    "subcategory": "Meals",
+    "english": "food",
+    "germany": "Essen",
+    "korean": "음식"
+  },
+  {
+    "number": "747",
+    "category": "Food & Daily Life",
+    "subcategory": "Meals",
+    "english": "eat",
+    "germany": "essen",
+    "korean": "먹다"
+  },
+  {
+    "number": "748",
+    "category": "Food & Daily Life",
+    "subcategory": "Meals",
+    "english": "cook",
+    "germany": "kochen",
+    "korean": "요리하다"
+  },
+  {
+    "number": "749",
+    "category": "Food & Daily Life",
+    "subcategory": "Meals",
+    "english": "kitchen",
+    "germany": "Küche",
+    "korean": "주방"
+  },
+  {
+    "number": "750",
+    "category": "Food & Daily Life",
+    "subcategory": "Meals",
+    "english": "restaurant",
+    "germany": "Restaurant",
+    "korean": "레스토랑"
+  },
+  {
+    "number": "751",
+    "category": "Food & Daily Life",
+    "subcategory": "Cooking",
+    "english": "cook",
+    "germany": "kochen",
+    "korean": "요리하다"
+  },
+  {
+    "number": "752",
+    "category": "Food & Daily Life",
+    "subcategory": "Cooking",
+    "english": "boil",
+    "germany": "kochen/sieden",
+    "korean": "끓이다"
+  },
+  {
+    "number": "753",
+    "category": "Food & Daily Life",
+    "subcategory": "Cooking",
+    "english": "fry",
+    "germany": "braten",
+    "korean": "튀기다/볶다"
+  },
+  {
+    "number": "754",
+    "category": "Food & Daily Life",
+    "subcategory": "Cooking",
+    "english": "bake",
+    "germany": "backen",
+    "korean": "굽다"
+  },
+  {
+    "number": "755",
+    "category": "Food & Daily Life",
+    "subcategory": "Cooking",
+    "english": "grill",
+    "germany": "grillen",
+    "korean": "그릴에 굽다"
+  },
+  {
+    "number": "756",
+    "category": "Food & Daily Life",
+    "subcategory": "Cooking",
+    "english": "mix",
+    "germany": "mischen",
+    "korean": "섞다"
+  },
+  {
+    "number": "757",
+    "category": "Food & Daily Life",
+    "subcategory": "Cooking",
+    "english": "cut",
+    "germany": "schneiden",
+    "korean": "자르다"
+  },
+  {
+    "number": "758",
+    "category": "Food & Daily Life",
+    "subcategory": "Cooking",
+    "english": "wash",
+    "germany": "waschen",
+    "korean": "씻다"
+  },
+  {
+    "number": "759",
+    "category": "Food & Daily Life",
+    "subcategory": "Cooking",
+    "english": "prepare",
+    "germany": "vorbereiten",
+    "korean": "준비하다"
+  },
+  {
+    "number": "760",
+    "category": "Food & Daily Life",
+    "subcategory": "Cooking",
+    "english": "heat",
+    "germany": "erhitzen",
+    "korean": "가열하다"
+  },
+  {
+    "number": "761",
+    "category": "Food & Daily Life",
+    "subcategory": "Taste",
+    "english": "sweet",
+    "germany": "süß",
+    "korean": "달콤한"
+  },
+  {
+    "number": "762",
+    "category": "Food & Daily Life",
+    "subcategory": "Taste",
+    "english": "salty",
+    "germany": "salzig",
+    "korean": "짠"
+  },
+  {
+    "number": "763",
+    "category": "Food & Daily Life",
+    "subcategory": "Taste",
+    "english": "sour",
+    "germany": "sauer",
+    "korean": "신"
+  },
+  {
+    "number": "764",
+    "category": "Food & Daily Life",
+    "subcategory": "Taste",
+    "english": "bitter",
+    "germany": "bitter",
+    "korean": "쓴"
+  },
+  {
+    "number": "765",
+    "category": "Food & Daily Life",
+    "subcategory": "Taste",
+    "english": "spicy",
+    "germany": "scharf",
+    "korean": "매운"
+  },
+  {
+    "number": "766",
+    "category": "Food & Daily Life",
+    "subcategory": "Taste",
+    "english": "hot",
+    "germany": "heiß/scharf",
+    "korean": "뜨거운/매운"
+  },
+  {
+    "number": "767",
+    "category": "Food & Daily Life",
+    "subcategory": "Taste",
+    "english": "cold",
+    "germany": "kalt",
+    "korean": "차가운"
+  },
+  {
+    "number": "768",
+    "category": "Food & Daily Life",
+    "subcategory": "Taste",
+    "english": "fresh",
+    "germany": "frisch",
+    "korean": "신선한"
+  },
+  {
+    "number": "769",
+    "category": "Food & Daily Life",
+    "subcategory": "Taste",
+    "english": "delicious",
+    "germany": "lecker",
+    "korean": "맛있는"
+  },
+  {
+    "number": "770",
+    "category": "Food & Daily Life",
+    "subcategory": "Taste",
+    "english": "tasty",
+    "germany": "schmackhaft",
+    "korean": "맛있는"
+  },
+  {
+    "number": "771",
+    "category": "Food & Daily Life",
+    "subcategory": "Shopping food",
+    "english": "buy",
+    "germany": "kaufen",
+    "korean": "사다"
+  },
+  {
+    "number": "772",
+    "category": "Food & Daily Life",
+    "subcategory": "Shopping food",
+    "english": "price",
+    "germany": "Preis",
+    "korean": "가격"
+  },
+  {
+    "number": "773",
+    "category": "Food & Daily Life",
+    "subcategory": "Shopping food",
+    "english": "market",
+    "germany": "Markt",
+    "korean": "시장"
+  },
+  {
+    "number": "774",
+    "category": "Food & Daily Life",
+    "subcategory": "Shopping food",
+    "english": "store",
+    "germany": "Laden",
+    "korean": "가게"
+  },
+  {
+    "number": "775",
+    "category": "Food & Daily Life",
+    "subcategory": "Shopping food",
+    "english": "shop",
+    "germany": "Geschäft",
+    "korean": "상점"
+  },
+  {
+    "number": "776",
+    "category": "Food & Daily Life",
+    "subcategory": "Shopping food",
+    "english": "pay",
+    "germany": "bezahlen",
+    "korean": "지불하다"
+  },
+  {
+    "number": "777",
+    "category": "Food & Daily Life",
+    "subcategory": "Shopping food",
+    "english": "cost",
+    "germany": "kosten",
+    "korean": "비용"
+  },
+  {
+    "number": "778",
+    "category": "Food & Daily Life",
+    "subcategory": "Shopping food",
+    "english": "bill",
+    "germany": "Rechnung",
+    "korean": "계산서"
+  },
+  {
+    "number": "779",
+    "category": "Food & Daily Life",
+    "subcategory": "Shopping food",
+    "english": "list",
+    "germany": "Liste",
+    "korean": "목록"
+  },
+  {
+    "number": "780",
+    "category": "Food & Daily Life",
+    "subcategory": "Shopping food",
+    "english": "fresh",
+    "germany": "frisch",
+    "korean": "신선한"
+  },
+  {
+    "number": "781",
+    "category": "Food & Daily Life",
+    "subcategory": "Eating out",
+    "english": "menu",
+    "germany": "Speisekarte",
+    "korean": "메뉴"
+  },
+  {
+    "number": "782",
+    "category": "Food & Daily Life",
+    "subcategory": "Eating out",
+    "english": "bill",
+    "germany": "Rechnung",
+    "korean": "계산서"
+  },
+  {
+    "number": "783",
+    "category": "Food & Daily Life",
+    "subcategory": "Eating out",
+    "english": "table",
+    "germany": "Tisch",
+    "korean": "테이블"
+  },
+  {
+    "number": "784",
+    "category": "Food & Daily Life",
+    "subcategory": "Eating out",
+    "english": "waiter",
+    "germany": "Kellner",
+    "korean": "웨이터"
+  },
+  {
+    "number": "785",
+    "category": "Food & Daily Life",
+    "subcategory": "Eating out",
+    "english": "order",
+    "germany": "bestellen",
+    "korean": "주문하다"
+  },
+  {
+    "number": "786",
+    "category": "Food & Daily Life",
+    "subcategory": "Eating out",
+    "english": "tip",
+    "germany": "Trinkgeld",
+    "korean": "팁"
+  },
+  {
+    "number": "787",
+    "category": "Food & Daily Life",
+    "subcategory": "Eating out",
+    "english": "restaurant",
+    "germany": "Restaurant",
+    "korean": "레스토랑"
+  },
+  {
+    "number": "788",
+    "category": "Food & Daily Life",
+    "subcategory": "Eating out",
+    "english": "cafe",
+    "germany": "Café",
+    "korean": "카페"
+  },
+  {
+    "number": "789",
+    "category": "Food & Daily Life",
+    "subcategory": "Eating out",
+    "english": "food",
+    "germany": "Essen",
+    "korean": "음식"
+  },
+  {
+    "number": "790",
+    "category": "Food & Daily Life",
+    "subcategory": "Eating out",
+    "english": "drink",
+    "germany": "Getränk",
+    "korean": "음료"
+  },
+  {
+    "number": "791",
+    "category": "Food & Daily Life",
+    "subcategory": "Health food",
+    "english": "diet",
+    "germany": "Diät",
+    "korean": "식단"
+  },
+  {
+    "number": "792",
+    "category": "Food & Daily Life",
+    "subcategory": "Health food",
+    "english": "healthy",
+    "germany": "gesund",
+    "korean": "건강한"
+  },
+  {
+    "number": "793",
+    "category": "Food & Daily Life",
+    "subcategory": "Health food",
+    "english": "vitamin",
+    "germany": "Vitamin",
+    "korean": "비타민"
+  },
+  {
+    "number": "794",
+    "category": "Food & Daily Life",
+    "subcategory": "Health food",
+    "english": "fruit",
+    "germany": "Frucht",
+    "korean": "과일"
+  },
+  {
+    "number": "795",
+    "category": "Food & Daily Life",
+    "subcategory": "Health food",
+    "english": "green",
+    "germany": "grün",
+    "korean": "초록색/채소"
+  },
+  {
+    "number": "796",
+    "category": "Food & Daily Life",
+    "subcategory": "Health food",
+    "english": "natural",
+    "germany": "natürlich",
+    "korean": "자연의"
+  },
+  {
+    "number": "797",
+    "category": "Food & Daily Life",
+    "subcategory": "Health food",
+    "english": "organic",
+    "germany": "Bio",
+    "korean": "유기농"
+  },
+  {
+    "number": "798",
+    "category": "Food & Daily Life",
+    "subcategory": "Health food",
+    "english": "fresh",
+    "germany": "frisch",
+    "korean": "신선한"
+  },
+  {
+    "number": "799",
+    "category": "Food & Daily Life",
+    "subcategory": "Health food",
+    "english": "water",
+    "germany": "Wasser",
+    "korean": "물"
+  },
+  {
+    "number": "800",
+    "category": "Food & Daily Life",
+    "subcategory": "Health food",
+    "english": "sugar-free",
+    "germany": "zuckerfrei",
+    "korean": "무설탕"
+  },
+  {
+    "number": "801",
+    "category": "Travel & Directions",
+    "subcategory": "Directions",
+    "english": "left",
+    "germany": "links",
+    "korean": "왼쪽"
+  },
+  {
+    "number": "802",
+    "category": "Travel & Directions",
+    "subcategory": "Directions",
+    "english": "right",
+    "germany": "rechts",
+    "korean": "오른쪽"
+  },
+  {
+    "number": "803",
+    "category": "Travel & Directions",
+    "subcategory": "Directions",
+    "english": "straight",
+    "germany": "geradeaus",
+    "korean": "똑바로"
+  },
+  {
+    "number": "804",
+    "category": "Travel & Directions",
+    "subcategory": "Directions",
+    "english": "back",
+    "germany": "zurück",
+    "korean": "뒤로"
+  },
+  {
+    "number": "805",
+    "category": "Travel & Directions",
+    "subcategory": "Directions",
+    "english": "up",
+    "germany": "hoch",
+    "korean": "위로"
+  },
+  {
+    "number": "806",
+    "category": "Travel & Directions",
+    "subcategory": "Directions",
+    "english": "down",
+    "germany": "runter",
+    "korean": "아래로"
+  },
+  {
+    "number": "807",
+    "category": "Travel & Directions",
+    "subcategory": "Directions",
+    "english": "north",
+    "germany": "Norden",
+    "korean": "북쪽"
+  },
+  {
+    "number": "808",
+    "category": "Travel & Directions",
+    "subcategory": "Directions",
+    "english": "south",
+    "germany": "Süden",
+    "korean": "남쪽"
+  },
+  {
+    "number": "809",
+    "category": "Travel & Directions",
+    "subcategory": "Directions",
+    "english": "east",
+    "germany": "Osten",
+    "korean": "동쪽"
+  },
+  {
+    "number": "810",
+    "category": "Travel & Directions",
+    "subcategory": "Directions",
+    "english": "west",
+    "germany": "Westen",
+    "korean": "서쪽"
+  },
+  {
+    "number": "811",
+    "category": "Travel & Directions",
+    "subcategory": "Places",
+    "english": "hotel",
+    "germany": "Hotel",
+    "korean": "호텔"
+  },
+  {
+    "number": "812",
+    "category": "Travel & Directions",
+    "subcategory": "Places",
+    "english": "airport",
+    "germany": "Flughafen",
+    "korean": "공항"
+  },
+  {
+    "number": "813",
+    "category": "Travel & Directions",
+    "subcategory": "Places",
+    "english": "station",
+    "germany": "Bahnhof",
+    "korean": "역"
+  },
+  {
+    "number": "814",
+    "category": "Travel & Directions",
+    "subcategory": "Places",
+    "english": "bridge",
+    "germany": "Brücke",
+    "korean": "다리"
+  },
+  {
+    "number": "815",
+    "category": "Travel & Directions",
+    "subcategory": "Places",
+    "english": "city",
+    "germany": "Stadt",
+    "korean": "도시"
+  },
+  {
+    "number": "816",
+    "category": "Travel & Directions",
+    "subcategory": "Places",
+    "english": "country",
+    "germany": "Land",
+    "korean": "나라"
+  },
+  {
+    "number": "817",
+    "category": "Travel & Directions",
+    "subcategory": "Places",
+    "english": "beach",
+    "germany": "Strand",
+    "korean": "해변"
+  },
+  {
+    "number": "818",
+    "category": "Travel & Directions",
+    "subcategory": "Places",
+    "english": "island",
+    "germany": "Insel",
+    "korean": "섬"
+  },
+  {
+    "number": "819",
+    "category": "Travel & Directions",
+    "subcategory": "Places",
+    "english": "forest",
+    "germany": "Wald",
+    "korean": "숲"
+  },
+  {
+    "number": "820",
+    "category": "Travel & Directions",
+    "subcategory": "Places",
+    "english": "field",
+    "germany": "Feld",
+    "korean": "들판"
+  },
+  {
+    "number": "821",
+    "category": "Travel & Directions",
+    "subcategory": "Transport verbs",
+    "english": "drive",
+    "germany": "fahren",
+    "korean": "운전하다"
+  },
+  {
+    "number": "822",
+    "category": "Travel & Directions",
+    "subcategory": "Transport verbs",
+    "english": "fly",
+    "germany": "fliegen",
+    "korean": "날다"
+  },
+  {
+    "number": "823",
+    "category": "Travel & Directions",
+    "subcategory": "Transport verbs",
+    "english": "ride",
+    "germany": "fahren",
+    "korean": "타다"
+  },
+  {
+    "number": "824",
+    "category": "Travel & Directions",
+    "subcategory": "Transport verbs",
+    "english": "walk",
+    "germany": "gehen",
+    "korean": "걷다"
+  },
+  {
+    "number": "825",
+    "category": "Travel & Directions",
+    "subcategory": "Transport verbs",
+    "english": "travel",
+    "germany": "reisen",
+    "korean": "여행하다"
+  },
+  {
+    "number": "826",
+    "category": "Travel & Directions",
+    "subcategory": "Transport verbs",
+    "english": "sail",
+    "germany": "segeln",
+    "korean": "항해하다"
+  },
+  {
+    "number": "827",
+    "category": "Travel & Directions",
+    "subcategory": "Transport verbs",
+    "english": "cross",
+    "germany": "überqueren",
+    "korean": "건너다"
+  },
+  {
+    "number": "828",
+    "category": "Travel & Directions",
+    "subcategory": "Transport verbs",
+    "english": "reach",
+    "germany": "erreichen",
+    "korean": "도착하다"
+  },
+  {
+    "number": "829",
+    "category": "Travel & Directions",
+    "subcategory": "Transport verbs",
+    "english": "leave",
+    "germany": "verlassen",
+    "korean": "떠나다"
+  },
+  {
+    "number": "830",
+    "category": "Travel & Directions",
+    "subcategory": "Transport verbs",
+    "english": "arrive",
+    "germany": "ankommen",
+    "korean": "도착하다"
+  },
+  {
+    "number": "831",
+    "category": "Travel & Directions",
+    "subcategory": "Tickets",
+    "english": "ticket",
+    "germany": "Ticket",
+    "korean": "티켓"
+  },
+  {
+    "number": "832",
+    "category": "Travel & Directions",
+    "subcategory": "Tickets",
+    "english": "seat",
+    "germany": "Sitz",
+    "korean": "좌석"
+  },
+  {
+    "number": "833",
+    "category": "Travel & Directions",
+    "subcategory": "Tickets",
+    "english": "flight",
+    "germany": "Flug",
+    "korean": "비행편"
+  },
+  {
+    "number": "834",
+    "category": "Travel & Directions",
+    "subcategory": "Tickets",
+    "english": "boarding",
+    "germany": "Boarding",
+    "korean": "탑승"
+  },
+  {
+    "number": "835",
+    "category": "Travel & Directions",
+    "subcategory": "Tickets",
+    "english": "pass",
+    "germany": "Pass/Ausweis",
+    "korean": "패스/통과"
+  },
+  {
+    "number": "836",
+    "category": "Travel & Directions",
+    "subcategory": "Tickets",
+    "english": "class",
+    "germany": "Klasse",
+    "korean": "등급/클래스"
+  },
+  {
+    "number": "837",
+    "category": "Travel & Directions",
+    "subcategory": "Tickets",
+    "english": "gate",
+    "germany": "Gate",
+    "korean": "게이트"
+  },
+  {
+    "number": "838",
+    "category": "Travel & Directions",
+    "subcategory": "Tickets",
+    "english": "price",
+    "germany": "Preis",
+    "korean": "가격"
+  },
+  {
+    "number": "839",
+    "category": "Travel & Directions",
+    "subcategory": "Tickets",
+    "english": "book",
+    "germany": "buchen",
+    "korean": "예약하다"
+  },
+  {
+    "number": "840",
+    "category": "Travel & Directions",
+    "subcategory": "Tickets",
+    "english": "cancel",
+    "germany": "stornieren",
+    "korean": "취소하다"
+  },
+  {
+    "number": "841",
+    "category": "Travel & Directions",
+    "subcategory": "Navigation",
+    "english": "map",
+    "germany": "Karte",
+    "korean": "지도"
+  },
+  {
+    "number": "842",
+    "category": "Travel & Directions",
+    "subcategory": "Navigation",
+    "english": "location",
+    "germany": "Standort",
+    "korean": "위치"
+  },
+  {
+    "number": "843",
+    "category": "Travel & Directions",
+    "subcategory": "Navigation",
+    "english": "compass",
+    "germany": "Kompass",
+    "korean": "나침반"
+  },
+  {
+    "number": "844",
+    "category": "Travel & Directions",
+    "subcategory": "Navigation",
+    "english": "route",
+    "germany": "Route",
+    "korean": "경로"
+  },
+  {
+    "number": "845",
+    "category": "Travel & Directions",
+    "subcategory": "Navigation",
+    "english": "way",
+    "germany": "Weg",
+    "korean": "길"
+  },
+  {
+    "number": "846",
+    "category": "Travel & Directions",
+    "subcategory": "Navigation",
+    "english": "road",
+    "germany": "Straße",
+    "korean": "도로"
+  },
+  {
+    "number": "847",
+    "category": "Travel & Directions",
+    "subcategory": "Navigation",
+    "english": "path",
+    "germany": "Pfad",
+    "korean": "경로/오솔길"
+  },
+  {
+    "number": "848",
+    "category": "Travel & Directions",
+    "subcategory": "Navigation",
+    "english": "sign",
+    "germany": "Schild",
+    "korean": "표지판"
+  },
+  {
+    "number": "849",
+    "category": "Travel & Directions",
+    "subcategory": "Navigation",
+    "english": "guide",
+    "germany": "Führer",
+    "korean": "안내원/가이드"
+  },
+  {
+    "number": "850",
+    "category": "Travel & Directions",
+    "subcategory": "Navigation",
+    "english": "GPS",
+    "germany": "GPS",
+    "korean": "GPS"
+  },
+  {
+    "number": "851",
+    "category": "Travel & Directions",
+    "subcategory": "Distance",
+    "english": "near",
+    "germany": "nah",
+    "korean": "가까운"
+  },
+  {
+    "number": "852",
+    "category": "Travel & Directions",
+    "subcategory": "Distance",
+    "english": "far",
+    "germany": "fern",
+    "korean": "먼"
+  },
+  {
+    "number": "853",
+    "category": "Travel & Directions",
+    "subcategory": "Distance",
+    "english": "close",
+    "germany": "nah",
+    "korean": "가까운"
+  },
+  {
+    "number": "854",
+    "category": "Travel & Directions",
+    "subcategory": "Distance",
+    "english": "distant",
+    "germany": "entfernt",
+    "korean": "먼"
+  },
+  {
+    "number": "855",
+    "category": "Travel & Directions",
+    "subcategory": "Distance",
+    "english": "mile",
+    "germany": "Meile",
+    "korean": "마일"
+  },
+  {
+    "number": "856",
+    "category": "Travel & Directions",
+    "subcategory": "Distance",
+    "english": "kilometer",
+    "germany": "Kilometer",
+    "korean": "킬로미터"
+  },
+  {
+    "number": "857",
+    "category": "Travel & Directions",
+    "subcategory": "Distance",
+    "english": "meter",
+    "germany": "Meter",
+    "korean": "미터"
+  },
+  {
+    "number": "858",
+    "category": "Travel & Directions",
+    "subcategory": "Distance",
+    "english": "long",
+    "germany": "lang",
+    "korean": "긴"
+  },
+  {
+    "number": "859",
+    "category": "Travel & Directions",
+    "subcategory": "Distance",
+    "english": "short",
+    "germany": "kurz",
+    "korean": "짧은"
+  },
+  {
+    "number": "860",
+    "category": "Travel & Directions",
+    "subcategory": "Distance",
+    "english": "around",
+    "germany": "um/herum",
+    "korean": "주변에"
+  },
+  {
+    "number": "861",
+    "category": "Travel & Directions",
+    "subcategory": "Accommodation",
+    "english": "room",
+    "germany": "Zimmer",
+    "korean": "방"
+  },
+  {
+    "number": "862",
+    "category": "Travel & Directions",
+    "subcategory": "Accommodation",
+    "english": "key",
+    "germany": "Schlüssel",
+    "korean": "열쇠"
+  },
+  {
+    "number": "863",
+    "category": "Travel & Directions",
+    "subcategory": "Accommodation",
+    "english": "bed",
+    "germany": "Bett",
+    "korean": "침대"
+  },
+  {
+    "number": "864",
+    "category": "Travel & Directions",
+    "subcategory": "Accommodation",
+    "english": "check-in",
+    "germany": "Check-in",
+    "korean": "체크인"
+  },
+  {
+    "number": "865",
+    "category": "Travel & Directions",
+    "subcategory": "Accommodation",
+    "english": "check-out",
+    "germany": "Check-out",
+    "korean": "체크아웃"
+  },
+  {
+    "number": "866",
+    "category": "Travel & Directions",
+    "subcategory": "Accommodation",
+    "english": "stay",
+    "germany": "Stay/Bleiben",
+    "korean": "머물다"
+  },
+  {
+    "number": "867",
+    "category": "Travel & Directions",
+    "subcategory": "Accommodation",
+    "english": "guest",
+    "germany": "Gast",
+    "korean": "손님"
+  },
+  {
+    "number": "868",
+    "category": "Travel & Directions",
+    "subcategory": "Accommodation",
+    "english": "reception",
+    "germany": "Rezeption",
+    "korean": "리셉션"
+  },
+  {
+    "number": "869",
+    "category": "Travel & Directions",
+    "subcategory": "Accommodation",
+    "english": "service",
+    "germany": "Service",
+    "korean": "서비스"
+  },
+  {
+    "number": "870",
+    "category": "Travel & Directions",
+    "subcategory": "Accommodation",
+    "english": "lobby",
+    "germany": "Lobby",
+    "korean": "로비"
+  },
+  {
+    "number": "871",
+    "category": "Travel & Directions",
+    "subcategory": "Problems",
+    "english": "lost",
+    "germany": "verloren",
+    "korean": "잃어버린/길을 잃은"
+  },
+  {
+    "number": "872",
+    "category": "Travel & Directions",
+    "subcategory": "Problems",
+    "english": "late",
+    "germany": "spät",
+    "korean": "늦은"
+  },
+  {
+    "number": "873",
+    "category": "Travel & Directions",
+    "subcategory": "Problems",
+    "english": "delayed",
+    "germany": "verspätet",
+    "korean": "지연된"
+  },
+  {
+    "number": "874",
+    "category": "Travel & Directions",
+    "subcategory": "Problems",
+    "english": "cancel",
+    "germany": "storniert",
+    "korean": "취소된"
+  },
+  {
+    "number": "875",
+    "category": "Travel & Directions",
+    "subcategory": "Problems",
+    "english": "broken",
+    "germany": "gebrochen/kaputt",
+    "korean": "부서진/고장 난"
+  },
+  {
+    "number": "876",
+    "category": "Travel & Directions",
+    "subcategory": "Problems",
+    "english": "stolen",
+    "germany": "gestohlen",
+    "korean": "도난당한"
+  },
+  {
+    "number": "877",
+    "category": "Travel & Directions",
+    "subcategory": "Problems",
+    "english": "missed",
+    "germany": "verpasst",
+    "korean": "놓친"
+  },
+  {
+    "number": "878",
+    "category": "Travel & Directions",
+    "subcategory": "Problems",
+    "english": "wrong",
+    "germany": "falsch",
+    "korean": "틀린"
+  },
+  {
+    "number": "879",
+    "category": "Travel & Directions",
+    "subcategory": "Problems",
+    "english": "danger",
+    "germany": "Gefahr",
+    "korean": "위험"
+  },
+  {
+    "number": "880",
+    "category": "Travel & Directions",
+    "subcategory": "Problems",
+    "english": "help",
+    "germany": "Hilfe",
+    "korean": "도움"
+  },
+  {
+    "number": "881",
+    "category": "Travel & Directions",
+    "subcategory": "Safety",
+    "english": "police",
+    "germany": "Polizei",
+    "korean": "경찰"
+  },
+  {
+    "number": "882",
+    "category": "Travel & Directions",
+    "subcategory": "Safety",
+    "english": "help",
+    "germany": "Hilfe",
+    "korean": "도움"
+  },
+  {
+    "number": "883",
+    "category": "Travel & Directions",
+    "subcategory": "Safety",
+    "english": "safe",
+    "germany": "sicher",
+    "korean": "안전한"
+  },
+  {
+    "number": "884",
+    "category": "Travel & Directions",
+    "subcategory": "Safety",
+    "english": "secure",
+    "germany": "sicher",
+    "korean": "보안된"
+  },
+  {
+    "number": "885",
+    "category": "Travel & Directions",
+    "subcategory": "Safety",
+    "english": "caution",
+    "germany": "Vorsicht",
+    "korean": "주의"
+  },
+  {
+    "number": "886",
+    "category": "Travel & Directions",
+    "subcategory": "Safety",
+    "english": "emergency",
+    "germany": "Notfall",
+    "korean": "비상사태"
+  },
+  {
+    "number": "887",
+    "category": "Travel & Directions",
+    "subcategory": "Safety",
+    "english": "exit",
+    "germany": "Ausgang",
+    "korean": "출구"
+  },
+  {
+    "number": "888",
+    "category": "Travel & Directions",
+    "subcategory": "Safety",
+    "english": "danger",
+    "germany": "Gefahr",
+    "korean": "위험"
+  },
+  {
+    "number": "889",
+    "category": "Travel & Directions",
+    "subcategory": "Safety",
+    "english": "guard",
+    "germany": "Wache",
+    "korean": "경비원"
+  },
+  {
+    "number": "890",
+    "category": "Travel & Directions",
+    "subcategory": "Safety",
+    "english": "protection",
+    "germany": "Schutz",
+    "korean": "보호"
+  },
+  {
+    "number": "891",
+    "category": "Travel & Directions",
+    "subcategory": "Travel phrases",
+    "english": "check-in",
+    "germany": "Check-in",
+    "korean": "체크인"
+  },
+  {
+    "number": "892",
+    "category": "Travel & Directions",
+    "subcategory": "Travel phrases",
+    "english": "departure",
+    "germany": "Abfahrt/Abflug",
+    "korean": "출발"
+  },
+  {
+    "number": "893",
+    "category": "Travel & Directions",
+    "subcategory": "Travel phrases",
+    "english": "arrival",
+    "germany": "Ankunft",
+    "korean": "도착"
+  },
+  {
+    "number": "894",
+    "category": "Travel & Directions",
+    "subcategory": "Travel phrases",
+    "english": "passport",
+    "germany": "Reisepass",
+    "korean": "여권"
+  },
+  {
+    "number": "895",
+    "category": "Travel & Directions",
+    "subcategory": "Travel phrases",
+    "english": "visa",
+    "germany": "Visum",
+    "korean": "비자"
+  },
+  {
+    "number": "896",
+    "category": "Travel & Directions",
+    "subcategory": "Travel phrases",
+    "english": "luggage",
+    "germany": "Gepäck",
+    "korean": "수하물"
+  },
+  {
+    "number": "897",
+    "category": "Travel & Directions",
+    "subcategory": "Travel phrases",
+    "english": "pack",
+    "germany": "packen",
+    "korean": "짐을 싸다"
+  },
+  {
+    "number": "898",
+    "category": "Travel & Directions",
+    "subcategory": "Travel phrases",
+    "english": "trip",
+    "germany": "Reise",
+    "korean": "여행"
+  },
+  {
+    "number": "899",
+    "category": "Travel & Directions",
+    "subcategory": "Travel phrases",
+    "english": "tour",
+    "germany": "Tour",
+    "korean": "투어"
+  },
+  {
+    "number": "900",
+    "category": "Travel & Directions",
+    "subcategory": "Travel phrases",
+    "english": "guide",
+    "germany": "Führer",
+    "korean": "안내"
+  },
+  {
+    "number": "901",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Work",
+    "english": "job",
+    "germany": "Beruf",
+    "korean": "직업"
+  },
+  {
+    "number": "902",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Work",
+    "english": "salary",
+    "germany": "Gehalt",
+    "korean": "연봉/급여"
+  },
+  {
+    "number": "903",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Work",
+    "english": "office",
+    "germany": "Büro",
+    "korean": "사무실"
+  },
+  {
+    "number": "904",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Work",
+    "english": "manager",
+    "germany": "Manager",
+    "korean": "매니저"
+  },
+  {
+    "number": "905",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Work",
+    "english": "meeting",
+    "germany": "Meeting",
+    "korean": "회의"
+  },
+  {
+    "number": "906",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Work",
+    "english": "company",
+    "germany": "Firma",
+    "korean": "회사"
+  },
+  {
+    "number": "907",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Work",
+    "english": "career",
+    "germany": "Karriere",
+    "korean": "경력"
+  },
+  {
+    "number": "908",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Work",
+    "english": "boss",
+    "germany": "Chef",
+    "korean": "상사"
+  },
+  {
+    "number": "909",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Work",
+    "english": "work",
+    "germany": "Arbeit",
+    "korean": "일/업무"
+  },
+  {
+    "number": "910",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Work",
+    "english": "staff",
+    "germany": "Personal",
+    "korean": "직원"
+  },
+  {
+    "number": "911",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Office actions",
+    "english": "send",
+    "germany": "senden",
+    "korean": "보내다"
+  },
+  {
+    "number": "912",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Office actions",
+    "english": "meet",
+    "germany": "treffen",
+    "korean": "만나다"
+  },
+  {
+    "number": "913",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Office actions",
+    "english": "call",
+    "germany": "anrufen",
+    "korean": "전화하다"
+  },
+  {
+    "number": "914",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Office actions",
+    "english": "write",
+    "germany": "schreiben",
+    "korean": "쓰다"
+  },
+  {
+    "number": "915",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Office actions",
+    "english": "print",
+    "germany": "drucken",
+    "korean": "인쇄하다"
+  },
+  {
+    "number": "916",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Office actions",
+    "english": "copy",
+    "germany": "kopieren",
+    "korean": "복사하다"
+  },
+  {
+    "number": "917",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Office actions",
+    "english": "save",
+    "germany": "speichern",
+    "korean": "저장하다"
+  },
+  {
+    "number": "918",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Office actions",
+    "english": "organize",
+    "germany": "organisieren",
+    "korean": "조직하다"
+  },
+  {
+    "number": "919",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Office actions",
+    "english": "plan",
+    "germany": "planen",
+    "korean": "계획하다"
+  },
+  {
+    "number": "920",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Office actions",
+    "english": "finish",
+    "germany": "beenden",
+    "korean": "끝내다"
+  },
+  {
+    "number": "921",
+    "category": "Work, Study & Social Life",
+    "subcategory": "School",
+    "english": "class",
+    "germany": "Klasse",
+    "korean": "수업/반"
+  },
+  {
+    "number": "922",
+    "category": "Work, Study & Social Life",
+    "subcategory": "School",
+    "english": "exam",
+    "germany": "Prüfung",
+    "korean": "시험"
+  },
+  {
+    "number": "923",
+    "category": "Work, Study & Social Life",
+    "subcategory": "School",
+    "english": "lesson",
+    "germany": "Lektion",
+    "korean": "레슨/공과"
+  },
+  {
+    "number": "924",
+    "category": "Work, Study & Social Life",
+    "subcategory": "School",
+    "english": "grade",
+    "germany": "Note",
+    "korean": "성적/학년"
+  },
+  {
+    "number": "925",
+    "category": "Work, Study & Social Life",
+    "subcategory": "School",
+    "english": "score",
+    "germany": "Punktzahl",
+    "korean": "점수"
+  },
+  {
+    "number": "926",
+    "category": "Work, Study & Social Life",
+    "subcategory": "School",
+    "english": "homework",
+    "germany": "Hausaufgabe",
+    "korean": "숙제"
+  },
+  {
+    "number": "927",
+    "category": "Work, Study & Social Life",
+    "subcategory": "School",
+    "english": "student",
+    "germany": "Student",
+    "korean": "학생"
+  },
+  {
+    "number": "928",
+    "category": "Work, Study & Social Life",
+    "subcategory": "School",
+    "english": "teacher",
+    "germany": "Lehrer",
+    "korean": "선생님"
+  },
+  {
+    "number": "929",
+    "category": "Work, Study & Social Life",
+    "subcategory": "School",
+    "english": "subject",
+    "germany": "Fach",
+    "korean": "과목"
+  },
+  {
+    "number": "930",
+    "category": "Work, Study & Social Life",
+    "subcategory": "School",
+    "english": "term",
+    "germany": "Semester/Begriff",
+    "korean": "학기/용어"
+  },
+  {
+    "number": "931",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Learning",
+    "english": "study",
+    "germany": "studieren",
+    "korean": "공부하다"
+  },
+  {
+    "number": "932",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Learning",
+    "english": "practice",
+    "germany": "üben",
+    "korean": "연습하다"
+  },
+  {
+    "number": "933",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Learning",
+    "english": "learn",
+    "germany": "lernen",
+    "korean": "배우다"
+  },
+  {
+    "number": "934",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Learning",
+    "english": "improve",
+    "germany": "verbessern",
+    "korean": "개선하다"
+  },
+  {
+    "number": "935",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Learning",
+    "english": "test",
+    "germany": "Test",
+    "korean": "시험/테스트"
+  },
+  {
+    "number": "936",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Learning",
+    "english": "quiz",
+    "germany": "Quiz",
+    "korean": "퀴즈"
+  },
+  {
+    "number": "937",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Learning",
+    "english": "result",
+    "germany": "Ergebnis",
+    "korean": "결과"
+  },
+  {
+    "number": "938",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Learning",
+    "english": "skill",
+    "germany": "Fähigkeit",
+    "korean": "기술/숙련도"
+  },
+  {
+    "number": "939",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Learning",
+    "english": "progress",
+    "germany": "Fortschritt",
+    "korean": "진행/발전"
+  },
+  {
+    "number": "940",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Learning",
+    "english": "goal",
+    "germany": "Ziel",
+    "korean": "목표"
+  },
+  {
+    "number": "941",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Communication",
+    "english": "email",
+    "germany": "E-Mail",
+    "korean": "이메일"
+  },
+  {
+    "number": "942",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Communication",
+    "english": "message",
+    "germany": "Nachricht",
+    "korean": "메시지"
+  },
+  {
+    "number": "943",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Communication",
+    "english": "call",
+    "germany": "Anruf",
+    "korean": "전화"
+  },
+  {
+    "number": "944",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Communication",
+    "english": "chat",
+    "germany": "Chatten",
+    "korean": "채팅"
+  },
+  {
+    "number": "945",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Communication",
+    "english": "speak",
+    "germany": "sprechen",
+    "korean": "말하다"
+  },
+  {
+    "number": "946",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Communication",
+    "english": "talk",
+    "germany": "reden",
+    "korean": "이야기하다"
+  },
+  {
+    "number": "947",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Communication",
+    "english": "discuss",
+    "germany": "diskutieren",
+    "korean": "토론하다"
+  },
+  {
+    "number": "948",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Communication",
+    "english": "answer",
+    "germany": "antworten",
+    "korean": "대답"
+  },
+  {
+    "number": "949",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Communication",
+    "english": "question",
+    "germany": "Frage",
+    "korean": "질문"
+  },
+  {
+    "number": "950",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Communication",
+    "english": "share",
+    "germany": "teilen",
+    "korean": "공유"
+  },
+  {
+    "number": "951",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Social media",
+    "english": "post",
+    "germany": "Beitrag",
+    "korean": "포스트/게시물"
+  },
+  {
+    "number": "952",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Social media",
+    "english": "comment",
+    "germany": "Kommentar",
+    "korean": "댓글"
+  },
+  {
+    "number": "953",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Social media",
+    "english": "like",
+    "germany": "Like/Gefällt mir",
+    "korean": "좋아요"
+  },
+  {
+    "number": "954",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Social media",
+    "english": "share",
+    "germany": "teilen",
+    "korean": "공유"
+  },
+  {
+    "number": "955",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Social media",
+    "english": "follow",
+    "germany": "folgen",
+    "korean": "팔로우"
+  },
+  {
+    "number": "956",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Social media",
+    "english": "profile",
+    "germany": "Profil",
+    "korean": "프로필"
+  },
+  {
+    "number": "957",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Social media",
+    "english": "account",
+    "germany": "Konto",
+    "korean": "계정"
+  },
+  {
+    "number": "958",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Social media",
+    "english": "online",
+    "germany": "online",
+    "korean": "온라인"
+  },
+  {
+    "number": "959",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Social media",
+    "english": "web",
+    "germany": "Web",
+    "korean": "웹"
+  },
+  {
+    "number": "960",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Social media",
+    "english": "app",
+    "germany": "App",
+    "korean": "앱"
+  },
+  {
+    "number": "961",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Events",
+    "english": "party",
+    "germany": "Party",
+    "korean": "파티"
+  },
+  {
+    "number": "962",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Events",
+    "english": "meeting",
+    "germany": "Meeting",
+    "korean": "미팅/회의"
+  },
+  {
+    "number": "963",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Events",
+    "english": "wedding",
+    "germany": "Hochzeit",
+    "korean": "결혼식"
+  },
+  {
+    "number": "964",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Events",
+    "english": "concert",
+    "germany": "Konzert",
+    "korean": "콘서트"
+  },
+  {
+    "number": "965",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Events",
+    "english": "sport",
+    "germany": "Sport",
+    "korean": "스포츠"
+  },
+  {
+    "number": "966",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Events",
+    "english": "game",
+    "germany": "Spiel",
+    "korean": "게임"
+  },
+  {
+    "number": "967",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Events",
+    "english": "show",
+    "germany": "Show",
+    "korean": "쇼"
+  },
+  {
+    "number": "968",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Events",
+    "english": "event",
+    "germany": "Ereignis",
+    "korean": "행사/이벤트"
+  },
+  {
+    "number": "969",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Events",
+    "english": "celebration",
+    "germany": "Feier",
+    "korean": "축하"
+  },
+  {
+    "number": "970",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Events",
+    "english": "holiday",
+    "germany": "Feiertag",
+    "korean": "휴일"
+  },
+  {
+    "number": "971",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Hobbies",
+    "english": "game",
+    "germany": "Spiel",
+    "korean": "게임"
+  },
+  {
+    "number": "972",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Hobbies",
+    "english": "music",
+    "germany": "Musik",
+    "korean": "음악"
+  },
+  {
+    "number": "973",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Hobbies",
+    "english": "movie",
+    "germany": "Film",
+    "korean": "영화"
+  },
+  {
+    "number": "974",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Hobbies",
+    "english": "book",
+    "germany": "Buch",
+    "korean": "책"
+  },
+  {
+    "number": "975",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Hobbies",
+    "english": "sport",
+    "germany": "Sport",
+    "korean": "스포츠"
+  },
+  {
+    "number": "976",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Hobbies",
+    "english": "art",
+    "germany": "Kunst",
+    "korean": "예술"
+  },
+  {
+    "number": "977",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Hobbies",
+    "english": "dance",
+    "germany": "Tanz",
+    "korean": "춤"
+  },
+  {
+    "number": "978",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Hobbies",
+    "english": "read",
+    "germany": "lesen",
+    "korean": "읽기"
+  },
+  {
+    "number": "979",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Hobbies",
+    "english": "paint",
+    "germany": "malen",
+    "korean": "페인트/그림 그리기"
+  },
+  {
+    "number": "980",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Hobbies",
+    "english": "draw",
+    "germany": "zeichnen",
+    "korean": "그리기"
+  },
+  {
+    "number": "981",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Goals",
+    "english": "plan",
+    "germany": "Plan",
+    "korean": "계획"
+  },
+  {
+    "number": "982",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Goals",
+    "english": "success",
+    "germany": "Erfolg",
+    "korean": "성공"
+  },
+  {
+    "number": "983",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Goals",
+    "english": "future",
+    "germany": "Zukunft",
+    "korean": "미래"
+  },
+  {
+    "number": "984",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Goals",
+    "english": "dream",
+    "germany": "Traum",
+    "korean": "꿈"
+  },
+  {
+    "number": "985",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Goals",
+    "english": "target",
+    "germany": "Ziel",
+    "korean": "타겟/대상"
+  },
+  {
+    "number": "986",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Goals",
+    "english": "win",
+    "germany": "Sieg/Gewinnen",
+    "korean": "승리"
+  },
+  {
+    "number": "987",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Goals",
+    "english": "achieve",
+    "germany": "erreichen",
+    "korean": "성취하다"
+  },
+  {
+    "number": "988",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Goals",
+    "english": "hope",
+    "germany": "Hoffnung",
+    "korean": "희망"
+  },
+  {
+    "number": "989",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Goals",
+    "english": "wish",
+    "germany": "Wunsch",
+    "korean": "소원"
+  },
+  {
+    "number": "990",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Goals",
+    "english": "try",
+    "germany": "Versuch",
+    "korean": "시도"
+  },
+  {
+    "number": "991",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Daily routine",
+    "english": "wake",
+    "germany": "aufwachen",
+    "korean": "깨다"
+  },
+  {
+    "number": "992",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Daily routine",
+    "english": "commute",
+    "germany": "pendeln",
+    "korean": "통근하다"
+  },
+  {
+    "number": "993",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Daily routine",
+    "english": "start",
+    "germany": "beginnen",
+    "korean": "시작하다"
+  },
+  {
+    "number": "994",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Daily routine",
+    "english": "lunch",
+    "germany": "Mittagessen",
+    "korean": "점심"
+  },
+  {
+    "number": "995",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Daily routine",
+    "english": "finish",
+    "germany": "beenden",
+    "korean": "끝내다"
+  },
+  {
+    "number": "996",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Daily routine",
+    "english": "home",
+    "germany": "Zuhause",
+    "korean": "집"
+  },
+  {
+    "number": "997",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Daily routine",
+    "english": "sleep",
+    "germany": "schlafen",
+    "korean": "자다"
+  },
+  {
+    "number": "998",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Daily routine",
+    "english": "shower",
+    "germany": "duschen",
+    "korean": "샤워"
+  },
+  {
+    "number": "999",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Daily routine",
+    "english": "dress",
+    "germany": "anziehen",
+    "korean": "옷 입기"
+  },
+  {
+    "number": "1000",
+    "category": "Work, Study & Social Life",
+    "subcategory": "Daily routine",
+    "english": "eat",
+    "germany": "essen",
+    "korean": "먹다"
+  }
+]

@@ -4,12 +4,33 @@
 
 - [Psychology](#psychology)
   - [Table of Contents](#table-of-contents)
-  - [Biological Psychology](#biological-psychology)
-  - [Cognitive Psychology](#cognitive-psychology)
-  - [Social Psychology](#social-psychology)
+  - [Diagrams](#diagrams)
+    - [Biological Psychology](#biological-psychology)
+      - [NeuroSciences](#neurosciences)
+    - [Cognitive Psychology](#cognitive-psychology)
+    - [Social Psychology](#social-psychology)
+    - [Developmental Psychology](#developmental-psychology)
+  - [Practices](#practices)
+    - [Counselling](#counselling)
+    - [Mindfulness](#mindfulness)
+    - [Journaling](#journaling)
 
-## Biological Psychology
+## Diagrams
 
-## Cognitive Psychology
+### Biological Psychology
 
-## Social Psychology
+#### NeuroSciences
+
+### Cognitive Psychology
+
+### Social Psychology
+
+### Developmental Psychology
+
+## Practices
+
+### Counselling
+
+### Mindfulness
+
+### Journaling
