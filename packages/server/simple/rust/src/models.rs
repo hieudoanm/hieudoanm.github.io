@@ -116,6 +116,18 @@ pub struct PaginationParams {
     pub per_page: Option<i64>,
 }
 
+#[derive(Debug, Deserialize)]
+pub struct RecordListParams {
+    pub page: Option<i64>,
+    pub per_page: Option<i64>,
+    pub search: Option<String>,
+}
+
+#[derive(Debug, Deserialize)]
+pub struct UpdateCollectionRequest {
+    pub schema: Option<String>,
+}
+
 #[derive(Debug, Serialize)]
 pub struct Bucket {
     pub name: String,

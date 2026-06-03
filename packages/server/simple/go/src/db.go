@@ -309,7 +309,7 @@ func migrateDB(db *sql.DB) error {
 	return err
 }
 
-func createCollectionTable(db *sql.DB, name string) error {
+func createCollectionTable(db *sql.DB, name string, schema string) error {
 	_, err := db.Exec(fmt.Sprintf(
 		`CREATE TABLE IF NOT EXISTS "_data_%s" (
 			id         TEXT PRIMARY KEY,
@@ -317,7 +317,16 @@ func createCollectionTable(db *sql.DB, name string) error {
 			created_at TEXT NOT NULL DEFAULT (datetime('now')),
 			updated_at TEXT NOT NULL DEFAULT (datetime('now'))
 		)`, name))
-	return err
+	if err != nil {
+		return err
+	}
+	if schema != "" && schema != "{}" {
+		cols := parseSchemaColumns(schema)
+		for _, col := range cols {
+			db.Exec(fmt.Sprintf(`ALTER TABLE "_data_%s" ADD COLUMN %s %s`, name, col.Name, col.ColType))
+		}
+	}
+	return nil
 }
 
 func createCollection(db *sql.DB, name, schema string) error {
@@ -328,7 +337,7 @@ func createCollection(db *sql.DB, name, schema string) error {
 	if err != nil {
 		return fmt.Errorf("create collection: %w", err)
 	}
-	return createCollectionTable(db, name)
+	return createCollectionTable(db, name, schema)
 }
 
 func getCollection(db *sql.DB, name string) (*Collection, error) {
@@ -380,6 +389,7 @@ func createRecord(db *sql.DB, collection, id string, data json.RawMessage) (*Rec
 	if err != nil {
 		return nil, fmt.Errorf("insert record: %w", err)
 	}
+	syncSchemaColumns(db, collection, id)
 	return &Record{ID: id, Data: data, CreatedAt: now, UpdatedAt: now}, nil
 }
 
@@ -436,6 +446,20 @@ func buildFilterClause(filters []string) (string, []any) {
 		return "", nil
 	}
 	return " WHERE " + strings.Join(clauses, " AND "), args
+}
+
+func buildSearchClause(search string) (string, []any) {
+	if search == "" {
+		return "", nil
+	}
+	words := strings.Fields(search)
+	var clauses []string
+	var args []any
+	for _, word := range words {
+		clauses = append(clauses, "data LIKE ?")
+		args = append(args, "%"+word+"%")
+	}
+	return " (" + strings.Join(clauses, " AND ") + ")", args
 }
 
 func buildSortClause(sort string) string {
@@ -536,8 +560,17 @@ func resolveExpands(db *sql.DB, records []Record, expandFields []string) (map[st
 	return result, nil
 }
 
-func listRecords(db *sql.DB, collection string, page, perPage int, filter []string, sort string, expand []string) (*RecordsPage, error) {
+func listRecords(db *sql.DB, collection string, page, perPage int, filter []string, sort string, expand []string, search string) (*RecordsPage, error) {
 	filterClause, filterArgs := buildFilterClause(filter)
+	searchClause, searchArgs := buildSearchClause(search)
+	if searchClause != "" {
+		if filterClause != "" {
+			filterClause = filterClause + " AND" + searchClause
+		} else {
+			filterClause = " WHERE" + searchClause
+		}
+		filterArgs = append(filterArgs, searchArgs...)
+	}
 
 	var total int
 	countQuery := fmt.Sprintf(`SELECT COUNT(*) FROM "_data_%s"%s`, collection, filterClause)
@@ -606,6 +639,7 @@ func updateRecord(db *sql.DB, collection, id string, data json.RawMessage) (*Rec
 	if err != nil {
 		return nil, err
 	}
+	syncSchemaColumns(db, collection, id)
 	return &Record{ID: id, Data: data, CreatedAt: "", UpdatedAt: now}, nil
 }
 
@@ -1216,4 +1250,95 @@ func getCacheStats(db *sql.DB) (map[string]any, error) {
 		"total_entries":   total,
 		"expired_entries": expired,
 	}, nil
+}
+
+type schemaColumn struct {
+	Name    string
+	ColType string
+}
+
+func parseSchemaColumns(schema string) []schemaColumn {
+	if schema == "" || schema == "{}" {
+		return nil
+	}
+	var schemaMap map[string]string
+	if err := json.Unmarshal([]byte(schema), &schemaMap); err != nil {
+		return nil
+	}
+	var cols []schemaColumn
+	for field, typ := range schemaMap {
+		name := strings.TrimSuffix(field, "?")
+		cols = append(cols, schemaColumn{Name: name, ColType: schemaTypeToSQL(typ)})
+	}
+	return cols
+}
+
+func schemaTypeToSQL(typ string) string {
+	switch typ {
+	case "string", "email", "url":
+		return "TEXT"
+	case "number":
+		return "REAL"
+	case "integer":
+		return "INTEGER"
+	case "boolean":
+		return "INTEGER"
+	case "array", "object":
+		return "TEXT"
+	default:
+		return "TEXT"
+	}
+}
+
+func migrateCollectionSchema(db *sql.DB, name string, oldSchema string, newSchema string) error {
+	oldCols := parseSchemaColumns(oldSchema)
+	newCols := parseSchemaColumns(newSchema)
+
+	oldMap := make(map[string]string)
+	for _, c := range oldCols {
+		oldMap[c.Name] = c.ColType
+	}
+	newMap := make(map[string]string)
+	for _, c := range newCols {
+		newMap[c.Name] = c.ColType
+	}
+
+	for colName, colType := range newMap {
+		if _, exists := oldMap[colName]; !exists {
+			if _, err := db.Exec(fmt.Sprintf(`ALTER TABLE "_data_%s" ADD COLUMN %s %s`, name, colName, colType)); err != nil {
+				return fmt.Errorf("add column %s: %w", colName, err)
+			}
+		}
+	}
+
+	for colName := range oldMap {
+		if _, exists := newMap[colName]; !exists {
+			if _, err := db.Exec(fmt.Sprintf(`ALTER TABLE "_data_%s" DROP COLUMN %s`, name, colName)); err != nil {
+				return fmt.Errorf("drop column %s: %w", colName, err)
+			}
+		}
+	}
+
+	_, err := db.Exec(`UPDATE _collections SET schema = ?, updated_at = datetime('now') WHERE name = ?`, newSchema, name)
+	return err
+}
+
+func syncSchemaColumns(db *sql.DB, collection, id string) {
+	var colSchema string
+	err := db.QueryRow("SELECT schema FROM _collections WHERE name = ?", collection).Scan(&colSchema)
+	if err != nil || colSchema == "" || colSchema == "{}" {
+		return
+	}
+	var schemaMap map[string]string
+	if err := json.Unmarshal([]byte(colSchema), &schemaMap); err != nil {
+		return
+	}
+	var setClauses []string
+	for field := range schemaMap {
+		name := strings.TrimSuffix(field, "?")
+		setClauses = append(setClauses, fmt.Sprintf("%s = json_extract(data, '$.%s')", name, name))
+	}
+	if len(setClauses) > 0 {
+		db.Exec(fmt.Sprintf(`UPDATE "_data_%s" SET %s WHERE id = ?`, collection, strings.Join(setClauses, ", ")), id)
+	}
 }

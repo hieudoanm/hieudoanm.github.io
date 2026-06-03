@@ -1,3 +1,5 @@
+#![recursion_limit = "512"]
+
 mod auth;
 mod cache;
 mod cronjobs;
@@ -6,6 +8,7 @@ mod handlers;
 mod log;
 mod models;
 mod notification;
+mod openapi;
 mod pubsub;
 mod secrets;
 mod webhook;
@@ -69,7 +72,9 @@ fn app(state: Arc<AppState>) -> Router {
         )
         .route(
             "/api/collections/{name}",
-            get(handlers::get_collection).delete(handlers::delete_collection),
+            get(handlers::get_collection)
+                .patch(handlers::update_collection)
+                .delete(handlers::delete_collection),
         )
         .route(
             "/api/collections/{name}/records",
@@ -176,10 +181,14 @@ fn app(state: Arc<AppState>) -> Router {
                 .delete(handlers::delete_cron_job),
         )
         .route("/api/cronjobs/{id}/run", post(handlers::run_cron_job))
-        .route("/api/cronjobs/{id}/logs", get(handlers::list_cron_job_logs));
+        .route("/api/cronjobs/{id}/logs", get(handlers::list_cron_job_logs))
+        .route("/api/backup", get(handlers::get_backup));
 
     Router::new()
         .merge(api)
+        .route("/api/openapi.json", get(handlers::get_openapi_json))
+        .route("/api/docs", get(handlers::get_swagger_ui))
+        .route("/api/docs/", get(handlers::get_swagger_ui))
         .route("/ws", get(crate::websocket::handle_ws_upgrade))
         .route(
             "/api/notifications/stream",

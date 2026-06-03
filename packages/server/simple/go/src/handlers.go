@@ -154,6 +154,44 @@ func (s *Server) handleCollectionsGet(w http.ResponseWriter, r *http.Request) {
 	jsonResponse(w, c)
 }
 
+func (s *Server) handleCollectionsUpdate(w http.ResponseWriter, r *http.Request) {
+	name := r.PathValue("name")
+	c, err := getCollection(s.db, name)
+	if err != nil {
+		errorJSON(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	if c == nil {
+		errorJSON(w, "not found", http.StatusNotFound)
+		return
+	}
+
+	var body struct {
+		Schema *string `json:"schema"`
+	}
+	if err := json.NewDecoder(r.Body).Decode(&body); err != nil {
+		errorJSON(w, "invalid json", http.StatusBadRequest)
+		return
+	}
+
+	if body.Schema != nil {
+		if *body.Schema != "{}" && *body.Schema != c.Schema {
+			if err := migrateCollectionSchema(s.db, name, c.Schema, *body.Schema); err != nil {
+				errorJSON(w, err.Error(), http.StatusInternalServerError)
+				return
+			}
+		} else {
+			if _, err := s.db.Exec(`UPDATE _collections SET schema = ?, updated_at = datetime('now') WHERE name = ?`, *body.Schema, name); err != nil {
+				errorJSON(w, err.Error(), http.StatusInternalServerError)
+				return
+			}
+		}
+	}
+
+	c, _ = getCollection(s.db, name)
+	jsonResponse(w, c)
+}
+
 func (s *Server) handleCollectionsDelete(w http.ResponseWriter, r *http.Request) {
 	name := r.PathValue("name")
 	c, err := getCollection(s.db, name)
@@ -195,6 +233,10 @@ func (s *Server) handleRecordsCreate(w http.ResponseWriter, r *http.Request) {
 	}
 	if body.Data == nil {
 		body.Data = json.RawMessage("{}")
+	}
+	if err := validateData(body.Data, c.Schema); err != nil {
+		errorJSON(w, err.Error(), http.StatusBadRequest)
+		return
 	}
 	id := body.ID
 	if id == "" {
@@ -247,7 +289,9 @@ func (s *Server) handleRecordsList(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
-	pageData, err := listRecords(s.db, name, page, perPage, filter, sort, expand)
+	search := r.URL.Query().Get("search")
+
+	pageData, err := listRecords(s.db, name, page, perPage, filter, sort, expand, search)
 	if err != nil {
 		errorJSON(w, err.Error(), http.StatusInternalServerError)
 		return
@@ -304,6 +348,11 @@ func (s *Server) handleRecordsUpdate(w http.ResponseWriter, r *http.Request) {
 	}
 	if body.Data == nil {
 		errorJSON(w, "data is required", http.StatusBadRequest)
+		return
+	}
+
+	if err := validateData(body.Data, c.Schema); err != nil {
+		errorJSON(w, err.Error(), http.StatusBadRequest)
 		return
 	}
 
@@ -1282,6 +1331,23 @@ func (s *Server) handleCacheStats(w http.ResponseWriter, r *http.Request) {
 	jsonResponse(w, s.cache.Stats())
 }
 
+func (s *Server) handleBackup(w http.ResponseWriter, r *http.Request) {
+	path := filepath.Join(os.TempDir(), "simple-backup-"+generateID()+".db")
+	defer os.Remove(path)
+	if _, err := s.db.Exec(fmt.Sprintf("VACUUM INTO '%s'", path)); err != nil {
+		errorJSON(w, "backup failed: "+err.Error(), http.StatusInternalServerError)
+		return
+	}
+	data, err := os.ReadFile(path)
+	if err != nil {
+		errorJSON(w, "read backup: "+err.Error(), http.StatusInternalServerError)
+		return
+	}
+	w.Header().Set("Content-Type", "application/octet-stream")
+	w.Header().Set("Content-Disposition", `attachment; filename="simple-backup.db"`)
+	w.Write(data)
+}
+
 func (s *Server) routes() http.Handler {
 	mux := http.NewServeMux()
 
@@ -1291,6 +1357,10 @@ func (s *Server) routes() http.Handler {
 
 	mux.HandleFunc("POST /api/auth/register", s.handleRegister)
 	mux.HandleFunc("POST /api/auth/login", s.handleLogin)
+
+	mux.HandleFunc("GET /api/openapi.json", s.handleOpenAPIJSON)
+	mux.HandleFunc("GET /api/docs", s.handleSwaggerUI)
+	mux.HandleFunc("GET /api/docs/", s.handleSwaggerUI)
 
 	mux.Handle("/", http.FileServer(http.Dir("public")))
 
@@ -1303,6 +1373,7 @@ func (s *Server) routes() http.Handler {
 	protected.HandleFunc("GET /api/collections", s.handleCollectionsList)
 	protected.Handle("POST /api/collections", s.rbacMiddleware("admin")(contentHandler(s.handleCollectionsCreate)))
 	protected.HandleFunc("GET /api/collections/{name}", s.handleCollectionsGet)
+	protected.Handle("PATCH /api/collections/{name}", s.rbacMiddleware("admin")(contentHandler(s.handleCollectionsUpdate)))
 	protected.Handle("DELETE /api/collections/{name}", s.rbacMiddleware("admin")(http.HandlerFunc(s.handleCollectionsDelete)))
 
 	protected.Handle("POST /api/collections/{name}/records", s.rbacMiddleware("admin", "editor")(contentHandler(s.handleRecordsCreate)))
@@ -1382,6 +1453,8 @@ func (s *Server) routes() http.Handler {
 	protected.Handle("GET /api/permissions", s.rbacMiddleware("admin")(http.HandlerFunc(s.handlePermissionsList)))
 	protected.Handle("POST /api/permissions", s.rbacMiddleware("admin")(contentHandler(s.handlePermissionsCreate)))
 	protected.Handle("DELETE /api/permissions/{id}", s.rbacMiddleware("admin")(http.HandlerFunc(s.handlePermissionsDelete)))
+
+	protected.Handle("GET /api/backup", s.rbacMiddleware("admin")(http.HandlerFunc(s.handleBackup)))
 
 	mux.Handle("/api/", rateLimitMiddleware(authMiddleware(protected)))
 

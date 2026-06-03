@@ -1,3 +1,4 @@
+use std::collections::HashMap;
 use std::path::PathBuf;
 
 use chrono::Utc;
@@ -190,7 +191,7 @@ pub fn migrate_db(conn: &Connection) -> Result<()> {
     Ok(())
 }
 
-pub fn create_collection_table(conn: &Connection, name: &str) -> Result<()> {
+pub fn create_collection_table(conn: &Connection, name: &str, schema: &str) -> Result<()> {
     let sql = format!(
         "CREATE TABLE IF NOT EXISTS \"_data_{name}\" (
             id         TEXT PRIMARY KEY,
@@ -201,7 +202,201 @@ pub fn create_collection_table(conn: &Connection, name: &str) -> Result<()> {
     );
     conn.execute(&sql, [])
         .map_err(|e| AppError::Internal(format!("create table: {e}")))?;
+    for (field, sql_type) in get_schema_fields(schema) {
+        let alter = format!("ALTER TABLE \"_data_{name}\" ADD COLUMN \"{field}\" {sql_type}");
+        conn.execute(&alter, [])
+            .map_err(|e| AppError::Internal(format!("add column: {e}")))?;
+    }
     Ok(())
+}
+
+pub fn get_schema_fields(schema: &str) -> Vec<(String, String)> {
+    if schema.is_empty() || schema == "{}" {
+        return vec![];
+    }
+    let map: serde_json::Map<String, Value> = serde_json::from_str(schema).unwrap_or_default();
+    let mut fields = Vec::new();
+    for (field, type_val) in &map {
+        let type_str = type_val.as_str().unwrap_or("string");
+        let sql_type = match type_str {
+            "string" | "email" | "url" => "TEXT",
+            "number" => "REAL",
+            "integer" => "INTEGER",
+            "boolean" => "INTEGER",
+            "array" | "object" => "TEXT",
+            _ => "TEXT",
+        };
+        let field_name = if field.ends_with('?') {
+            field[..field.len() - 1].to_string()
+        } else {
+            field.clone()
+        };
+        fields.push((field_name, sql_type.to_string()));
+    }
+    fields
+}
+
+pub fn migrate_collection_schema(conn: &Connection, name: &str, old_schema: &str, new_schema: &str) -> Result<()> {
+    let old_fields: HashMap<String, String> = get_schema_fields(old_schema).into_iter().collect();
+    let new_fields: HashMap<String, String> = get_schema_fields(new_schema).into_iter().collect();
+    for (field, sql_type) in &new_fields {
+        if !old_fields.contains_key(field) {
+            let alter = format!("ALTER TABLE \"_data_{name}\" ADD COLUMN \"{field}\" {sql_type}");
+            conn.execute(&alter, [])
+                .map_err(|e| AppError::Internal(format!("add column: {e}")))?;
+        }
+    }
+    for (field, _) in &old_fields {
+        if !new_fields.contains_key(field) {
+            let alter = format!("ALTER TABLE \"_data_{name}\" DROP COLUMN \"{field}\"");
+            conn.execute(&alter, [])
+                .map_err(|e| AppError::Internal(format!("drop column: {e}")))?;
+        }
+    }
+    let now = Utc::now().to_rfc3339();
+    conn.execute(
+        "UPDATE _collections SET schema = ?1, updated_at = ?2 WHERE name = ?3",
+        params![new_schema, now, name],
+    )
+    .map_err(|e| AppError::Internal(format!("update collection schema: {e}")))?;
+    Ok(())
+}
+
+pub fn update_collection(conn: &Connection, name: &str, schema: Option<&str>) -> Result<Collection> {
+    let existing = get_collection(conn, name)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
+    if let Some(new_schema) = schema {
+        if !new_schema.is_empty() && new_schema != &existing.schema {
+            migrate_collection_schema(conn, name, &existing.schema, new_schema)?;
+        }
+    }
+    get_collection(conn, name)?.ok_or_else(|| AppError::Internal("collection not found after update".into()))
+}
+
+pub fn sync_schema_columns(conn: &Connection, collection: &str, id: &str, schema: &str) -> Result<()> {
+    if schema.is_empty() || schema == "{}" {
+        return Ok(());
+    }
+    let fields = get_schema_fields(schema);
+    if fields.is_empty() {
+        return Ok(());
+    }
+    let set_clause: Vec<String> = fields
+        .iter()
+        .map(|(field, _)| format!("\"{field}\" = json_extract(data, '$.{field}')"))
+        .collect();
+    let sql = format!(
+        "UPDATE \"_data_{collection}\" SET {} WHERE id = ?1",
+        set_clause.join(", ")
+    );
+    conn.execute(&sql, params![id])
+        .map_err(|e| AppError::Internal(format!("sync columns: {e}")))?;
+    Ok(())
+}
+
+pub fn build_search_clause(search: &str) -> Option<(String, Vec<String>)> {
+    let words: Vec<String> = search
+        .split_whitespace()
+        .filter(|w| !w.is_empty())
+        .map(|w| format!("%{}%", w))
+        .collect();
+    if words.is_empty() {
+        return None;
+    }
+    let clause = words
+        .iter()
+        .enumerate()
+        .map(|(i, _)| format!("data LIKE ?{}", i + 1))
+        .collect::<Vec<_>>()
+        .join(" AND ");
+    Some((clause, words))
+}
+
+fn validate_field(value: &Value, type_str: &str, field_name: &str) -> Option<String> {
+    match type_str {
+        "string" => {
+            if !value.is_string() {
+                Some(format!("field '{field_name}' must be a string"))
+            } else {
+                None
+            }
+        }
+        "number" => {
+            if !value.is_number() {
+                Some(format!("field '{field_name}' must be a number"))
+            } else {
+                None
+            }
+        }
+        "integer" => match value.as_f64() {
+            Some(f) if f.fract() == 0.0 => None,
+            _ => Some(format!("field '{field_name}' must be an integer")),
+        },
+        "boolean" => {
+            if !value.is_boolean() {
+                Some(format!("field '{field_name}' must be a boolean"))
+            } else {
+                None
+            }
+        }
+        "array" => {
+            if !value.is_array() {
+                Some(format!("field '{field_name}' must be an array"))
+            } else {
+                None
+            }
+        }
+        "object" => {
+            if !value.is_object() {
+                Some(format!("field '{field_name}' must be an object"))
+            } else {
+                None
+            }
+        }
+        "email" => match value.as_str() {
+            Some(s) if s.contains('@') => None,
+            _ => Some(format!("field '{field_name}' must be a valid email")),
+        },
+        "url" => match value.as_str() {
+            Some(s) if s.starts_with("http://") || s.starts_with("https://") => None,
+            _ => Some(format!("field '{field_name}' must be a valid URL")),
+        },
+        _ => None,
+    }
+}
+
+pub fn validate_data(data: &Value, schema: &str) -> Result<()> {
+    if schema.is_empty() || schema == "{}" {
+        return Ok(());
+    }
+    let schema_map: serde_json::Map<String, Value> = serde_json::from_str(schema)
+        .map_err(|e| AppError::Internal(format!("parse schema: {e}")))?;
+    let mut errors = Vec::new();
+    for (field, type_val) in &schema_map {
+        let type_str = type_val.as_str().unwrap_or("string");
+        let is_optional = field.ends_with('?');
+        let field_name = if is_optional { &field[..field.len() - 1] } else { field.as_str() };
+        if is_optional && !data.get(field_name).map_or(false, |v| !v.is_null()) {
+            continue;
+        }
+        match data.get(field_name) {
+            None => {
+                if !is_optional {
+                    errors.push(format!("field '{field_name}' is required"));
+                }
+            }
+            Some(v) if v.is_null() && is_optional => {}
+            Some(v) => {
+                if let Some(err) = validate_field(v, type_str, field_name) {
+                    errors.push(err);
+                }
+            }
+        }
+    }
+    if errors.is_empty() {
+        Ok(())
+    } else {
+        Err(AppError::BadRequest(errors.join("; ")))
+    }
 }
 
 pub fn insert_collection(conn: &Connection, name: &str, schema: &str) -> Result<()> {
@@ -289,6 +484,11 @@ pub fn insert_record(
                 AppError::Internal(format!("insert record: {e}"))
             }
         })?;
+    if let Ok(Some(col)) = get_collection(conn, collection) {
+        if col.schema != "{}" {
+            let _ = sync_schema_columns(conn, collection, id, &col.schema);
+        }
+    }
     Ok(Record {
         id: id.to_string(),
         data: data.clone(),
@@ -331,24 +531,48 @@ pub fn list_records(
     collection: &str,
     page: i64,
     per_page: i64,
+    search: &str,
 ) -> Result<RecordsPage> {
-    let count_sql = format!("SELECT COUNT(*) FROM \"_data_{collection}\"");
-    let total: i64 = conn
-        .query_row(&count_sql, [], |row| row.get(0))
-        .map_err(|e| AppError::Internal(e.to_string()))?;
+    let (where_clause, params_list) = if let Some((clause, words)) = build_search_clause(search) {
+        (format!(" WHERE {clause}"), words)
+    } else {
+        (String::new(), Vec::new())
+    };
+
+    let count_sql = format!("SELECT COUNT(*) FROM \"_data_{collection}\"{where_clause}");
+    let total: i64 = if params_list.is_empty() {
+        conn.query_row(&count_sql, [], |row| row.get(0))
+            .map_err(|e| AppError::Internal(e.to_string()))?
+    } else {
+        let param_refs: Vec<&dyn rusqlite::types::ToSql> =
+            params_list.iter().map(|s| s as &dyn rusqlite::types::ToSql).collect();
+        conn.query_row(&count_sql, param_refs.as_slice(), |row| row.get(0))
+            .map_err(|e| AppError::Internal(e.to_string()))?
+    };
 
     let total_pages = std::cmp::max(1, (total + per_page - 1) / per_page);
     let offset = (page - 1) * per_page;
 
     let sql = format!(
-        "SELECT id, data, created_at, updated_at FROM \"_data_{collection}\" ORDER BY created_at DESC LIMIT ?1 OFFSET ?2"
+        "SELECT id, data, created_at, updated_at FROM \"_data_{collection}\"{where_clause} ORDER BY created_at DESC LIMIT ?{limit_idx} OFFSET ?{offset_idx}",
+        limit_idx = params_list.len() + 1,
+        offset_idx = params_list.len() + 2,
     );
     let mut stmt = conn
         .prepare(&sql)
         .map_err(|e| AppError::Internal(e.to_string()))?;
 
+    let mut all_params: Vec<Box<dyn rusqlite::types::ToSql>> = Vec::new();
+    for w in &params_list {
+        all_params.push(Box::new(w.clone()));
+    }
+    all_params.push(Box::new(per_page));
+    all_params.push(Box::new(offset));
+    let param_refs: Vec<&dyn rusqlite::types::ToSql> =
+        all_params.iter().map(|p| p.as_ref()).collect();
+
     let rows = stmt
-        .query_map(params![per_page, offset], |row| {
+        .query_map(param_refs.as_slice(), |row| {
             let id: String = row.get(0)?;
             let data_str: String = row.get(1)?;
             let created_at: String = row.get(2)?;
@@ -389,6 +613,11 @@ pub fn update_record(
     conn.execute(&sql, params![raw, now, id])
         .map_err(|e| AppError::Internal(e.to_string()))?;
 
+    if let Ok(Some(col)) = get_collection(conn, collection) {
+        if col.schema != "{}" {
+            let _ = sync_schema_columns(conn, collection, id, &col.schema);
+        }
+    }
     let existing = get_record(conn, collection, id)?;
     existing.ok_or_else(|| AppError::NotFound("record not found after update".into()))
 }

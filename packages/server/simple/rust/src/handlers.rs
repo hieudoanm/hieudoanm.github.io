@@ -17,10 +17,43 @@ use crate::auth;
 use crate::db;
 use crate::models::*;
 use crate::notification;
+use crate::openapi;
 use crate::pubsub;
 use crate::secrets;
 use crate::webhook;
 use crate::websocket;
+
+pub async fn get_openapi_json() -> impl axum::response::IntoResponse {
+    let spec = openapi::build_openapi_json();
+    let json_str = serde_json::to_string_pretty(&spec).unwrap_or_default();
+    axum::response::Response::builder()
+        .header("Content-Type", "application/json")
+        .body(Body::from(json_str))
+        .unwrap()
+}
+
+pub async fn get_swagger_ui() -> impl axum::response::IntoResponse {
+    axum::response::Response::builder()
+        .header("Content-Type", "text/html; charset=utf-8")
+        .body(Body::from(
+            r#"<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Server API – Swagger UI</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui.css">
+</head>
+<body>
+  <div id="swagger-ui"></div>
+  <script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui-bundle.js"></script>
+  <script>
+    SwaggerUIBundle({ url: '/api/openapi.json', dom_id: '#swagger-ui' });
+  </script>
+</body>
+</html>"#,
+        ))
+        .unwrap()
+}
 
 pub struct AppState {
     pub db: Mutex<Connection>,
@@ -48,6 +81,36 @@ pub(crate) fn extract_token(headers: &HeaderMap) -> std::result::Result<String, 
 
 pub async fn get_health() -> Json<serde_json::Value> {
     Json(serde_json::json!({"status": "ok"}))
+}
+
+pub async fn get_backup(
+    headers: HeaderMap,
+    State(state): State<std::sync::Arc<AppState>>,
+) -> std::result::Result<axum::response::Response<Body>, AppError> {
+    let _token = extract_token(&headers)?;
+    auth::validate_token(&_token)?;
+    let path = std::env::temp_dir().join(format!("simple-backup-{}.db", uuid::Uuid::new_v4()));
+    {
+        let conn = state
+            .db
+            .lock()
+            .map_err(|e| AppError::Internal(e.to_string()))?;
+        conn.execute("VACUUM INTO ?1", rusqlite::params![path.to_str().unwrap()])
+            .map_err(|e| AppError::Internal(format!("backup: {e}")))?;
+    }
+    let data = tokio::fs::read(&path)
+        .await
+        .map_err(|e| AppError::Internal(format!("read backup: {e}")))?;
+    tokio::fs::remove_file(&path).await.ok();
+    let response = axum::response::Response::builder()
+        .header("Content-Type", "application/octet-stream")
+        .header(
+            "Content-Disposition",
+            "attachment; filename=\"simple-backup.db\"",
+        )
+        .body(Body::from(data))
+        .map_err(|e| AppError::Internal(e.to_string()))?;
+    Ok(response)
 }
 
 pub async fn post_register(
@@ -105,7 +168,7 @@ pub async fn create_collection(
         .lock()
         .map_err(|e| AppError::Internal(e.to_string()))?;
     db::insert_collection(&conn, &req.name, &req.schema)?;
-    db::create_collection_table(&conn, &req.name)?;
+    db::create_collection_table(&conn, &req.name, &req.schema)?;
     let c = db::get_collection(&conn, &req.name)?
         .ok_or_else(|| AppError::Internal("collection not found after create".into()))?;
     webhook::dispatch_event(
@@ -157,6 +220,22 @@ pub async fn delete_collection(
     Ok(StatusCode::NO_CONTENT)
 }
 
+pub async fn update_collection(
+    headers: HeaderMap,
+    State(state): State<std::sync::Arc<AppState>>,
+    Path(name): Path<String>,
+    Json(req): Json<UpdateCollectionRequest>,
+) -> std::result::Result<Json<Collection>, AppError> {
+    let _token = extract_token(&headers)?;
+    auth::validate_token(&_token)?;
+    let conn = state
+        .db
+        .lock()
+        .map_err(|e| AppError::Internal(e.to_string()))?;
+    let c = db::update_collection(&conn, &name, req.schema.as_deref())?;
+    Ok(Json(c))
+}
+
 pub async fn create_record(
     headers: HeaderMap,
     State(state): State<std::sync::Arc<AppState>>,
@@ -173,6 +252,8 @@ pub async fn create_record(
     if existing.is_none() {
         return Err(AppError::NotFound("collection not found".into()));
     }
+    let collection = existing.unwrap();
+    db::validate_data(&req.data, &collection.schema)?;
     let id = req
         .id
         .unwrap_or_else(|| uuid::Uuid::new_v4().to_string().replace('-', ""));
@@ -189,7 +270,7 @@ pub async fn list_records(
     headers: HeaderMap,
     State(state): State<std::sync::Arc<AppState>>,
     Path(name): Path<String>,
-    Query(params): Query<PaginationParams>,
+    Query(params): Query<RecordListParams>,
 ) -> std::result::Result<Json<RecordsPage>, AppError> {
     let _token = extract_token(&headers)?;
     auth::validate_token(&_token)?;
@@ -203,7 +284,8 @@ pub async fn list_records(
     }
     let page = params.page.unwrap_or(1).max(1);
     let per_page = params.per_page.unwrap_or(20).clamp(1, 100);
-    let records = db::list_records(&conn, &name, page, per_page)?;
+    let search = params.search.as_deref().unwrap_or("");
+    let records = db::list_records(&conn, &name, page, per_page, search)?;
     Ok(Json(records))
 }
 
@@ -239,6 +321,8 @@ pub async fn update_record(
     if existing.is_none() {
         return Err(AppError::NotFound("collection not found".into()));
     }
+    let collection = existing.unwrap();
+    db::validate_data(&req.data, &collection.schema)?;
     let rec = db::update_record(&conn, &name, &id, &req.data)?;
     webhook::dispatch_event(
         &state,

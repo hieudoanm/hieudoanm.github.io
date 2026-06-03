@@ -15,7 +15,7 @@ func (s *Server) handleExport(w http.ResponseWriter, r *http.Request) {
 
 	records := make(map[string][]Record)
 	for _, c := range cols {
-		page, err := listRecords(s.db, c.Name, 1, 1000000, nil, "", nil)
+		page, err := listRecords(s.db, c.Name, 1, 1000000, nil, "", nil, "")
 		if err != nil {
 			errorJSON(w, err.Error(), http.StatusInternalServerError)
 			return
