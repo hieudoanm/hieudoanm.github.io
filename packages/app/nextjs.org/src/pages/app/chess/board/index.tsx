@@ -17,19 +17,6 @@ import html2canvas from 'html2canvas-pro';
 import type { NextPage } from 'next';
 import { ChangeEvent, useEffect, useRef, useState } from 'react';
 import { DraggingPieceDataType, PieceDataType } from 'react-chessboard';
-import {
-  PiArrowCounterClockwise,
-  PiArrowLeft,
-  PiArrowRight,
-  PiDownloadSimple,
-  PiEye,
-  PiFilmStrip,
-  PiFrameCorners,
-  PiRobot,
-  PiShuffle,
-  PiSkipBack,
-  PiSkipForward,
-} from 'react-icons/pi';
 
 /* ══════════════════════════════════════════════
    TYPES
@@ -430,13 +417,13 @@ const ChessWorkbenchPage: NextPage = () => {
                 className="btn btn-ghost btn-sm"
                 title="Randomize"
                 onClick={randomize960}>
-                <PiShuffle />
+                🔀
               </button>
               <button
                 className="btn btn-ghost btn-sm"
                 title="Reset"
                 onClick={resetToStart}>
-                <PiArrowCounterClockwise />
+                🔄
               </button>
             </div>
           </div>
@@ -448,13 +435,13 @@ const ChessWorkbenchPage: NextPage = () => {
                 role="tab"
                 className={`tab flex-1 gap-1 ${boardMode === 'explore' ? 'tab-active' : ''}`}
                 onClick={() => switchBoardMode('explore')}>
-                <PiEye /> Explore
+                👁️ Explore
               </button>
               <button
                 role="tab"
                 className={`tab flex-1 gap-1 ${boardMode === 'play' ? 'tab-active' : ''}`}
                 onClick={() => switchBoardMode('play')}>
-                <PiRobot /> vs Stockfish
+                🤖 vs Stockfish
               </button>
             </div>
           )}
@@ -551,25 +538,25 @@ const ChessWorkbenchPage: NextPage = () => {
                     className="btn btn-ghost btn-xs"
                     onClick={ecoStart}
                     disabled={ecoCursor === 0}>
-                    <PiSkipBack size={14} />
+                    ⏪
                   </button>
                   <button
                     className="btn btn-ghost btn-xs"
                     onClick={ecoPrev}
                     disabled={ecoCursor === 0}>
-                    <PiArrowLeft size={14} />
+                    ◀️
                   </button>
                   <button
                     className="btn btn-ghost btn-xs"
                     onClick={ecoNext}
                     disabled={ecoCursor >= ecoTotal}>
-                    <PiArrowRight size={14} />
+                    ▶️
                   </button>
                   <button
                     className="btn btn-ghost btn-xs"
                     onClick={ecoEnd}
                     disabled={ecoCursor >= ecoTotal}>
-                    <PiSkipForward size={14} />
+                    ⏩
                   </button>
                 </div>
               </div>
@@ -635,12 +622,12 @@ const ChessWorkbenchPage: NextPage = () => {
                 <button
                   className="btn btn-outline btn-sm flex-1"
                   onClick={resetToStart}>
-                  <PiArrowCounterClockwise /> Reset
+                  🔄 Reset
                 </button>
                 <button
                   className="btn btn-outline btn-sm flex-1"
                   onClick={randomize960}>
-                  <PiShuffle /> Random 960
+                  🔀 Random 960
                 </button>
               </div>
             </div>
@@ -684,7 +671,7 @@ const ChessWorkbenchPage: NextPage = () => {
                 onClick={() =>
                   switchBoardMode(boardMode === 'play' ? 'explore' : 'play')
                 }>
-                <PiRobot />
+                🤖
                 {boardMode === 'play' ? 'Stop Engine' : 'Start Engine'}
               </button>
 
@@ -698,7 +685,7 @@ const ChessWorkbenchPage: NextPage = () => {
                 <button
                   className="btn btn-outline btn-sm"
                   onClick={() => switchBoardMode('play')}>
-                  <PiArrowCounterClockwise /> Reset Game
+                  🔄 Reset Game
                 </button>
               )}
             </div>
@@ -713,7 +700,7 @@ const ChessWorkbenchPage: NextPage = () => {
 
               <div className="bg-base-100 flex flex-col gap-2 rounded-xl p-4">
                 <div className="flex items-center gap-2">
-                  <PiFrameCorners className="text-lg" />
+                  <span className="text-lg">🔲</span>
                   <div>
                     <p className="text-sm font-bold">FEN → PNG</p>
                     <p className="text-base-content/50 text-xs">
@@ -724,13 +711,13 @@ const ChessWorkbenchPage: NextPage = () => {
                 <button
                   className="btn btn-primary btn-sm w-full"
                   onClick={exportPNG}>
-                  <PiDownloadSimple /> Download PNG
+                  ⬇️ Download PNG
                 </button>
               </div>
 
               <div className="bg-base-100 flex flex-col gap-2 rounded-xl p-4">
                 <div className="flex items-center gap-2">
-                  <PiFilmStrip className="text-lg" />
+                  <span className="text-lg">🎞️</span>
                   <div>
                     <p className="text-sm font-bold">PGN → GIF</p>
                     <p className="text-base-content/50 text-xs">
@@ -753,9 +740,7 @@ const ChessWorkbenchPage: NextPage = () => {
                       Rendering…
                     </>
                   ) : (
-                    <>
-                      <PiDownloadSimple /> Download GIF
-                    </>
+                    <>⬇️ Download GIF</>
                   )}
                 </button>
               </div>
