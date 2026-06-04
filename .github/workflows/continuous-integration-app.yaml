@@ -20,14 +20,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
       - name: Install pnpm
         uses: pnpm/action-setup@v6
         with:
-          version: '11.5.0'
+          version: '11.5.1'
       - name: Install Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: '26.2.0'
+          node-version: '26.3.0'
           cache: 'pnpm'
       - name: Setup Chrome
         uses: browser-actions/setup-chrome@v1
@@ -36,8 +38,8 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
       - name: Lint
-        run: pnpm run lint
+        run: pnpm run lint --filter=...[origin/master]
       - name: Build
-        run: pnpm run build
+        run: pnpm run build --filter=...[origin/master]
       - name: Test
-        run: pnpm run test
+        run: pnpm run test --filter=...[origin/master]
