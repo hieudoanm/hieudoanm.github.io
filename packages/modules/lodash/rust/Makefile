@@ -11,6 +11,7 @@ build:
 
 wasm: check-wasm
 	wasm-pack build --target web
+	jq '.name = "@lodash/rs"' pkg/package.json > pkg/package.json.tmp && mv pkg/package.json.tmp pkg/package.json
 
 test:
 	cargo test

@@ -26,7 +26,7 @@ pub fn max(collection: &[f64]) -> f64 {
     math::max(collection).unwrap_or(std::f64::NAN)
 }
 
-#[wasm_bindgen]
+#[wasm_bindgen(js_name = "maxBy")]
 pub fn max_by(collection: &[f64], iteratee: &js_sys::Function) -> f64 {
     math::max_by(collection, |&item| {
         let this = JsValue::NULL;
@@ -44,7 +44,7 @@ pub fn mean(collection: &[f64]) -> f64 {
     math::mean(collection)
 }
 
-#[wasm_bindgen]
+#[wasm_bindgen(js_name = "meanBy")]
 pub fn mean_by(collection: &[f64], iteratee: &js_sys::Function) -> f64 {
     math::mean_by(collection, |&item| {
         let this = JsValue::NULL;
@@ -62,7 +62,7 @@ pub fn min(collection: &[f64]) -> f64 {
     math::min(collection).unwrap_or(std::f64::NAN)
 }
 
-#[wasm_bindgen]
+#[wasm_bindgen(js_name = "minBy")]
 pub fn min_by(collection: &[f64], iteratee: &js_sys::Function) -> f64 {
     math::min_by(collection, |&item| {
         let this = JsValue::NULL;
@@ -95,7 +95,7 @@ pub fn sum(collection: &[f64]) -> f64 {
     math::sum(collection)
 }
 
-#[wasm_bindgen]
+#[wasm_bindgen(js_name = "sumBy")]
 pub fn sum_by(collection: &[f64], iteratee: &js_sys::Function) -> f64 {
     math::sum_by(collection, |&item| {
         let this = JsValue::NULL;

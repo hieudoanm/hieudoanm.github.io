@@ -9,7 +9,7 @@ pub fn clamp(n: f64, lower: f64, upper: f64) -> f64 {
 
 /// Checks if `n` is between `start` and up to (but not including) `end`.
 /// If `end` is `NaN` or not provided (use `f64::NAN`), the range is `[0, start)`.
-#[wasm_bindgen]
+#[wasm_bindgen(js_name = "inRange")]
 pub fn in_range(n: f64, start: f64, end: f64) -> bool {
     let end_opt = if end.is_nan() { None } else { Some(end) };
     number::in_range(n, start, end_opt)
