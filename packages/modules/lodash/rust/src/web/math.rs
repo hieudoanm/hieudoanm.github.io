@@ -1,5 +1,5 @@
-use wasm_bindgen::prelude::*;
 use crate::core::math;
+use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn add(a: f64, b: f64) -> f64 {
@@ -36,7 +36,8 @@ pub fn max_by(collection: &[f64], iteratee: &js_sys::Function) -> f64 {
         } else {
             std::f64::NAN
         }
-    }).unwrap_or(std::f64::NAN)
+    })
+    .unwrap_or(std::f64::NAN)
 }
 
 #[wasm_bindgen]
@@ -72,7 +73,8 @@ pub fn min_by(collection: &[f64], iteratee: &js_sys::Function) -> f64 {
         } else {
             std::f64::NAN
         }
-    }).unwrap_or(std::f64::NAN)
+    })
+    .unwrap_or(std::f64::NAN)
 }
 
 #[wasm_bindgen]

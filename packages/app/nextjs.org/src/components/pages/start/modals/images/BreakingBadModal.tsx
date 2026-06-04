@@ -11,7 +11,7 @@ import {
   periodicTable,
   specificNameColorMap,
 } from '@hieudoanm.github.io/data/periodic-table';
-import { capitalize, kebabCase } from '@lodash/ts';
+import { capitalize, kebabCase } from '@lodash/rs';
 
 /* ------------------------------------------------------------------ */
 /* Types                                                                */

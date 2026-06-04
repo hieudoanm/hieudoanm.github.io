@@ -1,10 +1,13 @@
-use wasm_bindgen::prelude::*;
 use crate::core::util;
+use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn constant(value: JsValue) -> js_sys::Function {
     let closure = Closure::wrap(Box::new(move || value.clone()) as Box<dyn Fn() -> JsValue>);
-    closure.into_js_value().dyn_into::<js_sys::Function>().unwrap()
+    closure
+        .into_js_value()
+        .dyn_into::<js_sys::Function>()
+        .unwrap()
 }
 
 #[wasm_bindgen]

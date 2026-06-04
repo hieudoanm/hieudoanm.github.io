@@ -13,5 +13,7 @@ pub fn tap(value: JsValue, interceptor: &js_sys::Function) -> JsValue {
 
 #[wasm_bindgen]
 pub fn thru(value: JsValue, interceptor: &js_sys::Function) -> JsValue {
-    interceptor.call1(&JsValue::NULL, &value).unwrap_or(JsValue::UNDEFINED)
+    interceptor
+        .call1(&JsValue::NULL, &value)
+        .unwrap_or(JsValue::UNDEFINED)
 }

@@ -1,5 +1,5 @@
-use wasm_bindgen::prelude::*;
 use crate::core::number;
+use wasm_bindgen::prelude::*;
 
 /// Clamps `number` within the inclusive range `lower` to `upper`.
 #[wasm_bindgen]

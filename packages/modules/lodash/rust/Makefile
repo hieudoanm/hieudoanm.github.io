@@ -11,7 +11,6 @@ build:
 
 wasm: check-wasm
 	wasm-pack build --target web
-	jq '.name = "@lodash/rs"' pkg/package.json > pkg/package.json.tmp && mv pkg/package.json.tmp pkg/package.json
 
 test:
 	cargo test
@@ -24,3 +23,9 @@ check-wasm:
 ifndef WASM_PACK
 	$(error "wasm-pack is not installed. Please install it via 'curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh' or 'cargo install wasm-pack'")
 endif
+
+format:
+	cargo fmt
+
+lint:
+	cargo clippy

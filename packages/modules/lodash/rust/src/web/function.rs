@@ -5,7 +5,10 @@ where
     F: 'static + Fn(),
 {
     let closure = Closure::wrap(Box::new(f) as Box<dyn Fn()>);
-    closure.into_js_value().dyn_into::<js_sys::Function>().unwrap()
+    closure
+        .into_js_value()
+        .dyn_into::<js_sys::Function>()
+        .unwrap()
 }
 
 #[wasm_bindgen]

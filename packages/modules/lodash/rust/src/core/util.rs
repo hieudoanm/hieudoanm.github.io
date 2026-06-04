@@ -110,10 +110,7 @@ pub fn matches(source: HashMap<String, String>) -> impl Fn(&HashMap<String, Stri
 
 /// Creates a function that checks whether `key` in an object equals
 /// `value`.
-pub fn matches_property(
-    key: String,
-    value: String,
-) -> impl Fn(&HashMap<String, String>) -> bool {
+pub fn matches_property(key: String, value: String) -> impl Fn(&HashMap<String, String>) -> bool {
     move |obj| obj.get(&key) == Some(&value)
 }
 

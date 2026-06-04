@@ -6,7 +6,7 @@ import {
   lowerCase,
   snakeCase,
   upperCase,
-} from '@lodash/ts';
+} from '@lodash/rs';
 import { FC, useState } from 'react';
 
 type Style =

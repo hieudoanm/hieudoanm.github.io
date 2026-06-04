@@ -86,9 +86,9 @@ importers:
       '@hieudoanm/try-catch':
         specifier: workspace:*
         version: link:../../modules/utilities/try-catch
-      '@lodash/ts':
+      '@lodash/rs':
         specifier: workspace:*
-        version: link:../../modules/lodash/typescript
+        version: link:../../modules/lodash/rust
       '@mediapipe/camera_utils':
         specifier: 0.3.1675466862
         version: 0.3.1675466862
@@ -1548,6 +1548,8 @@ importers:
       typescript-eslint:
         specifier: 8.60.1
         version: 8.60.1(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3)
+
+  packages/modules/lodash/rust: {}
 
   packages/modules/lodash/rust/pkg: {}
 

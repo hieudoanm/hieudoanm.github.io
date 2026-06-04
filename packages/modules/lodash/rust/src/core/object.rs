@@ -1,7 +1,10 @@
 use std::collections::HashMap;
 
 /// Copies own enumerable string keyed properties of source objects to the destination object.
-pub fn assign(mut object: HashMap<String, String>, sources: &[HashMap<String, String>]) -> HashMap<String, String> {
+pub fn assign(
+    mut object: HashMap<String, String>,
+    sources: &[HashMap<String, String>],
+) -> HashMap<String, String> {
     for source in sources {
         for (k, v) in source {
             object.insert(k.clone(), v.clone());
@@ -12,7 +15,10 @@ pub fn assign(mut object: HashMap<String, String>, sources: &[HashMap<String, St
 
 /// Like `assign` but iterates over own and inherited source properties.
 /// Implementation is identical to `assign` for `HashMap<String, String>`.
-pub fn assign_in(mut object: HashMap<String, String>, sources: &[HashMap<String, String>]) -> HashMap<String, String> {
+pub fn assign_in(
+    mut object: HashMap<String, String>,
+    sources: &[HashMap<String, String>],
+) -> HashMap<String, String> {
     for source in sources {
         for (k, v) in source {
             object.insert(k.clone(), v.clone());
@@ -23,8 +29,13 @@ pub fn assign_in(mut object: HashMap<String, String>, sources: &[HashMap<String,
 
 /// Like `assign_in` but accepts a customizer that determines the assigned value.
 /// The customizer receives the existing value and the source value.
-pub fn assign_in_with<F>(mut object: HashMap<String, String>, sources: &[HashMap<String, String>], customizer: F) -> HashMap<String, String>
-where F: Fn(&str, &str) -> String
+pub fn assign_in_with<F>(
+    mut object: HashMap<String, String>,
+    sources: &[HashMap<String, String>],
+    customizer: F,
+) -> HashMap<String, String>
+where
+    F: Fn(&str, &str) -> String,
 {
     for source in sources {
         for (k, v) in source {
@@ -38,8 +49,13 @@ where F: Fn(&str, &str) -> String
 
 /// Like `assign` but accepts a customizer that determines the assigned value.
 /// The customizer receives the existing value and the source value.
-pub fn assign_with<F>(mut object: HashMap<String, String>, sources: &[HashMap<String, String>], customizer: F) -> HashMap<String, String>
-where F: Fn(&str, &str) -> String
+pub fn assign_with<F>(
+    mut object: HashMap<String, String>,
+    sources: &[HashMap<String, String>],
+    customizer: F,
+) -> HashMap<String, String>
+where
+    F: Fn(&str, &str) -> String,
 {
     for source in sources {
         for (k, v) in source {
@@ -64,7 +80,10 @@ pub fn create(prototype: HashMap<String, String>) -> HashMap<String, String> {
 
 /// Assigns own enumerable string keyed properties of source objects to the destination object
 /// for all destination properties that resolve to undefined.
-pub fn defaults(mut object: HashMap<String, String>, sources: &[HashMap<String, String>]) -> HashMap<String, String> {
+pub fn defaults(
+    mut object: HashMap<String, String>,
+    sources: &[HashMap<String, String>],
+) -> HashMap<String, String> {
     for source in sources {
         for (k, v) in source {
             if !object.contains_key(k) {
@@ -76,7 +95,10 @@ pub fn defaults(mut object: HashMap<String, String>, sources: &[HashMap<String, 
 }
 
 /// Like `defaults` but recursively assigns. Simplified to match `defaults` behavior.
-pub fn defaults_deep(mut object: HashMap<String, String>, sources: &[HashMap<String, String>]) -> HashMap<String, String> {
+pub fn defaults_deep(
+    mut object: HashMap<String, String>,
+    sources: &[HashMap<String, String>],
+) -> HashMap<String, String> {
     for source in sources {
         for (k, v) in source {
             if !object.contains_key(k) {
@@ -89,7 +111,8 @@ pub fn defaults_deep(mut object: HashMap<String, String>, sources: &[HashMap<Str
 
 /// Finds the first key for which the predicate returns true.
 pub fn find_key<F>(object: &HashMap<String, String>, predicate: F) -> Option<String>
-where F: Fn(&str) -> bool
+where
+    F: Fn(&str) -> bool,
 {
     for (k, v) in object {
         if predicate(v) {
@@ -102,14 +125,16 @@ where F: Fn(&str) -> bool
 /// Like `find_key` but iterates from right to left.
 /// Identical to `find_key` since `HashMap` is unordered.
 pub fn find_last_key<F>(object: &HashMap<String, String>, predicate: F) -> Option<String>
-where F: Fn(&str) -> bool
+where
+    F: Fn(&str) -> bool,
 {
     find_key(object, predicate)
 }
 
 /// Iterates over own and inherited enumerable string keyed properties of an object.
 pub fn for_in<F>(object: &HashMap<String, String>, iteratee: F)
-where F: Fn(&str, &str)
+where
+    F: Fn(&str, &str),
 {
     for (k, v) in object {
         iteratee(k, v);
@@ -119,14 +144,16 @@ where F: Fn(&str, &str)
 /// Like `for_in` but iterates from right to left.
 /// Identical to `for_in` since `HashMap` is unordered.
 pub fn for_in_right<F>(object: &HashMap<String, String>, iteratee: F)
-where F: Fn(&str, &str)
+where
+    F: Fn(&str, &str),
 {
     for_in(object, iteratee);
 }
 
 /// Iterates over own enumerable string keyed properties of an object.
 pub fn for_own<F>(object: &HashMap<String, String>, iteratee: F)
-where F: Fn(&str, &str)
+where
+    F: Fn(&str, &str),
 {
     for (k, v) in object {
         iteratee(k, v);
@@ -136,7 +163,8 @@ where F: Fn(&str, &str)
 /// Like `for_own` but iterates from right to left.
 /// Identical to `for_own` since `HashMap` is unordered.
 pub fn for_own_right<F>(object: &HashMap<String, String>, iteratee: F)
-where F: Fn(&str, &str)
+where
+    F: Fn(&str, &str),
 {
     for_own(object, iteratee);
 }
@@ -155,7 +183,11 @@ pub fn functions_in(_object: &HashMap<String, String>) -> Vec<String> {
 /// Gets the value at `path` of `object`. If the value is not found, returns `None`.
 /// The `default_value` parameter is accepted for API compatibility but cannot be
 /// returned due to type constraints (`&str` vs `&String`).
-pub fn get<'a>(object: &'a HashMap<String, String>, path: &str, _default_value: Option<&'a str>) -> Option<&'a String> {
+pub fn get<'a>(
+    object: &'a HashMap<String, String>,
+    path: &str,
+    _default_value: Option<&'a str>,
+) -> Option<&'a String> {
     object.get(path)
 }
 
@@ -181,7 +213,8 @@ pub fn invert(object: &HashMap<String, String>) -> HashMap<String, String> {
 
 /// Like `invert` but the inverted keys are generated by running each value through `iteratee`.
 pub fn invert_by<F>(object: &HashMap<String, String>, iteratee: F) -> HashMap<String, String>
-where F: Fn(&str) -> String
+where
+    F: Fn(&str) -> String,
 {
     let mut result = HashMap::new();
     for (k, v) in object {
@@ -210,7 +243,8 @@ pub fn keys_in(object: &HashMap<String, String>) -> Vec<String> {
 /// Creates an object with the same values as `object` and keys generated by running
 /// each own enumerable string keyed property through `iteratee`.
 pub fn map_keys<F>(object: &HashMap<String, String>, iteratee: F) -> HashMap<String, String>
-where F: Fn(&str) -> String
+where
+    F: Fn(&str) -> String,
 {
     let mut result = HashMap::new();
     for (k, v) in object {
@@ -222,7 +256,8 @@ where F: Fn(&str) -> String
 /// Creates an object with the same keys as `object` and values generated by running
 /// each own enumerable string keyed property through `iteratee`.
 pub fn map_values<F>(object: &HashMap<String, String>, iteratee: F) -> HashMap<String, String>
-where F: Fn(&str) -> String
+where
+    F: Fn(&str) -> String,
 {
     let mut result = HashMap::new();
     for (k, v) in object {
@@ -233,7 +268,10 @@ where F: Fn(&str) -> String
 
 /// Recursively merges own and inherited enumerable string keyed properties of source
 /// objects into the destination object. Simplified to match `assign` behavior.
-pub fn merge(mut object: HashMap<String, String>, sources: &[HashMap<String, String>]) -> HashMap<String, String> {
+pub fn merge(
+    mut object: HashMap<String, String>,
+    sources: &[HashMap<String, String>],
+) -> HashMap<String, String> {
     for source in sources {
         for (k, v) in source {
             object.insert(k.clone(), v.clone());
@@ -244,8 +282,13 @@ pub fn merge(mut object: HashMap<String, String>, sources: &[HashMap<String, Str
 
 /// Like `merge` but accepts a customizer that determines the merged value.
 /// The customizer receives the existing value and the source value.
-pub fn merge_with<F>(mut object: HashMap<String, String>, sources: &[HashMap<String, String>], customizer: F) -> HashMap<String, String>
-where F: Fn(&str, &str) -> String
+pub fn merge_with<F>(
+    mut object: HashMap<String, String>,
+    sources: &[HashMap<String, String>],
+    customizer: F,
+) -> HashMap<String, String>
+where
+    F: Fn(&str, &str) -> String,
 {
     for source in sources {
         for (k, v) in source {
@@ -272,7 +315,8 @@ pub fn omit(object: &HashMap<String, String>, paths: &[String]) -> HashMap<Strin
 /// Creates an object composed of the own enumerable property paths of `object`
 /// that are not omitted, excluding properties for which the predicate returns truthy.
 pub fn omit_by<F>(object: &HashMap<String, String>, predicate: F) -> HashMap<String, String>
-where F: Fn(&str) -> bool
+where
+    F: Fn(&str) -> bool,
 {
     let mut result = HashMap::new();
     for (k, v) in object {
@@ -297,7 +341,8 @@ pub fn pick(object: &HashMap<String, String>, paths: &[String]) -> HashMap<Strin
 /// Creates an object composed of the own enumerable property paths of `object`
 /// for which the predicate returns truthy.
 pub fn pick_by<F>(object: &HashMap<String, String>, predicate: F) -> HashMap<String, String>
-where F: Fn(&str) -> bool
+where
+    F: Fn(&str) -> bool,
 {
     let mut result = HashMap::new();
     for (k, v) in object {
@@ -321,7 +366,8 @@ pub fn set(object: &mut HashMap<String, String>, path: &str, value: String) {
 /// Like `set` but accepts a customizer that determines the value to set.
 /// The customizer receives the existing value (or "") and the new value.
 pub fn set_with<F>(object: &mut HashMap<String, String>, path: &str, value: String, customizer: F)
-where F: Fn(&str, &str) -> String
+where
+    F: Fn(&str, &str) -> String,
 {
     let existing = object.get(path).map(|s| s.as_str()).unwrap_or("");
     let new_value = customizer(existing, &value);
@@ -339,8 +385,13 @@ pub fn to_pairs_in(object: &HashMap<String, String>) -> Vec<(String, String)> {
 }
 
 /// An alternative to a reducer for objects, transforming an object into a new accumulator.
-pub fn transform<F>(object: &HashMap<String, String>, iteratee: F, mut accumulator: HashMap<String, String>) -> HashMap<String, String>
-where F: Fn(&str, &str, &mut HashMap<String, String>)
+pub fn transform<F>(
+    object: &HashMap<String, String>,
+    iteratee: F,
+    mut accumulator: HashMap<String, String>,
+) -> HashMap<String, String>
+where
+    F: Fn(&str, &str, &mut HashMap<String, String>),
 {
     for (k, v) in object {
         iteratee(k, v, &mut accumulator);
@@ -356,7 +407,8 @@ pub fn unset(object: &mut HashMap<String, String>, path: &str) -> bool {
 /// Updates the value at `path` of `object` using the `updater` function.
 /// The updater receives the current value (or `None` if not present) and returns the new value.
 pub fn update<F>(object: &mut HashMap<String, String>, path: &str, updater: F)
-where F: Fn(Option<&str>) -> String
+where
+    F: Fn(Option<&str>) -> String,
 {
     let current = object.get(path).map(|s| s.as_str());
     let new_value = updater(current);
@@ -365,8 +417,14 @@ where F: Fn(Option<&str>) -> String
 
 /// Like `update` but accepts a customizer that transforms the result of the updater
 /// before setting it. The customizer receives the existing value and the updater result.
-pub fn update_with<F, G>(object: &mut HashMap<String, String>, path: &str, updater: F, customizer: G)
-where F: Fn(Option<&str>) -> String, G: Fn(&str, &str) -> String
+pub fn update_with<F, G>(
+    object: &mut HashMap<String, String>,
+    path: &str,
+    updater: F,
+    customizer: G,
+) where
+    F: Fn(Option<&str>) -> String,
+    G: Fn(&str, &str) -> String,
 {
     let current = object.get(path).map(|s| s.as_str());
     let updated = updater(current);

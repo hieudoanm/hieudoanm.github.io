@@ -1,6 +1,6 @@
-use wasm_bindgen::prelude::*;
 use crate::core::string;
 use std::collections::HashMap;
+use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen(js_name = "camelCase")]
 pub fn camel_case(s: &str) -> String {

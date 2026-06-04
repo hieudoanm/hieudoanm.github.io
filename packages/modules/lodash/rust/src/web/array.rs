@@ -1,5 +1,5 @@
-use wasm_bindgen::prelude::*;
 use crate::core::array;
+use wasm_bindgen::prelude::*;
 
 fn f64s_to_array(vals: &[f64]) -> js_sys::Array {
     let arr = js_sys::Array::new();
@@ -69,38 +69,74 @@ pub fn drop_right_string(array: Vec<String>, n: usize) -> Vec<String> {
 
 #[wasm_bindgen(js_name = "findIndex")]
 pub fn find_index(array: &[f64], predicate: &js_sys::Function, from_index: usize) -> i32 {
-    array::find_index(array, |x| {
-        let this = JsValue::NULL;
-        let val = JsValue::from_f64(*x);
-        predicate.call1(&this, &val).map(|r| r.is_truthy()).unwrap_or(false)
-    }, from_index)
+    array::find_index(
+        array,
+        |x| {
+            let this = JsValue::NULL;
+            let val = JsValue::from_f64(*x);
+            predicate
+                .call1(&this, &val)
+                .map(|r| r.is_truthy())
+                .unwrap_or(false)
+        },
+        from_index,
+    )
 }
 
 #[wasm_bindgen(js_name = "findIndexStrings")]
-pub fn find_index_string(array: Vec<String>, predicate: &js_sys::Function, from_index: usize) -> i32 {
-    array::find_index(&array, |x| {
-        let this = JsValue::NULL;
-        let val = JsValue::from_str(x);
-        predicate.call1(&this, &val).map(|r| r.is_truthy()).unwrap_or(false)
-    }, from_index)
+pub fn find_index_string(
+    array: Vec<String>,
+    predicate: &js_sys::Function,
+    from_index: usize,
+) -> i32 {
+    array::find_index(
+        &array,
+        |x| {
+            let this = JsValue::NULL;
+            let val = JsValue::from_str(x);
+            predicate
+                .call1(&this, &val)
+                .map(|r| r.is_truthy())
+                .unwrap_or(false)
+        },
+        from_index,
+    )
 }
 
 #[wasm_bindgen(js_name = "findLastIndex")]
 pub fn find_last_index(array: &[f64], predicate: &js_sys::Function, from_index: usize) -> i32 {
-    array::find_last_index(array, |x| {
-        let this = JsValue::NULL;
-        let val = JsValue::from_f64(*x);
-        predicate.call1(&this, &val).map(|r| r.is_truthy()).unwrap_or(false)
-    }, from_index)
+    array::find_last_index(
+        array,
+        |x| {
+            let this = JsValue::NULL;
+            let val = JsValue::from_f64(*x);
+            predicate
+                .call1(&this, &val)
+                .map(|r| r.is_truthy())
+                .unwrap_or(false)
+        },
+        from_index,
+    )
 }
 
 #[wasm_bindgen(js_name = "findLastIndexStrings")]
-pub fn find_last_index_string(array: Vec<String>, predicate: &js_sys::Function, from_index: usize) -> i32 {
-    array::find_last_index(&array, |x| {
-        let this = JsValue::NULL;
-        let val = JsValue::from_str(x);
-        predicate.call1(&this, &val).map(|r| r.is_truthy()).unwrap_or(false)
-    }, from_index)
+pub fn find_last_index_string(
+    array: Vec<String>,
+    predicate: &js_sys::Function,
+    from_index: usize,
+) -> i32 {
+    array::find_last_index(
+        &array,
+        |x| {
+            let this = JsValue::NULL;
+            let val = JsValue::from_str(x);
+            predicate
+                .call1(&this, &val)
+                .map(|r| r.is_truthy())
+                .unwrap_or(false)
+        },
+        from_index,
+    )
 }
 
 #[wasm_bindgen]
@@ -288,22 +324,36 @@ pub fn xor_string(array: Vec<String>, values: Vec<String>) -> Vec<String> {
 // === Closure-based f64 + String ===
 
 #[wasm_bindgen(js_name = "differenceWith")]
-pub fn difference_with(array: &[f64], values: &[f64], comparator: &js_sys::Function) -> js_sys::Array {
+pub fn difference_with(
+    array: &[f64],
+    values: &[f64],
+    comparator: &js_sys::Function,
+) -> js_sys::Array {
     f64s_to_array(&array::difference_with(array, values, |a, b| {
         let this = JsValue::NULL;
         let val_a = JsValue::from_f64(*a);
         let val_b = JsValue::from_f64(*b);
-        comparator.call2(&this, &val_a, &val_b).map(|r| r.is_truthy()).unwrap_or(false)
+        comparator
+            .call2(&this, &val_a, &val_b)
+            .map(|r| r.is_truthy())
+            .unwrap_or(false)
     }))
 }
 
 #[wasm_bindgen(js_name = "differenceWithStrings")]
-pub fn difference_with_string(array: Vec<String>, values: Vec<String>, comparator: &js_sys::Function) -> Vec<String> {
+pub fn difference_with_string(
+    array: Vec<String>,
+    values: Vec<String>,
+    comparator: &js_sys::Function,
+) -> Vec<String> {
     array::difference_with(&array, &values, |a, b| {
         let this = JsValue::NULL;
         let val_a = JsValue::from_str(a);
         let val_b = JsValue::from_str(b);
-        comparator.call2(&this, &val_a, &val_b).map(|r| r.is_truthy()).unwrap_or(false)
+        comparator
+            .call2(&this, &val_a, &val_b)
+            .map(|r| r.is_truthy())
+            .unwrap_or(false)
     })
 }
 
@@ -312,7 +362,10 @@ pub fn drop_while(array: &[f64], predicate: &js_sys::Function) -> js_sys::Array 
     f64s_to_array(&array::drop_while(array, |x| {
         let this = JsValue::NULL;
         let val = JsValue::from_f64(*x);
-        predicate.call1(&this, &val).map(|r| r.is_truthy()).unwrap_or(false)
+        predicate
+            .call1(&this, &val)
+            .map(|r| r.is_truthy())
+            .unwrap_or(false)
     }))
 }
 
@@ -321,7 +374,10 @@ pub fn drop_while_string(array: Vec<String>, predicate: &js_sys::Function) -> Ve
     array::drop_while(&array, |x| {
         let this = JsValue::NULL;
         let val = JsValue::from_str(x);
-        predicate.call1(&this, &val).map(|r| r.is_truthy()).unwrap_or(false)
+        predicate
+            .call1(&this, &val)
+            .map(|r| r.is_truthy())
+            .unwrap_or(false)
     })
 }
 
@@ -330,7 +386,10 @@ pub fn drop_right_while(array: &[f64], predicate: &js_sys::Function) -> js_sys::
     f64s_to_array(&array::drop_right_while(array, |x| {
         let this = JsValue::NULL;
         let val = JsValue::from_f64(*x);
-        predicate.call1(&this, &val).map(|r| r.is_truthy()).unwrap_or(false)
+        predicate
+            .call1(&this, &val)
+            .map(|r| r.is_truthy())
+            .unwrap_or(false)
     }))
 }
 
@@ -339,27 +398,44 @@ pub fn drop_right_while_string(array: Vec<String>, predicate: &js_sys::Function)
     array::drop_right_while(&array, |x| {
         let this = JsValue::NULL;
         let val = JsValue::from_str(x);
-        predicate.call1(&this, &val).map(|r| r.is_truthy()).unwrap_or(false)
+        predicate
+            .call1(&this, &val)
+            .map(|r| r.is_truthy())
+            .unwrap_or(false)
     })
 }
 
 #[wasm_bindgen(js_name = "intersectionWith")]
-pub fn intersection_with(array: &[f64], values: &[f64], comparator: &js_sys::Function) -> js_sys::Array {
+pub fn intersection_with(
+    array: &[f64],
+    values: &[f64],
+    comparator: &js_sys::Function,
+) -> js_sys::Array {
     f64s_to_array(&array::intersection_with(array, values, |a, b| {
         let this = JsValue::NULL;
         let val_a = JsValue::from_f64(*a);
         let val_b = JsValue::from_f64(*b);
-        comparator.call2(&this, &val_a, &val_b).map(|r| r.is_truthy()).unwrap_or(false)
+        comparator
+            .call2(&this, &val_a, &val_b)
+            .map(|r| r.is_truthy())
+            .unwrap_or(false)
     }))
 }
 
 #[wasm_bindgen(js_name = "intersectionWithStrings")]
-pub fn intersection_with_string(array: Vec<String>, values: Vec<String>, comparator: &js_sys::Function) -> Vec<String> {
+pub fn intersection_with_string(
+    array: Vec<String>,
+    values: Vec<String>,
+    comparator: &js_sys::Function,
+) -> Vec<String> {
     array::intersection_with(&array, &values, |a, b| {
         let this = JsValue::NULL;
         let val_a = JsValue::from_str(a);
         let val_b = JsValue::from_str(b);
-        comparator.call2(&this, &val_a, &val_b).map(|r| r.is_truthy()).unwrap_or(false)
+        comparator
+            .call2(&this, &val_a, &val_b)
+            .map(|r| r.is_truthy())
+            .unwrap_or(false)
     })
 }
 
@@ -368,7 +444,10 @@ pub fn take_while(array: &[f64], predicate: &js_sys::Function) -> js_sys::Array 
     f64s_to_array(&array::take_while(array, |x| {
         let this = JsValue::NULL;
         let val = JsValue::from_f64(*x);
-        predicate.call1(&this, &val).map(|r| r.is_truthy()).unwrap_or(false)
+        predicate
+            .call1(&this, &val)
+            .map(|r| r.is_truthy())
+            .unwrap_or(false)
     }))
 }
 
@@ -377,7 +456,10 @@ pub fn take_while_string(array: Vec<String>, predicate: &js_sys::Function) -> Ve
     array::take_while(&array, |x| {
         let this = JsValue::NULL;
         let val = JsValue::from_str(x);
-        predicate.call1(&this, &val).map(|r| r.is_truthy()).unwrap_or(false)
+        predicate
+            .call1(&this, &val)
+            .map(|r| r.is_truthy())
+            .unwrap_or(false)
     })
 }
 
@@ -386,7 +468,10 @@ pub fn take_right_while(array: &[f64], predicate: &js_sys::Function) -> js_sys::
     f64s_to_array(&array::take_right_while(array, |x| {
         let this = JsValue::NULL;
         let val = JsValue::from_f64(*x);
-        predicate.call1(&this, &val).map(|r| r.is_truthy()).unwrap_or(false)
+        predicate
+            .call1(&this, &val)
+            .map(|r| r.is_truthy())
+            .unwrap_or(false)
     }))
 }
 
@@ -395,7 +480,10 @@ pub fn take_right_while_string(array: Vec<String>, predicate: &js_sys::Function)
     array::take_right_while(&array, |x| {
         let this = JsValue::NULL;
         let val = JsValue::from_str(x);
-        predicate.call1(&this, &val).map(|r| r.is_truthy()).unwrap_or(false)
+        predicate
+            .call1(&this, &val)
+            .map(|r| r.is_truthy())
+            .unwrap_or(false)
     })
 }
 
@@ -405,17 +493,27 @@ pub fn union_with(array: &[f64], values: &[f64], comparator: &js_sys::Function) 
         let this = JsValue::NULL;
         let val_a = JsValue::from_f64(*a);
         let val_b = JsValue::from_f64(*b);
-        comparator.call2(&this, &val_a, &val_b).map(|r| r.is_truthy()).unwrap_or(false)
+        comparator
+            .call2(&this, &val_a, &val_b)
+            .map(|r| r.is_truthy())
+            .unwrap_or(false)
     }))
 }
 
 #[wasm_bindgen(js_name = "unionWithStrings")]
-pub fn union_with_string(array: Vec<String>, values: Vec<String>, comparator: &js_sys::Function) -> Vec<String> {
+pub fn union_with_string(
+    array: Vec<String>,
+    values: Vec<String>,
+    comparator: &js_sys::Function,
+) -> Vec<String> {
     array::union_with(&array, &values, |a, b| {
         let this = JsValue::NULL;
         let val_a = JsValue::from_str(a);
         let val_b = JsValue::from_str(b);
-        comparator.call2(&this, &val_a, &val_b).map(|r| r.is_truthy()).unwrap_or(false)
+        comparator
+            .call2(&this, &val_a, &val_b)
+            .map(|r| r.is_truthy())
+            .unwrap_or(false)
     })
 }
 
@@ -425,7 +523,10 @@ pub fn uniq_with(array: &[f64], comparator: &js_sys::Function) -> js_sys::Array 
         let this = JsValue::NULL;
         let val_a = JsValue::from_f64(*a);
         let val_b = JsValue::from_f64(*b);
-        comparator.call2(&this, &val_a, &val_b).map(|r| r.is_truthy()).unwrap_or(false)
+        comparator
+            .call2(&this, &val_a, &val_b)
+            .map(|r| r.is_truthy())
+            .unwrap_or(false)
     }))
 }
 
@@ -435,7 +536,10 @@ pub fn uniq_with_string(array: Vec<String>, comparator: &js_sys::Function) -> Ve
         let this = JsValue::NULL;
         let val_a = JsValue::from_str(a);
         let val_b = JsValue::from_str(b);
-        comparator.call2(&this, &val_a, &val_b).map(|r| r.is_truthy()).unwrap_or(false)
+        comparator
+            .call2(&this, &val_a, &val_b)
+            .map(|r| r.is_truthy())
+            .unwrap_or(false)
     })
 }
 
@@ -445,16 +549,26 @@ pub fn xor_with(array: &[f64], values: &[f64], comparator: &js_sys::Function) ->
         let this = JsValue::NULL;
         let val_a = JsValue::from_f64(*a);
         let val_b = JsValue::from_f64(*b);
-        comparator.call2(&this, &val_a, &val_b).map(|r| r.is_truthy()).unwrap_or(false)
+        comparator
+            .call2(&this, &val_a, &val_b)
+            .map(|r| r.is_truthy())
+            .unwrap_or(false)
     }))
 }
 
 #[wasm_bindgen(js_name = "xorWithStrings")]
-pub fn xor_with_string(array: Vec<String>, values: Vec<String>, comparator: &js_sys::Function) -> Vec<String> {
+pub fn xor_with_string(
+    array: Vec<String>,
+    values: Vec<String>,
+    comparator: &js_sys::Function,
+) -> Vec<String> {
     array::xor_with(&array, &values, |a, b| {
         let this = JsValue::NULL;
         let val_a = JsValue::from_str(a);
         let val_b = JsValue::from_str(b);
-        comparator.call2(&this, &val_a, &val_b).map(|r| r.is_truthy()).unwrap_or(false)
+        comparator
+            .call2(&this, &val_a, &val_b)
+            .map(|r| r.is_truthy())
+            .unwrap_or(false)
     })
 }

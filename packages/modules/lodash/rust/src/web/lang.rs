@@ -1,5 +1,5 @@
-use wasm_bindgen::prelude::*;
 use crate::core::lang;
+use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn eq(a: f64, b: f64) -> bool {

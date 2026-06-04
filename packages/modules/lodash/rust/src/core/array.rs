@@ -34,11 +34,7 @@ pub fn concat<T: Clone>(array: &[T], values: &[&[T]]) -> Vec<T> {
 /// Creates an array of `array` values not included in `values`.
 pub fn difference<T: Eq + Hash + Clone>(array: &[T], values: &[T]) -> Vec<T> {
     let set: HashSet<&T> = values.iter().collect();
-    array
-        .iter()
-        .filter(|x| !set.contains(x))
-        .cloned()
-        .collect()
+    array.iter().filter(|x| !set.contains(x)).cloned().collect()
 }
 
 /// Creates an array of `array` values not included in `values`, using an iteratee.
@@ -123,11 +119,7 @@ pub fn find_index<T, F: Fn(&T) -> bool>(array: &[T], predicate: F, from_index: u
 }
 
 /// Finds the index of the last element predicate returns truthy for.
-pub fn find_last_index<T, F: Fn(&T) -> bool>(
-    array: &[T],
-    predicate: F,
-    from_index: usize,
-) -> i32 {
+pub fn find_last_index<T, F: Fn(&T) -> bool>(array: &[T], predicate: F, from_index: usize) -> i32 {
     let end = (from_index + 1).min(array.len());
     for i in (0..end).rev() {
         if predicate(&array[i]) {
@@ -294,11 +286,7 @@ pub fn pull_all<T: PartialEq + Clone>(array: &mut Vec<T>, values: &[T]) {
 }
 
 /// Removes all given values from `array` using an iteratee.
-pub fn pull_all_by<T: Clone, U: Eq, F: Fn(&T) -> U>(
-    array: &mut Vec<T>,
-    values: &[T],
-    iteratee: F,
-) {
+pub fn pull_all_by<T: Clone, U: Eq, F: Fn(&T) -> U>(array: &mut Vec<T>, values: &[T], iteratee: F) {
     let mapped: Vec<U> = values.iter().map(&iteratee).collect();
     array.retain(|x| !mapped.contains(&iteratee(x)));
 }
@@ -363,11 +351,7 @@ pub fn sorted_index<T: Ord>(array: &[T], value: &T) -> usize {
 }
 
 /// Uses a binary search and an iteratee to determine the lowest index for value.
-pub fn sorted_index_by<T, U: Ord, F: Fn(&T) -> U>(
-    array: &[T],
-    value: &T,
-    iteratee: F,
-) -> usize {
+pub fn sorted_index_by<T, U: Ord, F: Fn(&T) -> U>(array: &[T], value: &T, iteratee: F) -> usize {
     let mapped_value = iteratee(value);
     let mut left = 0;
     let mut right = array.len();
@@ -505,11 +489,7 @@ pub fn take_right_while<T: Clone, F: Fn(&T) -> bool>(array: &[T], predicate: F) 
 
 /// Creates a slice of `array` with elements taken from the beginning until predicate fails.
 pub fn take_while<T: Clone, F: Fn(&T) -> bool>(array: &[T], predicate: F) -> Vec<T> {
-    array
-        .iter()
-        .take_while(|x| predicate(x))
-        .cloned()
-        .collect()
+    array.iter().take_while(|x| predicate(x)).cloned().collect()
 }
 
 /// Creates an array of unique values, in order, from all given arrays.

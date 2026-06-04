@@ -17,7 +17,10 @@ impl SimpleRng {
     }
 
     fn next(&mut self) -> u64 {
-        self.0 = self.0.wrapping_mul(6364136223846793005).wrapping_add(1442695040888963407);
+        self.0 = self
+            .0
+            .wrapping_mul(6364136223846793005)
+            .wrapping_add(1442695040888963407);
         self.0
     }
 
@@ -70,9 +73,7 @@ pub fn random(lower: f64, upper: Option<f64>, floating: Option<bool>) -> f64 {
         None => (0.0, lower),
     };
 
-    let should_float = floating.unwrap_or_else(|| {
-        lo.fract() != 0.0 || hi.fract() != 0.0
-    });
+    let should_float = floating.unwrap_or_else(|| lo.fract() != 0.0 || hi.fract() != 0.0);
 
     RNG.with(|rng| {
         let mut rng = rng.borrow_mut();
