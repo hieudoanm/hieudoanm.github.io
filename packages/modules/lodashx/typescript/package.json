@@ -41,5 +41,8 @@
     "ts-node": "10.9.2",
     "typescript": "6.0.3",
     "typescript-eslint": "8.60.1"
+  },
+  "dependencies": {
+    "yaml": "2.9.0"
   }
 }

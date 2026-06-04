@@ -4,7 +4,7 @@ import {
   hex2oklch,
   hex2rgb,
   randomHEX,
-} from '@hieudoanm/colors';
+} from '@lodashx/ts';
 import { FC, useEffect, useState } from 'react';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 

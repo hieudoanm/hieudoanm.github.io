@@ -1,4 +1,4 @@
-import * as colors from '../src';
+import * as colors from '..';
 
 describe('colors package exports', () => {
   it('exports all expected functions', () => {

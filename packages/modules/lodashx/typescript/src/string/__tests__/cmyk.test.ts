@@ -1,4 +1,4 @@
-import { cmyk2hex, cmyk2hsl } from '../src/cmyk';
+import { cmyk2hex, cmyk2hsl } from '../cmyk';
 
 describe('cmyk2hex', () => {
   it('converts cmyk red to hex', () => {

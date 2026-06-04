@@ -12,7 +12,6 @@
     - [Simple Auth](#simple-auth)
     - [Simplebase](#simplebase)
     - [Simple Upload](#simple-upload)
-  - [Utilities](#utilities)
 
 ## API
 
@@ -58,8 +57,3 @@
 1. `@simple-upload/react`
 2. `@simple-upload/solid`
 3. `@simple-upload/server`
-
-## Utilities
-
-1. `@hieudoanm/colors`
-2. `@hieudoanm/json`

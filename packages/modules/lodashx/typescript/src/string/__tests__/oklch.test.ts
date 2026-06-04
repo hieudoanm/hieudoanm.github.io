@@ -1,4 +1,4 @@
-import { oklch2hex } from '../src/oklch';
+import { oklch2hex } from '../oklch';
 
 describe('oklch2hex', () => {
   it('returns a string starting with #', () => {

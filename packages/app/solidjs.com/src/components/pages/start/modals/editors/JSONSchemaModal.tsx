@@ -10,7 +10,7 @@ import { EditorState, Extension } from '@codemirror/state';
 import { oneDark } from '@codemirror/theme-one-dark';
 import { EditorView } from '@codemirror/view';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
-import { json, jsonParse } from '@hieudoanm/json';
+import { json, jsonParse } from '@lodashx/ts';
 import jsonSchemaGenerator from 'json-schema-generator';
 import {
   createEffect,

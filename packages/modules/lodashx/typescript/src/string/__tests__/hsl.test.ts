@@ -1,4 +1,4 @@
-import { hsl2hex, hsl2rgb, hsl2cmyk } from '../src/hsl';
+import { hsl2hex, hsl2rgb, hsl2cmyk } from '../hsl';
 
 describe('hsl2hex', () => {
   it('converts red hsl to hex', () => {

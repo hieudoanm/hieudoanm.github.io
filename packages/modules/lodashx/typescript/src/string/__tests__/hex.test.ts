@@ -1,10 +1,4 @@
-import {
-  hex2rgb,
-  hex2hsl,
-  hex2cmyk,
-  hex2oklch,
-  getBrightness,
-} from '../src/hex';
+import { hex2rgb, hex2hsl, hex2cmyk, hex2oklch, getBrightness } from '../hex';
 
 describe('hex2rgb', () => {
   it('converts 6-digit hex to rgb', () => {

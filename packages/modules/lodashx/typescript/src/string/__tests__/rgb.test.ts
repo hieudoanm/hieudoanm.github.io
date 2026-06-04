@@ -1,4 +1,4 @@
-import { component2hex, rgb2hex, rgb2hsl, rgb2cmyk } from '../src/rgb';
+import { component2hex, rgb2hex, rgb2hsl, rgb2cmyk } from '../rgb';
 
 describe('component2hex', () => {
   it('converts 0 to 00', () => {

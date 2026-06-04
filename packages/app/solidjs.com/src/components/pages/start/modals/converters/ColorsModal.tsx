@@ -4,7 +4,7 @@ import {
   hex2oklch,
   hex2rgb,
   randomHEX,
-} from '@hieudoanm/colors';
+} from '@lodashx/ts';
 import { createSignal, onMount, onCleanup } from 'solid-js';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
