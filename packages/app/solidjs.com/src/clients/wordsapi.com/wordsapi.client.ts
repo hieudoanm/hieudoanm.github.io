@@ -14,7 +14,7 @@ export type Word = {
 
 export const getWord = async (word: string): Promise<Word> => {
   try {
-    const url: string = `https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/data/languages/english/words/${encodeURI(word)}.json`;
+    const url: string = `https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/data/languages/english/words/${encodeURI(word)}.json`;
     const response = await fetch(url);
     const data: Word = await response.json();
     return data;

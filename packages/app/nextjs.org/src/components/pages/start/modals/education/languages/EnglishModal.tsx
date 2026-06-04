@@ -30,7 +30,9 @@ export const LanguagesEnglishModal: FC<{ onClose: () => void }> = ({
     queryFn: async () => {
       if (word === '') throw new Error('Empty Word');
       const wordQuery: string = encodeURI(word.trim().toLowerCase());
-      const url: string = `https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/packages/data/english/words/${wordQuery}.json`;
+      const base: string =
+        'https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/data/english/words';
+      const url: string = `${base}/${wordQuery}.json`;
       const { data: response, error: fetchError } = await tryCatch(fetch(url));
       if (fetchError) {
         console.error(fetchError);

@@ -52,7 +52,9 @@ type WordData = { word: string; definitions: Definition[] };
 const fetchDefinition = async (word: string): Promise<WordData | null> => {
   try {
     const wordQuery = word.toLowerCase();
-    const url = `https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/packages/data/english/words/${wordQuery}.json`;
+    const base: string =
+      'https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/data/english/words';
+    const url: string = `${base}/${wordQuery}.json`;
     const res = await fetch(url);
     if (!res.ok) return null;
     return await res.json();
