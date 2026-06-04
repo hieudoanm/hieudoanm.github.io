@@ -12,7 +12,7 @@ import {
   LunarCalendar,
   generateFullCalendar,
   getWeekOfYear,
-} from '@hieudoanm/calendar';
+} from '@lodashx/ts';
 import { useQueries } from '@tanstack/react-query';
 import { FC, useState } from 'react';
 

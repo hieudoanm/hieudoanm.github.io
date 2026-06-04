@@ -1,7 +1,7 @@
 import { getId, getWork } from '@hieudoanm/api';
 import type { Reference } from '@hieudoanm/api';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
-import { tryCatch } from '@hieudoanm/try-catch';
+import { tryCatch } from '@lodashx/ts';
 import { createSignal } from 'solid-js';
 
 const ReferenceCard = ({

@@ -4,19 +4,8 @@
 
 - [Utilities](#utilities)
   - [Table of Contents](#table-of-contents)
-  - [Calendar](#calendar)
   - [Colors](#colors)
   - [JSON](#json)
-  - [Number](#number)
-  - [String](#string)
-
-## Calendar
-
-```bash
-yarn add --exact @hieudoanm/calendar
-npm install --save-exact @hieudoanm/calendar
-pnpm install --save-exact @hieudoanm/calendar
-```
 
 ## Colors
 
@@ -32,20 +21,4 @@ pnpm install --save-exact @hieudoanm/colors
 yarn add --exact @hieudoanm/json
 npm install --save-exact @hieudoanm/json
 pnpm install --save-exact @hieudoanm/json
-```
-
-## Number
-
-```bash
-yarn add --exact @hieudoanm/number
-npm install --save-exact @hieudoanm/number
-pnpm install --save-exact @hieudoanm/number
-```
-
-## String
-
-```bash
-yarn add --exact @hieudoanm/string
-npm install --save-exact @hieudoanm/string
-pnpm install --save-exact @hieudoanm/string
 ```

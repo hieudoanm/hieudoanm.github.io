@@ -2,7 +2,7 @@ import { render, screen, waitFor } from '@testing-library/react';
 import { TelegramProvider, useTelegram } from '../TelegramContext';
 
 jest.mock(
-  '@hieudoanm/try-catch',
+  '@lodashx/ts',
   () => ({
     tryCatch: jest.fn().mockResolvedValue({ data: null, error: null }),
   }),

@@ -1,4 +1,4 @@
-import { tryCatch } from '@hieudoanm/try-catch';
+import { tryCatch } from '@lodashx/ts';
 import { useQuery } from '@tanstack/react-query';
 import { ChangeEvent, FC, useState } from 'react';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';

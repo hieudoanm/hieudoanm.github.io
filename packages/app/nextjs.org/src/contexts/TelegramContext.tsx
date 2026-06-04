@@ -1,4 +1,4 @@
-import { tryCatch } from '@hieudoanm/try-catch';
+import { tryCatch } from '@lodashx/ts';
 import {
   createContext,
   ReactNode,

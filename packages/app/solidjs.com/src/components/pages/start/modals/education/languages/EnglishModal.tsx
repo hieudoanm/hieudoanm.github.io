@@ -1,4 +1,4 @@
-import { tryCatch } from '@hieudoanm/try-catch';
+import { tryCatch } from '@lodashx/ts';
 import { createSignal } from 'solid-js';
 import { useQuery } from '@tanstack/solid-query';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';

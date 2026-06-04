@@ -2,7 +2,7 @@ import type { APIEvent } from '@solidjs/start/server';
 import { GeminiModel } from '@hieudoanm.github.io/clients/gemini/gemini.enums';
 import { OpenRouterModel } from '@hieudoanm.github.io/clients/openrouter/openrouter.enums';
 import { generate } from '@hieudoanm.github.io/services/openrouter/openrouter.service';
-import { tryCatch } from '@hieudoanm/try-catch';
+import { tryCatch } from '@lodashx/ts';
 
 const validateModel = (model: GeminiModel | OpenRouterModel): boolean => {
   return (

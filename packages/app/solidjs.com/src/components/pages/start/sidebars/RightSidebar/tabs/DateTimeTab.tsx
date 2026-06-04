@@ -11,7 +11,7 @@ import {
   LunarCalendar,
   generateFullCalendar,
   getWeekOfYear,
-} from '@hieudoanm/calendar';
+} from '@lodashx/ts';
 import { useQueries } from '@tanstack/solid-query';
 import { createSignal } from 'solid-js';
 

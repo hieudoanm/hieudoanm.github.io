@@ -1,5 +1,5 @@
+import { base } from '@lodashx/ts';
 import { createSignal } from 'solid-js';
-import { base } from '@hieudoanm/number';
 
 const INITIAL_NUMBER = 10;
 

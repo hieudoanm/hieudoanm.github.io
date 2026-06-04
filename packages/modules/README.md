@@ -61,9 +61,5 @@
 
 ## Utilities
 
-1. `@hieudoanm/calendar`
-2. `@hieudoanm/colors`
-3. `@hieudoanm/json`
-4. `@hieudoanm/number`
-5. `@hieudoanm/string`
-6. `@hieudoanm/try-catch`
+1. `@hieudoanm/colors`
+2. `@hieudoanm/json`

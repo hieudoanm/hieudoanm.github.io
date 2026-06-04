@@ -9,7 +9,7 @@ import {
 } from '@hieudoanm.github.io/clients/openrouter/openrouter.client';
 import { OpenRouterModel } from '@hieudoanm.github.io/clients/openrouter/openrouter.enums';
 import { models } from '@hieudoanm.github.io/data/models';
-import { tryCatch } from '@hieudoanm/try-catch';
+import { tryCatch } from '@lodashx/ts';
 
 const ids: string[] = models.map(({ id }) => id);
 

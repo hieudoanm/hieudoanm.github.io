@@ -1,4 +1,4 @@
-import { base } from '@hieudoanm/number';
+import { base } from '@lodashx/ts';
 import { FC, useState } from 'react';
 
 const INITIAL_NUMBER: number = 10;

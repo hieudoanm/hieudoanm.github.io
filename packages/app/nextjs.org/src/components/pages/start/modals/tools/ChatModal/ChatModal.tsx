@@ -4,7 +4,7 @@ import { OpenRouterModel } from '@hieudoanm.github.io/clients/openrouter/openrou
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 import { Model, models } from '@hieudoanm.github.io/data/models';
 import { trpcClient } from '@hieudoanm.github.io/utils/trpc';
-import { tryCatch } from '@hieudoanm/try-catch';
+import { tryCatch } from '@lodashx/ts';
 import { ChangeEvent, FC, SubmitEvent, useRef, useState } from 'react';
 import Tesseract from 'tesseract.js';
 import { Message, Messages } from './ChatMessages';
