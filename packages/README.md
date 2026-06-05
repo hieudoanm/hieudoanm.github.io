@@ -1,0 +1,22 @@
+# Packages
+
+1. Application
+   1. Next.js
+   2. Solid.js
+2. CLI
+   1. Cobra
+   2. Clap
+3. Data
+4. Docker
+5. Docs
+6. Extensions
+   1. Browser
+7. Modules
+   1. Go
+   2. Rust
+   3. TypeScript
+8. Obsidian
+9. Server
+   1. Backbone
+10. Watch
+    1. Garmin
