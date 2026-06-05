@@ -11,6 +11,7 @@ import (
 	"github.com/hieudoanm/api/core/crossref.org"
 	"github.com/hieudoanm/api/core/deepseek.com"
 	"github.com/hieudoanm/api/core/fixer.io"
+	"github.com/hieudoanm/api/core/gemini.google.com"
 	"github.com/hieudoanm/api/core/football-data.org"
 	"github.com/hieudoanm/api/core/frankfurter.app"
 	"github.com/hieudoanm/api/core/lichess.org"
@@ -82,6 +83,19 @@ func main() {
 	export("deepseekChat", func(this js.Value, args []js.Value) interface{} {
 		client := deepseek.NewDeepSeekClient(args[2].String())
 		resp, err := client.GetChatCompletions(args[0].String(), args[1].String())
+		if err != nil {
+			return js.Global().Get("Error").New(err.Error())
+		}
+		return js.Global().Get("JSON").Call("parse", js.ValueOf(jsonString(resp)))
+	})
+
+	export("geminiGenerateContent", func(this js.Value, args []js.Value) interface{} {
+		client := gemini.NewGeminiClient(args[2].String())
+		var contents []gemini.Content
+		if err := json.Unmarshal([]byte(args[1].String()), &contents); err != nil {
+			return js.Global().Get("Error").New(err.Error())
+		}
+		resp, err := client.GenerateContent(gemini.Model(args[0].String()), contents)
 		if err != nil {
 			return js.Global().Get("Error").New(err.Error())
 		}

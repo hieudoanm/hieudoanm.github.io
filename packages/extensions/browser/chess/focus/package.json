@@ -14,7 +14,7 @@
   "homepage": "https://hieudoanm.github.io/chess",
   "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
   "license": "GPL-3.0",
-  "packageManager": "pnpm@11.5.1",
+  "packageManager": "pnpm@11.5.2",
   "engines": {
     "node": "26.3.0"
   },

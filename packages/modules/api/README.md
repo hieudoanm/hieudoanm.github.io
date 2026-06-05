@@ -14,7 +14,7 @@
 ## Installation
 
 ```bash
-yarn add --exact @hieudoanm/api
-npm install --save-exact @hieudoanm/api
-pnpm install --save-exact @hieudoanm/api
+yarn add --exact @api/ts
+npm install --save-exact @api/ts
+pnpm install --save-exact @api/ts
 ```

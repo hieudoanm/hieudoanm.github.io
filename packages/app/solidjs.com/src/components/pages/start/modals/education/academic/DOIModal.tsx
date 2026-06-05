@@ -1,5 +1,5 @@
-import { getId, getWork } from '@hieudoanm/api';
-import type { Reference } from '@hieudoanm/api';
+import { getId, getWork } from '@api/ts';
+import type { Reference } from '@api/ts';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 import { tryCatch } from '@lodashx/ts';
 import { createSignal } from 'solid-js';

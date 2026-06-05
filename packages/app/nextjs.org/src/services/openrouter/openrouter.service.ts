@@ -1,8 +1,4 @@
-import {
-  GeminiRole,
-  generateContent,
-} from '@hieudoanm.github.io/clients/gemini/gemini.client';
-import { GeminiModel } from '@hieudoanm.github.io/clients/gemini/gemini.enums';
+import { GeminiModel, GeminiRole, generateContent } from '@api/ts';
 import {
   complete,
   OpenRouterRole,
@@ -28,7 +24,10 @@ export const generate = async ({
       };
     });
     const { data, error } = await tryCatch(
-      generateContent({ contents, model: model as GeminiModel })
+      generateContent(process.env.GOOGLE_GEMINI_API_KEY ?? '', {
+        contents,
+        model: model as GeminiModel,
+      })
     );
     if (error) {
       console.error('Error generating content:', error);

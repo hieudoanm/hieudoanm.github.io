@@ -20,6 +20,9 @@ importers:
 
   packages/app/nextjs.org:
     dependencies:
+      '@api/ts':
+        specifier: workspace:*
+        version: link:../../modules/api/typescript
       '@browser/native':
         specifier: workspace:*
         version: link:../../modules/browser/native
@@ -68,9 +71,6 @@ importers:
       '@codemirror/view':
         specifier: 6.43.0
         version: 6.43.0
-      '@hieudoanm/api':
-        specifier: workspace:*
-        version: link:../../modules/api/typescript
       '@lodash/ts':
         specifier: workspace:*
         version: link:../../modules/lodash/typescript
@@ -303,6 +303,9 @@ importers:
 
   packages/app/solidjs.com:
     dependencies:
+      '@api/ts':
+        specifier: workspace:*
+        version: link:../../modules/api/typescript
       '@browser/native':
         specifier: workspace:*
         version: link:../../modules/browser/native
@@ -351,9 +354,6 @@ importers:
       '@codemirror/view':
         specifier: 6.43.0
         version: 6.43.0
-      '@hieudoanm/api':
-        specifier: workspace:*
-        version: link:../../modules/api/typescript
       '@lodash/ts':
         specifier: workspace:*
         version: link:../../modules/lodash/typescript

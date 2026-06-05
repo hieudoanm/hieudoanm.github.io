@@ -1,5 +1,5 @@
 [package]
-name = "hieudoanm_api"
+name = "api_rs"
 version = "0.0.1"
 edition = "2024"
 description = "API Clients"

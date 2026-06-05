@@ -1,5 +1,5 @@
 import { createClipboard, scrollToBottom } from '@browser/native';
-import { GeminiModel } from '@hieudoanm.github.io/clients/gemini/gemini.enums';
+import { GeminiModel } from '@api/ts';
 import { OpenRouterModel } from '@hieudoanm.github.io/clients/openrouter/openrouter.enums';
 import { MODELS } from '@hieudoanm.github.io/constants/models';
 import { marked } from 'marked';

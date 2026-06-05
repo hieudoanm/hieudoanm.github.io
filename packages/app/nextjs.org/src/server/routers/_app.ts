@@ -1,4 +1,4 @@
-import { GeminiModel } from '@hieudoanm.github.io/clients/gemini/gemini.enums';
+import { GeminiModel } from '@api/ts';
 import { OpenRouterModel } from '@hieudoanm.github.io/clients/openrouter/openrouter.enums';
 import { generate } from '@hieudoanm.github.io/services/openrouter/openrouter.service';
 import { summariseTranscript } from '@hieudoanm.github.io/services/youtube/youtube.service';

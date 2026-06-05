@@ -1,5 +1,5 @@
 import { scrollToBottom } from '@browser/native';
-import { GeminiModel } from '@hieudoanm.github.io/clients/gemini/gemini.enums';
+import { GeminiModel } from '@api/ts';
 import { OpenRouterModel } from '@hieudoanm.github.io/clients/openrouter/openrouter.enums';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 import { Model, models } from '@hieudoanm.github.io/data/models';

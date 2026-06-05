@@ -14,6 +14,8 @@ pub mod fixer;
 pub mod football;
 #[path = "frankfurter.app/frankfurter.rs"]
 pub mod frankfurter;
+#[path = "gemini.google.com/gemini.rs"]
+pub mod gemini;
 #[path = "lichess.org/lichess.rs"]
 pub mod lichess;
 #[path = "newsapi.org/newsapi.rs"]

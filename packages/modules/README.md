@@ -15,7 +15,7 @@
 
 ## API
 
-1. `@hieudoanm/api`
+1. `@api/ts`
 
 ## Browser
 

@@ -13,6 +13,8 @@ export * from './football-data.org/football-data.client.js';
 export * from './football-data.org/football-data.dto.js';
 export * from './frankfurter.app/frankfurter.client.js';
 export * from './frankfurter.app/frankfurter.dto.js';
+export * from './gemini.google.com/gemini.client.js';
+export * from './gemini.google.com/gemini.dto.js';
 export * from './lichess.org/lichess.client.js';
 export * from './lichess.org/lichess.dto.js';
 export * from './newsapi.org/newsapi.client.js';
