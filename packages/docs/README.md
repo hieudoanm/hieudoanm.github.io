@@ -8,5 +8,10 @@
 
 ## Tech Stack
 
-1. [Docusaurus](https://docusaurus.io/)
-2. [Starlight](https://starlight.astro.build/)
+1. [Docusaurus][docusaurus]
+2. [Obsidian][obsidian]
+3. [Starlight][starlight]
+
+[docusaurus]: https://docusaurus.io/
+[obsidian]: https://obsidian.md/
+[starlight]: https://starlight.astro.build/

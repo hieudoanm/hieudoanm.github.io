@@ -1,8 +1,8 @@
-# Key/Value
+# KeVIN (Key/Value In-Memory Database)
 
 ## Table of Contents
 
-- [Key/Value](#keyvalue)
+- [KeVIN (Key/Value In-Memory Database)](#kevin-keyvalue-in-memory-database)
   - [Table of Contents](#table-of-contents)
   - [Languages](#languages)
   - [API](#api)
