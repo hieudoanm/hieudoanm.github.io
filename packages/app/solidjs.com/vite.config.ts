@@ -1,7 +1,7 @@
-import { defineConfig } from 'vite';
 import { solidStart } from '@solidjs/start/config';
 import tailwindcss from '@tailwindcss/vite';
 import path from 'path';
+import { defineConfig } from 'vite';
 
 export default defineConfig({
   plugins: [solidStart(), tailwindcss()],
@@ -46,7 +46,6 @@ export default defineConfig({
         find: /^@hieudoanm\.github\.io\/(.*)$/,
         replacement: path.resolve(__dirname, './src/$1'),
       },
-      { find: '@hieudoanm/', replacement: path.resolve(__dirname, './src') },
     ],
   },
   ssr: {
