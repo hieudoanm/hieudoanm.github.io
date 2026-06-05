@@ -92,6 +92,14 @@ const BrailleModal = dynamic(
   { ssr: false }
 );
 
+const LeetSpeakModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/converters/LeetSpeakModal').then(
+      (mod) => mod.LeetSpeakModal
+    ),
+  { ssr: false }
+);
+
 const BreakingBadModal = dynamic(
   () =>
     import('@hieudoanm.github.io/components/pages/start/modals/images/BreakingBadModal').then(
@@ -581,6 +589,7 @@ type ModalId =
   | 'json-schema'
   | 'kaprekar'
   | 'legislation'
+  | 'leetspeak'
   | 'logmar'
   | 'manifest'
   | 'markdown'
@@ -660,6 +669,7 @@ const MODAL_MAP: Record<
   manifest: ManifestModal,
   markdown: MarkdownModal,
   morse: MorseModal,
+  leetspeak: LeetSpeakModal,
   'no-sleep': NoSleepModal,
   openapi: OpenAPI2Postman,
   palindrome: PalindromeModal,
@@ -897,6 +907,13 @@ const makeTools = (
       emoji: '🔣',
       color: '#f59e0b',
       onClick: open('morse'),
+    },
+    {
+      label: 'Leet Speak',
+      description: 'From Text',
+      emoji: '🔐',
+      color: '#10b981',
+      onClick: open('leetspeak'),
     },
     {
       label: 'OpenAPI',
