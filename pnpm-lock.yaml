@@ -1358,6 +1358,8 @@ importers:
         specifier: 8.60.1
         version: 8.60.1(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3)
 
+  packages/modules/chess/rust/pkg: {}
+
   packages/modules/chess/ts:
     dependencies:
       react:
