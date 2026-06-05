@@ -14,7 +14,7 @@
             <guid>https://hieudoanm.github.io/blog/prompt-framework</guid>
             <pubDate>Tue, 13 Jan 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[📚 Table of Contents]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_EDND" id="-table-of-contents">📚 Table of Contents<a href="https://hieudoanm.github.io/blog/prompt-framework#-table-of-contents" class="hash-link" aria-label="Direct link to 📚 Table of Contents" title="Direct link to 📚 Table of Contents" translate="no">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_tJA3" id="-table-of-contents">📚 Table of Contents<a href="https://hieudoanm.github.io/blog/prompt-framework#-table-of-contents" class="hash-link" aria-label="Direct link to 📚 Table of Contents" title="Direct link to 📚 Table of Contents" translate="no">​</a></h2>
 <ul>
 <li class=""><a href="https://hieudoanm.github.io/blog/prompt-framework#-table-of-contents" class="">📚 Table of Contents</a></li>
 <li class=""><a href="https://hieudoanm.github.io/blog/prompt-framework#-introduction" class="">🧠✨ Introduction</a></li>
@@ -43,7 +43,7 @@
 </li>
 <li class=""><a href="https://hieudoanm.github.io/blog/prompt-framework#final-thoughts-" class="">Final Thoughts 🚀</a></li>
 </ul>
-<h2 class="anchor anchorTargetStickyNavbar_EDND" id="-introduction">🧠✨ Introduction<a href="https://hieudoanm.github.io/blog/prompt-framework#-introduction" class="hash-link" aria-label="Direct link to 🧠✨ Introduction" title="Direct link to 🧠✨ Introduction" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_tJA3" id="-introduction">🧠✨ Introduction<a href="https://hieudoanm.github.io/blog/prompt-framework#-introduction" class="hash-link" aria-label="Direct link to 🧠✨ Introduction" title="Direct link to 🧠✨ Introduction" translate="no">​</a></h2>
 <p>🧠 Prompting is quickly becoming a <strong>core skill</strong> for developers, designers, and knowledge workers.</p>
 <p>⏳ A good prompt can save hours of work, while a vague one can lead to confusing or unusable results.</p>
 <p>🧩 Think of prompts as <strong>interfaces for thinking</strong> — the clearer your interface, the better the output.</p>
@@ -55,9 +55,9 @@
 </ul>
 <hr>
 <p>truncate</p>
-<h2 class="anchor anchorTargetStickyNavbar_EDND" id="-5w1h">🧩 5W1H<a href="https://hieudoanm.github.io/blog/prompt-framework#-5w1h" class="hash-link" aria-label="Direct link to 🧩 5W1H" title="Direct link to 🧩 5W1H" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_tJA3" id="-5w1h">🧩 5W1H<a href="https://hieudoanm.github.io/blog/prompt-framework#-5w1h" class="hash-link" aria-label="Direct link to 🧩 5W1H" title="Direct link to 🧩 5W1H" translate="no">​</a></h2>
 <p>🧠 One of the easiest ways to structure a strong prompt is by borrowing the classic <strong>5W1H framework</strong>.</p>
-<h3 class="anchor anchorTargetStickyNavbar_EDND" id="-who">👤 <strong>Who</strong><a href="https://hieudoanm.github.io/blog/prompt-framework#-who" class="hash-link" aria-label="Direct link to -who" title="Direct link to -who" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_tJA3" id="-who">👤 <strong>Who</strong><a href="https://hieudoanm.github.io/blog/prompt-framework#-who" class="hash-link" aria-label="Direct link to -who" title="Direct link to -who" translate="no">​</a></h3>
 <p>👤 Who is the AI supposed to be?</p>
 <ul>
 <li class="">A senior engineer</li>
@@ -68,7 +68,7 @@
 <p><em>“Act as a senior backend engineer…”</em></p>
 </blockquote>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_EDND" id="-what">📌 <strong>What</strong><a href="https://hieudoanm.github.io/blog/prompt-framework#-what" class="hash-link" aria-label="Direct link to -what" title="Direct link to -what" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_tJA3" id="-what">📌 <strong>What</strong><a href="https://hieudoanm.github.io/blog/prompt-framework#-what" class="hash-link" aria-label="Direct link to -what" title="Direct link to -what" translate="no">​</a></h3>
 <p>📌 What exactly do you want?</p>
 <ul>
 <li class="">Generate code</li>
@@ -79,7 +79,7 @@
 <p><em>“Explain how Kafka consumer groups work…”</em></p>
 </blockquote>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_EDND" id="-why">🎯 <strong>Why</strong><a href="https://hieudoanm.github.io/blog/prompt-framework#-why" class="hash-link" aria-label="Direct link to -why" title="Direct link to -why" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_tJA3" id="-why">🎯 <strong>Why</strong><a href="https://hieudoanm.github.io/blog/prompt-framework#-why" class="hash-link" aria-label="Direct link to -why" title="Direct link to -why" translate="no">​</a></h3>
 <p>🎯 Why are you asking?</p>
 <ul>
 <li class="">Learning</li>
@@ -91,7 +91,7 @@
 <p><em>“…so I can explain it to junior developers.”</em></p>
 </blockquote>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_EDND" id="️-when-optional">⏱️ <strong>When</strong> <em>(optional)</em><a href="https://hieudoanm.github.io/blog/prompt-framework#%EF%B8%8F-when-optional" class="hash-link" aria-label="Direct link to ️-when-optional" title="Direct link to ️-when-optional" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_tJA3" id="️-when-optional">⏱️ <strong>When</strong> <em>(optional)</em><a href="https://hieudoanm.github.io/blog/prompt-framework#%EF%B8%8F-when-optional" class="hash-link" aria-label="Direct link to ️-when-optional" title="Direct link to ️-when-optional" translate="no">​</a></h3>
 <p>⏱️ When are time or context constraints relevant?</p>
 <ul>
 <li class="">Current trends</li>
@@ -102,7 +102,7 @@
 <p><em>“Using Kafka 3.x…”</em></p>
 </blockquote>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_EDND" id="-where-optional">🌍 <strong>Where</strong> <em>(optional)</em><a href="https://hieudoanm.github.io/blog/prompt-framework#-where-optional" class="hash-link" aria-label="Direct link to -where-optional" title="Direct link to -where-optional" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_tJA3" id="-where-optional">🌍 <strong>Where</strong> <em>(optional)</em><a href="https://hieudoanm.github.io/blog/prompt-framework#-where-optional" class="hash-link" aria-label="Direct link to -where-optional" title="Direct link to -where-optional" translate="no">​</a></h3>
 <p>🌍 Where will this be used?</p>
 <ul>
 <li class="">Web</li>
@@ -114,7 +114,7 @@
 <p><em>“…in a Spring Boot application.”</em></p>
 </blockquote>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_EDND" id="️-how">⚙️ <strong>How</strong><a href="https://hieudoanm.github.io/blog/prompt-framework#%EF%B8%8F-how" class="hash-link" aria-label="Direct link to ️-how" title="Direct link to ️-how" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_tJA3" id="️-how">⚙️ <strong>How</strong><a href="https://hieudoanm.github.io/blog/prompt-framework#%EF%B8%8F-how" class="hash-link" aria-label="Direct link to ️-how" title="Direct link to ️-how" translate="no">​</a></h3>
 <p>⚙️ How should the output look?</p>
 <ul>
 <li class="">Bullet points</li>
@@ -125,8 +125,8 @@
 <p><em>“Use simple examples and diagrams in text.”</em></p>
 </blockquote>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_EDND" id="-good-prompt-vs--bad-prompt">✅ Good Prompt vs ❌ Bad Prompt<a href="https://hieudoanm.github.io/blog/prompt-framework#-good-prompt-vs--bad-prompt" class="hash-link" aria-label="Direct link to ✅ Good Prompt vs ❌ Bad Prompt" title="Direct link to ✅ Good Prompt vs ❌ Bad Prompt" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_EDND" id="-bad-prompt">❌ Bad Prompt<a href="https://hieudoanm.github.io/blog/prompt-framework#-bad-prompt" class="hash-link" aria-label="Direct link to ❌ Bad Prompt" title="Direct link to ❌ Bad Prompt" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_tJA3" id="-good-prompt-vs--bad-prompt">✅ Good Prompt vs ❌ Bad Prompt<a href="https://hieudoanm.github.io/blog/prompt-framework#-good-prompt-vs--bad-prompt" class="hash-link" aria-label="Direct link to ✅ Good Prompt vs ❌ Bad Prompt" title="Direct link to ✅ Good Prompt vs ❌ Bad Prompt" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_tJA3" id="-bad-prompt">❌ Bad Prompt<a href="https://hieudoanm.github.io/blog/prompt-framework#-bad-prompt" class="hash-link" aria-label="Direct link to ❌ Bad Prompt" title="Direct link to ❌ Bad Prompt" translate="no">​</a></h3>
 <blockquote>
 <p>“Explain Kafka”</p>
 </blockquote>
@@ -140,7 +140,7 @@
 </ul>
 <p>🤔 The AI must <strong>guess everything</strong>, which often leads to generic or unfocused answers.</p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_EDND" id="-good-prompt">✅ Good Prompt<a href="https://hieudoanm.github.io/blog/prompt-framework#-good-prompt" class="hash-link" aria-label="Direct link to ✅ Good Prompt" title="Direct link to ✅ Good Prompt" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_tJA3" id="-good-prompt">✅ Good Prompt<a href="https://hieudoanm.github.io/blog/prompt-framework#-good-prompt" class="hash-link" aria-label="Direct link to ✅ Good Prompt" title="Direct link to ✅ Good Prompt" translate="no">​</a></h3>
 <blockquote>
 <p>“Act as a senior backend engineer.<br>
 <!-- -->Explain Kafka consumer groups in simple terms for junior developers, using Kafka 3.x and a Spring Boot context.<br>
@@ -156,13 +156,13 @@
 </ul>
 <p>🧠 Examples act as <strong>anchors</strong> — they show the AI <em>what “good” looks like</em>, not just what to do.</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_EDND" id="-combination">🔗 Combination<a href="https://hieudoanm.github.io/blog/prompt-framework#-combination" class="hash-link" aria-label="Direct link to 🔗 Combination" title="Direct link to 🔗 Combination" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_tJA3" id="-combination">🔗 Combination<a href="https://hieudoanm.github.io/blog/prompt-framework#-combination" class="hash-link" aria-label="Direct link to 🔗 Combination" title="Direct link to 🔗 Combination" translate="no">​</a></h2>
 <p>🔗 The real power comes from <strong>combining frameworks</strong>.</p>
-<h3 class="anchor anchorTargetStickyNavbar_EDND" id="-prompt-formula">🧠 Prompt Formula<a href="https://hieudoanm.github.io/blog/prompt-framework#-prompt-formula" class="hash-link" aria-label="Direct link to 🧠 Prompt Formula" title="Direct link to 🧠 Prompt Formula" translate="no">​</a></h3>
-<div class="language-text codeBlockContainer_QoGo theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_e3qU"><pre tabindex="0" class="prism-code language-text codeBlock_srji thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_BuQz"><div class="token-line" style="color:#F8F8F2"><span class="token plain">Role + Task + Context + Constraints + Output Format + (Optional) Example</span><br></div></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_tJA3" id="-prompt-formula">🧠 Prompt Formula<a href="https://hieudoanm.github.io/blog/prompt-framework#-prompt-formula" class="hash-link" aria-label="Direct link to 🧠 Prompt Formula" title="Direct link to 🧠 Prompt Formula" translate="no">​</a></h3>
+<div class="language-text codeBlockContainer_vVqe theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_gl11"><pre tabindex="0" class="prism-code language-text codeBlock_GXzV thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_DOVX"><div class="token-line" style="color:#F8F8F2"><span class="token plain">Role + Task + Context + Constraints + Output Format + (Optional) Example</span><br></div></code></pre></div></div>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_EDND" id="-reusable-prompt-template">🔁 Reusable Prompt Template<a href="https://hieudoanm.github.io/blog/prompt-framework#-reusable-prompt-template" class="hash-link" aria-label="Direct link to 🔁 Reusable Prompt Template" title="Direct link to 🔁 Reusable Prompt Template" translate="no">​</a></h3>
-<div class="language-text codeBlockContainer_QoGo theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_e3qU"><pre tabindex="0" class="prism-code language-text codeBlock_srji thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_BuQz"><div class="token-line" style="color:#F8F8F2"><span class="token plain">Act as [ROLE].</span><br></div><div class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#F8F8F2"><span class="token plain">Your task is to [WHAT].</span><br></div><div class="token-line" style="color:#F8F8F2"><span class="token plain">This is for [WHY].</span><br></div><div class="token-line" style="color:#F8F8F2"><span class="token plain">Context: [WHERE / WHEN].</span><br></div><div class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#F8F8F2"><span class="token plain">Output requirements:</span><br></div><div class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#F8F8F2"><span class="token plain">- Format: [FORMAT]</span><br></div><div class="token-line" style="color:#F8F8F2"><span class="token plain">- Style: [STYLE]</span><br></div><div class="token-line" style="color:#F8F8F2"><span class="token plain">- Length: [LENGTH]</span><br></div><div class="token-line" style="color:#F8F8F2"><span class="token plain">- Example (optional): [REFERENCE OR SAMPLE]</span><br></div></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_tJA3" id="-reusable-prompt-template">🔁 Reusable Prompt Template<a href="https://hieudoanm.github.io/blog/prompt-framework#-reusable-prompt-template" class="hash-link" aria-label="Direct link to 🔁 Reusable Prompt Template" title="Direct link to 🔁 Reusable Prompt Template" translate="no">​</a></h3>
+<div class="language-text codeBlockContainer_vVqe theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_gl11"><pre tabindex="0" class="prism-code language-text codeBlock_GXzV thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_DOVX"><div class="token-line" style="color:#F8F8F2"><span class="token plain">Act as [ROLE].</span><br></div><div class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#F8F8F2"><span class="token plain">Your task is to [WHAT].</span><br></div><div class="token-line" style="color:#F8F8F2"><span class="token plain">This is for [WHY].</span><br></div><div class="token-line" style="color:#F8F8F2"><span class="token plain">Context: [WHERE / WHEN].</span><br></div><div class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#F8F8F2"><span class="token plain">Output requirements:</span><br></div><div class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#F8F8F2"><span class="token plain">- Format: [FORMAT]</span><br></div><div class="token-line" style="color:#F8F8F2"><span class="token plain">- Style: [STYLE]</span><br></div><div class="token-line" style="color:#F8F8F2"><span class="token plain">- Length: [LENGTH]</span><br></div><div class="token-line" style="color:#F8F8F2"><span class="token plain">- Example (optional): [REFERENCE OR SAMPLE]</span><br></div></code></pre></div></div>
 <p>🔁 You can store these templates and reuse them across:</p>
 <ul>
 <li class="">ChatGPT</li>
@@ -171,7 +171,7 @@
 <li class="">Internal AI tools</li>
 </ul>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_EDND" id="4️⃣-why-this-works">4️⃣ Why This Works<a href="https://hieudoanm.github.io/blog/prompt-framework#4%EF%B8%8F%E2%83%A3-why-this-works" class="hash-link" aria-label="Direct link to 4️⃣ Why This Works" title="Direct link to 4️⃣ Why This Works" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_tJA3" id="4️⃣-why-this-works">4️⃣ Why This Works<a href="https://hieudoanm.github.io/blog/prompt-framework#4%EF%B8%8F%E2%83%A3-why-this-works" class="hash-link" aria-label="Direct link to 4️⃣ Why This Works" title="Direct link to 4️⃣ Why This Works" translate="no">​</a></h3>
 <p>🧠 This framework works because it <strong>separates structure from intent</strong>.</p>
 <ul>
 <li class="">
@@ -205,7 +205,7 @@
 <p>✨ <strong>Template sets clarity. User sets purpose. Examples set direction.</strong></p>
 </blockquote>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_EDND" id="final-thoughts-">Final Thoughts 🚀<a href="https://hieudoanm.github.io/blog/prompt-framework#final-thoughts-" class="hash-link" aria-label="Direct link to Final Thoughts 🚀" title="Direct link to Final Thoughts 🚀" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_tJA3" id="final-thoughts-">Final Thoughts 🚀<a href="https://hieudoanm.github.io/blog/prompt-framework#final-thoughts-" class="hash-link" aria-label="Direct link to Final Thoughts 🚀" title="Direct link to Final Thoughts 🚀" translate="no">​</a></h2>
 <p>🧠 Prompting is not about “talking nicely to AI”.<br>
 <!-- -->🎯 It’s about <strong>thinking clearly and expressing intent</strong>.</p>
 <p>✅ A good prompt:</p>
