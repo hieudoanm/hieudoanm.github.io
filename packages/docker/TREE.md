@@ -1,119 +1,129 @@
 # TREE
 
-```bash
+```text
 ├── compose/
 │   ├── aws/
 │   │   ├── localstack/
-│   │   │   ├── Makefile
-│   │   │   └── docker-compose.yaml
-│   │   └── README.md
+│   │   │   ├── [Makefile](./compose/aws/localstack/Makefile)
+│   │   │   └── [docker-compose.yaml](./compose/aws/localstack/docker-compose.yaml)
+│   │   └── [README.md](./compose/aws/README.md)
 │   ├── databases/
 │   │   ├── cache/
 │   │   │   ├── memcached/
-│   │   │   │   └── docker-compose.yaml
+│   │   │   │   └── [docker-compose.yaml](./compose/databases/cache/memcached/docker-compose.yaml)
 │   │   │   └── redis/
-│   │   │       └── docker-compose.yaml
+│   │   │       └── [docker-compose.yaml](./compose/databases/cache/redis/docker-compose.yaml)
+│   │   ├── columns/
+│   │   │   ├── apache-cassandra/
+│   │   │   │   └── [docker-compose.yaml](./compose/databases/columns/apache-cassandra/docker-compose.yaml)
+│   │   │   └── apache-hbase/
+│   │   │       └── [docker-compose.yaml](./compose/databases/columns/apache-hbase/docker-compose.yaml)
 │   │   ├── documental/
 │   │   │   ├── couchbase/
-│   │   │   │   └── docker-compose.yaml
+│   │   │   │   └── [docker-compose.yaml](./compose/databases/documental/couchbase/docker-compose.yaml)
 │   │   │   ├── couchdb/
-│   │   │   │   └── docker-compose.yaml
+│   │   │   │   └── [docker-compose.yaml](./compose/databases/documental/couchdb/docker-compose.yaml)
 │   │   │   └── mongodb/
-│   │   │       └── docker-compose.yaml
-│   │   ├── sql/
+│   │   │       └── [docker-compose.yaml](./compose/databases/documental/mongodb/docker-compose.yaml)
+│   │   ├── relational/
 │   │   │   ├── cockroachdb/
-│   │   │   │   └── docker-compose.yaml
+│   │   │   │   └── [docker-compose.yaml](./compose/databases/relational/cockroachdb/docker-compose.yaml)
 │   │   │   ├── mariadb/
-│   │   │   │   └── docker-compose.yaml
+│   │   │   │   └── [docker-compose.yaml](./compose/databases/relational/mariadb/docker-compose.yaml)
 │   │   │   ├── mysql/
-│   │   │   │   └── docker-compose.yaml
+│   │   │   │   └── [docker-compose.yaml](./compose/databases/relational/mysql/docker-compose.yaml)
 │   │   │   ├── postgresql/
-│   │   │   │   └── docker-compose.yaml
+│   │   │   │   └── [docker-compose.yaml](./compose/databases/relational/postgresql/docker-compose.yaml)
 │   │   │   └── sqlite/
-│   │   │       └── docker-compose.yaml
-│   │   └── README.md
+│   │   │       └── [docker-compose.yaml](./compose/databases/relational/sqlite/docker-compose.yaml)
+│   │   ├── search/
+│   │   │   ├── elasticsearch/
+│   │   │   │   └── [docker-compose.yaml](./compose/databases/search/elasticsearch/docker-compose.yaml)
+│   │   │   └── opensearch/
+│   │   │       └── [docker-compose.yaml](./compose/databases/search/opensearch/docker-compose.yaml)
+│   │   └── [README.md](./compose/databases/README.md)
 │   ├── messages/
 │   │   ├── activemq/
-│   │   │   └── docker-compose.yaml
+│   │   │   └── [docker-compose.yaml](./compose/messages/activemq/docker-compose.yaml)
 │   │   ├── aws-sqs/
-│   │   │   └── docker-compose.yaml
+│   │   │   └── [docker-compose.yaml](./compose/messages/aws-sqs/docker-compose.yaml)
 │   │   ├── kafka/
-│   │   │   └── docker-compose.yaml
+│   │   │   └── [docker-compose.yaml](./compose/messages/kafka/docker-compose.yaml)
 │   │   ├── nats/
-│   │   │   └── docker-compose.yaml
+│   │   │   └── [docker-compose.yaml](./compose/messages/nats/docker-compose.yaml)
 │   │   ├── rabbitmq/
-│   │   │   └── docker-compose.yaml
-│   │   └── README.md
+│   │   │   └── [docker-compose.yaml](./compose/messages/rabbitmq/docker-compose.yaml)
+│   │   └── [README.md](./compose/messages/README.md)
 │   └── secrets/
 │       └── vault/
-│           └── docker-compose.yaml
+│           └── [docker-compose.yaml](./compose/secrets/vault/docker-compose.yaml)
 ├── file/
-│   ├── go/
-│   │   ├── backend/
-│   │   │   └── gin/
-│   │   │       └── Dockerfile
-│   │   └── Dockerfile
-│   ├── java/
-│   │   ├── backend/
-│   │   │   └── spring/
-│   │   │       └── Dockerfile
-│   │   └── Dockerfile
-│   ├── javascript/
-│   │   ├── frontend/
-│   │   │   ├── client/
-│   │   │   │   ├── angular/
-│   │   │   │   │   └── Dockerfile
-│   │   │   │   ├── react.js/
-│   │   │   │   │   └── Dockerfile
-│   │   │   │   ├── solid.js/
-│   │   │   │   │   └── Dockerfile
-│   │   │   │   ├── svelte.js/
-│   │   │   │   │   └── Dockerfile
-│   │   │   │   └── vue.js/
-│   │   │   │       └── Dockerfile
-│   │   │   ├── meta/
-│   │   │   │   ├── angular.ssr/
-│   │   │   │   │   └── Dockerfile
-│   │   │   │   ├── next.js/
-│   │   │   │   │   └── Dockerfile
-│   │   │   │   ├── nuxt.js/
-│   │   │   │   │   └── Dockerfile
-│   │   │   │   ├── solid.start/
-│   │   │   │   │   └── Dockerfile
-│   │   │   │   └── svelte.kit/
-│   │   │   │       └── Dockerfile
-│   │   │   └── test-dir/
-│   │   └── runtimes/
-│   │       ├── bun/
-│   │       │   └── Dockerfile
-│   │       ├── deno/
-│   │       │   └── Dockerfile
-│   │       └── node/
-│   │           └── Dockerfile
-│   ├── python/
-│   │   ├── backend/
-│   │   │   ├── django/
-│   │   │   │   └── Dockerfile
-│   │   │   ├── fastapi/
-│   │   │   │   └── Dockerfile
-│   │   │   └── flask/
-│   │   │       └── Dockerfile
-│   │   └── Dockerfile
-│   ├── rust/
-│   │   └── Dockerfile
+│   ├── languages/
+│   │   ├── go/
+│   │   │   ├── backend/
+│   │   │   │   └── gin/
+│   │   │   │       └── [Dockerfile](./file/languages/go/backend/gin/Dockerfile)
+│   │   │   └── [Dockerfile](./file/languages/go/Dockerfile)
+│   │   ├── java/
+│   │   │   ├── backend/
+│   │   │   │   └── spring/
+│   │   │   │       └── [Dockerfile](./file/languages/java/backend/spring/Dockerfile)
+│   │   │   └── [Dockerfile](./file/languages/java/Dockerfile)
+│   │   ├── javascript/
+│   │   │   ├── frontend/
+│   │   │   │   ├── client/
+│   │   │   │   │   ├── angular/
+│   │   │   │   │   │   └── [Dockerfile](./file/languages/javascript/frontend/client/angular/Dockerfile)
+│   │   │   │   │   ├── react.js/
+│   │   │   │   │   │   └── [Dockerfile](./file/languages/javascript/frontend/client/react.js/Dockerfile)
+│   │   │   │   │   ├── solid.js/
+│   │   │   │   │   │   └── [Dockerfile](./file/languages/javascript/frontend/client/solid.js/Dockerfile)
+│   │   │   │   │   ├── svelte.js/
+│   │   │   │   │   │   └── [Dockerfile](./file/languages/javascript/frontend/client/svelte.js/Dockerfile)
+│   │   │   │   │   └── vue.js/
+│   │   │   │   │       └── [Dockerfile](./file/languages/javascript/frontend/client/vue.js/Dockerfile)
+│   │   │   │   └── meta/
+│   │   │   │       ├── angular.ssr/
+│   │   │   │       │   └── [Dockerfile](./file/languages/javascript/frontend/meta/angular.ssr/Dockerfile)
+│   │   │   │       ├── next.js/
+│   │   │   │       │   └── [Dockerfile](./file/languages/javascript/frontend/meta/next.js/Dockerfile)
+│   │   │   │       ├── nuxt.js/
+│   │   │   │       │   └── [Dockerfile](./file/languages/javascript/frontend/meta/nuxt.js/Dockerfile)
+│   │   │   │       ├── solid.start/
+│   │   │   │       │   └── [Dockerfile](./file/languages/javascript/frontend/meta/solid.start/Dockerfile)
+│   │   │   │       └── svelte.kit/
+│   │   │   │           └── [Dockerfile](./file/languages/javascript/frontend/meta/svelte.kit/Dockerfile)
+│   │   │   └── runtimes/
+│   │   │       ├── bun/
+│   │   │       │   └── [Dockerfile](./file/languages/javascript/runtimes/bun/Dockerfile)
+│   │   │       ├── deno/
+│   │   │       │   └── [Dockerfile](./file/languages/javascript/runtimes/deno/Dockerfile)
+│   │   │       └── node/
+│   │   │           └── [Dockerfile](./file/languages/javascript/runtimes/node/Dockerfile)
+│   │   ├── python/
+│   │   │   ├── backend/
+│   │   │   │   ├── django/
+│   │   │   │   │   └── [Dockerfile](./file/languages/python/backend/django/Dockerfile)
+│   │   │   │   ├── fastapi/
+│   │   │   │   │   └── [Dockerfile](./file/languages/python/backend/fastapi/Dockerfile)
+│   │   │   │   └── flask/
+│   │   │   │       └── [Dockerfile](./file/languages/python/backend/flask/Dockerfile)
+│   │   │   └── [Dockerfile](./file/languages/python/Dockerfile)
+│   │   └── rust/
+│   │       └── [Dockerfile](./file/languages/rust/Dockerfile)
 │   └── server/
 │       ├── apache-http-server/
-│       │   ├── Dockerfile
-│       │   └── httpd.conf
+│       │   ├── [Dockerfile](./file/server/apache-http-server/Dockerfile)
+│       │   └── [httpd.conf](./file/server/apache-http-server/httpd.conf)
 │       ├── haproxy/
-│       │   ├── Dockerfile
-│       │   └── haproxy.cfg
+│       │   ├── [Dockerfile](./file/server/haproxy/Dockerfile)
+│       │   └── [haproxy.cfg](./file/server/haproxy/haproxy.cfg)
 │       ├── nginx/
-│       │   ├── Dockerfile
-│       │   └── nginx.conf
+│       │   ├── [Dockerfile](./file/server/nginx/Dockerfile)
+│       │   └── [nginx.conf](./file/server/nginx/nginx.conf)
 │       └── pocket-base/
-│           └── Dockerfile
-└── TREE.md
+│           └── [Dockerfile](./file/server/pocket-base/Dockerfile)
+└── [TREE.md](./TREE.md)
 ```
 
-62 directories, 51 files
+68 directories, 55 files

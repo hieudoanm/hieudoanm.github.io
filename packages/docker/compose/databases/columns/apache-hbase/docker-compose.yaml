@@ -1,0 +1,16 @@
+services:
+  hbase:
+    image: apache/hbase:2.6.1
+    container_name: hbase
+    restart: always
+    environment:
+      - HBASE_MANAGES_ZK=true
+    ports:
+      - "16010:16010"
+      - "16000:16000"
+      - "2181:2181"
+    volumes:
+      - hbase_data:/hbase-data
+
+volumes:
+  hbase_data:
