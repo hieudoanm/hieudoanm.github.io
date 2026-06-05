@@ -490,6 +490,166 @@ func ToTS(data interface{}, rootName string, indentSize int) string {
 }
 
 // ---------------------------------------------------------------------------
+// JSON Schema
+// ---------------------------------------------------------------------------
+
+func ToSchema(data interface{}, rootName string, indentSize int) string {
+	var buildType func(interface{}) map[string]interface{}
+	var buildObjectSchema func(map[string]interface{}) map[string]interface{}
+	var mergeSchemas func([]map[string]interface{}) map[string]interface{}
+
+	buildType = func(value interface{}) map[string]interface{} {
+		if value == nil {
+			return map[string]interface{}{"type": "null"}
+		}
+		switch val := value.(type) {
+		case bool:
+			return map[string]interface{}{"type": "boolean"}
+		case float64:
+			if val == float64(int64(val)) {
+				return map[string]interface{}{"type": "integer"}
+			}
+			return map[string]interface{}{"type": "number"}
+		case string:
+			return map[string]interface{}{"type": "string"}
+		case []interface{}:
+			if len(val) == 0 {
+				return map[string]interface{}{"type": "array", "items": map[string]interface{}{}}
+			}
+			itemSchemas := make([]map[string]interface{}, len(val))
+			for i, v := range val {
+				itemSchemas[i] = buildType(v)
+			}
+			merged := mergeSchemas(itemSchemas)
+			return map[string]interface{}{"type": "array", "items": merged}
+		case map[string]interface{}:
+			return buildObjectSchema(val)
+		}
+		return map[string]interface{}{}
+	}
+
+	buildObjectSchema = func(obj map[string]interface{}) map[string]interface{} {
+		required := []string{}
+		properties := make(map[string]interface{})
+
+		keys := orderedKeys(obj)
+		for _, key := range keys {
+			val := obj[key]
+			if val != nil {
+				required = append(required, key)
+			}
+			if val == nil {
+				properties[key] = map[string]interface{}{"type": "null"}
+			} else {
+				properties[key] = buildType(val)
+			}
+		}
+
+		schema := map[string]interface{}{
+			"type":       "object",
+			"properties": properties,
+		}
+		if len(required) > 0 {
+			schema["required"] = required
+		}
+		return schema
+	}
+
+	mergeSchemas = func(schemas []map[string]interface{}) map[string]interface{} {
+		if len(schemas) == 1 {
+			return schemas[0]
+		}
+
+		typeSet := make(map[string]bool)
+		for _, s := range schemas {
+			if t, ok := s["type"].(string); ok {
+				typeSet[t] = true
+			}
+		}
+		types := make([]string, 0, len(typeSet))
+		for t := range typeSet {
+			types = append(types, t)
+		}
+		sort.Strings(types)
+
+		if len(types) == 1 {
+			t := types[0]
+			if t == "object" {
+				allKeys := make(map[string]bool)
+				for _, s := range schemas {
+					if props, ok := s["properties"].(map[string]interface{}); ok {
+						for k := range props {
+							allKeys[k] = true
+						}
+					}
+				}
+				keyList := make([]string, 0, len(allKeys))
+				for k := range allKeys {
+					keyList = append(keyList, k)
+				}
+				sort.Strings(keyList)
+
+				mergedProps := make(map[string]interface{})
+				mergedRequired := []string{}
+
+				for _, key := range keyList {
+					keySchemas := []map[string]interface{}{}
+					for _, s := range schemas {
+						if props, ok := s["properties"].(map[string]interface{}); ok {
+							if ks, ok := props[key]; ok {
+								if ksm, ok := ks.(map[string]interface{}); ok {
+									keySchemas = append(keySchemas, ksm)
+								}
+							}
+						}
+					}
+					if len(keySchemas) == len(schemas) {
+						mergedRequired = append(mergedRequired, key)
+					}
+					if len(keySchemas) > 0 {
+						mergedProps[key] = mergeSchemas(keySchemas)
+					} else {
+						mergedProps[key] = map[string]interface{}{}
+					}
+				}
+
+				merged := map[string]interface{}{
+					"type":       "object",
+					"properties": mergedProps,
+				}
+				if len(mergedRequired) > 0 {
+					merged["required"] = mergedRequired
+				}
+				return merged
+			}
+			return map[string]interface{}{"type": t}
+		}
+
+		oneOf := make([]map[string]interface{}, len(types))
+		for i, t := range types {
+			oneOf[i] = map[string]interface{}{"type": t}
+		}
+		return map[string]interface{}{"oneOf": oneOf}
+	}
+
+	root := buildType(data)
+	result := map[string]interface{}{
+		"$schema": "http://json-schema.org/draft-07/schema#",
+		"$id":     rootName,
+		"title":   rootName,
+	}
+	for k, v := range root {
+		result[k] = v
+	}
+
+	b, err := json.MarshalIndent(result, "", strings.Repeat(" ", indentSize))
+	if err != nil {
+		return ""
+	}
+	return string(b)
+}
+
+// ---------------------------------------------------------------------------
 // json() fluent API
 // ---------------------------------------------------------------------------
 
@@ -575,6 +735,8 @@ func (j JsonResult) Convert(format string) string {
 		return ToRust(j.data, "Root")
 	case "ts":
 		return ToTS(j.data, "Root", 2)
+	case "schema":
+		return ToSchema(j.data, "Root", 2)
 	case "xml":
 		return ToXml(j.data, true, 2, false, "")
 	default:

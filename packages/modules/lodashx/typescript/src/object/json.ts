@@ -1,5 +1,6 @@
 import { stringify as toYAML } from 'yaml';
 import { toPython } from './json-to-py';
+import { toSchema } from './json-to-schema';
 import { toTS } from './json-to-ts';
 import { toXml } from './json-to-xml';
 import { toRust } from './json-to-rs';
@@ -13,42 +14,6 @@ export const parseJson = <T = unknown>(text: string, defaultValue: T): T => {
     console.error('error', error);
     return defaultValue;
   }
-};
-
-type Options = { delimiter?: string; headers?: string[]; quote?: string };
-
-const defaultOptions = {
-  delimiter: ',',
-  headers: [],
-  quote: '"',
-};
-
-export const jsonToCsv = <
-  T extends Record<string, string | number | boolean | Date>,
->(
-  data: T[],
-  { delimiter = ',', headers = [], quote = '"' }: Options = defaultOptions
-): string => {
-  if (headers.length === 0) {
-    const keys: string[] = data.flatMap((item) => Object.keys(item));
-    const uniqueKeys: string[] = [...new Set(keys)];
-    headers = uniqueKeys;
-  }
-
-  const headerRow: string = headers
-    .map((header: string) => `${quote}${header}${quote}`)
-    .join(delimiter);
-  const rows: string = data
-    .map((item: Record<string, string | number | boolean | Date>) =>
-      headers
-        .map((key: string) => {
-          const value: string = (item[key] || '').toString();
-          return `${quote}${value}${quote}`;
-        })
-        .join(delimiter)
-    )
-    .join('\n');
-  return `${headerRow}\n${rows}`;
 };
 
 const jsonSort = (json: string) => {
@@ -85,6 +50,10 @@ const json2ts = (data: unknown): string => {
   return toTS(data);
 };
 
+const json2schema = (data: unknown): string => {
+  return toSchema(data);
+};
+
 const json2xml = (json: string) => {
   return toXml(parseJson(json, {}));
 };
@@ -106,7 +75,9 @@ export const json = <T extends Record<string, unknown>>(
         sort: () => jsonSort(JSON.stringify(data)),
       };
     },
-    convert: (format: 'java' | 'py' | 'rs' | 'ts' | 'xml' | 'yaml'): string => {
+    convert: (
+      format: 'java' | 'py' | 'rs' | 'ts' | 'xml' | 'yaml' | 'schema'
+    ): string => {
       try {
         if (format === 'java') return json2java(data);
         if (format === 'py') return json2py(data);
@@ -114,6 +85,7 @@ export const json = <T extends Record<string, unknown>>(
         if (format === 'ts') return json2ts(data);
         if (format === 'xml') return json2xml(JSON.stringify(data));
         if (format === 'yaml') return json2yaml(data);
+        if (format === 'schema') return json2schema(data);
         return 'Invalid Format';
       } catch (error) {
         console.error(error);

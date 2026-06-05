@@ -1,17 +1,17 @@
-import { jsonToCsv } from '../json';
+import { csv } from '..';
 
 type Row = { id: string; name: string; gender?: string };
 
-describe('jsonToCsv', () => {
+describe('csv', () => {
   it('should convert json to csv', () => {
-    const csv = `"id","name","gender"
+    const csvData: string = `"id","name","gender"
 "1","test1","male"
 "2","test2",""`;
     const json = [
       { id: '1', name: 'test1', gender: 'male' },
       { id: '2', name: 'test2' },
     ];
-    expect(jsonToCsv<Row>(json)).toEqual(csv);
+    expect(csv<Row>(json)).toEqual(csvData);
   });
 
   it('should convert json to csv with delimiter and headers', () => {
@@ -19,11 +19,11 @@ describe('jsonToCsv', () => {
       { id: '1', name: 'test1', gender: 'male' },
       { id: '2', name: 'test2' },
     ];
-    const csv = `"id";"name"
+    const csvData = `"id";"name"
 "1";"test1"
 "2";"test2"`;
-    expect(
-      jsonToCsv<Row>(json, { delimiter: ';', headers: ['id', 'name'] })
-    ).toEqual(csv);
+    expect(csv<Row>(json, { delimiter: ';', headers: ['id', 'name'] })).toEqual(
+      csvData
+    );
   });
 });

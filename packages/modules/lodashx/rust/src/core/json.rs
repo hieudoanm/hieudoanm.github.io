@@ -1,3 +1,5 @@
+use serde_json::json;
+use serde_json::map::Map;
 use serde_json::Value;
 
 pub fn parse_json<T: serde::de::DeserializeOwned>(text: &str, default: T) -> T {
@@ -403,6 +405,151 @@ pub fn to_xml(obj: &Value, indent: bool, indent_size: usize, declaration: bool, 
     xml_decl + &wrapped_body
 }
 
+pub fn to_schema(data: &Value, root_name: &str, indent_size: usize) -> String {
+    use serde_json::ser::PrettyFormatter;
+    use serde_json::Serializer;
+
+    fn build_type(value: &Value) -> Value {
+        match value {
+            Value::Null => json!({"type": "null"}),
+            Value::Bool(_) => json!({"type": "boolean"}),
+            Value::Number(n) => {
+                if n.as_f64().map_or(false, |f| f.fract() == 0.0) {
+                    json!({"type": "integer"})
+                } else {
+                    json!({"type": "number"})
+                }
+            }
+            Value::String(_) => json!({"type": "string"}),
+            Value::Array(arr) => {
+                if arr.is_empty() {
+                    return json!({"type": "array", "items": {}});
+                }
+                let item_schemas: Vec<Value> = arr.iter().map(|v| build_type(v)).collect();
+                let merged = merge_schemas(&item_schemas);
+                json!({"type": "array", "items": merged})
+            }
+            Value::Object(_) => build_object_schema(value),
+        }
+    }
+
+    fn build_object_schema(value: &Value) -> Value {
+        let obj = value.as_object().unwrap();
+        let mut required: Vec<String> = Vec::new();
+        let mut properties = Map::new();
+
+        for (key, val) in obj {
+            if !val.is_null() {
+                required.push(key.clone());
+            }
+            properties.insert(
+                key.clone(),
+                if val.is_null() {
+                    json!({"type": "null"})
+                } else {
+                    build_type(val)
+                },
+            );
+        }
+
+        let mut schema = Map::new();
+        schema.insert("type".to_string(), Value::String("object".to_string()));
+        schema.insert("properties".to_string(), Value::Object(properties));
+        if !required.is_empty() {
+            schema.insert(
+                "required".to_string(),
+                Value::Array(required.into_iter().map(Value::String).collect()),
+            );
+        }
+
+        Value::Object(schema)
+    }
+
+    fn merge_schemas(schemas: &[Value]) -> Value {
+        if schemas.len() == 1 {
+            return schemas[0].clone();
+        }
+
+        let types: std::collections::BTreeSet<&str> =
+            schemas.iter().filter_map(|s| s.get("type")?.as_str()).collect();
+
+        if types.len() == 1 {
+            let t = *types.iter().next().unwrap();
+            if t == "object" {
+                let all_keys: std::collections::BTreeSet<String> = schemas
+                    .iter()
+                    .filter_map(|s| s.get("properties"))
+                    .filter_map(|p| p.as_object())
+                    .flat_map(|m| m.keys().cloned())
+                    .collect();
+
+                let mut merged_properties = Map::new();
+                let mut merged_required: Vec<String> = Vec::new();
+
+                for key in &all_keys {
+                    let key_schemas: Vec<Value> = schemas
+                        .iter()
+                        .filter_map(|s| s.get("properties")?.as_object()?.get(key).cloned())
+                        .collect();
+
+                    if key_schemas.len() == schemas.len() {
+                        merged_required.push(key.clone());
+                    }
+
+                    merged_properties.insert(
+                        key.clone(),
+                        if key_schemas.is_empty() {
+                            Value::Object(Map::new())
+                        } else {
+                            merge_schemas(&key_schemas)
+                        },
+                    );
+                }
+
+                let mut merged = Map::new();
+                merged.insert("type".to_string(), Value::String("object".to_string()));
+                merged.insert("properties".to_string(), Value::Object(merged_properties));
+                if !merged_required.is_empty() {
+                    merged.insert(
+                        "required".to_string(),
+                        Value::Array(merged_required.into_iter().map(Value::String).collect()),
+                    );
+                }
+
+                return Value::Object(merged);
+            }
+
+            return json!({"type": t});
+        }
+
+        let one_of: Vec<Value> = types.iter().map(|t| json!({"type": t})).collect();
+        json!({"oneOf": one_of})
+    }
+
+    let root = build_type(data);
+    let mut root_obj = Map::new();
+    root_obj.insert(
+        "$schema".to_string(),
+        Value::String("http://json-schema.org/draft-07/schema#".to_string()),
+    );
+    root_obj.insert("$id".to_string(), Value::String(root_name.to_string()));
+    root_obj.insert("title".to_string(), Value::String(root_name.to_string()));
+
+    if let Value::Object(map) = root {
+        for (k, v) in map {
+            root_obj.insert(k, v);
+        }
+    }
+
+    let value = Value::Object(root_obj);
+    let indent = " ".repeat(indent_size);
+    let mut buf = Vec::new();
+    let formatter = PrettyFormatter::with_indent(indent.as_bytes());
+    let mut ser = Serializer::with_formatter(&mut buf, formatter);
+    serde::Serialize::serialize(&value, &mut ser).ok();
+    String::from_utf8(buf).unwrap_or_default()
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -440,5 +587,87 @@ mod tests {
         let ts = to_ts(&obj, "Test", 2);
         assert!(ts.contains("name: string"));
         assert!(ts.contains("count: number"));
+    }
+
+    #[test]
+    fn test_to_schema_string() {
+        let s = to_schema(&json!("hello"), "Root", 2);
+        assert!(s.contains("http://json-schema.org/draft-07/schema#"));
+        assert!(s.contains("\"type\": \"string\""));
+    }
+
+    #[test]
+    fn test_to_schema_integer() {
+        let s = to_schema(&json!(42), "Root", 2);
+        assert!(s.contains("\"type\": \"integer\""));
+    }
+
+    #[test]
+    fn test_to_schema_number() {
+        let s = to_schema(&json!(3.14), "Root", 2);
+        assert!(s.contains("\"type\": \"number\""));
+    }
+
+    #[test]
+    fn test_to_schema_boolean() {
+        let s = to_schema(&json!(true), "Root", 2);
+        assert!(s.contains("\"type\": \"boolean\""));
+    }
+
+    #[test]
+    fn test_to_schema_null() {
+        let s = to_schema(&json!(null), "Root", 2);
+        assert!(s.contains("\"type\": \"null\""));
+    }
+
+    #[test]
+    fn test_to_schema_object() {
+        let obj = json!({"name": "hello", "count": 42});
+        let s = to_schema(&obj, "Root", 2);
+        assert!(s.contains("\"type\": \"object\""));
+        assert!(s.contains("name"));
+        assert!(s.contains("count"));
+        assert!(s.contains("\"type\": \"string\""));
+        assert!(s.contains("\"type\": \"integer\""));
+        assert!(s.contains("\"required\""));
+    }
+
+    #[test]
+    fn test_to_schema_object_with_null() {
+        let obj = json!({"name": "hello", "optional": null});
+        let s = to_schema(&obj, "Root", 2);
+        assert!(s.contains("\"type\": \"object\""));
+        assert!(s.contains("\"type\": \"null\""));
+        assert!(s.contains("\"required\""));
+        assert!(s.contains("\"name\""));
+    }
+
+    #[test]
+    fn test_to_schema_array_uniform() {
+        let arr = json!([{"a": 1}, {"a": 2}]);
+        let s = to_schema(&arr, "Root", 2);
+        assert!(s.contains("\"type\": \"array\""));
+        assert!(s.contains("\"type\": \"integer\""));
+    }
+
+    #[test]
+    fn test_to_schema_array_mixed_types() {
+        let arr = json!([1, "two", true]);
+        let s = to_schema(&arr, "Root", 2);
+        assert!(s.contains("\"oneOf\""));
+    }
+
+    #[test]
+    fn test_to_schema_empty_array() {
+        let s = to_schema(&json!([]), "Root", 2);
+        assert!(s.contains("\"type\": \"array\""));
+        assert!(s.contains("\"items\": {}"));
+    }
+
+    #[test]
+    fn test_to_schema_root_name() {
+        let s = to_schema(&json!("hello"), "MySchema", 2);
+        assert!(s.contains("\"$id\": \"MySchema\""));
+        assert!(s.contains("\"title\": \"MySchema\""));
     }
 }

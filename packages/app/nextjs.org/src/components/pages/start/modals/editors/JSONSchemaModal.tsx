@@ -11,7 +11,6 @@ import { oneDark } from '@codemirror/theme-one-dark';
 import { EditorView } from '@codemirror/view';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 import { json, parseJson } from '@lodashx/ts';
-import jsonSchemaGenerator from 'json-schema-generator';
 import { FC, useEffect, useMemo, useRef, useState } from 'react';
 import { parse as parseYaml, stringify as stringifyYaml } from 'yaml';
 
@@ -165,7 +164,7 @@ export const JSONSchemaModal: FC<{ onClose: () => void }> = ({ onClose }) => {
 
   const schema = useMemo(() => {
     try {
-      return JSON.stringify(jsonSchemaGenerator(data), null, 2);
+      return json(data).convert('schema');
     } catch {
       return 'Invalid input';
     }

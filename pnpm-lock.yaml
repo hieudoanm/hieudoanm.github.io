@@ -143,9 +143,6 @@ importers:
       html2canvas-pro:
         specifier: 2.0.4
         version: 2.0.4
-      json-schema-generator:
-        specifier: 2.0.6
-        version: 2.0.6
       marked:
         specifier: 18.0.4
         version: 18.0.4
@@ -231,9 +228,6 @@ importers:
       '@types/jest':
         specifier: 30.0.0
         version: 30.0.0
-      '@types/json-schema-generator':
-        specifier: 2.0.3
-        version: 2.0.3
       '@types/node':
         specifier: 25.9.1
         version: 25.9.1

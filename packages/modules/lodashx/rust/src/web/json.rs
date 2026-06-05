@@ -47,3 +47,9 @@ pub fn to_xml(data: &JsValue, indent: bool, indent_size: usize, declaration: boo
     let val: Value = from_js(data);
     crate::core::json::to_xml(&val, indent, indent_size, declaration, root_name.as_deref())
 }
+
+#[wasm_bindgen]
+pub fn to_schema(data: &JsValue, root_name: &str, indent_size: usize) -> String {
+    let val: Value = from_js(data);
+    crate::core::json::to_schema(&val, root_name, indent_size)
+}
