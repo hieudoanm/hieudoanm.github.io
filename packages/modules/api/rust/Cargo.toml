@@ -1,13 +1,25 @@
 [package]
-name = "api"
+name = "hieudoanm_api"
 version = "0.0.1"
 edition = "2024"
+description = "API Clients"
+repository = "https://github.com/hieudoanm/hieudoanm.github.io"
+license = "GPL-3.0"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
 
 [dependencies]
 anyhow = "1"
 reqwest = { version = "0.12", features = ["json"] }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+wasm-bindgen = "0.2"
+js-sys = "0.3"
+wasm-bindgen-futures = "0.4"
+serde-wasm-bindgen = "0.6"
 
 [dev-dependencies]
 tokio = { version = "1", features = ["full"] }
