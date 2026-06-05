@@ -1,20 +1,20 @@
-import { addZero, formatCurrency } from '../format';
+import { padZero, formatCurrency } from '../format';
 
-describe('addZero', () => {
+describe('padZero', () => {
   it('pads single digit to default length 2', () => {
-    expect(addZero(5)).toBe('05');
+    expect(padZero(5)).toBe('05');
   });
 
   it('does not pad if same length', () => {
-    expect(addZero(42)).toBe('42');
+    expect(padZero(42)).toBe('42');
   });
 
   it('does not pad if longer than length', () => {
-    expect(addZero(123)).toBe('123');
+    expect(padZero(123)).toBe('123');
   });
 
   it('pads to custom length', () => {
-    expect(addZero(7, 4)).toBe('0007');
+    expect(padZero(7, 4)).toBe('0007');
   });
 });
 

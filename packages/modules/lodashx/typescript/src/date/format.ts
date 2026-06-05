@@ -1,4 +1,4 @@
-export const padZero = (n: number) => String(n).padStart(2, '0');
+const padZero = (n: number) => String(n).padStart(2, '0');
 
 export const formatDate = (date: Date, separator = '-') => {
   const yyyy = date.getFullYear();

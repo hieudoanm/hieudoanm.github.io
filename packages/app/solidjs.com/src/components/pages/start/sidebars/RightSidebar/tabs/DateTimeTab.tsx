@@ -7,11 +7,7 @@ import {
 import { yearsByDecades } from '@hieudoanm.github.io/data/calendar/years';
 import { timezones } from '@hieudoanm.github.io/data/timezones';
 import type { WeatherData } from '@hieudoanm.github.io/data/weather';
-import {
-  LunarCalendar,
-  generateFullCalendar,
-  getWeekOfYear,
-} from '@lodashx/ts';
+import { LunarCalendar, calendar, weekOfYear } from '@lodashx/ts';
 import { useQueries } from '@tanstack/solid-query';
 import { createSignal } from 'solid-js';
 
@@ -60,7 +56,7 @@ export const DateTimeTab = (props: { times: string[] }) => {
   const currentYear = year();
   const currentChosenDate = chosenDate();
 
-  const calendar = generateFullCalendar(currentYear, currentMonth);
+  const calendarData = calendar(currentYear, currentMonth);
   const chosenEvents = getEventsForDate(currentChosenDate);
 
   const lunarChosen = lunarCalendar.solar2lunar(
@@ -142,7 +138,7 @@ export const DateTimeTab = (props: { times: string[] }) => {
             </tr>
           </thead>
           <tbody>
-            {calendar.map((week, i) => {
+            {calendarData.map((week, i) => {
               const firstDay = week.find((d) => d?.currentMonth !== undefined);
               let weekNum = '';
               if (firstDay) {
@@ -161,7 +157,7 @@ export const DateTimeTab = (props: { times: string[] }) => {
                     wy++;
                   }
                 }
-                weekNum = getWeekOfYear(
+                weekNum = weekOfYear(
                   new Date(wy, wm, firstDay.date)
                 ).toString();
               }

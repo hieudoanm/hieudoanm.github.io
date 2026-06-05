@@ -1,4 +1,4 @@
-export const arabic2roman = (num: number): string => {
+export const arabicToRoman = (num: number): string => {
   const romanMap: { value: number; numeral: string }[] = [
     { value: 1000, numeral: 'M' },
     { value: 900, numeral: 'CM' },
@@ -25,7 +25,7 @@ export const arabic2roman = (num: number): string => {
   return result;
 };
 
-export const roman2arabic = (roman: string): string => {
+export const romanToArabic = (roman: string): string => {
   const romanMap: { [key: string]: number } = {
     M: 1000,
     D: 500,

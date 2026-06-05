@@ -13,7 +13,7 @@ interface ToXMLOptions {
   rootName?: string;
 }
 
-export function toXML(obj: XMLObject, options: ToXMLOptions = {}): string {
+export function toXml(obj: XMLObject, options: ToXMLOptions = {}): string {
   const {
     indent = true,
     indentSize = 2,

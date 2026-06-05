@@ -1,4 +1,4 @@
-export const toRS = (data: unknown, rootName = 'Root'): string => {
+export const toRust = (data: unknown, rootName = 'Root'): string => {
   const indent = (level: number) => ' '.repeat(level * 4);
 
   const capitalize = (str: string) =>

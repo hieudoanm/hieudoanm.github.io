@@ -1,9 +1,9 @@
 import {
-  getBrightness,
+  brightness,
   hex2hsl,
   hex2oklch,
   hex2rgb,
-  randomHEX,
+  randomHex,
 } from '@lodashx/ts';
 import { FC, useEffect, useState } from 'react';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
@@ -328,14 +328,14 @@ export const ColorsModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === ' ') {
         e.preventDefault();
-        update(randomHEX());
+        update(randomHex());
       }
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  const isDark = getBrightness(hex);
+  const isDark = brightness(hex);
 
   return (
     <ModalWrapper
@@ -344,7 +344,7 @@ export const ColorsModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       subtitle="HEX · RGB · HSL · OKLCH"
       footerNote="Click outside to close · Space for random">
       <button
-        onClick={() => update(randomHEX())}
+        onClick={() => update(randomHex())}
         className="btn btn-ghost btn-xs font-mono tracking-widest opacity-60 hover:opacity-100">
         Random
       </button>

@@ -8,11 +8,7 @@ import {
 import { yearsByDecades } from '@hieudoanm.github.io/data/calendar/years';
 import { timezones } from '@hieudoanm.github.io/data/timezones';
 import type { WeatherData } from '@hieudoanm.github.io/data/weather';
-import {
-  LunarCalendar,
-  generateFullCalendar,
-  getWeekOfYear,
-} from '@lodashx/ts';
+import { LunarCalendar, calendar, weekOfYear } from '@lodashx/ts';
 import { useQueries } from '@tanstack/react-query';
 import { FC, useState } from 'react';
 
@@ -61,7 +57,7 @@ export const DateTimeTab: FC<{ times: string[] }> = ({ times }) => {
     })),
   });
 
-  const calendar = generateFullCalendar(year, month);
+  const calendarData = calendar(year, month);
   const chosenEvents = getEventsForDate(chosenDate);
 
   const lunarChosen = lunarCalendar.solar2lunar(
@@ -151,7 +147,7 @@ export const DateTimeTab: FC<{ times: string[] }> = ({ times }) => {
             </tr>
           </thead>
           <tbody>
-            {calendar.map((week, i) => {
+            {calendarData.map((week, i) => {
               const firstDay = week.find((d) => d?.currentMonth !== undefined);
               let weekNum = '';
               if (firstDay) {
@@ -170,7 +166,7 @@ export const DateTimeTab: FC<{ times: string[] }> = ({ times }) => {
                     wy++;
                   }
                 }
-                weekNum = getWeekOfYear(
+                weekNum = weekOfYear(
                   new Date(wy, wm, firstDay.date)
                 ).toString();
               }

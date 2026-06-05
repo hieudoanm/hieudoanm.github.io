@@ -1,114 +1,114 @@
 import {
   diff,
-  diffInDays,
-  diffInHours,
-  diffInMinutes,
-  diffInSeconds,
-  diffInTime,
+  diffDays,
+  diffHours,
+  diffMinutes,
+  diffSeconds,
+  diffTime,
 } from '../diff';
 
-describe('diffInTime', () => {
+describe('diffTime', () => {
   it('returns 0 for same dates', () => {
     const date = new Date('2024-01-01');
-    expect(diffInTime(date, date)).toBe(0);
+    expect(diffTime(date, date)).toBe(0);
   });
 
   it('returns absolute difference in milliseconds', () => {
     const a = new Date('2024-01-01T00:00:00');
     const b = new Date('2024-01-01T00:01:00');
-    expect(diffInTime(a, b)).toBe(60000);
+    expect(diffTime(a, b)).toBe(60000);
   });
 
   it('works regardless of argument order', () => {
     const a = new Date('2024-01-02');
     const b = new Date('2024-01-01');
-    expect(diffInTime(a, b)).toBe(diffInTime(b, a));
+    expect(diffTime(a, b)).toBe(diffTime(b, a));
   });
 });
 
-describe('diffInDays', () => {
+describe('diffDays', () => {
   it('returns 0 for same day', () => {
     const a = new Date('2024-01-01T00:00:00');
     const b = new Date('2024-01-01T23:59:59');
-    expect(diffInDays(a, b)).toBe(0);
+    expect(diffDays(a, b)).toBe(0);
   });
 
   it('returns 1 for consecutive days', () => {
     const a = new Date('2024-01-01');
     const b = new Date('2024-01-02');
-    expect(diffInDays(a, b)).toBe(1);
+    expect(diffDays(a, b)).toBe(1);
   });
 
   it('returns correct days across months', () => {
     const a = new Date('2024-01-31');
     const b = new Date('2024-02-01');
-    expect(diffInDays(a, b)).toBe(1);
+    expect(diffDays(a, b)).toBe(1);
   });
 
   it('returns correct days across leap year February', () => {
     const a = new Date('2024-02-28');
     const b = new Date('2024-03-01');
-    expect(diffInDays(a, b)).toBe(2);
+    expect(diffDays(a, b)).toBe(2);
   });
 });
 
-describe('diffInHours', () => {
+describe('diffHours', () => {
   it('returns 0 for same hour', () => {
     const a = new Date('2024-01-01T10:00:00');
     const b = new Date('2024-01-01T10:30:00');
-    expect(diffInHours(a, b)).toBe(0);
+    expect(diffHours(a, b)).toBe(0);
   });
 
   it('returns 1 for one hour apart', () => {
     const a = new Date('2024-01-01T10:00:00');
     const b = new Date('2024-01-01T11:00:00');
-    expect(diffInHours(a, b)).toBe(1);
+    expect(diffHours(a, b)).toBe(1);
   });
 
   it('returns 24 for a full day apart', () => {
     const a = new Date('2024-01-01T00:00:00');
     const b = new Date('2024-01-02T00:00:00');
-    expect(diffInHours(a, b)).toBe(24);
+    expect(diffHours(a, b)).toBe(24);
   });
 });
 
-describe('diffInMinutes', () => {
+describe('diffMinutes', () => {
   it('returns 0 for same minute', () => {
     const a = new Date('2024-01-01T10:00:00');
     const b = new Date('2024-01-01T10:00:30');
-    expect(diffInMinutes(a, b)).toBe(0);
+    expect(diffMinutes(a, b)).toBe(0);
   });
 
   it('returns 1 for one minute apart', () => {
     const a = new Date('2024-01-01T10:00:00');
     const b = new Date('2024-01-01T10:01:00');
-    expect(diffInMinutes(a, b)).toBe(1);
+    expect(diffMinutes(a, b)).toBe(1);
   });
 
   it('returns 60 for one hour apart', () => {
     const a = new Date('2024-01-01T10:00:00');
     const b = new Date('2024-01-01T11:00:00');
-    expect(diffInMinutes(a, b)).toBe(60);
+    expect(diffMinutes(a, b)).toBe(60);
   });
 });
 
-describe('diffInSeconds', () => {
+describe('diffSeconds', () => {
   it('returns 0 for same time', () => {
     const a = new Date('2024-01-01T10:00:00');
     const b = new Date('2024-01-01T10:00:00');
-    expect(diffInSeconds(a, b)).toBe(0);
+    expect(diffSeconds(a, b)).toBe(0);
   });
 
   it('returns 1 for one second apart', () => {
     const a = new Date('2024-01-01T10:00:00');
     const b = new Date('2024-01-01T10:00:01');
-    expect(diffInSeconds(a, b)).toBe(1);
+    expect(diffSeconds(a, b)).toBe(1);
   });
 
   it('returns 60 for one minute apart', () => {
     const a = new Date('2024-01-01T10:00:00');
     const b = new Date('2024-01-01T10:01:00');
-    expect(diffInSeconds(a, b)).toBe(60);
+    expect(diffSeconds(a, b)).toBe(60);
   });
 });
 

@@ -19,7 +19,7 @@ import { Opening, openings } from '@hieudoanm.github.io/data/chess/openings';
 import { useStockfish } from '@hieudoanm.github.io/hooks/use-stockfish';
 import { download } from '@hieudoanm.github.io/utils/canvas';
 import { range } from '@lodash/ts';
-import { addZero } from '@lodashx/ts';
+import { padZero } from '@lodashx/ts';
 import GIF from 'gif.js';
 import html2canvas from 'html2canvas-pro';
 import type { NextPage } from 'next';
@@ -467,7 +467,7 @@ const ChessWorkbenchPage: NextPage = () => {
                 onChange={handle960IdChange}>
                 {range(0, 959).map((i: number) => (
                   <option key={i} value={i}>
-                    {addZero(i, 3)}
+                    {padZero(i, 3)}
                   </option>
                 ))}
               </select>

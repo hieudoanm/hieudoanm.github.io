@@ -1,3 +1,3 @@
-export { base } from './base';
-export { addZero, formatCurrency, commas } from './format';
-export { arabic2roman, roman2arabic } from './roman';
+export { convertBase } from './base';
+export { padZero, formatCurrency, formatComma } from './format';
+export { arabicToRoman, romanToArabic } from './roman';

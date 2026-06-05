@@ -1,22 +1,26 @@
-import { base } from '@lodashx/ts';
+import { convertBase } from '@lodashx/ts';
 import { createSignal } from 'solid-js';
 
 const INITIAL_NUMBER = 10;
 
 export const Base = () => {
-  const [base2, setBase2] = createSignal(base(INITIAL_NUMBER).from(10).to(2));
-  const [base8, setBase8] = createSignal(base(INITIAL_NUMBER).from(10).to(8));
+  const [base2, setBase2] = createSignal(
+    convertBase(INITIAL_NUMBER).from(10).to(2)
+  );
+  const [base8, setBase8] = createSignal(
+    convertBase(INITIAL_NUMBER).from(10).to(8)
+  );
   const [base10, setBase10] = createSignal(INITIAL_NUMBER.toString());
   const [base16, setBase16] = createSignal(
-    base(INITIAL_NUMBER).from(10).to(16)
+    convertBase(INITIAL_NUMBER).from(10).to(16)
   );
 
   const handleChange = (value: string, fromBase: number) => {
     const newNumber = parseInt(value, 10);
-    setBase2(base(newNumber).from(fromBase).to(2));
-    setBase8(base(newNumber).from(fromBase).to(8));
-    setBase10(base(newNumber).from(fromBase).to(10));
-    setBase16(base(newNumber).from(fromBase).to(16));
+    setBase2(convertBase(newNumber).from(fromBase).to(2));
+    setBase8(convertBase(newNumber).from(fromBase).to(8));
+    setBase10(convertBase(newNumber).from(fromBase).to(10));
+    setBase16(convertBase(newNumber).from(fromBase).to(16));
   };
 
   return (

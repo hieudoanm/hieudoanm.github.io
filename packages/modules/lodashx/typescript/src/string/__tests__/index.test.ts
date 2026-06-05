@@ -8,20 +8,20 @@ describe('colors package exports', () => {
     expect(colors.hex2hsl).toBeDefined();
     expect(colors.hex2cmyk).toBeDefined();
     expect(colors.hex2oklch).toBeDefined();
-    expect(colors.getBrightness).toBeDefined();
-    expect(colors.randomHEX).toBeDefined();
+    expect(colors.brightness).toBeDefined();
+    expect(colors.randomHex).toBeDefined();
     expect(colors.hsl2hex).toBeDefined();
     expect(colors.hsl2rgb).toBeDefined();
     expect(colors.hsl2cmyk).toBeDefined();
     expect(colors.oklch2hex).toBeDefined();
-    expect(colors.component2hex).toBeDefined();
+    expect(colors.componentToHex).toBeDefined();
     expect(colors.rgb2hex).toBeDefined();
     expect(colors.rgb2hsl).toBeDefined();
     expect(colors.rgb2cmyk).toBeDefined();
   });
 
   it('generates random hex color', () => {
-    const color = colors.randomHEX();
+    const color = colors.randomHex();
     expect(color).toMatch(/^#[0-9a-f]{6}$/);
   });
 });

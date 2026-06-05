@@ -1,4 +1,4 @@
-import { arabic2roman, roman2arabic } from '@lodashx/ts';
+import { arabicToRoman, romanToArabic } from '@lodashx/ts';
 import { createSignal } from 'solid-js';
 
 const INITIAL_NUMBER = 10;
@@ -8,13 +8,13 @@ export const Roman = () => {
     INITIAL_NUMBER.toString()
   );
   const [romanNumber, setRomanNumber] = createSignal(
-    arabic2roman(INITIAL_NUMBER)
+    arabicToRoman(INITIAL_NUMBER)
   );
 
   const handleChange = (value: string, type: string) => {
-    const newArabicNumber = type === 'arabic' ? value : roman2arabic(value);
+    const newArabicNumber = type === 'arabic' ? value : romanToArabic(value);
     const newRomanNumber =
-      type === 'roman' ? value : arabic2roman(parseInt(value, 10));
+      type === 'roman' ? value : arabicToRoman(parseInt(value, 10));
     setArabicNumber(newArabicNumber);
     setRomanNumber(newRomanNumber);
   };

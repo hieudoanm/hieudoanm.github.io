@@ -1,17 +1,17 @@
-import { component2hex, rgb2hex, rgb2hsl, rgb2cmyk } from '../rgb';
+import { componentToHex, rgb2hex, rgb2hsl, rgb2cmyk } from '../rgb';
 
-describe('component2hex', () => {
+describe('componentToHex', () => {
   it('converts 0 to 00', () => {
-    expect(component2hex(0)).toBe('00');
+    expect(componentToHex(0)).toBe('00');
   });
 
   it('converts 255 to ff', () => {
-    expect(component2hex(255)).toBe('ff');
+    expect(componentToHex(255)).toBe('ff');
   });
 
   it('doubles single-char hex values', () => {
-    expect(component2hex(0)).toBe('00');
-    expect(component2hex(15)).toBe('ff');
+    expect(componentToHex(0)).toBe('00');
+    expect(componentToHex(15)).toBe('ff');
   });
 });
 

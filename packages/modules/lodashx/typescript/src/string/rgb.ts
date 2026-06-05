@@ -1,4 +1,4 @@
-export const component2hex = (code: number): string => {
+export const componentToHex = (code: number): string => {
   const hex: string = code.toString(16);
   return hex.length === 1 ? `${hex}${hex}` : hex;
 };
@@ -16,9 +16,9 @@ export const rgb2hex = (
   if (red < min) red = min;
   if (green < min) green = min;
   if (blue < min) blue = min;
-  const r: string = component2hex(red);
-  const g: string = component2hex(green);
-  const b: string = component2hex(blue);
+  const r: string = componentToHex(red);
+  const g: string = componentToHex(green);
+  const b: string = componentToHex(blue);
   return `#${r}${g}${b}`;
 };
 

@@ -10,7 +10,7 @@ import { EditorState, Extension } from '@codemirror/state';
 import { oneDark } from '@codemirror/theme-one-dark';
 import { EditorView } from '@codemirror/view';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
-import { json, jsonParse } from '@lodashx/ts';
+import { json, parseJson } from '@lodashx/ts';
 import jsonSchemaGenerator from 'json-schema-generator';
 import {
   createEffect,
@@ -132,7 +132,7 @@ export const JSONSchemaModal = ({ onClose }: { onClose: () => void }) => {
   createEffect(() => {
     if (inputMode() !== 'json') return;
     try {
-      const parsed = jsonParse(jsonText(), {});
+      const parsed = parseJson(jsonText(), {});
       setData(parsed);
       setYamlText(stringifyYaml(parsed));
     } catch {}

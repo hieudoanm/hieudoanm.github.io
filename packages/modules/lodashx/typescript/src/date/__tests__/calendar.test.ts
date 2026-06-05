@@ -1,33 +1,29 @@
-import {
-  generateFullCalendar,
-  getWeekOfYear,
-  LunarCalendar,
-} from '../calendar';
+import { calendar, weekOfYear, LunarCalendar } from '../calendar';
 
-describe('generateFullCalendar', () => {
+describe('calendar', () => {
   it('returns 2D array of weeks', () => {
-    const result = generateFullCalendar(2024, 0);
+    const result = calendar(2024, 0);
     expect(Array.isArray(result)).toBe(true);
     expect(result.length).toBeGreaterThanOrEqual(4);
     expect(result.length).toBeLessThanOrEqual(6);
   });
 
   it('each week has 7 days', () => {
-    const result = generateFullCalendar(2024, 0);
+    const result = calendar(2024, 0);
     result.forEach((week) => {
       expect(week.length).toBe(7);
     });
   });
 
   it('each day has date and currentMonth', () => {
-    const result = generateFullCalendar(2024, 0);
+    const result = calendar(2024, 0);
     const day = result[0]![0]!;
     expect(typeof day.date).toBe('number');
     expect(['previous', 'current', 'next']).toContain(day.currentMonth);
   });
 
   it('contains dates from the current month', () => {
-    const result = generateFullCalendar(2024, 0);
+    const result = calendar(2024, 0);
     const currentDays = result
       .flat()
       .filter((d) => d.currentMonth === 'current');
@@ -35,7 +31,7 @@ describe('generateFullCalendar', () => {
   });
 
   it('handles February in leap year', () => {
-    const result = generateFullCalendar(2024, 1);
+    const result = calendar(2024, 1);
     const currentDays = result
       .flat()
       .filter((d) => d.currentMonth === 'current');
@@ -43,7 +39,7 @@ describe('generateFullCalendar', () => {
   });
 
   it('handles February in non-leap year', () => {
-    const result = generateFullCalendar(2023, 1);
+    const result = calendar(2023, 1);
     const currentDays = result
       .flat()
       .filter((d) => d.currentMonth === 'current');
@@ -51,39 +47,39 @@ describe('generateFullCalendar', () => {
   });
 
   it('handles month starting on Sunday (firstDay = 0)', () => {
-    const result = generateFullCalendar(2024, 8);
+    const result = calendar(2024, 8);
     const firstWeek = result[0]!;
     expect(firstWeek[0]!.currentMonth).toBe('current');
   });
 
   it('handles month starting on Monday (firstDay = 1)', () => {
-    const result = generateFullCalendar(2024, 6);
+    const result = calendar(2024, 6);
     const firstWeek = result[0]!;
     expect(firstWeek[0]!.currentMonth).toBe('previous');
     expect(firstWeek[1]!.currentMonth).toBe('current');
   });
 
   it('handles month starting on Saturday (firstDay = 6)', () => {
-    const result = generateFullCalendar(2024, 5);
+    const result = calendar(2024, 5);
     const firstWeek = result[0]!;
     expect(firstWeek[0]!.currentMonth).toBe('previous');
     expect(firstWeek[6]!.currentMonth).toBe('current');
   });
 
   it('includes previous month dates', () => {
-    const result = generateFullCalendar(2024, 0);
+    const result = calendar(2024, 0);
     const prevDays = result.flat().filter((d) => d.currentMonth === 'previous');
     expect(prevDays.length).toBeGreaterThanOrEqual(0);
   });
 
   it('includes next month dates', () => {
-    const result = generateFullCalendar(2024, 11);
+    const result = calendar(2024, 11);
     const nextDays = result.flat().filter((d) => d.currentMonth === 'next');
     expect(nextDays.length).toBeGreaterThanOrEqual(0);
   });
 
   it('handles 31-day months correctly', () => {
-    const result = generateFullCalendar(2024, 0);
+    const result = calendar(2024, 0);
     const currentDays = result
       .flat()
       .filter((d) => d.currentMonth === 'current');
@@ -91,7 +87,7 @@ describe('generateFullCalendar', () => {
   });
 
   it('handles 30-day months correctly', () => {
-    const result = generateFullCalendar(2024, 3);
+    const result = calendar(2024, 3);
     const currentDays = result
       .flat()
       .filter((d) => d.currentMonth === 'current');
@@ -100,45 +96,45 @@ describe('generateFullCalendar', () => {
 
   it('previous month dates count matches firstDay offset', () => {
     const firstDay = new Date(2026, 0, 1).getDay();
-    const result = generateFullCalendar(2026, 0);
+    const result = calendar(2026, 0);
     const prevDays = result.flat().filter((d) => d.currentMonth === 'previous');
     expect(prevDays.length).toBe(firstDay);
   });
 });
 
-describe('getWeekOfYear', () => {
+describe('weekOfYear', () => {
   it('returns 1 for first week of January', () => {
     const date = new Date(2024, 0, 1);
-    expect(getWeekOfYear(date)).toBe(1);
+    expect(weekOfYear(date)).toBe(1);
   });
 
   it('returns correct week for late December', () => {
     const date = new Date(2025, 11, 31);
-    const week = getWeekOfYear(date);
+    const week = weekOfYear(date);
     expect(week).toBe(1);
   });
 
   it('returns week 52 for late December of 2024', () => {
     const date = new Date(2024, 11, 30);
-    const week = getWeekOfYear(date);
+    const week = weekOfYear(date);
     expect(week).toBe(1);
   });
 
   it('returns correct week for mid-year date', () => {
     const date = new Date(2024, 5, 15);
-    const week = getWeekOfYear(date);
+    const week = weekOfYear(date);
     expect(week).toBe(24);
   });
 
   it('handles dates in leap year correctly', () => {
     const date = new Date(2024, 1, 29);
-    const week = getWeekOfYear(date);
+    const week = weekOfYear(date);
     expect(week).toBe(9);
   });
 
   it('returns week 53 for January 1 2026', () => {
     const date = new Date(2026, 0, 1);
-    const week = getWeekOfYear(date);
+    const week = weekOfYear(date);
     expect(week).toBe(1);
   });
 });

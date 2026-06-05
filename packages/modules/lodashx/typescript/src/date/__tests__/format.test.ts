@@ -1,26 +1,4 @@
-import {
-  format,
-  formatDate,
-  formatDateTime,
-  formatTime,
-  padZero,
-} from '../format';
-
-describe('padZero', () => {
-  it('pads single digit with zero', () => {
-    expect(padZero(1)).toBe('01');
-    expect(padZero(9)).toBe('09');
-  });
-
-  it('does not pad double digits', () => {
-    expect(padZero(10)).toBe('10');
-    expect(padZero(31)).toBe('31');
-  });
-
-  it('handles zero', () => {
-    expect(padZero(0)).toBe('00');
-  });
-});
+import { format, formatDate, formatDateTime, formatTime } from '../format';
 
 describe('formatDate', () => {
   it('formats date with default separator', () => {

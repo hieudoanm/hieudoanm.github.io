@@ -1,4 +1,4 @@
-import { base } from '@lodashx/ts';
+import { convertBase } from '@lodashx/ts';
 import { FC, useState } from 'react';
 
 const INITIAL_NUMBER: number = 10;
@@ -6,10 +6,10 @@ const INITIAL_NUMBER: number = 10;
 export const Base: FC = () => {
   const [
     {
-      base2 = base(INITIAL_NUMBER).from(10).to(2),
-      base8 = base(INITIAL_NUMBER).from(10).to(8),
+      base2 = convertBase(INITIAL_NUMBER).from(10).to(2),
+      base8 = convertBase(INITIAL_NUMBER).from(10).to(8),
       base10 = INITIAL_NUMBER.toString(),
-      base16 = base(INITIAL_NUMBER).from(10).to(16),
+      base16 = convertBase(INITIAL_NUMBER).from(10).to(16),
     },
     setState,
   ] = useState<{
@@ -18,10 +18,10 @@ export const Base: FC = () => {
     base10: string;
     base16: string;
   }>({
-    base2: base(INITIAL_NUMBER).from(10).to(2),
-    base8: base(INITIAL_NUMBER).from(10).to(8),
+    base2: convertBase(INITIAL_NUMBER).from(10).to(2),
+    base8: convertBase(INITIAL_NUMBER).from(10).to(8),
     base10: INITIAL_NUMBER.toString(),
-    base16: base(INITIAL_NUMBER).from(10).to(16),
+    base16: convertBase(INITIAL_NUMBER).from(10).to(16),
   });
 
   return (
@@ -48,10 +48,10 @@ export const Base: FC = () => {
                 const newNumber: number = parseInt(newValue);
                 setState((previous) => ({
                   ...previous,
-                  base2: base(newNumber).from(fromBase).to(2),
-                  base8: base(newNumber).from(fromBase).to(8),
-                  base10: base(newNumber).from(fromBase).to(10),
-                  base16: base(newNumber).from(fromBase).to(16),
+                  base2: convertBase(newNumber).from(fromBase).to(2),
+                  base8: convertBase(newNumber).from(fromBase).to(8),
+                  base10: convertBase(newNumber).from(fromBase).to(10),
+                  base16: convertBase(newNumber).from(fromBase).to(16),
                 }));
               }}
             />

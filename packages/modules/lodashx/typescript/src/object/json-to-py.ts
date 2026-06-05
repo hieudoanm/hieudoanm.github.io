@@ -1,4 +1,4 @@
-export const toPY = (data: unknown, rootName = 'Root'): string => {
+export const toPython = (data: unknown, rootName = 'Root'): string => {
   const indent = (level: number) => ' '.repeat(level * 4);
 
   const parseType = (value: unknown): string => {

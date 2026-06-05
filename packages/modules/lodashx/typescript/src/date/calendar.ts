@@ -1,6 +1,6 @@
 type CurrentMonth = 'previous' | 'current' | 'next';
 
-export const generateFullCalendar = (year: number, month: number) => {
+export const calendar = (year: number, month: number) => {
   const firstDay = new Date(year, month, 1).getDay();
   const daysInMonth = new Date(year, month + 1, 0).getDate();
   const prevMonthDays = new Date(year, month, 0).getDate();
@@ -40,7 +40,7 @@ export const generateFullCalendar = (year: number, month: number) => {
   return weeks;
 };
 
-export const getWeekOfYear = (date: Date) => {
+export const weekOfYear = (date: Date) => {
   const d = new Date(
     Date.UTC(date.getFullYear(), date.getMonth(), date.getDate())
   );

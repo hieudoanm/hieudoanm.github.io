@@ -1,4 +1,4 @@
-import { hex2rgb, hex2hsl, hex2cmyk, hex2oklch, getBrightness } from '../hex';
+import { hex2rgb, hex2hsl, hex2cmyk, hex2oklch, brightness } from '../hex';
 
 describe('hex2rgb', () => {
   it('converts 6-digit hex to rgb', () => {
@@ -93,21 +93,21 @@ describe('hex2oklch', () => {
   });
 });
 
-describe('getBrightness', () => {
+describe('brightness', () => {
   it('returns true for dark colors', () => {
-    expect(getBrightness('#000000')).toBe(true);
-    expect(getBrightness('#0000ff')).toBe(true);
-    expect(getBrightness('#800000')).toBe(true);
+    expect(brightness('#000000')).toBe(true);
+    expect(brightness('#0000ff')).toBe(true);
+    expect(brightness('#800000')).toBe(true);
   });
 
   it('returns false for light colors', () => {
-    expect(getBrightness('#ffffff')).toBe(false);
-    expect(getBrightness('#ffff00')).toBe(false);
-    expect(getBrightness('#ffcccc')).toBe(false);
+    expect(brightness('#ffffff')).toBe(false);
+    expect(brightness('#ffff00')).toBe(false);
+    expect(brightness('#ffcccc')).toBe(false);
   });
 
   it('handles 3-digit hex', () => {
-    expect(getBrightness('#000')).toBe(true);
-    expect(getBrightness('#fff')).toBe(false);
+    expect(brightness('#000')).toBe(true);
+    expect(brightness('#fff')).toBe(false);
   });
 });

@@ -1,11 +1,11 @@
 import { stringify as toYAML } from 'yaml';
-import { toPY } from './json-to-py';
+import { toPython } from './json-to-py';
 import { toTS } from './json-to-ts';
-import { toXML } from './json-to-xml';
-import { toRS } from './json-to-rs';
+import { toXml } from './json-to-xml';
+import { toRust } from './json-to-rs';
 import { toJava } from './json-to-java';
 
-export const jsonParse = <T = unknown>(text: string, defaultValue: T): T => {
+export const parseJson = <T = unknown>(text: string, defaultValue: T): T => {
   try {
     const data = JSON.parse(text);
     return data;
@@ -23,7 +23,7 @@ const defaultOptions = {
   quote: '"',
 };
 
-export const json2csv = <
+export const jsonToCsv = <
   T extends Record<string, string | number | boolean | Date>,
 >(
   data: T[],
@@ -74,11 +74,11 @@ const json2java = (data: unknown) => {
 };
 
 const json2py = (data: unknown): string => {
-  return toPY(data);
+  return toPython(data);
 };
 
 const json2rs = (data: unknown): string => {
-  return toRS(data);
+  return toRust(data);
 };
 
 const json2ts = (data: unknown): string => {
@@ -86,7 +86,7 @@ const json2ts = (data: unknown): string => {
 };
 
 const json2xml = (json: string) => {
-  return toXML(jsonParse(json, {}));
+  return toXml(parseJson(json, {}));
 };
 
 const json2yaml = (data: unknown): string => {
@@ -98,7 +98,7 @@ export const json = <T extends Record<string, unknown>>(
   defaultValue: T = {} as T
 ) => {
   return {
-    parse: () => jsonParse(JSON.stringify(data), defaultValue),
+    parse: () => parseJson(JSON.stringify(data), defaultValue),
     format: () => {
       return {
         beautify: () => jsonBeautify(JSON.stringify(data)),

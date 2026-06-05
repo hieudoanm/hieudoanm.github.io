@@ -1,4 +1,4 @@
-import { arabic2roman, roman2arabic } from '@lodashx/ts';
+import { arabicToRoman, romanToArabic } from '@lodashx/ts';
 import { FC, useState } from 'react';
 
 const INITIAL_NUMBER: number = 10;
@@ -7,7 +7,7 @@ export const Roman: FC = () => {
   const [
     {
       arabicNumber = INITIAL_NUMBER.toString(),
-      romanNumber = arabic2roman(INITIAL_NUMBER),
+      romanNumber = arabicToRoman(INITIAL_NUMBER),
     },
     setState,
   ] = useState<{
@@ -15,7 +15,7 @@ export const Roman: FC = () => {
     romanNumber: string;
   }>({
     arabicNumber: INITIAL_NUMBER.toString(),
-    romanNumber: arabic2roman(INITIAL_NUMBER),
+    romanNumber: arabicToRoman(INITIAL_NUMBER),
   });
 
   return (
@@ -37,11 +37,11 @@ export const Roman: FC = () => {
               onChange={(event) => {
                 const newValue = event.target.value;
                 const newArabicNumber: string =
-                  type === 'arabic' ? newValue : roman2arabic(newValue);
+                  type === 'arabic' ? newValue : romanToArabic(newValue);
                 const newRomanNumber: string =
                   type === 'roman'
                     ? newValue
-                    : arabic2roman(parseInt(newValue, 10));
+                    : arabicToRoman(parseInt(newValue, 10));
                 setState((previous) => ({
                   ...previous,
                   arabicNumber: newArabicNumber,
