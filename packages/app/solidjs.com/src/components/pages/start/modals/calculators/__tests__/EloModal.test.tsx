@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from '@solidjs/testing-library';
 import { EloModal } from '../EloModal';
 
-vi.mock('@chess/elo', () => ({
+vi.mock('@chess/ts', () => ({
   calculateRating: () => 1016,
   calculatePerformance: () => 1800,
   Score: { WIN: 'win', DRAW: 'draw', LOSS: 'loss' },

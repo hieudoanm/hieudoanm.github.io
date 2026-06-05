@@ -1,17 +1,25 @@
-import { download } from '@hieudoanm.github.io/utils/canvas';
-import { chess960BackRankToInitialFEN } from '@hieudoanm.github.io/utils/chess/fen';
+import type { GameState, Move } from '@chess/ts';
 import {
+  chess960,
+  chess960BackRankToInitialFEN,
+  createGame,
   getHeaders,
   getMoves,
-  simplifyPGN,
-} from '@hieudoanm.github.io/utils/chess/pgn';
-import { addZero, range } from '@hieudoanm.github.io/utils/number';
+  legalMoves,
+  makeMove,
+  parsePGN,
+  parseSAN,
+  parseSquare,
+  stateToPGN,
+  stringifyFEN,
+} from '@chess/ts';
 import { Chessboard } from '@hieudoanm.github.io/components/organisms/chess/ChessBoard';
 import { INITIAL_FEN, INITIAL_ID } from '@hieudoanm.github.io/constants/app';
-import { chess960 } from '@hieudoanm.github.io/data/chess/chess960';
 import { Opening, openings } from '@hieudoanm.github.io/data/chess/openings';
 import { useStockfish } from '@hieudoanm.github.io/hooks/use-stockfish';
-import { Chess } from 'chess.js';
+import { download } from '@hieudoanm.github.io/utils/canvas';
+import { range } from '@lodash/ts';
+import { addZero } from '@lodashx/ts';
 import GIF from 'gif.js';
 import html2canvas from 'html2canvas-pro';
 import type { NextPage } from 'next';
@@ -24,6 +32,30 @@ import { DraggingPieceDataType, PieceDataType } from 'react-chessboard';
 
 type BoardMode = 'explore' | 'play';
 type SidePanel = 'position' | 'engine' | 'export' | 'openings';
+
+/* ══════════════════════════════════════════════
+   HELPERS
+══════════════════════════════════════════════ */
+
+const replayPGN = (pgn: string): GameState | null => {
+  const games = parsePGN(pgn);
+  const game = games[0];
+  if (!game) return null;
+
+  let state = createGame();
+  for (const sanMove of game.moves) {
+    const move = parseSAN(
+      sanMove.san,
+      state.board,
+      state.turn,
+      state.castlingRights,
+      state.enPassant
+    );
+    if (!move) return null;
+    state = makeMove(state, move);
+  }
+  return state;
+};
 
 /* ══════════════════════════════════════════════
    OPENINGS — pre-computed tree
@@ -94,7 +126,7 @@ const downloadGIF = ({
 const ChessWorkbenchPage: NextPage = () => {
   /* ─── refs ─── */
   const boardRef = useRef<HTMLDivElement | null>(null);
-  const gameRef = useRef<Chess>(new Chess(INITIAL_FEN));
+  const gameRef = useRef<GameState>(createGame(INITIAL_FEN));
 
   /* ─── board state ─── */
   const [fen, setFen] = useState<string>(INITIAL_FEN);
@@ -128,15 +160,21 @@ const ChessWorkbenchPage: NextPage = () => {
   const ecoTotal = ecoMoves.length;
 
   const ecoFenAtCursor = (): string => {
-    const g = new Chess();
+    let state = createGame();
     for (let i = 0; i < ecoCursor; i++) {
-      try {
-        g.move(ecoMoves[i]!);
-      } catch {
-        break;
-      }
+      const san = ecoMoves[i];
+      if (!san) break;
+      const move = parseSAN(
+        san,
+        state.board,
+        state.turn,
+        state.castlingRights,
+        state.enPassant
+      );
+      if (!move) break;
+      state = makeMove(state, move);
     }
-    return g.fen();
+    return stringifyFEN(state);
   };
 
   useEffect(() => {
@@ -159,16 +197,16 @@ const ChessWorkbenchPage: NextPage = () => {
      HELPERS
   ══════════════════════════════════════════ */
 
-  const syncGame = (newGame: Chess) => {
+  const syncGame = (newGame: GameState) => {
     gameRef.current = newGame;
-    setFen(newGame.fen());
-    setPgn(simplifyPGN(newGame.pgn()));
+    setFen(stringifyFEN(newGame));
+    setPgn(stateToPGN(newGame));
     setThinking(false);
   };
 
-  const build960 = (id: number): Chess => {
+  const build960 = (id: number): GameState => {
     const pos = chess960[id] ?? '';
-    return new Chess(chess960BackRankToInitialFEN(pos));
+    return createGame(chess960BackRankToInitialFEN(pos));
   };
 
   /* ══════════════════════════════════════════
@@ -177,7 +215,7 @@ const ChessWorkbenchPage: NextPage = () => {
 
   const handleFENChange = (value: string) => {
     try {
-      syncGame(new Chess(value));
+      syncGame(createGame(value));
     } catch {
       /* ignore */
     }
@@ -196,7 +234,7 @@ const ChessWorkbenchPage: NextPage = () => {
   };
 
   const resetToStart = () => {
-    syncGame(new Chess(INITIAL_FEN));
+    syncGame(createGame(INITIAL_FEN));
     setPositionId(INITIAL_ID);
   };
 
@@ -215,23 +253,30 @@ const ChessWorkbenchPage: NextPage = () => {
     if (panel === 'openings') return false;
 
     const game = gameRef.current;
-    if (boardMode === 'play' && game.turn() !== 'w') return false;
+    if (boardMode === 'play' && game.turn !== 'w') return false;
 
-    let move = null;
-    try {
-      move = game.move({
-        from: sourceSquare,
-        to: targetSquare ?? '',
-        promotion: 'q',
-      });
-    } catch (e) {
-      console.error(e);
-    }
+    const from = parseSquare(sourceSquare);
+    const to = targetSquare ? parseSquare(targetSquare) : null;
+    if (from === null || to === null) return false;
 
-    if (!move) return false;
+    const legal = legalMoves(
+      game.board,
+      game.turn,
+      game.castlingRights,
+      game.enPassant
+    );
+    const found = legal.find((m) => m.from === from && m.to === to);
+    if (!found) return false;
 
-    setFen(game.fen());
-    setPgn(simplifyPGN(game.pgn()));
+    const move: Move = {
+      ...found,
+      promotion: found.promotion ?? (found.promotion === null ? null : 'q'),
+    };
+    const newGame = makeMove(game, found.promotion !== null ? found : move);
+
+    setFen(stringifyFEN(newGame));
+    setPgn(stateToPGN(newGame));
+    gameRef.current = newGame;
     if (boardMode === 'play') setThinking(true);
     return true;
   };
@@ -255,26 +300,33 @@ const ChessWorkbenchPage: NextPage = () => {
   useEffect(() => {
     if (boardMode !== 'play') return;
     const game = gameRef.current;
-    if (game.turn() === 'b' && !game.isGameOver()) {
-      analyze(game.fen(), 15);
+    if (game.turn === 'b' && game.status === 'playing') {
+      analyze(stringifyFEN(game), 15);
     }
   }, [fen, boardMode]);
 
   useEffect(() => {
     if (!bestMove || boardMode !== 'play') return;
     const game = gameRef.current;
-    if (game.turn() !== 'b') return;
+    if (game.turn !== 'b') return;
 
-    const move = game.move({
-      from: bestMove.slice(0, 2),
-      to: bestMove.slice(2, 4),
-      promotion: 'q',
-    });
+    const from = parseSquare(bestMove.slice(0, 2));
+    const to = parseSquare(bestMove.slice(2, 4));
+    if (from === null || to === null) return;
 
-    if (move) {
-      setFen(game.fen());
-      setPgn(simplifyPGN(game.pgn()));
-    }
+    const legal = legalMoves(
+      game.board,
+      game.turn,
+      game.castlingRights,
+      game.enPassant
+    );
+    const found = legal.find((m) => m.from === from && m.to === to);
+    if (!found) return;
+
+    const newGame = makeMove(game, found);
+    setFen(stringifyFEN(newGame));
+    setPgn(stateToPGN(newGame));
+    gameRef.current = newGame;
     setThinking(false);
   }, [bestMove, boardMode]);
 
@@ -308,11 +360,11 @@ const ChessWorkbenchPage: NextPage = () => {
   const statusLabel = (() => {
     const game = gameRef.current;
     if (boardMode !== 'play') return null;
-    if (game.isCheckmate()) return 'Checkmate!';
-    if (game.isDraw()) return 'Draw';
-    if (game.isCheck()) return 'Check!';
+    if (game.status === 'checkmate') return 'Checkmate!';
+    if (game.status === 'draw' || game.status === 'stalemate') return 'Draw';
+    if (game.inCheck) return 'Check!';
     if (thinking) return 'Stockfish thinking…';
-    return game.turn() === 'w' ? 'Your turn (White)' : null;
+    return game.turn === 'w' ? 'Your turn (White)' : null;
   })();
 
   /* ══════════════════════════════════════════
@@ -321,13 +373,10 @@ const ChessWorkbenchPage: NextPage = () => {
 
   const handlePGNChange = (value: string) => {
     setPgn(value);
-    try {
-      const g = new Chess();
-      g.loadPgn(value);
-      gameRef.current = g;
-      setFen(g.fen());
-    } catch {
-      /* ignore */
+    const state = replayPGN(value);
+    if (state) {
+      gameRef.current = state;
+      setFen(stringifyFEN(state));
     }
   };
 
@@ -340,18 +389,30 @@ const ChessWorkbenchPage: NextPage = () => {
   const exportGIF = async () => {
     if (!pgn) return;
     setGifLoading(true);
-    const moves = getMoves(pgn);
-    const tempGame = new Chess();
+
+    const games = parsePGN(pgn);
+    const sanMoves = games[0]?.moves ?? [];
+    let state = createGame();
     const base64s: string[] = [];
-    for (const move of moves) {
-      tempGame.move(move);
-      gameRef.current = new Chess(tempGame.fen());
-      setFen(tempGame.fen());
+
+    for (const sanMove of sanMoves) {
+      const move = parseSAN(
+        sanMove.san,
+        state.board,
+        state.turn,
+        state.castlingRights,
+        state.enPassant
+      );
+      if (!move) break;
+      state = makeMove(state, move);
+      gameRef.current = state;
+      setFen(stringifyFEN(state));
       if (boardRef.current) {
         const canvas = await html2canvas(boardRef.current);
         base64s.push(canvas.toDataURL('image/png'));
       }
     }
+
     await downloadGIF({ base64s, pgn });
     setGifLoading(false);
   };

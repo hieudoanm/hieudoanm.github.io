@@ -30,16 +30,16 @@ export const packages: Download[] = [
     ],
   },
   {
-    id: 'chess-elo',
-    label: '@chess/elo',
-    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/modules/chess/elo',
+    id: 'chess-ts',
+    label: '@chess/ts',
+    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/modules/chess/ts',
     emoji: '♞',
     color: '#1f2937',
-    description: 'Elo',
+    description: 'Chess',
     downloads: [
       {
         label: 'Download NPM',
-        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/modules/chess/elo',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/modules/chess/ts',
       },
     ],
   },

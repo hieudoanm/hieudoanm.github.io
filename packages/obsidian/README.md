@@ -1,12 +1,4 @@
-# Hieu Doan
-
-## Table of Contents
-
-- [Hieu Doan](#hieu-doan)
-  - [Table of Contents](#table-of-contents)
-  - [Tree](#tree)
-
-## Tree
+# README
 
 1. [[Countries]]
 2. [[Education]]

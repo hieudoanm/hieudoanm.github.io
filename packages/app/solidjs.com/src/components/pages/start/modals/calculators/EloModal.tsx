@@ -4,7 +4,7 @@ import {
   calculateRating,
   Score,
   TimeClass,
-} from '@chess/elo';
+} from '@chess/ts';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
 type Formula = {

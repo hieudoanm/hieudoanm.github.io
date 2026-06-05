@@ -21,7 +21,7 @@
     "@capacitor/android": "8.3.4",
     "@capacitor/core": "8.3.4",
     "@capacitor/ios": "8.3.4",
-    "@chess/elo": "workspace:*",
+    "@chess/ts": "workspace:*",
     "@codemirror/lang-java": "6.0.2",
     "@codemirror/lang-javascript": "6.2.5",
     "@codemirror/lang-json": "6.0.2",

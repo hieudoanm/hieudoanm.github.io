@@ -50,11 +50,11 @@ export default defineConfig({
     ],
   },
   ssr: {
-    noExternal: ['@browser/native', '@chess/elo'],
+    noExternal: ['@browser/native', '@chess/ts'],
   },
   build: {
     commonjsOptions: {
-      include: [/browser\/native/, /chess\/elo/, /node_modules/],
+      include: [/browser\/native/, /chess\/ts/, /node_modules/],
     },
   },
 });
