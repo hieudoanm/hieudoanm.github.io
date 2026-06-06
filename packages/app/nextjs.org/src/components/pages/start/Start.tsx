@@ -45,6 +45,13 @@ const RedactModal = dynamic(
     ),
   { ssr: false }
 );
+const RegexModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/editors/RegexModal').then(
+      (mod) => mod.RegexModal
+    ),
+  { ssr: false }
+);
 const InstaSizeModal = dynamic(
   () =>
     import('@hieudoanm.github.io/components/pages/start/modals/images/InstaSizeModal').then(
@@ -633,6 +640,7 @@ type ModalId =
   | 'quizify'
   | 'recall'
   | 'redact'
+  | 'regex'
   | 'resume'
   | 'sheets'
   | 'shopify-detect'
@@ -712,6 +720,7 @@ const MODAL_MAP: Record<
   quizify: QuizifyModal,
   recall: RecallModal,
   redact: RedactModal,
+  regex: RegexModal,
   resume: ResumeModal,
   sheets: SheetsModal,
   'shopify-detect': ShopifyDetectModal,
@@ -997,6 +1006,13 @@ const makeTools = (
       emoji: '🖋️',
       color: '#3b82f6',
       onClick: open('redact'),
+    },
+    {
+      label: 'Regex',
+      description: 'Pattern Generator',
+      emoji: '🔍',
+      color: '#3b82f6',
+      onClick: open('regex'),
     },
     {
       label: 'Slides',
