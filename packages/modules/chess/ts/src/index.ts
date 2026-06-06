@@ -1,73 +1,76 @@
-export { isInCheck, isSquareAttacked } from './attack';
 export {
   PIECE_UNICODE,
   PIECE_VALUES,
-  boardFromFen,
-  boardToFen,
+  fromFenBoard,
+  toFenBoard,
   cloneBoard,
-  emptyBoard,
+  createEmptyBoard,
   findKing,
   getPiece,
-  putPiece,
+  setPiece,
   removePiece,
-} from './board';
-export { chess960 } from './chess960';
+} from './board/board';
+export type * from './types/types';
 export {
-  chess960BackRankToInitialFEN,
-  parseFENFields,
-  stringifyFENFields,
-} from './fen';
-export type { FENFields } from './fen';
+  FILES,
+  getFile,
+  isSquareValid,
+  toOppositeColor,
+  toSquareFromName,
+  getRank,
+  toSquare,
+  getSquareColor,
+  toSquareName,
+} from './utils/utils';
 export {
   STARTING_FEN,
   createGame,
   getStatusMessage,
   makeMove,
   undoMove,
-} from './game';
+} from './game/game';
+export { divide, perft } from './game/perft';
+export { isInCheck, isSquareAttacked } from './moves/attack';
 export {
   applyMove,
-  generateKingMoves,
-  generateKnightMoves,
-  generatePawnMoves,
-  generatePseudoLegalMoves,
-  generateSlidingMoves,
-  legalMoves,
-} from './moves';
+  getKingMoves,
+  getKnightMoves,
+  getPawnMoves,
+  getPseudoLegalMoves,
+  getSlidingMoves,
+  getLegalMoves,
+} from './moves/moves';
+export { toInitialFen, fromFenFields, toFenFields } from './notation/fen';
+export type { FENFields } from './notation/fen';
 export {
-  moveToSAN,
-  moveToUCI,
-  parseFEN,
-  parseSAN,
-  parseUCI,
-  stringifyFEN,
-} from './notation';
-export { divide, perft } from './perft';
+  toSan,
+  toUci,
+  fromFen,
+  fromSan,
+  fromUci,
+  toFen,
+} from './notation/notation';
 export {
-  parsePGN,
-  stringifyPGN,
-  getMoves,
   getHeaders,
-  stateToPGN,
-} from './pgn';
-export type { PGNGame, PGNMove } from './pgn';
+  getMoves,
+  fromPgn,
+  toPgnFromState,
+  toPgn,
+} from './notation/pgn';
+export type { PGNGame, PGNMove } from './notation/pgn';
 export {
   Score,
   TimeClass,
   calculatePerformance,
   calculateRating,
   getScoreValue,
-} from './rating';
-export type { DevelopmentCoefficient, Game, PerformanceInput } from './rating';
-export type * from './types';
-export {
-  FILES,
-  fileOf,
-  isValidSquare,
-  oppositeColor,
-  parseSquare,
-  rankOf,
-  square,
-  squareColor,
-  squareName,
-} from './utils';
+} from './rating/rating';
+export type {
+  DevelopmentCoefficient,
+  Game,
+  PerformanceInput,
+} from './rating/rating';
+export { chess960 } from './variants/chess960';
+export { evaluateBoard } from './engine/evaluate';
+export { findBestMove } from './engine/search';
+export type { SearchResult } from './engine/search';
