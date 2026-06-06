@@ -378,6 +378,14 @@ const PitchModal = dynamic(
   { ssr: false }
 );
 
+const PdModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/games/PrisonerDilemmaModal').then(
+      (mod) => mod.PrisonerDilemmaModal
+    ),
+  { ssr: false }
+);
+
 const PokedexModal = dynamic(
   () =>
     import('@hieudoanm.github.io/components/pages/start/modals/games/PokedexModal').then(
@@ -636,6 +644,7 @@ type ModalId =
   | 'no-sleep'
   | 'openapi'
   | 'palindrome'
+  | 'pd'
   | 'periodic-table'
   | 'pi'
   | 'pitch'
@@ -717,6 +726,7 @@ const MODAL_MAP: Record<
   'no-sleep': NoSleepModal,
   openapi: OpenAPI2Postman,
   palindrome: PalindromeModal,
+  pd: PdModal,
   'periodic-table': PeriodicTableModal,
   pi: PiModal,
   pitch: PitchModal,
@@ -1112,6 +1122,13 @@ const makeTools = (
       emoji: '🔁',
       color: '#f59e0b',
       onClick: open('palindrome'),
+    },
+    {
+      label: 'PD',
+      description: "Prisoner's Dilemma",
+      emoji: '⚖️',
+      color: '#f59e0b',
+      onClick: open('pd'),
     },
     {
       label: 'Sudoku',

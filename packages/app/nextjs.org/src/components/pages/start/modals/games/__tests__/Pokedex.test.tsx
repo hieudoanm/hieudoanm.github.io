@@ -1,9 +1,9 @@
 import { render } from '@testing-library/react';
-import { BlackjackModal } from '../BlackjackModal';
+import { PokedexModal } from '../PokedexModal';
 
-describe('BlackjackModal', () => {
+describe('PokedexModal', () => {
   it('should render', () => {
-    const { container } = render(<BlackjackModal onClose={jest.fn()} />);
+    const { container } = render(<PokedexModal onClose={jest.fn()} />);
     expect(container).toMatchSnapshot();
   });
 });
