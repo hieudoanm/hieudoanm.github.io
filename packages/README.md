@@ -7,17 +7,18 @@
 | 03  | CLI                  | [Cobra][cobra]           | [Go][go]                                 |
 | 04  | CLI                  | [Clap][clap]             | [Rust][rs]                               |
 | 05  | Data                 | SQLite                   | SQL                                      |
-| 06  | Docker (Compose)     |                          |                                          |
-| 07  | Docs                 | [Docusaurus][docusaurus] | Markdown                                 |
-| 08  | Docs                 | [Obsidian][obsidian]     | Markdown                                 |
-| 09  | Docs                 | [Starlight][starlight]   | Markdown                                 |
-| 10  | Extensions (Browser) | [Chrome][chrome]         | [TypeScript][ts]                         |
-| 11  | Extensions (Browser) | [Firefox][firefox]       | [TypeScript][ts]                         |
-| 12  | Modules              | chess                    | [Go][go] / [Rust][rs] / [TypeScript][ts] |
-| 13  | Modules              | lodashx                  | [Go][go] / [Rust][rs] / [TypeScript][ts] |
-| 14  | Server               | Backbone                 | [Go][go] / [Rust][rs]                    |
-| 15  | Server               | KeVIN                    | C/C++                                    |
-| 16  | Watch                | Garmin                   | MonkeyC                                  |
+| 06  | DevOps               | CI / CD                  | GitHub Actions                           |
+| 07  | DevOps               | Docker (Compose)         |                                          |
+| 08  | Docs                 | [Docusaurus][docusaurus] | Markdown                                 |
+| 09  | Docs                 | [Obsidian][obsidian]     | Markdown                                 |
+| 10  | Docs                 | [Starlight][starlight]   | Markdown                                 |
+| 11  | Extensions (Browser) | [Chrome][chrome]         | [TypeScript][ts]                         |
+| 12  | Extensions (Browser) | [Firefox][firefox]       | [TypeScript][ts]                         |
+| 13  | Modules              | chess                    | [Go][go] / [Rust][rs] / [TypeScript][ts] |
+| 14  | Modules              | lodashx                  | [Go][go] / [Rust][rs] / [TypeScript][ts] |
+| 15  | Server               | Backbone                 | [Go][go] / [Rust][rs]                    |
+| 16  | Server               | KeVIN                    | C/C++                                    |
+| 17  | Watch                | Garmin                   | MonkeyC                                  |
 
 <!-- Languages -->
 
