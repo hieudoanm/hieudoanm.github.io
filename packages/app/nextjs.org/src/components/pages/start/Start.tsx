@@ -76,6 +76,14 @@ const SignModal = dynamic(
   { ssr: false }
 );
 
+const Game2048Modal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/games/Game2048Modal').then(
+      (mod) => mod.Game2048Modal
+    ),
+  { ssr: false }
+);
+
 const BlackjackModal = dynamic(
   () =>
     import('@hieudoanm.github.io/components/pages/start/modals/games/BlackjackModal').then(
@@ -556,6 +564,14 @@ const YouTubeThumbnailsModal = dynamic(
   { ssr: false }
 );
 
+const SnakeModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/games/SnakeModal').then(
+      (mod) => mod.SnakeModal
+    ),
+  { ssr: false }
+);
+
 const ResumeTimelineModal = dynamic(
   () =>
     import('@hieudoanm.github.io/components/pages/start/modals/visualization/ResumeTimelineModal').then(
@@ -588,6 +604,7 @@ type ModalId =
   | 'english'
   | 'figlet'
   | 'flashcards'
+  | 'game2048'
   | 'github-social-preview'
   | 'house'
   | 'inflation'
@@ -619,6 +636,7 @@ type ModalId =
   | 'resume'
   | 'sheets'
   | 'shopify-detect'
+  | 'snake'
   | 'sign'
   | 'slides'
   | 'snellen'
@@ -646,6 +664,7 @@ const MODAL_MAP: Record<
   ModalId,
   FC<{ onClose: () => void }> | ComponentType<{ onClose: () => void }>
 > = {
+  game2048: Game2048Modal,
   blackjack: BlackjackModal,
   braille: BrailleModal,
   'breaking-bad': BreakingBadModal,
@@ -711,6 +730,7 @@ const MODAL_MAP: Record<
   watchface: WatchFaceModal,
   wordle: WordleModal,
   'youtube-thumbnails': YouTubeThumbnailsModal,
+  snake: SnakeModal,
   'resume-timeline': ResumeTimelineModal,
 };
 
@@ -1046,6 +1066,13 @@ const makeTools = (
   ],
   games: [
     {
+      label: '2048',
+      description: 'Merge tiles',
+      emoji: '🔢',
+      color: '#f59e0b',
+      onClick: open('game2048'),
+    },
+    {
       label: 'Blackjack',
       description: 'Cards Counter',
       emoji: '🃏',
@@ -1061,10 +1088,17 @@ const makeTools = (
     },
     {
       label: 'Sudoku',
-      description: '6×6 & 9×9',
+      description: '4×4 & 9×9',
       emoji: '🧩',
       color: '#f59e0b',
       onClick: open('sudoku'),
+    },
+    {
+      label: 'Snake',
+      description: '12×12 grid',
+      emoji: '🐍',
+      color: '#f59e0b',
+      onClick: open('snake'),
     },
     {
       label: 'PI',
