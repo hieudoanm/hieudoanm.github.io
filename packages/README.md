@@ -7,7 +7,7 @@
 | 03  | CLI                  | [Cobra][cobra]           | [Go][go]                                 |
 | 04  | CLI                  | [Clap][clap]             | [Rust][rs]                               |
 | 05  | Data                 | SQLite                   | SQL                                      |
-| 06  | DevOps               | CI / CD                  | GitHub Actions                           |
+| 06  | DevOps               | CI / CD                  | GitHub Actions / Jenkins                 |
 | 07  | DevOps               | Docker (Compose)         |                                          |
 | 08  | Docs                 | [Docusaurus][docusaurus] | Markdown                                 |
 | 09  | Docs                 | [Obsidian][obsidian]     | Markdown                                 |

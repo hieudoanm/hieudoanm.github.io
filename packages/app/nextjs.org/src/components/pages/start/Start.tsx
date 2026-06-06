@@ -476,6 +476,14 @@ const SVGModal = dynamic(
   { ssr: false }
 );
 
+const SudokuModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/games/SudokuModal').then(
+      (mod) => mod.SudokuModal
+    ),
+  { ssr: false }
+);
+
 const T3Modal = dynamic(
   () =>
     import('@hieudoanm.github.io/components/pages/start/modals/games/T3Modal').then(
@@ -614,6 +622,7 @@ type ModalId =
   | 'sign'
   | 'slides'
   | 'snellen'
+  | 'sudoku'
   | 'string'
   | 'svg'
   | 't3'
@@ -692,6 +701,7 @@ const MODAL_MAP: Record<
   snellen: SnellenChartModal,
   string: StringModal,
   svg: SVGModal,
+  sudoku: SudokuModal,
   t3: T3Modal,
   tax: TaxModal,
   towers: TowersModal,
@@ -1048,6 +1058,13 @@ const makeTools = (
       emoji: '🔁',
       color: '#f59e0b',
       onClick: open('palindrome'),
+    },
+    {
+      label: 'Sudoku',
+      description: '6×6 & 9×9',
+      emoji: '🧩',
+      color: '#f59e0b',
+      onClick: open('sudoku'),
     },
     {
       label: 'PI',
