@@ -129,23 +129,27 @@ export class TranspositionTable {
     return hash & (TT_SIZE - 1);
   }
 
-  probe(
+  probe(hash: number): TTEntry | null {
+    const entry = this.entries[this.index(hash)];
+    if (!entry || entry.key !== hash) return null;
+    return entry;
+  }
+
+  getCutoff(
     hash: number,
     depth: number,
     alpha: number,
     beta: number
   ): { score: number; bestMove: Move | null } | null {
-    const entry = this.entries[this.index(hash)];
-    if (!entry || entry.key !== hash) return null;
-    if (entry.depth >= depth) {
-      if (entry.flag === TTFlag.Exact)
-        return { score: entry.score, bestMove: entry.bestMove };
-      if (entry.flag === TTFlag.Alpha && entry.score <= alpha)
-        return { score: entry.score, bestMove: entry.bestMove };
-      if (entry.flag === TTFlag.Beta && entry.score >= beta)
-        return { score: entry.score, bestMove: entry.bestMove };
-    }
-    return { score: entry.score, bestMove: entry.bestMove };
+    const entry = this.probe(hash);
+    if (!entry || entry.depth < depth) return null;
+    if (entry.flag === TTFlag.Exact)
+      return { score: entry.score, bestMove: entry.bestMove };
+    if (entry.flag === TTFlag.Alpha && entry.score <= alpha)
+      return { score: entry.score, bestMove: entry.bestMove };
+    if (entry.flag === TTFlag.Beta && entry.score >= beta)
+      return { score: entry.score, bestMove: entry.bestMove };
+    return null;
   }
 
   store(

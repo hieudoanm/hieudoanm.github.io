@@ -28,6 +28,7 @@ export {
   getStatusMessage,
   makeMove,
   undoMove,
+  updateCastlingRights,
 } from './game/game';
 export { divide, perft } from './game/perft';
 export { isInCheck, isSquareAttacked } from './moves/attack';
@@ -74,3 +75,11 @@ export { chess960 } from './variants/chess960';
 export { evaluateBoard } from './engine/evaluate';
 export { findBestMove } from './engine/search';
 export type { SearchResult } from './engine/search';
+export { parseUciCommand, UCIEngine } from './engine/uci';
+export type {
+  UCICommand,
+  UCIResponse,
+  PositionCommand,
+  GoCommand,
+  UCIEngineConfig,
+} from './engine/uci';

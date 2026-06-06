@@ -127,28 +127,28 @@ impl TranspositionTable {
         hash as usize & (TT_SIZE - 1)
     }
 
-    pub fn probe(
-        &self,
-        hash: u64,
-        depth: u8,
-        alpha: i32,
-        beta: i32,
-    ) -> Option<(i32, Option<Move>)> {
+    pub fn probe(&self, hash: u64) -> Option<TTEntry> {
         let entry = self.entries[self.index(hash)];
         if entry.key == hash {
-            if entry.depth >= depth {
-                match entry.flag {
-                    TTFlag::Exact => return Some((entry.score, entry.best_move)),
-                    TTFlag::Alpha if entry.score <= alpha => {
-                        return Some((entry.score, entry.best_move))
-                    }
-                    TTFlag::Beta if entry.score >= beta => {
-                        return Some((entry.score, entry.best_move))
-                    }
-                    _ => {}
+            Some(entry)
+        } else {
+            None
+        }
+    }
+
+    pub fn get_cutoff(&self, hash: u64, depth: u8, alpha: i32, beta: i32) -> Option<(i32, Option<Move>)> {
+        let entry = self.entries[self.index(hash)];
+        if entry.key == hash && entry.depth >= depth {
+            match entry.flag {
+                TTFlag::Exact => return Some((entry.score, entry.best_move)),
+                TTFlag::Alpha if entry.score <= alpha => {
+                    return Some((entry.score, entry.best_move))
                 }
+                TTFlag::Beta if entry.score >= beta => {
+                    return Some((entry.score, entry.best_move))
+                }
+                _ => {}
             }
-            return Some((entry.score, entry.best_move));
         }
         None
     }

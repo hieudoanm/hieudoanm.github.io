@@ -9,6 +9,7 @@ import { cloneBoard } from '../board/board';
 import { getLegalMoves, applyMove } from '../moves/moves';
 import { isInCheck } from '../moves/attack';
 import { getRank, getFile, toSquare } from '../utils/utils';
+import { updateCastlingRights } from '../game/game';
 import { evaluateBoard } from './evaluate';
 import { computeHash, TranspositionTable, TTFlag } from './transposition';
 
@@ -63,29 +64,10 @@ const applyEngineMove = (
   enPassant: Square | null;
 } => {
   const newBoard = cloneBoard(board);
-  const piece = board[move.from]!;
   applyMove(newBoard, move);
 
-  const newCastlingRights = { ...castlingRights };
-  if (move.from === 4 || move.to === 4)
-    newCastlingRights.K = newCastlingRights.Q = false;
-  if (move.from === 60 || move.to === 60)
-    newCastlingRights.K = newCastlingRights.Q = false;
-  if (move.from === 7 || move.to === 7) newCastlingRights.K = false;
-  if (move.from === 0 || move.to === 0) newCastlingRights.Q = false;
-  if (move.from === 63 || move.to === 63) newCastlingRights.k = false;
-  if (move.from === 56 || move.to === 56) newCastlingRights.q = false;
-
-  if (piece.type === 'k') {
-    if (piece.color === 'w') newCastlingRights.K = newCastlingRights.Q = false;
-    else newCastlingRights.k = newCastlingRights.q = false;
-  }
-  if (piece.type === 'r') {
-    if (move.from === 7) newCastlingRights.K = false;
-    if (move.from === 0) newCastlingRights.Q = false;
-    if (move.from === 63) newCastlingRights.k = false;
-    if (move.from === 56) newCastlingRights.q = false;
-  }
+  const piece = board[move.from]!;
+  const newCastlingRights = updateCastlingRights(castlingRights, move, board);
 
   let newEnPassant: Square | null = null;
   if (
@@ -127,8 +109,24 @@ const moveValue = (move: Move): number => {
   return 0;
 };
 
-const orderMoves = (moves: Move[]): Move[] =>
-  [...moves].sort((a, b) => moveValue(b) - moveValue(a));
+const orderMoves = (moves: Move[], ttBest: Move | null): Move[] =>
+  [...moves].sort((a, b) => {
+    if (
+      ttBest &&
+      a.from === ttBest.from &&
+      a.to === ttBest.to &&
+      a.promotion === ttBest.promotion
+    )
+      return -1;
+    if (
+      ttBest &&
+      b.from === ttBest.from &&
+      b.to === ttBest.to &&
+      b.promotion === ttBest.promotion
+    )
+      return 1;
+    return moveValue(b) - moveValue(a);
+  });
 
 const quiescence = (
   board: Board,
@@ -162,7 +160,8 @@ const quiescence = (
   if (standPat > alpha) alpha = standPat;
 
   const tacticalMoves = orderMoves(
-    allMoves.filter((m) => m.captured || m.promotion || isInCheck(board, turn))
+    allMoves.filter((m) => m.captured || m.promotion || isInCheck(board, turn)),
+    null
   );
 
   if (tacticalMoves.length === 0) return alpha;
@@ -216,12 +215,15 @@ const alphaBeta = (
   const hash = computeHash(board, turn, castlingRights, enPassant);
 
   if (depth > 0 && !inNull) {
-    const ttHit = tt.probe(hash, depth, alpha, beta);
-    if (ttHit && ttHit.bestMove) return ttHit.score;
+    const cutoff = tt.getCutoff(hash, depth, alpha, beta);
+    if (cutoff) return cutoff.score;
   }
 
   const check = isInCheck(board, turn);
   nodeCount++;
+
+  const ttEntry = tt.probe(hash);
+  const ttBest: Move | null = ttEntry ? ttEntry.bestMove : null;
 
   // Null-move pruning
   if (
@@ -246,7 +248,8 @@ const alphaBeta = (
   }
 
   const moves = orderMoves(
-    getLegalMoves(board, turn, castlingRights, enPassant)
+    getLegalMoves(board, turn, castlingRights, enPassant),
+    ttBest
   );
 
   if (moves.length === 0) {
@@ -267,10 +270,6 @@ const alphaBeta = (
     );
     tt.store(hash, depth, score, TTFlag.Exact, null);
     return score;
-  }
-
-  if (!check && ply === 0 && moves.length === 1) {
-    return alpha;
   }
 
   let bestMove: Move | null = null;
@@ -334,7 +333,10 @@ export const findBestMove = (
     let alpha = -INF;
     const beta = INF;
 
-    const orderedMoves = orderMoves(moves);
+    const ttEntry = tt.probe(
+      computeHash(board, turn, castlingRights, enPassant)
+    );
+    const orderedMoves = orderMoves(moves, ttEntry ? ttEntry.bestMove : null);
 
     for (const move of orderedMoves) {
       if (timeUp()) break;

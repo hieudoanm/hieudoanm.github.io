@@ -69,7 +69,7 @@ func hasInsufficientMaterial(b types.Board) bool {
 	return false
 }
 
-func updateCastlingRights(cr types.CastlingRights, move types.Move, b types.Board) types.CastlingRights {
+func UpdateCastlingRights(cr types.CastlingRights, move types.Move, b types.Board) types.CastlingRights {
 	newRights := cr
 
 	if move.From == 4 || move.To == 4 {
@@ -139,7 +139,7 @@ func MakeMove(state types.GameState, move types.Move) types.GameState {
 		newEnPassant = utils.Square((utils.RankOf(move.From)+utils.RankOf(move.To))/2, utils.FileOf(move.From))
 	}
 
-	newCastlingRights := updateCastlingRights(state.CastlingRights, move, state.Board)
+	newCastlingRights := UpdateCastlingRights(state.CastlingRights, move, state.Board)
 
 	halfMoveClock := state.HalfMoveClock + 1
 	if piece != nil && (piece.Type == types.Pawn || capturedPiece != nil) {

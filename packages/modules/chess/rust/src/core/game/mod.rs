@@ -61,7 +61,7 @@ fn has_insufficient_material(board: &[Option<crate::core::types::Piece>; 64]) ->
     false
 }
 
-fn update_castling_rights(
+pub fn update_castling_rights(
     castling_rights: CastlingRights,
     mv: Move,
     board: &[Option<crate::core::types::Piece>; 64],

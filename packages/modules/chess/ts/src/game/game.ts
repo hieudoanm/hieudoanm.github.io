@@ -53,7 +53,7 @@ const hasInsufficientMaterial = (board: Board): boolean => {
   return false;
 };
 
-const updateCastlingRights = (
+export const updateCastlingRights = (
   castlingRights: CastlingRights,
   move: Move,
   board: Board
