@@ -86,7 +86,7 @@ const Game2048Modal = dynamic(
 
 const BlackjackModal = dynamic(
   () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/games/BlackjackModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/casino/BlackjackModal').then(
       (mod) => mod.BlackjackModal
     ),
   { ssr: false }
@@ -382,7 +382,7 @@ const PokedexModal = dynamic(
 
 const PokerModal = dynamic(
   () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/calculators/PokerModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/casino/PokerModal').then(
       (mod) => mod.PokerModal
     ),
   { ssr: false }
@@ -865,18 +865,27 @@ const makeTools = (
       onClick: open('inflation'),
     },
     {
-      label: 'Poker',
-      description: 'Odds Calculator',
-      emoji: '🃏',
-      color: '#f59e0b',
-      onClick: open('poker'),
-    },
-    {
       label: 'Tax',
       description: 'Vietnam PIT',
       emoji: '🇻🇳',
       color: '#ef4444',
       onClick: open('tax'),
+    },
+  ],
+  casino: [
+    {
+      label: 'Blackjack',
+      description: 'Cards Counter',
+      emoji: '🃏',
+      color: '#f59e0b',
+      onClick: open('blackjack'),
+    },
+    {
+      label: 'Poker',
+      description: 'Odds Calculator',
+      emoji: '🃏',
+      color: '#f59e0b',
+      onClick: open('poker'),
     },
   ],
   clocks: [
@@ -1071,13 +1080,6 @@ const makeTools = (
       emoji: '🔢',
       color: '#f59e0b',
       onClick: open('game2048'),
-    },
-    {
-      label: 'Blackjack',
-      description: 'Cards Counter',
-      emoji: '🃏',
-      color: '#f59e0b',
-      onClick: open('blackjack'),
     },
     {
       label: 'Palindrome',
@@ -1346,6 +1348,7 @@ const MainContent: FC<MainContentProps> = memo(
     const {
       tools,
       calculators,
+      casino,
       clocks,
       converters,
       editors,
@@ -1375,6 +1378,7 @@ const MainContent: FC<MainContentProps> = memo(
       () => [
         { label: 'Tools', items: tools },
         { label: 'Calculators', items: calculators },
+        { label: 'Casino', items: casino },
         { label: 'Clocks', items: clocks },
         { label: 'Converters', items: converters },
         { label: 'Editors', items: editors },
@@ -1387,6 +1391,7 @@ const MainContent: FC<MainContentProps> = memo(
       [
         tools,
         calculators,
+        casino,
         clocks,
         converters,
         editors,
@@ -1670,6 +1675,11 @@ export const Start: FC = () => {
       {
         label: 'Calculators',
         items: f(toolSections.calculators, 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Casino',
+        items: f(toolSections.casino, 'label'),
         Card: ToolCard,
       },
       {
