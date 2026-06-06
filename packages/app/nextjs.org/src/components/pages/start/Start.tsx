@@ -365,12 +365,11 @@ const PeriodicTableModal = dynamic(
 
 const PiModal = dynamic(
   () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/games/PiNumberModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/memory/PiNumberModal').then(
       (mod) => mod.PiModal
     ),
   { ssr: false }
 );
-
 const PitchModal = dynamic(
   () =>
     import('@hieudoanm.github.io/components/pages/start/modals/education/music/PitchModal').then(
@@ -421,7 +420,7 @@ const QRCodeModal = dynamic(
 
 const QuizifyModal = dynamic(
   () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/games/QuizifyModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/memory/QuizifyModal').then(
       (mod) => mod.QuizifyModal
     ),
   { ssr: false }
@@ -429,8 +428,16 @@ const QuizifyModal = dynamic(
 
 const RecallModal = dynamic(
   () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/games/RecallModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/memory/RecallModal').then(
       (mod) => mod.RecallModal
+    ),
+  { ssr: false }
+);
+
+const RockPaperScissorsModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/games/RockPaperScissorsModal').then(
+      (mod) => mod.RockPaperScissorsModal
     ),
   { ssr: false }
 );
@@ -640,6 +647,7 @@ type ModalId =
   | 'quizify'
   | 'recall'
   | 'redact'
+  | 'rps'
   | 'regex'
   | 'resume'
   | 'sheets'
@@ -720,6 +728,7 @@ const MODAL_MAP: Record<
   quizify: QuizifyModal,
   recall: RecallModal,
   redact: RedactModal,
+  rps: RockPaperScissorsModal,
   regex: RegexModal,
   resume: ResumeModal,
   sheets: SheetsModal,
@@ -1119,13 +1128,6 @@ const makeTools = (
       onClick: open('snake'),
     },
     {
-      label: 'PI',
-      description: 'Memorization',
-      emoji: 'π',
-      color: '#f59e0b',
-      onClick: open('pi'),
-    },
-    {
       label: 'Pokedex',
       description: 'Pokemon',
       emoji: '📕',
@@ -1133,18 +1135,11 @@ const makeTools = (
       onClick: open('pokedex'),
     },
     {
-      label: 'Quizify',
-      description: 'Quiz',
-      emoji: '❓',
+      label: 'RPS',
+      description: 'Rock Paper Scissors',
+      emoji: '✂️',
       color: '#f59e0b',
-      onClick: open('quizify'),
-    },
-    {
-      label: 'Recall',
-      description: 'Memorization',
-      emoji: '🔣',
-      color: '#f59e0b',
-      onClick: open('recall'),
+      onClick: open('rps'),
     },
     {
       label: 'T3',
@@ -1173,6 +1168,29 @@ const makeTools = (
       emoji: '🟩',
       color: '#f59e0b',
       onClick: open('wordle'),
+    },
+  ],
+  memory: [
+    {
+      label: 'PI',
+      description: 'Memorization',
+      emoji: 'π',
+      color: '#f59e0b',
+      onClick: open('pi'),
+    },
+    {
+      label: 'Quizify',
+      description: 'Quiz',
+      emoji: '❓',
+      color: '#f59e0b',
+      onClick: open('quizify'),
+    },
+    {
+      label: 'Recall',
+      description: 'Memorization',
+      emoji: '🔣',
+      color: '#f59e0b',
+      onClick: open('recall'),
     },
   ],
   images: [
@@ -1371,6 +1389,7 @@ const MainContent: FC<MainContentProps> = memo(
       education,
       eyes,
       games,
+      memory,
       images,
       visualization,
     } = toolSections;
@@ -1401,6 +1420,7 @@ const MainContent: FC<MainContentProps> = memo(
         { label: 'Education', items: education },
         { label: 'Eyes', items: eyes },
         { label: 'Games', items: games },
+        { label: 'Memory', items: memory },
         { label: 'Images', items: images },
         { label: 'Visualization', items: visualization },
       ],
@@ -1414,6 +1434,7 @@ const MainContent: FC<MainContentProps> = memo(
         education,
         eyes,
         games,
+        memory,
         images,
         visualization,
       ]
@@ -1724,6 +1745,11 @@ export const Start: FC = () => {
         Card: ToolCard,
       },
       { label: 'Games', items: f(toolSections.games, 'label'), Card: ToolCard },
+      {
+        label: 'Memory',
+        items: f(toolSections.memory, 'label'),
+        Card: ToolCard,
+      },
       {
         label: 'Images',
         items: f(toolSections.images, 'label'),
