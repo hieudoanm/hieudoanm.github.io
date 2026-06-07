@@ -1,9 +1,7 @@
-import { createClipboard, scrollToBottom } from '@browser/native';
-import { GeminiModel } from '@api/ts';
-import { OpenRouterModel } from '@hieudoanm.github.io/clients/openrouter/openrouter.enums';
+import { createClipboard } from '@browser/native';
 import { MODELS } from '@hieudoanm.github.io/constants/models';
 import { marked } from 'marked';
-import { FC, useEffect } from 'react';
+import { FC, useEffect, useRef } from 'react';
 import { Counter } from './ChatCounter';
 
 const clipboard = createClipboard();
@@ -14,39 +12,44 @@ export type Message = {
   role: Role;
   text: string;
   loading: boolean;
-  model: GeminiModel | OpenRouterModel;
+  model: string;
 };
 
 export const Messages: FC<{ messages: Message[] }> = ({ messages = [] }) => {
+  const bottomRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    scrollToBottom('messages');
+    bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
   if (!messages.length) {
     return (
-      <div className="flex grow items-center justify-center">
-        <p className="text-neutral-500">
-          No messages yet. Start the conversation with {MODELS.length} free AI
-          Models
-        </p>
+      <div className="flex h-full items-center justify-center">
+        <div className="text-center">
+          <p className="text-4xl">💬</p>
+          <p className="mt-3 text-sm text-neutral-500">
+            Pick a model from the left, then start chatting
+          </p>
+          <p className="mt-1 text-xs text-neutral-600">
+            {MODELS.length} free models available
+          </p>
+        </div>
       </div>
     );
   }
 
   return (
-    <div
-      id="messages"
-      className="flex grow scrollbar-none flex-col space-y-4 overflow-y-auto">
+    <div className="flex flex-col gap-4">
       {messages.map(({ role, text, loading = false, model }, index) => {
         const key = `${role}-${index}`;
         if (role === 'user')
           return (
             <div key={key} className="flex justify-end">
-              <div className="flex flex-col items-end space-y-1">
-                <div className="max-w-md rounded-2xl bg-neutral-800 px-4 py-2 text-right">
+              <div className="flex max-w-lg flex-col items-end gap-1">
+                <div className="rounded-2xl bg-neutral-800 px-4 py-2.5 text-sm leading-relaxed">
                   <p>{text}</p>
                 </div>
-                <p className="px-4 text-xs text-neutral-500">{model}</p>
+                <p className="px-1 text-[10px] text-neutral-600">{model}</p>
               </div>
             </div>
           );
@@ -55,29 +58,37 @@ export const Messages: FC<{ messages: Message[] }> = ({ messages = [] }) => {
           return (
             <div key={key}>
               {loading ? (
-                <div className="flex flex-col items-start space-y-1">
-                  <p className="text-xs text-neutral-500">{model}</p>
-                  <div className="flex items-center space-x-2">
-                    <div className="h-3 w-3 animate-bounce rounded-full bg-neutral-100 [animation-delay:0s]"></div>
-                    <div className="h-3 w-3 animate-bounce rounded-full bg-neutral-100 [animation-delay:0.2s]"></div>
-                    <div className="h-3 w-3 animate-bounce rounded-full bg-neutral-100 [animation-delay:0.4s]"></div>
-                    <div className="grow pb-2">
-                      <Counter />
+                <div className="flex flex-col gap-2">
+                  <div className="flex items-center gap-2">
+                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-neutral-700 text-[10px]">
+                      AI
+                    </span>
+                    <p className="text-xs text-neutral-500">{model}</p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-1.5">
+                      <div className="h-2 w-2 animate-bounce rounded-full bg-neutral-500 [animation-delay:0s]"></div>
+                      <div className="h-2 w-2 animate-bounce rounded-full bg-neutral-500 [animation-delay:0.2s]"></div>
+                      <div className="h-2 w-2 animate-bounce rounded-full bg-neutral-500 [animation-delay:0.4s]"></div>
                     </div>
+                    <Counter />
                   </div>
                 </div>
               ) : (
-                <div className="flex flex-col items-start space-y-1">
-                  <div className="flex items-center space-x-1 text-neutral-500">
-                    <p className="text-xs">{model}</p>
+                <div className="flex flex-col gap-1.5">
+                  <div className="flex items-center gap-2">
+                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-neutral-700 text-[10px]">
+                      AI
+                    </span>
+                    <p className="text-xs text-neutral-500">{model}</p>
                     <button
-                      className="cursor-pointer text-lg"
+                      className="ml-auto cursor-pointer text-xs text-neutral-600 transition-opacity hover:opacity-70"
                       onClick={() => clipboard.copy(text)}>
-                      Copy
+                      📋
                     </button>
                   </div>
                   <div
-                    className="prose prose-invert markdown-body bg-neutral-900!"
+                    className="prose prose-invert markdown-body rounded-xl bg-neutral-900 px-4 py-3 text-sm leading-relaxed!"
                     dangerouslySetInnerHTML={{ __html: html }}
                   />
                 </div>
@@ -87,6 +98,7 @@ export const Messages: FC<{ messages: Message[] }> = ({ messages = [] }) => {
         }
         return <span key={key}></span>;
       })}
+      <div ref={bottomRef} />
     </div>
   );
 };

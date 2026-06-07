@@ -22,11 +22,8 @@ export const appRouter = router({
         })
       )
       .mutation(async (options): Promise<{ text: string }> => {
-        const { messages = [], model = GeminiModel.Gemini_2_5_Flash } =
-          options.input;
-        const { data, error } = await tryCatch(
-          generate({ messages, model: model as GeminiModel | OpenRouterModel })
-        );
+        const { messages = [], model = '' } = options.input;
+        const { data, error } = await tryCatch(generate({ messages, model }));
         if (error) {
           console.error('Error generating content:', error);
           return { text: 'An error occurred while generating content.' };

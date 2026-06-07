@@ -13,7 +13,15 @@ interface OpenRouterModel {
   supported_parameters: string[];
 }
 
-export const FreeModelsTab: FC = () => {
+interface ChatModelsProps {
+  selectedModelId: string;
+  onSelect: (modelId: string) => void;
+}
+
+export const ChatModels: FC<ChatModelsProps> = ({
+  selectedModelId,
+  onSelect,
+}) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedTokenizer, setSelectedTokenizer] = useState('');
 
@@ -21,7 +29,7 @@ export const FreeModelsTab: FC = () => {
     queryKey: ['openrouter', 'models'],
     queryFn: () =>
       fetch('https://openrouter.ai/api/v1/models').then((res) => res.json()),
-    staleTime: 1000 * 60 * 60, // 1 hour
+    staleTime: 1000 * 60 * 60,
     retry: 1,
   });
 
@@ -41,7 +49,6 @@ export const FreeModelsTab: FC = () => {
   ).sort();
 
   const filteredModels = freeModels.filter((model) => {
-    // Filter by tokenizer if one is selected
     if (
       selectedTokenizer &&
       model.architecture?.tokenizer !== selectedTokenizer
@@ -49,7 +56,6 @@ export const FreeModelsTab: FC = () => {
       return false;
     }
 
-    // Filter by search query
     const query = searchQuery.toLowerCase().trim();
     if (!query) return true;
     return (
@@ -60,20 +66,19 @@ export const FreeModelsTab: FC = () => {
 
   return (
     <div className="flex h-full flex-col">
-      {/* Search & Filter Header */}
-      <div className="border-base-300 flex flex-col gap-2 border-b p-3">
+      <div className="flex flex-col gap-2 px-3 pt-2.5 pb-3">
         <div className="relative">
           <input
             type="text"
-            placeholder="Search models…"
-            className="input input-bordered input-xs w-full pr-6"
+            placeholder="Search…"
+            className="input input-ghost input-xs w-full rounded-lg bg-neutral-800 pr-6 text-xs"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
           {searchQuery && (
             <button
               onClick={() => setSearchQuery('')}
-              className="text-base-content/50 hover:text-base-content absolute top-1/2 right-2 -translate-y-1/2 text-[10px]"
+              className="absolute top-1/2 right-2 -translate-y-1/2 text-[10px] opacity-30 transition-opacity hover:opacity-60"
               title="Clear search">
               ✕
             </button>
@@ -81,7 +86,7 @@ export const FreeModelsTab: FC = () => {
         </div>
 
         <select
-          className="select select-bordered select-xs w-full text-xs font-medium"
+          className="select select-ghost select-xs w-full rounded-lg bg-neutral-800 text-[10px]"
           value={selectedTokenizer}
           onChange={(e) => setSelectedTokenizer(e.target.value)}>
           <option value="">All tokenizers</option>
@@ -93,44 +98,46 @@ export const FreeModelsTab: FC = () => {
         </select>
       </div>
 
-      <div className="flex-1 overflow-y-auto">
+      <div className="flex-1 overflow-y-auto px-2 pb-2">
         {isPending ? (
-          <p className="text-base-content/25 py-8 text-center text-xs">
-            Loading models...
-          </p>
+          <p className="py-8 text-center text-[10px] opacity-30">Loading...</p>
         ) : error ? (
-          <p className="text-error/50 py-8 text-center text-xs">
-            Failed to load models
+          <p className="py-8 text-center text-[10px] text-red-400/50">
+            Failed to load
           </p>
         ) : freeModels.length === 0 ? (
-          <p className="text-base-content/25 py-8 text-center text-xs">
-            No free models found.
+          <p className="py-8 text-center text-[10px] opacity-30">
+            No free models
           </p>
         ) : filteredModels.length === 0 ? (
-          <p className="text-base-content/25 py-8 text-center text-xs">
-            No matching models found.
-          </p>
+          <p className="py-8 text-center text-[10px] opacity-30">No matches</p>
         ) : (
-          <ul className="flex flex-col gap-0.5 p-3">
-            {filteredModels.map((model) => (
-              <li
-                key={model.id}
-                className="hover:bg-base-300 flex flex-col gap-1 rounded-lg px-2 py-2 transition-colors">
-                <span className="text-xs font-semibold">{model.name}</span>
-                <span className="text-base-content/50 text-[10px] break-all">
-                  {model.id}
-                </span>
-              </li>
-            ))}
+          <ul className="flex flex-col gap-px">
+            {filteredModels.map((model) => {
+              const isSelected = model.id === selectedModelId;
+              return (
+                <li
+                  key={model.id}
+                  onClick={() => onSelect(model.id)}
+                  className={`flex cursor-pointer flex-col gap-0.5 rounded-lg px-2.5 py-2 transition-colors ${
+                    isSelected ? 'bg-neutral-700/60' : 'hover:bg-neutral-800/60'
+                  }`}>
+                  <span className="text-xs font-medium">{model.name}</span>
+                  <span className="truncate text-[9px] opacity-30">
+                    {model.id}
+                  </span>
+                </li>
+              );
+            })}
           </ul>
         )}
       </div>
 
-      <footer className="border-base-300 border-t px-4 py-4 text-center font-mono">
-        <p className="text-xs tracking-widest uppercase opacity-20">
+      <footer className="border-t border-neutral-800 px-3 py-2.5 text-center">
+        <p className="text-[9px] tracking-widest uppercase opacity-15">
           {searchQuery.trim() || selectedTokenizer
             ? `${filteredModels.length} found · ${freeModels.length} total`
-            : `${freeModels.length} free models`}
+            : `${freeModels.length} free`}
         </p>
       </footer>
     </div>

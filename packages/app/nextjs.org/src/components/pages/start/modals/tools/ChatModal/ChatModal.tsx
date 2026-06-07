@@ -1,32 +1,11 @@
 import { scrollToBottom } from '@browser/native';
-import { GeminiModel } from '@api/ts';
-import { OpenRouterModel } from '@hieudoanm.github.io/clients/openrouter/openrouter.enums';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
-import { Model, models } from '@hieudoanm.github.io/data/models';
 import { trpcClient } from '@hieudoanm.github.io/utils/trpc';
 import { tryCatch } from '@lodashx/ts';
 import { ChangeEvent, FC, SubmitEvent, useRef, useState } from 'react';
 import Tesseract from 'tesseract.js';
 import { Message, Messages } from './ChatMessages';
-
-const groupModels = (models: Model[]) => {
-  const ids: string[] = models.map(({ id }) => id);
-  ids.sort((a, b) => (a > b ? 1 : -1));
-
-  const groups: string[] = [
-    ...new Set(
-      ids.map((id) => id.split('/').at(0) ?? '').filter((group) => group !== '')
-    ),
-  ];
-  groups.sort((a, b) => (a > b ? 1 : -1));
-
-  const modelsByGroups = groups.map((group) => {
-    const modelsByGroup = models.filter(({ id }) => id.includes(group));
-    modelsByGroup.sort((a, b) => (a.name > b.name ? 1 : -1));
-    return { group, models: modelsByGroup };
-  });
-  return modelsByGroups;
-};
+import { ChatModels } from './ChatModels';
 
 export const ChatModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -34,17 +13,17 @@ export const ChatModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     {
       message = 'Explain GenAI in a few words',
       messages = [],
-      model = OpenRouterModel.Deepseek_R1,
+      model = 'openrouter/free',
     },
     setState,
   ] = useState<{
     message: string;
     messages: Message[];
-    model: GeminiModel | OpenRouterModel;
+    model: string;
   }>({
     message: 'Explain GenAI in a few words',
     messages: [],
-    model: OpenRouterModel.Deepseek_R1,
+    model: 'openrouter/free',
   });
 
   const loading: boolean = messages.some((message) => message.loading);
@@ -106,94 +85,92 @@ export const ChatModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   };
 
   return (
-    <ModalWrapper onClose={onClose} title="Chat" size="max-w-4xl" fullHeight>
-      <div className="flex items-center justify-between px-4 py-2">
-        {messages.length > 0 && (
-          <button
-            className="btn btn-ghost btn-sm"
-            onClick={() => {
-              setState((previous) => ({
-                ...previous,
-                message: '',
-                messages: [],
-              }));
-              scrollToBottom('messages');
-            }}>
-            New Chat
-          </button>
-        )}
-        <div />
-      </div>
-
-      <div className="flex-1 overflow-y-auto">
-        <Messages messages={messages} />
-      </div>
-
-      <form
-        onSubmit={onSubmit}
-        className="mx-4 mb-4 flex flex-col items-center rounded-2xl bg-neutral-800 p-2">
-        <textarea
-          autoComplete="off"
-          placeholder="Ask anything ..."
-          className="w-full resize-none overflow-hidden bg-transparent p-2 focus:outline-none"
-          ref={textareaRef}
-          onInput={onInputPaste}
-          onPaste={onInputPaste}
-          rows={1}
-          value={message}
-          onChange={(event: ChangeEvent<HTMLTextAreaElement>) => {
-            const message = event.target.value;
-            setState((previous) => ({ ...previous, message }));
-          }}
-        />
-        <div className="flex w-full items-center justify-between gap-x-2 p-2">
-          <select
-            className="w-full max-w-sm appearance-none truncate bg-transparent font-black focus:outline-none"
-            value={model}
-            onChange={(event: ChangeEvent<HTMLSelectElement>) => {
-              setState((previous) => ({
-                ...previous,
-                model: event.target.value as GeminiModel,
-              }));
-            }}>
-            {groupModels(models).map(({ group, models }) => (
-              <optgroup key={group} label={group}>
-                {models.map(({ id, name }) => (
-                  <option key={id} value={id}>
-                    {name}
-                  </option>
-                ))}
-              </optgroup>
-            ))}
-          </select>
-          <div className="flex items-center gap-x-4">
-            <label className="cursor-pointer rounded-full text-neutral-100">
-              <input
-                type="file"
-                className="hidden"
-                disabled={loading}
-                onChange={async (event) => {
-                  const file = event.target.files?.[0];
-                  if (file) {
-                    const {
-                      data: { text },
-                    } = await Tesseract.recognize(file, 'eng');
-                    setState((previous) => ({ ...previous, message: text }));
-                    onInputPaste();
-                  }
-                }}
-              />
-              Attach
-            </label>
-            <button
-              type="submit"
-              className="cursor-pointer rounded-full bg-neutral-100 p-2 text-neutral-900"
-              disabled={loading}>
-              Send
-            </button>
+    <ModalWrapper onClose={onClose} title="Chat" size="max-w-5xl" fullHeight>
+      <div className="flex min-h-0 flex-1">
+        <div className="border-base-300 flex w-72 shrink-0 flex-col border-r">
+          <div className="border-base-300 flex items-center gap-2 border-b px-3 py-2.5">
+            <span className="text-xs font-bold tracking-widest uppercase opacity-40">
+              Models
+            </span>
+            {messages.length > 0 && (
+              <button
+                className="ml-auto text-[10px] tracking-wider uppercase opacity-30 transition-opacity hover:opacity-60"
+                onClick={() => {
+                  setState((previous) => ({
+                    ...previous,
+                    message: '',
+                    messages: [],
+                  }));
+                  scrollToBottom('messages');
+                }}>
+                Clear
+              </button>
+            )}
+          </div>
+          <div className="min-h-0 flex-1">
+            <ChatModels
+              selectedModelId={model}
+              onSelect={(modelId) =>
+                setState((previous) => ({
+                  ...previous,
+                  model: modelId,
+                }))
+              }
+            />
           </div>
         </div>
-      </form>
+
+        <div className="flex min-h-0 flex-1 flex-col">
+          <div className="flex-1 overflow-y-auto px-4 py-4">
+            <Messages messages={messages} />
+          </div>
+
+          <div className="border-base-300 border-t px-4 py-3">
+            <form
+              onSubmit={onSubmit}
+              className="flex items-center gap-x-2 rounded-2xl border border-neutral-700 bg-neutral-800/50 px-3 py-1.5 transition-colors focus-within:border-neutral-600">
+              <textarea
+                autoComplete="off"
+                placeholder="Ask anything ..."
+                className="flex-1 resize-none overflow-hidden bg-transparent py-1.5 text-sm focus:outline-none"
+                ref={textareaRef}
+                onInput={onInputPaste}
+                onPaste={onInputPaste}
+                rows={1}
+                value={message}
+                onChange={(event: ChangeEvent<HTMLTextAreaElement>) => {
+                  const message = event.target.value;
+                  setState((previous) => ({ ...previous, message }));
+                }}
+              />
+              <label className="cursor-pointer px-1 text-sm opacity-40 transition-opacity hover:opacity-70">
+                <input
+                  type="file"
+                  className="hidden"
+                  disabled={loading}
+                  onChange={async (event) => {
+                    const file = event.target.files?.[0];
+                    if (file) {
+                      const {
+                        data: { text },
+                      } = await Tesseract.recognize(file, 'eng');
+                      setState((previous) => ({ ...previous, message: text }));
+                      onInputPaste();
+                    }
+                  }}
+                />
+                📎
+              </label>
+              <button
+                type="submit"
+                className="flex h-7 w-7 shrink-0 cursor-pointer items-center justify-center rounded-full bg-neutral-100 text-xs text-neutral-900 transition-opacity disabled:opacity-30"
+                disabled={loading}>
+                ➤
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
     </ModalWrapper>
   );
 };
