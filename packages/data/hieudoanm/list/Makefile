@@ -3,10 +3,11 @@
 all: query convert
 
 convert:
-	python3 scripts/convert.py
+	uv run scripts/convert.py
 
 query:
-	python3 scripts/query-emojis.py
-	python3 scripts/query-palindrome.py
-	python3 scripts/query-tlds.py
-	python3 scripts/query-wordle.py
+	uv run scripts/query-chess-titles.py
+	uv run scripts/query-emojis.py
+	uv run scripts/query-palindrome.py
+	uv run scripts/query-tlds.py
+	uv run scripts/query-wordle.py
