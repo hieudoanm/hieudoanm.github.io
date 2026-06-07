@@ -4,4 +4,7 @@ version = "0.0.1"
 description = "hieudoanm.db"
 readme = "README.md"
 requires-python = "==3.14.5"
-dependencies = []
+dependencies = [
+    "pandas>=3.0.3",
+    "requests>=2.34.2",
+]

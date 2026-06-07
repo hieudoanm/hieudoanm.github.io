@@ -3,9 +3,10 @@
 all: query convert
 
 convert:
-	python3 scripts/convert.py
+	uv run scripts/convert.py
 
 query:
-	python3 scripts/query-quotes.py
-	python3 scripts/query-timezones.py
-	python3 scripts/query-visas.py
+	uv run scripts/query-chess-openings.py
+	uv run scripts/query-quotes.py
+	uv run scripts/query-timezones.py
+	uv run scripts/query-visas.py
