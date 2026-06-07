@@ -1,0 +1,189 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`NavigationSection to match snapshot 1`] = `
+<div>
+  <section
+    class="mx-auto max-w-5xl px-12 py-24"
+    id="navigation"
+  >
+    <p
+      class="text-primary mb-3 text-xs font-medium tracking-[0.14em] uppercase"
+    >
+      Navigation
+    </p>
+    <h2
+      class="mb-4 font-serif text-4xl leading-snug font-bold "
+    >
+      Find your way
+    </h2>
+    <p
+      class="text-base-content/60 mb-12 max-w-xl text-base leading-relaxed "
+    >
+      Tabs, breadcrumbs, pagination, and more — every pattern users expect, executed with precision.
+    </p>
+    <div
+      class="mb-8"
+    >
+      <p
+        class="text-base-content/50 mb-4 text-sm"
+      >
+        Breadcrumb
+      </p>
+      <div
+        class="breadcrumbs text-base-content/50 text-sm"
+      >
+        <ul>
+          <li>
+            <a
+              class="hover:text-primary"
+              href="#"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              class="hover:text-primary"
+              href="#"
+            >
+              Components
+            </a>
+          </li>
+          <li>
+            <a
+              class="hover:text-primary"
+              href="#"
+            >
+              Navigation
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-base-content"
+              href="#"
+            >
+              Breadcrumb
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="mb-8"
+    >
+      <p
+        class="text-base-content/50 mb-4 text-sm"
+      >
+        Tabs
+      </p>
+      <div
+        class="tabs tabs-bordered"
+        role="tablist"
+      >
+        <button
+          class="tab capitalize tab-active text-primary"
+          role="tab"
+        >
+          overview
+        </button>
+        <button
+          class="tab capitalize text-base-content/50"
+          role="tab"
+        >
+          api
+        </button>
+        <button
+          class="tab capitalize text-base-content/50"
+          role="tab"
+        >
+          examples
+        </button>
+        <button
+          class="tab capitalize text-base-content/50"
+          role="tab"
+        >
+          changelog
+        </button>
+      </div>
+      <p
+        class="text-base-content/50 mt-4 font-mono text-sm leading-relaxed"
+      >
+        The Overview tab shows a high-level description of the component, its variants, and usage guidelines. Switch tabs to explore the API reference, live code examples, and version history.
+      </p>
+    </div>
+    <div
+      class="mb-8"
+    >
+      <p
+        class="text-base-content/50 mb-4 text-sm"
+      >
+        Pagination
+      </p>
+      <div
+        class="join"
+      >
+        <button
+          class="join-item btn btn-sm btn-ghost border-base-300 border "
+        >
+          ‹
+        </button>
+        <button
+          class="join-item btn btn-sm btn-primary "
+        >
+          1
+        </button>
+        <button
+          class="join-item btn btn-sm btn-ghost border-base-300 border "
+        >
+          2
+        </button>
+        <button
+          class="join-item btn btn-sm btn-ghost border-base-300 border "
+        >
+          3
+        </button>
+        <button
+          class="join-item btn btn-sm btn-ghost border-base-300 border btn-disabled opacity-40"
+        >
+          …
+        </button>
+        <button
+          class="join-item btn btn-sm btn-ghost border-base-300 border "
+        >
+          12
+        </button>
+        <button
+          class="join-item btn btn-sm btn-ghost border-base-300 border "
+        >
+          ›
+        </button>
+      </div>
+    </div>
+    <div
+      class="flex flex-wrap gap-3"
+    >
+      <label
+        class="btn btn-ghost border-base-300 border"
+        for="demo-modal"
+      >
+        Open modal ↗
+      </label>
+      <label
+        class="btn btn-ghost border-base-300 border"
+        for="demo-drawer"
+      >
+        Open drawer ↗
+      </label>
+      <div
+        class="relative"
+      >
+        <button
+          class="btn btn-ghost border-base-300 border"
+        >
+          Color popover ↓
+        </button>
+      </div>
+    </div>
+  </section>
+</div>
+`;

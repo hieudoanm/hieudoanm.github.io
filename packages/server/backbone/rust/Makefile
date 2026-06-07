@@ -2,7 +2,7 @@ CARGO=cargo
 BUILD_DIR=target/release
 BINARY=backbone
 
-.PHONY: all build clean test format lint run start docker-start
+.PHONY: all build clean test format lint coverage run start docker-start
 
 all: format lint test build
 
@@ -21,6 +21,11 @@ format:
 
 lint:
 	$(CARGO) clippy -- -D warnings 2>/dev/null || true
+
+coverage:
+	cargo llvm-cov --html
+	@echo ""
+	@echo "Coverage report: file://$$(pwd)/target/llvm-cov/html/index.html"
 
 run: build
 	./$(BUILD_DIR)/$(BINARY)

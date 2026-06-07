@@ -1,0 +1,274 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`ManifestModal should render PWA manifest by default 1`] = `
+<div>
+  <dialog
+    class="modal modal-open"
+    open=""
+    style="background: rgba(0, 0, 0, 0.6);"
+  >
+    <div
+      class="modal-box border-base-content/15 flex h-[90vh] w-full max-w-2xl flex-col overflow-hidden border p-0"
+    >
+      <div
+        class="border-base-300 flex items-center justify-between border-b px-4 py-3"
+      >
+        <h3
+          class="text-sm font-bold"
+        >
+          Manifest Editor
+        </h3>
+        <button
+          class="btn btn-sm btn-circle btn-ghost opacity-60 hover:opacity-100"
+        >
+          ✕
+        </button>
+      </div>
+      <div
+        class="border-base-300 flex items-center border-b px-4 py-3"
+      >
+        <div
+          class="tabs tabs-boxed"
+        >
+          <a
+            class="tab tab-sm uppercase tab-active"
+            role="tab"
+          >
+            📱 PWA
+          </a>
+          <a
+            class="tab tab-sm uppercase "
+            role="tab"
+          >
+            🧩 Extension
+          </a>
+        </div>
+      </div>
+      <div
+        class="flex min-h-0 flex-1 overflow-hidden"
+      >
+        <div
+          class="border-base-300 bg-base-200 text-base-content/30 w-10 shrink-0 overflow-hidden border-r py-3 text-right font-mono text-[10px] leading-relaxed select-none"
+        >
+          <div
+            class="px-2"
+          >
+            1
+          </div>
+          <div
+            class="px-2"
+          >
+            2
+          </div>
+          <div
+            class="px-2"
+          >
+            3
+          </div>
+          <div
+            class="px-2"
+          >
+            4
+          </div>
+          <div
+            class="px-2"
+          >
+            5
+          </div>
+          <div
+            class="px-2"
+          >
+            6
+          </div>
+          <div
+            class="px-2"
+          >
+            7
+          </div>
+          <div
+            class="px-2"
+          >
+            8
+          </div>
+          <div
+            class="px-2"
+          >
+            9
+          </div>
+          <div
+            class="px-2"
+          >
+            10
+          </div>
+          <div
+            class="px-2"
+          >
+            11
+          </div>
+          <div
+            class="px-2"
+          >
+            12
+          </div>
+          <div
+            class="px-2"
+          >
+            13
+          </div>
+          <div
+            class="px-2"
+          >
+            14
+          </div>
+          <div
+            class="px-2"
+          >
+            15
+          </div>
+          <div
+            class="px-2"
+          >
+            16
+          </div>
+          <div
+            class="px-2"
+          >
+            17
+          </div>
+          <div
+            class="px-2"
+          >
+            18
+          </div>
+          <div
+            class="px-2"
+          >
+            19
+          </div>
+          <div
+            class="px-2"
+          >
+            20
+          </div>
+          <div
+            class="px-2"
+          >
+            21
+          </div>
+          <div
+            class="px-2"
+          >
+            22
+          </div>
+          <div
+            class="px-2"
+          >
+            23
+          </div>
+          <div
+            class="px-2"
+          >
+            24
+          </div>
+          <div
+            class="px-2"
+          >
+            25
+          </div>
+          <div
+            class="px-2"
+          >
+            26
+          </div>
+          <div
+            class="px-2"
+          >
+            27
+          </div>
+          <div
+            class="px-2"
+          >
+            28
+          </div>
+          <div
+            class="px-2"
+          >
+            29
+          </div>
+          <div
+            class="px-2"
+          >
+            30
+          </div>
+        </div>
+        <textarea
+          autocapitalize="off"
+          autocorrect="off"
+          class="text-base-content/80 flex-1 resize-none bg-transparent p-3 font-mono text-[11px] leading-relaxed outline-none"
+          spellcheck="false"
+        >
+          {
+  "background_color": "",
+  "categories": [],
+  "description": "",
+  "display": "fullscreen",
+  "file_handlers": [],
+  "icons": [],
+  "id": "",
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
+  "name": "",
+  "note_taking": {
+    "new_note_url": ""
+  },
+  "orientation": "landscape",
+  "prefer_related_applications": false,
+  "protocol_handlers": [],
+  "related_applications": [],
+  "scope": "",
+  "scope_extensions": [],
+  "screenshots": [],
+  "start_url": "",
+  "short_name": "",
+  "lang": "",
+  "dir": "auto",
+  "theme_color": "",
+  "shortcuts": [],
+  "iarc_rating_id": ""
+}
+        </textarea>
+      </div>
+      <div
+        class="border-base-300 flex items-center justify-between border-t px-4 py-2"
+      >
+        <span
+          class="text-base-content/30 font-mono text-[10px]"
+        >
+          30
+           lines · 
+          593
+           bytes
+        </span>
+        <div
+          class="flex gap-2"
+        >
+          <button
+            class="btn btn-ghost btn-xs"
+          >
+            Reset
+          </button>
+          <button
+            class="btn btn-xs btn-primary"
+          >
+            Copy
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal-backdrop"
+    />
+  </dialog>
+</div>
+`;

@@ -80,4 +80,37 @@ func TestChessClient(t *testing.T) {
 			t.Fatal("expected error")
 		}
 	})
+
+	t.Run("GetPlayer error status", func(t *testing.T) {
+		ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+			w.WriteHeader(http.StatusNotFound)
+		}))
+		defer ts.Close()
+
+		c := &ChessClient{BaseURL: ts.URL}
+		_, err := c.GetPlayer("nobody")
+		if err == nil {
+			t.Fatal("expected error")
+		}
+	})
+
+	t.Run("GetStats error status", func(t *testing.T) {
+		ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+			w.WriteHeader(http.StatusNotFound)
+		}))
+		defer ts.Close()
+
+		c := &ChessClient{BaseURL: ts.URL}
+		_, err := c.GetStats("nobody")
+		if err == nil {
+			t.Fatal("expected error")
+		}
+	})
+
+	t.Run("NewChessClient default base URL", func(t *testing.T) {
+		c := NewChessClient()
+		if c.BaseURL != "https://api.chess.com/pub" {
+			t.Errorf("expected https://api.chess.com/pub, got %s", c.BaseURL)
+		}
+	})
 }

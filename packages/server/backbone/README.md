@@ -11,7 +11,8 @@
 ## Languages
 
 1. [Go](https://go.dev)
-2. [Rust](https://rust-lang.org)
+2. [Kotlin](https://kotlinlang.org)
+3. [Rust](https://rust-lang.org)
 
 ## Dashboard
 

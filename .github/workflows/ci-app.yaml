@@ -1,0 +1,188 @@
+name: CI - App
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/mobile/expo.dev/**'
+      - 'packages/app/web/nextjs.org/**'
+      - 'packages/app/web/solidjs.com/**'
+      - '.github/workflows/ci-app.yaml'
+
+permissions:
+  contents: write
+
+jobs:
+  expo:
+    name: Expo
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.3
+      - name: Install pnpm
+        uses: pnpm/action-setup@v6.0.8
+        with:
+          version: '11.8.0'
+      - name: Install Node.js
+        uses: actions/setup-node@v6.4.0
+        with:
+          node-version: '26.3.1'
+          cache: 'pnpm'
+      - name: Install Dependencies
+        run: pnpm install
+      - name: Lint
+        run: pnpm run lint --filter=...[origin/master]
+      - name: Build
+        run: pnpm run build --filter=...[origin/master]
+      - name: Test
+        run: pnpm run test --filter=...[origin/master]
+
+  next:
+    name: Next.js
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.3
+      - name: Install pnpm
+        uses: pnpm/action-setup@v6.0.8
+        with:
+          version: '11.8.0'
+      - name: Install Node.js
+        uses: actions/setup-node@v6.4.0
+        with:
+          node-version: '26.3.1'
+          cache: 'pnpm'
+      - name: Setup Chrome
+        uses: browser-actions/setup-chrome@v1.7.3
+        with:
+          install-chromedriver: true
+      - name: Install Dependencies
+        run: pnpm install
+      - name: Lint
+        run: pnpm run lint --filter=...[origin/master]
+      - name: Build Workspace Dependencies
+        run: pnpm run build --filter=@api/ts --filter=@chess/ts --filter=@lodash/ts --filter=@lodashx/ts --filter=@frontend/native --filter=@frontend/react
+      - name: Build
+        run: pnpm run build --filter=...[origin/master]
+      - name: Test
+        run: pnpm run test --filter=...[origin/master]
+
+  solid:
+    name: SolidJS
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.3
+      - name: Install pnpm
+        uses: pnpm/action-setup@v6.0.8
+        with:
+          version: '11.8.0'
+      - name: Install Node.js
+        uses: actions/setup-node@v6.4.0
+        with:
+          node-version: '26.3.1'
+          cache: 'pnpm'
+      - name: Setup Chrome
+        uses: browser-actions/setup-chrome@v1.7.3
+        with:
+          install-chromedriver: true
+      - name: Install Dependencies
+        run: pnpm install
+      - name: Lint
+        run: pnpm run lint --filter=...[origin/master]
+      - name: Build
+        run: pnpm run build --filter=...[origin/master]
+      - name: Test
+        run: pnpm run test --filter=...[origin/master]
+
+  tauri:
+    name: Tauri (${{ matrix.app }}, ${{ matrix.os }})
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        app: [mobile/expo.dev, web/nextjs.org]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.3
+      - name: Install pnpm
+        uses: pnpm/action-setup@v6.0.8
+        with:
+          version: '11.8.0'
+      - name: Install Node.js
+        uses: actions/setup-node@v6.4.0
+        with:
+          node-version: '26.3.1'
+          cache: 'pnpm'
+      - name: Install Dependencies
+        run: pnpm install
+      - name: Install System Dependencies
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libwebkit2gtk-4.1-dev \
+            libgtk-3-dev \
+            libappindicator3-dev \
+            librsvg2-dev \
+            patchelf
+      - name: Build Workspace Dependencies
+        run: pnpm run build --filter=@api/ts --filter=@chess/ts --filter=@lodash/ts --filter=@lodashx/ts --filter=@frontend/native --filter=@frontend/react
+      - name: Build App
+        working-directory: packages/app/${{ matrix.app }}
+        run: |
+          if [ "${{ matrix.app }}" = "mobile/expo.dev" ] && [ ! -d dist ]; then
+            pnpm run build
+          elif [ "${{ matrix.app }}" = "web/nextjs.org" ] && [ ! -d out ]; then
+            EXPORT=true pnpm run build
+          fi
+      - name: Build Tauri Artifact
+        working-directory: packages/app/${{ matrix.app }}
+        run: pnpm exec tauri build --ci --config '{"build":{"beforeBuildCommand":""}}'
+      - name: Sanitize artifact name
+        shell: bash
+        run: echo "app_safe=$(echo '${{ matrix.app }}' | tr '/' '_')" >> "$GITHUB_ENV"
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: app_tauri_${{ env.app_safe }}_${{ matrix.os }}
+          path: packages/app/${{ matrix.app }}/src-tauri/target/release/bundle/
+
+  publish:
+    name: Publish to GitHub Release
+    needs: [expo, next, tauri]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.3
+        with:
+          fetch-depth: 0
+      - name: Download Build Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+      - name: Collect Release Artifacts
+        run: |
+          mkdir -p release
+          for dir in artifacts/*/; do
+            find "$dir" -type f \( -name "*.AppImage" -o -name "*.deb" -o -name "*.dmg" -o -name "*.app" -o -name "*.msi" -o -name "*.tar.xz" \) ! -name "*control.tar.gz" ! -name "*data.tar.gz" -print0 | while IFS= read -r -d '' file; do
+              cp "$file" "release/"
+            done
+          done
+      - name: Publish Release
+        run: |
+          gh release delete app-latest --yes --cleanup-tag 2>/dev/null || true
+          gh release create app-latest \
+            --title "App Builds (latest)" \
+            --notes "Auto-built apps from commit ${{ github.sha }}" \
+            $(find release -type f | sort)
+        env:
+          GH_TOKEN: ${{ github.token }}

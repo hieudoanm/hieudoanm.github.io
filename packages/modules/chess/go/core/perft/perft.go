@@ -22,7 +22,7 @@ func Perft(state types.GameState, depth int) int {
 
 	for _, move := range movesList {
 		newBoard := board.CloneBoard(state.Board)
-		moves.ApplyMove(newBoard, move)
+		moves.ApplyMove(&newBoard, move)
 
 		newTurn := state.Turn.Opposite()
 
@@ -111,7 +111,7 @@ func Divide(state types.GameState, depth int) map[string]int {
 		uci := notationMoveToUCI(move)
 
 		newBoard := board.CloneBoard(state.Board)
-		moves.ApplyMove(newBoard, move)
+		moves.ApplyMove(&newBoard, move)
 
 		newTurn := state.Turn.Opposite()
 

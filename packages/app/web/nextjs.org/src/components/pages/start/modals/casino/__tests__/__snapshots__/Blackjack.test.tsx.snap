@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`BlackjackModal should render correctly 1`] = `
+<div>
+  <dialog
+    class="modal modal-open"
+    open=""
+    style="background: rgba(0, 0, 0, 0.6);"
+  >
+    <div
+      class="card bg-base-100 border-base-300 w-full max-w-sm border shadow-2xl"
+    >
+      <div
+        class="card-body gap-5 p-6"
+      >
+        <div
+          class="flex items-start justify-between"
+        >
+          <div>
+            <h2
+              class="text-lg font-black tracking-tight"
+            >
+              🃏 Card Counting
+            </h2>
+          </div>
+          <button
+            class="btn btn-ghost btn-xs btn-square text-base opacity-60 hover:opacity-100"
+          >
+            ✕
+          </button>
+        </div>
+        <div
+          class="outline-none"
+          tabindex="0"
+        >
+          <div
+            class="bg-base-200 mb-4 flex flex-col items-center justify-center rounded-xl py-6"
+          >
+            <span
+              class="text-base-content/40 text-sm"
+            >
+              Deal a card to start
+            </span>
+          </div>
+          <div
+            class="mb-4 flex items-center justify-between text-sm"
+          >
+            <span
+              class="opacity-50"
+            >
+              Cards left: 
+              52
+            </span>
+            <span
+              class="text-xs opacity-30"
+            >
+              Press Space to reveal count
+            </span>
+          </div>
+          <div
+            class="grid grid-cols-3 gap-2"
+          >
+            <button
+              class="btn btn-primary btn-sm"
+            >
+              Deal
+            </button>
+            <button
+              class="btn btn-secondary btn-sm"
+            >
+              Reveal
+            </button>
+            <button
+              class="btn btn-accent btn-sm"
+            >
+              Reset
+            </button>
+          </div>
+          <p
+            class="mt-3 text-center text-xs opacity-40"
+          >
+            <kbd
+              class="kbd kbd-xs"
+            >
+              Tab
+            </kbd>
+             Deal ·
+             
+            <kbd
+              class="kbd kbd-xs"
+            >
+              Space
+            </kbd>
+             reveal ·
+             
+            <kbd
+              class="kbd kbd-xs"
+            >
+              R
+            </kbd>
+             Reset
+          </p>
+        </div>
+      </div>
+    </div>
+    <form
+      class="modal-backdrop"
+      method="dialog"
+    >
+      <button>
+        close
+      </button>
+    </form>
+  </dialog>
+</div>
+`;

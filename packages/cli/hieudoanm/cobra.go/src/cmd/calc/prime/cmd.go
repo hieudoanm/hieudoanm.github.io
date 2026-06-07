@@ -1,0 +1,64 @@
+package prime
+
+import (
+	"encoding/json"
+	"fmt"
+
+	"github.com/spf13/cobra"
+)
+
+func NewCmd() *cobra.Command {
+	var number int
+	var list bool
+
+	cmd := &cobra.Command{
+		Use:   "prime [--number <n>]",
+		Short: "Check if a number is prime, or generate primes up to N",
+		Long:  `Test primality of a number, or list/count primes up to a limit with --list.`,
+		Example: `  calc prime --number 17
+  calc prime --number 100 --list
+  calc prime --number 1000000 --count`,
+		RunE: func(cmd *cobra.Command, args []string) error {
+			var n int64 = int64(number)
+			if n < 2 {
+				return fmt.Errorf("number must be >= 2")
+			}
+
+			if list {
+				primes := sieve(n)
+				if ok, _ := cmd.Flags().GetBool("json"); ok {
+					b, _ := json.MarshalIndent(map[string]interface{}{
+						"limit":  n,
+						"count":  len(primes),
+						"primes": primes,
+					}, "", "  ")
+					fmt.Println(string(b))
+				} else {
+					for _, p := range primes {
+						fmt.Println(p)
+					}
+				}
+				return nil
+			}
+
+			isPrime := isPrime(n)
+			if ok, _ := cmd.Flags().GetBool("json"); ok {
+				b, _ := json.MarshalIndent(map[string]interface{}{
+					"number":   n,
+					"is_prime": isPrime,
+				}, "", "  ")
+				fmt.Println(string(b))
+			} else if isPrime {
+				fmt.Printf("%d is prime\n", n)
+			} else {
+				fmt.Printf("%d is not prime\n", n)
+			}
+			return nil
+		},
+	}
+
+	cmd.Flags().IntVarP(&number, "number", "n", 0, "Number to check or limit")
+	cmd.Flags().BoolVarP(&list, "list", "l", false, "List all primes up to N")
+	cmd.Flags().Bool("json", false, "Output in JSON format")
+	return cmd
+}

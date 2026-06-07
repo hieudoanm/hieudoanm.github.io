@@ -127,7 +127,7 @@ func MakeMove(state types.GameState, move types.Move) types.GameState {
 	newBoard := board.CloneBoard(state.Board)
 	piece := state.Board[move.From]
 
-	moves.ApplyMove(newBoard, move)
+	moves.ApplyMove(&newBoard, move)
 
 	var capturedPiece *types.Piece
 	if move.Captured != nil {

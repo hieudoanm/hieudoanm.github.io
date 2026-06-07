@@ -1,0 +1,82 @@
+package sticker
+
+import (
+	"encoding/json"
+	"fmt"
+
+	"github.com/hieudoanm/jack/src/cmd/telegram/internal"
+	"github.com/hieudoanm/jack/src/libs/requests"
+	"github.com/spf13/cobra"
+)
+
+func newReplaceInSetCmd() *cobra.Command {
+	cmd := &cobra.Command{
+		Use:     "replace-in-set",
+		Short:   "Replace a sticker in a set",
+		Long:    `Replace an existing sticker in a set with a new one.`,
+		Example: `  telegram sticker replace-in-set --user-id 12345 --name "my_set" --old-sticker FILE_ID --sticker '{"sticker":"NEW_FILE_ID","emoji_list":["😀"]}'`,
+		RunE: func(cmd *cobra.Command, args []string) error {
+			jsonOutput, _ := cmd.Flags().GetBool("json")
+
+			token, err := internal.ResolveToken(cmd)
+			if err != nil {
+				return err
+			}
+
+			userID, _ := cmd.Flags().GetInt64("user-id")
+			name, _ := cmd.Flags().GetString("name")
+			oldSticker, _ := cmd.Flags().GetString("old-sticker")
+			stickerJSON, _ := cmd.Flags().GetString("sticker")
+
+			if userID == 0 {
+				return fmt.Errorf("--user-id is required")
+			}
+			if name == "" {
+				return fmt.Errorf("--name is required")
+			}
+			if oldSticker == "" {
+				return fmt.Errorf("--old-sticker is required")
+			}
+			if stickerJSON == "" {
+				return fmt.Errorf("--sticker is required (JSON object)")
+			}
+
+			var sticker map[string]interface{}
+			if err := json.Unmarshal([]byte(stickerJSON), &sticker); err != nil {
+				return fmt.Errorf("invalid --sticker JSON: %w", err)
+			}
+
+			body := map[string]interface{}{
+				"user_id":     userID,
+				"name":        name,
+				"old_sticker": oldSticker,
+				"sticker":     sticker,
+			}
+
+			url := internal.TelegramAPIURL(token, "replaceStickerInSet")
+			responseByte, postErr := requests.Post(url, requests.Options{Body: body})
+			if postErr != nil {
+				return postErr
+			}
+
+			if jsonOutput {
+				var result map[string]interface{}
+				if err := json.Unmarshal(responseByte, &result); err != nil {
+					return err
+				}
+				out, _ := json.MarshalIndent(result, "", "  ")
+				fmt.Println(string(out))
+			} else {
+				fmt.Println("Success")
+			}
+			return nil
+		},
+	}
+
+	cmd.Flags().Int64("user-id", 0, "Sticker set owner ID")
+	cmd.Flags().String("name", "", "Sticker set short name")
+	cmd.Flags().String("old-sticker", "", "File ID of the sticker to replace")
+	cmd.Flags().String("sticker", "", "JSON object with new sticker data")
+
+	return cmd
+}

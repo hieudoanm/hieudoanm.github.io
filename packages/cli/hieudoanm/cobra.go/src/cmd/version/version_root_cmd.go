@@ -1,0 +1,36 @@
+package version
+
+import (
+	"encoding/json"
+	"fmt"
+
+	"github.com/spf13/cobra"
+)
+
+var V = "dev"
+
+func NewCommand() *cobra.Command {
+	cmd := &cobra.Command{
+		Use:   "version",
+		Short: "Print the application version",
+		Long:  `Print the version number of the application.`,
+		Example: `  version
+  version --json`,
+		RunE: func(cmd *cobra.Command, args []string) error {
+			if ok, _ := cmd.Flags().GetBool("json"); ok {
+				out, err := json.MarshalIndent(map[string]interface{}{
+					"version": V,
+				}, "", "  ")
+				if err != nil {
+					return err
+				}
+				fmt.Println(string(out))
+			} else {
+				fmt.Printf("Version: %s\n", V)
+			}
+			return nil
+		},
+	}
+	cmd.Flags().BoolP("json", "j", false, "Output in JSON format")
+	return cmd
+}

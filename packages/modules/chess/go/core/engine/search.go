@@ -87,7 +87,7 @@ func applyEngineMove(
 	m types.Move,
 ) (types.Board, types.Color, types.CastlingRights, types.Square) {
 	nextB := board.CloneBoard(b)
-	moves.ApplyMove(nextB, m)
+	moves.ApplyMove(&nextB, m)
 	nextCR := game.UpdateCastlingRights(cr, m, b)
 	piece := b[m.From]
 	var nextEP types.Square = -1

@@ -61,4 +61,14 @@ func TestGetChatCompletions(t *testing.T) {
 			t.Fatal("expected error")
 		}
 	})
+
+	t.Run("NewDeepSeekClient default base URL", func(t *testing.T) {
+		c := NewDeepSeekClient("my-key")
+		if c.BaseURL != "https://api.deepseek.com" {
+			t.Errorf("expected https://api.deepseek.com, got %s", c.BaseURL)
+		}
+		if c.APIKey != "my-key" {
+			t.Errorf("expected my-key, got %s", c.APIKey)
+		}
+	})
 }

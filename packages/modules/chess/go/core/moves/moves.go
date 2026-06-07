@@ -7,8 +7,8 @@ import (
 	"github.com/hieudoanm/chess/core/utils"
 )
 
-func applyMoveToBoard(b types.Board, move types.Move) {
-	piece := board.GetPiece(b, move.From)
+func applyMoveToBoard(b *types.Board, move types.Move) {
+	piece := board.GetPiece(*b, move.From)
 	if piece == nil {
 		return
 	}
@@ -39,11 +39,10 @@ func applyMoveToBoard(b types.Board, move types.Move) {
 			rookFrom = move.To - 2
 			rookTo = move.To + 1
 		}
-		r := utils.RankOf(move.To)
-		rook := board.GetPiece(b, utils.Square(r, rookFrom))
+		rook := board.GetPiece(*b, rookFrom)
 		if rook != nil {
-			board.RemovePiece(b, utils.Square(r, rookFrom))
-			board.PutPiece(b, rook, utils.Square(r, rookTo))
+			board.RemovePiece(b, rookFrom)
+			board.PutPiece(b, rook, rookTo)
 		}
 	}
 
@@ -54,7 +53,7 @@ func applyMoveToBoard(b types.Board, move types.Move) {
 	}
 }
 
-func ApplyMove(b types.Board, move types.Move) {
+func ApplyMove(b *types.Board, move types.Move) {
 	applyMoveToBoard(b, move)
 }
 
@@ -289,7 +288,7 @@ func LegalMoves(b types.Board, turn types.Color, castlingRights types.CastlingRi
 	var legal []types.Move
 	for _, move := range pseudo {
 		testBoard := board.CloneBoard(b)
-		ApplyMove(testBoard, move)
+		ApplyMove(&testBoard, move)
 		kingSq, found := board.FindKing(testBoard, turn)
 		if !found {
 			continue

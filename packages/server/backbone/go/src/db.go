@@ -439,7 +439,11 @@ func buildFilterClause(filters []string) (string, []any) {
 		}
 		field := strings.TrimSpace(parts[0])
 		value := strings.TrimSpace(parts[1])
-		clauses = append(clauses, fmt.Sprintf("json_extract(data, '$.%s') %s ?", field, op))
+		if op == "=" || op == "!=" {
+			clauses = append(clauses, fmt.Sprintf("CAST(json_extract(data, '$.%s') AS TEXT) %s ?", field, op))
+		} else {
+			clauses = append(clauses, fmt.Sprintf("json_extract(data, '$.%s') %s ?", field, op))
+		}
 		args = append(args, value)
 	}
 	if len(clauses) == 0 {

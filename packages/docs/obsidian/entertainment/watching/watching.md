@@ -2,4 +2,4 @@
 
 - [[Anime]]
 - [[Movies]]
-- [[TV]]
+- [[Series]]

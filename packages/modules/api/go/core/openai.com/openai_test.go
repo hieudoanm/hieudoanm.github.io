@@ -79,4 +79,14 @@ func TestGetChatCompletion(t *testing.T) {
 			t.Errorf("expected 429 in error, got %s", err.Error())
 		}
 	})
+
+	t.Run("NewOpenAIClient default", func(t *testing.T) {
+		c := NewOpenAIClient("test-key")
+		if c.BaseURL != "https://api.openai.com/v1" {
+			t.Errorf("expected https://api.openai.com/v1, got %s", c.BaseURL)
+		}
+		if c.APIKey != "test-key" {
+			t.Errorf("expected test-key, got %s", c.APIKey)
+		}
+	})
 }

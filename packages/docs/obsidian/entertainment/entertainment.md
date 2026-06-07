@@ -32,5 +32,6 @@
 
 ## [[Watching]]
 
-1. [[Movies]]
-2. [[TV]]
+1. [[Anime]]
+2. [[Movies]]
+3. [[Series]]

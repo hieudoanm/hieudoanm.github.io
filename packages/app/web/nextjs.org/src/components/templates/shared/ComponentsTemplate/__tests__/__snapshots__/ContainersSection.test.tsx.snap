@@ -1,0 +1,373 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`ContainersSection to match snapshot 1`] = `
+<div>
+  <section
+    class="mx-auto max-w-5xl px-12 py-24"
+  >
+    <p
+      class="text-primary mb-3 text-xs font-medium tracking-[0.14em] uppercase"
+    >
+      Containers
+    </p>
+    <h2
+      class="mb-4 font-serif text-4xl leading-snug font-bold "
+    >
+      Structured surfaces
+    </h2>
+    <p
+      class="text-base-content/60 mb-12 max-w-xl text-base leading-relaxed "
+    >
+      Cards, modals, drawers, accordions — flexible containers that adapt to any layout.
+    </p>
+    <div
+      class="grid grid-cols-2 gap-10"
+    >
+      <div>
+        <p
+          class="text-base-content/50 mb-4 text-sm"
+        >
+          Accordion
+        </p>
+        <div
+          class="border-base-300 overflow-hidden rounded-2xl border"
+        >
+          <div
+            class="collapse-arrow collapse collapse-open border-base-300 border-b bg-transparent last:border-b-0"
+          >
+            <input
+              checked=""
+              name="faq"
+              type="radio"
+            />
+            <div
+              class="collapse-title text-base-content px-5 py-4 text-sm font-medium"
+            >
+              What tokens does DaisyX export?
+            </div>
+            <div
+              class="collapse-content px-5"
+            >
+              <p
+                class="text-base-content/50 pb-2 text-sm leading-relaxed"
+              >
+                DaisyX exports CSS custom properties for color, spacing, radius, shadow, and typography — plus a JS token object for use in styled-components or Tailwind configs.
+              </p>
+            </div>
+          </div>
+          <div
+            class="collapse-arrow collapse  border-base-300 border-b bg-transparent last:border-b-0"
+          >
+            <input
+              name="faq"
+              type="radio"
+            />
+            <div
+              class="collapse-title text-base-content px-5 py-4 text-sm font-medium"
+            >
+              Is it framework-agnostic?
+            </div>
+            <div
+              class="collapse-content px-5"
+            >
+              <p
+                class="text-base-content/50 pb-2 text-sm leading-relaxed"
+              >
+                The core tokens and CSS utilities work anywhere. React components are available via @forma/react, with Vue and Svelte packages coming soon.
+              </p>
+            </div>
+          </div>
+          <div
+            class="collapse-arrow collapse  border-base-300 border-b bg-transparent last:border-b-0"
+          >
+            <input
+              name="faq"
+              type="radio"
+            />
+            <div
+              class="collapse-title text-base-content px-5 py-4 text-sm font-medium"
+            >
+              How are accessibility levels tested?
+            </div>
+            <div
+              class="collapse-content px-5"
+            >
+              <p
+                class="text-base-content/50 pb-2 text-sm leading-relaxed"
+              >
+                We run automated axe-core tests in CI and manual audits with NVDA and VoiceOver on every major release. All interactive components meet WCAG 2.1 AA criteria.
+              </p>
+            </div>
+          </div>
+          <div
+            class="collapse-arrow collapse  border-base-300 border-b bg-transparent last:border-b-0"
+          >
+            <input
+              name="faq"
+              type="radio"
+            />
+            <div
+              class="collapse-title text-base-content px-5 py-4 text-sm font-medium"
+            >
+              Can I use DaisyX in a commercial project?
+            </div>
+            <div
+              class="collapse-content px-5"
+            >
+              <p
+                class="text-base-content/50 pb-2 text-sm leading-relaxed"
+              >
+                Yes — DaisyX is MIT licensed. You can use it in personal, open-source, and commercial projects with no restrictions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p
+          class="text-base-content/50 mb-4 text-sm"
+        >
+          Calendar / Date picker
+        </p>
+        <div
+          class="border-base-300 overflow-hidden rounded-2xl border"
+        >
+          <div
+            class="bg-base-300 border-base-content/10 flex items-center justify-between border-b px-5 py-4"
+          >
+            <button
+              class="btn btn-ghost btn-xs"
+            >
+              ‹
+            </button>
+            <span
+              class="text-sm font-medium"
+            >
+              April 2026
+            </span>
+            <button
+              class="btn btn-ghost btn-xs"
+            >
+              ›
+            </button>
+          </div>
+          <div
+            class="grid grid-cols-7"
+          >
+            <div
+              class="text-base-content/40 bg-base-300 border-base-content/10 border-b py-2 text-center text-[11px] font-medium tracking-wider uppercase"
+            >
+              Su
+            </div>
+            <div
+              class="text-base-content/40 bg-base-300 border-base-content/10 border-b py-2 text-center text-[11px] font-medium tracking-wider uppercase"
+            >
+              Mo
+            </div>
+            <div
+              class="text-base-content/40 bg-base-300 border-base-content/10 border-b py-2 text-center text-[11px] font-medium tracking-wider uppercase"
+            >
+              Tu
+            </div>
+            <div
+              class="text-base-content/40 bg-base-300 border-base-content/10 border-b py-2 text-center text-[11px] font-medium tracking-wider uppercase"
+            >
+              We
+            </div>
+            <div
+              class="text-base-content/40 bg-base-300 border-base-content/10 border-b py-2 text-center text-[11px] font-medium tracking-wider uppercase"
+            >
+              Th
+            </div>
+            <div
+              class="text-base-content/40 bg-base-300 border-base-content/10 border-b py-2 text-center text-[11px] font-medium tracking-wider uppercase"
+            >
+              Fr
+            </div>
+            <div
+              class="text-base-content/40 bg-base-300 border-base-content/10 border-b py-2 text-center text-[11px] font-medium tracking-wider uppercase"
+            >
+              Sa
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 text-base-content/20"
+            >
+              29
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 text-base-content/20"
+            >
+              30
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 text-base-content/20"
+            >
+              31
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 text-base-content/50 hover:bg-base-300 hover:text-base-content"
+            >
+              1
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 text-base-content/50 hover:bg-base-300 hover:text-base-content"
+            >
+              2
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 text-base-content/50 hover:bg-base-300 hover:text-base-content"
+            >
+              3
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 text-primary font-semibold"
+            >
+              4
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 text-base-content/50 hover:bg-base-300 hover:text-base-content"
+            >
+              5
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 text-base-content/50 hover:bg-base-300 hover:text-base-content"
+            >
+              6
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 text-base-content/50 hover:bg-base-300 hover:text-base-content"
+            >
+              7
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 bg-primary/10 text-base-content"
+            >
+              8
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 bg-primary/10 text-base-content"
+            >
+              9
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 bg-primary/10 text-base-content"
+            >
+              10
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 bg-primary text-primary-content font-semibold"
+            >
+              11
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 text-base-content/50 hover:bg-base-300 hover:text-base-content"
+            >
+              12
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 text-base-content/50 hover:bg-base-300 hover:text-base-content"
+            >
+              13
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 text-base-content/50 hover:bg-base-300 hover:text-base-content"
+            >
+              14
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 text-base-content/50 hover:bg-base-300 hover:text-base-content"
+            >
+              15
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 text-base-content/50 hover:bg-base-300 hover:text-base-content"
+            >
+              16
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 text-base-content/50 hover:bg-base-300 hover:text-base-content"
+            >
+              17
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 text-base-content/50 hover:bg-base-300 hover:text-base-content"
+            >
+              18
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 text-base-content/50 hover:bg-base-300 hover:text-base-content"
+            >
+              19
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 text-base-content/50 hover:bg-base-300 hover:text-base-content"
+            >
+              20
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 text-base-content/50 hover:bg-base-300 hover:text-base-content"
+            >
+              21
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 text-base-content/50 hover:bg-base-300 hover:text-base-content"
+            >
+              22
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 text-base-content/50 hover:bg-base-300 hover:text-base-content"
+            >
+              23
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 text-base-content/50 hover:bg-base-300 hover:text-base-content"
+            >
+              24
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 text-base-content/50 hover:bg-base-300 hover:text-base-content"
+            >
+              25
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 text-base-content/50 hover:bg-base-300 hover:text-base-content"
+            >
+              26
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 text-base-content/50 hover:bg-base-300 hover:text-base-content"
+            >
+              27
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 text-base-content/50 hover:bg-base-300 hover:text-base-content"
+            >
+              28
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 text-base-content/50 hover:bg-base-300 hover:text-base-content"
+            >
+              29
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 text-base-content/50 hover:bg-base-300 hover:text-base-content"
+            >
+              30
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 text-base-content/20"
+            >
+              1
+            </div>
+            <div
+              class="border-base-content/10 cursor-pointer border-r border-b py-[10px] text-center text-xs transition-colors last:border-r-0 text-base-content/20"
+            >
+              2
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

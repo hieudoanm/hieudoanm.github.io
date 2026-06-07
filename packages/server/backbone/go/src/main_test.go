@@ -2,14 +2,19 @@ package main
 
 import (
 	"bytes"
+	"database/sql"
 	"encoding/json"
 	"fmt"
 	"io"
 	"mime/multipart"
+	"net"
 	"net/http"
 	"net/http/httptest"
 	"os"
+	"os/exec"
+	"strconv"
 	"strings"
+	"syscall"
 	"testing"
 	"time"
 )
@@ -1911,5 +1916,1697 @@ func TestRecordUpdateMissingData(t *testing.T) {
 	resp = request(t, h, "PATCH", "/api/collections/items/records/"+id, `{}`)
 	if resp.StatusCode != 400 {
 		t.Fatalf("expected 400 for missing data, got %d", resp.StatusCode)
+	}
+}
+
+// --- Import / Export Tests ---
+
+func TestExport(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/collections", `{"name":"export_test"}`)
+	request(t, h, "POST", "/api/collections/export_test/records", `{"id":"r1","data":{"x":1}}`)
+	request(t, h, "POST", "/api/buckets", `{"name":"export_bucket"}`)
+
+	resp := request(t, h, "GET", "/api/export", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("export: expected 200, got %d", resp.StatusCode)
+	}
+	var result map[string]any
+	if err := json.NewDecoder(resp.Body).Decode(&result); err != nil {
+		t.Fatal(err)
+	}
+	resp.Body.Close()
+	if _, ok := result["collections"]; !ok {
+		t.Fatal("expected collections in export")
+	}
+	if _, ok := result["records"]; !ok {
+		t.Fatal("expected records in export")
+	}
+}
+
+func TestImportConflict(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/collections", `{"name":"import_test"}`)
+
+	body := `{"collections":[{"name":"import_test"}],"records":{},"buckets":[],"files":[]}`
+	resp := request(t, h, "POST", "/api/import", body)
+	if resp.StatusCode != 409 {
+		t.Fatalf("import conflict: expected 409, got %d", resp.StatusCode)
+	}
+}
+
+func TestImportSkipExisting(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/collections", `{"name":"skip_test"}`)
+
+	body := `{"collections":[{"name":"skip_test"}],"records":{},"buckets":[],"files":[]}`
+	resp := request(t, h, "POST", "/api/import?skip_existing=true", body)
+	if resp.StatusCode != 200 {
+		t.Fatalf("import skip: expected 200, got %d", resp.StatusCode)
+	}
+}
+
+func TestImportNewData(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	body := `{"collections":[{"name":"new_collection"}],"records":{"new_collection":[{"id":"r1","data":{"hello":"world"}}]},"buckets":[{"name":"new_bucket"}],"files":[]}`
+	resp := request(t, h, "POST", "/api/import", body)
+	if resp.StatusCode != 200 {
+		t.Fatalf("import new: expected 200, got %d", resp.StatusCode)
+	}
+
+	resp = request(t, h, "GET", "/api/collections/new_collection", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("verify collection: expected 200, got %d", resp.StatusCode)
+	}
+}
+
+func TestImportInvalidJSON(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "POST", "/api/import", `not json`)
+	if resp.StatusCode != 400 {
+		t.Fatalf("expected 400 for invalid json, got %d", resp.StatusCode)
+	}
+}
+
+// --- Permissions Tests ---
+
+func TestPermissionsCRUD(t *testing.T) {
+	srv := newTestServer(t)
+
+	// Register then login to get token and user ID
+	resp := request(t, srv.routes(), "POST", "/api/auth/register", `{"email":"admin@perm.com","password":"admin123"}`)
+	if resp.StatusCode != 200 {
+		t.Fatalf("register: expected 200, got %d", resp.StatusCode)
+	}
+	resp = request(t, srv.routes(), "POST", "/api/auth/login", `{"email":"admin@perm.com","password":"admin123"}`)
+	if resp.StatusCode != 200 {
+		t.Fatalf("login: expected 200, got %d", resp.StatusCode)
+	}
+	loginResult := readBody(t, resp)
+	token := loginResult["token"].(string)
+	userObj := loginResult["user"].(map[string]any)
+	adminUserID := userObj["id"].(string)
+	h := authenticated(srv.routes(), token)
+
+	// Create admin permission for self (works because _permissions table is empty)
+	resp = request(t, h, "POST", "/api/permissions", fmt.Sprintf(`{"user_id":"%s","collection":"*","role":"admin"}`, adminUserID))
+	if resp.StatusCode != 200 {
+		t.Fatalf("create admin perm: expected 200, got %d", resp.StatusCode)
+	}
+
+	// Now user has admin role, list/create/delete all work
+	resp = request(t, h, "GET", "/api/permissions", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("list: expected 200, got %d", resp.StatusCode)
+	}
+	var list []any
+	if err := json.NewDecoder(resp.Body).Decode(&list); err != nil {
+		t.Fatal(err)
+	}
+	resp.Body.Close()
+
+	resp = request(t, h, "POST", "/api/permissions", `{"user_id":"user1","collection":"posts","role":"editor"}`)
+	if resp.StatusCode != 200 {
+		t.Fatalf("create: expected 200, got %d", resp.StatusCode)
+	}
+	created := readBody(t, resp)
+	permID := created["id"].(string)
+	if created["user_id"] != "user1" {
+		t.Fatalf("expected user1, got %v", created["user_id"])
+	}
+	if created["role"] != "editor" {
+		t.Fatalf("expected editor, got %v", created["role"])
+	}
+
+	resp = request(t, h, "POST", "/api/permissions", `{"user_id":"user2","collection":"other","role":"superadmin"}`)
+	if resp.StatusCode != 400 {
+		t.Fatalf("invalid role: expected 400, got %d", resp.StatusCode)
+	}
+
+	resp = request(t, h, "DELETE", "/api/permissions/"+permID, "")
+	if resp.StatusCode != 204 {
+		t.Fatalf("delete: expected 204, got %d", resp.StatusCode)
+	}
+
+	resp = request(t, h, "DELETE", "/api/permissions/nonexistent", "")
+	if resp.StatusCode != 404 {
+		t.Fatalf("delete not found: expected 404, got %d", resp.StatusCode)
+	}
+}
+
+func TestPermissionsAuthRequired(t *testing.T) {
+	srv := newTestServer(t)
+	h := srv.routes()
+
+	resp := request(t, h, "GET", "/api/permissions", "")
+	if resp.StatusCode != 401 {
+		t.Fatalf("expected 401, got %d", resp.StatusCode)
+	}
+}
+
+// --- File Thumbnail Tests ---
+
+func TestFileThumbnailImage(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/buckets", `{"name":"images"}`)
+
+	// Create a minimal 1x1 PNG
+	pngData := []byte{
+		0x89, 0x50, 0x4E, 0x47, 0x0D, 0x0A, 0x1A, 0x0A,
+		0x00, 0x00, 0x00, 0x0D, 0x49, 0x48, 0x44, 0x52,
+		0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x01,
+		0x08, 0x02, 0x00, 0x00, 0x00, 0x90, 0x77, 0x53,
+		0xDE, 0x00, 0x00, 0x00, 0x0C, 0x49, 0x44, 0x41,
+		0x54, 0x08, 0xD7, 0x63, 0x60, 0x60, 0x00, 0x00,
+		0x00, 0x02, 0x00, 0x01, 0xE5, 0x27, 0xDE, 0xFC,
+		0x00, 0x00, 0x00, 0x00, 0x49, 0x45, 0x4E, 0x44,
+		0xAE, 0x42, 0x60, 0x82,
+	}
+
+	var buf bytes.Buffer
+	w := multipart.NewWriter(&buf)
+	fw, err := w.CreateFormFile("file", "test.png")
+	if err != nil {
+		t.Fatal(err)
+	}
+	fw.Write(pngData)
+	w.Close()
+
+	req := httptest.NewRequest("POST", "/api/buckets/images/files", &buf)
+	req.Header.Set("Content-Type", w.FormDataContentType())
+	resp := httptest.NewRecorder()
+	h.ServeHTTP(resp, req)
+	result := resp.Result()
+	if result.StatusCode != 200 {
+		t.Fatalf("upload png: expected 200, got %d", result.StatusCode)
+	}
+	uploaded := readBody(t, result)
+	fileID := uploaded["id"].(string)
+
+	// Thumbnail should produce a resized PNG
+	resp2 := request(t, h, "GET", "/api/buckets/images/files/"+fileID+"/thumb?width=50&height=50", "")
+	if resp2.StatusCode != 200 {
+		t.Fatalf("thumbnail image: expected 200, got %d", resp2.StatusCode)
+	}
+	thumbData, _ := io.ReadAll(resp2.Body)
+	resp2.Body.Close()
+	if len(thumbData) == 0 {
+		t.Fatal("expected non-empty thumbnail")
+	}
+}
+
+func TestFileThumbnailNonImage(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/buckets", `{"name":"docs"}`)
+	resp := uploadFile(t, h, "docs", "test.txt", "hello thumbnail")
+	if resp.StatusCode != 200 {
+		t.Fatalf("upload: expected 200, got %d", resp.StatusCode)
+	}
+	result := readBody(t, resp)
+	fileID := result["id"].(string)
+
+	resp = request(t, h, "GET", "/api/buckets/docs/files/"+fileID+"/thumb", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("thumbnail: expected 200, got %d", resp.StatusCode)
+	}
+	body, _ := io.ReadAll(resp.Body)
+	resp.Body.Close()
+	if string(body) != "hello thumbnail" {
+		t.Fatalf("expected file content, got %s", string(body))
+	}
+
+	resp = request(t, h, "GET", "/api/buckets/docs/files/nonexistent/thumb", "")
+	if resp.StatusCode != 404 {
+		t.Fatalf("expected 404, got %d", resp.StatusCode)
+	}
+
+	resp = request(t, h, "GET", "/api/buckets/other/files/"+fileID+"/thumb", "")
+	if resp.StatusCode != 404 {
+		t.Fatalf("expected 404 for wrong bucket, got %d", resp.StatusCode)
+	}
+}
+
+// --- Collection Update Tests ---
+
+func TestCollectionUpdate(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/collections", `{"name":"updatable","schema":"{\"title\":\"string\"}"}`)
+
+	resp := request(t, h, "PATCH", "/api/collections/updatable", `{"schema":"{\"title\":\"string\",\"views\":\"integer\"}"}`)
+	if resp.StatusCode != 200 {
+		t.Fatalf("update collection schema: expected 200, got %d", resp.StatusCode)
+	}
+
+	resp = request(t, h, "GET", "/api/collections/updatable", "")
+	result := readBody(t, resp)
+	schema, ok := result["schema"].(string)
+	if !ok {
+		t.Fatal("expected schema in response")
+	}
+	if schema != `{"title":"string","views":"integer"}` {
+		t.Fatalf("unexpected schema: %s", schema)
+	}
+
+	resp = request(t, h, "PATCH", "/api/collections/nonexistent", `{"schema":"{}"}`)
+	if resp.StatusCode != 404 {
+		t.Fatalf("expected 404, got %d", resp.StatusCode)
+	}
+}
+
+// --- Record Create With Schema Validation ---
+
+func TestRecordCreateWithValidation(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/collections", `{"name":"validated","schema":"{\"name\":\"string\",\"age\":\"integer\"}"}`)
+
+	resp := request(t, h, "POST", "/api/collections/validated/records", `{"data":{"name":"Alice","age":30}}`)
+	if resp.StatusCode != 200 {
+		t.Fatalf("valid record: expected 200, got %d", resp.StatusCode)
+	}
+
+	resp = request(t, h, "POST", "/api/collections/validated/records", `{"data":{"name":123,"age":"not-number"}}`)
+	if resp.StatusCode != 400 {
+		t.Fatalf("invalid record: expected 400, got %d", resp.StatusCode)
+	}
+}
+
+// --- Record List With Filter/Sort/Search ---
+
+func TestRecordListFilterSortSearch(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/collections", `{"name":"filterable"}`)
+
+	for i := 0; i < 5; i++ {
+		body := fmt.Sprintf(`{"data":{"val":%d,"label":"item-%d"}}`, i, i)
+		request(t, h, "POST", "/api/collections/filterable/records", body)
+	}
+
+	resp := request(t, h, "GET", "/api/collections/filterable/records?sort=-val", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("list sorted: expected 200, got %d", resp.StatusCode)
+	}
+
+	resp = request(t, h, "GET", "/api/collections/filterable/records?search=item-1", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("list search: expected 200, got %d", resp.StatusCode)
+	}
+	var page map[string]any
+	if err := json.NewDecoder(resp.Body).Decode(&page); err != nil {
+		t.Fatal(err)
+	}
+	resp.Body.Close()
+	total, _ := page["total"].(float64)
+	if total != 1 {
+		t.Fatalf("expected 1 result for search, got %v", total)
+	}
+}
+
+// --- Backup Test ---
+
+func TestBackupEndpoint(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "GET", "/api/backup", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("backup: expected 200, got %d", resp.StatusCode)
+	}
+	body, _ := io.ReadAll(resp.Body)
+	resp.Body.Close()
+	if len(body) == 0 {
+		t.Fatal("expected non-empty backup")
+	}
+	if resp.Header.Get("Content-Type") != "application/octet-stream" {
+		t.Fatalf("expected octet-stream, got %s", resp.Header.Get("Content-Type"))
+	}
+}
+
+// --- Content-Type Validation Tests ---
+
+func TestContentTypeValidationWrongType(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	req := httptest.NewRequest("POST", "/api/collections", strings.NewReader(`{"name":"test"}`))
+	req.Header.Set("Content-Type", "text/plain")
+	req.Header.Set("Authorization", "Bearer "+token)
+	resp := httptest.NewRecorder()
+	h.ServeHTTP(resp, req)
+	if resp.Result().StatusCode != 415 {
+		t.Fatalf("expected 415, got %d", resp.Result().StatusCode)
+	}
+}
+
+func TestContentTypeValidationInvalidJSON(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	req := httptest.NewRequest("POST", "/api/collections", strings.NewReader(`not json`))
+	req.Header.Set("Content-Type", "application/json")
+	req.Header.Set("Authorization", "Bearer "+token)
+	resp := httptest.NewRecorder()
+	h.ServeHTTP(resp, req)
+	if resp.Result().StatusCode != 400 {
+		t.Fatalf("expected 400, got %d", resp.Result().StatusCode)
+	}
+}
+
+func TestContentTypeValidationGETNoCheck(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	req := httptest.NewRequest("GET", "/api/collections", nil)
+	req.Header.Set("Content-Type", "text/plain")
+	req.Header.Set("Authorization", "Bearer "+token)
+	resp := httptest.NewRecorder()
+	h.ServeHTTP(resp, req)
+	if resp.Result().StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.Result().StatusCode)
+	}
+}
+
+// --- Import edge case tests ---
+
+func TestImportNonExistentCollection(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	body := map[string]any{
+		"collections": []map[string]string{},
+		"records": map[string][]map[string]any{
+			"ghost": {{"id": "r1", "data": map[string]string{"name": "test"}}},
+		},
+	}
+	data, _ := json.Marshal(body)
+	resp := request(t, h, "POST", "/api/import?skip_existing=true", string(data))
+	if resp.StatusCode != 500 {
+		t.Fatalf("expected 500 for non-existent collection, got %d", resp.StatusCode)
+	}
+}
+
+func TestImportWithBucketsAndFiles(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	body := map[string]any{
+		"collections": []map[string]string{},
+		"records":     map[string][]map[string]any{},
+		"buckets":     []map[string]any{{"name": "imported-bucket", "is_public": true}},
+		"files": []map[string]any{
+			{"id": "f1", "bucket": "imported-bucket", "filename": "test.txt", "mime_type": "text/plain", "size": 0},
+		},
+	}
+	data, _ := json.Marshal(body)
+	resp := request(t, h, "POST", "/api/import", string(data))
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.StatusCode)
+	}
+}
+
+// --- Collections/Buckets Delete with content ---
+
+func TestCollectionDeleteWithRecords(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/collections", `{"name":"delete-me"}`)
+	request(t, h, "POST", "/api/collections/delete-me/records", `{"id":"r1","data":{"name":"test"}}`)
+	request(t, h, "POST", "/api/collections/delete-me/records", `{"id":"r2","data":{"name":"test2"}}`)
+
+	resp := request(t, h, "DELETE", "/api/collections/delete-me", "")
+	if resp.StatusCode != 204 {
+		t.Fatalf("expected 204, got %d", resp.StatusCode)
+	}
+}
+
+func TestBucketDeleteWithFiles(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/buckets", `{"name":"files-to-delete"}`)
+	resp := uploadFile(t, h, "files-to-delete", "keep.txt", "content")
+	if resp.StatusCode != 200 {
+		t.Fatalf("upload: expected 200, got %d", resp.StatusCode)
+	}
+
+	resp = request(t, h, "DELETE", "/api/buckets/files-to-delete", "")
+	if resp.StatusCode != 204 {
+		t.Fatalf("expected 204, got %d", resp.StatusCode)
+	}
+}
+
+// --- Login edge cases ---
+
+func TestLoginMissingFields(t *testing.T) {
+	srv := newTestServer(t)
+	h := srv.routes()
+
+	tests := []struct {
+		body string
+		code int
+		desc string
+	}{
+		{`{"email":"test@test.com"}`, 400, "missing password"},
+		{`{"password":"pass"}`, 400, "missing email"},
+		{`{}`, 400, "empty body"},
+	}
+	for _, tt := range tests {
+		resp := request(t, h, "POST", "/api/auth/login", tt.body)
+		if resp.StatusCode != tt.code {
+			t.Errorf("%s: expected %d, got %d", tt.desc, tt.code, resp.StatusCode)
+		}
+	}
+}
+
+func TestRegisterMissingFields(t *testing.T) {
+	srv := newTestServer(t)
+	h := srv.routes()
+
+	tests := []struct {
+		body string
+		code int
+		desc string
+	}{
+		{`{"email":"test@test.com"}`, 400, "missing password"},
+		{`{"password":"pass"}`, 400, "missing email"},
+		{`{}`, 400, "empty body"},
+	}
+	for _, tt := range tests {
+		resp := request(t, h, "POST", "/api/auth/register", tt.body)
+		if resp.StatusCode != tt.code {
+			t.Errorf("%s: expected %d, got %d", tt.desc, tt.code, resp.StatusCode)
+		}
+	}
+}
+
+// --- Notification boolToInt test ---
+
+func TestBoolToInt(t *testing.T) {
+	if v := boolToInt(true); v != 1 {
+		t.Fatalf("expected 1, got %d", v)
+	}
+	if v := boolToInt(false); v != 0 {
+		t.Fatalf("expected 0, got %d", v)
+	}
+}
+
+// --- Records Update with validation ---
+
+func TestRecordUpdateWithDataValidation(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/collections", `{"name":"val-update","schema":"{\"name\":\"string\",\"count\":\"number\"}"}`)
+	request(t, h, "POST", "/api/collections/val-update/records", `{"id":"r1","data":{"name":"test","count":5}}`)
+
+	// Update with valid data
+	resp := request(t, h, "PATCH", "/api/collections/val-update/records/r1", `{"data":{"name":"updated","count":10}}`)
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.StatusCode)
+	}
+	body := readBody(t, resp)
+	data := body["data"].(map[string]any)
+	if data["name"] != "updated" {
+		t.Fatalf("expected updated, got %v", data["name"])
+	}
+
+	// Update with invalid type
+	resp = request(t, h, "PATCH", "/api/collections/val-update/records/r1", `{"data":{"name":123}}`)
+	if resp.StatusCode != 400 {
+		t.Fatalf("expected 400, got %d", resp.StatusCode)
+	}
+}
+
+// --- Webhook Dispatch edge cases ---
+
+func TestWebhookDispatchToInvalidURL(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/collections", `{"name":"webhook-col"}`)
+	request(t, h, "POST", "/api/collections/webhook-col/webhooks", `{"url":"http://127.0.0.1:1/invalid","events":["record.created"]}`)
+	resp := request(t, h, "POST", "/api/collections/webhook-col/records", `{"id":"r1","data":{"name":"test"}}`)
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200 for record create, got %d", resp.StatusCode)
+	}
+}
+
+// --- Export/Import clean state ---
+
+func TestExportEmpty(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "GET", "/api/export", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.StatusCode)
+	}
+	body := readBody(t, resp)
+	cols, _ := body["collections"].([]any)
+	if len(cols) != 0 {
+		t.Fatalf("expected no collections, got %d", len(cols))
+	}
+}
+
+// --- File thumbnail edge cases ---
+
+func TestFileThumbnailInvalidSize(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/buckets", `{"name":"thumb-bad"}`)
+	resp := uploadFile(t, h, "thumb-bad", "test.txt", "hello world")
+	body := readBody(t, resp)
+	fileID := body["id"].(string)
+
+	// Invalid width (negative) returns the file content (not JSON)
+	resp = request(t, h, "GET", "/api/buckets/thumb-bad/files/"+fileID+"/thumb?width=-1&height=50", "")
+	raw, _ := io.ReadAll(resp.Body)
+	resp.Body.Close()
+	if len(raw) == 0 {
+		t.Fatal("expected non-empty response")
+	}
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.StatusCode)
+	}
+}
+
+// --- Secrets edge cases ---
+
+func TestSecretsUpdateNotFound(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "PATCH", "/api/secrets/nonexistent", `{"name":"test","value":"val"}`)
+	if resp.StatusCode != 404 {
+		t.Fatalf("expected 404, got %d", resp.StatusCode)
+	}
+}
+
+func TestSecretsDeleteNotFound(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "DELETE", "/api/secrets/nonexistent", "")
+	if resp.StatusCode != 404 {
+		t.Fatalf("expected 404, got %d", resp.StatusCode)
+	}
+}
+
+// --- Collections Create with schema validation ---
+
+func TestCollectionCreateWithSchemaValidation(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	// Create collection with schema (schema must be a JSON string)
+	resp := request(t, h, "POST", "/api/collections", `{"name":"schema-col","schema":"{\"email\":\"email\",\"age\":\"integer\"}"}`)
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.StatusCode)
+	}
+
+	// Record with valid data
+	resp = request(t, h, "POST", "/api/collections/schema-col/records", `{"data":{"email":"user@test.com","age":30}}`)
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.StatusCode)
+	}
+
+	// Record with invalid email
+	resp = request(t, h, "POST", "/api/collections/schema-col/records", `{"data":{"email":"not-an-email","age":30}}`)
+	if resp.StatusCode != 400 {
+		t.Fatalf("expected 400, got %d", resp.StatusCode)
+	}
+
+	// Record with invalid integer
+	resp = request(t, h, "POST", "/api/collections/schema-col/records", `{"data":{"email":"user@test.com","age":"not-a-number"}}`)
+	if resp.StatusCode != 400 {
+		t.Fatalf("expected 400, got %d", resp.StatusCode)
+	}
+}
+
+// --- Records List with pagination and expand ---
+
+func TestRecordListWithPagination(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/collections", `{"name":"paginated"}`)
+	for i := 0; i < 5; i++ {
+		id := fmt.Sprintf("r%d", i+1)
+		request(t, h, "POST", "/api/collections/paginated/records", fmt.Sprintf(`{"id":"%s","data":{"val":%d}}`, id, i+1))
+	}
+
+	// Page 1 (page=1, per_page=2)
+	resp := request(t, h, "GET", "/api/collections/paginated/records?page=1&per_page=2", "")
+	body := readBody(t, resp)
+	recs, _ := body["records"].([]any)
+	if len(recs) != 2 {
+		t.Fatalf("expected 2 records, got %d", len(recs))
+	}
+	total, _ := body["total"].(float64)
+	if total != 5 {
+		t.Fatalf("expected total=5, got %v", total)
+	}
+	totalPages, _ := body["total_pages"].(float64)
+	if totalPages != 3 {
+		t.Fatalf("expected totalPages=3, got %v", totalPages)
+	}
+}
+
+// --- Cron jobs edge cases ---
+
+func TestCronJobsUpdateNotFound(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "PUT", "/api/cron/nonexistent", `{"name":"test","schedule":"* * * * *","url":"http://example.com/hook"}`)
+	if resp.StatusCode != 404 {
+		t.Fatalf("expected 404, got %d", resp.StatusCode)
+	}
+}
+
+func TestCronJobsDeleteNotFound(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "DELETE", "/api/cron/nonexistent", "")
+	if resp.StatusCode != 404 {
+		t.Fatalf("expected 404, got %d", resp.StatusCode)
+	}
+}
+
+// --- Bucket CRUD with public flag ---
+
+func TestBucketCreateWithPublicFlag(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/buckets", `{"name":"public-bucket","is_public":true}`)
+
+	resp := request(t, h, "GET", "/api/buckets/public-bucket", "")
+	body := readBody(t, resp)
+	if body["is_public"] != true {
+		t.Fatal("expected is_public=true")
+	}
+}
+
+// --- Permissions missing fields ---
+
+func TestPermissionsCreateMissingFields(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	tests := []struct {
+		body string
+		code int
+		desc string
+	}{
+		{`{"role":"admin"}`, 400, "missing user_id"},
+		{`{"user_id":"some-user"}`, 400, "missing role"},
+		{`{}`, 400, "empty"},
+	}
+	for _, tt := range tests {
+		resp := request(t, h, "POST", "/api/permissions", tt.body)
+		if resp.StatusCode != tt.code {
+			t.Errorf("%s: expected %d, got %d", tt.desc, tt.code, resp.StatusCode)
+		}
+	}
+}
+
+// --- RBAC middleware with invalid token ---
+
+func TestPermissionListRequiresAuth(t *testing.T) {
+	srv := newTestServer(t)
+	h := srv.routes()
+
+	resp := request(t, h, "GET", "/api/permissions", "")
+	if resp.StatusCode != 401 {
+		t.Fatalf("expected 401, got %d", resp.StatusCode)
+	}
+}
+
+// --- Records created without ID should auto-generate one ---
+
+func TestRecordCreateAutoGenerateID(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/collections", `{"name":"auto-id"}`)
+	resp := request(t, h, "POST", "/api/collections/auto-id/records", `{"data":{"name":"test"}}`)
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.StatusCode)
+	}
+	body := readBody(t, resp)
+	id, _ := body["id"].(string)
+	if id == "" {
+		t.Fatal("expected auto-generated id")
+	}
+}
+
+// --- Records list with expand parameter ---
+
+func TestRecordListWithExpand(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/collections", `{"name":"authors"}`)
+	request(t, h, "POST", "/api/collections", `{"name":"books"}`)
+
+	request(t, h, "POST", "/api/collections/authors/records", `{"id":"auth1","data":{"name":"Alice"}}`)
+	request(t, h, "POST", "/api/collections/books/records", `{"id":"book1","data":{"title":"Go","author_id":"auth1"}}`)
+
+	resp := request(t, h, "GET", "/api/collections/books/records?expand=author_id", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.StatusCode)
+	}
+}
+
+// --- Files upload missing file part ---
+
+func TestFileUploadMissingFile(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/buckets", `{"name":"no-file"}`)
+
+	var buf bytes.Buffer
+	w := multipart.NewWriter(&buf)
+	w.Close()
+
+	req := httptest.NewRequest("POST", "/api/buckets/no-file/files", &buf)
+	req.Header.Set("Content-Type", w.FormDataContentType())
+	req.Header.Set("Authorization", "Bearer "+token)
+	resp := httptest.NewRecorder()
+	h.ServeHTTP(resp, req)
+	if resp.Result().StatusCode != 400 {
+		t.Fatalf("expected 400, got %d", resp.Result().StatusCode)
+	}
+}
+
+// --- Files delete not found ---
+
+func TestFileDeleteNotFound(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/buckets", `{"name":"file-del"}`)
+	resp := request(t, h, "DELETE", "/api/buckets/file-del/files/nonexistent", "")
+	if resp.StatusCode != 404 {
+		t.Fatalf("expected 404, got %d", resp.StatusCode)
+	}
+}
+
+// --- Cache set missing key/value ---
+
+func TestCacheSetMissingFields(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	tests := []struct {
+		body string
+		code int
+		desc string
+	}{
+		{`{"key":"k","value":""}`, 400, "empty value"},
+		{`{"key":"","value":"v"}`, 400, "empty key"},
+		{`{}`, 400, "empty body"},
+	}
+	for _, tt := range tests {
+		resp := request(t, h, "POST", "/api/cache", tt.body)
+		if resp.StatusCode != tt.code {
+			t.Errorf("%s: expected %d, got %d", tt.desc, tt.code, resp.StatusCode)
+		}
+	}
+}
+
+// --- Cache delete nonexistent ---
+
+func TestCacheDeleteNotFound(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "DELETE", "/api/cache/nonexistent", "")
+	if resp.StatusCode != 404 {
+		t.Fatalf("expected 404, got %d", resp.StatusCode)
+	}
+}
+
+// --- Secrets create missing fields ---
+
+func TestSecretsCreateMissingFields(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	tests := []struct {
+		body string
+		code int
+		desc string
+	}{
+		{`{}`, 400, "missing name"},
+		{`{"value":"v"}`, 400, "missing name"},
+	}
+	for _, tt := range tests {
+		resp := request(t, h, "POST", "/api/secrets", tt.body)
+		if resp.StatusCode != tt.code {
+			t.Errorf("%s: expected %d, got %d", tt.desc, tt.code, resp.StatusCode)
+		}
+	}
+}
+
+// --- Secrets update partial data ---
+
+func TestSecretsUpdatePartialData(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "POST", "/api/secrets", `{"name":"partial_test","value":"initial"}`)
+	if resp.StatusCode != 201 {
+		t.Fatalf("expected 201, got %d", resp.StatusCode)
+	}
+	created := readBody(t, resp)
+	id := created["id"].(string)
+
+	// Update just name
+	resp = request(t, h, "PATCH", "/api/secrets/"+id, `{"name":"renamed"}`)
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.StatusCode)
+	}
+	body := readBody(t, resp)
+	if body["name"] != "renamed" {
+		t.Fatalf("expected renamed, got %v", body["name"])
+	}
+}
+
+// --- Webhooks create and list globally ---
+
+func TestWebhookCreateAndList(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "POST", "/api/webhooks", `{"name":"myhook","url":"http://example.com/hook","events":["record.created"]}`)
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.StatusCode)
+	}
+
+	// List webhooks (returns a JSON array)
+	resp = request(t, h, "GET", "/api/webhooks", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.StatusCode)
+	}
+}
+
+// --- Records update with no changes ---
+
+func TestRecordUpdateNoChanges(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/collections", `{"name":"upd-missing"}`)
+	request(t, h, "POST", "/api/collections/upd-missing/records", `{"id":"r1","data":{"name":"test"}}`)
+
+	// PATCH with empty data should work
+	resp := request(t, h, "PATCH", "/api/collections/upd-missing/records/r1", `{"data":{}}`)
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.StatusCode)
+	}
+}
+
+// --- Bucket create duplicate name ---
+
+func TestBucketCreateDuplicateName(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/buckets", `{"name":"dup-bucket"}`)
+	resp := request(t, h, "POST", "/api/buckets", `{"name":"dup-bucket"}`)
+	if resp.StatusCode != 409 {
+		t.Fatalf("expected 409, got %d", resp.StatusCode)
+	}
+}
+
+// --- Webhook logs without webhook ---
+
+func TestWebhookLogsNoWebhook(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "GET", "/api/webhooks/nonexistent/logs", "")
+	if resp.StatusCode != 404 {
+		t.Fatalf("expected 404, got %d", resp.StatusCode)
+	}
+}
+
+// --- Backup without data (empty DB) ---
+
+func TestBackupEmpty(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "GET", "/api/backup", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.StatusCode)
+	}
+	body, _ := io.ReadAll(resp.Body)
+	resp.Body.Close()
+	if len(body) == 0 {
+		t.Fatal("expected non-empty backup")
+	}
+}
+
+// --- Collection delete not found ---
+
+func TestCollectionDeleteNotFound(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "DELETE", "/api/collections/nonexistent", "")
+	if resp.StatusCode != 404 {
+		t.Fatalf("expected 404, got %d", resp.StatusCode)
+	}
+}
+
+// --- Register short password ---
+
+func TestRegisterShortPassword(t *testing.T) {
+	srv := newTestServer(t)
+	h := srv.routes()
+
+	resp := request(t, h, "POST", "/api/auth/register", `{"email":"short@test.com","password":"12"}`)
+	if resp.StatusCode != 400 {
+		t.Fatalf("expected 400, got %d", resp.StatusCode)
+	}
+}
+
+// --- RBAC forbidden with non-matching role ---
+
+func TestRBACForbiddenNonMatchingRole(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/collections", `{"name":"rbac-forbidden"}`)
+
+	// Register another user with viewer-only role
+	resp := request(t, h, "POST", "/api/auth/register", `{"email":"viewer@test.com","password":"password123"}`)
+	userBody := readBody(t, resp)
+	viewerID := userBody["id"].(string)
+
+	// Grant viewer permission on the collection
+	request(t, h, "POST", "/api/permissions", fmt.Sprintf(`{"user_id":"%s","collection":"rbac-forbidden","role":"viewer"}`, viewerID))
+
+	// Login as viewer
+	viewerResp := request(t, h, "POST", "/api/auth/login", `{"email":"viewer@test.com","password":"password123"}`)
+	viewerToken := readBody(t, viewerResp)["token"].(string)
+	viewerHandler := authenticated(srv.routes(), viewerToken)
+
+	// Viewer should be forbidden from creating records (requires editor/admin)
+	resp = request(t, viewerHandler, "POST", "/api/collections/rbac-forbidden/records", `{"data":{"name":"x"}}`)
+	if resp.StatusCode != 403 {
+		t.Fatalf("expected 403, got %d", resp.StatusCode)
+	}
+}
+
+// --- Permissions list empty ---
+
+func TestPermissionsListEmpty(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "GET", "/api/permissions", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.StatusCode)
+	}
+	var perms []any
+	if err := json.NewDecoder(resp.Body).Decode(&perms); err != nil {
+		t.Fatal(err)
+	}
+	resp.Body.Close()
+	if perms == nil {
+		t.Fatal("expected empty array, not nil")
+	}
+}
+
+// --- Record delete not found in collection ---
+
+func TestRecordDeleteNotFoundInCollection(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/collections", `{"name":"rec-del"}`)
+	resp := request(t, h, "DELETE", "/api/collections/rec-del/records/nonexistent", "")
+	if resp.StatusCode != 404 {
+		t.Fatalf("expected 404, got %d", resp.StatusCode)
+	}
+}
+
+// --- Cache set with invalid JSON ---
+
+func TestCacheSetInvalidJSON(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	req := httptest.NewRequest("POST", "/api/cache", strings.NewReader(`not json`))
+	req.Header.Set("Content-Type", "application/json")
+	req.Header.Set("Authorization", "Bearer "+token)
+	resp := httptest.NewRecorder()
+	h.ServeHTTP(resp, req)
+	if resp.Result().StatusCode != 400 {
+		t.Fatalf("expected 400, got %d", resp.Result().StatusCode)
+	}
+}
+
+// --- Decrypt secret with invalid format ---
+
+func TestDecryptSecretInvalidFormat(t *testing.T) {
+	_, err := decryptSecret([]byte("12345678901234567890123456789012"), "invalid-format")
+	if err == nil {
+		t.Fatal("expected error for invalid format")
+	}
+}
+
+func TestDecryptSecretInvalidHex(t *testing.T) {
+	_, err := decryptSecret([]byte("12345678901234567890123456789012"), "ZZZZ:data")
+	if err == nil {
+		t.Fatal("expected error for invalid hex")
+	}
+}
+
+// --- GetOrCreateSecretsKey via env var ---
+
+func TestGetOrCreateSecretsKeyEnvVar(t *testing.T) {
+	keyHex := "abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890"
+	t.Setenv("BACKBONE_SECRETS_KEY", keyHex)
+	key, err := getOrCreateSecretsKey(t.TempDir())
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(key) != 32 {
+		t.Fatalf("expected 32 bytes, got %d", len(key))
+	}
+}
+
+// --- Logs list and clear ---
+
+func TestLogListWithEntries(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	// Create a log entry
+	resp := request(t, h, "POST", "/api/logs", `{"level":"info","message":"test log"}`)
+	if resp.StatusCode != 201 {
+		t.Fatalf("expected 201, got %d", resp.StatusCode)
+	}
+
+	// List logs (returns array)
+	resp = request(t, h, "GET", "/api/logs", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.StatusCode)
+	}
+	var logEntries []any
+	if err := json.NewDecoder(resp.Body).Decode(&logEntries); err != nil {
+		t.Fatal(err)
+	}
+	resp.Body.Close()
+	if len(logEntries) == 0 {
+		t.Fatal("expected at least one log")
+	}
+}
+
+func TestLogClearWithEntries(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/logs", `{"level":"info","message":"to clear"}`)
+	resp := request(t, h, "DELETE", "/api/logs", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.StatusCode)
+	}
+
+	resp = request(t, h, "GET", "/api/logs", "")
+	var afterClear []any
+	if err := json.NewDecoder(resp.Body).Decode(&afterClear); err != nil {
+		t.Fatal(err)
+	}
+	resp.Body.Close()
+	if len(afterClear) != 0 {
+		t.Fatalf("expected 0 logs after clear, got %d", len(afterClear))
+	}
+}
+
+// --- Records list with filter parameters ---
+
+func TestRecordListWithFilterOp(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/collections", `{"name":"filtered"}`)
+	request(t, h, "POST", "/api/collections/filtered/records", `{"id":"a","data":{"val":10}}`)
+	request(t, h, "POST", "/api/collections/filtered/records", `{"id":"b","data":{"val":20}}`)
+	request(t, h, "POST", "/api/collections/filtered/records", `{"id":"c","data":{"val":30}}`)
+
+	resp := request(t, h, "GET", "/api/collections/filtered/records?filter=val=20", "")
+	body := readBody(t, resp)
+	total, _ := body["total"].(float64)
+	if total != 1 {
+		t.Fatalf("expected total=1, got %v", total)
+	}
+}
+
+// --- Webhook dispatch to unreachable URL (covers sendWebhook error path) ---
+
+func TestWebhookDispatchError(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/collections", `{"name":"wh-err"}`)
+	request(t, h, "POST", "/api/webhooks", `{"name":"err-hook","url":"http://127.0.0.1:1/invalid","events":["record.created"]}`)
+	resp := request(t, h, "POST", "/api/collections/wh-err/records", `{"id":"r1","data":{"name":"test"}}`)
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.StatusCode)
+	}
+}
+
+// --- CronJobs update and delete edge cases ---
+
+func TestCronJobsUpdateFields(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/cronjobs", `{"name":"myjob","schedule":"* * * * *","command":"http://example.com/hook","method":"POST"}`)
+	resp := request(t, h, "GET", "/api/cronjobs", "")
+	var jobs []map[string]any
+	if err := json.NewDecoder(resp.Body).Decode(&jobs); err != nil {
+		t.Fatal(err)
+	}
+	resp.Body.Close()
+	if len(jobs) == 0 {
+		t.Fatal("expected at least one cron job")
+	}
+	job := jobs[0]
+	id := job["id"].(string)
+
+	// Update name only
+	resp = request(t, h, "PATCH", "/api/cronjobs/"+id, `{"name":"renamed"}`)
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.StatusCode)
+	}
+}
+
+// --- WS List with no connections ---
+
+func TestWSListEmpty(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "GET", "/api/websockets", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.StatusCode)
+	}
+	var conns []any
+	if err := json.NewDecoder(resp.Body).Decode(&conns); err != nil {
+		t.Fatal(err)
+	}
+	resp.Body.Close()
+	if len(conns) != 0 {
+		t.Fatalf("expected no connections, got %d", len(conns))
+	}
+}
+
+// --- WS Get nonexistent connection ---
+
+func TestWSGetNotFound(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "GET", "/api/websockets/nonexistent", "")
+	if resp.StatusCode != 404 {
+		t.Fatalf("expected 404, got %d", resp.StatusCode)
+	}
+}
+
+// --- WS Send to nonexistent connection (inserts message, returns 200) ---
+
+func TestWSSendNotFound(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "POST", "/api/websockets/nonexistent/send", `{"content":"hello"}`)
+	if resp.StatusCode != 404 {
+		t.Fatalf("expected 404, got %d", resp.StatusCode)
+	}
+}
+
+// --- PubSub topic delete not found ---
+
+func TestPubSubTopicDeleteNotFound(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "DELETE", "/api/pubsub/topics/nonexistent", "")
+	if resp.StatusCode != 404 {
+		t.Fatalf("expected 404, got %d", resp.StatusCode)
+	}
+}
+
+// --- Notifications mark read not found ---
+
+func TestNotificationMarkReadNotFound(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "PATCH", "/api/notifications/nonexistent", "")
+	if resp.StatusCode != 404 {
+		t.Fatalf("expected 404, got %d", resp.StatusCode)
+	}
+}
+
+func TestNotificationDeleteNotFound(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "DELETE", "/api/notifications/nonexistent", "")
+	if resp.StatusCode != 404 {
+		t.Fatalf("expected 404, got %d", resp.StatusCode)
+	}
+}
+
+// --- Backend backup file with real data in collections ---
+
+func TestBackupWithData(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	request(t, h, "POST", "/api/collections", `{"name":"data-col"}`)
+	request(t, h, "POST", "/api/collections/data-col/records", `{"id":"r1","data":{"name":"backup-test"}}`)
+
+	resp := request(t, h, "GET", "/api/backup", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.StatusCode)
+	}
+	body, _ := io.ReadAll(resp.Body)
+	resp.Body.Close()
+	if len(body) == 0 {
+		t.Fatal("expected non-empty backup")
+	}
+}
+
+// --- Webhook logs for an existing webhook (no logs) ---
+
+func TestWebhookLogsEmpty(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "POST", "/api/webhooks", `{"name":"empty-logs","url":"http://example.com/hook","events":["record.created"]}`)
+	hook := readBody(t, resp)
+	hookID := hook["id"].(string)
+
+	resp = request(t, h, "GET", "/api/webhooks/"+hookID+"/logs", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.StatusCode)
+	}
+}
+
+func TestServeHTTP(t *testing.T) {
+	srv := newTestServer(t)
+	w := httptest.NewRecorder()
+	r := httptest.NewRequest("GET", "/api/health", nil)
+	srv.ServeHTTP(w, r)
+	if w.Code != 200 {
+		t.Fatalf("expected 200, got %d", w.Code)
+	}
+}
+
+func TestWSBroadcastInvalidJSON(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "POST", "/api/websockets/broadcast", `invalid`)
+	if resp.StatusCode != 400 {
+		t.Fatalf("expected 400, got %d", resp.StatusCode)
+	}
+}
+
+func TestWSBroadcastEmptyContent(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "POST", "/api/websockets/broadcast", `{"content":""}`)
+	if resp.StatusCode != 400 {
+		t.Fatalf("expected 400, got %d", resp.StatusCode)
+	}
+}
+
+func TestWSAllMessagesEmpty(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "GET", "/api/websockets/messages", "")
+	if resp.StatusCode != 200 {
+		t.Fatalf("expected 200, got %d", resp.StatusCode)
+	}
+	var msgs []any
+	if err := json.NewDecoder(resp.Body).Decode(&msgs); err != nil {
+		t.Fatal(err)
+	}
+	resp.Body.Close()
+}
+
+func TestCronJobsLogsNotFound(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "GET", "/api/cronjobs/nonexistent/logs", "")
+	if resp.StatusCode != 404 {
+		t.Fatalf("expected 404, got %d", resp.StatusCode)
+	}
+}
+
+func TestWSSendInvalidJSON(t *testing.T) {
+	srv := newTestServer(t)
+	token := loginAndGetToken(t, srv)
+	h := authenticated(srv.routes(), token)
+
+	resp := request(t, h, "POST", "/api/websockets/test-id/send", `invalid`)
+	if resp.StatusCode != 400 {
+		t.Fatalf("expected 400, got %d", resp.StatusCode)
+	}
+}
+
+// Test handler-level DB error branches by creating a Server with a closed DB.
+func TestHandlers_ClosedDB(t *testing.T) {
+	db, err := sql.Open("sqlite", ":memory:")
+	if err != nil {
+		t.Fatal(err)
+	}
+	db.Close()
+
+	key := make([]byte, 32)
+	srv := &Server{db: db, dataDir: t.TempDir(), secretsKey: key}
+
+	noArgCases := []struct {
+		name string
+		fn   func(w http.ResponseWriter, r *http.Request)
+	}{
+		{"handleCollectionsList", srv.handleCollectionsList},
+		{"handleBucketsList", srv.handleBucketsList},
+		{"handleWebhooksList", srv.handleWebhooksList},
+		{"handleCronJobsList", srv.handleCronJobsList},
+		{"handleWSList", srv.handleWSList},
+		{"handleLogsList", srv.handleLogsList},
+		{"handleWSAllMessages", srv.handleWSAllMessages},
+		{"handleFilesList", srv.handleFilesList},
+		{"handleLogsClear", srv.handleLogsClear},
+		{"handleNotificationsList", srv.handleNotificationsList},
+		{"handleNotificationsClear", srv.handleNotificationsClear},
+		{"handlePubSubTopicsList", srv.handlePubSubTopicsList},
+		{"handlePermissionsList", srv.handlePermissionsList},
+		{"handleExport", srv.handleExport},
+		{"handleBackup", srv.handleBackup},
+	}
+	for _, tc := range noArgCases {
+		t.Run(tc.name, func(t *testing.T) {
+			w := httptest.NewRecorder()
+			r := httptest.NewRequest("GET", "/", nil)
+			tc.fn(w, r)
+			if w.Code != 500 {
+				t.Fatalf("expected 500, got %d", w.Code)
+			}
+		})
+	}
+
+	pathValueCases := []struct {
+		name string
+		fn   func(w http.ResponseWriter, r *http.Request)
+	}{
+		{"handleCollectionsGet", srv.handleCollectionsGet},
+		{"handleCollectionsUpdate", srv.handleCollectionsUpdate},
+		{"handleCollectionsDelete", srv.handleCollectionsDelete},
+		{"handleBucketsGet", srv.handleBucketsGet},
+		{"handleBucketsDelete", srv.handleBucketsDelete},
+		{"handleWebhooksGet", srv.handleWebhooksGet},
+		{"handleWebhooksUpdate", srv.handleWebhooksUpdate},
+		{"handleWebhooksDelete", srv.handleWebhooksDelete},
+		{"handleWebhookLogs", srv.handleWebhookLogs},
+		{"handleSecretsGet", srv.handleSecretsGet},
+		{"handleSecretsUpdate", srv.handleSecretsUpdate},
+		{"handleSecretsDelete", srv.handleSecretsDelete},
+		{"handleCronJobsGet", srv.handleCronJobsGet},
+		{"handleCronJobsUpdate", srv.handleCronJobsUpdate},
+		{"handleCronJobsDelete", srv.handleCronJobsDelete},
+		{"handleCronJobsRun", srv.handleCronJobsRun},
+		{"handleCronJobsLogs", srv.handleCronJobsLogs},
+		{"handleWSGet", srv.handleWSGet},
+		{"handleWSDelete", srv.handleWSDelete},
+		{"handleWSMessages", srv.handleWSMessages},
+		{"handleNotificationsGet", srv.handleNotificationsGet},
+		{"handleNotificationsMarkRead", srv.handleNotificationsMarkRead},
+		{"handleNotificationsDelete", srv.handleNotificationsDelete},
+		{"handlePubSubTopicsGet", srv.handlePubSubTopicsGet},
+		{"handlePubSubTopicsDelete", srv.handlePubSubTopicsDelete},
+		{"handlePubSubMessagesList", srv.handlePubSubMessagesList},
+	}
+	for _, tc := range pathValueCases {
+		t.Run(tc.name, func(t *testing.T) {
+			w := httptest.NewRecorder()
+			r := httptest.NewRequest("GET", "/", nil)
+			r.SetPathValue("id", "test")
+			r.SetPathValue("name", "test")
+			tc.fn(w, r)
+			if w.Code != 500 {
+				t.Fatalf("expected 500, got %d", w.Code)
+			}
+		})
+	}
+
+	bodyCases := []struct {
+		name   string
+		method string
+		fn     func(w http.ResponseWriter, r *http.Request)
+		body   string
+	}{
+		{"handleWebhooksCreate", "POST", srv.handleWebhooksCreate, `{"name":"test","url":"http://ex.com","events":["record.created"]}`},
+		{"handleSecretsCreate", "POST", srv.handleSecretsCreate, `{"name":"k","value":"v","scope":"g"}`},
+	}
+	for _, tc := range bodyCases {
+		t.Run(tc.name, func(t *testing.T) {
+			w := httptest.NewRecorder()
+			r := httptest.NewRequest(tc.method, "/", strings.NewReader(tc.body))
+			r.Header.Set("Content-Type", "application/json")
+			r.SetPathValue("id", "test")
+			tc.fn(w, r)
+			if w.Code != 500 {
+				t.Fatalf("expected 500, got %d", w.Code)
+			}
+		})
+	}
+}
+
+func TestDataDir_WithEnv(t *testing.T) {
+	t.Setenv("BACKBONE_DATA", "/custom/path")
+	if got := dataDir(); got != "/custom/path" {
+		t.Fatalf("expected /custom/path, got %s", got)
+	}
+}
+
+func TestDataDir_EmptyEnv(t *testing.T) {
+	t.Setenv("BACKBONE_DATA", "")
+	dir := dataDir()
+	if dir == "" {
+		t.Fatal("expected non-empty dir")
+	}
+	if !strings.HasSuffix(dir, ".backbone") {
+		t.Fatalf("expected .backbone suffix, got %s", dir)
+	}
+}
+
+func TestGetLocalIP(t *testing.T) {
+	ip := getLocalIP()
+	if ip == "" {
+		t.Fatal("expected non-empty IP")
+	}
+}
+
+func TestGetLocalIP_NonLoopback(t *testing.T) {
+	ip := getLocalIP()
+	if ip == "127.0.0.1" {
+		t.Skip("only loopback available")
+	}
+	parsed := net.ParseIP(ip)
+	if parsed == nil || parsed.IsLoopback() || parsed.To4() == nil {
+		t.Fatalf("expected non-loopback IPv4, got %s", ip)
+	}
+}
+
+func TestMain(m *testing.M) {
+	if os.Getenv("GO_MAIN_TEST") == "1" {
+		main()
+		return
+	}
+	os.Exit(m.Run())
+}
+
+func TestMainFunction_StartsAndResponds(t *testing.T) {
+	dir := t.TempDir()
+
+	l, err := net.Listen("tcp", "127.0.0.1:0")
+	if err != nil {
+		t.Fatal(err)
+	}
+	port := l.Addr().(*net.TCPAddr).Port
+	l.Close()
+
+	cmd := exec.Command(os.Args[0], "-test.run=TestMainFunction_StartsAndResponds")
+	cmd.Env = append(os.Environ(),
+		"GO_MAIN_TEST=1",
+		"BACKBONE_DATA="+dir,
+		"PORT="+strconv.Itoa(port),
+	)
+	cmd.Stdout = &bytes.Buffer{}
+	cmd.Stderr = &bytes.Buffer{}
+
+	if err := cmd.Start(); err != nil {
+		t.Fatal(err)
+	}
+	defer func() {
+		cmd.Process.Signal(syscall.SIGINT)
+		cmd.Wait()
+	}()
+
+	baseURL := fmt.Sprintf("http://127.0.0.1:%d", port)
+	var resp *http.Response
+	for i := 0; i < 20; i++ {
+		resp, err = http.Get(baseURL + "/api/health")
+		if err == nil {
+			break
+		}
+		time.Sleep(50 * time.Millisecond)
+	}
+	if err != nil {
+		t.Fatalf("server did not start: %v\nstdout: %s\nstderr: %s",
+			err, cmd.Stdout.(*bytes.Buffer).String(), cmd.Stderr.(*bytes.Buffer).String())
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		body, _ := io.ReadAll(resp.Body)
+		t.Fatalf("expected 200, got %d: %s", resp.StatusCode, string(body))
+	}
+}
+
+// Direct closed-DB tests for low-coverage DB functions
+func TestDBFunctions_ClosedDB(t *testing.T) {
+	db, err := sql.Open("sqlite", ":memory:")
+	if err != nil {
+		t.Fatal(err)
+	}
+	db.Close()
+
+	tests := []struct {
+		name string
+		fn   func(*sql.DB) error
+	}{
+		{"deleteBucket", func(db *sql.DB) error { _, err := deleteBucket(db, "test"); return err }},
+		{"deleteFile", func(db *sql.DB) error { _, err := deleteFile(db, "test"); return err }},
+		{"deleteCacheEntry", func(db *sql.DB) error { _, err := deleteCacheEntry(db, "test"); return err }},
+		{"listBuckets", func(db *sql.DB) error { _, err := listBuckets(db); return err }},
+		{"listSecrets", func(db *sql.DB) error { _, err := listSecrets(db); return err }},
+		{"listCronJobs", func(db *sql.DB) error { _, err := listCronJobs(db); return err }},
+		{"listWebhooks", func(db *sql.DB) error { _, err := listWebhooks(db); return err }},
+		{"listWSConnections", func(db *sql.DB) error { _, err := listWSConnections(db); return err }},
+		{"listAllWSMessages", func(db *sql.DB) error { _, err := listAllWSMessages(db); return err }},
+		{"listCronJobLogs", func(db *sql.DB) error { _, err := listCronJobLogs(db, "test"); return err }},
+		{"listWebhookLogs", func(db *sql.DB) error { _, err := listWebhookLogs(db, "test", 10); return err }},
+		{"insertPubSubTopic", func(db *sql.DB) error { _, err := insertPubSubTopic(db, "test", "test"); return err }},
+	}
+	for _, tc := range tests {
+		t.Run(tc.name, func(t *testing.T) {
+			if err := tc.fn(db); err == nil {
+				t.Fatal("expected error")
+			}
+		})
 	}
 }

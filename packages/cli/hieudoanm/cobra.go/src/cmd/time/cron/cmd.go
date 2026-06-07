@@ -1,0 +1,49 @@
+package cron
+
+import (
+	"time"
+
+	"github.com/spf13/cobra"
+)
+
+func NewCmd() *cobra.Command {
+	var expression string
+	var next int
+	var until string
+	var cronJSON bool
+
+	cmd := &cobra.Command{
+		Use:   "cron [--expression <expression>]",
+		Short: "Describe a cron expression in plain English and compute next runs",
+		Long:  `Parse a 5-field cron expression, describe when it runs, and compute upcoming occurrences.`,
+		Example: `  cron --expression "*/15 * * * *"
+  cron --expression "0 9 * * 1-5"
+  cron --expression "0 0 1 1 *"
+  cron --next 5 --expression "*/30 * * * *"
+  cron --next 10 --until "2026-12-31" --expression "0 0 * * *"`,
+		RunE: func(cmd *cobra.Command, args []string) error {
+			expr := expression
+			untilTime, err := parseUntil(until)
+			if err != nil {
+				return err
+			}
+
+			var runs []*time.Time
+			if next > 0 {
+				runs = cronNextRuns(expr, next, untilTime)
+			}
+
+			if cronJSON {
+				return outputCronJSON(expr, runs)
+			}
+			outputCronText(expr, runs)
+			return nil
+		},
+	}
+
+	cmd.Flags().StringVarP(&expression, "expression", "e", "", "Cron expression")
+	cmd.Flags().IntVarP(&next, "next", "n", 0, "Show next N run times")
+	cmd.Flags().StringVar(&until, "until", "", "Show runs until this date (YYYY-MM-DD)")
+	cmd.Flags().BoolVar(&cronJSON, "json", false, "Output in JSON format")
+	return cmd
+}

@@ -10,11 +10,15 @@ import (
 type Model string
 
 const (
-	Model25Flash   Model = "gemini-2.5-flash"
-	Model20Flash   Model = "gemini-2.0-flash"
-	Model20FlashLite Model = "gemini-2.0-flash-lite"
-	Model15Flash   Model = "gemini-1.5-flash"
-	Model15Flash8B Model = "gemini-1.5-flash-8b"
+	Model35Flash        Model = "gemini-3.5-flash"
+	Model31FlashLite    Model = "gemini-3.1-flash-lite"
+	Model31ProPreview   Model = "gemini-3.1-pro-preview"
+	Model3FlashPreview  Model = "gemini-3-flash-preview"
+	Model25Pro          Model = "gemini-2.5-pro"
+	Model25Flash        Model = "gemini-2.5-flash"
+	Model25FlashLite    Model = "gemini-2.5-flash-lite"
+	Model20Flash        Model = "gemini-2.0-flash"
+	Model20FlashLite    Model = "gemini-2.0-flash-lite"
 )
 
 type Role string

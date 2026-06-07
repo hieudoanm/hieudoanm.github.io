@@ -15,7 +15,7 @@ func CloneBoard(b types.Board) types.Board {
 	return b
 }
 
-func PutPiece(b types.Board, piece *types.Piece, sq types.Square) {
+func PutPiece(b *types.Board, piece *types.Piece, sq types.Square) {
 	b[sq] = piece
 }
 
@@ -23,7 +23,7 @@ func GetPiece(b types.Board, sq types.Square) *types.Piece {
 	return b[sq]
 }
 
-func RemovePiece(b types.Board, sq types.Square) {
+func RemovePiece(b *types.Board, sq types.Square) {
 	b[sq] = nil
 }
 

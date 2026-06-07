@@ -26,6 +26,7 @@ var tagRegex = regexp.MustCompile(`^\[(\w+)\s+"(.*)"\]$`)
 func ParsePGN(input string) []PGNGame {
 	var games []PGNGame
 	chunks := strings.Split(input, "\n\n")
+	var pendingHeaders map[string]string
 
 	for _, chunk := range chunks {
 		if strings.TrimSpace(chunk) == "" {
@@ -35,6 +36,7 @@ func ParsePGN(input string) []PGNGame {
 		lines := strings.Split(chunk, "\n")
 		headers := make(map[string]string)
 		var movesText string
+		hasNonTagLine := false
 
 		for _, line := range lines {
 			line = strings.TrimSpace(line)
@@ -46,7 +48,22 @@ func ParsePGN(input string) []PGNGame {
 				headers[match[1]] = match[2]
 			} else {
 				movesText += " " + line
+				hasNonTagLine = true
 			}
+		}
+
+		if !hasNonTagLine && len(headers) > 0 {
+			pendingHeaders = headers
+			continue
+		}
+
+		if pendingHeaders != nil {
+			for k, v := range pendingHeaders {
+				if _, ok := headers[k]; !ok {
+					headers[k] = v
+				}
+			}
+			pendingHeaders = nil
 		}
 
 		movesList := parseMoves(movesText)
@@ -58,6 +75,18 @@ func ParsePGN(input string) []PGNGame {
 		games = append(games, PGNGame{
 			Headers: headers,
 			Moves:   movesList,
+			Result:  result,
+		})
+	}
+
+	if pendingHeaders != nil {
+		result := "*"
+		if r, ok := pendingHeaders["Result"]; ok {
+			result = r
+		}
+		games = append(games, PGNGame{
+			Headers: pendingHeaders,
+			Moves:   nil,
 			Result:  result,
 		})
 	}

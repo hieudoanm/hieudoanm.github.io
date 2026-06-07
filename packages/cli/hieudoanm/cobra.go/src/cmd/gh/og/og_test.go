@@ -1,0 +1,271 @@
+package og
+
+import (
+	"errors"
+	"os"
+	"path/filepath"
+	"strings"
+	"testing"
+
+	"github.com/hieudoanm/jack/src/cmd/gh/shared"
+)
+
+func TestNewOGCmd_Structure(t *testing.T) {
+	cmd := NewCommand()
+	if cmd.Use != "og [--url <owner/repo>]" {
+		t.Errorf("Use = %q, want 'og [--url <owner/repo>]'", cmd.Use)
+	}
+	if cmd.Short != "Generate an Open Graph SVG for a GitHub repository" {
+		t.Errorf("Short = %q, want 'Generate an Open Graph SVG for a GitHub repository'", cmd.Short)
+	}
+	wantLong := `Fetches repository metadata from GitHub and generates
+a 1200×630 Open Graph SVG image (social preview card).`
+	if cmd.Long != wantLong {
+		t.Errorf("Long = %q, want %q", cmd.Long, wantLong)
+	}
+	wantExample := `  gh og --url hieudoanm/hieudoanm.github.io
+  gh og --url hieudoanm/hieudoanm --output preview.svg`
+	if cmd.Example != wantExample {
+		t.Errorf("Example = %q, want %q", cmd.Example, wantExample)
+	}
+	if f := cmd.Flags().Lookup("url"); f == nil {
+		t.Error("expected --url flag")
+	} else if f.DefValue != "" {
+		t.Errorf("--url default = %q, want ''", f.DefValue)
+	}
+	if f := cmd.Flags().Lookup("output"); f == nil {
+		t.Error("expected --output flag")
+	} else if f.DefValue != "og.svg" {
+		t.Errorf("--output default = %q, want 'og.svg'", f.DefValue)
+	}
+}
+
+func TestFetchOG(t *testing.T) {
+	repoBody := `{"name":"test-repo","full_name":"owner/test-repo","description":"A test repo","html_url":"https://github.com/owner/test-repo","stargazers_count":42,"forks_count":7,"language":"Go","owner":{"login":"owner","avatar_url":"https://avatars.githubusercontent.com/u/1"}}`
+
+	tests := []struct {
+		name    string
+		repo    string
+		output  string
+		mocks   []shared.MockResult
+		wantErr string
+	}{
+		{
+			name:   "success",
+			repo:   "owner/repo",
+			output: "og.svg",
+			mocks: []shared.MockResult{
+				{Body: []byte(repoBody)},
+			},
+		},
+		{
+			name:    "invalid repo format",
+			repo:    "invalid",
+			output:  "og.svg",
+			wantErr: "repo must be in format owner/repo",
+		},
+		{
+			name:   "fetch error",
+			repo:   "owner/repo",
+			output: "og.svg",
+			mocks: []shared.MockResult{
+				{Err: errors.New("network error")},
+			},
+			wantErr: "error fetching repository",
+		},
+		{
+			name:   "invalid JSON",
+			repo:   "owner/repo",
+			output: "og.svg",
+			mocks: []shared.MockResult{
+				{Body: []byte("invalid json")},
+			},
+			wantErr: "error parsing response",
+		},
+		{
+			name:   "file write error",
+			repo:   "owner/repo",
+			output: "/nonexistent/deep/dir/og.svg",
+			mocks: []shared.MockResult{
+				{Body: []byte(repoBody)},
+			},
+			wantErr: "error writing SVG",
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			dir := t.TempDir()
+			outPath := tt.output
+			if !filepath.IsAbs(outPath) {
+				outPath = filepath.Join(dir, outPath)
+			}
+
+			mock := shared.MockFetchSeq(tt.mocks...)
+			err := fetchOG(tt.repo, outPath, mock)
+
+			if tt.wantErr != "" {
+				if err == nil {
+					t.Fatal("expected error, got nil")
+				}
+				if !strings.Contains(err.Error(), tt.wantErr) {
+					t.Errorf("err = %q, want contains %q", err.Error(), tt.wantErr)
+				}
+				return
+			}
+
+			if err != nil {
+				t.Fatalf("unexpected error: %v", err)
+			}
+
+			data, err := os.ReadFile(outPath)
+			if err != nil {
+				t.Fatalf("error reading output file: %v", err)
+			}
+			svg := string(data)
+			if !strings.Contains(svg, "test-repo") {
+				t.Error("expected SVG to contain repo name")
+			}
+			if !strings.Contains(svg, "★ 42") {
+				t.Error("expected SVG to contain star count")
+			}
+		})
+	}
+}
+
+func TestEscapeXML(t *testing.T) {
+	tests := []struct {
+		input string
+		want  string
+	}{
+		{`&`, `&amp;`},
+		{`<`, `&lt;`},
+		{`>`, `&gt;`},
+		{`'`, `&apos;`},
+		{`"`, `&quot;`},
+		{`hello & world <foo>`, `hello &amp; world &lt;foo&gt;`},
+		{`normal text`, `normal text`},
+		{``, ``},
+	}
+
+	for _, tt := range tests {
+		got := escapeXML(tt.input)
+		if got != tt.want {
+			t.Errorf("escapeXML(%q) = %q, want %q", tt.input, got, tt.want)
+		}
+	}
+}
+
+func TestGenerateOGSVG(t *testing.T) {
+	repo := ghRepo{
+		Name:        "test-repo",
+		FullName:    "owner/test-repo",
+		Description: "A test repository",
+		HTMLURL:     "https://github.com/owner/test-repo",
+		Stars:       42,
+		Forks:       7,
+		Language:    "Go",
+		Owner: struct {
+			Login     string `json:"login"`
+			AvatarURL string `json:"avatar_url"`
+		}{
+			Login:     "owner",
+			AvatarURL: "https://avatars.githubusercontent.com/u/1",
+		},
+	}
+
+	svg := GenerateOGSVG(repo)
+
+	if !strings.HasPrefix(svg, `<svg xmlns="http://www.w3.org/2000/svg"`) {
+		t.Error("expected SVG namespace prefix")
+	}
+	if !strings.HasSuffix(strings.TrimSpace(svg), "</svg>") {
+		t.Error("expected SVG closing tag")
+	}
+	if !strings.Contains(svg, "test-repo") {
+		t.Error("expected SVG to contain repo name")
+	}
+	if !strings.Contains(svg, "owner") {
+		t.Error("expected SVG to contain owner login")
+	}
+	if !strings.Contains(svg, "A test repository") {
+		t.Error("expected SVG to contain description")
+	}
+	if !strings.Contains(svg, "★ 42") {
+		t.Error("expected SVG to contain star count")
+	}
+	if !strings.Contains(svg, "⑂ 7") {
+		t.Error("expected SVG to contain fork count")
+	}
+	if !strings.Contains(svg, `width="1200"`) {
+		t.Error("expected SVG width 1200")
+	}
+	if !strings.Contains(svg, `height="630"`) {
+		t.Error("expected SVG height 630")
+	}
+}
+
+func TestGenerateOGSVG_emptyDescription(t *testing.T) {
+	repo := ghRepo{
+		Name:     "empty-desc",
+		FullName: "u/empty-desc",
+		Language: "Rust",
+		Owner: struct {
+			Login     string `json:"login"`
+			AvatarURL string `json:"avatar_url"`
+		}{
+			Login: "u",
+		},
+	}
+
+	svg := GenerateOGSVG(repo)
+
+	if !strings.Contains(svg, "No description") {
+		t.Error("expected default text for empty description")
+	}
+}
+
+func TestGenerateOGSVG_longDescription(t *testing.T) {
+	longDesc := strings.Repeat("a", 200)
+	repo := ghRepo{
+		Name:        "long-desc",
+		FullName:    "u/long-desc",
+		Description: longDesc,
+		Language:    "Python",
+		Owner: struct {
+			Login     string `json:"login"`
+			AvatarURL string `json:"avatar_url"`
+		}{
+			Login: "u",
+		},
+	}
+
+	svg := GenerateOGSVG(repo)
+
+	if !strings.Contains(svg, "...") {
+		t.Error("expected truncated description to end with ...")
+	}
+	if strings.Contains(svg, longDesc) {
+		t.Error("expected long description to be truncated")
+	}
+}
+
+func TestGenerateOGSVG_unknownLanguageColor(t *testing.T) {
+	repo := ghRepo{
+		Name:     "unknown-lang",
+		FullName: "u/unknown-lang",
+		Language: "FooLang",
+		Owner: struct {
+			Login     string `json:"login"`
+			AvatarURL string `json:"avatar_url"`
+		}{
+			Login: "u",
+		},
+	}
+
+	svg := GenerateOGSVG(repo)
+
+	if !strings.Contains(svg, `fill="#6e7681"`) {
+		t.Error("expected unknown language to use default color")
+	}
+}

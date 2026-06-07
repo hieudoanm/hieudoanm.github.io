@@ -1,0 +1,107 @@
+package message
+
+import (
+	"encoding/json"
+	"fmt"
+
+	"github.com/hieudoanm/jack/src/cmd/telegram/internal"
+	"github.com/hieudoanm/jack/src/libs/requests"
+	"github.com/spf13/cobra"
+)
+
+type DeleteResponse struct {
+	Ok bool `json:"ok"`
+}
+
+type SendResponse struct {
+	Ok bool `json:"ok"`
+}
+
+func newSendCmd() *cobra.Command {
+	cmd := &cobra.Command{
+		Use:   "send",
+		Short: "Send a Telegram message",
+		Long:  `Send a text message to a Telegram chat.`,
+		Example: `  telegram message send --chat-id 123456 --text "Hello"
+  telegram message send --chat-id @username --text "Hello" --parse-mode HTML`,
+		RunE: func(cmd *cobra.Command, args []string) error {
+			jsonOutput, _ := cmd.Flags().GetBool("json")
+
+			token, err := internal.ResolveToken(cmd)
+			if err != nil {
+				return err
+			}
+
+			chatID, _ := cmd.Flags().GetString("chat-id")
+			text, _ := cmd.Flags().GetString("text")
+			parseMode, _ := cmd.Flags().GetString("parse-mode")
+			disableWebPagePreview, _ := cmd.Flags().GetBool("disable-web-page-preview")
+			disableNotification, _ := cmd.Flags().GetBool("disable-notification")
+			protectContent, _ := cmd.Flags().GetBool("protect-content")
+			replyToMessageID, _ := cmd.Flags().GetInt("reply-to-message-id")
+
+			if chatID == "" {
+				return fmt.Errorf("--chat-id is required")
+			}
+			if text == "" {
+				return fmt.Errorf("--text is required")
+			}
+
+			body := map[string]interface{}{
+				"chat_id": chatID,
+				"text":    text,
+			}
+			if parseMode != "" {
+				body["parse_mode"] = parseMode
+			}
+			if disableWebPagePreview {
+				body["disable_web_page_preview"] = true
+			}
+			if disableNotification {
+				body["disable_notification"] = true
+			}
+			if protectContent {
+				body["protect_content"] = true
+			}
+			if replyToMessageID != 0 {
+				body["reply_to_message_id"] = replyToMessageID
+			}
+
+			url := internal.TelegramAPIURL(token, "sendMessage")
+			responseByte, postErr := requests.Post(url, requests.Options{Body: body})
+			if postErr != nil {
+				return postErr
+			}
+
+			if jsonOutput {
+				var result map[string]interface{}
+				if err := json.Unmarshal(responseByte, &result); err != nil {
+					return err
+				}
+				out, _ := json.MarshalIndent(result, "", "  ")
+				fmt.Println(string(out))
+			} else {
+				var sendResponse SendResponse
+				if err := json.Unmarshal(responseByte, &sendResponse); err != nil {
+					return err
+				}
+				if sendResponse.Ok {
+					fmt.Println("Success")
+				} else {
+					fmt.Println("Failed")
+				}
+			}
+			return nil
+		},
+	}
+
+	cmd.Flags().String("chat-id", "", "Target chat ID or @username")
+	cmd.Flags().String("text", "", "Message text")
+	cmd.Flags().String("parse-mode", "", "Parse mode: HTML, MarkdownV2, Markdown")
+	cmd.Flags().Bool("disable-web-page-preview", false, "Disable link preview")
+	cmd.Flags().Bool("disable-notification", false, "Send silently")
+	cmd.Flags().Bool("protect-content", false, "Protect forwarded content")
+	cmd.Flags().Int("reply-to-message-id", 0, "Reply to a message")
+
+	return cmd
+}

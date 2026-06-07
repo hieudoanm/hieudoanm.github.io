@@ -1,0 +1,1308 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`StoreFrontTemplate to match snapshot 1`] = `
+<div>
+  <div
+    class="bg-base-100 text-base-content min-h-screen font-sans"
+    data-theme="luxury"
+  >
+    <div
+      class="navbar bg-base-100/85 border-base-300 sticky top-0 z-50 min-h-[60px] border-b px-4 backdrop-blur-xl lg:px-12"
+    >
+      <div
+        class="navbar-start"
+      >
+        <a
+          class="text-primary font-serif text-2xl font-bold tracking-widest"
+          href="/store"
+        >
+          DaisyX
+        </a>
+      </div>
+      <div
+        class="navbar-center hidden lg:flex"
+      >
+        <ul
+          class="menu menu-horizontal text-base-content/60 gap-2 px-1 text-sm"
+        >
+          <li>
+            <a
+              class="hover:text-base-content"
+              href="#products"
+            >
+              Products
+            </a>
+          </li>
+          <li>
+            <a
+              class="hover:text-base-content"
+              href="#categories"
+            >
+              Categories
+            </a>
+          </li>
+          <li>
+            <a
+              class="hover:text-base-content"
+              href="#deals"
+            >
+              Deals
+            </a>
+          </li>
+          <li>
+            <a
+              class="hover:text-base-content"
+              href="#newsletter"
+            >
+              Newsletter
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="navbar-end gap-2"
+      >
+        <button
+          class="btn btn-ghost btn-sm"
+        >
+          <span
+            class="text-lg"
+          >
+            🔍
+          </span>
+        </button>
+        <button
+          class="btn btn-ghost btn-sm relative"
+        >
+          <span
+            class="text-lg"
+          >
+            🛒
+          </span>
+          <span
+            class="badge badge-error badge-xs absolute -top-1 -right-1 h-4 min-w-4 p-0 text-[10px]"
+          >
+            2
+          </span>
+        </button>
+        <button
+          class="btn btn-primary btn-sm"
+        >
+          Sign in
+        </button>
+      </div>
+    </div>
+    <section
+      class="relative mx-auto max-w-5xl px-4 py-24 text-center lg:px-12"
+    >
+      <div
+        class="bg-primary/5 pointer-events-none absolute top-0 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full blur-3xl"
+      />
+      <p
+        class="text-primary mb-4 text-xs tracking-[0.2em] uppercase"
+      >
+        Spring collection · Free shipping
+      </p>
+      <h1
+        class="mb-6 font-serif text-5xl leading-[1.05] font-black tracking-tight lg:text-7xl"
+      >
+        Workspace essentials
+        <br />
+        <span
+          class="text-primary"
+        >
+          curated for you
+        </span>
+      </h1>
+      <p
+        class="text-base-content/60 mx-auto mb-10 max-w-xl text-base leading-relaxed lg:text-lg"
+      >
+        Thoughtfully designed tools and accessories for your everyday workflow. From ergonomic furniture to premium audio.
+      </p>
+      <div
+        class="flex flex-wrap justify-center gap-3"
+      >
+        <a
+          class="btn btn-primary"
+          href="#products"
+        >
+          Shop now
+        </a>
+        <a
+          class="btn btn-ghost"
+          href="#deals"
+        >
+          View deals →
+        </a>
+      </div>
+    </section>
+    <div
+      class="border-base-300 mx-4 border-t lg:mx-12"
+    />
+    <section
+      class="mx-auto max-w-5xl px-4 py-24 lg:px-12"
+      id="products"
+    >
+      <p
+        class="text-primary mb-3 text-xs font-medium tracking-[0.14em] uppercase"
+      >
+        Products
+      </p>
+      <div
+        class="mb-8 flex flex-wrap items-center justify-between gap-4"
+      >
+        <h2
+          class="font-serif text-3xl leading-snug font-bold lg:text-4xl"
+        >
+          Browse all
+        </h2>
+        <div
+          class="flex flex-wrap gap-2"
+        >
+          <button
+            class="btn btn-sm btn-primary"
+          >
+            All
+          </button>
+          <button
+            class="btn btn-sm btn-ghost border-base-300 border"
+          >
+            Furniture
+          </button>
+          <button
+            class="btn btn-sm btn-ghost border-base-300 border"
+          >
+            Electronics
+          </button>
+          <button
+            class="btn btn-sm btn-ghost border-base-300 border"
+          >
+            Audio
+          </button>
+          <button
+            class="btn btn-sm btn-ghost border-base-300 border"
+          >
+            Accessories
+          </button>
+        </div>
+      </div>
+      <div
+        class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+      >
+        <a
+          class="card bg-base-200 border-base-300 hover:border-primary/40 group border transition-all"
+          href="/store/1"
+        >
+          <figure
+            class="bg-base-300 flex h-48 items-center justify-center"
+          >
+            <span
+              class="text-base-content/20 text-5xl"
+            >
+              ◻
+            </span>
+          </figure>
+          <div
+            class="card-body p-5"
+          >
+            <div
+              class="flex items-start justify-between gap-2"
+            >
+              <div
+                class="min-w-0 flex-1"
+              >
+                <p
+                  class="text-base-content/40 text-xs"
+                >
+                  Furniture
+                </p>
+                <h3
+                  class="card-title mt-0.5 text-sm font-medium"
+                >
+                  Ergonomic Chair
+                </h3>
+              </div>
+              <span
+                class="badge badge-error badge-sm shrink-0"
+              >
+                Sale
+              </span>
+            </div>
+            <div
+              class="mt-2 flex items-center gap-2"
+            >
+              <span
+                class="text-warning text-xs"
+              >
+                ★★★★
+                ☆
+              </span>
+              <span
+                class="text-base-content/40 text-xs"
+              >
+                (
+                128
+                )
+              </span>
+            </div>
+            <div
+              class="mt-3 flex items-center gap-2"
+            >
+              <span
+                class="text-lg font-bold"
+              >
+                $
+                349
+              </span>
+              <span
+                class="text-base-content/30 text-sm line-through"
+              >
+                $
+                429
+              </span>
+            </div>
+          </div>
+        </a>
+        <a
+          class="card bg-base-200 border-base-300 hover:border-primary/40 group border transition-all"
+          href="/store/2"
+        >
+          <figure
+            class="bg-base-300 flex h-48 items-center justify-center"
+          >
+            <span
+              class="text-base-content/20 text-5xl"
+            >
+              ◻
+            </span>
+          </figure>
+          <div
+            class="card-body p-5"
+          >
+            <div
+              class="flex items-start justify-between gap-2"
+            >
+              <div
+                class="min-w-0 flex-1"
+              >
+                <p
+                  class="text-base-content/40 text-xs"
+                >
+                  Electronics
+                </p>
+                <h3
+                  class="card-title mt-0.5 text-sm font-medium"
+                >
+                  Mechanical Keyboard
+                </h3>
+              </div>
+              <span
+                class="badge badge-warning badge-sm shrink-0"
+              >
+                Best seller
+              </span>
+            </div>
+            <div
+              class="mt-2 flex items-center gap-2"
+            >
+              <span
+                class="text-warning text-xs"
+              >
+                ★★★★
+                ☆
+              </span>
+              <span
+                class="text-base-content/40 text-xs"
+              >
+                (
+                94
+                )
+              </span>
+            </div>
+            <div
+              class="mt-3 flex items-center gap-2"
+            >
+              <span
+                class="text-lg font-bold"
+              >
+                $
+                159
+              </span>
+            </div>
+          </div>
+        </a>
+        <a
+          class="card bg-base-200 border-base-300 hover:border-primary/40 group border transition-all"
+          href="/store/3"
+        >
+          <figure
+            class="bg-base-300 flex h-48 items-center justify-center"
+          >
+            <span
+              class="text-base-content/20 text-5xl"
+            >
+              ◻
+            </span>
+          </figure>
+          <div
+            class="card-body p-5"
+          >
+            <div
+              class="flex items-start justify-between gap-2"
+            >
+              <div
+                class="min-w-0 flex-1"
+              >
+                <p
+                  class="text-base-content/40 text-xs"
+                >
+                  Audio
+                </p>
+                <h3
+                  class="card-title mt-0.5 text-sm font-medium"
+                >
+                  Studio Headphones
+                </h3>
+              </div>
+              <span
+                class="badge badge-info badge-sm shrink-0"
+              >
+                New
+              </span>
+            </div>
+            <div
+              class="mt-2 flex items-center gap-2"
+            >
+              <span
+                class="text-warning text-xs"
+              >
+                ★★★★
+                ☆
+              </span>
+              <span
+                class="text-base-content/40 text-xs"
+              >
+                (
+                215
+                )
+              </span>
+            </div>
+            <div
+              class="mt-3 flex items-center gap-2"
+            >
+              <span
+                class="text-lg font-bold"
+              >
+                $
+                89
+              </span>
+            </div>
+          </div>
+        </a>
+        <a
+          class="card bg-base-200 border-base-300 hover:border-primary/40 group border transition-all"
+          href="/store/4"
+        >
+          <figure
+            class="bg-base-300 flex h-48 items-center justify-center"
+          >
+            <span
+              class="text-base-content/20 text-5xl"
+            >
+              ◻
+            </span>
+          </figure>
+          <div
+            class="card-body p-5"
+          >
+            <div
+              class="flex items-start justify-between gap-2"
+            >
+              <div
+                class="min-w-0 flex-1"
+              >
+                <p
+                  class="text-base-content/40 text-xs"
+                >
+                  Furniture
+                </p>
+                <h3
+                  class="card-title mt-0.5 text-sm font-medium"
+                >
+                  Minimal Desk Lamp
+                </h3>
+              </div>
+            </div>
+            <div
+              class="mt-2 flex items-center gap-2"
+            >
+              <span
+                class="text-warning text-xs"
+              >
+                ★★★★
+                ☆
+              </span>
+              <span
+                class="text-base-content/40 text-xs"
+              >
+                (
+                73
+                )
+              </span>
+            </div>
+            <div
+              class="mt-3 flex items-center gap-2"
+            >
+              <span
+                class="text-lg font-bold"
+              >
+                $
+                59
+              </span>
+            </div>
+          </div>
+        </a>
+        <a
+          class="card bg-base-200 border-base-300 hover:border-primary/40 group border transition-all"
+          href="/store/5"
+        >
+          <figure
+            class="bg-base-300 flex h-48 items-center justify-center"
+          >
+            <span
+              class="text-base-content/20 text-5xl"
+            >
+              ◻
+            </span>
+          </figure>
+          <div
+            class="card-body p-5"
+          >
+            <div
+              class="flex items-start justify-between gap-2"
+            >
+              <div
+                class="min-w-0 flex-1"
+              >
+                <p
+                  class="text-base-content/40 text-xs"
+                >
+                  Electronics
+                </p>
+                <h3
+                  class="card-title mt-0.5 text-sm font-medium"
+                >
+                  Wireless Mouse
+                </h3>
+              </div>
+            </div>
+            <div
+              class="mt-2 flex items-center gap-2"
+            >
+              <span
+                class="text-warning text-xs"
+              >
+                ★★★★
+                ☆
+              </span>
+              <span
+                class="text-base-content/40 text-xs"
+              >
+                (
+                186
+                )
+              </span>
+            </div>
+            <div
+              class="mt-3 flex items-center gap-2"
+            >
+              <span
+                class="text-lg font-bold"
+              >
+                $
+                79
+              </span>
+            </div>
+          </div>
+        </a>
+        <a
+          class="card bg-base-200 border-base-300 hover:border-primary/40 group border transition-all"
+          href="/store/6"
+        >
+          <figure
+            class="bg-base-300 flex h-48 items-center justify-center"
+          >
+            <span
+              class="text-base-content/20 text-5xl"
+            >
+              ◻
+            </span>
+          </figure>
+          <div
+            class="card-body p-5"
+          >
+            <div
+              class="flex items-start justify-between gap-2"
+            >
+              <div
+                class="min-w-0 flex-1"
+              >
+                <p
+                  class="text-base-content/40 text-xs"
+                >
+                  Accessories
+                </p>
+                <h3
+                  class="card-title mt-0.5 text-sm font-medium"
+                >
+                  Canvas Backpack
+                </h3>
+              </div>
+              <span
+                class="badge badge-error badge-sm shrink-0"
+              >
+                Sale
+              </span>
+            </div>
+            <div
+              class="mt-2 flex items-center gap-2"
+            >
+              <span
+                class="text-warning text-xs"
+              >
+                ★★★★
+                ☆
+              </span>
+              <span
+                class="text-base-content/40 text-xs"
+              >
+                (
+                52
+                )
+              </span>
+            </div>
+            <div
+              class="mt-3 flex items-center gap-2"
+            >
+              <span
+                class="text-lg font-bold"
+              >
+                $
+                129
+              </span>
+              <span
+                class="text-base-content/30 text-sm line-through"
+              >
+                $
+                159
+              </span>
+            </div>
+          </div>
+        </a>
+        <a
+          class="card bg-base-200 border-base-300 hover:border-primary/40 group border transition-all"
+          href="/store/7"
+        >
+          <figure
+            class="bg-base-300 flex h-48 items-center justify-center"
+          >
+            <span
+              class="text-base-content/20 text-5xl"
+            >
+              ◻
+            </span>
+          </figure>
+          <div
+            class="card-body p-5"
+          >
+            <div
+              class="flex items-start justify-between gap-2"
+            >
+              <div
+                class="min-w-0 flex-1"
+              >
+                <p
+                  class="text-base-content/40 text-xs"
+                >
+                  Accessories
+                </p>
+                <h3
+                  class="card-title mt-0.5 text-sm font-medium"
+                >
+                  Ceramic Mug Set
+                </h3>
+              </div>
+              <span
+                class="badge badge-success badge-sm shrink-0"
+              >
+                Eco
+              </span>
+            </div>
+            <div
+              class="mt-2 flex items-center gap-2"
+            >
+              <span
+                class="text-warning text-xs"
+              >
+                ★★★★
+                ☆
+              </span>
+              <span
+                class="text-base-content/40 text-xs"
+              >
+                (
+                309
+                )
+              </span>
+            </div>
+            <div
+              class="mt-3 flex items-center gap-2"
+            >
+              <span
+                class="text-lg font-bold"
+              >
+                $
+                34
+              </span>
+            </div>
+          </div>
+        </a>
+        <a
+          class="card bg-base-200 border-base-300 hover:border-primary/40 group border transition-all"
+          href="/store/8"
+        >
+          <figure
+            class="bg-base-300 flex h-48 items-center justify-center"
+          >
+            <span
+              class="text-base-content/20 text-5xl"
+            >
+              ◻
+            </span>
+          </figure>
+          <div
+            class="card-body p-5"
+          >
+            <div
+              class="flex items-start justify-between gap-2"
+            >
+              <div
+                class="min-w-0 flex-1"
+              >
+                <p
+                  class="text-base-content/40 text-xs"
+                >
+                  Furniture
+                </p>
+                <h3
+                  class="card-title mt-0.5 text-sm font-medium"
+                >
+                  Laptop Stand
+                </h3>
+              </div>
+            </div>
+            <div
+              class="mt-2 flex items-center gap-2"
+            >
+              <span
+                class="text-warning text-xs"
+              >
+                ★★★★
+                ☆
+              </span>
+              <span
+                class="text-base-content/40 text-xs"
+              >
+                (
+                98
+                )
+              </span>
+            </div>
+            <div
+              class="mt-3 flex items-center gap-2"
+            >
+              <span
+                class="text-lg font-bold"
+              >
+                $
+                69
+              </span>
+            </div>
+          </div>
+        </a>
+        <a
+          class="card bg-base-200 border-base-300 hover:border-primary/40 group border transition-all"
+          href="/store/9"
+        >
+          <figure
+            class="bg-base-300 flex h-48 items-center justify-center"
+          >
+            <span
+              class="text-base-content/20 text-5xl"
+            >
+              ◻
+            </span>
+          </figure>
+          <div
+            class="card-body p-5"
+          >
+            <div
+              class="flex items-start justify-between gap-2"
+            >
+              <div
+                class="min-w-0 flex-1"
+              >
+                <p
+                  class="text-base-content/40 text-xs"
+                >
+                  Electronics
+                </p>
+                <h3
+                  class="card-title mt-0.5 text-sm font-medium"
+                >
+                  USB-C Hub
+                </h3>
+              </div>
+            </div>
+            <div
+              class="mt-2 flex items-center gap-2"
+            >
+              <span
+                class="text-warning text-xs"
+              >
+                ★★★★
+                ☆
+              </span>
+              <span
+                class="text-base-content/40 text-xs"
+              >
+                (
+                144
+                )
+              </span>
+            </div>
+            <div
+              class="mt-3 flex items-center gap-2"
+            >
+              <span
+                class="text-lg font-bold"
+              >
+                $
+                45
+              </span>
+            </div>
+          </div>
+        </a>
+        <a
+          class="card bg-base-200 border-base-300 hover:border-primary/40 group border transition-all"
+          href="/store/10"
+        >
+          <figure
+            class="bg-base-300 flex h-48 items-center justify-center"
+          >
+            <span
+              class="text-base-content/20 text-5xl"
+            >
+              ◻
+            </span>
+          </figure>
+          <div
+            class="card-body p-5"
+          >
+            <div
+              class="flex items-start justify-between gap-2"
+            >
+              <div
+                class="min-w-0 flex-1"
+              >
+                <p
+                  class="text-base-content/40 text-xs"
+                >
+                  Accessories
+                </p>
+                <h3
+                  class="card-title mt-0.5 text-sm font-medium"
+                >
+                  Desk Mat
+                </h3>
+              </div>
+              <span
+                class="badge badge-neutral badge-sm shrink-0"
+              >
+                Premium
+              </span>
+            </div>
+            <div
+              class="mt-2 flex items-center gap-2"
+            >
+              <span
+                class="text-warning text-xs"
+              >
+                ★★★★
+                ☆
+              </span>
+              <span
+                class="text-base-content/40 text-xs"
+              >
+                (
+                67
+                )
+              </span>
+            </div>
+            <div
+              class="mt-3 flex items-center gap-2"
+            >
+              <span
+                class="text-lg font-bold"
+              >
+                $
+                39
+              </span>
+            </div>
+          </div>
+        </a>
+        <a
+          class="card bg-base-200 border-base-300 hover:border-primary/40 group border transition-all"
+          href="/store/11"
+        >
+          <figure
+            class="bg-base-300 flex h-48 items-center justify-center"
+          >
+            <span
+              class="text-base-content/20 text-5xl"
+            >
+              ◻
+            </span>
+          </figure>
+          <div
+            class="card-body p-5"
+          >
+            <div
+              class="flex items-start justify-between gap-2"
+            >
+              <div
+                class="min-w-0 flex-1"
+              >
+                <p
+                  class="text-base-content/40 text-xs"
+                >
+                  Audio
+                </p>
+                <h3
+                  class="card-title mt-0.5 text-sm font-medium"
+                >
+                  Portable Speaker
+                </h3>
+              </div>
+              <span
+                class="badge badge-error badge-sm shrink-0"
+              >
+                Sale
+              </span>
+            </div>
+            <div
+              class="mt-2 flex items-center gap-2"
+            >
+              <span
+                class="text-warning text-xs"
+              >
+                ★★★★
+                ☆
+              </span>
+              <span
+                class="text-base-content/40 text-xs"
+              >
+                (
+                231
+                )
+              </span>
+            </div>
+            <div
+              class="mt-3 flex items-center gap-2"
+            >
+              <span
+                class="text-lg font-bold"
+              >
+                $
+                119
+              </span>
+              <span
+                class="text-base-content/30 text-sm line-through"
+              >
+                $
+                149
+              </span>
+            </div>
+          </div>
+        </a>
+        <a
+          class="card bg-base-200 border-base-300 hover:border-primary/40 group border transition-all"
+          href="/store/12"
+        >
+          <figure
+            class="bg-base-300 flex h-48 items-center justify-center"
+          >
+            <span
+              class="text-base-content/20 text-5xl"
+            >
+              ◻
+            </span>
+          </figure>
+          <div
+            class="card-body p-5"
+          >
+            <div
+              class="flex items-start justify-between gap-2"
+            >
+              <div
+                class="min-w-0 flex-1"
+              >
+                <p
+                  class="text-base-content/40 text-xs"
+                >
+                  Electronics
+                </p>
+                <h3
+                  class="card-title mt-0.5 text-sm font-medium"
+                >
+                  LED Monitor 27"
+                </h3>
+              </div>
+              <span
+                class="badge badge-primary badge-sm shrink-0"
+              >
+                Popular
+              </span>
+            </div>
+            <div
+              class="mt-2 flex items-center gap-2"
+            >
+              <span
+                class="text-warning text-xs"
+              >
+                ★★★★
+                ☆
+              </span>
+              <span
+                class="text-base-content/40 text-xs"
+              >
+                (
+                412
+                )
+              </span>
+            </div>
+            <div
+              class="mt-3 flex items-center gap-2"
+            >
+              <span
+                class="text-lg font-bold"
+              >
+                $
+                449
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+    <div
+      class="border-base-300 mx-4 border-t lg:mx-12"
+    />
+    <section
+      class="mx-auto max-w-5xl px-4 py-24 lg:px-12"
+      id="deals"
+    >
+      <p
+        class="text-primary mb-3 text-xs font-medium tracking-[0.14em] uppercase"
+      >
+        Deals
+      </p>
+      <h2
+        class="mb-8 font-serif text-3xl leading-snug font-bold lg:text-4xl"
+      >
+        On sale now
+      </h2>
+      <div
+        class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
+      >
+        <a
+          class="card bg-base-200 border-base-300 hover:border-primary/40 group border transition-all"
+          href="/store/1"
+        >
+          <figure
+            class="bg-base-300 flex h-48 items-center justify-center"
+          >
+            <span
+              class="text-base-content/20 text-5xl"
+            >
+              ◻
+            </span>
+          </figure>
+          <div
+            class="card-body p-5"
+          >
+            <div
+              class="flex items-start justify-between gap-2"
+            >
+              <div
+                class="min-w-0 flex-1"
+              >
+                <p
+                  class="text-base-content/40 text-xs"
+                >
+                  Furniture
+                </p>
+                <h3
+                  class="card-title mt-0.5 text-sm font-medium"
+                >
+                  Ergonomic Chair
+                </h3>
+              </div>
+              <span
+                class="badge badge-error badge-sm shrink-0"
+              >
+                Sale
+              </span>
+            </div>
+            <div
+              class="mt-2 flex items-center gap-2"
+            >
+              <span
+                class="text-warning text-xs"
+              >
+                ★★★★
+                ☆
+              </span>
+              <span
+                class="text-base-content/40 text-xs"
+              >
+                (
+                128
+                )
+              </span>
+            </div>
+            <div
+              class="mt-3 flex items-center gap-2"
+            >
+              <span
+                class="text-lg font-bold"
+              >
+                $
+                349
+              </span>
+              <span
+                class="text-base-content/30 text-sm line-through"
+              >
+                $
+                429
+              </span>
+            </div>
+          </div>
+        </a>
+        <a
+          class="card bg-base-200 border-base-300 hover:border-primary/40 group border transition-all"
+          href="/store/6"
+        >
+          <figure
+            class="bg-base-300 flex h-48 items-center justify-center"
+          >
+            <span
+              class="text-base-content/20 text-5xl"
+            >
+              ◻
+            </span>
+          </figure>
+          <div
+            class="card-body p-5"
+          >
+            <div
+              class="flex items-start justify-between gap-2"
+            >
+              <div
+                class="min-w-0 flex-1"
+              >
+                <p
+                  class="text-base-content/40 text-xs"
+                >
+                  Accessories
+                </p>
+                <h3
+                  class="card-title mt-0.5 text-sm font-medium"
+                >
+                  Canvas Backpack
+                </h3>
+              </div>
+              <span
+                class="badge badge-error badge-sm shrink-0"
+              >
+                Sale
+              </span>
+            </div>
+            <div
+              class="mt-2 flex items-center gap-2"
+            >
+              <span
+                class="text-warning text-xs"
+              >
+                ★★★★
+                ☆
+              </span>
+              <span
+                class="text-base-content/40 text-xs"
+              >
+                (
+                52
+                )
+              </span>
+            </div>
+            <div
+              class="mt-3 flex items-center gap-2"
+            >
+              <span
+                class="text-lg font-bold"
+              >
+                $
+                129
+              </span>
+              <span
+                class="text-base-content/30 text-sm line-through"
+              >
+                $
+                159
+              </span>
+            </div>
+          </div>
+        </a>
+        <a
+          class="card bg-base-200 border-base-300 hover:border-primary/40 group border transition-all"
+          href="/store/11"
+        >
+          <figure
+            class="bg-base-300 flex h-48 items-center justify-center"
+          >
+            <span
+              class="text-base-content/20 text-5xl"
+            >
+              ◻
+            </span>
+          </figure>
+          <div
+            class="card-body p-5"
+          >
+            <div
+              class="flex items-start justify-between gap-2"
+            >
+              <div
+                class="min-w-0 flex-1"
+              >
+                <p
+                  class="text-base-content/40 text-xs"
+                >
+                  Audio
+                </p>
+                <h3
+                  class="card-title mt-0.5 text-sm font-medium"
+                >
+                  Portable Speaker
+                </h3>
+              </div>
+              <span
+                class="badge badge-error badge-sm shrink-0"
+              >
+                Sale
+              </span>
+            </div>
+            <div
+              class="mt-2 flex items-center gap-2"
+            >
+              <span
+                class="text-warning text-xs"
+              >
+                ★★★★
+                ☆
+              </span>
+              <span
+                class="text-base-content/40 text-xs"
+              >
+                (
+                231
+                )
+              </span>
+            </div>
+            <div
+              class="mt-3 flex items-center gap-2"
+            >
+              <span
+                class="text-lg font-bold"
+              >
+                $
+                119
+              </span>
+              <span
+                class="text-base-content/30 text-sm line-through"
+              >
+                $
+                149
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+    <div
+      class="border-base-300 mx-4 border-t lg:mx-12"
+    />
+    <section
+      class="mx-auto max-w-5xl px-4 py-24 text-center lg:px-12"
+      id="newsletter"
+    >
+      <div
+        class="card bg-base-200 border-base-300 border"
+      >
+        <div
+          class="card-body items-center py-16"
+        >
+          <h2
+            class="mb-4 font-serif text-3xl leading-snug font-bold lg:text-4xl"
+          >
+            Stay in the loop
+          </h2>
+          <p
+            class="text-base-content/60 mb-8 max-w-md text-base leading-relaxed"
+          >
+            Get early access to new products, exclusive deals, and workspace inspiration.
+          </p>
+          <div
+            class="flex w-full max-w-md flex-col gap-3 sm:flex-row"
+          >
+            <input
+              class="input input-bordered flex-1"
+              placeholder="jane@forma.io"
+              type="email"
+            />
+            <button
+              class="btn btn-primary"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer
+      class="border-base-300 border-t py-12 text-center"
+    >
+      <p
+        class="text-primary mb-3 font-serif text-3xl"
+      >
+        DaisyX
+      </p>
+      <p
+        class="text-base-content/30 text-sm"
+      >
+        © 2026 DaisyX Store · Built with care
+      </p>
+    </footer>
+  </div>
+</div>
+`;

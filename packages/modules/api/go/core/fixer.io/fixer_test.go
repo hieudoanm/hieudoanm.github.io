@@ -77,4 +77,27 @@ func TestFixerClient(t *testing.T) {
 			t.Fatal("expected error")
 		}
 	})
+
+	t.Run("GetSymbols error status", func(t *testing.T) {
+		ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+			w.WriteHeader(http.StatusForbidden)
+		}))
+		defer ts.Close()
+
+		c := &FixerClient{BaseURL: ts.URL, APIKey: "bad-key"}
+		_, err := c.GetSymbols()
+		if err == nil {
+			t.Fatal("expected error")
+		}
+	})
+
+	t.Run("NewFixerClient default base URL", func(t *testing.T) {
+		c := NewFixerClient("abc")
+		if c.BaseURL != "http://data.fixer.io/api" {
+			t.Errorf("expected http://data.fixer.io/api, got %s", c.BaseURL)
+		}
+		if c.APIKey != "abc" {
+			t.Errorf("expected abc, got %s", c.APIKey)
+		}
+	})
 }

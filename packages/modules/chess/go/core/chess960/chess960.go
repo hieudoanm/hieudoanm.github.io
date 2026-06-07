@@ -962,3 +962,49 @@ var Positions = []string{
 	"RKRNNBBQ",
 	"RKRNNQBB",
 }
+
+func IsValidPosition(pos string) bool {
+	if len(pos) != 8 {
+		return false
+	}
+
+	counts := make(map[byte]int)
+	var bishopSquares []int
+	var rookIndices []int
+	kingIndex := -1
+
+	for i := 0; i < 8; i++ {
+		ch := pos[i]
+		if ch != 'B' && ch != 'N' && ch != 'R' && ch != 'Q' && ch != 'K' {
+			return false
+		}
+		counts[ch]++
+		switch ch {
+		case 'B':
+			bishopSquares = append(bishopSquares, i)
+		case 'R':
+			rookIndices = append(rookIndices, i)
+		case 'K':
+			kingIndex = i
+		}
+	}
+
+	if counts['K'] != 1 || counts['Q'] != 1 || counts['R'] != 2 ||
+		counts['B'] != 2 || counts['N'] != 2 {
+		return false
+	}
+
+	if len(bishopSquares) != 2 || len(rookIndices) != 2 || kingIndex == -1 {
+		return false
+	}
+
+	if bishopSquares[0]%2 == bishopSquares[1]%2 {
+		return false
+	}
+
+	if kingIndex < rookIndices[0] || kingIndex > rookIndices[1] {
+		return false
+	}
+
+	return true
+}

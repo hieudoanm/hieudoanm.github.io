@@ -272,7 +272,7 @@ pub fn migrate_collection_schema(conn: &Connection, name: &str, old_schema: &str
                 .map_err(|e| AppError::Internal(format!("add column: {e}")))?;
         }
     }
-    for (field, _) in &old_fields {
+    for field in old_fields.keys() {
         if !new_fields.contains_key(field) {
             let alter = format!("ALTER TABLE \"_data_{name}\" DROP COLUMN \"{field}\"");
             conn.execute(&alter, [])
@@ -290,10 +290,10 @@ pub fn migrate_collection_schema(conn: &Connection, name: &str, old_schema: &str
 
 pub fn update_collection(conn: &Connection, name: &str, schema: Option<&str>) -> Result<Collection> {
     let existing = get_collection(conn, name)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
-    if let Some(new_schema) = schema {
-        if !new_schema.is_empty() && new_schema != &existing.schema {
-            migrate_collection_schema(conn, name, &existing.schema, new_schema)?;
-        }
+    if let Some(new_schema) = schema
+        && !new_schema.is_empty() && new_schema != existing.schema
+    {
+        migrate_collection_schema(conn, name, &existing.schema, new_schema)?;
     }
     get_collection(conn, name)?.ok_or_else(|| AppError::Internal("collection not found after update".into()))
 }
@@ -401,7 +401,7 @@ pub fn validate_data(data: &Value, schema: &str) -> Result<()> {
         let type_str = type_val.as_str().unwrap_or("string");
         let is_optional = field.ends_with('?');
         let field_name = if is_optional { &field[..field.len() - 1] } else { field.as_str() };
-        if is_optional && !data.get(field_name).map_or(false, |v| !v.is_null()) {
+        if is_optional && data.get(field_name).is_none_or(|v| v.is_null()) {
             continue;
         }
         match data.get(field_name) {
@@ -510,10 +510,10 @@ pub fn insert_record(
                 AppError::Internal(format!("insert record: {e}"))
             }
         })?;
-    if let Ok(Some(col)) = get_collection(conn, collection) {
-        if col.schema != "{}" {
-            let _ = sync_schema_columns(conn, collection, id, &col.schema);
-        }
+    if let Ok(Some(col)) = get_collection(conn, collection)
+        && col.schema != "{}"
+    {
+        let _ = sync_schema_columns(conn, collection, id, &col.schema);
     }
     Ok(Record {
         id: id.to_string(),
@@ -639,10 +639,10 @@ pub fn update_record(
     conn.execute(&sql, params![raw, now, id])
         .map_err(|e| AppError::Internal(e.to_string()))?;
 
-    if let Ok(Some(col)) = get_collection(conn, collection) {
-        if col.schema != "{}" {
-            let _ = sync_schema_columns(conn, collection, id, &col.schema);
-        }
+    if let Ok(Some(col)) = get_collection(conn, collection)
+        && col.schema != "{}"
+    {
+        let _ = sync_schema_columns(conn, collection, id, &col.schema);
     }
     let existing = get_record(conn, collection, id)?;
     existing.ok_or_else(|| AppError::NotFound("record not found after update".into()))
@@ -1350,14 +1350,14 @@ pub fn get_cache_entry(conn: &Connection, key: &str) -> Result<Option<CacheEntry
         .map_err(|e| AppError::Internal(e.to_string()))?;
     match rows.next() {
         Some(Ok(entry)) => {
-            if entry.ttl > 0 && !entry.expires_at.is_empty() {
-                if let Ok(expires) = chrono::DateTime::parse_from_rfc3339(&entry.expires_at) {
-                    if chrono::Utc::now() > expires {
-                        conn.execute("DELETE FROM _cache WHERE key = ?1", params![key])
-                            .map_err(|e| AppError::Internal(e.to_string()))?;
-                        return Ok(None);
-                    }
-                }
+            if entry.ttl > 0
+                && !entry.expires_at.is_empty()
+                && let Ok(expires) = chrono::DateTime::parse_from_rfc3339(&entry.expires_at)
+                && chrono::Utc::now() > expires
+            {
+                conn.execute("DELETE FROM _cache WHERE key = ?1", params![key])
+                    .map_err(|e| AppError::Internal(e.to_string()))?;
+                return Ok(None);
             }
             Ok(Some(entry))
         }
@@ -1717,6 +1717,7 @@ pub fn get_cron_job(conn: &Connection, id: &str) -> Result<Option<CronJob>> {
     }
 }
 
+#[allow(clippy::too_many_arguments)]
 pub fn insert_cron_job(
     conn: &Connection,
     id: &str,
@@ -1749,6 +1750,7 @@ pub fn insert_cron_job(
     })
 }
 
+#[allow(clippy::too_many_arguments)]
 pub fn update_cron_job(
     conn: &Connection,
     id: &str,
@@ -1820,4 +1822,1032 @@ pub fn insert_cron_job_log(conn: &Connection, log: &CronJobLog) -> Result<()> {
     )
     .map_err(|e| AppError::Internal(format!("insert cron job log: {e}")))?;
     Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use serde_json::json;
+
+    #[test]
+    fn test_get_schema_fields_empty() {
+        assert!(get_schema_fields("").is_empty());
+    }
+
+    #[test]
+    fn test_get_schema_fields_empty_object() {
+        assert!(get_schema_fields("{}").is_empty());
+    }
+
+    #[test]
+    fn test_get_schema_fields_single_string() {
+        let fields = get_schema_fields(r#"{"name": "string"}"#);
+        assert_eq!(fields, vec![("name".to_string(), "TEXT".to_string())]);
+    }
+
+    #[test]
+    fn test_get_schema_fields_optional_strips_question() {
+        let fields = get_schema_fields(r#"{"name?": "string"}"#);
+        assert_eq!(fields, vec![("name".to_string(), "TEXT".to_string())]);
+    }
+
+    #[test]
+    fn test_get_schema_fields_type_mappings() {
+        let fields: Vec<(String, String)> = get_schema_fields(
+            r#"{"a": "string", "b": "number", "c": "integer", "d": "boolean"}"#,
+        );
+        assert_eq!(fields.len(), 4);
+        let map: std::collections::HashMap<&str, &str> =
+            fields.iter().map(|(k, v)| (k.as_str(), v.as_str())).collect();
+        assert_eq!(map.get("a"), Some(&"TEXT"));
+        assert_eq!(map.get("b"), Some(&"REAL"));
+        assert_eq!(map.get("c"), Some(&"INTEGER"));
+        assert_eq!(map.get("d"), Some(&"INTEGER"));
+    }
+
+    #[test]
+    fn test_get_schema_fields_unknown_type_defaults_to_text() {
+        let fields = get_schema_fields(r#"{"x": "unknown_type"}"#);
+        assert_eq!(fields, vec![("x".to_string(), "TEXT".to_string())]);
+    }
+
+    #[test]
+    fn test_get_schema_fields_mixed_types() {
+        let fields = get_schema_fields(r#"{"email": "email", "url": "url", "tags": "array", "meta": "object"}"#);
+        let map: std::collections::HashMap<&str, &str> =
+            fields.iter().map(|(k, v)| (k.as_str(), v.as_str())).collect();
+        assert_eq!(map.len(), 4);
+        for (_, v) in &map {
+            assert_eq!(*v, "TEXT");
+        }
+    }
+
+    #[test]
+    fn test_build_search_clause_empty() {
+        assert_eq!(build_search_clause(""), None);
+    }
+
+    #[test]
+    fn test_build_search_clause_whitespace() {
+        assert_eq!(build_search_clause("   "), None);
+    }
+
+    #[test]
+    fn test_build_search_clause_single_word() {
+        let (clause, params) = build_search_clause("hello").unwrap();
+        assert_eq!(clause, "data LIKE ?1");
+        assert_eq!(params, vec!["%hello%"]);
+    }
+
+    #[test]
+    fn test_build_search_clause_multiple_words() {
+        let (clause, params) = build_search_clause("hello world").unwrap();
+        assert_eq!(clause, "data LIKE ?1 AND data LIKE ?2");
+        assert_eq!(params, vec!["%hello%", "%world%"]);
+    }
+
+    #[test]
+    fn test_build_search_clause_special_characters() {
+        let (clause, params) = build_search_clause("foo%_bar").unwrap();
+        assert_eq!(clause, "data LIKE ?1");
+        assert_eq!(params, vec!["%foo%_bar%"]);
+    }
+
+    #[test]
+    fn test_validate_field_string_valid() {
+        assert_eq!(validate_field(&json!("hello"), "string", "name"), None);
+    }
+
+    #[test]
+    fn test_validate_field_string_invalid() {
+        let err = validate_field(&json!(42), "string", "name");
+        assert_eq!(err, Some("field 'name' must be a string".to_string()));
+    }
+
+    #[test]
+    fn test_validate_field_number_valid() {
+        assert_eq!(validate_field(&json!(3.14), "number", "x"), None);
+    }
+
+    #[test]
+    fn test_validate_field_number_invalid() {
+        let err = validate_field(&json!("text"), "number", "x");
+        assert_eq!(err, Some("field 'x' must be a number".to_string()));
+    }
+
+    #[test]
+    fn test_validate_field_integer_valid() {
+        assert_eq!(validate_field(&json!(42), "integer", "n"), None);
+    }
+
+    #[test]
+    fn test_validate_field_integer_float() {
+        let err = validate_field(&json!(3.5), "integer", "n");
+        assert_eq!(err, Some("field 'n' must be an integer".to_string()));
+    }
+
+    #[test]
+    fn test_validate_field_integer_non_number() {
+        let err = validate_field(&json!("bad"), "integer", "n");
+        assert_eq!(err, Some("field 'n' must be an integer".to_string()));
+    }
+
+    #[test]
+    fn test_validate_field_boolean_valid() {
+        assert_eq!(validate_field(&json!(true), "boolean", "b"), None);
+        assert_eq!(validate_field(&json!(false), "boolean", "b"), None);
+    }
+
+    #[test]
+    fn test_validate_field_boolean_invalid() {
+        let err = validate_field(&json!("yes"), "boolean", "b");
+        assert_eq!(err, Some("field 'b' must be a boolean".to_string()));
+    }
+
+    #[test]
+    fn test_validate_field_array_valid() {
+        assert_eq!(validate_field(&json!([1, 2, 3]), "array", "a"), None);
+    }
+
+    #[test]
+    fn test_validate_field_array_invalid() {
+        let err = validate_field(&json!("not array"), "array", "a");
+        assert_eq!(err, Some("field 'a' must be an array".to_string()));
+    }
+
+    #[test]
+    fn test_validate_field_object_valid() {
+        assert_eq!(validate_field(&json!({"k": "v"}), "object", "o"), None);
+    }
+
+    #[test]
+    fn test_validate_field_object_invalid() {
+        let err = validate_field(&json!("not object"), "object", "o");
+        assert_eq!(err, Some("field 'o' must be an object".to_string()));
+    }
+
+    #[test]
+    fn test_validate_field_email_valid() {
+        assert_eq!(validate_field(&json!("user@example.com"), "email", "e"), None);
+    }
+
+    #[test]
+    fn test_validate_field_email_missing_at() {
+        let err = validate_field(&json!("userexample.com"), "email", "e");
+        assert_eq!(err, Some("field 'e' must be a valid email".to_string()));
+    }
+
+    #[test]
+    fn test_validate_field_email_non_string() {
+        let err = validate_field(&json!(42), "email", "e");
+        assert_eq!(err, Some("field 'e' must be a valid email".to_string()));
+    }
+
+    #[test]
+    fn test_validate_field_url_valid_http() {
+        assert_eq!(validate_field(&json!("http://example.com"), "url", "u"), None);
+    }
+
+    #[test]
+    fn test_validate_field_url_valid_https() {
+        assert_eq!(validate_field(&json!("https://example.com"), "url", "u"), None);
+    }
+
+    #[test]
+    fn test_validate_field_url_no_protocol() {
+        let err = validate_field(&json!("example.com"), "url", "u");
+        assert_eq!(err, Some("field 'u' must be a valid URL".to_string()));
+    }
+
+    #[test]
+    fn test_validate_field_unknown_type() {
+        assert_eq!(validate_field(&json!("anything"), "custom_type", "c"), None);
+    }
+
+    #[test]
+    fn test_validate_data_empty_schema() {
+        assert_eq!(validate_data(&json!({"x": 1}), "").ok(), Some(()));
+        assert_eq!(validate_data(&json!({"x": 1}), "{}").ok(), Some(()));
+    }
+
+    #[test]
+    fn test_validate_data_all_valid() {
+        let data = json!({"name": "Alice", "age": 30, "active": true});
+        let schema = r#"{"name": "string", "age": "integer", "active": "boolean"}"#;
+        assert!(validate_data(&data, schema).is_ok());
+    }
+
+    #[test]
+    fn test_validate_data_missing_required() {
+        let data = json!({"name": "Alice"});
+        let schema = r#"{"name": "string", "age": "integer"}"#;
+        let err = validate_data(&data, schema).unwrap_err();
+        assert!(matches!(err, AppError::BadRequest(_)));
+        assert!(format!("{:?}", err).contains("age"));
+    }
+
+    #[test]
+    fn test_validate_data_optional_missing() {
+        let data = json!({"name": "Alice"});
+        let schema = r#"{"name": "string", "age?": "integer"}"#;
+        assert!(validate_data(&data, schema).is_ok());
+    }
+
+    #[test]
+    fn test_validate_data_optional_null() {
+        let data = json!({"name": "Alice", "age": null});
+        let schema = r#"{"name": "string", "age?": "integer"}"#;
+        assert!(validate_data(&data, schema).is_ok());
+    }
+
+    #[test]
+    fn test_validate_data_type_mismatch() {
+        let data = json!({"name": 42});
+        let schema = r#"{"name": "string"}"#;
+        let err = validate_data(&data, schema).unwrap_err();
+        assert!(matches!(err, AppError::BadRequest(_)));
+        assert!(format!("{:?}", err).contains("must be a string"));
+    }
+
+    #[test]
+    fn test_validate_data_multiple_errors() {
+        let data = json!({"a": 1, "b": "not bool", "c": [1,2,3]});
+        let schema = r#"{"a": "string", "b": "boolean", "c": "number"}"#;
+        let err = validate_data(&data, schema).unwrap_err();
+        assert!(matches!(err, AppError::BadRequest(_)));
+        let msg = format!("{:?}", err);
+        assert!(msg.contains("a") && msg.contains("b") && msg.contains("c"));
+    }
+
+    // --- data_dir ---
+
+    #[test]
+    fn test_data_dir_default() {
+        unsafe { std::env::set_var("BACKBONE_DATA", "/tmp/test_backbone"); }
+        let d = data_dir();
+        assert_eq!(d, std::path::PathBuf::from("/tmp/test_backbone"));
+        unsafe { std::env::remove_var("BACKBONE_DATA"); }
+    }
+
+    #[test]
+    fn test_data_dir_fallback_home() {
+        unsafe { std::env::remove_var("BACKBONE_DATA"); }
+        let home = std::env::var("HOME").unwrap_or_else(|_| "/tmp".to_string());
+        let d = data_dir();
+        assert_eq!(d, std::path::PathBuf::from(home).join(".backbone"));
+    }
+
+    // --- Collection CRUD ---
+
+    #[test]
+    fn test_insert_get_list_delete_collection() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+
+        insert_collection(&conn, "test_coll", r#"{"name": "string"}"#).unwrap();
+
+        let col = get_collection(&conn, "test_coll").unwrap().unwrap();
+        assert_eq!(col.name, "test_coll");
+        assert_eq!(col.schema, r#"{"name": "string"}"#);
+
+        let cols = list_collections(&conn).unwrap();
+        assert_eq!(cols.len(), 1);
+        assert_eq!(cols[0].name, "test_coll");
+
+        delete_collection(&conn, "test_coll").unwrap();
+        assert!(get_collection(&conn, "test_coll").unwrap().is_none());
+        assert!(list_collections(&conn).unwrap().is_empty());
+    }
+
+    #[test]
+    fn test_insert_collection_duplicate() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+
+        insert_collection(&conn, "dup", "{}").unwrap();
+        let err = insert_collection(&conn, "dup", "{}").unwrap_err();
+        assert!(matches!(err, AppError::Conflict(_)));
+    }
+
+    #[test]
+    fn test_get_collection_not_found() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+        assert!(get_collection(&conn, "nonexistent").unwrap().is_none());
+    }
+
+    #[test]
+    fn test_list_collections_empty() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+        let cols = list_collections(&conn).unwrap();
+        assert!(cols.is_empty());
+    }
+
+    // --- create_collection_table & migrate_collection_schema & update_collection & sync_schema_columns ---
+
+    #[test]
+    fn test_create_collection_table_and_migrate() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+
+        insert_collection(&conn, "schema_test", r#"{"name": "string"}"#).unwrap();
+        create_collection_table(&conn, "schema_test", r#"{"name": "string"}"#).unwrap();
+
+        migrate_collection_schema(&conn, "schema_test", r#"{"name": "string"}"#, r#"{"name": "string", "age": "integer"}"#).unwrap();
+
+        let col = get_collection(&conn, "schema_test").unwrap().unwrap();
+        assert_eq!(col.schema, r#"{"name": "string", "age": "integer"}"#);
+    }
+
+    #[test]
+    fn test_update_collection_with_new_schema() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+
+        insert_collection(&conn, "upd_coll", r#"{"name": "string"}"#).unwrap();
+        create_collection_table(&conn, "upd_coll", r#"{"name": "string"}"#).unwrap();
+
+        let updated = update_collection(&conn, "upd_coll", Some(r#"{"name": "string", "active": "boolean"}"#)).unwrap();
+        assert!(updated.schema.contains("active"));
+    }
+
+    #[test]
+    fn test_update_collection_no_schema_change() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+
+        insert_collection(&conn, "nochange", r#"{"x": "string"}"#).unwrap();
+        create_collection_table(&conn, "nochange", r#"{"x": "string"}"#).unwrap();
+
+        let updated = update_collection(&conn, "nochange", None).unwrap();
+        assert_eq!(updated.schema, r#"{"x": "string"}"#);
+    }
+
+    #[test]
+    fn test_sync_schema_columns() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+
+        insert_collection(&conn, "sync_coll", r#"{"val": "string"}"#).unwrap();
+        create_collection_table(&conn, "sync_coll", r#"{"val": "string"}"#).unwrap();
+
+        let rec = insert_record(&conn, "sync_coll", "r1", &serde_json::json!({"val": "hello"})).unwrap();
+        assert_eq!(rec.id, "r1");
+
+        sync_schema_columns(&conn, "sync_coll", "r1", r#"{"val": "string"}"#).unwrap();
+        let fetched = get_record(&conn, "sync_coll", "r1").unwrap().unwrap();
+        assert_eq!(fetched.data["val"], "hello");
+    }
+
+    // --- Record CRUD ---
+
+    #[test]
+    fn test_record_crud() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+
+        insert_collection(&conn, "records", "{}").unwrap();
+        create_collection_table(&conn, "records", "{}").unwrap();
+
+        let data = serde_json::json!({"title": "hello", "count": 42});
+        let rec = insert_record(&conn, "records", "rec1", &data).unwrap();
+        assert_eq!(rec.id, "rec1");
+        assert_eq!(rec.data["title"], "hello");
+
+        let fetched = get_record(&conn, "records", "rec1").unwrap().unwrap();
+        assert_eq!(fetched.id, "rec1");
+        assert_eq!(fetched.data["count"], 42);
+
+        let updated_data = serde_json::json!({"title": "updated", "count": 99});
+        let updated = update_record(&conn, "records", "rec1", &updated_data).unwrap();
+        assert_eq!(updated.data["title"], "updated");
+
+        let page = list_records(&conn, "records", 1, 10, "").unwrap();
+        assert_eq!(page.total, 1);
+        assert_eq!(page.records.len(), 1);
+
+        delete_record(&conn, "records", "rec1").unwrap();
+        assert!(get_record(&conn, "records", "rec1").unwrap().is_none());
+    }
+
+    #[test]
+    fn test_record_search() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+
+        insert_collection(&conn, "search_test", "{}").unwrap();
+        create_collection_table(&conn, "search_test", "{}").unwrap();
+
+        insert_record(&conn, "search_test", "a", &serde_json::json!({"text": "hello world"})).unwrap();
+        insert_record(&conn, "search_test", "b", &serde_json::json!({"text": "goodbye world"})).unwrap();
+
+        let page = list_records(&conn, "search_test", 1, 10, "hello").unwrap();
+        assert_eq!(page.total, 1);
+
+        let page2 = list_records(&conn, "search_test", 1, 10, "world").unwrap();
+        assert_eq!(page2.total, 2);
+    }
+
+    #[test]
+    fn test_record_pagination() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+
+        insert_collection(&conn, "pagination", "{}").unwrap();
+        create_collection_table(&conn, "pagination", "{}").unwrap();
+
+        for i in 0..5 {
+            insert_record(&conn, "pagination", &format!("r{i}"), &serde_json::json!({"n": i})).unwrap();
+        }
+
+        let page = list_records(&conn, "pagination", 1, 2, "").unwrap();
+        assert_eq!(page.records.len(), 2);
+        assert_eq!(page.total, 5);
+        assert_eq!(page.total_pages, 3);
+    }
+
+    #[test]
+    fn test_get_record_not_found() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+
+        insert_collection(&conn, "nf_test", "{}").unwrap();
+        create_collection_table(&conn, "nf_test", "{}").unwrap();
+
+        assert!(get_record(&conn, "nf_test", "nonexistent").unwrap().is_none());
+    }
+
+    // --- Bucket CRUD ---
+
+    #[test]
+    fn test_bucket_crud() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+
+        let bucket = insert_bucket(&conn, "my_bucket", true).unwrap();
+        assert_eq!(bucket.name, "my_bucket");
+        assert!(bucket.is_public);
+
+        let fetched = get_bucket(&conn, "my_bucket").unwrap().unwrap();
+        assert_eq!(fetched.name, "my_bucket");
+        assert!(fetched.is_public);
+
+        let buckets = list_buckets(&conn).unwrap();
+        assert_eq!(buckets.len(), 1);
+
+        let files = delete_bucket(&conn, "my_bucket").unwrap();
+        assert!(files.is_empty());
+        assert!(get_bucket(&conn, "my_bucket").unwrap().is_none());
+    }
+
+    #[test]
+    fn test_bucket_not_found() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+        assert!(get_bucket(&conn, "nonexistent").unwrap().is_none());
+    }
+
+    #[test]
+    fn test_bucket_duplicate() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+
+        insert_bucket(&conn, "dup_bucket", false).unwrap();
+        let err = insert_bucket(&conn, "dup_bucket", false).unwrap_err();
+        assert!(matches!(err, AppError::Conflict(_)));
+    }
+
+    // --- File CRUD ---
+
+    #[test]
+    fn test_file_crud() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+
+        insert_bucket(&conn, "files_bucket", false).unwrap();
+
+        let file = insert_file(&conn, "files_bucket", "f1", "test.txt", "text/plain", 100).unwrap();
+        assert_eq!(file.id, "f1");
+        assert_eq!(file.filename, "test.txt");
+
+        let fetched = get_file(&conn, "f1").unwrap().unwrap();
+        assert_eq!(fetched.bucket, "files_bucket");
+
+        let page = list_files(&conn, "files_bucket", 1, 10).unwrap();
+        assert_eq!(page.total, 1);
+        assert_eq!(page.files.len(), 1);
+
+        let deleted = delete_file(&conn, "f1").unwrap().unwrap();
+        assert_eq!(deleted.id, "f1");
+        assert!(get_file(&conn, "f1").unwrap().is_none());
+    }
+
+    #[test]
+    fn test_delete_file_not_found() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+        assert!(delete_file(&conn, "nonexistent").unwrap().is_none());
+    }
+
+    // --- Cache CRUD ---
+
+    #[test]
+    fn test_cache_crud() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+
+        let entry = set_cache_entry(&conn, "k1", "v1", 0).unwrap();
+        assert_eq!(entry.key, "k1");
+        assert_eq!(entry.ttl, 0);
+
+        let fetched = get_cache_entry(&conn, "k1").unwrap().unwrap();
+        assert_eq!(fetched.value, "v1");
+
+        let deleted = delete_cache_entry(&conn, "k1").unwrap();
+        assert!(deleted);
+        assert!(get_cache_entry(&conn, "k1").unwrap().is_none());
+
+        let deleted2 = delete_cache_entry(&conn, "nonexistent").unwrap();
+        assert!(!deleted2);
+    }
+
+    #[test]
+    fn test_cache_list_and_flush() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+
+        set_cache_entry(&conn, "a", "1", 0).unwrap();
+        set_cache_entry(&conn, "b", "2", 0).unwrap();
+
+        let entries = list_cache_entries(&conn).unwrap();
+        assert_eq!(entries.len(), 2);
+
+        flush_cache(&conn).unwrap();
+        assert!(list_cache_entries(&conn).unwrap().is_empty());
+    }
+
+    #[test]
+    fn test_cache_upsert() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+
+        set_cache_entry(&conn, "k", "old", 0).unwrap();
+        set_cache_entry(&conn, "k", "new", 3600).unwrap();
+
+        let entry = get_cache_entry(&conn, "k").unwrap().unwrap();
+        assert_eq!(entry.value, "new");
+        assert_eq!(entry.ttl, 3600);
+    }
+
+    // --- Notification CRUD ---
+
+    #[test]
+    fn test_notification_crud() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+
+        let n = insert_notification(&conn, "n1", "Hello", "Body text", "info").unwrap();
+        assert_eq!(n.title, "Hello");
+        assert!(!n.is_read);
+
+        let fetched = get_notification(&conn, "n1").unwrap().unwrap();
+        assert_eq!(fetched.body, "Body text");
+
+        let list = list_notifications(&conn).unwrap();
+        assert_eq!(list.len(), 1);
+
+        let read = update_notification_read(&conn, "n1").unwrap();
+        assert!(read.is_read);
+
+        let deleted = delete_notification(&conn, "n1").unwrap();
+        assert!(deleted);
+        assert!(get_notification(&conn, "n1").unwrap().is_none());
+
+        let deleted_false = delete_notification(&conn, "nonexistent").unwrap();
+        assert!(!deleted_false);
+    }
+
+    #[test]
+    fn test_notification_clear_all() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+
+        insert_notification(&conn, "n1", "A", "", "info").unwrap();
+        insert_notification(&conn, "n2", "B", "", "warn").unwrap();
+
+        clear_notifications(&conn).unwrap();
+        let list = list_notifications(&conn).unwrap();
+        assert!(list.is_empty());
+    }
+
+    // --- Webhook CRUD ---
+
+    #[test]
+    fn test_webhook_crud() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+
+        let wh = insert_webhook(&conn, "wh1", "test hook", "http://example.com", &["event.a".to_string()], "sec123").unwrap();
+        assert_eq!(wh.name, "test hook");
+        assert!(wh.is_active);
+
+        let hooks = list_webhooks(&conn).unwrap();
+        assert_eq!(hooks.len(), 1);
+
+        let fetched = get_webhook(&conn, "wh1").unwrap().unwrap();
+        assert_eq!(fetched.url, "http://example.com");
+
+        let updated = update_webhook(&conn, "wh1", "updated hook", "http://example.net", &["event.b".to_string()], "newsec", false).unwrap();
+        assert!(!updated.is_active);
+        assert_eq!(updated.name, "updated hook");
+
+        delete_webhook(&conn, "wh1").unwrap();
+        assert!(get_webhook(&conn, "wh1").unwrap().is_none());
+        assert!(list_webhooks(&conn).unwrap().is_empty());
+    }
+
+    // --- Webhook Log ---
+
+    #[test]
+    fn test_webhook_log_crud() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+
+        let log = WebhookLog {
+            id: "log1".into(),
+            webhook_id: "wh1".into(),
+            event: "event.a".into(),
+            url: "http://example.com".into(),
+            request_body: "{}".into(),
+            response_status: 200,
+            response_body: "ok".into(),
+            error: String::new(),
+            status: "delivered".into(),
+            created_at: "2024-01-01T00:00:00Z".into(),
+        };
+        insert_webhook_log(&conn, &log).unwrap();
+
+        let logs = list_webhook_logs(&conn, "wh1").unwrap();
+        assert_eq!(logs.len(), 1);
+        assert_eq!(logs[0].event, "event.a");
+    }
+
+    // --- WS Connection CRUD ---
+
+    #[test]
+    fn test_ws_connection_crud() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+
+        insert_ws_connection(&conn, "ws1", "127.0.0.1", "/chat", "test-agent").unwrap();
+
+        let conns = list_ws_connections(&conn).unwrap();
+        assert_eq!(conns.len(), 1);
+        assert!(conns[0].is_active);
+
+        let fetched = get_ws_connection(&conn, "ws1").unwrap().unwrap();
+        assert_eq!(fetched.remote_addr, "127.0.0.1");
+
+        update_ws_disconnect(&conn, "ws1").unwrap();
+        let after = get_ws_connection(&conn, "ws1").unwrap().unwrap();
+        assert!(!after.is_active);
+        assert!(!after.disconnected_at.is_empty());
+
+        delete_ws_connection(&conn, "ws1").unwrap();
+        assert!(get_ws_connection(&conn, "ws1").unwrap().is_none());
+    }
+
+    #[test]
+    fn test_get_ws_connection_not_found() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+        assert!(get_ws_connection(&conn, "nonexistent").unwrap().is_none());
+    }
+
+    // --- WS Messages ---
+
+    #[test]
+    fn test_ws_message_crud() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+
+        insert_ws_connection(&conn, "ws_msg", "10.0.0.1", "/", "agent").unwrap();
+        insert_ws_message(&conn, "ws_msg", "sent", "hello").unwrap();
+        insert_ws_message(&conn, "ws_msg", "received", "world").unwrap();
+
+        let msgs = list_ws_messages(&conn, "ws_msg").unwrap();
+        assert_eq!(msgs.len(), 2);
+
+        let all = list_all_ws_messages(&conn).unwrap();
+        assert_eq!(all.len(), 2);
+    }
+
+    // --- PubSub Topic CRUD ---
+
+    #[test]
+    fn test_pubsub_topic_crud() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+
+        let topic = insert_pubsub_topic(&conn, "t1", "my_topic").unwrap();
+        assert_eq!(topic.name, "my_topic");
+
+        let topics = list_pubsub_topics(&conn).unwrap();
+        assert_eq!(topics.len(), 1);
+
+        let by_name = get_pubsub_topic_by_name(&conn, "my_topic").unwrap().unwrap();
+        assert_eq!(by_name.id, "t1");
+
+        delete_pubsub_topic(&conn, "my_topic").unwrap();
+        assert!(list_pubsub_topics(&conn).unwrap().is_empty());
+    }
+
+    // --- PubSub Messages ---
+
+    #[test]
+    fn test_pubsub_message_crud() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+
+        insert_pubsub_topic(&conn, "topic1", "chat").unwrap();
+        insert_pubsub_message(&conn, "m1", "topic1", "hello world").unwrap();
+
+        let msgs = list_pubsub_messages(&conn, "topic1").unwrap();
+        assert_eq!(msgs.len(), 1);
+        assert_eq!(msgs[0].body, "hello world");
+    }
+
+    // --- Cron Job CRUD ---
+
+    #[test]
+    fn test_cron_job_crud() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+
+        let job = insert_cron_job(&conn, "cj1", "daily_task", "0 0 * * *", "echo hi", "GET", "", "").unwrap();
+        assert_eq!(job.name, "daily_task");
+        assert!(job.is_active);
+
+        let jobs = list_cron_jobs(&conn).unwrap();
+        assert_eq!(jobs.len(), 1);
+
+        let fetched = get_cron_job(&conn, "cj1").unwrap().unwrap();
+        assert_eq!(fetched.schedule, "0 0 * * *");
+
+        let updated = update_cron_job(&conn, "cj1", "nightly", "0 0 * * 0", "echo bye", "POST", "{}", "{}", false).unwrap();
+        assert!(!updated.is_active);
+        assert_eq!(updated.name, "nightly");
+
+        delete_cron_job(&conn, "cj1").unwrap();
+        assert!(get_cron_job(&conn, "cj1").unwrap().is_none());
+    }
+
+    #[test]
+    fn test_cron_job_last_run() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+
+        insert_cron_job(&conn, "cj2", "test_job", "* * * * *", "cmd", "GET", "", "").unwrap();
+        update_cron_job_last_run(&conn, "cj2", "2024-01-01T00:00:00Z", "success").unwrap();
+
+        let job = get_cron_job(&conn, "cj2").unwrap().unwrap();
+        assert_eq!(job.last_run_at, "2024-01-01T00:00:00Z");
+        assert_eq!(job.last_run_status, "success");
+    }
+
+    #[test]
+    fn test_cron_job_log() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+
+        let log = CronJobLog {
+            id: "cjl1".into(),
+            cronjob_id: "cj1".into(),
+            started_at: "2024-01-01T00:00:00Z".into(),
+            finished_at: "2024-01-01T01:00:00Z".into(),
+            duration_ms: 3600000,
+            status: "success".into(),
+            output: "done".into(),
+            error: String::new(),
+        };
+        insert_cron_job_log(&conn, &log).unwrap();
+
+        let logs = list_cron_job_logs(&conn, "cj1").unwrap();
+        assert_eq!(logs.len(), 1);
+        assert_eq!(logs[0].status, "success");
+    }
+
+    // --- Secret CRUD ---
+
+    #[test]
+    fn test_secret_crud() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+
+        let secret = insert_secret(&conn, "s1", "api_key", "abc123", "general").unwrap();
+        assert_eq!(secret.name, "api_key");
+
+        let secrets = list_secrets(&conn).unwrap();
+        assert_eq!(secrets.len(), 1);
+
+        let fetched = get_secret(&conn, "s1").unwrap().unwrap();
+        assert_eq!(fetched.value, "abc123");
+
+        let updated = update_secret(&conn, "s1", "new_key", "xyz789", "admin").unwrap();
+        assert_eq!(updated.name, "new_key");
+
+        let confirm = get_secret(&conn, "s1").unwrap().unwrap();
+        assert_eq!(confirm.value, "xyz789");
+
+        delete_secret(&conn, "s1").unwrap();
+        assert!(get_secret(&conn, "s1").unwrap().is_none());
+    }
+
+    #[test]
+    fn test_get_secret_not_found() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+        assert!(get_secret(&conn, "nonexistent").unwrap().is_none());
+    }
+
+    // --- User operations ---
+
+    #[test]
+    fn test_user_insert_and_find() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+
+        insert_user(&conn, "u1", "user@example.com", "hashed_pw").unwrap();
+
+        let found = find_user_by_email(&conn, "user@example.com").unwrap().unwrap();
+        assert_eq!(found.0, "u1");
+        assert_eq!(found.1, "user@example.com");
+        assert_eq!(found.4, "hashed_pw");
+    }
+
+    #[test]
+    fn test_find_user_by_email_not_found() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+        assert!(find_user_by_email(&conn, "noone@example.com").unwrap().is_none());
+    }
+
+    #[test]
+    fn test_insert_user_duplicate_email() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+
+        insert_user(&conn, "u1", "dup@example.com", "pw").unwrap();
+        let err = insert_user(&conn, "u2", "dup@example.com", "pw2").unwrap_err();
+        assert!(matches!(err, AppError::Conflict(_)));
+    }
+
+    // --- Log operations ---
+
+    #[test]
+    fn test_log_crud() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+
+        let log = insert_log(&conn, "log1", "info", "server started", "{}").unwrap();
+        assert_eq!(log.level, "info");
+        assert_eq!(log.message, "server started");
+
+        let logs = list_logs(&conn).unwrap();
+        assert_eq!(logs.len(), 1);
+
+        clear_logs(&conn).unwrap();
+        assert!(list_logs(&conn).unwrap().is_empty());
+    }
+
+    #[test]
+    fn test_get_cache_entry_expired() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+        set_cache_entry(&conn, "expkey", "oldval", 1).unwrap();
+        std::thread::sleep(std::time::Duration::from_secs(2));
+        let result = get_cache_entry(&conn, "expkey").unwrap();
+        assert!(result.is_none());
+    }
+
+    #[test]
+    fn test_update_collection_not_found() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+        let err = update_collection(&conn, "nonexistent", Some("{}")).unwrap_err();
+        assert!(matches!(err, AppError::NotFound(_)));
+    }
+
+    #[test]
+    fn test_update_record_not_found() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+        insert_collection(&conn, "rc", "{}").unwrap();
+        create_collection_table(&conn, "rc", "{}").unwrap();
+        let err = update_record(&conn, "rc", "noexist", &json!({"x": 1})).unwrap_err();
+        assert!(matches!(err, AppError::NotFound(_)));
+    }
+
+    #[test]
+    fn test_update_cron_job_not_found() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+        let err = update_cron_job(&conn, "nojob", "n", "* * * * *", "cmd", "GET", "", "", false).unwrap_err();
+        assert!(matches!(err, AppError::Internal(_)));
+    }
+
+    #[test]
+    fn test_delete_bucket_with_files() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+        insert_bucket(&conn, "bf", false).unwrap();
+        insert_file(&conn, "bf", "f1", "a.txt", "text/plain", 10).unwrap();
+        let files = delete_bucket(&conn, "bf").unwrap();
+        assert_eq!(files.len(), 1);
+        assert_eq!(files[0].id, "f1");
+    }
+
+    #[test]
+    fn test_get_webhook_not_found() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+        assert!(get_webhook(&conn, "nonexistent").unwrap().is_none());
+    }
+
+    #[test]
+    fn test_get_cron_job_not_found() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+        assert!(get_cron_job(&conn, "nonexistent").unwrap().is_none());
+    }
+
+    #[test]
+    fn test_insert_record_duplicate() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+        insert_collection(&conn, "dup_rec", "{}").unwrap();
+        create_collection_table(&conn, "dup_rec", "{}").unwrap();
+        insert_record(&conn, "dup_rec", "r1", &json!({"x": 1})).unwrap();
+        let err = insert_record(&conn, "dup_rec", "r1", &json!({"x": 2})).unwrap_err();
+        assert!(matches!(err, AppError::Conflict(_)));
+    }
+
+    #[test]
+    fn test_list_webhooks_empty() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+        assert!(list_webhooks(&conn).unwrap().is_empty());
+    }
+
+    #[test]
+    fn test_list_webhook_logs_empty() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+        assert!(list_webhook_logs(&conn, "nonexistent").unwrap().is_empty());
+    }
+
+    #[test]
+    fn test_list_files_empty() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+        let page = list_files(&conn, "nonexistent", 1, 10).unwrap();
+        assert!(page.files.is_empty());
+        assert_eq!(page.total, 0);
+    }
+
+    #[test]
+    fn test_list_cron_job_logs_empty() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+        assert!(list_cron_job_logs(&conn, "nonexistent").unwrap().is_empty());
+    }
+
+    #[test]
+    fn test_list_pubsub_messages_empty() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+        assert!(list_pubsub_messages(&conn, "nonexistent").unwrap().is_empty());
+    }
+
+    #[test]
+    fn test_list_ws_messages_empty() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+        assert!(list_ws_messages(&conn, "nonexistent").unwrap().is_empty());
+    }
+
+    #[test]
+    fn test_get_pubsub_topic_by_name_not_found() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+        assert!(get_pubsub_topic_by_name(&conn, "nonexistent").unwrap().is_none());
+    }
+
+    #[test]
+    fn test_get_notification_not_found() {
+        let conn = Connection::open_in_memory().unwrap();
+        migrate_db(&conn).unwrap();
+        assert!(get_notification(&conn, "nonexistent").unwrap().is_none());
+    }
 }

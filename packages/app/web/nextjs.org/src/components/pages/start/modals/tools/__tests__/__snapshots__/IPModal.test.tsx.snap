@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`IPModal should render and fetch IP info on mount 1`] = `
+<div>
+  <dialog
+    class="modal modal-open"
+    open=""
+    style="background: rgba(0, 0, 0, 0.6);"
+  >
+    <div
+      class="card bg-base-100 border-base-300 w-full max-w-2xl border shadow-2xl"
+    >
+      <div
+        class="card-body gap-5 p-6"
+      >
+        <div
+          class="flex items-start justify-between"
+        >
+          <div>
+            <h2
+              class="text-lg font-black tracking-tight"
+            >
+              IP Inspector
+            </h2>
+            <p
+              class="text-base-content/40 mt-0.5 font-mono text-[10px] tracking-widest uppercase"
+            >
+              Pure frontend · Fallback enabled · No data stored
+            </p>
+          </div>
+          <button
+            class="btn btn-ghost btn-xs btn-square text-base opacity-60 hover:opacity-100"
+          >
+            ✕
+          </button>
+        </div>
+        <div
+          class="flex items-center gap-3"
+        >
+          <button
+            class="btn btn-ghost btn-xs ml-auto"
+            disabled=""
+          >
+            <span
+              class="loading loading-spinner loading-xs"
+            />
+          </button>
+        </div>
+        <div
+          class="tabs tabs-bordered"
+        >
+          <button
+            class="tab tab-bordered capitalize tab-active"
+          >
+            network
+          </button>
+          <button
+            class="tab tab-bordered capitalize "
+          >
+            location
+          </button>
+          <button
+            class="tab tab-bordered capitalize "
+          >
+            dns
+          </button>
+        </div>
+        <div
+          class="flex flex-col gap-2"
+        >
+          <div
+            class="flex justify-center py-8"
+          >
+            <span
+              class="loading loading-spinner loading-md"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <form
+      class="modal-backdrop"
+      method="dialog"
+    >
+      <button>
+        close
+      </button>
+    </form>
+  </dialog>
+</div>
+`;

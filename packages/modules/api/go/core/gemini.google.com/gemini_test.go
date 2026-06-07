@@ -93,4 +93,14 @@ func TestGenerateContent(t *testing.T) {
 			t.Fatal("expected error")
 		}
 	})
+
+	t.Run("NewGeminiClient default", func(t *testing.T) {
+		c := NewGeminiClient("test-key")
+		if c.BaseURL != "https://generativelanguage.googleapis.com" {
+			t.Errorf("expected https://generativelanguage.googleapis.com, got %s", c.BaseURL)
+		}
+		if c.APIKey != "test-key" {
+			t.Errorf("expected test-key, got %s", c.APIKey)
+		}
+	})
 }

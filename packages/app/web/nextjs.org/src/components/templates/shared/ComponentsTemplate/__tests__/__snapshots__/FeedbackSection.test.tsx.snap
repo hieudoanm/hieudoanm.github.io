@@ -1,0 +1,303 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`FeedbackSection to match snapshot 1`] = `
+<div>
+  <section
+    class="mx-auto max-w-5xl px-12 py-24"
+    id="feedback"
+  >
+    <p
+      class="text-primary mb-3 text-xs font-medium tracking-[0.14em] uppercase"
+    >
+      Feedback & display
+    </p>
+    <h2
+      class="mb-4 font-serif text-4xl leading-snug font-bold "
+    >
+      Communicate every state
+    </h2>
+    <p
+      class="text-base-content/60 mb-12 max-w-xl text-base leading-relaxed "
+    >
+      Alerts, toasts, progress, skeletons — all the patterns you need to tell users what's happening.
+    </p>
+    <div
+      class="mb-10 grid grid-cols-2 gap-10"
+    >
+      <div>
+        <p
+          class="text-base-content/50 mb-4 text-sm"
+        >
+          Alerts
+        </p>
+        <div
+          class="flex flex-col gap-3"
+        >
+          <div
+            class="alert alert-success text-sm"
+            role="alert"
+          >
+            <span>
+              ✓
+            </span>
+            <div>
+              <strong
+                class="block"
+              >
+                Changes saved
+              </strong>
+              <span
+                class="text-xs opacity-80"
+              >
+                Your profile was updated successfully.
+              </span>
+            </div>
+          </div>
+          <div
+            class="alert alert-error text-sm"
+            role="alert"
+          >
+            <span>
+              ✕
+            </span>
+            <div>
+              <strong
+                class="block"
+              >
+                Payment failed
+              </strong>
+              <span
+                class="text-xs opacity-80"
+              >
+                Your card was declined. Please try again.
+              </span>
+            </div>
+          </div>
+          <div
+            class="alert alert-warning text-sm"
+            role="alert"
+          >
+            <span>
+              ⚠
+            </span>
+            <div>
+              <strong
+                class="block"
+              >
+                Trial ending soon
+              </strong>
+              <span
+                class="text-xs opacity-80"
+              >
+                7 days left in your free trial.
+              </span>
+            </div>
+          </div>
+          <div
+            class="alert alert-info text-sm"
+            role="alert"
+          >
+            <span>
+              ℹ
+            </span>
+            <div>
+              <strong
+                class="block"
+              >
+                Scheduled maintenance
+              </strong>
+              <span
+                class="text-xs opacity-80"
+              >
+                Downtime on Sat, Apr 6 from 02:00–04:00 UTC.
+              </span>
+            </div>
+          </div>
+        </div>
+        <p
+          class="text-base-content/50 mt-6 mb-4 text-sm"
+        >
+          Toast
+        </p>
+        <div
+          class="relative h-14"
+        >
+          <div
+            class="bg-base-300 border-base-content/10 absolute right-0 bottom-0 flex items-center gap-3 rounded-xl border px-4 py-3 text-sm shadow-lg"
+          >
+            <span
+              class="text-success"
+            >
+              ✓
+            </span>
+            <span>
+              Copied to clipboard
+            </span>
+            <button
+              class="text-base-content/40 hover:text-base-content ml-2 text-base leading-none"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p
+          class="text-base-content/50 mb-4 text-sm"
+        >
+          Progress & steps
+        </p>
+        <div
+          class="mb-8 flex flex-col gap-2"
+        >
+          <div>
+            <div
+              class="text-base-content/50 mb-1 flex justify-between text-xs"
+            >
+              <span>
+                Uploading files
+              </span>
+              <span>
+                72
+                %
+              </span>
+            </div>
+            <progress
+              class="progress progress-primary h-[6px] w-full"
+              max="100"
+              value="72"
+            />
+          </div>
+          <div>
+            <div
+              class="text-base-content/50 mb-1 flex justify-between text-xs"
+            >
+              <span>
+                Processing
+              </span>
+              <span>
+                40
+                %
+              </span>
+            </div>
+            <progress
+              class="progress progress-primary h-[6px] w-full"
+              max="100"
+              value="40"
+            />
+          </div>
+          <div>
+            <div
+              class="text-base-content/50 mb-1 flex justify-between text-xs"
+            >
+              <span>
+                Indexing
+              </span>
+              <span>
+                100
+                %
+              </span>
+            </div>
+            <progress
+              class="progress progress-primary h-[6px] w-full"
+              max="100"
+              value="100"
+            />
+          </div>
+        </div>
+        <ul
+          class="steps steps-horizontal mb-8 w-full text-xs"
+        >
+          <li
+            class="step step-primary"
+            data-content="✓"
+          >
+            Account
+          </li>
+          <li
+            class="step step-primary"
+            data-content="✓"
+          >
+            Profile
+          </li>
+          <li
+            class="step step-primary"
+          >
+            Billing
+          </li>
+          <li
+            class="step "
+          >
+            Done
+          </li>
+        </ul>
+        <p
+          class="text-base-content/50 mb-4 text-sm"
+        >
+          Skeleton & spinner
+        </p>
+        <div
+          class="flex items-start gap-3"
+        >
+          <div
+            class="skeleton h-11 w-11 shrink-0 rounded-full"
+          />
+          <div
+            class="flex flex-1 flex-col gap-2"
+          >
+            <div
+              class="skeleton h-3 w-3/5"
+            />
+            <div
+              class="skeleton h-3 w-4/5"
+            />
+            <div
+              class="skeleton h-3 w-2/5"
+            />
+          </div>
+        </div>
+        <div
+          class="mt-4 flex items-center gap-3"
+        >
+          <span
+            class="loading loading-spinner loading-sm text-primary"
+          />
+          <span
+            class="text-base-content/50 text-sm"
+          >
+            Loading your workspace…
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="card bg-base-200 border-base-300 border"
+    >
+      <div
+        class="card-body items-center py-12 text-center"
+      >
+        <div
+          class="mb-4 text-5xl opacity-40"
+        >
+          ◌
+        </div>
+        <h3
+          class="mb-2 text-base font-medium"
+        >
+          No components yet
+        </h3>
+        <p
+          class="text-base-content/50 mb-6 text-sm"
+        >
+          Start building your library by adding your first component.
+        </p>
+        <button
+          class="btn btn-primary btn-sm"
+        >
+          Add component
+        </button>
+      </div>
+    </div>
+  </section>
+</div>
+`;
