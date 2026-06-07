@@ -1,9 +1,9 @@
-import { BookmarkItem } from '@hieudoanm.github.io/components/pages/start/cards/BookmarkCard';
+import { LinkCardProps } from '@hieudoanm.github.io/components/pages/start/cards/LinkCard';
 
-export const chat: BookmarkItem[] = [
+export const chat: LinkCardProps[] = [
   {
     label: 'Claude',
-    url: 'https://claude.ai/',
+    href: 'https://claude.ai/',
     description: 'Anthropic',
     emoji: '✦',
     color: '#d97757',
@@ -11,7 +11,7 @@ export const chat: BookmarkItem[] = [
   },
   {
     label: 'ChatGPT',
-    url: 'https://chatgpt.com',
+    href: 'https://chatgpt.com',
     description: 'OpenAI',
     emoji: '✦',
     color: '#10a37f',
@@ -19,7 +19,7 @@ export const chat: BookmarkItem[] = [
   },
   {
     label: 'Qwen',
-    url: 'https://qwen.ai',
+    href: 'https://qwen.ai',
     description: 'Alibaba Cloud',
     emoji: '✦',
     color: '#615ced',
@@ -27,7 +27,7 @@ export const chat: BookmarkItem[] = [
   },
   {
     label: 'Kimi',
-    url: 'https://kimi.moonshot.cn',
+    href: 'https://kimi.moonshot.cn',
     description: 'Moonshot AI',
     emoji: '🌙',
     color: '#39d353',
@@ -35,7 +35,7 @@ export const chat: BookmarkItem[] = [
   },
   {
     label: 'Perplexity',
-    url: 'https://www.perplexity.ai',
+    href: 'https://www.perplexity.ai',
     description: 'AI Search',
     emoji: '🔍',
     color: '#20b2aa',
@@ -43,63 +43,63 @@ export const chat: BookmarkItem[] = [
   },
   {
     label: 'Gemini',
-    url: 'https://gemini.google.com/app',
+    href: 'https://gemini.google.com/app',
     description: 'Google',
     emoji: '✨',
     color: '#4285f4',
   },
   {
     label: 'Grok',
-    url: 'https://grok.com',
+    href: 'https://grok.com',
     description: 'xAI',
     emoji: '⚡',
     color: '#1d9bf0',
   },
   {
     label: 'Copilot',
-    url: 'https://copilot.microsoft.com',
+    href: 'https://copilot.microsoft.com',
     description: 'Microsoft',
     emoji: '🪟',
     color: '#0078d4',
   },
   {
     label: 'DeepSeek',
-    url: 'https://chat.deepseek.com',
+    href: 'https://chat.deepseek.com',
     description: 'DeepSeek',
     emoji: '🐋',
     color: '#4d6bfe',
   },
   {
     label: 'Mistral',
-    url: 'https://chat.mistral.ai',
+    href: 'https://chat.mistral.ai',
     description: 'Mistral AI',
     emoji: '🌬️',
     color: '#ff7000',
   },
   {
     label: 'Meta AI',
-    url: 'https://www.meta.ai',
+    href: 'https://www.meta.ai',
     description: 'Meta',
     emoji: '♾️',
     color: '#0082fb',
   },
   {
     label: 'HuggingChat',
-    url: 'https://huggingface.co/chat',
+    href: 'https://huggingface.co/chat',
     description: 'HuggingFace',
     emoji: '🤗',
     color: '#ff9d00',
   },
   {
     label: 'Poe',
-    url: 'https://poe.com',
+    href: 'https://poe.com',
     description: 'Quora',
     emoji: '💬',
     color: '#8b5cf6',
   },
   {
     label: 'Cohere',
-    url: 'https://coral.cohere.com',
+    href: 'https://coral.cohere.com',
     description: 'Cohere',
     emoji: '🌊',
     color: '#39d353',

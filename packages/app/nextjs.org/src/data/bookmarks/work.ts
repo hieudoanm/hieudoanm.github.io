@@ -1,30 +1,30 @@
-import { BookmarkItem } from '@hieudoanm.github.io/components/pages/start/cards/BookmarkCard';
+import { LinkCardProps } from '@hieudoanm.github.io/components/pages/start/cards/LinkCard';
 
-export const work: BookmarkItem[] = [
+export const work: LinkCardProps[] = [
   {
     label: 'LinkedIn',
-    url: 'https://linkedin.com',
+    href: 'https://linkedin.com',
     description: 'Social network',
     emoji: '💼',
     color: '#0077b5',
   },
   {
     label: 'Hacker News',
-    url: 'https://news.ycombinator.com',
+    href: 'https://news.ycombinator.com',
     description: 'News',
     emoji: '📰',
     color: '#ff6600',
   },
   {
     label: 'Indie Hackers',
-    url: 'https://www.indiehackers.com',
+    href: 'https://www.indiehackers.com',
     description: 'News',
     emoji: '👨‍💻',
     color: '#ffa200',
   },
   {
     label: 'Product Hunt',
-    url: 'https://www.producthunt.com',
+    href: 'https://www.producthunt.com',
     description: 'News',
     emoji: '📦',
     color: '#ffa200',

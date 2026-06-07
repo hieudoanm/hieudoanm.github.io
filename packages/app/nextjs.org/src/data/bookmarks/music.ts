@@ -1,16 +1,16 @@
-import { BookmarkItem } from '@hieudoanm.github.io/components/pages/start/cards/BookmarkCard';
+import { LinkCardProps } from '@hieudoanm.github.io/components/pages/start/cards/LinkCard';
 
-export const music: BookmarkItem[] = [
+export const music: LinkCardProps[] = [
   {
     label: 'Spotify',
-    url: 'https://open.spotify.com',
+    href: 'https://open.spotify.com',
     description: 'Music',
     emoji: '🎵',
     color: '#1DB954',
   },
   {
     label: 'YouTube',
-    url: 'https://youtube.com',
+    href: 'https://youtube.com',
     description: 'Videos',
     emoji: '▶',
     color: '#ff0000',

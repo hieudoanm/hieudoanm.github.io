@@ -1,4 +1,4 @@
-import { BookmarkCard } from '@hieudoanm.github.io/components/pages/start/cards/BookmarkCard';
+import { LinkCard } from '@hieudoanm.github.io/components/pages/start/cards/LinkCard';
 import { DownloadCard } from '@hieudoanm.github.io/components/pages/start/cards/DownloadCard';
 import {
   Tool,
@@ -1585,7 +1585,7 @@ const MainContent: FC<MainContentProps> = memo(
                 <Section key={label} label={label} count={filtered.length}>
                   <div className={GRID}>
                     {filtered.map((bm) => (
-                      <BookmarkCard key={bm.label} {...bm} />
+                      <LinkCard key={bm.label} {...bm} />
                     ))}
                   </div>
                 </Section>
@@ -1693,37 +1693,37 @@ export const Start: FC = () => {
       {
         label: 'Chatbot',
         items: f(chatBookmarks, 'label'),
-        Card: BookmarkCard,
+        Card: LinkCard,
       },
       {
         label: 'Code',
         items: f(codeBookmarks, 'label'),
-        Card: BookmarkCard,
+        Card: LinkCard,
       },
       {
         label: 'Google Workspace',
         items: f(googleBookmarks, 'label'),
-        Card: BookmarkCard,
+        Card: LinkCard,
       },
       {
         label: 'Messaging',
         items: f(messagingBookmarks, 'label'),
-        Card: BookmarkCard,
+        Card: LinkCard,
       },
       {
         label: 'Music',
         items: f(musicBookmarks, 'label'),
-        Card: BookmarkCard,
+        Card: LinkCard,
       },
       {
         label: 'Social',
         items: f(socialBookmarks, 'label'),
-        Card: BookmarkCard,
+        Card: LinkCard,
       },
       {
         label: 'Work',
         items: f(workBookmarks, 'label'),
-        Card: BookmarkCard,
+        Card: LinkCard,
       },
       { label: 'Tools', items: f(toolSections.tools, 'label'), Card: ToolCard },
       {
@@ -1775,7 +1775,7 @@ export const Start: FC = () => {
       {
         label: 'Visualization',
         items: f(toolSections.visualization, 'label'),
-        Card: BookmarkCard,
+        Card: LinkCard,
       },
       {
         label: 'Agents',

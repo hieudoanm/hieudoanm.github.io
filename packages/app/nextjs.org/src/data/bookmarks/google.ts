@@ -1,58 +1,58 @@
-import { BookmarkItem } from '@hieudoanm.github.io/components/pages/start/cards/BookmarkCard';
+import { LinkCardProps } from '@hieudoanm.github.io/components/pages/start/cards/LinkCard';
 
-export const google: BookmarkItem[] = [
+export const google: LinkCardProps[] = [
   {
     label: 'Calendar',
-    url: 'https://calendar.google.com',
+    href: 'https://calendar.google.com',
     description: 'Calendar',
     emoji: '📅',
     color: '#4285f4',
   },
   {
     label: 'Docs',
-    url: 'https://docs.google.com',
+    href: 'https://docs.google.com',
     description: 'Word',
     emoji: '📝',
     color: '#4285f4',
   },
   {
     label: 'Drive',
-    url: 'https://drive.google.com',
+    href: 'https://drive.google.com',
     description: 'OneDrive',
     emoji: '📁',
     color: '#4285f4',
   },
   {
     label: 'Gmail',
-    url: 'https://gmail.com',
+    href: 'https://gmail.com',
     description: 'Email',
     emoji: '📧',
     color: '#d93025',
   },
   {
     label: 'Maps',
-    url: 'https://maps.google.com',
+    href: 'https://maps.google.com',
     description: 'Maps',
     emoji: '🗺️',
     color: '#4285f4',
   },
   {
     label: 'Sheets',
-    url: 'https://sheets.google.com',
+    href: 'https://sheets.google.com',
     description: 'Excel',
     emoji: '📊',
     color: '#0a6847',
   },
   {
     label: 'Slides',
-    url: 'https://slides.google.com',
+    href: 'https://slides.google.com',
     description: 'PowerPoint',
     emoji: '🎭',
     color: '#c23728',
   },
   {
     label: 'Tasks',
-    url: 'https://tasks.google.com',
+    href: 'https://tasks.google.com',
     description: 'ToDo',
     emoji: '✅',
     color: '#4285f4',
