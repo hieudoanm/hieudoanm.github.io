@@ -1,5 +1,5 @@
 # Stage 1: Build the application
-FROM node:20-slim AS builder
+FROM node:20.20.2-slim AS builder
 
 WORKDIR /app
 
@@ -16,7 +16,7 @@ COPY . .
 RUN pnpm run build
 
 # Stage 2: Run the application
-FROM node:20-slim
+FROM node:20.20.2-slim
 
 WORKDIR /app
 
