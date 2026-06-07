@@ -90,9 +90,9 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "httpx", specifier = ">=0.28.1" },
-    { name = "pandas", specifier = ">=3.0.3" },
-    { name = "requests", specifier = ">=2.34.2" },
+    { name = "httpx", specifier = "==0.28.1" },
+    { name = "pandas", specifier = "==3.0.3" },
+    { name = "requests", specifier = "==2.34.2" },
 ]
 
 [[package]]

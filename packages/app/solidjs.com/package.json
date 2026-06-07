@@ -71,7 +71,7 @@
   "devDependencies": {
     "@capacitor/cli": "8.4.0",
     "@eslint/js": "10.0.1",
-    "@solidjs/testing-library": "^0.8.10",
+    "@solidjs/testing-library": "0.8.10",
     "@solidjs/vite-plugin-nitro-2": "0.1.0",
     "@tailwindcss/vite": "4.3.0",
     "@tauri-apps/cli": "2.11.2",
@@ -87,13 +87,13 @@
     "daisyui": "5.5.20",
     "eslint": "10.4.1",
     "globals": "17.6.0",
-    "jsdom": "^29.1.1",
+    "jsdom": "29.1.1",
     "prettier": "3.8.3",
     "prettier-plugin-tailwindcss": "0.8.0",
     "tailwindcss": "4.3.0",
     "typescript": "6.0.3",
     "typescript-eslint": "8.60.1",
-    "vite-plugin-solid": "^2.11.12",
+    "vite-plugin-solid": "2.11.12",
     "vitest": "4.1.8"
   }
 }
