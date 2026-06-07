@@ -45,7 +45,7 @@ exports[`LinkCard should render with all props 1`] = `
           class="btn btn-primary btn-xs w-full no-underline transition-all"
           type="button"
         >
-          ↗ Open in new tab
+          Open in new tab
         </button>
       </div>
     </a>
@@ -67,7 +67,7 @@ exports[`LinkCard should render with minimal props 1`] = `
         class="card-body flex-col items-center justify-center gap-2 p-4 text-center"
       >
         <div
-          class="flex h-10 w-10 items-center justify-center rounded-xl text-xl shadow-inner transition-transform duration-300 group-hover:scale-110 border bg-neutral border-primary-content"
+          class="flex h-10 w-10 items-center justify-center rounded-xl text-xl shadow-inner transition-transform duration-300 group-hover:scale-110bg-neutral border-primary-content border"
         >
           <span>
             🔥
@@ -90,7 +90,7 @@ exports[`LinkCard should render with minimal props 1`] = `
           class="btn btn-primary btn-xs w-full no-underline transition-all"
           type="button"
         >
-          ↗ Open in new tab
+          Open in new tab
         </button>
       </div>
     </a>

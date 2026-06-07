@@ -64,7 +64,7 @@ export const LinkCard: FC<LinkCardProps> = ({
           }}
           className="btn btn-primary btn-xs w-full no-underline transition-all"
           aria-label={`Open ${label} in new tab`}>
-          ↗ Open in new tab
+          Open in new tab
         </button>
       </div>
     </a>

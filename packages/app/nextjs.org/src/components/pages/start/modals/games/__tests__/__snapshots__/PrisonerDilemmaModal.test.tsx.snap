@@ -41,7 +41,8 @@ exports[`PrisonerDilemmaModal should render 1`] = `
               <strong>
                 1
               </strong>
-               / 
+               /
+               
               10
             </span>
             <div
@@ -64,10 +65,10 @@ exports[`PrisonerDilemmaModal should render 1`] = `
             </div>
           </div>
           <div
-            class="overflow-hidden rounded-lg border border-base-300 text-center text-[10px]"
+            class="border-base-300 overflow-hidden rounded-lg border text-center text-[10px]"
           >
             <div
-              class="grid grid-cols-3 border-b border-base-300 bg-base-200 font-bold"
+              class="border-base-300 bg-base-200 grid grid-cols-3 border-b font-bold"
             >
               <div
                 class="p-1"
@@ -84,7 +85,7 @@ exports[`PrisonerDilemmaModal should render 1`] = `
               </div>
             </div>
             <div
-              class="grid grid-cols-3 border-b border-base-300"
+              class="border-base-300 grid grid-cols-3 border-b"
             >
               <div
                 class="bg-base-200 p-1 font-bold"
@@ -92,12 +93,12 @@ exports[`PrisonerDilemmaModal should render 1`] = `
                 🤝 Coop
               </div>
               <div
-                class="p-1 text-success"
+                class="text-success p-1"
               >
                 1yr, 1yr
               </div>
               <div
-                class="p-1 text-error"
+                class="text-error p-1"
               >
                 3yr, 0yr
               </div>
@@ -111,7 +112,7 @@ exports[`PrisonerDilemmaModal should render 1`] = `
                 🔪 Defect
               </div>
               <div
-                class="p-1 text-error"
+                class="text-error p-1"
               >
                 0yr, 3yr
               </div>
