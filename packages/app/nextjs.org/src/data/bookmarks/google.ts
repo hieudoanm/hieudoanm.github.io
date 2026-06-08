@@ -1,6 +1,6 @@
-import { LinkCardProps } from '@hieudoanm.github.io/components/pages/start/cards/LinkCard';
+import { ItemCardProps } from '@hieudoanm.github.io/components/pages/start/cards/ItemCard';
 
-export const google: LinkCardProps[] = [
+export const google: ItemCardProps[] = [
   {
     label: 'Calendar',
     href: 'https://calendar.google.com',

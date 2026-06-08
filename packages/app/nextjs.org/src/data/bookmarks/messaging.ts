@@ -1,6 +1,6 @@
-import { LinkCardProps } from '@hieudoanm.github.io/components/pages/start/cards/LinkCard';
+import { ItemCardProps } from '@hieudoanm.github.io/components/pages/start/cards/ItemCard';
 
-export const messaging: LinkCardProps[] = [
+export const messaging: ItemCardProps[] = [
   {
     label: 'Discord',
     href: 'https://discord.com',

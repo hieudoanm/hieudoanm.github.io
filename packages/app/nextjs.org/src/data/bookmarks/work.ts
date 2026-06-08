@@ -1,6 +1,6 @@
-import { LinkCardProps } from '@hieudoanm.github.io/components/pages/start/cards/LinkCard';
+import { ItemCardProps } from '@hieudoanm.github.io/components/pages/start/cards/ItemCard';
 
-export const work: LinkCardProps[] = [
+export const work: ItemCardProps[] = [
   {
     label: 'LinkedIn',
     href: 'https://linkedin.com',

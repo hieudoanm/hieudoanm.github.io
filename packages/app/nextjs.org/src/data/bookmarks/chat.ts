@@ -1,6 +1,6 @@
-import { LinkCardProps } from '@hieudoanm.github.io/components/pages/start/cards/LinkCard';
+import { ItemCardProps } from '@hieudoanm.github.io/components/pages/start/cards/ItemCard';
 
-export const chat: LinkCardProps[] = [
+export const chat: ItemCardProps[] = [
   {
     label: 'Claude',
     href: 'https://claude.ai/',

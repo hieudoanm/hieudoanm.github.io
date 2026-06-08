@@ -1,6 +1,6 @@
-import { LinkCardProps } from '@hieudoanm.github.io/components/pages/start/cards/LinkCard';
+import { ItemCardProps } from '@hieudoanm.github.io/components/pages/start/cards/ItemCard';
 
-export const music: LinkCardProps[] = [
+export const music: ItemCardProps[] = [
   {
     label: 'Spotify',
     href: 'https://open.spotify.com',

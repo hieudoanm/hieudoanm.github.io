@@ -1,21 +1,28 @@
 import { FC } from 'react';
 
-export interface LinkCardProps {
-  href: string;
+export interface Action {
   label: string;
+  url: string;
+}
+
+export interface ItemCardProps {
+  label: string;
+  href: string;
   emoji: string;
   description?: string;
   color?: string;
   badge?: string;
+  actions?: Action[];
 }
 
-export const LinkCard: FC<LinkCardProps> = ({
-  href,
+export const ItemCard: FC<ItemCardProps> = ({
   label,
+  href,
   emoji,
   description,
   color,
   badge,
+  actions,
 }) => (
   <div
     className="card bg-base-200 border-base-300 hover:bg-base-300 group relative w-full border text-left transition-all duration-300 hover:scale-[1.03] hover:shadow-lg"
@@ -56,16 +63,22 @@ export const LinkCard: FC<LinkCardProps> = ({
             {description ?? label}
           </div>
         </div>
-        <button
-          type="button"
-          onClick={(e: React.MouseEvent) => {
-            e.preventDefault();
-            window.open(href, '_blank', 'noopener,noreferrer');
-          }}
-          className="btn btn-primary btn-xs w-full no-underline transition-all"
-          aria-label={`Open ${label} in new tab`}>
-          Open in new tab
-        </button>
+        {(actions ?? [{ label: 'Open in new tab', url: href }]).map(
+          (action, index) => (
+            <button
+              key={index}
+              type="button"
+              onClick={(e: React.MouseEvent) => {
+                e.preventDefault();
+                e.stopPropagation();
+                window.open(action.url, '_blank', 'noopener,noreferrer');
+              }}
+              className="btn btn-primary btn-xs w-full no-underline transition-all"
+              aria-label={`Open ${label} in new tab`}>
+              {action.label}
+            </button>
+          )
+        )}
       </div>
     </a>
   </div>

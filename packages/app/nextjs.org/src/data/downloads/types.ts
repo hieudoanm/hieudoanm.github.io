@@ -1,3 +1,5 @@
+import { Action } from '@hieudoanm.github.io/components/pages/start/cards/ItemCard';
+
 export type Download = {
   id: string;
   label: string;
@@ -5,5 +7,5 @@ export type Download = {
   emoji: string;
   color: string;
   description: string;
-  downloads: { label: string; url: string }[];
+  downloads: Action[];
 };

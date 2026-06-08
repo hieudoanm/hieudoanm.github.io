@@ -1,5 +1,4 @@
-import { LinkCard } from '@hieudoanm.github.io/components/pages/start/cards/LinkCard';
-import { DownloadCard } from '@hieudoanm.github.io/components/pages/start/cards/DownloadCard';
+import { ItemCard } from '@hieudoanm.github.io/components/pages/start/cards/ItemCard';
 import {
   Tool,
   ToolCard,
@@ -1584,7 +1583,7 @@ const MainContent: FC<MainContentProps> = memo(
                 <Section key={label} label={label} count={filtered.length}>
                   <div className={GRID}>
                     {filtered.map((bm) => (
-                      <LinkCard key={bm.label} {...bm} />
+                      <ItemCard key={bm.label} {...bm} />
                     ))}
                   </div>
                 </Section>
@@ -1607,7 +1606,12 @@ const MainContent: FC<MainContentProps> = memo(
                 <Section key={label} label={label} count={filtered.length}>
                   <div className={GRID}>
                     {filtered.map((a) => (
-                      <DownloadCard key={a.id} {...a} />
+                      <ItemCard
+                        key={a.id}
+                        href={a.url}
+                        {...a}
+                        actions={a.downloads}
+                      />
                     ))}
                   </div>
                 </Section>
@@ -1688,41 +1692,52 @@ export const Start: FC = () => {
         ? items.filter((item) => match(String(item[key] ?? ''), query))
         : items;
 
+    const toItemCard = <
+      T extends { url: string; downloads?: { label: string; url: string }[] },
+    >(
+      item: T
+    ) =>
+      ({
+        ...item,
+        href: item.url,
+        actions: item.downloads,
+      }) as any;
+
     return [
       {
         label: 'Chatbot',
         items: f(chatBookmarks, 'label'),
-        Card: LinkCard,
+        Card: ItemCard,
       },
       {
         label: 'Code',
         items: f(codeBookmarks, 'label'),
-        Card: LinkCard,
+        Card: ItemCard,
       },
       {
         label: 'Google Workspace',
         items: f(googleBookmarks, 'label'),
-        Card: LinkCard,
+        Card: ItemCard,
       },
       {
         label: 'Messaging',
         items: f(messagingBookmarks, 'label'),
-        Card: LinkCard,
+        Card: ItemCard,
       },
       {
         label: 'Music',
         items: f(musicBookmarks, 'label'),
-        Card: LinkCard,
+        Card: ItemCard,
       },
       {
         label: 'Social',
         items: f(socialBookmarks, 'label'),
-        Card: LinkCard,
+        Card: ItemCard,
       },
       {
         label: 'Work',
         items: f(workBookmarks, 'label'),
-        Card: LinkCard,
+        Card: ItemCard,
       },
       { label: 'Tools', items: f(toolSections.tools, 'label'), Card: ToolCard },
       {
@@ -1774,21 +1789,29 @@ export const Start: FC = () => {
       {
         label: 'Visualization',
         items: f(toolSections.visualization, 'label'),
-        Card: LinkCard,
+        Card: ItemCard,
       },
       {
         label: 'Agents',
-        items: f(agents, 'label'),
-        Card: DownloadCard,
+        items: f(agents, 'label').map(toItemCard),
+        Card: ItemCard,
       },
-      { label: 'CLIs', items: f(clis, 'id'), Card: DownloadCard },
-      { label: 'Extensions', items: f(extensions, 'id'), Card: DownloadCard },
+      { label: 'CLIs', items: f(clis, 'id').map(toItemCard), Card: ItemCard },
+      {
+        label: 'Extensions',
+        items: f(extensions, 'id').map(toItemCard),
+        Card: ItemCard,
+      },
       {
         label: 'IDEs',
-        items: f(ides, 'label'),
-        Card: DownloadCard,
+        items: f(ides, 'label').map(toItemCard),
+        Card: ItemCard,
       },
-      { label: 'Packages', items: f(packages, 'id'), Card: DownloadCard },
+      {
+        label: 'Packages',
+        items: f(packages, 'id').map(toItemCard),
+        Card: ItemCard,
+      },
     ];
   }, [query, toolSections]);
 

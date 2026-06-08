@@ -1,6 +1,51 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`LinkCard should render with all props 1`] = `
+exports[`ItemCard should render as a bookmark link 1`] = `
+<div>
+  <div
+    class="card bg-base-200 border-base-300 hover:bg-base-300 group relative w-full border text-left transition-all duration-300 hover:scale-[1.03] hover:shadow-lg"
+  >
+    <a
+      class="block"
+      href="https://example.com"
+      rel="noopener noreferrer"
+    >
+      <div
+        class="card-body flex-col items-center justify-center gap-2 p-4 text-center"
+      >
+        <div
+          class="flex h-10 w-10 items-center justify-center rounded-xl text-xl shadow-inner transition-transform duration-300 group-hover:scale-110bg-neutral border-primary-content border"
+        >
+          <span>
+            🔥
+          </span>
+        </div>
+        <div>
+          <div
+            class="truncate text-sm font-bold tracking-tight"
+          >
+            test
+          </div>
+          <div
+            class="text-base-content/40 mt-0.5 truncate text-[10px] tracking-widest uppercase"
+          >
+            test
+          </div>
+        </div>
+        <button
+          aria-label="Open test in new tab"
+          class="btn btn-primary btn-xs w-full no-underline transition-all"
+          type="button"
+        >
+          Open in new tab
+        </button>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`ItemCard should render with a badge 1`] = `
 <div>
   <div
     class="card bg-base-200 border-base-300 hover:bg-base-300 group relative w-full border text-left transition-all duration-300 hover:scale-[1.03] hover:shadow-lg"
@@ -53,10 +98,11 @@ exports[`LinkCard should render with all props 1`] = `
 </div>
 `;
 
-exports[`LinkCard should render with minimal props 1`] = `
+exports[`ItemCard should render with action buttons 1`] = `
 <div>
   <div
     class="card bg-base-200 border-base-300 hover:bg-base-300 group relative w-full border text-left transition-all duration-300 hover:scale-[1.03] hover:shadow-lg"
+    style="--ai-color: #ff0000;"
   >
     <a
       class="block"
@@ -67,7 +113,8 @@ exports[`LinkCard should render with minimal props 1`] = `
         class="card-body flex-col items-center justify-center gap-2 p-4 text-center"
       >
         <div
-          class="flex h-10 w-10 items-center justify-center rounded-xl text-xl shadow-inner transition-transform duration-300 group-hover:scale-110bg-neutral border-primary-content border"
+          class="flex h-10 w-10 items-center justify-center rounded-xl text-xl shadow-inner transition-transform duration-300 group-hover:scale-110"
+          style="background: rgba(255, 0, 0, 0.133); border: 1.5px solid rgba(255, 0, 0, 0.267);"
         >
           <span>
             🔥
@@ -90,7 +137,14 @@ exports[`LinkCard should render with minimal props 1`] = `
           class="btn btn-primary btn-xs w-full no-underline transition-all"
           type="button"
         >
-          Open in new tab
+          macOS
+        </button>
+        <button
+          aria-label="Open test in new tab"
+          class="btn btn-primary btn-xs w-full no-underline transition-all"
+          type="button"
+        >
+          Windows
         </button>
       </div>
     </a>
