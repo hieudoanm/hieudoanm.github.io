@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
-    "@types/chrome": "0.1.42",
+    "@types/chrome": "0.1.43",
     "@types/firefox-webext-browser": "143.0.0",
     "@types/node": "25.9.1",
     "@webpack-cli/generators": "3.0.7",
