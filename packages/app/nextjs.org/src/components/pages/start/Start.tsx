@@ -1374,8 +1374,7 @@ Section.displayName = 'Section';
 /* ToolGrid — shared grid wrapper                                      */
 /* ------------------------------------------------------------------ */
 
-const GRID =
-  'grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 gap-3';
+const GRID = 'grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3';
 const GRID_MOBILE = 'grid grid-cols-2 sm:grid-cols-3 gap-3';
 
 /* ------------------------------------------------------------------ */
