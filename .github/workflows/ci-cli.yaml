@@ -1,0 +1,79 @@
+name: CI - CLI
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/cli/hieudoanm/clap.rs/**'
+      - 'packages/cli/hieudoanm/cobra.go/**'
+      - 'packages/cli/hieudoanm/swift/**'
+      - '.github/workflows/ci-cli.yaml'
+
+permissions:
+  contents: write
+
+jobs:
+  rust:
+    name: Rust
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/cli/hieudoanm/clap.rs
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.3
+      - name: Install Rust
+        uses: actions-rust-lang/setup-rust-toolchain@v1.11.0
+        with:
+          components: clippy
+      - name: Lint
+        run: cargo clippy -- -D warnings
+      - name: Test
+        run: cargo test
+      - name: Build
+        run: cargo build --release
+
+  go:
+    name: Go
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/cli/hieudoanm/cobra.go
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.3
+      - name: Install Go
+        uses: actions/setup-go@v6.4.0
+        with:
+          go-version: '1.26.3'
+          cache-dependency-path: packages/cli/hieudoanm/cobra.go/go.sum
+      - name: Install Dependencies
+        run: go mod download
+      - name: Lint
+        run: go vet ./...
+      - name: Test
+        run: go test ./...
+
+  swift:
+    name: Swift
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/cli/hieudoanm/swift
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.3
+      - name: Install Swift
+        uses: swift-actions/setup-swift@v2
+        with:
+          swift-version: '5.10'
+      - name: Build
+        run: swift build -c release
+      - name: Test
+        run: swift test
