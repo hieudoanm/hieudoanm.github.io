@@ -620,8 +620,8 @@ importers:
         specifier: 8.0.2
         version: 8.0.2
       '@types/chrome':
-        specifier: 0.1.42
-        version: 0.1.42
+        specifier: 0.1.43
+        version: 0.1.43
       '@types/firefox-webext-browser':
         specifier: 143.0.0
         version: 143.0.0
@@ -683,8 +683,8 @@ importers:
         specifier: 8.0.2
         version: 8.0.2
       '@types/chrome':
-        specifier: 0.1.42
-        version: 0.1.42
+        specifier: 0.1.43
+        version: 0.1.43
       '@types/firefox-webext-browser':
         specifier: 143.0.0
         version: 143.0.0
@@ -743,8 +743,8 @@ importers:
         specifier: 8.0.2
         version: 8.0.2
       '@types/chrome':
-        specifier: 0.1.42
-        version: 0.1.42
+        specifier: 0.1.43
+        version: 0.1.43
       '@types/firefox-webext-browser':
         specifier: 143.0.0
         version: 143.0.0
@@ -797,8 +797,8 @@ importers:
         specifier: 10.0.1
         version: 10.0.1(eslint@10.4.1(jiti@2.7.0))
       '@types/chrome':
-        specifier: 0.1.42
-        version: 0.1.42
+        specifier: 0.1.43
+        version: 0.1.43
       '@types/firefox-webext-browser':
         specifier: 143.0.0
         version: 143.0.0
@@ -851,8 +851,8 @@ importers:
         specifier: 10.0.1
         version: 10.0.1(eslint@10.4.1(jiti@2.7.0))
       '@types/chrome':
-        specifier: 0.1.42
-        version: 0.1.42
+        specifier: 0.1.43
+        version: 0.1.43
       '@types/firefox-webext-browser':
         specifier: 143.0.0
         version: 143.0.0
@@ -905,8 +905,8 @@ importers:
         specifier: 10.0.1
         version: 10.0.1(eslint@10.4.1(jiti@2.7.0))
       '@types/chrome':
-        specifier: 0.1.42
-        version: 0.1.42
+        specifier: 0.1.43
+        version: 0.1.43
       '@types/firefox-webext-browser':
         specifier: 143.0.0
         version: 143.0.0
@@ -965,8 +965,8 @@ importers:
         specifier: 10.0.1
         version: 10.0.1(eslint@10.4.1(jiti@2.7.0))
       '@types/chrome':
-        specifier: 0.1.42
-        version: 0.1.42
+        specifier: 0.1.43
+        version: 0.1.43
       '@types/firefox-webext-browser':
         specifier: 143.0.0
         version: 143.0.0
@@ -1019,8 +1019,8 @@ importers:
         specifier: 10.0.1
         version: 10.0.1(eslint@10.4.1(jiti@2.7.0))
       '@types/chrome':
-        specifier: 0.1.42
-        version: 0.1.42
+        specifier: 0.1.43
+        version: 0.1.43
       '@types/firefox-webext-browser':
         specifier: 143.0.0
         version: 143.0.0
@@ -1085,8 +1085,8 @@ importers:
         specifier: 8.0.2
         version: 8.0.2
       '@types/chrome':
-        specifier: 0.1.42
-        version: 0.1.42
+        specifier: 0.1.43
+        version: 0.1.43
       '@types/firefox-webext-browser':
         specifier: 143.0.0
         version: 143.0.0
@@ -1145,8 +1145,8 @@ importers:
         specifier: 8.0.2
         version: 8.0.2
       '@types/chrome':
-        specifier: 0.1.42
-        version: 0.1.42
+        specifier: 0.1.43
+        version: 0.1.43
       '@types/firefox-webext-browser':
         specifier: 143.0.0
         version: 143.0.0
@@ -6412,8 +6412,8 @@ packages:
   '@types/chai@5.2.3':
     resolution: {integrity: sha512-Mw558oeA9fFbv65/y4mHtXDs9bPnFMZAL/jxdPFUpOHHIXX91mcgEHbS5Lahr+pwZFR8A7GQleRWeI6cGFC2UA==}
 
-  '@types/chrome@0.1.42':
-    resolution: {integrity: sha512-tdT2roFqGecZZDjA9fUEAINb2STxSPifHMDvY6EfRjNRCjdrs/0FwKt5RCIA9MKMd1arAYZZL3nwEkp6ZLZu2w==}
+  '@types/chrome@0.1.43':
+    resolution: {integrity: sha512-ukH/HhmR6ht+UTX3PLUWJxgJ/RQcK2Foj4lBzsF24SIWsXgqhGuXqjd8FFuwioPP7d/JUKLM4g8GZxw3F4HTcA==}
 
   '@types/connect-history-api-fallback@1.5.4':
     resolution: {integrity: sha512-n6Cr2xS1h4uAulPRdlw6Jl6s1oG8KrVilPN2yUITEs+K48EzMJJ3W1xy8K5eWuFvjp3R74AOIGSmp2UfBJ8HFw==}
@@ -21583,7 +21583,7 @@ snapshots:
       '@types/deep-eql': 4.0.2
       assertion-error: 2.0.1
 
-  '@types/chrome@0.1.42':
+  '@types/chrome@0.1.43':
     dependencies:
       '@types/filesystem': 0.0.36
       '@types/har-format': 1.2.16
