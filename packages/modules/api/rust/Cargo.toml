@@ -10,17 +10,17 @@ license = "GPL-3.0"
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]
-anyhow = "1"
-reqwest = { version = "0.12", features = ["json"] }
-serde = { version = "1", features = ["derive"] }
-serde_json = "1"
+anyhow = "=1.0.102"
+reqwest = { version = "=0.12.28", features = ["json"] }
+serde = { version = "=1.0.228", features = ["derive"] }
+serde_json = "=1.0.150"
 
 [target.'cfg(target_arch = "wasm32")'.dependencies]
-wasm-bindgen = "0.2"
-js-sys = "0.3"
-wasm-bindgen-futures = "0.4"
-serde-wasm-bindgen = "0.6"
+wasm-bindgen = "=0.2.122"
+js-sys = "=0.3.99"
+wasm-bindgen-futures = "=0.4.72"
+serde-wasm-bindgen = "=0.6.5"
 
 [dev-dependencies]
-tokio = { version = "1", features = ["full"] }
-wiremock = "0.6"
+tokio = { version = "=1.52.3", features = ["full"] }
+wiremock = "=0.6.5"

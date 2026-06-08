@@ -168,7 +168,7 @@ importers:
         specifier: 19.2.7
         version: 19.2.7
       react-chartjs-2:
-        specifier: ^5.3.1
+        specifier: 5.3.1
         version: 5.3.1(chart.js@4.5.1)(react@19.2.7)
       react-chessboard:
         specifier: 5.10.0
@@ -461,7 +461,7 @@ importers:
         specifier: 10.0.1
         version: 10.0.1(eslint@10.4.1(jiti@2.7.0))
       '@solidjs/testing-library':
-        specifier: ^0.8.10
+        specifier: 0.8.10
         version: 0.8.10(@solidjs/router@0.16.1(solid-js@1.9.13))(solid-js@1.9.13)
       '@solidjs/vite-plugin-nitro-2':
         specifier: 0.1.0
@@ -509,7 +509,7 @@ importers:
         specifier: 17.6.0
         version: 17.6.0
       jsdom:
-        specifier: ^29.1.1
+        specifier: 29.1.1
         version: 29.1.1(@noble/hashes@1.8.0)(canvas@3.2.3)
       prettier:
         specifier: 3.8.3
@@ -527,7 +527,7 @@ importers:
         specifier: 8.60.1
         version: 8.60.1(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3)
       vite-plugin-solid:
-        specifier: ^2.11.12
+        specifier: 2.11.12
         version: 2.11.12(@testing-library/jest-dom@6.9.1)(solid-js@1.9.13)(vite@8.0.16(@types/node@25.9.2)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.48.0)(yaml@2.9.0))
       vitest:
         specifier: 4.1.8
@@ -647,7 +647,7 @@ importers:
         specifier: 6.1.3
         version: 6.1.3
       sharp:
-        specifier: ^0.34.5
+        specifier: 0.34.5
         version: 0.34.5
       ts-loader:
         specifier: 9.6.0
@@ -1205,6 +1205,8 @@ importers:
         specifier: 6.1.3
         version: 6.1.3
 
+  packages/modules/api/rust/pkg: {}
+
   packages/modules/api/typescript:
     devDependencies:
       '@eslint/js':
@@ -1350,6 +1352,8 @@ importers:
         specifier: 8.60.1
         version: 8.60.1(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3)
 
+  packages/modules/chess/rust/pkg: {}
+
   packages/modules/chess/ts:
     dependencies:
       react:
@@ -1405,6 +1409,8 @@ importers:
         specifier: 8.60.1
         version: 8.60.1(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3)
 
+  packages/modules/lodash/rust/pkg: {}
+
   packages/modules/lodash/typescript:
     devDependencies:
       '@eslint/js':
@@ -1446,6 +1452,8 @@ importers:
       typescript-eslint:
         specifier: 8.60.1
         version: 8.60.1(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3)
+
+  packages/modules/lodashx/rust/pkg: {}
 
   packages/modules/lodashx/typescript:
     dependencies:
@@ -26831,7 +26839,7 @@ snapshots:
       lodash.isstring: 4.0.1
       lodash.once: 4.1.1
       ms: 2.1.3
-      semver: 7.8.0
+      semver: 7.8.2
 
   jsprim@1.4.2:
     dependencies:
