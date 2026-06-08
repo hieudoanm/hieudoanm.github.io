@@ -19,7 +19,7 @@ format:
 
 ## lint: Run cargo clippy
 lint:
-	cargo clippy
+	cargo clippy -- -D warnings
 
 ## test: Run all tests
 test:

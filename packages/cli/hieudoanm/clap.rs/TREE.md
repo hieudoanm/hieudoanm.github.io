@@ -1,75 +1,76 @@
 # TREE
 
-```bash
+```text
 ├── scripts/
-│   └── install.sh
+│   └── [install.sh](./scripts/install.sh)
 ├── src/
 │   ├── cmd/
-│   │   ├── blackjack.rs
-│   │   ├── braille.rs
-│   │   ├── chess.rs
-│   │   ├── clipboard.rs
-│   │   ├── clock.rs
-│   │   ├── colors.rs
-│   │   ├── docsify.rs
-│   │   ├── doi.rs
-│   │   ├── english.rs
-│   │   ├── frankfurter.rs
-│   │   ├── instagram.rs
-│   │   ├── ip.rs
-│   │   ├── mod.rs
-│   │   ├── morse.rs
-│   │   ├── openapi.rs
-│   │   ├── openrouter.rs
-│   │   ├── qrcode.rs
-│   │   ├── shopify.rs
-│   │   ├── snapshot.rs
-│   │   ├── status.rs
-│   │   ├── status_all.rs
-│   │   ├── str_mod.rs
-│   │   ├── system.rs
-│   │   ├── tax.rs
-│   │   ├── telegram.rs
-│   │   ├── uuid.rs
-│   │   ├── version.rs
-│   │   ├── wifi.rs
-│   │   └── youtube.rs
+│   │   ├── [blackjack.rs](./src/cmd/blackjack.rs)
+│   │   ├── [braille.rs](./src/cmd/braille.rs)
+│   │   ├── [chess.rs](./src/cmd/chess.rs)
+│   │   ├── [clipboard.rs](./src/cmd/clipboard.rs)
+│   │   ├── [clock.rs](./src/cmd/clock.rs)
+│   │   ├── [colors.rs](./src/cmd/colors.rs)
+│   │   ├── [docsify.rs](./src/cmd/docsify.rs)
+│   │   ├── [doi.rs](./src/cmd/doi.rs)
+│   │   ├── [english.rs](./src/cmd/english.rs)
+│   │   ├── [frankfurter.rs](./src/cmd/frankfurter.rs)
+│   │   ├── [instagram.rs](./src/cmd/instagram.rs)
+│   │   ├── [ip.rs](./src/cmd/ip.rs)
+│   │   ├── [mod.rs](./src/cmd/mod.rs)
+│   │   ├── [morse.rs](./src/cmd/morse.rs)
+│   │   ├── [openapi.rs](./src/cmd/openapi.rs)
+│   │   ├── [openrouter.rs](./src/cmd/openrouter.rs)
+│   │   ├── [qrcode.rs](./src/cmd/qrcode.rs)
+│   │   ├── [shopify.rs](./src/cmd/shopify.rs)
+│   │   ├── [snapshot.rs](./src/cmd/snapshot.rs)
+│   │   ├── [status.rs](./src/cmd/status.rs)
+│   │   ├── [status_all.rs](./src/cmd/status_all.rs)
+│   │   ├── [str_mod.rs](./src/cmd/str_mod.rs)
+│   │   ├── [system.rs](./src/cmd/system.rs)
+│   │   ├── [tax.rs](./src/cmd/tax.rs)
+│   │   ├── [telegram.rs](./src/cmd/telegram.rs)
+│   │   ├── [uuid.rs](./src/cmd/uuid.rs)
+│   │   ├── [version.rs](./src/cmd/version.rs)
+│   │   ├── [wifi.rs](./src/cmd/wifi.rs)
+│   │   └── [youtube.rs](./src/cmd/youtube.rs)
 │   ├── configs/
-│   │   ├── mod.rs
-│   │   └── services.json
+│   │   ├── [mod.rs](./src/configs/mod.rs)
+│   │   └── [services.json](./src/configs/services.json)
 │   ├── data/
-│   │   └── mod.rs
+│   │   └── [mod.rs](./src/data/mod.rs)
 │   ├── libs/
-│   │   ├── browser.rs
-│   │   ├── colors.rs
-│   │   ├── figlet.rs
-│   │   ├── http.rs
-│   │   ├── mod.rs
-│   │   ├── number.rs
-│   │   └── requests.rs
+│   │   ├── [browser.rs](./src/libs/browser.rs)
+│   │   ├── [colors.rs](./src/libs/colors.rs)
+│   │   ├── [figlet.rs](./src/libs/figlet.rs)
+│   │   ├── [http.rs](./src/libs/http.rs)
+│   │   ├── [mod.rs](./src/libs/mod.rs)
+│   │   ├── [number.rs](./src/libs/number.rs)
+│   │   └── [requests.rs](./src/libs/requests.rs)
 │   ├── services/
-│   │   ├── apa.rs
-│   │   ├── blackjack.rs
-│   │   ├── chat.rs
-│   │   ├── colors.rs
-│   │   ├── docsify.rs
-│   │   ├── lichess.rs
-│   │   ├── mod.rs
-│   │   ├── openrouter.rs
-│   │   ├── openrouter_config.rs
-│   │   ├── pomodoro.rs
-│   │   ├── shopify.rs
-│   │   ├── status.rs
-│   │   ├── tax.rs
-│   │   ├── telegram.rs
-│   │   ├── transcript.rs
-│   │   └── wifi.rs
-│   └── main.rs
-├── target/
-├── Cargo.lock
-├── Cargo.toml
-├── README.md
-└── TREE.md
+│   │   ├── [apa.rs](./src/services/apa.rs)
+│   │   ├── [blackjack.rs](./src/services/blackjack.rs)
+│   │   ├── [chat.rs](./src/services/chat.rs)
+│   │   ├── [colors.rs](./src/services/colors.rs)
+│   │   ├── [docsify.rs](./src/services/docsify.rs)
+│   │   ├── [lichess.rs](./src/services/lichess.rs)
+│   │   ├── [mod.rs](./src/services/mod.rs)
+│   │   ├── [openrouter.rs](./src/services/openrouter.rs)
+│   │   ├── [openrouter_config.rs](./src/services/openrouter_config.rs)
+│   │   ├── [pomodoro.rs](./src/services/pomodoro.rs)
+│   │   ├── [shopify.rs](./src/services/shopify.rs)
+│   │   ├── [status.rs](./src/services/status.rs)
+│   │   ├── [tax.rs](./src/services/tax.rs)
+│   │   ├── [telegram.rs](./src/services/telegram.rs)
+│   │   ├── [transcript.rs](./src/services/transcript.rs)
+│   │   └── [wifi.rs](./src/services/wifi.rs)
+│   └── [main.rs](./src/main.rs)
+├── [Cargo.lock](./Cargo.lock)
+├── [Cargo.toml](./Cargo.toml)
+├── [LICENSE](./LICENSE)
+├── [Makefile](./Makefile)
+├── [README.md](./README.md)
+└── [TREE.md](./TREE.md)
 ```
 
-8 directories, 61 files
+7 directories, 63 files

@@ -45,7 +45,7 @@ fn should_retry(
     if err.is_some() {
         return true;
     }
-    status >= 500 && status <= 599
+    (500..=599).contains(&status)
 }
 
 fn backoff(attempt: usize) {
@@ -104,14 +104,9 @@ fn log_response(resp: &reqwest::Response, body: &[u8], options: &Options) {
         colors::blue(""),
         colors::blue("")
     );
-    println!("Status: {}{}{}", status_color(&status.to_string()), "", "");
+    println!("Status: {}", status_color(&status.to_string()));
     println!("Headers: {headers_str}");
-    println!(
-        "Body: {}{}{}",
-        colors::gray(""),
-        colors::gray(&body_str),
-        ""
-    );
+    println!("Body: {}{}", colors::gray(""), colors::gray(&body_str),);
     println!(
         "{}==============================={}",
         colors::blue(""),
@@ -153,7 +148,7 @@ pub async fn do_request(
             }
             Ok(Err(e)) => {
                 last_err = Some(anyhow::anyhow!("{e}"));
-                if should_retry(Some(&last_err.as_ref().unwrap()), 0, attempt, max_retries) {
+                if should_retry(Some(last_err.as_ref().unwrap()), 0, attempt, max_retries) {
                     backoff(attempt);
                     continue;
                 }
@@ -202,12 +197,7 @@ fn log_response_raw(status: &reqwest::StatusCode, body: &[u8], options: &Options
         colors::blue("")
     );
     println!("Status: {}", status_color(&status.to_string()));
-    println!(
-        "Body: {}{}{}",
-        colors::gray(""),
-        colors::gray(&body_str),
-        ""
-    );
+    println!("Body: {}{}", colors::gray(""), colors::gray(&body_str),);
     println!(
         "{}==============================={}",
         colors::blue(""),

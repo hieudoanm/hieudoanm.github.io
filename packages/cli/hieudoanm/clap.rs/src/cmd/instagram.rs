@@ -5,9 +5,8 @@ pub fn command() -> clap::Command {
 }
 
 pub fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    match matches.subcommand() {
-        Some(("download", _m)) => println!("Instagram download (not yet implemented)"),
-        _ => {}
+    if let Some(("download", _m)) = matches.subcommand() {
+        println!("Instagram download (not yet implemented)");
     }
     Ok(())
 }

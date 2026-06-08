@@ -819,12 +819,7 @@ fn symbol_to_node_kind(k: &SymbolKind) -> NodeKind {
 }
 
 fn sanitize_id(s: &str) -> String {
-    s.replace('/', "_")
-        .replace('\\', "_")
-        .replace('.', "_")
-        .replace(' ', "_")
-        .replace(':', "_")
-        .replace('-', "_")
+    s.replace(['/', '\\', '.', ' ', ':', '-'], "_")
 }
 
 use quick_xml::events::{BytesDecl, BytesEnd, BytesStart, BytesText, Event};

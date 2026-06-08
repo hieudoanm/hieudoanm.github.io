@@ -1,7 +1,7 @@
 fn load_services() -> Vec<(String, String)> {
     let services = crate::configs::services();
     let mut result = Vec::new();
-    for (_group, svcs) in &services {
+    for svcs in services.values() {
         for (name, url) in svcs {
             result.push((name.clone(), url.clone()));
         }

@@ -32,14 +32,28 @@ export const clis: Download[] = [
   {
     id: 'hieudoanm.rs',
     label: 'hieudoanm.rs',
-    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/cli/hieudoanm/rust',
+    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/cli/hieudoanm/clap.rs',
     emoji: '👨‍💻',
     color: '#1f2937',
     description: 'Rust',
     downloads: [
       {
         label: 'Download BIN',
-        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/cli/hieudoanm/rust/bin/hieudoanm',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/cli/hieudoanm/clap.rs/bin/hieudoanm',
+      },
+    ],
+  },
+  {
+    id: 'hieudoanm.swift',
+    label: 'hieudoanm.swift',
+    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/cli/hieudoanm/swift',
+    emoji: '👨‍💻',
+    color: '#1f2937',
+    description: 'Swift',
+    downloads: [
+      {
+        label: 'Download BIN',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/cli/hieudoanm/swift/bin/hieudoanm',
       },
     ],
   },

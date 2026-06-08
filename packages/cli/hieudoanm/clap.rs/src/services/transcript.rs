@@ -14,6 +14,7 @@ lazy_static::lazy_static! {
 }
 
 #[derive(Debug, Clone, Deserialize)]
+#[allow(non_snake_case)]
 pub struct CaptionTrack {
     pub base_url: Option<String>,
     #[serde(rename = "baseUrl")]
@@ -29,6 +30,7 @@ pub struct CaptionTrack {
 }
 
 #[derive(Debug, Clone, Deserialize)]
+#[allow(non_snake_case)]
 pub struct CaptionTrackName {
     pub simple_text: Option<String>,
     #[serde(rename = "simpleText")]

@@ -1,7 +1,9 @@
-use std::collections::HashMap;
+use std::collections::{HashMap, HashSet};
 use std::fs;
 use std::io::Write;
 use std::path::Path;
+
+use serde::Serialize;
 
 pub fn command() -> clap::Command {
     clap::Command::new("docsify")
@@ -66,6 +68,35 @@ pub fn command() -> clap::Command {
                         .help("Print progress to stderr"),
                 ),
         )
+        .subcommand(
+            clap::Command::new("obsidian")
+                .about("Build a wiki-link graph from markdown files")
+                .long_about("Walk a directory tree of markdown files, extract [[wiki-link]] references, and output a graph of how files interconnect.\nFormats:\n  dot     - Graphviz DOT format (default)\n  json    - JSON object with nodes[] and edges[]\n  edges   - Plain text edge list")
+                .arg(
+                    clap::Arg::new("dir")
+                        .long("dir")
+                        .default_value(".")
+                        .help("Root directory to scan"),
+                )
+                .arg(
+                    clap::Arg::new("out")
+                        .long("out")
+                        .default_value("")
+                        .help("Output file path (default: stdout)"),
+                )
+                .arg(
+                    clap::Arg::new("format")
+                        .long("format")
+                        .default_value("dot")
+                        .help("Output format: dot, json, edges"),
+                )
+                .arg(
+                    clap::Arg::new("exclude")
+                        .long("exclude")
+                        .default_value(".git,node_modules,vendor,dist,.next,__pycache__")
+                        .help("Comma-separated directories to exclude"),
+                ),
+        )
 }
 
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
@@ -73,8 +104,9 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
         Some(("tree", m)) => run_tree(m).await,
         Some(("cobra", m)) => run_cobra(m).await,
         Some(("scan", m)) => run_scan(m).await,
+        Some(("obsidian", m)) => run_obsidian(m).await,
         _ => {
-            println!("docsify: use `tree`, `cobra`, or `scan` subcommand");
+            println!("docsify: use `tree`, `cobra`, `scan`, or `obsidian` subcommand");
             Ok(())
         }
     }
@@ -82,6 +114,7 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
 
 // ── Tree subcommand ──────────────────────────────────────────────────────────
 
+#[allow(clippy::type_complexity)]
 fn load_gitignore(dir: &str) -> Result<Box<dyn Fn(&str, bool) -> bool>, anyhow::Error> {
     let path = Path::new(dir).join(".gitignore");
     let content = match fs::read_to_string(&path) {
@@ -140,6 +173,7 @@ fn load_gitignore(dir: &str) -> Result<Box<dyn Fn(&str, bool) -> bool>, anyhow::
     }))
 }
 
+#[allow(clippy::only_used_in_recursion)]
 fn write_tree<W: Write>(
     w: &mut W,
     root: &Path,
@@ -317,4 +351,233 @@ async fn run_scan(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     );
 
     Ok(())
+}
+
+// ── Obsidian subcommand ──────────────────────────────────────────────────────
+
+#[derive(Debug, Clone, Serialize)]
+struct ObsidianNode {
+    id: String,
+    name: String,
+    path: String,
+    links: usize,
+}
+
+#[derive(Debug, Clone, Serialize)]
+struct ObsidianEdge {
+    source: String,
+    target: String,
+}
+
+#[derive(Debug, Serialize)]
+struct ObsidianGraph {
+    root: String,
+    nodes: Vec<ObsidianNode>,
+    edges: Vec<ObsidianEdge>,
+    orphan: usize,
+}
+
+fn build_obsidian_graph(
+    root: &str,
+    exclude_set: &HashSet<String>,
+) -> anyhow::Result<(Vec<ObsidianNode>, Vec<ObsidianEdge>)> {
+    let mut markdown_files: Vec<(String, String)> = Vec::new(); // (abs_path, display_name)
+    let mut links: Vec<(String, Vec<String>)> = Vec::new(); // (abs_path, [target_names])
+
+    let wiki_link_re = regex::Regex::new(r"\[\[([^\]|]+)(?:\|[^\]|]+)?\]\]")?;
+
+    for entry in walkdir::WalkDir::new(root).into_iter().filter_entry(|e| {
+        let name = e.file_name().to_string_lossy().to_string();
+        if name.starts_with('.') {
+            return false;
+        }
+        if e.file_type().is_dir() && exclude_set.contains(&name) {
+            return false;
+        }
+        true
+    }) {
+        let entry = match entry {
+            Ok(e) => e,
+            Err(_) => continue,
+        };
+        if !entry.file_type().is_file() {
+            continue;
+        }
+        let path = entry.path();
+        if !path.to_string_lossy().to_lowercase().ends_with(".md") {
+            continue;
+        }
+
+        let abs_path = path.to_string_lossy().to_string();
+        let name = path
+            .file_stem()
+            .map(|s| s.to_string_lossy().to_string())
+            .unwrap_or_default();
+
+        markdown_files.push((abs_path.clone(), name));
+
+        let content = match fs::read_to_string(&abs_path) {
+            Ok(c) => c,
+            Err(_) => continue,
+        };
+
+        let file_links: Vec<String> = wiki_link_re
+            .captures_iter(&content)
+            .map(|c| c[1].to_string())
+            .collect();
+
+        if !file_links.is_empty() {
+            links.push((abs_path, file_links));
+        }
+    }
+
+    // Build lookup: display_name (lowercase) -> abs_path
+    let lookup: HashMap<String, String> = markdown_files
+        .iter()
+        .map(|(p, n)| (n.to_lowercase(), p.clone()))
+        .collect();
+
+    // Sort markdown files by path for deterministic order
+    markdown_files.sort_by(|a, b| a.0.cmp(&b.0));
+
+    let mut rel_map: HashMap<String, String> = HashMap::new();
+    let mut node_map: HashMap<String, usize> = HashMap::new();
+    let mut nodes: Vec<ObsidianNode> = Vec::with_capacity(markdown_files.len());
+
+    for (i, (abs, name)) in markdown_files.iter().enumerate() {
+        let rel = Path::new(abs)
+            .strip_prefix(root)
+            .map(|p| p.to_string_lossy().to_string())
+            .unwrap_or_else(|_| abs.clone());
+        rel_map.insert(abs.clone(), rel.clone());
+        node_map.insert(abs.clone(), i);
+        nodes.push(ObsidianNode {
+            id: rel,
+            name: name.clone(),
+            path: abs.clone(),
+            links: 0,
+        });
+    }
+
+    let mut edge_set: HashSet<String> = HashSet::new();
+    let mut edges: Vec<ObsidianEdge> = Vec::new();
+
+    for (source_path, targets) in &links {
+        let src_idx = match node_map.get(source_path) {
+            Some(i) => *i,
+            None => continue,
+        };
+
+        for t in targets {
+            let target_path = match lookup.get(&t.to_lowercase()) {
+                Some(p) => p,
+                None => continue,
+            };
+            let tgt_idx = match node_map.get(target_path) {
+                Some(i) => *i,
+                None => continue,
+            };
+
+            let key = format!("{}->{}", src_idx, tgt_idx);
+            if !edge_set.insert(key) {
+                continue;
+            }
+
+            edges.push(ObsidianEdge {
+                source: rel_map[source_path].clone(),
+                target: rel_map[target_path].clone(),
+            });
+            nodes[src_idx].links += 1;
+        }
+    }
+
+    Ok((nodes, edges))
+}
+
+fn write_obsidian_json(
+    root: &str,
+    nodes: &[ObsidianNode],
+    edges: &[ObsidianEdge],
+    orphan: usize,
+    path: &str,
+) -> anyhow::Result<()> {
+    let g = ObsidianGraph {
+        root: root.to_string(),
+        nodes: nodes.to_vec(),
+        edges: edges.to_vec(),
+        orphan,
+    };
+    let data = serde_json::to_string_pretty(&g)?;
+    write_output(&data, path)
+}
+
+fn write_obsidian_dot(
+    nodes: &[ObsidianNode],
+    edges: &[ObsidianEdge],
+    path: &str,
+) -> anyhow::Result<()> {
+    let mut b = String::new();
+    b.push_str("digraph obsidian {\n");
+    b.push_str("  rankdir=LR;\n");
+    b.push_str("  node [shape=box style=rounded];\n\n");
+
+    for n in nodes {
+        let label = n.name.replace('\"', "\\\"");
+        b.push_str(&format!("  {:?} [label=\"{label}\"];\n", n.id));
+    }
+
+    b.push('\n');
+
+    for e in edges {
+        b.push_str(&format!("  {:?} -> {:?};\n", e.source, e.target));
+    }
+
+    b.push_str("}\n");
+    write_output(&b, path)
+}
+
+fn write_obsidian_edges(
+    _nodes: &[ObsidianNode],
+    edges: &[ObsidianEdge],
+    path: &str,
+) -> anyhow::Result<()> {
+    let mut b = String::new();
+    for e in edges {
+        b.push_str(&format!("{} -> {}\n", e.source, e.target));
+    }
+    write_output(&b, path)
+}
+
+fn write_output(data: &str, path: &str) -> anyhow::Result<()> {
+    if path.is_empty() {
+        print!("{data}");
+    } else {
+        fs::write(path, data)?;
+    }
+    Ok(())
+}
+
+async fn run_obsidian(matches: &clap::ArgMatches) -> anyhow::Result<()> {
+    let dir = matches.get_one::<String>("dir").unwrap();
+    let out = matches.get_one::<String>("out").unwrap();
+    let format = matches.get_one::<String>("format").unwrap();
+    let exclude_str = matches.get_one::<String>("exclude").unwrap();
+
+    let abs_dir = Path::new(dir).canonicalize()?;
+    let abs_dir_str = abs_dir.to_string_lossy().to_string();
+    let exclude_set: HashSet<String> = exclude_str
+        .split(',')
+        .map(|s| s.trim().to_string())
+        .filter(|s| !s.is_empty())
+        .collect();
+
+    let (nodes, edges) = build_obsidian_graph(&abs_dir_str, &exclude_set)?;
+
+    let orphan = nodes.iter().filter(|n| n.links == 0).count();
+
+    match *format {
+        ref f if f == "json" => write_obsidian_json(&abs_dir_str, &nodes, &edges, orphan, out),
+        ref f if f == "dot" => write_obsidian_dot(&nodes, &edges, out),
+        _ => write_obsidian_edges(&nodes, &edges, out),
+    }
 }

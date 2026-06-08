@@ -9,25 +9,22 @@ pub fn command() -> clap::Command {
 }
 
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    match matches.subcommand() {
-        Some(("detect", sub_m)) => {
-            let url = sub_m
-                .get_one::<String>("url")
-                .ok_or_else(|| anyhow::anyhow!("url required"))?;
-            let result = crate::services::shopify::check_shopify(url)?;
-            if result.is_shopify {
-                println!("✅ {url} IS a Shopify store");
-                if result.is_plus {
-                    println!("   Shopify Plus: yes");
-                }
-                if !result.signals.is_empty() {
-                    println!("   Signals: {}", result.signals.join(", "));
-                }
-            } else {
-                println!("❌ {url} is NOT a Shopify store");
+    if let Some(("detect", sub_m)) = matches.subcommand() {
+        let url = sub_m
+            .get_one::<String>("url")
+            .ok_or_else(|| anyhow::anyhow!("url required"))?;
+        let result = crate::services::shopify::check_shopify(url)?;
+        if result.is_shopify {
+            println!("✅ {url} IS a Shopify store");
+            if result.is_plus {
+                println!("   Shopify Plus: yes");
             }
+            if !result.signals.is_empty() {
+                println!("   Signals: {}", result.signals.join(", "));
+            }
+        } else {
+            println!("❌ {url} is NOT a Shopify store");
         }
-        _ => {}
     }
     Ok(())
 }

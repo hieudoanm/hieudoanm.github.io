@@ -1,8 +1,8 @@
-# 🚀 `hieudoanm` CLI.go
+# 🚀 `hieudoanm` CLI (Go)
 
 ## 📚 Table of Contents
 
-- [🚀 `hieudoanm` CLI.go](#-hieudoanm-cligo)
+- [🚀 `hieudoanm` CLI (Go)](#-hieudoanm-cli-go)
   - [📚 Table of Contents](#-table-of-contents)
   - [📦 Installation](#-installation)
   - [🚀 Usage](#-usage)

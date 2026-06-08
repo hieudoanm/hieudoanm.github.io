@@ -1,8 +1,8 @@
-# 🚀 `hieudoanm` CLI.rs
+# 🚀 `hieudoanm` CLI (Clap)
 
 ## 📚 Table of Contents
 
-- [🚀 `hieudoanm` CLI.rs](#-hieudoanm-clirs)
+- [🚀 `hieudoanm` CLI (Clap)](#-hieudoanm-cli-clap)
   - [📚 Table of Contents](#-table-of-contents)
   - [📦 Installation](#-installation)
   - [🚀 Usage](#-usage)

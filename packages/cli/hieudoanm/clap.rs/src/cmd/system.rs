@@ -76,7 +76,7 @@ fn monitor(watch_secs: u64, top_n: usize) -> anyhow::Result<()> {
         procs.sort_by(|a, b| b.2.partial_cmp(&a.2).unwrap_or(std::cmp::Ordering::Equal));
         procs.truncate(top_n);
 
-        print!("\n");
+        println!();
         println!("┌─────────────────────────────────────────────┐");
         println!("│           SYSTEM MONITOR                    │");
         println!("├─────────────────────────────────────────────┤");

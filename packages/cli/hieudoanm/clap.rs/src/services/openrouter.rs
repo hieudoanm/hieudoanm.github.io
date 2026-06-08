@@ -95,7 +95,7 @@ pub fn resolve_model(query: &str, models: &[Model]) -> Option<Model> {
         .collect();
     if !name_matches.is_empty() {
         let mut sorted = name_matches.clone();
-        sorted.sort_by(|a, b| a.id.len().cmp(&b.id.len()));
+        sorted.sort_by_key(|a| a.id.len());
         return Some(sorted[0].clone());
     }
 

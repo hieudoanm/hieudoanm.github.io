@@ -37,22 +37,22 @@ pub fn hex_to_rgb(hex: &str) -> Result<(u8, u8, u8), String> {
 
 pub fn hex_to_hsl(hex: &str) -> Result<(f64, f64, f64), String> {
     let (r, g, b) = hex_to_rgb(hex)?;
-    Ok(RGB { r, g, b }.to_hsl())
+    Ok(Rgb { r, g, b }.to_hsl())
 }
 
 pub fn hex_to_oklch(hex: &str) -> Result<(f64, f64, f64), String> {
     let (r, g, b) = hex_to_rgb(hex)?;
-    Ok(RGB { r, g, b }.to_oklch())
+    Ok(Rgb { r, g, b }.to_oklch())
 }
 
 pub fn hex_to_hcl(hex: &str) -> Result<(f64, f64, f64), String> {
     let (r, g, b) = hex_to_rgb(hex)?;
-    Ok(RGB { r, g, b }.to_hcl())
+    Ok(Rgb { r, g, b }.to_hcl())
 }
 
 pub fn hex_to_cmyk(hex: &str) -> Result<(f64, f64, f64, f64), String> {
     let (r, g, b) = hex_to_rgb(hex)?;
-    Ok(RGB { r, g, b }.to_cmyk())
+    Ok(Rgb { r, g, b }.to_cmyk())
 }
 
 pub fn generate_random_hex_color() -> String {
@@ -65,16 +65,17 @@ pub fn generate_random_hex_color() -> String {
     )
 }
 
-// ── RGB ─────────────────────────────────────────────────────────────
+// ── Rgb ─────────────────────────────────────────────────────────────
 
 #[derive(Debug, Clone, Copy, PartialEq)]
-pub struct RGB {
+pub struct Rgb {
     pub r: u8,
     pub g: u8,
     pub b: u8,
 }
 
-impl RGB {
+#[allow(clippy::wrong_self_convention)]
+impl Rgb {
     pub fn new(r: u8, g: u8, b: u8) -> Self {
         Self { r, g, b }
     }
@@ -173,29 +174,30 @@ impl RGB {
     }
 }
 
-impl fmt::Display for RGB {
+impl fmt::Display for Rgb {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         write!(f, "rgb({}, {}, {})", self.r, self.g, self.b)
     }
 }
 
-impl From<&str> for RGB {
+impl From<&str> for Rgb {
     fn from(hex: &str) -> Self {
         let (r, g, b) = hex_to_rgb(hex).unwrap_or((0, 0, 0));
-        RGB { r, g, b }
+        Rgb { r, g, b }
     }
 }
 
-// ── HSL ─────────────────────────────────────────────────────────────
+// ── Hsl ─────────────────────────────────────────────────────────────
 
 #[derive(Debug, Clone, Copy, PartialEq)]
-pub struct HSL {
+pub struct Hsl {
     pub h: f64,
     pub s: f64,
     pub l: f64,
 }
 
-impl HSL {
+#[allow(clippy::wrong_self_convention)]
+impl Hsl {
     pub fn new(h: f64, s: f64, l: f64) -> Self {
         Self { h, s, l }
     }
@@ -232,20 +234,21 @@ impl HSL {
 
     pub fn to_oklch(&self) -> (f64, f64, f64) {
         let (r, g, b) = self.to_rgb();
-        RGB { r, g, b }.to_oklch()
+        Rgb { r, g, b }.to_oklch()
     }
 }
 
-// ── HCL (CIELCh) ────────────────────────────────────────────────────
+// ── Hcl (CIELCh) ────────────────────────────────────────────────────
 
 #[derive(Debug, Clone, Copy, PartialEq)]
-pub struct HCL {
+pub struct Hcl {
     pub h: f64,
     pub c: f64,
     pub l: f64,
 }
 
-impl HCL {
+#[allow(clippy::wrong_self_convention)]
+impl Hcl {
     pub fn new(h: f64, c: f64, l: f64) -> Self {
         Self { h, c, l }
     }
@@ -263,7 +266,7 @@ impl HCL {
 
     pub fn to_rgb(&self) -> Result<(u8, u8, u8), String> {
         if !self.is_valid() {
-            return Err("invalid HCL".into());
+            return Err("invalid Hcl".into());
         }
         let (l, a, b) = self.to_lab();
         let (x, y, z) = lab_to_xyz(l, a, b);
@@ -278,30 +281,31 @@ impl HCL {
 
     pub fn to_hsl(&self) -> Result<(f64, f64, f64), String> {
         let (r, g, b) = self.to_rgb()?;
-        Ok(RGB { r, g, b }.to_hsl())
+        Ok(Rgb { r, g, b }.to_hsl())
     }
 
     pub fn to_cmyk(&self) -> Result<(f64, f64, f64, f64), String> {
         let (r, g, b) = self.to_rgb()?;
-        Ok(RGB { r, g, b }.to_cmyk())
+        Ok(Rgb { r, g, b }.to_cmyk())
     }
 
     pub fn to_oklch(&self) -> Result<(f64, f64, f64), String> {
         let (r, g, b) = self.to_rgb()?;
-        Ok(RGB { r, g, b }.to_oklch())
+        Ok(Rgb { r, g, b }.to_oklch())
     }
 }
 
-// ── OKLCH ───────────────────────────────────────────────────────────
+// ── Oklch ───────────────────────────────────────────────────────────
 
 #[derive(Debug, Clone, Copy, PartialEq)]
-pub struct OKLCH {
+pub struct Oklch {
     pub l: f64,
     pub c: f64,
     pub h: f64,
 }
 
-impl OKLCH {
+#[allow(clippy::wrong_self_convention)]
+impl Oklch {
     pub fn new(l: f64, c: f64, h: f64) -> Self {
         Self { l, c, h }
     }
@@ -319,7 +323,7 @@ impl OKLCH {
 
     pub fn to_rgb(&self) -> Result<(u8, u8, u8), String> {
         if !self.is_valid() {
-            return Err("invalid OKLCH".into());
+            return Err("invalid Oklch".into());
         }
         let (l, a, b) = self.to_oklab();
         let (r_lin, g_lin, b_lin) = oklab_to_linear_rgb(l, a, b);
@@ -333,31 +337,32 @@ impl OKLCH {
 
     pub fn to_hsl(&self) -> Result<(f64, f64, f64), String> {
         let (r, g, b) = self.to_rgb()?;
-        Ok(RGB { r, g, b }.to_hsl())
+        Ok(Rgb { r, g, b }.to_hsl())
     }
 
     pub fn to_hcl(&self) -> Result<(f64, f64, f64), String> {
         let (r, g, b) = self.to_rgb()?;
-        Ok(RGB { r, g, b }.to_hcl())
+        Ok(Rgb { r, g, b }.to_hcl())
     }
 
     pub fn to_cmyk(&self) -> Result<(f64, f64, f64, f64), String> {
         let (r, g, b) = self.to_rgb()?;
-        Ok(RGB { r, g, b }.to_cmyk())
+        Ok(Rgb { r, g, b }.to_cmyk())
     }
 }
 
-// ── CMYK ────────────────────────────────────────────────────────────
+// ── Cmyk ────────────────────────────────────────────────────────────
 
 #[derive(Debug, Clone, Copy, PartialEq)]
-pub struct CMYK {
+pub struct Cmyk {
     pub c: f64,
     pub m: f64,
     pub y: f64,
     pub k: f64,
 }
 
-impl CMYK {
+#[allow(clippy::wrong_self_convention)]
+impl Cmyk {
     pub fn new(c: f64, m: f64, y: f64, k: f64) -> Self {
         Self { c, m, y, k }
     }
@@ -375,7 +380,7 @@ impl CMYK {
 
     pub fn to_rgb(&self) -> Result<(u8, u8, u8), String> {
         if !self.is_valid() {
-            return Err("invalid CMYK".into());
+            return Err("invalid Cmyk".into());
         }
         let c = self.c / 100.0;
         let m = self.m / 100.0;
@@ -400,17 +405,17 @@ impl CMYK {
 
     pub fn to_hsl(&self) -> Result<(f64, f64, f64), String> {
         let (r, g, b) = self.to_rgb()?;
-        Ok(RGB { r, g, b }.to_hsl())
+        Ok(Rgb { r, g, b }.to_hsl())
     }
 
     pub fn to_hcl(&self) -> Result<(f64, f64, f64), String> {
         let (r, g, b) = self.to_rgb()?;
-        Ok(RGB { r, g, b }.to_hcl())
+        Ok(Rgb { r, g, b }.to_hcl())
     }
 
     pub fn to_oklch(&self) -> Result<(f64, f64, f64), String> {
         let (r, g, b) = self.to_rgb()?;
-        Ok(RGB { r, g, b }.to_oklch())
+        Ok(Rgb { r, g, b }.to_oklch())
     }
 }
 
@@ -534,13 +539,13 @@ mod tests {
 
     #[test]
     fn test_rgb_to_hex() {
-        assert_eq!(RGB::new(255, 0, 0).to_hex(), "#FF0000");
-        assert_eq!(RGB::new(0, 255, 0).to_hex(), "#00FF00");
+        assert_eq!(Rgb::new(255, 0, 0).to_hex(), "#FF0000");
+        assert_eq!(Rgb::new(0, 255, 0).to_hex(), "#00FF00");
     }
 
     #[test]
     fn test_rgb_to_hsl() {
-        let (h, s, l) = RGB::new(255, 0, 0).to_hsl();
+        let (h, s, l) = Rgb::new(255, 0, 0).to_hsl();
         assert!((h - 0.0).abs() < 1.0);
         assert!((s - 100.0).abs() < 1.0);
         assert!((l - 50.0).abs() < 1.0);
@@ -548,7 +553,7 @@ mod tests {
 
     #[test]
     fn test_hsl_to_rgb() {
-        let hsl = HSL::new(0.0, 100.0, 50.0);
+        let hsl = Hsl::new(0.0, 100.0, 50.0);
         let (r, g, b) = hsl.to_rgb();
         assert_eq!(r, 255);
         assert_eq!(g, 0);
@@ -559,7 +564,7 @@ mod tests {
     fn test_roundtrip_hex_rgb_hex() {
         let hex = "#AABBCC";
         let (r, g, b) = hex_to_rgb(hex).unwrap();
-        let rgb = RGB::new(r, g, b);
+        let rgb = Rgb::new(r, g, b);
         assert_eq!(rgb.to_hex(), "#AABBCC");
     }
 }

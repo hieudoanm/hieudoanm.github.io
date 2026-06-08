@@ -5,9 +5,8 @@ pub fn command() -> clap::Command {
 }
 
 pub fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    match matches.subcommand() {
-        Some(("postman", _m)) => println!("OpenAPI to Postman (not yet implemented)"),
-        _ => {}
+    if let Some(("postman", _m)) = matches.subcommand() {
+        println!("OpenAPI to Postman (not yet implemented)");
     }
     Ok(())
 }
