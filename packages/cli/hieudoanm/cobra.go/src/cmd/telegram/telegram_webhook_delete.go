@@ -1,0 +1,40 @@
+// Package telegram ...
+package telegram
+
+import (
+	"encoding/json"
+	"fmt"
+
+	"github.com/hieudoanm/hieudoanm/src/libs/requests"
+	"github.com/spf13/cobra"
+)
+
+// telegramWebhookDeleteCmd represents the telegramWebhookDelete command
+var telegramWebhookDeleteCmd = &cobra.Command{
+	Use:   "delete",
+	Short: "Run the delete operation for the telegram app",
+	Long: `The delete command is a specific utility to execute operations related to delete within the telegram application.
+
+As a component of the messaging tools, this command empowers you to interact directly with telegram's delete features via the CLI.`,
+	Run: func(cmd *cobra.Command, args []string) {
+		// Get Telegram Token
+		fmt.Print("Telegram Token: ")
+		var token string
+		fmt.Scanln(&token)
+		// Delete Webhook
+		var url string = fmt.Sprintf("https://api.telegram.org/bot%s/deleteWebhook", token)
+		responseByte, postError := requests.Post(url, requests.Options{})
+		if postError != nil {
+			fmt.Println("Error: ", postError)
+			return
+		}
+		// Parse response
+		var deleteResponse DeleteResponse
+		jsonError := json.Unmarshal(responseByte, &deleteResponse)
+		if jsonError != nil {
+			fmt.Println("Error: ", jsonError)
+			return
+		}
+		fmt.Println("Success")
+	},
+}

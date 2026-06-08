@@ -18,14 +18,14 @@ export const clis: Download[] = [
   {
     id: 'hieudoanm.go',
     label: 'hieudoanm.go',
-    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/cli/hieudoanm/go',
+    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/cli/hieudoanm/cobra.go',
     emoji: '👨‍💻',
     color: '#1f2937',
     description: 'Go',
     downloads: [
       {
         label: 'Download BIN',
-        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/cli/hieudoanm/rust/bin/hieudoanm',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/cli/hieudoanm/cobra.go/bin/hieudoanm',
       },
     ],
   },

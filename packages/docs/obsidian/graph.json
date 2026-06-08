@@ -1,0 +1,4100 @@
+{
+  "root": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian",
+  "nodes": [
+    {
+      "id": "README.md",
+      "name": "README",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/README.md",
+      "links": 4
+    },
+    {
+      "id": "TREE.md",
+      "name": "TREE",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/TREE.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/africa.md",
+      "name": "africa",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/africa.md",
+      "links": 5
+    },
+    {
+      "id": "countries/africa/central-africa/angola.md",
+      "name": "angola",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/central-africa/angola.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/central-africa/cameroon.md",
+      "name": "cameroon",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/central-africa/cameroon.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/central-africa/central-africa.md",
+      "name": "central-africa",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/central-africa/central-africa.md",
+      "links": 9
+    },
+    {
+      "id": "countries/africa/central-africa/central-african-republic.md",
+      "name": "central-african-republic",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/central-africa/central-african-republic.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/central-africa/chad.md",
+      "name": "chad",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/central-africa/chad.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/central-africa/congo.md",
+      "name": "congo",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/central-africa/congo.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/central-africa/dr-congo.md",
+      "name": "dr-congo",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/central-africa/dr-congo.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/central-africa/equatorial-guinea.md",
+      "name": "equatorial-guinea",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/central-africa/equatorial-guinea.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/central-africa/gabon.md",
+      "name": "gabon",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/central-africa/gabon.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/central-africa/sao-tome-and-principe.md",
+      "name": "sao-tome-and-principe",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/central-africa/sao-tome-and-principe.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/eastern-africa/burundi.md",
+      "name": "burundi",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/eastern-africa/burundi.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/eastern-africa/comoros.md",
+      "name": "comoros",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/eastern-africa/comoros.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/eastern-africa/djibouti.md",
+      "name": "djibouti",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/eastern-africa/djibouti.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/eastern-africa/eastern-africa.md",
+      "name": "eastern-africa",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/eastern-africa/eastern-africa.md",
+      "links": 18
+    },
+    {
+      "id": "countries/africa/eastern-africa/eritrea.md",
+      "name": "eritrea",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/eastern-africa/eritrea.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/eastern-africa/ethiopia.md",
+      "name": "ethiopia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/eastern-africa/ethiopia.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/eastern-africa/kenya.md",
+      "name": "kenya",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/eastern-africa/kenya.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/eastern-africa/madagascar.md",
+      "name": "madagascar",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/eastern-africa/madagascar.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/eastern-africa/malawi.md",
+      "name": "malawi",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/eastern-africa/malawi.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/eastern-africa/mauritius.md",
+      "name": "mauritius",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/eastern-africa/mauritius.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/eastern-africa/mozambique.md",
+      "name": "mozambique",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/eastern-africa/mozambique.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/eastern-africa/rwanda.md",
+      "name": "rwanda",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/eastern-africa/rwanda.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/eastern-africa/seychelles.md",
+      "name": "seychelles",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/eastern-africa/seychelles.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/eastern-africa/somalia.md",
+      "name": "somalia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/eastern-africa/somalia.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/eastern-africa/south-sudan.md",
+      "name": "south-sudan",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/eastern-africa/south-sudan.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/eastern-africa/tanzania.md",
+      "name": "tanzania",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/eastern-africa/tanzania.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/eastern-africa/uganda.md",
+      "name": "uganda",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/eastern-africa/uganda.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/eastern-africa/zambia.md",
+      "name": "zambia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/eastern-africa/zambia.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/eastern-africa/zimbabwe.md",
+      "name": "zimbabwe",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/eastern-africa/zimbabwe.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/northern-africa/algeria.md",
+      "name": "algeria",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/northern-africa/algeria.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/northern-africa/egypt.md",
+      "name": "egypt",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/northern-africa/egypt.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/northern-africa/libya.md",
+      "name": "libya",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/northern-africa/libya.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/northern-africa/mauritania.md",
+      "name": "mauritania",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/northern-africa/mauritania.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/northern-africa/morocco.md",
+      "name": "morocco",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/northern-africa/morocco.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/northern-africa/northern-africa.md",
+      "name": "northern-africa",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/northern-africa/northern-africa.md",
+      "links": 7
+    },
+    {
+      "id": "countries/africa/northern-africa/sudan.md",
+      "name": "sudan",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/northern-africa/sudan.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/northern-africa/tunisia.md",
+      "name": "tunisia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/northern-africa/tunisia.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/southern-africa/botswana.md",
+      "name": "botswana",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/southern-africa/botswana.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/southern-africa/eswatini.md",
+      "name": "eswatini",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/southern-africa/eswatini.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/southern-africa/lesotho.md",
+      "name": "lesotho",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/southern-africa/lesotho.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/southern-africa/namibia.md",
+      "name": "namibia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/southern-africa/namibia.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/southern-africa/south-africa.md",
+      "name": "south-africa",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/southern-africa/south-africa.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/southern-africa/southern-africa.md",
+      "name": "southern-africa",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/southern-africa/southern-africa.md",
+      "links": 5
+    },
+    {
+      "id": "countries/africa/western-africa/benin.md",
+      "name": "benin",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/western-africa/benin.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/western-africa/burkina-faso.md",
+      "name": "burkina-faso",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/western-africa/burkina-faso.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/western-africa/cape-verde.md",
+      "name": "cape-verde",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/western-africa/cape-verde.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/western-africa/cote-d-ivoire.md",
+      "name": "cote-d-ivoire",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/western-africa/cote-d-ivoire.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/western-africa/gambia.md",
+      "name": "gambia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/western-africa/gambia.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/western-africa/ghana.md",
+      "name": "ghana",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/western-africa/ghana.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/western-africa/guinea-bissau.md",
+      "name": "guinea-bissau",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/western-africa/guinea-bissau.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/western-africa/guinea.md",
+      "name": "guinea",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/western-africa/guinea.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/western-africa/liberia.md",
+      "name": "liberia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/western-africa/liberia.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/western-africa/mali.md",
+      "name": "mali",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/western-africa/mali.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/western-africa/niger.md",
+      "name": "niger",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/western-africa/niger.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/western-africa/nigeria.md",
+      "name": "nigeria",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/western-africa/nigeria.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/western-africa/senegal.md",
+      "name": "senegal",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/western-africa/senegal.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/western-africa/sierra-leone.md",
+      "name": "sierra-leone",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/western-africa/sierra-leone.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/western-africa/togo.md",
+      "name": "togo",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/western-africa/togo.md",
+      "links": 0
+    },
+    {
+      "id": "countries/africa/western-africa/western-africa.md",
+      "name": "western-africa",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/africa/western-africa/western-africa.md",
+      "links": 15
+    },
+    {
+      "id": "countries/america/america.md",
+      "name": "america",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/america.md",
+      "links": 4
+    },
+    {
+      "id": "countries/america/caribbean/antigua-and-barbuda.md",
+      "name": "antigua-and-barbuda",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/caribbean/antigua-and-barbuda.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/caribbean/bahamas.md",
+      "name": "bahamas",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/caribbean/bahamas.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/caribbean/barbados.md",
+      "name": "barbados",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/caribbean/barbados.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/caribbean/caribbean.md",
+      "name": "caribbean",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/caribbean/caribbean.md",
+      "links": 13
+    },
+    {
+      "id": "countries/america/caribbean/cuba.md",
+      "name": "cuba",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/caribbean/cuba.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/caribbean/dominica-republic.md",
+      "name": "dominica-republic",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/caribbean/dominica-republic.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/caribbean/dominica.md",
+      "name": "dominica",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/caribbean/dominica.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/caribbean/grenada.md",
+      "name": "grenada",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/caribbean/grenada.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/caribbean/haiti.md",
+      "name": "haiti",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/caribbean/haiti.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/caribbean/jamaica.md",
+      "name": "jamaica",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/caribbean/jamaica.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/caribbean/saint-kitts-and-nevis.md",
+      "name": "saint-kitts-and-nevis",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/caribbean/saint-kitts-and-nevis.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/caribbean/saint-lucia.md",
+      "name": "saint-lucia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/caribbean/saint-lucia.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/caribbean/saint-vincent-and-the-grenadines.md",
+      "name": "saint-vincent-and-the-grenadines",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/caribbean/saint-vincent-and-the-grenadines.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/caribbean/trinidad-and-tobago.md",
+      "name": "trinidad-and-tobago",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/caribbean/trinidad-and-tobago.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/central-america/belize.md",
+      "name": "belize",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/central-america/belize.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/central-america/central-america.md",
+      "name": "central-america",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/central-america/central-america.md",
+      "links": 7
+    },
+    {
+      "id": "countries/america/central-america/costa-rica.md",
+      "name": "costa-rica",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/central-america/costa-rica.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/central-america/el-salvador.md",
+      "name": "el-salvador",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/central-america/el-salvador.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/central-america/guatemala.md",
+      "name": "guatemala",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/central-america/guatemala.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/central-america/honduras.md",
+      "name": "honduras",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/central-america/honduras.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/central-america/nicaragua.md",
+      "name": "nicaragua",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/central-america/nicaragua.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/central-america/panama.md",
+      "name": "panama",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/central-america/panama.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/north-america/canada.md",
+      "name": "canada",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/canada.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/north-america/mexico.md",
+      "name": "mexico",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/mexico.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/north-america/north-america.md",
+      "name": "north-america",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/north-america.md",
+      "links": 3
+    },
+    {
+      "id": "countries/america/north-america/united-states/government/federal/executive/cabinet/presidents.md",
+      "name": "presidents",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/united-states/government/federal/executive/cabinet/presidents.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/agriculture.md",
+      "name": "agriculture",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/agriculture.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/commerce.md",
+      "name": "commerce",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/commerce.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/defense.md",
+      "name": "defense",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/defense.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/education.md",
+      "name": "education",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/education.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/energy.md",
+      "name": "energy",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/energy.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/hhs.md",
+      "name": "hhs",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/hhs.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/homeland-security.md",
+      "name": "homeland-security",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/homeland-security.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/hud.md",
+      "name": "hud",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/hud.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/interior.md",
+      "name": "interior",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/interior.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/justice.md",
+      "name": "justice",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/justice.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/labor.md",
+      "name": "labor",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/labor.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/state.md",
+      "name": "state",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/state.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/transportation.md",
+      "name": "transportation",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/transportation.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/treasury.md",
+      "name": "treasury",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/treasury.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/veterans-affairs.md",
+      "name": "veterans-affairs",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/veterans-affairs.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/north-america/united-states/government/federal/executive/cabinet/vice.md",
+      "name": "vice",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/united-states/government/federal/executive/cabinet/vice.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/north-america/united-states/government/federal/executive/chiefs-of-staff.md",
+      "name": "chiefs-of-staff",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/united-states/government/federal/executive/chiefs-of-staff.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/north-america/united-states/government/federal/executive/executive.md",
+      "name": "executive",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/united-states/government/federal/executive/executive.md",
+      "links": 18
+    },
+    {
+      "id": "countries/america/north-america/united-states/government/federal/judicial/courts.md",
+      "name": "courts",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/united-states/government/federal/judicial/courts.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/north-america/united-states/government/federal/judicial/judicial.md",
+      "name": "judicial",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/united-states/government/federal/judicial/judicial.md",
+      "links": 2
+    },
+    {
+      "id": "countries/america/north-america/united-states/government/federal/judicial/supreme-court-justices.md",
+      "name": "supreme-court-justices",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/united-states/government/federal/judicial/supreme-court-justices.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/north-america/united-states/government/federal/legislative/house.md",
+      "name": "house",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/united-states/government/federal/legislative/house.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/north-america/united-states/government/federal/legislative/legislative.md",
+      "name": "legislative",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/united-states/government/federal/legislative/legislative.md",
+      "links": 2
+    },
+    {
+      "id": "countries/america/north-america/united-states/government/federal/legislative/senate.md",
+      "name": "senate",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/united-states/government/federal/legislative/senate.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/north-america/united-states/government/government.md",
+      "name": "government",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/united-states/government/government.md",
+      "links": 4
+    },
+    {
+      "id": "countries/america/north-america/united-states/government/states/governors.md",
+      "name": "governors",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/united-states/government/states/governors.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/north-america/united-states/government/states/states.md",
+      "name": "states",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/united-states/government/states/states.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/north-america/united-states/sports/mls.md",
+      "name": "mls",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/united-states/sports/mls.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/north-america/united-states/sports/nba.md",
+      "name": "nba",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/united-states/sports/nba.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/north-america/united-states/sports/nfl.md",
+      "name": "nfl",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/united-states/sports/nfl.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/north-america/united-states/united-states.md",
+      "name": "united-states",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/north-america/united-states/united-states.md",
+      "links": 4
+    },
+    {
+      "id": "countries/america/south-america/argentina.md",
+      "name": "argentina",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/south-america/argentina.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/south-america/bolivia.md",
+      "name": "bolivia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/south-america/bolivia.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/south-america/brazil.md",
+      "name": "brazil",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/south-america/brazil.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/south-america/chile.md",
+      "name": "chile",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/south-america/chile.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/south-america/colombia.md",
+      "name": "colombia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/south-america/colombia.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/south-america/ecuador.md",
+      "name": "ecuador",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/south-america/ecuador.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/south-america/guyana.md",
+      "name": "guyana",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/south-america/guyana.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/south-america/paraguay.md",
+      "name": "paraguay",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/south-america/paraguay.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/south-america/peru.md",
+      "name": "peru",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/south-america/peru.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/south-america/south-america.md",
+      "name": "south-america",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/south-america/south-america.md",
+      "links": 12
+    },
+    {
+      "id": "countries/america/south-america/suriname.md",
+      "name": "suriname",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/south-america/suriname.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/south-america/uruguay.md",
+      "name": "uruguay",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/south-america/uruguay.md",
+      "links": 0
+    },
+    {
+      "id": "countries/america/south-america/venezuela.md",
+      "name": "venezuela",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/america/south-america/venezuela.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/asia.md",
+      "name": "asia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/asia.md",
+      "links": 4
+    },
+    {
+      "id": "countries/asia/central-asia/central-asia.md",
+      "name": "central-asia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/central-asia/central-asia.md",
+      "links": 5
+    },
+    {
+      "id": "countries/asia/central-asia/kazakhstan.md",
+      "name": "kazakhstan",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/central-asia/kazakhstan.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/central-asia/kyrgyzstan.md",
+      "name": "kyrgyzstan",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/central-asia/kyrgyzstan.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/central-asia/tajikistan.md",
+      "name": "tajikistan",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/central-asia/tajikistan.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/central-asia/turkmenistan.md",
+      "name": "turkmenistan",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/central-asia/turkmenistan.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/central-asia/uzbekistan.md",
+      "name": "uzbekistan",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/central-asia/uzbekistan.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/eastern-asia/china.md",
+      "name": "china",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/eastern-asia/china.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/eastern-asia/eastern-asia.md",
+      "name": "eastern-asia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/eastern-asia/eastern-asia.md",
+      "links": 5
+    },
+    {
+      "id": "countries/asia/eastern-asia/japan.md",
+      "name": "japan",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/eastern-asia/japan.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/eastern-asia/mongolia.md",
+      "name": "mongolia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/eastern-asia/mongolia.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/eastern-asia/north-korea.md",
+      "name": "north-korea",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/eastern-asia/north-korea.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/eastern-asia/south-korea.md",
+      "name": "south-korea",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/eastern-asia/south-korea.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/south-eastern-asia/mainland/cambodia.md",
+      "name": "cambodia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/south-eastern-asia/mainland/cambodia.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/south-eastern-asia/mainland/laos.md",
+      "name": "laos",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/south-eastern-asia/mainland/laos.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/south-eastern-asia/mainland/myanmar.md",
+      "name": "myanmar",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/south-eastern-asia/mainland/myanmar.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/south-eastern-asia/mainland/thailand.md",
+      "name": "thailand",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/south-eastern-asia/mainland/thailand.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/south-eastern-asia/mainland/vietnam/vietnam.md",
+      "name": "vietnam",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/south-eastern-asia/mainland/vietnam/vietnam.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/south-eastern-asia/maritime/brunei.md",
+      "name": "brunei",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/south-eastern-asia/maritime/brunei.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/south-eastern-asia/maritime/east-timor.md",
+      "name": "east-timor",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/south-eastern-asia/maritime/east-timor.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/south-eastern-asia/maritime/indonesia.md",
+      "name": "indonesia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/south-eastern-asia/maritime/indonesia.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/south-eastern-asia/maritime/malaysia.md",
+      "name": "malaysia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/south-eastern-asia/maritime/malaysia.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/south-eastern-asia/maritime/philippines.md",
+      "name": "philippines",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/south-eastern-asia/maritime/philippines.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/south-eastern-asia/maritime/singapore.md",
+      "name": "singapore",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/south-eastern-asia/maritime/singapore.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/south-eastern-asia/south-eastern-asia.md",
+      "name": "south-eastern-asia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/south-eastern-asia/south-eastern-asia.md",
+      "links": 11
+    },
+    {
+      "id": "countries/asia/southern-asia/afghanistan.md",
+      "name": "afghanistan",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/southern-asia/afghanistan.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/southern-asia/bangladesh.md",
+      "name": "bangladesh",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/southern-asia/bangladesh.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/southern-asia/bhutan.md",
+      "name": "bhutan",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/southern-asia/bhutan.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/southern-asia/india.md",
+      "name": "india",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/southern-asia/india.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/southern-asia/maldives.md",
+      "name": "maldives",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/southern-asia/maldives.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/southern-asia/nepal.md",
+      "name": "nepal",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/southern-asia/nepal.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/southern-asia/pakistan.md",
+      "name": "pakistan",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/southern-asia/pakistan.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/southern-asia/southern-asia.md",
+      "name": "southern-asia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/southern-asia/southern-asia.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/southern-asia/sri-lanka.md",
+      "name": "sri-lanka",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/southern-asia/sri-lanka.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/western-asia/arabian-peninsula/bahrain.md",
+      "name": "bahrain",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/western-asia/arabian-peninsula/bahrain.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/western-asia/arabian-peninsula/kuwait.md",
+      "name": "kuwait",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/western-asia/arabian-peninsula/kuwait.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/western-asia/arabian-peninsula/oman.md",
+      "name": "oman",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/western-asia/arabian-peninsula/oman.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/western-asia/arabian-peninsula/qatar.md",
+      "name": "qatar",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/western-asia/arabian-peninsula/qatar.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/western-asia/arabian-peninsula/saudi-arabia.md",
+      "name": "saudi-arabia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/western-asia/arabian-peninsula/saudi-arabia.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/western-asia/arabian-peninsula/united-arab-emirates.md",
+      "name": "united-arab-emirates",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/western-asia/arabian-peninsula/united-arab-emirates.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/western-asia/arabian-peninsula/yemen.md",
+      "name": "yemen",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/western-asia/arabian-peninsula/yemen.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/western-asia/caucasus/armenia.md",
+      "name": "armenia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/western-asia/caucasus/armenia.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/western-asia/caucasus/azerbaijan.md",
+      "name": "azerbaijan",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/western-asia/caucasus/azerbaijan.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/western-asia/caucasus/georgia.md",
+      "name": "georgia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/western-asia/caucasus/georgia.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/western-asia/iran.md",
+      "name": "iran",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/western-asia/iran.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/western-asia/israel.md",
+      "name": "israel",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/western-asia/israel.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/western-asia/levant/iraq.md",
+      "name": "iraq",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/western-asia/levant/iraq.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/western-asia/levant/jordan.md",
+      "name": "jordan",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/western-asia/levant/jordan.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/western-asia/levant/lebanon.md",
+      "name": "lebanon",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/western-asia/levant/lebanon.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/western-asia/levant/palestine.md",
+      "name": "palestine",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/western-asia/levant/palestine.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/western-asia/levant/syria.md",
+      "name": "syria",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/western-asia/levant/syria.md",
+      "links": 0
+    },
+    {
+      "id": "countries/asia/western-asia/western-asia.md",
+      "name": "western-asia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/asia/western-asia/western-asia.md",
+      "links": 2
+    },
+    {
+      "id": "countries/countries.md",
+      "name": "countries",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/countries.md",
+      "links": 7
+    },
+    {
+      "id": "countries/europe/eastern-europe/belarus.md",
+      "name": "belarus",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/eastern-europe/belarus.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/eastern-europe/bulgaria.md",
+      "name": "bulgaria",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/eastern-europe/bulgaria.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/eastern-europe/czech.md",
+      "name": "czech",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/eastern-europe/czech.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/eastern-europe/eastern-europe.md",
+      "name": "eastern-europe",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/eastern-europe/eastern-europe.md",
+      "links": 10
+    },
+    {
+      "id": "countries/europe/eastern-europe/hungary.md",
+      "name": "hungary",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/eastern-europe/hungary.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/eastern-europe/moldova.md",
+      "name": "moldova",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/eastern-europe/moldova.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/eastern-europe/poland.md",
+      "name": "poland",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/eastern-europe/poland.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/eastern-europe/romania.md",
+      "name": "romania",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/eastern-europe/romania.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/eastern-europe/russia.md",
+      "name": "russia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/eastern-europe/russia.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/eastern-europe/slovakia.md",
+      "name": "slovakia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/eastern-europe/slovakia.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/eastern-europe/ukraine.md",
+      "name": "ukraine",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/eastern-europe/ukraine.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/europe.md",
+      "name": "europe",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/europe.md",
+      "links": 49
+    },
+    {
+      "id": "countries/europe/northern-europe/baltic/estonia.md",
+      "name": "estonia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/northern-europe/baltic/estonia.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/northern-europe/baltic/latvia.md",
+      "name": "latvia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/northern-europe/baltic/latvia.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/northern-europe/baltic/lithuania.md",
+      "name": "lithuania",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/northern-europe/baltic/lithuania.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/northern-europe/british/irish.md",
+      "name": "irish",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/northern-europe/british/irish.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/northern-europe/british/united-kindgom/england/england.md",
+      "name": "england",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/northern-europe/british/united-kindgom/england/england.md",
+      "links": 2
+    },
+    {
+      "id": "countries/europe/northern-europe/british/united-kindgom/england/football/fa-cup.md",
+      "name": "fa-cup",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/northern-europe/british/united-kindgom/england/football/fa-cup.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/northern-europe/british/united-kindgom/england/football/premier-league.md",
+      "name": "premier-league",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/northern-europe/british/united-kindgom/england/football/premier-league.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/northern-europe/british/united-kindgom/northern-ireland.md",
+      "name": "northern-ireland",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/northern-europe/british/united-kindgom/northern-ireland.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/northern-europe/british/united-kindgom/scotland.md",
+      "name": "scotland",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/northern-europe/british/united-kindgom/scotland.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/northern-europe/british/united-kindgom/united-kingdom.md",
+      "name": "united-kingdom",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/northern-europe/british/united-kindgom/united-kingdom.md",
+      "links": 4
+    },
+    {
+      "id": "countries/europe/northern-europe/british/united-kindgom/wales.md",
+      "name": "wales",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/northern-europe/british/united-kindgom/wales.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/northern-europe/nordic/denmark.md",
+      "name": "denmark",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/northern-europe/nordic/denmark.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/northern-europe/nordic/finland.md",
+      "name": "finland",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/northern-europe/nordic/finland.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/northern-europe/nordic/iceland.md",
+      "name": "iceland",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/northern-europe/nordic/iceland.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/northern-europe/nordic/norway.md",
+      "name": "norway",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/northern-europe/nordic/norway.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/northern-europe/nordic/sweden.md",
+      "name": "sweden",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/northern-europe/nordic/sweden.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/northern-europe/nothern-europe.md",
+      "name": "nothern-europe",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/northern-europe/nothern-europe.md",
+      "links": 10
+    },
+    {
+      "id": "countries/europe/southern-europe/balkan/albania.md",
+      "name": "albania",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/southern-europe/balkan/albania.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/southern-europe/balkan/bosnia-and-herzegovina.md",
+      "name": "bosnia-and-herzegovina",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/southern-europe/balkan/bosnia-and-herzegovina.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/southern-europe/balkan/bulgaria.md",
+      "name": "bulgaria",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/southern-europe/balkan/bulgaria.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/southern-europe/balkan/croatia.md",
+      "name": "croatia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/southern-europe/balkan/croatia.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/southern-europe/balkan/greece.md",
+      "name": "greece",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/southern-europe/balkan/greece.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/southern-europe/balkan/montenegro.md",
+      "name": "montenegro",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/southern-europe/balkan/montenegro.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/southern-europe/balkan/north-macedonia.md",
+      "name": "north-macedonia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/southern-europe/balkan/north-macedonia.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/southern-europe/balkan/serbia.md",
+      "name": "serbia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/southern-europe/balkan/serbia.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/southern-europe/balkan/slovenia.md",
+      "name": "slovenia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/southern-europe/balkan/slovenia.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/southern-europe/iberian/andorra.md",
+      "name": "andorra",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/southern-europe/iberian/andorra.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/southern-europe/iberian/portugal/portugal.md",
+      "name": "portugal",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/southern-europe/iberian/portugal/portugal.md",
+      "links": 1
+    },
+    {
+      "id": "countries/europe/southern-europe/iberian/portugal/primeira-liga.md",
+      "name": "primeira-liga",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/southern-europe/iberian/portugal/primeira-liga.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/southern-europe/iberian/spain/la-liga.md",
+      "name": "la-liga",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/southern-europe/iberian/spain/la-liga.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/southern-europe/iberian/spain/spain.md",
+      "name": "spain",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/southern-europe/iberian/spain/spain.md",
+      "links": 1
+    },
+    {
+      "id": "countries/europe/southern-europe/italian/italy/italy.md",
+      "name": "italy",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/southern-europe/italian/italy/italy.md",
+      "links": 1
+    },
+    {
+      "id": "countries/europe/southern-europe/italian/italy/serie-a.md",
+      "name": "serie-a",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/southern-europe/italian/italy/serie-a.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/southern-europe/italian/san-marino.md",
+      "name": "san-marino",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/southern-europe/italian/san-marino.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/southern-europe/italian/vatican-city.md",
+      "name": "vatican-city",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/southern-europe/italian/vatican-city.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/southern-europe/mediterranean/cyprus.md",
+      "name": "cyprus",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/southern-europe/mediterranean/cyprus.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/southern-europe/mediterranean/malta.md",
+      "name": "malta",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/southern-europe/mediterranean/malta.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/southern-europe/mediterranean/turkey.md",
+      "name": "turkey",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/southern-europe/mediterranean/turkey.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/southern-europe/southern-europe.md",
+      "name": "southern-europe",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/southern-europe/southern-europe.md",
+      "links": 18
+    },
+    {
+      "id": "countries/europe/sports/football.md",
+      "name": "football",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/sports/football.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/western-europe/benelux/belgium.md",
+      "name": "belgium",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/western-europe/benelux/belgium.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/western-europe/benelux/france/france.md",
+      "name": "france",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/western-europe/benelux/france/france.md",
+      "links": 1
+    },
+    {
+      "id": "countries/europe/western-europe/benelux/france/ligue-1.md",
+      "name": "ligue-1",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/western-europe/benelux/france/ligue-1.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/western-europe/benelux/luxembourg.md",
+      "name": "luxembourg",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/western-europe/benelux/luxembourg.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/western-europe/benelux/netherlands/eredivisie.md",
+      "name": "eredivisie",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/western-europe/benelux/netherlands/eredivisie.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/western-europe/benelux/netherlands/netherlands.md",
+      "name": "netherlands",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/western-europe/benelux/netherlands/netherlands.md",
+      "links": 1
+    },
+    {
+      "id": "countries/europe/western-europe/central/austria.md",
+      "name": "austria",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/western-europe/central/austria.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/western-europe/central/germany/bundesliga.md",
+      "name": "bundesliga",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/western-europe/central/germany/bundesliga.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/western-europe/central/germany/germany.md",
+      "name": "germany",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/western-europe/central/germany/germany.md",
+      "links": 1
+    },
+    {
+      "id": "countries/europe/western-europe/central/liechtenstein.md",
+      "name": "liechtenstein",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/western-europe/central/liechtenstein.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/western-europe/central/monaco.md",
+      "name": "monaco",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/western-europe/central/monaco.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/western-europe/central/switzerland.md",
+      "name": "switzerland",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/western-europe/central/switzerland.md",
+      "links": 0
+    },
+    {
+      "id": "countries/europe/western-europe/western-europe.md",
+      "name": "western-europe",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/europe/western-europe/western-europe.md",
+      "links": 9
+    },
+    {
+      "id": "countries/oceania/australasia/australasia.md",
+      "name": "australasia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/oceania/australasia/australasia.md",
+      "links": 2
+    },
+    {
+      "id": "countries/oceania/australasia/australia.md",
+      "name": "australia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/oceania/australasia/australia.md",
+      "links": 0
+    },
+    {
+      "id": "countries/oceania/australasia/new-zealand.md",
+      "name": "new-zealand",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/oceania/australasia/new-zealand.md",
+      "links": 0
+    },
+    {
+      "id": "countries/oceania/melanesia/fiji.md",
+      "name": "fiji",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/oceania/melanesia/fiji.md",
+      "links": 0
+    },
+    {
+      "id": "countries/oceania/melanesia/melanesia.md",
+      "name": "melanesia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/oceania/melanesia/melanesia.md",
+      "links": 0
+    },
+    {
+      "id": "countries/oceania/melanesia/papua-new-guinea.md",
+      "name": "papua-new-guinea",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/oceania/melanesia/papua-new-guinea.md",
+      "links": 0
+    },
+    {
+      "id": "countries/oceania/melanesia/solomon-islands.md",
+      "name": "solomon-islands",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/oceania/melanesia/solomon-islands.md",
+      "links": 0
+    },
+    {
+      "id": "countries/oceania/melanesia/vanuatu.md",
+      "name": "vanuatu",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/oceania/melanesia/vanuatu.md",
+      "links": 0
+    },
+    {
+      "id": "countries/oceania/micronesia/kiribati.md",
+      "name": "kiribati",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/oceania/micronesia/kiribati.md",
+      "links": 0
+    },
+    {
+      "id": "countries/oceania/micronesia/marshall-islands.md",
+      "name": "marshall-islands",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/oceania/micronesia/marshall-islands.md",
+      "links": 0
+    },
+    {
+      "id": "countries/oceania/micronesia/micronesia.md",
+      "name": "micronesia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/oceania/micronesia/micronesia.md",
+      "links": 0
+    },
+    {
+      "id": "countries/oceania/micronesia/nauru.md",
+      "name": "nauru",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/oceania/micronesia/nauru.md",
+      "links": 0
+    },
+    {
+      "id": "countries/oceania/micronesia/palau.md",
+      "name": "palau",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/oceania/micronesia/palau.md",
+      "links": 0
+    },
+    {
+      "id": "countries/oceania/oceania.md",
+      "name": "oceania",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/oceania/oceania.md",
+      "links": 4
+    },
+    {
+      "id": "countries/oceania/polynesia/polynesia.md",
+      "name": "polynesia",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/oceania/polynesia/polynesia.md",
+      "links": 0
+    },
+    {
+      "id": "countries/oceania/polynesia/samoa.md",
+      "name": "samoa",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/oceania/polynesia/samoa.md",
+      "links": 0
+    },
+    {
+      "id": "countries/oceania/polynesia/tonga.md",
+      "name": "tonga",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/oceania/polynesia/tonga.md",
+      "links": 0
+    },
+    {
+      "id": "countries/oceania/polynesia/tuvalu.md",
+      "name": "tuvalu",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/countries/oceania/polynesia/tuvalu.md",
+      "links": 0
+    },
+    {
+      "id": "education/degrees.md",
+      "name": "degrees",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/degrees.md",
+      "links": 0
+    },
+    {
+      "id": "education/education.md",
+      "name": "education",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/education.md",
+      "links": 4
+    },
+    {
+      "id": "education/humanity/arts.md",
+      "name": "arts",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/humanity/arts.md",
+      "links": 0
+    },
+    {
+      "id": "education/humanity/economics.md",
+      "name": "economics",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/humanity/economics.md",
+      "links": 0
+    },
+    {
+      "id": "education/humanity/humanity.md",
+      "name": "humanity",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/humanity/humanity.md",
+      "links": 5
+    },
+    {
+      "id": "education/humanity/languages.md",
+      "name": "languages",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/humanity/languages.md",
+      "links": 0
+    },
+    {
+      "id": "education/humanity/literature.md",
+      "name": "literature",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/humanity/literature.md",
+      "links": 0
+    },
+    {
+      "id": "education/humanity/psychology.md",
+      "name": "psychology",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/humanity/psychology.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/engineering/api.md",
+      "name": "api",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/engineering/api.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/engineering/back-end.md",
+      "name": "back-end",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/engineering/back-end.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/engineering/cli.md",
+      "name": "cli",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/engineering/cli.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/engineering/databases.md",
+      "name": "databases",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/engineering/databases.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/engineering/dsa/algorithms.md",
+      "name": "algorithms",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/engineering/dsa/algorithms.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/engineering/dsa/data-structures-and-algorithms.md",
+      "name": "data-structures-and-algorithms",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/engineering/dsa/data-structures-and-algorithms.md",
+      "links": 2
+    },
+    {
+      "id": "education/stem/engineering/dsa/data-structures.md",
+      "name": "data-structures",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/engineering/dsa/data-structures.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/engineering/engineering.md",
+      "name": "engineering",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/engineering/engineering.md",
+      "links": 12
+    },
+    {
+      "id": "education/stem/engineering/front-end/front-end.md",
+      "name": "front-end",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/engineering/front-end/front-end.md",
+      "links": 1
+    },
+    {
+      "id": "education/stem/engineering/front-end/ui-components.md",
+      "name": "ui-components",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/engineering/front-end/ui-components.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/engineering/game-engines.md",
+      "name": "game-engines",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/engineering/game-engines.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/engineering/hosting.md",
+      "name": "hosting",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/engineering/hosting.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/engineering/ide.md",
+      "name": "ide",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/engineering/ide.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/engineering/languages.md",
+      "name": "languages",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/engineering/languages.md",
+      "links": 1
+    },
+    {
+      "id": "education/stem/engineering/languages/c.md",
+      "name": "c",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/engineering/languages/c.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/engineering/languages/go.md",
+      "name": "go",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/engineering/languages/go.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/engineering/languages/java.md",
+      "name": "java",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/engineering/languages/java.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/engineering/languages/javascript.md",
+      "name": "javascript",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/engineering/languages/javascript.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/engineering/languages/kotlin.md",
+      "name": "kotlin",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/engineering/languages/kotlin.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/engineering/languages/languages.md",
+      "name": "languages",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/engineering/languages/languages.md",
+      "links": 5
+    },
+    {
+      "id": "education/stem/engineering/languages/python.md",
+      "name": "python",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/engineering/languages/python.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/engineering/languages/rust.md",
+      "name": "rust",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/engineering/languages/rust.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/engineering/languages/swift.md",
+      "name": "swift",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/engineering/languages/swift.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/engineering/os.md",
+      "name": "os",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/engineering/os.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/engineering/system-design.md",
+      "name": "system-design",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/engineering/system-design.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/mathematics/mathematics.md",
+      "name": "mathematics",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/mathematics/mathematics.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/sciences/prizes/fields.md",
+      "name": "fields",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/sciences/prizes/fields.md",
+      "links": 1
+    },
+    {
+      "id": "education/stem/sciences/prizes/nobel.md",
+      "name": "nobel",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/sciences/prizes/nobel.md",
+      "links": 5
+    },
+    {
+      "id": "education/stem/sciences/sciences.md",
+      "name": "sciences",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/sciences/sciences.md",
+      "links": 6
+    },
+    {
+      "id": "education/stem/sciences/subjects/biology.md",
+      "name": "biology",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/sciences/subjects/biology.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/sciences/subjects/chemistry.md",
+      "name": "chemistry",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/sciences/subjects/chemistry.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/sciences/subjects/geography.md",
+      "name": "geography",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/sciences/subjects/geography.md",
+      "links": 1
+    },
+    {
+      "id": "education/stem/sciences/subjects/physics.md",
+      "name": "physics",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/sciences/subjects/physics.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/stem.md",
+      "name": "stem",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/stem.md",
+      "links": 4
+    },
+    {
+      "id": "education/stem/technology/blockchain.md",
+      "name": "blockchain",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/technology/blockchain.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/technology/browsers.md",
+      "name": "browsers",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/technology/browsers.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/technology/design.md",
+      "name": "design",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/technology/design.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/technology/devices/devices.md",
+      "name": "devices",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/technology/devices/devices.md",
+      "links": 5
+    },
+    {
+      "id": "education/stem/technology/devices/gaming-consoles.md",
+      "name": "gaming-consoles",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/technology/devices/gaming-consoles.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/technology/devices/headphones.md",
+      "name": "headphones",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/technology/devices/headphones.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/technology/devices/laptops.md",
+      "name": "laptops",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/technology/devices/laptops.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/technology/devices/phones.md",
+      "name": "phones",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/technology/devices/phones.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/technology/devices/tablets.md",
+      "name": "tablets",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/technology/devices/tablets.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/technology/devices/watches.md",
+      "name": "watches",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/technology/devices/watches.md",
+      "links": 3
+    },
+    {
+      "id": "education/stem/technology/llm.md",
+      "name": "llm",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/technology/llm.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/technology/messaging.md",
+      "name": "messaging",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/technology/messaging.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/technology/neuroscience.md",
+      "name": "neuroscience",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/technology/neuroscience.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/technology/technology.md",
+      "name": "technology",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/technology/technology.md",
+      "links": 9
+    },
+    {
+      "id": "education/stem/technology/vehicles/cars.md",
+      "name": "cars",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/technology/vehicles/cars.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/technology/vehicles/motorcycles.md",
+      "name": "motorcycles",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/technology/vehicles/motorcycles.md",
+      "links": 0
+    },
+    {
+      "id": "education/stem/technology/vehicles/vehicles.md",
+      "name": "vehicles",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/technology/vehicles/vehicles.md",
+      "links": 2
+    },
+    {
+      "id": "education/stem/technology/workspaces.md",
+      "name": "workspaces",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/stem/technology/workspaces.md",
+      "links": 0
+    },
+    {
+      "id": "education/university.md",
+      "name": "university",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/education/university.md",
+      "links": 6
+    },
+    {
+      "id": "entertainment/entertainment.md",
+      "name": "entertainment",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/entertainment.md",
+      "links": 14
+    },
+    {
+      "id": "entertainment/games/games.md",
+      "name": "games",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/games/games.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/listening/instruments.md",
+      "name": "instruments",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/listening/instruments.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/listening/listening.md",
+      "name": "listening",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/listening/listening.md",
+      "links": 3
+    },
+    {
+      "id": "entertainment/listening/music/grammy.md",
+      "name": "grammy",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/listening/music/grammy.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/listening/music/music.md",
+      "name": "music",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/listening/music/music.md",
+      "links": 3
+    },
+    {
+      "id": "entertainment/listening/music/musical.md",
+      "name": "musical",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/listening/music/musical.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/listening/podcasts.md",
+      "name": "podcasts",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/listening/podcasts.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/reading/books.md",
+      "name": "books",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/reading/books.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/reading/comics.md",
+      "name": "comics",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/reading/comics.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/reading/reading.md",
+      "name": "reading",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/reading/reading.md",
+      "links": 2
+    },
+    {
+      "id": "entertainment/sports/basket/basketball.md",
+      "name": "basketball",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/sports/basket/basketball.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/sports/basket/netball.md",
+      "name": "netball",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/sports/basket/netball.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/sports/bat/baseball.md",
+      "name": "baseball",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/sports/bat/baseball.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/sports/bat/cricket.md",
+      "name": "cricket",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/sports/bat/cricket.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/sports/board/checker.md",
+      "name": "checker",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/sports/board/checker.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/sports/board/chess.md",
+      "name": "chess",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/sports/board/chess.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/sports/board/go.md",
+      "name": "go",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/sports/board/go.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/sports/board/shogi.md",
+      "name": "shogi",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/sports/board/shogi.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/sports/board/xiangqi.md",
+      "name": "xiangqi",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/sports/board/xiangqi.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/sports/e-sports/dota.md",
+      "name": "dota",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/sports/e-sports/dota.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/sports/e-sports/e-sports.md",
+      "name": "e-sports",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/sports/e-sports/e-sports.md",
+      "links": 2
+    },
+    {
+      "id": "entertainment/sports/e-sports/league-of-legends.md",
+      "name": "league-of-legends",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/sports/e-sports/league-of-legends.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/sports/football/football.md",
+      "name": "football",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/sports/football/football.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/sports/football/futsal.md",
+      "name": "futsal",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/sports/football/futsal.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/sports/racing/bicycling.md",
+      "name": "bicycling",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/sports/racing/bicycling.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/sports/racing/f1.md",
+      "name": "f1",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/sports/racing/f1.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/sports/racing/marathon.md",
+      "name": "marathon",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/sports/racing/marathon.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/sports/racing/motorcycle.md",
+      "name": "motorcycle",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/sports/racing/motorcycle.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/sports/racing/swimming.md",
+      "name": "swimming",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/sports/racing/swimming.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/sports/rackets/badminton.md",
+      "name": "badminton",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/sports/rackets/badminton.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/sports/rackets/pickleball.md",
+      "name": "pickleball",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/sports/rackets/pickleball.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/sports/rackets/squash.md",
+      "name": "squash",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/sports/rackets/squash.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/sports/rackets/table-tennis.md",
+      "name": "table-tennis",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/sports/rackets/table-tennis.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/sports/rackets/tennis.md",
+      "name": "tennis",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/sports/rackets/tennis.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/sports/rugby/american-football.md",
+      "name": "american-football",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/sports/rugby/american-football.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/sports/rugby/rugby.md",
+      "name": "rugby",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/sports/rugby/rugby.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/sports/sports.md",
+      "name": "sports",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/sports/sports.md",
+      "links": 21
+    },
+    {
+      "id": "entertainment/watching/anime.md",
+      "name": "anime",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/watching/anime.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/watching/movies.md",
+      "name": "movies",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/watching/movies.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/watching/tv.md",
+      "name": "tv",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/watching/tv.md",
+      "links": 0
+    },
+    {
+      "id": "entertainment/watching/watching.md",
+      "name": "watching",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/entertainment/watching/watching.md",
+      "links": 3
+    },
+    {
+      "id": "me/bored.md",
+      "name": "bored",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/me/bored.md",
+      "links": 6
+    },
+    {
+      "id": "me/cities.md",
+      "name": "cities",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/me/cities.md",
+      "links": 23
+    },
+    {
+      "id": "me/f\u0026b.md",
+      "name": "f\u0026b",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/me/f\u0026b.md",
+      "links": 0
+    },
+    {
+      "id": "me/me.md",
+      "name": "me",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/me/me.md",
+      "links": 7
+    },
+    {
+      "id": "me/minimalism.md",
+      "name": "minimalism",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/me/minimalism.md",
+      "links": 8
+    },
+    {
+      "id": "me/random-research/productivity/monday-fear.md",
+      "name": "monday-fear",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/me/random-research/productivity/monday-fear.md",
+      "links": 0
+    },
+    {
+      "id": "me/random-research/random-research.md",
+      "name": "random-research",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/me/random-research/random-research.md",
+      "links": 1
+    },
+    {
+      "id": "me/random-research/sample.md",
+      "name": "sample",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/me/random-research/sample.md",
+      "links": 0
+    },
+    {
+      "id": "me/resolutions.md",
+      "name": "resolutions",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/me/resolutions.md",
+      "links": 0
+    },
+    {
+      "id": "me/resume.md",
+      "name": "resume",
+      "path": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/docs/obsidian/me/resume.md",
+      "links": 5
+    }
+  ],
+  "edges": [
+    {
+      "source": "countries/europe/northern-europe/nothern-europe.md",
+      "target": "countries/europe/northern-europe/nordic/denmark.md"
+    },
+    {
+      "source": "countries/europe/northern-europe/nothern-europe.md",
+      "target": "countries/europe/northern-europe/nordic/finland.md"
+    },
+    {
+      "source": "countries/europe/northern-europe/nothern-europe.md",
+      "target": "countries/europe/northern-europe/nordic/iceland.md"
+    },
+    {
+      "source": "countries/europe/northern-europe/nothern-europe.md",
+      "target": "countries/europe/northern-europe/nordic/norway.md"
+    },
+    {
+      "source": "countries/europe/northern-europe/nothern-europe.md",
+      "target": "countries/europe/northern-europe/nordic/sweden.md"
+    },
+    {
+      "source": "countries/europe/northern-europe/nothern-europe.md",
+      "target": "countries/europe/northern-europe/baltic/estonia.md"
+    },
+    {
+      "source": "countries/europe/northern-europe/nothern-europe.md",
+      "target": "countries/europe/northern-europe/baltic/latvia.md"
+    },
+    {
+      "source": "countries/europe/northern-europe/nothern-europe.md",
+      "target": "countries/europe/northern-europe/baltic/lithuania.md"
+    },
+    {
+      "source": "countries/europe/northern-europe/nothern-europe.md",
+      "target": "countries/europe/northern-europe/british/irish.md"
+    },
+    {
+      "source": "countries/europe/northern-europe/nothern-europe.md",
+      "target": "countries/europe/northern-europe/british/united-kindgom/united-kingdom.md"
+    },
+    {
+      "source": "education/stem/technology/technology.md",
+      "target": "education/stem/technology/blockchain.md"
+    },
+    {
+      "source": "education/stem/technology/technology.md",
+      "target": "education/stem/technology/browsers.md"
+    },
+    {
+      "source": "education/stem/technology/technology.md",
+      "target": "education/stem/technology/design.md"
+    },
+    {
+      "source": "education/stem/technology/technology.md",
+      "target": "education/stem/technology/llm.md"
+    },
+    {
+      "source": "education/stem/technology/technology.md",
+      "target": "education/stem/technology/messaging.md"
+    },
+    {
+      "source": "education/stem/technology/technology.md",
+      "target": "education/stem/technology/neuroscience.md"
+    },
+    {
+      "source": "education/stem/technology/technology.md",
+      "target": "education/stem/technology/workspaces.md"
+    },
+    {
+      "source": "education/stem/technology/technology.md",
+      "target": "education/stem/technology/devices/devices.md"
+    },
+    {
+      "source": "education/stem/technology/technology.md",
+      "target": "education/stem/technology/vehicles/vehicles.md"
+    },
+    {
+      "source": "entertainment/reading/reading.md",
+      "target": "entertainment/reading/books.md"
+    },
+    {
+      "source": "entertainment/reading/reading.md",
+      "target": "entertainment/reading/comics.md"
+    },
+    {
+      "source": "education/stem/sciences/subjects/geography.md",
+      "target": "countries/countries.md"
+    },
+    {
+      "source": "countries/america/caribbean/caribbean.md",
+      "target": "countries/america/caribbean/antigua-and-barbuda.md"
+    },
+    {
+      "source": "countries/america/caribbean/caribbean.md",
+      "target": "countries/america/caribbean/bahamas.md"
+    },
+    {
+      "source": "countries/america/caribbean/caribbean.md",
+      "target": "countries/america/caribbean/barbados.md"
+    },
+    {
+      "source": "countries/america/caribbean/caribbean.md",
+      "target": "countries/america/caribbean/cuba.md"
+    },
+    {
+      "source": "countries/america/caribbean/caribbean.md",
+      "target": "countries/america/caribbean/dominica.md"
+    },
+    {
+      "source": "countries/america/caribbean/caribbean.md",
+      "target": "countries/america/caribbean/dominica-republic.md"
+    },
+    {
+      "source": "countries/america/caribbean/caribbean.md",
+      "target": "countries/america/caribbean/grenada.md"
+    },
+    {
+      "source": "countries/america/caribbean/caribbean.md",
+      "target": "countries/america/caribbean/haiti.md"
+    },
+    {
+      "source": "countries/america/caribbean/caribbean.md",
+      "target": "countries/america/caribbean/jamaica.md"
+    },
+    {
+      "source": "countries/america/caribbean/caribbean.md",
+      "target": "countries/america/caribbean/saint-kitts-and-nevis.md"
+    },
+    {
+      "source": "countries/america/caribbean/caribbean.md",
+      "target": "countries/america/caribbean/saint-lucia.md"
+    },
+    {
+      "source": "countries/america/caribbean/caribbean.md",
+      "target": "countries/america/caribbean/saint-vincent-and-the-grenadines.md"
+    },
+    {
+      "source": "countries/america/caribbean/caribbean.md",
+      "target": "countries/america/caribbean/trinidad-and-tobago.md"
+    },
+    {
+      "source": "countries/asia/western-asia/western-asia.md",
+      "target": "countries/asia/western-asia/iran.md"
+    },
+    {
+      "source": "countries/asia/western-asia/western-asia.md",
+      "target": "countries/asia/western-asia/israel.md"
+    },
+    {
+      "source": "countries/europe/southern-europe/iberian/portugal/portugal.md",
+      "target": "countries/europe/southern-europe/iberian/portugal/primeira-liga.md"
+    },
+    {
+      "source": "countries/europe/southern-europe/italian/italy/italy.md",
+      "target": "countries/europe/southern-europe/italian/italy/serie-a.md"
+    },
+    {
+      "source": "education/stem/engineering/front-end/front-end.md",
+      "target": "education/stem/engineering/front-end/ui-components.md"
+    },
+    {
+      "source": "education/stem/sciences/prizes/nobel.md",
+      "target": "education/stem/sciences/subjects/physics.md"
+    },
+    {
+      "source": "education/stem/sciences/prizes/nobel.md",
+      "target": "education/stem/sciences/subjects/chemistry.md"
+    },
+    {
+      "source": "education/stem/sciences/prizes/nobel.md",
+      "target": "education/stem/sciences/subjects/biology.md"
+    },
+    {
+      "source": "education/stem/sciences/prizes/nobel.md",
+      "target": "education/humanity/literature.md"
+    },
+    {
+      "source": "education/stem/sciences/prizes/nobel.md",
+      "target": "education/humanity/economics.md"
+    },
+    {
+      "source": "countries/africa/africa.md",
+      "target": "countries/africa/northern-africa/northern-africa.md"
+    },
+    {
+      "source": "countries/africa/africa.md",
+      "target": "countries/africa/western-africa/western-africa.md"
+    },
+    {
+      "source": "countries/africa/africa.md",
+      "target": "countries/africa/eastern-africa/eastern-africa.md"
+    },
+    {
+      "source": "countries/africa/africa.md",
+      "target": "countries/africa/central-africa/central-africa.md"
+    },
+    {
+      "source": "countries/africa/africa.md",
+      "target": "countries/africa/southern-africa/southern-africa.md"
+    },
+    {
+      "source": "countries/africa/eastern-africa/eastern-africa.md",
+      "target": "countries/africa/eastern-africa/burundi.md"
+    },
+    {
+      "source": "countries/africa/eastern-africa/eastern-africa.md",
+      "target": "countries/africa/eastern-africa/comoros.md"
+    },
+    {
+      "source": "countries/africa/eastern-africa/eastern-africa.md",
+      "target": "countries/africa/eastern-africa/djibouti.md"
+    },
+    {
+      "source": "countries/africa/eastern-africa/eastern-africa.md",
+      "target": "countries/africa/eastern-africa/eritrea.md"
+    },
+    {
+      "source": "countries/africa/eastern-africa/eastern-africa.md",
+      "target": "countries/africa/eastern-africa/ethiopia.md"
+    },
+    {
+      "source": "countries/africa/eastern-africa/eastern-africa.md",
+      "target": "countries/africa/eastern-africa/kenya.md"
+    },
+    {
+      "source": "countries/africa/eastern-africa/eastern-africa.md",
+      "target": "countries/africa/eastern-africa/madagascar.md"
+    },
+    {
+      "source": "countries/africa/eastern-africa/eastern-africa.md",
+      "target": "countries/africa/eastern-africa/malawi.md"
+    },
+    {
+      "source": "countries/africa/eastern-africa/eastern-africa.md",
+      "target": "countries/africa/eastern-africa/mauritius.md"
+    },
+    {
+      "source": "countries/africa/eastern-africa/eastern-africa.md",
+      "target": "countries/africa/eastern-africa/mozambique.md"
+    },
+    {
+      "source": "countries/africa/eastern-africa/eastern-africa.md",
+      "target": "countries/africa/eastern-africa/rwanda.md"
+    },
+    {
+      "source": "countries/africa/eastern-africa/eastern-africa.md",
+      "target": "countries/africa/eastern-africa/seychelles.md"
+    },
+    {
+      "source": "countries/africa/eastern-africa/eastern-africa.md",
+      "target": "countries/africa/eastern-africa/somalia.md"
+    },
+    {
+      "source": "countries/africa/eastern-africa/eastern-africa.md",
+      "target": "countries/africa/eastern-africa/south-sudan.md"
+    },
+    {
+      "source": "countries/africa/eastern-africa/eastern-africa.md",
+      "target": "countries/africa/eastern-africa/tanzania.md"
+    },
+    {
+      "source": "countries/africa/eastern-africa/eastern-africa.md",
+      "target": "countries/africa/eastern-africa/uganda.md"
+    },
+    {
+      "source": "countries/africa/eastern-africa/eastern-africa.md",
+      "target": "countries/africa/eastern-africa/zambia.md"
+    },
+    {
+      "source": "countries/africa/eastern-africa/eastern-africa.md",
+      "target": "countries/africa/eastern-africa/zimbabwe.md"
+    },
+    {
+      "source": "countries/america/north-america/united-states/government/federal/executive/executive.md",
+      "target": "countries/america/north-america/united-states/government/federal/executive/executive.md"
+    },
+    {
+      "source": "countries/america/north-america/united-states/government/federal/executive/executive.md",
+      "target": "countries/america/north-america/united-states/government/federal/executive/cabinet/presidents.md"
+    },
+    {
+      "source": "countries/america/north-america/united-states/government/federal/executive/executive.md",
+      "target": "countries/america/north-america/united-states/government/federal/executive/cabinet/vice.md"
+    },
+    {
+      "source": "countries/america/north-america/united-states/government/federal/executive/executive.md",
+      "target": "countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/state.md"
+    },
+    {
+      "source": "countries/america/north-america/united-states/government/federal/executive/executive.md",
+      "target": "countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/treasury.md"
+    },
+    {
+      "source": "countries/america/north-america/united-states/government/federal/executive/executive.md",
+      "target": "countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/defense.md"
+    },
+    {
+      "source": "countries/america/north-america/united-states/government/federal/executive/executive.md",
+      "target": "countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/justice.md"
+    },
+    {
+      "source": "countries/america/north-america/united-states/government/federal/executive/executive.md",
+      "target": "countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/interior.md"
+    },
+    {
+      "source": "countries/america/north-america/united-states/government/federal/executive/executive.md",
+      "target": "countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/agriculture.md"
+    },
+    {
+      "source": "countries/america/north-america/united-states/government/federal/executive/executive.md",
+      "target": "countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/commerce.md"
+    },
+    {
+      "source": "countries/america/north-america/united-states/government/federal/executive/executive.md",
+      "target": "countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/labor.md"
+    },
+    {
+      "source": "countries/america/north-america/united-states/government/federal/executive/executive.md",
+      "target": "countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/hhs.md"
+    },
+    {
+      "source": "countries/america/north-america/united-states/government/federal/executive/executive.md",
+      "target": "countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/hud.md"
+    },
+    {
+      "source": "countries/america/north-america/united-states/government/federal/executive/executive.md",
+      "target": "countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/transportation.md"
+    },
+    {
+      "source": "countries/america/north-america/united-states/government/federal/executive/executive.md",
+      "target": "countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/energy.md"
+    },
+    {
+      "source": "countries/america/north-america/united-states/government/federal/executive/executive.md",
+      "target": "countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/veterans-affairs.md"
+    },
+    {
+      "source": "countries/america/north-america/united-states/government/federal/executive/executive.md",
+      "target": "countries/america/north-america/united-states/government/federal/executive/cabinet/secretaries/homeland-security.md"
+    },
+    {
+      "source": "countries/america/north-america/united-states/government/federal/executive/executive.md",
+      "target": "countries/america/north-america/united-states/government/federal/executive/chiefs-of-staff.md"
+    },
+    {
+      "source": "countries/america/south-america/south-america.md",
+      "target": "countries/america/south-america/argentina.md"
+    },
+    {
+      "source": "countries/america/south-america/south-america.md",
+      "target": "countries/america/south-america/bolivia.md"
+    },
+    {
+      "source": "countries/america/south-america/south-america.md",
+      "target": "countries/america/south-america/brazil.md"
+    },
+    {
+      "source": "countries/america/south-america/south-america.md",
+      "target": "countries/america/south-america/chile.md"
+    },
+    {
+      "source": "countries/america/south-america/south-america.md",
+      "target": "countries/america/south-america/colombia.md"
+    },
+    {
+      "source": "countries/america/south-america/south-america.md",
+      "target": "countries/america/south-america/ecuador.md"
+    },
+    {
+      "source": "countries/america/south-america/south-america.md",
+      "target": "countries/america/south-america/guyana.md"
+    },
+    {
+      "source": "countries/america/south-america/south-america.md",
+      "target": "countries/america/south-america/paraguay.md"
+    },
+    {
+      "source": "countries/america/south-america/south-america.md",
+      "target": "countries/america/south-america/peru.md"
+    },
+    {
+      "source": "countries/america/south-america/south-america.md",
+      "target": "countries/america/south-america/suriname.md"
+    },
+    {
+      "source": "countries/america/south-america/south-america.md",
+      "target": "countries/america/south-america/uruguay.md"
+    },
+    {
+      "source": "countries/america/south-america/south-america.md",
+      "target": "countries/america/south-america/venezuela.md"
+    },
+    {
+      "source": "countries/europe/southern-europe/iberian/spain/spain.md",
+      "target": "countries/europe/southern-europe/iberian/spain/la-liga.md"
+    },
+    {
+      "source": "education/stem/engineering/dsa/data-structures-and-algorithms.md",
+      "target": "education/stem/engineering/dsa/data-structures.md"
+    },
+    {
+      "source": "education/stem/engineering/dsa/data-structures-and-algorithms.md",
+      "target": "education/stem/engineering/dsa/algorithms.md"
+    },
+    {
+      "source": "education/stem/stem.md",
+      "target": "education/stem/sciences/sciences.md"
+    },
+    {
+      "source": "education/stem/stem.md",
+      "target": "education/stem/technology/technology.md"
+    },
+    {
+      "source": "education/stem/stem.md",
+      "target": "education/stem/engineering/engineering.md"
+    },
+    {
+      "source": "education/stem/stem.md",
+      "target": "education/stem/mathematics/mathematics.md"
+    },
+    {
+      "source": "education/stem/technology/vehicles/vehicles.md",
+      "target": "education/stem/technology/vehicles/cars.md"
+    },
+    {
+      "source": "education/stem/technology/vehicles/vehicles.md",
+      "target": "education/stem/technology/vehicles/motorcycles.md"
+    },
+    {
+      "source": "countries/countries.md",
+      "target": "me/cities.md"
+    },
+    {
+      "source": "countries/countries.md",
+      "target": "countries/africa/africa.md"
+    },
+    {
+      "source": "countries/countries.md",
+      "target": "countries/america/america.md"
+    },
+    {
+      "source": "countries/countries.md",
+      "target": "countries/asia/asia.md"
+    },
+    {
+      "source": "countries/countries.md",
+      "target": "countries/europe/europe.md"
+    },
+    {
+      "source": "countries/countries.md",
+      "target": "countries/europe/southern-europe/italian/italy/italy.md"
+    },
+    {
+      "source": "countries/countries.md",
+      "target": "countries/oceania/oceania.md"
+    },
+    {
+      "source": "countries/europe/eastern-europe/eastern-europe.md",
+      "target": "countries/europe/eastern-europe/belarus.md"
+    },
+    {
+      "source": "countries/europe/eastern-europe/eastern-europe.md",
+      "target": "countries/europe/eastern-europe/bulgaria.md"
+    },
+    {
+      "source": "countries/europe/eastern-europe/eastern-europe.md",
+      "target": "countries/europe/eastern-europe/czech.md"
+    },
+    {
+      "source": "countries/europe/eastern-europe/eastern-europe.md",
+      "target": "countries/europe/eastern-europe/hungary.md"
+    },
+    {
+      "source": "countries/europe/eastern-europe/eastern-europe.md",
+      "target": "countries/europe/eastern-europe/moldova.md"
+    },
+    {
+      "source": "countries/europe/eastern-europe/eastern-europe.md",
+      "target": "countries/europe/eastern-europe/poland.md"
+    },
+    {
+      "source": "countries/europe/eastern-europe/eastern-europe.md",
+      "target": "countries/europe/eastern-europe/romania.md"
+    },
+    {
+      "source": "countries/europe/eastern-europe/eastern-europe.md",
+      "target": "countries/europe/eastern-europe/russia.md"
+    },
+    {
+      "source": "countries/europe/eastern-europe/eastern-europe.md",
+      "target": "countries/europe/eastern-europe/slovakia.md"
+    },
+    {
+      "source": "countries/europe/eastern-europe/eastern-europe.md",
+      "target": "countries/europe/eastern-europe/ukraine.md"
+    },
+    {
+      "source": "countries/europe/northern-europe/british/united-kindgom/england/england.md",
+      "target": "countries/europe/northern-europe/british/united-kindgom/england/football/premier-league.md"
+    },
+    {
+      "source": "countries/europe/northern-europe/british/united-kindgom/england/england.md",
+      "target": "countries/europe/northern-europe/british/united-kindgom/england/football/fa-cup.md"
+    },
+    {
+      "source": "education/stem/engineering/languages.md",
+      "target": "education/stem/engineering/languages/javascript.md"
+    },
+    {
+      "source": "me/resume.md",
+      "target": "education/university.md"
+    },
+    {
+      "source": "me/resume.md",
+      "target": "countries/asia/south-eastern-asia/mainland/vietnam/vietnam.md"
+    },
+    {
+      "source": "me/resume.md",
+      "target": "countries/europe/northern-europe/nordic/finland.md"
+    },
+    {
+      "source": "me/resume.md",
+      "target": "education/stem/engineering/front-end/front-end.md"
+    },
+    {
+      "source": "me/resume.md",
+      "target": "countries/europe/western-europe/central/germany/germany.md"
+    },
+    {
+      "source": "README.md",
+      "target": "countries/countries.md"
+    },
+    {
+      "source": "README.md",
+      "target": "education/education.md"
+    },
+    {
+      "source": "README.md",
+      "target": "entertainment/entertainment.md"
+    },
+    {
+      "source": "README.md",
+      "target": "me/me.md"
+    },
+    {
+      "source": "countries/africa/central-africa/central-africa.md",
+      "target": "countries/africa/central-africa/angola.md"
+    },
+    {
+      "source": "countries/africa/central-africa/central-africa.md",
+      "target": "countries/africa/central-africa/cameroon.md"
+    },
+    {
+      "source": "countries/africa/central-africa/central-africa.md",
+      "target": "countries/africa/central-africa/central-african-republic.md"
+    },
+    {
+      "source": "countries/africa/central-africa/central-africa.md",
+      "target": "countries/africa/central-africa/chad.md"
+    },
+    {
+      "source": "countries/africa/central-africa/central-africa.md",
+      "target": "countries/africa/central-africa/congo.md"
+    },
+    {
+      "source": "countries/africa/central-africa/central-africa.md",
+      "target": "countries/africa/central-africa/dr-congo.md"
+    },
+    {
+      "source": "countries/africa/central-africa/central-africa.md",
+      "target": "countries/africa/central-africa/equatorial-guinea.md"
+    },
+    {
+      "source": "countries/africa/central-africa/central-africa.md",
+      "target": "countries/africa/central-africa/gabon.md"
+    },
+    {
+      "source": "countries/africa/central-africa/central-africa.md",
+      "target": "countries/africa/central-africa/sao-tome-and-principe.md"
+    },
+    {
+      "source": "countries/africa/western-africa/western-africa.md",
+      "target": "countries/africa/western-africa/benin.md"
+    },
+    {
+      "source": "countries/africa/western-africa/western-africa.md",
+      "target": "countries/africa/western-africa/burkina-faso.md"
+    },
+    {
+      "source": "countries/africa/western-africa/western-africa.md",
+      "target": "countries/africa/western-africa/cape-verde.md"
+    },
+    {
+      "source": "countries/africa/western-africa/western-africa.md",
+      "target": "countries/africa/western-africa/cote-d-ivoire.md"
+    },
+    {
+      "source": "countries/africa/western-africa/western-africa.md",
+      "target": "countries/africa/western-africa/gambia.md"
+    },
+    {
+      "source": "countries/africa/western-africa/western-africa.md",
+      "target": "countries/africa/western-africa/ghana.md"
+    },
+    {
+      "source": "countries/africa/western-africa/western-africa.md",
+      "target": "countries/africa/western-africa/guinea.md"
+    },
+    {
+      "source": "countries/africa/western-africa/western-africa.md",
+      "target": "countries/africa/western-africa/guinea-bissau.md"
+    },
+    {
+      "source": "countries/africa/western-africa/western-africa.md",
+      "target": "countries/africa/western-africa/liberia.md"
+    },
+    {
+      "source": "countries/africa/western-africa/western-africa.md",
+      "target": "countries/africa/western-africa/mali.md"
+    },
+    {
+      "source": "countries/africa/western-africa/western-africa.md",
+      "target": "countries/africa/western-africa/niger.md"
+    },
+    {
+      "source": "countries/africa/western-africa/western-africa.md",
+      "target": "countries/africa/western-africa/nigeria.md"
+    },
+    {
+      "source": "countries/africa/western-africa/western-africa.md",
+      "target": "countries/africa/western-africa/senegal.md"
+    },
+    {
+      "source": "countries/africa/western-africa/western-africa.md",
+      "target": "countries/africa/western-africa/sierra-leone.md"
+    },
+    {
+      "source": "countries/africa/western-africa/western-africa.md",
+      "target": "countries/africa/western-africa/togo.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/eastern-europe/eastern-europe.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/eastern-europe/belarus.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/eastern-europe/bulgaria.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/eastern-europe/czech.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/eastern-europe/hungary.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/eastern-europe/moldova.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/eastern-europe/poland.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/eastern-europe/romania.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/eastern-europe/russia.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/eastern-europe/slovakia.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/eastern-europe/ukraine.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/northern-europe/nordic/denmark.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/northern-europe/baltic/estonia.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/northern-europe/nordic/finland.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/northern-europe/nordic/iceland.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/northern-europe/british/irish.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/northern-europe/baltic/latvia.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/northern-europe/baltic/lithuania.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/northern-europe/nordic/norway.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/northern-europe/nordic/sweden.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/northern-europe/british/united-kindgom/united-kingdom.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/southern-europe/southern-europe.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/southern-europe/balkan/albania.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/southern-europe/iberian/andorra.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/southern-europe/balkan/bosnia-and-herzegovina.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/southern-europe/balkan/croatia.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/southern-europe/mediterranean/cyprus.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/southern-europe/balkan/greece.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/southern-europe/italian/italy/italy.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/southern-europe/mediterranean/malta.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/southern-europe/balkan/montenegro.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/southern-europe/balkan/north-macedonia.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/southern-europe/iberian/portugal/portugal.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/southern-europe/italian/san-marino.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/southern-europe/balkan/serbia.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/southern-europe/balkan/slovenia.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/southern-europe/iberian/spain/spain.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/southern-europe/mediterranean/turkey.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/southern-europe/italian/vatican-city.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/western-europe/western-europe.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/western-europe/central/austria.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/western-europe/benelux/belgium.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/western-europe/benelux/france/france.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/western-europe/central/germany/germany.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/western-europe/central/liechtenstein.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/western-europe/benelux/luxembourg.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/western-europe/central/monaco.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/western-europe/benelux/netherlands/netherlands.md"
+    },
+    {
+      "source": "countries/europe/europe.md",
+      "target": "countries/europe/western-europe/central/switzerland.md"
+    },
+    {
+      "source": "countries/asia/south-eastern-asia/south-eastern-asia.md",
+      "target": "countries/asia/south-eastern-asia/mainland/thailand.md"
+    },
+    {
+      "source": "countries/asia/south-eastern-asia/south-eastern-asia.md",
+      "target": "countries/asia/south-eastern-asia/mainland/vietnam/vietnam.md"
+    },
+    {
+      "source": "countries/asia/south-eastern-asia/south-eastern-asia.md",
+      "target": "countries/asia/south-eastern-asia/maritime/singapore.md"
+    },
+    {
+      "source": "countries/asia/south-eastern-asia/south-eastern-asia.md",
+      "target": "countries/asia/south-eastern-asia/maritime/malaysia.md"
+    },
+    {
+      "source": "countries/asia/south-eastern-asia/south-eastern-asia.md",
+      "target": "countries/asia/south-eastern-asia/maritime/indonesia.md"
+    },
+    {
+      "source": "countries/asia/south-eastern-asia/south-eastern-asia.md",
+      "target": "countries/asia/south-eastern-asia/mainland/myanmar.md"
+    },
+    {
+      "source": "countries/asia/south-eastern-asia/south-eastern-asia.md",
+      "target": "countries/asia/south-eastern-asia/maritime/philippines.md"
+    },
+    {
+      "source": "countries/asia/south-eastern-asia/south-eastern-asia.md",
+      "target": "countries/asia/south-eastern-asia/maritime/east-timor.md"
+    },
+    {
+      "source": "countries/asia/south-eastern-asia/south-eastern-asia.md",
+      "target": "countries/asia/south-eastern-asia/mainland/laos.md"
+    },
+    {
+      "source": "countries/asia/south-eastern-asia/south-eastern-asia.md",
+      "target": "countries/asia/south-eastern-asia/mainland/cambodia.md"
+    },
+    {
+      "source": "countries/asia/south-eastern-asia/south-eastern-asia.md",
+      "target": "countries/asia/south-eastern-asia/maritime/brunei.md"
+    },
+    {
+      "source": "countries/asia/central-asia/central-asia.md",
+      "target": "countries/asia/central-asia/kazakhstan.md"
+    },
+    {
+      "source": "countries/asia/central-asia/central-asia.md",
+      "target": "countries/asia/central-asia/kyrgyzstan.md"
+    },
+    {
+      "source": "countries/asia/central-asia/central-asia.md",
+      "target": "countries/asia/central-asia/tajikistan.md"
+    },
+    {
+      "source": "countries/asia/central-asia/central-asia.md",
+      "target": "countries/asia/central-asia/turkmenistan.md"
+    },
+    {
+      "source": "countries/asia/central-asia/central-asia.md",
+      "target": "countries/asia/central-asia/uzbekistan.md"
+    },
+    {
+      "source": "education/stem/sciences/sciences.md",
+      "target": "education/stem/sciences/subjects/physics.md"
+    },
+    {
+      "source": "education/stem/sciences/sciences.md",
+      "target": "education/stem/sciences/subjects/chemistry.md"
+    },
+    {
+      "source": "education/stem/sciences/sciences.md",
+      "target": "education/stem/sciences/subjects/biology.md"
+    },
+    {
+      "source": "education/stem/sciences/sciences.md",
+      "target": "education/stem/sciences/subjects/geography.md"
+    },
+    {
+      "source": "education/stem/sciences/sciences.md",
+      "target": "education/stem/sciences/prizes/fields.md"
+    },
+    {
+      "source": "education/stem/sciences/sciences.md",
+      "target": "education/stem/sciences/prizes/nobel.md"
+    },
+    {
+      "source": "education/stem/technology/devices/watches.md",
+      "target": "countries/asia/eastern-asia/china.md"
+    },
+    {
+      "source": "education/stem/technology/devices/watches.md",
+      "target": "countries/asia/eastern-asia/japan.md"
+    },
+    {
+      "source": "education/stem/technology/devices/watches.md",
+      "target": "countries/europe/western-europe/central/switzerland.md"
+    },
+    {
+      "source": "me/bored.md",
+      "target": "entertainment/sports/board/chess.md"
+    },
+    {
+      "source": "me/bored.md",
+      "target": "education/stem/mathematics/mathematics.md"
+    },
+    {
+      "source": "me/bored.md",
+      "target": "education/stem/sciences/subjects/physics.md"
+    },
+    {
+      "source": "me/bored.md",
+      "target": "education/stem/sciences/subjects/chemistry.md"
+    },
+    {
+      "source": "me/bored.md",
+      "target": "education/stem/sciences/subjects/biology.md"
+    },
+    {
+      "source": "me/bored.md",
+      "target": "entertainment/sports/racing/marathon.md"
+    },
+    {
+      "source": "me/me.md",
+      "target": "me/bored.md"
+    },
+    {
+      "source": "me/me.md",
+      "target": "me/cities.md"
+    },
+    {
+      "source": "me/me.md",
+      "target": "me/f\u0026b.md"
+    },
+    {
+      "source": "me/me.md",
+      "target": "me/minimalism.md"
+    },
+    {
+      "source": "me/me.md",
+      "target": "me/random-research/random-research.md"
+    },
+    {
+      "source": "me/me.md",
+      "target": "me/resolutions.md"
+    },
+    {
+      "source": "me/me.md",
+      "target": "me/resume.md"
+    },
+    {
+      "source": "entertainment/watching/watching.md",
+      "target": "entertainment/watching/anime.md"
+    },
+    {
+      "source": "entertainment/watching/watching.md",
+      "target": "entertainment/watching/movies.md"
+    },
+    {
+      "source": "entertainment/watching/watching.md",
+      "target": "entertainment/watching/tv.md"
+    },
+    {
+      "source": "countries/europe/southern-europe/southern-europe.md",
+      "target": "countries/europe/southern-europe/balkan/albania.md"
+    },
+    {
+      "source": "countries/europe/southern-europe/southern-europe.md",
+      "target": "countries/europe/southern-europe/balkan/bosnia-and-herzegovina.md"
+    },
+    {
+      "source": "countries/europe/southern-europe/southern-europe.md",
+      "target": "countries/europe/eastern-europe/bulgaria.md"
+    },
+    {
+      "source": "countries/europe/southern-europe/southern-europe.md",
+      "target": "countries/europe/southern-europe/balkan/croatia.md"
+    },
+    {
+      "source": "countries/europe/southern-europe/southern-europe.md",
+      "target": "countries/europe/southern-europe/balkan/greece.md"
+    },
+    {
+      "source": "countries/europe/southern-europe/southern-europe.md",
+      "target": "countries/europe/southern-europe/balkan/montenegro.md"
+    },
+    {
+      "source": "countries/europe/southern-europe/southern-europe.md",
+      "target": "countries/europe/southern-europe/balkan/north-macedonia.md"
+    },
+    {
+      "source": "countries/europe/southern-europe/southern-europe.md",
+      "target": "countries/europe/southern-europe/balkan/serbia.md"
+    },
+    {
+      "source": "countries/europe/southern-europe/southern-europe.md",
+      "target": "countries/europe/southern-europe/balkan/slovenia.md"
+    },
+    {
+      "source": "countries/europe/southern-europe/southern-europe.md",
+      "target": "countries/europe/southern-europe/iberian/andorra.md"
+    },
+    {
+      "source": "countries/europe/southern-europe/southern-europe.md",
+      "target": "countries/europe/southern-europe/iberian/portugal/portugal.md"
+    },
+    {
+      "source": "countries/europe/southern-europe/southern-europe.md",
+      "target": "countries/europe/southern-europe/iberian/spain/spain.md"
+    },
+    {
+      "source": "countries/europe/southern-europe/southern-europe.md",
+      "target": "countries/europe/southern-europe/italian/italy/italy.md"
+    },
+    {
+      "source": "countries/europe/southern-europe/southern-europe.md",
+      "target": "countries/europe/southern-europe/italian/san-marino.md"
+    },
+    {
+      "source": "countries/europe/southern-europe/southern-europe.md",
+      "target": "countries/europe/southern-europe/italian/vatican-city.md"
+    },
+    {
+      "source": "countries/europe/southern-europe/southern-europe.md",
+      "target": "countries/europe/southern-europe/mediterranean/cyprus.md"
+    },
+    {
+      "source": "countries/europe/southern-europe/southern-europe.md",
+      "target": "countries/europe/southern-europe/mediterranean/malta.md"
+    },
+    {
+      "source": "countries/europe/southern-europe/southern-europe.md",
+      "target": "countries/europe/southern-europe/mediterranean/turkey.md"
+    },
+    {
+      "source": "countries/africa/southern-africa/southern-africa.md",
+      "target": "countries/africa/southern-africa/botswana.md"
+    },
+    {
+      "source": "countries/africa/southern-africa/southern-africa.md",
+      "target": "countries/africa/southern-africa/eswatini.md"
+    },
+    {
+      "source": "countries/africa/southern-africa/southern-africa.md",
+      "target": "countries/africa/southern-africa/lesotho.md"
+    },
+    {
+      "source": "countries/africa/southern-africa/southern-africa.md",
+      "target": "countries/africa/southern-africa/namibia.md"
+    },
+    {
+      "source": "countries/africa/southern-africa/southern-africa.md",
+      "target": "countries/africa/southern-africa/south-africa.md"
+    },
+    {
+      "source": "countries/asia/asia.md",
+      "target": "countries/asia/eastern-asia/eastern-asia.md"
+    },
+    {
+      "source": "countries/asia/asia.md",
+      "target": "countries/asia/central-asia/central-asia.md"
+    },
+    {
+      "source": "countries/asia/asia.md",
+      "target": "countries/asia/southern-asia/southern-asia.md"
+    },
+    {
+      "source": "countries/asia/asia.md",
+      "target": "countries/asia/western-asia/western-asia.md"
+    },
+    {
+      "source": "countries/europe/western-europe/central/germany/germany.md",
+      "target": "countries/europe/western-europe/central/germany/bundesliga.md"
+    },
+    {
+      "source": "countries/europe/western-europe/benelux/france/france.md",
+      "target": "countries/europe/western-europe/benelux/france/ligue-1.md"
+    },
+    {
+      "source": "countries/europe/western-europe/benelux/netherlands/netherlands.md",
+      "target": "countries/europe/western-europe/benelux/netherlands/eredivisie.md"
+    },
+    {
+      "source": "education/stem/sciences/prizes/fields.md",
+      "target": "education/stem/sciences/sciences.md"
+    },
+    {
+      "source": "entertainment/sports/sports.md",
+      "target": "entertainment/sports/rugby/american-football.md"
+    },
+    {
+      "source": "entertainment/sports/sports.md",
+      "target": "entertainment/sports/rackets/badminton.md"
+    },
+    {
+      "source": "entertainment/sports/sports.md",
+      "target": "entertainment/sports/bat/baseball.md"
+    },
+    {
+      "source": "entertainment/sports/sports.md",
+      "target": "entertainment/sports/basket/basketball.md"
+    },
+    {
+      "source": "entertainment/sports/sports.md",
+      "target": "entertainment/sports/racing/bicycling.md"
+    },
+    {
+      "source": "entertainment/sports/sports.md",
+      "target": "entertainment/sports/board/checker.md"
+    },
+    {
+      "source": "entertainment/sports/sports.md",
+      "target": "entertainment/sports/board/chess.md"
+    },
+    {
+      "source": "entertainment/sports/sports.md",
+      "target": "entertainment/sports/bat/cricket.md"
+    },
+    {
+      "source": "entertainment/sports/sports.md",
+      "target": "entertainment/sports/racing/f1.md"
+    },
+    {
+      "source": "entertainment/sports/sports.md",
+      "target": "entertainment/sports/football/futsal.md"
+    },
+    {
+      "source": "entertainment/sports/sports.md",
+      "target": "entertainment/sports/racing/marathon.md"
+    },
+    {
+      "source": "entertainment/sports/sports.md",
+      "target": "entertainment/sports/racing/motorcycle.md"
+    },
+    {
+      "source": "entertainment/sports/sports.md",
+      "target": "entertainment/sports/basket/netball.md"
+    },
+    {
+      "source": "entertainment/sports/sports.md",
+      "target": "entertainment/sports/rackets/pickleball.md"
+    },
+    {
+      "source": "entertainment/sports/sports.md",
+      "target": "entertainment/sports/rugby/rugby.md"
+    },
+    {
+      "source": "entertainment/sports/sports.md",
+      "target": "entertainment/sports/board/shogi.md"
+    },
+    {
+      "source": "entertainment/sports/sports.md",
+      "target": "entertainment/sports/rackets/squash.md"
+    },
+    {
+      "source": "entertainment/sports/sports.md",
+      "target": "entertainment/sports/racing/swimming.md"
+    },
+    {
+      "source": "entertainment/sports/sports.md",
+      "target": "entertainment/sports/rackets/table-tennis.md"
+    },
+    {
+      "source": "entertainment/sports/sports.md",
+      "target": "entertainment/sports/rackets/tennis.md"
+    },
+    {
+      "source": "entertainment/sports/sports.md",
+      "target": "entertainment/sports/board/xiangqi.md"
+    },
+    {
+      "source": "entertainment/entertainment.md",
+      "target": "entertainment/games/games.md"
+    },
+    {
+      "source": "entertainment/entertainment.md",
+      "target": "entertainment/listening/listening.md"
+    },
+    {
+      "source": "entertainment/entertainment.md",
+      "target": "entertainment/listening/music/grammy.md"
+    },
+    {
+      "source": "entertainment/entertainment.md",
+      "target": "entertainment/listening/instruments.md"
+    },
+    {
+      "source": "entertainment/entertainment.md",
+      "target": "entertainment/listening/podcasts.md"
+    },
+    {
+      "source": "entertainment/entertainment.md",
+      "target": "entertainment/reading/reading.md"
+    },
+    {
+      "source": "entertainment/entertainment.md",
+      "target": "entertainment/reading/books.md"
+    },
+    {
+      "source": "entertainment/entertainment.md",
+      "target": "entertainment/reading/comics.md"
+    },
+    {
+      "source": "entertainment/entertainment.md",
+      "target": "entertainment/sports/sports.md"
+    },
+    {
+      "source": "entertainment/entertainment.md",
+      "target": "entertainment/sports/board/chess.md"
+    },
+    {
+      "source": "entertainment/entertainment.md",
+      "target": "entertainment/sports/racing/marathon.md"
+    },
+    {
+      "source": "entertainment/entertainment.md",
+      "target": "entertainment/watching/watching.md"
+    },
+    {
+      "source": "entertainment/entertainment.md",
+      "target": "entertainment/watching/movies.md"
+    },
+    {
+      "source": "entertainment/entertainment.md",
+      "target": "entertainment/watching/tv.md"
+    },
+    {
+      "source": "countries/europe/western-europe/western-europe.md",
+      "target": "countries/europe/western-europe/benelux/belgium.md"
+    },
+    {
+      "source": "countries/europe/western-europe/western-europe.md",
+      "target": "countries/europe/western-europe/benelux/france/france.md"
+    },
+    {
+      "source": "countries/europe/western-europe/western-europe.md",
+      "target": "countries/europe/western-europe/benelux/luxembourg.md"
+    },
+    {
+      "source": "countries/europe/western-europe/western-europe.md",
+      "target": "countries/europe/western-europe/benelux/netherlands/netherlands.md"
+    },
+    {
+      "source": "countries/europe/western-europe/western-europe.md",
+      "target": "countries/europe/western-europe/central/austria.md"
+    },
+    {
+      "source": "countries/europe/western-europe/western-europe.md",
+      "target": "countries/europe/western-europe/central/germany/germany.md"
+    },
+    {
+      "source": "countries/europe/western-europe/western-europe.md",
+      "target": "countries/europe/western-europe/central/liechtenstein.md"
+    },
+    {
+      "source": "countries/europe/western-europe/western-europe.md",
+      "target": "countries/europe/western-europe/central/monaco.md"
+    },
+    {
+      "source": "countries/europe/western-europe/western-europe.md",
+      "target": "countries/europe/western-europe/central/switzerland.md"
+    },
+    {
+      "source": "countries/oceania/australasia/australasia.md",
+      "target": "countries/oceania/australasia/australia.md"
+    },
+    {
+      "source": "countries/oceania/australasia/australasia.md",
+      "target": "countries/oceania/australasia/new-zealand.md"
+    },
+    {
+      "source": "education/education.md",
+      "target": "education/humanity/humanity.md"
+    },
+    {
+      "source": "education/education.md",
+      "target": "education/stem/stem.md"
+    },
+    {
+      "source": "education/education.md",
+      "target": "education/degrees.md"
+    },
+    {
+      "source": "education/education.md",
+      "target": "education/university.md"
+    },
+    {
+      "source": "entertainment/listening/listening.md",
+      "target": "entertainment/listening/instruments.md"
+    },
+    {
+      "source": "entertainment/listening/listening.md",
+      "target": "entertainment/listening/music/music.md"
+    },
+    {
+      "source": "entertainment/listening/listening.md",
+      "target": "entertainment/listening/podcasts.md"
+    },
+    {
+      "source": "me/minimalism.md",
+      "target": "education/stem/technology/technology.md"
+    },
+    {
+      "source": "me/minimalism.md",
+      "target": "education/stem/technology/devices/phones.md"
+    },
+    {
+      "source": "me/minimalism.md",
+      "target": "education/stem/technology/devices/tablets.md"
+    },
+    {
+      "source": "me/minimalism.md",
+      "target": "education/stem/technology/devices/laptops.md"
+    },
+    {
+      "source": "me/minimalism.md",
+      "target": "education/stem/technology/devices/headphones.md"
+    },
+    {
+      "source": "me/minimalism.md",
+      "target": "education/stem/technology/devices/watches.md"
+    },
+    {
+      "source": "me/minimalism.md",
+      "target": "education/stem/technology/vehicles/motorcycles.md"
+    },
+    {
+      "source": "me/minimalism.md",
+      "target": "education/stem/technology/vehicles/cars.md"
+    },
+    {
+      "source": "countries/america/north-america/north-america.md",
+      "target": "countries/america/north-america/canada.md"
+    },
+    {
+      "source": "countries/america/north-america/north-america.md",
+      "target": "countries/america/north-america/mexico.md"
+    },
+    {
+      "source": "countries/america/north-america/north-america.md",
+      "target": "countries/america/north-america/united-states/united-states.md"
+    },
+    {
+      "source": "countries/america/north-america/united-states/government/federal/legislative/legislative.md",
+      "target": "countries/america/north-america/united-states/government/federal/legislative/house.md"
+    },
+    {
+      "source": "countries/america/north-america/united-states/government/federal/legislative/legislative.md",
+      "target": "countries/america/north-america/united-states/government/federal/legislative/senate.md"
+    },
+    {
+      "source": "countries/america/north-america/united-states/government/government.md",
+      "target": "countries/america/north-america/united-states/government/federal/legislative/legislative.md"
+    },
+    {
+      "source": "countries/america/north-america/united-states/government/government.md",
+      "target": "countries/america/north-america/united-states/government/federal/executive/executive.md"
+    },
+    {
+      "source": "countries/america/north-america/united-states/government/government.md",
+      "target": "countries/america/north-america/united-states/government/federal/judicial/judicial.md"
+    },
+    {
+      "source": "countries/america/north-america/united-states/government/government.md",
+      "target": "countries/america/north-america/united-states/government/states/governors.md"
+    },
+    {
+      "source": "countries/oceania/oceania.md",
+      "target": "countries/oceania/australasia/australasia.md"
+    },
+    {
+      "source": "countries/oceania/oceania.md",
+      "target": "countries/oceania/melanesia/melanesia.md"
+    },
+    {
+      "source": "countries/oceania/oceania.md",
+      "target": "countries/oceania/micronesia/micronesia.md"
+    },
+    {
+      "source": "countries/oceania/oceania.md",
+      "target": "countries/oceania/polynesia/polynesia.md"
+    },
+    {
+      "source": "education/humanity/humanity.md",
+      "target": "education/humanity/arts.md"
+    },
+    {
+      "source": "education/humanity/humanity.md",
+      "target": "education/humanity/economics.md"
+    },
+    {
+      "source": "education/humanity/humanity.md",
+      "target": "education/stem/engineering/languages/languages.md"
+    },
+    {
+      "source": "education/humanity/humanity.md",
+      "target": "education/humanity/literature.md"
+    },
+    {
+      "source": "education/humanity/humanity.md",
+      "target": "education/humanity/psychology.md"
+    },
+    {
+      "source": "entertainment/sports/e-sports/e-sports.md",
+      "target": "entertainment/sports/e-sports/dota.md"
+    },
+    {
+      "source": "entertainment/sports/e-sports/e-sports.md",
+      "target": "education/stem/engineering/game-engines.md"
+    },
+    {
+      "source": "countries/africa/northern-africa/northern-africa.md",
+      "target": "countries/africa/northern-africa/algeria.md"
+    },
+    {
+      "source": "countries/africa/northern-africa/northern-africa.md",
+      "target": "countries/africa/northern-africa/egypt.md"
+    },
+    {
+      "source": "countries/africa/northern-africa/northern-africa.md",
+      "target": "countries/africa/northern-africa/libya.md"
+    },
+    {
+      "source": "countries/africa/northern-africa/northern-africa.md",
+      "target": "countries/africa/northern-africa/mauritania.md"
+    },
+    {
+      "source": "countries/africa/northern-africa/northern-africa.md",
+      "target": "countries/africa/northern-africa/morocco.md"
+    },
+    {
+      "source": "countries/africa/northern-africa/northern-africa.md",
+      "target": "countries/africa/northern-africa/sudan.md"
+    },
+    {
+      "source": "countries/africa/northern-africa/northern-africa.md",
+      "target": "countries/africa/northern-africa/tunisia.md"
+    },
+    {
+      "source": "countries/america/central-america/central-america.md",
+      "target": "countries/america/central-america/belize.md"
+    },
+    {
+      "source": "countries/america/central-america/central-america.md",
+      "target": "countries/america/central-america/costa-rica.md"
+    },
+    {
+      "source": "countries/america/central-america/central-america.md",
+      "target": "countries/america/central-america/el-salvador.md"
+    },
+    {
+      "source": "countries/america/central-america/central-america.md",
+      "target": "countries/america/central-america/guatemala.md"
+    },
+    {
+      "source": "countries/america/central-america/central-america.md",
+      "target": "countries/america/central-america/honduras.md"
+    },
+    {
+      "source": "countries/america/central-america/central-america.md",
+      "target": "countries/america/central-america/nicaragua.md"
+    },
+    {
+      "source": "countries/america/central-america/central-america.md",
+      "target": "countries/america/central-america/panama.md"
+    },
+    {
+      "source": "countries/america/north-america/united-states/government/federal/judicial/judicial.md",
+      "target": "countries/america/north-america/united-states/government/federal/judicial/courts.md"
+    },
+    {
+      "source": "countries/america/north-america/united-states/government/federal/judicial/judicial.md",
+      "target": "countries/america/north-america/united-states/government/federal/judicial/supreme-court-justices.md"
+    },
+    {
+      "source": "countries/america/north-america/united-states/united-states.md",
+      "target": "countries/america/north-america/united-states/sports/mls.md"
+    },
+    {
+      "source": "countries/america/north-america/united-states/united-states.md",
+      "target": "countries/america/north-america/united-states/sports/nba.md"
+    },
+    {
+      "source": "countries/america/north-america/united-states/united-states.md",
+      "target": "countries/america/north-america/united-states/sports/nfl.md"
+    },
+    {
+      "source": "countries/america/north-america/united-states/united-states.md",
+      "target": "countries/america/north-america/united-states/government/states/states.md"
+    },
+    {
+      "source": "countries/asia/eastern-asia/eastern-asia.md",
+      "target": "countries/asia/eastern-asia/china.md"
+    },
+    {
+      "source": "countries/asia/eastern-asia/eastern-asia.md",
+      "target": "countries/asia/eastern-asia/japan.md"
+    },
+    {
+      "source": "countries/asia/eastern-asia/eastern-asia.md",
+      "target": "countries/asia/eastern-asia/mongolia.md"
+    },
+    {
+      "source": "countries/asia/eastern-asia/eastern-asia.md",
+      "target": "countries/asia/eastern-asia/north-korea.md"
+    },
+    {
+      "source": "countries/asia/eastern-asia/eastern-asia.md",
+      "target": "countries/asia/eastern-asia/south-korea.md"
+    },
+    {
+      "source": "education/stem/engineering/languages/languages.md",
+      "target": "education/stem/engineering/languages/java.md"
+    },
+    {
+      "source": "education/stem/engineering/languages/languages.md",
+      "target": "education/stem/engineering/languages/kotlin.md"
+    },
+    {
+      "source": "education/stem/engineering/languages/languages.md",
+      "target": "education/stem/engineering/languages/python.md"
+    },
+    {
+      "source": "education/stem/engineering/languages/languages.md",
+      "target": "education/stem/engineering/languages/rust.md"
+    },
+    {
+      "source": "education/stem/engineering/languages/languages.md",
+      "target": "education/stem/engineering/languages/swift.md"
+    },
+    {
+      "source": "education/stem/technology/devices/devices.md",
+      "target": "education/stem/technology/devices/laptops.md"
+    },
+    {
+      "source": "education/stem/technology/devices/devices.md",
+      "target": "education/stem/technology/devices/tablets.md"
+    },
+    {
+      "source": "education/stem/technology/devices/devices.md",
+      "target": "education/stem/technology/devices/phones.md"
+    },
+    {
+      "source": "education/stem/technology/devices/devices.md",
+      "target": "education/stem/technology/devices/headphones.md"
+    },
+    {
+      "source": "education/stem/technology/devices/devices.md",
+      "target": "education/stem/technology/devices/watches.md"
+    },
+    {
+      "source": "me/random-research/random-research.md",
+      "target": "me/random-research/sample.md"
+    },
+    {
+      "source": "education/university.md",
+      "target": "countries/europe/western-europe/central/germany/germany.md"
+    },
+    {
+      "source": "education/university.md",
+      "target": "countries/europe/western-europe/benelux/netherlands/netherlands.md"
+    },
+    {
+      "source": "education/university.md",
+      "target": "countries/asia/south-eastern-asia/maritime/singapore.md"
+    },
+    {
+      "source": "education/university.md",
+      "target": "countries/asia/south-eastern-asia/mainland/vietnam/vietnam.md"
+    },
+    {
+      "source": "education/university.md",
+      "target": "countries/america/north-america/united-states/united-states.md"
+    },
+    {
+      "source": "education/university.md",
+      "target": "countries/america/north-america/canada.md"
+    },
+    {
+      "source": "entertainment/listening/music/music.md",
+      "target": "countries/asia/south-eastern-asia/mainland/vietnam/vietnam.md"
+    },
+    {
+      "source": "entertainment/listening/music/music.md",
+      "target": "entertainment/listening/music/grammy.md"
+    },
+    {
+      "source": "entertainment/listening/music/music.md",
+      "target": "entertainment/listening/music/musical.md"
+    },
+    {
+      "source": "countries/america/america.md",
+      "target": "countries/america/north-america/north-america.md"
+    },
+    {
+      "source": "countries/america/america.md",
+      "target": "countries/america/central-america/central-america.md"
+    },
+    {
+      "source": "countries/america/america.md",
+      "target": "countries/america/caribbean/caribbean.md"
+    },
+    {
+      "source": "countries/america/america.md",
+      "target": "countries/america/south-america/south-america.md"
+    },
+    {
+      "source": "education/stem/engineering/engineering.md",
+      "target": "education/stem/engineering/dsa/data-structures-and-algorithms.md"
+    },
+    {
+      "source": "education/stem/engineering/engineering.md",
+      "target": "education/stem/engineering/api.md"
+    },
+    {
+      "source": "education/stem/engineering/engineering.md",
+      "target": "education/stem/engineering/os.md"
+    },
+    {
+      "source": "education/stem/engineering/engineering.md",
+      "target": "education/stem/engineering/ide.md"
+    },
+    {
+      "source": "education/stem/engineering/engineering.md",
+      "target": "education/stem/engineering/languages/languages.md"
+    },
+    {
+      "source": "education/stem/engineering/engineering.md",
+      "target": "education/stem/engineering/front-end/front-end.md"
+    },
+    {
+      "source": "education/stem/engineering/engineering.md",
+      "target": "education/stem/engineering/back-end.md"
+    },
+    {
+      "source": "education/stem/engineering/engineering.md",
+      "target": "education/stem/engineering/cli.md"
+    },
+    {
+      "source": "education/stem/engineering/engineering.md",
+      "target": "education/stem/engineering/databases.md"
+    },
+    {
+      "source": "education/stem/engineering/engineering.md",
+      "target": "education/stem/engineering/game-engines.md"
+    },
+    {
+      "source": "education/stem/engineering/engineering.md",
+      "target": "education/stem/engineering/hosting.md"
+    },
+    {
+      "source": "education/stem/engineering/engineering.md",
+      "target": "education/stem/engineering/system-design.md"
+    },
+    {
+      "source": "me/cities.md",
+      "target": "countries/africa/africa.md"
+    },
+    {
+      "source": "me/cities.md",
+      "target": "countries/africa/northern-africa/egypt.md"
+    },
+    {
+      "source": "me/cities.md",
+      "target": "countries/africa/northern-africa/morocco.md"
+    },
+    {
+      "source": "me/cities.md",
+      "target": "countries/america/america.md"
+    },
+    {
+      "source": "me/cities.md",
+      "target": "countries/america/south-america/brazil.md"
+    },
+    {
+      "source": "me/cities.md",
+      "target": "countries/asia/asia.md"
+    },
+    {
+      "source": "me/cities.md",
+      "target": "countries/asia/eastern-asia/china.md"
+    },
+    {
+      "source": "me/cities.md",
+      "target": "countries/asia/eastern-asia/japan.md"
+    },
+    {
+      "source": "me/cities.md",
+      "target": "countries/asia/south-eastern-asia/maritime/malaysia.md"
+    },
+    {
+      "source": "me/cities.md",
+      "target": "countries/asia/south-eastern-asia/maritime/singapore.md"
+    },
+    {
+      "source": "me/cities.md",
+      "target": "countries/asia/south-eastern-asia/mainland/thailand.md"
+    },
+    {
+      "source": "me/cities.md",
+      "target": "countries/europe/southern-europe/mediterranean/turkey.md"
+    },
+    {
+      "source": "me/cities.md",
+      "target": "countries/europe/europe.md"
+    },
+    {
+      "source": "me/cities.md",
+      "target": "countries/europe/eastern-europe/hungary.md"
+    },
+    {
+      "source": "me/cities.md",
+      "target": "countries/europe/northern-europe/nordic/finland.md"
+    },
+    {
+      "source": "me/cities.md",
+      "target": "countries/europe/northern-europe/british/united-kindgom/england/england.md"
+    },
+    {
+      "source": "me/cities.md",
+      "target": "countries/europe/southern-europe/italian/italy/italy.md"
+    },
+    {
+      "source": "me/cities.md",
+      "target": "countries/europe/southern-europe/iberian/spain/spain.md"
+    },
+    {
+      "source": "me/cities.md",
+      "target": "countries/europe/western-europe/benelux/france/france.md"
+    },
+    {
+      "source": "me/cities.md",
+      "target": "countries/europe/western-europe/central/germany/germany.md"
+    },
+    {
+      "source": "me/cities.md",
+      "target": "countries/europe/western-europe/benelux/netherlands/netherlands.md"
+    },
+    {
+      "source": "me/cities.md",
+      "target": "countries/oceania/oceania.md"
+    },
+    {
+      "source": "me/cities.md",
+      "target": "countries/oceania/australasia/australia.md"
+    },
+    {
+      "source": "countries/europe/northern-europe/british/united-kindgom/united-kingdom.md",
+      "target": "countries/europe/northern-europe/british/united-kindgom/england/england.md"
+    },
+    {
+      "source": "countries/europe/northern-europe/british/united-kindgom/united-kingdom.md",
+      "target": "countries/europe/northern-europe/british/united-kindgom/wales.md"
+    },
+    {
+      "source": "countries/europe/northern-europe/british/united-kindgom/united-kingdom.md",
+      "target": "countries/europe/northern-europe/british/united-kindgom/scotland.md"
+    },
+    {
+      "source": "countries/europe/northern-europe/british/united-kindgom/united-kingdom.md",
+      "target": "countries/europe/northern-europe/british/united-kindgom/northern-ireland.md"
+    }
+  ],
+  "orphan": 314
+}

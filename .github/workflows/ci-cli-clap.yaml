@@ -10,7 +10,7 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/cli/hieudoanm/rust/**'
+      - 'packages/cli/hieudoanm/clap.rs/**'
       - '.github/workflows/ci-cli-clap.yaml'
 
 permissions:
@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: packages/cli/hieudoanm/rust
+        working-directory: packages/cli/hieudoanm/clap.rs
     steps:
       - name: Checkout
         uses: actions/checkout@v6.0.3
