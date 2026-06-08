@@ -1,4 +1,4 @@
-name: Continuous Integration (App)
+name: CI - App - Next.js
 
 on:
   push:
@@ -9,6 +9,9 @@ on:
       - 'feature/**'
       - 'renovate/**'
       - 'dependabot/**'
+    paths:
+      - 'packages/app/nextjs.org/**'
+      - '.github/workflows/ci-app-next.yaml'
 
 permissions:
   contents: write

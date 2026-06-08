@@ -1,4 +1,4 @@
-name: Continuous Integration (CLI)
+name: CI - CLI - Cobra
 
 on:
   push:
@@ -9,6 +9,9 @@ on:
       - 'feature/**'
       - 'renovate/**'
       - 'dependabot/**'
+    paths:
+      - 'packages/cli/hieudoanm/go/**'
+      - '.github/workflows/ci-cli-cobra.yaml'
 
 permissions:
   contents: write
