@@ -4,10 +4,10 @@
 
 | No  | Language                 | Framework      |
 | --- | ------------------------ | -------------- |
-| 1   | [Go][go]                 | [cobra][cobra] |
-| 2   | [Rust][rust]             | [clap][clap]   |
-| 3   | [Swift][swift]           |                |
-| 4   | [TypeScript][typescript] | [oclif][oclif] |
+| 01  | [Go][go]                 | [cobra][cobra] |
+| 02  | [Rust][rust]             | [clap][clap]   |
+| 03  | [Swift][swift]           |                |
+| 04  | [TypeScript][typescript] | [oclif][oclif] |
 
 ## Commands
 
