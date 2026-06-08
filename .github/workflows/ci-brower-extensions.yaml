@@ -101,8 +101,8 @@ jobs:
           find artifacts -type f -exec cp {} release/ \;
       - name: Publish Release
         run: |
-          gh release delete latest --yes --cleanup-tag 2>/dev/null || true
-          gh release create latest \
+          gh release delete brower-extensions-latest --yes --cleanup-tag 2>/dev/null || true
+          gh release create brower-extensions-latest \
             --title "Browser Extensions (latest)" \
             --notes "Auto-built browser extensions from commit ${{ github.sha }}" \
             release/*

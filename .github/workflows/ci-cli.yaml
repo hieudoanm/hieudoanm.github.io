@@ -117,8 +117,8 @@ jobs:
           done
       - name: Publish Release
         run: |
-          gh release delete latest --yes --cleanup-tag 2>/dev/null || true
-          gh release create latest \
+          gh release delete cli-latest --yes --cleanup-tag 2>/dev/null || true
+          gh release create cli-latest \
             --title "CLI Tools (latest)" \
             --notes "Auto-built CLI tools from commit ${{ github.sha }}" \
             release/*
