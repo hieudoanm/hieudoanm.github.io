@@ -62,7 +62,7 @@ jobs:
 
   swift:
     name: Swift
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     defaults:
       run:
         working-directory: packages/cli/hieudoanm/swift

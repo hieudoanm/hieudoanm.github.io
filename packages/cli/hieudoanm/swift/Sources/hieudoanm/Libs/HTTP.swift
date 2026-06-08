@@ -1,7 +1,5 @@
 import Foundation
-#if canImport(FoundationNetworking)
 import FoundationNetworking
-#endif
 
 enum HTTPMethod: String {
     case get = "GET"
