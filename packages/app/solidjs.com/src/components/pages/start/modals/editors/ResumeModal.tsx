@@ -2,7 +2,7 @@ import { yaml as yamlLang } from '@codemirror/lang-yaml';
 import { EditorState, Extension } from '@codemirror/state';
 import { oneDark } from '@codemirror/theme-one-dark';
 import { EditorView } from '@codemirror/view';
-import { useDebounce } from '@hieudoanm.github.io/signals/create-debounce';
+import { createDebounce } from '@frontend/solid';
 import { yaml2pdfMake } from '@hieudoanm.github.io/services/yaml2pdfmake/yaml2pdfmake.service';
 import pdfMake from 'pdfmake/build/pdfmake';
 import pdfFonts from 'pdfmake/build/vfs_fonts';
@@ -110,7 +110,7 @@ const useCodeMirror = ({
 export const ResumeModal = ({ onClose }: { onClose: () => void }) => {
   let iframeRef: HTMLIFrameElement | undefined;
   const [yaml, setYaml] = createSignal(YAML_TEMPLATE);
-  const debouncedYaml = useDebounce(yaml(), 500);
+  const debouncedYaml = createDebounce(yaml(), 500);
 
   const { ref: editorRef } = useCodeMirror({
     value: yaml(),

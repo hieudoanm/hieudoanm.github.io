@@ -1,4 +1,4 @@
-import { createClipboard, createStorage } from '@browser/native';
+import { createClipboard, createStorage } from '@frontend/native';
 import { FC, useEffect, useState } from 'react';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 

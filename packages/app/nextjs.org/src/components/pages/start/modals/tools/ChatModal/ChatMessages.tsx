@@ -1,4 +1,4 @@
-import { createClipboard } from '@browser/native';
+import { createClipboard } from '@frontend/native';
 import { MODELS } from '@hieudoanm.github.io/constants/models';
 import { marked } from 'marked';
 import { FC, useEffect, useRef } from 'react';

@@ -23,9 +23,6 @@ importers:
       '@api/ts':
         specifier: workspace:*
         version: link:../../modules/api/typescript
-      '@browser/native':
-        specifier: workspace:*
-        version: link:../../modules/browser/native
       '@capacitor/android':
         specifier: 8.4.0
         version: 8.4.0(@capacitor/core@8.4.0)
@@ -71,12 +68,18 @@ importers:
       '@codemirror/view':
         specifier: 6.43.0
         version: 6.43.0
+      '@frontend/native':
+        specifier: workspace:*
+        version: link:../../modules/frontend/native
+      '@frontend/react':
+        specifier: workspace:*
+        version: link:../../modules/frontend/react
       '@lodash/ts':
         specifier: workspace:*
-        version: link:../../modules/lodash/typescript
+        version: link:../../modules/lodash/core/typescript
       '@lodashx/ts':
         specifier: workspace:*
-        version: link:../../modules/lodashx/typescript
+        version: link:../../modules/lodash/extensions/typescript
       '@mediapipe/camera_utils':
         specifier: 0.3.1675466862
         version: 0.3.1675466862
@@ -306,9 +309,6 @@ importers:
       '@api/ts':
         specifier: workspace:*
         version: link:../../modules/api/typescript
-      '@browser/native':
-        specifier: workspace:*
-        version: link:../../modules/browser/native
       '@capacitor/android':
         specifier: 8.4.0
         version: 8.4.0(@capacitor/core@8.4.0)
@@ -354,12 +354,18 @@ importers:
       '@codemirror/view':
         specifier: 6.43.0
         version: 6.43.0
+      '@frontend/native':
+        specifier: workspace:*
+        version: link:../../modules/frontend/native
+      '@frontend/solid':
+        specifier: workspace:*
+        version: link:../../modules/frontend/solid
       '@lodash/ts':
         specifier: workspace:*
-        version: link:../../modules/lodash/typescript
+        version: link:../../modules/lodash/core/typescript
       '@lodashx/ts':
         specifier: workspace:*
-        version: link:../../modules/lodashx/typescript
+        version: link:../../modules/lodash/extensions/typescript
       '@mediapipe/camera_utils':
         specifier: 0.3.1675466862
         version: 0.3.1675466862
@@ -1285,106 +1291,6 @@ importers:
         specifier: 8.60.1
         version: 8.60.1(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3)
 
-  packages/modules/browser/native:
-    devDependencies:
-      '@eslint/js':
-        specifier: 10.0.1
-        version: 10.0.1(eslint@10.4.1(jiti@2.7.0))
-      '@types/jest':
-        specifier: 30.0.0
-        version: 30.0.0
-      '@types/node':
-        specifier: 25.9.2
-        version: 25.9.2
-      eslint:
-        specifier: 10.4.1
-        version: 10.4.1(jiti@2.7.0)
-      fake-indexeddb:
-        specifier: 6.2.5
-        version: 6.2.5
-      globals:
-        specifier: 17.6.0
-        version: 17.6.0
-      jest:
-        specifier: 30.4.2
-        version: 30.4.2(@types/node@25.9.2)(ts-node@10.9.2(@swc/core@1.15.40(@swc/helpers@0.5.23))(@types/node@25.9.2)(typescript@6.0.3))
-      jest-environment-jsdom:
-        specifier: 30.4.1
-        version: 30.4.1(canvas@3.2.3)
-      prettier:
-        specifier: 3.8.3
-        version: 3.8.3
-      rimraf:
-        specifier: 6.1.3
-        version: 6.1.3
-      ts-jest:
-        specifier: 29.4.11
-        version: 29.4.11(@babel/core@7.29.7)(@jest/transform@30.4.1)(@jest/types@30.4.1)(babel-jest@30.4.1(@babel/core@7.29.7))(jest-util@30.4.1)(jest@30.4.2(@types/node@25.9.2)(ts-node@10.9.2(@swc/core@1.15.40(@swc/helpers@0.5.23))(@types/node@25.9.2)(typescript@6.0.3)))(typescript@6.0.3)
-      ts-node:
-        specifier: 10.9.2
-        version: 10.9.2(@swc/core@1.15.40(@swc/helpers@0.5.23))(@types/node@25.9.2)(typescript@6.0.3)
-      typescript:
-        specifier: 6.0.3
-        version: 6.0.3
-      typescript-eslint:
-        specifier: 8.60.1
-        version: 8.60.1(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3)
-
-  packages/modules/browser/react:
-    dependencies:
-      react:
-        specifier: 19.2.7
-        version: 19.2.7
-    devDependencies:
-      '@eslint/js':
-        specifier: 10.0.1
-        version: 10.0.1(eslint@10.4.1(jiti@2.7.0))
-      '@types/jest':
-        specifier: 30.0.0
-        version: 30.0.0
-      '@types/node':
-        specifier: 25.9.2
-        version: 25.9.2
-      '@types/react':
-        specifier: 19.2.16
-        version: 19.2.16
-      eslint:
-        specifier: 10.4.1
-        version: 10.4.1(jiti@2.7.0)
-      eslint-plugin-react:
-        specifier: 7.37.5
-        version: 7.37.5(eslint@10.4.1(jiti@2.7.0))
-      fake-indexeddb:
-        specifier: 6.2.5
-        version: 6.2.5
-      globals:
-        specifier: 17.6.0
-        version: 17.6.0
-      jest:
-        specifier: 30.4.2
-        version: 30.4.2(@types/node@25.9.2)(ts-node@10.9.2(@swc/core@1.15.40(@swc/helpers@0.5.23))(@types/node@25.9.2)(typescript@6.0.3))
-      jest-environment-jsdom:
-        specifier: 30.4.1
-        version: 30.4.1(canvas@3.2.3)
-      prettier:
-        specifier: 3.8.3
-        version: 3.8.3
-      rimraf:
-        specifier: 6.1.3
-        version: 6.1.3
-      ts-jest:
-        specifier: 29.4.11
-        version: 29.4.11(@babel/core@7.29.7)(@jest/transform@30.4.1)(@jest/types@30.4.1)(babel-jest@30.4.1(@babel/core@7.29.7))(jest-util@30.4.1)(jest@30.4.2(@types/node@25.9.2)(ts-node@10.9.2(@swc/core@1.15.40(@swc/helpers@0.5.23))(@types/node@25.9.2)(typescript@6.0.3)))(typescript@6.0.3)
-      ts-node:
-        specifier: 10.9.2
-        version: 10.9.2(@swc/core@1.15.40(@swc/helpers@0.5.23))(@types/node@25.9.2)(typescript@6.0.3)
-      typescript:
-        specifier: 6.0.3
-        version: 6.0.3
-      typescript-eslint:
-        specifier: 8.60.1
-        version: 8.60.1(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3)
-
   packages/modules/chess/rust/pkg: {}
 
   packages/modules/chess/ts:
@@ -1442,9 +1348,173 @@ importers:
         specifier: 8.60.1
         version: 8.60.1(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3)
 
-  packages/modules/lodash/rust/pkg: {}
+  packages/modules/frontend/native:
+    devDependencies:
+      '@eslint/js':
+        specifier: 10.0.1
+        version: 10.0.1(eslint@10.4.1(jiti@2.7.0))
+      '@types/jest':
+        specifier: 30.0.0
+        version: 30.0.0
+      '@types/node':
+        specifier: 25.9.2
+        version: 25.9.2
+      eslint:
+        specifier: 10.4.1
+        version: 10.4.1(jiti@2.7.0)
+      fake-indexeddb:
+        specifier: 6.2.5
+        version: 6.2.5
+      globals:
+        specifier: 17.6.0
+        version: 17.6.0
+      jest:
+        specifier: 30.4.2
+        version: 30.4.2(@types/node@25.9.2)(ts-node@10.9.2(@swc/core@1.15.40(@swc/helpers@0.5.23))(@types/node@25.9.2)(typescript@6.0.3))
+      jest-environment-jsdom:
+        specifier: 30.4.1
+        version: 30.4.1(canvas@3.2.3)
+      prettier:
+        specifier: 3.8.3
+        version: 3.8.3
+      rimraf:
+        specifier: 6.1.3
+        version: 6.1.3
+      ts-jest:
+        specifier: 29.4.11
+        version: 29.4.11(@babel/core@7.29.7)(@jest/transform@30.4.1)(@jest/types@30.4.1)(babel-jest@30.4.1(@babel/core@7.29.7))(jest-util@30.4.1)(jest@30.4.2(@types/node@25.9.2)(ts-node@10.9.2(@swc/core@1.15.40(@swc/helpers@0.5.23))(@types/node@25.9.2)(typescript@6.0.3)))(typescript@6.0.3)
+      ts-node:
+        specifier: 10.9.2
+        version: 10.9.2(@swc/core@1.15.40(@swc/helpers@0.5.23))(@types/node@25.9.2)(typescript@6.0.3)
+      typescript:
+        specifier: 6.0.3
+        version: 6.0.3
+      typescript-eslint:
+        specifier: 8.60.1
+        version: 8.60.1(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3)
 
-  packages/modules/lodash/typescript:
+  packages/modules/frontend/react:
+    dependencies:
+      '@lodashx/ts':
+        specifier: workspace:*
+        version: link:../../lodash/extensions/typescript
+      '@ton/crypto':
+        specifier: 3.3.0
+        version: 3.3.0
+      '@ton/ton':
+        specifier: 16.3.0
+        version: 16.3.0(@ton/core@0.63.1(@ton/crypto@3.3.0))(@ton/crypto@3.3.0)
+      '@tonconnect/ui-react':
+        specifier: 2.4.4
+        version: 2.4.4(encoding@0.1.13)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      buffer:
+        specifier: 6.0.3
+        version: 6.0.3
+      react:
+        specifier: 19.2.7
+        version: 19.2.7
+    devDependencies:
+      '@eslint/js':
+        specifier: 10.0.1
+        version: 10.0.1(eslint@10.4.1(jiti@2.7.0))
+      '@types/jest':
+        specifier: 30.0.0
+        version: 30.0.0
+      '@types/node':
+        specifier: 25.9.2
+        version: 25.9.2
+      '@types/react':
+        specifier: 19.2.16
+        version: 19.2.16
+      '@types/web-bluetooth':
+        specifier: 0.0.21
+        version: 0.0.21
+      eslint:
+        specifier: 10.4.1
+        version: 10.4.1(jiti@2.7.0)
+      eslint-plugin-react:
+        specifier: 7.37.5
+        version: 7.37.5(eslint@10.4.1(jiti@2.7.0))
+      globals:
+        specifier: 17.6.0
+        version: 17.6.0
+      prettier:
+        specifier: 3.8.3
+        version: 3.8.3
+      rimraf:
+        specifier: 6.1.3
+        version: 6.1.3
+      ts-jest:
+        specifier: 29.4.11
+        version: 29.4.11(@babel/core@7.29.7)(@jest/transform@30.4.1)(@jest/types@30.4.1)(babel-jest@30.4.1(@babel/core@7.29.7))(jest-util@30.4.1)(jest@30.4.2(@types/node@25.9.2)(ts-node@10.9.2(@swc/core@1.15.40(@swc/helpers@0.5.23))(@types/node@25.9.2)(typescript@6.0.3)))(typescript@6.0.3)
+      ts-node:
+        specifier: 10.9.2
+        version: 10.9.2(@swc/core@1.15.40(@swc/helpers@0.5.23))(@types/node@25.9.2)(typescript@6.0.3)
+      typescript:
+        specifier: 6.0.3
+        version: 6.0.3
+      typescript-eslint:
+        specifier: 8.60.1
+        version: 8.60.1(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3)
+
+  packages/modules/frontend/solid:
+    dependencies:
+      '@lodashx/ts':
+        specifier: workspace:*
+        version: link:../../lodash/extensions/typescript
+      '@ton/crypto':
+        specifier: 3.3.0
+        version: 3.3.0
+      '@ton/ton':
+        specifier: 16.3.0
+        version: 16.3.0(@ton/core@0.63.1(@ton/crypto@3.3.0))(@ton/crypto@3.3.0)
+      buffer:
+        specifier: 6.0.3
+        version: 6.0.3
+      solid-js:
+        specifier: 1.9.13
+        version: 1.9.13
+    devDependencies:
+      '@eslint/js':
+        specifier: 10.0.1
+        version: 10.0.1(eslint@10.4.1(jiti@2.7.0))
+      '@types/jest':
+        specifier: 30.0.0
+        version: 30.0.0
+      '@types/node':
+        specifier: 25.9.2
+        version: 25.9.2
+      '@types/web-bluetooth':
+        specifier: 0.0.21
+        version: 0.0.21
+      eslint:
+        specifier: 10.4.1
+        version: 10.4.1(jiti@2.7.0)
+      globals:
+        specifier: 17.6.0
+        version: 17.6.0
+      prettier:
+        specifier: 3.8.3
+        version: 3.8.3
+      rimraf:
+        specifier: 6.1.3
+        version: 6.1.3
+      ts-jest:
+        specifier: 29.4.11
+        version: 29.4.11(@babel/core@7.29.7)(@jest/transform@30.4.1)(@jest/types@30.4.1)(babel-jest@30.4.1(@babel/core@7.29.7))(jest-util@30.4.1)(jest@30.4.2(@types/node@25.9.2)(ts-node@10.9.2(@swc/core@1.15.40(@swc/helpers@0.5.23))(@types/node@25.9.2)(typescript@6.0.3)))(typescript@6.0.3)
+      ts-node:
+        specifier: 10.9.2
+        version: 10.9.2(@swc/core@1.15.40(@swc/helpers@0.5.23))(@types/node@25.9.2)(typescript@6.0.3)
+      typescript:
+        specifier: 6.0.3
+        version: 6.0.3
+      typescript-eslint:
+        specifier: 8.60.1
+        version: 8.60.1(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3)
+
+  packages/modules/lodash/core/rust/pkg: {}
+
+  packages/modules/lodash/core/typescript:
     devDependencies:
       '@eslint/js':
         specifier: 10.0.1
@@ -1486,9 +1556,9 @@ importers:
         specifier: 8.60.1
         version: 8.60.1(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3)
 
-  packages/modules/lodashx/rust/pkg: {}
+  packages/modules/lodash/extensions/rust/pkg: {}
 
-  packages/modules/lodashx/typescript:
+  packages/modules/lodash/extensions/typescript:
     dependencies:
       yaml:
         specifier: 2.9.0
@@ -28305,7 +28375,7 @@ snapshots:
   normalize-package-data@2.5.0:
     dependencies:
       hosted-git-info: 2.8.9
-      resolve: 1.22.2
+      resolve: 1.22.12
       semver: 5.7.2
       validate-npm-package-license: 3.0.4
 

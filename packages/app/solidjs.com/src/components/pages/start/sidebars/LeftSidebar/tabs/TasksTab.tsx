@@ -1,4 +1,4 @@
-import useIndexedDB from '@hieudoanm.github.io/signals/create-indexed-db';
+import { createIndexedDB } from '@frontend/solid';
 import { createSignal, onMount } from 'solid-js';
 
 export interface Task {
@@ -10,7 +10,7 @@ export interface Task {
 }
 
 export const TasksTab = () => {
-  const { database, list, add, update, remove } = useIndexedDB<Task>({
+  const { database, list, add, update, remove } = createIndexedDB<Task>({
     databaseName: 'TasksDB',
     storeName: 'tasks',
   });

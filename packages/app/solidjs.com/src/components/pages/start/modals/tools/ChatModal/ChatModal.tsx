@@ -7,7 +7,7 @@ import { tryCatch } from '@lodashx/ts';
 import Tesseract from 'tesseract.js';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 import { Message, Messages } from './ChatMessages';
-import { scrollToBottom } from '@browser/native';
+import { scrollToBottom } from '@frontend/native';
 
 const groupModels = (models: Model[]) => {
   const ids: string[] = models.map(({ id }) => id);

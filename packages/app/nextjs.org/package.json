@@ -33,7 +33,8 @@
   },
   "dependencies": {
     "@api/ts": "workspace:*",
-    "@browser/native": "workspace:*",
+    "@frontend/native": "workspace:*",
+    "@frontend/react": "workspace:*",
     "@capacitor/android": "8.4.0",
     "@capacitor/core": "8.4.0",
     "@capacitor/ios": "8.4.0",

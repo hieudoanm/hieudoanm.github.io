@@ -1,4 +1,4 @@
-import { createClipboard, scrollToBottom } from '@browser/native';
+import { createClipboard, scrollToBottom } from '@frontend/native';
 import { GeminiModel } from '@hieudoanm.github.io/clients/gemini/gemini.enums';
 import { OpenRouterModel } from '@hieudoanm.github.io/clients/openrouter/openrouter.enums';
 import { MODELS } from '@hieudoanm.github.io/constants/models';

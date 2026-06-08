@@ -2,30 +2,44 @@ import { Download } from './types';
 
 export const packages: Download[] = [
   {
-    id: 'browser-native',
-    label: '@browser/native',
-    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/modules/browser/native',
+    id: 'frontend-native',
+    label: '@frontend/native',
+    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/modules/frontend/native',
     emoji: '🌐',
     color: '#3b82f6',
     description: 'Native',
     downloads: [
       {
         label: 'Download NPM',
-        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/modules/browser/native',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/modules/frontend/native',
       },
     ],
   },
   {
-    id: 'browser-react',
-    label: '@browser/react',
-    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/modules/browser/react',
+    id: 'frontend-react',
+    label: '@frontend/react',
+    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/modules/frontend/react',
     emoji: '🌐',
     color: '#3b82f6',
     description: 'React',
     downloads: [
       {
         label: 'Download NPM',
-        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/modules/browser/react',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/modules/frontend/react',
+      },
+    ],
+  },
+  {
+    id: 'frontend-solid',
+    label: '@frontend/solid',
+    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/modules/frontend/solid',
+    emoji: '🌐',
+    color: '#3b82f6',
+    description: 'Solid',
+    downloads: [
+      {
+        label: 'Download NPM',
+        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/modules/frontend/solid',
       },
     ],
   },

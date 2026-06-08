@@ -1,4 +1,4 @@
-import { scrollToBottom } from '@browser/native';
+import { scrollToBottom } from '@frontend/native';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 import { trpcClient } from '@hieudoanm.github.io/utils/trpc';
 import { tryCatch } from '@lodashx/ts';

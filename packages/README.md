@@ -15,11 +15,13 @@
 | 11  | Docs                 | [Starlight][starlight]   | Markdown                                 |
 | 12  | Extensions (Browser) | [Chrome][chrome]         | [TypeScript][ts]                         |
 | 13  | Extensions (Browser) | [Firefox][firefox]       | [TypeScript][ts]                         |
-| 14  | Modules              | chess                    | [Go][go] / [Rust][rs] / [TypeScript][ts] |
-| 15  | Modules              | lodashx                  | [Go][go] / [Rust][rs] / [TypeScript][ts] |
-| 16  | Server               | Backbone                 | [Go][go] / [Rust][rs]                    |
-| 17  | Server               | KeVIN                    | C/C++                                    |
-| 18  | Watch                | Garmin                   | MonkeyC                                  |
+| 14  | Modules              | `@api/*`                 | [Go][go] / [Rust][rs] / [TypeScript][ts] |
+| 15  | Modules              | `@chess/*`               | [Go][go] / [Rust][rs] / [TypeScript][ts] |
+| 16  | Modules              | `@frontend/*`            | [Go][go] / [Rust][rs] / [TypeScript][ts] |
+| 17  | Modules              | `@lodash(x)/*`           | [Go][go] / [Rust][rs] / [TypeScript][ts] |
+| 18  | Server               | Backbone                 | [Go][go] / [Rust][rs]                    |
+| 19  | Server               | KeVIN                    | C/C++                                    |
+| 20  | Watch                | Garmin                   | MonkeyC                                  |
 
 <!-- Languages -->
 

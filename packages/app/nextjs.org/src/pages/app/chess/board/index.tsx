@@ -16,7 +16,7 @@ import {
 import { Chessboard } from '@hieudoanm.github.io/components/organisms/chess/ChessBoard';
 import { INITIAL_FEN, INITIAL_ID } from '@hieudoanm.github.io/constants/app';
 import { Opening, openings } from '@hieudoanm.github.io/data/chess/openings';
-import { useStockfish } from '@hieudoanm.github.io/hooks/use-stockfish';
+import { useStockfish } from '@frontend/react';
 import { download } from '@hieudoanm.github.io/utils/canvas';
 import { range } from '@lodash/ts';
 import { padZero } from '@lodashx/ts';

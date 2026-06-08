@@ -49,11 +49,11 @@ export default defineConfig({
     ],
   },
   ssr: {
-    noExternal: ['@browser/native', '@chess/ts'],
+    noExternal: ['@frontend/native', '@chess/ts'],
   },
   build: {
     commonjsOptions: {
-      include: [/browser\/native/, /chess\/ts/, /node_modules/],
+      include: [/frontend\/native/, /chess\/ts/, /node_modules/],
     },
   },
 });
