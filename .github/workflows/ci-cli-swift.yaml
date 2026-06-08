@@ -1,0 +1,36 @@
+name: CI - CLI - Swift
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/cli/hieudoanm/swift/**'
+      - '.github/workflows/ci-cli-swift.yaml'
+
+permissions:
+  contents: write
+
+jobs:
+  quality:
+    name: Quality
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/cli/hieudoanm/swift
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.3
+      - name: Install Swift
+        uses: swift-actions/setup-swift@v2
+        with:
+          swift-version: '5.10'
+      - name: Build
+        run: swift build -c release
+      - name: Test
+        run: swift test

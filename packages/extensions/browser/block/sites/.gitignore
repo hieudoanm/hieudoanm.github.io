@@ -10,6 +10,7 @@ yarn.lock
 *.pem
 dist/
 build/
+download/
 
 # IDE and editor files
 .idea/
