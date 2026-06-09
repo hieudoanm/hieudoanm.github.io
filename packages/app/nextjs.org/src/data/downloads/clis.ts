@@ -25,7 +25,7 @@ export const clis: Download[] = [
     downloads: [
       {
         label: 'Download BIN',
-        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/cli/hieudoanm/cobra.go/bin/hieudoanm',
+        url: 'https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/cli-latest',
       },
     ],
   },
@@ -39,7 +39,7 @@ export const clis: Download[] = [
     downloads: [
       {
         label: 'Download BIN',
-        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/cli/hieudoanm/clap.rs/bin/hieudoanm',
+        url: 'https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/cli-latest',
       },
     ],
   },
@@ -53,7 +53,7 @@ export const clis: Download[] = [
     downloads: [
       {
         label: 'Download BIN',
-        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/cli/hieudoanm/swift/bin/hieudoanm',
+        url: 'https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/cli-latest',
       },
     ],
   },
