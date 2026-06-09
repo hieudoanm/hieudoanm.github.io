@@ -86,7 +86,7 @@ jobs:
       - name: Lint
         run: pnpm run lint --filter=...[origin/master]
       - name: Build Workspace Dependencies
-        run: pnpm run build --filter=@lodashx/ts --filter=@lodash/ts --filter=@api/ts --filter=@chess/ts
+        run: pnpm run build --filter=@lodashx/ts --filter=@lodash/ts --filter=@api/ts --filter=@chess/ts --filter=@frontend/react
       - name: Build
         run: pnpm run build --filter=...[origin/master]
       - name: Test

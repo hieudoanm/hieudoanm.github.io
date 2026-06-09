@@ -1814,7 +1814,7 @@ mod tests {
         let (status, value) = request(&app, "POST", "/api/websockets/broadcast", Some(&token), Some(body)).await;
         assert_eq!(status, StatusCode::OK);
         assert!(value.get("sent").is_some());
-        let (status, value) = get_json(&app, "/api/websockets/messages", Some(&token)).await;
+        let (status, _value) = get_json(&app, "/api/websockets/messages", Some(&token)).await;
         assert_eq!(status, StatusCode::OK);
     }
 
@@ -1841,7 +1841,7 @@ mod tests {
     async fn test_websocket_messages_list() {
         let app = test_app().await;
         let token = register_token(&app).await;
-        let (status, value) = get_json(&app, "/api/websockets/nonexistent/messages", Some(&token)).await;
+        let (status, _value) = get_json(&app, "/api/websockets/nonexistent/messages", Some(&token)).await;
         assert_eq!(status, StatusCode::NOT_FOUND);
     }
 
