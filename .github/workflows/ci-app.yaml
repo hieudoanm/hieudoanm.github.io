@@ -59,7 +59,7 @@ jobs:
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: app-tauri-expo
+          name: app_tauri_expo
           path: packages/app/expo.dev/src-tauri/target/release/bundle/
 
   next:
@@ -108,7 +108,7 @@ jobs:
       - name: Upload Tauri Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: app-tauri-next
+          name: app_tauri_next
           path: packages/app/nextjs.org/src-tauri/target/release/bundle/
 
   solid:
@@ -158,9 +158,8 @@ jobs:
         run: |
           mkdir -p release
           for dir in artifacts/*/; do
-            artifact_name=$(basename "$dir")
-            find "$dir" -type f \( -name "*.deb" -o -name "*.AppImage" -o -name "*.dmg" -o -name "*.msi" -o -name "*.tar.gz" -o -name "*.tar.xz" \) -print0 | while IFS= read -r -d '' file; do
-              cp "$file" "release/${artifact_name}-$(basename "$file")"
+            find "$dir" -type f \( -name "*.AppImage" -o -name "*.deb" -o -name "*.dmg" -o -name "*.msi" -o -name "*.tar.xz" \) ! -name "*control.tar.gz" ! -name "*data.tar.gz" -print0 | while IFS= read -r -d '' file; do
+              cp "$file" "release/"
             done
           done
       - name: Publish Release
