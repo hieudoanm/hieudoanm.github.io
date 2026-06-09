@@ -45,7 +45,7 @@ jobs:
       - name: Test
         run: pnpm run test --filter=...[origin/master]
       - name: Build Artifact
-        run: pnpm tauri build --ci --config '{"build":{"beforeBuildCommand":""}}'
+        run: pnpm exec tauri build --ci --config '{"build":{"beforeBuildCommand":""}}'
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v4
         with:
