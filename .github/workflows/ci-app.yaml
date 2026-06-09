@@ -46,7 +46,9 @@ jobs:
         run: pnpm run test --filter=...[origin/master]
       - name: Build Artifact
         working-directory: packages/app/expo.dev
-        run: pnpm tauri build --ci --config '{"build":{"beforeBuildCommand":""}}'
+        run: |
+          if [ ! -d dist ]; then pnpm run build; fi
+          pnpm tauri build --ci --config '{"build":{"beforeBuildCommand":""}}'
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v4
         with:
