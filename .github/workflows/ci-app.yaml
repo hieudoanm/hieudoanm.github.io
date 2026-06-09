@@ -159,9 +159,7 @@ jobs:
           mkdir -p release
           for dir in artifacts/*/; do
             artifact_name=$(basename "$dir")
-            for file in "$dir"*; do
-              cp "$file" "release/${artifact_name}-$(basename "$file")"
-            done
+            cp -r "$dir." "release/${artifact_name}/"
           done
       - name: Publish Release
         run: |
