@@ -71,6 +71,7 @@
     "globals": "17.6.0",
     "jest": "30.4.2",
     "jest-expo": "56.0.4",
+    "jiti": "2.7.0",
     "kill-port": "2.0.1",
     "nativewind": "4.2.5",
     "prettier": "3.8.3",
