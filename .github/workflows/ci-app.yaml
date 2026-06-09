@@ -159,7 +159,9 @@ jobs:
           mkdir -p release
           for dir in artifacts/*/; do
             artifact_name=$(basename "$dir")
-            cp -r "$dir." "release/${artifact_name}/"
+            find "$dir" -type f \( -name "*.deb" -o -name "*.AppImage" -o -name "*.dmg" -o -name "*.msi" -o -name "*.tar.gz" -o -name "*.tar.xz" \) -print0 | while IFS= read -r -d '' file; do
+              cp "$file" "release/${artifact_name}-$(basename "$file")"
+            done
           done
       - name: Publish Release
         run: |
