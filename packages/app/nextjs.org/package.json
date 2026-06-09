@@ -27,10 +27,7 @@
     "prebuild": "rimraf .next",
     "build": "next build --turbopack",
     "prestart": "kill-port 3000",
-    "start": "next start",
-    "tauri": "tauri",
-    "dev:desktop": "tauri dev",
-    "build:desktop": "tauri build"
+    "start": "next start"
   },
   "dependencies": {
     "@api/ts": "workspace:*",

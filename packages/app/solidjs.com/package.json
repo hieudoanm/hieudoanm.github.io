@@ -11,10 +11,7 @@
     "preview": "vite preview",
     "lint": "true",
     "format": "prettier --cache --write .",
-    "test": "vitest",
-    "tauri": "tauri",
-    "dev:desktop": "tauri dev",
-    "build:desktop": "tauri build"
+    "test": "vitest"
   },
   "dependencies": {
     "@api/ts": "workspace:*",
