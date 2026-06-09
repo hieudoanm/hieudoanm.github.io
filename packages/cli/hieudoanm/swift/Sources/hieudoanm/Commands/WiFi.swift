@@ -1,5 +1,6 @@
 import Foundation
 import ArgumentParser
+import CoreWLAN
 
 struct WiFi: ParsableCommand {
     static let configuration = CommandConfiguration(
@@ -9,24 +10,58 @@ struct WiFi: ParsableCommand {
 
     mutating func run() {
         #if os(macOS)
-        let task = Process()
-        task.executableURL = URL(fileURLWithPath: "/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport")
-        task.arguments = ["-s"]
+        let client = CWWiFiClient.shared()
 
-        let pipe = Pipe()
-        task.standardOutput = pipe
-        task.standardError = Pipe()
+        guard let interface = client.interface() else {
+            print("[]")
+            return
+        }
 
         do {
-            try task.run()
-            task.waitUntilExit()
-            let data = pipe.fileHandleForReading.readDataToEndOfFile()
-            print(String(data: data, encoding: .utf8) ?? "No networks found")
+            let networks = try interface.scanForNetworks(withSSID: nil)
+
+            let results = networks.map { network -> WifiNetwork in
+                var secure = false
+
+                if network.responds(to: NSSelectorFromString("supportedSecurityTypes")) {
+                    if let securityTypes = network.value(forKey: "supportedSecurityTypes") as? Set<Int> {
+                        secure = !securityTypes.isEmpty
+                    }
+                } else if network.responds(to: NSSelectorFromString("security")) {
+                    if let securityNumber = network.value(forKey: "security") as? Int {
+                        secure = securityNumber != 0
+                    }
+                }
+
+                let channelNumber = network.wlanChannel?.channelNumber ?? 0
+                let ssidName = network.ssid?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "<Hidden>"
+
+                return WifiNetwork(
+                    ssid: ssidName,
+                    bssid: network.bssid ?? "",
+                    rssi: network.rssiValue,
+                    channel: channelNumber,
+                    secure: secure
+                )
+            }
+
+            let jsonData = try JSONEncoder().encode(results)
+            if let jsonString = String(data: jsonData, encoding: .utf8) {
+                print(jsonString)
+            }
         } catch {
-            print("Error scanning WiFi: \(error)")
+            print("[]")
         }
         #else
         print("WiFi scanning not supported on this platform")
         #endif
     }
+}
+
+private struct WifiNetwork: Codable {
+    let ssid: String
+    let bssid: String
+    let rssi: Int
+    let channel: Int
+    let secure: Bool
 }

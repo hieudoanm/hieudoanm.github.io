@@ -79,7 +79,7 @@
     "onnxruntime-web": "1.26.0",
     "openai": "6.42.0",
     "pdf-lib": "1.17.1",
-    "pdfmake": "0.3.9",
+    "pdfmake": "0.3.10",
     "qrcode": "1.5.4",
     "react": "19.2.7",
     "react-chartjs-2": "5.3.1",
