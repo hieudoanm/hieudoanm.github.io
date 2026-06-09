@@ -1,7 +1,7 @@
 [package]
-name = "hieudoanm_next"
+name = "hieudoanm_expo"
 version = "0.0.1"
-description = "Hieu Doan"
+description = "@hieudoanm.github.io/expo"
 authors = ["hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)"]
 license = "GPL-3.0"
 repository = "git+ssh://git@github.com/hieudoanm/hieudoanm.github.io.git"

@@ -23,6 +23,7 @@
     "predev": "rimraf .next && kill-port 3000",
     "dev": "next dev --turbopack",
     "test": "jest",
+    "analyze": "next experimental-analyze",
     "prebuild": "rimraf .next",
     "build": "next build --turbopack",
     "prestart": "kill-port 3000",

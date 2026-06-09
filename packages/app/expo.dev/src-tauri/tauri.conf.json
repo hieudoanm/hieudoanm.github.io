@@ -1,18 +1,18 @@
 {
   "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
   "productName": "hieudoanm.github.io",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "identifier": "io.github.hieudoanm",
   "build": {
-    "frontendDist": "../../../docs",
-    "devUrl": "http://localhost:3000",
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:8081",
     "beforeDevCommand": "pnpm dev",
     "beforeBuildCommand": "pnpm build"
   },
   "app": {
     "windows": [
       {
-        "title": "@hieudoanm.github.io/next",
+        "title": "@hieudoanm.github.io/expo",
         "width": 800,
         "height": 600,
         "resizable": true,
@@ -32,6 +32,9 @@
       "icons/128x128@2x.png",
       "icons/icon.icns",
       "icons/icon.ico"
-    ]
+    ],
+    "android": {
+      "debugApplicationIdSuffix": ".debug"
+    }
   }
 }
