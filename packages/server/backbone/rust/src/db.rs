@@ -401,7 +401,7 @@ pub fn validate_data(data: &Value, schema: &str) -> Result<()> {
         let type_str = type_val.as_str().unwrap_or("string");
         let is_optional = field.ends_with('?');
         let field_name = if is_optional { &field[..field.len() - 1] } else { field.as_str() };
-        if is_optional && !data.get(field_name).is_some_and(|v| !v.is_null()) {
+        if is_optional && data.get(field_name).is_none_or(|v| v.is_null()) {
             continue;
         }
         match data.get(field_name) {
