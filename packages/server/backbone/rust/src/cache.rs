@@ -38,16 +38,16 @@ impl CacheStore {
         {
             let data = self.data.read().unwrap();
             if let Some(entry) = data.get(key) {
-                if entry.ttl > 0 && !entry.expires_at.is_empty() {
-                    if let Ok(expires) = chrono::DateTime::parse_from_rfc3339(&entry.expires_at) {
-                        if Utc::now() > expires {
-                            drop(data);
-                            let mut data = self.data.write().unwrap();
-                            data.remove(key);
-                            let _ = db::delete_cache_entry(conn, key);
-                            return Ok(None);
-                        }
-                    }
+                if entry.ttl > 0
+                    && !entry.expires_at.is_empty()
+                    && let Ok(expires) = chrono::DateTime::parse_from_rfc3339(&entry.expires_at)
+                    && Utc::now() > expires
+                {
+                    drop(data);
+                    let mut data = self.data.write().unwrap();
+                    data.remove(key);
+                    let _ = db::delete_cache_entry(conn, key);
+                    return Ok(None);
                 }
                 return Ok(Some(entry.clone()));
             }
@@ -73,10 +73,11 @@ impl CacheStore {
         let now = Utc::now();
         data.values()
             .filter(|e| {
-                if e.ttl > 0 && !e.expires_at.is_empty() {
-                    if let Ok(expires) = chrono::DateTime::parse_from_rfc3339(&e.expires_at) {
-                        return now <= expires;
-                    }
+                if e.ttl > 0
+                    && !e.expires_at.is_empty()
+                    && let Ok(expires) = chrono::DateTime::parse_from_rfc3339(&e.expires_at)
+                {
+                    return now <= expires;
                 }
                 true
             })
@@ -97,10 +98,11 @@ impl CacheStore {
         let expired = data
             .values()
             .filter(|e| {
-                if e.ttl > 0 && !e.expires_at.is_empty() {
-                    if let Ok(expires) = chrono::DateTime::parse_from_rfc3339(&e.expires_at) {
-                        return now > expires;
-                    }
+                if e.ttl > 0
+                    && !e.expires_at.is_empty()
+                    && let Ok(expires) = chrono::DateTime::parse_from_rfc3339(&e.expires_at)
+                {
+                    return now > expires;
                 }
                 false
             })
@@ -116,10 +118,11 @@ impl CacheStore {
         let mut data = self.data.write().unwrap();
         let now = Utc::now();
         data.retain(|_, e| {
-            if e.ttl > 0 && !e.expires_at.is_empty() {
-                if let Ok(expires) = chrono::DateTime::parse_from_rfc3339(&e.expires_at) {
-                    return now <= expires;
-                }
+            if e.ttl > 0
+                && !e.expires_at.is_empty()
+                && let Ok(expires) = chrono::DateTime::parse_from_rfc3339(&e.expires_at)
+            {
+                return now <= expires;
             }
             true
         });

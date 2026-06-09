@@ -272,7 +272,7 @@ pub fn migrate_collection_schema(conn: &Connection, name: &str, old_schema: &str
                 .map_err(|e| AppError::Internal(format!("add column: {e}")))?;
         }
     }
-    for (field, _) in &old_fields {
+    for field in old_fields.keys() {
         if !new_fields.contains_key(field) {
             let alter = format!("ALTER TABLE \"_data_{name}\" DROP COLUMN \"{field}\"");
             conn.execute(&alter, [])
@@ -290,10 +290,10 @@ pub fn migrate_collection_schema(conn: &Connection, name: &str, old_schema: &str
 
 pub fn update_collection(conn: &Connection, name: &str, schema: Option<&str>) -> Result<Collection> {
     let existing = get_collection(conn, name)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
-    if let Some(new_schema) = schema {
-        if !new_schema.is_empty() && new_schema != &existing.schema {
-            migrate_collection_schema(conn, name, &existing.schema, new_schema)?;
-        }
+    if let Some(new_schema) = schema
+        && !new_schema.is_empty() && new_schema != existing.schema
+    {
+        migrate_collection_schema(conn, name, &existing.schema, new_schema)?;
     }
     get_collection(conn, name)?.ok_or_else(|| AppError::Internal("collection not found after update".into()))
 }
@@ -401,7 +401,7 @@ pub fn validate_data(data: &Value, schema: &str) -> Result<()> {
         let type_str = type_val.as_str().unwrap_or("string");
         let is_optional = field.ends_with('?');
         let field_name = if is_optional { &field[..field.len() - 1] } else { field.as_str() };
-        if is_optional && !data.get(field_name).map_or(false, |v| !v.is_null()) {
+        if is_optional && !data.get(field_name).is_some_and(|v| !v.is_null()) {
             continue;
         }
         match data.get(field_name) {
@@ -510,10 +510,10 @@ pub fn insert_record(
                 AppError::Internal(format!("insert record: {e}"))
             }
         })?;
-    if let Ok(Some(col)) = get_collection(conn, collection) {
-        if col.schema != "{}" {
-            let _ = sync_schema_columns(conn, collection, id, &col.schema);
-        }
+    if let Ok(Some(col)) = get_collection(conn, collection)
+        && col.schema != "{}"
+    {
+        let _ = sync_schema_columns(conn, collection, id, &col.schema);
     }
     Ok(Record {
         id: id.to_string(),
@@ -639,10 +639,10 @@ pub fn update_record(
     conn.execute(&sql, params![raw, now, id])
         .map_err(|e| AppError::Internal(e.to_string()))?;
 
-    if let Ok(Some(col)) = get_collection(conn, collection) {
-        if col.schema != "{}" {
-            let _ = sync_schema_columns(conn, collection, id, &col.schema);
-        }
+    if let Ok(Some(col)) = get_collection(conn, collection)
+        && col.schema != "{}"
+    {
+        let _ = sync_schema_columns(conn, collection, id, &col.schema);
     }
     let existing = get_record(conn, collection, id)?;
     existing.ok_or_else(|| AppError::NotFound("record not found after update".into()))
@@ -1350,14 +1350,14 @@ pub fn get_cache_entry(conn: &Connection, key: &str) -> Result<Option<CacheEntry
         .map_err(|e| AppError::Internal(e.to_string()))?;
     match rows.next() {
         Some(Ok(entry)) => {
-            if entry.ttl > 0 && !entry.expires_at.is_empty() {
-                if let Ok(expires) = chrono::DateTime::parse_from_rfc3339(&entry.expires_at) {
-                    if chrono::Utc::now() > expires {
-                        conn.execute("DELETE FROM _cache WHERE key = ?1", params![key])
-                            .map_err(|e| AppError::Internal(e.to_string()))?;
-                        return Ok(None);
-                    }
-                }
+            if entry.ttl > 0
+                && !entry.expires_at.is_empty()
+                && let Ok(expires) = chrono::DateTime::parse_from_rfc3339(&entry.expires_at)
+                && chrono::Utc::now() > expires
+            {
+                conn.execute("DELETE FROM _cache WHERE key = ?1", params![key])
+                    .map_err(|e| AppError::Internal(e.to_string()))?;
+                return Ok(None);
             }
             Ok(Some(entry))
         }
@@ -1717,6 +1717,7 @@ pub fn get_cron_job(conn: &Connection, id: &str) -> Result<Option<CronJob>> {
     }
 }
 
+#[allow(clippy::too_many_arguments)]
 pub fn insert_cron_job(
     conn: &Connection,
     id: &str,
@@ -1749,6 +1750,7 @@ pub fn insert_cron_job(
     })
 }
 
+#[allow(clippy::too_many_arguments)]
 pub fn update_cron_job(
     conn: &Connection,
     id: &str,

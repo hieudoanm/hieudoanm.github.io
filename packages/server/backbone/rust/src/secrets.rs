@@ -4,7 +4,7 @@ use aes_gcm::{
 };
 use rand::RngCore;
 use serde_json::Value;
-use std::path::PathBuf;
+use std::path::Path;
 
 use crate::models::Secret;
 
@@ -12,7 +12,7 @@ pub const EVENT_SECRET_CREATE: &str = "secret.create";
 pub const EVENT_SECRET_UPDATE: &str = "secret.update";
 pub const EVENT_SECRET_DELETE: &str = "secret.delete";
 
-pub fn get_or_create_secrets_key(data_dir: &PathBuf) -> Result<Vec<u8>, String> {
+pub fn get_or_create_secrets_key(data_dir: &Path) -> Result<Vec<u8>, String> {
     if let Ok(env_key) = std::env::var("BACKBONE_SECRETS_KEY") {
         return hex::decode(&env_key).map_err(|e| format!("decode env key: {e}"));
     }
@@ -50,7 +50,7 @@ pub fn decrypt_secret(key: &[u8], encrypted: &str) -> Result<String, String> {
     let plaintext = cipher
         .decrypt(nonce, ciphertext.as_slice())
         .map_err(|e| format!("decrypt: {e}"))?;
-    Ok(String::from_utf8(plaintext).map_err(|e| format!("utf8: {e}"))?)
+    String::from_utf8(plaintext).map_err(|e| format!("utf8: {e}"))
 }
 
 pub fn webhook_secret_data(secret: &Secret) -> Value {

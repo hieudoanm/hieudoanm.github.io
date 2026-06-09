@@ -1,7 +1,12 @@
 [package]
 name = "backbone"
-version = "0.1.0"
+version = "0.0.1"
+description = "Backbone - Back-end as a Service"
+authors = ["hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)"]
+license = "GPL-3.0"
+repository = "git+ssh://git@github.com/hieudoanm/hieudoanm.github.io.git"
 edition = "2024"
+rust-version = "1.77.2"
 
 [dependencies]
 axum = { version = "=0.8.9", features = ["ws", "macros"] }

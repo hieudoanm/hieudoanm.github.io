@@ -49,10 +49,10 @@ pub async fn start_cron_scheduler(state: Arc<AppState>) {
                         .map(|d| d.with_timezone(&chrono::Utc))
                         .unwrap_or(now - chrono::Duration::hours(1))
                 };
-                if let Some(next_run) = schedule.after(&last_run).next() {
-                    if next_run <= now {
-                        execute_cron_job(Arc::clone(&state), job).await;
-                    }
+                if let Some(next_run) = schedule.after(&last_run).next()
+                    && next_run <= now
+                {
+                    execute_cron_job(Arc::clone(&state), job).await;
                 }
             }
         }
@@ -73,12 +73,12 @@ pub async fn execute_cron_job(state: Arc<AppState>, job: CronJob) {
         _ => client.get(&job.command),
     };
 
-    if !job.headers.is_empty() {
-        if let Ok(headers) = serde_json::from_str::<Vec<Vec<String>>>(&job.headers) {
-            for h in headers {
-                if h.len() == 2 {
-                    req_builder = req_builder.header(&h[0], &h[1]);
-                }
+    if !job.headers.is_empty()
+        && let Ok(headers) = serde_json::from_str::<Vec<Vec<String>>>(&job.headers)
+    {
+        for h in headers {
+            if h.len() == 2 {
+                req_builder = req_builder.header(&h[0], &h[1]);
             }
         }
     }

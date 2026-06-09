@@ -674,7 +674,7 @@ pub async fn get_thumbnail(
         .join(&bucket)
         .join(&file_id);
     let thumb_data =
-        crate::image::generate_thumbnail(&file_path, 256).map_err(|e| AppError::Internal(e))?;
+        crate::image::generate_thumbnail(&file_path, 256).map_err(AppError::Internal)?;
     let response = axum::response::Response::builder()
         .header(axum::http::header::CONTENT_TYPE, "image/jpeg")
         .body(Body::from(thumb_data))
@@ -858,7 +858,7 @@ pub async fn create_secret(
         req.scope
     };
     let encrypted = secrets::encrypt_secret(&state.secrets_key, &req.value)
-        .map_err(|e| AppError::Internal(e))?;
+        .map_err(AppError::Internal)?;
     let id = uuid::Uuid::new_v4().to_string().replace('-', "");
     let conn = state
         .db
@@ -888,7 +888,7 @@ pub async fn get_secret(
     let mut secret =
         db::get_secret(&conn, &id)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
     secret.value = secrets::decrypt_secret(&state.secrets_key, &secret.value)
-        .map_err(|e| AppError::Internal(e))?;
+        .map_err(AppError::Internal)?;
     Ok(Json(secret))
 }
 
@@ -914,7 +914,7 @@ pub async fn update_secret(
         _ => secrets::decrypt_secret(&state.secrets_key, &existing.value).unwrap_or_default(),
     };
     let encrypted = secrets::encrypt_secret(&state.secrets_key, &plaintext)
-        .map_err(|e| AppError::Internal(e))?;
+        .map_err(AppError::Internal)?;
     let secret = db::update_secret(&conn, &id, &name, &encrypted, &scope)?;
     webhook::dispatch_event(
         &state,
