@@ -167,6 +167,6 @@ jobs:
           gh release create app-latest \
             --title "App Builds (latest)" \
             --notes "Auto-built apps from commit ${{ github.sha }}" \
-            release/*
+            $(find release -type f | sort)
         env:
           GH_TOKEN: ${{ github.token }}
