@@ -4,10 +4,10 @@
   "version": "0.0.1",
   "identifier": "io.github.hieudoanm",
   "build": {
-    "frontendDist": "../../../docs",
+    "frontendDist": "../out",
     "devUrl": "http://localhost:3000",
     "beforeDevCommand": "pnpm dev",
-    "beforeBuildCommand": "pnpm build"
+    "beforeBuildCommand": "EXPORT=true pnpm build"
   },
   "app": {
     "windows": [

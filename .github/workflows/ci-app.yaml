@@ -44,11 +44,20 @@ jobs:
         run: pnpm run build --filter=...[origin/master]
       - name: Test
         run: pnpm run test --filter=...[origin/master]
-      - name: Build Artifact
+      - name: Install System Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libwebkit2gtk-4.1-dev \
+            libgtk-3-dev \
+            libappindicator3-dev \
+            librsvg2-dev \
+            patchelf
+      - name: Build Tauri Artifact
         working-directory: packages/app/expo.dev
         run: |
           if [ ! -d dist ]; then pnpm run build; fi
-          pnpm tauri build --ci --config '{"build":{"beforeBuildCommand":""}}'
+          pnpm exec tauri build --ci --config '{"build":{"beforeBuildCommand":""}}'
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -84,6 +93,25 @@ jobs:
         run: pnpm run build --filter=...[origin/master]
       - name: Test
         run: pnpm run test --filter=...[origin/master]
+      - name: Install System Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libwebkit2gtk-4.1-dev \
+            libgtk-3-dev \
+            libappindicator3-dev \
+            librsvg2-dev \
+            patchelf
+      - name: Build Tauri Artifact
+        working-directory: packages/app/nextjs.org
+        run: |
+          if [ ! -d out ]; then EXPORT=true pnpm run build; fi
+          pnpm exec tauri build --ci --config '{"build":{"beforeBuildCommand":""}}'
+      - name: Upload Tauri Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-tauri-next
+          path: packages/app/nextjs.org/src-tauri/target/release/bundle/
 
   solid:
     name: SolidJS
@@ -117,7 +145,7 @@ jobs:
 
   publish:
     name: Publish to GitHub Release
-    needs: expo
+    needs: [expo, next]
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -129,14 +157,22 @@ jobs:
       - name: Download Build Artifacts
         uses: actions/download-artifact@v4
         with:
-          name: app-tauri-expo
-          path: release
+          path: artifacts
+      - name: Collect Release Artifacts
+        run: |
+          mkdir -p release
+          for dir in artifacts/*/; do
+            artifact_name=$(basename "$dir")
+            for file in "$dir"*; do
+              cp "$file" "release/${artifact_name}-$(basename "$file")"
+            done
+          done
       - name: Publish Release
         run: |
-          gh release delete app-tauri-expo-latest --yes --cleanup-tag 2>/dev/null || true
-          gh release create app-tauri-expo-latest \
-            --title "Tauri Desktop App (latest)" \
-            --notes "Auto-built Tauri app from commit ${{ github.sha }}" \
+          gh release delete app-latest --yes --cleanup-tag 2>/dev/null || true
+          gh release create app-latest \
+            --title "App Builds (latest)" \
+            --notes "Auto-built apps from commit ${{ github.sha }}" \
             release/*
         env:
           GH_TOKEN: ${{ github.token }}
