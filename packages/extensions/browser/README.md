@@ -129,10 +129,7 @@ extension/
     "48": "icons/48x48.png",
     "128": "icons/128x128.png"
   },
-  "permissions": [
-    "tabs",
-    "<all_urls>"
-  ],
+  "permissions": ["tabs", "<all_urls>"],
   "browser_action": {
     "default_popup": "popup.html",
     "default_icon": "icons/48x48.png"
