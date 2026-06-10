@@ -63,7 +63,7 @@ export const ChatModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     });
 
     const { data, error } = await tryCatch(
-      trpcClient.genai.generate.mutate({ messages: oldMessages, model })
+      trpcClient.openrouter.generate.mutate({ messages: oldMessages, model })
     );
 
     let text = 'An error occurred while generating content.';
