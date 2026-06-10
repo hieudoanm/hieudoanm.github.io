@@ -18,7 +18,6 @@ import {
   agents,
   clis,
   extensions,
-  ides,
   packages,
 } from '@hieudoanm.github.io/data/downloads';
 import { getTimeInZone, timezones } from '@hieudoanm.github.io/data/timezones';
@@ -1461,7 +1460,6 @@ const MainContent: FC<MainContentProps> = memo(
         { label: 'Agents', items: agents },
         { label: 'CLIs', items: clis },
         { label: 'Extensions', items: extensions },
-        { label: 'IDEs', items: ides },
         { label: 'Packages', items: packages },
       ],
       []
@@ -1800,11 +1798,6 @@ export const Start: FC = () => {
       {
         label: 'Extensions',
         items: f(extensions, 'id').map(toItemCard),
-        Card: ItemCard,
-      },
-      {
-        label: 'IDEs',
-        items: f(ides, 'label').map(toItemCard),
         Card: ItemCard,
       },
       {

@@ -10,49 +10,29 @@ export const clis: Download[] = [
     description: 'Aliases',
     downloads: [
       {
-        label: 'Download BIN',
+        label: 'Download bash',
         url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/cli/bash/download/bash/dist',
       },
     ],
   },
   {
-    id: 'hieudoanm.go',
-    label: 'hieudoanm.go',
-    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/cli/hieudoanm/cobra.go',
+    id: 'hieudoanm',
+    label: 'hieudoanm',
+    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/cli/hieudoanm',
     emoji: '👨‍💻',
     color: '#1f2937',
-    description: 'Go',
+    description: 'CLI',
     downloads: [
       {
-        label: 'Download BIN',
+        label: 'Download bin.go',
         url: 'https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/cli-latest',
       },
-    ],
-  },
-  {
-    id: 'hieudoanm.rs',
-    label: 'hieudoanm.rs',
-    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/cli/hieudoanm/clap.rs',
-    emoji: '👨‍💻',
-    color: '#1f2937',
-    description: 'Rust',
-    downloads: [
       {
-        label: 'Download BIN',
+        label: 'Download bin.rs',
         url: 'https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/cli-latest',
       },
-    ],
-  },
-  {
-    id: 'hieudoanm.swift',
-    label: 'hieudoanm.swift',
-    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/cli/hieudoanm/swift',
-    emoji: '👨‍💻',
-    color: '#1f2937',
-    description: 'Swift',
-    downloads: [
       {
-        label: 'Download BIN',
+        label: 'Download bin.swift',
         url: 'https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/cli-latest',
       },
     ],
