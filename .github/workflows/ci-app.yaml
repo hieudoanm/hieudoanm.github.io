@@ -132,6 +132,8 @@ jobs:
             libappindicator3-dev \
             librsvg2-dev \
             patchelf
+      - name: Build Workspace Dependencies
+        run: pnpm run build --filter=@api/ts --filter=@chess/ts --filter=@lodash/ts --filter=@lodashx/ts --filter=@frontend/native --filter=@frontend/react
       - name: Build App
         working-directory: packages/app/${{ matrix.app }}
         run: |
