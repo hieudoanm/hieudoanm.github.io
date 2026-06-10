@@ -35,6 +35,10 @@
   },
   "dependencies": {
     "@expo/ui": "56.0.16",
+    "@frontend/native": "workspace:*",
+    "@frontend/react": "workspace:*",
+    "@lodashx/ts": "workspace:*",
+    "@tanstack/react-query": "5.101.0",
     "expo": "56.0.9",
     "expo-constants": "56.0.17",
     "expo-device": "56.0.4",
