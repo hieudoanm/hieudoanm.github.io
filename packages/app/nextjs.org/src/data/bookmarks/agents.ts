@@ -1,6 +1,6 @@
 import { ItemCardProps } from '@hieudoanm.github.io/components/pages/start/cards/ItemCard';
 
-export const chat: ItemCardProps[] = [
+export const agents: ItemCardProps[] = [
   {
     label: 'Claude',
     href: 'https://claude.ai/',

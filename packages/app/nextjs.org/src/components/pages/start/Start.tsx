@@ -6,7 +6,7 @@ import {
 import { LeftSidebar } from '@hieudoanm.github.io/components/pages/start/sidebars/LeftSidebar';
 import { RightSidebar } from '@hieudoanm.github.io/components/pages/start/sidebars/RightSidebar';
 import {
-  chat as chatBookmarks,
+  agents as agentsBookmarks,
   code as codeBookmarks,
   google as googleBookmarks,
   messaging as messagingBookmarks,
@@ -1411,7 +1411,7 @@ const MainContent: FC<MainContentProps> = memo(
     // Bookmark sections
     const bookmarkSections = useMemo(
       () => [
-        { label: 'Chatbot', items: chatBookmarks },
+        { label: 'Agents', items: agentsBookmarks },
         { label: 'Code', items: codeBookmarks },
         { label: 'Google Workspace', items: googleBookmarks },
         { label: 'Messaging', items: messagingBookmarks },
@@ -1703,8 +1703,8 @@ export const Start: FC = () => {
 
     return [
       {
-        label: 'Chatbot',
-        items: f(chatBookmarks, 'label'),
+        label: 'Agents',
+        items: f(agentsBookmarks, 'label'),
         Card: ItemCard,
       },
       {

@@ -1,4 +1,4 @@
-export { chat } from './chat';
+export { agents } from './agents';
 export { code } from './code';
 export { google } from './google';
 export { messaging } from './messaging';
