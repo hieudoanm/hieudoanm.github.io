@@ -37,18 +37,4 @@ export const clis: Download[] = [
       },
     ],
   },
-  {
-    id: 'gh',
-    label: 'gh',
-    url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/cli/gh',
-    emoji: '🐙',
-    color: '#24292f',
-    description: 'GitHub CLI',
-    downloads: [
-      {
-        label: 'Download BIN',
-        url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/cli/gh/bin',
-      },
-    ],
-  },
 ];
