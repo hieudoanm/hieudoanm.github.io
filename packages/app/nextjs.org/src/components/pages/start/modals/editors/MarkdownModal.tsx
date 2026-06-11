@@ -1,10 +1,12 @@
 import { markdown as markdownLang } from '@codemirror/lang-markdown';
+import { search, searchKeymap } from '@codemirror/search';
 import { Compartment, EditorState } from '@codemirror/state';
+import { EditorView, keymap, lineNumbers } from '@codemirror/view';
 import { oneDark } from '@codemirror/theme-one-dark';
-import { EditorView } from '@codemirror/view';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 import { tryCatch } from '@lodashx/ts';
 import DOMPurify from 'dompurify';
+import { saveAs } from 'file-saver';
 import 'github-markdown-css/github-markdown.css';
 import htmlToPdfmake from 'html-to-pdfmake';
 import { marked } from 'marked';
@@ -29,8 +31,21 @@ import {
   PageSize,
   TDocumentDefinitions,
 } from 'pdfmake/interfaces';
-import { ChangeEvent, FC, useEffect, useRef, useState } from 'react';
+import {
+  ChangeEvent,
+  FC,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import Tesseract from 'tesseract.js';
+
+/* =========================
+   Types
+========================= */
+type ViewMode = 'split' | 'editor' | 'preview';
 
 /* =========================
    Fonts
@@ -88,6 +103,152 @@ const FONT_NAME_TIMES = 'Times-New-Roman';
 const A4_MARGIN: [number, number, number, number] = [72, 72, 72, 72];
 const ZERO_MARGIN: [number, number, number, number] = [0, 0, 0, 0];
 
+const STORAGE_KEY = '@hieudoanm/markdown-draft';
+
+interface TocItem {
+  level: number;
+  text: string;
+  line: number;
+}
+
+interface DraftData {
+  markdown: string;
+  fontId: string;
+  viewMode: ViewMode;
+  fileName: string;
+  showLineNumbers: boolean;
+}
+
+/* =========================
+   Formatting helpers
+========================= */
+const insertAround = (
+  view: EditorView,
+  before: string,
+  after: string,
+  placeholder?: string
+) => {
+  const { from, to } = view.state.selection.main;
+  const text = view.state.sliceDoc(from, to) || placeholder || '';
+  view.dispatch({
+    changes: { from, to, insert: `${before}${text}${after}` },
+    selection: {
+      anchor: from + before.length,
+      head: from + before.length + text.length,
+    },
+  });
+  view.focus();
+};
+
+const insertAtLineStart = (view: EditorView, prefix: string) => {
+  const { from } = view.state.selection.main;
+  const line = view.state.doc.lineAt(from);
+  view.dispatch({
+    changes: { from: line.from, to: line.from, insert: `${prefix} ` },
+  });
+  view.focus();
+};
+
+const insertBlock = (
+  view: EditorView,
+  before: string,
+  after: string,
+  placeholder?: string
+) => {
+  const { from, to } = view.state.selection.main;
+  const text = view.state.sliceDoc(from, to) || placeholder || '';
+  view.dispatch({
+    changes: { from, to, insert: `${before}\n${text}\n${after}` },
+    selection: {
+      anchor: from + before.length + 1,
+      head: from + before.length + 1 + text.length,
+    },
+  });
+  view.focus();
+};
+
+const insertHeading = (view: EditorView, level: number) => {
+  const { from } = view.state.selection.main;
+  const line = view.state.doc.lineAt(from);
+  const prefix = '#'.repeat(level);
+  const existingMatch = line.text.match(/^(#{1,6})\s/);
+  if (existingMatch && existingMatch[1].length === level) {
+    view.dispatch({
+      changes: { from: line.from, to: line.from + level + 1, insert: '' },
+    });
+  } else {
+    view.dispatch({
+      changes: { from: line.from, to: line.from, insert: `${prefix} ` },
+    });
+  }
+  view.focus();
+};
+
+const insertTable = (view: EditorView) => {
+  const { from } = view.state.selection.main;
+  const table =
+    '| Column 1 | Column 2 | Column 3 |\n|----------|----------|----------|\n| Cell     | Cell     | Cell     |';
+  view.dispatch({
+    changes: { from, to: from, insert: table },
+  });
+  view.focus();
+};
+
+/* =========================
+   Auto-pairing
+========================= */
+const autoClose = (open: string, close: string) => (view: EditorView) => {
+  const { from, to } = view.state.selection.main;
+  if (from !== to) {
+    view.dispatch({
+      changes: {
+        from,
+        to,
+        insert: open + view.state.sliceDoc(from, to) + close,
+      },
+      selection: { anchor: from + open.length, head: to + open.length },
+    });
+  } else if (
+    from < view.state.doc.length &&
+    view.state.sliceDoc(from, from + close.length) === close
+  ) {
+    view.dispatch({
+      selection: { anchor: from + close.length },
+    });
+  } else {
+    view.dispatch({
+      changes: { from, insert: open + close },
+      selection: { anchor: from + open.length },
+    });
+  }
+  view.focus();
+  return true;
+};
+
+/* =========================
+   Stats
+========================= */
+interface Stats {
+  characters: number;
+  charactersNoSpaces: number;
+  words: number;
+  lines: number;
+  readingTime: string;
+}
+
+const computeStats = (text: string): Stats => {
+  const characters = text.length;
+  const charactersNoSpaces = text.replace(/\s/g, '').length;
+  const words = text.trim() ? text.trim().split(/\s+/).length : 0;
+  const lines = text ? text.split('\n').length : 0;
+  const minutes = Math.max(1, Math.ceil(words / 200));
+  const readingTime = `${minutes} min`;
+  return { characters, charactersNoSpaces, words, lines, readingTime };
+};
+
+/* =========================
+   INITIAL_MARKDOWN
+========================= */
 const INITIAL_MARKDOWN: string = `# Markdown Cheat Sheet
 
 Thanks for visiting [The Markdown Guide](https://www.markdownguide.org)!
@@ -96,7 +257,7 @@ This Markdown cheat sheet provides a quick overview of all the Markdown syntax e
 
 ## Basic Syntax
 
-These are the elements outlined in John Gruber’s original design document. All Markdown applications support these elements.
+These are the elements outlined in John Gruber's original design document. All Markdown applications support these elements.
 
 ### Heading
 
@@ -248,6 +409,11 @@ export const MarkdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       markdown = INITIAL_MARKDOWN,
       ocrLoading = false,
       fontId = DEFAULT_FONT_ID,
+      viewMode = 'split' as ViewMode,
+      showToc = false,
+      restored = false,
+      fileName = 'untitled.md',
+      showLineNumbers = false,
     },
     setState,
   ] = useState<{
@@ -256,22 +422,38 @@ export const MarkdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     markdown: string;
     ocrLoading: boolean;
     fontId: string;
+    viewMode: ViewMode;
+    showToc: boolean;
+    restored: boolean;
+    fileName: string;
+    showLineNumbers: boolean;
   }>({
     html: '',
     loading: false,
     markdown: INITIAL_MARKDOWN,
     ocrLoading: false,
     fontId: DEFAULT_FONT_ID,
+    viewMode: 'split',
+    showToc: false,
+    restored: false,
+    fileName: 'untitled.md',
+    showLineNumbers: false,
   });
 
   const selectedFont = FONTS.find((f) => f.id === fontId) ?? FONTS[0];
 
+  const stats = useMemo(() => computeStats(markdown), [markdown]);
+
   /* =========================
-     CodeMirror
+      CodeMirror
   ========================= */
   const editorRef = useRef<HTMLDivElement | null>(null);
   const viewRef = useRef<EditorView | null>(null);
   const editableCompartment = useRef(new Compartment()).current;
+  const lineNumbersCompartment = useRef(new Compartment()).current;
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
+  const ocrInputRef = useRef<HTMLInputElement | null>(null);
+  const previewScrollRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (!editorRef.current) return;
@@ -288,12 +470,92 @@ export const MarkdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           '.cm-scroller': { overflow: 'auto', fontFamily: 'monospace' },
         }),
         editableCompartment.of(EditorView.editable.of(!ocrLoading)),
+        lineNumbersCompartment.of(showLineNumbers ? lineNumbers() : []),
+        search({ top: true }),
         EditorView.updateListener.of((update) => {
           if (update.docChanged) {
             const value = update.state.doc.toString();
             setState((prev) => ({ ...prev, markdown: value }));
           }
         }),
+        EditorView.domEventHandlers({
+          paste: (event, view) => {
+            const items = event.clipboardData?.items;
+            if (!items) return false;
+            for (let i = 0; i < items.length; i++) {
+              if (items[i].type.startsWith('image/')) {
+                event.preventDefault();
+                const file = items[i].getAsFile();
+                if (file) {
+                  const reader = new FileReader();
+                  reader.onload = (e) => {
+                    const dataUrl = e.target?.result as string;
+                    if (dataUrl) {
+                      const { from } = view.state.selection.main;
+                      view.dispatch({
+                        changes: { from, insert: `![image](${dataUrl})` },
+                      });
+                      view.focus();
+                    }
+                  };
+                  reader.readAsDataURL(file);
+                }
+                return true;
+              }
+            }
+            return false;
+          },
+        }),
+        keymap.of([
+          ...searchKeymap,
+          {
+            key: 'Mod-b',
+            run: (v) => {
+              insertAround(v, '**', '**', 'bold text');
+              return true;
+            },
+          },
+          {
+            key: 'Mod-i',
+            run: (v) => {
+              insertAround(v, '*', '*', 'italic text');
+              return true;
+            },
+          },
+          {
+            key: 'Mod-Shift-x',
+            run: (v) => {
+              insertAround(v, '~~', '~~', 'strikethrough text');
+              return true;
+            },
+          },
+          {
+            key: 'Mod-k',
+            run: (v) => {
+              insertAround(v, '[', '](url)', 'link text');
+              return true;
+            },
+          },
+          {
+            key: 'Mod-`',
+            run: (v) => {
+              insertAround(v, '`', '`', 'code');
+              return true;
+            },
+          },
+          {
+            key: 'Mod-Shift-c',
+            run: (v) => {
+              insertBlock(v, '```', '```', 'code');
+              return true;
+            },
+          },
+          { key: '"', run: autoClose('"', '"') },
+          { key: "'", run: autoClose("'", "'") },
+          { key: '`', run: autoClose('`', '`') },
+          { key: '[', run: autoClose('[', ']') },
+          { key: '(', run: autoClose('(', ')') },
+        ]),
       ],
     });
 
@@ -323,6 +585,63 @@ export const MarkdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     }
   }, [markdown]);
 
+  /* =========================
+      Line numbers toggle
+  ========================= */
+  useEffect(() => {
+    const view = viewRef.current;
+    if (!view) return;
+    view.dispatch({
+      effects: lineNumbersCompartment.reconfigure(
+        showLineNumbers ? lineNumbers() : []
+      ),
+    });
+  }, [showLineNumbers, lineNumbersCompartment]);
+
+  /* =========================
+      Preview scroll sync
+  ========================= */
+  useEffect(() => {
+    const view = viewRef.current;
+    const previewEl = previewScrollRef.current;
+    if (!view || !previewEl) return;
+
+    const editorScroll = view.scrollDOM;
+    let syncing = false;
+
+    const onEditorScroll = () => {
+      if (syncing) return;
+      syncing = true;
+      const maxScroll = editorScroll.scrollHeight - editorScroll.clientHeight;
+      if (maxScroll > 0) {
+        const ratio = editorScroll.scrollTop / maxScroll;
+        const previewMax = previewEl.scrollHeight - previewEl.clientHeight;
+        previewEl.scrollTop = previewMax > 0 ? ratio * previewMax : 0;
+      }
+      syncing = false;
+    };
+
+    const onPreviewScroll = () => {
+      if (syncing) return;
+      syncing = true;
+      const maxScroll = previewEl.scrollHeight - previewEl.clientHeight;
+      if (maxScroll > 0) {
+        const ratio = previewEl.scrollTop / maxScroll;
+        const editorMax = editorScroll.scrollHeight - editorScroll.clientHeight;
+        editorScroll.scrollTop = editorMax > 0 ? ratio * editorMax : 0;
+      }
+      syncing = false;
+    };
+
+    editorScroll.addEventListener('scroll', onEditorScroll, { passive: true });
+    previewEl.addEventListener('scroll', onPreviewScroll, { passive: true });
+
+    return () => {
+      editorScroll.removeEventListener('scroll', onEditorScroll);
+      previewEl.removeEventListener('scroll', onPreviewScroll);
+    };
+  });
+
   useEffect(() => {
     const setHTML = async () => {
       const newHTML = await marked(markdown);
@@ -332,7 +651,151 @@ export const MarkdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   }, [markdown]);
 
   /* =========================
-     OCR
+      localStorage: restore draft on mount
+  ========================= */
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (raw) {
+        const data = JSON.parse(raw) as DraftData;
+        if (data.markdown && data.markdown !== INITIAL_MARKDOWN) {
+          setState((prev) => ({
+            ...prev,
+            markdown: data.markdown,
+            fontId: data.fontId ?? prev.fontId,
+            viewMode: data.viewMode ?? prev.viewMode,
+            fileName: data.fileName ?? prev.fileName,
+            showLineNumbers: data.showLineNumbers ?? prev.showLineNumbers,
+            restored: true,
+          }));
+        }
+      }
+    } catch {
+      // ignore corrupted data
+    }
+  }, []);
+
+  /* =========================
+      localStorage: save draft on change
+  ========================= */
+  useEffect(() => {
+    try {
+      if (markdown && markdown !== INITIAL_MARKDOWN) {
+        localStorage.setItem(
+          STORAGE_KEY,
+          JSON.stringify({
+            markdown,
+            fontId,
+            viewMode,
+            fileName,
+            showLineNumbers,
+          } satisfies DraftData)
+        );
+      }
+    } catch {
+      // localStorage may be full
+    }
+  }, [markdown, fontId, viewMode]);
+
+  /* =========================
+      ToC parsing
+  ========================= */
+  const tocItems = useMemo(() => {
+    const items: TocItem[] = [];
+    const lines = markdown.split('\n');
+    lines.forEach((line, index) => {
+      const match = line.match(/^(#{1,6})\s+(.+)/);
+      if (match) {
+        const text = match[2].replace(/\{#[^}]+\}/g, '').trim();
+        if (text) {
+          items.push({ level: match[1].length, text, line: index });
+        }
+      }
+    });
+    return items;
+  }, [markdown]);
+
+  /* =========================
+      Toolbar actions
+  ========================= */
+  const exec = useCallback((fn: (view: EditorView) => void) => {
+    const view = viewRef.current;
+    if (view) fn(view);
+  }, []);
+
+  /* =========================
+      File operations
+  ========================= */
+  const handleNew = useCallback(() => {
+    localStorage.removeItem(STORAGE_KEY);
+    setState((prev) => ({
+      ...prev,
+      markdown: '',
+      html: '',
+      restored: false,
+      fileName: 'untitled.md',
+    }));
+  }, []);
+
+  const handleOpen = useCallback(() => {
+    fileInputRef.current?.click();
+  }, []);
+
+  const handleOpenFile = useCallback(
+    async (e: ChangeEvent<HTMLInputElement>) => {
+      const file = e.target.files?.item(0);
+      if (!file) return;
+      const text = await file.text();
+      setState((prev) => ({ ...prev, markdown: text, fileName: file.name }));
+      e.target.value = '';
+    },
+    []
+  );
+
+  const handleSave = useCallback(() => {
+    const blob = new Blob([markdown], { type: 'text/markdown;charset=utf-8' });
+    saveAs(blob, fileName);
+  }, [markdown, fileName]);
+
+  const handleExportHTML = useCallback(() => {
+    const fullHtml = `<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>${fileName}</title></head>
+<body>${html}</body>
+</html>`;
+    const blob = new Blob([fullHtml], { type: 'text/html;charset=utf-8' });
+    saveAs(blob, fileName.replace(/\.md$/, '') + '.html');
+  }, [html, fileName]);
+
+  const handleCopyMarkdown = useCallback(async () => {
+    try {
+      await navigator.clipboard.writeText(markdown);
+    } catch {
+      // silently fail
+    }
+  }, [markdown]);
+
+  const handleCopyHTML = useCallback(async () => {
+    try {
+      await navigator.clipboard.writeText(html);
+    } catch {
+      // silently fail
+    }
+  }, [html]);
+
+  const scrollToHeading = useCallback((line: number) => {
+    const view = viewRef.current;
+    if (!view) return;
+    const pos = view.state.doc.line(line + 1).from;
+    view.dispatch({
+      selection: { anchor: pos },
+      scrollIntoView: true,
+    });
+    view.focus();
+  }, []);
+
+  /* =========================
+      OCR
   ========================= */
   const handleOCRFile = async (e: ChangeEvent<HTMLInputElement>) => {
     setState((prev) => ({ ...prev, ocrLoading: true }));
@@ -357,7 +820,7 @@ export const MarkdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   };
 
   /* =========================
-     PDF Export
+      PDF Export
   ========================= */
   const handleDownload = () => {
     setState((prev) => ({ ...prev, loading: true }));
@@ -431,7 +894,16 @@ export const MarkdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   };
 
   /* =========================
-     UI
+      View mode
+  ========================= */
+  const viewModes: { id: ViewMode; label: string }[] = [
+    { id: 'split', label: 'Split' },
+    { id: 'editor', label: 'Editor' },
+    { id: 'preview', label: 'Preview' },
+  ];
+
+  /* =========================
+      UI
   ========================= */
   return (
     <ModalWrapper
@@ -439,69 +911,350 @@ export const MarkdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       title="Markdown Editor"
       size="max-w-6xl"
       fullHeight>
-      {/* Body */}
-      <div className="divide-base-300 grid min-h-0 flex-1 divide-x overflow-hidden md:grid-cols-2">
-        <div>
-          {/* LEFT: Editor */}
-          <div className="flex h-full flex-col overflow-hidden">
-            <div className="border-base-300 flex gap-2 border-b p-2">
-              <label
-                className={`btn btn-secondary btn-sm cursor-pointer ${ocrLoading ? 'btn-disabled' : ''}`}>
-                <span>{ocrLoading ? 'Processing OCR...' : 'Upload Image'}</span>
-                <input
-                  type="file"
-                  accept="image/*"
-                  onChange={handleOCRFile}
-                  className="hidden"
-                  disabled={ocrLoading}
-                />
-              </label>
-            </div>
-            <div
-              ref={editorRef}
-              className={`${ocrLoading ? 'pointer-events-none opacity-50' : ''} h-full w-full flex-1 overflow-auto text-sm`}
+      <div className="flex min-h-0 flex-1 flex-col overflow-hidden">
+        {/* File toolbar */}
+        <div className="border-base-300 flex flex-wrap items-center gap-1 border-b px-3 py-1.5">
+          <button
+            type="button"
+            className="btn btn-ghost btn-xs"
+            onClick={handleNew}
+            title="New document">
+            New
+          </button>
+          <button
+            type="button"
+            className="btn btn-ghost btn-xs"
+            onClick={handleOpen}
+            title="Open .md file">
+            Open
+          </button>
+          <button
+            type="button"
+            className="btn btn-ghost btn-xs"
+            onClick={handleSave}
+            title="Save as .md">
+            Save
+          </button>
+
+          <div className="border-base-300 mx-1 h-4 w-px border-l" />
+
+          <span
+            className="text-base-content/60 max-w-40 truncate font-mono text-xs"
+            title={fileName}>
+            {fileName}
+          </span>
+
+          <div className="border-base-300 mx-1 h-4 w-px border-l" />
+
+          <button
+            type="button"
+            className="btn btn-ghost btn-xs"
+            onClick={handleCopyMarkdown}
+            title="Copy Markdown to clipboard">
+            Copy MD
+          </button>
+          <button
+            type="button"
+            className="btn btn-ghost btn-xs"
+            onClick={handleCopyHTML}
+            title="Copy HTML to clipboard">
+            Copy HTML
+          </button>
+          <button
+            type="button"
+            className="btn btn-ghost btn-xs"
+            onClick={handleExportHTML}
+            title="Export as HTML file">
+            HTML
+          </button>
+
+          <div className="border-base-300 mx-1 h-4 w-px border-l" />
+
+          <button
+            type="button"
+            className="btn btn-ghost btn-xs"
+            disabled={loading || ocrLoading}
+            onClick={handleDownload}
+            title="Download as PDF">
+            {loading ? (
+              <span className="loading loading-spinner loading-xs" />
+            ) : (
+              'PDF'
+            )}
+          </button>
+
+          <label
+            className={`btn btn-ghost btn-xs cursor-pointer ${ocrLoading ? 'btn-disabled' : ''}`}
+            title="Extract text from image (OCR)">
+            <span>{ocrLoading ? 'OCR...' : 'OCR'}</span>
+            <input
+              ref={ocrInputRef}
+              type="file"
+              accept="image/*"
+              onChange={handleOCRFile}
+              className="hidden"
+              disabled={ocrLoading}
             />
+          </label>
+        </div>
+
+        {/* Formatting toolbar */}
+        <div className="border-base-300 flex flex-wrap items-center gap-0.5 border-b px-3 py-1">
+          <button
+            type="button"
+            className="btn btn-ghost btn-xs btn-square font-bold"
+            onClick={() =>
+              exec((v) => insertAround(v, '**', '**', 'bold text'))
+            }
+            title="Bold (Ctrl+B)">
+            B
+          </button>
+          <button
+            type="button"
+            className="btn btn-ghost btn-xs btn-square italic"
+            onClick={() =>
+              exec((v) => insertAround(v, '*', '*', 'italic text'))
+            }
+            title="Italic (Ctrl+I)">
+            I
+          </button>
+          <button
+            type="button"
+            className="btn btn-ghost btn-xs btn-square line-through"
+            onClick={() =>
+              exec((v) => insertAround(v, '~~', '~~', 'strikethrough text'))
+            }
+            title="Strikethrough (Ctrl+Shift+X)">
+            S
+          </button>
+
+          <div className="border-base-300 mx-0.5 h-4 w-px border-l" />
+
+          {[1, 2, 3].map((level) => (
+            <button
+              key={level}
+              type="button"
+              className="btn btn-ghost btn-xs btn-square font-bold"
+              onClick={() => exec((v) => insertHeading(v, level))}
+              title={`Heading ${level}`}>
+              H{level}
+            </button>
+          ))}
+
+          <div className="border-base-300 mx-0.5 h-4 w-px border-l" />
+
+          <button
+            type="button"
+            className="btn btn-ghost btn-xs"
+            onClick={() =>
+              exec((v) => insertAround(v, '[', '](url)', 'link text'))
+            }
+            title="Link (Ctrl+K)">
+            Link
+          </button>
+          <button
+            type="button"
+            className="btn btn-ghost btn-xs"
+            onClick={() =>
+              exec((v) => insertAround(v, '![', '](url)', 'alt text'))
+            }
+            title="Image">
+            Img
+          </button>
+
+          <div className="border-base-300 mx-0.5 h-4 w-px border-l" />
+
+          <button
+            type="button"
+            className="btn btn-ghost btn-xs"
+            onClick={() => exec((v) => insertAtLineStart(v, '-'))}
+            title="Unordered list">
+            UL
+          </button>
+          <button
+            type="button"
+            className="btn btn-ghost btn-xs"
+            onClick={() => exec((v) => insertAtLineStart(v, '1.'))}
+            title="Ordered list">
+            OL
+          </button>
+          <button
+            type="button"
+            className="btn btn-ghost btn-xs"
+            onClick={() => exec((v) => insertAtLineStart(v, '- [ ]'))}
+            title="Task list">
+            Task
+          </button>
+
+          <div className="border-base-300 mx-0.5 h-4 w-px border-l" />
+
+          <button
+            type="button"
+            className="btn btn-ghost btn-xs"
+            onClick={() => exec((v) => insertAround(v, '`', '`', 'code'))}
+            title="Inline code (Ctrl+`)">
+            Code
+          </button>
+          <button
+            type="button"
+            className="btn btn-ghost btn-xs"
+            onClick={() =>
+              exec((v) => insertBlock(v, '```\n', '\n```', 'code'))
+            }
+            title="Code block (Ctrl+Shift+C)">
+            {`{ }`}
+          </button>
+          <button
+            type="button"
+            className="btn btn-ghost btn-xs"
+            onClick={() => exec((v) => insertAtLineStart(v, '>'))}
+            title="Blockquote">
+            Quote
+          </button>
+          <button
+            type="button"
+            className="btn btn-ghost btn-xs"
+            onClick={() =>
+              exec((v) => {
+                const { from } = v.state.selection.main;
+                v.dispatch({ changes: { from, insert: '\n---\n' } });
+                v.focus();
+              })
+            }
+            title="Horizontal rule">
+            HR
+          </button>
+          <button
+            type="button"
+            className="btn btn-ghost btn-xs"
+            onClick={() => exec((v) => insertTable(v))}
+            title="Insert table">
+            Tbl
+          </button>
+        </div>
+
+        {/* View mode + ToC + Font */}
+        <div className="border-base-300 flex items-center justify-between border-b px-3 py-1.5">
+          <div className="flex items-center gap-1">
+            {viewModes.map(({ id, label }) => (
+              <button
+                key={id}
+                type="button"
+                className={`btn btn-xs ${viewMode === id ? 'btn-primary' : 'btn-ghost'}`}
+                onClick={() => setState((prev) => ({ ...prev, viewMode: id }))}>
+                {label}
+              </button>
+            ))}
+            <div className="border-base-300 mx-0.5 h-4 w-px border-l" />
+            <button
+              type="button"
+              className={`btn btn-xs ${showToc ? 'btn-primary' : 'btn-ghost'}`}
+              onClick={() =>
+                setState((prev) => ({ ...prev, showToc: !prev.showToc }))
+              }
+              title="Toggle table of contents">
+              ToC
+            </button>
+            <button
+              type="button"
+              className={`btn btn-xs ${showLineNumbers ? 'btn-primary' : 'btn-ghost'}`}
+              onClick={() =>
+                setState((prev) => ({
+                  ...prev,
+                  showLineNumbers: !prev.showLineNumbers,
+                }))
+              }
+              title="Toggle line numbers">
+              #Line
+            </button>
+            {restored && (
+              <span className="badge badge-warning badge-xs">
+                Draft restored
+              </span>
+            )}
           </div>
 
-          {/* RIGHT: Preview */}
-          <div className="bg-base-100 flex h-full flex-col overflow-hidden">
-            <div className="border-base-300 flex items-center gap-2 border-b p-2">
-              <button
-                type="button"
-                className="btn btn-primary btn-sm"
-                disabled={loading || ocrLoading}
-                onClick={handleDownload}>
-                {loading ? (
-                  <span className="loading loading-spinner loading-sm" />
-                ) : (
-                  'Download PDF'
-                )}
-              </button>
+          <select
+            className="select select-xs border-base-300 w-auto border"
+            value={fontId}
+            onChange={(e) =>
+              setState((prev) => ({ ...prev, fontId: e.target.value }))
+            }>
+            {FONTS.map(({ id, name }) => (
+              <option key={id} value={id}>
+                {name}
+              </option>
+            ))}
+          </select>
+        </div>
 
-              {/* Font picker */}
-              <select
-                className="select select-sm border-base-300 min-w-0 flex-1 border"
-                value={fontId}
-                onChange={(e) =>
-                  setState((prev) => ({ ...prev, fontId: e.target.value }))
-                }>
-                {FONTS.map(({ id, name }) => (
-                  <option key={id} value={id}>
-                    {name}
-                  </option>
-                ))}
-              </select>
+        {/* Main area: ToC sidebar + editor/preview */}
+        <div className="flex min-h-0 flex-1 overflow-hidden">
+          {showToc && (
+            <div className="border-base-300 w-48 flex-shrink-0 overflow-y-auto border-r p-2 text-xs">
+              {tocItems.length > 0 ? (
+                <nav className="space-y-0.5">
+                  {tocItems.map((item, i) => (
+                    <button
+                      key={i}
+                      type="button"
+                      className="hover:bg-base-300 block w-full cursor-pointer truncate rounded px-2 py-0.5 text-left"
+                      style={{ paddingLeft: `${8 + (item.level - 1) * 12}px` }}
+                      onClick={() => scrollToHeading(item.line)}
+                      title={item.text}>
+                      {item.text}
+                    </button>
+                  ))}
+                </nav>
+              ) : (
+                <p className="text-base-content/40 p-2">No headings</p>
+              )}
+            </div>
+          )}
+          <div
+            className={`grid min-h-0 flex-1 overflow-hidden ${viewMode === 'split' ? 'divide-base-300 divide-x md:grid-cols-2' : 'grid-cols-1'}`}>
+            {/* Editor panel */}
+            <div
+              className={`flex flex-col overflow-hidden ${viewMode === 'preview' ? 'hidden' : ''}`}>
+              <div
+                ref={editorRef}
+                className={`${ocrLoading ? 'pointer-events-none opacity-50' : ''} h-full w-full flex-1 overflow-auto text-sm`}
+              />
             </div>
 
-            <div className="h-full w-full flex-1 overflow-auto p-4">
-              <MarkdownPreviewer
-                html={html}
-                fontClassName={selectedFont.className}
-              />
+            {/* Preview panel */}
+            <div
+              className={`flex flex-col overflow-hidden ${viewMode === 'editor' ? 'hidden' : ''}`}>
+              <div
+                ref={previewScrollRef}
+                className="h-full w-full flex-1 overflow-auto p-4">
+                <MarkdownPreviewer
+                  html={html}
+                  fontClassName={selectedFont.className}
+                />
+              </div>
             </div>
           </div>
         </div>
+
+        {/* Stats bar */}
+        <div className="border-base-300 text-base-content/60 flex flex-wrap items-center gap-4 border-t px-3 py-1 text-xs">
+          <span>Chars: {stats.characters}</span>
+          <span>Chars (no space): {stats.charactersNoSpaces}</span>
+          <span>Words: {stats.words}</span>
+          <span>Lines: {stats.lines}</span>
+          <span>Reading: {stats.readingTime}</span>
+        </div>
       </div>
+
+      {/* Hidden file input for opening .md files */}
+      <input
+        ref={fileInputRef}
+        type="file"
+        accept=".md,.markdown,text/markdown"
+        onChange={handleOpenFile}
+        className="hidden"
+      />
     </ModalWrapper>
   );
 };
