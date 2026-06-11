@@ -13,17 +13,23 @@ import (
 	"github.com/hieudoanm/hieudoanm/cmd/docsify"
 	"github.com/hieudoanm/hieudoanm/cmd/doi"
 	"github.com/hieudoanm/hieudoanm/cmd/english"
+	"github.com/hieudoanm/hieudoanm/cmd/epoch"
 	"github.com/hieudoanm/hieudoanm/cmd/gh"
+	"github.com/hieudoanm/hieudoanm/cmd/hash"
 	"github.com/hieudoanm/hieudoanm/cmd/instagram"
 	"github.com/hieudoanm/hieudoanm/cmd/ip"
+	"github.com/hieudoanm/hieudoanm/cmd/jsontool"
+	"github.com/hieudoanm/hieudoanm/cmd/jwt"
 	"github.com/hieudoanm/hieudoanm/cmd/openapi"
 	"github.com/hieudoanm/hieudoanm/cmd/openrouter"
+	"github.com/hieudoanm/hieudoanm/cmd/passwd"
 	"github.com/hieudoanm/hieudoanm/cmd/qrcode"
 	"github.com/hieudoanm/hieudoanm/cmd/shopify"
 	"github.com/hieudoanm/hieudoanm/cmd/snapshot"
 	"github.com/hieudoanm/hieudoanm/cmd/statuspkg"
 	"github.com/hieudoanm/hieudoanm/cmd/system"
 	"github.com/hieudoanm/hieudoanm/cmd/telegram"
+	"github.com/hieudoanm/hieudoanm/cmd/timercmd"
 	"github.com/hieudoanm/hieudoanm/cmd/uuidcmd"
 	"github.com/hieudoanm/hieudoanm/cmd/version"
 	"github.com/hieudoanm/hieudoanm/cmd/wificmd"
@@ -55,17 +61,23 @@ func init() {
 	rootCmd.AddCommand(docsify.NewCommand())
 	rootCmd.AddCommand(doi.NewCommand())
 	rootCmd.AddCommand(english.NewCommand())
+	rootCmd.AddCommand(epoch.NewCommand())
 	rootCmd.AddCommand(gh.NewCommand())
+	rootCmd.AddCommand(hash.NewCommand())
 	rootCmd.AddCommand(instagram.NewCommand())
 	rootCmd.AddCommand(ip.NewCommand())
+	rootCmd.AddCommand(jsontool.NewCommand())
+	rootCmd.AddCommand(jwt.NewCommand())
 	rootCmd.AddCommand(openapi.NewCommand())
 	rootCmd.AddCommand(openrouter.NewCommand())
+	rootCmd.AddCommand(passwd.NewCommand())
 	rootCmd.AddCommand(qrcode.NewCommand())
 	rootCmd.AddCommand(shopify.NewCommand())
 	rootCmd.AddCommand(snapshot.NewCommand())
 	rootCmd.AddCommand(statuspkg.NewCommand())
 	rootCmd.AddCommand(system.NewCommand())
 	rootCmd.AddCommand(telegram.NewCommand())
+	rootCmd.AddCommand(timercmd.NewCommand())
 	rootCmd.AddCommand(uuidcmd.NewCommand())
 	rootCmd.AddCommand(version.NewCommand())
 	rootCmd.AddCommand(wificmd.NewCommand())

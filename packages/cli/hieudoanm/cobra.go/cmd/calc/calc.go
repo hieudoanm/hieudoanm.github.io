@@ -13,5 +13,10 @@ func NewCommand() *cobra.Command {
 	cmd.AddCommand(newTaxCmd())
 	cmd.AddCommand(newCompoundCmd())
 	cmd.AddCommand(newCurrencyCmd())
+	cmd.AddCommand(newLoanCmd())
+	cmd.AddCommand(newDiscountCmd())
+	cmd.AddCommand(newTipCmd())
+	cmd.AddCommand(newBmiCmd())
+	cmd.AddCommand(newBaseCmd())
 	return cmd
 }
