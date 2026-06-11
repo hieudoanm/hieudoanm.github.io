@@ -1,4 +1,4 @@
-package frankfurter
+package calc
 
 import (
 	"encoding/json"
@@ -8,50 +8,48 @@ import (
 	"github.com/spf13/cobra"
 )
 
-type FrankfurterResponse struct {
+type frankfurterResponse struct {
 	Amount float64            `json:"amount"`
 	Base   string             `json:"base"`
 	Date   string             `json:"date"`
 	Rates  map[string]float64 `json:"rates"`
 }
 
-func NewCommand() *cobra.Command {
+func newCurrencyCmd() *cobra.Command {
 	var from, to string
 	var amount float64
-	var debug bool
 
 	cmd := &cobra.Command{
-		Use:   "cc",
-		Short: "Convert between currencies using Frankfurter API",
-		Long:  `Convert amounts between world currencies using the European Central Bank's Frankfurter exchange rate API.`,
-		Run: func(cmd *cobra.Command, args []string) {
+		Use:     "currency",
+		Aliases: []string{"cc", "fx"},
+		Short:   "Convert between currencies using Frankfurter API",
+		Long:    `Convert amounts between world currencies using the European Central Bank's Frankfurter exchange rate API.`,
+		Example: `  calc currency --from USD --to EUR --amount 100`,
+		RunE: func(cmd *cobra.Command, args []string) error {
 			url := fmt.Sprintf("https://api.frankfurter.app/latest?base=%s&symbols=%s", from, to)
-			responseByte, err := requests.Get(url, requests.Options{Debug: debug})
+			responseByte, err := requests.Get(url, requests.Options{})
 			if err != nil {
-				fmt.Println("Error: ", err)
-				return
+				return fmt.Errorf("fetch error: %w", err)
 			}
 
-			var response FrankfurterResponse
+			var response frankfurterResponse
 			if err := json.Unmarshal(responseByte, &response); err != nil {
-				fmt.Println("Error: ", err)
-				return
+				return fmt.Errorf("parse error: %w", err)
 			}
 
 			rate, ok := response.Rates[to]
 			if !ok {
-				fmt.Printf("Error: no rate found for %s\n", to)
-				return
+				return fmt.Errorf("no rate found for %s", to)
 			}
 
 			converted := amount * rate
-			fmt.Printf("%.2f %s = %.2f %s\n", amount, from, converted, to)
+			fmt.Printf("%.2f %s = %.2f %s (rate: %f)\n", amount, from, converted, to, rate)
+			return nil
 		},
 	}
 
 	cmd.Flags().StringVar(&from, "from", "EUR", "Source currency (default EUR)")
 	cmd.Flags().StringVar(&to, "to", "USD", "Target currency (default USD)")
 	cmd.Flags().Float64Var(&amount, "amount", 1, "Amount to convert (default 1)")
-	cmd.Flags().BoolVar(&debug, "debug", false, "Print response status and body")
 	return cmd
 }

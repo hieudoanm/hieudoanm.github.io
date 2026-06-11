@@ -12,5 +12,6 @@ func NewCommand() *cobra.Command {
 	}
 	cmd.AddCommand(newTaxCmd())
 	cmd.AddCommand(newCompoundCmd())
+	cmd.AddCommand(newCurrencyCmd())
 	return cmd
 }

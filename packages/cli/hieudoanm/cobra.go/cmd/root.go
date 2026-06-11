@@ -13,7 +13,6 @@ import (
 	"github.com/hieudoanm/hieudoanm/cmd/docsify"
 	"github.com/hieudoanm/hieudoanm/cmd/doi"
 	"github.com/hieudoanm/hieudoanm/cmd/english"
-	"github.com/hieudoanm/hieudoanm/cmd/frankfurter"
 	"github.com/hieudoanm/hieudoanm/cmd/gh"
 	"github.com/hieudoanm/hieudoanm/cmd/instagram"
 	"github.com/hieudoanm/hieudoanm/cmd/ip"
@@ -57,7 +56,6 @@ func init() {
 	rootCmd.AddCommand(docsify.NewCommand())
 	rootCmd.AddCommand(doi.NewCommand())
 	rootCmd.AddCommand(english.NewCommand())
-	rootCmd.AddCommand(frankfurter.NewCommand())
 	rootCmd.AddCommand(gh.NewCommand())
 	rootCmd.AddCommand(instagram.NewCommand())
 	rootCmd.AddCommand(ip.NewCommand())
