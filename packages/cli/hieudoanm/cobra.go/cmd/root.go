@@ -10,6 +10,8 @@ import (
 	"github.com/hieudoanm/hieudoanm/cmd/clock"
 	"github.com/hieudoanm/hieudoanm/cmd/colors"
 	"github.com/hieudoanm/hieudoanm/cmd/convert"
+	"github.com/hieudoanm/hieudoanm/cmd/cron"
+	"github.com/hieudoanm/hieudoanm/cmd/csv"
 	"github.com/hieudoanm/hieudoanm/cmd/docsify"
 	"github.com/hieudoanm/hieudoanm/cmd/doi"
 	"github.com/hieudoanm/hieudoanm/cmd/english"
@@ -24,6 +26,7 @@ import (
 	"github.com/hieudoanm/hieudoanm/cmd/openrouter"
 	"github.com/hieudoanm/hieudoanm/cmd/passwd"
 	"github.com/hieudoanm/hieudoanm/cmd/qrcode"
+	"github.com/hieudoanm/hieudoanm/cmd/semver"
 	"github.com/hieudoanm/hieudoanm/cmd/shopify"
 	"github.com/hieudoanm/hieudoanm/cmd/snapshot"
 	"github.com/hieudoanm/hieudoanm/cmd/statuspkg"
@@ -32,7 +35,9 @@ import (
 	"github.com/hieudoanm/hieudoanm/cmd/timercmd"
 	"github.com/hieudoanm/hieudoanm/cmd/uuidcmd"
 	"github.com/hieudoanm/hieudoanm/cmd/version"
+	"github.com/hieudoanm/hieudoanm/cmd/weather"
 	"github.com/hieudoanm/hieudoanm/cmd/wificmd"
+	"github.com/hieudoanm/hieudoanm/cmd/ymlcmd"
 	"github.com/hieudoanm/hieudoanm/cmd/youtube"
 	"github.com/spf13/cobra"
 )
@@ -58,6 +63,8 @@ func init() {
 	rootCmd.AddCommand(clock.NewCommand())
 	rootCmd.AddCommand(colors.NewCommand())
 	rootCmd.AddCommand(convert.NewCommand())
+	rootCmd.AddCommand(cron.NewCommand())
+	rootCmd.AddCommand(csv.NewCommand())
 	rootCmd.AddCommand(docsify.NewCommand())
 	rootCmd.AddCommand(doi.NewCommand())
 	rootCmd.AddCommand(english.NewCommand())
@@ -69,6 +76,7 @@ func init() {
 	rootCmd.AddCommand(jsontool.NewCommand())
 	rootCmd.AddCommand(jwt.NewCommand())
 	rootCmd.AddCommand(openapi.NewCommand())
+	rootCmd.AddCommand(semver.NewCommand())
 	rootCmd.AddCommand(openrouter.NewCommand())
 	rootCmd.AddCommand(passwd.NewCommand())
 	rootCmd.AddCommand(qrcode.NewCommand())
@@ -80,6 +88,8 @@ func init() {
 	rootCmd.AddCommand(timercmd.NewCommand())
 	rootCmd.AddCommand(uuidcmd.NewCommand())
 	rootCmd.AddCommand(version.NewCommand())
+	rootCmd.AddCommand(weather.NewCommand())
 	rootCmd.AddCommand(wificmd.NewCommand())
+	rootCmd.AddCommand(ymlcmd.NewCommand())
 	rootCmd.AddCommand(youtube.NewCommand())
 }

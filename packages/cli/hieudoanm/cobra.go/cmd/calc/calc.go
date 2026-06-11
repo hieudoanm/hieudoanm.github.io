@@ -18,5 +18,7 @@ func NewCommand() *cobra.Command {
 	cmd.AddCommand(newTipCmd())
 	cmd.AddCommand(newBmiCmd())
 	cmd.AddCommand(newBaseCmd())
+	cmd.AddCommand(newUnitCmd())
+	cmd.AddCommand(newPercentCmd())
 	return cmd
 }
