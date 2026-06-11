@@ -1,177 +1,194 @@
 # TREE
 
 ```text
-├── bin/
-│   └── [hieudoanm](./bin/hieudoanm)
+├── cmd/
+│   ├── braille/
+│   │   └── [braille.go](./cmd/braille/braille.go)
+│   ├── calc/
+│   │   ├── [calc.go](./cmd/calc/calc.go)
+│   │   ├── [calc_compound.go](./cmd/calc/calc_compound.go)
+│   │   ├── [calc_compound_test.go](./cmd/calc/calc_compound_test.go)
+│   │   ├── [calc_tax.go](./cmd/calc/calc_tax.go)
+│   │   └── [calc_tax_test.go](./cmd/calc/calc_tax_test.go)
+│   ├── casino/
+│   │   ├── [casino.go](./cmd/casino/casino.go)
+│   │   ├── [casino_baccarat.go](./cmd/casino/casino_baccarat.go)
+│   │   ├── [casino_baccarat_play.go](./cmd/casino/casino_baccarat_play.go)
+│   │   ├── [casino_baccarat_strategy.go](./cmd/casino/casino_baccarat_strategy.go)
+│   │   ├── [casino_blackjack.go](./cmd/casino/casino_blackjack.go)
+│   │   ├── [casino_blackjack_count.go](./cmd/casino/casino_blackjack_count.go)
+│   │   ├── [casino_blackjack_play.go](./cmd/casino/casino_blackjack_play.go)
+│   │   ├── [casino_poker.go](./cmd/casino/casino_poker.go)
+│   │   ├── [casino_poker_odds.go](./cmd/casino/casino_poker_odds.go)
+│   │   ├── [casino_poker_odds_eval.go](./cmd/casino/casino_poker_odds_eval.go)
+│   │   ├── [casino_poker_odds_sim.go](./cmd/casino/casino_poker_odds_sim.go)
+│   │   ├── [casino_poker_play.go](./cmd/casino/casino_poker_play.go)
+│   │   ├── [casino_slots.go](./cmd/casino/casino_slots.go)
+│   │   └── [casino_slots_play.go](./cmd/casino/casino_slots_play.go)
+│   ├── chess/
+│   │   ├── lichess/
+│   │   │   └── [lichess.org.go](./cmd/chess/lichess/lichess.org.go)
+│   │   ├── [chess.go](./cmd/chess/chess.go)
+│   │   ├── [chess960.go](./cmd/chess/chess960.go)
+│   │   ├── [chess_com_leaderboards.go](./cmd/chess/chess_com_leaderboards.go)
+│   │   ├── [chess_com_player.go](./cmd/chess/chess_com_player.go)
+│   │   ├── [chess_com_titled.go](./cmd/chess/chess_com_titled.go)
+│   │   ├── [chess_elo.go](./cmd/chess/chess_elo.go)
+│   │   ├── [chess_fen.go](./cmd/chess/chess_fen.go)
+│   │   ├── [chess_fen_eval.go](./cmd/chess/chess_fen_eval.go)
+│   │   ├── [chess_fen_svg.go](./cmd/chess/chess_fen_svg.go)
+│   │   ├── [chess_openings.go](./cmd/chess/chess_openings.go)
+│   │   ├── [chess_pgn.go](./cmd/chess/chess_pgn.go)
+│   │   ├── [chess_pgn_fen.go](./cmd/chess/chess_pgn_fen.go)
+│   │   ├── [chess_pgn_uci.go](./cmd/chess/chess_pgn_uci.go)
+│   │   ├── [chess_play.go](./cmd/chess/chess_play.go)
+│   │   ├── [chess_random.go](./cmd/chess/chess_random.go)
+│   │   ├── [chess_setup.go](./cmd/chess/chess_setup.go)
+│   │   ├── [chess_stockfish.go](./cmd/chess/chess_stockfish.go)
+│   │   └── [chess_titles.go](./cmd/chess/chess_titles.go)
+│   ├── clipboard/
+│   │   └── [clipboard.go](./cmd/clipboard/clipboard.go)
+│   ├── clock/
+│   │   ├── pomodoro/
+│   │   │   └── [pomodoro.go](./cmd/clock/pomodoro/pomodoro.go)
+│   │   ├── [clock.go](./cmd/clock/clock.go)
+│   │   ├── [clock_now.go](./cmd/clock/clock_now.go)
+│   │   └── [clock_pomodoro.go](./cmd/clock/clock_pomodoro.go)
+│   ├── colors/
+│   │   ├── [cmyk.go](./cmd/colors/cmyk.go)
+│   │   ├── [colors.go](./cmd/colors/colors.go)
+│   │   ├── [colors_convert_hcl.go](./cmd/colors/colors_convert_hcl.go)
+│   │   ├── [colors_convert_hex.go](./cmd/colors/colors_convert_hex.go)
+│   │   ├── [colors_convert_oklch.go](./cmd/colors/colors_convert_oklch.go)
+│   │   ├── [colors_convert_rgb.go](./cmd/colors/colors_convert_rgb.go)
+│   │   ├── [colors_palette.go](./cmd/colors/colors_palette.go)
+│   │   ├── [colors_random.go](./cmd/colors/colors_random.go)
+│   │   ├── [colors_test.go](./cmd/colors/colors_test.go)
+│   │   ├── [hcl.go](./cmd/colors/hcl.go)
+│   │   ├── [hex.go](./cmd/colors/hex.go)
+│   │   ├── [hsl.go](./cmd/colors/hsl.go)
+│   │   ├── [oklch.go](./cmd/colors/oklch.go)
+│   │   └── [rgb.go](./cmd/colors/rgb.go)
+│   ├── docsify/
+│   │   ├── [docsify.go](./cmd/docsify/docsify.go)
+│   │   ├── [docsify_cobra.go](./cmd/docsify/docsify_cobra.go)
+│   │   ├── [docsify_obsidian.go](./cmd/docsify/docsify_obsidian.go)
+│   │   ├── [docsify_scan.go](./cmd/docsify/docsify_scan.go)
+│   │   ├── [docsify_tree.go](./cmd/docsify/docsify_tree.go)
+│   │   ├── [extractor.go](./cmd/docsify/extractor.go)
+│   │   ├── [graph.go](./cmd/docsify/graph.go)
+│   │   ├── [walker.go](./cmd/docsify/walker.go)
+│   │   └── [writer.go](./cmd/docsify/writer.go)
+│   ├── doi/
+│   │   ├── [apa.go](./cmd/doi/apa.go)
+│   │   ├── [apa_test.go](./cmd/doi/apa_test.go)
+│   │   ├── [doi.go](./cmd/doi/doi.go)
+│   │   ├── [doi_cite.go](./cmd/doi/doi_cite.go)
+│   │   └── [doi_ref.go](./cmd/doi/doi_ref.go)
+│   ├── english/
+│   │   └── [english.go](./cmd/english/english.go)
+│   ├── frankfurter/
+│   │   └── [frankfurter.go](./cmd/frankfurter/frankfurter.go)
+│   ├── gh/
+│   │   ├── [gh.go](./cmd/gh/gh.go)
+│   │   ├── [gh_coc.go](./cmd/gh/gh_coc.go)
+│   │   ├── [gh_colors.go](./cmd/gh/gh_colors.go)
+│   │   ├── [gh_ignore.go](./cmd/gh/gh_ignore.go)
+│   │   ├── [gh_languages.go](./cmd/gh/gh_languages.go)
+│   │   ├── [gh_license.go](./cmd/gh/gh_license.go)
+│   │   └── [gh_og.go](./cmd/gh/gh_og.go)
+│   ├── instagram/
+│   │   ├── [instagram.go](./cmd/instagram/instagram.go)
+│   │   ├── [instagram_download.go](./cmd/instagram/instagram_download.go)
+│   │   └── [instagram_download_test.go](./cmd/instagram/instagram_download_test.go)
+│   ├── ip/
+│   │   ├── [ip.go](./cmd/ip/ip.go)
+│   │   └── [ip_dns.go](./cmd/ip/ip_dns.go)
+│   ├── morse/
+│   │   └── [morse.go](./cmd/morse/morse.go)
+│   ├── openapi/
+│   │   ├── [openapi.go](./cmd/openapi/openapi.go)
+│   │   └── [openapi_postman.go](./cmd/openapi/openapi_postman.go)
+│   ├── openrouter/
+│   │   ├── chat/
+│   │   │   └── [chat.go](./cmd/openrouter/chat/chat.go)
+│   │   ├── [config.go](./cmd/openrouter/config.go)
+│   │   ├── [openrouter.go](./cmd/openrouter/openrouter.go)
+│   │   ├── [openrouter_chat.go](./cmd/openrouter/openrouter_chat.go)
+│   │   ├── [openrouter_cmd.go](./cmd/openrouter/openrouter_cmd.go)
+│   │   ├── [openrouter_hook.go](./cmd/openrouter/openrouter_hook.go)
+│   │   ├── [openrouter_models.go](./cmd/openrouter/openrouter_models.go)
+│   │   ├── [openrouter_serve.go](./cmd/openrouter/openrouter_serve.go)
+│   │   ├── [openrouter_status.go](./cmd/openrouter/openrouter_status.go)
+│   │   └── [openrouter_test.go](./cmd/openrouter/openrouter_test.go)
+│   ├── qrcode/
+│   │   └── [qrcode.go](./cmd/qrcode/qrcode.go)
+│   ├── shopify/
+│   │   ├── [shopify.go](./cmd/shopify/shopify.go)
+│   │   ├── [shopify_detect.go](./cmd/shopify/shopify_detect.go)
+│   │   └── [shopify_test.go](./cmd/shopify/shopify_test.go)
+│   ├── snapshot/
+│   │   └── [snapshot.go](./cmd/snapshot/snapshot.go)
+│   ├── statuspkg/
+│   │   └── [statuspkg.go](./cmd/statuspkg/statuspkg.go)
+│   ├── string/
+│   │   ├── [string.go](./cmd/string/string.go)
+│   │   ├── [string_capitalise.go](./cmd/string/string_capitalise.go)
+│   │   ├── [string_deburr.go](./cmd/string/string_deburr.go)
+│   │   ├── [string_kebabcase.go](./cmd/string/string_kebabcase.go)
+│   │   ├── [string_lowercase.go](./cmd/string/string_lowercase.go)
+│   │   ├── [string_snakecase.go](./cmd/string/string_snakecase.go)
+│   │   └── [string_uppercase.go](./cmd/string/string_uppercase.go)
+│   ├── system/
+│   │   ├── [system.go](./cmd/system/system.go)
+│   │   └── [system_monitor.go](./cmd/system/system_monitor.go)
+│   ├── telegram/
+│   │   ├── [telegram.go](./cmd/telegram/telegram.go)
+│   │   ├── [telegram_cmd.go](./cmd/telegram/telegram_cmd.go)
+│   │   ├── [telegram_message.go](./cmd/telegram/telegram_message.go)
+│   │   ├── [telegram_message_send.go](./cmd/telegram/telegram_message_send.go)
+│   │   ├── [telegram_webhook.go](./cmd/telegram/telegram_webhook.go)
+│   │   ├── [telegram_webhook_delete.go](./cmd/telegram/telegram_webhook_delete.go)
+│   │   ├── [telegram_webhook_info.go](./cmd/telegram/telegram_webhook_info.go)
+│   │   └── [telegram_webhook_set.go](./cmd/telegram/telegram_webhook_set.go)
+│   ├── uuidcmd/
+│   │   └── [uuidcmd.go](./cmd/uuidcmd/uuidcmd.go)
+│   ├── version/
+│   │   └── [version.go](./cmd/version/version.go)
+│   ├── wificmd/
+│   │   ├── [wifi_darwin.go](./cmd/wificmd/wifi_darwin.go)
+│   │   ├── [wifi_linux.go](./cmd/wificmd/wifi_linux.go)
+│   │   └── [wificmd.go](./cmd/wificmd/wificmd.go)
+│   ├── youtube/
+│   │   ├── transcript/
+│   │   │   ├── [client.go](./cmd/youtube/transcript/client.go)
+│   │   │   ├── [parser.go](./cmd/youtube/transcript/parser.go)
+│   │   │   ├── [transcript_test.go](./cmd/youtube/transcript/transcript_test.go)
+│   │   │   └── [types.go](./cmd/youtube/transcript/types.go)
+│   │   ├── [youtube.go](./cmd/youtube/youtube.go)
+│   │   ├── [youtube_thumbnails.go](./cmd/youtube/youtube_thumbnails.go)
+│   │   └── [youtube_transcript.go](./cmd/youtube/youtube_transcript.go)
+│   ├── [cmd_test.go](./cmd/cmd_test.go)
+│   └── [root.go](./cmd/root.go)
+├── data/
+│   └── [countries.go](./data/countries.go)
+├── libs/
+│   ├── browser/
+│   │   ├── [browser.go](./libs/browser/browser.go)
+│   │   └── [browser_test.go](./libs/browser/browser_test.go)
+│   ├── colors/
+│   │   ├── [colors.go](./libs/colors/colors.go)
+│   │   └── [colors_test.go](./libs/colors/colors_test.go)
+│   ├── number/
+│   │   ├── [number.go](./libs/number/number.go)
+│   │   └── [number_test.go](./libs/number/number_test.go)
+│   ├── requests/
+│   │   ├── [requests.go](./libs/requests/requests.go)
+│   │   └── [requests_test.go](./libs/requests/requests_test.go)
+│   └── theme/
+│       └── [theme.go](./libs/theme/theme.go)
 ├── scripts/
 │   └── [install.sh](./scripts/install.sh)
-├── src/
-│   ├── cmd/
-│   │   ├── chess/
-│   │   │   ├── [chess.go](./src/cmd/chess/chess.go)
-│   │   │   ├── [chess960.go](./src/cmd/chess/chess960.go)
-│   │   │   ├── [chess_com_leaderboards.go](./src/cmd/chess/chess_com_leaderboards.go)
-│   │   │   ├── [chess_com_player.go](./src/cmd/chess/chess_com_player.go)
-│   │   │   ├── [chess_com_titled.go](./src/cmd/chess/chess_com_titled.go)
-│   │   │   ├── [chess_elo.go](./src/cmd/chess/chess_elo.go)
-│   │   │   ├── [chess_fen.go](./src/cmd/chess/chess_fen.go)
-│   │   │   ├── [chess_fen_eval.go](./src/cmd/chess/chess_fen_eval.go)
-│   │   │   ├── [chess_fen_svg.go](./src/cmd/chess/chess_fen_svg.go)
-│   │   │   ├── [chess_openings.go](./src/cmd/chess/chess_openings.go)
-│   │   │   ├── [chess_pgn.go](./src/cmd/chess/chess_pgn.go)
-│   │   │   ├── [chess_pgn_fen.go](./src/cmd/chess/chess_pgn_fen.go)
-│   │   │   ├── [chess_pgn_uci.go](./src/cmd/chess/chess_pgn_uci.go)
-│   │   │   ├── [chess_play.go](./src/cmd/chess/chess_play.go)
-│   │   │   ├── [chess_random.go](./src/cmd/chess/chess_random.go)
-│   │   │   ├── [chess_setup.go](./src/cmd/chess/chess_setup.go)
-│   │   │   ├── [chess_stockfish.go](./src/cmd/chess/chess_stockfish.go)
-│   │   │   └── [chess_titles.go](./src/cmd/chess/chess_titles.go)
-│   │   ├── clock/
-│   │   │   ├── [clock.go](./src/cmd/clock/clock.go)
-│   │   │   ├── [clock_now.go](./src/cmd/clock/clock_now.go)
-│   │   │   └── [clock_pomodoro.go](./src/cmd/clock/clock_pomodoro.go)
-│   │   ├── colors/
-│   │   │   ├── [colors.go](./src/cmd/colors/colors.go)
-│   │   │   ├── [colors_convert_hcl.go](./src/cmd/colors/colors_convert_hcl.go)
-│   │   │   ├── [colors_convert_hex.go](./src/cmd/colors/colors_convert_hex.go)
-│   │   │   ├── [colors_convert_oklch.go](./src/cmd/colors/colors_convert_oklch.go)
-│   │   │   ├── [colors_convert_rgb.go](./src/cmd/colors/colors_convert_rgb.go)
-│   │   │   ├── [colors_palette.go](./src/cmd/colors/colors_palette.go)
-│   │   │   └── [colors_random.go](./src/cmd/colors/colors_random.go)
-│   │   ├── docsify/
-│   │   │   ├── [docsify.go](./src/cmd/docsify/docsify.go)
-│   │   │   ├── [docsify_cobra.go](./src/cmd/docsify/docsify_cobra.go)
-│   │   │   ├── [docsify_obsidian.go](./src/cmd/docsify/docsify_obsidian.go)
-│   │   │   ├── [docsify_scan.go](./src/cmd/docsify/docsify_scan.go)
-│   │   │   └── [docsify_tree.go](./src/cmd/docsify/docsify_tree.go)
-│   │   ├── doi/
-│   │   │   ├── [doi.go](./src/cmd/doi/doi.go)
-│   │   │   ├── [doi_cite.go](./src/cmd/doi/doi_cite.go)
-│   │   │   └── [doi_ref.go](./src/cmd/doi/doi_ref.go)
-│   │   ├── instagram/
-│   │   │   ├── [instagram.go](./src/cmd/instagram/instagram.go)
-│   │   │   ├── [instagram_download.go](./src/cmd/instagram/instagram_download.go)
-│   │   │   └── [instagram_download_test.go](./src/cmd/instagram/instagram_download_test.go)
-│   │   ├── ip/
-│   │   │   ├── [ip.go](./src/cmd/ip/ip.go)
-│   │   │   └── [ip_dns.go](./src/cmd/ip/ip_dns.go)
-│   │   ├── openapi/
-│   │   │   ├── [openapi.go](./src/cmd/openapi/openapi.go)
-│   │   │   └── [openapi_postman.go](./src/cmd/openapi/openapi_postman.go)
-│   │   ├── openrouter/
-│   │   │   ├── [openrouter.go](./src/cmd/openrouter/openrouter.go)
-│   │   │   ├── [openrouter_chat.go](./src/cmd/openrouter/openrouter_chat.go)
-│   │   │   ├── [openrouter_hook.go](./src/cmd/openrouter/openrouter_hook.go)
-│   │   │   ├── [openrouter_models.go](./src/cmd/openrouter/openrouter_models.go)
-│   │   │   ├── [openrouter_serve.go](./src/cmd/openrouter/openrouter_serve.go)
-│   │   │   └── [openrouter_status.go](./src/cmd/openrouter/openrouter_status.go)
-│   │   ├── shopify/
-│   │   │   ├── [shopify.go](./src/cmd/shopify/shopify.go)
-│   │   │   └── [shopify_detect.go](./src/cmd/shopify/shopify_detect.go)
-│   │   ├── string/
-│   │   │   ├── [string.go](./src/cmd/string/string.go)
-│   │   │   ├── [string_capitalise.go](./src/cmd/string/string_capitalise.go)
-│   │   │   ├── [string_deburr.go](./src/cmd/string/string_deburr.go)
-│   │   │   ├── [string_kebabcase.go](./src/cmd/string/string_kebabcase.go)
-│   │   │   ├── [string_lowercase.go](./src/cmd/string/string_lowercase.go)
-│   │   │   ├── [string_snakecase.go](./src/cmd/string/string_snakecase.go)
-│   │   │   └── [string_uppercase.go](./src/cmd/string/string_uppercase.go)
-│   │   ├── system/
-│   │   │   ├── [system.go](./src/cmd/system/system.go)
-│   │   │   └── [system_monitor.go](./src/cmd/system/system_monitor.go)
-│   │   ├── telegram/
-│   │   │   ├── [telegram.go](./src/cmd/telegram/telegram.go)
-│   │   │   ├── [telegram_message.go](./src/cmd/telegram/telegram_message.go)
-│   │   │   ├── [telegram_message_send.go](./src/cmd/telegram/telegram_message_send.go)
-│   │   │   ├── [telegram_webhook.go](./src/cmd/telegram/telegram_webhook.go)
-│   │   │   ├── [telegram_webhook_delete.go](./src/cmd/telegram/telegram_webhook_delete.go)
-│   │   │   ├── [telegram_webhook_info.go](./src/cmd/telegram/telegram_webhook_info.go)
-│   │   │   └── [telegram_webhook_set.go](./src/cmd/telegram/telegram_webhook_set.go)
-│   │   ├── youtube/
-│   │   │   ├── [youtube.go](./src/cmd/youtube/youtube.go)
-│   │   │   ├── [youtube_thumbnails.go](./src/cmd/youtube/youtube_thumbnails.go)
-│   │   │   └── [youtube_transcript.go](./src/cmd/youtube/youtube_transcript.go)
-│   │   ├── [blackjack.go](./src/cmd/blackjack.go)
-│   │   ├── [braille.go](./src/cmd/braille.go)
-│   │   ├── [clipboard.go](./src/cmd/clipboard.go)
-│   │   ├── [cmd_test.go](./src/cmd/cmd_test.go)
-│   │   ├── [english.go](./src/cmd/english.go)
-│   │   ├── [frankfurter.go](./src/cmd/frankfurter.go)
-│   │   ├── [morse.go](./src/cmd/morse.go)
-│   │   ├── [qrcode.go](./src/cmd/qrcode.go)
-│   │   ├── [root.go](./src/cmd/root.go)
-│   │   ├── [snapshot.go](./src/cmd/snapshot.go)
-│   │   ├── [status.go](./src/cmd/status.go)
-│   │   ├── [tax.go](./src/cmd/tax.go)
-│   │   ├── [uuid.go](./src/cmd/uuid.go)
-│   │   ├── [version.go](./src/cmd/version.go)
-│   │   └── [wifi.go](./src/cmd/wifi.go)
-│   ├── data/
-│   │   └── [countries.go](./src/data/countries.go)
-│   ├── libs/
-│   │   ├── browser/
-│   │   │   ├── [browser.go](./src/libs/browser/browser.go)
-│   │   │   └── [browser_test.go](./src/libs/browser/browser_test.go)
-│   │   ├── colors/
-│   │   │   ├── [colors.go](./src/libs/colors/colors.go)
-│   │   │   └── [colors_test.go](./src/libs/colors/colors_test.go)
-│   │   ├── figlet/
-│   │   │   ├── [figlet.go](./src/libs/figlet/figlet.go)
-│   │   │   └── [figlet_test.go](./src/libs/figlet/figlet_test.go)
-│   │   ├── http/
-│   │   │   ├── [http.go](./src/libs/http/http.go)
-│   │   │   └── [http_test.go](./src/libs/http/http_test.go)
-│   │   ├── number/
-│   │   │   ├── [number.go](./src/libs/number/number.go)
-│   │   │   └── [number_test.go](./src/libs/number/number_test.go)
-│   │   └── requests/
-│   │       ├── [requests.go](./src/libs/requests/requests.go)
-│   │       └── [requests_test.go](./src/libs/requests/requests_test.go)
-│   └── services/
-│       ├── apa/
-│       │   ├── [apa.go](./src/services/apa/apa.go)
-│       │   └── [apa_test.go](./src/services/apa/apa_test.go)
-│       ├── blackjack/
-│       │   └── [blackjack.go](./src/services/blackjack/blackjack.go)
-│       ├── chat/
-│       │   └── [chat.go](./src/services/chat/chat.go)
-│       ├── colors/
-│       │   ├── [cmyk.go](./src/services/colors/cmyk.go)
-│       │   ├── [colors_test.go](./src/services/colors/colors_test.go)
-│       │   ├── [hcl.go](./src/services/colors/hcl.go)
-│       │   ├── [hex.go](./src/services/colors/hex.go)
-│       │   ├── [hsl.go](./src/services/colors/hsl.go)
-│       │   ├── [oklch.go](./src/services/colors/oklch.go)
-│       │   └── [rgb.go](./src/services/colors/rgb.go)
-│       ├── docsify/
-│       │   ├── [extractor.go](./src/services/docsify/extractor.go)
-│       │   ├── [graph.go](./src/services/docsify/graph.go)
-│       │   ├── [walker.go](./src/services/docsify/walker.go)
-│       │   └── [writer.go](./src/services/docsify/writer.go)
-│       ├── lichess/
-│       │   └── [lichess.org.go](./src/services/lichess/lichess.org.go)
-│       ├── openrouter/
-│       │   ├── [config.go](./src/services/openrouter/config.go)
-│       │   ├── [openrouter.go](./src/services/openrouter/openrouter.go)
-│       │   └── [openrouter_test.go](./src/services/openrouter/openrouter_test.go)
-│       ├── pomodoro/
-│       │   └── [pomodoro.go](./src/services/pomodoro/pomodoro.go)
-│       ├── shopify/
-│       │   ├── [shopify.go](./src/services/shopify/shopify.go)
-│       │   └── [shopify_test.go](./src/services/shopify/shopify_test.go)
-│       ├── tax/
-│       │   ├── [tax.go](./src/services/tax/tax.go)
-│       │   └── [tax_test.go](./src/services/tax/tax_test.go)
-│       ├── telegram/
-│       │   └── [telegram.go](./src/services/telegram/telegram.go)
-│       ├── transcript/
-│       │   ├── [client.go](./src/services/transcript/client.go)
-│       │   ├── [parser.go](./src/services/transcript/parser.go)
-│       │   ├── [transcript_test.go](./src/services/transcript/transcript_test.go)
-│       │   └── [types.go](./src/services/transcript/types.go)
-│       └── wifi/
-│           ├── [wifi_darwin.go](./src/services/wifi/wifi_darwin.go)
-│           └── [wifi_linux.go](./src/services/wifi/wifi_linux.go)
 ├── [LICENSE](./LICENSE)
 ├── [Makefile](./Makefile)
 ├── [README.md](./README.md)
@@ -181,4 +198,4 @@
 └── [main.go](./main.go)
 ```
 
-40 directories, 138 files
+41 directories, 154 files
