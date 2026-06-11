@@ -1,10 +1,9 @@
-package braille
+package convert
 
 import (
 	"fmt"
 	"strings"
 
-	"github.com/AlecAivazis/survey/v2"
 	"github.com/spf13/cobra"
 )
 
@@ -17,34 +16,31 @@ var braille = map[rune]string{
 	'(': "⠣", ')': "⠜", '"': "⠘",
 }
 
-func ConvertToBraille(text string) string {
+func ToBraille(text string) string {
 	var result strings.Builder
-	for _, character := range text {
-		code, exists := braille[character]
+	for _, ch := range strings.ToLower(text) {
+		code, exists := braille[ch]
 		if exists {
 			result.WriteString(code)
 		} else {
-			result.WriteRune(character)
+			result.WriteRune(ch)
 		}
-		result.WriteString("")
 	}
 	return result.String()
 }
 
-func NewCommand() *cobra.Command {
+func newBrailleCmd() *cobra.Command {
 	return &cobra.Command{
-		Use:   "convert",
+		Use:   "braille [text]",
 		Short: "Convert text to Braille",
 		Long:  `Converts plain text to Unicode Braille characters. Supports letters, numbers, and common punctuation.`,
+		Args:  cobra.MaximumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
-			var text string
-			prompt := &survey.Input{Message: "Text:"}
-			if err := survey.AskOne(prompt, &text); err != nil {
+			text, err := resolveText(args)
+			if err != nil {
 				return err
 			}
-			fmt.Printf("Converting: %s\n", text)
-			brailleText := ConvertToBraille(text)
-			fmt.Println("Braille:", brailleText)
+			fmt.Println(ToBraille(text))
 			return nil
 		},
 	}

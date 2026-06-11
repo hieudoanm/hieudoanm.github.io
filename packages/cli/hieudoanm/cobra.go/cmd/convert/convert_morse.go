@@ -1,10 +1,9 @@
-package morse
+package convert
 
 import (
 	"fmt"
 	"strings"
 
-	"github.com/AlecAivazis/survey/v2"
 	"github.com/spf13/cobra"
 )
 
@@ -21,34 +20,31 @@ var morseMap = map[rune]string{
 	'(': "-.--.", ')': "-.--.-", '"': ".-..-.", '/': "-..-.",
 }
 
-func ConvertTextToMorse(text string) string {
+func ToMorse(text string) string {
 	var result []string
-	for _, character := range text {
-		lowerCharacter := rune(strings.ToLower(string(character))[0])
-		code, found := morseMap[lowerCharacter]
+	for _, ch := range strings.ToLower(text) {
+		code, found := morseMap[ch]
 		if found {
 			result = append(result, code)
 		} else {
-			result = append(result, string(character))
+			result = append(result, string(ch))
 		}
 	}
-	return strings.Join(result, "")
+	return strings.Join(result, " ")
 }
 
-func NewCommand() *cobra.Command {
+func newMorseCmd() *cobra.Command {
 	return &cobra.Command{
-		Use:   "convert",
+		Use:   "morse [text]",
 		Short: "Convert text to Morse code",
 		Long:  `Converts plain text to Morse code. Supports letters, numbers, and common punctuation.`,
+		Args:  cobra.MaximumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
-			var text string
-			prompt := &survey.Input{Message: "Text:"}
-			if err := survey.AskOne(prompt, &text); err != nil {
+			text, err := resolveText(args)
+			if err != nil {
 				return err
 			}
-			fmt.Printf("Converting: %s\n", text)
-			morseCode := ConvertTextToMorse(text)
-			fmt.Println("Morse Code:", morseCode)
+			fmt.Println(ToMorse(text))
 			return nil
 		},
 	}
