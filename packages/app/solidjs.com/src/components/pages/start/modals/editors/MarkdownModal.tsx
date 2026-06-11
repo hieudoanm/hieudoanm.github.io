@@ -3,6 +3,14 @@ import { Compartment, EditorState } from '@codemirror/state';
 import { oneDark } from '@codemirror/theme-one-dark';
 import { EditorView } from '@codemirror/view';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import {
+  capitalize,
+  deburr,
+  kebabCase,
+  lowerCase,
+  snakeCase,
+  upperCase,
+} from '@lodash/ts';
 import { tryCatch } from '@lodashx/ts';
 import DOMPurify from 'dompurify';
 import 'github-markdown-css/github-markdown.css';
@@ -199,6 +207,36 @@ const MarkdownPreviewer = ({
 };
 
 /* =========================
+   String transform helpers
+========================= */
+type StringStype =
+  | 'capitalize'
+  | 'deburr'
+  | 'kebabCase'
+  | 'lowerCase'
+  | 'snakeCase'
+  | 'upperCase';
+
+const STRING_STYLES: { value: StringStype | ''; label: string }[] = [
+  { value: '', label: 'Format…' },
+  { value: 'capitalize', label: 'Capitalise' },
+  { value: 'deburr', label: 'deburr' },
+  { value: 'kebabCase', label: 'kebab-case' },
+  { value: 'lowerCase', label: 'lowercase' },
+  { value: 'snakeCase', label: 'snake_case' },
+  { value: 'upperCase', label: 'UPPERCASE' },
+];
+
+const STYLE_FN: Record<StringStype, (s: string) => string> = {
+  capitalize,
+  deburr,
+  kebabCase,
+  lowerCase,
+  snakeCase,
+  upperCase,
+};
+
+/* =========================
    Modal
 ========================= */
 export const MarkdownModal = ({ onClose }: { onClose: () => void }) => {
@@ -220,6 +258,8 @@ export const MarkdownModal = ({ onClose }: { onClose: () => void }) => {
   const markdown = () => state().markdown;
   const ocrLoading = () => state().ocrLoading;
   const fontId = () => state().fontId;
+
+  const [stringStyle, setStringStyle] = createSignal<StringStype | ''>('');
 
   /* =========================
      CodeMirror
@@ -400,7 +440,7 @@ export const MarkdownModal = ({ onClose }: { onClose: () => void }) => {
         <div>
           {/* LEFT: Editor */}
           <div class="flex h-full flex-col overflow-hidden">
-            <div class="border-base-300 flex gap-2 border-b p-2">
+            <div class="border-base-300 flex flex-wrap items-center gap-2 border-b p-2">
               <label
                 class={`btn btn-secondary btn-sm cursor-pointer ${ocrLoading() ? 'btn-disabled' : ''}`}>
                 <span>
@@ -414,6 +454,39 @@ export const MarkdownModal = ({ onClose }: { onClose: () => void }) => {
                   disabled={ocrLoading()}
                 />
               </label>
+
+              <div class="border-base-300 mx-0.5 h-4 w-px border-l" />
+
+              <select
+                class="select select-xs border-base-300 w-28 border font-mono"
+                value={stringStyle()}
+                onChange={(e) => {
+                  const style = (e.target as HTMLSelectElement)
+                    .value as StringStype;
+                  if (style && viewRef) {
+                    const { from, to } = viewRef.state.selection.main;
+                    const selected = viewRef.state.sliceDoc(from, to);
+                    if (selected) {
+                      const transformed = STYLE_FN[style](selected);
+                      viewRef.dispatch({
+                        changes: { from, to, insert: transformed },
+                        selection: {
+                          anchor: from,
+                          head: from + transformed.length,
+                        },
+                      });
+                      viewRef.focus();
+                    }
+                  }
+                  setStringStyle('');
+                }}
+                title="Apply string transformation to selected text">
+                {STRING_STYLES.map(({ value, label }) => (
+                  <option key={value} value={value}>
+                    {label}
+                  </option>
+                ))}
+              </select>
             </div>
             <div
               ref={editorRef}

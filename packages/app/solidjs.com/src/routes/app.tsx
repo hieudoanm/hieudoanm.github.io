@@ -59,7 +59,6 @@ import { ProxyModal } from '@hieudoanm.github.io/components/pages/start/modals/t
 import { SVGModal } from '@hieudoanm.github.io/components/pages/start/modals/tools/SVGModal';
 import { ShopifyDetectModal } from '@hieudoanm.github.io/components/pages/start/modals/tools/ShopifyDetectModal';
 import { SheetsModal } from '@hieudoanm.github.io/components/pages/start/modals/tools/SheetsModal';
-import { StringModal } from '@hieudoanm.github.io/components/pages/start/modals/tools/StringModal';
 import { UUIDModal } from '@hieudoanm.github.io/components/pages/start/modals/tools/UUIDModal';
 import { CalendarTrackerModal } from '@hieudoanm.github.io/components/pages/start/modals/visualization/CalendarTracker';
 import { LegislationModal } from '@hieudoanm.github.io/components/pages/start/modals/visualization/LegislationModal';
@@ -175,7 +174,6 @@ type ModalId =
   | 'sign'
   | 'slides'
   | 'snellen'
-  | 'string'
   | 'svg'
   | 't3'
   | 'tax'
@@ -249,7 +247,6 @@ const MODAL_MAP: Record<
   sign: SignModal,
   slides: SlidesModal,
   snellen: SnellenChartModal,
-  string: StringModal,
   svg: SVGModal,
   t3: T3Modal,
   tax: TaxModal,
@@ -332,13 +329,6 @@ const makeTools = (
       emoji: '🔍',
       color: '#06b6d4',
       onClick: open('shopify-detect'),
-    },
-    {
-      label: 'String',
-      description: 'Formatter',
-      emoji: '✏️',
-      color: '#10b981',
-      onClick: open('string'),
     },
     {
       label: 'SVG',

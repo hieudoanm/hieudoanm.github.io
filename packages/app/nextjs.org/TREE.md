@@ -66,9 +66,6 @@
 │   └── [tsconfig.json](./scripts/tsconfig.json)
 ├── src/
 │   ├── clients/
-│   │   ├── gemini/
-│   │   │   ├── [gemini.client.ts](./src/clients/gemini/gemini.client.ts)
-│   │   │   └── [gemini.enums.ts](./src/clients/gemini/gemini.enums.ts)
 │   │   ├── openrouter/
 │   │   │   ├── [openrouter.client.ts](./src/clients/openrouter/openrouter.client.ts)
 │   │   │   └── [openrouter.enums.ts](./src/clients/openrouter/openrouter.enums.ts)
@@ -206,18 +203,14 @@
 │   │   │       ├── cards/
 │   │   │       │   ├── __tests__/
 │   │   │       │   │   ├── __snapshots__/
-│   │   │       │   │   │   ├── [AppCard.test.tsx.snap](./src/components/pages/start/cards/__tests__/__snapshots__/AppCard.test.tsx.snap)
-│   │   │       │   │   │   ├── [BookmarkCard.test.tsx.snap](./src/components/pages/start/cards/__tests__/__snapshots__/BookmarkCard.test.tsx.snap)
 │   │   │       │   │   │   ├── [CityCard.test.tsx.snap](./src/components/pages/start/cards/__tests__/__snapshots__/CityCard.test.tsx.snap)
+│   │   │       │   │   │   ├── [ItemCard.test.tsx.snap](./src/components/pages/start/cards/__tests__/__snapshots__/ItemCard.test.tsx.snap)
 │   │   │       │   │   │   └── [ToolCard.test.tsx.snap](./src/components/pages/start/cards/__tests__/__snapshots__/ToolCard.test.tsx.snap)
-│   │   │       │   │   ├── [AppCard.test.tsx](./src/components/pages/start/cards/__tests__/AppCard.test.tsx)
-│   │   │       │   │   ├── [BookmarkCard.test.tsx](./src/components/pages/start/cards/__tests__/BookmarkCard.test.tsx)
 │   │   │       │   │   ├── [CityCard.test.tsx](./src/components/pages/start/cards/__tests__/CityCard.test.tsx)
+│   │   │       │   │   ├── [ItemCard.test.tsx](./src/components/pages/start/cards/__tests__/ItemCard.test.tsx)
 │   │   │       │   │   └── [ToolCard.test.tsx](./src/components/pages/start/cards/__tests__/ToolCard.test.tsx)
-│   │   │       │   ├── [AppCard.tsx](./src/components/pages/start/cards/AppCard.tsx)
-│   │   │       │   ├── [BookmarkCard.tsx](./src/components/pages/start/cards/BookmarkCard.tsx)
 │   │   │       │   ├── [CityCard.tsx](./src/components/pages/start/cards/CityCard.tsx)
-│   │   │       │   ├── [DownloadCard.tsx](./src/components/pages/start/cards/DownloadCard.tsx)
+│   │   │       │   ├── [ItemCard.tsx](./src/components/pages/start/cards/ItemCard.tsx)
 │   │   │       │   └── [ToolCard.tsx](./src/components/pages/start/cards/ToolCard.tsx)
 │   │   │       ├── modals/
 │   │   │       │   ├── calculators/
@@ -237,16 +230,22 @@
 │   │   │       │   │   ├── __tests__/
 │   │   │       │   │   │   ├── __snapshots__/
 │   │   │       │   │   │   │   ├── [CalculatorModal.test.tsx.snap](./src/components/pages/start/modals/calculators/__tests__/__snapshots__/CalculatorModal.test.tsx.snap)
-│   │   │       │   │   │   │   ├── [ConverterModal.test.tsx.snap](./src/components/pages/start/modals/calculators/__tests__/__snapshots__/ConverterModal.test.tsx.snap)
-│   │   │       │   │   │   │   └── [PokerModal.test.tsx.snap](./src/components/pages/start/modals/calculators/__tests__/__snapshots__/PokerModal.test.tsx.snap)
+│   │   │       │   │   │   │   └── [ConverterModal.test.tsx.snap](./src/components/pages/start/modals/calculators/__tests__/__snapshots__/ConverterModal.test.tsx.snap)
 │   │   │       │   │   │   ├── [CalculatorModal.test.tsx](./src/components/pages/start/modals/calculators/__tests__/CalculatorModal.test.tsx)
-│   │   │       │   │   │   ├── [ConverterModal.test.tsx](./src/components/pages/start/modals/calculators/__tests__/ConverterModal.test.tsx)
-│   │   │       │   │   │   └── [PokerModal.test.tsx](./src/components/pages/start/modals/calculators/__tests__/PokerModal.test.tsx)
+│   │   │       │   │   │   └── [ConverterModal.test.tsx](./src/components/pages/start/modals/calculators/__tests__/ConverterModal.test.tsx)
 │   │   │       │   │   ├── [CalculatorModal.tsx](./src/components/pages/start/modals/calculators/CalculatorModal.tsx)
 │   │   │       │   │   ├── [EloModal.tsx](./src/components/pages/start/modals/calculators/EloModal.tsx)
 │   │   │       │   │   ├── [InflationModal.tsx](./src/components/pages/start/modals/calculators/InflationModal.tsx)
-│   │   │       │   │   ├── [PokerModal.tsx](./src/components/pages/start/modals/calculators/PokerModal.tsx)
 │   │   │       │   │   └── [TaxModal.tsx](./src/components/pages/start/modals/calculators/TaxModal.tsx)
+│   │   │       │   ├── casino/
+│   │   │       │   │   ├── __tests__/
+│   │   │       │   │   │   ├── __snapshots__/
+│   │   │       │   │   │   │   ├── [Blackjack.test.tsx.snap](./src/components/pages/start/modals/casino/__tests__/__snapshots__/Blackjack.test.tsx.snap)
+│   │   │       │   │   │   │   └── [PokerModal.test.tsx.snap](./src/components/pages/start/modals/casino/__tests__/__snapshots__/PokerModal.test.tsx.snap)
+│   │   │       │   │   │   ├── [Blackjack.test.tsx](./src/components/pages/start/modals/casino/__tests__/Blackjack.test.tsx)
+│   │   │       │   │   │   └── [PokerModal.test.tsx](./src/components/pages/start/modals/casino/__tests__/PokerModal.test.tsx)
+│   │   │       │   │   ├── [BlackjackModal.tsx](./src/components/pages/start/modals/casino/BlackjackModal.tsx)
+│   │   │       │   │   └── [PokerModal.tsx](./src/components/pages/start/modals/casino/PokerModal.tsx)
 │   │   │       │   ├── clocks/
 │   │   │       │   │   ├── __tests__/
 │   │   │       │   │   │   ├── __snapshots__/
@@ -274,6 +273,7 @@
 │   │   │       │   │   │   └── [OpenAPI2Postman.test.tsx](./src/components/pages/start/modals/converters/__tests__/OpenAPI2Postman.test.tsx)
 │   │   │       │   │   ├── [BrailleModal.tsx](./src/components/pages/start/modals/converters/BrailleModal.tsx)
 │   │   │       │   │   ├── [ColorsModal.tsx](./src/components/pages/start/modals/converters/ColorsModal.tsx)
+│   │   │       │   │   ├── [LeetSpeakModal.tsx](./src/components/pages/start/modals/converters/LeetSpeakModal.tsx)
 │   │   │       │   │   ├── [MorseModal.tsx](./src/components/pages/start/modals/converters/MorseModal.tsx)
 │   │   │       │   │   └── [OpenAPI2Postman.tsx](./src/components/pages/start/modals/converters/OpenAPI2Postman.tsx)
 │   │   │       │   ├── editors/
@@ -289,6 +289,7 @@
 │   │   │       │   │   ├── [ManifestModal.tsx](./src/components/pages/start/modals/editors/ManifestModal.tsx)
 │   │   │       │   │   ├── [MarkdownModal.tsx](./src/components/pages/start/modals/editors/MarkdownModal.tsx)
 │   │   │       │   │   ├── [RedactModal.tsx](./src/components/pages/start/modals/editors/RedactModal.tsx)
+│   │   │       │   │   ├── [RegexModal.tsx](./src/components/pages/start/modals/editors/RegexModal.tsx)
 │   │   │       │   │   ├── [ResumeModal.tsx](./src/components/pages/start/modals/editors/ResumeModal.tsx)
 │   │   │       │   │   └── [SlidesModal.tsx](./src/components/pages/start/modals/editors/SlidesModal.tsx)
 │   │   │       │   ├── education/
@@ -333,26 +334,35 @@
 │   │   │       │   ├── games/
 │   │   │       │   │   ├── __tests__/
 │   │   │       │   │   │   ├── __snapshots__/
-│   │   │       │   │   │   │   ├── [Blackjack.test.tsx.snap](./src/components/pages/start/modals/games/__tests__/__snapshots__/Blackjack.test.tsx.snap)
-│   │   │       │   │   │   │   ├── [PiModal.test.tsx.snap](./src/components/pages/start/modals/games/__tests__/__snapshots__/PiModal.test.tsx.snap)
+│   │   │       │   │   │   │   ├── [Game2048Modal.test.tsx.snap](./src/components/pages/start/modals/games/__tests__/__snapshots__/Game2048Modal.test.tsx.snap)
+│   │   │       │   │   │   │   ├── [PalindromeModal.test.tsx.snap](./src/components/pages/start/modals/games/__tests__/__snapshots__/PalindromeModal.test.tsx.snap)
 │   │   │       │   │   │   │   ├── [Pokedex.test.tsx.snap](./src/components/pages/start/modals/games/__tests__/__snapshots__/Pokedex.test.tsx.snap)
-│   │   │       │   │   │   │   ├── [RecallModal.test.tsx.snap](./src/components/pages/start/modals/games/__tests__/__snapshots__/RecallModal.test.tsx.snap)
+│   │   │       │   │   │   │   ├── [PrisonerDilemmaModal.test.tsx.snap](./src/components/pages/start/modals/games/__tests__/__snapshots__/PrisonerDilemmaModal.test.tsx.snap)
+│   │   │       │   │   │   │   ├── [RockPaperScissorsModal.test.tsx.snap](./src/components/pages/start/modals/games/__tests__/__snapshots__/RockPaperScissorsModal.test.tsx.snap)
+│   │   │       │   │   │   │   ├── [SnakeModal.test.tsx.snap](./src/components/pages/start/modals/games/__tests__/__snapshots__/SnakeModal.test.tsx.snap)
+│   │   │       │   │   │   │   ├── [SudokuModal.test.tsx.snap](./src/components/pages/start/modals/games/__tests__/__snapshots__/SudokuModal.test.tsx.snap)
 │   │   │       │   │   │   │   ├── [T3Modal.test.tsx.snap](./src/components/pages/start/modals/games/__tests__/__snapshots__/T3Modal.test.tsx.snap)
 │   │   │       │   │   │   │   ├── [TowersModal.test.tsx.snap](./src/components/pages/start/modals/games/__tests__/__snapshots__/TowersModal.test.tsx.snap)
+│   │   │       │   │   │   │   ├── [TypoglycemiaModal.test.tsx.snap](./src/components/pages/start/modals/games/__tests__/__snapshots__/TypoglycemiaModal.test.tsx.snap)
 │   │   │       │   │   │   │   └── [WordleModal.test.tsx.snap](./src/components/pages/start/modals/games/__tests__/__snapshots__/WordleModal.test.tsx.snap)
-│   │   │       │   │   │   ├── [Blackjack.test.tsx](./src/components/pages/start/modals/games/__tests__/Blackjack.test.tsx)
-│   │   │       │   │   │   ├── [PiModal.test.tsx](./src/components/pages/start/modals/games/__tests__/PiModal.test.tsx)
+│   │   │       │   │   │   ├── [Game2048Modal.test.tsx](./src/components/pages/start/modals/games/__tests__/Game2048Modal.test.tsx)
+│   │   │       │   │   │   ├── [PalindromeModal.test.tsx](./src/components/pages/start/modals/games/__tests__/PalindromeModal.test.tsx)
 │   │   │       │   │   │   ├── [Pokedex.test.tsx](./src/components/pages/start/modals/games/__tests__/Pokedex.test.tsx)
-│   │   │       │   │   │   ├── [RecallModal.test.tsx](./src/components/pages/start/modals/games/__tests__/RecallModal.test.tsx)
+│   │   │       │   │   │   ├── [PrisonerDilemmaModal.test.tsx](./src/components/pages/start/modals/games/__tests__/PrisonerDilemmaModal.test.tsx)
+│   │   │       │   │   │   ├── [RockPaperScissorsModal.test.tsx](./src/components/pages/start/modals/games/__tests__/RockPaperScissorsModal.test.tsx)
+│   │   │       │   │   │   ├── [SnakeModal.test.tsx](./src/components/pages/start/modals/games/__tests__/SnakeModal.test.tsx)
+│   │   │       │   │   │   ├── [SudokuModal.test.tsx](./src/components/pages/start/modals/games/__tests__/SudokuModal.test.tsx)
 │   │   │       │   │   │   ├── [T3Modal.test.tsx](./src/components/pages/start/modals/games/__tests__/T3Modal.test.tsx)
 │   │   │       │   │   │   ├── [TowersModal.test.tsx](./src/components/pages/start/modals/games/__tests__/TowersModal.test.tsx)
+│   │   │       │   │   │   ├── [TypoglycemiaModal.test.tsx](./src/components/pages/start/modals/games/__tests__/TypoglycemiaModal.test.tsx)
 │   │   │       │   │   │   └── [WordleModal.test.tsx](./src/components/pages/start/modals/games/__tests__/WordleModal.test.tsx)
-│   │   │       │   │   ├── [BlackjackModal.tsx](./src/components/pages/start/modals/games/BlackjackModal.tsx)
+│   │   │       │   │   ├── [Game2048Modal.tsx](./src/components/pages/start/modals/games/Game2048Modal.tsx)
 │   │   │       │   │   ├── [PalindromeModal.tsx](./src/components/pages/start/modals/games/PalindromeModal.tsx)
-│   │   │       │   │   ├── [PiNumberModal.tsx](./src/components/pages/start/modals/games/PiNumberModal.tsx)
 │   │   │       │   │   ├── [PokedexModal.tsx](./src/components/pages/start/modals/games/PokedexModal.tsx)
-│   │   │       │   │   ├── [QuizifyModal.tsx](./src/components/pages/start/modals/games/QuizifyModal.tsx)
-│   │   │       │   │   ├── [RecallModal.tsx](./src/components/pages/start/modals/games/RecallModal.tsx)
+│   │   │       │   │   ├── [PrisonerDilemmaModal.tsx](./src/components/pages/start/modals/games/PrisonerDilemmaModal.tsx)
+│   │   │       │   │   ├── [RockPaperScissorsModal.tsx](./src/components/pages/start/modals/games/RockPaperScissorsModal.tsx)
+│   │   │       │   │   ├── [SnakeModal.tsx](./src/components/pages/start/modals/games/SnakeModal.tsx)
+│   │   │       │   │   ├── [SudokuModal.tsx](./src/components/pages/start/modals/games/SudokuModal.tsx)
 │   │   │       │   │   ├── [T3Modal.tsx](./src/components/pages/start/modals/games/T3Modal.tsx)
 │   │   │       │   │   ├── [TowersModal.tsx](./src/components/pages/start/modals/games/TowersModal.tsx)
 │   │   │       │   │   ├── [TypoglycemiaModal.tsx](./src/components/pages/start/modals/games/TypoglycemiaModal.tsx)
@@ -382,11 +392,22 @@
 │   │   │       │   │   ├── [InvoiceParserModal.tsx](./src/components/pages/start/modals/images/InvoiceParserModal.tsx)
 │   │   │       │   │   ├── [QRCodeModal.tsx](./src/components/pages/start/modals/images/QRCodeModal.tsx)
 │   │   │       │   │   └── [YouTubeThumbnailsModal.tsx](./src/components/pages/start/modals/images/YouTubeThumbnailsModal.tsx)
+│   │   │       │   ├── memory/
+│   │   │       │   │   ├── __tests__/
+│   │   │       │   │   │   ├── __snapshots__/
+│   │   │       │   │   │   │   ├── [PiModal.test.tsx.snap](./src/components/pages/start/modals/memory/__tests__/__snapshots__/PiModal.test.tsx.snap)
+│   │   │       │   │   │   │   └── [RecallModal.test.tsx.snap](./src/components/pages/start/modals/memory/__tests__/__snapshots__/RecallModal.test.tsx.snap)
+│   │   │       │   │   │   ├── [PiModal.test.tsx](./src/components/pages/start/modals/memory/__tests__/PiModal.test.tsx)
+│   │   │       │   │   │   └── [RecallModal.test.tsx](./src/components/pages/start/modals/memory/__tests__/RecallModal.test.tsx)
+│   │   │       │   │   ├── [PiNumberModal.tsx](./src/components/pages/start/modals/memory/PiNumberModal.tsx)
+│   │   │       │   │   ├── [QuizifyModal.tsx](./src/components/pages/start/modals/memory/QuizifyModal.tsx)
+│   │   │       │   │   └── [RecallModal.tsx](./src/components/pages/start/modals/memory/RecallModal.tsx)
 │   │   │       │   ├── tools/
 │   │   │       │   │   ├── ChatModal/
 │   │   │       │   │   │   ├── [ChatCounter.tsx](./src/components/pages/start/modals/tools/ChatModal/ChatCounter.tsx)
 │   │   │       │   │   │   ├── [ChatMessages.tsx](./src/components/pages/start/modals/tools/ChatModal/ChatMessages.tsx)
 │   │   │       │   │   │   ├── [ChatModal.tsx](./src/components/pages/start/modals/tools/ChatModal/ChatModal.tsx)
+│   │   │       │   │   │   ├── [ChatModels.tsx](./src/components/pages/start/modals/tools/ChatModal/ChatModels.tsx)
 │   │   │       │   │   │   └── [index.ts](./src/components/pages/start/modals/tools/ChatModal/index.ts)
 │   │   │       │   │   ├── __tests__/
 │   │   │       │   │   │   ├── __snapshots__/
@@ -395,14 +416,12 @@
 │   │   │       │   │   │   │   ├── [IPModal.test.tsx.snap](./src/components/pages/start/modals/tools/__tests__/__snapshots__/IPModal.test.tsx.snap)
 │   │   │       │   │   │   │   ├── [KaprekarModal.test.tsx.snap](./src/components/pages/start/modals/tools/__tests__/__snapshots__/KaprekarModal.test.tsx.snap)
 │   │   │       │   │   │   │   ├── [ProxyModal.test.tsx.snap](./src/components/pages/start/modals/tools/__tests__/__snapshots__/ProxyModal.test.tsx.snap)
-│   │   │       │   │   │   │   ├── [StringModal.test.tsx.snap](./src/components/pages/start/modals/tools/__tests__/__snapshots__/StringModal.test.tsx.snap)
 │   │   │       │   │   │   │   └── [UUIDModal.test.tsx.snap](./src/components/pages/start/modals/tools/__tests__/__snapshots__/UUIDModal.test.tsx.snap)
 │   │   │       │   │   │   ├── [EmojisModal.test.tsx](./src/components/pages/start/modals/tools/__tests__/EmojisModal.test.tsx)
 │   │   │       │   │   │   ├── [FigletModal.test.tsx](./src/components/pages/start/modals/tools/__tests__/FigletModal.test.tsx)
 │   │   │       │   │   │   ├── [IPModal.test.tsx](./src/components/pages/start/modals/tools/__tests__/IPModal.test.tsx)
 │   │   │       │   │   │   ├── [KaprekarModal.test.tsx](./src/components/pages/start/modals/tools/__tests__/KaprekarModal.test.tsx)
 │   │   │       │   │   │   ├── [ProxyModal.test.tsx](./src/components/pages/start/modals/tools/__tests__/ProxyModal.test.tsx)
-│   │   │       │   │   │   ├── [StringModal.test.tsx](./src/components/pages/start/modals/tools/__tests__/StringModal.test.tsx)
 │   │   │       │   │   │   └── [UUIDModal.test.tsx](./src/components/pages/start/modals/tools/__tests__/UUIDModal.test.tsx)
 │   │   │       │   │   ├── [ClipboardModal.tsx](./src/components/pages/start/modals/tools/ClipboardModal.tsx)
 │   │   │       │   │   ├── [EmojisModal.tsx](./src/components/pages/start/modals/tools/EmojisModal.tsx)
@@ -414,7 +433,6 @@
 │   │   │       │   │   ├── [SVGModal.tsx](./src/components/pages/start/modals/tools/SVGModal.tsx)
 │   │   │       │   │   ├── [SheetsModal.tsx](./src/components/pages/start/modals/tools/SheetsModal.tsx)
 │   │   │       │   │   ├── [ShopifyDetectModal.tsx](./src/components/pages/start/modals/tools/ShopifyDetectModal.tsx)
-│   │   │       │   │   ├── [StringModal.tsx](./src/components/pages/start/modals/tools/StringModal.tsx)
 │   │   │       │   │   └── [UUIDModal.tsx](./src/components/pages/start/modals/tools/UUIDModal.tsx)
 │   │   │       │   └── visualization/
 │   │   │       │       ├── __tests__/
@@ -433,7 +451,6 @@
 │   │   │       │   │   │   │   ├── __snapshots__/
 │   │   │       │   │   │   │   │   └── [StatusTab.test.tsx.snap](./src/components/pages/start/sidebars/LeftSidebar/tabs/__tests__/__snapshots__/StatusTab.test.tsx.snap)
 │   │   │       │   │   │   │   └── [StatusTab.test.tsx](./src/components/pages/start/sidebars/LeftSidebar/tabs/__tests__/StatusTab.test.tsx)
-│   │   │       │   │   │   ├── [FreeModelsTab.tsx](./src/components/pages/start/sidebars/LeftSidebar/tabs/FreeModelsTab.tsx)
 │   │   │       │   │   │   ├── [StatusTab.tsx](./src/components/pages/start/sidebars/LeftSidebar/tabs/StatusTab.tsx)
 │   │   │       │   │   │   ├── [TasksTab.tsx](./src/components/pages/start/sidebars/LeftSidebar/tabs/TasksTab.tsx)
 │   │   │       │   │   │   └── [TimeTab.tsx](./src/components/pages/start/sidebars/LeftSidebar/tabs/TimeTab.tsx)
@@ -575,25 +592,9 @@
 │   ├── constants/
 │   │   ├── [app.ts](./src/constants/app.ts)
 │   │   └── [models.ts](./src/constants/models.ts)
-│   ├── contexts/
-│   │   ├── __tests__/
-│   │   │   ├── [LanguageContext.test.tsx](./src/contexts/__tests__/LanguageContext.test.tsx)
-│   │   │   ├── [ModalContext.test.tsx](./src/contexts/__tests__/ModalContext.test.tsx)
-│   │   │   ├── [NotificationContext.test.tsx](./src/contexts/__tests__/NotificationContext.test.tsx)
-│   │   │   ├── [SettingsContext.test.tsx](./src/contexts/__tests__/SettingsContext.test.tsx)
-│   │   │   ├── [TelegramContext.test.tsx](./src/contexts/__tests__/TelegramContext.test.tsx)
-│   │   │   ├── [ThemeContext.test.tsx](./src/contexts/__tests__/ThemeContext.test.tsx)
-│   │   │   └── [TonWalletContext.test.tsx](./src/contexts/__tests__/TonWalletContext.test.tsx)
-│   │   ├── [LanguageContext.tsx](./src/contexts/LanguageContext.tsx)
-│   │   ├── [ModalContext.tsx](./src/contexts/ModalContext.tsx)
-│   │   ├── [NotificationContext.tsx](./src/contexts/NotificationContext.tsx)
-│   │   ├── [SettingsContext.tsx](./src/contexts/SettingsContext.tsx)
-│   │   ├── [TelegramContext.tsx](./src/contexts/TelegramContext.tsx)
-│   │   ├── [ThemeContext.tsx](./src/contexts/ThemeContext.tsx)
-│   │   └── [TonWalletContext.tsx](./src/contexts/TonWalletContext.tsx)
 │   ├── data/
 │   │   ├── bookmarks/
-│   │   │   ├── [chat.ts](./src/data/bookmarks/chat.ts)
+│   │   │   ├── [agents.ts](./src/data/bookmarks/agents.ts)
 │   │   │   ├── [code.ts](./src/data/bookmarks/code.ts)
 │   │   │   ├── [google.ts](./src/data/bookmarks/google.ts)
 │   │   │   ├── [index.ts](./src/data/bookmarks/index.ts)
@@ -606,13 +607,11 @@
 │   │   │   ├── [months.ts](./src/data/calendar/months.ts)
 │   │   │   └── [years.ts](./src/data/calendar/years.ts)
 │   │   ├── chess/
-│   │   │   ├── [chess960.ts](./src/data/chess/chess960.ts)
 │   │   │   └── [openings.ts](./src/data/chess/openings.ts)
 │   │   ├── downloads/
 │   │   │   ├── [agents.ts](./src/data/downloads/agents.ts)
 │   │   │   ├── [clis.ts](./src/data/downloads/clis.ts)
 │   │   │   ├── [extensions.ts](./src/data/downloads/extensions.ts)
-│   │   │   ├── [ides.ts](./src/data/downloads/ides.ts)
 │   │   │   ├── [index.ts](./src/data/downloads/index.ts)
 │   │   │   ├── [packages.ts](./src/data/downloads/packages.ts)
 │   │   │   └── [types.ts](./src/data/downloads/types.ts)
@@ -634,35 +633,6 @@
 │   │   └── [wordle.ts](./src/data/wordle.ts)
 │   ├── examples/
 │   │   └── [example.yaml](./src/examples/example.yaml)
-│   ├── hooks/
-│   │   ├── boolean/
-│   │   │   ├── [use-boolean.tsx](./src/hooks/boolean/use-boolean.tsx)
-│   │   │   └── [use-toggle.tsx](./src/hooks/boolean/use-toggle.tsx)
-│   │   ├── events/
-│   │   │   ├── [use-keyboard.tsx](./src/hooks/events/use-keyboard.tsx)
-│   │   │   ├── [use-media-query.tsx](./src/hooks/events/use-media-query.tsx)
-│   │   │   ├── [use-resize.tsx](./src/hooks/events/use-resize.tsx)
-│   │   │   └── [use-scroll.tsx](./src/hooks/events/use-scroll.tsx)
-│   │   ├── info/
-│   │   │   ├── [use-browser.tsx](./src/hooks/info/use-browser.tsx)
-│   │   │   ├── [use-language.tsx](./src/hooks/info/use-language.tsx)
-│   │   │   └── [use-screen.tsx](./src/hooks/info/use-screen.tsx)
-│   │   ├── navigator/
-│   │   │   ├── [use-bluetooth.tsx](./src/hooks/navigator/use-bluetooth.tsx)
-│   │   │   └── [use-camera.tsx](./src/hooks/navigator/use-camera.tsx)
-│   │   ├── network/
-│   │   │   ├── [use-fetch.tsx](./src/hooks/network/use-fetch.tsx)
-│   │   │   └── [use-online.tsx](./src/hooks/network/use-online.tsx)
-│   │   ├── ssr/
-│   │   │   └── [use-isomorphic-layout-effect.tsx](./src/hooks/ssr/use-isomorphic-layout-effect.tsx)
-│   │   ├── time/
-│   │   │   ├── [use-countdown.tsx](./src/hooks/time/use-countdown.tsx)
-│   │   │   ├── [use-interval.tsx](./src/hooks/time/use-interval.tsx)
-│   │   │   └── [use-timeout.tsx](./src/hooks/time/use-timeout.tsx)
-│   │   ├── [use-dark-mode.ts](./src/hooks/use-dark-mode.ts)
-│   │   ├── [use-debounce.ts](./src/hooks/use-debounce.ts)
-│   │   ├── [use-indexed-db.ts](./src/hooks/use-indexed-db.ts)
-│   │   └── [use-stockfish.ts](./src/hooks/use-stockfish.ts)
 │   ├── json/
 │   │   ├── chess/
 │   │   │   └── [analysis.json](./src/json/chess/analysis.json)
@@ -679,16 +649,10 @@
 │   │   └── [rate-limit.ts](./src/middlewares/rate-limit.ts)
 │   ├── pages/
 │   │   ├── api/
-│   │   │   ├── openrouter/
-│   │   │   │   └── [index.ts](./src/pages/api/openrouter/index.ts)
 │   │   │   ├── proxy/
 │   │   │   │   └── [index.ts](./src/pages/api/proxy/index.ts)
-│   │   │   ├── trpc/
-│   │   │   │   └── [[trpc].ts](./src/pages/api/trpc/[trpc].ts)
-│   │   │   └── youtube/
-│   │   │       └── transcript/
-│   │   │           └── [id]/
-│   │   │               └── [index.ts](./src/pages/api/youtube/transcript/[id]/index.ts)
+│   │   │   └── trpc/
+│   │   │       └── [[trpc].ts](./src/pages/api/trpc/[trpc].ts)
 │   │   ├── app/
 │   │   │   ├── attractors/
 │   │   │   │   └── [index.tsx](./src/pages/app/attractors/index.tsx)
@@ -727,11 +691,7 @@
 │   ├── styles/
 │   │   └── [globals.css](./src/styles/globals.css)
 │   └── utils/
-│       ├── chess/
-│       │   ├── [fen.ts](./src/utils/chess/fen.ts)
-│       │   └── [pgn.ts](./src/utils/chess/pgn.ts)
 │       ├── [canvas.ts](./src/utils/canvas.ts)
-│       ├── [number.ts](./src/utils/number.ts)
 │       └── [trpc.ts](./src/utils/trpc.ts)
 ├── src-tauri/
 │   ├── capabilities/
@@ -759,6 +719,7 @@
 │   ├── [Cargo.toml](./src-tauri/Cargo.toml)
 │   ├── [build.rs](./src-tauri/build.rs)
 │   └── [tauri.conf.json](./src-tauri/tauri.conf.json)
+├── [LICENSE](./LICENSE)
 ├── [README.md](./README.md)
 ├── [TREE.md](./TREE.md)
 ├── [capacitor.config.ts](./capacitor.config.ts)
@@ -771,4 +732,4 @@
 └── [tsconfig.json](./tsconfig.json)
 ```
 
-213 directories, 555 files
+203 directories, 526 files

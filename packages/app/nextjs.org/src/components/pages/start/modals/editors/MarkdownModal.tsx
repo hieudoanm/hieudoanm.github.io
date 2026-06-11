@@ -4,6 +4,14 @@ import { Compartment, EditorState } from '@codemirror/state';
 import { EditorView, keymap, lineNumbers } from '@codemirror/view';
 import { oneDark } from '@codemirror/theme-one-dark';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import {
+  capitalize,
+  deburr,
+  kebabCase,
+  lowerCase,
+  snakeCase,
+  upperCase,
+} from '@lodash/ts';
 import { tryCatch } from '@lodashx/ts';
 import DOMPurify from 'dompurify';
 import { saveAs } from 'file-saver';
@@ -192,6 +200,36 @@ const insertTable = (view: EditorView) => {
     changes: { from, to: from, insert: table },
   });
   view.focus();
+};
+
+/* =========================
+   String transform helpers
+========================= */
+type StringStype =
+  | 'capitalize'
+  | 'deburr'
+  | 'kebabCase'
+  | 'lowerCase'
+  | 'snakeCase'
+  | 'upperCase';
+
+const STRING_STYLES: { value: StringStype | ''; label: string }[] = [
+  { value: '', label: 'Format…' },
+  { value: 'capitalize', label: 'Capitalise' },
+  { value: 'deburr', label: 'deburr' },
+  { value: 'kebabCase', label: 'kebab-case' },
+  { value: 'lowerCase', label: 'lowercase' },
+  { value: 'snakeCase', label: 'snake_case' },
+  { value: 'upperCase', label: 'UPPERCASE' },
+];
+
+const STYLE_FN: Record<StringStype, (s: string) => string> = {
+  capitalize,
+  deburr,
+  kebabCase,
+  lowerCase,
+  snakeCase,
+  upperCase,
 };
 
 /* =========================
@@ -439,6 +477,8 @@ export const MarkdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     fileName: 'untitled.md',
     showLineNumbers: false,
   });
+
+  const [stringStyle, setStringStyle] = useState<StringStype | ''>('');
 
   const selectedFont = FONTS.find((f) => f.id === fontId) ?? FONTS[0];
 
@@ -1131,6 +1171,41 @@ export const MarkdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             title="Insert table">
             Tbl
           </button>
+
+          <div className="border-base-300 mx-0.5 h-4 w-px border-l" />
+
+          <select
+            className="select select-xs border-base-300 w-28 border font-mono"
+            value={stringStyle}
+            onChange={(e) => {
+              const style = e.target.value as StringStype;
+              if (style) {
+                const view = viewRef.current;
+                if (view) {
+                  const { from, to } = view.state.selection.main;
+                  const selected = view.state.sliceDoc(from, to);
+                  if (selected) {
+                    const transformed = STYLE_FN[style](selected);
+                    view.dispatch({
+                      changes: { from, to, insert: transformed },
+                      selection: {
+                        anchor: from,
+                        head: from + transformed.length,
+                      },
+                    });
+                    view.focus();
+                  }
+                }
+              }
+              setStringStyle('');
+            }}
+            title="Apply string transformation to selected text">
+            {STRING_STYLES.map(({ value, label }) => (
+              <option key={value} value={value}>
+                {label}
+              </option>
+            ))}
+          </select>
         </div>
 
         {/* View mode + ToC + Font */}

@@ -488,14 +488,6 @@ const SnellenChartModal = dynamic(
   { ssr: false }
 );
 
-const StringModal = dynamic(
-  () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/tools/StringModal').then(
-      (mod) => mod.StringModal
-    ),
-  { ssr: false }
-);
-
 const SVGModal = dynamic(
   () =>
     import('@hieudoanm.github.io/components/pages/start/modals/tools/SVGModal').then(
@@ -664,7 +656,6 @@ type ModalId =
   | 'slides'
   | 'snellen'
   | 'sudoku'
-  | 'string'
   | 'svg'
   | 't3'
   | 'tax'
@@ -744,7 +735,6 @@ const MODAL_MAP: Record<
   sign: SignModal,
   slides: SlidesModal,
   snellen: SnellenChartModal,
-  string: StringModal,
   svg: SVGModal,
   sudoku: SudokuModal,
   t3: T3Modal,
@@ -831,13 +821,6 @@ const makeTools = (
       emoji: '🔍',
       color: '#06b6d4',
       onClick: open('shopify-detect'),
-    },
-    {
-      label: 'String',
-      description: 'Formatter',
-      emoji: '✏️',
-      color: '#10b981',
-      onClick: open('string'),
     },
     {
       label: 'SVG',

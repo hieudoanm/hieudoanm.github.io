@@ -221,8 +221,7 @@
 │   │   │       │   │   ├── __tests__/
 │   │   │       │   │   │   ├── [EmojisModal.test.tsx](./src/components/pages/start/modals/tools/__tests__/EmojisModal.test.tsx)
 │   │   │       │   │   │   ├── [KaprekarModal.test.tsx](./src/components/pages/start/modals/tools/__tests__/KaprekarModal.test.tsx)
-│   │   │       │   │   │   ├── [ProxyModal.test.tsx](./src/components/pages/start/modals/tools/__tests__/ProxyModal.test.tsx)
-│   │   │       │   │   │   └── [StringModal.test.tsx](./src/components/pages/start/modals/tools/__tests__/StringModal.test.tsx)
+│   │   │       │   │   │   └── [ProxyModal.test.tsx](./src/components/pages/start/modals/tools/__tests__/ProxyModal.test.tsx)
 │   │   │       │   │   ├── [ClipboardModal.tsx](./src/components/pages/start/modals/tools/ClipboardModal.tsx)
 │   │   │       │   │   ├── [EmojisModal.tsx](./src/components/pages/start/modals/tools/EmojisModal.tsx)
 │   │   │       │   │   ├── [FigletModal.tsx](./src/components/pages/start/modals/tools/FigletModal.tsx)
@@ -233,7 +232,6 @@
 │   │   │       │   │   ├── [SVGModal.tsx](./src/components/pages/start/modals/tools/SVGModal.tsx)
 │   │   │       │   │   ├── [SheetsModal.tsx](./src/components/pages/start/modals/tools/SheetsModal.tsx)
 │   │   │       │   │   ├── [ShopifyDetectModal.tsx](./src/components/pages/start/modals/tools/ShopifyDetectModal.tsx)
-│   │   │       │   │   ├── [StringModal.tsx](./src/components/pages/start/modals/tools/StringModal.tsx)
 │   │   │       │   │   └── [UUIDModal.tsx](./src/components/pages/start/modals/tools/UUIDModal.tsx)
 │   │   │       │   └── visualization/
 │   │   │       │       ├── __tests__/
@@ -318,14 +316,6 @@
 │   │               └── [index.ts](./src/components/templates/store/StoreItemTemplate/index.ts)
 │   ├── constants/
 │   │   └── [models.ts](./src/constants/models.ts)
-│   ├── contexts/
-│   │   ├── [LanguageContext.tsx](./src/contexts/LanguageContext.tsx)
-│   │   ├── [ModalContext.tsx](./src/contexts/ModalContext.tsx)
-│   │   ├── [NotificationContext.tsx](./src/contexts/NotificationContext.tsx)
-│   │   ├── [SettingsContext.tsx](./src/contexts/SettingsContext.tsx)
-│   │   ├── [TelegramContext.tsx](./src/contexts/TelegramContext.tsx)
-│   │   ├── [ThemeContext.tsx](./src/contexts/ThemeContext.tsx)
-│   │   └── [index.ts](./src/contexts/index.ts)
 │   ├── data/
 │   │   ├── bookmarks/
 │   │   │   ├── [chat.ts](./src/data/bookmarks/chat.ts)
@@ -405,33 +395,6 @@
 │   │   │   └── [yaml2pdfmake.types.ts](./src/services/yaml2pdfmake/yaml2pdfmake.types.ts)
 │   │   └── youtube/
 │   │       └── [youtube.service.ts](./src/services/youtube/youtube.service.ts)
-│   ├── signals/
-│   │   ├── boolean/
-│   │   │   ├── [create-boolean.ts](./src/signals/boolean/create-boolean.ts)
-│   │   │   └── [create-toggle.ts](./src/signals/boolean/create-toggle.ts)
-│   │   ├── events/
-│   │   │   ├── [create-keyboard.ts](./src/signals/events/create-keyboard.ts)
-│   │   │   ├── [create-media-query.ts](./src/signals/events/create-media-query.ts)
-│   │   │   ├── [create-resize.ts](./src/signals/events/create-resize.ts)
-│   │   │   └── [create-scroll.ts](./src/signals/events/create-scroll.ts)
-│   │   ├── info/
-│   │   │   ├── [create-browser.ts](./src/signals/info/create-browser.ts)
-│   │   │   ├── [create-language.ts](./src/signals/info/create-language.ts)
-│   │   │   └── [create-screen.ts](./src/signals/info/create-screen.ts)
-│   │   ├── navigator/
-│   │   │   ├── [create-bluetooth.ts](./src/signals/navigator/create-bluetooth.ts)
-│   │   │   └── [create-camera.ts](./src/signals/navigator/create-camera.ts)
-│   │   ├── network/
-│   │   │   ├── [create-fetch.ts](./src/signals/network/create-fetch.ts)
-│   │   │   └── [create-online.ts](./src/signals/network/create-online.ts)
-│   │   ├── time/
-│   │   │   ├── [create-countdown.ts](./src/signals/time/create-countdown.ts)
-│   │   │   ├── [create-interval.ts](./src/signals/time/create-interval.ts)
-│   │   │   └── [create-timeout.ts](./src/signals/time/create-timeout.ts)
-│   │   ├── [create-dark-mode.ts](./src/signals/create-dark-mode.ts)
-│   │   ├── [create-debounce.ts](./src/signals/create-debounce.ts)
-│   │   ├── [create-indexed-db.ts](./src/signals/create-indexed-db.ts)
-│   │   └── [index.ts](./src/signals/index.ts)
 │   ├── styles/
 │   │   └── [globals.css](./src/styles/globals.css)
 │   ├── utils/
@@ -449,6 +412,7 @@
 │   ├── [Cargo.toml](./src-tauri/Cargo.toml)
 │   ├── [build.rs](./src-tauri/build.rs)
 │   └── [tauri.conf.json](./src-tauri/tauri.conf.json)
+├── [LICENSE](./LICENSE)
 ├── [README.md](./README.md)
 ├── [TREE.md](./TREE.md)
 ├── [capacitor.config.ts](./capacitor.config.ts)
@@ -461,4 +425,4 @@
 └── [vitest.setup.ts](./vitest.setup.ts)
 ```
 
-123 directories, 335 files
+115 directories, 307 files
