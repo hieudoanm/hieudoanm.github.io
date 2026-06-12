@@ -1,19 +1,16 @@
-// Package system ...
 package system
 
-import (
-	"github.com/spf13/cobra"
-)
+import "github.com/spf13/cobra"
 
-// NewCommand returns the system root cobra command.
 func NewCommand() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "system",
-		Short: "System monitoring and diagnostics tools",
-		Long:  `System monitoring utilities including CPU, RAM, disk, and network metrics.`,
+		Short: "System utilities",
+		Long:  `System monitoring and clipboard management.`,
 	}
-
-	cmd.AddCommand(monitorCmd)
-
+	cmd.AddCommand(
+		newMonitorCmd(),
+		newClipboardCmd(),
+	)
 	return cmd
 }

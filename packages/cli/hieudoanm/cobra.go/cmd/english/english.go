@@ -24,6 +24,8 @@ type Word struct {
 	Results []Result `json:"results"`
 }
 
+var defineJSON bool
+
 var defineCmd = &cobra.Command{
 	Use:   "define <word>",
 	Short: "Look up the definition of an English word",
@@ -50,6 +52,12 @@ var defineCmd = &cobra.Command{
 			return fmt.Errorf("json error: %w", err)
 		}
 
+		if defineJSON {
+			out, _ := json.MarshalIndent(data, "", "  ")
+			fmt.Println(string(out))
+			return nil
+		}
+
 		fmt.Printf("\nWORD: %s\n\n", data.Word)
 		for i, r := range data.Results {
 			fmt.Printf("%d) %s\n", i+1, r.PartOfSpeech)
@@ -72,6 +80,7 @@ func NewCommand() *cobra.Command {
 		Short: "English dictionary tools",
 		Long:  `English dictionary lookup tool that fetches word definitions, synonyms, antonyms, and usage examples.`,
 	}
+	defineCmd.Flags().BoolVar(&defineJSON, "json", false, "Output in JSON format")
 	cmd.AddCommand(defineCmd)
 	return cmd
 }

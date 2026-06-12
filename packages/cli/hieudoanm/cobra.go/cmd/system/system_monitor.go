@@ -1,6 +1,7 @@
 package system
 
 import (
+	"encoding/json"
 	"fmt"
 	"math"
 	"sort"
@@ -20,11 +21,11 @@ import (
 	"github.com/spf13/cobra"
 )
 
-/* ─── Sparkline ────────────────────────────────────────────────────────── */
+var monitorJSON bool
 
-const sparkChars = "▁▂▃▄▅▆▇█"
+const sysSparkChars = "▁▂▃▄▅▆▇█"
 
-func sparkline(data []float64, width int) string {
+func sysSparkline(data []float64, width int) string {
 	if len(data) == 0 {
 		return strings.Repeat(" ", width)
 	}
@@ -34,47 +35,44 @@ func sparkline(data []float64, width int) string {
 
 	var sb strings.Builder
 	for _, v := range data {
-		idx := int(math.Round(v / 100 * float64(len(sparkChars)-1)))
-		idx = max(0, min(len(sparkChars)-1, idx))
-		sb.WriteRune(rune(sparkChars[idx]))
+		idx := int(math.Round(v / 100 * float64(len(sysSparkChars)-1)))
+		idx = sysMax(0, sysMin(len(sysSparkChars)-1, idx))
+		sb.WriteRune(rune(sysSparkChars[idx]))
 	}
 
 	return strings.Repeat(" ", width-len(data)) + sb.String()
 }
 
-func max(a, b int) int {
+func sysMax(a, b int) int {
 	if a > b {
 		return a
 	}
 	return b
 }
-func min(a, b int) int {
+
+func sysMin(a, b int) int {
 	if a < b {
 		return a
 	}
 	return b
 }
 
-/* ─── Bar ─────────────────────────────────────────────────────────────── */
-
-func bar(pct float64, width int) string {
+func sysBar(pct float64, width int) string {
 	filled := int(math.Round(pct / 100 * float64(width)))
-	filled = max(0, min(width, filled))
+	filled = sysMax(0, sysMin(width, filled))
 	return theme.StatusStyle(pct).Render(
 		strings.Repeat("█", filled) + strings.Repeat("░", width-filled),
 	)
 }
 
-/* ─── Metrics ─────────────────────────────────────────────────────────── */
-
-type ProcessInfo struct {
+type SysProcessInfo struct {
 	PID   int32
 	Name  string
 	CPU   float64
 	MemMB uint64
 }
 
-type Metrics struct {
+type SysMetrics struct {
 	CPUTotal    float64
 	CPUPerCore  []float64
 	RAMUsedGB   float64
@@ -85,11 +83,11 @@ type Metrics struct {
 	NetRxKB     uint64
 	NetTxKB     uint64
 	Uptime      uint64
-	TopProcs    []ProcessInfo
+	TopProcs    []SysProcessInfo
 }
 
-func gatherMetrics() (Metrics, error) {
-	var m Metrics
+func sysGatherMetrics() (SysMetrics, error) {
+	var m SysMetrics
 
 	if p, _ := cpu.Percent(0, false); len(p) > 0 {
 		m.CPUTotal = p[0]
@@ -127,7 +125,7 @@ func gatherMetrics() (Metrics, error) {
 			memMB = memInfo.RSS / 1048576
 		}
 
-		m.TopProcs = append(m.TopProcs, ProcessInfo{
+		m.TopProcs = append(m.TopProcs, SysProcessInfo{
 			PID: p.Pid, Name: name, CPU: cpuPct, MemMB: memMB,
 		})
 	}
@@ -142,40 +140,38 @@ func gatherMetrics() (Metrics, error) {
 	return m, nil
 }
 
-/* ─── Bubbletea Model ─────────────────────────────────────────────────── */
+type sysTickMsg time.Time
+type sysMetricsMsg SysMetrics
 
-type tickMsg time.Time
-type metricsMsg Metrics
-
-type model struct {
-	metrics    Metrics
+type sysModel struct {
+	metrics    SysMetrics
 	cpuHistory []float64
 	ramHistory []float64
 	width      int
 	err        error
 }
 
-func (m model) Init() tea.Cmd {
-	return tea.Batch(fetchMetrics(), tickEvery())
+func (m sysModel) Init() tea.Cmd {
+	return tea.Batch(sysFetchMetrics(), sysTickEvery())
 }
 
-func fetchMetrics() tea.Cmd {
+func sysFetchMetrics() tea.Cmd {
 	return func() tea.Msg {
-		m, err := gatherMetrics()
+		m, err := sysGatherMetrics()
 		if err != nil {
 			return err
 		}
-		return metricsMsg(m)
+		return sysMetricsMsg(m)
 	}
 }
 
-func tickEvery() tea.Cmd {
+func sysTickEvery() tea.Cmd {
 	return tea.Tick(time.Second, func(t time.Time) tea.Msg {
-		return tickMsg(t)
+		return sysTickMsg(t)
 	})
 }
 
-func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
+func (m sysModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	switch msg := msg.(type) {
 
 	case tea.KeyMsg:
@@ -186,14 +182,14 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	case tea.WindowSizeMsg:
 		m.width = msg.Width
 
-	case metricsMsg:
-		m.metrics = Metrics(msg)
+	case sysMetricsMsg:
+		m.metrics = SysMetrics(msg)
 
 		m.cpuHistory = append(m.cpuHistory, m.metrics.CPUTotal)
 		m.ramHistory = append(m.ramHistory, m.metrics.RAMPct)
 
-	case tickMsg:
-		return m, tea.Batch(fetchMetrics(), tickEvery())
+	case sysTickMsg:
+		return m, tea.Batch(sysFetchMetrics(), sysTickEvery())
 
 	case error:
 		m.err = msg
@@ -202,9 +198,7 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	return m, nil
 }
 
-/* ─── View (v2 FIX) ───────────────────────────────────────────────────── */
-
-func (m model) View() tea.View {
+func (m sysModel) View() tea.View {
 	if m.err != nil {
 		return tea.NewView(theme.Error.Render("error: " + m.err.Error()))
 	}
@@ -222,14 +216,44 @@ func (m model) View() tea.View {
 	return tea.NewView(content)
 }
 
-/* ─── Command ─────────────────────────────────────────────────────────── */
-
-var monitorCmd = &cobra.Command{
+var sysMonitorCmd = &cobra.Command{
 	Use:   "monitor",
 	Short: "Monitor system resources in real-time",
 	RunE: func(cmd *cobra.Command, args []string) error {
-		p := tea.NewProgram(model{width: 100})
+		if monitorJSON {
+			m, err := sysGatherMetrics()
+			if err != nil {
+				return err
+			}
+			type procInfo struct {
+				PID   int32   `json:"pid"`
+				Name  string  `json:"name"`
+				CPU   float64 `json:"cpu_percent"`
+				MemMB uint64  `json:"mem_mb"`
+			}
+			procs := make([]procInfo, len(m.TopProcs))
+			for i, p := range m.TopProcs {
+				procs[i] = procInfo{PID: p.PID, Name: p.Name, CPU: p.CPU, MemMB: p.MemMB}
+			}
+			uptime := time.Duration(m.Uptime) * time.Second
+			out, _ := json.MarshalIndent(map[string]interface{}{
+				"cpu_percent":  m.CPUTotal,
+				"ram_percent":  m.RAMPct,
+				"ram_used_gb":  m.RAMUsedGB,
+				"ram_total_gb": m.RAMTotalGB,
+				"uptime":       uptime.String(),
+				"top_processes": procs,
+			}, "", "  ")
+			fmt.Println(string(out))
+			return nil
+		}
+		p := tea.NewProgram(sysModel{width: 100})
 		_, err := p.Run()
 		return err
 	},
+}
+
+func newMonitorCmd() *cobra.Command {
+	sysMonitorCmd.Flags().BoolVar(&monitorJSON, "json", false, "Output in JSON format")
+	return sysMonitorCmd
 }

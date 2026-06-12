@@ -1,6 +1,7 @@
 package semver
 
 import (
+	"encoding/json"
 	"fmt"
 	"sort"
 	"strconv"
@@ -8,6 +9,8 @@ import (
 
 	"github.com/spf13/cobra"
 )
+
+var semverJSON bool
 
 type version struct {
 	major, minor, patch int
@@ -113,7 +116,17 @@ func NewCommand() *cobra.Command {
 				if prerelease != "" {
 					result.prerelease = prerelease
 				}
-				fmt.Println(result)
+				if semverJSON {
+					out, _ := json.MarshalIndent(map[string]interface{}{
+						"input":     args[0],
+						"result":    result.String(),
+						"bump":      bumpPart,
+						"prerelease": prerelease,
+					}, "", "  ")
+					fmt.Println(string(out))
+				} else {
+					fmt.Println(result)
+				}
 				return nil
 			}
 
@@ -129,10 +142,19 @@ func NewCommand() *cobra.Command {
 				if err != nil {
 					return err
 				}
-				if matches {
-					fmt.Printf("%s matches range %s\n", v, rangeExpr)
+				if semverJSON {
+					out, _ := json.MarshalIndent(map[string]interface{}{
+						"version": args[0],
+						"range":   rangeExpr,
+						"matches": matches,
+					}, "", "  ")
+					fmt.Println(string(out))
 				} else {
-					fmt.Printf("%s does NOT match range %s\n", v, rangeExpr)
+					if matches {
+						fmt.Printf("%s matches range %s\n", v, rangeExpr)
+					} else {
+						fmt.Printf("%s does NOT match range %s\n", v, rangeExpr)
+					}
 				}
 				return nil
 			}
@@ -146,12 +168,30 @@ func NewCommand() *cobra.Command {
 
 			switch action {
 			case "validate":
-				for _, s := range versions {
-					_, err := parseVersion(s)
-					if err != nil {
-						fmt.Printf("%s: invalid (%v)\n", s, err)
-					} else {
-						fmt.Printf("%s: valid\n", s)
+				if semverJSON {
+					results := make([]map[string]interface{}, 0)
+					for _, s := range versions {
+						_, err := parseVersion(s)
+						valid := err == nil
+						entry := map[string]interface{}{
+							"version": s,
+							"valid":   valid,
+						}
+						if err != nil {
+							entry["error"] = err.Error()
+						}
+						results = append(results, entry)
+					}
+					out, _ := json.MarshalIndent(results, "", "  ")
+					fmt.Println(string(out))
+				} else {
+					for _, s := range versions {
+						_, err := parseVersion(s)
+						if err != nil {
+							fmt.Printf("%s: invalid (%v)\n", s, err)
+						} else {
+							fmt.Printf("%s: valid\n", s)
+						}
 					}
 				}
 
@@ -177,7 +217,16 @@ func NewCommand() *cobra.Command {
 				default:
 					rel = "=="
 				}
-				fmt.Printf("%s %s %s\n", a, rel, b)
+				if semverJSON {
+					out, _ := json.MarshalIndent(map[string]interface{}{
+						"a":        a.String(),
+						"b":        b.String(),
+						"relation": rel,
+					}, "", "  ")
+					fmt.Println(string(out))
+				} else {
+					fmt.Printf("%s %s %s\n", a, rel, b)
+				}
 
 			case "sort":
 				parsed := make([]version, len(versions))
@@ -191,16 +240,35 @@ func NewCommand() *cobra.Command {
 				sort.Slice(parsed, func(i, j int) bool {
 					return parsed[i].compare(parsed[j]) < 0
 				})
-				for _, v := range parsed {
-					fmt.Println(v)
+				if semverJSON {
+					sorted := make([]string, len(parsed))
+					for i, v := range parsed {
+						sorted[i] = v.String()
+					}
+					out, _ := json.MarshalIndent(map[string]interface{}{
+						"sorted": sorted,
+					}, "", "  ")
+					fmt.Println(string(out))
+				} else {
+					for _, v := range parsed {
+						fmt.Println(v)
+					}
 				}
 
 			default:
-				// If the first arg looks like a version, treat as bump
 				if _, err := parseVersion(action); err == nil && len(versions) >= 0 {
 					v, _ := parseVersion(action)
 					result := v.bump(bumpPart)
-					fmt.Println(result)
+					if semverJSON {
+						out, _ := json.MarshalIndent(map[string]interface{}{
+							"input":  action,
+							"result": result.String(),
+							"bump":   bumpPart,
+						}, "", "  ")
+						fmt.Println(string(out))
+					} else {
+						fmt.Println(result)
+					}
 				} else {
 					return fmt.Errorf("unknown action: %s (use validate, compare, sort)", action)
 				}
@@ -212,6 +280,7 @@ func NewCommand() *cobra.Command {
 	cmd.Flags().StringVar(&bumpPart, "bump", "", "Bump version part: major, minor, patch")
 	cmd.Flags().StringVar(&prerelease, "prerelease", "", "Set prerelease label after bump")
 	cmd.Flags().StringVar(&rangeExpr, "range", "", "Check if version matches a range (e.g. '>=1.0.0 <2.0.0')")
+	cmd.Flags().BoolVar(&semverJSON, "json", false, "Output in JSON format")
 	return cmd
 }
 
