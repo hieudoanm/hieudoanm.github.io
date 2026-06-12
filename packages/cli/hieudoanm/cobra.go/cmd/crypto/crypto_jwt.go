@@ -12,7 +12,17 @@ var jwtJSON bool
 
 func newJwtCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "jwt <token>",
+		Use:   "jwt",
+		Short: "Encode and decode JWTs",
+	}
+
+	cmd.AddCommand(newJwtDecodeCmd(), newJwtEncodeCmd())
+	return cmd
+}
+
+func newJwtDecodeCmd() *cobra.Command {
+	cmd := &cobra.Command{
+		Use:   "decode <token>",
 		Short: "Decode a JWT token without signature verification",
 		Args:  cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {

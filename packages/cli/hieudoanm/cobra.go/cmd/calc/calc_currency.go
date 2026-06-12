@@ -43,7 +43,19 @@ func newCurrencyCmd() *cobra.Command {
 			}
 
 			converted := amount * rate
-			fmt.Printf("%.2f %s = %.2f %s (rate: %f)\n", amount, from, converted, to, rate)
+			if calcJSON {
+				out, _ := json.MarshalIndent(map[string]interface{}{
+					"from":   from,
+					"to":     to,
+					"amount": amount,
+					"rate":   rate,
+					"result": converted,
+					"date":   response.Date,
+				}, "", "  ")
+				fmt.Println(string(out))
+			} else {
+				fmt.Printf("%.2f %s = %.2f %s (rate: %f)\n", amount, from, converted, to, rate)
+			}
 			return nil
 		},
 	}

@@ -1,6 +1,7 @@
 package calc
 
 import (
+	"encoding/json"
 	"fmt"
 	"strings"
 
@@ -15,7 +16,6 @@ type unitConv struct {
 }
 
 var unitTable = []unitConv{
-	// Length
 	{"length", []string{"mm", "millimeter", "millimetre"}, func(v float64) float64 { return v / 1000 }, func(v float64) float64 { return v * 1000 }},
 	{"length", []string{"cm", "centimeter", "centimetre"}, func(v float64) float64 { return v / 100 }, func(v float64) float64 { return v * 100 }},
 	{"length", []string{"m", "meter", "metre"}, func(v float64) float64 { return v }, func(v float64) float64 { return v }},
@@ -25,7 +25,6 @@ var unitTable = []unitConv{
 	{"length", []string{"yd", "yard"}, func(v float64) float64 { return v * 0.9144 }, func(v float64) float64 { return v / 0.9144 }},
 	{"length", []string{"mi", "mile"}, func(v float64) float64 { return v * 1609.344 }, func(v float64) float64 { return v / 1609.344 }},
 
-	// Weight
 	{"weight", []string{"mg", "milligram"}, func(v float64) float64 { return v / 1e6 }, func(v float64) float64 { return v * 1e6 }},
 	{"weight", []string{"g", "gram"}, func(v float64) float64 { return v / 1000 }, func(v float64) float64 { return v * 1000 }},
 	{"weight", []string{"kg", "kilogram"}, func(v float64) float64 { return v }, func(v float64) float64 { return v }},
@@ -33,12 +32,10 @@ var unitTable = []unitConv{
 	{"weight", []string{"lb", "lbs", "pound"}, func(v float64) float64 { return v * 0.453592 }, func(v float64) float64 { return v / 0.453592 }},
 	{"weight", []string{"oz", "ounce"}, func(v float64) float64 { return v * 0.0283495 }, func(v float64) float64 { return v / 0.0283495 }},
 
-	// Temperature
 	{"temperature", []string{"c", "celsius"}, func(v float64) float64 { return v }, func(v float64) float64 { return v }},
 	{"temperature", []string{"f", "fahrenheit"}, func(v float64) float64 { return (v - 32) * 5 / 9 }, func(v float64) float64 { return v*9/5 + 32 }},
 	{"temperature", []string{"k", "kelvin"}, func(v float64) float64 { return v - 273.15 }, func(v float64) float64 { return v + 273.15 }},
 
-	// Speed
 	{"speed", []string{"m/s", "mps"}, func(v float64) float64 { return v }, func(v float64) float64 { return v }},
 	{"speed", []string{"km/h", "kph"}, func(v float64) float64 { return v / 3.6 }, func(v float64) float64 { return v * 3.6 }},
 	{"speed", []string{"mph"}, func(v float64) float64 { return v * 0.44704 }, func(v float64) float64 { return v / 0.44704 }},
@@ -83,7 +80,18 @@ func newUnitCmd() *cobra.Command {
 
 			base := fromUnit.toBase(value)
 			result := toUnit.fromBase(base)
-			fmt.Printf("%g %s = %g %s\n", value, from, result, to)
+			if calcJSON {
+				out, _ := json.MarshalIndent(map[string]interface{}{
+					"value":    value,
+					"from":     from,
+					"to":       to,
+					"result":   result,
+					"category": fromUnit.cat,
+				}, "", "  ")
+				fmt.Println(string(out))
+			} else {
+				fmt.Printf("%g %s = %g %s\n", value, from, result, to)
+			}
 			return nil
 		},
 	}

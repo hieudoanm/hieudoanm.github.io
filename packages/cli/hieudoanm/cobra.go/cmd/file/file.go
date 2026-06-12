@@ -1,6 +1,7 @@
 package file
 
 import (
+	"bufio"
 	"crypto/md5"
 	"crypto/sha1"
 	"crypto/sha256"
@@ -30,6 +31,9 @@ func NewCommand() *cobra.Command {
 	cmd.AddCommand(newSizeCmd())
 	cmd.AddCommand(newDuplicatesCmd())
 	cmd.AddCommand(newStatsCmd())
+	cmd.AddCommand(newHeadCmd())
+	cmd.AddCommand(newTailCmd())
+	cmd.AddCommand(newCountCmd())
 	cmd.PersistentFlags().BoolVar(&jsonOutput, "json", false, "Output in JSON format")
 	return cmd
 }
@@ -101,7 +105,7 @@ func detectMIME(path string) string {
 		".gif": "image/gif", ".svg": "image/svg+xml", ".webp": "image/webp",
 		".pdf": "application/pdf", ".doc": "application/msword",
 		".docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-		".xls": "application/vnd.ms-excel", ".xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+		".xls":  "application/vnd.ms-excel", ".xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
 		".zip": "application/zip", ".tar": "application/x-tar", ".gz": "application/gzip",
 		".mp3": "audio/mpeg", ".mp4": "video/mp4",
 		".go": "text/x-go", ".py": "text/x-python", ".rs": "text/x-rust",
@@ -273,7 +277,10 @@ func newStatsCmd() *cobra.Command {
 		Short: "Show file statistics by extension",
 		Args:  cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
-			extStats := make(map[string]struct{ count int; size int64 })
+			extStats := make(map[string]struct {
+				count int
+				size  int64
+			})
 			var totalFiles int
 			var totalSize int64
 
@@ -308,9 +315,9 @@ func newStatsCmd() *cobra.Command {
 					return entries[i].Size > entries[j].Size
 				})
 				b, _ := json.MarshalIndent(map[string]interface{}{
-					"path":       args[0],
-					"totalFiles": totalFiles,
-					"totalSize":  totalSize,
+					"path":        args[0],
+					"totalFiles":  totalFiles,
+					"totalSize":   totalSize,
 					"byExtension": entries,
 				}, "", "  ")
 				fmt.Println(string(b))
@@ -338,6 +345,106 @@ func newStatsCmd() *cobra.Command {
 			fmt.Println(strings.Repeat("-", 42))
 			for _, e := range entries {
 				fmt.Printf("%-20s %8d %12s\n", e.ext, e.count, formatSize(e.size))
+			}
+			return nil
+		},
+	}
+}
+
+func newHeadCmd() *cobra.Command {
+	var lines int
+	cmd := &cobra.Command{
+		Use:   "head <file>",
+		Short: "Show the first N lines of a file",
+		Example: `  file head main.go
+  file head --lines 20 main.go`,
+		Args: cobra.ExactArgs(1),
+		RunE: func(cmd *cobra.Command, args []string) error {
+			f, err := os.Open(args[0])
+			if err != nil {
+				return err
+			}
+			defer f.Close()
+
+			sc := bufio.NewScanner(f)
+			for i := 0; i < lines && sc.Scan(); i++ {
+				fmt.Println(sc.Text())
+			}
+			return sc.Err()
+		},
+	}
+	cmd.Flags().IntVarP(&lines, "lines", "n", 10, "Number of lines")
+	return cmd
+}
+
+func newTailCmd() *cobra.Command {
+	var lines int
+	cmd := &cobra.Command{
+		Use:   "tail <file>",
+		Short: "Show the last N lines of a file",
+		Example: `  file tail main.go
+  file tail --lines 20 main.go`,
+		Args: cobra.ExactArgs(1),
+		RunE: func(cmd *cobra.Command, args []string) error {
+			f, err := os.Open(args[0])
+			if err != nil {
+				return err
+			}
+			defer f.Close()
+
+			sc := bufio.NewScanner(f)
+			ring := make([]string, 0, lines)
+			for sc.Scan() {
+				if len(ring) >= lines {
+					ring = ring[1:]
+				}
+				ring = append(ring, sc.Text())
+			}
+			if err := sc.Err(); err != nil {
+				return err
+			}
+			for _, line := range ring {
+				fmt.Println(line)
+			}
+			return nil
+		},
+	}
+	cmd.Flags().IntVarP(&lines, "lines", "n", 10, "Number of lines")
+	return cmd
+}
+
+func newCountCmd() *cobra.Command {
+	return &cobra.Command{
+		Use:   "count <file>",
+		Short: "Count lines, words, and bytes in a file",
+		Example: `  file count main.go
+  file count main.go --json`,
+		Args: cobra.ExactArgs(1),
+		RunE: func(cmd *cobra.Command, args []string) error {
+			data, err := os.ReadFile(args[0])
+			if err != nil {
+				return err
+			}
+
+			lines := 0
+			for _, b := range data {
+				if b == '\n' {
+					lines++
+				}
+			}
+			words := len(strings.Fields(string(data)))
+			bytes := len(data)
+
+			if jsonOutput {
+				b, _ := json.MarshalIndent(map[string]interface{}{
+					"file":  args[0],
+					"lines": lines,
+					"words": words,
+					"bytes": bytes,
+				}, "", "  ")
+				fmt.Println(string(b))
+			} else {
+				fmt.Printf("%8d %8d %8d %s\n", lines, words, bytes, args[0])
 			}
 			return nil
 		},

@@ -6,15 +6,34 @@ import (
 	"log"
 	"os"
 	"strings"
+
+	"github.com/hieudoanm/hieudoanm/libs/config"
 )
 
 // LoadAPIKey returns the OpenRouter API key from (in priority order):
 //  1. OPEN_ROUTER_API_KEY environment variable
-//  2. ~/.fr  (supports KEY=value or bare sk-... lines)
-//  3. .env in the current working directory
+//  2. ~/.hieudoanm/config.json (via config package)
+//  3. ~/.fr  (supports KEY=value or bare sk-... lines)
+//  4. .env in the current working directory
+//  5. Interactive prompt
 func LoadAPIKey() string {
 	// 1. Env var
 	if v := os.Getenv("OPEN_ROUTER_API_KEY"); v != "" {
+		return v
+	}
+
+	// 2. Config file
+	if v := config.OpenRouterKey(); v != "" {
+		return v
+	}
+
+	// 3. ~/.fr
+	if v := readKeyFromFile(os.ExpandEnv("$HOME/.fr")); v != "" {
+		return v
+	}
+
+	// 4. .env
+	if v := readKeyFromFile(".env"); v != "" {
 		return v
 	}
 
@@ -33,7 +52,6 @@ func LoadAPIKey() string {
 		log.Fatal("API key cannot be empty")
 	}
 
-	// Optional: persist for current process
 	os.Setenv("OPEN_ROUTER_API_KEY", key)
 
 	return key
@@ -52,11 +70,9 @@ func readKeyFromFile(path string) string {
 		if line == "" || strings.HasPrefix(line, "#") {
 			continue
 		}
-		// KEY=value format
 		if strings.HasPrefix(line, "OPEN_ROUTER_API_KEY=") {
 			return strings.TrimPrefix(line, "OPEN_ROUTER_API_KEY=")
 		}
-		// Bare sk-or-... key
 		if strings.HasPrefix(line, "sk-") {
 			return line
 		}

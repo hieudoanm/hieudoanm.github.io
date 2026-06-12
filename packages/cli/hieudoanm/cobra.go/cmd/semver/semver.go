@@ -118,9 +118,9 @@ func NewCommand() *cobra.Command {
 				}
 				if semverJSON {
 					out, _ := json.MarshalIndent(map[string]interface{}{
-						"input":     args[0],
-						"result":    result.String(),
-						"bump":      bumpPart,
+						"input":      args[0],
+						"result":     result.String(),
+						"bump":       bumpPart,
 						"prerelease": prerelease,
 					}, "", "  ")
 					fmt.Println(string(out))

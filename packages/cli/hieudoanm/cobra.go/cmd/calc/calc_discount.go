@@ -1,6 +1,7 @@
 package calc
 
 import (
+	"encoding/json"
 	"fmt"
 
 	"github.com/spf13/cobra"
@@ -18,11 +19,21 @@ func newDiscountCmd() *cobra.Command {
 			discount := original * percent / 100
 			final := original - discount
 
-			fmt.Println("=== Discount Calculator ===")
-			fmt.Printf("Original price:  %12.2f\n", original)
-			fmt.Printf("Discount:        %12.2f%%\n", percent)
-			fmt.Printf("You save:        %12.2f\n", discount)
-			fmt.Printf("Final price:     %12.2f\n", final)
+			if calcJSON {
+				out, _ := json.MarshalIndent(map[string]interface{}{
+					"original":    original,
+					"percent":     percent,
+					"discount":    discount,
+					"final_price": final,
+				}, "", "  ")
+				fmt.Println(string(out))
+			} else {
+				fmt.Println("=== Discount Calculator ===")
+				fmt.Printf("Original price:  %12.2f\n", original)
+				fmt.Printf("Discount:        %12.2f%%\n", percent)
+				fmt.Printf("You save:        %12.2f\n", discount)
+				fmt.Printf("Final price:     %12.2f\n", final)
+			}
 			return nil
 		},
 	}

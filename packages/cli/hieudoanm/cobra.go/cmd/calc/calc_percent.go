@@ -1,6 +1,7 @@
 package calc
 
 import (
+	"encoding/json"
 	"fmt"
 
 	"github.com/spf13/cobra"
@@ -20,13 +21,43 @@ func newPercentCmd() *cobra.Command {
 			switch {
 			case of != 0:
 				pct := value / of * 100
-				fmt.Printf("%.2f is %.2f%% of %.2f\n", value, pct, of)
+				if calcJSON {
+					out, _ := json.MarshalIndent(map[string]interface{}{
+						"value":      value,
+						"of":         of,
+						"percentage": pct,
+						"type":       "percentage_of",
+					}, "", "  ")
+					fmt.Println(string(out))
+				} else {
+					fmt.Printf("%.2f is %.2f%% of %.2f\n", value, pct, of)
+				}
 			case plus != 0:
 				result := value * (1 + plus/100)
-				fmt.Printf("%.2f + %.2f%% = %.2f\n", value, plus, result)
+				if calcJSON {
+					out, _ := json.MarshalIndent(map[string]interface{}{
+						"value":  value,
+						"change": plus,
+						"result": result,
+						"type":   "add_percentage",
+					}, "", "  ")
+					fmt.Println(string(out))
+				} else {
+					fmt.Printf("%.2f + %.2f%% = %.2f\n", value, plus, result)
+				}
 			case minus != 0:
 				result := value * (1 - minus/100)
-				fmt.Printf("%.2f - %.2f%% = %.2f\n", value, minus, result)
+				if calcJSON {
+					out, _ := json.MarshalIndent(map[string]interface{}{
+						"value":  value,
+						"change": minus,
+						"result": result,
+						"type":   "subtract_percentage",
+					}, "", "  ")
+					fmt.Println(string(out))
+				} else {
+					fmt.Printf("%.2f - %.2f%% = %.2f\n", value, minus, result)
+				}
 			default:
 				return fmt.Errorf("use --of, --plus, or --minus")
 			}

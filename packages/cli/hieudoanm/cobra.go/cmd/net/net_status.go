@@ -328,7 +328,7 @@ func newStatusCmd() *cobra.Command {
 				}
 			}
 
-					if statusJSON {
+			if statusJSON {
 				results := make([]map[string]interface{}, 0)
 				for _, svc := range services {
 					out := GetDescriptiveStatus(svc.Name, svc.URL, statusDebug)

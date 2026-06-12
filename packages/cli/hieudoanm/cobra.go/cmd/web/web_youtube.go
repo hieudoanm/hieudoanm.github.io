@@ -149,7 +149,7 @@ Examples:
 					})
 				}
 				b, _ := json.MarshalIndent(map[string]interface{}{
-					"video_id":  videoID,
+					"video_id":   videoID,
 					"thumbnails": entries,
 				}, "", "  ")
 				fmt.Println(string(b))
@@ -210,10 +210,10 @@ Examples:
 }
 
 var (
-	ytLang               string
-	ytOutputFile         string
-	ytFormat             string
-	ytNoTS               bool
+	ytLang       string
+	ytOutputFile string
+	ytFormat     string
+	ytNoTS       bool
 )
 
 var ytTranscriptCmd = &cobra.Command{

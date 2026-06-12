@@ -1,39 +1,145 @@
 package net
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
-	"net/http"
+	"net"
+	"strings"
+	"time"
 
-	"github.com/hieudoanm/hieudoanm/libs/requests"
 	"github.com/spf13/cobra"
 )
 
+type dnsResult struct {
+	Domain string   `json:"domain"`
+	A      []string `json:"a,omitempty"`
+	AAAA   []string `json:"aaaa,omitempty"`
+	CNAME  string   `json:"cname,omitempty"`
+	MX     []string `json:"mx,omitempty"`
+	NS     []string `json:"ns,omitempty"`
+	TXT    []string `json:"txt,omitempty"`
+}
+
+var dnsJSON bool
+
 func newDNSSubCmd() *cobra.Command {
-	return &cobra.Command{
+	var recordType string
+
+	cmd := &cobra.Command{
 		Use:   "dns <domain>",
-		Short: "Perform a DNS A-record lookup",
-		Args:  cobra.ExactArgs(1),
+		Short: "DNS record lookup",
+		Long:  `Look up DNS records (A, AAAA, CNAME, MX, NS, TXT) for a domain. Defaults to all record types.`,
+		Example: `  hieudoanm net dns example.com
+  hieudoanm net dns example.com --type mx
+  hieudoanm net dns example.com --json`,
+		Args: cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
-			domain := args[0]
-			url := fmt.Sprintf("https://cloudflare-dns.com/dns-query?name=%s&type=A", domain)
+			resolver := &net.Resolver{}
+			result := dnsResult{Domain: args[0]}
+			types := []string{"a", "aaaa", "cname", "mx", "ns", "txt"}
 
-			headers := make(http.Header)
-			headers.Set("Accept", "application/dns-json")
-
-			body, err := requests.Get(url, requests.Options{Header: headers})
-			if err != nil {
-				return fmt.Errorf("DNS lookup failed: %w", err)
+			if recordType != "" {
+				types = []string{strings.ToLower(recordType)}
 			}
 
-			var pretty map[string]any
-			if err := json.Unmarshal(body, &pretty); err != nil {
-				fmt.Println(string(body))
-				return nil
+			for _, t := range types {
+				ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+				switch t {
+				case "a":
+					ips, err := resolver.LookupHost(ctx, result.Domain)
+					cancel()
+					if err == nil {
+						for _, ip := range ips {
+							if net.ParseIP(ip).To4() != nil {
+								result.A = append(result.A, ip)
+							}
+						}
+					}
+				case "aaaa":
+					ips, err := resolver.LookupHost(ctx, result.Domain)
+					cancel()
+					if err == nil {
+						for _, ip := range ips {
+							if net.ParseIP(ip).To4() == nil {
+								result.AAAA = append(result.AAAA, ip)
+							}
+						}
+					}
+				case "cname":
+					cname, err := resolver.LookupCNAME(ctx, result.Domain)
+					cancel()
+					if err == nil {
+						result.CNAME = strings.TrimRight(cname, ".")
+					}
+				case "mx":
+					mxs, err := resolver.LookupMX(ctx, result.Domain)
+					cancel()
+					if err == nil {
+						for _, mx := range mxs {
+							host := strings.TrimRight(mx.Host, ".")
+							if host == "" {
+								continue
+							}
+							result.MX = append(result.MX, fmt.Sprintf("%s (priority %d)", host, mx.Pref))
+						}
+					}
+				case "ns":
+					nss, err := resolver.LookupNS(ctx, result.Domain)
+					cancel()
+					if err == nil {
+						for _, ns := range nss {
+							host := strings.TrimRight(ns.Host, ".")
+							if host == "" {
+								continue
+							}
+							result.NS = append(result.NS, host)
+						}
+					}
+				case "txt":
+					txts, err := resolver.LookupTXT(ctx, result.Domain)
+					cancel()
+					if err == nil {
+						result.TXT = txts
+					}
+				default:
+					cancel()
+					return fmt.Errorf("unsupported record type: %s", t)
+				}
 			}
-			b, _ := json.MarshalIndent(pretty, "", "  ")
-			fmt.Println(string(b))
+
+			if dnsJSON {
+				b, _ := json.MarshalIndent(result, "", "  ")
+				fmt.Println(string(b))
+			} else {
+				fmt.Printf("Domain: %s\n", result.Domain)
+				if len(result.A) > 0 {
+					fmt.Printf("A:      %s\n", strings.Join(result.A, ", "))
+				}
+				if len(result.AAAA) > 0 {
+					fmt.Printf("AAAA:   %s\n", strings.Join(result.AAAA, ", "))
+				}
+				if result.CNAME != "" {
+					fmt.Printf("CNAME:  %s\n", result.CNAME)
+				}
+				if len(result.MX) > 0 {
+					fmt.Printf("MX:     %s\n", strings.Join(result.MX, ", "))
+				}
+				if len(result.NS) > 0 {
+					fmt.Printf("NS:     %s\n", strings.Join(result.NS, ", "))
+				}
+				if len(result.TXT) > 0 {
+					fmt.Printf("TXT:    %s\n", strings.Join(result.TXT, ", "))
+				}
+				if result.A == nil && result.AAAA == nil && result.CNAME == "" && result.MX == nil && result.NS == nil && result.TXT == nil {
+					fmt.Println("(no records found)")
+				}
+			}
 			return nil
 		},
 	}
+
+	cmd.Flags().StringVarP(&recordType, "type", "t", "", "Record type (a, aaaa, cname, mx, ns, txt)")
+	cmd.Flags().BoolVar(&dnsJSON, "json", false, "Output in JSON format")
+	return cmd
 }

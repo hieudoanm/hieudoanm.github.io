@@ -1,6 +1,7 @@
 package calc
 
 import (
+	"encoding/json"
 	"fmt"
 	"strconv"
 
@@ -41,7 +42,17 @@ func newBaseCmd() *cobra.Command {
 			result := strconv.FormatInt(n, toBase)
 			baseNames := map[int]string{2: "binary", 8: "octal", 10: "decimal", 16: "hexadecimal"}
 
-			fmt.Printf("%s (%s) = %s (%s)\n", value, baseNames[fromBase], result, baseNames[toBase])
+			if calcJSON {
+				out, _ := json.MarshalIndent(map[string]interface{}{
+					"value":  value,
+					"from":   baseNames[fromBase],
+					"to":     baseNames[toBase],
+					"result": result,
+				}, "", "  ")
+				fmt.Println(string(out))
+			} else {
+				fmt.Printf("%s (%s) = %s (%s)\n", value, baseNames[fromBase], result, baseNames[toBase])
+			}
 			return nil
 		},
 	}

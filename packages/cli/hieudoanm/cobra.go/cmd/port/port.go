@@ -52,9 +52,9 @@ func newCheckCmd() *cobra.Command {
 				parts := strings.SplitN(host, ":", 2)
 				portNum, _ := strconv.Atoi(parts[1])
 				b, _ := json.MarshalIndent(map[string]interface{}{
-					"host":    parts[0],
-					"port":    portNum,
-					"open":    open,
+					"host": parts[0],
+					"port": portNum,
+					"open": open,
 				}, "", "  ")
 				fmt.Println(string(b))
 			} else if open {

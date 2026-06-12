@@ -18,8 +18,8 @@ func newQrcodeCmd() *cobra.Command {
 			text := strings.Join(args, " ")
 
 			config := qrterminal.Config{
-				Level:     qrterminal.M,
-				Writer:    os.Stdout,
+				Level:      qrterminal.M,
+				Writer:     os.Stdout,
 				HalfBlocks: true,
 				BlackChar:  qrterminal.BLACK,
 				WhiteChar:  qrterminal.WHITE,

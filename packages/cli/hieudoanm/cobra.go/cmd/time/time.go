@@ -13,6 +13,9 @@ func NewCommand() *cobra.Command {
 		newCronCmd(),
 		newEpochCmd(),
 		newTimerCmd(),
+		newUntilCmd(),
+		newWorldCmd(),
+		newAgeCmd(),
 	)
 	return cmd
 }

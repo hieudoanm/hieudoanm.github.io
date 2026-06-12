@@ -1,6 +1,7 @@
 package calc
 
 import (
+	"encoding/json"
 	"fmt"
 	"math"
 
@@ -66,18 +67,15 @@ func futureValue(principal, rate, years, contribute float64, n float64) (totalFV
 	return
 }
 
-func yearBreakdown(principal, rate, years, contribute float64, n float64) []struct {
-	Year     int
-	Balance  float64
-	Interest float64
-	Deposits float64
-} {
-	var rows []struct {
-		Year     int
-		Balance  float64
-		Interest float64
-		Deposits float64
-	}
+type compoundYearRow struct {
+	Year     int     `json:"year"`
+	Balance  float64 `json:"balance"`
+	Interest float64 `json:"interest"`
+	Deposits float64 `json:"deposits"`
+}
+
+func yearBreakdown(principal, rate, years, contribute float64, n float64) []compoundYearRow {
+	var rows []compoundYearRow
 
 	r := rate / 100.0
 	for y := 1; y <= int(years); y++ {
@@ -92,12 +90,7 @@ func yearBreakdown(principal, rate, years, contribute float64, n float64) []stru
 			}
 		}
 		interest := fv - deposits
-		rows = append(rows, struct {
-			Year     int
-			Balance  float64
-			Interest float64
-			Deposits float64
-		}{Year: y, Balance: fv, Interest: interest, Deposits: deposits})
+		rows = append(rows, compoundYearRow{Year: y, Balance: fv, Interest: interest, Deposits: deposits})
 	}
 	return rows
 }
@@ -107,6 +100,23 @@ func runCompound(principal, rate, years, contribute float64, compound string) er
 
 	fv, totalDeposits := futureValue(principal, rate, years, contribute, n)
 	totalInterest := fv - totalDeposits
+
+	if calcJSON {
+		rows := yearBreakdown(principal, rate, years, contribute, n)
+		out, _ := json.MarshalIndent(map[string]interface{}{
+			"principal":      principal,
+			"rate":           rate,
+			"years":          years,
+			"compounding":    compound,
+			"contribution":   contribute,
+			"future_value":   fv,
+			"total_deposits": totalDeposits,
+			"total_interest": totalInterest,
+			"year_breakdown": rows,
+		}, "", "  ")
+		fmt.Println(string(out))
+		return nil
+	}
 
 	freqLabel := compound
 	periodLabel := "per " + compound[:len(compound)-2] + "y"

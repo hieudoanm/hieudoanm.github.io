@@ -10,10 +10,14 @@ func NewCommand() *cobra.Command {
 	}
 	cmd.AddCommand(
 		newCertCmd(),
+		newDNSSubCmd(),
 		newIPCmd(),
+		newPingCmd(),
 		newServeCmd(),
 		newStatusCmd(),
 		newWifiCmd(),
+		newHTTPCmd(),
+		newWhoisCmd(),
 	)
 	return cmd
 }

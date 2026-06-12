@@ -2,14 +2,34 @@
 
 ```text
 ├── cmd/
-│   ├── braille/
-│   │   └── [braille.go](./cmd/braille/braille.go)
 │   ├── calc/
 │   │   ├── [calc.go](./cmd/calc/calc.go)
+│   │   ├── [calc_base.go](./cmd/calc/calc_base.go)
+│   │   ├── [calc_base_test.go](./cmd/calc/calc_base_test.go)
+│   │   ├── [calc_bmi.go](./cmd/calc/calc_bmi.go)
+│   │   ├── [calc_bmi_test.go](./cmd/calc/calc_bmi_test.go)
 │   │   ├── [calc_compound.go](./cmd/calc/calc_compound.go)
 │   │   ├── [calc_compound_test.go](./cmd/calc/calc_compound_test.go)
+│   │   ├── [calc_currency.go](./cmd/calc/calc_currency.go)
+│   │   ├── [calc_date.go](./cmd/calc/calc_date.go)
+│   │   ├── [calc_discount.go](./cmd/calc/calc_discount.go)
+│   │   ├── [calc_discount_test.go](./cmd/calc/calc_discount_test.go)
+│   │   ├── [calc_eval.go](./cmd/calc/calc_eval.go)
+│   │   ├── [calc_factorial.go](./cmd/calc/calc_factorial.go)
+│   │   ├── [calc_loan.go](./cmd/calc/calc_loan.go)
+│   │   ├── [calc_loan_test.go](./cmd/calc/calc_loan_test.go)
+│   │   ├── [calc_mortgage.go](./cmd/calc/calc_mortgage.go)
+│   │   ├── [calc_percent.go](./cmd/calc/calc_percent.go)
+│   │   ├── [calc_percent_test.go](./cmd/calc/calc_percent_test.go)
+│   │   ├── [calc_prime.go](./cmd/calc/calc_prime.go)
+│   │   ├── [calc_random.go](./cmd/calc/calc_random.go)
+│   │   ├── [calc_stats.go](./cmd/calc/calc_stats.go)
 │   │   ├── [calc_tax.go](./cmd/calc/calc_tax.go)
-│   │   └── [calc_tax_test.go](./cmd/calc/calc_tax_test.go)
+│   │   ├── [calc_tax_test.go](./cmd/calc/calc_tax_test.go)
+│   │   ├── [calc_tip.go](./cmd/calc/calc_tip.go)
+│   │   ├── [calc_tip_test.go](./cmd/calc/calc_tip_test.go)
+│   │   ├── [calc_unit.go](./cmd/calc/calc_unit.go)
+│   │   └── [calc_unit_test.go](./cmd/calc/calc_unit_test.go)
 │   ├── casino/
 │   │   ├── [casino.go](./cmd/casino/casino.go)
 │   │   ├── [casino_baccarat.go](./cmd/casino/casino_baccarat.go)
@@ -18,6 +38,7 @@
 │   │   ├── [casino_blackjack.go](./cmd/casino/casino_blackjack.go)
 │   │   ├── [casino_blackjack_count.go](./cmd/casino/casino_blackjack_count.go)
 │   │   ├── [casino_blackjack_play.go](./cmd/casino/casino_blackjack_play.go)
+│   │   ├── [casino_coin.go](./cmd/casino/casino_coin.go)
 │   │   ├── [casino_poker.go](./cmd/casino/casino_poker.go)
 │   │   ├── [casino_poker_odds.go](./cmd/casino/casino_poker_odds.go)
 │   │   ├── [casino_poker_odds_eval.go](./cmd/casino/casino_poker_odds_eval.go)
@@ -46,14 +67,6 @@
 │   │   ├── [chess_setup.go](./cmd/chess/chess_setup.go)
 │   │   ├── [chess_stockfish.go](./cmd/chess/chess_stockfish.go)
 │   │   └── [chess_titles.go](./cmd/chess/chess_titles.go)
-│   ├── clipboard/
-│   │   └── [clipboard.go](./cmd/clipboard/clipboard.go)
-│   ├── clock/
-│   │   ├── pomodoro/
-│   │   │   └── [pomodoro.go](./cmd/clock/pomodoro/pomodoro.go)
-│   │   ├── [clock.go](./cmd/clock/clock.go)
-│   │   ├── [clock_now.go](./cmd/clock/clock_now.go)
-│   │   └── [clock_pomodoro.go](./cmd/clock/clock_pomodoro.go)
 │   ├── colors/
 │   │   ├── [cmyk.go](./cmd/colors/cmyk.go)
 │   │   ├── [colors.go](./cmd/colors/colors.go)
@@ -69,6 +82,39 @@
 │   │   ├── [hsl.go](./cmd/colors/hsl.go)
 │   │   ├── [oklch.go](./cmd/colors/oklch.go)
 │   │   └── [rgb.go](./cmd/colors/rgb.go)
+│   ├── convert/
+│   │   ├── [convert.go](./cmd/convert/convert.go)
+│   │   ├── [convert_base64.go](./cmd/convert/convert_base64.go)
+│   │   ├── [convert_braille.go](./cmd/convert/convert_braille.go)
+│   │   ├── [convert_camelcase.go](./cmd/convert/convert_camelcase.go)
+│   │   ├── [convert_camelcase_test.go](./cmd/convert/convert_camelcase_test.go)
+│   │   ├── [convert_capitalise.go](./cmd/convert/convert_capitalise.go)
+│   │   ├── [convert_count.go](./cmd/convert/convert_count.go)
+│   │   ├── [convert_deburr.go](./cmd/convert/convert_deburr.go)
+│   │   ├── [convert_kebabcase.go](./cmd/convert/convert_kebabcase.go)
+│   │   ├── [convert_lowercase.go](./cmd/convert/convert_lowercase.go)
+│   │   ├── [convert_morse.go](./cmd/convert/convert_morse.go)
+│   │   ├── [convert_pascalcase.go](./cmd/convert/convert_pascalcase.go)
+│   │   ├── [convert_shared.go](./cmd/convert/convert_shared.go)
+│   │   ├── [convert_slug.go](./cmd/convert/convert_slug.go)
+│   │   ├── [convert_snakecase.go](./cmd/convert/convert_snakecase.go)
+│   │   ├── [convert_test.go](./cmd/convert/convert_test.go)
+│   │   ├── [convert_uppercase.go](./cmd/convert/convert_uppercase.go)
+│   │   └── [convert_url.go](./cmd/convert/convert_url.go)
+│   ├── crypto/
+│   │   ├── [crypto.go](./cmd/crypto/crypto.go)
+│   │   ├── [crypto_hash.go](./cmd/crypto/crypto_hash.go)
+│   │   ├── [crypto_jwt.go](./cmd/crypto/crypto_jwt.go)
+│   │   ├── [crypto_jwt_encode.go](./cmd/crypto/crypto_jwt_encode.go)
+│   │   ├── [crypto_keygen.go](./cmd/crypto/crypto_keygen.go)
+│   │   ├── [crypto_passwd.go](./cmd/crypto/crypto_passwd.go)
+│   │   ├── [crypto_qrcode.go](./cmd/crypto/crypto_qrcode.go)
+│   │   └── [crypto_uuid.go](./cmd/crypto/crypto_uuid.go)
+│   ├── data/
+│   │   ├── [data.go](./cmd/data/data.go)
+│   │   ├── [data_csv.go](./cmd/data/data_csv.go)
+│   │   ├── [data_json.go](./cmd/data/data_json.go)
+│   │   └── [data_yml.go](./cmd/data/data_yml.go)
 │   ├── docsify/
 │   │   ├── [docsify.go](./cmd/docsify/docsify.go)
 │   │   ├── [docsify_cobra.go](./cmd/docsify/docsify_cobra.go)
@@ -80,15 +126,15 @@
 │   │   ├── [walker.go](./cmd/docsify/walker.go)
 │   │   └── [writer.go](./cmd/docsify/writer.go)
 │   ├── doi/
-│   │   ├── [apa.go](./cmd/doi/apa.go)
-│   │   ├── [apa_test.go](./cmd/doi/apa_test.go)
 │   │   ├── [doi.go](./cmd/doi/doi.go)
+│   │   ├── [doi_apa.go](./cmd/doi/doi_apa.go)
+│   │   ├── [doi_apa_test.go](./cmd/doi/doi_apa_test.go)
 │   │   ├── [doi_cite.go](./cmd/doi/doi_cite.go)
-│   │   └── [doi_ref.go](./cmd/doi/doi_ref.go)
+│   │   └── [doi_validate.go](./cmd/doi/doi_validate.go)
 │   ├── english/
 │   │   └── [english.go](./cmd/english/english.go)
-│   ├── frankfurter/
-│   │   └── [frankfurter.go](./cmd/frankfurter/frankfurter.go)
+│   ├── file/
+│   │   └── [file.go](./cmd/file/file.go)
 │   ├── gh/
 │   │   ├── [gh.go](./cmd/gh/gh.go)
 │   │   ├── [gh_coc.go](./cmd/gh/gh_coc.go)
@@ -97,15 +143,21 @@
 │   │   ├── [gh_languages.go](./cmd/gh/gh_languages.go)
 │   │   ├── [gh_license.go](./cmd/gh/gh_license.go)
 │   │   └── [gh_og.go](./cmd/gh/gh_og.go)
-│   ├── instagram/
-│   │   ├── [instagram.go](./cmd/instagram/instagram.go)
-│   │   ├── [instagram_download.go](./cmd/instagram/instagram_download.go)
-│   │   └── [instagram_download_test.go](./cmd/instagram/instagram_download_test.go)
-│   ├── ip/
-│   │   ├── [ip.go](./cmd/ip/ip.go)
-│   │   └── [ip_dns.go](./cmd/ip/ip_dns.go)
-│   ├── morse/
-│   │   └── [morse.go](./cmd/morse/morse.go)
+│   ├── image/
+│   │   └── [image.go](./cmd/image/image.go)
+│   ├── net/
+│   │   ├── [net.go](./cmd/net/net.go)
+│   │   ├── [net_cert.go](./cmd/net/net_cert.go)
+│   │   ├── [net_http.go](./cmd/net/net_http.go)
+│   │   ├── [net_ip.go](./cmd/net/net_ip.go)
+│   │   ├── [net_ip_dns.go](./cmd/net/net_ip_dns.go)
+│   │   ├── [net_ping.go](./cmd/net/net_ping.go)
+│   │   ├── [net_serve.go](./cmd/net/net_serve.go)
+│   │   ├── [net_status.go](./cmd/net/net_status.go)
+│   │   ├── [net_whois.go](./cmd/net/net_whois.go)
+│   │   ├── [net_wifi.go](./cmd/net/net_wifi.go)
+│   │   ├── [net_wifi_darwin.go](./cmd/net/net_wifi_darwin.go)
+│   │   └── [net_wifi_linux.go](./cmd/net/net_wifi_linux.go)
 │   ├── openapi/
 │   │   ├── [openapi.go](./cmd/openapi/openapi.go)
 │   │   └── [openapi_postman.go](./cmd/openapi/openapi_postman.go)
@@ -121,27 +173,19 @@
 │   │   ├── [openrouter_serve.go](./cmd/openrouter/openrouter_serve.go)
 │   │   ├── [openrouter_status.go](./cmd/openrouter/openrouter_status.go)
 │   │   └── [openrouter_test.go](./cmd/openrouter/openrouter_test.go)
-│   ├── qrcode/
-│   │   └── [qrcode.go](./cmd/qrcode/qrcode.go)
-│   ├── shopify/
-│   │   ├── [shopify.go](./cmd/shopify/shopify.go)
-│   │   ├── [shopify_detect.go](./cmd/shopify/shopify_detect.go)
-│   │   └── [shopify_test.go](./cmd/shopify/shopify_test.go)
-│   ├── snapshot/
-│   │   └── [snapshot.go](./cmd/snapshot/snapshot.go)
-│   ├── statuspkg/
-│   │   └── [statuspkg.go](./cmd/statuspkg/statuspkg.go)
-│   ├── string/
-│   │   ├── [string.go](./cmd/string/string.go)
-│   │   ├── [string_capitalise.go](./cmd/string/string_capitalise.go)
-│   │   ├── [string_deburr.go](./cmd/string/string_deburr.go)
-│   │   ├── [string_kebabcase.go](./cmd/string/string_kebabcase.go)
-│   │   ├── [string_lowercase.go](./cmd/string/string_lowercase.go)
-│   │   ├── [string_snakecase.go](./cmd/string/string_snakecase.go)
-│   │   └── [string_uppercase.go](./cmd/string/string_uppercase.go)
+│   ├── port/
+│   │   └── [port.go](./cmd/port/port.go)
+│   ├── semver/
+│   │   ├── [semver.go](./cmd/semver/semver.go)
+│   │   └── [semver_test.go](./cmd/semver/semver_test.go)
 │   ├── system/
 │   │   ├── [system.go](./cmd/system/system.go)
-│   │   └── [system_monitor.go](./cmd/system/system_monitor.go)
+│   │   ├── [system_clipboard.go](./cmd/system/system_clipboard.go)
+│   │   ├── [system_disk.go](./cmd/system/system_disk.go)
+│   │   ├── [system_env.go](./cmd/system/system_env.go)
+│   │   ├── [system_info.go](./cmd/system/system_info.go)
+│   │   ├── [system_monitor.go](./cmd/system/system_monitor.go)
+│   │   └── [system_path.go](./cmd/system/system_path.go)
 │   ├── telegram/
 │   │   ├── [telegram.go](./cmd/telegram/telegram.go)
 │   │   ├── [telegram_cmd.go](./cmd/telegram/telegram_cmd.go)
@@ -151,25 +195,34 @@
 │   │   ├── [telegram_webhook_delete.go](./cmd/telegram/telegram_webhook_delete.go)
 │   │   ├── [telegram_webhook_info.go](./cmd/telegram/telegram_webhook_info.go)
 │   │   └── [telegram_webhook_set.go](./cmd/telegram/telegram_webhook_set.go)
-│   ├── uuidcmd/
-│   │   └── [uuidcmd.go](./cmd/uuidcmd/uuidcmd.go)
+│   ├── time/
+│   │   ├── pomodoro/
+│   │   │   └── [pomodoro.go](./cmd/time/pomodoro/pomodoro.go)
+│   │   ├── [time.go](./cmd/time/time.go)
+│   │   ├── [time_age.go](./cmd/time/time_age.go)
+│   │   ├── [time_clock.go](./cmd/time/time_clock.go)
+│   │   ├── [time_cron.go](./cmd/time/time_cron.go)
+│   │   ├── [time_epoch.go](./cmd/time/time_epoch.go)
+│   │   ├── [time_timer.go](./cmd/time/time_timer.go)
+│   │   ├── [time_until.go](./cmd/time/time_until.go)
+│   │   └── [time_world.go](./cmd/time/time_world.go)
 │   ├── version/
 │   │   └── [version.go](./cmd/version/version.go)
-│   ├── wificmd/
-│   │   ├── [wifi_darwin.go](./cmd/wificmd/wifi_darwin.go)
-│   │   ├── [wifi_linux.go](./cmd/wificmd/wifi_linux.go)
-│   │   └── [wificmd.go](./cmd/wificmd/wificmd.go)
-│   ├── youtube/
+│   ├── web/
 │   │   ├── transcript/
-│   │   │   ├── [client.go](./cmd/youtube/transcript/client.go)
-│   │   │   ├── [parser.go](./cmd/youtube/transcript/parser.go)
-│   │   │   ├── [transcript_test.go](./cmd/youtube/transcript/transcript_test.go)
-│   │   │   └── [types.go](./cmd/youtube/transcript/types.go)
-│   │   ├── [youtube.go](./cmd/youtube/youtube.go)
-│   │   ├── [youtube_thumbnails.go](./cmd/youtube/youtube_thumbnails.go)
-│   │   └── [youtube_transcript.go](./cmd/youtube/youtube_transcript.go)
-│   ├── [cmd_test.go](./cmd/cmd_test.go)
-│   └── [root.go](./cmd/root.go)
+│   │   │   ├── [client.go](./cmd/web/transcript/client.go)
+│   │   │   ├── [parser.go](./cmd/web/transcript/parser.go)
+│   │   │   ├── [transcript_test.go](./cmd/web/transcript/transcript_test.go)
+│   │   │   └── [types.go](./cmd/web/transcript/types.go)
+│   │   ├── [web.go](./cmd/web/web.go)
+│   │   ├── [web_instagram.go](./cmd/web/web_instagram.go)
+│   │   ├── [web_shopify.go](./cmd/web/web_shopify.go)
+│   │   ├── [web_snapshot.go](./cmd/web/web_snapshot.go)
+│   │   ├── [web_weather.go](./cmd/web/web_weather.go)
+│   │   └── [web_youtube.go](./cmd/web/web_youtube.go)
+│   ├── [completion.go](./cmd/completion.go)
+│   ├── [root.go](./cmd/root.go)
+│   └── [root_test.go](./cmd/root_test.go)
 ├── data/
 │   └── [countries.go](./data/countries.go)
 ├── libs/
@@ -179,6 +232,8 @@
 │   ├── colors/
 │   │   ├── [colors.go](./libs/colors/colors.go)
 │   │   └── [colors_test.go](./libs/colors/colors_test.go)
+│   ├── config/
+│   │   └── [config.go](./libs/config/config.go)
 │   ├── number/
 │   │   ├── [number.go](./libs/number/number.go)
 │   │   └── [number_test.go](./libs/number/number_test.go)
@@ -198,4 +253,4 @@
 └── [main.go](./main.go)
 ```
 
-41 directories, 154 files
+37 directories, 213 files

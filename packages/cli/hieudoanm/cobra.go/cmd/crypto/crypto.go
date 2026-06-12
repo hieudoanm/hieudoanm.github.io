@@ -11,6 +11,7 @@ func NewCommand() *cobra.Command {
 	cmd.AddCommand(
 		newHashCmd(),
 		newJwtCmd(),
+		newKeygenCmd(),
 		newPasswdCmd(),
 		newUUIDCmd(),
 		newQrcodeCmd(),

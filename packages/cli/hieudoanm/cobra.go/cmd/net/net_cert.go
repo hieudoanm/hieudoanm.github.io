@@ -50,18 +50,18 @@ func newCertInfoCmd() *cobra.Command {
 			now := time.Now()
 
 			type certJSON struct {
-				Subject           string   `json:"subject"`
-				Issuer            string   `json:"issuer"`
-				Serial            string   `json:"serial"`
-				Version           int      `json:"version"`
-				NotBefore         string   `json:"notBefore"`
-				NotAfter          string   `json:"notAfter"`
-				Expired           bool     `json:"expired"`
-				Remaining         string   `json:"remaining"`
-				DNSNames          []string `json:"dnsNames,omitempty"`
-				IPAddresses       []string `json:"ipAddresses,omitempty"`
-				SignatureAlgo     string   `json:"signatureAlgorithm"`
-				PublicKeyAlgo     string   `json:"publicKeyAlgorithm"`
+				Subject       string   `json:"subject"`
+				Issuer        string   `json:"issuer"`
+				Serial        string   `json:"serial"`
+				Version       int      `json:"version"`
+				NotBefore     string   `json:"notBefore"`
+				NotAfter      string   `json:"notAfter"`
+				Expired       bool     `json:"expired"`
+				Remaining     string   `json:"remaining"`
+				DNSNames      []string `json:"dnsNames,omitempty"`
+				IPAddresses   []string `json:"ipAddresses,omitempty"`
+				SignatureAlgo string   `json:"signatureAlgorithm"`
+				PublicKeyAlgo string   `json:"publicKeyAlgorithm"`
 			}
 
 			var certs []certJSON
@@ -171,14 +171,14 @@ func newCertCheckCmd() *cobra.Command {
 					status = "expiring_soon"
 				}
 				b, _ := json.MarshalIndent(map[string]interface{}{
-					"host":           host,
-					"subject":        leaf.Subject.String(),
-					"issuer":         leaf.Issuer.String(),
-					"notAfter":       leaf.NotAfter.Format("2006-01-02T15:04:05Z"),
-					"remaining":      remaining.String(),
-					"status":         status,
-					"dnsNames":       leaf.DNSNames,
-					"dnsNamesCount":  len(leaf.DNSNames),
+					"host":          host,
+					"subject":       leaf.Subject.String(),
+					"issuer":        leaf.Issuer.String(),
+					"notAfter":      leaf.NotAfter.Format("2006-01-02T15:04:05Z"),
+					"remaining":     remaining.String(),
+					"status":        status,
+					"dnsNames":      leaf.DNSNames,
+					"dnsNamesCount": len(leaf.DNSNames),
 				}, "", "  ")
 				fmt.Println(string(b))
 				return nil

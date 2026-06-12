@@ -237,11 +237,11 @@ var sysMonitorCmd = &cobra.Command{
 			}
 			uptime := time.Duration(m.Uptime) * time.Second
 			out, _ := json.MarshalIndent(map[string]interface{}{
-				"cpu_percent":  m.CPUTotal,
-				"ram_percent":  m.RAMPct,
-				"ram_used_gb":  m.RAMUsedGB,
-				"ram_total_gb": m.RAMTotalGB,
-				"uptime":       uptime.String(),
+				"cpu_percent":   m.CPUTotal,
+				"ram_percent":   m.RAMPct,
+				"ram_used_gb":   m.RAMUsedGB,
+				"ram_total_gb":  m.RAMTotalGB,
+				"uptime":        uptime.String(),
 				"top_processes": procs,
 			}, "", "  ")
 			fmt.Println(string(out))

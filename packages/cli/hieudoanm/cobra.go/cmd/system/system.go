@@ -11,6 +11,10 @@ func NewCommand() *cobra.Command {
 	cmd.AddCommand(
 		newMonitorCmd(),
 		newClipboardCmd(),
+		newInfoCmd(),
+		newEnvCmd(),
+		newPathCmd(),
+		newDiskCmd(),
 	)
 	return cmd
 }

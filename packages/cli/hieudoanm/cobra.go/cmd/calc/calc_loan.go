@@ -1,8 +1,8 @@
 package calc
 
 import (
+	"encoding/json"
 	"fmt"
-	"math"
 
 	"github.com/spf13/cobra"
 )
@@ -16,11 +16,40 @@ func newLoanCmd() *cobra.Command {
 		Example: `  calc loan --principal 30000 --rate 5 --years 5
   calc loan -p 30000 -r 5 -y 5`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			r := rate / 100.0 / 12
+			payment := calcPayment(principal, rate, years)
 			n := years * 12
-			payment := principal * r * math.Pow(1+r, n) / (math.Pow(1+r, n) - 1)
 			totalPayment := payment * n
 			totalInterest := totalPayment - principal
+
+			r := rate / 100.0 / 12
+
+			if calcJSON {
+				type monthRow struct {
+					Month    int     `json:"month"`
+					Payment  float64 `json:"payment"`
+					Interest float64 `json:"interest"`
+					Balance  float64 `json:"balance"`
+				}
+				var schedule []monthRow
+				balance := principal
+				for i := 1; i <= int(n) && i <= 12; i++ {
+					interest := balance * r
+					principalPaid := payment - interest
+					balance -= principalPaid
+					schedule = append(schedule, monthRow{i, payment, interest, balance})
+				}
+				out, _ := json.MarshalIndent(map[string]interface{}{
+					"principal":      principal,
+					"rate":           rate,
+					"years":          years,
+					"monthly":        payment,
+					"total_paid":     totalPayment,
+					"total_interest": totalInterest,
+					"schedule":       schedule,
+				}, "", "  ")
+				fmt.Println(string(out))
+				return nil
+			}
 
 			fmt.Println("=== Loan Amortization ===")
 			fmt.Printf("Principal:     %15.2f\n", principal)

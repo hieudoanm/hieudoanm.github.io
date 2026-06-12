@@ -24,6 +24,7 @@ func NewCommand() *cobra.Command {
 	cmd.AddCommand(newLowercaseCmd())
 	cmd.AddCommand(newSnakecaseCmd())
 	cmd.AddCommand(newUppercaseCmd())
+	cmd.AddCommand(newCountCmd())
 
 	return cmd
 }
