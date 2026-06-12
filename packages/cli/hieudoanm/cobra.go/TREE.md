@@ -16,6 +16,7 @@
 │   │   ├── [calc_discount_test.go](./cmd/calc/calc_discount_test.go)
 │   │   ├── [calc_eval.go](./cmd/calc/calc_eval.go)
 │   │   ├── [calc_factorial.go](./cmd/calc/calc_factorial.go)
+│   │   ├── [calc_gcd.go](./cmd/calc/calc_gcd.go)
 │   │   ├── [calc_loan.go](./cmd/calc/calc_loan.go)
 │   │   ├── [calc_loan_test.go](./cmd/calc/calc_loan_test.go)
 │   │   ├── [calc_mortgage.go](./cmd/calc/calc_mortgage.go)
@@ -103,12 +104,14 @@
 │   │   └── [convert_url.go](./cmd/convert/convert_url.go)
 │   ├── crypto/
 │   │   ├── [crypto.go](./cmd/crypto/crypto.go)
+│   │   ├── [crypto_encrypt.go](./cmd/crypto/crypto_encrypt.go)
 │   │   ├── [crypto_hash.go](./cmd/crypto/crypto_hash.go)
 │   │   ├── [crypto_jwt.go](./cmd/crypto/crypto_jwt.go)
 │   │   ├── [crypto_jwt_encode.go](./cmd/crypto/crypto_jwt_encode.go)
 │   │   ├── [crypto_keygen.go](./cmd/crypto/crypto_keygen.go)
 │   │   ├── [crypto_passwd.go](./cmd/crypto/crypto_passwd.go)
 │   │   ├── [crypto_qrcode.go](./cmd/crypto/crypto_qrcode.go)
+│   │   ├── [crypto_totp.go](./cmd/crypto/crypto_totp.go)
 │   │   └── [crypto_uuid.go](./cmd/crypto/crypto_uuid.go)
 │   ├── data/
 │   │   ├── [data.go](./cmd/data/data.go)
@@ -166,8 +169,8 @@
 │   │   │   └── [chat.go](./cmd/openrouter/chat/chat.go)
 │   │   ├── [config.go](./cmd/openrouter/config.go)
 │   │   ├── [openrouter.go](./cmd/openrouter/openrouter.go)
-│   │   ├── [openrouter_chat.go](./cmd/openrouter/openrouter_chat.go)
 │   │   ├── [openrouter_cmd.go](./cmd/openrouter/openrouter_cmd.go)
+│   │   ├── [openrouter_code.go](./cmd/openrouter/openrouter_code.go)
 │   │   ├── [openrouter_hook.go](./cmd/openrouter/openrouter_hook.go)
 │   │   ├── [openrouter_models.go](./cmd/openrouter/openrouter_models.go)
 │   │   ├── [openrouter_serve.go](./cmd/openrouter/openrouter_serve.go)
@@ -180,6 +183,7 @@
 │   │   └── [semver_test.go](./cmd/semver/semver_test.go)
 │   ├── system/
 │   │   ├── [system.go](./cmd/system/system.go)
+│   │   ├── [system_battery.go](./cmd/system/system_battery.go)
 │   │   ├── [system_clipboard.go](./cmd/system/system_clipboard.go)
 │   │   ├── [system_disk.go](./cmd/system/system_disk.go)
 │   │   ├── [system_env.go](./cmd/system/system_env.go)
@@ -203,6 +207,7 @@
 │   │   ├── [time_clock.go](./cmd/time/time_clock.go)
 │   │   ├── [time_cron.go](./cmd/time/time_cron.go)
 │   │   ├── [time_epoch.go](./cmd/time/time_epoch.go)
+│   │   ├── [time_stopwatch.go](./cmd/time/time_stopwatch.go)
 │   │   ├── [time_timer.go](./cmd/time/time_timer.go)
 │   │   ├── [time_until.go](./cmd/time/time_until.go)
 │   │   └── [time_world.go](./cmd/time/time_world.go)
@@ -253,4 +258,4 @@
 └── [main.go](./main.go)
 ```
 
-37 directories, 213 files
+37 directories, 218 files

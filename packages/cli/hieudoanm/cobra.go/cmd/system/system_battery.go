@@ -35,9 +35,9 @@ func newBatteryCmd() *cobra.Command {
 }
 
 type batteryInfo struct {
-	Percent     int    `json:"percent"`
-	Charging    bool   `json:"charging"`
-	TimeRemain  string `json:"time_remaining,omitempty"`
+	Percent    int    `json:"percent"`
+	Charging   bool   `json:"charging"`
+	TimeRemain string `json:"time_remaining,omitempty"`
 }
 
 func printBattery(b batteryInfo) {
