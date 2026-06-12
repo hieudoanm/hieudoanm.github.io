@@ -14,6 +14,7 @@ import (
 	"github.com/hieudoanm/hieudoanm/cmd/doi"
 	"github.com/hieudoanm/hieudoanm/cmd/english"
 	"github.com/hieudoanm/hieudoanm/cmd/file"
+	"github.com/hieudoanm/hieudoanm/cmd/gemini"
 	"github.com/hieudoanm/hieudoanm/cmd/gh"
 	"github.com/hieudoanm/hieudoanm/cmd/image"
 	"github.com/hieudoanm/hieudoanm/cmd/net"
@@ -53,6 +54,7 @@ func init() {
 	rootCmd.AddCommand(doi.NewCommand())
 	rootCmd.AddCommand(english.NewCommand())
 	rootCmd.AddCommand(file.NewCommand())
+	rootCmd.AddCommand(gemini.NewCommand())
 	rootCmd.AddCommand(gh.NewCommand())
 	rootCmd.AddCommand(image.NewCommand())
 	rootCmd.AddCommand(net.NewCommand())

@@ -138,6 +138,9 @@
 │   │   └── [english.go](./cmd/english/english.go)
 │   ├── file/
 │   │   └── [file.go](./cmd/file/file.go)
+│   ├── gemini/
+│   │   ├── [gemini.go](./cmd/gemini/gemini.go)
+│   │   └── [gemini_code.go](./cmd/gemini/gemini_code.go)
 │   ├── gh/
 │   │   ├── [gh.go](./cmd/gh/gh.go)
 │   │   ├── [gh_coc.go](./cmd/gh/gh_coc.go)
@@ -258,4 +261,4 @@
 └── [main.go](./main.go)
 ```
 
-37 directories, 218 files
+38 directories, 220 files
