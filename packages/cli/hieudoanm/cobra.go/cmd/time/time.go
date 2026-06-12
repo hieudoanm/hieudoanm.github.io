@@ -16,6 +16,7 @@ func NewCommand() *cobra.Command {
 		newUntilCmd(),
 		newWorldCmd(),
 		newAgeCmd(),
+		newStopwatchCmd(),
 	)
 	return cmd
 }

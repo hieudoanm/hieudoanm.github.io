@@ -15,6 +15,9 @@ func NewCommand() *cobra.Command {
 		newPasswdCmd(),
 		newUUIDCmd(),
 		newQrcodeCmd(),
+		newEncryptCmd(),
+		newDecryptCmd(),
+		newTotpCmd(),
 	)
 	return cmd
 }

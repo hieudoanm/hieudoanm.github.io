@@ -40,6 +40,8 @@ func NewCommand() *cobra.Command {
 	cmd.AddCommand(newFactorialCmd())
 	cmd.AddCommand(newRandomCmd())
 	cmd.AddCommand(newPrimeCmd())
+	cmd.AddCommand(newGcdCmd())
+	cmd.AddCommand(newLcmCmd())
 	cmd.PersistentFlags().BoolVar(&calcJSON, "json", false, "Output in JSON format")
 	return cmd
 }

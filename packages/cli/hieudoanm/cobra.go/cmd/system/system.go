@@ -15,6 +15,7 @@ func NewCommand() *cobra.Command {
 		newEnvCmd(),
 		newPathCmd(),
 		newDiskCmd(),
+		newBatteryCmd(),
 	)
 	return cmd
 }
