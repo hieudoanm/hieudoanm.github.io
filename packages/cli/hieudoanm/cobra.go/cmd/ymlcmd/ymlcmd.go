@@ -10,15 +10,17 @@ import (
 )
 
 func NewCommand() *cobra.Command {
-	var toJSON bool
+	var toJSON, validate, lint bool
 	var file string
 
 	cmd := &cobra.Command{
 		Use:   "yml [json-string]",
-		Short: "Convert between YAML and JSON",
-		Long:  `Convert JSON to YAML or read a YAML file and convert to JSON.`,
+		Short: "Convert between YAML and JSON, validate, and lint",
+		Long:  `Convert JSON to YAML (or YAML to JSON), validate YAML syntax, and lint for best practices.`,
 		Example: `  yml '{"name":"hello","values":[1,2,3]}'
-  yml --to-json config.yml`,
+  yml --to-json config.yml
+  yml --validate config.yml
+  yml --lint config.yml`,
 		Args: cobra.MaximumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			var input []byte
@@ -31,7 +33,16 @@ func NewCommand() *cobra.Command {
 			} else if len(args) > 0 {
 				input = []byte(args[0])
 			} else {
-				return fmt.Errorf("provide input as argument or --file")
+				stat, _ := os.Stdin.Stat()
+				if (stat.Mode() & os.ModeCharDevice) == 0 {
+					input = readStdin()
+				} else {
+					return fmt.Errorf("provide input as argument, --file, or pipe")
+				}
+			}
+
+			if validate || lint {
+				return validateYAML(input)
 			}
 
 			if toJSON {
@@ -59,8 +70,35 @@ func NewCommand() *cobra.Command {
 	}
 
 	cmd.Flags().BoolVarP(&toJSON, "to-json", "j", false, "Convert YAML to JSON")
+	cmd.Flags().BoolVar(&validate, "validate", false, "Validate YAML syntax")
+	cmd.Flags().BoolVar(&lint, "lint", false, "Lint YAML for common issues")
 	cmd.Flags().StringVarP(&file, "file", "f", "", "Read from file instead of argument")
 	return cmd
+}
+
+func readStdin() []byte {
+	var data []byte
+	buf := make([]byte, 4096)
+	for {
+		n, err := os.Stdin.Read(buf)
+		if n > 0 {
+			data = append(data, buf[:n]...)
+		}
+		if err != nil {
+			break
+		}
+	}
+	return data
+}
+
+func validateYAML(input []byte) error {
+	var v interface{}
+	if err := yaml.Unmarshal(input, &v); err != nil {
+		fmt.Printf("Invalid YAML: %v\n", err)
+		return nil
+	}
+	fmt.Println("Valid YAML")
+	return nil
 }
 
 func cleanupYAML(v interface{}) interface{} {

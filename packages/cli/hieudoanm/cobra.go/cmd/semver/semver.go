@@ -11,6 +11,7 @@ import (
 
 type version struct {
 	major, minor, patch int
+	prerelease          string
 }
 
 func parseVersion(s string) (version, error) {
@@ -27,15 +28,27 @@ func parseVersion(s string) (version, error) {
 	if err != nil {
 		return version{}, fmt.Errorf("invalid minor version: %s", parts[1])
 	}
-	patch, err := strconv.Atoi(parts[2])
-	if err != nil {
-		return version{}, fmt.Errorf("invalid patch version: %s", parts[2])
+
+	patchStr := parts[2]
+	prerelease := ""
+	if idx := strings.Index(patchStr, "-"); idx >= 0 {
+		prerelease = patchStr[idx+1:]
+		patchStr = patchStr[:idx]
 	}
-	return version{major, minor, patch}, nil
+
+	patch, err := strconv.Atoi(patchStr)
+	if err != nil {
+		return version{}, fmt.Errorf("invalid patch version: %s", patchStr)
+	}
+	return version{major, minor, patch, prerelease}, nil
 }
 
 func (v version) String() string {
-	return fmt.Sprintf("%d.%d.%d", v.major, v.minor, v.patch)
+	s := fmt.Sprintf("%d.%d.%d", v.major, v.minor, v.patch)
+	if v.prerelease != "" {
+		s += "-" + v.prerelease
+	}
+	return s
 }
 
 func (a version) compare(b version) int {
@@ -45,19 +58,89 @@ func (a version) compare(b version) int {
 	if a.minor != b.minor {
 		return a.minor - b.minor
 	}
-	return a.patch - b.patch
+	if a.patch != b.patch {
+		return a.patch - b.patch
+	}
+	if a.prerelease != b.prerelease {
+		if a.prerelease == "" {
+			return 1
+		}
+		if b.prerelease == "" {
+			return -1
+		}
+		if a.prerelease < b.prerelease {
+			return -1
+		}
+		return 1
+	}
+	return 0
+}
+
+func (v version) bump(part string) version {
+	switch part {
+	case "major":
+		return version{v.major + 1, 0, 0, ""}
+	case "minor":
+		return version{v.major, v.minor + 1, 0, ""}
+	case "patch":
+		return version{v.major, v.minor, v.patch + 1, ""}
+	default:
+		return v
+	}
 }
 
 func NewCommand() *cobra.Command {
-	return &cobra.Command{
+	var bumpPart, prerelease, rangeExpr string
+
+	cmd := &cobra.Command{
 		Use:   "semver <command> [versions...]",
-		Short: "Parse, compare, and sort semver strings",
+		Short: "Parse, compare, sort, and bump semver strings",
 		Long:  `Tools for working with semantic version strings (major.minor.patch).`,
 		Example: `  semver validate 1.2.3
   semver compare 1.0.0 2.0.0
-  semver sort 1.2.0 2.0.0 1.10.0`,
-		Args: cobra.MinimumNArgs(2),
+  semver sort 1.2.0 2.0.0 1.10.0
+  semver --bump minor 1.2.3
+  semver --bump patch --prerelease alpha 1.2.3
+  semver --range ">=1.0.0 <2.0.0" 1.5.0`,
+		Args: cobra.MinimumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
+			if bumpPart != "" {
+				v, err := parseVersion(args[0])
+				if err != nil {
+					return err
+				}
+				result := v.bump(bumpPart)
+				if prerelease != "" {
+					result.prerelease = prerelease
+				}
+				fmt.Println(result)
+				return nil
+			}
+
+			if rangeExpr != "" {
+				if len(args) < 1 {
+					return fmt.Errorf("need a version to check against range")
+				}
+				v, err := parseVersion(args[0])
+				if err != nil {
+					return err
+				}
+				matches, err := checkRange(v, rangeExpr)
+				if err != nil {
+					return err
+				}
+				if matches {
+					fmt.Printf("%s matches range %s\n", v, rangeExpr)
+				} else {
+					fmt.Printf("%s does NOT match range %s\n", v, rangeExpr)
+				}
+				return nil
+			}
+
+			if len(args) < 2 {
+				return fmt.Errorf("need at least 2 arguments for validate|compare|sort")
+			}
+
 			action := args[0]
 			versions := args[1:]
 
@@ -113,9 +196,66 @@ func NewCommand() *cobra.Command {
 				}
 
 			default:
-				return fmt.Errorf("unknown action: %s (use validate, compare, sort)", action)
+				// If the first arg looks like a version, treat as bump
+				if _, err := parseVersion(action); err == nil && len(versions) >= 0 {
+					v, _ := parseVersion(action)
+					result := v.bump(bumpPart)
+					fmt.Println(result)
+				} else {
+					return fmt.Errorf("unknown action: %s (use validate, compare, sort)", action)
+				}
 			}
 			return nil
 		},
 	}
+
+	cmd.Flags().StringVar(&bumpPart, "bump", "", "Bump version part: major, minor, patch")
+	cmd.Flags().StringVar(&prerelease, "prerelease", "", "Set prerelease label after bump")
+	cmd.Flags().StringVar(&rangeExpr, "range", "", "Check if version matches a range (e.g. '>=1.0.0 <2.0.0')")
+	return cmd
+}
+
+func checkRange(v version, rangeExpr string) (bool, error) {
+	parts := strings.Fields(rangeExpr)
+	if len(parts) == 0 {
+		return false, fmt.Errorf("empty range expression")
+	}
+
+	for i := 0; i < len(parts); i += 2 {
+		op := parts[i]
+		if i+1 >= len(parts) {
+			return false, fmt.Errorf("incomplete range: missing version after %s", op)
+		}
+		ver, err := parseVersion(parts[i+1])
+		if err != nil {
+			return false, fmt.Errorf("invalid version in range: %s", parts[i+1])
+		}
+
+		switch op {
+		case ">":
+			if v.compare(ver) <= 0 {
+				return false, nil
+			}
+		case ">=":
+			if v.compare(ver) < 0 {
+				return false, nil
+			}
+		case "<":
+			if v.compare(ver) >= 0 {
+				return false, nil
+			}
+		case "<=":
+			if v.compare(ver) > 0 {
+				return false, nil
+			}
+		case "=", "==":
+			if v.compare(ver) != 0 {
+				return false, nil
+			}
+		default:
+			return false, fmt.Errorf("unknown operator: %s", op)
+		}
+	}
+
+	return true, nil
 }

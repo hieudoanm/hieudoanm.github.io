@@ -14,6 +14,9 @@ func NewCommand() *cobra.Command {
 		newPokerCmd(),
 		newBaccaratCmd(),
 		newSlotsCmd(),
+		newCoinCmd(),
+		newDiceCmd(),
+		newRouletteCmd(),
 	)
 	return cmd
 }

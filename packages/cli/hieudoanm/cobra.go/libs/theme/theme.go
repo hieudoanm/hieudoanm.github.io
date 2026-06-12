@@ -60,6 +60,26 @@ var (
 	TaxTitle  = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("212"))
 	TaxActive = lipgloss.NewStyle().Foreground(lipgloss.Color("42"))
 	TaxDim    = lipgloss.NewStyle().Foreground(lipgloss.Color("240"))
+
+	// New theme styles for expanded commands
+	Label     = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("215"))
+	Value     = lipgloss.NewStyle().Foreground(lipgloss.Color("188"))
+	Section   = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("205")).MarginTop(1)
+	Divider   = lipgloss.NewStyle().Foreground(lipgloss.Color("240"))
+	Dim       = lipgloss.NewStyle().Foreground(lipgloss.Color("241"))
+	Highlight = lipgloss.NewStyle().Bold(true).Foreground(lipgloss.Color("220"))
+
+	CopyIcon   = lipgloss.NewStyle().Foreground(lipgloss.Color("33")).Render("📋")
+	LockIcon   = lipgloss.NewStyle().Foreground(lipgloss.Color("42")).Render("🔒")
+	GlobeIcon  = lipgloss.NewStyle().Foreground(lipgloss.Color("99")).Render("🌐")
+	KeyIcon    = lipgloss.NewStyle().Foreground(lipgloss.Color("220")).Render("🔑")
+	WarningIcon = lipgloss.NewStyle().Foreground(lipgloss.Color("226")).Render("⚠")
+	CheckIcon  = lipgloss.NewStyle().Foreground(lipgloss.Color("42")).Render("✓")
+	CrossIcon  = lipgloss.NewStyle().Foreground(lipgloss.Color("196")).Render("✗")
+
+	ServerUp   = lipgloss.NewStyle().Foreground(lipgloss.Color("42")).Render("●")
+	ServerDown = lipgloss.NewStyle().Foreground(lipgloss.Color("196")).Render("●")
+	ServerWarn = lipgloss.NewStyle().Foreground(lipgloss.Color("226")).Render("●")
 )
 
 func StatusStyle(v float64) lipgloss.Style {
@@ -70,4 +90,15 @@ func StatusStyle(v float64) lipgloss.Style {
 		return Warning
 	}
 	return Success
+}
+
+func DotForStatus(status string) string {
+	switch status {
+	case "up", "ok", "healthy":
+		return ServerUp
+	case "down", "error", "critical":
+		return ServerDown
+	default:
+		return ServerWarn
+	}
 }

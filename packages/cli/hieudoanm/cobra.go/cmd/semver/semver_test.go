@@ -32,8 +32,8 @@ func TestParseVersionInvalid(t *testing.T) {
 }
 
 func TestCompare(t *testing.T) {
-	a := version{1, 0, 0}
-	b := version{2, 0, 0}
+	a := version{1, 0, 0, ""}
+	b := version{2, 0, 0, ""}
 	if a.compare(b) >= 0 {
 		t.Error("1.0.0 should be < 2.0.0")
 	}

@@ -5,6 +5,7 @@ import (
 
 	"github.com/hieudoanm/hieudoanm/cmd/calc"
 	"github.com/hieudoanm/hieudoanm/cmd/casino"
+	"github.com/hieudoanm/hieudoanm/cmd/cert"
 	"github.com/hieudoanm/hieudoanm/cmd/chess"
 	"github.com/hieudoanm/hieudoanm/cmd/clipboard"
 	"github.com/hieudoanm/hieudoanm/cmd/clock"
@@ -16,8 +17,10 @@ import (
 	"github.com/hieudoanm/hieudoanm/cmd/doi"
 	"github.com/hieudoanm/hieudoanm/cmd/english"
 	"github.com/hieudoanm/hieudoanm/cmd/epoch"
+	"github.com/hieudoanm/hieudoanm/cmd/file"
 	"github.com/hieudoanm/hieudoanm/cmd/gh"
 	"github.com/hieudoanm/hieudoanm/cmd/hash"
+	"github.com/hieudoanm/hieudoanm/cmd/image"
 	"github.com/hieudoanm/hieudoanm/cmd/instagram"
 	"github.com/hieudoanm/hieudoanm/cmd/ip"
 	"github.com/hieudoanm/hieudoanm/cmd/jsontool"
@@ -25,8 +28,10 @@ import (
 	"github.com/hieudoanm/hieudoanm/cmd/openapi"
 	"github.com/hieudoanm/hieudoanm/cmd/openrouter"
 	"github.com/hieudoanm/hieudoanm/cmd/passwd"
+	"github.com/hieudoanm/hieudoanm/cmd/port"
 	"github.com/hieudoanm/hieudoanm/cmd/qrcode"
 	"github.com/hieudoanm/hieudoanm/cmd/semver"
+	"github.com/hieudoanm/hieudoanm/cmd/serve"
 	"github.com/hieudoanm/hieudoanm/cmd/shopify"
 	"github.com/hieudoanm/hieudoanm/cmd/snapshot"
 	"github.com/hieudoanm/hieudoanm/cmd/statuspkg"
@@ -58,6 +63,7 @@ func Execute() {
 func init() {
 	rootCmd.AddCommand(calc.NewCommand())
 	rootCmd.AddCommand(casino.NewCommand())
+	rootCmd.AddCommand(cert.NewCommand())
 	rootCmd.AddCommand(chess.NewCommand())
 	rootCmd.AddCommand(clipboard.NewCommand())
 	rootCmd.AddCommand(clock.NewCommand())
@@ -69,17 +75,21 @@ func init() {
 	rootCmd.AddCommand(doi.NewCommand())
 	rootCmd.AddCommand(english.NewCommand())
 	rootCmd.AddCommand(epoch.NewCommand())
+	rootCmd.AddCommand(file.NewCommand())
 	rootCmd.AddCommand(gh.NewCommand())
 	rootCmd.AddCommand(hash.NewCommand())
+	rootCmd.AddCommand(image.NewCommand())
 	rootCmd.AddCommand(instagram.NewCommand())
 	rootCmd.AddCommand(ip.NewCommand())
 	rootCmd.AddCommand(jsontool.NewCommand())
 	rootCmd.AddCommand(jwt.NewCommand())
 	rootCmd.AddCommand(openapi.NewCommand())
-	rootCmd.AddCommand(semver.NewCommand())
 	rootCmd.AddCommand(openrouter.NewCommand())
 	rootCmd.AddCommand(passwd.NewCommand())
+	rootCmd.AddCommand(port.NewCommand())
 	rootCmd.AddCommand(qrcode.NewCommand())
+	rootCmd.AddCommand(semver.NewCommand())
+	rootCmd.AddCommand(serve.NewCommand())
 	rootCmd.AddCommand(shopify.NewCommand())
 	rootCmd.AddCommand(snapshot.NewCommand())
 	rootCmd.AddCommand(statuspkg.NewCommand())
