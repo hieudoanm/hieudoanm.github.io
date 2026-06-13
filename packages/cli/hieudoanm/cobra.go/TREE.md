@@ -328,8 +328,14 @@
 │   │   ├── [search_web_service.go](./cmd/search/search_web_service.go)
 │   │   └── [search_web_service_test.go](./cmd/search/search_web_service_test.go)
 │   ├── semver/
+│   │   ├── [semver_compare_cmd.go](./cmd/semver/semver_compare_cmd.go)
+│   │   ├── [semver_compare_cmd_test.go](./cmd/semver/semver_compare_cmd_test.go)
 │   │   ├── [semver_root_cmd.go](./cmd/semver/semver_root_cmd.go)
-│   │   └── [semver_root_cmd_test.go](./cmd/semver/semver_root_cmd_test.go)
+│   │   ├── [semver_root_cmd_test.go](./cmd/semver/semver_root_cmd_test.go)
+│   │   ├── [semver_sort_cmd.go](./cmd/semver/semver_sort_cmd.go)
+│   │   ├── [semver_sort_cmd_test.go](./cmd/semver/semver_sort_cmd_test.go)
+│   │   ├── [semver_validate_cmd.go](./cmd/semver/semver_validate_cmd.go)
+│   │   └── [semver_validate_cmd_test.go](./cmd/semver/semver_validate_cmd_test.go)
 │   ├── system/
 │   │   ├── [system_battery_cmd.go](./cmd/system/system_battery_cmd.go)
 │   │   ├── [system_clipboard_cmd.go](./cmd/system/system_clipboard_cmd.go)
@@ -445,4 +451,4 @@
 └── [main.go](./main.go)
 ```
 
-38 directories, 404 files
+38 directories, 410 files

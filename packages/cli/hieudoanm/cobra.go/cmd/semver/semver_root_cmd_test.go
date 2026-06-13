@@ -4,6 +4,19 @@ import (
 	"testing"
 )
 
+func TestNewCommandHasSubcommands(t *testing.T) {
+	cmd := NewCommand()
+	names := make(map[string]bool)
+	for _, c := range cmd.Commands() {
+		names[c.Name()] = true
+	}
+	for _, want := range []string{"validate", "compare", "sort"} {
+		if !names[want] {
+			t.Errorf("missing subcommand: %s", want)
+		}
+	}
+}
+
 func TestParseVersion(t *testing.T) {
 	v, err := parseVersion("1.2.3")
 	if err != nil {
