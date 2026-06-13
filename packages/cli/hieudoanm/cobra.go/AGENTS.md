@@ -12,11 +12,12 @@ Go CLI toolbox using `github.com/spf13/cobra`. Root command is `hieudoanm`, wire
 
 ### Naming
 
-- Root command file: `cmd_{module}_root.go` (contains `func NewCommand()`)
-- Subcommand files: `cmd_{module}_{subcommand}.go` (contain `func newXxxCmd()`, one per file)
-- Service/helper files: `service_{topic}.go` (pure logic, no cobra commands)
-- TUI files: `tui_{topic}.go` (bubbletea TUI model/view/update)
-- Test files: `{source_file}_test.go` (same package, no `_test` suffix)
+Suffix convention — type comes last:
+- Root command file: `{module}_root_cmd.go` (contains `func NewCommand()`)
+- Subcommand files: `{module}_{subcommand}_cmd.go` (contain `func newXxxCmd()`, one per file)
+- Service/helper files: `{topic}_service.go` (pure logic, no cobra commands)
+- TUI files: `{topic}_tui.go` (bubbletea TUI model/view/update)
+- Test files: `{source_file}_test.go` (same package, no `_test` suffix), e.g. `bmi_cmd_test.go`
 - One subcommand per file
 
 ### Flags & Error Handling
