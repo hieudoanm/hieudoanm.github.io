@@ -1,0 +1,26 @@
+package doi
+
+import (
+	"github.com/spf13/cobra"
+)
+
+func newCiteCmd() *cobra.Command {
+	return &cobra.Command{
+		Use:   "cite [doi]",
+		Short: "Generate an APA citation from a DOI",
+		Long:  `Fetches metadata for a given DOI from Crossref and generates an APA-formatted citation.`,
+		Args:  cobra.MaximumNArgs(1),
+		RunE: func(cmd *cobra.Command, args []string) error {
+			id, err := resolveDOI(args)
+			if err != nil {
+				return err
+			}
+			data, err := fetchCrossref(id)
+			if err != nil {
+				return err
+			}
+			PrintCitation(data)
+			return nil
+		},
+	}
+}

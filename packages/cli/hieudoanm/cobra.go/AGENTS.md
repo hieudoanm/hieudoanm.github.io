@@ -10,19 +10,30 @@ Go CLI toolbox using `github.com/spf13/cobra`. Root command is `hieudoanm`, wire
 
 ## Conventions
 
-- Each module has a `{module}.go` with `NewCommand()` that registers subcommands via `newXxxCmd()` constructors
-- Each subcommand in its own file: `{module}_{subcommand}.go`
-- `NewCommand()` lives in a `_cmd.go` file or the module root `{module}.go`
-- Tests live alongside source files as `{file}_test.go` (same package, no `_test` package suffix)
+### Naming
+
+- Root command file: `cmd_{module}.go` (contains `func NewCommand()`)
+- Subcommand files: `cmd_{module}_{subcommand}.go` (contain `func newXxxCmd()`, one per file)
+- Service/helper files: `service_{topic}.go` (pure logic, no cobra commands)
+- TUI files: `tui_{topic}.go` (bubbletea TUI model/view/update)
+- Test files: `{source_file}_test.go` (same package, no `_test` suffix)
+- One subcommand per file
+
+### Flags & Error Handling
+
 - `--json` flag: persistent flag on the module root, package-level `var jsonOutput bool`
 - `RunE` pattern (return `error`), not `Run`
+- Error messages are lowercase (Go convention)
+- `fmt.Println` for output (not `cmd.Printf`)
+
+### Imports
+
 - Use `requests.Get()` from `libs/requests/` for HTTP calls (handles retries, timeouts, headers)
 
-## Coding Style
+### Coding Style
 
 - No comments in code unless explaining non-obvious logic
 - Short functions (< 30 lines preferred)
-- One subcommand per file
 - Error messages are lowercase (Go convention)
 - `fmt.Println` for output (not `cmd.Printf`)
 
