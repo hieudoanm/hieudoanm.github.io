@@ -12,6 +12,7 @@ func NewCommand() *cobra.Command {
 		newClockCmd(),
 		newCronCmd(),
 		newEpochCmd(),
+		newPomodoroCmd(),
 		newTimerCmd(),
 		newUntilCmd(),
 		newWorldCmd(),

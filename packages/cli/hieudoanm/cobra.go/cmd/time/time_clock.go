@@ -5,26 +5,11 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/hieudoanm/hieudoanm/cmd/time/pomodoro"
 	"github.com/hieudoanm/hieudoanm/libs/number"
 	"github.com/spf13/cobra"
 )
 
 var nowJSON bool
-
-var (
-	tuiWork  int
-	tuiBreak int
-)
-
-var timePomodoroCmd = &cobra.Command{
-	Use:   "tui",
-	Short: "Start a Pomodoro timer session",
-	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("🍅 Launching Pomodoro TUI...")
-		pomodoro.RunTUI(tuiWork, tuiBreak)
-	},
-}
 
 var timeNowCmd = &cobra.Command{
 	Use:   "now",
@@ -54,17 +39,14 @@ func newClockCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "clock",
 		Short: "Clock and timer utilities",
-		Long:  `Clock and timer utilities including current time display and Pomodoro timer.`,
+		Long:  `Clock and timer utilities including current time display.`,
 	}
 
-	cmd.AddCommand(timePomodoroCmd)
 	cmd.AddCommand(timeNowCmd)
 
 	return cmd
 }
 
 func init() {
-	timePomodoroCmd.Flags().IntVarP(&tuiWork, "work", "w", 25, "work session minutes")
-	timePomodoroCmd.Flags().IntVarP(&tuiBreak, "break", "b", 5, "break session minutes")
 	timeNowCmd.Flags().BoolVar(&nowJSON, "json", false, "Output in JSON format")
 }

@@ -1,4 +1,4 @@
-package pomodoro
+package time
 
 import (
 	"fmt"
@@ -7,9 +7,8 @@ import (
 	"charm.land/bubbles/v2/progress"
 	tea "charm.land/bubbletea/v2"
 	"charm.land/lipgloss/v2"
+	"github.com/spf13/cobra"
 )
-
-/* ----------------------------- STATE ----------------------------- */
 
 type pomodoroState int
 
@@ -20,9 +19,7 @@ const (
 	stateStopped
 )
 
-/* ----------------------------- MODEL ----------------------------- */
-
-type model struct {
+type pomodoroModel struct {
 	workDuration     time.Duration
 	breakDuration    time.Duration
 	startTime        time.Time
@@ -37,53 +34,37 @@ type model struct {
 	quitting bool
 }
 
-/* ----------------------------- MESSAGES ----------------------------- */
+type pomodoroTickMsg time.Time
 
-type tickMsg time.Time
-
-/* ----------------------------- INIT ----------------------------- */
-
-func (m model) Init() tea.Cmd {
-	return tick()
+func (m pomodoroModel) Init() tea.Cmd {
+	return pomodoroTick()
 }
 
-func tick() tea.Cmd {
+func pomodoroTick() tea.Cmd {
 	return tea.Tick(time.Second, func(t time.Time) tea.Msg {
-		return tickMsg(t)
+		return pomodoroTickMsg(t)
 	})
 }
 
-/* ----------------------------- UPDATE ----------------------------- */
-
-func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
-
+func (m pomodoroModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	switch msg := msg.(type) {
-
-	/* ----------------------------- TICK ----------------------------- */
-
-	case tickMsg:
-
+	case pomodoroTickMsg:
 		if m.paused || m.state == stateStopped {
-			return m, tick()
+			return m, pomodoroTick()
 		}
 
 		elapsed := time.Since(m.startTime) - m.accumulatedPause
 
 		if elapsed >= m.totalDuration {
-
 			if m.state == stateWork {
-				// switch to break
 				m.state = stateBreak
 				m.startTime = time.Now()
 				m.accumulatedPause = 0
 				m.totalDuration = m.breakDuration
-
 				m.progress.SetPercent(0)
-
-				return m, tick()
+				return m, pomodoroTick()
 			}
 
-			// finished
 			m.state = stateDone
 			m.quitting = true
 			return m, tea.Quit
@@ -92,17 +73,13 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		pct := float64(elapsed) / float64(m.totalDuration)
 		m.progress.SetPercent(pct)
 
-		return m, tick()
-
-	/* ----------------------------- KEYS ----------------------------- */
+		return m, pomodoroTick()
 
 	case tea.KeyMsg:
 		switch msg.String() {
-
 		case "q", "ctrl+c":
 			m.quitting = true
 			return m, tea.Quit
-
 		case "p":
 			if !m.paused {
 				m.paused = true
@@ -112,7 +89,6 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 				m.accumulatedPause += time.Since(m.pausedAt)
 			}
 			return m, nil
-
 		case "s":
 			m.state = stateStopped
 			m.quitting = true
@@ -123,10 +99,7 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	return m, nil
 }
 
-/* ----------------------------- VIEW (v2) ----------------------------- */
-
-func (m model) View() tea.View {
-
+func (m pomodoroModel) View() tea.View {
 	if m.quitting {
 		switch m.state {
 		case stateDone:
@@ -148,7 +121,6 @@ func (m model) View() tea.View {
 	styleTime := lipgloss.NewStyle().Foreground(lipgloss.Color("205")).Bold(true)
 
 	var remaining time.Duration
-
 	if m.paused {
 		remaining = m.totalDuration - (m.pausedAt.Sub(m.startTime) - m.accumulatedPause)
 	} else {
@@ -178,11 +150,9 @@ func (m model) View() tea.View {
 	return tea.NewView(view)
 }
 
-/* ----------------------------- RUN ----------------------------- */
-
-func RunTUI(work, rest int) {
+func runPomodoroTUI(work, rest int) {
 	p := progress.New()
-	m := model{
+	m := pomodoroModel{
 		workDuration:  time.Minute * time.Duration(work),
 		breakDuration: time.Minute * time.Duration(rest),
 		startTime:     time.Now(),
@@ -194,4 +164,19 @@ func RunTUI(work, rest int) {
 	if _, err := tea.NewProgram(m).Run(); err != nil {
 		fmt.Println("error:", err)
 	}
+}
+
+func newPomodoroCmd() *cobra.Command {
+	var work, rest int
+	cmd := &cobra.Command{
+		Use:   "pomodoro",
+		Short: "Start a Pomodoro timer TUI session",
+		Run: func(cmd *cobra.Command, args []string) {
+			fmt.Println("🍅 Launching Pomodoro TUI...")
+			runPomodoroTUI(work, rest)
+		},
+	}
+	cmd.Flags().IntVarP(&work, "work", "w", 25, "work session minutes")
+	cmd.Flags().IntVarP(&rest, "rest", "r", 5, "rest session minutes")
+	return cmd
 }

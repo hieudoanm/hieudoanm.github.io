@@ -135,9 +135,19 @@
 │   │   ├── [doi_cite.go](./cmd/doi/doi_cite.go)
 │   │   └── [doi_validate.go](./cmd/doi/doi_validate.go)
 │   ├── english/
-│   │   └── [english.go](./cmd/english/english.go)
+│   │   ├── [english.go](./cmd/english/english.go)
+│   │   └── [english_define.go](./cmd/english/english_define.go)
 │   ├── file/
-│   │   └── [file.go](./cmd/file/file.go)
+│   │   ├── [file.go](./cmd/file/file.go)
+│   │   ├── [file_checksum.go](./cmd/file/file_checksum.go)
+│   │   ├── [file_chmod.go](./cmd/file/file_chmod.go)
+│   │   ├── [file_count.go](./cmd/file/file_count.go)
+│   │   ├── [file_duplicates.go](./cmd/file/file_duplicates.go)
+│   │   ├── [file_head.go](./cmd/file/file_head.go)
+│   │   ├── [file_size.go](./cmd/file/file_size.go)
+│   │   ├── [file_stats.go](./cmd/file/file_stats.go)
+│   │   ├── [file_tail.go](./cmd/file/file_tail.go)
+│   │   └── [file_type.go](./cmd/file/file_type.go)
 │   ├── gemini/
 │   │   ├── [gemini.go](./cmd/gemini/gemini.go)
 │   │   └── [gemini_code.go](./cmd/gemini/gemini_code.go)
@@ -150,7 +160,10 @@
 │   │   ├── [gh_license.go](./cmd/gh/gh_license.go)
 │   │   └── [gh_og.go](./cmd/gh/gh_og.go)
 │   ├── image/
-│   │   └── [image.go](./cmd/image/image.go)
+│   │   ├── [image.go](./cmd/image/image.go)
+│   │   ├── [image_convert.go](./cmd/image/image_convert.go)
+│   │   ├── [image_dominant.go](./cmd/image/image_dominant.go)
+│   │   └── [image_info.go](./cmd/image/image_info.go)
 │   ├── net/
 │   │   ├── [net.go](./cmd/net/net.go)
 │   │   ├── [net_cert.go](./cmd/net/net_cert.go)
@@ -168,8 +181,6 @@
 │   │   ├── [openapi.go](./cmd/openapi/openapi.go)
 │   │   └── [openapi_postman.go](./cmd/openapi/openapi_postman.go)
 │   ├── openrouter/
-│   │   ├── chat/
-│   │   │   └── [chat.go](./cmd/openrouter/chat/chat.go)
 │   │   ├── [config.go](./cmd/openrouter/config.go)
 │   │   ├── [openrouter.go](./cmd/openrouter/openrouter.go)
 │   │   ├── [openrouter_cmd.go](./cmd/openrouter/openrouter_cmd.go)
@@ -237,6 +248,8 @@
 │   ├── browser/
 │   │   ├── [browser.go](./libs/browser/browser.go)
 │   │   └── [browser_test.go](./libs/browser/browser_test.go)
+│   ├── chat/
+│   │   └── [chat.go](./libs/chat/chat.go)
 │   ├── colors/
 │   │   ├── [colors.go](./libs/colors/colors.go)
 │   │   └── [colors_test.go](./libs/colors/colors_test.go)
@@ -261,4 +274,4 @@
 └── [main.go](./main.go)
 ```
 
-38 directories, 220 files
+38 directories, 233 files
