@@ -23,7 +23,7 @@ func TestNewCommandHasSubcommands(t *testing.T) {
 	for _, c := range cmd.Commands() {
 		names[c.Name()] = true
 	}
-	for _, want := range []string{"checksum", "chmod", "count", "duplicates", "head", "size", "stats", "tail", "type"} {
+	for _, want := range []string{"checksum", "chmod", "count", "duplicates", "edit", "grep", "head", "read", "size", "stats", "tail", "type", "write"} {
 		if !names[want] {
 			t.Errorf("missing subcommand: %s", want)
 		}
