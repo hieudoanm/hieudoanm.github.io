@@ -69,20 +69,20 @@
 │   │   ├── [chess_stockfish.go](./cmd/chess/chess_stockfish.go)
 │   │   └── [chess_titles.go](./cmd/chess/chess_titles.go)
 │   ├── colors/
-│   │   ├── [cmyk.go](./cmd/colors/cmyk.go)
-│   │   ├── [colors.go](./cmd/colors/colors.go)
-│   │   ├── [colors_convert_hcl.go](./cmd/colors/colors_convert_hcl.go)
-│   │   ├── [colors_convert_hex.go](./cmd/colors/colors_convert_hex.go)
-│   │   ├── [colors_convert_oklch.go](./cmd/colors/colors_convert_oklch.go)
-│   │   ├── [colors_convert_rgb.go](./cmd/colors/colors_convert_rgb.go)
-│   │   ├── [colors_palette.go](./cmd/colors/colors_palette.go)
-│   │   ├── [colors_random.go](./cmd/colors/colors_random.go)
+│   │   ├── [cmd_colors.go](./cmd/colors/cmd_colors.go)
+│   │   ├── [cmd_colors_convert_hcl.go](./cmd/colors/cmd_colors_convert_hcl.go)
+│   │   ├── [cmd_colors_convert_hex.go](./cmd/colors/cmd_colors_convert_hex.go)
+│   │   ├── [cmd_colors_convert_oklch.go](./cmd/colors/cmd_colors_convert_oklch.go)
+│   │   ├── [cmd_colors_convert_rgb.go](./cmd/colors/cmd_colors_convert_rgb.go)
+│   │   ├── [cmd_colors_palette.go](./cmd/colors/cmd_colors_palette.go)
+│   │   ├── [cmd_colors_random.go](./cmd/colors/cmd_colors_random.go)
 │   │   ├── [colors_test.go](./cmd/colors/colors_test.go)
-│   │   ├── [hcl.go](./cmd/colors/hcl.go)
-│   │   ├── [hex.go](./cmd/colors/hex.go)
-│   │   ├── [hsl.go](./cmd/colors/hsl.go)
-│   │   ├── [oklch.go](./cmd/colors/oklch.go)
-│   │   └── [rgb.go](./cmd/colors/rgb.go)
+│   │   ├── [service_cmyk.go](./cmd/colors/service_cmyk.go)
+│   │   ├── [service_hcl.go](./cmd/colors/service_hcl.go)
+│   │   ├── [service_hex.go](./cmd/colors/service_hex.go)
+│   │   ├── [service_hsl.go](./cmd/colors/service_hsl.go)
+│   │   ├── [service_oklch.go](./cmd/colors/service_oklch.go)
+│   │   └── [service_rgb.go](./cmd/colors/service_rgb.go)
 │   ├── convert/
 │   │   ├── [convert.go](./cmd/convert/convert.go)
 │   │   ├── [convert_base64.go](./cmd/convert/convert_base64.go)
@@ -149,8 +149,9 @@
 │   │   ├── [file_tail.go](./cmd/file/file_tail.go)
 │   │   └── [file_type.go](./cmd/file/file_type.go)
 │   ├── gemini/
-│   │   ├── [gemini.go](./cmd/gemini/gemini.go)
-│   │   └── [gemini_code.go](./cmd/gemini/gemini_code.go)
+│   │   ├── [cmd_gemini.go](./cmd/gemini/cmd_gemini.go)
+│   │   ├── [cmd_gemini_code.go](./cmd/gemini/cmd_gemini_code.go)
+│   │   └── [tui_gemini_code.go](./cmd/gemini/tui_gemini_code.go)
 │   ├── gh/
 │   │   ├── [gh.go](./cmd/gh/gh.go)
 │   │   ├── [gh_coc.go](./cmd/gh/gh_coc.go)
@@ -206,7 +207,6 @@
 │   │   └── [system_path.go](./cmd/system/system_path.go)
 │   ├── telegram/
 │   │   ├── [telegram.go](./cmd/telegram/telegram.go)
-│   │   ├── [telegram_cmd.go](./cmd/telegram/telegram_cmd.go)
 │   │   ├── [telegram_message.go](./cmd/telegram/telegram_message.go)
 │   │   ├── [telegram_message_send.go](./cmd/telegram/telegram_message_send.go)
 │   │   ├── [telegram_webhook.go](./cmd/telegram/telegram_webhook.go)
@@ -214,13 +214,12 @@
 │   │   ├── [telegram_webhook_info.go](./cmd/telegram/telegram_webhook_info.go)
 │   │   └── [telegram_webhook_set.go](./cmd/telegram/telegram_webhook_set.go)
 │   ├── time/
-│   │   ├── pomodoro/
-│   │   │   └── [pomodoro.go](./cmd/time/pomodoro/pomodoro.go)
 │   │   ├── [time.go](./cmd/time/time.go)
 │   │   ├── [time_age.go](./cmd/time/time_age.go)
 │   │   ├── [time_clock.go](./cmd/time/time_clock.go)
 │   │   ├── [time_cron.go](./cmd/time/time_cron.go)
 │   │   ├── [time_epoch.go](./cmd/time/time_epoch.go)
+│   │   ├── [time_pomodoro.go](./cmd/time/time_pomodoro.go)
 │   │   ├── [time_stopwatch.go](./cmd/time/time_stopwatch.go)
 │   │   ├── [time_timer.go](./cmd/time/time_timer.go)
 │   │   ├── [time_until.go](./cmd/time/time_until.go)
@@ -274,4 +273,4 @@
 └── [main.go](./main.go)
 ```
 
-38 directories, 233 files
+37 directories, 233 files
