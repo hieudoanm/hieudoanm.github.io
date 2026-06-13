@@ -11,6 +11,7 @@ func NewCommand() *cobra.Command {
 		Use:   "calc",
 		Short: "Financial and utility calculators",
 		Long:  `A collection of calculator tools including tax calculation and compound interest.`,
+		RunE:  func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
 	cmd.AddCommand(newTaxCmd())
 	cmd.AddCommand(newCompoundCmd())

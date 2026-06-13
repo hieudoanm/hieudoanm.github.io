@@ -10,6 +10,7 @@ func NewCommand() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "openrouter",
 		Short: "Interact with OpenRouter AI models and services",
+		RunE:  func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
 	cmd.PersistentFlags().BoolVarP(&jsonOutput, "json", "j", false, "Output in JSON format")
 	cmd.AddCommand(newServeCmd())

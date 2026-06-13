@@ -9,6 +9,7 @@ func NewCommand() *cobra.Command {
 		Use:   "system",
 		Short: "System utilities",
 		Long:  `System monitoring and clipboard management.`,
+		RunE:  func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
 	cmd.AddCommand(
 		newMonitorCmd(),

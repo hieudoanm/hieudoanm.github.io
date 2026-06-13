@@ -17,6 +17,7 @@ Search is the universal entry point for finding things:
   search text   - search file contents by regex
   search code   - find code symbols (functions, types, etc.)
   search web    - search the internet`,
+		RunE: func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
 	cmd.AddCommand(newFilesCmd())
 	cmd.AddCommand(newTextCmd())

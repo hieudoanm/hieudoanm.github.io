@@ -10,6 +10,7 @@ func NewCommand() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "casino",
 		Short: "Casino games: blackjack, poker odds, and more",
+		RunE:  func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
 	cmd.AddCommand(
 		newBlackjackCmd(),

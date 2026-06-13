@@ -20,6 +20,7 @@ import (
 	"github.com/hieudoanm/hieudoanm/cmd/net"
 	"github.com/hieudoanm/hieudoanm/cmd/openapi"
 	"github.com/hieudoanm/hieudoanm/cmd/openrouter"
+	"github.com/hieudoanm/hieudoanm/cmd/port"
 	"github.com/hieudoanm/hieudoanm/cmd/search"
 	"github.com/hieudoanm/hieudoanm/cmd/semver"
 	"github.com/hieudoanm/hieudoanm/cmd/system"
@@ -61,6 +62,7 @@ func init() {
 	rootCmd.AddCommand(net.NewCommand())
 	rootCmd.AddCommand(openapi.NewCommand())
 	rootCmd.AddCommand(openrouter.NewCommand())
+	rootCmd.AddCommand(port.NewCommand())
 	rootCmd.AddCommand(search.NewCommand())
 	rootCmd.AddCommand(semver.NewCommand())
 	rootCmd.AddCommand(system.NewCommand())

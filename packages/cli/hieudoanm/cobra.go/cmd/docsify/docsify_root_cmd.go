@@ -12,6 +12,7 @@ func NewCommand() *cobra.Command {
 		Use:   "docsify",
 		Short: "",
 		Long:  "",
+		RunE:  func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
 
 	cmd.PersistentFlags().BoolVarP(&jsonOutput, "json", "j", false, "Output in JSON format")

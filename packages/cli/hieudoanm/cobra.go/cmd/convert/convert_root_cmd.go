@@ -11,6 +11,7 @@ func NewCommand() *cobra.Command {
 		Use:   "convert",
 		Short: "Text conversion utilities",
 		Long:  `Convert text between formats: Braille, Morse code, and string case transformations.`,
+		RunE:  func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
 
 	cmd.AddCommand(newBrailleCmd())

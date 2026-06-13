@@ -11,6 +11,7 @@ func NewCommand() *cobra.Command {
 		Use:   "image",
 		Short: "Image inspection and conversion tools",
 		Long:  `Get image metadata, convert between formats, and extract dominant colors.`,
+		RunE:  func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
 	cmd.AddCommand(newInfoCmd())
 	cmd.AddCommand(newConvertCmd())

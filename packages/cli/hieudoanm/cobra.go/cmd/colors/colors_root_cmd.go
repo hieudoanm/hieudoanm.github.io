@@ -14,6 +14,7 @@ func NewCommand() *cobra.Command {
 		Long: `The colors CLI application is a comprehensive backend utility belonging to the design suite of tools.
 
 Use this root executable to manage configuring, running, and interacting with all colors-related operations securely and efficiently from your terminal.`,
+		RunE: func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
 
 	cmd.PersistentFlags().BoolVarP(&jsonOutput, "json", "j", false, "Output in JSON format")

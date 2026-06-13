@@ -9,6 +9,7 @@ func NewCommand() *cobra.Command {
 		Use:   "time",
 		Short: "Time and scheduling tools",
 		Long:  `Current time, pomodoro timer, countdown timer, epoch conversion, and cron expression utilities.`,
+		RunE:  func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
 	cmd.AddCommand(
 		newClockCmd(),

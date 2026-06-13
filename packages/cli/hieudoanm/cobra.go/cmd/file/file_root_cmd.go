@@ -11,6 +11,7 @@ func NewCommand() *cobra.Command {
 		Use:   "file",
 		Short: "File introspection and analysis tools",
 		Long:  `Check file checksums, detect types, analyze sizes, find duplicates, search, read, write, and edit files.`,
+		RunE:  func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
 	cmd.AddCommand(newChecksumCmd())
 	cmd.AddCommand(newChmodCmd())

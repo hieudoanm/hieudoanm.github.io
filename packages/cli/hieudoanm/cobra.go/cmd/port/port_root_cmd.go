@@ -11,6 +11,7 @@ func NewCommand() *cobra.Command {
 		Use:   "port",
 		Short: "Network port checking tools",
 		Long:  `Check if ports are open, find available ports, and scan common ports.`,
+		RunE:  func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
 	cmd.AddCommand(newCheckCmd())
 	cmd.AddCommand(newFindCmd())

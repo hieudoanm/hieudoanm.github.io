@@ -9,6 +9,7 @@ func NewCommand() *cobra.Command {
 		Use:   "data",
 		Short: "Data serialization and transformation tools",
 		Long:  `Format, convert, and validate JSON, YAML, and CSV.`,
+		RunE:  func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
 	cmd.AddCommand(
 		newCsvCmd(),

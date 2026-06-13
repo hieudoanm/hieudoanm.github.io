@@ -9,6 +9,7 @@ func NewCommand() *cobra.Command {
 		Use:   "net",
 		Short: "Network diagnostics and servers",
 		Long:  `IP geolocation, WiFi scanning, TLS certificates, HTTP serving, and cloud status.`,
+		RunE:  func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
 	cmd.AddCommand(
 		newCertCmd(),

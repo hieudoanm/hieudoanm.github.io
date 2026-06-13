@@ -9,6 +9,7 @@ func NewCommand() *cobra.Command {
 		Use:   "crypto",
 		Short: "Cryptographic and security tools",
 		Long:  `Hashing, password generation, JWT, UUIDs, and QR codes.`,
+		RunE:  func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
 	cmd.AddCommand(
 		newHashCmd(),
