@@ -100,11 +100,11 @@ func TestSearchFile(t *testing.T) {
 	if len(matches) != 2 {
 		t.Errorf("got %d matches, want 2", len(matches))
 	}
-	if len(matches) > 0 && matches[0].line != 1 {
-		t.Errorf("first match line = %d, want 1", matches[0].line)
+	if len(matches) > 0 && matches[0].Line != 1 {
+		t.Errorf("first match line = %d, want 1", matches[0].Line)
 	}
-	if len(matches) > 1 && matches[1].line != 3 {
-		t.Errorf("second match line = %d, want 3", matches[1].line)
+	if len(matches) > 1 && matches[1].Line != 3 {
+		t.Errorf("second match line = %d, want 3", matches[1].Line)
 	}
 }
 
@@ -160,7 +160,7 @@ func TestSearchFileContext(t *testing.T) {
 	if len(matches) != 1 {
 		t.Fatalf("got %d matches, want 1", len(matches))
 	}
-	if matches[0].after == "" {
-		t.Error("expected context in .after field")
+	if matches[0].After == "" {
+		t.Error("expected context in .After field")
 	}
 }

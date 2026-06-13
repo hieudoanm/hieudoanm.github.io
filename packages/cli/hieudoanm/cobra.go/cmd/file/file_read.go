@@ -9,6 +9,83 @@ import (
 	"github.com/spf13/cobra"
 )
 
+func readFileContent(path string, offset, lines int) (string, []string, int, error) {
+	info, err := os.Stat(path)
+	if err != nil {
+		return "", nil, 0, err
+	}
+	if info.IsDir() {
+		return "", nil, 0, fmt.Errorf("%q is a directory", path)
+	}
+
+	data, err := os.ReadFile(path)
+	if err != nil {
+		return "", nil, 0, err
+	}
+
+	content := string(data)
+	allLines := splitLines(content)
+	totalLines := len(allLines)
+
+	start := offset
+	if start < 0 {
+		start = 0
+	}
+	if start > totalLines {
+		start = totalLines
+	}
+	end := start + lines
+	if end > totalLines {
+		end = totalLines
+	}
+	if lines == 0 {
+		end = totalLines
+	}
+
+	return content, allLines[start:end], totalLines, nil
+}
+
+func renderReadJSON(path string, info os.FileInfo, content string, displayLines []string, totalLines int, offset, lines int) {
+	displayContent := content
+	if offset > 0 || lines > 0 {
+		displayContent = joinLines(displayLines)
+	}
+	out, _ := json.MarshalIndent(map[string]interface{}{
+		"file":       path,
+		"size":       info.Size(),
+		"mode":       info.Mode().String(),
+		"mime":       detectMIME(path),
+		"totalLines": totalLines,
+		"content":    displayContent,
+	}, "", "  ")
+	fmt.Println(string(out))
+}
+
+func renderReadText(path string, displayLines []string, start, totalLines int, showLineNumbers bool) {
+	abs, _ := filepath.Abs(path)
+	fmt.Printf("── %s ──\n", abs)
+
+	if len(displayLines) == 0 {
+		fmt.Println("(empty file)")
+		return
+	}
+
+	end := start + len(displayLines)
+	lineWidth := len(fmt.Sprintf("%d", end))
+	for i, line := range displayLines {
+		num := start + i + 1
+		if showLineNumbers {
+			fmt.Printf("%*d | %s\n", lineWidth, num, line)
+		} else {
+			fmt.Println(line)
+		}
+	}
+
+	if start > 0 || end < totalLines {
+		fmt.Printf("── %d/%d lines (%d-%d) ──\n", end-start, totalLines, start+1, end)
+	}
+}
+
 func newReadCmd() *cobra.Command {
 	var lines int
 	var offset int
@@ -27,88 +104,18 @@ Examples:
 		Args: cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			path := args[0]
-			info, err := os.Stat(path)
-			if err != nil {
-				return err
-			}
-			if info.IsDir() {
-				return fmt.Errorf("%q is a directory", path)
-			}
-
-			data, err := os.ReadFile(path)
+			content, displayLines, totalLines, err := readFileContent(path, offset, lines)
 			if err != nil {
 				return err
 			}
 
 			if jsonOutput {
-				content := string(data)
-				if offset > 0 || lines > 0 {
-					allLines := splitLines(content)
-					start := offset
-					if start < 0 {
-						start = 0
-					}
-					if start > len(allLines) {
-						start = len(allLines)
-					}
-					end := start + lines
-					if end > len(allLines) {
-						end = len(allLines)
-					}
-					content = joinLines(allLines[start:end])
-				}
-				out, _ := json.MarshalIndent(map[string]interface{}{
-					"file":       path,
-					"size":       info.Size(),
-					"mode":       info.Mode().String(),
-					"mime":       detectMIME(path),
-					"totalLines": len(splitLines(string(data))),
-					"content":    content,
-				}, "", "  ")
-				fmt.Println(string(out))
+				info, _ := os.Stat(path)
+				renderReadJSON(path, info, content, displayLines, totalLines, offset, lines)
 				return nil
 			}
 
-			abs, _ := filepath.Abs(path)
-			fmt.Printf("── %s ──\n", abs)
-
-			allLines := splitLines(string(data))
-			totalLines := len(allLines)
-
-			start := offset
-			if start < 0 {
-				start = 0
-			}
-			if start > totalLines {
-				start = totalLines
-			}
-			end := start + lines
-			if end > totalLines {
-				end = totalLines
-			}
-			if end == 0 {
-				end = totalLines
-			}
-
-			displayLines := allLines[start:end]
-			if len(displayLines) == 0 {
-				fmt.Println("(empty file)")
-				return nil
-			}
-
-			lineWidth := len(fmt.Sprintf("%d", end))
-			for i, line := range displayLines {
-				num := start + i + 1
-				if showLineNumbers {
-					fmt.Printf("%*d | %s\n", lineWidth, num, line)
-				} else {
-					fmt.Println(line)
-				}
-			}
-
-			if start > 0 || end < totalLines {
-				fmt.Printf("── %d/%d lines (%d-%d) ──\n", end-start, totalLines, start+1, end)
-			}
+			renderReadText(path, displayLines, offset, totalLines, showLineNumbers)
 			return nil
 		},
 	}

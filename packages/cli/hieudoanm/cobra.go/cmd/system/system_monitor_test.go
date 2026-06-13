@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-func TestSysMax(t *testing.T) {
+func TestBuiltinMax(t *testing.T) {
 	tests := []struct {
 		a, b, expected int
 	}{
@@ -20,15 +20,15 @@ func TestSysMax(t *testing.T) {
 	for _, tt := range tests {
 		name := fmt.Sprintf("max(%d,%d)=%d", tt.a, tt.b, tt.expected)
 		t.Run(name, func(t *testing.T) {
-			got := sysMax(tt.a, tt.b)
+			got := max(tt.a, tt.b)
 			if got != tt.expected {
-				t.Errorf("sysMax(%d,%d) = %d, want %d", tt.a, tt.b, got, tt.expected)
+				t.Errorf("max(%d,%d) = %d, want %d", tt.a, tt.b, got, tt.expected)
 			}
 		})
 	}
 }
 
-func TestSysMin(t *testing.T) {
+func TestBuiltinMin(t *testing.T) {
 	tests := []struct {
 		a, b, expected int
 	}{
@@ -42,9 +42,9 @@ func TestSysMin(t *testing.T) {
 	for _, tt := range tests {
 		name := fmt.Sprintf("min(%d,%d)=%d", tt.a, tt.b, tt.expected)
 		t.Run(name, func(t *testing.T) {
-			got := sysMin(tt.a, tt.b)
+			got := min(tt.a, tt.b)
 			if got != tt.expected {
-				t.Errorf("sysMin(%d,%d) = %d, want %d", tt.a, tt.b, got, tt.expected)
+				t.Errorf("min(%d,%d) = %d, want %d", tt.a, tt.b, got, tt.expected)
 			}
 		})
 	}

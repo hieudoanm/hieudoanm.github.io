@@ -48,28 +48,30 @@ type webResult struct {
 	Snippet string `json:"snippet"`
 }
 
-func duckDuckGoSearch(query string, maxResults int) error {
+func fetchDuckDuckGo(query string) (string, error) {
 	searchURL := fmt.Sprintf("https://lite.duckduckgo.com/lite/?q=%s", url.QueryEscape(query))
 
 	req, err := http.NewRequest("GET", searchURL, nil)
 	if err != nil {
-		return fmt.Errorf("request error: %w", err)
+		return "", fmt.Errorf("request error: %w", err)
 	}
 	req.Header.Set("User-Agent", "Mozilla/5.0 (compatible; hieudoanm-cli/1.0)")
 
 	resp, err := http.DefaultClient.Do(req)
 	if err != nil {
-		return fmt.Errorf("fetch error: %w", err)
+		return "", fmt.Errorf("fetch error: %w", err)
 	}
 	defer resp.Body.Close()
 
 	body, err := io.ReadAll(resp.Body)
 	if err != nil {
-		return fmt.Errorf("read error: %w", err)
+		return "", fmt.Errorf("read error: %w", err)
 	}
 
-	results := parseDuckDuckGoResults(string(body), maxResults)
+	return string(body), nil
+}
 
+func outputWebResults(results []webResult, query string) {
 	if jsonOutput {
 		out, _ := json.MarshalIndent(map[string]interface{}{
 			"query":   query,
@@ -77,12 +79,12 @@ func duckDuckGoSearch(query string, maxResults int) error {
 			"count":   len(results),
 		}, "", "  ")
 		fmt.Println(string(out))
-		return nil
+		return
 	}
 
 	if len(results) == 0 {
 		fmt.Println("(no results)")
-		return nil
+		return
 	}
 
 	for i, r := range results {
@@ -94,6 +96,16 @@ func duckDuckGoSearch(query string, maxResults int) error {
 		fmt.Println()
 	}
 	fmt.Printf("%d results from DuckDuckGo\n", len(results))
+}
+
+func duckDuckGoSearch(query string, maxResults int) error {
+	body, err := fetchDuckDuckGo(query)
+	if err != nil {
+		return err
+	}
+
+	results := parseDuckDuckGoResults(body, maxResults)
+	outputWebResults(results, query)
 	return nil
 }
 
@@ -111,29 +123,32 @@ func parseDuckDuckGoResults(html string, maxResults int) []webResult {
 
 	results := make([]webResult, 0, n)
 	for i := 0; i < n && i < len(linkMatches); i++ {
-		link := linkMatches[i]
-		href := link[1]
-		title := cleanHTML(link[2])
+		r := buildWebResult(linkMatches[i], snippetMatches, i)
+		results = append(results, r)
+	}
+	return results
+}
 
-		if strings.HasPrefix(href, "//") {
-			href = "https:" + href
-		} else if !strings.HasPrefix(href, "http") {
-			href = "https://" + href
-		}
+func buildWebResult(linkMatch []string, snippetMatches [][]string, idx int) webResult {
+	href := linkMatch[1]
+	title := cleanHTML(linkMatch[2])
 
-		var snippet string
-		if i < len(snippetMatches) {
-			snippet = cleanHTML(snippetMatches[i][1])
-		}
-
-		results = append(results, webResult{
-			Title:   title,
-			URL:     href,
-			Snippet: snippet,
-		})
+	if strings.HasPrefix(href, "//") {
+		href = "https:" + href
+	} else if !strings.HasPrefix(href, "http") {
+		href = "https://" + href
 	}
 
-	return results
+	var snippet string
+	if idx < len(snippetMatches) {
+		snippet = cleanHTML(snippetMatches[idx][1])
+	}
+
+	return webResult{
+		Title:   title,
+		URL:     href,
+		Snippet: snippet,
+	}
 }
 
 var htmlTagRe = regexp.MustCompile(`<[^>]*>`)

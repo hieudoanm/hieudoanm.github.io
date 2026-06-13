@@ -11,6 +11,97 @@ import (
 	"github.com/spf13/cobra"
 )
 
+func findFilesWithGlob(pattern, root string, maxDepth int, fileType string, hidden bool) ([]string, error) {
+	info, err := os.Stat(root)
+	if err != nil {
+		return nil, err
+	}
+	if !info.IsDir() {
+		return nil, fmt.Errorf("%q is not a directory", root)
+	}
+
+	var results []string
+	absRoot, _ := filepath.Abs(root)
+	hasGlobStar := strings.Contains(pattern, "**")
+
+	walkFn := func(path string, fi os.FileInfo, err error) error {
+		if err != nil {
+			return nil
+		}
+
+		if !hidden && isHidden(path) {
+			if fi.IsDir() {
+				return filepath.SkipDir
+			}
+			return nil
+		}
+
+		if fileType == "d" && !fi.IsDir() {
+			return nil
+		}
+		if fileType == "f" && fi.IsDir() {
+			return nil
+		}
+
+		if hasGlobStar {
+			matched, _ := filepath.Match(pattern, path)
+			if matched {
+				results = append(results, path)
+			}
+			return nil
+		}
+
+		if fi.IsDir() {
+			return nil
+		}
+
+		base := fi.Name()
+		matched, _ := filepath.Match(pattern, base)
+		if matched {
+			results = append(results, path)
+		}
+		return nil
+	}
+
+	if maxDepth > 0 {
+		walkWithDepth(absRoot, 0, maxDepth, walkFn)
+	} else {
+		filepath.Walk(absRoot, walkFn)
+	}
+
+	sort.Strings(results)
+	return results, nil
+}
+
+func outputFileResults(results []string, pattern, root string) {
+	absRoot, _ := filepath.Abs(root)
+
+	if jsonOutput {
+		out, _ := json.MarshalIndent(map[string]interface{}{
+			"pattern": pattern,
+			"root":    root,
+			"files":   results,
+			"count":   len(results),
+		}, "", "  ")
+		fmt.Println(string(out))
+		return
+	}
+
+	if len(results) == 0 {
+		fmt.Println("(no files found)")
+		return
+	}
+
+	for _, f := range results {
+		rel, _ := filepath.Rel(absRoot, f)
+		fmt.Println(rel)
+	}
+
+	if len(results) > 1 {
+		fmt.Printf("\n%d files found\n", len(results))
+	}
+}
+
 func newFilesCmd() *cobra.Command {
 	var maxDepth int
 	var fileType string
@@ -41,90 +132,12 @@ Examples:
 				root = args[1]
 			}
 
-			info, err := os.Stat(root)
+			results, err := findFilesWithGlob(pattern, root, maxDepth, fileType, hidden)
 			if err != nil {
 				return err
 			}
-			if !info.IsDir() {
-				return fmt.Errorf("%q is not a directory", root)
-			}
 
-			var results []string
-			absRoot, _ := filepath.Abs(root)
-
-			hasGlobStar := strings.Contains(pattern, "**")
-
-			walkFn := func(path string, fi os.FileInfo, err error) error {
-				if err != nil {
-					return nil
-				}
-
-				if !hidden && isHidden(path) {
-					if fi.IsDir() {
-						return filepath.SkipDir
-					}
-					return nil
-				}
-
-				if fileType == "d" && !fi.IsDir() {
-					return nil
-				}
-				if fileType == "f" && fi.IsDir() {
-					return nil
-				}
-
-				if hasGlobStar {
-					matched, _ := filepath.Match(pattern, path)
-					if matched {
-						results = append(results, path)
-					}
-					return nil
-				}
-
-				if fi.IsDir() {
-					return nil
-				}
-
-				base := fi.Name()
-				matched, _ := filepath.Match(pattern, base)
-				if matched {
-					results = append(results, path)
-				}
-				return nil
-			}
-
-			if maxDepth > 0 {
-				walkWithDepth(absRoot, 0, maxDepth, walkFn)
-			} else {
-				filepath.Walk(absRoot, walkFn)
-			}
-
-			sort.Strings(results)
-
-			if jsonOutput {
-				out, _ := json.MarshalIndent(map[string]interface{}{
-					"pattern": pattern,
-					"root":    root,
-					"files":   results,
-					"count":   len(results),
-				}, "", "  ")
-				fmt.Println(string(out))
-				return nil
-			}
-
-			if len(results) == 0 {
-				fmt.Println("(no files found)")
-				return nil
-			}
-
-			for _, f := range results {
-				rel, _ := filepath.Rel(absRoot, f)
-				fmt.Println(rel)
-			}
-
-			if len(results) > 1 {
-				fmt.Printf("\n%d files found\n", len(results))
-			}
+			outputFileResults(results, pattern, root)
 			return nil
 		},
 	}

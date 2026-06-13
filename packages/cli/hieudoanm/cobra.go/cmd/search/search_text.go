@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
-	"path/filepath"
 	"regexp"
 	"strings"
 
@@ -15,6 +14,68 @@ type textMatch struct {
 	File    string `json:"file"`
 	Line    int    `json:"line"`
 	Content string `json:"content"`
+}
+
+func includeToRegex(include string) *regexp.Regexp {
+	if include == "" {
+		return nil
+	}
+	globRe := strings.ReplaceAll(regexp.QuoteMeta(include), "\\*", ".*")
+	globRe = "^" + globRe + "$"
+	return regexp.MustCompile(globRe)
+}
+
+func searchTextInRoots(pattern string, searchRoots []string, re *regexp.Regexp, include *regexp.Regexp, maxDepth, maxCount int) ([]textMatch, error) {
+	var results []textMatch
+	seen := make(map[string]bool)
+
+	for _, root := range searchRoots {
+		info, err := os.Stat(root)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "error: %v\n", err)
+			continue
+		}
+
+		if !info.IsDir() {
+			matches := searchFileText(root, pattern, re, maxCount)
+			for _, m := range matches {
+				key := m.File + ":" + m.Content
+				if seen[key] {
+					continue
+				}
+				seen[key] = true
+				results = append(results, m)
+			}
+			continue
+		}
+
+		walkTextFile(re, root, maxDepth, include, &results, maxCount, seen)
+	}
+	return results, nil
+}
+
+func outputTextResults(results []textMatch, pattern string) {
+	if jsonOutput {
+		out, _ := json.MarshalIndent(map[string]interface{}{
+			"pattern": pattern,
+			"matches": len(results),
+			"results": results,
+		}, "", "  ")
+		fmt.Println(string(out))
+		return
+	}
+
+	if len(results) == 0 {
+		fmt.Println("(no matches)")
+		return
+	}
+
+	for _, m := range results {
+		fmt.Printf("%s:%d: %s\n", m.File, m.Line, m.Content)
+	}
+	if len(results) > 1 {
+		fmt.Printf("\n%d matches\n", len(results))
+	}
 }
 
 func newTextCmd() *cobra.Command {
@@ -37,10 +98,8 @@ Examples:
 		RunE: func(cmd *cobra.Command, args []string) error {
 			pattern := args[0]
 
-			var searchRoots []string
-			if len(args) > 1 {
-				searchRoots = args[1:]
-			} else {
+			searchRoots := args[1:]
+			if len(searchRoots) == 0 {
 				searchRoots = []string{"."}
 			}
 
@@ -54,62 +113,13 @@ Examples:
 				return fmt.Errorf("invalid regex %q: %w", pattern, err)
 			}
 
-			var includePattern *regexp.Regexp
-			if include != "" {
-				globRe := strings.ReplaceAll(regexp.QuoteMeta(include), "\\*", ".*")
-				globRe = "^" + globRe + "$"
-				includePattern, err = regexp.Compile(globRe)
-				if err != nil {
-					return fmt.Errorf("invalid include pattern %q: %w", include, err)
-				}
+			includePattern := includeToRegex(include)
+			results, err := searchTextInRoots(pattern, searchRoots, re, includePattern, maxDepth, maxCount)
+			if err != nil {
+				return err
 			}
 
-			var results []textMatch
-			seen := make(map[string]bool)
-
-			for _, root := range searchRoots {
-				info, err := os.Stat(root)
-				if err != nil {
-					fmt.Fprintf(os.Stderr, "error: %v\n", err)
-					continue
-				}
-
-				if !info.IsDir() {
-					matches := searchFileText(root, pattern, re, maxCount)
-					for _, m := range matches {
-						if seen[m.File+":"+m.Content] {
-							continue
-						}
-						seen[m.File+":"+m.Content] = true
-						results = append(results, m)
-					}
-					continue
-				}
-
-				walkTextFile(re, root, maxDepth, includePattern, &results, maxCount, seen)
-			}
-
-			if jsonOutput {
-				out, _ := json.MarshalIndent(map[string]interface{}{
-					"pattern": pattern,
-					"matches": len(results),
-					"results": results,
-				}, "", "  ")
-				fmt.Println(string(out))
-				return nil
-			}
-
-			if len(results) == 0 {
-				fmt.Println("(no matches)")
-				return nil
-			}
-
-			for _, m := range results {
-				fmt.Printf("%s:%d: %s\n", m.File, m.Line, m.Content)
-			}
-			if len(results) > 1 {
-				fmt.Printf("\n%d matches\n", len(results))
-			}
+			outputTextResults(results, pattern)
 			return nil
 		},
 	}
@@ -152,53 +162,4 @@ func searchFileText(path, pattern string, re *regexp.Regexp, maxCount int) []tex
 		}
 	}
 	return matches
-}
-
-func walkTextFile(re *regexp.Regexp, root string, maxDepth int, include *regexp.Regexp, results *[]textMatch, maxCount int, seen map[string]bool) {
-	if maxDepth > 0 {
-		walkWithDepth(root, 0, maxDepth, func(path string, fi os.FileInfo, err error) error {
-			if err != nil || fi.IsDir() {
-				return nil
-			}
-			if include != nil && !include.MatchString(fi.Name()) {
-				return nil
-			}
-			matches := searchFileText(path, "", re, maxCount)
-			for _, m := range matches {
-				key := m.File + ":" + m.Content
-				if seen[key] {
-					continue
-				}
-				seen[key] = true
-				*results = append(*results, m)
-				if maxCount > 0 && len(*results) >= maxCount {
-					return fmt.Errorf("done")
-				}
-			}
-			return nil
-		})
-		return
-	}
-
-	filepath.Walk(root, func(path string, fi os.FileInfo, err error) error {
-		if err != nil || fi.IsDir() {
-			return nil
-		}
-		if include != nil && !include.MatchString(fi.Name()) {
-			return nil
-		}
-		matches := searchFileText(path, "", re, maxCount)
-		for _, m := range matches {
-			key := m.File + ":" + m.Content
-			if seen[key] {
-				continue
-			}
-			seen[key] = true
-			*results = append(*results, m)
-			if maxCount > 0 && len(*results) >= maxCount {
-				return fmt.Errorf("done")
-			}
-		}
-		return nil
-	})
 }

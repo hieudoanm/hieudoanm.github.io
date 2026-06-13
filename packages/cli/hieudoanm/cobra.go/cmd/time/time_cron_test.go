@@ -114,19 +114,16 @@ func TestCronZeropadNonNumeric(t *testing.T) {
 func TestCronNextRuns(t *testing.T) {
 	expr := "* * * * *"
 	until := time.Now().Add(5 * time.Minute).Truncate(time.Minute)
-	runs, err := cronNextRuns(expr, 3, until)
-	if err != nil {
-		t.Fatalf("unexpected error: %v", err)
-	}
+	runs := cronNextRuns(expr, 3, until)
 	if len(runs) != 3 {
 		t.Errorf("expected 3 runs, got %d", len(runs))
 	}
 }
 
 func TestCronNextRunsInvalid(t *testing.T) {
-	_, err := cronNextRuns("*/15 * *", 5, time.Now().Add(time.Hour))
-	if err == nil {
-		t.Error("expected error for invalid expression")
+	runs := cronNextRuns("*/15 * *", 5, time.Now().Add(time.Hour))
+	if runs != nil {
+		t.Error("expected nil for invalid expression")
 	}
 }
 

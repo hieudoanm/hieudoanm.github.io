@@ -1,7 +1,6 @@
 package web
 
 import (
-	"encoding/json"
 	"fmt"
 	"net/http"
 	"net/url"
@@ -10,7 +9,6 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/hieudoanm/hieudoanm/libs/colors"
 	"github.com/hieudoanm/hieudoanm/libs/requests"
 	"github.com/spf13/cobra"
 )
@@ -49,7 +47,6 @@ func fetchIGPage(shortcode string, useProxy bool) (string, error) {
 	if err != nil {
 		return "", err
 	}
-
 	return string(body), nil
 }
 
@@ -86,7 +83,6 @@ func downloadIGFile(rawURL, filename, outDir string) (string, error) {
 	if err := os.WriteFile(path, body, 0644); err != nil {
 		return "", err
 	}
-
 	return path, nil
 }
 
@@ -96,119 +92,6 @@ func newInstagramCmd() *cobra.Command {
 		Short: "Instagram related tools",
 		Long:  `Instagram related tools like downloading images and reels.`,
 	}
-
 	cmd.AddCommand(newIGDownloadCmd())
-
-	return cmd
-}
-
-func newIGDownloadCmd() *cobra.Command {
-	var igJSON bool
-	cmd := &cobra.Command{
-		Use:   "download [url]",
-		Short: "Download images from Instagram",
-		Long: `Download images from an Instagram post, reel, or video.
-Supports carousels and specific image selection via --index.
-
-Example:
-  devtools instagram download https://www.instagram.com/p/CLI7qRNhI_o/
-  devtools instagram download CLI7qRNhI_o --index 1`,
-		Args: cobra.ExactArgs(1),
-		RunE: func(cmd *cobra.Command, args []string) error {
-			input := args[0]
-			outputDir, _ := cmd.Flags().GetString("output")
-			imgIndex, _ := cmd.Flags().GetInt("index")
-			useProxy, _ := cmd.Flags().GetBool("proxy")
-
-			shortcode, err := extractShortcode(input)
-			if err != nil {
-				return err
-			}
-
-			if igJSON {
-				html, err := fetchIGPage(shortcode, useProxy)
-				if err != nil && !useProxy {
-					html, err = fetchIGPage(shortcode, true)
-				}
-				if err != nil {
-					return err
-				}
-				imageURLs := scrapeIGImages(html)
-				out, _ := json.MarshalIndent(map[string]interface{}{
-					"shortcode":  shortcode,
-					"image_urls": imageURLs,
-					"count":      len(imageURLs),
-				}, "", "  ")
-				fmt.Println(string(out))
-				return nil
-			}
-
-			fmt.Printf("Shortcode: %s\n", colors.Cyan(shortcode))
-			fmt.Print("Fetching page content... ")
-
-			html, err := fetchIGPage(shortcode, useProxy)
-			if err != nil {
-				if !useProxy {
-					fmt.Printf(colors.Yellow("direct failed (%v), trying proxy... "), err)
-					html, err = fetchIGPage(shortcode, true)
-				}
-			}
-
-			if err != nil {
-				fmt.Println(colors.Red("failed"))
-				return err
-			}
-			fmt.Println(colors.Green("done"))
-
-			imageURLs := scrapeIGImages(html)
-			if len(imageURLs) == 0 {
-				return fmt.Errorf("no images found in post %s", shortcode)
-			}
-
-			if imgIndex > 0 {
-				if imgIndex > len(imageURLs) {
-					return fmt.Errorf("index %d out of range (found %d images)", imgIndex, len(imageURLs))
-				}
-				imageURLs = []string{imageURLs[imgIndex-1]}
-				fmt.Printf("Selected image index %d\n", imgIndex)
-			} else {
-				fmt.Printf("Found %d image candidates\n", len(imageURLs))
-			}
-
-			if outputDir == "" {
-				outputDir = "."
-			}
-			if err := os.MkdirAll(outputDir, 0o755); err != nil {
-				return fmt.Errorf("create output dir: %w", err)
-			}
-
-			downloaded := 0
-			for i, u := range imageURLs {
-				filename := fmt.Sprintf("%s_%d.jpg", shortcode, i+1)
-				if len(imageURLs) == 1 && imgIndex > 0 {
-					filename = fmt.Sprintf("%s_%d.jpg", shortcode, imgIndex)
-				} else if len(imageURLs) == 1 {
-					filename = fmt.Sprintf("%s.jpg", shortcode)
-				}
-
-				fmt.Printf("  Downloading %s ... ", filename)
-				path, err := downloadIGFile(u, filename, outputDir)
-				if err != nil {
-					fmt.Printf(colors.Red("failed: %v\n"), err)
-					continue
-				}
-				fmt.Println(colors.Green("saved → ") + path)
-				downloaded++
-			}
-
-			fmt.Printf("\nDone. %d image(s) saved to %s\n", downloaded, outputDir)
-			return nil
-		},
-	}
-
-	cmd.Flags().StringP("output", "o", ".", "Output directory")
-	cmd.Flags().IntP("index", "i", 0, "Specific image index to download (1-based)")
-	cmd.Flags().BoolP("proxy", "p", false, "Use proxy to fetch content")
-	cmd.Flags().BoolVar(&igJSON, "json", false, "Output in JSON format")
 	return cmd
 }
