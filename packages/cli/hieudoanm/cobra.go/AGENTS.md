@@ -12,7 +12,7 @@ Go CLI toolbox using `github.com/spf13/cobra`. Root command is `hieudoanm`, wire
 
 ### Naming
 
-- Root command file: `cmd_{module}.go` (contains `func NewCommand()`)
+- Root command file: `cmd_{module}_root.go` (contains `func NewCommand()`)
 - Subcommand files: `cmd_{module}_{subcommand}.go` (contain `func newXxxCmd()`, one per file)
 - Service/helper files: `service_{topic}.go` (pure logic, no cobra commands)
 - TUI files: `tui_{topic}.go` (bubbletea TUI model/view/update)
