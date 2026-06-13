@@ -5,6 +5,7 @@ import (
 	"log"
 	"os"
 	"strings"
+	"time"
 
 	markdown "github.com/MichaelMure/go-term-markdown"
 	"github.com/hieudoanm/api/core/gemini.google.com"
@@ -40,6 +41,12 @@ type codeModel struct {
 
 	input textarea.Model
 	spin  spinner.Model
+
+	waitingPrefix  bool
+	tokenCount     int
+	showCommands   bool
+	thoughtStart   time.Time
+	thoughtSeconds float64
 }
 
 type codeResultMsg struct {
@@ -65,21 +72,23 @@ func codeInitialModel() codeModel {
 	ti.Placeholder = "Ask Gemini... (@ for files, ! for shell commands)"
 	ti.Focus()
 	ti.CharLimit = 5000
+	ti.ShowLineNumbers = false
+	ti.Prompt = ""
 	ti.SetHeight(1)
 
 	s := ti.Styles()
-	s.Focused.Base = lipgloss.NewStyle().Background(lipgloss.Color("0"))
-	s.Focused.Text = lipgloss.NewStyle().Background(lipgloss.Color("0"))
-	s.Focused.CursorLine = lipgloss.NewStyle().Background(lipgloss.Color("0"))
-	s.Focused.Placeholder = lipgloss.NewStyle().Background(lipgloss.Color("0"))
-	s.Focused.Prompt = lipgloss.NewStyle().Background(lipgloss.Color("0"))
-	s.Focused.LineNumber = lipgloss.NewStyle().Background(lipgloss.Color("0"))
-	s.Focused.CursorLineNumber = lipgloss.NewStyle().Background(lipgloss.Color("0"))
-	s.Focused.EndOfBuffer = lipgloss.NewStyle().Background(lipgloss.Color("0"))
+	s.Focused.Base = lipgloss.NewStyle().Background(codeBg)
+	s.Focused.Text = lipgloss.NewStyle().Background(codeBg)
+	s.Focused.CursorLine = lipgloss.NewStyle().Background(codeBg)
+	s.Focused.Placeholder = lipgloss.NewStyle().Background(codeBg)
+	s.Focused.Prompt = lipgloss.NewStyle().Background(codeBg).Foreground(codeBg)
+	s.Focused.LineNumber = lipgloss.NewStyle().Background(codeBg)
+	s.Focused.CursorLineNumber = lipgloss.NewStyle().Background(codeBg)
+	s.Focused.EndOfBuffer = lipgloss.NewStyle().Background(codeBg)
 	ti.SetStyles(s)
 
 	vp := viewport.New(
-		viewport.WithWidth(80),
+		viewport.WithWidth(120),
 		viewport.WithHeight(10),
 	)
 
@@ -91,7 +100,7 @@ func codeInitialModel() codeModel {
 		input:   ti,
 		history: vp,
 		spin:    sp,
-		width:   80,
+		width:   120,
 		height:  24,
 	}
 	m.refresh()
@@ -104,35 +113,38 @@ func (m codeModel) Init() tea.Cmd {
 
 func (m *codeModel) refresh() {
 	var buf strings.Builder
-	for i, msg := range m.display {
-		if i > 0 {
-			buf.WriteString("\n")
-		}
-		buf.WriteString(formatMessage(msg))
+	for _, msg := range m.display {
+		buf.WriteString(m.formatMessage(msg))
+		buf.WriteString("\n\n")
+	}
+	if m.state == codeStateLoading {
+		thinkingStyle := lipgloss.NewStyle().Foreground(lipgloss.Color("220"))
+		buf.WriteString("  " + thinkingStyle.Render(m.spin.View()+" thinking..."))
 	}
 	m.history.SetContent(buf.String())
 	m.history.GotoBottom()
 }
 
-func formatMessage(msg chatMessage) string {
-	var roleLabel string
+func (m *codeModel) formatMessage(msg chatMessage) string {
+	if msg.role == "thought" {
+		return "  " + msg.content
+	}
+	var borderColor = dimColor
 	switch msg.role {
 	case "user":
-		roleLabel = labelUser("USER")
+		borderColor = lipgloss.Color("39")
 	case "assistant":
-		roleLabel = labelAsst("ASSISTANT")
+		borderColor = greenClr
 	case "error":
-		roleLabel = labelErr("ERROR")
-	default:
-		roleLabel = dimText(msg.role)
+		borderColor = lipgloss.Color("196")
 	}
-	inner := roleLabel + "\n" + bodyStyle.Render(msg.content)
 	box := lipgloss.NewStyle().
 		Background(codeBg).
-		Border(lipgloss.RoundedBorder()).
-		BorderForeground(lipgloss.Color("236")).
-		Padding(0, 2)
-	return box.Render(inner)
+		Padding(1, 1, 1, 2).
+		Border(lipgloss.ThickBorder(), false, false, false, true).
+		BorderForeground(borderColor).
+		Width(m.width)
+	return box.Render(bodyStyle.Render(msg.content))
 }
 
 func formatCodeBlock(lang, filename, code string) string {
@@ -152,7 +164,7 @@ func formatCodeBlock(lang, filename, code string) string {
 }
 
 func (m *codeModel) appendMessage(role, content string) {
-	rendered := renderContent(content, m.width-6)
+	rendered := renderContent(content, m.width-4)
 	m.display = append(m.display, chatMessage{role: role, content: rendered})
 	m.refresh()
 }
@@ -204,7 +216,8 @@ func renderContent(content string, width int) string {
 	}
 
 	text := strings.Join(blocks, "\n")
-	rendered := string(markdown.Render(text, width, 6))
+	rendered := string(markdown.Render(text, width, 0))
+	rendered = strings.ReplaceAll(rendered, "\x1b[0m", "\x1b[0;38;5;250;48;5;233m")
 	return strings.TrimRight(rendered, "\n")
 }
 
@@ -243,12 +256,24 @@ func (m codeModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		m.width = msg.Width
 		m.height = msg.Height
 		m.history.SetWidth(msg.Width)
-		m.history.SetHeight(msg.Height - 14)
-		m.input.SetWidth(msg.Width - 20)
+		m.updateViewHeight(msg.Height)
+		m.input.SetWidth(msg.Width - 4)
 		return m, nil
 	case tea.KeyMsg:
 		switch m.state {
 		case codeStateChat:
+			if m.waitingPrefix {
+				m.waitingPrefix = false
+				switch msg.String() {
+				case "q":
+					return m, tea.Quit
+				case "?":
+					m.appendMessage("assistant", "Available commands:\n\n- /help  — Show help\n- /new   — Clear conversation\n- /undo  — Remove last exchange\n- /exit  — Quit\n\nKeys: enter to send, ctrl+x ? for help, ctrl+x q / esc / ctrl+c to quit")
+					return m, nil
+				default:
+					return m, nil
+				}
+			}
 			switch msg.String() {
 			case "enter":
 				text := strings.TrimSpace(m.input.Value())
@@ -263,10 +288,15 @@ func (m codeModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 				m.appendUserMessage(text)
 				m.input.Reset()
 				m.state = codeStateLoading
+				m.thoughtStart = time.Now()
+				m.thoughtSeconds = 0
 				return m, tea.Batch(
 					m.spin.Tick,
 					sendToGemini(gemini.Model25Flash, m.messages),
 				)
+			case "ctrl+x":
+				m.waitingPrefix = true
+				return m, nil
 			case "esc", "ctrl+c":
 				return m, tea.Quit
 			}
@@ -284,6 +314,8 @@ func (m codeModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		var cmd tea.Cmd
 		m.input, cmd = m.input.Update(msg)
 		cmds = append(cmds, cmd)
+		m.showCommands = strings.HasPrefix(m.input.Value(), "/")
+		m.updateViewHeight(m.height)
 		m.history, cmd = m.history.Update(msg)
 		cmds = append(cmds, cmd)
 		return m, tea.Batch(cmds...)
@@ -292,8 +324,12 @@ func (m codeModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		switch msg := msg.(type) {
 		case codeResultMsg:
 			if msg.err != nil {
-				m.appendMessage("error", msg.err.Error())
 				m.state = codeStateChat
+				m.thoughtSeconds = time.Since(m.thoughtStart).Seconds()
+				thinkingStyle := lipgloss.NewStyle().Foreground(lipgloss.Color("220"))
+				thoughtMsg := chatMessage{role: "thought", content: thinkingStyle.Render(fmt.Sprintf("+ Thought: %.1f s", m.thoughtSeconds))}
+				m.display = append(m.display, thoughtMsg)
+				m.appendMessage("error", msg.err.Error())
 				return m, nil
 			}
 			content := msg.response.Candidates[0].Content.Parts[0].Text
@@ -301,23 +337,39 @@ func (m codeModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 				Role:  gemini.RoleModel,
 				Parts: []gemini.Part{{Text: content}},
 			})
-			m.appendMessage("assistant", content)
 			m.state = codeStateChat
+			m.thoughtSeconds = time.Since(m.thoughtStart).Seconds()
+			m.tokenCount = msg.response.UsageMetadata.TotalTokenCount
+			thinkingStyle := lipgloss.NewStyle().Foreground(lipgloss.Color("220"))
+			thoughtMsg := chatMessage{role: "thought", content: thinkingStyle.Render(fmt.Sprintf("+ Thought: %.1f s", m.thoughtSeconds))}
+			m.display = append(m.display, thoughtMsg)
+			m.appendMessage("assistant", content)
 			return m, nil
 		}
 
 		var cmd tea.Cmd
 		m.spin, cmd = m.spin.Update(msg)
-		return m, cmd
+		m.refresh()
+		var vpcmd tea.Cmd
+		m.history, vpcmd = m.history.Update(msg)
+		return m, tea.Batch(cmd, vpcmd)
 	}
 
 	return m, nil
 }
 
+func (m *codeModel) updateViewHeight(height int) {
+	overhead := 7
+	if m.showCommands {
+		overhead = 11
+	}
+	m.history.SetHeight(height - overhead)
+}
+
 func (m *codeModel) handleSlash(cmd string) {
 	switch cmd {
 	case "/help":
-		m.appendMessage("assistant", "Slash commands:\n  /help  - Show this help\n  /new   - Clear conversation\n  /undo  - Remove last exchange\n  /exit  - Quit")
+		m.appendMessage("assistant", "Slash commands:\n- /help  — Show help\n- /new   — Clear conversation\n- /undo  — Remove last exchange\n- /exit  — Quit")
 	case "/new":
 		m.messages = nil
 		m.display = nil
@@ -338,69 +390,46 @@ func (m *codeModel) handleSlash(cmd string) {
 }
 
 func (m codeModel) View() tea.View {
-	titleBg := lipgloss.NewStyle().Background(lipgloss.Color("234"))
-	var titlebar string
-	{
-		red := lipgloss.NewStyle().Foreground(lipgloss.Color("196")).Render("●")
-		yel := lipgloss.NewStyle().Foreground(lipgloss.Color("220")).Render("●")
-		grn := lipgloss.NewStyle().Foreground(lipgloss.Color("42")).Render("●")
-		dots := red + " " + yel + " " + grn
+	body := m.history.View()
 
-		title := lipgloss.NewStyle().Foreground(dimColor).Render("opencode — gemini-2.5-flash")
-		right := dimText("ctrl+x ?  help")
-		bar := "  " + dots + "   " + title + "  "
-		bar = titleBg.Render(bar)
-		barWidth := m.width - lipgloss.Width(bar) - lipgloss.Width(right) - 4
-		if barWidth < 0 {
-			barWidth = 0
-		}
-		titlebar = bar + dimText(strings.Repeat(" ", barWidth)) + "  " + right
-	}
-
-	chatHeader := dimText("current session  ·  ") + dimText(fmt.Sprintf("%d messages", len(m.display)))
-
-	var body string
-	switch m.state {
-	case codeStateLoading:
-		body = "  " + dimText(m.spin.View()+" thinking...")
-	default:
-		body = m.history.View()
-	}
-
-	rowContent := lipgloss.NewStyle().Foreground(purpleClr).Bold(true).PaddingLeft(2).Render(">") + " " + m.input.View()
-	rowWidth := lipgloss.Width(rowContent)
-	if rowWidth < m.width {
-		rowContent += strings.Repeat(" ", m.width-rowWidth)
-	}
-	promptRow := lipgloss.NewStyle().Background(lipgloss.Color("0")).Render(rowContent)
-	keyHint := dimText("ctrl+j")
-	sendStyle := lipgloss.NewStyle().Background(purpleClr).Foreground(lipgloss.Color("0")).Padding(0, 1).Render(" send ")
-
+	inputLine := m.input.View()
+	modelName := dimText("Gemini Flash 2.5 (gemini-2.5-flash)")
+	promptRow := lipgloss.NewStyle().
+		Background(codeBg).
+		Padding(1, 1, 1, 2).
+		Border(lipgloss.ThickBorder(), false, false, false, true).
+		BorderForeground(purpleClr).
+		Width(m.width).
+		Render(inputLine + "\n\n" + modelName)
+	chatHeader := dimText(fmt.Sprintf("%d messages", len(m.display)))
 	statusConnected := lipgloss.NewStyle().Foreground(greenClr).Render("●") + dimText(" connected")
-	cwd := dimText(osGetCwd())
-	exitHint := dimText("ctrl+x q to exit  ·  ctrl+x ? for help")
+	exitKey := dimText("ctrl+x q to exit")
+	helpKey := dimText("ctrl+x ? for help")
 
-	return tea.NewView(fmt.Sprintf(
-		"%s\n  %s\n\n%s\n\n  %s\n  %s  %s\n\n  %s  %s  %s   %s",
-		titlebar,
-		chatHeader,
+	statusLine := fmt.Sprintf("%s  ·  %s  ·  %s  ·  %s  ·  %s",
+		statusConnected, dimText(fmt.Sprintf("%d tokens", m.tokenCount)), chatHeader, exitKey, helpKey)
+
+	var commands string
+	if strings.HasPrefix(m.input.Value(), "/") {
+		cmdStyle := lipgloss.NewStyle().Background(codeBg).Padding(1, 1, 0, 2).Width(m.width)
+		commands = cmdStyle.Render(
+			dimText("/help  ")+"Show help"+"\n"+
+				dimText("/new   ")+"Clear conversation"+"\n"+
+				dimText("/undo  ")+"Remove last exchange"+"\n"+
+				dimText("/exit  ")+"Quit",
+		) + "\n"
+	}
+
+	v := tea.NewView(fmt.Sprintf(
+		"%s\n\n%s%s\n\n%s",
 		body,
-		"  "+dimText("/help")+"  "+dimText("/new")+"  "+dimText("/undo")+"  "+dimText("/exit"),
-		promptRow, keyHint+"  "+sendStyle,
-		statusConnected, cwd, dimText("0 tokens"), exitHint,
+		commands,
+		promptRow,
+		statusLine,
 	))
-}
-
-func osGetCwd() string {
-	wd, err := os.Getwd()
-	if err != nil {
-		return "?"
-	}
-	home, _ := os.UserHomeDir()
-	if strings.HasPrefix(wd, home) {
-		return "~" + strings.TrimPrefix(wd, home)
-	}
-	return wd
+	v.AltScreen = true
+	v.MouseMode = tea.MouseModeCellMotion
+	return v
 }
 
 var geminiCodeCmd = &cobra.Command{

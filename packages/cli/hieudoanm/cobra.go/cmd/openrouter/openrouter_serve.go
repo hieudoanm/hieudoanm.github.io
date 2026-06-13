@@ -7,7 +7,6 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/hieudoanm/hieudoanm/cmd/openrouter/chat"
 	"github.com/spf13/cobra"
 )
 
@@ -61,7 +60,7 @@ func serveChat(w http.ResponseWriter, r *http.Request) {
 		req.Model = "openai/gpt-oss-20b"
 	}
 
-	output, err := chat.Generate(req.Model, req.Prompt)
+	output, err := Generate(req.Model, req.Prompt)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
 		json.NewEncoder(w).Encode(errorResponse{Error: err.Error()})
