@@ -11,11 +11,12 @@ func NewCommand() *cobra.Command {
 		Use:   "openapi",
 		Short: "OpenAPI related tools",
 		Long:  `Tools for interacting with and managing OpenAPI specifications.`,
-		Run: func(cmd *cobra.Command, args []string) {
+		RunE: func(cmd *cobra.Command, args []string) error {
 			fmt.Println("openapi called")
+			return nil
 		},
 	}
 
-	cmd.AddCommand(NewPostmanCommand())
+	cmd.AddCommand(newPostmanCmd())
 	return cmd
 }

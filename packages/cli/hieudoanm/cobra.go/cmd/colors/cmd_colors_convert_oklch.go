@@ -14,7 +14,7 @@ var colorsConvertOklchCmd = &cobra.Command{
 	Long: `The oklch command is a specific utility to execute operations related to oklch within the colors application.
 
 As a component of the design tools, this command empowers you to interact directly with colors's oklch features via the CLI.`,
-	Run: func(cmd *cobra.Command, args []string) {
+	RunE: func(cmd *cobra.Command, args []string) error {
 		// Prompt for OKLCH input
 		var L, C, H float64
 		fmt.Print("Lightness (0–1) : ")
@@ -30,7 +30,7 @@ As a component of the design tools, this command empowers you to interact direct
 		r, g, b, err := oklch.ToRGB()
 		if err != nil {
 			fmt.Println("Error (RGB)  :", err)
-			return
+			return nil
 		}
 		rgb := RGB{R: r, G: g, B: b}
 
@@ -38,14 +38,14 @@ As a component of the design tools, this command empowers you to interact direct
 		hex, err := rgb.ToHex()
 		if err != nil {
 			fmt.Println("Error (HEX)  :", err)
-			return
+			return nil
 		}
 		fmt.Printf("HEX    : %s\n", hex)
 
 		// RGB → RGB
 		if !rgb.IsValid() {
 			fmt.Println("Error (RGB)  : invalid RGB values")
-			return
+			return nil
 		}
 		fmt.Printf("RGB    : rgb(%d, %d, %d)\n", r, g, b)
 
@@ -53,7 +53,7 @@ As a component of the design tools, this command empowers you to interact direct
 		hHSL, sHSL, lHSL, err := rgb.ToHSL()
 		if err != nil {
 			fmt.Println("Error (HSL)  :", err)
-			return
+			return nil
 		}
 		fmt.Printf("HSL    : h=%.2f°, s=%.2f%%, l=%.2f%%\n", hHSL, sHSL, lHSL)
 
@@ -61,7 +61,7 @@ As a component of the design tools, this command empowers you to interact direct
 		hHCL, cHCL, lHCL, err := rgb.ToHCL()
 		if err != nil {
 			fmt.Println("Error (HCL)  :", err)
-			return
+			return nil
 		}
 		fmt.Printf("HCL    : h=%.2f°, c=%.2f, l=%.2f\n", hHCL, cHCL, lHCL)
 
@@ -80,5 +80,7 @@ As a component of the design tools, this command empowers you to interact direct
 		} else {
 			fmt.Printf("CMYK   : C=%.3f, M=%.3f, Y=%.3f, K=%.3f\n", Cy, M, Y, K)
 		}
+
+		return nil
 	},
 }

@@ -9,15 +9,15 @@ import (
 
 var V = "dev"
 
-var versionJSON bool
+var jsonOutput bool
 
 func NewCommand() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "version",
 		Short: "Print the application version",
 		Long:  `Print the version number of the application.`,
-		Run: func(cmd *cobra.Command, args []string) {
-			if versionJSON {
+		RunE: func(cmd *cobra.Command, args []string) error {
+			if jsonOutput {
 				out, _ := json.MarshalIndent(map[string]interface{}{
 					"version": V,
 				}, "", "  ")
@@ -25,8 +25,9 @@ func NewCommand() *cobra.Command {
 			} else {
 				cmd.Printf("Version: %s\n", V)
 			}
+			return nil
 		},
 	}
-	cmd.Flags().BoolVar(&versionJSON, "json", false, "Output in JSON format")
+	cmd.Flags().BoolVar(&jsonOutput, "json", false, "Output in JSON format")
 	return cmd
 }

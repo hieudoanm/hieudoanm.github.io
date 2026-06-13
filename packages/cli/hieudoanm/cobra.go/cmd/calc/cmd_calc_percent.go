@@ -21,7 +21,7 @@ func newPercentCmd() *cobra.Command {
 			switch {
 			case of != 0:
 				pct := value / of * 100
-				if calcJSON {
+				if jsonOutput {
 					out, _ := json.MarshalIndent(map[string]interface{}{
 						"value":      value,
 						"of":         of,
@@ -34,7 +34,7 @@ func newPercentCmd() *cobra.Command {
 				}
 			case plus != 0:
 				result := value * (1 + plus/100)
-				if calcJSON {
+				if jsonOutput {
 					out, _ := json.MarshalIndent(map[string]interface{}{
 						"value":  value,
 						"change": plus,
@@ -47,7 +47,7 @@ func newPercentCmd() *cobra.Command {
 				}
 			case minus != 0:
 				result := value * (1 - minus/100)
-				if calcJSON {
+				if jsonOutput {
 					out, _ := json.MarshalIndent(map[string]interface{}{
 						"value":  value,
 						"change": minus,

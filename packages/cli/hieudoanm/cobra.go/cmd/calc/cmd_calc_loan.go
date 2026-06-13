@@ -23,7 +23,7 @@ func newLoanCmd() *cobra.Command {
 
 			r := rate / 100.0 / 12
 
-			if calcJSON {
+			if jsonOutput {
 				type monthRow struct {
 					Month    int     `json:"month"`
 					Payment  float64 `json:"payment"`

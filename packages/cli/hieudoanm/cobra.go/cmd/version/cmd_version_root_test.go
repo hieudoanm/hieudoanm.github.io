@@ -27,7 +27,9 @@ func TestVersionOutput(t *testing.T) {
 	var buf bytes.Buffer
 	cmd.SetOut(&buf)
 
-	cmd.Run(cmd, []string{})
+	if err := cmd.RunE(cmd, []string{}); err != nil {
+		t.Fatal(err)
+	}
 	if buf.String() != "Version: 1.2.3\n" {
 		t.Errorf("output = %q", buf.String())
 	}
@@ -42,7 +44,9 @@ func TestVersionJSONOutput(t *testing.T) {
 	os.Stdout = w
 
 	cmd.Flags().Set("json", "true")
-	cmd.Run(cmd, []string{})
+	if err := cmd.RunE(cmd, []string{}); err != nil {
+		t.Fatal(err)
+	}
 
 	w.Close()
 	os.Stdout = old

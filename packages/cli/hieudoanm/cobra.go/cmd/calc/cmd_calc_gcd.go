@@ -20,7 +20,7 @@ func newGcdCmd() *cobra.Command {
 				return err
 			}
 			result := gcd(a, b)
-			if calcJSON {
+			if jsonOutput {
 				b, _ := json.MarshalIndent(map[string]interface{}{
 					"a":   a,
 					"b":   b,

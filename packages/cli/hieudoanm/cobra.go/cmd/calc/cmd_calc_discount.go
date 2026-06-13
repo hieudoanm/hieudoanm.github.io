@@ -19,7 +19,7 @@ func newDiscountCmd() *cobra.Command {
 			discount := original * percent / 100
 			final := original - discount
 
-			if calcJSON {
+			if jsonOutput {
 				out, _ := json.MarshalIndent(map[string]interface{}{
 					"original":    original,
 					"percent":     percent,

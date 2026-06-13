@@ -293,7 +293,7 @@ func convertToPostman(spec JSON) (JSON, error) {
 	}, nil
 }
 
-func NewPostmanCommand() *cobra.Command {
+func newPostmanCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "openapi2postman",
 		Short: "Convert OpenAPI to Postman collection",

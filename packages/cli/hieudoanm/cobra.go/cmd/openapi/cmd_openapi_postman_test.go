@@ -223,9 +223,9 @@ func TestConvertToPostman(t *testing.T) {
 }
 
 func TestNewPostmanCommand(t *testing.T) {
-	cmd := NewPostmanCommand()
+	cmd := newPostmanCmd()
 	if cmd == nil {
-		t.Fatal("NewPostmanCommand() returned nil")
+		t.Fatal("newPostmanCmd() returned nil")
 	}
 	if cmd.Use != "openapi2postman" {
 		t.Errorf("Use = %q", cmd.Use)

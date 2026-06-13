@@ -14,7 +14,7 @@ var colorsConvertHexCmd = &cobra.Command{
 	Long: `The hex command is a specific utility to execute operations related to hex within the colors application.
 
 As a component of the design tools, this command empowers you to interact directly with colors's hex features via the CLI.`,
-	Run: func(cmd *cobra.Command, args []string) {
+	RunE: func(cmd *cobra.Command, args []string) error {
 		// Prompt for HEX input
 		fmt.Print("HEX: ")
 		var hexInput string
@@ -26,7 +26,7 @@ As a component of the design tools, this command empowers you to interact direct
 		r, g, b, err := hex.ToRGB()
 		if err != nil {
 			fmt.Println("Error (RGB)  :", err)
-			return
+			return nil
 		}
 		fmt.Printf("RGB    : rgb(%d, %d, %d)\n", r, g, b)
 
@@ -61,5 +61,7 @@ As a component of the design tools, this command empowers you to interact direct
 		} else {
 			fmt.Printf("CMYK   : C=%.3f, M=%.3f, Y=%.3f, K=%.3f\n", C, M, Y, K)
 		}
+
+		return nil
 	},
 }

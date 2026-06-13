@@ -24,7 +24,7 @@ func newTipCmd() *cobra.Command {
 			total := bill + tip
 			perPerson := total / float64(split)
 
-			if calcJSON {
+			if jsonOutput {
 				out, _ := json.MarshalIndent(map[string]interface{}{
 					"bill":        bill,
 					"tip_percent": tipPercent,

@@ -42,7 +42,7 @@ func newBaseCmd() *cobra.Command {
 			result := strconv.FormatInt(n, toBase)
 			baseNames := map[int]string{2: "binary", 8: "octal", 10: "decimal", 16: "hexadecimal"}
 
-			if calcJSON {
+			if jsonOutput {
 				out, _ := json.MarshalIndent(map[string]interface{}{
 					"value":  value,
 					"from":   baseNames[fromBase],

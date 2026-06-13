@@ -10,7 +10,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var semverJSON bool
+var jsonOutput bool
 
 type version struct {
 	major, minor, patch int
@@ -116,7 +116,7 @@ func NewCommand() *cobra.Command {
 				if prerelease != "" {
 					result.prerelease = prerelease
 				}
-				if semverJSON {
+				if jsonOutput {
 					out, _ := json.MarshalIndent(map[string]interface{}{
 						"input":      args[0],
 						"result":     result.String(),
@@ -142,7 +142,7 @@ func NewCommand() *cobra.Command {
 				if err != nil {
 					return err
 				}
-				if semverJSON {
+				if jsonOutput {
 					out, _ := json.MarshalIndent(map[string]interface{}{
 						"version": args[0],
 						"range":   rangeExpr,
@@ -168,7 +168,7 @@ func NewCommand() *cobra.Command {
 
 			switch action {
 			case "validate":
-				if semverJSON {
+				if jsonOutput {
 					results := make([]map[string]interface{}, 0)
 					for _, s := range versions {
 						_, err := parseVersion(s)
@@ -217,7 +217,7 @@ func NewCommand() *cobra.Command {
 				default:
 					rel = "=="
 				}
-				if semverJSON {
+				if jsonOutput {
 					out, _ := json.MarshalIndent(map[string]interface{}{
 						"a":        a.String(),
 						"b":        b.String(),
@@ -240,7 +240,7 @@ func NewCommand() *cobra.Command {
 				sort.Slice(parsed, func(i, j int) bool {
 					return parsed[i].compare(parsed[j]) < 0
 				})
-				if semverJSON {
+				if jsonOutput {
 					sorted := make([]string, len(parsed))
 					for i, v := range parsed {
 						sorted[i] = v.String()
@@ -259,7 +259,7 @@ func NewCommand() *cobra.Command {
 				if _, err := parseVersion(action); err == nil && len(versions) >= 0 {
 					v, _ := parseVersion(action)
 					result := v.bump(bumpPart)
-					if semverJSON {
+					if jsonOutput {
 						out, _ := json.MarshalIndent(map[string]interface{}{
 							"input":  action,
 							"result": result.String(),
@@ -280,7 +280,7 @@ func NewCommand() *cobra.Command {
 	cmd.Flags().StringVar(&bumpPart, "bump", "", "Bump version part: major, minor, patch")
 	cmd.Flags().StringVar(&prerelease, "prerelease", "", "Set prerelease label after bump")
 	cmd.Flags().StringVar(&rangeExpr, "range", "", "Check if version matches a range (e.g. '>=1.0.0 <2.0.0')")
-	cmd.Flags().BoolVar(&semverJSON, "json", false, "Output in JSON format")
+	cmd.Flags().BoolVar(&jsonOutput, "json", false, "Output in JSON format")
 	return cmd
 }
 

@@ -3,7 +3,6 @@ package net
 import (
 	"encoding/json"
 	"fmt"
-	"os"
 
 	"charm.land/bubbles/v2/spinner"
 	tea "charm.land/bubbletea/v2"
@@ -51,8 +50,7 @@ func newStatusCmd() *cobra.Command {
 			}
 
 			if _, err := tea.NewProgram(m).Run(); err != nil {
-				fmt.Println("Error running TUI:", err)
-				os.Exit(1)
+				return fmt.Errorf("error running TUI: %w", err)
 			}
 			return nil
 		},

@@ -18,7 +18,7 @@ var colorsPaletteCmd = &cobra.Command{
 	Long: `The palette command is a specific utility to execute operations related to palette within the colors application.
 
 As a component of the design tools, this command empowers you to interact directly with colors's palette features via the CLI.`,
-	Run: func(cmd *cobra.Command, args []string) {
+	RunE: func(cmd *cobra.Command, args []string) error {
 
 		reader := bufio.NewReader(os.Stdin)
 
@@ -31,7 +31,7 @@ As a component of the design tools, this command empowers you to interact direct
 
 		if !IsValidHex(hexInput) {
 			fmt.Println("❌ Invalid hex color.")
-			return
+			return nil
 		}
 
 		hex := Hex(hexInput) // wrap input in Hex type
@@ -40,7 +40,7 @@ As a component of the design tools, this command empowers you to interact direct
 		h, s, l, err := hex.ToHSL()
 		if err != nil {
 			fmt.Println("Error converting to HSL:", err)
-			return
+			return nil
 		}
 		baseHue := h
 		baseS := s
@@ -111,5 +111,7 @@ As a component of the design tools, this command empowers you to interact direct
 		fmt.Printf("Support: %s  (H=%.0f)\n", supportHex, support)
 		fmt.Printf("Accent:  %s  (H=%.0f)\n", accentHex, accent)
 		fmt.Println()
+
+		return nil
 	},
 }

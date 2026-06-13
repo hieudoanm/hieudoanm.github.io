@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/url"
-	"os"
 
 	"github.com/hieudoanm/hieudoanm/libs/number"
 	"github.com/hieudoanm/hieudoanm/libs/requests"
@@ -34,13 +33,12 @@ var fenEvalCmd = &cobra.Command{
 	Long: `The eval command is a specific utility to execute operations related to eval within the chess application.
 
 As a component of the chess tools, this command empowers you to interact directly with chess's eval features via the CLI.`,
-	Run: func(cmd *cobra.Command, args []string) {
+	RunE: func(cmd *cobra.Command, args []string) error {
 		fen, _ := cmd.Flags().GetString("fen")
 		multiPv, _ := cmd.Flags().GetInt("multipv")
 
 		if fen == "" {
-			fmt.Fprintln(os.Stderr, "❌ --fen is required")
-			os.Exit(1)
+			return fmt.Errorf("--fen is required")
 		}
 
 		if multiPv <= 0 {
@@ -55,14 +53,12 @@ As a component of the chess tools, this command empowers you to interact directl
 
 		body, err := requests.Get(apiURL, requests.Options{})
 		if err != nil {
-			fmt.Fprintln(os.Stderr, "❌ Failed to fetch evaluation:", err)
-			os.Exit(1)
+			return fmt.Errorf("failed to fetch evaluation: %w", err)
 		}
 
 		var eval CloudEvalResponse
 		if err := json.Unmarshal(body, &eval); err != nil {
-			fmt.Fprintln(os.Stderr, "❌ Failed to parse evaluation:", err)
-			os.Exit(1)
+			return fmt.Errorf("failed to parse evaluation: %w", err)
 		}
 
 		// ---- output ----
@@ -81,6 +77,8 @@ As a component of the chess tools, this command empowers you to interact directl
 				pv.Moves,
 			)
 		}
+
+		return nil
 	},
 }
 

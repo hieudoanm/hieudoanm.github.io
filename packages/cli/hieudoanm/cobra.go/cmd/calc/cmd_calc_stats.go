@@ -44,7 +44,7 @@ func newStatsCmd() *cobra.Command {
 				median = (nums[n/2-1] + nums[n/2]) / 2
 			}
 
-			if calcJSON {
+			if jsonOutput {
 				b, _ := json.MarshalIndent(map[string]interface{}{
 					"count":  n,
 					"min":    nums[0],

@@ -35,17 +35,17 @@ type TelegramChat struct {
 var openrouterHookCmd = &cobra.Command{
 	Use:   "hook",
 	Short: "Start webhook server on :8080 and expose via ngrok and hook it to telegram",
-	Run: func(cmd *cobra.Command, args []string) {
+	RunE: func(cmd *cobra.Command, args []string) error {
 		fmt.Println("🌙 Starting hook mode...")
 		fmt.Println()
 
 		go startNgrok()
 
-		startWebhook()
+		return startWebhook()
 	},
 }
 
-func startWebhook() {
+func startWebhook() error {
 	port := ":8080"
 
 	http.HandleFunc("/webhook", func(w http.ResponseWriter, r *http.Request) {
@@ -102,8 +102,9 @@ func startWebhook() {
 
 	if err := http.ListenAndServe(port, nil); err != nil {
 		fmt.Fprintf(os.Stderr, "❌ Server error: %v\n", err)
-		os.Exit(1)
+		return fmt.Errorf("server error: %w", err)
 	}
+	return nil
 }
 
 const telegramMaxLength = 4096

@@ -29,10 +29,7 @@ As a component of the ai tools, this command empowers you to interact directly w
 func runOpenRouterStatus(cmd *cobra.Command, args []string) error {
 	apiKey := LoadAPIKey()
 	if apiKey == "" {
-		fmt.Fprintln(os.Stderr, color.RedString("✖ No OpenRouter API key found."))
-		fmt.Fprintln(os.Stderr, color.New(color.Faint).Sprint(
-			"  Set OPEN_ROUTER_API_KEY or add it to ~/.hieudoanm"))
-		os.Exit(1)
+		return fmt.Errorf("no OpenRouter API key found.\n  Set OPEN_ROUTER_API_KEY or add it to ~/.hieudoanm")
 	}
 
 	fmt.Fprint(os.Stderr, color.CyanString("⠿ Fetching free models from OpenRouter...\n"))

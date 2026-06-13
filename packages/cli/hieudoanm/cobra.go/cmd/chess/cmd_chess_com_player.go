@@ -3,7 +3,7 @@ package chess
 import (
 	"encoding/json"
 	"fmt"
-	"os"
+
 	"strings"
 
 	"github.com/hieudoanm/hieudoanm/libs/colors"
@@ -100,7 +100,7 @@ var comPlayerCmd = &cobra.Command{
 
 As a component of the chess tools, this command empowers you to interact directly with chess.com's player features via the CLI.`,
 	Args: cobra.ExactArgs(1),
-	Run: func(cmd *cobra.Command, args []string) {
+	RunE: func(cmd *cobra.Command, args []string) error {
 		username := strings.ToLower(args[0])
 
 		profileURL := fmt.Sprintf("https://api.chess.com/pub/player/%s", username)
@@ -109,27 +109,23 @@ As a component of the chess tools, this command empowers you to interact directl
 		// ---- profile ----
 		profileBody, err := requests.Get(profileURL, requests.Options{})
 		if err != nil {
-			fmt.Fprintln(os.Stderr, "❌ Failed to fetch player profile:", err)
-			os.Exit(1)
+			return fmt.Errorf("failed to fetch player profile: %w", err)
 		}
 
 		var profile PlayerProfile
 		if err := json.Unmarshal(profileBody, &profile); err != nil {
-			fmt.Fprintln(os.Stderr, "❌ Failed to parse profile:", err)
-			os.Exit(1)
+			return fmt.Errorf("failed to parse profile: %w", err)
 		}
 
 		// ---- stats ----
 		statsBody, err := requests.Get(statsURL, requests.Options{})
 		if err != nil {
-			fmt.Fprintln(os.Stderr, "❌ Failed to fetch player stats:", err)
-			os.Exit(1)
+			return fmt.Errorf("failed to fetch player stats: %w", err)
 		}
 
 		var stats PlayerStats
 		if err := json.Unmarshal(statsBody, &stats); err != nil {
-			fmt.Fprintln(os.Stderr, "❌ Failed to parse stats:", err)
-			os.Exit(1)
+			return fmt.Errorf("failed to parse stats: %w", err)
 		}
 
 		// ---- output ----
@@ -161,5 +157,7 @@ As a component of the chess tools, this command empowers you to interact directl
 		printRating("Bullet", stats.ChessBullet)
 		printRating("Blitz", stats.ChessBlitz)
 		printRating("Rapid", stats.ChessRapid)
+
+		return nil
 	},
 }

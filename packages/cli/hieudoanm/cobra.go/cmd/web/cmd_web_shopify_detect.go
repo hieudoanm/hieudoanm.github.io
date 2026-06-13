@@ -21,7 +21,7 @@ func newShopifyDetectCmd() *cobra.Command {
 		Use:   "detect [url]",
 		Short: "Run the detect operation for the shopify app",
 		Args:  cobra.MaximumNArgs(1),
-		Run: func(cmd *cobra.Command, args []string) {
+		RunE: func(cmd *cobra.Command, args []string) error {
 			var url string
 
 			if len(args) == 1 {
@@ -31,15 +31,13 @@ func newShopifyDetectCmd() *cobra.Command {
 				reader := bufio.NewReader(os.Stdin)
 				input, err := reader.ReadString('\n')
 				if err != nil {
-					fmt.Fprintln(os.Stderr, colors.Red("Failed to read input"))
-					os.Exit(2)
+					return fmt.Errorf("failed to read input")
 				}
 				url = strings.TrimSpace(input)
 			}
 
 			if url == "" {
-				fmt.Fprintln(os.Stderr, colors.Red("URL is required"))
-				os.Exit(2)
+				return fmt.Errorf("URL is required")
 			}
 
 			if !strings.HasPrefix(url, "http://") && !strings.HasPrefix(url, "https://") {
@@ -48,8 +46,7 @@ func newShopifyDetectCmd() *cobra.Command {
 
 			isShopify, isPlus, signals, err := CheckShopify(url)
 			if err != nil {
-				fmt.Fprintln(os.Stderr, colors.Red("Error:"), err)
-				os.Exit(2)
+				return fmt.Errorf("error checking shopify: %w", err)
 			}
 
 			if shopifyJSON {
@@ -60,12 +57,11 @@ func newShopifyDetectCmd() *cobra.Command {
 					"signals": signals,
 				}, "", "  ")
 				fmt.Println(string(out))
-				return
+				return nil
 			}
 
 			if !isShopify {
-				fmt.Println(colors.Red("Shopify not detected"))
-				os.Exit(1)
+				return fmt.Errorf("shopify not detected")
 			}
 
 			fmt.Println(colors.Green("Shopify detected"))
@@ -82,6 +78,7 @@ func newShopifyDetectCmd() *cobra.Command {
 					fmt.Println(colors.Dim(" - " + s))
 				}
 			}
+			return nil
 		},
 	}
 

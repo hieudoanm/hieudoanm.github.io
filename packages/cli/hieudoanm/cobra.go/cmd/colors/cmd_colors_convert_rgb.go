@@ -18,7 +18,7 @@ var colorsConvertRgbCmd = &cobra.Command{
 	Long: `The rgb command is a specific utility to execute operations related to rgb within the colors application.
 
 As a component of the design tools, this command empowers you to interact directly with colors's rgb features via the CLI.`,
-	Run: func(cmd *cobra.Command, args []string) {
+	RunE: func(cmd *cobra.Command, args []string) error {
 
 		reader := bufio.NewReader(os.Stdin)
 
@@ -29,7 +29,7 @@ As a component of the design tools, this command empowers you to interact direct
 		r, err := strconv.Atoi(rStr)
 		if err != nil {
 			fmt.Println("Error (R)    :", err)
-			return
+			return nil
 		}
 
 		// Prompt for G
@@ -39,7 +39,7 @@ As a component of the design tools, this command empowers you to interact direct
 		g, err := strconv.Atoi(gStr)
 		if err != nil {
 			fmt.Println("Error (G)    :", err)
-			return
+			return nil
 		}
 
 		// Prompt for B
@@ -49,7 +49,7 @@ As a component of the design tools, this command empowers you to interact direct
 		b, err := strconv.Atoi(bStr)
 		if err != nil {
 			fmt.Println("Error (B)    :", err)
-			return
+			return nil
 		}
 
 		rgb := RGB{R: r, G: g, B: b}
@@ -93,5 +93,7 @@ As a component of the design tools, this command empowers you to interact direct
 		} else {
 			fmt.Printf("CMYK   : C=%.3f, M=%.3f, Y=%.3f, K=%.3f\n", C, M, Y, K)
 		}
+
+		return nil
 	},
 }

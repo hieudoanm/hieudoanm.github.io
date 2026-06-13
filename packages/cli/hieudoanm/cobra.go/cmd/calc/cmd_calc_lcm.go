@@ -20,7 +20,7 @@ func newLcmCmd() *cobra.Command {
 				return err
 			}
 			result := a / gcd(a, b) * b
-			if calcJSON {
+			if jsonOutput {
 				b, _ := json.MarshalIndent(map[string]interface{}{
 					"a":   a,
 					"b":   b,

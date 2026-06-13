@@ -28,7 +28,7 @@ Use parentheses for grouping.`,
 			if err != nil {
 				return fmt.Errorf("eval: %w", err)
 			}
-			if calcJSON {
+			if jsonOutput {
 				b, _ := json.MarshalIndent(map[string]interface{}{
 					"expression": args[0],
 					"result":     v,

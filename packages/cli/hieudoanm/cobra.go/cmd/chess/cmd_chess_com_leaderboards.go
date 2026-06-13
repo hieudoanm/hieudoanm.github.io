@@ -3,7 +3,7 @@ package chess
 import (
 	"encoding/json"
 	"fmt"
-	"os"
+
 	"strconv"
 	"strings"
 
@@ -102,7 +102,7 @@ var comLeaderboardsCmd = &cobra.Command{
 	Long: `The leaderboards command is a specific utility to execute operations related to leaderboards within the chess.com application.
 
 As a component of the chess tools, this command empowers you to interact directly with chess.com's leaderboards features via the CLI.`,
-	Run: func(cmd *cobra.Command, args []string) {
+	RunE: func(cmd *cobra.Command, args []string) error {
 		top, _ := cmd.Flags().GetInt("top")
 		countryFilter, _ := cmd.Flags().GetString("country")
 
@@ -113,14 +113,12 @@ As a component of the chess tools, this command empowers you to interact directl
 		url := "https://api.chess.com/pub/leaderboards"
 		body, err := requests.Get(url, requests.Options{})
 		if err != nil {
-			fmt.Fprintln(os.Stderr, "❌ Failed to fetch leaderboards:", err)
-			os.Exit(1)
+			return fmt.Errorf("failed to fetch leaderboards: %w", err)
 		}
 
 		var data LeaderboardsResponse
 		if err := json.Unmarshal(body, &data); err != nil {
-			fmt.Fprintln(os.Stderr, "❌ Failed to parse response:", err)
-			os.Exit(1)
+			return fmt.Errorf("failed to parse response: %w", err)
 		}
 
 		filterPlayers := func(players []Player) []Player {
@@ -141,6 +139,8 @@ As a component of the chess tools, this command empowers you to interact directl
 		printTop("♞ Live Blitz", filterPlayers(data.LiveBlitz), top)
 		printTop("⏱ Live Rapid", filterPlayers(data.LiveRapid), top)
 		printTop("♜ Live Blitz 960", filterPlayers(data.LiveBlitz960), top)
+
+		return nil
 	},
 }
 

@@ -27,7 +27,7 @@ func newFactorialCmd() *cobra.Command {
 
 			result := new(big.Int).MulRange(1, n)
 
-			if calcJSON {
+			if jsonOutput {
 				b, _ := json.MarshalIndent(map[string]interface{}{
 					"n":         n,
 					"factorial": result.String(),

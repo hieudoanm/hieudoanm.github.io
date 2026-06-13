@@ -73,7 +73,7 @@ func runCompound(principal, rate, years, contribute float64, compound string) er
 	fv, totalDeposits := futureValue(principal, rate, years, contribute, n)
 	totalInterest := fv - totalDeposits
 
-	if calcJSON {
+	if jsonOutput {
 		rows := yearBreakdown(principal, rate, years, contribute, n)
 		out, _ := json.MarshalIndent(map[string]interface{}{
 			"principal":      principal,

@@ -44,7 +44,7 @@ var comTitledCmd = &cobra.Command{
 	Long: `The titled command is a specific utility to execute operations related to titled within the chess.com application.
 
 As a component of the chess tools, this command empowers you to interact directly with chess.com's titled features via the CLI.`,
-	Run: func(cmd *cobra.Command, args []string) {
+	RunE: func(cmd *cobra.Command, args []string) error {
 		fmt.Println()
 		fmt.Printf("| %-6s | %7s |\n", "Titled", "Players")
 		fmt.Printf("| %-6s | %7s |\n", strings.Repeat("-", 6), strings.Repeat("-", 7))
@@ -59,5 +59,7 @@ As a component of the chess tools, this command empowers you to interact directl
 			fmt.Printf("| %-6s | %7s |\n", title, number.Comma(count))
 		}
 		fmt.Println()
+
+		return nil
 	},
 }

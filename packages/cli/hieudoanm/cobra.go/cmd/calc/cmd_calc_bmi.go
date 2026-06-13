@@ -7,6 +7,19 @@ import (
 	"github.com/spf13/cobra"
 )
 
+func bmiCategory(bmi float64) string {
+	switch {
+	case bmi < 18.5:
+		return "Underweight"
+	case bmi < 25:
+		return "Normal"
+	case bmi < 30:
+		return "Overweight"
+	default:
+		return "Obese"
+	}
+}
+
 func newBmiCmd() *cobra.Command {
 	var weight, height float64
 
@@ -18,7 +31,7 @@ func newBmiCmd() *cobra.Command {
 			heightM := height / 100
 			bmi := weight / (heightM * heightM)
 
-			if calcJSON {
+			if jsonOutput {
 				out, _ := json.MarshalIndent(map[string]interface{}{
 					"weight":   weight,
 					"height":   height,

@@ -28,7 +28,7 @@ func newMortgageCmd() *cobra.Command {
 			totalPaid := totalMonthly * n
 			totalInterest := totalPaid - principal - monthlyTaxes*n - monthlyInsurance*n - monthlyPMI*n
 
-			if calcJSON {
+			if jsonOutput {
 				out, _ := json.MarshalIndent(map[string]interface{}{
 					"principal":         principal,
 					"rate":              rate,

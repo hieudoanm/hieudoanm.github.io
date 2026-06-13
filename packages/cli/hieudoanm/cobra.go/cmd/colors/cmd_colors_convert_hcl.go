@@ -14,7 +14,7 @@ var colorsConvertHclCmd = &cobra.Command{
 	Long: `The hcl command is a specific utility to execute operations related to hcl within the colors application.
 
 As a component of the design tools, this command empowers you to interact directly with colors's hcl features via the CLI.`,
-	Run: func(cmd *cobra.Command, args []string) {
+	RunE: func(cmd *cobra.Command, args []string) error {
 		// Prompt for HCL input
 		var h, c, l float64
 		fmt.Print("Hue (0–360)      : ")
@@ -30,7 +30,7 @@ As a component of the design tools, this command empowers you to interact direct
 		r, g, b, err := hcl.ToRGB()
 		if err != nil {
 			fmt.Println("Error (RGB)  :", err)
-			return
+			return nil
 		}
 		rgb := RGB{R: r, G: g, B: b}
 
@@ -72,5 +72,7 @@ As a component of the design tools, this command empowers you to interact direct
 		} else {
 			fmt.Printf("CMYK   : C=%.3f, M=%.3f, Y=%.3f, K=%.3f\n", C, M, Y, K)
 		}
+
+		return nil
 	},
 }
