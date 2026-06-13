@@ -2,16 +2,32 @@ package gemini
 
 import (
 	"fmt"
-	"log"
 	"os"
+	"strconv"
 	"strings"
 
 	"github.com/hieudoanm/api/core/gemini.google.com"
 	"github.com/hieudoanm/hieudoanm/libs/chat"
-	"github.com/spf13/cobra"
 
 	tea "charm.land/bubbletea/v2"
 )
+
+type modelEntry struct {
+	ID   string
+	Name string
+}
+
+var textModels = []modelEntry{
+	{ID: string(gemini.Model35Flash), Name: "Gemini 3.5 Flash"},
+	{ID: string(gemini.Model31FlashLite), Name: "Gemini 3.1 Flash-Lite"},
+	{ID: string(gemini.Model31ProPreview), Name: "Gemini 3.1 Pro Preview"},
+	{ID: string(gemini.Model3FlashPreview), Name: "Gemini 3 Flash Preview"},
+	{ID: string(gemini.Model25Pro), Name: "Gemini 2.5 Pro"},
+	{ID: string(gemini.Model25Flash), Name: "Gemini 2.5 Flash"},
+	{ID: string(gemini.Model25FlashLite), Name: "Gemini 2.5 Flash-Lite"},
+	{ID: string(gemini.Model20Flash), Name: "Gemini 2.0 Flash"},
+	{ID: string(gemini.Model20FlashLite), Name: "Gemini 2.0 Flash Lite"},
+}
 
 type codeResultMsg struct {
 	response *gemini.GenerateContentResponse
@@ -21,12 +37,14 @@ type codeResultMsg struct {
 type codeModel struct {
 	chat.BaseModel
 
-	messages []gemini.Content
+	messages    []gemini.Content
+	modelChoice string
 }
 
 func codeInitialModel() codeModel {
 	m := codeModel{
-		BaseModel: chat.NewBaseModel("Ask Gemini... (@ for files, ! for shell commands)"),
+		BaseModel:   chat.NewBaseModel("Ask Gemini... (@ for files, ! for shell commands)"),
+		modelChoice: string(gemini.Model25Flash),
 	}
 	m.Refresh()
 	return m
@@ -72,7 +90,7 @@ func (m codeModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		m.State = chat.StateLoading
 		return tea.Batch(
 			m.Spin.Tick,
-			sendToGemini(gemini.Model25Flash, m.messages),
+			sendToGemini(gemini.Model(m.modelChoice), m.messages),
 		)
 	}); handled {
 		if cmd != nil {
@@ -115,9 +133,13 @@ func (m codeModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 }
 
 func (m *codeModel) handleSlash(cmd string) tea.Cmd {
-	switch cmd {
+	parts := strings.Fields(cmd)
+	if len(parts) == 0 {
+		return nil
+	}
+	switch parts[0] {
 	case "/help":
-		m.AppendMessage("assistant", "Slash commands:\n- /help  — Show help\n- /new   — Clear conversation\n- /undo  — Remove last exchange\n- /exit  — Quit")
+		m.AppendMessage("assistant", "Slash commands:\n- /help     — Show help\n- /new      — Clear conversation\n- /undo     — Remove last exchange\n- /models   — List available models\n- /model N  — Switch to model by number\n- /exit     — Quit")
 	case "/new":
 		m.messages = nil
 		m.Display = nil
@@ -130,6 +152,29 @@ func (m *codeModel) handleSlash(cmd string) tea.Cmd {
 			m.Display = m.Display[:len(m.Display)-1]
 		}
 		m.Refresh()
+	case "/models":
+		var buf strings.Builder
+		buf.WriteString("Available text generation models:\n\n")
+		for i, mod := range textModels {
+			mark := " "
+			if mod.ID == m.modelChoice {
+				mark = "→"
+			}
+			buf.WriteString(fmt.Sprintf("  %s %2d. %-30s %s\n", mark, i+1, mod.Name, mod.ID))
+		}
+		buf.WriteString("\nType /model N to switch (e.g., /model 3)")
+		m.AppendMessage("assistant", strings.TrimRight(buf.String(), "\n"))
+	case "/model":
+		if len(parts) < 2 {
+			m.AppendMessage("error", "Usage: /model N (run /models to see available models)")
+			return nil
+		}
+		idx, err := strconv.Atoi(parts[1])
+		if err != nil {
+			m.AppendMessage("error", "Usage: /model N (run /models to see available models)")
+			return nil
+		}
+		m.switchModel(idx)
 	case "/exit":
 		return tea.Quit
 	default:
@@ -138,20 +183,31 @@ func (m *codeModel) handleSlash(cmd string) tea.Cmd {
 	return nil
 }
 
-func (m codeModel) View() tea.View {
-	return chat.CommonView(&m.BaseModel, chat.DimText("Gemini Flash 2.5 (gemini-2.5-flash)"), "")
+func (m *codeModel) switchModel(idx int) {
+	idx--
+	if idx < 0 || idx >= len(textModels) {
+		m.AppendMessage("error", "Invalid model number. Run /models to see available models.")
+		return
+	}
+	mod := textModels[idx]
+	if mod.ID == m.modelChoice {
+		m.AppendMessage("assistant", "Already using `"+mod.ID+"`")
+	} else {
+		m.modelChoice = mod.ID
+		m.AppendMessage("assistant", "Switched to `"+mod.ID+"`")
+	}
 }
 
-var geminiCodeCmd = &cobra.Command{
-	Use:   "code",
-	Short: "Gemini-powered AI coding assistant",
-	Long: `An interactive TUI coding assistant powered by Google Gemini.
+func (m codeModel) View() tea.View {
+	label := fmt.Sprintf("Gemini — %s (%s)", modelName(m.modelChoice), m.modelChoice)
+	return chat.CommonView(&m.BaseModel, chat.DimText(label), "")
+}
 
-Provides a chat interface with markdown rendering and code block support.`,
-	RunE: func(cmd *cobra.Command, args []string) error {
-		if _, err := tea.NewProgram(codeInitialModel()).Run(); err != nil {
-			log.Fatal(err)
+func modelName(id string) string {
+	for _, mod := range textModels {
+		if mod.ID == id {
+			return mod.Name
 		}
-		return nil
-	},
+	}
+	return id
 }
