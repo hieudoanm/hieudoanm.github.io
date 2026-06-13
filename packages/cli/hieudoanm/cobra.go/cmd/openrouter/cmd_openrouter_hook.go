@@ -32,17 +32,19 @@ type TelegramChat struct {
 	ID int64 `json:"id"`
 }
 
-var openrouterHookCmd = &cobra.Command{
-	Use:   "hook",
-	Short: "Start webhook server on :8080 and expose via ngrok and hook it to telegram",
-	RunE: func(cmd *cobra.Command, args []string) error {
-		fmt.Println("🌙 Starting hook mode...")
-		fmt.Println()
+func newHookCmd() *cobra.Command {
+	return &cobra.Command{
+		Use:   "hook",
+		Short: "Start webhook server on :8080 and expose via ngrok and hook it to telegram",
+		RunE: func(cmd *cobra.Command, args []string) error {
+			fmt.Println("🌙 Starting hook mode...")
+			fmt.Println()
 
-		go startNgrok()
+			go startNgrok()
 
-		return startWebhook()
-	},
+			return startWebhook()
+		},
+	}
 }
 
 func startWebhook() error {

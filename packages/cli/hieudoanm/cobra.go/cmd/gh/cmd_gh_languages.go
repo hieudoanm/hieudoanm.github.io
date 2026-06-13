@@ -65,63 +65,61 @@ func generateLanguagesSVG(langs map[string]int) string {
 	return sb.String()
 }
 
-var ghLanguagesCmd = &cobra.Command{
-	Use:   "languages <owner/repo>",
-	Short: "Show repository language breakdown and generate SVG bar chart",
-	Long: `Fetches language statistics for a GitHub repository and generates
+func newLanguagesCmd() *cobra.Command {
+	cmd := &cobra.Command{
+		Use:   "languages <owner/repo>",
+		Short: "Show repository language breakdown and generate SVG bar chart",
+		Long: `Fetches language statistics for a GitHub repository and generates
 an SVG bar chart showing the breakdown.
 
 Example:
   hieudoanm gh languages hieudoanm/hieudoanm.github.io`,
-	Args: cobra.ExactArgs(1),
-	Run: func(cmd *cobra.Command, args []string) {
-		repo := args[0]
-		output, _ := cmd.Flags().GetString("output")
+		Args: cobra.ExactArgs(1),
+		RunE: func(cmd *cobra.Command, args []string) error {
+			repo := args[0]
+			output, _ := cmd.Flags().GetString("output")
 
-		parts := strings.Split(repo, "/")
-		if len(parts) != 2 {
-			fmt.Fprintf(os.Stderr, "Error: repo must be in format owner/repo (got %q)\n", repo)
-			return
-		}
+			parts := strings.Split(repo, "/")
+			if len(parts) != 2 {
+				return fmt.Errorf("repo must be in format owner/repo (got %q)", repo)
+			}
 
-		url := fmt.Sprintf("https://api.github.com/repos/%s/%s/languages", parts[0], parts[1])
-		body, err := requests.Get(url, requests.Options{
-			Header: http.Header{
-				"Accept":     {"application/json"},
-				"User-Agent": {"hieudoanm-cli"},
-			},
-		})
-		if err != nil {
-			fmt.Fprintf(os.Stderr, "Error fetching languages: %v\n", err)
-			return
-		}
+			url := fmt.Sprintf("https://api.github.com/repos/%s/%s/languages", parts[0], parts[1])
+			body, err := requests.Get(url, requests.Options{
+				Header: http.Header{
+					"Accept":     {"application/json"},
+					"User-Agent": {"hieudoanm-cli"},
+				},
+			})
+			if err != nil {
+				return fmt.Errorf("error fetching languages: %w", err)
+			}
 
-		var langs map[string]int
-		if err := json.Unmarshal(body, &langs); err != nil {
-			fmt.Fprintf(os.Stderr, "Error parsing response: %v\n", err)
-			return
-		}
+			var langs map[string]int
+			if err := json.Unmarshal(body, &langs); err != nil {
+				return fmt.Errorf("error parsing response: %w", err)
+			}
 
-		if len(langs) == 0 {
-			fmt.Println("No languages found")
-			return
-		}
+			if len(langs) == 0 {
+				fmt.Println("No languages found")
+				return nil
+			}
 
-		fmt.Println("Languages:")
-		for lang, bytes := range langs {
-			fmt.Printf("  %s: %d bytes\n", lang, bytes)
-		}
+			fmt.Println("Languages:")
+			for lang, bytes := range langs {
+				fmt.Printf("  %s: %d bytes\n", lang, bytes)
+			}
 
-		svg := generateLanguagesSVG(langs)
-		if err := os.WriteFile(output, []byte(svg), 0644); err != nil {
-			fmt.Fprintf(os.Stderr, "Error writing SVG: %v\n", err)
-			return
-		}
+			svg := generateLanguagesSVG(langs)
+			if err := os.WriteFile(output, []byte(svg), 0644); err != nil {
+				return fmt.Errorf("error writing SVG: %w", err)
+			}
 
-		fmt.Printf("✓ languages.svg generated at %s\n", output)
-	},
-}
+			fmt.Printf("✓ languages.svg generated at %s\n", output)
+			return nil
+		},
+	}
 
-func init() {
-	ghLanguagesCmd.Flags().StringP("output", "o", "languages.svg", "Output SVG file path")
+	cmd.Flags().StringP("output", "o", "languages.svg", "Output SVG file path")
+	return cmd
 }

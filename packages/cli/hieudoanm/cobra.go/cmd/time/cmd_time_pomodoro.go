@@ -171,9 +171,10 @@ func newPomodoroCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "pomodoro",
 		Short: "Start a Pomodoro timer TUI session",
-		Run: func(cmd *cobra.Command, args []string) {
+		RunE: func(cmd *cobra.Command, args []string) error {
 			fmt.Println("🍅 Launching Pomodoro TUI...")
 			runPomodoroTUI(work, rest)
+			return nil
 		},
 	}
 	cmd.Flags().IntVarP(&work, "work", "w", 25, "work session minutes")

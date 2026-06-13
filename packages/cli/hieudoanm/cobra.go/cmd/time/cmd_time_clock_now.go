@@ -15,7 +15,7 @@ var timeNowCmd = &cobra.Command{
 	Use:   "now",
 	Short: "Display the current date and time",
 	Long:  `Display the current date, time, and timezone in a formatted output.`,
-	Run: func(cmd *cobra.Command, args []string) {
+	RunE: func(cmd *cobra.Command, args []string) error {
 		t := time.Now()
 		hours, minutes, seconds := t.Clock()
 		date := t.Format("2006-01-02")
@@ -32,6 +32,7 @@ var timeNowCmd = &cobra.Command{
 		} else {
 			fmt.Printf("%s %s:%s:%s GMT%s\n", date, number.AddZero(hours), number.AddZero(minutes), number.AddZero(seconds), zone)
 		}
+		return nil
 	},
 }
 

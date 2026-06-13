@@ -93,71 +93,73 @@ type PlayerStats struct {
 
 /* ----------------------------- Command ----------------------------- */
 
-var comPlayerCmd = &cobra.Command{
-	Use:   "player <username>",
-	Short: "Run the player operation for the chess.com app",
-	Long: `The player command is a specific utility to execute operations related to player within the chess.com application.
+func newComPlayerCmd() *cobra.Command {
+	return &cobra.Command{
+		Use:   "player <username>",
+		Short: "Run the player operation for the chess.com app",
+		Long: `The player command is a specific utility to execute operations related to player within the chess.com application.
 
 As a component of the chess tools, this command empowers you to interact directly with chess.com's player features via the CLI.`,
-	Args: cobra.ExactArgs(1),
-	RunE: func(cmd *cobra.Command, args []string) error {
-		username := strings.ToLower(args[0])
+		Args: cobra.ExactArgs(1),
+		RunE: func(cmd *cobra.Command, args []string) error {
+			username := strings.ToLower(args[0])
 
-		profileURL := fmt.Sprintf("https://api.chess.com/pub/player/%s", username)
-		statsURL := fmt.Sprintf("https://api.chess.com/pub/player/%s/stats", username)
+			profileURL := fmt.Sprintf("https://api.chess.com/pub/player/%s", username)
+			statsURL := fmt.Sprintf("https://api.chess.com/pub/player/%s/stats", username)
 
-		// ---- profile ----
-		profileBody, err := requests.Get(profileURL, requests.Options{})
-		if err != nil {
-			return fmt.Errorf("failed to fetch player profile: %w", err)
-		}
+			// ---- profile ----
+			profileBody, err := requests.Get(profileURL, requests.Options{})
+			if err != nil {
+				return fmt.Errorf("failed to fetch player profile: %w", err)
+			}
 
-		var profile PlayerProfile
-		if err := json.Unmarshal(profileBody, &profile); err != nil {
-			return fmt.Errorf("failed to parse profile: %w", err)
-		}
+			var profile PlayerProfile
+			if err := json.Unmarshal(profileBody, &profile); err != nil {
+				return fmt.Errorf("failed to parse profile: %w", err)
+			}
 
-		// ---- stats ----
-		statsBody, err := requests.Get(statsURL, requests.Options{})
-		if err != nil {
-			return fmt.Errorf("failed to fetch player stats: %w", err)
-		}
+			// ---- stats ----
+			statsBody, err := requests.Get(statsURL, requests.Options{})
+			if err != nil {
+				return fmt.Errorf("failed to fetch player stats: %w", err)
+			}
 
-		var stats PlayerStats
-		if err := json.Unmarshal(statsBody, &stats); err != nil {
-			return fmt.Errorf("failed to parse stats: %w", err)
-		}
+			var stats PlayerStats
+			if err := json.Unmarshal(statsBody, &stats); err != nil {
+				return fmt.Errorf("failed to parse stats: %w", err)
+			}
 
-		// ---- output ----
-		fmt.Println()
-		fmt.Printf("♟ Player: %s\n", strings.ToUpper(profile.Username))
-		fmt.Println("---------------------------------------------------------------")
+			// ---- output ----
+			fmt.Println()
+			fmt.Printf("♟ Player: %s\n", strings.ToUpper(profile.Username))
+			fmt.Println("---------------------------------------------------------------")
 
-		if profile.Name != "" {
-			fmt.Printf("Name      : %s\n", profile.Name)
-		}
-		if profile.Title != "" {
-			fmt.Printf("Title     : %s\n", colors.Red(profile.Title))
-		}
+			if profile.Name != "" {
+				fmt.Printf("Name      : %s\n", profile.Name)
+			}
+			if profile.Title != "" {
+				fmt.Printf("Title     : %s\n", colors.Red(profile.Title))
+			}
 
-		_, countryName := country(profile.Country)
-		fmt.Printf("Country   : %s\n", countryName)
+			_, countryName := country(profile.Country)
+			fmt.Printf("Country   : %s\n", countryName)
 
-		if profile.Fide > 0 {
-			fmt.Printf("FIDE      : %d\n", profile.Fide)
-		}
+			if profile.Fide > 0 {
+				fmt.Printf("FIDE      : %d\n", profile.Fide)
+			}
 
-		fmt.Printf("Followers : %s\n", number.Comma(profile.Followers))
+			fmt.Printf("Followers : %s\n", number.Comma(profile.Followers))
 
-		fmt.Println()
-		fmt.Println("Ratings")
-		fmt.Println()
+			fmt.Println()
+			fmt.Println("Ratings")
+			fmt.Println()
 
-		printRatingsHeader()
-		printRating("Bullet", stats.ChessBullet)
-		printRating("Blitz", stats.ChessBlitz)
-		printRating("Rapid", stats.ChessRapid)
+			printRatingsHeader()
+			printRating("Bullet", stats.ChessBullet)
+			printRating("Blitz", stats.ChessBlitz)
+			printRating("Rapid", stats.ChessRapid)
 
-		return nil
-	},
+			return nil
+		},
+	}
 }

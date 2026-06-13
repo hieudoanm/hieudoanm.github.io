@@ -12,18 +12,26 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var (
-	modelsSearch string
-	modelsJSON   bool
-)
+func newModelsCmd() *cobra.Command {
+	var (
+		modelsSearch string
+		modelsJSON   bool
+	)
 
-var openrouterModelsCmd = &cobra.Command{
-	Use:   "models",
-	Short: "Run the models operation for the OpenRouter app",
-	RunE:  runModels,
+	cmd := &cobra.Command{
+		Use:   "models",
+		Short: "Run the models operation for the OpenRouter app",
+		RunE: func(cmd *cobra.Command, args []string) error {
+			return runModels(cmd, args, modelsSearch, modelsJSON)
+		},
+	}
+
+	cmd.Flags().StringVarP(&modelsSearch, "search", "s", "", "Filter models by name or ID")
+	cmd.Flags().BoolVar(&modelsJSON, "json", false, "Output raw JSON")
+	return cmd
 }
 
-func runModels(cmd *cobra.Command, args []string) error {
+func runModels(cmd *cobra.Command, args []string, modelsSearch string, modelsJSON bool) error {
 	fmt.Fprint(os.Stderr, color.CyanString("⠿ Fetching free models from OpenRouter...\n"))
 
 	models, err := FetchFreeModels()
@@ -116,9 +124,4 @@ func formatCtx(n int) string {
 	default:
 		return fmt.Sprintf("%d", n)
 	}
-}
-
-func init() {
-	openrouterModelsCmd.Flags().StringVarP(&modelsSearch, "search", "s", "", "Filter models by name or ID")
-	openrouterModelsCmd.Flags().BoolVar(&modelsJSON, "json", false, "Output raw JSON")
 }

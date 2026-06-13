@@ -105,53 +105,51 @@ func escapeXML(s string) string {
 	return s
 }
 
-var ghOGCmd = &cobra.Command{
-	Use:   "og <owner/repo>",
-	Short: "Generate an Open Graph SVG for a GitHub repository",
-	Long: `Fetches repository metadata from GitHub and generates
+func newOGCmd() *cobra.Command {
+	cmd := &cobra.Command{
+		Use:   "og <owner/repo>",
+		Short: "Generate an Open Graph SVG for a GitHub repository",
+		Long: `Fetches repository metadata from GitHub and generates
 a 1200×630 Open Graph SVG image (social preview card).
 
 Example:
   hieudoanm gh og hieudoanm/hieudoanm.github.io`,
-	Args: cobra.ExactArgs(1),
-	Run: func(cmd *cobra.Command, args []string) {
-		repoArg := args[0]
-		output, _ := cmd.Flags().GetString("output")
+		Args: cobra.ExactArgs(1),
+		RunE: func(cmd *cobra.Command, args []string) error {
+			repoArg := args[0]
+			output, _ := cmd.Flags().GetString("output")
 
-		parts := strings.Split(repoArg, "/")
-		if len(parts) != 2 {
-			fmt.Fprintf(os.Stderr, "Error: repo must be in format owner/repo (got %q)\n", repoArg)
-			return
-		}
+			parts := strings.Split(repoArg, "/")
+			if len(parts) != 2 {
+				return fmt.Errorf("repo must be in format owner/repo (got %q)", repoArg)
+			}
 
-		url := fmt.Sprintf("https://api.github.com/repos/%s/%s", parts[0], parts[1])
-		body, err := requests.Get(url, requests.Options{
-			Header: http.Header{
-				"Accept":     {"application/json"},
-				"User-Agent": {"hieudoanm-cli"},
-			},
-		})
-		if err != nil {
-			fmt.Fprintf(os.Stderr, "Error fetching repository: %v\n", err)
-			return
-		}
+			url := fmt.Sprintf("https://api.github.com/repos/%s/%s", parts[0], parts[1])
+			body, err := requests.Get(url, requests.Options{
+				Header: http.Header{
+					"Accept":     {"application/json"},
+					"User-Agent": {"hieudoanm-cli"},
+				},
+			})
+			if err != nil {
+				return fmt.Errorf("error fetching repository: %w", err)
+			}
 
-		var repo ghRepo
-		if err := json.Unmarshal(body, &repo); err != nil {
-			fmt.Fprintf(os.Stderr, "Error parsing response: %v\n", err)
-			return
-		}
+			var repo ghRepo
+			if err := json.Unmarshal(body, &repo); err != nil {
+				return fmt.Errorf("error parsing response: %w", err)
+			}
 
-		svg := generateOGSVG(repo)
-		if err := os.WriteFile(output, []byte(svg), 0644); err != nil {
-			fmt.Fprintf(os.Stderr, "Error writing SVG: %v\n", err)
-			return
-		}
+			svg := generateOGSVG(repo)
+			if err := os.WriteFile(output, []byte(svg), 0644); err != nil {
+				return fmt.Errorf("error writing SVG: %w", err)
+			}
 
-		fmt.Printf("✓ og.svg generated at %s\n", output)
-	},
-}
+			fmt.Printf("✓ og.svg generated at %s\n", output)
+			return nil
+		},
+	}
 
-func init() {
-	ghOGCmd.Flags().StringP("output", "o", "og.svg", "Output SVG file path")
+	cmd.Flags().StringP("output", "o", "og.svg", "Output SVG file path")
+	return cmd
 }

@@ -4,6 +4,8 @@ import (
 	"github.com/spf13/cobra"
 )
 
+var jsonOutput bool
+
 func NewCommand() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "gh",
@@ -11,11 +13,13 @@ func NewCommand() *cobra.Command {
 		Long:  `GitHub CLI utilities for interacting with GitHub APIs.`,
 	}
 
-	cmd.AddCommand(ghCocCmd)
-	cmd.AddCommand(ghIgnoreCmd)
-	cmd.AddCommand(ghLanguagesCmd)
-	cmd.AddCommand(ghLicenseCmd)
-	cmd.AddCommand(ghOGCmd)
+	cmd.PersistentFlags().BoolVarP(&jsonOutput, "json", "j", false, "Output in JSON format")
+
+	cmd.AddCommand(newCocCmd())
+	cmd.AddCommand(newIgnoreCmd())
+	cmd.AddCommand(newLanguagesCmd())
+	cmd.AddCommand(newLicenseCmd())
+	cmd.AddCommand(newOGCmd())
 
 	return cmd
 }

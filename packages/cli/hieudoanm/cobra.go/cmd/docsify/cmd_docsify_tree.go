@@ -12,46 +12,48 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var (
-	treeDir string
-	treeOut string
-)
+func newTreeCmd() *cobra.Command {
+	var (
+		treeDir string
+		treeOut string
+	)
 
-var docsifyTreeCmd = &cobra.Command{
-	Use:   "tree",
-	Short: "Generate directory tree as Markdown",
-	Long:  `Walk the directory tree and write the structure to TREE.md, respecting .gitignore patterns.`,
-	RunE: func(cmd *cobra.Command, args []string) error {
-		absDir, err := filepath.Abs(treeDir)
-		if err != nil {
-			return fmt.Errorf("resolve directory: %w", err)
-		}
-		ignore, err := loadGitignore(absDir)
-		if err != nil {
-			return fmt.Errorf("load .gitignore: %w", err)
-		}
-		out, err := os.Create(treeOut)
-		if err != nil {
-			return fmt.Errorf("create output: %w", err)
-		}
-		defer out.Close()
+	cmd := &cobra.Command{
+		Use:   "tree",
+		Short: "Generate directory tree as Markdown",
+		Long:  `Walk the directory tree and write the structure to TREE.md, respecting .gitignore patterns.`,
+		RunE: func(cmd *cobra.Command, args []string) error {
+			absDir, err := filepath.Abs(treeDir)
+			if err != nil {
+				return fmt.Errorf("resolve directory: %w", err)
+			}
+			ignore, err := loadGitignore(absDir)
+			if err != nil {
+				return fmt.Errorf("load .gitignore: %w", err)
+			}
+			out, err := os.Create(treeOut)
+			if err != nil {
+				return fmt.Errorf("create output: %w", err)
+			}
+			defer out.Close()
 
-		fmt.Fprintln(out, "# TREE")
-		fmt.Fprintln(out)
-		fmt.Fprintln(out, "```text")
-		dirs, files, err := writeTree(out, absDir, absDir, "", ignore)
-		if err != nil {
-			return err
-		}
-		fmt.Fprintln(out, "```")
-		fmt.Fprintf(out, "\n%d directories, %d files\n", dirs, files)
-		return nil
-	},
-}
+			fmt.Fprintln(out, "# TREE")
+			fmt.Fprintln(out)
+			fmt.Fprintln(out, "```text")
+			dirs, files, err := writeTree(out, absDir, absDir, "", ignore)
+			if err != nil {
+				return err
+			}
+			fmt.Fprintln(out, "```")
+			fmt.Fprintf(out, "\n%d directories, %d files\n", dirs, files)
+			return nil
+		},
+	}
 
-func init() {
-	docsifyTreeCmd.Flags().StringVar(&treeDir, "dir", ".", "Root directory to tree")
-	docsifyTreeCmd.Flags().StringVar(&treeOut, "out", "TREE.md", "Output file path")
+	cmd.Flags().StringVar(&treeDir, "dir", ".", "Root directory to tree")
+	cmd.Flags().StringVar(&treeOut, "out", "TREE.md", "Output file path")
+
+	return cmd
 }
 
 // loadGitignore reads .gitignore from dir and returns a matcher function.

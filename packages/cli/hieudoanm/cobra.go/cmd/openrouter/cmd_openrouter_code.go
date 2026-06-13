@@ -39,8 +39,6 @@ type probeResultMsg struct {
 	modelID string
 }
 
-var codeModelFlag string
-
 var (
 	amberClr  = lipgloss.Color("214")
 	labelTool = lipgloss.NewStyle().Foreground(amberClr).Bold(true).Render
@@ -784,25 +782,28 @@ func statusIcon(s ProbeStatus) string {
 	}
 }
 
-var openrouterCodeCmd = &cobra.Command{
-	Use:   "code",
-	Short: "AI coding assistant with file editing and bash access",
-	Long: `An interactive TUI coding assistant powered by OpenRouter.
+func newCodeCmd() *cobra.Command {
+	var codeModelFlag string
+
+	cmd := &cobra.Command{
+		Use:   "code",
+		Short: "AI coding assistant with file editing and bash access",
+		Long: `An interactive TUI coding assistant powered by OpenRouter.
 
 Supports reading, writing, and editing files, as well as running bash commands.
 All tool calls require your approval before execution.`,
-	RunE: func(cmd *cobra.Command, args []string) error {
-		model := codeModelFlag
-		if model == "" {
-			model = pickToolModel()
-		}
-		if _, err := tea.NewProgram(codeInitialModel(model)).Run(); err != nil {
-			log.Fatal(err)
-		}
-		return nil
-	},
-}
+		RunE: func(cmd *cobra.Command, args []string) error {
+			model := codeModelFlag
+			if model == "" {
+				model = pickToolModel()
+			}
+			if _, err := tea.NewProgram(codeInitialModel(model)).Run(); err != nil {
+				log.Fatal(err)
+			}
+			return nil
+		},
+	}
 
-func init() {
-	openrouterCodeCmd.Flags().StringVar(&codeModelFlag, "model", "", "Model ID (default: auto-select tool-capable model)")
+	cmd.Flags().StringVar(&codeModelFlag, "model", "", "Model ID (default: auto-select tool-capable model)")
+	return cmd
 }

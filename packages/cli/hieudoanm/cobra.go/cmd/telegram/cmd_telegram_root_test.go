@@ -117,20 +117,22 @@ func TestSendResponseUnmarshalEmpty(t *testing.T) {
 }
 
 func TestTelegramMessageCmdExists(t *testing.T) {
-	if telegramMessageCmd.Use != "message" {
-		t.Errorf("expected Use 'message', got %q", telegramMessageCmd.Use)
+	cmd := newMessageCmd()
+	if cmd.Use != "message" {
+		t.Errorf("expected Use 'message', got %q", cmd.Use)
 	}
 }
 
 func TestTelegramWebhookCmdExists(t *testing.T) {
-	if telegramWebhookCmd.Use != "webhook" {
-		t.Errorf("expected Use 'webhook', got %q", telegramWebhookCmd.Use)
+	cmd := newWebhookCmd()
+	if cmd.Use != "webhook" {
+		t.Errorf("expected Use 'webhook', got %q", cmd.Use)
 	}
 }
 
 func TestTelegramWebhookSubcommands(t *testing.T) {
 	expected := []string{"delete", "info", "set"}
-	subs := subcommandNames(telegramWebhookCmd)
+	subs := subcommandNames(newWebhookCmd())
 	for _, name := range expected {
 		if !contains(subs, name) {
 			t.Errorf("expected webhook subcommand %q not found", name)

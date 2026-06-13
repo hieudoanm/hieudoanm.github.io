@@ -77,30 +77,32 @@ func serveChat(w http.ResponseWriter, r *http.Request) {
 // Cobra command
 // ---------------------------
 
-var servePort string
+func newServeCmd() *cobra.Command {
+	var servePort string
 
-var openrouterServeCmd = &cobra.Command{
-	Use:   "serve",
-	Short: "Start the OpenRouter HTTP server",
-	Long: `Starts a lightweight Go HTTP server that exposes:
+	cmd := &cobra.Command{
+		Use:   "serve",
+		Short: "Start the OpenRouter HTTP server",
+		Long: `Starts a lightweight Go HTTP server that exposes:
   GET  /       — health check
   POST /chat   — forward {prompt, model} to OpenRouter and return the response`,
-	Run: func(cmd *cobra.Command, args []string) {
-		mux := http.NewServeMux()
-		mux.HandleFunc("/", serveRoot)
-		mux.HandleFunc("/chat", serveChat)
+		RunE: func(cmd *cobra.Command, args []string) error {
+			mux := http.NewServeMux()
+			mux.HandleFunc("/", serveRoot)
+			mux.HandleFunc("/chat", serveChat)
 
-		addr := fmt.Sprintf(":%s", servePort)
-		fmt.Printf("🚀 OpenRouter server listening on http://localhost%s\n", addr)
-		fmt.Println("  GET  / → health check")
-		fmt.Println("  POST /chat → {\"prompt\":\"...\",\"model\":\"...\"}")
+			addr := fmt.Sprintf(":%s", servePort)
+			fmt.Printf("🚀 OpenRouter server listening on http://localhost%s\n", addr)
+			fmt.Println("  GET  / → health check")
+			fmt.Println("  POST /chat → {\"prompt\":\"...\",\"model\":\"...\"}")
 
-		if err := http.ListenAndServe(addr, mux); err != nil {
-			log.Fatalf("Server error: %v", err)
-		}
-	},
-}
+			if err := http.ListenAndServe(addr, mux); err != nil {
+				log.Fatalf("Server error: %v", err)
+			}
+			return nil
+		},
+	}
 
-func init() {
-	openrouterServeCmd.Flags().StringVarP(&servePort, "port", "p", "8080", "Port to listen on")
+	cmd.Flags().StringVarP(&servePort, "port", "p", "8080", "Port to listen on")
+	return cmd
 }

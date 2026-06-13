@@ -11,41 +11,47 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// fen2svgCmd represents the fen2svg command
-var fen2svgCmd = &cobra.Command{
-	Use:   "svg",
-	Short: "Run the svg operation for the chess.graphics app",
-	Long: `The svg command is a specific utility to execute operations related to svg within the chess.graphics application.
+func newFen2svgCmd() *cobra.Command {
+	cmd := &cobra.Command{
+		Use:   "svg",
+		Short: "Run the svg operation for the chess.graphics app",
+		Long: `The svg command is a specific utility to execute operations related to svg within the chess.graphics application.
 
 As a component of the chess tools, this command empowers you to interact directly with chess.graphics's svg features via the CLI.`,
-	RunE: func(cmd *cobra.Command, args []string) error {
-		fenStr, _ := cmd.Flags().GetString("fen")
-		outputFile, _ := cmd.Flags().GetString("out")
+		RunE: func(cmd *cobra.Command, args []string) error {
+			fenStr, _ := cmd.Flags().GetString("fen")
+			outputFile, _ := cmd.Flags().GetString("out")
 
-		if fenStr == "" {
-			return fmt.Errorf("❌ you must provide a FEN string using --fen")
-		}
-		if outputFile == "" {
-			outputFile = "board.svg"
-		}
+			if fenStr == "" {
+				return fmt.Errorf("❌ you must provide a FEN string using --fen")
+			}
+			if outputFile == "" {
+				outputFile = "board.svg"
+			}
 
-		game := chess.NewGame()
-		opt, err := chess.FEN(fenStr)
-		if err != nil {
-			return fmt.Errorf("❌ failed to parse PGN: %w", err)
-		}
-		opt(game)
+			game := chess.NewGame()
+			opt, err := chess.FEN(fenStr)
+			if err != nil {
+				return fmt.Errorf("❌ failed to parse PGN: %w", err)
+			}
+			opt(game)
 
-		board := game.Position().Board()
-		svg := renderBoardSVG(board)
+			board := game.Position().Board()
+			svg := renderBoardSVG(board)
 
-		if err := os.WriteFile(outputFile, []byte(svg), 0644); err != nil {
-			return fmt.Errorf("❌ failed to write SVG: %w", err)
-		}
+			if err := os.WriteFile(outputFile, []byte(svg), 0644); err != nil {
+				return fmt.Errorf("❌ failed to write SVG: %w", err)
+			}
 
-		fmt.Println("✅ SVG saved to", outputFile)
-		return nil
-	},
+			fmt.Println("✅ SVG saved to", outputFile)
+			return nil
+		},
+	}
+
+	cmd.Flags().String("fen", "", "FEN string to render")
+	cmd.Flags().String("out", "", "Output SVG file (default: board.svg)")
+
+	return cmd
 }
 
 func renderBoardSVG(board *chess.Board) string {
@@ -68,10 +74,4 @@ func renderBoardSVG(board *chess.Board) string {
 
 	svg += `</svg>`
 	return svg
-}
-
-func init() {
-	fenCmd.AddCommand(fen2svgCmd)
-	fen2svgCmd.Flags().String("fen", "", "FEN string to render")
-	fen2svgCmd.Flags().String("out", "", "Output SVG file (default: board.svg)")
 }

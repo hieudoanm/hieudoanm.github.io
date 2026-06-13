@@ -1,9 +1,10 @@
-// Package chess ...
 package chess
 
 import (
 	"github.com/spf13/cobra"
 )
+
+var jsonOutput bool
 
 func NewCommand() *cobra.Command {
 	cmd := &cobra.Command{
@@ -12,15 +13,17 @@ func NewCommand() *cobra.Command {
 		Long:  `Chess tools including board analysis, FEN/PGN utilities, and Lichess integration.`,
 	}
 
-	cmd.AddCommand(comLeaderboardsCmd)
-	cmd.AddCommand(comPlayerCmd)
-	cmd.AddCommand(comTitledCmd)
-	cmd.AddCommand(eloCmd)
-	cmd.AddCommand(fenCmd)
-	cmd.AddCommand(pgnCmd)
-	cmd.AddCommand(playCmd)
-	cmd.AddCommand(randomCmd)
-	cmd.AddCommand(setupCmd)
+	cmd.PersistentFlags().BoolVarP(&jsonOutput, "json", "j", false, "Output in JSON format")
+
+	cmd.AddCommand(newComLeaderboardsCmd())
+	cmd.AddCommand(newComPlayerCmd())
+	cmd.AddCommand(newComTitledCmd())
+	cmd.AddCommand(newEloCmd())
+	cmd.AddCommand(newFenCmd())
+	cmd.AddCommand(newPgnCmd())
+	cmd.AddCommand(newPlayCmd())
+	cmd.AddCommand(newRandomCmd())
+	cmd.AddCommand(newSetupCmd())
 
 	return cmd
 }

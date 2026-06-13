@@ -4,6 +4,8 @@ import (
 	"github.com/spf13/cobra"
 )
 
+var jsonOutput bool
+
 func NewCommand() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "convert",
@@ -25,6 +27,6 @@ func NewCommand() *cobra.Command {
 	cmd.AddCommand(newSnakecaseCmd())
 	cmd.AddCommand(newUppercaseCmd())
 	cmd.AddCommand(newCountCmd())
-
+	cmd.PersistentFlags().BoolVarP(&jsonOutput, "json", "j", false, "Output in JSON format")
 	return cmd
 }

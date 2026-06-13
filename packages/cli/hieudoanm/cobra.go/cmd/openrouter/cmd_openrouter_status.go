@@ -12,21 +12,29 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var (
-	statusSearch  string
-	statusWorkers int
-)
+func newStatusCmd() *cobra.Command {
+	var (
+		statusSearch  string
+		statusWorkers int
+	)
 
-var openrouterStatusCmd = &cobra.Command{
-	Use:   "status",
-	Short: "Run the status operation for the OpenRouter app",
-	Long: `The status command is a specific utility to execute operations related to status within the OpenRouter application.
+	cmd := &cobra.Command{
+		Use:   "status",
+		Short: "Run the status operation for the OpenRouter app",
+		Long: `The status command is a specific utility to execute operations related to status within the OpenRouter application.
 
 As a component of the ai tools, this command empowers you to interact directly with OpenRouter's status features via the CLI.`,
-	RunE: runOpenRouterStatus,
+		RunE: func(cmd *cobra.Command, args []string) error {
+			return runOpenRouterStatus(cmd, args, statusSearch, statusWorkers)
+		},
+	}
+
+	cmd.Flags().StringVarP(&statusSearch, "search", "s", "", "Filter models by name or ID before probing")
+	cmd.Flags().IntVarP(&statusWorkers, "workers", "w", 6, "Parallel probe workers")
+	return cmd
 }
 
-func runOpenRouterStatus(cmd *cobra.Command, args []string) error {
+func runOpenRouterStatus(cmd *cobra.Command, args []string, statusSearch string, statusWorkers int) error {
 	apiKey := LoadAPIKey()
 	if apiKey == "" {
 		return fmt.Errorf("no OpenRouter API key found.\n  Set OPEN_ROUTER_API_KEY or add it to ~/.hieudoanm")
@@ -168,9 +176,4 @@ func truncate(s string, max int) string {
 		return s
 	}
 	return s[:max-1] + "…"
-}
-
-func init() {
-	openrouterStatusCmd.Flags().StringVarP(&statusSearch, "search", "s", "", "Filter models by name or ID before probing")
-	openrouterStatusCmd.Flags().IntVarP(&statusWorkers, "workers", "w", 6, "Parallel probe workers")
 }

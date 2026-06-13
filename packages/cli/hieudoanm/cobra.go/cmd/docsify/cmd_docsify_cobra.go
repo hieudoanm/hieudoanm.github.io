@@ -381,31 +381,33 @@ func generateDocs(projectPath string, w io.Writer) error {
 	return nil
 }
 
-var docsifyCobraCmd = &cobra.Command{
-	Use:   "cobra [path/to/cobra/project]",
-	Short: "Generate README.md documentation from a Cobra CLI project",
-	Long:  `docsify cobra reads the cmd/ folder of a Cobra project and generates a single README.md documenting all commands, flags, and examples.`,
-	Args:  cobra.ExactArgs(1),
-	RunE: func(cmd *cobra.Command, args []string) error {
-		projectPath := args[0]
-		output, _ := cmd.Flags().GetString("output")
+func newCobraCmd() *cobra.Command {
+	cmd := &cobra.Command{
+		Use:   "cobra [path/to/cobra/project]",
+		Short: "Generate README.md documentation from a Cobra CLI project",
+		Long:  `docsify cobra reads the cmd/ folder of a Cobra project and generates a single README.md documenting all commands, flags, and examples.`,
+		Args:  cobra.ExactArgs(1),
+		RunE: func(cmd *cobra.Command, args []string) error {
+			projectPath := args[0]
+			output, _ := cmd.Flags().GetString("output")
 
-		out, err := os.Create(output)
-		if err != nil {
-			return err
-		}
-		defer out.Close()
+			out, err := os.Create(output)
+			if err != nil {
+				return err
+			}
+			defer out.Close()
 
-		if err := generateDocs(projectPath, out); err != nil {
-			return err
-		}
+			if err := generateDocs(projectPath, out); err != nil {
+				return err
+			}
 
-		cmd.Printf("📄 Docs written to %s\n", output)
-		return nil
-	},
-}
+			cmd.Printf("📄 Docs written to %s\n", output)
+			return nil
+		},
+	}
 
-func init() {
-	docsifyCobraCmd.CompletionOptions.DisableDefaultCmd = true
-	docsifyCobraCmd.Flags().StringP("output", "o", "README.md", "Output file path")
+	cmd.CompletionOptions.DisableDefaultCmd = true
+	cmd.Flags().StringP("output", "o", "README.md", "Output file path")
+
+	return cmd
 }

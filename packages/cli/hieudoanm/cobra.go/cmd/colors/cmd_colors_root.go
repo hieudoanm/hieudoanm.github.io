@@ -5,6 +5,8 @@ import (
 	"github.com/spf13/cobra"
 )
 
+var jsonOutput bool
+
 func NewCommand() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "colors",
@@ -14,12 +16,13 @@ func NewCommand() *cobra.Command {
 Use this root executable to manage configuring, running, and interacting with all colors-related operations securely and efficiently from your terminal.`,
 	}
 
-	cmd.AddCommand(colorsConvertHclCmd)
-	cmd.AddCommand(colorsConvertHexCmd)
-	cmd.AddCommand(colorsConvertOklchCmd)
-	cmd.AddCommand(colorsConvertRgbCmd)
-	cmd.AddCommand(colorsPaletteCmd)
-	cmd.AddCommand(colorsRandomCmd)
+	cmd.PersistentFlags().BoolVarP(&jsonOutput, "json", "j", false, "Output in JSON format")
+	cmd.AddCommand(newConvertHclCmd())
+	cmd.AddCommand(newConvertHexCmd())
+	cmd.AddCommand(newConvertOklchCmd())
+	cmd.AddCommand(newConvertRgbCmd())
+	cmd.AddCommand(newPaletteCmd())
+	cmd.AddCommand(newRandomCmd())
 
 	return cmd
 }

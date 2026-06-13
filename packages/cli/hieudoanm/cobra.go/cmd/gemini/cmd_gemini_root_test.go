@@ -20,11 +20,12 @@ func TestNewCommand(t *testing.T) {
 }
 
 func TestGeminiCodeCmd(t *testing.T) {
-	if geminiCodeCmd.Use != "code" {
-		t.Errorf("expected Use 'code', got %q", geminiCodeCmd.Use)
+	cmd := newCodeCmd()
+	if cmd.Use != "code" {
+		t.Errorf("expected Use 'code', got %q", cmd.Use)
 	}
-	if geminiCodeCmd.Short != "Gemini-powered AI coding assistant" {
-		t.Errorf("expected Short %q, got %q", "Gemini-powered AI coding assistant", geminiCodeCmd.Short)
+	if cmd.Short != "Gemini-powered AI coding assistant" {
+		t.Errorf("expected Short %q, got %q", "Gemini-powered AI coding assistant", cmd.Short)
 	}
 }
 

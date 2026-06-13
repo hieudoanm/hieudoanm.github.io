@@ -39,52 +39,54 @@ type obsidianGraph struct {
 	Orphan int            `json:"orphan"`
 }
 
-var docsifyObsidianCmd = &cobra.Command{
-	Use:   "obsidian",
-	Short: "Build a wiki-link graph from markdown files",
-	Long: `Walk a directory tree of markdown files, extract [[wiki-link]] references,
+func newObsidianCmd() *cobra.Command {
+	cmd := &cobra.Command{
+		Use:   "obsidian",
+		Short: "Build a wiki-link graph from markdown files",
+		Long: `Walk a directory tree of markdown files, extract [[wiki-link]] references,
 and output a graph of how files interconnect.
 
 Formats:
   dot     - Graphviz DOT format (default)
   json    - JSON object with nodes[] and edges[]
   edges   - Plain text edge list`,
-	RunE: func(cmd *cobra.Command, args []string) error {
-		absDir, err := filepath.Abs(obsidianDir)
-		if err != nil {
-			return fmt.Errorf("resolve directory: %w", err)
-		}
-
-		excludeSet := parseExcludeList(obsidianExclude)
-
-		nodes, edges, err := buildObsidianGraph(absDir, excludeSet)
-		if err != nil {
-			return err
-		}
-
-		orphan := 0
-		for _, n := range nodes {
-			if n.Links == 0 {
-				orphan++
+		RunE: func(cmd *cobra.Command, args []string) error {
+			absDir, err := filepath.Abs(obsidianDir)
+			if err != nil {
+				return fmt.Errorf("resolve directory: %w", err)
 			}
-		}
 
-		switch obsidianFormat {
-		case "json":
-			return writeObsidianJSON(absDir, nodes, edges, orphan, obsidianOut)
-		case "dot":
-			return writeObsidianDOT(nodes, edges, obsidianOut)
-		default:
-			return writeObsidianEdges(nodes, edges, obsidianOut)
-		}
-	},
-}
+			excludeSet := parseExcludeList(obsidianExclude)
 
-func init() {
-	docsifyObsidianCmd.Flags().StringVar(&obsidianDir, "dir", ".", "Root directory to scan")
-	docsifyObsidianCmd.Flags().StringVar(&obsidianOut, "out", "", "Output file path (default: stdout)")
-	docsifyObsidianCmd.Flags().StringVar(&obsidianFormat, "format", "dot", "Output format: dot, json, edges")
-	docsifyObsidianCmd.Flags().StringVar(&obsidianExclude, "exclude", ".git,node_modules,vendor,dist,.next,__pycache__", "Comma-separated directories to exclude")
+			nodes, edges, err := buildObsidianGraph(absDir, excludeSet)
+			if err != nil {
+				return err
+			}
+
+			orphan := 0
+			for _, n := range nodes {
+				if n.Links == 0 {
+					orphan++
+				}
+			}
+
+			switch obsidianFormat {
+			case "json":
+				return writeObsidianJSON(absDir, nodes, edges, orphan, obsidianOut)
+			case "dot":
+				return writeObsidianDOT(nodes, edges, obsidianOut)
+			default:
+				return writeObsidianEdges(nodes, edges, obsidianOut)
+			}
+		},
+	}
+
+	cmd.Flags().StringVar(&obsidianDir, "dir", ".", "Root directory to scan")
+	cmd.Flags().StringVar(&obsidianOut, "out", "", "Output file path (default: stdout)")
+	cmd.Flags().StringVar(&obsidianFormat, "format", "dot", "Output format: dot, json, edges")
+	cmd.Flags().StringVar(&obsidianExclude, "exclude", ".git,node_modules,vendor,dist,.next,__pycache__", "Comma-separated directories to exclude")
+
+	return cmd
 }
 
 // ─── Graph building ───────────────────────────────────────────────────────────

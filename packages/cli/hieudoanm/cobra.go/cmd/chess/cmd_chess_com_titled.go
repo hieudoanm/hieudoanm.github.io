@@ -38,28 +38,30 @@ func fetchTitleCount(title string) (int, error) {
 
 /* ----------------------------- Command ----------------------------- */
 
-var comTitledCmd = &cobra.Command{
-	Use:   "titled",
-	Short: "Run the titled operation for the chess.com app",
-	Long: `The titled command is a specific utility to execute operations related to titled within the chess.com application.
+func newComTitledCmd() *cobra.Command {
+	return &cobra.Command{
+		Use:   "titled",
+		Short: "Run the titled operation for the chess.com app",
+		Long: `The titled command is a specific utility to execute operations related to titled within the chess.com application.
 
 As a component of the chess tools, this command empowers you to interact directly with chess.com's titled features via the CLI.`,
-	RunE: func(cmd *cobra.Command, args []string) error {
-		fmt.Println()
-		fmt.Printf("| %-6s | %7s |\n", "Titled", "Players")
-		fmt.Printf("| %-6s | %7s |\n", strings.Repeat("-", 6), strings.Repeat("-", 7))
+		RunE: func(cmd *cobra.Command, args []string) error {
+			fmt.Println()
+			fmt.Printf("| %-6s | %7s |\n", "Titled", "Players")
+			fmt.Printf("| %-6s | %7s |\n", strings.Repeat("-", 6), strings.Repeat("-", 7))
 
-		for _, title := range Titles {
-			count, err := fetchTitleCount(title)
-			if err != nil {
-				fmt.Fprintf(os.Stderr, "❌ Failed to fetch %s: %v\n", title, err)
-				continue
+			for _, title := range Titles {
+				count, err := fetchTitleCount(title)
+				if err != nil {
+					fmt.Fprintf(os.Stderr, "❌ Failed to fetch %s: %v\n", title, err)
+					continue
+				}
+
+				fmt.Printf("| %-6s | %7s |\n", title, number.Comma(count))
 			}
+			fmt.Println()
 
-			fmt.Printf("| %-6s | %7s |\n", title, number.Comma(count))
-		}
-		fmt.Println()
-
-		return nil
-	},
+			return nil
+		},
+	}
 }

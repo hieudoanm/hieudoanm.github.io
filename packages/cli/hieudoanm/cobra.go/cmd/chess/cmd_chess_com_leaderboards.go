@@ -96,55 +96,57 @@ type LeaderboardsResponse struct {
 	LiveBlitz960 []Player `json:"live_blitz960"`
 }
 
-var comLeaderboardsCmd = &cobra.Command{
-	Use:   "leaderboards",
-	Short: "Run the leaderboards operation for the chess.com app",
-	Long: `The leaderboards command is a specific utility to execute operations related to leaderboards within the chess.com application.
+func newComLeaderboardsCmd() *cobra.Command {
+	cmd := &cobra.Command{
+		Use:   "leaderboards",
+		Short: "Run the leaderboards operation for the chess.com app",
+		Long: `The leaderboards command is a specific utility to execute operations related to leaderboards within the chess.com application.
 
 As a component of the chess tools, this command empowers you to interact directly with chess.com's leaderboards features via the CLI.`,
-	RunE: func(cmd *cobra.Command, args []string) error {
-		top, _ := cmd.Flags().GetInt("top")
-		countryFilter, _ := cmd.Flags().GetString("country")
+		RunE: func(cmd *cobra.Command, args []string) error {
+			top, _ := cmd.Flags().GetInt("top")
+			countryFilter, _ := cmd.Flags().GetString("country")
 
-		if top <= 0 {
-			top = 5
-		}
-
-		url := "https://api.chess.com/pub/leaderboards"
-		body, err := requests.Get(url, requests.Options{})
-		if err != nil {
-			return fmt.Errorf("failed to fetch leaderboards: %w", err)
-		}
-
-		var data LeaderboardsResponse
-		if err := json.Unmarshal(body, &data); err != nil {
-			return fmt.Errorf("failed to parse response: %w", err)
-		}
-
-		filterPlayers := func(players []Player) []Player {
-			if countryFilter == "" {
-				return players
+			if top <= 0 {
+				top = 5
 			}
-			var filtered []Player
-			for _, p := range players {
-				code, _ := country(p.Country)
-				if code == strings.ToUpper(countryFilter) {
-					filtered = append(filtered, p)
+
+			url := "https://api.chess.com/pub/leaderboards"
+			body, err := requests.Get(url, requests.Options{})
+			if err != nil {
+				return fmt.Errorf("failed to fetch leaderboards: %w", err)
+			}
+
+			var data LeaderboardsResponse
+			if err := json.Unmarshal(body, &data); err != nil {
+				return fmt.Errorf("failed to parse response: %w", err)
+			}
+
+			filterPlayers := func(players []Player) []Player {
+				if countryFilter == "" {
+					return players
 				}
+				var filtered []Player
+				for _, p := range players {
+					code, _ := country(p.Country)
+					if code == strings.ToUpper(countryFilter) {
+						filtered = append(filtered, p)
+					}
+				}
+				return filtered
 			}
-			return filtered
-		}
 
-		printTop("♟ Live Bullet", filterPlayers(data.LiveBullet), top)
-		printTop("♞ Live Blitz", filterPlayers(data.LiveBlitz), top)
-		printTop("⏱ Live Rapid", filterPlayers(data.LiveRapid), top)
-		printTop("♜ Live Blitz 960", filterPlayers(data.LiveBlitz960), top)
+			printTop("♟ Live Bullet", filterPlayers(data.LiveBullet), top)
+			printTop("♞ Live Blitz", filterPlayers(data.LiveBlitz), top)
+			printTop("⏱ Live Rapid", filterPlayers(data.LiveRapid), top)
+			printTop("♜ Live Blitz 960", filterPlayers(data.LiveBlitz960), top)
 
-		return nil
-	},
-}
+			return nil
+		},
+	}
 
-func init() {
-	comLeaderboardsCmd.Flags().Int("top", 5, "Number of top players to display")
-	comLeaderboardsCmd.Flags().String("country", "", "Filter players by country code (e.g., US, RU)")
+	cmd.Flags().Int("top", 5, "Number of top players to display")
+	cmd.Flags().String("country", "", "Filter players by country code (e.g., US, RU)")
+
+	return cmd
 }
