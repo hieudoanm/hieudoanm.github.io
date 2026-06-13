@@ -24,19 +24,19 @@ type dnsResult struct {
 var dnsJSON bool
 
 func newDNSSubCmd() *cobra.Command {
+	var domain string
 	var recordType string
 
 	cmd := &cobra.Command{
-		Use:   "dns <domain>",
+		Use:   "dns [--domain <domain>]",
 		Short: "DNS record lookup",
 		Long:  `Look up DNS records (A, AAAA, CNAME, MX, NS, TXT) for a domain. Defaults to all record types.`,
-		Example: `  hieudoanm net dns example.com
-  hieudoanm net dns example.com --type mx
-  hieudoanm net dns example.com --json`,
-		Args: cobra.ExactArgs(1),
+		Example: `  hieudoanm net dns --domain example.com
+  hieudoanm net dns --domain example.com --type mx
+  hieudoanm net dns --domain example.com --json`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			resolver := &net.Resolver{}
-			result := dnsResult{Domain: args[0]}
+			result := dnsResult{Domain: domain}
 			types := []string{"a", "aaaa", "cname", "mx", "ns", "txt"}
 
 			if recordType != "" {
@@ -139,6 +139,7 @@ func newDNSSubCmd() *cobra.Command {
 		},
 	}
 
+	cmd.Flags().StringVarP(&domain, "domain", "d", "", "Domain to look up")
 	cmd.Flags().StringVarP(&recordType, "type", "t", "", "Record type (a, aaaa, cname, mx, ns, txt)")
 	cmd.Flags().BoolVar(&dnsJSON, "json", false, "Output in JSON format")
 	return cmd

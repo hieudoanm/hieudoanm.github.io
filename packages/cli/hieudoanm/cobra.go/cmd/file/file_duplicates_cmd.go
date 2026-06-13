@@ -11,13 +11,13 @@ import (
 
 func newDuplicatesCmd() *cobra.Command {
 	var minSize int64
+	var dir string
 	cmd := &cobra.Command{
-		Use:   "duplicates <directory>",
+		Use:   "duplicates [--dir <path>]",
 		Short: "Find duplicate files by size and partial hash",
-		Args:  cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			bySize := make(map[int64][]string)
-			filepath.Walk(args[0], func(path string, fi os.FileInfo, err error) error {
+			filepath.Walk(dir, func(path string, fi os.FileInfo, err error) error {
 				if err != nil || fi.IsDir() || fi.Size() < minSize {
 					return nil
 				}
@@ -67,6 +67,7 @@ func newDuplicatesCmd() *cobra.Command {
 			return nil
 		},
 	}
+	cmd.Flags().StringVarP(&dir, "dir", "d", "", "Directory to scan")
 	cmd.Flags().Int64VarP(&minSize, "min-size", "m", 1, "Minimum file size to consider (bytes)")
 	return cmd
 }

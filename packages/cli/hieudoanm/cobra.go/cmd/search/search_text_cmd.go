@@ -8,30 +8,24 @@ import (
 )
 
 func newTextCmd() *cobra.Command {
+	var pattern string
+	var path string
 	var ignoreCase bool
 	var maxCount int
 	var include string
 	var maxDepth int
 
 	cmd := &cobra.Command{
-		Use:   "text <pattern> [files-or-dirs...]",
+		Use:   "text [--pattern <pattern>] [--path <path>]",
 		Short: "Search file contents using regex",
 		Long: `Search for a regex pattern inside files. If a directory is given, searches recursively.
 
 Examples:
-  search text "TODO" .
-  search text "func.*error" --include "*.go"
-  search text "import" src/ --ignore-case
-  search text "panic" --max-count 5`,
-		Args: cobra.MinimumNArgs(1),
+  search text --pattern "TODO" --path .
+  search text --pattern "func.*error" --include "*.go"
+  search text --pattern "import" --path src/ --ignore-case
+  search text --pattern "panic" --max-count 5`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			pattern := args[0]
-
-			searchRoots := args[1:]
-			if len(searchRoots) == 0 {
-				searchRoots = []string{"."}
-			}
-
 			rePattern := pattern
 			if ignoreCase {
 				rePattern = "(?i)" + pattern
@@ -43,7 +37,7 @@ Examples:
 			}
 
 			includePattern := includeToRegex(include)
-			results, err := searchTextInRoots(pattern, searchRoots, re, includePattern, maxDepth, maxCount)
+			results, err := searchTextInRoots(pattern, []string{path}, re, includePattern, maxDepth, maxCount)
 			if err != nil {
 				return err
 			}
@@ -53,6 +47,8 @@ Examples:
 		},
 	}
 
+	cmd.Flags().StringVarP(&pattern, "pattern", "p", "", "Regex pattern to search")
+	cmd.Flags().StringVarP(&path, "path", "P", ".", "File or directory to search")
 	cmd.Flags().BoolVarP(&ignoreCase, "ignore-case", "i", false, "Case-insensitive search")
 	cmd.Flags().IntVarP(&maxCount, "max-count", "m", 0, "Maximum number of matches")
 	cmd.Flags().StringVar(&include, "include", "", "Glob pattern for file names (e.g. \"*.go\")")

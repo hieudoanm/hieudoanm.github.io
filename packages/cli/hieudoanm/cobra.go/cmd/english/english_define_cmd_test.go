@@ -49,23 +49,20 @@ func TestNewDefineCmd(t *testing.T) {
 	if cmd == nil {
 		t.Fatal("newDefineCmd() returned nil")
 	}
-	if cmd.Use != "define <word>" {
+	if cmd.Use != "define [--word <word>]" {
 		t.Errorf("Use = %q", cmd.Use)
 	}
 	if cmd.Flag("json") == nil {
 		t.Error("expected --json flag")
 	}
+	if cmd.Flag("word") == nil {
+		t.Error("expected --word flag")
+	}
 }
 
 func TestNewDefineCmdArgs(t *testing.T) {
 	cmd := newDefineCmd()
-	if err := cmd.Args(cmd, []string{}); err == nil {
-		t.Error("expected error for 0 args")
-	}
-	if err := cmd.Args(cmd, []string{"hello"}); err != nil {
-		t.Errorf("expected no error for 1 arg, got: %v", err)
-	}
-	if err := cmd.Args(cmd, []string{"hello", "world"}); err == nil {
-		t.Error("expected error for 2 args")
+	if cmd.Args != nil {
+		t.Error("Args should be nil after conversion to flags")
 	}
 }

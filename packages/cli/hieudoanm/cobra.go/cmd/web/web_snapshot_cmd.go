@@ -13,6 +13,7 @@ import (
 
 func newSnapshotCmd() *cobra.Command {
 	var (
+		flagURL      string
 		flagOutput   string
 		flagWidth    int
 		flagHeight   int
@@ -26,14 +27,13 @@ func newSnapshotCmd() *cobra.Command {
 	)
 
 	cmd := &cobra.Command{
-		Use:   "snapshot <url>",
+		Use:   "snapshot [--url <url>]",
 		Short: "Take a screenshot of a web page",
 		Long: `Take a full or viewport screenshot of a given URL.
 The output file is saved as PNG (default) or PDF.
 If --output is a directory, the filename is derived from the URL hostname + timestamp.`,
-		Args: cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
-			rawURL := args[0]
+			rawURL := flagURL
 			if !strings.HasPrefix(rawURL, "http://") && !strings.HasPrefix(rawURL, "https://") {
 				rawURL = "https://" + rawURL
 			}
@@ -115,6 +115,7 @@ If --output is a directory, the filename is derived from the URL hostname + time
 		},
 	}
 
+	cmd.Flags().StringVarP(&flagURL, "url", "u", "", "URL to capture")
 	cmd.Flags().StringVarP(&flagOutput, "output", "o", "", "Output file or directory")
 	cmd.Flags().IntVar(&flagWidth, "width", 0, "Viewport width (overrides --preset)")
 	cmd.Flags().IntVar(&flagHeight, "height", 0, "Viewport height (overrides --preset)")

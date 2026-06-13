@@ -15,15 +15,15 @@ import (
 )
 
 func newChecksumCmd() *cobra.Command {
-	var algorithm string
+	var algorithm, filePath string
 	cmd := &cobra.Command{
-		Use:   "checksum <file>",
+		Use:   "checksum [--file <path>]",
 		Short: "Compute file checksum",
-		Example: `  file checksum document.pdf
-  file checksum --algorithm sha256 document.pdf`,
-		Args: cobra.ExactArgs(1),
+		Example: `  file checksum --file document.pdf
+  file checksum --algorithm sha256 --file document.pdf
+  file checksum -f document.pdf --algorithm sha256`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			f, err := os.Open(args[0])
+			f, err := os.Open(filePath)
 			if err != nil {
 				return err
 			}
@@ -55,17 +55,18 @@ func newChecksumCmd() *cobra.Command {
 
 			if jsonOutput {
 				b, _ := json.MarshalIndent(map[string]string{
-					"file":      args[0],
+					"file":      filePath,
 					"algorithm": algorithm,
 					"hash":      hash,
 				}, "", "  ")
 				fmt.Println(string(b))
 			} else {
-				fmt.Printf("%s  %s\n", hash, args[0])
+				fmt.Printf("%s  %s\n", hash, filePath)
 			}
 			return nil
 		},
 	}
 	cmd.Flags().StringVarP(&algorithm, "algorithm", "a", "sha256", "Hash algorithm: md5, sha1, sha256, sha512")
+	cmd.Flags().StringVarP(&filePath, "file", "f", "", "File path")
 	return cmd
 }

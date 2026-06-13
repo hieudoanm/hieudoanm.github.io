@@ -8,19 +8,19 @@ import (
 )
 
 func newUntilCmd() *cobra.Command {
-	return &cobra.Command{
-		Use:   "until <datetime>",
+	var timeStr string
+	cmd := &cobra.Command{
+		Use:   "until [--time <datetime>]",
 		Short: "Countdown to a specific date/time",
 		Long: `Show the time remaining until a given datetime.
 
 Accepts formats: RFC3339 (2026-12-25T00:00:00Z), ISO date (2026-12-25),
 date and time (2026-12-25 15:04:05), or a Unix timestamp in seconds.`,
-		Example: `  hieudoanm time until 2026-12-25
-  hieudoanm time until "2026-12-25 15:04:05"
-  hieudoanm time until 2026-12-25T00:00:00Z`,
-		Args: cobra.ExactArgs(1),
+		Example: `  hieudoanm time until --time 2026-12-25
+  hieudoanm time until --time "2026-12-25 15:04:05"
+  hieudoanm time until --time 2026-12-25T00:00:00Z`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			t, err := parseDatetime(args[0])
+			t, err := parseDatetime(timeStr)
 			if err != nil {
 				return fmt.Errorf("parse datetime: %w", err)
 			}
@@ -41,4 +41,7 @@ date and time (2026-12-25 15:04:05), or a Unix timestamp in seconds.`,
 			return nil
 		},
 	}
+
+	cmd.Flags().StringVarP(&timeStr, "time", "t", "", "Target datetime")
+	return cmd
 }

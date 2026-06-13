@@ -7,22 +7,22 @@ import (
 )
 
 func newCronCmd() *cobra.Command {
+	var expression string
 	var next int
 	var until string
 	var cronJSON bool
 
 	cmd := &cobra.Command{
-		Use:   "cron <expression>",
+		Use:   "cron [--expression <expression>]",
 		Short: "Describe a cron expression in plain English and compute next runs",
 		Long:  `Parse a 5-field cron expression, describe when it runs, and compute upcoming occurrences.`,
-		Example: `  cron "*/15 * * * *"
-  cron "0 9 * * 1-5"
-  cron "0 0 1 1 *"
-  cron --next 5 "*/30 * * * *"
-  cron --next 10 --until "2026-12-31" "0 0 * * *"`,
-		Args: cobra.ExactArgs(1),
+		Example: `  cron --expression "*/15 * * * *"
+  cron --expression "0 9 * * 1-5"
+  cron --expression "0 0 1 1 *"
+  cron --next 5 --expression "*/30 * * * *"
+  cron --next 10 --until "2026-12-31" --expression "0 0 * * *"`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			expr := args[0]
+			expr := expression
 			untilTime, err := parseUntil(until)
 			if err != nil {
 				return err
@@ -42,6 +42,7 @@ func newCronCmd() *cobra.Command {
 		},
 	}
 
+	cmd.Flags().StringVarP(&expression, "expression", "e", "", "Cron expression")
 	cmd.Flags().IntVarP(&next, "next", "n", 0, "Show next N run times")
 	cmd.Flags().StringVar(&until, "until", "", "Show runs until this date (YYYY-MM-DD)")
 	cmd.Flags().BoolVar(&cronJSON, "json", false, "Output in JSON format")

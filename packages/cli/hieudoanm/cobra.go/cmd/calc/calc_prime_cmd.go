@@ -8,20 +8,19 @@ import (
 )
 
 func newPrimeCmd() *cobra.Command {
+	var number int
 	var list bool
 
 	cmd := &cobra.Command{
-		Use:   "prime <n>",
+		Use:   "prime [--number <n>]",
 		Short: "Check if a number is prime, or generate primes up to N",
 		Long:  `Test primality of a number, or list/count primes up to a limit with --list.`,
-		Example: `  calc prime 17
-  calc prime 100 --list
-  calc prime 1000000 --count`,
-		Args: cobra.ExactArgs(1),
+		Example: `  calc prime --number 17
+  calc prime --number 100 --list
+  calc prime --number 1000000 --count`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			var n int64
-			if _, err := fmt.Sscanf(args[0], "%d", &n); err != nil {
-				return fmt.Errorf("invalid integer %q", args[0])
+			var n int64 = int64(number)
+			if n < 2 {
 			}
 			if n < 2 {
 				return fmt.Errorf("number must be >= 2")
@@ -60,6 +59,7 @@ func newPrimeCmd() *cobra.Command {
 		},
 	}
 
+	cmd.Flags().IntVarP(&number, "number", "n", 0, "Number to check or limit")
 	cmd.Flags().BoolVarP(&list, "list", "l", false, "List all primes up to N")
 	return cmd
 }

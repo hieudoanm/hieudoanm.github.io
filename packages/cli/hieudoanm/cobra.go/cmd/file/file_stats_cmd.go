@@ -12,10 +12,10 @@ import (
 )
 
 func newStatsCmd() *cobra.Command {
-	return &cobra.Command{
-		Use:   "stats <directory>",
+	var dir string
+	cmd := &cobra.Command{
+		Use:   "stats [--dir <path>]",
 		Short: "Show file statistics by extension",
-		Args:  cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			extStats := make(map[string]struct {
 				count int
@@ -24,7 +24,7 @@ func newStatsCmd() *cobra.Command {
 			var totalFiles int
 			var totalSize int64
 
-			filepath.Walk(args[0], func(path string, fi os.FileInfo, err error) error {
+			filepath.Walk(dir, func(path string, fi os.FileInfo, err error) error {
 				if err != nil || fi.IsDir() {
 					return nil
 				}
@@ -55,7 +55,7 @@ func newStatsCmd() *cobra.Command {
 					return entries[i].Size > entries[j].Size
 				})
 				b, _ := json.MarshalIndent(map[string]interface{}{
-					"path":        args[0],
+					"path":        dir,
 					"totalFiles":  totalFiles,
 					"totalSize":   totalSize,
 					"byExtension": entries,
@@ -89,4 +89,6 @@ func newStatsCmd() *cobra.Command {
 			return nil
 		},
 	}
+	cmd.Flags().StringVarP(&dir, "dir", "d", "", "Directory path")
+	return cmd
 }

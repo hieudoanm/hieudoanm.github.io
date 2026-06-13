@@ -8,8 +8,9 @@ import (
 )
 
 func newEvalCmd() *cobra.Command {
-	return &cobra.Command{
-		Use:   "eval <expression>",
+	var expression string
+	cmd := &cobra.Command{
+		Use:   "eval [--expression <expression>]",
 		Short: "Evaluate a mathematical expression",
 		Long: `Evaluate arbitrary math expressions with operators and functions.
 
@@ -18,19 +19,18 @@ Functions: sqrt, sin, cos, tan, abs, floor, ceil, round, log, log10, exp
 Constants: pi, e
 
 Use parentheses for grouping.`,
-		Example: `  calc eval "2 + 2"
-  calc eval "sqrt(144) * 2"
-  calc eval "pi * 5 ^ 2"
-  calc eval "sin(45) ^ 2 + cos(45) ^ 2"`,
-		Args: cobra.ExactArgs(1),
+		Example: `  calc eval --expression "2 + 2"
+  calc eval --expression "sqrt(144) * 2"
+  calc eval --expression "pi * 5 ^ 2"
+  calc eval --expression "sin(45) ^ 2 + cos(45) ^ 2"`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			v, err := newEvaluator(args[0]).eval()
+			v, err := newEvaluator(expression).eval()
 			if err != nil {
 				return fmt.Errorf("eval: %w", err)
 			}
 			if jsonOutput {
 				b, _ := json.MarshalIndent(map[string]interface{}{
-					"expression": args[0],
+					"expression": expression,
 					"result":     v,
 				}, "", "  ")
 				fmt.Println(string(b))
@@ -40,4 +40,7 @@ Use parentheses for grouping.`,
 			return nil
 		},
 	}
+
+	cmd.Flags().StringVarP(&expression, "expression", "e", "", "Mathematical expression to evaluate")
+	return cmd
 }

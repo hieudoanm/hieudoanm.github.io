@@ -9,18 +9,15 @@ import (
 )
 
 func newFactorialCmd() *cobra.Command {
-	return &cobra.Command{
-		Use:   "factorial <n>",
+	var number int
+	cmd := &cobra.Command{
+		Use:   "factorial [--number <n>]",
 		Short: "Compute factorial of a number (n!)",
 		Long:  `Calculate the factorial of a non-negative integer using arbitrary-precision arithmetic.`,
-		Example: `  calc factorial 10
-  calc factorial 100`,
-		Args: cobra.ExactArgs(1),
+		Example: `  calc factorial --number 10
+  calc factorial --number 100`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			var n int64
-			if _, err := fmt.Sscanf(args[0], "%d", &n); err != nil {
-				return fmt.Errorf("invalid integer %q", args[0])
-			}
+			n := int64(number)
 			if n < 0 {
 				return fmt.Errorf("factorial of negative number is undefined")
 			}
@@ -39,4 +36,7 @@ func newFactorialCmd() *cobra.Command {
 			return nil
 		},
 	}
+
+	cmd.Flags().IntVarP(&number, "number", "n", 0, "Non-negative integer")
+	return cmd
 }

@@ -18,23 +18,23 @@ var totpJSON bool
 
 func newTotpCmd() *cobra.Command {
 	var (
-		step    int
-		digits  int
-		timeStr string
+		secretStr string
+		step      int
+		digits    int
+		timeStr   string
 	)
 
 	cmd := &cobra.Command{
-		Use:   "totp <secret>",
+		Use:   "totp [--secret <secret>]",
 		Short: "Generate a TOTP code from a Base32 secret",
 		Long: `Generate a Time-based One-Time Password (RFC 6238) from a Base32-encoded secret key.
 
 Accepts secrets with or without padding. Compatible with Google Authenticator, Authy, and most 2FA apps.`,
-		Example: `  crypto totp JBSWY3DPEHPK3PXP
-  crypto totp JBSWY3DPEHPK3PXP --step 30 --digits 6
-  crypto totp JBSWY3DPEHPK3PXP --json`,
-		Args: cobra.ExactArgs(1),
+		Example: `  crypto totp --secret JBSWY3DPEHPK3PXP
+  crypto totp --secret JBSWY3DPEHPK3PXP --step 30 --digits 6
+  crypto totp --secret JBSWY3DPEHPK3PXP --json`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			secret := strings.ToUpper(strings.TrimSpace(args[0]))
+			secret := strings.ToUpper(strings.TrimSpace(secretStr))
 			secret = strings.ReplaceAll(secret, " ", "")
 
 			padding := 8 - len(secret)%8
@@ -90,6 +90,7 @@ Accepts secrets with or without padding. Compatible with Google Authenticator, A
 		},
 	}
 
+	cmd.Flags().StringVarP(&secretStr, "secret", "s", "", "Base32 secret")
 	cmd.Flags().IntVar(&step, "step", 30, "Time step in seconds")
 	cmd.Flags().IntVar(&digits, "digits", 6, "Number of digits (6 or 8)")
 	cmd.Flags().StringVar(&timeStr, "time", "", "Time in RFC3339 format (for testing)")

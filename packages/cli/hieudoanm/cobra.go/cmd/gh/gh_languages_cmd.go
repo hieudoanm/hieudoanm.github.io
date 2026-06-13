@@ -66,17 +66,16 @@ func generateLanguagesSVG(langs map[string]int) string {
 }
 
 func newLanguagesCmd() *cobra.Command {
+	var repo string
 	cmd := &cobra.Command{
-		Use:   "languages <owner/repo>",
+		Use:   "languages [--repo <owner/repo>]",
 		Short: "Show repository language breakdown and generate SVG bar chart",
 		Long: `Fetches language statistics for a GitHub repository and generates
 an SVG bar chart showing the breakdown.
 
 Example:
-  hieudoanm gh languages hieudoanm/hieudoanm.github.io`,
-		Args: cobra.ExactArgs(1),
+  hieudoanm gh languages --repo hieudoanm/hieudoanm.github.io`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			repo := args[0]
 			output, _ := cmd.Flags().GetString("output")
 
 			parts := strings.Split(repo, "/")
@@ -120,6 +119,7 @@ Example:
 		},
 	}
 
+	cmd.Flags().StringVarP(&repo, "repo", "r", "", "Repository (owner/repo)")
 	cmd.Flags().StringP("output", "o", "languages.svg", "Output SVG file path")
 	return cmd
 }

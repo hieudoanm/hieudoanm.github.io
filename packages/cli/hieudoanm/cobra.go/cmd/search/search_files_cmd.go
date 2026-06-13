@@ -5,12 +5,14 @@ import (
 )
 
 func newFilesCmd() *cobra.Command {
+	var pattern string
+	var dir string
 	var maxDepth int
 	var fileType string
 	var hidden bool
 
 	cmd := &cobra.Command{
-		Use:   "files <pattern> [root]",
+		Use:   "files [--pattern <pattern>] [--dir <dir>]",
 		Short: "Find files by glob pattern",
 		Long: `Find files matching a glob pattern starting from an optional root directory.
 
@@ -21,30 +23,25 @@ Patterns use glob syntax:
   test_*.py     - files matching test_ prefix with .py extension
 
 Examples:
-  search files "*.go"
-  search files "*.ts" src/
-  search files "**/*.md" docs/
-  search files "*.py" --type f
-  search files "config.*" --hidden`,
-		Args: cobra.RangeArgs(1, 2),
+  search files --pattern "*.go"
+  search files --pattern "*.ts" --dir src/
+  search files --pattern "**/*.md" --dir docs/
+  search files --pattern "*.py" --type f
+  search files --pattern "config.*" --hidden`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			pattern := args[0]
-			root := "."
-			if len(args) > 1 {
-				root = args[1]
-			}
-
-			results, err := findFilesWithGlob(pattern, root, maxDepth, fileType, hidden)
+			results, err := findFilesWithGlob(pattern, dir, maxDepth, fileType, hidden)
 			if err != nil {
 				return err
 			}
 
-			outputFileResults(results, pattern, root)
+			outputFileResults(results, pattern, dir)
 			return nil
 		},
 	}
 
-	cmd.Flags().IntVarP(&maxDepth, "max-depth", "d", 0, "Maximum directory depth (0 = unlimited)")
+	cmd.Flags().StringVarP(&pattern, "pattern", "p", "", "Glob pattern to match")
+	cmd.Flags().StringVarP(&dir, "dir", "d", ".", "Root directory to search")
+	cmd.Flags().IntVarP(&maxDepth, "max-depth", "D", 0, "Maximum directory depth (0 = unlimited)")
 	cmd.Flags().StringVarP(&fileType, "type", "t", "", "Filter by type: f (file) or d (directory)")
 	cmd.Flags().BoolVarP(&hidden, "hidden", "H", false, "Include hidden files and directories")
 	return cmd

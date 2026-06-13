@@ -5,25 +5,28 @@ import (
 	"fmt"
 	"math"
 	"sort"
+	"strconv"
 
 	"github.com/spf13/cobra"
 )
 
 func newStatsCmd() *cobra.Command {
-	return &cobra.Command{
-		Use:   "stats <n1> <n2> ...",
+	var values []string
+	cmd := &cobra.Command{
+		Use:   "stats [--values <n1,n2,...>]",
 		Short: "Statistical summary of numbers",
 		Long:  `Compute count, min, max, sum, mean, median, and standard deviation.`,
-		Example: `  calc stats 1 2 3 4 5
-  calc stats 100 200 300
-  calc stats --json 1 2 3 4 5 6 7 8 9 10`,
-		Args: cobra.MinimumNArgs(2),
+		Example: `  calc stats --values 1,2,3,4,5
+  calc stats --values 100,200,300
+  calc stats --json --values 1,2,3,4,5,6,7,8,9,10`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			nums := make([]float64, len(args))
-			for i, s := range args {
-				if _, err := fmt.Sscanf(s, "%f", &nums[i]); err != nil {
+			nums := make([]float64, len(values))
+			for i, s := range values {
+				v, err := strconv.ParseFloat(s, 64)
+				if err != nil {
 					return fmt.Errorf("invalid number %q: %w", s, err)
 				}
+				nums[i] = v
 			}
 
 			sort.Float64s(nums)
@@ -67,4 +70,7 @@ func newStatsCmd() *cobra.Command {
 			return nil
 		},
 	}
+
+	cmd.Flags().StringSliceVarP(&values, "values", "v", nil, "Comma-separated numbers")
+	return cmd
 }

@@ -12,12 +12,12 @@ import (
 )
 
 func newDominantCmd() *cobra.Command {
-	return &cobra.Command{
-		Use:   "dominant <file>",
+	var file string
+	cmd := &cobra.Command{
+		Use:   "dominant [--file <file>]",
 		Short: "Extract dominant color from an image",
-		Args:  cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
-			f, err := os.Open(args[0])
+			f, err := os.Open(file)
 			if err != nil {
 				return err
 			}
@@ -76,7 +76,7 @@ func newDominantCmd() *cobra.Command {
 				b, _ := json.MarshalIndent(entries, "", "  ")
 				fmt.Println(string(b))
 			} else {
-				fmt.Printf("Dominant colors for %s:\n", args[0])
+				fmt.Printf("Dominant colors for %s:\n", file)
 				fmt.Println()
 				for _, e := range entries {
 					fmt.Printf("  %s  %.1f%%\n", e.Hex, e.Pct)
@@ -85,4 +85,7 @@ func newDominantCmd() *cobra.Command {
 			return nil
 		},
 	}
+
+	cmd.Flags().StringVarP(&file, "file", "f", "", "Image file")
+	return cmd
 }

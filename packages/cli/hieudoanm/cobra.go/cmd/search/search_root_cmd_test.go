@@ -26,10 +26,18 @@ func TestNewCommand(t *testing.T) {
 
 func TestFilesCmdHasFlags(t *testing.T) {
 	cmd := newFilesCmd()
-	if cmd.Use != "files <pattern> [root]" {
+	if cmd.Use != "files [--pattern <pattern>] [--dir <dir>]" {
 		t.Errorf("Use = %q", cmd.Use)
 	}
-	_, err := cmd.Flags().GetInt("max-depth")
+	_, err := cmd.Flags().GetString("pattern")
+	if err != nil {
+		t.Error("expected --pattern flag")
+	}
+	_, err = cmd.Flags().GetString("dir")
+	if err != nil {
+		t.Error("expected --dir flag")
+	}
+	_, err = cmd.Flags().GetInt("max-depth")
 	if err != nil {
 		t.Error("expected --max-depth flag")
 	}
@@ -45,10 +53,18 @@ func TestFilesCmdHasFlags(t *testing.T) {
 
 func TestTextCmdHasFlags(t *testing.T) {
 	cmd := newTextCmd()
-	if cmd.Use != "text <pattern> [files-or-dirs...]" {
+	if cmd.Use != "text [--pattern <pattern>] [--path <path>]" {
 		t.Errorf("Use = %q", cmd.Use)
 	}
-	_, err := cmd.Flags().GetBool("ignore-case")
+	_, err := cmd.Flags().GetString("pattern")
+	if err != nil {
+		t.Error("expected --pattern flag")
+	}
+	_, err = cmd.Flags().GetString("path")
+	if err != nil {
+		t.Error("expected --path flag")
+	}
+	_, err = cmd.Flags().GetBool("ignore-case")
 	if err != nil {
 		t.Error("expected --ignore-case flag")
 	}
@@ -64,10 +80,14 @@ func TestTextCmdHasFlags(t *testing.T) {
 
 func TestWebCmdHasFlags(t *testing.T) {
 	cmd := newWebCmd()
-	if cmd.Use != "web <query>" {
+	if cmd.Use != "web [--query <query>]" {
 		t.Errorf("Use = %q", cmd.Use)
 	}
-	_, err := cmd.Flags().GetInt("max-results")
+	_, err := cmd.Flags().GetString("query")
+	if err != nil {
+		t.Error("expected --query flag")
+	}
+	_, err = cmd.Flags().GetInt("max-results")
 	if err != nil {
 		t.Error("expected --max-results flag")
 	}
@@ -79,10 +99,18 @@ func TestWebCmdHasFlags(t *testing.T) {
 
 func TestCodeCmdHasFlags(t *testing.T) {
 	cmd := newCodeCmd()
-	if cmd.Use != "code <symbol> [dir]" {
+	if cmd.Use != "code [--symbol <symbol>] [--dir <dir>]" {
 		t.Errorf("Use = %q", cmd.Use)
 	}
-	_, err := cmd.Flags().GetString("lang")
+	_, err := cmd.Flags().GetString("symbol")
+	if err != nil {
+		t.Error("expected --symbol flag")
+	}
+	_, err = cmd.Flags().GetString("dir")
+	if err != nil {
+		t.Error("expected --dir flag")
+	}
+	_, err = cmd.Flags().GetString("lang")
 	if err != nil {
 		t.Error("expected --lang flag")
 	}

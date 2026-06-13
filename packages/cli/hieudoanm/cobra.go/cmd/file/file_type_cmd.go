@@ -9,22 +9,22 @@ import (
 )
 
 func newTypeCmd() *cobra.Command {
-	return &cobra.Command{
-		Use:   "type <file>",
+	var filePath string
+	cmd := &cobra.Command{
+		Use:   "type [--file <path>]",
 		Short: "Detect file type by extension",
-		Example: `  file type image.png
-  file type document.pdf`,
-		Args: cobra.ExactArgs(1),
+		Example: `  file type --file image.png
+  file type -f document.pdf`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			info, err := os.Stat(args[0])
+			info, err := os.Stat(filePath)
 			if err != nil {
 				return err
 			}
-			mime := detectMIME(args[0])
+			mime := detectMIME(filePath)
 
 			if jsonOutput {
 				b, _ := json.MarshalIndent(map[string]interface{}{
-					"file":     args[0],
+					"file":     filePath,
 					"size":     info.Size(),
 					"mime":     mime,
 					"mode":     info.Mode().String(),
@@ -32,7 +32,7 @@ func newTypeCmd() *cobra.Command {
 				}, "", "  ")
 				fmt.Println(string(b))
 			} else {
-				fmt.Printf("File     : %s\n", args[0])
+				fmt.Printf("File     : %s\n", filePath)
 				fmt.Printf("Size     : %s\n", formatSize(info.Size()))
 				fmt.Printf("MIME     : %s\n", mime)
 				fmt.Printf("Mode     : %s\n", info.Mode())
@@ -43,4 +43,6 @@ func newTypeCmd() *cobra.Command {
 			return nil
 		},
 	}
+	cmd.Flags().StringVarP(&filePath, "file", "f", "", "File path")
+	return cmd
 }

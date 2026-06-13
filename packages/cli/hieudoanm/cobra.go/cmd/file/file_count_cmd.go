@@ -10,14 +10,14 @@ import (
 )
 
 func newCountCmd() *cobra.Command {
-	return &cobra.Command{
-		Use:   "count <file>",
+	var filePath string
+	cmd := &cobra.Command{
+		Use:   "count [--file <path>]",
 		Short: "Count lines, words, and bytes in a file",
-		Example: `  file count main.go
-  file count main.go --json`,
-		Args: cobra.ExactArgs(1),
+		Example: `  file count --file main.go
+  file count -f main.go --json`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			data, err := os.ReadFile(args[0])
+			data, err := os.ReadFile(filePath)
 			if err != nil {
 				return err
 			}
@@ -33,16 +33,18 @@ func newCountCmd() *cobra.Command {
 
 			if jsonOutput {
 				b, _ := json.MarshalIndent(map[string]interface{}{
-					"file":  args[0],
+					"file":  filePath,
 					"lines": lines,
 					"words": words,
 					"bytes": bytes,
 				}, "", "  ")
 				fmt.Println(string(b))
 			} else {
-				fmt.Printf("%8d %8d %8d %s\n", lines, words, bytes, args[0])
+				fmt.Printf("%8d %8d %8d %s\n", lines, words, bytes, filePath)
 			}
 			return nil
 		},
 	}
+	cmd.Flags().StringVarP(&filePath, "file", "f", "", "File path")
+	return cmd
 }

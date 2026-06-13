@@ -382,13 +382,13 @@ func generateDocs(projectPath string, w io.Writer) error {
 }
 
 func newCobraCmd() *cobra.Command {
+	var file string
 	cmd := &cobra.Command{
-		Use:   "cobra [path/to/cobra/project]",
+		Use:   "cobra [--file <path>]",
 		Short: "Generate README.md documentation from a Cobra CLI project",
 		Long:  `docsify cobra reads the cmd/ folder of a Cobra project and generates a single README.md documenting all commands, flags, and examples.`,
-		Args:  cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
-			projectPath := args[0]
+			projectPath := file
 			output, _ := cmd.Flags().GetString("output")
 
 			out, err := os.Create(output)
@@ -407,6 +407,7 @@ func newCobraCmd() *cobra.Command {
 	}
 
 	cmd.CompletionOptions.DisableDefaultCmd = true
+	cmd.Flags().StringVarP(&file, "file", "f", "", "Path to cobra project directory")
 	cmd.Flags().StringP("output", "o", "README.md", "Output file path")
 
 	return cmd

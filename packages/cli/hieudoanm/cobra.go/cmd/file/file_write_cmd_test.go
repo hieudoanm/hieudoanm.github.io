@@ -8,13 +8,21 @@ import (
 
 func TestWriteCmdHasFlags(t *testing.T) {
 	cmd := newWriteCmd()
-	if cmd.Use != "write <file> [content]" {
+	if cmd.Use != "write [--file <path>] [--content <text>]" {
 		t.Errorf("Use = %q", cmd.Use)
 	}
-	if cmd.Args == nil {
-		t.Error("Args must be set")
+	if cmd.Args != nil {
+		t.Error("Args should not be set")
 	}
-	_, err := cmd.Flags().GetBool("append")
+	_, err := cmd.Flags().GetString("file")
+	if err != nil {
+		t.Error("expected --file flag")
+	}
+	_, err = cmd.Flags().GetString("content")
+	if err != nil {
+		t.Error("expected --content flag")
+	}
+	_, err = cmd.Flags().GetBool("append")
 	if err != nil {
 		t.Error("expected --append flag")
 	}
@@ -33,7 +41,7 @@ func TestWriteToFile(t *testing.T) {
 	path := filepath.Join(dir, "test.txt")
 
 	cmd := newWriteCmd()
-	cmd.SetArgs([]string{path, "hello world"})
+	cmd.SetArgs([]string{"--file", path, "--content", "hello world"})
 	err := cmd.Execute()
 	if err != nil {
 		t.Fatal(err)
@@ -55,7 +63,7 @@ func TestWriteAppend(t *testing.T) {
 	os.WriteFile(path, []byte("first\n"), 0644)
 
 	cmd := newWriteCmd()
-	cmd.SetArgs([]string{"--append", path, "second"})
+	cmd.SetArgs([]string{"--file", path, "--content", "second", "--append"})
 	err := cmd.Execute()
 	if err != nil {
 		t.Fatal(err)
@@ -76,7 +84,7 @@ func TestWriteMkdir(t *testing.T) {
 	path := filepath.Join(dir, "sub", "nested", "file.txt")
 
 	cmd := newWriteCmd()
-	cmd.SetArgs([]string{"--mkdir", path, "content"})
+	cmd.SetArgs([]string{"--file", path, "--content", "content", "--mkdir"})
 	err := cmd.Execute()
 	if err != nil {
 		t.Fatal(err)
@@ -88,9 +96,8 @@ func TestWriteMkdir(t *testing.T) {
 }
 
 func TestWriteErrorOnNoContent(t *testing.T) {
-	// When not piped and no arg, should fail
 	cmd := newWriteCmd()
-	cmd.SetArgs([]string{"/tmp/nonexistent/file.txt"})
+	cmd.SetArgs([]string{"--file", "/tmp/nonexistent/file.txt"})
 	err := cmd.Execute()
 	if err == nil {
 		t.Error("expected error when no content provided and not piped")

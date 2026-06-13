@@ -14,15 +14,14 @@ import (
 )
 
 func newConvertCmd() *cobra.Command {
-	var output, toFormat string
+	var file, output, toFormat string
 	cmd := &cobra.Command{
-		Use:   "convert <file>",
+		Use:   "convert [--file <file>]",
 		Short: "Convert image to another format",
-		Example: `  image convert photo.jpg --format png
-  image convert photo.png --format jpg --output photo.jpg`,
-		Args: cobra.ExactArgs(1),
+		Example: `  image convert --file photo.jpg --format png
+  image convert --file photo.png --format jpg --output photo.jpg`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			f, err := os.Open(args[0])
+			f, err := os.Open(file)
 			if err != nil {
 				return err
 			}
@@ -35,7 +34,7 @@ func newConvertCmd() *cobra.Command {
 			f.Close()
 
 			if output == "" {
-				base := strings.TrimSuffix(args[0], filepath.Ext(args[0]))
+				base := strings.TrimSuffix(file, filepath.Ext(file))
 				output = base + "." + toFormat
 			}
 
@@ -62,6 +61,7 @@ func newConvertCmd() *cobra.Command {
 			return nil
 		},
 	}
+	cmd.Flags().StringVarP(&file, "file", "i", "", "Input image file")
 	cmd.Flags().StringVarP(&toFormat, "format", "f", "png", "Output format (png, jpg, gif)")
 	cmd.Flags().StringVarP(&output, "output", "o", "", "Output file path")
 	return cmd

@@ -94,16 +94,15 @@ type PlayerStats struct {
 /* ----------------------------- Command ----------------------------- */
 
 func newComPlayerCmd() *cobra.Command {
-	return &cobra.Command{
-		Use:   "player <username>",
+	var username string
+	cmd := &cobra.Command{
+		Use:   "player [--username <username>]",
 		Short: "Run the player operation for the chess.com app",
 		Long: `The player command is a specific utility to execute operations related to player within the chess.com application.
 
 As a component of the chess tools, this command empowers you to interact directly with chess.com's player features via the CLI.`,
-		Args: cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
-			username := strings.ToLower(args[0])
-
+			username = strings.ToLower(username)
 			profileURL := fmt.Sprintf("https://api.chess.com/pub/player/%s", username)
 			statsURL := fmt.Sprintf("https://api.chess.com/pub/player/%s/stats", username)
 
@@ -162,4 +161,7 @@ As a component of the chess tools, this command empowers you to interact directl
 			return nil
 		},
 	}
+
+	cmd.Flags().StringVarP(&username, "username", "u", "", "Chess.com username")
+	return cmd
 }

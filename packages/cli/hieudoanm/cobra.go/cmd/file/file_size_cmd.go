@@ -10,18 +10,18 @@ import (
 )
 
 func newSizeCmd() *cobra.Command {
-	return &cobra.Command{
-		Use:   "size <file-or-dir>",
+	var path string
+	cmd := &cobra.Command{
+		Use:   "size [--path <file-or-dir>]",
 		Short: "Show file or directory size",
-		Args:  cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
-			info, err := os.Stat(args[0])
+			info, err := os.Stat(path)
 			if err != nil {
 				return err
 			}
 			if info.IsDir() {
 				var total int64
-				filepath.Walk(args[0], func(path string, fi os.FileInfo, err error) error {
+				filepath.Walk(path, func(p string, fi os.FileInfo, err error) error {
 					if err != nil {
 						return nil
 					}
@@ -30,25 +30,27 @@ func newSizeCmd() *cobra.Command {
 				})
 				if jsonOutput {
 					b, _ := json.MarshalIndent(map[string]interface{}{
-						"path": args[0],
+						"path": path,
 						"size": total,
 					}, "", "  ")
 					fmt.Println(string(b))
 				} else {
-					fmt.Printf("%s  %s\n", formatSize(total), args[0])
+					fmt.Printf("%s  %s\n", formatSize(total), path)
 				}
 			} else {
 				if jsonOutput {
 					b, _ := json.MarshalIndent(map[string]interface{}{
-						"path": args[0],
+						"path": path,
 						"size": info.Size(),
 					}, "", "  ")
 					fmt.Println(string(b))
 				} else {
-					fmt.Printf("%s  %s\n", formatSize(info.Size()), args[0])
+					fmt.Printf("%s  %s\n", formatSize(info.Size()), path)
 				}
 			}
 			return nil
 		},
 	}
+	cmd.Flags().StringVarP(&path, "path", "p", "", "File or directory path")
+	return cmd
 }

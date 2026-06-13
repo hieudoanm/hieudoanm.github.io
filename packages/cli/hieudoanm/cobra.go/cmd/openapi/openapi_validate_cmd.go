@@ -12,12 +12,12 @@ import (
 var validMethods = []string{"get", "put", "post", "delete", "options", "head", "patch", "trace"}
 
 func newValidateCmd() *cobra.Command {
-	return &cobra.Command{
-		Use:   "validate <file>",
+	var file string
+	cmd := &cobra.Command{
+		Use:   "validate [--file <file>]",
 		Short: "Validate an OpenAPI specification",
-		Args:  cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
-			data, err := os.ReadFile(args[0])
+			data, err := os.ReadFile(file)
 			if err != nil {
 				return err
 			}
@@ -39,6 +39,9 @@ func newValidateCmd() *cobra.Command {
 			return fmt.Errorf("%d validation issue(s) found", len(issues))
 		},
 	}
+
+	cmd.Flags().StringVarP(&file, "file", "f", "", "OpenAPI spec file")
+	return cmd
 }
 
 func validateSpec(spec JSON) []string {

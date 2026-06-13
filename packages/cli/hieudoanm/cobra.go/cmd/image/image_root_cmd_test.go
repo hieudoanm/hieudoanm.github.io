@@ -32,8 +32,11 @@ func TestNewCommandHasSubcommands(t *testing.T) {
 
 func TestInfoCmdUse(t *testing.T) {
 	cmd := newInfoCmd()
-	if cmd.Use != "info <file>" {
-		t.Errorf("Use = %q, want %q", cmd.Use, "info <file>")
+	if cmd.Use != "info [--file <file>]" {
+		t.Errorf("Use = %q, want %q", cmd.Use, "info [--file <file>]")
+	}
+	if cmd.Flag("file") == nil {
+		t.Error("expected --file flag")
 	}
 	if cmd.Short != "Show image metadata (dimensions, format, etc.)" {
 		t.Errorf("Short = %q, want %q", cmd.Short, "Show image metadata (dimensions, format, etc.)")
@@ -42,8 +45,11 @@ func TestInfoCmdUse(t *testing.T) {
 
 func TestConvertCmdUse(t *testing.T) {
 	cmd := newConvertCmd()
-	if cmd.Use != "convert <file>" {
-		t.Errorf("Use = %q, want %q", cmd.Use, "convert <file>")
+	if cmd.Use != "convert [--file <file>]" {
+		t.Errorf("Use = %q, want %q", cmd.Use, "convert [--file <file>]")
+	}
+	if cmd.Flag("file") == nil {
+		t.Error("expected --file flag")
 	}
 	if cmd.Short != "Convert image to another format" {
 		t.Errorf("Short = %q, want %q", cmd.Short, "Convert image to another format")
@@ -52,8 +58,11 @@ func TestConvertCmdUse(t *testing.T) {
 
 func TestDominantCmdUse(t *testing.T) {
 	cmd := newDominantCmd()
-	if cmd.Use != "dominant <file>" {
-		t.Errorf("Use = %q, want %q", cmd.Use, "dominant <file>")
+	if cmd.Use != "dominant [--file <file>]" {
+		t.Errorf("Use = %q, want %q", cmd.Use, "dominant [--file <file>]")
+	}
+	if cmd.Flag("file") == nil {
+		t.Error("expected --file flag")
 	}
 	if cmd.Short != "Extract dominant color from an image" {
 		t.Errorf("Short = %q, want %q", cmd.Short, "Extract dominant color from an image")

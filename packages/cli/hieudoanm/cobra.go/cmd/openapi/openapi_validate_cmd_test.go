@@ -199,8 +199,11 @@ func TestNewValidateCommand(t *testing.T) {
 	if cmd == nil {
 		t.Fatal("newValidateCmd() returned nil")
 	}
-	if cmd.Use != "validate <file>" {
+	if cmd.Use != "validate [--file <file>]" {
 		t.Errorf("Use = %q", cmd.Use)
+	}
+	if cmd.Flag("file") == nil {
+		t.Error("expected --file flag")
 	}
 }
 

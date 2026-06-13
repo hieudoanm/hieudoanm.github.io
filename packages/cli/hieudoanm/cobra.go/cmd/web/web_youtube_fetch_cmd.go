@@ -18,12 +18,12 @@ var (
 )
 
 func newYoutubeFetchCmd() *cobra.Command {
+	var url string
 	cmd := &cobra.Command{
-		Use:   "fetch <video-id-or-url>",
+		Use:   "fetch [--url <video-id-or-url>]",
 		Short: "Fetch YouTube video transcript",
-		Args:  cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
-			videoID, err := ytExtractVideoID(args[0])
+			videoID, err := ytExtractVideoID(url)
 			if err != nil {
 				return err
 			}
@@ -61,6 +61,7 @@ func newYoutubeFetchCmd() *cobra.Command {
 		},
 	}
 
+	cmd.Flags().StringVarP(&url, "url", "u", "", "Video URL or ID")
 	cmd.Flags().StringVarP(&ytLang, "lang", "l", "en", "Language code (e.g. en, es, fr)")
 	cmd.Flags().StringVarP(&ytOutputFile, "output", "o", "", "Save to file instead of stdout")
 	cmd.Flags().StringVarP(&ytFormat, "format", "f", "text", "Output format: text or json")

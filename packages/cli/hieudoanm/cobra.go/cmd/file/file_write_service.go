@@ -7,9 +7,9 @@ import (
 	"path/filepath"
 )
 
-func getWriteContent(args []string) (string, error) {
-	if len(args) >= 2 {
-		return args[1], nil
+func getWriteContent(content string) (string, error) {
+	if content != "" {
+		return content, nil
 	}
 	data, err := readStdin()
 	if err != nil {

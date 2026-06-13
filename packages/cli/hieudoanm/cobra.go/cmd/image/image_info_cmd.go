@@ -10,12 +10,12 @@ import (
 )
 
 func newInfoCmd() *cobra.Command {
-	return &cobra.Command{
-		Use:   "info <file>",
+	var file string
+	cmd := &cobra.Command{
+		Use:   "info [--file <file>]",
 		Short: "Show image metadata (dimensions, format, etc.)",
-		Args:  cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
-			f, err := os.Open(args[0])
+			f, err := os.Open(file)
 			if err != nil {
 				return err
 			}
@@ -26,11 +26,11 @@ func newInfoCmd() *cobra.Command {
 				return fmt.Errorf("not a recognized image: %w", err)
 			}
 
-			stat, _ := os.Stat(args[0])
+			stat, _ := os.Stat(file)
 
 			if jsonOutput {
 				b, _ := json.MarshalIndent(map[string]interface{}{
-					"file":   args[0],
+					"file":   file,
 					"format": format,
 					"width":  cfg.Width,
 					"height": cfg.Height,
@@ -38,7 +38,7 @@ func newInfoCmd() *cobra.Command {
 				}, "", "  ")
 				fmt.Println(string(b))
 			} else {
-				fmt.Printf("File     : %s\n", args[0])
+				fmt.Printf("File     : %s\n", file)
 				fmt.Printf("Format   : %s\n", format)
 				fmt.Printf("Width    : %d px\n", cfg.Width)
 				fmt.Printf("Height   : %d px\n", cfg.Height)
@@ -50,4 +50,7 @@ func newInfoCmd() *cobra.Command {
 			return nil
 		},
 	}
+
+	cmd.Flags().StringVarP(&file, "file", "f", "", "Image file")
+	return cmd
 }

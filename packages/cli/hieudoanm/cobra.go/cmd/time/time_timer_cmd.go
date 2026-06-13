@@ -13,18 +13,18 @@ import (
 var timerJSON bool
 
 func newTimerCmd() *cobra.Command {
+	var duration string
 	cmd := &cobra.Command{
-		Use:   "timer <duration>",
+		Use:   "timer [--duration <duration>]",
 		Short: "Simple countdown timer",
 		Long: `Set a countdown timer. Supports seconds (30s) and minutes (5m).
 
 Press Ctrl+C to cancel.`,
-		Example: `  timer 30s
-  timer 5m
-  timer 90`,
-		Args: cobra.ExactArgs(1),
+		Example: `  timer --duration 30s
+  timer --duration 5m
+  timer --duration 90`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			dur, err := parseTimerDuration(args[0])
+			dur, err := parseTimerDuration(duration)
 			if err != nil {
 				return err
 			}
@@ -72,6 +72,7 @@ Press Ctrl+C to cancel.`,
 		},
 	}
 
+	cmd.Flags().StringVarP(&duration, "duration", "d", "", "Duration (e.g. 30s, 5m)")
 	cmd.Flags().BoolVar(&timerJSON, "json", false, "Output in JSON format")
 	return cmd
 }

@@ -11,20 +11,18 @@ import (
 )
 
 func newHTTPCmd() *cobra.Command {
-	var method, data, header string
+	var url, method, data, header string
 	var httpJSON bool
 
 	cmd := &cobra.Command{
-		Use:   "http <url>",
+		Use:   "http [--url <url>]",
 		Short: "Make HTTP requests",
 		Long:  `Make HTTP GET, POST, PUT, DELETE requests to URLs.`,
-		Example: `  net http https://api.example.com/data
-  net http --method POST --data '{"key":"value"}' https://api.example.com
-  net http --method DELETE https://api.example.com/resource/1
-  net http --header "Authorization: Bearer token" https://api.example.com`,
-		Args: cobra.ExactArgs(1),
+		Example: `  net http --url https://api.example.com/data
+  net http --url https://api.example.com --method POST --data '{"key":"value"}'
+  net http --url https://api.example.com/resource/1 --method DELETE
+  net http --url https://api.example.com --header "Authorization: Bearer token"`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			url := args[0]
 			method = strings.ToUpper(method)
 			if method == "" {
 				method = http.MethodGet
@@ -79,6 +77,7 @@ func newHTTPCmd() *cobra.Command {
 		},
 	}
 
+	cmd.Flags().StringVarP(&url, "url", "u", "", "URL to request")
 	cmd.Flags().StringVarP(&method, "method", "X", "GET", "HTTP method (GET, POST, PUT, DELETE)")
 	cmd.Flags().StringVarP(&data, "data", "d", "", "Request body data")
 	cmd.Flags().StringVarP(&header, "header", "H", "", "Request headers (key:val,key2:val2)")

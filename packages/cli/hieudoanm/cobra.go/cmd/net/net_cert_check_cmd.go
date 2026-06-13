@@ -8,15 +8,15 @@ import (
 )
 
 func newCertCheckCmd() *cobra.Command {
+	var host string
 	var warnDays int
 	cmd := &cobra.Command{
-		Use:   "check <host:port>",
+		Use:   "check [--host <host:port>]",
 		Short: "Quick certificate health check (expiry warning)",
-		Example: `  cert check google.com:443
-  cert check --warn 30 example.org`,
-		Args: cobra.ExactArgs(1),
+		Example: `  cert check --host google.com:443
+  cert check --host example.org --warn 30`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			conn, err := dialTLS(args[0])
+			conn, err := dialTLS(host)
 			if err != nil {
 				return err
 			}
@@ -31,13 +31,14 @@ func newCertCheckCmd() *cobra.Command {
 			remaining := leaf.NotAfter.Sub(time.Now())
 
 			if certJSONOut {
-				printJSON(buildCertCheck(args[0], remaining, leaf.DNSNames))
+				printJSON(buildCertCheck(host, remaining, leaf.DNSNames))
 				return nil
 			}
-			printCertCheck(buildCertCheck(args[0], remaining, leaf.DNSNames))
+			printCertCheck(buildCertCheck(host, remaining, leaf.DNSNames))
 			return nil
 		},
 	}
+	cmd.Flags().StringVarP(&host, "host", "H", "", "Host:port to check")
 	cmd.Flags().IntVarP(&warnDays, "warn", "w", 30, "Warning threshold in days")
 	return cmd
 }

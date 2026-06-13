@@ -9,8 +9,9 @@ import (
 )
 
 func newYoutubeThumbnailsCmd() *cobra.Command {
+	var url string
 	cmd := &cobra.Command{
-		Use:   "thumbnails [video-url-or-id]",
+		Use:   "thumbnails [--url <video-url-or-id>]",
 		Short: "Download YouTube video thumbnails",
 		Long: `Download all available thumbnail qualities for a YouTube video.
 
@@ -22,13 +23,12 @@ Accepts any of:
   - Raw ID:     dQw4w9WgXcQ
 
 Examples:
-  devtools youtube thumbnails https://www.youtube.com/watch?v=dQw4w9WgXcQ
-  devtools youtube thumbnails dQw4w9WgXcQ --quality hqdefault
-  devtools youtube thumbnails dQw4w9WgXcQ --output ./thumbs
-  devtools youtube thumbnails dQw4w9WgXcQ --all`,
-		Args: cobra.ExactArgs(1),
+  devtools youtube thumbnails --url https://www.youtube.com/watch?v=dQw4w9WgXcQ
+  devtools youtube thumbnails --url dQw4w9WgXcQ --quality hqdefault
+  devtools youtube thumbnails --url dQw4w9WgXcQ --output ./thumbs
+  devtools youtube thumbnails --url dQw4w9WgXcQ --all`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			input := args[0]
+			input := url
 
 			qualityFlag, _ := cmd.Flags().GetString("quality")
 			outputDir, _ := cmd.Flags().GetString("output")
@@ -117,6 +117,7 @@ Examples:
 		},
 	}
 
+	cmd.Flags().StringVarP(&url, "url", "u", "", "Video URL or ID")
 	cmd.Flags().StringP("quality", "q", "", fmt.Sprintf("specific quality to download (%s)", ytValidQualityIDs()))
 	cmd.Flags().StringP("output", "o", ".", "output directory")
 	cmd.Flags().BoolP("all", "a", false, "download all quality variants")

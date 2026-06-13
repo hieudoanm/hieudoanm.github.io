@@ -11,17 +11,17 @@ import (
 var ageJSON bool
 
 func newAgeCmd() *cobra.Command {
+	var date string
 	cmd := &cobra.Command{
-		Use:   "age <birthdate>",
+		Use:   "age [--date <birthdate>]",
 		Short: "Calculate age from a birthdate",
 		Long: `Calculate someone's age in years, months, and days from their birthdate.
 
 Accepts formats: YYYY-MM-DD, YYYY-MM-DDTHH:MM:SS, RFC3339.`,
-		Example: `  time age 1990-01-15
-  time age 1990-01-15 --json`,
-		Args: cobra.ExactArgs(1),
+		Example: `  time age --date 1990-01-15
+  time age --date 1990-01-15 --json`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			t, err := parseDatetime(args[0])
+			t, err := parseDatetime(date)
 			if err != nil {
 				return fmt.Errorf("parse date: %w", err)
 			}
@@ -60,6 +60,7 @@ Accepts formats: YYYY-MM-DD, YYYY-MM-DDTHH:MM:SS, RFC3339.`,
 		},
 	}
 
+	cmd.Flags().StringVarP(&date, "date", "d", "", "Birthdate (YYYY-MM-DD)")
 	cmd.Flags().BoolVar(&ageJSON, "json", false, "Output in JSON format")
 	return cmd
 }

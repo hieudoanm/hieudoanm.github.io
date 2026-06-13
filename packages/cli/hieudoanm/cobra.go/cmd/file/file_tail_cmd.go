@@ -10,14 +10,14 @@ import (
 
 func newTailCmd() *cobra.Command {
 	var lines int
+	var filePath string
 	cmd := &cobra.Command{
-		Use:   "tail <file>",
+		Use:   "tail [--file <path>]",
 		Short: "Show the last N lines of a file",
-		Example: `  file tail main.go
-  file tail --lines 20 main.go`,
-		Args: cobra.ExactArgs(1),
+		Example: `  file tail --file main.go
+  file tail -f main.go --lines 20`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			f, err := os.Open(args[0])
+			f, err := os.Open(filePath)
 			if err != nil {
 				return err
 			}
@@ -40,6 +40,7 @@ func newTailCmd() *cobra.Command {
 			return nil
 		},
 	}
+	cmd.Flags().StringVarP(&filePath, "file", "f", "", "File path")
 	cmd.Flags().IntVarP(&lines, "lines", "n", 10, "Number of lines")
 	return cmd
 }

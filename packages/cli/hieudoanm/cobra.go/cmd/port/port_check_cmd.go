@@ -8,16 +8,16 @@ import (
 )
 
 func newCheckCmd() *cobra.Command {
+	var target string
 	var timeout int
 	cmd := &cobra.Command{
-		Use:   "check <host:port>",
+		Use:   "check [--target <host:port>]",
 		Short: "Check if a port is open",
-		Example: `  port check localhost:8080
-  port check google.com:443
-  port check --timeout 5 192.168.1.1:22`,
-		Args: cobra.ExactArgs(1),
+		Example: `  port check --target localhost:8080
+  port check --target google.com:443
+  port check --target 192.168.1.1:22 --timeout 5`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			host := args[0]
+			host := target
 			if _, _, err := net.SplitHostPort(host); err != nil {
 				return fmt.Errorf("use host:port format (e.g. localhost:8080)")
 			}
@@ -27,6 +27,7 @@ func newCheckCmd() *cobra.Command {
 			return nil
 		},
 	}
+	cmd.Flags().StringVarP(&target, "target", "T", "", "Host:port to check")
 	cmd.Flags().IntVarP(&timeout, "timeout", "t", 3, "Connection timeout in seconds")
 	return cmd
 }

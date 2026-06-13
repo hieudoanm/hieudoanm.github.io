@@ -3,19 +3,18 @@ package crypto
 import (
 	"fmt"
 	"os"
-	"strings"
 
 	"github.com/mdp/qrterminal/v3"
 	"github.com/spf13/cobra"
 )
 
 func newQrcodeCmd() *cobra.Command {
-	return &cobra.Command{
-		Use:   "qrcode <text>",
+	var data string
+	cmd := &cobra.Command{
+		Use:   "qrcode [--data <text>]",
 		Short: "Generate a QR code in the terminal",
-		Args:  cobra.MinimumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
-			text := strings.Join(args, " ")
+			text := data
 
 			config := qrterminal.Config{
 				Level:      qrterminal.M,
@@ -31,4 +30,7 @@ func newQrcodeCmd() *cobra.Command {
 			return nil
 		},
 	}
+
+	cmd.Flags().StringVarP(&data, "data", "d", "", "Text or data to encode")
+	return cmd
 }

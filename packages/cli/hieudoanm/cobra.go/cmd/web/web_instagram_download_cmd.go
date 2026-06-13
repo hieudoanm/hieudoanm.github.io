@@ -8,19 +8,19 @@ import (
 )
 
 func newIGDownloadCmd() *cobra.Command {
+	var url string
 	var igJSON bool
 	cmd := &cobra.Command{
-		Use:   "download [url]",
+		Use:   "download [--url <url>]",
 		Short: "Download images from Instagram",
 		Long: `Download images from an Instagram post, reel, or video.
 Supports carousels and specific image selection via --index.
 
 Example:
-  devtools instagram download https://www.instagram.com/p/CLI7qRNhI_o/
-  devtools instagram download CLI7qRNhI_o --index 1`,
-		Args: cobra.ExactArgs(1),
+  devtools instagram download --url https://www.instagram.com/p/CLI7qRNhI_o/
+  devtools instagram download --url CLI7qRNhI_o --index 1`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			input := args[0]
+			input := url
 			outputDir, _ := cmd.Flags().GetString("output")
 			imgIndex, _ := cmd.Flags().GetInt("index")
 			useProxy, _ := cmd.Flags().GetBool("proxy")
@@ -72,6 +72,7 @@ Example:
 		},
 	}
 
+	cmd.Flags().StringVarP(&url, "url", "u", "", "Instagram post URL or shortcode")
 	cmd.Flags().StringP("output", "o", ".", "Output directory")
 	cmd.Flags().IntP("index", "i", 0, "Specific image index to download (1-based)")
 	cmd.Flags().BoolP("proxy", "p", false, "Use proxy to fetch content")

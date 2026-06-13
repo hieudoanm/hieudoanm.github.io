@@ -5,15 +5,15 @@ import (
 )
 
 func newCertInfoCmd() *cobra.Command {
-	return &cobra.Command{
-		Use:   "info <host:port>",
+	var host string
+	cmd := &cobra.Command{
+		Use:   "info [--host <host:port>]",
 		Short: "Show detailed certificate information",
 		Long:  `Retrieve and display the full certificate chain for a TLS endpoint.`,
-		Example: `  cert info google.com:443
-  cert info example.org:8443`,
-		Args: cobra.ExactArgs(1),
+		Example: `  cert info --host google.com:443
+  cert info --host example.org:8443`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			conn, err := dialTLS(args[0])
+			conn, err := dialTLS(host)
 			if err != nil {
 				return err
 			}
@@ -28,4 +28,7 @@ func newCertInfoCmd() *cobra.Command {
 			return nil
 		},
 	}
+
+	cmd.Flags().StringVarP(&host, "host", "H", "", "Host:port to inspect")
+	return cmd
 }

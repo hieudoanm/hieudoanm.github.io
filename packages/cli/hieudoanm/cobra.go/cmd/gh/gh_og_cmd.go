@@ -106,17 +106,17 @@ func escapeXML(s string) string {
 }
 
 func newOGCmd() *cobra.Command {
+	var url string
 	cmd := &cobra.Command{
-		Use:   "og <owner/repo>",
+		Use:   "og [--url <owner/repo>]",
 		Short: "Generate an Open Graph SVG for a GitHub repository",
 		Long: `Fetches repository metadata from GitHub and generates
 a 1200×630 Open Graph SVG image (social preview card).
 
 Example:
-  hieudoanm gh og hieudoanm/hieudoanm.github.io`,
-		Args: cobra.ExactArgs(1),
+  hieudoanm gh og --url hieudoanm/hieudoanm.github.io`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			repoArg := args[0]
+			repoArg := url
 			output, _ := cmd.Flags().GetString("output")
 
 			parts := strings.Split(repoArg, "/")
@@ -150,6 +150,7 @@ Example:
 		},
 	}
 
+	cmd.Flags().StringVarP(&url, "url", "u", "", "Repository (owner/repo)")
 	cmd.Flags().StringP("output", "o", "og.svg", "Output SVG file path")
 	return cmd
 }

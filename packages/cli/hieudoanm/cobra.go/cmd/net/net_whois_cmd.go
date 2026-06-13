@@ -11,18 +11,18 @@ import (
 )
 
 func newWhoisCmd() *cobra.Command {
+	var domain string
 	var server string
 
 	cmd := &cobra.Command{
-		Use:   "whois <domain>",
+		Use:   "whois [--domain <domain>]",
 		Short: "WHOIS lookup for a domain",
 		Long:  `Query WHOIS servers for domain registration information.`,
-		Example: `  net whois example.com
-  net whois google.com
-  net whois example.com --server whois.verisign-grs.com`,
-		Args: cobra.ExactArgs(1),
+		Example: `  net whois --domain example.com
+  net whois --domain google.com
+  net whois --domain example.com --server whois.verisign-grs.com`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			domain := strings.TrimSpace(args[0])
+			domain = strings.TrimSpace(domain)
 			whoisServer := server
 			if whoisServer == "" {
 				whoisServer = whoisLookupServer(domain)
@@ -52,6 +52,7 @@ func newWhoisCmd() *cobra.Command {
 		},
 	}
 
+	cmd.Flags().StringVarP(&domain, "domain", "d", "", "Domain to look up")
 	cmd.Flags().StringVarP(&server, "server", "s", "", "WHOIS server to query")
 	return cmd
 }

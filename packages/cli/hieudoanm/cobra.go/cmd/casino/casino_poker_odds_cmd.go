@@ -14,8 +14,9 @@ var (
 )
 
 func newPokerOddsCmd() *cobra.Command {
+	var hand string
 	cmd := &cobra.Command{
-		Use:   "odds <hole>",
+		Use:   "odds [--hand <hole>]",
 		Short: "Calculate Texas Hold'em poker odds",
 		Long: `Calculate win/tie/lose odds using Monte Carlo simulation.
 
@@ -23,12 +24,11 @@ Hole cards are required (e.g. "Ah Kh" or "As Ks").
 Use --board to specify community cards (0-5 cards).
 
 Examples:
-  hieudoanm casino odds "Ah Kh"
-  hieudoanm casino odds "Ah Kh" --board "2h 7s Tc"
-  hieudoanm casino odds "As Ks" --board "2h 7s Tc" --opponents 3`,
-		Args: cobra.ExactArgs(1),
+  hieudoanm casino odds --hand "Ah Kh"
+  hieudoanm casino odds --hand "Ah Kh" --board "2h 7s Tc"
+  hieudoanm casino odds --hand "As Ks" --board "2h 7s Tc" --opponents 3`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			hole, err := FormatCards(args[0])
+			hole, err := FormatCards(hand)
 			if err != nil {
 				return fmt.Errorf("invalid hole cards: %w", err)
 			}
@@ -81,6 +81,7 @@ Examples:
 		},
 	}
 
+	cmd.Flags().StringVarP(&hand, "hand", "H", "", "Hole cards (e.g. \"Ah Kh\")")
 	cmd.Flags().StringVarP(&boardStr, "board", "b", "", "Community cards (e.g. \"2h 7s Tc\")")
 	cmd.Flags().IntVarP(&numOpponents, "opponents", "o", 1, "Number of opponents")
 	cmd.Flags().IntVarP(&numSimulations, "simulations", "n", 10000, "Number of Monte Carlo simulations")

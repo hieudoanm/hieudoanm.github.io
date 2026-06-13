@@ -10,20 +10,19 @@ func newReadCmd() *cobra.Command {
 	var lines int
 	var offset int
 	var showLineNumbers bool
+	var path string
 
 	cmd := &cobra.Command{
-		Use:   "read <file>",
+		Use:   "read [--file <path>]",
 		Short: "Read file content with line numbers",
 		Long: `Read a file and display its content with optional line numbers, offset, and line limit.
 
 Examples:
-  file read main.go
-  file read --lines 50 main.go
-  file read --offset 10 --lines 20 main.go
-  file read --no-numbers main.go`,
-		Args: cobra.ExactArgs(1),
+  file read --file main.go
+  file read -f main.go --lines 50
+  file read -f main.go --offset 10 --lines 20
+  file read -f main.go --no-numbers`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			path := args[0]
 			content, displayLines, totalLines, err := readFileContent(path, offset, lines)
 			if err != nil {
 				return err
@@ -40,6 +39,7 @@ Examples:
 		},
 	}
 
+	cmd.Flags().StringVarP(&path, "file", "f", "", "File path")
 	cmd.Flags().IntVarP(&lines, "lines", "n", 0, "Number of lines to show (0 = all)")
 	cmd.Flags().IntVarP(&offset, "offset", "o", 0, "Starting line offset (0-based)")
 	cmd.Flags().BoolVar(&showLineNumbers, "numbers", true, "Show line numbers")

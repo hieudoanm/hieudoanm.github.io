@@ -5,27 +5,28 @@ import (
 )
 
 func newGrepCmd() *cobra.Command {
-	var include string
+	var include, pattern, searchPath string
 	var context int
 	var fixed bool
 	var maxCount int
 	var ignoreCase bool
 
 	cmd := &cobra.Command{
-		Use:   "grep <pattern> [files...]",
+		Use:   "grep [--pattern <regex>] [--path <dir>]",
 		Short: "Search file contents using regex or fixed strings",
 		Long: `Search for a pattern in files (grep = global regular expression print). Supports recursive directory search and glob patterns.
 
 Examples:
-  file grep "TODO" main.go
-  file grep --ignore-case "func" .
-  file grep "error" --include "*.go"
-  file grep --fixed "fmt.Println" src/ -r
-  file grep --context 2 "panic" .`,
-		Args: cobra.MinimumNArgs(1),
+  file grep --pattern "TODO" --path main.go
+  file grep -p "func" --path . --ignore-case
+  file grep --pattern "error" --include "*.go"
+  file grep --fixed -p "fmt.Println" --path src/
+  file grep -p "panic" --path . --context 2`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			pattern := args[0]
-			searchPaths := args[1:]
+			searchPaths := []string{searchPath}
+			if searchPath == "" {
+				searchPaths = args
+			}
 			if len(searchPaths) == 0 {
 				searchPaths = []string{"."}
 			}
@@ -41,6 +42,8 @@ Examples:
 		},
 	}
 
+	cmd.Flags().StringVarP(&pattern, "pattern", "p", "", "Regex or fixed string pattern to search for")
+	cmd.Flags().StringVarP(&searchPath, "path", "P", "", "File or directory to search (default: .)")
 	cmd.Flags().StringVarP(&include, "include", "i", "", "Glob pattern for file names (e.g. \"*.go\")")
 	cmd.Flags().IntVarP(&context, "context", "C", 0, "Show N lines of context around matches")
 	cmd.Flags().BoolVarP(&fixed, "fixed", "F", false, "Fixed string match (not regex)")

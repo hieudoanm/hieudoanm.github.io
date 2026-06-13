@@ -25,14 +25,14 @@ type Word struct {
 }
 
 func newDefineCmd() *cobra.Command {
+	var word string
 	var defineJSON bool
 	cmd := &cobra.Command{
-		Use:   "define <word>",
+		Use:   "define [--word <word>]",
 		Short: "Look up the definition of an English word",
 		Long:  `Fetches and displays the definition, part of speech, synonyms, and antonyms for a given English word from a local dictionary data source.`,
-		Args:  cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
-			word := strings.TrimSpace(strings.ToLower(args[0]))
+			word = strings.TrimSpace(strings.ToLower(word))
 			if word == "" {
 				return errors.New("word cannot be empty")
 			}
@@ -73,6 +73,7 @@ func newDefineCmd() *cobra.Command {
 			return nil
 		},
 	}
+	cmd.Flags().StringVarP(&word, "word", "w", "", "Word to define")
 	cmd.Flags().BoolVar(&defineJSON, "json", false, "Output in JSON format")
 	return cmd
 }

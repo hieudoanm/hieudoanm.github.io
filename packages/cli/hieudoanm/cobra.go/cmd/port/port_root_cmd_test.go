@@ -97,8 +97,11 @@ func TestNewCheckCmd(t *testing.T) {
 	if cmd == nil {
 		t.Fatal("newCheckCmd() returned nil")
 	}
-	if cmd.Use != "check <host:port>" {
+	if cmd.Use != "check [--target <host:port>]" {
 		t.Errorf("Use = %q", cmd.Use)
+	}
+	if cmd.Flag("target") == nil {
+		t.Error("expected --target flag")
 	}
 	if cmd.Flag("timeout") == nil {
 		t.Error("expected --timeout flag")
@@ -123,10 +126,10 @@ func TestNewScanCmd(t *testing.T) {
 	if cmd == nil {
 		t.Fatal("newScanCmd() returned nil")
 	}
-	if cmd.Use != "scan <host>" {
+	if cmd.Use != "scan [--host <host>]" {
 		t.Errorf("Use = %q", cmd.Use)
 	}
-	for _, name := range []string{"ports", "timeout"} {
+	for _, name := range []string{"host", "ports", "timeout"} {
 		if cmd.Flag(name) == nil {
 			t.Errorf("missing flag: --%s", name)
 		}

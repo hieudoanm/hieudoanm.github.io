@@ -11,17 +11,16 @@ import (
 )
 
 func newDecryptCmd() *cobra.Command {
-	var password, output string
+	var file, password, output string
 
 	cmd := &cobra.Command{
-		Use:   "decrypt <file>",
+		Use:   "decrypt [--file <file>]",
 		Short: "Decrypt a file encrypted with AES-256-GCM",
 		Long:  `Decrypt a file previously encrypted with "crypto encrypt" using the same password.`,
-		Example: `  crypto decrypt secret.enc --password "hunter2"
-  crypto decrypt secret.enc --password "hunter2" --output secret.txt`,
-		Args: cobra.ExactArgs(1),
+		Example: `  crypto decrypt --file secret.enc --password "hunter2"
+  crypto decrypt --file secret.enc --password "hunter2" --output secret.txt`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			data, err := os.ReadFile(args[0])
+			data, err := os.ReadFile(file)
 			if err != nil {
 				return err
 			}
@@ -50,7 +49,7 @@ func newDecryptCmd() *cobra.Command {
 
 			outPath := output
 			if outPath == "" {
-				outPath = args[0]
+				outPath = file
 				if len(outPath) > 4 && outPath[len(outPath)-4:] == ".enc" {
 					outPath = outPath[:len(outPath)-4]
 				} else {
@@ -67,6 +66,7 @@ func newDecryptCmd() *cobra.Command {
 		},
 	}
 
+	cmd.Flags().StringVarP(&file, "file", "f", "", "File to decrypt")
 	cmd.Flags().StringVarP(&password, "password", "p", "", "Decryption password")
 	cmd.Flags().StringVarP(&output, "output", "o", "", "Output file")
 	cmd.MarkFlagRequired("password")

@@ -11,13 +11,11 @@ import (
 var jwtJSON bool
 
 func newJwtDecodeCmd() *cobra.Command {
+	var token string
 	cmd := &cobra.Command{
-		Use:   "decode <token>",
+		Use:   "decode [--token <token>]",
 		Short: "Decode a JWT token without signature verification",
-		Args:  cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
-			token := args[0]
-
 			parser := jwt.NewParser(jwt.WithoutClaimsValidation())
 			parsed, _, err := parser.ParseUnverified(token, jwt.MapClaims{})
 			if err != nil {
@@ -53,6 +51,7 @@ func newJwtDecodeCmd() *cobra.Command {
 		},
 	}
 
+	cmd.Flags().StringVarP(&token, "token", "t", "", "JWT token to decode")
 	cmd.Flags().BoolVar(&jwtJSON, "json", false, "Output in JSON format")
 	return cmd
 }

@@ -13,7 +13,7 @@ func TestEditCmd(t *testing.T) {
 	os.WriteFile(path, []byte(original), 0644)
 
 	cmd := newEditCmd()
-	cmd.SetArgs([]string{path, "foo", "bar"})
+	cmd.SetArgs([]string{"--file", path, "--old", "foo", "--new", "bar"})
 	err := cmd.Execute()
 	if err != nil {
 		t.Fatal(err)
@@ -36,7 +36,7 @@ func TestEditCmdCount(t *testing.T) {
 	os.WriteFile(path, []byte(original), 0644)
 
 	cmd := newEditCmd()
-	cmd.SetArgs([]string{"--count", "2", path, "foo", "bar"})
+	cmd.SetArgs([]string{"--file", path, "--old", "foo", "--new", "bar", "--count", "2"})
 	err := cmd.Execute()
 	if err != nil {
 		t.Fatal(err)
@@ -59,7 +59,7 @@ func TestEditCmdPreview(t *testing.T) {
 	os.WriteFile(path, []byte(original), 0644)
 
 	cmd := newEditCmd()
-	cmd.SetArgs([]string{"--preview", path, "foo", "bar"})
+	cmd.SetArgs([]string{"--file", path, "--old", "foo", "--new", "bar", "--preview"})
 	err := cmd.Execute()
 	if err != nil {
 		t.Fatal(err)
@@ -80,7 +80,7 @@ func TestEditCmdNoMatch(t *testing.T) {
 	os.WriteFile(path, []byte("hello world"), 0644)
 
 	cmd := newEditCmd()
-	cmd.SetArgs([]string{path, "nonexistent", "bar"})
+	cmd.SetArgs([]string{"--file", path, "--old", "nonexistent", "--new", "bar"})
 	err := cmd.Execute()
 	if err != nil {
 		t.Fatal(err)
@@ -89,10 +89,22 @@ func TestEditCmdNoMatch(t *testing.T) {
 
 func TestEditCmdHasFlags(t *testing.T) {
 	cmd := newEditCmd()
-	if cmd.Use != "edit <file> <old> <new>" {
+	if cmd.Use != "edit [--file <path>] [--old <text>] [--new <text>]" {
 		t.Errorf("Use = %q", cmd.Use)
 	}
-	_, err := cmd.Flags().GetBool("regex")
+	_, err := cmd.Flags().GetString("file")
+	if err != nil {
+		t.Error("expected --file flag")
+	}
+	_, err = cmd.Flags().GetString("old")
+	if err != nil {
+		t.Error("expected --old flag")
+	}
+	_, err = cmd.Flags().GetString("new")
+	if err != nil {
+		t.Error("expected --new flag")
+	}
+	_, err = cmd.Flags().GetBool("regex")
 	if err != nil {
 		t.Error("expected --regex flag")
 	}

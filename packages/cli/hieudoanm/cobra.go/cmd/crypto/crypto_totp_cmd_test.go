@@ -6,15 +6,15 @@ import (
 
 func TestNewTotpCmd_Use(t *testing.T) {
 	cmd := newTotpCmd()
-	if cmd.Use != "totp <secret>" {
-		t.Errorf("got Use %q, want %q", cmd.Use, "totp <secret>")
+	if cmd.Use != "totp [--secret <secret>]" {
+		t.Errorf("got Use %q, want %q", cmd.Use, "totp [--secret <secret>]")
 	}
 }
 
 func TestNewTotpCmd_Args(t *testing.T) {
 	cmd := newTotpCmd()
-	if cmd.Args == nil {
-		t.Fatal("Args is nil")
+	if cmd.Args != nil {
+		t.Fatal("Args should be nil after conversion to flags")
 	}
 }
 

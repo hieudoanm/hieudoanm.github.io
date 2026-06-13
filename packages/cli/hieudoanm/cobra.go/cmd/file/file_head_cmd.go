@@ -10,14 +10,14 @@ import (
 
 func newHeadCmd() *cobra.Command {
 	var lines int
+	var filePath string
 	cmd := &cobra.Command{
-		Use:   "head <file>",
+		Use:   "head [--file <path>]",
 		Short: "Show the first N lines of a file",
-		Example: `  file head main.go
-  file head --lines 20 main.go`,
-		Args: cobra.ExactArgs(1),
+		Example: `  file head --file main.go
+  file head -f main.go --lines 20`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			f, err := os.Open(args[0])
+			f, err := os.Open(filePath)
 			if err != nil {
 				return err
 			}
@@ -30,6 +30,7 @@ func newHeadCmd() *cobra.Command {
 			return sc.Err()
 		},
 	}
+	cmd.Flags().StringVarP(&filePath, "file", "f", "", "File path")
 	cmd.Flags().IntVarP(&lines, "lines", "n", 10, "Number of lines")
 	return cmd
 }
