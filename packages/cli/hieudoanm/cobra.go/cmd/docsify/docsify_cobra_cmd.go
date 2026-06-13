@@ -13,11 +13,20 @@ import (
 	"github.com/spf13/cobra"
 )
 
+type FlagDoc struct {
+	Name         string
+	Shorthand    string
+	DefaultValue string
+	Usage        string
+	Persistent   bool
+}
+
 type commandDoc struct {
 	FullName    string
 	Short       string
 	Long        string
 	Example     string
+	Flags       []FlagDoc
 	SubCommands []commandDoc
 }
 
@@ -25,6 +34,8 @@ type cmdRef struct {
 	doc      commandDoc
 	varName  string
 	funcName string
+	localVar string
+	filePath string
 	children []string
 }
 
@@ -88,8 +99,135 @@ func identName(e ast.Expr) string {
 	return ""
 }
 
-func findCmds(dir string) (map[string]*cmdRef, error) {
+func qualifiedIdentName(e ast.Expr) string {
+	switch v := e.(type) {
+	case *ast.Ident:
+		return v.Name
+	case *ast.CallExpr:
+		return qualifiedIdentName(v.Fun)
+	case *ast.SelectorExpr:
+		if pkg, ok := v.X.(*ast.Ident); ok {
+			return pkg.Name + "." + v.Sel.Name
+		}
+		return v.Sel.Name
+	}
+	return ""
+}
+
+func basicLitString(e ast.Expr) string {
+	switch v := e.(type) {
+	case *ast.BasicLit:
+		return strings.Trim(v.Value, "`\"")
+	case *ast.Ident:
+		return v.Name
+	}
+	return ""
+}
+
+func extractFlag(method string, args []ast.Expr) *FlagDoc {
+	nameIdx, shorthandIdx, defaultIdx, usageIdx := -1, -1, -1, -1
+	hasShorthand := false
+
+	switch method {
+	case "StringP", "IntP", "BoolP", "Float64P", "DurationP",
+		"Int32P", "Int64P", "Uint32P", "Uint64P",
+		"StringSliceP", "IntSliceP", "Int32SliceP", "Int64SliceP",
+		"UintSliceP", "BoolSliceP", "Float32SliceP", "DurationSliceP":
+		nameIdx, shorthandIdx, defaultIdx, usageIdx = 0, 1, 2, 3
+		hasShorthand = true
+	case "String", "Int", "Bool", "Float64", "Duration",
+		"Int32", "Int64", "Uint32", "Uint64",
+		"StringSlice", "IntSlice", "BoolSlice":
+		nameIdx, defaultIdx, usageIdx = 0, 1, 2
+	case "StringToString", "StringToStringP":
+		nameIdx, defaultIdx, usageIdx = 0, 1, 2
+		hasShorthand = strings.HasSuffix(method, "P")
+		if hasShorthand {
+			shorthandIdx = 1
+			defaultIdx = 2
+			usageIdx = 3
+		}
+	case "StringVarP", "IntVarP", "BoolVarP", "Float64VarP", "DurationVarP",
+		"Int32VarP", "Int64VarP", "Uint32VarP", "Uint64VarP":
+		nameIdx, shorthandIdx, defaultIdx, usageIdx = 1, 2, 3, 4
+		hasShorthand = true
+	case "StringVar", "IntVar", "BoolVar", "Float64Var", "DurationVar":
+		nameIdx, defaultIdx, usageIdx = 1, 2, 3
+	}
+
+	if nameIdx < 0 || nameIdx >= len(args) {
+		return nil
+	}
+
+	doc := &FlagDoc{
+		Name:  basicLitString(args[nameIdx]),
+		Usage: basicLitString(args[usageIdx]),
+	}
+	if hasShorthand && shorthandIdx >= 0 && shorthandIdx < len(args) {
+		doc.Shorthand = basicLitString(args[shorthandIdx])
+	}
+	if defaultIdx >= 0 && defaultIdx < len(args) {
+		doc.DefaultValue = basicLitString(args[defaultIdx])
+	}
+	if doc.Name == "" {
+		return nil
+	}
+	return doc
+}
+
+func findFlagsForCmd(root ast.Node, varName string) []FlagDoc {
+	var flags []FlagDoc
+	seen := map[string]bool{}
+
+	ast.Inspect(root, func(n ast.Node) bool {
+		call, ok := n.(*ast.CallExpr)
+		if !ok {
+			return true
+		}
+		sel, ok := call.Fun.(*ast.SelectorExpr)
+		if !ok {
+			return true
+		}
+		innerCall, ok := sel.X.(*ast.CallExpr)
+		if !ok {
+			return true
+		}
+		innerSel, ok := innerCall.Fun.(*ast.SelectorExpr)
+		if !ok {
+			return true
+		}
+		xIdent, ok := innerSel.X.(*ast.Ident)
+		if !ok || xIdent.Name != varName {
+			return true
+		}
+		if innerSel.Sel.Name != "Flags" && innerSel.Sel.Name != "PersistentFlags" {
+			return true
+		}
+
+		methodName := sel.Sel.Name
+		flag := extractFlag(methodName, call.Args)
+		if flag == nil {
+			return true
+		}
+		flag.Persistent = innerSel.Sel.Name == "PersistentFlags"
+
+		key := flag.Name
+		if flag.Shorthand != "" {
+			key += "-" + flag.Shorthand
+		}
+		if !seen[key] {
+			seen[key] = true
+			flags = append(flags, *flag)
+		}
+		return true
+	})
+
+	return flags
+}
+
+func findCmds(dir string) (map[string]*cmdRef, map[string]string, error) {
 	refs := map[string]*cmdRef{}
+	funcToVar := map[string]string{}
 	skipNames := map[string]bool{"completion": true, "help": true, "docs": true}
 
 	err := filepath.Walk(dir, func(path string, fi os.FileInfo, err error) error {
@@ -102,11 +240,11 @@ func findCmds(dir string) (map[string]*cmdRef, error) {
 		if err != nil {
 			return nil
 		}
+		pkgName := f.Name.Name
 
 		ast.Inspect(f, func(n ast.Node) bool {
 			switch node := n.(type) {
 
-			// var xxxCmd = &cobra.Command{...}
 			case *ast.GenDecl:
 				for _, spec := range node.Specs {
 					vs, ok := spec.(*ast.ValueSpec)
@@ -131,19 +269,20 @@ func findCmds(dir string) (map[string]*cmdRef, error) {
 							continue
 						}
 						vn := vs.Names[i].Name
-						refs[vn] = &cmdRef{
-							doc:     extractCmd(lit),
-							varName: vn,
+						ref := &cmdRef{
+							doc:      extractCmd(lit),
+							varName:  vn,
+							filePath: path,
 						}
+						ref.doc.Flags = findFlagsForCmd(f, vn)
+						refs[vn] = ref
 					}
 				}
 
-			// func newXxxCmd() *cobra.Command { ... }
 			case *ast.FuncDecl:
 				if !funcHasCmdReturn(node) {
 					break
 				}
-				// Try AssignStmt pattern first: x := &cobra.Command{...}
 				found := false
 				ast.Inspect(node.Body, func(n ast.Node) bool {
 					stmt, ok := n.(*ast.AssignStmt)
@@ -167,17 +306,22 @@ func findCmds(dir string) (map[string]*cmdRef, error) {
 						return true
 					}
 					fnName := node.Name.Name
-					refs[fnName] = &cmdRef{
+					qualifiedName := pkgName + "." + fnName
+					localVarName := identName(stmt.Lhs[0])
+					ref := &cmdRef{
 						doc:      extractCmd(lit),
 						funcName: fnName,
+						localVar: localVarName,
+						filePath: path,
 					}
+					ref.doc.Flags = findFlagsForCmd(node.Body, localVarName)
+					refs[qualifiedName] = ref
 					found = true
 					return false
 				})
 				if found {
 					break
 				}
-				// Try ReturnStmt pattern: return &cobra.Command{...}
 				ast.Inspect(node.Body, func(n ast.Node) bool {
 					ret, ok := n.(*ast.ReturnStmt)
 					if !ok || len(ret.Results) != 1 {
@@ -200,9 +344,32 @@ func findCmds(dir string) (map[string]*cmdRef, error) {
 						return true
 					}
 					fnName := node.Name.Name
-					refs[fnName] = &cmdRef{
+					qualifiedName := pkgName + "." + fnName
+					refs[qualifiedName] = &cmdRef{
 						doc:      extractCmd(lit),
 						funcName: fnName,
+						filePath: path,
+					}
+					return false
+				})
+				if found {
+					break
+				}
+				// Fallback: return <ident> matching a known command variable
+				ast.Inspect(node.Body, func(n ast.Node) bool {
+					ret, ok := n.(*ast.ReturnStmt)
+					if !ok || len(ret.Results) != 1 {
+						return true
+					}
+					ident, ok := ret.Results[0].(*ast.Ident)
+					if !ok {
+						return true
+					}
+					varName := ident.Name
+					if _, ok := refs[varName]; ok {
+						fnName := pkgName + "." + node.Name.Name
+						funcToVar[fnName] = varName
+						found = true
 					}
 					return false
 				})
@@ -213,12 +380,12 @@ func findCmds(dir string) (map[string]*cmdRef, error) {
 	})
 
 	if err != nil {
-		return nil, fmt.Errorf("walk %s: %w", dir, err)
+		return nil, nil, fmt.Errorf("walk %s: %w", dir, err)
 	}
-	return refs, nil
+	return refs, funcToVar, nil
 }
 
-func findAddCalls(dir string, refs map[string]*cmdRef) {
+func findAddCalls(dir string, refs map[string]*cmdRef, funcToVar map[string]string) {
 	filepath.Walk(dir, func(path string, fi os.FileInfo, err error) error {
 		if err != nil || fi.IsDir() || !strings.HasSuffix(path, ".go") {
 			return nil
@@ -229,33 +396,57 @@ func findAddCalls(dir string, refs map[string]*cmdRef) {
 		if err != nil {
 			return nil
 		}
+		pkgName := f.Name.Name
 
 		ast.Inspect(f, func(n ast.Node) bool {
-			stmt, ok := n.(*ast.ExprStmt)
-			if !ok {
-				return true
-			}
-			call, ok := stmt.X.(*ast.CallExpr)
-			if !ok {
-				return true
-			}
-			sel, ok := call.Fun.(*ast.SelectorExpr)
-			if !ok || sel.Sel.Name != "AddCommand" {
+			fn, ok := n.(*ast.FuncDecl)
+			if !ok || fn.Body == nil {
 				return true
 			}
 
-			parentName := identName(sel.X)
-			parent, ok := refs[parentName]
-			if !ok {
-				return true
-			}
-
-			for _, arg := range call.Args {
-				childName := identName(arg)
-				if _, exists := refs[childName]; exists {
-					parent.children = append(parent.children, childName)
+			ast.Inspect(fn.Body, func(n ast.Node) bool {
+				stmt, ok := n.(*ast.ExprStmt)
+				if !ok {
+					return true
 				}
-			}
+				call, ok := stmt.X.(*ast.CallExpr)
+				if !ok {
+					return true
+				}
+				sel, ok := call.Fun.(*ast.SelectorExpr)
+				if !ok || sel.Sel.Name != "AddCommand" {
+					return true
+				}
+
+				parentName := identName(sel.X)
+				parent, ok := refs[parentName]
+				if !ok {
+					qualifiedName := pkgName + "." + fn.Name.Name
+					if ref, exists := refs[qualifiedName]; exists && ref.localVar == parentName {
+						parent = ref
+						ok = true
+					}
+				}
+				if !ok {
+					return true
+				}
+
+				for _, arg := range call.Args {
+					childName := qualifiedIdentName(arg)
+					if _, exists := refs[childName]; !exists {
+						pkgQualified := pkgName + "." + childName
+						if _, exists := refs[pkgQualified]; exists {
+							childName = pkgQualified
+						} else if target, ok := funcToVar[pkgQualified]; ok {
+							childName = target
+						}
+					}
+					if _, exists := refs[childName]; exists {
+						parent.children = append(parent.children, childName)
+					}
+				}
+				return true
+			})
 			return true
 		})
 		return nil
@@ -301,9 +492,56 @@ func wireTree(name string, refs map[string]*cmdRef, visited map[string]bool) com
 	return doc
 }
 
-func renderFlags(w io.Writer) {
-	fmt.Fprintf(w, "| Flag | Description |\n")
-	fmt.Fprintf(w, "|------|-------------|\n")
+func renderTOC(w io.Writer, doc commandDoc, rootName string, flagCount *int) {
+	fmt.Fprintf(w, "- [`%s`](#%s)\n", rootName, rootName)
+	fmt.Fprintf(w, "  - [Table of Contents](#table-of-contents)\n")
+
+	for _, sub := range doc.SubCommands {
+		renderTOCEntry(w, sub, rootName, "  ", flagCount)
+	}
+}
+
+func renderTOCEntry(w io.Writer, doc commandDoc, parentName, indent string, flagCount *int) {
+	baseName := strings.Fields(doc.FullName)[0]
+	headingText := parentName + " " + baseName
+	anchor := strings.ReplaceAll(strings.ToLower(headingText), " ", "-")
+
+	fmt.Fprintf(w, "%s- [`%s`](#%s)\n", indent, headingText, anchor)
+
+	if len(doc.Flags) > 0 {
+		if *flagCount == 0 {
+			fmt.Fprintf(w, "%s  - [Flags](#flags)\n", indent)
+		} else {
+			fmt.Fprintf(w, "%s  - [Flags](#flags-%d)\n", indent, *flagCount)
+		}
+		*flagCount++
+	}
+
+	for _, sub := range doc.SubCommands {
+		renderTOCEntry(w, sub, headingText, indent+"  ", flagCount)
+	}
+}
+
+func renderFlags(w io.Writer, flags []FlagDoc, level int) {
+	if len(flags) == 0 {
+		return
+	}
+
+	heading := strings.Repeat("#", level+1)
+	fmt.Fprintf(w, "%s Flags\n\n", heading)
+	fmt.Fprintf(w, "| Flag | Shorthand | Default | Description |\n")
+	fmt.Fprintf(w, "|------|-----------|---------|-------------|\n")
+	for _, f := range flags {
+		shorthand := ""
+		if f.Shorthand != "" {
+			shorthand = "-" + f.Shorthand
+		}
+		flagName := "--" + f.Name
+		if f.Persistent {
+			flagName += " (persistent)"
+		}
+		fmt.Fprintf(w, "| `%s` | `%s` | `%s` | %s |\n", flagName, shorthand, f.DefaultValue, f.Usage)
+	}
 	fmt.Fprintf(w, "\n")
 }
 
@@ -317,16 +555,18 @@ func renderCommand(doc commandDoc, level int, parentName string, w io.Writer) {
 	fullUsage = strings.TrimSpace(fullUsage)
 
 	heading := strings.Repeat("#", level)
-	fmt.Fprintf(w, "%s `%s`\n\n", heading, baseName)
+	headingText := parentName + " " + baseName
+	fmt.Fprintf(w, "%s `%s`\n\n", heading, headingText)
 	if doc.Short != "" {
 		fmt.Fprintf(w, "%s\n\n", doc.Short)
 	}
-	if doc.Long != "" && doc.Long != doc.Short {
+	if doc.Long != "" {
 		fmt.Fprintf(w, "%s\n\n", strings.TrimSpace(doc.Long))
 	}
-	fmt.Fprintf(w, "```\n%s\n```\n\n", fullUsage)
+	fmt.Fprintf(w, "```bash\n%s\n```\n\n", fullUsage)
+	renderFlags(w, doc.Flags, level)
 	if doc.Example != "" {
-		fmt.Fprintf(w, "Example:\n```\n%s\n```\n\n", strings.TrimSpace(doc.Example))
+		fmt.Fprintf(w, "Example:\n\n```bash\n%s\n```\n\n", strings.TrimSpace(doc.Example))
 	}
 	fmt.Fprintf(w, "---\n\n")
 	for _, sub := range doc.SubCommands {
@@ -335,21 +575,16 @@ func renderCommand(doc commandDoc, level int, parentName string, w io.Writer) {
 }
 
 func generateDocs(projectPath string, w io.Writer) error {
-	cmdDir := filepath.Join(projectPath, "cmd")
-	if _, err := os.Stat(cmdDir); err != nil {
-		return fmt.Errorf("cmd/ directory not found in %s", projectPath)
-	}
-
-	refs, err := findCmds(cmdDir)
+	refs, funcToVar, err := findCmds(projectPath)
 	if err != nil {
 		return err
 	}
 
-	findAddCalls(cmdDir, refs)
+	findAddCalls(projectPath, refs, funcToVar)
 
 	roots := buildTree(refs)
 	if len(roots) == 0 {
-		return fmt.Errorf("no cobra commands found in %s", cmdDir)
+		return fmt.Errorf("no cobra commands found in %s", projectPath)
 	}
 
 	root := roots[0]
@@ -362,15 +597,13 @@ func generateDocs(projectPath string, w io.Writer) error {
 	if root.Long != "" && root.Long != root.Short {
 		fmt.Fprintf(w, "%s\n\n", strings.TrimSpace(root.Long))
 	}
+	renderFlags(w, root.Flags, 1)
 	fmt.Fprintf(w, "---\n\n")
 
 	if len(root.SubCommands) > 0 {
-		fmt.Fprintf(w, "## Commands\n\n")
-		for _, sub := range root.SubCommands {
-			name := strings.Fields(sub.FullName)[0]
-			short := sub.Short
-			fmt.Fprintf(w, "- [`%s`](#%s) — %s\n", name, name, short)
-		}
+		flagCount := 0
+		fmt.Fprintf(w, "## Table of Contents\n\n")
+		renderTOC(w, root, rootName, &flagCount)
 		fmt.Fprintf(w, "\n")
 	}
 
@@ -386,9 +619,12 @@ func newCobraCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "cobra [--file <path>]",
 		Short: "Generate README.md documentation from a Cobra CLI project",
-		Long:  `docsify cobra reads the cmd/ folder of a Cobra project and generates a single README.md documenting all commands, flags, and examples.`,
+		Long:  `docsify cobra scans Go source files for &cobra.Command{} definitions and generates a single README.md documenting all commands, subcommands, flags, and usage.`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			projectPath := file
+			if projectPath == "" {
+				projectPath = "."
+			}
 			output, _ := cmd.Flags().GetString("output")
 
 			out, err := os.Create(output)
@@ -401,13 +637,13 @@ func newCobraCmd() *cobra.Command {
 				return err
 			}
 
-			cmd.Printf("📄 Docs written to %s\n", output)
+			cmd.Printf("Docs written to %s\n", output)
 			return nil
 		},
 	}
 
 	cmd.CompletionOptions.DisableDefaultCmd = true
-	cmd.Flags().StringVarP(&file, "file", "f", "", "Path to cobra project directory")
+	cmd.Flags().StringVarP(&file, "file", "f", "", "Path to cobra project directory (default: current directory)")
 	cmd.Flags().StringP("output", "o", "README.md", "Output file path")
 
 	return cmd

@@ -1,30 +1,4332 @@
-# 🚀 `hieudoanm` CLI (Go)
+# `hieudoanm`
 
-## 📚 Table of Contents
+Hieu Doan's personal CLI toolbox
 
-- [🚀 `hieudoanm` CLI (Go)](#-hieudoanm-cli-go)
-  - [📚 Table of Contents](#-table-of-contents)
-  - [📦 Installation](#-installation)
-  - [🚀 Usage](#-usage)
-  - [📄 License](#-license)
-  - [Structure](#structure)
+A collection of CLI utilities covering system monitoring, cloud service status, currency conversion, text processing, UUID generation, and more.
 
-## 📦 Installation
+---
+
+## Table of Contents
+
+- [`hieudoanm`](#hieudoanm)
+  - [Table of Contents](#table-of-contents)
+  - [`hieudoanm calc`](#hieudoanm-calc)
+    - [Flags](#flags)
+    - [`hieudoanm calc tax`](#hieudoanm-calc-tax)
+    - [`hieudoanm calc compound`](#hieudoanm-calc-compound)
+      - [Flags](#flags-1)
+    - [`hieudoanm calc currency`](#hieudoanm-calc-currency)
+      - [Flags](#flags-2)
+    - [`hieudoanm calc loan`](#hieudoanm-calc-loan)
+      - [Flags](#flags-3)
+    - [`hieudoanm calc discount`](#hieudoanm-calc-discount)
+      - [Flags](#flags-4)
+    - [`hieudoanm calc tip`](#hieudoanm-calc-tip)
+      - [Flags](#flags-5)
+    - [`hieudoanm calc bmi`](#hieudoanm-calc-bmi)
+      - [Flags](#flags-6)
+    - [`hieudoanm calc base`](#hieudoanm-calc-base)
+      - [Flags](#flags-7)
+    - [`hieudoanm calc unit`](#hieudoanm-calc-unit)
+      - [Flags](#flags-8)
+    - [`hieudoanm calc percent`](#hieudoanm-calc-percent)
+      - [Flags](#flags-9)
+    - [`hieudoanm calc mortgage`](#hieudoanm-calc-mortgage)
+      - [Flags](#flags-10)
+    - [`hieudoanm calc date`](#hieudoanm-calc-date)
+      - [Flags](#flags-11)
+    - [`hieudoanm calc eval`](#hieudoanm-calc-eval)
+      - [Flags](#flags-12)
+    - [`hieudoanm calc stats`](#hieudoanm-calc-stats)
+    - [`hieudoanm calc factorial`](#hieudoanm-calc-factorial)
+      - [Flags](#flags-13)
+    - [`hieudoanm calc random`](#hieudoanm-calc-random)
+      - [Flags](#flags-14)
+    - [`hieudoanm calc prime`](#hieudoanm-calc-prime)
+      - [Flags](#flags-15)
+    - [`hieudoanm calc gcd`](#hieudoanm-calc-gcd)
+      - [Flags](#flags-16)
+    - [`hieudoanm calc lcm`](#hieudoanm-calc-lcm)
+      - [Flags](#flags-17)
+  - [`hieudoanm casino`](#hieudoanm-casino)
+    - [Flags](#flags-18)
+    - [`hieudoanm casino blackjack`](#hieudoanm-casino-blackjack)
+      - [`hieudoanm casino blackjack count`](#hieudoanm-casino-blackjack-count)
+      - [`hieudoanm casino blackjack play`](#hieudoanm-casino-blackjack-play)
+    - [`hieudoanm casino poker`](#hieudoanm-casino-poker)
+      - [`hieudoanm casino poker odds`](#hieudoanm-casino-poker-odds)
+        - [Flags](#flags-19)
+      - [`hieudoanm casino poker play`](#hieudoanm-casino-poker-play)
+    - [`hieudoanm casino baccarat`](#hieudoanm-casino-baccarat)
+      - [`hieudoanm casino baccarat play`](#hieudoanm-casino-baccarat-play)
+      - [`hieudoanm casino baccarat strategy`](#hieudoanm-casino-baccarat-strategy)
+        - [Flags](#flags-20)
+    - [`hieudoanm casino slots`](#hieudoanm-casino-slots)
+      - [`hieudoanm casino slots play`](#hieudoanm-casino-slots-play)
+    - [`hieudoanm casino coin`](#hieudoanm-casino-coin)
+      - [Flags](#flags-21)
+    - [`hieudoanm casino dice`](#hieudoanm-casino-dice)
+      - [Flags](#flags-22)
+    - [`hieudoanm casino roulette`](#hieudoanm-casino-roulette)
+      - [Flags](#flags-23)
+  - [`hieudoanm chess`](#hieudoanm-chess)
+    - [Flags](#flags-24)
+    - [`hieudoanm chess leaderboards`](#hieudoanm-chess-leaderboards)
+      - [Flags](#flags-25)
+    - [`hieudoanm chess player`](#hieudoanm-chess-player)
+      - [Flags](#flags-26)
+    - [`hieudoanm chess titled`](#hieudoanm-chess-titled)
+    - [`hieudoanm chess elo`](#hieudoanm-chess-elo)
+    - [`hieudoanm chess fen`](#hieudoanm-chess-fen)
+      - [Flags](#flags-27)
+      - [`hieudoanm chess fen eval`](#hieudoanm-chess-fen-eval)
+        - [Flags](#flags-28)
+      - [`hieudoanm chess fen svg`](#hieudoanm-chess-fen-svg)
+        - [Flags](#flags-29)
+    - [`hieudoanm chess pgn`](#hieudoanm-chess-pgn)
+      - [`hieudoanm chess pgn fen`](#hieudoanm-chess-pgn-fen)
+        - [Flags](#flags-30)
+      - [`hieudoanm chess pgn uci`](#hieudoanm-chess-pgn-uci)
+        - [Flags](#flags-31)
+    - [`hieudoanm chess play`](#hieudoanm-chess-play)
+      - [Flags](#flags-32)
+    - [`hieudoanm chess random`](#hieudoanm-chess-random)
+    - [`hieudoanm chess setup`](#hieudoanm-chess-setup)
+  - [`hieudoanm colors`](#hieudoanm-colors)
+    - [Flags](#flags-33)
+    - [`hieudoanm colors hcl`](#hieudoanm-colors-hcl)
+    - [`hieudoanm colors hex`](#hieudoanm-colors-hex)
+    - [`hieudoanm colors oklch`](#hieudoanm-colors-oklch)
+    - [`hieudoanm colors rgb`](#hieudoanm-colors-rgb)
+    - [`hieudoanm colors palette`](#hieudoanm-colors-palette)
+    - [`hieudoanm colors random`](#hieudoanm-colors-random)
+      - [Flags](#flags-34)
+  - [`hieudoanm convert`](#hieudoanm-convert)
+    - [Flags](#flags-35)
+    - [`hieudoanm convert braille`](#hieudoanm-convert-braille)
+    - [`hieudoanm convert morse`](#hieudoanm-convert-morse)
+    - [`hieudoanm convert base64`](#hieudoanm-convert-base64)
+      - [Flags](#flags-36)
+    - [`hieudoanm convert url`](#hieudoanm-convert-url)
+      - [Flags](#flags-37)
+    - [`hieudoanm convert capitalise`](#hieudoanm-convert-capitalise)
+    - [`hieudoanm convert deburr`](#hieudoanm-convert-deburr)
+    - [`hieudoanm convert kebabcase`](#hieudoanm-convert-kebabcase)
+    - [`hieudoanm convert camelcase`](#hieudoanm-convert-camelcase)
+    - [`hieudoanm convert pascalcase`](#hieudoanm-convert-pascalcase)
+    - [`hieudoanm convert slug`](#hieudoanm-convert-slug)
+    - [`hieudoanm convert lowercase`](#hieudoanm-convert-lowercase)
+    - [`hieudoanm convert snakecase`](#hieudoanm-convert-snakecase)
+    - [`hieudoanm convert uppercase`](#hieudoanm-convert-uppercase)
+    - [`hieudoanm convert count`](#hieudoanm-convert-count)
+      - [Flags](#flags-38)
+  - [`hieudoanm crypto`](#hieudoanm-crypto)
+    - [Flags](#flags-39)
+    - [`hieudoanm crypto hash`](#hieudoanm-crypto-hash)
+      - [Flags](#flags-40)
+    - [`hieudoanm crypto jwt`](#hieudoanm-crypto-jwt)
+      - [`hieudoanm crypto jwt decode`](#hieudoanm-crypto-jwt-decode)
+        - [Flags](#flags-41)
+      - [`hieudoanm crypto jwt encode`](#hieudoanm-crypto-jwt-encode)
+        - [Flags](#flags-42)
+    - [`hieudoanm crypto keygen`](#hieudoanm-crypto-keygen)
+      - [Flags](#flags-43)
+    - [`hieudoanm crypto passwd`](#hieudoanm-crypto-passwd)
+      - [Flags](#flags-44)
+    - [`hieudoanm crypto uuid`](#hieudoanm-crypto-uuid)
+      - [Flags](#flags-45)
+    - [`hieudoanm crypto qrcode`](#hieudoanm-crypto-qrcode)
+      - [Flags](#flags-46)
+    - [`hieudoanm crypto encrypt`](#hieudoanm-crypto-encrypt)
+      - [Flags](#flags-47)
+    - [`hieudoanm crypto decrypt`](#hieudoanm-crypto-decrypt)
+      - [Flags](#flags-48)
+    - [`hieudoanm crypto totp`](#hieudoanm-crypto-totp)
+      - [Flags](#flags-49)
+  - [`hieudoanm data`](#hieudoanm-data)
+    - [Flags](#flags-50)
+    - [`hieudoanm data csv`](#hieudoanm-data-csv)
+      - [Flags](#flags-51)
+    - [`hieudoanm data json`](#hieudoanm-data-json)
+      - [Flags](#flags-52)
+    - [`hieudoanm data yml`](#hieudoanm-data-yml)
+      - [Flags](#flags-53)
+  - [`hieudoanm docsify`](#hieudoanm-docsify)
+    - [Flags](#flags-54)
+    - [`hieudoanm docsify cobra`](#hieudoanm-docsify-cobra)
+      - [Flags](#flags-55)
+    - [`hieudoanm docsify obsidian`](#hieudoanm-docsify-obsidian)
+      - [Flags](#flags-56)
+    - [`hieudoanm docsify scan`](#hieudoanm-docsify-scan)
+      - [Flags](#flags-57)
+    - [`hieudoanm docsify tree`](#hieudoanm-docsify-tree)
+      - [Flags](#flags-58)
+  - [`hieudoanm doi`](#hieudoanm-doi)
+    - [Flags](#flags-59)
+    - [`hieudoanm doi cite`](#hieudoanm-doi-cite)
+    - [`hieudoanm doi ref`](#hieudoanm-doi-ref)
+    - [`hieudoanm doi fetch`](#hieudoanm-doi-fetch)
+    - [`hieudoanm doi validate`](#hieudoanm-doi-validate)
+  - [`hieudoanm english`](#hieudoanm-english)
+    - [Flags](#flags-60)
+    - [`hieudoanm english define`](#hieudoanm-english-define)
+      - [Flags](#flags-61)
+  - [`hieudoanm file`](#hieudoanm-file)
+    - [Flags](#flags-62)
+    - [`hieudoanm file checksum`](#hieudoanm-file-checksum)
+      - [Flags](#flags-63)
+    - [`hieudoanm file chmod`](#hieudoanm-file-chmod)
+      - [Flags](#flags-64)
+    - [`hieudoanm file count`](#hieudoanm-file-count)
+      - [Flags](#flags-65)
+    - [`hieudoanm file duplicates`](#hieudoanm-file-duplicates)
+      - [Flags](#flags-66)
+    - [`hieudoanm file edit`](#hieudoanm-file-edit)
+      - [Flags](#flags-67)
+    - [`hieudoanm file grep`](#hieudoanm-file-grep)
+      - [Flags](#flags-68)
+    - [`hieudoanm file head`](#hieudoanm-file-head)
+      - [Flags](#flags-69)
+    - [`hieudoanm file read`](#hieudoanm-file-read)
+      - [Flags](#flags-70)
+    - [`hieudoanm file size`](#hieudoanm-file-size)
+      - [Flags](#flags-71)
+    - [`hieudoanm file stats`](#hieudoanm-file-stats)
+      - [Flags](#flags-72)
+    - [`hieudoanm file tail`](#hieudoanm-file-tail)
+      - [Flags](#flags-73)
+    - [`hieudoanm file type`](#hieudoanm-file-type)
+      - [Flags](#flags-74)
+    - [`hieudoanm file write`](#hieudoanm-file-write)
+      - [Flags](#flags-75)
+  - [`hieudoanm gemini`](#hieudoanm-gemini)
+    - [Flags](#flags-76)
+    - [`hieudoanm gemini code`](#hieudoanm-gemini-code)
+  - [`hieudoanm gh`](#hieudoanm-gh)
+    - [Flags](#flags-77)
+    - [`hieudoanm gh coc`](#hieudoanm-gh-coc)
+      - [Flags](#flags-78)
+    - [`hieudoanm gh ignore`](#hieudoanm-gh-ignore)
+      - [Flags](#flags-79)
+    - [`hieudoanm gh languages`](#hieudoanm-gh-languages)
+      - [Flags](#flags-80)
+    - [`hieudoanm gh license`](#hieudoanm-gh-license)
+      - [Flags](#flags-81)
+    - [`hieudoanm gh og`](#hieudoanm-gh-og)
+      - [Flags](#flags-82)
+  - [`hieudoanm image`](#hieudoanm-image)
+    - [Flags](#flags-83)
+    - [`hieudoanm image info`](#hieudoanm-image-info)
+      - [Flags](#flags-84)
+    - [`hieudoanm image convert`](#hieudoanm-image-convert)
+      - [Flags](#flags-85)
+    - [`hieudoanm image dominant`](#hieudoanm-image-dominant)
+      - [Flags](#flags-86)
+  - [`hieudoanm net`](#hieudoanm-net)
+    - [Flags](#flags-87)
+    - [`hieudoanm net cert`](#hieudoanm-net-cert)
+      - [Flags](#flags-88)
+      - [`hieudoanm net cert info`](#hieudoanm-net-cert-info)
+        - [Flags](#flags-89)
+      - [`hieudoanm net cert check`](#hieudoanm-net-cert-check)
+        - [Flags](#flags-90)
+    - [`hieudoanm net dns`](#hieudoanm-net-dns)
+      - [Flags](#flags-91)
+    - [`hieudoanm net ip`](#hieudoanm-net-ip)
+      - [Flags](#flags-92)
+    - [`hieudoanm net ping`](#hieudoanm-net-ping)
+      - [Flags](#flags-93)
+    - [`hieudoanm net serve`](#hieudoanm-net-serve)
+      - [Flags](#flags-94)
+    - [`hieudoanm net status`](#hieudoanm-net-status)
+      - [Flags](#flags-95)
+    - [`hieudoanm net wifi`](#hieudoanm-net-wifi)
+      - [Flags](#flags-96)
+    - [`hieudoanm net http`](#hieudoanm-net-http)
+      - [Flags](#flags-97)
+    - [`hieudoanm net whois`](#hieudoanm-net-whois)
+      - [Flags](#flags-98)
+  - [`hieudoanm openapi`](#hieudoanm-openapi)
+    - [Flags](#flags-99)
+    - [`hieudoanm openapi openapi2postman`](#hieudoanm-openapi-openapi2postman)
+      - [Flags](#flags-100)
+    - [`hieudoanm openapi validate`](#hieudoanm-openapi-validate)
+      - [Flags](#flags-101)
+  - [`hieudoanm openrouter`](#hieudoanm-openrouter)
+    - [Flags](#flags-102)
+    - [`hieudoanm openrouter serve`](#hieudoanm-openrouter-serve)
+      - [Flags](#flags-103)
+    - [`hieudoanm openrouter status`](#hieudoanm-openrouter-status)
+      - [Flags](#flags-104)
+    - [`hieudoanm openrouter models`](#hieudoanm-openrouter-models)
+      - [Flags](#flags-105)
+    - [`hieudoanm openrouter hook`](#hieudoanm-openrouter-hook)
+    - [`hieudoanm openrouter code`](#hieudoanm-openrouter-code)
+      - [Flags](#flags-106)
+  - [`hieudoanm port`](#hieudoanm-port)
+    - [Flags](#flags-107)
+    - [`hieudoanm port check`](#hieudoanm-port-check)
+      - [Flags](#flags-108)
+    - [`hieudoanm port find`](#hieudoanm-port-find)
+      - [Flags](#flags-109)
+    - [`hieudoanm port scan`](#hieudoanm-port-scan)
+      - [Flags](#flags-110)
+  - [`hieudoanm search`](#hieudoanm-search)
+    - [Flags](#flags-111)
+    - [`hieudoanm search files`](#hieudoanm-search-files)
+      - [Flags](#flags-112)
+    - [`hieudoanm search text`](#hieudoanm-search-text)
+      - [Flags](#flags-113)
+    - [`hieudoanm search code`](#hieudoanm-search-code)
+      - [Flags](#flags-114)
+    - [`hieudoanm search web`](#hieudoanm-search-web)
+      - [Flags](#flags-115)
+  - [`hieudoanm semver`](#hieudoanm-semver)
+    - [Flags](#flags-116)
+    - [`hieudoanm semver <command> [flags] validate`](#hieudoanm-semver-command-flags-validate)
+      - [Flags](#flags-117)
+    - [`hieudoanm semver <command> [flags] compare`](#hieudoanm-semver-command-flags-compare)
+      - [Flags](#flags-118)
+    - [`hieudoanm semver <command> [flags] sort`](#hieudoanm-semver-command-flags-sort)
+      - [Flags](#flags-119)
+  - [`hieudoanm system`](#hieudoanm-system)
+    - [Flags](#flags-120)
+    - [`hieudoanm system monitor`](#hieudoanm-system-monitor)
+      - [Flags](#flags-121)
+    - [`hieudoanm system clipboard`](#hieudoanm-system-clipboard)
+      - [Flags](#flags-122)
+    - [`hieudoanm system info`](#hieudoanm-system-info)
+      - [Flags](#flags-123)
+    - [`hieudoanm system env`](#hieudoanm-system-env)
+      - [Flags](#flags-124)
+    - [`hieudoanm system path`](#hieudoanm-system-path)
+      - [Flags](#flags-125)
+    - [`hieudoanm system disk`](#hieudoanm-system-disk)
+      - [Flags](#flags-126)
+    - [`hieudoanm system battery`](#hieudoanm-system-battery)
+      - [Flags](#flags-127)
+  - [`hieudoanm telegram`](#hieudoanm-telegram)
+    - [Flags](#flags-128)
+    - [`hieudoanm telegram message`](#hieudoanm-telegram-message)
+      - [`hieudoanm telegram message send`](#hieudoanm-telegram-message-send)
+    - [`hieudoanm telegram webhook`](#hieudoanm-telegram-webhook)
+      - [`hieudoanm telegram webhook delete`](#hieudoanm-telegram-webhook-delete)
+      - [`hieudoanm telegram webhook info`](#hieudoanm-telegram-webhook-info)
+      - [`hieudoanm telegram webhook set`](#hieudoanm-telegram-webhook-set)
+  - [`hieudoanm time`](#hieudoanm-time)
+    - [Flags](#flags-129)
+    - [`hieudoanm time clock`](#hieudoanm-time-clock)
+      - [`hieudoanm time clock now`](#hieudoanm-time-clock-now)
+        - [Flags](#flags-130)
+    - [`hieudoanm time cron`](#hieudoanm-time-cron)
+      - [Flags](#flags-131)
+    - [`hieudoanm time epoch`](#hieudoanm-time-epoch)
+      - [Flags](#flags-132)
+    - [`hieudoanm time pomodoro`](#hieudoanm-time-pomodoro)
+      - [Flags](#flags-133)
+    - [`hieudoanm time timer`](#hieudoanm-time-timer)
+      - [Flags](#flags-134)
+    - [`hieudoanm time until`](#hieudoanm-time-until)
+      - [Flags](#flags-135)
+    - [`hieudoanm time world`](#hieudoanm-time-world)
+    - [`hieudoanm time age`](#hieudoanm-time-age)
+      - [Flags](#flags-136)
+    - [`hieudoanm time stopwatch`](#hieudoanm-time-stopwatch)
+      - [Flags](#flags-137)
+  - [`hieudoanm version`](#hieudoanm-version)
+    - [Flags](#flags-138)
+  - [`hieudoanm web`](#hieudoanm-web)
+    - [Flags](#flags-139)
+    - [`hieudoanm web instagram`](#hieudoanm-web-instagram)
+      - [`hieudoanm web instagram download`](#hieudoanm-web-instagram-download)
+        - [Flags](#flags-140)
+    - [`hieudoanm web shopify`](#hieudoanm-web-shopify)
+      - [`hieudoanm web shopify detect`](#hieudoanm-web-shopify-detect)
+        - [Flags](#flags-141)
+    - [`hieudoanm web snapshot`](#hieudoanm-web-snapshot)
+      - [Flags](#flags-142)
+    - [`hieudoanm web weather`](#hieudoanm-web-weather)
+      - [Flags](#flags-143)
+    - [`hieudoanm web youtube`](#hieudoanm-web-youtube)
+      - [`hieudoanm web youtube thumbnails`](#hieudoanm-web-youtube-thumbnails)
+        - [Flags](#flags-144)
+      - [`hieudoanm web youtube fetch`](#hieudoanm-web-youtube-fetch)
+        - [Flags](#flags-145)
+
+## `hieudoanm calc`
+
+Financial and utility calculators
+
+A collection of calculator tools including tax calculation and compound interest.
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/hieudoanm/hieudoanm/master/packages/cli/hieudoanm/go/scripts/install.sh | bash
+hieudoanm calc
 ```
 
-## 🚀 Usage
+### Flags
+
+| Flag                  | Shorthand | Default | Description           |
+| --------------------- | --------- | ------- | --------------------- |
+| `--json (persistent)` | ``        | `false` | Output in JSON format |
+
+---
+
+### `hieudoanm calc tax`
+
+Calculate Vietnam personal income tax
+
+Calculate Vietnam personal income tax (PIT) with a terminal UI. Supports gross-to-net and net-to-gross modes, dependent deductions, and insurance.
 
 ```bash
-hieudoanm
+hieudoanm calc tax
 ```
 
-## 📄 License
+---
 
-[GNU General Public License - Version 3 (GPL-3.0)](https://opensource.org/license/gpl-3.0)
+### `hieudoanm calc compound`
 
-## Structure
+Compound interest calculator
 
-[TREE](TREE.md)
+Calculate compound interest with optional regular contributions.
+
+Uses the formula: A = P(1+r/n)^(nt) + PMT \* ((1+r/n)^(nt) - 1) / (r/n)
+
+```bash
+hieudoanm calc compound
+```
+
+#### Flags
+
+| Flag           | Shorthand | Default  | Description                                              |
+| -------------- | --------- | -------- | -------------------------------------------------------- |
+| `--principal`  | `-p`      | `0`      | Initial principal amount                                 |
+| `--rate`       | `-r`      | `0`      | Annual interest rate (percentage)                        |
+| `--years`      | `-y`      | `0`      | Number of years                                          |
+| `--contribute` | `-c`      | `0`      | Regular contribution per compounding period              |
+| `--compound`   | `-n`      | `yearly` | Compounding frequency: yearly, quarterly, monthly, daily |
+
+Example:
+
+```bash
+calc compound --principal 10000 --rate 5 --years 10 --compound monthly
+  calc compound -p 50000 -r 7.5 -y 20 -n yearly -c 500
+```
+
+---
+
+### `hieudoanm calc currency`
+
+Convert between currencies using Frankfurter API
+
+Convert amounts between world currencies using the European Central Bank's Frankfurter exchange rate API.
+
+```bash
+hieudoanm calc currency
+```
+
+#### Flags
+
+| Flag       | Shorthand | Default | Description                   |
+| ---------- | --------- | ------- | ----------------------------- |
+| `--from`   | ``        | `EUR`   | Source currency (default EUR) |
+| `--to`     | ``        | `USD`   | Target currency (default USD) |
+| `--amount` | ``        | `1`     | Amount to convert (default 1) |
+
+Example:
+
+```bash
+calc currency --from USD --to EUR --amount 100
+```
+
+---
+
+### `hieudoanm calc loan`
+
+Loan amortization calculator
+
+```bash
+hieudoanm calc loan
+```
+
+#### Flags
+
+| Flag          | Shorthand | Default | Description                       |
+| ------------- | --------- | ------- | --------------------------------- |
+| `--principal` | `-p`      | `0`     | Loan principal amount             |
+| `--rate`      | `-r`      | `0`     | Annual interest rate (percentage) |
+| `--years`     | `-y`      | `0`     | Loan term in years                |
+
+Example:
+
+```bash
+calc loan --principal 30000 --rate 5 --years 5
+  calc loan -p 30000 -r 5 -y 5
+```
+
+---
+
+### `hieudoanm calc discount`
+
+Calculate discount and sale price
+
+```bash
+hieudoanm calc discount
+```
+
+#### Flags
+
+| Flag         | Shorthand | Default | Description         |
+| ------------ | --------- | ------- | ------------------- |
+| `--original` | `-o`      | `0`     | Original price      |
+| `--percent`  | `-p`      | `0`     | Discount percentage |
+
+Example:
+
+```bash
+calc discount --original 100 --percent 20
+  calc discount -o 100 -p 20
+```
+
+---
+
+### `hieudoanm calc tip`
+
+Calculate tip and split bill
+
+```bash
+hieudoanm calc tip
+```
+
+#### Flags
+
+| Flag        | Shorthand | Default | Description                |
+| ----------- | --------- | ------- | -------------------------- |
+| `--bill`    | `-b`      | `0`     | Bill amount                |
+| `--percent` | `-p`      | `15`    | Tip percentage             |
+| `--split`   | `-s`      | `1`     | Number of people splitting |
+
+Example:
+
+```bash
+calc tip --bill 50 --percent 15 --split 4
+  calc tip -b 50 -p 15 -s 4
+```
+
+---
+
+### `hieudoanm calc bmi`
+
+Calculate Body Mass Index
+
+```bash
+hieudoanm calc bmi
+```
+
+#### Flags
+
+| Flag       | Shorthand | Default | Description  |
+| ---------- | --------- | ------- | ------------ |
+| `--weight` | `-w`      | `0`     | Weight in kg |
+| `--height` | `-h`      | `0`     | Height in cm |
+
+Example:
+
+```bash
+calc bmi --weight 70 --height 175
+```
+
+---
+
+### `hieudoanm calc base`
+
+Convert between number bases (bin/oct/dec/hex)
+
+```bash
+hieudoanm calc base
+```
+
+#### Flags
+
+| Flag      | Shorthand | Default | Description                   |
+| --------- | --------- | ------- | ----------------------------- |
+| `--value` | `-v`      | ``      | Value to convert              |
+| `--from`  | `-f`      | `dec`   | Source base (bin/oct/dec/hex) |
+| `--to`    | `-t`      | `hex`   | Target base (bin/oct/dec/hex) |
+
+Example:
+
+```bash
+calc base --value FF --from hex --to dec
+  calc base --value 255 --from dec --to hex
+  calc base --value 1010 --from bin --to dec
+```
+
+---
+
+### `hieudoanm calc unit`
+
+Convert between units (length, weight, temp, speed)
+
+Convert values between different units of measurement.
+
+```bash
+hieudoanm calc unit
+```
+
+#### Flags
+
+| Flag      | Shorthand | Default | Description      |
+| --------- | --------- | ------- | ---------------- |
+| `--value` | `-v`      | `0`     | Value to convert |
+| `--from`  | `-f`      | ``      | Source unit      |
+| `--to`    | `-t`      | ``      | Target unit      |
+
+Example:
+
+```bash
+calc unit --value 12 --from inch --to cm
+  calc unit -v 32 -f f -t c
+  calc unit -v 100 -f kg -t lb
+```
+
+---
+
+### `hieudoanm calc percent`
+
+Calculate percentages
+
+Calculate what percent one number is of another, or add/subtract a percentage.
+
+```bash
+hieudoanm calc percent
+```
+
+#### Flags
+
+| Flag      | Shorthand | Default | Description                       |
+| --------- | --------- | ------- | --------------------------------- |
+| `--value` | `-v`      | `0`     | Base value                        |
+| `--of`    | `-o`      | `0`     | Calculate what % value is of this |
+| `--plus`  | `-p`      | `0`     | Add percentage                    |
+| `--minus` | `-m`      | `0`     | Subtract percentage               |
+
+Example:
+
+```bash
+calc percent --value 20 --of 50
+  calc percent --value 50 --plus 20
+  calc percent --value 50 --minus 20
+```
+
+---
+
+### `hieudoanm calc mortgage`
+
+Mortgage payment calculator
+
+Calculate monthly mortgage payments including taxes, insurance, and PMI.
+
+```bash
+hieudoanm calc mortgage
+```
+
+#### Flags
+
+| Flag          | Shorthand | Default | Description                       |
+| ------------- | --------- | ------- | --------------------------------- |
+| `--principal` | `-p`      | `0`     | Loan principal                    |
+| `--rate`      | `-r`      | `0`     | Annual interest rate (percentage) |
+| `--years`     | `-y`      | `30`    | Loan term in years                |
+| `--taxes`     | ``        | `0`     | Annual property taxes             |
+| `--insurance` | ``        | `0`     | Annual insurance                  |
+| `--pmi`       | ``        | `0`     | Annual PMI                        |
+
+Example:
+
+```bash
+calc mortgage --principal 300000 --rate 6.5 --years 30
+  calc mortgage -p 300000 -r 6.5 -y 30 --taxes 3000 --insurance 1200
+```
+
+---
+
+### `hieudoanm calc date`
+
+Date arithmetic and difference
+
+Add/subtract days, months, or years from a date, or calculate difference between two dates.
+
+```bash
+hieudoanm calc date
+```
+
+#### Flags
+
+| Flag           | Shorthand | Default | Description                                   |
+| -------------- | --------- | ------- | --------------------------------------------- |
+| `--add`        | ``        | `0`     | Add N days                                    |
+| `--add-months` | ``        | `0`     | Add N months                                  |
+| `--add-years`  | ``        | `0`     | Add N years                                   |
+| `--diff`       | ``        | ``      | Calculate days between two dates (YYYY-MM-DD) |
+| `--format`     | ``        | ``      | Output format (uses Go time layout)           |
+
+Example:
+
+```bash
+calc date --add 90
+  calc date --add 30 "2026-01-01"
+  calc date --diff "2026-06-01" "2026-01-01
+```
+
+---
+
+### `hieudoanm calc eval`
+
+Evaluate a mathematical expression
+
+Evaluate arbitrary math expressions with operators and functions.
+
+Operators: +, -, \*, /, ^ (power)
+Functions: sqrt, sin, cos, tan, abs, floor, ceil, round, log, log10, exp
+Constants: pi, e
+
+Use parentheses for grouping.
+
+```bash
+hieudoanm calc eval [--expression <expression>]
+```
+
+#### Flags
+
+| Flag           | Shorthand | Default | Description                         |
+| -------------- | --------- | ------- | ----------------------------------- |
+| `--expression` | `-e`      | ``      | Mathematical expression to evaluate |
+
+Example:
+
+```bash
+calc eval --expression "2 + 2"
+  calc eval --expression "sqrt(144) * 2"
+  calc eval --expression "pi * 5 ^ 2"
+  calc eval --expression "sin(45) ^ 2 + cos(45) ^ 2
+```
+
+---
+
+### `hieudoanm calc stats`
+
+Statistical summary of numbers
+
+Compute count, min, max, sum, mean, median, and standard deviation.
+
+```bash
+hieudoanm calc stats [--values <n1,n2,...>]
+```
+
+Example:
+
+```bash
+calc stats --values 1,2,3,4,5
+  calc stats --values 100,200,300
+  calc stats --json --values 1,2,3,4,5,6,7,8,9,10
+```
+
+---
+
+### `hieudoanm calc factorial`
+
+Compute factorial of a number (n!)
+
+Calculate the factorial of a non-negative integer using arbitrary-precision arithmetic.
+
+```bash
+hieudoanm calc factorial [--number <n>]
+```
+
+#### Flags
+
+| Flag       | Shorthand | Default | Description          |
+| ---------- | --------- | ------- | -------------------- |
+| `--number` | `-n`      | `0`     | Non-negative integer |
+
+Example:
+
+```bash
+calc factorial --number 10
+  calc factorial --number 100
+```
+
+---
+
+### `hieudoanm calc random`
+
+Generate random numbers
+
+Generate random integers or floats within a range.
+
+```bash
+hieudoanm calc random
+```
+
+#### Flags
+
+| Flag      | Shorthand | Default | Description      |
+| --------- | --------- | ------- | ---------------- |
+| `--min`   | `-m`      | `1`     | Minimum value    |
+| `--max`   | `-x`      | `100`   | Maximum value    |
+| `--count` | `-n`      | `1`     | Number of values |
+
+Example:
+
+```bash
+calc random --min 1 --max 100
+  calc random --min 1 --max 100 --count 5
+  calc random --min 0 --max 1 --float --count 3
+```
+
+---
+
+### `hieudoanm calc prime`
+
+Check if a number is prime, or generate primes up to N
+
+Test primality of a number, or list/count primes up to a limit with --list.
+
+```bash
+hieudoanm calc prime [--number <n>]
+```
+
+#### Flags
+
+| Flag       | Shorthand | Default | Description              |
+| ---------- | --------- | ------- | ------------------------ |
+| `--number` | `-n`      | `0`     | Number to check or limit |
+| `--list`   | `-l`      | `false` | List all primes up to N  |
+
+Example:
+
+```bash
+calc prime --number 17
+  calc prime --number 100 --list
+  calc prime --number 1000000 --count
+```
+
+---
+
+### `hieudoanm calc gcd`
+
+Greatest common divisor of two numbers
+
+```bash
+hieudoanm calc gcd [--a <a> --b <b>]
+```
+
+#### Flags
+
+| Flag  | Shorthand | Default | Description   |
+| ----- | --------- | ------- | ------------- |
+| `--a` | `-a`      | `0`     | First number  |
+| `--b` | `-b`      | `0`     | Second number |
+
+Example:
+
+```bash
+calc gcd --a 12 --b 18
+  calc gcd --a 100 --b 75
+```
+
+---
+
+### `hieudoanm calc lcm`
+
+Least common multiple of two numbers
+
+```bash
+hieudoanm calc lcm [--a <a> --b <b>]
+```
+
+#### Flags
+
+| Flag  | Shorthand | Default | Description   |
+| ----- | --------- | ------- | ------------- |
+| `--a` | `-a`      | `0`     | First number  |
+| `--b` | `-b`      | `0`     | Second number |
+
+Example:
+
+```bash
+calc lcm --a 12 --b 18
+  calc lcm --a 7 --b 5
+```
+
+---
+
+## `hieudoanm casino`
+
+Casino games: blackjack, poker odds, and more
+
+```bash
+hieudoanm casino
+```
+
+### Flags
+
+| Flag                  | Shorthand | Default | Description           |
+| --------------------- | --------- | ------- | --------------------- |
+| `--json (persistent)` | `-j`      | `false` | Output in JSON format |
+
+---
+
+### `hieudoanm casino blackjack`
+
+Blackjack games
+
+```bash
+hieudoanm casino blackjack
+```
+
+---
+
+#### `hieudoanm casino blackjack count`
+
+Practice card counting
+
+A terminal-based Blackjack card counting game with a Bubble Tea TUI interface.
+
+```bash
+hieudoanm casino blackjack count
+```
+
+---
+
+#### `hieudoanm casino blackjack play`
+
+Play a full game of Blackjack against the dealer
+
+```bash
+hieudoanm casino blackjack play
+```
+
+---
+
+### `hieudoanm casino poker`
+
+Poker: odds calculator and Texas Hold'em
+
+```bash
+hieudoanm casino poker
+```
+
+---
+
+#### `hieudoanm casino poker odds`
+
+Calculate Texas Hold'em poker odds
+
+Calculate win/tie/lose odds using Monte Carlo simulation.
+
+Hole cards are required (e.g. "Ah Kh" or "As Ks").
+Use --board to specify community cards (0-5 cards).
+
+Examples:
+hieudoanm casino odds --hand "Ah Kh"
+hieudoanm casino odds --hand "Ah Kh" --board "2h 7s Tc"
+hieudoanm casino odds --hand "As Ks" --board "2h 7s Tc" --opponents 3
+
+```bash
+hieudoanm casino poker odds [--hand <hole>]
+```
+
+##### Flags
+
+| Flag            | Shorthand | Default | Description                         |
+| --------------- | --------- | ------- | ----------------------------------- |
+| `--hand`        | `-H`      | ``      | Hole cards (e.g. \"Ah Kh\")         |
+| `--board`       | `-b`      | ``      | Community cards (e.g. \"2h 7s Tc\") |
+| `--opponents`   | `-o`      | `1`     | Number of opponents                 |
+| `--simulations` | `-n`      | `10000` | Number of Monte Carlo simulations   |
+
+---
+
+#### `hieudoanm casino poker play`
+
+Play heads-up Texas Hold'em against an AI opponent
+
+```bash
+hieudoanm casino poker play
+```
+
+---
+
+### `hieudoanm casino baccarat`
+
+Baccarat games
+
+```bash
+hieudoanm casino baccarat
+```
+
+---
+
+#### `hieudoanm casino baccarat play`
+
+Play a game of Baccarat
+
+```bash
+hieudoanm casino baccarat play
+```
+
+---
+
+#### `hieudoanm casino baccarat strategy`
+
+Baccarat strategy analysis and statistics
+
+Analyze baccarat odds and optimal betting strategy through simulation.
+
+```bash
+hieudoanm casino baccarat strategy
+```
+
+##### Flags
+
+| Flag            | Shorthand | Default  | Description           |
+| --------------- | --------- | -------- | --------------------- |
+| `--simulations` | `-n`      | `100000` | Number of simulations |
+
+---
+
+### `hieudoanm casino slots`
+
+Slot machine games
+
+```bash
+hieudoanm casino slots
+```
+
+---
+
+#### `hieudoanm casino slots play`
+
+Play a slot machine
+
+```bash
+hieudoanm casino slots play
+```
+
+---
+
+### `hieudoanm casino coin`
+
+Flip a coin
+
+```bash
+hieudoanm casino coin
+```
+
+#### Flags
+
+| Flag      | Shorthand | Default | Description          |
+| --------- | --------- | ------- | -------------------- |
+| `--count` | `-n`      | `1`     | Number of coin flips |
+
+Example:
+
+```bash
+casino coin
+  casino coin --count 10
+```
+
+---
+
+### `hieudoanm casino dice`
+
+Roll dice
+
+```bash
+hieudoanm casino dice
+```
+
+#### Flags
+
+| Flag      | Shorthand | Default | Description             |
+| --------- | --------- | ------- | ----------------------- |
+| `--sides` | `-s`      | `6`     | Number of sides per die |
+| `--count` | `-n`      | `1`     | Number of dice to roll  |
+
+Example:
+
+```bash
+casino dice
+  casino dice --sides 20
+  casino dice --count 4 --sides 6
+```
+
+---
+
+### `hieudoanm casino roulette`
+
+Spin the roulette wheel
+
+```bash
+hieudoanm casino roulette
+```
+
+#### Flags
+
+| Flag      | Shorthand | Default | Description     |
+| --------- | --------- | ------- | --------------- |
+| `--spins` | `-n`      | `1`     | Number of spins |
+
+Example:
+
+```bash
+casino roulette
+  casino roulette --spins 5
+```
+
+---
+
+## `hieudoanm chess`
+
+Chess tools and utilities
+
+Chess tools including board analysis, FEN/PGN utilities, and Lichess integration.
+
+```bash
+hieudoanm chess
+```
+
+### Flags
+
+| Flag                  | Shorthand | Default | Description           |
+| --------------------- | --------- | ------- | --------------------- |
+| `--json (persistent)` | `-j`      | `false` | Output in JSON format |
+
+---
+
+### `hieudoanm chess leaderboards`
+
+Run the leaderboards operation for the chess.com app
+
+The leaderboards command is a specific utility to execute operations related to leaderboards within the chess.com application.
+
+As a component of the chess tools, this command empowers you to interact directly with chess.com's leaderboards features via the CLI.
+
+```bash
+hieudoanm chess leaderboards
+```
+
+#### Flags
+
+| Flag        | Shorthand | Default | Description                                   |
+| ----------- | --------- | ------- | --------------------------------------------- |
+| `--top`     | ``        | `5`     | Number of top players to display              |
+| `--country` | ``        | ``      | Filter players by country code (e.g., US, RU) |
+
+---
+
+### `hieudoanm chess player`
+
+Run the player operation for the chess.com app
+
+The player command is a specific utility to execute operations related to player within the chess.com application.
+
+As a component of the chess tools, this command empowers you to interact directly with chess.com's player features via the CLI.
+
+```bash
+hieudoanm chess player [--username <username>]
+```
+
+#### Flags
+
+| Flag         | Shorthand | Default | Description        |
+| ------------ | --------- | ------- | ------------------ |
+| `--username` | `-u`      | ``      | Chess.com username |
+
+---
+
+### `hieudoanm chess titled`
+
+Run the titled operation for the chess.com app
+
+The titled command is a specific utility to execute operations related to titled within the chess.com application.
+
+As a component of the chess tools, this command empowers you to interact directly with chess.com's titled features via the CLI.
+
+```bash
+hieudoanm chess titled
+```
+
+---
+
+### `hieudoanm chess elo`
+
+Run the elo operation for the chess.elo app
+
+The elo command is a specific utility to execute operations related to elo within the chess.elo application.
+
+As a component of the chess tools, this command empowers you to interact directly with chess.elo's elo features via the CLI.
+
+```bash
+hieudoanm chess elo
+```
+
+---
+
+### `hieudoanm chess fen`
+
+Run the fen operation for the chess app
+
+The fen command is a specific utility to execute operations related to fen within the chess application.
+
+As a component of the chess tools, this command empowers you to interact directly with chess's fen features via the CLI.
+
+```bash
+hieudoanm chess fen
+```
+
+#### Flags
+
+| Flag     | Shorthand | Default | Description                  |
+| -------- | --------- | ------- | ---------------------------- |
+| `--list` | `-l`      | `false` | List popular chess platforms |
+
+---
+
+#### `hieudoanm chess fen eval`
+
+Run the eval operation for the chess app
+
+The eval command is a specific utility to execute operations related to eval within the chess application.
+
+As a component of the chess tools, this command empowers you to interact directly with chess's eval features via the CLI.
+
+```bash
+hieudoanm chess fen eval
+```
+
+##### Flags
+
+| Flag        | Shorthand | Default | Description                       |
+| ----------- | --------- | ------- | --------------------------------- |
+| `--fen`     | ``        | ``      | FEN string to evaluate (required) |
+| `--multipv` | ``        | `3`     | Number of principal variations    |
+
+---
+
+#### `hieudoanm chess fen svg`
+
+Run the svg operation for the chess.graphics app
+
+The svg command is a specific utility to execute operations related to svg within the chess.graphics application.
+
+As a component of the chess tools, this command empowers you to interact directly with chess.graphics's svg features via the CLI.
+
+```bash
+hieudoanm chess fen svg
+```
+
+##### Flags
+
+| Flag    | Shorthand | Default | Description                          |
+| ------- | --------- | ------- | ------------------------------------ |
+| `--fen` | ``        | ``      | FEN string to render                 |
+| `--out` | ``        | ``      | Output SVG file (default: board.svg) |
+
+---
+
+### `hieudoanm chess pgn`
+
+Run the pgn operation for the chess.graphics app
+
+The pgn command is a specific utility to execute operations related to pgn within the chess.graphics application.
+
+As a component of the chess tools, this command empowers you to interact directly with chess.graphics's pgn features via the CLI.
+
+```bash
+hieudoanm chess pgn
+```
+
+---
+
+#### `hieudoanm chess pgn fen`
+
+Run the fen operation for the chess app
+
+The fen command is a specific utility to execute operations related to fen within the chess application.
+
+As a component of the chess tools, this command empowers you to interact directly with chess's fen features via the CLI.
+
+```bash
+hieudoanm chess pgn fen
+```
+
+##### Flags
+
+| Flag         | Shorthand | Default | Description        |
+| ------------ | --------- | ------- | ------------------ |
+| `--pgn-file` | ``        | ``      | Path to a PGN file |
+| `--pgn`      | ``        | ``      | Raw PGN string     |
+
+---
+
+#### `hieudoanm chess pgn uci`
+
+Run the uci operation for the chess app
+
+The uci command is a specific utility to execute operations related to uci within the chess application.
+
+As a component of the chess tools, this command empowers you to interact directly with chess's uci features via the CLI.
+
+```bash
+hieudoanm chess pgn uci
+```
+
+##### Flags
+
+| Flag         | Shorthand | Default | Description        |
+| ------------ | --------- | ------- | ------------------ |
+| `--pgn-file` | ``        | ``      | Path to a PGN file |
+| `--pgn`      | ``        | ``      | Raw PGN string     |
+
+---
+
+### `hieudoanm chess play`
+
+Run the play operation for the chess.graphics app
+
+The play command is a specific utility to execute operations related to play within the chess.graphics application.
+
+As a component of the chess tools, this command empowers you to interact directly with chess.graphics's play features via the CLI.
+
+```bash
+hieudoanm chess play
+```
+
+#### Flags
+
+| Flag      | Shorthand | Default | Description                    |
+| --------- | --------- | ------- | ------------------------------ |
+| `--blind` | ``        | `false` | Hide the board after each move |
+
+---
+
+### `hieudoanm chess random`
+
+Run the random operation for the chess960 app
+
+The random command is a specific utility to execute operations related to random within the chess960 application.
+
+As a component of the chess tools, this command empowers you to interact directly with chess960's random features via the CLI.
+
+```bash
+hieudoanm chess random
+```
+
+---
+
+### `hieudoanm chess setup`
+
+Run the setup operation for the chess app
+
+The setup command is a specific utility to execute operations related to setup within the chess application.
+
+As a component of the chess tools, this command empowers you to interact directly with chess's setup features via the CLI.
+
+```bash
+hieudoanm chess setup
+```
+
+---
+
+## `hieudoanm colors`
+
+Colors CLI application (design tools)
+
+The colors CLI application is a comprehensive backend utility belonging to the design suite of tools.
+
+Use this root executable to manage configuring, running, and interacting with all colors-related operations securely and efficiently from your terminal.
+
+```bash
+hieudoanm colors
+```
+
+### Flags
+
+| Flag                  | Shorthand | Default | Description           |
+| --------------------- | --------- | ------- | --------------------- |
+| `--json (persistent)` | `-j`      | `false` | Output in JSON format |
+
+---
+
+### `hieudoanm colors hcl`
+
+Run the hcl operation for the colors app
+
+The hcl command is a specific utility to execute operations related to hcl within the colors application.
+
+As a component of the design tools, this command empowers you to interact directly with colors's hcl features via the CLI.
+
+```bash
+hieudoanm colors hcl
+```
+
+---
+
+### `hieudoanm colors hex`
+
+Run the hex operation for the colors app
+
+The hex command is a specific utility to execute operations related to hex within the colors application.
+
+As a component of the design tools, this command empowers you to interact directly with colors's hex features via the CLI.
+
+```bash
+hieudoanm colors hex
+```
+
+---
+
+### `hieudoanm colors oklch`
+
+Run the oklch operation for the colors app
+
+The oklch command is a specific utility to execute operations related to oklch within the colors application.
+
+As a component of the design tools, this command empowers you to interact directly with colors's oklch features via the CLI.
+
+```bash
+hieudoanm colors oklch
+```
+
+---
+
+### `hieudoanm colors rgb`
+
+Run the rgb operation for the colors app
+
+The rgb command is a specific utility to execute operations related to rgb within the colors application.
+
+As a component of the design tools, this command empowers you to interact directly with colors's rgb features via the CLI.
+
+```bash
+hieudoanm colors rgb
+```
+
+---
+
+### `hieudoanm colors palette`
+
+Run the palette operation for the colors app
+
+The palette command is a specific utility to execute operations related to palette within the colors application.
+
+As a component of the design tools, this command empowers you to interact directly with colors's palette features via the CLI.
+
+```bash
+hieudoanm colors palette
+```
+
+---
+
+### `hieudoanm colors random`
+
+Run the random operation for the colors app
+
+The random command is a specific utility to execute operations related to random within the colors application.
+
+As a component of the design tools, this command empowers you to interact directly with colors's random features via the CLI.
+
+```bash
+hieudoanm colors random
+```
+
+#### Flags
+
+| Flag    | Shorthand | Default | Description             |
+| ------- | --------- | ------- | ----------------------- |
+| `--max` | `-m`      | `1`     | number of random colors |
+
+---
+
+## `hieudoanm convert`
+
+Text conversion utilities
+
+Convert text between formats: Braille, Morse code, and string case transformations.
+
+```bash
+hieudoanm convert
+```
+
+### Flags
+
+| Flag                  | Shorthand | Default | Description           |
+| --------------------- | --------- | ------- | --------------------- |
+| `--json (persistent)` | `-j`      | `false` | Output in JSON format |
+
+---
+
+### `hieudoanm convert braille`
+
+Convert text to Braille
+
+Converts plain text to Unicode Braille characters. Supports letters, numbers, and common punctuation.
+
+```bash
+hieudoanm convert braille [text]
+```
+
+---
+
+### `hieudoanm convert morse`
+
+Convert text to Morse code
+
+Converts plain text to Morse code. Supports letters, numbers, and common punctuation.
+
+```bash
+hieudoanm convert morse [text]
+```
+
+---
+
+### `hieudoanm convert base64`
+
+Encode or decode base64
+
+```bash
+hieudoanm convert base64 [text]
+```
+
+#### Flags
+
+| Flag       | Shorthand | Default | Description   |
+| ---------- | --------- | ------- | ------------- |
+| `--decode` | `-d`      | `false` | Decode base64 |
+
+---
+
+### `hieudoanm convert url`
+
+Encode or decode a URL
+
+```bash
+hieudoanm convert url [text]
+```
+
+#### Flags
+
+| Flag       | Shorthand | Default | Description |
+| ---------- | --------- | ------- | ----------- |
+| `--decode` | `-d`      | `false` | Decode URL  |
+
+---
+
+### `hieudoanm convert capitalise`
+
+Capitalise the first letter of each word
+
+```bash
+hieudoanm convert capitalise [text]
+```
+
+---
+
+### `hieudoanm convert deburr`
+
+Remove diacritical marks (accents) from letters
+
+```bash
+hieudoanm convert deburr [text]
+```
+
+---
+
+### `hieudoanm convert kebabcase`
+
+Convert a string to kebab-case
+
+```bash
+hieudoanm convert kebabcase [text]
+```
+
+---
+
+### `hieudoanm convert camelcase`
+
+Convert a string to camelCase
+
+```bash
+hieudoanm convert camelcase [text]
+```
+
+---
+
+### `hieudoanm convert pascalcase`
+
+Convert a string to PascalCase
+
+```bash
+hieudoanm convert pascalcase [text]
+```
+
+---
+
+### `hieudoanm convert slug`
+
+Generate a URL-friendly slug
+
+```bash
+hieudoanm convert slug [text]
+```
+
+---
+
+### `hieudoanm convert lowercase`
+
+Convert a string to lowercase
+
+```bash
+hieudoanm convert lowercase [text]
+```
+
+---
+
+### `hieudoanm convert snakecase`
+
+Convert a string to snake_case
+
+```bash
+hieudoanm convert snakecase [text]
+```
+
+---
+
+### `hieudoanm convert uppercase`
+
+Convert a string to uppercase
+
+```bash
+hieudoanm convert uppercase [text]
+```
+
+---
+
+### `hieudoanm convert count`
+
+Count characters, words, and lines in text
+
+Count the number of characters, words, and lines in the provided text.
+If no text is provided, reads from stdin.
+
+```bash
+hieudoanm convert count <text>
+```
+
+#### Flags
+
+| Flag     | Shorthand | Default | Description           |
+| -------- | --------- | ------- | --------------------- |
+| `--json` | ``        | `false` | Output in JSON format |
+
+Example:
+
+```bash
+convert count "hello world"
+  convert count --json "the quick brown fox"
+  echo "hello world" | convert count
+```
+
+---
+
+## `hieudoanm crypto`
+
+Cryptographic and security tools
+
+Hashing, password generation, JWT, UUIDs, and QR codes.
+
+```bash
+hieudoanm crypto
+```
+
+### Flags
+
+| Flag                  | Shorthand | Default | Description           |
+| --------------------- | --------- | ------- | --------------------- |
+| `--json (persistent)` | `-j`      | `false` | Output in JSON format |
+
+---
+
+### `hieudoanm crypto hash`
+
+Compute hashes of text or files
+
+Compute MD5, SHA1, SHA256, or SHA512 hashes with optional HMAC support.
+
+```bash
+hieudoanm crypto hash
+```
+
+#### Flags
+
+| Flag      | Shorthand | Default  | Description                                  |
+| --------- | --------- | -------- | -------------------------------------------- |
+| `--algo`  | `-a`      | `sha256` | Hash algorithm (md5, sha1, sha256, sha512)   |
+| `--text`  | `-t`      | ``       | Text to hash                                 |
+| `--key`   | `-k`      | ``       | HMAC key                                     |
+| `--check` | ``        | `false`  | Verify file hash from 'hash filename' format |
+| `--json`  | ``        | `false`  | Output in JSON format                        |
+
+Example:
+
+```bash
+hash --text "hello world"
+  hash --text "hello" --algo sha256 --key secret
+```
+
+---
+
+### `hieudoanm crypto jwt`
+
+Encode and decode JWTs
+
+```bash
+hieudoanm crypto jwt
+```
+
+---
+
+#### `hieudoanm crypto jwt decode`
+
+Decode a JWT token without signature verification
+
+```bash
+hieudoanm crypto jwt decode [--token <token>]
+```
+
+##### Flags
+
+| Flag      | Shorthand | Default | Description           |
+| --------- | --------- | ------- | --------------------- |
+| `--token` | `-t`      | ``      | JWT token to decode   |
+| `--json`  | ``        | `false` | Output in JSON format |
+
+---
+
+#### `hieudoanm crypto jwt encode`
+
+Encode and sign a JWT token
+
+Create a signed JWT token with custom claims and signing method.
+
+```bash
+hieudoanm crypto jwt encode
+```
+
+##### Flags
+
+| Flag          | Shorthand | Default | Description                             |
+| ------------- | --------- | ------- | --------------------------------------- |
+| `--algorithm` | `-a`      | `HS256` | Signing algorithm (HS256, HS384, HS512) |
+| `--key`       | `-k`      | ``      | Signing key (secret)                    |
+| `--claims`    | `-c`      | ``      | Claims as JSON string                   |
+
+Example:
+
+```bash
+jwt encode --key secret --claims '{"sub":"123","name":"John"}'
+  jwt encode --key secret --claims '{"sub":"123"}' --algorithm HS256
+```
+
+---
+
+### `hieudoanm crypto keygen`
+
+Generate a new SSH keypair
+
+Generate an SSH keypair (RSA, ECDSA, or Ed25519).
+
+Writes two files: <name> (private key) and <name>.pub (public key).
+Private key is saved in PEM format with 0600 permissions.
+
+```bash
+hieudoanm crypto keygen
+```
+
+#### Flags
+
+| Flag       | Shorthand | Default   | Description                                               |
+| ---------- | --------- | --------- | --------------------------------------------------------- |
+| `--algo`   | `-a`      | `ed25519` | Key algorithm (rsa, ecdsa, ed25519)                       |
+| `--bits`   | `-b`      | `256`     | Key size (bits): 2048/4096 for rsa, 256/384/521 for ecdsa |
+| `--output` | `-o`      | `id_rsa`  | Output file path                                          |
+
+Example:
+
+```bash
+crypto keygen --algo ed25519 -o id_ed25519
+  crypto keygen --algo rsa --bits 4096 -o id_rsa
+  crypto keygen --algo ecdsa --bits 256 -o id_ecdsa
+```
+
+---
+
+### `hieudoanm crypto passwd`
+
+Generate secure random passwords
+
+Generate random passwords with configurable length, character sets, and pronounceable options.
+
+```bash
+hieudoanm crypto passwd
+```
+
+#### Flags
+
+| Flag              | Shorthand | Default | Description                             |
+| ----------------- | --------- | ------- | --------------------------------------- |
+| `--length`        | `-l`      | `16`    | Password length                         |
+| `--count`         | `-n`      | `1`     | Number of passwords                     |
+| `--digits`        | `-d`      | `true`  | Include digits                          |
+| `--symbols`       | `-s`      | `false` | Include symbols                         |
+| `--no-upper`      | ``        | `false` | Exclude uppercase letters               |
+| `--pin`           | ``        | `false` | Generate numeric PIN                    |
+| `--clip`          | ``        | `false` | Copy to clipboard (first password only) |
+| `--pronounceable` | ``        | `false` | Generate pronounceable password         |
+| `--json`          | ``        | `false` | Output in JSON format                   |
+
+Example:
+
+```bash
+passwd
+  passwd --length 32 --symbols
+  passwd --pin --count 5
+  passwd --pronounceable
+```
+
+---
+
+### `hieudoanm crypto uuid`
+
+Generate UUID v4 identifiers
+
+```bash
+hieudoanm crypto uuid
+```
+
+#### Flags
+
+| Flag      | Shorthand | Default | Description                 |
+| --------- | --------- | ------- | --------------------------- |
+| `--count` | `-n`      | `1`     | Number of UUIDs to generate |
+| `--json`  | ``        | `false` | Output in JSON format       |
+
+---
+
+### `hieudoanm crypto qrcode`
+
+Generate a QR code in the terminal
+
+```bash
+hieudoanm crypto qrcode [--data <text>]
+```
+
+#### Flags
+
+| Flag     | Shorthand | Default | Description            |
+| -------- | --------- | ------- | ---------------------- |
+| `--data` | `-d`      | ``      | Text or data to encode |
+
+---
+
+### `hieudoanm crypto encrypt`
+
+Encrypt a file with AES-256-GCM
+
+Encrypt a file using AES-256-GCM with a key derived from the given password.
+
+```bash
+hieudoanm crypto encrypt [--file <file>]
+```
+
+#### Flags
+
+| Flag         | Shorthand | Default | Description                       |
+| ------------ | --------- | ------- | --------------------------------- |
+| `--file`     | `-f`      | ``      | File to encrypt                   |
+| `--password` | `-p`      | ``      | Encryption password               |
+| `--output`   | `-o`      | ``      | Output file (default: <file>.enc) |
+
+Example:
+
+```bash
+crypto encrypt --file secret.txt --password "hunter2"
+  crypto encrypt --file secret.txt --password "hunter2" --output secret.enc
+```
+
+---
+
+### `hieudoanm crypto decrypt`
+
+Decrypt a file encrypted with AES-256-GCM
+
+Decrypt a file previously encrypted with "crypto encrypt" using the same password.
+
+```bash
+hieudoanm crypto decrypt [--file <file>]
+```
+
+#### Flags
+
+| Flag         | Shorthand | Default | Description         |
+| ------------ | --------- | ------- | ------------------- |
+| `--file`     | `-f`      | ``      | File to decrypt     |
+| `--password` | `-p`      | ``      | Decryption password |
+| `--output`   | `-o`      | ``      | Output file         |
+
+Example:
+
+```bash
+crypto decrypt --file secret.enc --password "hunter2"
+  crypto decrypt --file secret.enc --password "hunter2" --output secret.txt
+```
+
+---
+
+### `hieudoanm crypto totp`
+
+Generate a TOTP code from a Base32 secret
+
+Generate a Time-based One-Time Password (RFC 6238) from a Base32-encoded secret key.
+
+Accepts secrets with or without padding. Compatible with Google Authenticator, Authy, and most 2FA apps.
+
+```bash
+hieudoanm crypto totp [--secret <secret>]
+```
+
+#### Flags
+
+| Flag       | Shorthand | Default | Description                          |
+| ---------- | --------- | ------- | ------------------------------------ |
+| `--secret` | `-s`      | ``      | Base32 secret                        |
+| `--step`   | ``        | `30`    | Time step in seconds                 |
+| `--digits` | ``        | `6`     | Number of digits (6 or 8)            |
+| `--time`   | ``        | ``      | Time in RFC3339 format (for testing) |
+| `--json`   | ``        | `false` | Output in JSON format                |
+
+Example:
+
+```bash
+crypto totp --secret JBSWY3DPEHPK3PXP
+  crypto totp --secret JBSWY3DPEHPK3PXP --step 30 --digits 6
+  crypto totp --secret JBSWY3DPEHPK3PXP --json
+```
+
+---
+
+## `hieudoanm data`
+
+Data serialization and transformation tools
+
+Format, convert, and validate JSON, YAML, and CSV.
+
+```bash
+hieudoanm data
+```
+
+### Flags
+
+| Flag                  | Shorthand | Default | Description           |
+| --------------------- | --------- | ------- | --------------------- |
+| `--json (persistent)` | `-j`      | `false` | Output in JSON format |
+
+---
+
+### `hieudoanm data csv`
+
+View and format CSV files
+
+```bash
+hieudoanm data csv <file>
+```
+
+#### Flags
+
+| Flag     | Shorthand | Default | Description           |
+| -------- | --------- | ------- | --------------------- |
+| `--json` | ``        | `false` | Output in JSON format |
+
+---
+
+### `hieudoanm data json`
+
+Query, format, diff, and merge JSON data
+
+Pretty-print JSON, run jq-like queries, or diff/merge two JSON files.
+
+```bash
+hieudoanm data json [file]
+```
+
+#### Flags
+
+| Flag       | Shorthand | Default | Description                           |
+| ---------- | --------- | ------- | ------------------------------------- |
+| `--query`  | `-q`      | ``      | JQ-like query (e.g. .name, .items[0]) |
+| `--diff`   | ``        | ``      | Diff with another JSON file           |
+| `--merge`  | ``        | ``      | Merge with another JSON file (patch)  |
+| `--pretty` | `-p`      | `false` | Pretty-print JSON                     |
+
+Example:
+
+```bash
+json data.json
+  json --query ".name" data.json
+  json --diff file1.json file2.json
+  json --merge base.json patch.json
+```
+
+---
+
+### `hieudoanm data yml`
+
+Parse, validate, and lint YAML files
+
+```bash
+hieudoanm data yml <file>
+```
+
+#### Flags
+
+| Flag         | Shorthand | Default | Description           |
+| ------------ | --------- | ------- | --------------------- |
+| `--validate` | `-V`      | `false` | Validate YAML syntax  |
+| `--lint`     | ``        | `false` | Lint YAML file        |
+| `--json`     | ``        | `false` | Output in JSON format |
+
+---
+
+## `hieudoanm docsify`
+
+```bash
+hieudoanm docsify
+```
+
+### Flags
+
+| Flag                  | Shorthand | Default | Description           |
+| --------------------- | --------- | ------- | --------------------- |
+| `--json (persistent)` | `-j`      | `false` | Output in JSON format |
+
+---
+
+### `hieudoanm docsify cobra`
+
+Generate README.md documentation from a Cobra CLI project
+
+docsify cobra scans Go source files for &cobra.Command{} definitions and generates a single README.md documenting all commands, subcommands, flags, and usage.
+
+```bash
+hieudoanm docsify cobra [--file <path>]
+```
+
+#### Flags
+
+| Flag       | Shorthand | Default     | Description                                                  |
+| ---------- | --------- | ----------- | ------------------------------------------------------------ |
+| `--file`   | `-f`      | ``          | Path to cobra project directory (default: current directory) |
+| `--output` | `-o`      | `README.md` | Output file path                                             |
+
+---
+
+### `hieudoanm docsify obsidian`
+
+Build a wiki-link graph from markdown files
+
+Walk a directory tree of markdown files, extract [[wiki-link]] references,
+and output a graph of how files interconnect.
+
+Formats:
+dot - Graphviz DOT format (default)
+json - JSON object with nodes[] and edges[]
+edges - Plain text edge list
+
+```bash
+hieudoanm docsify obsidian
+```
+
+#### Flags
+
+| Flag        | Shorthand | Default                                           | Description                            |
+| ----------- | --------- | ------------------------------------------------- | -------------------------------------- |
+| `--dir`     | ``        | `.`                                               | Root directory to scan                 |
+| `--out`     | ``        | ``                                                | Output file path (default: stdout)     |
+| `--format`  | ``        | `dot`                                             | Output format: dot, json, edges        |
+| `--exclude` | ``        | `.git,node_modules,vendor,dist,.next,__pycache__` | Comma-separated directories to exclude |
+
+---
+
+### `hieudoanm docsify scan`
+
+Scan a codebase and generate a GraphML file
+
+```bash
+hieudoanm docsify scan
+```
+
+#### Flags
+
+| Flag        | Shorthand | Default                                           | Description                            |
+| ----------- | --------- | ------------------------------------------------- | -------------------------------------- |
+| `--dir`     | ``        | `.`                                               | Root directory to scan                 |
+| `--out`     | ``        | `codebase.graphml`                                | Output .graphml file path              |
+| `--exclude` | ``        | `.git,node_modules,vendor,dist,.next,__pycache__` | Comma-separated directories to exclude |
+| `--verbose` | ``        | `false`                                           | Print progress to stderr               |
+
+---
+
+### `hieudoanm docsify tree`
+
+Generate directory tree as Markdown
+
+Walk the directory tree and write the structure to TREE.md, respecting .gitignore patterns.
+
+```bash
+hieudoanm docsify tree
+```
+
+#### Flags
+
+| Flag    | Shorthand | Default   | Description            |
+| ------- | --------- | --------- | ---------------------- |
+| `--dir` | ``        | `.`       | Root directory to tree |
+| `--out` | ``        | `TREE.md` | Output file path       |
+
+---
+
+## `hieudoanm doi`
+
+DOI productivity tools
+
+Tools for working with Digital Object Identifiers (DOIs): fetch metadata, generate citations, and validate identifiers.
+
+```bash
+hieudoanm doi
+```
+
+### Flags
+
+| Flag                  | Shorthand | Default | Description           |
+| --------------------- | --------- | ------- | --------------------- |
+| `--json (persistent)` | `-j`      | `false` | Output in JSON format |
+
+---
+
+### `hieudoanm doi cite`
+
+Generate an APA citation from a DOI
+
+Fetches metadata for a given DOI from Crossref and generates an APA-formatted citation.
+
+```bash
+hieudoanm doi cite [doi]
+```
+
+---
+
+### `hieudoanm doi ref`
+
+Generate a formatted reference from a DOI
+
+Fetches metadata for a given DOI from Crossref and generates a formatted reference entry.
+
+```bash
+hieudoanm doi ref [doi]
+```
+
+---
+
+### `hieudoanm doi fetch`
+
+Fetch raw metadata for a DOI
+
+Fetches metadata for a given DOI from Crossref and displays the raw JSON response.
+
+```bash
+hieudoanm doi fetch [doi]
+```
+
+---
+
+### `hieudoanm doi validate`
+
+Validate a DOI string format
+
+Checks whether a given string conforms to the DOI syntax (10.NNNN/...).
+
+```bash
+hieudoanm doi validate [doi]
+```
+
+---
+
+## `hieudoanm english`
+
+English dictionary tools
+
+English dictionary lookup tool that fetches word definitions, synonyms, antonyms, and usage examples.
+
+```bash
+hieudoanm english
+```
+
+### Flags
+
+| Flag                  | Shorthand | Default | Description           |
+| --------------------- | --------- | ------- | --------------------- |
+| `--json (persistent)` | `-j`      | `false` | Output in JSON format |
+
+---
+
+### `hieudoanm english define`
+
+Look up the definition of an English word
+
+Fetches and displays the definition, part of speech, synonyms, and antonyms for a given English word from a local dictionary data source.
+
+```bash
+hieudoanm english define [--word <word>]
+```
+
+#### Flags
+
+| Flag     | Shorthand | Default | Description           |
+| -------- | --------- | ------- | --------------------- |
+| `--word` | `-w`      | ``      | Word to define        |
+| `--json` | ``        | `false` | Output in JSON format |
+
+---
+
+## `hieudoanm file`
+
+File introspection and analysis tools
+
+Check file checksums, detect types, analyze sizes, find duplicates, search, read, write, and edit files.
+
+```bash
+hieudoanm file
+```
+
+### Flags
+
+| Flag                  | Shorthand | Default | Description           |
+| --------------------- | --------- | ------- | --------------------- |
+| `--json (persistent)` | ``        | `false` | Output in JSON format |
+
+---
+
+### `hieudoanm file checksum`
+
+Compute file checksum
+
+```bash
+hieudoanm file checksum [--file <path>]
+```
+
+#### Flags
+
+| Flag          | Shorthand | Default  | Description                               |
+| ------------- | --------- | -------- | ----------------------------------------- |
+| `--algorithm` | `-a`      | `sha256` | Hash algorithm: md5, sha1, sha256, sha512 |
+| `--file`      | `-f`      | ``       | File path                                 |
+
+Example:
+
+```bash
+file checksum --file document.pdf
+  file checksum --algorithm sha256 --file document.pdf
+  file checksum -f document.pdf --algorithm sha256
+```
+
+---
+
+### `hieudoanm file chmod`
+
+Change file permissions
+
+Change permissions of a file. Mode is an octal string (e.g. 755, 644, 600).
+
+```bash
+hieudoanm file chmod [--mode <octal>] [--file <path>]
+```
+
+#### Flags
+
+| Flag          | Shorthand | Default | Description                      |
+| ------------- | --------- | ------- | -------------------------------- |
+| `--mode`      | `-m`      | ``      | Octal permission mode (e.g. 755) |
+| `--file`      | `-f`      | ``      | File or directory path           |
+| `--recursive` | `-r`      | `false` | Change permissions recursively   |
+
+Example:
+
+```bash
+file chmod --mode 755 --file script.sh
+  file chmod -m 644 -f README.md
+  file chmod -r -m 755 -f dir/
+```
+
+---
+
+### `hieudoanm file count`
+
+Count lines, words, and bytes in a file
+
+```bash
+hieudoanm file count [--file <path>]
+```
+
+#### Flags
+
+| Flag     | Shorthand | Default | Description |
+| -------- | --------- | ------- | ----------- |
+| `--file` | `-f`      | ``      | File path   |
+
+Example:
+
+```bash
+file count --file main.go
+  file count -f main.go --json
+```
+
+---
+
+### `hieudoanm file duplicates`
+
+Find duplicate files by size and partial hash
+
+```bash
+hieudoanm file duplicates [--dir <path>]
+```
+
+#### Flags
+
+| Flag         | Shorthand | Default | Description                           |
+| ------------ | --------- | ------- | ------------------------------------- |
+| `--dir`      | `-d`      | ``      | Directory to scan                     |
+| `--min-size` | `-m`      | `1`     | Minimum file size to consider (bytes) |
+
+---
+
+### `hieudoanm file edit`
+
+Find and replace text in a file
+
+Replace occurrences of a string (or regex pattern) in a file.
+
+Examples:
+file edit -f main.go --old "foo" --new "bar"
+file edit --regex -f main.go --old "foo.\*" --new "bar"
+file edit -f main.go -o "foo" -n "bar" --preview
+file edit -f main.go -o "foo" -n "bar" --count 1
+
+```bash
+hieudoanm file edit [--file <path>] [--old <text>] [--new <text>]
+```
+
+#### Flags
+
+| Flag        | Shorthand | Default | Description                                |
+| ----------- | --------- | ------- | ------------------------------------------ |
+| `--file`    | `-f`      | ``      | File path                                  |
+| `--old`     | `-o`      | ``      | Text or pattern to replace                 |
+| `--new`     | ``        | ``      | Replacement text                           |
+| `--regex`   | `-r`      | `false` | Interpret old as a regex pattern           |
+| `--preview` | `-p`      | `false` | Preview changes without modifying the file |
+| `--count`   | `-n`      | `0`     | Number of occurrences to replace (0 = all) |
+
+---
+
+### `hieudoanm file grep`
+
+Search file contents using regex or fixed strings
+
+Search for a pattern in files (grep = global regular expression print). Supports recursive directory search and glob patterns.
+
+Examples:
+file grep --pattern "TODO" --path main.go
+file grep -p "func" --path . --ignore-case
+file grep --pattern "error" --include "\*.go"
+file grep --fixed -p "fmt.Println" --path src/
+file grep -p "panic" --path . --context 2
+
+```bash
+hieudoanm file grep [--pattern <regex>] [--path <dir>]
+```
+
+#### Flags
+
+| Flag            | Shorthand | Default | Description                                  |
+| --------------- | --------- | ------- | -------------------------------------------- |
+| `--pattern`     | `-p`      | ``      | Regex or fixed string pattern to search for  |
+| `--path`        | `-P`      | ``      | File or directory to search (default: .)     |
+| `--include`     | `-i`      | ``      | Glob pattern for file names (e.g. \"\*.go\") |
+| `--context`     | `-C`      | `0`     | Show N lines of context around matches       |
+| `--fixed`       | `-F`      | `false` | Fixed string match (not regex)               |
+| `--max-count`   | `-m`      | `0`     | Maximum number of matches                    |
+| `--ignore-case` | `-v`      | `false` | Case-insensitive search                      |
+
+---
+
+### `hieudoanm file head`
+
+Show the first N lines of a file
+
+```bash
+hieudoanm file head [--file <path>]
+```
+
+#### Flags
+
+| Flag      | Shorthand | Default | Description     |
+| --------- | --------- | ------- | --------------- |
+| `--file`  | `-f`      | ``      | File path       |
+| `--lines` | `-n`      | `10`    | Number of lines |
+
+Example:
+
+```bash
+file head --file main.go
+  file head -f main.go --lines 20
+```
+
+---
+
+### `hieudoanm file read`
+
+Read file content with line numbers
+
+Read a file and display its content with optional line numbers, offset, and line limit.
+
+Examples:
+file read --file main.go
+file read -f main.go --lines 50
+file read -f main.go --offset 10 --lines 20
+file read -f main.go --no-numbers
+
+```bash
+hieudoanm file read [--file <path>]
+```
+
+#### Flags
+
+| Flag        | Shorthand | Default | Description                       |
+| ----------- | --------- | ------- | --------------------------------- |
+| `--file`    | `-f`      | ``      | File path                         |
+| `--lines`   | `-n`      | `0`     | Number of lines to show (0 = all) |
+| `--offset`  | `-o`      | `0`     | Starting line offset (0-based)    |
+| `--numbers` | ``        | `true`  | Show line numbers                 |
+
+---
+
+### `hieudoanm file size`
+
+Show file or directory size
+
+```bash
+hieudoanm file size [--path <file-or-dir>]
+```
+
+#### Flags
+
+| Flag     | Shorthand | Default | Description            |
+| -------- | --------- | ------- | ---------------------- |
+| `--path` | `-p`      | ``      | File or directory path |
+
+---
+
+### `hieudoanm file stats`
+
+Show file statistics by extension
+
+```bash
+hieudoanm file stats [--dir <path>]
+```
+
+#### Flags
+
+| Flag    | Shorthand | Default | Description    |
+| ------- | --------- | ------- | -------------- |
+| `--dir` | `-d`      | ``      | Directory path |
+
+---
+
+### `hieudoanm file tail`
+
+Show the last N lines of a file
+
+```bash
+hieudoanm file tail [--file <path>]
+```
+
+#### Flags
+
+| Flag      | Shorthand | Default | Description     |
+| --------- | --------- | ------- | --------------- |
+| `--file`  | `-f`      | ``      | File path       |
+| `--lines` | `-n`      | `10`    | Number of lines |
+
+Example:
+
+```bash
+file tail --file main.go
+  file tail -f main.go --lines 20
+```
+
+---
+
+### `hieudoanm file type`
+
+Detect file type by extension
+
+```bash
+hieudoanm file type [--file <path>]
+```
+
+#### Flags
+
+| Flag     | Shorthand | Default | Description |
+| -------- | --------- | ------- | ----------- |
+| `--file` | `-f`      | ``      | File path   |
+
+Example:
+
+```bash
+file type --file image.png
+  file type -f document.pdf
+```
+
+---
+
+### `hieudoanm file write`
+
+Write or append content to a file
+
+Write content to a file. Content can be provided via --content flag or piped via stdin.
+
+Examples:
+file write -f hello.txt -c "Hello, World!"
+file write --file hello.txt (reads from stdin)
+file write -f log.txt -c "new log entry" --append
+file write -f newdir/file.txt --mkdir -c "content"
+echo "data" | file write -f output.txt
+
+```bash
+hieudoanm file write [--file <path>] [--content <text>]
+```
+
+#### Flags
+
+| Flag        | Shorthand | Default | Description                            |
+| ----------- | --------- | ------- | -------------------------------------- |
+| `--file`    | `-f`      | ``      | File path                              |
+| `--content` | `-c`      | ``      | File content (omit to read from stdin) |
+| `--append`  | `-a`      | `false` | Append to file instead of overwriting  |
+| `--mkdir`   | `-p`      | `false` | Create parent directories if needed    |
+| `--mode`    | `-m`      | ``      | File permissions (octal, e.g. 644)     |
+
+---
+
+## `hieudoanm gemini`
+
+Interact with Google Gemini AI models
+
+```bash
+hieudoanm gemini
+```
+
+### Flags
+
+| Flag                  | Shorthand | Default | Description           |
+| --------------------- | --------- | ------- | --------------------- |
+| `--json (persistent)` | `-j`      | `false` | Output in JSON format |
+
+---
+
+### `hieudoanm gemini code`
+
+Gemini-powered AI coding assistant
+
+An interactive TUI coding assistant powered by Google Gemini.
+
+Provides a chat interface with markdown rendering and code block support.
+
+```bash
+hieudoanm gemini code
+```
+
+---
+
+## `hieudoanm gh`
+
+GitHub CLI tools
+
+GitHub CLI utilities for interacting with GitHub APIs.
+
+```bash
+hieudoanm gh
+```
+
+### Flags
+
+| Flag                  | Shorthand | Default | Description           |
+| --------------------- | --------- | ------- | --------------------- |
+| `--json (persistent)` | `-j`      | `false` | Output in JSON format |
+
+---
+
+### `hieudoanm gh coc`
+
+Fetch a GitHub Code of Conduct
+
+Fetch and save a GitHub Code of Conduct to a file.
+
+Fetches the list of available codes of conduct from the GitHub API,
+prompts the user to select one (or uses --key), then writes the body
+to a file.
+
+```bash
+hieudoanm gh coc
+```
+
+#### Flags
+
+| Flag       | Shorthand | Default           | Description                       |
+| ---------- | --------- | ----------------- | --------------------------------- |
+| `--key`    | ``        | ``                | Code of Conduct key (skip prompt) |
+| `--output` | `-o`      | `CODE_OF_CONDUCT` | Output file path                  |
+
+---
+
+### `hieudoanm gh ignore`
+
+Fetch a .gitignore template from GitHub
+
+Fetch and save a .gitignore template from the GitHub gitignore API.
+
+Fetches the list of available templates, prompts the user to select
+one (or uses --name), then writes the template content to a file.
+
+```bash
+hieudoanm gh ignore
+```
+
+#### Flags
+
+| Flag       | Shorthand | Default      | Description                           |
+| ---------- | --------- | ------------ | ------------------------------------- |
+| `--name`   | ``        | ``           | Gitignore template name (skip prompt) |
+| `--output` | `-o`      | `.gitignore` | Output file path                      |
+
+---
+
+### `hieudoanm gh languages`
+
+Show repository language breakdown and generate SVG bar chart
+
+Fetches language statistics for a GitHub repository and generates
+an SVG bar chart showing the breakdown.
+
+Example:
+hieudoanm gh languages --repo hieudoanm/hieudoanm.github.io
+
+```bash
+hieudoanm gh languages [--repo <owner/repo>]
+```
+
+#### Flags
+
+| Flag       | Shorthand | Default         | Description             |
+| ---------- | --------- | --------------- | ----------------------- |
+| `--repo`   | `-r`      | ``              | Repository (owner/repo) |
+| `--output` | `-o`      | `languages.svg` | Output SVG file path    |
+
+---
+
+### `hieudoanm gh license`
+
+Fetch a license template from GitHub
+
+Fetch and save a license template from the GitHub licenses API.
+
+Fetches the list of available licenses, prompts the user to select
+one (or uses --spdx-id), then writes the license body to a file.
+
+```bash
+hieudoanm gh license
+```
+
+#### Flags
+
+| Flag        | Shorthand | Default   | Description                           |
+| ----------- | --------- | --------- | ------------------------------------- |
+| `--spdx-id` | ``        | ``        | SPDX license identifier (skip prompt) |
+| `--output`  | `-o`      | `LICENSE` | Output file path                      |
+
+---
+
+### `hieudoanm gh og`
+
+Generate an Open Graph SVG for a GitHub repository
+
+Fetches repository metadata from GitHub and generates
+a 1200×630 Open Graph SVG image (social preview card).
+
+Example:
+hieudoanm gh og --url hieudoanm/hieudoanm.github.io
+
+```bash
+hieudoanm gh og [--url <owner/repo>]
+```
+
+#### Flags
+
+| Flag       | Shorthand | Default  | Description             |
+| ---------- | --------- | -------- | ----------------------- |
+| `--url`    | `-u`      | ``       | Repository (owner/repo) |
+| `--output` | `-o`      | `og.svg` | Output SVG file path    |
+
+---
+
+## `hieudoanm image`
+
+Image inspection and conversion tools
+
+Get image metadata, convert between formats, and extract dominant colors.
+
+```bash
+hieudoanm image
+```
+
+### Flags
+
+| Flag                  | Shorthand | Default | Description           |
+| --------------------- | --------- | ------- | --------------------- |
+| `--json (persistent)` | ``        | `false` | Output in JSON format |
+
+---
+
+### `hieudoanm image info`
+
+Show image metadata (dimensions, format, etc.)
+
+```bash
+hieudoanm image info [--file <file>]
+```
+
+#### Flags
+
+| Flag     | Shorthand | Default | Description |
+| -------- | --------- | ------- | ----------- |
+| `--file` | `-f`      | ``      | Image file  |
+
+---
+
+### `hieudoanm image convert`
+
+Convert image to another format
+
+```bash
+hieudoanm image convert [--file <file>]
+```
+
+#### Flags
+
+| Flag       | Shorthand | Default | Description                   |
+| ---------- | --------- | ------- | ----------------------------- |
+| `--file`   | `-i`      | ``      | Input image file              |
+| `--format` | `-f`      | `png`   | Output format (png, jpg, gif) |
+| `--output` | `-o`      | ``      | Output file path              |
+
+Example:
+
+```bash
+image convert --file photo.jpg --format png
+  image convert --file photo.png --format jpg --output photo.jpg
+```
+
+---
+
+### `hieudoanm image dominant`
+
+Extract dominant color from an image
+
+```bash
+hieudoanm image dominant [--file <file>]
+```
+
+#### Flags
+
+| Flag     | Shorthand | Default | Description |
+| -------- | --------- | ------- | ----------- |
+| `--file` | `-f`      | ``      | Image file  |
+
+---
+
+## `hieudoanm net`
+
+Network diagnostics and servers
+
+IP geolocation, WiFi scanning, TLS certificates, HTTP serving, and cloud status.
+
+```bash
+hieudoanm net
+```
+
+### Flags
+
+| Flag                  | Shorthand | Default | Description           |
+| --------------------- | --------- | ------- | --------------------- |
+| `--json (persistent)` | `-j`      | `false` | Output in JSON format |
+
+---
+
+### `hieudoanm net cert`
+
+SSL/TLS certificate inspection
+
+Inspect SSL/TLS certificates for domains: check expiry, issuer, SANs, and chain.
+
+```bash
+hieudoanm net cert
+```
+
+#### Flags
+
+| Flag                  | Shorthand | Default | Description           |
+| --------------------- | --------- | ------- | --------------------- |
+| `--json (persistent)` | ``        | `false` | Output in JSON format |
+
+---
+
+#### `hieudoanm net cert info`
+
+Show detailed certificate information
+
+Retrieve and display the full certificate chain for a TLS endpoint.
+
+```bash
+hieudoanm net cert info [--host <host:port>]
+```
+
+##### Flags
+
+| Flag     | Shorthand | Default | Description          |
+| -------- | --------- | ------- | -------------------- |
+| `--host` | `-H`      | ``      | Host:port to inspect |
+
+Example:
+
+```bash
+cert info --host google.com:443
+  cert info --host example.org:8443
+```
+
+---
+
+#### `hieudoanm net cert check`
+
+Quick certificate health check (expiry warning)
+
+```bash
+hieudoanm net cert check [--host <host:port>]
+```
+
+##### Flags
+
+| Flag     | Shorthand | Default | Description               |
+| -------- | --------- | ------- | ------------------------- |
+| `--host` | `-H`      | ``      | Host:port to check        |
+| `--warn` | `-w`      | `30`    | Warning threshold in days |
+
+Example:
+
+```bash
+cert check --host google.com:443
+  cert check --host example.org --warn 30
+```
+
+---
+
+### `hieudoanm net dns`
+
+DNS record lookup
+
+Look up DNS records (A, AAAA, CNAME, MX, NS, TXT) for a domain. Defaults to all record types.
+
+```bash
+hieudoanm net dns [--domain <domain>]
+```
+
+#### Flags
+
+| Flag       | Shorthand | Default | Description                               |
+| ---------- | --------- | ------- | ----------------------------------------- |
+| `--domain` | `-d`      | ``      | Domain to look up                         |
+| `--type`   | `-t`      | ``      | Record type (a, aaaa, cname, mx, ns, txt) |
+| `--json`   | ``        | `false` | Output in JSON format                     |
+
+Example:
+
+```bash
+hieudoanm net dns --domain example.com
+  hieudoanm net dns --domain example.com --type mx
+  hieudoanm net dns --domain example.com --json
+```
+
+---
+
+### `hieudoanm net ip`
+
+Ip CLI application (utilities tools)
+
+The ip CLI application is a comprehensive backend utility belonging to the utilities suite of tools.
+
+Use this root executable to manage configuring, running, and interacting with all ip-related operations securely and efficiently from your terminal.
+
+```bash
+hieudoanm net ip
+```
+
+#### Flags
+
+| Flag     | Shorthand | Default | Description           |
+| -------- | --------- | ------- | --------------------- |
+| `--raw`  | `-r`      | `false` | Output raw JSON       |
+| `--json` | ``        | `false` | Output in JSON format |
+
+---
+
+### `hieudoanm net ping`
+
+TCP ping to check host reachability
+
+Test TCP connectivity to a host with timing statistics. Uses TCP dial (not ICMP).
+
+```bash
+hieudoanm net ping [--host <host>]
+```
+
+#### Flags
+
+| Flag        | Shorthand | Default | Description           |
+| ----------- | --------- | ------- | --------------------- |
+| `--host`    | `-H`      | ``      | Host to ping          |
+| `--port`    | `-p`      | `80`    | TCP port              |
+| `--count`   | `-c`      | `4`     | Number of pings       |
+| `--timeout` | `-t`      | ``      | Per-ping timeout      |
+| `--json`    | ``        | `false` | Output in JSON format |
+
+Example:
+
+```bash
+net ping --host example.com
+  net ping --host example.com --port 443
+  net ping --host example.com --count 5
+  net ping --host google.com --port 443 --count 3 --timeout 2s
+```
+
+---
+
+### `hieudoanm net serve`
+
+Start an HTTP file server
+
+Serve static files over HTTP with optional CORS, directory listing, and TLS support.
+
+```bash
+hieudoanm net serve
+```
+
+#### Flags
+
+| Flag     | Shorthand | Default | Description           |
+| -------- | --------- | ------- | --------------------- |
+| `--port` | `-p`      | `8080`  | Port to listen on     |
+| `--dir`  | `-d`      | `.`     | Directory to serve    |
+| `--cors` | ``        | `false` | Enable CORS headers   |
+| `--cert` | ``        | ``      | TLS certificate file  |
+| `--key`  | ``        | ``      | TLS key file          |
+| `--json` | ``        | `false` | Output in JSON format |
+
+Example:
+
+```bash
+serve
+  serve --port 9000 --dir ./public
+  serve --port 443 --cert cert.pem --key key.pem
+```
+
+---
+
+### `hieudoanm net status`
+
+Check the uptime status of cloud services
+
+Check and display the current operational status of various cloud services including Atlassian, GitHub, Vercel, and more via a Bubble Tea TUI.
+
+```bash
+hieudoanm net status
+```
+
+#### Flags
+
+| Flag      | Shorthand | Default | Description           |
+| --------- | --------- | ------- | --------------------- |
+| `--debug` | `-d`      | `false` | Enable debug logging  |
+| `--json`  | ``        | `false` | Output in JSON format |
+
+---
+
+### `hieudoanm net wifi`
+
+List nearby Wi-Fi networks
+
+Scan and list nearby Wi-Fi networks with signal strength and security information.
+
+```bash
+hieudoanm net wifi
+```
+
+#### Flags
+
+| Flag     | Shorthand | Default | Description           |
+| -------- | --------- | ------- | --------------------- |
+| `--json` | ``        | `false` | Output in JSON format |
+
+---
+
+### `hieudoanm net http`
+
+Make HTTP requests
+
+Make HTTP GET, POST, PUT, DELETE requests to URLs.
+
+```bash
+hieudoanm net http [--url <url>]
+```
+
+#### Flags
+
+| Flag       | Shorthand | Default | Description                          |
+| ---------- | --------- | ------- | ------------------------------------ |
+| `--url`    | `-u`      | ``      | URL to request                       |
+| `--method` | `-X`      | `GET`   | HTTP method (GET, POST, PUT, DELETE) |
+| `--data`   | `-d`      | ``      | Request body data                    |
+| `--header` | `-H`      | ``      | Request headers (key:val,key2:val2)  |
+| `--json`   | ``        | `false` | Pretty-print JSON response           |
+
+Example:
+
+```bash
+net http --url https://api.example.com/data
+  net http --url https://api.example.com --method POST --data '{"key":"value"}'
+  net http --url https://api.example.com/resource/1 --method DELETE
+  net http --url https://api.example.com --header "Authorization: Bearer token
+```
+
+---
+
+### `hieudoanm net whois`
+
+WHOIS lookup for a domain
+
+Query WHOIS servers for domain registration information.
+
+```bash
+hieudoanm net whois [--domain <domain>]
+```
+
+#### Flags
+
+| Flag       | Shorthand | Default | Description           |
+| ---------- | --------- | ------- | --------------------- |
+| `--domain` | `-d`      | ``      | Domain to look up     |
+| `--server` | `-s`      | ``      | WHOIS server to query |
+
+Example:
+
+```bash
+net whois --domain example.com
+  net whois --domain google.com
+  net whois --domain example.com --server whois.verisign-grs.com
+```
+
+---
+
+## `hieudoanm openapi`
+
+OpenAPI related tools
+
+Tools for interacting with and managing OpenAPI specifications.
+
+```bash
+hieudoanm openapi
+```
+
+### Flags
+
+| Flag                  | Shorthand | Default | Description           |
+| --------------------- | --------- | ------- | --------------------- |
+| `--json (persistent)` | `-j`      | `false` | Output in JSON format |
+
+---
+
+### `hieudoanm openapi openapi2postman`
+
+Convert OpenAPI to Postman collection
+
+```bash
+hieudoanm openapi openapi2postman
+```
+
+#### Flags
+
+| Flag       | Shorthand | Default | Description              |
+| ---------- | --------- | ------- | ------------------------ |
+| `--input`  | `-i`      | ``      | OpenAPI file (json/yaml) |
+| `--output` | `-o`      | ``      | Output Postman file      |
+
+---
+
+### `hieudoanm openapi validate`
+
+Validate an OpenAPI specification
+
+```bash
+hieudoanm openapi validate [--file <file>]
+```
+
+#### Flags
+
+| Flag     | Shorthand | Default | Description       |
+| -------- | --------- | ------- | ----------------- |
+| `--file` | `-f`      | ``      | OpenAPI spec file |
+
+---
+
+## `hieudoanm openrouter`
+
+Interact with OpenRouter AI models and services
+
+```bash
+hieudoanm openrouter
+```
+
+### Flags
+
+| Flag                  | Shorthand | Default | Description           |
+| --------------------- | --------- | ------- | --------------------- |
+| `--json (persistent)` | `-j`      | `false` | Output in JSON format |
+
+---
+
+### `hieudoanm openrouter serve`
+
+Start the OpenRouter HTTP server
+
+Starts a lightweight Go HTTP server that exposes:
+GET / — health check
+POST /chat — forward {prompt, model} to OpenRouter and return the response
+
+```bash
+hieudoanm openrouter serve
+```
+
+#### Flags
+
+| Flag     | Shorthand | Default | Description       |
+| -------- | --------- | ------- | ----------------- |
+| `--port` | `-p`      | `8080`  | Port to listen on |
+
+---
+
+### `hieudoanm openrouter status`
+
+Run the status operation for the OpenRouter app
+
+The status command is a specific utility to execute operations related to status within the OpenRouter application.
+
+As a component of the ai tools, this command empowers you to interact directly with OpenRouter's status features via the CLI.
+
+```bash
+hieudoanm openrouter status
+```
+
+#### Flags
+
+| Flag        | Shorthand | Default | Description                                |
+| ----------- | --------- | ------- | ------------------------------------------ |
+| `--search`  | `-s`      | ``      | Filter models by name or ID before probing |
+| `--workers` | `-w`      | `6`     | Parallel probe workers                     |
+
+---
+
+### `hieudoanm openrouter models`
+
+Run the models operation for the OpenRouter app
+
+```bash
+hieudoanm openrouter models
+```
+
+#### Flags
+
+| Flag       | Shorthand | Default | Description                 |
+| ---------- | --------- | ------- | --------------------------- |
+| `--search` | `-s`      | ``      | Filter models by name or ID |
+| `--json`   | ``        | `false` | Output raw JSON             |
+
+---
+
+### `hieudoanm openrouter hook`
+
+Start webhook server on :8080 and expose via ngrok and hook it to telegram
+
+```bash
+hieudoanm openrouter hook
+```
+
+---
+
+### `hieudoanm openrouter code`
+
+AI coding assistant with file editing and bash access
+
+An interactive TUI coding assistant powered by OpenRouter.
+
+Supports reading, writing, and editing files, as well as running bash commands.
+All tool calls require your approval before execution.
+
+```bash
+hieudoanm openrouter code
+```
+
+#### Flags
+
+| Flag      | Shorthand | Default | Description                                        |
+| --------- | --------- | ------- | -------------------------------------------------- |
+| `--model` | ``        | ``      | Model ID (default: auto-select tool-capable model) |
+
+---
+
+## `hieudoanm port`
+
+Network port checking tools
+
+Check if ports are open, find available ports, and scan common ports.
+
+```bash
+hieudoanm port
+```
+
+### Flags
+
+| Flag                  | Shorthand | Default | Description           |
+| --------------------- | --------- | ------- | --------------------- |
+| `--json (persistent)` | ``        | `false` | Output in JSON format |
+
+---
+
+### `hieudoanm port check`
+
+Check if a port is open
+
+```bash
+hieudoanm port check [--target <host:port>]
+```
+
+#### Flags
+
+| Flag        | Shorthand | Default | Description                   |
+| ----------- | --------- | ------- | ----------------------------- |
+| `--target`  | `-T`      | ``      | Host:port to check            |
+| `--timeout` | `-t`      | `3`     | Connection timeout in seconds |
+
+Example:
+
+```bash
+port check --target localhost:8080
+  port check --target google.com:443
+  port check --target 192.168.1.1:22 --timeout 5
+```
+
+---
+
+### `hieudoanm port find`
+
+Find an available port in a range
+
+```bash
+hieudoanm port find
+```
+
+#### Flags
+
+| Flag      | Shorthand | Default | Description         |
+| --------- | --------- | ------- | ------------------- |
+| `--start` | `-s`      | `8000`  | Start of port range |
+| `--end`   | `-e`      | `9000`  | End of port range   |
+
+Example:
+
+```bash
+port find
+  port find --start 3000 --end 3010
+```
+
+---
+
+### `hieudoanm port scan`
+
+Scan common ports on a host
+
+Scan a host for open ports. Defaults to the common ports list.
+
+```bash
+hieudoanm port scan [--host <host>]
+```
+
+#### Flags
+
+| Flag        | Shorthand | Default | Description                             |
+| ----------- | --------- | ------- | --------------------------------------- |
+| `--host`    | `-H`      | ``      | Host to scan                            |
+| `--ports`   | ``        | ``      | Port list (e.g. 22,80,443 or 8000-8100) |
+| `--timeout` | `-t`      | `2`     | Per-port timeout in seconds             |
+
+Example:
+
+```bash
+port scan --host localhost
+  port scan --host google.com --ports 22,80,443
+  port scan --host localhost --ports 8000-8100
+```
+
+---
+
+## `hieudoanm search`
+
+Universal search for files, text, code, and the web
+
+Search for files by name, text inside files, code symbols, and web content.
+
+Search is the universal entry point for finding things:
+search files - find files by glob pattern
+search text - search file contents by regex
+search code - find code symbols (functions, types, etc.)
+search web - search the internet
+
+```bash
+hieudoanm search
+```
+
+### Flags
+
+| Flag                  | Shorthand | Default | Description           |
+| --------------------- | --------- | ------- | --------------------- |
+| `--json (persistent)` | ``        | `false` | Output in JSON format |
+
+---
+
+### `hieudoanm search files`
+
+Find files by glob pattern
+
+Find files matching a glob pattern starting from an optional root directory.
+
+Patterns use glob syntax:
+_.go - all Go files
+\*\*/_.ts - TypeScript files in any subdirectory
+src/\*_/_.ts - TypeScript files under src/
+test*\*.py - files matching test* prefix with .py extension
+
+Examples:
+search files --pattern "_.go"
+search files --pattern "_.ts" --dir src/
+search files --pattern "\*_/_.md" --dir docs/
+search files --pattern "_.py" --type f
+search files --pattern "config._" --hidden
+
+```bash
+hieudoanm search files [--pattern <pattern>] [--dir <dir>]
+```
+
+#### Flags
+
+| Flag          | Shorthand | Default | Description                               |
+| ------------- | --------- | ------- | ----------------------------------------- |
+| `--pattern`   | `-p`      | ``      | Glob pattern to match                     |
+| `--dir`       | `-d`      | `.`     | Root directory to search                  |
+| `--max-depth` | `-D`      | `0`     | Maximum directory depth (0 = unlimited)   |
+| `--type`      | `-t`      | ``      | Filter by type: f (file) or d (directory) |
+| `--hidden`    | `-H`      | `false` | Include hidden files and directories      |
+
+---
+
+### `hieudoanm search text`
+
+Search file contents using regex
+
+Search for a regex pattern inside files. If a directory is given, searches recursively.
+
+Examples:
+search text --pattern "TODO" --path .
+search text --pattern "func._error" --include "_.go"
+search text --pattern "import" --path src/ --ignore-case
+search text --pattern "panic" --max-count 5
+
+```bash
+hieudoanm search text [--pattern <pattern>] [--path <path>]
+```
+
+#### Flags
+
+| Flag            | Shorthand | Default | Description                                  |
+| --------------- | --------- | ------- | -------------------------------------------- |
+| `--pattern`     | `-p`      | ``      | Regex pattern to search                      |
+| `--path`        | `-P`      | `.`     | File or directory to search                  |
+| `--ignore-case` | `-i`      | `false` | Case-insensitive search                      |
+| `--max-count`   | `-m`      | `0`     | Maximum number of matches                    |
+| `--include`     | ``        | ``      | Glob pattern for file names (e.g. \"\*.go\") |
+| `--max-depth`   | `-d`      | `0`     | Maximum directory depth (0 = unlimited)      |
+
+---
+
+### `hieudoanm search code`
+
+Search for code symbols (functions, types, variables)
+
+Find code symbol definitions matching a name pattern.
+
+Supports Go, TypeScript/JavaScript, Python, and Rust.
+
+Examples:
+search code --symbol "ParseCard"
+search code --symbol "handle" --dir src/
+search code --symbol "NewCommand" --lang go
+search code --symbol "getUser" --kind function
+search code --symbol "fetchAPI" --lang ts
+
+```bash
+hieudoanm search code [--symbol <symbol>] [--dir <dir>]
+```
+
+#### Flags
+
+| Flag            | Shorthand | Default | Description                                           |
+| --------------- | --------- | ------- | ----------------------------------------------------- |
+| `--symbol`      | `-s`      | ``      | Symbol name to search                                 |
+| `--dir`         | `-d`      | `.`     | Root directory to search                              |
+| `--lang`        | `-l`      | ``      | Language filter (go, ts, py, rs)                      |
+| `--kind`        | `-k`      | ``      | Symbol kind (function, type, variable, method, class) |
+| `--max-results` | `-n`      | `0`     | Maximum number of results (0 = unlimited)             |
+
+---
+
+### `hieudoanm search web`
+
+Search the internet
+
+Search the web for a query. Uses DuckDuckGo by default (no API key needed).
+
+Examples:
+search web --query "golang concurrency patterns"
+search web --query "latest AI news 2026" --max-results 10
+search web --query "site:github.com golang cli" --source google
+
+```bash
+hieudoanm search web [--query <query>]
+```
+
+#### Flags
+
+| Flag            | Shorthand | Default      | Description                |
+| --------------- | --------- | ------------ | -------------------------- |
+| `--query`       | `-q`      | ``           | Search query               |
+| `--max-results` | `-n`      | `5`          | Maximum number of results  |
+| `--source`      | `-s`      | `duckduckgo` | Search source (duckduckgo) |
+
+---
+
+## `hieudoanm semver`
+
+Parse, compare, sort, and bump semver strings
+
+Tools for working with semantic version strings (major.minor.patch).
+
+```bash
+hieudoanm semver <command> [flags]
+```
+
+### Flags
+
+| Flag                  | Shorthand | Default | Description                                              |
+| --------------------- | --------- | ------- | -------------------------------------------------------- |
+| `--bump`              | ``        | ``      | Bump version part: major, minor, patch                   |
+| `--prerelease`        | ``        | ``      | Set prerelease label after bump                          |
+| `--range`             | ``        | ``      | Check if version matches a range (e.g. '>=1.0.0 <2.0.0') |
+| `--version`           | ``        | ``      | Single version for --bump or --range                     |
+| `--json (persistent)` | ``        | `false` | Output in JSON format                                    |
+
+Example:
+
+```bash
+semver validate --versions 1.2.3
+  semver compare --a 1.0.0 --b 2.0.0
+  semver sort --versions 1.2.0,2.0.0,1.10.0
+  semver --bump minor --version 1.2.3
+  semver --bump patch --prerelease alpha --version 1.2.3
+  semver --range ">=1.0.0 <2.0.0" --version 1.5.0
+```
+
+---
+
+### `hieudoanm semver <command> [flags] validate`
+
+Validate one or more semver strings
+
+```bash
+hieudoanm semver <command> [flags] validate [--versions <v1,v2,...>]
+```
+
+#### Flags
+
+| Flag     | Shorthand | Default | Description           |
+| -------- | --------- | ------- | --------------------- |
+| `--json` | ``        | `false` | Output in JSON format |
+
+Example:
+
+```bash
+semver validate --versions 1.2.3
+  semver validate --versions 1.2.3,2.0.0,abc
+  semver validate --versions v1.0.0
+```
+
+---
+
+### `hieudoanm semver <command> [flags] compare`
+
+Compare two semver strings
+
+```bash
+hieudoanm semver <command> [flags] compare --a <version> --b <version>
+```
+
+#### Flags
+
+| Flag     | Shorthand | Default | Description           |
+| -------- | --------- | ------- | --------------------- |
+| `--a`    | ``        | ``      | First version         |
+| `--b`    | ``        | ``      | Second version        |
+| `--json` | ``        | `false` | Output in JSON format |
+
+Example:
+
+```bash
+semver compare --a 1.0.0 --b 2.0.0
+  semver compare --a v1.2.3 --b v1.2.3
+```
+
+---
+
+### `hieudoanm semver <command> [flags] sort`
+
+Sort one or more semver strings
+
+```bash
+hieudoanm semver <command> [flags] sort [--versions <v1,v2,...>]
+```
+
+#### Flags
+
+| Flag     | Shorthand | Default | Description           |
+| -------- | --------- | ------- | --------------------- |
+| `--json` | ``        | `false` | Output in JSON format |
+
+Example:
+
+```bash
+semver sort --versions 1.2.0,2.0.0,1.10.0
+  semver sort --versions v3.0.0,v1.0.0,v2.0.0
+```
+
+---
+
+## `hieudoanm system`
+
+System utilities
+
+System monitoring and clipboard management.
+
+```bash
+hieudoanm system
+```
+
+### Flags
+
+| Flag                  | Shorthand | Default | Description           |
+| --------------------- | --------- | ------- | --------------------- |
+| `--json (persistent)` | `-j`      | `false` | Output in JSON format |
+
+---
+
+### `hieudoanm system monitor`
+
+Monitor system resources in real-time
+
+```bash
+hieudoanm system monitor
+```
+
+#### Flags
+
+| Flag     | Shorthand | Default | Description           |
+| -------- | --------- | ------- | --------------------- |
+| `--json` | ``        | `false` | Output in JSON format |
+
+---
+
+### `hieudoanm system clipboard`
+
+Watch clipboard changes and store them in SQLite
+
+Monitors the system clipboard for changes and saves each unique entry to a local SQLite database.
+
+```bash
+hieudoanm system clipboard
+```
+
+#### Flags
+
+| Flag     | Shorthand | Default | Description           |
+| -------- | --------- | ------- | --------------------- |
+| `--json` | ``        | `false` | Output in JSON format |
+
+---
+
+### `hieudoanm system info`
+
+Show system information
+
+Display OS, architecture, CPU count, uptime, and memory.
+
+```bash
+hieudoanm system info
+```
+
+#### Flags
+
+| Flag     | Shorthand | Default | Description           |
+| -------- | --------- | ------- | --------------------- |
+| `--json` | ``        | `false` | Output in JSON format |
+
+---
+
+### `hieudoanm system env`
+
+List or search environment variables
+
+Display all environment variables, or filter by key prefix.
+
+```bash
+hieudoanm system env [key]
+```
+
+#### Flags
+
+| Flag     | Shorthand | Default | Description                |
+| -------- | --------- | ------- | -------------------------- |
+| `--sort` | ``        | `false` | Sort alphabetically by key |
+| `--json` | ``        | `false` | Output in JSON format      |
+
+Example:
+
+```bash
+system env
+  system env PATH
+  system env HOME
+  system env --sort
+  system env --json
+```
+
+---
+
+### `hieudoanm system path`
+
+List or search PATH directories and commands
+
+Show all directories in PATH, or find which path a command resolves to.
+
+With no arguments, lists all PATH entries.
+With a command name, shows which executable would be found first.
+
+```bash
+hieudoanm system path [command]
+```
+
+#### Flags
+
+| Flag     | Shorthand | Default | Description                 |
+| -------- | --------- | ------- | --------------------------- |
+| `--sort` | ``        | `false` | Sort alphabetically by path |
+| `--json` | ``        | `false` | Output in JSON format       |
+
+Example:
+
+```bash
+system path
+  system path go
+  system path --sort
+  system path --json
+```
+
+---
+
+### `hieudoanm system disk`
+
+Show disk usage for mounted filesystems
+
+Display disk capacity, used space, available space, and mount points (like df -h).
+
+```bash
+hieudoanm system disk
+```
+
+#### Flags
+
+| Flag     | Shorthand | Default | Description           |
+| -------- | --------- | ------- | --------------------- |
+| `--json` | ``        | `false` | Output in JSON format |
+
+Example:
+
+```bash
+system disk
+  system disk --json
+```
+
+---
+
+### `hieudoanm system battery`
+
+Show battery status
+
+Display battery percentage, charging state, and time remaining.
+
+```bash
+hieudoanm system battery
+```
+
+#### Flags
+
+| Flag     | Shorthand | Default | Description           |
+| -------- | --------- | ------- | --------------------- |
+| `--json` | ``        | `false` | Output in JSON format |
+
+---
+
+## `hieudoanm telegram`
+
+Telegram bot and message tools
+
+```bash
+hieudoanm telegram
+```
+
+### Flags
+
+| Flag                  | Shorthand | Default | Description           |
+| --------------------- | --------- | ------- | --------------------- |
+| `--json (persistent)` | `-j`      | `false` | Output in JSON format |
+
+---
+
+### `hieudoanm telegram message`
+
+Run the message operation for the telegram app
+
+The message command is a specific utility to execute operations related to message within the telegram application.
+
+As a component of the messaging tools, this command empowers you to interact directly with telegram's message features via the CLI.
+
+```bash
+hieudoanm telegram message
+```
+
+---
+
+#### `hieudoanm telegram message send`
+
+Run the send operation for the telegram app
+
+The send command is a specific utility to execute operations related to send within the telegram application.
+
+As a component of the messaging tools, this command empowers you to interact directly with telegram's send features via the CLI.
+
+```bash
+hieudoanm telegram message send
+```
+
+---
+
+### `hieudoanm telegram webhook`
+
+Run the webhook operation for the telegram app
+
+The webhook command is a specific utility to execute operations related to webhook within the telegram application.
+
+As a component of the messaging tools, this command empowers you to interact directly with telegram's webhook features via the CLI.
+
+```bash
+hieudoanm telegram webhook
+```
+
+---
+
+#### `hieudoanm telegram webhook delete`
+
+Run the delete operation for the telegram app
+
+The delete command is a specific utility to execute operations related to delete within the telegram application.
+
+As a component of the messaging tools, this command empowers you to interact directly with telegram's delete features via the CLI.
+
+```bash
+hieudoanm telegram webhook delete
+```
+
+---
+
+#### `hieudoanm telegram webhook info`
+
+Run the info operation for the telegram app
+
+The info command is a specific utility to execute operations related to info within the telegram application.
+
+As a component of the messaging tools, this command empowers you to interact directly with telegram's info features via the CLI.
+
+```bash
+hieudoanm telegram webhook info
+```
+
+---
+
+#### `hieudoanm telegram webhook set`
+
+Run the set operation for the telegram app
+
+The set command is a specific utility to execute operations related to set within the telegram application.
+
+As a component of the messaging tools, this command empowers you to interact directly with telegram's set features via the CLI.
+
+```bash
+hieudoanm telegram webhook set
+```
+
+---
+
+## `hieudoanm time`
+
+Time and scheduling tools
+
+Current time, pomodoro timer, countdown timer, epoch conversion, and cron expression utilities.
+
+```bash
+hieudoanm time
+```
+
+### Flags
+
+| Flag                  | Shorthand | Default | Description           |
+| --------------------- | --------- | ------- | --------------------- |
+| `--json (persistent)` | `-j`      | `false` | Output in JSON format |
+
+---
+
+### `hieudoanm time clock`
+
+Clock and timer utilities
+
+Clock and timer utilities including current time display.
+
+```bash
+hieudoanm time clock
+```
+
+---
+
+#### `hieudoanm time clock now`
+
+Display the current date and time
+
+Display the current date, time, and timezone in a formatted output.
+
+```bash
+hieudoanm time clock now
+```
+
+##### Flags
+
+| Flag     | Shorthand | Default | Description           |
+| -------- | --------- | ------- | --------------------- |
+| `--json` | ``        | `false` | Output in JSON format |
+
+---
+
+### `hieudoanm time cron`
+
+Describe a cron expression in plain English and compute next runs
+
+Parse a 5-field cron expression, describe when it runs, and compute upcoming occurrences.
+
+```bash
+hieudoanm time cron [--expression <expression>]
+```
+
+#### Flags
+
+| Flag           | Shorthand | Default | Description                            |
+| -------------- | --------- | ------- | -------------------------------------- |
+| `--expression` | `-e`      | ``      | Cron expression                        |
+| `--next`       | `-n`      | `0`     | Show next N run times                  |
+| `--until`      | ``        | ``      | Show runs until this date (YYYY-MM-DD) |
+| `--json`       | ``        | `false` | Output in JSON format                  |
+
+Example:
+
+```bash
+cron --expression "*/15 * * * *"
+  cron --expression "0 9 * * 1-5"
+  cron --expression "0 0 1 1 *"
+  cron --next 5 --expression "*/30 * * * *"
+  cron --next 10 --until "2026-12-31" --expression "0 0 * * *
+```
+
+---
+
+### `hieudoanm time epoch`
+
+Convert between epoch timestamps and human-readable dates
+
+Convert Unix epoch timestamps to human-readable dates and vice versa.
+
+```bash
+hieudoanm time epoch [timestamp]
+```
+
+#### Flags
+
+| Flag         | Shorthand | Default | Description                                             |
+| ------------ | --------- | ------- | ------------------------------------------------------- |
+| `--from`     | `-f`      | ``      | Convert a date string to epoch                          |
+| `--relative` | ``        | ``      | Calculate relative time (e.g. '2 hours ago', '+3 days') |
+| `--format`   | ``        | ``      | Output format for date (Go time layout)                 |
+| `--iso`      | ``        | `false` | Output in ISO 8601 format                               |
+| `--unix`     | ``        | `false` | Output as Unix timestamp                                |
+| `--json`     | ``        | `false` | Output as JSON                                          |
+
+Example:
+
+```bash
+epoch 1718100000
+  epoch --from "2024-06-11"
+  epoch --from "2024-06-11T15:04:05Z"
+  epoch --relative "2 hours ago"
+  epoch --relative "+3 days"
+  epoch --iso
+```
+
+---
+
+### `hieudoanm time pomodoro`
+
+Start a Pomodoro timer TUI session
+
+```bash
+hieudoanm time pomodoro
+```
+
+#### Flags
+
+| Flag     | Shorthand | Default | Description          |
+| -------- | --------- | ------- | -------------------- |
+| `--work` | `-w`      | `25`    | work session minutes |
+| `--rest` | `-r`      | `5`     | rest session minutes |
+
+---
+
+### `hieudoanm time timer`
+
+Simple countdown timer
+
+Set a countdown timer. Supports seconds (30s) and minutes (5m).
+
+Press Ctrl+C to cancel.
+
+```bash
+hieudoanm time timer [--duration <duration>]
+```
+
+#### Flags
+
+| Flag         | Shorthand | Default | Description             |
+| ------------ | --------- | ------- | ----------------------- |
+| `--duration` | `-d`      | ``      | Duration (e.g. 30s, 5m) |
+| `--json`     | ``        | `false` | Output in JSON format   |
+
+Example:
+
+```bash
+timer --duration 30s
+  timer --duration 5m
+  timer --duration 90
+```
+
+---
+
+### `hieudoanm time until`
+
+Countdown to a specific date/time
+
+Show the time remaining until a given datetime.
+
+Accepts formats: RFC3339 (2026-12-25T00:00:00Z), ISO date (2026-12-25),
+date and time (2026-12-25 15:04:05), or a Unix timestamp in seconds.
+
+```bash
+hieudoanm time until [--time <datetime>]
+```
+
+#### Flags
+
+| Flag     | Shorthand | Default | Description     |
+| -------- | --------- | ------- | --------------- |
+| `--time` | `-t`      | ``      | Target datetime |
+
+Example:
+
+```bash
+hieudoanm time until --time 2026-12-25
+  hieudoanm time until --time "2026-12-25 15:04:05"
+  hieudoanm time until --time 2026-12-25T00:00:00Z
+```
+
+---
+
+### `hieudoanm time world`
+
+Display current time in multiple timezones
+
+Show the current time in one or more timezones.
+
+Common shorthand names: utc, ny, london, tokyo, hcmc, sf, paris, etc.
+Accepts any valid IANA timezone name, or a UTC offset like "UTC+5:30", "UTC-8".
+
+```bash
+hieudoanm time world [zone1 zone2 ...]
+```
+
+Example:
+
+```bash
+hieudoanm time world
+  hieudoanm time world ny london tokyo hcmc
+  hieudoanm time world UTC UTC+5:30
+```
+
+---
+
+### `hieudoanm time age`
+
+Calculate age from a birthdate
+
+Calculate someone's age in years, months, and days from their birthdate.
+
+Accepts formats: YYYY-MM-DD, YYYY-MM-DDTHH:MM:SS, RFC3339.
+
+```bash
+hieudoanm time age [--date <birthdate>]
+```
+
+#### Flags
+
+| Flag     | Shorthand | Default | Description            |
+| -------- | --------- | ------- | ---------------------- |
+| `--date` | `-d`      | ``      | Birthdate (YYYY-MM-DD) |
+| `--json` | ``        | `false` | Output in JSON format  |
+
+Example:
+
+```bash
+time age --date 1990-01-15
+  time age --date 1990-01-15 --json
+```
+
+---
+
+### `hieudoanm time stopwatch`
+
+Measure elapsed time like a stopwatch
+
+Starts a stopwatch that runs until interrupted (Ctrl+C),
+then displays the elapsed time.
+
+```bash
+hieudoanm time stopwatch
+```
+
+#### Flags
+
+| Flag     | Shorthand | Default | Description           |
+| -------- | --------- | ------- | --------------------- |
+| `--json` | ``        | `false` | Output in JSON format |
+
+---
+
+## `hieudoanm version`
+
+Print the application version
+
+Print the version number of the application.
+
+```bash
+hieudoanm version
+```
+
+### Flags
+
+| Flag     | Shorthand | Default | Description           |
+| -------- | --------- | ------- | --------------------- |
+| `--json` | ``        | `false` | Output in JSON format |
+
+---
+
+## `hieudoanm web`
+
+Web service tools
+
+Interact with web services: download Instagram content, detect Shopify sites, capture page snapshots, fetch weather, and retrieve YouTube transcripts.
+
+```bash
+hieudoanm web
+```
+
+### Flags
+
+| Flag                  | Shorthand | Default | Description           |
+| --------------------- | --------- | ------- | --------------------- |
+| `--json (persistent)` | `-j`      | `false` | Output in JSON format |
+
+---
+
+### `hieudoanm web instagram`
+
+Instagram related tools
+
+Instagram related tools like downloading images and reels.
+
+```bash
+hieudoanm web instagram
+```
+
+---
+
+#### `hieudoanm web instagram download`
+
+Download images from Instagram
+
+Download images from an Instagram post, reel, or video.
+Supports carousels and specific image selection via --index.
+
+Example:
+devtools instagram download --url https://www.instagram.com/p/CLI7qRNhI_o/
+devtools instagram download --url CLI7qRNhI_o --index 1
+
+```bash
+hieudoanm web instagram download [--url <url>]
+```
+
+##### Flags
+
+| Flag       | Shorthand | Default | Description                                |
+| ---------- | --------- | ------- | ------------------------------------------ |
+| `--url`    | `-u`      | ``      | Instagram post URL or shortcode            |
+| `--output` | `-o`      | `.`     | Output directory                           |
+| `--index`  | `-i`      | `0`     | Specific image index to download (1-based) |
+| `--proxy`  | `-p`      | `false` | Use proxy to fetch content                 |
+| `--json`   | ``        | `false` | Output in JSON format                      |
+
+---
+
+### `hieudoanm web shopify`
+
+Shopify detection and analysis tools
+
+```bash
+hieudoanm web shopify
+```
+
+---
+
+#### `hieudoanm web shopify detect`
+
+Run the detect operation for the shopify app
+
+```bash
+hieudoanm web shopify detect [url]
+```
+
+##### Flags
+
+| Flag        | Shorthand | Default | Description            |
+| ----------- | --------- | ------- | ---------------------- |
+| `--verbose` | `-v`      | `false` | Show detection signals |
+| `--json`    | ``        | `false` | Output in JSON format  |
+
+---
+
+### `hieudoanm web snapshot`
+
+Take a screenshot of a web page
+
+Take a full or viewport screenshot of a given URL.
+The output file is saved as PNG (default) or PDF.
+If --output is a directory, the filename is derived from the URL hostname + timestamp.
+
+```bash
+hieudoanm web snapshot [--url <url>]
+```
+
+#### Flags
+
+| Flag          | Shorthand | Default   | Description                            |
+| ------------- | --------- | --------- | -------------------------------------- | ------ | ------ | ------ | --- | --- |
+| `--url`       | `-u`      | ``        | URL to capture                         |
+| `--output`    | `-o`      | ``        | Output file or directory               |
+| `--width`     | ``        | `0`       | Viewport width (overrides --preset)    |
+| `--height`    | ``        | `0`       | Viewport height (overrides --preset)   |
+| `--preset`    | ``        | `desktop` | Viewport preset: desktop               | laptop | tablet | mobile | hd  | 4k  |
+| `--full-page` | ``        | `false`   | Capture full scrollable page           |
+| `--delay`     | ``        | `0`       | Wait before capturing (e.g. 500ms, 2s) |
+| `--pdf`       | ``        | `false`   | Save as PDF instead of PNG             |
+| `--quality`   | ``        | `90`      | Screenshot quality 1-100 (JPEG only)   |
+| `--verbose`   | `-v`      | `false`   | Print extra info                       |
+| `--json`      | ``        | `false`   | Output in JSON format                  |
+
+---
+
+### `hieudoanm web weather`
+
+Check current weather for a city
+
+Get current weather conditions using wttr.in (free, no API key needed).
+
+```bash
+hieudoanm web weather [city]
+```
+
+#### Flags
+
+| Flag         | Shorthand | Default  | Description                 |
+| ------------ | --------- | -------- | --------------------------- |
+| `--forecast` | `-f`      | `false`  | Show 3-day forecast         |
+| `--json`     | `-j`      | `false`  | Output in JSON format       |
+| `--units`    | `-u`      | `metric` | Units: metric, imperial, uk |
+
+Example:
+
+```bash
+weather London
+  weather "Ho Chi Minh City"
+  weather --forecast Tokyo
+  weather --json London
+  weather --units us "New York
+```
+
+---
+
+### `hieudoanm web youtube`
+
+YouTube CLI application (devtools)
+
+The youtube CLI application is a comprehensive backend utility belonging to the devtools suite of tools.
+
+Use this root executable to manage configuring, running, and interacting with all youtube-related operations securely and efficiently from your terminal.
+
+```bash
+hieudoanm web youtube
+```
+
+---
+
+#### `hieudoanm web youtube thumbnails`
+
+Download YouTube video thumbnails
+
+Download all available thumbnail qualities for a YouTube video.
+
+Accepts any of:
+
+- Full URL: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+- Short URL: https://youtu.be/dQw4w9WgXcQ
+- Embed URL: https://www.youtube.com/embed/dQw4w9WgXcQ
+- Shorts URL: https://www.youtube.com/shorts/dQw4w9WgXcQ
+- Raw ID: dQw4w9WgXcQ
+
+Examples:
+devtools youtube thumbnails --url https://www.youtube.com/watch?v=dQw4w9WgXcQ
+devtools youtube thumbnails --url dQw4w9WgXcQ --quality hqdefault
+devtools youtube thumbnails --url dQw4w9WgXcQ --output ./thumbs
+devtools youtube thumbnails --url dQw4w9WgXcQ --all
+
+```bash
+hieudoanm web youtube thumbnails [--url <video-url-or-id>]
+```
+
+##### Flags
+
+| Flag        | Shorthand | Default | Description                             |
+| ----------- | --------- | ------- | --------------------------------------- |
+| `--url`     | `-u`      | ``      | Video URL or ID                         |
+| `--quality` | `-q`      | ``      |                                         |
+| `--output`  | `-o`      | `.`     | output directory                        |
+| `--all`     | `-a`      | `false` | download all quality variants           |
+| `--list`    | `-l`      | `false` | list thumbnail URLs without downloading |
+| `--json`    | ``        | `false` | Output in JSON format (with --list)     |
+
+---
+
+#### `hieudoanm web youtube fetch`
+
+Fetch YouTube video transcript
+
+```bash
+hieudoanm web youtube fetch [--url <video-id-or-url>]
+```
+
+##### Flags
+
+| Flag              | Shorthand | Default | Description                      |
+| ----------------- | --------- | ------- | -------------------------------- |
+| `--url`           | `-u`      | ``      | Video URL or ID                  |
+| `--lang`          | `-l`      | `en`    | Language code (e.g. en, es, fr)  |
+| `--output`        | `-o`      | ``      | Save to file instead of stdout   |
+| `--format`        | `-f`      | `text`  | Output format: text or json      |
+| `--no-timestamps` | ``        | `false` | Omit timestamps from text output |
+
+---
