@@ -5,35 +5,55 @@
 │   └── [install.sh](./scripts/install.sh)
 ├── src/
 │   ├── cmd/
-│   │   ├── [blackjack.rs](./src/cmd/blackjack.rs)
-│   │   ├── [braille.rs](./src/cmd/braille.rs)
-│   │   ├── [chess.rs](./src/cmd/chess.rs)
-│   │   ├── [clipboard.rs](./src/cmd/clipboard.rs)
-│   │   ├── [clock.rs](./src/cmd/clock.rs)
-│   │   ├── [colors.rs](./src/cmd/colors.rs)
-│   │   ├── [docsify.rs](./src/cmd/docsify.rs)
-│   │   ├── [doi.rs](./src/cmd/doi.rs)
-│   │   ├── [english.rs](./src/cmd/english.rs)
-│   │   ├── [frankfurter.rs](./src/cmd/frankfurter.rs)
-│   │   ├── [instagram.rs](./src/cmd/instagram.rs)
-│   │   ├── [ip.rs](./src/cmd/ip.rs)
-│   │   ├── [mod.rs](./src/cmd/mod.rs)
-│   │   ├── [morse.rs](./src/cmd/morse.rs)
-│   │   ├── [openapi.rs](./src/cmd/openapi.rs)
-│   │   ├── [openrouter.rs](./src/cmd/openrouter.rs)
-│   │   ├── [qrcode.rs](./src/cmd/qrcode.rs)
-│   │   ├── [shopify.rs](./src/cmd/shopify.rs)
-│   │   ├── [snapshot.rs](./src/cmd/snapshot.rs)
-│   │   ├── [status.rs](./src/cmd/status.rs)
-│   │   ├── [status_all.rs](./src/cmd/status_all.rs)
-│   │   ├── [str_mod.rs](./src/cmd/str_mod.rs)
-│   │   ├── [system.rs](./src/cmd/system.rs)
-│   │   ├── [tax.rs](./src/cmd/tax.rs)
-│   │   ├── [telegram.rs](./src/cmd/telegram.rs)
-│   │   ├── [uuid.rs](./src/cmd/uuid.rs)
-│   │   ├── [version.rs](./src/cmd/version.rs)
-│   │   ├── [wifi.rs](./src/cmd/wifi.rs)
-│   │   └── [youtube.rs](./src/cmd/youtube.rs)
+│   │   ├── calc/
+│   │   │   └── [mod.rs](./src/cmd/calc/mod.rs)
+│   │   ├── casino/
+│   │   │   └── [mod.rs](./src/cmd/casino/mod.rs)
+│   │   ├── chess/
+│   │   │   └── [mod.rs](./src/cmd/chess/mod.rs)
+│   │   ├── colors/
+│   │   │   └── [mod.rs](./src/cmd/colors/mod.rs)
+│   │   ├── convert/
+│   │   │   └── [mod.rs](./src/cmd/convert/mod.rs)
+│   │   ├── crypto/
+│   │   │   └── [mod.rs](./src/cmd/crypto/mod.rs)
+│   │   ├── data/
+│   │   │   └── [mod.rs](./src/cmd/data/mod.rs)
+│   │   ├── docsify/
+│   │   │   └── [mod.rs](./src/cmd/docsify/mod.rs)
+│   │   ├── doi/
+│   │   │   └── [mod.rs](./src/cmd/doi/mod.rs)
+│   │   ├── english/
+│   │   │   └── [mod.rs](./src/cmd/english/mod.rs)
+│   │   ├── file/
+│   │   │   └── [mod.rs](./src/cmd/file/mod.rs)
+│   │   ├── gh/
+│   │   │   └── [mod.rs](./src/cmd/gh/mod.rs)
+│   │   ├── image/
+│   │   │   └── [mod.rs](./src/cmd/image/mod.rs)
+│   │   ├── net/
+│   │   │   └── [mod.rs](./src/cmd/net/mod.rs)
+│   │   ├── openapi/
+│   │   │   └── [mod.rs](./src/cmd/openapi/mod.rs)
+│   │   ├── openrouter/
+│   │   │   └── [mod.rs](./src/cmd/openrouter/mod.rs)
+│   │   ├── port/
+│   │   │   └── [mod.rs](./src/cmd/port/mod.rs)
+│   │   ├── search/
+│   │   │   └── [mod.rs](./src/cmd/search/mod.rs)
+│   │   ├── semver/
+│   │   │   └── [mod.rs](./src/cmd/semver/mod.rs)
+│   │   ├── system/
+│   │   │   └── [mod.rs](./src/cmd/system/mod.rs)
+│   │   ├── telegram/
+│   │   │   └── [mod.rs](./src/cmd/telegram/mod.rs)
+│   │   ├── time/
+│   │   │   └── [mod.rs](./src/cmd/time/mod.rs)
+│   │   ├── version/
+│   │   │   └── [mod.rs](./src/cmd/version/mod.rs)
+│   │   ├── web/
+│   │   │   └── [mod.rs](./src/cmd/web/mod.rs)
+│   │   └── [mod.rs](./src/cmd/mod.rs)
 │   ├── configs/
 │   │   ├── [mod.rs](./src/configs/mod.rs)
 │   │   └── [services.json](./src/configs/services.json)
@@ -65,6 +85,7 @@
 │   │   ├── [transcript.rs](./src/services/transcript.rs)
 │   │   └── [wifi.rs](./src/services/wifi.rs)
 │   └── [main.rs](./src/main.rs)
+├── target/
 ├── [Cargo.lock](./Cargo.lock)
 ├── [Cargo.toml](./Cargo.toml)
 ├── [LICENSE](./LICENSE)
@@ -73,4 +94,4 @@
 └── [TREE.md](./TREE.md)
 ```
 
-7 directories, 63 files
+32 directories, 59 files

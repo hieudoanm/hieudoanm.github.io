@@ -1,103 +1,86 @@
-mod blackjack;
-mod braille;
+mod calc;
+mod casino;
 mod chess;
-mod clipboard;
-mod clock;
 mod colors;
+mod convert;
+mod crypto;
+mod data;
 mod docsify;
 mod doi;
 mod english;
-mod frankfurter;
-mod instagram;
-mod ip;
-mod morse;
+mod file;
+mod gh;
+mod image;
+mod net;
 mod openapi;
 mod openrouter;
-mod qrcode;
-mod shopify;
-mod snapshot;
-mod status;
-mod status_all;
-mod str_mod;
+mod port;
+mod search;
+mod semver;
 mod system;
-mod tax;
 mod telegram;
-mod uuid;
+mod time;
 mod version;
-mod wifi;
-mod youtube;
+mod web;
 
-fn root_command() -> clap::Command {
-    clap::Command::new("hieudoanm")
+pub async fn execute() -> anyhow::Result<()> {
+    let mut root = clap::Command::new("hieudoanm")
         .about("Hieu Doan's personal CLI toolbox")
         .subcommand_required(true)
         .arg_required_else_help(true)
         .subcommand(version::command())
-        .subcommand(blackjack::command())
-        .subcommand(braille::command())
-        .subcommand(clipboard::command())
-        .subcommand(english::command())
-        .subcommand(frankfurter::command())
-        .subcommand(morse::command())
-        .subcommand(qrcode::command())
-        .subcommand(snapshot::command())
-        .subcommand(status::command())
-        .subcommand(tax::command())
-        .subcommand(uuid::command())
-        .subcommand(wifi::command())
-        .subcommand(status_all::command())
+        .subcommand(calc::command())
+        .subcommand(casino::command())
         .subcommand(chess::command())
-        .subcommand(clock::command())
         .subcommand(colors::command())
+        .subcommand(convert::command())
+        .subcommand(crypto::command())
+        .subcommand(data::command())
         .subcommand(docsify::command())
         .subcommand(doi::command())
-        .subcommand(instagram::command())
-        .subcommand(ip::command())
+        .subcommand(english::command())
+        .subcommand(file::command())
+        .subcommand(gh::command())
+        .subcommand(image::command())
+        .subcommand(net::command())
         .subcommand(openapi::command())
         .subcommand(openrouter::command())
-        .subcommand(shopify::command())
-        .subcommand(str_mod::command())
+        .subcommand(port::command())
+        .subcommand(search::command())
+        .subcommand(semver::command())
         .subcommand(system::command())
         .subcommand(telegram::command())
-        .subcommand(youtube::command())
-}
-
-pub async fn execute() -> anyhow::Result<()> {
-    let root = root_command();
-    let matches = root.get_matches();
+        .subcommand(time::command())
+        .subcommand(web::command());
+    let matches = root.clone().get_matches();
 
     match matches.subcommand() {
         Some(("version", m)) => version::run(m),
-        Some(("blackjack", m)) => blackjack::run(m),
-        Some(("braille", m)) => braille::run(m),
-        Some(("clipboard", m)) => clipboard::run(m),
-        Some(("define", m)) => english::run(m).await,
-        Some(("cc", m)) => frankfurter::run(m).await,
-        Some(("morse", m)) => morse::run(m),
-        Some(("qrcode", m)) => qrcode::run(m).await,
-        Some(("snapshot", m)) => snapshot::run(m),
-        Some(("status", m)) => status::run(m).await,
-        Some(("status-all", m)) => status_all::run(m).await,
-        Some(("all", m)) => status_all::run(m).await,
-        Some(("tax", m)) => tax::run(m).await,
-        Some(("uuid", m)) => uuid::run(m),
-        Some(("wifi", m)) => wifi::run(m).await,
+        Some(("calc", m)) => calc::run(m).await,
+        Some(("casino", m)) => casino::run(m).await,
         Some(("chess", m)) => chess::run(m).await,
-        Some(("clock", m)) => clock::run(m),
         Some(("colors", m)) => colors::run(m).await,
+        Some(("convert", m)) => convert::run(m).await,
+        Some(("crypto", m)) => crypto::run(m).await,
+        Some(("data", m)) => data::run(m).await,
         Some(("docsify", m)) => docsify::run(m).await,
         Some(("doi", m)) => doi::run(m).await,
-        Some(("instagram", m)) => instagram::run(m),
-        Some(("ip", m)) => ip::run(m).await,
-        Some(("openapi", m)) => openapi::run(m),
+        Some(("english", m)) => english::run(m).await,
+        Some(("file", m)) => file::run(m).await,
+        Some(("gh", m)) => gh::run(m).await,
+        Some(("image", m)) => image::run(m).await,
+        Some(("net", m)) => net::run(m).await,
+        Some(("openapi", m)) => openapi::run(m).await,
         Some(("openrouter", m)) => openrouter::run(m).await,
-        Some(("shopify", m)) => shopify::run(m).await,
-        Some(("string", m)) => str_mod::run(m).await,
-        Some(("system", m)) => system::run(m),
+        Some(("port", m)) => port::run(m).await,
+        Some(("search", m)) => search::run(m).await,
+        Some(("semver", m)) => semver::run(m).await,
+        Some(("system", m)) => system::run(m).await,
         Some(("telegram", m)) => telegram::run(m).await,
-        Some(("youtube", m)) => youtube::run(m).await,
+        Some(("time", m)) => time::run(m).await,
+        Some(("web", m)) => web::run(m).await,
         _ => {
-            root_command().print_help()?;
+            root.print_help()?;
             println!();
             Ok(())
         }
