@@ -52,14 +52,12 @@ fn is_free(p: &Pricing) -> bool {
 pub fn resolve_model(query: &str, models: &[Model]) -> Option<Model> {
     let q = query.to_lowercase();
 
-    // Exact match
     for m in models {
         if m.id.to_lowercase() == q {
             return Some(m.clone());
         }
     }
 
-    // Exact match with :free suffix
     let with_free = format!("{}:free", q);
     for m in models {
         if m.id.to_lowercase() == with_free {
@@ -67,7 +65,6 @@ pub fn resolve_model(query: &str, models: &[Model]) -> Option<Model> {
         }
     }
 
-    // Partial match on ID
     let id_matches: Vec<&Model> = models
         .iter()
         .filter(|m| m.id.to_lowercase().contains(&q))
@@ -88,7 +85,6 @@ pub fn resolve_model(query: &str, models: &[Model]) -> Option<Model> {
         return Some(sorted[0].clone());
     }
 
-    // Partial match on Name
     let name_matches: Vec<&Model> = models
         .iter()
         .filter(|m| m.name.to_lowercase().contains(&q))
@@ -208,4 +204,44 @@ fn extract_error_message(body: &str) -> String {
         }
     }
     String::new()
+}
+
+#[derive(Debug, Serialize)]
+struct Message {
+    role: String,
+    text: String,
+}
+
+#[derive(Debug, Serialize)]
+struct RequestPayload {
+    model: String,
+    messages: Vec<Message>,
+}
+
+#[derive(Debug, Deserialize)]
+struct ResponsePayload {
+    output: String,
+}
+
+pub fn generate(model: &str, prompt: &str) -> Result<String> {
+    let url = "https://hieudoanm-chat.vercel.app/api/genai";
+
+    let payload = RequestPayload {
+        model: model.to_string(),
+        messages: vec![Message {
+            role: "user".to_string(),
+            text: prompt.to_string(),
+        }],
+    };
+
+    let client = reqwest::blocking::Client::new();
+    let resp = client
+        .post(url)
+        .json(&payload)
+        .send()
+        .context("failed to send chat request")?;
+
+    let response: ResponsePayload = resp.json().context("failed to parse chat response")?;
+
+    Ok(response.output)
 }

@@ -1,6 +1,10 @@
 use std::cmp::Ordering;
 use std::fmt;
 
+pub mod compare;
+pub mod sort;
+pub mod validate;
+
 #[derive(Debug, Clone)]
 struct Version {
     major: u64,
@@ -106,34 +110,9 @@ pub fn command() -> clap::Command {
 
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     match matches.subcommand() {
-        Some(("validate", sub_m)) => {
-            let v = sub_m.get_one::<String>("version").unwrap();
-            match parse_version(v) {
-                Ok(ver) => println!("✅ {v} is valid semver ({ver})"),
-                Err(e) => println!("❌ {v} is invalid: {e}"),
-            }
-        }
-        Some(("compare", sub_m)) => {
-            let a = parse_version(sub_m.get_one::<String>("a").unwrap())?;
-            let b = parse_version(sub_m.get_one::<String>("b").unwrap())?;
-            match compare(&a, &b) {
-                Ordering::Less => println!("{} < {}", a, b),
-                Ordering::Equal => println!("{} == {}", a, b),
-                Ordering::Greater => println!("{} > {}", a, b),
-            }
-        }
-        Some(("sort", sub_m)) => {
-            let versions_str = sub_m.get_one::<String>("versions").unwrap();
-            let mut versions: Vec<Version> = versions_str
-                .split(',')
-                .map(|s| parse_version(s.trim()))
-                .collect::<anyhow::Result<_>>()?;
-            versions.sort_by(compare);
-            for v in &versions {
-                println!("{v}");
-            }
-        }
-        _ => {}
+        Some(("validate", sub_m)) => validate::run(sub_m).await,
+        Some(("compare", sub_m)) => compare::run(sub_m).await,
+        Some(("sort", sub_m)) => sort::run(sub_m).await,
+        _ => Ok(()),
     }
-    Ok(())
 }

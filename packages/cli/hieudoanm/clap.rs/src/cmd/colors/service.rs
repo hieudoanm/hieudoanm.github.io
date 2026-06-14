@@ -2,8 +2,6 @@ use rand::Rng;
 use regex::Regex;
 use std::fmt;
 
-// ── Hex ─────────────────────────────────────────────────────────────
-
 pub type Hex = String;
 
 pub fn is_valid_hex(hex: &str) -> bool {
@@ -64,8 +62,6 @@ pub fn generate_random_hex_color() -> String {
         rng.gen_range(0..=255)
     )
 }
-
-// ── Rgb ─────────────────────────────────────────────────────────────
 
 #[derive(Debug, Clone, Copy, PartialEq)]
 pub struct Rgb {
@@ -187,8 +183,6 @@ impl From<&str> for Rgb {
     }
 }
 
-// ── Hsl ─────────────────────────────────────────────────────────────
-
 #[derive(Debug, Clone, Copy, PartialEq)]
 pub struct Hsl {
     pub h: f64,
@@ -237,8 +231,6 @@ impl Hsl {
         Rgb { r, g, b }.to_oklch()
     }
 }
-
-// ── Hcl (CIELCh) ────────────────────────────────────────────────────
 
 #[derive(Debug, Clone, Copy, PartialEq)]
 pub struct Hcl {
@@ -295,8 +287,6 @@ impl Hcl {
     }
 }
 
-// ── Oklch ───────────────────────────────────────────────────────────
-
 #[derive(Debug, Clone, Copy, PartialEq)]
 pub struct Oklch {
     pub l: f64,
@@ -350,8 +340,6 @@ impl Oklch {
         Ok(Rgb { r, g, b }.to_cmyk())
     }
 }
-
-// ── Cmyk ────────────────────────────────────────────────────────────
 
 #[derive(Debug, Clone, Copy, PartialEq)]
 pub struct Cmyk {
@@ -418,8 +406,6 @@ impl Cmyk {
         Ok(Rgb { r, g, b }.to_oklch())
     }
 }
-
-// ── Internal helpers ────────────────────────────────────────────────
 
 fn srgb_to_linear(c: f64) -> f64 {
     if c <= 0.04045 {
