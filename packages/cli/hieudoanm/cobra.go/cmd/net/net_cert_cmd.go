@@ -11,6 +11,8 @@ func newCertCmd() *cobra.Command {
 		Use:   "cert",
 		Short: "SSL/TLS certificate inspection",
 		Long:  `Inspect SSL/TLS certificates for domains: check expiry, issuer, SANs, and chain.`,
+		Example: `  net cert info --host google.com:443
+  net cert check --host google.com:443`,
 	}
 	cmd.AddCommand(newCertInfoCmd())
 	cmd.AddCommand(newCertCheckCmd())

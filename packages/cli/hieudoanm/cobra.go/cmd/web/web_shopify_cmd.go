@@ -4,8 +4,10 @@ import "github.com/spf13/cobra"
 
 func newShopifyCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "shopify",
-		Short: "Shopify detection and analysis tools",
+		Use:     "shopify",
+		Short:   "Shopify detection and analysis tools",
+		Long:    `Detect whether a website is built with Shopify and identify Shopify Plus stores.`,
+		Example: `  web shopify detect example.com`,
 	}
 	cmd.AddCommand(newShopifyDetectCmd())
 	return cmd

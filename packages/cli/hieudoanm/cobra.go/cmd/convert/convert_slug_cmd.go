@@ -24,7 +24,10 @@ func newSlugCmd() *cobra.Command {
 	return &cobra.Command{
 		Use:   "slug [text]",
 		Short: "Generate a URL-friendly slug",
-		Args:  cobra.MaximumNArgs(1),
+		Long:  `Generate a URL-friendly slug by lowercasing, replacing spaces with hyphens, and removing special characters.`,
+		Example: `  convert slug "Hello World!"
+  convert slug "My Blog Post Title"`,
+		Args: cobra.MaximumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			text, err := resolveText(args)
 			if err != nil {

@@ -15,10 +15,8 @@ func newReadCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "read [--file <path>]",
 		Short: "Read file content with line numbers",
-		Long: `Read a file and display its content with optional line numbers, offset, and line limit.
-
-Examples:
-  file read --file main.go
+		Long:  `Read a file and display its content with optional line numbers, offset, and line limit.`,
+		Example: `  file read --file main.go
   file read -f main.go --lines 50
   file read -f main.go --offset 10 --lines 20
   file read -f main.go --no-numbers`,

@@ -11,11 +11,10 @@ import (
 
 func newWebhookDeleteCmd() *cobra.Command {
 	return &cobra.Command{
-		Use:   "delete",
-		Short: "Run the delete operation for the telegram app",
-		Long: `The delete command is a specific utility to execute operations related to delete within the telegram application.
-
-As a component of the messaging tools, this command empowers you to interact directly with telegram's delete features via the CLI.`,
+		Use:     "delete",
+		Short:   "Delete the Telegram webhook",
+		Long:    `Prompt for a Telegram Bot API token and delete the currently registered webhook.`,
+		Example: `  telegram webhook delete`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			fmt.Print("Telegram Token: ")
 			var token string

@@ -24,6 +24,9 @@ func newIgnoreCmd() *cobra.Command {
 
 Fetches the list of available templates, prompts the user to select
 one (or uses --name), then writes the template content to a file.`,
+		Example: `  gh ignore
+  gh ignore --name Go
+  gh ignore --name Python -o .gitignore`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			name, _ := cmd.Flags().GetString("name")
 			output, _ := cmd.Flags().GetString("output")

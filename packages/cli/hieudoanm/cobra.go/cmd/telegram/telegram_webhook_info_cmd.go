@@ -16,11 +16,10 @@ type GetInfoResponse struct {
 
 func newWebhookInfoCmd() *cobra.Command {
 	return &cobra.Command{
-		Use:   "info",
-		Short: "Run the info operation for the telegram app",
-		Long: `The info command is a specific utility to execute operations related to info within the telegram application.
-
-As a component of the messaging tools, this command empowers you to interact directly with telegram's info features via the CLI.`,
+		Use:     "info",
+		Short:   "Get current webhook info",
+		Long:    `Prompt for a Telegram Bot API token and fetch the current webhook configuration.`,
+		Example: `  telegram webhook info`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			fmt.Print("Telegram Token: ")
 			var token string

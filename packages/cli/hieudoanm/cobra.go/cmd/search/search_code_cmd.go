@@ -16,10 +16,8 @@ func newCodeCmd() *cobra.Command {
 		Short: "Search for code symbols (functions, types, variables)",
 		Long: `Find code symbol definitions matching a name pattern.
 
-Supports Go, TypeScript/JavaScript, Python, and Rust.
-
-Examples:
-  search code --symbol "ParseCard"
+Supports Go, TypeScript/JavaScript, Python, and Rust.`,
+		Example: `  search code --symbol "ParseCard"
   search code --symbol "handle" --dir src/
   search code --symbol "NewCommand" --lang go
   search code --symbol "getUser" --kind function

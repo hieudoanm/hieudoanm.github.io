@@ -15,10 +15,11 @@ var (
 func newIPCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "ip",
-		Short: "Ip CLI application (utilities tools)",
-		Long: `The ip CLI application is a comprehensive backend utility belonging to the utilities suite of tools.
-
-Use this root executable to manage configuring, running, and interacting with all ip-related operations securely and efficiently from your terminal.`,
+		Short: "Look up your public IP and geolocation",
+		Long:  `Look up your public IP address and geolocation information from multiple providers.`,
+		Example: `  net ip
+  net ip --json
+  net ip --raw`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			ip, err := fetchPublicIP()
 			if err != nil {

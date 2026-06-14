@@ -12,10 +12,8 @@ func newCompletionCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "completion [--shell <shell>]",
 		Short: "Generate shell completion scripts",
-		Long: `Generate shell completion scripts for bash, zsh, or fish.
-
-To use:
-  # Bash (add to ~/.bashrc)
+		Long:  `Generate shell completion scripts for bash, zsh, or fish.`,
+		Example: `  # Bash (add to ~/.bashrc)
   source <(hieudoanm completion --shell bash)
 
   # Zsh (add to ~/.zshrc)

@@ -25,7 +25,10 @@ func newDeburrCmd() *cobra.Command {
 	return &cobra.Command{
 		Use:   "deburr [text]",
 		Short: "Remove diacritical marks (accents) from letters",
-		Args:  cobra.MaximumNArgs(1),
+		Long:  `Remove diacritical marks (accents) from letters, converting accented characters to their ASCII equivalents.`,
+		Example: `  convert deburr "héllo wörld"
+  convert deburr "café résumé"`,
+		Args: cobra.MaximumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			text, err := resolveText(args)
 			if err != nil {

@@ -381,6 +381,12 @@ Calculate Vietnam personal income tax (PIT) with a terminal UI. Supports gross-t
 hieudoanm calc tax
 ```
 
+Example:
+
+```bash
+  calc tax
+```
+
 ---
 
 ### `hieudoanm calc compound`
@@ -408,7 +414,7 @@ hieudoanm calc compound
 Example:
 
 ```bash
-calc compound --principal 10000 --rate 5 --years 10 --compound monthly
+  calc compound --principal 10000 --rate 5 --years 10 --compound monthly
   calc compound -p 50000 -r 7.5 -y 20 -n yearly -c 500
 ```
 
@@ -435,7 +441,7 @@ hieudoanm calc currency
 Example:
 
 ```bash
-calc currency --from USD --to EUR --amount 100
+  calc currency --from USD --to EUR --amount 100
 ```
 
 ---
@@ -443,6 +449,11 @@ calc currency --from USD --to EUR --amount 100
 ### `hieudoanm calc loan`
 
 Loan amortization calculator
+
+Calculate loan amortization schedule with monthly payments.
+
+Uses the standard amortization formula to compute monthly payments
+and generates a detailed schedule showing payment, interest, and balance over time.
 
 ```bash
 hieudoanm calc loan
@@ -459,7 +470,7 @@ hieudoanm calc loan
 Example:
 
 ```bash
-calc loan --principal 30000 --rate 5 --years 5
+  calc loan --principal 30000 --rate 5 --years 5
   calc loan -p 30000 -r 5 -y 5
 ```
 
@@ -468,6 +479,10 @@ calc loan --principal 30000 --rate 5 --years 5
 ### `hieudoanm calc discount`
 
 Calculate discount and sale price
+
+Calculate the sale price after applying a percentage discount.
+
+Given the original price and discount percentage, shows the amount saved and final price.
 
 ```bash
 hieudoanm calc discount
@@ -483,7 +498,7 @@ hieudoanm calc discount
 Example:
 
 ```bash
-calc discount --original 100 --percent 20
+  calc discount --original 100 --percent 20
   calc discount -o 100 -p 20
 ```
 
@@ -492,6 +507,10 @@ calc discount --original 100 --percent 20
 ### `hieudoanm calc tip`
 
 Calculate tip and split bill
+
+Calculate the tip amount, total bill, and per-person share when splitting.
+
+Enter the bill amount, tip percentage, and number of people to split.
 
 ```bash
 hieudoanm calc tip
@@ -508,7 +527,7 @@ hieudoanm calc tip
 Example:
 
 ```bash
-calc tip --bill 50 --percent 15 --split 4
+  calc tip --bill 50 --percent 15 --split 4
   calc tip -b 50 -p 15 -s 4
 ```
 
@@ -517,6 +536,11 @@ calc tip --bill 50 --percent 15 --split 4
 ### `hieudoanm calc bmi`
 
 Calculate Body Mass Index
+
+Calculate Body Mass Index (BMI) from weight and height.
+
+BMI is calculated as weight (kg) divided by height (m) squared.
+The result includes a weight category: Underweight, Normal, Overweight, or Obese.
 
 ```bash
 hieudoanm calc bmi
@@ -532,7 +556,7 @@ hieudoanm calc bmi
 Example:
 
 ```bash
-calc bmi --weight 70 --height 175
+  calc bmi --weight 70 --height 175
 ```
 
 ---
@@ -540,6 +564,11 @@ calc bmi --weight 70 --height 175
 ### `hieudoanm calc base`
 
 Convert between number bases (bin/oct/dec/hex)
+
+Convert numbers between different bases (binary, octal, decimal, hexadecimal).
+
+Supports standard prefixes and aliases for each base.
+Results can be output in JSON format with --json.
 
 ```bash
 hieudoanm calc base
@@ -556,7 +585,7 @@ hieudoanm calc base
 Example:
 
 ```bash
-calc base --value FF --from hex --to dec
+  calc base --value FF --from hex --to dec
   calc base --value 255 --from dec --to hex
   calc base --value 1010 --from bin --to dec
 ```
@@ -584,7 +613,7 @@ hieudoanm calc unit
 Example:
 
 ```bash
-calc unit --value 12 --from inch --to cm
+  calc unit --value 12 --from inch --to cm
   calc unit -v 32 -f f -t c
   calc unit -v 100 -f kg -t lb
 ```
@@ -613,7 +642,7 @@ hieudoanm calc percent
 Example:
 
 ```bash
-calc percent --value 20 --of 50
+  calc percent --value 20 --of 50
   calc percent --value 50 --plus 20
   calc percent --value 50 --minus 20
 ```
@@ -644,7 +673,7 @@ hieudoanm calc mortgage
 Example:
 
 ```bash
-calc mortgage --principal 300000 --rate 6.5 --years 30
+  calc mortgage --principal 300000 --rate 6.5 --years 30
   calc mortgage -p 300000 -r 6.5 -y 30 --taxes 3000 --insurance 1200
 ```
 
@@ -673,7 +702,7 @@ hieudoanm calc date
 Example:
 
 ```bash
-calc date --add 90
+  calc date --add 90
   calc date --add 30 "2026-01-01"
   calc date --diff "2026-06-01" "2026-01-01
 ```
@@ -705,7 +734,7 @@ hieudoanm calc eval [--expression <expression>]
 Example:
 
 ```bash
-calc eval --expression "2 + 2"
+  calc eval --expression "2 + 2"
   calc eval --expression "sqrt(144) * 2"
   calc eval --expression "pi * 5 ^ 2"
   calc eval --expression "sin(45) ^ 2 + cos(45) ^ 2
@@ -726,7 +755,7 @@ hieudoanm calc stats [--values <n1,n2,...>]
 Example:
 
 ```bash
-calc stats --values 1,2,3,4,5
+  calc stats --values 1,2,3,4,5
   calc stats --values 100,200,300
   calc stats --json --values 1,2,3,4,5,6,7,8,9,10
 ```
@@ -752,7 +781,7 @@ hieudoanm calc factorial [--number <n>]
 Example:
 
 ```bash
-calc factorial --number 10
+  calc factorial --number 10
   calc factorial --number 100
 ```
 
@@ -779,7 +808,7 @@ hieudoanm calc random
 Example:
 
 ```bash
-calc random --min 1 --max 100
+  calc random --min 1 --max 100
   calc random --min 1 --max 100 --count 5
   calc random --min 0 --max 1 --float --count 3
 ```
@@ -806,7 +835,7 @@ hieudoanm calc prime [--number <n>]
 Example:
 
 ```bash
-calc prime --number 17
+  calc prime --number 17
   calc prime --number 100 --list
   calc prime --number 1000000 --count
 ```
@@ -816,6 +845,8 @@ calc prime --number 17
 ### `hieudoanm calc gcd`
 
 Greatest common divisor of two numbers
+
+Compute the greatest common divisor (GCD) of two integers using the Euclidean algorithm.
 
 ```bash
 hieudoanm calc gcd [--a <a> --b <b>]
@@ -831,7 +862,7 @@ hieudoanm calc gcd [--a <a> --b <b>]
 Example:
 
 ```bash
-calc gcd --a 12 --b 18
+  calc gcd --a 12 --b 18
   calc gcd --a 100 --b 75
 ```
 
@@ -840,6 +871,10 @@ calc gcd --a 12 --b 18
 ### `hieudoanm calc lcm`
 
 Least common multiple of two numbers
+
+Compute the least common multiple (LCM) of two integers using the GCD method.
+
+LCM(a, b) = |a \* b| / GCD(a, b)
 
 ```bash
 hieudoanm calc lcm [--a <a> --b <b>]
@@ -855,7 +890,7 @@ hieudoanm calc lcm [--a <a> --b <b>]
 Example:
 
 ```bash
-calc lcm --a 12 --b 18
+  calc lcm --a 12 --b 18
   calc lcm --a 7 --b 5
 ```
 
@@ -881,8 +916,17 @@ hieudoanm casino
 
 Blackjack games
 
+Blackjack subcommands: play a full game, or practice card counting.
+
 ```bash
 hieudoanm casino blackjack
+```
+
+Example:
+
+```bash
+  casino blackjack play
+  casino blackjack count
 ```
 
 ---
@@ -897,14 +941,28 @@ A terminal-based Blackjack card counting game with a Bubble Tea TUI interface.
 hieudoanm casino blackjack count
 ```
 
+Example:
+
+```bash
+  casino blackjack count
+```
+
 ---
 
 #### `hieudoanm casino blackjack play`
 
 Play a full game of Blackjack against the dealer
 
+Play a full game of Blackjack against the dealer with a Bubble Tea TUI. Supports hit, stand, and double down. Starts with $1000 balance.
+
 ```bash
 hieudoanm casino blackjack play
+```
+
+Example:
+
+```bash
+  casino blackjack play
 ```
 
 ---
@@ -913,8 +971,17 @@ hieudoanm casino blackjack play
 
 Poker: odds calculator and Texas Hold'em
 
+Poker subcommands: calculate Texas Hold'em odds, or play heads-up against an AI.
+
 ```bash
 hieudoanm casino poker
+```
+
+Example:
+
+```bash
+  casino poker odds --hand "Ah Kh"
+  casino poker play
 ```
 
 ---
@@ -923,15 +990,10 @@ hieudoanm casino poker
 
 Calculate Texas Hold'em poker odds
 
-Calculate win/tie/lose odds using Monte Carlo simulation.
+Calculate win/tie/lose odds using Monte Carlo simulation for Texas Hold'em.
 
 Hole cards are required (e.g. "Ah Kh" or "As Ks").
 Use --board to specify community cards (0-5 cards).
-
-Examples:
-hieudoanm casino odds --hand "Ah Kh"
-hieudoanm casino odds --hand "Ah Kh" --board "2h 7s Tc"
-hieudoanm casino odds --hand "As Ks" --board "2h 7s Tc" --opponents 3
 
 ```bash
 hieudoanm casino poker odds [--hand <hole>]
@@ -946,14 +1008,30 @@ hieudoanm casino poker odds [--hand <hole>]
 | `--opponents`   | `-o`      | `1`     | Number of opponents                 |
 | `--simulations` | `-n`      | `10000` | Number of Monte Carlo simulations   |
 
+Example:
+
+```bash
+  casino poker odds --hand "Ah Kh"
+  casino poker odds --hand "Ah Kh" --board "2h 7s Tc"
+  casino poker odds --hand "As Ks" --board "2h 7s Tc" --opponents 3
+```
+
 ---
 
 #### `hieudoanm casino poker play`
 
 Play heads-up Texas Hold'em against an AI opponent
 
+Play heads-up Texas Hold'em against an AI opponent with a Bubble Tea TUI. Supports check, bet, call, raise, and fold. Starts with $1000 each.
+
 ```bash
 hieudoanm casino poker play
+```
+
+Example:
+
+```bash
+  casino poker play
 ```
 
 ---
@@ -962,8 +1040,17 @@ hieudoanm casino poker play
 
 Baccarat games
 
+Baccarat subcommands: play a game, or analyze betting strategy.
+
 ```bash
 hieudoanm casino baccarat
+```
+
+Example:
+
+```bash
+  casino baccarat play
+  casino baccarat strategy
 ```
 
 ---
@@ -972,8 +1059,16 @@ hieudoanm casino baccarat
 
 Play a game of Baccarat
 
+Play a game of Baccarat against the banker with a Bubble Tea TUI. Bet on Player, Banker, or Tie. Follows standard baccarat drawing rules.
+
 ```bash
 hieudoanm casino baccarat play
+```
+
+Example:
+
+```bash
+  casino baccarat play
 ```
 
 ---
@@ -994,14 +1089,29 @@ hieudoanm casino baccarat strategy
 | --------------- | --------- | -------- | --------------------- |
 | `--simulations` | `-n`      | `100000` | Number of simulations |
 
+Example:
+
+```bash
+  casino baccarat strategy
+  casino baccarat strategy --simulations 50000
+```
+
 ---
 
 ### `hieudoanm casino slots`
 
 Slot machine games
 
+Slot machine subcommands: play a slot machine game.
+
 ```bash
 hieudoanm casino slots
+```
+
+Example:
+
+```bash
+  casino slots play
 ```
 
 ---
@@ -1010,8 +1120,16 @@ hieudoanm casino slots
 
 Play a slot machine
 
+Play a slot machine with a Bubble Tea TUI. Three reels with symbols: Cherry, Lemon, Bell, Diamond, 7, BAR. Match three of a kind to win.
+
 ```bash
 hieudoanm casino slots play
+```
+
+Example:
+
+```bash
+  casino slots play
 ```
 
 ---
@@ -1019,6 +1137,10 @@ hieudoanm casino slots play
 ### `hieudoanm casino coin`
 
 Flip a coin
+
+Simulate flipping one or more coins and display the results.
+
+Shows heads/tails distribution when flipping multiple coins.
 
 ```bash
 hieudoanm casino coin
@@ -1033,7 +1155,7 @@ hieudoanm casino coin
 Example:
 
 ```bash
-casino coin
+  casino coin
   casino coin --count 10
 ```
 
@@ -1042,6 +1164,10 @@ casino coin
 ### `hieudoanm casino dice`
 
 Roll dice
+
+Roll one or more dice with a configurable number of sides.
+
+Shows individual die results and the total when rolling multiple dice.
 
 ```bash
 hieudoanm casino dice
@@ -1057,7 +1183,7 @@ hieudoanm casino dice
 Example:
 
 ```bash
-casino dice
+  casino dice
   casino dice --sides 20
   casino dice --count 4 --sides 6
 ```
@@ -1067,6 +1193,10 @@ casino dice
 ### `hieudoanm casino roulette`
 
 Spin the roulette wheel
+
+Spin a European roulette wheel (numbers 0-36) and display results.
+
+Shows the number, color (Red/Black/Green), parity (Even/Odd), and half (1-18/19-36).
 
 ```bash
 hieudoanm casino roulette
@@ -1081,7 +1211,7 @@ hieudoanm casino roulette
 Example:
 
 ```bash
-casino roulette
+  casino roulette
   casino roulette --spins 5
 ```
 
@@ -1103,15 +1233,29 @@ hieudoanm chess
 | --------------------- | --------- | ------- | --------------------- |
 | `--json (persistent)` | `-j`      | `false` | Output in JSON format |
 
+Example:
+
+```bash
+  chess fen eval --fen "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
+  chess fen svg --fen "..." --out board.svg
+  chess pgn fen --pgn-file game.pgn
+  chess pgn uci --pgn "1.e4 e5 2.Nf3"
+  chess play
+  chess elo
+  chess random
+  chess setup
+  chess com player --username hikaru
+  chess com leaderboards
+  chess com titled
+```
+
 ---
 
 ### `hieudoanm chess leaderboards`
 
-Run the leaderboards operation for the chess.com app
+Show Chess.com leaderboards
 
-The leaderboards command is a specific utility to execute operations related to leaderboards within the chess.com application.
-
-As a component of the chess tools, this command empowers you to interact directly with chess.com's leaderboards features via the CLI.
+Fetch and display top players from Chess.com leaderboards for bullet, blitz, rapid, and Chess960 variants. Supports filtering by country.
 
 ```bash
 hieudoanm chess leaderboards
@@ -1124,15 +1268,21 @@ hieudoanm chess leaderboards
 | `--top`     | ``        | `5`     | Number of top players to display              |
 | `--country` | ``        | ``      | Filter players by country code (e.g., US, RU) |
 
+Example:
+
+```bash
+  chess com leaderboards
+  chess com leaderboards --top 10
+  chess com leaderboards --country US
+```
+
 ---
 
 ### `hieudoanm chess player`
 
-Run the player operation for the chess.com app
+Show Chess.com player profile and stats
 
-The player command is a specific utility to execute operations related to player within the chess.com application.
-
-As a component of the chess tools, this command empowers you to interact directly with chess.com's player features via the CLI.
+Fetch and display a Chess.com player's profile information including name, title, country, and ratings for bullet, blitz, and rapid.
 
 ```bash
 hieudoanm chess player [--username <username>]
@@ -1144,43 +1294,56 @@ hieudoanm chess player [--username <username>]
 | ------------ | --------- | ------- | ------------------ |
 | `--username` | `-u`      | ``      | Chess.com username |
 
+Example:
+
+```bash
+  chess com player --username hikaru
+  chess com player --username magnuscarlsen
+```
+
 ---
 
 ### `hieudoanm chess titled`
 
-Run the titled operation for the chess.com app
+Show Chess.com titled player counts
 
-The titled command is a specific utility to execute operations related to titled within the chess.com application.
-
-As a component of the chess tools, this command empowers you to interact directly with chess.com's titled features via the CLI.
+Fetch and display the number of Chess.com players holding each title (GM, IM, FM, etc.).
 
 ```bash
 hieudoanm chess titled
+```
+
+Example:
+
+```bash
+  chess com titled
 ```
 
 ---
 
 ### `hieudoanm chess elo`
 
-Run the elo operation for the chess.elo app
+Calculate new Elo rating after a game
 
-The elo command is a specific utility to execute operations related to elo within the chess.elo application.
-
-As a component of the chess tools, this command empowers you to interact directly with chess.elo's elo features via the CLI.
+Calculate your new Elo rating after a chess game given your rating, opponent's rating, result, and optional K-factor.
 
 ```bash
 hieudoanm chess elo
+```
+
+Example:
+
+```bash
+  chess elo
 ```
 
 ---
 
 ### `hieudoanm chess fen`
 
-Run the fen operation for the chess app
+FEN-based chess analysis tools
 
-The fen command is a specific utility to execute operations related to fen within the chess application.
-
-As a component of the chess tools, this command empowers you to interact directly with chess's fen features via the CLI.
+Analyze FEN strings with cloud evaluation and render boards to SVG.
 
 ```bash
 hieudoanm chess fen
@@ -1192,15 +1355,20 @@ hieudoanm chess fen
 | -------- | --------- | ------- | ---------------------------- |
 | `--list` | `-l`      | `false` | List popular chess platforms |
 
+Example:
+
+```bash
+  chess fen eval --fen "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
+  chess fen svg --fen "..." --out board.svg
+```
+
 ---
 
 #### `hieudoanm chess fen eval`
 
-Run the eval operation for the chess app
+Evaluate a FEN position using Lichess cloud eval
 
-The eval command is a specific utility to execute operations related to eval within the chess application.
-
-As a component of the chess tools, this command empowers you to interact directly with chess's eval features via the CLI.
+Fetch a cloud-based evaluation for a FEN position from Lichess, returning centipawn scores and principal variations.
 
 ```bash
 hieudoanm chess fen eval
@@ -1213,15 +1381,20 @@ hieudoanm chess fen eval
 | `--fen`     | ``        | ``      | FEN string to evaluate (required) |
 | `--multipv` | ``        | `3`     | Number of principal variations    |
 
+Example:
+
+```bash
+  chess fen eval --fen "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
+  chess fen eval --fen "..." --multipv 5
+```
+
 ---
 
 #### `hieudoanm chess fen svg`
 
-Run the svg operation for the chess.graphics app
+Render a FEN position as an SVG board image
 
-The svg command is a specific utility to execute operations related to svg within the chess.graphics application.
-
-As a component of the chess tools, this command empowers you to interact directly with chess.graphics's svg features via the CLI.
+Generate an SVG image of a chess board from a FEN string, with standard light/dark square colors.
 
 ```bash
 hieudoanm chess fen svg
@@ -1234,29 +1407,39 @@ hieudoanm chess fen svg
 | `--fen` | ``        | ``      | FEN string to render                 |
 | `--out` | ``        | ``      | Output SVG file (default: board.svg) |
 
+Example:
+
+```bash
+  chess fen svg --fen "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
+  chess fen svg --fen "..." --out board.svg
+```
+
 ---
 
 ### `hieudoanm chess pgn`
 
-Run the pgn operation for the chess.graphics app
+PGN chess game analysis tools
 
-The pgn command is a specific utility to execute operations related to pgn within the chess.graphics application.
-
-As a component of the chess tools, this command empowers you to interact directly with chess.graphics's pgn features via the CLI.
+Convert PGN game notation to FEN positions per move, or extract UCI move sequences.
 
 ```bash
 hieudoanm chess pgn
+```
+
+Example:
+
+```bash
+  chess pgn fen --pgn-file game.pgn
+  chess pgn uci --pgn "1.e4 e5 2.Nf3
 ```
 
 ---
 
 #### `hieudoanm chess pgn fen`
 
-Run the fen operation for the chess app
+Convert PGN to FEN per move with evaluation
 
-The fen command is a specific utility to execute operations related to fen within the chess application.
-
-As a component of the chess tools, this command empowers you to interact directly with chess's fen features via the CLI.
+Parse a PGN game and display each move with its resulting FEN, centipawn evaluation from Lichess cloud eval, and a quality label (Best/Good/Inaccuracy/Mistake/Blunder).
 
 ```bash
 hieudoanm chess pgn fen
@@ -1269,15 +1452,20 @@ hieudoanm chess pgn fen
 | `--pgn-file` | ``        | ``      | Path to a PGN file |
 | `--pgn`      | ``        | ``      | Raw PGN string     |
 
+Example:
+
+```bash
+  chess pgn fen --pgn-file game.pgn
+  chess pgn fen --pgn "1.e4 e5 2.Nf3 Nc6
+```
+
 ---
 
 #### `hieudoanm chess pgn uci`
 
-Run the uci operation for the chess app
+Convert PGN moves to UCI notation
 
-The uci command is a specific utility to execute operations related to uci within the chess application.
-
-As a component of the chess tools, this command empowers you to interact directly with chess's uci features via the CLI.
+Parse a PGN game and output the moves as a space-separated UCI (Universal Chess Interface) string.
 
 ```bash
 hieudoanm chess pgn uci
@@ -1290,15 +1478,20 @@ hieudoanm chess pgn uci
 | `--pgn-file` | ``        | ``      | Path to a PGN file |
 | `--pgn`      | ``        | ``      | Raw PGN string     |
 
+Example:
+
+```bash
+  chess pgn uci --pgn-file game.pgn
+  chess pgn uci --pgn "1.e4 e5 2.Nf3 Nc6 3.Bb5
+```
+
 ---
 
 ### `hieudoanm chess play`
 
-Run the play operation for the chess.graphics app
+Play chess interactively in the terminal
 
-The play command is a specific utility to execute operations related to play within the chess.graphics application.
-
-As a component of the chess tools, this command empowers you to interact directly with chess.graphics's play features via the CLI.
+Play a full chess game in your terminal with board display. Enter moves in SAN notation (e.g., e4, Nf3). Supports blind mode with --blind.
 
 ```bash
 hieudoanm chess play
@@ -1310,43 +1503,57 @@ hieudoanm chess play
 | --------- | --------- | ------- | ------------------------------ |
 | `--blind` | ``        | `false` | Hide the board after each move |
 
+Example:
+
+```bash
+  chess play
+  chess play --blind
+```
+
 ---
 
 ### `hieudoanm chess random`
 
-Run the random operation for the chess960 app
+Pick a random Chess960 starting position
 
-The random command is a specific utility to execute operations related to random within the chess960 application.
-
-As a component of the chess tools, this command empowers you to interact directly with chess960's random features via the CLI.
+Select a random Chess960 starting position, display the FEN, and fetch a cloud evaluation from Lichess.
 
 ```bash
 hieudoanm chess random
+```
+
+Example:
+
+```bash
+  chess random
 ```
 
 ---
 
 ### `hieudoanm chess setup`
 
-Run the setup operation for the chess app
+Set up a specific Chess960 starting position
 
-The setup command is a specific utility to execute operations related to setup within the chess application.
-
-As a component of the chess tools, this command empowers you to interact directly with chess's setup features via the CLI.
+Select a Chess960 starting position by number, display the FEN, and fetch a cloud evaluation from Lichess.
 
 ```bash
 hieudoanm chess setup
+```
+
+Example:
+
+```bash
+  chess setup
+  chess setup 518
 ```
 
 ---
 
 ## `hieudoanm colors`
 
-Colors CLI application (design tools)
+Color conversion and palette generation tools
 
-The colors CLI application is a comprehensive backend utility belonging to the design suite of tools.
-
-Use this root executable to manage configuring, running, and interacting with all colors-related operations securely and efficiently from your terminal.
+Convert between color spaces (HEX, RGB, HSL, HCL, OKLCH, CMYK) and generate color palettes.
 
 ```bash
 hieudoanm colors
@@ -1358,85 +1565,114 @@ hieudoanm colors
 | --------------------- | --------- | ------- | --------------------- |
 | `--json (persistent)` | `-j`      | `false` | Output in JSON format |
 
+Example:
+
+```bash
+  colors hex
+  colors rgb
+  colors hcl
+  colors oklch
+  colors palette
+  colors random
+```
+
 ---
 
 ### `hieudoanm colors hcl`
 
-Run the hcl operation for the colors app
+Convert HCL values to HEX, RGB, HSL, OKLCH, and CMYK
 
-The hcl command is a specific utility to execute operations related to hcl within the colors application.
-
-As a component of the design tools, this command empowers you to interact directly with colors's hcl features via the CLI.
+Prompt for HCL (Hue, Chroma, Lightness) values and convert them to RGB, HEX, HSL, OKLCH, and CMYK color spaces.
 
 ```bash
 hieudoanm colors hcl
+```
+
+Example:
+
+```bash
+  colors hcl
 ```
 
 ---
 
 ### `hieudoanm colors hex`
 
-Run the hex operation for the colors app
+Convert a HEX color to RGB, HSL, HCL, OKLCH, and CMYK
 
-The hex command is a specific utility to execute operations related to hex within the colors application.
-
-As a component of the design tools, this command empowers you to interact directly with colors's hex features via the CLI.
+Prompt for a HEX color code and convert it to RGB, HSL, HCL, OKLCH, and CMYK color spaces.
 
 ```bash
 hieudoanm colors hex
+```
+
+Example:
+
+```bash
+  colors hex
 ```
 
 ---
 
 ### `hieudoanm colors oklch`
 
-Run the oklch operation for the colors app
+Convert OKLCH values to HEX, RGB, HSL, HCL, and CMYK
 
-The oklch command is a specific utility to execute operations related to oklch within the colors application.
-
-As a component of the design tools, this command empowers you to interact directly with colors's oklch features via the CLI.
+Prompt for OKLCH (Lightness, Chroma, Hue) values and convert them to RGB, HEX, HSL, HCL, and CMYK color spaces.
 
 ```bash
 hieudoanm colors oklch
+```
+
+Example:
+
+```bash
+  colors oklch
 ```
 
 ---
 
 ### `hieudoanm colors rgb`
 
-Run the rgb operation for the colors app
+Convert RGB values to HEX, HSL, HCL, OKLCH, and CMYK
 
-The rgb command is a specific utility to execute operations related to rgb within the colors application.
-
-As a component of the design tools, this command empowers you to interact directly with colors's rgb features via the CLI.
+Prompt for R, G, B values and convert them to HEX, HSL, HCL, OKLCH, and CMYK color spaces.
 
 ```bash
 hieudoanm colors rgb
+```
+
+Example:
+
+```bash
+  colors rgb
 ```
 
 ---
 
 ### `hieudoanm colors palette`
 
-Run the palette operation for the colors app
+Generate a color palette from a base HEX color
 
-The palette command is a specific utility to execute operations related to palette within the colors application.
-
-As a component of the design tools, this command empowers you to interact directly with colors's palette features via the CLI.
+Generate a 3-color palette (base, support, accent) from a base HEX color using triadic, complementary, or analogous harmony.
 
 ```bash
 hieudoanm colors palette
+```
+
+Example:
+
+```bash
+  colors palette
 ```
 
 ---
 
 ### `hieudoanm colors random`
 
-Run the random operation for the colors app
+Generate random HEX colors with RGB preview
 
-The random command is a specific utility to execute operations related to random within the colors application.
-
-As a component of the design tools, this command empowers you to interact directly with colors's random features via the CLI.
+Generate one or more random HEX colors and display them alongside their RGB values.
 
 ```bash
 hieudoanm colors random
@@ -1447,6 +1683,13 @@ hieudoanm colors random
 | Flag    | Shorthand | Default | Description             |
 | ------- | --------- | ------- | ----------------------- |
 | `--max` | `-m`      | `1`     | number of random colors |
+
+Example:
+
+```bash
+  colors random
+  colors random --max 5
+```
 
 ---
 
@@ -1466,6 +1709,14 @@ hieudoanm convert
 | --------------------- | --------- | ------- | --------------------- |
 | `--json (persistent)` | `-j`      | `false` | Output in JSON format |
 
+Example:
+
+```bash
+  convert base64 "hello world"
+  convert morse "sos"
+  convert slug "Hello World!
+```
+
 ---
 
 ### `hieudoanm convert braille`
@@ -1476,6 +1727,13 @@ Converts plain text to Unicode Braille characters. Supports letters, numbers, an
 
 ```bash
 hieudoanm convert braille [text]
+```
+
+Example:
+
+```bash
+  convert braille "hello"
+  convert braille "good morning
 ```
 
 ---
@@ -1490,11 +1748,20 @@ Converts plain text to Morse code. Supports letters, numbers, and common punctua
 hieudoanm convert morse [text]
 ```
 
+Example:
+
+```bash
+  convert morse "hello world"
+  convert morse "sos
+```
+
 ---
 
 ### `hieudoanm convert base64`
 
 Encode or decode base64
+
+Encode text to base64 or decode base64 back to text (use --decode for decoding).
 
 ```bash
 hieudoanm convert base64 [text]
@@ -1506,11 +1773,20 @@ hieudoanm convert base64 [text]
 | ---------- | --------- | ------- | ------------- |
 | `--decode` | `-d`      | `false` | Decode base64 |
 
+Example:
+
+```bash
+  convert base64 "hello world"
+  convert base64 --decode "aGVsbG8gd29ybGQ=
+```
+
 ---
 
 ### `hieudoanm convert url`
 
 Encode or decode a URL
+
+URL-encode a string or URL-decode an encoded string (use --decode for decoding).
 
 ```bash
 hieudoanm convert url [text]
@@ -1522,14 +1798,30 @@ hieudoanm convert url [text]
 | ---------- | --------- | ------- | ----------- |
 | `--decode` | `-d`      | `false` | Decode URL  |
 
+Example:
+
+```bash
+  convert url "hello world"
+  convert url --decode "hello+world
+```
+
 ---
 
 ### `hieudoanm convert capitalise`
 
 Capitalise the first letter of each word
 
+Capitalise the first letter of each word in the provided text.
+
 ```bash
 hieudoanm convert capitalise [text]
+```
+
+Example:
+
+```bash
+  convert capitalise "hello world"
+  convert capitalise "the quick brown fox
 ```
 
 ---
@@ -1538,8 +1830,17 @@ hieudoanm convert capitalise [text]
 
 Remove diacritical marks (accents) from letters
 
+Remove diacritical marks (accents) from letters, converting accented characters to their ASCII equivalents.
+
 ```bash
 hieudoanm convert deburr [text]
+```
+
+Example:
+
+```bash
+  convert deburr "héllo wörld"
+  convert deburr "café résumé
 ```
 
 ---
@@ -1548,8 +1849,18 @@ hieudoanm convert deburr [text]
 
 Convert a string to kebab-case
 
+Convert a string to kebab-case by replacing spaces, underscores, and camelCase boundaries with hyphens.
+
 ```bash
 hieudoanm convert kebabcase [text]
+```
+
+Example:
+
+```bash
+  convert kebabcase "hello world"
+  convert kebabcase "helloWorld"
+  convert kebabcase "hello_world
 ```
 
 ---
@@ -1558,8 +1869,18 @@ hieudoanm convert kebabcase [text]
 
 Convert a string to camelCase
 
+Convert a string to camelCase by joining words with the first word lowercased and subsequent words capitalised.
+
 ```bash
 hieudoanm convert camelcase [text]
+```
+
+Example:
+
+```bash
+  convert camelcase "hello world"
+  convert camelcase "hello-world"
+  convert camelcase "hello_world
 ```
 
 ---
@@ -1568,8 +1889,18 @@ hieudoanm convert camelcase [text]
 
 Convert a string to PascalCase
 
+Convert a string to PascalCase by capitalising the first letter of each word and joining them.
+
 ```bash
 hieudoanm convert pascalcase [text]
+```
+
+Example:
+
+```bash
+  convert pascalcase "hello world"
+  convert pascalcase "hello-world"
+  convert pascalcase "hello_world
 ```
 
 ---
@@ -1578,8 +1909,17 @@ hieudoanm convert pascalcase [text]
 
 Generate a URL-friendly slug
 
+Generate a URL-friendly slug by lowercasing, replacing spaces with hyphens, and removing special characters.
+
 ```bash
 hieudoanm convert slug [text]
+```
+
+Example:
+
+```bash
+  convert slug "Hello World!"
+  convert slug "My Blog Post Title
 ```
 
 ---
@@ -1588,8 +1928,17 @@ hieudoanm convert slug [text]
 
 Convert a string to lowercase
 
+Convert all characters in the provided text to lowercase.
+
 ```bash
 hieudoanm convert lowercase [text]
+```
+
+Example:
+
+```bash
+  convert lowercase "HELLO WORLD"
+  convert lowercase "The Quick Brown Fox
 ```
 
 ---
@@ -1598,8 +1947,18 @@ hieudoanm convert lowercase [text]
 
 Convert a string to snake_case
 
+Convert a string to snake_case by replacing spaces, hyphens, and camelCase boundaries with underscores.
+
 ```bash
 hieudoanm convert snakecase [text]
+```
+
+Example:
+
+```bash
+  convert snakecase "hello world"
+  convert snakecase "helloWorld"
+  convert snakecase "hello-world
 ```
 
 ---
@@ -1608,8 +1967,17 @@ hieudoanm convert snakecase [text]
 
 Convert a string to uppercase
 
+Convert all characters in the provided text to uppercase.
+
 ```bash
 hieudoanm convert uppercase [text]
+```
+
+Example:
+
+```bash
+  convert uppercase "hello world"
+  convert uppercase "the quick brown fox
 ```
 
 ---
@@ -1634,7 +2002,7 @@ hieudoanm convert count <text>
 Example:
 
 ```bash
-convert count "hello world"
+  convert count "hello world"
   convert count --json "the quick brown fox"
   echo "hello world" | convert count
 ```
@@ -1656,6 +2024,14 @@ hieudoanm crypto
 | Flag                  | Shorthand | Default | Description           |
 | --------------------- | --------- | ------- | --------------------- |
 | `--json (persistent)` | `-j`      | `false` | Output in JSON format |
+
+Example:
+
+```bash
+  crypto uuid
+  crypto hash --text "hello world"
+  crypto passwd --length 32 --symbols
+```
 
 ---
 
@@ -1682,7 +2058,7 @@ hieudoanm crypto hash
 Example:
 
 ```bash
-hash --text "hello world"
+  hash --text "hello world"
   hash --text "hello" --algo sha256 --key secret
 ```
 
@@ -1692,8 +2068,17 @@ hash --text "hello world"
 
 Encode and decode JWTs
 
+Encode (sign) and decode JWT tokens using HMAC-based algorithms (HS256, HS384, HS512).
+
 ```bash
 hieudoanm crypto jwt
+```
+
+Example:
+
+```bash
+  crypto jwt encode --key secret --claims '{"sub":"123","name":"John"}'
+  crypto jwt decode --token eyJhbGci...
 ```
 
 ---
@@ -1701,6 +2086,8 @@ hieudoanm crypto jwt
 #### `hieudoanm crypto jwt decode`
 
 Decode a JWT token without signature verification
+
+Decode a JWT token to inspect its header and payload claims without verifying the signature. Supports JSON output.
 
 ```bash
 hieudoanm crypto jwt decode [--token <token>]
@@ -1712,6 +2099,13 @@ hieudoanm crypto jwt decode [--token <token>]
 | --------- | --------- | ------- | --------------------- |
 | `--token` | `-t`      | ``      | JWT token to decode   |
 | `--json`  | ``        | `false` | Output in JSON format |
+
+Example:
+
+```bash
+  crypto jwt decode --token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjMifQ.abc
+  crypto jwt decode --token eyJhbGci... --json
+```
 
 ---
 
@@ -1736,7 +2130,7 @@ hieudoanm crypto jwt encode
 Example:
 
 ```bash
-jwt encode --key secret --claims '{"sub":"123","name":"John"}'
+  jwt encode --key secret --claims '{"sub":"123","name":"John"}'
   jwt encode --key secret --claims '{"sub":"123"}' --algorithm HS256
 ```
 
@@ -1766,7 +2160,7 @@ hieudoanm crypto keygen
 Example:
 
 ```bash
-crypto keygen --algo ed25519 -o id_ed25519
+  crypto keygen --algo ed25519 -o id_ed25519
   crypto keygen --algo rsa --bits 4096 -o id_rsa
   crypto keygen --algo ecdsa --bits 256 -o id_ecdsa
 ```
@@ -1800,7 +2194,7 @@ hieudoanm crypto passwd
 Example:
 
 ```bash
-passwd
+  passwd
   passwd --length 32 --symbols
   passwd --pin --count 5
   passwd --pronounceable
@@ -1811,6 +2205,8 @@ passwd
 ### `hieudoanm crypto uuid`
 
 Generate UUID v4 identifiers
+
+Generate random UUID v4 (RFC 4122) identifiers. Supports generating multiple UUIDs at once and JSON output.
 
 ```bash
 hieudoanm crypto uuid
@@ -1823,11 +2219,21 @@ hieudoanm crypto uuid
 | `--count` | `-n`      | `1`     | Number of UUIDs to generate |
 | `--json`  | ``        | `false` | Output in JSON format       |
 
+Example:
+
+```bash
+  crypto uuid
+  crypto uuid --count 5
+  crypto uuid --count 3 --json
+```
+
 ---
 
 ### `hieudoanm crypto qrcode`
 
 Generate a QR code in the terminal
+
+Generate a QR code from text and display it in the terminal using Unicode block characters.
 
 ```bash
 hieudoanm crypto qrcode [--data <text>]
@@ -1838,6 +2244,13 @@ hieudoanm crypto qrcode [--data <text>]
 | Flag     | Shorthand | Default | Description            |
 | -------- | --------- | ------- | ---------------------- |
 | `--data` | `-d`      | ``      | Text or data to encode |
+
+Example:
+
+```bash
+  crypto qrcode --data "https://example.com"
+  crypto qrcode --data "Hello, World!
+```
 
 ---
 
@@ -1862,7 +2275,7 @@ hieudoanm crypto encrypt [--file <file>]
 Example:
 
 ```bash
-crypto encrypt --file secret.txt --password "hunter2"
+  crypto encrypt --file secret.txt --password "hunter2"
   crypto encrypt --file secret.txt --password "hunter2" --output secret.enc
 ```
 
@@ -1889,7 +2302,7 @@ hieudoanm crypto decrypt [--file <file>]
 Example:
 
 ```bash
-crypto decrypt --file secret.enc --password "hunter2"
+  crypto decrypt --file secret.enc --password "hunter2"
   crypto decrypt --file secret.enc --password "hunter2" --output secret.txt
 ```
 
@@ -1920,7 +2333,7 @@ hieudoanm crypto totp [--secret <secret>]
 Example:
 
 ```bash
-crypto totp --secret JBSWY3DPEHPK3PXP
+  crypto totp --secret JBSWY3DPEHPK3PXP
   crypto totp --secret JBSWY3DPEHPK3PXP --step 30 --digits 6
   crypto totp --secret JBSWY3DPEHPK3PXP --json
 ```
@@ -1943,11 +2356,21 @@ hieudoanm data
 | --------------------- | --------- | ------- | --------------------- |
 | `--json (persistent)` | `-j`      | `false` | Output in JSON format |
 
+Example:
+
+```bash
+  data csv data.csv
+  data yml config.yml --validate
+  data json data.json --query ".name
+```
+
 ---
 
 ### `hieudoanm data csv`
 
 View and format CSV files
+
+Read a CSV file (or stdin) and display records as pipe-delimited text or JSON.
 
 ```bash
 hieudoanm data csv <file>
@@ -1958,6 +2381,14 @@ hieudoanm data csv <file>
 | Flag     | Shorthand | Default | Description           |
 | -------- | --------- | ------- | --------------------- |
 | `--json` | ``        | `false` | Output in JSON format |
+
+Example:
+
+```bash
+  data csv data.csv
+  data csv data.csv --json
+  cat data.csv | data csv
+```
 
 ---
 
@@ -1983,10 +2414,10 @@ hieudoanm data json [file]
 Example:
 
 ```bash
-json data.json
-  json --query ".name" data.json
-  json --diff file1.json file2.json
-  json --merge base.json patch.json
+  data json data.json
+  data json data.json --query ".name"
+  data json data.json --diff file2.json
+  data json --merge base.json patch.json
 ```
 
 ---
@@ -1994,6 +2425,8 @@ json data.json
 ### `hieudoanm data yml`
 
 Parse, validate, and lint YAML files
+
+Parse, validate, lint, and convert YAML files. Can output as JSON or reformatted YAML.
 
 ```bash
 hieudoanm data yml <file>
@@ -2007,9 +2440,21 @@ hieudoanm data yml <file>
 | `--lint`     | ``        | `false` | Lint YAML file        |
 | `--json`     | ``        | `false` | Output in JSON format |
 
+Example:
+
+```bash
+  data yml config.yml
+  data yml config.yml --validate
+  data yml config.yml --json
+```
+
 ---
 
 ## `hieudoanm docsify`
+
+Codebase documentation and analysis tools
+
+Generate documentation from Cobra CLI projects, scan codebases for symbols and call graphs, build wiki-link graphs from markdown files, and produce directory trees.
 
 ```bash
 hieudoanm docsify
@@ -2020,6 +2465,14 @@ hieudoanm docsify
 | Flag                  | Shorthand | Default | Description           |
 | --------------------- | --------- | ------- | --------------------- |
 | `--json (persistent)` | `-j`      | `false` | Output in JSON format |
+
+Example:
+
+```bash
+  docsify cobra --file /path/to/project
+  docsify scan --dir . --out graph.graphml
+  docsify tree --dir . --out TREE.md
+```
 
 ---
 
@@ -2039,6 +2492,13 @@ hieudoanm docsify cobra [--file <path>]
 | ---------- | --------- | ----------- | ------------------------------------------------------------ |
 | `--file`   | `-f`      | ``          | Path to cobra project directory (default: current directory) |
 | `--output` | `-o`      | `README.md` | Output file path                                             |
+
+Example:
+
+```bash
+  docsify cobra --file /path/to/project
+  docsify cobra -f . -o README.md
+```
 
 ---
 
@@ -2067,11 +2527,20 @@ hieudoanm docsify obsidian
 | `--format`  | ``        | `dot`                                             | Output format: dot, json, edges        |
 | `--exclude` | ``        | `.git,node_modules,vendor,dist,.next,__pycache__` | Comma-separated directories to exclude |
 
+Example:
+
+```bash
+  docsify obsidian --dir . --format dot --out graph.dot
+  docsify obsidian --dir /path/to/vault --format json
+```
+
 ---
 
 ### `hieudoanm docsify scan`
 
 Scan a codebase and generate a GraphML file
+
+Walk a codebase directory, extract symbols (functions, types, classes) and call edges from Go, TypeScript, Python, and Rust source files, and write the result as a GraphML file.
 
 ```bash
 hieudoanm docsify scan
@@ -2085,6 +2554,13 @@ hieudoanm docsify scan
 | `--out`     | ``        | `codebase.graphml`                                | Output .graphml file path              |
 | `--exclude` | ``        | `.git,node_modules,vendor,dist,.next,__pycache__` | Comma-separated directories to exclude |
 | `--verbose` | ``        | `false`                                           | Print progress to stderr               |
+
+Example:
+
+```bash
+  docsify scan --dir . --out graph.graphml
+  docsify scan --dir /path/to/project --verbose
+```
 
 ---
 
@@ -2105,6 +2581,13 @@ hieudoanm docsify tree
 | `--dir` | ``        | `.`       | Root directory to tree |
 | `--out` | ``        | `TREE.md` | Output file path       |
 
+Example:
+
+```bash
+  docsify tree --dir . --out TREE.md
+  docsify tree --dir /path/to/project
+```
+
 ---
 
 ## `hieudoanm doi`
@@ -2123,6 +2606,15 @@ hieudoanm doi
 | --------------------- | --------- | ------- | --------------------- |
 | `--json (persistent)` | `-j`      | `false` | Output in JSON format |
 
+Example:
+
+```bash
+  doi fetch 10.1000/xyz123
+  doi cite 10.1000/xyz123
+  doi ref 10.1000/xyz123
+  doi validate 10.1000/xyz123
+```
+
 ---
 
 ### `hieudoanm doi cite`
@@ -2133,6 +2625,13 @@ Fetches metadata for a given DOI from Crossref and generates an APA-formatted ci
 
 ```bash
 hieudoanm doi cite [doi]
+```
+
+Example:
+
+```bash
+  doi cite 10.1000/xyz123
+  doi cite 10.1038/nature12373
 ```
 
 ---
@@ -2147,6 +2646,13 @@ Fetches metadata for a given DOI from Crossref and generates a formatted referen
 hieudoanm doi ref [doi]
 ```
 
+Example:
+
+```bash
+  doi ref 10.1000/xyz123
+  doi ref 10.1038/nature12373
+```
+
 ---
 
 ### `hieudoanm doi fetch`
@@ -2159,6 +2665,13 @@ Fetches metadata for a given DOI from Crossref and displays the raw JSON respons
 hieudoanm doi fetch [doi]
 ```
 
+Example:
+
+```bash
+  doi fetch 10.1000/xyz123
+  doi fetch 10.1038/nature12373
+```
+
 ---
 
 ### `hieudoanm doi validate`
@@ -2169,6 +2682,13 @@ Checks whether a given string conforms to the DOI syntax (10.NNNN/...).
 
 ```bash
 hieudoanm doi validate [doi]
+```
+
+Example:
+
+```bash
+  doi validate 10.1000/xyz123
+  doi validate 10.1234/invalid
 ```
 
 ---
@@ -2189,6 +2709,13 @@ hieudoanm english
 | --------------------- | --------- | ------- | --------------------- |
 | `--json (persistent)` | `-j`      | `false` | Output in JSON format |
 
+Example:
+
+```bash
+  english define --word hello
+  english define --word serendipity --json
+```
+
 ---
 
 ### `hieudoanm english define`
@@ -2208,6 +2735,13 @@ hieudoanm english define [--word <word>]
 | `--word` | `-w`      | ``      | Word to define        |
 | `--json` | ``        | `false` | Output in JSON format |
 
+Example:
+
+```bash
+  english define --word hello
+  english define --word serendipity --json
+```
+
 ---
 
 ## `hieudoanm file`
@@ -2226,11 +2760,22 @@ hieudoanm file
 | --------------------- | --------- | ------- | --------------------- |
 | `--json (persistent)` | ``        | `false` | Output in JSON format |
 
+Example:
+
+```bash
+  file checksum --file document.pdf --algorithm sha256
+  file type --file image.png
+  file read -f main.go --lines 50
+  file grep --pattern "TODO" --path .
+```
+
 ---
 
 ### `hieudoanm file checksum`
 
 Compute file checksum
+
+Compute a cryptographic hash of a file. Supports md5, sha1, sha256 (default), and sha512.
 
 ```bash
 hieudoanm file checksum [--file <path>]
@@ -2246,7 +2791,7 @@ hieudoanm file checksum [--file <path>]
 Example:
 
 ```bash
-file checksum --file document.pdf
+  file checksum --file document.pdf
   file checksum --algorithm sha256 --file document.pdf
   file checksum -f document.pdf --algorithm sha256
 ```
@@ -2274,7 +2819,7 @@ hieudoanm file chmod [--mode <octal>] [--file <path>]
 Example:
 
 ```bash
-file chmod --mode 755 --file script.sh
+  file chmod --mode 755 --file script.sh
   file chmod -m 644 -f README.md
   file chmod -r -m 755 -f dir/
 ```
@@ -2284,6 +2829,8 @@ file chmod --mode 755 --file script.sh
 ### `hieudoanm file count`
 
 Count lines, words, and bytes in a file
+
+Count lines, words, and bytes in a file (like Unix wc).
 
 ```bash
 hieudoanm file count [--file <path>]
@@ -2298,7 +2845,7 @@ hieudoanm file count [--file <path>]
 Example:
 
 ```bash
-file count --file main.go
+  file count --file main.go
   file count -f main.go --json
 ```
 
@@ -2307,6 +2854,8 @@ file count --file main.go
 ### `hieudoanm file duplicates`
 
 Find duplicate files by size and partial hash
+
+Scan a directory for duplicate files by comparing SHA-256 hashes of files with the same size.
 
 ```bash
 hieudoanm file duplicates [--dir <path>]
@@ -2319,6 +2868,14 @@ hieudoanm file duplicates [--dir <path>]
 | `--dir`      | `-d`      | ``      | Directory to scan                     |
 | `--min-size` | `-m`      | `1`     | Minimum file size to consider (bytes) |
 
+Example:
+
+```bash
+  file duplicates --dir .
+  file duplicates -d /path/to/files --min-size 1024
+  file duplicates -d . --json
+```
+
 ---
 
 ### `hieudoanm file edit`
@@ -2326,12 +2883,6 @@ hieudoanm file duplicates [--dir <path>]
 Find and replace text in a file
 
 Replace occurrences of a string (or regex pattern) in a file.
-
-Examples:
-file edit -f main.go --old "foo" --new "bar"
-file edit --regex -f main.go --old "foo.\*" --new "bar"
-file edit -f main.go -o "foo" -n "bar" --preview
-file edit -f main.go -o "foo" -n "bar" --count 1
 
 ```bash
 hieudoanm file edit [--file <path>] [--old <text>] [--new <text>]
@@ -2348,6 +2899,15 @@ hieudoanm file edit [--file <path>] [--old <text>] [--new <text>]
 | `--preview` | `-p`      | `false` | Preview changes without modifying the file |
 | `--count`   | `-n`      | `0`     | Number of occurrences to replace (0 = all) |
 
+Example:
+
+```bash
+  file edit -f main.go --old "foo" --new "bar"
+  file edit --regex -f main.go --old "foo.*" --new "bar"
+  file edit -f main.go -o "foo" -n "bar" --preview
+  file edit -f main.go -o "foo" -n "bar" --count 1
+```
+
 ---
 
 ### `hieudoanm file grep`
@@ -2355,13 +2915,6 @@ hieudoanm file edit [--file <path>] [--old <text>] [--new <text>]
 Search file contents using regex or fixed strings
 
 Search for a pattern in files (grep = global regular expression print). Supports recursive directory search and glob patterns.
-
-Examples:
-file grep --pattern "TODO" --path main.go
-file grep -p "func" --path . --ignore-case
-file grep --pattern "error" --include "\*.go"
-file grep --fixed -p "fmt.Println" --path src/
-file grep -p "panic" --path . --context 2
 
 ```bash
 hieudoanm file grep [--pattern <regex>] [--path <dir>]
@@ -2379,11 +2932,23 @@ hieudoanm file grep [--pattern <regex>] [--path <dir>]
 | `--max-count`   | `-m`      | `0`     | Maximum number of matches                    |
 | `--ignore-case` | `-v`      | `false` | Case-insensitive search                      |
 
+Example:
+
+```bash
+  file grep --pattern "TODO" --path main.go
+  file grep -p "func" --path . --ignore-case
+  file grep --pattern "error" --include "*.go"
+  file grep --fixed -p "fmt.Println" --path src/
+  file grep -p "panic" --path . --context 2
+```
+
 ---
 
 ### `hieudoanm file head`
 
 Show the first N lines of a file
+
+Display the first N lines of a file (like Unix head).
 
 ```bash
 hieudoanm file head [--file <path>]
@@ -2399,7 +2964,7 @@ hieudoanm file head [--file <path>]
 Example:
 
 ```bash
-file head --file main.go
+  file head --file main.go
   file head -f main.go --lines 20
 ```
 
@@ -2410,12 +2975,6 @@ file head --file main.go
 Read file content with line numbers
 
 Read a file and display its content with optional line numbers, offset, and line limit.
-
-Examples:
-file read --file main.go
-file read -f main.go --lines 50
-file read -f main.go --offset 10 --lines 20
-file read -f main.go --no-numbers
 
 ```bash
 hieudoanm file read [--file <path>]
@@ -2430,11 +2989,22 @@ hieudoanm file read [--file <path>]
 | `--offset`  | `-o`      | `0`     | Starting line offset (0-based)    |
 | `--numbers` | ``        | `true`  | Show line numbers                 |
 
+Example:
+
+```bash
+  file read --file main.go
+  file read -f main.go --lines 50
+  file read -f main.go --offset 10 --lines 20
+  file read -f main.go --no-numbers
+```
+
 ---
 
 ### `hieudoanm file size`
 
 Show file or directory size
+
+Display the size of a file or the total size of a directory (recursive).
 
 ```bash
 hieudoanm file size [--path <file-or-dir>]
@@ -2446,11 +3016,21 @@ hieudoanm file size [--path <file-or-dir>]
 | -------- | --------- | ------- | ---------------------- |
 | `--path` | `-p`      | ``      | File or directory path |
 
+Example:
+
+```bash
+  file size --path main.go
+  file size -p /path/to/directory
+  file size -p . --json
+```
+
 ---
 
 ### `hieudoanm file stats`
 
 Show file statistics by extension
+
+Walk a directory and produce statistics about files grouped by extension. Shows file count and total size per extension.
 
 ```bash
 hieudoanm file stats [--dir <path>]
@@ -2462,11 +3042,21 @@ hieudoanm file stats [--dir <path>]
 | ------- | --------- | ------- | -------------- |
 | `--dir` | `-d`      | ``      | Directory path |
 
+Example:
+
+```bash
+  file stats --dir .
+  file stats -d /path/to/project
+  file stats -d . --json
+```
+
 ---
 
 ### `hieudoanm file tail`
 
 Show the last N lines of a file
+
+Display the last N lines of a file (like Unix tail). Uses a ring buffer to efficiently stream through the file.
 
 ```bash
 hieudoanm file tail [--file <path>]
@@ -2482,7 +3072,7 @@ hieudoanm file tail [--file <path>]
 Example:
 
 ```bash
-file tail --file main.go
+  file tail --file main.go
   file tail -f main.go --lines 20
 ```
 
@@ -2491,6 +3081,8 @@ file tail --file main.go
 ### `hieudoanm file type`
 
 Detect file type by extension
+
+Detect a file's MIME type based on its extension and display file metadata (size, mode, modification time).
 
 ```bash
 hieudoanm file type [--file <path>]
@@ -2505,7 +3097,7 @@ hieudoanm file type [--file <path>]
 Example:
 
 ```bash
-file type --file image.png
+  file type --file image.png
   file type -f document.pdf
 ```
 
@@ -2516,13 +3108,6 @@ file type --file image.png
 Write or append content to a file
 
 Write content to a file. Content can be provided via --content flag or piped via stdin.
-
-Examples:
-file write -f hello.txt -c "Hello, World!"
-file write --file hello.txt (reads from stdin)
-file write -f log.txt -c "new log entry" --append
-file write -f newdir/file.txt --mkdir -c "content"
-echo "data" | file write -f output.txt
 
 ```bash
 hieudoanm file write [--file <path>] [--content <text>]
@@ -2538,11 +3123,23 @@ hieudoanm file write [--file <path>] [--content <text>]
 | `--mkdir`   | `-p`      | `false` | Create parent directories if needed    |
 | `--mode`    | `-m`      | ``      | File permissions (octal, e.g. 644)     |
 
+Example:
+
+```bash
+  file write -f hello.txt -c "Hello, World!"
+  file write --file hello.txt      (reads from stdin)
+  file write -f log.txt -c "new log entry" --append
+  file write -f newdir/file.txt --mkdir -c "content"
+  echo "data" | file write -f output.txt
+```
+
 ---
 
 ## `hieudoanm gemini`
 
 Interact with Google Gemini AI models
+
+Interact with Google Gemini AI models. Provides a TUI coding assistant with support for multiple Gemini models, chat history, and slash commands.
 
 ```bash
 hieudoanm gemini
@@ -2553,6 +3150,12 @@ hieudoanm gemini
 | Flag                  | Shorthand | Default | Description           |
 | --------------------- | --------- | ------- | --------------------- |
 | `--json (persistent)` | `-j`      | `false` | Output in JSON format |
+
+Example:
+
+```bash
+  gemini code
+```
 
 ---
 
@@ -2566,6 +3169,12 @@ Provides a chat interface with markdown rendering and code block support.
 
 ```bash
 hieudoanm gemini code
+```
+
+Example:
+
+```bash
+  gemini code
 ```
 
 ---
@@ -2585,6 +3194,16 @@ hieudoanm gh
 | Flag                  | Shorthand | Default | Description           |
 | --------------------- | --------- | ------- | --------------------- |
 | `--json (persistent)` | `-j`      | `false` | Output in JSON format |
+
+Example:
+
+```bash
+  gh languages --repo hieudoanm/hieudoanm.github.io
+  gh license
+  gh coc
+  gh ignore
+  gh og --url hieudoanm/hieudoanm.github.io
+```
 
 ---
 
@@ -2609,6 +3228,14 @@ hieudoanm gh coc
 | `--key`    | ``        | ``                | Code of Conduct key (skip prompt) |
 | `--output` | `-o`      | `CODE_OF_CONDUCT` | Output file path                  |
 
+Example:
+
+```bash
+  gh coc
+  gh coc --key citizen_code_of_conduct
+  gh coc --key contributor_covenant -o COC.md
+```
+
 ---
 
 ### `hieudoanm gh ignore`
@@ -2631,6 +3258,14 @@ hieudoanm gh ignore
 | `--name`   | ``        | ``           | Gitignore template name (skip prompt) |
 | `--output` | `-o`      | `.gitignore` | Output file path                      |
 
+Example:
+
+```bash
+  gh ignore
+  gh ignore --name Go
+  gh ignore --name Python -o .gitignore
+```
+
 ---
 
 ### `hieudoanm gh languages`
@@ -2639,9 +3274,6 @@ Show repository language breakdown and generate SVG bar chart
 
 Fetches language statistics for a GitHub repository and generates
 an SVG bar chart showing the breakdown.
-
-Example:
-hieudoanm gh languages --repo hieudoanm/hieudoanm.github.io
 
 ```bash
 hieudoanm gh languages [--repo <owner/repo>]
@@ -2653,6 +3285,13 @@ hieudoanm gh languages [--repo <owner/repo>]
 | ---------- | --------- | --------------- | ----------------------- |
 | `--repo`   | `-r`      | ``              | Repository (owner/repo) |
 | `--output` | `-o`      | `languages.svg` | Output SVG file path    |
+
+Example:
+
+```bash
+  gh languages --repo hieudoanm/hieudoanm.github.io
+  gh languages --repo hieudoanm/hieudoanm --output lang.svg
+```
 
 ---
 
@@ -2676,6 +3315,14 @@ hieudoanm gh license
 | `--spdx-id` | ``        | ``        | SPDX license identifier (skip prompt) |
 | `--output`  | `-o`      | `LICENSE` | Output file path                      |
 
+Example:
+
+```bash
+  gh license
+  gh license --spdx-id MIT
+  gh license --spdx-id Apache-2.0 -o LICENSE.txt
+```
+
 ---
 
 ### `hieudoanm gh og`
@@ -2684,9 +3331,6 @@ Generate an Open Graph SVG for a GitHub repository
 
 Fetches repository metadata from GitHub and generates
 a 1200×630 Open Graph SVG image (social preview card).
-
-Example:
-hieudoanm gh og --url hieudoanm/hieudoanm.github.io
 
 ```bash
 hieudoanm gh og [--url <owner/repo>]
@@ -2698,6 +3342,13 @@ hieudoanm gh og [--url <owner/repo>]
 | ---------- | --------- | -------- | ----------------------- |
 | `--url`    | `-u`      | ``       | Repository (owner/repo) |
 | `--output` | `-o`      | `og.svg` | Output SVG file path    |
+
+Example:
+
+```bash
+  gh og --url hieudoanm/hieudoanm.github.io
+  gh og --url hieudoanm/hieudoanm --output preview.svg
+```
 
 ---
 
@@ -2717,11 +3368,21 @@ hieudoanm image
 | --------------------- | --------- | ------- | --------------------- |
 | `--json (persistent)` | ``        | `false` | Output in JSON format |
 
+Example:
+
+```bash
+  image info --file photo.jpg
+  image convert --file photo.jpg --format png
+  image dominant --file photo.jpg
+```
+
 ---
 
 ### `hieudoanm image info`
 
 Show image metadata (dimensions, format, etc.)
+
+Display detailed metadata for an image file including dimensions (width/height), file format, file size on disk, and color model information.
 
 ```bash
 hieudoanm image info [--file <file>]
@@ -2733,11 +3394,21 @@ hieudoanm image info [--file <file>]
 | -------- | --------- | ------- | ----------- |
 | `--file` | `-f`      | ``      | Image file  |
 
+Example:
+
+```bash
+  image info --file photo.jpg
+  image info -f logo.png
+  image info --file screenshot.png --json
+```
+
 ---
 
 ### `hieudoanm image convert`
 
 Convert image to another format
+
+Convert an image file from one format to another. Supports PNG, JPEG/JPG, and GIF output formats.
 
 ```bash
 hieudoanm image convert [--file <file>]
@@ -2754,7 +3425,7 @@ hieudoanm image convert [--file <file>]
 Example:
 
 ```bash
-image convert --file photo.jpg --format png
+  image convert --file photo.jpg --format png
   image convert --file photo.png --format jpg --output photo.jpg
 ```
 
@@ -2763,6 +3434,8 @@ image convert --file photo.jpg --format png
 ### `hieudoanm image dominant`
 
 Extract dominant color from an image
+
+Analyze an image and extract its top 5 dominant colors by sampling pixels. Each color is returned as a hex code with its percentage of the sampled pixels.
 
 ```bash
 hieudoanm image dominant [--file <file>]
@@ -2773,6 +3446,14 @@ hieudoanm image dominant [--file <file>]
 | Flag     | Shorthand | Default | Description |
 | -------- | --------- | ------- | ----------- |
 | `--file` | `-f`      | ``      | Image file  |
+
+Example:
+
+```bash
+  image dominant --file photo.jpg
+  image dominant -f logo.png
+  image dominant --file wallpaper.jpg --json
+```
 
 ---
 
@@ -2792,6 +3473,15 @@ hieudoanm net
 | --------------------- | --------- | ------- | --------------------- |
 | `--json (persistent)` | `-j`      | `false` | Output in JSON format |
 
+Example:
+
+```bash
+  net ip
+  net ping --host google.com --port 443
+  net whois --domain example.com
+  net cert info --host google.com:443
+```
+
 ---
 
 ### `hieudoanm net cert`
@@ -2809,6 +3499,13 @@ hieudoanm net cert
 | Flag                  | Shorthand | Default | Description           |
 | --------------------- | --------- | ------- | --------------------- |
 | `--json (persistent)` | ``        | `false` | Output in JSON format |
+
+Example:
+
+```bash
+  net cert info --host google.com:443
+  net cert check --host google.com:443
+```
 
 ---
 
@@ -2831,7 +3528,7 @@ hieudoanm net cert info [--host <host:port>]
 Example:
 
 ```bash
-cert info --host google.com:443
+  cert info --host google.com:443
   cert info --host example.org:8443
 ```
 
@@ -2840,6 +3537,8 @@ cert info --host google.com:443
 #### `hieudoanm net cert check`
 
 Quick certificate health check (expiry warning)
+
+Quickly check the TLS certificate for a host and report whether it is valid, expiring soon, or expired. Returns remaining validity time and SAN entries.
 
 ```bash
 hieudoanm net cert check [--host <host:port>]
@@ -2855,7 +3554,7 @@ hieudoanm net cert check [--host <host:port>]
 Example:
 
 ```bash
-cert check --host google.com:443
+  net cert check --host google.com:443
   cert check --host example.org --warn 30
 ```
 
@@ -2882,7 +3581,7 @@ hieudoanm net dns [--domain <domain>]
 Example:
 
 ```bash
-hieudoanm net dns --domain example.com
+  hieudoanm net dns --domain example.com
   hieudoanm net dns --domain example.com --type mx
   hieudoanm net dns --domain example.com --json
 ```
@@ -2891,11 +3590,9 @@ hieudoanm net dns --domain example.com
 
 ### `hieudoanm net ip`
 
-Ip CLI application (utilities tools)
+Look up your public IP and geolocation
 
-The ip CLI application is a comprehensive backend utility belonging to the utilities suite of tools.
-
-Use this root executable to manage configuring, running, and interacting with all ip-related operations securely and efficiently from your terminal.
+Look up your public IP address and geolocation information from multiple providers.
 
 ```bash
 hieudoanm net ip
@@ -2907,6 +3604,14 @@ hieudoanm net ip
 | -------- | --------- | ------- | --------------------- |
 | `--raw`  | `-r`      | `false` | Output raw JSON       |
 | `--json` | ``        | `false` | Output in JSON format |
+
+Example:
+
+```bash
+  net ip
+  net ip --json
+  net ip --raw
+```
 
 ---
 
@@ -2933,7 +3638,7 @@ hieudoanm net ping [--host <host>]
 Example:
 
 ```bash
-net ping --host example.com
+  net ping --host example.com
   net ping --host example.com --port 443
   net ping --host example.com --count 5
   net ping --host google.com --port 443 --count 3 --timeout 2s
@@ -2965,7 +3670,7 @@ hieudoanm net serve
 Example:
 
 ```bash
-serve
+  serve
   serve --port 9000 --dir ./public
   serve --port 443 --cert cert.pem --key key.pem
 ```
@@ -2989,6 +3694,13 @@ hieudoanm net status
 | `--debug` | `-d`      | `false` | Enable debug logging  |
 | `--json`  | ``        | `false` | Output in JSON format |
 
+Example:
+
+```bash
+  net status
+  net status --json
+```
+
 ---
 
 ### `hieudoanm net wifi`
@@ -3006,6 +3718,13 @@ hieudoanm net wifi
 | Flag     | Shorthand | Default | Description           |
 | -------- | --------- | ------- | --------------------- |
 | `--json` | ``        | `false` | Output in JSON format |
+
+Example:
+
+```bash
+  net wifi
+  net wifi --json
+```
 
 ---
 
@@ -3032,7 +3751,7 @@ hieudoanm net http [--url <url>]
 Example:
 
 ```bash
-net http --url https://api.example.com/data
+  net http --url https://api.example.com/data
   net http --url https://api.example.com --method POST --data '{"key":"value"}'
   net http --url https://api.example.com/resource/1 --method DELETE
   net http --url https://api.example.com --header "Authorization: Bearer token
@@ -3060,7 +3779,7 @@ hieudoanm net whois [--domain <domain>]
 Example:
 
 ```bash
-net whois --domain example.com
+  net whois --domain example.com
   net whois --domain google.com
   net whois --domain example.com --server whois.verisign-grs.com
 ```
@@ -3083,11 +3802,20 @@ hieudoanm openapi
 | --------------------- | --------- | ------- | --------------------- |
 | `--json (persistent)` | `-j`      | `false` | Output in JSON format |
 
+Example:
+
+```bash
+  openapi validate -f spec.yaml
+  openapi openapi2postman -i spec.yaml
+```
+
 ---
 
 ### `hieudoanm openapi openapi2postman`
 
 Convert OpenAPI to Postman collection
+
+Convert an OpenAPI specification (JSON or YAML) to a Postman v2.1 collection. Generates folders by tag, auto-generates example bodies from schemas, and preserves query/path/header parameters.
 
 ```bash
 hieudoanm openapi openapi2postman
@@ -3100,11 +3828,21 @@ hieudoanm openapi openapi2postman
 | `--input`  | `-i`      | ``      | OpenAPI file (json/yaml) |
 | `--output` | `-o`      | ``      | Output Postman file      |
 
+Example:
+
+```bash
+  openapi openapi2postman -i spec.yaml
+  openapi openapi2postman -i spec.yaml -o collection.json
+  openapi openapi2postman -i petstore.yaml
+```
+
 ---
 
 ### `hieudoanm openapi validate`
 
 Validate an OpenAPI specification
+
+Parse and validate an OpenAPI specification file (JSON or YAML). Checks for required fields (openapi, info, paths), valid operation methods, operationId uniqueness, and response definitions.
 
 ```bash
 hieudoanm openapi validate [--file <file>]
@@ -3116,11 +3854,21 @@ hieudoanm openapi validate [--file <file>]
 | -------- | --------- | ------- | ----------------- |
 | `--file` | `-f`      | ``      | OpenAPI spec file |
 
+Example:
+
+```bash
+  openapi validate -f spec.yaml
+  openapi validate -f openapi.json
+  openapi validate -f petstore-v3.yaml --json
+```
+
 ---
 
 ## `hieudoanm openrouter`
 
 Interact with OpenRouter AI models and services
+
+Interact with OpenRouter AI models: serve a local API proxy, probe model availability, list free models, and run an AI coding assistant TUI.
 
 ```bash
 hieudoanm openrouter
@@ -3131,6 +3879,15 @@ hieudoanm openrouter
 | Flag                  | Shorthand | Default | Description           |
 | --------------------- | --------- | ------- | --------------------- |
 | `--json (persistent)` | `-j`      | `false` | Output in JSON format |
+
+Example:
+
+```bash
+  openrouter serve
+  openrouter status
+  openrouter models
+  openrouter code
+```
 
 ---
 
@@ -3152,15 +3909,20 @@ hieudoanm openrouter serve
 | -------- | --------- | ------- | ----------------- |
 | `--port` | `-p`      | `8080`  | Port to listen on |
 
+Example:
+
+```bash
+  openrouter serve
+  openrouter serve -p 8080
+```
+
 ---
 
 ### `hieudoanm openrouter status`
 
-Run the status operation for the OpenRouter app
+Probe free models for availability and latency
 
-The status command is a specific utility to execute operations related to status within the OpenRouter application.
-
-As a component of the ai tools, this command empowers you to interact directly with OpenRouter's status features via the CLI.
+Probe free OpenRouter models in parallel to check which are currently available, rate-limited, restricted, or erroring. Reports latency for available models and sorts results by status.
 
 ```bash
 hieudoanm openrouter status
@@ -3173,11 +3935,21 @@ hieudoanm openrouter status
 | `--search`  | `-s`      | ``      | Filter models by name or ID before probing |
 | `--workers` | `-w`      | `6`     | Parallel probe workers                     |
 
+Example:
+
+```bash
+  openrouter status
+  openrouter status --search gemma
+  openrouter status --workers 10
+```
+
 ---
 
 ### `hieudoanm openrouter models`
 
-Run the models operation for the OpenRouter app
+List available free models from OpenRouter
+
+Fetch and display all free models available on OpenRouter. Models can be filtered by name or ID with --search, and grouped by provider for easy browsing.
 
 ```bash
 hieudoanm openrouter models
@@ -3190,14 +3962,30 @@ hieudoanm openrouter models
 | `--search` | `-s`      | ``      | Filter models by name or ID |
 | `--json`   | ``        | `false` | Output raw JSON             |
 
+Example:
+
+```bash
+  openrouter models
+  openrouter models --search gemma
+  openrouter models --json
+```
+
 ---
 
 ### `hieudoanm openrouter hook`
 
 Start webhook server on :8080 and expose via ngrok and hook it to telegram
 
+Start a webhook server on port 8080, expose it via ngrok, and register with Telegram. Routes incoming Telegram messages through OpenRouter AI and sends replies back. Requires TELEGRAM_API_TOKEN and OPEN_ROUTER_API_KEY env vars.
+
 ```bash
 hieudoanm openrouter hook
+```
+
+Example:
+
+```bash
+  openrouter hook
 ```
 
 ---
@@ -3221,6 +4009,13 @@ hieudoanm openrouter code
 | --------- | --------- | ------- | -------------------------------------------------- |
 | `--model` | ``        | ``      | Model ID (default: auto-select tool-capable model) |
 
+Example:
+
+```bash
+  openrouter code
+  openrouter code --model google/gemma-4-26b-a4b-it:free
+```
+
 ---
 
 ## `hieudoanm port`
@@ -3239,11 +4034,21 @@ hieudoanm port
 | --------------------- | --------- | ------- | --------------------- |
 | `--json (persistent)` | ``        | `false` | Output in JSON format |
 
+Example:
+
+```bash
+  port check --target localhost:8080
+  port find --start 3000 --end 3010
+  port scan --host localhost
+```
+
 ---
 
 ### `hieudoanm port check`
 
 Check if a port is open
+
+Check whether a specific TCP port is open on a given host. Supports configurable connection timeout.
 
 ```bash
 hieudoanm port check [--target <host:port>]
@@ -3259,7 +4064,7 @@ hieudoanm port check [--target <host:port>]
 Example:
 
 ```bash
-port check --target localhost:8080
+  port check --target localhost:8080
   port check --target google.com:443
   port check --target 192.168.1.1:22 --timeout 5
 ```
@@ -3269,6 +4074,8 @@ port check --target localhost:8080
 ### `hieudoanm port find`
 
 Find an available port in a range
+
+Find the first available TCP port within a given range. Useful for finding a free port for local development servers.
 
 ```bash
 hieudoanm port find
@@ -3284,7 +4091,7 @@ hieudoanm port find
 Example:
 
 ```bash
-port find
+  port find
   port find --start 3000 --end 3010
 ```
 
@@ -3311,7 +4118,7 @@ hieudoanm port scan [--host <host>]
 Example:
 
 ```bash
-port scan --host localhost
+  port scan --host localhost
   port scan --host google.com --ports 22,80,443
   port scan --host localhost --ports 8000-8100
 ```
@@ -3340,6 +4147,15 @@ hieudoanm search
 | --------------------- | --------- | ------- | --------------------- |
 | `--json (persistent)` | ``        | `false` | Output in JSON format |
 
+Example:
+
+```bash
+  search files --pattern "*.go"
+  search text --pattern "TODO" --path .
+  search code --symbol "NewCommand"
+  search web --query "golang concurrency patterns
+```
+
 ---
 
 ### `hieudoanm search files`
@@ -3353,13 +4169,6 @@ _.go - all Go files
 \*\*/_.ts - TypeScript files in any subdirectory
 src/\*_/_.ts - TypeScript files under src/
 test*\*.py - files matching test* prefix with .py extension
-
-Examples:
-search files --pattern "_.go"
-search files --pattern "_.ts" --dir src/
-search files --pattern "\*_/_.md" --dir docs/
-search files --pattern "_.py" --type f
-search files --pattern "config._" --hidden
 
 ```bash
 hieudoanm search files [--pattern <pattern>] [--dir <dir>]
@@ -3375,6 +4184,16 @@ hieudoanm search files [--pattern <pattern>] [--dir <dir>]
 | `--type`      | `-t`      | ``      | Filter by type: f (file) or d (directory) |
 | `--hidden`    | `-H`      | `false` | Include hidden files and directories      |
 
+Example:
+
+```bash
+  search files --pattern "*.go"
+  search files --pattern "*.ts" --dir src/
+  search files --pattern "**/*.md" --dir docs/
+  search files --pattern "*.py" --type f
+  search files --pattern "config.*" --hidden
+```
+
 ---
 
 ### `hieudoanm search text`
@@ -3382,12 +4201,6 @@ hieudoanm search files [--pattern <pattern>] [--dir <dir>]
 Search file contents using regex
 
 Search for a regex pattern inside files. If a directory is given, searches recursively.
-
-Examples:
-search text --pattern "TODO" --path .
-search text --pattern "func._error" --include "_.go"
-search text --pattern "import" --path src/ --ignore-case
-search text --pattern "panic" --max-count 5
 
 ```bash
 hieudoanm search text [--pattern <pattern>] [--path <path>]
@@ -3404,6 +4217,15 @@ hieudoanm search text [--pattern <pattern>] [--path <path>]
 | `--include`     | ``        | ``      | Glob pattern for file names (e.g. \"\*.go\") |
 | `--max-depth`   | `-d`      | `0`     | Maximum directory depth (0 = unlimited)      |
 
+Example:
+
+```bash
+  search text --pattern "TODO" --path .
+  search text --pattern "func.*error" --include "*.go"
+  search text --pattern "import" --path src/ --ignore-case
+  search text --pattern "panic" --max-count 5
+```
+
 ---
 
 ### `hieudoanm search code`
@@ -3413,13 +4235,6 @@ Search for code symbols (functions, types, variables)
 Find code symbol definitions matching a name pattern.
 
 Supports Go, TypeScript/JavaScript, Python, and Rust.
-
-Examples:
-search code --symbol "ParseCard"
-search code --symbol "handle" --dir src/
-search code --symbol "NewCommand" --lang go
-search code --symbol "getUser" --kind function
-search code --symbol "fetchAPI" --lang ts
 
 ```bash
 hieudoanm search code [--symbol <symbol>] [--dir <dir>]
@@ -3435,6 +4250,16 @@ hieudoanm search code [--symbol <symbol>] [--dir <dir>]
 | `--kind`        | `-k`      | ``      | Symbol kind (function, type, variable, method, class) |
 | `--max-results` | `-n`      | `0`     | Maximum number of results (0 = unlimited)             |
 
+Example:
+
+```bash
+  search code --symbol "ParseCard"
+  search code --symbol "handle" --dir src/
+  search code --symbol "NewCommand" --lang go
+  search code --symbol "getUser" --kind function
+  search code --symbol "fetchAPI" --lang ts
+```
+
 ---
 
 ### `hieudoanm search web`
@@ -3442,11 +4267,6 @@ hieudoanm search code [--symbol <symbol>] [--dir <dir>]
 Search the internet
 
 Search the web for a query. Uses DuckDuckGo by default (no API key needed).
-
-Examples:
-search web --query "golang concurrency patterns"
-search web --query "latest AI news 2026" --max-results 10
-search web --query "site:github.com golang cli" --source google
 
 ```bash
 hieudoanm search web [--query <query>]
@@ -3459,6 +4279,14 @@ hieudoanm search web [--query <query>]
 | `--query`       | `-q`      | ``           | Search query               |
 | `--max-results` | `-n`      | `5`          | Maximum number of results  |
 | `--source`      | `-s`      | `duckduckgo` | Search source (duckduckgo) |
+
+Example:
+
+```bash
+  search web --query "golang concurrency patterns"
+  search web --query "latest AI news 2026" --max-results 10
+  search web --query "site:github.com golang cli" --source google
+```
 
 ---
 
@@ -3485,7 +4313,7 @@ hieudoanm semver <command> [flags]
 Example:
 
 ```bash
-semver validate --versions 1.2.3
+  semver validate --versions 1.2.3
   semver compare --a 1.0.0 --b 2.0.0
   semver sort --versions 1.2.0,2.0.0,1.10.0
   semver --bump minor --version 1.2.3
@@ -3498,6 +4326,8 @@ semver validate --versions 1.2.3
 ### `hieudoanm semver <command> [flags] validate`
 
 Validate one or more semver strings
+
+Validate whether one or more comma-separated strings conform to semantic versioning (major.minor.patch, optionally with "v" prefix).
 
 ```bash
 hieudoanm semver <command> [flags] validate [--versions <v1,v2,...>]
@@ -3512,7 +4342,7 @@ hieudoanm semver <command> [flags] validate [--versions <v1,v2,...>]
 Example:
 
 ```bash
-semver validate --versions 1.2.3
+  semver validate --versions 1.2.3
   semver validate --versions 1.2.3,2.0.0,abc
   semver validate --versions v1.0.0
 ```
@@ -3522,6 +4352,8 @@ semver validate --versions 1.2.3
 ### `hieudoanm semver <command> [flags] compare`
 
 Compare two semver strings
+
+Compare two semantic versions and output their relationship (less than, greater than, or equal). Versions may be prefixed with "v".
 
 ```bash
 hieudoanm semver <command> [flags] compare --a <version> --b <version>
@@ -3538,7 +4370,7 @@ hieudoanm semver <command> [flags] compare --a <version> --b <version>
 Example:
 
 ```bash
-semver compare --a 1.0.0 --b 2.0.0
+  semver compare --a 1.0.0 --b 2.0.0
   semver compare --a v1.2.3 --b v1.2.3
 ```
 
@@ -3547,6 +4379,8 @@ semver compare --a 1.0.0 --b 2.0.0
 ### `hieudoanm semver <command> [flags] sort`
 
 Sort one or more semver strings
+
+Sort a list of comma-separated semantic version strings in ascending order. Versions may be prefixed with "v".
 
 ```bash
 hieudoanm semver <command> [flags] sort [--versions <v1,v2,...>]
@@ -3561,7 +4395,7 @@ hieudoanm semver <command> [flags] sort [--versions <v1,v2,...>]
 Example:
 
 ```bash
-semver sort --versions 1.2.0,2.0.0,1.10.0
+  semver sort --versions 1.2.0,2.0.0,1.10.0
   semver sort --versions v3.0.0,v1.0.0,v2.0.0
 ```
 
@@ -3583,11 +4417,24 @@ hieudoanm system
 | --------------------- | --------- | ------- | --------------------- |
 | `--json (persistent)` | `-j`      | `false` | Output in JSON format |
 
+Example:
+
+```bash
+  system monitor
+  system info
+  system disk
+  system battery
+  system env PATH
+  system path go
+```
+
 ---
 
 ### `hieudoanm system monitor`
 
 Monitor system resources in real-time
+
+Display real-time CPU, memory, and process information in a Bubble Tea TUI, or output a one-shot JSON snapshot with --json.
 
 ```bash
 hieudoanm system monitor
@@ -3598,6 +4445,13 @@ hieudoanm system monitor
 | Flag     | Shorthand | Default | Description           |
 | -------- | --------- | ------- | --------------------- |
 | `--json` | ``        | `false` | Output in JSON format |
+
+Example:
+
+```bash
+  system monitor
+  system monitor --json
+```
 
 ---
 
@@ -3617,6 +4471,12 @@ hieudoanm system clipboard
 | -------- | --------- | ------- | --------------------- |
 | `--json` | ``        | `false` | Output in JSON format |
 
+Example:
+
+```bash
+  system clipboard
+```
+
 ---
 
 ### `hieudoanm system info`
@@ -3634,6 +4494,13 @@ hieudoanm system info
 | Flag     | Shorthand | Default | Description           |
 | -------- | --------- | ------- | --------------------- |
 | `--json` | ``        | `false` | Output in JSON format |
+
+Example:
+
+```bash
+  system info
+  system info --json
+```
 
 ---
 
@@ -3657,7 +4524,7 @@ hieudoanm system env [key]
 Example:
 
 ```bash
-system env
+  system env
   system env PATH
   system env HOME
   system env --sort
@@ -3689,7 +4556,7 @@ hieudoanm system path [command]
 Example:
 
 ```bash
-system path
+  system path
   system path go
   system path --sort
   system path --json
@@ -3716,7 +4583,7 @@ hieudoanm system disk
 Example:
 
 ```bash
-system disk
+  system disk
   system disk --json
 ```
 
@@ -3738,11 +4605,20 @@ hieudoanm system battery
 | -------- | --------- | ------- | --------------------- |
 | `--json` | ``        | `false` | Output in JSON format |
 
+Example:
+
+```bash
+  system battery
+  system battery --json
+```
+
 ---
 
 ## `hieudoanm telegram`
 
 Telegram bot and message tools
+
+Tools for interacting with the Telegram Bot API: send messages and manage webhooks.
 
 ```bash
 hieudoanm telegram
@@ -3754,88 +4630,123 @@ hieudoanm telegram
 | --------------------- | --------- | ------- | --------------------- |
 | `--json (persistent)` | `-j`      | `false` | Output in JSON format |
 
+Example:
+
+```bash
+  telegram message send
+  telegram webhook set
+  telegram webhook info
+  telegram webhook delete
+```
+
 ---
 
 ### `hieudoanm telegram message`
 
-Run the message operation for the telegram app
+Send Telegram messages
 
-The message command is a specific utility to execute operations related to message within the telegram application.
-
-As a component of the messaging tools, this command empowers you to interact directly with telegram's message features via the CLI.
+Send messages via the Telegram Bot API.
 
 ```bash
 hieudoanm telegram message
+```
+
+Example:
+
+```bash
+  telegram message send
 ```
 
 ---
 
 #### `hieudoanm telegram message send`
 
-Run the send operation for the telegram app
+Send a Telegram message
 
-The send command is a specific utility to execute operations related to send within the telegram application.
-
-As a component of the messaging tools, this command empowers you to interact directly with telegram's send features via the CLI.
+Prompt for a Telegram Bot API token, chat ID, and message text, then send the message via the Telegram Bot API.
 
 ```bash
 hieudoanm telegram message send
+```
+
+Example:
+
+```bash
+  telegram message send
 ```
 
 ---
 
 ### `hieudoanm telegram webhook`
 
-Run the webhook operation for the telegram app
+Manage Telegram webhooks
 
-The webhook command is a specific utility to execute operations related to webhook within the telegram application.
-
-As a component of the messaging tools, this command empowers you to interact directly with telegram's webhook features via the CLI.
+Manage Telegram Bot webhooks: set, check info, or delete.
 
 ```bash
 hieudoanm telegram webhook
+```
+
+Example:
+
+```bash
+  telegram webhook set
+  telegram webhook info
+  telegram webhook delete
 ```
 
 ---
 
 #### `hieudoanm telegram webhook delete`
 
-Run the delete operation for the telegram app
+Delete the Telegram webhook
 
-The delete command is a specific utility to execute operations related to delete within the telegram application.
-
-As a component of the messaging tools, this command empowers you to interact directly with telegram's delete features via the CLI.
+Prompt for a Telegram Bot API token and delete the currently registered webhook.
 
 ```bash
 hieudoanm telegram webhook delete
+```
+
+Example:
+
+```bash
+  telegram webhook delete
 ```
 
 ---
 
 #### `hieudoanm telegram webhook info`
 
-Run the info operation for the telegram app
+Get current webhook info
 
-The info command is a specific utility to execute operations related to info within the telegram application.
-
-As a component of the messaging tools, this command empowers you to interact directly with telegram's info features via the CLI.
+Prompt for a Telegram Bot API token and fetch the current webhook configuration.
 
 ```bash
 hieudoanm telegram webhook info
+```
+
+Example:
+
+```bash
+  telegram webhook info
 ```
 
 ---
 
 #### `hieudoanm telegram webhook set`
 
-Run the set operation for the telegram app
+Set a Telegram webhook URL
 
-The set command is a specific utility to execute operations related to set within the telegram application.
-
-As a component of the messaging tools, this command empowers you to interact directly with telegram's set features via the CLI.
+Prompt for a Telegram Bot API token and webhook URL, then register the webhook with Telegram.
 
 ```bash
 hieudoanm telegram webhook set
+```
+
+Example:
+
+```bash
+  telegram webhook set
 ```
 
 ---
@@ -3856,6 +4767,18 @@ hieudoanm time
 | --------------------- | --------- | ------- | --------------------- |
 | `--json (persistent)` | `-j`      | `false` | Output in JSON format |
 
+Example:
+
+```bash
+  time clock now
+  time age --date 1990-01-15
+  time epoch 1718100000
+  time cron --expression "*/15 * * * *"
+  time timer --duration 30s
+  time pomodoro
+  time world ny london tokyo
+```
+
 ---
 
 ### `hieudoanm time clock`
@@ -3866,6 +4789,12 @@ Clock and timer utilities including current time display.
 
 ```bash
 hieudoanm time clock
+```
+
+Example:
+
+```bash
+  time clock now
 ```
 
 ---
@@ -3885,6 +4814,13 @@ hieudoanm time clock now
 | Flag     | Shorthand | Default | Description           |
 | -------- | --------- | ------- | --------------------- |
 | `--json` | ``        | `false` | Output in JSON format |
+
+Example:
+
+```bash
+  time clock now
+  time clock now --json
+```
 
 ---
 
@@ -3910,7 +4846,7 @@ hieudoanm time cron [--expression <expression>]
 Example:
 
 ```bash
-cron --expression "*/15 * * * *"
+  cron --expression "*/15 * * * *"
   cron --expression "0 9 * * 1-5"
   cron --expression "0 0 1 1 *"
   cron --next 5 --expression "*/30 * * * *"
@@ -3943,7 +4879,7 @@ hieudoanm time epoch [timestamp]
 Example:
 
 ```bash
-epoch 1718100000
+  epoch 1718100000
   epoch --from "2024-06-11"
   epoch --from "2024-06-11T15:04:05Z"
   epoch --relative "2 hours ago"
@@ -3957,6 +4893,8 @@ epoch 1718100000
 
 Start a Pomodoro timer TUI session
 
+Launch a Bubble Tea TUI Pomodoro timer with configurable work and break durations. Press p to pause/resume, s to stop, q to quit.
+
 ```bash
 hieudoanm time pomodoro
 ```
@@ -3967,6 +4905,13 @@ hieudoanm time pomodoro
 | -------- | --------- | ------- | -------------------- |
 | `--work` | `-w`      | `25`    | work session minutes |
 | `--rest` | `-r`      | `5`     | rest session minutes |
+
+Example:
+
+```bash
+  time pomodoro
+  time pomodoro --work 25 --rest 5
+```
 
 ---
 
@@ -3992,7 +4937,7 @@ hieudoanm time timer [--duration <duration>]
 Example:
 
 ```bash
-timer --duration 30s
+  timer --duration 30s
   timer --duration 5m
   timer --duration 90
 ```
@@ -4021,7 +4966,7 @@ hieudoanm time until [--time <datetime>]
 Example:
 
 ```bash
-hieudoanm time until --time 2026-12-25
+  hieudoanm time until --time 2026-12-25
   hieudoanm time until --time "2026-12-25 15:04:05"
   hieudoanm time until --time 2026-12-25T00:00:00Z
 ```
@@ -4044,7 +4989,7 @@ hieudoanm time world [zone1 zone2 ...]
 Example:
 
 ```bash
-hieudoanm time world
+  hieudoanm time world
   hieudoanm time world ny london tokyo hcmc
   hieudoanm time world UTC UTC+5:30
 ```
@@ -4073,7 +5018,7 @@ hieudoanm time age [--date <birthdate>]
 Example:
 
 ```bash
-time age --date 1990-01-15
+  time age --date 1990-01-15
   time age --date 1990-01-15 --json
 ```
 
@@ -4096,6 +5041,13 @@ hieudoanm time stopwatch
 | -------- | --------- | ------- | --------------------- |
 | `--json` | ``        | `false` | Output in JSON format |
 
+Example:
+
+```bash
+  time stopwatch
+  time stopwatch --json
+```
+
 ---
 
 ## `hieudoanm version`
@@ -4113,6 +5065,13 @@ hieudoanm version
 | Flag     | Shorthand | Default | Description           |
 | -------- | --------- | ------- | --------------------- |
 | `--json` | ``        | `false` | Output in JSON format |
+
+Example:
+
+```bash
+  version
+  version --json
+```
 
 ---
 
@@ -4132,6 +5091,15 @@ hieudoanm web
 | --------------------- | --------- | ------- | --------------------- |
 | `--json (persistent)` | `-j`      | `false` | Output in JSON format |
 
+Example:
+
+```bash
+  web weather London
+  web snapshot --url https://example.com
+  web youtube fetch --url dQw4w9WgXcQ
+  web instagram download --url CLI7qRNhI_o
+```
+
 ---
 
 ### `hieudoanm web instagram`
@@ -4144,6 +5112,12 @@ Instagram related tools like downloading images and reels.
 hieudoanm web instagram
 ```
 
+Example:
+
+```bash
+  web instagram download --url CLI7qRNhI_o
+```
+
 ---
 
 #### `hieudoanm web instagram download`
@@ -4152,10 +5126,6 @@ Download images from Instagram
 
 Download images from an Instagram post, reel, or video.
 Supports carousels and specific image selection via --index.
-
-Example:
-devtools instagram download --url https://www.instagram.com/p/CLI7qRNhI_o/
-devtools instagram download --url CLI7qRNhI_o --index 1
 
 ```bash
 hieudoanm web instagram download [--url <url>]
@@ -4171,21 +5141,39 @@ hieudoanm web instagram download [--url <url>]
 | `--proxy`  | `-p`      | `false` | Use proxy to fetch content                 |
 | `--json`   | ``        | `false` | Output in JSON format                      |
 
+Example:
+
+```bash
+  web instagram download --url https://www.instagram.com/p/CLI7qRNhI_o/
+  web instagram download --url CLI7qRNhI_o --index 1
+  web instagram download --url CLI7qRNhI_o --output ./downloads --json
+```
+
 ---
 
 ### `hieudoanm web shopify`
 
 Shopify detection and analysis tools
 
+Detect whether a website is built with Shopify and identify Shopify Plus stores.
+
 ```bash
 hieudoanm web shopify
+```
+
+Example:
+
+```bash
+  web shopify detect example.com
 ```
 
 ---
 
 #### `hieudoanm web shopify detect`
 
-Run the detect operation for the shopify app
+Detect if a website is using Shopify
+
+Check a website URL for Shopify indicators including CDN references, script patterns, storefront API, and Shopify Plus headers.
 
 ```bash
 hieudoanm web shopify detect [url]
@@ -4197,6 +5185,13 @@ hieudoanm web shopify detect [url]
 | ----------- | --------- | ------- | ---------------------- |
 | `--verbose` | `-v`      | `false` | Show detection signals |
 | `--json`    | ``        | `false` | Output in JSON format  |
+
+Example:
+
+```bash
+  web shopify detect example.com
+  web shopify detect https://shop.example.com --verbose
+```
 
 ---
 
@@ -4228,6 +5223,16 @@ hieudoanm web snapshot [--url <url>]
 | `--verbose`   | `-v`      | `false`   | Print extra info                       |
 | `--json`      | ``        | `false`   | Output in JSON format                  |
 
+Example:
+
+```bash
+  web snapshot --url https://example.com
+  web snapshot --url https://example.com --full-page
+  web snapshot --url https://example.com --pdf
+  web snapshot --url https://example.com --preset mobile
+  web snapshot --url https://example.com --delay 2s
+```
+
 ---
 
 ### `hieudoanm web weather`
@@ -4251,7 +5256,7 @@ hieudoanm web weather [city]
 Example:
 
 ```bash
-weather London
+  weather London
   weather "Ho Chi Minh City"
   weather --forecast Tokyo
   weather --json London
@@ -4262,14 +5267,19 @@ weather London
 
 ### `hieudoanm web youtube`
 
-YouTube CLI application (devtools)
+YouTube transcript and thumbnail tools
 
-The youtube CLI application is a comprehensive backend utility belonging to the devtools suite of tools.
-
-Use this root executable to manage configuring, running, and interacting with all youtube-related operations securely and efficiently from your terminal.
+Fetch YouTube video transcripts and download thumbnails in various qualities.
 
 ```bash
 hieudoanm web youtube
+```
+
+Example:
+
+```bash
+  web youtube fetch --url dQw4w9WgXcQ
+  web youtube thumbnails --url dQw4w9WgXcQ
 ```
 
 ---
@@ -4288,12 +5298,6 @@ Accepts any of:
 - Shorts URL: https://www.youtube.com/shorts/dQw4w9WgXcQ
 - Raw ID: dQw4w9WgXcQ
 
-Examples:
-devtools youtube thumbnails --url https://www.youtube.com/watch?v=dQw4w9WgXcQ
-devtools youtube thumbnails --url dQw4w9WgXcQ --quality hqdefault
-devtools youtube thumbnails --url dQw4w9WgXcQ --output ./thumbs
-devtools youtube thumbnails --url dQw4w9WgXcQ --all
-
 ```bash
 hieudoanm web youtube thumbnails [--url <video-url-or-id>]
 ```
@@ -4309,11 +5313,22 @@ hieudoanm web youtube thumbnails [--url <video-url-or-id>]
 | `--list`    | `-l`      | `false` | list thumbnail URLs without downloading |
 | `--json`    | ``        | `false` | Output in JSON format (with --list)     |
 
+Example:
+
+```bash
+  web youtube thumbnails --url dQw4w9WgXcQ
+  web youtube thumbnails --url dQw4w9WgXcQ --quality hqdefault
+  web youtube thumbnails --url dQw4w9WgXcQ --output ./thumbs
+  web youtube thumbnails --url dQw4w9WgXcQ --all
+```
+
 ---
 
 #### `hieudoanm web youtube fetch`
 
 Fetch YouTube video transcript
+
+Fetch the transcript/captions for a YouTube video by URL or video ID. Supports language selection and multiple output formats.
 
 ```bash
 hieudoanm web youtube fetch [--url <video-id-or-url>]
@@ -4328,5 +5343,14 @@ hieudoanm web youtube fetch [--url <video-id-or-url>]
 | `--output`        | `-o`      | ``      | Save to file instead of stdout   |
 | `--format`        | `-f`      | `text`  | Output format: text or json      |
 | `--no-timestamps` | ``        | `false` | Omit timestamps from text output |
+
+Example:
+
+```bash
+  web youtube fetch --url dQw4w9WgXcQ
+  web youtube fetch --url dQw4w9WgXcQ --lang es
+  web youtube fetch --url dQw4w9WgXcQ --format json
+  web youtube fetch --url dQw4w9WgXcQ --no-timestamps
+```
 
 ---

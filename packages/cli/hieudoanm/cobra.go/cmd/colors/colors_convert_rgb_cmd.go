@@ -13,11 +13,10 @@ import (
 
 func newConvertRgbCmd() *cobra.Command {
 	return &cobra.Command{
-		Use:   "rgb",
-		Short: "Run the rgb operation for the colors app",
-		Long: `The rgb command is a specific utility to execute operations related to rgb within the colors application.
-
-As a component of the design tools, this command empowers you to interact directly with colors's rgb features via the CLI.`,
+		Use:     "rgb",
+		Short:   "Convert RGB values to HEX, HSL, HCL, OKLCH, and CMYK",
+		Long:    `Prompt for R, G, B values and convert them to HEX, HSL, HCL, OKLCH, and CMYK color spaces.`,
+		Example: `  colors rgb`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 
 			reader := bufio.NewReader(os.Stdin)

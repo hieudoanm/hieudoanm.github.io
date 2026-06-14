@@ -16,7 +16,11 @@ func newUUIDCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "uuid",
 		Short: "Generate UUID v4 identifiers",
-		Args:  cobra.NoArgs,
+		Long:  `Generate random UUID v4 (RFC 4122) identifiers. Supports generating multiple UUIDs at once and JSON output.`,
+		Example: `  crypto uuid
+  crypto uuid --count 5
+  crypto uuid --count 3 --json`,
+		Args: cobra.NoArgs,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			var uuids []string
 			for i := 0; i < count; i++ {

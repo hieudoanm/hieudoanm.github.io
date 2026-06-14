@@ -71,10 +71,9 @@ func newLanguagesCmd() *cobra.Command {
 		Use:   "languages [--repo <owner/repo>]",
 		Short: "Show repository language breakdown and generate SVG bar chart",
 		Long: `Fetches language statistics for a GitHub repository and generates
-an SVG bar chart showing the breakdown.
-
-Example:
-  hieudoanm gh languages --repo hieudoanm/hieudoanm.github.io`,
+an SVG bar chart showing the breakdown.`,
+		Example: `  gh languages --repo hieudoanm/hieudoanm.github.io
+  gh languages --repo hieudoanm/hieudoanm --output lang.svg`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			output, _ := cmd.Flags().GetString("output")
 

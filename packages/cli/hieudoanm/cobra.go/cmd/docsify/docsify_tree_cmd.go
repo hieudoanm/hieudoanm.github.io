@@ -22,6 +22,8 @@ func newTreeCmd() *cobra.Command {
 		Use:   "tree",
 		Short: "Generate directory tree as Markdown",
 		Long:  `Walk the directory tree and write the structure to TREE.md, respecting .gitignore patterns.`,
+		Example: `  docsify tree --dir . --out TREE.md
+  docsify tree --dir /path/to/project`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			absDir, err := filepath.Abs(treeDir)
 			if err != nil {

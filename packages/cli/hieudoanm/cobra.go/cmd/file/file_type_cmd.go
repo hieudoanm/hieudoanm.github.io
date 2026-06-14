@@ -13,6 +13,7 @@ func newTypeCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "type [--file <path>]",
 		Short: "Detect file type by extension",
+		Long:  `Detect a file's MIME type based on its extension and display file metadata (size, mode, modification time).`,
 		Example: `  file type --file image.png
   file type -f document.pdf`,
 		RunE: func(cmd *cobra.Command, args []string) error {

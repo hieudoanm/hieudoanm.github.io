@@ -16,6 +16,10 @@ func newValidateCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "validate [--file <file>]",
 		Short: "Validate an OpenAPI specification",
+		Long:  `Parse and validate an OpenAPI specification file (JSON or YAML). Checks for required fields (openapi, info, paths), valid operation methods, operationId uniqueness, and response definitions.`,
+		Example: `  openapi validate -f spec.yaml
+  openapi validate -f openapi.json
+  openapi validate -f petstore-v3.yaml --json`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			data, err := os.ReadFile(file)
 			if err != nil {

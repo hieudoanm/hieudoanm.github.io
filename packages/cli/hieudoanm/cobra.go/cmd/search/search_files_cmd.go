@@ -20,10 +20,8 @@ Patterns use glob syntax:
   *.go          - all Go files
   **/*.ts       - TypeScript files in any subdirectory
   src/**/*.ts   - TypeScript files under src/
-  test_*.py     - files matching test_ prefix with .py extension
-
-Examples:
-  search files --pattern "*.go"
+  test_*.py     - files matching test_ prefix with .py extension`,
+		Example: `  search files --pattern "*.go"
   search files --pattern "*.ts" --dir src/
   search files --pattern "**/*.md" --dir docs/
   search files --pattern "*.py" --type f

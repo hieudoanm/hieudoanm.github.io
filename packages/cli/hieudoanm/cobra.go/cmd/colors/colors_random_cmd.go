@@ -12,10 +12,10 @@ func newRandomCmd() *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "random",
-		Short: "Run the random operation for the colors app",
-		Long: `The random command is a specific utility to execute operations related to random within the colors application.
-
-As a component of the design tools, this command empowers you to interact directly with colors's random features via the CLI.`,
+		Short: "Generate random HEX colors with RGB preview",
+		Long:  `Generate one or more random HEX colors and display them alongside their RGB values.`,
+		Example: `  colors random
+  colors random --max 5`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 
 			for i := 0; i < maxHEX; i++ {

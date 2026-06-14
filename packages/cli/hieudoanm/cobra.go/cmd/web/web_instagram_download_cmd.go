@@ -14,11 +14,10 @@ func newIGDownloadCmd() *cobra.Command {
 		Use:   "download [--url <url>]",
 		Short: "Download images from Instagram",
 		Long: `Download images from an Instagram post, reel, or video.
-Supports carousels and specific image selection via --index.
-
-Example:
-  devtools instagram download --url https://www.instagram.com/p/CLI7qRNhI_o/
-  devtools instagram download --url CLI7qRNhI_o --index 1`,
+Supports carousels and specific image selection via --index.`,
+		Example: `  web instagram download --url https://www.instagram.com/p/CLI7qRNhI_o/
+  web instagram download --url CLI7qRNhI_o --index 1
+  web instagram download --url CLI7qRNhI_o --output ./downloads --json`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			input := url
 			outputDir, _ := cmd.Flags().GetString("output")

@@ -14,6 +14,10 @@ func newInfoCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "info [--file <file>]",
 		Short: "Show image metadata (dimensions, format, etc.)",
+		Long:  `Display detailed metadata for an image file including dimensions (width/height), file format, file size on disk, and color model information.`,
+		Example: `  image info --file photo.jpg
+  image info -f logo.png
+  image info --file screenshot.png --json`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			f, err := os.Open(file)
 			if err != nil {

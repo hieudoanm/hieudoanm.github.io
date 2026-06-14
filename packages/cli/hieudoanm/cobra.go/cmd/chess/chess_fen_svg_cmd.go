@@ -14,10 +14,10 @@ import (
 func newFen2svgCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "svg",
-		Short: "Run the svg operation for the chess.graphics app",
-		Long: `The svg command is a specific utility to execute operations related to svg within the chess.graphics application.
-
-As a component of the chess tools, this command empowers you to interact directly with chess.graphics's svg features via the CLI.`,
+		Short: "Render a FEN position as an SVG board image",
+		Long:  `Generate an SVG image of a chess board from a FEN string, with standard light/dark square colors.`,
+		Example: `  chess fen svg --fen "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
+  chess fen svg --fen "..." --out board.svg`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			fenStr, _ := cmd.Flags().GetString("fen")
 			outputFile, _ := cmd.Flags().GetString("out")

@@ -16,11 +16,10 @@ type SetResponse struct {
 
 func newWebhookSetCmd() *cobra.Command {
 	return &cobra.Command{
-		Use:   "set",
-		Short: "Run the set operation for the telegram app",
-		Long: `The set command is a specific utility to execute operations related to set within the telegram application.
-
-As a component of the messaging tools, this command empowers you to interact directly with telegram's set features via the CLI.`,
+		Use:     "set",
+		Short:   "Set a Telegram webhook URL",
+		Long:    `Prompt for a Telegram Bot API token and webhook URL, then register the webhook with Telegram.`,
+		Example: `  telegram webhook set`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			fmt.Print("Telegram Token: ")
 			var token string

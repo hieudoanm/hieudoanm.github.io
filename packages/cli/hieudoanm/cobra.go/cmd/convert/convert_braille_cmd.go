@@ -34,7 +34,9 @@ func newBrailleCmd() *cobra.Command {
 		Use:   "braille [text]",
 		Short: "Convert text to Braille",
 		Long:  `Converts plain text to Unicode Braille characters. Supports letters, numbers, and common punctuation.`,
-		Args:  cobra.MaximumNArgs(1),
+		Example: `  convert braille "hello"
+  convert braille "good morning"`,
+		Args: cobra.MaximumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			text, err := resolveText(args)
 			if err != nil {

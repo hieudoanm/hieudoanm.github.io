@@ -9,11 +9,10 @@ import (
 
 func newConvertHclCmd() *cobra.Command {
 	return &cobra.Command{
-		Use:   "hcl",
-		Short: "Run the hcl operation for the colors app",
-		Long: `The hcl command is a specific utility to execute operations related to hcl within the colors application.
-
-As a component of the design tools, this command empowers you to interact directly with colors's hcl features via the CLI.`,
+		Use:     "hcl",
+		Short:   "Convert HCL values to HEX, RGB, HSL, OKLCH, and CMYK",
+		Long:    `Prompt for HCL (Hue, Chroma, Lightness) values and convert them to RGB, HEX, HSL, OKLCH, and CMYK color spaces.`,
+		Example: `  colors hcl`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			// Prompt for HCL input
 			var h, c, l float64

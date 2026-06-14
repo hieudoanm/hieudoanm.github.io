@@ -20,7 +20,11 @@ func newModelsCmd() *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "models",
-		Short: "Run the models operation for the OpenRouter app",
+		Short: "List available free models from OpenRouter",
+		Long:  `Fetch and display all free models available on OpenRouter. Models can be filtered by name or ID with --search, and grouped by provider for easy browsing.`,
+		Example: `  openrouter models
+  openrouter models --search gemma
+  openrouter models --json`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			return runModels(cmd, args, modelsSearch, modelsJSON)
 		},

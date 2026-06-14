@@ -14,6 +14,9 @@ func newTipCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "tip",
 		Short: "Calculate tip and split bill",
+		Long: `Calculate the tip amount, total bill, and per-person share when splitting.
+
+Enter the bill amount, tip percentage, and number of people to split.`,
 		Example: `  calc tip --bill 50 --percent 15 --split 4
   calc tip -b 50 -p 15 -s 4`,
 		RunE: func(cmd *cobra.Command, args []string) error {

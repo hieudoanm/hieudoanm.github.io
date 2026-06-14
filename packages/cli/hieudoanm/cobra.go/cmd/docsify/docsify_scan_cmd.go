@@ -20,6 +20,9 @@ func newScanCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "scan",
 		Short: "Scan a codebase and generate a GraphML file",
+		Long:  `Walk a codebase directory, extract symbols (functions, types, classes) and call edges from Go, TypeScript, Python, and Rust source files, and write the result as a GraphML file.`,
+		Example: `  docsify scan --dir . --out graph.graphml
+  docsify scan --dir /path/to/project --verbose`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			absDir, err := filepath.Abs(dir)
 			if err != nil {

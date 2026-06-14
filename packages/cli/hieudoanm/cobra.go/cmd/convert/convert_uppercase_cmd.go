@@ -11,7 +11,10 @@ func newUppercaseCmd() *cobra.Command {
 	return &cobra.Command{
 		Use:   "uppercase [text]",
 		Short: "Convert a string to uppercase",
-		Args:  cobra.MaximumNArgs(1),
+		Long:  `Convert all characters in the provided text to uppercase.`,
+		Example: `  convert uppercase "hello world"
+  convert uppercase "the quick brown fox"`,
+		Args: cobra.MaximumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			text, err := resolveText(args)
 			if err != nil {

@@ -5,10 +5,10 @@ import "github.com/spf13/cobra"
 func newYoutubeCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "youtube",
-		Short: "YouTube CLI application (devtools)",
-		Long: `The youtube CLI application is a comprehensive backend utility belonging to the devtools suite of tools.
-
-Use this root executable to manage configuring, running, and interacting with all youtube-related operations securely and efficiently from your terminal.`,
+		Short: "YouTube transcript and thumbnail tools",
+		Long:  `Fetch YouTube video transcripts and download thumbnails in various qualities.`,
+		Example: `  web youtube fetch --url dQw4w9WgXcQ
+  web youtube thumbnails --url dQw4w9WgXcQ`,
 	}
 
 	cmd.AddCommand(newYoutubeThumbnailsCmd())

@@ -10,9 +10,12 @@ var jsonOutput bool
 func NewCommand() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "docsify",
-		Short: "",
-		Long:  "",
-		RunE:  func(cmd *cobra.Command, args []string) error { return cmd.Help() },
+		Short: "Codebase documentation and analysis tools",
+		Long:  `Generate documentation from Cobra CLI projects, scan codebases for symbols and call graphs, build wiki-link graphs from markdown files, and produce directory trees.`,
+		Example: `  docsify cobra --file /path/to/project
+  docsify scan --dir . --out graph.graphml
+  docsify tree --dir . --out TREE.md`,
+		RunE: func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
 
 	cmd.PersistentFlags().BoolVarP(&jsonOutput, "json", "j", false, "Output in JSON format")

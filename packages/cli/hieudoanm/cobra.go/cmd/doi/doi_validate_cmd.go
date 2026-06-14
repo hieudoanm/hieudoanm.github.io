@@ -12,7 +12,9 @@ func newValidateCmd() *cobra.Command {
 		Use:   "validate [doi]",
 		Short: "Validate a DOI string format",
 		Long:  `Checks whether a given string conforms to the DOI syntax (10.NNNN/...).`,
-		Args:  cobra.MaximumNArgs(1),
+		Example: `  doi validate 10.1000/xyz123
+  doi validate 10.1234/invalid`,
+		Args: cobra.MaximumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			var id string
 			if len(args) > 0 {

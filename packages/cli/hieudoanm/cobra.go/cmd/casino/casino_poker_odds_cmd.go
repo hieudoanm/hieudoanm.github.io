@@ -18,15 +18,13 @@ func newPokerOddsCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "odds [--hand <hole>]",
 		Short: "Calculate Texas Hold'em poker odds",
-		Long: `Calculate win/tie/lose odds using Monte Carlo simulation.
+		Long: `Calculate win/tie/lose odds using Monte Carlo simulation for Texas Hold'em.
 
 Hole cards are required (e.g. "Ah Kh" or "As Ks").
-Use --board to specify community cards (0-5 cards).
-
-Examples:
-  hieudoanm casino odds --hand "Ah Kh"
-  hieudoanm casino odds --hand "Ah Kh" --board "2h 7s Tc"
-  hieudoanm casino odds --hand "As Ks" --board "2h 7s Tc" --opponents 3`,
+Use --board to specify community cards (0-5 cards).`,
+		Example: `  casino poker odds --hand "Ah Kh"
+  casino poker odds --hand "Ah Kh" --board "2h 7s Tc"
+  casino poker odds --hand "As Ks" --board "2h 7s Tc" --opponents 3`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			hole, err := FormatCards(hand)
 			if err != nil {

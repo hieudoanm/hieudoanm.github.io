@@ -31,6 +31,8 @@ func newDefineCmd() *cobra.Command {
 		Use:   "define [--word <word>]",
 		Short: "Look up the definition of an English word",
 		Long:  `Fetches and displays the definition, part of speech, synonyms, and antonyms for a given English word from a local dictionary data source.`,
+		Example: `  english define --word hello
+  english define --word serendipity --json`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			word = strings.TrimSpace(strings.ToLower(word))
 			if word == "" {

@@ -14,6 +14,10 @@ func newSizeCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "size [--path <file-or-dir>]",
 		Short: "Show file or directory size",
+		Long:  `Display the size of a file or the total size of a directory (recursive).`,
+		Example: `  file size --path main.go
+  file size -p /path/to/directory
+  file size -p . --json`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			info, err := os.Stat(path)
 			if err != nil {

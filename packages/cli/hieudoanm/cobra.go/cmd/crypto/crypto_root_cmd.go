@@ -9,7 +9,10 @@ func NewCommand() *cobra.Command {
 		Use:   "crypto",
 		Short: "Cryptographic and security tools",
 		Long:  `Hashing, password generation, JWT, UUIDs, and QR codes.`,
-		RunE:  func(cmd *cobra.Command, args []string) error { return cmd.Help() },
+		Example: `  crypto uuid
+  crypto hash --text "hello world"
+  crypto passwd --length 32 --symbols`,
+		RunE: func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
 	cmd.AddCommand(
 		newHashCmd(),

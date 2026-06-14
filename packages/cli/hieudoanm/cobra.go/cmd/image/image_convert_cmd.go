@@ -18,6 +18,7 @@ func newConvertCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "convert [--file <file>]",
 		Short: "Convert image to another format",
+		Long:  `Convert an image file from one format to another. Supports PNG, JPEG/JPG, and GIF output formats.`,
 		Example: `  image convert --file photo.jpg --format png
   image convert --file photo.png --format jpg --output photo.jpg`,
 		RunE: func(cmd *cobra.Command, args []string) error {

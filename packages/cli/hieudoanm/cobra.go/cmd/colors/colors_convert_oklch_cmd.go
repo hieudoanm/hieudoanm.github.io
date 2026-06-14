@@ -9,11 +9,10 @@ import (
 
 func newConvertOklchCmd() *cobra.Command {
 	return &cobra.Command{
-		Use:   "oklch",
-		Short: "Run the oklch operation for the colors app",
-		Long: `The oklch command is a specific utility to execute operations related to oklch within the colors application.
-
-As a component of the design tools, this command empowers you to interact directly with colors's oklch features via the CLI.`,
+		Use:     "oklch",
+		Short:   "Convert OKLCH values to HEX, RGB, HSL, HCL, and CMYK",
+		Long:    `Prompt for OKLCH (Lightness, Chroma, Hue) values and convert them to RGB, HEX, HSL, HCL, and CMYK color spaces.`,
+		Example: `  colors oklch`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			// Prompt for OKLCH input
 			var L, C, H float64

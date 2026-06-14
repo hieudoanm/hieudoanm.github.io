@@ -14,6 +14,9 @@ var monitorJSON bool
 var sysMonitorCmd = &cobra.Command{
 	Use:   "monitor",
 	Short: "Monitor system resources in real-time",
+	Long:  `Display real-time CPU, memory, and process information in a Bubble Tea TUI, or output a one-shot JSON snapshot with --json.`,
+	Example: `  system monitor
+  system monitor --json`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		if monitorJSON {
 			m, err := sysGatherMetrics()

@@ -792,6 +792,8 @@ func newCodeCmd() *cobra.Command {
 
 Supports reading, writing, and editing files, as well as running bash commands.
 All tool calls require your approval before execution.`,
+		Example: `  openrouter code
+  openrouter code --model google/gemma-4-26b-a4b-it:free`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			model := codeModelFlag
 			if model == "" {

@@ -22,7 +22,11 @@ func newPascalcaseCmd() *cobra.Command {
 	return &cobra.Command{
 		Use:   "pascalcase [text]",
 		Short: "Convert a string to PascalCase",
-		Args:  cobra.MaximumNArgs(1),
+		Long:  `Convert a string to PascalCase by capitalising the first letter of each word and joining them.`,
+		Example: `  convert pascalcase "hello world"
+  convert pascalcase "hello-world"
+  convert pascalcase "hello_world"`,
+		Args: cobra.MaximumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			text, err := resolveText(args)
 			if err != nil {

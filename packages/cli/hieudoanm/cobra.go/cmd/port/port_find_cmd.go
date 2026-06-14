@@ -9,6 +9,7 @@ func newFindCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "find",
 		Short: "Find an available port in a range",
+		Long:  `Find the first available TCP port within a given range. Useful for finding a free port for local development servers.`,
 		Example: `  port find
   port find --start 3000 --end 3010`,
 		RunE: func(cmd *cobra.Command, args []string) error {

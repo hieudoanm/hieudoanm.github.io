@@ -13,11 +13,10 @@ import (
 
 func newRandomCmd() *cobra.Command {
 	return &cobra.Command{
-		Use:   "random",
-		Short: "Run the random operation for the chess960 app",
-		Long: `The random command is a specific utility to execute operations related to random within the chess960 application.
-
-As a component of the chess tools, this command empowers you to interact directly with chess960's random features via the CLI.`,
+		Use:     "random",
+		Short:   "Pick a random Chess960 starting position",
+		Long:    `Select a random Chess960 starting position, display the FEN, and fetch a cloud evaluation from Lichess.`,
+		Example: `  chess random`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			n := len(Positions)
 

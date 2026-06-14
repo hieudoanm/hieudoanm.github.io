@@ -14,6 +14,7 @@ func newHeadCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "head [--file <path>]",
 		Short: "Show the first N lines of a file",
+		Long:  `Display the first N lines of a file (like Unix head).`,
 		Example: `  file head --file main.go
   file head -f main.go --lines 20`,
 		RunE: func(cmd *cobra.Command, args []string) error {

@@ -14,6 +14,7 @@ func newCodeCmd() *cobra.Command {
 		Long: `An interactive TUI coding assistant powered by Google Gemini.
 
 Provides a chat interface with markdown rendering and code block support.`,
+		Example: `  gemini code`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if _, err := tea.NewProgram(codeInitialModel()).Run(); err != nil {
 				log.Fatal(err)

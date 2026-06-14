@@ -7,10 +7,10 @@ import (
 func newFenCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "fen",
-		Short: "Run the fen operation for the chess app",
-		Long: `The fen command is a specific utility to execute operations related to fen within the chess application.
-
-As a component of the chess tools, this command empowers you to interact directly with chess's fen features via the CLI.`,
+		Short: "FEN-based chess analysis tools",
+		Long:  `Analyze FEN strings with cloud evaluation and render boards to SVG.`,
+		Example: `  chess fen eval --fen "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
+  chess fen svg --fen "..." --out board.svg`,
 	}
 
 	cmd.AddCommand(newFenEvalCmd())

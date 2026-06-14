@@ -20,7 +20,11 @@ func newSnakecaseCmd() *cobra.Command {
 	return &cobra.Command{
 		Use:   "snakecase [text]",
 		Short: "Convert a string to snake_case",
-		Args:  cobra.MaximumNArgs(1),
+		Long:  `Convert a string to snake_case by replacing spaces, hyphens, and camelCase boundaries with underscores.`,
+		Example: `  convert snakecase "hello world"
+  convert snakecase "helloWorld"
+  convert snakecase "hello-world"`,
+		Args: cobra.MaximumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			text, err := resolveText(args)
 			if err != nil {

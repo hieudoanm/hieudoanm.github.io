@@ -20,13 +20,11 @@ Accepts any of:
   - Short URL:  https://youtu.be/dQw4w9WgXcQ
   - Embed URL:  https://www.youtube.com/embed/dQw4w9WgXcQ
   - Shorts URL: https://www.youtube.com/shorts/dQw4w9WgXcQ
-  - Raw ID:     dQw4w9WgXcQ
-
-Examples:
-  devtools youtube thumbnails --url https://www.youtube.com/watch?v=dQw4w9WgXcQ
-  devtools youtube thumbnails --url dQw4w9WgXcQ --quality hqdefault
-  devtools youtube thumbnails --url dQw4w9WgXcQ --output ./thumbs
-  devtools youtube thumbnails --url dQw4w9WgXcQ --all`,
+  - Raw ID:     dQw4w9WgXcQ`,
+		Example: `  web youtube thumbnails --url dQw4w9WgXcQ
+  web youtube thumbnails --url dQw4w9WgXcQ --quality hqdefault
+  web youtube thumbnails --url dQw4w9WgXcQ --output ./thumbs
+  web youtube thumbnails --url dQw4w9WgXcQ --all`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			input := url
 

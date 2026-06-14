@@ -12,6 +12,7 @@ func newCompareCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "compare --a <version> --b <version>",
 		Short: "Compare two semver strings",
+		Long:  `Compare two semantic versions and output their relationship (less than, greater than, or equal). Versions may be prefixed with "v".`,
 		Example: `  semver compare --a 1.0.0 --b 2.0.0
   semver compare --a v1.2.3 --b v1.2.3`,
 		RunE: func(cmd *cobra.Command, args []string) error {

@@ -111,10 +111,9 @@ func newOGCmd() *cobra.Command {
 		Use:   "og [--url <owner/repo>]",
 		Short: "Generate an Open Graph SVG for a GitHub repository",
 		Long: `Fetches repository metadata from GitHub and generates
-a 1200×630 Open Graph SVG image (social preview card).
-
-Example:
-  hieudoanm gh og --url hieudoanm/hieudoanm.github.io`,
+a 1200×630 Open Graph SVG image (social preview card).`,
+		Example: `  gh og --url hieudoanm/hieudoanm.github.io
+  gh og --url hieudoanm/hieudoanm --output preview.svg`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			repoArg := url
 			output, _ := cmd.Flags().GetString("output")

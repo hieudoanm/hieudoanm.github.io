@@ -45,10 +45,10 @@ func newJsonCmd() *cobra.Command {
 		Use:   "json [file]",
 		Short: "Query, format, diff, and merge JSON data",
 		Long:  `Pretty-print JSON, run jq-like queries, or diff/merge two JSON files.`,
-		Example: `  json data.json
-  json --query ".name" data.json
-  json --diff file1.json file2.json
-  json --merge base.json patch.json`,
+		Example: `  data json data.json
+  data json data.json --query ".name"
+  data json data.json --diff file2.json
+  data json --merge base.json patch.json`,
 		Args: cobra.MaximumNArgs(2),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if diff != "" {

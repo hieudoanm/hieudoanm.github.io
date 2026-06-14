@@ -35,6 +35,16 @@ var rootCmd = &cobra.Command{
 	Use:   "hieudoanm",
 	Short: "Hieu Doan's personal CLI toolbox",
 	Long:  `A collection of CLI utilities covering system monitoring, cloud service status, currency conversion, text processing, UUID generation, and more.`,
+	Example: `  hieudoanm calc bmi --height 175 --weight 70
+  hieudoanm casino blackjack
+  hieudoanm convert base64 --input "hello world"
+  hieudoanm crypto uuid
+  hieudoanm data json --pretty --file data.json
+  hieudoanm file read main.go
+  hieudoanm net ip
+  hieudoanm system monitor
+  hieudoanm time now
+  hieudoanm version`,
 }
 
 func Execute() {

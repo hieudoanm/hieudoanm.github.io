@@ -297,6 +297,10 @@ func newPostmanCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "openapi2postman",
 		Short: "Convert OpenAPI to Postman collection",
+		Long:  `Convert an OpenAPI specification (JSON or YAML) to a Postman v2.1 collection. Generates folders by tag, auto-generates example bodies from schemas, and preserves query/path/header parameters.`,
+		Example: `  openapi openapi2postman -i spec.yaml
+  openapi openapi2postman -i spec.yaml -o collection.json
+  openapi openapi2postman -i petstore.yaml`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if inputFile == "" {
 				return fmt.Errorf("input file required (-i)")

@@ -50,6 +50,8 @@ Formats:
   dot     - Graphviz DOT format (default)
   json    - JSON object with nodes[] and edges[]
   edges   - Plain text edge list`,
+		Example: `  docsify obsidian --dir . --format dot --out graph.dot
+  docsify obsidian --dir /path/to/vault --format json`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			absDir, err := filepath.Abs(obsidianDir)
 			if err != nil {

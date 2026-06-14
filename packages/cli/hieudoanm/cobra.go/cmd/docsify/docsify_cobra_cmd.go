@@ -566,7 +566,7 @@ func renderCommand(doc commandDoc, level int, parentName string, w io.Writer) {
 	fmt.Fprintf(w, "```bash\n%s\n```\n\n", fullUsage)
 	renderFlags(w, doc.Flags, level)
 	if doc.Example != "" {
-		fmt.Fprintf(w, "Example:\n\n```bash\n%s\n```\n\n", strings.TrimSpace(doc.Example))
+		fmt.Fprintf(w, "Example:\n\n```bash\n%s\n```\n\n", doc.Example)
 	}
 	fmt.Fprintf(w, "---\n\n")
 	for _, sub := range doc.SubCommands {
@@ -620,6 +620,8 @@ func newCobraCmd() *cobra.Command {
 		Use:   "cobra [--file <path>]",
 		Short: "Generate README.md documentation from a Cobra CLI project",
 		Long:  `docsify cobra scans Go source files for &cobra.Command{} definitions and generates a single README.md documenting all commands, subcommands, flags, and usage.`,
+		Example: `  docsify cobra --file /path/to/project
+  docsify cobra -f . -o README.md`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			projectPath := file
 			if projectPath == "" {

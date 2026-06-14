@@ -9,11 +9,10 @@ import (
 
 func newMessageCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "message",
-		Short: "Run the message operation for the telegram app",
-		Long: `The message command is a specific utility to execute operations related to message within the telegram application.
-
-As a component of the messaging tools, this command empowers you to interact directly with telegram's message features via the CLI.`,
+		Use:     "message",
+		Short:   "Send Telegram messages",
+		Long:    `Send messages via the Telegram Bot API.`,
+		Example: `  telegram message send`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			fmt.Println("send - Send Telegram Message")
 			return nil

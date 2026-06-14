@@ -18,6 +18,8 @@ func newBatteryCmd() *cobra.Command {
 		Use:   "battery",
 		Short: "Show battery status",
 		Long:  `Display battery percentage, charging state, and time remaining.`,
+		Example: `  system battery
+  system battery --json`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			switch runtime.GOOS {
 			case "darwin":

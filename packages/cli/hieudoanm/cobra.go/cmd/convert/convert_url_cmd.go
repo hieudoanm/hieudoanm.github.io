@@ -13,7 +13,10 @@ func newURLCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "url [text]",
 		Short: "Encode or decode a URL",
-		Args:  cobra.MaximumNArgs(1),
+		Long:  `URL-encode a string or URL-decode an encoded string (use --decode for decoding).`,
+		Example: `  convert url "hello world"
+  convert url --decode "hello+world"`,
+		Args: cobra.MaximumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			text, err := resolveText(args)
 			if err != nil {

@@ -16,10 +16,8 @@ func newEditCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "edit [--file <path>] [--old <text>] [--new <text>]",
 		Short: "Find and replace text in a file",
-		Long: `Replace occurrences of a string (or regex pattern) in a file.
-
-Examples:
-  file edit -f main.go --old "foo" --new "bar"
+		Long:  `Replace occurrences of a string (or regex pattern) in a file.`,
+		Example: `  file edit -f main.go --old "foo" --new "bar"
   file edit --regex -f main.go --old "foo.*" --new "bar"
   file edit -f main.go -o "foo" -n "bar" --preview
   file edit -f main.go -o "foo" -n "bar" --count 1`,

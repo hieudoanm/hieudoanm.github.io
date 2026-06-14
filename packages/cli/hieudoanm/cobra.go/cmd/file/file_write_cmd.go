@@ -14,10 +14,8 @@ func newWriteCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "write [--file <path>] [--content <text>]",
 		Short: "Write or append content to a file",
-		Long: `Write content to a file. Content can be provided via --content flag or piped via stdin.
-
-Examples:
-  file write -f hello.txt -c "Hello, World!"
+		Long:  `Write content to a file. Content can be provided via --content flag or piped via stdin.`,
+		Example: `  file write -f hello.txt -c "Hello, World!"
   file write --file hello.txt      (reads from stdin)
   file write -f log.txt -c "new log entry" --append
   file write -f newdir/file.txt --mkdir -c "content"

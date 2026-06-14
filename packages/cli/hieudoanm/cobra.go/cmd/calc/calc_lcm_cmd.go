@@ -12,6 +12,9 @@ func newLcmCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "lcm [--a <a> --b <b>]",
 		Short: "Least common multiple of two numbers",
+		Long: `Compute the least common multiple (LCM) of two integers using the GCD method.
+
+LCM(a, b) = |a * b| / GCD(a, b)`,
 		Example: `  calc lcm --a 12 --b 18
   calc lcm --a 7 --b 5`,
 		RunE: func(cmd *cobra.Command, args []string) error {

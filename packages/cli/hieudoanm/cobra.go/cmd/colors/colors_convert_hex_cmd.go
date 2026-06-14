@@ -9,11 +9,10 @@ import (
 
 func newConvertHexCmd() *cobra.Command {
 	return &cobra.Command{
-		Use:   "hex",
-		Short: "Run the hex operation for the colors app",
-		Long: `The hex command is a specific utility to execute operations related to hex within the colors application.
-
-As a component of the design tools, this command empowers you to interact directly with colors's hex features via the CLI.`,
+		Use:     "hex",
+		Short:   "Convert a HEX color to RGB, HSL, HCL, OKLCH, and CMYK",
+		Long:    `Prompt for a HEX color code and convert it to RGB, HSL, HCL, OKLCH, and CMYK color spaces.`,
+		Example: `  colors hex`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			// Prompt for HEX input
 			fmt.Print("HEX: ")

@@ -10,10 +10,14 @@ var jsonOutput bool
 func NewCommand() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "colors",
-		Short: "Colors CLI application (design tools)",
-		Long: `The colors CLI application is a comprehensive backend utility belonging to the design suite of tools.
-
-Use this root executable to manage configuring, running, and interacting with all colors-related operations securely and efficiently from your terminal.`,
+		Short: "Color conversion and palette generation tools",
+		Long:  `Convert between color spaces (HEX, RGB, HSL, HCL, OKLCH, CMYK) and generate color palettes.`,
+		Example: `  colors hex
+  colors rgb
+  colors hcl
+  colors oklch
+  colors palette
+  colors random`,
 		RunE: func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
 

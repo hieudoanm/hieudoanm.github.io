@@ -16,6 +16,8 @@ func newWifiCmd() *cobra.Command {
 		Use:   "wifi",
 		Short: "List nearby Wi-Fi networks",
 		Long:  `Scan and list nearby Wi-Fi networks with signal strength and security information.`,
+		Example: `  net wifi
+  net wifi --json`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			out, err := ScanWifi()
 			if err != nil {

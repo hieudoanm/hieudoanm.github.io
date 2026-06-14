@@ -17,7 +17,11 @@ func newCsvCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "csv <file>",
 		Short: "View and format CSV files",
-		Args:  cobra.MaximumNArgs(1),
+		Long:  `Read a CSV file (or stdin) and display records as pipe-delimited text or JSON.`,
+		Example: `  data csv data.csv
+  data csv data.csv --json
+  cat data.csv | data csv`,
+		Args: cobra.MaximumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			var r *csv.Reader
 

@@ -171,6 +171,9 @@ func newPomodoroCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "pomodoro",
 		Short: "Start a Pomodoro timer TUI session",
+		Long:  `Launch a Bubble Tea TUI Pomodoro timer with configurable work and break durations. Press p to pause/resume, s to stop, q to quit.`,
+		Example: `  time pomodoro
+  time pomodoro --work 25 --rest 5`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			fmt.Println("🍅 Launching Pomodoro TUI...")
 			runPomodoroTUI(work, rest)

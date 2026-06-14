@@ -16,10 +16,10 @@ import (
 func newSetupCmd() *cobra.Command {
 	return &cobra.Command{
 		Use:   "setup",
-		Short: "Run the setup operation for the chess app",
-		Long: `The setup command is a specific utility to execute operations related to setup within the chess application.
-
-As a component of the chess tools, this command empowers you to interact directly with chess's setup features via the CLI.`,
+		Short: "Set up a specific Chess960 starting position",
+		Long:  `Select a Chess960 starting position by number, display the FEN, and fetch a cloud evaluation from Lichess.`,
+		Example: `  chess setup
+  chess setup 518`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			reader := bufio.NewReader(os.Stdin)
 

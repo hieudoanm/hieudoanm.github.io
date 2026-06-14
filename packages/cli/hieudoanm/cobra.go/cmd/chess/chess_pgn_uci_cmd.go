@@ -15,10 +15,10 @@ import (
 func newPgn2uciCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "uci",
-		Short: "Run the uci operation for the chess app",
-		Long: `The uci command is a specific utility to execute operations related to uci within the chess application.
-
-As a component of the chess tools, this command empowers you to interact directly with chess's uci features via the CLI.`,
+		Short: "Convert PGN moves to UCI notation",
+		Long:  `Parse a PGN game and output the moves as a space-separated UCI (Universal Chess Interface) string.`,
+		Example: `  chess pgn uci --pgn-file game.pgn
+  chess pgn uci --pgn "1.e4 e5 2.Nf3 Nc6 3.Bb5"`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			pgnFile, _ := cmd.Flags().GetString("pgn-file")
 			pgnString, _ := cmd.Flags().GetString("pgn")

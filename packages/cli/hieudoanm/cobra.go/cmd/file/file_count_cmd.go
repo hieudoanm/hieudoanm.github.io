@@ -14,6 +14,7 @@ func newCountCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "count [--file <path>]",
 		Short: "Count lines, words, and bytes in a file",
+		Long:  `Count lines, words, and bytes in a file (like Unix wc).`,
 		Example: `  file count --file main.go
   file count -f main.go --json`,
 		RunE: func(cmd *cobra.Command, args []string) error {

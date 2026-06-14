@@ -19,8 +19,11 @@ var (
 func newShopifyDetectCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "detect [url]",
-		Short: "Run the detect operation for the shopify app",
-		Args:  cobra.MaximumNArgs(1),
+		Short: "Detect if a website is using Shopify",
+		Long:  `Check a website URL for Shopify indicators including CDN references, script patterns, storefront API, and Shopify Plus headers.`,
+		Example: `  web shopify detect example.com
+  web shopify detect https://shop.example.com --verbose`,
+		Args: cobra.MaximumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			var url string
 

@@ -15,6 +15,10 @@ func newBaseCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "base",
 		Short: "Convert between number bases (bin/oct/dec/hex)",
+		Long: `Convert numbers between different bases (binary, octal, decimal, hexadecimal).
+
+Supports standard prefixes and aliases for each base.
+Results can be output in JSON format with --json.`,
 		Example: `  calc base --value FF --from hex --to dec
   calc base --value 255 --from dec --to hex
   calc base --value 1010 --from bin --to dec`,

@@ -7,10 +7,10 @@ import (
 func newPgnCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "pgn",
-		Short: "Run the pgn operation for the chess.graphics app",
-		Long: `The pgn command is a specific utility to execute operations related to pgn within the chess.graphics application.
-
-As a component of the chess tools, this command empowers you to interact directly with chess.graphics's pgn features via the CLI.`,
+		Short: "PGN chess game analysis tools",
+		Long:  `Convert PGN game notation to FEN positions per move, or extract UCI move sequences.`,
+		Example: `  chess pgn fen --pgn-file game.pgn
+  chess pgn uci --pgn "1.e4 e5 2.Nf3"`,
 	}
 	cmd.AddCommand(newPgn2fenCmd())
 	cmd.AddCommand(newPgn2uciCmd())

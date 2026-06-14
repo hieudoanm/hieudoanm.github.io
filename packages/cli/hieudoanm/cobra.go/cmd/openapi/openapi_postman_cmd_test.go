@@ -213,12 +213,19 @@ func TestConvertToPostman(t *testing.T) {
 		t.Fatalf("expected 2 items in folder, got %d", len(folderItems))
 	}
 
-	first := getMap(folderItems[0])
-	if first == nil {
-		t.Fatal("expected first item")
+	names := map[string]bool{}
+	for _, fi := range folderItems {
+		m := getMap(fi)
+		if m == nil {
+			t.Fatal("expected item map")
+		}
+		names[getString(m["name"])] = true
 	}
-	if first["name"] != "List all pets" {
-		t.Errorf("item name = %v", first["name"])
+	if !names["List all pets"] {
+		t.Error("missing item 'List all pets'")
+	}
+	if !names["Create a pet"] {
+		t.Error("missing item 'Create a pet'")
 	}
 }
 

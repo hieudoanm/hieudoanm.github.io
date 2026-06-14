@@ -20,7 +20,11 @@ func newKebabcaseCmd() *cobra.Command {
 	return &cobra.Command{
 		Use:   "kebabcase [text]",
 		Short: "Convert a string to kebab-case",
-		Args:  cobra.MaximumNArgs(1),
+		Long:  `Convert a string to kebab-case by replacing spaces, underscores, and camelCase boundaries with hyphens.`,
+		Example: `  convert kebabcase "hello world"
+  convert kebabcase "helloWorld"
+  convert kebabcase "hello_world"`,
+		Args: cobra.MaximumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			text, err := resolveText(args)
 			if err != nil {

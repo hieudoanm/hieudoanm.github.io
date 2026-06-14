@@ -14,10 +14,8 @@ func newGrepCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "grep [--pattern <regex>] [--path <dir>]",
 		Short: "Search file contents using regex or fixed strings",
-		Long: `Search for a pattern in files (grep = global regular expression print). Supports recursive directory search and glob patterns.
-
-Examples:
-  file grep --pattern "TODO" --path main.go
+		Long:  `Search for a pattern in files (grep = global regular expression print). Supports recursive directory search and glob patterns.`,
+		Example: `  file grep --pattern "TODO" --path main.go
   file grep -p "func" --path . --ignore-case
   file grep --pattern "error" --include "*.go"
   file grep --fixed -p "fmt.Println" --path src/

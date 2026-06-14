@@ -16,6 +16,10 @@ func newDominantCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "dominant [--file <file>]",
 		Short: "Extract dominant color from an image",
+		Long:  `Analyze an image and extract its top 5 dominant colors by sampling pixels. Each color is returned as a hex code with its percentage of the sampled pixels.`,
+		Example: `  image dominant --file photo.jpg
+  image dominant -f logo.png
+  image dominant --file wallpaper.jpg --json`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			f, err := os.Open(file)
 			if err != nil {

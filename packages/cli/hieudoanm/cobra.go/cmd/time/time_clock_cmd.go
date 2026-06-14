@@ -6,9 +6,10 @@ import (
 
 func newClockCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "clock",
-		Short: "Clock and timer utilities",
-		Long:  `Clock and timer utilities including current time display.`,
+		Use:     "clock",
+		Short:   "Clock and timer utilities",
+		Long:    `Clock and timer utilities including current time display.`,
+		Example: `  time clock now`,
 	}
 
 	cmd.AddCommand(timeNowCmd)

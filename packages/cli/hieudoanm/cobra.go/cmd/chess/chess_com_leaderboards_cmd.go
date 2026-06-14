@@ -99,10 +99,11 @@ type LeaderboardsResponse struct {
 func newComLeaderboardsCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "leaderboards",
-		Short: "Run the leaderboards operation for the chess.com app",
-		Long: `The leaderboards command is a specific utility to execute operations related to leaderboards within the chess.com application.
-
-As a component of the chess tools, this command empowers you to interact directly with chess.com's leaderboards features via the CLI.`,
+		Short: "Show Chess.com leaderboards",
+		Long:  `Fetch and display top players from Chess.com leaderboards for bullet, blitz, rapid, and Chess960 variants. Supports filtering by country.`,
+		Example: `  chess com leaderboards
+  chess com leaderboards --top 10
+  chess com leaderboards --country US`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			top, _ := cmd.Flags().GetInt("top")
 			countryFilter, _ := cmd.Flags().GetString("country")

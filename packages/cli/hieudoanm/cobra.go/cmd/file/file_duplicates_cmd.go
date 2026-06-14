@@ -15,6 +15,10 @@ func newDuplicatesCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "duplicates [--dir <path>]",
 		Short: "Find duplicate files by size and partial hash",
+		Long:  `Scan a directory for duplicate files by comparing SHA-256 hashes of files with the same size.`,
+		Example: `  file duplicates --dir .
+  file duplicates -d /path/to/files --min-size 1024
+  file duplicates -d . --json`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			bySize := make(map[int64][]string)
 			filepath.Walk(dir, func(path string, fi os.FileInfo, err error) error {

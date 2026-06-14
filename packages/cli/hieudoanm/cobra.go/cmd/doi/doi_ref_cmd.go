@@ -9,7 +9,9 @@ func newRefCmd() *cobra.Command {
 		Use:   "ref [doi]",
 		Short: "Generate a formatted reference from a DOI",
 		Long:  `Fetches metadata for a given DOI from Crossref and generates a formatted reference entry.`,
-		Args:  cobra.MaximumNArgs(1),
+		Example: `  doi ref 10.1000/xyz123
+  doi ref 10.1038/nature12373`,
+		Args: cobra.MaximumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			id, err := resolveDOI(args)
 			if err != nil {

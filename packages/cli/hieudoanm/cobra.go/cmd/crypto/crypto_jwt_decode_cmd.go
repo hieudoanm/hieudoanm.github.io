@@ -15,6 +15,9 @@ func newJwtDecodeCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "decode [--token <token>]",
 		Short: "Decode a JWT token without signature verification",
+		Long:  `Decode a JWT token to inspect its header and payload claims without verifying the signature. Supports JSON output.`,
+		Example: `  crypto jwt decode --token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjMifQ.abc
+  crypto jwt decode --token eyJhbGci... --json`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			parser := jwt.NewParser(jwt.WithoutClaimsValidation())
 			parsed, _, err := parser.ParseUnverified(token, jwt.MapClaims{})

@@ -12,6 +12,9 @@ func newRouletteCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "roulette",
 		Short: "Spin the roulette wheel",
+		Long: `Spin a European roulette wheel (numbers 0-36) and display results.
+
+Shows the number, color (Red/Black/Green), parity (Even/Odd), and half (1-18/19-36).`,
 		Example: `  casino roulette
   casino roulette --spins 5`,
 		RunE: func(cmd *cobra.Command, args []string) error {

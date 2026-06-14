@@ -24,8 +24,12 @@ func newBmiCmd() *cobra.Command {
 	var weight, height float64
 
 	cmd := &cobra.Command{
-		Use:     "bmi",
-		Short:   "Calculate Body Mass Index",
+		Use:   "bmi",
+		Short: "Calculate Body Mass Index",
+		Long: `Calculate Body Mass Index (BMI) from weight and height.
+
+BMI is calculated as weight (kg) divided by height (m) squared.
+The result includes a weight category: Underweight, Normal, Overweight, or Obese.`,
 		Example: `  calc bmi --weight 70 --height 175`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			heightM := height / 100

@@ -97,10 +97,10 @@ func newComPlayerCmd() *cobra.Command {
 	var username string
 	cmd := &cobra.Command{
 		Use:   "player [--username <username>]",
-		Short: "Run the player operation for the chess.com app",
-		Long: `The player command is a specific utility to execute operations related to player within the chess.com application.
-
-As a component of the chess tools, this command empowers you to interact directly with chess.com's player features via the CLI.`,
+		Short: "Show Chess.com player profile and stats",
+		Long:  `Fetch and display a Chess.com player's profile information including name, title, country, and ratings for bullet, blitz, and rapid.`,
+		Example: `  chess com player --username hikaru
+  chess com player --username magnuscarlsen`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			username = strings.ToLower(username)
 			profileURL := fmt.Sprintf("https://api.chess.com/pub/player/%s", username)

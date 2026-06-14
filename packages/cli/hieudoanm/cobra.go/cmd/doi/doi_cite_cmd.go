@@ -9,7 +9,9 @@ func newCiteCmd() *cobra.Command {
 		Use:   "cite [doi]",
 		Short: "Generate an APA citation from a DOI",
 		Long:  `Fetches metadata for a given DOI from Crossref and generates an APA-formatted citation.`,
-		Args:  cobra.MaximumNArgs(1),
+		Example: `  doi cite 10.1000/xyz123
+  doi cite 10.1038/nature12373`,
+		Args: cobra.MaximumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			id, err := resolveDOI(args)
 			if err != nil {

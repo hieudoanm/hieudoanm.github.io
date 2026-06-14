@@ -12,6 +12,9 @@ func newDiceCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "dice",
 		Short: "Roll dice",
+		Long: `Roll one or more dice with a configurable number of sides.
+
+Shows individual die results and the total when rolling multiple dice.`,
 		Example: `  casino dice
   casino dice --sides 20
   casino dice --count 4 --sides 6`,

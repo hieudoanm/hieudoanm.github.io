@@ -21,11 +21,10 @@ type SendResponse struct {
 
 func newMessageSendCmd() *cobra.Command {
 	return &cobra.Command{
-		Use:   "send",
-		Short: "Run the send operation for the telegram app",
-		Long: `The send command is a specific utility to execute operations related to send within the telegram application.
-
-As a component of the messaging tools, this command empowers you to interact directly with telegram's send features via the CLI.`,
+		Use:     "send",
+		Short:   "Send a Telegram message",
+		Long:    `Prompt for a Telegram Bot API token, chat ID, and message text, then send the message via the Telegram Bot API.`,
+		Example: `  telegram message send`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			fmt.Print("Telegram Token: ")
 			var token string

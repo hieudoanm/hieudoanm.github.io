@@ -11,7 +11,12 @@ func NewCommand() *cobra.Command {
 		Use:   "gh",
 		Short: "GitHub CLI tools",
 		Long:  `GitHub CLI utilities for interacting with GitHub APIs.`,
-		RunE:  func(cmd *cobra.Command, args []string) error { return cmd.Help() },
+		Example: `  gh languages --repo hieudoanm/hieudoanm.github.io
+  gh license
+  gh coc
+  gh ignore
+  gh og --url hieudoanm/hieudoanm.github.io`,
+		RunE: func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
 
 	cmd.PersistentFlags().BoolVarP(&jsonOutput, "json", "j", false, "Output in JSON format")

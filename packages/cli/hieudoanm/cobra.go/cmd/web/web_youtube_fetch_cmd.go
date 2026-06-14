@@ -22,6 +22,11 @@ func newYoutubeFetchCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "fetch [--url <video-id-or-url>]",
 		Short: "Fetch YouTube video transcript",
+		Long:  `Fetch the transcript/captions for a YouTube video by URL or video ID. Supports language selection and multiple output formats.`,
+		Example: `  web youtube fetch --url dQw4w9WgXcQ
+  web youtube fetch --url dQw4w9WgXcQ --lang es
+  web youtube fetch --url dQw4w9WgXcQ --format json
+  web youtube fetch --url dQw4w9WgXcQ --no-timestamps`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			videoID, err := ytExtractVideoID(url)
 			if err != nil {

@@ -13,7 +13,8 @@ func newCertCheckCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "check [--host <host:port>]",
 		Short: "Quick certificate health check (expiry warning)",
-		Example: `  cert check --host google.com:443
+		Long:  `Quickly check the TLS certificate for a host and report whether it is valid, expiring soon, or expired. Returns remaining validity time and SAN entries.`,
+		Example: `  net cert check --host google.com:443
   cert check --host example.org --warn 30`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			conn, err := dialTLS(host)

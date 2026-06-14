@@ -14,10 +14,8 @@ func newWebCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "web [--query <query>]",
 		Short: "Search the internet",
-		Long: `Search the web for a query. Uses DuckDuckGo by default (no API key needed).
-
-Examples:
-  search web --query "golang concurrency patterns"
+		Long:  `Search the web for a query. Uses DuckDuckGo by default (no API key needed).`,
+		Example: `  search web --query "golang concurrency patterns"
   search web --query "latest AI news 2026" --max-results 10
   search web --query "site:github.com golang cli" --source google`,
 		RunE: func(cmd *cobra.Command, args []string) error {

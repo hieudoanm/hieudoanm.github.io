@@ -32,6 +32,11 @@ func newSnapshotCmd() *cobra.Command {
 		Long: `Take a full or viewport screenshot of a given URL.
 The output file is saved as PNG (default) or PDF.
 If --output is a directory, the filename is derived from the URL hostname + timestamp.`,
+		Example: `  web snapshot --url https://example.com
+  web snapshot --url https://example.com --full-page
+  web snapshot --url https://example.com --pdf
+  web snapshot --url https://example.com --preset mobile
+  web snapshot --url https://example.com --delay 2s`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			rawURL := flagURL
 			if !strings.HasPrefix(rawURL, "http://") && !strings.HasPrefix(rawURL, "https://") {

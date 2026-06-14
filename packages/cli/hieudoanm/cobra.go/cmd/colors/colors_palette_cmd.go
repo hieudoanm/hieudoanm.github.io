@@ -13,11 +13,10 @@ import (
 
 func newPaletteCmd() *cobra.Command {
 	return &cobra.Command{
-		Use:   "palette",
-		Short: "Run the palette operation for the colors app",
-		Long: `The palette command is a specific utility to execute operations related to palette within the colors application.
-
-As a component of the design tools, this command empowers you to interact directly with colors's palette features via the CLI.`,
+		Use:     "palette",
+		Short:   "Generate a color palette from a base HEX color",
+		Long:    `Generate a 3-color palette (base, support, accent) from a base HEX color using triadic, complementary, or analogous harmony.`,
+		Example: `  colors palette`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 
 			reader := bufio.NewReader(os.Stdin)

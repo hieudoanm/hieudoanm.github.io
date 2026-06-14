@@ -13,6 +13,10 @@ func newLoanCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "loan",
 		Short: "Loan amortization calculator",
+		Long: `Calculate loan amortization schedule with monthly payments.
+
+Uses the standard amortization formula to compute monthly payments
+and generates a detailed schedule showing payment, interest, and balance over time.`,
 		Example: `  calc loan --principal 30000 --rate 5 --years 5
   calc loan -p 30000 -r 5 -y 5`,
 		RunE: func(cmd *cobra.Command, args []string) error {

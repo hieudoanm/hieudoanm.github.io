@@ -16,11 +16,10 @@ import (
 
 func newEloCmd() *cobra.Command {
 	return &cobra.Command{
-		Use:   "elo",
-		Short: "Run the elo operation for the chess.elo app",
-		Long: `The elo command is a specific utility to execute operations related to elo within the chess.elo application.
-
-As a component of the chess tools, this command empowers you to interact directly with chess.elo's elo features via the CLI.`,
+		Use:     "elo",
+		Short:   "Calculate new Elo rating after a game",
+		Long:    `Calculate your new Elo rating after a chess game given your rating, opponent's rating, result, and optional K-factor.`,
+		Example: `  chess elo`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			reader := bufio.NewReader(os.Stdin)
 

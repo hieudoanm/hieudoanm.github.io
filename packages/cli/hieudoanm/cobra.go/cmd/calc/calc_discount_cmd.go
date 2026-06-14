@@ -13,6 +13,9 @@ func newDiscountCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "discount",
 		Short: "Calculate discount and sale price",
+		Long: `Calculate the sale price after applying a percentage discount.
+
+Given the original price and discount percentage, shows the amount saved and final price.`,
 		Example: `  calc discount --original 100 --percent 20
   calc discount -o 100 -p 20`,
 		RunE: func(cmd *cobra.Command, args []string) error {

@@ -13,7 +13,10 @@ func newBase64Cmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "base64 [text]",
 		Short: "Encode or decode base64",
-		Args:  cobra.MaximumNArgs(1),
+		Long:  `Encode text to base64 or decode base64 back to text (use --decode for decoding).`,
+		Example: `  convert base64 "hello world"
+  convert base64 --decode "aGVsbG8gd29ybGQ="`,
+		Args: cobra.MaximumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			text, err := resolveText(args)
 			if err != nil {

@@ -13,6 +13,7 @@ func newCheckCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "check [--target <host:port>]",
 		Short: "Check if a port is open",
+		Long:  `Check whether a specific TCP port is open on a given host. Supports configurable connection timeout.`,
 		Example: `  port check --target localhost:8080
   port check --target google.com:443
   port check --target 192.168.1.1:22 --timeout 5`,

@@ -30,10 +30,10 @@ type CloudEvalResponse struct {
 func newFenEvalCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "eval",
-		Short: "Run the eval operation for the chess app",
-		Long: `The eval command is a specific utility to execute operations related to eval within the chess application.
-
-As a component of the chess tools, this command empowers you to interact directly with chess's eval features via the CLI.`,
+		Short: "Evaluate a FEN position using Lichess cloud eval",
+		Long:  `Fetch a cloud-based evaluation for a FEN position from Lichess, returning centipawn scores and principal variations.`,
+		Example: `  chess fen eval --fen "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
+  chess fen eval --fen "..." --multipv 5`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			fen, _ := cmd.Flags().GetString("fen")
 			multiPv, _ := cmd.Flags().GetInt("multipv")

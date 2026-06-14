@@ -16,10 +16,10 @@ import (
 func newPlayCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "play",
-		Short: "Run the play operation for the chess.graphics app",
-		Long: `The play command is a specific utility to execute operations related to play within the chess.graphics application.
-
-As a component of the chess tools, this command empowers you to interact directly with chess.graphics's play features via the CLI.`,
+		Short: "Play chess interactively in the terminal",
+		Long:  `Play a full chess game in your terminal with board display. Enter moves in SAN notation (e.g., e4, Nf3). Supports blind mode with --blind.`,
+		Example: `  chess play
+  chess play --blind`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			game := chess.NewGame()
 			reader := bufio.NewReader(os.Stdin)

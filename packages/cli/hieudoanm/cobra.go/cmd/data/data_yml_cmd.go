@@ -18,7 +18,11 @@ func newYmlCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "yml <file>",
 		Short: "Parse, validate, and lint YAML files",
-		Args:  cobra.MaximumNArgs(1),
+		Long:  `Parse, validate, lint, and convert YAML files. Can output as JSON or reformatted YAML.`,
+		Example: `  data yml config.yml
+  data yml config.yml --validate
+  data yml config.yml --json`,
+		Args: cobra.MaximumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			var input []byte
 			if len(args) > 0 {

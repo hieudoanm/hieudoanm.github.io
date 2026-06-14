@@ -13,6 +13,8 @@ func newBaccaratStrategyCmd() *cobra.Command {
 		Use:   "strategy",
 		Short: "Baccarat strategy analysis and statistics",
 		Long:  `Analyze baccarat odds and optimal betting strategy through simulation.`,
+		Example: `  casino baccarat strategy
+  casino baccarat strategy --simulations 50000`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			sims := baccaratStrategySims
 			pWins := 0

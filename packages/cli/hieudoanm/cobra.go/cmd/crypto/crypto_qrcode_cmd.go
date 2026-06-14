@@ -13,6 +13,9 @@ func newQrcodeCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "qrcode [--data <text>]",
 		Short: "Generate a QR code in the terminal",
+		Long:  `Generate a QR code from text and display it in the terminal using Unicode block characters.`,
+		Example: `  crypto qrcode --data "https://example.com"
+  crypto qrcode --data "Hello, World!"`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			text := data
 

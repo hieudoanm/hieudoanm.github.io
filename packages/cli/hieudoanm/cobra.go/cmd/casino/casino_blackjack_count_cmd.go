@@ -9,9 +9,10 @@ import (
 
 func newBlackjackCountCmd() *cobra.Command {
 	return &cobra.Command{
-		Use:   "count",
-		Short: "Practice card counting",
-		Long:  `A terminal-based Blackjack card counting game with a Bubble Tea TUI interface.`,
+		Use:     "count",
+		Short:   "Practice card counting",
+		Long:    `A terminal-based Blackjack card counting game with a Bubble Tea TUI interface.`,
+		Example: `  casino blackjack count`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			p := tea.NewProgram(NewModel())
 			if _, err := p.Run(); err != nil {

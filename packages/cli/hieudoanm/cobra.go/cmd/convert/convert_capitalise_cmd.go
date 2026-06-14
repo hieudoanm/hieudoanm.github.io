@@ -22,7 +22,10 @@ func newCapitaliseCmd() *cobra.Command {
 	return &cobra.Command{
 		Use:   "capitalise [text]",
 		Short: "Capitalise the first letter of each word",
-		Args:  cobra.MaximumNArgs(1),
+		Long:  `Capitalise the first letter of each word in the provided text.`,
+		Example: `  convert capitalise "hello world"
+  convert capitalise "the quick brown fox"`,
+		Args: cobra.MaximumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			text, err := resolveText(args)
 			if err != nil {

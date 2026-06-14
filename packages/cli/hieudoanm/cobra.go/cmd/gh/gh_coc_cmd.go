@@ -27,6 +27,9 @@ func newCocCmd() *cobra.Command {
 Fetches the list of available codes of conduct from the GitHub API,
 prompts the user to select one (or uses --key), then writes the body
 to a file.`,
+		Example: `  gh coc
+  gh coc --key citizen_code_of_conduct
+  gh coc --key contributor_covenant -o COC.md`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			key, _ := cmd.Flags().GetString("key")
 			output, _ := cmd.Flags().GetString("output")

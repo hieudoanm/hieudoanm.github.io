@@ -19,6 +19,7 @@ func newChecksumCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "checksum [--file <path>]",
 		Short: "Compute file checksum",
+		Long:  `Compute a cryptographic hash of a file. Supports md5, sha1, sha256 (default), and sha512.`,
 		Example: `  file checksum --file document.pdf
   file checksum --algorithm sha256 --file document.pdf
   file checksum -f document.pdf --algorithm sha256`,

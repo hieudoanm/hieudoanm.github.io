@@ -38,7 +38,9 @@ func newMorseCmd() *cobra.Command {
 		Use:   "morse [text]",
 		Short: "Convert text to Morse code",
 		Long:  `Converts plain text to Morse code. Supports letters, numbers, and common punctuation.`,
-		Args:  cobra.MaximumNArgs(1),
+		Example: `  convert morse "hello world"
+  convert morse "sos"`,
+		Args: cobra.MaximumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			text, err := resolveText(args)
 			if err != nil {

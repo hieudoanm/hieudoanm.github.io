@@ -14,6 +14,8 @@ func newStatusCmd() *cobra.Command {
 		Use:   "status",
 		Short: "Check the uptime status of cloud services",
 		Long:  `Check and display the current operational status of various cloud services including Atlassian, GitHub, Vercel, and more via a Bubble Tea TUI.`,
+		Example: `  net status
+  net status --json`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			var services []ServiceStatus
 			for _, servicesByGroup := range Services {

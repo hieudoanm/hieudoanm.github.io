@@ -16,6 +16,8 @@ func NewCommand() *cobra.Command {
 		Use:   "version",
 		Short: "Print the application version",
 		Long:  `Print the version number of the application.`,
+		Example: `  version
+  version --json`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if jsonOutput {
 				out, _ := json.MarshalIndent(map[string]interface{}{

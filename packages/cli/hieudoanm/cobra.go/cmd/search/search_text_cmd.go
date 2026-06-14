@@ -18,10 +18,8 @@ func newTextCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "text [--pattern <pattern>] [--path <path>]",
 		Short: "Search file contents using regex",
-		Long: `Search for a regex pattern inside files. If a directory is given, searches recursively.
-
-Examples:
-  search text --pattern "TODO" --path .
+		Long:  `Search for a regex pattern inside files. If a directory is given, searches recursively.`,
+		Example: `  search text --pattern "TODO" --path .
   search text --pattern "func.*error" --include "*.go"
   search text --pattern "import" --path src/ --ignore-case
   search text --pattern "panic" --max-count 5`,

@@ -26,7 +26,11 @@ func newCamelcaseCmd() *cobra.Command {
 	return &cobra.Command{
 		Use:   "camelcase [text]",
 		Short: "Convert a string to camelCase",
-		Args:  cobra.MaximumNArgs(1),
+		Long:  `Convert a string to camelCase by joining words with the first word lowercased and subsequent words capitalised.`,
+		Example: `  convert camelcase "hello world"
+  convert camelcase "hello-world"
+  convert camelcase "hello_world"`,
+		Args: cobra.MaximumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			text, err := resolveText(args)
 			if err != nil {
