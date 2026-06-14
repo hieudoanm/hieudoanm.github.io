@@ -1,20 +1,13 @@
-// Package config provides a centralized configuration system.
-//
-// Configuration is stored in ~/.hieudoanm/config.json.
-// Example config file:
-//
-//	{
-//	  "open_router_api_key": "sk-or-v1-...",
-//	  "weather_api_key": "...",
-//	  "telegram_bot_token": "..."
-//	}
-package config
+package openrouter
 
 import (
+	"bufio"
 	"encoding/json"
 	"fmt"
+	"log"
 	"os"
 	"path/filepath"
+	"strings"
 )
 
 type Config struct {
@@ -72,35 +65,62 @@ func OpenRouterKey() string {
 	return cfg.OpenRouterAPIKey
 }
 
-func WeatherKey() string {
-	if key := os.Getenv("WEATHER_API_KEY"); key != "" {
-		return key
+func LoadAPIKey() string {
+	if v := os.Getenv("OPEN_ROUTER_API_KEY"); v != "" {
+		return v
 	}
-	cfg, err := Load()
+
+	if v := OpenRouterKey(); v != "" {
+		return v
+	}
+
+	if v := readKeyFromFile(os.ExpandEnv("$HOME/.fr")); v != "" {
+		return v
+	}
+
+	if v := readKeyFromFile(".env"); v != "" {
+		return v
+	}
+
+	fmt.Println("OPEN_ROUTER_API_KEY is not set.")
+	fmt.Print("Please enter your OpenRouter API key: ")
+
+	reader := bufio.NewReader(os.Stdin)
+	key, err := reader.ReadString('\n')
 	if err != nil {
-		return ""
+		log.Fatal("failed to read API key:", err)
 	}
-	return cfg.WeatherAPIKey
+
+	key = strings.TrimSpace(key)
+
+	if key == "" {
+		log.Fatal("API key cannot be empty")
+	}
+
+	os.Setenv("OPEN_ROUTER_API_KEY", key)
+
+	return key
 }
 
-func TelegramBotToken() string {
-	if key := os.Getenv("TELEGRAM_BOT_TOKEN"); key != "" {
-		return key
-	}
-	cfg, err := Load()
+func readKeyFromFile(path string) string {
+	f, err := os.Open(path)
 	if err != nil {
 		return ""
 	}
-	return cfg.TelegramBotToken
-}
+	defer f.Close()
 
-func GithubToken() string {
-	if key := os.Getenv("GITHUB_TOKEN"); key != "" {
-		return key
+	scanner := bufio.NewScanner(f)
+	for scanner.Scan() {
+		line := strings.TrimSpace(scanner.Text())
+		if line == "" || strings.HasPrefix(line, "#") {
+			continue
+		}
+		if strings.HasPrefix(line, "OPEN_ROUTER_API_KEY=") {
+			return strings.TrimPrefix(line, "OPEN_ROUTER_API_KEY=")
+		}
+		if strings.HasPrefix(line, "sk-") {
+			return line
+		}
 	}
-	cfg, err := Load()
-	if err != nil {
-		return ""
-	}
-	return cfg.GithubToken
+	return ""
 }

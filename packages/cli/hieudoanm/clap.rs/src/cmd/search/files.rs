@@ -1,0 +1,166 @@
+use anyhow::Context;
+
+pub fn command() -> clap::Command {
+    clap::Command::new("files")
+        .about("Find files by glob pattern")
+        .arg(
+            clap::Arg::new("pattern")
+                .long("pattern")
+                .short('p')
+                .help("Glob pattern to match")
+                .required(true),
+        )
+        .arg(
+            clap::Arg::new("dir")
+                .long("dir")
+                .short('d')
+                .help("Root directory to search")
+                .default_value("."),
+        )
+        .arg(
+            clap::Arg::new("max-depth")
+                .long("max-depth")
+                .short('D')
+                .help("Maximum directory depth (0 = unlimited)")
+                .default_value("0"),
+        )
+        .arg(
+            clap::Arg::new("type")
+                .long("type")
+                .short('t')
+                .help("Filter by type: f (file) or d (directory)"),
+        )
+        .arg(
+            clap::Arg::new("hidden")
+                .long("hidden")
+                .short('H')
+                .action(clap::ArgAction::SetTrue)
+                .help("Include hidden files and directories"),
+        )
+        .arg(
+            clap::Arg::new("json")
+                .long("json")
+                .action(clap::ArgAction::SetTrue)
+                .help("Output in JSON format"),
+        )
+}
+
+pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
+    let pattern = matches
+        .get_one::<String>("pattern")
+        .context("pattern required")?;
+    let dir = matches
+        .get_one::<String>("dir")
+        .map(|s| s.as_str())
+        .unwrap_or(".");
+    let max_depth: usize = matches
+        .get_one::<String>("max-depth")
+        .and_then(|s| s.parse().ok())
+        .unwrap_or(0);
+    let file_type = matches.get_one::<String>("type").map(|s| s.as_str());
+    let hidden = matches.get_flag("hidden");
+    let use_json = matches.get_flag("json");
+
+    let results = find_files_with_glob(pattern, dir, max_depth, file_type, hidden)?;
+
+    if use_json {
+        let out = serde_json::json!({
+            "pattern": pattern,
+            "root": dir,
+            "files": results,
+            "count": results.len(),
+        });
+        println!("{}", serde_json::to_string_pretty(&out)?);
+    } else if results.is_empty() {
+        println!("(no files found)");
+    } else {
+        for f in &results {
+            println!("{f}");
+        }
+        if results.len() > 1 {
+            println!("\n{} files found", results.len());
+        }
+    }
+
+    Ok(())
+}
+
+fn find_files_with_glob(
+    pattern: &str,
+    root: &str,
+    max_depth: usize,
+    file_type: Option<&str>,
+    hidden: bool,
+) -> anyhow::Result<Vec<String>> {
+    let root_path = std::path::Path::new(root);
+    if !root_path.is_dir() {
+        anyhow::bail!("{root:?} is not a directory");
+    }
+
+    let mut results: Vec<String> = Vec::new();
+
+    let mut walker = walkdir::WalkDir::new(root);
+    if max_depth > 0 {
+        walker = walker.max_depth(max_depth);
+    }
+
+    let has_globstar = pattern.contains("**");
+
+    for entry in walker.into_iter().filter_map(|e| e.ok()) {
+        let path = entry.path();
+
+        if !hidden && is_hidden(path) {
+            continue;
+        }
+
+        if let Some(ft) = file_type {
+            if entry.file_type().is_dir() {
+                if ft != "d" {
+                    continue;
+                }
+            } else if ft != "f" {
+                continue;
+            }
+        }
+
+        let matched = if has_globstar {
+            glob_match(pattern, path.to_string_lossy().as_ref())
+        } else if entry.file_type().is_dir() {
+            false
+        } else {
+            path.file_name()
+                .and_then(|n| n.to_str())
+                .map(|n| glob_match(pattern, n))
+                .unwrap_or(false)
+        };
+
+        if matched {
+            results.push(path.to_string_lossy().to_string());
+        }
+    }
+
+    results.sort();
+    Ok(results)
+}
+
+fn is_hidden(path: &std::path::Path) -> bool {
+    path.components().any(|c| {
+        if let std::path::Component::Normal(name) = c {
+            if let Some(s) = name.to_str() {
+                return s.starts_with('.');
+            }
+        }
+        false
+    })
+}
+
+fn glob_match(pattern: &str, name: &str) -> bool {
+    let re_str = pattern
+        .replace('.', "\\.")
+        .replace('*', ".*")
+        .replace('?', ".");
+    let re_str = format!("^{re_str}$");
+    regex::Regex::new(&re_str)
+        .map(|re| re.is_match(name))
+        .unwrap_or(false)
+}

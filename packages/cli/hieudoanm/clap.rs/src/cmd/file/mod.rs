@@ -1,28 +1,55 @@
-mod stub;
+mod checksum;
+mod chmod;
+mod common;
+mod count;
+mod duplicates;
+mod edit;
+mod grep;
+mod info;
+mod read;
+mod write;
 
 pub fn command() -> clap::Command {
     clap::Command::new("file")
         .about("File introspection and analysis tools")
         .subcommand_required(true)
-        .subcommand(stub::read_cmd())
-        .subcommand(stub::write_cmd())
-        .subcommand(stub::edit_cmd())
-        .subcommand(stub::grep_cmd())
-        .subcommand(stub::checksum_cmd())
-        .subcommand(stub::chmod_cmd())
-        .subcommand(stub::count_cmd())
-        .subcommand(stub::duplicates_cmd())
-        .subcommand(stub::head_cmd())
-        .subcommand(stub::size_cmd())
-        .subcommand(stub::stats_cmd())
-        .subcommand(stub::tail_cmd())
-        .subcommand(stub::type_cmd())
+        .arg(
+            clap::Arg::new("json")
+                .long("json")
+                .global(true)
+                .help("Output in JSON format"),
+        )
+        .subcommand(read::read_command())
+        .subcommand(read::head_command())
+        .subcommand(read::tail_command())
+        .subcommand(write::command())
+        .subcommand(edit::command())
+        .subcommand(grep::command())
+        .subcommand(checksum::command())
+        .subcommand(chmod::command())
+        .subcommand(count::command())
+        .subcommand(duplicates::command())
+        .subcommand(info::size_command())
+        .subcommand(info::stats_command())
+        .subcommand(info::type_command())
 }
 
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    if let Some((name, m)) = matches.subcommand() {
-        stub::run(name, m).await
-    } else {
-        Ok(())
+    let json = matches.get_one::<bool>("json").copied().unwrap_or(false);
+    match matches.subcommand() {
+        Some(("read", m)) => read::read_run(m, json).await,
+        Some(("head", m)) => read::head_run(m).await,
+        Some(("tail", m)) => read::tail_run(m).await,
+        Some(("write", m)) => write::run(m, json).await,
+        Some(("edit", m)) => edit::run(m, json).await,
+        Some(("grep", m)) => grep::run(m, json).await,
+        Some(("checksum", m)) => checksum::run(m, json).await,
+        Some(("chmod", m)) => chmod::run(m).await,
+        Some(("count", m)) => count::run(m, json).await,
+        Some(("duplicates", m)) => duplicates::run(m, json).await,
+        Some(("size", m)) => info::size_run(m, json).await,
+        Some(("stats", m)) => info::stats_run(m, json).await,
+        Some(("type", m)) => info::run_type(m, json).await,
+        _ => Ok(()),
     }
 }

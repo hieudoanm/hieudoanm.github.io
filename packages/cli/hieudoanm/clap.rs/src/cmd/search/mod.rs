@@ -1,19 +1,24 @@
-mod stub;
+mod code;
+mod files;
+mod text;
+mod web;
 
 pub fn command() -> clap::Command {
     clap::Command::new("search")
         .about("Universal search for files, text, code, and the web")
         .subcommand_required(true)
-        .subcommand(stub::files_cmd())
-        .subcommand(stub::text_cmd())
-        .subcommand(stub::code_cmd())
-        .subcommand(stub::web_cmd())
+        .subcommand(files::command())
+        .subcommand(text::command())
+        .subcommand(code::command())
+        .subcommand(web::command())
 }
 
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    if let Some((name, m)) = matches.subcommand() {
-        stub::run(name, m).await
-    } else {
-        Ok(())
+    match matches.subcommand() {
+        Some(("files", m)) => files::run(m).await,
+        Some(("text", m)) => text::run(m).await,
+        Some(("code", m)) => code::run(m).await,
+        Some(("web", m)) => web::run(m).await,
+        _ => Ok(()),
     }
 }

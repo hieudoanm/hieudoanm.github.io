@@ -1,0 +1,25 @@
+use crate::cmd::chess::service;
+use rand::Rng;
+
+pub fn command() -> clap::Command {
+    clap::Command::new("random").about("Pick a random Chess960 starting position")
+}
+
+pub async fn run(_matches: &clap::ArgMatches) -> anyhow::Result<()> {
+    let mut rng = rand::thread_rng();
+    let n = service::POSITIONS.len();
+    let idx = rng.gen_range(0..n);
+    let position = service::POSITIONS[idx];
+    println!("Position {}: {}", idx + 1, position);
+
+    let fen = format!(
+        "{}/pppppppp/8/8/8/8/PPPPPPPP/{} w KQkq - 0 1",
+        position.to_lowercase(),
+        position
+    );
+    println!("FEN: {}", fen);
+
+    let eval = service::cloud_eval_cp(&fen, "chess960")?;
+    println!("Evaluation (centipawns): {}", eval);
+    Ok(())
+}

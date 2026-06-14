@@ -1,20 +1,28 @@
-mod stub;
+mod coc;
+mod colors;
+mod ignore;
+mod languages;
+mod license;
+mod og;
 
 pub fn command() -> clap::Command {
     clap::Command::new("gh")
         .about("GitHub CLI tools")
         .subcommand_required(true)
-        .subcommand(stub::languages_cmd())
-        .subcommand(stub::license_cmd())
-        .subcommand(stub::coc_cmd())
-        .subcommand(stub::ignore_cmd())
-        .subcommand(stub::og_cmd())
+        .subcommand(languages::command())
+        .subcommand(license::command())
+        .subcommand(coc::command())
+        .subcommand(ignore::command())
+        .subcommand(og::command())
 }
 
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    if let Some((name, m)) = matches.subcommand() {
-        stub::run(name, m).await
-    } else {
-        Ok(())
+    match matches.subcommand() {
+        Some(("languages", m)) => languages::run(m).await,
+        Some(("license", m)) => license::run(m).await,
+        Some(("coc", m)) => coc::run(m).await,
+        Some(("ignore", m)) => ignore::run(m).await,
+        Some(("og", m)) => og::run(m).await,
+        _ => Ok(()),
     }
 }

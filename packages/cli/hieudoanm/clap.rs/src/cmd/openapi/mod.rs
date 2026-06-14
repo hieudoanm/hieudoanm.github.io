@@ -1,17 +1,19 @@
-mod stub;
+mod postman;
+mod service;
+mod validate;
 
 pub fn command() -> clap::Command {
     clap::Command::new("openapi")
         .about("OpenAPI specification tools")
         .subcommand_required(true)
-        .subcommand(stub::postman_cmd())
-        .subcommand(stub::validate_cmd())
+        .subcommand(postman::command())
+        .subcommand(validate::command())
 }
 
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    if let Some((name, m)) = matches.subcommand() {
-        stub::run(name, m).await
-    } else {
-        Ok(())
+    match matches.subcommand() {
+        Some(("openapi2postman", m)) => postman::run(m).await,
+        Some(("validate", m)) => validate::run(m).await,
+        _ => Ok(()),
     }
 }
