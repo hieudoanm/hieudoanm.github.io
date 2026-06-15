@@ -444,23 +444,23 @@ private fun performEdit(content: String, old: String, newStr: String, useRegex: 
     return Pair(replaced, if (count > 0) minOf(matchCount, count) else matchCount)
 }
 
-private fun outputEditResult(f: File, content: String, replaced: String, matchCount: Int, preview: Boolean, json: Boolean) {
+private fun CliktCommand.outputEditResult(f: File, content: String, replaced: String, matchCount: Int, preview: Boolean, json: Boolean) {
     if (matchCount == 0) {
-        if (json) println(gson.toJson(mapOf("file" to f.path, "matches" to 0)))
-        else println("No matches found in ${f.path}")
+        if (json) echo(gson.toJson(mapOf("file" to f.path, "matches" to 0)))
+        else echo("No matches found in ${f.path}")
         return
     }
     if (preview) {
-        println("── Preview for ${f.path} ($matchCount match${if (matchCount != 1) "es" else ""}) ──")
+        echo("── Preview for ${f.path} ($matchCount match${if (matchCount != 1) "es" else ""}) ──")
         showDiff(content, replaced)
         return
     }
     f.writeText(replaced)
-    if (json) println(gson.toJson(mapOf("file" to f.path, "matches" to matchCount)))
-    else println("Replaced $matchCount occurrence${if (matchCount != 1) "s" else ""} in ${f.path}")
+    if (json) echo(gson.toJson(mapOf("file" to f.path, "matches" to matchCount)))
+    else echo("Replaced $matchCount occurrence${if (matchCount != 1) "s" else ""} in ${f.path}")
 }
 
-private fun showDiff(before: String, after: String) {
+private fun CliktCommand.showDiff(before: String, after: String) {
     val beforeLines = before.split("\n")
     val afterLines = after.split("\n")
     val maxLen = maxOf(beforeLines.size, afterLines.size)
@@ -468,10 +468,10 @@ private fun showDiff(before: String, after: String) {
         val b = if (i < beforeLines.size) beforeLines[i] else ""
         val a = if (i < afterLines.size) afterLines[i] else ""
         if (b != a) {
-            if (b.isNotEmpty()) println("- $b")
-            if (a.isNotEmpty()) println("+ $a")
+            if (b.isNotEmpty()) echo("- $b")
+            if (a.isNotEmpty()) echo("+ $a")
         } else {
-            println("  $b")
+            echo("  $b")
         }
     }
 }
@@ -501,12 +501,12 @@ private fun isBinary(path: String): Boolean {
     return ext in binaryExtensions
 }
 
-private fun grepFiles(re: Regex, searchPaths: List<String>, include: Regex?, context: Int, maxCount: Int): Pair<List<LineMatch>, Int> {
+private fun CliktCommand.grepFiles(re: Regex, searchPaths: List<String>, include: Regex?, context: Int, maxCount: Int): Pair<List<LineMatch>, Int> {
     val matches = mutableListOf<LineMatch>()
     var totalFiles = 0
     for (root in searchPaths) {
         val rootPath = Paths.get(root)
-        if (!Files.exists(rootPath)) { println("error: $root not found"); continue }
+        if (!Files.exists(rootPath)) { echo("error: $root not found", err = true); continue }
         if (!Files.isDirectory(rootPath)) {
             val (m, f) = grepFile(re, rootPath.toString(), context, maxCount)
             matches.addAll(m)
@@ -551,18 +551,18 @@ private fun grepFile(re: Regex, path: String, context: Int, maxCount: Int): Pair
     return Pair(result, 1)
 }
 
-private fun outputGrepResults(matches: List<LineMatch>, totalFiles: Int, pattern: String, jsonOut: Boolean) {
+private fun CliktCommand.outputGrepResults(matches: List<LineMatch>, totalFiles: Int, pattern: String, jsonOut: Boolean) {
     val multiFile = totalFiles > 1
     if (jsonOut) {
-        println(gson.toJson(mapOf("pattern" to pattern, "files" to totalFiles, "matches" to matches.size, "results" to matches)))
+        echo(gson.toJson(mapOf("pattern" to pattern, "files" to totalFiles, "matches" to matches.size, "results" to matches)))
         return
     }
-    if (matches.isEmpty()) { println("(no matches)"); return }
+    if (matches.isEmpty()) { echo("(no matches)"); return }
     for (m in matches) {
         val prefix = if (multiFile) "${m.file}:" else ""
-        if (m.before.isNotEmpty()) println("$prefix  ${m.before}")
-        println("$prefix${m.line}: ${m.content}")
-        if (m.after.isNotEmpty()) println("$prefix  ${m.after}")
+        if (m.before.isNotEmpty()) echo("$prefix  ${m.before}")
+        echo("$prefix${m.line}: ${m.content}")
+        if (m.after.isNotEmpty()) echo("$prefix  ${m.after}")
     }
 }
 

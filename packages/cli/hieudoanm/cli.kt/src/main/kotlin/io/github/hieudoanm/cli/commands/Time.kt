@@ -295,9 +295,9 @@ private fun parseEpochRelative(s: String): ZonedDateTime {
     return now.plus(dur.multipliedBy(n.toLong()).multipliedBy(direction.toLong()))
 }
 
-private fun printEpochJSON(epoch: Long, rfc3339: String) {
+private fun CliktCommand.printEpochJSON(epoch: Long, rfc3339: String) {
     val gson = GsonBuilder().setPrettyPrinting().create()
-    println(gson.toJson(mapOf("epoch" to epoch, "rfc3339" to rfc3339)))
+    echo(gson.toJson(mapOf("epoch" to epoch, "rfc3339" to rfc3339)))
 }
 
 class TimePomodoro : CliktCommand(name = "pomodoro", help = "Start a Pomodoro timer") {

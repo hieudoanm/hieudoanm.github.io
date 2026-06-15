@@ -320,14 +320,14 @@ private fun escapeXml(s: String): String {
         .replace("\"", "&quot;")
 }
 
-private fun promptSelection(options: List<String>, message: String): String {
-    println(message)
-    options.forEachIndexed { i, opt -> println("  ${i + 1}) $opt") }
+private fun CliktCommand.promptSelection(options: List<String>, message: String): String {
+    echo(message)
+    options.forEachIndexed { i, opt -> echo("  ${i + 1}) $opt") }
     while (true) {
-        print("Enter number: ")
+        echo("Enter number: ", trailingNewline = false)
         val input = readLine()?.trim() ?: continue
         val idx = input.toIntOrNull()?.minus(1) ?: continue
         if (idx in options.indices) return options[idx]
-        System.err.println("Invalid selection")
+        echo("Invalid selection", err = true)
     }
 }
