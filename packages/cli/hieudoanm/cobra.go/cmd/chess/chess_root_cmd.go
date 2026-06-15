@@ -27,9 +27,7 @@ func NewCommand() *cobra.Command {
 
 	cmd.PersistentFlags().BoolVarP(&jsonOutput, "json", "j", false, "Output in JSON format")
 
-	cmd.AddCommand(newComLeaderboardsCmd())
-	cmd.AddCommand(newComPlayerCmd())
-	cmd.AddCommand(newComTitledCmd())
+	cmd.AddCommand(newComCmd())
 	cmd.AddCommand(newEloCmd())
 	cmd.AddCommand(newFenCmd())
 	cmd.AddCommand(newPgnCmd())

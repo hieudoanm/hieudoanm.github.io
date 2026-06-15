@@ -10,7 +10,7 @@ func TestNewCommand_HasSubcommands(t *testing.T) {
 		t.Errorf("expected Use='chess', got %q", cmd.Use)
 	}
 
-	expected := []string{"leaderboards", "player", "titled", "elo", "fen", "pgn", "play", "random", "setup"}
+	expected := []string{"com", "elo", "fen", "pgn", "play", "random", "setup"}
 	got := make(map[string]bool)
 	for _, sub := range cmd.Commands() {
 		got[sub.Name()] = true
