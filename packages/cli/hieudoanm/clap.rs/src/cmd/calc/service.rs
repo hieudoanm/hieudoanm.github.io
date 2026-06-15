@@ -1,3 +1,13 @@
+pub fn calc_payment(principal: f64, annual_rate: f64, years: f64) -> f64 {
+    if annual_rate == 0.0 {
+        return principal / (years * 12.0);
+    }
+    let r = annual_rate / 100.0 / 12.0;
+    let n = years * 12.0;
+    let p = (1.0 + r).powf(n);
+    principal * r * p / (p - 1.0)
+}
+
 const PERSONAL_DEDUCTION: f64 = 11_000_000.0;
 const DEPENDENT_DEDUCTION: f64 = 4_400_000.0;
 const INSURANCE_CAP: f64 = 36_000_000.0;

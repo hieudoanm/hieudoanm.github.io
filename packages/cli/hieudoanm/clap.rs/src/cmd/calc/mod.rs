@@ -1,40 +1,73 @@
+mod base;
 mod bmi;
+mod compound;
 mod currency;
+mod datecalc;
+mod discount;
+mod eval;
+mod eval_service;
+mod factorial;
+mod gcd;
+mod lcm;
+mod loan;
+mod mortgage;
+mod percent;
+mod prime;
+mod prime_service;
+mod random;
 mod service;
-mod stub;
+mod stats;
 mod tax;
+mod tip;
+mod unit;
+mod unit_service;
 
 pub fn command() -> clap::Command {
     clap::Command::new("calc")
         .about("Financial and utility calculators")
         .subcommand_required(true)
+        .subcommand(base::command())
         .subcommand(bmi::command())
+        .subcommand(compound::command())
         .subcommand(currency::command())
+        .subcommand(datecalc::command())
+        .subcommand(discount::command())
+        .subcommand(eval::command())
+        .subcommand(factorial::command())
+        .subcommand(gcd::command())
+        .subcommand(lcm::command())
+        .subcommand(loan::command())
+        .subcommand(mortgage::command())
+        .subcommand(percent::command())
+        .subcommand(prime::command())
+        .subcommand(random::command())
+        .subcommand(stats::command())
         .subcommand(tax::command())
-        .subcommand(clap::Command::new("compound").about("Compound interest calculator"))
-        .subcommand(clap::Command::new("loan").about("Loan payment calculator"))
-        .subcommand(clap::Command::new("discount").about("Discount calculator"))
-        .subcommand(clap::Command::new("tip").about("Tip calculator"))
-        .subcommand(clap::Command::new("base").about("Number base conversion"))
-        .subcommand(clap::Command::new("unit").about("Unit conversion"))
-        .subcommand(clap::Command::new("percent").about("Percentage calculator"))
-        .subcommand(clap::Command::new("mortgage").about("Mortgage calculator"))
-        .subcommand(clap::Command::new("datecalc").about("Date arithmetic"))
-        .subcommand(clap::Command::new("eval").about("Evaluate math expression"))
-        .subcommand(clap::Command::new("stats").about("Statistical calculations"))
-        .subcommand(clap::Command::new("factorial").about("Factorial calculator"))
-        .subcommand(clap::Command::new("random").about("Random number generator"))
-        .subcommand(clap::Command::new("prime").about("Prime number tools"))
-        .subcommand(clap::Command::new("gcd").about("Greatest common divisor"))
-        .subcommand(clap::Command::new("lcm").about("Least common multiple"))
+        .subcommand(tip::command())
+        .subcommand(unit::command())
 }
 
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     match matches.subcommand() {
+        Some(("base", m)) => base::run(m).await,
         Some(("bmi", m)) => bmi::run(m).await,
+        Some(("compound", m)) => compound::run(m).await,
         Some(("currency", m)) => currency::run(m).await,
+        Some(("datecalc", m)) => datecalc::run(m).await,
+        Some(("discount", m)) => discount::run(m).await,
+        Some(("eval", m)) => eval::run(m).await,
+        Some(("factorial", m)) => factorial::run(m).await,
+        Some(("gcd", m)) => gcd::run(m).await,
+        Some(("lcm", m)) => lcm::run(m).await,
+        Some(("loan", m)) => loan::run(m).await,
+        Some(("mortgage", m)) => mortgage::run(m).await,
+        Some(("percent", m)) => percent::run(m).await,
+        Some(("prime", m)) => prime::run(m).await,
+        Some(("random", m)) => random::run(m).await,
+        Some(("stats", m)) => stats::run(m).await,
         Some(("tax", m)) => tax::run(m).await,
-        Some((name, m)) => stub::run(name, m).await,
+        Some(("tip", m)) => tip::run(m).await,
+        Some(("unit", m)) => unit::run(m).await,
         _ => Ok(()),
     }
 }

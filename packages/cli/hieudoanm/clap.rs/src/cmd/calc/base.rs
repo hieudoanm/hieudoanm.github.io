@@ -1,0 +1,104 @@
+use std::collections::HashMap;
+
+use clap::ArgMatches;
+
+pub fn command() -> clap::Command {
+    clap::Command::new("base")
+        .about("Convert between number bases (bin/oct/dec/hex)")
+        .arg(
+            clap::Arg::new("value")
+                .long("value")
+                .short('v')
+                .help("Value to convert")
+                .required(true),
+        )
+        .arg(
+            clap::Arg::new("from")
+                .long("from")
+                .short('f')
+                .help("Source base (bin/oct/dec/hex)")
+                .default_value("dec"),
+        )
+        .arg(
+            clap::Arg::new("to")
+                .long("to")
+                .short('t')
+                .help("Target base (bin/oct/dec/hex)")
+                .default_value("hex"),
+        )
+        .arg(
+            clap::Arg::new("json")
+                .long("json")
+                .help("Output in JSON format")
+                .action(clap::ArgAction::SetTrue),
+        )
+}
+
+pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
+    let value = matches.get_one::<String>("value").unwrap();
+    let from = matches.get_one::<String>("from").unwrap();
+    let to = matches.get_one::<String>("to").unwrap();
+    let json = matches.get_flag("json");
+
+    let bases: HashMap<&str, u32> = [
+        ("bin", 2),
+        ("binary", 2),
+        ("oct", 8),
+        ("octal", 8),
+        ("dec", 10),
+        ("decimal", 10),
+        ("hex", 16),
+        ("hexadecimal", 16),
+    ]
+    .iter()
+    .cloned()
+    .collect();
+
+    let from_base = bases
+        .get(from.as_str())
+        .ok_or_else(|| anyhow::anyhow!("unknown base: {} (use bin/oct/dec/hex)", from))?;
+    let to_base = bases
+        .get(to.as_str())
+        .ok_or_else(|| anyhow::anyhow!("unknown base: {} (use bin/oct/dec/hex)", to))?;
+
+    let n = i64::from_str_radix(value, *from_base)
+        .map_err(|_| anyhow::anyhow!("invalid value '{}' for base {}", value, from))?;
+
+    let result = match to_base {
+        2 => format!("{:b}", n),
+        8 => format!("{:o}", n),
+        10 => format!("{}", n),
+        16 => format!("{:X}", n),
+        _ => unreachable!(),
+    };
+
+    let base_names: HashMap<u32, &str> = [
+        (2, "binary"),
+        (8, "octal"),
+        (10, "decimal"),
+        (16, "hexadecimal"),
+    ]
+    .iter()
+    .cloned()
+    .collect();
+
+    if json {
+        let output = serde_json::json!({
+            "value": value,
+            "from": base_names.get(from_base).unwrap_or(&"unknown"),
+            "to": base_names.get(to_base).unwrap_or(&"unknown"),
+            "result": result,
+        });
+        println!("{}", serde_json::to_string_pretty(&output)?);
+    } else {
+        println!(
+            "{} ({}) = {} ({})",
+            value,
+            base_names.get(from_base).unwrap_or(&"unknown"),
+            result,
+            base_names.get(to_base).unwrap_or(&"unknown"),
+        );
+    }
+
+    Ok(())
+}
