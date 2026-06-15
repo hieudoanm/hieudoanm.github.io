@@ -186,7 +186,7 @@ struct GhOG: AsyncParsableCommand {
     }
 }
 
-private func escXml(_ s: String) -> String {
+func escXml(_ s: String) -> String {
     s.replacingOccurrences(of: "&", with: "&amp;")
      .replacingOccurrences(of: "<", with: "&lt;")
      .replacingOccurrences(of: ">", with: "&gt;")
@@ -194,7 +194,7 @@ private func escXml(_ s: String) -> String {
      .replacingOccurrences(of: "\"", with: "&quot;")
 }
 
-private func languageColor(_ lang: String) -> String {
+func languageColor(_ lang: String) -> String {
     let colors: [String: String] = [
         "Swift": "#F05138", "Python": "#3572A5", "JavaScript": "#F1E05A",
         "TypeScript": "#3178C6", "Go": "#00ADD8", "Rust": "#DEA584",

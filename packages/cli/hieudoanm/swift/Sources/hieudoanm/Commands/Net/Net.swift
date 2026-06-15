@@ -534,7 +534,7 @@ private func runProcess(executable: String, args: [String], input: String? = nil
     return output
 }
 
-private enum NetError: Error, CustomStringConvertible {
+enum NetError: Error, CustomStringConvertible {
     case timeout(String)
     case invalidOutput
 

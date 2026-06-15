@@ -85,7 +85,7 @@ struct TimeCron: ParsableCommand {
     }
 }
 
-private func cronMatches(_ parts: [String], date: Date) -> Bool {
+func cronMatches(_ parts: [String], date: Date) -> Bool {
     let cal = Calendar.current
     let minute = cal.component(.minute, from: date)
     let hour = cal.component(.hour, from: date)
@@ -189,7 +189,7 @@ struct TimeTimer: ParsableCommand {
     }
 }
 
-private func parseDuration(_ s: String) -> Int {
+func parseDuration(_ s: String) -> Int {
     let s = s.lowercased()
     if s.hasSuffix("h") { return (Int(s.dropLast()) ?? 0) * 3600 }
     if s.hasSuffix("m") { return (Int(s.dropLast()) ?? 0) * 60 }

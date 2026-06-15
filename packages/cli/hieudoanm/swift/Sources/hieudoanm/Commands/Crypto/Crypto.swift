@@ -456,7 +456,7 @@ private func generateTOTP(secret: Data, counter: UInt64, digits: Int) throws -> 
     #endif
 }
 
-private func base32Decode(_ string: String) throws -> Data {
+func base32Decode(_ string: String) throws -> Data {
     let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567"
     let upper = string.uppercased().filter { chars.contains($0) }
     var result = [UInt8]()
@@ -506,14 +506,14 @@ enum CryptoError: Error, CustomStringConvertible {
     }
 }
 
-private func base64URLEncode(_ data: Data) -> String {
+func base64URLEncode(_ data: Data) -> String {
     data.base64EncodedString()
         .replacingOccurrences(of: "+", with: "-")
         .replacingOccurrences(of: "/", with: "_")
         .replacingOccurrences(of: "=", with: "")
 }
 
-private func base64URLDecode(_ string: String) -> Data {
+func base64URLDecode(_ string: String) -> Data {
     var base64 = string
         .replacingOccurrences(of: "-", with: "+")
         .replacingOccurrences(of: "_", with: "/")
@@ -522,7 +522,7 @@ private func base64URLDecode(_ string: String) -> Data {
     return Data(base64Encoded: base64) ?? Data()
 }
 
-private func hmacSHA256(key: String, message: String) throws -> String {
+func hmacSHA256(key: String, message: String) throws -> String {
     #if canImport(CryptoKit)
     let keyData = Data(key.utf8)
     let msgData = Data(message.utf8)

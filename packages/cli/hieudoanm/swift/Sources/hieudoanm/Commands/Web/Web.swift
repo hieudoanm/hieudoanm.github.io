@@ -71,7 +71,7 @@ struct WebInstagram: ParsableCommand {
     }
 }
 
-private func extractInstagramShortcode(from url: String) -> String? {
+func extractInstagramShortcode(from url: String) -> String? {
     let patterns = [
         try! NSRegularExpression(pattern: "instagram\\.com/p/([^/?]+)", options: []),
         try! NSRegularExpression(pattern: "instagram\\.com/reel/([^/?]+)", options: []),
@@ -226,7 +226,7 @@ struct WebYoutubeTranscript: ParsableCommand {
     }
 }
 
-private func extractVideoID(_ input: String) -> String {
+func extractVideoID(_ input: String) -> String {
     if input.count == 11 && !input.contains("/") && !input.contains(".") {
         return input
     }
@@ -244,7 +244,7 @@ private func extractVideoID(_ input: String) -> String {
     return input
 }
 
-private func formatTime(_ seconds: Double) -> String {
+func formatTime(_ seconds: Double) -> String {
     let total = Int(seconds)
     let h = total / 3600
     let m = (total % 3600) / 60

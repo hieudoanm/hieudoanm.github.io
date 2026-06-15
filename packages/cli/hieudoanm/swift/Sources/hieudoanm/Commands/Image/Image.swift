@@ -217,7 +217,7 @@ private func runSips(args: [String]) throws -> String {
     return output
 }
 
-private enum ImageError: Error, CustomStringConvertible {
+enum ImageError: Error, CustomStringConvertible {
     case invalidOutput
     case sipsFailed(String)
 

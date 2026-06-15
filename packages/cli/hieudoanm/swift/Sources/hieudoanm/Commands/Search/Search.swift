@@ -192,7 +192,7 @@ struct SearchCode: ParsableCommand {
     }
 }
 
-private struct SymbolMatch {
+struct SymbolMatch {
     let line: Int
     let lineContent: String
 }
@@ -228,7 +228,7 @@ private let rustSearch: SearchHandler = { content, symbol in
     return patterns.flatMap { findMatches(content: content, pattern: $0) }
 }
 
-private func findMatches(content: String, pattern: String) -> [SymbolMatch] {
+func findMatches(content: String, pattern: String) -> [SymbolMatch] {
     guard let regex = try? NSRegularExpression(pattern: pattern, options: []) else { return [] }
     let range = NSRange(content.startIndex..<content.endIndex, in: content)
     let matches = regex.matches(in: content, options: [], range: range)
@@ -277,13 +277,13 @@ struct SearchWeb: ParsableCommand {
     }
 }
 
-private struct SearchResult {
+struct SearchResult {
     let title: String
     let url: String
     let snippet: String
 }
 
-private func parseDuckDuckGoResults(_ html: String) -> [SearchResult] {
+func parseDuckDuckGoResults(_ html: String) -> [SearchResult] {
     var results: [SearchResult] = []
 
     let lines = html.components(separatedBy: .newlines)

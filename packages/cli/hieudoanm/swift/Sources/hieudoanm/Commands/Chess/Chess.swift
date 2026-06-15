@@ -1,6 +1,16 @@
 import Foundation
 import ArgumentParser
 
+func resolveCountry(_ url: String) -> (code: String, name: String) {
+    if url.isEmpty { return ("-", "-") }
+    let trimmed = url.hasSuffix("/") ? String(url.dropLast()) : url
+    let parts = trimmed.split(separator: "/")
+    guard let last = parts.last else { return ("-", "-") }
+    let code = last.uppercased()
+    if let name = COUNTRIES[code] { return (code, name) }
+    return (code, "-")
+}
+
 struct ChessCommand: ParsableCommand {
     static let configuration = CommandConfiguration(
         commandName: "chess",
@@ -100,46 +110,115 @@ struct ChessSetup: ParsableCommand {
     }
 }
 
-struct ChessComPlayer: AsyncParsableCommand {
-    static let configuration = CommandConfiguration(commandName: "com-player", abstract: "Fetch Chess.com player stats")
-    @Argument(help: "Username") var username: String
-    mutating func run() async throws {
-        let response = try await Requests.fetch("https://api.chess.com/pub/player/\(username)/stats")
-        let json = try JSONSerialization.jsonObject(with: response.data) as? [String: Any]
-        print("Player: \(username)")
-        for (key, value) in json ?? [:] {
-            if let stats = value as? [String: Any] {
-                let last = stats["last"] as? [String: Any]
-                let best = stats["best"] as? [String: Any]
-                let record = stats["record"] as? [String: Any]
-                let rating = last?["rating"] as? Int ?? stats["rating"] as? Int ?? 0
-                let bestRating = best?["rating"] as? Int ?? 0
-                let wins = record?["wins"] as? Int ?? 0
-                let losses = record?["losses"] as? Int ?? 0
-                let draws = record?["draws"] as? Int ?? 0
-                print("  \(key): rating=\(rating), best=\(bestRating), W=\(wins) L=\(losses) D=\(draws)")
-            }
-        }
-    }
+struct Player: Decodable {
+    let rank: Int
+    let username: String
+    let name: String?
+    let score: Int
+    let country: String
+    let title: String?
+    let winCount: Int
+    let drawCount: Int
+    let lossCount: Int
+}
+
+struct LeaderboardsResponse: Decodable {
+    let liveBullet: [Player]
+    let liveBlitz: [Player]
+    let liveRapid: [Player]
+    let liveBlitz960: [Player]
 }
 
 struct ChessComLeaderboards: AsyncParsableCommand {
     static let configuration = CommandConfiguration(commandName: "com-leaderboards", abstract: "Fetch Chess.com leaderboards")
-    @Option(name: .long, help: "Type: daily, rapid, blitz, bullet") var type: String = "daily"
+    @Option(name: .long, help: "Number of top players to display") var top: Int = 5
+    @Option(name: .long, help: "Filter by country code (e.g. US, RU)") var country: String = ""
+
     mutating func run() async throws {
         let response = try await Requests.fetch("https://api.chess.com/pub/leaderboards")
-        let json = try JSONSerialization.jsonObject(with: response.data) as? [String: Any]
-        guard let entries = json?[type] as? [[String: Any]] else {
-            print("No leaderboard data for '\(type)'"); return
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        let data = try decoder.decode(LeaderboardsResponse.self, from: response.data)
+
+        let countryFilter = country
+        let filterPlayers: ([Player]) -> [Player] = { players in
+            guard !countryFilter.isEmpty else { return players }
+            return players.filter { p in
+                let (code, _) = resolveCountry(p.country)
+                return code == countryFilter.uppercased()
+            }
         }
-        print("\(type.uppercased()) Leaderboard:")
-        for (i, entry) in entries.prefix(10).enumerated() {
-            let username = entry["username"] as? String ?? ""
-            let rating = entry["score"] as? Int ?? entry["rating"] as? Int ?? 0
-            let title = entry["title"] as? String ?? ""
-            print("  \(i + 1). \(username)\(title.isEmpty ? "" : " (\(title))") - \(rating)")
-        }
+
+        printTop("Live Bullet", filterPlayers(data.liveBullet), top)
+        printTop("Live Blitz", filterPlayers(data.liveBlitz), top)
+        printTop("Live Rapid", filterPlayers(data.liveRapid), top)
+        printTop("Live Blitz 960", filterPlayers(data.liveBlitz960), top)
     }
+}
+
+private func printTop(_ title: String, _ players: [Player], _ limit: Int) {
+    guard !players.isEmpty else { return }
+    print("\n\(title)\n")
+    let count = min(limit, players.count)
+    for i in 0..<count {
+        let p = players[i]
+        let name = p.name ?? "-"
+        let (_, countryName) = resolveCountry(p.country)
+        let wdl = "\(p.winCount) / \(p.drawCount) / \(p.lossCount)"
+        print("\(String(format: "%3d", p.rank)). \(name) (\(p.username.lowercased())) - \(countryName) - \(p.score) - \(wdl)")
+    }
+}
+
+struct ChessComPlayer: AsyncParsableCommand {
+    static let configuration = CommandConfiguration(commandName: "com-player", abstract: "Fetch Chess.com player stats")
+    @Argument(help: "Username") var username: String
+    mutating func run() async throws {
+        let username = username.lowercased()
+        let profileURL = "https://api.chess.com/pub/player/\(username)"
+        let statsURL = "https://api.chess.com/pub/player/\(username)/stats"
+
+        async let profileResp = try Requests.fetch(profileURL)
+        async let statsResp = try Requests.fetch(statsURL)
+        let (profileData, statsData) = try await (profileResp, statsResp)
+
+        let profile = try JSONSerialization.jsonObject(with: profileData.data) as? [String: Any] ?? [:]
+        let stats = try JSONSerialization.jsonObject(with: statsData.data) as? [String: Any] ?? [:]
+
+        print()
+        print("Player: \(username.uppercased())")
+        print("---------------------------------------------------------------")
+        if let name = profile["name"] as? String, !name.isEmpty { print("Name      : \(name)") }
+        if let title = profile["title"] as? String, !title.isEmpty { print("Title     : \(title)") }
+        if let countryURL = profile["country"] as? String {
+            let (_, countryName) = resolveCountry(countryURL)
+            print("Country   : \(countryName)")
+        }
+        if let fide = profile["fide"] as? Int, fide > 0 { print("FIDE      : \(fide)") }
+        if let followers = profile["followers"] as? Int { print("Followers : \(followers)") }
+
+        print("\nRatings\n")
+        printRatingsHeader()
+        printRating("Bullet", stats["chess_bullet"] as? [String: Any])
+        printRating("Blitz", stats["chess_blitz"] as? [String: Any])
+        printRating("Rapid", stats["chess_rapid"] as? [String: Any])
+    }
+}
+
+private func printRatingsHeader() {
+    print("| Mode    |    Best |    Last |     Win |    Draw |    Loss |")
+    print("|---------|--------|--------|--------|--------|--------|")
+}
+
+private func printRating(_ label: String, _ stats: [String: Any]?) {
+    let best = stats?["best"] as? [String: Any] ?? [:]
+    let last = stats?["last"] as? [String: Any] ?? [:]
+    let record = stats?["record"] as? [String: Any] ?? [:]
+    let bestR = best["rating"] as? Int ?? 0
+    let lastR = last["rating"] as? Int ?? 0
+    let wins = record["wins"] as? Int ?? 0
+    let draws = record["draws"] as? Int ?? 0
+    let losses = record["losses"] as? Int ?? 0
+    print(String(format: "| %-7s | %6d | %6d | %6d | %6d | %6d |", label, bestR, lastR, wins, draws, losses))
 }
 
 struct ChessComTitled: AsyncParsableCommand {

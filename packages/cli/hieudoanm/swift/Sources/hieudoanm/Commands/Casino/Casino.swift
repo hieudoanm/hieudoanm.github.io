@@ -134,7 +134,7 @@ struct CasinoBlackjack: ParsableCommand {
     }
 }
 
-private func createDeck() -> [Int] {
+func createDeck() -> [Int] {
     var deck: [Int] = []
     for _ in 0..<4 { for v in 1...13 { deck.append(v) } }
     return deck
@@ -172,19 +172,19 @@ struct CasinoPoker: ParsableCommand {
     }
 }
 
-private struct PokerCard: Equatable {
+struct PokerCard: Equatable {
     let rank: Int
     let suit: String
 }
 
-private func createPokerDeck() -> [PokerCard] {
+func createPokerDeck() -> [PokerCard] {
     let suits = ["h", "d", "c", "s"]
     var deck: [PokerCard] = []
     for s in suits { for r in 2...14 { deck.append(PokerCard(rank: r, suit: s)) } }
     return deck
 }
 
-private func parseCards(_ s: String) -> [PokerCard] {
+func parseCards(_ s: String) -> [PokerCard] {
     let parts = s.split(separator: " ").map(String.init)
     let rankMap: [Character: Int] = ["2":2,"3":3,"4":4,"5":5,"6":6,"7":7,"8":8,"9":9,"1":10,"J":11,"Q":12,"K":13,"A":14]
     return parts.compactMap { part in
@@ -199,11 +199,11 @@ private func parseCards(_ s: String) -> [PokerCard] {
     }
 }
 
-private func rankMapSuit(_ s: String) -> String? {
+func rankMapSuit(_ s: String) -> String? {
     switch s.lowercased() { case "h": return "h"; case "d": return "d"; case "c": return "c"; case "s": return "s"; default: return nil }
 }
 
-private func evaluateHand(_ cards: [PokerCard]) -> (Int, String) {
+func evaluateHand(_ cards: [PokerCard]) -> (Int, String) {
     guard cards.count == 5 else { return (0, "Invalid") }
     let sorted = cards.sorted { $0.rank > $1.rank }
     let ranks = sorted.map { $0.rank }

@@ -426,3 +426,12 @@ enum CalcError: Error, CustomStringConvertible {
         }
     }
 }
+
+func calcGcd(_ a: Int, _ b: Int) -> Int {
+    b == 0 ? abs(a) : calcGcd(b, a % b)
+}
+
+func calcLcm(_ a: Int, _ b: Int) -> Int {
+    guard a != 0 || b != 0 else { return 0 }
+    return abs(a * b) / calcGcd(a, b)
+}

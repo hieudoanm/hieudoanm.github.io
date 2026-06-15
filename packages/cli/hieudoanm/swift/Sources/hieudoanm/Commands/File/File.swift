@@ -372,7 +372,7 @@ struct FileCount: AsyncParsableCommand {
     }
 }
 
-private extension String {
+extension String {
     func split(by characterSet: CharacterSet) -> [String] {
         components(separatedBy: characterSet).filter { !$0.isEmpty }
     }

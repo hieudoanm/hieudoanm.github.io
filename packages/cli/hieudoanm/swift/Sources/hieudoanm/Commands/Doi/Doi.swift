@@ -34,6 +34,10 @@ struct CrossrefAuthor: Codable {
 
 struct CrossrefDate: Codable {
     let dateParts: [[Int]]?
+
+    enum CodingKeys: String, CodingKey {
+        case dateParts = "date-parts"
+    }
 }
 
 private func fetchDoiMetadata(doi: String) async throws -> CrossrefMessage {
@@ -47,7 +51,7 @@ private func fetchDoiMetadata(doi: String) async throws -> CrossrefMessage {
     return message
 }
 
-private func formatAuthors(_ authors: [CrossrefAuthor]?) -> String {
+func formatAuthors(_ authors: [CrossrefAuthor]?) -> String {
     guard let authors = authors, !authors.isEmpty else { return "Unknown" }
     if authors.count == 1 {
         let a = authors[0]
@@ -61,12 +65,12 @@ private func formatAuthors(_ authors: [CrossrefAuthor]?) -> String {
     }
 }
 
-private func formatAuthorsFull(_ authors: [CrossrefAuthor]?) -> String {
+func formatAuthorsFull(_ authors: [CrossrefAuthor]?) -> String {
     guard let authors = authors, !authors.isEmpty else { return "Unknown" }
     return authors.map { "\($0.family ?? "?"), \(String(($0.given ?? "?").prefix(1)))." }.joined(separator: ", ")
 }
 
-private func getYear(_ msg: CrossrefMessage) -> String {
+func getYear(_ msg: CrossrefMessage) -> String {
     if let date = msg.publishedOnline ?? msg.publishedPrint,
        let parts = date.dateParts, let first = parts.first, let year = first.first {
         return "\(year)"

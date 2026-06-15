@@ -67,9 +67,9 @@ struct CsvCommand: ParsableCommand {
         var lines = text.components(separatedBy: .newlines).filter { !$0.trimmingCharacters(in: .whitespaces).isEmpty }
         guard lines.count >= 2 else { throw DataError.invalidCSV }
         let headerLine = lines.removeFirst()
-        let headers = parseCSVLine(headerLine).map { $0.trimmingCharacters(in: .whitespaces) }
+        let headers = Self.parseCSVLine(headerLine).map { $0.trimmingCharacters(in: .whitespaces) }
         return lines.map { line in
-            let values = parseCSVLine(line)
+            let values = Self.parseCSVLine(line)
             var row: [String: String] = [:]
             for (i, h) in headers.enumerated() {
                 if i < values.count {
@@ -80,7 +80,7 @@ struct CsvCommand: ParsableCommand {
         }
     }
 
-    private func parseCSVLine(_ line: String) -> [String] {
+    static func parseCSVLine(_ line: String) -> [String] {
         var result: [String] = []
         var current = ""
         var inQuotes = false
@@ -307,7 +307,7 @@ struct YmlCommand: ParsableCommand {
                         }
                     }
                 } else {
-                    let parsedVal: Any = parseYAMLValue(value)
+                    let parsedVal: Any = Self.parseYAMLValue(value)
                     setNestedValue(root: &root, stack: stack, key: key, value: parsedVal)
                 }
             }
@@ -316,7 +316,7 @@ struct YmlCommand: ParsableCommand {
         return root
     }
 
-    private func parseYAMLValue(_ value: String) -> Any {
+    static func parseYAMLValue(_ value: String) -> Any {
         if let int = Int(value) { return int }
         if let double = Double(value) { return double }
         if value == "true" || value == "yes" { return true }

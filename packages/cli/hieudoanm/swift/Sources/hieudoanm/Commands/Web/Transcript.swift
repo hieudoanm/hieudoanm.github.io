@@ -89,7 +89,7 @@ private func parseTimedText(_ xml: String) throws -> Transcript {
     return Transcript(lines: lines)
 }
 
-private func decodeHTML(_ s: String) -> String {
+func decodeHTML(_ s: String) -> String {
     var result = s
     let replacements: [(String, String)] = [
         ("&amp;", "&"), ("&lt;", "<"), ("&gt;", ">"),

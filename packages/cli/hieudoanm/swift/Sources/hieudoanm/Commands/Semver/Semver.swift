@@ -153,7 +153,7 @@ struct SemverSort: ParsableCommand {
     }
 }
 
-private struct SemVer: CustomStringConvertible, Equatable {
+struct SemVer: CustomStringConvertible, Equatable {
     let major: Int
     let minor: Int
     let patch: Int
@@ -218,7 +218,7 @@ private struct SemVer: CustomStringConvertible, Equatable {
     }
 }
 
-private func checkRange(_ v: SemVer, range: String) -> Bool {
+func checkRange(_ v: SemVer, range: String) -> Bool {
     let range = range.trimmingCharacters(in: .whitespaces)
 
     if range.hasPrefix("^") {
@@ -257,10 +257,10 @@ private func checkRange(_ v: SemVer, range: String) -> Bool {
     return false
 }
 
-private func >= (lhs: SemVer, rhs: SemVer) -> Bool { lhs.compare(rhs) != .less }
-private func > (lhs: SemVer, rhs: SemVer) -> Bool { lhs.compare(rhs) == .greater }
-private func <= (lhs: SemVer, rhs: SemVer) -> Bool { lhs.compare(rhs) != .greater }
-private func < (lhs: SemVer, rhs: SemVer) -> Bool { lhs.compare(rhs) == .less }
+func >= (lhs: SemVer, rhs: SemVer) -> Bool { lhs.compare(rhs) != .less }
+func > (lhs: SemVer, rhs: SemVer) -> Bool { lhs.compare(rhs) == .greater }
+func <= (lhs: SemVer, rhs: SemVer) -> Bool { lhs.compare(rhs) != .greater }
+func < (lhs: SemVer, rhs: SemVer) -> Bool { lhs.compare(rhs) == .less }
 
 
 var stderr = FileHandle.standardError
