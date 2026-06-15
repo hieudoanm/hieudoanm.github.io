@@ -9,12 +9,13 @@
 
 ## Frameworks
 
-| No | Language | Framework |
-| 01 | [Go][go] | [cobra][cobra] |
-| 02 | [Rust][rust] | [clap][clap] |
-| 03 | [Swift][swift] | [swift-argument-parser][swift-argument-parser] |
-| 04 | [Kotlin][kotlin] | [clikt][clikt] |
-| 05 | [TypeScript][typescript] | [oclif][oclif] |
+| No  | Language                 | Framework                                      |
+| --- | ------------------------ | ---------------------------------------------- |
+| 01  | [Go][go]                 | [cobra][cobra]                                 |
+| 02  | [Rust][rust]             | [clap][clap]                                   |
+| 03  | [Swift][swift]           | [swift-argument-parser][swift-argument-parser] |
+| 04  | [Kotlin][kotlin]         | [clikt][clikt]                                 |
+| 05  | [TypeScript][typescript] | [oclif][oclif]                                 |
 
 ## Commands
 
