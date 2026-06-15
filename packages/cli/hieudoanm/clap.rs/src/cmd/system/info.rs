@@ -1,13 +1,11 @@
 use std::time::Duration;
 
 pub fn command() -> clap::Command {
-    clap::Command::new("info")
-        .about("Show system info")
-        .arg(
-            clap::Arg::new("json")
-                .long("json")
-                .help("Output in JSON format"),
-        )
+    clap::Command::new("info").about("Show system info").arg(
+        clap::Arg::new("json")
+            .long("json")
+            .help("Output in JSON format"),
+    )
 }
 
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {

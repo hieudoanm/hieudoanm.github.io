@@ -120,5 +120,3 @@ pub async fn stats_run(m: &clap::ArgMatches, json: bool) -> anyhow::Result<()> {
 
     Ok(())
 }
-
-

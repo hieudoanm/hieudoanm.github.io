@@ -70,7 +70,7 @@ fn hotp(key: &[u8], counter: u64, digits: u32) -> String {
     let counter_bytes = counter.to_be_bytes();
     let mut mac = Sha1::new();
     mac.update(key);
-    mac.update(&counter_bytes);
+    mac.update(counter_bytes);
     let hash = mac.finalize();
 
     let offset = (hash[hash.len() - 1] & 0x0f) as usize;

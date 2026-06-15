@@ -35,8 +35,11 @@ fn load_offset(name: &str) -> Option<FixedOffset> {
     if let Some(&(_, hours)) = ZONE_ALIASES.iter().find(|&&(alias, _)| alias == name) {
         return FixedOffset::east_opt(hours * 3600);
     }
-    if let Some(rest) = name.strip_prefix("UTC").or_else(|| name.strip_prefix("utc")) {
-        let rest = rest.trim_start_matches(|c: char| c == '+' || c == ' ');
+    if let Some(rest) = name
+        .strip_prefix("UTC")
+        .or_else(|| name.strip_prefix("utc"))
+    {
+        let rest = rest.trim_start_matches(['+', ' ']);
         let negative = rest.starts_with('-');
         let rest = rest.trim_start_matches('-');
         if let Some((h_str, m_str)) = rest.split_once(':') {
@@ -76,7 +79,11 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
         }
         if let Some(offset) = load_offset(name) {
             let t = now.with_timezone(&offset);
-            println!("{:-12} {}", format!("{name}:"), t.format("%Y-%m-%d %H:%M:%S"));
+            println!(
+                "{:-12} {}",
+                format!("{name}:"),
+                t.format("%Y-%m-%d %H:%M:%S")
+            );
         } else {
             anyhow::bail!("unknown timezone {name:?}");
         }

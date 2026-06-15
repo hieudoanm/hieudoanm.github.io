@@ -13,10 +13,18 @@ const WEEK_NAMES: &[&str] = &["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
 
 lazy_static! {
     static ref MONTH_MAP: HashMap<&'static str, u32> = {
-        MONTH_NAMES.iter().enumerate().map(|(i, n)| (*n, (i + 1) as u32)).collect()
+        MONTH_NAMES
+            .iter()
+            .enumerate()
+            .map(|(i, n)| (*n, (i + 1) as u32))
+            .collect()
     };
     static ref WEEK_MAP: HashMap<&'static str, u32> = {
-        WEEK_NAMES.iter().enumerate().map(|(i, n)| (*n, i as u32)).collect()
+        WEEK_NAMES
+            .iter()
+            .enumerate()
+            .map(|(i, n)| (*n, i as u32))
+            .collect()
     };
 }
 
@@ -122,7 +130,9 @@ fn match_field(spec: &str, val: u32, _min: u32, _max: u32) -> bool {
         return false;
     }
     if spec.contains(',') {
-        return spec.split(',').any(|p| p.trim().parse::<u32>().ok() == Some(val));
+        return spec
+            .split(',')
+            .any(|p| p.trim().parse::<u32>().ok() == Some(val));
     }
     if spec.contains('-') {
         let parts: Vec<&str> = spec.splitn(2, '-').collect();
@@ -146,7 +156,8 @@ fn next_runs(expr: &str, count: usize, until: chrono::NaiveDate) -> Vec<chrono::
     let dow_spec = fields[4];
 
     let mut runs = Vec::new();
-    let mut current = chrono::Utc::now().naive_utc()
+    let mut current = chrono::Utc::now()
+        .naive_utc()
         .date()
         .and_hms_opt(0, 0, 0)
         .unwrap();
@@ -167,7 +178,7 @@ fn next_runs(expr: &str, count: usize, until: chrono::NaiveDate) -> Vec<chrono::
             runs.push(current);
         }
 
-        current = current + chrono::TimeDelta::minutes(1);
+        current += chrono::TimeDelta::minutes(1);
     }
 
     runs
@@ -178,12 +189,8 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     let next = matches.get_one::<usize>("next").copied().unwrap_or(0);
     let until = matches
         .get_one::<String>("until")
-        .and_then(|s| {
-            chrono::NaiveDate::parse_from_str(s, "%Y-%m-%d").ok()
-        })
-        .unwrap_or_else(|| {
-            chrono::NaiveDate::from_ymd_opt(2100, 1, 1).unwrap()
-        });
+        .and_then(|s| chrono::NaiveDate::parse_from_str(s, "%Y-%m-%d").ok())
+        .unwrap_or_else(|| chrono::NaiveDate::from_ymd_opt(2100, 1, 1).unwrap());
 
     let runs = if next > 0 {
         next_runs(expr, next, until)

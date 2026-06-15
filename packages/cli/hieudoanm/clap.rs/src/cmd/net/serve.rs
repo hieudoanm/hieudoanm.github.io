@@ -118,9 +118,7 @@ fn handle_client(mut stream: TcpStream, base_dir: &Path, cors: bool) {
                 } else {
                     format!("/{req_path}/{entry}")
                 };
-                listing.push_str(&format!(
-                    "<li><a href=\"{href}\">{entry}</a></li>"
-                ));
+                listing.push_str(&format!("<li><a href=\"{href}\">{entry}</a></li>"));
             }
             listing.push_str("</ul></body></html>");
             let data = listing.into_bytes();
@@ -136,7 +134,13 @@ fn handle_client(mut stream: TcpStream, base_dir: &Path, cors: bool) {
     let _ = stream.write_all(&response);
 }
 
-fn write_response_headers(response: &mut Vec<u8>, status: u16, content_type: &str, content_len: usize, cors: bool) {
+fn write_response_headers(
+    response: &mut Vec<u8>,
+    status: u16,
+    content_type: &str,
+    content_len: usize,
+    cors: bool,
+) {
     let reason = match status {
         200 => "OK",
         204 => "No Content",

@@ -33,11 +33,9 @@ pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
 
     let out_path = output.cloned().unwrap_or_else(|| {
         let f = file.as_str();
-        if f.ends_with(".enc") {
-            f[..f.len() - 4].to_string()
-        } else {
-            format!("{f}.dec")
-        }
+        f.strip_suffix(".enc")
+            .map(|s| s.to_string())
+            .unwrap_or_else(|| format!("{f}.dec"))
     });
 
     let status = Command::new("openssl")

@@ -28,7 +28,10 @@ pub fn command() -> clap::Command {
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     let forecast = matches.get_flag("forecast");
     let json = matches.get_flag("json");
-    let units = matches.get_one::<String>("units").map(|s| s.as_str()).unwrap_or("metric");
+    let units = matches
+        .get_one::<String>("units")
+        .map(|s| s.as_str())
+        .unwrap_or("metric");
     let city = matches.get_one::<String>("city").cloned();
 
     let city = if let Some(c) = city {
@@ -62,7 +65,11 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     };
 
     let client = reqwest::Client::new();
-    let resp = client.get(&url).send().await.map_err(|e| anyhow::anyhow!("fetch error: {e}"))?;
+    let resp = client
+        .get(&url)
+        .send()
+        .await
+        .map_err(|e| anyhow::anyhow!("fetch error: {e}"))?;
     let text = resp.text().await?.trim().to_string();
 
     if json {

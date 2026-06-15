@@ -63,8 +63,8 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     {
         let capacity = std::fs::read_to_string("/sys/class/power_supply/BAT0/capacity")
             .map_err(|e| anyhow::anyhow!("read battery capacity: {e}"))?;
-        let status = std::fs::read_to_string("/sys/class/power_supply/BAT0/status")
-            .unwrap_or_default();
+        let status =
+            std::fs::read_to_string("/sys/class/power_supply/BAT0/status").unwrap_or_default();
 
         let percent = capacity.trim().parse().unwrap_or(0);
         let charging = status.trim() == "Charging";

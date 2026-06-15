@@ -37,10 +37,7 @@ pub fn command() -> clap::Command {
 
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     let url = matches.get_one::<String>("url").unwrap().clone();
-    let method = matches
-        .get_one::<String>("method")
-        .unwrap()
-        .to_uppercase();
+    let method = matches.get_one::<String>("method").unwrap().to_uppercase();
     let data = matches.get_one::<String>("data").cloned();
     let header = matches.get_one::<String>("header").cloned();
     let json = matches.get_flag("json");

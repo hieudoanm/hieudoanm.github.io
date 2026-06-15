@@ -16,11 +16,13 @@ pub fn command() -> clap::Command {
         .subcommand(status::command())
         .subcommand(status::command_all())
         .subcommand(wifi::command())
-        .subcommand(clap::Command::new("dns").about("DNS lookup").arg(
-            clap::Arg::new("domain")
-                .help("Domain to look up")
-                .required(true),
-        ))
+        .subcommand(
+            clap::Command::new("dns").about("DNS lookup").arg(
+                clap::Arg::new("domain")
+                    .help("Domain to look up")
+                    .required(true),
+            ),
+        )
         .subcommand(cert::command())
         .subcommand(ping::command())
         .subcommand(serve::command())

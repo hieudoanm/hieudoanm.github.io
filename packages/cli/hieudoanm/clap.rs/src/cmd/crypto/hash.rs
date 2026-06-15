@@ -96,7 +96,7 @@ fn hmac_sha256(key: &[u8], data: &[u8]) -> Vec<u8> {
     let inner_hash = inner.finalize();
     let mut outer = Sha256::new();
     outer.update(&opad);
-    outer.update(&inner_hash);
+    outer.update(inner_hash);
     outer.finalize().to_vec()
 }
 
@@ -121,7 +121,7 @@ fn hmac_sha1(key: &[u8], data: &[u8]) -> Vec<u8> {
     let inner_hash = inner.finalize();
     let mut outer = Sha1::new();
     outer.update(&opad);
-    outer.update(&inner_hash);
+    outer.update(inner_hash);
     outer.finalize().to_vec()
 }
 
@@ -146,7 +146,7 @@ fn hmac_md5(key: &[u8], data: &[u8]) -> Vec<u8> {
     let inner_hash = inner.finalize();
     let mut outer = Md5::new();
     outer.update(&opad);
-    outer.update(&inner_hash);
+    outer.update(inner_hash);
     outer.finalize().to_vec()
 }
 
@@ -171,7 +171,7 @@ fn hmac_sha512(key: &[u8], data: &[u8]) -> Vec<u8> {
     let inner_hash = inner.finalize();
     let mut outer = Sha512::new();
     outer.update(&opad);
-    outer.update(&inner_hash);
+    outer.update(inner_hash);
     outer.finalize().to_vec()
 }
 

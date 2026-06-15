@@ -13,11 +13,7 @@ pub fn command() -> clap::Command {
 }
 
 fn parse_datetime(s: &str) -> Option<NaiveDateTime> {
-    let formats = [
-        "%Y-%m-%dT%H:%M:%S",
-        "%Y-%m-%d %H:%M:%S",
-        "%Y-%m-%d",
-    ];
+    let formats = ["%Y-%m-%dT%H:%M:%S", "%Y-%m-%d %H:%M:%S", "%Y-%m-%d"];
     for fmt in &formats {
         if let Ok(dt) = NaiveDateTime::parse_from_str(s, fmt) {
             return Some(dt);

@@ -6,12 +6,30 @@
 ├── src/
 │   ├── cmd/
 │   │   ├── calc/
+│   │   │   ├── [base.rs](./src/cmd/calc/base.rs)
 │   │   │   ├── [bmi.rs](./src/cmd/calc/bmi.rs)
+│   │   │   ├── [compound.rs](./src/cmd/calc/compound.rs)
 │   │   │   ├── [currency.rs](./src/cmd/calc/currency.rs)
+│   │   │   ├── [datecalc.rs](./src/cmd/calc/datecalc.rs)
+│   │   │   ├── [discount.rs](./src/cmd/calc/discount.rs)
+│   │   │   ├── [eval.rs](./src/cmd/calc/eval.rs)
+│   │   │   ├── [eval_service.rs](./src/cmd/calc/eval_service.rs)
+│   │   │   ├── [factorial.rs](./src/cmd/calc/factorial.rs)
+│   │   │   ├── [gcd.rs](./src/cmd/calc/gcd.rs)
+│   │   │   ├── [lcm.rs](./src/cmd/calc/lcm.rs)
+│   │   │   ├── [loan.rs](./src/cmd/calc/loan.rs)
 │   │   │   ├── [mod.rs](./src/cmd/calc/mod.rs)
+│   │   │   ├── [mortgage.rs](./src/cmd/calc/mortgage.rs)
+│   │   │   ├── [percent.rs](./src/cmd/calc/percent.rs)
+│   │   │   ├── [prime.rs](./src/cmd/calc/prime.rs)
+│   │   │   ├── [prime_service.rs](./src/cmd/calc/prime_service.rs)
+│   │   │   ├── [random.rs](./src/cmd/calc/random.rs)
 │   │   │   ├── [service.rs](./src/cmd/calc/service.rs)
-│   │   │   ├── [stub.rs](./src/cmd/calc/stub.rs)
-│   │   │   └── [tax.rs](./src/cmd/calc/tax.rs)
+│   │   │   ├── [stats.rs](./src/cmd/calc/stats.rs)
+│   │   │   ├── [tax.rs](./src/cmd/calc/tax.rs)
+│   │   │   ├── [tip.rs](./src/cmd/calc/tip.rs)
+│   │   │   ├── [unit.rs](./src/cmd/calc/unit.rs)
+│   │   │   └── [unit_service.rs](./src/cmd/calc/unit_service.rs)
 │   │   ├── casino/
 │   │   │   ├── [baccarat.rs](./src/cmd/casino/baccarat.rs)
 │   │   │   ├── [blackjack.rs](./src/cmd/casino/blackjack.rs)
@@ -47,9 +65,15 @@
 │   │   │   ├── [morse.rs](./src/cmd/convert/morse.rs)
 │   │   │   └── [string.rs](./src/cmd/convert/string.rs)
 │   │   ├── crypto/
+│   │   │   ├── [decrypt.rs](./src/cmd/crypto/decrypt.rs)
+│   │   │   ├── [encrypt.rs](./src/cmd/crypto/encrypt.rs)
+│   │   │   ├── [hash.rs](./src/cmd/crypto/hash.rs)
+│   │   │   ├── [jwt.rs](./src/cmd/crypto/jwt.rs)
+│   │   │   ├── [keygen.rs](./src/cmd/crypto/keygen.rs)
 │   │   │   ├── [mod.rs](./src/cmd/crypto/mod.rs)
+│   │   │   ├── [passwd.rs](./src/cmd/crypto/passwd.rs)
 │   │   │   ├── [qrcode.rs](./src/cmd/crypto/qrcode.rs)
-│   │   │   ├── [stub.rs](./src/cmd/crypto/stub.rs)
+│   │   │   ├── [totp.rs](./src/cmd/crypto/totp.rs)
 │   │   │   └── [uuid.rs](./src/cmd/crypto/uuid.rs)
 │   │   ├── data/
 │   │   │   ├── [csv.rs](./src/cmd/data/csv.rs)
@@ -78,11 +102,11 @@
 │   │   │   ├── [count.rs](./src/cmd/file/count.rs)
 │   │   │   ├── [duplicates.rs](./src/cmd/file/duplicates.rs)
 │   │   │   ├── [edit.rs](./src/cmd/file/edit.rs)
+│   │   │   ├── [ftype.rs](./src/cmd/file/ftype.rs)
 │   │   │   ├── [grep.rs](./src/cmd/file/grep.rs)
 │   │   │   ├── [info.rs](./src/cmd/file/info.rs)
 │   │   │   ├── [mod.rs](./src/cmd/file/mod.rs)
 │   │   │   ├── [read.rs](./src/cmd/file/read.rs)
-│   │   │   ├── [stub.rs](./src/cmd/file/stub.rs)
 │   │   │   └── [write.rs](./src/cmd/file/write.rs)
 │   │   ├── gh/
 │   │   │   ├── [coc.rs](./src/cmd/gh/coc.rs)
@@ -91,26 +115,27 @@
 │   │   │   ├── [languages.rs](./src/cmd/gh/languages.rs)
 │   │   │   ├── [license.rs](./src/cmd/gh/license.rs)
 │   │   │   ├── [mod.rs](./src/cmd/gh/mod.rs)
-│   │   │   ├── [og.rs](./src/cmd/gh/og.rs)
-│   │   │   └── [stub.rs](./src/cmd/gh/stub.rs)
+│   │   │   └── [og.rs](./src/cmd/gh/og.rs)
 │   │   ├── image/
 │   │   │   ├── [convert.rs](./src/cmd/image/convert.rs)
 │   │   │   ├── [dominant.rs](./src/cmd/image/dominant.rs)
 │   │   │   ├── [info.rs](./src/cmd/image/info.rs)
-│   │   │   ├── [mod.rs](./src/cmd/image/mod.rs)
-│   │   │   └── [stub.rs](./src/cmd/image/stub.rs)
+│   │   │   └── [mod.rs](./src/cmd/image/mod.rs)
 │   │   ├── net/
+│   │   │   ├── [cert.rs](./src/cmd/net/cert.rs)
+│   │   │   ├── [http.rs](./src/cmd/net/http.rs)
 │   │   │   ├── [ip.rs](./src/cmd/net/ip.rs)
 │   │   │   ├── [mod.rs](./src/cmd/net/mod.rs)
+│   │   │   ├── [ping.rs](./src/cmd/net/ping.rs)
+│   │   │   ├── [serve.rs](./src/cmd/net/serve.rs)
 │   │   │   ├── [service.rs](./src/cmd/net/service.rs)
 │   │   │   ├── [status.rs](./src/cmd/net/status.rs)
-│   │   │   ├── [stub.rs](./src/cmd/net/stub.rs)
+│   │   │   ├── [whois.rs](./src/cmd/net/whois.rs)
 │   │   │   └── [wifi.rs](./src/cmd/net/wifi.rs)
 │   │   ├── openapi/
 │   │   │   ├── [mod.rs](./src/cmd/openapi/mod.rs)
 │   │   │   ├── [postman.rs](./src/cmd/openapi/postman.rs)
 │   │   │   ├── [service.rs](./src/cmd/openapi/service.rs)
-│   │   │   ├── [stub.rs](./src/cmd/openapi/stub.rs)
 │   │   │   └── [validate.rs](./src/cmd/openapi/validate.rs)
 │   │   ├── openrouter/
 │   │   │   ├── [chat.rs](./src/cmd/openrouter/chat.rs)
@@ -137,21 +162,31 @@
 │   │   │   ├── [sort.rs](./src/cmd/semver/sort.rs)
 │   │   │   └── [validate.rs](./src/cmd/semver/validate.rs)
 │   │   ├── system/
+│   │   │   ├── [battery.rs](./src/cmd/system/battery.rs)
 │   │   │   ├── [clipboard.rs](./src/cmd/system/clipboard.rs)
+│   │   │   ├── [disk.rs](./src/cmd/system/disk.rs)
+│   │   │   ├── [env.rs](./src/cmd/system/env.rs)
+│   │   │   ├── [info.rs](./src/cmd/system/info.rs)
 │   │   │   ├── [mod.rs](./src/cmd/system/mod.rs)
 │   │   │   ├── [monitor.rs](./src/cmd/system/monitor.rs)
-│   │   │   └── [stub.rs](./src/cmd/system/stub.rs)
+│   │   │   └── [path.rs](./src/cmd/system/path.rs)
 │   │   ├── telegram/
 │   │   │   ├── [mod.rs](./src/cmd/telegram/mod.rs)
 │   │   │   ├── [send.rs](./src/cmd/telegram/send.rs)
 │   │   │   ├── [service.rs](./src/cmd/telegram/service.rs)
 │   │   │   └── [webhook.rs](./src/cmd/telegram/webhook.rs)
 │   │   ├── time/
+│   │   │   ├── [age.rs](./src/cmd/time/age.rs)
 │   │   │   ├── [clock.rs](./src/cmd/time/clock.rs)
+│   │   │   ├── [cron.rs](./src/cmd/time/cron.rs)
+│   │   │   ├── [epoch.rs](./src/cmd/time/epoch.rs)
 │   │   │   ├── [mod.rs](./src/cmd/time/mod.rs)
 │   │   │   ├── [pomodoro.rs](./src/cmd/time/pomodoro.rs)
 │   │   │   ├── [service.rs](./src/cmd/time/service.rs)
-│   │   │   └── [stub.rs](./src/cmd/time/stub.rs)
+│   │   │   ├── [stopwatch.rs](./src/cmd/time/stopwatch.rs)
+│   │   │   ├── [timer.rs](./src/cmd/time/timer.rs)
+│   │   │   ├── [until.rs](./src/cmd/time/until.rs)
+│   │   │   └── [world.rs](./src/cmd/time/world.rs)
 │   │   ├── version/
 │   │   │   └── [mod.rs](./src/cmd/version/mod.rs)
 │   │   ├── web/
@@ -160,7 +195,7 @@
 │   │   │   ├── [service.rs](./src/cmd/web/service.rs)
 │   │   │   ├── [shopify.rs](./src/cmd/web/shopify.rs)
 │   │   │   ├── [snapshot.rs](./src/cmd/web/snapshot.rs)
-│   │   │   ├── [stub.rs](./src/cmd/web/stub.rs)
+│   │   │   ├── [weather.rs](./src/cmd/web/weather.rs)
 │   │   │   └── [youtube.rs](./src/cmd/web/youtube.rs)
 │   │   └── [mod.rs](./src/cmd/mod.rs)
 │   ├── configs/
@@ -169,13 +204,19 @@
 │   ├── data/
 │   │   └── [mod.rs](./src/data/mod.rs)
 │   ├── libs/
+│   │   ├── chat/
+│   │   │   ├── [component.rs](./src/libs/chat/component.rs)
+│   │   │   ├── [message.rs](./src/libs/chat/message.rs)
+│   │   │   ├── [mod.rs](./src/libs/chat/mod.rs)
+│   │   │   ├── [spinner.rs](./src/libs/chat/spinner.rs)
+│   │   │   └── [state.rs](./src/libs/chat/state.rs)
 │   │   ├── [browser.rs](./src/libs/browser.rs)
 │   │   ├── [colors.rs](./src/libs/colors.rs)
 │   │   ├── [figlet.rs](./src/libs/figlet.rs)
-│   │   ├── [http.rs](./src/libs/http.rs)
 │   │   ├── [mod.rs](./src/libs/mod.rs)
 │   │   ├── [number.rs](./src/libs/number.rs)
-│   │   └── [requests.rs](./src/libs/requests.rs)
+│   │   ├── [requests.rs](./src/libs/requests.rs)
+│   │   └── [theme.rs](./src/libs/theme.rs)
 │   └── [main.rs](./src/main.rs)
 ├── target/
 ├── [Cargo.lock](./Cargo.lock)
@@ -186,4 +227,4 @@
 └── [TREE.md](./TREE.md)
 ```
 
-31 directories, 152 files
+32 directories, 192 files

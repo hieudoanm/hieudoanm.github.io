@@ -12,13 +12,11 @@ fn format_bytes(bytes: u64) -> String {
 }
 
 pub fn command() -> clap::Command {
-    clap::Command::new("disk")
-        .about("Show disk usage")
-        .arg(
-            clap::Arg::new("json")
-                .long("json")
-                .help("Output in JSON format"),
-        )
+    clap::Command::new("disk").about("Show disk usage").arg(
+        clap::Arg::new("json")
+            .long("json")
+            .help("Output in JSON format"),
+    )
 }
 
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
@@ -50,7 +48,7 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
         println!("{}", serde_json::to_string_pretty(&entries)?);
     } else {
         println!(
-            "{:<24} {:>8} {:>8} {:>8} {:>6}  {}",
+            "{:<24} {:>8} {:>8} {:>8} {:>6}  {:<8}",
             "Filesystem", "Size", "Used", "Avail", "Use%", "Mounted"
         );
         for disk in &disks {

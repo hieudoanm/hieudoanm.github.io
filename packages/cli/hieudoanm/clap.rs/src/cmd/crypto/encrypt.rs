@@ -32,9 +32,7 @@ pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
     let password = matches.get_one::<String>("password").unwrap();
     let output = matches.get_one::<String>("output");
 
-    let out_path = output
-        .cloned()
-        .unwrap_or_else(|| format!("{file}.enc"));
+    let out_path = output.cloned().unwrap_or_else(|| format!("{file}.enc"));
 
     let status = Command::new("openssl")
         .args(["enc", "-aes-256-cbc", "-pbkdf2", "-salt"])

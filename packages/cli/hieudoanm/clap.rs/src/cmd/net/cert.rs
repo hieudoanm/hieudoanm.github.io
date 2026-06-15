@@ -114,11 +114,7 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
         }
         Some(("check", m)) => {
             let host = m.get_one::<String>("host").unwrap();
-            let warn_days: i64 = m
-                .get_one::<String>("warn")
-                .unwrap()
-                .parse()
-                .unwrap_or(30);
+            let warn_days: i64 = m.get_one::<String>("warn").unwrap().parse().unwrap_or(30);
 
             let output = openssl_x509(host, &["-subject", "-issuer", "-enddate"])?;
 
@@ -147,10 +143,7 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
                 if remaining.num_seconds() < 0 {
                     format!("EXPIRED ({} ago)", format_duration(-remaining))
                 } else if remaining.num_days() < warn_days {
-                    format!(
-                        "Expiring soon ({} remaining)",
-                        format_duration(remaining)
-                    )
+                    format!("Expiring soon ({} remaining)", format_duration(remaining))
                 } else {
                     format!("Valid ({} remaining)", format_duration(remaining))
                 }

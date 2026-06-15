@@ -56,12 +56,19 @@ fn base64url_decode(input: &str) -> anyhow::Result<Vec<u8>> {
         _ => input.to_string(),
     };
     let standard = padded.replace('-', "+").replace('_', "/");
-    Ok(base64::Engine::decode(&base64::engine::general_purpose::STANDARD, &standard)?)
+    Ok(base64::Engine::decode(
+        &base64::engine::general_purpose::STANDARD,
+        &standard,
+    )?)
 }
 
 fn base64url_encode(input: &[u8]) -> String {
     let encoded = base64::Engine::encode(&base64::engine::general_purpose::STANDARD, input);
-    encoded.replace('+', "-").replace('/', "_").trim_end_matches('=').to_string()
+    encoded
+        .replace('+', "-")
+        .replace('/', "_")
+        .trim_end_matches('=')
+        .to_string()
 }
 
 fn hmac_sha256_sign(key: &[u8], data: &[u8]) -> Vec<u8> {
@@ -85,7 +92,7 @@ fn hmac_sha256_sign(key: &[u8], data: &[u8]) -> Vec<u8> {
     let inner_hash = inner.finalize();
     let mut outer = sha2::Sha256::new();
     outer.update(&opad);
-    outer.update(&inner_hash);
+    outer.update(inner_hash);
     outer.finalize().to_vec()
 }
 
@@ -110,7 +117,7 @@ fn hmac_sha384_sign(key: &[u8], data: &[u8]) -> Vec<u8> {
     let inner_hash = inner.finalize();
     let mut outer = sha2::Sha384::new();
     outer.update(&opad);
-    outer.update(&inner_hash);
+    outer.update(inner_hash);
     outer.finalize().to_vec()
 }
 
@@ -135,7 +142,7 @@ fn hmac_sha512_sign(key: &[u8], data: &[u8]) -> Vec<u8> {
     let inner_hash = inner.finalize();
     let mut outer = sha2::Sha512::new();
     outer.update(&opad);
-    outer.update(&inner_hash);
+    outer.update(inner_hash);
     outer.finalize().to_vec()
 }
 
@@ -189,7 +196,10 @@ fn run_decode(matches: &ArgMatches) -> anyhow::Result<()> {
         println!("{}", serde_json::to_string_pretty(&out)?);
     } else {
         println!("Header:\n{}", serde_json::to_string_pretty(&header_val)?);
-        println!("\nPayload:\n{}", serde_json::to_string_pretty(&payload_val)?);
+        println!(
+            "\nPayload:\n{}",
+            serde_json::to_string_pretty(&payload_val)?
+        );
     }
     Ok(())
 }

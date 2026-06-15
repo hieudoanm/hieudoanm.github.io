@@ -9,6 +9,10 @@ pub async fn run(_matches: &clap::ArgMatches) -> anyhow::Result<()> {
     let start = Instant::now();
     tokio::signal::ctrl_c().await?;
     let elapsed = start.elapsed();
-    println!("\rElapsed: {}.{:03}s", elapsed.as_secs(), elapsed.subsec_millis());
+    println!(
+        "\rElapsed: {}.{:03}s",
+        elapsed.as_secs(),
+        elapsed.subsec_millis()
+    );
     Ok(())
 }

@@ -42,8 +42,8 @@ fn parse_date(s: &str) -> Option<NaiveDateTime> {
 
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     let date_str = matches.get_one::<String>("date").unwrap();
-    let birth = parse_date(date_str)
-        .ok_or_else(|| anyhow::anyhow!("unable to parse date: {date_str}"))?;
+    let birth =
+        parse_date(date_str).ok_or_else(|| anyhow::anyhow!("unable to parse date: {date_str}"))?;
 
     let now = chrono::Local::now().naive_local();
 
