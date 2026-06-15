@@ -1,11 +1,15 @@
-use std::io::{self, Write};
+use std::io::Write;
 use std::path::Path;
 
-pub async fn run() -> anyhow::Result<()> {
+pub fn command() -> clap::Command {
+    clap::Command::new("qrcode").about("Generate a QR code")
+}
+
+pub async fn run(_matches: &clap::ArgMatches) -> anyhow::Result<()> {
     print!("URL: ");
-    io::stdout().flush()?;
+    std::io::stdout().flush()?;
     let mut url = String::new();
-    io::stdin().read_line(&mut url)?;
+    std::io::stdin().read_line(&mut url)?;
     let url = url.trim().to_string();
 
     let code = qrcode::QrCode::new(url.as_bytes())?;

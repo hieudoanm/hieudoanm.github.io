@@ -4,6 +4,7 @@ mod common;
 mod count;
 mod duplicates;
 mod edit;
+mod ftype;
 mod grep;
 mod info;
 mod read;
@@ -31,7 +32,7 @@ pub fn command() -> clap::Command {
         .subcommand(duplicates::command())
         .subcommand(info::size_command())
         .subcommand(info::stats_command())
-        .subcommand(info::type_command())
+        .subcommand(ftype::command())
 }
 
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
@@ -49,7 +50,7 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
         Some(("duplicates", m)) => duplicates::run(m, json).await,
         Some(("size", m)) => info::size_run(m, json).await,
         Some(("stats", m)) => info::stats_run(m, json).await,
-        Some(("type", m)) => info::run_type(m, json).await,
+        Some(("type", m)) => ftype::run(m, json).await,
         _ => Ok(()),
     }
 }

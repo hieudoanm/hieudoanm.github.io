@@ -1,7 +1,11 @@
+mod cert;
+mod http;
 mod ip;
+mod ping;
+mod serve;
 pub(crate) mod service;
 mod status;
-mod stub;
+mod whois;
 mod wifi;
 
 pub fn command() -> clap::Command {
@@ -12,12 +16,16 @@ pub fn command() -> clap::Command {
         .subcommand(status::command())
         .subcommand(status::command_all())
         .subcommand(wifi::command())
-        .subcommand(clap::Command::new("cert").about("TLS certificate tools"))
-        .subcommand(clap::Command::new("ping").about("Ping a host"))
-        .subcommand(clap::Command::new("dns").about("DNS lookup"))
-        .subcommand(clap::Command::new("serve").about("Start an HTTP server"))
-        .subcommand(clap::Command::new("http").about("HTTP client"))
-        .subcommand(clap::Command::new("whois").about("WHOIS lookup"))
+        .subcommand(clap::Command::new("dns").about("DNS lookup").arg(
+            clap::Arg::new("domain")
+                .help("Domain to look up")
+                .required(true),
+        ))
+        .subcommand(cert::command())
+        .subcommand(ping::command())
+        .subcommand(serve::command())
+        .subcommand(http::command())
+        .subcommand(whois::command())
 }
 
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
@@ -27,7 +35,11 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
         Some(("status-all", m)) => status::run_all(m).await,
         Some(("dns", m)) => ip::run_dns(m).await,
         Some(("wifi", m)) => wifi::run(m).await,
-        Some((name, m)) => stub::run(name, m).await,
+        Some(("cert", m)) => cert::run(m).await,
+        Some(("ping", m)) => ping::run(m).await,
+        Some(("serve", m)) => serve::run(m).await,
+        Some(("http", m)) => http::run(m).await,
+        Some(("whois", m)) => whois::run(m).await,
         _ => Ok(()),
     }
 }

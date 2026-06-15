@@ -2,7 +2,7 @@ mod instagram;
 pub(crate) mod service;
 mod shopify;
 mod snapshot;
-mod stub;
+mod weather;
 mod youtube;
 
 pub fn command() -> clap::Command {
@@ -13,7 +13,7 @@ pub fn command() -> clap::Command {
         .subcommand(instagram::command())
         .subcommand(shopify::command())
         .subcommand(snapshot::command())
-        .subcommand(stub::command())
+        .subcommand(weather::command())
 }
 
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
@@ -22,7 +22,7 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
         Some(("instagram", m)) => instagram::run(m).await,
         Some(("shopify", m)) => shopify::run(m).await,
         Some(("snapshot", m)) => snapshot::run(m).await,
-        Some((name, m)) => stub::run(name, m).await,
+        Some(("weather", m)) => weather::run(m).await,
         _ => Ok(()),
     }
 }

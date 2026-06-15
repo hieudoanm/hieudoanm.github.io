@@ -1,0 +1,54 @@
+use clap::ArgMatches;
+use std::path::Path;
+use std::process::Command;
+
+pub fn command() -> clap::Command {
+    clap::Command::new("encrypt")
+        .about("Encrypt data")
+        .arg(
+            clap::Arg::new("file")
+                .long("file")
+                .short('f')
+                .help("File to encrypt")
+                .required(true),
+        )
+        .arg(
+            clap::Arg::new("password")
+                .long("password")
+                .short('p')
+                .help("Encryption password")
+                .required(true),
+        )
+        .arg(
+            clap::Arg::new("output")
+                .long("output")
+                .short('o')
+                .help("Output file"),
+        )
+}
+
+pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
+    let file = matches.get_one::<String>("file").unwrap();
+    let password = matches.get_one::<String>("password").unwrap();
+    let output = matches.get_one::<String>("output");
+
+    let out_path = output
+        .cloned()
+        .unwrap_or_else(|| format!("{file}.enc"));
+
+    let status = Command::new("openssl")
+        .args(["enc", "-aes-256-cbc", "-pbkdf2", "-salt"])
+        .args(["-in", file])
+        .args(["-out", &out_path])
+        .args(["-pass", &format!("pass:{password}")])
+        .status()?;
+
+    if !status.success() {
+        anyhow::bail!("openssl encryption failed");
+    }
+
+    if Path::new(&out_path).exists() {
+        println!("{out_path}");
+    }
+    Ok(())
+}
