@@ -1,110 +1,111 @@
 import Foundation
-#if canImport(FoundationNetworking)
-import FoundationNetworking
-#endif
 
-
-struct RequestsOptions {
-    var headers: [String: String] = [:]
-    var query: [String: String] = [:]
-    var body: Data?
-    var debug = false
-    var timeout: TimeInterval = 30
-    var retries = 3
+enum HTTPMethod: String {
+    case get = "GET"
+    case post = "POST"
+    case put = "PUT"
+    case delete = "DELETE"
 }
 
-func requestsFetch(
-    method: String,
-    url: String,
-    options: RequestsOptions = RequestsOptions()
-) async throws -> Data {
-    var lastError: Error?
+struct RequestError: Error, CustomStringConvertible {
+    let message: String
+    let statusCode: Int?
 
-    for attempt in 0...options.retries {
-        do {
-            return try await performRequest(method: method, url: url, options: options)
-        } catch {
-            lastError = error
-            if attempt < options.retries {
-                let delay = pow(2.0, Double(attempt))
-                if options.debug {
-                    print("\(yellow(""))Request failed (attempt \(attempt + 1)/\(options.retries + 1)), retrying in \(Int(delay))s...\(yellow(""))")
-                }
-                try await Task.sleep(nanoseconds: UInt64(delay * 1_000_000_000))
+    var description: String {
+        if let code = statusCode {
+            return "HTTP \(code): \(message)"
+        }
+        return message
+    }
+}
+
+struct HTTPResponse {
+    let data: Data
+    let statusCode: Int
+    let headers: [String: String]
+}
+
+struct Requests {
+    static let defaultTimeout: TimeInterval = 30
+    static let userAgent = "hieudoanm/1.0"
+
+    static func fetch(
+        _ url: String,
+        method: HTTPMethod = .get,
+        headers: [String: String] = [:],
+        body: Data? = nil,
+        timeout: TimeInterval = defaultTimeout
+    ) async throws -> HTTPResponse {
+        guard let requestURL = URL(string: url) else {
+            throw RequestError(message: "Invalid URL: \(url)", statusCode: nil)
+        }
+
+        var request = URLRequest(url: requestURL)
+        request.httpMethod = method.rawValue
+        request.timeoutInterval = timeout
+        request.setValue(userAgent, forHTTPHeaderField: "User-Agent")
+
+        for (key, value) in headers {
+            request.setValue(value, forHTTPHeaderField: key)
+        }
+
+        if let body = body {
+            request.httpBody = body
+            if headers["Content-Type"] == nil {
+                request.setValue("application/json", forHTTPHeaderField: "Content-Type")
             }
         }
-    }
 
-    throw lastError ?? RequestsError.failed
-}
+        let (data, response) = try await URLSession.shared.data(for: request)
 
-private func performRequest(
-    method: String,
-    url: String,
-    options: RequestsOptions
-) async throws -> Data {
-    guard var components = URLComponents(string: url) else {
-        throw RequestsError.invalidURL
-    }
-
-    if !options.query.isEmpty {
-        components.queryItems = options.query.map { URLQueryItem(name: $0.key, value: $0.value) }
-    }
-
-    guard let finalURL = components.url else {
-        throw RequestsError.invalidURL
-    }
-
-    var request = URLRequest(url: finalURL)
-    request.httpMethod = method
-    request.httpBody = options.body
-    request.timeoutInterval = options.timeout
-
-    for (key, value) in options.headers {
-        request.setValue(value, forHTTPHeaderField: key)
-    }
-
-    if options.debug {
-        print("\(blue(""))===== HTTP Request Debug =====\(blue(""))")
-        print("Method: \(method)")
-        print("URL: \(finalURL.absoluteString)")
-        print("Headers: \(options.headers)")
-    }
-
-    let (data, response) = try await URLSession.shared.data(for: request)
-
-    guard let httpResponse = response as? HTTPURLResponse else {
-        throw RequestsError.invalidResponse
-    }
-
-    let status = httpResponse.statusCode
-
-    if options.debug {
-        let statusColor: (String) -> String = status >= 500 ? red : (status >= 400 ? yellow : green)
-        print("Status: \(statusColor("\(status)"))")
-        print("Body: \(String(data: data, encoding: .utf8) ?? "<binary>")")
-        print("\(blue(""))===============================\(blue(""))")
-    }
-
-    if status >= 500 {
-        throw RequestsError.serverError(status)
-    }
-
-    return data
-}
-
-enum RequestsError: LocalizedError {
-    case invalidURL
-    case invalidResponse
-    case serverError(Int)
-    case failed
-
-    var errorDescription: String? {
-        switch self {
-        case .invalidURL: return "invalid URL"
-        case .invalidResponse: return "invalid response"
-        case .serverError(let code): return "server error: \(code)"
-        case .failed: return "request failed"
+        guard let httpResponse = response as? HTTPURLResponse else {
+            throw RequestError(message: "Invalid response", statusCode: nil)
         }
+
+        var responseHeaders: [String: String] = [:]
+        for (key, value) in httpResponse.allHeaderFields {
+            responseHeaders["\(key)"] = "\(value)"
+        }
+
+        return HTTPResponse(
+            data: data,
+            statusCode: httpResponse.statusCode,
+            headers: responseHeaders
+        )
+    }
+
+    static func fetchJSON<T: Decodable>(
+        _ url: String,
+        method: HTTPMethod = .get,
+        headers: [String: String] = [:],
+        body: Data? = nil,
+        timeout: TimeInterval = defaultTimeout
+    ) async throws -> T {
+        let response = try await fetch(url, method: method, headers: headers, body: body, timeout: timeout)
+        return try JSONDecoder().decode(T.self, from: response.data)
+    }
+
+    static func fetchString(
+        _ url: String,
+        method: HTTPMethod = .get,
+        headers: [String: String] = [:],
+        body: Data? = nil,
+        timeout: TimeInterval = defaultTimeout
+    ) async throws -> String {
+        let response = try await fetch(url, method: method, headers: headers, body: body, timeout: timeout)
+        guard let string = String(data: response.data, encoding: .utf8) else {
+            throw RequestError(message: "Invalid UTF-8 response", statusCode: nil)
+        }
+        return string
+    }
+
+    static func buildURL(_ base: String, query: [String: String]) -> String {
+        guard var components = URLComponents(string: base) else { return base }
+        var queryItems = components.queryItems ?? []
+        for (key, value) in query {
+            queryItems.append(URLQueryItem(name: key, value: value))
+        }
+        components.queryItems = queryItems.isEmpty ? nil : queryItems
+        return components.url?.absoluteString ?? base
     }
 }
