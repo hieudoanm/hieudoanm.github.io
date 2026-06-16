@@ -520,6 +520,14 @@ const TaxModal = dynamic(
   { ssr: false }
 );
 
+const SplitBillModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/calculators/SplitBillModal').then(
+      (mod) => mod.SplitBillModal
+    ),
+  { ssr: false }
+);
+
 const TowersModal = dynamic(
   () =>
     import('@hieudoanm.github.io/components/pages/start/modals/games/TowersModal').then(
@@ -666,7 +674,8 @@ type ModalId =
   | 'watchface'
   | 'wordle'
   | 'youtube-thumbnails'
-  | 'resume-timeline';
+  | 'resume-timeline'
+  | 'split-bill';
 
 type SidebarTab = 'tasks' | 'clock';
 
@@ -739,6 +748,7 @@ const MODAL_MAP: Record<
   sudoku: SudokuModal,
   t3: T3Modal,
   tax: TaxModal,
+  'split-bill': SplitBillModal,
   towers: TowersModal,
   'tumbling-e': TumblingEChartModal,
   typoglycemia: TypoglycemiaModal,
@@ -879,6 +889,13 @@ const makeTools = (
       emoji: '🇻🇳',
       color: '#ef4444',
       onClick: open('tax'),
+    },
+    {
+      label: 'Split Bill',
+      description: 'Calculator',
+      emoji: '💵',
+      color: '#10b981',
+      onClick: open('split-bill'),
     },
   ],
   casino: [
