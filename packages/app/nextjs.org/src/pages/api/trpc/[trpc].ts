@@ -1,4 +1,4 @@
-import { appRouter } from '@hieudoanm.github.io/server/routers/_app';
+import { appRouter } from '@hieudoanm.github.io/server/trpc/routers/_app';
 import * as trpcNext from '@trpc/server/adapters/next';
 // export API handler
 // @link https://trpc.io/docs/v11/server/adapters

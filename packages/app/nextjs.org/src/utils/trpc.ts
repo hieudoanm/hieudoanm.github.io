@@ -1,4 +1,4 @@
-import type { AppRouter } from '@hieudoanm.github.io/server/routers/_app';
+import type { AppRouter } from '@hieudoanm.github.io/server/trpc/routers/_app';
 import { createTRPCClient, httpBatchLink } from '@trpc/client';
 import { createTRPCNext } from '@trpc/next';
 

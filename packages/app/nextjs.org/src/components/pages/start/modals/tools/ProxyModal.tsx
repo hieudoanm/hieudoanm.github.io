@@ -1,7 +1,7 @@
 import { FC, useCallback, useMemo, useState } from 'react';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
-const PROXY_BASE_URL = 'https://hieudoanm-proxy.vercel.app/api?url=';
+const PROXY_BASE_URL = 'https://hieudoanm.vercel.app/api/rest/proxy?url=';
 
 type TabType = 'curl' | 'fetch' | 'axios' | 'useQuery';
 
