@@ -12,7 +12,7 @@ func TestNewCommand_HasSubcommands(t *testing.T) {
 		t.Errorf("expected Use='web', got %q", cmd.Use)
 	}
 
-	expected := []string{"instagram", "shopify", "snapshot", "weather", "youtube"}
+	expected := []string{"csv", "instagram", "shopify", "snapshot", "weather", "youtube"}
 	got := make(map[string]*cobra.Command)
 	for _, sub := range cmd.Commands() {
 		got[sub.Name()] = sub

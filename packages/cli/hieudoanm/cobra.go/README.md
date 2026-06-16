@@ -71,11 +71,12 @@ A collection of CLI utilities covering system monitoring, cloud service status, 
       - [Flags](#flags-23)
   - [`hieudoanm chess`](#hieudoanm-chess)
     - [Flags](#flags-24)
-    - [`hieudoanm chess leaderboards`](#hieudoanm-chess-leaderboards)
-      - [Flags](#flags-25)
-    - [`hieudoanm chess player`](#hieudoanm-chess-player)
-      - [Flags](#flags-26)
-    - [`hieudoanm chess titled`](#hieudoanm-chess-titled)
+    - [`hieudoanm chess com`](#hieudoanm-chess-com)
+      - [`hieudoanm chess com player`](#hieudoanm-chess-com-player)
+        - [Flags](#flags-25)
+      - [`hieudoanm chess com leaderboards`](#hieudoanm-chess-com-leaderboards)
+        - [Flags](#flags-26)
+      - [`hieudoanm chess com titled`](#hieudoanm-chess-com-titled)
     - [`hieudoanm chess elo`](#hieudoanm-chess-elo)
     - [`hieudoanm chess fen`](#hieudoanm-chess-fen)
       - [Flags](#flags-27)
@@ -283,11 +284,11 @@ A collection of CLI utilities covering system monitoring, cloud service status, 
       - [Flags](#flags-115)
   - [`hieudoanm semver`](#hieudoanm-semver)
     - [Flags](#flags-116)
-    - [`hieudoanm semver <command> [flags] validate`](#hieudoanm-semver-command-flags-validate)
+    - [`hieudoanm semver validate`](#hieudoanm-semver-validate)
       - [Flags](#flags-117)
-    - [`hieudoanm semver <command> [flags] compare`](#hieudoanm-semver-command-flags-compare)
+    - [`hieudoanm semver compare`](#hieudoanm-semver-compare)
       - [Flags](#flags-118)
-    - [`hieudoanm semver <command> [flags] sort`](#hieudoanm-semver-command-flags-sort)
+    - [`hieudoanm semver sort`](#hieudoanm-semver-sort)
       - [Flags](#flags-119)
   - [`hieudoanm system`](#hieudoanm-system)
     - [Flags](#flags-120)
@@ -337,21 +338,23 @@ A collection of CLI utilities covering system monitoring, cloud service status, 
     - [Flags](#flags-138)
   - [`hieudoanm web`](#hieudoanm-web)
     - [Flags](#flags-139)
+    - [`hieudoanm web csv`](#hieudoanm-web-csv)
+      - [Flags](#flags-140)
     - [`hieudoanm web instagram`](#hieudoanm-web-instagram)
       - [`hieudoanm web instagram download`](#hieudoanm-web-instagram-download)
-        - [Flags](#flags-140)
+        - [Flags](#flags-141)
     - [`hieudoanm web shopify`](#hieudoanm-web-shopify)
       - [`hieudoanm web shopify detect`](#hieudoanm-web-shopify-detect)
-        - [Flags](#flags-141)
+        - [Flags](#flags-142)
     - [`hieudoanm web snapshot`](#hieudoanm-web-snapshot)
-      - [Flags](#flags-142)
-    - [`hieudoanm web weather`](#hieudoanm-web-weather)
       - [Flags](#flags-143)
+    - [`hieudoanm web weather`](#hieudoanm-web-weather)
+      - [Flags](#flags-144)
     - [`hieudoanm web youtube`](#hieudoanm-web-youtube)
       - [`hieudoanm web youtube thumbnails`](#hieudoanm-web-youtube-thumbnails)
-        - [Flags](#flags-144)
-      - [`hieudoanm web youtube fetch`](#hieudoanm-web-youtube-fetch)
         - [Flags](#flags-145)
+      - [`hieudoanm web youtube fetch`](#hieudoanm-web-youtube-fetch)
+        - [Flags](#flags-146)
 
 ## `hieudoanm calc`
 
@@ -1251,17 +1254,62 @@ Example:
 
 ---
 
-### `hieudoanm chess leaderboards`
+### `hieudoanm chess com`
+
+Chess.com integration
+
+Fetch data from Chess.com: player profiles, leaderboards, and titled player counts.
+
+```bash
+hieudoanm chess com
+```
+
+Example:
+
+```bash
+  chess com player --username hikaru
+  chess com leaderboards --top 10
+  chess com titled
+```
+
+---
+
+#### `hieudoanm chess com player`
+
+Show Chess.com player profile and stats
+
+Fetch and display a Chess.com player's profile information including name, title, country, and ratings for bullet, blitz, and rapid.
+
+```bash
+hieudoanm chess com player [--username <username>]
+```
+
+##### Flags
+
+| Flag         | Shorthand | Default | Description        |
+| ------------ | --------- | ------- | ------------------ |
+| `--username` | `-u`      | ``      | Chess.com username |
+
+Example:
+
+```bash
+  chess com player --username hikaru
+  chess com player --username magnuscarlsen
+```
+
+---
+
+#### `hieudoanm chess com leaderboards`
 
 Show Chess.com leaderboards
 
 Fetch and display top players from Chess.com leaderboards for bullet, blitz, rapid, and Chess960 variants. Supports filtering by country.
 
 ```bash
-hieudoanm chess leaderboards
+hieudoanm chess com leaderboards
 ```
 
-#### Flags
+##### Flags
 
 | Flag        | Shorthand | Default | Description                                   |
 | ----------- | --------- | ------- | --------------------------------------------- |
@@ -1278,39 +1326,14 @@ Example:
 
 ---
 
-### `hieudoanm chess player`
-
-Show Chess.com player profile and stats
-
-Fetch and display a Chess.com player's profile information including name, title, country, and ratings for bullet, blitz, and rapid.
-
-```bash
-hieudoanm chess player [--username <username>]
-```
-
-#### Flags
-
-| Flag         | Shorthand | Default | Description        |
-| ------------ | --------- | ------- | ------------------ |
-| `--username` | `-u`      | ``      | Chess.com username |
-
-Example:
-
-```bash
-  chess com player --username hikaru
-  chess com player --username magnuscarlsen
-```
-
----
-
-### `hieudoanm chess titled`
+#### `hieudoanm chess com titled`
 
 Show Chess.com titled player counts
 
 Fetch and display the number of Chess.com players holding each title (GM, IM, FM, etc.).
 
 ```bash
-hieudoanm chess titled
+hieudoanm chess com titled
 ```
 
 Example:
@@ -5098,6 +5121,35 @@ Example:
   web snapshot --url https://example.com
   web youtube fetch --url dQw4w9WgXcQ
   web instagram download --url CLI7qRNhI_o
+```
+
+---
+
+### `hieudoanm web csv`
+
+Extract HTML tables to CSV
+
+Fetch a webpage, detect all <table> elements, and save each table as a CSV file.
+
+If the page contains a single table it is saved as <domain>.csv.
+Multiple tables produce individual <domain>-table-<N>.csv files.
+
+```bash
+hieudoanm web csv --url <url>
+```
+
+#### Flags
+
+| Flag    | Shorthand | Default | Description                  |
+| ------- | --------- | ------- | ---------------------------- |
+| `--url` | `-u`      | ``      | URL to fetch                 |
+| `--out` | `-o`      | ``      | Output directory (default .) |
+
+Example:
+
+```bash
+  web csv --url https://en.wikipedia.org/wiki/List_of_countries_by_population
+  web csv --url https://example.com/data --out ./output
 ```
 
 ---
