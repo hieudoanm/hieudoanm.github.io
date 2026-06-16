@@ -1,5 +1,5 @@
-import { createMemo, createSignal } from 'solid-js';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { createMemo, createSignal } from 'solid-js';
 
 type Period = 'monthly' | 'annual';
 type SalaryMode = 'gross' | 'net';

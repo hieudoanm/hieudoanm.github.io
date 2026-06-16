@@ -9,7 +9,8 @@ import { CalculatorModal } from '@hieudoanm.github.io/components/pages/start/mod
 import { ConverterModal } from '@hieudoanm.github.io/components/pages/start/modals/calculators/ConverterModal';
 import { EloModal } from '@hieudoanm.github.io/components/pages/start/modals/calculators/EloModal';
 import { InflationModal } from '@hieudoanm.github.io/components/pages/start/modals/calculators/InflationModal';
-import { PokerModal } from '@hieudoanm.github.io/components/pages/start/modals/calculators/PokerModal';
+import { PokerModal } from '@hieudoanm.github.io/components/pages/start/modals/casino/PokerModal';
+import { SplitBillModal } from '@hieudoanm.github.io/components/pages/start/modals/calculators/SplitBillModal';
 import { TaxModal } from '@hieudoanm.github.io/components/pages/start/modals/calculators/TaxModal';
 import { ChessClockModal } from '@hieudoanm.github.io/components/pages/start/modals/clocks/ChessClockModal';
 import { CountdownModal } from '@hieudoanm.github.io/components/pages/start/modals/clocks/CountdownModal';
@@ -33,12 +34,12 @@ import { PitchModal } from '@hieudoanm.github.io/components/pages/start/modals/e
 import { LogMARChartModal } from '@hieudoanm.github.io/components/pages/start/modals/eyes/LogMARChartModal';
 import { SnellenChartModal } from '@hieudoanm.github.io/components/pages/start/modals/eyes/SnellenChartModal';
 import { TumblingEChartModal } from '@hieudoanm.github.io/components/pages/start/modals/eyes/TumblingEChartModal';
-import { BlackjackModal } from '@hieudoanm.github.io/components/pages/start/modals/games/BlackjackModal';
+import { BlackjackModal } from '@hieudoanm.github.io/components/pages/start/modals/casino/BlackjackModal';
 import { PalindromeModal } from '@hieudoanm.github.io/components/pages/start/modals/games/PalindromeModal';
-import { PiModal } from '@hieudoanm.github.io/components/pages/start/modals/games/PiNumberModal';
+import { PiModal } from '@hieudoanm.github.io/components/pages/start/modals/memory/PiNumberModal';
 import { PokedexModal } from '@hieudoanm.github.io/components/pages/start/modals/games/PokedexModal';
-import { QuizifyModal } from '@hieudoanm.github.io/components/pages/start/modals/games/QuizifyModal';
-import { RecallModal } from '@hieudoanm.github.io/components/pages/start/modals/games/RecallModal';
+import { QuizifyModal } from '@hieudoanm.github.io/components/pages/start/modals/memory/QuizifyModal';
+import { RecallModal } from '@hieudoanm.github.io/components/pages/start/modals/memory/RecallModal';
 import { T3Modal } from '@hieudoanm.github.io/components/pages/start/modals/games/T3Modal';
 import { TowersModal } from '@hieudoanm.github.io/components/pages/start/modals/games/TowersModal';
 import { TypoglycemiaModal } from '@hieudoanm.github.io/components/pages/start/modals/games/TypoglycemiaModal';
@@ -172,6 +173,7 @@ type ModalId =
   | 'sheets'
   | 'shopify-detect'
   | 'sign'
+  | 'split-bill'
   | 'slides'
   | 'snellen'
   | 'svg'
@@ -244,6 +246,7 @@ const MODAL_MAP: Record<
   resume: ResumeModal,
   sheets: SheetsModal,
   'shopify-detect': ShopifyDetectModal,
+  'split-bill': SplitBillModal,
   sign: SignModal,
   slides: SlidesModal,
   snellen: SnellenChartModal,
@@ -394,6 +397,13 @@ const makeTools = (
       emoji: '🇻🇳',
       color: '#ef4444',
       onClick: open('tax'),
+    },
+    {
+      label: 'Split Bill',
+      description: 'Calculator',
+      emoji: '🧾',
+      color: '#f59e0b',
+      onClick: open('split-bill'),
     },
   ],
   clocks: [

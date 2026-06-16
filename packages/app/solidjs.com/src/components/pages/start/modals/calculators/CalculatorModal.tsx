@@ -1,5 +1,5 @@
-import { createSignal, createEffect, onCleanup } from 'solid-js';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { createEffect, createSignal, onCleanup } from 'solid-js';
 
 export const CalculatorModal = (props: { onClose: () => void }) => {
   const [expression, setExpression] = createSignal<string>('');

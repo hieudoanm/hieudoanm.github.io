@@ -94,7 +94,6 @@ export const PiModal = ({ onClose }: { onClose: () => void }) => {
   };
 
   const onKeyDown = (e: KeyboardEvent) => {
-    // prevent modal-box scroll on arrow / space
     if (['ArrowLeft', 'ArrowRight', ' '].includes(e.key)) e.preventDefault();
     handleKey(e.key);
   };
@@ -106,7 +105,6 @@ export const PiModal = ({ onClose }: { onClose: () => void }) => {
         tabIndex={0}
         onKeyDown={onKeyDown}
         class="outline-none">
-        {/* Mode tabs */}
         <div class="tabs tabs-boxed mb-4 w-full">
           <a
             role="tab"
@@ -125,7 +123,6 @@ export const PiModal = ({ onClose }: { onClose: () => void }) => {
           </a>
         </div>
 
-        {/* Score */}
         {mode() === 'game' && (
           <div class="mb-3 flex justify-center gap-3 text-xs opacity-70">
             <span>
@@ -138,7 +135,6 @@ export const PiModal = ({ onClose }: { onClose: () => void }) => {
           </div>
         )}
 
-        {/* Digit viewport */}
         <div class="mb-4 flex justify-center">
           <div class="border-accent rounded-md border border-dashed px-4 py-2">
             <div class="relative h-12 w-54 overflow-hidden">
@@ -176,7 +172,6 @@ export const PiModal = ({ onClose }: { onClose: () => void }) => {
           </div>
         </div>
 
-        {/* Status */}
         <div class="mb-4 text-center text-xs opacity-60">
           {mode() === 'practice' ? (
             <>
@@ -196,7 +191,6 @@ export const PiModal = ({ onClose }: { onClose: () => void }) => {
           )}
         </div>
 
-        {/* Retry */}
         {mode() === 'game' && locked() && (
           <div class="mb-4 flex justify-center">
             <button class="btn btn-error btn-sm" onClick={retry}>
@@ -205,7 +199,6 @@ export const PiModal = ({ onClose }: { onClose: () => void }) => {
           </div>
         )}
 
-        {/* Numpad */}
         {mode() === 'game' && !locked() && (
           <div class="grid grid-cols-3 gap-2">
             {[1, 2, 3, 4, 5, 6, 7, 8, 9, '.', 0].map((n) => (

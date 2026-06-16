@@ -1,4 +1,3 @@
-import { createSignal } from 'solid-js';
 import {
   calculatePerformance,
   calculateRating,
@@ -6,6 +5,7 @@ import {
   TimeClass,
 } from '@chess/ts';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { createSignal } from 'solid-js';
 
 type Formula = {
   ratingPlayer: number;

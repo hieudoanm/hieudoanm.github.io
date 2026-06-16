@@ -95,7 +95,6 @@ export const BlackjackModal = ({ onClose }: { onClose: () => void }) => {
         tabIndex={0}
         onKeyDown={onKeyDown}
         class="outline-none">
-        {/* Card display */}
         <div class="bg-base-200 mb-4 flex flex-col items-center justify-center rounded-xl py-6">
           {currentCard() ? (
             <span
@@ -110,7 +109,6 @@ export const BlackjackModal = ({ onClose }: { onClose: () => void }) => {
           )}
         </div>
 
-        {/* Count reveal */}
         <div class="mb-4 flex items-center justify-between text-sm">
           <span class="opacity-50">Cards left: {cardsLeft()}</span>
           {reveal() ? (
@@ -122,7 +120,6 @@ export const BlackjackModal = ({ onClose }: { onClose: () => void }) => {
           )}
         </div>
 
-        {/* Buttons */}
         <div class="grid grid-cols-3 gap-2">
           <button
             class="btn btn-primary btn-sm"

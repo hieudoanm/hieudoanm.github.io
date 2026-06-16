@@ -12,15 +12,10 @@ type QuizData = {
   correct: 'red' | 'yellow' | 'blue' | 'green';
 };
 
-/**
- * Parse a CSV string into an array of QuizData.
- * Expected header: question,red,blue,green,yellow,correct
- */
 function parseCsv(csvText: string): QuizData[] {
   const lines = csvText.trim().split(/\r?\n/);
   const header = lines[0].split(',').map((h) => h.trim().toLowerCase());
   const expected = ['question', 'red', 'blue', 'green', 'yellow', 'correct'];
-  // Simple validation – if headers differ, attempt to map by position.
   const indices = expected.map((col) => header.indexOf(col));
   if (indices.some((i) => i === -1)) {
     console.warn(
@@ -30,7 +25,7 @@ function parseCsv(csvText: string): QuizData[] {
   const rows: QuizData[] = [];
   for (let i = 1; i < lines.length; i++) {
     const vals = lines[i].split(',');
-    if (vals.length < 6) continue; // skip malformed rows
+    if (vals.length < 6) continue;
     const get = (idx: number) =>
       vals[indices[idx] !== -1 ? indices[idx] : idx].trim();
     const correct = get(5) as 'red' | 'yellow' | 'blue' | 'green';
@@ -109,10 +104,9 @@ export const QuizifyModal = ({ onClose }: { onClose: () => void }) => {
         );
       }
     };
-    reader.readAsDataURL(file);
+    reader.readAsText(file);
   };
 
-  // Keyboard shortcuts (same as original Play page)
   createEffect(() => {
     selected();
     isLastQuestion();
@@ -156,7 +150,6 @@ export const QuizifyModal = ({ onClose }: { onClose: () => void }) => {
         <main class="bg-base-100 text-base-content flex flex-col items-center">
           <div class="card bg-base-100 border-base-300 w-full max-w-md border shadow-xl">
             <div class="card-body space-y-4">
-              {/* Progress */}
               <div class="space-y-1">
                 <progress
                   class="progress progress-primary w-full"
@@ -171,14 +164,12 @@ export const QuizifyModal = ({ onClose }: { onClose: () => void }) => {
                 </div>
               </div>
 
-              {/* Question */}
               <div class="space-y-1 text-center">
                 <h2 class="card-title justify-center text-lg">
                   {quiz().question}
                 </h2>
               </div>
 
-              {/* Answers */}
               <div class="grid grid-cols-2 gap-3">
                 {(
                   Object.keys(quiz().answers) as Array<
@@ -202,7 +193,6 @@ export const QuizifyModal = ({ onClose }: { onClose: () => void }) => {
                 ))}
               </div>
 
-              {/* Feedback */}
               {selected() && (
                 <div class="alert">
                   {selected() === quiz().correct ? (
@@ -213,14 +203,12 @@ export const QuizifyModal = ({ onClose }: { onClose: () => void }) => {
                 </div>
               )}
 
-              {/* Navigation */}
               {selected() && !isLastQuestion() && (
                 <button class="btn btn-primary w-full" onClick={handleNext}>
                   Next Question →
                 </button>
               )}
 
-              {/* Completed */}
               {selected() && isLastQuestion() && (
                 <div class="space-y-3 text-center">
                   <div class="text-lg font-semibold">🎉 Quiz completed!</div>

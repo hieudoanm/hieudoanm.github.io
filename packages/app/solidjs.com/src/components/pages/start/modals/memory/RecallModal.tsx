@@ -145,7 +145,6 @@ export const RecallModal = ({ onClose }: { onClose: () => void }) => {
         tabIndex={0}
         onKeyDown={onKeyDown}
         class="outline-none">
-        {/* Badges */}
         <div class="mb-4 flex justify-center gap-2">
           <span class="badge badge-secondary">Level {level()}</span>
           <span class="badge badge-accent">🏆 Best {highStreak()}</span>
