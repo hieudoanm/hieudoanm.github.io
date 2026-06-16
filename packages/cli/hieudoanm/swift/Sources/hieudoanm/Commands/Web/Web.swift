@@ -1,5 +1,6 @@
 import Foundation
 import ArgumentParser
+import SwiftSoup
 
 struct WebCommand: ParsableCommand {
     static let configuration = CommandConfiguration(
@@ -8,11 +9,192 @@ struct WebCommand: ParsableCommand {
         subcommands: [
             WebInstagram.self,
             WebShopify.self,
+            WebSimplify.self,
             WebSnapshot.self,
             WebWeather.self,
             WebYoutube.self,
         ]
     )
+}
+
+struct WebSimplify: ParsableCommand {
+    static let configuration = CommandConfiguration(
+        commandName: "simplify",
+        abstract: "Extract and convert web content",
+        subcommands: [WebSimplifyCsv.self, WebSimplifyMd.self]
+    )
+}
+
+struct WebSimplifyCsv: AsyncParsableCommand {
+    static let configuration = CommandConfiguration(commandName: "csv", abstract: "Extract HTML tables to CSV")
+
+    @Option(name: .shortAndLong, help: "URL to fetch")
+    var url: String
+
+    @Option(name: .shortAndLong, help: "Output directory")
+    var output: String = "."
+
+    mutating func run() async throws {
+        let resp = try await Requests.fetch(url)
+        let html = String(data: resp.data, encoding: .utf8) ?? ""
+        let doc = try SwiftSoup.parse(html)
+        let tables: Elements = try doc.select("table")
+        guard !tables.isEmpty() else {
+            print("no tables found")
+            return
+        }
+        let host = extractHost(url)
+        try FileManager.default.createDirectory(atPath: output, withIntermediateDirectories: true)
+        for (i, table) in tables.enumerated() {
+            let filename = tables.count == 1 ? "\(host).csv" : "\(host)-table-\(i + 1).csv"
+            let path = "\(output)/\(filename)"
+            var csvLines: [String] = []
+            let rows = try table.select("tr")
+            for row in rows.array() {
+                var cells: [String] = []
+                for cell in try row.select("td, th").array() {
+                    let text = try cell.text().trimmingCharacters(in: .whitespacesAndNewlines)
+                    cells.append("\"\(text.replacingOccurrences(of: "\"", with: "\"\""))\"")
+                }
+                if !cells.isEmpty {
+                    csvLines.append(cells.joined(separator: ","))
+                }
+            }
+            try csvLines.joined(separator: "\n").write(toFile: path, atomically: true, encoding: .utf8)
+            print(URL(fileURLWithPath: path).path)
+        }
+    }
+}
+
+struct WebSimplifyMd: AsyncParsableCommand {
+    static let configuration = CommandConfiguration(commandName: "md", abstract: "Convert webpage to markdown")
+
+    @Option(name: .shortAndLong, help: "URL to fetch")
+    var url: String
+
+    @Option(name: .shortAndLong, help: "Output directory")
+    var output: String = "."
+
+    mutating func run() async throws {
+        let resp = try await Requests.fetch(url)
+        let html = String(data: resp.data, encoding: .utf8) ?? ""
+        let doc: Document = try SwiftSoup.parse(html)
+        try doc.select("script, style, nav, footer, header, aside, .sidebar, .menu, .nav, .footer, .header, .ad, .ads, .advertisement").remove()
+        let title = try doc.title()
+        let host = extractHost(url)
+        try FileManager.default.createDirectory(atPath: output, withIntermediateDirectories: true)
+        let md = htmlToMarkdown(doc)
+        let content = title.isEmpty ? md : "# \(title)\n\n\(md)"
+        let path = "\(output)/\(host).md"
+        try content.write(toFile: path, atomically: true, encoding: .utf8)
+        print(URL(fileURLWithPath: path).path)
+    }
+}
+
+private func extractHost(_ raw: String) -> String {
+    guard let url = URL(string: raw), let host = url.host else { return "output" }
+    return host.replacingOccurrences(of: "www.", with: "").replacingOccurrences(of: ".", with: "_")
+}
+
+private func htmlToMarkdown(_ doc: Document) -> String {
+    var result = ""
+    if let body = doc.body() {
+        result = convertNode(body, indent: 0)
+    }
+    return result.trimmingCharacters(in: .whitespacesAndNewlines)
+}
+
+private func convertNode(_ node: Element, indent: Int) -> String {
+    var output = ""
+    for child in node.children() {
+        switch child.tagName() {
+        case "h1", "h2", "h3", "h4", "h5", "h6":
+            let level = Int(String(child.tagName().dropFirst())) ?? 1
+            let prefix = String(repeating: "#", count: level)
+            let text = (try? child.text()) ?? ""
+            output += "\(prefix) \(text)\n\n"
+        case "p":
+            let text = (try? child.text()) ?? ""
+            if !text.isEmpty { output += "\(text)\n\n" }
+        case "hr":
+            output += "---\n\n"
+        case "blockquote":
+            let text = (try? child.text()) ?? ""
+            for line in text.components(separatedBy: "\n") {
+                output += "> \(line.trimmingCharacters(in: .whitespaces))\n"
+            }
+            output += "\n"
+        case "ul":
+            for li in child.children() {
+                let text = (try? li.text()) ?? ""
+                if !text.isEmpty { output += "- \(text)\n" }
+            }
+            output += "\n"
+        case "ol":
+            for (i, li) in child.children().enumerated() {
+                let text = (try? li.text()) ?? ""
+                if !text.isEmpty { output += "\(i + 1). \(text)\n" }
+            }
+            output += "\n"
+        case "pre":
+            let code = (try? child.text()) ?? ""
+            output += "```\n\(code)\n```\n\n"
+        case "code":
+            let text = (try? child.text()) ?? ""
+            output += "`\(text)` "
+        case "a":
+            let href = try? child.attr("href")
+            let text = (try? child.text()) ?? ""
+            if let h = href, !h.isEmpty, !text.isEmpty {
+                output += "[\(text)](\(h)) "
+            } else {
+                output += "\(text) "
+            }
+        case "img":
+            let src = try? child.attr("src")
+            let alt = try? child.attr("alt")
+            output += "![\(alt ?? "")](\(src ?? "")) "
+        case "br":
+            output += "\n"
+        case "table":
+            output += convertTable(child)
+        default:
+            output += convertNode(child, indent: indent)
+        }
+    }
+    return output
+}
+
+private func convertTable(_ table: Element) -> String {
+    var out = ""
+    let rows = (try? table.select("tr").array()) ?? []
+    guard !rows.isEmpty else { return out }
+
+    var allRows: [[String]] = []
+    for row in rows {
+        var cells: [String] = []
+        if let td = try? row.select("td, th") {
+            for cell in td.array() {
+                cells.append((try? cell.text()) ?? "")
+            }
+        }
+        if !cells.isEmpty { allRows.append(cells) }
+    }
+    guard !allRows.isEmpty else { return out }
+
+    let colCount = allRows.map(\.count).max() ?? 0
+    out += "|"
+    for cell in allRows[0] { out += " \(cell) |" }
+    out += "\n|"
+    for _ in 0..<colCount { out += " --- |" }
+    out += "\n"
+    for row in allRows.dropFirst() {
+        out += "|"
+        for cell in row { out += " \(cell) |" }
+        out += "\n"
+    }
+    out += "\n"
+    return out
 }
 
 struct WebInstagram: ParsableCommand {

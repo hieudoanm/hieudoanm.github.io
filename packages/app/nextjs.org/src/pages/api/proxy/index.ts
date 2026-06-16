@@ -14,10 +14,10 @@ function setCorsHeaders(res: NextApiResponse): void {
 
 // ─── Proxy Handler ────────────────────────────────────────────────────────────
 
-export default async function handler(
+const handler = async (
   req: NextApiRequest,
   res: NextApiResponse
-): Promise<void> {
+): Promise<void> => {
   setCorsHeaders(res);
 
   // Handle preflight
@@ -95,4 +95,6 @@ export default async function handler(
       details: (error as Error).message,
     });
   }
-}
+};
+
+export default handler;

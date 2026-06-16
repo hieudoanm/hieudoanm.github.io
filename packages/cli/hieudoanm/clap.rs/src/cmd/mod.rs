@@ -9,6 +9,7 @@ mod docsify;
 mod doi;
 mod english;
 mod file;
+mod gemini;
 mod gh;
 mod image;
 mod net;
@@ -40,6 +41,7 @@ pub async fn execute() -> anyhow::Result<()> {
         .subcommand(doi::command())
         .subcommand(english::command())
         .subcommand(file::command())
+        .subcommand(gemini::command())
         .subcommand(gh::command())
         .subcommand(image::command())
         .subcommand(net::command())
@@ -67,6 +69,7 @@ pub async fn execute() -> anyhow::Result<()> {
         Some(("doi", m)) => doi::run(m).await,
         Some(("english", m)) => english::run(m).await,
         Some(("file", m)) => file::run(m).await,
+        Some(("gemini", m)) => gemini::run(m).await,
         Some(("gh", m)) => gh::run(m).await,
         Some(("image", m)) => image::run(m).await,
         Some(("net", m)) => net::run(m).await,

@@ -13,11 +13,13 @@ import com.google.gson.GsonBuilder
 import io.github.hieudoanm.cli.services.Requests
 import java.io.File
 import java.net.URL
+import org.jsoup.Jsoup
+import org.jsoup.nodes.Element
 
 class WebCommand : CliktCommand(name = "web", help = "Web service tools") {
     init {
         subcommands(
-            WebInstagram(), WebShopify(), WebSnapshot(), WebWeather(), WebYoutube()
+            WebInstagram(), WebShopify(), WebSimplify(), WebSnapshot(), WebWeather(), WebYoutube()
         )
     }
     override fun run() = Unit
@@ -390,6 +392,126 @@ class WebYoutubeThumbnails : CliktCommand(name = "thumbnails", help = "Download 
         }
         echo("Done. $downloaded thumbnail(s) saved to $output")
     }
+}
+
+class WebSimplify : CliktCommand(name = "simplify", help = "Extract and convert web content") {
+    init { subcommands(WebSimplifyCsv(), WebSimplifyMd()) }
+    override fun run() = Unit
+}
+
+class WebSimplifyCsv : CliktCommand(name = "csv", help = "Extract HTML tables to CSV") {
+    private val url by option("--url", "-u", help = "URL to fetch").required()
+    private val out by option("--out", "-o", help = "Output directory (default .)").default("")
+
+    override fun run() {
+        val outDir = if (out.isNotEmpty()) out else "."
+        File(outDir).mkdirs()
+
+        val html = Requests.get(url).getOrElse { throw IllegalArgumentException("Failed to fetch $url: ${it.message}") }
+        val doc = Jsoup.parse(html, url)
+        val tables = doc.select("table")
+        if (tables.isEmpty()) {
+            echo("no tables found")
+            return
+        }
+
+        val host = try { URL(url).host.removePrefix("www.").replace(".", "_") } catch (_: Exception) { "output" }
+
+        tables.forEachIndexed { i, table ->
+            val filename = if (tables.size == 1) "$host.csv" else "${host}-table-${i + 1}.csv"
+            val filePath = File(outDir, filename)
+            val rows = table.select("tr").map { tr ->
+                tr.select("td, th").map { it.text().trim() }
+            }
+            if (rows.isNotEmpty()) {
+                filePath.writeText(rows.joinToString("\n") { it.joinToString(",") { "\"${it.replace("\"", "\"\"")}\"" } })
+                echo(filePath.absolutePath)
+            }
+        }
+    }
+}
+
+class WebSimplifyMd : CliktCommand(name = "md", help = "Convert webpage to markdown") {
+    private val url by option("--url", "-u", help = "URL to fetch").required()
+    private val out by option("--out", "-o", help = "Output directory (default .)").default("")
+
+    override fun run() {
+        val outDir = if (out.isNotEmpty()) out else "."
+        File(outDir).mkdirs()
+
+        val html = Requests.get(url).getOrElse { throw IllegalArgumentException("Failed to fetch $url: ${it.message}") }
+        val doc = Jsoup.parse(html, url)
+        doc.select("script, style, nav, footer, header, aside, .sidebar, .menu, .nav, .footer, .header, .ad, .ads, .advertisement").remove()
+
+        val title = doc.title().trim()
+        val host = try { URL(url).host.removePrefix("www.").replace(".", "_") } catch (_: Exception) { "output" }
+        val filename = "$host.md"
+
+        val md = buildString {
+            if (title.isNotEmpty()) appendLine("# $title").appendLine()
+            doc.select("body").firstOrNull()?.also { body -> append(htmlToMarkdown(body)) }
+        }
+
+        val filePath = File(outDir, filename)
+        filePath.writeText(md.trimStart())
+        echo(filePath.absolutePath)
+    }
+}
+
+private fun htmlToMarkdown(element: Element): String {
+    val sb = StringBuilder()
+    for (child in element.children()) {
+        when (child.tagName()) {
+            "h1" -> sb.appendLine("# ${child.text()}").appendLine()
+            "h2" -> sb.appendLine("## ${child.text()}").appendLine()
+            "h3" -> sb.appendLine("### ${child.text()}").appendLine()
+            "h4" -> sb.appendLine("#### ${child.text()}").appendLine()
+            "h5" -> sb.appendLine("##### ${child.text()}").appendLine()
+            "h6" -> sb.appendLine("###### ${child.text()}").appendLine()
+            "p" -> sb.appendLine(child.text()).appendLine()
+            "hr" -> sb.appendLine("---").appendLine()
+            "blockquote" -> {
+                for (line in child.text().split("\n")) {
+                    sb.appendLine("> $line")
+                }
+                sb.appendLine()
+            }
+            "ul" -> child.select("> li").forEach { sb.appendLine("- ${it.text()}") }.also { sb.appendLine() }
+            "ol" -> child.select("> li").forEachIndexed { i, li -> sb.appendLine("${i + 1}. ${li.text()}") }.also { sb.appendLine() }
+            "pre" -> sb.appendLine("```").appendLine(child.text()).appendLine("```").appendLine()
+            "code" -> if (child.parent()?.tagName() != "pre") sb.append("`${child.text()}`") else Unit
+            "a" -> {
+                val href = child.attr("href")
+                val text = child.text()
+                if (href.isNotEmpty() && text.isNotEmpty()) sb.append("[$text]($href) ") else sb.append(text).append(" ")
+            }
+            "img" -> {
+                val src = child.attr("src")
+                val alt = child.attr("alt")
+                sb.append("![$alt]($src) ")
+            }
+            "br" -> sb.appendLine()
+            "table" -> sb.appendLine(htmlTableToMarkdown(child)).appendLine()
+            "div", "section", "article", "main" -> sb.append(htmlToMarkdown(child))
+            else -> sb.append(child.text()).append(" ")
+        }
+    }
+    return sb.toString().trimEnd() + "\n"
+}
+
+private fun htmlTableToMarkdown(table: Element): String {
+    val sb = StringBuilder()
+    val rows = table.select("tr")
+    if (rows.isEmpty()) return ""
+    val headerCells = rows.first().select("td, th")
+    val colCount = headerCells.size
+    sb.append("| ").append(headerCells.joinToString(" | ") { it.text().trim() }).appendLine(" |")
+    sb.append("|").append((" --- |").repeat(colCount)).appendLine()
+    for (i in 1 until rows.size) {
+        val cells = rows[i].select("td, th")
+        sb.append("| ").append(cells.joinToString(" | ") { it.text().trim() }).appendLine(" |")
+    }
+    return sb.toString()
 }
 
 class WebYoutubeTranscript : CliktCommand(name = "transcript", help = "Fetch YouTube video transcript") {

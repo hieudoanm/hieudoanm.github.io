@@ -1,8 +1,10 @@
 mod chat;
+pub mod code;
 mod config;
 mod hook;
 mod models;
-mod service;
+mod serve;
+pub mod service;
 mod status;
 
 pub fn command() -> clap::Command {
@@ -23,6 +25,22 @@ pub fn command() -> clap::Command {
                         .help("Model name or ID"),
                 ),
         )
+        .subcommand(
+            clap::Command::new("code")
+                .about("AI coding assistant")
+                .arg(
+                    clap::Arg::new("prompt")
+                        .help("Your coding question")
+                        .required(true),
+                )
+                .arg(
+                    clap::Arg::new("model")
+                        .short('m')
+                        .long("model")
+                        .help("Model name or ID"),
+                ),
+        )
+        .subcommand(serve::command())
 }
 
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
@@ -31,6 +49,8 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
         Some(("status", _m)) => status::run().await?,
         Some(("chat", sub_m)) => chat::run(sub_m).await?,
         Some(("hook", _m)) => hook::run().await?,
+        Some(("code", sub_m)) => code::run(sub_m).await?,
+        Some(("serve", sub_m)) => serve::run(sub_m).await?,
         _ => {}
     }
     Ok(())

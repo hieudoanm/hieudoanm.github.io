@@ -1,7 +1,9 @@
 use std::cmp::Ordering;
 use std::fmt;
 
+pub mod bump;
 pub mod compare;
+pub mod range;
 pub mod sort;
 pub mod validate;
 
@@ -106,6 +108,40 @@ pub fn command() -> clap::Command {
                     .required(true),
             ),
         )
+        .subcommand(
+            clap::Command::new("bump")
+                .about("Bump a version (major, minor, patch)")
+                .arg(
+                    clap::Arg::new("version")
+                        .help("Version to bump")
+                        .required(true),
+                )
+                .arg(
+                    clap::Arg::new("part")
+                        .help("Part to bump (major, minor, patch)")
+                        .required(true),
+                )
+                .arg(
+                    clap::Arg::new("prerelease")
+                        .short('p')
+                        .long("prerelease")
+                        .help("Prerelease tag"),
+                ),
+        )
+        .subcommand(
+            clap::Command::new("range")
+                .about("Check if a version satisfies a range")
+                .arg(
+                    clap::Arg::new("version")
+                        .help("Version to check")
+                        .required(true),
+                )
+                .arg(
+                    clap::Arg::new("range")
+                        .help("Range (e.g. '>=1.0.0 <2.0.0')")
+                        .required(true),
+                ),
+        )
 }
 
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
@@ -113,6 +149,8 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
         Some(("validate", sub_m)) => validate::run(sub_m).await,
         Some(("compare", sub_m)) => compare::run(sub_m).await,
         Some(("sort", sub_m)) => sort::run(sub_m).await,
+        Some(("bump", sub_m)) => bump::run(sub_m).await,
+        Some(("range", sub_m)) => range::run(sub_m).await,
         _ => Ok(()),
     }
 }

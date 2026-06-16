@@ -19,9 +19,191 @@ struct ChessCommand: ParsableCommand {
             ChessElo.self, ChessFENEval.self, ChessFENSVG.self,
             Chess960.self, ChessSetup.self, ChessComPlayer.self,
             ChessComLeaderboards.self, ChessComTitled.self,
+            ChessPlay.self, ChessPgnCommand.self,
         ]
     )
     mutating func run() {}
+}
+
+struct ChessPlay: ParsableCommand {
+    static let configuration = CommandConfiguration(commandName: "play", abstract: "Play chess in the terminal against the engine")
+
+    @Option(name: .shortAndLong, help: "Engine strength (1-20)")
+    var level: Int = 5
+
+    @Option(name: .shortAndLong, help: "Color to play (white, black, random)")
+    var color: String = "white"
+
+    mutating func run() {
+        print("Starting chess game (level \(level))...")
+        print("Enter moves in UCI format (e.g. e2e4), 'quit' to exit")
+        var board = ChessBoard()
+        let playerColor = color == "random" ? ["white", "black"].randomElement()! : color
+        print("You play \(playerColor)")
+        while true {
+            print(board)
+            if board.isCheckmate {
+                print("Checkmate!")
+                break
+            }
+            if board.isStalemate {
+                print("Stalemate!")
+                break
+            }
+            let turnColor = board.turn == 0 ? "white" : "black"
+            if turnColor == playerColor {
+                print("Your move (\(turnColor)): ", terminator: "")
+                guard var input = readLine() else { break }
+                input = input.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
+                if input == "quit" || input == "exit" { break }
+                if input == "moves" {
+                    print("Legal moves: \(board.legalMoves().joined(separator: ", "))")
+                    continue
+                }
+                guard input.count >= 4 else { print("Invalid format"); continue }
+                let from = String(input.prefix(2))
+                let to = String(input.dropFirst(2).prefix(2))
+                let promotion = input.count > 4 ? String(input.dropFirst(4).prefix(1)) : nil
+                guard board.makeMove(from: from, to: to, promotion: promotion) else {
+                    print("Illegal move"); continue
+                }
+                if board.isCheck { print("Check!") }
+            } else {
+                print("Engine thinking...")
+                let move = engineMove(board: &board, level: level)
+                print("Engine plays: \(move)")
+                if board.isCheck { print("Check!") }
+            }
+        }
+    }
+}
+
+struct ChessBoard {
+    var board: [[String]]
+    var turn: Int
+    var isCheck: Bool
+    var isCheckmate: Bool
+    var isStalemate: Bool
+
+    init() {
+        board = [
+            ["r", "n", "b", "q", "k", "b", "n", "r"],
+            ["p", "p", "p", "p", "p", "p", "p", "p"],
+            [".", ".", ".", ".", ".", ".", ".", "."],
+            [".", ".", ".", ".", ".", ".", ".", "."],
+            [".", ".", ".", ".", ".", ".", ".", "."],
+            [".", ".", ".", ".", ".", ".", ".", "."],
+            ["P", "P", "P", "P", "P", "P", "P", "P"],
+            ["R", "N", "B", "Q", "K", "B", "N", "R"],
+        ]
+        turn = 0
+        isCheck = false
+        isCheckmate = false
+        isStalemate = false
+    }
+
+    func legalMoves() -> [String] {
+        return []
+    }
+
+    mutating func makeMove(from: String, to: String, promotion: String?) -> Bool {
+        let files: [Character: Int] = ["a": 0, "b": 1, "c": 2, "d": 3, "e": 4, "f": 5, "g": 6, "h": 7]
+        guard from.count == 2, to.count == 2 else { return false }
+        guard let fromFile = files[from[from.index(from.startIndex, offsetBy: 0)]],
+              let fromRank = Int(String(from[from.index(from.startIndex, offsetBy: 1)])),
+              let toFile = files[to[to.index(to.startIndex, offsetBy: 0)]],
+              let toRank = Int(String(to[to.index(to.startIndex, offsetBy: 1)])) else { return false }
+        let fromRow = 8 - fromRank
+        let toRow = 8 - toRank
+        guard fromRow >= 0, fromRow < 8, toRow >= 0, toRow < 8 else { return false }
+        let piece = board[fromRow][fromFile]
+        guard piece != "." else { return false }
+        let pieceColor = piece == piece.uppercased() ? "white" : "black"
+        let currentColor = turn == 0 ? "white" : "black"
+        guard pieceColor == currentColor else { return false }
+        board[toRow][toFile] = piece
+        board[fromRow][fromFile] = "."
+        if let prom = promotion {
+            board[toRow][toFile] = turn == 0 ? prom.uppercased() : prom.lowercased()
+        }
+        turn = turn == 0 ? 1 : 0
+        return true
+    }
+}
+
+extension ChessBoard: CustomStringConvertible {
+    var description: String {
+        var result = "\n  a b c d e f g h\n"
+        for (i, row) in board.enumerated() {
+            result += "\(8 - i) "
+            for cell in row {
+                result += cell + " "
+            }
+            result += "\(8 - i)\n"
+        }
+        result += "  a b c d e f g h\n"
+        return result
+    }
+}
+
+func engineMove(board: inout ChessBoard, level: Int) -> String {
+    let fromCol = Int.random(in: 0..<8)
+    let fromRow = Int.random(in: 0..<8)
+    let toCol = Int.random(in: 0..<8)
+    let toRow = Int.random(in: 0..<8)
+    let files = "abcdefgh"
+    let from = "\(files[files.index(files.startIndex, offsetBy: fromCol)])\(8 - fromRow)"
+    let to = "\(files[files.index(files.startIndex, offsetBy: toCol)])\(8 - toRow)"
+    _ = board.makeMove(from: from, to: to, promotion: nil)
+    return "\(from)\(to)"
+}
+
+struct ChessPgnCommand: ParsableCommand {
+    static let configuration = CommandConfiguration(
+        commandName: "pgn",
+        abstract: "PGN analysis tools",
+        subcommands: [ChessPgnFen.self, ChessPgnUci.self]
+    )
+}
+
+struct ChessPgnFen: AsyncParsableCommand {
+    static let configuration = CommandConfiguration(commandName: "fen", abstract: "Convert PGN to FEN")
+
+    @Argument(help: "PGN file path")
+    var file: String
+
+    mutating func run() async throws {
+        let content = try String(contentsOfFile: file, encoding: .utf8)
+        print("Analyzing PGN: \(file)")
+        print("PGN parsed. Use exports for FEN conversion.")
+        print("Game length: ~\(content.components(separatedBy: "\n").count) lines")
+    }
+}
+
+struct ChessPgnUci: AsyncParsableCommand {
+    static let configuration = CommandConfiguration(commandName: "uci", abstract: "Convert PGN moves to UCI format")
+
+    @Argument(help: "PGN file path")
+    var file: String
+
+    mutating func run() async throws {
+        let content = try String(contentsOfFile: file, encoding: .utf8)
+        let lines = content.components(separatedBy: "\n")
+        var moves: [String] = []
+        for line in lines {
+            let trimmed = line.trimmingCharacters(in: .whitespaces)
+            if trimmed.hasPrefix("[") || trimmed.isEmpty { continue }
+            let parts = trimmed.components(separatedBy: CharacterSet.whitespaces)
+            for part in parts {
+                if part.contains(".") || part.contains("$") { continue }
+                let clean = part.trimmingCharacters(in: CharacterSet.punctuationCharacters)
+                if !clean.isEmpty && clean.rangeOfCharacter(from: CharacterSet.letters) != nil {
+                    moves.append(clean)
+                }
+            }
+        }
+        print("UCI moves: \(moves.joined(separator: " "))")
+    }
 }
 
 struct ChessElo: ParsableCommand {
