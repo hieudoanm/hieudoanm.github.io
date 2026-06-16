@@ -186,8 +186,8 @@ fun Application.configureRoutes(state: AppState) {
                     INSERT INTO _collections (name, schema, created_at, updated_at)
                     VALUES ('${name.replace("'", "''")}', '$schema', datetime('now'), datetime('now'))
                 """)
-                state.db.ensureDataTable(name)
             }
+            state.db.ensureDataTable(name)
 
             call.respond(status = HttpStatusCode.Created, mapOf("name" to name, "schema" to schema))
         }
@@ -831,7 +831,11 @@ fun Application.configureRoutes(state: AppState) {
             checkAuth(state, call)
             val key = call.parameters["key"] ?: throw AppError.BadRequest("Cache key required")
             val entry = state.cache.get(key) ?: throw AppError.NotFound("Cache key '$key' not found")
-            call.respond(entry)
+            call.respondJson(buildJsonObject {
+                put("key", entry["key"]?.toString() ?: "")
+                put("value", entry["value"]?.toString() ?: "")
+                put("ttl", (entry["ttl"] as? Number)?.toLong() ?: 0L)
+            })
         }
 
         delete("/api/cache/{key}") {
@@ -962,7 +966,7 @@ fun Application.configureRoutes(state: AppState) {
         post("/api/logs") {
             checkAuth(state, call)
             val body = call.receive<Map<String, String>>()
-            val message = body["message"] ?: throw AppError.BadRequest("Log message is required")
+            val message = body["message"]?.takeUnless { it.isBlank() } ?: throw AppError.BadRequest("Log message is required")
             val level = body["level"] ?: "info"
             val meta = body["meta"] ?: "{}"
             if (level !in validLevels2) throw AppError.BadRequest("Invalid level: $level")
@@ -1488,7 +1492,7 @@ private suspend fun handleImportHandler(state: AppState, call: ApplicationCall) 
 
 // ---- Backup handler ----
 private suspend fun handleBackupHandler(state: AppState, call: ApplicationCall) {
-    val dbUrl = state.db.connection().metaData.url
+    val dbUrl = state.db.connection().use { it.metaData.url }
     val dbFile = java.io.File(dbUrl.removePrefix("jdbc:sqlite:"))
     if (!dbFile.exists()) throw AppError.NotFound("Database file not found")
     call.response.header(HttpHeaders.ContentDisposition, "attachment; filename=\"backbone-backup.db\"")
