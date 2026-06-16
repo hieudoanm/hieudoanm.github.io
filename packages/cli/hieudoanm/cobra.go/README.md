@@ -284,11 +284,11 @@ A collection of CLI utilities covering system monitoring, cloud service status, 
       - [Flags](#flags-115)
   - [`hieudoanm semver`](#hieudoanm-semver)
     - [Flags](#flags-116)
-    - [`hieudoanm semver validate`](#hieudoanm-semver-validate)
+    - [`hieudoanm semver <command> [flags] validate`](#hieudoanm-semver-command-flags-validate)
       - [Flags](#flags-117)
-    - [`hieudoanm semver compare`](#hieudoanm-semver-compare)
+    - [`hieudoanm semver <command> [flags] compare`](#hieudoanm-semver-command-flags-compare)
       - [Flags](#flags-118)
-    - [`hieudoanm semver sort`](#hieudoanm-semver-sort)
+    - [`hieudoanm semver <command> [flags] sort`](#hieudoanm-semver-command-flags-sort)
       - [Flags](#flags-119)
   - [`hieudoanm system`](#hieudoanm-system)
     - [Flags](#flags-120)
@@ -338,23 +338,26 @@ A collection of CLI utilities covering system monitoring, cloud service status, 
     - [Flags](#flags-138)
   - [`hieudoanm web`](#hieudoanm-web)
     - [Flags](#flags-139)
-    - [`hieudoanm web csv`](#hieudoanm-web-csv)
-      - [Flags](#flags-140)
     - [`hieudoanm web instagram`](#hieudoanm-web-instagram)
       - [`hieudoanm web instagram download`](#hieudoanm-web-instagram-download)
-        - [Flags](#flags-141)
+        - [Flags](#flags-140)
     - [`hieudoanm web shopify`](#hieudoanm-web-shopify)
       - [`hieudoanm web shopify detect`](#hieudoanm-web-shopify-detect)
+        - [Flags](#flags-141)
+    - [`hieudoanm web simplify`](#hieudoanm-web-simplify)
+      - [`hieudoanm web simplify csv`](#hieudoanm-web-simplify-csv)
         - [Flags](#flags-142)
+      - [`hieudoanm web simplify md`](#hieudoanm-web-simplify-md)
+        - [Flags](#flags-143)
     - [`hieudoanm web snapshot`](#hieudoanm-web-snapshot)
-      - [Flags](#flags-143)
-    - [`hieudoanm web weather`](#hieudoanm-web-weather)
       - [Flags](#flags-144)
+    - [`hieudoanm web weather`](#hieudoanm-web-weather)
+      - [Flags](#flags-145)
     - [`hieudoanm web youtube`](#hieudoanm-web-youtube)
       - [`hieudoanm web youtube thumbnails`](#hieudoanm-web-youtube-thumbnails)
-        - [Flags](#flags-145)
-      - [`hieudoanm web youtube fetch`](#hieudoanm-web-youtube-fetch)
         - [Flags](#flags-146)
+      - [`hieudoanm web youtube fetch`](#hieudoanm-web-youtube-fetch)
+        - [Flags](#flags-147)
 
 ## `hieudoanm calc`
 
@@ -5125,35 +5128,6 @@ Example:
 
 ---
 
-### `hieudoanm web csv`
-
-Extract HTML tables to CSV
-
-Fetch a webpage, detect all <table> elements, and save each table as a CSV file.
-
-If the page contains a single table it is saved as <domain>.csv.
-Multiple tables produce individual <domain>-table-<N>.csv files.
-
-```bash
-hieudoanm web csv --url <url>
-```
-
-#### Flags
-
-| Flag    | Shorthand | Default | Description                  |
-| ------- | --------- | ------- | ---------------------------- |
-| `--url` | `-u`      | ``      | URL to fetch                 |
-| `--out` | `-o`      | ``      | Output directory (default .) |
-
-Example:
-
-```bash
-  web csv --url https://en.wikipedia.org/wiki/List_of_countries_by_population
-  web csv --url https://example.com/data --out ./output
-```
-
----
-
 ### `hieudoanm web instagram`
 
 Instagram related tools
@@ -5243,6 +5217,82 @@ Example:
 ```bash
   web shopify detect example.com
   web shopify detect https://shop.example.com --verbose
+```
+
+---
+
+### `hieudoanm web simplify`
+
+Extract and convert web content
+
+Extract tables to CSV or webpage content to Markdown.
+
+```bash
+hieudoanm web simplify
+```
+
+Example:
+
+```bash
+  web simplify csv --url https://en.wikipedia.org/wiki/List_of_countries_by_population
+  web simplify md --url https://en.wikipedia.org/wiki/Go_(programming_language)
+```
+
+---
+
+#### `hieudoanm web simplify csv`
+
+Extract HTML tables to CSV
+
+Fetch a webpage, detect all <table> elements, and save each table as a CSV file.
+
+If the page contains a single table it is saved as <domain>.csv.
+Multiple tables produce individual <domain>-table-<N>.csv files.
+
+```bash
+hieudoanm web simplify csv --url <url>
+```
+
+##### Flags
+
+| Flag    | Shorthand | Default | Description                  |
+| ------- | --------- | ------- | ---------------------------- |
+| `--url` | `-u`      | ``      | URL to fetch                 |
+| `--out` | `-o`      | ``      | Output directory (default .) |
+
+Example:
+
+```bash
+  web simplify csv --url https://en.wikipedia.org/wiki/List_of_countries_by_population
+  web simplify csv --url https://example.com/data --out ./output
+```
+
+---
+
+#### `hieudoanm web simplify md`
+
+Convert webpage to markdown
+
+Fetch a webpage, extract its readable content (reader view), and save it as a markdown file.
+
+If reader view is not available the raw page is converted instead.
+
+```bash
+hieudoanm web simplify md --url <url>
+```
+
+##### Flags
+
+| Flag    | Shorthand | Default | Description                  |
+| ------- | --------- | ------- | ---------------------------- |
+| `--url` | `-u`      | ``      | URL to fetch                 |
+| `--out` | `-o`      | ``      | Output directory (default .) |
+
+Example:
+
+```bash
+  web simplify md --url https://en.wikipedia.org/wiki/Go_(programming_language)
+  web simplify md --url https://example.com/article --out ./output
 ```
 
 ---

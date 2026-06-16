@@ -7,7 +7,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-func newCsvCmd() *cobra.Command {
+func newSimplifyCsvCmd() *cobra.Command {
 	var url string
 	var out string
 
@@ -18,8 +18,8 @@ func newCsvCmd() *cobra.Command {
 
 If the page contains a single table it is saved as <domain>.csv.
 Multiple tables produce individual <domain>-table-<N>.csv files.`,
-		Example: `  web csv --url https://en.wikipedia.org/wiki/List_of_countries_by_population
-  web csv --url https://example.com/data --out ./output`,
+		Example: `  web simplify csv --url https://en.wikipedia.org/wiki/List_of_countries_by_population
+  web simplify csv --url https://example.com/data --out ./output`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if url == "" {
 				return fmt.Errorf("url is required")
