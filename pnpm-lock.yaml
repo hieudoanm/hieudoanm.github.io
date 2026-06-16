@@ -274,8 +274,8 @@ importers:
         specifier: 4.5.1
         version: 4.5.1
       dompurify:
-        specifier: 3.4.8
-        version: 3.4.8
+        specifier: 3.4.9
+        version: 3.4.9
       fabric:
         specifier: 7.4.0
         version: 7.4.0
@@ -551,8 +551,8 @@ importers:
         specifier: 11.17.0
         version: 11.17.0(typescript@6.0.3)
       dompurify:
-        specifier: 3.4.8
-        version: 3.4.8
+        specifier: 3.4.9
+        version: 3.4.9
       fabric:
         specifier: 7.4.0
         version: 7.4.0
@@ -1395,8 +1395,6 @@ importers:
         specifier: 6.1.3
         version: 6.1.3
 
-  packages/modules/api/rust/pkg: {}
-
   packages/modules/api/typescript:
     devDependencies:
       '@eslint/js':
@@ -1441,8 +1439,6 @@ importers:
       typescript-eslint:
         specifier: 8.61.0
         version: 8.61.0(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3)
-
-  packages/modules/chess/rust/pkg: {}
 
   packages/modules/chess/ts:
     dependencies:
@@ -1663,8 +1659,6 @@ importers:
         specifier: 8.61.0
         version: 8.61.0(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3)
 
-  packages/modules/lodash/core/rust/pkg: {}
-
   packages/modules/lodash/core/typescript:
     devDependencies:
       '@eslint/js':
@@ -1706,8 +1700,6 @@ importers:
       typescript-eslint:
         specifier: 8.61.0
         version: 8.61.0(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3)
-
-  packages/modules/lodash/extensions/rust/pkg: {}
 
   packages/modules/lodash/extensions/typescript:
     dependencies:
@@ -9905,8 +9897,8 @@ packages:
     resolution: {integrity: sha512-cgwlv/1iFQiFnU96XXgROh8xTeetsnJiDsTc7TYCLFd9+/WNkIqPTxiM/8pSd8VIrhXGTf1Ny1q1hquVqDJB5w==}
     engines: {node: '>= 4'}
 
-  dompurify@3.4.8:
-    resolution: {integrity: sha512-yb1cEmaOum7wFvOCSQxyfgVlv5D47Rc30iZWoMpbDIWTnJ6grDDQyu2KFJzB2k7u0pMuJcQ1zphH//fFnw2tjQ==}
+  dompurify@3.4.9:
+    resolution: {integrity: sha512-4dPSRMRDqHvs0V4YDFCsaIZo4if5u0xM+llyxiM2fwuZFdKArUBAF3VtI2+n8NKg9P870WMdYk0UhqQNoWXbfQ==}
 
   domutils@2.8.0:
     resolution: {integrity: sha512-w96Cjofp72M5IIhpjgobBimYEfoPjx1Vx0BSX9P30WBdZW2WIKU0T1Bd0kz2eNZ9ikjKgHbEyKx8BB6H1L3h3A==}
@@ -27504,7 +27496,7 @@ snapshots:
     dependencies:
       domelementtype: 2.3.0
 
-  dompurify@3.4.8:
+  dompurify@3.4.9:
     optionalDependencies:
       '@types/trusted-types': 2.0.7
 
