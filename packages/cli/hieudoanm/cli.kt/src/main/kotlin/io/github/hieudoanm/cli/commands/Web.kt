@@ -291,8 +291,8 @@ class WebWeather : CliktCommand(name = "weather", help = "Check current weather 
     }
 }
 
-class WebYoutube : CliktCommand(name = "youtube", help = "YouTube transcript and thumbnail tools") {
-    init { subcommands(WebYoutubeThumbnails(), WebYoutubeTranscript()) }
+class WebYoutube : CliktCommand(name = "youtube", help = "YouTube fetch and thumbnail tools") {
+    init { subcommands(WebYoutubeThumbnails(), WebYoutubeFetch()) }
     override fun run() = Unit
 }
 
@@ -514,7 +514,7 @@ private fun htmlTableToMarkdown(table: Element): String {
     return sb.toString()
 }
 
-class WebYoutubeTranscript : CliktCommand(name = "transcript", help = "Fetch YouTube video transcript") {
+class WebYoutubeFetch : CliktCommand(name = "fetch", help = "Fetch YouTube video transcript") {
     private val url by option("--url", "-u", help = "Video URL or ID").required()
     private val lang by option("--lang", "-l", help = "Language code (e.g. en, es, fr)").default("en")
     private val output by option("--output", "-o", help = "Save to file instead of stdout").default("")

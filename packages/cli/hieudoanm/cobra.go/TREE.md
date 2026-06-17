@@ -77,6 +77,7 @@
 │   │   ├── lichess/
 │   │   │   └── [lichess_org_service.go](./cmd/chess/lichess/lichess_org_service.go)
 │   │   ├── [chess_960_service.go](./cmd/chess/chess_960_service.go)
+│   │   ├── [chess_com_cmd.go](./cmd/chess/chess_com_cmd.go)
 │   │   ├── [chess_com_leaderboards_cmd.go](./cmd/chess/chess_com_leaderboards_cmd.go)
 │   │   ├── [chess_com_leaderboards_service_test.go](./cmd/chess/chess_com_leaderboards_service_test.go)
 │   │   ├── [chess_com_player_cmd.go](./cmd/chess/chess_com_player_cmd.go)
@@ -243,6 +244,7 @@
 │   │   ├── [gh_coc_cmd.go](./cmd/gh/gh_coc_cmd.go)
 │   │   ├── [gh_colors_service.go](./cmd/gh/gh_colors_service.go)
 │   │   ├── [gh_colors_service_test.go](./cmd/gh/gh_colors_service_test.go)
+│   │   ├── [gh_config_service.go](./cmd/gh/gh_config_service.go)
 │   │   ├── [gh_ignore_cmd.go](./cmd/gh/gh_ignore_cmd.go)
 │   │   ├── [gh_languages_cmd.go](./cmd/gh/gh_languages_cmd.go)
 │   │   ├── [gh_languages_service_test.go](./cmd/gh/gh_languages_service_test.go)
@@ -251,12 +253,24 @@
 │   │   ├── [gh_og_service_test.go](./cmd/gh/gh_og_service_test.go)
 │   │   ├── [gh_root_cmd.go](./cmd/gh/gh_root_cmd.go)
 │   │   └── [gh_root_cmd_test.go](./cmd/gh/gh_root_cmd_test.go)
+│   ├── history/
+│   │   ├── [history_clear_cmd.go](./cmd/history/history_clear_cmd.go)
+│   │   ├── [history_list_cmd.go](./cmd/history/history_list_cmd.go)
+│   │   ├── [history_root_cmd.go](./cmd/history/history_root_cmd.go)
+│   │   ├── [history_search_cmd.go](./cmd/history/history_search_cmd.go)
+│   │   └── [history_stats_cmd.go](./cmd/history/history_stats_cmd.go)
 │   ├── image/
 │   │   ├── [image_convert_cmd.go](./cmd/image/image_convert_cmd.go)
 │   │   ├── [image_dominant_cmd.go](./cmd/image/image_dominant_cmd.go)
 │   │   ├── [image_info_cmd.go](./cmd/image/image_info_cmd.go)
 │   │   ├── [image_root_cmd.go](./cmd/image/image_root_cmd.go)
 │   │   └── [image_root_cmd_test.go](./cmd/image/image_root_cmd_test.go)
+│   ├── mcp/
+│   │   ├── [mcp_discover_service.go](./cmd/mcp/mcp_discover_service.go)
+│   │   ├── [mcp_exec_service.go](./cmd/mcp/mcp_exec_service.go)
+│   │   ├── [mcp_root_cmd.go](./cmd/mcp/mcp_root_cmd.go)
+│   │   ├── [mcp_schema_service.go](./cmd/mcp/mcp_schema_service.go)
+│   │   └── [mcp_serve_cmd.go](./cmd/mcp/mcp_serve_cmd.go)
 │   ├── net/
 │   │   ├── [net_cert_check_cmd.go](./cmd/net/net_cert_check_cmd.go)
 │   │   ├── [net_cert_cmd.go](./cmd/net/net_cert_cmd.go)
@@ -291,8 +305,8 @@
 │   │   ├── [openapi_validate_cmd.go](./cmd/openapi/openapi_validate_cmd.go)
 │   │   └── [openapi_validate_cmd_test.go](./cmd/openapi/openapi_validate_cmd_test.go)
 │   ├── openrouter/
-│   │   ├── [config_service.go](./cmd/openrouter/config_service.go)
 │   │   ├── [openrouter_code_cmd.go](./cmd/openrouter/openrouter_code_cmd.go)
+│   │   ├── [openrouter_config_service.go](./cmd/openrouter/openrouter_config_service.go)
 │   │   ├── [openrouter_hook_cmd.go](./cmd/openrouter/openrouter_hook_cmd.go)
 │   │   ├── [openrouter_models_cmd.go](./cmd/openrouter/openrouter_models_cmd.go)
 │   │   ├── [openrouter_root_cmd.go](./cmd/openrouter/openrouter_root_cmd.go)
@@ -352,6 +366,7 @@
 │   │   ├── [system_root_cmd.go](./cmd/system/system_root_cmd.go)
 │   │   └── [system_root_cmd_test.go](./cmd/system/system_root_cmd_test.go)
 │   ├── telegram/
+│   │   ├── [telegram_config_service.go](./cmd/telegram/telegram_config_service.go)
 │   │   ├── [telegram_message_cmd.go](./cmd/telegram/telegram_message_cmd.go)
 │   │   ├── [telegram_message_send_cmd.go](./cmd/telegram/telegram_message_send_cmd.go)
 │   │   ├── [telegram_root_cmd.go](./cmd/telegram/telegram_root_cmd.go)
@@ -396,6 +411,7 @@
 │   │   │   ├── [parser.go](./cmd/web/transcript/parser.go)
 │   │   │   ├── [transcript_test.go](./cmd/web/transcript/transcript_test.go)
 │   │   │   └── [types.go](./cmd/web/transcript/types.go)
+│   │   ├── [web_config_service.go](./cmd/web/web_config_service.go)
 │   │   ├── [web_instagram_cmd.go](./cmd/web/web_instagram_cmd.go)
 │   │   ├── [web_instagram_download_cmd.go](./cmd/web/web_instagram_download_cmd.go)
 │   │   ├── [web_instagram_service.go](./cmd/web/web_instagram_service.go)
@@ -405,6 +421,13 @@
 │   │   ├── [web_shopify_cmd.go](./cmd/web/web_shopify_cmd.go)
 │   │   ├── [web_shopify_detect_cmd.go](./cmd/web/web_shopify_detect_cmd.go)
 │   │   ├── [web_shopify_service.go](./cmd/web/web_shopify_service.go)
+│   │   ├── [web_simplify_cmd.go](./cmd/web/web_simplify_cmd.go)
+│   │   ├── [web_simplify_csv_cmd.go](./cmd/web/web_simplify_csv_cmd.go)
+│   │   ├── [web_simplify_csv_service.go](./cmd/web/web_simplify_csv_service.go)
+│   │   ├── [web_simplify_csv_service_test.go](./cmd/web/web_simplify_csv_service_test.go)
+│   │   ├── [web_simplify_md_cmd.go](./cmd/web/web_simplify_md_cmd.go)
+│   │   ├── [web_simplify_md_service.go](./cmd/web/web_simplify_md_service.go)
+│   │   ├── [web_simplify_md_service_test.go](./cmd/web/web_simplify_md_service_test.go)
 │   │   ├── [web_snapshot_cmd.go](./cmd/web/web_snapshot_cmd.go)
 │   │   ├── [web_snapshot_service.go](./cmd/web/web_snapshot_service.go)
 │   │   ├── [web_snapshot_service_test.go](./cmd/web/web_snapshot_service_test.go)
@@ -429,8 +452,13 @@
 │   ├── colors/
 │   │   ├── [colors.go](./libs/colors/colors.go)
 │   │   └── [colors_test.go](./libs/colors/colors_test.go)
-│   ├── config/
-│   │   └── [config.go](./libs/config/config.go)
+│   ├── figlet/
+│   │   └── [figlet.go](./libs/figlet/figlet.go)
+│   ├── history/
+│   │   └── [history.go](./libs/history/history.go)
+│   ├── mcp/
+│   │   ├── [protocol.go](./libs/mcp/protocol.go)
+│   │   └── [server.go](./libs/mcp/server.go)
 │   ├── number/
 │   │   ├── [number.go](./libs/number/number.go)
 │   │   └── [number_test.go](./libs/number/number_test.go)
@@ -451,4 +479,4 @@
 └── [main.go](./main.go)
 ```
 
-38 directories, 410 files
+42 directories, 434 files

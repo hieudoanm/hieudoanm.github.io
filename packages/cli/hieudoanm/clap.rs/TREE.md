@@ -108,6 +108,9 @@
 │   │   │   ├── [mod.rs](./src/cmd/file/mod.rs)
 │   │   │   ├── [read.rs](./src/cmd/file/read.rs)
 │   │   │   └── [write.rs](./src/cmd/file/write.rs)
+│   │   ├── gemini/
+│   │   │   ├── [code.rs](./src/cmd/gemini/code.rs)
+│   │   │   └── [mod.rs](./src/cmd/gemini/mod.rs)
 │   │   ├── gh/
 │   │   │   ├── [coc.rs](./src/cmd/gh/coc.rs)
 │   │   │   ├── [colors.rs](./src/cmd/gh/colors.rs)
@@ -116,11 +119,15 @@
 │   │   │   ├── [license.rs](./src/cmd/gh/license.rs)
 │   │   │   ├── [mod.rs](./src/cmd/gh/mod.rs)
 │   │   │   └── [og.rs](./src/cmd/gh/og.rs)
+│   │   ├── history/
+│   │   │   └── [mod.rs](./src/cmd/history/mod.rs)
 │   │   ├── image/
 │   │   │   ├── [convert.rs](./src/cmd/image/convert.rs)
 │   │   │   ├── [dominant.rs](./src/cmd/image/dominant.rs)
 │   │   │   ├── [info.rs](./src/cmd/image/info.rs)
 │   │   │   └── [mod.rs](./src/cmd/image/mod.rs)
+│   │   ├── mcp/
+│   │   │   └── [mod.rs](./src/cmd/mcp/mod.rs)
 │   │   ├── net/
 │   │   │   ├── [cert.rs](./src/cmd/net/cert.rs)
 │   │   │   ├── [http.rs](./src/cmd/net/http.rs)
@@ -139,10 +146,12 @@
 │   │   │   └── [validate.rs](./src/cmd/openapi/validate.rs)
 │   │   ├── openrouter/
 │   │   │   ├── [chat.rs](./src/cmd/openrouter/chat.rs)
+│   │   │   ├── [code.rs](./src/cmd/openrouter/code.rs)
 │   │   │   ├── [config.rs](./src/cmd/openrouter/config.rs)
 │   │   │   ├── [hook.rs](./src/cmd/openrouter/hook.rs)
 │   │   │   ├── [mod.rs](./src/cmd/openrouter/mod.rs)
 │   │   │   ├── [models.rs](./src/cmd/openrouter/models.rs)
+│   │   │   ├── [serve.rs](./src/cmd/openrouter/serve.rs)
 │   │   │   ├── [service.rs](./src/cmd/openrouter/service.rs)
 │   │   │   └── [status.rs](./src/cmd/openrouter/status.rs)
 │   │   ├── port/
@@ -157,8 +166,10 @@
 │   │   │   ├── [text.rs](./src/cmd/search/text.rs)
 │   │   │   └── [web.rs](./src/cmd/search/web.rs)
 │   │   ├── semver/
+│   │   │   ├── [bump.rs](./src/cmd/semver/bump.rs)
 │   │   │   ├── [compare.rs](./src/cmd/semver/compare.rs)
 │   │   │   ├── [mod.rs](./src/cmd/semver/mod.rs)
+│   │   │   ├── [range.rs](./src/cmd/semver/range.rs)
 │   │   │   ├── [sort.rs](./src/cmd/semver/sort.rs)
 │   │   │   └── [validate.rs](./src/cmd/semver/validate.rs)
 │   │   ├── system/
@@ -190,6 +201,10 @@
 │   │   ├── version/
 │   │   │   └── [mod.rs](./src/cmd/version/mod.rs)
 │   │   ├── web/
+│   │   │   ├── simplify/
+│   │   │   │   ├── [csv.rs](./src/cmd/web/simplify/csv.rs)
+│   │   │   │   ├── [md.rs](./src/cmd/web/simplify/md.rs)
+│   │   │   │   └── [mod.rs](./src/cmd/web/simplify/mod.rs)
 │   │   │   ├── [instagram.rs](./src/cmd/web/instagram.rs)
 │   │   │   ├── [mod.rs](./src/cmd/web/mod.rs)
 │   │   │   ├── [service.rs](./src/cmd/web/service.rs)
@@ -213,6 +228,8 @@
 │   │   ├── [browser.rs](./src/libs/browser.rs)
 │   │   ├── [colors.rs](./src/libs/colors.rs)
 │   │   ├── [figlet.rs](./src/libs/figlet.rs)
+│   │   ├── [history.rs](./src/libs/history.rs)
+│   │   ├── [mcp.rs](./src/libs/mcp.rs)
 │   │   ├── [mod.rs](./src/libs/mod.rs)
 │   │   ├── [number.rs](./src/libs/number.rs)
 │   │   ├── [requests.rs](./src/libs/requests.rs)
@@ -227,4 +244,4 @@
 └── [TREE.md](./TREE.md)
 ```
 
-32 directories, 192 files
+36 directories, 205 files

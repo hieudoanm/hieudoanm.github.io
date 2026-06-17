@@ -31,8 +31,12 @@
 │       │   │   └── [Gemini.swift](./Sources/hieudoanm/Commands/Gemini/Gemini.swift)
 │       │   ├── Gh/
 │       │   │   └── [Gh.swift](./Sources/hieudoanm/Commands/Gh/Gh.swift)
+│       │   ├── History/
+│       │   │   └── [History.swift](./Sources/hieudoanm/Commands/History/History.swift)
 │       │   ├── Image/
 │       │   │   └── [Image.swift](./Sources/hieudoanm/Commands/Image/Image.swift)
+│       │   ├── Mcp/
+│       │   │   └── [McpCmd.swift](./Sources/hieudoanm/Commands/Mcp/McpCmd.swift)
 │       │   ├── Net/
 │       │   │   └── [Net.swift](./Sources/hieudoanm/Commands/Net/Net.swift)
 │       │   ├── Openapi/
@@ -63,6 +67,8 @@
 │       │   ├── [Chat.swift](./Sources/hieudoanm/Libs/Chat.swift)
 │       │   ├── [ColorHelpers.swift](./Sources/hieudoanm/Libs/ColorHelpers.swift)
 │       │   ├── [Figlet.swift](./Sources/hieudoanm/Libs/Figlet.swift)
+│       │   ├── [HistoryStore.swift](./Sources/hieudoanm/Libs/HistoryStore.swift)
+│       │   ├── [McpServer.swift](./Sources/hieudoanm/Libs/McpServer.swift)
 │       │   ├── [Number.swift](./Sources/hieudoanm/Libs/Number.swift)
 │       │   └── [Requests.swift](./Sources/hieudoanm/Libs/Requests.swift)
 │       └── [HieuDoanm.swift](./Sources/hieudoanm/HieuDoanm.swift)
@@ -126,4 +132,4 @@
 └── [TREE.md](./TREE.md)
 ```
 
-55 directories, 68 files
+57 directories, 72 files

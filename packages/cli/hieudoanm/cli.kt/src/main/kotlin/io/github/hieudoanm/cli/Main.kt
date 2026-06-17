@@ -1,5 +1,6 @@
 package io.github.hieudoanm.cli
 
+import com.github.ajalt.clikt.completion.completionOption
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.core.subcommands
 import io.github.hieudoanm.cli.commands.*
@@ -10,9 +11,11 @@ class HieuDoanm : CliktCommand(
     help = "Hieu Doan's personal CLI toolbox"
 ) {
     init {
+        completionOption()
         subcommands(
             CalcCommand(),
             CasinoCommand(),
+            CompletionCommand(),
             ChessCommand(),
             ColorsCommand(),
             ConvertCommand(),
