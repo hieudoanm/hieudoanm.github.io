@@ -38,12 +38,10 @@ const handler: Route['handler'] = async (req, res) => {
   try {
     fetchResponse = await fetch(decodedUrl, { method, body });
   } catch (error) {
-    res
-      .status(500)
-      .json({
-        error: 'Proxy request failed',
-        details: (error as Error).message,
-      });
+    res.status(500).json({
+      error: 'Proxy request failed',
+      details: (error as Error).message,
+    });
     return;
   }
 
@@ -60,12 +58,10 @@ const handler: Route['handler'] = async (req, res) => {
       const data = await fetchResponse.json();
       res.status(200).json(data);
     } catch (error) {
-      res
-        .status(500)
-        .json({
-          error: 'Failed to parse JSON response',
-          details: (error as Error).message,
-        });
+      res.status(500).json({
+        error: 'Failed to parse JSON response',
+        details: (error as Error).message,
+      });
     }
     return;
   }
@@ -75,12 +71,10 @@ const handler: Route['handler'] = async (req, res) => {
     res.setHeader('Content-Type', contentType || 'text/plain');
     res.status(200).send(text);
   } catch (error) {
-    res
-      .status(500)
-      .json({
-        error: 'Failed to read text response',
-        details: (error as Error).message,
-      });
+    res.status(500).json({
+      error: 'Failed to read text response',
+      details: (error as Error).message,
+    });
   }
 };
 
