@@ -1,6 +1,7 @@
 plugins {
     kotlin("jvm") version "1.9.25"
     application
+    jacoco
 }
 
 group = "io.github.hieudoanm.cli"
@@ -35,6 +36,16 @@ tasks.jar {
 
 tasks.test {
     useJUnitPlatform()
+    finalizedBy(tasks.jacocoTestReport)
+}
+
+tasks.jacocoTestReport {
+    dependsOn(tasks.test)
+    reports {
+        html.required.set(true)
+        xml.required.set(true)
+        csv.required.set(false)
+    }
 }
 
 kotlin {

@@ -1,4 +1,4 @@
-.PHONY: clean format lint test build install help
+.PHONY: clean format lint test build install help coverage
 
 BIN_DIR  := bin
 BIN_NAME := hieudoanm
@@ -21,9 +21,19 @@ format:
 lint:
 	cargo clippy -- -D warnings
 
-## test: Run all tests
+## test: Run all tests with coverage
 test:
+	cargo llvm-cov
+
+## test-fast: Run tests without coverage (faster)
+test-fast:
 	cargo test
+
+## coverage: Generate HTML coverage report
+coverage:
+	cargo llvm-cov --html
+	@echo ""
+	@echo "📊 Coverage report: file://$$(pwd)/target/llvm-cov/html/index.html"
 
 ## build: Format, lint, then compile binary into ./bin
 build: clean format lint test

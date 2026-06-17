@@ -2,12 +2,13 @@ BINARY_NAME = hieudoanm
 BUILD_DIR = .build
 INSTALL_DIR = $(HOME)/bin
 SWIFT_BUILD_FLAGS = -c release
+COVERAGE_DIR = coverage
 
 FULL_VERSION ?= $(shell git describe --tags --always --dirty 2>/dev/null || echo "dev")
 GIT_COMMIT ?= $(shell git rev-parse --short HEAD 2>/dev/null || echo "unknown")
 BUILD_DATE ?= $(shell date -u +%Y-%m-%dT%H:%M:%SZ)
 
-.PHONY: all build clean install lint format run test help
+.PHONY: all build clean install lint format run test test-fast coverage help
 
 all: build
 
@@ -26,11 +27,33 @@ build:
 install: build
 
 test:
+	@mkdir -p $(COVERAGE_DIR)
+	swift test --enable-code-coverage
+	@xcrun llvm-profdata merge -sparse $(BUILD_DIR)/debug/codecov/*.profraw -o $(COVERAGE_DIR)/coverage.profdata
+	@TEST_BIN=$$(find "$(BUILD_DIR)" -name "hieudoanmPackageTests" -type f -not -path "*.dSYM*" | head -1); \
+	if [ -n "$$TEST_BIN" ]; then \
+		xcrun llvm-cov report --instr-profile=$(COVERAGE_DIR)/coverage.profdata "$$TEST_BIN" Sources/ 2>&1 | tail -1; \
+		xcrun llvm-cov show --instr-profile=$(COVERAGE_DIR)/coverage.profdata "$$TEST_BIN" --format=html --output-dir=$(COVERAGE_DIR)/html 2>&1 | tail -1; \
+		echo "Coverage report: file://$(PWD)/$(COVERAGE_DIR)/html/index.html"; \
+	fi
+
+## test-fast: Run tests without coverage (faster)
+test-fast:
 	swift test
+
+## coverage: Generate HTML coverage report
+coverage:
+	@xcrun llvm-profdata merge -sparse $(BUILD_DIR)/debug/codecov/*.profraw -o $(COVERAGE_DIR)/coverage.profdata 2>/dev/null; \
+	TEST_BIN=$$(find "$(BUILD_DIR)" -name "hieudoanmPackageTests" -type f -not -path "*.dSYM*" | head -1); \
+	if [ -z "$$TEST_BIN" ]; then echo "No test binary found. Run 'make test' first."; exit 1; fi; \
+	xcrun llvm-cov report --instr-profile=$(COVERAGE_DIR)/coverage.profdata "$$TEST_BIN" Sources/ 2>&1 | tail -1; \
+	xcrun llvm-cov show --instr-profile=$(COVERAGE_DIR)/coverage.profdata "$$TEST_BIN" --format=html --output-dir=$(COVERAGE_DIR)/html 2>&1 | tail -1; \
+	echo "Coverage report: file://$(PWD)/$(COVERAGE_DIR)/html/index.html"
 
 clean:
 	rm -rf "$(BUILD_DIR)"
 	rm -rf ".swiftpm"
+	rm -rf "$(COVERAGE_DIR)"
 
 lint:
 	swift format lint --recursive Sources/
@@ -43,9 +66,11 @@ run: build
 
 help:
 	@echo "Usage:"
-	@echo "  make build    - Build the binary and copy to ~/bin"
-	@echo "  make install  - Alias for build"
-	@echo "  make test     - Run tests"
-	@echo "  make clean    - Remove build artifacts"
-	@echo "  make lint     - Lint Swift source code"
-	@echo "  make format   - Format Swift source code"
+	@echo "  make build     - Build the binary and copy to ~/bin"
+	@echo "  make install   - Alias for build"
+	@echo "  make test      - Run tests with coverage"
+	@echo "  make test-fast - Run tests without coverage (faster)"
+	@echo "  make coverage  - Regenerate coverage report from last test run"
+	@echo "  make clean     - Remove build artifacts and coverage"
+	@echo "  make lint      - Lint Swift source code"
+	@echo "  make format    - Format Swift source code"

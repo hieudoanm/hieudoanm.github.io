@@ -1,4 +1,6 @@
-.PHONY: clean format lint test build install
+.PHONY: clean format lint test build install coverage
+
+COVERAGE_DIR := coverage
 
 BIN_DIR  := bin
 BIN_NAME := hieudoanm
@@ -11,10 +13,10 @@ FULL_VERSION := $(VERSION)-$(COMMIT)
 LDFLAGS      := -ldflags="-s -w \
 	-X '$(OWNER)/cmd/version.V=$(FULL_VERSION)'"
 
-## clean: Remove build artifacts
+## clean: Remove build artifacts and coverage
 clean:
-	@rm -rf $(BIN_DIR)
-	@echo "🧹 Cleaned $(BIN_DIR)/"
+	@rm -rf $(BIN_DIR) $(COVERAGE_DIR)
+	@echo "🧹 Cleaned $(BIN_DIR)/ and $(COVERAGE_DIR)/"
 
 ## format: Run go fmt
 format:
@@ -24,8 +26,16 @@ format:
 lint:
 	go vet ./...
 
-## test: Run all tests
+## test: Run all tests with coverage
 test:
+	@mkdir -p $(COVERAGE_DIR)
+	go test -coverprofile=$(COVERAGE_DIR)/coverage.out -covermode=atomic ./...
+	@go tool cover -html=$(COVERAGE_DIR)/coverage.out -o $(COVERAGE_DIR)/coverage.html
+	@go tool cover -func=$(COVERAGE_DIR)/coverage.out | tail -1
+	@echo "📊 Coverage report: file://$(abspath $(COVERAGE_DIR))/coverage.html"
+
+## test-fast: Run tests without coverage (faster)
+test-fast:
 	go test ./...
 
 ## build: Format, lint, then compile binary into ./bin
