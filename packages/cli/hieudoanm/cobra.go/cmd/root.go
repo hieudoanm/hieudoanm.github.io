@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"os"
+	"time"
 
 	"github.com/hieudoanm/hieudoanm/cmd/calc"
 	"github.com/hieudoanm/hieudoanm/cmd/casino"
@@ -16,7 +17,9 @@ import (
 	"github.com/hieudoanm/hieudoanm/cmd/file"
 	"github.com/hieudoanm/hieudoanm/cmd/gemini"
 	"github.com/hieudoanm/hieudoanm/cmd/gh"
+	history_cmd "github.com/hieudoanm/hieudoanm/cmd/history"
 	"github.com/hieudoanm/hieudoanm/cmd/image"
+	"github.com/hieudoanm/hieudoanm/cmd/mcp"
 	"github.com/hieudoanm/hieudoanm/cmd/net"
 	"github.com/hieudoanm/hieudoanm/cmd/openapi"
 	"github.com/hieudoanm/hieudoanm/cmd/openrouter"
@@ -25,11 +28,14 @@ import (
 	"github.com/hieudoanm/hieudoanm/cmd/semver"
 	"github.com/hieudoanm/hieudoanm/cmd/system"
 	"github.com/hieudoanm/hieudoanm/cmd/telegram"
-	"github.com/hieudoanm/hieudoanm/cmd/time"
+	time_cmd "github.com/hieudoanm/hieudoanm/cmd/time"
 	"github.com/hieudoanm/hieudoanm/cmd/version"
 	"github.com/hieudoanm/hieudoanm/cmd/web"
+	"github.com/hieudoanm/hieudoanm/libs/history"
 	"github.com/spf13/cobra"
 )
+
+var lastCommandPath string
 
 var rootCmd = &cobra.Command{
 	Use:   "hieudoanm",
@@ -45,10 +51,48 @@ var rootCmd = &cobra.Command{
   hieudoanm system monitor
   hieudoanm time now
   hieudoanm version`,
+	PersistentPreRunE: func(cmd *cobra.Command, args []string) error {
+		lastCommandPath = cmd.CommandPath()
+		return nil
+	},
+}
+
+func getCWD() string {
+	d, err := os.Getwd()
+	if err != nil {
+		return ""
+	}
+	return d
+}
+
+func shouldTrack(cmdPath string) bool {
+	if cmdPath == "" || cmdPath == "hieudoanm" {
+		return false
+	}
+	for _, prefix := range []string{"hieudoanm help", "hieudoanm completion", "hieudoanm history", "hieudoanm mcp"} {
+		if len(cmdPath) >= len(prefix) && cmdPath[:len(prefix)] == prefix {
+			return false
+		}
+	}
+	return true
 }
 
 func Execute() {
+	start := time.Now()
 	err := rootCmd.Execute()
+	if shouldTrack(lastCommandPath) {
+		entry := history.Entry{
+			Timestamp:  start.Format(time.RFC3339),
+			Source:     "cli",
+			Command:    lastCommandPath,
+			CWD:        getCWD(),
+			DurationMs: time.Since(start).Milliseconds(),
+		}
+		if err != nil {
+			entry.Error = err.Error()
+		}
+		history.Append(entry)
+	}
 	if err != nil {
 		os.Exit(1)
 	}
@@ -68,7 +112,9 @@ func init() {
 	rootCmd.AddCommand(file.NewCommand())
 	rootCmd.AddCommand(gemini.NewCommand())
 	rootCmd.AddCommand(gh.NewCommand())
+	rootCmd.AddCommand(history_cmd.NewCommand())
 	rootCmd.AddCommand(image.NewCommand())
+	rootCmd.AddCommand(mcp.NewCommand(rootCmd))
 	rootCmd.AddCommand(net.NewCommand())
 	rootCmd.AddCommand(openapi.NewCommand())
 	rootCmd.AddCommand(openrouter.NewCommand())
@@ -77,7 +123,7 @@ func init() {
 	rootCmd.AddCommand(semver.NewCommand())
 	rootCmd.AddCommand(system.NewCommand())
 	rootCmd.AddCommand(telegram.NewCommand())
-	rootCmd.AddCommand(time.NewCommand())
+	rootCmd.AddCommand(time_cmd.NewCommand())
 	rootCmd.AddCommand(version.NewCommand())
 	rootCmd.AddCommand(web.NewCommand())
 }

@@ -48,7 +48,7 @@ Lint: `golangci-lint run`
 
 ## Modules
 
-24 modules registered in `cmd/root.go`. Key ones for AI agent use:
+25 modules registered in `cmd/root.go`. Key ones for AI agent use:
 
 - **file** — 13 subcommands: checksum, chmod, count, duplicates, edit, grep, head, read, size, stats, tail, type, write
 - **search** — 4 subcommands: files (glob find), text (content search), web (DuckDuckGo), code (symbol search for Go/TS/Python/Rust)
@@ -72,6 +72,23 @@ Lint: `golangci-lint run`
 - **english** — Word definitions from GitHub raw JSON
 - **semver** — Validate, compare, sort, bump, prerelease, range constraints
 - **version** — Show CLI version
+- **mcp** — MCP server exposing all CLI tools to AI agents (`mcp serve`)
+
+### MCP module
+
+- `mcp serve` — Start MCP stdio server. Dynamically discovers all cobra commands and exposes them as 189 MCP tools.
+- Tool naming: dot notation matching the CLI path (e.g., `file.read`, `search.files`, `calc.bmi`, `time.clock.now`)
+- Each tool's JSON schema is auto-generated from cobra flag definitions. Flags appear as JSON properties; positional args go in `_args` array.
+- In-process execution: flags are set directly, positional args passed to `RunE`, stdout captured via pipe.
+- Protocol: JSON-RPC 2.0 over stdio (newline-delimited JSON)
+- Library: `libs/mcp/` — protocol types and server loop
+- Connect via any MCP client (Claude Code, Cursor, VS Code, etc.)
+- Configure in `.mcp.json`:
+```json
+{"mcpServers":{"hieudoanm":{"command":"hieudoanm","args":["mcp","serve"]}}}
+```
+- TTY-dependent commands (system.monitor, gemini chat, etc.) may fail when run via MCP since no TTY is available.
+- Build: `go build ./...` — Vet: `go vet ./...`
 
 ## Recent Additions
 

@@ -223,6 +223,8 @@ A collection of CLI utilities covering system monitoring, cloud service status, 
       - [Flags](#flags-85)
     - [`hieudoanm image dominant`](#hieudoanm-image-dominant)
       - [Flags](#flags-86)
+  - [`hieudoanm mcp`](#hieudoanm-mcp)
+    - [`hieudoanm mcp serve`](#hieudoanm-mcp-serve)
   - [`hieudoanm net`](#hieudoanm-net)
     - [Flags](#flags-87)
     - [`hieudoanm net cert`](#hieudoanm-net-cert)
@@ -314,50 +316,30 @@ A collection of CLI utilities covering system monitoring, cloud service status, 
       - [`hieudoanm telegram webhook delete`](#hieudoanm-telegram-webhook-delete)
       - [`hieudoanm telegram webhook info`](#hieudoanm-telegram-webhook-info)
       - [`hieudoanm telegram webhook set`](#hieudoanm-telegram-webhook-set)
-  - [`hieudoanm time`](#hieudoanm-time)
-    - [Flags](#flags-129)
-    - [`hieudoanm time clock`](#hieudoanm-time-clock)
-      - [`hieudoanm time clock now`](#hieudoanm-time-clock-now)
-        - [Flags](#flags-130)
-    - [`hieudoanm time cron`](#hieudoanm-time-cron)
-      - [Flags](#flags-131)
-    - [`hieudoanm time epoch`](#hieudoanm-time-epoch)
-      - [Flags](#flags-132)
-    - [`hieudoanm time pomodoro`](#hieudoanm-time-pomodoro)
-      - [Flags](#flags-133)
-    - [`hieudoanm time timer`](#hieudoanm-time-timer)
-      - [Flags](#flags-134)
-    - [`hieudoanm time until`](#hieudoanm-time-until)
-      - [Flags](#flags-135)
-    - [`hieudoanm time world`](#hieudoanm-time-world)
-    - [`hieudoanm time age`](#hieudoanm-time-age)
-      - [Flags](#flags-136)
-    - [`hieudoanm time stopwatch`](#hieudoanm-time-stopwatch)
-      - [Flags](#flags-137)
   - [`hieudoanm version`](#hieudoanm-version)
-    - [Flags](#flags-138)
+    - [Flags](#flags-129)
   - [`hieudoanm web`](#hieudoanm-web)
-    - [Flags](#flags-139)
+    - [Flags](#flags-130)
     - [`hieudoanm web instagram`](#hieudoanm-web-instagram)
       - [`hieudoanm web instagram download`](#hieudoanm-web-instagram-download)
-        - [Flags](#flags-140)
+        - [Flags](#flags-131)
     - [`hieudoanm web shopify`](#hieudoanm-web-shopify)
       - [`hieudoanm web shopify detect`](#hieudoanm-web-shopify-detect)
-        - [Flags](#flags-141)
+        - [Flags](#flags-132)
     - [`hieudoanm web simplify`](#hieudoanm-web-simplify)
       - [`hieudoanm web simplify csv`](#hieudoanm-web-simplify-csv)
-        - [Flags](#flags-142)
+        - [Flags](#flags-133)
       - [`hieudoanm web simplify md`](#hieudoanm-web-simplify-md)
-        - [Flags](#flags-143)
+        - [Flags](#flags-134)
     - [`hieudoanm web snapshot`](#hieudoanm-web-snapshot)
-      - [Flags](#flags-144)
+      - [Flags](#flags-135)
     - [`hieudoanm web weather`](#hieudoanm-web-weather)
-      - [Flags](#flags-145)
+      - [Flags](#flags-136)
     - [`hieudoanm web youtube`](#hieudoanm-web-youtube)
       - [`hieudoanm web youtube thumbnails`](#hieudoanm-web-youtube-thumbnails)
-        - [Flags](#flags-146)
+        - [Flags](#flags-137)
       - [`hieudoanm web youtube fetch`](#hieudoanm-web-youtube-fetch)
-        - [Flags](#flags-147)
+        - [Flags](#flags-138)
 
 ## `hieudoanm calc`
 
@@ -3483,6 +3465,41 @@ Example:
 
 ---
 
+## `hieudoanm mcp`
+
+MCP server exposing CLI tools to AI agents
+
+Run an MCP (Model Context Protocol) server over stdio.
+
+Exposes all hieudoanm CLI commands as MCP tools that AI agents can discover and call.
+Each CLI command becomes a tool named with dot notation (e.g., file.read, search.files).
+
+Protocol: JSON-RPC 2.0 over stdio (newline-delimited JSON)
+
+```bash
+hieudoanm mcp
+```
+
+Example:
+
+```bash
+  hieudoanm mcp serve
+```
+
+---
+
+### `hieudoanm mcp serve`
+
+Start the MCP server over stdio
+
+Start the MCP stdio server. Reads JSON-RPC messages from stdin and writes responses to stdout.
+
+```bash
+hieudoanm mcp serve
+```
+
+---
+
 ## `hieudoanm net`
 
 Network diagnostics and servers
@@ -4773,305 +4790,6 @@ Example:
 
 ```bash
   telegram webhook set
-```
-
----
-
-## `hieudoanm time`
-
-Time and scheduling tools
-
-Current time, pomodoro timer, countdown timer, epoch conversion, and cron expression utilities.
-
-```bash
-hieudoanm time
-```
-
-### Flags
-
-| Flag                  | Shorthand | Default | Description           |
-| --------------------- | --------- | ------- | --------------------- |
-| `--json (persistent)` | `-j`      | `false` | Output in JSON format |
-
-Example:
-
-```bash
-  time clock now
-  time age --date 1990-01-15
-  time epoch 1718100000
-  time cron --expression "*/15 * * * *"
-  time timer --duration 30s
-  time pomodoro
-  time world ny london tokyo
-```
-
----
-
-### `hieudoanm time clock`
-
-Clock and timer utilities
-
-Clock and timer utilities including current time display.
-
-```bash
-hieudoanm time clock
-```
-
-Example:
-
-```bash
-  time clock now
-```
-
----
-
-#### `hieudoanm time clock now`
-
-Display the current date and time
-
-Display the current date, time, and timezone in a formatted output.
-
-```bash
-hieudoanm time clock now
-```
-
-##### Flags
-
-| Flag     | Shorthand | Default | Description           |
-| -------- | --------- | ------- | --------------------- |
-| `--json` | ``        | `false` | Output in JSON format |
-
-Example:
-
-```bash
-  time clock now
-  time clock now --json
-```
-
----
-
-### `hieudoanm time cron`
-
-Describe a cron expression in plain English and compute next runs
-
-Parse a 5-field cron expression, describe when it runs, and compute upcoming occurrences.
-
-```bash
-hieudoanm time cron [--expression <expression>]
-```
-
-#### Flags
-
-| Flag           | Shorthand | Default | Description                            |
-| -------------- | --------- | ------- | -------------------------------------- |
-| `--expression` | `-e`      | ``      | Cron expression                        |
-| `--next`       | `-n`      | `0`     | Show next N run times                  |
-| `--until`      | ``        | ``      | Show runs until this date (YYYY-MM-DD) |
-| `--json`       | ``        | `false` | Output in JSON format                  |
-
-Example:
-
-```bash
-  cron --expression "*/15 * * * *"
-  cron --expression "0 9 * * 1-5"
-  cron --expression "0 0 1 1 *"
-  cron --next 5 --expression "*/30 * * * *"
-  cron --next 10 --until "2026-12-31" --expression "0 0 * * *
-```
-
----
-
-### `hieudoanm time epoch`
-
-Convert between epoch timestamps and human-readable dates
-
-Convert Unix epoch timestamps to human-readable dates and vice versa.
-
-```bash
-hieudoanm time epoch [timestamp]
-```
-
-#### Flags
-
-| Flag         | Shorthand | Default | Description                                             |
-| ------------ | --------- | ------- | ------------------------------------------------------- |
-| `--from`     | `-f`      | ``      | Convert a date string to epoch                          |
-| `--relative` | ``        | ``      | Calculate relative time (e.g. '2 hours ago', '+3 days') |
-| `--format`   | ``        | ``      | Output format for date (Go time layout)                 |
-| `--iso`      | ``        | `false` | Output in ISO 8601 format                               |
-| `--unix`     | ``        | `false` | Output as Unix timestamp                                |
-| `--json`     | ``        | `false` | Output as JSON                                          |
-
-Example:
-
-```bash
-  epoch 1718100000
-  epoch --from "2024-06-11"
-  epoch --from "2024-06-11T15:04:05Z"
-  epoch --relative "2 hours ago"
-  epoch --relative "+3 days"
-  epoch --iso
-```
-
----
-
-### `hieudoanm time pomodoro`
-
-Start a Pomodoro timer TUI session
-
-Launch a Bubble Tea TUI Pomodoro timer with configurable work and break durations. Press p to pause/resume, s to stop, q to quit.
-
-```bash
-hieudoanm time pomodoro
-```
-
-#### Flags
-
-| Flag     | Shorthand | Default | Description          |
-| -------- | --------- | ------- | -------------------- |
-| `--work` | `-w`      | `25`    | work session minutes |
-| `--rest` | `-r`      | `5`     | rest session minutes |
-
-Example:
-
-```bash
-  time pomodoro
-  time pomodoro --work 25 --rest 5
-```
-
----
-
-### `hieudoanm time timer`
-
-Simple countdown timer
-
-Set a countdown timer. Supports seconds (30s) and minutes (5m).
-
-Press Ctrl+C to cancel.
-
-```bash
-hieudoanm time timer [--duration <duration>]
-```
-
-#### Flags
-
-| Flag         | Shorthand | Default | Description             |
-| ------------ | --------- | ------- | ----------------------- |
-| `--duration` | `-d`      | ``      | Duration (e.g. 30s, 5m) |
-| `--json`     | ``        | `false` | Output in JSON format   |
-
-Example:
-
-```bash
-  timer --duration 30s
-  timer --duration 5m
-  timer --duration 90
-```
-
----
-
-### `hieudoanm time until`
-
-Countdown to a specific date/time
-
-Show the time remaining until a given datetime.
-
-Accepts formats: RFC3339 (2026-12-25T00:00:00Z), ISO date (2026-12-25),
-date and time (2026-12-25 15:04:05), or a Unix timestamp in seconds.
-
-```bash
-hieudoanm time until [--time <datetime>]
-```
-
-#### Flags
-
-| Flag     | Shorthand | Default | Description     |
-| -------- | --------- | ------- | --------------- |
-| `--time` | `-t`      | ``      | Target datetime |
-
-Example:
-
-```bash
-  hieudoanm time until --time 2026-12-25
-  hieudoanm time until --time "2026-12-25 15:04:05"
-  hieudoanm time until --time 2026-12-25T00:00:00Z
-```
-
----
-
-### `hieudoanm time world`
-
-Display current time in multiple timezones
-
-Show the current time in one or more timezones.
-
-Common shorthand names: utc, ny, london, tokyo, hcmc, sf, paris, etc.
-Accepts any valid IANA timezone name, or a UTC offset like "UTC+5:30", "UTC-8".
-
-```bash
-hieudoanm time world [zone1 zone2 ...]
-```
-
-Example:
-
-```bash
-  hieudoanm time world
-  hieudoanm time world ny london tokyo hcmc
-  hieudoanm time world UTC UTC+5:30
-```
-
----
-
-### `hieudoanm time age`
-
-Calculate age from a birthdate
-
-Calculate someone's age in years, months, and days from their birthdate.
-
-Accepts formats: YYYY-MM-DD, YYYY-MM-DDTHH:MM:SS, RFC3339.
-
-```bash
-hieudoanm time age [--date <birthdate>]
-```
-
-#### Flags
-
-| Flag     | Shorthand | Default | Description            |
-| -------- | --------- | ------- | ---------------------- |
-| `--date` | `-d`      | ``      | Birthdate (YYYY-MM-DD) |
-| `--json` | ``        | `false` | Output in JSON format  |
-
-Example:
-
-```bash
-  time age --date 1990-01-15
-  time age --date 1990-01-15 --json
-```
-
----
-
-### `hieudoanm time stopwatch`
-
-Measure elapsed time like a stopwatch
-
-Starts a stopwatch that runs until interrupted (Ctrl+C),
-then displays the elapsed time.
-
-```bash
-hieudoanm time stopwatch
-```
-
-#### Flags
-
-| Flag     | Shorthand | Default | Description           |
-| -------- | --------- | ------- | --------------------- |
-| `--json` | ``        | `false` | Output in JSON format |
-
-Example:
-
-```bash
-  time stopwatch
-  time stopwatch --json
 ```
 
 ---
