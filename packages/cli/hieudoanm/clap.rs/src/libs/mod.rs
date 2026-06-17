@@ -3,6 +3,7 @@ pub mod chat;
 pub mod colors;
 pub mod figlet;
 pub mod history;
+pub mod mcp;
 pub mod number;
 pub mod requests;
 pub mod theme;

@@ -26,6 +26,7 @@ class HieuDoanm : CliktCommand(
             GhCommand(),
             HistoryCommand(),
             ImageCommand(),
+            McpCommand(),
             NetCommand(),
             OpenapiCommand(),
             OpenrouterCommand(),

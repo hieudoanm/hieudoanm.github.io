@@ -13,6 +13,7 @@ mod gemini;
 mod gh;
 mod history;
 mod image;
+mod mcp;
 mod net;
 mod openapi;
 mod openrouter;
@@ -46,6 +47,7 @@ pub async fn execute() -> anyhow::Result<()> {
         .subcommand(gh::command())
         .subcommand(history::command())
         .subcommand(image::command())
+        .subcommand(mcp::command())
         .subcommand(net::command())
         .subcommand(openapi::command())
         .subcommand(openrouter::command())
@@ -59,7 +61,8 @@ pub async fn execute() -> anyhow::Result<()> {
     let matches = root.clone().get_matches();
 
     let cmd_name = matches.subcommand_name().unwrap_or("").to_string();
-    let should_track = !cmd_name.is_empty() && cmd_name != "help" && cmd_name != "history";
+    let should_track =
+        !cmd_name.is_empty() && cmd_name != "help" && cmd_name != "history" && cmd_name != "mcp";
     let start = std::time::Instant::now();
 
     let result = match matches.subcommand() {
@@ -79,6 +82,7 @@ pub async fn execute() -> anyhow::Result<()> {
         Some(("gh", m)) => gh::run(m).await,
         Some(("history", m)) => history::run(m).await,
         Some(("image", m)) => image::run(m).await,
+        Some(("mcp", m)) => mcp::run(m).await,
         Some(("net", m)) => net::run(m).await,
         Some(("openapi", m)) => openapi::run(m).await,
         Some(("openrouter", m)) => openrouter::run(m).await,

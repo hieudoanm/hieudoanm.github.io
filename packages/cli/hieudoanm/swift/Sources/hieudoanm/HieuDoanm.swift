@@ -22,6 +22,7 @@ struct HieuDoanm: AsyncParsableCommand {
             GhCommand.self,
             HistoryCommand.self,
             ImageCommand.self,
+            McpCommand.self,
             NetCommand.self,
             OpenapiCommand.self,
             OpenrouterCommand.self,
