@@ -23,12 +23,15 @@ Given the original price and discount percentage, shows the amount saved and fin
 			final := original - discount
 
 			if jsonOutput {
-				out, _ := json.MarshalIndent(map[string]interface{}{
+				out, err := json.MarshalIndent(map[string]interface{}{
 					"original":    original,
 					"percent":     percent,
 					"discount":    discount,
 					"final_price": final,
 				}, "", "  ")
+				if err != nil {
+					return err
+				}
 				fmt.Println(string(out))
 			} else {
 				fmt.Println("=== Discount Calculator ===")

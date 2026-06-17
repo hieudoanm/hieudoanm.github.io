@@ -115,12 +115,15 @@ func NewCommand() *cobra.Command {
 					result.prerelease = prerelease
 				}
 				if jsonOutput {
-					out, _ := json.MarshalIndent(map[string]interface{}{
+					out, err := json.MarshalIndent(map[string]interface{}{
 						"input":      singleVersion,
 						"result":     result.String(),
 						"bump":       bumpPart,
 						"prerelease": prerelease,
 					}, "", "  ")
+					if err != nil {
+						return err
+					}
 					fmt.Println(string(out))
 				} else {
 					fmt.Println(result)
@@ -141,11 +144,14 @@ func NewCommand() *cobra.Command {
 					return err
 				}
 				if jsonOutput {
-					out, _ := json.MarshalIndent(map[string]interface{}{
+					out, err := json.MarshalIndent(map[string]interface{}{
 						"version": singleVersion,
 						"range":   rangeExpr,
 						"matches": matches,
 					}, "", "  ")
+					if err != nil {
+						return err
+					}
 					fmt.Println(string(out))
 				} else {
 					if matches {

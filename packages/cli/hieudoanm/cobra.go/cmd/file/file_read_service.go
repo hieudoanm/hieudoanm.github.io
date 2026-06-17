@@ -43,12 +43,12 @@ func readFileContent(path string, offset, lines int) (string, []string, int, err
 	return content, allLines[start:end], totalLines, nil
 }
 
-func renderReadJSON(path string, info os.FileInfo, content string, displayLines []string, totalLines int, offset, lines int) {
+func renderReadJSON(path string, info os.FileInfo, content string, displayLines []string, totalLines int, offset, lines int) error {
 	displayContent := content
 	if offset > 0 || lines > 0 {
 		displayContent = joinLines(displayLines)
 	}
-	out, _ := json.MarshalIndent(map[string]interface{}{
+	out, err := json.MarshalIndent(map[string]interface{}{
 		"file":       path,
 		"size":       info.Size(),
 		"mode":       info.Mode().String(),
@@ -56,7 +56,11 @@ func renderReadJSON(path string, info os.FileInfo, content string, displayLines 
 		"totalLines": totalLines,
 		"content":    displayContent,
 	}, "", "  ")
+	if err != nil {
+		return err
+	}
 	fmt.Println(string(out))
+	return nil
 }
 
 func renderReadText(path string, displayLines []string, start, totalLines int, showLineNumbers bool) {

@@ -52,11 +52,14 @@ func newDateCalcCmd() *cobra.Command {
 				}
 
 				if jsonOutput {
-					out, _ := json.MarshalIndent(map[string]interface{}{
+					out, err := json.MarshalIndent(map[string]interface{}{
 						"date1": date1.Format("2006-01-02"),
 						"date2": date2.Format("2006-01-02"),
 						"days":  days,
 					}, "", "  ")
+					if err != nil {
+						return err
+					}
 					fmt.Println(string(out))
 				} else {
 					before, after := date1.Format("2006-01-02"), date2.Format("2006-01-02")
@@ -85,12 +88,15 @@ func newDateCalcCmd() *cobra.Command {
 			}
 
 			if jsonOutput {
-				out, _ := json.MarshalIndent(map[string]interface{}{
+				out, err := json.MarshalIndent(map[string]interface{}{
 					"date":    result.Format(outputFormat),
 					"iso":     result.Format(time.RFC3339),
 					"unix":    result.Unix(),
 					"weekday": result.Weekday().String(),
 				}, "", "  ")
+				if err != nil {
+					return err
+				}
 				fmt.Println(string(out))
 			} else {
 				fmt.Println(result.Format(outputFormat))

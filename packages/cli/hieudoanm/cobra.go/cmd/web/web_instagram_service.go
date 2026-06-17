@@ -87,13 +87,17 @@ func downloadIGFile(rawURL, filename, outDir string) (string, error) {
 	return path, nil
 }
 
-func outputIGJSON(shortcode string, imageURLs []string) {
-	out, _ := json.MarshalIndent(map[string]interface{}{
+func outputIGJSON(shortcode string, imageURLs []string) error {
+	out, err := json.MarshalIndent(map[string]interface{}{
 		"shortcode":  shortcode,
 		"image_urls": imageURLs,
 		"count":      len(imageURLs),
 	}, "", "  ")
+	if err != nil {
+		return err
+	}
 	fmt.Println(string(out))
+	return nil
 }
 
 func downloadIGImages(shortcode string, imageURLs []string, imgIndex int, outputDir string) int {

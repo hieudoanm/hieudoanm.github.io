@@ -47,12 +47,15 @@ Results can be output in JSON format with --json.`,
 			baseNames := map[int]string{2: "binary", 8: "octal", 10: "decimal", 16: "hexadecimal"}
 
 			if jsonOutput {
-				out, _ := json.MarshalIndent(map[string]interface{}{
+				out, err := json.MarshalIndent(map[string]interface{}{
 					"value":  value,
 					"from":   baseNames[fromBase],
 					"to":     baseNames[toBase],
 					"result": result,
 				}, "", "  ")
+				if err != nil {
+					return err
+				}
 				fmt.Println(string(out))
 			} else {
 				fmt.Printf("%s (%s) = %s (%s)\n", value, baseNames[fromBase], result, baseNames[toBase])

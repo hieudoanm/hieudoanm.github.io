@@ -28,8 +28,7 @@ Supports Go, TypeScript/JavaScript, Python, and Rust.`,
 				return err
 			}
 
-			outputCodeResults(results, symbol)
-			return nil
+			return outputCodeResults(results, symbol)
 		},
 	}
 

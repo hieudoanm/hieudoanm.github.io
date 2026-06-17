@@ -69,17 +69,21 @@ func parseUntil(until string) (time.Time, error) {
 	return t, nil
 }
 
-func outputCronJSON(expr string, runs []*time.Time) {
+func outputCronJSON(expr string, runs []*time.Time) error {
 	runStrs := make([]string, len(runs))
 	for i, t := range runs {
 		runStrs[i] = t.Format("2006-01-02 15:04 Mon")
 	}
-	out, _ := json.MarshalIndent(map[string]interface{}{
+	out, err := json.MarshalIndent(map[string]interface{}{
 		"expression":  expr,
 		"description": cronDescribe(expr),
 		"next_runs":   runStrs,
 	}, "", "  ")
+	if err != nil {
+		return err
+	}
 	fmt.Println(string(out))
+	return nil
 }
 
 func outputCronText(expr string, runs []*time.Time) {

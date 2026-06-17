@@ -67,12 +67,15 @@ func newServeCmd() *cobra.Command {
 			listener.Close()
 
 			if serveJSON {
-				out, _ := json.MarshalIndent(map[string]interface{}{
+				out, err := json.MarshalIndent(map[string]interface{}{
 					"directory": absDir,
 					"url":       fmt.Sprintf("http://localhost:%d", port),
 					"port":      port,
 					"tls":       certFile != "" && keyFile != "",
 				}, "", "  ")
+				if err != nil {
+					return err
+				}
 				fmt.Println(string(out))
 			} else {
 				fmt.Printf("Serving %s on http://localhost:%d\n", absDir, port)

@@ -32,8 +32,7 @@ Patterns use glob syntax:
 				return err
 			}
 
-			outputFileResults(results, pattern, dir)
-			return nil
+			return outputFileResults(results, pattern, dir)
 		},
 	}
 

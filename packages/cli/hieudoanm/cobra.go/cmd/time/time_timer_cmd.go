@@ -42,10 +42,13 @@ Press Ctrl+C to cancel.`,
 				select {
 				case <-sig:
 					if timerJSON {
-						out, _ := json.MarshalIndent(map[string]interface{}{
+						out, err := json.MarshalIndent(map[string]interface{}{
 							"duration": dur.String(),
 							"status":   "cancelled",
 						}, "", "  ")
+						if err != nil {
+							return err
+						}
 						fmt.Println(string(out))
 					} else {
 						fmt.Println("\nTimer cancelled")
@@ -60,10 +63,13 @@ Press Ctrl+C to cancel.`,
 			}
 
 			if timerJSON {
-				out, _ := json.MarshalIndent(map[string]interface{}{
+				out, err := json.MarshalIndent(map[string]interface{}{
 					"duration": dur.String(),
 					"status":   "completed",
 				}, "", "  ")
+				if err != nil {
+					return err
+				}
 				fmt.Println(string(out))
 			} else {
 				fmt.Println("\nTime's up!")

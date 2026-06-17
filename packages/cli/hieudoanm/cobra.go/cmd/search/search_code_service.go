@@ -77,24 +77,28 @@ func searchCodeSymbols(symbol string, root string, lang string, kind string, max
 	return results, nil
 }
 
-func outputCodeResults(results []symbolMatch, symbol string) {
+func outputCodeResults(results []symbolMatch, symbol string) error {
 	if jsonOutput {
-		out, _ := json.MarshalIndent(map[string]interface{}{
+		out, err := json.MarshalIndent(map[string]interface{}{
 			"symbol":  symbol,
 			"results": results,
 			"count":   len(results),
 		}, "", "  ")
+		if err != nil {
+			return err
+		}
 		fmt.Println(string(out))
-		return
+		return nil
 	}
 
 	if len(results) == 0 {
 		fmt.Println("(no symbols found)")
-		return
+		return nil
 	}
 
 	for _, r := range results {
 		fmt.Printf("%s:%d: %s %s\n", r.File, r.Line, r.Kind, r.Symbol)
 	}
 	fmt.Printf("\n%d symbols found\n", len(results))
+	return nil
 }

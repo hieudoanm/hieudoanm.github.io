@@ -40,8 +40,7 @@ func newEditCmd() *cobra.Command {
 				return err
 			}
 
-			outputEditResult(path, string(data), replaced, matchCount, preview, info.Mode())
-			return nil
+			return outputEditResult(path, string(data), replaced, matchCount, preview, info.Mode())
 		},
 	}
 

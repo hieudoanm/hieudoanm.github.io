@@ -23,13 +23,16 @@ var timeNowCmd = &cobra.Command{
 		date := t.Format("2006-01-02")
 		zone, _ := t.Zone()
 		if nowJSON {
-			out, _ := json.MarshalIndent(map[string]interface{}{
+			out, err := json.MarshalIndent(map[string]interface{}{
 				"date":     date,
 				"time":     fmt.Sprintf("%s:%s:%s", number.AddZero(hours), number.AddZero(minutes), number.AddZero(seconds)),
 				"timezone": zone,
 				"iso":      t.Format(time.RFC3339),
 				"unix":     t.Unix(),
 			}, "", "  ")
+			if err != nil {
+				return err
+			}
 			fmt.Println(string(out))
 		} else {
 			fmt.Printf("%s %s:%s:%s GMT%s\n", date, number.AddZero(hours), number.AddZero(minutes), number.AddZero(seconds), zone)

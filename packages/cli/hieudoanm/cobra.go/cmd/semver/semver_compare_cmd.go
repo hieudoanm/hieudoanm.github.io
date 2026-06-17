@@ -38,11 +38,14 @@ func newCompareCmd() *cobra.Command {
 				rel = "=="
 			}
 			if jsonOutput {
-				out, _ := json.MarshalIndent(map[string]interface{}{
+				out, err := json.MarshalIndent(map[string]interface{}{
 					"a":        a.String(),
 					"b":        b.String(),
 					"relation": rel,
 				}, "", "  ")
+				if err != nil {
+					return err
+				}
 				fmt.Println(string(out))
 			} else {
 				fmt.Printf("%s %s %s\n", a, rel, b)

@@ -28,7 +28,7 @@ Enter the bill amount, tip percentage, and number of people to split.`,
 			perPerson := total / float64(split)
 
 			if jsonOutput {
-				out, _ := json.MarshalIndent(map[string]interface{}{
+				out, err := json.MarshalIndent(map[string]interface{}{
 					"bill":        bill,
 					"tip_percent": tipPercent,
 					"tip":         tip,
@@ -36,6 +36,9 @@ Enter the bill amount, tip percentage, and number of people to split.`,
 					"split":       split,
 					"per_person":  perPerson,
 				}, "", "  ")
+				if err != nil {
+					return err
+				}
 				fmt.Println(string(out))
 			} else {
 				fmt.Println("=== Tip Calculator ===")

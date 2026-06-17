@@ -71,23 +71,26 @@ func findFilesWithGlob(pattern, root string, maxDepth int, fileType string, hidd
 	return results, nil
 }
 
-func outputFileResults(results []string, pattern, root string) {
+func outputFileResults(results []string, pattern, root string) error {
 	absRoot, _ := filepath.Abs(root)
 
 	if jsonOutput {
-		out, _ := json.MarshalIndent(map[string]interface{}{
+		out, err := json.MarshalIndent(map[string]interface{}{
 			"pattern": pattern,
 			"root":    root,
 			"files":   results,
 			"count":   len(results),
 		}, "", "  ")
+		if err != nil {
+			return err
+		}
 		fmt.Println(string(out))
-		return
+		return nil
 	}
 
 	if len(results) == 0 {
 		fmt.Println("(no files found)")
-		return
+		return nil
 	}
 
 	for _, f := range results {
@@ -98,6 +101,7 @@ func outputFileResults(results []string, pattern, root string) {
 	if len(results) > 1 {
 		fmt.Printf("\n%d files found\n", len(results))
 	}
+	return nil
 }
 
 func isHidden(path string) bool {

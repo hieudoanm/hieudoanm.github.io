@@ -53,12 +53,15 @@ func newShopifyDetectCmd() *cobra.Command {
 			}
 
 			if shopifyJSON {
-				out, _ := json.MarshalIndent(map[string]interface{}{
+				out, err := json.MarshalIndent(map[string]interface{}{
 					"url":     url,
 					"shopify": isShopify,
 					"plus":    isPlus,
 					"signals": signals,
 				}, "", "  ")
+				if err != nil {
+					return err
+				}
 				fmt.Println(string(out))
 				return nil
 			}

@@ -29,17 +29,22 @@ func newJwtDecodeCmd() *cobra.Command {
 
 			headerData, _ := jwt.NewParser().DecodeSegment(parts[0])
 			var headerJSON interface{}
-			json.Unmarshal(headerData, &headerJSON)
+			if err := json.Unmarshal(headerData, &headerJSON); err != nil {
+				headerJSON = string(headerData)
+			}
 
 			if jwtJSON {
 				var payload interface{}
 				if claims, ok := parsed.Claims.(jwt.MapClaims); ok {
 					payload = map[string]interface{}(claims)
 				}
-				out, _ := json.MarshalIndent(map[string]interface{}{
+				out, err := json.MarshalIndent(map[string]interface{}{
 					"header":  headerJSON,
 					"payload": payload,
 				}, "", "  ")
+				if err != nil {
+					return err
+				}
 				fmt.Println(string(out))
 			} else {
 				fmt.Printf("Header:\n%s\n\n", string(headerData))

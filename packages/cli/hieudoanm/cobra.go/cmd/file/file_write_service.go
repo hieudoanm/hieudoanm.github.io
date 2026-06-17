@@ -46,15 +46,18 @@ func openFileForWrite(path string, appendMode, mkdir bool, permMode string) (int
 	return flag, mode, nil
 }
 
-func outputWriteResult(path string, n int, appendMode bool) {
+func outputWriteResult(path string, n int, appendMode bool) error {
 	if jsonOutput {
-		out, _ := json.MarshalIndent(map[string]interface{}{
+		out, err := json.MarshalIndent(map[string]interface{}{
 			"file":   path,
 			"bytes":  n,
 			"append": appendMode,
 		}, "", "  ")
+		if err != nil {
+			return err
+		}
 		fmt.Println(string(out))
-		return
+		return nil
 	}
 
 	verb := "Written"
@@ -62,6 +65,7 @@ func outputWriteResult(path string, n int, appendMode bool) {
 		verb = "Appended"
 	}
 	fmt.Printf("%s %d bytes to %s\n", verb, n, path)
+	return nil
 }
 
 func readStdin() ([]byte, error) {

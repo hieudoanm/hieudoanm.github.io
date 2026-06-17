@@ -34,7 +34,7 @@ func newCronCmd() *cobra.Command {
 			}
 
 			if cronJSON {
-				outputCronJSON(expr, runs)
+				return outputCronJSON(expr, runs)
 			} else {
 				outputCronText(expr, runs)
 			}

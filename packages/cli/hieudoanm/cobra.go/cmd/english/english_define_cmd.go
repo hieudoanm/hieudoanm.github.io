@@ -55,7 +55,10 @@ func newDefineCmd() *cobra.Command {
 			}
 
 			if defineJSON {
-				out, _ := json.MarshalIndent(data, "", "  ")
+				out, err := json.MarshalIndent(data, "", "  ")
+				if err != nil {
+					return err
+				}
 				fmt.Println(string(out))
 				return nil
 			}

@@ -90,7 +90,7 @@ If --output is a directory, the filename is derived from the URL hostname + time
 			}
 
 			if flagJSON {
-				out, _ := json.MarshalIndent(map[string]interface{}{
+				out, err := json.MarshalIndent(map[string]interface{}{
 					"url":       rawURL,
 					"file":      outPath,
 					"size_kb":   len(data) / 1024,
@@ -99,6 +99,9 @@ If --output is a directory, the filename is derived from the URL hostname + time
 					"viewport":  fmt.Sprintf("%dx%d", opts.Width, opts.Height),
 					"full_page": opts.FullPage,
 				}, "", "  ")
+				if err != nil {
+					return err
+				}
 				fmt.Println(string(out))
 			} else {
 				fmt.Printf("Capturing %s\n", rawURL)

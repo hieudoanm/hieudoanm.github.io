@@ -59,11 +59,15 @@ func runClipboardWatcher() {
 			log.Println("insert error:", err)
 		} else {
 			if clipJSON {
-				out, _ := json.MarshalIndent(map[string]interface{}{
+				out, err := json.MarshalIndent(map[string]interface{}{
 					"content": text,
 					"preview": previewClip(text),
 				}, "", "  ")
-				fmt.Println(string(out))
+				if err != nil {
+					log.Printf("json error: %v", err)
+				} else {
+					fmt.Println(string(out))
+				}
 			} else {
 				fmt.Println("Saved:", previewClip(text))
 			}

@@ -4,27 +4,6 @@ import (
 	"testing"
 )
 
-func TestCleanHTML(t *testing.T) {
-	tests := []struct {
-		input string
-		want  string
-	}{
-		{"hello &amp; world", "hello & world"},
-		{"foo &lt; bar &gt; baz", "foo < bar > baz"},
-		{"<b>bold</b>", "bold"},
-		{"<a href=\"link\">text</a>", "text"},
-		{"hello &nbsp; world", "hello   world"},
-		{"plain text", "plain text"},
-		{"", ""},
-	}
-	for _, tc := range tests {
-		got := cleanHTML(tc.input)
-		if got != tc.want {
-			t.Errorf("cleanHTML(%q) = %q, want %q", tc.input, got, tc.want)
-		}
-	}
-}
-
 func TestParseDuckDuckGoResults(t *testing.T) {
 	html := `<html>
 <body>

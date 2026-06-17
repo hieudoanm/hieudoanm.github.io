@@ -43,8 +43,7 @@ Supports carousels and specific image selection via --index.`,
 			}
 
 			if igJSON {
-				outputIGJSON(shortcode, imageURLs)
-				return nil
+				return outputIGJSON(shortcode, imageURLs)
 			}
 
 			fmt.Printf("Shortcode: %s\n", shortcode)

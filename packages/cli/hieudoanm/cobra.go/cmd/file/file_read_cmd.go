@@ -27,9 +27,11 @@ func newReadCmd() *cobra.Command {
 			}
 
 			if jsonOutput {
-				info, _ := os.Stat(path)
-				renderReadJSON(path, info, content, displayLines, totalLines, offset, lines)
-				return nil
+				info, err := os.Stat(path)
+				if err != nil {
+					return err
+				}
+				return renderReadJSON(path, info, content, displayLines, totalLines, offset, lines)
 			}
 
 			renderReadText(path, displayLines, offset, totalLines, showLineNumbers)

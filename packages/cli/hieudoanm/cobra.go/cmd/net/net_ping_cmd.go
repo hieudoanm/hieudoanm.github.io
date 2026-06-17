@@ -76,7 +76,7 @@ func newPingCmd() *cobra.Command {
 				if successes > 0 {
 					avg = total / time.Duration(successes)
 				}
-				out, _ := json.MarshalIndent(map[string]interface{}{
+				out, err := json.MarshalIndent(map[string]interface{}{
 					"host":      host,
 					"port":      port,
 					"sent":      count,
@@ -85,6 +85,9 @@ func newPingCmd() *cobra.Command {
 					"avg_ms":    avg.Round(time.Millisecond).String(),
 					"results":   results,
 				}, "", "  ")
+				if err != nil {
+					return err
+				}
 				fmt.Println(string(out))
 			} else {
 				fmt.Printf("\n--- %s ping statistics ---\n", host)

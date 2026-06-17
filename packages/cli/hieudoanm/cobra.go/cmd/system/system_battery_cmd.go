@@ -42,9 +42,12 @@ type batteryInfo struct {
 	TimeRemain string `json:"time_remaining,omitempty"`
 }
 
-func printBattery(b batteryInfo) {
+func printBattery(b batteryInfo) error {
 	if batteryJSON {
-		out, _ := json.MarshalIndent(b, "", "  ")
+		out, err := json.MarshalIndent(b, "", "  ")
+		if err != nil {
+			return err
+		}
 		fmt.Println(string(out))
 	} else {
 		status := "discharging"
@@ -56,6 +59,7 @@ func printBattery(b batteryInfo) {
 			fmt.Printf("Time remaining: %s\n", b.TimeRemain)
 		}
 	}
+	return nil
 }
 
 func darwinBattery() error {
@@ -91,8 +95,7 @@ func darwinBattery() error {
 		}
 	}
 
-	printBattery(info)
-	return nil
+	return printBattery(info)
 }
 
 func linuxBattery() error {
@@ -113,8 +116,7 @@ func linuxBattery() error {
 		info.Charging = status == "Charging"
 	}
 
-	printBattery(info)
-	return nil
+	return printBattery(info)
 }
 
 func readFileTrim(path string) (string, error) {

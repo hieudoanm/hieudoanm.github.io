@@ -52,20 +52,23 @@ func searchTextInRoots(pattern string, searchRoots []string, re *regexp.Regexp, 
 	return results, nil
 }
 
-func outputTextResults(results []textMatch, pattern string) {
+func outputTextResults(results []textMatch, pattern string) error {
 	if jsonOutput {
-		out, _ := json.MarshalIndent(map[string]interface{}{
+		out, err := json.MarshalIndent(map[string]interface{}{
 			"pattern": pattern,
 			"matches": len(results),
 			"results": results,
 		}, "", "  ")
+		if err != nil {
+			return err
+		}
 		fmt.Println(string(out))
-		return
+		return nil
 	}
 
 	if len(results) == 0 {
 		fmt.Println("(no matches)")
-		return
+		return nil
 	}
 
 	for _, m := range results {
@@ -74,6 +77,7 @@ func outputTextResults(results []textMatch, pattern string) {
 	if len(results) > 1 {
 		fmt.Printf("\n%d matches\n", len(results))
 	}
+	return nil
 }
 
 func searchFileText(path, pattern string, re *regexp.Regexp, maxCount int) []textMatch {

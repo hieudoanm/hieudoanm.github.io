@@ -7,6 +7,7 @@ import (
 	"io"
 	"os"
 	"strings"
+	"sync"
 	"time"
 
 	"github.com/hieudoanm/hieudoanm/libs/history"
@@ -14,6 +15,8 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 )
+
+var captureMu sync.Mutex
 
 func getCWD() string {
 	d, err := os.Getwd()
@@ -119,6 +122,9 @@ func setFlagValue(flag *pflag.Flag, value any) {
 }
 
 func captureRun(cmd *cobra.Command, posArgs []string) (string, string, error) {
+	captureMu.Lock()
+	defer captureMu.Unlock()
+
 	oldStdout := os.Stdout
 	stdoutR, stdoutW, _ := os.Pipe()
 	os.Stdout = stdoutW

@@ -75,7 +75,7 @@ func runCompound(principal, rate, years, contribute float64, compound string) er
 
 	if jsonOutput {
 		rows := yearBreakdown(principal, rate, years, contribute, n)
-		out, _ := json.MarshalIndent(map[string]interface{}{
+		out, err := json.MarshalIndent(map[string]interface{}{
 			"principal":      principal,
 			"rate":           rate,
 			"years":          years,
@@ -86,6 +86,9 @@ func runCompound(principal, rate, years, contribute float64, compound string) er
 			"total_interest": totalInterest,
 			"year_breakdown": rows,
 		}, "", "  ")
+		if err != nil {
+			return err
+		}
 		fmt.Println(string(out))
 		return nil
 	}

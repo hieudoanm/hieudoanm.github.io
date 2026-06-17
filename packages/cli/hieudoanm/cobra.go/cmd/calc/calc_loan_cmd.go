@@ -42,7 +42,7 @@ and generates a detailed schedule showing payment, interest, and balance over ti
 					balance -= principalPaid
 					schedule = append(schedule, monthRow{i, payment, interest, balance})
 				}
-				out, _ := json.MarshalIndent(map[string]interface{}{
+				out, err := json.MarshalIndent(map[string]interface{}{
 					"principal":      principal,
 					"rate":           rate,
 					"years":          years,
@@ -51,6 +51,9 @@ and generates a detailed schedule showing payment, interest, and balance over ti
 					"total_interest": totalInterest,
 					"schedule":       schedule,
 				}, "", "  ")
+				if err != nil {
+					return err
+				}
 				fmt.Println(string(out))
 				return nil
 			}

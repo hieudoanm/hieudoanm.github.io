@@ -40,8 +40,7 @@ func newTextCmd() *cobra.Command {
 				return err
 			}
 
-			outputTextResults(results, pattern)
-			return nil
+			return outputTextResults(results, pattern)
 		},
 	}
 

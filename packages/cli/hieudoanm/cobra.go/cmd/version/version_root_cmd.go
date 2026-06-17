@@ -20,9 +20,12 @@ func NewCommand() *cobra.Command {
   version --json`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if jsonOutput {
-				out, _ := json.MarshalIndent(map[string]interface{}{
+				out, err := json.MarshalIndent(map[string]interface{}{
 					"version": V,
 				}, "", "  ")
+				if err != nil {
+					return err
+				}
 				fmt.Println(string(out))
 			} else {
 				cmd.Printf("Version: %s\n", V)

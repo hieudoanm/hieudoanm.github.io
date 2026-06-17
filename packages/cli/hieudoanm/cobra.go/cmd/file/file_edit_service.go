@@ -42,48 +42,57 @@ func performEdit(content, old, newStr string, useRegex bool, count int) (string,
 	return strings.Replace(content, old, newStr, -1), matchCount, nil
 }
 
-func outputEditResult(path, content, replaced string, matchCount int, preview bool, mode os.FileMode) {
+func outputEditResult(path, content, replaced string, matchCount int, preview bool, mode os.FileMode) error {
 	if matchCount == 0 {
 		if jsonOutput {
-			out, _ := json.MarshalIndent(map[string]interface{}{
+			out, err := json.MarshalIndent(map[string]interface{}{
 				"file":    path,
 				"matches": 0,
 			}, "", "  ")
+			if err != nil {
+				return err
+			}
 			fmt.Println(string(out))
 		} else {
 			fmt.Printf("No matches found in %s\n", path)
 		}
-		return
+		return nil
 	}
 
 	if preview {
 		if jsonOutput {
 			diff := buildDiff(content, replaced)
-			out, _ := json.MarshalIndent(map[string]interface{}{
+			out, err := json.MarshalIndent(map[string]interface{}{
 				"file":    path,
 				"matches": matchCount,
 				"diff":    diff,
 			}, "", "  ")
+			if err != nil {
+				return err
+			}
 			fmt.Println(string(out))
 		} else {
 			fmt.Printf("── Preview for %s (%d match%s) ──\n", path, matchCount, pluralS(matchCount))
 			showDiff(content, replaced)
 		}
-		return
+		return nil
 	}
 
 	if err := os.WriteFile(path, []byte(replaced), mode); err != nil {
-		fmt.Fprintf(os.Stderr, "error writing %s: %v\n", path, err)
-		return
+		return fmt.Errorf("error writing %s: %w", path, err)
 	}
 
 	if jsonOutput {
-		out, _ := json.MarshalIndent(map[string]interface{}{
+		out, err := json.MarshalIndent(map[string]interface{}{
 			"file":    path,
 			"matches": matchCount,
 		}, "", "  ")
+		if err != nil {
+			return err
+		}
 		fmt.Println(string(out))
 	} else {
 		fmt.Printf("Replaced %d occurrence%s in %s\n", matchCount, pluralS(matchCount), path)
 	}
+	return nil
 }

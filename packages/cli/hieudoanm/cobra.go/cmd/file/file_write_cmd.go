@@ -42,8 +42,7 @@ func newWriteCmd() *cobra.Command {
 				return err
 			}
 
-			outputWriteResult(path, n, appendMode)
-			return nil
+			return outputWriteResult(path, n, appendMode)
 		},
 	}
 

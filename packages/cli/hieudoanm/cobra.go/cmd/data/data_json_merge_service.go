@@ -28,7 +28,10 @@ func jsonMerge(baseFile, patchFile string) error {
 		baseMap[k] = v
 	}
 
-	out, _ := json.MarshalIndent(baseMap, "", "  ")
+	out, err := json.MarshalIndent(baseMap, "", "  ")
+	if err != nil {
+		return err
+	}
 	fmt.Println(string(out))
 	return nil
 }

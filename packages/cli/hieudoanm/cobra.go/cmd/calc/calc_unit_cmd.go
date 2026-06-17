@@ -34,13 +34,16 @@ func newUnitCmd() *cobra.Command {
 			base := fromUnit.toBase(value)
 			result := toUnit.fromBase(base)
 			if jsonOutput {
-				out, _ := json.MarshalIndent(map[string]interface{}{
+				out, err := json.MarshalIndent(map[string]interface{}{
 					"value":    value,
 					"from":     from,
 					"to":       to,
 					"result":   result,
 					"category": fromUnit.cat,
 				}, "", "  ")
+				if err != nil {
+					return err
+				}
 				fmt.Println(string(out))
 			} else {
 				fmt.Printf("%g %s = %g %s\n", value, from, result, to)

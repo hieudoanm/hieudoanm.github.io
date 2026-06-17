@@ -37,9 +37,12 @@ func newSortCmd() *cobra.Command {
 				for i, v := range parsed {
 					sorted[i] = v.String()
 				}
-				out, _ := json.MarshalIndent(map[string]interface{}{
+				out, err := json.MarshalIndent(map[string]interface{}{
 					"sorted": sorted,
 				}, "", "  ")
+				if err != nil {
+					return err
+				}
 				fmt.Println(string(out))
 			} else {
 				for _, v := range parsed {

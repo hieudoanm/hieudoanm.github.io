@@ -36,12 +36,15 @@ The result includes a weight category: Underweight, Normal, Overweight, or Obese
 			bmi := weight / (heightM * heightM)
 
 			if jsonOutput {
-				out, _ := json.MarshalIndent(map[string]interface{}{
+				out, err := json.MarshalIndent(map[string]interface{}{
 					"weight":   weight,
 					"height":   height,
 					"bmi":      bmi,
 					"category": bmiCategory(bmi),
 				}, "", "  ")
+				if err != nil {
+					return err
+				}
 				fmt.Println(string(out))
 			} else {
 				fmt.Println("=== BMI Calculator ===")

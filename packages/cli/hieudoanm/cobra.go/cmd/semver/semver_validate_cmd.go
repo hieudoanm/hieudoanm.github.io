@@ -35,7 +35,10 @@ func newValidateCmd() *cobra.Command {
 					}
 					results = append(results, entry)
 				}
-				out, _ := json.MarshalIndent(results, "", "  ")
+				out, err := json.MarshalIndent(results, "", "  ")
+				if err != nil {
+					return err
+				}
 				fmt.Println(string(out))
 			} else {
 				for _, s := range versions {

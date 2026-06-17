@@ -80,12 +80,15 @@ func grepFile(re *regexp.Regexp, path string, context, maxCount int) ([]lineMatc
 
 func outputGrepResults(matches []lineMatch, totalFiles int, pattern string) error {
 	if jsonOutput {
-		out, _ := json.MarshalIndent(map[string]interface{}{
+		out, err := json.MarshalIndent(map[string]interface{}{
 			"pattern": pattern,
 			"files":   totalFiles,
 			"matches": len(matches),
 			"results": matches,
 		}, "", "  ")
+		if err != nil {
+			return err
+		}
 		fmt.Println(string(out))
 		return nil
 	}
