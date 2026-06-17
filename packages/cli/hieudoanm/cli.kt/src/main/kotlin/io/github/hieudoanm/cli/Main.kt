@@ -3,7 +3,6 @@ package io.github.hieudoanm.cli
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.core.subcommands
 import io.github.hieudoanm.cli.commands.*
-
 fun main(args: Array<String>) = HieuDoanm().main(args)
 
 class HieuDoanm : CliktCommand(
@@ -25,6 +24,7 @@ class HieuDoanm : CliktCommand(
             FileCommand(),
             GeminiCommand(),
             GhCommand(),
+            HistoryCommand(),
             ImageCommand(),
             NetCommand(),
             OpenapiCommand(),

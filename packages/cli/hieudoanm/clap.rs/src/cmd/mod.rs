@@ -11,6 +11,7 @@ mod english;
 mod file;
 mod gemini;
 mod gh;
+mod history;
 mod image;
 mod net;
 mod openapi;
@@ -43,6 +44,7 @@ pub async fn execute() -> anyhow::Result<()> {
         .subcommand(file::command())
         .subcommand(gemini::command())
         .subcommand(gh::command())
+        .subcommand(history::command())
         .subcommand(image::command())
         .subcommand(net::command())
         .subcommand(openapi::command())
@@ -56,7 +58,11 @@ pub async fn execute() -> anyhow::Result<()> {
         .subcommand(web::command());
     let matches = root.clone().get_matches();
 
-    match matches.subcommand() {
+    let cmd_name = matches.subcommand_name().unwrap_or("").to_string();
+    let should_track = !cmd_name.is_empty() && cmd_name != "help" && cmd_name != "history";
+    let start = std::time::Instant::now();
+
+    let result = match matches.subcommand() {
         Some(("version", m)) => version::run(m),
         Some(("calc", m)) => calc::run(m).await,
         Some(("casino", m)) => casino::run(m).await,
@@ -71,6 +77,7 @@ pub async fn execute() -> anyhow::Result<()> {
         Some(("file", m)) => file::run(m).await,
         Some(("gemini", m)) => gemini::run(m).await,
         Some(("gh", m)) => gh::run(m).await,
+        Some(("history", m)) => history::run(m).await,
         Some(("image", m)) => image::run(m).await,
         Some(("net", m)) => net::run(m).await,
         Some(("openapi", m)) => openapi::run(m).await,
@@ -87,5 +94,16 @@ pub async fn execute() -> anyhow::Result<()> {
             println!();
             Ok(())
         }
+    };
+
+    if should_track {
+        let mut entry = crate::libs::history::entry("cli", &cmd_name);
+        entry.duration_ms = Some(start.elapsed().as_millis() as i64);
+        if let Err(ref e) = result {
+            entry.error = Some(e.to_string());
+        }
+        let _ = crate::libs::history::append(&entry);
     }
+
+    result
 }

@@ -1,7 +1,7 @@
 import ArgumentParser
 
 @main
-struct HieuDoanm: ParsableCommand {
+struct HieuDoanm: AsyncParsableCommand {
     static let configuration = CommandConfiguration(
         commandName: "hieudoanm",
         abstract: "Hieu Doan's personal CLI toolbox",
@@ -20,6 +20,7 @@ struct HieuDoanm: ParsableCommand {
             FileCommand.self,
             GeminiCommand.self,
             GhCommand.self,
+            HistoryCommand.self,
             ImageCommand.self,
             NetCommand.self,
             OpenapiCommand.self,
