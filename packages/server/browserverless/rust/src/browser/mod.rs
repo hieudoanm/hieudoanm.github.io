@@ -101,6 +101,12 @@ impl Browser {
         self.execute_deferred_scripts().await?;
         self.drain_and_execute_pending_scripts()?;
 
+        eprintln!("  🔧 Processing bootloader modules...");
+        if let Some(js) = &mut self.js_runtime {
+            js::process_bootloader_modules(&mut js.context);
+        }
+        self.drain_and_execute_pending_scripts()?;
+
         eprintln!("  ⏳ Waiting for idle...");
         if let Some(js) = &mut self.js_runtime {
             js.idle(opts.wait_ms)?;

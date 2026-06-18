@@ -111,4 +111,58 @@ class SystemCommandTest {
         assertContains(result.stdout, "cpu_percent")
         assertContains(result.stdout, "ram_percent")
     }
+
+    @Test
+    fun testSystemEnvSort() {
+        val cmd = SystemCommand()
+        val result = cmd.test("env --sort")
+        assertEquals(0, result.statusCode)
+        assertContains(result.stdout, "=")
+    }
+
+    @Test
+    fun testSystemEnvNoMatch() {
+        val cmd = SystemCommand()
+        val result = cmd.test("env ZZZNONEXISTENT")
+        assertEquals(0, result.statusCode)
+        assertEquals("", result.stdout.trim())
+    }
+
+    @Test
+    fun testSystemPathSort() {
+        val cmd = SystemCommand()
+        val result = cmd.test("path --sort")
+        assertEquals(0, result.statusCode)
+    }
+
+    @Test
+    fun testSystemPathNotFound() {
+        val cmd = SystemCommand()
+        val result = cmd.test("path nonexistentcommand12345")
+        assertEquals(0, result.statusCode)
+        assertContains(result.stdout, "not found in PATH")
+    }
+
+    @Test
+    fun testSystemBattery() {
+        val os = System.getProperty("os.name").lowercase()
+        val cmd = SystemCommand()
+        val result = cmd.test("battery")
+        assertEquals(0, result.statusCode)
+        if (os.contains("mac")) {
+            assertContains(result.stdout, "Battery:")
+        }
+    }
+
+    @Test
+    fun testSystemBatteryJson() {
+        val os = System.getProperty("os.name").lowercase()
+        val cmd = SystemCommand()
+        val result = cmd.test("battery --json")
+        assertEquals(0, result.statusCode)
+        if (os.contains("mac")) {
+            assertContains(result.stdout, "percent")
+            assertContains(result.stdout, "charging")
+        }
+    }
 }

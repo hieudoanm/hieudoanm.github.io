@@ -19,6 +19,7 @@ dependencies {
     implementation("commons-codec:commons-codec:1.16.0")
     implementation("org.jsoup:jsoup:1.17.2")
     testImplementation(kotlin("test"))
+    testImplementation("com.squareup.okhttp3:mockwebserver:4.12.0")
 }
 
 application {

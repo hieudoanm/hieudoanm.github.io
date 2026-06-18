@@ -55,7 +55,7 @@ private fun codePatternsFor(path: String, langFilter: String?): Triple<String, L
             Triple("python", listOf(
                 CodePattern(Pattern.compile("^(?:async\\s+)?def\\s+(\\w+)"), 1, "function"),
                 CodePattern(Pattern.compile("^class\\s+(\\w+)"), 1, "class"),
-                CodePattern(Pattern.compile("^(\\w+)\\s*=(?:\\s*lambda|[{(['\"0-9])"), 1, "variable"),
+                CodePattern(Pattern.compile("^(\\w+)\\s*=(?:\\s*lambda|[{(\\['\"0-9])"), 1, "variable"),
             ), true)
         }
         "rs" -> {

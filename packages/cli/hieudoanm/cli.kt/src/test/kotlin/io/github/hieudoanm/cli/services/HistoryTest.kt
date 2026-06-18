@@ -28,6 +28,30 @@ class HistoryTest {
     }
 
     @Test
+    fun testListWithZeroCount() {
+        HistoryService.clear()
+        HistoryService.append(HistoryEntry("2024-01-01T00:00:00", "cli", "cmd1"))
+        val listed = HistoryService.list(0)
+        assertEquals(1, listed.size)
+    }
+
+    @Test
+    fun testListWithNegativeCount() {
+        HistoryService.clear()
+        HistoryService.append(HistoryEntry("2024-01-01T00:00:00", "cli", "cmd1"))
+        val listed = HistoryService.list(-1)
+        assertEquals(1, listed.size)
+    }
+
+    @Test
+    fun testListWithExcessiveCount() {
+        HistoryService.clear()
+        HistoryService.append(HistoryEntry("2024-01-01T00:00:00", "cli", "cmd1"))
+        val listed = HistoryService.list(100)
+        assertEquals(1, listed.size)
+    }
+
+    @Test
     fun testSearch() {
         HistoryService.clear()
         HistoryService.append(HistoryEntry("2024-01-01T00:00:00", "cli", "calculate bmi"))
@@ -49,6 +73,23 @@ class HistoryTest {
     }
 
     @Test
+    fun testSearchWithZeroLimit() {
+        HistoryService.clear()
+        HistoryService.append(HistoryEntry("2024-01-01T00:00:00", "cli", "cmd alpha"))
+        HistoryService.append(HistoryEntry("2024-01-02T00:00:00", "cli", "cmd beta"))
+        val results = HistoryService.search("cmd", 0)
+        assertEquals(2, results.size)
+    }
+
+    @Test
+    fun testSearchCaseInsensitive() {
+        HistoryService.clear()
+        HistoryService.append(HistoryEntry("2024-01-01T00:00:00", "cli", "CALCULATE BMI"))
+        val results = HistoryService.search("calculate", 5)
+        assertEquals(1, results.size)
+    }
+
+    @Test
     fun testStats() {
         HistoryService.clear()
         HistoryService.append(HistoryEntry("2024-01-01T00:00:00", "cli", "calc bmi"))
@@ -57,6 +98,31 @@ class HistoryTest {
         val stats = HistoryService.computeStats()
         assertEquals(2, stats.totalCLI)
         assertEquals(1, stats.totalMCP)
+    }
+
+    @Test
+    fun testStatsWithErrors() {
+        HistoryService.clear()
+        HistoryService.append(HistoryEntry("2024-01-01T00:00:00", "cli", "calc bmi", error = "division by zero"))
+        HistoryService.append(HistoryEntry("2024-01-02T00:00:00", "cli", "convert"))
+        HistoryService.append(HistoryEntry("2024-01-03T00:00:00", "cli", "calc bmi", error = "timeout"))
+        val stats = HistoryService.computeStats()
+        assertEquals(3, stats.totalCLI)
+        assertEquals(0, stats.totalMCP)
+        assertEquals(1, stats.topErrors.size)
+        assertEquals("calc bmi", stats.topErrors[0].name)
+        assertEquals(2, stats.topErrors[0].count)
+    }
+
+    @Test
+    fun testStatsWithOnlyErrors() {
+        HistoryService.clear()
+        HistoryService.append(HistoryEntry("2024-01-01T00:00:00", "cli", "fail", error = "error 1"))
+        HistoryService.append(HistoryEntry("2024-01-02T00:00:00", "cli", "fail", error = "error 2"))
+        val stats = HistoryService.computeStats()
+        assertEquals(1, stats.topErrors.size)
+        assertEquals("fail", stats.topErrors[0].name)
+        assertEquals(2, stats.topErrors[0].count)
     }
 
     @Test
@@ -102,5 +168,12 @@ class HistoryTest {
         assertEquals(null, entry.cwd)
         assertEquals(null, entry.durationMs)
         assertEquals(null, entry.error)
+    }
+
+    @Test
+    fun testCommandCount() {
+        val cc = CommandCount("test-cmd", 42)
+        assertEquals("test-cmd", cc.name)
+        assertEquals(42, cc.count)
     }
 }

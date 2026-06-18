@@ -38,4 +38,34 @@ class PortCommandTest {
         assertContains(result.stdout, "port")
         assertContains(result.stdout, "open")
     }
+
+    @Test
+    fun testPortScan() {
+        val cmd = PortCommand()
+        val result = cmd.test("scan --host localhost --ports 1,2 --timeout 1")
+        assertEquals(0, result.statusCode)
+    }
+
+    @Test
+    fun testPortScanJson() {
+        val cmd = PortCommand()
+        val result = cmd.test("scan --host localhost --ports 3 --timeout 1 --json")
+        assertEquals(0, result.statusCode)
+        assertContains(result.stdout, "host")
+        assertContains(result.stdout, "ports")
+    }
+
+    @Test
+    fun testPortScanRange() {
+        val cmd = PortCommand()
+        val result = cmd.test("scan --host localhost --ports 4-5 --timeout 1")
+        assertEquals(0, result.statusCode)
+    }
+
+    @Test
+    fun testPortScanAllCommon() {
+        val cmd = PortCommand()
+        val result = cmd.test("scan --host 127.0.0.1 --timeout 1")
+        assertEquals(0, result.statusCode)
+    }
 }

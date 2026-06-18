@@ -9,6 +9,7 @@ import com.google.gson.JsonParser
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.io.OutputStreamWriter
+import java.io.Writer
 
 const val PROTOCOL_VERSION = "2025-11-25"
 
@@ -59,10 +60,8 @@ class McpServer {
         handlers[name] = handler
     }
 
-    fun run() {
+    fun run(reader: BufferedReader = BufferedReader(InputStreamReader(System.`in`)), writer: Writer = OutputStreamWriter(System.out)) {
         val gson = GsonBuilder().disableHtmlEscaping().create()
-        val reader = BufferedReader(InputStreamReader(System.`in`))
-        val writer = OutputStreamWriter(System.out)
 
         while (true) {
             val line = reader.readLine() ?: break
@@ -100,7 +99,7 @@ class McpServer {
         }
     }
 
-    private fun handleInitialize(writer: OutputStreamWriter, gson: Gson, id: JsonElement?) {
+    private fun handleInitialize(writer: Writer, gson: Gson, id: JsonElement?) {
         val result = JsonObject().apply {
             addProperty("protocolVersion", PROTOCOL_VERSION)
             add("capabilities", JsonObject().apply {
@@ -116,14 +115,14 @@ class McpServer {
         writeResponse(writer, gson, Response("2.0", id, result = gson.toJsonTree(result)))
     }
 
-    private fun handleListTools(writer: OutputStreamWriter, gson: Gson, id: JsonElement?) {
+    private fun handleListTools(writer: Writer, gson: Gson, id: JsonElement?) {
         val result = JsonObject().apply {
             add("tools", gson.toJsonTree(tools))
         }
         writeResponse(writer, gson, Response("2.0", id, result = gson.toJsonTree(result)))
     }
 
-    private fun handleCallTool(writer: OutputStreamWriter, gson: Gson, id: JsonElement?, params: JsonElement?) {
+    private fun handleCallTool(writer: Writer, gson: Gson, id: JsonElement?, params: JsonElement?) {
         if (params == null || !params.isJsonObject) {
             writeResponse(writer, gson, Response("2.0", id, error = ErrorObject(-32602, "missing params")))
             return
@@ -143,7 +142,7 @@ class McpServer {
         writeResponse(writer, gson, Response("2.0", id, result = gson.toJsonTree(result)))
     }
 
-    private fun writeResponse(writer: OutputStreamWriter, gson: Gson, resp: Response) {
+    private fun writeResponse(writer: Writer, gson: Gson, resp: Response) {
         writer.write(gson.toJson(resp))
         writer.write("\n")
         writer.flush()

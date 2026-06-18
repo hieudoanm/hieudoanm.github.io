@@ -639,6 +639,18 @@ impl JsRuntime {
 fn inject_polyfills(context: &mut Context) {
     eprintln!("  🔧 Injecting polyfills...");
     let polyfill = r#"
+// Save __rl_stub entries before bootloader processes them
+if (typeof globalThis.__INSTA_BOOTSTRAP === 'undefined') {
+    globalThis.__INSTA_BOOTSTRAP = {};
+    var _origRequireLazy = globalThis.requireLazy;
+    globalThis.__INSTA_BOOTSTRAP._rl_stub = [];
+    if (typeof globalThis.requireLazy === 'function') {
+        globalThis.requireLazy = function() {
+            globalThis.__INSTA_BOOTSTRAP._rl_stub.push(Array.prototype.slice.call(arguments));
+            return _origRequireLazy.apply(this, arguments);
+        };
+    }
+}
 if (typeof globalThis.self === 'undefined') {
     globalThis.self = globalThis;
 }
@@ -705,6 +717,32 @@ if (typeof globalThis.AbortController === 'undefined') {
     globalThis.AbortController = function() {
         this.signal = { aborted: false, onabort: null, addEventListener: function() {}, removeEventListener: function() {}, dispatchEvent: function() { return true; } };
         this.abort = function() { this.signal.aborted = true; if (this.signal.onabort) this.signal.onabort(); };
+    };
+}
+// XMLHttpRequest polyfill needed by Instagram's bootloader for ad-blocker defense checks
+if (typeof globalThis.XMLHttpRequest === 'undefined') {
+    globalThis.XMLHttpRequest = function() {
+        this.readyState = 4;
+        this.status = 200;
+        this.statusText = 'OK';
+        this.responseText = '';
+        this.response = '';
+        this.responseType = '';
+        this.withCredentials = false;
+        this.timeout = 0;
+        this._headers = {};
+        this._aborted = false;
+    };
+    globalThis.XMLHttpRequest.prototype = {
+        open: function(method, url) {},
+        send: function(data) { if (typeof this.onreadystatechange === 'function') this.onreadystatechange(); if (typeof this.onload === 'function') this.onload(); },
+        abort: function() { this._aborted = true; this.readyState = 4; if (typeof this.onabort === 'function') this.onabort(); },
+        setRequestHeader: function(name, value) { this._headers[name] = value; },
+        getResponseHeader: function(name) { return this._headers[name] || null; },
+        getAllResponseHeaders: function() { return ''; },
+        overrideMimeType: function(mime) {},
+        addEventListener: function(type, listener) { var ev = this['_on' + type]; this['_on' + type] = listener; },
+        removeEventListener: function(type, listener) { if (this['_on' + type] === listener) this['_on' + type] = null; }
     };
 }
 var _nativeFetch = globalThis.fetch;
@@ -853,5 +891,154 @@ try {
     let result = context.eval(Source::from_bytes(post_script.as_bytes()));
     if let Err(e) = result {
         eprintln!("[process_instagram_modules] Error: {}", e);
+    }
+}
+
+/// Processes bootloader modules after deferred scripts have been loaded.
+/// Replays saved __rl_stub entries through the real requireLazy,
+/// then re-processes data-sjs scripts with the bootloader's module system.
+pub fn process_bootloader_modules(context: &mut Context) {
+    let post_script = r#"
+(function() {
+try {
+    // Debug: check bootloader module state
+    var _define = null;
+    try { _define = window.require('define'); } catch(e) {}
+    console.log('[bl] define=' + String(typeof _define) + ' req=' + String(typeof window.require) + ' __d=' + String(typeof window.__d) + ' rl=' + String(typeof window.requireLazy));
+    
+    if (_define && typeof window.require === 'function') {
+        // Check each Bootloader dep
+        var allDeps = ["invariant","BootloaderConfig","BootloaderDocumentInserter","BootloaderEndpoint","BootloaderEvents","BootloaderEventsManager","BootloaderPreloader","BootloaderRetryTracker","BootloaderUsageLoggerUtils","CSSLoader","ClientConsistency","ErrorPubSub","ExecutionEnvironment","FBLogger","HasteBitMap","HasteResourceIndexUtil","JSResourceReferenceImpl","MakeHasteTranslations","NetworkStatus","RequireDeferredReference","ResourceHasher","ResourceTimingsStore","ServerJsRuntimeEnvironment","SiteData","TimeSlice","__debug","clearTimeout","cr:696703","err","fb-error","gkx","ifRequireable","ifRequired","nullthrows","objectKeys","objectValues","performanceAbsoluteNow","performanceNow","promiseDone","setTimeoutAcrossTransitions"];
+        var stubDeps = [];
+        for (var di = 0; di < allDeps.length; di++) {
+            try {
+                var dr = window.require(allDeps[di]);
+                if (dr === null || dr === undefined) {
+                    stubDeps.push(allDeps[di]);
+                }
+            } catch(e) {
+                stubDeps.push(allDeps[di]);
+            }
+        }
+        console.log('[bl] ' + String(stubDeps.length) + '/' + String(allDeps.length) + ' deps need stubs: ' + stubDeps.join(','));
+        
+        // Trace all 16 deps individually
+        var _define = window.require('define');
+        console.log('[bl] _define=' + String(typeof _define));
+        
+        // First check current state of all stub deps
+        var stateBefore = [];
+        for (var si = 0; si < stubDeps.length; si++) {
+            var dn = stubDeps[si];
+            var st = '';
+            try {
+                var dr = window.require(dn);
+                st = dr === null ? 'null' : (dr === undefined ? 'undef' : String(typeof dr));
+            } catch(e) {
+                st = 'err:' + String(e).substring(0,50);
+            }
+            stateBefore.push(dn + '=' + st);
+        }
+        console.log('[bl] before: ' + stateBefore.join(' | '));
+        
+        // Define stubs using _define
+        for (var si = 0; si < stubDeps.length; si++) {
+            try {
+                _define(stubDeps[si], [], {}, 0);
+            } catch(e) {
+                console.log('[bl] define err ' + stubDeps[si] + ': ' + String(e).substring(0, 100));
+            }
+        }
+        
+        // Check state after
+        var stateAfter = [];
+        for (var si = 0; si < stubDeps.length; si++) {
+            var dn = stubDeps[si];
+            var st = '';
+            try {
+                var dr = window.require(dn);
+                st = dr === null ? 'null' : (dr === undefined ? 'undef' : String(typeof dr));
+            } catch(e) {
+                st = 'err:' + String(e).substring(0,50);
+            }
+            stateAfter.push(dn + '=' + st);
+        }
+        console.log('[bl] after: ' + stateAfter.join(' | '));
+
+        
+        // Try Bootloader
+        var bl = null;
+        try { bl = window.require('Bootloader'); } catch(e) {
+            console.log('[bl] Bootloader error: ' + String(e).substring(0, 300));
+        }
+        console.log('[bl] Bootloader=' + (bl === null ? 'null' : (bl === undefined ? 'undefined' : 'ok')));
+        
+        var api = null;
+        if (bl) {
+            api = bl.default || bl;
+            console.log('[bl] api type=' + String(typeof api));
+            if (api) {
+                console.log('[bl] api keys=' + Object.keys(api).join(','));
+                if (typeof api.undeferBootloads === 'function') {
+                    api.undeferBootloads(true);
+                    console.log('[bl] undeferBootloads done');
+                }
+            }
+        }
+        
+        // Replay saved __rl_stub entries through real requireLazy
+        var stubs = globalThis.__INSTA_BOOTSTRAP && globalThis.__INSTA_BOOTSTRAP._rl_stub;
+        var rlCount = 0;
+        if (stubs && stubs.length > 0 && typeof window.requireLazy === 'function') {
+            console.log('[bl] replaying ' + String(stubs.length) + ' rl_stub entries');
+            for (var ri = 0; ri < stubs.length; ri++) {
+                var entry = stubs[ri];
+                try {
+                    window.requireLazy.apply(null, entry);
+                    rlCount++;
+                } catch(e) {
+                    console.log('[bl] rl_stub replay error #' + String(ri) + ': ' + String(e).substring(0, 100));
+                }
+            }
+            console.log('[bl] replayed ' + String(rlCount) + ' rl_stub entries');
+        }
+        
+        // Re-process data-sjs scripts to call Bootloader.handlePayload now that Bootloader is available
+        if (api) {
+            var sjsScripts = document.querySelectorAll('script[type="application/json"][data-sjs]:not([data-payload-processed])');
+            for (var si = 0; si < sjsScripts.length; si++) {
+                var ms = sjsScripts[si];
+                try {
+                    var raw = ms.textContent || '';
+                    var data = JSON.parse(raw);
+                    if (data && data.require && Array.isArray(data.require)) {
+                        for (var rj = 0; rj < data.require.length; rj++) {
+                            var entry = data.require[rj];
+                            if (Array.isArray(entry) && entry.length >= 2) {
+                                var modName = entry[0];
+                                var method = entry[1];
+                                var args = entry.slice(3);
+                                try {
+                                    if (modName === 'Bootloader' && method === 'handlePayload') {
+                                        api.handlePayload.apply(api, args);
+                                        console.log('[bl] called handlePayload');
+                                    }
+                                } catch(e) {}
+                            }
+                        }
+                    }
+                    ms.setAttribute('data-payload-processed', '');
+                } catch(e) {}
+            }
+        }
+    }
+} catch(e) {
+    console.log('[bl] error: ' + String(e).substring(0, 300));
+}
+})();
+"#;
+    let result = context.eval(Source::from_bytes(post_script.as_bytes()));
+    if let Err(e) = result {
+        eprintln!("[process_bootloader_modules] Error: {}", e);
     }
 }
