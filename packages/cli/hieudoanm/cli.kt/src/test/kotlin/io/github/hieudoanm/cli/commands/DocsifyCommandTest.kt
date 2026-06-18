@@ -111,4 +111,25 @@ class DocsifyCommandTest {
         assertContains(content, "file1")
     }
 
+    @Test
+    fun testObsidianNodeDataClass() {
+        val node = ObsidianNode(id = "1", name = "file1", path = "/path/file1.md", links = 3)
+        assertEquals("1", node.id)
+        assertEquals("file1", node.name)
+        assertEquals("/path/file1.md", node.path)
+        assertEquals(3, node.links)
+    }
+
+    @Test
+    fun testObsidianNodeDefaultLinks() {
+        val node = ObsidianNode(id = "2", name = "file2", path = "/path/file2.md")
+        assertEquals(0, node.links)
+    }
+
+    @Test
+    fun testObsidianEdgeDataClass() {
+        val edge = ObsidianEdge(source = "1", target = "2")
+        assertEquals("1", edge.source)
+        assertEquals("2", edge.target)
+    }
 }

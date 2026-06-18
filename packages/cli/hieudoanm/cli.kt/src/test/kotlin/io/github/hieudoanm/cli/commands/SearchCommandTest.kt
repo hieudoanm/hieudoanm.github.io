@@ -4,6 +4,7 @@ import com.github.ajalt.clikt.testing.test
 import kotlin.test.Test
 import kotlin.test.assertContains
 import kotlin.test.assertEquals
+import kotlin.test.assertTrue
 import java.io.File
 
 class SearchCommandTest {
@@ -260,5 +261,46 @@ class SearchCommandTest {
         val result = cmd.test("code --symbol nonexistent --dir $dir")
         assertEquals(0, result.statusCode)
         assertContains(result.stdout, "(no symbols found)")
+    }
+
+    @Test
+    fun testCodePatternDataClass() {
+        val pattern = CodePattern(regex = java.util.regex.Pattern.compile("fun\\s+(\\w+)"), nameGroup = 1, kind = "function")
+        assertTrue(pattern.regex.matcher("fun hello()").find())
+        assertEquals("function", pattern.kind)
+    }
+
+    @Test
+    fun testSymbolMatchDataClass() {
+        val m = SymbolMatch(file = "/path/to/file.kt", line = 42, symbol = "myFunc", kind = "function", language = "Kotlin")
+        assertEquals("/path/to/file.kt", m.file)
+        assertEquals(42, m.line)
+        assertEquals("myFunc", m.symbol)
+        assertEquals("function", m.kind)
+        assertEquals("Kotlin", m.language)
+    }
+
+    @Test
+    fun testTextMatchDataClass() {
+        val m = TextMatch(file = "file.txt", line = 10, content = "hello world")
+        assertEquals("file.txt", m.file)
+        assertEquals(10, m.line)
+        assertEquals("hello world", m.content)
+    }
+
+    @Test
+    fun testWebResultDataClass() {
+        val r = WebResult(title = "Example", url = "https://example.com", snippet = "An example site")
+        assertEquals("Example", r.title)
+        assertEquals("https://example.com", r.url)
+        assertEquals("An example site", r.snippet)
+    }
+
+    @Test
+    fun testWebResultDefaults() {
+        val r = WebResult()
+        assertEquals("", r.title)
+        assertEquals("", r.url)
+        assertEquals("", r.snippet)
     }
 }

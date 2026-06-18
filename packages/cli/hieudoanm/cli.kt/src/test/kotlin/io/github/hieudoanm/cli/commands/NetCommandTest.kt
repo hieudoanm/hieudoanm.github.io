@@ -164,4 +164,43 @@ class NetCommandTest {
         assertEquals("example.com", dns.domain)
         assertContains(dns.a.toString(), "93.184.216.34")
     }
+
+    @Test
+    fun testDnsResultDefaults() {
+        val dns = DnsResult()
+        assertEquals("", dns.domain)
+        assertEquals(emptyList<String>(), dns.a)
+        assertEquals(emptyList<String>(), dns.aaaa)
+        assertEquals("", dns.cname)
+        assertEquals(emptyList<String>(), dns.mx)
+    }
+
+    @Test
+    fun testIPInfoDefaults() {
+        val info = IPInfo()
+        assertEquals("", info.ip)
+        assertEquals("", info.city)
+        assertEquals("", info.org)
+    }
+
+    @Test
+    fun testIPInfoAllFields() {
+        val info = IPInfo(
+            ip = "1.1.1.1", version = "IPv4", city = "City", region = "Region",
+            countryName = "Country", countryCode = "US", postal = "12345",
+            latitude = "0", longitude = "0", timezone = "UTC", org = "Org", asn = "AS123"
+        )
+        assertEquals("1.1.1.1", info.ip)
+        assertEquals("IPv4", info.version)
+        assertEquals("City", info.city)
+        assertEquals("Region", info.region)
+        assertEquals("Country", info.countryName)
+        assertEquals("US", info.countryCode)
+        assertEquals("12345", info.postal)
+        assertEquals("0", info.latitude)
+        assertEquals("0", info.longitude)
+        assertEquals("UTC", info.timezone)
+        assertEquals("Org", info.org)
+        assertEquals("AS123", info.asn)
+    }
 }

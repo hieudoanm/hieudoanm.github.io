@@ -139,4 +139,31 @@ class GhCommandTest {
         val owner = GhOwner(login = "testuser", avatar_url = "https://example.com/avatar")
         assertEquals("testuser", owner.login)
     }
+
+    @Test
+    fun testGhOwnerDefaults() {
+        val owner = GhOwner()
+        assertEquals("", owner.login)
+        assertEquals("", owner.avatar_url)
+    }
+
+    @Test
+    fun testGhRepoDefaults() {
+        val repo = GhRepo()
+        assertEquals("", repo.name)
+        assertEquals("", repo.full_name)
+        assertEquals("", repo.owner.login)
+    }
+
+    @Test
+    fun testGhCodeOfConductDefaults() {
+        val coc = GhCodeOfConduct()
+        assertEquals("", coc.key)
+    }
+
+    @Test
+    fun testGitignoreTemplateDefaults() {
+        val tmpl = GitignoreTemplate()
+        assertEquals("", tmpl.name)
+    }
 }

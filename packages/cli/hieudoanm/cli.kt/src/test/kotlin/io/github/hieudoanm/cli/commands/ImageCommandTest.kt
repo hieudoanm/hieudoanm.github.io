@@ -60,4 +60,11 @@ class ImageCommandTest {
         assertEquals(0, result.statusCode)
         assertContains(result.stdout, "Dominant")
     }
+
+    @Test
+    fun testColorEntryDataClass() {
+        val entry = ColorEntry(hex = "#FF6600", percentage = 45.5)
+        assertEquals("#FF6600", entry.hex)
+        assertEquals(45.5, entry.percentage, 0.001)
+    }
 }

@@ -47,6 +47,13 @@ tasks.jacocoTestReport {
         xml.required.set(true)
         csv.required.set(false)
     }
+    classDirectories.setFrom(
+        files(classDirectories.files.map {
+            fileTree(it) {
+                exclude("**/*\$*")
+            }
+        })
+    )
 }
 
 kotlin {

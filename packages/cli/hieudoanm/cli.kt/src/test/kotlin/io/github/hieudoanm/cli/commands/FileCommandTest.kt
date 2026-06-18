@@ -541,4 +541,45 @@ class FileCommandTest {
         assertEquals(0, result.statusCode)
         assertTrue(File(path).canRead())
     }
+
+    @Test
+    fun testFileSizeEmptyDir() {
+        val dir = "/tmp/test-file-size-empty-dir"
+        File(dir).mkdirs()
+        val cmd = FileCommand()
+        val result = cmd.test("size --path $dir")
+        assertEquals(0, result.statusCode)
+        assertContains(result.stdout, "0 B")
+    }
+
+    @Test
+    fun testFileGrepDirectory() {
+        val dir = "/tmp/test-file-grep-dir"
+        File(dir).mkdirs()
+        File("$dir/file.txt").writeText("hello")
+        val cmd = FileCommand()
+        val result = cmd.test("grep --pattern hello --path $dir")
+        assertEquals(0, result.statusCode)
+        assertContains(result.stdout, "hello")
+    }
+
+    @Test
+    fun testFileChecksumSha256() {
+        val path = "/tmp/test-file-checksum-sha256.txt"
+        File(path).writeText("hello")
+        val cmd = FileCommand()
+        val result = cmd.test("checksum --file $path --algorithm sha256")
+        assertEquals(0, result.statusCode)
+        assertContains(result.stdout, path)
+    }
+
+    @Test
+    fun testFileChecksumUnknownAlgo() {
+        val path = "/tmp/test-file-checksum-unknown.txt"
+        File(path).writeText("hello")
+        val cmd = FileCommand()
+        val result = cmd.test("checksum --file $path --algorithm unknown")
+        assertEquals(0, result.statusCode)
+        assertContains(result.stdout, path)
+    }
 }

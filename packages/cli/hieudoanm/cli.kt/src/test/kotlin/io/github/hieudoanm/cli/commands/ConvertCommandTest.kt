@@ -5,6 +5,7 @@ import kotlin.test.Test
 import kotlin.test.assertContains
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
+import java.io.File
 
 class ConvertCommandTest {
     @Test
@@ -143,5 +144,81 @@ class ConvertCommandTest {
         val result = cmd.test("url 'hello+world' --decode")
         assertEquals(0, result.statusCode)
         assertEquals("hello world", result.stdout.trim())
+    }
+
+    @Test
+    fun testBase64EncodeFile() {
+        val path = "/tmp/test-base64-encode.txt"
+        File(path).writeText("hello")
+        val cmd = ConvertCommand()
+        val result = cmd.test("base64 encode '' --file $path")
+        assertEquals(0, result.statusCode)
+        assertEquals("aGVsbG8=", result.stdout.trim())
+    }
+
+    @Test
+    fun testBase64EncodeOutputFile() {
+        val out = "/tmp/test-base64-out.txt"
+        val cmd = ConvertCommand()
+        val result = cmd.test("base64 encode 'hello' --output $out")
+        assertEquals(0, result.statusCode)
+        assertEquals("aGVsbG8=", File(out).readText().trim())
+    }
+
+    @Test
+    fun testBase64DecodeCleaned() {
+        val cmd = ConvertCommand()
+        val result = cmd.test("base64 decode 'data:image/png;base64,aGVsbG8='")
+        assertEquals(0, result.statusCode)
+        assertEquals("hello", result.stdout.trim())
+    }
+
+    @Test
+    fun testCamelcaseWithNumbers() {
+        val cmd = ConvertCommand()
+        val result = cmd.test("camelcase 'hello2world'")
+        assertEquals(0, result.statusCode)
+        assertEquals("hello2world", result.stdout.trim())
+    }
+
+    @Test
+    fun testCamelcaseWithUnderscore() {
+        val cmd = ConvertCommand()
+        val result = cmd.test("camelcase 'hello_world'")
+        assertEquals(0, result.statusCode)
+        assertEquals("helloWorld", result.stdout.trim())
+    }
+
+    @Test
+    fun testSlugMultipleSpaces() {
+        val cmd = ConvertCommand()
+        val result = cmd.test("slug 'hello   world'")
+        assertEquals(0, result.statusCode)
+        assertEquals("hello-world", result.stdout.trim())
+    }
+
+    @Test
+    fun testCountJson() {
+        val cmd = ConvertCommand()
+        val result = cmd.test("count 'hello world' --json")
+        assertEquals(0, result.statusCode)
+        assertContains(result.stdout, "characters")
+        assertContains(result.stdout, "words")
+        assertContains(result.stdout, "lines")
+    }
+
+    @Test
+    fun testCountEmpty() {
+        val cmd = ConvertCommand()
+        val result = cmd.test("count ''")
+        assertEquals(0, result.statusCode)
+    }
+
+    @Test
+    fun testCapitaliseEmptyWord() {
+        val cmd = ConvertCommand()
+        val result = cmd.test("capitalise 'hello  world'")
+        assertEquals(0, result.statusCode)
+        assertEquals("Hello  World", result.stdout.trim())
     }
 }

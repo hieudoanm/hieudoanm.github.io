@@ -62,4 +62,22 @@ class OpenrouterCommandTest {
         val result = cmd.test("status --help")
         assertEquals(0, result.statusCode)
     }
+
+    @Test
+    fun testOpenRouterModelDataClass() {
+        val m = OpenRouterModel(id = "openai/gpt-4", name = "GPT-4", description = "OpenAI model", context_length = 8192)
+        assertEquals("openai/gpt-4", m.id)
+        assertEquals("GPT-4", m.name)
+        assertEquals("OpenAI model", m.description)
+        assertEquals(8192, m.context_length)
+    }
+
+    @Test
+    fun testOpenRouterModelDefaults() {
+        val m = OpenRouterModel()
+        assertEquals("", m.id)
+        assertEquals("", m.name)
+        assertEquals("", m.description)
+        assertEquals(0, m.context_length)
+    }
 }
