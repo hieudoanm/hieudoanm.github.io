@@ -1,9 +1,8 @@
-use anyhow::Result;
 use crate::browser::dom::JsDocument;
+use anyhow::Result;
 use markup5ever_rcdom::Handle;
-use reqwest::Client;
-use rquickjs::{AsyncContext, AsyncRuntime, Ctx, Function, Object, Promise};
 use rquickjs::prelude::Func;
+use rquickjs::{AsyncContext, AsyncRuntime, Ctx, Function, Object, Promise};
 use std::collections::HashMap;
 use std::sync::atomic::{AtomicBool, AtomicU32, Ordering};
 use std::sync::{Arc, Mutex};
@@ -12,7 +11,8 @@ use std::time::Duration;
 static NEXT_TIMER_ID: AtomicU32 = AtomicU32::new(1);
 
 fn timers() -> &'static Mutex<HashMap<u32, Arc<AtomicBool>>> {
-    static TIMERS: std::sync::OnceLock<Mutex<HashMap<u32, Arc<AtomicBool>>>> = std::sync::OnceLock::new();
+    static TIMERS: std::sync::OnceLock<Mutex<HashMap<u32, Arc<AtomicBool>>>> =
+        std::sync::OnceLock::new();
     TIMERS.get_or_init(|| Mutex::new(HashMap::new()))
 }
 
@@ -88,7 +88,11 @@ fn cancelAnimationFrame_impl(id: u32) {
 }
 
 #[allow(non_snake_case)]
-fn getComputedStyle_impl<'js>(ctx: Ctx<'js>, _el: rquickjs::Value<'js>, _pseudo: Option<String>) -> rquickjs::Result<Object<'js>> {
+fn getComputedStyle_impl<'js>(
+    ctx: Ctx<'js>,
+    _el: rquickjs::Value<'js>,
+    _pseudo: Option<String>,
+) -> rquickjs::Result<Object<'js>> {
     let style = Object::new(ctx)?;
     Ok(style)
 }
@@ -99,18 +103,31 @@ fn matchMedia_impl<'js>(ctx: Ctx<'js>, _query: String) -> rquickjs::Result<Objec
     mm.set("matches", false)?;
     mm.set("media", _query)?;
     mm.set("addListener", Func::from(|_f: rquickjs::Function<'_>| {}))?;
-    mm.set("removeListener", Func::from(|_f: rquickjs::Function<'_>| {}))?;
-    mm.set("addEventListener", Func::from(|_event: String, _f: rquickjs::Function<'_>| {}))?;
-    mm.set("removeEventListener", Func::from(|_event: String, _f: rquickjs::Function<'_>| {}))?;
+    mm.set(
+        "removeListener",
+        Func::from(|_f: rquickjs::Function<'_>| {}),
+    )?;
+    mm.set(
+        "addEventListener",
+        Func::from(|_event: String, _f: rquickjs::Function<'_>| {}),
+    )?;
+    mm.set(
+        "removeEventListener",
+        Func::from(|_event: String, _f: rquickjs::Function<'_>| {}),
+    )?;
     Ok(mm)
 }
 
-fn fetch_impl<'js>(ctx: Ctx<'js>, url: String, init: Option<Object<'js>>) -> rquickjs::Result<Promise<'js>> {
-    let method = init.as_ref()
+fn fetch_impl<'js>(
+    ctx: Ctx<'js>,
+    url: String,
+    init: Option<Object<'js>>,
+) -> rquickjs::Result<Promise<'js>> {
+    let method = init
+        .as_ref()
         .and_then(|o| o.get::<_, String>("method").ok())
         .unwrap_or_else(|| "GET".to_string());
-    let req_body = init.as_ref()
-        .and_then(|o| o.get::<_, String>("body").ok());
+    let req_body = init.as_ref().and_then(|o| o.get::<_, String>("body").ok());
 
     // Resolve relative URLs against document base URL
     let resolved = globals_location_href(&ctx)
@@ -130,7 +147,11 @@ fn fetch_impl<'js>(ctx: Ctx<'js>, url: String, init: Option<Object<'js>>) -> rqu
             "HEAD" => client.head(&resolved),
             _ => client.get(&resolved),
         };
-        let req = if let Some(b) = req_body { req.body(b) } else { req };
+        let req = if let Some(b) = req_body {
+            req.body(b)
+        } else {
+            req
+        };
 
         match req.send().await {
             Ok(resp) => {
@@ -140,7 +161,7 @@ fn fetch_impl<'js>(ctx: Ctx<'js>, url: String, init: Option<Object<'js>>) -> rqu
             }
             Err(e) => {
                 eprintln!("fetch({}) failed: {}", resolved, e);
-                format!("0\n")
+                "0\n".to_string()
             }
         }
     })
@@ -162,24 +183,39 @@ fn session_storage() -> &'static Mutex<HashMap<String, String>> {
     STORE.get_or_init(|| Mutex::new(HashMap::new()))
 }
 
-fn create_storage<'js>(ctx: &Ctx<'js>, store: fn() -> &'static Mutex<HashMap<String, String>>) -> rquickjs::Result<Object<'js>> {
+fn create_storage<'js>(
+    ctx: &Ctx<'js>,
+    store: fn() -> &'static Mutex<HashMap<String, String>>,
+) -> rquickjs::Result<Object<'js>> {
     let storage = Object::new(ctx.clone())?;
 
-    let _ = storage.set("getItem", Func::from(move |key: String| -> Option<String> {
-        store().lock().unwrap().get(&key).cloned()
-    }));
+    let _ = storage.set(
+        "getItem",
+        Func::from(move |key: String| -> Option<String> {
+            store().lock().unwrap().get(&key).cloned()
+        }),
+    );
 
-    let _ = storage.set("setItem", Func::from(move |key: String, value: String| {
-        store().lock().unwrap().insert(key, value);
-    }));
+    let _ = storage.set(
+        "setItem",
+        Func::from(move |key: String, value: String| {
+            store().lock().unwrap().insert(key, value);
+        }),
+    );
 
-    let _ = storage.set("removeItem", Func::from(move |key: String| {
-        store().lock().unwrap().remove(&key);
-    }));
+    let _ = storage.set(
+        "removeItem",
+        Func::from(move |key: String| {
+            store().lock().unwrap().remove(&key);
+        }),
+    );
 
-    let _ = storage.set("clear", Func::from(move || {
-        store().lock().unwrap().clear();
-    }));
+    let _ = storage.set(
+        "clear",
+        Func::from(move || {
+            store().lock().unwrap().clear();
+        }),
+    );
 
     let _ = storage.set("length", 0);
 
@@ -192,14 +228,58 @@ fn create_location<'js>(ctx: &Ctx<'js>, url: &str) -> rquickjs::Result<Object<'j
 
     let href = parsed.as_ref().map(|u| u.as_str()).unwrap_or(url);
     loc.set("href", href)?;
-    loc.set("origin", parsed.as_ref().map(|u| u.origin().ascii_serialization()).unwrap_or_default())?;
-    loc.set("protocol", parsed.as_ref().map(|u| u.scheme()).unwrap_or("").to_string() + ":")?;
-    loc.set("host", parsed.as_ref().map(|u| u.host_str().unwrap_or("")).unwrap_or(""))?;
-    loc.set("hostname", parsed.as_ref().map(|u| u.host_str().unwrap_or("")).unwrap_or(""))?;
-    loc.set("port", parsed.as_ref().and_then(|u| u.port().map(|p| p.to_string())).unwrap_or_default())?;
+    loc.set(
+        "origin",
+        parsed
+            .as_ref()
+            .map(|u| u.origin().ascii_serialization())
+            .unwrap_or_default(),
+    )?;
+    loc.set(
+        "protocol",
+        parsed
+            .as_ref()
+            .map(|u| u.scheme())
+            .unwrap_or("")
+            .to_string()
+            + ":",
+    )?;
+    loc.set(
+        "host",
+        parsed
+            .as_ref()
+            .map(|u| u.host_str().unwrap_or(""))
+            .unwrap_or(""),
+    )?;
+    loc.set(
+        "hostname",
+        parsed
+            .as_ref()
+            .map(|u| u.host_str().unwrap_or(""))
+            .unwrap_or(""),
+    )?;
+    loc.set(
+        "port",
+        parsed
+            .as_ref()
+            .and_then(|u| u.port().map(|p| p.to_string()))
+            .unwrap_or_default(),
+    )?;
     loc.set("pathname", parsed.as_ref().map(|u| u.path()).unwrap_or("/"))?;
-    loc.set("search", parsed.as_ref().map(|u| u.query().map(|q| format!("?{}", q)).unwrap_or_default()).unwrap_or_default())?;
-    loc.set("hash", parsed.as_ref().map(|u| u.fragment().map(|f| format!("#{}", f)).unwrap_or_default()).unwrap_or_default())?;
+    loc.set(
+        "search",
+        parsed
+            .as_ref()
+            .map(|u| u.query().map(|q| format!("?{}", q)).unwrap_or_default())
+            .unwrap_or_default(),
+    )?;
+    loc.set(
+        "hash",
+        parsed
+            .as_ref()
+            .map(|u| u.fragment().map(|f| format!("#{}", f)).unwrap_or_default())
+            .unwrap_or_default(),
+    )?;
 
     Ok(loc)
 }
@@ -418,21 +498,23 @@ if (_nativeFetch && !globalThis._fetchWrapped) {
             return Ok(());
         }
 
-        self.context.with(|ctx| {
-            let res = ctx.eval::<rquickjs::Value, _>(script);
-            if res.is_ok() {
-                return Ok(());
-            }
-            let err_msg = format!("{}", res.unwrap_err());
+        self.context
+            .with(|ctx| {
+                let res = ctx.eval::<rquickjs::Value, _>(script);
+                if res.is_ok() {
+                    return Ok(());
+                }
+                let err_msg = format!("{}", res.unwrap_err());
 
-            let wrapped_script = format!("({})", script);
-            if ctx.eval::<rquickjs::Value, _>(wrapped_script).is_ok() {
-                return Ok(());
-            }
+                let wrapped_script = format!("({})", script);
+                if ctx.eval::<rquickjs::Value, _>(wrapped_script).is_ok() {
+                    return Ok(());
+                }
 
-            eprintln!("Script error: {}", err_msg);
-            Ok(())
-        }).await
+                eprintln!("Script error: {}", err_msg);
+                Ok(())
+            })
+            .await
     }
 
     pub async fn idle(&self) -> Result<()> {

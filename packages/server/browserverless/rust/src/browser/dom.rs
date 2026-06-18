@@ -1,10 +1,10 @@
 use html5ever::serialize::{serialize, SerializeOpts, TraversalScope};
 use html5ever::tendril::TendrilSink;
-use html5ever::{parse_document, ParseOpts, local_name, ns, Attribute, QualName};
+use html5ever::{local_name, ns, parse_document, Attribute, ParseOpts, QualName};
 use markup5ever_rcdom::{Handle, NodeData, RcDom, SerializableHandle};
 use rquickjs::class::{Trace, Tracer};
-use rquickjs::Object;
 use rquickjs::prelude::Func;
+use rquickjs::Object;
 use std::cell::{Cell, RefCell};
 use std::collections::HashMap;
 use std::rc::Rc;
@@ -12,6 +12,11 @@ use std::sync::Mutex;
 
 thread_local! {
     static ACTIVE_ELEMENT: RefCell<Option<Handle>> = const { RefCell::new(None) };
+    pub static PENDING_SCRIPTS: RefCell<Vec<String>> = const { RefCell::new(Vec::new()) };
+}
+
+pub fn drain_pending_scripts() -> Vec<String> {
+    PENDING_SCRIPTS.with(|s| s.borrow_mut().drain(..).collect())
 }
 
 #[rquickjs::class]
@@ -51,69 +56,95 @@ impl JsDocument {
     }
 
     #[qjs(rename = "querySelector")]
-    pub fn query_selector<'js>(&self, ctx: rquickjs::Ctx<'js>, selector: String) -> Option<rquickjs::Class<'js, JsElement>> {
+    pub fn query_selector<'js>(
+        &self,
+        ctx: rquickjs::Ctx<'js>,
+        selector: String,
+    ) -> Option<rquickjs::Class<'js, JsElement>> {
         let sels = parse_selector_list(&selector).ok()?;
-        find_first_match(&self.handle, &sels).map(|h| {
-            rquickjs::Class::instance(ctx, JsElement::new(h)).unwrap()
-        })
+        find_first_match(&self.handle, &sels)
+            .map(|h| rquickjs::Class::instance(ctx, JsElement::new(h)).unwrap())
     }
 
     #[qjs(rename = "querySelectorAll")]
-    pub fn query_selector_all<'js>(&self, ctx: rquickjs::Ctx<'js>, selector: String) -> Vec<rquickjs::Class<'js, JsElement>> {
+    pub fn query_selector_all<'js>(
+        &self,
+        ctx: rquickjs::Ctx<'js>,
+        selector: String,
+    ) -> Vec<rquickjs::Class<'js, JsElement>> {
         let sels = match parse_selector_list(&selector) {
             Ok(s) => s,
             Err(_) => return Vec::new(),
         };
         let mut results = Vec::new();
         collect_matches(&self.handle, &sels, &mut results);
-        results.into_iter().map(|h| {
-            rquickjs::Class::instance(ctx.clone(), JsElement::new(h)).unwrap()
-        }).collect()
+        results
+            .into_iter()
+            .map(|h| rquickjs::Class::instance(ctx.clone(), JsElement::new(h)).unwrap())
+            .collect()
     }
 
     #[qjs(rename = "getElementById")]
-    pub fn get_element_by_id<'js>(&self, ctx: rquickjs::Ctx<'js>, id: String) -> Option<rquickjs::Class<'js, JsElement>> {
-        self.find_by_id(&self.handle, &id).map(|h| {
-            rquickjs::Class::instance(ctx, JsElement::new(h)).unwrap()
-        })
+    pub fn get_element_by_id<'js>(
+        &self,
+        ctx: rquickjs::Ctx<'js>,
+        id: String,
+    ) -> Option<rquickjs::Class<'js, JsElement>> {
+        self.find_by_id(&self.handle, &id)
+            .map(|h| rquickjs::Class::instance(ctx, JsElement::new(h)).unwrap())
     }
 
     #[qjs(get, rename = "body")]
-    pub fn get_body<'js>(&self, ctx: rquickjs::Ctx<'js>) -> Option<rquickjs::Class<'js, JsElement>> {
-        find_element_by_tag(&self.handle, "body").map(|h| {
-            rquickjs::Class::instance(ctx, JsElement::new(h)).unwrap()
-        })
+    pub fn get_body<'js>(
+        &self,
+        ctx: rquickjs::Ctx<'js>,
+    ) -> Option<rquickjs::Class<'js, JsElement>> {
+        find_element_by_tag(&self.handle, "body")
+            .map(|h| rquickjs::Class::instance(ctx, JsElement::new(h)).unwrap())
     }
 
     #[qjs(get, rename = "documentElement")]
-    pub fn get_document_element<'js>(&self, ctx: rquickjs::Ctx<'js>) -> Option<rquickjs::Class<'js, JsElement>> {
-        find_element_by_tag(&self.handle, "html").map(|h| {
-            rquickjs::Class::instance(ctx, JsElement::new(h)).unwrap()
-        })
+    pub fn get_document_element<'js>(
+        &self,
+        ctx: rquickjs::Ctx<'js>,
+    ) -> Option<rquickjs::Class<'js, JsElement>> {
+        find_element_by_tag(&self.handle, "html")
+            .map(|h| rquickjs::Class::instance(ctx, JsElement::new(h)).unwrap())
     }
 
     #[qjs(get, rename = "head")]
-    pub fn get_head<'js>(&self, ctx: rquickjs::Ctx<'js>) -> Option<rquickjs::Class<'js, JsElement>> {
-        find_element_by_tag(&self.handle, "head").map(|h| {
-            rquickjs::Class::instance(ctx, JsElement::new(h)).unwrap()
-        })
+    pub fn get_head<'js>(
+        &self,
+        ctx: rquickjs::Ctx<'js>,
+    ) -> Option<rquickjs::Class<'js, JsElement>> {
+        find_element_by_tag(&self.handle, "head")
+            .map(|h| rquickjs::Class::instance(ctx, JsElement::new(h)).unwrap())
     }
 
     #[qjs(get, rename = "activeElement")]
-    pub fn get_active_element<'js>(&self, ctx: rquickjs::Ctx<'js>) -> Option<rquickjs::Class<'js, JsElement>> {
-        get_active_element().map(|h| {
-            rquickjs::Class::instance(ctx, JsElement::new(h)).unwrap()
-        })
+    pub fn get_active_element<'js>(
+        &self,
+        ctx: rquickjs::Ctx<'js>,
+    ) -> Option<rquickjs::Class<'js, JsElement>> {
+        get_active_element().map(|h| rquickjs::Class::instance(ctx, JsElement::new(h)).unwrap())
     }
 
     #[qjs(rename = "createElement")]
-    pub fn create_element<'js>(&self, ctx: rquickjs::Ctx<'js>, tag_name: String) -> rquickjs::Class<'js, JsElement> {
+    pub fn create_element<'js>(
+        &self,
+        ctx: rquickjs::Ctx<'js>,
+        tag_name: String,
+    ) -> rquickjs::Class<'js, JsElement> {
         let handle = create_element_node(&tag_name);
         rquickjs::Class::instance(ctx, JsElement::new(handle)).unwrap()
     }
 
     #[qjs(rename = "createTextNode")]
-    pub fn create_text_node<'js>(&self, ctx: rquickjs::Ctx<'js>, text: String) -> rquickjs::Class<'js, JsElement> {
+    pub fn create_text_node<'js>(
+        &self,
+        ctx: rquickjs::Ctx<'js>,
+        text: String,
+    ) -> rquickjs::Class<'js, JsElement> {
         let handle = Rc::new(markup5ever_rcdom::Node {
             parent: std::cell::Cell::new(None),
             children: RefCell::new(Vec::new()),
@@ -228,65 +259,96 @@ fn find_next_element_sibling(handle: &Handle) -> Option<Handle> {
     None
 }
 
-fn create_class_list<'js>(ctx: &rquickjs::Ctx<'js>, element_handle: Handle) -> rquickjs::Result<Object<'js>> {
+fn create_class_list<'js>(
+    ctx: &rquickjs::Ctx<'js>,
+    element_handle: Handle,
+) -> rquickjs::Result<Object<'js>> {
     let cl = Object::new(ctx.clone())?;
 
     let h_add = element_handle.clone();
-    let _ = cl.set("add", Func::from(move |token: String| {
-        let mut current = get_attr(&h_add, "class");
-        let tokens: Vec<&str> = current.split_whitespace().collect();
-        if !tokens.contains(&token.as_str()) {
-            if !current.is_empty() {
-                current.push(' ');
+    let _ = cl.set(
+        "add",
+        Func::from(move |token: String| {
+            let mut current = get_attr(&h_add, "class");
+            let tokens: Vec<&str> = current.split_whitespace().collect();
+            if !tokens.contains(&token.as_str()) {
+                if !current.is_empty() {
+                    current.push(' ');
+                }
+                current.push_str(&token);
+                set_attr(&h_add, "class", &current);
             }
-            current.push_str(&token);
-            set_attr(&h_add, "class", &current);
-        }
-    }));
+        }),
+    );
 
     let h_remove = element_handle.clone();
-    let _ = cl.set("remove", Func::from(move |token: String| {
-        let current = get_attr(&h_remove, "class");
-        let tokens: Vec<&str> = current.split_whitespace().filter(|t| *t != token.as_str()).collect();
-        set_attr(&h_remove, "class", &tokens.join(" "));
-    }));
+    let _ = cl.set(
+        "remove",
+        Func::from(move |token: String| {
+            let current = get_attr(&h_remove, "class");
+            let tokens: Vec<&str> = current
+                .split_whitespace()
+                .filter(|t| *t != token.as_str())
+                .collect();
+            set_attr(&h_remove, "class", &tokens.join(" "));
+        }),
+    );
 
     let h_toggle = element_handle.clone();
-    let _ = cl.set("toggle", Func::from(move |token: String| -> bool {
-        let current = get_attr(&h_toggle, "class");
-        let tokens: Vec<&str> = current.split_whitespace().collect();
-        if tokens.contains(&token.as_str()) {
-            let filtered: Vec<&str> = tokens.into_iter().filter(|t| *t != token.as_str()).collect();
-            set_attr(&h_toggle, "class", &filtered.join(" "));
-            false
-        } else {
-            let mut updated = current;
-            if !updated.is_empty() {
-                updated.push(' ');
+    let _ = cl.set(
+        "toggle",
+        Func::from(move |token: String| -> bool {
+            let current = get_attr(&h_toggle, "class");
+            let tokens: Vec<&str> = current.split_whitespace().collect();
+            if tokens.contains(&token.as_str()) {
+                let filtered: Vec<&str> = tokens
+                    .into_iter()
+                    .filter(|t| *t != token.as_str())
+                    .collect();
+                set_attr(&h_toggle, "class", &filtered.join(" "));
+                false
+            } else {
+                let mut updated = current;
+                if !updated.is_empty() {
+                    updated.push(' ');
+                }
+                updated.push_str(&token);
+                set_attr(&h_toggle, "class", &updated);
+                true
             }
-            updated.push_str(&token);
-            set_attr(&h_toggle, "class", &updated);
-            true
-        }
-    }));
+        }),
+    );
 
     let h_contains = element_handle.clone();
-    let _ = cl.set("contains", Func::from(move |token: String| -> bool {
-        let current = get_attr(&h_contains, "class");
-        current.split_whitespace().any(|t| t == token.as_str())
-    }));
+    let _ = cl.set(
+        "contains",
+        Func::from(move |token: String| -> bool {
+            let current = get_attr(&h_contains, "class");
+            current.split_whitespace().any(|t| t == token.as_str())
+        }),
+    );
 
     let h_len = element_handle.clone();
-    let _ = cl.set("length", Func::from(move || -> usize {
-        let current = get_attr(&h_len, "class");
-        if current.is_empty() { 0 } else { current.split_whitespace().count() }
-    }));
+    let _ = cl.set(
+        "length",
+        Func::from(move || -> usize {
+            let current = get_attr(&h_len, "class");
+            if current.is_empty() {
+                0
+            } else {
+                current.split_whitespace().count()
+            }
+        }),
+    );
 
     let h_item = element_handle.clone();
-    let _ = cl.set("item", Func::from(move |index: usize| -> Option<String> {
-        let current = get_attr(&h_item, "class");
-        current.split_whitespace().nth(index).map(String::from)
-    }));
+    let _ = cl.set(
+        "item",
+        Func::from(move |index: usize| -> Option<String> {
+            let current = get_attr(&h_item, "class");
+            current.split_whitespace().nth(index).map(String::from)
+        }),
+    );
 
     Ok(cl)
 }
@@ -311,6 +373,8 @@ impl JsElement {
         children.clear();
         for child in new_children {
             child.parent.set(Some(Rc::downgrade(&self.handle)));
+            let scripts = collect_script_text_from_children(&child);
+            PENDING_SCRIPTS.with(|s| s.borrow_mut().extend(scripts));
             children.push(child);
         }
     }
@@ -401,15 +465,27 @@ impl JsElement {
     }
 
     #[qjs(rename = "addEventListener")]
-    pub fn add_event_listener<'js>(&self, ctx: rquickjs::Ctx<'js>, event_type: String, handler: rquickjs::Function<'js>) {
+    pub fn add_event_listener<'js>(
+        &self,
+        ctx: rquickjs::Ctx<'js>,
+        event_type: String,
+        handler: rquickjs::Function<'js>,
+    ) {
         let persistent = rquickjs::Persistent::save(&ctx, handler);
         self.listeners.borrow_mut().push((event_type, persistent));
     }
 
     #[qjs(rename = "removeEventListener")]
-    pub fn remove_event_listener<'js>(&self, ctx: rquickjs::Ctx<'js>, event_type: String, handler: rquickjs::Function<'js>) {
+    pub fn remove_event_listener<'js>(
+        &self,
+        ctx: rquickjs::Ctx<'js>,
+        event_type: String,
+        handler: rquickjs::Function<'js>,
+    ) {
         let persistent = rquickjs::Persistent::save(&ctx, handler);
-        self.listeners.borrow_mut().retain(|(t, h)| t != &event_type || h != &persistent);
+        self.listeners
+            .borrow_mut()
+            .retain(|(t, h)| t != &event_type || h != &persistent);
     }
 
     #[qjs(rename = "dispatchEvent")]
@@ -432,12 +508,21 @@ impl JsElement {
         };
         let _ = event.set("type", event_type.as_str());
         let _ = event.set("defaultPrevented", false);
-        let _ = event.set("preventDefault", rquickjs::Function::new(ctx.clone(), {
-            let ev = event.clone();
-            move || { let _ = ev.set("defaultPrevented", true); }
-        }));
-        let _ = event.set("stopPropagation", rquickjs::Function::new(ctx.clone(), || {}));
-        let el_ref = rquickjs::Class::instance(ctx.clone(), JsElement::new(self.handle.clone())).unwrap();
+        let _ = event.set(
+            "preventDefault",
+            rquickjs::Function::new(ctx.clone(), {
+                let ev = event.clone();
+                move || {
+                    let _ = ev.set("defaultPrevented", true);
+                }
+            }),
+        );
+        let _ = event.set(
+            "stopPropagation",
+            rquickjs::Function::new(ctx.clone(), || {}),
+        );
+        let el_ref =
+            rquickjs::Class::instance(ctx.clone(), JsElement::new(self.handle.clone())).unwrap();
         let _ = event.set("target", el_ref.clone());
         let _ = event.set("currentTarget", el_ref);
 
@@ -500,12 +585,19 @@ impl JsElement {
     }
 
     #[qjs(get, rename = "parentElement")]
-    pub fn get_parent_element<'js>(&self, ctx: rquickjs::Ctx<'js>) -> Option<rquickjs::Class<'js, JsElement>> {
-        find_parent_element(&self.handle).map(|h| rquickjs::Class::instance(ctx, JsElement::new(h)).unwrap())
+    pub fn get_parent_element<'js>(
+        &self,
+        ctx: rquickjs::Ctx<'js>,
+    ) -> Option<rquickjs::Class<'js, JsElement>> {
+        find_parent_element(&self.handle)
+            .map(|h| rquickjs::Class::instance(ctx, JsElement::new(h)).unwrap())
     }
 
     #[qjs(get, rename = "children")]
-    pub fn get_children<'js>(&self, ctx: rquickjs::Ctx<'js>) -> Vec<rquickjs::Class<'js, JsElement>> {
+    pub fn get_children<'js>(
+        &self,
+        ctx: rquickjs::Ctx<'js>,
+    ) -> Vec<rquickjs::Class<'js, JsElement>> {
         self.handle
             .children
             .borrow()
@@ -516,7 +608,10 @@ impl JsElement {
     }
 
     #[qjs(get, rename = "firstChild")]
-    pub fn get_first_child<'js>(&self, ctx: rquickjs::Ctx<'js>) -> Option<rquickjs::Class<'js, JsElement>> {
+    pub fn get_first_child<'js>(
+        &self,
+        ctx: rquickjs::Ctx<'js>,
+    ) -> Option<rquickjs::Class<'js, JsElement>> {
         self.handle
             .children
             .borrow()
@@ -526,19 +621,29 @@ impl JsElement {
     }
 
     #[qjs(get, rename = "nextSibling")]
-    pub fn get_next_sibling<'js>(&self, ctx: rquickjs::Ctx<'js>) -> Option<rquickjs::Class<'js, JsElement>> {
+    pub fn get_next_sibling<'js>(
+        &self,
+        ctx: rquickjs::Ctx<'js>,
+    ) -> Option<rquickjs::Class<'js, JsElement>> {
         find_next_element_sibling(&self.handle)
             .map(|h| rquickjs::Class::instance(ctx, JsElement::new(h)).unwrap())
     }
 
     #[qjs(get, rename = "previousSibling")]
-    pub fn get_previous_sibling<'js>(&self, ctx: rquickjs::Ctx<'js>) -> Option<rquickjs::Class<'js, JsElement>> {
+    pub fn get_previous_sibling<'js>(
+        &self,
+        ctx: rquickjs::Ctx<'js>,
+    ) -> Option<rquickjs::Class<'js, JsElement>> {
         find_prev_element_sibling(&self.handle)
             .map(|h| rquickjs::Class::instance(ctx, JsElement::new(h)).unwrap())
     }
 
     #[qjs(rename = "closest")]
-    pub fn closest<'js>(&self, ctx: rquickjs::Ctx<'js>, selector: String) -> Option<rquickjs::Class<'js, JsElement>> {
+    pub fn closest<'js>(
+        &self,
+        ctx: rquickjs::Ctx<'js>,
+        selector: String,
+    ) -> Option<rquickjs::Class<'js, JsElement>> {
         let sels = parse_selector_list(&selector).ok()?;
         if sels.is_empty() {
             return None;
@@ -572,17 +677,28 @@ impl JsElement {
     }
 
     #[qjs(rename = "getBoundingClientRect")]
-    pub fn get_bounding_client_rect<'js>(&self, ctx: rquickjs::Ctx<'js>) -> rquickjs::Result<Object<'js>> {
+    pub fn get_bounding_client_rect<'js>(
+        &self,
+        ctx: rquickjs::Ctx<'js>,
+    ) -> rquickjs::Result<Object<'js>> {
         let rect = Object::new(ctx)?;
-        rect.set("x", 0)?; rect.set("y", 0)?;
-        rect.set("top", 0)?; rect.set("right", 0)?;
-        rect.set("bottom", 0)?; rect.set("left", 0)?;
-        rect.set("width", 0)?; rect.set("height", 0)?;
+        rect.set("x", 0)?;
+        rect.set("y", 0)?;
+        rect.set("top", 0)?;
+        rect.set("right", 0)?;
+        rect.set("bottom", 0)?;
+        rect.set("left", 0)?;
+        rect.set("width", 0)?;
+        rect.set("height", 0)?;
         Ok(rect)
     }
 
     #[qjs(rename = "insertBefore")]
-    pub fn insert_before(&self, new_child: rquickjs::Class<'_, JsElement>, ref_child: Option<rquickjs::Class<'_, JsElement>>) {
+    pub fn insert_before(
+        &self,
+        new_child: rquickjs::Class<'_, JsElement>,
+        ref_child: Option<rquickjs::Class<'_, JsElement>>,
+    ) {
         let new_handle = &new_child.borrow().handle;
         let mut children = self.handle.children.borrow_mut();
         new_handle.parent.set(Some(Rc::downgrade(&self.handle)));
@@ -603,7 +719,8 @@ impl JsElement {
 
     #[qjs(get, rename = "style")]
     pub fn get_style<'js>(&self, ctx: rquickjs::Ctx<'js>) -> rquickjs::Result<Object<'js>> {
-        let el = rquickjs::Class::instance(ctx.clone(), JsElement::new(self.handle.clone())).unwrap();
+        let el =
+            rquickjs::Class::instance(ctx.clone(), JsElement::new(self.handle.clone())).unwrap();
         let js = r#"
 (function(el) {
     return new Proxy({}, {
@@ -638,7 +755,8 @@ impl JsElement {
 
     #[qjs(get, rename = "dataset")]
     pub fn get_dataset<'js>(&self, ctx: rquickjs::Ctx<'js>) -> rquickjs::Result<Object<'js>> {
-        let el = rquickjs::Class::instance(ctx.clone(), JsElement::new(self.handle.clone())).unwrap();
+        let el =
+            rquickjs::Class::instance(ctx.clone(), JsElement::new(self.handle.clone())).unwrap();
         let js = r#"
 (function(el) {
     var cache = {};
@@ -671,24 +789,32 @@ impl JsElement {
     }
 
     #[qjs(rename = "querySelector")]
-    pub fn query_selector_element<'js>(&self, ctx: rquickjs::Ctx<'js>, selector: String) -> Option<rquickjs::Class<'js, JsElement>> {
+    pub fn query_selector_element<'js>(
+        &self,
+        ctx: rquickjs::Ctx<'js>,
+        selector: String,
+    ) -> Option<rquickjs::Class<'js, JsElement>> {
         let sels = parse_selector_list(&selector).ok()?;
-        find_first_match(&self.handle, &sels).map(|h| {
-            rquickjs::Class::instance(ctx, JsElement::new(h)).unwrap()
-        })
+        find_first_match(&self.handle, &sels)
+            .map(|h| rquickjs::Class::instance(ctx, JsElement::new(h)).unwrap())
     }
 
     #[qjs(rename = "querySelectorAll")]
-    pub fn query_selector_all_element<'js>(&self, ctx: rquickjs::Ctx<'js>, selector: String) -> Vec<rquickjs::Class<'js, JsElement>> {
+    pub fn query_selector_all_element<'js>(
+        &self,
+        ctx: rquickjs::Ctx<'js>,
+        selector: String,
+    ) -> Vec<rquickjs::Class<'js, JsElement>> {
         let sels = match parse_selector_list(&selector) {
             Ok(s) => s,
             Err(_) => return Vec::new(),
         };
         let mut results = Vec::new();
         collect_matches(&self.handle, &sels, &mut results);
-        results.into_iter().map(|h| {
-            rquickjs::Class::instance(ctx.clone(), JsElement::new(h)).unwrap()
-        }).collect()
+        results
+            .into_iter()
+            .map(|h| rquickjs::Class::instance(ctx.clone(), JsElement::new(h)).unwrap())
+            .collect()
     }
 
     #[qjs(get, rename = "src")]
@@ -884,9 +1010,7 @@ fn parse_simple(input: &str) -> Result<(SimpleSelector, &str), String> {
 
     let ch = input.chars().next().unwrap();
     match ch {
-        '*' => {
-            Ok((SimpleSelector::Universal, &input[1..]))
-        }
+        '*' => Ok((SimpleSelector::Universal, &input[1..])),
         '.' => {
             let after_dot = &input[1..];
             let len = find_ident_len(after_dot);
@@ -894,7 +1018,10 @@ fn parse_simple(input: &str) -> Result<(SimpleSelector, &str), String> {
                 return Err("expected class name after '.'".into());
             }
             let class_name = &after_dot[..len];
-            Ok((SimpleSelector::Class(class_name.to_string()), &after_dot[len..]))
+            Ok((
+                SimpleSelector::Class(class_name.to_string()),
+                &after_dot[len..],
+            ))
         }
         '#' => {
             let after_hash = &input[1..];
@@ -905,17 +1032,13 @@ fn parse_simple(input: &str) -> Result<(SimpleSelector, &str), String> {
             let id = &after_hash[..len];
             Ok((SimpleSelector::Id(id.to_string()), &after_hash[len..]))
         }
-        '[' => {
-            parse_attr_selector(input)
-        }
+        '[' => parse_attr_selector(input),
         'a'..='z' | 'A'..='Z' | '-' | '_' => {
             let len = find_ident_len(input);
             let tag = &input[..len];
             Ok((SimpleSelector::Tag(tag.to_string()), &input[len..]))
         }
-        c => {
-            Err(format!("unexpected character '{}' in selector", c))
-        }
+        c => Err(format!("unexpected character '{}' in selector", c)),
     }
 }
 
@@ -944,9 +1067,15 @@ fn parse_attr_selector(input: &str) -> Result<(SimpleSelector, &str), String> {
         if !after_val.starts_with(']') {
             return Err("expected ']' to close attribute selector".into());
         }
-        return Ok((SimpleSelector::AttrIncludes { name, value }, &after_val[1..]));
+        return Ok((
+            SimpleSelector::AttrIncludes { name, value },
+            &after_val[1..],
+        ));
     } else {
-        return Err(format!("expected ']' or '=' in attribute selector, got '{}'", &rest[..rest.len().min(5)]));
+        return Err(format!(
+            "expected ']' or '=' in attribute selector, got '{}'",
+            &rest[..rest.len().min(5)]
+        ));
     }
 
     let (value, rest) = parse_attr_value(rest)?;
@@ -970,7 +1099,7 @@ fn parse_attr_value(input: &str) -> Result<(String, &str), String> {
             }
         }
         match end {
-            Some(i) => Ok((input[1..i].to_string(), &input[i+1..])),
+            Some(i) => Ok((input[1..i].to_string(), &input[i + 1..])),
             None => Err("unterminated string in attribute selector".into()),
         }
     } else {
@@ -1018,8 +1147,9 @@ fn matches_selector(el: &Handle, sel: &SelectorOrComplex) -> bool {
                     }
                     false
                 }
-                Combinator::Child => parent_handle(el)
-                    .is_some_and(|parent| matches_selector(&parent, &complex.left)),
+                Combinator::Child => {
+                    parent_handle(el).is_some_and(|parent| matches_selector(&parent, &complex.left))
+                }
             }
         }
     }
@@ -1043,37 +1173,29 @@ fn matches_simple(el: &Handle, simple: &SimpleSelector) -> bool {
             match simple {
                 SimpleSelector::Universal => true,
                 SimpleSelector::Tag(tag) => name.local.as_ref().eq_ignore_ascii_case(tag),
-                SimpleSelector::Class(class_name) => {
-                    attrs.iter().any(|a| {
-                        a.name.local.as_ref() == "class"
-                            && a.value
-                                .to_string()
-                                .split_whitespace()
-                                .any(|c| c == class_name.as_str())
-                    })
-                }
-                SimpleSelector::Id(id) => {
-                    attrs.iter().any(|a| {
-                        a.name.local.as_ref() == "id" && a.value.as_ref() == id.as_str()
-                    })
-                }
+                SimpleSelector::Class(class_name) => attrs.iter().any(|a| {
+                    a.name.local.as_ref() == "class"
+                        && a.value
+                            .to_string()
+                            .split_whitespace()
+                            .any(|c| c == class_name.as_str())
+                }),
+                SimpleSelector::Id(id) => attrs
+                    .iter()
+                    .any(|a| a.name.local.as_ref() == "id" && a.value.as_ref() == id.as_str()),
                 SimpleSelector::AttrExists(name) => {
                     attrs.iter().any(|a| a.name.local.as_ref() == name.as_str())
                 }
-                SimpleSelector::AttrEquals(name, value) => {
-                    attrs.iter().any(|a| {
-                        a.name.local.as_ref() == name.as_str() && a.value.as_ref() == value.as_str()
-                    })
-                }
-                SimpleSelector::AttrIncludes { name, value } => {
-                    attrs.iter().any(|a| {
-                        a.name.local.as_ref() == name.as_str()
-                            && a.value
-                                .to_string()
-                                .split_whitespace()
-                                .any(|v| v == value.as_str())
-                    })
-                }
+                SimpleSelector::AttrEquals(name, value) => attrs.iter().any(|a| {
+                    a.name.local.as_ref() == name.as_str() && a.value.as_ref() == value.as_str()
+                }),
+                SimpleSelector::AttrIncludes { name, value } => attrs.iter().any(|a| {
+                    a.name.local.as_ref() == name.as_str()
+                        && a.value
+                            .to_string()
+                            .split_whitespace()
+                            .any(|v| v == value.as_str())
+                }),
             }
         }
         _ => false,
@@ -1128,10 +1250,14 @@ fn create_element_node(tag_name: &str) -> Handle {
 fn serialize_children(handle: &Handle) -> String {
     let mut output = Vec::new();
     let document: SerializableHandle = handle.clone().into();
-    serialize(&mut output, &document, SerializeOpts {
-        traversal_scope: TraversalScope::ChildrenOnly(None),
-        ..Default::default()
-    })
+    serialize(
+        &mut output,
+        &document,
+        SerializeOpts {
+            traversal_scope: TraversalScope::ChildrenOnly(None),
+            ..Default::default()
+        },
+    )
     .unwrap();
     String::from_utf8(output).unwrap()
 }
@@ -1243,6 +1369,53 @@ fn set_attr(handle: &Handle, name: &str, value: &str) {
                 value: value.into(),
             });
         }
+    }
+}
+
+#[allow(dead_code)]
+fn collect_elements_by_tag(handle: &Handle, tag: &str) -> Vec<Handle> {
+    let mut result = Vec::new();
+    collect_elements_by_tag_recursive(handle, tag, &mut result);
+    result
+}
+
+#[allow(dead_code)]
+fn collect_elements_by_tag_recursive(handle: &Handle, tag: &str, result: &mut Vec<Handle>) {
+    if let NodeData::Element { name, .. } = &handle.data {
+        if name.local.as_ref() == tag {
+            result.push(handle.clone());
+        }
+    }
+    for child in handle.children.borrow().iter() {
+        collect_elements_by_tag_recursive(child, tag, result);
+    }
+}
+
+fn collect_script_text_from_children(handle: &Handle) -> Vec<String> {
+    let mut scripts = Vec::new();
+    for child in handle.children.borrow().iter() {
+        collect_script_text_recursive(child, &mut scripts);
+    }
+    scripts
+}
+
+fn collect_script_text_recursive(handle: &Handle, scripts: &mut Vec<String>) {
+    if let NodeData::Element { name, .. } = &handle.data {
+        if name.local == local_name!("script") {
+            let mut text = String::new();
+            for child in handle.children.borrow().iter() {
+                if let NodeData::Text { contents } = &child.data {
+                    text.push_str(&contents.borrow());
+                }
+            }
+            if !text.trim().is_empty() {
+                scripts.push(text);
+            }
+            return;
+        }
+    }
+    for child in handle.children.borrow().iter() {
+        collect_script_text_recursive(child, scripts);
     }
 }
 

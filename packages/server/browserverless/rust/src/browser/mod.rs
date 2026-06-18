@@ -1,16 +1,17 @@
 mod dom;
 mod js;
 
-use std::cell::RefCell;
-use std::rc::Rc;
 use anyhow::{Context, Result};
 use base64::Engine;
+use dom::drain_pending_scripts;
 use html5ever::serialize::{serialize, SerializeOpts, TraversalScope};
 use html5ever::tendril::TendrilSink;
-use html5ever::{parse_document, ParseOpts, local_name, QualName, ns};
-use markup5ever_rcdom::{RcDom, SerializableHandle, NodeData, Handle};
-use reqwest::Client;
+use html5ever::{local_name, ns, parse_document, ParseOpts, QualName};
 use js::JsRuntime;
+use markup5ever_rcdom::{Handle, NodeData, RcDom, SerializableHandle};
+use reqwest::Client;
+use std::cell::RefCell;
+use std::rc::Rc;
 
 pub struct Browser {
     client: Client,
@@ -39,7 +40,8 @@ impl Browser {
     }
 
     pub async fn fetch(&mut self, url: &str) -> Result<()> {
-        let response = self.client
+        let response = self
+            .client
             .get(url)
             .send()
             .await
@@ -49,7 +51,10 @@ impl Browser {
             anyhow::bail!("HTTP request failed with status: {}", response.status());
         }
 
-        let html = response.text().await.context("Failed to read response body")?;
+        let html = response
+            .text()
+            .await
+            .context("Failed to read response body")?;
 
         self.dom = parse_document(RcDom::default(), ParseOpts::default())
             .from_utf8()
@@ -58,9 +63,11 @@ impl Browser {
 
         self.js_runtime = Some(JsRuntime::new(self.dom.document.clone(), url).await?);
         self.execute_scripts().await?;
+        self.drain_and_execute_pending_scripts().await?;
         if let Some(js) = &self.js_runtime {
             js.idle().await?;
         }
+        self.drain_and_execute_pending_scripts().await?;
         self.inject_og_media();
 
         Ok(())
@@ -95,15 +102,28 @@ impl Browser {
         Ok(())
     }
 
+    async fn drain_and_execute_pending_scripts(&mut self) -> Result<()> {
+        let scripts = drain_pending_scripts();
+        for script in scripts {
+            if let Some(js_runtime) = &self.js_runtime {
+                if let Err(e) = js_runtime.execute(&script).await {
+                    eprintln!("Pending script error: {}", e);
+                }
+            }
+        }
+        Ok(())
+    }
+
     async fn fetch_external_script(&self, src: &str) -> Result<String> {
         if let Some(decoded) = decode_data_uri(src) {
             return Ok(decoded);
         }
-        let base = url::Url::parse(&self.page_url)
-            .context("Failed to parse page URL")?;
-        let absolute = base.join(src)
+        let base = url::Url::parse(&self.page_url).context("Failed to parse page URL")?;
+        let absolute = base
+            .join(src)
             .context(format!("Failed to resolve URL: {}", src))?;
-        let resp = self.client
+        let resp = self
+            .client
             .get(absolute.as_str())
             .send()
             .await
@@ -130,7 +150,11 @@ impl Browser {
 
                 if !inline.trim().is_empty() || src.is_some() {
                     scripts.push(ScriptContent {
-                        inline: if inline.trim().is_empty() { None } else { Some(inline) },
+                        inline: if inline.trim().is_empty() {
+                            None
+                        } else {
+                            Some(inline)
+                        },
                         external: src,
                     });
                 }
@@ -211,17 +235,24 @@ impl Browser {
     pub fn serialize(&self) -> Result<String> {
         let mut output = Vec::new();
         let document: SerializableHandle = self.dom.document.clone().into();
-        serialize(&mut output, &document, SerializeOpts {
-            traversal_scope: TraversalScope::ChildrenOnly(None),
-            ..Default::default()
-        })
+        serialize(
+            &mut output,
+            &document,
+            SerializeOpts {
+                traversal_scope: TraversalScope::ChildrenOnly(None),
+                ..Default::default()
+            },
+        )
         .context("Failed to serialize DOM")?;
 
         String::from_utf8(output).context("Failed to convert serialized HTML to string")
     }
 }
 
-fn get_attr_raw(attrs: &std::cell::RefCell<Vec<html5ever::Attribute>>, name: &str) -> Option<String> {
+fn get_attr_raw(
+    attrs: &std::cell::RefCell<Vec<html5ever::Attribute>>,
+    name: &str,
+) -> Option<String> {
     for attr in attrs.borrow().iter() {
         if attr.name.local.to_string() == name {
             return Some(attr.value.to_string());
