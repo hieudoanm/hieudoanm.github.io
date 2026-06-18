@@ -251,10 +251,7 @@ mod tests {
     #[test]
     fn test_version_from_ip_ipv6() {
         assert_eq!(version_from_ip("::1"), "IPv6");
-        assert_eq!(
-            version_from_ip("2001:db8::ff00:42:8329"),
-            "IPv6"
-        );
+        assert_eq!(version_from_ip("2001:db8::ff00:42:8329"), "IPv6");
     }
 
     #[test]

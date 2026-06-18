@@ -7,7 +7,9 @@ use super::{deal_card, new_shuffled_deck, Card};
 mod tests {
     use super::*;
 
-    fn c(rank: u8, suit: u8) -> Card { Card { rank, suit } }
+    fn c(rank: u8, suit: u8) -> Card {
+        Card { rank, suit }
+    }
 
     #[test]
     fn test_card_value_number() {
@@ -133,13 +135,19 @@ mod tests {
     #[test]
     fn test_run_dispatches_play() {
         let cmd = command();
-        assert!(cmd.clone().try_get_matches_from(vec!["blackjack", "play"]).is_ok());
+        assert!(cmd
+            .clone()
+            .try_get_matches_from(vec!["blackjack", "play"])
+            .is_ok());
     }
 
     #[test]
     fn test_run_dispatches_count() {
         let cmd = command();
-        assert!(cmd.clone().try_get_matches_from(vec!["blackjack", "count"]).is_ok());
+        assert!(cmd
+            .clone()
+            .try_get_matches_from(vec!["blackjack", "count"])
+            .is_ok());
     }
 
     #[test]

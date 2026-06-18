@@ -5,6 +5,7 @@ import com.github.ajalt.clikt.core.subcommands
 import com.github.ajalt.clikt.parameters.arguments.argument
 import com.github.ajalt.clikt.parameters.options.flag
 import com.github.ajalt.clikt.parameters.options.option
+import java.io.File
 import java.net.URLDecoder
 import java.net.URLEncoder
 import java.text.Normalizer
@@ -21,16 +22,52 @@ class ConvertCommand : CliktCommand(name = "convert", help = "Text conversion to
     override fun run() = Unit
 }
 
-class ConvertBase64 : CliktCommand(name = "base64", help = "Encode or decode base64") {
+class ConvertBase64 : CliktCommand(name = "base64", help = "Base64 encode/decode") {
+    init {
+        subcommands(ConvertBase64Encode(), ConvertBase64Decode())
+    }
+    override fun run() = Unit
+}
+
+class ConvertBase64Encode : CliktCommand(name = "encode", help = "Encode text/file to base64") {
     private val text by argument()
-    private val decode by option("--decode", "-d").flag()
+    private val file by option("--file", "-f", help = "File to encode (reads raw bytes → base64)")
+    private val output by option("--output", "-o", help = "Write output to file instead of stdout")
+
     override fun run() {
-        val result = if (decode) {
-            String(java.util.Base64.getDecoder().decode(text))
+        val input: ByteArray = if (file != null) {
+            File(file!!).readBytes()
         } else {
-            java.util.Base64.getEncoder().encodeToString(text.toByteArray())
+            text.toByteArray()
         }
-        echo(result)
+        val encoded = java.util.Base64.getEncoder().encodeToString(input)
+        if (output != null) {
+            File(output).writeText(encoded)
+        } else {
+            echo(encoded)
+        }
+    }
+}
+
+class ConvertBase64Decode : CliktCommand(name = "decode", help = "Decode base64 to text/file") {
+    private val text by argument()
+    private val file by option("--file", "-f", help = "File containing base64 to decode")
+    private val output by option("--output", "-o", help = "Write decoded output to file instead of stdout")
+
+    override fun run() {
+        val input: ByteArray = if (file != null) {
+            File(file!!).readBytes()
+        } else {
+            text.toByteArray()
+        }
+        val raw = String(input).trim().replace("\n", "")
+        val cleaned = if (raw.contains("base64,")) raw.substringAfter("base64,") else raw
+        val decoded = java.util.Base64.getDecoder().decode(cleaned)
+        if (output != null) {
+            File(output).writeBytes(decoded)
+        } else {
+            echo(String(decoded))
+        }
     }
 }
 

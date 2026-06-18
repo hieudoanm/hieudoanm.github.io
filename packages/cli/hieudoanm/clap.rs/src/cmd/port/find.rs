@@ -60,7 +60,11 @@ fn find_available_port(start: u16, end: u16) -> Option<u16> {
     find_available_port_with(start, end, |addr| !super::check_port_open(addr, 1))
 }
 
-fn find_available_port_with(start: u16, end: u16, available_fn: impl Fn(&str) -> bool) -> Option<u16> {
+fn find_available_port_with(
+    start: u16,
+    end: u16,
+    available_fn: impl Fn(&str) -> bool,
+) -> Option<u16> {
     for port in start..=end {
         let addr = format!("localhost:{port}");
         if available_fn(&addr) {

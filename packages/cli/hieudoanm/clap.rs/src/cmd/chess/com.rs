@@ -221,7 +221,6 @@ async fn titled() -> anyhow::Result<()> {
     println!("| {:<6} | {:>7} |", "Titled", "Players");
     println!("| {:<6} | {:>7} |", "-".repeat(6), "-".repeat(7));
 
-
     for title in service::TITLES {
         let url = format!("https://api.chess.com/pub/titled/{}", title);
         match reqwest::blocking::get(&url) {
@@ -249,9 +248,21 @@ mod tests {
 
     fn sample_rating() -> service::ChessRating {
         service::ChessRating {
-            last: service::ChessRatingLast { rating: 1500, date: 20240101, rd: 50 },
-            best: service::ChessRatingBest { rating: 1600, date: 20240101, game: None },
-            record: service::ChessRatingRecord { win: 100, draw: 20, loss: 80 },
+            last: service::ChessRatingLast {
+                rating: 1500,
+                date: 20240101,
+                rd: 50,
+            },
+            best: service::ChessRatingBest {
+                rating: 1600,
+                date: 20240101,
+                game: None,
+            },
+            record: service::ChessRatingRecord {
+                win: 100,
+                draw: 20,
+                loss: 80,
+            },
         }
     }
 

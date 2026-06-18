@@ -213,9 +213,12 @@ mod tests {
         let m = cmd
             .try_get_matches_from(vec![
                 "compound",
-                "--principal", "1000",
-                "--rate", "10",
-                "--years", "5",
+                "--principal",
+                "1000",
+                "--rate",
+                "10",
+                "--years",
+                "5",
             ])
             .unwrap();
         run(&m).await.unwrap();
@@ -227,9 +230,12 @@ mod tests {
         let m = cmd
             .try_get_matches_from(vec![
                 "compound",
-                "--principal", "1000",
-                "--rate", "10",
-                "--years", "5",
+                "--principal",
+                "1000",
+                "--rate",
+                "10",
+                "--years",
+                "5",
                 "--json",
             ])
             .unwrap();

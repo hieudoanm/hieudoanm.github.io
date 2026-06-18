@@ -16,13 +16,17 @@ mod tests {
 
     #[test]
     fn test_extract_title_present() {
-        let doc = scraper::Html::parse_document("<html><head><title>My Page</title></head><body></body></html>");
+        let doc = scraper::Html::parse_document(
+            "<html><head><title>My Page</title></head><body></body></html>",
+        );
         assert_eq!(extract_title(&doc), "My Page");
     }
 
     #[test]
     fn test_extract_title_trimmed() {
-        let doc = scraper::Html::parse_document("<html><head><title>  Spaced Title  </title></head></html>");
+        let doc = scraper::Html::parse_document(
+            "<html><head><title>  Spaced Title  </title></head></html>",
+        );
         assert_eq!(extract_title(&doc), "Spaced Title");
     }
 
@@ -100,7 +104,9 @@ mod tests {
 
     #[test]
     fn test_html_to_markdown_table() {
-        let md = html_to_markdown("<table><tr><th>Name</th><th>Age</th></tr><tr><td>Alice</td><td>30</td></tr></table>");
+        let md = html_to_markdown(
+            "<table><tr><th>Name</th><th>Age</th></tr><tr><td>Alice</td><td>30</td></tr></table>",
+        );
         assert!(md.contains("| Name | Age |"));
         assert!(md.contains("| --- | --- |"));
         assert!(md.contains("| Alice | 30 |"));
@@ -161,7 +167,9 @@ mod tests {
     #[test]
     fn test_convert_node_default_branch() {
         assert_eq!(
-            html_to_markdown("<div><main><article><section><b>content</b></section></article></main></div>"),
+            html_to_markdown(
+                "<div><main><article><section><b>content</b></section></article></main></div>"
+            ),
             "content"
         );
     }
@@ -173,7 +181,10 @@ mod tests {
 
     #[test]
     fn test_convert_node_a_empty_text() {
-        assert_eq!(html_to_markdown(r#"<a href="https://example.com"></a>"#), "");
+        assert_eq!(
+            html_to_markdown(r#"<a href="https://example.com"></a>"#),
+            ""
+        );
     }
 
     #[test]

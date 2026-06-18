@@ -260,7 +260,8 @@ mod tests {
 
     #[test]
     fn test_hmac_long_key_sha256() {
-        let long_key = b"this is a very long key that exceeds the block size of 64 bytes for sha256";
+        let long_key =
+            b"this is a very long key that exceeds the block size of 64 bytes for sha256";
         let result = hmac_sha256_sign(long_key, b"test data");
         assert_eq!(result.len(), 32);
     }

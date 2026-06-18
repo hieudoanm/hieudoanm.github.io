@@ -64,23 +64,14 @@ mod tests {
     fn test_format_duration_hours() {
         assert_eq!(format_duration(Duration::from_secs(3600)), "1h 0m");
         assert_eq!(format_duration(Duration::from_secs(3660)), "1h 1m");
-        assert_eq!(
-            format_duration(Duration::from_secs(86399)),
-            "23h 59m"
-        );
+        assert_eq!(format_duration(Duration::from_secs(86399)), "23h 59m");
     }
 
     #[test]
     fn test_format_duration_days() {
         assert_eq!(format_duration(Duration::from_secs(86400)), "1d 0m");
-        assert_eq!(
-            format_duration(Duration::from_secs(90000)),
-            "1d 1h 0m"
-        );
-        assert_eq!(
-            format_duration(Duration::from_secs(172800)),
-            "2d 0m"
-        );
+        assert_eq!(format_duration(Duration::from_secs(90000)), "1d 1h 0m");
+        assert_eq!(format_duration(Duration::from_secs(172800)), "2d 0m");
     }
 
     #[test]

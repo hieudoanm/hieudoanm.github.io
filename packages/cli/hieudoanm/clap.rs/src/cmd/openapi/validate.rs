@@ -87,7 +87,10 @@ mod tests {
     #[test]
     fn test_validate_paths_path_not_starting_with_slash() {
         let mut paths = serde_json::Map::new();
-        paths.insert("test".into(), serde_json::json!({"get": {"responses": {"200": {"description": "OK"}}}}));
+        paths.insert(
+            "test".into(),
+            serde_json::json!({"get": {"responses": {"200": {"description": "OK"}}}}),
+        );
         let issues = validate_paths(&paths);
         assert!(issues.iter().any(|i| i.contains("should start with /")));
     }
@@ -121,7 +124,11 @@ mod tests {
     async fn test_run_nonexistent_file() {
         let cmd = command();
         let m = cmd
-            .try_get_matches_from(vec!["validate", "--file", "/tmp/nonexistent_openapi_file_xyz.yaml"])
+            .try_get_matches_from(vec![
+                "validate",
+                "--file",
+                "/tmp/nonexistent_openapi_file_xyz.yaml",
+            ])
             .unwrap();
         let result = run(&m).await;
         assert!(result.is_err());
@@ -135,7 +142,8 @@ mod tests {
             "openapi": "3.0.0",
             "info": {"title": "Test", "version": "1.0.0"},
             "paths": {"/test": {"get": {"responses": {"200": {"description": "OK"}}}}}
-        })).unwrap();
+        }))
+        .unwrap();
         let mut f = std::fs::File::create(&dir).unwrap();
         f.write_all(yaml.as_bytes()).unwrap();
         let cmd = command();

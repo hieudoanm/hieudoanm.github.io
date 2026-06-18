@@ -20,10 +20,13 @@ async fn main() {
     env_logger::init();
     let args = Args::parse();
 
+    eprintln!("🚀 Browserverless starting...");
+    eprintln!("🌐 Fetching: {}", args.url);
+
     let mut browser = match Browser::new(&args.url) {
         Ok(b) => b,
         Err(e) => {
-            eprintln!("Internal error: {}", e);
+            eprintln!("💥 Internal error: {}", e);
             process::exit(5);
         }
     };
@@ -31,20 +34,23 @@ async fn main() {
     if let Err(e) = browser.fetch(&args.url, args.wait).await {
         let msg = e.to_string();
         if msg.contains("Timeout") {
-            eprintln!("Timeout: {}", msg);
+            eprintln!("⏰ Timeout: {}", msg);
             process::exit(4);
         }
-        eprintln!("Network error: {}", msg);
+        eprintln!("🌐 Network error: {}", msg);
         process::exit(2);
     }
+
+    eprintln!("✅ Page loaded");
 
     let output_html = match browser.serialize() {
         Ok(h) => h,
         Err(e) => {
-            eprintln!("Internal error: {}", e);
+            eprintln!("💥 Internal error: {}", e);
             process::exit(5);
         }
     };
 
+    eprintln!("📄 Output size: {} bytes", output_html.len());
     print!("{}", output_html);
 }

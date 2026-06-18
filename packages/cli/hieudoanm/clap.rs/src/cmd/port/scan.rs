@@ -68,7 +68,9 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
 }
 
 fn scan_ports(host: &str, ports: &[u16], timeout: u64) -> Vec<(u16, &'static str)> {
-    scan_ports_with_check(host, ports, timeout, |addr| super::check_port_open(addr, timeout))
+    scan_ports_with_check(host, ports, timeout, |addr| {
+        super::check_port_open(addr, timeout)
+    })
 }
 
 fn scan_ports_with_check(
@@ -109,7 +111,8 @@ mod tests {
 
     #[test]
     fn test_scan_ports_with_check_some_open() {
-        let ports = scan_ports_with_check("localhost", &[80, 8080, 443], 1, |addr| addr.contains("80"));
+        let ports =
+            scan_ports_with_check("localhost", &[80, 8080, 443], 1, |addr| addr.contains("80"));
         assert_eq!(ports.len(), 2);
         assert_eq!(ports[0], (80, "HTTP"));
         assert_eq!(ports[1], (8080, "HTTP-Alt"));

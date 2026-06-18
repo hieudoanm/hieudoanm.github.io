@@ -51,33 +51,69 @@ mod tests {
 
     #[test]
     fn test_is_free_zero() {
-        let p = Pricing { prompt: "0".into(), completion: "0".into(), request: "0".into() };
+        let p = Pricing {
+            prompt: "0".into(),
+            completion: "0".into(),
+            request: "0".into(),
+        };
         assert!(is_free(&p));
     }
 
     #[test]
     fn test_is_free_empty() {
-        let p = Pricing { prompt: "".into(), completion: "".into(), request: "0".into() };
+        let p = Pricing {
+            prompt: "".into(),
+            completion: "".into(),
+            request: "0".into(),
+        };
         assert!(is_free(&p));
     }
 
     #[test]
     fn test_is_free_not_free_prompt() {
-        let p = Pricing { prompt: "0.0001".into(), completion: "0".into(), request: "0".into() };
+        let p = Pricing {
+            prompt: "0.0001".into(),
+            completion: "0".into(),
+            request: "0".into(),
+        };
         assert!(!is_free(&p));
     }
 
     #[test]
     fn test_is_free_not_free_completion() {
-        let p = Pricing { prompt: "0".into(), completion: "0.0002".into(), request: "0".into() };
+        let p = Pricing {
+            prompt: "0".into(),
+            completion: "0.0002".into(),
+            request: "0".into(),
+        };
         assert!(!is_free(&p));
     }
 
     #[test]
     fn test_resolve_model_exact_match() {
         let models = vec![
-            Model { id: "openai/gpt-4".into(), name: "GPT-4".into(), description: "".into(), context_length: 8192, pricing: Pricing { prompt: "0".into(), completion: "0".into(), request: "0".into() } },
-            Model { id: "openai/gpt-3.5-turbo".into(), name: "GPT-3.5 Turbo".into(), description: "".into(), context_length: 4096, pricing: Pricing { prompt: "0".into(), completion: "0".into(), request: "0".into() } },
+            Model {
+                id: "openai/gpt-4".into(),
+                name: "GPT-4".into(),
+                description: "".into(),
+                context_length: 8192,
+                pricing: Pricing {
+                    prompt: "0".into(),
+                    completion: "0".into(),
+                    request: "0".into(),
+                },
+            },
+            Model {
+                id: "openai/gpt-3.5-turbo".into(),
+                name: "GPT-3.5 Turbo".into(),
+                description: "".into(),
+                context_length: 4096,
+                pricing: Pricing {
+                    prompt: "0".into(),
+                    completion: "0".into(),
+                    request: "0".into(),
+                },
+            },
         ];
         let result = resolve_model("openai/gpt-4", &models);
         assert!(result.is_some());
@@ -86,18 +122,34 @@ mod tests {
 
     #[test]
     fn test_resolve_model_exact_match_case_insensitive() {
-        let models = vec![
-            Model { id: "OpenAI/GPT-4".into(), name: "GPT-4".into(), description: "".into(), context_length: 8192, pricing: Pricing { prompt: "0".into(), completion: "0".into(), request: "0".into() } },
-        ];
+        let models = vec![Model {
+            id: "OpenAI/GPT-4".into(),
+            name: "GPT-4".into(),
+            description: "".into(),
+            context_length: 8192,
+            pricing: Pricing {
+                prompt: "0".into(),
+                completion: "0".into(),
+                request: "0".into(),
+            },
+        }];
         let result = resolve_model("openai/gpt-4", &models);
         assert!(result.is_some());
     }
 
     #[test]
     fn test_resolve_model_with_free_suffix() {
-        let models = vec![
-            Model { id: "openai/gpt-4:free".into(), name: "GPT-4 Free".into(), description: "".into(), context_length: 8192, pricing: Pricing { prompt: "0".into(), completion: "0".into(), request: "0".into() } },
-        ];
+        let models = vec![Model {
+            id: "openai/gpt-4:free".into(),
+            name: "GPT-4 Free".into(),
+            description: "".into(),
+            context_length: 8192,
+            pricing: Pricing {
+                prompt: "0".into(),
+                completion: "0".into(),
+                request: "0".into(),
+            },
+        }];
         let result = resolve_model("openai/gpt-4", &models);
         assert!(result.is_some());
         assert_eq!(result.unwrap().id, "openai/gpt-4:free");

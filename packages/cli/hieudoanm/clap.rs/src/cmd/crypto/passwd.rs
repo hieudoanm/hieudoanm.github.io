@@ -111,10 +111,7 @@ mod tests {
     fn test_generate_pronounceable_different() {
         let a = generate_pronounceable(16);
         let b = generate_pronounceable(16);
-        assert_ne!(
-            a, b,
-            "two calls should produce different passwords"
-        );
+        assert_ne!(a, b, "two calls should produce different passwords");
     }
 }
 

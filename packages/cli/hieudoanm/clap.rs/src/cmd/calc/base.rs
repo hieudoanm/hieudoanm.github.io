@@ -174,9 +174,18 @@ mod tests {
     #[test]
     fn test_bases_map() {
         let bases: HashMap<&str, u32> = [
-            ("bin", 2), ("binary", 2), ("oct", 8), ("octal", 8),
-            ("dec", 10), ("decimal", 10), ("hex", 16), ("hexadecimal", 16),
-        ].iter().cloned().collect();
+            ("bin", 2),
+            ("binary", 2),
+            ("oct", 8),
+            ("octal", 8),
+            ("dec", 10),
+            ("decimal", 10),
+            ("hex", 16),
+            ("hexadecimal", 16),
+        ]
+        .iter()
+        .cloned()
+        .collect();
 
         assert_eq!(*bases.get("bin").unwrap(), 2u32);
         assert_eq!(*bases.get("hexadecimal").unwrap(), 16u32);

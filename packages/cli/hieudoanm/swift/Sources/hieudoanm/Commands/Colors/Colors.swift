@@ -95,7 +95,7 @@ struct ColorsPalette: ParsableCommand {
         defer { try? FileManager.default.removeItem(atPath: samplesPath) }
         let cols = min(pixelWidth, 100)
         let rows = min(pixelHeight, Int(ceil(Double(sampleSize) / Double(cols))))
-        try runSips(args: ["--resampleWidth", "\(cols)", "--resampleHeight", "\(rows)", "--out", samplesPath, path])
+        _ = try runSips(args: ["--resampleWidth", "\(cols)", "--resampleHeight", "\(rows)", "--out", samplesPath, path])
         guard let scaledData = try? Data(contentsOf: URL(fileURLWithPath: samplesPath)),
               let imageSource = CGImageSourceCreateWithData(scaledData as CFData, nil),
               let cgImage = CGImageSourceCreateImageAtIndex(imageSource, 0, nil) else {
@@ -119,7 +119,7 @@ struct ColorsPalette: ParsableCommand {
         }
         let sorted = colorFreq.sorted { $0.value > $1.value }.prefix(count)
         print("Dominant colors:")
-        for (color, freq) in sorted {
+        for (color, _) in sorted {
             let block = ANSIColor.hex(color.trimmingCharacters(in: CharacterSet(charactersIn: "#")))
             print("\(block) \(color)")
         }

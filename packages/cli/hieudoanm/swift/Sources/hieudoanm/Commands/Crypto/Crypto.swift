@@ -325,7 +325,7 @@ struct EncryptCommand: ParsableCommand {
         let keyData = try parseKey(key)
 
         let iv = try randomBytes(16)
-        var encrypted = try aes256cbcEncrypt(data: fileData, key: keyData, iv: iv)
+        let encrypted = try aes256cbcEncrypt(data: fileData, key: keyData, iv: iv)
         var result = Data()
         result.append(iv)
         result.append(encrypted)
@@ -365,7 +365,7 @@ struct DecryptCommand: ParsableCommand {
 
 private func parseKey(_ hex: String) throws -> Data {
     let hex = hex.replacingOccurrences(of: " ", with: "")
-    guard hex.count == 64, let data = hex.data(using: .utf8) else {
+    guard hex.count == 64, hex.data(using: .utf8) != nil else {
         throw CryptoError.invalidKey
     }
     var bytes = [UInt8]()
@@ -441,7 +441,7 @@ private func generateTOTP(secret: Data, counter: UInt64, digits: Int) throws -> 
     #if canImport(CryptoKit)
     let key = SymmetricKey(data: secret)
     let code = HMAC<Insecure.SHA1>.authenticationCode(for: counterData, using: key)
-    var codeBytes = [UInt8](code)
+    let codeBytes = [UInt8](code)
 
     let offset = Int(codeBytes[codeBytes.count - 1] & 0x0f)
     let truncated = UInt32(codeBytes[offset] & 0x7f) << 24

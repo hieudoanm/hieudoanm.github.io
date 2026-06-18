@@ -147,7 +147,10 @@ mod tests {
             indicator: "none".to_string(),
             description: "All Systems Operational".to_string(),
         };
-        assert_eq!(describe_from_response("GitHub", &status), "GitHub - Healthy");
+        assert_eq!(
+            describe_from_response("GitHub", &status),
+            "GitHub - Healthy"
+        );
     }
 
     #[test]

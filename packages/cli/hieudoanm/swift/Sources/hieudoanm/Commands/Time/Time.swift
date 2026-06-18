@@ -285,7 +285,7 @@ struct TimeStopwatch: ParsableCommand {
 
     mutating func run() {
         print("Stopwatch started. Press Ctrl+C to stop.")
-        var start = Date()
+        let start = Date()
         var last = start
         while true {
             let now = Date()

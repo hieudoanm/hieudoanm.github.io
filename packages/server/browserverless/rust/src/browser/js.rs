@@ -69,7 +69,7 @@ fn jsval_from_string(s: &str) -> JsValue {
 fn console_log(_this: &JsValue, args: &[JsValue], context: &mut Context) -> JsResult<JsValue> {
     for arg in args {
         let s = js_to_string(arg, context);
-        println!("{}", s);
+        eprintln!("  💬 {}", s);
     }
     Ok(JsValue::undefined())
 }
@@ -497,6 +497,7 @@ impl JsRuntime {
     pub fn idle(&mut self, wait_ms: u64) -> Result<(), anyhow::Error> {
         let deadline = std::time::Instant::now() + Duration::from_secs(60);
         let mut last_activity = std::time::Instant::now();
+        let mut idle_cycles = 0;
 
         loop {
             let prev_timeouts = ACTIVE_TIMEOUTS.load(Ordering::Relaxed);
@@ -513,19 +514,29 @@ impl JsRuntime {
             }
 
             if timeouts == 0 && fetches == 0 {
-                if last_activity.elapsed() >= Duration::from_millis(500) {
+                if last_activity.elapsed() >= Duration::from_millis(5000) {
+                    eprint!("\r  ✅ Idle ({:.1}s)                               ", last_activity.elapsed().as_secs_f32());
                     break;
                 }
+                idle_cycles += 1;
+                let dots = (idle_cycles / 10) % 4;
+                eprint!("\r  🌀 Idle waiting{}{} timeouts={} fetches={}", ".".repeat(dots), " ".repeat(3 - dots), timeouts, fetches);
+            } else {
+                idle_cycles = 0;
+                eprint!("\r  ⏳ Busy... timeouts={} fetches={}", timeouts, fetches);
             }
 
             if std::time::Instant::now() >= deadline {
+                eprintln!("\n  ⏰ Idle deadline reached (60s)");
                 break;
             }
 
             std::thread::sleep(Duration::from_millis(50));
         }
+        eprintln!();
 
         if wait_ms > 0 {
+            eprintln!("  ⏰ Waiting extra {}ms for lazy content...", wait_ms);
             std::thread::sleep(Duration::from_millis(wait_ms));
         }
 
@@ -578,32 +589,8 @@ impl JsRuntime {
 // ---------------------------------------------------------------------------
 
 fn inject_polyfills(context: &mut Context) {
+    eprintln!("  🔧 Injecting polyfills...");
     let polyfill = r#"
-function __processServerJS() {
-    var scripts = document.querySelectorAll('script[type="application/json"][data-sjs]');
-    for (var i = 0; i < scripts.length; i++) {
-        try {
-            var data = JSON.parse(scripts[i].textContent);
-            if (data && data.require && Array.isArray(data.require)) {
-                for (var j = 0; j < data.require.length; j++) {
-                    var entry = data.require[j];
-                    if (Array.isArray(entry) && entry.length >= 2) {
-                        var modName = entry[0];
-                        var method = entry[1];
-                        var ctx = entry[2];
-                        var args = entry[3] || [];
-                        var mod = globalThis[modName];
-                        try {
-                            if (mod && typeof mod[method] === 'function') {
-                                mod[method].apply(ctx, args);
-                            }
-                        } catch(e) {}
-                    }
-                }
-            }
-        } catch(e) {}
-    }
-}
 if (typeof globalThis.self === 'undefined') {
     globalThis.self = globalThis;
 }
@@ -631,6 +618,39 @@ if (typeof globalThis.Event === 'undefined') {
         var ev = new globalThis.Event(type, opts);
         ev.detail = opts.detail || null;
         return ev;
+    };
+}
+if (typeof globalThis.HTMLElement === 'undefined') {
+    globalThis.HTMLElement = function() {};
+}
+// HTMLScriptElement needed by Instagram's ServerJSPayloadListener
+if (typeof globalThis.HTMLScriptElement === 'undefined') {
+    globalThis.HTMLScriptElement = function() {};
+    globalThis.HTMLScriptElement.prototype = Object.create(globalThis.HTMLElement.prototype);
+}
+if (typeof Symbol !== 'undefined' && Symbol.hasInstance) {
+    globalThis.HTMLScriptElement[Symbol.hasInstance] = function(instance) {
+        return instance && instance.tagName === 'SCRIPT';
+    };
+}
+// HTMLStyleElement needed by Comet
+if (typeof globalThis.HTMLStyleElement === 'undefined') {
+    globalThis.HTMLStyleElement = function() {};
+    globalThis.HTMLStyleElement.prototype = Object.create(globalThis.HTMLElement.prototype);
+}
+if (typeof Symbol !== 'undefined' && Symbol.hasInstance) {
+    globalThis.HTMLStyleElement[Symbol.hasInstance] = function(instance) {
+        return instance && instance.tagName === 'STYLE';
+    };
+}
+// HTMLLinkElement needed for preload detection
+if (typeof globalThis.HTMLLinkElement === 'undefined') {
+    globalThis.HTMLLinkElement = function() {};
+    globalThis.HTMLLinkElement.prototype = Object.create(globalThis.HTMLElement.prototype);
+}
+if (typeof Symbol !== 'undefined' && Symbol.hasInstance) {
+    globalThis.HTMLLinkElement[Symbol.hasInstance] = function(instance) {
+        return instance && instance.tagName === 'LINK';
     };
 }
 if (typeof globalThis.AbortController === 'undefined') {
@@ -665,6 +685,41 @@ if (_nativeFetch && !globalThis._fetchWrapped) {
         });
     };
 }
+// Make querySelectorAll results iterable (for...of support) and fix prototype chain for instanceof checks
+if (typeof document !== 'undefined' && document.querySelectorAll) {
+    var _origQSA = document.querySelectorAll;
+    document.querySelectorAll = function(sel) {
+        var result = _origQSA.call(this, sel);
+        if (result) {
+            // Patch prototype chain for instanceof checks
+            for (var pi = 0; pi < result.length; pi++) {
+                var pel = result[pi];
+                if (pel && pel.tagName) {
+                    var ctor = globalThis['HTML' + pel.tagName.charAt(0) + pel.tagName.slice(1).toLowerCase() + 'Element'];
+                    if (ctor && !(pel instanceof ctor)) {
+                        try { pel.__proto__ = ctor.prototype; } catch(e) {}
+                    }
+                }
+            }
+            // Add Symbol.iterator if missing
+            if (typeof result[Symbol.iterator] === 'undefined') {
+                result[Symbol.iterator] = function() {
+                    var items = this;
+                    var idx = 0;
+                    return {
+                        next: function() {
+                            if (idx < items.length) {
+                                return { value: items[idx++], done: false };
+                            }
+                            return { value: undefined, done: true };
+                        }
+                    };
+                };
+            }
+        }
+        return result;
+    };
+}
 "#;
     let _ = context.eval(Source::from_bytes(polyfill.as_bytes()));
 }
@@ -673,55 +728,33 @@ if (_nativeFetch && !globalThis._fetchWrapped) {
 /// processes __rl_stub queue, and fires DOMContentLoaded.
 pub fn process_instagram_modules(context: &mut Context) {
     let post_script = r#"
-if (typeof globalThis.__rl_stub === 'undefined') {
-    globalThis.__rl_stub = [];
-}
-// Create ServerJSPayloadListener module
-if (typeof globalThis.ServerJSPayloadListener === 'undefined') {
-    globalThis.ServerJSPayloadListener = {
-        process: function() {
-            var scripts = document.querySelectorAll('script[type="application/json"][data-sjs]');
-            for (var i = 0; i < scripts.length; i++) {
-                try {
-                    var data = JSON.parse(scripts[i].textContent);
-                    if (data && data.require && Array.isArray(data.require)) {
-                        for (var j = 0; j < data.require.length; j++) {
-                            var entry = data.require[j];
-                            if (Array.isArray(entry) && entry.length >= 2) {
-                                var modName = entry[0];
-                                var method = entry[1];
-                                var ctx = entry[2];
-                                var args = entry[3] || [];
-                                var mod = globalThis[modName];
-                                try {
-                                    if (mod && typeof mod[method] === 'function') {
-                                        mod[method].apply(ctx, args);
-                                    }
-                                } catch(e) { console.log('ServerJSPayloadListener error:', e); }
-                            }
+// Process data-sjs scripts using window.require (Bootloader module registry)
+if (typeof window.require === 'function') {
+    var scripts = document.querySelectorAll('script[type="application/json"][data-sjs]:not([data-processed])');
+    for (var si = 0; si < scripts.length; si++) {
+        var ms = scripts[si];
+        try {
+            var raw = ms.textContent || '';
+            var data = JSON.parse(raw);
+            if (data && data.require && Array.isArray(data.require)) {
+                for (var rj = 0; rj < data.require.length; rj++) {
+                    var entry = data.require[rj];
+                    if (Array.isArray(entry) && entry.length >= 2) {
+                        var modName = entry[0];
+                        var method = entry[1];
+                        var args = entry.slice(3);
+                        var mod = null;
+                        try { mod = window.require(modName); } catch(e) {}
+                        if (mod && typeof method === 'string' && typeof mod[method] === 'function') {
+                            mod[method].apply(mod, args);
+                        } else if (mod && method === null && typeof mod === 'function') {
+                            mod.apply(null, args.length > 0 ? args[0] : []);
                         }
                     }
-                    scripts[i].remove();
-                } catch(e) {}
+                }
             }
-        }
-    };
-}
-// Process __rl_stub queue (Instagram's requireLazy calls)
-if (Array.isArray(globalThis.__rl_stub)) {
-    while (globalThis.__rl_stub.length > 0) {
-        var entry = globalThis.__rl_stub.shift();
-        if (Array.isArray(entry) && entry.length >= 2) {
-            var modules = entry[0];
-            var callback = entry[1];
-            var resolved = modules.map(function(name) {
-                if (typeof globalThis[name] !== 'undefined') return globalThis[name];
-                return {};
-            });
-            try {
-                callback.apply(null, resolved);
-            } catch(e) { console.log('rl_stub callback error:', e); }
-        }
+            ms.setAttribute('data-processed', '');
+        } catch(e) {}
     }
 }
 // Fire DOMContentLoaded
@@ -729,6 +762,23 @@ try {
     var event = new Event('DOMContentLoaded');
     document.dispatchEvent(event);
 } catch(e) {}
+// Reveal SSR content: remove content-visibility:hidden from mount divs
+try {
+    var allDivs = document.querySelectorAll('div');
+    for (var di = 0; di < allDivs.length; di++) {
+        var d = allDivs[di];
+        var id = d.id || '';
+        if (id.indexOf('mount_0') === 0 || id.indexOf('ssr') === 0) {
+            var style = d.getAttribute('style') || '';
+            if (style.indexOf('content-visibility:hidden') >= 0 || style.indexOf('visibility:hidden') >= 0) {
+                d.setAttribute('style', style.replace(/content-visibility:\s*hidden\s*;?\s*/g, '').replace(/visibility:\s*hidden\s*;?\s*/g, ''));
+            }
+        }
+    }
+} catch(e) {}
 "#;
-    let _ = context.eval(Source::from_bytes(post_script.as_bytes()));
+    let result = context.eval(Source::from_bytes(post_script.as_bytes()));
+    if let Err(e) = result {
+        eprintln!("[process_instagram_modules] Error: {}", e);
+    }
 }

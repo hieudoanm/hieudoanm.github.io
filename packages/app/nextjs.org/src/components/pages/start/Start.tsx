@@ -89,6 +89,14 @@ const Game2048Modal = dynamic(
   { ssr: false }
 );
 
+const Base64Modal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/images/Base64Modal').then(
+      (mod) => mod.Base64Modal
+    ),
+  { ssr: false }
+);
+
 const BlackjackModal = dynamic(
   () =>
     import('@hieudoanm.github.io/components/pages/start/modals/casino/BlackjackModal').then(
@@ -605,6 +613,7 @@ const ResumeTimelineModal = dynamic(
 /* ------------------------------------------------------------------ */
 
 type ModalId =
+  | 'base64'
   | 'blackjack'
   | 'braille'
   | 'breaking-bad'
@@ -688,6 +697,7 @@ const MODAL_MAP: Record<
   FC<{ onClose: () => void }> | ComponentType<{ onClose: () => void }>
 > = {
   game2048: Game2048Modal,
+  base64: Base64Modal,
   blackjack: BlackjackModal,
   braille: BrailleModal,
   'breaking-bad': BreakingBadModal,
@@ -1209,6 +1219,13 @@ const makeTools = (
     },
   ],
   images: [
+    {
+      label: 'Base64',
+      description: 'Decode/Encode',
+      emoji: '🔐',
+      color: '#3b82f6',
+      onClick: open('base64'),
+    },
     {
       label: 'Breaking Bad',
       description: 'Element',

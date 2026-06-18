@@ -5,8 +5,7 @@ pub fn command() -> clap::Command {
 }
 
 pub fn calculate_elo(my_rating: i32, opponent_rating: i32, score: f64, k_factor: i32) -> f64 {
-    let expected =
-        1.0 / (1.0 + 10.0_f64.powf((opponent_rating - my_rating) as f64 / 400.0));
+    let expected = 1.0 / (1.0 + 10.0_f64.powf((opponent_rating - my_rating) as f64 / 400.0));
     my_rating as f64 + k_factor as f64 * (score - expected)
 }
 

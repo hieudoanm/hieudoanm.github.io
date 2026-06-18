@@ -134,7 +134,11 @@ mod tests {
         CrossRefData {
             status: "ok".into(),
             message: Message {
-                author: if authors.is_empty() { None } else { Some(authors) },
+                author: if authors.is_empty() {
+                    None
+                } else {
+                    Some(authors)
+                },
                 title: Some(vec![title.into()]),
                 container_title: Some(vec!["Test Journal".into()]),
                 volume: Some("10".into()),
@@ -150,8 +154,12 @@ mod tests {
     #[test]
     fn test_format_citation_one_author() {
         let data = make_data(
-            vec![Author { given: Some("John".into()), family: Some("Doe".into()) }],
-            "A Great Paper", 2023,
+            vec![Author {
+                given: Some("John".into()),
+                family: Some("Doe".into()),
+            }],
+            "A Great Paper",
+            2023,
         );
         assert_eq!(format_citation(&data), "(Doe, 2023)");
     }
@@ -160,10 +168,17 @@ mod tests {
     fn test_format_citation_two_authors() {
         let data = make_data(
             vec![
-                Author { given: Some("John".into()), family: Some("Doe".into()) },
-                Author { given: Some("Jane".into()), family: Some("Smith".into()) },
+                Author {
+                    given: Some("John".into()),
+                    family: Some("Doe".into()),
+                },
+                Author {
+                    given: Some("Jane".into()),
+                    family: Some("Smith".into()),
+                },
             ],
-            "A Great Paper", 2023,
+            "A Great Paper",
+            2023,
         );
         assert_eq!(format_citation(&data), "(Doe & Smith, 2023)");
     }
@@ -172,11 +187,21 @@ mod tests {
     fn test_format_citation_three_authors() {
         let data = make_data(
             vec![
-                Author { given: Some("A".into()), family: Some("Alpha".into()) },
-                Author { given: Some("B".into()), family: Some("Beta".into()) },
-                Author { given: Some("C".into()), family: Some("Gamma".into()) },
+                Author {
+                    given: Some("A".into()),
+                    family: Some("Alpha".into()),
+                },
+                Author {
+                    given: Some("B".into()),
+                    family: Some("Beta".into()),
+                },
+                Author {
+                    given: Some("C".into()),
+                    family: Some("Gamma".into()),
+                },
             ],
-            "A Great Paper", 2023,
+            "A Great Paper",
+            2023,
         );
         assert_eq!(format_citation(&data), "(Alpha et al., 2023)");
     }
@@ -192,7 +217,10 @@ mod tests {
         let data = CrossRefData {
             status: "ok".into(),
             message: Message {
-                author: Some(vec![Author { given: Some("John".into()), family: Some("Doe".into()) }]),
+                author: Some(vec![Author {
+                    given: Some("John".into()),
+                    family: Some("Doe".into()),
+                }]),
                 title: Some(vec!["Paper".into()]),
                 container_title: None,
                 volume: None,
@@ -207,8 +235,12 @@ mod tests {
     #[test]
     fn test_print_citation_does_not_panic() {
         let data = make_data(
-            vec![Author { given: Some("John".into()), family: Some("Doe".into()) }],
-            "Paper", 2023,
+            vec![Author {
+                given: Some("John".into()),
+                family: Some("Doe".into()),
+            }],
+            "Paper",
+            2023,
         );
         print_citation(&data);
     }
@@ -216,8 +248,12 @@ mod tests {
     #[test]
     fn test_print_reference_does_not_panic() {
         let data = make_data(
-            vec![Author { given: Some("John".into()), family: Some("Doe".into()) }],
-            "Paper", 2023,
+            vec![Author {
+                given: Some("John".into()),
+                family: Some("Doe".into()),
+            }],
+            "Paper",
+            2023,
         );
         print_reference(&data);
     }
@@ -226,11 +262,21 @@ mod tests {
     fn test_format_reference_three_authors() {
         let data = make_data(
             vec![
-                Author { given: Some("A".into()), family: Some("Alpha".into()) },
-                Author { given: Some("B".into()), family: Some("Beta".into()) },
-                Author { given: Some("C".into()), family: Some("Gamma".into()) },
+                Author {
+                    given: Some("A".into()),
+                    family: Some("Alpha".into()),
+                },
+                Author {
+                    given: Some("B".into()),
+                    family: Some("Beta".into()),
+                },
+                Author {
+                    given: Some("C".into()),
+                    family: Some("Gamma".into()),
+                },
             ],
-            "Multi Author Study", 2024,
+            "Multi Author Study",
+            2024,
         );
         let ref_text = format_reference(&data);
         assert!(ref_text.contains("Alpha, A."));
@@ -242,10 +288,17 @@ mod tests {
     fn test_format_reference_basic() {
         let data = make_data(
             vec![
-                Author { given: Some("John".into()), family: Some("Doe".into()) },
-                Author { given: Some("Jane".into()), family: Some("Smith".into()) },
+                Author {
+                    given: Some("John".into()),
+                    family: Some("Doe".into()),
+                },
+                Author {
+                    given: Some("Jane".into()),
+                    family: Some("Smith".into()),
+                },
             ],
-            "An Important Study", 2022,
+            "An Important Study",
+            2022,
         );
         let ref_text = format_reference(&data);
         assert!(ref_text.contains("Doe, J."));
@@ -258,8 +311,12 @@ mod tests {
     #[test]
     fn test_format_reference_one_author() {
         let data = make_data(
-            vec![Author { given: Some("John".into()), family: Some("Doe".into()) }],
-            "Single Author Paper", 2023,
+            vec![Author {
+                given: Some("John".into()),
+                family: Some("Doe".into()),
+            }],
+            "Single Author Paper",
+            2023,
         );
         let ref_text = format_reference(&data);
         assert!(ref_text.starts_with("Doe, J."));
@@ -278,7 +335,10 @@ mod tests {
         let data = CrossRefData {
             status: "ok".into(),
             message: Message {
-                author: Some(vec![Author { given: None, family: Some("Doe".into()) }]),
+                author: Some(vec![Author {
+                    given: None,
+                    family: Some("Doe".into()),
+                }]),
                 title: Some(vec!["Paper".into()]),
                 container_title: None,
                 volume: None,

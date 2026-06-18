@@ -17,9 +17,7 @@ pub fn wheel_number_at(index: usize) -> u32 {
 pub fn wheel_color(n: u32) -> &'static str {
     match n {
         0 => "Green",
-        1 | 3 | 5 | 7 | 9 | 12 | 14 | 16 | 18 | 19 | 21 | 23 | 25 | 27 | 30 | 32 | 34 | 36 => {
-            "Red"
-        }
+        1 | 3 | 5 | 7 | 9 | 12 | 14 | 16 | 18 | 19 | 21 | 23 | 25 | 27 | 30 | 32 | 34 | 36 => "Red",
         _ => "Black",
     }
 }

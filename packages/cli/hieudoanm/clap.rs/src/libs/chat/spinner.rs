@@ -43,7 +43,9 @@ mod tests {
 
     #[test]
     fn test_spinner_tick_wraps_around() {
-        let mut s = Spinner { frame: FRAMES.len() - 1 };
+        let mut s = Spinner {
+            frame: FRAMES.len() - 1,
+        };
         s.tick();
         assert_eq!(s.frame, 0);
     }

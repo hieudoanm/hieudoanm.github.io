@@ -161,7 +161,10 @@ mod tests {
     #[test]
     fn test_country_code_extracts_code() {
         assert_eq!(country_code("https://api.chess.com/pub/country/US"), "US");
-        assert_eq!(country_code("https://api.chess.com/pub/country/VIETNAM"), "VIETNAM");
+        assert_eq!(
+            country_code("https://api.chess.com/pub/country/VIETNAM"),
+            "VIETNAM"
+        );
     }
 
     #[test]

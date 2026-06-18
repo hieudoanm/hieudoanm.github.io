@@ -183,19 +183,160 @@ where
 
 fn matches_selector(handle: &Handle, selector: &str) -> bool {
     if let NodeData::Element { name, attrs, .. } = &handle.data {
-        if !selector.starts_with('.') && !selector.starts_with('#') {
-            return name.local.to_string() == selector.to_lowercase();
+        let mut parts = selector.trim();
+        let mut tag_match = true;
+        let mut attr_checks: Vec<(String, Option<String>)> = Vec::new();
+
+        // Parse tag name (alphanumeric before [ . # :)
+        if parts.starts_with(|c: char| c.is_ascii_alphabetic()) {
+            let mut tag = String::new();
+            while let Some(c) = parts.chars().next() {
+                if c.is_ascii_alphanumeric() || c == '-' {
+                    tag.push(c);
+                    parts = &parts[1..];
+                } else {
+                    break;
+                }
+            }
+            tag_match = name.local.to_string().to_lowercase() == tag.to_lowercase();
         }
-        if let Some(cls) = selector.strip_prefix('.') {
-            if let Some(class_attr) = get_attr_raw(attrs, "class") {
-                return class_attr.split_whitespace().any(|c| c == cls);
+        if !tag_match {
+            return false;
+        }
+
+        // Parse remaining parts: [attr], [attr="val"], .class, #id, :pseudo(...)
+        while !parts.is_empty() {
+            if parts.starts_with('[') {
+                parts = &parts[1..];
+                let mut attr_name = String::new();
+                let mut attr_value = None;
+                while let Some(c) = parts.chars().next() {
+                    if c == ']' || c == '=' {
+                        break;
+                    }
+                    attr_name.push(c);
+                    parts = &parts[1..];
+                }
+                if parts.starts_with('=') {
+                    parts = &parts[1..];
+                    let quote = parts.chars().next();
+                    if quote == Some('"') || quote == Some('\'') {
+                        let q = quote.unwrap();
+                        parts = &parts[1..];
+                        let mut val = String::new();
+                        while let Some(c) = parts.chars().next() {
+                            if c == q { break; }
+                            val.push(c);
+                            parts = &parts[1..];
+                        }
+                        if parts.starts_with(q) { parts = &parts[1..]; }
+                        attr_value = Some(val);
+                    } else {
+                        let mut val = String::new();
+                        while let Some(c) = parts.chars().next() {
+                            if c == ']' { break; }
+                            val.push(c);
+                            parts = &parts[1..];
+                        }
+                        attr_value = Some(val);
+                    }
+                }
+                if parts.starts_with(']') { parts = &parts[1..]; }
+                attr_checks.push((attr_name, attr_value));
+            } else if parts.starts_with('.') {
+                parts = &parts[1..];
+                let mut cls = String::new();
+                while let Some(c) = parts.chars().next() {
+                    if !c.is_alphanumeric() && c != '-' && c != '_' { break; }
+                    cls.push(c);
+                    parts = &parts[1..];
+                }
+                if let Some(class_attr) = get_attr_raw(attrs, "class") {
+                    if !class_attr.split_whitespace().any(|c| c == cls) {
+                        return false;
+                    }
+                } else {
+                    return false;
+                }
+            } else if parts.starts_with('#') {
+                parts = &parts[1..];
+                let mut id = String::new();
+                while let Some(c) = parts.chars().next() {
+                    if !c.is_alphanumeric() && c != '-' && c != '_' { break; }
+                    id.push(c);
+                    parts = &parts[1..];
+                }
+                if let Some(id_attr) = get_attr_raw(attrs, "id") {
+                    if id_attr != id { return false; }
+                } else {
+                    return false;
+                }
+            } else if parts.starts_with(':') {
+                // Skip past :pseudo-class(...)
+                let end = parts.find('(').map(|i| i + 1).unwrap_or(parts.len());
+                parts = &parts[end..];
+                if !parts.is_empty() && parts.as_bytes()[0] as char != ')' {
+                    let mut depth = 1;
+                    for (i, c) in parts.char_indices() {
+                        if c == '(' { depth += 1; }
+                        else if c == ')' { depth -= 1; if depth == 0 { parts = &parts[i+1..]; break; } }
+                    }
+                } else if parts.starts_with(')') {
+                    parts = &parts[1..];
+                }
+            } else {
+                break;
             }
         }
-        if let Some(id) = selector.strip_prefix('#') {
-            if let Some(id_attr) = get_attr_raw(attrs, "id") {
-                return id_attr == id;
+
+        // Check collected attribute selectors
+        for (name, expected) in &attr_checks {
+            let attr_val = get_attr_raw(attrs, name);
+            match expected {
+                Some(val) => {
+                    if attr_val.as_deref() != Some(val.as_str()) {
+                        return false;
+                    }
+                }
+                None => {
+                    if attr_val.is_none() {
+                        return false;
+                    }
+                }
             }
         }
+
+        // Handle :not(...) by re-parsing the selector
+        if let Some(not_idx) = selector.find(":not(") {
+            let start = not_idx + 5;
+            let mut depth = 0;
+            let mut end = start;
+            for (i, c) in selector[start..].char_indices() {
+                if c == '(' { depth += 1; }
+                else if c == ')' { if depth == 0 { end = start + i; break; } depth -= 1; }
+            }
+            let inner = selector[start..end].trim();
+            if inner.starts_with('[') {
+                let inner_trimmed = inner.trim_start_matches('[').trim_end_matches(']');
+                let (not_name, not_expected) = if let Some(eq_idx) = inner_trimmed.find('=') {
+                    let n = inner_trimmed[..eq_idx].trim().to_string();
+                    let v = inner_trimmed[eq_idx+1..].trim().trim_matches('"').trim_matches('\'').to_string();
+                    (n, Some(v))
+                } else {
+                    (inner_trimmed.to_string(), None)
+                };
+                let attr_val = get_attr_raw(attrs, &not_name);
+                let matches_not = match &not_expected {
+                    Some(val) => attr_val.as_deref() == Some(val.as_str()),
+                    None => attr_val.is_some(),
+                };
+                if matches_not {
+                    return false;
+                }
+            }
+        }
+
+        return true;
     }
     false
 }
@@ -419,6 +560,26 @@ fn build_element_object(context: &mut Context, handle: Handle) -> JsResult<JsVal
         }),
         js_string!("removeChild"),
         1,
+    );
+    obj.function(
+        NativeFunction::from_copy_closure(|this: &JsValue, _: &[JsValue], _: &mut Context| -> JsResult<JsValue> {
+            let eid = match get_this_node_id(this) {
+                Ok(id) => id,
+                Err(_) => return Ok(JsValue::undefined()),
+            };
+            if let Some(elem) = get_handle(eid) {
+                let parent_weak = elem.parent.take();
+                elem.parent.set(parent_weak.clone());
+                if let Some(parent_weak) = parent_weak {
+                    if let Some(parent) = parent_weak.upgrade() {
+                        parent.children.borrow_mut().retain(|child| !Rc::ptr_eq(child, &elem));
+                    }
+                }
+            }
+            Ok(JsValue::undefined())
+        }),
+        js_string!("remove"),
+        0,
     );
     obj.function(
         NativeFunction::from_copy_closure(|this: &JsValue, args: &[JsValue], context: &mut Context| -> JsResult<JsValue> {

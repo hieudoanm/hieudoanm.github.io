@@ -137,7 +137,10 @@ mod tests {
         });
         let result = convert_to_postman(&spec).unwrap();
         let item = &result["item"][0]["item"][0];
-        assert_eq!(item["request"]["url"]["raw"], "https://api.example.com/users");
+        assert_eq!(
+            item["request"]["url"]["raw"],
+            "https://api.example.com/users"
+        );
     }
 
     #[test]

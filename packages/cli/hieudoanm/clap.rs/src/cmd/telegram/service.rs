@@ -108,7 +108,10 @@ mod tests {
 
     #[test]
     fn test_urlencoding_url() {
-        assert_eq!(urlencoding("https://example.com/webhook?test=1"), "https%3A%2F%2Fexample.com%2Fwebhook%3Ftest%3D1");
+        assert_eq!(
+            urlencoding("https://example.com/webhook?test=1"),
+            "https%3A%2F%2Fexample.com%2Fwebhook%3Ftest%3D1"
+        );
     }
 
     #[test]

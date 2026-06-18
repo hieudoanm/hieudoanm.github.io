@@ -10,7 +10,7 @@ class ConvertCommandTest {
     @Test
     fun testBase64Encode() {
         val cmd = ConvertCommand()
-        val result = cmd.test("base64 'hello world'")
+        val result = cmd.test("base64 encode 'hello world'")
         assertEquals(0, result.statusCode)
         assertEquals("aGVsbG8gd29ybGQ=", result.stdout.trim())
     }
@@ -18,7 +18,7 @@ class ConvertCommandTest {
     @Test
     fun testBase64Decode() {
         val cmd = ConvertCommand()
-        val result = cmd.test("base64 aGVsbG8gd29ybGQ= --decode")
+        val result = cmd.test("base64 decode aGVsbG8gd29ybGQ=")
         assertEquals(0, result.statusCode)
         assertEquals("hello world", result.stdout.trim())
     }

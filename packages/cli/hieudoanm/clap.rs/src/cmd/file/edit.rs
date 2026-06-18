@@ -220,9 +220,12 @@ mod tests {
         let m = cmd
             .try_get_matches_from(vec![
                 "edit",
-                "-f", "/tmp/nonexistent_edit_file_xyz.txt",
-                "-o", "old",
-                "--new", "new",
+                "-f",
+                "/tmp/nonexistent_edit_file_xyz.txt",
+                "-o",
+                "old",
+                "--new",
+                "new",
             ])
             .unwrap();
         let result = run(&m, false).await;

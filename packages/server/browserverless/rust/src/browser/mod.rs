@@ -51,23 +51,33 @@ impl Browser {
             anyhow::bail!("HTTP request failed with status: {}", response.status());
         }
 
+        eprintln!("  ✅ Fetched {} bytes", response.content_length().unwrap_or(0));
+
         let html = response
             .text()
             .await
             .context("Failed to read response body")?;
 
+        eprintln!("  📄 Parsing HTML...");
         self.dom = parse_document(RcDom::default(), ParseOpts::default())
             .from_utf8()
             .read_from(&mut html.as_bytes())
             .context("Failed to parse HTML")?;
 
         // JsRuntime::new is now synchronous
+        eprintln!("  ⚡ Initializing JavaScript runtime...");
         self.js_runtime = Some(JsRuntime::new(self.dom.document.clone(), url)?);
+
         self.execute_scripts().await?;
+        eprintln!("  ✅ Script execution complete");
+
+        eprintln!("  🔧 Processing Instagram modules...");
         if let Some(js) = &mut self.js_runtime {
             js::process_instagram_modules(&mut js.context);
         }
         self.drain_and_execute_pending_scripts()?;
+
+        eprintln!("  ⏳ Waiting for idle...");
         if let Some(js) = &mut self.js_runtime {
             js.idle(wait_ms)?;
         }
@@ -79,14 +89,17 @@ impl Browser {
 
     async fn execute_scripts(&mut self) -> Result<()> {
         let scripts = self.collect_scripts(&self.dom.document);
+        let total = scripts.len();
+        eprintln!("  🔍 Found {} scripts to execute", total);
 
         for (i, script) in scripts.iter().enumerate() {
+            let pct = if total > 0 { (i as f64 / total as f64 * 100.0) as u32 } else { 0 };
             if let Some(inline) = &script.inline {
                 if !inline.trim().is_empty() {
                     if let Some(js_runtime) = &mut self.js_runtime {
-                        eprintln!("[script {}] executing inline script ({} chars)", i, inline.len());
+                        eprint!("\r  ⚡ Executing scripts... {}% ({}/{})", pct, i + 1, total);
                         if let Err(e) = js_runtime.execute(inline) {
-                            eprintln!("[script {}] inline script error: {}", i, e);
+                            eprintln!("\n  ❌ Script {} inline error: {}", i, e);
                         }
                     }
                 }
@@ -96,31 +109,38 @@ impl Browser {
                 if let Some(js_runtime) = &mut self.js_runtime {
                     match code {
                         Ok(code) => {
-                            eprintln!("[script {}] executing external script '{}' ({} chars)", i, src, code.len());
+                            eprint!("\r  ⚡ Executing external scripts... {}% ({}/{})", pct, i + 1, total);
                             if let Err(e) = js_runtime.execute(&code) {
-                                eprintln!("[script {}] external script error: {}", i, e);
+                                eprintln!("\n  ❌ Script {} external error: {}", i, e);
                             }
                         }
                         Err(e) => {
-                            eprintln!("[script {}] failed to fetch external script '{}': {}", i, src, e);
+                            eprintln!("\n  ⚠️  Script {} failed to fetch '{}': {}", i, src, e);
                         }
                     }
                 }
             }
         }
+        eprintln!();
         Ok(())
     }
 
     fn drain_and_execute_pending_scripts(&mut self) -> Result<()> {
         let scripts = drain_pending_scripts();
-        for script in scripts {
+        if scripts.is_empty() {
+            return Ok(());
+        }
+        let total = scripts.len();
+        eprintln!("  ⏰ Processing {} pending script(s)...", total);
+        for (i, script) in scripts.iter().enumerate() {
             if let Some(js_runtime) = &mut self.js_runtime {
-                eprintln!("[pending] executing script ({} chars)", script.len());
+                eprint!("\r  ⏰ Pending script {}/{}", i + 1, total);
                 if let Err(e) = js_runtime.execute(&script) {
-                    eprintln!("[pending] script error: {}", e);
+                    eprintln!("\n  ❌ Pending script error: {}", e);
                 }
             }
         }
+        eprintln!();
         Ok(())
     }
 

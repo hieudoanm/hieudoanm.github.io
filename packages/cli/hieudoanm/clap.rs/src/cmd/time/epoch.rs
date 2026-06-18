@@ -60,13 +60,19 @@ mod tests {
     #[test]
     fn test_parse_date_string_with_time() {
         let dt = parse_date_string("2024-01-15 10:30:00").unwrap();
-        assert_eq!(dt.format("%Y-%m-%d %H:%M:%S").to_string(), "2024-01-15 10:30:00");
+        assert_eq!(
+            dt.format("%Y-%m-%d %H:%M:%S").to_string(),
+            "2024-01-15 10:30:00"
+        );
     }
 
     #[test]
     fn test_parse_date_string_rfc3339() {
         let dt = parse_date_string("2024-01-15T10:30:00").unwrap();
-        assert_eq!(dt.format("%Y-%m-%d %H:%M:%S").to_string(), "2024-01-15 10:30:00");
+        assert_eq!(
+            dt.format("%Y-%m-%d %H:%M:%S").to_string(),
+            "2024-01-15 10:30:00"
+        );
     }
 
     #[test]

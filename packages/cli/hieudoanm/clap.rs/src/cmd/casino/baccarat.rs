@@ -29,19 +29,13 @@ mod tests {
 
     #[test]
     fn test_baccarat_sum() {
-        let cards = vec![
-            Card { rank: 2, suit: 0 },
-            Card { rank: 3, suit: 1 },
-        ];
+        let cards = vec![Card { rank: 2, suit: 0 }, Card { rank: 3, suit: 1 }];
         assert_eq!(baccarat_sum(&cards), 5);
     }
 
     #[test]
     fn test_baccarat_sum_wraps() {
-        let cards = vec![
-            Card { rank: 7, suit: 0 },
-            Card { rank: 8, suit: 1 },
-        ];
+        let cards = vec![Card { rank: 7, suit: 0 }, Card { rank: 8, suit: 1 }];
         assert_eq!(baccarat_sum(&cards), 5);
     }
 
@@ -69,8 +63,14 @@ mod tests {
 
     #[test]
     fn test_draw_for_third() {
-        assert!(draw_for_third(&vec![Card { rank: 0, suit: 0 }, Card { rank: 0, suit: 1 }], 0));
-        assert!(!draw_for_third(&vec![Card { rank: 10, suit: 0 }, Card { rank: 7, suit: 1 }], 8));
+        assert!(draw_for_third(
+            &vec![Card { rank: 0, suit: 0 }, Card { rank: 0, suit: 1 }],
+            0
+        ));
+        assert!(!draw_for_third(
+            &vec![Card { rank: 10, suit: 0 }, Card { rank: 7, suit: 1 }],
+            8
+        ));
     }
 
     #[test]
@@ -93,10 +93,7 @@ mod tests {
 
     #[test]
     fn test_hand_display() {
-        let cards = vec![
-            Card { rank: 14, suit: 0 },
-            Card { rank: 13, suit: 1 },
-        ];
+        let cards = vec![Card { rank: 14, suit: 0 }, Card { rank: 13, suit: 1 }];
         assert_eq!(hand_display(&cards), "Ac Kd");
     }
 
@@ -124,9 +121,7 @@ mod tests {
     #[tokio::test]
     async fn test_run_default_bet() {
         let cmd = command();
-        let m = cmd
-            .try_get_matches_from(vec!["baccarat"])
-            .unwrap();
+        let m = cmd.try_get_matches_from(vec!["baccarat"]).unwrap();
         run(&m).await.unwrap();
     }
 

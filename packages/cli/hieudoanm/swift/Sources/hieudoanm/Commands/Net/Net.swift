@@ -163,12 +163,7 @@ struct NetWifi: AsyncParsableCommand {
             return
         }
 
-        let headerLine = lines[0]
-        let ssidRange = headerLine.range(of: "SSID") ?? headerLine.range(of: "SSID")!
-        let bssidRange = headerLine.range(of: "BSSID") ?? headerLine.range(of: "BSSID") ?? headerLine.range(of: "BSSID")!
-        let rssiRange = headerLine.range(of: "RSSI") ?? headerLine.range(of: "RSSI")!
-        let channelRange = headerLine.range(of: "CHANNEL") ?? headerLine.range(of: "CH")!
-        let secRange = headerLine.range(of: "SECURITY") ?? headerLine.range(of: "SEC")!
+        _ = lines[0]
 
         struct WifiEntry: Codable {
             let ssid: String
@@ -182,7 +177,6 @@ struct NetWifi: AsyncParsableCommand {
 
         for line in lines.dropFirst() {
             let ssid = line.prefix(32).trimmingCharacters(in: .whitespaces)
-            let bssidStart = line.index(line.startIndex, offsetBy: 33)
             let bssid: String
             if line.count > 48 { bssid = String(line[line.index(line.startIndex, offsetBy: 33)..<line.index(line.startIndex, offsetBy: 50)]).trimmingCharacters(in: .whitespaces) }
             else { bssid = "" }

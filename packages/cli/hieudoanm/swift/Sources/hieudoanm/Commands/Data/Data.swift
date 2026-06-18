@@ -200,7 +200,6 @@ struct JsonCommand: ParsableCommand {
 
     private func tryParseArrayIndex(_ s: String) -> Int? {
         if s.hasPrefix("[") && s.hasSuffix("]") {
-            let idx = s.dropFirst().dropFirst()
             return Int(String(s.dropFirst().dropLast()))
         }
         if let idx = Int(s) { return idx }
@@ -294,7 +293,7 @@ struct YmlCommand: ParsableCommand {
                 }
 
                 if value.isEmpty || value == "|" || value == ">" {
-                    var nested: [String: Any] = [:]
+                    let nested: [String: Any] = [:]
                     stack.append((indent, key, nested))
                     if stack.count == 1 {
                         root[key] = nested
@@ -335,7 +334,7 @@ struct YmlCommand: ParsableCommand {
             if let nested = current[k] as? [String: Any] {
                 current = nested
             } else {
-                var newDict: [String: Any] = [:]
+                let newDict: [String: Any] = [:]
                 current[k] = newDict
                 current = newDict
             }

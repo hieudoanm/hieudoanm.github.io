@@ -1,6 +1,10 @@
 use super::{parse_version, Version};
 
-pub fn bump_version(version_str: &str, part: &str, prerelease: Option<&str>) -> anyhow::Result<String> {
+pub fn bump_version(
+    version_str: &str,
+    part: &str,
+    prerelease: Option<&str>,
+) -> anyhow::Result<String> {
     let v = parse_version(version_str)?;
     let prerelease_str = prerelease.unwrap_or("").to_string();
     let bumped = match part {

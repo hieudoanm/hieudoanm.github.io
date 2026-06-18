@@ -298,23 +298,24 @@ mod tests {
             },
         ];
         let result = select_track(&tracks, "en");
-        assert_eq!(result.unwrap().base_url(), "https://example.com/en-manual.vtt");
+        assert_eq!(
+            result.unwrap().base_url(),
+            "https://example.com/en-manual.vtt"
+        );
     }
 
     #[test]
     fn test_select_track_falls_back_to_asr() {
-        let tracks = vec![
-            CaptionTrack {
-                base_url: Some("https://example.com/en-asr.vtt".into()),
-                baseUrl: None,
-                language_code: Some("en".into()),
-                languageCode: None,
-                kind: Some("asr".into()),
-                name: None,
-                is_translatable: None,
-                isTranslatable: None,
-            },
-        ];
+        let tracks = vec![CaptionTrack {
+            base_url: Some("https://example.com/en-asr.vtt".into()),
+            baseUrl: None,
+            language_code: Some("en".into()),
+            languageCode: None,
+            kind: Some("asr".into()),
+            name: None,
+            is_translatable: None,
+            isTranslatable: None,
+        }];
         let result = select_track(&tracks, "en");
         assert!(result.is_some());
         assert_eq!(result.unwrap().kind(), "asr");
@@ -322,18 +323,16 @@ mod tests {
 
     #[test]
     fn test_select_track_no_match() {
-        let tracks = vec![
-            CaptionTrack {
-                base_url: Some("https://example.com/fr.vtt".into()),
-                baseUrl: None,
-                language_code: Some("fr".into()),
-                languageCode: None,
-                kind: Some("standard".into()),
-                name: None,
-                is_translatable: None,
-                isTranslatable: None,
-            },
-        ];
+        let tracks = vec![CaptionTrack {
+            base_url: Some("https://example.com/fr.vtt".into()),
+            baseUrl: None,
+            language_code: Some("fr".into()),
+            languageCode: None,
+            kind: Some("standard".into()),
+            name: None,
+            is_translatable: None,
+            isTranslatable: None,
+        }];
         assert!(select_track(&tracks, "de").is_none());
     }
 
@@ -341,19 +340,34 @@ mod tests {
     fn test_available_langs() {
         let tracks = vec![
             CaptionTrack {
-                base_url: None, baseUrl: None,
-                language_code: Some("en".into()), languageCode: None,
-                kind: None, name: None, is_translatable: None, isTranslatable: None,
+                base_url: None,
+                baseUrl: None,
+                language_code: Some("en".into()),
+                languageCode: None,
+                kind: None,
+                name: None,
+                is_translatable: None,
+                isTranslatable: None,
             },
             CaptionTrack {
-                base_url: None, baseUrl: None,
-                language_code: Some("fr".into()), languageCode: None,
-                kind: None, name: None, is_translatable: None, isTranslatable: None,
+                base_url: None,
+                baseUrl: None,
+                language_code: Some("fr".into()),
+                languageCode: None,
+                kind: None,
+                name: None,
+                is_translatable: None,
+                isTranslatable: None,
             },
             CaptionTrack {
-                base_url: None, baseUrl: None,
-                language_code: Some("en".into()), languageCode: None,
-                kind: None, name: None, is_translatable: None, isTranslatable: None,
+                base_url: None,
+                baseUrl: None,
+                language_code: Some("en".into()),
+                languageCode: None,
+                kind: None,
+                name: None,
+                is_translatable: None,
+                isTranslatable: None,
             },
         ];
         let langs = available_langs(&tracks);
@@ -365,8 +379,12 @@ mod tests {
         let t = CaptionTrack {
             base_url: Some("https://example.com/vtt".into()),
             baseUrl: None,
-            language_code: None, languageCode: None,
-            kind: None, name: None, is_translatable: None, isTranslatable: None,
+            language_code: None,
+            languageCode: None,
+            kind: None,
+            name: None,
+            is_translatable: None,
+            isTranslatable: None,
         };
         assert_eq!(t.base_url(), "https://example.com/vtt");
     }
@@ -374,10 +392,14 @@ mod tests {
     #[test]
     fn test_caption_track_language_code() {
         let t = CaptionTrack {
-            base_url: None, baseUrl: None,
+            base_url: None,
+            baseUrl: None,
             language_code: None,
             languageCode: Some("fr".into()),
-            kind: None, name: None, is_translatable: None, isTranslatable: None,
+            kind: None,
+            name: None,
+            is_translatable: None,
+            isTranslatable: None,
         };
         assert_eq!(t.language_code(), "fr");
     }

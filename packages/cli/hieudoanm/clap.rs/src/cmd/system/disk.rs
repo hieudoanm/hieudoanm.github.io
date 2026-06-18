@@ -38,18 +38,12 @@ mod tests {
     #[test]
     fn test_format_bytes_gb() {
         assert_eq!(format_bytes(1024u64 * 1024 * 1024), "1.0 GB");
-        assert_eq!(
-            format_bytes(5 * 1024u64 * 1024 * 1024),
-            "5.0 GB"
-        );
+        assert_eq!(format_bytes(5 * 1024u64 * 1024 * 1024), "5.0 GB");
     }
 
     #[test]
     fn test_format_bytes_tb() {
-        assert_eq!(
-            format_bytes(1024u64 * 1024 * 1024 * 1024),
-            "1.0 TB"
-        );
+        assert_eq!(format_bytes(1024u64 * 1024 * 1024 * 1024), "1.0 TB");
     }
 }
 

@@ -107,7 +107,7 @@ struct ImageConvert: AsyncParsableCommand {
 
         args.append(input)
 
-        try runSips(args: args)
+        _ = try runSips(args: args)
         let outSize = try FileManager.default.attributesOfItem(atPath: output)[.size] as? UInt64 ?? 0
         print("Converted \(input) -> \(output) (\(NumberFormat.formatBytes(outSize)))")
     }
@@ -127,22 +127,17 @@ struct ImageDominant: AsyncParsableCommand {
     mutating func run() throws {
         let output = try runSips(args: ["--getProperty", "all", path])
         let lines = output.components(separatedBy: .newlines)
-        var pixelWidth = 0, pixelHeight = 0
 
         for line in lines {
             let parts = line.split(separator: ":", maxSplits: 1).map(String.init)
             guard parts.count == 2 else { continue }
-            let key = parts[0].trimmingCharacters(in: .whitespaces)
-            let val = parts[1].trimmingCharacters(in: .whitespaces)
-            if key == "pixelWidth" { pixelWidth = Int(val) ?? 0 }
-            if key == "pixelHeight" { pixelHeight = Int(val) ?? 0 }
         }
 
         let tempDir = FileManager.default.temporaryDirectory
         let scaledPath = tempDir.appendingPathComponent("\(UUID().uuidString).png").path
         defer { try? FileManager.default.removeItem(atPath: scaledPath) }
 
-        try runSips(args: ["--resampleWidth", "1", "--resampleHeight", "1", "--out", scaledPath, path])
+        _ = try runSips(args: ["--resampleWidth", "1", "--resampleHeight", "1", "--out", scaledPath, path])
 
         guard let scaledData = try? Data(contentsOf: URL(fileURLWithPath: scaledPath)),
               let imageSource = CGImageSourceCreateWithData(scaledData as CFData, nil),

@@ -217,7 +217,7 @@ func evaluateHand(_ cards: [PokerCard]) -> (Int, String) {
     let freq = Dictionary(grouping: ranks, by: { $0 }).mapValues(\.count)
     let groups = freq.sorted { $0.value > $1.value || ($0.value == $1.value && $0.key > $1.key) }
     let counts = groups.map { $0.value }
-    let kickers = groups.map { $0.key }
+    _ = groups.map { $0.key }
 
     if isFlush && isStraight {
         if ranks[0] == 14 && !(ranks[4] == 2 && ranks[3] == 3) { return (9, "Royal Flush") }

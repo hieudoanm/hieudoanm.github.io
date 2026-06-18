@@ -181,13 +181,23 @@ mod tests {
 
     #[test]
     fn test_version_display() {
-        let v = Version { major: 1, minor: 2, patch: 3, prerelease: String::new() };
+        let v = Version {
+            major: 1,
+            minor: 2,
+            patch: 3,
+            prerelease: String::new(),
+        };
         assert_eq!(format!("{v}"), "1.2.3");
     }
 
     #[test]
     fn test_version_display_prerelease() {
-        let v = Version { major: 2, minor: 0, patch: 0, prerelease: "rc.1".to_string() };
+        let v = Version {
+            major: 2,
+            minor: 0,
+            patch: 0,
+            prerelease: "rc.1".to_string(),
+        };
         assert_eq!(format!("{v}"), "2.0.0-rc.1");
     }
 

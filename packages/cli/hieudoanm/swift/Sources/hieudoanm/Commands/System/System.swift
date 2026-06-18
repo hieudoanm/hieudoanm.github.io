@@ -25,7 +25,7 @@ struct SystemMonitor: ParsableCommand {
         let cpuBrand = shell("sysctl -n machdep.cpu.brand_string") ?? "?"
         let uptimeStr = shell("uptime") ?? "?"
         let memStats = shell("vm_stat") ?? "?"
-        let processes = (try? String(contentsOfFile: "/proc/uptime")) ?? shell("ps -eo pid,comm,%cpu,%mem --sort=-%cpu | head -20") ?? "?"
+        _ = (try? String(contentsOfFile: "/proc/uptime")) ?? shell("ps -eo pid,comm,%cpu,%mem --sort=-%cpu | head -20") ?? "?"
 
         print("CPU: \(cpuBrand) (\(cpu) cores)")
         print("Uptime: \(uptimeStr.trimmingCharacters(in: .whitespacesAndNewlines))")

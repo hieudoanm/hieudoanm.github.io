@@ -1,6 +1,7 @@
 import Foundation
 import ArgumentParser
 import Network
+import os
 
 struct PortCommand: ParsableCommand {
     static let configuration = CommandConfiguration(
@@ -158,18 +159,18 @@ private func checkPort(host: String, port: Int, timeout: TimeInterval) async thr
             using: .tcp
         )
         let queue = DispatchQueue(label: "port-check-\(host)-\(port)")
-        var didResume = false
+        let resumed = OSAllocatedUnfairLock(initialState: false)
 
         connection.stateUpdateHandler = { state in
             switch state {
             case .ready:
-                if !didResume { didResume = true; continuation.resume(returning: true) }
+                if !resumed.withLock({ $0 }) { resumed.withLock { $0 = true }; continuation.resume(returning: true) }
                 connection.cancel()
             case .failed:
-                if !didResume { didResume = true; continuation.resume(returning: false) }
+                if !resumed.withLock({ $0 }) { resumed.withLock { $0 = true }; continuation.resume(returning: false) }
                 connection.cancel()
             case .cancelled:
-                if !didResume { didResume = true; continuation.resume(returning: false) }
+                if !resumed.withLock({ $0 }) { resumed.withLock { $0 = true }; continuation.resume(returning: false) }
             default:
                 break
             }
@@ -178,8 +179,8 @@ private func checkPort(host: String, port: Int, timeout: TimeInterval) async thr
         connection.start(queue: queue)
 
         DispatchQueue.global().asyncAfter(deadline: .now() + timeout) {
-            if !didResume {
-                didResume = true
+            if !resumed.withLock({ $0 }) {
+                resumed.withLock { $0 = true }
                 connection.cancel()
                 continuation.resume(returning: false)
             }

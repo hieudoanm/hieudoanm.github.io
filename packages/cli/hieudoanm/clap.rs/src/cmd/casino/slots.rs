@@ -151,9 +151,7 @@ mod tests {
     #[tokio::test]
     async fn test_run_default_bet() {
         let cmd = command();
-        let m = cmd
-            .try_get_matches_from(vec!["slots"])
-            .unwrap();
+        let m = cmd.try_get_matches_from(vec!["slots"]).unwrap();
         run(&m).await.unwrap();
     }
 }

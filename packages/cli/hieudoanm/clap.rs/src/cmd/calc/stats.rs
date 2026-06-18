@@ -123,7 +123,14 @@ mod tests {
         let n = nums.len();
         let sum: f64 = nums.iter().sum();
         let mean: f64 = sum / n as f64;
-        let variance: f64 = nums.iter().map(|v| { let d = v - mean; d * d }).sum::<f64>() / n as f64;
+        let variance: f64 = nums
+            .iter()
+            .map(|v| {
+                let d = v - mean;
+                d * d
+            })
+            .sum::<f64>()
+            / n as f64;
         let stddev: f64 = variance.sqrt();
         assert!((mean - 5.0).abs() < 1e-10);
         assert!((variance - 4.0).abs() < 1e-10);

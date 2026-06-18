@@ -67,8 +67,14 @@ mod tests {
 
     #[test]
     fn test_content_type_unknown() {
-        assert_eq!(content_type(Path::new("file.xyz")), "application/octet-stream");
-        assert_eq!(content_type(Path::new("Makefile")), "application/octet-stream");
+        assert_eq!(
+            content_type(Path::new("file.xyz")),
+            "application/octet-stream"
+        );
+        assert_eq!(
+            content_type(Path::new("Makefile")),
+            "application/octet-stream"
+        );
     }
 }
 

@@ -204,7 +204,10 @@ mod tests {
     #[test]
     fn test_compute_hash_sha256() {
         let h = compute_hash(b"hello", "sha256").unwrap();
-        assert_eq!(h, "2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824");
+        assert_eq!(
+            h,
+            "2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824"
+        );
     }
 
     #[test]
@@ -222,13 +225,19 @@ mod tests {
     #[test]
     fn test_hmac_sha256() {
         let result = hmac_sha256(b"key", b"data");
-        assert_eq!(hex_encode(&result), "5031fe3d989c6d1537a013fa6e739da23463fdaec3b70137d828e36ace221bd0");
+        assert_eq!(
+            hex_encode(&result),
+            "5031fe3d989c6d1537a013fa6e739da23463fdaec3b70137d828e36ace221bd0"
+        );
     }
 
     #[test]
     fn test_hmac_sha1() {
         let result = hmac_sha1(b"key", b"data");
-        assert_eq!(hex_encode(&result), "104152c5bfdca07bc633eebd46199f0255c9f49d");
+        assert_eq!(
+            hex_encode(&result),
+            "104152c5bfdca07bc633eebd46199f0255c9f49d"
+        );
     }
 
     #[test]
@@ -279,7 +288,9 @@ mod tests {
     async fn test_run_with_hmac_sha256() {
         let cmd = command();
         let m = cmd
-            .try_get_matches_from(vec!["hash", "--text", "data", "--key", "key", "--algo", "sha256"])
+            .try_get_matches_from(vec![
+                "hash", "--text", "data", "--key", "key", "--algo", "sha256",
+            ])
             .unwrap();
         run(&m).await.unwrap();
     }
@@ -288,7 +299,9 @@ mod tests {
     async fn test_run_with_hmac_sha1_json() {
         let cmd = command();
         let m = cmd
-            .try_get_matches_from(vec!["hash", "--text", "data", "--key", "key", "--algo", "sha1", "--json"])
+            .try_get_matches_from(vec![
+                "hash", "--text", "data", "--key", "key", "--algo", "sha1", "--json",
+            ])
             .unwrap();
         run(&m).await.unwrap();
     }
@@ -297,7 +310,9 @@ mod tests {
     async fn test_run_with_hmac_md5() {
         let cmd = command();
         let m = cmd
-            .try_get_matches_from(vec!["hash", "--text", "data", "--key", "key", "--algo", "md5"])
+            .try_get_matches_from(vec![
+                "hash", "--text", "data", "--key", "key", "--algo", "md5",
+            ])
             .unwrap();
         run(&m).await.unwrap();
     }
@@ -306,7 +321,9 @@ mod tests {
     async fn test_run_with_hmac_sha512_json() {
         let cmd = command();
         let m = cmd
-            .try_get_matches_from(vec!["hash", "--text", "data", "--key", "key", "--algo", "sha512", "--json"])
+            .try_get_matches_from(vec![
+                "hash", "--text", "data", "--key", "key", "--algo", "sha512", "--json",
+            ])
             .unwrap();
         run(&m).await.unwrap();
     }

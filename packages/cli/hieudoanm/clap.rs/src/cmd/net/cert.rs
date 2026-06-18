@@ -63,7 +63,8 @@ mod tests {
 
     #[test]
     fn test_format_duration_days() {
-        let d = chrono::Duration::days(3) + chrono::Duration::hours(5) + chrono::Duration::minutes(10);
+        let d =
+            chrono::Duration::days(3) + chrono::Duration::hours(5) + chrono::Duration::minutes(10);
         assert_eq!(format_duration(d), "3d 5h 10m");
     }
 

@@ -7,7 +7,9 @@ use super::{format_cards, Card};
 mod tests {
     use super::*;
 
-    fn c(rank: u8, suit: u8) -> Card { Card { rank, suit } }
+    fn c(rank: u8, suit: u8) -> Card {
+        Card { rank, suit }
+    }
 
     #[test]
     fn test_is_straight_normal() {
@@ -95,8 +97,13 @@ mod tests {
     #[test]
     fn test_best_hand_selects_best_from_seven() {
         let seven = vec![
-            c(14, 0), c(14, 1), // pocket aces
-            c(2, 0), c(5, 1), c(9, 2), c(11, 3), c(3, 0), // board
+            c(14, 0),
+            c(14, 1), // pocket aces
+            c(2, 0),
+            c(5, 1),
+            c(9, 2),
+            c(11, 3),
+            c(3, 0), // board
         ];
         let result = best_hand(&seven);
         assert_eq!(result.rank, HandRank::OnePair);
@@ -161,13 +168,7 @@ mod tests {
     async fn test_run_with_board() {
         let cmd = command();
         let m = cmd
-            .try_get_matches_from(vec![
-                "poker",
-                "--hand",
-                "Ah Kh",
-                "--board",
-                "2h 7s Tc",
-            ])
+            .try_get_matches_from(vec!["poker", "--hand", "Ah Kh", "--board", "2h 7s Tc"])
             .unwrap();
         run(&m).await.unwrap();
     }
