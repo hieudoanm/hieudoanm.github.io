@@ -1,6 +1,7 @@
 use anyhow::Result;
 use crate::browser::dom::JsDocument;
 use markup5ever_rcdom::Handle;
+use reqwest::Client;
 use rquickjs::{AsyncContext, AsyncRuntime, Ctx, Function, Object, Promise};
 use rquickjs::prelude::Func;
 use std::collections::HashMap;
@@ -64,16 +65,52 @@ fn clearInterval_impl(id: u32) {
     clearTimeout_impl(id);
 }
 
-fn fetch_impl<'js>(ctx: Ctx<'js>, url: String) -> rquickjs::Result<Promise<'js>> {
-    async fn do_fetch(url: String) -> String {
-        match reqwest::get(&url).await {
-            Ok(resp) => resp.text().await.unwrap_or_default(),
-            Err(e) => {
-                eprintln!("fetch({}) failed: {}", url, e);
-                String::new()
-            }
+#[allow(non_snake_case)]
+fn requestAnimationFrame_impl<'js>(ctx: Ctx<'js>, f: Function<'js>) -> u32 {
+    let id = NEXT_TIMER_ID.fetch_add(1, Ordering::Relaxed);
+    let cancelled = Arc::new(AtomicBool::new(false));
+    let guard = cancelled.clone();
+
+    ctx.spawn(async move {
+        tokio::time::sleep(Duration::from_millis(1)).await;
+        if !guard.load(Ordering::Relaxed) {
+            let _ = f.call::<_, ()>(());
         }
-    }
+    });
+
+    timers().lock().unwrap().insert(id, cancelled);
+    id
+}
+
+#[allow(non_snake_case)]
+fn cancelAnimationFrame_impl(id: u32) {
+    clearTimeout_impl(id);
+}
+
+#[allow(non_snake_case)]
+fn getComputedStyle_impl<'js>(ctx: Ctx<'js>, _el: rquickjs::Value<'js>, _pseudo: Option<String>) -> rquickjs::Result<Object<'js>> {
+    let style = Object::new(ctx)?;
+    Ok(style)
+}
+
+#[allow(non_snake_case)]
+fn matchMedia_impl<'js>(ctx: Ctx<'js>, _query: String) -> rquickjs::Result<Object<'js>> {
+    let mm = Object::new(ctx)?;
+    mm.set("matches", false)?;
+    mm.set("media", _query)?;
+    mm.set("addListener", Func::from(|_f: rquickjs::Function<'_>| {}))?;
+    mm.set("removeListener", Func::from(|_f: rquickjs::Function<'_>| {}))?;
+    mm.set("addEventListener", Func::from(|_event: String, _f: rquickjs::Function<'_>| {}))?;
+    mm.set("removeEventListener", Func::from(|_event: String, _f: rquickjs::Function<'_>| {}))?;
+    Ok(mm)
+}
+
+fn fetch_impl<'js>(ctx: Ctx<'js>, url: String, init: Option<Object<'js>>) -> rquickjs::Result<Promise<'js>> {
+    let method = init.as_ref()
+        .and_then(|o| o.get::<_, String>("method").ok())
+        .unwrap_or_else(|| "GET".to_string());
+    let req_body = init.as_ref()
+        .and_then(|o| o.get::<_, String>("body").ok());
 
     // Resolve relative URLs against document base URL
     let resolved = globals_location_href(&ctx)
@@ -82,7 +119,31 @@ fn fetch_impl<'js>(ctx: Ctx<'js>, url: String) -> rquickjs::Result<Promise<'js>>
         .map(|u| u.to_string())
         .unwrap_or(url);
 
-    rquickjs::Promise::wrap_future(&ctx, do_fetch(resolved))
+    rquickjs::Promise::wrap_future(&ctx, async move {
+        let client = reqwest::Client::new();
+        let req = match method.as_str() {
+            "GET" => client.get(&resolved),
+            "POST" => client.post(&resolved),
+            "PUT" => client.put(&resolved),
+            "DELETE" => client.delete(&resolved),
+            "PATCH" => client.patch(&resolved),
+            "HEAD" => client.head(&resolved),
+            _ => client.get(&resolved),
+        };
+        let req = if let Some(b) = req_body { req.body(b) } else { req };
+
+        match req.send().await {
+            Ok(resp) => {
+                let status = resp.status().as_u16();
+                let body = resp.text().await.unwrap_or_default();
+                format!("{}\n{}", status, body)
+            }
+            Err(e) => {
+                eprintln!("fetch({}) failed: {}", resolved, e);
+                format!("0\n")
+            }
+        }
+    })
 }
 
 fn globals_location_href(ctx: &Ctx<'_>) -> Option<String> {
@@ -186,6 +247,12 @@ impl JsRuntime {
                 let _ = window.set("scrollBy", Func::from(|| {}));
             }
 
+            // getComputedStyle
+            globals.set("getComputedStyle", Func::from(getComputedStyle_impl))?;
+
+            // matchMedia
+            globals.set("matchMedia", Func::from(matchMedia_impl))?;
+
             // localStorage
             if let Ok(storage) = create_storage(&ctx, local_storage) {
                 globals.set("localStorage", storage)?;
@@ -207,6 +274,12 @@ impl JsRuntime {
 
             // clearInterval
             globals.set("clearInterval", Func::from(clearInterval_impl))?;
+
+            // requestAnimationFrame
+            globals.set("requestAnimationFrame", Func::from(requestAnimationFrame_impl))?;
+
+            // cancelAnimationFrame
+            globals.set("cancelAnimationFrame", Func::from(cancelAnimationFrame_impl))?;
 
             // fetch
             globals.set("fetch", Func::from(fetch_impl))?;
@@ -269,6 +342,69 @@ if (typeof globalThis.requireLazy === 'undefined') {
 }
 "#;
             let _ = ctx.eval::<rquickjs::Value, _>(polyfill);
+
+            // Inject Image constructor, alert/confirm/prompt/open, fetch Response wrapper, Event, AbortController
+            let browser_polyfill = r#"
+if (typeof globalThis.Image === 'undefined') {
+    globalThis.Image = function(width, height) {
+        var img = document.createElement('img');
+        if (width !== undefined) img.setAttribute('width', width);
+        if (height !== undefined) img.setAttribute('height', height);
+        return img;
+    };
+}
+if (typeof globalThis.alert === 'undefined') {
+    globalThis.alert = function(msg) { console.log(String(msg)); };
+    globalThis.confirm = function() { return true; };
+    globalThis.prompt = function(msg, def) { return def || null; };
+    globalThis.open = function() { return null; };
+}
+if (typeof globalThis.Event === 'undefined') {
+    globalThis.Event = function(type, opts) {
+        opts = opts || {};
+        return { type: type, bubbles: opts.bubbles || false, cancelable: opts.cancelable || false, defaultPrevented: false, target: null, currentTarget: null, preventDefault: function() { this.defaultPrevented = true; }, stopPropagation: function() {} };
+    };
+    globalThis.CustomEvent = function(type, opts) {
+        opts = opts || {};
+        var ev = new globalThis.Event(type, opts);
+        ev.detail = opts.detail || null;
+        return ev;
+    };
+}
+if (typeof globalThis.AbortController === 'undefined') {
+    globalThis.AbortController = function() {
+        this.signal = { aborted: false, onabort: null, addEventListener: function() {}, removeEventListener: function() {}, dispatchEvent: function() { return true; } };
+        this.abort = function() { this.signal.aborted = true; if (this.signal.onabort) this.signal.onabort(); };
+    };
+}
+var _nativeFetch = globalThis.fetch;
+if (_nativeFetch && !globalThis._fetchWrapped) {
+    globalThis._fetchWrapped = true;
+    globalThis.fetch = function(url, init) {
+        return _nativeFetch(url, init).then(function(raw) {
+            var status = 200;
+            var body = raw;
+            var newlineIdx = raw.indexOf('\n');
+            if (newlineIdx > 0 && newlineIdx <= 4) {
+                var n = parseInt(raw.substring(0, newlineIdx), 10);
+                if (!isNaN(n)) { status = n; body = raw.substring(newlineIdx + 1); }
+            }
+            return {
+                ok: status >= 200 && status < 300,
+                status: status,
+                statusText: status === 200 ? 'OK' : 'Error',
+                url: typeof url === 'string' ? url : '',
+                headers: {},
+                redirected: false,
+                type: 'basic',
+                text: function() { return Promise.resolve(body); },
+                json: function() { return Promise.resolve(JSON.parse(body)); }
+            };
+        });
+    };
+}
+"#;
+            let _ = ctx.eval::<rquickjs::Value, _>(browser_polyfill);
 
             Ok::<(), anyhow::Error>(())
         }).await;

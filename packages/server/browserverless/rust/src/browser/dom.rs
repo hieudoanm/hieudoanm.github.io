@@ -10,6 +10,10 @@ use std::collections::HashMap;
 use std::rc::Rc;
 use std::sync::Mutex;
 
+thread_local! {
+    static ACTIVE_ELEMENT: RefCell<Option<Handle>> = const { RefCell::new(None) };
+}
+
 #[rquickjs::class]
 pub struct JsDocument {
     pub handle: Handle,
@@ -95,9 +99,28 @@ impl JsDocument {
         })
     }
 
+    #[qjs(get, rename = "activeElement")]
+    pub fn get_active_element<'js>(&self, ctx: rquickjs::Ctx<'js>) -> Option<rquickjs::Class<'js, JsElement>> {
+        get_active_element().map(|h| {
+            rquickjs::Class::instance(ctx, JsElement::new(h)).unwrap()
+        })
+    }
+
     #[qjs(rename = "createElement")]
     pub fn create_element<'js>(&self, ctx: rquickjs::Ctx<'js>, tag_name: String) -> rquickjs::Class<'js, JsElement> {
         let handle = create_element_node(&tag_name);
+        rquickjs::Class::instance(ctx, JsElement::new(handle)).unwrap()
+    }
+
+    #[qjs(rename = "createTextNode")]
+    pub fn create_text_node<'js>(&self, ctx: rquickjs::Ctx<'js>, text: String) -> rquickjs::Class<'js, JsElement> {
+        let handle = Rc::new(markup5ever_rcdom::Node {
+            parent: std::cell::Cell::new(None),
+            children: RefCell::new(Vec::new()),
+            data: NodeData::Text {
+                contents: RefCell::new(text.into()),
+            },
+        });
         rquickjs::Class::instance(ctx, JsElement::new(handle)).unwrap()
     }
 }
@@ -139,6 +162,18 @@ impl JsElement {
 fn cookie_store() -> &'static Mutex<HashMap<String, String>> {
     static STORE: std::sync::OnceLock<Mutex<HashMap<String, String>>> = std::sync::OnceLock::new();
     STORE.get_or_init(|| Mutex::new(HashMap::new()))
+}
+
+fn set_active_element(h: Handle) {
+    ACTIVE_ELEMENT.with(|cell| *cell.borrow_mut() = Some(h));
+}
+
+fn clear_active_element() {
+    ACTIVE_ELEMENT.with(|cell| *cell.borrow_mut() = None);
+}
+
+fn get_active_element() -> Option<Handle> {
+    ACTIVE_ELEMENT.with(|cell| cell.borrow().clone())
 }
 
 fn find_element_by_tag(handle: &Handle, tag: &str) -> Option<Handle> {
@@ -402,6 +437,9 @@ impl JsElement {
             move || { let _ = ev.set("defaultPrevented", true); }
         }));
         let _ = event.set("stopPropagation", rquickjs::Function::new(ctx.clone(), || {}));
+        let el_ref = rquickjs::Class::instance(ctx.clone(), JsElement::new(self.handle.clone())).unwrap();
+        let _ = event.set("target", el_ref.clone());
+        let _ = event.set("currentTarget", el_ref);
 
         for handler in handlers {
             if let Ok(f) = handler.restore(&ctx) {
@@ -425,11 +463,13 @@ impl JsElement {
 
     #[qjs(rename = "focus")]
     pub fn focus<'js>(&self, ctx: rquickjs::Ctx<'js>) {
+        set_active_element(self.handle.clone());
         let _ = self.dispatch_event(ctx, "focus".to_string());
     }
 
     #[qjs(rename = "blur")]
     pub fn blur<'js>(&self, ctx: rquickjs::Ctx<'js>) {
+        clear_active_element();
         let _ = self.dispatch_event(ctx, "blur".to_string());
     }
 
@@ -520,6 +560,150 @@ impl JsElement {
             Err(_) => return false,
         };
         sels.iter().any(|sel| matches_selector(&self.handle, sel))
+    }
+
+    #[qjs(rename = "hasAttribute")]
+    pub fn has_attribute(&self, name: String) -> bool {
+        if let NodeData::Element { attrs, .. } = &self.handle.data {
+            attrs.borrow().iter().any(|a| a.name.local.as_ref() == name)
+        } else {
+            false
+        }
+    }
+
+    #[qjs(rename = "getBoundingClientRect")]
+    pub fn get_bounding_client_rect<'js>(&self, ctx: rquickjs::Ctx<'js>) -> rquickjs::Result<Object<'js>> {
+        let rect = Object::new(ctx)?;
+        rect.set("x", 0)?; rect.set("y", 0)?;
+        rect.set("top", 0)?; rect.set("right", 0)?;
+        rect.set("bottom", 0)?; rect.set("left", 0)?;
+        rect.set("width", 0)?; rect.set("height", 0)?;
+        Ok(rect)
+    }
+
+    #[qjs(rename = "insertBefore")]
+    pub fn insert_before(&self, new_child: rquickjs::Class<'_, JsElement>, ref_child: Option<rquickjs::Class<'_, JsElement>>) {
+        let new_handle = &new_child.borrow().handle;
+        let mut children = self.handle.children.borrow_mut();
+        new_handle.parent.set(Some(Rc::downgrade(&self.handle)));
+        match ref_child {
+            Some(ref_child) => {
+                let ref_handle = &ref_child.borrow().handle;
+                if let Some(pos) = children.iter().position(|h| Rc::ptr_eq(h, ref_handle)) {
+                    children.insert(pos, new_handle.clone());
+                } else {
+                    children.push(new_handle.clone());
+                }
+            }
+            None => {
+                children.push(new_handle.clone());
+            }
+        }
+    }
+
+    #[qjs(get, rename = "style")]
+    pub fn get_style<'js>(&self, ctx: rquickjs::Ctx<'js>) -> rquickjs::Result<Object<'js>> {
+        let el = rquickjs::Class::instance(ctx.clone(), JsElement::new(self.handle.clone())).unwrap();
+        let js = r#"
+(function(el) {
+    return new Proxy({}, {
+        get: function(target, prop) {
+            if (prop === 'setProperty') {
+                return function(name, value) {
+                    var cssProp = name.replace(/[A-Z]/g, '-$&').toLowerCase();
+                    el.setAttribute('style', (el.getAttribute('style') || '') + cssProp + ': ' + value + ';');
+                };
+            }
+            if (typeof prop === 'string' && prop !== 'then' && prop !== 'toJSON') {
+                var style = el.getAttribute('style') || '';
+                var regex = new RegExp(prop.replace(/[A-Z]/g, '-$&').toLowerCase() + '\\s*:\\s*([^;]+)');
+                var match = style.match(regex);
+                return match ? match[1].trim() : '';
+            }
+            return target[prop];
+        },
+        set: function(target, prop, value) {
+            if (typeof prop === 'string') {
+                var cssProp = prop.replace(/[A-Z]/g, '-$&').toLowerCase();
+                el.setAttribute('style', (el.getAttribute('style') || '') + cssProp + ': ' + value + ';');
+            }
+            return true;
+        }
+    });
+})
+"#;
+        let func = ctx.eval::<rquickjs::Function, _>(js)?;
+        func.call::<_, Object>((el,))
+    }
+
+    #[qjs(get, rename = "dataset")]
+    pub fn get_dataset<'js>(&self, ctx: rquickjs::Ctx<'js>) -> rquickjs::Result<Object<'js>> {
+        let el = rquickjs::Class::instance(ctx.clone(), JsElement::new(self.handle.clone())).unwrap();
+        let js = r#"
+(function(el) {
+    var cache = {};
+    return new Proxy(cache, {
+        get: function(target, prop) {
+            if (typeof prop === 'string') {
+                var attr = 'data-' + prop.replace(/[A-Z]/g, '-$&').toLowerCase();
+                var val = el.getAttribute(attr);
+                return val !== null ? val : undefined;
+            }
+            return target[prop];
+        },
+        set: function(target, prop, value) {
+            if (typeof prop === 'string') {
+                var attr = 'data-' + prop.replace(/[A-Z]/g, '-$&').toLowerCase();
+                if (value === null || value === undefined) {
+                    el.setAttribute(attr, '');
+                } else {
+                    el.setAttribute(attr, String(value));
+                }
+                target[prop] = value;
+            }
+            return true;
+        }
+    });
+})
+"#;
+        let func = ctx.eval::<rquickjs::Function, _>(js)?;
+        func.call::<_, Object>((el,))
+    }
+
+    #[qjs(rename = "querySelector")]
+    pub fn query_selector_element<'js>(&self, ctx: rquickjs::Ctx<'js>, selector: String) -> Option<rquickjs::Class<'js, JsElement>> {
+        let sels = parse_selector_list(&selector).ok()?;
+        find_first_match(&self.handle, &sels).map(|h| {
+            rquickjs::Class::instance(ctx, JsElement::new(h)).unwrap()
+        })
+    }
+
+    #[qjs(rename = "querySelectorAll")]
+    pub fn query_selector_all_element<'js>(&self, ctx: rquickjs::Ctx<'js>, selector: String) -> Vec<rquickjs::Class<'js, JsElement>> {
+        let sels = match parse_selector_list(&selector) {
+            Ok(s) => s,
+            Err(_) => return Vec::new(),
+        };
+        let mut results = Vec::new();
+        collect_matches(&self.handle, &sels, &mut results);
+        results.into_iter().map(|h| {
+            rquickjs::Class::instance(ctx.clone(), JsElement::new(h)).unwrap()
+        }).collect()
+    }
+
+    #[qjs(get, rename = "src")]
+    pub fn get_src(&self) -> String {
+        get_attr(&self.handle, "src")
+    }
+
+    #[qjs(set, rename = "src")]
+    pub fn set_src(&self, val: String) {
+        set_attr(&self.handle, "src", &val);
+    }
+
+    #[qjs(rename = "scrollIntoView")]
+    pub fn scroll_into_view(&self) {
+        // No-op for headless browser
     }
 }
 
