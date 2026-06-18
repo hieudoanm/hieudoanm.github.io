@@ -28,6 +28,7 @@ impl Browser {
     pub fn new(url: &str) -> Result<Self> {
         let client = Client::builder()
             .user_agent("Browserverless/0.1.0")
+            .cookie_store(true)
             .build()?;
         Ok(Self {
             client,

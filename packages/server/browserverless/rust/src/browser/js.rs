@@ -39,6 +39,31 @@ fn clearTimeout_impl(id: u32) {
     }
 }
 
+#[allow(non_snake_case)]
+fn setInterval_impl<'js>(ctx: Ctx<'js>, f: Function<'js>, interval: u64) -> u32 {
+    let id = NEXT_TIMER_ID.fetch_add(1, Ordering::Relaxed);
+    let cancelled = Arc::new(AtomicBool::new(false));
+    let guard = cancelled.clone();
+
+    ctx.spawn(async move {
+        loop {
+            tokio::time::sleep(Duration::from_millis(interval)).await;
+            if guard.load(Ordering::Relaxed) {
+                break;
+            }
+            let _ = f.call::<_, ()>(());
+        }
+    });
+
+    timers().lock().unwrap().insert(id, cancelled);
+    id
+}
+
+#[allow(non_snake_case)]
+fn clearInterval_impl(id: u32) {
+    clearTimeout_impl(id);
+}
+
 fn fetch_impl<'js>(ctx: Ctx<'js>, url: String) -> rquickjs::Result<Promise<'js>> {
     async fn do_fetch(url: String) -> String {
         match reqwest::get(&url).await {
@@ -151,6 +176,14 @@ impl JsRuntime {
             globals.set("location", location.clone())?;
             if let Ok(window) = globals.get::<_, Object>("window") {
                 let _ = window.set("location", location);
+                let _ = window.set("innerWidth", 1024);
+                let _ = window.set("innerHeight", 768);
+                let _ = window.set("scrollX", 0);
+                let _ = window.set("scrollY", 0);
+                let _ = window.set("pageXOffset", 0);
+                let _ = window.set("pageYOffset", 0);
+                let _ = window.set("scrollTo", Func::from(|| {}));
+                let _ = window.set("scrollBy", Func::from(|| {}));
             }
 
             // localStorage
@@ -168,6 +201,12 @@ impl JsRuntime {
 
             // clearTimeout
             globals.set("clearTimeout", Func::from(clearTimeout_impl))?;
+
+            // setInterval
+            globals.set("setInterval", Func::from(setInterval_impl))?;
+
+            // clearInterval
+            globals.set("clearInterval", Func::from(clearInterval_impl))?;
 
             // fetch
             globals.set("fetch", Func::from(fetch_impl))?;
@@ -248,13 +287,14 @@ if (typeof globalThis.requireLazy === 'undefined') {
             if res.is_ok() {
                 return Ok(());
             }
+            let err_msg = format!("{}", res.unwrap_err());
 
             let wrapped_script = format!("({})", script);
             if ctx.eval::<rquickjs::Value, _>(wrapped_script).is_ok() {
                 return Ok(());
             }
 
-            eprintln!("Ignoring script: {}", &script[..script.len().min(20)]);
+            eprintln!("Script error: {}", err_msg);
             Ok(())
         }).await
     }
@@ -263,6 +303,13 @@ if (typeof globalThis.requireLazy === 'undefined') {
         tokio::time::timeout(Duration::from_secs(30), self.runtime.idle())
             .await
             .map_err(|_| anyhow::anyhow!("Timeout waiting for page to become idle"))?;
+
+        // Debounce: wait up to 500ms for DOM mutations from settling callbacks
+        let start = tokio::time::Instant::now();
+        while start.elapsed() < Duration::from_millis(500) {
+            tokio::time::sleep(Duration::from_millis(50)).await;
+            let _ = tokio::time::timeout(Duration::from_millis(10), self.runtime.idle()).await;
+        }
         Ok(())
     }
 }

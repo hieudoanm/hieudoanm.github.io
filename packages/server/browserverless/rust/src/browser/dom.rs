@@ -3,8 +3,12 @@ use html5ever::tendril::TendrilSink;
 use html5ever::{parse_document, ParseOpts, local_name, ns, Attribute, QualName};
 use markup5ever_rcdom::{Handle, NodeData, RcDom, SerializableHandle};
 use rquickjs::class::{Trace, Tracer};
+use rquickjs::Object;
+use rquickjs::prelude::Func;
 use std::cell::{Cell, RefCell};
+use std::collections::HashMap;
 use std::rc::Rc;
+use std::sync::Mutex;
 
 #[rquickjs::class]
 pub struct JsDocument {
@@ -25,12 +29,21 @@ impl JsDocument {
 
     #[qjs(get, rename = "cookie")]
     pub fn get_cookie(&self) -> String {
-        String::new()
+        let store = cookie_store().lock().unwrap();
+        store
+            .iter()
+            .map(|(k, v)| format!("{}={}", k, v))
+            .collect::<Vec<_>>()
+            .join("; ")
     }
 
     #[qjs(set, rename = "cookie")]
-    pub fn set_cookie(&self, _val: String) {
-        // For MVP, cookies are a no-op
+    pub fn set_cookie(&self, val: String) {
+        if let Some((key, value)) = val.split_once('=') {
+            let key = key.trim().to_string();
+            let value = value.split(';').next().unwrap_or("").trim().to_string();
+            cookie_store().lock().unwrap().insert(key, value);
+        }
     }
 
     #[qjs(rename = "querySelector")]
@@ -57,6 +70,27 @@ impl JsDocument {
     #[qjs(rename = "getElementById")]
     pub fn get_element_by_id<'js>(&self, ctx: rquickjs::Ctx<'js>, id: String) -> Option<rquickjs::Class<'js, JsElement>> {
         self.find_by_id(&self.handle, &id).map(|h| {
+            rquickjs::Class::instance(ctx, JsElement::new(h)).unwrap()
+        })
+    }
+
+    #[qjs(get, rename = "body")]
+    pub fn get_body<'js>(&self, ctx: rquickjs::Ctx<'js>) -> Option<rquickjs::Class<'js, JsElement>> {
+        find_element_by_tag(&self.handle, "body").map(|h| {
+            rquickjs::Class::instance(ctx, JsElement::new(h)).unwrap()
+        })
+    }
+
+    #[qjs(get, rename = "documentElement")]
+    pub fn get_document_element<'js>(&self, ctx: rquickjs::Ctx<'js>) -> Option<rquickjs::Class<'js, JsElement>> {
+        find_element_by_tag(&self.handle, "html").map(|h| {
+            rquickjs::Class::instance(ctx, JsElement::new(h)).unwrap()
+        })
+    }
+
+    #[qjs(get, rename = "head")]
+    pub fn get_head<'js>(&self, ctx: rquickjs::Ctx<'js>) -> Option<rquickjs::Class<'js, JsElement>> {
+        find_element_by_tag(&self.handle, "head").map(|h| {
             rquickjs::Class::instance(ctx, JsElement::new(h)).unwrap()
         })
     }
@@ -100,6 +134,126 @@ impl JsElement {
             listeners: RefCell::new(Vec::new()),
         }
     }
+}
+
+fn cookie_store() -> &'static Mutex<HashMap<String, String>> {
+    static STORE: std::sync::OnceLock<Mutex<HashMap<String, String>>> = std::sync::OnceLock::new();
+    STORE.get_or_init(|| Mutex::new(HashMap::new()))
+}
+
+fn find_element_by_tag(handle: &Handle, tag: &str) -> Option<Handle> {
+    let tag_lower = tag.to_lowercase();
+    for child in handle.children.borrow().iter() {
+        if let NodeData::Element { ref name, .. } = child.data {
+            if name.local.as_ref() == tag_lower {
+                return Some(child.clone());
+            }
+        }
+        if let Some(found) = find_element_by_tag(child, tag) {
+            return Some(found);
+        }
+    }
+    None
+}
+
+fn find_parent_element(handle: &Handle) -> Option<Handle> {
+    let parent = parent_handle(handle)?;
+    if matches!(parent.data, NodeData::Element { .. }) {
+        Some(parent)
+    } else {
+        None
+    }
+}
+
+fn find_prev_element_sibling(handle: &Handle) -> Option<Handle> {
+    let parent = parent_handle(handle)?;
+    let children = parent.children.borrow();
+    let mut found_self = false;
+    for child in children.iter().rev() {
+        if Rc::ptr_eq(child, handle) {
+            found_self = true;
+        } else if found_self && matches!(child.data, NodeData::Element { .. }) {
+            return Some(child.clone());
+        }
+    }
+    None
+}
+
+fn find_next_element_sibling(handle: &Handle) -> Option<Handle> {
+    let parent = parent_handle(handle)?;
+    let children = parent.children.borrow();
+    let mut found_self = false;
+    for child in children.iter() {
+        if Rc::ptr_eq(child, handle) {
+            found_self = true;
+        } else if found_self && matches!(child.data, NodeData::Element { .. }) {
+            return Some(child.clone());
+        }
+    }
+    None
+}
+
+fn create_class_list<'js>(ctx: &rquickjs::Ctx<'js>, element_handle: Handle) -> rquickjs::Result<Object<'js>> {
+    let cl = Object::new(ctx.clone())?;
+
+    let h_add = element_handle.clone();
+    let _ = cl.set("add", Func::from(move |token: String| {
+        let mut current = get_attr(&h_add, "class");
+        let tokens: Vec<&str> = current.split_whitespace().collect();
+        if !tokens.contains(&token.as_str()) {
+            if !current.is_empty() {
+                current.push(' ');
+            }
+            current.push_str(&token);
+            set_attr(&h_add, "class", &current);
+        }
+    }));
+
+    let h_remove = element_handle.clone();
+    let _ = cl.set("remove", Func::from(move |token: String| {
+        let current = get_attr(&h_remove, "class");
+        let tokens: Vec<&str> = current.split_whitespace().filter(|t| *t != token.as_str()).collect();
+        set_attr(&h_remove, "class", &tokens.join(" "));
+    }));
+
+    let h_toggle = element_handle.clone();
+    let _ = cl.set("toggle", Func::from(move |token: String| -> bool {
+        let current = get_attr(&h_toggle, "class");
+        let tokens: Vec<&str> = current.split_whitespace().collect();
+        if tokens.contains(&token.as_str()) {
+            let filtered: Vec<&str> = tokens.into_iter().filter(|t| *t != token.as_str()).collect();
+            set_attr(&h_toggle, "class", &filtered.join(" "));
+            false
+        } else {
+            let mut updated = current;
+            if !updated.is_empty() {
+                updated.push(' ');
+            }
+            updated.push_str(&token);
+            set_attr(&h_toggle, "class", &updated);
+            true
+        }
+    }));
+
+    let h_contains = element_handle.clone();
+    let _ = cl.set("contains", Func::from(move |token: String| -> bool {
+        let current = get_attr(&h_contains, "class");
+        current.split_whitespace().any(|t| t == token.as_str())
+    }));
+
+    let h_len = element_handle.clone();
+    let _ = cl.set("length", Func::from(move || -> usize {
+        let current = get_attr(&h_len, "class");
+        if current.is_empty() { 0 } else { current.split_whitespace().count() }
+    }));
+
+    let h_item = element_handle.clone();
+    let _ = cl.set("item", Func::from(move |index: usize| -> Option<String> {
+        let current = get_attr(&h_item, "class");
+        current.split_whitespace().nth(index).map(String::from)
+    }));
+
+    Ok(cl)
 }
 
 #[rquickjs::methods]
@@ -287,6 +441,85 @@ impl JsElement {
     #[qjs(rename = "input")]
     pub fn input<'js>(&self, ctx: rquickjs::Ctx<'js>) {
         let _ = self.dispatch_event(ctx, "input".to_string());
+    }
+
+    #[qjs(get, rename = "classList")]
+    pub fn get_class_list<'js>(&self, ctx: rquickjs::Ctx<'js>) -> rquickjs::Result<Object<'js>> {
+        create_class_list(&ctx, self.handle.clone())
+    }
+
+    #[qjs(rename = "remove")]
+    pub fn remove(&self) {
+        if let Some(parent) = parent_handle(&self.handle) {
+            let mut children = parent.children.borrow_mut();
+            if let Some(pos) = children.iter().position(|h| Rc::ptr_eq(h, &self.handle)) {
+                children.remove(pos);
+                self.handle.parent.set(None);
+            }
+        }
+    }
+
+    #[qjs(get, rename = "parentElement")]
+    pub fn get_parent_element<'js>(&self, ctx: rquickjs::Ctx<'js>) -> Option<rquickjs::Class<'js, JsElement>> {
+        find_parent_element(&self.handle).map(|h| rquickjs::Class::instance(ctx, JsElement::new(h)).unwrap())
+    }
+
+    #[qjs(get, rename = "children")]
+    pub fn get_children<'js>(&self, ctx: rquickjs::Ctx<'js>) -> Vec<rquickjs::Class<'js, JsElement>> {
+        self.handle
+            .children
+            .borrow()
+            .iter()
+            .filter(|h| matches!(h.data, NodeData::Element { .. }))
+            .map(|h| rquickjs::Class::instance(ctx.clone(), JsElement::new(h.clone())).unwrap())
+            .collect()
+    }
+
+    #[qjs(get, rename = "firstChild")]
+    pub fn get_first_child<'js>(&self, ctx: rquickjs::Ctx<'js>) -> Option<rquickjs::Class<'js, JsElement>> {
+        self.handle
+            .children
+            .borrow()
+            .iter()
+            .find(|h| matches!(h.data, NodeData::Element { .. }))
+            .map(|h| rquickjs::Class::instance(ctx, JsElement::new(h.clone())).unwrap())
+    }
+
+    #[qjs(get, rename = "nextSibling")]
+    pub fn get_next_sibling<'js>(&self, ctx: rquickjs::Ctx<'js>) -> Option<rquickjs::Class<'js, JsElement>> {
+        find_next_element_sibling(&self.handle)
+            .map(|h| rquickjs::Class::instance(ctx, JsElement::new(h)).unwrap())
+    }
+
+    #[qjs(get, rename = "previousSibling")]
+    pub fn get_previous_sibling<'js>(&self, ctx: rquickjs::Ctx<'js>) -> Option<rquickjs::Class<'js, JsElement>> {
+        find_prev_element_sibling(&self.handle)
+            .map(|h| rquickjs::Class::instance(ctx, JsElement::new(h)).unwrap())
+    }
+
+    #[qjs(rename = "closest")]
+    pub fn closest<'js>(&self, ctx: rquickjs::Ctx<'js>, selector: String) -> Option<rquickjs::Class<'js, JsElement>> {
+        let sels = parse_selector_list(&selector).ok()?;
+        if sels.is_empty() {
+            return None;
+        }
+        let mut current = Some(self.handle.clone());
+        while let Some(el) = current {
+            if sels.iter().any(|sel| matches_selector(&el, sel)) {
+                return Some(rquickjs::Class::instance(ctx, JsElement::new(el)).unwrap());
+            }
+            current = parent_handle(&el);
+        }
+        None
+    }
+
+    #[qjs(rename = "matches")]
+    pub fn matches(&self, selector: String) -> bool {
+        let sels = match parse_selector_list(&selector) {
+            Ok(s) => s,
+            Err(_) => return false,
+        };
+        sels.iter().any(|sel| matches_selector(&self.handle, sel))
     }
 }
 
