@@ -64,6 +64,9 @@ impl Browser {
         // JsRuntime::new is now synchronous
         self.js_runtime = Some(JsRuntime::new(self.dom.document.clone(), url)?);
         self.execute_scripts().await?;
+        if let Some(js) = &mut self.js_runtime {
+            js::process_instagram_modules(&mut js.context);
+        }
         self.drain_and_execute_pending_scripts()?;
         if let Some(js) = &mut self.js_runtime {
             js.idle(wait_ms)?;
@@ -81,8 +84,9 @@ impl Browser {
             if let Some(inline) = &script.inline {
                 if !inline.trim().is_empty() {
                     if let Some(js_runtime) = &mut self.js_runtime {
+                        eprintln!("[script {}] executing inline script ({} chars)", i, inline.len());
                         if let Err(e) = js_runtime.execute(inline) {
-                            eprintln!("Failed to execute script {}: {}", i, e);
+                            eprintln!("[script {}] inline script error: {}", i, e);
                         }
                     }
                 }
@@ -92,12 +96,13 @@ impl Browser {
                 if let Some(js_runtime) = &mut self.js_runtime {
                     match code {
                         Ok(code) => {
+                            eprintln!("[script {}] executing external script '{}' ({} chars)", i, src, code.len());
                             if let Err(e) = js_runtime.execute(&code) {
-                                eprintln!("Failed to execute external script {}: {}", i, e);
+                                eprintln!("[script {}] external script error: {}", i, e);
                             }
                         }
                         Err(e) => {
-                            eprintln!("Failed to fetch external script '{}': {}", src, e);
+                            eprintln!("[script {}] failed to fetch external script '{}': {}", i, src, e);
                         }
                     }
                 }
@@ -110,8 +115,9 @@ impl Browser {
         let scripts = drain_pending_scripts();
         for script in scripts {
             if let Some(js_runtime) = &mut self.js_runtime {
+                eprintln!("[pending] executing script ({} chars)", script.len());
                 if let Err(e) = js_runtime.execute(&script) {
-                    eprintln!("Pending script error: {}", e);
+                    eprintln!("[pending] script error: {}", e);
                 }
             }
         }

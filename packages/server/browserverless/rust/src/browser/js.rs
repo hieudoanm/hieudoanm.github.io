@@ -8,6 +8,7 @@ use boa_engine::{js_string, Context, JsArgs, JsResult, JsValue, NativeFunction, 
 use markup5ever_rcdom::Handle;
 use std::cell::RefCell;
 use std::collections::HashMap;
+use std::path::Path;
 use std::sync::atomic::{AtomicU32, Ordering};
 use std::sync::mpsc::{self, Receiver, Sender};
 use std::sync::{Mutex, OnceLock};
@@ -473,36 +474,48 @@ impl JsRuntime {
             return Ok(());
         }
 
-        match self.context.eval(Source::from_bytes(script.as_bytes())) {
+        let source = Source::from_bytes(script.as_bytes()).with_path(Path::new("inline"));
+        let result = self.context.eval(source);
+        match result {
             Ok(_) => Ok(()),
             Err(e) => {
                 let wrapped = format!("({})", script);
-                if self.context.eval(Source::from_bytes(wrapped.as_bytes())).is_ok() {
+                let wrapped_source = Source::from_bytes(wrapped.as_bytes()).with_path(Path::new("inline"));
+                if self.context.eval(wrapped_source).is_ok() {
                     return Ok(());
                 }
+                let preview: String = script.chars().take(200).collect();
+                let ellipsis = if script.len() > 200 { "..." } else { "" };
                 eprintln!("Script error: {}", e);
+                eprintln!("  Script preview (first 200 chars): {}{}", preview, ellipsis);
+                eprintln!("  Script length: {} bytes", script.len());
                 Ok(())
             }
         }
     }
 
     pub fn idle(&mut self, wait_ms: u64) -> Result<(), anyhow::Error> {
-        let deadline = std::time::Instant::now() + Duration::from_secs(30);
+        let deadline = std::time::Instant::now() + Duration::from_secs(60);
         let mut last_activity = std::time::Instant::now();
 
         loop {
-            self.process_events();
+            let prev_timeouts = ACTIVE_TIMEOUTS.load(Ordering::Relaxed);
+            let prev_fetches = ACTIVE_FETCHES.load(Ordering::Relaxed);
 
+            self.process_events();
             let _ = self.context.run_jobs();
 
-            if ACTIVE_TIMEOUTS.load(Ordering::Relaxed) == 0
-                && ACTIVE_FETCHES.load(Ordering::Relaxed) == 0
-            {
+            let timeouts = ACTIVE_TIMEOUTS.load(Ordering::Relaxed);
+            let fetches = ACTIVE_FETCHES.load(Ordering::Relaxed);
+
+            if timeouts != prev_timeouts || fetches != prev_fetches {
+                last_activity = std::time::Instant::now();
+            }
+
+            if timeouts == 0 && fetches == 0 {
                 if last_activity.elapsed() >= Duration::from_millis(500) {
                     break;
                 }
-            } else {
-                last_activity = std::time::Instant::now();
             }
 
             if std::time::Instant::now() >= deadline {
@@ -566,64 +579,34 @@ impl JsRuntime {
 
 fn inject_polyfills(context: &mut Context) {
     let polyfill = r#"
-if (typeof globalThis.requireLazy === 'undefined') {
-    var __rlModules = {};
-    function __processServerJS() {
-        var scripts = document.querySelectorAll('script[type="application/json"][data-sjs]');
-        for (var i = 0; i < scripts.length; i++) {
-            try {
-                var data = JSON.parse(scripts[i].textContent);
-                if (data && data.require && Array.isArray(data.require)) {
-                    for (var j = 0; j < data.require.length; j++) {
-                        var entry = data.require[j];
-                        if (Array.isArray(entry) && entry.length >= 2) {
-                            var modName = entry[0];
-                            var method = entry[1];
-                            var context = entry[2];
-                            var args = entry[3] || [];
-                            var mod = globalThis[modName];
-                            try {
-                                if (mod && typeof mod[method] === 'function') {
-                                    mod[method].apply(context, args);
-                                }
-                            } catch(e) {}
-                        }
+function __processServerJS() {
+    var scripts = document.querySelectorAll('script[type="application/json"][data-sjs]');
+    for (var i = 0; i < scripts.length; i++) {
+        try {
+            var data = JSON.parse(scripts[i].textContent);
+            if (data && data.require && Array.isArray(data.require)) {
+                for (var j = 0; j < data.require.length; j++) {
+                    var entry = data.require[j];
+                    if (Array.isArray(entry) && entry.length >= 2) {
+                        var modName = entry[0];
+                        var method = entry[1];
+                        var ctx = entry[2];
+                        var args = entry[3] || [];
+                        var mod = globalThis[modName];
+                        try {
+                            if (mod && typeof mod[method] === 'function') {
+                                mod[method].apply(ctx, args);
+                            }
+                        } catch(e) {}
                     }
                 }
-            } catch(e) {}
-        }
-    }
-    globalThis.requireLazy = function(modules, callback) {
-        var resolved = modules.map(function(name) {
-            if (typeof globalThis[name] !== 'undefined') return globalThis[name];
-            if (!__rlModules[name]) {
-                if (name === 'ServerJSProcessingListener') {
-                    __rlModules[name] = { process: __processServerJS };
-                } else {
-                    __rlModules[name] = {};
-                }
-                globalThis[name] = __rlModules[name];
             }
-            return __rlModules[name];
-        });
-        if (callback) {
-            try { callback.apply(null, resolved); } catch(e) { console.log('requireLazy error:', e); }
-        }
-    };
-    globalThis.define = function(name, deps, factory) {
-        if (!factory) { factory = deps; deps = []; }
-        var exports = {};
-        var resolved = (deps || []).map(function(dep) { return globalThis[dep] || {}; });
-        var result = factory.apply(null, resolved);
-        var mod = result || exports;
-        if (typeof name === 'string') { globalThis[name] = mod; }
-        return mod;
-    };
+        } catch(e) {}
+    }
 }
-"#;
-    let _ = context.eval(Source::from_bytes(polyfill.as_bytes()));
-
-    let browser_polyfill = r#"
+if (typeof globalThis.self === 'undefined') {
+    globalThis.self = globalThis;
+}
 if (typeof globalThis.Image === 'undefined') {
     globalThis.Image = function(width, height) {
         var img = document.createElement('img');
@@ -683,5 +666,69 @@ if (_nativeFetch && !globalThis._fetchWrapped) {
     };
 }
 "#;
-    let _ = context.eval(Source::from_bytes(browser_polyfill.as_bytes()));
+    let _ = context.eval(Source::from_bytes(polyfill.as_bytes()));
+}
+
+/// Processes Instagram's module bootstrapping: creates ServerJSPayloadListener,
+/// processes __rl_stub queue, and fires DOMContentLoaded.
+pub fn process_instagram_modules(context: &mut Context) {
+    let post_script = r#"
+if (typeof globalThis.__rl_stub === 'undefined') {
+    globalThis.__rl_stub = [];
+}
+// Create ServerJSPayloadListener module
+if (typeof globalThis.ServerJSPayloadListener === 'undefined') {
+    globalThis.ServerJSPayloadListener = {
+        process: function() {
+            var scripts = document.querySelectorAll('script[type="application/json"][data-sjs]');
+            for (var i = 0; i < scripts.length; i++) {
+                try {
+                    var data = JSON.parse(scripts[i].textContent);
+                    if (data && data.require && Array.isArray(data.require)) {
+                        for (var j = 0; j < data.require.length; j++) {
+                            var entry = data.require[j];
+                            if (Array.isArray(entry) && entry.length >= 2) {
+                                var modName = entry[0];
+                                var method = entry[1];
+                                var ctx = entry[2];
+                                var args = entry[3] || [];
+                                var mod = globalThis[modName];
+                                try {
+                                    if (mod && typeof mod[method] === 'function') {
+                                        mod[method].apply(ctx, args);
+                                    }
+                                } catch(e) { console.log('ServerJSPayloadListener error:', e); }
+                            }
+                        }
+                    }
+                    scripts[i].remove();
+                } catch(e) {}
+            }
+        }
+    };
+}
+// Process __rl_stub queue (Instagram's requireLazy calls)
+if (Array.isArray(globalThis.__rl_stub)) {
+    while (globalThis.__rl_stub.length > 0) {
+        var entry = globalThis.__rl_stub.shift();
+        if (Array.isArray(entry) && entry.length >= 2) {
+            var modules = entry[0];
+            var callback = entry[1];
+            var resolved = modules.map(function(name) {
+                if (typeof globalThis[name] !== 'undefined') return globalThis[name];
+                return {};
+            });
+            try {
+                callback.apply(null, resolved);
+            } catch(e) { console.log('rl_stub callback error:', e); }
+        }
+    }
+}
+// Fire DOMContentLoaded
+try {
+    var event = new Event('DOMContentLoaded');
+    document.dispatchEvent(event);
+} catch(e) {}
+"#;
+    let _ = context.eval(Source::from_bytes(post_script.as_bytes()));
 }

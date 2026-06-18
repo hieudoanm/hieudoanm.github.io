@@ -656,6 +656,41 @@ pub fn setup_document(context: &mut Context, document_handle: Handle) -> JsResul
         0,
     );
 
+    // getElementsByTagName
+    doc.function(
+        NativeFunction::from_copy_closure(|_: &JsValue, args: &[JsValue], context: &mut Context| -> JsResult<JsValue> {
+            let tag = args.first().and_then(|v| v.as_string()).and_then(|s| s.to_std_string().ok()).unwrap_or_default().to_uppercase();
+            let mut results = Vec::new();
+            if let Some(doc_handle) = get_document_root() {
+                find_by_tag_name(&doc_handle, &tag, &mut results);
+            }
+            let mut elements = Vec::new();
+            for h in &results {
+                if let Ok(el) = build_element_object(context, h.clone()) {
+                    elements.push(el);
+                }
+            }
+            let mut arr = ObjectInitializer::new(context);
+            arr.property(js_string!("length"), elements.len() as i64, Attribute::all());
+            for (i, el) in elements.iter().enumerate() {
+                arr.property(js_string!(i.to_string().as_str()), el.clone(), Attribute::all());
+            }
+            Ok(JsValue::from(arr.build()))
+        }),
+        js_string!("getElementsByTagName"),
+        1,
+    );
+
+    // readyState
+    doc.property(js_string!("readyState"), js_string!("loading"), Attribute::all());
+
+    // document.addEventListener
+    doc.function(
+        NativeFunction::from_copy_closure(|_, _, _| Ok(JsValue::undefined())),
+        js_string!("addEventListener"),
+        2,
+    );
+
     doc.accessor(js_string!("cookie"), Some(cookie_get_fn), Some(cookie_set_fn), Attribute::all());
 
     let doc_obj = doc.build();
@@ -745,4 +780,15 @@ fn find_by_id(handle: &Handle, id: &str) -> Option<Handle> {
         }
     }
     None
+}
+
+fn find_by_tag_name(handle: &Handle, tag: &str, out: &mut Vec<Handle>) {
+    if let NodeData::Element { name, .. } = &handle.data {
+        if name.local.to_string().to_ascii_uppercase() == tag {
+            out.push(handle.clone());
+        }
+    }
+    for child in handle.children.borrow().iter() {
+        find_by_tag_name(child, tag, out);
+    }
 }
