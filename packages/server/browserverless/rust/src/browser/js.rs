@@ -49,7 +49,73 @@ fn fetch_impl<'js>(ctx: Ctx<'js>, url: String) -> rquickjs::Result<Promise<'js>>
             }
         }
     }
-    rquickjs::Promise::wrap_future(&ctx, do_fetch(url))
+
+    // Resolve relative URLs against document base URL
+    let resolved = globals_location_href(&ctx)
+        .and_then(|base| url::Url::parse(&base).ok())
+        .and_then(|base| base.join(&url).ok())
+        .map(|u| u.to_string())
+        .unwrap_or(url);
+
+    rquickjs::Promise::wrap_future(&ctx, do_fetch(resolved))
+}
+
+fn globals_location_href(ctx: &Ctx<'_>) -> Option<String> {
+    let globals = ctx.globals();
+    let location: Object = globals.get("location").ok()?;
+    location.get("href").ok()
+}
+
+fn local_storage() -> &'static Mutex<HashMap<String, String>> {
+    static STORE: std::sync::OnceLock<Mutex<HashMap<String, String>>> = std::sync::OnceLock::new();
+    STORE.get_or_init(|| Mutex::new(HashMap::new()))
+}
+
+fn session_storage() -> &'static Mutex<HashMap<String, String>> {
+    static STORE: std::sync::OnceLock<Mutex<HashMap<String, String>>> = std::sync::OnceLock::new();
+    STORE.get_or_init(|| Mutex::new(HashMap::new()))
+}
+
+fn create_storage<'js>(ctx: &Ctx<'js>, store: fn() -> &'static Mutex<HashMap<String, String>>) -> rquickjs::Result<Object<'js>> {
+    let storage = Object::new(ctx.clone())?;
+
+    let _ = storage.set("getItem", Func::from(move |key: String| -> Option<String> {
+        store().lock().unwrap().get(&key).cloned()
+    }));
+
+    let _ = storage.set("setItem", Func::from(move |key: String, value: String| {
+        store().lock().unwrap().insert(key, value);
+    }));
+
+    let _ = storage.set("removeItem", Func::from(move |key: String| {
+        store().lock().unwrap().remove(&key);
+    }));
+
+    let _ = storage.set("clear", Func::from(move || {
+        store().lock().unwrap().clear();
+    }));
+
+    let _ = storage.set("length", 0);
+
+    Ok(storage)
+}
+
+fn create_location<'js>(ctx: &Ctx<'js>, url: &str) -> rquickjs::Result<Object<'js>> {
+    let parsed = url::Url::parse(url).ok();
+    let loc = Object::new(ctx.clone())?;
+
+    let href = parsed.as_ref().map(|u| u.as_str()).unwrap_or(url);
+    loc.set("href", href)?;
+    loc.set("origin", parsed.as_ref().map(|u| u.origin().ascii_serialization()).unwrap_or_default())?;
+    loc.set("protocol", parsed.as_ref().map(|u| u.scheme()).unwrap_or("").to_string() + ":")?;
+    loc.set("host", parsed.as_ref().map(|u| u.host_str().unwrap_or("")).unwrap_or(""))?;
+    loc.set("hostname", parsed.as_ref().map(|u| u.host_str().unwrap_or("")).unwrap_or(""))?;
+    loc.set("port", parsed.as_ref().and_then(|u| u.port().map(|p| p.to_string())).unwrap_or_default())?;
+    loc.set("pathname", parsed.as_ref().map(|u| u.path()).unwrap_or("/"))?;
+    loc.set("search", parsed.as_ref().map(|u| u.query().map(|q| format!("?{}", q)).unwrap_or_default()).unwrap_or_default())?;
+    loc.set("hash", parsed.as_ref().map(|u| u.fragment().map(|f| format!("#{}", f)).unwrap_or_default()).unwrap_or_default())?;
+
+    Ok(loc)
 }
 
 pub struct JsRuntime {
@@ -58,7 +124,7 @@ pub struct JsRuntime {
 }
 
 impl JsRuntime {
-    pub async fn new(document_handle: Handle) -> Result<Self> {
+    pub async fn new(document_handle: Handle, page_url: &str) -> Result<Self> {
         let runtime = AsyncRuntime::new()?;
         let context = AsyncContext::full(&runtime).await?;
 
@@ -80,13 +146,30 @@ impl JsRuntime {
             let window_ref = globals.clone();
             globals.set("window", window_ref)?;
 
-            // setTimeout — drives callback after delay via spawned future
+            // window.location
+            let location = create_location(&ctx, page_url)?;
+            globals.set("location", location.clone())?;
+            if let Ok(window) = globals.get::<_, Object>("window") {
+                let _ = window.set("location", location);
+            }
+
+            // localStorage
+            if let Ok(storage) = create_storage(&ctx, local_storage) {
+                globals.set("localStorage", storage)?;
+            }
+
+            // sessionStorage
+            if let Ok(storage) = create_storage(&ctx, session_storage) {
+                globals.set("sessionStorage", storage)?;
+            }
+
+            // setTimeout
             globals.set("setTimeout", Func::from(setTimeout_impl))?;
 
-            // clearTimeout — aborts the spawned timer task
+            // clearTimeout
             globals.set("clearTimeout", Func::from(clearTimeout_impl))?;
 
-            // fetch — returns a Promise that resolves with the response text
+            // fetch
             globals.set("fetch", Func::from(fetch_impl))?;
 
             Ok::<(), anyhow::Error>(())

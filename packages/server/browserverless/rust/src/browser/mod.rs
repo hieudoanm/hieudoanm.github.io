@@ -13,10 +13,16 @@ pub struct Browser {
     client: Client,
     dom: RcDom,
     js_runtime: Option<JsRuntime>,
+    page_url: String,
+}
+
+struct ScriptContent {
+    inline: Option<String>,
+    external: Option<String>,
 }
 
 impl Browser {
-    pub fn new() -> Result<Self> {
+    pub fn new(url: &str) -> Result<Self> {
         let client = Client::builder()
             .user_agent("Browserverless/0.1.0")
             .build()?;
@@ -24,6 +30,7 @@ impl Browser {
             client,
             dom: RcDom::default(),
             js_runtime: None,
+            page_url: url.to_string(),
         })
     }
 
@@ -45,7 +52,7 @@ impl Browser {
             .read_from(&mut html.as_bytes())
             .context("Failed to parse HTML")?;
 
-        self.js_runtime = Some(JsRuntime::new(self.dom.document.clone()).await?);
+        self.js_runtime = Some(JsRuntime::new(self.dom.document.clone(), url).await?);
         self.execute_scripts().await?;
         if let Some(js) = &self.js_runtime {
             js.idle().await?;
@@ -55,39 +62,75 @@ impl Browser {
     }
 
     async fn execute_scripts(&mut self) -> Result<()> {
-        let mut scripts = Vec::new();
-        self.find_scripts(&self.dom.document, &mut scripts);
+        let scripts = self.collect_scripts(&self.dom.document);
 
         for (i, script) in scripts.iter().enumerate() {
-            let script_content = script.trim();
             if let Some(js_runtime) = &self.js_runtime {
-                if let Err(e) = js_runtime.execute(script_content).await {
-                    eprintln!("Failed to execute script {}: {}", i, e);
+                if let Some(inline) = &script.inline {
+                    if !inline.trim().is_empty() {
+                        if let Err(e) = js_runtime.execute(inline).await {
+                            eprintln!("Failed to execute script {}: {}", i, e);
+                        }
+                    }
+                }
+                if let Some(src) = &script.external {
+                    match self.fetch_external_script(src).await {
+                        Ok(code) => {
+                            if let Err(e) = js_runtime.execute(&code).await {
+                                eprintln!("Failed to execute external script {}: {}", i, e);
+                            }
+                        }
+                        Err(e) => {
+                            eprintln!("Failed to fetch external script '{}': {}", src, e);
+                        }
+                    }
                 }
             }
         }
         Ok(())
     }
 
-    fn find_scripts(&self, handle: &Handle, scripts: &mut Vec<String>) {
-        let node = handle;
-        match &node.data {
-            NodeData::Element { name, .. } if name.local == local_name!("script") => {
-                let mut content = String::new();
-                for child in node.children.borrow().iter() {
+    async fn fetch_external_script(&self, src: &str) -> Result<String> {
+        let base = url::Url::parse(&self.page_url)
+            .context("Failed to parse page URL")?;
+        let absolute = base.join(src)
+            .context(format!("Failed to resolve URL: {}", src))?;
+        let resp = self.client
+            .get(absolute.as_str())
+            .send()
+            .await
+            .context(format!("Failed to fetch script: {}", absolute))?;
+        resp.text().await.context("Failed to read script response")
+    }
+
+    fn collect_scripts(&self, handle: &Handle) -> Vec<ScriptContent> {
+        let mut scripts = Vec::new();
+        self.collect_scripts_recursive(handle, &mut scripts);
+        scripts
+    }
+
+    fn collect_scripts_recursive(&self, handle: &Handle, scripts: &mut Vec<ScriptContent>) {
+        if let NodeData::Element { name, attrs, .. } = &handle.data {
+            if name.local == local_name!("script") {
+                let mut inline = String::new();
+                for child in handle.children.borrow().iter() {
                     if let NodeData::Text { contents } = &child.data {
-                        content.push_str(&contents.borrow());
+                        inline.push_str(&contents.borrow());
                     }
                 }
-                if !content.is_empty() {
-                    scripts.push(content);
+                let src = get_attr_raw(attrs, "src");
+
+                if !inline.trim().is_empty() || src.is_some() {
+                    scripts.push(ScriptContent {
+                        inline: if inline.trim().is_empty() { None } else { Some(inline) },
+                        external: src,
+                    });
                 }
+                return;
             }
-            _ => {
-                for child in node.children.borrow().iter() {
-                    self.find_scripts(child, scripts);
-                }
-            }
+        }
+        for child in handle.children.borrow().iter() {
+            self.collect_scripts_recursive(child, scripts);
         }
     }
 
@@ -102,4 +145,13 @@ impl Browser {
 
         String::from_utf8(output).context("Failed to convert serialized HTML to string")
     }
+}
+
+fn get_attr_raw(attrs: &std::cell::RefCell<Vec<html5ever::Attribute>>, name: &str) -> Option<String> {
+    for attr in attrs.borrow().iter() {
+        if attr.name.local.to_string() == name {
+            return Some(attr.value.to_string());
+        }
+    }
+    None
 }

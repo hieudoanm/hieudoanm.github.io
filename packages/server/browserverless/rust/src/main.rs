@@ -16,7 +16,7 @@ async fn main() {
     env_logger::init();
     let args = Args::parse();
 
-    let mut browser = match Browser::new() {
+    let mut browser = match Browser::new(&args.url) {
         Ok(b) => b,
         Err(e) => {
             eprintln!("Internal error: {}", e);

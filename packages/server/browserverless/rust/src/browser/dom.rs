@@ -255,7 +255,6 @@ impl JsElement {
             }
         }
 
-        // dispatchEvent returns false if preventDefault was called
         let cancelled = event.get::<_, bool>("defaultPrevented").unwrap_or(false);
         !cancelled
     }
@@ -268,6 +267,26 @@ impl JsElement {
     #[qjs(rename = "submit")]
     pub fn submit<'js>(&self, ctx: rquickjs::Ctx<'js>) {
         let _ = self.dispatch_event(ctx, "submit".to_string());
+    }
+
+    #[qjs(rename = "focus")]
+    pub fn focus<'js>(&self, ctx: rquickjs::Ctx<'js>) {
+        let _ = self.dispatch_event(ctx, "focus".to_string());
+    }
+
+    #[qjs(rename = "blur")]
+    pub fn blur<'js>(&self, ctx: rquickjs::Ctx<'js>) {
+        let _ = self.dispatch_event(ctx, "blur".to_string());
+    }
+
+    #[qjs(rename = "change")]
+    pub fn change<'js>(&self, ctx: rquickjs::Ctx<'js>) {
+        let _ = self.dispatch_event(ctx, "change".to_string());
+    }
+
+    #[qjs(rename = "input")]
+    pub fn input<'js>(&self, ctx: rquickjs::Ctx<'js>) {
+        let _ = self.dispatch_event(ctx, "input".to_string());
     }
 }
 
