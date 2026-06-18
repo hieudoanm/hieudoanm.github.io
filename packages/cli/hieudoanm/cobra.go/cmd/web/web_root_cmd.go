@@ -16,7 +16,6 @@ func NewCommand() *cobra.Command {
 		RunE: func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
 	cmd.AddCommand(
-		newInstagramCmd(),
 		newShopifyCmd(),
 		newSimplifyCmd(),
 		newSnapshotCmd(),

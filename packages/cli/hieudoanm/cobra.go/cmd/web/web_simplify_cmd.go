@@ -13,5 +13,6 @@ func newSimplifyCmd() *cobra.Command {
 	}
 	cmd.AddCommand(newSimplifyCsvCmd())
 	cmd.AddCommand(newSimplifyMdCmd())
+	cmd.AddCommand(newSimplifyImagesCmd())
 	return cmd
 }

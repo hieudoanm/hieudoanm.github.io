@@ -33,40 +33,21 @@ func DefaultOptions() Options {
 }
 
 // chromePath resolves the Chrome/Chromium executable to use.
-// Priority: CHROME_PATH env → puppeteer local cache → system paths → rod auto-download.
+// Priority: CHROME_PATH env → system paths → puppeteer local cache → rod auto-download.
 func chromePath() string {
 	// 1. Explicit override
 	if p := os.Getenv("CHROME_PATH"); p != "" {
 		return p
 	}
 
-	home, _ := os.UserHomeDir()
-
-	// 2. Puppeteer cache — covers `npx @puppeteer/browsers install chrome@stable`
-	puppeteerGlobs := []string{
-		// local project install (your setup)
-		"./chrome/mac_arm-*/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
-		"./chrome/linux-*/chrome-linux64/chrome",
-		// global puppeteer cache
-		filepath.Join(home, ".cache/puppeteer/chrome/mac_arm-*/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing"),
-		filepath.Join(home, ".cache/puppeteer/chrome/mac-*/chrome-mac-x64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing"),
-		filepath.Join(home, ".cache/puppeteer/chrome/linux-*/chrome-linux64/chrome"),
-	}
-	for _, pattern := range puppeteerGlobs {
-		matches, err := filepath.Glob(pattern)
-		if err == nil && len(matches) > 0 {
-			return matches[len(matches)-1] // pick latest if multiple versions present
-		}
-	}
-
-	// 3. System-installed fallbacks
+	// 2. System-installed paths (most stable)
 	systemPaths := []string{
+		"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+		"/Applications/Chromium.app/Contents/MacOS/Chromium",
 		"/usr/bin/google-chrome",
 		"/usr/bin/google-chrome-stable",
 		"/usr/bin/chromium",
 		"/usr/bin/chromium-browser",
-		"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-		"/Applications/Chromium.app/Contents/MacOS/Chromium",
 	}
 	for _, p := range systemPaths {
 		if _, err := os.Stat(p); err == nil {
@@ -74,7 +55,61 @@ func chromePath() string {
 		}
 	}
 
+	home, _ := os.UserHomeDir()
+
+	// 3. Puppeteer cache — covers `npx @puppeteer/browsers install chrome@stable`
+	puppeteerGlobs := []string{
+		filepath.Join(home, ".cache/puppeteer/chrome/mac_arm-*/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing"),
+		filepath.Join(home, ".cache/puppeteer/chrome/mac-*/chrome-mac-x64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing"),
+		filepath.Join(home, ".cache/puppeteer/chrome/linux-*/chrome-linux64/chrome"),
+		"./chrome/mac_arm-*/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+		"./chrome/linux-*/chrome-linux64/chrome",
+	}
+	for _, pattern := range puppeteerGlobs {
+		matches, err := filepath.Glob(pattern)
+		if err == nil && len(matches) > 0 {
+			return matches[len(matches)-1]
+		}
+	}
+
 	return "" // let rod auto-download its own pinned Chromium
+}
+
+// FetchHTML navigates to a URL, waits for the page to load, and returns the
+// rendered HTML source.
+func FetchHTML(url string) (string, error) {
+	l := launcher.New().
+		Headless(true).
+		Set("no-sandbox", "").
+		Set("disable-gpu", "").
+		Set("disable-dev-shm-usage", "")
+
+	if p := chromePath(); p != "" {
+		l = l.Bin(p)
+	}
+
+	controlURL, err := l.Launch()
+	if err != nil {
+		return "", fmt.Errorf("launching browser: %w", err)
+	}
+
+	browser := rod.New().ControlURL(controlURL).MustConnect()
+	defer browser.MustClose()
+
+	page, err := browser.Page(proto.TargetCreateTarget{URL: "about:blank"})
+	if err != nil {
+		return "", fmt.Errorf("creating page: %w", err)
+	}
+	defer page.MustClose()
+
+	if err := page.Navigate(url); err != nil {
+		return "", fmt.Errorf("navigating to %s: %w", url, err)
+	}
+	if err := page.WaitLoad(); err != nil {
+		return "", fmt.Errorf("waiting for load: %w", err)
+	}
+
+	return page.HTML()
 }
 
 // Capture takes a screenshot of url and returns raw bytes (PNG or PDF).
