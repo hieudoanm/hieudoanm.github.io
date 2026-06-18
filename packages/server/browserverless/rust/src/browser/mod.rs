@@ -44,35 +44,30 @@ impl Browser {
             .from_utf8()
             .read_from(&mut html.as_bytes())
             .context("Failed to parse HTML")?;
-            
-        self.js_runtime = Some(JsRuntime::new(self.dom.document.clone())?);
+
+        self.js_runtime = Some(JsRuntime::new(self.dom.document.clone()).await?);
         self.execute_scripts().await?;
-        self.wait_until_idle();
+        if let Some(js) = &self.js_runtime {
+            js.idle().await?;
+        }
 
         Ok(())
     }
 
-    pub fn wait_until_idle(&mut self) {
-        if let Some(js_runtime) = &self.js_runtime {
-            let _ = js_runtime.runtime.execute_pending_job();
-        }
-    }
+    async fn execute_scripts(&mut self) -> Result<()> {
+        let mut scripts = Vec::new();
+        self.find_scripts(&self.dom.document, &mut scripts);
 
-            async fn execute_scripts(&mut self) -> Result<()> {
-                let mut scripts = Vec::new();
-                self.find_scripts(&self.dom.document, &mut scripts);
-
-                for (i, script) in scripts.iter().enumerate() {
-                    let script_content = script.trim();
-                    eprintln!(">>> Script {} (len={}):\n{}\n<<<", i, script_content.len(), script_content.get(..200).unwrap_or(script_content));
-                    if let Some(js_runtime) = &self.js_runtime {
-                        if let Err(e) = js_runtime.execute(script_content) {
-                            eprintln!("Failed to execute script {}: {}", i, e);
-                        }
-                    }
+        for (i, script) in scripts.iter().enumerate() {
+            let script_content = script.trim();
+            if let Some(js_runtime) = &self.js_runtime {
+                if let Err(e) = js_runtime.execute(script_content).await {
+                    eprintln!("Failed to execute script {}: {}", i, e);
                 }
-                Ok(())
             }
+        }
+        Ok(())
+    }
 
     fn find_scripts(&self, handle: &Handle, scripts: &mut Vec<String>) {
         let node = handle;

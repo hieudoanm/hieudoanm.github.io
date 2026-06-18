@@ -1,8 +1,8 @@
 mod browser;
 
-use anyhow::Result;
 use browser::Browser;
 use clap::Parser;
+use std::process;
 
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about = None)]
@@ -12,15 +12,35 @@ struct Args {
 }
 
 #[tokio::main]
-async fn main() -> Result<()> {
+async fn main() {
     env_logger::init();
     let args = Args::parse();
 
-    let mut browser = Browser::new()?;
-    browser.fetch(&args.url).await?;
+    let mut browser = match Browser::new() {
+        Ok(b) => b,
+        Err(e) => {
+            eprintln!("Internal error: {}", e);
+            process::exit(5);
+        }
+    };
 
-    let output_html = browser.serialize()?;
-    println!("{}", output_html);
+    if let Err(e) = browser.fetch(&args.url).await {
+        let msg = e.to_string();
+        if msg.contains("Timeout") {
+            eprintln!("Timeout: {}", msg);
+            process::exit(4);
+        }
+        eprintln!("Network error: {}", msg);
+        process::exit(2);
+    }
 
-    Ok(())
+    let output_html = match browser.serialize() {
+        Ok(h) => h,
+        Err(e) => {
+            eprintln!("Internal error: {}", e);
+            process::exit(5);
+        }
+    };
+
+    print!("{}", output_html);
 }
