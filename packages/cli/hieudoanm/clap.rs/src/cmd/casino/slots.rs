@@ -132,4 +132,28 @@ mod tests {
         assert_eq!(format_reels(&[0, 1, 2]), "  [Cherry]  [Lemon]  [Bell]");
         assert_eq!(format_reels(&[5, 5, 5]), "  [BAR]  [BAR]  [BAR]");
     }
+
+    #[test]
+    fn test_command_definition() {
+        let cmd = command();
+        assert!(!cmd.get_name().is_empty());
+    }
+
+    #[tokio::test]
+    async fn test_run() {
+        let cmd = command();
+        let m = cmd
+            .try_get_matches_from(vec!["slots", "--bet", "100"])
+            .unwrap();
+        run(&m).await.unwrap();
+    }
+
+    #[tokio::test]
+    async fn test_run_default_bet() {
+        let cmd = command();
+        let m = cmd
+            .try_get_matches_from(vec!["slots"])
+            .unwrap();
+        run(&m).await.unwrap();
+    }
 }

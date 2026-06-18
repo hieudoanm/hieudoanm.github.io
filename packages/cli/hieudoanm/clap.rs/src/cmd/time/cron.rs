@@ -305,6 +305,49 @@ mod tests {
         let desc = describe("* 9 * * *");
         assert!(desc.contains("every minute of hour"));
     }
+
+    #[test]
+    fn test_command_definition() {
+        let cmd = command();
+        assert!(!cmd.get_name().is_empty());
+    }
+
+    #[test]
+    fn test_next_runs_daily() {
+        let until = chrono::NaiveDate::from_ymd_opt(2099, 1, 10).unwrap();
+        let runs = next_runs("0 6 * * *", 3, until);
+        assert!(!runs.is_empty());
+        assert!(runs.len() <= 3);
+        for run in &runs {
+            assert_eq!(run.hour(), 6);
+            assert_eq!(run.minute(), 0);
+        }
+    }
+
+    #[test]
+    fn test_next_runs_invalid_expression() {
+        let until = chrono::NaiveDate::from_ymd_opt(2025, 1, 1).unwrap();
+        let runs = next_runs("invalid", 3, until);
+        assert!(runs.is_empty());
+    }
+
+    #[tokio::test]
+    async fn test_run_simple() {
+        let cmd = command();
+        let m = cmd
+            .try_get_matches_from(vec!["cron", "--expression", "* * * * *"])
+            .unwrap();
+        run(&m).await.unwrap();
+    }
+
+    #[tokio::test]
+    async fn test_run_with_next() {
+        let cmd = command();
+        let m = cmd
+            .try_get_matches_from(vec!["cron", "--expression", "0 6 * * *", "--next", "3"])
+            .unwrap();
+        run(&m).await.unwrap();
+    }
 }
 
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {

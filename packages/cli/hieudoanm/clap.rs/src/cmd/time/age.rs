@@ -102,6 +102,31 @@ mod tests {
         assert!(parse_date("not-a-date").is_none());
         assert!(parse_date("").is_none());
     }
+
+    #[test]
+    fn test_command_definition() {
+        let cmd = command();
+        assert!(!cmd.get_name().is_empty());
+    }
+
+    #[tokio::test]
+    async fn test_run_valid_date() {
+        let cmd = command();
+        let m = cmd
+            .try_get_matches_from(vec!["age", "--date", "1990-01-01"])
+            .unwrap();
+        run(&m).await.unwrap();
+    }
+
+    #[tokio::test]
+    async fn test_run_future_date() {
+        let cmd = command();
+        let m = cmd
+            .try_get_matches_from(vec!["age", "--date", "2099-01-01"])
+            .unwrap();
+        let result = run(&m).await;
+        assert!(result.is_err());
+    }
 }
 
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {

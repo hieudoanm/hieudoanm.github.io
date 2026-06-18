@@ -165,4 +165,19 @@ mod tests {
         assert_eq!(format_spin_result(2), "2 (Black, Even, 1-18)");
         assert_eq!(format_spin_result(32), "32 (Red, Even, 19-36)");
     }
+
+    #[test]
+    fn test_command_definition() {
+        let cmd = command();
+        assert!(!cmd.get_name().is_empty());
+    }
+
+    #[tokio::test]
+    async fn test_run_single_spin() {
+        let cmd = command();
+        let m = cmd
+            .try_get_matches_from(vec!["roulette", "--spins", "1"])
+            .unwrap();
+        run(&m).await.unwrap();
+    }
 }

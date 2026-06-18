@@ -200,4 +200,39 @@ mod tests {
         assert!((deposits - 1000.0).abs() < 0.01);
         assert!((fv - 1000.0).abs() < 0.01);
     }
+
+    #[test]
+    fn test_command_definition() {
+        let cmd = command();
+        assert!(!cmd.get_name().is_empty());
+    }
+
+    #[tokio::test]
+    async fn test_run_basic() {
+        let cmd = command();
+        let m = cmd
+            .try_get_matches_from(vec![
+                "compound",
+                "--principal", "1000",
+                "--rate", "10",
+                "--years", "5",
+            ])
+            .unwrap();
+        run(&m).await.unwrap();
+    }
+
+    #[tokio::test]
+    async fn test_run_json() {
+        let cmd = command();
+        let m = cmd
+            .try_get_matches_from(vec![
+                "compound",
+                "--principal", "1000",
+                "--rate", "10",
+                "--years", "5",
+                "--json",
+            ])
+            .unwrap();
+        run(&m).await.unwrap();
+    }
 }

@@ -264,6 +264,12 @@ mod tests {
         let result = hmac_sha256_sign(long_key, b"test data");
         assert_eq!(result.len(), 32);
     }
+
+    #[test]
+    fn test_command_definition() {
+        let cmd = command();
+        assert!(!cmd.get_name().is_empty());
+    }
 }
 
 pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {

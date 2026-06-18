@@ -106,6 +106,54 @@ mod tests {
     fn test_hand_display_empty() {
         assert_eq!(hand_display(&[], false), "");
     }
+
+    #[test]
+    fn test_run_dealer_hits_until_17() {
+        let mut deck = new_shuffled_deck();
+        let mut hand = vec![Card { rank: 10, suit: 0 }, Card { rank: 6, suit: 1 }];
+        run_dealer(&mut deck, &mut hand);
+        assert!(hand_value(&hand) >= 17);
+    }
+
+    #[test]
+    fn test_run_dealer_stands_on_17() {
+        let mut deck = new_shuffled_deck();
+        let mut hand = vec![Card { rank: 10, suit: 0 }, Card { rank: 7, suit: 1 }];
+        let len_before = hand.len();
+        run_dealer(&mut deck, &mut hand);
+        assert_eq!(hand.len(), len_before);
+    }
+
+    #[test]
+    fn test_command_definition() {
+        let cmd = command();
+        assert!(!cmd.get_name().is_empty());
+    }
+
+    #[test]
+    fn test_run_dispatches_play() {
+        let cmd = command();
+        assert!(cmd.clone().try_get_matches_from(vec!["blackjack", "play"]).is_ok());
+    }
+
+    #[test]
+    fn test_run_dispatches_count() {
+        let cmd = command();
+        assert!(cmd.clone().try_get_matches_from(vec!["blackjack", "count"]).is_ok());
+    }
+
+    #[test]
+    fn test_hand_value_empty() {
+        assert_eq!(hand_value(&[]), 0);
+    }
+
+    #[test]
+    fn test_card_display_all_suits() {
+        assert_eq!(card_display(&c(2, 0)), "2c");
+        assert_eq!(card_display(&c(3, 1)), "3d");
+        assert_eq!(card_display(&c(4, 2)), "4h");
+        assert_eq!(card_display(&c(5, 3)), "5s");
+    }
 }
 
 fn card_value(c: &Card) -> u8 {

@@ -141,4 +141,73 @@ mod tests {
         let prog = p.progress();
         assert!(prog >= 0.0 && prog <= 1.0);
     }
+
+    #[test]
+    fn test_elapsed_not_paused() {
+        let p = Pomodoro::new(25, 5);
+        let e = p.elapsed();
+        assert!(e.as_secs() < 1);
+    }
+
+    #[test]
+    fn test_elapsed_paused_no_paused_at() {
+        let mut p = Pomodoro::new(25, 5);
+        p.paused = true;
+        p.paused_at = None;
+        assert_eq!(p.elapsed(), Duration::ZERO);
+    }
+
+    #[test]
+    fn test_elapsed_paused_with_paused_at() {
+        let mut p = Pomodoro::new(25, 5);
+        p.paused = true;
+        p.paused_at = Some(std::time::Instant::now());
+        let e = p.elapsed();
+        assert!(e.as_secs() < 1);
+    }
+
+    #[test]
+    fn test_remaining_initial() {
+        let p = Pomodoro::new(25, 5);
+        let r = p.remaining();
+        assert!(r > Duration::ZERO);
+        assert!(r <= p.total_duration);
+    }
+
+    #[test]
+    fn test_remaining_after_expiry() {
+        let p = Pomodoro::new(0, 5);
+        assert_eq!(p.remaining(), Duration::ZERO);
+    }
+
+    #[test]
+    fn test_tick_immediate_transition() {
+        let mut p = Pomodoro::new(0, 5);
+        let result = p.tick();
+        assert_eq!(result, Some(PomodoroState::Break));
+        assert_eq!(p.state, PomodoroState::Break);
+    }
+
+    #[test]
+    fn test_tick_from_break_to_done() {
+        let mut p = Pomodoro::new(0, 0);
+        p.tick();
+        let result = p.tick();
+        assert_eq!(result, Some(PomodoroState::Done));
+        assert_eq!(p.state, PomodoroState::Done);
+    }
+
+    #[test]
+    fn test_tick_returns_none_when_paused() {
+        let mut p = Pomodoro::new(25, 5);
+        p.paused = true;
+        assert!(p.tick().is_none());
+    }
+
+    #[test]
+    fn test_tick_returns_none_when_stopped() {
+        let mut p = Pomodoro::new(25, 5);
+        p.stop();
+        assert!(p.tick().is_none());
+    }
 }

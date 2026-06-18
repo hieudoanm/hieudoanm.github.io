@@ -129,6 +129,23 @@ mod tests {
         let svg = generate_og_svg(&repo);
         assert!(svg.contains("nolang"));
     }
+
+    #[test]
+    fn test_command_definition() {
+        let cmd = command();
+        assert!(!cmd.get_name().is_empty());
+    }
+
+    #[tokio::test]
+    async fn test_run_invalid_repo_format() {
+        let cmd = command();
+        let m = cmd
+            .try_get_matches_from(vec!["og", "--url", "invalid-format"])
+            .unwrap();
+        let result = run(&m).await;
+        assert!(result.is_err());
+        assert!(result.unwrap_err().to_string().contains("owner/repo"));
+    }
 }
 
 fn escape_xml(s: &str) -> String {

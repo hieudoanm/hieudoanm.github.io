@@ -46,6 +46,12 @@ mod tests {
         assert_eq!(opts.width, 1440);
         assert_eq!(opts.height, 900);
     }
+
+    #[test]
+    fn test_capture_returns_error() {
+        let result = capture("https://example.com", Options::default());
+        assert!(result.is_err());
+    }
 }
 
 pub fn capture(_url: &str, _opts: Options) -> Result<Vec<u8>, anyhow::Error> {

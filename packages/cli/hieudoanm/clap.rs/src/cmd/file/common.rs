@@ -239,6 +239,15 @@ mod tests {
         assert!(parse_mode("abc").is_err());
         assert!(parse_mode("").is_err());
     }
+
+    #[test]
+    fn test_read_stdin_callable() {
+        use std::io::IsTerminal;
+        let result = read_stdin();
+        if std::io::stdin().is_terminal() {
+            assert!(result.is_err());
+        }
+    }
 }
 
 pub fn read_stdin() -> anyhow::Result<String> {

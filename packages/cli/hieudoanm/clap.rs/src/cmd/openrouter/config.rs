@@ -106,4 +106,17 @@ mod tests {
     fn test_read_key_from_file_nonexistent() {
         assert_eq!(read_key_from_file("/tmp/nonexistent-key-file-xyz"), None);
     }
+
+    #[test]
+    fn test_load_api_key_from_env() {
+        let original = std::env::var("OPEN_ROUTER_API_KEY").ok();
+        std::env::set_var("OPEN_ROUTER_API_KEY", "sk-test-key-from-env");
+        let key = load_api_key();
+        assert_eq!(key, "sk-test-key-from-env");
+        if let Some(v) = original {
+            std::env::set_var("OPEN_ROUTER_API_KEY", v);
+        } else {
+            std::env::remove_var("OPEN_ROUTER_API_KEY");
+        }
+    }
 }

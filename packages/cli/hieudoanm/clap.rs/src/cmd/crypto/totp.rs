@@ -144,6 +144,21 @@ mod tests {
         let code = hotp(key, 0, 6);
         assert_eq!(code.len(), 6);
     }
+
+    #[test]
+    fn test_command_definition() {
+        let cmd = command();
+        assert!(!cmd.get_name().is_empty());
+    }
+
+    #[tokio::test]
+    async fn test_run_with_secret() {
+        let cmd = command();
+        let m = cmd
+            .try_get_matches_from(vec!["totp", "--secret", "JBSWY3DP"])
+            .unwrap();
+        run(&m).await.unwrap();
+    }
 }
 
 pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {

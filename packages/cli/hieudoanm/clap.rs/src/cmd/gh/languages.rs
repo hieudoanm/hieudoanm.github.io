@@ -67,6 +67,23 @@ mod tests {
         assert!(svg.contains("Rust"));
         assert!(svg.contains("0.1%"));
     }
+
+    #[test]
+    fn test_command_definition() {
+        let cmd = command();
+        assert!(!cmd.get_name().is_empty());
+    }
+
+    #[tokio::test]
+    async fn test_run_invalid_repo_format() {
+        let cmd = command();
+        let m = cmd
+            .try_get_matches_from(vec!["languages", "--repo", "invalid-format"])
+            .unwrap();
+        let result = run(&m).await;
+        assert!(result.is_err());
+        assert!(result.unwrap_err().to_string().contains("owner/repo"));
+    }
 }
 
 fn generate_languages_svg(langs: &HashMap<String, i64>) -> String {

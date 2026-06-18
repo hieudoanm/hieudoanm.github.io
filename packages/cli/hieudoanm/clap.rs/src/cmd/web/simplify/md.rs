@@ -136,6 +136,66 @@ mod tests {
         let table = doc.root_element();
         assert_eq!(convert_table(&table), "");
     }
+
+    #[test]
+    fn test_command_definition() {
+        let cmd = command();
+        assert!(!cmd.get_name().is_empty());
+    }
+
+    #[test]
+    fn test_extract_host_with_port() {
+        assert_eq!(extract_host("https://example.com:8080/page"), "example_com");
+    }
+
+    #[test]
+    fn test_extract_host_www() {
+        assert_eq!(extract_host("https://www.example.com"), "example_com");
+    }
+
+    #[test]
+    fn test_convert_node_span() {
+        assert_eq!(html_to_markdown("<span><b>text</b></span>"), "text");
+    }
+
+    #[test]
+    fn test_convert_node_default_branch() {
+        assert_eq!(
+            html_to_markdown("<div><main><article><section><b>content</b></section></article></main></div>"),
+            "content"
+        );
+    }
+
+    #[test]
+    fn test_convert_node_a_without_href() {
+        assert_eq!(html_to_markdown("<a>click</a>"), "click");
+    }
+
+    #[test]
+    fn test_convert_node_a_empty_text() {
+        assert_eq!(html_to_markdown(r#"<a href="https://example.com"></a>"#), "");
+    }
+
+    #[test]
+    fn test_convert_table_multi_column() {
+        let md = html_to_markdown(
+            "<table><tr><th>A</th><th>B</th><th>C</th></tr><tr><td>1</td><td>2</td><td>3</td></tr></table>",
+        );
+        assert!(md.contains("| A | B | C |"));
+        assert!(md.contains("| 1 | 2 | 3 |"));
+    }
+
+    #[test]
+    fn test_convert_table_empty_rows_filtered() {
+        let md = html_to_markdown("<table><tr></tr></table>");
+        assert_eq!(md, "");
+    }
+
+    #[test]
+    fn test_convert_node_container_div() {
+        let md = html_to_markdown("<div><p>hello</p><p>world</p></div>");
+        assert_eq!(md, "hello\n\nworld");
+    }
 }
 
 pub fn command() -> clap::Command {

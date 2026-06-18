@@ -138,4 +138,24 @@ mod tests {
     fn test_deburr_str_empty() {
         assert_eq!(deburr_str(""), "");
     }
+
+    #[test]
+    fn test_commands_definition() {
+        let cmds = commands();
+        assert!(!cmds.is_empty());
+        for cmd in &cmds {
+            assert!(!cmd.get_name().is_empty());
+        }
+    }
+
+    #[tokio::test]
+    async fn test_run_capitalise() {
+        let mut cmds = commands();
+        let cmd = cmds.remove(0);
+        let m = cmd
+            .arg(clap::Arg::new("text").required(true))
+            .try_get_matches_from(vec!["capitalise", "hello"])
+            .unwrap();
+        run("capitalise", &m).await.unwrap();
+    }
 }

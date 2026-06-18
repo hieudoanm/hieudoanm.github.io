@@ -110,6 +110,41 @@ mod tests {
         let issues = validate_spec(&spec);
         assert!(issues.iter().any(|i| i.contains("title")));
     }
+
+    #[test]
+    fn test_command_definition() {
+        let cmd = command();
+        assert!(!cmd.get_name().is_empty());
+    }
+
+    #[tokio::test]
+    async fn test_run_nonexistent_file() {
+        let cmd = command();
+        let m = cmd
+            .try_get_matches_from(vec!["validate", "--file", "/tmp/nonexistent_openapi_file_xyz.yaml"])
+            .unwrap();
+        let result = run(&m).await;
+        assert!(result.is_err());
+    }
+
+    #[tokio::test]
+    async fn test_run_valid_spec() {
+        use std::io::Write;
+        let dir = std::env::temp_dir().join("test_openapi_valid_spec.yaml");
+        let yaml = serde_yaml::to_string(&serde_json::json!({
+            "openapi": "3.0.0",
+            "info": {"title": "Test", "version": "1.0.0"},
+            "paths": {"/test": {"get": {"responses": {"200": {"description": "OK"}}}}}
+        })).unwrap();
+        let mut f = std::fs::File::create(&dir).unwrap();
+        f.write_all(yaml.as_bytes()).unwrap();
+        let cmd = command();
+        let m = cmd
+            .try_get_matches_from(vec!["validate", "--file", dir.to_str().unwrap()])
+            .unwrap();
+        run(&m).await.unwrap();
+        std::fs::remove_file(&dir).ok();
+    }
 }
 
 fn validate_spec(spec: &super::service::JSON) -> Vec<String> {

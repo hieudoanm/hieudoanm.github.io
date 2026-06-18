@@ -64,6 +64,7 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use clap::Command;
 
     #[test]
     fn test_parse_exclude_list_empty() {
@@ -101,5 +102,44 @@ mod tests {
         assert_eq!(m.len(), 2);
         assert!(m.contains_key("a"));
         assert!(m.contains_key("b"));
+    }
+
+    fn make_scan_command() -> Command {
+        Command::new("scan")
+            .arg(clap::Arg::new("dir").required(true))
+            .arg(clap::Arg::new("out").required(true))
+            .arg(clap::Arg::new("exclude").default_value(""))
+            .arg(
+                clap::Arg::new("verbose")
+                    .long("verbose")
+                    .short('v')
+                    .action(clap::ArgAction::SetTrue),
+            )
+    }
+
+    #[tokio::test]
+    async fn test_run_nonexistent_dir() {
+        let cmd = make_scan_command();
+        let m = cmd
+            .try_get_matches_from(vec!["scan", "/tmp/nonexistent_dir_xyz", "/tmp/out.graphml"])
+            .unwrap();
+        let result = run(&m).await;
+        assert!(result.is_err());
+    }
+
+    #[tokio::test]
+    async fn test_run_with_exclude_and_verbose() {
+        let cmd = make_scan_command();
+        let m = cmd
+            .try_get_matches_from(vec![
+                "scan",
+                "/tmp/nonexistent_dir_abc",
+                "/tmp/out.graphml",
+                "node_modules,target",
+                "-v",
+            ])
+            .unwrap();
+        let result = run(&m).await;
+        assert!(result.is_err());
     }
 }

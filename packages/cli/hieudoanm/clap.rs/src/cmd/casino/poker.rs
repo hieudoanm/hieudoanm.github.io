@@ -130,6 +130,57 @@ mod tests {
         let hand = [c(14, 0), c(13, 1), c(12, 2), c(11, 3), c(10, 0)];
         assert_eq!(sum_high_cards(&hand), 1413121110);
     }
+
+    #[test]
+    fn test_command_definition() {
+        let cmd = command();
+        assert!(!cmd.get_name().is_empty());
+    }
+
+    #[test]
+    fn test_calculate_odds_simple() {
+        let hole = vec![c(14, 0), c(14, 1)];
+        let board = vec![c(14, 2), c(14, 3), c(9, 0), c(9, 1), c(2, 0)];
+        let result = calculate_odds(&hole, &board, 1, 100);
+        assert!(result.win >= 0.0);
+        assert!(result.tie >= 0.0);
+        assert!(result.lose >= 0.0);
+        assert!((result.win + result.tie + result.lose - 100.0).abs() < 0.01);
+    }
+
+    #[tokio::test]
+    async fn test_run_valid() {
+        let cmd = command();
+        let m = cmd
+            .try_get_matches_from(vec!["poker", "--hand", "Ah Kh"])
+            .unwrap();
+        run(&m).await.unwrap();
+    }
+
+    #[tokio::test]
+    async fn test_run_with_board() {
+        let cmd = command();
+        let m = cmd
+            .try_get_matches_from(vec![
+                "poker",
+                "--hand",
+                "Ah Kh",
+                "--board",
+                "2h 7s Tc",
+            ])
+            .unwrap();
+        run(&m).await.unwrap();
+    }
+
+    #[tokio::test]
+    async fn test_run_duplicate_cards() {
+        let cmd = command();
+        let m = cmd
+            .try_get_matches_from(vec!["poker", "--hand", "Ah Kh", "--board", "Ah"])
+            .unwrap();
+        let result = run(&m).await;
+        assert!(result.is_err());
+    }
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord)]

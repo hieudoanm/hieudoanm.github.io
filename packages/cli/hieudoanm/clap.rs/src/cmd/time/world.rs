@@ -113,6 +113,50 @@ mod tests {
         let offset = load_offset("tokyo").unwrap();
         assert_eq!(offset.local_minus_utc(), 9 * 3600);
     }
+
+    #[test]
+    fn test_load_offset_utc_lowercase() {
+        let offset = load_offset("utc+5").unwrap();
+        assert_eq!(offset.local_minus_utc(), 5 * 3600);
+    }
+
+    #[test]
+    fn test_load_offset_utc_lowercase_minus() {
+        let offset = load_offset("utc-3:30").unwrap();
+        assert_eq!(offset.local_minus_utc(), -(3 * 3600 + 30 * 60));
+    }
+
+    #[test]
+    fn test_command_definition() {
+        let cmd = command();
+        assert_eq!(cmd.get_name(), "world");
+    }
+
+    #[tokio::test]
+    async fn test_run_default_zones() {
+        let cmd = command();
+        let m = cmd.try_get_matches_from(vec!["world"]).unwrap();
+        run(&m).await.unwrap();
+    }
+
+    #[tokio::test]
+    async fn test_run_with_known_zones() {
+        let cmd = command();
+        let m = cmd
+            .try_get_matches_from(vec!["world", "ny", "london", "utc"])
+            .unwrap();
+        run(&m).await.unwrap();
+    }
+
+    #[tokio::test]
+    async fn test_run_with_unknown_zone() {
+        let cmd = command();
+        let m = cmd
+            .try_get_matches_from(vec!["world", "unknownzone"])
+            .unwrap();
+        let result = run(&m).await;
+        assert!(result.is_err());
+    }
 }
 
 pub fn command() -> clap::Command {

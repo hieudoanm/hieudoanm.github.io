@@ -104,6 +104,40 @@ mod tests {
     fn test_hand_display_empty() {
         assert_eq!(hand_display(&[]), "");
     }
+
+    #[test]
+    fn test_command_definition() {
+        let cmd = command();
+        assert!(!cmd.get_name().is_empty());
+    }
+
+    #[test]
+    fn test_deal_baccarat() {
+        let mut deck = new_shuffled_deck();
+        let (player, banker, pv, bv) = deal_baccarat(&mut deck);
+        assert!(player.len() >= 2);
+        assert!(banker.len() >= 2);
+        assert!(pv <= 9);
+        assert!(bv <= 9);
+    }
+
+    #[tokio::test]
+    async fn test_run_default_bet() {
+        let cmd = command();
+        let m = cmd
+            .try_get_matches_from(vec!["baccarat"])
+            .unwrap();
+        run(&m).await.unwrap();
+    }
+
+    #[tokio::test]
+    async fn test_run_banker_bet() {
+        let cmd = command();
+        let m = cmd
+            .try_get_matches_from(vec!["baccarat", "--bet", "banker"])
+            .unwrap();
+        run(&m).await.unwrap();
+    }
 }
 
 fn baccarat_value(c: &Card) -> u8 {

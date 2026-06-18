@@ -65,4 +65,20 @@ mod tests {
         let rt = tokio::runtime::Runtime::new().unwrap();
         rt.block_on(sub_uci(&m)).unwrap();
     }
+
+    #[tokio::test]
+    async fn test_run_with_fen_subcommand() {
+        let cmd = command();
+        let m = cmd.try_get_matches_from(vec!["pgn", "fen"]).unwrap();
+        let result = run(&m).await;
+        assert!(result.is_ok());
+    }
+
+    #[tokio::test]
+    async fn test_run_with_uci_subcommand() {
+        let cmd = command();
+        let m = cmd.try_get_matches_from(vec!["pgn", "uci"]).unwrap();
+        let result = run(&m).await;
+        assert!(result.is_ok());
+    }
 }

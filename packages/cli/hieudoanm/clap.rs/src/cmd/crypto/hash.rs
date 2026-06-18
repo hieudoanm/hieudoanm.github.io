@@ -250,6 +250,66 @@ mod tests {
         let hash = hex_encode(&result);
         assert_eq!(hash.len(), 64);
     }
+
+    #[test]
+    fn test_command_definition() {
+        let cmd = command();
+        assert_eq!(cmd.get_name(), "hash");
+    }
+
+    #[tokio::test]
+    async fn test_run_with_text_sha256() {
+        let cmd = command();
+        let m = cmd
+            .try_get_matches_from(vec!["hash", "--text", "hello", "--algo", "sha256"])
+            .unwrap();
+        run(&m).await.unwrap();
+    }
+
+    #[tokio::test]
+    async fn test_run_with_text_md5_json() {
+        let cmd = command();
+        let m = cmd
+            .try_get_matches_from(vec!["hash", "--text", "hello", "--algo", "md5", "--json"])
+            .unwrap();
+        run(&m).await.unwrap();
+    }
+
+    #[tokio::test]
+    async fn test_run_with_hmac_sha256() {
+        let cmd = command();
+        let m = cmd
+            .try_get_matches_from(vec!["hash", "--text", "data", "--key", "key", "--algo", "sha256"])
+            .unwrap();
+        run(&m).await.unwrap();
+    }
+
+    #[tokio::test]
+    async fn test_run_with_hmac_sha1_json() {
+        let cmd = command();
+        let m = cmd
+            .try_get_matches_from(vec!["hash", "--text", "data", "--key", "key", "--algo", "sha1", "--json"])
+            .unwrap();
+        run(&m).await.unwrap();
+    }
+
+    #[tokio::test]
+    async fn test_run_with_hmac_md5() {
+        let cmd = command();
+        let m = cmd
+            .try_get_matches_from(vec!["hash", "--text", "data", "--key", "key", "--algo", "md5"])
+            .unwrap();
+        run(&m).await.unwrap();
+    }
+
+    #[tokio::test]
+    async fn test_run_with_hmac_sha512_json() {
+        let cmd = command();
+        let m = cmd
+            .try_get_matches_from(vec!["hash", "--text", "data", "--key", "key", "--algo", "sha512", "--json"])
+            .unwrap();
+        run(&m).await.unwrap();
+    }
 }
 
 pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {

@@ -200,6 +200,34 @@ mod tests {
         assert!(diff.contains("- hello"));
         assert!(diff.contains("+ there"));
     }
+
+    #[test]
+    fn test_command_definition() {
+        let cmd = command();
+        assert!(!cmd.get_name().is_empty());
+    }
+
+    #[test]
+    fn test_show_diff_does_not_panic() {
+        show_diff("hello\nworld", "hello\nthere");
+        show_diff("", "new line");
+        show_diff("old line", "");
+    }
+
+    #[tokio::test]
+    async fn test_run_nonexistent_file() {
+        let cmd = command();
+        let m = cmd
+            .try_get_matches_from(vec![
+                "edit",
+                "-f", "/tmp/nonexistent_edit_file_xyz.txt",
+                "-o", "old",
+                "--new", "new",
+            ])
+            .unwrap();
+        let result = run(&m, false).await;
+        assert!(result.is_err());
+    }
 }
 
 pub fn command() -> clap::Command {

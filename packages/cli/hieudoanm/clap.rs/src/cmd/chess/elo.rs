@@ -1,4 +1,4 @@
-use std::io::{self, BufRead, Write};
+use std::io::{self, BufRead};
 
 pub fn command() -> clap::Command {
     clap::Command::new("elo").about("Calculate new Elo rating after a game")
@@ -10,24 +10,16 @@ pub fn calculate_elo(my_rating: i32, opponent_rating: i32, score: f64, k_factor:
     my_rating as f64 + k_factor as f64 * (score - expected)
 }
 
-pub async fn run(_matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let stdin = io::stdin();
-    let mut reader = stdin.lock();
-
-    print!("Enter your rating: ");
-    io::stdout().flush()?;
+fn read_rating_input<R: BufRead>(reader: &mut R) -> anyhow::Result<(i32, i32, f64, i32)> {
     let mut input = String::new();
+
     reader.read_line(&mut input)?;
     let my_rating: i32 = input.trim().parse().context("invalid rating")?;
 
-    print!("Enter opponent's rating: ");
-    io::stdout().flush()?;
     input.clear();
     reader.read_line(&mut input)?;
     let opponent_rating: i32 = input.trim().parse().context("invalid opponent rating")?;
 
-    print!("Enter game result (1=win, 0.5=draw, 0=loss): ");
-    io::stdout().flush()?;
     input.clear();
     reader.read_line(&mut input)?;
     let score: f64 = input
@@ -38,16 +30,22 @@ pub async fn run(_matches: &clap::ArgMatches) -> anyhow::Result<()> {
         anyhow::bail!("invalid score, must be 0, 0.5, or 1");
     }
 
-    let mut k = 20;
-    print!("Enter K-factor (default 20, press Enter to skip): ");
-    io::stdout().flush()?;
     input.clear();
     reader.read_line(&mut input)?;
     let k_input = input.trim();
-    if !k_input.is_empty() {
-        k = k_input.parse().context("invalid K-factor")?;
-    }
+    let k = if k_input.is_empty() {
+        20
+    } else {
+        k_input.parse().context("invalid K-factor")?
+    };
 
+    Ok((my_rating, opponent_rating, score, k))
+}
+
+pub async fn run(_matches: &clap::ArgMatches) -> anyhow::Result<()> {
+    let stdin = io::stdin();
+    let mut reader = stdin.lock();
+    let (my_rating, opponent_rating, score, k) = read_rating_input(&mut reader)?;
     let new_rating = calculate_elo(my_rating, opponent_rating, score, k);
     println!();
     println!("Your new rating: {:.0}", new_rating);
@@ -104,5 +102,54 @@ mod tests {
         let new_40 = calculate_elo(1500, 1500, 1.0, 40);
         assert!((new_20 - 1510.0).abs() < 0.01);
         assert!((new_40 - 1520.0).abs() < 0.01);
+    }
+
+    #[test]
+    fn test_command_definition() {
+        let cmd = command();
+        assert!(!cmd.get_name().is_empty());
+    }
+
+    #[test]
+    fn test_read_rating_input_valid() {
+        let input = b"1500\n1700\n1.0\n32\n";
+        let mut reader = std::io::BufReader::new(&input[..]);
+        let (my, opponent, score, k) = read_rating_input(&mut reader).unwrap();
+        assert_eq!(my, 1500);
+        assert_eq!(opponent, 1700);
+        assert!((score - 1.0).abs() < 0.001);
+        assert_eq!(k, 32);
+    }
+
+    #[test]
+    fn test_read_rating_input_default_k_factor() {
+        let input = b"1500\n1500\n0.5\n\n";
+        let mut reader = std::io::BufReader::new(&input[..]);
+        let (my, opponent, score, k) = read_rating_input(&mut reader).unwrap();
+        assert_eq!(my, 1500);
+        assert_eq!(opponent, 1500);
+        assert!((score - 0.5).abs() < 0.001);
+        assert_eq!(k, 20);
+    }
+
+    #[test]
+    fn test_read_rating_input_invalid_rating() {
+        let input = b"abc\n";
+        let mut reader = std::io::BufReader::new(&input[..]);
+        assert!(read_rating_input(&mut reader).is_err());
+    }
+
+    #[test]
+    fn test_read_rating_input_invalid_score() {
+        let input = b"1500\n1700\n2.0\n";
+        let mut reader = std::io::BufReader::new(&input[..]);
+        assert!(read_rating_input(&mut reader).is_err());
+    }
+
+    #[test]
+    fn test_read_rating_input_invalid_k() {
+        let input = b"1500\n1700\n0.5\nabc\n";
+        let mut reader = std::io::BufReader::new(&input[..]);
+        assert!(read_rating_input(&mut reader).is_err());
     }
 }

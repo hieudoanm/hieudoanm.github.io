@@ -205,6 +205,40 @@ mod tests {
     }
 
     #[test]
+    fn test_print_citation_does_not_panic() {
+        let data = make_data(
+            vec![Author { given: Some("John".into()), family: Some("Doe".into()) }],
+            "Paper", 2023,
+        );
+        print_citation(&data);
+    }
+
+    #[test]
+    fn test_print_reference_does_not_panic() {
+        let data = make_data(
+            vec![Author { given: Some("John".into()), family: Some("Doe".into()) }],
+            "Paper", 2023,
+        );
+        print_reference(&data);
+    }
+
+    #[test]
+    fn test_format_reference_three_authors() {
+        let data = make_data(
+            vec![
+                Author { given: Some("A".into()), family: Some("Alpha".into()) },
+                Author { given: Some("B".into()), family: Some("Beta".into()) },
+                Author { given: Some("C".into()), family: Some("Gamma".into()) },
+            ],
+            "Multi Author Study", 2024,
+        );
+        let ref_text = format_reference(&data);
+        assert!(ref_text.contains("Alpha, A."));
+        assert!(ref_text.contains(", Beta, B."));
+        assert!(ref_text.contains(" & Gamma, C."));
+    }
+
+    #[test]
     fn test_format_reference_basic() {
         let data = make_data(
             vec![
@@ -219,6 +253,43 @@ mod tests {
         assert!(ref_text.contains("(2022)"));
         assert!(ref_text.contains("An Important Study"));
         assert!(ref_text.contains("Test Journal"));
+    }
+
+    #[test]
+    fn test_format_reference_one_author() {
+        let data = make_data(
+            vec![Author { given: Some("John".into()), family: Some("Doe".into()) }],
+            "Single Author Paper", 2023,
+        );
+        let ref_text = format_reference(&data);
+        assert!(ref_text.starts_with("Doe, J."));
+        assert!(ref_text.contains("(2023)"));
+    }
+
+    #[test]
+    fn test_format_reference_no_authors() {
+        let data = make_data(vec![], "No Author Work", 2023);
+        let ref_text = format_reference(&data);
+        assert!(ref_text.starts_with(" (2023)."));
+    }
+
+    #[test]
+    fn test_format_reference_no_given() {
+        let data = CrossRefData {
+            status: "ok".into(),
+            message: Message {
+                author: Some(vec![Author { given: None, family: Some("Doe".into()) }]),
+                title: Some(vec!["Paper".into()]),
+                container_title: None,
+                volume: None,
+                issue: None,
+                page: None,
+                published_print: None,
+            },
+        };
+        let ref_text = format_reference(&data);
+        assert!(ref_text.contains("Doe, ."));
+        assert!(ref_text.contains("n.d."));
     }
 }
 

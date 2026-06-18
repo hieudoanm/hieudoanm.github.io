@@ -275,4 +275,62 @@ mod tests {
         let results = parse_duck_duck_go_results(html, 5);
         assert_eq!(results[0].url, "https://example.com");
     }
+
+    #[test]
+    fn test_command_definition() {
+        let cmd = command();
+        assert!(!cmd.get_name().is_empty());
+    }
+
+    #[test]
+    fn test_output_web_results_json_does_not_panic() {
+        let results = vec![WebResult {
+            title: "Test".into(),
+            url: "https://test.com".into(),
+            snippet: "A snippet".into(),
+        }];
+        output_web_results(&results, "test", true);
+    }
+
+    #[test]
+    fn test_output_web_results_empty_does_not_panic() {
+        output_web_results(&[], "test", false);
+    }
+
+    #[test]
+    fn test_output_web_results_non_empty_does_not_panic() {
+        let results = vec![WebResult {
+            title: "Test".into(),
+            url: "https://test.com".into(),
+            snippet: "A snippet".into(),
+        }];
+        output_web_results(&results, "test", false);
+    }
+
+    #[tokio::test]
+    async fn test_run_unsupported_source() {
+        let cmd = command();
+        let m = cmd
+            .try_get_matches_from(vec!["web", "--query", "test", "--source", "google"])
+            .unwrap();
+        let result = run(&m).await;
+        assert!(result.is_err());
+    }
+
+    #[test]
+    fn test_clean_html_unknown_entity() {
+        assert_eq!(clean_html("&unknown;"), "&unknown;");
+    }
+
+    #[test]
+    fn test_parse_duck_duck_go_results_mismatched_snippets() {
+        let html = r#"
+            <a class="result-link" href="https://a.com">A</a>
+            <td class="result-snippet">Snippet A</td>
+            <a class="result-link" href="https://b.com">B</a>
+        "#;
+        let results = parse_duck_duck_go_results(html, 5);
+        assert_eq!(results.len(), 2);
+        assert_eq!(results[1].snippet, "");
+    }
 }

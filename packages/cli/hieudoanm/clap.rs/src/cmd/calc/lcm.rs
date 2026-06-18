@@ -102,4 +102,28 @@ mod tests {
         let result = a / gcd(a, b) * b;
         assert_eq!(result, 10);
     }
+
+    #[test]
+    fn test_command_definition() {
+        let cmd = command();
+        assert!(!cmd.get_name().is_empty());
+    }
+
+    #[tokio::test]
+    async fn test_run_basic() {
+        let cmd = command();
+        let m = cmd
+            .try_get_matches_from(vec!["lcm", "--a", "12", "--b", "8"])
+            .unwrap();
+        run(&m).await.unwrap();
+    }
+
+    #[tokio::test]
+    async fn test_run_json() {
+        let cmd = command();
+        let m = cmd
+            .try_get_matches_from(vec!["lcm", "--a", "7", "--b", "13", "--json"])
+            .unwrap();
+        run(&m).await.unwrap();
+    }
 }
