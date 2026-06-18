@@ -1,7 +1,7 @@
 mod dom;
 mod js;
 
-use anyhow::{Context, Result};
+use anyhow::{Context as AnyhowContext, Result};
 use base64::Engine;
 use dom::drain_pending_scripts;
 use html5ever::serialize::{serialize, SerializeOpts, TraversalScope};
@@ -39,7 +39,7 @@ impl Browser {
         })
     }
 
-    pub async fn fetch(&mut self, url: &str) -> Result<()> {
+    pub async fn fetch(&mut self, url: &str, wait_ms: u64) -> Result<()> {
         let response = self
             .client
             .get(url)
@@ -61,13 +61,14 @@ impl Browser {
             .read_from(&mut html.as_bytes())
             .context("Failed to parse HTML")?;
 
-        self.js_runtime = Some(JsRuntime::new(self.dom.document.clone(), url).await?);
+        // JsRuntime::new is now synchronous
+        self.js_runtime = Some(JsRuntime::new(self.dom.document.clone(), url)?);
         self.execute_scripts().await?;
-        self.drain_and_execute_pending_scripts().await?;
-        if let Some(js) = &self.js_runtime {
-            js.idle().await?;
+        self.drain_and_execute_pending_scripts()?;
+        if let Some(js) = &mut self.js_runtime {
+            js.idle(wait_ms)?;
         }
-        self.drain_and_execute_pending_scripts().await?;
+        self.drain_and_execute_pending_scripts()?;
         self.inject_og_media();
 
         Ok(())
@@ -77,18 +78,21 @@ impl Browser {
         let scripts = self.collect_scripts(&self.dom.document);
 
         for (i, script) in scripts.iter().enumerate() {
-            if let Some(js_runtime) = &self.js_runtime {
-                if let Some(inline) = &script.inline {
-                    if !inline.trim().is_empty() {
-                        if let Err(e) = js_runtime.execute(inline).await {
+            if let Some(inline) = &script.inline {
+                if !inline.trim().is_empty() {
+                    if let Some(js_runtime) = &mut self.js_runtime {
+                        if let Err(e) = js_runtime.execute(inline) {
                             eprintln!("Failed to execute script {}: {}", i, e);
                         }
                     }
                 }
-                if let Some(src) = &script.external {
-                    match self.fetch_external_script(src).await {
+            }
+            if let Some(src) = &script.external {
+                let code = self.fetch_external_script(src).await;
+                if let Some(js_runtime) = &mut self.js_runtime {
+                    match code {
                         Ok(code) => {
-                            if let Err(e) = js_runtime.execute(&code).await {
+                            if let Err(e) = js_runtime.execute(&code) {
                                 eprintln!("Failed to execute external script {}: {}", i, e);
                             }
                         }
@@ -102,11 +106,11 @@ impl Browser {
         Ok(())
     }
 
-    async fn drain_and_execute_pending_scripts(&mut self) -> Result<()> {
+    fn drain_and_execute_pending_scripts(&mut self) -> Result<()> {
         let scripts = drain_pending_scripts();
         for script in scripts {
-            if let Some(js_runtime) = &self.js_runtime {
-                if let Err(e) = js_runtime.execute(&script).await {
+            if let Some(js_runtime) = &mut self.js_runtime {
+                if let Err(e) = js_runtime.execute(&script) {
                     eprintln!("Pending script error: {}", e);
                 }
             }
@@ -299,7 +303,6 @@ fn decode_data_uri(uri: &str) -> Option<String> {
             .ok()?;
         Some(String::from_utf8(decoded).ok()?)
     } else {
-        // Raw data (percent-encoded or plain text)
         Some(data.to_string())
     }
 }

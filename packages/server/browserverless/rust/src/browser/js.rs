@@ -1,143 +1,199 @@
-use crate::browser::dom::JsDocument;
-use anyhow::Result;
+#![allow(non_snake_case)]
+use crate::browser::dom::setup_document;
+use boa_engine::builtins::promise::ResolvingFunctions;
+use boa_engine::object::builtins::JsPromise;
+use boa_engine::object::{FunctionObjectBuilder, ObjectInitializer};
+use boa_engine::property::Attribute;
+use boa_engine::{js_string, Context, JsArgs, JsResult, JsValue, NativeFunction, Source};
 use markup5ever_rcdom::Handle;
-use rquickjs::prelude::Func;
-use rquickjs::{AsyncContext, AsyncRuntime, Ctx, Function, Object, Promise};
+use std::cell::RefCell;
 use std::collections::HashMap;
-use std::sync::atomic::{AtomicBool, AtomicU32, Ordering};
-use std::sync::{Arc, Mutex};
+use std::sync::atomic::{AtomicU32, Ordering};
+use std::sync::mpsc::{self, Receiver, Sender};
+use std::sync::{Mutex, OnceLock};
 use std::time::Duration;
 
+// ---------------------------------------------------------------------------
+// Event channel
+// ---------------------------------------------------------------------------
+
+enum JsEvent {
+    TimerFired(u32),
+    FetchComplete(u32, Result<String, String>),
+}
+
+fn event_channel() -> &'static (Sender<JsEvent>, Mutex<Receiver<JsEvent>>) {
+    static CH: OnceLock<(Sender<JsEvent>, Mutex<Receiver<JsEvent>>)> = OnceLock::new();
+    CH.get_or_init(|| {
+        let (tx, rx) = mpsc::channel();
+        (tx, Mutex::new(rx))
+    })
+}
+
+thread_local! {
+    static TIMER_CALLBACKS: RefCell<HashMap<u32, JsValue>> = RefCell::new(HashMap::new());
+    static FETCH_RESOLVERS: RefCell<HashMap<u32, JsValue>> = RefCell::new(HashMap::new());
+    static FETCH_REJECTORS: RefCell<HashMap<u32, JsValue>> = RefCell::new(HashMap::new());
+}
+
 static NEXT_TIMER_ID: AtomicU32 = AtomicU32::new(1);
+static NEXT_FETCH_ID: AtomicU32 = AtomicU32::new(1);
+static ACTIVE_TIMEOUTS: AtomicU32 = AtomicU32::new(0);
+static ACTIVE_FETCHES: AtomicU32 = AtomicU32::new(0);
 
-fn timers() -> &'static Mutex<HashMap<u32, Arc<AtomicBool>>> {
-    static TIMERS: std::sync::OnceLock<Mutex<HashMap<u32, Arc<AtomicBool>>>> =
-        std::sync::OnceLock::new();
-    TIMERS.get_or_init(|| Mutex::new(HashMap::new()))
+// ---------------------------------------------------------------------------
+// Helper to extract a String from a JsValue argument
+// ---------------------------------------------------------------------------
+
+fn js_to_string(val: &JsValue, context: &mut Context) -> String {
+    val.to_string(context)
+        .map(|s| s.to_std_string().unwrap_or_default())
+        .unwrap_or_default()
 }
 
-#[allow(non_snake_case)]
-fn setTimeout_impl<'js>(ctx: Ctx<'js>, f: Function<'js>, delay: u64) -> u32 {
-    let id = NEXT_TIMER_ID.fetch_add(1, Ordering::Relaxed);
-    let cancelled = Arc::new(AtomicBool::new(false));
-    let guard = cancelled.clone();
-
-    ctx.spawn(async move {
-        tokio::time::sleep(Duration::from_millis(delay)).await;
-        if !guard.load(Ordering::Relaxed) {
-            let _ = f.call::<_, ()>(());
-        }
-    });
-
-    timers().lock().unwrap().insert(id, cancelled);
-    id
+fn js_to_string_opt(val: &JsValue, context: &mut Context) -> Option<String> {
+    val.to_string(context)
+        .ok()
+        .and_then(|s| s.to_std_string().ok())
 }
 
-#[allow(non_snake_case)]
-fn clearTimeout_impl(id: u32) {
-    if let Some(cancelled) = timers().lock().unwrap().remove(&id) {
-        cancelled.store(true, Ordering::Relaxed);
+fn jsval_from_string(s: &str) -> JsValue {
+    JsValue::from(js_string!(s))
+}
+
+// ---------------------------------------------------------------------------
+// Native function implementations
+// ---------------------------------------------------------------------------
+
+fn console_log(_this: &JsValue, args: &[JsValue], context: &mut Context) -> JsResult<JsValue> {
+    for arg in args {
+        let s = js_to_string(arg, context);
+        println!("{}", s);
     }
+    Ok(JsValue::undefined())
 }
 
-#[allow(non_snake_case)]
-fn setInterval_impl<'js>(ctx: Ctx<'js>, f: Function<'js>, interval: u64) -> u32 {
+fn setTimeout_impl(_this: &JsValue, args: &[JsValue], _context: &mut Context) -> JsResult<JsValue> {
+    let func = args.get_or_undefined(0).clone();
+    let delay = args.get(1).and_then(|v| v.as_number()).unwrap_or(0.0) as u64;
     let id = NEXT_TIMER_ID.fetch_add(1, Ordering::Relaxed);
-    let cancelled = Arc::new(AtomicBool::new(false));
-    let guard = cancelled.clone();
+    ACTIVE_TIMEOUTS.fetch_add(1, Ordering::Relaxed);
+    TIMER_CALLBACKS.with(|cbs| cbs.borrow_mut().insert(id, func));
+    let tx = event_channel().0.clone();
+    tokio::spawn(async move {
+        tokio::time::sleep(Duration::from_millis(delay)).await;
+        let _ = tx.send(JsEvent::TimerFired(id));
+    });
+    Ok(JsValue::new(id))
+}
 
-    ctx.spawn(async move {
+fn clearTimeout_impl(_this: &JsValue, args: &[JsValue], _context: &mut Context) -> JsResult<JsValue> {
+    if let Some(id) = args.get(0).and_then(|v| v.as_number()).map(|n| n as u32) {
+        TIMER_CALLBACKS.with(|cbs| {
+            if cbs.borrow_mut().remove(&id).is_some() {
+                ACTIVE_TIMEOUTS.fetch_sub(1, Ordering::Relaxed);
+            }
+        });
+    }
+    Ok(JsValue::undefined())
+}
+
+fn setInterval_impl(_this: &JsValue, args: &[JsValue], _context: &mut Context) -> JsResult<JsValue> {
+    let func = args.get_or_undefined(0).clone();
+    let interval = args.get(1).and_then(|v| v.as_number()).unwrap_or(0.0) as u64;
+    let id = NEXT_TIMER_ID.fetch_add(1, Ordering::Relaxed);
+    ACTIVE_TIMEOUTS.fetch_add(1, Ordering::Relaxed);
+    TIMER_CALLBACKS.with(|cbs| cbs.borrow_mut().insert(id, func));
+    let tx = event_channel().0.clone();
+    tokio::spawn(async move {
         loop {
             tokio::time::sleep(Duration::from_millis(interval)).await;
-            if guard.load(Ordering::Relaxed) {
+            if tx.send(JsEvent::TimerFired(id)).is_err() {
                 break;
             }
-            let _ = f.call::<_, ()>(());
         }
     });
-
-    timers().lock().unwrap().insert(id, cancelled);
-    id
+    Ok(JsValue::new(id))
 }
 
-#[allow(non_snake_case)]
-fn clearInterval_impl(id: u32) {
-    clearTimeout_impl(id);
+fn clearInterval_impl(this: &JsValue, args: &[JsValue], context: &mut Context) -> JsResult<JsValue> {
+    clearTimeout_impl(this, args, context)
 }
 
-#[allow(non_snake_case)]
-fn requestAnimationFrame_impl<'js>(ctx: Ctx<'js>, f: Function<'js>) -> u32 {
+fn requestAnimationFrame_impl(_this: &JsValue, args: &[JsValue], _context: &mut Context) -> JsResult<JsValue> {
+    let func = args.get_or_undefined(0).clone();
     let id = NEXT_TIMER_ID.fetch_add(1, Ordering::Relaxed);
-    let cancelled = Arc::new(AtomicBool::new(false));
-    let guard = cancelled.clone();
-
-    ctx.spawn(async move {
+    ACTIVE_TIMEOUTS.fetch_add(1, Ordering::Relaxed);
+    TIMER_CALLBACKS.with(|cbs| cbs.borrow_mut().insert(id, func));
+    let tx = event_channel().0.clone();
+    tokio::spawn(async move {
         tokio::time::sleep(Duration::from_millis(1)).await;
-        if !guard.load(Ordering::Relaxed) {
-            let _ = f.call::<_, ()>(());
-        }
+        let _ = tx.send(JsEvent::TimerFired(id));
     });
-
-    timers().lock().unwrap().insert(id, cancelled);
-    id
+    Ok(JsValue::new(id))
 }
 
-#[allow(non_snake_case)]
-fn cancelAnimationFrame_impl(id: u32) {
-    clearTimeout_impl(id);
+fn cancelAnimationFrame_impl(this: &JsValue, args: &[JsValue], context: &mut Context) -> JsResult<JsValue> {
+    clearTimeout_impl(this, args, context)
 }
 
-#[allow(non_snake_case)]
-fn getComputedStyle_impl<'js>(
-    ctx: Ctx<'js>,
-    _el: rquickjs::Value<'js>,
-    _pseudo: Option<String>,
-) -> rquickjs::Result<Object<'js>> {
-    let style = Object::new(ctx)?;
-    Ok(style)
+fn getComputedStyle_impl(_this: &JsValue, _args: &[JsValue], context: &mut Context) -> JsResult<JsValue> {
+    let style = ObjectInitializer::new(context).build();
+    Ok(JsValue::from(style))
 }
 
-#[allow(non_snake_case)]
-fn matchMedia_impl<'js>(ctx: Ctx<'js>, _query: String) -> rquickjs::Result<Object<'js>> {
-    let mm = Object::new(ctx)?;
-    mm.set("matches", false)?;
-    mm.set("media", _query)?;
-    mm.set("addListener", Func::from(|_f: rquickjs::Function<'_>| {}))?;
-    mm.set(
-        "removeListener",
-        Func::from(|_f: rquickjs::Function<'_>| {}),
-    )?;
-    mm.set(
-        "addEventListener",
-        Func::from(|_event: String, _f: rquickjs::Function<'_>| {}),
-    )?;
-    mm.set(
-        "removeEventListener",
-        Func::from(|_event: String, _f: rquickjs::Function<'_>| {}),
-    )?;
-    Ok(mm)
+fn matchMedia_impl(_this: &JsValue, args: &[JsValue], context: &mut Context) -> JsResult<JsValue> {
+    let query = js_to_string(args.get_or_undefined(0), context);
+    let noop = NativeFunction::from_fn_ptr(|_, _, _| Ok(JsValue::undefined()));
+    let mm = ObjectInitializer::new(context)
+        .property(js_string!("matches"), false, Attribute::all())
+        .property(js_string!("media"), jsval_from_string(&query), Attribute::all())
+        .function(noop.clone(), js_string!("addListener"), 1)
+        .function(noop.clone(), js_string!("removeListener"), 1)
+        .function(noop.clone(), js_string!("addEventListener"), 2)
+        .function(noop, js_string!("removeEventListener"), 2)
+        .build();
+    Ok(JsValue::from(mm))
 }
 
-fn fetch_impl<'js>(
-    ctx: Ctx<'js>,
-    url: String,
-    init: Option<Object<'js>>,
-) -> rquickjs::Result<Promise<'js>> {
-    let method = init
-        .as_ref()
-        .and_then(|o| o.get::<_, String>("method").ok())
-        .unwrap_or_else(|| "GET".to_string());
-    let req_body = init.as_ref().and_then(|o| o.get::<_, String>("body").ok());
+fn fetch_impl(_this: &JsValue, args: &[JsValue], context: &mut Context) -> JsResult<JsValue> {
+    let url = js_to_string(args.get_or_undefined(0), context);
 
-    // Resolve relative URLs against document base URL
-    let resolved = globals_location_href(&ctx)
-        .and_then(|base| url::Url::parse(&base).ok())
-        .and_then(|base| base.join(&url).ok())
-        .map(|u| u.to_string())
-        .unwrap_or(url);
+    let resolved = resolve_url(context, &url).unwrap_or(url);
 
-    rquickjs::Promise::wrap_future(&ctx, async move {
-        let client = reqwest::Client::new();
+    let (method, body) = if let Some(init) = args.get(1).and_then(|v| v.as_object()) {
+        let m = init.get(js_string!("method"), context)
+            .ok()
+            .and_then(|v| js_to_string_opt(&v, context))
+            .unwrap_or_else(|| "GET".to_string());
+        let b = init.get(js_string!("body"), context)
+            .ok()
+            .and_then(|v| js_to_string_opt(&v, context));
+        (m, b)
+    } else {
+        ("GET".to_string(), None)
+    };
+
+    let (promise, resolvers): (JsPromise, ResolvingFunctions) = JsPromise::new_pending(context);
+    let id = NEXT_FETCH_ID.fetch_add(1, Ordering::Relaxed);
+    ACTIVE_FETCHES.fetch_add(1, Ordering::Relaxed);
+
+    FETCH_RESOLVERS.with(|r| r.borrow_mut().insert(id, JsValue::from(resolvers.resolve)));
+    FETCH_REJECTORS.with(|r| r.borrow_mut().insert(id, JsValue::from(resolvers.reject)));
+
+    let tx = event_channel().0.clone();
+    tokio::spawn(async move {
+        let client = reqwest::Client::builder()
+            .user_agent("Browserverless/0.1.0")
+            .cookie_store(true)
+            .build();
+        let client = match client {
+            Ok(c) => c,
+            Err(e) => {
+                let _ = tx.send(JsEvent::FetchComplete(id, Err(e.to_string())));
+                return;
+            }
+        };
         let req = match method.as_str() {
             "GET" => client.get(&resolved),
             "POST" => client.post(&resolved),
@@ -147,225 +203,369 @@ fn fetch_impl<'js>(
             "HEAD" => client.head(&resolved),
             _ => client.get(&resolved),
         };
-        let req = if let Some(b) = req_body {
-            req.body(b)
-        } else {
-            req
-        };
+        let req = if let Some(b) = body { req.body(b) } else { req };
 
         match req.send().await {
             Ok(resp) => {
                 let status = resp.status().as_u16();
                 let body = resp.text().await.unwrap_or_default();
-                format!("{}\n{}", status, body)
+                let _ = tx.send(JsEvent::FetchComplete(id, Ok(format!("{}\n{}", status, body))));
             }
             Err(e) => {
-                eprintln!("fetch({}) failed: {}", resolved, e);
-                "0\n".to_string()
+                let _ = tx.send(JsEvent::FetchComplete(id, Err(e.to_string())));
             }
         }
-    })
+    });
+
+    Ok(JsValue::from(promise))
 }
 
-fn globals_location_href(ctx: &Ctx<'_>) -> Option<String> {
-    let globals = ctx.globals();
-    let location: Object = globals.get("location").ok()?;
-    location.get("href").ok()
+fn resolve_url(context: &Context, url: &str) -> Option<String> {
+    let globals = context.global_object();
+    let location = globals.get(js_string!("location"), &mut Context::default()).ok()?;
+    let href = location.as_object()?.get(js_string!("href"), &mut Context::default()).ok()?;
+    let base = href.as_string()?.to_std_string().ok()?;
+    url::Url::parse(&base).ok()?.join(url).ok().map(|u| u.to_string())
 }
 
-fn local_storage() -> &'static Mutex<HashMap<String, String>> {
-    static STORE: std::sync::OnceLock<Mutex<HashMap<String, String>>> = std::sync::OnceLock::new();
+// ---------------------------------------------------------------------------
+// Storage
+// ---------------------------------------------------------------------------
+
+fn storage_alloc() -> &'static Mutex<HashMap<String, String>> {
+    static STORE: OnceLock<Mutex<HashMap<String, String>>> = OnceLock::new();
     STORE.get_or_init(|| Mutex::new(HashMap::new()))
 }
 
-fn session_storage() -> &'static Mutex<HashMap<String, String>> {
-    static STORE: std::sync::OnceLock<Mutex<HashMap<String, String>>> = std::sync::OnceLock::new();
+fn storage_session() -> &'static Mutex<HashMap<String, String>> {
+    static STORE: OnceLock<Mutex<HashMap<String, String>>> = OnceLock::new();
     STORE.get_or_init(|| Mutex::new(HashMap::new()))
 }
 
-fn create_storage<'js>(
-    ctx: &Ctx<'js>,
-    store: fn() -> &'static Mutex<HashMap<String, String>>,
-) -> rquickjs::Result<Object<'js>> {
-    let storage = Object::new(ctx.clone())?;
-
-    let _ = storage.set(
-        "getItem",
-        Func::from(move |key: String| -> Option<String> {
-            store().lock().unwrap().get(&key).cloned()
-        }),
-    );
-
-    let _ = storage.set(
-        "setItem",
-        Func::from(move |key: String, value: String| {
-            store().lock().unwrap().insert(key, value);
-        }),
-    );
-
-    let _ = storage.set(
-        "removeItem",
-        Func::from(move |key: String| {
-            store().lock().unwrap().remove(&key);
-        }),
-    );
-
-    let _ = storage.set(
-        "clear",
-        Func::from(move || {
-            store().lock().unwrap().clear();
-        }),
-    );
-
-    let _ = storage.set("length", 0);
-
-    Ok(storage)
+fn build_storage_object(context: &mut Context, store: fn() -> &'static Mutex<HashMap<String, String>>) -> boa_engine::JsObject {
+    ObjectInitializer::new(context)
+        .function(
+            NativeFunction::from_copy_closure(move |_: &JsValue, args: &[JsValue], _: &mut Context| -> JsResult<JsValue> {
+                let key = args.get_or_undefined(0).as_string().and_then(|s| s.to_std_string().ok()).unwrap_or_default();
+                Ok(store().lock().unwrap().get(&key).cloned().map(|s| jsval_from_string(&s)).unwrap_or(JsValue::null()))
+            }),
+            js_string!("getItem"),
+            1,
+        )
+        .function(
+            NativeFunction::from_copy_closure(move |_: &JsValue, args: &[JsValue], _: &mut Context| -> JsResult<JsValue> {
+                let key = args.get_or_undefined(0).as_string().and_then(|s| s.to_std_string().ok()).unwrap_or_default();
+                let value = args.get(1).and_then(|v| v.as_string()).and_then(|s| s.to_std_string().ok()).unwrap_or_default();
+                store().lock().unwrap().insert(key, value);
+                Ok(JsValue::undefined())
+            }),
+            js_string!("setItem"),
+            2,
+        )
+        .function(
+            NativeFunction::from_copy_closure(move |_: &JsValue, args: &[JsValue], _: &mut Context| -> JsResult<JsValue> {
+                let key = args.get_or_undefined(0).as_string().and_then(|s| s.to_std_string().ok()).unwrap_or_default();
+                store().lock().unwrap().remove(&key);
+                Ok(JsValue::undefined())
+            }),
+            js_string!("removeItem"),
+            1,
+        )
+        .function(
+            NativeFunction::from_copy_closure(move |_: &JsValue, _: &[JsValue], _: &mut Context| -> JsResult<JsValue> {
+                store().lock().unwrap().clear();
+                Ok(JsValue::undefined())
+            }),
+            js_string!("clear"),
+            0,
+        )
+        .property(js_string!("length"), 0, Attribute::all())
+        .build()
 }
 
-fn create_location<'js>(ctx: &Ctx<'js>, url: &str) -> rquickjs::Result<Object<'js>> {
-    let parsed = url::Url::parse(url).ok();
-    let loc = Object::new(ctx.clone())?;
+// ---------------------------------------------------------------------------
+// Location object
+// ---------------------------------------------------------------------------
 
-    let href = parsed.as_ref().map(|u| u.as_str()).unwrap_or(url);
-    loc.set("href", href)?;
-    loc.set(
-        "origin",
-        parsed
-            .as_ref()
-            .map(|u| u.origin().ascii_serialization())
-            .unwrap_or_default(),
-    )?;
-    loc.set(
-        "protocol",
-        parsed
-            .as_ref()
-            .map(|u| u.scheme())
-            .unwrap_or("")
-            .to_string()
-            + ":",
-    )?;
-    loc.set(
-        "host",
-        parsed
-            .as_ref()
-            .map(|u| u.host_str().unwrap_or(""))
-            .unwrap_or(""),
-    )?;
-    loc.set(
-        "hostname",
-        parsed
-            .as_ref()
-            .map(|u| u.host_str().unwrap_or(""))
-            .unwrap_or(""),
-    )?;
-    loc.set(
-        "port",
-        parsed
-            .as_ref()
-            .and_then(|u| u.port().map(|p| p.to_string()))
-            .unwrap_or_default(),
-    )?;
-    loc.set("pathname", parsed.as_ref().map(|u| u.path()).unwrap_or("/"))?;
-    loc.set(
-        "search",
-        parsed
-            .as_ref()
-            .map(|u| u.query().map(|q| format!("?{}", q)).unwrap_or_default())
-            .unwrap_or_default(),
-    )?;
-    loc.set(
-        "hash",
-        parsed
-            .as_ref()
-            .map(|u| u.fragment().map(|f| format!("#{}", f)).unwrap_or_default())
-            .unwrap_or_default(),
-    )?;
+fn create_location(context: &mut Context, url_str: &str) -> boa_engine::JsObject {
+    let parsed = url::Url::parse(url_str).ok();
+    let mut loc = ObjectInitializer::new(context);
 
-    Ok(loc)
+    let href = parsed.as_ref().map(|u| u.as_str()).unwrap_or(url_str);
+    loc.property(js_string!("href"), jsval_from_string(href), Attribute::all());
+    loc.property(js_string!("origin"), jsval_from_string(&parsed.as_ref().map(|u| u.origin().ascii_serialization()).unwrap_or_default()), Attribute::all());
+    loc.property(js_string!("protocol"), jsval_from_string(&parsed.as_ref().map(|u| format!("{}:", u.scheme())).unwrap_or_default()), Attribute::all());
+    loc.property(js_string!("host"), jsval_from_string(parsed.as_ref().and_then(|u| u.host_str()).unwrap_or("")), Attribute::all());
+    loc.property(js_string!("hostname"), jsval_from_string(parsed.as_ref().and_then(|u| u.host_str()).unwrap_or("")), Attribute::all());
+    loc.property(js_string!("port"), jsval_from_string(&parsed.as_ref().and_then(|u| u.port().map(|p| p.to_string())).unwrap_or_default()), Attribute::all());
+    loc.property(js_string!("pathname"), jsval_from_string(parsed.as_ref().map(|u| u.path()).unwrap_or("/")), Attribute::all());
+    loc.property(js_string!("search"), jsval_from_string(&parsed.as_ref().and_then(|u| u.query().map(|q| format!("?{}", q))).unwrap_or_default()), Attribute::all());
+    loc.property(js_string!("hash"), jsval_from_string(&parsed.as_ref().and_then(|u| u.fragment().map(|f| format!("#{}", f))).unwrap_or_default()), Attribute::all());
+
+    loc.build()
 }
+
+// ---------------------------------------------------------------------------
+// JsRuntime
+// ---------------------------------------------------------------------------
 
 pub struct JsRuntime {
-    pub runtime: AsyncRuntime,
-    pub context: AsyncContext,
+    pub context: Context,
 }
 
 impl JsRuntime {
-    pub async fn new(document_handle: Handle, page_url: &str) -> Result<Self> {
-        let runtime = AsyncRuntime::new()?;
-        let context = AsyncContext::full(&runtime).await?;
+    pub fn new(document_handle: Handle, page_url: &str) -> Result<Self, anyhow::Error> {
+        let mut context = Context::default();
 
-        let _ = context.with(|ctx| {
-            let globals = ctx.globals();
+        setup_document(&mut context, document_handle)
+            .map_err(|e| anyhow::anyhow!("{}", e))?;
 
-            // console.log
-            let console = Object::new(ctx.clone())?;
-            console.set("log", Function::new(ctx.clone(), |s: String| {
-                println!("{}", s);
-            })?)?;
-            globals.set("console", console)?;
+        // console
+        let console = ObjectInitializer::new(&mut context)
+            .function(NativeFunction::from_fn_ptr(console_log), js_string!("log"), 1)
+            .build();
+        context.register_global_property(js_string!("console"), console, Attribute::all())
+            .map_err(|e| anyhow::anyhow!("{}", e))?;
 
-            // document
-            let doc = JsDocument { handle: document_handle };
-            globals.set("document", rquickjs::Class::instance(ctx.clone(), doc)?)?;
+        // location
+        let location = create_location(&mut context, page_url);
+        context.register_global_property(js_string!("location"), location.clone(), Attribute::all())
+            .map_err(|e| anyhow::anyhow!("{}", e))?;
 
-            // window — alias to globalThis
-            let window_ref = globals.clone();
-            globals.set("window", window_ref)?;
+        // window — alias to globalThis
+        let window = context.global_object().clone();
+        context.register_global_property(js_string!("window"), window.clone(), Attribute::all())
+            .map_err(|e| anyhow::anyhow!("{}", e))?;
+        let _ = window.set(js_string!("location"), location, false, &mut context);
+        let _ = window.set(js_string!("innerWidth"), 1024, false, &mut context);
+        let _ = window.set(js_string!("innerHeight"), 768, false, &mut context);
+        let _ = window.set(js_string!("scrollX"), 0, false, &mut context);
+        let _ = window.set(js_string!("scrollY"), 0, false, &mut context);
+        let _ = window.set(js_string!("pageXOffset"), 0, false, &mut context);
+        let _ = window.set(js_string!("pageYOffset"), 0, false, &mut context);
 
-            // window.location
-            let location = create_location(&ctx, page_url)?;
-            globals.set("location", location.clone())?;
-            if let Ok(window) = globals.get::<_, Object>("window") {
-                let _ = window.set("location", location);
-                let _ = window.set("innerWidth", 1024);
-                let _ = window.set("innerHeight", 768);
-                let _ = window.set("scrollX", 0);
-                let _ = window.set("scrollY", 0);
-                let _ = window.set("pageXOffset", 0);
-                let _ = window.set("pageYOffset", 0);
-                let _ = window.set("scrollTo", Func::from(|| {}));
-                let _ = window.set("scrollBy", Func::from(|| {}));
+        let noop = NativeFunction::from_fn_ptr(|_, _, _| Ok(JsValue::undefined()));
+        let _ = window.set(js_string!("scrollTo"),
+            FunctionObjectBuilder::new(context.realm(), noop.clone()).name("scrollTo").length(0).constructor(false).build(),
+            false, &mut context);
+        let _ = window.set(js_string!("scrollBy"),
+            FunctionObjectBuilder::new(context.realm(), noop).name("scrollBy").length(0).constructor(false).build(),
+            false, &mut context);
+
+        // getComputedStyle
+        context.register_global_property(
+            js_string!("getComputedStyle"),
+            FunctionObjectBuilder::new(context.realm(), NativeFunction::from_fn_ptr(getComputedStyle_impl))
+                .name("getComputedStyle").length(2).constructor(false).build(),
+            Attribute::all(),
+        ).map_err(|e| anyhow::anyhow!("{}", e))?;
+
+        // matchMedia
+        context.register_global_property(
+            js_string!("matchMedia"),
+            FunctionObjectBuilder::new(context.realm(), NativeFunction::from_fn_ptr(matchMedia_impl))
+                .name("matchMedia").length(1).constructor(false).build(),
+            Attribute::all(),
+        ).map_err(|e| anyhow::anyhow!("{}", e))?;
+
+        // Timers
+        context.register_global_property(
+            js_string!("setTimeout"),
+            FunctionObjectBuilder::new(context.realm(), NativeFunction::from_fn_ptr(setTimeout_impl))
+                .name("setTimeout").length(2).constructor(false).build(),
+            Attribute::all(),
+        ).map_err(|e| anyhow::anyhow!("{}", e))?;
+        context.register_global_property(
+            js_string!("clearTimeout"),
+            FunctionObjectBuilder::new(context.realm(), NativeFunction::from_fn_ptr(clearTimeout_impl))
+                .name("clearTimeout").length(1).constructor(false).build(),
+            Attribute::all(),
+        ).map_err(|e| anyhow::anyhow!("{}", e))?;
+        context.register_global_property(
+            js_string!("setInterval"),
+            FunctionObjectBuilder::new(context.realm(), NativeFunction::from_fn_ptr(setInterval_impl))
+                .name("setInterval").length(2).constructor(false).build(),
+            Attribute::all(),
+        ).map_err(|e| anyhow::anyhow!("{}", e))?;
+        context.register_global_property(
+            js_string!("clearInterval"),
+            FunctionObjectBuilder::new(context.realm(), NativeFunction::from_fn_ptr(clearInterval_impl))
+                .name("clearInterval").length(1).constructor(false).build(),
+            Attribute::all(),
+        ).map_err(|e| anyhow::anyhow!("{}", e))?;
+
+        // requestAnimationFrame
+        context.register_global_property(
+            js_string!("requestAnimationFrame"),
+            FunctionObjectBuilder::new(context.realm(), NativeFunction::from_fn_ptr(requestAnimationFrame_impl))
+                .name("requestAnimationFrame").length(1).constructor(false).build(),
+            Attribute::all(),
+        ).map_err(|e| anyhow::anyhow!("{}", e))?;
+
+        // cancelAnimationFrame
+        context.register_global_property(
+            js_string!("cancelAnimationFrame"),
+            FunctionObjectBuilder::new(context.realm(), NativeFunction::from_fn_ptr(cancelAnimationFrame_impl))
+                .name("cancelAnimationFrame").length(1).constructor(false).build(),
+            Attribute::all(),
+        ).map_err(|e| anyhow::anyhow!("{}", e))?;
+
+        // localStorage / sessionStorage
+        let ls = build_storage_object(&mut context, storage_alloc);
+        context.register_global_property(js_string!("localStorage"), ls, Attribute::all())
+            .map_err(|e| anyhow::anyhow!("{}", e))?;
+        let ss = build_storage_object(&mut context, storage_session);
+        context.register_global_property(js_string!("sessionStorage"), ss, Attribute::all())
+            .map_err(|e| anyhow::anyhow!("{}", e))?;
+
+        // fetch
+        context.register_global_property(
+            js_string!("fetch"),
+            FunctionObjectBuilder::new(context.realm(), NativeFunction::from_fn_ptr(fetch_impl))
+                .name("fetch").length(1).constructor(false).build(),
+            Attribute::all(),
+        ).map_err(|e| anyhow::anyhow!("{}", e))?;
+
+        // navigator
+        let navigator = ObjectInitializer::new(&mut context)
+            .property(js_string!("userAgent"), js_string!("Browserverless/1.0"), Attribute::all())
+            .property(js_string!("platform"), js_string!(""), Attribute::all())
+            .property(js_string!("language"), js_string!("en-US"), Attribute::all())
+            .property(js_string!("cookieEnabled"), true, Attribute::all())
+            .build();
+        context.register_global_property(js_string!("navigator"), navigator, Attribute::all())
+            .map_err(|e| anyhow::anyhow!("{}", e))?;
+
+        // MutationObserver
+        let mutation_observer_impl = NativeFunction::from_fn_ptr(|_this: &JsValue, _args: &[JsValue], context: &mut Context| -> JsResult<JsValue> {
+            let obj = ObjectInitializer::new(context)
+                .function(
+                    NativeFunction::from_fn_ptr(|_, _, _| Ok(JsValue::undefined())),
+                    js_string!("observe"), 2,
+                )
+                .function(
+                    NativeFunction::from_fn_ptr(|_, _, _| Ok(JsValue::undefined())),
+                    js_string!("disconnect"), 0,
+                )
+                .function(
+                    NativeFunction::from_fn_ptr(|_, _, _| Ok(JsValue::undefined())),
+                    js_string!("takeRecords"), 0,
+                )
+                .build();
+            Ok(JsValue::from(obj))
+        });
+        context.register_global_property(
+            js_string!("MutationObserver"),
+            FunctionObjectBuilder::new(context.realm(), mutation_observer_impl)
+                .name("MutationObserver").length(1).constructor(true).build(),
+            Attribute::all(),
+        ).map_err(|e| anyhow::anyhow!("{}", e))?;
+
+        // Polyfills
+        inject_polyfills(&mut context);
+
+        Ok(Self { context })
+    }
+
+    pub fn execute(&mut self, script: &str) -> Result<(), anyhow::Error> {
+        let script = script.trim();
+        if script.is_empty() {
+            return Ok(());
+        }
+
+        match self.context.eval(Source::from_bytes(script.as_bytes())) {
+            Ok(_) => Ok(()),
+            Err(e) => {
+                let wrapped = format!("({})", script);
+                if self.context.eval(Source::from_bytes(wrapped.as_bytes())).is_ok() {
+                    return Ok(());
+                }
+                eprintln!("Script error: {}", e);
+                Ok(())
+            }
+        }
+    }
+
+    pub fn idle(&mut self, wait_ms: u64) -> Result<(), anyhow::Error> {
+        let deadline = std::time::Instant::now() + Duration::from_secs(30);
+        let mut last_activity = std::time::Instant::now();
+
+        loop {
+            self.process_events();
+
+            let _ = self.context.run_jobs();
+
+            if ACTIVE_TIMEOUTS.load(Ordering::Relaxed) == 0
+                && ACTIVE_FETCHES.load(Ordering::Relaxed) == 0
+            {
+                if last_activity.elapsed() >= Duration::from_millis(500) {
+                    break;
+                }
+            } else {
+                last_activity = std::time::Instant::now();
             }
 
-            // getComputedStyle
-            globals.set("getComputedStyle", Func::from(getComputedStyle_impl))?;
-
-            // matchMedia
-            globals.set("matchMedia", Func::from(matchMedia_impl))?;
-
-            // localStorage
-            if let Ok(storage) = create_storage(&ctx, local_storage) {
-                globals.set("localStorage", storage)?;
+            if std::time::Instant::now() >= deadline {
+                break;
             }
 
-            // sessionStorage
-            if let Ok(storage) = create_storage(&ctx, session_storage) {
-                globals.set("sessionStorage", storage)?;
+            std::thread::sleep(Duration::from_millis(50));
+        }
+
+        if wait_ms > 0 {
+            std::thread::sleep(Duration::from_millis(wait_ms));
+        }
+
+        Ok(())
+    }
+
+    fn process_events(&mut self) {
+        let rx = event_channel().1.lock().unwrap();
+        while let Ok(event) = rx.try_recv() {
+            match event {
+                JsEvent::TimerFired(id) => {
+                    let func = TIMER_CALLBACKS.with(|cbs| cbs.borrow_mut().remove(&id));
+                    if let Some(func) = func {
+                        ACTIVE_TIMEOUTS.fetch_sub(1, Ordering::Relaxed);
+                        if let Some(obj) = func.as_object() {
+                            let _ = obj.clone().call(&JsValue::undefined(), &[], &mut self.context);
+                        }
+                    }
+                }
+                JsEvent::FetchComplete(id, result) => {
+                    let resolve = FETCH_RESOLVERS.with(|r| r.borrow_mut().remove(&id));
+                    let reject = FETCH_REJECTORS.with(|r| r.borrow_mut().remove(&id));
+                    if resolve.is_some() {
+                        ACTIVE_FETCHES.fetch_sub(1, Ordering::Relaxed);
+                        match &result {
+                            Ok(response) => {
+                                if let Some(resolve) = resolve {
+                                    if let Some(obj) = resolve.as_object() {
+                                        let _ = obj.clone().call(&JsValue::undefined(), &[jsval_from_string(response)], &mut self.context);
+                                    }
+                                }
+                            }
+                            Err(err) => {
+                                if let Some(reject) = reject {
+                                    if let Some(obj) = reject.as_object() {
+                                        let _ = obj.clone().call(&JsValue::undefined(), &[jsval_from_string(err)], &mut self.context);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
+        }
+    }
+}
 
-            // setTimeout
-            globals.set("setTimeout", Func::from(setTimeout_impl))?;
+// ---------------------------------------------------------------------------
+// Polyfills
+// ---------------------------------------------------------------------------
 
-            // clearTimeout
-            globals.set("clearTimeout", Func::from(clearTimeout_impl))?;
-
-            // setInterval
-            globals.set("setInterval", Func::from(setInterval_impl))?;
-
-            // clearInterval
-            globals.set("clearInterval", Func::from(clearInterval_impl))?;
-
-            // requestAnimationFrame
-            globals.set("requestAnimationFrame", Func::from(requestAnimationFrame_impl))?;
-
-            // cancelAnimationFrame
-            globals.set("cancelAnimationFrame", Func::from(cancelAnimationFrame_impl))?;
-
-            // fetch
-            globals.set("fetch", Func::from(fetch_impl))?;
-
-            // Inject polyfills for Facebook module system
-            let polyfill = r#"
+fn inject_polyfills(context: &mut Context) {
+    let polyfill = r#"
 if (typeof globalThis.requireLazy === 'undefined') {
     var __rlModules = {};
     function __processServerJS() {
@@ -421,10 +621,9 @@ if (typeof globalThis.requireLazy === 'undefined') {
     };
 }
 "#;
-            let _ = ctx.eval::<rquickjs::Value, _>(polyfill);
+    let _ = context.eval(Source::from_bytes(polyfill.as_bytes()));
 
-            // Inject Image constructor, alert/confirm/prompt/open, fetch Response wrapper, Event, AbortController
-            let browser_polyfill = r#"
+    let browser_polyfill = r#"
 if (typeof globalThis.Image === 'undefined') {
     globalThis.Image = function(width, height) {
         var img = document.createElement('img');
@@ -484,50 +683,5 @@ if (_nativeFetch && !globalThis._fetchWrapped) {
     };
 }
 "#;
-            let _ = ctx.eval::<rquickjs::Value, _>(browser_polyfill);
-
-            Ok::<(), anyhow::Error>(())
-        }).await;
-
-        Ok(Self { runtime, context })
-    }
-
-    pub async fn execute(&self, script: &str) -> Result<()> {
-        let script = script.trim();
-        if script.is_empty() {
-            return Ok(());
-        }
-
-        self.context
-            .with(|ctx| {
-                let res = ctx.eval::<rquickjs::Value, _>(script);
-                if res.is_ok() {
-                    return Ok(());
-                }
-                let err_msg = format!("{}", res.unwrap_err());
-
-                let wrapped_script = format!("({})", script);
-                if ctx.eval::<rquickjs::Value, _>(wrapped_script).is_ok() {
-                    return Ok(());
-                }
-
-                eprintln!("Script error: {}", err_msg);
-                Ok(())
-            })
-            .await
-    }
-
-    pub async fn idle(&self) -> Result<()> {
-        tokio::time::timeout(Duration::from_secs(30), self.runtime.idle())
-            .await
-            .map_err(|_| anyhow::anyhow!("Timeout waiting for page to become idle"))?;
-
-        // Debounce: wait up to 500ms for DOM mutations from settling callbacks
-        let start = tokio::time::Instant::now();
-        while start.elapsed() < Duration::from_millis(500) {
-            tokio::time::sleep(Duration::from_millis(50)).await;
-            let _ = tokio::time::timeout(Duration::from_millis(10), self.runtime.idle()).await;
-        }
-        Ok(())
-    }
+    let _ = context.eval(Source::from_bytes(browser_polyfill.as_bytes()));
 }

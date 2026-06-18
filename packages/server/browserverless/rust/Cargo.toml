@@ -22,7 +22,7 @@ html5ever = "=0.39.0"
 markup5ever_rcdom = "=0.39.0"
 
 # JavaScript engine
-rquickjs = { version = "=0.6.2", features = ["macro", "full-async"] }
+boa_engine = "=0.21"
 
 # URL handling
 url = "=2.5.8"
