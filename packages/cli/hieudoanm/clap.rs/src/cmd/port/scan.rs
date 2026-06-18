@@ -68,14 +68,56 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
 }
 
 fn scan_ports(host: &str, ports: &[u16], timeout: u64) -> Vec<(u16, &'static str)> {
+    scan_ports_with_check(host, ports, timeout, |addr| super::check_port_open(addr, timeout))
+}
+
+fn scan_ports_with_check(
+    host: &str,
+    ports: &[u16],
+    _timeout: u64,
+    check_fn: impl Fn(&str) -> bool,
+) -> Vec<(u16, &'static str)> {
     let common = super::common_ports();
     let mut open_ports = Vec::new();
     for &p in ports {
         let addr = format!("{host}:{p}");
-        if super::check_port_open(&addr, timeout) {
+        if check_fn(&addr) {
             let name = common.get(&p).copied().unwrap_or("Unknown");
             open_ports.push((p, name));
         }
     }
     open_ports
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_scan_ports_with_check_all_open() {
+        let ports = scan_ports_with_check("localhost", &[80, 443], 1, |_| true);
+        assert_eq!(ports.len(), 2);
+        assert_eq!(ports[0], (80, "HTTP"));
+        assert_eq!(ports[1], (443, "HTTPS"));
+    }
+
+    #[test]
+    fn test_scan_ports_with_check_all_closed() {
+        let ports = scan_ports_with_check("localhost", &[80, 443], 1, |_| false);
+        assert_eq!(ports.len(), 0);
+    }
+
+    #[test]
+    fn test_scan_ports_with_check_some_open() {
+        let ports = scan_ports_with_check("localhost", &[80, 8080, 443], 1, |addr| addr.contains("80"));
+        assert_eq!(ports.len(), 2);
+        assert_eq!(ports[0], (80, "HTTP"));
+        assert_eq!(ports[1], (8080, "HTTP-Alt"));
+    }
+
+    #[test]
+    fn test_scan_ports_with_check_empty() {
+        let ports = scan_ports_with_check("localhost", &[], 1, |_| true);
+        assert!(ports.is_empty());
+    }
 }

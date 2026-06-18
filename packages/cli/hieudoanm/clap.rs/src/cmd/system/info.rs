@@ -8,6 +8,17 @@ pub fn command() -> clap::Command {
     )
 }
 
+pub fn format_uptime(seconds: u64) -> String {
+    let days = seconds / 86400;
+    let hours = (seconds % 86400) / 3600;
+    let mins = (seconds % 3600) / 60;
+    format!("{}d {}h {}m", days, hours, mins)
+}
+
+pub fn memory_to_gb(bytes: u64) -> f64 {
+    bytes as f64 / 1_073_741_824.0
+}
+
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     let json = matches.get_flag("json");
     let mut sys = sysinfo::System::new_all();
@@ -29,8 +40,8 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     let used_mem = sys.used_memory();
     let uptime = Duration::from_secs(sysinfo::System::uptime());
 
-    let mem_total = total_mem as f64 / 1_073_741_824.0;
-    let mem_used = used_mem as f64 / 1_073_741_824.0;
+    let mem_total = memory_to_gb(total_mem);
+    let mem_used = memory_to_gb(used_mem);
 
     if json {
         let output = serde_json::json!({
@@ -53,13 +64,60 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
         println!("Arch:     {}", arch);
         println!("CPU:      {} ({} cores)", cpu_brand, cpu_cores);
         println!("Memory:   {:.1}/{:.1} GB", mem_used, mem_total);
-        println!(
-            "Uptime:   {}d {}h {}m",
-            uptime.as_secs() / 86400,
-            (uptime.as_secs() % 86400) / 3600,
-            (uptime.as_secs() % 3600) / 60,
-        );
+        println!("Uptime:   {}", format_uptime(uptime.as_secs()));
     }
 
     Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_format_uptime_seconds() {
+        assert_eq!(format_uptime(45), "0d 0h 0m");
+    }
+
+    #[test]
+    fn test_format_uptime_minutes() {
+        assert_eq!(format_uptime(125), "0d 0h 2m");
+    }
+
+    #[test]
+    fn test_format_uptime_hours() {
+        assert_eq!(format_uptime(3661), "0d 1h 1m");
+    }
+
+    #[test]
+    fn test_format_uptime_days() {
+        assert_eq!(format_uptime(90061), "1d 1h 1m");
+    }
+
+    #[test]
+    fn test_format_uptime_exact_day() {
+        assert_eq!(format_uptime(86400), "1d 0h 0m");
+    }
+
+    #[test]
+    fn test_format_uptime_zero() {
+        assert_eq!(format_uptime(0), "0d 0h 0m");
+    }
+
+    #[test]
+    fn test_memory_to_gb() {
+        let gb = memory_to_gb(1_073_741_824);
+        assert!((gb - 1.0).abs() < 0.01);
+    }
+
+    #[test]
+    fn test_memory_to_gb_zero() {
+        assert!((memory_to_gb(0)).abs() < 0.01);
+    }
+
+    #[test]
+    fn test_memory_to_gb_512mb() {
+        let gb = memory_to_gb(536_870_912);
+        assert!((gb - 0.5).abs() < 0.01);
+    }
 }

@@ -16,6 +16,26 @@ pub fn commands() -> Vec<clap::Command> {
     ]
 }
 
+pub fn capitalise_str(s: &str) -> String {
+    let mut chars = s.chars();
+    match chars.next() {
+        None => String::new(),
+        Some(c) => c.to_uppercase().to_string() + chars.as_str(),
+    }
+}
+
+pub fn kebabcase_str(s: &str) -> String {
+    s.to_lowercase().replace(' ', "-")
+}
+
+pub fn snakecase_str(s: &str) -> String {
+    s.to_lowercase().replace(' ', "_")
+}
+
+pub fn deburr_str(s: &str) -> String {
+    deunicode::deunicode(s)
+}
+
 pub async fn run(name: &str, sub_m: &clap::ArgMatches) -> anyhow::Result<()> {
     let text = match sub_m.get_one::<String>("text") {
         Some(t) => t.clone(),
@@ -24,24 +44,19 @@ pub async fn run(name: &str, sub_m: &clap::ArgMatches) -> anyhow::Result<()> {
 
     match name {
         "capitalise" => {
-            let mut chars = text.chars();
-            let result = match chars.next() {
-                None => String::new(),
-                Some(c) => c.to_uppercase().to_string() + chars.as_str(),
-            };
-            println!("{result}");
+            println!("{}", capitalise_str(&text));
         }
         "deburr" => {
-            println!("{}", deunicode::deunicode(&text));
+            println!("{}", deburr_str(&text));
         }
         "kebabcase" => {
-            println!("{}", text.to_lowercase().replace(' ', "-"));
+            println!("{}", kebabcase_str(&text));
         }
         "lowercase" => {
             println!("{}", text.to_lowercase());
         }
         "snakecase" => {
-            println!("{}", text.to_lowercase().replace(' ', "_"));
+            println!("{}", snakecase_str(&text));
         }
         "uppercase" => {
             println!("{}", text.to_uppercase());
@@ -52,4 +67,75 @@ pub async fn run(name: &str, sub_m: &clap::ArgMatches) -> anyhow::Result<()> {
         _ => {}
     }
     Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_capitalise_str_normal() {
+        assert_eq!(capitalise_str("hello"), "Hello");
+    }
+
+    #[test]
+    fn test_capitalise_str_already_capitalised() {
+        assert_eq!(capitalise_str("Hello"), "Hello");
+    }
+
+    #[test]
+    fn test_capitalise_str_single_char() {
+        assert_eq!(capitalise_str("a"), "A");
+    }
+
+    #[test]
+    fn test_capitalise_str_multiple_words() {
+        assert_eq!(capitalise_str("hello world"), "Hello world");
+    }
+
+    #[test]
+    fn test_kebabcase_str() {
+        assert_eq!(kebabcase_str("hello world"), "hello-world");
+    }
+
+    #[test]
+    fn test_kebabcase_str_single_word() {
+        assert_eq!(kebabcase_str("hello"), "hello");
+    }
+
+    #[test]
+    fn test_kebabcase_str_empty() {
+        assert_eq!(kebabcase_str(""), "");
+    }
+
+    #[test]
+    fn test_snakecase_str() {
+        assert_eq!(snakecase_str("hello world"), "hello_world");
+    }
+
+    #[test]
+    fn test_snakecase_str_single_word() {
+        assert_eq!(snakecase_str("hello"), "hello");
+    }
+
+    #[test]
+    fn test_snakecase_str_empty() {
+        assert_eq!(snakecase_str(""), "");
+    }
+
+    #[test]
+    fn test_deburr_str() {
+        assert_eq!(deburr_str("café"), "cafe");
+        assert_eq!(deburr_str("résumé"), "resume");
+    }
+
+    #[test]
+    fn test_deburr_str_ascii() {
+        assert_eq!(deburr_str("hello"), "hello");
+    }
+
+    #[test]
+    fn test_deburr_str_empty() {
+        assert_eq!(deburr_str(""), "");
+    }
 }

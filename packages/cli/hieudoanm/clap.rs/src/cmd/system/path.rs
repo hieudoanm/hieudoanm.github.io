@@ -20,36 +20,52 @@ pub fn command() -> clap::Command {
         )
 }
 
+pub fn parse_path(path: &str) -> Vec<&str> {
+    path.split(':').collect()
+}
+
+pub fn find_in_path(path: &str, name: &str) -> Option<String> {
+    let dirs: Vec<&str> = path.split(':').collect();
+    for dir in &dirs {
+        let full = Path::new(dir).join(name);
+        if full.exists() {
+            return Some(full.to_string_lossy().to_string());
+        }
+    }
+    None
+}
+
+pub fn analyze_path_entries(path: &str) -> Vec<(usize, &str, bool)> {
+    let dirs: Vec<&str> = path.split(':').collect();
+    dirs.iter()
+        .enumerate()
+        .map(|(i, d)| (i, *d, Path::new(d).exists()))
+        .collect()
+}
+
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     let cmd_name = matches.get_one::<String>("name");
     let sort = matches.get_flag("sort");
     let json = matches.get_flag("json");
 
     let path = std::env::var("PATH").unwrap_or_default();
-    let dirs: Vec<&str> = path.split(':').collect();
 
     if let Some(name) = cmd_name {
-        for dir in &dirs {
-            let full = Path::new(dir).join(name);
-            if full.exists() {
+        match find_in_path(&path, name) {
+            Some(full) => {
                 if json {
-                    let output =
-                        serde_json::json!({"command": name, "path": full.to_string_lossy()});
+                    let output = serde_json::json!({"command": name, "path": full});
                     println!("{}", serde_json::to_string_pretty(&output)?);
                 } else {
-                    println!("{}", full.display());
+                    println!("{full}");
                 }
-                return Ok(());
             }
+            None => anyhow::bail!("command {:?} not found in PATH", name),
         }
-        anyhow::bail!("command {:?} not found in PATH", name);
+        return Ok(());
     }
 
-    let mut entries: Vec<(usize, &str, bool)> = dirs
-        .iter()
-        .enumerate()
-        .map(|(i, d)| (i, *d, Path::new(d).exists()))
-        .collect();
+    let mut entries: Vec<(usize, &str, bool)> = analyze_path_entries(&path);
 
     if sort {
         entries.sort_by(|a, b| a.1.cmp(b.1));
@@ -69,4 +85,45 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     }
 
     Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_parse_path_empty() {
+        let dirs = parse_path("");
+        assert_eq!(dirs, vec![""]);
+    }
+
+    #[test]
+    fn test_parse_path_single() {
+        let dirs = parse_path("/usr/bin");
+        assert_eq!(dirs, vec!["/usr/bin"]);
+    }
+
+    #[test]
+    fn test_parse_path_multiple() {
+        let dirs = parse_path("/usr/bin:/usr/local/bin:/opt/homebrew/bin");
+        assert_eq!(dirs.len(), 3);
+        assert_eq!(dirs[0], "/usr/bin");
+        assert_eq!(dirs[2], "/opt/homebrew/bin");
+    }
+
+    #[test]
+    fn test_parse_path_trailing_colon() {
+        let dirs = parse_path("/usr/bin:");
+        assert_eq!(dirs, vec!["/usr/bin", ""]);
+    }
+
+    #[test]
+    fn test_analyze_path_entries() {
+        let entries = analyze_path_entries("/usr/bin:/nonexistent_dir_xyz123");
+        assert_eq!(entries.len(), 2);
+        assert_eq!(entries[0].1, "/usr/bin");
+        assert!(entries[0].2);
+        assert_eq!(entries[1].1, "/nonexistent_dir_xyz123");
+        assert!(!entries[1].2);
+    }
 }

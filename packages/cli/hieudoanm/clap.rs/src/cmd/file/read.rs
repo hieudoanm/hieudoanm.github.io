@@ -3,6 +3,16 @@ use std::path::Path;
 
 use crate::cmd::file::common::{detect_mime, split_lines};
 
+pub fn compute_line_slice(offset: usize, lines: usize, total_lines: usize) -> (usize, usize) {
+    let start = offset.min(total_lines);
+    let end = if lines == 0 {
+        total_lines
+    } else {
+        (start + lines).min(total_lines)
+    };
+    (start, end)
+}
+
 fn read_file_content(
     path: &str,
     offset: usize,
@@ -18,13 +28,7 @@ fn read_file_content(
     let all_lines = split_lines(&data);
     let total_lines = all_lines.len();
 
-    let start = offset.min(total_lines);
-    let end = if lines == 0 {
-        total_lines
-    } else {
-        (start + lines).min(total_lines)
-    };
-
+    let (start, end) = compute_line_slice(offset, lines, total_lines);
     let display_lines: Vec<String> = all_lines[start..end].to_vec();
     Ok((data, display_lines, total_lines))
 }
@@ -206,4 +210,44 @@ pub async fn tail_run(m: &clap::ArgMatches) -> anyhow::Result<()> {
         println!("{line}");
     }
     Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_compute_line_slice_no_limit() {
+        assert_eq!(compute_line_slice(0, 0, 100), (0, 100));
+    }
+
+    #[test]
+    fn test_compute_line_slice_with_limit() {
+        assert_eq!(compute_line_slice(0, 10, 100), (0, 10));
+    }
+
+    #[test]
+    fn test_compute_line_slice_with_offset() {
+        assert_eq!(compute_line_slice(5, 10, 100), (5, 15));
+    }
+
+    #[test]
+    fn test_compute_line_slice_offset_beyond_end() {
+        assert_eq!(compute_line_slice(200, 10, 100), (100, 100));
+    }
+
+    #[test]
+    fn test_compute_line_slice_limit_beyond_end() {
+        assert_eq!(compute_line_slice(90, 20, 100), (90, 100));
+    }
+
+    #[test]
+    fn test_compute_line_slice_exact_fit() {
+        assert_eq!(compute_line_slice(0, 100, 100), (0, 100));
+    }
+
+    #[test]
+    fn test_compute_line_slice_empty() {
+        assert_eq!(compute_line_slice(0, 10, 0), (0, 0));
+    }
 }

@@ -96,12 +96,15 @@ async fn player(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     Ok(())
 }
 
-fn print_ratings_header() {
-    println!(
+fn ratings_header_line() -> String {
+    format!(
         "| {:<8} | {:>8} | {:>8} | {:>8} | {:>8} | {:>8} |",
         "Mode", "Best", "Last", "Win", "Draw", "Loss"
-    );
-    println!(
+    )
+}
+
+fn ratings_header_separator() -> String {
+    format!(
         "| {:<8} | {:>8} | {:>8} | {:>8} | {:>8} | {:>8} |",
         "-".repeat(8),
         "-".repeat(8),
@@ -109,14 +112,23 @@ fn print_ratings_header() {
         "-".repeat(8),
         "-".repeat(8),
         "-".repeat(8)
-    );
+    )
+}
+
+fn print_ratings_header() {
+    println!("{}", ratings_header_line());
+    println!("{}", ratings_header_separator());
+}
+
+fn format_rating_line(label: &str, r: &service::ChessRating) -> String {
+    format!(
+        "| {:<8} | {:>8} | {:>8} | {:>8} | {:>8} | {:>8} |",
+        label, r.best.rating, r.last.rating, r.record.win, r.record.draw, r.record.loss
+    )
 }
 
 fn print_rating(label: &str, r: &service::ChessRating) {
-    println!(
-        "| {:<8} | {:>8} | {:>8} | {:>8} | {:>8} | {:>8} |",
-        label, r.best.rating, r.last.rating, r.record.win, r.record.draw, r.record.loss
-    );
+    println!("{}", format_rating_line(label, r));
 }
 
 async fn leaderboards(matches: &clap::ArgMatches) -> anyhow::Result<()> {
@@ -153,6 +165,40 @@ async fn leaderboards(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     Ok(())
 }
 
+fn leaderboard_header_line() -> String {
+    format!(
+        "| {:<4} | {:<32} | {:<24} | {:<24} | {:>6} | {:<24} |",
+        "Rank", "Name", "Username", "Country", "Score", "W / D / L"
+    )
+}
+
+fn leaderboard_header_separator() -> String {
+    format!(
+        "| {:<4} | {:<32} | {:<24} | {:<24} | {:>6} | {:<24} |",
+        "-".repeat(4),
+        "-".repeat(32),
+        "-".repeat(24),
+        "-".repeat(24),
+        "-".repeat(6),
+        "-".repeat(24)
+    )
+}
+
+fn format_player_line(p: &service::Player) -> String {
+    let name = if p.name.is_empty() { "-" } else { &p.name };
+    let country = service::country_code(&p.country);
+    let wdl = format!("{} / {} / {}", p.win_count, p.draw_count, p.loss_count);
+    format!(
+        "| {:<4} | {:<32} | {:<24} | {:<24} | {:>6} | {:<24} |",
+        p.rank,
+        name,
+        p.username.to_lowercase(),
+        country,
+        p.score,
+        wdl
+    )
+}
+
 fn print_top(title: &str, players: &[service::Player], limit: usize) {
     if players.is_empty() {
         return;
@@ -161,35 +207,12 @@ fn print_top(title: &str, players: &[service::Player], limit: usize) {
     println!();
     println!("{}", title);
     println!();
-
-    println!(
-        "| {:<4} | {:<32} | {:<24} | {:<24} | {:>6} | {:<24} |",
-        "Rank", "Name", "Username", "Country", "Score", "W / D / L"
-    );
-    println!(
-        "| {:<4} | {:<32} | {:<24} | {:<24} | {:>6} | {:<24} |",
-        "-".repeat(4),
-        "-".repeat(32),
-        "-".repeat(24),
-        "-".repeat(24),
-        "-".repeat(6),
-        "-".repeat(24)
-    );
+    println!("{}", leaderboard_header_line());
+    println!("{}", leaderboard_header_separator());
 
     let limit = limit.min(players.len());
     for p in &players[..limit] {
-        let name = if p.name.is_empty() { "-" } else { &p.name };
-        let country = service::country_code(&p.country);
-        let wdl = format!("{} / {} / {}", p.win_count, p.draw_count, p.loss_count);
-        println!(
-            "| {:<4} | {:<32} | {:<24} | {:<24} | {:>6} | {:<24} |",
-            p.rank,
-            name,
-            p.username.to_lowercase(),
-            country,
-            p.score,
-            wdl
-        );
+        println!("{}", format_player_line(p));
     }
 }
 
@@ -197,6 +220,7 @@ async fn titled() -> anyhow::Result<()> {
     println!();
     println!("| {:<6} | {:>7} |", "Titled", "Players");
     println!("| {:<6} | {:>7} |", "-".repeat(6), "-".repeat(7));
+
 
     for title in service::TITLES {
         let url = format!("https://api.chess.com/pub/titled/{}", title);
@@ -217,4 +241,112 @@ async fn titled() -> anyhow::Result<()> {
     println!();
 
     Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    fn sample_rating() -> service::ChessRating {
+        service::ChessRating {
+            last: service::ChessRatingLast { rating: 1500, date: 20240101, rd: 50 },
+            best: service::ChessRatingBest { rating: 1600, date: 20240101, game: None },
+            record: service::ChessRatingRecord { win: 100, draw: 20, loss: 80 },
+        }
+    }
+
+    fn sample_player(rank: i32, username: &str, country: &str) -> service::Player {
+        service::Player {
+            rank,
+            username: username.to_string(),
+            name: String::new(),
+            country: country.to_string(),
+            title: String::new(),
+            score: 2000 - rank * 10,
+            win_count: 50 - rank,
+            draw_count: 10,
+            loss_count: 30 + rank,
+        }
+    }
+
+    #[test]
+    fn test_ratings_header_line() {
+        let line = ratings_header_line();
+        assert!(line.starts_with('|'));
+        assert!(line.contains("Mode"));
+        assert!(line.contains("Best"));
+        assert!(line.contains("Last"));
+        assert!(line.contains("Win"));
+        assert!(line.contains("Draw"));
+        assert!(line.contains("Loss"));
+    }
+
+    #[test]
+    fn test_ratings_header_separator() {
+        let sep = ratings_header_separator();
+        assert!(sep.starts_with('|'));
+        assert!(sep.contains("--------"));
+    }
+
+    #[test]
+    fn test_format_rating_line() {
+        let r = sample_rating();
+        let line = format_rating_line("Blitz", &r);
+        assert!(line.starts_with('|'));
+        assert!(line.contains("Blitz"));
+        assert!(line.contains("1600"));
+        assert!(line.contains("1500"));
+        assert!(line.contains("100"));
+        assert!(line.contains("20"));
+        assert!(line.contains("80"));
+    }
+
+    #[test]
+    fn test_leaderboard_header_line() {
+        let line = leaderboard_header_line();
+        assert!(line.starts_with('|'));
+        assert!(line.contains("Rank"));
+        assert!(line.contains("Username"));
+        assert!(line.contains("Score"));
+    }
+
+    #[test]
+    fn test_leaderboard_header_separator() {
+        let sep = leaderboard_header_separator();
+        assert!(sep.starts_with('|'));
+        assert!(sep.contains("----"));
+    }
+
+    #[test]
+    fn test_format_player_line_with_name() {
+        let p = service::Player {
+            rank: 1,
+            username: "hikaru".to_string(),
+            name: "Hikaru Nakamura".to_string(),
+            country: "/country/US".to_string(),
+            title: "GM".to_string(),
+            score: 2800,
+            win_count: 100,
+            draw_count: 20,
+            loss_count: 10,
+        };
+        let line = format_player_line(&p);
+        assert!(line.contains("hikaru"));
+        assert!(line.contains("Hikaru Nakamura"));
+        assert!(line.contains("2800"));
+    }
+
+    #[test]
+    fn test_format_player_line_without_name() {
+        let p = sample_player(5, "testplayer", "/country/VN");
+        let line = format_player_line(&p);
+        assert!(line.contains("testplayer"));
+        assert!(line.contains("-"));
+        assert!(line.contains("1950"));
+    }
+
+    #[test]
+    fn test_print_top_empty_does_not_panic() {
+        print_top("Empty", &[], 5);
+    }
 }

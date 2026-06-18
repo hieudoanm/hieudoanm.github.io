@@ -55,14 +55,16 @@ pub fn print_full_status(url: &str) {
 
 pub fn get_descriptive_status(name: &str, url: &str) -> String {
     match get_status(url) {
-        Ok(resp) => {
-            if resp.status.indicator == "none" {
-                format!("{} - Healthy", name)
-            } else {
-                format!("{} - Offline", name)
-            }
-        }
+        Ok(resp) => describe_from_response(name, &resp.status),
         Err(e) => format!("{} - Error: {}", name, e),
+    }
+}
+
+pub fn describe_from_response(name: &str, status: &Status) -> String {
+    if status.indicator == "none" {
+        format!("{} - Healthy", name)
+    } else {
+        format!("{} - Offline", name)
     }
 }
 
@@ -133,4 +135,36 @@ pub fn scan_wifi() -> Result<String> {
 #[cfg(not(any(target_os = "macos", target_os = "linux")))]
 pub fn scan_wifi() -> Result<String> {
     anyhow::bail!("unsupported platform")
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_describe_from_response_healthy() {
+        let status = Status {
+            indicator: "none".to_string(),
+            description: "All Systems Operational".to_string(),
+        };
+        assert_eq!(describe_from_response("GitHub", &status), "GitHub - Healthy");
+    }
+
+    #[test]
+    fn test_describe_from_response_offline() {
+        let status = Status {
+            indicator: "critical".to_string(),
+            description: "Partial Outage".to_string(),
+        };
+        assert_eq!(describe_from_response("API", &status), "API - Offline");
+    }
+
+    #[test]
+    fn test_describe_from_response_minor() {
+        let status = Status {
+            indicator: "minor".to_string(),
+            description: "Degraded Performance".to_string(),
+        };
+        assert_eq!(describe_from_response("DB", &status), "DB - Offline");
+    }
 }

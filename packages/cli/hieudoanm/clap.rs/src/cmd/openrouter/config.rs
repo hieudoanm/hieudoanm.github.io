@@ -32,14 +32,8 @@ pub fn load_api_key() -> String {
     key
 }
 
-pub fn read_key_from_file(path: &str) -> Option<String> {
-    let p = Path::new(path);
-    if !p.exists() {
-        return None;
-    }
-
-    let content = fs::read_to_string(p).ok()?;
-    for line in content.lines() {
+pub fn parse_key_file_contents(contents: &str) -> Option<String> {
+    for line in contents.lines() {
         let line = line.trim();
         if line.is_empty() || line.starts_with('#') {
             continue;
@@ -54,6 +48,14 @@ pub fn read_key_from_file(path: &str) -> Option<String> {
             return Some(line.to_string());
         }
     }
-
     None
+}
+
+pub fn read_key_from_file(path: &str) -> Option<String> {
+    let p = Path::new(path);
+    if !p.exists() {
+        return None;
+    }
+    let content = fs::read_to_string(p).ok()?;
+    parse_key_file_contents(&content)
 }

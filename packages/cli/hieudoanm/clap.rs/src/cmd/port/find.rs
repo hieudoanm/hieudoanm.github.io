@@ -57,11 +57,44 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
 }
 
 fn find_available_port(start: u16, end: u16) -> Option<u16> {
+    find_available_port_with(start, end, |addr| !super::check_port_open(addr, 1))
+}
+
+fn find_available_port_with(start: u16, end: u16, available_fn: impl Fn(&str) -> bool) -> Option<u16> {
     for port in start..=end {
         let addr = format!("localhost:{port}");
-        if !super::check_port_open(&addr, 1) {
+        if available_fn(&addr) {
             return Some(port);
         }
     }
     None
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_find_available_port_with_first() {
+        let port = find_available_port_with(8000, 9000, |_| true);
+        assert_eq!(port, Some(8000));
+    }
+
+    #[test]
+    fn test_find_available_port_with_last() {
+        let port = find_available_port_with(8000, 9000, |addr| addr == "localhost:9000");
+        assert_eq!(port, Some(9000));
+    }
+
+    #[test]
+    fn test_find_available_port_with_none() {
+        let port = find_available_port_with(8000, 9000, |_| false);
+        assert_eq!(port, None);
+    }
+
+    #[test]
+    fn test_find_available_port_with_single() {
+        let port = find_available_port_with(8080, 8080, |_| true);
+        assert_eq!(port, Some(8080));
+    }
 }
