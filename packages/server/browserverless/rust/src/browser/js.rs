@@ -902,12 +902,13 @@ pub fn process_bootloader_modules(context: &mut Context) {
 (function() {
 try {
     // Debug: check bootloader module state
+    console.log('[bl] ErrorGuard=' + String(typeof window.ErrorGuard) + ' inGuard=' + (window.ErrorGuard ? typeof window.ErrorGuard.inGuard : 'n/a'));
+    
     var _define = null;
     try { _define = window.require('define'); } catch(e) {}
     console.log('[bl] define=' + String(typeof _define) + ' req=' + String(typeof window.require) + ' __d=' + String(typeof window.__d) + ' rl=' + String(typeof window.requireLazy));
     
     if (_define && typeof window.require === 'function') {
-        // Check each Bootloader dep
         var allDeps = ["invariant","BootloaderConfig","BootloaderDocumentInserter","BootloaderEndpoint","BootloaderEvents","BootloaderEventsManager","BootloaderPreloader","BootloaderRetryTracker","BootloaderUsageLoggerUtils","CSSLoader","ClientConsistency","ErrorPubSub","ExecutionEnvironment","FBLogger","HasteBitMap","HasteResourceIndexUtil","JSResourceReferenceImpl","MakeHasteTranslations","NetworkStatus","RequireDeferredReference","ResourceHasher","ResourceTimingsStore","ServerJsRuntimeEnvironment","SiteData","TimeSlice","__debug","clearTimeout","cr:696703","err","fb-error","gkx","ifRequireable","ifRequired","nullthrows","objectKeys","objectValues","performanceAbsoluteNow","performanceNow","promiseDone","setTimeoutAcrossTransitions"];
         var stubDeps = [];
         for (var di = 0; di < allDeps.length; di++) {
@@ -922,48 +923,49 @@ try {
         }
         console.log('[bl] ' + String(stubDeps.length) + '/' + String(allDeps.length) + ' deps need stubs: ' + stubDeps.join(','));
         
-        // Trace all 16 deps individually
-        var _define = window.require('define');
-        console.log('[bl] _define=' + String(typeof _define));
-        
-        // First check current state of all stub deps
-        var stateBefore = [];
-        for (var si = 0; si < stubDeps.length; si++) {
-            var dn = stubDeps[si];
-            var st = '';
-            try {
-                var dr = window.require(dn);
-                st = dr === null ? 'null' : (dr === undefined ? 'undef' : String(typeof dr));
-            } catch(e) {
-                st = 'err:' + String(e).substring(0,50);
-            }
-            stateBefore.push(dn + '=' + st);
-        }
-        console.log('[bl] before: ' + stateBefore.join(' | '));
-        
-        // Define stubs using _define
-        for (var si = 0; si < stubDeps.length; si++) {
-            try {
-                _define(stubDeps[si], [], {}, 0);
-            } catch(e) {
-                console.log('[bl] define err ' + stubDeps[si] + ': ' + String(e).substring(0, 100));
-            }
+        // Patch ErrorGuard to stop swallowing W() errors
+        if (window.ErrorGuard && typeof window.ErrorGuard.inGuard === 'function') {
+            console.log('[bl] patching ErrorGuard...');
+            window.ErrorGuard = { inGuard: function() { return true; } };
         }
         
-        // Check state after
-        var stateAfter = [];
+        // Deep trace for clearTimeout
+        var _define2 = window.require('define');
+        
+        // Before
+        var vB;
+        try { vB = window.require('clearTimeout'); } catch(e) { vB = 'ERR:'+String(e).substring(0,100); }
+        console.log('[bl]1 pre ' + String(vB));
+        
+        // Define
+        try { _define2('clearTimeout', [], 'EXPORTS_OK', 0); } catch(e) { console.log('[bl]1 def-err:' + String(e).substring(0,100)); }
+        console.log('[bl]1 def-done');
+        
+        // After
+        var vA;
+        try { vA = window.require('clearTimeout'); } catch(e) { vA = 'ERR:'+String(e).substring(0,100); }
+        console.log('[bl]1 post ' + String(vA));
+        
+        // Try again with direct window.clearTimeout
+        window.clearTimeout = null;
+        try { _define2('clearTimeout', [], null, 0); } catch(e) { console.log('[bl]2 def-err:' + String(e).substring(0,100)); }
+        try { var vA2 = window.require('clearTimeout'); console.log('[bl]2 post ' + String(vA2)); } catch(e) { console.log('[bl]2 post-err:' + String(e).substring(0,100)); }
+        
+        // Define all stubs
         for (var si = 0; si < stubDeps.length; si++) {
-            var dn = stubDeps[si];
-            var st = '';
             try {
-                var dr = window.require(dn);
-                st = dr === null ? 'null' : (dr === undefined ? 'undef' : String(typeof dr));
+                _define2(stubDeps[si], [], {}, 0);
             } catch(e) {
-                st = 'err:' + String(e).substring(0,50);
+                console.log('[bl] def err ' + stubDeps[si] + ': ' + String(e).substring(0, 100));
             }
-            stateAfter.push(dn + '=' + st);
         }
-        console.log('[bl] after: ' + stateAfter.join(' | '));
+        
+        // Check Bootloader
+        var bl = null;
+        try { bl = window.require('Bootloader'); } catch(e) {
+            console.log('[bl] Bootloader error: ' + String(e).substring(0, 300));
+        }
+        console.log('[bl] Bootloader=' + (bl === null ? 'null' : 'ok'));
 
         
         // Try Bootloader
