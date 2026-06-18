@@ -8,16 +8,32 @@ repository = "git+ssh://git@github.com/hieudoanm/hieudoanm.github.io.git"
 edition = "2021"
 
 [dependencies]
-reqwest = { version = "0.12", default-features = false, features = ["rustls-tls"] }
-tokio = { version = "1", features = ["rt", "rt-multi-thread", "macros", "time"] }
-clap = { version = "4", features = ["derive"] }
-html5ever = "0.39"
-markup5ever_rcdom = "0.39"
-rquickjs = { version = "0.6", features = ["macro", "full-async"] }
-anyhow = "1.0"
-log = "0.4"
-env_logger = "0.11"
-url = "2"
+# HTTP client
+reqwest = { version = "=0.12.28", default-features = false, features = ["rustls-tls"] }
+
+# Async runtime
+tokio = { version = "=1.52.3", features = ["rt", "rt-multi-thread", "macros", "time"] }
+
+# CLI
+clap = { version = "=4.6.1", features = ["derive"] }
+
+# HTML parsing & serialization
+html5ever = "=0.39.0"
+markup5ever_rcdom = "=0.39.0"
+
+# JavaScript engine
+rquickjs = { version = "=0.6.2", features = ["macro", "full-async"] }
+
+# URL handling
+url = "=2.5.8"
+base64 = "=0.22.1"
+
+# Error handling
+anyhow = "=1.0.102"
+
+# Logging
+log = "=0.4.32"
+env_logger = "=0.11.10"
 
 [profile.release]
 opt-level = "z"

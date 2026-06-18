@@ -172,6 +172,65 @@ impl JsRuntime {
             // fetch
             globals.set("fetch", Func::from(fetch_impl))?;
 
+            // Inject polyfills for Facebook module system
+            let polyfill = r#"
+if (typeof globalThis.requireLazy === 'undefined') {
+    var __rlModules = {};
+    function __processServerJS() {
+        var scripts = document.querySelectorAll('script[type="application/json"][data-sjs]');
+        for (var i = 0; i < scripts.length; i++) {
+            try {
+                var data = JSON.parse(scripts[i].textContent);
+                if (data && data.require && Array.isArray(data.require)) {
+                    for (var j = 0; j < data.require.length; j++) {
+                        var entry = data.require[j];
+                        if (Array.isArray(entry) && entry.length >= 2) {
+                            var modName = entry[0];
+                            var method = entry[1];
+                            var context = entry[2];
+                            var args = entry[3] || [];
+                            var mod = globalThis[modName];
+                            try {
+                                if (mod && typeof mod[method] === 'function') {
+                                    mod[method].apply(context, args);
+                                }
+                            } catch(e) {}
+                        }
+                    }
+                }
+            } catch(e) {}
+        }
+    }
+    globalThis.requireLazy = function(modules, callback) {
+        var resolved = modules.map(function(name) {
+            if (typeof globalThis[name] !== 'undefined') return globalThis[name];
+            if (!__rlModules[name]) {
+                if (name === 'ServerJSProcessingListener') {
+                    __rlModules[name] = { process: __processServerJS };
+                } else {
+                    __rlModules[name] = {};
+                }
+                globalThis[name] = __rlModules[name];
+            }
+            return __rlModules[name];
+        });
+        if (callback) {
+            try { callback.apply(null, resolved); } catch(e) { console.log('requireLazy error:', e); }
+        }
+    };
+    globalThis.define = function(name, deps, factory) {
+        if (!factory) { factory = deps; deps = []; }
+        var exports = {};
+        var resolved = (deps || []).map(function(dep) { return globalThis[dep] || {}; });
+        var result = factory.apply(null, resolved);
+        var mod = result || exports;
+        if (typeof name === 'string') { globalThis[name] = mod; }
+        return mod;
+    };
+}
+"#;
+            let _ = ctx.eval::<rquickjs::Value, _>(polyfill);
+
             Ok::<(), anyhow::Error>(())
         }).await;
 

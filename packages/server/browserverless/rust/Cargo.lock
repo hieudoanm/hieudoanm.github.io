@@ -116,6 +116,7 @@ name = "browserverless"
 version = "0.0.1"
 dependencies = [
  "anyhow",
+ "base64",
  "clap",
  "env_logger",
  "html5ever",
