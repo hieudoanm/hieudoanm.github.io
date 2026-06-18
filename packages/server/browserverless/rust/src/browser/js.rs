@@ -3,15 +3,40 @@ use crate::browser::dom::JsDocument;
 use markup5ever_rcdom::Handle;
 use rquickjs::{AsyncContext, AsyncRuntime, Ctx, Function, Object, Promise};
 use rquickjs::prelude::Func;
+use std::collections::HashMap;
+use std::sync::atomic::{AtomicBool, AtomicU32, Ordering};
+use std::sync::{Arc, Mutex};
 use std::time::Duration;
 
+static NEXT_TIMER_ID: AtomicU32 = AtomicU32::new(1);
+
+fn timers() -> &'static Mutex<HashMap<u32, Arc<AtomicBool>>> {
+    static TIMERS: std::sync::OnceLock<Mutex<HashMap<u32, Arc<AtomicBool>>>> = std::sync::OnceLock::new();
+    TIMERS.get_or_init(|| Mutex::new(HashMap::new()))
+}
+
 #[allow(non_snake_case)]
-fn setTimeout_impl<'js>(ctx: Ctx<'js>, f: Function<'js>, delay: u64) -> i32 {
+fn setTimeout_impl<'js>(ctx: Ctx<'js>, f: Function<'js>, delay: u64) -> u32 {
+    let id = NEXT_TIMER_ID.fetch_add(1, Ordering::Relaxed);
+    let cancelled = Arc::new(AtomicBool::new(false));
+    let guard = cancelled.clone();
+
     ctx.spawn(async move {
         tokio::time::sleep(Duration::from_millis(delay)).await;
-        let _ = f.call::<_, ()>(());
+        if !guard.load(Ordering::Relaxed) {
+            let _ = f.call::<_, ()>(());
+        }
     });
-    0
+
+    timers().lock().unwrap().insert(id, cancelled);
+    id
+}
+
+#[allow(non_snake_case)]
+fn clearTimeout_impl(id: u32) {
+    if let Some(cancelled) = timers().lock().unwrap().remove(&id) {
+        cancelled.store(true, Ordering::Relaxed);
+    }
 }
 
 fn fetch_impl<'js>(ctx: Ctx<'js>, url: String) -> rquickjs::Result<Promise<'js>> {
@@ -58,9 +83,8 @@ impl JsRuntime {
             // setTimeout — drives callback after delay via spawned future
             globals.set("setTimeout", Func::from(setTimeout_impl))?;
 
-            // clearTimeout stub (non-cancellable for MVP)
-            globals.set("clearTimeout", Function::new(ctx.clone(), move |_id: i32| {
-            })?)?;
+            // clearTimeout — aborts the spawned timer task
+            globals.set("clearTimeout", Func::from(clearTimeout_impl))?;
 
             // fetch — returns a Promise that resolves with the response text
             globals.set("fetch", Func::from(fetch_impl))?;

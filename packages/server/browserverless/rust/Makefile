@@ -8,6 +8,7 @@ all: format lint test build
 
 build:
 	$(CARGO) build --release
+	@ls -lh $(BUILD_DIR)/$(BINARY) | awk '{print "Binary size:", $$5}'
 
 clean:
 	$(CARGO) clean

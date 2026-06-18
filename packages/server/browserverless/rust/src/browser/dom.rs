@@ -13,64 +13,62 @@ pub struct JsDocument {
 
 #[rquickjs::methods]
 impl JsDocument {
+    #[qjs(get, rename = "title")]
+    pub fn get_title(&self) -> String {
+        get_title_text(&self.handle)
+    }
+
+    #[qjs(set, rename = "title")]
+    pub fn set_title(&self, title: String) {
+        set_title_text(&self.handle, &title);
+    }
+
+    #[qjs(get, rename = "cookie")]
+    pub fn get_cookie(&self) -> String {
+        String::new()
+    }
+
+    #[qjs(set, rename = "cookie")]
+    pub fn set_cookie(&self, _val: String) {
+        // For MVP, cookies are a no-op
+    }
+
     #[qjs(rename = "querySelector")]
     pub fn query_selector<'js>(&self, ctx: rquickjs::Ctx<'js>, selector: String) -> Option<rquickjs::Class<'js, JsElement>> {
-        self.find_by_tag(&self.handle, &selector).map(|h| {
-            rquickjs::Class::instance(ctx, JsElement { handle: h }).unwrap()
+        let sels = parse_selector_list(&selector).ok()?;
+        find_first_match(&self.handle, &sels).map(|h| {
+            rquickjs::Class::instance(ctx, JsElement::new(h)).unwrap()
         })
     }
 
     #[qjs(rename = "querySelectorAll")]
-    pub fn query_selector_all<'js>(&self, ctx: rquickjs::Ctx<'js>, tag: String) -> Vec<rquickjs::Class<'js, JsElement>> {
+    pub fn query_selector_all<'js>(&self, ctx: rquickjs::Ctx<'js>, selector: String) -> Vec<rquickjs::Class<'js, JsElement>> {
+        let sels = match parse_selector_list(&selector) {
+            Ok(s) => s,
+            Err(_) => return Vec::new(),
+        };
         let mut results = Vec::new();
-        self.find_all_by_tag(&self.handle, &tag, &mut results);
+        collect_matches(&self.handle, &sels, &mut results);
         results.into_iter().map(|h| {
-            rquickjs::Class::instance(ctx.clone(), JsElement { handle: h }).unwrap()
+            rquickjs::Class::instance(ctx.clone(), JsElement::new(h)).unwrap()
         }).collect()
     }
 
     #[qjs(rename = "getElementById")]
     pub fn get_element_by_id<'js>(&self, ctx: rquickjs::Ctx<'js>, id: String) -> Option<rquickjs::Class<'js, JsElement>> {
         self.find_by_id(&self.handle, &id).map(|h| {
-            rquickjs::Class::instance(ctx, JsElement { handle: h }).unwrap()
+            rquickjs::Class::instance(ctx, JsElement::new(h)).unwrap()
         })
     }
 
     #[qjs(rename = "createElement")]
     pub fn create_element<'js>(&self, ctx: rquickjs::Ctx<'js>, tag_name: String) -> rquickjs::Class<'js, JsElement> {
         let handle = create_element_node(&tag_name);
-        rquickjs::Class::instance(ctx, JsElement { handle }).unwrap()
+        rquickjs::Class::instance(ctx, JsElement::new(handle)).unwrap()
     }
 }
 
 impl JsDocument {
-    fn find_by_tag(&self, handle: &Handle, tag: &str) -> Option<Handle> {
-        let node = handle;
-        if let NodeData::Element { name, .. } = &node.data {
-            if name.local.to_string().eq_ignore_ascii_case(tag) {
-                return Some(node.clone());
-            }
-        }
-        for child in node.children.borrow().iter() {
-            if let Some(found) = self.find_by_tag(child, tag) {
-                return Some(found);
-            }
-        }
-        None
-    }
-
-    fn find_all_by_tag(&self, handle: &Handle, tag: &str, results: &mut Vec<Handle>) {
-        let node = handle;
-        if let NodeData::Element { name, .. } = &node.data {
-            if name.local.to_string().eq_ignore_ascii_case(tag) {
-                results.push(node.clone());
-            }
-        }
-        for child in node.children.borrow().iter() {
-            self.find_all_by_tag(child, tag, results);
-        }
-    }
-
     fn find_by_id(&self, handle: &Handle, id: &str) -> Option<Handle> {
         let node = handle;
         if let NodeData::Element { attrs, .. } = &node.data {
@@ -92,6 +90,16 @@ impl JsDocument {
 #[rquickjs::class]
 pub struct JsElement {
     pub handle: Handle,
+    pub listeners: RefCell<Vec<(String, rquickjs::Persistent<rquickjs::Function<'static>>)>>,
+}
+
+impl JsElement {
+    fn new(handle: Handle) -> Self {
+        JsElement {
+            handle,
+            listeners: RefCell::new(Vec::new()),
+        }
+    }
 }
 
 #[rquickjs::methods]
@@ -183,7 +191,6 @@ impl JsElement {
     pub fn get_attribute(&self, name: String) -> Option<String> {
         let val = get_attr(&self.handle, &name);
         if val.is_empty() {
-            // Check if attribute actually exists (vs empty string value)
             if let NodeData::Element { attrs, .. } = &self.handle.data {
                 if attrs.borrow().iter().any(|a| a.name.local.as_ref() == name) {
                     return Some(val);
@@ -195,10 +202,476 @@ impl JsElement {
         }
     }
 
-    #[qjs(rename = "click")]
-    pub fn click(&self) {
-        // Phase 4: dispatch a click event. For now this is a no-op.
+    #[qjs(get, rename = "tagName")]
+    pub fn get_tag_name(&self) -> String {
+        if let NodeData::Element { ref name, .. } = self.handle.data {
+            name.local.to_uppercase()
+        } else {
+            String::new()
+        }
     }
+
+    #[qjs(rename = "addEventListener")]
+    pub fn add_event_listener<'js>(&self, ctx: rquickjs::Ctx<'js>, event_type: String, handler: rquickjs::Function<'js>) {
+        let persistent = rquickjs::Persistent::save(&ctx, handler);
+        self.listeners.borrow_mut().push((event_type, persistent));
+    }
+
+    #[qjs(rename = "removeEventListener")]
+    pub fn remove_event_listener<'js>(&self, ctx: rquickjs::Ctx<'js>, event_type: String, handler: rquickjs::Function<'js>) {
+        let persistent = rquickjs::Persistent::save(&ctx, handler);
+        self.listeners.borrow_mut().retain(|(t, h)| t != &event_type || h != &persistent);
+    }
+
+    #[qjs(rename = "dispatchEvent")]
+    pub fn dispatch_event<'js>(&self, ctx: rquickjs::Ctx<'js>, event_type: String) -> bool {
+        let handlers: Vec<rquickjs::Persistent<rquickjs::Function<'static>>> = self
+            .listeners
+            .borrow()
+            .iter()
+            .filter(|(t, _)| t == &event_type)
+            .map(|(_, h)| h.clone())
+            .collect();
+
+        if handlers.is_empty() {
+            return false;
+        }
+
+        let event = match rquickjs::Object::new(ctx.clone()) {
+            Ok(obj) => obj,
+            Err(_) => return false,
+        };
+        let _ = event.set("type", event_type.as_str());
+        let _ = event.set("defaultPrevented", false);
+        let _ = event.set("preventDefault", rquickjs::Function::new(ctx.clone(), {
+            let ev = event.clone();
+            move || { let _ = ev.set("defaultPrevented", true); }
+        }));
+        let _ = event.set("stopPropagation", rquickjs::Function::new(ctx.clone(), || {}));
+
+        for handler in handlers {
+            if let Ok(f) = handler.restore(&ctx) {
+                let _ = f.call::<_, ()>((event.clone(),));
+            }
+        }
+
+        // dispatchEvent returns false if preventDefault was called
+        let cancelled = event.get::<_, bool>("defaultPrevented").unwrap_or(false);
+        !cancelled
+    }
+
+    #[qjs(rename = "click")]
+    pub fn click<'js>(&self, ctx: rquickjs::Ctx<'js>) {
+        let _ = self.dispatch_event(ctx, "click".to_string());
+    }
+
+    #[qjs(rename = "submit")]
+    pub fn submit<'js>(&self, ctx: rquickjs::Ctx<'js>) {
+        let _ = self.dispatch_event(ctx, "submit".to_string());
+    }
+}
+
+// --- CSS Selector Engine ---
+
+#[derive(Debug, Clone)]
+enum SimpleSelector {
+    Universal,
+    Tag(String),
+    Class(String),
+    Id(String),
+    AttrExists(String),
+    AttrEquals(String, String),
+    AttrIncludes { name: String, value: String },
+}
+
+#[derive(Debug, Clone)]
+struct Selector {
+    simples: Vec<SimpleSelector>,
+}
+
+#[derive(Debug, Clone)]
+enum Combinator {
+    Descendant,
+    Child,
+}
+
+#[derive(Debug, Clone)]
+struct ComplexSelector {
+    left: Box<SelectorOrComplex>,
+    combinator: Combinator,
+    right: Selector,
+}
+
+#[derive(Debug, Clone)]
+enum SelectorOrComplex {
+    Simple(Selector),
+    Complex(Box<ComplexSelector>),
+}
+
+fn parse_selector_list(input: &str) -> Result<Vec<SelectorOrComplex>, String> {
+    let mut results = Vec::new();
+    for part in input.split(',') {
+        let part = part.trim();
+        if !part.is_empty() {
+            results.push(parse_selector(part)?);
+        }
+    }
+    if results.is_empty() {
+        return Err("empty selector".into());
+    }
+    Ok(results)
+}
+
+fn parse_selector(input: &str) -> Result<SelectorOrComplex, String> {
+    let parts = split_by_combinator(input)?;
+    if parts.is_empty() {
+        return Err("empty compound".into());
+    }
+
+    let mut iter = parts.into_iter().peekable();
+    let mut current = SelectorOrComplex::Simple(parse_compound(&iter.next().unwrap())?);
+
+    while iter.peek().is_some() {
+        let comb_raw = iter.next().unwrap();
+        let comb = if comb_raw == ">" {
+            Combinator::Child
+        } else {
+            Combinator::Descendant
+        };
+        let right = parse_compound(&iter.next().unwrap())?;
+        current = SelectorOrComplex::Complex(Box::new(ComplexSelector {
+            left: Box::new(current),
+            combinator: comb,
+            right,
+        }));
+    }
+
+    Ok(current)
+}
+
+fn split_by_combinator(input: &str) -> Result<Vec<String>, String> {
+    let mut result = Vec::new();
+    let mut buf = String::new();
+    let mut chars = input.chars().peekable();
+    let mut in_bracket: i32 = 0;
+
+    while let Some(ch) = chars.next() {
+        match ch {
+            '[' => {
+                in_bracket += 1;
+                buf.push(ch);
+            }
+            ']' => {
+                in_bracket = in_bracket.saturating_sub(1);
+                buf.push(ch);
+            }
+            '>' if in_bracket == 0 => {
+                let trimmed = buf.trim().to_string();
+                if !trimmed.is_empty() {
+                    result.push(trimmed);
+                }
+                result.push(">".to_string());
+                buf.clear();
+            }
+            ' ' | '\t' | '\n' if in_bracket == 0 => {
+                if !buf.trim().is_empty() {
+                    let trimmed = buf.trim().to_string();
+                    buf.clear();
+                    // Look ahead for '>' or more whitespace
+                    let mut lookahead = chars.clone();
+                    let next = lookahead.next();
+                    if next == Some('>') {
+                        result.push(trimmed);
+                        result.push(">".to_string());
+                        chars = lookahead;
+                    } else {
+                        result.push(trimmed);
+                        result.push(" ".to_string());
+                    }
+                }
+            }
+            _ => buf.push(ch),
+        }
+    }
+
+    let trimmed = buf.trim().to_string();
+    if !trimmed.is_empty() {
+        result.push(trimmed);
+    }
+
+    // Collapse whitespace combinators: remove consecutive spaces
+    let mut collapsed = Vec::new();
+    let mut prev_was_space = false;
+    for item in &result {
+        if item == " " {
+            if !prev_was_space {
+                collapsed.push(" ".to_string());
+                prev_was_space = true;
+            }
+        } else {
+            collapsed.push(item.clone());
+            prev_was_space = false;
+        }
+    }
+
+    Ok(collapsed)
+}
+
+fn parse_compound(input: &str) -> Result<Selector, String> {
+    let input = input.trim();
+    let mut simples = Vec::new();
+    let mut rest = input;
+
+    while !rest.is_empty() {
+        rest = rest.trim_start();
+        if rest.is_empty() {
+            break;
+        }
+
+        let (simple, consumed) = parse_simple(rest)?;
+        simples.push(simple);
+        rest = consumed;
+    }
+
+    if simples.is_empty() {
+        return Err(format!("invalid selector: '{}'", input));
+    }
+
+    Ok(Selector { simples })
+}
+
+fn parse_simple(input: &str) -> Result<(SimpleSelector, &str), String> {
+    let input = input.trim_start();
+    if input.is_empty() {
+        return Err("unexpected end of selector".into());
+    }
+
+    let ch = input.chars().next().unwrap();
+    match ch {
+        '*' => {
+            Ok((SimpleSelector::Universal, &input[1..]))
+        }
+        '.' => {
+            let after_dot = &input[1..];
+            let len = find_ident_len(after_dot);
+            if len == 0 {
+                return Err("expected class name after '.'".into());
+            }
+            let class_name = &after_dot[..len];
+            Ok((SimpleSelector::Class(class_name.to_string()), &after_dot[len..]))
+        }
+        '#' => {
+            let after_hash = &input[1..];
+            let len = find_ident_len(after_hash);
+            if len == 0 {
+                return Err("expected id after '#'".into());
+            }
+            let id = &after_hash[..len];
+            Ok((SimpleSelector::Id(id.to_string()), &after_hash[len..]))
+        }
+        '[' => {
+            parse_attr_selector(input)
+        }
+        'a'..='z' | 'A'..='Z' | '-' | '_' => {
+            let len = find_ident_len(input);
+            let tag = &input[..len];
+            Ok((SimpleSelector::Tag(tag.to_string()), &input[len..]))
+        }
+        c => {
+            Err(format!("unexpected character '{}' in selector", c))
+        }
+    }
+}
+
+fn parse_attr_selector(input: &str) -> Result<(SimpleSelector, &str), String> {
+    let rest = input.strip_prefix('[').ok_or("expected '['")?;
+    let rest = rest.trim_start();
+    let name_len = find_ident_len(rest);
+    if name_len == 0 {
+        return Err("expected attribute name".into());
+    }
+    let name = rest[..name_len].to_string();
+    let mut rest = &rest[name_len..];
+
+    rest = rest.trim_start();
+
+    if let Some(remaining) = rest.strip_prefix(']') {
+        return Ok((SimpleSelector::AttrExists(name), remaining));
+    }
+
+    if rest.starts_with('=') {
+        rest = &rest[1..];
+    } else if rest.starts_with("~=") {
+        rest = &rest[2..];
+        let (value, after_val) = parse_attr_value(rest)?;
+        let after_val = after_val.trim_start();
+        if !after_val.starts_with(']') {
+            return Err("expected ']' to close attribute selector".into());
+        }
+        return Ok((SimpleSelector::AttrIncludes { name, value }, &after_val[1..]));
+    } else {
+        return Err(format!("expected ']' or '=' in attribute selector, got '{}'", &rest[..rest.len().min(5)]));
+    }
+
+    let (value, rest) = parse_attr_value(rest)?;
+    let rest = rest.trim_start();
+    if !rest.starts_with(']') {
+        return Err("expected ']' to close attribute selector".to_string());
+    }
+
+    Ok((SimpleSelector::AttrEquals(name, value), &rest[1..]))
+}
+
+fn parse_attr_value(input: &str) -> Result<(String, &str), String> {
+    let input = input.trim_start();
+    if input.starts_with('"') || input.starts_with('\'') {
+        let quote = input.chars().next().unwrap();
+        let mut end = None;
+        for (i, c) in input[1..].char_indices() {
+            if c == quote {
+                end = Some(i + 1);
+                break;
+            }
+        }
+        match end {
+            Some(i) => Ok((input[1..i].to_string(), &input[i+1..])),
+            None => Err("unterminated string in attribute selector".into()),
+        }
+    } else {
+        let len = find_ident_len(input);
+        if len == 0 {
+            return Err("expected attribute value".into());
+        }
+        Ok((input[..len].to_string(), &input[len..]))
+    }
+}
+
+fn find_ident_len(s: &str) -> usize {
+    let mut len = 0;
+    for (i, c) in s.char_indices() {
+        match c {
+            'a'..='z' | 'A'..='Z' | '0'..='9' | '-' | '_' => len = i + 1,
+            _ => break,
+        }
+    }
+    len
+}
+
+fn parent_handle(el: &Handle) -> Option<Handle> {
+    let weak = el.parent.take();
+    let result = weak.as_ref().and_then(|w| w.upgrade());
+    el.parent.set(weak);
+    result
+}
+
+fn matches_selector(el: &Handle, sel: &SelectorOrComplex) -> bool {
+    match sel {
+        SelectorOrComplex::Simple(compound) => matches_compound(el, compound),
+        SelectorOrComplex::Complex(complex) => {
+            if !matches_compound(el, &complex.right) {
+                return false;
+            }
+            match complex.combinator {
+                Combinator::Descendant => {
+                    let mut current = parent_handle(el);
+                    while let Some(parent) = current {
+                        if matches_selector(&parent, &complex.left) {
+                            return true;
+                        }
+                        current = parent_handle(&parent);
+                    }
+                    false
+                }
+                Combinator::Child => parent_handle(el)
+                    .is_some_and(|parent| matches_selector(&parent, &complex.left)),
+            }
+        }
+    }
+}
+
+fn matches_compound(el: &Handle, compound: &Selector) -> bool {
+    let node = el;
+    for simple in &compound.simples {
+        if !matches_simple(node, simple) {
+            return false;
+        }
+    }
+    true
+}
+
+fn matches_simple(el: &Handle, simple: &SimpleSelector) -> bool {
+    let node = el;
+    match &node.data {
+        NodeData::Element { name, attrs, .. } => {
+            let attrs = attrs.borrow();
+            match simple {
+                SimpleSelector::Universal => true,
+                SimpleSelector::Tag(tag) => name.local.as_ref().eq_ignore_ascii_case(tag),
+                SimpleSelector::Class(class_name) => {
+                    attrs.iter().any(|a| {
+                        a.name.local.as_ref() == "class"
+                            && a.value
+                                .to_string()
+                                .split_whitespace()
+                                .any(|c| c == class_name.as_str())
+                    })
+                }
+                SimpleSelector::Id(id) => {
+                    attrs.iter().any(|a| {
+                        a.name.local.as_ref() == "id" && a.value.as_ref() == id.as_str()
+                    })
+                }
+                SimpleSelector::AttrExists(name) => {
+                    attrs.iter().any(|a| a.name.local.as_ref() == name.as_str())
+                }
+                SimpleSelector::AttrEquals(name, value) => {
+                    attrs.iter().any(|a| {
+                        a.name.local.as_ref() == name.as_str() && a.value.as_ref() == value.as_str()
+                    })
+                }
+                SimpleSelector::AttrIncludes { name, value } => {
+                    attrs.iter().any(|a| {
+                        a.name.local.as_ref() == name.as_str()
+                            && a.value
+                                .to_string()
+                                .split_whitespace()
+                                .any(|v| v == value.as_str())
+                    })
+                }
+            }
+        }
+        _ => false,
+    }
+}
+
+fn collect_matches(root: &Handle, sels: &[SelectorOrComplex], results: &mut Vec<Handle>) {
+    if let NodeData::Element { .. } = &root.data {
+        for sel in sels {
+            if matches_selector(root, sel) {
+                results.push(root.clone());
+                break;
+            }
+        }
+    }
+    for child in root.children.borrow().iter() {
+        collect_matches(child, sels, results);
+    }
+}
+
+fn find_first_match(root: &Handle, sels: &[SelectorOrComplex]) -> Option<Handle> {
+    if let NodeData::Element { .. } = &root.data {
+        for sel in sels {
+            if matches_selector(root, sel) {
+                return Some(root.clone());
+            }
+        }
+    }
+    for child in root.children.borrow().iter() {
+        if let Some(found) = find_first_match(child, sels) {
+            return Some(found);
+        }
+    }
+    None
 }
 
 // --- Free helper functions ---
@@ -272,6 +745,42 @@ fn collect_text_content_recursive(handle: &Handle, result: &mut String) {
     }
     for child in handle.children.borrow().iter() {
         collect_text_content_recursive(child, result);
+    }
+}
+
+fn get_title_text(handle: &Handle) -> String {
+    if let NodeData::Element { name, .. } = &handle.data {
+        if name.local == local_name!("title") {
+            return collect_text_content(handle);
+        }
+    }
+    for child in handle.children.borrow().iter() {
+        let result = get_title_text(child);
+        if !result.is_empty() {
+            return result;
+        }
+    }
+    String::new()
+}
+
+fn set_title_text(handle: &Handle, title: &str) {
+    if let NodeData::Element { name, .. } = &handle.data {
+        if name.local == local_name!("title") {
+            let mut children = handle.children.borrow_mut();
+            children.clear();
+            let text_node = Rc::new(markup5ever_rcdom::Node {
+                parent: std::cell::Cell::new(Some(Rc::downgrade(handle))),
+                children: RefCell::new(Vec::new()),
+                data: NodeData::Text {
+                    contents: RefCell::new(title.into()),
+                },
+            });
+            children.push(text_node);
+            return;
+        }
+    }
+    for child in handle.children.borrow().iter() {
+        set_title_text(child, title);
     }
 }
 
@@ -413,70 +922,150 @@ mod tests {
     }
 
     #[test]
-    fn test_find_by_tag_matches_element() {
-        let doc = JsDocument { handle: create_element_node("body") };
-        let found = doc.find_by_tag(&doc.handle, "body");
+    fn test_css_selector_tag_match() {
+        let handle = create_element_node("body");
+        let sels = parse_selector_list("body").unwrap();
+        let found = find_first_match(&handle, &sels);
         assert!(found.is_some());
     }
 
     #[test]
-    fn test_find_by_tag_no_match() {
-        let doc = JsDocument { handle: create_element_node("div") };
-        let found = doc.find_by_tag(&doc.handle, "span");
+    fn test_css_selector_tag_no_match() {
+        let handle = create_element_node("div");
+        let sels = parse_selector_list("span").unwrap();
+        let found = find_first_match(&handle, &sels);
         assert!(found.is_none());
     }
 
     #[test]
-    fn test_find_by_tag_case_insensitive() {
-        let doc = JsDocument { handle: create_element_node("DIV") };
-        let found = doc.find_by_tag(&doc.handle, "div");
+    fn test_css_selector_tag_case_insensitive() {
+        let handle = create_element_node("DIV");
+        let sels = parse_selector_list("div").unwrap();
+        let found = find_first_match(&handle, &sels);
         assert!(found.is_some());
     }
 
     #[test]
-    fn test_find_by_id_finds_element() {
+    fn test_css_selector_id() {
         let handle = create_element_node("div");
         set_attr(&handle, "id", "my-id");
-        let doc = JsDocument { handle: create_element_node("root") };
-        doc.handle.children.borrow_mut().push(handle.clone());
-        let found = doc.find_by_id(&doc.handle, "my-id");
+        let sels = parse_selector_list("#my-id").unwrap();
+        let found = find_first_match(&handle, &sels);
         assert!(found.is_some());
     }
 
     #[test]
-    fn test_find_by_id_no_match() {
-        let doc = JsDocument { handle: create_element_node("div") };
-        let found = doc.find_by_id(&doc.handle, "nonexistent");
-        assert!(found.is_none());
+    fn test_css_selector_class() {
+        let handle = create_element_node("div");
+        set_attr(&handle, "class", "foo");
+        let sels = parse_selector_list(".foo").unwrap();
+        let found = find_first_match(&handle, &sels);
+        assert!(found.is_some());
     }
 
     #[test]
-    fn test_find_all_by_tag_returns_multiple() {
-        let parent = create_element_node("ul");
-        let child1 = create_element_node("li");
-        let child2 = create_element_node("li");
-        child1.parent.set(Some(Rc::downgrade(&parent)));
-        child2.parent.set(Some(Rc::downgrade(&parent)));
-        parent.children.borrow_mut().push(child1);
-        parent.children.borrow_mut().push(child2);
-        let doc = JsDocument { handle: parent };
+    fn test_css_selector_class_no_match() {
+        let handle = create_element_node("div");
+        set_attr(&handle, "class", "bar");
+        let sels = parse_selector_list(".foo").unwrap();
+        assert!(find_first_match(&handle, &sels).is_none());
+    }
+
+    #[test]
+    fn test_css_selector_compound() {
+        let handle = create_element_node("div");
+        set_attr(&handle, "id", "x");
+        set_attr(&handle, "class", "y");
+        let sels = parse_selector_list("div#x.y").unwrap();
+        assert!(find_first_match(&handle, &sels).is_some());
+    }
+
+    #[test]
+    fn test_css_selector_descendant() {
+        let parent = create_element_node("div");
+        let child = create_element_node("span");
+        child.parent.set(Some(Rc::downgrade(&parent)));
+        parent.children.borrow_mut().push(child.clone());
+        let sels = parse_selector_list("div span").unwrap();
+        assert!(find_first_match(&child, &sels).is_some());
+    }
+
+    #[test]
+    fn test_css_selector_child() {
+        let parent = create_element_node("div");
+        let child = create_element_node("span");
+        child.parent.set(Some(Rc::downgrade(&parent)));
+        parent.children.borrow_mut().push(child.clone());
+        let sels = parse_selector_list("div > span").unwrap();
+        assert!(find_first_match(&child, &sels).is_some());
+    }
+
+    #[test]
+    fn test_css_selector_child_no_match_grandparent() {
+        let grandparent = create_element_node("div");
+        let parent = create_element_node("section");
+        let child = create_element_node("span");
+        parent.parent.set(Some(Rc::downgrade(&grandparent)));
+        child.parent.set(Some(Rc::downgrade(&parent)));
+        grandparent.children.borrow_mut().push(parent.clone());
+        parent.children.borrow_mut().push(child.clone());
+        // div > span should NOT match since span's parent is section, not div
+        let sels = parse_selector_list("div > span").unwrap();
+        assert!(find_first_match(&child, &sels).is_none());
+    }
+
+    #[test]
+    fn test_css_selector_list() {
+        let h1 = create_element_node("h1");
+        let h2 = create_element_node("h2");
+        let sels = parse_selector_list("h1, h2").unwrap();
+        assert!(find_first_match(&h1, &sels).is_some());
+        assert!(find_first_match(&h2, &sels).is_some());
+    }
+
+    #[test]
+    fn test_css_selector_attr_exists() {
+        let handle = create_element_node("input");
+        set_attr(&handle, "disabled", "");
+        let sels = parse_selector_list("[disabled]").unwrap();
+        assert!(find_first_match(&handle, &sels).is_some());
+    }
+
+    #[test]
+    fn test_css_selector_attr_equals() {
+        let handle = create_element_node("input");
+        set_attr(&handle, "type", "text");
+        let sels = parse_selector_list("[type=text]").unwrap();
+        assert!(find_first_match(&handle, &sels).is_some());
+    }
+
+    #[test]
+    fn test_css_selector_attr_includes() {
+        let handle = create_element_node("div");
+        set_attr(&handle, "class", "foo bar baz");
+        let sels = parse_selector_list("[class~=bar]").unwrap();
+        assert!(find_first_match(&handle, &sels).is_some());
+    }
+
+    #[test]
+    fn test_css_selector_collect_matches() {
+        let ul = create_element_node("ul");
+        let li1 = create_element_node("li");
+        let li2 = create_element_node("li");
+        li1.parent.set(Some(Rc::downgrade(&ul)));
+        li2.parent.set(Some(Rc::downgrade(&ul)));
+        ul.children.borrow_mut().push(li1.clone());
+        ul.children.borrow_mut().push(li2.clone());
+        let sels = parse_selector_list("li").unwrap();
         let mut results = Vec::new();
-        doc.find_all_by_tag(&doc.handle, "li", &mut results);
+        collect_matches(&ul, &sels, &mut results);
         assert_eq!(results.len(), 2);
-    }
-
-    #[test]
-    fn test_find_all_by_tag_no_matches() {
-        let doc = JsDocument { handle: create_element_node("div") };
-        let mut results = Vec::new();
-        doc.find_all_by_tag(&doc.handle, "span", &mut results);
-        assert!(results.is_empty());
     }
 
     #[test]
     fn test_set_inner_html_clears_and_replaces() {
         let parent = create_element_node("div");
-        let elem = JsElement { handle: parent.clone() };
+        let elem = JsElement::new(parent.clone());
         elem.set_inner_html("<p>hello</p>".into());
         let html = elem.get_inner_html();
         assert_eq!(html, "<p>hello</p>", "unexpected inner html: '{}'", html);
@@ -485,7 +1074,7 @@ mod tests {
     #[test]
     fn test_set_inner_html_multiple_children() {
         let parent = create_element_node("div");
-        let elem = JsElement { handle: parent.clone() };
+        let elem = JsElement::new(parent.clone());
         elem.set_inner_html("<a></a><b></b>".into());
         assert_eq!(parent.children.borrow().len(), 2);
     }
@@ -493,7 +1082,7 @@ mod tests {
     #[test]
     fn test_set_text_content_creates_text_node() {
         let parent = create_element_node("div");
-        let elem = JsElement { handle: parent.clone() };
+        let elem = JsElement::new(parent.clone());
         elem.set_text_content("hello".into());
         assert_eq!(elem.get_text_content(), "hello");
     }
@@ -502,14 +1091,14 @@ mod tests {
     fn test_get_value_returns_attribute() {
         let handle = create_element_node("input");
         set_attr(&handle, "value", "test-val");
-        let elem = JsElement { handle };
+        let elem = JsElement::new(handle);
         assert_eq!(elem.get_value(), "test-val");
     }
 
     #[test]
     fn test_set_value_updates_attribute() {
         let handle = create_element_node("input");
-        let elem = JsElement { handle: handle.clone() };
+        let elem = JsElement::new(handle.clone());
         elem.set_value("new-val".into());
         assert_eq!(get_attr(&handle, "value"), "new-val");
     }
@@ -518,7 +1107,7 @@ mod tests {
     fn test_get_id_returns_id_attr() {
         let handle = create_element_node("div");
         set_attr(&handle, "id", "my-div");
-        let elem = JsElement { handle };
+        let elem = JsElement::new(handle);
         assert_eq!(elem.get_id(), "my-div");
     }
 
@@ -526,7 +1115,7 @@ mod tests {
     fn test_get_class_name_returns_class_attr() {
         let handle = create_element_node("div");
         set_attr(&handle, "class", "foo bar");
-        let elem = JsElement { handle };
+        let elem = JsElement::new(handle);
         assert_eq!(elem.get_class_name(), "foo bar");
     }
 }
