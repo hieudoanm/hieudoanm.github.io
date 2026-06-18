@@ -15,8 +15,8 @@
 | 02  | DevTools  | Package Manager |                | [pnpm][pnpm]                     |                                 |
 | 03  | DevTools  | Linter          |                | [ESLint][eslint]                 | [Biome][biome]                  |
 | 04  | DevTools  | Formatter       |                | [Prettier][prettier]             |                                 |
-| 05  | DevTools  | Test            | Unit           | [Jest][jest]                     |                                 |
-| 06  | DevTools  | Test            | E2E            | [Playwright][playwright]         |                                 |
+| 05  | DevTools  | Test            | Unit           | [Jest][jest]                     | [Vitest][vitest]                |
+| 06  | DevTools  | Test            | E2E            | [Playwright][playwright]         | [Cypress][cypress]              |
 | 07  | Front-end | Framework       | Web            | [Next.js][nextjs]                | [Solid.js][solidjs]             |
 | 08  | Front-end | Framework       | Mobile         | [Expo][expo]                     | [Capacitor][capacitor]          |
 | 09  | Front-end | Framework       | Desktop        | [Tauri][tauri]                   | [Electron][electron]            |
@@ -40,7 +40,9 @@
 [prettier]: https://prettier.io/
 [biome]: https://biomejs.dev/
 [jest]: https://jestjs.io/
+[vitest]: https://vitest.dev/
 [playwright]: https://playwright.dev/
+[cypress]: https://www.cypress.io/
 [nextjs]: https://nextjs.org/
 [solidjs]: https://solidjs.com/
 [capacitor]: https://capacitorjs.com/
