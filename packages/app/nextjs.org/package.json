@@ -68,7 +68,7 @@
     "@trpc/server": "11.17.0",
     "buffer": "6.0.3",
     "chart.js": "4.5.1",
-    "dompurify": "3.4.10",
+    "dompurify": "3.4.11",
     "fabric": "7.4.0",
     "file-saver": "2.0.5",
     "gif.js": "0.2.0",
