@@ -149,6 +149,32 @@ pub struct TitledResponse {
     pub players: Vec<String>,
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_country_code_empty_returns_dash() {
+        assert_eq!(country_code(""), "-");
+    }
+
+    #[test]
+    fn test_country_code_extracts_code() {
+        assert_eq!(country_code("https://api.chess.com/pub/country/US"), "US");
+        assert_eq!(country_code("https://api.chess.com/pub/country/VIETNAM"), "VIETNAM");
+    }
+
+    #[test]
+    fn test_country_code_trims_trailing_slash() {
+        assert_eq!(country_code("https://api.chess.com/pub/country/FR/"), "FR");
+    }
+
+    #[test]
+    fn test_country_code_empty_url_returns_dash() {
+        assert_eq!(country_code(""), "-");
+    }
+}
+
 pub fn country_code(url: &str) -> String {
     if url.is_empty() {
         return "-".to_string();

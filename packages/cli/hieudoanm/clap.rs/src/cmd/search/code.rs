@@ -170,6 +170,84 @@ fn search_code_symbols(
     Ok(results)
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use std::path::Path;
+
+    #[test]
+    fn test_code_patterns_for_go() {
+        let path = Path::new("main.go");
+        let (lang, patterns, ok) = code_patterns_for(path, None);
+        assert!(ok);
+        assert_eq!(lang, "go");
+        assert!(patterns.iter().any(|p| p.kind == "function"));
+    }
+
+    #[test]
+    fn test_code_patterns_for_rust() {
+        let path = Path::new("main.rs");
+        let (lang, patterns, ok) = code_patterns_for(path, None);
+        assert!(ok);
+        assert_eq!(lang, "rust");
+        assert!(patterns.iter().any(|p| p.kind == "function"));
+        assert!(patterns.iter().any(|p| p.kind == "struct"));
+    }
+
+    #[test]
+    fn test_code_patterns_for_typescript() {
+        let path = Path::new("app.ts");
+        let (lang, patterns, ok) = code_patterns_for(path, None);
+        assert!(ok);
+        assert_eq!(lang, "typescript");
+        assert!(patterns.iter().any(|p| p.kind == "function"));
+        assert!(patterns.iter().any(|p| p.kind == "class"));
+    }
+
+    #[test]
+    fn test_code_patterns_for_javascript() {
+        let path = Path::new("app.jsx");
+        let (lang, patterns, ok) = code_patterns_for(path, None);
+        assert!(ok);
+        assert_eq!(lang, "typescript");
+        assert!(patterns.iter().any(|p| p.kind == "function"));
+    }
+
+    #[test]
+    fn test_code_patterns_for_python() {
+        let path = Path::new("main.py");
+        let (lang, patterns, ok) = code_patterns_for(path, None);
+        assert!(ok);
+        assert_eq!(lang, "python");
+        assert!(patterns.iter().any(|p| p.kind == "function"));
+        assert!(patterns.iter().any(|p| p.kind == "class"));
+    }
+
+    #[test]
+    fn test_code_patterns_for_unknown_extension() {
+        let path = Path::new("readme.md");
+        let (lang, patterns, ok) = code_patterns_for(path, None);
+        assert!(!ok);
+        assert!(lang.is_empty());
+        assert!(patterns.is_empty());
+    }
+
+    #[test]
+    fn test_code_patterns_with_lang_filter_match() {
+        let path = Path::new("main.rs");
+        let (lang, _patterns, ok) = code_patterns_for(path, Some("rs"));
+        assert!(ok);
+        assert_eq!(lang, "rust");
+    }
+
+    #[test]
+    fn test_code_patterns_with_lang_filter_mismatch() {
+        let path = Path::new("main.rs");
+        let (_lang, _patterns, ok) = code_patterns_for(path, Some("go"));
+        assert!(!ok);
+    }
+}
+
 fn code_patterns_for(
     path: &std::path::Path,
     lang_filter: Option<&str>,

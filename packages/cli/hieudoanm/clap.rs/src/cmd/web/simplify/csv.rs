@@ -1,5 +1,67 @@
 use std::path::Path;
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_extract_host_normal() {
+        assert_eq!(extract_host("https://www.example.com/page"), "example_com");
+    }
+
+    #[test]
+    fn test_extract_host_no_subdomain() {
+        assert_eq!(extract_host("https://github.com"), "github_com");
+    }
+
+    #[test]
+    fn test_extract_host_invalid_url() {
+        assert_eq!(extract_host("not a url"), "output");
+    }
+
+    #[test]
+    fn test_extract_host_empty() {
+        assert_eq!(extract_host(""), "output");
+    }
+
+    #[test]
+    fn test_parse_tables_no_tables() {
+        let result = parse_tables("<html><body>no table here</body></html>");
+        assert!(result.is_empty());
+    }
+
+    #[test]
+    fn test_parse_tables_simple() {
+        let html = r#"<table><tr><td>a</td><td>b</td></tr><tr><td>1</td><td>2</td></tr></table>"#;
+        let tables = parse_tables(html);
+        assert_eq!(tables.len(), 1);
+        assert_eq!(tables[0].len(), 2);
+        assert_eq!(tables[0][0], vec!["a", "b"]);
+        assert_eq!(tables[0][1], vec!["1", "2"]);
+    }
+
+    #[test]
+    fn test_parse_tables_uses_th() {
+        let html = r#"<table><tr><th>Name</th><th>Age</th></tr><tr><td>Alice</td><td>30</td></tr></table>"#;
+        let tables = parse_tables(html);
+        assert_eq!(tables[0][0], vec!["Name", "Age"]);
+    }
+
+    #[test]
+    fn test_parse_tables_multiple_tables() {
+        let html = r#"<table><tr><td>T1</td></tr></table><table><tr><td>T2</td></tr></table>"#;
+        let tables = parse_tables(html);
+        assert_eq!(tables.len(), 2);
+    }
+
+    #[test]
+    fn test_parse_tables_empty_rows_skipped() {
+        let html = r#"<table><tr><td>data</td></tr><tr></tr></table>"#;
+        let tables = parse_tables(html);
+        assert_eq!(tables[0].len(), 1);
+    }
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("csv")
         .about("Extract HTML tables to CSV")

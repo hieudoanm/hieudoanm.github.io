@@ -59,3 +59,82 @@ pub fn gray(s: &str) -> String {
         s.to_string()
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    fn color_active() -> bool {
+        enable_color()
+    }
+
+    #[test]
+    fn test_green_output() {
+        let out = green("hello");
+        if color_active() {
+            assert_eq!(out, "\x1b[32mhello\x1b[0m");
+        } else {
+            assert_eq!(out, "hello");
+        }
+    }
+
+    #[test]
+    fn test_red_output() {
+        let out = red("error");
+        if color_active() {
+            assert_eq!(out, "\x1b[31merror\x1b[0m");
+        } else {
+            assert_eq!(out, "error");
+        }
+    }
+
+    #[test]
+    fn test_yellow_output() {
+        let out = yellow("warn");
+        if color_active() {
+            assert_eq!(out, "\x1b[33mwarn\x1b[0m");
+        } else {
+            assert_eq!(out, "warn");
+        }
+    }
+
+    #[test]
+    fn test_cyan_output() {
+        let out = cyan("info");
+        if color_active() {
+            assert_eq!(out, "\x1b[36minfo\x1b[0m");
+        } else {
+            assert_eq!(out, "info");
+        }
+    }
+
+    #[test]
+    fn test_dim_output() {
+        let out = dim("muted");
+        if color_active() {
+            assert_eq!(out, "\x1b[2mmuted\x1b[0m");
+        } else {
+            assert_eq!(out, "muted");
+        }
+    }
+
+    #[test]
+    fn test_blue_output() {
+        let out = blue("link");
+        if color_active() {
+            assert_eq!(out, "\x1b[34mlink\x1b[0m");
+        } else {
+            assert_eq!(out, "link");
+        }
+    }
+
+    #[test]
+    fn test_gray_output() {
+        let out = gray("note");
+        if color_active() {
+            assert_eq!(out, "\x1b[90mnote\x1b[0m");
+        } else {
+            assert_eq!(out, "note");
+        }
+    }
+}

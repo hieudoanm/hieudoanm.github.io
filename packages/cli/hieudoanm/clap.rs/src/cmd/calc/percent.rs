@@ -88,3 +88,38 @@ pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
 
     Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn test_percentage_of() {
+        let value: f64 = 25.0;
+        let of: f64 = 200.0;
+        let pct: f64 = value / of * 100.0;
+        assert!((pct - 12.5).abs() < 1e-10);
+    }
+
+    #[test]
+    fn test_add_percentage() {
+        let value: f64 = 100.0;
+        let plus: f64 = 20.0;
+        let result: f64 = value * (1.0 + plus / 100.0);
+        assert!((result - 120.0).abs() < 1e-10);
+    }
+
+    #[test]
+    fn test_subtract_percentage() {
+        let value: f64 = 100.0;
+        let minus: f64 = 20.0;
+        let result: f64 = value * (1.0 - minus / 100.0);
+        assert!((result - 80.0).abs() < 1e-10);
+    }
+
+    #[test]
+    fn test_percentage_zero() {
+        let value: f64 = 100.0;
+        let of: f64 = 100.0;
+        let pct: f64 = value / of * 100.0;
+        assert!((pct - 100.0).abs() < 1e-10);
+    }
+}

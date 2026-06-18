@@ -184,6 +184,129 @@ fn next_runs(expr: &str, count: usize, until: chrono::NaiveDate) -> Vec<chrono::
     runs
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_resolve_val_with_names() {
+        let mut names = HashMap::new();
+        names.insert("jan", 1u32);
+        names.insert("feb", 2u32);
+        assert_eq!(resolve_val("jan", &names), "1");
+        assert_eq!(resolve_val("JAN", &names), "1");
+    }
+
+    #[test]
+    fn test_resolve_val_without_names() {
+        let names = HashMap::new();
+        assert_eq!(resolve_val("15", &names), "15");
+    }
+
+    #[test]
+    fn test_expand_field_every() {
+        let names = HashMap::new();
+        assert_eq!(expand_field("*", 0, 59, &names), "every");
+    }
+
+    #[test]
+    fn test_expand_field_step() {
+        let names = HashMap::new();
+        assert_eq!(expand_field("*/5", 0, 59, &names), "every 5");
+    }
+
+    #[test]
+    fn test_expand_field_range() {
+        let mut names = HashMap::new();
+        names.insert("mon", 1u32);
+        names.insert("fri", 5u32);
+        assert_eq!(expand_field("mon-fri", 1, 12, &names), "1-5");
+    }
+
+    #[test]
+    fn test_expand_field_single_val() {
+        let names = HashMap::new();
+        assert_eq!(expand_field("30", 0, 59, &names), "30");
+    }
+
+    #[test]
+    fn test_expand_field_list() {
+        let names = HashMap::new();
+        assert_eq!(expand_field("1,2,3", 0, 59, &names), "1,2,3");
+    }
+
+    #[test]
+    fn test_describe_every_minute() {
+        assert_eq!(describe("* * * * *"), "every minute");
+    }
+
+    #[test]
+    fn test_describe_specific_time() {
+        let desc = describe("30 9 * * *");
+        assert!(desc.contains("at"));
+        assert!(desc.contains("9"));
+        assert!(desc.contains("30"));
+    }
+
+    #[test]
+    fn test_describe_with_month() {
+        let desc = describe("0 12 1 jan *");
+        assert!(desc.contains("in 1"), "expected month 1, got: {desc}");
+        assert!(desc.contains("on day 1"), "expected day 1, got: {desc}");
+    }
+
+    #[test]
+    fn test_describe_invalid() {
+        assert_eq!(describe(""), "invalid cron expression (need 5 fields)");
+        assert_eq!(describe("a b c"), "invalid cron expression (need 5 fields)");
+    }
+
+    #[test]
+    fn test_match_field_asterisk() {
+        assert!(match_field("*", 0, 0, 59));
+        assert!(match_field("*", 30, 0, 59));
+    }
+
+    #[test]
+    fn test_match_field_step() {
+        assert!(match_field("*/5", 0, 0, 59));
+        assert!(match_field("*/5", 5, 0, 59));
+        assert!(!match_field("*/5", 3, 0, 59));
+    }
+
+    #[test]
+    fn test_match_field_range() {
+        assert!(match_field("1-5", 3, 0, 59));
+        assert!(!match_field("1-5", 6, 0, 59));
+        assert!(match_field("1-5", 1, 0, 59));
+        assert!(match_field("1-5", 5, 0, 59));
+    }
+
+    #[test]
+    fn test_match_field_list() {
+        assert!(match_field("1,3,5", 3, 0, 59));
+        assert!(!match_field("1,3,5", 2, 0, 59));
+    }
+
+    #[test]
+    fn test_match_field_single() {
+        assert!(match_field("30", 30, 0, 59));
+        assert!(!match_field("30", 31, 0, 59));
+    }
+
+    #[test]
+    fn test_describe_cron_every_hour() {
+        let desc = describe("30 * * * *");
+        assert!(desc.contains("minute 30"));
+    }
+
+    #[test]
+    fn test_describe_cron_every_minute_of_hour() {
+        let desc = describe("* 9 * * *");
+        assert!(desc.contains("every minute of hour"));
+    }
+}
+
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     let expr = matches.get_one::<String>("expression").unwrap();
     let next = matches.get_one::<usize>("next").copied().unwrap_or(0);

@@ -57,6 +57,35 @@ fn openssl_x509(host: &str, args: &[&str]) -> anyhow::Result<String> {
     Ok(String::from_utf8_lossy(&result.stdout).to_string())
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_format_duration_days() {
+        let d = chrono::Duration::days(3) + chrono::Duration::hours(5) + chrono::Duration::minutes(10);
+        assert_eq!(format_duration(d), "3d 5h 10m");
+    }
+
+    #[test]
+    fn test_format_duration_hours() {
+        let d = chrono::Duration::hours(7) + chrono::Duration::minutes(15);
+        assert_eq!(format_duration(d), "7h 15m");
+    }
+
+    #[test]
+    fn test_format_duration_minutes_only() {
+        let d = chrono::Duration::minutes(42);
+        assert_eq!(format_duration(d), "42m");
+    }
+
+    #[test]
+    fn test_format_duration_zero() {
+        let d = chrono::Duration::minutes(0);
+        assert_eq!(format_duration(d), "0m");
+    }
+}
+
 fn format_duration(dur: chrono::Duration) -> String {
     let days = dur.num_days();
     let hours = dur.num_hours() - days * 24;

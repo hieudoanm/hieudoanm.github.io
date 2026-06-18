@@ -126,6 +126,102 @@ pub fn format_reference(data: &CrossRefData) -> String {
     )
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    fn make_data(authors: Vec<Author>, title: &str, year: i32) -> CrossRefData {
+        CrossRefData {
+            status: "ok".into(),
+            message: Message {
+                author: if authors.is_empty() { None } else { Some(authors) },
+                title: Some(vec![title.into()]),
+                container_title: Some(vec!["Test Journal".into()]),
+                volume: Some("10".into()),
+                issue: Some("2".into()),
+                page: Some("100-110".into()),
+                published_print: Some(PublishedPrint {
+                    date_parts: Some(vec![vec![year]]),
+                }),
+            },
+        }
+    }
+
+    #[test]
+    fn test_format_citation_one_author() {
+        let data = make_data(
+            vec![Author { given: Some("John".into()), family: Some("Doe".into()) }],
+            "A Great Paper", 2023,
+        );
+        assert_eq!(format_citation(&data), "(Doe, 2023)");
+    }
+
+    #[test]
+    fn test_format_citation_two_authors() {
+        let data = make_data(
+            vec![
+                Author { given: Some("John".into()), family: Some("Doe".into()) },
+                Author { given: Some("Jane".into()), family: Some("Smith".into()) },
+            ],
+            "A Great Paper", 2023,
+        );
+        assert_eq!(format_citation(&data), "(Doe & Smith, 2023)");
+    }
+
+    #[test]
+    fn test_format_citation_three_authors() {
+        let data = make_data(
+            vec![
+                Author { given: Some("A".into()), family: Some("Alpha".into()) },
+                Author { given: Some("B".into()), family: Some("Beta".into()) },
+                Author { given: Some("C".into()), family: Some("Gamma".into()) },
+            ],
+            "A Great Paper", 2023,
+        );
+        assert_eq!(format_citation(&data), "(Alpha et al., 2023)");
+    }
+
+    #[test]
+    fn test_format_citation_no_author() {
+        let data = make_data(vec![], "Untitled", 2023);
+        assert_eq!(format_citation(&data), "(Unknown, 2023)");
+    }
+
+    #[test]
+    fn test_format_citation_no_year() {
+        let data = CrossRefData {
+            status: "ok".into(),
+            message: Message {
+                author: Some(vec![Author { given: Some("John".into()), family: Some("Doe".into()) }]),
+                title: Some(vec!["Paper".into()]),
+                container_title: None,
+                volume: None,
+                issue: None,
+                page: None,
+                published_print: None,
+            },
+        };
+        assert_eq!(format_citation(&data), "(Doe, n.d.)");
+    }
+
+    #[test]
+    fn test_format_reference_basic() {
+        let data = make_data(
+            vec![
+                Author { given: Some("John".into()), family: Some("Doe".into()) },
+                Author { given: Some("Jane".into()), family: Some("Smith".into()) },
+            ],
+            "An Important Study", 2022,
+        );
+        let ref_text = format_reference(&data);
+        assert!(ref_text.contains("Doe, J."));
+        assert!(ref_text.contains(" & Smith, J."));
+        assert!(ref_text.contains("(2022)"));
+        assert!(ref_text.contains("An Important Study"));
+        assert!(ref_text.contains("Test Journal"));
+    }
+}
+
 pub fn print_citation(data: &CrossRefData) {
     println!("Cite:");
     println!("{}", format_citation(data));

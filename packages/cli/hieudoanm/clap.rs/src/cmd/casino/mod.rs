@@ -36,6 +36,61 @@ impl fmt::Display for Card {
     }
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_card_display() {
+        assert_eq!(format!("{}", Card { rank: 14, suit: 0 }), "Ac");
+        assert_eq!(format!("{}", Card { rank: 10, suit: 3 }), "Ts");
+        assert_eq!(format!("{}", Card { rank: 2, suit: 1 }), "2d");
+    }
+
+    #[test]
+    fn test_parse_card_number() {
+        let c = parse_card("7c");
+        assert_eq!(c.rank, 7);
+        assert_eq!(c.suit, 0);
+    }
+
+    #[test]
+    fn test_parse_card_face() {
+        assert_eq!(parse_card("Jd").rank, 11);
+        assert_eq!(parse_card("Qh").rank, 12);
+        assert_eq!(parse_card("Ks").rank, 13);
+    }
+
+    #[test]
+    fn test_parse_card_ace() {
+        let c = parse_card("Ac");
+        assert_eq!(c.rank, 14);
+    }
+
+    #[test]
+    fn test_parse_card_ten() {
+        let c = parse_card("Tc");
+        assert_eq!(c.rank, 10);
+    }
+
+    #[test]
+    fn test_format_cards_basic() {
+        let cards = format_cards("Ac Kd").unwrap();
+        assert_eq!(cards.len(), 2);
+        assert_eq!(cards[0].rank, 14);
+        assert_eq!(cards[1].rank, 13);
+    }
+
+    #[test]
+    fn test_format_cards_sorts_by_rank_descending() {
+        let cards = format_cards("7c 5d Ah").unwrap();
+        assert_eq!(cards.len(), 3);
+        assert_eq!(cards[0].rank, 14);
+        assert_eq!(cards[1].rank, 7);
+        assert_eq!(cards[2].rank, 5);
+    }
+}
+
 pub fn parse_card(s: &str) -> Card {
     let chars: Vec<char> = s.chars().collect();
     let rank = match chars[0] {

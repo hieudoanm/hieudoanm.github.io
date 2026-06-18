@@ -25,6 +25,29 @@ pub fn default_options() -> Options {
     Options::default()
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_default_options() {
+        let opts = default_options();
+        assert_eq!(opts.width, 1440);
+        assert_eq!(opts.height, 900);
+        assert!(!opts.full_page);
+        assert_eq!(opts.delay_ms, 0);
+        assert_eq!(opts.quality, 90);
+        assert!(!opts.pdf);
+    }
+
+    #[test]
+    fn test_options_default_trait() {
+        let opts = Options::default();
+        assert_eq!(opts.width, 1440);
+        assert_eq!(opts.height, 900);
+    }
+}
+
 pub fn capture(_url: &str, _opts: Options) -> Result<Vec<u8>, anyhow::Error> {
     anyhow::bail!(
         "headless browser capture requires the `headless_chrome` crate which is not yet integrated"

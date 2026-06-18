@@ -111,6 +111,136 @@ pub fn is_binary(path: &str) -> bool {
     BINARY_EXTS.contains(&ext.as_str())
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_split_lines_empty() {
+        let result = split_lines("");
+        assert_eq!(result, vec![""]);
+    }
+
+    #[test]
+    fn test_split_lines_single_line() {
+        let result = split_lines("hello");
+        assert_eq!(result, vec!["hello"]);
+    }
+
+    #[test]
+    fn test_split_lines_multiple() {
+        let result = split_lines("a\nb\nc");
+        assert_eq!(result, vec!["a", "b", "c"]);
+    }
+
+    #[test]
+    fn test_split_lines_trailing_newline() {
+        let result = split_lines("a\nb\n");
+        assert_eq!(result, vec!["a", "b", ""]);
+    }
+
+    #[test]
+    fn test_format_size_bytes() {
+        assert_eq!(format_size(0), "0 B");
+        assert_eq!(format_size(512), "512 B");
+        assert_eq!(format_size(1023), "1023 B");
+    }
+
+    #[test]
+    fn test_format_size_kb() {
+        assert_eq!(format_size(1024), "1.0 KB");
+        assert_eq!(format_size(1536), "1.5 KB");
+    }
+
+    #[test]
+    fn test_format_size_mb() {
+        assert_eq!(format_size(1048576), "1.0 MB");
+        assert_eq!(format_size(1572864), "1.5 MB");
+    }
+
+    #[test]
+    fn test_format_size_gb() {
+        let gb = 1073741824u64;
+        assert_eq!(format_size(gb), "1.0 GB");
+    }
+
+    #[test]
+    fn test_format_size_tb() {
+        let tb = 1099511627776u64;
+        assert_eq!(format_size(tb), "1.0 TB");
+    }
+
+    #[test]
+    fn test_detect_mime_text() {
+        assert_eq!(detect_mime("file.txt"), "text/plain");
+        assert_eq!(detect_mime("file.md"), "text/markdown");
+        assert_eq!(detect_mime("file.rs"), "text/x-rust");
+    }
+
+    #[test]
+    fn test_detect_mime_image() {
+        assert_eq!(detect_mime("photo.jpg"), "image/jpeg");
+        assert_eq!(detect_mime("photo.png"), "image/png");
+        assert_eq!(detect_mime("icon.svg"), "image/svg+xml");
+    }
+
+    #[test]
+    fn test_detect_mime_unknown() {
+        assert_eq!(detect_mime("file.unknown"), "application/octet-stream");
+    }
+
+    #[test]
+    fn test_detect_mime_no_extension() {
+        assert_eq!(detect_mime("Makefile"), "application/octet-stream");
+    }
+
+    #[test]
+    fn test_is_binary_true() {
+        assert!(is_binary("file.exe"));
+        assert!(is_binary("image.jpg"));
+        assert!(is_binary("archive.zip"));
+        assert!(is_binary("binary.so"));
+    }
+
+    #[test]
+    fn test_is_binary_false() {
+        assert!(!is_binary("main.rs"));
+        assert!(!is_binary("index.html"));
+        assert!(!is_binary("script.py"));
+    }
+
+    #[test]
+    fn test_hex_encode_empty() {
+        assert_eq!(hex_encode(b""), "");
+    }
+
+    #[test]
+    fn test_hex_encode_basic() {
+        assert_eq!(hex_encode(b"hello"), "68656c6c6f");
+    }
+
+    #[test]
+    fn test_hex_encode_binary() {
+        assert_eq!(hex_encode(&[0x00, 0xff, 0xab]), "00ffab");
+    }
+
+    #[test]
+    fn test_parse_mode_valid() {
+        let perm = parse_mode("755").unwrap();
+        #[cfg(unix)]
+        {
+            use std::os::unix::fs::PermissionsExt;
+            assert_eq!(perm.mode() & 0o777, 0o755);
+        }
+    }
+
+    #[test]
+    fn test_parse_mode_invalid() {
+        assert!(parse_mode("abc").is_err());
+        assert!(parse_mode("").is_err());
+    }
+}
+
 pub fn read_stdin() -> anyhow::Result<String> {
     use std::io::{IsTerminal, Read};
     if std::io::stdin().is_terminal() {

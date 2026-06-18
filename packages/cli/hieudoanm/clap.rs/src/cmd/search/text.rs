@@ -117,6 +117,53 @@ fn include_to_regex(include: &str) -> Option<regex::Regex> {
     regex::Regex::new(&re_str).ok()
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_include_to_regex_exact() {
+        let re = include_to_regex("main.rs").unwrap();
+        assert!(re.is_match("main.rs"));
+        assert!(!re.is_match("main.go"));
+    }
+
+    #[test]
+    fn test_include_to_regex_wildcard() {
+        let re = include_to_regex("*.rs").unwrap();
+        assert!(re.is_match("main.rs"));
+        assert!(re.is_match("lib.rs"));
+        assert!(!re.is_match("main.go"));
+    }
+
+    #[test]
+    fn test_include_to_regex_prefix_wildcard() {
+        let re = include_to_regex("test_*").unwrap();
+        assert!(re.is_match("test_foo.rs"));
+        assert!(!re.is_match("foo_test.rs"));
+    }
+
+    #[test]
+    fn test_include_to_regex_dot_in_pattern() {
+        let re = include_to_regex("*.min.js").unwrap();
+        assert!(re.is_match("app.min.js"));
+        assert!(!re.is_match("app.dev.js"));
+    }
+
+    #[test]
+    fn test_include_to_regex_invalid_pattern() {
+        let re = include_to_regex("[invalid");
+        assert!(re.is_none());
+    }
+
+    #[test]
+    fn test_include_to_regex_empty() {
+        let re = include_to_regex("").unwrap();
+        assert!(re.is_match(""));
+        assert!(!re.is_match("anything"));
+    }
+}
+
 fn search_text_in_root(
     re: &regex::Regex,
     include: Option<&regex::Regex>,

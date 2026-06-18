@@ -77,3 +77,76 @@ pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
 
     Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn test_stats_mean() {
+        let nums: Vec<f64> = vec![1.0, 2.0, 3.0, 4.0, 5.0];
+        let sum: f64 = nums.iter().sum();
+        let mean: f64 = sum / nums.len() as f64;
+        assert!((mean - 3.0).abs() < 1e-10);
+    }
+
+    #[test]
+    fn test_stats_median_odd() {
+        let mut nums: Vec<f64> = vec![5.0, 1.0, 3.0, 2.0, 4.0];
+        nums.sort_by(|a, b| a.partial_cmp(b).unwrap());
+        let n = nums.len();
+        let median: f64 = nums[n / 2];
+        assert!((median - 3.0).abs() < 1e-10);
+    }
+
+    #[test]
+    fn test_stats_median_even() {
+        let mut nums: Vec<f64> = vec![1.0, 2.0, 3.0, 4.0];
+        nums.sort_by(|a, b| a.partial_cmp(b).unwrap());
+        let n = nums.len();
+        let median: f64 = (nums[n / 2 - 1] + nums[n / 2]) / 2.0;
+        assert!((median - 2.5).abs() < 1e-10);
+    }
+
+    #[test]
+    fn test_stats_min_max() {
+        let mut nums: Vec<f64> = vec![3.0, 1.0, 4.0, 1.0, 5.0];
+        nums.sort_by(|a, b| a.partial_cmp(b).unwrap());
+        let n = nums.len();
+        let min: f64 = nums[0];
+        let max: f64 = nums[n - 1];
+        assert!((min - 1.0).abs() < 1e-10);
+        assert!((max - 5.0).abs() < 1e-10);
+    }
+
+    #[test]
+    fn test_stats_variance_and_stddev() {
+        let nums: Vec<f64> = vec![2.0, 4.0, 4.0, 4.0, 5.0, 5.0, 7.0, 9.0];
+        let n = nums.len();
+        let sum: f64 = nums.iter().sum();
+        let mean: f64 = sum / n as f64;
+        let variance: f64 = nums.iter().map(|v| { let d = v - mean; d * d }).sum::<f64>() / n as f64;
+        let stddev: f64 = variance.sqrt();
+        assert!((mean - 5.0).abs() < 1e-10);
+        assert!((variance - 4.0).abs() < 1e-10);
+        assert!((stddev - 2.0).abs() < 1e-10);
+    }
+
+    #[test]
+    fn test_stats_single_value() {
+        let nums: Vec<f64> = vec![42.0];
+        let n = nums.len();
+        let sum: f64 = nums.iter().sum();
+        let mean: f64 = sum / n as f64;
+        let median: f64 = nums[n / 2];
+        assert!((mean - 42.0).abs() < 1e-10);
+        assert!((median - 42.0).abs() < 1e-10);
+    }
+
+    #[test]
+    fn test_stats_two_values() {
+        let mut nums: Vec<f64> = vec![10.0, 20.0];
+        nums.sort_by(|a, b| a.partial_cmp(b).unwrap());
+        let n = nums.len();
+        let median: f64 = (nums[n / 2 - 1] + nums[n / 2]) / 2.0;
+        assert!((median - 15.0).abs() < 1e-10);
+    }
+}

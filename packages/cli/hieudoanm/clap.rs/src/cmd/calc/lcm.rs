@@ -54,3 +54,52 @@ pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
 
     Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_gcd_positive() {
+        assert_eq!(gcd(12, 8), 4);
+    }
+
+    #[test]
+    fn test_gcd_coprime() {
+        assert_eq!(gcd(7, 13), 1);
+    }
+
+    #[test]
+    fn test_gcd_same_number() {
+        assert_eq!(gcd(10, 10), 10);
+    }
+
+    #[test]
+    fn test_gcd_one_zero() {
+        assert_eq!(gcd(0, 5), 5);
+    }
+
+    #[test]
+    fn test_lcm_formula() {
+        let a: i64 = 4;
+        let b: i64 = 6;
+        let result = a / gcd(a, b) * b;
+        assert_eq!(result, 12);
+    }
+
+    #[test]
+    fn test_lcm_formula_coprime() {
+        let a: i64 = 7;
+        let b: i64 = 13;
+        let result = a / gcd(a, b) * b;
+        assert_eq!(result, 91);
+    }
+
+    #[test]
+    fn test_lcm_formula_same() {
+        let a: i64 = 10;
+        let b: i64 = 10;
+        let result = a / gcd(a, b) * b;
+        assert_eq!(result, 10);
+    }
+}

@@ -56,6 +56,65 @@ fn load_offset(name: &str) -> Option<FixedOffset> {
     None
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_load_offset_known_alias() {
+        let offset = load_offset("ny").unwrap();
+        assert_eq!(offset.local_minus_utc(), -5 * 3600);
+    }
+
+    #[test]
+    fn test_load_offset_utc() {
+        let offset = load_offset("utc").unwrap();
+        assert_eq!(offset.local_minus_utc(), 0);
+    }
+
+    #[test]
+    fn test_load_offset_case_sensitive() {
+        assert!(load_offset("NY").is_none());
+        assert!(load_offset("London").is_none());
+    }
+
+    #[test]
+    fn test_load_offset_unknown() {
+        assert!(load_offset("unknown").is_none());
+        assert!(load_offset("").is_none());
+    }
+
+    #[test]
+    fn test_load_offset_utc_plus() {
+        let offset = load_offset("UTC+5").unwrap();
+        assert_eq!(offset.local_minus_utc(), 5 * 3600);
+    }
+
+    #[test]
+    fn test_load_offset_utc_minus() {
+        let offset = load_offset("UTC-3").unwrap();
+        assert_eq!(offset.local_minus_utc(), -3 * 3600);
+    }
+
+    #[test]
+    fn test_load_offset_utc_with_colon() {
+        let offset = load_offset("UTC+5:30").unwrap();
+        assert_eq!(offset.local_minus_utc(), 5 * 3600 + 30 * 60);
+    }
+
+    #[test]
+    fn test_load_offset_utc_without_sign() {
+        let offset = load_offset("UTC+8").unwrap();
+        assert_eq!(offset.local_minus_utc(), 8 * 3600);
+    }
+
+    #[test]
+    fn test_load_offset_tokyo() {
+        let offset = load_offset("tokyo").unwrap();
+        assert_eq!(offset.local_minus_utc(), 9 * 3600);
+    }
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("world")
         .about("Display current time in multiple timezones")

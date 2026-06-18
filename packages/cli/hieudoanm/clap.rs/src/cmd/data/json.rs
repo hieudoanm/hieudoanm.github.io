@@ -98,6 +98,68 @@ fn json_query(data: &Value, query: &str) -> anyhow::Result<Value> {
     Ok(current.clone())
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use serde_json::json;
+
+    #[test]
+    fn test_json_query_root() {
+        let data = json!({"name": "test", "value": 42});
+        let result = json_query(&data, ".").unwrap();
+        assert_eq!(result, data);
+    }
+
+    #[test]
+    fn test_json_query_simple_key() {
+        let data = json!({"name": "test", "value": 42});
+        let result = json_query(&data, ".name").unwrap();
+        assert_eq!(result, json!("test"));
+    }
+
+    #[test]
+    fn test_json_query_nested() {
+        let data = json!({"a": {"b": {"c": 123}}});
+        let result = json_query(&data, ".a.b.c").unwrap();
+        assert_eq!(result, json!(123));
+    }
+
+    #[test]
+    fn test_json_query_array_index() {
+        let data = json!({"items": [10, 20, 30]});
+        let result = json_query(&data, ".items[1]").unwrap();
+        assert_eq!(result, json!(20));
+    }
+
+    #[test]
+    fn test_json_query_nested_array() {
+        let data = json!({"users": [{"name": "alice"}, {"name": "bob"}]});
+        let result = json_query(&data, ".users[1].name").unwrap();
+        assert_eq!(result, json!("bob"));
+    }
+
+    #[test]
+    fn test_json_query_key_not_found() {
+        let data = json!({"a": 1});
+        let result = json_query(&data, ".b");
+        assert!(result.is_err());
+    }
+
+    #[test]
+    fn test_json_query_array_out_of_bounds() {
+        let data = json!({"items": [1, 2]});
+        let result = json_query(&data, ".items[5]");
+        assert!(result.is_err());
+    }
+
+    #[test]
+    fn test_json_query_empty_query() {
+        let data = json!({"key": "val"});
+        let result = json_query(&data, "").unwrap();
+        assert_eq!(result, data);
+    }
+}
+
 fn json_diff(file1: &str, file2: &str) -> anyhow::Result<()> {
     let a: Value = serde_json::from_slice(&std::fs::read(file1)?)?;
     let b: Value = serde_json::from_slice(&std::fs::read(file2)?)?;

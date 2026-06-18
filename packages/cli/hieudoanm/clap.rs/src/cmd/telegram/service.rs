@@ -86,3 +86,33 @@ pub fn get_webhook_info(token: &str) -> Result<serde_json::Value> {
 fn urlencoding(s: &str) -> String {
     url::form_urlencoded::byte_serialize(s.as_bytes()).collect()
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_urlencoding_plain() {
+        assert_eq!(urlencoding("hello"), "hello");
+    }
+
+    #[test]
+    fn test_urlencoding_spaces() {
+        assert_eq!(urlencoding("hello world"), "hello+world");
+    }
+
+    #[test]
+    fn test_urlencoding_special_chars() {
+        assert_eq!(urlencoding("a&b=c"), "a%26b%3Dc");
+    }
+
+    #[test]
+    fn test_urlencoding_url() {
+        assert_eq!(urlencoding("https://example.com/webhook?test=1"), "https%3A%2F%2Fexample.com%2Fwebhook%3Ftest%3D1");
+    }
+
+    #[test]
+    fn test_urlencoding_empty() {
+        assert_eq!(urlencoding(""), "");
+    }
+}

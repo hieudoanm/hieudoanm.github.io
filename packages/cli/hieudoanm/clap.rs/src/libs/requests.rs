@@ -33,6 +33,54 @@ pub struct Options {
     pub debug: bool,
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_should_retry_not_exceeded_with_error() {
+        assert!(should_retry(Some(&anyhow::anyhow!("err")), 200, 0, 3));
+    }
+
+    #[test]
+    fn test_should_retry_exceeded_max_retries() {
+        assert!(!should_retry(Some(&anyhow::anyhow!("err")), 200, 3, 3));
+    }
+
+    #[test]
+    fn test_should_retry_server_error() {
+        assert!(should_retry(None, 500, 0, 3));
+        assert!(should_retry(None, 502, 0, 3));
+        assert!(should_retry(None, 503, 0, 3));
+    }
+
+    #[test]
+    fn test_should_retry_client_error_no_retry() {
+        assert!(!should_retry(None, 400, 0, 3));
+        assert!(!should_retry(None, 404, 0, 3));
+        assert!(!should_retry(None, 418, 0, 3));
+    }
+
+    #[test]
+    fn test_should_retry_success_no_retry() {
+        assert!(!should_retry(None, 200, 0, 3));
+        assert!(!should_retry(None, 201, 0, 3));
+        assert!(!should_retry(None, 204, 0, 3));
+    }
+
+    #[test]
+    fn test_should_retry_redirect_no_retry() {
+        assert!(!should_retry(None, 301, 0, 3));
+        assert!(!should_retry(None, 302, 0, 3));
+    }
+
+    #[test]
+    fn test_should_retry_last_attempt() {
+        assert!(should_retry(Some(&anyhow::anyhow!("err")), 200, 2, 3));
+        assert!(!should_retry(Some(&anyhow::anyhow!("err")), 200, 3, 3));
+    }
+}
+
 fn should_retry(
     err: Option<&anyhow::Error>,
     status: u16,

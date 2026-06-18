@@ -176,3 +176,97 @@ pub fn convert(value: f64, from: &str, to: &str) -> Result<UnitResult, String> {
         category: from_unit.cat,
     })
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_convert_length_m_to_cm() {
+        let result = convert(1.0, "m", "cm").unwrap();
+        assert!((result.result - 100.0).abs() < 1e-10);
+        assert_eq!(result.category, "length");
+    }
+
+    #[test]
+    fn test_convert_length_km_to_mi() {
+        let result = convert(1.0, "km", "mi").unwrap();
+        assert!((result.result - 0.621371).abs() < 0.001);
+    }
+
+    #[test]
+    fn test_convert_weight_kg_to_lb() {
+        let result = convert(1.0, "kg", "lb").unwrap();
+        assert!((result.result - 2.20462).abs() < 0.001);
+        assert_eq!(result.category, "weight");
+    }
+
+    #[test]
+    fn test_convert_weight_g_to_oz() {
+        let result = convert(100.0, "g", "oz").unwrap();
+        assert!((result.result - 3.5274).abs() < 0.001);
+    }
+
+    #[test]
+    fn test_convert_temperature_c_to_f() {
+        let result = convert(0.0, "c", "f").unwrap();
+        assert!((result.result - 32.0).abs() < 1e-10);
+        assert_eq!(result.category, "temperature");
+    }
+
+    #[test]
+    fn test_convert_temperature_f_to_c() {
+        let result = convert(212.0, "f", "c").unwrap();
+        assert!((result.result - 100.0).abs() < 1e-10);
+    }
+
+    #[test]
+    fn test_convert_temperature_c_to_k() {
+        let result = convert(0.0, "c", "k").unwrap();
+        assert!((result.result - 273.15).abs() < 1e-10);
+    }
+
+    #[test]
+    fn test_convert_speed_kph_to_mph() {
+        let result = convert(100.0, "km/h", "mph").unwrap();
+        assert!((result.result - 62.1371).abs() < 0.001);
+        assert_eq!(result.category, "speed");
+    }
+
+    #[test]
+    fn test_convert_incompatible_units() {
+        let result = convert(1.0, "m", "kg");
+        assert!(result.is_err());
+    }
+
+    #[test]
+    fn test_convert_unknown_unit() {
+        let result = convert(1.0, "m", "xyz");
+        assert!(result.is_err());
+    }
+
+    #[test]
+    fn test_convert_unknown_from_unit() {
+        let result = convert(1.0, "xyz", "m");
+        assert!(result.is_err());
+    }
+
+    #[test]
+    fn test_convert_same_unit() {
+        let result = convert(42.0, "m", "m").unwrap();
+        assert!((result.result - 42.0).abs() < 1e-10);
+    }
+
+    #[test]
+    fn test_convert_alias_millimeter() {
+        let result = convert(1000.0, "millimeter", "m").unwrap();
+        assert!((result.result - 1.0).abs() < 1e-10);
+    }
+
+    #[test]
+    fn test_find_unit() {
+        assert!(find_unit("m").is_some());
+        assert!(find_unit("xyz").is_none());
+        assert!(find_unit("KILOGRAM").is_some());
+    }
+}

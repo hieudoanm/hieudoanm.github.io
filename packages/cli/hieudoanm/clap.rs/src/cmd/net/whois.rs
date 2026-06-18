@@ -2,6 +2,46 @@ use tokio::io::{AsyncBufReadExt, AsyncWriteExt, BufReader};
 use tokio::net::TcpStream;
 use tokio::time::{timeout, Duration};
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_whois_server_com() {
+        assert_eq!(whois_server("example.com"), "whois.verisign-grs.com");
+    }
+
+    #[test]
+    fn test_whois_server_net() {
+        assert_eq!(whois_server("example.net"), "whois.verisign-grs.com");
+    }
+
+    #[test]
+    fn test_whois_server_org() {
+        assert_eq!(whois_server("example.org"), "whois.pir.org");
+    }
+
+    #[test]
+    fn test_whois_server_io() {
+        assert_eq!(whois_server("example.io"), "whois.nic.io");
+    }
+
+    #[test]
+    fn test_whois_server_dev() {
+        assert_eq!(whois_server("example.dev"), "whois.nic.dev");
+    }
+
+    #[test]
+    fn test_whois_server_unknown_tld() {
+        assert_eq!(whois_server("example.unknown"), "whois.iana.org");
+    }
+
+    #[test]
+    fn test_whois_server_no_tld() {
+        assert_eq!(whois_server("example"), "whois.iana.org");
+    }
+}
+
 fn whois_server(domain: &str) -> &str {
     let tld = domain.rsplit('.').next().unwrap_or("");
     match tld {

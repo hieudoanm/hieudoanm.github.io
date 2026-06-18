@@ -143,6 +143,114 @@ pub fn yellow_dot() -> &'static str {
     "\u{25CF}"
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_gold_color_rgb() {
+        let c = gold();
+        assert_eq!(c, Color::Rgb(201, 168, 76));
+    }
+
+    #[test]
+    fn test_muted_color_rgb() {
+        let c = muted();
+        assert_eq!(c, Color::Rgb(107, 90, 62));
+    }
+
+    #[test]
+    fn test_success_color_rgb() {
+        let c = success();
+        assert_eq!(c, Color::Rgb(129, 199, 132));
+    }
+
+    #[test]
+    fn test_warning_color_rgb() {
+        let c = warning();
+        assert_eq!(c, Color::Rgb(255, 183, 77));
+    }
+
+    #[test]
+    fn test_error_color_rgb() {
+        let c = error();
+        assert_eq!(c, Color::Rgb(229, 115, 115));
+    }
+
+    #[test]
+    fn test_title_style() {
+        let s = title();
+        assert_eq!(s.fg, Some(gold()));
+        assert_eq!(s.add_modifier, Modifier::BOLD);
+    }
+
+    #[test]
+    fn test_status_style_error() {
+        let s = status_style(90.0);
+        assert_eq!(s.fg, Some(error()));
+    }
+
+    #[test]
+    fn test_status_style_warning() {
+        let s = status_style(70.0);
+        assert_eq!(s.fg, Some(warning()));
+    }
+
+    #[test]
+    fn test_status_style_success() {
+        let s = status_style(50.0);
+        assert_eq!(s.fg, Some(success()));
+    }
+
+    #[test]
+    fn test_status_style_boundary() {
+        let s1 = status_style(85.0);
+        assert_eq!(s1.fg, Some(warning()));
+        let s2 = status_style(85.1);
+        assert_eq!(s2.fg, Some(error()));
+        let s3 = status_style(65.0);
+        assert_eq!(s3.fg, Some(success()));
+        let s4 = status_style(65.1);
+        assert_eq!(s4.fg, Some(warning()));
+    }
+
+    #[test]
+    fn test_dot_for_status_up() {
+        let (dot, style) = dot_for_status("up");
+        assert_eq!(dot, green_dot());
+        assert_eq!(style.fg, Some(success()));
+    }
+
+    #[test]
+    fn test_dot_for_status_ok() {
+        let (dot, style) = dot_for_status("ok");
+        assert_eq!(dot, green_dot());
+        assert_eq!(style.fg, Some(success()));
+    }
+
+    #[test]
+    fn test_dot_for_status_down() {
+        let (dot, style) = dot_for_status("down");
+        assert_eq!(dot, red_dot());
+        assert_eq!(style.fg, Some(error()));
+    }
+
+    #[test]
+    fn test_dot_for_status_unknown() {
+        let (dot, style) = dot_for_status("unknown");
+        assert_eq!(dot, yellow_dot());
+        assert_eq!(style.fg, Some(warning()));
+    }
+
+    #[test]
+    fn test_icons_return_non_empty() {
+        assert!(!copy_icon().is_empty());
+        assert!(!lock_icon().is_empty());
+        assert!(!globe_icon().is_empty());
+        assert!(!key_icon().is_empty());
+    }
+}
+
 pub fn status_style(value: f64) -> Style {
     if value > 85.0 {
         error_text()

@@ -26,6 +26,41 @@ fn parse_duration(s: &str) -> anyhow::Result<Duration> {
     }
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_parse_duration_seconds() {
+        let d = parse_duration("30s").unwrap();
+        assert_eq!(d.as_secs(), 30);
+    }
+
+    #[test]
+    fn test_parse_duration_minutes() {
+        let d = parse_duration("5m").unwrap();
+        assert_eq!(d.as_secs(), 300);
+    }
+
+    #[test]
+    fn test_parse_duration_plain_number() {
+        let d = parse_duration("90").unwrap();
+        assert_eq!(d.as_secs(), 90);
+    }
+
+    #[test]
+    fn test_parse_duration_zero() {
+        let d = parse_duration("0").unwrap();
+        assert_eq!(d.as_secs(), 0);
+    }
+
+    #[test]
+    fn test_parse_duration_invalid() {
+        assert!(parse_duration("abc").is_err());
+        assert!(parse_duration("").is_err());
+    }
+}
+
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     let dur_str = matches.get_one::<String>("duration").unwrap();
     let total = parse_duration(dur_str)?;

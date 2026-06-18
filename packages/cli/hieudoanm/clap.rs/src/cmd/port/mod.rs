@@ -89,3 +89,61 @@ fn common_ports() -> std::collections::HashMap<u16, &'static str> {
     m.insert(27017, "MongoDB");
     m
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_common_ports_contains_http() {
+        let ports = common_ports();
+        assert_eq!(ports.get(&80), Some(&"HTTP"));
+        assert_eq!(ports.get(&443), Some(&"HTTPS"));
+        assert_eq!(ports.get(&22), Some(&"SSH"));
+    }
+
+    #[test]
+    fn test_build_port_list_empty_returns_all_common() {
+        let ports = build_port_list("");
+        assert!(ports.contains(&80));
+        assert!(ports.contains(&443));
+        assert!(ports.contains(&22));
+        assert!(ports.len() >= 20);
+    }
+
+    #[test]
+    fn test_build_port_list_single() {
+        assert_eq!(build_port_list("80"), vec![80]);
+        assert_eq!(build_port_list("443"), vec![443]);
+    }
+
+    #[test]
+    fn test_build_port_list_range() {
+        assert_eq!(build_port_list("8000-8003"), vec![8000, 8001, 8002, 8003]);
+    }
+
+    #[test]
+    fn test_build_port_list_comma_separated() {
+        assert_eq!(build_port_list("22,80,443"), vec![22u16, 80, 443]);
+    }
+
+    #[test]
+    fn test_build_port_list_mixed() {
+        assert_eq!(
+            build_port_list("80,8000-8002,443"),
+            vec![80u16, 443, 8000, 8001, 8002]
+        );
+    }
+
+    #[test]
+    fn test_build_port_list_invalid_part_skipped() {
+        let result = build_port_list("80,abc,443");
+        assert_eq!(result, vec![80u16, 443]);
+    }
+
+    #[test]
+    fn test_build_port_list_sorted() {
+        let result = build_port_list("443,22,80");
+        assert_eq!(result, vec![22u16, 80, 443]);
+    }
+}

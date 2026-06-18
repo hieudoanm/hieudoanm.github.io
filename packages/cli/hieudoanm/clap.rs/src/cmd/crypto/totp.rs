@@ -83,6 +83,69 @@ fn hotp(key: &[u8], counter: u64, digits: u32) -> String {
     format!("{code:0width$}", width = digits as usize)
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_base32_decode_rfc4648() {
+        let decoded = base32_decode("JBSWY3DP").unwrap();
+        assert_eq!(String::from_utf8_lossy(&decoded), "Hello");
+    }
+
+    #[test]
+    fn test_base32_decode_with_padding() {
+        let decoded = base32_decode("JBSWY3DPEE=======").unwrap();
+        assert_eq!(String::from_utf8_lossy(&decoded), "Hello!");
+    }
+
+    #[test]
+    fn test_base32_decode_lowercase() {
+        let decoded = base32_decode("jbswy3dp").unwrap();
+        assert_eq!(String::from_utf8_lossy(&decoded), "Hello");
+    }
+
+    #[test]
+    fn test_base32_decode_whitespace() {
+        let decoded = base32_decode("JBSW Y3DP").unwrap();
+        assert_eq!(String::from_utf8_lossy(&decoded), "Hello");
+    }
+
+    #[test]
+    fn test_base32_decode_empty() {
+        let decoded = base32_decode("").unwrap();
+        assert!(decoded.is_empty());
+    }
+
+    #[test]
+    fn test_base32_decode_invalid_char() {
+        let result = base32_decode("JBSWY3D!");
+        assert!(result.is_err());
+    }
+
+    #[test]
+    fn test_hotp_rfc4226_test_vector() {
+        let key = b"12345678901234567890";
+        let code = hotp(key, 0, 6);
+        assert_eq!(code.len(), 6);
+        assert!(code.chars().all(|c| c.is_ascii_digit()));
+    }
+
+    #[test]
+    fn test_hotp_8_digits() {
+        let key = b"12345678901234567890";
+        let code = hotp(key, 0, 8);
+        assert_eq!(code.len(), 8);
+    }
+
+    #[test]
+    fn test_hotp_zero_key() {
+        let key = b"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00";
+        let code = hotp(key, 0, 6);
+        assert_eq!(code.len(), 6);
+    }
+}
+
 pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
     let secret = matches.get_one::<String>("secret").unwrap();
     let step: u64 = matches

@@ -4,6 +4,130 @@ use ratatui::text::{Line, Span};
 use ratatui::widgets::{Block, BorderType, Borders, Paragraph, Wrap};
 use ratatui::Frame;
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_chat_new() {
+        let chat = Chat::new();
+        assert!(chat.messages.is_empty());
+        assert!(chat.input.is_empty());
+    }
+
+    #[test]
+    fn test_chat_add_message() {
+        let mut chat = Chat::new();
+        chat.add_message("user", "hello");
+        assert_eq!(chat.messages.len(), 1);
+        assert_eq!(chat.messages[0].role, "user");
+        assert_eq!(chat.messages[0].content, "hello");
+    }
+
+    #[test]
+    fn test_chat_input_char() {
+        let mut chat = Chat::new();
+        chat.input_char('a');
+        chat.input_char('b');
+        assert_eq!(chat.input, "ab");
+    }
+
+    #[test]
+    fn test_chat_input_backspace() {
+        let mut chat = Chat::new();
+        chat.input_char('a');
+        chat.input_char('b');
+        chat.input_backspace();
+        assert_eq!(chat.input, "a");
+    }
+
+    #[test]
+    fn test_chat_input_backspace_empty() {
+        let mut chat = Chat::new();
+        chat.input_backspace();
+        assert!(chat.input.is_empty());
+    }
+
+    #[test]
+    fn test_chat_clear_input() {
+        let mut chat = Chat::new();
+        chat.input_char('x');
+        chat.clear_input();
+        assert!(chat.input.is_empty());
+    }
+
+    #[test]
+    fn test_format_message_user() {
+        let chat = Chat::new();
+        let msg = Message::new("user", "hello");
+        let lines = chat.format_message(&msg, 80);
+        assert!(!lines.is_empty());
+    }
+
+    #[test]
+    fn test_format_message_assistant() {
+        let chat = Chat::new();
+        let msg = Message::new("assistant", "response");
+        let lines = chat.format_message(&msg, 80);
+        assert!(!lines.is_empty());
+    }
+
+    #[test]
+    fn test_format_message_error() {
+        let chat = Chat::new();
+        let msg = Message::new("error", "something went wrong");
+        let lines = chat.format_message(&msg, 80);
+        assert!(!lines.is_empty());
+    }
+
+    #[test]
+    fn test_format_message_tool() {
+        let chat = Chat::new();
+        let msg = Message::new("tool", "result");
+        let lines = chat.format_message(&msg, 80);
+        assert!(!lines.is_empty());
+    }
+
+    #[test]
+    fn test_format_message_multiline() {
+        let chat = Chat::new();
+        let msg = Message::new("user", "line1\nline2\nline3");
+        let lines = chat.format_message(&msg, 80);
+        assert!(lines.len() >= 5);
+    }
+
+    #[test]
+    fn test_format_code_block_basic() {
+        let chat = Chat::new();
+        let lines = chat.format_code_block("rust", None, "fn main() {}");
+        assert!(lines.len() >= 2);
+    }
+
+    #[test]
+    fn test_format_code_block_with_filename() {
+        let chat = Chat::new();
+        let lines = chat.format_code_block("rust", Some("main.rs"), "fn main() {}");
+        assert!(lines.len() >= 2);
+    }
+
+    #[test]
+    fn test_format_code_block_empty() {
+        let chat = Chat::new();
+        let lines = chat.format_code_block("", None, "");
+        assert!(lines.len() >= 1);
+    }
+
+    #[test]
+    fn test_chat_add_multiple_messages() {
+        let mut chat = Chat::new();
+        chat.add_message("user", "hi");
+        chat.add_message("assistant", "hello!");
+        chat.add_message("user", "how are you?");
+        assert_eq!(chat.messages.len(), 3);
+        assert_eq!(chat.messages[1].role, "assistant");
+    }
+}
+
 use super::message::Message;
 use super::spinner::Spinner;
 use super::state::State;

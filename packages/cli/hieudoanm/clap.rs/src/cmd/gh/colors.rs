@@ -1,5 +1,39 @@
 use std::collections::HashMap;
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_language_colors_contains_common() {
+        let colors = language_colors();
+        assert_eq!(colors.get("Rust"), Some(&"#DEA584"));
+        assert_eq!(colors.get("Go"), Some(&"#00ADD8"));
+        assert_eq!(colors.get("Python"), Some(&"#3572A5"));
+    }
+
+    #[test]
+    fn test_language_colors_count() {
+        let colors = language_colors();
+        assert!(colors.len() >= 30);
+    }
+
+    #[test]
+    fn test_language_colors_unknown() {
+        let colors = language_colors();
+        assert!(colors.get("UnknownLang").is_none());
+    }
+
+    #[test]
+    fn test_language_colors_hex_format() {
+        let colors = language_colors();
+        for (_, hex) in &colors {
+            assert_eq!(hex.len(), 7);
+            assert!(hex.starts_with('#'));
+        }
+    }
+}
+
 pub fn language_colors() -> HashMap<&'static str, &'static str> {
     HashMap::from([
         ("Go", "#00ADD8"),

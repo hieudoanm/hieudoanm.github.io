@@ -1,5 +1,143 @@
 use std::path::Path;
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_extract_host_normal() {
+        assert_eq!(extract_host("https://www.example.com/page"), "example_com");
+    }
+
+    #[test]
+    fn test_extract_host_invalid() {
+        assert_eq!(extract_host("not a url"), "output");
+    }
+
+    #[test]
+    fn test_extract_title_present() {
+        let doc = scraper::Html::parse_document("<html><head><title>My Page</title></head><body></body></html>");
+        assert_eq!(extract_title(&doc), "My Page");
+    }
+
+    #[test]
+    fn test_extract_title_trimmed() {
+        let doc = scraper::Html::parse_document("<html><head><title>  Spaced Title  </title></head></html>");
+        assert_eq!(extract_title(&doc), "Spaced Title");
+    }
+
+    #[test]
+    fn test_extract_title_missing() {
+        let doc = scraper::Html::parse_document("<html><head></head></html>");
+        assert_eq!(extract_title(&doc), "");
+    }
+
+    #[test]
+    fn test_html_to_markdown_heading() {
+        let md = html_to_markdown("<h1>Title</h1>");
+        assert_eq!(md, "# Title");
+    }
+
+    #[test]
+    fn test_html_to_markdown_paragraph() {
+        let md = html_to_markdown("<p>Hello world</p>");
+        assert_eq!(md, "Hello world");
+    }
+
+    #[test]
+    fn test_html_to_markdown_bold() {
+        let md = html_to_markdown("<p><b>bold</b> text</p>");
+        assert_eq!(md, "bold text");
+    }
+
+    #[test]
+    fn test_html_to_markdown_link() {
+        let md = html_to_markdown("<p><a href=\"https://example.com\">click</a></p>");
+        assert_eq!(md, "click");
+    }
+
+    #[test]
+    fn test_html_to_markdown_image() {
+        let md = html_to_markdown("<p><img src=\"https://example.com/img.png\" alt=\"pic\"></p>");
+        assert_eq!(md, "");
+    }
+
+    #[test]
+    fn test_html_to_markdown_unordered_list() {
+        let md = html_to_markdown("<ul><li>Item 1</li><li>Item 2</li></ul>");
+        assert_eq!(md, "- Item 1\n- Item 2");
+    }
+
+    #[test]
+    fn test_html_to_markdown_ordered_list() {
+        let md = html_to_markdown("<ol><li>First</li><li>Second</li></ol>");
+        assert_eq!(md, "1. First\n2. Second");
+    }
+
+    #[test]
+    fn test_html_to_markdown_code_block() {
+        let md = html_to_markdown("<pre><code>fn main() {}</code></pre>");
+        assert_eq!(md, "```\nfn main() {}\n```");
+    }
+
+    #[test]
+    fn test_html_to_markdown_inline_code() {
+        let md = html_to_markdown("<p>Use <code>cargo build</code> to compile</p>");
+        assert_eq!(md, "Use cargo build to compile");
+    }
+
+    #[test]
+    fn test_html_to_markdown_blockquote() {
+        let md = html_to_markdown("<blockquote>A wise quote</blockquote>");
+        assert_eq!(md, "> A wise quote");
+    }
+
+    #[test]
+    fn test_html_to_markdown_hr() {
+        let md = html_to_markdown("<hr>");
+        assert_eq!(md, "---");
+    }
+
+    #[test]
+    fn test_html_to_markdown_table() {
+        let md = html_to_markdown("<table><tr><th>Name</th><th>Age</th></tr><tr><td>Alice</td><td>30</td></tr></table>");
+        assert!(md.contains("| Name | Age |"));
+        assert!(md.contains("| --- | --- |"));
+        assert!(md.contains("| Alice | 30 |"));
+    }
+
+    #[test]
+    fn test_html_to_markdown_br() {
+        let md = html_to_markdown("<p>line1<br>line2</p>");
+        assert_eq!(md, "line1line2");
+    }
+
+    #[test]
+    fn test_html_to_markdown_empty() {
+        let md = html_to_markdown("");
+        assert_eq!(md, "");
+    }
+
+    #[test]
+    fn test_html_to_markdown_nested_heading() {
+        let md = html_to_markdown("<div><h2>Subtitle</h2><p>Content</p></div>");
+        assert_eq!(md, "## Subtitle\n\nContent");
+    }
+
+    #[test]
+    fn test_html_to_markdown_sub_heading() {
+        let md = html_to_markdown("<h3>Section</h3>");
+        assert_eq!(md, "### Section");
+    }
+
+    #[test]
+    fn test_convert_table_empty() {
+        let doc = scraper::Html::parse_fragment("<table></table>");
+        let table = doc.root_element();
+        assert_eq!(convert_table(&table), "");
+    }
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("md")
         .about("Convert webpage to markdown")

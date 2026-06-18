@@ -111,3 +111,45 @@ pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
 
     Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+    use super::super::service::calc_payment;
+
+    #[test]
+    fn test_mortgage_payment() {
+        let payment = calc_payment(300_000.0, 7.0, 30.0);
+        assert!((payment - 1995.91).abs() < 0.01);
+    }
+
+    #[test]
+    fn test_mortgage_total_paid() {
+        let principal = 200_000.0;
+        let rate = 6.0;
+        let years = 30.0;
+        let payment = calc_payment(principal, rate, years);
+        let n = years * 12.0;
+        let total_paid = payment * n;
+        let total_interest = total_paid - principal;
+        assert!(total_paid > principal);
+        assert!(total_interest > 0.0);
+    }
+
+    #[test]
+    fn test_mortgage_with_taxes() {
+        let principal: f64 = 200_000.0;
+        let rate: f64 = 6.0;
+        let years: f64 = 30.0;
+        let taxes: f64 = 2400.0;
+        let insurance: f64 = 600.0;
+        let pmi: f64 = 0.0;
+        let payment: f64 = calc_payment(principal, rate, years);
+        let monthly_taxes: f64 = taxes / 12.0;
+        let monthly_insurance: f64 = insurance / 12.0;
+        let monthly_pmi: f64 = pmi / 12.0;
+        let total_monthly: f64 = payment + monthly_taxes + monthly_insurance + monthly_pmi;
+        assert!((monthly_taxes - 200.0).abs() < 0.01);
+        assert!((monthly_insurance - 50.0).abs() < 0.01);
+        assert!(total_monthly > payment);
+    }
+}

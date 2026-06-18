@@ -72,6 +72,52 @@ pub fn command() -> clap::Command {
         )
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_generate_pronounceable_length() {
+        for len in [4, 8, 12, 16] {
+            let pw = generate_pronounceable(len);
+            assert_eq!(pw.len(), len, "length mismatch for {len}");
+        }
+    }
+
+    #[test]
+    fn test_generate_pronounceable_only_consonants_and_vowels() {
+        let pw = generate_pronounceable(100);
+        for (i, c) in pw.chars().enumerate() {
+            if i % 2 == 0 {
+                assert!(
+                    CONSONANTS.contains(&(c as u8)),
+                    "expected consonant at {i}, got {c}"
+                );
+            } else {
+                assert!(
+                    VOWELS.contains(&(c as u8)),
+                    "expected vowel at {i}, got {c}"
+                );
+            }
+        }
+    }
+
+    #[test]
+    fn test_generate_pronounceable_empty() {
+        assert_eq!(generate_pronounceable(0), "");
+    }
+
+    #[test]
+    fn test_generate_pronounceable_different() {
+        let a = generate_pronounceable(16);
+        let b = generate_pronounceable(16);
+        assert_ne!(
+            a, b,
+            "two calls should produce different passwords"
+        );
+    }
+}
+
 fn generate_pronounceable(length: usize) -> String {
     let mut rng = rand::thread_rng();
     let mut s = String::with_capacity(length);

@@ -236,3 +236,72 @@ pub async fn run_dns(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     }
     Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_version_from_ip_ipv4() {
+        assert_eq!(version_from_ip("192.168.1.1"), "IPv4");
+        assert_eq!(version_from_ip("8.8.8.8"), "IPv4");
+        assert_eq!(version_from_ip("127.0.0.1"), "IPv4");
+    }
+
+    #[test]
+    fn test_version_from_ip_ipv6() {
+        assert_eq!(version_from_ip("::1"), "IPv6");
+        assert_eq!(
+            version_from_ip("2001:db8::ff00:42:8329"),
+            "IPv6"
+        );
+    }
+
+    #[test]
+    fn test_version_from_ip_empty() {
+        assert_eq!(version_from_ip(""), "IPv4");
+    }
+
+    #[test]
+    fn test_detect_vpn_detects_cloudflare() {
+        assert!(detect_vpn("CLOUDFLARE, INC."));
+        assert!(detect_vpn("cloudflare, inc."));
+        assert!(detect_vpn("Something Cloudflare"));
+    }
+
+    #[test]
+    fn test_detect_vpn_detects_amazon() {
+        assert!(detect_vpn("Amazon Web Services"));
+        assert!(detect_vpn("amazon.com"));
+    }
+
+    #[test]
+    fn test_detect_vpn_detects_google() {
+        assert!(detect_vpn("Google Cloud"));
+        assert!(detect_vpn("google LLC"));
+    }
+
+    #[test]
+    fn test_detect_vpn_detects_digitalocean() {
+        assert!(detect_vpn("DigitalOcean"));
+        assert!(detect_vpn("digitalocean, LLC"));
+    }
+
+    #[test]
+    fn test_detect_vpn_detects_microsoft() {
+        assert!(detect_vpn("Microsoft Corporation"));
+        assert!(detect_vpn("microsoft azure"));
+    }
+
+    #[test]
+    fn test_detect_vpn_returns_false_for_normal_isp() {
+        assert!(!detect_vpn("Comcast Cable"));
+        assert!(!detect_vpn("Verizon Communications"));
+        assert!(!detect_vpn("AT&T Internet"));
+    }
+
+    #[test]
+    fn test_detect_vpn_empty() {
+        assert!(!detect_vpn(""));
+    }
+}

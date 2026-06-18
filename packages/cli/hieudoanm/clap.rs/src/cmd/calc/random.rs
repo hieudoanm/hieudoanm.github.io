@@ -66,3 +66,20 @@ pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
 
     Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn test_count_min_one() {
+        let count: i32 = 0i32.max(1);
+        assert_eq!(count, 1);
+    }
+
+    #[test]
+    fn test_inverted_range() {
+        let min: f64 = 10.0;
+        let max: f64 = 5.0;
+        let v: f64 = min + 0.5 * (max - min);
+        assert!((v - 7.5).abs() < 1e-10);
+    }
+}

@@ -40,6 +40,70 @@ fn parse_date(s: &str) -> Option<NaiveDateTime> {
     None
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_days_in_month_january() {
+        assert_eq!(days_in_month(2024, 1), 31);
+    }
+
+    #[test]
+    fn test_days_in_month_february_leap() {
+        assert_eq!(days_in_month(2024, 2), 29);
+    }
+
+    #[test]
+    fn test_days_in_month_february_non_leap() {
+        assert_eq!(days_in_month(2023, 2), 28);
+    }
+
+    #[test]
+    fn test_days_in_month_february_century() {
+        assert_eq!(days_in_month(1900, 2), 28);
+    }
+
+    #[test]
+    fn test_days_in_month_february_century_leap() {
+        assert_eq!(days_in_month(2000, 2), 29);
+    }
+
+    #[test]
+    fn test_days_in_month_april() {
+        assert_eq!(days_in_month(2024, 4), 30);
+    }
+
+    #[test]
+    fn test_days_in_month_invalid() {
+        assert_eq!(days_in_month(2024, 13), 0);
+    }
+
+    #[test]
+    fn test_parse_date_ymd() {
+        let dt = parse_date("2024-01-15").unwrap();
+        assert_eq!(dt.format("%Y-%m-%d").to_string(), "2024-01-15");
+    }
+
+    #[test]
+    fn test_parse_date_with_time() {
+        let dt = parse_date("2024-01-15 10:30:00").unwrap();
+        assert_eq!(dt.format("%Y-%m-%d %H:%M:%S").to_string(), "2024-01-15 10:30:00");
+    }
+
+    #[test]
+    fn test_parse_date_rfc3339() {
+        let dt = parse_date("2024-01-15T10:30:00").unwrap();
+        assert_eq!(dt.format("%Y-%m-%d %H:%M:%S").to_string(), "2024-01-15 10:30:00");
+    }
+
+    #[test]
+    fn test_parse_date_invalid() {
+        assert!(parse_date("not-a-date").is_none());
+        assert!(parse_date("").is_none());
+    }
+}
+
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     let date_str = matches.get_one::<String>("date").unwrap();
     let birth =

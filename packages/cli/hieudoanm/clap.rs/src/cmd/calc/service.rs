@@ -174,4 +174,49 @@ mod tests {
         assert!((h - 540_000.0).abs() < 0.001);
         assert!((u - 360_000.0).abs() < 0.001);
     }
+
+    #[test]
+    fn test_calc_payment_standard() {
+        let pmt = calc_payment(200_000.0, 6.0, 30.0);
+        assert!((pmt - 1199.10).abs() < 0.01);
+    }
+
+    #[test]
+    fn test_calc_payment_zero_rate() {
+        let pmt = calc_payment(120_000.0, 0.0, 30.0);
+        assert!((pmt - 333.33).abs() < 0.01);
+    }
+
+    #[test]
+    fn test_calc_payment_short_term() {
+        let pmt = calc_payment(10_000.0, 5.0, 1.0);
+        assert!((pmt - 856.07).abs() < 0.01);
+    }
+
+    #[test]
+    fn test_sum_insurance_rate() {
+        let rate = sum_insurance_rate();
+        assert!((rate - 0.105).abs() < 0.001);
+    }
+
+    #[test]
+    fn test_calculate_tax_full_no_insurance() {
+        let result = calculate_tax_full(20_000_000.0, 0, false);
+        assert!((result.gross - 20_000_000.0).abs() < 0.001);
+        assert!((result.insurance_social - 0.0).abs() < 0.001);
+    }
+
+    #[test]
+    fn test_calculate_tax_full_with_insurance() {
+        let result = calculate_tax_full(20_000_000.0, 1, true);
+        assert!((result.insurance_social - 1_600_000.0).abs() < 0.001);
+        assert!((result.insurance_health - 300_000.0).abs() < 0.001);
+        assert!((result.insurance_unemployment - 200_000.0).abs() < 0.001);
+    }
+
+    #[test]
+    fn test_solve_gross_from_net() {
+        let gross = solve_gross_from_net(15_000_000.0, 0, false);
+        assert!(gross > 15_000_000.0);
+    }
 }

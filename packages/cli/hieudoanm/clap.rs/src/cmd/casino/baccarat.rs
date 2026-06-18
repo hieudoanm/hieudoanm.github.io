@@ -2,6 +2,110 @@ use clap::ArgMatches;
 
 use super::{deal_card, new_shuffled_deck, Card};
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use crate::cmd::casino::Card;
+
+    #[test]
+    fn test_baccarat_value_number() {
+        let c = Card { rank: 5, suit: 0 };
+        assert_eq!(baccarat_value(&c), 5);
+    }
+
+    #[test]
+    fn test_baccarat_value_face_card() {
+        let c = Card { rank: 10, suit: 1 };
+        assert_eq!(baccarat_value(&c), 0);
+        let c = Card { rank: 13, suit: 2 };
+        assert_eq!(baccarat_value(&c), 0);
+    }
+
+    #[test]
+    fn test_baccarat_value_ace() {
+        let c = Card { rank: 14, suit: 3 };
+        assert_eq!(baccarat_value(&c), 0);
+    }
+
+    #[test]
+    fn test_baccarat_sum() {
+        let cards = vec![
+            Card { rank: 2, suit: 0 },
+            Card { rank: 3, suit: 1 },
+        ];
+        assert_eq!(baccarat_sum(&cards), 5);
+    }
+
+    #[test]
+    fn test_baccarat_sum_wraps() {
+        let cards = vec![
+            Card { rank: 7, suit: 0 },
+            Card { rank: 8, suit: 1 },
+        ];
+        assert_eq!(baccarat_sum(&cards), 5);
+    }
+
+    #[test]
+    fn test_baccarat_sum_all_face() {
+        let cards = vec![
+            Card { rank: 10, suit: 0 },
+            Card { rank: 11, suit: 1 },
+            Card { rank: 12, suit: 2 },
+        ];
+        assert_eq!(baccarat_sum(&cards), 0);
+    }
+
+    #[test]
+    fn test_should_draw_true() {
+        let cards = vec![Card { rank: 0, suit: 0 }, Card { rank: 0, suit: 1 }];
+        assert!(should_draw(&cards));
+    }
+
+    #[test]
+    fn test_should_draw_false() {
+        let cards = vec![Card { rank: 10, suit: 0 }, Card { rank: 6, suit: 1 }];
+        assert!(!should_draw(&cards));
+    }
+
+    #[test]
+    fn test_draw_for_third() {
+        assert!(draw_for_third(&vec![Card { rank: 0, suit: 0 }, Card { rank: 0, suit: 1 }], 0));
+        assert!(!draw_for_third(&vec![Card { rank: 10, suit: 0 }, Card { rank: 7, suit: 1 }], 8));
+    }
+
+    #[test]
+    fn test_card_display_number() {
+        let c = Card { rank: 7, suit: 0 };
+        assert_eq!(card_display(&c), "7c");
+    }
+
+    #[test]
+    fn test_card_display_face() {
+        assert_eq!(card_display(&Card { rank: 11, suit: 1 }), "Jd");
+        assert_eq!(card_display(&Card { rank: 12, suit: 2 }), "Qh");
+        assert_eq!(card_display(&Card { rank: 13, suit: 3 }), "Ks");
+    }
+
+    #[test]
+    fn test_card_display_ace() {
+        assert_eq!(card_display(&Card { rank: 14, suit: 0 }), "Ac");
+    }
+
+    #[test]
+    fn test_hand_display() {
+        let cards = vec![
+            Card { rank: 14, suit: 0 },
+            Card { rank: 13, suit: 1 },
+        ];
+        assert_eq!(hand_display(&cards), "Ac Kd");
+    }
+
+    #[test]
+    fn test_hand_display_empty() {
+        assert_eq!(hand_display(&[]), "");
+    }
+}
+
 fn baccarat_value(c: &Card) -> u8 {
     if c.rank >= 10 {
         0

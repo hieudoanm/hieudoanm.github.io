@@ -104,3 +104,43 @@ pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
 
     Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+    use super::super::service::calc_payment;
+
+    #[test]
+    fn test_loan_payment() {
+        let payment = calc_payment(10_000.0, 5.0, 5.0);
+        assert!((payment - 188.71).abs() < 0.01);
+    }
+
+    #[test]
+    fn test_loan_amortization_first_month() {
+        let principal = 10_000.0;
+        let rate = 5.0;
+        let years = 5.0;
+        let payment = calc_payment(principal, rate, years);
+        let r = rate / 100.0 / 12.0;
+        let interest = principal * r;
+        let principal_paid = payment - interest;
+        let balance = principal - principal_paid;
+        assert!(interest > 0.0);
+        assert!(principal_paid > 0.0);
+        assert!(balance < principal);
+        assert!((payment - (interest + principal_paid)).abs() < 0.01);
+    }
+
+    #[test]
+    fn test_loan_total_cost() {
+        let principal = 10_000.0;
+        let rate = 5.0;
+        let years = 5.0;
+        let payment = calc_payment(principal, rate, years);
+        let n = (years * 12.0) as i32;
+        let total_payment = payment * n as f64;
+        let total_interest = total_payment - principal;
+        assert!(total_interest > 0.0);
+        assert!(total_interest < principal); // reasonable: interest < principal for 5% over 5yr
+    }
+}

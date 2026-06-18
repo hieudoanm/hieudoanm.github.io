@@ -47,6 +47,35 @@ fn parse_date_string(s: &str) -> Option<NaiveDateTime> {
     None
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_parse_date_string_ymd() {
+        let dt = parse_date_string("2024-01-15").unwrap();
+        assert_eq!(dt.format("%Y-%m-%d").to_string(), "2024-01-15");
+    }
+
+    #[test]
+    fn test_parse_date_string_with_time() {
+        let dt = parse_date_string("2024-01-15 10:30:00").unwrap();
+        assert_eq!(dt.format("%Y-%m-%d %H:%M:%S").to_string(), "2024-01-15 10:30:00");
+    }
+
+    #[test]
+    fn test_parse_date_string_rfc3339() {
+        let dt = parse_date_string("2024-01-15T10:30:00").unwrap();
+        assert_eq!(dt.format("%Y-%m-%d %H:%M:%S").to_string(), "2024-01-15 10:30:00");
+    }
+
+    #[test]
+    fn test_parse_date_string_invalid() {
+        assert!(parse_date_string("").is_none());
+        assert!(parse_date_string("not-a-date").is_none());
+    }
+}
+
 fn parse_relative(s: &str) -> Option<DateTime<Utc>> {
     let s = s.trim();
     let now = Utc::now();

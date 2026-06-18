@@ -25,6 +25,35 @@ fn parse_datetime(s: &str) -> Option<NaiveDateTime> {
     None
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_parse_datetime_date_only() {
+        let dt = parse_datetime("2024-12-25").unwrap();
+        assert_eq!(dt.format("%Y-%m-%d").to_string(), "2024-12-25");
+    }
+
+    #[test]
+    fn test_parse_datetime_with_space() {
+        let dt = parse_datetime("2024-12-25 14:30:00").unwrap();
+        assert_eq!(dt.format("%Y-%m-%d %H:%M:%S").to_string(), "2024-12-25 14:30:00");
+    }
+
+    #[test]
+    fn test_parse_datetime_rfc3339() {
+        let dt = parse_datetime("2024-12-25T14:30:00").unwrap();
+        assert_eq!(dt.format("%Y-%m-%d %H:%M:%S").to_string(), "2024-12-25 14:30:00");
+    }
+
+    #[test]
+    fn test_parse_datetime_invalid() {
+        assert!(parse_datetime("").is_none());
+        assert!(parse_datetime("not-a-date").is_none());
+    }
+}
+
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     let time_str = matches.get_one::<String>("time").unwrap();
     let target = parse_datetime(time_str)

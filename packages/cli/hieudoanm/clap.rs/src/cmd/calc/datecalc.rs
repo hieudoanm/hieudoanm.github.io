@@ -124,3 +124,59 @@ pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
 
     Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_date_diff() {
+        let date1 = NaiveDate::parse_from_str("2024-01-01", "%Y-%m-%d").unwrap();
+        let date2 = NaiveDate::parse_from_str("2024-12-31", "%Y-%m-%d").unwrap();
+        let days = (date2 - date1).num_days();
+        assert_eq!(days, 365);
+    }
+
+    #[test]
+    fn test_date_diff_same_day() {
+        let date1 = NaiveDate::parse_from_str("2024-06-15", "%Y-%m-%d").unwrap();
+        let date2 = NaiveDate::parse_from_str("2024-06-15", "%Y-%m-%d").unwrap();
+        let days = (date2 - date1).num_days();
+        assert_eq!(days, 0);
+    }
+
+    #[test]
+    fn test_add_days() {
+        let base = NaiveDate::parse_from_str("2024-01-01", "%Y-%m-%d").unwrap();
+        let result = base + chrono::Duration::days(31);
+        assert_eq!(result.format("%Y-%m-%d").to_string(), "2024-02-01");
+    }
+
+    #[test]
+    fn test_add_months() {
+        let base = NaiveDate::parse_from_str("2024-01-15", "%Y-%m-%d").unwrap();
+        let months = 3i32;
+        let result = base.with_month(1 + months as u32).unwrap();
+        assert_eq!(result.format("%Y-%m-%d").to_string(), "2024-04-15");
+    }
+
+    #[test]
+    fn test_add_years() {
+        let base = NaiveDate::parse_from_str("2024-01-01", "%Y-%m-%d").unwrap();
+        let years = 5i32;
+        let result = base.with_year(base.year() + years).unwrap();
+        assert_eq!(result.format("%Y-%m-%d").to_string(), "2029-01-01");
+    }
+
+    #[test]
+    fn test_weekday_format() {
+        let date = NaiveDate::parse_from_str("2024-02-05", "%Y-%m-%d").unwrap();
+        assert_eq!(date.format("%A").to_string(), "Monday");
+    }
+
+    #[test]
+    fn test_parse_invalid_date() {
+        let result = NaiveDate::parse_from_str("not-a-date", "%Y-%m-%d");
+        assert!(result.is_err());
+    }
+}

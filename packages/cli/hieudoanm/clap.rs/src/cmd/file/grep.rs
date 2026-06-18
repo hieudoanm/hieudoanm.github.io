@@ -41,6 +41,85 @@ fn glob_to_regex(pattern: &str) -> String {
     format!("^{result}$")
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_compile_search_pattern_literal() {
+        let re = compile_search_pattern("hello", false, false).unwrap();
+        assert!(re.is_match("hello"));
+        assert!(!re.is_match("world"));
+    }
+
+    #[test]
+    fn test_compile_search_pattern_fixed() {
+        let re = compile_search_pattern("he.lo", true, false).unwrap();
+        assert!(re.is_match("he.lo"));
+        assert!(!re.is_match("hello"));
+    }
+
+    #[test]
+    fn test_compile_search_pattern_ignore_case() {
+        let re = compile_search_pattern("hello", false, true).unwrap();
+        assert!(re.is_match("Hello"));
+        assert!(re.is_match("HELLO"));
+    }
+
+    #[test]
+    fn test_compile_search_pattern_invalid_regex() {
+        let result = compile_search_pattern(r"[invalid", false, false);
+        assert!(result.is_err());
+    }
+
+    #[test]
+    fn test_compile_include_pattern_empty() {
+        assert!(compile_include_pattern("").is_none());
+    }
+
+    #[test]
+    fn test_compile_include_pattern_basic() {
+        let re = compile_include_pattern("*.rs").unwrap();
+        assert!(re.is_match("main.rs"));
+        assert!(!re.is_match("main.go"));
+    }
+
+    #[test]
+    fn test_compile_include_pattern_no_extension() {
+        let re = compile_include_pattern("Dockerfile").unwrap();
+        assert!(re.is_match("Dockerfile"));
+        assert!(!re.is_match("dockerfile"));
+    }
+
+    #[test]
+    fn test_glob_to_regex_simple() {
+        let re = regex::Regex::new(&glob_to_regex("*.rs")).unwrap();
+        assert!(re.is_match("main.rs"));
+        assert!(!re.is_match("main.go"));
+    }
+
+    #[test]
+    fn test_glob_to_regex_question_mark() {
+        let re = regex::Regex::new(&glob_to_regex("file.???")).unwrap();
+        assert!(re.is_match("file.rsv"));
+        assert!(!re.is_match("file.rs"));
+    }
+
+    #[test]
+    fn test_glob_to_regex_literal_dot() {
+        let re = regex::Regex::new(&glob_to_regex("min.js")).unwrap();
+        assert!(re.is_match("min.js"));
+        assert!(!re.is_match("minXjs"));
+    }
+
+    #[test]
+    fn test_glob_to_regex_no_wildcards() {
+        let re = regex::Regex::new(&glob_to_regex("exact.txt")).unwrap();
+        assert!(re.is_match("exact.txt"));
+        assert!(!re.is_match("exact"));
+    }
+}
+
 fn search_file(
     re: &Regex,
     path: &str,

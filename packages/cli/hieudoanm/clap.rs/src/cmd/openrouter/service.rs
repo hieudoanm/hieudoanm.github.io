@@ -45,6 +45,97 @@ pub fn fetch_free_models() -> Result<Vec<Model>> {
     Ok(free)
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_is_free_zero() {
+        let p = Pricing { prompt: "0".into(), completion: "0".into(), request: "0".into() };
+        assert!(is_free(&p));
+    }
+
+    #[test]
+    fn test_is_free_empty() {
+        let p = Pricing { prompt: "".into(), completion: "".into(), request: "0".into() };
+        assert!(is_free(&p));
+    }
+
+    #[test]
+    fn test_is_free_not_free_prompt() {
+        let p = Pricing { prompt: "0.0001".into(), completion: "0".into(), request: "0".into() };
+        assert!(!is_free(&p));
+    }
+
+    #[test]
+    fn test_is_free_not_free_completion() {
+        let p = Pricing { prompt: "0".into(), completion: "0.0002".into(), request: "0".into() };
+        assert!(!is_free(&p));
+    }
+
+    #[test]
+    fn test_resolve_model_exact_match() {
+        let models = vec![
+            Model { id: "openai/gpt-4".into(), name: "GPT-4".into(), description: "".into(), context_length: 8192, pricing: Pricing { prompt: "0".into(), completion: "0".into(), request: "0".into() } },
+            Model { id: "openai/gpt-3.5-turbo".into(), name: "GPT-3.5 Turbo".into(), description: "".into(), context_length: 4096, pricing: Pricing { prompt: "0".into(), completion: "0".into(), request: "0".into() } },
+        ];
+        let result = resolve_model("openai/gpt-4", &models);
+        assert!(result.is_some());
+        assert_eq!(result.unwrap().id, "openai/gpt-4");
+    }
+
+    #[test]
+    fn test_resolve_model_exact_match_case_insensitive() {
+        let models = vec![
+            Model { id: "OpenAI/GPT-4".into(), name: "GPT-4".into(), description: "".into(), context_length: 8192, pricing: Pricing { prompt: "0".into(), completion: "0".into(), request: "0".into() } },
+        ];
+        let result = resolve_model("openai/gpt-4", &models);
+        assert!(result.is_some());
+    }
+
+    #[test]
+    fn test_resolve_model_with_free_suffix() {
+        let models = vec![
+            Model { id: "openai/gpt-4:free".into(), name: "GPT-4 Free".into(), description: "".into(), context_length: 8192, pricing: Pricing { prompt: "0".into(), completion: "0".into(), request: "0".into() } },
+        ];
+        let result = resolve_model("openai/gpt-4", &models);
+        assert!(result.is_some());
+        assert_eq!(result.unwrap().id, "openai/gpt-4:free");
+    }
+
+    #[test]
+    fn test_resolve_model_no_match() {
+        let models: Vec<Model> = vec![];
+        let result = resolve_model("nonexistent/model", &models);
+        assert!(result.is_none());
+    }
+
+    #[test]
+    fn test_extract_error_message_valid() {
+        let body = r#"{"error": {"message": "rate limit exceeded"}}"#;
+        assert_eq!(extract_error_message(body), "rate limit exceeded");
+    }
+
+    #[test]
+    fn test_extract_error_message_truncate() {
+        let long_msg = "a".repeat(100);
+        let body = format!(r#"{{"error": {{"message": "{}"}}}}"#, long_msg);
+        let result = extract_error_message(&body);
+        assert_eq!(result.len(), 80);
+        assert!(result.ends_with("..."));
+    }
+
+    #[test]
+    fn test_extract_error_message_invalid_json() {
+        assert_eq!(extract_error_message("not json"), "");
+    }
+
+    #[test]
+    fn test_extract_error_message_no_error_field() {
+        assert_eq!(extract_error_message(r#"{"foo": "bar"}"#), "");
+    }
+}
+
 fn is_free(p: &Pricing) -> bool {
     (p.prompt == "0" || p.prompt.is_empty()) && (p.completion == "0" || p.completion.is_empty())
 }

@@ -41,3 +41,73 @@ pub fn sieve(limit: i64) -> Vec<i64> {
         .map(|i| i as i64)
         .collect()
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_is_prime_negative() {
+        assert!(!is_prime(-5));
+    }
+
+    #[test]
+    fn test_is_prime_zero() {
+        assert!(!is_prime(0));
+    }
+
+    #[test]
+    fn test_is_prime_one() {
+        assert!(!is_prime(1));
+    }
+
+    #[test]
+    fn test_is_prime_two() {
+        assert!(is_prime(2));
+    }
+
+    #[test]
+    fn test_is_prime_three() {
+        assert!(is_prime(3));
+    }
+
+    #[test]
+    fn test_is_prime_four() {
+        assert!(!is_prime(4));
+    }
+
+    #[test]
+    fn test_is_prime_large_prime() {
+        assert!(is_prime(7919));
+    }
+
+    #[test]
+    fn test_is_prime_large_composite() {
+        assert!(!is_prime(7920));
+    }
+
+    #[test]
+    fn test_is_prime_even() {
+        assert!(!is_prime(100));
+    }
+
+    #[test]
+    fn test_sieve_empty() {
+        assert!(sieve(1).is_empty());
+    }
+
+    #[test]
+    fn test_sieve_up_to_10() {
+        assert_eq!(sieve(10), vec![2, 3, 5, 7]);
+    }
+
+    #[test]
+    fn test_sieve_up_to_30() {
+        assert_eq!(sieve(30), vec![2, 3, 5, 7, 11, 13, 17, 19, 23, 29]);
+    }
+
+    #[test]
+    fn test_sieve_up_to_2() {
+        assert_eq!(sieve(2), vec![2]);
+    }
+}

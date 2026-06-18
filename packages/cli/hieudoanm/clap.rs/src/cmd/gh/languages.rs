@@ -2,6 +2,73 @@ use std::collections::HashMap;
 
 use anyhow::Context;
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_generate_languages_svg_single() {
+        let mut langs = HashMap::new();
+        langs.insert("Rust".into(), 1000i64);
+        let svg = generate_languages_svg(&langs);
+        assert!(svg.contains("<svg"));
+        assert!(svg.contains("Rust"));
+        assert!(svg.contains("100.0%"));
+        assert!(svg.contains("</svg>"));
+    }
+
+    #[test]
+    fn test_generate_languages_svg_multiple() {
+        let mut langs = HashMap::new();
+        langs.insert("Rust".into(), 3000i64);
+        langs.insert("JavaScript".into(), 1000i64);
+        let svg = generate_languages_svg(&langs);
+        assert!(svg.contains("Rust"));
+        assert!(svg.contains("JavaScript"));
+        assert!(svg.contains("75.0%"));
+        assert!(svg.contains("25.0%"));
+    }
+
+    #[test]
+    fn test_generate_languages_svg_empty() {
+        let langs = HashMap::new();
+        let svg = generate_languages_svg(&langs);
+        assert!(svg.contains("<svg"));
+        assert!(svg.contains("</svg>"));
+    }
+
+    #[test]
+    fn test_generate_languages_svg_sorts_by_bytes_descending() {
+        let mut langs = HashMap::new();
+        langs.insert("Python".into(), 500i64);
+        langs.insert("Rust".into(), 3000i64);
+        let svg = generate_languages_svg(&langs);
+        let rust_pos = svg.find("Rust").unwrap();
+        let python_pos = svg.find("Python").unwrap();
+        assert!(rust_pos < python_pos);
+    }
+
+    #[test]
+    fn test_generate_languages_svg_invalid_color_falls_back() {
+        let mut langs = HashMap::new();
+        langs.insert("UnknownLangXYZ".into(), 100i64);
+        // No color entry for this language, should not crash
+        let svg = generate_languages_svg(&langs);
+        assert!(svg.contains("UnknownLangXYZ"));
+    }
+
+    #[test]
+    fn test_generate_languages_svg_tiny_bar() {
+        let mut langs = HashMap::new();
+        langs.insert("Rust".into(), 1i64);
+        langs.insert("JavaScript".into(), 999i64);
+        let svg = generate_languages_svg(&langs);
+        // Rust should still get at least 1px width
+        assert!(svg.contains("Rust"));
+        assert!(svg.contains("0.1%"));
+    }
+}
+
 fn generate_languages_svg(langs: &HashMap<String, i64>) -> String {
     let colors = super::colors::language_colors();
     let mut entries: Vec<(&String, &i64)> = langs.iter().collect();

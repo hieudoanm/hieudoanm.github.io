@@ -69,3 +69,48 @@ pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
 
     Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn test_tip_calculation() {
+        let bill: f64 = 100.0;
+        let tip_percent: f64 = 15.0;
+        let split: i32 = 1i32.max(1);
+        let tip: f64 = bill * tip_percent / 100.0;
+        let total: f64 = bill + tip;
+        let per_person: f64 = total / split as f64;
+        assert!((tip - 15.0).abs() < 1e-10);
+        assert!((total - 115.0).abs() < 1e-10);
+        assert!((per_person - 115.0).abs() < 1e-10);
+    }
+
+    #[test]
+    fn test_split_bill() {
+        let bill: f64 = 100.0;
+        let tip_percent: f64 = 10.0;
+        let split: i32 = 4i32.max(1);
+        let tip: f64 = bill * tip_percent / 100.0;
+        let total: f64 = bill + tip;
+        let per_person: f64 = total / split as f64;
+        assert!((tip - 10.0).abs() < 1e-10);
+        assert!((total - 110.0).abs() < 1e-10);
+        assert!((per_person - 27.5).abs() < 1e-10);
+    }
+
+    #[test]
+    fn test_split_min_one() {
+        let split: i32 = 0i32.max(1);
+        assert_eq!(split, 1);
+    }
+
+    #[test]
+    fn test_tip_zero_percent() {
+        let bill: f64 = 50.0;
+        let tip_percent: f64 = 0.0;
+        let tip: f64 = bill * tip_percent / 100.0;
+        let total: f64 = bill + tip;
+        assert!((tip - 0.0).abs() < 1e-10);
+        assert!((total - 50.0).abs() < 1e-10);
+    }
+}

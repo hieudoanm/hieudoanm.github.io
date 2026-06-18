@@ -1,5 +1,177 @@
 use anyhow::Context;
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_get_map_with_object() {
+        let v = serde_json::json!({"key": "val"});
+        assert!(get_map(&v).is_some());
+    }
+
+    #[test]
+    fn test_get_map_with_non_object() {
+        let v = serde_json::json!("string");
+        assert!(get_map(&v).is_none());
+    }
+
+    #[test]
+    fn test_get_slice_with_array() {
+        let v = serde_json::json!([1, 2, 3]);
+        assert!(get_slice(&v).is_some());
+    }
+
+    #[test]
+    fn test_get_slice_with_non_array() {
+        let v = serde_json::json!("string");
+        assert!(get_slice(&v).is_none());
+    }
+
+    #[test]
+    fn test_get_string_with_str() {
+        let v = serde_json::json!("hello");
+        assert_eq!(get_string(&v), Some("hello"));
+    }
+
+    #[test]
+    fn test_get_string_with_non_str() {
+        let v = serde_json::json!(42);
+        assert!(get_string(&v).is_none());
+    }
+
+    #[test]
+    fn test_schema_to_example_string() {
+        let schema = serde_json::json!({"type": "string"});
+        assert_eq!(schema_to_example(&schema), serde_json::json!("string"));
+    }
+
+    #[test]
+    fn test_schema_to_example_integer() {
+        let schema = serde_json::json!({"type": "integer"});
+        assert_eq!(schema_to_example(&schema), serde_json::json!(0));
+    }
+
+    #[test]
+    fn test_schema_to_example_boolean() {
+        let schema = serde_json::json!({"type": "boolean"});
+        assert_eq!(schema_to_example(&schema), serde_json::json!(true));
+    }
+
+    #[test]
+    fn test_schema_to_example_array() {
+        let schema = serde_json::json!({"type": "array", "items": {"type": "string"}});
+        let result = schema_to_example(&schema);
+        assert_eq!(result, serde_json::json!(["string"]));
+    }
+
+    #[test]
+    fn test_schema_to_example_object() {
+        let schema = serde_json::json!({
+            "type": "object",
+            "properties": {
+                "name": {"type": "string"},
+                "age": {"type": "integer"}
+            }
+        });
+        let result = schema_to_example(&schema);
+        assert_eq!(result, serde_json::json!({"name": "string", "age": 0}));
+    }
+
+    #[test]
+    fn test_schema_to_example_with_example() {
+        let schema = serde_json::json!({"type": "string", "example": "hello"});
+        assert_eq!(schema_to_example(&schema), serde_json::json!("hello"));
+    }
+
+    #[test]
+    fn test_schema_to_example_with_default() {
+        let schema = serde_json::json!({"type": "string", "default": "world"});
+        assert_eq!(schema_to_example(&schema), serde_json::json!("world"));
+    }
+
+    #[test]
+    fn test_schema_to_example_enum() {
+        let schema = serde_json::json!({"type": "string", "enum": ["a", "b", "c"]});
+        assert_eq!(schema_to_example(&schema), serde_json::json!("a"));
+    }
+
+    #[test]
+    fn test_schema_to_example_null() {
+        let schema = serde_json::json!({"type": "null"});
+        assert_eq!(schema_to_example(&schema), serde_json::json!(null));
+    }
+
+    #[test]
+    fn test_convert_to_postman_basic() {
+        let spec = serde_json::json!({
+            "openapi": "3.0.0",
+            "info": {"title": "My API", "version": "1.0.0"},
+            "paths": {
+                "/users": {
+                    "get": {
+                        "summary": "List users",
+                        "responses": {"200": {"description": "OK"}}
+                    }
+                }
+            }
+        });
+        let result = convert_to_postman(&spec).unwrap();
+        assert_eq!(result["info"]["name"], "My API");
+    }
+
+    #[test]
+    fn test_convert_to_postman_with_servers() {
+        let spec = serde_json::json!({
+            "openapi": "3.0.0",
+            "info": {"title": "API", "version": "1.0.0"},
+            "servers": [{"url": "https://api.example.com"}],
+            "paths": {
+                "/users": {
+                    "get": {
+                        "tags": ["users"],
+                        "responses": {"200": {"description": "OK"}}
+                    }
+                }
+            }
+        });
+        let result = convert_to_postman(&spec).unwrap();
+        let item = &result["item"][0]["item"][0];
+        assert_eq!(item["request"]["url"]["raw"], "https://api.example.com/users");
+    }
+
+    #[test]
+    fn test_convert_to_postman_with_request_body() {
+        let spec = serde_json::json!({
+            "openapi": "3.0.0",
+            "info": {"title": "API", "version": "1.0.0"},
+            "paths": {
+                "/users": {
+                    "post": {
+                        "requestBody": {
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "type": "object",
+                                        "properties": {
+                                            "name": {"type": "string"}
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "responses": {"201": {"description": "Created"}}
+                    }
+                }
+            }
+        });
+        let result = convert_to_postman(&spec).unwrap();
+        let req = &result["item"][0]["item"][0]["request"];
+        assert!(req["body"].is_object());
+        assert_eq!(req["body"]["mode"], "raw");
+    }
+}
+
 #[allow(clippy::upper_case_acronyms)]
 pub type JSON = serde_json::Value;
 

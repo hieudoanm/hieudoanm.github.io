@@ -143,3 +143,61 @@ pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
 
     Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_compounding_periods_yearly() {
+        assert!((compounding_periods("yearly") - 1.0).abs() < 1e-10);
+    }
+
+    #[test]
+    fn test_compounding_periods_quarterly() {
+        assert!((compounding_periods("quarterly") - 4.0).abs() < 1e-10);
+    }
+
+    #[test]
+    fn test_compounding_periods_monthly() {
+        assert!((compounding_periods("monthly") - 12.0).abs() < 1e-10);
+    }
+
+    #[test]
+    fn test_compounding_periods_daily() {
+        assert!((compounding_periods("daily") - 365.0).abs() < 1e-10);
+    }
+
+    #[test]
+    fn test_compounding_periods_unknown_defaults_to_yearly() {
+        assert!((compounding_periods("weekly") - 1.0).abs() < 1e-10);
+    }
+
+    #[test]
+    fn test_future_value_no_contributions() {
+        let (fv, deposits) = future_value(1000.0, 10.0, 5.0, 0.0, 1.0);
+        assert!((deposits - 1000.0).abs() < 0.01);
+        assert!((fv - 1610.51).abs() < 0.01);
+    }
+
+    #[test]
+    fn test_future_value_with_contributions() {
+        let (fv, deposits) = future_value(1000.0, 10.0, 5.0, 1200.0, 12.0);
+        assert!((deposits - 73000.0).abs() < 0.01);
+        assert!(fv > deposits);
+    }
+
+    #[test]
+    fn test_future_value_zero_rate_with_contributions() {
+        let (fv, deposits) = future_value(1000.0, 0.0, 5.0, 0.0, 12.0);
+        assert!((deposits - 1000.0).abs() < 0.01);
+        assert!((fv - 1000.0).abs() < 0.01);
+    }
+
+    #[test]
+    fn test_future_value_zero_rate_no_contributions() {
+        let (fv, deposits) = future_value(1000.0, 0.0, 5.0, 0.0, 1.0);
+        assert!((deposits - 1000.0).abs() < 0.01);
+        assert!((fv - 1000.0).abs() < 0.01);
+    }
+}

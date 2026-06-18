@@ -175,6 +175,83 @@ fn hmac_sha512(key: &[u8], data: &[u8]) -> Vec<u8> {
     outer.finalize().to_vec()
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_hex_encode_empty() {
+        assert_eq!(hex_encode(b""), "");
+    }
+
+    #[test]
+    fn test_hex_encode() {
+        assert_eq!(hex_encode(b"hello"), "68656c6c6f");
+    }
+
+    #[test]
+    fn test_compute_hash_md5() {
+        let h = compute_hash(b"hello", "md5").unwrap();
+        assert_eq!(h, "5d41402abc4b2a76b9719d911017c592");
+    }
+
+    #[test]
+    fn test_compute_hash_sha1() {
+        let h = compute_hash(b"hello", "sha1").unwrap();
+        assert_eq!(h, "aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d");
+    }
+
+    #[test]
+    fn test_compute_hash_sha256() {
+        let h = compute_hash(b"hello", "sha256").unwrap();
+        assert_eq!(h, "2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824");
+    }
+
+    #[test]
+    fn test_compute_hash_sha512() {
+        let h = compute_hash(b"hello", "sha512").unwrap();
+        assert_eq!(h, "9b71d224bd62f3785d96d46ad3ea3d73319bfbc2890caadae2dff72519673ca72323c3d99ba5c11d7c7acc6e14b8c5da0c4663475c2e5c3adef46f73bcdec043");
+    }
+
+    #[test]
+    fn test_compute_hash_unknown_algorithm() {
+        let result = compute_hash(b"hello", "unknown");
+        assert!(result.is_err());
+    }
+
+    #[test]
+    fn test_hmac_sha256() {
+        let result = hmac_sha256(b"key", b"data");
+        assert_eq!(hex_encode(&result), "5031fe3d989c6d1537a013fa6e739da23463fdaec3b70137d828e36ace221bd0");
+    }
+
+    #[test]
+    fn test_hmac_sha1() {
+        let result = hmac_sha1(b"key", b"data");
+        assert_eq!(hex_encode(&result), "104152c5bfdca07bc633eebd46199f0255c9f49d");
+    }
+
+    #[test]
+    fn test_hmac_md5() {
+        let result = hmac_md5(b"key", b"data");
+        assert_eq!(hex_encode(&result), "9d5c73ef85594d34ec4438b7c97e51d8");
+    }
+
+    #[test]
+    fn test_hmac_sha512() {
+        let result = hmac_sha512(b"key", b"data");
+        assert_eq!(hex_encode(&result), "3c5953a18f7303ec653ba170ae334fafa08e3846f2efe317b87efce82376253cb52a8c31ddcde5a3a2eee183c2b34cb91f85e64ddbc325f7692b199473579c58");
+    }
+
+    #[test]
+    fn test_hmac_long_key_sha256() {
+        let long_key = b"this is a very long key that exceeds the block size of 64 bytes for sha256, so it must be hashed first before being used as the HMAC key";
+        let result = hmac_sha256(long_key, b"test data");
+        let hash = hex_encode(&result);
+        assert_eq!(hash.len(), 64);
+    }
+}
+
 pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
     let algorithm = matches
         .get_one::<String>("algorithm")

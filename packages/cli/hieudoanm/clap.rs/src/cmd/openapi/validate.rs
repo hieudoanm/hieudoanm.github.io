@@ -3,6 +3,115 @@ use std::collections::BTreeSet;
 use anyhow::Context;
 use regex::Regex;
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_validate_spec_missing_openapi() {
+        let spec = serde_json::json!({
+            "info": {"title": "Test", "version": "1.0.0"},
+            "paths": {"/test": {"get": {"responses": {"200": {"description": "OK"}}}}}
+        });
+        let issues = validate_spec(&spec);
+        assert!(issues.iter().any(|i| i.contains("openapi")));
+    }
+
+    #[test]
+    fn test_validate_spec_missing_info() {
+        let spec = serde_json::json!({
+            "openapi": "3.0.0",
+            "paths": {"/test": {"get": {"responses": {"200": {"description": "OK"}}}}}
+        });
+        let issues = validate_spec(&spec);
+        assert!(issues.iter().any(|i| i.contains("info")));
+    }
+
+    #[test]
+    fn test_validate_spec_missing_paths() {
+        let spec = serde_json::json!({
+            "openapi": "3.0.0",
+            "info": {"title": "Test", "version": "1.0.0"}
+        });
+        let issues = validate_spec(&spec);
+        assert!(issues.iter().any(|i| i.contains("paths")));
+    }
+
+    #[test]
+    fn test_validate_spec_invalid_semver() {
+        let spec = serde_json::json!({
+            "openapi": "3.0",
+            "info": {"title": "Test", "version": "1.0.0"},
+            "paths": {}
+        });
+        let issues = validate_spec(&spec);
+        assert!(issues.iter().any(|i| i.contains("semver")));
+    }
+
+    #[test]
+    fn test_validate_spec_valid() {
+        let spec = serde_json::json!({
+            "openapi": "3.0.0",
+            "info": {"title": "Test API", "version": "1.0.0"},
+            "paths": {"/users": {"get": {"responses": {"200": {"description": "OK"}}}}}
+        });
+        let issues = validate_spec(&spec);
+        assert_eq!(issues.len(), 0);
+    }
+
+    #[test]
+    fn test_validate_paths_invalid_method() {
+        let mut paths = serde_json::Map::new();
+        paths.insert("/test".into(), serde_json::json!({"invalid": {}}));
+        let issues = validate_paths(&paths);
+        assert!(issues.iter().any(|i| i.contains("invalid method")));
+    }
+
+    #[test]
+    fn test_validate_paths_missing_responses() {
+        let mut paths = serde_json::Map::new();
+        paths.insert("/test".into(), serde_json::json!({"get": {}}));
+        let issues = validate_paths(&paths);
+        assert!(issues.iter().any(|i| i.contains("missing responses")));
+    }
+
+    #[test]
+    fn test_validate_paths_duplicate_operation_id() {
+        let mut paths = serde_json::Map::new();
+        paths.insert("/a".into(), serde_json::json!({"get": {"operationId": "list", "responses": {"200": {"description": "OK"}}}}));
+        paths.insert("/b".into(), serde_json::json!({"get": {"operationId": "list", "responses": {"200": {"description": "OK"}}}}));
+        let issues = validate_paths(&paths);
+        assert!(issues.iter().any(|i| i.contains("duplicate operationId")));
+    }
+
+    #[test]
+    fn test_validate_paths_path_not_starting_with_slash() {
+        let mut paths = serde_json::Map::new();
+        paths.insert("test".into(), serde_json::json!({"get": {"responses": {"200": {"description": "OK"}}}}));
+        let issues = validate_paths(&paths);
+        assert!(issues.iter().any(|i| i.contains("should start with /")));
+    }
+
+    #[test]
+    fn test_validate_paths_extension_starts_with_x_are_skipped() {
+        let mut paths = serde_json::Map::new();
+        paths.insert("/test".into(), serde_json::json!({"x-custom": {}}));
+        let issues = validate_paths(&paths);
+        assert!(!issues.iter().any(|i| i.contains("invalid method")));
+    }
+
+    #[test]
+    fn test_validate_spec_empty_title() {
+        let spec = serde_json::json!({
+            "openapi": "3.0.0",
+            "info": {"title": "", "version": "1.0.0"},
+            "paths": {}
+        });
+        let issues = validate_spec(&spec);
+        assert!(issues.iter().any(|i| i.contains("title")));
+    }
+}
+
 fn validate_spec(spec: &super::service::JSON) -> Vec<String> {
     let mut issues = Vec::new();
     let semver_re = Regex::new(r"^\d+\.\d+\.\d+$").unwrap();

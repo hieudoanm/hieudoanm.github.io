@@ -22,6 +22,52 @@ pub async fn run(_matches: &clap::ArgMatches) -> anyhow::Result<()> {
     Ok(())
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_morse_map_contains_all_letters() {
+        let map = morse_map();
+        for ch in 'a'..='z' {
+            assert!(map.contains_key(&ch), "missing morse for {ch}");
+        }
+    }
+
+    #[test]
+    fn test_morse_map_contains_digits() {
+        let map = morse_map();
+        for ch in '0'..='9' {
+            assert!(map.contains_key(&ch), "missing morse for {ch}");
+        }
+    }
+
+    #[test]
+    fn test_morse_map_contains_punctuation() {
+        let map = morse_map();
+        assert!(map.contains_key(&'.'));
+        assert!(map.contains_key(&','));
+        assert!(map.contains_key(&'!'));
+        assert!(map.contains_key(&'?'));
+    }
+
+    #[test]
+    fn test_morse_map_known_values() {
+        let map = morse_map();
+        assert_eq!(map.get(&'a'), Some(&".-"));
+        assert_eq!(map.get(&'s'), Some(&"..."));
+        assert_eq!(map.get(&'o'), Some(&"---"));
+        assert_eq!(map.get(&'1'), Some(&".----"));
+    }
+
+    #[test]
+    fn test_morse_map_lowercase_only() {
+        let map = morse_map();
+        assert!(map.contains_key(&'a'));
+        assert!(!map.contains_key(&'A'));
+    }
+}
+
 fn morse_map() -> HashMap<char, &'static str> {
     let mut m = HashMap::new();
     m.insert('a', ".-");

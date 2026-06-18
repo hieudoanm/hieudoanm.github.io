@@ -269,6 +269,201 @@ impl CaptionTrack {
     }
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_select_track_manual_preferred() {
+        let tracks = vec![
+            CaptionTrack {
+                base_url: Some("https://example.com/en.vtt".into()),
+                baseUrl: None,
+                language_code: Some("en".into()),
+                languageCode: None,
+                kind: Some("asr".into()),
+                name: None,
+                is_translatable: None,
+                isTranslatable: None,
+            },
+            CaptionTrack {
+                base_url: Some("https://example.com/en-manual.vtt".into()),
+                baseUrl: None,
+                language_code: Some("en".into()),
+                languageCode: None,
+                kind: Some("standard".into()),
+                name: None,
+                is_translatable: None,
+                isTranslatable: None,
+            },
+        ];
+        let result = select_track(&tracks, "en");
+        assert_eq!(result.unwrap().base_url(), "https://example.com/en-manual.vtt");
+    }
+
+    #[test]
+    fn test_select_track_falls_back_to_asr() {
+        let tracks = vec![
+            CaptionTrack {
+                base_url: Some("https://example.com/en-asr.vtt".into()),
+                baseUrl: None,
+                language_code: Some("en".into()),
+                languageCode: None,
+                kind: Some("asr".into()),
+                name: None,
+                is_translatable: None,
+                isTranslatable: None,
+            },
+        ];
+        let result = select_track(&tracks, "en");
+        assert!(result.is_some());
+        assert_eq!(result.unwrap().kind(), "asr");
+    }
+
+    #[test]
+    fn test_select_track_no_match() {
+        let tracks = vec![
+            CaptionTrack {
+                base_url: Some("https://example.com/fr.vtt".into()),
+                baseUrl: None,
+                language_code: Some("fr".into()),
+                languageCode: None,
+                kind: Some("standard".into()),
+                name: None,
+                is_translatable: None,
+                isTranslatable: None,
+            },
+        ];
+        assert!(select_track(&tracks, "de").is_none());
+    }
+
+    #[test]
+    fn test_available_langs() {
+        let tracks = vec![
+            CaptionTrack {
+                base_url: None, baseUrl: None,
+                language_code: Some("en".into()), languageCode: None,
+                kind: None, name: None, is_translatable: None, isTranslatable: None,
+            },
+            CaptionTrack {
+                base_url: None, baseUrl: None,
+                language_code: Some("fr".into()), languageCode: None,
+                kind: None, name: None, is_translatable: None, isTranslatable: None,
+            },
+            CaptionTrack {
+                base_url: None, baseUrl: None,
+                language_code: Some("en".into()), languageCode: None,
+                kind: None, name: None, is_translatable: None, isTranslatable: None,
+            },
+        ];
+        let langs = available_langs(&tracks);
+        assert_eq!(langs, "en, fr");
+    }
+
+    #[test]
+    fn test_caption_track_base_url() {
+        let t = CaptionTrack {
+            base_url: Some("https://example.com/vtt".into()),
+            baseUrl: None,
+            language_code: None, languageCode: None,
+            kind: None, name: None, is_translatable: None, isTranslatable: None,
+        };
+        assert_eq!(t.base_url(), "https://example.com/vtt");
+    }
+
+    #[test]
+    fn test_caption_track_language_code() {
+        let t = CaptionTrack {
+            base_url: None, baseUrl: None,
+            language_code: None,
+            languageCode: Some("fr".into()),
+            kind: None, name: None, is_translatable: None, isTranslatable: None,
+        };
+        assert_eq!(t.language_code(), "fr");
+    }
+
+    #[test]
+    fn test_parse_caption_tracks_empty_json() {
+        let result = parse_caption_tracks(r#"{"captions":null}"#);
+        assert!(result.is_ok());
+        assert!(result.unwrap().is_empty());
+    }
+
+    #[test]
+    fn test_parse_caption_tracks_invalid_json() {
+        let result = parse_caption_tracks("not json");
+        assert!(result.is_err());
+    }
+
+    #[test]
+    fn test_parse_caption_tracks_with_tracks() {
+        let json = r#"{
+            "captions": {
+                "playerCaptionsTracklistRenderer": {
+                    "captionTracks": [
+                        {
+                            "baseUrl": "https://example.com/en.vtt?lang=en",
+                            "languageCode": "en",
+                            "kind": "standard",
+                            "name": {"simpleText": "English"}
+                        }
+                    ]
+                }
+            }
+        }"#;
+        let result = parse_caption_tracks(json).unwrap();
+        assert_eq!(result.len(), 1);
+        assert_eq!(result[0].language_code(), "en");
+    }
+
+    #[test]
+    fn test_parse_timed_text_empty() {
+        let result = parse_timed_text("<timedtext></timedtext>");
+        assert!(result.is_ok());
+        assert!(result.unwrap().is_empty());
+    }
+
+    #[test]
+    fn test_parse_timed_text_with_entries() {
+        let xml = r#"<?xml version="1.0" encoding="utf-8"?>
+<timedtext>
+  <body>
+    <p>
+      <t>0</t>
+      <d>5000</d>
+      Hello world
+    </p>
+    <p>
+      <t>5000</t>
+      <d>3000</d>
+      How are you?
+    </p>
+  </body>
+</timedtext>"#;
+        let lines = parse_timed_text(xml).unwrap();
+        assert_eq!(lines.len(), 2);
+        assert_eq!(lines[0].start, 0.0);
+        assert_eq!(lines[0].duration, 5.0);
+        assert_eq!(lines[0].text, "Hello world");
+        assert_eq!(lines[1].start, 5.0);
+        assert_eq!(lines[1].duration, 3.0);
+        assert_eq!(lines[1].text, "How are you?");
+    }
+
+    #[test]
+    fn test_parse_timed_text_skips_empty() {
+        let xml = r#"<timedtext><body><p t="0" d="1000"> </p></body></timedtext>"#;
+        let lines = parse_timed_text(xml).unwrap();
+        assert_eq!(lines.len(), 0);
+    }
+
+    #[test]
+    fn test_parse_timed_text_invalid_xml() {
+        let result = parse_timed_text("not xml");
+        assert!(result.is_err());
+    }
+}
+
 fn parse_caption_tracks(json_str: &str) -> Result<Vec<CaptionTrack>> {
     let resp: CaptionsResponse = serde_json::from_str(json_str)?;
 

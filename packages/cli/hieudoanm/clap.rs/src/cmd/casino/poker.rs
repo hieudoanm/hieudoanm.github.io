@@ -3,6 +3,135 @@ use rand::seq::SliceRandom;
 
 use super::{format_cards, Card};
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    fn c(rank: u8, suit: u8) -> Card { Card { rank, suit } }
+
+    #[test]
+    fn test_is_straight_normal() {
+        let hand = [c(5, 0), c(6, 1), c(7, 2), c(8, 3), c(9, 0)];
+        let (is, high) = is_straight(&hand);
+        assert!(is);
+        assert_eq!(high, 9);
+    }
+
+    #[test]
+    fn test_is_straight_wheel() {
+        let hand = [c(14, 0), c(2, 1), c(3, 2), c(4, 3), c(5, 0)];
+        let (is, high) = is_straight(&hand);
+        assert!(is);
+        assert_eq!(high, 5);
+    }
+
+    #[test]
+    fn test_is_straight_false() {
+        let hand = [c(2, 0), c(4, 1), c(6, 2), c(8, 3), c(10, 0)];
+        let (is, _) = is_straight(&hand);
+        assert!(!is);
+    }
+
+    #[test]
+    fn test_eval5_royal_flush() {
+        let hand = [c(10, 0), c(11, 0), c(12, 0), c(13, 0), c(14, 0)];
+        assert_eq!(eval5(&hand).rank, HandRank::StraightFlush);
+    }
+
+    #[test]
+    fn test_eval5_straight_flush() {
+        let hand = [c(5, 1), c(6, 1), c(7, 1), c(8, 1), c(9, 1)];
+        assert_eq!(eval5(&hand).rank, HandRank::StraightFlush);
+    }
+
+    #[test]
+    fn test_eval5_four_of_a_kind() {
+        let hand = [c(7, 0), c(7, 1), c(7, 2), c(7, 3), c(9, 0)];
+        assert_eq!(eval5(&hand).rank, HandRank::FourOfAKind);
+    }
+
+    #[test]
+    fn test_eval5_full_house() {
+        let hand = [c(10, 0), c(10, 1), c(10, 2), c(5, 0), c(5, 1)];
+        assert_eq!(eval5(&hand).rank, HandRank::FullHouse);
+    }
+
+    #[test]
+    fn test_eval5_flush() {
+        let hand = [c(2, 0), c(5, 0), c(9, 0), c(11, 0), c(14, 0)];
+        assert_eq!(eval5(&hand).rank, HandRank::Flush);
+    }
+
+    #[test]
+    fn test_eval5_straight() {
+        let hand = [c(3, 0), c(4, 1), c(5, 2), c(6, 3), c(7, 0)];
+        assert_eq!(eval5(&hand).rank, HandRank::Straight);
+    }
+
+    #[test]
+    fn test_eval5_three_of_a_kind() {
+        let hand = [c(8, 0), c(8, 1), c(8, 2), c(2, 0), c(5, 1)];
+        assert_eq!(eval5(&hand).rank, HandRank::ThreeOfAKind);
+    }
+
+    #[test]
+    fn test_eval5_two_pair() {
+        let hand = [c(9, 0), c(9, 1), c(4, 0), c(4, 1), c(2, 0)];
+        assert_eq!(eval5(&hand).rank, HandRank::TwoPair);
+    }
+
+    #[test]
+    fn test_eval5_one_pair() {
+        let hand = [c(6, 0), c(6, 1), c(3, 0), c(5, 1), c(9, 2)];
+        assert_eq!(eval5(&hand).rank, HandRank::OnePair);
+    }
+
+    #[test]
+    fn test_eval5_high_card() {
+        let hand = [c(2, 0), c(5, 1), c(9, 2), c(11, 3), c(14, 0)];
+        assert_eq!(eval5(&hand).rank, HandRank::HighCard);
+    }
+
+    #[test]
+    fn test_best_hand_selects_best_from_seven() {
+        let seven = vec![
+            c(14, 0), c(14, 1), // pocket aces
+            c(2, 0), c(5, 1), c(9, 2), c(11, 3), c(3, 0), // board
+        ];
+        let result = best_hand(&seven);
+        assert_eq!(result.rank, HandRank::OnePair);
+    }
+
+    #[test]
+    fn test_new_poker_deck_52() {
+        let deck = new_poker_deck();
+        assert_eq!(deck.len(), 52);
+    }
+
+    #[test]
+    fn test_new_poker_deck_all_ranks() {
+        let deck = new_poker_deck();
+        let ranks: std::collections::HashSet<u8> = deck.iter().map(|c| c.rank).collect();
+        assert_eq!(ranks.len(), 13);
+        for r in 2..=14 {
+            assert!(ranks.contains(&r));
+        }
+    }
+
+    #[test]
+    fn test_remove_cards() {
+        let deck = vec![c(2, 0), c(3, 1), c(4, 2), c(5, 3)];
+        let removed = remove_cards(&deck, &[c(3, 1), c(5, 3)]);
+        assert_eq!(removed, vec![c(2, 0), c(4, 2)]);
+    }
+
+    #[test]
+    fn test_sum_high_cards() {
+        let hand = [c(14, 0), c(13, 1), c(12, 2), c(11, 3), c(10, 0)];
+        assert_eq!(sum_high_cards(&hand), 1413121110);
+    }
+}
+
 #[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord)]
 enum HandRank {
     HighCard,

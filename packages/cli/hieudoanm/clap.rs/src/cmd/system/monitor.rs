@@ -42,6 +42,53 @@ fn format_duration(d: Duration) -> String {
     parts.join(" ")
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use std::time::Duration;
+
+    #[test]
+    fn test_format_duration_seconds() {
+        assert_eq!(format_duration(Duration::from_secs(30)), "0m");
+        assert_eq!(format_duration(Duration::from_secs(59)), "0m");
+    }
+
+    #[test]
+    fn test_format_duration_minutes() {
+        assert_eq!(format_duration(Duration::from_secs(60)), "1m");
+        assert_eq!(format_duration(Duration::from_secs(120)), "2m");
+        assert_eq!(format_duration(Duration::from_secs(3600 - 1)), "59m");
+    }
+
+    #[test]
+    fn test_format_duration_hours() {
+        assert_eq!(format_duration(Duration::from_secs(3600)), "1h 0m");
+        assert_eq!(format_duration(Duration::from_secs(3660)), "1h 1m");
+        assert_eq!(
+            format_duration(Duration::from_secs(86399)),
+            "23h 59m"
+        );
+    }
+
+    #[test]
+    fn test_format_duration_days() {
+        assert_eq!(format_duration(Duration::from_secs(86400)), "1d 0m");
+        assert_eq!(
+            format_duration(Duration::from_secs(90000)),
+            "1d 1h 0m"
+        );
+        assert_eq!(
+            format_duration(Duration::from_secs(172800)),
+            "2d 0m"
+        );
+    }
+
+    #[test]
+    fn test_format_duration_zero() {
+        assert_eq!(format_duration(Duration::from_secs(0)), "0m");
+    }
+}
+
 fn run_monitor(watch_secs: u64, top_n: usize) -> anyhow::Result<()> {
     use sysinfo::System;
     loop {

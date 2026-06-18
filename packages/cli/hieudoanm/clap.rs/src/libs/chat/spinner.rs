@@ -17,3 +17,42 @@ impl Spinner {
         FRAMES[self.frame]
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_spinner_new() {
+        let s = Spinner::new();
+        assert_eq!(s.frame, 0);
+    }
+
+    #[test]
+    fn test_spinner_tick() {
+        let mut s = Spinner::new();
+        s.tick();
+        assert_eq!(s.frame, 1);
+    }
+
+    #[test]
+    fn test_spinner_current_initial() {
+        let s = Spinner::new();
+        assert_eq!(s.current(), FRAMES[0]);
+    }
+
+    #[test]
+    fn test_spinner_tick_wraps_around() {
+        let mut s = Spinner { frame: FRAMES.len() - 1 };
+        s.tick();
+        assert_eq!(s.frame, 0);
+    }
+
+    #[test]
+    fn test_spinner_all_frames() {
+        for i in 0..FRAMES.len() {
+            let s = Spinner { frame: i };
+            assert_eq!(s.current(), FRAMES[i]);
+        }
+    }
+}

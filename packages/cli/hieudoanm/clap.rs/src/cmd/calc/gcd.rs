@@ -54,3 +54,43 @@ pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
 
     Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_gcd_positive() {
+        assert_eq!(gcd(12, 8), 4);
+    }
+
+    #[test]
+    fn test_gcd_coprime() {
+        assert_eq!(gcd(7, 13), 1);
+    }
+
+    #[test]
+    fn test_gcd_same_number() {
+        assert_eq!(gcd(10, 10), 10);
+    }
+
+    #[test]
+    fn test_gcd_one_zero() {
+        assert_eq!(gcd(0, 5), 5);
+    }
+
+    #[test]
+    fn test_gcd_both_zero() {
+        assert_eq!(gcd(0, 0), 0);
+    }
+
+    #[test]
+    fn test_gcd_negative() {
+        assert_eq!(gcd(-12, 8), 4);
+    }
+
+    #[test]
+    fn test_gcd_large_numbers() {
+        assert_eq!(gcd(123456, 7890), 6);
+    }
+}

@@ -104,6 +104,104 @@ fn plural_s(n: usize) -> &'static str {
     }
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_plural_s_singular() {
+        assert_eq!(plural_s(1), "");
+    }
+
+    #[test]
+    fn test_plural_s_plural() {
+        assert_eq!(plural_s(0), "s");
+        assert_eq!(plural_s(2), "s");
+        assert_eq!(plural_s(100), "s");
+    }
+
+    #[test]
+    fn test_perform_edit_basic_replace() {
+        let (result, count) = perform_edit("hello world", "world", "there", false, 0);
+        assert_eq!(result, "hello there");
+        assert_eq!(count, 1);
+    }
+
+    #[test]
+    fn test_perform_edit_no_match() {
+        let (result, count) = perform_edit("hello world", "xyz", "abc", false, 0);
+        assert_eq!(result, "hello world");
+        assert_eq!(count, 0);
+    }
+
+    #[test]
+    fn test_perform_edit_multiple_occurrences() {
+        let (result, count) = perform_edit("a a a", "a", "b", false, 0);
+        assert_eq!(result, "b b b");
+        assert_eq!(count, 3);
+    }
+
+    #[test]
+    fn test_perform_edit_with_count_limit() {
+        let (result, count) = perform_edit("a a a", "a", "b", false, 2);
+        assert_eq!(result, "b b a");
+        assert_eq!(count, 2);
+    }
+
+    #[test]
+    fn test_perform_edit_regex() {
+        let (result, count) = perform_edit("hello 123 world 456", r"\d+", "NUM", true, 0);
+        assert_eq!(result, "hello NUM world NUM");
+        assert_eq!(count, 2);
+    }
+
+    #[test]
+    fn test_perform_edit_regex_with_count() {
+        let (result, count) = perform_edit("a1 b2 c3", r"\d", "X", true, 2);
+        assert_eq!(result, "aX bX c3");
+        assert_eq!(count, 2);
+    }
+
+    #[test]
+    fn test_perform_edit_invalid_regex() {
+        let (result, count) = perform_edit("hello", r"[invalid", "", true, 0);
+        assert_eq!(result, "hello");
+        assert_eq!(count, 0);
+    }
+
+    #[test]
+    fn test_perform_edit_regex_no_match() {
+        let (result, count) = perform_edit("hello", r"\d+", "NUM", true, 0);
+        assert_eq!(result, "hello");
+        assert_eq!(count, 0);
+    }
+
+    #[test]
+    fn test_build_diff_identical() {
+        let diff = build_diff("hello\nworld", "hello\nworld");
+        assert!(diff.is_empty());
+    }
+
+    #[test]
+    fn test_build_diff_added_line() {
+        let diff = build_diff("hello", "hello\nworld");
+        assert!(diff.contains("+ world"));
+    }
+
+    #[test]
+    fn test_build_diff_removed_line() {
+        let diff = build_diff("hello\nworld", "hello");
+        assert!(diff.contains("- world"));
+    }
+
+    #[test]
+    fn test_build_diff_changed_line() {
+        let diff = build_diff("hello", "there");
+        assert!(diff.contains("- hello"));
+        assert!(diff.contains("+ there"));
+    }
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("edit")
         .about("Find and replace text in a file")

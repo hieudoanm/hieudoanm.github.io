@@ -204,6 +204,68 @@ fn run_decode(matches: &ArgMatches) -> anyhow::Result<()> {
     Ok(())
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_base64url_decode() {
+        let decoded = base64url_decode("aGVsbG8").unwrap();
+        assert_eq!(String::from_utf8(decoded).unwrap(), "hello");
+    }
+
+    #[test]
+    fn test_base64url_decode_with_padding() {
+        let decoded = base64url_decode("aGVsbG8=").unwrap();
+        assert_eq!(String::from_utf8(decoded).unwrap(), "hello");
+    }
+
+    #[test]
+    fn test_base64url_encode() {
+        let encoded = base64url_encode(b"hello");
+        assert_eq!(encoded, "aGVsbG8");
+    }
+
+    #[test]
+    fn test_base64url_encode_special_chars() {
+        let encoded = base64url_encode(b"\xff\xfb\x00");
+        assert_eq!(encoded, "__sA");
+    }
+
+    #[test]
+    fn test_base64url_roundtrip() {
+        let original = b"test data with \x00 and \xff";
+        let encoded = base64url_encode(original);
+        let decoded = base64url_decode(&encoded).unwrap();
+        assert_eq!(decoded, original);
+    }
+
+    #[test]
+    fn test_hmac_sha256_sign() {
+        let result = hmac_sha256_sign(b"key", b"data");
+        assert_eq!(result.len(), 32);
+    }
+
+    #[test]
+    fn test_hmac_sha384_sign() {
+        let result = hmac_sha384_sign(b"key", b"data");
+        assert_eq!(result.len(), 48);
+    }
+
+    #[test]
+    fn test_hmac_sha512_sign() {
+        let result = hmac_sha512_sign(b"key", b"data");
+        assert_eq!(result.len(), 64);
+    }
+
+    #[test]
+    fn test_hmac_long_key_sha256() {
+        let long_key = b"this is a very long key that exceeds the block size of 64 bytes for sha256";
+        let result = hmac_sha256_sign(long_key, b"test data");
+        assert_eq!(result.len(), 32);
+    }
+}
+
 pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
     match matches.subcommand() {
         Some(("encode", m)) => run_encode(m),

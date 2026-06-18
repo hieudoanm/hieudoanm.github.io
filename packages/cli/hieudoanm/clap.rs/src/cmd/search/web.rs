@@ -179,3 +179,100 @@ fn clean_html(s: &str) -> String {
 
     s.trim().to_string()
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_clean_html_removes_tags() {
+        assert_eq!(clean_html("<b>hello</b>"), "hello");
+        assert_eq!(clean_html("<p>text</p>"), "text");
+    }
+
+    #[test]
+    fn test_clean_html_entities() {
+        assert_eq!(clean_html("&amp;"), "&");
+        assert_eq!(clean_html("&lt;"), "<");
+        assert_eq!(clean_html("&gt;"), ">");
+        assert_eq!(clean_html("&quot;"), "\"");
+        assert_eq!(clean_html("&apos;"), "'");
+        assert_eq!(clean_html("&nbsp;"), "");
+    }
+
+    #[test]
+    fn test_clean_html_numeric_entity() {
+        assert_eq!(clean_html("&#38;"), "&");
+    }
+
+    #[test]
+    fn test_clean_html_mixed() {
+        let input = "<p>hello &amp; goodbye</p>";
+        assert_eq!(clean_html(input), "hello & goodbye");
+    }
+
+    #[test]
+    fn test_clean_html_trims() {
+        assert_eq!(clean_html("  hello  "), "hello");
+    }
+
+    #[test]
+    fn test_parse_duck_duck_go_results_empty() {
+        let results = parse_duck_duck_go_results("", 5);
+        assert!(results.is_empty());
+    }
+
+    #[test]
+    fn test_parse_duck_duck_go_results_no_match() {
+        let html = "<html><body>no results here</body></html>";
+        let results = parse_duck_duck_go_results(html, 5);
+        assert!(results.is_empty());
+    }
+
+    #[test]
+    fn test_parse_duck_duck_go_results_with_matches() {
+        let html = r#"
+            <a class="result-link" href="https://example.com">Example</a>
+            <td class="result-snippet">A sample site</td>
+        "#;
+        let results = parse_duck_duck_go_results(html, 5);
+        assert_eq!(results.len(), 1);
+        assert_eq!(results[0].title, "Example");
+        assert_eq!(results[0].url, "https://example.com");
+        assert_eq!(results[0].snippet, "A sample site");
+    }
+
+    #[test]
+    fn test_parse_duck_duck_go_results_max_results() {
+        let html = r#"
+            <a class="result-link" href="https://a.com">A</a>
+            <td class="result-snippet">Snippet A</td>
+            <a class="result-link" href="https://b.com">B</a>
+            <td class="result-snippet">Snippet B</td>
+            <a class="result-link" href="https://c.com">C</a>
+            <td class="result-snippet">Snippet C</td>
+        "#;
+        let results = parse_duck_duck_go_results(html, 2);
+        assert_eq!(results.len(), 2);
+    }
+
+    #[test]
+    fn test_parse_duck_duck_go_results_protocol_relative() {
+        let html = r#"
+            <a class="result-link" href="//example.com">Example</a>
+            <td class="result-snippet">Snippet</td>
+        "#;
+        let results = parse_duck_duck_go_results(html, 5);
+        assert_eq!(results[0].url, "https://example.com");
+    }
+
+    #[test]
+    fn test_parse_duck_duck_go_results_missing_protocol() {
+        let html = r#"
+            <a class="result-link" href="example.com">Example</a>
+            <td class="result-snippet">Snippet</td>
+        "#;
+        let results = parse_duck_duck_go_results(html, 5);
+        assert_eq!(results[0].url, "https://example.com");
+    }
+}

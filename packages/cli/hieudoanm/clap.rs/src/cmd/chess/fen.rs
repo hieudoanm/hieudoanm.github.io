@@ -115,4 +115,32 @@ mod svg {
         svg += "</svg>";
         svg
     }
+
+    #[cfg(test)]
+    mod tests {
+        use super::*;
+
+        #[test]
+        fn test_render_board_svg_contains_board() {
+            let svg = render_board_svg("start");
+            assert!(svg.starts_with(r#"<svg xmlns="http://www.w3.org/2000/svg""#));
+            assert!(svg.ends_with("</svg>"));
+            assert!(svg.contains("width=\"480\""));
+            assert!(svg.contains("height=\"480\""));
+        }
+
+        #[test]
+        fn test_render_board_svg_has_64_squares() {
+            let svg = render_board_svg("");
+            let rects: Vec<&str> = svg.matches("<rect ").collect();
+            assert_eq!(rects.len(), 64);
+        }
+
+        #[test]
+        fn test_render_board_svg_alternating_colors() {
+            let svg = render_board_svg("");
+            assert!(svg.contains("#f0d9b5"));
+            assert!(svg.contains("#b58863"));
+        }
+    }
 }

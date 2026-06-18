@@ -164,3 +164,61 @@ fn glob_match(pattern: &str, name: &str) -> bool {
         .map(|re| re.is_match(name))
         .unwrap_or(false)
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use std::path::Path;
+
+    #[test]
+    fn test_is_hidden_dotfile() {
+        assert!(is_hidden(Path::new("/home/user/.hidden")));
+        assert!(is_hidden(Path::new(".git")));
+    }
+
+    #[test]
+    fn test_is_hidden_non_hidden() {
+        assert!(!is_hidden(Path::new("/home/user/file.txt")));
+        assert!(!is_hidden(Path::new("src/main.rs")));
+    }
+
+    #[test]
+    fn test_is_hidden_in_subdir() {
+        assert!(is_hidden(Path::new("/home/user/.hidden/file.txt")));
+        assert!(!is_hidden(Path::new("/home/user/docs/file.txt")));
+    }
+
+    #[test]
+    fn test_glob_match_exact() {
+        assert!(glob_match("foo.txt", "foo.txt"));
+        assert!(!glob_match("foo.txt", "bar.txt"));
+    }
+
+    #[test]
+    fn test_glob_match_wildcard() {
+        assert!(glob_match("*.rs", "main.rs"));
+        assert!(!glob_match("*.rs", "main.go"));
+    }
+
+    #[test]
+    fn test_glob_match_prefix() {
+        assert!(glob_match("test_*", "test_foo.rs"));
+        assert!(!glob_match("test_*", "foo_test.rs"));
+    }
+
+    #[test]
+    fn test_glob_match_question_mark() {
+        assert!(glob_match("file.?sv", "file.rsv"));
+        assert!(!glob_match("file.?sv", "file.rs"));
+    }
+
+    #[test]
+    fn test_glob_match_dot_in_pattern() {
+        assert!(glob_match("*.min.js", "app.min.js"));
+    }
+
+    #[test]
+    fn test_glob_match_invalid_pattern() {
+        assert!(!glob_match("[invalid", "test"));
+    }
+}

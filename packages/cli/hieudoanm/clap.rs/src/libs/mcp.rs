@@ -193,6 +193,71 @@ impl Server {
     }
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use serde_json::json;
+
+    #[test]
+    fn test_new_success_with_id() {
+        let resp = new_success(Some(json!(1)), json!({"ok": true}));
+        assert_eq!(resp.jsonrpc, "2.0");
+        assert_eq!(resp.id, Some(json!(1)));
+        assert_eq!(resp.result, Some(json!({"ok": true})));
+        assert!(resp.error.is_none());
+    }
+
+    #[test]
+    fn test_new_success_null_id() {
+        let resp = new_success(None, json!("done"));
+        assert_eq!(resp.jsonrpc, "2.0");
+        assert_eq!(resp.id, None);
+        assert_eq!(resp.result, Some(json!("done")));
+    }
+
+    #[test]
+    fn test_new_error_with_code_and_message() {
+        let resp = new_error(Some(json!(1)), -32601, "method not found");
+        assert_eq!(resp.jsonrpc, "2.0");
+        assert_eq!(resp.id, Some(json!(1)));
+        assert!(resp.result.is_none());
+        let err = resp.error.unwrap();
+        assert_eq!(err.code, -32601);
+        assert_eq!(err.message, "method not found");
+    }
+
+    #[test]
+    fn test_new_error_parse_error() {
+        let resp = new_error(None, -32700, "parse error");
+        assert_eq!(resp.jsonrpc, "2.0");
+        assert!(resp.id.is_none());
+        let err = resp.error.unwrap();
+        assert_eq!(err.code, -32700);
+    }
+
+    #[test]
+    fn test_new_tool_result_text() {
+        let val = new_tool_result_text("hello");
+        assert_eq!(val["content"][0]["type"], "text");
+        assert_eq!(val["content"][0]["text"], "hello");
+        assert!(val.get("isError").is_none());
+    }
+
+    #[test]
+    fn test_new_tool_result_error() {
+        let val = new_tool_result_error("error msg");
+        assert_eq!(val["content"][0]["type"], "text");
+        assert_eq!(val["content"][0]["text"], "error msg");
+        assert_eq!(val["isError"], true);
+    }
+
+    #[test]
+    fn test_server_new() {
+        let server = Server::new();
+        assert!(server.tools.is_empty());
+    }
+}
+
 fn new_success(id: Option<Value>, result: Value) -> Response {
     Response {
         jsonrpc: "2.0".to_string(),

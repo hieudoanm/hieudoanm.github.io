@@ -22,6 +22,42 @@ pub async fn run(_matches: &clap::ArgMatches) -> anyhow::Result<()> {
     Ok(())
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_braille_map_contains_all_letters() {
+        let map = braille_map();
+        for ch in 'a'..='z' {
+            assert!(map.contains_key(&ch), "missing braille for {ch}");
+        }
+    }
+
+    #[test]
+    fn test_braille_map_contains_punctuation() {
+        let map = braille_map();
+        assert!(map.contains_key(&'.'));
+        assert!(map.contains_key(&','));
+        assert!(map.contains_key(&'!'));
+        assert!(map.contains_key(&'?'));
+    }
+
+    #[test]
+    fn test_braille_map_known_value() {
+        let map = braille_map();
+        assert_eq!(map.get(&'a'), Some(&"⠁"));
+        assert_eq!(map.get(&'z'), Some(&"⠵"));
+    }
+
+    #[test]
+    fn test_braille_map_lowercase_only() {
+        let map = braille_map();
+        assert!(map.contains_key(&'a'));
+        assert!(!map.contains_key(&'A'));
+    }
+}
+
 fn braille_map() -> HashMap<char, &'static str> {
     let mut m = HashMap::new();
     m.insert('a', "⠁");

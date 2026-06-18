@@ -28,6 +28,26 @@ pub fn command() -> clap::Command {
         )
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_md5_hash_empty() {
+        assert_eq!(md5_hash(b""), "d41d8cd98f00b204e9800998ecf8427e");
+    }
+
+    #[test]
+    fn test_md5_hash_hello() {
+        assert_eq!(md5_hash(b"hello"), "5d41402abc4b2a76b9719d911017c592");
+    }
+
+    #[test]
+    fn test_md5_hash_binary() {
+        assert_eq!(md5_hash(&[0x00, 0xff]), "d07d34efac6328007ad67c7e0a985e00");
+    }
+}
+
 pub async fn run(m: &clap::ArgMatches, json: bool) -> anyhow::Result<()> {
     let algorithm = m.get_one::<String>("algorithm").unwrap();
     let file_path = m.get_one::<String>("file").unwrap();

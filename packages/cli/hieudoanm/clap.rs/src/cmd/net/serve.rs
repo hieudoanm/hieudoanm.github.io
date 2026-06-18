@@ -5,6 +5,73 @@ use std::path::Path;
 
 const INDEX_FILES: &[&str] = &["index.html", "index.htm"];
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_content_type_html() {
+        assert_eq!(content_type(Path::new("index.html")), "text/html");
+        assert_eq!(content_type(Path::new("page.htm")), "text/html");
+    }
+
+    #[test]
+    fn test_content_type_css() {
+        assert_eq!(content_type(Path::new("style.css")), "text/css");
+    }
+
+    #[test]
+    fn test_content_type_js() {
+        assert_eq!(content_type(Path::new("app.js")), "application/javascript");
+    }
+
+    #[test]
+    fn test_content_type_json() {
+        assert_eq!(content_type(Path::new("data.json")), "application/json");
+    }
+
+    #[test]
+    fn test_content_type_image() {
+        assert_eq!(content_type(Path::new("img.png")), "image/png");
+        assert_eq!(content_type(Path::new("photo.jpg")), "image/jpeg");
+        assert_eq!(content_type(Path::new("photo.jpeg")), "image/jpeg");
+        assert_eq!(content_type(Path::new("anim.gif")), "image/gif");
+        assert_eq!(content_type(Path::new("icon.svg")), "image/svg+xml");
+        assert_eq!(content_type(Path::new("favicon.ico")), "image/x-icon");
+    }
+
+    #[test]
+    fn test_content_type_text() {
+        assert_eq!(content_type(Path::new("readme.txt")), "text/plain");
+    }
+
+    #[test]
+    fn test_content_type_pdf() {
+        assert_eq!(content_type(Path::new("doc.pdf")), "application/pdf");
+    }
+
+    #[test]
+    fn test_content_type_zip() {
+        assert_eq!(content_type(Path::new("archive.zip")), "application/zip");
+    }
+
+    #[test]
+    fn test_content_type_xml() {
+        assert_eq!(content_type(Path::new("data.xml")), "application/xml");
+    }
+
+    #[test]
+    fn test_content_type_wasm() {
+        assert_eq!(content_type(Path::new("module.wasm")), "application/wasm");
+    }
+
+    #[test]
+    fn test_content_type_unknown() {
+        assert_eq!(content_type(Path::new("file.xyz")), "application/octet-stream");
+        assert_eq!(content_type(Path::new("Makefile")), "application/octet-stream");
+    }
+}
+
 fn content_type(path: &Path) -> &'static str {
     match path.extension().and_then(|e| e.to_str()) {
         Some("html" | "htm") => "text/html",

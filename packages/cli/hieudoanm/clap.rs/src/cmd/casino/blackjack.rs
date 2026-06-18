@@ -3,6 +3,111 @@ use rand::seq::SliceRandom;
 
 use super::{deal_card, new_shuffled_deck, Card};
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    fn c(rank: u8, suit: u8) -> Card { Card { rank, suit } }
+
+    #[test]
+    fn test_card_value_number() {
+        assert_eq!(card_value(&c(5, 0)), 5);
+        assert_eq!(card_value(&c(10, 1)), 10);
+    }
+
+    #[test]
+    fn test_card_value_face() {
+        assert_eq!(card_value(&c(11, 0)), 10);
+        assert_eq!(card_value(&c(12, 1)), 10);
+        assert_eq!(card_value(&c(13, 2)), 10);
+    }
+
+    #[test]
+    fn test_card_value_ace() {
+        assert_eq!(card_value(&c(14, 3)), 11);
+    }
+
+    #[test]
+    fn test_hand_value_soft() {
+        let hand = vec![c(14, 0), c(6, 1)];
+        assert_eq!(hand_value(&hand), 17);
+    }
+
+    #[test]
+    fn test_hand_value_hard() {
+        let hand = vec![c(14, 0), c(10, 1), c(5, 2)];
+        assert_eq!(hand_value(&hand), 16);
+    }
+
+    #[test]
+    fn test_hand_value_multiple_aces() {
+        let hand = vec![c(14, 0), c(14, 1)];
+        assert_eq!(hand_value(&hand), 12);
+    }
+
+    #[test]
+    fn test_hand_value_bust() {
+        let hand = vec![c(10, 0), c(10, 1), c(5, 2)];
+        assert_eq!(hand_value(&hand), 25);
+    }
+
+    #[test]
+    fn test_hi_lo_value_low() {
+        assert_eq!(hi_lo_value(&c(2, 0)), 1);
+        assert_eq!(hi_lo_value(&c(6, 1)), 1);
+    }
+
+    #[test]
+    fn test_hi_lo_value_neutral() {
+        assert_eq!(hi_lo_value(&c(7, 0)), 0);
+        assert_eq!(hi_lo_value(&c(8, 1)), 0);
+        assert_eq!(hi_lo_value(&c(9, 2)), 0);
+    }
+
+    #[test]
+    fn test_hi_lo_value_high() {
+        assert_eq!(hi_lo_value(&c(10, 0)), -1);
+        assert_eq!(hi_lo_value(&c(11, 1)), -1);
+        assert_eq!(hi_lo_value(&c(13, 2)), -1);
+        assert_eq!(hi_lo_value(&c(14, 3)), -1);
+    }
+
+    #[test]
+    fn test_card_display_number() {
+        assert_eq!(card_display(&c(7, 0)), "7c");
+        assert_eq!(card_display(&c(10, 3)), "10s");
+    }
+
+    #[test]
+    fn test_card_display_face() {
+        assert_eq!(card_display(&c(11, 1)), "Jd");
+        assert_eq!(card_display(&c(12, 2)), "Qh");
+        assert_eq!(card_display(&c(13, 3)), "Ks");
+    }
+
+    #[test]
+    fn test_card_display_ace() {
+        assert_eq!(card_display(&c(14, 0)), "Ac");
+    }
+
+    #[test]
+    fn test_hand_display_all_visible() {
+        let hand = vec![c(7, 0), c(8, 1)];
+        assert_eq!(hand_display(&hand, false), "7c 8d");
+    }
+
+    #[test]
+    fn test_hand_display_hide_first() {
+        let hand = vec![c(7, 0), c(8, 1)];
+        assert_eq!(hand_display(&hand, true), "?? 8d");
+    }
+
+    #[test]
+    fn test_hand_display_empty() {
+        assert_eq!(hand_display(&[], false), "");
+    }
+}
+
 fn card_value(c: &Card) -> u8 {
     match c.rank {
         11..=13 => 10,

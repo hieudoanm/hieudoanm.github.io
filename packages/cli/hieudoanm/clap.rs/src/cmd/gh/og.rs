@@ -19,6 +19,118 @@ struct Repo {
     owner: Owner,
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_escape_xml_ampersand() {
+        assert_eq!(escape_xml("a&b"), "a&amp;b");
+    }
+
+    #[test]
+    fn test_escape_xml_lt_gt() {
+        assert_eq!(escape_xml("<tag>"), "&lt;tag&gt;");
+    }
+
+    #[test]
+    fn test_escape_xml_quotes() {
+        assert_eq!(escape_xml("it's \"done\""), "it&apos;s &quot;done&quot;");
+    }
+
+    #[test]
+    fn test_escape_xml_no_special() {
+        assert_eq!(escape_xml("hello"), "hello");
+    }
+
+    #[test]
+    fn test_escape_xml_empty() {
+        assert_eq!(escape_xml(""), "");
+    }
+
+    #[test]
+    fn test_generate_og_svg_basic() {
+        let repo = Repo {
+            name: "test-repo".to_string(),
+            full_name: "user/test-repo".to_string(),
+            description: Some("A test repository".to_string()),
+            html_url: "https://github.com/user/test-repo".to_string(),
+            stargazers_count: 42,
+            forks_count: 7,
+            language: Some("Rust".to_string()),
+            owner: Owner {
+                login: "testuser".to_string(),
+                avatar_url: None,
+            },
+        };
+        let svg = generate_og_svg(&repo);
+        assert!(svg.contains("test-repo"));
+        assert!(svg.contains("testuser"));
+        assert!(svg.contains("A test repository"));
+        assert!(svg.contains("<svg"));
+        assert!(svg.contains("</svg>"));
+    }
+
+    #[test]
+    fn test_generate_og_svg_with_avatar() {
+        let repo = Repo {
+            name: "repo".to_string(),
+            full_name: "u/repo".to_string(),
+            description: None,
+            html_url: "https://github.com/u/repo".to_string(),
+            stargazers_count: 0,
+            forks_count: 0,
+            language: None,
+            owner: Owner {
+                login: "u".to_string(),
+                avatar_url: Some("https://avatars.example.com/img.png".to_string()),
+            },
+        };
+        let svg = generate_og_svg(&repo);
+        assert!(svg.contains("https://avatars.example.com/img.png"));
+        assert!(svg.contains("No description"));
+    }
+
+    #[test]
+    fn test_generate_og_svg_long_description_truncated() {
+        let long_desc = "x".repeat(200);
+        let repo = Repo {
+            name: "r".to_string(),
+            full_name: "u/r".to_string(),
+            description: Some(long_desc.clone()),
+            html_url: "https://github.com/u/r".to_string(),
+            stargazers_count: 100,
+            forks_count: 10,
+            language: Some("Go".to_string()),
+            owner: Owner {
+                login: "u".to_string(),
+                avatar_url: None,
+            },
+        };
+        let svg = generate_og_svg(&repo);
+        assert!(svg.contains("..."), "description should be truncated");
+    }
+
+    #[test]
+    fn test_generate_og_svg_no_language() {
+        let repo = Repo {
+            name: "nolang".to_string(),
+            full_name: "u/nolang".to_string(),
+            description: Some("desc".to_string()),
+            html_url: "https://github.com/u/nolang".to_string(),
+            stargazers_count: 1,
+            forks_count: 0,
+            language: None,
+            owner: Owner {
+                login: "u".to_string(),
+                avatar_url: None,
+            },
+        };
+        let svg = generate_og_svg(&repo);
+        assert!(svg.contains("nolang"));
+    }
+}
+
 fn escape_xml(s: &str) -> String {
     s.replace('&', "&amp;")
         .replace('<', "&lt;")

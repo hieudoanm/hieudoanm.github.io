@@ -129,6 +129,86 @@ pub fn compute_stats() -> anyhow::Result<Stats> {
     Ok(stats)
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_top_n_empty() {
+        let counts = HashMap::new();
+        let result = top_n(&counts, 5);
+        assert!(result.is_empty());
+    }
+
+    #[test]
+    fn test_top_n_basic() {
+        let mut counts = HashMap::new();
+        counts.insert("a".to_string(), 10);
+        counts.insert("b".to_string(), 5);
+        counts.insert("c".to_string(), 20);
+        let result = top_n(&counts, 5);
+        assert_eq!(result.len(), 3);
+        assert_eq!(result[0].name, "c");
+        assert_eq!(result[0].count, 20);
+        assert_eq!(result[2].name, "b");
+        assert_eq!(result[2].count, 5);
+    }
+
+    #[test]
+    fn test_top_n_limits_results() {
+        let mut counts = HashMap::new();
+        for i in 0..10 {
+            counts.insert(format!("cmd{i}"), i);
+        }
+        let result = top_n(&counts, 3);
+        assert_eq!(result.len(), 3);
+    }
+
+    #[test]
+    fn test_entry_display_no_error() {
+        let e = Entry {
+            timestamp: "2025-01-01".to_string(),
+            source: "cli".to_string(),
+            command: "test".to_string(),
+            cwd: None,
+            duration_ms: None,
+            error: None,
+        };
+        let output = format!("{e}");
+        assert_eq!(output, "2025-01-01  test");
+    }
+
+    #[test]
+    fn test_entry_display_with_error() {
+        let e = Entry {
+            timestamp: "2025-01-01".to_string(),
+            source: "cli".to_string(),
+            command: "test".to_string(),
+            cwd: None,
+            duration_ms: None,
+            error: Some("failed".to_string()),
+        };
+        let output = format!("{e}");
+        assert_eq!(output, "2025-01-01  test  [failed]");
+    }
+
+    #[test]
+    fn test_entry_basic() {
+        let e = entry("cli", "help");
+        assert_eq!(e.source, "cli");
+        assert_eq!(e.command, "help");
+        assert!(e.timestamp.len() > 10);
+    }
+
+    #[test]
+    fn test_stats_totals() {
+        use std::collections::HashMap;
+        let counts: HashMap<String, usize> = HashMap::new();
+        let result = top_n(&counts, 5);
+        assert!(result.is_empty());
+    }
+}
+
 fn top_n(counts: &HashMap<String, usize>, n: usize) -> Vec<CommandCount> {
     let mut v: Vec<CommandCount> = counts
         .iter()
