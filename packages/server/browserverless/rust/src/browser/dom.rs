@@ -12,7 +12,7 @@ use std::sync::atomic::{AtomicUsize, Ordering};
 
 thread_local! {
     static DOM_NODES: RefCell<HashMap<usize, Handle>> = RefCell::new(HashMap::new());
-    static PENDING_SCRIPTS: RefCell<Vec<String>> = RefCell::new(Vec::new());
+    static PENDING_SCRIPTS: RefCell<Vec<String>> = const { RefCell::new(Vec::new()) };
 }
 
 pub fn drain_pending_scripts() -> Vec<String> {
@@ -375,7 +375,7 @@ fn build_element_object(context: &mut Context, handle: Handle) -> JsResult<JsVal
     let node_type: i32 = match handle.data {
         NodeData::Element { .. } => 1,
         NodeData::Text { .. } => 3,
-        NodeData::Document { .. } => 9,
+        NodeData::Document => 9,
         _ => 1,
     };
 
@@ -865,7 +865,7 @@ pub fn setup_document(context: &mut Context, document_handle: Handle) -> JsResul
 fn get_document_root() -> Option<Handle> {
     DOM_NODES.with(|nodes| {
         for (_, h) in nodes.borrow().iter() {
-            if matches!(h.data, NodeData::Document { .. }) {
+            if matches!(h.data, NodeData::Document) {
                 return Some(h.clone());
             }
         }

@@ -89,7 +89,7 @@ fn setTimeout_impl(_this: &JsValue, args: &[JsValue], _context: &mut Context) ->
 }
 
 fn clearTimeout_impl(_this: &JsValue, args: &[JsValue], _context: &mut Context) -> JsResult<JsValue> {
-    if let Some(id) = args.get(0).and_then(|v| v.as_number()).map(|n| n as u32) {
+    if let Some(id) = args.first().and_then(|v| v.as_number()).map(|n| n as u32) {
         TIMER_CALLBACKS.with(|cbs| {
             if cbs.borrow_mut().remove(&id).is_some() {
                 ACTIVE_TIMEOUTS.fetch_sub(1, Ordering::Relaxed);
@@ -543,6 +543,54 @@ impl JsRuntime {
         Ok(())
     }
 
+    pub fn wait_for_selector(&mut self, selector: &str, timeout_ms: u64) -> Result<(), anyhow::Error> {
+        let deadline = std::time::Instant::now() + Duration::from_millis(timeout_ms);
+        let escaped = selector.replace('\\', "\\\\").replace('\'', "\\'");
+        let script = format!("document.querySelector('{}')", escaped);
+
+        loop {
+            self.process_events();
+            let _ = self.context.run_jobs();
+
+            let source = Source::from_bytes(script.as_bytes());
+            if let Ok(result) = self.context.eval(source) {
+                if !result.is_null_or_undefined() {
+                    eprintln!("  ✅ Selector matched: {}", selector);
+                    return Ok(());
+                }
+            }
+
+            if std::time::Instant::now() >= deadline {
+                anyhow::bail!("Timeout waiting for selector: {}", selector);
+            }
+
+            std::thread::sleep(Duration::from_millis(100));
+        }
+    }
+
+    pub fn wait_for_script(&mut self, script: &str, timeout_ms: u64) -> Result<(), anyhow::Error> {
+        let deadline = std::time::Instant::now() + Duration::from_millis(timeout_ms);
+
+        loop {
+            self.process_events();
+            let _ = self.context.run_jobs();
+
+            let source = Source::from_bytes(script.as_bytes());
+            if let Ok(result) = self.context.eval(source) {
+                if result.to_boolean() {
+                    eprintln!("  ✅ Script condition met");
+                    return Ok(());
+                }
+            }
+
+            if std::time::Instant::now() >= deadline {
+                anyhow::bail!("Timeout waiting for script condition");
+            }
+
+            std::thread::sleep(Duration::from_millis(100));
+        }
+    }
+
     fn process_events(&mut self) {
         let rx = event_channel().1.lock().unwrap();
         while let Ok(event) = rx.try_recv() {
@@ -757,6 +805,31 @@ if (typeof window.require === 'function') {
         } catch(e) {}
     }
 }
+// Process deferred-scripts JSON (normally done by processScripts on DOMContentLoaded)
+try {
+    var deferredEl = document.getElementById('deferred-scripts');
+    if (deferredEl) {
+        var raw = JSON.parse(deferredEl.textContent || '{}');
+        var scalar = JSON.parse(raw.scalar || '{}');
+        var head = document.head || document.getElementsByTagName('head')[0];
+        var keys = Object.keys(scalar);
+        for (var ki = 0; ki < keys.length; ki++) {
+            var tagName = keys[ki];
+            var items = scalar[tagName];
+            if (!Array.isArray(items)) continue;
+            for (var ii = 0; ii < items.length; ii++) {
+                var attrs = items[ii]['@attributes'];
+                if (!attrs) continue;
+                var el = document.createElement(tagName);
+                var attrKeys = Object.keys(attrs);
+                for (var ai = 0; ai < attrKeys.length; ai++) {
+                    el.setAttribute(attrKeys[ai], attrs[attrKeys[ai]]);
+                }
+                head.appendChild(el);
+            }
+        }
+    }
+} catch(e) {}
 // Fire DOMContentLoaded
 try {
     var event = new Event('DOMContentLoaded');

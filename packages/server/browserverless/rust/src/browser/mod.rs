@@ -13,11 +13,30 @@ use reqwest::Client;
 use std::cell::RefCell;
 use std::rc::Rc;
 
+pub struct WaitOptions {
+    pub wait_ms: u64,
+    pub wait_selector: Option<String>,
+    pub wait_script: Option<String>,
+    pub wait_timeout: u64,
+}
+
+impl Default for WaitOptions {
+    fn default() -> Self {
+        Self {
+            wait_ms: 0,
+            wait_selector: None,
+            wait_script: None,
+            wait_timeout: 30000,
+        }
+    }
+}
+
 pub struct Browser {
     client: Client,
     dom: RcDom,
     js_runtime: Option<JsRuntime>,
     page_url: String,
+    executed_src_urls: Vec<String>,
 }
 
 struct ScriptContent {
@@ -36,10 +55,11 @@ impl Browser {
             dom: RcDom::default(),
             js_runtime: None,
             page_url: url.to_string(),
+            executed_src_urls: Vec::new(),
         })
     }
 
-    pub async fn fetch(&mut self, url: &str, wait_ms: u64) -> Result<()> {
+    pub async fn fetch(&mut self, url: &str, opts: &WaitOptions) -> Result<()> {
         let response = self
             .client
             .get(url)
@@ -77,11 +97,31 @@ impl Browser {
         }
         self.drain_and_execute_pending_scripts()?;
 
+        eprintln!("  🌐 Executing deferred scripts...");
+        self.execute_deferred_scripts().await?;
+        self.drain_and_execute_pending_scripts()?;
+
         eprintln!("  ⏳ Waiting for idle...");
         if let Some(js) = &mut self.js_runtime {
-            js.idle(wait_ms)?;
+            js.idle(opts.wait_ms)?;
         }
         self.drain_and_execute_pending_scripts()?;
+
+        if let Some(sel) = &opts.wait_selector {
+            eprintln!("  🔍 Waiting for selector: {}", sel);
+            if let Some(js) = &mut self.js_runtime {
+                js.wait_for_selector(sel, opts.wait_timeout)?;
+            }
+            self.drain_and_execute_pending_scripts()?;
+        }
+        if let Some(script) = &opts.wait_script {
+            eprintln!("  📜 Waiting for script: {}", script);
+            if let Some(js) = &mut self.js_runtime {
+                js.wait_for_script(script, opts.wait_timeout)?;
+            }
+            self.drain_and_execute_pending_scripts()?;
+        }
+
         self.inject_og_media();
 
         Ok(())
@@ -105,6 +145,7 @@ impl Browser {
                 }
             }
             if let Some(src) = &script.external {
+                self.executed_src_urls.push(src.clone());
                 let code = self.fetch_external_script(src).await;
                 if let Some(js_runtime) = &mut self.js_runtime {
                     match code {
@@ -125,6 +166,49 @@ impl Browser {
         Ok(())
     }
 
+    async fn execute_deferred_scripts(&mut self) -> Result<()> {
+        let mut round = 1;
+        loop {
+            let scripts = self.collect_scripts(&self.dom.document);
+            let new_srcs: Vec<String> = scripts.iter().filter_map(|s| {
+                s.external.as_ref().and_then(|src| {
+                    if !self.executed_src_urls.contains(src) && !src.starts_with("data:") {
+                        Some(src.clone())
+                    } else {
+                        None
+                    }
+                })
+            }).collect();
+
+            if new_srcs.is_empty() {
+                break;
+            }
+
+            eprintln!("  🌐 Deferred round {}: {} new script(s)", round, new_srcs.len());
+            for src in &new_srcs {
+                self.executed_src_urls.push(src.clone());
+                let code = self.fetch_external_script(src).await;
+                if let Some(js_runtime) = &mut self.js_runtime {
+                    match code {
+                        Ok(code) => {
+                            eprintln!("  📥 Fetching & executing: {}", src);
+                            if let Err(e) = js_runtime.execute(&code) {
+                                eprintln!("  ❌ Deferred script error: {}", e);
+                            }
+                        }
+                        Err(e) => {
+                            eprintln!("  ⚠️  Deferred script failed to fetch '{}': {}", src, e);
+                        }
+                    }
+                }
+            }
+            self.drain_and_execute_pending_scripts()?;
+            round += 1;
+        }
+        eprintln!("  ✅ All deferred scripts executed");
+        Ok(())
+    }
+
     fn drain_and_execute_pending_scripts(&mut self) -> Result<()> {
         let scripts = drain_pending_scripts();
         if scripts.is_empty() {
@@ -135,7 +219,7 @@ impl Browser {
         for (i, script) in scripts.iter().enumerate() {
             if let Some(js_runtime) = &mut self.js_runtime {
                 eprint!("\r  ⏰ Pending script {}/{}", i + 1, total);
-                if let Err(e) = js_runtime.execute(&script) {
+                if let Err(e) = js_runtime.execute(script) {
                     eprintln!("\n  ❌ Pending script error: {}", e);
                 }
             }
