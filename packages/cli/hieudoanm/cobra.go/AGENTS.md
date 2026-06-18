@@ -1,12 +1,12 @@
 # hieudoanm CLI — AGENTS.md
 
-Go CLI toolbox using `github.com/spf13/cobra`. Root command is `hieudoanm`, wired in `cmd/root.go`.
+Go CLI toolbox using `github.com/spf13/cobra`. Root command is `hieudoanm`, wired in `src/cmd/root.go`.
 
 ## Project Structure
 
-- `cmd/{module}/` — Each top-level module is its own Go package with a `NewCommand()` function
-- `cmd/root.go` — Registers all modules as subcommands via `init()`
-- `libs/` — Internal shared libraries (`requests/`, `chat/`, `colors/`)
+- `src/cmd/{module}/` — Each top-level module is its own Go package with a `NewCommand()` function
+- `src/cmd/root.go` — Registers all modules as subcommands via `init()`
+- `src/libs/` — Internal shared libraries (`requests/`, `chat/`, `colors/`)
 
 ## Conventions
 
@@ -29,7 +29,7 @@ Suffix convention — type comes last:
 
 ### Imports
 
-- Use `requests.Get()` from `libs/requests/` for HTTP calls (handles retries, timeouts, headers)
+- Use `requests.Get()` from `src/libs/requests/` for HTTP calls (handles retries, timeouts, headers)
 
 ### Coding Style
 
@@ -42,13 +42,13 @@ Suffix convention — type comes last:
 
 Build: `go build ./...`
 Vet: `go vet ./...`
-Test all: `go test ./cmd/...`
-Test single: `go test ./cmd/{module}/`
+Test all: `go test ./src/cmd/...`
+Test single: `go test ./src/cmd/{module}/`
 Lint: `golangci-lint run`
 
 ## Modules
 
-25 modules registered in `cmd/root.go`. Key ones for AI agent use:
+25 modules registered in `src/cmd/root.go`. Key ones for AI agent use:
 
 - **file** — 13 subcommands: checksum, chmod, count, duplicates, edit, grep, head, read, size, stats, tail, type, write
 - **search** — 4 subcommands: files (glob find), text (content search), web (DuckDuckGo), code (symbol search for Go/TS/Python/Rust)
@@ -81,7 +81,7 @@ Lint: `golangci-lint run`
 - Each tool's JSON schema is auto-generated from cobra flag definitions. Flags appear as JSON properties; positional args go in `_args` array.
 - In-process execution: flags are set directly, positional args passed to `RunE`, stdout captured via pipe.
 - Protocol: JSON-RPC 2.0 over stdio (newline-delimited JSON)
-- Library: `libs/mcp/` — protocol types and server loop
+- Library: `src/libs/mcp/` — protocol types and server loop
 - Connect via any MCP client (Claude Code, Cursor, VS Code, etc.)
 - Configure in `.mcp.json`:
 ```json
@@ -111,4 +111,4 @@ Lint: `golangci-lint run`
 ### Test coverage
 
 - All 24 modules have per-file tests
-- Run `go test ./cmd/...` — all packages pass
+- Run `go test ./src/cmd/...` — all packages pass

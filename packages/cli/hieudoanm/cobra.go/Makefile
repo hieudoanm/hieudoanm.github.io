@@ -11,7 +11,7 @@ VERSION      := $(shell date +%Y.%m.%d.%H.%M.%S)
 COMMIT       := $(shell git rev-parse --short HEAD 2>/dev/null || echo "unknown")
 FULL_VERSION := $(VERSION)-$(COMMIT)
 LDFLAGS      := -ldflags="-s -w \
-	-X '$(OWNER)/cmd/version.V=$(FULL_VERSION)'"
+	-X '$(OWNER)/src/cmd/version.V=$(FULL_VERSION)'"
 
 ## clean: Remove build artifacts and coverage
 clean:
