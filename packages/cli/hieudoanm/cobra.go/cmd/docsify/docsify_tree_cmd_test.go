@@ -34,7 +34,7 @@ func TestLoadGitignore_noFile(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if ignore("anything", false) {
+	if ignore.ignore("anything", false) {
 		t.Error("expected no ignores when no .gitignore exists")
 	}
 }
@@ -68,7 +68,7 @@ dist
 		{"README.md", false, false},
 	}
 	for _, tc := range tests {
-		got := ignore(tc.path, tc.isDir)
+		got := ignore.ignore(tc.path, tc.isDir)
 		if got != tc.want {
 			t.Errorf("ignore(%q, isDir=%v) = %v, want %v", tc.path, tc.isDir, got, tc.want)
 		}
@@ -90,10 +90,10 @@ func TestLoadGitignore_negation(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	if !ignore("debug.log", false) {
+	if !ignore.ignore("debug.log", false) {
 		t.Error("debug.log should be ignored")
 	}
-	if ignore("important.log", false) {
+	if ignore.ignore("important.log", false) {
 		t.Error("important.log should not be ignored (negation)")
 	}
 }
@@ -112,10 +112,10 @@ func TestLoadGitignore_dirOnlyPattern(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	if !ignore("build", true) {
+	if !ignore.ignore("build", true) {
 		t.Error("build/ should ignore directories named build")
 	}
-	if ignore("build/output.txt", false) {
+	if ignore.ignore("build/output.txt", false) {
 		t.Error("build/ should not ignore files named build/output.txt (dirOnly)")
 	}
 }
@@ -136,10 +136,10 @@ node_modules
 		t.Fatal(err)
 	}
 
-	if !ignore("node_modules/pkg.js", false) {
+	if !ignore.ignore("node_modules/pkg.js", false) {
 		t.Error("node_modules should be ignored")
 	}
-	if ignore("src/main.go", false) {
+	if ignore.ignore("src/main.go", false) {
 		t.Error("src/main.go should not be ignored")
 	}
 }
