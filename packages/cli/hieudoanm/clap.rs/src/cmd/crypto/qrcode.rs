@@ -19,3 +19,14 @@ pub async fn run(_matches: &clap::ArgMatches) -> anyhow::Result<()> {
     println!("QR code saved to: {}", out_path.display());
     Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_command_definition() {
+        let cmd = command();
+        assert!(!cmd.get_name().is_empty());
+    }
+}

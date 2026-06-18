@@ -126,3 +126,14 @@ fn extract_pub(path: &str) -> anyhow::Result<()> {
     }
     Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_command_definition() {
+        let cmd = command();
+        assert!(!cmd.get_name().is_empty());
+    }
+}

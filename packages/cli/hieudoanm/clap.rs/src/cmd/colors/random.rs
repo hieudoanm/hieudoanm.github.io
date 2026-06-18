@@ -15,3 +15,14 @@ pub async fn run(_matches: &ArgMatches) -> anyhow::Result<()> {
     println!("HSL: ({h:.1}, {s:.1}%, {l:.1}%)");
     Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_command_definition() {
+        let cmd = command();
+        assert!(!cmd.get_name().is_empty());
+    }
+}

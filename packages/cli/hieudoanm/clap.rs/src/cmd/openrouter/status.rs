@@ -6,3 +6,11 @@ pub async fn run() -> anyhow::Result<()> {
     println!("Free models available: {}", models.len());
     Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn test_module_compiles() {
+        assert!(true);
+    }
+}

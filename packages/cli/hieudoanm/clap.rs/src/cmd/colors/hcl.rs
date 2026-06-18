@@ -15,3 +15,14 @@ pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
     println!("HCL({h:.1}, {c:.1}%, {l:.1}%)");
     Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_command_definition() {
+        let cmd = command();
+        assert!(!cmd.get_name().is_empty());
+    }
+}

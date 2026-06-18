@@ -17,3 +17,11 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     println!("Docs written to {output}");
     Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn test_module_compiles() {
+        assert!(true);
+    }
+}

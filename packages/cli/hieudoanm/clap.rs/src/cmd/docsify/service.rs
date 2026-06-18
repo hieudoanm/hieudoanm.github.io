@@ -943,3 +943,54 @@ pub fn write_graphml<W: std::io::Write>(g: &Graph, writer: W) -> Result<(), anyh
 
     Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_language_as_str() {
+        assert_eq!(Language::Go.as_str(), "go");
+        assert_eq!(Language::Rust.as_str(), "rust");
+        assert_eq!(Language::Unknown.as_str(), "unknown");
+    }
+
+    #[test]
+    fn test_is_exported() {
+        assert!(is_exported("Foo"));
+        assert!(!is_exported("foo"));
+        assert!(!is_exported(""));
+    }
+
+    #[test]
+    fn test_file_base_name() {
+        assert_eq!(file_base_name("/path/to/file.rs"), "file");
+        assert_eq!(file_base_name("main.rs"), "main");
+    }
+
+    #[test]
+    fn test_sanitize_id() {
+        let id = sanitize_id("file:src/main.rs");
+        assert!(!id.contains('/'));
+        assert!(!id.contains(':'));
+    }
+
+    #[test]
+    fn test_graph_new() {
+        let g = Graph::new();
+        assert_eq!(g.node_count(), 0);
+        assert_eq!(g.edge_count(), 0);
+    }
+
+    #[test]
+    fn test_symbol_to_node_kind() {
+        assert!(matches!(
+            symbol_to_node_kind(&SymbolKind::Function),
+            NodeKind::Function
+        ));
+        assert!(matches!(
+            symbol_to_node_kind(&SymbolKind::Method),
+            NodeKind::Method
+        ));
+    }
+}

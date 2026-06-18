@@ -60,3 +60,46 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     );
     Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_parse_exclude_list_empty() {
+        let m = parse_exclude_list("");
+        assert!(m.is_empty());
+    }
+
+    #[test]
+    fn test_parse_exclude_list_single() {
+        let m = parse_exclude_list("node_modules");
+        assert_eq!(m.len(), 1);
+        assert!(m.contains_key("node_modules"));
+    }
+
+    #[test]
+    fn test_parse_exclude_list_multiple() {
+        let m = parse_exclude_list("node_modules,target,.git");
+        assert_eq!(m.len(), 3);
+        assert!(m.contains_key("node_modules"));
+        assert!(m.contains_key("target"));
+        assert!(m.contains_key(".git"));
+    }
+
+    #[test]
+    fn test_parse_exclude_list_with_spaces() {
+        let m = parse_exclude_list("  dist ,  build ");
+        assert_eq!(m.len(), 2);
+        assert!(m.contains_key("dist"));
+        assert!(m.contains_key("build"));
+    }
+
+    #[test]
+    fn test_parse_exclude_list_ignores_empty_parts() {
+        let m = parse_exclude_list("a,,b,");
+        assert_eq!(m.len(), 2);
+        assert!(m.contains_key("a"));
+        assert!(m.contains_key("b"));
+    }
+}

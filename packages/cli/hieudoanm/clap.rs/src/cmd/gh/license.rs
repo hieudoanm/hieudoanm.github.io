@@ -80,3 +80,14 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     println!("Written {} ({}) to {output}", lic.name, lic.spdx_id);
     Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_command_definition() {
+        let cmd = command();
+        assert!(!cmd.get_name().is_empty());
+    }
+}

@@ -25,6 +25,22 @@ pub fn command() -> clap::Command {
         )
 }
 
+fn build_weather_url(city: &str, forecast: bool, json: bool, units: &str) -> String {
+    let unit_param = match units {
+        "us" | "imperial" => "u",
+        "uk" => "M",
+        _ => "m",
+    };
+
+    if json {
+        format!("https://wttr.in/{city}?format=j1&lang=en&{unit_param}")
+    } else if forecast {
+        format!("https://wttr.in/{city}?0&lang=en&{unit_param}")
+    } else {
+        format!("https://wttr.in/{city}?format=%C+%t+%w+%h&{unit_param}")
+    }
+}
+
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     let forecast = matches.get_flag("forecast");
     let json = matches.get_flag("json");
@@ -46,23 +62,7 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
         anyhow::bail!("provide a city name");
     }
 
-    let unit_param = match units {
-        "us" | "imperial" => "u",
-        "uk" => "M",
-        _ => "m",
-    };
-
-    let url = if forecast {
-        if json {
-            format!("https://wttr.in/{city}?format=j1&lang=en&{unit_param}")
-        } else {
-            format!("https://wttr.in/{city}?0&lang=en&{unit_param}")
-        }
-    } else if json {
-        format!("https://wttr.in/{city}?format=j1&lang=en&{unit_param}")
-    } else {
-        format!("https://wttr.in/{city}?format=%C+%t+%w+%h&{unit_param}")
-    };
+    let url = build_weather_url(&city, forecast, json, units);
 
     let client = reqwest::Client::new();
     let resp = client
@@ -91,4 +91,49 @@ async fn detect_location() -> anyhow::Result<String> {
         .as_str()
         .ok_or_else(|| anyhow::anyhow!("could not detect city"))?;
     Ok(city.to_string())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_build_weather_url_json() {
+        let url = build_weather_url("London", false, true, "metric");
+        assert!(url.contains("London"));
+        assert!(url.contains("format=j1"));
+    }
+
+    #[test]
+    fn test_build_weather_url_forecast() {
+        let url = build_weather_url("Paris", true, false, "metric");
+        assert!(url.contains("Paris"));
+        assert!(url.contains("?0&"));
+    }
+
+    #[test]
+    fn test_build_weather_url_current() {
+        let url = build_weather_url("Tokyo", false, false, "metric");
+        assert!(url.contains("Tokyo"));
+        assert!(url.contains("%C+%t+%w+%h"));
+    }
+
+    #[test]
+    fn test_build_weather_url_imperial() {
+        let url = build_weather_url("NYC", false, false, "imperial");
+        assert!(url.contains("&u"));
+    }
+
+    #[test]
+    fn test_build_weather_url_uk_units() {
+        let url = build_weather_url("London", false, false, "uk");
+        assert!(url.contains("&M"));
+    }
+
+    #[test]
+    fn test_build_weather_url_json_forecast() {
+        let url = build_weather_url("Berlin", true, true, "metric");
+        assert!(url.contains("Berlin"));
+        assert!(url.contains("format=j1"));
+    }
 }

@@ -76,3 +76,24 @@ fn read_yml_input(file: Option<&String>) -> anyhow::Result<Vec<u8>> {
         }
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_command_definition() {
+        let cmd = command();
+        assert!(!cmd.get_name().is_empty());
+    }
+
+    #[test]
+    fn test_read_yml_input_with_file() {
+        let dir = std::env::temp_dir();
+        let path = dir.join("_test_yml_input.yml");
+        std::fs::write(&path, b"key: value").unwrap();
+        let result = read_yml_input(Some(&path.to_string_lossy().to_string())).unwrap();
+        assert!(!result.is_empty());
+        let _ = std::fs::remove_file(&path);
+    }
+}

@@ -51,3 +51,25 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     }
     Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_struct_derives() {
+        let r = Result {
+            definition: "test".into(),
+            part_of_speech: "noun".into(),
+            synonyms: vec![],
+            anonyms: vec![],
+            usage_of: vec![],
+            type_of: vec![],
+        };
+        let w = Word {
+            word: "test".into(),
+            results: vec![r],
+        };
+        assert_eq!(w.word, "test");
+    }
+}

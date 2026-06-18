@@ -47,3 +47,14 @@ pub async fn run(_matches: &clap::ArgMatches) -> anyhow::Result<()> {
         std::thread::sleep(Duration::from_millis(500));
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_command_definition() {
+        let cmd = command();
+        assert!(!cmd.get_name().is_empty());
+    }
+}

@@ -14,3 +14,14 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     let _url = matches.get_one::<String>("url").unwrap();
     anyhow::bail!("snapshot requires the `headless_chrome` crate which is not yet integrated");
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_command_definition() {
+        let cmd = command();
+        assert!(!cmd.get_name().is_empty());
+    }
+}

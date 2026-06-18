@@ -120,3 +120,20 @@ pub async fn stats_run(m: &clap::ArgMatches, json: bool) -> anyhow::Result<()> {
 
     Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_size_command_definition() {
+        let cmd = size_command();
+        assert!(!cmd.get_name().is_empty());
+    }
+
+    #[test]
+    fn test_stats_command_definition() {
+        let cmd = stats_command();
+        assert!(!cmd.get_name().is_empty());
+    }
+}

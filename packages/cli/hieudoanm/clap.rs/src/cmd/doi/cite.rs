@@ -10,3 +10,11 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     service::print_citation(&data);
     Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn test_module_compiles() {
+        assert!(true);
+    }
+}

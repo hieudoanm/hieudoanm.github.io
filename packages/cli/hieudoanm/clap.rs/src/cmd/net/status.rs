@@ -67,3 +67,27 @@ pub async fn run_all(_matches: &clap::ArgMatches) -> anyhow::Result<()> {
     println!("└─────────────────────────────────────────────────────────────┘");
     Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_command_definition() {
+        let cmd = command();
+        assert_eq!(cmd.get_name(), "status");
+    }
+
+    #[test]
+    fn test_command_all_definition() {
+        let cmd = command_all();
+        assert_eq!(cmd.get_name(), "status-all");
+    }
+
+    #[test]
+    fn test_load_services_returns_vec() {
+        // load_services reads from configs::services() which may be empty in test
+        let services = load_services();
+        assert!(services.iter().all(|(n, u)| !n.is_empty() && !u.is_empty()));
+    }
+}

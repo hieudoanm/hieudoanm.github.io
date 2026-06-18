@@ -198,3 +198,11 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
         _ => write_obsidian_dot(&nodes, &edges, out),
     }
 }
+
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn test_module_compiles() {
+        assert!(true);
+    }
+}

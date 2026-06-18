@@ -40,3 +40,14 @@ pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
     println!("CMYK: ({c_val:.1}%, {m:.1}%, {y:.1}%, {k:.1}%)");
     Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_command_definition() {
+        let cmd = command();
+        assert!(!cmd.get_name().is_empty());
+    }
+}

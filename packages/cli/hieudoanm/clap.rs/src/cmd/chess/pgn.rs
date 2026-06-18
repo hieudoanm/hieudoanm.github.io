@@ -41,3 +41,28 @@ async fn sub_uci(_matches: &clap::ArgMatches) -> anyhow::Result<()> {
     println!("pgn uci (not yet implemented)");
     Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_command_definition() {
+        let cmd = command();
+        assert!(!cmd.get_name().is_empty());
+    }
+
+    #[test]
+    fn test_sub_fen() {
+        let m = clap::ArgMatches::default();
+        let rt = tokio::runtime::Runtime::new().unwrap();
+        rt.block_on(sub_fen(&m)).unwrap();
+    }
+
+    #[test]
+    fn test_sub_uci() {
+        let m = clap::ArgMatches::default();
+        let rt = tokio::runtime::Runtime::new().unwrap();
+        rt.block_on(sub_uci(&m)).unwrap();
+    }
+}
