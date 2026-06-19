@@ -3,108 +3,50 @@ import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper
 import html2canvas from 'html2canvas-pro';
 import { FC, useCallback, useMemo, useRef, useState } from 'react';
 
-const CURRENCIES = [
-  'VND',
-  'USD',
-  'EUR',
-  'GBP',
-  'JPY',
-  'KRW',
-  'THB',
-  'ILS',
-  'INR',
-  'AUD',
-  'CAD',
-  'SGD',
-];
-
-type Settlement = {
-  from: string;
-  to: string;
-  amount: number;
-};
-
-type PersonRow = {
-  name: string;
-  paid: number;
-  owes: number;
-};
-
-const calculateSettlements = (persons: PersonRow[]): Settlement[] => {
-  const net = persons.map((p) => ({
-    name: p.name.trim(),
-    net: (p.paid || 0) - (p.owes || 0),
-  }));
-
-  const creditors = net.filter((n) => n.net > 0).sort((a, b) => b.net - a.net);
-  const debtors = net.filter((n) => n.net < 0).sort((a, b) => a.net - b.net);
-
-  const settlements: Settlement[] = [];
-  let i = 0;
-  let j = 0;
-
-  while (i < debtors.length && j < creditors.length) {
-    const debtor = debtors[i];
-    const creditor = creditors[j];
-    const amount = Math.min(-debtor.net, creditor.net);
-
-    settlements.push({ from: debtor.name, to: creditor.name, amount });
-
-    debtor.net += amount;
-    creditor.net -= amount;
-
-    if (debtor.net === 0) i++;
-    if (creditor.net === 0) j++;
-  }
-
-  return settlements;
-};
+import { PersonRow, Settlement } from './types';
+import { CURRENCIES } from './constants';
+import { calculateSettlements } from './utils/calculate';
 
 export const SplitBillModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [tab, setTab] = useState<'equal' | 'settle'>('equal');
-
   const [bill, setBill] = useState(100);
   const [people, setPeople] = useState(2);
   const [tip, setTip] = useState(10);
   const [tax, setTax] = useState(0);
-
   const [currency, setCurrency] = useState(CURRENCIES[0]);
-
   const [persons, setPersons] = useState<PersonRow[]>([
     { name: 'Alice', paid: 100, owes: 25 },
     { name: 'Bob', paid: 0, owes: 40 },
     { name: 'Carol', paid: 0, owes: 35 },
   ]);
-
   const [splitEqually, setSplitEqually] = useState(true);
   const [settlements, setSettlements] = useState<Settlement[] | null>(null);
   const [capturing, setCapturing] = useState(false);
-
   const captureRef = useRef<HTMLDivElement>(null);
 
   const eqResult = useMemo(() => {
-    const tipAmount = bill * (tip / 100);
-    const taxAmount = bill * (tax / 100);
-    const total = bill + tipAmount + taxAmount;
-    return { tipAmount, taxAmount, total, perPerson: total / people };
+    const tipA = bill * (tip / 100);
+    const taxA = bill * (tax / 100);
+    return {
+      tipAmount: tipA,
+      taxAmount: taxA,
+      total: bill + tipA + taxA,
+      perPerson: (bill + tipA + taxA) / people,
+    };
   }, [bill, people, tip, tax]);
-
   const totalPaid = useMemo(
     () => persons.reduce((s, p) => s + (p.paid || 0), 0),
     [persons]
   );
-
   const equalShare = useMemo(
     () => totalPaid / (persons.length || 1),
     [totalPaid, persons.length]
   );
-
   const computedPersons = useMemo(
     () =>
       splitEqually ? persons.map((p) => ({ ...p, owes: equalShare })) : persons,
     [persons, splitEqually, equalShare]
   );
-
   const computedTotalOwes = useMemo(
     () => computedPersons.reduce((s, p) => s + (p.owes || 0), 0),
     [computedPersons]
@@ -115,11 +57,8 @@ export const SplitBillModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       setSettlements(null);
       setPersons((prev) => {
         const copy = prev.map((p) => ({ ...p }));
-        if (field === 'name') {
-          copy[index].name = value;
-        } else {
-          copy[index][field] = Number.parseFloat(value) || 0;
-        }
+        if (field === 'name') copy[index].name = value;
+        else copy[index][field] = Number.parseFloat(value) || 0;
         return copy;
       });
     },
@@ -130,17 +69,17 @@ export const SplitBillModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     setSettlements(null);
     setPersons((prev) => [...prev, { name: '', paid: 0, owes: 0 }]);
   }, []);
-
   const removePerson = useCallback((index: number) => {
     setSettlements(null);
     setPersons((prev) => prev.filter((_, i) => i !== index));
   }, []);
 
-  const handleSettle = useCallback(() => {
-    setSettlements(calculateSettlements(computedPersons));
-  }, [computedPersons]);
+  const handleSettle = useCallback(
+    () => setSettlements(calculateSettlements(computedPersons)),
+    [computedPersons]
+  );
 
-  const handleDownload = useCallback(async () => {
+  const capture = useCallback(async (fn: (c: HTMLCanvasElement) => void) => {
     if (!captureRef.current) return;
     setCapturing(true);
     await new Promise((r) => requestAnimationFrame(r));
@@ -149,41 +88,38 @@ export const SplitBillModal: FC<{ onClose: () => void }> = ({ onClose }) => {
         scale: 2,
         useCORS: true,
       });
-      const dataURL = canvas.toDataURL('image/png');
-      const link = document.createElement('a');
-      link.href = dataURL;
-      link.download = 'split-bill.png';
-      link.click();
-      link.remove();
+      fn(canvas);
     } finally {
       setCapturing(false);
     }
   }, []);
 
-  const handleCopy = useCallback(async () => {
-    if (!captureRef.current) return;
-    setCapturing(true);
-    await new Promise((r) => requestAnimationFrame(r));
-    try {
-      const canvas = await html2canvas(captureRef.current, {
-        scale: 2,
-        useCORS: true,
-      });
-      canvas.toBlob(async (blob) => {
-        if (!blob) return;
-        try {
-          await navigator.clipboard.write([
-            new ClipboardItem({ 'image/png': blob }),
-          ]);
-        } catch {
-          /* fallback */ null;
-        }
-        setCapturing(false);
-      });
-    } catch {
-      setCapturing(false);
-    }
-  }, []);
+  const handleDownload = useCallback(
+    () =>
+      capture((c) => {
+        const a = document.createElement('a');
+        a.href = c.toDataURL('image/png');
+        a.download = 'split-bill.png';
+        a.click();
+      }),
+    [capture]
+  );
+  const handleCopy = useCallback(
+    () =>
+      capture((c) =>
+        c.toBlob(async (blob) => {
+          if (!blob) return;
+          try {
+            await navigator.clipboard.write([
+              new ClipboardItem({ 'image/png': blob }),
+            ]);
+          } catch {
+            /* */
+          }
+        })
+      ),
+    [capture]
+  );
 
   return (
     <ModalWrapper onClose={onClose} title="Split Bill" size="max-w-lg">
@@ -197,13 +133,10 @@ export const SplitBillModal: FC<{ onClose: () => void }> = ({ onClose }) => {
         <button
           role="tab"
           className={`tab flex-1 ${tab === 'settle' ? 'tab-active' : ''}`}
-          onClick={() => {
-            setTab('settle');
-          }}>
+          onClick={() => setTab('settle')}>
           Who Owes Who
         </button>
       </div>
-
       <div
         ref={captureRef}
         className={`space-y-3 ${capturing ? 'relative' : ''}`}>
@@ -212,17 +145,15 @@ export const SplitBillModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             <span className="loading loading-spinner loading-md" />
           </div>
         )}
-
         {tab === 'equal' && (
           <>
             <div className="form-control">
-              <label htmlFor="total-bill" className="label mb-1 p-0">
+              <label className="label mb-1 p-0">
                 <span className="label-text text-xs font-medium opacity-70">
                   Total Bill
                 </span>
               </label>
               <input
-                id="total-bill"
                 type="number"
                 className="input input-sm input-bordered w-full text-right"
                 value={bill}
@@ -233,15 +164,13 @@ export const SplitBillModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                 }
               />
             </div>
-
             <div className="form-control">
-              <label htmlFor="number-of-people" className="label mb-1 p-0">
+              <label className="label mb-1 p-0">
                 <span className="label-text text-xs font-medium opacity-70">
                   Number of People
                 </span>
               </label>
               <input
-                id="number-of-people"
                 type="number"
                 className="input input-sm input-bordered w-full text-right"
                 value={people}
@@ -253,15 +182,13 @@ export const SplitBillModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                 }
               />
             </div>
-
             <div className="form-control">
-              <label htmlFor="tip" className="label mb-1 p-0">
+              <label className="label mb-1 p-0">
                 <span className="label-text text-xs font-medium opacity-70">
                   Tip (%)
                 </span>
               </label>
               <input
-                id="tip"
                 type="number"
                 className="input input-sm input-bordered w-full text-right"
                 value={tip}
@@ -270,15 +197,13 @@ export const SplitBillModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                 onChange={(e) => setTip(Number.parseFloat(e.target.value) || 0)}
               />
             </div>
-
             <div className="form-control">
-              <label htmlFor="tax" className="label mb-1 p-0">
+              <label className="label mb-1 p-0">
                 <span className="label-text text-xs font-medium opacity-70">
                   Tax (%)
                 </span>
               </label>
               <input
-                id="tax"
                 type="number"
                 className="input input-sm input-bordered w-full text-right"
                 value={tax}
@@ -287,7 +212,6 @@ export const SplitBillModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                 onChange={(e) => setTax(Number.parseFloat(e.target.value) || 0)}
               />
             </div>
-
             <div className="bg-base-200 mt-4 space-y-2 rounded-xl p-3">
               <div className="flex items-center justify-between">
                 <span className="text-xs opacity-70">Tip Amount</span>
@@ -318,14 +242,12 @@ export const SplitBillModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             </div>
           </>
         )}
-
         {tab === 'settle' && (
           <>
             <p className="text-xs opacity-60">
               Enter what each person paid. The calculator figures out who owes
               whom to settle up.
             </p>
-
             <label className="flex items-center gap-2 text-xs">
               <input
                 type="checkbox"
@@ -339,7 +261,6 @@ export const SplitBillModal: FC<{ onClose: () => void }> = ({ onClose }) => {
               Split equally — auto-fill owes as{' '}
               {formatCurrency(equalShare, currency)} each
             </label>
-
             <div className="max-h-44 space-y-2 overflow-y-auto pr-1">
               {computedPersons.map((p, i) => (
                 <div key={i} className="flex items-center gap-1.5">
@@ -383,7 +304,6 @@ export const SplitBillModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                 </div>
               ))}
             </div>
-
             <div className="flex gap-2">
               <button
                 className="btn btn-outline btn-sm border-base-content/20 bg-base-100/10 hover:bg-base-100/20 flex-1 backdrop-blur"
@@ -397,7 +317,6 @@ export const SplitBillModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                 Settle Up
               </button>
             </div>
-
             {totalPaid > 0 || computedTotalOwes > 0 ? (
               <div className="flex items-center justify-between text-xs opacity-60">
                 <span>
@@ -410,7 +329,6 @@ export const SplitBillModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                 </span>
               </div>
             ) : null}
-
             {settlements && settlements.length > 0 && (
               <div className="bg-base-200 mt-2 flex flex-col space-y-2 gap-y-2 rounded-xl p-3">
                 <span className="text-xs font-semibold">Settle Up</span>
@@ -429,7 +347,6 @@ export const SplitBillModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                 ))}
               </div>
             )}
-
             {settlements && settlements.length === 0 && (
               <div className="bg-base-200 mt-2 rounded-xl p-3 text-center text-sm font-medium text-green-600">
                 All settled ✓
@@ -438,7 +355,6 @@ export const SplitBillModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           </>
         )}
       </div>
-
       <div className="border-base-content/10 flex items-center justify-between gap-2 border-t pt-3">
         <div className="flex items-center gap-1.5">
           <span className="text-xs opacity-60">Currency</span>
@@ -453,7 +369,6 @@ export const SplitBillModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             ))}
           </select>
         </div>
-
         <div className="flex items-center gap-1.5">
           <button
             className="btn btn-outline btn-xs border-base-content/20 bg-base-100/10 hover:bg-base-100/20 backdrop-blur"
