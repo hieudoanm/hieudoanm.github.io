@@ -18,42 +18,8 @@ permissions:
 
 jobs:
   build:
-    name: ${{ matrix.name }}
+    name: Build
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - dir: block/ads
-            name: '@block/ads'
-            artifact: block-ads
-          - dir: block/sites
-            name: '@block/sites'
-            artifact: block-sites
-          - dir: chess/focus
-            name: '@chess/focus'
-            artifact: chess-focus
-          - dir: claude/limit
-            name: '@claude/limit'
-            artifact: claude-limit
-          - dir: github/open-link
-            name: '@github/open-link'
-            artifact: github-open-link
-          - dir: instagram/download
-            name: '@instagram/download'
-            artifact: instagram-download
-          - dir: shopify/detect
-            name: '@shopify/detect'
-            artifact: shopify-detect
-          - dir: tab/new
-            name: '@tab/new'
-            artifact: tab-new
-          - dir: tab/snapshot
-            name: '@tab/snapshot'
-            artifact: tab-snapshot
-          - dir: youtube/transcript
-            name: '@youtube/transcript'
-            artifact: youtube-transcript
     steps:
       - name: Checkout
         uses: actions/checkout@v6.0.3
@@ -73,12 +39,12 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
       - name: Build
-        run: pnpm run build --filter=${{ matrix.name }}
+        run: pnpm run build --filter=@hieudoanm.github.io/extension
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ matrix.artifact }}
-          path: packages/extensions/browser/${{ matrix.dir }}/download/
+          name: hieudoanm-extension
+          path: packages/extensions/browser/hieudoanm/ts/download/
 
   publish:
     name: Publish to GitHub Release
