@@ -2,7 +2,7 @@ import { getRoutes } from '../..';
 import type { Route } from '../../types';
 import type { NextApiHandler } from 'next';
 
-function buildOpenApiSpec(routes: Route[]): Record<string, unknown> {
+const buildOpenApiSpec = (routes: Route[]): Record<string, unknown> => {
   const paths: Record<string, Record<string, unknown>> = {};
   const tagSet = new Set<string>();
 
@@ -46,7 +46,7 @@ function buildOpenApiSpec(routes: Route[]): Record<string, unknown> {
     tags,
     paths,
   };
-}
+};
 
 const swaggerUiHtml = (spec: Record<string, unknown>): string => {
   const specJson = JSON.stringify(spec);

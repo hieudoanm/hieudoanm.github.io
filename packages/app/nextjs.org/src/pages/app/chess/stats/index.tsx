@@ -111,7 +111,7 @@ declare global {
   }
 }
 
-function loadSqlJs(): Promise<SqlJsStatic> {
+const loadSqlJs = (): Promise<SqlJsStatic> => {
   return new Promise((resolve, reject) => {
     if (globalThis.window === undefined) return reject(new Error('No window'));
 
@@ -137,18 +137,18 @@ function loadSqlJs(): Promise<SqlJsStatic> {
     script.onerror = () => reject(new Error('Failed to load sql.js from CDN'));
     document.head.appendChild(script);
   });
-}
+};
 
 // ─── DB Hook ──────────────────────────────────────────────────────────────────
 
-function useSQLite(dbPath: string) {
+const useSQLite = (dbPath: string) => {
   const [db, setDb] = useState<DB | null>(null);
   const [dbLoading, setDbLoading] = useState(true);
   const [dbError, setDbError] = useState<Error | null>(null);
 
   useEffect(() => {
     let cancelled = false;
-    async function load() {
+    const load = async () => {
       try {
         const SQL = await loadSqlJs();
         const res = await fetch(dbPath);
@@ -161,7 +161,7 @@ function useSQLite(dbPath: string) {
       } finally {
         if (!cancelled) setDbLoading(false);
       }
-    }
+    };
     load();
     return () => {
       cancelled = true;
@@ -169,7 +169,7 @@ function useSQLite(dbPath: string) {
   }, [dbPath]);
 
   return { db, dbLoading, dbError };
-}
+};
 
 // ─── Percentile Calculator ────────────────────────────────────────────────────
 

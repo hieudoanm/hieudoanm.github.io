@@ -1,10 +1,10 @@
-export function renderToCanvas(
+export const renderToCanvas = (
   canvas: HTMLCanvasElement,
   imgSrc: string,
   pad: number,
   filterCss: string,
   cb: (url: string) => void
-) {
+) => {
   const img = new Image();
   img.onload = () => {
     const { naturalWidth: w, naturalHeight: h } = img;
@@ -42,4 +42,4 @@ export function renderToCanvas(
     cb(canvas.toDataURL('image/png'));
   };
   img.src = imgSrc;
-}
+};

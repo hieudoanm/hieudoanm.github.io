@@ -3,11 +3,11 @@ import { PDFDocument } from 'pdf-lib';
 import { saveAs } from 'file-saver';
 import { RedactionBox } from '../types';
 
-export async function exportRedactedPdf(
+export const exportRedactedPdf = async (
   file: File,
   redactions: Record<number, RedactionBox[]>,
   scale: number
-) {
+) => {
   const buffer = await file.arrayBuffer();
   const pdfDoc = await PDFDocument.load(buffer);
 
@@ -28,4 +28,4 @@ export async function exportRedactedPdf(
   const modifiedBytes = await pdfDoc.save();
   const arrayBuffer = modifiedBytes.slice().buffer;
   saveAs(new Blob([arrayBuffer], { type: 'application/pdf' }), 'redacted.pdf');
-}
+};

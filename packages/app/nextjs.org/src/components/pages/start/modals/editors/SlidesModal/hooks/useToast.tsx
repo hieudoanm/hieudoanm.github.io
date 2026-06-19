@@ -9,7 +9,7 @@ const TOAST_EMOJI: Record<ToastType, string> = {
   loading: '⌛',
 };
 
-export function useToast() {
+export const useToast = () => {
   const [toasts, setToasts] = useState<ToastItem[]>([]);
   const dismiss = (id: number) =>
     setToasts((prev) => prev.filter((t) => t.id !== id));
@@ -27,7 +27,7 @@ export function useToast() {
     return id;
   };
   return { toasts, show, dismiss };
-}
+};
 
 export const ToastUI: FC<{
   toasts: ToastItem[];

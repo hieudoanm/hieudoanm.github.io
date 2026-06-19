@@ -1,6 +1,6 @@
 import { QuizData } from '../types';
 
-export function parseCsv(csvText: string): QuizData[] {
+export const parseCsv = (csvText: string): QuizData[] => {
   const lines = csvText.trim().split(/\r?\n/);
   const header = lines[0].split(',').map((h) => h.trim().toLowerCase());
   const expected = ['question', 'red', 'blue', 'green', 'yellow', 'correct'];
@@ -23,7 +23,7 @@ export function parseCsv(csvText: string): QuizData[] {
     });
   }
   return rows;
-}
+};
 
 export const colorClassMap: Record<keyof QuizData['answers'], string> = {
   red: 'btn-error',

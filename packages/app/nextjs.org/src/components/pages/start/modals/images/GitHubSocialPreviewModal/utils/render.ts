@@ -2,14 +2,14 @@ import { RepoData } from '../types';
 import { LANG_COLORS } from '../constants';
 import { fmt } from './format';
 
-function roundRect(
+const roundRect = (
   ctx: CanvasRenderingContext2D,
   x: number,
   y: number,
   w: number,
   h: number,
   r: number
-) {
+) => {
   ctx.beginPath();
   ctx.moveTo(x + r, y);
   ctx.lineTo(x + w - r, y);
@@ -21,12 +21,12 @@ function roundRect(
   ctx.lineTo(x, y + r);
   ctx.quadraticCurveTo(x, y, x + r, y);
   ctx.closePath();
-}
+};
 
-export async function renderPreview(
+export const renderPreview = async (
   canvas: HTMLCanvasElement,
   repo: RepoData
-): Promise<void> {
+): Promise<void> => {
   const W = 1200,
     H = 630;
   canvas.width = W;
@@ -204,4 +204,4 @@ export async function renderPreview(
   ctx.textAlign = 'center';
   ctx.fillText('G', W - 100, H - 36);
   ctx.textAlign = 'left';
-}
+};

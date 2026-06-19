@@ -1,7 +1,7 @@
-export function svgToCanvas(
+export const svgToCanvas = (
   svgText: string,
   size: number
-): Promise<HTMLCanvasElement> {
+): Promise<HTMLCanvasElement> => {
   return new Promise((resolve, reject) => {
     const canvas = document.createElement('canvas');
     canvas.width = size;
@@ -26,4 +26,4 @@ export function svgToCanvas(
     };
     img.src = url;
   });
-}
+};

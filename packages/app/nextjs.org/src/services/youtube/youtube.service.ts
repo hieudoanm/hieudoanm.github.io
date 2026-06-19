@@ -6,7 +6,7 @@ const BASE_URL =
     ? 'http://localhost:10000'
     : 'https://youtube-transcript-summariser.onrender.com';
 
-function parseVideoId(raw: string): string | null {
+const parseVideoId = (raw: string): string | null => {
   const clean = raw.trim();
   if (/^[a-zA-Z0-9_-]{11}$/.test(clean)) return clean;
   const patterns = [
@@ -20,9 +20,9 @@ function parseVideoId(raw: string): string | null {
     if (m?.[1]) return m[1];
   }
   return null;
-}
+};
 
-async function fetchCaptionUrl(videoId: string): Promise<string | null> {
+const fetchCaptionUrl = async (videoId: string): Promise<string | null> => {
   const watchUrl = `https://www.youtube.com/watch?v=${videoId}`;
   const res = await fetch(watchUrl, {
     headers: {
@@ -68,9 +68,9 @@ async function fetchCaptionUrl(videoId: string): Promise<string | null> {
     captionTracks.find((t: any) => t.kind === 'asr') ??
     captionTracks[0];
   return preferred?.baseUrl ?? null;
-}
+};
 
-async function fetchTranscriptText(captionUrl: string): Promise<string> {
+const fetchTranscriptText = async (captionUrl: string): Promise<string> => {
   const url = new URL(captionUrl);
   url.searchParams.set('fmt', 'srv3');
   url.searchParams.set('lang', 'en');
@@ -102,13 +102,13 @@ async function fetchTranscriptText(captionUrl: string): Promise<string> {
   if (lines.length === 0) throw new Error('No text found in caption file');
   lines.sort((a, b) => a.start - b.start);
   return lines.map((l) => l.text).join(' ');
-}
+};
 
-export async function getTranscript({
+export const getTranscript = async ({
   videoId,
 }: {
   videoId: string;
-}): Promise<{ transcript: string }> {
+}): Promise<{ transcript: string }> => {
   const id = parseVideoId(videoId);
   if (!id) throw new Error(`Invalid video ID or URL: "${videoId}"`);
   const captionUrl = await fetchCaptionUrl(id);
@@ -117,7 +117,7 @@ export async function getTranscript({
   }
   const transcript = await fetchTranscriptText(captionUrl);
   return { transcript };
-}
+};
 
 export const summariseTranscript = async ({
   videoId,

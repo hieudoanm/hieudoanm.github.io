@@ -9,12 +9,12 @@ import {
 } from './colors';
 import { PitchDeck } from '../types';
 
-export async function exportPdf(
+export const exportPdf = async (
   data: PitchDeck,
   onProgress: (msg: string) => void,
   onError: (msg: string) => void,
   onSuccess: (msg: string) => void
-) {
+) => {
   onProgress('Generating PDF…');
   const preview = document.getElementById('pitch-preview');
   if (!preview) throw new Error('#pitch-preview not found');
@@ -91,4 +91,4 @@ export async function exportPdf(
     `${data.title?.product ?? 'pitch-deck'}.pdf`
   );
   onSuccess('PDF exported successfully');
-}
+};

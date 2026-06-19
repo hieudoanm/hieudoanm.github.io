@@ -15,20 +15,20 @@ const SNELLEN_LINES = [
 
 const LETTERS = 'CDEFHKLNOPRSTUV';
 
-function randomLetters(count: number): string {
+const randomLetters = (count: number): string => {
   let result = '';
   for (let i = 0; i < count; i++) {
     result += LETTERS[Math.floor(Math.random() * LETTERS.length)];
   }
   return result;
-}
+};
 
-function generateChart() {
+const generateChart = () => {
   return SNELLEN_LINES.map((line) => ({
     ...line,
     letters: randomLetters(line.count),
   }));
-}
+};
 
 export const SnellenChartModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [chart] = useState(generateChart);

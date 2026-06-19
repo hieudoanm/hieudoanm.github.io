@@ -6,7 +6,7 @@ interface TimeUnit {
   label: string;
 }
 
-function getElapsed(startTime: number): TimeUnit[] {
+const getElapsed = (startTime: number): TimeUnit[] => {
   let totalSeconds = Math.floor((Date.now() - startTime) / 1000);
 
   const years = Math.floor(totalSeconds / (365 * 24 * 3600));
@@ -32,7 +32,7 @@ function getElapsed(startTime: number): TimeUnit[] {
     { value: minutes, label: minutes === 1 ? 'minute' : 'minutes' },
     { value: seconds, label: seconds === 1 ? 'second' : 'seconds' },
   ];
-}
+};
 
 export const NoSleepModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const startTimeRef = useRef<number>(Date.now());

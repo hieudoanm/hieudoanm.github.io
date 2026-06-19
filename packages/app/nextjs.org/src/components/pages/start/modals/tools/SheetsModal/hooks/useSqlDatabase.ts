@@ -11,7 +11,7 @@ import {
 } from '../utils/opfs';
 import { createSeedData } from '../utils/seedData';
 
-export function useSqlDatabase() {
+export const useSqlDatabase = () => {
   const [sqlJs, setSqlJs] = useState<SqlJsStatic | null>(null);
   const [dbInstance, setDbInstance] = useState<SqlDatabase | null>(null);
   const [dbFileName, setDbFileName] = useState<string | null>(null);
@@ -219,4 +219,4 @@ export function useSqlDatabase() {
     handleLoadOpfs,
     handleExport,
   };
-}
+};
