@@ -16,8 +16,10 @@
     - [🦀 Rust](#-rust)
       - [📋 clap.rs](#-claprs)
       - [🌐 axum](#-axum)
+      - [🖥️ Tauri](#️-tauri)
     - [🕊️ Swift](#️-swift)
       - [🏗️ Swift Argument Parser](#️-swift-argument-parser)
+      - [🖼️ SwiftUI](#️-swiftui)
     - [🔵 TypeScript](#-typescript)
       - [🧪 Jest](#-jest)
       - [⚛️ React](#️-react)
@@ -234,6 +236,23 @@
 
 ---
 
+#### 🖥️ [Tauri][tauri]
+
+1. Use `tauri::Builder` for app configuration — Chain `.plugin()`, `.invoke_handler()`, `.setup()` on `tauri::Builder::default()`. AI agents trace the app lifecycle from a single builder chain.
+2. Use `#[tauri::command]` for IPC — Annotate Rust functions and register via `generate_handler![]`. AI agents see the IPC boundary from the attribute.
+3. Use `State<'_, T>` for shared state — Manage state with `.manage()` in setup and receive it in commands. AI agents trace dependency injection through the type parameter.
+4. Use `Window` for window control — Access the calling window as a command parameter for manipulation. AI agents see window operations as explicit method calls.
+5. Use `tauri::path::PathResolver` for file paths — Resolve resource, app, and cache directories via the path resolver. AI agents infer file access boundaries from the resolver API.
+6. Use events for frontend↔backend messaging — `window.emit("event", payload)` and `listen()`. AI agents trace event flow from emitter to listener across the bridge.
+7. Use `tauri::api::shell` for external links — Delegate URL and file opening to the OS via `shell::open()`. AI agents see external resource access as explicit API calls.
+8. Prefer Tauri plugins for native features — Use `tauri-plugin-*` crates for dialogs, notifications, file system. AI agents infer capabilities from plugin imports.
+9. Use `tauri::async_runtime` for background tasks — Spawn concurrent work with `tauri::async_runtime::spawn()`. AI agents see concurrency boundaries from the spawn call.
+10. Define permissions in `capabilities/` — Granular access control for commands, windows, and plugins. AI agents see security boundaries as declarative configuration.
+
+[Back to Table of Contents](#-table-of-contents)
+
+---
+
 ### 🕊️ [Swift][swift]
 
 1. Prefer `let` over `var` — Immutable bindings signal intent and let AI agents trust that a value won't change after initialisation.
@@ -264,7 +283,24 @@
 9. Keep command structs focused on parsing — Delegate business logic to separate functions/services. A command body over ~10 lines signals too much responsibility.
 10. Prefer `async` in `run` with Swift concurrency — `mutating func run() async throws { }` supports async workflows natively. AI agents see the concurrency model from the function signature.
 
-[Back to Table of Content](#-table-of-contents)
+[Back to Table of Contents](#-table-of-contents)
+
+---
+
+#### 🖼️ [SwiftUI][swiftui]
+
+1. Use `@State` for local view state — `@State private var count = 0` declares mutable state owned by the view. AI agents trace state mutations from the property wrapper.
+2. Use `@Binding` for child-parent data flow — `@Binding var isPresented: Bool` lets children read and write a parent's state. AI agents infer data ownership from the binding's source.
+3. Use `@StateObject` / `@ObservedObject` for model data — `@StateObject private var model = ViewModel()` for observable objects the view owns. AI agents trace reactive updates through the `ObservableObject` conformance.
+4. Use `@EnvironmentObject` for shared dependencies — Inject services via `.environmentObject()` at the root and receive with `@EnvironmentObject`. AI agents trace dependency injection through the environment hierarchy.
+5. Use `VStack`, `HStack`, `ZStack` for layout — Compose views with stack containers rather than hardcoded frames. AI agents infer layout relationships from the stack nesting.
+6. Use `@ViewBuilder` for conditional content — Build branching UI with `@ViewBuilder` closures for type-erased child views. AI agents see conditional branches as builder closures.
+7. Use `NavigationStack` over `NavigationView` — `NavigationStack` provides modern, state-driven navigation with path bindings. AI agents infer navigation structure from the stack binding.
+8. Use `List` and `ForEach` for dynamic content — `List { ForEach(items) { item in ... } }` for scrollable, recyclable lists. AI agents see list rendering as declarative data mapping.
+9. Use `#Preview` for SwiftUI previews — `#Preview { MyView() }` enables inline previews for rapid iteration. AI agents see the preview contract alongside the view definition.
+10. Prefer `View` protocol conformance over `ViewBuilder` returns — Define custom views as `struct MyView: View` with a computed `body` property. AI agents infer view structure from the `body` getter.
+
+[Back to Table of Contents](#-table-of-contents)
 
 ---
 
@@ -297,6 +333,10 @@
 8. Use `toMatchSnapshot` for snapshot testing
 9. Use `expect.anything()` for optional values
 10. Use `expect.objectContaining()` for partial object matching
+
+[Back to Table of Content](#-table-of-contents)
+
+---
 
 #### ⚛️ [React][react]
 
@@ -366,14 +406,16 @@
 
 ## 📦 Projects
 
-| No  | Category      | Project          | [TypeScript][typescript] | [Go][go]             | [Rust][rust] | [Kotlin][kotlin] | [Swift][swift]                                 |
-| --- | ------------- | ---------------- | ------------------------ | -------------------- | ------------ | ---------------- | ---------------------------------------------- |
-| 1   | App           | `hieudoanm.app`  | [Next.js][next.js]       |                      |              |                  |                                                |
-| 2   | CLI           | `hieudoanm.cli`  |                          | [cobra.go][cobra.go] | [clap.rs]    | [cli.kt]         | [Swift Argument Parser][swift-argument-parser] |
-| 3   | Documentation | `hieudoanm.md`   | [Docusaurus][docusaurus] |                      |              |                  |                                                |
-| 4   | Extensions    | `hieudoanm.ext`  |                          |                      |              |                  |                                                |
-| 5   | Server        | `backbone`       |                          | `net/http`           | [Axum][axum] | [Ktor][ktor]     |                                                |
-| 6   | Serverless    | `browserverless` |                          |                      |              |                  |                                                |
+| No  | Category      | Subcategory | Project          | [TypeScript][typescript] | [Go][go]             | [Rust][rust]   | [Kotlin][kotlin]                   | [Swift][swift]                                 |
+| --- | ------------- | ----------- | ---------------- | ------------------------ | -------------------- | -------------- | ---------------------------------- | ---------------------------------------------- |
+| 1   | App           | Web         | `hieudoanm.app`  | [Next.js][next.js]       |                      |                |                                    |                                                |
+| -   | -             | Mobile      | -                | [Expo][expo]             |                      |                | [Jetpack Compose][jetpack-compose] | [SwiftUI][swiftui]                             |
+| -   | -             | Desktop     | -                |                          |                      | [Tauri][tauri] |                                    |                                                |
+| 2   | CLI           |             | `hieudoanm.cli`  |                          | [cobra.go][cobra.go] | [clap.rs]      | [cli.kt]                           | [Swift Argument Parser][swift-argument-parser] |
+| 3   | Documentation |             | `hieudoanm.md`   | [Docusaurus][docusaurus] |                      |                |                                    |                                                |
+| 4   | Extensions    | Browser     | `hieudoanm.ext`  |                          |                      |                |                                    |                                                |
+| 5   | Server        |             | `backbone`       |                          | `net/http`           | [Axum][axum]   | [Ktor][ktor]                       |                                                |
+| 6   | Serverless    |             | `browserverless` |                          |                      |                |                                    |                                                |
 
 [Back to Table of Content](#-table-of-contents)
 
@@ -385,8 +427,10 @@
 [cli.kt]: https://ajalt.github.io/clikt/
 [cobra.go]: https://cobra.dev
 [docusaurus]: https://docusaurus.io/
+[expo]: https://expo.dev/
 [go]: https://go.dev/
 [jest]: https://jestjs.org
+[jetpack-compose]: https://developer.android.com/compose
 [kotlin]: https://kotlinlang.org
 [ktor]: https://ktor.io
 [next.js]: https://nextjs.org
@@ -396,5 +440,7 @@
 [react]: https://react.dev/
 [rust]: https://www.rust-lang.org
 [swift]: https://www.swift.org
+[swiftui]: https://developer.apple.com/swiftui/
 [swift-argument-parser]: https://github.com/apple/swift-argument-parser
+[tauri]: https://tauri.app
 [typescript]: https://www.typescriptlang.org/

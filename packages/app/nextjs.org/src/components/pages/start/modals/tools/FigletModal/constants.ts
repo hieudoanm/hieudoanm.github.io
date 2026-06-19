@@ -1,14 +1,6 @@
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
-import { FC, useState } from 'react';
+import { FigletFont } from './types';
 
-/* ------------------------------------------------------------------ */
-/* Figlet engine — subset of standard fonts rendered in JS             */
-/* ------------------------------------------------------------------ */
-
-type FigletFont = Record<string, string[]>;
-
-/* ---- STANDARD font (FIGlet standard.flf, manually encoded) ---- */
-const STANDARD: FigletFont = {
+export const STANDARD: FigletFont = {
   ' ': ['   ', '   ', '   ', '   ', '   ', '   '],
   A: [' /\\ ', '/  \\', '/__\\', '/  \\', '/  \\', '    '],
   B: ['|\\ ', '| \\', '|__\\', '|  \\', '|__/', '    '],
@@ -79,8 +71,7 @@ const STANDARD: FigletFont = {
   $: ['/‾\\ ', '$   ', ' \\_ ', '   $', '\\_ /', '    '],
 };
 
-/* ---- BLOCK font ---- */
-const BLOCK: FigletFont = {
+export const BLOCK: FigletFont = {
   ' ': [
     '      ',
     '      ',
@@ -350,8 +341,7 @@ const BLOCK: FigletFont = {
   ],
 };
 
-/* ---- SMALL font ---- */
-const SMALL: FigletFont = {
+export const SMALL: FigletFont = {
   ' ': ['  ', '  ', '  ', '  ', '  '],
   A: [' _ ', '/_\\', '/ _\\', '\\__/', '    '],
   B: ['|__ \\', ' / /', ' |_|', ' (_)', '     '],
@@ -395,8 +385,7 @@ const SMALL: FigletFont = {
   '-': ['    ', '____', '    ', '    ', '    '],
 };
 
-/* ---- BANNER font ---- */
-const BANNER: FigletFont = {
+export const BANNER: FigletFont = {
   ' ': ['     ', '     ', '     ', '     ', '     ', '     '],
   A: ['  #  ', ' # # ', '#####', '#   #', '#   #', '      '],
   B: ['#### ', '#   #', '#### ', '#   #', '#### ', '      '],
@@ -438,122 +427,4 @@ const BANNER: FigletFont = {
   '?': [' ### ', '#   #', '  ## ', '     ', '  #  ', '      '],
   '.': ['     ', '     ', '     ', '  #  ', '  #  ', '      '],
   '-': ['     ', '     ', '#####', '     ', '     ', '      '],
-};
-
-/* ---- Render function ---- */
-const FONTS: Record<string, FigletFont> = {
-  Standard: STANDARD,
-  Block: BLOCK,
-  Small: SMALL,
-  Banner: BANNER,
-};
-
-const renderFiglet = (text: string, fontName: string): string => {
-  const font = FONTS[fontName] ?? FONTS.Standard;
-  const chars = text.toUpperCase().split('');
-  const fallback = font[' '] ?? ['   ', '   ', '   ', '   ', '   '];
-  const rows = fallback.length;
-
-  const lines: string[] = Array(rows).fill('');
-  for (const ch of chars) {
-    const glyph = font[ch] ?? font['?'] ?? fallback;
-    const h = glyph.length;
-    for (let r = 0; r < rows; r++) {
-      lines[r] += r < h ? glyph[r] : ' '.repeat((glyph[0] ?? '').length);
-    }
-  }
-  return lines.join('\n');
-};
-
-/* ------------------------------------------------------------------ */
-/* Modal                                                                */
-/* ------------------------------------------------------------------ */
-
-const FONT_NAMES = Object.keys(FONTS);
-
-export const FigletModal: FC<{ onClose: () => void }> = ({ onClose }) => {
-  const [text, setText] = useState('Hello, World!');
-  const [font, setFont] = useState('Standard');
-  const [copied, setCopied] = useState(false);
-
-  const output = renderFiglet(text || 'Hello, World!', font);
-
-  const copy = async () => {
-    await navigator.clipboard.writeText(output);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
-  const onKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Escape') onClose();
-  };
-
-  return (
-    <ModalWrapper onClose={onClose} title="FIGlet Generator" size="max-w-2xl">
-      <div onKeyDown={onKeyDown}>
-        {/* Input */}
-        <div className="mb-3 flex gap-2">
-          <input
-            autoFocus
-            type="text"
-            value={text}
-            onChange={(e) => setText(e.target.value)}
-            placeholder="Type something…"
-            maxLength={20}
-            className="input input-bordered flex-1 font-mono"
-          />
-          <select
-            value={font}
-            onChange={(e) => setFont(e.target.value)}
-            className="select select-bordered">
-            {FONT_NAMES.map((f) => (
-              <option key={f} value={f}>
-                {f}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        {/* Font tabs */}
-        <div role="tablist" className="tabs tabs-boxed mb-4">
-          {FONT_NAMES.map((f) => (
-            <a
-              key={f}
-              role="tab"
-              className={`tab ${font === f ? 'tab-active' : ''}`}
-              onClick={() => setFont(f)}>
-              {f}
-            </a>
-          ))}
-        </div>
-
-        {/* Output */}
-        <div className="bg-base-200 mb-3 overflow-x-auto rounded-xl p-4">
-          <pre className="text-base-content/80 font-mono text-xs leading-tight whitespace-pre">
-            {output}
-          </pre>
-        </div>
-
-        {/* Character count + hint */}
-        <div className="mb-3 flex items-center justify-between text-xs opacity-40">
-          <span>
-            {text.length}/20 chars · letters, digits, punctuation supported
-          </span>
-          <span>Rendered in {font}</span>
-        </div>
-
-        {/* Actions */}
-        <div className="flex gap-2">
-          <button
-            className={`btn btn-sm flex-1 ${copied ? 'btn-success' : 'btn-primary'}`}
-            onClick={copy}>
-            {copied ? '✓ Copied' : '📋 Copy ASCII'}
-          </button>
-          <button className="btn btn-ghost btn-sm" onClick={() => setText('')}>
-            Clear
-          </button>
-        </div>
-      </div>
-    </ModalWrapper>
-  );
 };
