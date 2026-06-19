@@ -10,9 +10,9 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/expo.dev/**'
-      - 'packages/app/nextjs.org/**'
-      - 'packages/app/solidjs.com/**'
+      - 'packages/app/mobile/expo.dev/**'
+      - 'packages/app/web/nextjs.org/**'
+      - 'packages/app/web/solidjs.com/**'
       - '.github/workflows/ci-app.yaml'
 
 permissions:
@@ -106,7 +106,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest]
-        app: [expo.dev, nextjs.org]
+        app: [mobile/expo.dev, web/nextjs.org]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout
@@ -137,9 +137,9 @@ jobs:
       - name: Build App
         working-directory: packages/app/${{ matrix.app }}
         run: |
-          if [ "${{ matrix.app }}" = "expo.dev" ] && [ ! -d dist ]; then
+          if [ "${{ matrix.app }}" = "mobile/expo.dev" ] && [ ! -d dist ]; then
             pnpm run build
-          elif [ "${{ matrix.app }}" = "nextjs.org" ] && [ ! -d out ]; then
+          elif [ "${{ matrix.app }}" = "web/nextjs.org" ] && [ ! -d out ]; then
             EXPORT=true pnpm run build
           fi
       - name: Build Tauri Artifact

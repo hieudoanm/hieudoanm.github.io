@@ -18,20 +18,20 @@ importers:
         specifier: 2.9.18
         version: 2.9.18
 
-  packages/app/expo.dev:
+  packages/app/mobile/expo.dev:
     dependencies:
       '@expo/ui':
         specifier: 56.0.18
         version: 56.0.18(b46bdf594927eae2f969102e41284f27)
       '@frontend/native':
         specifier: workspace:*
-        version: link:../../modules/frontend/native
+        version: link:../../../modules/frontend/native
       '@frontend/react':
         specifier: workspace:*
-        version: link:../../modules/frontend/react
+        version: link:../../../modules/frontend/react
       '@lodashx/ts':
         specifier: workspace:*
-        version: link:../../modules/lodash/extensions/typescript
+        version: link:../../../modules/lodash/extensions/typescript
       '@tanstack/react-query':
         specifier: 5.101.0
         version: 5.101.0(react@19.2.3)
@@ -163,11 +163,11 @@ importers:
         specifier: 8.61.1
         version: 8.61.1(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3)
 
-  packages/app/nextjs.org:
+  packages/app/web/nextjs.org:
     dependencies:
       '@api/ts':
         specifier: workspace:*
-        version: link:../../modules/api/typescript
+        version: link:../../../modules/api/typescript
       '@capacitor/android':
         specifier: 8.4.0
         version: 8.4.0(@capacitor/core@8.4.0)
@@ -179,7 +179,7 @@ importers:
         version: 8.4.0(@capacitor/core@8.4.0)
       '@chess/ts':
         specifier: workspace:*
-        version: link:../../modules/chess/ts
+        version: link:../../../modules/chess/ts
       '@codemirror/lang-java':
         specifier: 6.0.2
         version: 6.0.2
@@ -218,16 +218,16 @@ importers:
         version: 6.43.1
       '@frontend/native':
         specifier: workspace:*
-        version: link:../../modules/frontend/native
+        version: link:../../../modules/frontend/native
       '@frontend/react':
         specifier: workspace:*
-        version: link:../../modules/frontend/react
+        version: link:../../../modules/frontend/react
       '@lodash/ts':
         specifier: workspace:*
-        version: link:../../modules/lodash/core/typescript
+        version: link:../../../modules/lodash/core/typescript
       '@lodashx/ts':
         specifier: workspace:*
-        version: link:../../modules/lodash/extensions/typescript
+        version: link:../../../modules/lodash/extensions/typescript
       '@mediapipe/camera_utils':
         specifier: 0.3.1675466862
         version: 0.3.1675466862
@@ -458,11 +458,11 @@ importers:
         specifier: 8.61.1
         version: 8.61.1(eslint@10.5.0(jiti@2.7.0))(typescript@6.0.3)
 
-  packages/app/solidjs.com:
+  packages/app/web/solidjs.com:
     dependencies:
       '@api/ts':
         specifier: workspace:*
-        version: link:../../modules/api/typescript
+        version: link:../../../modules/api/typescript
       '@capacitor/android':
         specifier: 8.4.0
         version: 8.4.0(@capacitor/core@8.4.0)
@@ -474,7 +474,7 @@ importers:
         version: 8.4.0(@capacitor/core@8.4.0)
       '@chess/ts':
         specifier: workspace:*
-        version: link:../../modules/chess/ts
+        version: link:../../../modules/chess/ts
       '@codemirror/lang-java':
         specifier: 6.0.2
         version: 6.0.2
@@ -510,16 +510,16 @@ importers:
         version: 6.43.1
       '@frontend/native':
         specifier: workspace:*
-        version: link:../../modules/frontend/native
+        version: link:../../../modules/frontend/native
       '@frontend/solid':
         specifier: workspace:*
-        version: link:../../modules/frontend/solid
+        version: link:../../../modules/frontend/solid
       '@lodash/ts':
         specifier: workspace:*
-        version: link:../../modules/lodash/core/typescript
+        version: link:../../../modules/lodash/core/typescript
       '@lodashx/ts':
         specifier: workspace:*
-        version: link:../../modules/lodash/extensions/typescript
+        version: link:../../../modules/lodash/extensions/typescript
       '@mediapipe/camera_utils':
         specifier: 0.3.1675466862
         version: 0.3.1675466862
@@ -32372,7 +32372,7 @@ snapshots:
   normalize-package-data@2.5.0:
     dependencies:
       hosted-git-info: 2.8.9
-      resolve: 1.22.2
+      resolve: 1.22.12
       semver: 5.7.2
       validate-npm-package-license: 3.0.4
 
