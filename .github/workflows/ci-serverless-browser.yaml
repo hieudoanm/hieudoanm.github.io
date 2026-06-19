@@ -1,4 +1,4 @@
-name: CI - BrowServerless
+name: CI - Serverless Browser
 
 on:
   push:
@@ -38,7 +38,7 @@ jobs:
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: browserverless-rust
+          name: serverless-browser-rust
           path: packages/server/browserverless/rust/target/release/browserverless
 
   publish:
@@ -67,10 +67,10 @@ jobs:
           done
       - name: Publish Release
         run: |
-          gh release delete browserverless-latest --yes --cleanup-tag 2>/dev/null || true
-          gh release create browserverless-latest \
-            --title "BrowServerless (latest)" \
-            --notes "Auto-built BrowServerless from commit ${{ github.sha }}" \
+          gh release delete serverless-browser-latest --yes --cleanup-tag 2>/dev/null || true
+          gh release create serverless-browser-latest \
+            --title "Serverless Browser (latest)" \
+            --notes "Auto-built Serverless Browser from commit ${{ github.sha }}" \
             release/*
         env:
           GH_TOKEN: ${{ github.token }}
