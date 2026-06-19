@@ -7,7 +7,7 @@ import { IcoDownload, IcoSearch } from '../icons';
 import { QueryResult } from '../types';
 import { formatNumber } from '../utils/sqlExport';
 
-type DataViewProps = {
+interface DataViewProps {
   activeTable: string | null;
   loading: boolean;
   queryResult: QueryResult;
@@ -23,7 +23,7 @@ type DataViewProps = {
   onExport: () => void;
   onPrevPage: () => void;
   onNextPage: () => void;
-};
+}
 
 export const DataView: FC<DataViewProps> = memo(
   ({

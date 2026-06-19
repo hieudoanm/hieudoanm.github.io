@@ -1,4 +1,4 @@
-export type ExtensionManifestV3 = {
+export interface ExtensionManifestV3 {
   /* ===== Required ===== */
   manifest_version: 3;
   name: string;
@@ -165,7 +165,7 @@ export type ExtensionManifestV3 = {
   /* ===== Update & Homepage ===== */
   update_url: string;
   homepage_url: string;
-};
+}
 
 export const manifest: ExtensionManifestV3 = {
   manifest_version: 3,

@@ -37,7 +37,13 @@ export const CenterBlock: FC<{ block: SlideBlock }> = ({ block }) => {
           </div>
         </div>
       );
-    default:
+    case 'bullets':
+    case 'highlight':
+    case 'center':
       return null;
+    default: {
+      const _exhaustive: never = block;
+      return _exhaustive;
+    }
   }
 };

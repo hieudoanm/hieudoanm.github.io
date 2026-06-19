@@ -3,7 +3,7 @@ import { FC, memo } from 'react';
 import { FONTS } from '../fonts';
 import { ViewMode } from '../types';
 
-type ViewControlsProps = {
+interface ViewControlsProps {
   viewMode: ViewMode;
   showToc: boolean;
   showLineNumbers: boolean;
@@ -13,7 +13,7 @@ type ViewControlsProps = {
   onTocToggle: () => void;
   onLineNumbersToggle: () => void;
   onFontChange: (fontId: string) => void;
-};
+}
 
 const VIEW_MODES: { id: ViewMode; label: string }[] = [
   { id: 'split', label: 'Split' },

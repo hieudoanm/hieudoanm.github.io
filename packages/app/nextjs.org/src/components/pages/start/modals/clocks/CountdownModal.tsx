@@ -1,14 +1,14 @@
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 import { FC, useEffect, useState } from 'react';
 
-type TimeLeft = {
+interface TimeLeft {
   years: number;
   months: number;
   days: number;
   hours: number;
   minutes: number;
   seconds: number;
-};
+}
 
 const diffParts = (from: Date, to: Date): TimeLeft => {
   const start = new Date(from);

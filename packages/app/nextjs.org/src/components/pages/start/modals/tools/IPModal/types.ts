@@ -1,4 +1,4 @@
-export type IPInfo = {
+export interface IPInfo {
   ip: string;
   version: string;
   city?: string;
@@ -11,4 +11,4 @@ export type IPInfo = {
   timezone?: string;
   org?: string;
   asn?: string;
-};
+}

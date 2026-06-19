@@ -1,4 +1,4 @@
-export type Model = {
+export interface Model {
   id: string;
   canonical_slug: string;
   hugging_face_id: string | null;
@@ -42,7 +42,7 @@ export type Model = {
     top_p?: number | null;
     frequency_penalty?: number | null;
   };
-};
+}
 
 export const models: Model[] = [
   {

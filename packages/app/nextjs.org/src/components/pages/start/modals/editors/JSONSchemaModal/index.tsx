@@ -37,7 +37,9 @@ export const JSONSchemaModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       const parsed = parseJson(jsonText, {});
       setData(parsed);
       setYamlText(stringifyYaml(parsed));
-    } catch {}
+    } catch (e: unknown) {
+      console.error('JSON parse error:', e);
+    }
   }, [jsonText, inputMode]);
 
   useEffect(() => {
@@ -46,7 +48,9 @@ export const JSONSchemaModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       const parsed = parseYaml(yamlText);
       setData(parsed);
       setJsonText(JSON.stringify(parsed, null, 2));
-    } catch {}
+    } catch (e: unknown) {
+      console.error('YAML parse error:', e);
+    }
   }, [yamlText, inputMode]);
 
   const others = useMemo(() => {

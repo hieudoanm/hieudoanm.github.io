@@ -1,5 +1,21 @@
 import { tryCatch } from '@lodashx/ts';
 
+interface CaptionTrack {
+  languageCode?: string;
+  kind?: string;
+  baseUrl?: string;
+}
+
+interface CaptionsData {
+  playerCaptionsTracklistRenderer?: {
+    captionTracks?: CaptionTrack[];
+  };
+}
+
+interface PlayerResponse {
+  captions?: CaptionsData;
+}
+
 const NODE_ENV = process.env.NODE_ENV ?? 'development';
 const BASE_URL =
   NODE_ENV === 'development'
@@ -52,20 +68,20 @@ const fetchCaptionUrl = async (videoId: string): Promise<string | null> => {
       }
     }
   }
-  let playerResponse: any;
+  let playerResponse: PlayerResponse;
   try {
     playerResponse = JSON.parse(html.slice(jsonStart, jsonEnd));
   } catch {
     throw new Error('Failed to parse ytInitialPlayerResponse');
   }
-  const captionTracks: any[] =
+  const captionTracks: CaptionTrack[] =
     playerResponse?.captions?.playerCaptionsTracklistRenderer?.captionTracks ??
     [];
   if (captionTracks.length === 0) return null;
   const preferred =
-    captionTracks.find((t: any) => t.languageCode === 'en' && !t.kind) ??
-    captionTracks.find((t: any) => t.languageCode === 'en') ??
-    captionTracks.find((t: any) => t.kind === 'asr') ??
+    captionTracks.find((t) => t.languageCode === 'en' && !t.kind) ??
+    captionTracks.find((t) => t.languageCode === 'en') ??
+    captionTracks.find((t) => t.kind === 'asr') ??
     captionTracks[0];
   return preferred?.baseUrl ?? null;
 };

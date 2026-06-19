@@ -2,7 +2,7 @@
 import { countries } from '@hieudoanm.github.io/data/countries';
 import { ChangeEvent, FC, useState } from 'react';
 
-type Country = {
+interface Country {
   name: string;
   official_name: string;
   region: string;
@@ -11,7 +11,7 @@ type Country = {
   cca3: string;
   flag: string;
   rank: number;
-};
+}
 
 const REGIONS = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania'] as const;
 

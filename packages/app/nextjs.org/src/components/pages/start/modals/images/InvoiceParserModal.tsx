@@ -3,11 +3,11 @@ import { FC, useState } from 'react';
 import Tesseract from 'tesseract.js';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
-type ExtractedFields = {
+interface ExtractedFields {
   vendor: string;
   total: string;
   date: string;
-};
+}
 
 export const InvoiceParserModal: FC<{ onClose: () => void }> = ({
   onClose,

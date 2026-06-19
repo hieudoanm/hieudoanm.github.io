@@ -12,11 +12,11 @@ import {
   StringStyle,
 } from '../markdownFormatting';
 
-type FormatToolbarProps = {
+interface FormatToolbarProps {
   exec: (fn: (view: EditorView) => void) => void;
   stringStyle: string;
   onStyleChange: (v: string) => void;
-};
+}
 
 export const FormatToolbar: FC<FormatToolbarProps> = memo(
   ({ exec, stringStyle, onStyleChange }) => (

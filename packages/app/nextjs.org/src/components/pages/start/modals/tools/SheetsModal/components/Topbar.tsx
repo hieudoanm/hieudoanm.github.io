@@ -8,7 +8,7 @@ import {
   IcoUpload,
 } from '../icons';
 
-type TopbarProps = {
+interface TopbarProps {
   loading: boolean;
   dbFileName: string | null;
   opfsFiles: string[];
@@ -18,7 +18,7 @@ type TopbarProps = {
   onLoadOpfs: (f: string) => void;
   onSave: () => void;
   onExport: () => void;
-};
+}
 
 export const Topbar: FC<TopbarProps> = memo(
   ({

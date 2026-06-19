@@ -1,6 +1,6 @@
 import { Score, TimeClass } from '@chess/ts';
 
-export type Formula = {
+export interface Formula {
   ratingPlayer: number;
   ratingOpponent: number;
   ratingNew: number;
@@ -9,9 +9,9 @@ export type Formula = {
   lessThan30Games: boolean;
   overRating2400: boolean;
   overAge18: boolean;
-};
+}
 
-export type GameRow = {
+export interface GameRow {
   ratingOpponent: number;
   score: Score;
-};
+}

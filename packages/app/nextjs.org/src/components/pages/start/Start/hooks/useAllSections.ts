@@ -15,13 +15,17 @@ import {
   extensions,
   packages,
 } from '@hieudoanm.github.io/data/downloads';
-import { Tool } from '@hieudoanm.github.io/components/pages/start/cards/ToolCard';
+import { ItemCardProps } from '@hieudoanm.github.io/components/pages/start/cards/ItemCard';
+import {
+  Tool,
+  ToolCard,
+} from '@hieudoanm.github.io/components/pages/start/cards/ToolCard';
 import { ItemCard } from '@hieudoanm.github.io/components/pages/start/cards/ItemCard';
-import { ToolCard } from '@hieudoanm.github.io/components/pages/start/cards/ToolCard';
 import { ComponentType, FC } from 'react';
 
 import { match } from '../constants';
 
+type SectionItem = ItemCardProps | Tool;
 type Card = FC<any> | ComponentType<any>;
 
 export const useAllSections = (
@@ -42,14 +46,20 @@ export const useAllSections = (
       T extends { url: string; downloads?: { label: string; url: string }[] },
     >(
       item: T
-    ) =>
-      ({
-        ...item,
-        href: item.url,
-        actions: item.downloads,
-      }) as any;
+    ): Omit<T, 'url' | 'downloads'> & {
+      href: string;
+      actions?: { label: string; url: string }[];
+    } => ({
+      ...item,
+      href: item.url,
+      actions: item.downloads,
+    });
 
-    const bookmarkSections: { label: string; items: any[]; Card: Card }[] = [
+    const bookmarkSections: {
+      label: string;
+      items: SectionItem[];
+      Card: Card;
+    }[] = [
       { label: 'Agents', items: f(agentsBookmarks, 'label'), Card: ItemCard },
       { label: 'Code', items: f(codeBookmarks, 'label'), Card: ItemCard },
       {
@@ -67,7 +77,11 @@ export const useAllSections = (
       { label: 'Work', items: f(workBookmarks, 'label'), Card: ItemCard },
     ];
 
-    const toolSectionDefs: { label: string; items: Tool[]; Card: Card }[] = [
+    const toolSectionDefs: {
+      label: string;
+      items: SectionItem[];
+      Card: Card;
+    }[] = [
       { label: 'Tools', items: f(toolSections.tools, 'label'), Card: ToolCard },
       {
         label: 'Calculators',
@@ -118,7 +132,11 @@ export const useAllSections = (
       },
     ];
 
-    const downloadSections: { label: string; items: any[]; Card: Card }[] = [
+    const downloadSections: {
+      label: string;
+      items: SectionItem[];
+      Card: Card;
+    }[] = [
       {
         label: 'Agents',
         items: f(agents, 'label').map(toItemCard),

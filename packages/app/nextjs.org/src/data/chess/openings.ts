@@ -1,4 +1,4 @@
-export type Opening = {
+export interface Opening {
   eco: string;
   group: string;
   subgroup: string | null;
@@ -7,7 +7,7 @@ export type Opening = {
   first: string;
   half_moves: number;
   fen: string;
-};
+}
 
 export const openings: Opening[] = [
   {

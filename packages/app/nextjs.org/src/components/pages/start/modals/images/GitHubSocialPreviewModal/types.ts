@@ -1,6 +1,6 @@
 export type Language = { name: string; color: string };
 
-export type RepoData = {
+export interface RepoData {
   full_name: string;
   description: string | null;
   stargazers_count: number;
@@ -11,4 +11,4 @@ export type RepoData = {
   owner: { login: string; avatar_url: string };
   license: { spdx_id: string } | null;
   open_issues_count: number;
-};
+}

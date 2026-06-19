@@ -44,7 +44,9 @@ export const PomodoroModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.6);
       osc.start();
       osc.stop(ctx.currentTime + 0.6);
-    } catch {}
+    } catch (e: unknown) {
+      console.error('Audio playback error:', e);
+    }
   };
 
   const applyPreset = (p: Preset) => {

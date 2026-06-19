@@ -68,8 +68,8 @@ export const useSqlDatabase = () => {
       setStatus(
         `"${name}" · ${formatNumber(result.rows.length)} rows · ${result.columns.length} columns`
       );
-    } catch (e: any) {
-      setStatus('Query error: ' + e.message);
+    } catch (e: unknown) {
+      setStatus('Query error: ' + (e instanceof Error ? e.message : String(e)));
     }
   };
 
@@ -100,7 +100,9 @@ export const useSqlDatabase = () => {
         if (dbRef.current) {
           try {
             dbRef.current.close();
-          } catch {}
+          } catch (e: unknown) {
+            console.error('Error closing existing DB:', e);
+          }
         }
         const instance = new SQL.Database(buffer);
         const metas = enumerateTables(instance);
@@ -116,8 +118,8 @@ export const useSqlDatabase = () => {
           setQueryResult({ columns: [], rows: [] });
         }
         listOPFSFiles().then(setOpfsFiles);
-      } catch (e: any) {
-        setStatus('Error: ' + e.message);
+      } catch (e: unknown) {
+        setStatus('Error: ' + (e instanceof Error ? e.message : String(e)));
       } finally {
         setLoading(false);
       }
@@ -140,7 +142,9 @@ export const useSqlDatabase = () => {
       if (dbRef.current) {
         try {
           dbRef.current.close();
-        } catch {}
+        } catch (e: unknown) {
+          console.error('Error closing existing DB:', e);
+        }
       }
       const instance = new SQL.Database();
       createSeedData(instance);
@@ -155,8 +159,8 @@ export const useSqlDatabase = () => {
       setTables(metas);
       selectTableWithInstance(instance, 'customers');
       setStatus('Created demo database · 3 tables');
-    } catch (e: any) {
-      setStatus('Error: ' + e.message);
+    } catch (e: unknown) {
+      setStatus('Error: ' + (e instanceof Error ? e.message : String(e)));
     } finally {
       setLoading(false);
     }
@@ -175,8 +179,10 @@ export const useSqlDatabase = () => {
         `Saved to OPFS · "${dbFileName}" · ${formatBytes(data.length)}`
       );
       listOPFSFiles().then(setOpfsFiles);
-    } catch (e: any) {
-      setStatus('OPFS save error: ' + e.message);
+    } catch (e: unknown) {
+      setStatus(
+        'OPFS save error: ' + (e instanceof Error ? e.message : String(e))
+      );
     }
   };
 

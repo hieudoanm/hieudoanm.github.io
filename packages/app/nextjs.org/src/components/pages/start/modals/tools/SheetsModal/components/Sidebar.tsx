@@ -4,13 +4,13 @@ import { IcoDatabase, IcoTable } from '../icons';
 import { TableMeta } from '../types';
 import { formatNumber } from '../utils/sqlExport';
 
-type SidebarProps = {
+interface SidebarProps {
   tables: TableMeta[];
   activeTable: string | null;
   opfsFiles: string[];
   onSelectTable: (name: string) => void;
   onLoadOpfs: (f: string) => void;
-};
+}
 
 export const Sidebar: FC<SidebarProps> = memo(
   ({ tables, activeTable, opfsFiles, onSelectTable, onLoadOpfs }) => (

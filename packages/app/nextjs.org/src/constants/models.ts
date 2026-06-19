@@ -1,11 +1,11 @@
 import { GeminiModel } from '@api/ts';
 import { OpenRouterModel } from '@hieudoanm.github.io/clients/openrouter/openrouter.enums';
 
-type Model = {
+interface Model {
   company: string;
   label: string;
   value: OpenRouterModel | GeminiModel;
-};
+}
 
 export const MODELS: Model[] = [
   // Deepseek

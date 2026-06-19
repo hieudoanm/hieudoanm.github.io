@@ -3,7 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import { ChangeEvent, FC, useState } from 'react';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
-export type Word = {
+export interface Word {
   word: string;
   results: {
     definition: string;
@@ -13,7 +13,7 @@ export type Word = {
     usageOf: string[];
     typeOf: string[];
   }[];
-};
+}
 
 export const LanguagesEnglishModal: FC<{ onClose: () => void }> = ({
   onClose,

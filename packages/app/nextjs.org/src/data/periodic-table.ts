@@ -25,7 +25,7 @@ export const specificNameColorMap: Record<SpecificName, string> = {
   Actinide: 'bg-pink-900', // darker pink
 };
 
-export type Element = {
+export interface Element {
   number: number;
   group: number;
   period: number;
@@ -33,7 +33,7 @@ export type Element = {
   state: 'solid' | 'liquid' | 'gas';
   specificName: SpecificName;
   mass: number;
-};
+}
 
 export const periodicTable: Record<string, Element> = {
   H: {

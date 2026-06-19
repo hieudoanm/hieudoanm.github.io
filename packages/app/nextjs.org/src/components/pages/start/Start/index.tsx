@@ -93,8 +93,8 @@ export const Start: FC = () => {
                   </span>
                 </p>
                 <div className={GRID_MOBILE}>
-                  {items.map((item: any) => (
-                    <Card key={item.label ?? item.id} {...item} />
+                  {items.map((item) => (
+                    <Card key={item.label} {...item} />
                   ))}
                 </div>
               </section>

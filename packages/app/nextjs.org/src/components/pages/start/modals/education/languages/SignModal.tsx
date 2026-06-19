@@ -20,11 +20,16 @@ export const SignModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [isReady, setIsReady] = useState(false);
   const [sign, setSign] = useState<string>('');
 
+  interface MediaPipeCamera {
+    start: () => Promise<void>;
+    stop: () => void;
+  }
+
   useEffect(() => {
     if (!videoRef.current || !canvasRef.current || !containerRef.current)
       return;
 
-    let camera: any = null;
+    let camera: MediaPipeCamera | null = null;
 
     const load = async () => {
       try {

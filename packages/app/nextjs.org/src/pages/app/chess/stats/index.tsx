@@ -15,7 +15,7 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
-type Analysis = {
+interface Analysis {
   count: Record<string, number>;
   histogram: Record<
     string,
@@ -25,40 +25,40 @@ type Analysis = {
       bullet: Record<string, number>;
     }
   >;
-};
+}
 
-type PlayerRatings = {
+interface PlayerRatings {
   bullet: { last: number; best: number };
   blitz: { last: number; best: number };
   rapid: { last: number; best: number };
-};
+}
 
 type Format = 'bullet' | 'blitz' | 'rapid';
 type TitleKey = (typeof ALL_TITLES)[number];
 type ComparisonTabKey = 'all' | TitleKey;
 
-type PercentileResult = {
+interface PercentileResult {
   format: 'bullet' | 'blitz' | 'rapid';
   rating: number;
   percentile: number;
   betterThan: number;
   total: number;
-};
+}
 
-type ComparisonTab = {
+interface ComparisonTab {
   key: ComparisonTabKey;
   label: string;
   description: string;
   results: PercentileResult[];
-};
+}
 
-type SqlJsStatic = {
+interface SqlJsStatic {
   Database: new (data?: ArrayLike<number> | null) => DB;
-};
+}
 
-type DB = {
+interface DB {
   exec: (sql: string) => { columns: string[]; values: unknown[][] }[];
-};
+}
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 

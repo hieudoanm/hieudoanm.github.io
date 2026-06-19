@@ -1,9 +1,9 @@
 import { VersionTemplate } from '@hieudoanm.github.io/components/templates/app/VersionTemplate';
 import { GetStaticProps, NextPage } from 'next';
 
-type Props = {
+interface Props {
   version: string;
-};
+}
 
 export const VersionPage: NextPage<Props> = ({ version }) => {
   return <VersionTemplate version={version} />;

@@ -2,11 +2,11 @@ import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper
 import words from '@hieudoanm.github.io/json/words.json';
 import { FC, useEffect, useState } from 'react';
 
-export type FlashCard = {
+export interface FlashCard {
   language: string;
   front: string;
   back: string;
-};
+}
 
 export const FlashcardsModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [language, setLanguage] = useState('korean');

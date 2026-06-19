@@ -1,21 +1,21 @@
 export type ChatRole = 'user' | 'assistant';
 
-export type ChatMessage = {
+export interface ChatMessage {
   id: string;
   role: ChatRole;
   content: string;
   timestamp: number;
   model?: string;
-};
+}
 
-export type ChatConversation = {
+export interface ChatConversation {
   id: string;
   title: string;
   messages: ChatMessage[];
   model: string;
   createdAt: number;
   updatedAt: number;
-};
+}
 
 export interface ChatTemplateProps {
   initialMessages?: ChatMessage[];

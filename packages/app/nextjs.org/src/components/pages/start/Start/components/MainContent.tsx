@@ -24,14 +24,41 @@ import { Section } from './Section';
 
 type MainTab = 'bookmarks' | 'downloads' | 'tools';
 
-type MainContentProps = {
+interface MainContentProps {
   today: string;
   query: string;
   onQueryChange: (v: string) => void;
   toolSections: ReturnType<typeof makeTools>;
-};
+}
 
-const EMPTY_ARR: [] = [];
+const TABS: { id: MainTab; label: string; emoji: string }[] = [
+  { id: 'bookmarks', label: 'Bookmarks', emoji: '🔖' },
+  { id: 'downloads', label: 'Downloads', emoji: '📦' },
+  { id: 'tools', label: 'Tools', emoji: '🔧' },
+];
+
+const bookmarkSections = [
+  { label: 'Agents', items: agentsBookmarks },
+  { label: 'Code', items: codeBookmarks },
+  { label: 'Google Workspace', items: googleBookmarks },
+  { label: 'Messaging', items: messagingBookmarks },
+  { label: 'Music', items: musicBookmarks },
+  { label: 'Social', items: socialBookmarks },
+  { label: 'Work', items: workBookmarks },
+] as const;
+
+const downloadSections = [
+  { label: 'Agents', items: agents },
+  { label: 'CLIs', items: clis },
+  { label: 'Extensions', items: extensions },
+  { label: 'Packages', items: packages },
+] as const;
+
+const filterBy = <T extends { label?: string; id?: string }>(
+  items: T[],
+  key: keyof T,
+  query: string
+) => items.filter((item) => match(String(item[key] ?? ''), query));
 
 export const MainContent: FC<MainContentProps> = memo(
   ({ today, query, onQueryChange, toolSections }) => {
@@ -51,19 +78,6 @@ export const MainContent: FC<MainContentProps> = memo(
       images,
       visualization,
     } = toolSections;
-
-    const bookmarkSections = useMemo(
-      () => [
-        { label: 'Agents', items: agentsBookmarks },
-        { label: 'Code', items: codeBookmarks },
-        { label: 'Google Workspace', items: googleBookmarks },
-        { label: 'Messaging', items: messagingBookmarks },
-        { label: 'Music', items: musicBookmarks },
-        { label: 'Social', items: socialBookmarks },
-        { label: 'Work', items: workBookmarks },
-      ],
-      EMPTY_ARR
-    );
 
     const toolSectionDefs = useMemo(
       () => [
@@ -96,34 +110,19 @@ export const MainContent: FC<MainContentProps> = memo(
       ]
     );
 
-    const downloadSections = useMemo(
-      () => [
-        { label: 'Agents', items: agents },
-        { label: 'CLIs', items: clis },
-        { label: 'Extensions', items: extensions },
-        { label: 'Packages', items: packages },
-      ],
-      EMPTY_ARR
-    );
-
-    const filterBy = <T extends { label?: string; id?: string }>(
-      items: T[],
-      key: keyof T
-    ) => items.filter((item) => match(String(item[key] ?? ''), query));
-
     const filteredBookmarks = useMemo(
       () =>
         bookmarkSections.map((s) => ({
           ...s,
-          filtered: filtering ? filterBy(s.items, 'label') : s.items,
+          filtered: filtering ? filterBy(s.items, 'label', query) : s.items,
         })),
-      [bookmarkSections, filtering, query]
+      [filtering, query]
     );
     const filteredTools = useMemo(
       () =>
         toolSectionDefs.map((s) => ({
           ...s,
-          filtered: filtering ? filterBy(s.items, 'label') : s.items,
+          filtered: filtering ? filterBy(s.items, 'label', query) : s.items,
         })),
       [toolSectionDefs, filtering, query]
     );
@@ -131,9 +130,9 @@ export const MainContent: FC<MainContentProps> = memo(
       () =>
         downloadSections.map((s) => ({
           ...s,
-          filtered: filtering ? filterBy(s.items, 'id') : s.items,
+          filtered: filtering ? filterBy(s.items, 'id', query) : s.items,
         })),
-      [downloadSections, filtering, query]
+      [filtering, query]
     );
 
     useEffect(() => {
@@ -152,12 +151,6 @@ export const MainContent: FC<MainContentProps> = memo(
       filteredBookmarks.some((s) => s.filtered.length > 0) ||
       filteredTools.some((s) => s.filtered.length > 0) ||
       filteredDownloads.some((s) => s.filtered.length > 0);
-
-    const TABS: { id: MainTab; label: string; emoji: string }[] = [
-      { id: 'bookmarks', label: 'Bookmarks', emoji: '🔖' },
-      { id: 'downloads', label: 'Downloads', emoji: '📦' },
-      { id: 'tools', label: 'Tools', emoji: '🔧' },
-    ];
 
     return (
       <main className="flex flex-col items-center overflow-y-auto px-8 py-12">

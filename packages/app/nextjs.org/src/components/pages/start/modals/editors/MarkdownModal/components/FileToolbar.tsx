@@ -1,6 +1,6 @@
 import { ChangeEvent, FC, memo, RefObject } from 'react';
 
-type FileToolbarProps = {
+interface FileToolbarProps {
   fileName: string;
   loading: boolean;
   ocrLoading: boolean;
@@ -13,7 +13,7 @@ type FileToolbarProps = {
   onDownloadPdf: () => void;
   onOcrFile: (e: ChangeEvent<HTMLInputElement>) => void;
   ocrInputRef: RefObject<HTMLInputElement | null>;
-};
+}
 
 export const FileToolbar: FC<FileToolbarProps> = memo(
   ({

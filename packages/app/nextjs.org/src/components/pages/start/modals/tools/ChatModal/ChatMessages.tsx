@@ -8,12 +8,12 @@ const clipboard = createClipboard();
 
 type Role = 'ai' | 'user';
 
-export type Message = {
+export interface Message {
   role: Role;
   text: string;
   loading: boolean;
   model: string;
-};
+}
 
 export const Messages: FC<{ messages: Message[] }> = ({ messages = [] }) => {
   const bottomRef = useRef<HTMLDivElement>(null);

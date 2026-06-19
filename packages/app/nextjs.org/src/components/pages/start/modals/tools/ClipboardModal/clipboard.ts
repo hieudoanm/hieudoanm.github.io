@@ -1,14 +1,13 @@
 import { createClipboard, createStorage } from '@frontend/native';
 
-export type ClipItem = {
+export interface ClipItem {
   id: string;
   content: string;
   createdAt: number;
-};
+}
 
-type ClipboardSchema = {
-  clips: ClipItem[];
-};
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type ClipboardSchema = Record<string, any>;
 
 export const clipboard = createClipboard();
 

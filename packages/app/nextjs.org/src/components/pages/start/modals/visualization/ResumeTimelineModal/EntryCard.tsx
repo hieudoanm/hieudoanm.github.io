@@ -1,13 +1,13 @@
 import { FC } from 'react';
 
-type TimelineEntry = {
+interface TimelineEntry {
   startYear: number;
   endYear: number;
   date: string;
   title: string;
   subtitle: string;
   location: string;
-};
+}
 
 export const EntryCard: FC<{ entry: TimelineEntry & { icon: string } }> = ({
   entry,

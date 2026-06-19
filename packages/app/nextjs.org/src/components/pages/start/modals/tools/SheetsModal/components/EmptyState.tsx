@@ -2,12 +2,12 @@ import { FC, memo } from 'react';
 
 import { IcoPlus, IcoUpload } from '../icons';
 
-type EmptyStateProps = {
+interface EmptyStateProps {
   loading: boolean;
   loadingMsg: string;
   onOpen: () => void;
   onNewDb: () => void;
-};
+}
 
 export const EmptyState: FC<EmptyStateProps> = memo(
   ({ loading, loadingMsg, onOpen, onNewDb }) => (

@@ -96,8 +96,13 @@ export const SlidePreview: FC<{ slide: SlideLayout; index: number }> = ({
                 ))}
               </ul>
             );
-          default:
+          case 'highlight':
+          case 'pricing-plan':
             return null;
+          default: {
+            const _exhaustive: never = block;
+            return _exhaustive;
+          }
         }
       })}
     </div>

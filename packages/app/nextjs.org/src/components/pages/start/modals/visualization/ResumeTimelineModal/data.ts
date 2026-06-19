@@ -1,17 +1,17 @@
-type TimelineEntry = {
+interface TimelineEntry {
   startYear: number;
   endYear: number;
   date: string;
   title: string;
   subtitle: string;
   location: string;
-};
+}
 
-export type Period = {
+export interface Period {
   label: string;
   education: (TimelineEntry & { icon: string }) | null;
   experience: (TimelineEntry & { icon: string }) | null;
-};
+}
 
 const rmit: TimelineEntry & { icon: string } = {
   icon: '🎓',

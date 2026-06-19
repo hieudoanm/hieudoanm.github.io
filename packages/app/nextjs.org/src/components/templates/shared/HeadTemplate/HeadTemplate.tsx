@@ -5,7 +5,7 @@ import { FC } from 'react';
    Prop Groups
 ───────────────────────────────────────────────────────────── */
 
-export type BasicProps = {
+export interface BasicProps {
   title?: string;
   description?: string;
   keywords?: string;
@@ -23,30 +23,30 @@ export type BasicProps = {
   copyright?: string;
   abstract?: string;
   formatDetection?: string;
-};
+}
 
-export type RobotsProps = {
+export interface RobotsProps {
   noIndex?: boolean;
   noFollow?: boolean;
-};
+}
 
-export type CanonicalProps = {
+export interface CanonicalProps {
   canonical?: string;
   ampUrl?: string;
   prev?: string;
   next?: string;
   alternates?: { hreflang: string; href: string }[];
-};
+}
 
-export type OgImageProps = {
+export interface OgImageProps {
   src?: string;
   alt?: string;
   width?: number;
   height?: number;
   type?: string;
-};
+}
 
-export type OgProps = {
+export interface OgProps {
   type?:
     | 'website'
     | 'article'
@@ -58,24 +58,24 @@ export type OgProps = {
   locale?: string;
   alternateLocales?: string[];
   image?: OgImageProps;
-};
+}
 
-export type ArticleProps = {
+export interface ArticleProps {
   publishedTime?: string;
   modifiedTime?: string;
   expirationTime?: string;
   authors?: string[];
   section?: string;
   tags?: string[];
-};
+}
 
-export type ProfileProps = {
+export interface ProfileProps {
   firstName?: string;
   lastName?: string;
   username?: string;
-};
+}
 
-export type TwitterProps = {
+export interface TwitterProps {
   card?: 'summary' | 'summary_large_image' | 'app' | 'player';
   site?: string;
   creator?: string;
@@ -83,72 +83,72 @@ export type TwitterProps = {
   description?: string;
   image?: string;
   imageAlt?: string;
-};
+}
 
-export type FaviconProps = {
+export interface FaviconProps {
   ico?: string;
   png16?: string;
   png32?: string;
   png192?: string;
   png512?: string;
-};
+}
 
-export type AppleProps = {
+export interface AppleProps {
   touchIcon?: string;
   touchIconPrecomposed?: string;
   webAppCapable?: boolean;
   webAppTitle?: string;
   webAppStatusBar?: 'default' | 'black' | 'black-translucent';
-};
+}
 
-export type MaskIconProps = {
+export interface MaskIconProps {
   href?: string;
   color?: string;
-};
+}
 
-export type MsProps = {
+export interface MsProps {
   tileImage?: string;
   tileColor?: string;
   tooltip?: string;
   startUrl?: string;
-};
+}
 
-export type SafariProps = {
+export interface SafariProps {
   pinnedTab?: string;
   pinnedTabColor?: string;
-};
+}
 
-export type ThemeProps = {
+export interface ThemeProps {
   color?: string;
   colorDark?: string;
   colorScheme?: 'light' | 'dark' | 'light dark' | 'dark light';
   mobileWebAppCapable?: boolean;
-};
+}
 
-export type PwaProps = {
+export interface PwaProps {
   manifest?: string;
-};
+}
 
-export type FeedProps = {
+export interface FeedProps {
   rss?: { url: string; title?: string };
   atom?: { url: string; title?: string };
-};
+}
 
-export type VerificationProps = {
+export interface VerificationProps {
   google?: string;
   bing?: string;
   yandex?: string;
   pinterest?: string;
-};
+}
 
-export type GeoProps = {
+export interface GeoProps {
   region?: string;
   placename?: string;
   position?: string;
   icbm?: string;
-};
+}
 
-export type PerformanceProps = {
+export interface PerformanceProps {
   preconnect?: string[];
   dnsPrefetch?: string[];
   preload?: {
@@ -158,11 +158,11 @@ export type PerformanceProps = {
     crossOrigin?: 'anonymous' | 'use-credentials' | '';
   }[];
   prefetch?: string[];
-};
+}
 
 export type JsonLdProps = Record<string, unknown> | Record<string, unknown>[];
 
-export type CustomProps = {
+export interface CustomProps {
   meta?: {
     name?: string;
     property?: string;
@@ -170,13 +170,13 @@ export type CustomProps = {
     httpEquiv?: string;
   }[];
   links?: { rel: string; href: string; [key: string]: string }[];
-};
+}
 
 /* ─────────────────────────────────────────────────────────────
    Root Props
 ───────────────────────────────────────────────────────────── */
 
-export type HeadTemplateProps = {
+export interface HeadTemplateProps {
   basic?: BasicProps;
   robots?: RobotsProps;
   canonical?: CanonicalProps;
@@ -197,7 +197,7 @@ export type HeadTemplateProps = {
   performance?: PerformanceProps;
   jsonLd?: JsonLdProps;
   custom?: CustomProps;
-};
+}
 
 /* ─────────────────────────────────────────────────────────────
    Component

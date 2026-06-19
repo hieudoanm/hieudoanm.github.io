@@ -1,4 +1,4 @@
-export type PWAManifest = {
+export interface PWAManifest {
   /* ===== Required (per spec / practice) ===== */
   name: string;
   short_name: string;
@@ -110,7 +110,7 @@ export type PWAManifest = {
 
   /* ===== iarc / content rating (Chrome) ===== */
   iarc_rating_id: string;
-};
+}
 
 export const manifest: PWAManifest = {
   background_color: '',

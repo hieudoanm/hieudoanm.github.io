@@ -1,14 +1,14 @@
 // tabs/TimeTab.tsx
 import { FC } from 'react';
 
-type Block = {
+interface Block {
   label: string;
   start: number;
   end: number;
   colorClass: string;
   glassClass: string;
   borderClass: string;
-};
+}
 
 const BLOCKS: Block[] = [
   {

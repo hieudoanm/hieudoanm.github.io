@@ -7,10 +7,12 @@ export const useSequence = (playTone: (id: string) => void) => {
   const [isPracticing, setIsPracticing] = useState(false);
   const [highlightedKey, setHighlightedKey] = useState<string | null>(null);
 
-  const playSequence = async (
-    sequence: { id?: string; note?: string; duration?: number }[],
-    getKey: (item: any) => string,
-    getDuration: (item: any) => number
+  const playSequence = async <
+    T extends { id?: string; note?: string; duration?: number },
+  >(
+    sequence: T[],
+    getKey: (item: T) => string,
+    getDuration: (item: T) => number
   ) => {
     if (isPracticing) return;
     setIsPracticing(true);

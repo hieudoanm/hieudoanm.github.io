@@ -39,8 +39,8 @@ export const GitHubSocialPreviewModal: FC<{ onClose: () => void }> = ({
           res.status === 404 ? 'Repository not found.' : 'GitHub API error.'
         );
       setRepo(await res.json());
-    } catch (e: any) {
-      setError(e.message ?? 'Failed to fetch repository.');
+    } catch (e: unknown) {
+      setError(e instanceof Error ? e.message : 'Failed to fetch repository.');
     } finally {
       setLoading(false);
     }

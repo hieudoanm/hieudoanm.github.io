@@ -1,4 +1,4 @@
-export type Word = {
+export interface Word {
   word: string;
   results: {
     definition: string;
@@ -10,7 +10,7 @@ export type Word = {
     derivation: string[];
     examples: string[];
   }[];
-};
+}
 
 export const getWord = async (word: string): Promise<Word> => {
   try {

@@ -12,7 +12,9 @@ export const IPModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [domain, setDomain] = useState('');
-  const [dnsResult, setDnsResult] = useState<any>(null);
+  const [dnsResult, setDnsResult] = useState<Record<string, unknown> | null>(
+    null
+  );
   const [dnsLoading, setDnsLoading] = useState(false);
   const [dnsError, setDnsError] = useState<string | null>(null);
   const [tab, setTab] = useState<'network' | 'location' | 'dns'>('network');
@@ -34,8 +36,8 @@ export const IPModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       setIpInfo(result.parsed);
       setProvider(result.provider);
       setVpnDetected(detectVPN(result.parsed.org));
-    } catch (err: any) {
-      setError(err.message);
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : String(err));
     } finally {
       setLoading(false);
     }
@@ -53,8 +55,8 @@ export const IPModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       );
       if (!res.ok) throw new Error('DNS lookup failed');
       setDnsResult(await res.json());
-    } catch (err: any) {
-      setDnsError(err.message);
+    } catch (err: unknown) {
+      setDnsError(err instanceof Error ? err.message : String(err));
     } finally {
       setDnsLoading(false);
     }

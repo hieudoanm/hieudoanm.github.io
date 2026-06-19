@@ -1,7 +1,7 @@
 export type ChessClockSide = 'player1' | 'player2';
 export type DelayType = 'none' | 'delay' | 'fischer' | 'bronstein';
 export type Stage = 'setup' | 'preview' | 'running' | 'paused';
-export type ClockState = {
+export interface ClockState {
   player1: number;
   player2: number;
   turn: ChessClockSide | null;
@@ -18,12 +18,12 @@ export type ClockState = {
   startTime: number | null;
   endTime: number | null;
   winner: ChessClockSide | null;
-};
-export type Preset = {
+}
+export interface Preset {
   label: string;
   p1: number;
   p2: number;
   delayType: DelayType;
   delaySeconds: number;
   increment: number;
-};
+}

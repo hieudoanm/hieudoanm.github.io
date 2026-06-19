@@ -1,4 +1,4 @@
-export type Event = {
+export interface Event {
   year: number;
   month: number;
   date: number;
@@ -7,7 +7,7 @@ export type Event = {
   country: string;
   field: string;
   title: string;
-};
+}
 
 export const events: Event[] = [
   {

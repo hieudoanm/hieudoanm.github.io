@@ -1,6 +1,6 @@
 import { Action } from '@hieudoanm.github.io/components/pages/start/cards/ItemCard';
 
-export type Download = {
+export interface Download {
   id: string;
   label: string;
   url: string;
@@ -8,4 +8,4 @@ export type Download = {
   color: string;
   description: string;
   downloads: Action[];
-};
+}

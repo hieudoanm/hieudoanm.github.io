@@ -5,12 +5,12 @@ import { IcoCheck, IcoCopy, IcoDownload, IcoX } from '../icons';
 import { CellVal, ExportFormat } from '../types';
 import { formatNumber, getExportContent } from '../utils/sqlExport';
 
-type ExportModalProps = {
+interface ExportModalProps {
   tableName: string;
   columns: string[];
   rows: CellVal[][];
   onClose: () => void;
-};
+}
 
 export const ExportModal: FC<ExportModalProps> = ({
   tableName,

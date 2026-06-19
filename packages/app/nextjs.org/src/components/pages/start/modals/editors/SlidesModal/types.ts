@@ -12,7 +12,7 @@ export type SlideBlock =
 
 export type SlideLayout = { kicker?: string; blocks: SlideBlock[] };
 
-export type PitchDeck = {
+export interface PitchDeck {
   title?: { product?: string; tagline?: string; audience?: string };
   problems?: {
     title?: string;
@@ -53,15 +53,15 @@ export type PitchDeck = {
       description?: string;
     }[];
   };
-};
+}
 
 export type ValidationError = { path: string; message: string; hint?: string };
 
 export type ToastType = 'success' | 'error' | 'info' | 'loading';
 
-export type ToastItem = {
+export interface ToastItem {
   id: number;
   type: ToastType;
   message: string;
   duration?: number;
-};
+}

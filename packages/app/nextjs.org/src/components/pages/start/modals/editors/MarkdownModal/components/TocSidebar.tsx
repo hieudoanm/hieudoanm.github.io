@@ -2,10 +2,10 @@ import { FC, memo } from 'react';
 
 import { TocItem } from '../constants';
 
-type TocSidebarProps = {
+interface TocSidebarProps {
   items: TocItem[];
   onScrollTo: (line: number) => void;
-};
+}
 
 export const TocSidebar: FC<TocSidebarProps> = memo(({ items, onScrollTo }) => (
   <div className="border-base-300 w-48 flex-shrink-0 overflow-y-auto border-r p-2 text-xs">

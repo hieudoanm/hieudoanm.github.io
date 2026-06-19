@@ -32,9 +32,11 @@ export const CameraModal: FC<{ onClose: () => void }> = ({ onClose }) => {
         });
         setStream(mediaStream);
         if (videoRef.current) videoRef.current.srcObject = mediaStream;
-      } catch (err: any) {
+      } catch (err: unknown) {
         console.error(err);
-        setError(err.message || 'Could not access camera');
+        setError(
+          err instanceof Error ? err.message : 'Could not access camera'
+        );
       }
     };
     initCamera();
