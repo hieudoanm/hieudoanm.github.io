@@ -10,7 +10,7 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/server/browserverless/rust/**'
+      - 'packages/serverless/browser/rust/**'
 
 permissions:
   contents: write
@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: packages/server/browserverless/rust
+        working-directory: packages/serverless/browser/rust
     steps:
       - name: Checkout
         uses: actions/checkout@v6.0.3
@@ -39,7 +39,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: serverless-browser-rust
-          path: packages/server/browserverless/rust/target/release/browserverless
+          path: packages/serverless/browser/rust/target/release/browserverless
 
   publish:
     name: Publish to GitHub Release
