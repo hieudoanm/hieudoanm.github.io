@@ -1,11 +1,5 @@
 import { parse } from 'yaml';
-import {
-  Education,
-  Experience,
-  PdfContent,
-  Project,
-  ResumeData,
-} from './yaml2pdfmake.types';
+import { Education, Experience, PdfContent, Project, ResumeData } from './';
 
 /* =====================
    HELPERS
