@@ -16,7 +16,7 @@ func jsonQuery(data interface{}, query string) (interface{}, error) {
 			idx := strings.Index(part, "[")
 			if idx >= 0 {
 				key := part[:idx]
-				arrIdx := 0
+				var arrIdx int
 				fmt.Sscanf(part[idx+1:len(part)-1], "%d", &arrIdx)
 
 				if key != "" {

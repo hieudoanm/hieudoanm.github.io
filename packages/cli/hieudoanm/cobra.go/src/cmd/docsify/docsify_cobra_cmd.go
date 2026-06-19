@@ -126,7 +126,7 @@ func basicLitString(e ast.Expr) string {
 
 func extractFlag(method string, args []ast.Expr) *FlagDoc {
 	nameIdx, shorthandIdx, defaultIdx, usageIdx := -1, -1, -1, -1
-	hasShorthand := false
+	var hasShorthand bool
 
 	switch method {
 	case "StringP", "IntP", "BoolP", "Float64P", "DurationP",
@@ -283,7 +283,7 @@ func findCmds(dir string) (map[string]*cmdRef, map[string]string, error) {
 				if !funcHasCmdReturn(node) {
 					break
 				}
-				found := false
+				var found bool
 				ast.Inspect(node.Body, func(n ast.Node) bool {
 					stmt, ok := n.(*ast.AssignStmt)
 					if !ok || len(stmt.Lhs) != 1 || len(stmt.Rhs) != 1 {
@@ -532,7 +532,7 @@ func renderFlags(w io.Writer, flags []FlagDoc, level int) {
 	fmt.Fprintf(w, "| Flag | Shorthand | Default | Description |\n")
 	fmt.Fprintf(w, "|------|-----------|---------|-------------|\n")
 	for _, f := range flags {
-		shorthand := ""
+		var shorthand string
 		if f.Shorthand != "" {
 			shorthand = "-" + f.Shorthand
 		}
@@ -601,7 +601,7 @@ func generateDocs(projectPath string, w io.Writer) error {
 	fmt.Fprintf(w, "---\n\n")
 
 	if len(root.SubCommands) > 0 {
-		flagCount := 0
+		var flagCount int
 		fmt.Fprintf(w, "## Table of Contents\n\n")
 		renderTOC(w, root, rootName, &flagCount)
 		fmt.Fprintf(w, "\n")
@@ -639,7 +639,7 @@ func newCobraCmd() *cobra.Command {
 				return err
 			}
 
-			cmd.Printf("Docs written to %s\n", output)
+			fmt.Printf("Docs written to %s\n", output)
 			return nil
 		},
 	}

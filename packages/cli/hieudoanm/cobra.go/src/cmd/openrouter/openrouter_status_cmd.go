@@ -79,7 +79,7 @@ func runOpenRouterStatus(cmd *cobra.Command, args []string, statusSearch string,
 	results := make([]ProbeResult, len(models))
 	var mu sync.Mutex
 	var wg sync.WaitGroup
-	idx := 0
+	var idx int
 
 	for i := 0; i < statusWorkers; i++ {
 		wg.Add(1)

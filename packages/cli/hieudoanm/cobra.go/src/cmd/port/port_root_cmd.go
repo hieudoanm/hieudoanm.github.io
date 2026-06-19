@@ -19,6 +19,6 @@ func NewCommand() *cobra.Command {
 	cmd.AddCommand(newCheckCmd())
 	cmd.AddCommand(newFindCmd())
 	cmd.AddCommand(newScanCmd())
-	cmd.PersistentFlags().BoolVar(&jsonOutput, "json", false, "Output in JSON format")
+	cmd.PersistentFlags().BoolVarP(&jsonOutput, "json", "j", false, "Output in JSON format")
 	return cmd
 }

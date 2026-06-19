@@ -91,7 +91,7 @@ func TestSysSparkline_PadsWithSpaces(t *testing.T) {
 	if out == "" {
 		t.Fatal("sysSparkline returned empty string")
 	}
-	spaceCount := 0
+	var spaceCount int
 	for _, c := range out[:4] {
 		if c == ' ' {
 			spaceCount++

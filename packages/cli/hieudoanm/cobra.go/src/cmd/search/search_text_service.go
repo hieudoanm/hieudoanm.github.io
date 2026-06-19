@@ -85,7 +85,7 @@ func searchFileText(path, pattern string, re *regexp.Regexp, maxCount int) []tex
 	if err != nil {
 		return nil
 	}
-	isBinary := false
+	var isBinary bool
 	for _, b := range data {
 		if b == 0 {
 			isBinary = true

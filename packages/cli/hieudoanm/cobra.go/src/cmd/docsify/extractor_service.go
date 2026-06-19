@@ -79,7 +79,7 @@ var (
 
 func extractGo(src string, info *FileInfo) {
 	lines := splitLines(src)
-	currentFunc := ""
+	var currentFunc string
 
 	for i, line := range lines {
 		trimmed := strings.TrimSpace(line)
@@ -157,7 +157,7 @@ var (
 
 func extractTS(src string, info *FileInfo) {
 	lines := splitLines(src)
-	currentFunc := ""
+	var currentFunc string
 
 	for i, line := range lines {
 		trimmed := strings.TrimSpace(line)
@@ -213,7 +213,7 @@ var (
 
 func extractPython(src string, info *FileInfo) {
 	lines := splitLines(src)
-	currentFunc := ""
+	var currentFunc string
 
 	for i, line := range lines {
 		trimmed := strings.TrimSpace(line)
@@ -258,7 +258,7 @@ var (
 
 func extractRust(src string, info *FileInfo) {
 	lines := splitLines(src)
-	currentFunc := ""
+	var currentFunc string
 
 	for i, line := range lines {
 		trimmed := strings.TrimSpace(line)

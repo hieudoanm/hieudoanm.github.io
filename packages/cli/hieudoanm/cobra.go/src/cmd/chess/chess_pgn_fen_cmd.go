@@ -77,14 +77,14 @@ func newPgn2fenCmd() *cobra.Command {
 			fmt.Printf("| %-4s | %-5s | %-6s | %-72s | %-7s | %-7s | %-10s |\n", strings.Repeat("-", 4), strings.Repeat("-", 5), strings.Repeat("-", 6), strings.Repeat("-", 72), strings.Repeat("-", 7), strings.Repeat("-", 7), strings.Repeat("-", 10))
 
 			position := chess.NewGame()
-			prevEval := 0
+			var prevEval int
 
 			for i, move := range moves {
 				position.Move(move)
 				fen := position.Position().String()
 
 				// Evaluate move unless --no-eval
-				eval := 0
+				var eval int
 
 				v, err := cloudEvalCP(fen, "standard")
 				if err == nil {

@@ -53,7 +53,7 @@ func Test_ytValidQualityIDs(t *testing.T) {
 	}
 	parts := strings.Split(got, ", ")
 	for _, q := range ytQualities {
-		found := false
+		var found bool
 		for _, p := range parts {
 			if p == q.id {
 				found = true

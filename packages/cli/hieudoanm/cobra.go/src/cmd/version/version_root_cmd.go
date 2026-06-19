@@ -28,11 +28,11 @@ func NewCommand() *cobra.Command {
 				}
 				fmt.Println(string(out))
 			} else {
-				cmd.Printf("Version: %s\n", V)
+				fmt.Printf("Version: %s\n", V)
 			}
 			return nil
 		},
 	}
-	cmd.Flags().BoolVar(&jsonOutput, "json", false, "Output in JSON format")
+	cmd.Flags().BoolVarP(&jsonOutput, "json", "j", false, "Output in JSON format")
 	return cmd
 }

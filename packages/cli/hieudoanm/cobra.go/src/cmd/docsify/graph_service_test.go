@@ -112,7 +112,7 @@ func TestGraphResolveCallEdges_multipleTargets(t *testing.T) {
 	g.AddFile(info3)
 	g.ResolveCallEdges()
 
-	callEdges := 0
+	var callEdges int
 	for _, e := range g.Edges {
 		if e.Kind == EdgeCalls {
 			callEdges++

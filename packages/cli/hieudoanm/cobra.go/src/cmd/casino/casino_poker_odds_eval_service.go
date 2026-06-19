@@ -23,7 +23,7 @@ func (c Card) String() string {
 }
 
 func ParseCard(s string) Card {
-	rank := 0
+	var rank int
 	switch s[0] {
 	case '2', '3', '4', '5', '6', '7', '8', '9':
 		rank = int(s[0] - '0')
@@ -38,7 +38,7 @@ func ParseCard(s string) Card {
 	case 'A':
 		rank = 14
 	}
-	suit := 0
+	var suit int
 	switch s[1] {
 	case 'd':
 		suit = 1
@@ -76,8 +76,8 @@ func eval5(cards [5]Card) EvalResult {
 	}
 
 	pairs := []int{}
-	trips := 0
-	quads := 0
+	var trips int
+	var quads int
 	for r, n := range counts {
 		switch n {
 		case 2:
@@ -154,7 +154,7 @@ func sumHighCards(cards [5]Card) int {
 		ranks[i] = c.Rank
 	}
 	sort.Slice(ranks, func(i, j int) bool { return ranks[i] > ranks[j] })
-	s := 0
+	var s int
 	for _, r := range ranks {
 		s = s*100 + r
 	}

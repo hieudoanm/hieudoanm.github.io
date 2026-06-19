@@ -246,7 +246,7 @@ var Presets = map[string]ViewportPreset{
 
 // NearestPreset finds the preset name closest to given dimensions.
 func NearestPreset(w, h int) string {
-	best := ""
+	var best string
 	bestDist := math.MaxFloat64
 	for name, p := range Presets {
 		d := math.Sqrt(math.Pow(float64(p.Width-w), 2) + math.Pow(float64(p.Height-h), 2))

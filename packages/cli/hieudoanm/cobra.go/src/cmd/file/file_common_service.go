@@ -12,7 +12,7 @@ import (
 
 func splitLines(s string) []string {
 	var lines []string
-	start := 0
+	var start int
 	for i := 0; i < len(s); i++ {
 		if s[i] == '\n' {
 			lines = append(lines, s[start:i])

@@ -30,6 +30,6 @@ func NewCommand() *cobra.Command {
 	cmd.AddCommand(newTailCmd())
 	cmd.AddCommand(newTypeCmd())
 	cmd.AddCommand(newWriteCmd())
-	cmd.PersistentFlags().BoolVar(&jsonOutput, "json", false, "Output in JSON format")
+	cmd.PersistentFlags().BoolVarP(&jsonOutput, "json", "j", false, "Output in JSON format")
 	return cmd
 }

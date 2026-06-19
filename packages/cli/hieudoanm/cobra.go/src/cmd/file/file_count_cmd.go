@@ -23,7 +23,7 @@ func newCountCmd() *cobra.Command {
 				return err
 			}
 
-			lines := 0
+			var lines int
 			for _, b := range data {
 				if b == '\n' {
 					lines++

@@ -32,7 +32,7 @@ func parseVersion(s string) (version, error) {
 	}
 
 	patchStr := parts[2]
-	prerelease := ""
+	var prerelease string
 	if idx := strings.Index(patchStr, "-"); idx >= 0 {
 		prerelease = patchStr[idx+1:]
 		patchStr = patchStr[:idx]

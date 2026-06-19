@@ -18,7 +18,7 @@ func generateLanguagesSVG(langs map[string]int) string {
 		bytes int
 	}
 	var entries []langEntry
-	total := 0
+	var total int
 	for name, bytes := range langs {
 		entries = append(entries, langEntry{name, bytes})
 		total += bytes

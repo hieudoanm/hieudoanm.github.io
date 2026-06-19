@@ -82,7 +82,7 @@ Accepts any of:
 			case downloadAll:
 				targets = ytQualities
 			case qualityFlag != "":
-				found := false
+				var found bool
 				for _, q := range ytQualities {
 					if q.id == qualityFlag {
 						targets = []ytQuality{q}
@@ -98,7 +98,7 @@ Accepts any of:
 				targets = ytQualities[:3]
 			}
 
-			downloaded := 0
+			var downloaded int
 			for _, q := range targets {
 				fmt.Printf("  Downloading %-18s (%s) ... ", q.id, q.resolution)
 				path, err := ytDownloadThumb(videoID, q.id, outputDir)

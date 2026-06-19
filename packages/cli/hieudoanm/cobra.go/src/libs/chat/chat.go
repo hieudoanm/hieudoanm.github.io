@@ -167,7 +167,7 @@ func (m *BaseModel) AppendMessage(role, content string) {
 func RenderContent(content string, width int) string {
 	var blocks []string
 	lines := strings.Split(content, "\n")
-	inCode := false
+	var inCode bool
 	var codeBuf strings.Builder
 	var lang, filename string
 

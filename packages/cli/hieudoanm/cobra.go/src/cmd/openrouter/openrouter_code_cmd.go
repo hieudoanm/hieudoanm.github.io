@@ -306,7 +306,7 @@ func (m codeModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		m.State = chat.StateChat
 		m.RecordThought()
 
-		content := ""
+		var content string
 		if c, ok := assistantMsg["content"].(string); ok {
 			content = c
 		}
@@ -682,7 +682,7 @@ func probeModels(models []Model, apiKey string) []ProbeResult {
 	results := make([]ProbeResult, len(models))
 	var mu sync.Mutex
 	var wg sync.WaitGroup
-	idx := 0
+	var idx int
 
 	jobs := make(chan Model, len(models))
 	for _, m := range models {

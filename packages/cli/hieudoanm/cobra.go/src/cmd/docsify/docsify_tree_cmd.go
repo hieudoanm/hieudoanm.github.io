@@ -131,7 +131,7 @@ func (gi *gitIgnore) ignore(relPath string, isDir bool) bool {
 	if err != nil {
 		adjusted = relPath
 	}
-	ignored := false
+	var ignored bool
 	for _, r := range gi.rules {
 		if r.dirOnly && !isDir {
 			continue

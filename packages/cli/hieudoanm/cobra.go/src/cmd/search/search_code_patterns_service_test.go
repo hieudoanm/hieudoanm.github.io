@@ -22,7 +22,7 @@ func TestCodePatternsForTS(t *testing.T) {
 	if !ok {
 		t.Fatal("expected patterns for .ts")
 	}
-	hasFunction := false
+	var hasFunction bool
 	for _, p := range patterns {
 		if p.kind == "function" {
 			hasFunction = true
@@ -45,7 +45,7 @@ func TestCodePatternsForPython(t *testing.T) {
 	if !ok {
 		t.Fatal("expected patterns for .py")
 	}
-	hasClass := false
+	var hasClass bool
 	for _, p := range patterns {
 		if p.kind == "class" {
 			hasClass = true
@@ -61,7 +61,7 @@ func TestCodePatternsForRust(t *testing.T) {
 	if !ok {
 		t.Fatal("expected patterns for .rs")
 	}
-	hasFn := false
+	var hasFn bool
 	for _, p := range patterns {
 		if p.kind == "function" {
 			hasFn = true
@@ -129,7 +129,7 @@ func TestCodeRegexPatterns(t *testing.T) {
 			continue
 		}
 
-		found := false
+		var found bool
 		for _, p := range patterns {
 			if p.kind != tc.kind {
 				continue

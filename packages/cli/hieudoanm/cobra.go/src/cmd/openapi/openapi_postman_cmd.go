@@ -150,7 +150,7 @@ func convertToPostman(spec JSON) (JSON, error) {
 		}
 	}
 
-	baseURL := ""
+	var baseURL string
 	if servers := getSlice(spec["servers"]); len(servers) > 0 {
 		if s := getMap(servers[0]); s != nil {
 			baseURL = getString(s["url"])

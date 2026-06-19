@@ -59,7 +59,7 @@ Use --board to specify community cards (0-5 cards).`,
 			fmt.Println(strings.Repeat("─", 48))
 			fmt.Printf("  Your hand:      %s %s\n", hole[0], hole[1])
 			if len(board) > 0 {
-				boardStr := ""
+				var boardStr string
 				for i, c := range board {
 					if i > 0 {
 						boardStr += " "

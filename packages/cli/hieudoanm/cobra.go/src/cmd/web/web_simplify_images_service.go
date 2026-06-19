@@ -194,7 +194,7 @@ func outputImagesJSON(imageURLs []string, sourceURL string) error {
 
 func saveImages(imageURLs []string, sourceURL string, imgIndex int, outputDir string) int {
 	prefix := slugFromURL(sourceURL)
-	downloaded := 0
+	var downloaded int
 	for i, u := range imageURLs {
 		filename := fmt.Sprintf("%s_%d", prefix, i+1)
 		if len(imageURLs) == 1 && imgIndex > 0 {

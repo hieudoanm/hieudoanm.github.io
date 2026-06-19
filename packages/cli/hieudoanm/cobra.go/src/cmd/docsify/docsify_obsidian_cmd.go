@@ -65,7 +65,7 @@ Formats:
 				return err
 			}
 
-			orphan := 0
+			var orphan int
 			for _, n := range nodes {
 				if n.Links == 0 {
 					orphan++

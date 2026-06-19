@@ -40,7 +40,7 @@ func baccaratValue(c Card) int {
 }
 
 func baccaratSum(cards []Card) int {
-	s := 0
+	var s int
 	for _, c := range cards {
 		s += baccaratValue(c)
 	}
@@ -72,7 +72,7 @@ func baccaratDrawForThird(cards []Card, playerThird int) bool {
 
 func newBaccaratDeck() []Card {
 	d := make([]Card, 52)
-	i := 0
+	var i int
 	for r := 2; r <= 14; r++ {
 		for s := 0; s < 4; s++ {
 			d[i] = Card{Rank: r, Suit: Suit(s)}

@@ -17,9 +17,9 @@ func newBaccaratStrategyCmd() *cobra.Command {
   casino baccarat strategy --simulations 50000`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			sims := baccaratStrategySims
-			pWins := 0
-			bWins := 0
-			ties := 0
+			var pWins int
+			var bWins int
+			var ties int
 
 			for range sims {
 				deck := newShuffledDeck()

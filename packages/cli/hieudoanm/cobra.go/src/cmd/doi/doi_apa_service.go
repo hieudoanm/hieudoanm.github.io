@@ -41,7 +41,7 @@ func PrintCitation(data CrossRefData) {
 	// If 2 authors: (Smith & Doe, 2020)
 	// If 3+ authors: (Smith et al., 2020)
 
-	citation := ""
+	var citation string
 
 	if len(msg.Authors) == 0 {
 		citation = fmt.Sprintf("(Unknown, %s)", year)
@@ -66,7 +66,7 @@ func PrintReference(data CrossRefData) {
 	msg := data.Message
 
 	// Authors: "Family, G."
-	authorsAPA := ""
+	var authorsAPA string
 	for i, a := range msg.Authors {
 		part := fmt.Sprintf("%s, %s.", a.Family, string([]rune(a.Given)[0]))
 		if i == 0 {
@@ -79,7 +79,7 @@ func PrintReference(data CrossRefData) {
 	}
 
 	// Year
-	year := ""
+	var year string
 	if len(msg.PublishedPrint.DateParts) > 0 && len(msg.PublishedPrint.DateParts[0]) > 0 {
 		year = fmt.Sprintf("%d", msg.PublishedPrint.DateParts[0][0])
 	} else {
@@ -87,13 +87,13 @@ func PrintReference(data CrossRefData) {
 	}
 
 	// Title
-	title := ""
+	var title string
 	if len(msg.Title) > 0 {
 		title = msg.Title[0]
 	}
 
 	// Container title (journal)
-	journal := ""
+	var journal string
 	if len(msg.ContainerTitle) > 0 {
 		journal = msg.ContainerTitle[0]
 	}

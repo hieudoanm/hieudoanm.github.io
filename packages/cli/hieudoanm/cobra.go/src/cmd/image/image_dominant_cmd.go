@@ -39,7 +39,7 @@ func newDominantCmd() *cobra.Command {
 			totalPixels := w * h
 			step := max(1, totalPixels/10000)
 
-			count := 0
+			var count int
 			for y := bounds.Min.Y; y < bounds.Max.Y; y++ {
 				for x := bounds.Min.X; x < bounds.Max.X; x++ {
 					count++

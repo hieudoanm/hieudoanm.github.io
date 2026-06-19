@@ -149,7 +149,7 @@ func (g *Game) parseFEN(fen string) {
 	rows := strings.Split(parts[0], "/")
 	i := 56 // a8
 	for _, r := range rows {
-		file := 0
+		var file int
 		for _, ch := range r {
 			if ch >= '1' && ch <= '8' {
 				empty := int(ch - '0')
@@ -623,7 +623,7 @@ func (g *Game) isKingAttacked(side Color) bool {
 
 // ===== Simple evaluation =====
 func (g *Game) Eval() int {
-	score := 0
+	var score int
 	for i := 0; i < 64; i++ {
 		p := g.board[i]
 		if p == Empty {
@@ -712,7 +712,7 @@ func (g *Game) Perft(depth int) int {
 	if depth == 0 {
 		return 1
 	}
-	nodes := 0
+	var nodes int
 	moves := g.GenerateLegalMoves()
 	for _, m := range moves {
 		captured := g.board[m.to]

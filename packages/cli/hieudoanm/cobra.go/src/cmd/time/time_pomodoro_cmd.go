@@ -109,7 +109,7 @@ func (m pomodoroModel) View() tea.View {
 		}
 	}
 
-	title := ""
+	var title string
 	switch m.state {
 	case stateWork:
 		title = "🍅 Work Session"

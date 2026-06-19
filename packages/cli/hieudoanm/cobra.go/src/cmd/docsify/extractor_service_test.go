@@ -478,7 +478,7 @@ func World() string {
 		t.Errorf("expected 2 symbols, got %d", len(info.Symbols))
 	}
 
-	hasCall := false
+	var hasCall bool
 	for _, c := range info.Calls {
 		if c.CallerName == "Hello" && c.CalleeName == "World" {
 			hasCall = true

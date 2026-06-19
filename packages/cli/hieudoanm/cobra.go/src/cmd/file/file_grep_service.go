@@ -31,7 +31,7 @@ func compileIncludePattern(include string) *regexp.Regexp {
 
 func grepFiles(re *regexp.Regexp, searchPaths []string, include *regexp.Regexp, context, maxCount int) ([]lineMatch, int) {
 	var matches []lineMatch
-	totalFiles := 0
+	var totalFiles int
 
 	for _, root := range searchPaths {
 		info, err := os.Stat(root)
@@ -100,7 +100,7 @@ func outputGrepResults(matches []lineMatch, totalFiles int, pattern string) erro
 
 	multiFile := totalFiles > 1
 	for _, m := range matches {
-		prefix := ""
+		var prefix string
 		if multiFile {
 			prefix = m.File + ":"
 		}

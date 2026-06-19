@@ -58,7 +58,7 @@ func TestValidateSpecInvalidOpenAPIVersion(t *testing.T) {
 		"paths":   JSON{},
 	})
 	issues := validateSpec(spec)
-	found := false
+	var found bool
 	for _, i := range issues {
 		if strings.Contains(i, "invalid openapi version") {
 			found = true
@@ -124,7 +124,7 @@ func TestValidateSpecMissingResponses(t *testing.T) {
 		},
 	})
 	issues := validateSpec(spec)
-	found := false
+	var found bool
 	for _, i := range issues {
 		if strings.Contains(i, "missing responses") {
 			found = true
@@ -156,7 +156,7 @@ func TestValidateSpecDuplicateOpID(t *testing.T) {
 		},
 	})
 	issues := validateSpec(spec)
-	found := false
+	var found bool
 	for _, i := range issues {
 		if strings.Contains(i, "duplicate operationId") {
 			found = true
@@ -182,7 +182,7 @@ func TestValidatePathNotStartingWithSlash(t *testing.T) {
 		},
 	})
 	issues := validateSpec(spec)
-	found := false
+	var found bool
 	for _, i := range issues {
 		if strings.Contains(i, "should start with /") {
 			found = true
@@ -232,7 +232,7 @@ func TestValidateSpecInvalidMethod(t *testing.T) {
 		},
 	})
 	issues := validateSpec(spec)
-	found := false
+	var found bool
 	for _, i := range issues {
 		if strings.Contains(i, "invalid method") {
 			found = true

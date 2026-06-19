@@ -86,7 +86,7 @@ func TestRequests(t *testing.T) {
 	}
 
 	// Retry case
-	attempts := 0
+	var attempts int
 	tsRetry := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		attempts++
 		if attempts < 2 {

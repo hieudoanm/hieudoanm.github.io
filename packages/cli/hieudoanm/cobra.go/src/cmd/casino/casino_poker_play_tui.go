@@ -146,7 +146,7 @@ func handRankName(r HandRank) string {
 
 func cardDisplay(c Card) string {
 	r := "23456789TJQKA"[c.Rank-2 : c.Rank-1]
-	s := ""
+	var s string
 	switch c.Suit {
 	case Clubs:
 		s = "♣"
@@ -499,7 +499,7 @@ func (m pokerPlayModel) View() tea.View {
 		s += fmt.Sprintf("  Villain: %s (%s)\n", cardsDisplay(m.villain), m.aiFinalHand)
 	}
 
-	streetName := ""
+	var streetName string
 	switch m.street {
 	case streetPreflop:
 		streetName = "Preflop"

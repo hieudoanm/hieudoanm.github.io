@@ -44,8 +44,8 @@ func toCardMap(cards []Card) map[Card]bool {
 func CalculateOdds(hole []Card, board []Card, numOpponents, simulations int) OddsResult {
 	deck := removeCards(newPokerDeck(), toCardMap(append(hole, board...)))
 
-	wins := 0
-	ties := 0
+	var wins int
+	var ties int
 
 	for range simulations {
 		rand.Shuffle(len(deck), func(i, j int) {
@@ -55,7 +55,7 @@ func CalculateOdds(hole []Card, board []Card, numOpponents, simulations int) Odd
 		fullBoard := make([]Card, len(board))
 		copy(fullBoard, board)
 
-		i := 0
+		var i int
 		for len(fullBoard) < 5 {
 			fullBoard = append(fullBoard, deck[i])
 			i++

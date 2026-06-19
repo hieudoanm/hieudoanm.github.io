@@ -20,7 +20,7 @@ Shows individual die results and the total when rolling multiple dice.`,
   casino dice --count 4 --sides 6`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			results := make([]int, count)
-			total := 0
+			var total int
 			for i := 0; i < count; i++ {
 				results[i] = rand.Intn(sides) + 1
 				total += results[i]

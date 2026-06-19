@@ -93,7 +93,7 @@ func runModels(cmd *cobra.Command, args []string, modelsSearch string, modelsJSO
 	for _, provider := range providers {
 		cyan.Printf("  %s\n", provider)
 		for _, m := range grouped[provider] {
-			ctx := ""
+			var ctx string
 			if m.ContextLength > 0 {
 				ctx = dim.Sprintf(" [%s ctx]", formatCtx(m.ContextLength))
 			}

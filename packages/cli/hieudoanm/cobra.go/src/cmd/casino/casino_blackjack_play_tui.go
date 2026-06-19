@@ -38,8 +38,8 @@ func bjValue(c Card) int {
 }
 
 func handValue(cards []Card) int {
-	val := 0
-	aces := 0
+	var val int
+	var aces int
 	for _, c := range cards {
 		v := bjValue(c)
 		if c.Rank == 14 {
@@ -58,7 +58,7 @@ func cardFace(c Card) string {
 	r := "  2  3  4  5  6  7  8  9 10  J  Q  K  A"
 	idx := (c.Rank - 2) * 2
 	rank := r[idx : idx+2]
-	sym := ""
+	var sym string
 	switch c.Suit {
 	case Clubs:
 		sym = "♣"

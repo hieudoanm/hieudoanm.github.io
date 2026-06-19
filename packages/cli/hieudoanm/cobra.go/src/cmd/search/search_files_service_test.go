@@ -50,7 +50,7 @@ func TestWalkWithDepth(t *testing.T) {
 		return nil
 	})
 
-	hasDeepFile := false
+	var hasDeepFile bool
 	for _, v := range visited {
 		if v == filepath.Join("a", "b", "c", "f3.txt") {
 			hasDeepFile = true
