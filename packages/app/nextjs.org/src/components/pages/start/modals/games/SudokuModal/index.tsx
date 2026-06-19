@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef, useState } from 'react';
+import { FC, useEffect, useReducer, useRef, useState } from 'react';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
 import { Grid } from './types';
@@ -10,16 +10,67 @@ import {
   formatTime,
 } from './utils/sudoku';
 
+interface GameState {
+  puzzle: Grid;
+  solution: Grid;
+  userGrid: Grid;
+  selected: [number, number] | null;
+  timer: number;
+  won: boolean;
+}
+
+type GameAction =
+  | { type: 'NEW_GAME'; puzzle: Grid; solution: Grid }
+  | { type: 'SET_CELL'; grid: Grid; won: boolean }
+  | { type: 'SELECT'; pos: [number, number] | null }
+  | { type: 'TICK' };
+
+const createInitialState = (size: 3 | 4 | 5): GameState => {
+  const e = createEmptyGrid(size);
+  return {
+    puzzle: e,
+    solution: e,
+    userGrid: e,
+    selected: null,
+    timer: 0,
+    won: false,
+  };
+};
+
+const gameReducer = (state: GameState, action: GameAction): GameState => {
+  switch (action.type) {
+    case 'NEW_GAME':
+      return {
+        puzzle: action.puzzle,
+        solution: action.solution,
+        userGrid: action.puzzle.map((r) => [...r]),
+        selected: null,
+        timer: 0,
+        won: false,
+      };
+    case 'SET_CELL':
+      return {
+        ...state,
+        userGrid: action.grid,
+        selected: null,
+        won: action.won,
+      };
+    case 'SELECT':
+      return { ...state, selected: action.pos };
+    case 'TICK':
+      return { ...state, timer: state.timer + 1 };
+    default:
+      const _exhaustive: never = action;
+      return state;
+  }
+};
+
 export const SudokuModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [size] = useState<3 | 4 | 5>(3);
-  const [puzzle, setPuzzle] = useState<Grid>(() => createEmptyGrid(size));
-  const [solution, setSolution] = useState<Grid>(() => createEmptyGrid(size));
-  const [userGrid, setUserGrid] = useState<Grid>(() => createEmptyGrid(size));
-  const [selected, setSelected] = useState<[number, number] | null>(null);
-  const [timer, setTimer] = useState(0);
-  const [won, setWon] = useState(false);
   const [diff, setDiff] = useState(0.5);
+  const [state, dispatch] = useReducer(gameReducer, size, createInitialState);
   const timerRef = useRef<number | null>(null);
+  const N = size * size;
 
   useEffect(() => {
     newGame();
@@ -29,56 +80,56 @@ export const SudokuModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   }, [size]);
 
   useEffect(() => {
-    if (won && timerRef.current !== null) {
+    if (state.won && timerRef.current !== null) {
       clearInterval(timerRef.current);
       timerRef.current = null;
     }
-  }, [won]);
+  }, [state.won]);
 
-  const N = size * size;
   const newGame = () => {
     if (timerRef.current !== null) clearInterval(timerRef.current);
     const { puzzle: p, solution: s } = generatePuzzle(size, diff);
-    setPuzzle(p);
-    setSolution(s);
-    setUserGrid(p.map((r) => [...r]));
-    setSelected(null);
-    setTimer(0);
-    setWon(false);
-    timerRef.current = window.setInterval(() => setTimer((t) => t + 1), 1000);
+    dispatch({ type: 'NEW_GAME', puzzle: p, solution: s });
+    timerRef.current = window.setInterval(
+      () => dispatch({ type: 'TICK' }),
+      1000
+    );
   };
+
   const setCell = (r: number, c: number, val: number) => {
-    if (puzzle[r][c] !== 0 || won) return;
-    const next = userGrid.map((row) => [...row]);
+    if (state.puzzle[r][c] !== 0 || state.won) return;
+    const next = state.userGrid.map((row) => [...row]);
     next[r][c] = val;
     if (val > 0 && !isValid(next, r, c, val, size)) return;
-    setUserGrid(next);
-    setSelected(null);
+    let isWon = false;
     if (val > 0) {
       const test = next.map((row) => [...row]);
       if (solve(test, size)) {
         const flat = test.flatMap((row, ri) =>
           row.map((c, ci) =>
-            c !== puzzle[ri][ci] && c === solution[ri][ci] ? 1 : 0
+            c !== state.puzzle[ri][ci] && c === state.solution[ri][ci] ? 1 : 0
           )
         );
-        if (flat.every(Boolean)) setWon(true);
+        if (flat.every(Boolean)) isWon = true;
       }
     }
+    dispatch({ type: 'SET_CELL', grid: next, won: isWon });
   };
+
   const hint = () => {
     for (let r = 0; r < N; r++)
       for (let c = 0; c < N; c++) {
-        if (userGrid[r][c] === 0 && puzzle[r][c] === 0) {
-          setCell(r, c, solution[r][c]);
+        if (state.userGrid[r][c] === 0 && state.puzzle[r][c] === 0) {
+          setCell(r, c, state.solution[r][c]);
           return;
         }
       }
   };
+
   const note = (n: number) => {
-    if (selected) {
-      const [r, c] = selected;
-      setCell(r, c, userGrid[r][c] === n ? 0 : n);
+    if (state.selected) {
+      const [r, c] = state.selected;
+      setCell(r, c, state.userGrid[r][c] === n ? 0 : n);
     }
   };
 
@@ -96,26 +147,29 @@ export const SudokuModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           ))}
         </div>
         <div>
-          <span className="opacity-50">Timer:</span> {formatTime(timer)}
+          <span className="opacity-50">Timer:</span> {formatTime(state.timer)}
         </div>
       </div>
       <div
         className={`mb-2 grid select-none`}
         style={{ gridTemplateColumns: `repeat(${N}, 1fr)`, gap: '0px' }}>
-        {userGrid.flatMap((row, r) =>
+        {state.userGrid.flatMap((row, r) =>
           row.map((val, c) => {
-            const isGiven = puzzle[r][c] !== 0;
-            const isSelected = selected?.[0] === r && selected?.[1] === c;
+            const isGiven = state.puzzle[r][c] !== 0;
+            const isSelected =
+              state.selected?.[0] === r && state.selected?.[1] === c;
             const isSameNum =
-              selected &&
+              state.selected &&
               val !== 0 &&
-              val === userGrid[selected[0]]?.[selected[1]];
+              val === state.userGrid[state.selected[0]]?.[state.selected[1]];
             const boxBorderR = (c + 1) % size === 0 && c !== N - 1;
             const boxBorderB = (r + 1) % size === 0 && r !== N - 1;
             return (
               <div
                 key={`${r}-${c}`}
-                onClick={() => !isGiven && setSelected([r, c])}
+                onClick={() =>
+                  !isGiven && dispatch({ type: 'SELECT', pos: [r, c] })
+                }
                 className={`flex aspect-square cursor-pointer items-center justify-center font-mono text-sm transition-colors ${isGiven ? 'font-bold' : ''} ${isSelected ? 'bg-primary/20' : isSameNum ? 'bg-primary/10' : (r + c) % 2 === 0 ? 'bg-base-200' : 'bg-base-100'} ${boxBorderR ? 'border-base-300 border-r-2' : ''} ${boxBorderB ? 'border-base-300 border-b-2' : ''} ${isGiven ? '' : 'hover:bg-primary/5'}`}>
                 {val !== 0 ? val : ''}
               </div>
@@ -146,9 +200,9 @@ export const SudokuModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           Hint
         </button>
       </div>
-      {won && (
+      {state.won && (
         <div className="alert alert-success mt-2 text-center text-sm">
-          Solved in {formatTime(timer)}!
+          Solved in {formatTime(state.timer)}!
         </div>
       )}
     </ModalWrapper>

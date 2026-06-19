@@ -1,25 +1,115 @@
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
-import { FC, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import {
+  FC,
+  useEffect,
+  useLayoutEffect,
+  useReducer,
+  useRef,
+  useState,
+} from 'react';
 
 import { DISK_GRADIENTS, DISK_TEXT, MAX_DISKS, MIN_DISKS } from './constants';
 import { Tower } from './types';
 import { generateMoves } from './utils/towers';
+
+interface GameState {
+  diskCount: number;
+  towers: Tower[];
+  selectedTower: number | null;
+  moves: number;
+  history: Tower[][];
+  future: Tower[][];
+}
+
+const createInitialState = (diskCount = 3): GameState => ({
+  diskCount,
+  towers: [Array.from({ length: diskCount }, (_, i) => diskCount - i), [], []],
+  selectedTower: null,
+  moves: 0,
+  history: [],
+  future: [],
+});
+
+type GameAction =
+  | { type: 'RESET'; diskCount: number }
+  | { type: 'SELECT_TOWER'; index: number }
+  | { type: 'MOVE_DISK'; from: number; to: number; capture: boolean }
+  | { type: 'UNDO'; towers: Tower[] }
+  | { type: 'REDO'; futureTowers: Tower[]; nextFuture: Tower[][] }
+  | { type: 'APPLY_MOVE'; from: number; to: number };
+
+const canDrop = (from: number, to: number, towers: Tower[]) => {
+  if (from === to) return false;
+  const fromDisk = towers[from]?.at(-1);
+  const toDisk = towers[to]?.at(-1);
+  return fromDisk && (!toDisk || fromDisk < toDisk);
+};
+
+const gameReducer = (state: GameState, action: GameAction): GameState => {
+  switch (action.type) {
+    case 'RESET':
+      return createInitialState(action.diskCount);
+    case 'SELECT_TOWER':
+      if (!state.towers[action.index]?.length) return state;
+      return { ...state, selectedTower: action.index };
+    case 'MOVE_DISK': {
+      const { from, to, capture } = action;
+      if (!canDrop(from, to, state.towers)) return state;
+      const nextTowers = state.towers.map((t) => [...t]);
+      const disk = nextTowers[from].pop()!;
+      nextTowers[to].push(disk);
+      return {
+        ...state,
+        towers: nextTowers,
+        moves: state.moves + 1,
+        selectedTower: null,
+        history: capture
+          ? [...state.history, state.towers.map((t) => [...t])]
+          : state.history,
+        future: capture ? [] : state.future,
+      };
+    }
+    case 'UNDO': {
+      return {
+        ...state,
+        towers: action.towers,
+        history: state.history.slice(0, -1),
+        moves: Math.max(0, state.moves - 1),
+      };
+    }
+    case 'REDO': {
+      return {
+        ...state,
+        towers: action.futureTowers,
+        future: action.nextFuture,
+        history: [...state.history, state.towers],
+        moves: state.moves + 1,
+      };
+    }
+    case 'APPLY_MOVE': {
+      const next = state.towers.map((t) => [...t]);
+      const disk = next[action.from].pop();
+      if (!disk) return state;
+      next[action.to].push(disk);
+      return { ...state, towers: next };
+    }
+    default:
+      const _exhaustive: never = action;
+      return state;
+  }
+};
 
 export const TowersModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const diskRefs = useRef<Map<number, HTMLDivElement>>(new Map());
   const prevPositions = useRef<Map<number, DOMRect>>(new Map());
   const autoTimer = useRef<NodeJS.Timeout | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-
-  const [diskCount, setDiskCount] = useState(3);
-  const [towers, setTowers] = useState<Tower[]>([[3, 2, 1], [], []]);
-  const [selectedTower, setSelectedTower] = useState<number | null>(null);
-  const [moves, setMoves] = useState(0);
-  const [shakeTower, setShakeTower] = useState<number | null>(null);
-  const [history, setHistory] = useState<Tower[][]>([]);
-  const [future, setFuture] = useState<Tower[][]>([]);
-  const [autoPlaying, setAutoPlaying] = useState(false);
   const towerRefs = useRef<(HTMLDivElement | null)[]>([null, null, null]);
+
+  const [state, dispatch] = useReducer(gameReducer, 3, createInitialState);
+  const [shakeTower, setShakeTower] = useState<number | null>(null);
+  const [autoPlaying, setAutoPlaying] = useState(false);
+  const { diskCount, towers, selectedTower, moves, history, future } = state;
 
   const optimalMoves = Math.pow(2, diskCount) - 1;
   const isWin = towers[2].length === diskCount;
@@ -67,6 +157,7 @@ export const TowersModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       prevPositions.current.set(disk, el.getBoundingClientRect());
     });
   };
+
   const stopAutoSolve = () => {
     if (autoTimer.current) clearTimeout(autoTimer.current);
     autoTimer.current = null;
@@ -75,76 +166,47 @@ export const TowersModal: FC<{ onClose: () => void }> = ({ onClose }) => {
 
   const resetGame = (count = diskCount) => {
     stopAutoSolve();
-    setDiskCount(count);
-    setTowers([Array.from({ length: count }, (_, i) => count - i), [], []]);
-    setMoves(0);
-    setSelectedTower(null);
-    setShakeTower(null);
-    setHistory([]);
-    setFuture([]);
-  };
-
-  const canDrop = (from: number, to: number, state = towers) => {
-    if (from === to) return false;
-    const fromDisk = state[from]?.at(-1);
-    const toDisk = state[to]?.at(-1);
-    return fromDisk && (!toDisk || fromDisk < toDisk);
-  };
-
-  const moveDisk = (from: number, to: number) => {
-    if (autoPlaying) return;
-    if (!canDrop(from, to)) {
-      setShakeTower(to);
-      setTimeout(() => setShakeTower(null), 400);
-      return;
-    }
-    capturePositions();
-    setHistory((h) => [...h, towers.map((t) => [...t])]);
-    setFuture([]);
-    const next = towers.map((t) => [...t]);
-    const disk = next[from].pop()!;
-    next[to].push(disk);
-    setTowers(next);
-    setMoves((m) => m + 1);
+    dispatch({ type: 'RESET', diskCount: count });
   };
 
   const handleTowerClick = (index: number) => {
+    if (autoPlaying) return;
     if (selectedTower === null) {
-      if (towers[index].length) setSelectedTower(index);
+      if (towers[index].length) dispatch({ type: 'SELECT_TOWER', index });
     } else {
-      moveDisk(selectedTower, index);
-      setSelectedTower(null);
+      if (!canDrop(selectedTower, index, towers)) {
+        setShakeTower(index);
+        setTimeout(() => setShakeTower(null), 400);
+        return;
+      }
+      capturePositions();
+      dispatch({
+        type: 'MOVE_DISK',
+        from: selectedTower,
+        to: index,
+        capture: true,
+      });
     }
   };
 
   const undo = () => {
     if (!history.length) return;
     capturePositions();
-    setFuture((f) => [towers, ...f]);
-    const prev = history.at(-1)!;
-    setHistory((h) => h.slice(0, -1));
-    setTowers(prev);
-    setMoves((m) => Math.max(0, m - 1));
+    dispatch({ type: 'UNDO', towers: history.at(-1)! });
   };
 
   const redo = () => {
     if (!future.length) return;
     capturePositions();
-    setHistory((h) => [...h, towers]);
-    const next = future[0];
-    setFuture((f) => f.slice(1));
-    setTowers(next);
-    setMoves((m) => m + 1);
+    dispatch({
+      type: 'REDO',
+      futureTowers: future[0],
+      nextFuture: future.slice(1),
+    });
   };
 
   const applyMove = (from: number, to: number) => {
-    setTowers((prev) => {
-      const next = prev.map((t) => [...t]);
-      const disk = next[from].pop();
-      if (!disk) return prev;
-      next[to].push(disk);
-      return next;
-    });
+    dispatch({ type: 'APPLY_MOVE', from, to });
   };
 
   const startAutoSolve = () => {
@@ -178,8 +240,7 @@ export const TowersModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   };
 
   const isValidTarget = (i: number) =>
-    selectedTower !== null && canDrop(selectedTower, i);
-
+    selectedTower !== null && canDrop(selectedTower, i, towers);
   return (
     <ModalWrapper onClose={onClose} title="Towers of Hanoi" size="max-w-2xl">
       <div

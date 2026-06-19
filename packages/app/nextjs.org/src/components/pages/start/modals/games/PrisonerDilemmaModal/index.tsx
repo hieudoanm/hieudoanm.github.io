@@ -1,23 +1,104 @@
-import { FC, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { FC, useCallback, useEffect, useMemo, useReducer, useRef } from 'react';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
 import { STRATEGIES, TOTAL_ROUNDS } from './constants';
 import { Move, Phase, Round, Strategy } from './types';
 import { chooseOpponent, formatScore, pickStrategy } from './utils/game';
 
+interface GameState {
+  phase: Phase;
+  round: number;
+  playerMove: Move | null;
+  opponentMove: Move | null;
+  playerScore: number;
+  opponentScore: number;
+  history: Round[];
+  strategy: Strategy;
+  revealStrategy: boolean;
+}
+
+const createInitialState = (): GameState => ({
+  phase: 'choose',
+  round: 1,
+  playerMove: null,
+  opponentMove: null,
+  playerScore: 0,
+  opponentScore: 0,
+  history: [],
+  strategy: pickStrategy(),
+  revealStrategy: false,
+});
+
+type GameAction =
+  | {
+      type: 'SUBMIT_MOVE';
+      playerMove: Move;
+      opponentMove: Move;
+      pAdd: number;
+      oAdd: number;
+    }
+  | { type: 'NEXT_ROUND'; totalRounds: number }
+  | { type: 'RESET' };
+
+const gameReducer = (state: GameState, action: GameAction): GameState => {
+  switch (action.type) {
+    case 'SUBMIT_MOVE':
+      return {
+        ...state,
+        phase: 'reveal',
+        playerMove: action.playerMove,
+        opponentMove: action.opponentMove,
+        playerScore: state.playerScore + action.pAdd,
+        opponentScore: state.opponentScore + action.oAdd,
+        history: [
+          ...state.history,
+          {
+            round: state.round,
+            player: action.playerMove,
+            opponent: action.opponentMove,
+            pScore: action.pAdd,
+            oScore: action.oAdd,
+          },
+        ],
+      };
+    case 'NEXT_ROUND':
+      if (state.round >= action.totalRounds) {
+        return { ...state, phase: 'done', revealStrategy: true };
+      }
+      return {
+        ...state,
+        phase: 'choose' as const,
+        round: state.round + 1,
+        playerMove: null,
+        opponentMove: null,
+      };
+    case 'RESET':
+      return createInitialState();
+    default:
+      const _exhaustive: never = action;
+      return state;
+  }
+};
+
 export const PrisonerDilemmaModal: FC<{ onClose: () => void }> = ({
   onClose,
 }) => {
-  const [phase, setPhase] = useState<Phase>('choose');
-  const [round, setRound] = useState(1);
-  const [playerMove, setPlayerMove] = useState<Move | null>(null);
-  const [opponentMove, setOpponentMove] = useState<Move | null>(null);
-  const [playerScore, setPlayerScore] = useState(0);
-  const [opponentScore, setOpponentScore] = useState(0);
-  const [history, setHistory] = useState<Round[]>([]);
-  const [strategy, setStrategy] = useState<Strategy>(pickStrategy);
-  const [revealStrategy, setRevealStrategy] = useState(false);
+  const [state, dispatch] = useReducer(
+    gameReducer,
+    undefined,
+    createInitialState
+  );
   const containerRef = useRef<HTMLDivElement>(null);
+  const {
+    phase,
+    round,
+    playerMove,
+    opponentMove,
+    playerScore,
+    opponentScore,
+    history,
+    strategy,
+  } = state;
 
   const playerHistory = useMemo(() => history.map((r) => r.player), [history]);
 
@@ -37,46 +118,24 @@ export const PrisonerDilemmaModal: FC<{ onClose: () => void }> = ({
             : move === 'defect' && opp === 'cooperate'
               ? [3, 0]
               : [2, 2];
-      const newRound: Round = {
-        round,
-        player: move,
-        opponent: opp,
-        pScore: pAdd,
-        oScore: oAdd,
-      };
-      setPlayerMove(move);
-      setOpponentMove(opp);
-      setPhase('reveal');
-      setPlayerScore((s) => s + pAdd);
-      setOpponentScore((s) => s + oAdd);
-      setHistory((h) => [...h, newRound]);
+      dispatch({
+        type: 'SUBMIT_MOVE',
+        playerMove: move,
+        opponentMove: opp,
+        pAdd,
+        oAdd,
+      });
     },
-    [phase, round, strategy, history, playerHistory]
+    [phase, strategy, history, playerHistory]
   );
 
   const nextRound = useCallback(() => {
-    if (round >= TOTAL_ROUNDS) {
-      setPhase('done');
-      setRevealStrategy(true);
-      return;
-    }
-    setRound((r) => r + 1);
-    setPlayerMove(null);
-    setOpponentMove(null);
-    setPhase('choose');
-    containerRef.current?.focus();
+    dispatch({ type: 'NEXT_ROUND', totalRounds: TOTAL_ROUNDS });
+    if (round < TOTAL_ROUNDS) containerRef.current?.focus();
   }, [round]);
 
   const reset = useCallback(() => {
-    setPhase('choose');
-    setRound(1);
-    setPlayerMove(null);
-    setOpponentMove(null);
-    setPlayerScore(0);
-    setOpponentScore(0);
-    setHistory([]);
-    setStrategy(pickStrategy());
-    setRevealStrategy(false);
+    dispatch({ type: 'RESET' });
     containerRef.current?.focus();
   }, []);
 
