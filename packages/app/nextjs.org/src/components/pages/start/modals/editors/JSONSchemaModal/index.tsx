@@ -95,6 +95,9 @@ export const JSONSchemaModal: FC<{ onClose: () => void }> = ({ onClose }) => {
         return [xmlLang()];
       case 'yaml':
         return [yamlLang()];
+      default:
+        const _exhaustive: never = lang;
+        return [];
     }
   };
 

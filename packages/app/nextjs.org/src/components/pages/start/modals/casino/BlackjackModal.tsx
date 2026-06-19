@@ -1,7 +1,11 @@
 import { FC, useEffect, useRef, useState } from 'react';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
-type Card = { rank: string; suit: string; value: number };
+interface Card {
+  rank: string;
+  suit: string;
+  value: number;
+}
 
 const ranks = [
   'A',

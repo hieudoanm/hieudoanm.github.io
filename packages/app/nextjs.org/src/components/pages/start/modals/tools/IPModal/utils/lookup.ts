@@ -8,7 +8,10 @@ export const detectVPN = (org?: string): boolean => {
   );
 };
 
-type FetchResult = { parsed: IPInfo; provider: string };
+interface FetchResult {
+  parsed: IPInfo;
+  provider: string;
+}
 
 export const fetchFromIPInfo = async (ip: string): Promise<FetchResult> => {
   const res = await fetch(`https://ipinfo.io/${ip}/json`);

@@ -1,4 +1,7 @@
-export type Language = { name: string; color: string };
+export interface Language {
+  name: string;
+  color: string;
+}
 
 export interface RepoData {
   full_name: string;

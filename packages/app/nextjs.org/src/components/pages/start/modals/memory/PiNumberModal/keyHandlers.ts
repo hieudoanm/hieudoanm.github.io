@@ -1,4 +1,5 @@
 import { HIGH_SCORE_KEY } from './constants';
+import type { GameState } from './usePiGame';
 
 export const handleEscape = (key: string, onClose: () => void): boolean => {
   if (key === 'Escape') {
@@ -23,25 +24,25 @@ export const handleGameKey = (
   digits: string[],
   locked: boolean,
   setIndex: (fn: (i: number) => number) => void,
-  setGameState: (fn: (prev: any) => any) => void,
+  setGameState: (fn: (prev: GameState) => GameState) => void,
   highScore: number
 ) => {
   if (!/^[0-9.]$/.test(key)) return;
   const correct = digits[index];
-  setGameState((p: any) => ({ ...p, revealedIndex: index }));
+  setGameState((p) => ({ ...p, revealedIndex: index }));
 
   if (key === correct) {
-    setGameState((p: any) => ({ ...p, lastResult: 'correct' }));
+    setGameState((p) => ({ ...p, lastResult: 'correct' }));
     setTimeout(() => {
       setIndex((i: number) => Math.min(i + 1, digits.length - 1));
-      setGameState((p: any) => ({
+      setGameState((p) => ({
         ...p,
         lastResult: null,
         revealedIndex: null,
       }));
     }, 200);
   } else {
-    setGameState((p: any) => {
+    setGameState((p) => {
       const newHighScore = Math.max(p.highScore, index);
       localStorage.setItem(HIGH_SCORE_KEY, String(newHighScore));
       return {

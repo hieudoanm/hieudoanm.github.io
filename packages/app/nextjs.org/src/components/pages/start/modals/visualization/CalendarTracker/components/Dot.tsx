@@ -1,6 +1,9 @@
 import { FC } from 'react';
 
-type DotProps = { index: number; date: Date };
+interface DotProps {
+  index: number;
+  date: Date;
+}
 
 export const Dot: FC<DotProps> = ({ index, date }) => {
   const today = new Date();

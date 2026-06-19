@@ -2,7 +2,11 @@ import { FC } from 'react';
 
 import { Chamber, Party } from '../types';
 
-type Dot = { x: number; y: number; color: string };
+interface Dot {
+  x: number;
+  y: number;
+  color: string;
+}
 
 const buildHemicycle = (parties: Party[], totalSeats: number): Dot[] => {
   const seatColors: string[] = [];

@@ -107,7 +107,17 @@ export const SVGModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js';
     document.head.appendChild(script);
     await new Promise((res) => (script.onload = res));
-    const zip = new (window as any).JSZip();
+    const JSZipClass = (
+      window as unknown as {
+        JSZip: new () => {
+          folder(name: string): {
+            file(name: string, data: ArrayBuffer): void;
+          };
+          generateAsync(opts: { type: string }): Promise<Blob>;
+        };
+      }
+    ).JSZip;
+    const zip = new JSZipClass();
     const folder = zip.folder('icons');
     for (const icon of icons) {
       const blob = await new Promise<Blob>((res) =>

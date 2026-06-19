@@ -22,6 +22,9 @@ export const chooseOpponent = (
       return playerHistory.includes('defect') ? 'defect' : 'cooperate';
     case 'random':
       return Math.random() < 0.5 ? 'cooperate' : 'defect';
+    default:
+      const _exhaustive: never = strategy;
+      return 'cooperate';
   }
 };
 

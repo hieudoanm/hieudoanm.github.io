@@ -10,7 +10,10 @@ export type SlideBlock =
   | { type: 'pricing-plan'; name: string; price: string; frequency: string }
   | { type: 'center'; blocks: SlideBlock[] };
 
-export type SlideLayout = { kicker?: string; blocks: SlideBlock[] };
+export interface SlideLayout {
+  kicker?: string;
+  blocks: SlideBlock[];
+}
 
 export interface PitchDeck {
   title?: { product?: string; tagline?: string; audience?: string };
@@ -55,7 +58,11 @@ export interface PitchDeck {
   };
 }
 
-export type ValidationError = { path: string; message: string; hint?: string };
+export interface ValidationError {
+  path: string;
+  message: string;
+  hint?: string;
+}
 
 export type ToastType = 'success' | 'error' | 'info' | 'loading';
 

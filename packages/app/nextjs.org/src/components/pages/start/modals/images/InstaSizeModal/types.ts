@@ -1,1 +1,4 @@
-export type FilterDef = { label: string; css: string };
+export interface FilterDef {
+  label: string;
+  css: string;
+}

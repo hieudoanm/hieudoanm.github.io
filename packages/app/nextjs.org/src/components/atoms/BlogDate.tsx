@@ -41,10 +41,12 @@ export const BlogDate: FC<BlogDateProps> = ({
   date,
   format: fmt = 'short',
 }) => {
-  let label: string;
-  if (fmt === 'long') label = formatLong(date);
-  else if (fmt === 'relative') label = formatRelative(date);
-  else label = formatShort(date);
+  const label: string =
+    fmt === 'long'
+      ? formatLong(date)
+      : fmt === 'relative'
+        ? formatRelative(date)
+        : formatShort(date);
 
   return (
     <time dateTime={date} className="text-base-content/40 text-xs">

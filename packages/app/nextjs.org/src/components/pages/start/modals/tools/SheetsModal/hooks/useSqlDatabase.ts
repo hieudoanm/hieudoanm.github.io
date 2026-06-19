@@ -38,14 +38,17 @@ export const useSqlDatabase = () => {
   const loadSqlJs = useCallback(async (): Promise<SqlJsStatic> => {
     if (sqlJs) return sqlJs;
     return new Promise((resolve, reject) => {
+      const w = window as unknown as {
+        initSqlJs?: (opts: {
+          locateFile: () => string;
+        }) => Promise<SqlJsStatic>;
+      };
       const init = () =>
-        (window as any)
-          .initSqlJs({ locateFile: () => WASM_CDN })
-          .then((s: SqlJsStatic) => {
-            setSqlJs(s);
-            resolve(s);
-          });
-      if ((window as any).initSqlJs) {
+        w.initSqlJs!({ locateFile: () => WASM_CDN }).then((s: SqlJsStatic) => {
+          setSqlJs(s);
+          resolve(s);
+        });
+      if (w.initSqlJs) {
         init();
         return;
       }

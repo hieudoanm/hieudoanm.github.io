@@ -1,7 +1,11 @@
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 import { FC, useEffect, useRef, useState } from 'react';
 
-type Preset = { label: string; work: number; break: number };
+interface Preset {
+  label: string;
+  work: number;
+  break: number;
+}
 type Phase = 'work' | 'break';
 
 const PRESETS: Preset[] = [

@@ -4,7 +4,10 @@ import { Dot } from './Dot';
 import { Weekday } from './Weekday';
 import { daysOfMonths, isLeapYear, months } from '../constants';
 
-type WeeklyViewProps = { year: number; withWeekday: boolean };
+interface WeeklyViewProps {
+  year: number;
+  withWeekday: boolean;
+}
 
 export const WeeklyView: FC<WeeklyViewProps> = ({ year, withWeekday }) => (
   <div className="w-84 md:w-112">

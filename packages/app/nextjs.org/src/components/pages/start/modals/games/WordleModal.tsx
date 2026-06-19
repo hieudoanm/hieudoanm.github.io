@@ -6,7 +6,10 @@ const WORD_SET = new Set(words);
 const MAX_ATTEMPTS: number = 6;
 
 type LetterState = 'correct' | 'present' | 'absent';
-type Guess = { word: string; result: LetterState[] };
+interface Guess {
+  word: string;
+  result: LetterState[];
+}
 
 const newTarget = () => words[Math.floor(Math.random() * words.length)];
 

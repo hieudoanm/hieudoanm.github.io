@@ -53,6 +53,9 @@ export const boardReducer = (
       return { ...state, gifLoading: action.gifLoading };
     case 'SYNC_GAME':
       return { ...state, fen: action.fen, pgn: action.pgn, thinking: false };
+    default:
+      const _exhaustive: never = action;
+      return state;
   }
 };
 

@@ -316,6 +316,7 @@
 8. Favour `io-ts` or `zod` for runtime validation — Parse external data at the boundary, then use inferred static types internally. AI agents see validated types instead of `any` or `unknown`.
 9. Use `never` in exhaustive checks — `default: const \_exhaustive: never = x;` causes a compile error when a switch misses a case. AI agents rely on the compiler to flag omissions.
 10. Prefer `satisfies` over raw casts — `const config = { port: 3000 } satisfies Config` validates without widening the type. AI agents see the narrowed literal but get type-checking.
+11. Use `pnpm` instead of `npm` or `yarn`
 
 [Back to Table of Content](#-table-of-contents)
 
@@ -406,16 +407,16 @@
 
 ## 📦 Projects
 
-| No  | Category      | Subcategory | Project          | [TypeScript][typescript] | [Go][go]             | [Rust][rust]   | [Kotlin][kotlin]                   | [Swift][swift]                                 |
-| --- | ------------- | ----------- | ---------------- | ------------------------ | -------------------- | -------------- | ---------------------------------- | ---------------------------------------------- |
-| 1   | App           | Web         | `hieudoanm.app`  | [Next.js][next.js]       |                      |                |                                    |                                                |
-| -   | -             | Mobile      | -                | [Expo][expo]             |                      |                | [Jetpack Compose][jetpack-compose] | [SwiftUI][swiftui]                             |
-| -   | -             | Desktop     | -                |                          |                      | [Tauri][tauri] |                                    |                                                |
-| 2   | CLI           |             | `hieudoanm.cli`  |                          | [cobra.go][cobra.go] | [clap.rs]      | [cli.kt]                           | [Swift Argument Parser][swift-argument-parser] |
-| 3   | Documentation |             | `hieudoanm.md`   | [Docusaurus][docusaurus] |                      |                |                                    |                                                |
-| 4   | Extensions    | Browser     | `hieudoanm.ext`  |                          |                      |                |                                    |                                                |
-| 5   | Server        |             | `backbone`       |                          | `net/http`           | [Axum][axum]   | [Ktor][ktor]                       |                                                |
-| 6   | Serverless    |             | `browserverless` |                          |                      |                |                                    |                                                |
+| No  | Category                            | Subcategory                              | Project          | [TypeScript][typescript] | [Go][go]             | [Rust][rust]   | [Kotlin][kotlin]                   | [Swift][swift]                                 |
+| --- | ----------------------------------- | ---------------------------------------- | ---------------- | ------------------------ | -------------------- | -------------- | ---------------------------------- | ---------------------------------------------- |
+| 1   | [App](./packages/app)               | Web                                      | `hieudoanm.app`  | [Next.js][next.js]       |                      |                |                                    |                                                |
+| -   | -                                   | Mobile                                   | -                | [Expo][expo]             |                      |                | [Jetpack Compose][jetpack-compose] | [SwiftUI][swiftui]                             |
+| -   | -                                   | Desktop                                  | -                |                          |                      | [Tauri][tauri] |                                    |                                                |
+| 2   | [CLI](./packages/cli)               |                                          | `hieudoanm.cli`  |                          | [cobra.go][cobra.go] | [clap.rs]      | [cli.kt]                           | [Swift Argument Parser][swift-argument-parser] |
+| 3   | [Documentation](./packages/docs)    |                                          | `hieudoanm.md`   | [Docusaurus][docusaurus] |                      |                |                                    |                                                |
+| 4   | [Extensions](./packages/extensions) | [Browser](./packages/extensions/browser) | `hieudoanm.ext`  |                          |                      |                |                                    |                                                |
+| 5   | [Server](./packages/server)         |                                          | `backbone`       |                          | `net/http`           | [Axum][axum]   | [Ktor][ktor]                       |                                                |
+| 6   | [Serverless](./packages/serverless) |                                          | `browserverless` |                          |                      |                |                                    |                                                |
 
 [Back to Table of Content](#-table-of-contents)
 

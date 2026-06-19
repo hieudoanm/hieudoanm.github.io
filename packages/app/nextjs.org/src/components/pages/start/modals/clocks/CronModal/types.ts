@@ -6,4 +6,7 @@ export interface Fields {
   dayOfWeek: Set<number>;
 }
 
-export type Preset = { label: string; value: string };
+export interface Preset {
+  label: string;
+  value: string;
+}

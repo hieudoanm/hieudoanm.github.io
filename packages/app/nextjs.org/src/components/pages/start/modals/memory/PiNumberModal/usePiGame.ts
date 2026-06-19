@@ -4,16 +4,23 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { Mode, getHighScore } from './constants';
 import { handleEscape, handleGameKey, handlePracticeKey } from './keyHandlers';
 
+export interface GameState {
+  locked: boolean;
+  lastResult: 'correct' | 'wrong' | null;
+  revealedIndex: number | null;
+  highScore: number;
+}
+
 export const usePiGame = (onClose: () => void) => {
   const digits = useMemo(() => PI.split(''), []);
   const containerRef = useRef<HTMLDivElement>(null);
   const [index, setIndex] = useState(0);
   const [mode, setMode] = useState<Mode>('practice');
   const [{ locked, lastResult, revealedIndex, highScore }, setGameState] =
-    useState({
+    useState<GameState>({
       locked: false,
-      lastResult: null as 'correct' | 'wrong' | null,
-      revealedIndex: null as number | null,
+      lastResult: null satisfies GameState['lastResult'],
+      revealedIndex: null satisfies GameState['revealedIndex'],
       highScore: getHighScore(),
     });
 

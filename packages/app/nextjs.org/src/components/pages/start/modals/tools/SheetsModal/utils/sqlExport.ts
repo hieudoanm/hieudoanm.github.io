@@ -92,5 +92,8 @@ export const getExportContent = (
       return convertToMarkdown(columns, rows);
     case 'sql':
       return convertToSQL(tableName, columns, rows);
+    default:
+      const _exhaustive: never = format;
+      return '';
   }
 };

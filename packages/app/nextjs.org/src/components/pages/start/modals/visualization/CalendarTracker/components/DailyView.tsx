@@ -4,7 +4,10 @@ import { Dot } from './Dot';
 import { Weekday } from './Weekday';
 import { isLeapYear } from '../constants';
 
-type DailyViewProps = { year: number; withWeekday: boolean };
+interface DailyViewProps {
+  year: number;
+  withWeekday: boolean;
+}
 
 export const DailyView: FC<DailyViewProps> = ({ year, withWeekday }) => {
   const times =

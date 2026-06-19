@@ -1,3 +1,11 @@
-export type Settlement = { from: string; to: string; amount: number };
+export interface Settlement {
+  from: string;
+  to: string;
+  amount: number;
+}
 
-export type PersonRow = { name: string; paid: number; owes: number };
+export interface PersonRow {
+  name: string;
+  paid: number;
+  owes: number;
+}

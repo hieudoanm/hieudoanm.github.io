@@ -8,7 +8,10 @@ export const morsify = (text: string): string =>
     .join(' ');
 
 export const playMorse = (text: string, onDone: () => void) => {
-  const AudioCtx = window.AudioContext || (window as any).webkitAudioContext;
+  const AudioCtx =
+    window.AudioContext ??
+    (window as unknown as { webkitAudioContext: typeof AudioContext })
+      .webkitAudioContext;
   const ctx = new AudioCtx();
   const unit = 0.08;
   const freq = 600;

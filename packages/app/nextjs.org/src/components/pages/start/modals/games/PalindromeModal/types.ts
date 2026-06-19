@@ -6,5 +6,11 @@ export interface Puzzle {
   type: PuzzleType;
 }
 
-export type Definition = { partOfSpeech: string; definition: string };
-export type WordData = { word: string; definitions: Definition[] };
+export interface Definition {
+  partOfSpeech: string;
+  definition: string;
+}
+export interface WordData {
+  word: string;
+  definitions: Definition[];
+}

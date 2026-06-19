@@ -8,7 +8,11 @@ const IGNORE_NUMBERS_4 = new Set([
   1111, 2222, 3333, 4444, 5555, 6666, 7777, 8888, 9999,
 ]);
 
-type Routine = { descending: number; ascending: number; result: number };
+interface Routine {
+  descending: number;
+  ascending: number;
+  result: number;
+}
 
 const kaprekarRoutine = (
   number: number,

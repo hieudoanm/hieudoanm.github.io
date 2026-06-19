@@ -5,15 +5,13 @@ import { createTRPCNext } from '@trpc/next';
 const getBaseUrl = (): string => {
   if (
     typeof window !== 'undefined' &&
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    !(window as any).location.href.includes('https://hieudoanm.github.io/chat')
+    !window.location.href.includes('https://hieudoanm.github.io/chat')
   ) {
     return ''; // browser should use relative path
   }
   if (
     typeof window !== 'undefined' &&
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (window as any).location.href.includes('https://hieudoanm.github.io/chat')
+    window.location.href.includes('https://hieudoanm.github.io/chat')
   ) {
     return 'https://hieudoanm-chat.vercel.app'; // reference to vercel.com
   }

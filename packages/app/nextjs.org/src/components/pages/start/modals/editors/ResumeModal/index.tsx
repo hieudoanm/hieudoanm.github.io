@@ -10,7 +10,7 @@ import type { TDocumentDefinitions } from 'pdfmake/interfaces';
 import { ParseResult, YAML_TEMPLATE } from './constants';
 import { useCodeMirror } from './useCodeMirror';
 
-(pdfMake as any).vfs = pdfFonts.vfs;
+(pdfMake as unknown as { vfs: typeof pdfFonts.vfs }).vfs = pdfFonts.vfs;
 
 export const ResumeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const iframeRef = useRef<HTMLIFrameElement | null>(null);

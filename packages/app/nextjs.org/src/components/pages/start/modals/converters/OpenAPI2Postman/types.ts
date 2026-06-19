@@ -5,7 +5,9 @@ export type JsonValue =
   | null
   | JsonValue[]
   | JsonObject;
-export type JsonObject = { [key: string]: JsonValue };
+export interface JsonObject {
+  [key: string]: JsonValue;
+}
 
 export interface StackFrame {
   obj: JsonObject;

@@ -1,4 +1,4 @@
-import { ChangeEventHandler, FC, useRef, useState } from 'react';
+import { ChangeEvent, ChangeEventHandler, FC, useRef, useState } from 'react';
 import { countWords } from './utils/typoglycemia';
 
 export const EditorTab: FC<{
@@ -33,7 +33,7 @@ export const EditorTab: FC<{
   const handlePaste = async () => {
     try {
       const text = await navigator.clipboard.readText();
-      onChange({ target: { value: text } } as any);
+      onChange({ target: { value: text } } as ChangeEvent<HTMLTextAreaElement>);
     } catch (err) {
       console.error(err);
     }
