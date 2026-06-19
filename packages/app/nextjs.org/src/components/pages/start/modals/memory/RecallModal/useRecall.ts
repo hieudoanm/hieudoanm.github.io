@@ -9,6 +9,7 @@ import {
   generateNumber,
   highlightMistakes,
 } from './constants';
+import { useHighStreak } from './useHighStreak';
 
 export const useRecall = (onClose: () => void) => {
   const [lastRoundFailed, setLastRoundFailed] = useState(false);
@@ -19,13 +20,7 @@ export const useRecall = (onClose: () => void) => {
   const [message, setMessage] = useState('');
   const [countdown, setCountdown] = useState(0);
   const [mask, setMask] = useState(false);
-  const [highStreak, setHighStreak] = useState(() => {
-    if (typeof window !== 'undefined') {
-      const stored = localStorage.getItem('highStreak');
-      return stored ? parseInt(stored, 10) : 0;
-    }
-    return 0;
-  });
+  const { highStreak, updateHighStreak } = useHighStreak();
 
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
@@ -52,7 +47,6 @@ export const useRecall = (onClose: () => void) => {
       MAX_TIME,
       Math.max(MIN_TIME, nextLevel * TIME_PER_DIGIT)
     );
-
     setNumber(value);
     setInput('');
     setPhase('show');
@@ -74,14 +68,6 @@ export const useRecall = (onClose: () => void) => {
     setLevel(1);
     setMessage('');
     startRound(1);
-  };
-
-  const updateHighStreak = (newStreak: number) => {
-    setHighStreak((prev) => {
-      const high = Math.max(prev, newStreak);
-      localStorage.setItem('highStreak', high.toString());
-      return high;
-    });
   };
 
   const submit = () => {

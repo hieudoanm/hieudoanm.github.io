@@ -1,7 +1,8 @@
 import { PI } from '@hieudoanm.github.io/data/pi';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
-import { DIGIT_WIDTH, HIGH_SCORE_KEY, Mode, getHighScore } from './constants';
+import { Mode, getHighScore } from './constants';
+import { handleEscape, handleGameKey, handlePracticeKey } from './keyHandlers';
 
 export const usePiGame = (onClose: () => void) => {
   const digits = useMemo(() => PI.split(''), []);
@@ -9,15 +10,10 @@ export const usePiGame = (onClose: () => void) => {
   const [index, setIndex] = useState(0);
   const [mode, setMode] = useState<Mode>('practice');
   const [{ locked, lastResult, revealedIndex, highScore }, setGameState] =
-    useState<{
-      locked: boolean;
-      lastResult: 'correct' | 'wrong' | null;
-      revealedIndex: number | null;
-      highScore: number;
-    }>({
+    useState({
       locked: false,
-      lastResult: null,
-      revealedIndex: null,
+      lastResult: null as 'correct' | 'wrong' | null,
+      revealedIndex: null as number | null,
       highScore: getHighScore(),
     });
 
@@ -42,45 +38,20 @@ export const usePiGame = (onClose: () => void) => {
   };
 
   const handleKey = (key: string) => {
-    if (key === 'Escape') {
-      onClose();
-      return;
-    }
-
+    if (handleEscape(key, onClose)) return;
     if (mode === 'practice') {
-      if (key === 'ArrowRight')
-        setIndex((i) => Math.min(i + 1, digits.length - 1));
-      if (key === 'ArrowLeft') setIndex((i) => Math.max(i - 1, 0));
+      handlePracticeKey(key, setIndex, digits.length - 1);
       return;
     }
-
-    if (mode === 'game' && !locked && /^[0-9.]$/.test(key)) {
-      const correct = digits[index];
-      setGameState((p) => ({ ...p, revealedIndex: index }));
-
-      if (key === correct) {
-        setGameState((p) => ({ ...p, lastResult: 'correct' }));
-        setTimeout(() => {
-          setIndex((i) => Math.min(i + 1, digits.length - 1));
-          setGameState((p) => ({
-            ...p,
-            lastResult: null,
-            revealedIndex: null,
-          }));
-        }, 200);
-      } else {
-        setGameState((p) => {
-          const newHighScore = Math.max(p.highScore, index);
-          localStorage.setItem(HIGH_SCORE_KEY, String(newHighScore));
-          return {
-            ...p,
-            locked: true,
-            lastResult: 'wrong',
-            highScore: newHighScore,
-          };
-        });
-      }
-    }
+    handleGameKey(
+      key,
+      index,
+      digits,
+      locked,
+      setIndex,
+      setGameState,
+      highScore
+    );
   };
 
   const onKeyDown = (e: React.KeyboardEvent) => {

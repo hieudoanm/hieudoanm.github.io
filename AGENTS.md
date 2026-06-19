@@ -1,26 +1,32 @@
-# Agents
+# 🤖 Agents
 
-## Table of Contents
+## 📑 Table of Contents
 
-- [Agents](#agents)
-  - [Table of Contents](#table-of-contents)
-  - [Coding Convention](#coding-convention)
-    - [Go](#go)
-      - [cobra.go](#cobrago)
-    - [Kotlin](#kotlin)
-      - [cli.kt](#clikt)
-      - [Ktor](#ktor)
-    - [Python](#python)
-      - [pandas](#pandas)
-    - [Rust](#rust)
-      - [clap.rs](#claprs)
-    - [Swift](#swift)
-      - [Swift Argument Parser](#swift-argument-parser)
-    - [TypeScript](#typescript)
-      - [React](#react)
-      - [Next.js](#nextjs)
+- [🤖 Agents](#-agents)
+  - [📑 Table of Contents](#-table-of-contents)
+  - [📐 Coding Convention](#-coding-convention)
+    - [🐚 Bash](#-bash)
+    - [🔷 Go](#-go)
+      - [🦾 cobra.go](#-cobrago)
+    - [🟣 Kotlin](#-kotlin)
+      - [⌨️ cli.kt](#️-clikt)
+      - [⚡ Ktor](#-ktor)
+    - [🐍 Python](#-python)
+      - [🐼 pandas](#-pandas)
+    - [🦀 Rust](#-rust)
+      - [📋 clap.rs](#-claprs)
+      - [🌐 axum](#-axum)
+    - [🕊️ Swift](#️-swift)
+      - [🏗️ Swift Argument Parser](#️-swift-argument-parser)
+    - [🔵 TypeScript](#-typescript)
+      - [🧪 Jest](#-jest)
+      - [⚛️ React](#️-react)
+      - [▲ Next.js](#-nextjs)
+      - [🎭 Playwright](#-playwright)
+      - [🦖 Docusaurus](#-docusaurus)
+  - [📦 Projects](#-projects)
 
-## Coding Convention
+## 📐 Coding Convention
 
 1. `Explicit types > Implicit` — TypeScript types, Rust type annotations, Python type hints. AI agents rely heavily on type information to understand what values flow where. A function signature tells us more than 100 lines of body.
 2. `Flat over deeply nested` — Shallow directory trees, short functions, minimal indentation. Deeply nested code (callback hell, 5-level if pyramids) exceeds context windows faster and is harder to trace.
@@ -37,11 +43,28 @@
    - **Return values over side effects**: Functions that mutate arguments or globals hide their impact. AI agents trust return values as the single source of truth.
 10. `Use conventional project layouts` — Follow community-standard directory structures (`src/`, `cmd/`, `internal/`, `tests/`). AI agents locate files by convention rather than scanning build configs.
 
-[Back to Table of Contents](#table-of-contents)
+[Back to Table of Contents](#-table-of-contents)
 
 ---
 
-### [Go](https://go.dev/)
+### 🐚 [Bash][bash]
+
+1. Use `set -euo pipefail` at the start of every script — Catches errors early, undefined variables, and pipe failures. AI agents see the safety contract from the first line instead of guessing error handling.
+2. Prefer `[[ ]]` over `[ ]` for conditionals — `[[ ]]` avoids word splitting and has fewer surprises. AI agents parse the more reliable syntax without reasoning about edge cases.
+3. Use `$(...)` over backticks for command substitution — Backticks nest poorly and are visually ambiguous. AI agents see the intent clearly from the `$()` delimiters.
+4. Quote all variable expansions — `"$var"` and `"${array[@]}"` prevent word splitting and globbing. AI agents trust that filenames with spaces won't break the logic.
+5. Use `local` in function-scoped variables — Prevents leaking state between functions. AI agents reason about variable scope from the declaration keyword.
+6. Prefer `printf` over `echo` — `printf` is consistent across platforms and supports format strings. AI agents see the exact output format without scanning for `echo` flags.
+7. Use `read -r` for parsing input — `-r` prevents backslash interpretation. AI agents trust that input won't be accidentally mangled.
+8. Handle errors with `trap` — `trap cleanup EXIT ERR` ensures cleanup on failure. AI agents see teardown logic in one place rather than checking exit points.
+9. Prefer `mapfile` / `readarray` for reading files into arrays — Avoids `while read` subshell pitfalls. AI agents see the full data captured without tracking pipeline scoping.
+10. Use `shellcheck` as a lint gate — Run `shellcheck` in CI with `--severity=style`. AI agents produce fewer shellcheck warnings when rules are standardised.
+
+[Back to Table of Contents](#-table-of-contents)
+
+---
+
+### 🔷 [Go][go]
 
 1. Use `error` as the last return value — Functions that can fail should return `error` as the final return value. AI agents infer failure paths from signatures.
 2. Handle errors explicitly, never ignore — Check every error return. Use `if err != nil { return ... }` rather than `\_ =`. Never use `must`-style panics outside `init`/`main`.
@@ -54,11 +77,11 @@
 9. Prefer `sync` primitives over channels for state — Use `sync.Mutex`/`sync.RWMutex` for protecting shared state; use channels for communication/coordination.
 10. Return early, avoid deep nesting — Guard clauses (`if err != nil { return }`) keep the happy path flat and readable.
 
-[Back to Table of Content](#table-of-contents)
+[Back to Table of Content](#-table-of-contents)
 
 ---
 
-#### [cobra.go](https://cobra.dev)
+#### 🦾 [cobra.go][cobra.go]
 
 1. Use `RunE` over `Run` for commands — `RunE` returns an error that Cobra prints and exits with code 1. AI agents see failure paths in the signature instead of guessing from `Run`'s void return.
 2. Nest subcommands via `AddCommand` — `rootCmd.AddCommand(subCmd)` builds a parent-child tree. AI agents infer CLI structure from command registration without parsing help strings.
@@ -71,11 +94,11 @@
 9. Favour `StringVarP` / `IntVarP` with short flags — `--verbose, -v` binds a flag to a variable at init time. AI agents see both long and short forms in one call instead of separate declarations.
 10. Group commands with `cmd.Groups` in v2 — Organize subcommands into logical groups for `--help` output. AI agents parse the group structure to understand command relationships.
 
-[Back to Table of Content](#table-of-contents)
+[Back to Table of Content](#-table-of-contents)
 
 ---
 
-### [Kotlin](https://kotlinlang.org)
+### 🟣 [Kotlin][kotlin]
 
 1. Prefer `val` over `var` — Use immutable `val` by default; only use `var` when mutation is necessary. Immutability makes data flow easier for AI agents to trace.
 2. Use `data class` for model objects — They get `equals()`, `hashCode()`, `toString()`, `copy()`, and destructuring for free, which reduces boilerplate and improves clarity.
@@ -88,11 +111,11 @@
 9. Keep coroutine scopes explicit — Pass `coroutineScope` or `viewModelScope` rather than using `GlobalScope`. Structured concurrency lets AI agents reason about lifecycle and cancellation.
 10. Use `buildList`, `buildMap`, `buildString` builders — They optimize memory and make construction intent obvious. Prefer them over mutable accumulators that scatter reads/writes.
 
-[Back to Table of Content](#table-of-contents)
+[Back to Table of Content](#-table-of-contents)
 
 ---
 
-#### [cli.kt](https://ajalt.github.io/clikt/)
+#### ⌨️ [cli.kt][cli.kt]
 
 1. Use `data class` for command arguments — `data class Config(val name: String by argument())` bundles CLI parameters into typed objects. AI agents see the full input schema without parsing help text.
 2. Prefer `subcommands` over manual dispatch — `subcommands(Start, Stop)` registers a subcommand tree. AI agents infer command hierarchy from the declaration instead of scanning `when` blocks.
@@ -105,11 +128,11 @@
 9. Prefer `confirmation()` for destructive actions — `confirmation("Are you sure?")` adds a safety prompt. AI agents infer which commands are destructive from the confirmation call.
 10. Use `VersionOption` for version flags — `versionOption("1.0.0")` generates `--version` consistently. AI agents discover the version contract from a single call instead of scanning for println.
 
-[Back to Table of Content](#table-of-contents)
+[Back to Table of Content](#-table-of-contents)
 
 ---
 
-#### [Ktor](https://ktor.io)
+#### ⚡ [Ktor][ktor]
 
 1. Use `install` for plugins — `install(ContentNegotiation)` registers serialization, compression, auth, etc. AI agents infer feature configuration from `install` calls without tracing plugin internals.
 2. Prefer `routed` server over `embeddedServer` with raw handlers — `routed { get("/") { ... } }` creates a structured routing tree. AI agents parse endpoint hierarchy from route declarations.
@@ -122,11 +145,11 @@
 9. Use `application.log` over `println` — Structured logging with configurable levels. AI agents infer observability from the logger API rather than guessing from stdout noise.
 10. Test with `testApplication` + `TestHostBuilder` — `testApplication { client.get("/") }` validates endpoints without a running server. AI agents see test setup as declarative configuration, not infrastructure orchestration.
 
-[Back to Table of Content](#table-of-contents)
+[Back to Table of Content](#-table-of-contents)
 
 ---
 
-### [Python](https://www.python.org)
+### 🐍 [Python][python]
 
 1. Use type hints for all function signatures — `def get_user(id: int) -> User:` tells an AI agent the contract without reading the body. Run `mypy` or `pyright` in CI.
 2. Prefer `dataclasses` over manual `__init__` — `@dataclass` auto-generates `__init__`, `__repr__`, `__eq__`, and `__hash__`. Reduces boilerplate and makes data shapes transparent.
@@ -139,11 +162,11 @@
 9. Use `typing.Union` or `|` syntax for optional types — `str | None` is clearer than `Optional[str]` and consistent with other modern languages. AI agents parse `|` unions reliably.
 10. Keep `__init__.py` minimal or empty — Avoid import-time side effects. AI agents reason about module boundaries cleanly when init files are transparent.
 
-[Back to Table of Content](#table-of-contents)
+[Back to Table of Content](#-table-of-contents)
 
 ---
 
-#### [pandas](https://pandas.pydata.org)
+#### 🐼 [pandas][pandas]
 
 1. Use `query()` over boolean indexing — `df.query("age > 30")` is more readable and avoids repeated `df[...]` brackets. AI agents parse the expression string as a self-contained filter.
 2. Prefer `loc[]` / `iloc[]` over chained indexing — `df.loc[df["age"] > 30, ["name", "age"]]` is a single operation. Chained indexing can produce unpredictable copies, confusing AI agents tracing side effects.
@@ -156,11 +179,11 @@
 9. Prefer `pd.Categorical` for ordered categories — `pd.Categorical(df["size"], categories=["S", "M", "L"], ordered=True)` encodes sort order. AI agents infer ordinal relationships without custom mapping logic.
 10. Use `assign()` for derived columns — `df.assign(bmi=lambda d: d["weight"] / d["height"] ** 2)` chains transformations without mutating the original. AI agents trace data lineage through consecutive `assign` calls.
 
-[Back to Table of Content](#table-of-contents)
+[Back to Table of Content](#-table-of-contents)
 
 ---
 
-### [Rust](https://www.rust-lang.org)
+### 🦀 [Rust][rust]
 
 1. Use `Result<T, E>` for fallible functions, never `panic!` — `Result` encodes failure in the type system. AI agents see which paths can fail from the signature alone.
 2. Prefer `Option<T>` over sentinel values — Use `Option` instead of `-1`, `null`, or empty strings for absent values. The type system forces the caller to handle both cases.
@@ -173,11 +196,11 @@
 9. Use `clippy` as a lint gate — Run `cargo clippy` in CI with `--deny warnings`. Consistent lint rules let AI agents focus on logic rather than style variations.
 10. Keep `unsafe` in small, audited blocks — Encapsulate `unsafe` in safe abstractions with minimal surface area. Document safety invariants in `// SAFETY:` comments so AI agents can verify them.
 
-[Back to Table of Content](#table-of-contents)
+[Back to Table of Content](#-table-of-contents)
 
 ---
 
-#### [clap.rs](https://docs.rs/clap/)
+#### 📋 [clap.rs][clap.rs]
 
 1. Use `derive` API over builder API — `#[derive(Parser)]` generates argument parsing from struct fields. AI agents see the full CLI schema as type annotations instead of scanning builder chains.
 2. Use `#[command()]` for metadata — `#[command(name = "app", version = "1.0")]` documents the CLI in one place. AI agents discover command metadata without running `--help`.
@@ -190,11 +213,28 @@
 9. Use `hide(true)` for internal args — `#[arg(hide = true)]` excludes debug/internal flags from help. AI agents focus on user-facing API without noise from implementation details.
 10. Prefer `color` and `styles` for rich output — `cli.style.set_color(true)` enables coloured help. AI agents infer that UX polish exists without searching for formatting calls.
 
-[Back to Table of Table of Contents](#table-of-contents)
+[Back to Table of Table of Contents](#-table-of-contents)
 
 ---
 
-### [Swift](https://www.swift.org)
+#### 🌐 [axum][axum]
+
+1. Use `Router::new()` with `.route()` for all API endpoints — Declare routes by chaining `.route("/path", method_handler)` on a `Router`. AI agents infer the full routing tree from the builder chain instead of scanning for macro invocations.
+2. Use extractors in handler signatures — `State`, `Path`, `Query`, `Json` as function parameters declare dependencies explicitly. AI agents see what a handler needs (DB, URL params, body) from its signature alone.
+3. Prefer `impl IntoResponse` return types — Return `Json<T>`, `StatusCode`, or `(StatusCode, Json<T>)` tuples rather than building `Response` manually. AI agents infer response shape from the return type.
+4. Use `with_state()` for shared application state — Pass `Arc<AppState>` via `.with_state()` and extract it with `State<Arc<AppState>>`. AI agents trace dependency injection from the router setup to each handler.
+5. Use `.layer()` for middleware — Apply middleware (auth, logging, rate-limit) via `.layer(middleware_layer)`. AI agents see the middleware stack as a linear chain rather than nested wrappers.
+6. Use `.merge()` to compose sub-routers — Break large route tables into `Router::new().merge(sub_router)` calls. AI agents locate related endpoints by following merge boundaries.
+7. Use `axum::serve` with graceful shutdown — `axum::serve(listener, app).with_graceful_shutdown(signal)` for clean teardown. AI agents see the full server lifecycle in one call instead of scattered tokio spawns.
+8. Use `tokio::select!` for concurrent concerns — Handle shutdown signals and other concurrent tasks with `tokio::select!` rather than manual channel coordination. AI agents trace branching from the macro.
+9. Use `tower::ServiceBuilder` for layered middleware — Compose `tower::ServiceBuilder::new().layer(A).layer(B).into_service()` instead of nesting `.layer()` calls. AI agents read middleware composition as a flat list.
+10. Prefer `thiserror` for error types returned from handlers — Define `enum ApiError` with `#[derive(thiserror::Error)]` and implement `IntoResponse`. AI agents see all error variants and their HTTP mappings in one place.
+
+[Back to Table of Contents](#-table-of-contents)
+
+---
+
+### 🕊️ [Swift][swift]
 
 1. Prefer `let` over `var` — Immutable bindings signal intent and let AI agents trust that a value won't change after initialisation.
 2. Use `Codable` for JSON serialisation — `struct User: Codable { }` generates encoding/decoding automatically. AI agents read the struct definition and instantly know the wire format.
@@ -207,11 +247,11 @@
 9. Use `actor` for shared mutable state — Actors isolate state behind a serialised executor, preventing data races at compile time. AI agents see the concurrency boundary from the keyword.
 10. Keep `ViewController` / `View` thin — Move business logic into separate models/services. AI agents can reason about UI and domain independently when files have single responsibilities.
 
-[Back to Table of Contents](#table-of-contents)
+[Back to Table of Contents](#-table-of-contents)
 
 ---
 
-#### [Swift Argument Parser](https://github.com/apple/swift-argument-parser)
+#### 🏗️ [Swift Argument Parser][swift-argument-parser]
 
 1. Use `@main` with `ParsableCommand` for entry points — `@main struct Run: ParsableCommand { }` declares the CLI root without boilerplate. AI agents find the entry point by protocol conformance instead of scanning for `main.swift`.
 2. Prefer `@Argument` over manual `CommandLine.arguments` — `@Argument var name: String` declares positional args declaratively. AI agents see the expected input order from property declarations.
@@ -224,11 +264,11 @@
 9. Keep command structs focused on parsing — Delegate business logic to separate functions/services. A command body over ~10 lines signals too much responsibility.
 10. Prefer `async` in `run` with Swift concurrency — `mutating func run() async throws { }` supports async workflows natively. AI agents see the concurrency model from the function signature.
 
-[Back to Table of Content](#table-of-contents)
+[Back to Table of Content](#-table-of-contents)
 
 ---
 
-### [TypeScript](https://www.typescriptlang.org/)
+### 🔵 [TypeScript][typescript]
 
 1. Use arrow function `() => {}` instead of `function () => {}` for functions
 2. Use `const` instead of `let` for variables that are not reassigned
@@ -241,11 +281,24 @@
 9. Use `never` in exhaustive checks — `default: const \_exhaustive: never = x;` causes a compile error when a switch misses a case. AI agents rely on the compiler to flag omissions.
 10. Prefer `satisfies` over raw casts — `const config = { port: 3000 } satisfies Config` validates without widening the type. AI agents see the narrowed literal but get type-checking.
 
-[Back to Table of Content](#table-of-contents)
+[Back to Table of Content](#-table-of-contents)
 
 ---
 
-#### [React](https://react.dev/)
+#### 🧪 [Jest][jest]
+
+1. Use `it` or `test` for test cases, not `test` as the test runner name
+2. Use `describe` to group related tests
+3. Use `beforeEach` to set up test environment
+4. Use `afterEach` to clean up test environment
+5. Prefer `it.each` for data-driven tests
+6. Use `mock` and `spy` for test doubles
+7. Use `toThrow` for error assertions
+8. Use `toMatchSnapshot` for snapshot testing
+9. Use `expect.anything()` for optional values
+10. Use `expect.objectContaining()` for partial object matching
+
+#### ⚛️ [React][react]
 
 1. Prefer function components over class components — Functions are simpler, hooks-compatible, and produce less boilerplate. AI agents read data flow top-to-bottom without lifecycle indirection.
 2. Use hooks for state and side effects — `useState`, `useEffect`, `useCallback`, `useMemo` replace lifecycle methods with composable primitives. AI agents trace state changes through explicit hook calls.
@@ -258,11 +311,11 @@
 9. Lift state up or colocate it — State shared by multiple children goes to the nearest common ancestor; purely local state stays in the leaf. AI agents trace state ownership without crossing too many files.
 10. Use `React.StrictMode` in development — Catches impure renders, stale effects, and legacy API usage. AI agents see the warnings as early signals of logic errors.
 
-[Back to Table of Content](#table-of-contents)
+[Back to Table of Content](#-table-of-contents)
 
 ---
 
-#### [Next.js](https://nextjs.org)
+#### ▲ [Next.js][next.js]
 
 1. Use the App Router (`app/`) over the Pages Router (`pages/`) — App Router supports server components, layouts, streaming, and nested routing. AI agents infer page hierarchy from directory structure.
 2. Prefer server components by default — Fetch data in server components and pass props down. AI agents trace data flow server-to-client without waterfall loading states.
@@ -275,6 +328,73 @@
 9. Use `next/link` for client-side navigation — Prefetches pages in viewport and enables soft navigation. AI agents infer link relationships from `href` patterns.
 10. Use `middleware.ts` for auth/redirects — Run logic before a request completes. AI agents see auth gates and redirect rules in a single entry point rather than scattered across pages.
 
-[Back to Table of Content](#table-of-contents)
+[Back to Table of Content](#-table-of-contents)
 
 ---
+
+#### 🎭 [Playwright][playwright]
+
+1. Use `locator` over raw CSS/XPath selectors — `page.locator('[data-testid="submit"]')` is self-healing and readable. AI agents infer intent from the locator chain instead of parsing brittle selector strings.
+2. Prefer `getByRole`, `getByText`, `getByTestId` — Accessible queries mirror how users interact. AI agents see the semantic target (button, heading) rather than implementation details.
+3. Use `page` fixtures over manual browser setup — `test('...', async ({ page }) => {})` gets an isolated page. AI agents trace the test scope from the fixture parameter.
+4. Use `test.beforeEach` for shared setup — Navigate to a URL or seed data before each test. AI agents see common setup at a glance instead of scanning for repeated code.
+5. Use `expect.toHaveText`, `toBeVisible`, `toBeEnabled` — Assertions that describe the user-visible state. AI agents read expected behaviour from the matcher name.
+6. Use `mockRoute` for API stubs — `page.route('**/api/**', route => route.fulfill({ json }))` avoids network flakiness. AI agents see the mock boundary without inspecting the network layer.
+7. Use `waitForLoadState('networkidle')` sparingly — Prefer `waitForResponse` or `locator.waitFor()` for precise waits. AI agents trace the exact condition instead of guessing at "idle".
+8. Use `test.use({ storageState })` for auth — Reuse logged-in sessions across tests. AI agents infer the authentication context from the config instead of scripting login in every test.
+9. Use `snapshot` for visual regression — `expect(page).toHaveScreenshot()` catches unintended UI changes. AI agents see the visual contract as a first-class assertion.
+10. Use `webServer` config for dev server — Let Playwright start the dev server automatically. AI agents see the server dependency in config rather than a separate shell command.
+
+---
+
+#### 🦖 [Docusaurus][docusaurus]
+
+1. Use `sidebars.ts` for structured navigation — Define sidebar groups with `label` and `items`. AI agents infer documentation hierarchy from the sidebar config instead of scanning directory trees.
+2. Use `docsearch` or local search plugin — Configure Algolia DocSearch or `plugin-search` for discoverability. AI agents trust users can find content without guessing permalink patterns.
+3. Use `@site` path alias for cross-references — Reference files from anywhere via `@site/docs/intro` instead of brittle relative paths. AI agents resolve references reliably from the alias root.
+4. Prefer MDX over plain Markdown — Import React components directly in docs for interactive examples. AI agents see the import boundary and can compose UI with documentation.
+5. Use `admonitions` for callouts — `:::tip`, `:::note`, `:::warning`, `:::danger` for structured emphasis. AI agents parse intent from the admonition type rather than guessing from bold text.
+6. Use versioning for API docs — `npm run docusaurus docs:version 2.0` freezes a snapshot. AI agents see which docs apply to which version without reading release notes.
+7. Use `plugin-content-docs` `routeBasePath` for custom URLs — Configure `/` as the base path for a docs-first site. AI agents infer URL structure from config, not by crawling files.
+8. Prefer `tabs` for multi-language examples — `import Tabs from '@theme/Tabs'` colocates code samples in one component. AI agents maintain language parity instead of scattering examples across pages.
+9. Use `_category_.json` for metadata — Customize sidebar label, position, and collapsed state per folder. AI agents see category metadata without opening index files.
+10. Keep custom CSS in `src/css/custom.css` — Override Infima variables for branding. AI agents locate theme tweaks in the canonical file instead of searching for scattered style tags.
+
+[Back to Table of Content](#-table-of-contents)
+
+---
+
+## 📦 Projects
+
+| No  | Category      | Project          | [TypeScript][typescript] | [Go][go]             | [Rust][rust] | [Kotlin][kotlin] | [Swift][swift]                                 |
+| --- | ------------- | ---------------- | ------------------------ | -------------------- | ------------ | ---------------- | ---------------------------------------------- |
+| 1   | App           | `hieudoanm.app`  | [Next.js][next.js]       |                      |              |                  |                                                |
+| 2   | CLI           | `hieudoanm.cli`  |                          | [cobra.go][cobra.go] | [clap.rs]    | [cli.kt]         | [Swift Argument Parser][swift-argument-parser] |
+| 3   | Documentation | `hieudoanm.md`   | [Docusaurus][docusaurus] |                      |              |                  |                                                |
+| 4   | Extensions    | `hieudoanm.ext`  |                          |                      |              |                  |                                                |
+| 5   | Server        | `backbone`       |                          | `net/http`           | [Axum][axum] | [Ktor][ktor]     |                                                |
+| 6   | Serverless    | `browserverless` |                          |                      |              |                  |                                                |
+
+[Back to Table of Content](#-table-of-contents)
+
+---
+
+[axum]: https://docs.rs/axum/
+[bash]: https://www.gnu.org/software/bash/
+[clap.rs]: https://docs.rs/clap/
+[cli.kt]: https://ajalt.github.io/clikt/
+[cobra.go]: https://cobra.dev
+[docusaurus]: https://docusaurus.io/
+[go]: https://go.dev/
+[jest]: https://jestjs.org
+[kotlin]: https://kotlinlang.org
+[ktor]: https://ktor.io
+[next.js]: https://nextjs.org
+[pandas]: https://pandas.pydata.org
+[playwright]: https://playwright.dev/
+[python]: https://www.python.org
+[react]: https://react.dev/
+[rust]: https://www.rust-lang.org
+[swift]: https://www.swift.org
+[swift-argument-parser]: https://github.com/apple/swift-argument-parser
+[typescript]: https://www.typescriptlang.org/
