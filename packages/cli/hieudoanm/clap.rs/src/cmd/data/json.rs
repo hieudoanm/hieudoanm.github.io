@@ -1,6 +1,22 @@
 use anyhow::Context;
 use serde_json::Value;
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(help = "JSON file")]
+    pub file: Option<String>,
+    #[arg(
+        short = 'q',
+        long = "query",
+        help = "JQ-like query (e.g. .name, .items[0])"
+    )]
+    pub query: Option<String>,
+    #[arg(long = "diff", help = "Diff with another JSON file")]
+    pub diff: Option<String>,
+    #[arg(long = "merge", help = "Merge with another JSON file (patch)")]
+    pub merge: Option<String>,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("json")
         .about("Query, format, diff, and merge JSON data")
@@ -23,11 +39,11 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let file = matches.get_one::<String>("file");
-    let diff = matches.get_one::<String>("diff");
-    let merge = matches.get_one::<String>("merge");
-    let query = matches.get_one::<String>("query");
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let file = matches.file.as_ref();
+    let diff = matches.diff.as_ref();
+    let merge = matches.merge.as_ref();
+    let query = matches.query.as_ref();
 
     if let Some(other) = diff {
         let f1 = file.context("first file required for diff")?;

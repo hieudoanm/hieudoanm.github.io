@@ -1,6 +1,15 @@
-use clap::ArgMatches;
 use std::path::Path;
 use std::process::Command;
+
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'f', long = "file", help = "File to encrypt")]
+    pub file: String,
+    #[arg(short = 'p', long = "password", help = "Encryption password")]
+    pub password: String,
+    #[arg(short = 'o', long = "output", help = "Output file")]
+    pub output: Option<String>,
+}
 
 pub fn command() -> clap::Command {
     clap::Command::new("encrypt")
@@ -27,10 +36,10 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
-    let file = matches.get_one::<String>("file").unwrap();
-    let password = matches.get_one::<String>("password").unwrap();
-    let output = matches.get_one::<String>("output");
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let file = &matches.file;
+    let password = &matches.password;
+    let output = matches.output.as_ref();
 
     let out_path = output.cloned().unwrap_or_else(|| format!("{file}.enc"));
 

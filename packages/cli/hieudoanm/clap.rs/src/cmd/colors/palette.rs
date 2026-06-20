@@ -1,10 +1,11 @@
-use clap::ArgMatches;
+#[derive(clap::Args)]
+pub struct Args;
 
 pub fn command() -> clap::Command {
     clap::Command::new("palette").about("Show a color palette")
 }
 
-pub async fn run(_matches: &ArgMatches) -> anyhow::Result<()> {
+pub async fn run(_matches: &Args) -> anyhow::Result<()> {
     use crate::cmd::colors::service;
 
     println!("Generating color palette...");

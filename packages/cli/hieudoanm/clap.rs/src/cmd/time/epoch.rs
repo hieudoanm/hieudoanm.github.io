@@ -1,5 +1,27 @@
 use chrono::{DateTime, NaiveDate, NaiveDateTime, TimeZone, Utc};
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(help = "Epoch timestamp (seconds)")]
+    pub timestamp: Option<String>,
+    #[arg(short = 'f', long = "from", help = "Convert a date string to epoch")]
+    pub from: Option<String>,
+    #[arg(
+        long = "relative",
+        help = "Calculate relative time (e.g. '2 hours ago', '+3 days')"
+    )]
+    pub relative: Option<String>,
+    #[arg(
+        long = "format",
+        help = "Output format for date (chrono format string)"
+    )]
+    pub format: Option<String>,
+    #[arg(long = "iso", action = clap::ArgAction::SetTrue, help = "Output in ISO 8601 format")]
+    pub iso: bool,
+    #[arg(long = "unix", action = clap::ArgAction::SetTrue, help = "Output as Unix timestamp")]
+    pub unix: bool,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("epoch")
         .about("Convert between epoch timestamps and human-readable dates")
@@ -114,12 +136,12 @@ fn parse_relative(s: &str) -> Option<DateTime<Utc>> {
     Some(now + chrono::TimeDelta::seconds(total_secs))
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let iso = matches.get_flag("iso");
-    let unix = matches.get_flag("unix");
-    let format = matches.get_one::<String>("format");
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let iso = matches.iso;
+    let unix = matches.unix;
+    let format = matches.format.as_ref();
 
-    if let Some(rel) = matches.get_one::<String>("relative") {
+    if let Some(rel) = matches.relative.as_ref() {
         if let Some(dt) = parse_relative(rel) {
             println!("{}", dt.timestamp());
         } else {
@@ -128,7 +150,7 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
         return Ok(());
     }
 
-    if let Some(from) = matches.get_one::<String>("from") {
+    if let Some(from) = matches.from.as_ref() {
         if let Some(dt) = parse_date_string(from) {
             println!("{}", dt.and_utc().timestamp());
         } else {
@@ -137,7 +159,7 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
         return Ok(());
     }
 
-    if let Some(ts_str) = matches.get_one::<String>("timestamp") {
+    if let Some(ts_str) = matches.timestamp.as_ref() {
         let secs: i64 = ts_str
             .parse()
             .map_err(|_| anyhow::anyhow!("invalid epoch timestamp: {ts_str}"))?;

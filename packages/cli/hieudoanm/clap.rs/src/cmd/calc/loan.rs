@@ -1,6 +1,16 @@
-use clap::ArgMatches;
-
 use super::service::calc_payment;
+
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'p', long = "principal", help = "Loan principal amount")]
+    pub principal: String,
+    #[arg(short = 'r', long = "rate", help = "Annual interest rate (percentage)")]
+    pub rate: String,
+    #[arg(short = 'y', long = "years", help = "Loan term in years")]
+    pub years: String,
+    #[arg(long = "json", action = clap::ArgAction::SetTrue, help = "Output in JSON format")]
+    pub json: bool,
+}
 
 pub fn command() -> clap::Command {
     clap::Command::new("loan")
@@ -34,11 +44,11 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
-    let principal: f64 = matches.get_one::<String>("principal").unwrap().parse()?;
-    let rate: f64 = matches.get_one::<String>("rate").unwrap().parse()?;
-    let years: f64 = matches.get_one::<String>("years").unwrap().parse()?;
-    let json = matches.get_flag("json");
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let principal: f64 = matches.principal.parse()?;
+    let rate: f64 = matches.rate.parse()?;
+    let years: f64 = matches.years.parse()?;
+    let json = matches.json;
 
     let payment = calc_payment(principal, rate, years);
     let n = (years * 12.0) as i32;

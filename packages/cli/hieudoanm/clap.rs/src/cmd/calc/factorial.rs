@@ -1,4 +1,10 @@
-use clap::ArgMatches;
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'n', long = "number", help = "Non-negative integer")]
+    pub number: String,
+    #[arg(long = "json", action = clap::ArgAction::SetTrue, help = "Output in JSON format")]
+    pub json: bool,
+}
 
 pub fn command() -> clap::Command {
     clap::Command::new("factorial")
@@ -18,9 +24,9 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
-    let number: u64 = matches.get_one::<String>("number").unwrap().parse()?;
-    let json = matches.get_flag("json");
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let number: u64 = matches.number.parse()?;
+    let json = matches.json;
 
     let result: u128 = (1..=number).fold(1u128, |acc, n| acc * n as u128);
 

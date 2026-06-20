@@ -1,11 +1,14 @@
 use std::io::Write;
 use std::path::Path;
 
+#[derive(clap::Args)]
+pub struct Args;
+
 pub fn command() -> clap::Command {
     clap::Command::new("qrcode").about("Generate a QR code")
 }
 
-pub async fn run(_matches: &clap::ArgMatches) -> anyhow::Result<()> {
+pub async fn run(_matches: &Args) -> anyhow::Result<()> {
     print!("URL: ");
     std::io::stdout().flush()?;
     let mut url = String::new();

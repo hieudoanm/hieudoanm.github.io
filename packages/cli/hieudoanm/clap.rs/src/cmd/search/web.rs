@@ -9,6 +9,29 @@ struct WebResult {
     snippet: String,
 }
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'q', long = "query", help = "Search query")]
+    pub query: String,
+    #[arg(
+        short = 'n',
+        long = "max-results",
+        id = "max-results",
+        default_value = "5",
+        help = "Maximum number of results"
+    )]
+    pub max_results: String,
+    #[arg(
+        short = 's',
+        long = "source",
+        default_value = "duckduckgo",
+        help = "Search source (duckduckgo)"
+    )]
+    pub source: String,
+    #[arg(long = "json", action = clap::ArgAction::SetTrue, help = "Output in JSON format")]
+    pub json: bool,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("web")
         .about("Search the internet")
@@ -41,19 +64,15 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let query = matches
-        .get_one::<String>("query")
-        .context("query required")?;
-    let max_results: usize = matches
-        .get_one::<String>("max-results")
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let query = Some(&matches.query).context("query required")?;
+    let max_results: usize = Some(&matches.max_results)
         .and_then(|s| s.parse().ok())
         .unwrap_or(5);
-    let source = matches
-        .get_one::<String>("source")
+    let source = Some(&matches.source)
         .map(|s| s.as_str())
         .unwrap_or("duckduckgo");
-    let use_json = matches.get_flag("json");
+    let use_json = matches.json;
 
     match source {
         "duckduckgo" | "" => {
@@ -183,6 +202,7 @@ fn clean_html(s: &str) -> String {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use clap::FromArgMatches;
 
     #[test]
     fn test_clean_html_removes_tags() {
@@ -313,7 +333,7 @@ mod tests {
         let m = cmd
             .try_get_matches_from(vec!["web", "--query", "test", "--source", "google"])
             .unwrap();
-        let result = run(&m).await;
+        let result = run(&Args::from_arg_matches(&m).unwrap()).await;
         assert!(result.is_err());
     }
 

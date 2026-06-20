@@ -1,5 +1,11 @@
 use crate::cmd::file::common::{detect_mime, format_size};
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'f', long = "file", help = "File path")]
+    pub file: String,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("type")
         .about("Detect file type by extension")

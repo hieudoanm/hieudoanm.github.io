@@ -1,5 +1,22 @@
-use clap::ArgMatches;
 use sha1::{Digest, Sha1};
+
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 's', long = "secret", help = "Base32 secret")]
+    pub secret: String,
+    #[arg(long = "step", default_value = "30", help = "Time step in seconds")]
+    pub step: String,
+    #[arg(
+        long = "digits",
+        default_value = "6",
+        help = "Number of digits (6 or 8)"
+    )]
+    pub digits: String,
+    #[arg(long = "time", help = "Time in RFC3339 format (for testing)")]
+    pub time: Option<String>,
+    #[arg(long = "json", action = clap::ArgAction::SetTrue, help = "Output in JSON format")]
+    pub json: bool,
+}
 
 pub fn command() -> clap::Command {
     clap::Command::new("totp")
@@ -86,6 +103,7 @@ fn hotp(key: &[u8], counter: u64, digits: u32) -> String {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use clap::FromArgMatches;
 
     #[test]
     fn test_base32_decode_rfc4648() {
@@ -157,24 +175,16 @@ mod tests {
         let m = cmd
             .try_get_matches_from(vec!["totp", "--secret", "JBSWY3DP"])
             .unwrap();
-        run(&m).await.unwrap();
+        run(&Args::from_arg_matches(&m).unwrap()).await.unwrap();
     }
 }
 
-pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
-    let secret = matches.get_one::<String>("secret").unwrap();
-    let step: u64 = matches
-        .get_one::<String>("step")
-        .unwrap()
-        .parse()
-        .unwrap_or(30);
-    let digits: u32 = matches
-        .get_one::<String>("digits")
-        .unwrap()
-        .parse()
-        .unwrap_or(6);
-    let time_str = matches.get_one::<String>("time");
-    let json = matches.get_flag("json");
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let secret = &matches.secret;
+    let step: u64 = matches.step.parse().unwrap_or(30);
+    let digits: u32 = matches.digits.parse().unwrap_or(6);
+    let time_str = matches.time.as_ref();
+    let json = matches.json;
 
     let key = base32_decode(secret)?;
 

@@ -1,5 +1,24 @@
 use chrono::{Datelike, NaiveDate};
-use clap::ArgMatches;
+
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(
+        short = 'd',
+        long = "date",
+        help = "Reference date (YYYY-MM-DD, default: today)"
+    )]
+    pub date: Option<String>,
+    #[arg(long = "add", help = "Add N days")]
+    pub add: Option<String>,
+    #[arg(long = "add-months", help = "Add N months")]
+    pub add_months: Option<String>,
+    #[arg(long = "add-years", help = "Add N years")]
+    pub add_years: Option<String>,
+    #[arg(long = "diff", help = "Calculate days between two dates (YYYY-MM-DD)")]
+    pub diff: Option<String>,
+    #[arg(long = "json", action = clap::ArgAction::SetTrue, help = "Output in JSON format")]
+    pub json: bool,
+}
 
 pub fn command() -> clap::Command {
     clap::Command::new("datecalc")
@@ -34,16 +53,16 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
-    let json = matches.get_flag("json");
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let json = matches.json;
 
     let today = chrono::Local::now().naive_local().date();
 
-    if let Some(diff_str) = matches.get_one::<String>("diff") {
+    if let Some(diff_str) = matches.diff.as_ref() {
         let date2 = NaiveDate::parse_from_str(diff_str, "%Y-%m-%d")
             .map_err(|_| anyhow::anyhow!("invalid date {:?} (use YYYY-MM-DD)", diff_str))?;
 
-        if let Some(date_str) = matches.get_one::<String>("date") {
+        if let Some(date_str) = matches.date.as_ref() {
             let date1 = NaiveDate::parse_from_str(date_str, "%Y-%m-%d")
                 .map_err(|_| anyhow::anyhow!("invalid date {:?} (use YYYY-MM-DD)", date_str))?;
             let days = (date2 - date1).num_days().abs();
@@ -83,7 +102,7 @@ pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
         return Ok(());
     }
 
-    let base = if let Some(date_str) = matches.get_one::<String>("date") {
+    let base = if let Some(date_str) = matches.date.as_ref() {
         NaiveDate::parse_from_str(date_str, "%Y-%m-%d")
             .map_err(|_| anyhow::anyhow!("invalid date {:?} (use YYYY-MM-DD)", date_str))?
     } else {
@@ -91,11 +110,11 @@ pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
     };
 
     let mut result = base;
-    if let Some(add_str) = matches.get_one::<String>("add") {
+    if let Some(add_str) = matches.add.as_ref() {
         let days: i64 = add_str.parse()?;
         result += chrono::Duration::days(days);
     }
-    if let Some(add_months) = matches.get_one::<String>("add-months") {
+    if let Some(add_months) = matches.add_months.as_ref() {
         let months: i32 = add_months.parse()?;
         if let Some(d) = result.with_month(((result.month() as i32 - 1 + months) % 12 + 1) as u32) {
             let year_add = (result.month() as i32 - 1 + months) / 12;
@@ -104,7 +123,7 @@ pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
             }
         }
     }
-    if let Some(add_years) = matches.get_one::<String>("add-years") {
+    if let Some(add_years) = matches.add_years.as_ref() {
         let years: i32 = add_years.parse()?;
         if let Some(d) = result.with_year(result.year() + years) {
             result = d;

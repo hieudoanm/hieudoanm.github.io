@@ -6,6 +6,7 @@ use regex::Regex;
 #[cfg(test)]
 mod tests {
     use super::*;
+    use clap::FromArgMatches;
 
     #[test]
     fn test_validate_spec_missing_openapi() {
@@ -130,7 +131,7 @@ mod tests {
                 "/tmp/nonexistent_openapi_file_xyz.yaml",
             ])
             .unwrap();
-        let result = run(&m).await;
+        let result = run(&Args::from_arg_matches(&m).unwrap()).await;
         assert!(result.is_err());
     }
 
@@ -150,7 +151,7 @@ mod tests {
         let m = cmd
             .try_get_matches_from(vec!["validate", "--file", dir.to_str().unwrap()])
             .unwrap();
-        run(&m).await.unwrap();
+        run(&Args::from_arg_matches(&m).unwrap()).await.unwrap();
         std::fs::remove_file(&dir).ok();
     }
 }
@@ -272,6 +273,12 @@ fn validate_paths(paths: &serde_json::Map<String, super::service::JSON>) -> Vec<
     issues
 }
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'f', long = "file", help = "OpenAPI spec file")]
+    pub file: String,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("validate")
         .about("Validate an OpenAPI specification")
@@ -284,8 +291,8 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let file = matches.get_one::<String>("file").unwrap();
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let file = &matches.file;
 
     let data = std::fs::read(file).with_context(|| format!("failed to read {file}"))?;
     let spec = super::service::parse_openapi(&data)?;

@@ -1,5 +1,13 @@
 use anyhow::Context;
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'i', long = "input", help = "OpenAPI file (json/yaml)")]
+    pub input: String,
+    #[arg(short = 'o', long = "output", help = "Output Postman file")]
+    pub output: Option<String>,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("openapi2postman")
         .about("Convert OpenAPI to Postman collection")
@@ -18,9 +26,9 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let input = matches.get_one::<String>("input").unwrap();
-    let output = matches.get_one::<String>("output");
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let input = &matches.input;
+    let output = matches.output.as_ref();
 
     let data = std::fs::read(input).with_context(|| format!("failed to read {input}"))?;
     let spec = super::service::parse_openapi(&data)?;

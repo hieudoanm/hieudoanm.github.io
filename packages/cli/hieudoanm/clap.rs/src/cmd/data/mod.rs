@@ -1,3 +1,4 @@
+use clap::FromArgMatches;
 mod csv;
 mod json;
 mod yml;
@@ -13,9 +14,9 @@ pub fn command() -> clap::Command {
 
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     match matches.subcommand() {
-        Some(("json", m)) => json::run(m).await,
-        Some(("csv", m)) => csv::run(m).await,
-        Some(("yml", m)) => yml::run(m).await,
+        Some(("json", m)) => json::run(&json::Args::from_arg_matches(m)?).await,
+        Some(("csv", m)) => csv::run(&csv::Args::from_arg_matches(m)?).await,
+        Some(("yml", m)) => yml::run(&yml::Args::from_arg_matches(m)?).await,
         _ => Ok(()),
     }
 }

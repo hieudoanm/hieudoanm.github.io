@@ -1,3 +1,4 @@
+use clap::FromArgMatches;
 mod code;
 mod files;
 mod text;
@@ -15,10 +16,10 @@ pub fn command() -> clap::Command {
 
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     match matches.subcommand() {
-        Some(("files", m)) => files::run(m).await,
-        Some(("text", m)) => text::run(m).await,
-        Some(("code", m)) => code::run(m).await,
-        Some(("web", m)) => web::run(m).await,
+        Some(("files", m)) => files::run(&files::Args::from_arg_matches(m)?).await,
+        Some(("text", m)) => text::run(&text::Args::from_arg_matches(m)?).await,
+        Some(("code", m)) => code::run(&code::Args::from_arg_matches(m)?).await,
+        Some(("web", m)) => web::run(&web::Args::from_arg_matches(m)?).await,
         _ => Ok(()),
     }
 }

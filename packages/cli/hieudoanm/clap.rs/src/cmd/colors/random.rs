@@ -1,10 +1,11 @@
-use clap::ArgMatches;
+#[derive(clap::Args)]
+pub struct Args;
 
 pub fn command() -> clap::Command {
     clap::Command::new("random").about("Generate random colors")
 }
 
-pub async fn run(_matches: &ArgMatches) -> anyhow::Result<()> {
+pub async fn run(_matches: &Args) -> anyhow::Result<()> {
     use crate::cmd::colors::service;
 
     let hex = service::generate_random_hex_color();

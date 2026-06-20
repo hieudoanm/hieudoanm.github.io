@@ -1,4 +1,28 @@
-use clap::ArgMatches;
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'p', long = "principal", help = "Initial principal amount")]
+    pub principal: String,
+    #[arg(short = 'r', long = "rate", help = "Annual interest rate (percentage)")]
+    pub rate: String,
+    #[arg(short = 'y', long = "years", help = "Number of years")]
+    pub years: String,
+    #[arg(
+        short = 'c',
+        long = "contribute",
+        default_value = "0",
+        help = "Regular contribution per period"
+    )]
+    pub contribute: String,
+    #[arg(
+        short = 'n',
+        long = "compound",
+        default_value = "yearly",
+        help = "Compounding frequency (yearly/quarterly/monthly/daily)"
+    )]
+    pub compound: String,
+    #[arg(long = "json", action = clap::ArgAction::SetTrue, help = "Output in JSON format")]
+    pub json: bool,
+}
 
 pub fn command() -> clap::Command {
     clap::Command::new("compound")
@@ -76,13 +100,13 @@ fn future_value(principal: f64, rate: f64, years: f64, contribute: f64, n: f64) 
     (total_fv, total_contributions)
 }
 
-pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
-    let principal: f64 = matches.get_one::<String>("principal").unwrap().parse()?;
-    let rate: f64 = matches.get_one::<String>("rate").unwrap().parse()?;
-    let years: f64 = matches.get_one::<String>("years").unwrap().parse()?;
-    let contribute: f64 = matches.get_one::<String>("contribute").unwrap().parse()?;
-    let compound = matches.get_one::<String>("compound").unwrap();
-    let json = matches.get_flag("json");
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let principal: f64 = matches.principal.parse()?;
+    let rate: f64 = matches.rate.parse()?;
+    let years: f64 = matches.years.parse()?;
+    let contribute: f64 = matches.contribute.parse()?;
+    let compound = &matches.compound;
+    let json = matches.json;
 
     let n = compounding_periods(compound);
     let (fv, total_deposits) = future_value(principal, rate, years, contribute, n);
@@ -147,6 +171,7 @@ pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use clap::FromArgMatches;
 
     #[test]
     fn test_compounding_periods_yearly() {
@@ -221,7 +246,7 @@ mod tests {
                 "5",
             ])
             .unwrap();
-        run(&m).await.unwrap();
+        run(&Args::from_arg_matches(&m).unwrap()).await.unwrap();
     }
 
     #[tokio::test]
@@ -239,6 +264,6 @@ mod tests {
                 "--json",
             ])
             .unwrap();
-        run(&m).await.unwrap();
+        run(&Args::from_arg_matches(&m).unwrap()).await.unwrap();
     }
 }

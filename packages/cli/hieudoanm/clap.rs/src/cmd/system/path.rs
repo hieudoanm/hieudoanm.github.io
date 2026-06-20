@@ -1,5 +1,15 @@
 use std::path::Path;
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(help = "Command to find in PATH")]
+    pub name: Option<String>,
+    #[arg(long = "sort", action = clap::ArgAction::SetTrue, help = "Sort alphabetically by path")]
+    pub sort: bool,
+    #[arg(long = "json", action = clap::ArgAction::SetTrue, help = "Output in JSON format")]
+    pub json: bool,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("path")
         .about("Show PATH entries")
@@ -43,10 +53,10 @@ pub fn analyze_path_entries(path: &str) -> Vec<(usize, &str, bool)> {
         .collect()
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let cmd_name = matches.get_one::<String>("name");
-    let sort = matches.get_flag("sort");
-    let json = matches.get_flag("json");
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let cmd_name = matches.name.as_ref();
+    let sort = matches.sort;
+    let json = matches.json;
 
     let path = std::env::var("PATH").unwrap_or_default();
 

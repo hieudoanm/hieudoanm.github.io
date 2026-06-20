@@ -37,6 +37,28 @@ fn open_file_for_write(
     Ok((file, mode))
 }
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'f', long = "file", help = "File path")]
+    pub file: String,
+    #[arg(
+        short = 'c',
+        long = "content",
+        help = "File content (omit to read from stdin)"
+    )]
+    pub content: Option<String>,
+    #[arg(short = 'a', long = "append", action = clap::ArgAction::SetTrue, help = "Append to file instead of overwriting")]
+    pub append: bool,
+    #[arg(short = 'p', long = "mkdir", action = clap::ArgAction::SetTrue, help = "Create parent directories if needed")]
+    pub mkdir: bool,
+    #[arg(
+        short = 'm',
+        long = "mode",
+        help = "File permissions (octal, e.g. 644)"
+    )]
+    pub mode: Option<String>,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("write")
         .about("Write or append content to a file")

@@ -47,6 +47,12 @@ mod tests {
     }
 }
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(long = "json", action = clap::ArgAction::SetTrue, help = "Output in JSON format")]
+    pub json: bool,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("disk").about("Show disk usage").arg(
         clap::Arg::new("json")
@@ -55,8 +61,8 @@ pub fn command() -> clap::Command {
     )
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let json = matches.get_flag("json");
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let json = matches.json;
     let disks = Disks::new_with_refreshed_list();
 
     if json {

@@ -1,4 +1,16 @@
-use clap::ArgMatches;
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'v', long = "value", help = "Base value")]
+    pub value: String,
+    #[arg(short = 'o', long = "of", help = "Calculate what % value is of this")]
+    pub of: Option<String>,
+    #[arg(short = 'p', long = "plus", help = "Add percentage")]
+    pub plus: Option<String>,
+    #[arg(short = 'm', long = "minus", help = "Subtract percentage")]
+    pub minus: Option<String>,
+    #[arg(long = "json", action = clap::ArgAction::SetTrue, help = "Output in JSON format")]
+    pub json: bool,
+}
 
 pub fn command() -> clap::Command {
     clap::Command::new("percent")
@@ -36,11 +48,11 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
-    let value: f64 = matches.get_one::<String>("value").unwrap().parse()?;
-    let json = matches.get_flag("json");
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let value: f64 = matches.value.parse()?;
+    let json = matches.json;
 
-    if let Some(of_str) = matches.get_one::<String>("of") {
+    if let Some(of_str) = matches.of.as_ref() {
         let of: f64 = of_str.parse()?;
         let pct = value / of * 100.0;
         if json {
@@ -54,7 +66,7 @@ pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
         } else {
             println!("{:.2} is {:.2}% of {:.2}", value, pct, of);
         }
-    } else if let Some(plus_str) = matches.get_one::<String>("plus") {
+    } else if let Some(plus_str) = matches.plus.as_ref() {
         let plus: f64 = plus_str.parse()?;
         let result = value * (1.0 + plus / 100.0);
         if json {
@@ -68,7 +80,7 @@ pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
         } else {
             println!("{:.2} + {:.2}% = {:.2}", value, plus, result);
         }
-    } else if let Some(minus_str) = matches.get_one::<String>("minus") {
+    } else if let Some(minus_str) = matches.minus.as_ref() {
         let minus: f64 = minus_str.parse()?;
         let result = value * (1.0 - minus / 100.0);
         if json {

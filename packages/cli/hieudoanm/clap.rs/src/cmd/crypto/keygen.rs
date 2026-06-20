@@ -1,6 +1,30 @@
-use clap::ArgMatches;
 use std::path::Path;
 use std::process::Command;
+
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(
+        short = 'a',
+        long = "algo",
+        default_value = "ed25519",
+        help = "Key algorithm (rsa, ecdsa, ed25519)"
+    )]
+    pub algorithm: String,
+    #[arg(
+        short = 'b',
+        long = "bits",
+        default_value = "256",
+        help = "Key size (bits): 2048/4096 for rsa, 256/384/521 for ecdsa"
+    )]
+    pub bits: String,
+    #[arg(
+        short = 'o',
+        long = "output",
+        default_value = "id_rsa",
+        help = "Output file path"
+    )]
+    pub output: String,
+}
 
 pub fn command() -> clap::Command {
     clap::Command::new("keygen")
@@ -28,17 +52,12 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
-    let algorithm = matches
-        .get_one::<String>("algorithm")
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let algorithm = Some(&matches.algorithm)
         .map(|s| s.as_str())
         .unwrap_or("ed25519");
-    let bits: usize = matches
-        .get_one::<String>("bits")
-        .unwrap()
-        .parse()
-        .unwrap_or(256);
-    let output = matches.get_one::<String>("output").unwrap();
+    let bits: usize = matches.bits.parse().unwrap_or(256);
+    let output = &matches.output;
 
     let out_path = Path::new(output);
     if let Some(parent) = out_path.parent() {

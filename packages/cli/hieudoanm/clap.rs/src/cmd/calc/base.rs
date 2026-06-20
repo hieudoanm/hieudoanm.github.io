@@ -1,6 +1,26 @@
 use std::collections::HashMap;
 
-use clap::ArgMatches;
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'v', long = "value", help = "Value to convert")]
+    pub value: String,
+    #[arg(
+        short = 'f',
+        long = "from",
+        default_value = "dec",
+        help = "Source base (bin/oct/dec/hex)"
+    )]
+    pub from: String,
+    #[arg(
+        short = 't',
+        long = "to",
+        default_value = "hex",
+        help = "Target base (bin/oct/dec/hex)"
+    )]
+    pub to: String,
+    #[arg(long = "json", action = clap::ArgAction::SetTrue, help = "Output in JSON format")]
+    pub json: bool,
+}
 
 pub fn command() -> clap::Command {
     clap::Command::new("base")
@@ -34,11 +54,11 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
-    let value = matches.get_one::<String>("value").unwrap();
-    let from = matches.get_one::<String>("from").unwrap();
-    let to = matches.get_one::<String>("to").unwrap();
-    let json = matches.get_flag("json");
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let value = &matches.value;
+    let from = &matches.from;
+    let to = &matches.to;
+    let json = matches.json;
 
     let bases: HashMap<&str, u32> = [
         ("bin", 2),

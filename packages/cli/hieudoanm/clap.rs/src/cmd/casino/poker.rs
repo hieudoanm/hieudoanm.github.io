@@ -1,4 +1,3 @@
-use clap::ArgMatches;
 use rand::seq::SliceRandom;
 
 use super::{format_cards, Card};
@@ -6,6 +5,7 @@ use super::{format_cards, Card};
 #[cfg(test)]
 mod tests {
     use super::*;
+    use clap::FromArgMatches;
 
     fn c(rank: u8, suit: u8) -> Card {
         Card { rank, suit }
@@ -161,7 +161,7 @@ mod tests {
         let m = cmd
             .try_get_matches_from(vec!["poker", "--hand", "Ah Kh"])
             .unwrap();
-        run(&m).await.unwrap();
+        run(&Args::from_arg_matches(&m).unwrap()).await.unwrap();
     }
 
     #[tokio::test]
@@ -170,7 +170,7 @@ mod tests {
         let m = cmd
             .try_get_matches_from(vec!["poker", "--hand", "Ah Kh", "--board", "2h 7s Tc"])
             .unwrap();
-        run(&m).await.unwrap();
+        run(&Args::from_arg_matches(&m).unwrap()).await.unwrap();
     }
 
     #[tokio::test]
@@ -179,7 +179,7 @@ mod tests {
         let m = cmd
             .try_get_matches_from(vec!["poker", "--hand", "Ah Kh", "--board", "Ah"])
             .unwrap();
-        let result = run(&m).await;
+        let result = run(&Args::from_arg_matches(&m).unwrap()).await;
         assert!(result.is_err());
     }
 }
@@ -448,6 +448,28 @@ fn calculate_odds(
     }
 }
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'H', long = "hand")]
+    pub hand: String,
+    #[arg(short = 'b', long = "board")]
+    pub board: Option<String>,
+    #[arg(
+        short = 'o',
+        long = "opponents",
+        default_value = "1",
+        help = "Number of opponents"
+    )]
+    pub opponents: String,
+    #[arg(
+        short = 'n',
+        long = "simulations",
+        default_value = "10000",
+        help = "Number of Monte Carlo simulations"
+    )]
+    pub simulations: String,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("poker")
         .about("Poker odds calculator")
@@ -480,14 +502,14 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
-    let hand_str = matches.get_one::<String>("hand").unwrap();
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let hand_str = &matches.hand;
     let hole = format_cards(hand_str)?;
     if hole.len() != 2 {
         anyhow::bail!("exactly 2 hole cards required, got {}", hole.len());
     }
 
-    let board: Vec<Card> = if let Some(b) = matches.get_one::<String>("board") {
+    let board: Vec<Card> = if let Some(b) = matches.board.as_ref() {
         let b = format_cards(b)?;
         if b.len() > 5 {
             anyhow::bail!("board can have at most 5 cards, got {}", b.len());
@@ -505,16 +527,8 @@ pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
         }
     }
 
-    let num_opponents: usize = matches
-        .get_one::<String>("opponents")
-        .unwrap()
-        .parse()
-        .unwrap_or(1);
-    let num_simulations: usize = matches
-        .get_one::<String>("simulations")
-        .unwrap()
-        .parse()
-        .unwrap_or(10000);
+    let num_opponents: usize = matches.opponents.parse().unwrap_or(1);
+    let num_simulations: usize = matches.simulations.parse().unwrap_or(10000);
 
     let result = calculate_odds(&hole, &board, num_opponents, num_simulations);
 

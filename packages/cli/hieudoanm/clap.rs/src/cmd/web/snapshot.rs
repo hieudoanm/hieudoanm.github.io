@@ -1,3 +1,11 @@
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(help = "URL to capture")]
+    pub url: String,
+    #[arg(short = 'o', long = "output", help = "Output file path")]
+    pub output: Option<String>,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("snapshot")
         .about("Take a browser screenshot")
@@ -10,8 +18,8 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let _url = matches.get_one::<String>("url").unwrap();
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let _url = &matches.url;
     anyhow::bail!("snapshot requires the `headless_chrome` crate which is not yet integrated");
 }
 

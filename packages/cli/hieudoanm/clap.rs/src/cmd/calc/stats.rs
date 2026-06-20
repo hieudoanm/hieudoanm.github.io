@@ -1,4 +1,10 @@
-use clap::ArgMatches;
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'v', long = "values", help = "Comma-separated numbers")]
+    pub values: String,
+    #[arg(long = "json", action = clap::ArgAction::SetTrue, help = "Output in JSON format")]
+    pub json: bool,
+}
 
 pub fn command() -> clap::Command {
     clap::Command::new("stats")
@@ -18,9 +24,9 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
-    let values_str = matches.get_one::<String>("values").unwrap();
-    let json = matches.get_flag("json");
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let values_str = &matches.values;
+    let json = matches.json;
 
     let mut nums: Vec<f64> = values_str
         .split(',')

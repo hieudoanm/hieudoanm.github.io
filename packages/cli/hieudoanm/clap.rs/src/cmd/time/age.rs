@@ -15,6 +15,12 @@ fn days_in_month(year: i32, month: u32) -> u32 {
     }
 }
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'd', long = "date", help = "Birthdate (YYYY-MM-DD)")]
+    pub date: String,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("age")
         .about("Calculate age from a birthdate")
@@ -43,6 +49,7 @@ fn parse_date(s: &str) -> Option<NaiveDateTime> {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use clap::FromArgMatches;
 
     #[test]
     fn test_days_in_month_january() {
@@ -121,7 +128,7 @@ mod tests {
         let m = cmd
             .try_get_matches_from(vec!["age", "--date", "1990-01-01"])
             .unwrap();
-        run(&m).await.unwrap();
+        run(&Args::from_arg_matches(&m).unwrap()).await.unwrap();
     }
 
     #[tokio::test]
@@ -130,13 +137,13 @@ mod tests {
         let m = cmd
             .try_get_matches_from(vec!["age", "--date", "2099-01-01"])
             .unwrap();
-        let result = run(&m).await;
+        let result = run(&Args::from_arg_matches(&m).unwrap()).await;
         assert!(result.is_err());
     }
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let date_str = matches.get_one::<String>("date").unwrap();
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let date_str = &matches.date;
     let birth =
         parse_date(date_str).ok_or_else(|| anyhow::anyhow!("unable to parse date: {date_str}"))?;
 

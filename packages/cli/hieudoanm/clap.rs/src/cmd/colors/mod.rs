@@ -1,3 +1,4 @@
+use clap::FromArgMatches;
 mod hcl;
 mod hex;
 mod oklch;
@@ -20,12 +21,12 @@ pub fn command() -> clap::Command {
 
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     match matches.subcommand() {
-        Some(("random", m)) => random::run(m).await,
-        Some(("palette", m)) => palette::run(m).await,
-        Some(("hex", m)) => hex::run(m).await,
-        Some(("rgb", m)) => rgb::run(m).await,
-        Some(("hcl", m)) => hcl::run(m).await,
-        Some(("oklch", m)) => oklch::run(m).await,
+        Some(("random", m)) => random::run(&random::Args::from_arg_matches(m)?).await,
+        Some(("palette", m)) => palette::run(&palette::Args::from_arg_matches(m)?).await,
+        Some(("hex", m)) => hex::run(&hex::Args::from_arg_matches(m)?).await,
+        Some(("rgb", m)) => rgb::run(&rgb::Args::from_arg_matches(m)?).await,
+        Some(("hcl", m)) => hcl::run(&hcl::Args::from_arg_matches(m)?).await,
+        Some(("oklch", m)) => oklch::run(&oklch::Args::from_arg_matches(m)?).await,
         _ => Ok(()),
     }
 }

@@ -1,6 +1,28 @@
 use tokio::net::TcpStream;
 use tokio::time::{timeout, Duration};
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'H', long = "host", help = "Host to ping")]
+    pub host: String,
+    #[arg(short = 'p', long = "port", default_value = "80", help = "TCP port")]
+    pub port: String,
+    #[arg(
+        short = 'c',
+        long = "count",
+        default_value = "4",
+        help = "Number of pings"
+    )]
+    pub count: String,
+    #[arg(
+        short = 't',
+        long = "timeout",
+        default_value = "5",
+        help = "Per-ping timeout in seconds"
+    )]
+    pub timeout: String,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("ping")
         .about("TCP ping to check host reachability")
@@ -34,23 +56,11 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let host = matches.get_one::<String>("host").unwrap();
-    let port: u16 = matches
-        .get_one::<String>("port")
-        .unwrap()
-        .parse()
-        .unwrap_or(80);
-    let count: u32 = matches
-        .get_one::<String>("count")
-        .unwrap()
-        .parse()
-        .unwrap_or(4);
-    let timeout_secs: u64 = matches
-        .get_one::<String>("timeout")
-        .unwrap()
-        .parse()
-        .unwrap_or(5);
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let host = &matches.host;
+    let port: u16 = matches.port.parse().unwrap_or(80);
+    let count: u32 = matches.count.parse().unwrap_or(4);
+    let timeout_secs: u64 = matches.timeout.parse().unwrap_or(5);
 
     let mut successes = 0u32;
     let mut failures = 0u32;

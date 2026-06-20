@@ -233,6 +233,27 @@ mod tests {
     }
 }
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'f', long = "file", help = "File path")]
+    pub file: String,
+    #[arg(short = 'o', long = "old", help = "Text or pattern to replace")]
+    pub old: String,
+    #[arg(long = "new", help = "Replacement text")]
+    pub new: String,
+    #[arg(short = 'r', long = "regex", action = clap::ArgAction::SetTrue, help = "Interpret old as a regex pattern")]
+    pub regex: bool,
+    #[arg(short = 'p', long = "preview", action = clap::ArgAction::SetTrue, help = "Preview changes without modifying the file")]
+    pub preview: bool,
+    #[arg(
+        short = 'n',
+        long = "count",
+        default_value = "0",
+        help = "Number of occurrences to replace (0 = all)"
+    )]
+    pub count: String,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("edit")
         .about("Find and replace text in a file")

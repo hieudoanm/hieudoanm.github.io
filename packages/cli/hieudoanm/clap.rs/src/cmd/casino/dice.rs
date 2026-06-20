@@ -1,5 +1,22 @@
-use clap::ArgMatches;
 use rand::Rng;
+
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(
+        short = 's',
+        long = "sides",
+        default_value = "6",
+        help = "Number of sides per die"
+    )]
+    pub sides: String,
+    #[arg(
+        short = 'n',
+        long = "count",
+        default_value = "1",
+        help = "Number of dice to roll"
+    )]
+    pub count: String,
+}
 
 pub fn command() -> clap::Command {
     clap::Command::new("dice")
@@ -20,13 +37,11 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
-    let sides: u32 = matches
-        .get_one::<String>("sides")
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let sides: u32 = Some(&matches.sides)
         .map(|s| s.parse().unwrap_or(6))
         .unwrap_or(6);
-    let count: usize = matches
-        .get_one::<String>("count")
+    let count: usize = Some(&matches.count)
         .map(|s| s.parse().unwrap_or(1))
         .unwrap_or(1);
 

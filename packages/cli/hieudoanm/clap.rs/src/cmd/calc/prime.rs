@@ -1,6 +1,14 @@
-use clap::ArgMatches;
-
 use super::prime_service;
+
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'n', long = "number", help = "Number to check or limit")]
+    pub number: String,
+    #[arg(short = 'l', long = "list", action = clap::ArgAction::SetTrue, help = "List all primes up to N")]
+    pub list: bool,
+    #[arg(long = "json", action = clap::ArgAction::SetTrue, help = "Output in JSON format")]
+    pub json: bool,
+}
 
 pub fn command() -> clap::Command {
     clap::Command::new("prime")
@@ -27,10 +35,10 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
-    let number: i64 = matches.get_one::<String>("number").unwrap().parse()?;
-    let list = matches.get_flag("list");
-    let json = matches.get_flag("json");
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let number: i64 = matches.number.parse()?;
+    let list = matches.list;
+    let json = matches.json;
 
     if number < 2 {
         anyhow::bail!("number must be >= 2");

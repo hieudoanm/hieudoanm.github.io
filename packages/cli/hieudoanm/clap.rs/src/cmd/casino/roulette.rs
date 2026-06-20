@@ -1,4 +1,3 @@
-use clap::ArgMatches;
 use rand::Rng;
 
 const WHEEL: &[u32] = &[
@@ -50,6 +49,17 @@ pub fn format_spin_result(n: u32) -> String {
     )
 }
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(
+        short = 'n',
+        long = "spins",
+        default_value = "1",
+        help = "Number of spins"
+    )]
+    pub spins: String,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("roulette")
         .about("Spin the roulette wheel")
@@ -62,9 +72,8 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
-    let spins: usize = matches
-        .get_one::<String>("spins")
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let spins: usize = Some(&matches.spins)
         .map(|s| s.parse().unwrap_or(1))
         .unwrap_or(1);
 
@@ -86,6 +95,7 @@ pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use clap::FromArgMatches;
 
     #[test]
     fn test_wheel_size() {
@@ -176,6 +186,6 @@ mod tests {
         let m = cmd
             .try_get_matches_from(vec!["roulette", "--spins", "1"])
             .unwrap();
-        run(&m).await.unwrap();
+        run(&Args::from_arg_matches(&m).unwrap()).await.unwrap();
     }
 }

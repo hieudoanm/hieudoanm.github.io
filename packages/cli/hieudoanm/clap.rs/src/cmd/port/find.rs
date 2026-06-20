@@ -1,3 +1,23 @@
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(
+        short = 's',
+        long = "start",
+        default_value = "8000",
+        help = "Start of port range"
+    )]
+    pub start: String,
+    #[arg(
+        short = 'e',
+        long = "end",
+        default_value = "9000",
+        help = "End of port range"
+    )]
+    pub end: String,
+    #[arg(long = "json", action = clap::ArgAction::SetTrue, help = "Output in JSON format")]
+    pub json: bool,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("find")
         .about("Find an available port in a range")
@@ -23,16 +43,14 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let start: u16 = matches
-        .get_one::<String>("start")
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let start: u16 = Some(&matches.start)
         .and_then(|s| s.parse().ok())
         .unwrap_or(8000);
-    let end: u16 = matches
-        .get_one::<String>("end")
+    let end: u16 = Some(&matches.end)
         .and_then(|s| s.parse().ok())
         .unwrap_or(9000);
-    let use_json = matches.get_flag("json");
+    let use_json = matches.json;
 
     match find_available_port(start, end) {
         Some(port) => {

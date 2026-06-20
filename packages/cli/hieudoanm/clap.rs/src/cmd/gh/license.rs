@@ -35,6 +35,19 @@ fn fetch_license(spdx_id: &str) -> anyhow::Result<License> {
     Ok(lic)
 }
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(long = "spdx-id", help = "SPDX license identifier (skip prompt)")]
+    pub spdx_id: Option<String>,
+    #[arg(
+        short = 'o',
+        long = "output",
+        default_value = "LICENSE",
+        help = "Output file path"
+    )]
+    pub output: String,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("license")
         .about("Fetch a license template from GitHub")
@@ -52,9 +65,9 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let spdx_id = matches.get_one::<String>("spdx-id");
-    let output = matches.get_one::<String>("output").unwrap();
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let spdx_id = matches.spdx_id.as_ref();
+    let output = &matches.output;
 
     let selected = if let Some(sid) = spdx_id {
         sid.clone()

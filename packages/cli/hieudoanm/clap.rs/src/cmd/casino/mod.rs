@@ -1,3 +1,4 @@
+use clap::FromArgMatches;
 pub mod baccarat;
 pub mod blackjack;
 mod coin;
@@ -151,12 +152,12 @@ pub fn command() -> clap::Command {
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     match matches.subcommand() {
         Some(("blackjack", m)) => blackjack::run(m).await,
-        Some(("poker", m)) => poker::run(m).await,
-        Some(("baccarat", m)) => baccarat::run(m).await,
-        Some(("slots", m)) => slots::run(m).await,
-        Some(("coin", m)) => coin::run(m).await,
-        Some(("dice", m)) => dice::run(m).await,
-        Some(("roulette", m)) => roulette::run(m).await,
+        Some(("poker", m)) => poker::run(&poker::Args::from_arg_matches(m)?).await,
+        Some(("baccarat", m)) => baccarat::run(&baccarat::Args::from_arg_matches(m)?).await,
+        Some(("slots", m)) => slots::run(&slots::Args::from_arg_matches(m)?).await,
+        Some(("coin", m)) => coin::run(&coin::Args::from_arg_matches(m)?).await,
+        Some(("dice", m)) => dice::run(&dice::Args::from_arg_matches(m)?).await,
+        Some(("roulette", m)) => roulette::run(&roulette::Args::from_arg_matches(m)?).await,
         _ => Ok(()),
     }
 }

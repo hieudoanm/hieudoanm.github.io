@@ -1,6 +1,23 @@
-use clap::ArgMatches;
-
 use super::service;
+
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'i', long = "income", help = "Gross monthly income (VND)")]
+    pub income: String,
+    #[arg(
+        short = 'd',
+        long = "dependents",
+        default_value = "0",
+        help = "Number of dependents"
+    )]
+    pub dependents: String,
+    #[arg(long = "insurance", action = clap::ArgAction::SetTrue, help = "Include insurance deductions")]
+    pub insurance: bool,
+    #[arg(long = "gross-up", action = clap::ArgAction::SetTrue, help = "Calculate gross from target net income")]
+    pub gross_up: bool,
+    #[arg(long = "json", action = clap::ArgAction::SetTrue, help = "Output in JSON format")]
+    pub json: bool,
+}
 
 pub fn command() -> clap::Command {
     clap::Command::new("tax")
@@ -39,17 +56,13 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
-    let json = matches.get_flag("json");
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let json = matches.json;
 
-    if matches.get_flag("gross-up") {
-        let target_net: f64 = matches.get_one::<String>("income").unwrap().parse()?;
-        let dependents: u32 = matches
-            .get_one::<String>("dependents")
-            .unwrap()
-            .parse()
-            .unwrap_or(0);
-        let insurance = matches.get_flag("insurance");
+    if matches.gross_up {
+        let target_net: f64 = matches.income.parse()?;
+        let dependents: u32 = matches.dependents.parse().unwrap_or(0);
+        let insurance = matches.insurance;
         let gross = service::solve_gross_from_net(target_net, dependents, insurance);
         let result = service::calculate_tax_full(gross, dependents, insurance);
 
@@ -88,13 +101,9 @@ pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
         return Ok(());
     }
 
-    let income: f64 = matches.get_one::<String>("income").unwrap().parse()?;
-    let dependents: u32 = matches
-        .get_one::<String>("dependents")
-        .unwrap()
-        .parse()
-        .unwrap_or(0);
-    let insurance = matches.get_flag("insurance");
+    let income: f64 = matches.income.parse()?;
+    let dependents: u32 = matches.dependents.parse().unwrap_or(0);
+    let insurance = matches.insurance;
     let result = service::calculate_tax_full(income, dependents, insurance);
 
     if json {

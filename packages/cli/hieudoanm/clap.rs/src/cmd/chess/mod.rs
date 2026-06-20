@@ -1,3 +1,4 @@
+use clap::FromArgMatches;
 mod com;
 mod elo;
 mod fen;
@@ -22,12 +23,12 @@ pub fn command() -> clap::Command {
 
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     match matches.subcommand() {
-        Some(("play", m)) => play::run(m).await,
+        Some(("play", m)) => play::run(&play::Args::from_arg_matches(m)?).await,
         Some(("fen", m)) => fen::run(m).await,
         Some(("pgn", m)) => pgn::run(m).await,
-        Some(("elo", m)) => elo::run(m).await,
-        Some(("random", m)) => random::run(m).await,
-        Some(("setup", m)) => setup::run(m).await,
+        Some(("elo", m)) => elo::run(&elo::Args::from_arg_matches(m)?).await,
+        Some(("random", m)) => random::run(&random::Args::from_arg_matches(m)?).await,
+        Some(("setup", m)) => setup::run(&setup::Args::from_arg_matches(m)?).await,
         Some(("com", m)) => com::run(m).await,
         _ => Ok(()),
     }

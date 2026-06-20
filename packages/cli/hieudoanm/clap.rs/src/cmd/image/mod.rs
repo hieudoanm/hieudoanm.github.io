@@ -1,3 +1,4 @@
+use clap::FromArgMatches;
 mod convert;
 mod dominant;
 mod info;
@@ -13,9 +14,9 @@ pub fn command() -> clap::Command {
 
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     match matches.subcommand() {
-        Some(("info", m)) => info::run(m).await,
-        Some(("convert", m)) => convert::run(m).await,
-        Some(("dominant", m)) => dominant::run(m).await,
+        Some(("info", m)) => info::run(&info::Args::from_arg_matches(m)?).await,
+        Some(("convert", m)) => convert::run(&convert::Args::from_arg_matches(m)?).await,
+        Some(("dominant", m)) => dominant::run(&dominant::Args::from_arg_matches(m)?).await,
         _ => Ok(()),
     }
 }

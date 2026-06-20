@@ -1,3 +1,20 @@
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(help = "City name")]
+    pub city: Option<String>,
+    #[arg(short = 'f', long = "forecast", action = clap::ArgAction::SetTrue, help = "Show 3-day forecast")]
+    pub forecast: bool,
+    #[arg(short = 'j', long = "json", action = clap::ArgAction::SetTrue, help = "Output in JSON format")]
+    pub json: bool,
+    #[arg(
+        short = 'u',
+        long = "units",
+        default_value = "metric",
+        help = "Units: metric, imperial, uk"
+    )]
+    pub units: String,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("weather")
         .about("Check current weather for a city")
@@ -41,14 +58,11 @@ fn build_weather_url(city: &str, forecast: bool, json: bool, units: &str) -> Str
     }
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let forecast = matches.get_flag("forecast");
-    let json = matches.get_flag("json");
-    let units = matches
-        .get_one::<String>("units")
-        .map(|s| s.as_str())
-        .unwrap_or("metric");
-    let city = matches.get_one::<String>("city").cloned();
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let forecast = matches.forecast;
+    let json = matches.json;
+    let units = Some(&matches.units).map(|s| s.as_str()).unwrap_or("metric");
+    let city = matches.city.as_ref().cloned();
 
     let city = if let Some(c) = city {
         c

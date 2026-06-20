@@ -1,3 +1,4 @@
+use clap::FromArgMatches;
 mod age;
 mod clock;
 mod cron;
@@ -26,15 +27,15 @@ pub fn command() -> clap::Command {
 
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     match matches.subcommand() {
-        Some(("age", m)) => age::run(m).await,
+        Some(("age", m)) => age::run(&age::Args::from_arg_matches(m)?).await,
         Some(("clock", m)) => clock::run(m).await,
-        Some(("cron", m)) => cron::run(m).await,
-        Some(("epoch", m)) => epoch::run(m).await,
-        Some(("pomodoro", m)) => pomodoro::run(m).await,
-        Some(("stopwatch", m)) => stopwatch::run(m).await,
-        Some(("timer", m)) => timer::run(m).await,
-        Some(("until", m)) => until::run(m).await,
-        Some(("world", m)) => world::run(m).await,
+        Some(("cron", m)) => cron::run(&cron::Args::from_arg_matches(m)?).await,
+        Some(("epoch", m)) => epoch::run(&epoch::Args::from_arg_matches(m)?).await,
+        Some(("pomodoro", m)) => pomodoro::run(&pomodoro::Args::from_arg_matches(m)?).await,
+        Some(("stopwatch", m)) => stopwatch::run(&stopwatch::Args::from_arg_matches(m)?).await,
+        Some(("timer", m)) => timer::run(&timer::Args::from_arg_matches(m)?).await,
+        Some(("until", m)) => until::run(&until::Args::from_arg_matches(m)?).await,
+        Some(("world", m)) => world::run(&world::Args::from_arg_matches(m)?).await,
         _ => Ok(()),
     }
 }

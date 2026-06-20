@@ -22,6 +22,7 @@ struct Repo {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use clap::FromArgMatches;
 
     #[test]
     fn test_escape_xml_ampersand() {
@@ -142,7 +143,7 @@ mod tests {
         let m = cmd
             .try_get_matches_from(vec!["og", "--url", "invalid-format"])
             .unwrap();
-        let result = run(&m).await;
+        let result = run(&Args::from_arg_matches(&m).unwrap()).await;
         assert!(result.is_err());
         assert!(result.unwrap_err().to_string().contains("owner/repo"));
     }
@@ -250,6 +251,19 @@ fn generate_og_svg(repo: &Repo) -> String {
     svg
 }
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'u', long = "url", help = "Repository (owner/repo)")]
+    pub url: String,
+    #[arg(
+        short = 'o',
+        long = "output",
+        default_value = "og.svg",
+        help = "Output SVG file path"
+    )]
+    pub output: String,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("og")
         .about("Generate an Open Graph SVG for a GitHub repository")
@@ -269,9 +283,9 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let url = matches.get_one::<String>("url").unwrap();
-    let output = matches.get_one::<String>("output").unwrap();
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let url = &matches.url;
+    let output = &matches.output;
 
     let parts: Vec<&str> = url.split('/').collect();
     if parts.len() != 2 {

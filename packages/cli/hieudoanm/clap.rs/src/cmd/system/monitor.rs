@@ -1,5 +1,23 @@
 use std::time::Duration;
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(
+        short = 'w',
+        long = "watch",
+        default_value = "0",
+        help = "Refresh interval in seconds (0 = one-shot)"
+    )]
+    pub watch: u64,
+    #[arg(
+        short = 'p',
+        long = "procs",
+        default_value = "10",
+        help = "Number of top processes to show"
+    )]
+    pub procs: usize,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("monitor")
         .about("Show system metrics (CPU, RAM, processes)")
@@ -21,9 +39,9 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let watch = *matches.get_one::<u64>("watch").unwrap_or(&0);
-    let procs = *matches.get_one::<usize>("procs").unwrap_or(&10);
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let watch = matches.watch;
+    let procs = matches.procs;
     run_monitor(watch, procs)
 }
 

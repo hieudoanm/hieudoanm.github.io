@@ -2,11 +2,14 @@ use std::collections::HashMap;
 
 use crate::cmd::convert::read_stdin;
 
+#[derive(clap::Args)]
+pub struct Args;
+
 pub fn command() -> clap::Command {
     clap::Command::new("braille").about("Convert text to braille")
 }
 
-pub async fn run(_matches: &clap::ArgMatches) -> anyhow::Result<()> {
+pub async fn run(_matches: &Args) -> anyhow::Result<()> {
     let text = read_stdin()?;
     let map = braille_map();
     let mut result = String::new();

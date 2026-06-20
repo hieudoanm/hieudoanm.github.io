@@ -1,3 +1,4 @@
+use clap::FromArgMatches;
 mod check;
 mod find;
 mod scan;
@@ -16,9 +17,9 @@ pub fn command() -> clap::Command {
 
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     match matches.subcommand() {
-        Some(("check", m)) => check::run(m).await,
-        Some(("find", m)) => find::run(m).await,
-        Some(("scan", m)) => scan::run(m).await,
+        Some(("check", m)) => check::run(&check::Args::from_arg_matches(m)?).await,
+        Some(("find", m)) => find::run(&find::Args::from_arg_matches(m)?).await,
+        Some(("scan", m)) => scan::run(&scan::Args::from_arg_matches(m)?).await,
         _ => Ok(()),
     }
 }

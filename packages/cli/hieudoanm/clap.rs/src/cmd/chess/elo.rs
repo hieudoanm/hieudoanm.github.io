@@ -1,5 +1,8 @@
 use std::io::{self, BufRead};
 
+#[derive(clap::Args)]
+pub struct Args;
+
 pub fn command() -> clap::Command {
     clap::Command::new("elo").about("Calculate new Elo rating after a game")
 }
@@ -41,7 +44,7 @@ fn read_rating_input<R: BufRead>(reader: &mut R) -> anyhow::Result<(i32, i32, f6
     Ok((my_rating, opponent_rating, score, k))
 }
 
-pub async fn run(_matches: &clap::ArgMatches) -> anyhow::Result<()> {
+pub async fn run(_matches: &Args) -> anyhow::Result<()> {
     let stdin = io::stdin();
     let mut reader = stdin.lock();
     let (my_rating, opponent_rating, score, k) = read_rating_input(&mut reader)?;

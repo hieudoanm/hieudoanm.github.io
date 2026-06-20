@@ -62,6 +62,14 @@ fn whois_server(domain: &str) -> &str {
     }
 }
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'd', long = "domain", help = "Domain to look up")]
+    pub domain: String,
+    #[arg(short = 's', long = "server", help = "WHOIS server to query")]
+    pub server: Option<String>,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("whois")
         .about("WHOIS lookup for a domain")
@@ -80,14 +88,11 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let domain = matches
-        .get_one::<String>("domain")
-        .unwrap()
-        .trim()
-        .to_string();
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let domain = matches.domain.trim().to_string();
     let server = matches
-        .get_one::<String>("server")
+        .server
+        .as_ref()
         .cloned()
         .unwrap_or_else(|| whois_server(&domain).to_string());
 

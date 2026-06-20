@@ -1,11 +1,14 @@
 use crate::cmd::chess::service;
 use std::io::{self, BufRead, Write};
 
+#[derive(clap::Args)]
+pub struct Args;
+
 pub fn command() -> clap::Command {
     clap::Command::new("setup").about("Set up a specific Chess960 starting position")
 }
 
-pub async fn run(_matches: &clap::ArgMatches) -> anyhow::Result<()> {
+pub async fn run(_matches: &Args) -> anyhow::Result<()> {
     let stdin = io::stdin();
     let mut reader = stdin.lock();
 

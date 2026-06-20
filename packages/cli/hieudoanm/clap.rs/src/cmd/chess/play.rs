@@ -1,5 +1,11 @@
 use std::io::{self, BufRead, Write};
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(long = "blind", action = clap::ArgAction::SetTrue, help = "Hide the board after each move")]
+    pub blind: bool,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("play")
         .about("Play chess interactively in the terminal")
@@ -11,8 +17,8 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let blind = matches.get_flag("blind");
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let blind = matches.blind;
     let stdin = io::stdin();
     let mut reader = stdin.lock();
 

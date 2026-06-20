@@ -34,6 +34,19 @@ fn fetch_coc(key: &str) -> anyhow::Result<CodeOfConduct> {
     Ok(coc)
 }
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(long = "key", help = "Code of Conduct key (skip prompt)")]
+    pub key: Option<String>,
+    #[arg(
+        short = 'o',
+        long = "output",
+        default_value = "CODE_OF_CONDUCT",
+        help = "Output file path"
+    )]
+    pub output: String,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("coc")
         .about("Fetch a GitHub Code of Conduct")
@@ -51,9 +64,9 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let key = matches.get_one::<String>("key");
-    let output = matches.get_one::<String>("output").unwrap();
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let key = matches.key.as_ref();
+    let output = &matches.output;
 
     let selected = if let Some(k) = key {
         k.clone()

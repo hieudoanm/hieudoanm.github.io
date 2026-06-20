@@ -1,3 +1,9 @@
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(long = "json", action = clap::ArgAction::SetTrue, help = "Output in JSON format")]
+    pub json: bool,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("battery")
         .about("Show battery status")
@@ -8,8 +14,8 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let json = matches.get_flag("json");
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let json = matches.json;
 
     #[cfg(target_os = "macos")]
     {

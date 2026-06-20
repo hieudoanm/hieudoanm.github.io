@@ -5,6 +5,7 @@ use anyhow::Context;
 #[cfg(test)]
 mod tests {
     use super::*;
+    use clap::FromArgMatches;
 
     #[test]
     fn test_generate_languages_svg_single() {
@@ -80,7 +81,7 @@ mod tests {
         let m = cmd
             .try_get_matches_from(vec!["languages", "--repo", "invalid-format"])
             .unwrap();
-        let result = run(&m).await;
+        let result = run(&Args::from_arg_matches(&m).unwrap()).await;
         assert!(result.is_err());
         assert!(result.unwrap_err().to_string().contains("owner/repo"));
     }
@@ -152,6 +153,19 @@ fn generate_languages_svg(langs: &HashMap<String, i64>) -> String {
     svg
 }
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'r', long = "repo", help = "Repository (owner/repo)")]
+    pub repo: String,
+    #[arg(
+        short = 'o',
+        long = "output",
+        default_value = "languages.svg",
+        help = "Output SVG file path"
+    )]
+    pub output: String,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("languages")
         .about("Show repository language breakdown and generate SVG bar chart")
@@ -171,9 +185,9 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let repo = matches.get_one::<String>("repo").unwrap();
-    let output = matches.get_one::<String>("output").unwrap();
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let repo = &matches.repo;
+    let output = &matches.output;
 
     let parts: Vec<&str> = repo.split('/').collect();
     if parts.len() != 2 {

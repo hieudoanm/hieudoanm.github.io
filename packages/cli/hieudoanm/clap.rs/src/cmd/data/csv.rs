@@ -1,5 +1,13 @@
 use anyhow::Context;
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(help = "CSV file")]
+    pub file: Option<String>,
+    #[arg(long = "json", action = clap::ArgAction::SetTrue, help = "Output in JSON format")]
+    pub json: bool,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("csv")
         .about("View and format CSV files")
@@ -12,9 +20,9 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let file = matches.get_one::<String>("file");
-    let use_json = matches.get_flag("json");
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let file = matches.file.as_ref();
+    let use_json = matches.json;
 
     let mut records: Vec<Vec<String>> = Vec::new();
 

@@ -1,4 +1,10 @@
-use clap::ArgMatches;
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(long = "weight", help = "Weight in kg")]
+    pub weight: String,
+    #[arg(long = "height", help = "Height in cm")]
+    pub height: String,
+}
 
 pub fn command() -> clap::Command {
     clap::Command::new("bmi")
@@ -17,17 +23,9 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
-    let weight: f64 = matches
-        .get_one::<String>("weight")
-        .unwrap()
-        .parse()
-        .unwrap_or(0.0);
-    let height: f64 = matches
-        .get_one::<String>("height")
-        .unwrap()
-        .parse()
-        .unwrap_or(0.0);
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let weight: f64 = matches.weight.parse().unwrap_or(0.0);
+    let height: f64 = matches.height.parse().unwrap_or(0.0);
     if height > 0.0 {
         let bmi = weight / ((height / 100.0) * (height / 100.0));
         println!("BMI: {bmi:.1}");

@@ -1,3 +1,4 @@
+use clap::FromArgMatches;
 mod chat;
 pub mod code;
 mod config;
@@ -50,7 +51,7 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
         Some(("chat", sub_m)) => chat::run(sub_m).await?,
         Some(("hook", _m)) => hook::run().await?,
         Some(("code", sub_m)) => code::run(sub_m).await?,
-        Some(("serve", sub_m)) => serve::run(sub_m).await?,
+        Some(("serve", sub_m)) => serve::run(&serve::Args::from_arg_matches(sub_m)?).await?,
         _ => {}
     }
     Ok(())

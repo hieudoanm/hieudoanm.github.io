@@ -178,6 +178,43 @@ fn grep_file(re: &Regex, path: &str, context: usize, max_count: usize) -> (Vec<L
     }
 }
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(
+        short = 'p',
+        long = "pattern",
+        help = "Regex or fixed string pattern to search for"
+    )]
+    pub pattern: String,
+    #[arg(
+        short = 'P',
+        long = "path",
+        default_value = ".",
+        help = "File or directory to search (default: .)"
+    )]
+    pub path: String,
+    #[arg(short = 'i', long = "include")]
+    pub include: Option<String>,
+    #[arg(
+        short = 'C',
+        long = "context",
+        default_value = "0",
+        help = "Show N lines of context around matches"
+    )]
+    pub context: String,
+    #[arg(short = 'F', long = "fixed", action = clap::ArgAction::SetTrue, help = "Fixed string match (not regex)")]
+    pub fixed: bool,
+    #[arg(
+        short = 'm',
+        long = "max-count",
+        default_value = "0",
+        help = "Maximum number of matches"
+    )]
+    pub max_count: String,
+    #[arg(short = 'v', long = "ignore-case", action = clap::ArgAction::SetTrue, help = "Case-insensitive search")]
+    pub ignore_case: bool,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("grep")
         .about("Search file contents using regex or fixed strings")

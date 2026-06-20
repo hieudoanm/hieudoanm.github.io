@@ -2,6 +2,21 @@ use std::path::Path;
 
 use anyhow::Context;
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'i', long = "file", help = "Input image file")]
+    pub file: String,
+    #[arg(
+        short = 'f',
+        long = "format",
+        default_value = "png",
+        help = "Output format (png, jpg, gif)"
+    )]
+    pub format: String,
+    #[arg(short = 'o', long = "output", help = "Output file path")]
+    pub output: Option<String>,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("convert")
         .about("Convert image to another format")
@@ -27,10 +42,10 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let file = matches.get_one::<String>("file").unwrap();
-    let to_format = matches.get_one::<String>("format").unwrap();
-    let output = matches.get_one::<String>("output");
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let file = &matches.file;
+    let to_format = &matches.format;
+    let output = matches.output.as_ref();
 
     let img = image::ImageReader::open(file)
         .with_context(|| format!("failed to open {file}"))?

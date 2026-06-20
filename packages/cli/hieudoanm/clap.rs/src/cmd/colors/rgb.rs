@@ -1,4 +1,12 @@
-use clap::ArgMatches;
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(help = "Red (0-255)")]
+    pub r: Option<u8>,
+    #[arg(help = "Green (0-255)")]
+    pub g: Option<u8>,
+    #[arg(help = "Blue (0-255)")]
+    pub b: Option<u8>,
+}
 
 pub fn command() -> clap::Command {
     clap::Command::new("rgb")
@@ -8,10 +16,10 @@ pub fn command() -> clap::Command {
         .arg(clap::Arg::new("b").help("Blue (0-255)"))
 }
 
-pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
-    let r = *matches.get_one::<u8>("r").unwrap_or(&0);
-    let g = *matches.get_one::<u8>("g").unwrap_or(&0);
-    let b = *matches.get_one::<u8>("b").unwrap_or(&0);
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let r = *matches.r.as_ref().unwrap_or(&0);
+    let g = *matches.g.as_ref().unwrap_or(&0);
+    let b = *matches.b.as_ref().unwrap_or(&0);
     println!("RGB({r}, {g}, {b})");
     Ok(())
 }

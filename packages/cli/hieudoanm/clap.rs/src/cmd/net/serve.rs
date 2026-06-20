@@ -234,6 +234,26 @@ fn write_response_headers(
     response.extend_from_slice(b"\r\n");
 }
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(
+        short = 'p',
+        long = "port",
+        default_value = "8080",
+        help = "Port to listen on"
+    )]
+    pub port: String,
+    #[arg(
+        short = 'd',
+        long = "dir",
+        default_value = ".",
+        help = "Directory to serve"
+    )]
+    pub dir: String,
+    #[arg(long = "cors", action = clap::ArgAction::SetTrue, help = "Enable CORS headers")]
+    pub cors: bool,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("serve")
         .about("Start an HTTP file server")
@@ -259,14 +279,10 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let port: u16 = matches
-        .get_one::<String>("port")
-        .unwrap()
-        .parse()
-        .unwrap_or(8080);
-    let dir = matches.get_one::<String>("dir").unwrap();
-    let cors = matches.get_flag("cors");
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let port: u16 = matches.port.parse().unwrap_or(8080);
+    let dir = &matches.dir;
+    let cors = matches.cors;
 
     let dir_path = Path::new(dir);
     let abs_dir = if dir_path.is_absolute() {

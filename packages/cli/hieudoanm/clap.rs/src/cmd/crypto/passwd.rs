@@ -1,4 +1,3 @@
-use clap::ArgMatches;
 use rand::Rng;
 
 const LOWERCASE: &[u8] = b"abcdefghijklmnopqrstuvwxyz";
@@ -7,6 +6,43 @@ const DIGITS: &[u8] = b"0123456789";
 const SYMBOLS: &[u8] = b"!@#$%^&*()-_=+[]{}<>?|~";
 const VOWELS: &[u8] = b"aeiou";
 const CONSONANTS: &[u8] = b"bcdfghjklmnpqrstvwxyz";
+
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(
+        short = 'l',
+        long = "length",
+        default_value = "16",
+        help = "Password length"
+    )]
+    pub length: String,
+    #[arg(
+        short = 'n',
+        long = "count",
+        default_value = "1",
+        help = "Number of passwords"
+    )]
+    pub count: String,
+    #[arg(
+        short = 'd',
+        long = "digits",
+        default_value = "true",
+        help = "Include digits"
+    )]
+    pub digits: String,
+    #[arg(short = 's', long = "symbols", action = clap::ArgAction::SetTrue, help = "Include symbols")]
+    pub symbols: bool,
+    #[arg(long = "no-upper", action = clap::ArgAction::SetTrue, help = "Exclude uppercase letters")]
+    pub no_upper: bool,
+    #[arg(long = "pin", action = clap::ArgAction::SetTrue, help = "Generate numeric PIN")]
+    pub pin: bool,
+    #[arg(long = "clip", action = clap::ArgAction::SetTrue, help = "Copy to clipboard (first password only)")]
+    pub clip: bool,
+    #[arg(long = "pronounceable", action = clap::ArgAction::SetTrue, help = "Generate pronounceable password")]
+    pub pronounceable: bool,
+    #[arg(long = "json", action = clap::ArgAction::SetTrue, help = "Output in JSON format")]
+    pub json: bool,
+}
 
 pub fn command() -> clap::Command {
     clap::Command::new("passwd")
@@ -126,27 +162,16 @@ fn generate_pronounceable(length: usize) -> String {
     s
 }
 
-pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
-    let length: usize = matches
-        .get_one::<String>("length")
-        .unwrap()
-        .parse()
-        .unwrap_or(16);
-    let count: usize = matches
-        .get_one::<String>("count")
-        .unwrap()
-        .parse()
-        .unwrap_or(1);
-    let include_digits = matches
-        .get_one::<String>("digits")
-        .map(|s| s != "false")
-        .unwrap_or(true);
-    let include_symbols = matches.get_flag("symbols");
-    let no_upper = matches.get_flag("no-upper");
-    let pin = matches.get_flag("pin");
-    let clip = matches.get_flag("clip");
-    let pronounceable = matches.get_flag("pronounceable");
-    let json = matches.get_flag("json");
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let length: usize = matches.length.parse().unwrap_or(16);
+    let count: usize = matches.count.parse().unwrap_or(1);
+    let include_digits = Some(&matches.digits).map(|s| s != "false").unwrap_or(true);
+    let include_symbols = matches.symbols;
+    let no_upper = matches.no_upper;
+    let pin = matches.pin;
+    let clip = matches.clip;
+    let pronounceable = matches.pronounceable;
+    let json = matches.json;
 
     let mut rng = rand::thread_rng();
     let mut passwords = Vec::with_capacity(count);

@@ -1,6 +1,16 @@
-use clap::ArgMatches;
-
 use super::eval_service;
+
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(
+        short = 'e',
+        long = "expression",
+        help = "Mathematical expression to evaluate"
+    )]
+    pub expression: String,
+    #[arg(long = "json", action = clap::ArgAction::SetTrue, help = "Output in JSON format")]
+    pub json: bool,
+}
 
 pub fn command() -> clap::Command {
     clap::Command::new("eval")
@@ -20,9 +30,9 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
-    let expression = matches.get_one::<String>("expression").unwrap();
-    let json = matches.get_flag("json");
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let expression = &matches.expression;
+    let json = matches.json;
 
     match eval_service::eval_expression(expression) {
         Ok(v) => {

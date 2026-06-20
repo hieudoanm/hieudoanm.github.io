@@ -1,3 +1,14 @@
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(
+        short = 'p',
+        long = "port",
+        default_value = "8080",
+        help = "Port to listen on"
+    )]
+    pub port: String,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("serve")
         .about("Start the OpenRouter HTTP server")
@@ -10,9 +21,8 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let port = matches
-        .get_one::<String>("port")
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let port = Some(&matches.port)
         .and_then(|p| p.parse::<u16>().ok())
         .unwrap_or(8080);
     println!("OpenRouter HTTP server starting on http://localhost:{port}");

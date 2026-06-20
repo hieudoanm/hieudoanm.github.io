@@ -1,5 +1,35 @@
 use anyhow::Context;
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'p', long = "pattern", help = "Glob pattern to match")]
+    pub pattern: String,
+    #[arg(
+        short = 'd',
+        long = "dir",
+        default_value = ".",
+        help = "Root directory to search"
+    )]
+    pub dir: String,
+    #[arg(
+        short = 'D',
+        long = "max-depth",
+        default_value = "0",
+        help = "Maximum directory depth (0 = unlimited)"
+    )]
+    pub max_depth: String,
+    #[arg(
+        short = 't',
+        long = "type",
+        help = "Filter by type: f (file) or d (directory)"
+    )]
+    pub r#type: Option<String>,
+    #[arg(short = 'H', long = "hidden", action = clap::ArgAction::SetTrue, help = "Include hidden files and directories")]
+    pub hidden: bool,
+    #[arg(long = "json", action = clap::ArgAction::SetTrue, help = "Output in JSON format")]
+    pub json: bool,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("files")
         .about("Find files by glob pattern")
@@ -45,21 +75,15 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let pattern = matches
-        .get_one::<String>("pattern")
-        .context("pattern required")?;
-    let dir = matches
-        .get_one::<String>("dir")
-        .map(|s| s.as_str())
-        .unwrap_or(".");
-    let max_depth: usize = matches
-        .get_one::<String>("max-depth")
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let pattern = Some(&matches.pattern).context("pattern required")?;
+    let dir = Some(&matches.dir).map(|s| s.as_str()).unwrap_or(".");
+    let max_depth: usize = Some(&matches.max_depth)
         .and_then(|s| s.parse().ok())
         .unwrap_or(0);
-    let file_type = matches.get_one::<String>("type").map(|s| s.as_str());
-    let hidden = matches.get_flag("hidden");
-    let use_json = matches.get_flag("json");
+    let file_type = matches.r#type.as_deref();
+    let hidden = matches.hidden;
+    let use_json = matches.json;
 
     let results = find_files_with_glob(pattern, dir, max_depth, file_type, hidden)?;
 

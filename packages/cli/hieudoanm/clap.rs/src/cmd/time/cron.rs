@@ -28,6 +28,16 @@ lazy_static! {
     };
 }
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'e', long = "expression", help = "Cron expression (5 fields)")]
+    pub expression: String,
+    #[arg(short = 'n', long = "next", help = "Show next N run times")]
+    pub next: Option<usize>,
+    #[arg(long = "until", help = "Show runs until this date (YYYY-MM-DD)")]
+    pub until: Option<String>,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("cron")
         .about("Parse and describe cron expressions")
@@ -187,6 +197,7 @@ fn next_runs(expr: &str, count: usize, until: chrono::NaiveDate) -> Vec<chrono::
 #[cfg(test)]
 mod tests {
     use super::*;
+    use clap::FromArgMatches;
 
     #[test]
     fn test_resolve_val_with_names() {
@@ -337,7 +348,7 @@ mod tests {
         let m = cmd
             .try_get_matches_from(vec!["cron", "--expression", "* * * * *"])
             .unwrap();
-        run(&m).await.unwrap();
+        run(&Args::from_arg_matches(&m).unwrap()).await.unwrap();
     }
 
     #[tokio::test]
@@ -346,15 +357,16 @@ mod tests {
         let m = cmd
             .try_get_matches_from(vec!["cron", "--expression", "0 6 * * *", "--next", "3"])
             .unwrap();
-        run(&m).await.unwrap();
+        run(&Args::from_arg_matches(&m).unwrap()).await.unwrap();
     }
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let expr = matches.get_one::<String>("expression").unwrap();
-    let next = matches.get_one::<usize>("next").copied().unwrap_or(0);
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let expr = &matches.expression;
+    let next = matches.next.as_ref().copied().unwrap_or(0);
     let until = matches
-        .get_one::<String>("until")
+        .until
+        .as_ref()
         .and_then(|s| chrono::NaiveDate::parse_from_str(s, "%Y-%m-%d").ok())
         .unwrap_or_else(|| chrono::NaiveDate::from_ymd_opt(2100, 1, 1).unwrap());
 

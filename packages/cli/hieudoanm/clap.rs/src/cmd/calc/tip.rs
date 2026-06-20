@@ -1,4 +1,24 @@
-use clap::ArgMatches;
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'b', long = "bill", help = "Bill amount")]
+    pub bill: String,
+    #[arg(
+        short = 'p',
+        long = "percent",
+        default_value = "15",
+        help = "Tip percentage"
+    )]
+    pub percent: String,
+    #[arg(
+        short = 's',
+        long = "split",
+        default_value = "1",
+        help = "Number of people splitting"
+    )]
+    pub split: String,
+    #[arg(long = "json", action = clap::ArgAction::SetTrue, help = "Output in JSON format")]
+    pub json: bool,
+}
 
 pub fn command() -> clap::Command {
     clap::Command::new("tip")
@@ -32,15 +52,11 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
-    let bill: f64 = matches.get_one::<String>("bill").unwrap().parse()?;
-    let tip_percent: f64 = matches.get_one::<String>("percent").unwrap().parse()?;
-    let split: i32 = matches
-        .get_one::<String>("split")
-        .unwrap()
-        .parse()
-        .unwrap_or(1);
-    let json = matches.get_flag("json");
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let bill: f64 = matches.bill.parse()?;
+    let tip_percent: f64 = matches.percent.parse()?;
+    let split: i32 = matches.split.parse().unwrap_or(1);
+    let json = matches.json;
 
     let split = split.max(1);
     let tip = bill * tip_percent / 100.0;

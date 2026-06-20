@@ -1,6 +1,18 @@
 use std::io::Write;
 use std::time::Duration;
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(long = "work", default_value = "25", help = "Work duration in minutes")]
+    pub work: String,
+    #[arg(
+        long = "break",
+        default_value = "5",
+        help = "Break duration in minutes"
+    )]
+    pub r#break: String,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("pomodoro")
         .about("Start a pomodoro timer")
@@ -18,17 +30,9 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let work: u64 = matches
-        .get_one::<String>("work")
-        .unwrap_or(&"25".into())
-        .parse()
-        .unwrap_or(25);
-    let break_: u64 = matches
-        .get_one::<String>("break")
-        .unwrap_or(&"5".into())
-        .parse()
-        .unwrap_or(5);
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let work: u64 = matches.work.parse().unwrap_or(25);
+    let break_: u64 = matches.r#break.parse().unwrap_or(5);
     println!("Pomodoro timer: {work}min work, {break_}min break");
     println!("Press Ctrl+C to stop\n");
 

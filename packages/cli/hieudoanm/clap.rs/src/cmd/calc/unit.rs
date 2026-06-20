@@ -1,6 +1,16 @@
-use clap::ArgMatches;
-
 use super::unit_service;
+
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'v', long = "value", help = "Value to convert")]
+    pub value: String,
+    #[arg(short = 'f', long = "from", help = "Source unit")]
+    pub from: String,
+    #[arg(short = 't', long = "to", help = "Target unit")]
+    pub to: String,
+    #[arg(long = "json", action = clap::ArgAction::SetTrue, help = "Output in JSON format")]
+    pub json: bool,
+}
 
 pub fn command() -> clap::Command {
     clap::Command::new("unit")
@@ -34,11 +44,11 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
-    let value: f64 = matches.get_one::<String>("value").unwrap().parse()?;
-    let from = matches.get_one::<String>("from").unwrap();
-    let to = matches.get_one::<String>("to").unwrap();
-    let json = matches.get_flag("json");
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let value: f64 = matches.value.parse()?;
+    let from = &matches.from;
+    let to = &matches.to;
+    let json = matches.json;
 
     match unit_service::convert(value, from, to) {
         Ok(r) => {

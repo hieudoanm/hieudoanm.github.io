@@ -9,6 +9,19 @@ fn md5_hash(data: &[u8]) -> String {
     hex_encode(&h.finalize())
 }
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(
+        short = 'a',
+        long = "algorithm",
+        default_value = "sha256",
+        help = "Hash algorithm: md5, sha1, sha256, sha512"
+    )]
+    pub algorithm: String,
+    #[arg(short = 'f', long = "file", help = "File path")]
+    pub file: String,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("checksum")
         .about("Compute file checksum")

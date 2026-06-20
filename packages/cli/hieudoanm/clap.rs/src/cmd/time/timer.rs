@@ -1,6 +1,12 @@
 use std::io::Write;
 use std::time::Duration;
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'd', long = "duration", help = "Duration (e.g. 30s, 5m, 90)")]
+    pub duration: String,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("timer")
         .about("Simple countdown timer")
@@ -61,8 +67,8 @@ mod tests {
     }
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let dur_str = matches.get_one::<String>("duration").unwrap();
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let dur_str = &matches.duration;
     let total = parse_duration(dur_str)?;
     let total_secs = total.as_secs();
 

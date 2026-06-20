@@ -1,5 +1,15 @@
 use chrono::{Datelike, Local, NaiveDate};
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'y', long = "year", help = "Birth year")]
+    pub year: String,
+    #[arg(short = 'm', long = "month", help = "Birth month (1-12)")]
+    pub month: String,
+    #[arg(short = 'd', long = "day", help = "Birth day (1-31)")]
+    pub day: String,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("age")
         .about("Calculate age from birthdate")
@@ -26,29 +36,18 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let year: i32 = matches
-        .get_one::<String>("year")
-        .unwrap()
-        .parse()
-        .unwrap_or(0);
-    let month: u32 = matches
-        .get_one::<String>("month")
-        .unwrap()
-        .parse()
-        .unwrap_or(0);
-    let day: u32 = matches
-        .get_one::<String>("day")
-        .unwrap()
-        .parse()
-        .unwrap_or(0);
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let year: i32 = matches.year.parse().unwrap_or(0);
+    let month: u32 = matches.month.parse().unwrap_or(0);
+    let day: u32 = matches.day.parse().unwrap_or(0);
 
     if year <= 0 || !(1..=12).contains(&month) || !(1..=31).contains(&day) {
         anyhow::bail!("invalid birth date: year/month/day must be valid values");
     }
 
-    let birth = NaiveDate::from_ymd_opt(year, month, day)
-        .ok_or_else(|| anyhow::anyhow!("invalid birth date: {year}/{month}/{day} does not exist"))?;
+    let birth = NaiveDate::from_ymd_opt(year, month, day).ok_or_else(|| {
+        anyhow::anyhow!("invalid birth date: {year}/{month}/{day} does not exist")
+    })?;
 
     let now = Local::now().naive_local().date();
 

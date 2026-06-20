@@ -1,4 +1,8 @@
-use clap::ArgMatches;
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(help = "Hex color (without #)")]
+    pub hex: Option<String>,
+}
 
 pub fn command() -> clap::Command {
     clap::Command::new("hex")
@@ -6,10 +10,10 @@ pub fn command() -> clap::Command {
         .arg(clap::Arg::new("hex").help("Hex color (without #)"))
 }
 
-pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
     use crate::cmd::colors::service;
 
-    let hex = if let Some(h) = matches.get_one::<String>("hex") {
+    let hex = if let Some(h) = matches.hex.as_ref() {
         h.clone()
     } else {
         print!("Enter hex color (e.g. ff0000): ");

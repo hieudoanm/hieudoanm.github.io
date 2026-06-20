@@ -8,6 +8,39 @@ struct TextMatch {
     content: String,
 }
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'p', long = "pattern", help = "Regex pattern to search")]
+    pub pattern: String,
+    #[arg(
+        short = 'P',
+        long = "path",
+        default_value = ".",
+        help = "File or directory to search"
+    )]
+    pub path: String,
+    #[arg(short = 'i', long = "ignore-case", action = clap::ArgAction::SetTrue, help = "Case-insensitive search")]
+    pub ignore_case: bool,
+    #[arg(
+        short = 'm',
+        long = "max-count",
+        default_value = "0",
+        help = "Maximum number of matches"
+    )]
+    pub max_count: String,
+    #[arg(long = "include")]
+    pub include: Option<String>,
+    #[arg(
+        short = 'd',
+        long = "max-depth",
+        default_value = "0",
+        help = "Maximum directory depth (0 = unlimited)"
+    )]
+    pub max_depth: String,
+    #[arg(long = "json", action = clap::ArgAction::SetTrue, help = "Output in JSON format")]
+    pub json: bool,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("text")
         .about("Search file contents using regex")
@@ -59,25 +92,18 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let pattern = matches
-        .get_one::<String>("pattern")
-        .context("pattern required")?;
-    let path = matches
-        .get_one::<String>("path")
-        .map(|s| s.as_str())
-        .unwrap_or(".");
-    let ignore_case = matches.get_flag("ignore-case");
-    let max_count: usize = matches
-        .get_one::<String>("max-count")
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let pattern = Some(&matches.pattern).context("pattern required")?;
+    let path = Some(&matches.path).map(|s| s.as_str()).unwrap_or(".");
+    let ignore_case = matches.ignore_case;
+    let max_count: usize = Some(&matches.max_count)
         .and_then(|s| s.parse().ok())
         .unwrap_or(0);
-    let include = matches.get_one::<String>("include").map(|s| s.as_str());
-    let max_depth: usize = matches
-        .get_one::<String>("max-depth")
+    let include = matches.include.as_deref();
+    let max_depth: usize = Some(&matches.max_depth)
         .and_then(|s| s.parse().ok())
         .unwrap_or(0);
-    let use_json = matches.get_flag("json");
+    let use_json = matches.json;
 
     let re_pattern = if ignore_case {
         format!("(?i){pattern}")

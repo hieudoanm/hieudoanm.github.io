@@ -16,6 +16,36 @@ struct CodePattern {
     kind: &'static str,
 }
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 's', long = "symbol", help = "Symbol name to search")]
+    pub symbol: String,
+    #[arg(
+        short = 'd',
+        long = "dir",
+        default_value = ".",
+        help = "Root directory to search"
+    )]
+    pub dir: String,
+    #[arg(short = 'l', long = "lang", help = "Language filter (go, ts, py, rs)")]
+    pub lang: Option<String>,
+    #[arg(
+        short = 'k',
+        long = "kind",
+        help = "Symbol kind (function, type, variable, method, class)"
+    )]
+    pub kind: Option<String>,
+    #[arg(
+        short = 'n',
+        long = "max-results",
+        default_value = "0",
+        help = "Maximum number of results (0 = unlimited)"
+    )]
+    pub max_results: String,
+    #[arg(long = "json", action = clap::ArgAction::SetTrue, help = "Output in JSON format")]
+    pub json: bool,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("code")
         .about("Search for code symbols (functions, types, variables)")
@@ -60,21 +90,15 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let symbol = matches
-        .get_one::<String>("symbol")
-        .context("symbol required")?;
-    let dir = matches
-        .get_one::<String>("dir")
-        .map(|s| s.as_str())
-        .unwrap_or(".");
-    let lang = matches.get_one::<String>("lang").map(|s| s.as_str());
-    let kind = matches.get_one::<String>("kind").map(|s| s.as_str());
-    let max_results: usize = matches
-        .get_one::<String>("max-results")
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let symbol = Some(&matches.symbol).context("symbol required")?;
+    let dir = Some(&matches.dir).map(|s| s.as_str()).unwrap_or(".");
+    let lang = matches.lang.as_deref();
+    let kind = matches.kind.as_deref();
+    let max_results: usize = Some(&matches.max_results)
         .and_then(|s| s.parse().ok())
         .unwrap_or(0);
-    let use_json = matches.get_flag("json");
+    let use_json = matches.json;
 
     let symbol_re = Regex::new(symbol).context("invalid symbol pattern")?;
     let results = search_code_symbols(&symbol_re, dir, lang, kind, max_results)?;

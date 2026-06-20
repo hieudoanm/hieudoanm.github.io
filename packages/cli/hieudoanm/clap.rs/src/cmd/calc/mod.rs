@@ -1,3 +1,4 @@
+use clap::FromArgMatches;
 mod age;
 mod base;
 mod bmi;
@@ -51,26 +52,26 @@ pub fn command() -> clap::Command {
 
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     match matches.subcommand() {
-        Some(("age", m)) => age::run(m).await,
-        Some(("base", m)) => base::run(m).await,
-        Some(("bmi", m)) => bmi::run(m).await,
-        Some(("compound", m)) => compound::run(m).await,
-        Some(("currency", m)) => currency::run(m).await,
-        Some(("datecalc", m)) => datecalc::run(m).await,
-        Some(("discount", m)) => discount::run(m).await,
-        Some(("eval", m)) => eval::run(m).await,
-        Some(("factorial", m)) => factorial::run(m).await,
-        Some(("gcd", m)) => gcd::run(m).await,
-        Some(("lcm", m)) => lcm::run(m).await,
-        Some(("loan", m)) => loan::run(m).await,
-        Some(("mortgage", m)) => mortgage::run(m).await,
-        Some(("percent", m)) => percent::run(m).await,
-        Some(("prime", m)) => prime::run(m).await,
-        Some(("random", m)) => random::run(m).await,
-        Some(("stats", m)) => stats::run(m).await,
-        Some(("tax", m)) => tax::run(m).await,
-        Some(("tip", m)) => tip::run(m).await,
-        Some(("unit", m)) => unit::run(m).await,
+        Some(("age", m)) => age::run(&age::Args::from_arg_matches(m)?).await,
+        Some(("base", m)) => base::run(&base::Args::from_arg_matches(m)?).await,
+        Some(("bmi", m)) => bmi::run(&bmi::Args::from_arg_matches(m)?).await,
+        Some(("compound", m)) => compound::run(&compound::Args::from_arg_matches(m)?).await,
+        Some(("currency", m)) => currency::run(&currency::Args::from_arg_matches(m)?).await,
+        Some(("datecalc", m)) => datecalc::run(&datecalc::Args::from_arg_matches(m)?).await,
+        Some(("discount", m)) => discount::run(&discount::Args::from_arg_matches(m)?).await,
+        Some(("eval", m)) => eval::run(&eval::Args::from_arg_matches(m)?).await,
+        Some(("factorial", m)) => factorial::run(&factorial::Args::from_arg_matches(m)?).await,
+        Some(("gcd", m)) => gcd::run(&gcd::Args::from_arg_matches(m)?).await,
+        Some(("lcm", m)) => lcm::run(&lcm::Args::from_arg_matches(m)?).await,
+        Some(("loan", m)) => loan::run(&loan::Args::from_arg_matches(m)?).await,
+        Some(("mortgage", m)) => mortgage::run(&mortgage::Args::from_arg_matches(m)?).await,
+        Some(("percent", m)) => percent::run(&percent::Args::from_arg_matches(m)?).await,
+        Some(("prime", m)) => prime::run(&prime::Args::from_arg_matches(m)?).await,
+        Some(("random", m)) => random::run(&random::Args::from_arg_matches(m)?).await,
+        Some(("stats", m)) => stats::run(&stats::Args::from_arg_matches(m)?).await,
+        Some(("tax", m)) => tax::run(&tax::Args::from_arg_matches(m)?).await,
+        Some(("tip", m)) => tip::run(&tip::Args::from_arg_matches(m)?).await,
+        Some(("unit", m)) => unit::run(&unit::Args::from_arg_matches(m)?).await,
         _ => Ok(()),
     }
 }

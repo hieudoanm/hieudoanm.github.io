@@ -1,8 +1,11 @@
+#[derive(clap::Args)]
+pub struct Args;
+
 pub fn command() -> clap::Command {
     clap::Command::new("uuid").about("Generate a UUID")
 }
 
-pub async fn run(_matches: &clap::ArgMatches) -> anyhow::Result<()> {
+pub async fn run(_matches: &Args) -> anyhow::Result<()> {
     let id = uuid::Uuid::new_v4();
     println!("{id}");
     Ok(())

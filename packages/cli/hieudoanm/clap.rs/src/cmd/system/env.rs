@@ -1,3 +1,13 @@
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(help = "Filter by key prefix")]
+    pub filter: Option<String>,
+    #[arg(long = "sort", action = clap::ArgAction::SetTrue, help = "Sort alphabetically by key")]
+    pub sort: bool,
+    #[arg(long = "json", action = clap::ArgAction::SetTrue, help = "Output in JSON format")]
+    pub json: bool,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("env")
         .about("Show environment variables")
@@ -18,10 +28,10 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let filter = matches.get_one::<String>("filter");
-    let sort = matches.get_flag("sort");
-    let json = matches.get_flag("json");
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let filter = matches.filter.as_ref();
+    let sort = matches.sort;
+    let json = matches.json;
 
     let mut vars: Vec<(String, String)> = std::env::vars()
         .filter(|(k, _)| {

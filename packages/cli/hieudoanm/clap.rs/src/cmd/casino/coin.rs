@@ -1,5 +1,15 @@
-use clap::ArgMatches;
 use rand::Rng;
+
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(
+        short = 'n',
+        long = "count",
+        default_value = "1",
+        help = "Number of coin flips"
+    )]
+    pub count: String,
+}
 
 pub fn command() -> clap::Command {
     clap::Command::new("coin").about("Flip a coin").arg(
@@ -11,9 +21,8 @@ pub fn command() -> clap::Command {
     )
 }
 
-pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
-    let count: usize = matches
-        .get_one::<String>("count")
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let count: usize = Some(&matches.count)
         .map(|s| s.parse().unwrap_or(1))
         .unwrap_or(1);
 

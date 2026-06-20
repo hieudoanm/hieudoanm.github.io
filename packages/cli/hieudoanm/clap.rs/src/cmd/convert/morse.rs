@@ -2,11 +2,14 @@ use std::collections::HashMap;
 
 use crate::cmd::convert::read_stdin;
 
+#[derive(clap::Args)]
+pub struct Args;
+
 pub fn command() -> clap::Command {
     clap::Command::new("morse").about("Convert text to Morse code")
 }
 
-pub async fn run(_matches: &clap::ArgMatches) -> anyhow::Result<()> {
+pub async fn run(_matches: &Args) -> anyhow::Result<()> {
     let text = read_stdin()?;
     let map = morse_map();
     let mut result = Vec::new();

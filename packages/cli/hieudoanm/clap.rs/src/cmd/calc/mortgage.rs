@@ -1,6 +1,27 @@
-use clap::ArgMatches;
-
 use super::service::calc_payment;
+
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'p', long = "principal", help = "Loan principal")]
+    pub principal: String,
+    #[arg(short = 'r', long = "rate", help = "Annual interest rate (percentage)")]
+    pub rate: String,
+    #[arg(
+        short = 'y',
+        long = "years",
+        default_value = "30",
+        help = "Loan term in years"
+    )]
+    pub years: String,
+    #[arg(long = "taxes", default_value = "0", help = "Annual property taxes")]
+    pub taxes: String,
+    #[arg(long = "insurance", default_value = "0", help = "Annual insurance")]
+    pub insurance: String,
+    #[arg(long = "pmi", default_value = "0", help = "Annual PMI")]
+    pub pmi: String,
+    #[arg(long = "json", action = clap::ArgAction::SetTrue, help = "Output in JSON format")]
+    pub json: bool,
+}
 
 pub fn command() -> clap::Command {
     clap::Command::new("mortgage")
@@ -52,14 +73,14 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
-    let principal: f64 = matches.get_one::<String>("principal").unwrap().parse()?;
-    let rate: f64 = matches.get_one::<String>("rate").unwrap().parse()?;
-    let years: f64 = matches.get_one::<String>("years").unwrap().parse()?;
-    let taxes: f64 = matches.get_one::<String>("taxes").unwrap().parse()?;
-    let insurance: f64 = matches.get_one::<String>("insurance").unwrap().parse()?;
-    let pmi: f64 = matches.get_one::<String>("pmi").unwrap().parse()?;
-    let json = matches.get_flag("json");
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let principal: f64 = matches.principal.parse()?;
+    let rate: f64 = matches.rate.parse()?;
+    let years: f64 = matches.years.parse()?;
+    let taxes: f64 = matches.taxes.parse()?;
+    let insurance: f64 = matches.insurance.parse()?;
+    let pmi: f64 = matches.pmi.parse()?;
+    let json = matches.json;
 
     let payment = calc_payment(principal, rate, years);
     let n = years * 12.0;

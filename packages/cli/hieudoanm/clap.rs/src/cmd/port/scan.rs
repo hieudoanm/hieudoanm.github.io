@@ -1,5 +1,22 @@
 use anyhow::Context;
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'H', long = "host", help = "Host to scan")]
+    pub host: String,
+    #[arg(long = "ports", help = "Port list (e.g. 22,80,443 or 8000-8100)")]
+    pub ports: Option<String>,
+    #[arg(
+        short = 't',
+        long = "timeout",
+        default_value = "2",
+        help = "Per-port timeout in seconds"
+    )]
+    pub timeout: String,
+    #[arg(long = "json", action = clap::ArgAction::SetTrue, help = "Output in JSON format")]
+    pub json: bool,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("scan")
         .about("Scan common ports on a host")
@@ -30,17 +47,13 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let host = matches.get_one::<String>("host").context("host required")?;
-    let ports_str = matches
-        .get_one::<String>("ports")
-        .map(|s| s.as_str())
-        .unwrap_or("");
-    let timeout: u64 = matches
-        .get_one::<String>("timeout")
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let host = Some(&matches.host).context("host required")?;
+    let ports_str = matches.ports.as_deref().unwrap_or("");
+    let timeout: u64 = Some(&matches.timeout)
         .and_then(|t| t.parse().ok())
         .unwrap_or(2);
-    let use_json = matches.get_flag("json");
+    let use_json = matches.json;
 
     let port_list = super::build_port_list(ports_str);
     let open_ports = scan_ports(host, &port_list, timeout);

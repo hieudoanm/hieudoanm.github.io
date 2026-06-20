@@ -1,3 +1,9 @@
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'f', long = "file", help = "File path")]
+    pub file: String,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("count")
         .about("Count lines, words, and bytes in a file")

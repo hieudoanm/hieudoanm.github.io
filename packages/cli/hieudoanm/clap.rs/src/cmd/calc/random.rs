@@ -1,5 +1,26 @@
-use clap::ArgMatches;
 use rand::Rng;
+
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'm', long = "min", default_value = "1", help = "Minimum value")]
+    pub min: String,
+    #[arg(
+        short = 'x',
+        long = "max",
+        default_value = "100",
+        help = "Maximum value"
+    )]
+    pub max: String,
+    #[arg(
+        short = 'n',
+        long = "count",
+        default_value = "1",
+        help = "Number of values"
+    )]
+    pub count: String,
+    #[arg(long = "json", action = clap::ArgAction::SetTrue, help = "Output in JSON format")]
+    pub json: bool,
+}
 
 pub fn command() -> clap::Command {
     clap::Command::new("random")
@@ -33,15 +54,11 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
-    let min: f64 = matches.get_one::<String>("min").unwrap().parse()?;
-    let max: f64 = matches.get_one::<String>("max").unwrap().parse()?;
-    let count: i32 = matches
-        .get_one::<String>("count")
-        .unwrap()
-        .parse()
-        .unwrap_or(1);
-    let json = matches.get_flag("json");
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let min: f64 = matches.min.parse()?;
+    let max: f64 = matches.max.parse()?;
+    let count: i32 = matches.count.parse().unwrap_or(1);
+    let json = matches.json;
 
     let count = count.max(1);
     let mut rng = rand::thread_rng();

@@ -1,3 +1,4 @@
+use clap::FromArgMatches;
 mod postman;
 mod service;
 mod validate;
@@ -12,8 +13,8 @@ pub fn command() -> clap::Command {
 
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     match matches.subcommand() {
-        Some(("openapi2postman", m)) => postman::run(m).await,
-        Some(("validate", m)) => validate::run(m).await,
+        Some(("openapi2postman", m)) => postman::run(&postman::Args::from_arg_matches(m)?).await,
+        Some(("validate", m)) => validate::run(&validate::Args::from_arg_matches(m)?).await,
         _ => Ok(()),
     }
 }

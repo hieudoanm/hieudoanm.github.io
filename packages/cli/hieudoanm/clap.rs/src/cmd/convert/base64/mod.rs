@@ -1,3 +1,4 @@
+use clap::FromArgMatches;
 mod decode;
 mod encode;
 
@@ -11,8 +12,8 @@ pub fn command() -> clap::Command {
 
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     match matches.subcommand() {
-        Some(("encode", m)) => encode::run(m).await,
-        Some(("decode", m)) => decode::run(m).await,
+        Some(("encode", m)) => encode::run(&encode::Args::from_arg_matches(m)?).await,
+        Some(("decode", m)) => decode::run(&decode::Args::from_arg_matches(m)?).await,
         _ => Ok(()),
     }
 }

@@ -1,10 +1,13 @@
 use std::time::Duration;
 
+#[derive(clap::Args)]
+pub struct Args;
+
 pub fn command() -> clap::Command {
     clap::Command::new("clipboard").about("Listen to clipboard changes and store them")
 }
 
-pub async fn run(_matches: &clap::ArgMatches) -> anyhow::Result<()> {
+pub async fn run(_matches: &Args) -> anyhow::Result<()> {
     use rusqlite::Connection;
 
     let home = dirs::home_dir().ok_or_else(|| anyhow::anyhow!("cannot find home dir"))?;

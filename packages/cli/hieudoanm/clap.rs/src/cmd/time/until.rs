@@ -1,5 +1,15 @@
 use chrono::{NaiveDate, NaiveDateTime};
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(
+        short = 't',
+        long = "time",
+        help = "Target datetime (YYYY-MM-DD, YYYY-MM-DD HH:MM:SS, or RFC3339)"
+    )]
+    pub time: String,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("until")
         .about("Countdown to a specific date/time")
@@ -60,8 +70,8 @@ mod tests {
     }
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let time_str = matches.get_one::<String>("time").unwrap();
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let time_str = &matches.time;
     let target = parse_datetime(time_str)
         .ok_or_else(|| anyhow::anyhow!("unrecognized datetime format: {time_str}"))?;
 

@@ -1,4 +1,3 @@
-use clap::ArgMatches;
 use rand::Rng;
 
 const SYMBOLS: &[&str] = &["Cherry", "Lemon", "Bell", "Diamond", "7", "BAR"];
@@ -35,6 +34,12 @@ pub fn format_reels(reels: &[usize; 3]) -> String {
     )
 }
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'b', long = "bet", default_value = "25", help = "Bet amount")]
+    pub bet: String,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("slots")
         .about("Play a slot machine")
@@ -47,9 +52,8 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
-    let bet: u32 = matches
-        .get_one::<String>("bet")
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let bet: u32 = Some(&matches.bet)
         .map(|s| s.parse().unwrap_or(25))
         .unwrap_or(25);
 
@@ -81,6 +85,7 @@ pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use clap::FromArgMatches;
 
     #[test]
     fn test_symbol_count() {
@@ -145,13 +150,13 @@ mod tests {
         let m = cmd
             .try_get_matches_from(vec!["slots", "--bet", "100"])
             .unwrap();
-        run(&m).await.unwrap();
+        run(&Args::from_arg_matches(&m).unwrap()).await.unwrap();
     }
 
     #[tokio::test]
     async fn test_run_default_bet() {
         let cmd = command();
         let m = cmd.try_get_matches_from(vec!["slots"]).unwrap();
-        run(&m).await.unwrap();
+        run(&Args::from_arg_matches(&m).unwrap()).await.unwrap();
     }
 }

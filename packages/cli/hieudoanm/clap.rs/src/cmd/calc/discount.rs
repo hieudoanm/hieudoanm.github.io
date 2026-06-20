@@ -1,4 +1,12 @@
-use clap::ArgMatches;
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'o', long = "original", help = "Original price")]
+    pub original: String,
+    #[arg(short = 'p', long = "percent", help = "Discount percentage")]
+    pub percent: String,
+    #[arg(long = "json", action = clap::ArgAction::SetTrue, help = "Output in JSON format")]
+    pub json: bool,
+}
 
 pub fn command() -> clap::Command {
     clap::Command::new("discount")
@@ -25,10 +33,10 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
-    let original: f64 = matches.get_one::<String>("original").unwrap().parse()?;
-    let percent: f64 = matches.get_one::<String>("percent").unwrap().parse()?;
-    let json = matches.get_flag("json");
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let original: f64 = matches.original.parse()?;
+    let percent: f64 = matches.percent.parse()?;
+    let json = matches.json;
 
     let discount = original * percent / 100.0;
     let final_price = original - discount;

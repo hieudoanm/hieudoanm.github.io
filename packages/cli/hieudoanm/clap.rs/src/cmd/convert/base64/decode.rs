@@ -10,6 +10,20 @@ fn strip_data_url(s: &str) -> &str {
     }
 }
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(help = "Base64 string to decode")]
+    pub text: Option<String>,
+    #[arg(short = 'f', long = "file", help = "File containing base64 to decode")]
+    pub file: Option<String>,
+    #[arg(
+        short = 'o',
+        long = "output",
+        help = "Write decoded output to file instead of stdout"
+    )]
+    pub output: Option<String>,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("decode")
         .about("Decode base64 to text/file")
@@ -35,13 +49,13 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let output = matches.get_one::<String>("output").map(PathBuf::from);
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let output = matches.output.as_ref().map(PathBuf::from);
 
-    let input = if let Some(path) = matches.get_one::<String>("file") {
+    let input = if let Some(path) = matches.file.as_ref() {
         fs::read(path)?
     } else {
-        let text = match matches.get_one::<String>("text") {
+        let text = match matches.text.as_ref() {
             Some(t) => t.clone(),
             None => {
                 print!("Base64: ");

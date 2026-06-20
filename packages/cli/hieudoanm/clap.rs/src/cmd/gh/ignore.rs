@@ -32,6 +32,19 @@ fn fetch_template(name: &str) -> anyhow::Result<GitignoreTemplate> {
     Ok(tmpl)
 }
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(long = "name", help = "Gitignore template name (skip prompt)")]
+    pub name: Option<String>,
+    #[arg(
+        short = 'o',
+        long = "output",
+        default_value = ".gitignore",
+        help = "Output file path"
+    )]
+    pub output: String,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("ignore")
         .about("Fetch a .gitignore template from GitHub")
@@ -49,9 +62,9 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let name = matches.get_one::<String>("name");
-    let output = matches.get_one::<String>("output").unwrap();
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let name = matches.name.as_ref();
+    let output = &matches.output;
 
     let selected = if let Some(n) = name {
         n.clone()

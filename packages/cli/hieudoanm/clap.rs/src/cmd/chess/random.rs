@@ -1,11 +1,14 @@
 use crate::cmd::chess::service;
 use rand::Rng;
 
+#[derive(clap::Args)]
+pub struct Args;
+
 pub fn command() -> clap::Command {
     clap::Command::new("random").about("Pick a random Chess960 starting position")
 }
 
-pub async fn run(_matches: &clap::ArgMatches) -> anyhow::Result<()> {
+pub async fn run(_matches: &Args) -> anyhow::Result<()> {
     let mut rng = rand::thread_rng();
     let n = service::POSITIONS.len();
     let idx = rng.gen_range(0..n);

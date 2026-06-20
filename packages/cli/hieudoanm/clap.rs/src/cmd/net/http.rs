@@ -1,3 +1,26 @@
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'u', long = "url", help = "URL to request")]
+    pub url: String,
+    #[arg(
+        short = 'X',
+        long = "method",
+        default_value = "GET",
+        help = "HTTP method (GET, POST, PUT, DELETE)"
+    )]
+    pub method: String,
+    #[arg(short = 'd', long = "data", help = "Request body data")]
+    pub data: Option<String>,
+    #[arg(
+        short = 'H',
+        long = "header",
+        help = "Request headers (key:val,key2:val2)"
+    )]
+    pub header: Option<String>,
+    #[arg(long = "json", action = clap::ArgAction::SetTrue, help = "Pretty-print JSON response")]
+    pub json: bool,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("http")
         .about("Make HTTP requests")
@@ -35,12 +58,12 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let url = matches.get_one::<String>("url").unwrap().clone();
-    let method = matches.get_one::<String>("method").unwrap().to_uppercase();
-    let data = matches.get_one::<String>("data").cloned();
-    let header = matches.get_one::<String>("header").cloned();
-    let json = matches.get_flag("json");
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let url = matches.url.clone();
+    let method = matches.method.to_uppercase();
+    let data = matches.data.as_ref().cloned();
+    let header = matches.header.as_ref().cloned();
+    let json = matches.json;
 
     let client = reqwest::Client::new();
     let mut req = match method.as_str() {

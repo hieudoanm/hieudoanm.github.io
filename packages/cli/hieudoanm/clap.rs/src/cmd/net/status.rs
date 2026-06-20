@@ -27,6 +27,9 @@ async fn check_service(_name: &str, url: &str) -> String {
     }
 }
 
+#[derive(clap::Args)]
+pub struct Args;
+
 pub fn command() -> clap::Command {
     clap::Command::new("status").about("Check service status")
 }
@@ -37,7 +40,7 @@ pub fn command_all() -> clap::Command {
         .alias("all")
 }
 
-pub async fn run(_matches: &clap::ArgMatches) -> anyhow::Result<()> {
+pub async fn run(_matches: &Args) -> anyhow::Result<()> {
     let services = load_services();
     let mut options: Vec<String> = Vec::new();
     for (name, url) in &services {

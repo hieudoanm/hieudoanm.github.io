@@ -1,3 +1,4 @@
+use clap::FromArgMatches;
 mod cert;
 mod http;
 mod ip;
@@ -33,15 +34,15 @@ pub fn command() -> clap::Command {
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     match matches.subcommand() {
         Some(("ip", m)) => ip::run(m).await,
-        Some(("status", m)) => status::run(m).await,
+        Some(("status", m)) => status::run(&status::Args::from_arg_matches(m)?).await,
         Some(("status-all", m)) => status::run_all(m).await,
         Some(("dns", m)) => ip::run_dns(m).await,
-        Some(("wifi", m)) => wifi::run(m).await,
+        Some(("wifi", m)) => wifi::run(&wifi::Args::from_arg_matches(m)?).await,
         Some(("cert", m)) => cert::run(m).await,
-        Some(("ping", m)) => ping::run(m).await,
-        Some(("serve", m)) => serve::run(m).await,
-        Some(("http", m)) => http::run(m).await,
-        Some(("whois", m)) => whois::run(m).await,
+        Some(("ping", m)) => ping::run(&ping::Args::from_arg_matches(m)?).await,
+        Some(("serve", m)) => serve::run(&serve::Args::from_arg_matches(m)?).await,
+        Some(("http", m)) => http::run(&http::Args::from_arg_matches(m)?).await,
+        Some(("whois", m)) => whois::run(&whois::Args::from_arg_matches(m)?).await,
         _ => Ok(()),
     }
 }

@@ -1,8 +1,28 @@
-use clap::ArgMatches;
 use md5::{Digest, Md5};
 use sha1::Sha1;
 use sha2::{Sha256, Sha512};
 use std::io::Read;
+
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(
+        short = 'a',
+        long = "algo",
+        default_value = "sha256",
+        help = "Hash algorithm (md5, sha1, sha256, sha512)"
+    )]
+    pub algorithm: String,
+    #[arg(short = 't', long = "text", help = "Text to hash")]
+    pub text: Option<String>,
+    #[arg(short = 'k', long = "key", help = "HMAC key")]
+    pub key: Option<String>,
+    #[arg(long = "check", action = clap::ArgAction::SetTrue, help = "Verify file hash from 'hash filename' format")]
+    pub check: bool,
+    #[arg(long = "json", action = clap::ArgAction::SetTrue, help = "Output in JSON format")]
+    pub json: bool,
+    #[arg(help = "File to hash")]
+    pub file: Option<String>,
+}
 
 pub fn command() -> clap::Command {
     clap::Command::new("hash")
@@ -178,6 +198,7 @@ fn hmac_sha512(key: &[u8], data: &[u8]) -> Vec<u8> {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use clap::FromArgMatches;
 
     #[test]
     fn test_hex_encode_empty() {
@@ -272,7 +293,7 @@ mod tests {
         let m = cmd
             .try_get_matches_from(vec!["hash", "--text", "hello", "--algo", "sha256"])
             .unwrap();
-        run(&m).await.unwrap();
+        run(&Args::from_arg_matches(&m).unwrap()).await.unwrap();
     }
 
     #[tokio::test]
@@ -281,7 +302,7 @@ mod tests {
         let m = cmd
             .try_get_matches_from(vec!["hash", "--text", "hello", "--algo", "md5", "--json"])
             .unwrap();
-        run(&m).await.unwrap();
+        run(&Args::from_arg_matches(&m).unwrap()).await.unwrap();
     }
 
     #[tokio::test]
@@ -292,7 +313,7 @@ mod tests {
                 "hash", "--text", "data", "--key", "key", "--algo", "sha256",
             ])
             .unwrap();
-        run(&m).await.unwrap();
+        run(&Args::from_arg_matches(&m).unwrap()).await.unwrap();
     }
 
     #[tokio::test]
@@ -303,7 +324,7 @@ mod tests {
                 "hash", "--text", "data", "--key", "key", "--algo", "sha1", "--json",
             ])
             .unwrap();
-        run(&m).await.unwrap();
+        run(&Args::from_arg_matches(&m).unwrap()).await.unwrap();
     }
 
     #[tokio::test]
@@ -314,7 +335,7 @@ mod tests {
                 "hash", "--text", "data", "--key", "key", "--algo", "md5",
             ])
             .unwrap();
-        run(&m).await.unwrap();
+        run(&Args::from_arg_matches(&m).unwrap()).await.unwrap();
     }
 
     #[tokio::test]
@@ -325,20 +346,19 @@ mod tests {
                 "hash", "--text", "data", "--key", "key", "--algo", "sha512", "--json",
             ])
             .unwrap();
-        run(&m).await.unwrap();
+        run(&Args::from_arg_matches(&m).unwrap()).await.unwrap();
     }
 }
 
-pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
-    let algorithm = matches
-        .get_one::<String>("algorithm")
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let algorithm = Some(&matches.algorithm)
         .map(|s| s.as_str())
         .unwrap_or("sha256");
-    let text = matches.get_one::<String>("text").map(|s| s.as_str());
-    let key = matches.get_one::<String>("key").map(|s| s.as_str());
-    let check = matches.get_flag("check");
-    let json = matches.get_flag("json");
-    let file = matches.get_one::<String>("file");
+    let text = matches.text.as_deref();
+    let key = matches.key.as_deref();
+    let check = matches.check;
+    let json = matches.json;
+    let file = matches.file.as_ref();
 
     let input: Vec<u8> = if let Some(t) = text {
         t.as_bytes().to_vec()

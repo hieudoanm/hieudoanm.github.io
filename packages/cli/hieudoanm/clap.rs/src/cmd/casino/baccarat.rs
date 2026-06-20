@@ -1,11 +1,10 @@
-use clap::ArgMatches;
-
 use super::{deal_card, new_shuffled_deck, Card};
 
 #[cfg(test)]
 mod tests {
     use super::*;
     use crate::cmd::casino::Card;
+    use clap::FromArgMatches;
 
     #[test]
     fn test_baccarat_value_number() {
@@ -122,7 +121,7 @@ mod tests {
     async fn test_run_default_bet() {
         let cmd = command();
         let m = cmd.try_get_matches_from(vec!["baccarat"]).unwrap();
-        run(&m).await.unwrap();
+        run(&Args::from_arg_matches(&m).unwrap()).await.unwrap();
     }
 
     #[tokio::test]
@@ -131,7 +130,7 @@ mod tests {
         let m = cmd
             .try_get_matches_from(vec!["baccarat", "--bet", "banker"])
             .unwrap();
-        run(&m).await.unwrap();
+        run(&Args::from_arg_matches(&m).unwrap()).await.unwrap();
     }
 }
 
@@ -225,6 +224,17 @@ fn deal_baccarat(deck: &mut Vec<Card>) -> (Vec<Card>, Vec<Card>, u8, u8) {
     (player, banker, pv, bv)
 }
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(
+        short = 'b',
+        long = "bet",
+        default_value = "player",
+        help = "Bet on: player, banker, or tie"
+    )]
+    pub bet: String,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("baccarat")
         .about("Play a game of Baccarat")
@@ -237,11 +247,8 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
-    let bet_type = matches
-        .get_one::<String>("bet")
-        .map(|s| s.as_str())
-        .unwrap_or("player");
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let bet_type = Some(&matches.bet).map(|s| s.as_str()).unwrap_or("player");
     let mut deck = new_shuffled_deck();
 
     let (player, banker, pv, bv) = deal_baccarat(&mut deck);

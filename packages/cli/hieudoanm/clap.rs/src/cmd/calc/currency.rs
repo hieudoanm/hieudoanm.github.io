@@ -1,4 +1,3 @@
-use clap::ArgMatches;
 use serde::Deserialize;
 use std::collections::HashMap;
 
@@ -9,6 +8,16 @@ struct FrankfurterResponse {
     base: String,
     date: String,
     rates: HashMap<String, f64>,
+}
+
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(long = "from", default_value = "EUR", help = "Source currency")]
+    pub from: String,
+    #[arg(long = "to", default_value = "USD", help = "Target currency")]
+    pub to: String,
+    #[arg(long = "amount", default_value = "1", help = "Amount to convert")]
+    pub amount: f64,
 }
 
 pub fn command() -> clap::Command {
@@ -35,10 +44,10 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
-    let from = matches.get_one::<String>("from").unwrap();
-    let to = matches.get_one::<String>("to").unwrap();
-    let amount = *matches.get_one::<f64>("amount").unwrap();
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let from = &matches.from;
+    let to = &matches.to;
+    let amount = matches.amount;
 
     let url = format!("https://api.frankfurter.app/latest?base={from}&symbols={to}");
     let resp = reqwest::get(&url).await?;

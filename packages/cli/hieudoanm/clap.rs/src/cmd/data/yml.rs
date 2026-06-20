@@ -1,5 +1,17 @@
 use anyhow::Context;
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(help = "YAML file")]
+    pub file: Option<String>,
+    #[arg(short = 'V', long = "validate", action = clap::ArgAction::SetTrue, help = "Validate YAML syntax")]
+    pub validate: bool,
+    #[arg(long = "lint", action = clap::ArgAction::SetTrue, help = "Lint YAML file")]
+    pub lint: bool,
+    #[arg(long = "json", action = clap::ArgAction::SetTrue, help = "Output in JSON format")]
+    pub json: bool,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("yml")
         .about("Parse, validate, and lint YAML files")
@@ -25,11 +37,11 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let file = matches.get_one::<String>("file");
-    let validate = matches.get_flag("validate");
-    let lint = matches.get_flag("lint");
-    let use_json = matches.get_flag("json");
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let file = matches.file.as_ref();
+    let validate = matches.validate;
+    let lint = matches.lint;
+    let use_json = matches.json;
 
     let input = read_yml_input(file)?;
 

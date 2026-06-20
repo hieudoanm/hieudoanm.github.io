@@ -1,5 +1,3 @@
-use clap::ArgMatches;
-
 fn gcd(a: i64, b: i64) -> i64 {
     let mut a = a.abs();
     let mut b = b.abs();
@@ -9,6 +7,16 @@ fn gcd(a: i64, b: i64) -> i64 {
         a = t;
     }
     a
+}
+
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(long = "a", help = "First number")]
+    pub a: String,
+    #[arg(long = "b", help = "Second number")]
+    pub b: String,
+    #[arg(long = "json", action = clap::ArgAction::SetTrue, help = "Output in JSON format")]
+    pub json: bool,
 }
 
 pub fn command() -> clap::Command {
@@ -34,10 +42,10 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
-    let a: i64 = matches.get_one::<String>("a").unwrap().parse()?;
-    let b: i64 = matches.get_one::<String>("b").unwrap().parse()?;
-    let json = matches.get_flag("json");
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let a: i64 = matches.a.parse()?;
+    let b: i64 = matches.b.parse()?;
+    let json = matches.json;
 
     let result = gcd(a, b);
 
@@ -58,6 +66,7 @@ pub async fn run(matches: &ArgMatches) -> anyhow::Result<()> {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use clap::FromArgMatches;
 
     #[test]
     fn test_gcd_positive() {
@@ -106,7 +115,7 @@ mod tests {
         let m = cmd
             .try_get_matches_from(vec!["gcd", "--a", "12", "--b", "8"])
             .unwrap();
-        run(&m).await.unwrap();
+        run(&Args::from_arg_matches(&m).unwrap()).await.unwrap();
     }
 
     #[tokio::test]
@@ -115,6 +124,6 @@ mod tests {
         let m = cmd
             .try_get_matches_from(vec!["gcd", "--a", "7", "--b", "13", "--json"])
             .unwrap();
-        run(&m).await.unwrap();
+        run(&Args::from_arg_matches(&m).unwrap()).await.unwrap();
     }
 }

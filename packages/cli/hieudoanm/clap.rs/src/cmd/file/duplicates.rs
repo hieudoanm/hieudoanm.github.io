@@ -13,6 +13,19 @@ fn quick_hash(path: &std::path::Path) -> anyhow::Result<String> {
     Ok(hex_encode(&hasher.finalize()))
 }
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'd', long = "dir", help = "Directory to scan")]
+    pub dir: String,
+    #[arg(
+        short = 'm',
+        long = "min-size",
+        default_value = "1",
+        help = "Minimum file size to consider (bytes)"
+    )]
+    pub min_size: String,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("duplicates")
         .about("Find duplicate files by size and partial hash")

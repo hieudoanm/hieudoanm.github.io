@@ -1,5 +1,13 @@
 use anyhow::Context;
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'f', long = "file", help = "Image file")]
+    pub file: String,
+    #[arg(long = "json", action = clap::ArgAction::SetTrue, help = "Output in JSON format")]
+    pub json: bool,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("info")
         .about("Show image metadata (dimensions, format, etc.)")
@@ -18,9 +26,9 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let file = matches.get_one::<String>("file").unwrap();
-    let json = matches.get_flag("json");
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let file = &matches.file;
+    let json = matches.json;
 
     let img = image::ImageReader::open(file)
         .with_context(|| format!("failed to open {file}"))?

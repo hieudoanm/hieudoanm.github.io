@@ -59,6 +59,7 @@ fn load_offset(name: &str) -> Option<FixedOffset> {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use clap::FromArgMatches;
 
     #[test]
     fn test_load_offset_known_alias() {
@@ -136,7 +137,7 @@ mod tests {
     async fn test_run_default_zones() {
         let cmd = command();
         let m = cmd.try_get_matches_from(vec!["world"]).unwrap();
-        run(&m).await.unwrap();
+        run(&Args::from_arg_matches(&m).unwrap()).await.unwrap();
     }
 
     #[tokio::test]
@@ -145,7 +146,7 @@ mod tests {
         let m = cmd
             .try_get_matches_from(vec!["world", "ny", "london", "utc"])
             .unwrap();
-        run(&m).await.unwrap();
+        run(&Args::from_arg_matches(&m).unwrap()).await.unwrap();
     }
 
     #[tokio::test]
@@ -154,9 +155,15 @@ mod tests {
         let m = cmd
             .try_get_matches_from(vec!["world", "unknownzone"])
             .unwrap();
-        let result = run(&m).await;
+        let result = run(&Args::from_arg_matches(&m).unwrap()).await;
         assert!(result.is_err());
     }
+}
+
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(help = "Timezone names (utc, ny, london, tokyo, hcmc, ...)")]
+    pub zones: Vec<String>,
 }
 
 pub fn command() -> clap::Command {
@@ -169,10 +176,11 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let zone_names: Vec<&str> = match matches.get_many::<String>("zones") {
-        Some(vals) => vals.map(|s| s.as_str()).collect(),
-        None => vec!["ny", "london", "hcmc", "tokyo", "utc"],
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let zone_names: Vec<&str> = if matches.zones.is_empty() {
+        vec!["ny", "london", "hcmc", "tokyo", "utc"]
+    } else {
+        matches.zones.iter().map(|s| s.as_str()).collect()
     };
 
     let now = Utc::now();

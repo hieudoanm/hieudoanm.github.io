@@ -62,6 +62,14 @@ mod tests {
     }
 }
 
+#[derive(clap::Args)]
+pub struct Args {
+    #[arg(short = 'u', long = "url", help = "URL to fetch")]
+    pub url: String,
+    #[arg(short = 'o', long = "out", help = "Output directory (default .)")]
+    pub out: Option<String>,
+}
+
 pub fn command() -> clap::Command {
     clap::Command::new("csv")
         .about("Extract HTML tables to CSV")
@@ -80,12 +88,11 @@ pub fn command() -> clap::Command {
         )
 }
 
-pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
-    let url = matches
-        .get_one::<String>("url")
-        .ok_or_else(|| anyhow::anyhow!("url required"))?;
+pub async fn run(matches: &Args) -> anyhow::Result<()> {
+    let url = Some(&matches.url).ok_or_else(|| anyhow::anyhow!("url required"))?;
     let out = matches
-        .get_one::<String>("out")
+        .out
+        .as_ref()
         .cloned()
         .unwrap_or_else(|| ".".to_string());
 

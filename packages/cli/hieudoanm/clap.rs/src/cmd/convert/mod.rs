@@ -1,3 +1,4 @@
+use clap::FromArgMatches;
 mod base64;
 mod braille;
 mod morse;
@@ -20,8 +21,8 @@ pub fn command() -> clap::Command {
 
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     match matches.subcommand() {
-        Some(("braille", m)) => braille::run(m).await,
-        Some(("morse", m)) => morse::run(m).await,
+        Some(("braille", m)) => braille::run(&braille::Args::from_arg_matches(m)?).await,
+        Some(("morse", m)) => morse::run(&morse::Args::from_arg_matches(m)?).await,
         Some(("base64", m)) => base64::run(m).await,
         Some((name, m)) => string::run(name, m).await,
         _ => Ok(()),

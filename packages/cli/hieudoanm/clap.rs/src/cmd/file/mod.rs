@@ -1,3 +1,4 @@
+use clap::FromArgMatches;
 mod checksum;
 mod chmod;
 mod common;
@@ -45,7 +46,7 @@ pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
         Some(("edit", m)) => edit::run(m, json).await,
         Some(("grep", m)) => grep::run(m, json).await,
         Some(("checksum", m)) => checksum::run(m, json).await,
-        Some(("chmod", m)) => chmod::run(m).await,
+        Some(("chmod", m)) => chmod::run(&chmod::Args::from_arg_matches(m)?).await,
         Some(("count", m)) => count::run(m, json).await,
         Some(("duplicates", m)) => duplicates::run(m, json).await,
         Some(("size", m)) => info::size_run(m, json).await,
