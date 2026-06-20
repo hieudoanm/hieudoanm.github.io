@@ -27,7 +27,7 @@ Enter the bill amount, tip percentage, and number of people to split.`,
 			total := bill + tip
 			perPerson := total / float64(split)
 
-			if jsonOutput {
+			if ok, _ := cmd.Flags().GetBool("json"); ok {
 				out, err := json.MarshalIndent(map[string]interface{}{
 					"bill":        bill,
 					"tip_percent": tipPercent,

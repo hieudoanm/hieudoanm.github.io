@@ -45,7 +45,7 @@ func newStatsCmd() *cobra.Command {
 				return nil
 			})
 
-			if jsonOutput {
+			if ok, _ := cmd.Flags().GetBool("json"); ok {
 				type extJSON struct {
 					Extension string `json:"extension"`
 					Files     int    `json:"files"`

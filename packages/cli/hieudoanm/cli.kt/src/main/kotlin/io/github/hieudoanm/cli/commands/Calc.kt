@@ -6,6 +6,7 @@ import com.github.ajalt.clikt.parameters.arguments.argument
 import com.github.ajalt.clikt.parameters.options.option
 import com.github.ajalt.clikt.parameters.options.flag
 import com.github.ajalt.clikt.parameters.options.default
+import com.github.ajalt.clikt.parameters.options.required
 import com.github.ajalt.clikt.parameters.arguments.default
 import com.github.ajalt.clikt.parameters.types.int
 import com.github.ajalt.clikt.parameters.types.double
@@ -22,13 +23,66 @@ import java.time.temporal.ChronoUnit
 class CalcCommand : CliktCommand(name = "calc", help = "Financial and utility calculators") {
     init {
         subcommands(
-            CalcBmi(), CalcCurrency(), CalcTax(), CalcCompound(), CalcLoan(),
+            CalcAge(), CalcBmi(), CalcCurrency(), CalcTax(), CalcCompound(), CalcLoan(),
             CalcDiscount(), CalcTip(), CalcBase(), CalcUnit(), CalcPercent(),
             CalcMortgage(), CalcDate(), CalcEval(), CalcStats(), CalcFactorial(),
             CalcRandom(), CalcPrime(), CalcGcd(), CalcLcm()
         )
     }
     override fun run() = Unit
+}
+
+class CalcAge : CliktCommand(name = "age", help = "Calculate age from birthdate") {
+    private val year by option("--year", "-y", help = "Birth year").int().required()
+    private val month by option("--month", "-m", help = "Birth month (1-12)").int().required()
+    private val day by option("--day", "-d", help = "Birth day (1-31)").int().required()
+    private val json by option("--json", help = "Output in JSON format").flag()
+
+    override fun run() {
+        if (month < 1 || month > 12 || day < 1 || day > 31 || year <= 0) {
+            echo("invalid birth date: year/month/day must be valid values")
+            return
+        }
+
+        val cal = java.util.Calendar.getInstance()
+        cal.set(year, month - 1, day)
+        val now = java.util.Calendar.getInstance()
+
+        if (cal.get(java.util.Calendar.YEAR) != year ||
+            cal.get(java.util.Calendar.MONTH) != month - 1 ||
+            cal.get(java.util.Calendar.DAY_OF_MONTH) != day
+        ) {
+            echo("invalid birth date: $year/$month/$day does not exist")
+            return
+        }
+
+        if (cal.after(now)) {
+            echo("birth date cannot be in the future")
+            return
+        }
+
+        var years = now.get(java.util.Calendar.YEAR) - cal.get(java.util.Calendar.YEAR)
+        var months = now.get(java.util.Calendar.MONTH) - cal.get(java.util.Calendar.MONTH)
+        var days = now.get(java.util.Calendar.DAY_OF_MONTH) - cal.get(java.util.Calendar.DAY_OF_MONTH)
+
+        if (days < 0) {
+            months--
+            val prevMonth = now.clone() as java.util.Calendar
+            prevMonth.add(java.util.Calendar.MONTH, -1)
+            days += prevMonth.getActualMaximum(java.util.Calendar.DAY_OF_MONTH)
+        }
+        if (months < 0) {
+            years--
+            months += 12
+        }
+
+        if (json) {
+            val gson = com.google.gson.GsonBuilder().setPrettyPrinting().create()
+            echo(gson.toJson(mapOf("birth_date" to String.format("%04d-%02d-%02d", year, month, day), "years" to years, "months" to months, "days" to days)))
+        } else {
+            echo("$years years, $months months, $days days")
+        }
+    }
 }
 
 class CalcBmi : CliktCommand(name = "bmi", help = "Calculate Body Mass Index") {

@@ -4,8 +4,6 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var jsonOutput bool
-
 func NewCommand() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "file",
@@ -30,6 +28,6 @@ func NewCommand() *cobra.Command {
 	cmd.AddCommand(newTailCmd())
 	cmd.AddCommand(newTypeCmd())
 	cmd.AddCommand(newWriteCmd())
-	cmd.PersistentFlags().BoolVarP(&jsonOutput, "json", "j", false, "Output in JSON format")
+	cmd.PersistentFlags().BoolP("json", "j", false, "Output in JSON format")
 	return cmd
 }

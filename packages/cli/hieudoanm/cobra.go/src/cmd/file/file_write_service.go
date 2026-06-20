@@ -46,7 +46,7 @@ func openFileForWrite(path string, appendMode, mkdir bool, permMode string) (int
 	return flag, mode, nil
 }
 
-func outputWriteResult(path string, n int, appendMode bool) error {
+func outputWriteResult(path string, n int, appendMode bool, jsonOutput bool) error {
 	if jsonOutput {
 		out, err := json.MarshalIndent(map[string]interface{}{
 			"file":   path,

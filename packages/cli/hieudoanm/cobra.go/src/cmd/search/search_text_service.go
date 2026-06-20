@@ -52,7 +52,7 @@ func searchTextInRoots(pattern string, searchRoots []string, re *regexp.Regexp, 
 	return results, nil
 }
 
-func outputTextResults(results []textMatch, pattern string) error {
+func outputTextResults(results []textMatch, pattern string, jsonOutput bool) error {
 	if jsonOutput {
 		out, err := json.MarshalIndent(map[string]interface{}{
 			"pattern": pattern,

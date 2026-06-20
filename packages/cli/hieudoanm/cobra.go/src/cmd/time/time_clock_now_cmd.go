@@ -17,6 +17,7 @@ var timeNowCmd = &cobra.Command{
 	Long:  `Display the current date, time, and timezone in a formatted output.`,
 	Example: `  time clock now
   time clock now --json`,
+	Args: cobra.NoArgs,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		t := time.Now()
 		hours, minutes, seconds := t.Clock()

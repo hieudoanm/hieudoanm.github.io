@@ -22,7 +22,7 @@ Given the original price and discount percentage, shows the amount saved and fin
 			discount := original * percent / 100
 			final := original - discount
 
-			if jsonOutput {
+			if ok, _ := cmd.Flags().GetBool("json"); ok {
 				out, err := json.MarshalIndent(map[string]interface{}{
 					"original":    original,
 					"percent":     percent,

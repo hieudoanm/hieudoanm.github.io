@@ -20,7 +20,10 @@ func newGrepCmd() *cobra.Command {
   file grep --pattern "error" --include "*.go"
   file grep --fixed -p "fmt.Println" --path src/
   file grep -p "panic" --path . --context 2`,
+		Args: cobra.ArbitraryArgs,
 		RunE: func(cmd *cobra.Command, args []string) error {
+			jsonOutput, _ := cmd.Flags().GetBool("json")
+
 			searchPaths := []string{searchPath}
 			if searchPath == "" {
 				searchPaths = args
@@ -36,7 +39,7 @@ func newGrepCmd() *cobra.Command {
 
 			includePattern := compileIncludePattern(include)
 			matches, totalFiles := grepFiles(re, searchPaths, includePattern, context, maxCount)
-			return outputGrepResults(matches, totalFiles, pattern)
+			return outputGrepResults(matches, totalFiles, pattern, jsonOutput)
 		},
 	}
 

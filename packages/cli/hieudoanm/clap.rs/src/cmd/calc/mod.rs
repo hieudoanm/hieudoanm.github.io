@@ -1,3 +1,4 @@
+mod age;
 mod base;
 mod bmi;
 mod compound;
@@ -26,6 +27,7 @@ pub fn command() -> clap::Command {
     clap::Command::new("calc")
         .about("Financial and utility calculators")
         .subcommand_required(true)
+        .subcommand(age::command())
         .subcommand(base::command())
         .subcommand(bmi::command())
         .subcommand(compound::command())
@@ -49,6 +51,7 @@ pub fn command() -> clap::Command {
 
 pub async fn run(matches: &clap::ArgMatches) -> anyhow::Result<()> {
     match matches.subcommand() {
+        Some(("age", m)) => age::run(m).await,
         Some(("base", m)) => base::run(m).await,
         Some(("bmi", m)) => bmi::run(m).await,
         Some(("compound", m)) => compound::run(m).await,

@@ -76,7 +76,7 @@ func newDominantCmd() *cobra.Command {
 			}
 			entries = entries[:maxEntries]
 
-			if jsonOutput {
+			if ok, _ := cmd.Flags().GetBool("json"); ok {
 				b, _ := json.MarshalIndent(entries, "", "  ")
 				fmt.Println(string(b))
 			} else {

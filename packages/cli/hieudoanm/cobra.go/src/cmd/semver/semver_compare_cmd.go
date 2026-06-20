@@ -37,7 +37,7 @@ func newCompareCmd() *cobra.Command {
 			default:
 				rel = "=="
 			}
-			if jsonOutput {
+			if ok, _ := cmd.Flags().GetBool("json"); ok {
 				out, err := json.MarshalIndent(map[string]interface{}{
 					"a":        a.String(),
 					"b":        b.String(),
@@ -55,6 +55,6 @@ func newCompareCmd() *cobra.Command {
 	}
 	cmd.Flags().StringVar(&aStr, "a", "", "First version")
 	cmd.Flags().StringVar(&bStr, "b", "", "Second version")
-	cmd.Flags().BoolVar(&jsonOutput, "json", false, "Output in JSON format")
+	cmd.Flags().BoolP("json", "j", false, "Output in JSON format")
 	return cmd
 }

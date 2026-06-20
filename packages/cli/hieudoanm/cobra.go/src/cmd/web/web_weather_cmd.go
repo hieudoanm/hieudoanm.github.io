@@ -11,7 +11,7 @@ import (
 )
 
 func newWeatherCmd() *cobra.Command {
-	var forecast, jsonOutput bool
+	var forecast bool
 	var city, units string
 
 	cmd := &cobra.Command{
@@ -53,11 +53,11 @@ func newWeatherCmd() *cobra.Command {
 			var url string
 			if forecast {
 				url = fmt.Sprintf("https://wttr.in/%s?0&lang=en&%s", city, unitParam)
-				if jsonOutput {
+				if ok, _ := cmd.Flags().GetBool("json"); ok {
 					url = fmt.Sprintf("https://wttr.in/%s?format=j1&lang=en&%s", city, unitParam)
 				}
 			} else {
-				if jsonOutput {
+				if ok, _ := cmd.Flags().GetBool("json"); ok {
 					url = fmt.Sprintf("https://wttr.in/%s?format=j1&lang=en&%s", city, unitParam)
 				} else {
 					url = fmt.Sprintf("https://wttr.in/%s?format=%%C+%%t+%%w+%%h&%s", city, unitParam)
@@ -77,7 +77,7 @@ func newWeatherCmd() *cobra.Command {
 
 			text := strings.TrimSpace(string(body))
 
-			if jsonOutput {
+			if ok, _ := cmd.Flags().GetBool("json"); ok {
 				var data interface{}
 				if err := json.Unmarshal(body, &data); err != nil {
 					return err
@@ -92,7 +92,7 @@ func newWeatherCmd() *cobra.Command {
 	}
 
 	cmd.Flags().BoolVarP(&forecast, "forecast", "f", false, "Show 3-day forecast")
-	cmd.Flags().BoolVarP(&jsonOutput, "json", "j", false, "Output in JSON format")
+	cmd.Flags().BoolP("json", "j", false, "Output in JSON format")
 	cmd.Flags().StringVarP(&units, "units", "u", "metric", "Units: metric, imperial, uk")
 	return cmd
 }

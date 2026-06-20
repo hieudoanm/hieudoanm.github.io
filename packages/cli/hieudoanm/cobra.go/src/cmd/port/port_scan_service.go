@@ -28,7 +28,7 @@ func scanPorts(host string, ports []int, timeout int) []portInfo {
 	return openPorts
 }
 
-func outputScanResult(host string, openPorts []portInfo) {
+func outputScanResult(host string, openPorts []portInfo, jsonOutput bool) {
 	if jsonOutput {
 		b, _ := json.MarshalIndent(map[string]interface{}{
 			"host":  host,

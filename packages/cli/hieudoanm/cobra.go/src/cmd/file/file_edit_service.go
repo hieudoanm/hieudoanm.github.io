@@ -42,7 +42,7 @@ func performEdit(content, old, newStr string, useRegex bool, count int) (string,
 	return strings.Replace(content, old, newStr, -1), matchCount, nil
 }
 
-func outputEditResult(path, content, replaced string, matchCount int, preview bool, mode os.FileMode) error {
+func outputEditResult(path, content, replaced string, matchCount int, preview bool, mode os.FileMode, jsonOutput bool) error {
 	if matchCount == 0 {
 		if jsonOutput {
 			out, err := json.MarshalIndent(map[string]interface{}{

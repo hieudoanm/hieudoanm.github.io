@@ -9,8 +9,6 @@ import (
 
 var V = "dev"
 
-var jsonOutput bool
-
 func NewCommand() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "version",
@@ -19,7 +17,7 @@ func NewCommand() *cobra.Command {
 		Example: `  version
   version --json`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			if jsonOutput {
+			if ok, _ := cmd.Flags().GetBool("json"); ok {
 				out, err := json.MarshalIndent(map[string]interface{}{
 					"version": V,
 				}, "", "  ")
@@ -33,6 +31,6 @@ func NewCommand() *cobra.Command {
 			return nil
 		},
 	}
-	cmd.Flags().BoolVarP(&jsonOutput, "json", "j", false, "Output in JSON format")
+	cmd.Flags().BoolP("json", "j", false, "Output in JSON format")
 	return cmd
 }

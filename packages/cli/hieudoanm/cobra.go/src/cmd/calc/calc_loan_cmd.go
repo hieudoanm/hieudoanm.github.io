@@ -27,7 +27,7 @@ and generates a detailed schedule showing payment, interest, and balance over ti
 
 			r := rate / 100.0 / 12
 
-			if jsonOutput {
+			if ok, _ := cmd.Flags().GetBool("json"); ok {
 				type monthRow struct {
 					Month    int     `json:"month"`
 					Payment  float64 `json:"payment"`

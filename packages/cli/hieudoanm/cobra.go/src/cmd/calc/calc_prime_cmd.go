@@ -28,7 +28,7 @@ func newPrimeCmd() *cobra.Command {
 
 			if list {
 				primes := sieve(n)
-				if jsonOutput {
+				if ok, _ := cmd.Flags().GetBool("json"); ok {
 					b, _ := json.MarshalIndent(map[string]interface{}{
 						"limit":  n,
 						"count":  len(primes),
@@ -44,7 +44,7 @@ func newPrimeCmd() *cobra.Command {
 			}
 
 			isPrime := isPrime(n)
-			if jsonOutput {
+			if ok, _ := cmd.Flags().GetBool("json"); ok {
 				b, _ := json.MarshalIndent(map[string]interface{}{
 					"number":   n,
 					"is_prime": isPrime,

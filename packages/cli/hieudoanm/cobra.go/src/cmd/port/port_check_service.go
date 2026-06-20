@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-func outputCheckResult(host string, open bool) {
+func outputCheckResult(host string, open bool, jsonOutput bool) {
 	if jsonOutput {
 		parts := strings.SplitN(host, ":", 2)
 		portNum, _ := strconv.Atoi(parts[1])

@@ -16,7 +16,7 @@ type webResult struct {
 	Snippet string `json:"snippet"`
 }
 
-func outputWebResults(results []webResult, query string) error {
+func outputWebResults(results []webResult, query string, jsonOutput bool) error {
 	if jsonOutput {
 		out, err := json.MarshalIndent(map[string]interface{}{
 			"query":   query,
@@ -47,7 +47,7 @@ func outputWebResults(results []webResult, query string) error {
 	return nil
 }
 
-func duckDuckGoSearch(query string, maxResults int) error {
+func duckDuckGoSearch(query string, maxResults int, jsonOutput bool) error {
 	searchURL := fmt.Sprintf("https://lite.duckduckgo.com/lite/?q=%s", url.QueryEscape(query))
 
 	body, err := requests.Get(searchURL, requests.Options{})
@@ -56,7 +56,7 @@ func duckDuckGoSearch(query string, maxResults int) error {
 	}
 
 	results := parseDuckDuckGoResults(string(body), maxResults)
-	return outputWebResults(results, query)
+	return outputWebResults(results, query, jsonOutput)
 }
 
 func parseDuckDuckGoResults(htmlStr string, maxResults int) []webResult {

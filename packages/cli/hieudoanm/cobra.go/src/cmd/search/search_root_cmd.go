@@ -4,8 +4,6 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var jsonOutput bool
-
 func NewCommand() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "search",
@@ -27,6 +25,6 @@ Search is the universal entry point for finding things:
 	cmd.AddCommand(newTextCmd())
 	cmd.AddCommand(newCodeCmd())
 	cmd.AddCommand(newWebCmd())
-	cmd.PersistentFlags().BoolVar(&jsonOutput, "json", false, "Output in JSON format")
+	cmd.PersistentFlags().BoolP("json", "j", false, "Output in JSON format")
 	return cmd
 }

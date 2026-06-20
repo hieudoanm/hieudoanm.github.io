@@ -2,6 +2,7 @@ package mcp
 
 import (
 	"bufio"
+	"context"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -30,25 +31,52 @@ func (s *Server) AddTool(tool Tool, handler ToolHandler) {
 }
 
 func (s *Server) Run() error {
+	return s.runWithReader(context.Background(), os.Stdin)
+}
+
+func (s *Server) RunWithContext(ctx context.Context) error {
+	return s.runWithReader(ctx, os.Stdin)
+}
+
+func (s *Server) runWithReader(ctx context.Context, stdin io.Reader) error {
 	log.SetOutput(os.Stderr)
 	log.SetPrefix("[mcp] ")
 
-	reader := bufio.NewReader(os.Stdin)
+	reader := bufio.NewReader(stdin)
 	for {
-		line, err := reader.ReadString('\n')
-		if err != nil {
+		select {
+		case <-ctx.Done():
+			return ctx.Err()
+		default:
+		}
+
+		lineCh := make(chan string, 1)
+		errCh := make(chan error, 1)
+
+		go func() {
+			line, err := reader.ReadString('\n')
+			if err != nil {
+				errCh <- err
+				return
+			}
+			lineCh <- line
+		}()
+
+		select {
+		case line := <-lineCh:
+			line = strings.TrimSpace(line)
+			if line == "" {
+				continue
+			}
+			s.handleMessage([]byte(line))
+		case err := <-errCh:
 			if err == io.EOF {
 				return nil
 			}
 			return fmt.Errorf("read stdin: %w", err)
+		case <-ctx.Done():
+			return ctx.Err()
 		}
-
-		line = strings.TrimSpace(line)
-		if line == "" {
-			continue
-		}
-
-		s.handleMessage([]byte(line))
 	}
 }
 

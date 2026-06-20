@@ -46,7 +46,7 @@ Results can be output in JSON format with --json.`,
 			result := strconv.FormatInt(n, toBase)
 			baseNames := map[int]string{2: "binary", 8: "octal", 10: "decimal", 16: "hexadecimal"}
 
-			if jsonOutput {
+			if ok, _ := cmd.Flags().GetBool("json"); ok {
 				out, err := json.MarshalIndent(map[string]interface{}{
 					"value":  value,
 					"from":   baseNames[fromBase],

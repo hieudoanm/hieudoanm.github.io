@@ -4,8 +4,6 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var jsonOutput bool
-
 func NewCommand() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:     "gemini",
@@ -14,7 +12,7 @@ func NewCommand() *cobra.Command {
 		Example: `  gemini code`,
 		RunE:    func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
-	cmd.PersistentFlags().BoolVarP(&jsonOutput, "json", "j", false, "Output in JSON format")
+	cmd.PersistentFlags().BoolP("json", "j", false, "Output in JSON format")
 	cmd.AddCommand(newCodeCmd())
 	return cmd
 }

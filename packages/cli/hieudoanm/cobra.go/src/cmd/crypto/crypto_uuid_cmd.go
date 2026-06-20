@@ -20,7 +20,6 @@ func newUUIDCmd() *cobra.Command {
 		Example: `  crypto uuid
   crypto uuid --count 5
   crypto uuid --count 3 --json`,
-		Args: cobra.NoArgs,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			var uuids []string
 			for i := 0; i < count; i++ {

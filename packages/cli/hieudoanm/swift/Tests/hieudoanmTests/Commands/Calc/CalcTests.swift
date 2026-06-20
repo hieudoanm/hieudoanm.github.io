@@ -2,6 +2,16 @@ import XCTest
 @testable import hieudoanm
 
 final class CalcTests: XCTestCase {
+    func testCalcAge() throws {
+        var cmd = try CalcAge.parse(["--year", "1990", "--month", "1", "--day", "15"])
+        cmd.run()
+    }
+
+    func testCalcAgeJson() throws {
+        var cmd = try CalcAge.parse(["--year", "1990", "--month", "1", "--day", "15", "--json"])
+        cmd.run()
+    }
+
     func testCalcGcd() {
         XCTAssertEqual(calcGcd(12, 8), 4)
         XCTAssertEqual(calcGcd(17, 5), 1)

@@ -16,9 +16,10 @@ func newScanCmd() *cobra.Command {
   port scan --host google.com --ports 22,80,443
   port scan --host localhost --ports 8000-8100`,
 		RunE: func(cmd *cobra.Command, args []string) error {
+			jsonOutput, _ := cmd.Flags().GetBool("json")
 			portList := buildPortList(ports)
 			openPorts := scanPorts(host, portList, timeout)
-			outputScanResult(host, openPorts)
+			outputScanResult(host, openPorts, jsonOutput)
 			return nil
 		},
 	}

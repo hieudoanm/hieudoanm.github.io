@@ -21,7 +21,7 @@ func newValidateCmd() *cobra.Command {
 				return fmt.Errorf("need at least one version: use --versions")
 			}
 
-			if jsonOutput {
+			if ok, _ := cmd.Flags().GetBool("json"); ok {
 				results := make([]map[string]interface{}, 0)
 				for _, s := range versions {
 					_, err := parseVersion(s)
@@ -54,6 +54,6 @@ func newValidateCmd() *cobra.Command {
 		},
 	}
 	cmd.Flags().StringSliceVar(&versions, "versions", nil, "Comma-separated versions to validate")
-	cmd.Flags().BoolVar(&jsonOutput, "json", false, "Output in JSON format")
+	cmd.Flags().BoolP("json", "j", false, "Output in JSON format")
 	return cmd
 }

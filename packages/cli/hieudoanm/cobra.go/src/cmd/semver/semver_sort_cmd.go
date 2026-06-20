@@ -32,7 +32,7 @@ func newSortCmd() *cobra.Command {
 			sort.Slice(parsed, func(i, j int) bool {
 				return parsed[i].compare(parsed[j]) < 0
 			})
-			if jsonOutput {
+			if ok, _ := cmd.Flags().GetBool("json"); ok {
 				sorted := make([]string, len(parsed))
 				for i, v := range parsed {
 					sorted[i] = v.String()
@@ -53,6 +53,6 @@ func newSortCmd() *cobra.Command {
 		},
 	}
 	cmd.Flags().StringSliceVar(&versions, "versions", nil, "Comma-separated versions to sort")
-	cmd.Flags().BoolVar(&jsonOutput, "json", false, "Output in JSON format")
+	cmd.Flags().BoolP("json", "j", false, "Output in JSON format")
 	return cmd
 }

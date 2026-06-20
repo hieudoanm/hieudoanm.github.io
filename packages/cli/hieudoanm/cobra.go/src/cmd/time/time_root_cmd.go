@@ -2,8 +2,6 @@ package time
 
 import "github.com/spf13/cobra"
 
-var jsonOutput bool
-
 func NewCommand() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "time",
@@ -29,6 +27,6 @@ func NewCommand() *cobra.Command {
 		newAgeCmd(),
 		newStopwatchCmd(),
 	)
-	cmd.PersistentFlags().BoolVarP(&jsonOutput, "json", "j", false, "Output in JSON format")
+	cmd.PersistentFlags().BoolP("json", "j", false, "Output in JSON format")
 	return cmd
 }

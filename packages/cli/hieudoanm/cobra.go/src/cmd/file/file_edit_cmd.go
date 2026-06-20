@@ -22,6 +22,8 @@ func newEditCmd() *cobra.Command {
   file edit -f main.go -o "foo" -n "bar" --preview
   file edit -f main.go -o "foo" -n "bar" --count 1`,
 		RunE: func(cmd *cobra.Command, args []string) error {
+			jsonOutput, _ := cmd.Flags().GetBool("json")
+
 			info, err := os.Stat(path)
 			if err != nil {
 				return err
@@ -40,7 +42,7 @@ func newEditCmd() *cobra.Command {
 				return err
 			}
 
-			return outputEditResult(path, string(data), replaced, matchCount, preview, info.Mode())
+			return outputEditResult(path, string(data), replaced, matchCount, preview, info.Mode(), jsonOutput)
 		},
 	}
 

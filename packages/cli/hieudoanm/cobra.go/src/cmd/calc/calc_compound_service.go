@@ -67,7 +67,7 @@ func yearBreakdown(principal, rate, years, contribute float64, n float64) []comp
 	return rows
 }
 
-func runCompound(principal, rate, years, contribute float64, compound string) error {
+func runCompound(principal, rate, years, contribute float64, compound string, jsonOutput bool) error {
 	n := compoundingPeriods(compound)
 
 	fv, totalDeposits := futureValue(principal, rate, years, contribute, n)

@@ -51,7 +51,7 @@ func newDateCalcCmd() *cobra.Command {
 					days = -days
 				}
 
-				if jsonOutput {
+				if ok, _ := cmd.Flags().GetBool("json"); ok {
 					out, err := json.MarshalIndent(map[string]interface{}{
 						"date1": date1.Format("2006-01-02"),
 						"date2": date2.Format("2006-01-02"),
@@ -87,7 +87,7 @@ func newDateCalcCmd() *cobra.Command {
 				outputFormat = "2006-01-02"
 			}
 
-			if jsonOutput {
+			if ok, _ := cmd.Flags().GetBool("json"); ok {
 				out, err := json.MarshalIndent(map[string]interface{}{
 					"date":    result.Format(outputFormat),
 					"iso":     result.Format(time.RFC3339),

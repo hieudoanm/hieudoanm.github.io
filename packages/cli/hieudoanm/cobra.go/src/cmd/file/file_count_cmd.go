@@ -32,7 +32,7 @@ func newCountCmd() *cobra.Command {
 			words := len(strings.Fields(string(data)))
 			bytes := len(data)
 
-			if jsonOutput {
+			if ok, _ := cmd.Flags().GetBool("json"); ok {
 				b, _ := json.MarshalIndent(map[string]interface{}{
 					"file":  filePath,
 					"lines": lines,

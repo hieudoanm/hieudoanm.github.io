@@ -18,13 +18,15 @@ func newCheckCmd() *cobra.Command {
   port check --target google.com:443
   port check --target 192.168.1.1:22 --timeout 5`,
 		RunE: func(cmd *cobra.Command, args []string) error {
+			jsonOutput, _ := cmd.Flags().GetBool("json")
+
 			host := target
 			if _, _, err := net.SplitHostPort(host); err != nil {
 				return fmt.Errorf("use host:port format (e.g. localhost:8080)")
 			}
 
 			open := checkPortOpen(host, timeout)
-			outputCheckResult(host, open)
+			outputCheckResult(host, open, jsonOutput)
 			return nil
 		},
 	}

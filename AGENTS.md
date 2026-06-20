@@ -6,25 +6,30 @@
   - [📑 Table of Contents](#-table-of-contents)
   - [📐 Coding Convention](#-coding-convention)
     - [🐚 Bash](#-bash)
-    - [🔷 Go](#-go)
+    - [🔷 Go (`.go`)](#-go-go)
       - [🦾 cobra.go](#-cobrago)
-    - [🟣 Kotlin](#-kotlin)
+    - [🟣 Kotlin (`.kt`)](#-kotlin-kt)
       - [⌨️ cli.kt](#️-clikt)
       - [⚡ Ktor](#-ktor)
-    - [🐍 Python](#-python)
+      - [📱 Compose](#-compose)
+    - [🐍 Python (`.py`)](#-python-py)
       - [🐼 pandas](#-pandas)
-    - [🦀 Rust](#-rust)
+    - [🦀 Rust (`.rs`)](#-rust-rs)
       - [📋 clap.rs](#-claprs)
       - [🌐 axum](#-axum)
       - [🖥️ Tauri](#️-tauri)
-    - [🕊️ Swift](#️-swift)
+    - [🕊️ Swift (`.swift`)](#️-swift-swift)
       - [🏗️ Swift Argument Parser](#️-swift-argument-parser)
       - [🖼️ SwiftUI](#️-swiftui)
-    - [🔵 TypeScript](#-typescript)
-      - [🧪 Jest](#-jest)
-      - [⚛️ React](#️-react)
-      - [▲ Next.js](#-nextjs)
-      - [🎭 Playwright](#-playwright)
+    - [🏹 C++ (`.cpp`)](#-c-cpp)
+      - [🧩 Qt](#-qt)
+    - [🔵 TypeScript (`.ts`, `.tsx`)](#-typescript-ts-tsx)
+      - [🧪 Testing](#-testing)
+        - [🧪 Jest](#-jest)
+        - [🎭 Playwright](#-playwright)
+      - [🌐 Web Development](#-web-development)
+        - [⚛️ React](#️-react)
+        - [▲ Next.js](#-nextjs)
       - [🦖 Docusaurus](#-docusaurus)
   - [📦 Projects](#-projects)
 
@@ -66,7 +71,7 @@
 
 ---
 
-### 🔷 [Go][go]
+### 🔷 [Go (`.go`)][go]
 
 1. Use `error` as the last return value — Functions that can fail should return `error` as the final return value. AI agents infer failure paths from signatures.
 2. Handle errors explicitly, never ignore — Check every error return. Use `if err != nil { return ... }` rather than `\_ =`. Never use `must`-style panics outside `init`/`main`.
@@ -100,7 +105,7 @@
 
 ---
 
-### 🟣 [Kotlin][kotlin]
+### 🟣 [Kotlin (`.kt`)][kotlin]
 
 1. Prefer `val` over `var` — Use immutable `val` by default; only use `var` when mutation is necessary. Immutability makes data flow easier for AI agents to trace.
 2. Use `data class` for model objects — They get `equals()`, `hashCode()`, `toString()`, `copy()`, and destructuring for free, which reduces boilerplate and improves clarity.
@@ -151,7 +156,24 @@
 
 ---
 
-### 🐍 [Python][python]
+#### 📱 [Compose][jetpack-compose]
+
+1. Use `@Composable` for UI components — Declare UI with the `@Composable` annotation. AI agents see UI boundaries from the annotation.
+2. Prefer `Column`, `Row`, `Box` for layout — Compose layouts with declarative containers instead of XML. AI agents read hierarchy from composable nesting.
+3. Use `remember` for local state — Scopes state to composition lifecycle. AI agents trace state initialisation from `remember` calls.
+4. Use `LaunchedEffect` for side effects — `LaunchedEffect(key) { ... }` runs coroutines scoped to composition. AI agents see lifecycle-aware effects from the key parameter.
+5. Use `State` and `MutableState` for reactivity — Compose re-renders when state reads change. AI agents infer reactive boundaries from state references.
+6. Use `Modifier` for styling and interaction — Chain `.padding()`, `.clickable {}`, `.background()` on `Modifier`. AI agents read the full styling pipeline from one chain.
+7. Use `MaterialTheme` for theming — Define colours, typography, and shapes centrally. AI agents infer design tokens from `MaterialTheme` references.
+8. Use `NavHost` for navigation — `NavHost(navController, startDestination = ...)` declares the nav graph. AI agents infer screen flow from the navigation structure.
+9. Use `ViewModel` with `collectAsState()` — ViewModels survive config changes; `collectAsState()` bridges to Compose. AI agents trace data flow from ViewModel to UI through state.
+10. Use `@Preview` for previsualisation — Annotate composables with `@Preview` for IDE rendering. AI agents see component isolation from preview annotations.
+
+[Back to Table of Content](#-table-of-contents)
+
+---
+
+### 🐍 [Python (`.py`)][python]
 
 1. Use type hints for all function signatures — `def get_user(id: int) -> User:` tells an AI agent the contract without reading the body. Run `mypy` or `pyright` in CI.
 2. Prefer `dataclasses` over manual `__init__` — `@dataclass` auto-generates `__init__`, `__repr__`, `__eq__`, and `__hash__`. Reduces boilerplate and makes data shapes transparent.
@@ -185,7 +207,7 @@
 
 ---
 
-### 🦀 [Rust][rust]
+### 🦀 [Rust (`.rs`)][rust]
 
 1. Use `Result<T, E>` for fallible functions, never `panic!` — `Result` encodes failure in the type system. AI agents see which paths can fail from the signature alone.
 2. Prefer `Option<T>` over sentinel values — Use `Option` instead of `-1`, `null`, or empty strings for absent values. The type system forces the caller to handle both cases.
@@ -253,7 +275,7 @@
 
 ---
 
-### 🕊️ [Swift][swift]
+### 🕊️ [Swift (`.swift`)][swift]
 
 1. Prefer `let` over `var` — Immutable bindings signal intent and let AI agents trust that a value won't change after initialisation.
 2. Use `Codable` for JSON serialisation — `struct User: Codable { }` generates encoding/decoding automatically. AI agents read the struct definition and instantly know the wire format.
@@ -304,7 +326,41 @@
 
 ---
 
-### 🔵 [TypeScript][typescript]
+### 🏹 [C++ (`.cpp`)][cplusplus]
+
+1. Use RAII for resource management — Constructors acquire resources, destructors release them. AI agents infer lifetime from constructor/destructor pairing.
+2. Prefer `std::unique_ptr` over raw pointers — Expresses ownership transfer at the type level. AI agents see ownership semantics from the smart pointer type.
+3. Use `const` wherever possible — Mark member functions and parameters `const` when they don't mutate. AI agents infer immutability contracts from the type signature.
+4. Use `auto` for complex types — Deduces iterator and template types. AI agents see intent without reading nested type names.
+5. Prefer `std::vector` over C arrays — Dynamic sizing, bounds-checked access, STL algorithm compatibility. AI agents infer container semantics from the type.
+6. Use `nullptr` over `NULL` or `0` — Type-safe null pointer constant. AI agents distinguish pointer null from integer zero.
+7. Use range-based for loops — `for (const auto& item : items)` expresses iteration intent without index variables. AI agents read iteration intent directly.
+8. Use `override` for virtual functions — Compiler-verified method override marker. AI agents infer polymorphic behaviour from the `override` keyword.
+9. Use `= default` and `= delete` for special members — Explicitly control compiler-generated constructors and operators. AI agents see the class contract from declarations.
+10. Use namespaces for logical grouping — `namespace mylib { ... }` prevents name collisions. AI agents infer module boundaries from namespace declarations.
+
+[Back to Table of Contents](#-table-of-contents)
+
+---
+
+#### 🧩 [Qt][qt]
+
+1. Use parent-child ownership model — QObjects track children via parent pointer. AI agents infer lifetime from the QObject tree.
+2. Use signals and slots for communication — `connect(sender, &Sender::signal, receiver, &Receiver::slot)`. AI agents trace event flow from signal to slot.
+3. Use `Q_OBJECT` macro for custom QObject classes — Enables signals/slots and the meta-object system. AI agents infer QObject capabilities from the macro.
+4. Use `QVBoxLayout`/`QHBoxLayout` for layout — Layout managers handle resize behaviour automatically. AI agents read UI hierarchy from layout nesting.
+5. Use `QString` over `std::string` — Unicode-safe, implicit sharing, Qt API compatibility. AI agents infer encoding from the string type.
+6. Use QML for declarative UI — `Item { Rectangle { ... } }` defines UI hierarchy in markup. AI agents parse UI structure from QML declarations.
+7. Use `Q_PROPERTY` for bindable properties — `Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)`. AI agents see the property contract from the macro.
+8. Use `QSettings` for persistent settings — Cross-platform key-value storage with auto-serialisation. AI agents infer config persistence from the API.
+9. Use `QThread` with worker objects — Move QObject to QThread for background work. AI agents see threading boundaries from the `moveToThread` call.
+10. Use `QTest` for unit testing — Qt Test framework with data-driven tests and GUI event simulation. AI agents see test contracts from QTest macros.
+
+[Back to Table of Contents](#-table-of-contents)
+
+---
+
+### 🔵 [TypeScript (`.ts`, `.tsx`)][typescript]
 
 1. Use arrow function `() => {}` instead of `function () => {}` for functions
 2. Use `const` instead of `let` for variables that are not reassigned
@@ -322,7 +378,24 @@
 
 ---
 
-#### 🧪 [Jest][jest]
+#### 🧪 [Testing](#-testing)
+
+1. Test behaviour, not implementation — Write tests that verify observable outcomes rather than internal details. AI agents infer intent from test names and assertions without mocking internals.
+2. Use Arrange-Act-Assert pattern — Structure each test in three clear phases: setup, action, verification. AI agents trace the test flow from context to action to outcome.
+3. Write isolated tests — Each test should manage its own state with setup and teardown. AI agents reason about test results without guessing shared state contamination.
+4. Prefer realistic test data — Use fixtures that resemble production data over minimal stubs. AI agents discover real-world edge cases from representative inputs.
+5. Cover boundary conditions — Test empty states, error cases, and edge values alongside happy paths. AI agents infer system limits and failure modes from boundary coverage.
+6. Inject dependencies explicitly — Accept dependencies as parameters rather than importing them directly. AI agents see how to substitute test doubles from the constructor or function signature.
+7. Keep tests independent — Tests must pass in any order and never depend on shared mutable state. AI agents trust individual test results without simulating execution order.
+8. Name tests as specifications — Describe the expected behaviour in the test name. AI agents read the specification from test names alone without scanning assertions.
+9. Run tests on every change — Automate test execution in CI and locally before commit. AI agents trust that regressions are caught before code is merged.
+10. Treat test code as production code — Apply the same quality standards: linting, review, and refactoring. AI agents find test logic just as reliable as the implementation.
+
+[Back to Table of Content](#-table-of-contents)
+
+---
+
+##### 🧪 [Jest][jest]
 
 1. Use `it` or `test` for test cases, not `test` as the test runner name
 2. Use `describe` to group related tests
@@ -339,7 +412,30 @@
 
 ---
 
-#### ⚛️ [React][react]
+##### 🎭 [Playwright][playwright]
+
+1. Use `locator` over raw CSS/XPath selectors — `page.locator('[data-testid="submit"]')` is self-healing and readable. AI agents infer intent from the locator chain instead of parsing brittle selector strings.
+2. Prefer `getByRole`, `getByText`, `getByTestId` — Accessible queries mirror how users interact. AI agents see the semantic target (button, heading) rather than implementation details.
+3. Use `page` fixtures over manual browser setup — `test('...', async ({ page }) => {})` gets an isolated page. AI agents trace the test scope from the fixture parameter.
+4. Use `test.beforeEach` for shared setup — Navigate to a URL or seed data before each test. AI agents see common setup at a glance instead of scanning for repeated code.
+5. Use `expect.toHaveText`, `toBeVisible`, `toBeEnabled` — Assertions that describe the user-visible state. AI agents read expected behaviour from the matcher name.
+6. Use `mockRoute` for API stubs — `page.route('**/api/**', route => route.fulfill({ json }))` avoids network flakiness. AI agents see the mock boundary without inspecting the network layer.
+7. Use `waitForLoadState('networkidle')` sparingly — Prefer `waitForResponse` or `locator.waitFor()` for precise waits. AI agents trace the exact condition instead of guessing at "idle".
+8. Use `test.use({ storageState })` for auth — Reuse logged-in sessions across tests. AI agents infer the authentication context from the config instead of scripting login in every test.
+9. Use `snapshot` for visual regression — `expect(page).toHaveScreenshot()` catches unintended UI changes. AI agents see the visual contract as a first-class assertion.
+10. Use `webServer` config for dev server — Let Playwright start the dev server automatically. AI agents see the server dependency in config rather than a separate shell command.
+
+[Back to Table of Content](#-table-of-contents)
+
+---
+
+#### 🌐 [Web Development](#-web-development)
+
+[Back to Table of Content](#-table-of-contents)
+
+---
+
+##### ⚛️ [React][react]
 
 1. Prefer function components over class components — Functions are simpler, hooks-compatible, and produce less boilerplate. AI agents read data flow top-to-bottom without lifecycle indirection.
 2. Use hooks for state and side effects — `useState`, `useEffect`, `useCallback`, `useMemo` replace lifecycle methods with composable primitives. AI agents trace state changes through explicit hook calls.
@@ -356,7 +452,7 @@
 
 ---
 
-#### ▲ [Next.js][next.js]
+##### ▲ [Next.js][next.js]
 
 1. Use the App Router (`app/`) over the Pages Router (`pages/`) — App Router supports server components, layouts, streaming, and nested routing. AI agents infer page hierarchy from directory structure.
 2. Prefer server components by default — Fetch data in server components and pass props down. AI agents trace data flow server-to-client without waterfall loading states.
@@ -370,21 +466,6 @@
 10. Use `middleware.ts` for auth/redirects — Run logic before a request completes. AI agents see auth gates and redirect rules in a single entry point rather than scattered across pages.
 
 [Back to Table of Content](#-table-of-contents)
-
----
-
-#### 🎭 [Playwright][playwright]
-
-1. Use `locator` over raw CSS/XPath selectors — `page.locator('[data-testid="submit"]')` is self-healing and readable. AI agents infer intent from the locator chain instead of parsing brittle selector strings.
-2. Prefer `getByRole`, `getByText`, `getByTestId` — Accessible queries mirror how users interact. AI agents see the semantic target (button, heading) rather than implementation details.
-3. Use `page` fixtures over manual browser setup — `test('...', async ({ page }) => {})` gets an isolated page. AI agents trace the test scope from the fixture parameter.
-4. Use `test.beforeEach` for shared setup — Navigate to a URL or seed data before each test. AI agents see common setup at a glance instead of scanning for repeated code.
-5. Use `expect.toHaveText`, `toBeVisible`, `toBeEnabled` — Assertions that describe the user-visible state. AI agents read expected behaviour from the matcher name.
-6. Use `mockRoute` for API stubs — `page.route('**/api/**', route => route.fulfill({ json }))` avoids network flakiness. AI agents see the mock boundary without inspecting the network layer.
-7. Use `waitForLoadState('networkidle')` sparingly — Prefer `waitForResponse` or `locator.waitFor()` for precise waits. AI agents trace the exact condition instead of guessing at "idle".
-8. Use `test.use({ storageState })` for auth — Reuse logged-in sessions across tests. AI agents infer the authentication context from the config instead of scripting login in every test.
-9. Use `snapshot` for visual regression — `expect(page).toHaveScreenshot()` catches unintended UI changes. AI agents see the visual contract as a first-class assertion.
-10. Use `webServer` config for dev server — Let Playwright start the dev server automatically. AI agents see the server dependency in config rather than a separate shell command.
 
 ---
 
@@ -407,16 +488,16 @@
 
 ## 📦 Projects
 
-| No  | Category                            | Subcategory                              | Project          | [TypeScript][typescript] | [Go][go]             | [Rust][rust]   | [Kotlin][kotlin]                   | [Swift][swift]                                 |
-| --- | ----------------------------------- | ---------------------------------------- | ---------------- | ------------------------ | -------------------- | -------------- | ---------------------------------- | ---------------------------------------------- |
-| 1   | [App](./packages/app)               | Web                                      | `hieudoanm.app`  | [Next.js][next.js]       |                      |                |                                    |                                                |
-| -   | -                                   | Mobile                                   | -                | [Expo][expo]             |                      |                | [Jetpack Compose][jetpack-compose] | [SwiftUI][swiftui]                             |
-| -   | -                                   | Desktop                                  | -                |                          |                      | [Tauri][tauri] |                                    |                                                |
-| 2   | [CLI](./packages/cli)               |                                          | `hieudoanm.cli`  |                          | [cobra.go][cobra.go] | [clap.rs]      | [cli.kt]                           | [Swift Argument Parser][swift-argument-parser] |
-| 3   | [Documentation](./packages/docs)    |                                          | `hieudoanm.md`   | [Docusaurus][docusaurus] |                      |                |                                    |                                                |
-| 4   | [Extensions](./packages/extensions) | [Browser](./packages/extensions/browser) | `hieudoanm.ext`  |                          |                      |                |                                    |                                                |
-| 5   | [Server](./packages/server)         |                                          | `backbone`       |                          | `net/http`           | [Axum][axum]   | [Ktor][ktor]                       |                                                |
-| 6   | [Serverless](./packages/serverless) |                                          | `browserverless` |                          |                      |                |                                    |                                                |
+| No  | Category                            | Subcategory                              | Project          | [TypeScript][typescript] | [Go][go]             | [Rust][rust]   | [C++][cplusplus] | [Kotlin][kotlin]                   | [Swift][swift]                                 |
+| --- | ----------------------------------- | ---------------------------------------- | ---------------- | ------------------------ | -------------------- | -------------- | ---------------- | ---------------------------------- | ---------------------------------------------- |
+| 1   | [App](./packages/app)               | Web                                      | `hieudoanm.app`  | [Next.js][next.js]       |                      |                |                  |                                    |                                                |
+| -   | -                                   | Mobile                                   | -                | [Expo][expo]             |                      |                |                  | [Jetpack Compose][jetpack-compose] | [SwiftUI][swiftui]                             |
+| -   | -                                   | Desktop                                  | -                |                          |                      | [Tauri][tauri] | [Qt][qt]         |                                    |                                                |
+| 2   | [CLI](./packages/cli)               |                                          | `hieudoanm.cli`  |                          | [cobra.go][cobra.go] | [clap.rs]      |                  | [cli.kt]                           | [Swift Argument Parser][swift-argument-parser] |
+| 3   | [Documentation](./packages/docs)    |                                          | `hieudoanm.md`   | [Docusaurus][docusaurus] |                      |                |                  |                                    |                                                |
+| 4   | [Extensions](./packages/extensions) | [Browser](./packages/extensions/browser) | `hieudoanm.ext`  |                          |                      |                |                  |                                    |                                                |
+| 5   | [Server](./packages/server)         |                                          | `backbone`       |                          | `net/http`           | [Axum][axum]   |                  | [Ktor][ktor]                       |                                                |
+| 6   | [Serverless](./packages/serverless) |                                          | `browserverless` |                          |                      |                |                  |                                    |                                                |
 
 [Back to Table of Content](#-table-of-contents)
 
@@ -427,11 +508,13 @@
 [clap.rs]: https://docs.rs/clap/
 [cli.kt]: https://ajalt.github.io/clikt/
 [cobra.go]: https://cobra.dev
+[cplusplus]: https://isocpp.org/
 [docusaurus]: https://docusaurus.io/
 [expo]: https://expo.dev/
 [go]: https://go.dev/
 [jest]: https://jestjs.org
 [jetpack-compose]: https://developer.android.com/compose
+[qt]: https://www.qt.io/
 [kotlin]: https://kotlinlang.org
 [ktor]: https://ktor.io
 [next.js]: https://nextjs.org

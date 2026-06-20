@@ -13,11 +13,12 @@ func newFindCmd() *cobra.Command {
 		Example: `  port find
   port find --start 3000 --end 3010`,
 		RunE: func(cmd *cobra.Command, args []string) error {
+			jsonOutput, _ := cmd.Flags().GetBool("json")
 			port, err := findAvailablePort(start, end)
 			if err != nil {
 				return err
 			}
-			outputFindResult(port)
+			outputFindResult(port, jsonOutput)
 			return nil
 		},
 	}

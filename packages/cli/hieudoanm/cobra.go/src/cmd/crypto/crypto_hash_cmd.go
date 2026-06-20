@@ -31,6 +31,7 @@ func newHashCmd() *cobra.Command {
 		Long:  `Compute MD5, SHA1, SHA256, or SHA512 hashes with optional HMAC support.`,
 		Example: `  hash --text "hello world"
   hash --text "hello" --algo sha256 --key secret`,
+		Args: cobra.MaximumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			var input []byte
 

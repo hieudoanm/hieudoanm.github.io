@@ -43,7 +43,7 @@ func newCurrencyCmd() *cobra.Command {
 			}
 
 			converted := amount * rate
-			if jsonOutput {
+			if ok, _ := cmd.Flags().GetBool("json"); ok {
 				out, err := json.MarshalIndent(map[string]interface{}{
 					"from":   from,
 					"to":     to,

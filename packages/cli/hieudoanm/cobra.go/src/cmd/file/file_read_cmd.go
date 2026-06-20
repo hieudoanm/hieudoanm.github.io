@@ -26,7 +26,7 @@ func newReadCmd() *cobra.Command {
 				return err
 			}
 
-			if jsonOutput {
+			if ok, _ := cmd.Flags().GetBool("json"); ok {
 				info, err := os.Stat(path)
 				if err != nil {
 					return err

@@ -35,7 +35,7 @@ The result includes a weight category: Underweight, Normal, Overweight, or Obese
 			heightM := height / 100
 			bmi := weight / (heightM * heightM)
 
-			if jsonOutput {
+			if ok, _ := cmd.Flags().GetBool("json"); ok {
 				out, err := json.MarshalIndent(map[string]interface{}{
 					"weight":   weight,
 					"height":   height,

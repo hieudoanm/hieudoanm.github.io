@@ -17,7 +17,8 @@ Uses the formula: A = P(1+r/n)^(nt) + PMT * ((1+r/n)^(nt) - 1) / (r/n)`,
 		Example: `  calc compound --principal 10000 --rate 5 --years 10 --compound monthly
   calc compound -p 50000 -r 7.5 -y 20 -n yearly -c 500`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			return runCompound(principal, rate, years, contribute, compound)
+			jsonOutput, _ := cmd.Flags().GetBool("json")
+			return runCompound(principal, rate, years, contribute, compound, jsonOutput)
 		},
 	}
 

@@ -8,6 +8,30 @@ import kotlin.test.assertTrue
 
 class CalcCommandTest {
     @Test
+    fun testCalcAge() {
+        val cmd = CalcCommand()
+        val result = cmd.test("age --year 1990 --month 1 --day 15")
+        assertEquals(0, result.statusCode)
+        assertContains(result.stdout, "years")
+    }
+
+    @Test
+    fun testCalcAgeFutureDate() {
+        val cmd = CalcCommand()
+        val result = cmd.test("age --year 2099 --month 1 --day 1")
+        assertEquals(0, result.statusCode)
+        assertContains(result.stdout, "future")
+    }
+
+    @Test
+    fun testCalcAgeInvalidDate() {
+        val cmd = CalcCommand()
+        val result = cmd.test("age --year 2024 --month 2 --day 30")
+        assertEquals(0, result.statusCode)
+        assertContains(result.stdout, "does not exist")
+    }
+
+    @Test
     fun testCalcBmi() {
         val cmd = CalcCommand()
         val result = cmd.test("bmi 70 175")

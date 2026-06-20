@@ -23,12 +23,13 @@ Supports Go, TypeScript/JavaScript, Python, and Rust.`,
   search code --symbol "getUser" --kind function
   search code --symbol "fetchAPI" --lang ts`,
 		RunE: func(cmd *cobra.Command, args []string) error {
+			jsonOutput, _ := cmd.Flags().GetBool("json")
 			results, err := searchCodeSymbols(symbol, dir, lang, kind, maxResults)
 			if err != nil {
 				return err
 			}
 
-			return outputCodeResults(results, symbol)
+			return outputCodeResults(results, symbol, jsonOutput)
 		},
 	}
 

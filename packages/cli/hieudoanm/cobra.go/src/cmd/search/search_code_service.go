@@ -77,7 +77,7 @@ func searchCodeSymbols(symbol string, root string, lang string, kind string, max
 	return results, nil
 }
 
-func outputCodeResults(results []symbolMatch, symbol string) error {
+func outputCodeResults(results []symbolMatch, symbol string, jsonOutput bool) error {
 	if jsonOutput {
 		out, err := json.MarshalIndent(map[string]interface{}{
 			"symbol":  symbol,

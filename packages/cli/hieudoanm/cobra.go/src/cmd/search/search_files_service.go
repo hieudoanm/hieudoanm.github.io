@@ -71,7 +71,7 @@ func findFilesWithGlob(pattern, root string, maxDepth int, fileType string, hidd
 	return results, nil
 }
 
-func outputFileResults(results []string, pattern, root string) error {
+func outputFileResults(results []string, pattern, root string, jsonOutput bool) error {
 	absRoot, _ := filepath.Abs(root)
 
 	if jsonOutput {

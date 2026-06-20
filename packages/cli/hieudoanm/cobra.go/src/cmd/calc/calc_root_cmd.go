@@ -4,8 +4,6 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var jsonOutput bool
-
 func NewCommand() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "calc",
@@ -32,6 +30,8 @@ func NewCommand() *cobra.Command {
 	cmd.AddCommand(newPrimeCmd())
 	cmd.AddCommand(newGcdCmd())
 	cmd.AddCommand(newLcmCmd())
-	cmd.PersistentFlags().BoolVar(&jsonOutput, "json", false, "Output in JSON format")
+	cmd.AddCommand(newAgeCmd())
+
+	cmd.PersistentFlags().BoolP("json", "j", false, "Output in JSON format")
 	return cmd
 }

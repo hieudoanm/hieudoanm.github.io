@@ -6,7 +6,7 @@ struct CalcCommand: ParsableCommand {
         commandName: "calc",
         abstract: "Calculator and math tools",
         subcommands: [
-            CalcBmi.self, CalcCurrency.self, CalcTax.self,
+            CalcAge.self, CalcBmi.self, CalcCurrency.self, CalcTax.self,
             CalcCompound.self, CalcLoan.self, CalcDiscount.self,
             CalcTip.self, CalcBase.self, CalcUnit.self,
             CalcPercent.self, CalcMortgage.self, CalcDate.self,
@@ -15,6 +15,46 @@ struct CalcCommand: ParsableCommand {
         ]
     )
     mutating func run() {}
+}
+
+struct CalcAge: ParsableCommand {
+    static let configuration = CommandConfiguration(commandName: "age", abstract: "Calculate age from birthdate")
+    @Option(name: .shortAndLong, help: "Birth year") var year: Int
+    @Option(name: .shortAndLong, help: "Birth month (1-12)") var month: Int
+    @Option(name: .shortAndLong, help: "Birth day (1-31)") var day: Int
+    @Flag(name: .long, help: "Output in JSON format") var json = false
+
+    mutating func run() {
+        guard year > 0, month >= 1, month <= 12, day >= 1, day <= 31 else {
+            print("invalid birth date: year/month/day must be valid values"); return
+        }
+        let cal = Calendar.current
+        var components = DateComponents()
+        components.year = year
+        components.month = month
+        components.day = day
+        guard let birth = cal.date(from: components) else {
+            print("invalid birth date: \(year)/\(month)/\(day) does not exist"); return
+        }
+        guard birth <= Date() else {
+            print("birth date cannot be in the future"); return
+        }
+        let now = Date()
+        let years = cal.dateComponents([.year], from: birth, to: now).year ?? 0
+        let months = cal.dateComponents([.month], from: birth, to: now).month ?? 0
+        let days = cal.dateComponents([.day], from: birth, to: now).day ?? 0
+
+        if json {
+            let obj: [String: Any] = [
+                "birth_date": String(format: "%04d-%02d-%02d", year, month, day),
+                "years": years, "months": months % 12, "days": days % 30,
+            ]
+            if let data = try? JSONSerialization.data(withJSONObject: obj, options: [.prettyPrinted]),
+               let str = String(data: data, encoding: .utf8) { print(str) }
+        } else {
+            print("Age: \(years) years, \(months % 12) months, \(days % 30) days")
+        }
+    }
 }
 
 struct CalcBmi: ParsableCommand {

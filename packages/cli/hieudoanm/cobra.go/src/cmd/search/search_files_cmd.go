@@ -27,12 +27,13 @@ Patterns use glob syntax:
   search files --pattern "*.py" --type f
   search files --pattern "config.*" --hidden`,
 		RunE: func(cmd *cobra.Command, args []string) error {
+			jsonOutput, _ := cmd.Flags().GetBool("json")
 			results, err := findFilesWithGlob(pattern, dir, maxDepth, fileType, hidden)
 			if err != nil {
 				return err
 			}
 
-			return outputFileResults(results, pattern, dir)
+			return outputFileResults(results, pattern, dir, jsonOutput)
 		},
 	}
 

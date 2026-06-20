@@ -22,7 +22,7 @@ Suffix convention — type comes last:
 
 ### Flags & Error Handling
 
-- `--json` flag: persistent flag on the module root, package-level `var jsonOutput bool`
+- `--json` flag: persistent flag on the module root, accessed via `cmd.Flags().GetBool("json")` in `RunE`
 - `RunE` pattern (return `error`), not `Run`
 - Error messages are lowercase (Go convention)
 - `fmt.Println` for output (not `cmd.Printf`)
@@ -72,6 +72,7 @@ Lint: `golangci-lint run`
 - **english** — Word definitions from GitHub raw JSON
 - **semver** — Validate, compare, sort, bump, prerelease, range constraints
 - **version** — Show CLI version
+- **image** — Image conversion, dominant color, info
 - **mcp** — MCP server exposing all CLI tools to AI agents (`mcp serve`)
 
 ### MCP module
@@ -110,5 +111,6 @@ Lint: `golangci-lint run`
 
 ### Test coverage
 
-- All 24 modules have per-file tests
-- Run `go test ./src/cmd/...` — all packages pass
+- All modules have per-file tests
+- `libs/history` and `libs/mcp` have dedicated test suites
+- Run `go test ./...` — all packages pass

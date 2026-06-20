@@ -33,7 +33,7 @@ func newUnitCmd() *cobra.Command {
 
 			base := fromUnit.toBase(value)
 			result := toUnit.fromBase(base)
-			if jsonOutput {
+			if ok, _ := cmd.Flags().GetBool("json"); ok {
 				out, err := json.MarshalIndent(map[string]interface{}{
 					"value":    value,
 					"from":     from,

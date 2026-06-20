@@ -17,7 +17,7 @@ func newGcdCmd() *cobra.Command {
   calc gcd --a 100 --b 75`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			result := gcd(int64(a), int64(b))
-			if jsonOutput {
+			if ok, _ := cmd.Flags().GetBool("json"); ok {
 				b, _ := json.MarshalIndent(map[string]interface{}{
 					"a":   a,
 					"b":   b,

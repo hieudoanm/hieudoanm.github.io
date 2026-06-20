@@ -24,6 +24,8 @@ func newTextCmd() *cobra.Command {
   search text --pattern "import" --path src/ --ignore-case
   search text --pattern "panic" --max-count 5`,
 		RunE: func(cmd *cobra.Command, args []string) error {
+			jsonOutput, _ := cmd.Flags().GetBool("json")
+
 			rePattern := pattern
 			if ignoreCase {
 				rePattern = "(?i)" + pattern
@@ -40,7 +42,7 @@ func newTextCmd() *cobra.Command {
 				return err
 			}
 
-			return outputTextResults(results, pattern)
+			return outputTextResults(results, pattern, jsonOutput)
 		},
 	}
 

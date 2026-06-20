@@ -19,8 +19,9 @@ func newWebCmd() *cobra.Command {
   search web --query "latest AI news 2026" --max-results 10
   search web --query "site:github.com golang cli" --source google`,
 		RunE: func(cmd *cobra.Command, args []string) error {
+			jsonOutput, _ := cmd.Flags().GetBool("json")
 			if source == "" || source == "duckduckgo" {
-				return duckDuckGoSearch(query, maxResults)
+				return duckDuckGoSearch(query, maxResults, jsonOutput)
 			}
 
 			return fmt.Errorf("unsupported search source: %s (use 'duckduckgo')", source)

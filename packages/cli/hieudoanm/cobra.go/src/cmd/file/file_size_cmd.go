@@ -32,7 +32,7 @@ func newSizeCmd() *cobra.Command {
 					total += fi.Size()
 					return nil
 				})
-				if jsonOutput {
+				if ok, _ := cmd.Flags().GetBool("json"); ok {
 					b, _ := json.MarshalIndent(map[string]interface{}{
 						"path": path,
 						"size": total,
@@ -42,7 +42,7 @@ func newSizeCmd() *cobra.Command {
 					fmt.Printf("%s  %s\n", formatSize(total), path)
 				}
 			} else {
-				if jsonOutput {
+				if ok, _ := cmd.Flags().GetBool("json"); ok {
 					b, _ := json.MarshalIndent(map[string]interface{}{
 						"path": path,
 						"size": info.Size(),

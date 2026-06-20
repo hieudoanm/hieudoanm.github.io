@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-func outputFindResult(port int) {
+func outputFindResult(port int, jsonOutput bool) {
 	if jsonOutput {
 		b, _ := json.MarshalIndent(map[string]interface{}{
 			"port": port,

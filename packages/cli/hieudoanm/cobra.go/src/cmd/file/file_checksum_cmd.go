@@ -54,7 +54,7 @@ func newChecksumCmd() *cobra.Command {
 				hash = hex.EncodeToString(h.Sum(nil))
 			}
 
-			if jsonOutput {
+			if ok, _ := cmd.Flags().GetBool("json"); ok {
 				b, _ := json.MarshalIndent(map[string]string{
 					"file":      filePath,
 					"algorithm": algorithm,

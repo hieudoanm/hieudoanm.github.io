@@ -24,12 +24,19 @@ func TestVersionOutput(t *testing.T) {
 	V = "1.2.3"
 	cmd := NewCommand()
 
-	var buf bytes.Buffer
-	cmd.SetOut(&buf)
+	old := os.Stdout
+	r, w, _ := os.Pipe()
+	os.Stdout = w
 
 	if err := cmd.RunE(cmd, []string{}); err != nil {
 		t.Fatal(err)
 	}
+
+	w.Close()
+	os.Stdout = old
+
+	var buf bytes.Buffer
+	_, _ = buf.ReadFrom(r)
 	if buf.String() != "Version: 1.2.3\n" {
 		t.Errorf("output = %q", buf.String())
 	}

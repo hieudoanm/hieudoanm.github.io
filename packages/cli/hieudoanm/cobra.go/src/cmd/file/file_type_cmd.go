@@ -23,7 +23,7 @@ func newTypeCmd() *cobra.Command {
 			}
 			mime := detectMIME(filePath)
 
-			if jsonOutput {
+			if ok, _ := cmd.Flags().GetBool("json"); ok {
 				b, _ := json.MarshalIndent(map[string]interface{}{
 					"file":     filePath,
 					"size":     info.Size(),

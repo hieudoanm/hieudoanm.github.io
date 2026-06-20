@@ -20,7 +20,7 @@ LCM(a, b) = |a * b| / GCD(a, b)`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			ai, bi := int64(a), int64(b)
 			result := ai / gcd(ai, bi) * bi
-			if jsonOutput {
+			if ok, _ := cmd.Flags().GetBool("json"); ok {
 				b, _ := json.MarshalIndent(map[string]interface{}{
 					"a":   a,
 					"b":   b,

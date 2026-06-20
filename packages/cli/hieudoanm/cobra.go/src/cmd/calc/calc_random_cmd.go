@@ -26,12 +26,12 @@ func newRandomCmd() *cobra.Command {
 
 			nums := make([]float64, count)
 			for i := range count {
-				if jsonOutput {
+				if ok, _ := cmd.Flags().GetBool("json"); ok {
 				}
 				nums[i] = min + rand.Float64()*(max-min)
 			}
 
-			if jsonOutput {
+			if ok, _ := cmd.Flags().GetBool("json"); ok {
 				b, _ := json.MarshalIndent(map[string]interface{}{
 					"min":    min,
 					"max":    max,

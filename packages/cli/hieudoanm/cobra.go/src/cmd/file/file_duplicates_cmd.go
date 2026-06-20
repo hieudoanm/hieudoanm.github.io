@@ -47,7 +47,7 @@ func newDuplicatesCmd() *cobra.Command {
 					if len(dups) < 2 {
 						continue
 					}
-					if jsonOutput {
+					if ok, _ := cmd.Flags().GetBool("json"); ok {
 						dupGroups = append(dupGroups, map[string]interface{}{
 							"size":  size,
 							"files": dups,
@@ -62,7 +62,7 @@ func newDuplicatesCmd() *cobra.Command {
 				}
 			}
 
-			if jsonOutput {
+			if ok, _ := cmd.Flags().GetBool("json"); ok {
 				b, _ := json.MarshalIndent(dupGroups, "", "  ")
 				fmt.Println(string(b))
 			} else if len(dupGroups) == 0 {

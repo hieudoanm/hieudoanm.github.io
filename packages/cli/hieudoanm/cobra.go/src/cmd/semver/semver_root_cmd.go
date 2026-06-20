@@ -9,8 +9,6 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var jsonOutput bool
-
 type version struct {
 	major, minor, patch int
 	prerelease          string
@@ -114,7 +112,7 @@ func NewCommand() *cobra.Command {
 				if prerelease != "" {
 					result.prerelease = prerelease
 				}
-				if jsonOutput {
+				if ok, _ := cmd.Flags().GetBool("json"); ok {
 					out, err := json.MarshalIndent(map[string]interface{}{
 						"input":      singleVersion,
 						"result":     result.String(),
@@ -143,7 +141,7 @@ func NewCommand() *cobra.Command {
 				if err != nil {
 					return err
 				}
-				if jsonOutput {
+				if ok, _ := cmd.Flags().GetBool("json"); ok {
 					out, err := json.MarshalIndent(map[string]interface{}{
 						"version": singleVersion,
 						"range":   rangeExpr,
@@ -171,7 +169,7 @@ func NewCommand() *cobra.Command {
 	cmd.Flags().StringVar(&prerelease, "prerelease", "", "Set prerelease label after bump")
 	cmd.Flags().StringVar(&rangeExpr, "range", "", "Check if version matches a range (e.g. '>=1.0.0 <2.0.0')")
 	cmd.Flags().StringVar(&singleVersion, "version", "", "Single version for --bump or --range")
-	cmd.PersistentFlags().BoolVar(&jsonOutput, "json", false, "Output in JSON format")
+	cmd.PersistentFlags().BoolP("json", "j", false, "Output in JSON format")
 	cmd.AddCommand(newValidateCmd(), newCompareCmd(), newSortCmd())
 	return cmd
 }

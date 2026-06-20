@@ -21,6 +21,8 @@ func newWriteCmd() *cobra.Command {
   file write -f newdir/file.txt --mkdir -c "content"
   echo "data" | file write -f output.txt`,
 		RunE: func(cmd *cobra.Command, args []string) error {
+			jsonOutput, _ := cmd.Flags().GetBool("json")
+
 			content, err := getWriteContent(content)
 			if err != nil {
 				return err
@@ -42,7 +44,7 @@ func newWriteCmd() *cobra.Command {
 				return err
 			}
 
-			return outputWriteResult(path, n, appendMode)
+			return outputWriteResult(path, n, appendMode, jsonOutput)
 		},
 	}
 

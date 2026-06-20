@@ -32,7 +32,7 @@ func newInfoCmd() *cobra.Command {
 
 			stat, _ := os.Stat(file)
 
-			if jsonOutput {
+			if ok, _ := cmd.Flags().GetBool("json"); ok {
 				b, _ := json.MarshalIndent(map[string]interface{}{
 					"file":   file,
 					"format": format,
