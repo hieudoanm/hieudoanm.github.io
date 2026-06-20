@@ -52,7 +52,7 @@ pub fn command() -> clap::Command {
     clap::Command::new("license")
         .about("Fetch a license template from GitHub")
         .arg(
-            clap::Arg::new("spdx-id")
+            clap::Arg::new("spdx_id")
                 .long("spdx-id")
                 .help("SPDX license identifier (skip prompt)"),
         )

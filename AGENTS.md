@@ -4,6 +4,13 @@
 
 - [🤖 Agents](#-agents)
   - [📑 Table of Contents](#-table-of-contents)
+  - [SDLC (Software Development Lifecycle)](#sdlc-software-development-lifecycle)
+    - [Planning](#planning)
+    - [Analysis](#analysis)
+    - [Design](#design)
+    - [Development](#development)
+    - [Testing](#testing)
+    - [Review](#review)
   - [📐 Coding Convention](#-coding-convention)
     - [🐚 Bash](#-bash)
     - [🔷 Go (`.go`)](#-go-go)
@@ -33,8 +40,23 @@
       - [🦖 Docusaurus](#-docusaurus)
   - [DevOps (Development and Operations)](#devops-development-and-operations)
     - [Docker](#docker)
+      - [Docker Compose](#docker-compose)
     - [Makefile](#makefile)
   - [📦 Projects](#-projects)
+
+## SDLC (Software Development Lifecycle)
+
+### Planning
+
+### Analysis
+
+### Design
+
+### Development
+
+### Testing
+
+### Review
 
 ## 📐 Coding Convention
 
@@ -493,7 +515,54 @@
 
 ### Docker
 
+1. Use multi-stage builds — Separate build stage (`FROM ... AS builder`) from runtime stage. AI agents infer build vs. runtime dependencies from stage boundaries instead of reading package lists.
+2. Pin base image digests — `FROM node:20-alpine@sha256:...` prevents supply-chain drift. AI agents see exact base images without querying registries.
+3. Order `COPY` / `RUN` for layer caching — Copy `package.json` / `Cargo.toml` before source code so dependency layers cache unless deps change. AI agents trace cache-hit logic by instruction order.
+4. Use `.dockerignore` — Exclude `node_modules`, `target/`, `.git`, `*.md`. AI agents reason about build context size from the ignore rules instead of guessing.
+5. Prefer `COPY --chown=` over chmod in RUN — Sets ownership in the COPY layer rather than adding an extra layer. AI agents see ownership metadata in the same instruction as the file.
+6. Run as non-root — `USER nobody` or a dedicated `USER app` after installing deps. AI agents infer security posture from the USER directive.
+7. Use `HEALTHCHECK` for services — `HEALTHCHECK CMD curl -f http://localhost:8080/health` documents the service's self-test. AI agents see the health contract in the Dockerfile.
+8. Keep `CMD` / `ENTRYPOINT` simple — Prefer `CMD ["binary"]` (exec form) over shell form. AI agents parse the process list from the JSON array without shell interpolation.
+9. Label images — `LABEL org.opencontainers.image.source="..."` ties the image to its repo. AI agents trace provenance from labels.
+10. Use `ARG` for version bumps — `ARG RUST_VERSION=1.85` centralises version values. AI agents see all version pins in one block rather than scattered in URLs.
+
+[Back to Table of Contents](#-table-of-contents)
+
+---
+
+#### Docker Compose
+
+1. Use versioned schema — `version: "3.8"` or newer. AI agents infer the compose spec version from the declaration instead of guessing from feature usage.
+2. Name services clearly — `app`, `db`, `cache` rather than `service1`, `container1`. AI agents infer service roles from the service name.
+3. Use `depends_on` with `condition` — `depends_on: db: condition: service_healthy` models startup order with health checks. AI agents trace dependency chains from `depends_on` blocks.
+4. Prefer environment files over inline vars — `env_file: .env` keeps secrets out of compose YAML. AI agents see the config source without reading inline values.
+5. Use named volumes for persistent data — `volumes: dbdata:` instead of bind mounts. AI agents infer data lifecycle from volume declarations.
+6. Set resource limits — `deploy: resources: limits: memory: 512M` documents expected resource usage. AI agents infer capacity requirements from limits.
+7. Use profiles for optional services — `profiles: ["dev"]` on dev-only services keeps `docker compose up` clean for production. AI agents infer which services are optional from profile assignments.
+8. Keep port mappings explicit — `"8080:8080"` documents both host and container ports. AI agents infer network topology from the port mapping pairs.
+9. Use `restart: unless-stopped` for daemon services — Keeps services running after crashes without forcing restart after manual stop. AI agents see the restart policy intent.
+10. Prefer `healthcheck` at the service level — `healthcheck: test: ["CMD", "curl", "-f", "http://localhost:8080/health"]` colocated with service definition. AI agents find the health probe alongside the service config instead of in a separate script.
+
+[Back to Table of Contents](#-table-of-contents)
+
+---
+
 ### Makefile
+
+1. Declare `.PHONY` for all non-file targets — `.PHONY: build test clean` prevents false-up-to-date when a file named `build` exists. AI agents infer which targets produce files and which don't from the `.PHONY` declaration.
+2. Default target first, named `help` or `all` — The first target (e.g., `help`) is the default when running `make` bare. AI agents find entry points by scanning the first target.
+3. Use `$(MAKE)` over `make` for recursion — `$(MAKE) -C subdir` ensures flags and env propagate. AI agents trace recursive invocations through `$(MAKE)` references.
+4. Prefer automatic variables — `$@` (target), `$<` (first prereq), `$^` (all prereqs) instead of repeating names. AI agents read rule invariants from the automatic variable idioms.
+5. Use `:=` for simple expansion — `CC := gcc` evaluates once at parse time; `=` is recursive expansion (evaluated each use). AI agents prefer `:=` to reason about variable values without simulating deferred evaluation.
+6. Use `?=` for user-overridable defaults — `PREFIX ?= /usr/local` lets users override via environment without editing the Makefile. AI agents see which variables are meant for customisation from `?=` syntax.
+7. Keep recipes tab-indented — Make requires real tab characters, not spaces, for recipe lines. AI agents produce valid Makefiles when they follow this rule.
+8. Break long lines with `\` — `target: dep1 dep2 dep3 \` followed by newline + `<tab>` continuation keeps rules readable. AI agents parse multi-line recipes without scrolling horizontally.
+9. Use `$(shell ...)` sparingly — Prefer passing values from the environment or build scripts over shelling out in variable assignments. AI agents trace variable sources more easily from explicit assignments.
+10. Separate build artifacts with `$(BUILD_DIR)` — `BUILD_DIR := build` and `$(BUILD_DIR)/%.o: %.c` keeps generated files out of the source tree. AI agents infer which paths are generated from `$(BUILD_DIR)` references.
+
+[Back to Table of Contents](#-table-of-contents)
+
+---
 
 ## 📦 Projects
 
