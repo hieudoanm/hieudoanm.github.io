@@ -128,4 +128,29 @@ pub async fn close_client(hub: &RwLock<WSHub>, id: &str) -> bool {
     }
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn new_ws_hub_creates_non_null_hub() {
+        let hub = new_ws_hub();
+        assert!(hub.try_read().is_ok());
+    }
+
+    #[tokio::test]
+    async fn send_to_client_unknown_returns_false() {
+        let hub = new_ws_hub();
+        let result = send_to_client(&hub, "nonexistent", Message::Text("hi".into())).await;
+        assert!(!result);
+    }
+
+    #[tokio::test]
+    async fn close_client_unknown_returns_false() {
+        let hub = new_ws_hub();
+        let result = close_client(&hub, "nonexistent").await;
+        assert!(!result);
+    }
+}
+
 

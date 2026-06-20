@@ -22,6 +22,17 @@ pub struct SSEHub {
     pub clients: HashMap<String, SSEClient>,
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn new_pubsub_hub_creates_non_null_hub() {
+        let hub = new_pubsub_hub();
+        assert!(hub.try_read().is_ok());
+    }
+}
+
 pub fn new_pubsub_hub() -> Arc<RwLock<SSEHub>> {
     Arc::new(RwLock::new(SSEHub {
         clients: HashMap::new(),

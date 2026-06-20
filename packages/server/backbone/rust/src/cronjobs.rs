@@ -14,6 +14,70 @@ pub const EVENT_CRONJOB_CREATE: &str = "cronjob.create";
 pub const EVENT_CRONJOB_UPDATE: &str = "cronjob.update";
 pub const EVENT_CRONJOB_DELETE: &str = "cronjob.delete";
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    fn sample_cronjob() -> CronJob {
+        CronJob {
+            id: "job-123".into(),
+            name: "Test Job".into(),
+            schedule: "*/5 * * * * *".into(),
+            command: "https://example.com/hook".into(),
+            method: "POST".into(),
+            headers: r#"[["Authorization", "Bearer token"]]"#.into(),
+            body: r#"{"key": "value"}"#.into(),
+            is_active: true,
+            last_run_at: "".into(),
+            last_run_status: "".into(),
+            created_at: "2025-01-01T00:00:00Z".into(),
+            updated_at: "2025-01-01T00:00:00Z".into(),
+        }
+    }
+
+    #[test]
+    fn contains_cronjob_key() {
+        let job = sample_cronjob();
+        let data = webhook_cronjob_data(&job);
+        assert!(data.get("cronjob").is_some());
+    }
+
+    #[test]
+    fn preserves_name() {
+        let job = sample_cronjob();
+        let data = webhook_cronjob_data(&job);
+        assert_eq!(data["cronjob"]["name"], "Test Job");
+    }
+
+    #[test]
+    fn preserves_schedule() {
+        let job = sample_cronjob();
+        let data = webhook_cronjob_data(&job);
+        assert_eq!(data["cronjob"]["schedule"], "*/5 * * * * *");
+    }
+
+    #[test]
+    fn preserves_command() {
+        let job = sample_cronjob();
+        let data = webhook_cronjob_data(&job);
+        assert_eq!(data["cronjob"]["command"], "https://example.com/hook");
+    }
+
+    #[test]
+    fn preserves_is_active() {
+        let job = sample_cronjob();
+        let data = webhook_cronjob_data(&job);
+        assert_eq!(data["cronjob"]["is_active"], true);
+    }
+
+    #[test]
+    fn preserves_method() {
+        let job = sample_cronjob();
+        let data = webhook_cronjob_data(&job);
+        assert_eq!(data["cronjob"]["method"], "POST");
+    }
+}
+
 pub fn webhook_cronjob_data(job: &CronJob) -> Value {
     serde_json::json!({"cronjob": job})
 }

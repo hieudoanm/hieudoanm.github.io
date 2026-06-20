@@ -56,6 +56,49 @@ impl RateLimiter {
     }
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn new_creates_rate_limiter() {
+        let rl = RateLimiter::new(10.0, 1.0);
+        assert_eq!(rl.capacity, 10.0);
+        assert_eq!(rl.refill_rate, 1.0);
+        assert!(rl.buckets.lock().unwrap().is_empty());
+    }
+
+    #[test]
+    fn first_request_to_new_ip_is_allowed() {
+        let rl = RateLimiter::new(1.0, 0.0);
+        assert!(rl.check("192.168.1.1"));
+    }
+
+    #[test]
+    fn rapid_requests_exhaust_capacity() {
+        let rl = RateLimiter::new(3.0, 0.0);
+        assert!(rl.check("10.0.0.1"));
+        assert!(rl.check("10.0.0.1"));
+        assert!(rl.check("10.0.0.1"));
+        assert!(!rl.check("10.0.0.1"));
+    }
+
+    #[test]
+    fn different_ips_have_independent_buckets() {
+        let rl = RateLimiter::new(1.0, 0.0);
+        assert!(rl.check("ip-a"));
+        assert!(!rl.check("ip-a"));
+        assert!(rl.check("ip-b"));
+    }
+
+    #[test]
+    fn cleanup_on_empty_state_is_safe() {
+        let rl = RateLimiter::new(10.0, 1.0);
+        rl.cleanup();
+        assert!(rl.buckets.lock().unwrap().is_empty());
+    }
+}
+
 pub async fn rate_limit_middleware(
     State(state): State<std::sync::Arc<AppState>>,
     request: Request,

@@ -19,3 +19,43 @@ pub fn generate_thumbnail(path: &Path, max_dim: u32) -> Result<Vec<u8>, String> 
 pub fn is_supported_image(mime: &str) -> bool {
     matches!(mime, "image/jpeg" | "image/png" | "image/webp" | "image/gif")
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn supports_jpeg() {
+        assert!(is_supported_image("image/jpeg"));
+    }
+
+    #[test]
+    fn supports_png() {
+        assert!(is_supported_image("image/png"));
+    }
+
+    #[test]
+    fn supports_gif() {
+        assert!(is_supported_image("image/gif"));
+    }
+
+    #[test]
+    fn supports_webp() {
+        assert!(is_supported_image("image/webp"));
+    }
+
+    #[test]
+    fn rejects_text_plain() {
+        assert!(!is_supported_image("text/plain"));
+    }
+
+    #[test]
+    fn rejects_empty_string() {
+        assert!(!is_supported_image(""));
+    }
+
+    #[test]
+    fn rejects_case_insensitive() {
+        assert!(!is_supported_image("IMAGE/JPEG"));
+    }
+}

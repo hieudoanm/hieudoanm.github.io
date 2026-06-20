@@ -58,3 +58,49 @@ pub fn webhook_secret_data(secret: &Secret) -> Value {
         "secret": secret,
     })
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn encrypt_decrypt_round_trip() {
+        let key = [0u8; 32];
+        let plaintext = "my-secret-value-123";
+        let encrypted = encrypt_secret(&key, plaintext).unwrap();
+        let decrypted = decrypt_secret(&key, &encrypted).unwrap();
+        assert_eq!(decrypted, plaintext);
+    }
+
+    #[test]
+    fn decrypt_with_wrong_key_returns_error() {
+        let key = [0u8; 32];
+        let wrong_key = [1u8; 32];
+        let encrypted = encrypt_secret(&key, "secret-data").unwrap();
+        let result = decrypt_secret(&wrong_key, &encrypted);
+        assert!(result.is_err());
+    }
+
+    #[test]
+    fn decrypt_invalid_format_returns_error() {
+        let key = [0u8; 32];
+        let result = decrypt_secret(&key, "invalid-format-no-colon");
+        assert_eq!(result.unwrap_err(), "invalid encrypted format");
+    }
+
+    #[test]
+    fn webhook_secret_data_correct_json() {
+        let secret = Secret {
+            id: "sec-1".into(),
+            name: "my-secret".into(),
+            value: "encrypted-value".into(),
+            scope: "default".into(),
+            created_at: "2024-01-01T00:00:00Z".into(),
+            updated_at: "2024-01-01T00:00:00Z".into(),
+        };
+        let data = webhook_secret_data(&secret);
+        assert_eq!(data["secret"]["id"], "sec-1");
+        assert_eq!(data["secret"]["name"], "my-secret");
+        assert_eq!(data["secret"]["value"], "encrypted-value");
+    }
+}

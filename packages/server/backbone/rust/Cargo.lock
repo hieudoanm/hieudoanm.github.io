@@ -232,7 +232,7 @@ dependencies = [
 
 [[package]]
 name = "backbone"
-version = "0.1.0"
+version = "0.0.1"
 dependencies = [
  "aes-gcm",
  "axum",
@@ -2348,6 +2348,7 @@ dependencies = [
  "bytes",
  "encoding_rs",
  "futures-core",
+ "futures-util",
  "h2",
  "http",
  "http-body",
@@ -2359,6 +2360,7 @@ dependencies = [
  "js-sys",
  "log",
  "mime",
+ "mime_guess",
  "native-tls",
  "percent-encoding",
  "pin-project-lite",

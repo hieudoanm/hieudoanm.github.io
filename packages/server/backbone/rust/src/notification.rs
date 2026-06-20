@@ -41,6 +41,52 @@ pub async fn broadcast_notification(state: &Arc<AppState>, notification: &Notifi
     }
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn new_sse_hub_creates_non_null_hub() {
+        let hub = new_sse_hub();
+        assert!(hub.try_read().is_ok());
+    }
+
+    #[test]
+    fn validate_notification_type_info() {
+        assert!(validate_notification_type("info"));
+    }
+
+    #[test]
+    fn validate_notification_type_success() {
+        assert!(validate_notification_type("success"));
+    }
+
+    #[test]
+    fn validate_notification_type_warning() {
+        assert!(validate_notification_type("warning"));
+    }
+
+    #[test]
+    fn validate_notification_type_error() {
+        assert!(validate_notification_type("error"));
+    }
+
+    #[test]
+    fn validate_notification_type_rejects_uppercase() {
+        assert!(!validate_notification_type("ERROR"));
+    }
+
+    #[test]
+    fn validate_notification_type_rejects_empty() {
+        assert!(!validate_notification_type(""));
+    }
+
+    #[test]
+    fn validate_notification_type_rejects_invalid() {
+        assert!(!validate_notification_type("invalid"));
+    }
+}
+
 pub async fn handle_notification_stream(State(state): State<Arc<AppState>>) -> impl IntoResponse {
     let (tx, rx) = tokio::sync::mpsc::unbounded_channel::<String>();
     let id = Uuid::new_v4().to_string().replace('-', "");
