@@ -57,6 +57,7 @@ pub fn command() -> clap::Command {
     clap::Command::new("disk").about("Show disk usage").arg(
         clap::Arg::new("json")
             .long("json")
+            .action(clap::ArgAction::SetTrue)
             .help("Output in JSON format"),
     )
 }

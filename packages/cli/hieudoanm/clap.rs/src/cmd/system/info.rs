@@ -10,6 +10,7 @@ pub fn command() -> clap::Command {
     clap::Command::new("info").about("Show system info").arg(
         clap::Arg::new("json")
             .long("json")
+            .action(clap::ArgAction::SetTrue)
             .help("Output in JSON format"),
     )
 }

@@ -76,7 +76,7 @@ pub fn command() -> clap::Command {
                 .help("Symbol kind (function, type, variable, method, class)"),
         )
         .arg(
-            clap::Arg::new("max-results")
+            clap::Arg::new("max_results")
                 .long("max-results")
                 .short('n')
                 .help("Maximum number of results (0 = unlimited)")

@@ -19,6 +19,7 @@ pub fn command() -> clap::Command {
             clap::Arg::new("json")
                 .long("json")
                 .global(true)
+                .action(clap::ArgAction::SetTrue)
                 .help("Output in JSON format"),
         )
         .subcommand(read::read_command())

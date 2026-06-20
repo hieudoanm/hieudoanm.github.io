@@ -11,9 +11,21 @@ pub struct Args {
 pub fn command() -> clap::Command {
     clap::Command::new("hcl")
         .about("Convert HCL color to other formats")
-        .arg(clap::Arg::new("h").help("Hue (0-360)"))
-        .arg(clap::Arg::new("c").help("Chroma (0-100)"))
-        .arg(clap::Arg::new("l").help("Luminance (0-100)"))
+        .arg(
+            clap::Arg::new("h")
+                .help("Hue (0-360)")
+                .value_parser(clap::value_parser!(f64)),
+        )
+        .arg(
+            clap::Arg::new("c")
+                .help("Chroma (0-100)")
+                .value_parser(clap::value_parser!(f64)),
+        )
+        .arg(
+            clap::Arg::new("l")
+                .help("Luminance (0-100)")
+                .value_parser(clap::value_parser!(f64)),
+        )
 }
 
 pub async fn run(matches: &Args) -> anyhow::Result<()> {

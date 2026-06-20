@@ -21,11 +21,13 @@ pub fn command() -> clap::Command {
         .arg(
             clap::Arg::new("sort")
                 .long("sort")
+                .action(clap::ArgAction::SetTrue)
                 .help("Sort alphabetically by path"),
         )
         .arg(
             clap::Arg::new("json")
                 .long("json")
+                .action(clap::ArgAction::SetTrue)
                 .help("Output in JSON format"),
         )
 }

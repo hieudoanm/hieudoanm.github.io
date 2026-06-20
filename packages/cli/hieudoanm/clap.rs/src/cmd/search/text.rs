@@ -59,14 +59,14 @@ pub fn command() -> clap::Command {
                 .default_value("."),
         )
         .arg(
-            clap::Arg::new("ignore-case")
+            clap::Arg::new("ignore_case")
                 .long("ignore-case")
                 .short('i')
                 .action(clap::ArgAction::SetTrue)
                 .help("Case-insensitive search"),
         )
         .arg(
-            clap::Arg::new("max-count")
+            clap::Arg::new("max_count")
                 .long("max-count")
                 .short('m')
                 .help("Maximum number of matches")
@@ -78,7 +78,7 @@ pub fn command() -> clap::Command {
                 .help("Glob pattern for file names (e.g. \"*.go\")"),
         )
         .arg(
-            clap::Arg::new("max-depth")
+            clap::Arg::new("max_depth")
                 .long("max-depth")
                 .short('d')
                 .help("Maximum directory depth (0 = unlimited)")

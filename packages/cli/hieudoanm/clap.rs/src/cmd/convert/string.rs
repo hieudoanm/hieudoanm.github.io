@@ -1,18 +1,44 @@
 use crate::cmd::convert::read_stdin;
 
+fn text_arg() -> clap::Arg {
+    clap::Arg::new("text").help("Text to convert")
+}
+
 pub fn commands() -> Vec<clap::Command> {
     vec![
-        clap::Command::new("capitalise").about("Capitalise a string"),
-        clap::Command::new("deburr").about("Remove diacritics from a string"),
-        clap::Command::new("kebabcase").about("Convert to kebab-case"),
-        clap::Command::new("camelcase").about("Convert to camelCase"),
-        clap::Command::new("pascalcase").about("Convert to PascalCase"),
-        clap::Command::new("slug").about("Create URL-friendly slug"),
-        clap::Command::new("lowercase").about("Convert to lowercase"),
-        clap::Command::new("snakecase").about("Convert to snake_case"),
-        clap::Command::new("uppercase").about("Convert to UPPERCASE"),
-        clap::Command::new("count").about("Count characters, words, lines"),
-        clap::Command::new("url").about("URL encode/decode"),
+        clap::Command::new("capitalise")
+            .about("Capitalise a string")
+            .arg(text_arg()),
+        clap::Command::new("deburr")
+            .about("Remove diacritics from a string")
+            .arg(text_arg()),
+        clap::Command::new("kebabcase")
+            .about("Convert to kebab-case")
+            .arg(text_arg()),
+        clap::Command::new("camelcase")
+            .about("Convert to camelCase")
+            .arg(text_arg()),
+        clap::Command::new("pascalcase")
+            .about("Convert to PascalCase")
+            .arg(text_arg()),
+        clap::Command::new("slug")
+            .about("Create URL-friendly slug")
+            .arg(text_arg()),
+        clap::Command::new("lowercase")
+            .about("Convert to lowercase")
+            .arg(text_arg()),
+        clap::Command::new("snakecase")
+            .about("Convert to snake_case")
+            .arg(text_arg()),
+        clap::Command::new("uppercase")
+            .about("Convert to UPPERCASE")
+            .arg(text_arg()),
+        clap::Command::new("count")
+            .about("Count characters, words, lines")
+            .arg(text_arg()),
+        clap::Command::new("url")
+            .about("URL encode/decode")
+            .arg(text_arg()),
     ]
 }
 
@@ -153,7 +179,6 @@ mod tests {
         let mut cmds = commands();
         let cmd = cmds.remove(0);
         let m = cmd
-            .arg(clap::Arg::new("text").required(true))
             .try_get_matches_from(vec!["capitalise", "hello"])
             .unwrap();
         run("capitalise", &m).await.unwrap();

@@ -11,9 +11,21 @@ pub struct Args {
 pub fn command() -> clap::Command {
     clap::Command::new("rgb")
         .about("Convert RGB color to other formats")
-        .arg(clap::Arg::new("r").help("Red (0-255)"))
-        .arg(clap::Arg::new("g").help("Green (0-255)"))
-        .arg(clap::Arg::new("b").help("Blue (0-255)"))
+        .arg(
+            clap::Arg::new("r")
+                .help("Red (0-255)")
+                .value_parser(clap::value_parser!(u8)),
+        )
+        .arg(
+            clap::Arg::new("g")
+                .help("Green (0-255)")
+                .value_parser(clap::value_parser!(u8)),
+        )
+        .arg(
+            clap::Arg::new("b")
+                .help("Blue (0-255)")
+                .value_parser(clap::value_parser!(u8)),
+        )
 }
 
 pub async fn run(matches: &Args) -> anyhow::Result<()> {

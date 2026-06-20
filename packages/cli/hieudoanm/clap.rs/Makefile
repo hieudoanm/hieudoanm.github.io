@@ -21,12 +21,12 @@ format:
 lint:
 	cargo clippy -- -D warnings
 
-## test: Run all tests with coverage
-test:
+## coverage: Run all tests with coverage
+coverage:
 	cargo llvm-cov
 
-## test-fast: Run tests without coverage (faster)
-test-fast:
+## test: Run tests without coverage (faster)
+test:
 	cargo test
 
 ## coverage: Generate HTML coverage report

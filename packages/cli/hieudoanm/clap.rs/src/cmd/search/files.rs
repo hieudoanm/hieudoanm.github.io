@@ -23,7 +23,7 @@ pub struct Args {
         long = "type",
         help = "Filter by type: f (file) or d (directory)"
     )]
-    pub r#type: Option<String>,
+    pub filter_type: Option<String>,
     #[arg(short = 'H', long = "hidden", action = clap::ArgAction::SetTrue, help = "Include hidden files and directories")]
     pub hidden: bool,
     #[arg(long = "json", action = clap::ArgAction::SetTrue, help = "Output in JSON format")]
@@ -48,14 +48,14 @@ pub fn command() -> clap::Command {
                 .default_value("."),
         )
         .arg(
-            clap::Arg::new("max-depth")
+            clap::Arg::new("max_depth")
                 .long("max-depth")
                 .short('D')
                 .help("Maximum directory depth (0 = unlimited)")
                 .default_value("0"),
         )
         .arg(
-            clap::Arg::new("type")
+            clap::Arg::new("filter_type")
                 .long("type")
                 .short('t')
                 .help("Filter by type: f (file) or d (directory)"),
@@ -81,7 +81,7 @@ pub async fn run(matches: &Args) -> anyhow::Result<()> {
     let max_depth: usize = Some(&matches.max_depth)
         .and_then(|s| s.parse().ok())
         .unwrap_or(0);
-    let file_type = matches.r#type.as_deref();
+    let file_type = matches.filter_type.as_deref();
     let hidden = matches.hidden;
     let use_json = matches.json;
 
