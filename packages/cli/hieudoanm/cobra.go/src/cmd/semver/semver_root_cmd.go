@@ -3,91 +3,14 @@ package semver
 import (
 	"encoding/json"
 	"fmt"
-	"strconv"
-	"strings"
 
 	"github.com/spf13/cobra"
+
+	"github.com/hieudoanm/jack/src/cmd/semver/compare"
+	"github.com/hieudoanm/jack/src/cmd/semver/sort"
+	"github.com/hieudoanm/jack/src/cmd/semver/validate"
+	"github.com/hieudoanm/jack/src/cmd/semver/version"
 )
-
-type version struct {
-	major, minor, patch int
-	prerelease          string
-}
-
-func parseVersion(s string) (version, error) {
-	s = strings.TrimPrefix(s, "v")
-	parts := strings.SplitN(s, ".", 3)
-	if len(parts) < 3 {
-		return version{}, fmt.Errorf("invalid semver: %s (need major.minor.patch)", s)
-	}
-	major, err := strconv.Atoi(parts[0])
-	if err != nil {
-		return version{}, fmt.Errorf("invalid major version: %s", parts[0])
-	}
-	minor, err := strconv.Atoi(parts[1])
-	if err != nil {
-		return version{}, fmt.Errorf("invalid minor version: %s", parts[1])
-	}
-
-	patchStr := parts[2]
-	var prerelease string
-	if idx := strings.Index(patchStr, "-"); idx >= 0 {
-		prerelease = patchStr[idx+1:]
-		patchStr = patchStr[:idx]
-	}
-
-	patch, err := strconv.Atoi(patchStr)
-	if err != nil {
-		return version{}, fmt.Errorf("invalid patch version: %s", patchStr)
-	}
-	return version{major, minor, patch, prerelease}, nil
-}
-
-func (v version) String() string {
-	s := fmt.Sprintf("%d.%d.%d", v.major, v.minor, v.patch)
-	if v.prerelease != "" {
-		s += "-" + v.prerelease
-	}
-	return s
-}
-
-func (a version) compare(b version) int {
-	if a.major != b.major {
-		return a.major - b.major
-	}
-	if a.minor != b.minor {
-		return a.minor - b.minor
-	}
-	if a.patch != b.patch {
-		return a.patch - b.patch
-	}
-	if a.prerelease != b.prerelease {
-		if a.prerelease == "" {
-			return 1
-		}
-		if b.prerelease == "" {
-			return -1
-		}
-		if a.prerelease < b.prerelease {
-			return -1
-		}
-		return 1
-	}
-	return 0
-}
-
-func (v version) bump(part string) version {
-	switch part {
-	case "major":
-		return version{v.major + 1, 0, 0, ""}
-	case "minor":
-		return version{v.major, v.minor + 1, 0, ""}
-	case "patch":
-		return version{v.major, v.minor, v.patch + 1, ""}
-	default:
-		return v
-	}
-}
 
 func NewCommand() *cobra.Command {
 	var bumpPart, prerelease, rangeExpr, singleVersion string
@@ -104,13 +27,13 @@ func NewCommand() *cobra.Command {
   semver --range ">=1.0.0 <2.0.0" --version 1.5.0`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if bumpPart != "" {
-				v, err := parseVersion(singleVersion)
+				v, err := version.Parse(singleVersion)
 				if err != nil {
 					return err
 				}
-				result := v.bump(bumpPart)
+				result := v.Bump(bumpPart)
 				if prerelease != "" {
-					result.prerelease = prerelease
+					result.Prerelease = prerelease
 				}
 				if ok, _ := cmd.Flags().GetBool("json"); ok {
 					out, err := json.MarshalIndent(map[string]interface{}{
@@ -133,11 +56,11 @@ func NewCommand() *cobra.Command {
 				if singleVersion == "" {
 					return fmt.Errorf("need a version to check against range: use --version")
 				}
-				v, err := parseVersion(singleVersion)
+				v, err := version.Parse(singleVersion)
 				if err != nil {
 					return err
 				}
-				matches, err := checkRange(v, rangeExpr)
+				matches, err := version.CheckRange(v, rangeExpr)
 				if err != nil {
 					return err
 				}
@@ -170,51 +93,6 @@ func NewCommand() *cobra.Command {
 	cmd.Flags().StringVar(&rangeExpr, "range", "", "Check if version matches a range (e.g. '>=1.0.0 <2.0.0')")
 	cmd.Flags().StringVar(&singleVersion, "version", "", "Single version for --bump or --range")
 	cmd.PersistentFlags().BoolP("json", "j", false, "Output in JSON format")
-	cmd.AddCommand(newValidateCmd(), newCompareCmd(), newSortCmd())
+	cmd.AddCommand(validate.NewCmd(), compare.NewCmd(), sort.NewCmd())
 	return cmd
-}
-
-func checkRange(v version, rangeExpr string) (bool, error) {
-	parts := strings.Fields(rangeExpr)
-	if len(parts) == 0 {
-		return false, fmt.Errorf("empty range expression")
-	}
-
-	for i := 0; i < len(parts); i += 2 {
-		op := parts[i]
-		if i+1 >= len(parts) {
-			return false, fmt.Errorf("incomplete range: missing version after %s", op)
-		}
-		ver, err := parseVersion(parts[i+1])
-		if err != nil {
-			return false, fmt.Errorf("invalid version in range: %s", parts[i+1])
-		}
-
-		switch op {
-		case ">":
-			if v.compare(ver) <= 0 {
-				return false, nil
-			}
-		case ">=":
-			if v.compare(ver) < 0 {
-				return false, nil
-			}
-		case "<":
-			if v.compare(ver) >= 0 {
-				return false, nil
-			}
-		case "<=":
-			if v.compare(ver) > 0 {
-				return false, nil
-			}
-		case "=", "==":
-			if v.compare(ver) != 0 {
-				return false, nil
-			}
-		default:
-			return false, fmt.Errorf("unknown operator: %s", op)
-		}
-	}
-
-	return true, nil
 }

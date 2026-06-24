@@ -1,6 +1,7 @@
 package uppercase
 
 import (
+	"fmt"
 	"strings"
 
 	"github.com/hieudoanm/jack/src/cmd/convert/internal"
@@ -27,7 +28,7 @@ func NewCommand() *cobra.Command {
 			if useJSON {
 				return internal.WriteJSON(cmd, result{Text: text, Uppercase: u})
 			}
-			cmd.Println(u)
+			fmt.Fprintln(cmd.OutOrStdout(), u)
 			return nil
 		},
 	}

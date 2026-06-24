@@ -1,6 +1,7 @@
 package url
 
 import (
+	"fmt"
 	"net/url"
 
 	"github.com/hieudoanm/jack/src/cmd/convert/internal"
@@ -37,13 +38,13 @@ func NewCommand() *cobra.Command {
 				if useJSON {
 					return internal.WriteJSON(cmd, result{Input: text, Output: r, Mode: "decode"})
 				}
-				cmd.Println(r)
+				fmt.Fprintln(cmd.OutOrStdout(), r)
 			} else {
 				r := url.QueryEscape(text)
 				if useJSON {
 					return internal.WriteJSON(cmd, result{Input: text, Output: r, Mode: "encode"})
 				}
-				cmd.Println(r)
+				fmt.Fprintln(cmd.OutOrStdout(), r)
 			}
 			return nil
 		},

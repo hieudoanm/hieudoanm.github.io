@@ -2,6 +2,8 @@ package gemini
 
 import (
 	"github.com/spf13/cobra"
+
+	"github.com/hieudoanm/jack/src/cmd/gemini/code"
 )
 
 func NewCommand() *cobra.Command {
@@ -13,6 +15,6 @@ func NewCommand() *cobra.Command {
 		RunE:    func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
 	cmd.PersistentFlags().BoolP("json", "j", false, "Output in JSON format")
-	cmd.AddCommand(newCodeCmd())
+	cmd.AddCommand(code.NewCmd())
 	return cmd
 }

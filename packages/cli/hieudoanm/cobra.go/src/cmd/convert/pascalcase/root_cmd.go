@@ -1,6 +1,8 @@
 package pascalcase
 
 import (
+	"fmt"
+
 	"github.com/hieudoanm/jack/src/cmd/convert/internal"
 	"github.com/spf13/cobra"
 )
@@ -25,7 +27,7 @@ func NewCommand() *cobra.Command {
 			if useJSON {
 				return internal.WriteJSON(cmd, result{Text: text, PascalCase: p})
 			}
-			cmd.Println(p)
+			fmt.Fprintln(cmd.OutOrStdout(), p)
 			return nil
 		},
 	}

@@ -2,6 +2,12 @@ package openrouter
 
 import (
 	"github.com/spf13/cobra"
+
+	"github.com/hieudoanm/jack/src/cmd/openrouter/code"
+	"github.com/hieudoanm/jack/src/cmd/openrouter/hook"
+	"github.com/hieudoanm/jack/src/cmd/openrouter/models"
+	"github.com/hieudoanm/jack/src/cmd/openrouter/serve"
+	"github.com/hieudoanm/jack/src/cmd/openrouter/status"
 )
 
 func NewCommand() *cobra.Command {
@@ -16,10 +22,10 @@ func NewCommand() *cobra.Command {
 		RunE: func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
 	cmd.PersistentFlags().BoolP("json", "j", false, "Output in JSON format")
-	cmd.AddCommand(newServeCmd())
-	cmd.AddCommand(newStatusCmd())
-	cmd.AddCommand(newModelsCmd())
-	cmd.AddCommand(newHookCmd())
-	cmd.AddCommand(newCodeCmd())
+	cmd.AddCommand(serve.NewCmd())
+	cmd.AddCommand(status.NewCmd())
+	cmd.AddCommand(models.NewCmd())
+	cmd.AddCommand(hook.NewCmd())
+	cmd.AddCommand(code.NewCmd())
 	return cmd
 }

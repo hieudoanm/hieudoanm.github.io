@@ -563,7 +563,7 @@ func TestSystemPathLookup(t *testing.T) {
 
 func TestDataJSONStdin(t *testing.T) {
 	var stdout, stderr bytes.Buffer
-	cmd := exec.Command(binPath, "data", "json", "--pretty")
+	cmd := exec.Command(binPath, "data", "json")
 	cmd.Stdin = strings.NewReader(`{"name": "test", "value": 42}`)
 	cmd.Stdout = &stdout
 	cmd.Stderr = &stderr

@@ -2,6 +2,10 @@ package port
 
 import (
 	"github.com/spf13/cobra"
+
+	"github.com/hieudoanm/jack/src/cmd/port/check"
+	"github.com/hieudoanm/jack/src/cmd/port/find"
+	"github.com/hieudoanm/jack/src/cmd/port/scan"
 )
 
 func NewCommand() *cobra.Command {
@@ -14,9 +18,9 @@ func NewCommand() *cobra.Command {
   port scan --host localhost`,
 		RunE: func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
-	cmd.AddCommand(newCheckCmd())
-	cmd.AddCommand(newFindCmd())
-	cmd.AddCommand(newScanCmd())
+	cmd.AddCommand(check.NewCmd())
+	cmd.AddCommand(find.NewCmd())
+	cmd.AddCommand(scan.NewCmd())
 	cmd.PersistentFlags().BoolP("json", "j", false, "Output in JSON format")
 	return cmd
 }

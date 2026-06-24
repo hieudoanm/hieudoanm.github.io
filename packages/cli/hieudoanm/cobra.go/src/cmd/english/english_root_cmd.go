@@ -2,6 +2,8 @@ package english
 
 import (
 	"github.com/spf13/cobra"
+
+	"github.com/hieudoanm/jack/src/cmd/english/define"
 )
 
 func NewCommand() *cobra.Command {
@@ -13,7 +15,7 @@ func NewCommand() *cobra.Command {
   english define --word serendipity --json`,
 		RunE: func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
-	cmd.AddCommand(newDefineCmd())
+	cmd.AddCommand(define.NewCmd())
 	cmd.PersistentFlags().BoolP("json", "j", false, "Output in JSON format")
 	return cmd
 }

@@ -2,6 +2,7 @@ package base64
 
 import (
 	"encoding/base64"
+	"fmt"
 	"os"
 	"strings"
 
@@ -66,7 +67,7 @@ func newDecodeCmd() *cobra.Command {
 				if useJSON {
 					return internal.WriteJSON(cmd, decodeResult{Output: string(decoded)})
 				}
-				cmd.Println(string(decoded))
+				fmt.Fprintln(cmd.OutOrStdout(), string(decoded))
 			}
 			return nil
 		},

@@ -1,6 +1,8 @@
 package braille
 
 import (
+	"fmt"
+
 	"github.com/hieudoanm/jack/src/cmd/convert/internal"
 	"github.com/spf13/cobra"
 )
@@ -25,7 +27,7 @@ func NewCommand() *cobra.Command {
 			if useJSON {
 				return internal.WriteJSON(cmd, result{Text: text, Braille: b})
 			}
-			cmd.Println(b)
+			fmt.Fprintln(cmd.OutOrStdout(), b)
 			return nil
 		},
 	}

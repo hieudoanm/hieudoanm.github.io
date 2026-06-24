@@ -3,6 +3,7 @@ package count
 import (
 	"bufio"
 	"encoding/json"
+	"fmt"
 	"os"
 	"strings"
 
@@ -53,10 +54,10 @@ If no text is provided, reads from stdin.`,
 			useJSON, _ := cmd.Flags().GetBool("json")
 			if useJSON {
 				b, _ := json.MarshalIndent(result{Characters: chars, Words: words, Lines: lines}, "", "  ")
-				cmd.Println(string(b))
+				fmt.Fprintln(cmd.OutOrStdout(), string(b))
 				return nil
 			}
-			cmd.Printf("%8d %8d %8d\n", lines, words, chars)
+			fmt.Fprintf(cmd.OutOrStdout(), "%8d %8d %8d\n", lines, words, chars)
 			return nil
 		},
 	}

@@ -1,6 +1,7 @@
 package lowercase
 
 import (
+	"fmt"
 	"strings"
 
 	"github.com/hieudoanm/jack/src/cmd/convert/internal"
@@ -27,7 +28,7 @@ func NewCommand() *cobra.Command {
 			if useJSON {
 				return internal.WriteJSON(cmd, result{Text: text, Lowercase: l})
 			}
-			cmd.Println(l)
+			fmt.Fprintln(cmd.OutOrStdout(), l)
 			return nil
 		},
 	}

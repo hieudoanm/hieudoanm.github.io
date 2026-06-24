@@ -1,6 +1,7 @@
 package mcp
 
 import (
+	"github.com/hieudoanm/jack/src/cmd/mcp/serve"
 	"github.com/spf13/cobra"
 )
 
@@ -19,6 +20,6 @@ Protocol: JSON-RPC 2.0 over stdio (newline-delimited JSON)`,
 			return cmd.Help()
 		},
 	}
-	cmd.AddCommand(newServeCmd(rootCmd))
+	cmd.AddCommand(serve.NewCmd(rootCmd))
 	return cmd
 }

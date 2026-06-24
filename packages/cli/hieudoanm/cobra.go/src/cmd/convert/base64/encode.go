@@ -2,6 +2,7 @@ package base64
 
 import (
 	"encoding/base64"
+	"fmt"
 	"os"
 
 	"github.com/hieudoanm/jack/src/cmd/convert/internal"
@@ -48,7 +49,7 @@ func newEncodeCmd() *cobra.Command {
 				if useJSON {
 					return internal.WriteJSON(cmd, encodeResult{Output: encoded})
 				}
-				cmd.Println(encoded)
+				fmt.Fprintln(cmd.OutOrStdout(), encoded)
 			}
 			return nil
 		},
