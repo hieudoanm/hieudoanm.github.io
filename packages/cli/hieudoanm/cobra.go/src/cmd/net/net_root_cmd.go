@@ -25,7 +25,6 @@ func NewCommand() *cobra.Command {
 	}
 	cmd.AddCommand(
 		cert.NewCmd(),
-		ip.NewDNSSubCmd(),
 		ip.NewCmd(),
 		ping.NewCmd(),
 		serve.NewCmd(),

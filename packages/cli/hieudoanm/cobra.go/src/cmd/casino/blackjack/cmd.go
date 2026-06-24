@@ -2,6 +2,10 @@ package blackjack
 
 import (
 	"github.com/spf13/cobra"
+
+	"github.com/hieudoanm/jack/src/cmd/casino/blackjack/cheatsheet"
+	"github.com/hieudoanm/jack/src/cmd/casino/blackjack/count"
+	"github.com/hieudoanm/jack/src/cmd/casino/blackjack/play"
 )
 
 func NewCmd() *cobra.Command {
@@ -14,9 +18,9 @@ func NewCmd() *cobra.Command {
 		RunE: func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
 	cmd.AddCommand(
-		newBlackjackCheatsheetCmd(),
-		newBlackjackCountCmd(),
-		newBlackjackPlayCmd(),
+		cheatsheet.NewCmd(),
+		count.NewCmd(),
+		play.NewCmd(),
 	)
 	return cmd
 }

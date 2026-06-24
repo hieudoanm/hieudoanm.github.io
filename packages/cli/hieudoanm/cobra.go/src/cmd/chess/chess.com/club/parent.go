@@ -2,6 +2,10 @@ package club
 
 import (
 	"github.com/spf13/cobra"
+
+	"github.com/hieudoanm/jack/src/cmd/chess/chess.com/club/matches"
+	"github.com/hieudoanm/jack/src/cmd/chess/chess.com/club/members"
+	"github.com/hieudoanm/jack/src/cmd/chess/chess.com/club/profile"
 )
 
 func NewCmd() *cobra.Command {
@@ -11,8 +15,8 @@ func NewCmd() *cobra.Command {
 		Long:  `Fetch Chess.com club data: profile, members, and matches.`,
 		RunE:  func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
-	cmd.AddCommand(newProfileCmd())
-	cmd.AddCommand(newMembersCmd())
-	cmd.AddCommand(newMatchesCmd())
+	cmd.AddCommand(profile.NewCmd())
+	cmd.AddCommand(members.NewCmd())
+	cmd.AddCommand(matches.NewCmd())
 	return cmd
 }

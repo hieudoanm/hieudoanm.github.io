@@ -1,6 +1,8 @@
 package cert
 
 import (
+	"github.com/hieudoanm/jack/src/cmd/net/cert/check"
+	"github.com/hieudoanm/jack/src/cmd/net/cert/info"
 	"github.com/spf13/cobra"
 )
 
@@ -13,8 +15,7 @@ func NewCmd() *cobra.Command {
   net cert check --host google.com:443`,
 		RunE: func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
-	cmd.AddCommand(newCertInfoCmd())
-	cmd.AddCommand(newCertCheckCmd())
-	cmd.PersistentFlags().BoolVar(&certJSONOut, "json", false, "Output in JSON format")
+	cmd.AddCommand(info.NewCmd())
+	cmd.AddCommand(check.NewCmd())
 	return cmd
 }

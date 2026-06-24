@@ -1,6 +1,8 @@
 package fen
 
 import (
+	"github.com/hieudoanm/jack/src/cmd/chess/fen/eval"
+	"github.com/hieudoanm/jack/src/cmd/chess/fen/svg"
 	"github.com/spf13/cobra"
 )
 
@@ -14,8 +16,8 @@ func NewCmd() *cobra.Command {
 		RunE: func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
 
-	cmd.AddCommand(newEvalCmd())
-	cmd.AddCommand(newSvgCmd())
+	cmd.AddCommand(eval.NewCmd())
+	cmd.AddCommand(svg.NewCmd())
 	cmd.Flags().BoolP("list", "l", false, "List popular chess platforms")
 
 	return cmd

@@ -1,6 +1,8 @@
 package pgn
 
 import (
+	"github.com/hieudoanm/jack/src/cmd/chess/pgn/fen"
+	"github.com/hieudoanm/jack/src/cmd/chess/pgn/uci"
 	"github.com/spf13/cobra"
 )
 
@@ -13,7 +15,7 @@ func NewCmd() *cobra.Command {
   chess pgn uci --pgn "1.e4 e5 2.Nf3"`,
 		RunE: func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
-	cmd.AddCommand(newFenCmd())
-	cmd.AddCommand(newUciCmd())
+	cmd.AddCommand(fen.NewCmd())
+	cmd.AddCommand(uci.NewCmd())
 	return cmd
 }

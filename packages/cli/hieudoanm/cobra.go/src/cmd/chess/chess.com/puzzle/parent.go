@@ -2,6 +2,9 @@ package puzzle
 
 import (
 	"github.com/spf13/cobra"
+
+	"github.com/hieudoanm/jack/src/cmd/chess/chess.com/puzzle/daily"
+	"github.com/hieudoanm/jack/src/cmd/chess/chess.com/puzzle/random"
 )
 
 func NewCmd() *cobra.Command {
@@ -11,7 +14,7 @@ func NewCmd() *cobra.Command {
 		Long:  `Fetch the daily puzzle or a random puzzle from Chess.com.`,
 		RunE:  func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
-	cmd.AddCommand(newDailyCmd())
-	cmd.AddCommand(newRandomCmd())
+	cmd.AddCommand(daily.NewCmd())
+	cmd.AddCommand(randompuzzle.NewCmd())
 	return cmd
 }

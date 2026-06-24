@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/hieudoanm/jack/src/cmd/net/ip/dns"
 	"github.com/spf13/cobra"
 )
 
@@ -44,6 +45,6 @@ func NewCmd() *cobra.Command {
 
 	cmd.Flags().BoolVarP(&ipRawFlag, "raw", "r", false, "Output raw JSON")
 	cmd.Flags().BoolVar(&ipJSON, "json", false, "Output in JSON format")
-	cmd.AddCommand(NewDNSSubCmd())
+	cmd.AddCommand(dns.NewCmd())
 	return cmd
 }

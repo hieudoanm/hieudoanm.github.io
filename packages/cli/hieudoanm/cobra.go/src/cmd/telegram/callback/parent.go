@@ -2,6 +2,7 @@ package callback
 
 import (
 	"github.com/spf13/cobra"
+	"github.com/hieudoanm/jack/src/cmd/telegram/callback/answer"
 )
 
 func NewCmd() *cobra.Command {
@@ -10,6 +11,6 @@ func NewCmd() *cobra.Command {
 		Short: "Answer callback queries",
 		RunE:  func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
-	cmd.AddCommand(newAnswerCmd())
+		cmd.AddCommand(answer.NewCmd())
 	return cmd
 }

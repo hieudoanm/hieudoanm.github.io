@@ -1,11 +1,6 @@
 package timer
 
 import (
-	"fmt"
-	"os"
-	"os/signal"
-	"time"
-
 	"github.com/spf13/cobra"
 )
 
@@ -21,39 +16,7 @@ func NewCmd() *cobra.Command {
 		RunE: func(cmd *cobra.Command, args []string) error {
 			durationStr, _ := cmd.Flags().GetString("duration")
 			jsonOutput, _ := cmd.Flags().GetBool("json")
-
-			d, err := parseTimerDuration(durationStr)
-			if err != nil {
-				return err
-			}
-
-			sig := make(chan os.Signal, 1)
-			signal.Notify(sig, os.Interrupt)
-
-			timer := time.NewTimer(d)
-			start := time.Now()
-
-			select {
-			case <-sig:
-				timer.Stop()
-				elapsed := time.Since(start)
-				if jsonOutput {
-					fmt.Printf(`{"status":"cancelled","elapsed":"%s"}`, formatTimerDuration(elapsed))
-					fmt.Println()
-				} else {
-					fmt.Printf("\nTimer cancelled after %s\n", formatTimerDuration(elapsed))
-				}
-				return nil
-			case <-timer.C:
-				elapsed := time.Since(start)
-				if jsonOutput {
-					fmt.Printf(`{"status":"completed","duration":"%s","elapsed":"%s"}`, durationStr, formatTimerDuration(elapsed))
-					fmt.Println()
-				} else {
-					fmt.Printf("Time's up! (elapsed: %s)\n", formatTimerDuration(elapsed))
-				}
-				return nil
-			}
+			return runTimer(durationStr, jsonOutput)
 		},
 	}
 	cmd.Flags().StringP("duration", "d", "", "Duration (e.g., 30s, 5m, 2h, or bare number for seconds)")

@@ -32,7 +32,6 @@ func NewCommand() *cobra.Command {
 		env.NewCmd(),
 		path.NewCmd(),
 		disk.NewCmd(),
-		disk.NewStatsCmd(),
 		battery.NewCmd(),
 	)
 	cmd.PersistentFlags().BoolP("json", "j", false, "Output in JSON format")

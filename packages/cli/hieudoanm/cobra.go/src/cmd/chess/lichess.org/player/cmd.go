@@ -1,6 +1,10 @@
 package player
 
-import "github.com/spf13/cobra"
+import (
+	"github.com/hieudoanm/jack/src/cmd/chess/lichess.org/player/leaderboard"
+	"github.com/hieudoanm/jack/src/cmd/chess/lichess.org/player/top10"
+	"github.com/spf13/cobra"
+)
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
@@ -8,7 +12,7 @@ func NewCmd() *cobra.Command {
 		Short: "Top players and leaderboards",
 		RunE:  func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
-	cmd.AddCommand(newTop10Cmd())
-	cmd.AddCommand(newLeaderboardCmd())
+	cmd.AddCommand(top10.NewCmd())
+	cmd.AddCommand(leaderboard.NewCmd())
 	return cmd
 }

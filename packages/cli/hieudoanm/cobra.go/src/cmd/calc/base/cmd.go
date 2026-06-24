@@ -1,10 +1,6 @@
 package base
 
 import (
-	"encoding/json"
-	"fmt"
-	"strconv"
-
 	"github.com/spf13/cobra"
 )
 
@@ -23,44 +19,8 @@ Results can be output in JSON format with --json.`,
   calc base --value 255 --from dec --to hex
   calc base --value 1010 --from bin --to dec`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			base := map[string]int{
-				"bin": 2, "binary": 2,
-				"oct": 8, "octal": 8,
-				"dec": 10, "decimal": 10,
-				"hex": 16, "hexadecimal": 16,
-			}
-			fromBase, ok := base[from]
-			if !ok {
-				return fmt.Errorf("unknown base: %s (use bin/oct/dec/hex)", from)
-			}
-			toBase, ok := base[to]
-			if !ok {
-				return fmt.Errorf("unknown base: %s (use bin/oct/dec/hex)", to)
-			}
-
-			n, err := strconv.ParseInt(value, fromBase, 64)
-			if err != nil {
-				return fmt.Errorf("invalid value %q for base %s: %w", value, from, err)
-			}
-
-			result := strconv.FormatInt(n, toBase)
-			baseNames := map[int]string{2: "binary", 8: "octal", 10: "decimal", 16: "hexadecimal"}
-
-			if ok, _ := cmd.Flags().GetBool("json"); ok {
-				out, err := json.MarshalIndent(map[string]interface{}{
-					"value":  value,
-					"from":   baseNames[fromBase],
-					"to":     baseNames[toBase],
-					"result": result,
-				}, "", "  ")
-				if err != nil {
-					return err
-				}
-				fmt.Println(string(out))
-			} else {
-				fmt.Printf("%s (%s) = %s (%s)\n", value, baseNames[fromBase], result, baseNames[toBase])
-			}
-			return nil
+			jsonOutput, _ := cmd.Flags().GetBool("json")
+			return runBase(value, from, to, jsonOutput)
 		},
 	}
 

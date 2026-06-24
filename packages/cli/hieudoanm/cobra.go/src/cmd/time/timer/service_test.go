@@ -1,9 +1,70 @@
 package timer
 
 import (
+	"bytes"
+	"io"
+	"os"
+	"strings"
 	"testing"
 	"time"
 )
+
+func captureOutput(fn func()) string {
+	old := os.Stdout
+	r, w, _ := os.Pipe()
+	os.Stdout = w
+	fn()
+	w.Close()
+	var buf bytes.Buffer
+	io.Copy(&buf, r)
+	os.Stdout = old
+	return buf.String()
+}
+
+func TestRunTimer(t *testing.T) {
+	output := captureOutput(func() {
+		if err := runTimer("2s", false); err != nil {
+			t.Fatal(err)
+		}
+	})
+	if !strings.Contains(output, "Time's up!") {
+		t.Errorf("expected Time's up, got: %s", output)
+	}
+}
+
+func TestRunTimer_JSON(t *testing.T) {
+	output := captureOutput(func() {
+		if err := runTimer("2s", true); err != nil {
+			t.Fatal(err)
+		}
+	})
+	if !strings.Contains(output, "completed") {
+		t.Errorf("expected JSON completed status, got: %s", output)
+	}
+}
+
+func TestRunTimer_Cancelled(t *testing.T) {
+	go func() {
+		time.Sleep(50 * time.Millisecond)
+		p, _ := os.FindProcess(os.Getpid())
+		p.Signal(os.Interrupt)
+	}()
+	output := captureOutput(func() {
+		if err := runTimer("10s", false); err != nil {
+			t.Fatal(err)
+		}
+	})
+	if !strings.Contains(output, "Timer cancelled") {
+		t.Errorf("expected cancelled message, got: %s", output)
+	}
+}
+
+func TestRunTimer_InvalidDuration(t *testing.T) {
+	err := runTimer("invalid", false)
+	if err == nil {
+		t.Fatal("expected error for invalid duration")
+	}
+}
 
 func TestParseTimerDurationSeconds(t *testing.T) {
 	d, err := parseTimerDuration("30s")

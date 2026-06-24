@@ -1,9 +1,6 @@
 package prime
 
 import (
-	"encoding/json"
-	"fmt"
-
 	"github.com/spf13/cobra"
 )
 
@@ -19,41 +16,8 @@ func NewCmd() *cobra.Command {
   calc prime --number 100 --list
   calc prime --number 1000000 --count`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			var n int64 = int64(number)
-			if n < 2 {
-				return fmt.Errorf("number must be >= 2")
-			}
-
-			if list {
-				primes := sieve(n)
-				if ok, _ := cmd.Flags().GetBool("json"); ok {
-					b, _ := json.MarshalIndent(map[string]interface{}{
-						"limit":  n,
-						"count":  len(primes),
-						"primes": primes,
-					}, "", "  ")
-					fmt.Println(string(b))
-				} else {
-					for _, p := range primes {
-						fmt.Println(p)
-					}
-				}
-				return nil
-			}
-
-			isPrime := isPrime(n)
-			if ok, _ := cmd.Flags().GetBool("json"); ok {
-				b, _ := json.MarshalIndent(map[string]interface{}{
-					"number":   n,
-					"is_prime": isPrime,
-				}, "", "  ")
-				fmt.Println(string(b))
-			} else if isPrime {
-				fmt.Printf("%d is prime\n", n)
-			} else {
-				fmt.Printf("%d is not prime\n", n)
-			}
-			return nil
+			jsonOutput, _ := cmd.Flags().GetBool("json")
+			return runPrime(number, list, jsonOutput)
 		},
 	}
 

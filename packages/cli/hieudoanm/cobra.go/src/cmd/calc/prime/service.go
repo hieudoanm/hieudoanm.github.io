@@ -1,6 +1,10 @@
 package prime
 
-import "math"
+import (
+	"encoding/json"
+	"fmt"
+	"math"
+)
 
 func isPrime(n int64) bool {
 	if n < 2 {
@@ -19,6 +23,44 @@ func isPrime(n int64) bool {
 		}
 	}
 	return true
+}
+
+func runPrime(number int, list bool, jsonOutput bool) error {
+	var n int64 = int64(number)
+	if n < 2 {
+		return fmt.Errorf("number must be >= 2")
+	}
+
+	if list {
+		primes := sieve(n)
+		if jsonOutput {
+			b, _ := json.MarshalIndent(map[string]interface{}{
+				"limit":  n,
+				"count":  len(primes),
+				"primes": primes,
+			}, "", "  ")
+			fmt.Println(string(b))
+		} else {
+			for _, p := range primes {
+				fmt.Println(p)
+			}
+		}
+		return nil
+	}
+
+	isPrime := isPrime(n)
+	if jsonOutput {
+		b, _ := json.MarshalIndent(map[string]interface{}{
+			"number":   n,
+			"is_prime": isPrime,
+		}, "", "  ")
+		fmt.Println(string(b))
+	} else if isPrime {
+		fmt.Printf("%d is prime\n", n)
+	} else {
+		fmt.Printf("%d is not prime\n", n)
+	}
+	return nil
 }
 
 func sieve(limit int64) []int64 {

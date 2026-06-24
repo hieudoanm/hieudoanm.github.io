@@ -1,6 +1,12 @@
 package elo
 
 import (
+	"github.com/hieudoanm/jack/src/cmd/chess/elo/change"
+	"github.com/hieudoanm/jack/src/cmd/chess/elo/diff"
+	"github.com/hieudoanm/jack/src/cmd/chess/elo/expected"
+	"github.com/hieudoanm/jack/src/cmd/chess/elo/required"
+	"github.com/hieudoanm/jack/src/cmd/chess/elo/tournament"
+	"github.com/hieudoanm/jack/src/cmd/chess/elo/tpr"
 	"github.com/spf13/cobra"
 )
 
@@ -19,12 +25,12 @@ func NewCmd() *cobra.Command {
 		RunE: func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
 
-	cmd.AddCommand(newExpectedCmd())
-	cmd.AddCommand(newChangeCmd())
-	cmd.AddCommand(newTournamentCmd())
-	cmd.AddCommand(newTPRCmd())
-	cmd.AddCommand(newRequiredCmd())
-	cmd.AddCommand(newDiffCmd())
+	cmd.AddCommand(expected.NewCmd())
+	cmd.AddCommand(change.NewCmd())
+	cmd.AddCommand(tournament.NewCmd())
+	cmd.AddCommand(tpr.NewCmd())
+	cmd.AddCommand(required.NewCmd())
+	cmd.AddCommand(diff.NewCmd())
 
 	return cmd
 }

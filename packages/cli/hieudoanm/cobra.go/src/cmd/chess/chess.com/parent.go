@@ -5,10 +5,12 @@ import (
 
 	"github.com/hieudoanm/jack/src/cmd/chess/chess.com/club"
 	"github.com/hieudoanm/jack/src/cmd/chess/chess.com/country"
+	"github.com/hieudoanm/jack/src/cmd/chess/chess.com/leaderboards"
 	"github.com/hieudoanm/jack/src/cmd/chess/chess.com/match"
 	"github.com/hieudoanm/jack/src/cmd/chess/chess.com/player"
 	"github.com/hieudoanm/jack/src/cmd/chess/chess.com/puzzle"
 	"github.com/hieudoanm/jack/src/cmd/chess/chess.com/streamer"
+	"github.com/hieudoanm/jack/src/cmd/chess/chess.com/titled"
 	"github.com/hieudoanm/jack/src/cmd/chess/chess.com/tournament"
 )
 
@@ -24,8 +26,8 @@ func NewCmd() *cobra.Command {
 	}
 
 	cmd.AddCommand(player.NewCmd())
-	cmd.AddCommand(newComLeaderboardsCmd())
-	cmd.AddCommand(newComTitledCmd())
+	cmd.AddCommand(leaderboards.NewCmd())
+	cmd.AddCommand(titled.NewCmd())
 	cmd.AddCommand(club.NewCmd())
 	cmd.AddCommand(country.NewCmd())
 	cmd.AddCommand(puzzle.NewCmd())

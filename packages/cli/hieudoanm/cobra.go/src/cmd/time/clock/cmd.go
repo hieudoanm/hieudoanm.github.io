@@ -14,6 +14,6 @@ func NewCmd() *cobra.Command {
   time clock now --format "2006-01-02 15:04:05"`,
 		RunE: func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
-	cmd.AddCommand(timeNowCmd)
+	cmd.AddCommand(newTimeNowCmd())
 	return cmd
 }

@@ -1,6 +1,10 @@
 package tournament
 
-import "github.com/spf13/cobra"
+import (
+	"github.com/hieudoanm/jack/src/cmd/chess/lichess.org/tournament/info"
+	"github.com/hieudoanm/jack/src/cmd/chess/lichess.org/tournament/results"
+	"github.com/spf13/cobra"
+)
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
@@ -8,7 +12,7 @@ func NewCmd() *cobra.Command {
 		Short: "Tournament information and results",
 		RunE:  func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
-	cmd.AddCommand(newInfoCmd())
-	cmd.AddCommand(newResultsCmd())
+	cmd.AddCommand(info.NewCmd())
+	cmd.AddCommand(results.NewCmd())
 	return cmd
 }

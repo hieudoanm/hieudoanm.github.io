@@ -1,9 +1,6 @@
 package eval
 
 import (
-	"encoding/json"
-	"fmt"
-
 	"github.com/spf13/cobra"
 )
 
@@ -24,20 +21,8 @@ Use parentheses for grouping.`,
   calc eval --expression "pi * 5 ^ 2"
   calc eval --expression "sin(45) ^ 2 + cos(45) ^ 2"`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			v, err := newEvaluator(expression).eval()
-			if err != nil {
-				return fmt.Errorf("eval: %w", err)
-			}
-			if ok, _ := cmd.Flags().GetBool("json"); ok {
-				b, _ := json.MarshalIndent(map[string]interface{}{
-					"expression": expression,
-					"result":     v,
-				}, "", "  ")
-				fmt.Println(string(b))
-			} else {
-				fmt.Println(v)
-			}
-			return nil
+			jsonOutput, _ := cmd.Flags().GetBool("json")
+			return runEval(expression, jsonOutput)
 		},
 	}
 

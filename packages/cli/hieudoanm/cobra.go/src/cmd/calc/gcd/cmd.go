@@ -1,10 +1,6 @@
 package gcd
 
 import (
-	"encoding/json"
-	"fmt"
-
-	"github.com/hieudoanm/jack/src/cmd/calc/internal"
 	"github.com/spf13/cobra"
 )
 
@@ -17,18 +13,8 @@ func NewCmd() *cobra.Command {
 		Example: `  calc gcd --a 12 --b 18
   calc gcd --a 100 --b 75`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			result := internal.Gcd(int64(a), int64(b))
-			if ok, _ := cmd.Flags().GetBool("json"); ok {
-				b, _ := json.MarshalIndent(map[string]interface{}{
-					"a":   a,
-					"b":   b,
-					"gcd": result,
-				}, "", "  ")
-				fmt.Println(string(b))
-			} else {
-				fmt.Println(result)
-			}
-			return nil
+			jsonOutput, _ := cmd.Flags().GetBool("json")
+			return runGcd(a, b, jsonOutput)
 		},
 	}
 

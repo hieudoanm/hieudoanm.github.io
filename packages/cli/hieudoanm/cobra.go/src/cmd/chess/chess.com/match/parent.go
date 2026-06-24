@@ -2,6 +2,11 @@ package match
 
 import (
 	"github.com/spf13/cobra"
+
+	"github.com/hieudoanm/jack/src/cmd/chess/chess.com/match/daily"
+	"github.com/hieudoanm/jack/src/cmd/chess/chess.com/match/daily-board"
+	"github.com/hieudoanm/jack/src/cmd/chess/chess.com/match/live-board"
+	"github.com/hieudoanm/jack/src/cmd/chess/chess.com/match/live"
 )
 
 func NewCmd() *cobra.Command {
@@ -11,9 +16,9 @@ func NewCmd() *cobra.Command {
 		Long:  `Fetch Chess.com team match data: daily and live matches and boards.`,
 		RunE:  func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
-	cmd.AddCommand(newDailyCmd())
-	cmd.AddCommand(newDailyBoardCmd())
-	cmd.AddCommand(newLiveCmd())
-	cmd.AddCommand(newLiveBoardCmd())
+	cmd.AddCommand(daily.NewCmd())
+	cmd.AddCommand(dailyboard.NewCmd())
+	cmd.AddCommand(livematch.NewCmd())
+	cmd.AddCommand(liveboard.NewCmd())
 	return cmd
 }

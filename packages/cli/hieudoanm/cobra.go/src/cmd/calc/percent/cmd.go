@@ -1,9 +1,6 @@
 package percent
 
 import (
-	"encoding/json"
-	"fmt"
-
 	"github.com/spf13/cobra"
 )
 
@@ -18,59 +15,8 @@ func NewCmd() *cobra.Command {
   calc percent --value 50 --plus 20
   calc percent --value 50 --minus 20`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			switch {
-			case of != 0:
-				pct := value / of * 100
-				if ok, _ := cmd.Flags().GetBool("json"); ok {
-					out, err := json.MarshalIndent(map[string]interface{}{
-						"value":      value,
-						"of":         of,
-						"percentage": pct,
-						"type":       "percentage_of",
-					}, "", "  ")
-					if err != nil {
-						return err
-					}
-					fmt.Println(string(out))
-				} else {
-					fmt.Printf("%.2f is %.2f%% of %.2f\n", value, pct, of)
-				}
-			case plus != 0:
-				result := value * (1 + plus/100)
-				if ok, _ := cmd.Flags().GetBool("json"); ok {
-					out, err := json.MarshalIndent(map[string]interface{}{
-						"value":  value,
-						"change": plus,
-						"result": result,
-						"type":   "add_percentage",
-					}, "", "  ")
-					if err != nil {
-						return err
-					}
-					fmt.Println(string(out))
-				} else {
-					fmt.Printf("%.2f + %.2f%% = %.2f\n", value, plus, result)
-				}
-			case minus != 0:
-				result := value * (1 - minus/100)
-				if ok, _ := cmd.Flags().GetBool("json"); ok {
-					out, err := json.MarshalIndent(map[string]interface{}{
-						"value":  value,
-						"change": minus,
-						"result": result,
-						"type":   "subtract_percentage",
-					}, "", "  ")
-					if err != nil {
-						return err
-					}
-					fmt.Println(string(out))
-				} else {
-					fmt.Printf("%.2f - %.2f%% = %.2f\n", value, minus, result)
-				}
-			default:
-				return fmt.Errorf("use --of, --plus, or --minus")
-			}
-			return nil
+			jsonOutput, _ := cmd.Flags().GetBool("json")
+			return runPercent(value, of, plus, minus, jsonOutput)
 		},
 	}
 

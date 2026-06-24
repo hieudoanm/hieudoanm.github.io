@@ -1,9 +1,6 @@
 package csv
 
 import (
-	"fmt"
-
-	"github.com/hieudoanm/jack/src/cmd/data/internal"
 	"github.com/spf13/cobra"
 )
 
@@ -19,18 +16,7 @@ func NewCmd() *cobra.Command {
   cat data.csv | data csv`,
 		Args: cobra.MaximumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
-			records, err := internal.ReadCSVInput(args)
-			if err != nil {
-				return err
-			}
-
-			if jsonOut {
-				fmt.Println(internal.FormatCSVJSON(records))
-			} else {
-				fmt.Println(internal.FormatCSVText(records))
-			}
-
-			return nil
+			return runE(args, jsonOut)
 		},
 	}
 

@@ -2,6 +2,9 @@ package poker
 
 import (
 	"github.com/spf13/cobra"
+
+	"github.com/hieudoanm/jack/src/cmd/casino/poker/odds"
+	"github.com/hieudoanm/jack/src/cmd/casino/poker/play"
 )
 
 func NewCmd() *cobra.Command {
@@ -14,8 +17,8 @@ func NewCmd() *cobra.Command {
 		RunE: func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
 	cmd.AddCommand(
-		newPokerOddsCmd(),
-		newPokerPlayCmd(),
+		odds.NewCmd(),
+		play.NewCmd(),
 	)
 	return cmd
 }

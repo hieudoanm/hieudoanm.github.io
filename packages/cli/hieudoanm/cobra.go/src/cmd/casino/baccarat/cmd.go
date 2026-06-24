@@ -2,6 +2,9 @@ package baccarat
 
 import (
 	"github.com/spf13/cobra"
+
+	"github.com/hieudoanm/jack/src/cmd/casino/baccarat/play"
+	"github.com/hieudoanm/jack/src/cmd/casino/baccarat/strategy"
 )
 
 func NewCmd() *cobra.Command {
@@ -14,8 +17,8 @@ func NewCmd() *cobra.Command {
 		RunE: func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
 	cmd.AddCommand(
-		newBaccaratPlayCmd(),
-		newBaccaratStrategyCmd(),
+		play.NewCmd(),
+		strategy.NewCmd(),
 	)
 	return cmd
 }

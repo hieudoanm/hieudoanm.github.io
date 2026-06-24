@@ -102,3 +102,22 @@ func Test_defaultSnapshotPath_pdf(t *testing.T) {
 		t.Errorf("expected .pdf extension, got %s", path)
 	}
 }
+
+func Test_parseDuration(t *testing.T) {
+	tests := []struct {
+		input   string
+		wantErr bool
+	}{
+		{"500ms", false},
+		{"2s", false},
+		{"1m", false},
+		{"invalid", true},
+		{"", true},
+	}
+	for _, tt := range tests {
+		_, err := parseDuration(tt.input)
+		if (err != nil) != tt.wantErr {
+			t.Errorf("parseDuration(%q) error = %v, wantErr = %v", tt.input, err, tt.wantErr)
+		}
+	}
+}

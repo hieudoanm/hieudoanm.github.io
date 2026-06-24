@@ -13,7 +13,7 @@ func TestNewCommand(t *testing.T) {
 		t.Errorf("expected Use='net', got %q", cmd.Use)
 	}
 
-	expected := []string{"cert", "dns", "ip", "ping", "serve", "status", "wifi", "http", "whois"}
+	expected := []string{"cert", "ip", "ping", "serve", "status", "wifi", "http", "whois"}
 	got := make(map[string]*cobra.Command)
 	for _, c := range cmd.Commands() {
 		got[c.Name()] = c

@@ -2,6 +2,18 @@ package chat
 
 import (
 	"github.com/spf13/cobra"
+	"github.com/hieudoanm/jack/src/cmd/telegram/chat/action"
+	"github.com/hieudoanm/jack/src/cmd/telegram/chat/ban"
+	"github.com/hieudoanm/jack/src/cmd/telegram/chat/create_invite_link"
+	"github.com/hieudoanm/jack/src/cmd/telegram/chat/edit_invite_link"
+	"github.com/hieudoanm/jack/src/cmd/telegram/chat/export_invite_link"
+	"github.com/hieudoanm/jack/src/cmd/telegram/chat/get"
+	"github.com/hieudoanm/jack/src/cmd/telegram/chat/leave"
+	"github.com/hieudoanm/jack/src/cmd/telegram/chat/pin"
+	"github.com/hieudoanm/jack/src/cmd/telegram/chat/promote"
+	"github.com/hieudoanm/jack/src/cmd/telegram/chat/restrict"
+	"github.com/hieudoanm/jack/src/cmd/telegram/chat/revoke_invite_link"
+	"github.com/hieudoanm/jack/src/cmd/telegram/chat/unban"
 )
 
 func NewCmd() *cobra.Command {
@@ -15,17 +27,17 @@ func NewCmd() *cobra.Command {
   telegram chat export-invite-link --chat-id @channel`,
 		RunE: func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
-	cmd.AddCommand(newActionCmd())
-	cmd.AddCommand(newLeaveCmd())
-	cmd.AddCommand(newGetCmd())
-	cmd.AddCommand(newBanCmd())
-	cmd.AddCommand(newUnbanCmd())
-	cmd.AddCommand(newRestrictCmd())
-	cmd.AddCommand(newPromoteCmd())
-	cmd.AddCommand(newPinCmd())
-	cmd.AddCommand(newExportInviteLinkCmd())
-	cmd.AddCommand(newCreateInviteLinkCmd())
-	cmd.AddCommand(newEditInviteLinkCmd())
-	cmd.AddCommand(newRevokeInviteLinkCmd())
+		cmd.AddCommand(action.NewCmd())
+	cmd.AddCommand(ban.NewCmd())
+	cmd.AddCommand(create_invite_link.NewCmd())
+	cmd.AddCommand(edit_invite_link.NewCmd())
+	cmd.AddCommand(export_invite_link.NewCmd())
+	cmd.AddCommand(get.NewCmd())
+	cmd.AddCommand(leave.NewCmd())
+	cmd.AddCommand(pin.NewCmd())
+	cmd.AddCommand(promote.NewCmd())
+	cmd.AddCommand(restrict.NewCmd())
+	cmd.AddCommand(revoke_invite_link.NewCmd())
+	cmd.AddCommand(unban.NewCmd())
 	return cmd
 }

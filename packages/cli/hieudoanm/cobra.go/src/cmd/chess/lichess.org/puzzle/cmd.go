@@ -1,6 +1,10 @@
 package puzzle
 
-import "github.com/spf13/cobra"
+import (
+	"github.com/hieudoanm/jack/src/cmd/chess/lichess.org/puzzle/by_id"
+	"github.com/hieudoanm/jack/src/cmd/chess/lichess.org/puzzle/daily"
+	"github.com/spf13/cobra"
+)
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
@@ -8,7 +12,7 @@ func NewCmd() *cobra.Command {
 		Short: "Puzzle of the day and puzzle lookup",
 		RunE:  func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
-	cmd.AddCommand(newDailyCmd())
-	cmd.AddCommand(newByIDCmd())
+	cmd.AddCommand(daily.NewCmd())
+	cmd.AddCommand(by_id.NewCmd())
 	return cmd
 }

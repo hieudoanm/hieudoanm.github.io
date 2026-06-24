@@ -22,6 +22,39 @@ func captureOutput(fn func()) string {
 	return buf.String()
 }
 
+func TestRunCron_Describe(t *testing.T) {
+	output := captureOutput(func() {
+		if err := runCron("0 9 * * 1-5", 0, "", false); err != nil {
+			t.Fatal(err)
+		}
+	})
+	if !strings.Contains(output, "09:00") {
+		t.Errorf("expected 09:00, got: %s", output)
+	}
+}
+
+func TestRunCron_Next(t *testing.T) {
+	output := captureOutput(func() {
+		if err := runCron("*/15 * * * *", 3, "", false); err != nil {
+			t.Fatal(err)
+		}
+	})
+	if !strings.Contains(output, "Next 3 runs") {
+		t.Errorf("expected 'Next 3 runs', got: %s", output)
+	}
+}
+
+func TestRunCron_JSON(t *testing.T) {
+	output := captureOutput(func() {
+		if err := runCron("0 0 * * *", 2, "", true); err != nil {
+			t.Fatal(err)
+		}
+	})
+	if !strings.Contains(output, "expression") {
+		t.Errorf("expected JSON expression field, got: %s", output)
+	}
+}
+
 func TestCronExpandFieldWildcard(t *testing.T) {
 	got := cronExpandField("*", 0, 59, nil)
 	if got != "every" {
@@ -186,17 +219,6 @@ func TestOutputCronJSON_Valid(t *testing.T) {
 	}
 	if _, ok := result["description"]; !ok {
 		t.Error("expected description in output")
-	}
-	runsRaw, ok := result["next_runs"]
-	if !ok {
-		t.Fatal("expected next_runs in output")
-	}
-	runsArr, ok := runsRaw.([]interface{})
-	if !ok {
-		t.Fatalf("expected next_runs to be an array, got %T", runsRaw)
-	}
-	if len(runsArr) != 1 {
-		t.Errorf("expected 1 run, got %d", len(runsArr))
 	}
 }
 

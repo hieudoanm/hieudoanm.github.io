@@ -1,19 +1,8 @@
 package currency
 
 import (
-	"encoding/json"
-	"fmt"
-
-	"github.com/hieudoanm/jack/src/libs/requests"
 	"github.com/spf13/cobra"
 )
-
-type frankfurterResponse struct {
-	Amount float64            `json:"amount"`
-	Base   string             `json:"base"`
-	Date   string             `json:"date"`
-	Rates  map[string]float64 `json:"rates"`
-}
 
 func NewCmd() *cobra.Command {
 	var from, to string
@@ -26,40 +15,8 @@ func NewCmd() *cobra.Command {
 		Long:    `Convert amounts between world currencies using the European Central Bank's Frankfurter exchange rate API.`,
 		Example: `  calc currency --from USD --to EUR --amount 100`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			url := fmt.Sprintf("https://api.frankfurter.app/latest?base=%s&symbols=%s", from, to)
-			responseByte, err := requests.Get(url, requests.Options{})
-			if err != nil {
-				return fmt.Errorf("fetch error: %w", err)
-			}
-
-			var response frankfurterResponse
-			if err := json.Unmarshal(responseByte, &response); err != nil {
-				return fmt.Errorf("parse error: %w", err)
-			}
-
-			rate, ok := response.Rates[to]
-			if !ok {
-				return fmt.Errorf("no rate found for %s", to)
-			}
-
-			converted := amount * rate
-			if ok, _ := cmd.Flags().GetBool("json"); ok {
-				out, err := json.MarshalIndent(map[string]interface{}{
-					"from":   from,
-					"to":     to,
-					"amount": amount,
-					"rate":   rate,
-					"result": converted,
-					"date":   response.Date,
-				}, "", "  ")
-				if err != nil {
-					return err
-				}
-				fmt.Println(string(out))
-			} else {
-				fmt.Printf("%.2f %s = %.2f %s (rate: %f)\n", amount, from, converted, to, rate)
-			}
-			return nil
+			jsonOutput, _ := cmd.Flags().GetBool("json")
+			return runCurrency(from, to, amount, jsonOutput)
 		},
 	}
 

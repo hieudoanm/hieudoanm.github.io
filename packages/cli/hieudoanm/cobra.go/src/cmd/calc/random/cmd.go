@@ -1,10 +1,6 @@
 package random
 
 import (
-	"encoding/json"
-	"fmt"
-	"math/rand/v2"
-
 	"github.com/spf13/cobra"
 )
 
@@ -20,29 +16,8 @@ func NewCmd() *cobra.Command {
   calc random --min 1 --max 100 --count 5
   calc random --min 0 --max 1 --float --count 3`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			if count < 1 {
-				count = 1
-			}
-
-			nums := make([]float64, count)
-			for i := range count {
-				nums[i] = min + rand.Float64()*(max-min)
-			}
-
-			if ok, _ := cmd.Flags().GetBool("json"); ok {
-				b, _ := json.MarshalIndent(map[string]interface{}{
-					"min":    min,
-					"max":    max,
-					"count":  count,
-					"values": nums,
-				}, "", "  ")
-				fmt.Println(string(b))
-			} else {
-				for _, v := range nums {
-					fmt.Println(v)
-				}
-			}
-			return nil
+			jsonOutput, _ := cmd.Flags().GetBool("json")
+			return runRandom(min, max, count, jsonOutput)
 		},
 	}
 

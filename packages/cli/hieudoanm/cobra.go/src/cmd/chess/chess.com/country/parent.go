@@ -2,6 +2,10 @@ package country
 
 import (
 	"github.com/spf13/cobra"
+
+	"github.com/hieudoanm/jack/src/cmd/chess/chess.com/country/clubs"
+	"github.com/hieudoanm/jack/src/cmd/chess/chess.com/country/players"
+	"github.com/hieudoanm/jack/src/cmd/chess/chess.com/country/profile"
 )
 
 func NewCmd() *cobra.Command {
@@ -11,8 +15,8 @@ func NewCmd() *cobra.Command {
 		Long:  `Fetch Chess.com country data: profile, players, and clubs.`,
 		RunE:  func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
-	cmd.AddCommand(newProfileCmd())
-	cmd.AddCommand(newPlayersCmd())
-	cmd.AddCommand(newClubsCmd())
+	cmd.AddCommand(profile.NewCmd())
+	cmd.AddCommand(players.NewCmd())
+	cmd.AddCommand(clubs.NewCmd())
 	return cmd
 }

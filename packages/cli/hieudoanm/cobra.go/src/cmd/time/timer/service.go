@@ -2,10 +2,47 @@ package timer
 
 import (
 	"fmt"
+	"os"
+	"os/signal"
 	"strconv"
 	"strings"
 	"time"
 )
+
+func runTimer(durationStr string, jsonOutput bool) error {
+	d, err := parseTimerDuration(durationStr)
+	if err != nil {
+		return err
+	}
+
+	sig := make(chan os.Signal, 1)
+	signal.Notify(sig, os.Interrupt)
+
+	timer := time.NewTimer(d)
+	start := time.Now()
+
+	select {
+	case <-sig:
+		timer.Stop()
+		elapsed := time.Since(start)
+		if jsonOutput {
+			fmt.Printf(`{"status":"cancelled","elapsed":"%s"}`, formatTimerDuration(elapsed))
+			fmt.Println()
+		} else {
+			fmt.Printf("\nTimer cancelled after %s\n", formatTimerDuration(elapsed))
+		}
+		return nil
+	case <-timer.C:
+		elapsed := time.Since(start)
+		if jsonOutput {
+			fmt.Printf(`{"status":"completed","duration":"%s","elapsed":"%s"}`, durationStr, formatTimerDuration(elapsed))
+			fmt.Println()
+		} else {
+			fmt.Printf("Time's up! (elapsed: %s)\n", formatTimerDuration(elapsed))
+		}
+		return nil
+	}
+}
 
 func parseTimerDuration(s string) (time.Duration, error) {
 	if s == "" {

@@ -7,6 +7,7 @@ import (
 	"crypto/rand"
 	"crypto/rsa"
 	"crypto/x509"
+	"encoding/json"
 	"encoding/pem"
 	"fmt"
 	"io"
@@ -15,6 +16,38 @@ import (
 )
 
 var KeygenReader io.Reader = rand.Reader
+
+func runKeygen(algorithm string, bits int, output string, jsonOutput bool) error {
+	switch algorithm {
+	case "rsa":
+		if err := GenRSA(bits, output); err != nil {
+			return err
+		}
+	case "ecdsa":
+		if err := GenECDSA(bits, output); err != nil {
+			return err
+		}
+	case "ed25519":
+		if err := GenEd25519(output); err != nil {
+			return err
+		}
+	default:
+		return fmt.Errorf("unsupported algorithm: %s (use rsa, ecdsa, or ed25519)", algorithm)
+	}
+
+	if jsonOutput {
+		abs, _ := filepath.Abs(output)
+		b, _ := json.MarshalIndent(map[string]interface{}{
+			"algorithm":   algorithm,
+			"bits":        bits,
+			"private_key": abs,
+			"public_key":  abs + ".pub",
+		}, "", "  ")
+		fmt.Println(string(b))
+	}
+
+	return nil
+}
 
 func GenRSA(bits int, path string) error {
 	if bits != 2048 && bits != 4096 {

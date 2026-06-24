@@ -4,8 +4,10 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/hieudoanm/jack/src/cmd/telegram/message"
-	"github.com/hieudoanm/jack/src/cmd/telegram/webhook"
+	"github.com/hieudoanm/jack/src/cmd/telegram/message/send"
+	webhookDelete "github.com/hieudoanm/jack/src/cmd/telegram/webhook/delete"
+	"github.com/hieudoanm/jack/src/cmd/telegram/webhook/info"
+	"github.com/hieudoanm/jack/src/cmd/telegram/webhook/set"
 	"github.com/spf13/cobra"
 )
 
@@ -43,7 +45,7 @@ func contains(slice []string, s string) bool {
 
 func TestSendResponseUnmarshal(t *testing.T) {
 	data := `{"ok": true}`
-	var resp message.SendResponse
+	var resp send.SendResponse
 	if err := json.Unmarshal([]byte(data), &resp); err != nil {
 		t.Fatalf("unexpected error: %v", err)
 	}
@@ -54,7 +56,7 @@ func TestSendResponseUnmarshal(t *testing.T) {
 
 func TestSendResponseUnmarshalFalse(t *testing.T) {
 	data := `{"ok": false}`
-	var resp message.SendResponse
+	var resp send.SendResponse
 	if err := json.Unmarshal([]byte(data), &resp); err != nil {
 		t.Fatalf("unexpected error: %v", err)
 	}
@@ -65,7 +67,7 @@ func TestSendResponseUnmarshalFalse(t *testing.T) {
 
 func TestSetResponseUnmarshal(t *testing.T) {
 	data := `{"ok": true}`
-	var resp webhook.SetResponse
+	var resp set.SetResponse
 	if err := json.Unmarshal([]byte(data), &resp); err != nil {
 		t.Fatalf("unexpected error: %v", err)
 	}
@@ -76,7 +78,7 @@ func TestSetResponseUnmarshal(t *testing.T) {
 
 func TestDeleteResponseUnmarshal(t *testing.T) {
 	data := `{"ok": true}`
-	var resp webhook.DeleteResponse
+	var resp webhookDelete.DeleteResponse
 	if err := json.Unmarshal([]byte(data), &resp); err != nil {
 		t.Fatalf("unexpected error: %v", err)
 	}
@@ -87,7 +89,7 @@ func TestDeleteResponseUnmarshal(t *testing.T) {
 
 func TestGetInfoResponseUnmarshal(t *testing.T) {
 	data := `{"ok": true, "result": {"url": "https://example.com"}}`
-	var resp webhook.GetInfoResponse
+	var resp info.GetInfoResponse
 	if err := json.Unmarshal([]byte(data), &resp); err != nil {
 		t.Fatalf("unexpected error: %v", err)
 	}
@@ -98,7 +100,7 @@ func TestGetInfoResponseUnmarshal(t *testing.T) {
 
 func TestGetInfoResponseUnmarshalFalse(t *testing.T) {
 	data := `{"ok": false}`
-	var resp webhook.GetInfoResponse
+	var resp info.GetInfoResponse
 	if err := json.Unmarshal([]byte(data), &resp); err != nil {
 		t.Fatalf("unexpected error: %v", err)
 	}
@@ -109,7 +111,7 @@ func TestGetInfoResponseUnmarshalFalse(t *testing.T) {
 
 func TestSendResponseUnmarshalEmpty(t *testing.T) {
 	data := `{}`
-	var resp message.SendResponse
+	var resp send.SendResponse
 	if err := json.Unmarshal([]byte(data), &resp); err != nil {
 		t.Fatalf("unexpected error: %v", err)
 	}

@@ -6,6 +6,24 @@ import (
 	"time"
 )
 
+func runCron(expression string, next int, until string, cronJSON bool) error {
+	untilTime, err := parseUntil(until)
+	if err != nil {
+		return err
+	}
+
+	var runs []*time.Time
+	if next > 0 {
+		runs = cronNextRuns(expression, next, untilTime)
+	}
+
+	if cronJSON {
+		return outputCronJSON(expression, runs)
+	}
+	outputCronText(expression, runs)
+	return nil
+}
+
 func parseUntil(until string) (time.Time, error) {
 	if until == "" {
 		return time.Date(2100, 1, 1, 0, 0, 0, 0, time.Local), nil

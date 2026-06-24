@@ -2,6 +2,9 @@ package webhook
 
 import (
 	"github.com/spf13/cobra"
+	"github.com/hieudoanm/jack/src/cmd/telegram/webhook/delete"
+	"github.com/hieudoanm/jack/src/cmd/telegram/webhook/info"
+	"github.com/hieudoanm/jack/src/cmd/telegram/webhook/set"
 )
 
 func NewCmd() *cobra.Command {
@@ -14,8 +17,8 @@ func NewCmd() *cobra.Command {
   telegram webhook delete`,
 		RunE: func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
-	cmd.AddCommand(newSetCmd())
-	cmd.AddCommand(newInfoCmd())
-	cmd.AddCommand(newDeleteCmd())
+		cmd.AddCommand(delete.NewCmd())
+	cmd.AddCommand(info.NewCmd())
+	cmd.AddCommand(set.NewCmd())
 	return cmd
 }

@@ -1,10 +1,6 @@
 package lcm
 
 import (
-	"encoding/json"
-	"fmt"
-
-	"github.com/hieudoanm/jack/src/cmd/calc/internal"
 	"github.com/spf13/cobra"
 )
 
@@ -19,19 +15,8 @@ LCM(a, b) = |a * b| / GCD(a, b)`,
 		Example: `  calc lcm --a 12 --b 18
   calc lcm --a 7 --b 5`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			ai, bi := int64(a), int64(b)
-			result := ai / internal.Gcd(ai, bi) * bi
-			if ok, _ := cmd.Flags().GetBool("json"); ok {
-				b, _ := json.MarshalIndent(map[string]interface{}{
-					"a":   a,
-					"b":   b,
-					"lcm": result,
-				}, "", "  ")
-				fmt.Println(string(b))
-			} else {
-				fmt.Println(result)
-			}
-			return nil
+			jsonOutput, _ := cmd.Flags().GetBool("json")
+			return runLcm(a, b, jsonOutput)
 		},
 	}
 

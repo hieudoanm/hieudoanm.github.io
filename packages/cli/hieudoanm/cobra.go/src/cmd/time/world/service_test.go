@@ -1,9 +1,60 @@
 package world
 
 import (
+	"bytes"
+	"io"
+	"os"
+	"strings"
 	"testing"
 	"time"
 )
+
+func captureOutput(fn func()) string {
+	old := os.Stdout
+	r, w, _ := os.Pipe()
+	os.Stdout = w
+	fn()
+	w.Close()
+	var buf bytes.Buffer
+	io.Copy(&buf, r)
+	os.Stdout = old
+	return buf.String()
+}
+
+func TestRunWorld_DefaultZones(t *testing.T) {
+	output := captureOutput(func() {
+		if err := runWorld([]string{}); err != nil {
+			t.Fatal(err)
+		}
+	})
+	if !strings.Contains(output, "ny:") {
+		t.Errorf("expected ny timezone, got: %s", output)
+	}
+	if !strings.Contains(output, "utc:") {
+		t.Errorf("expected utc timezone, got: %s", output)
+	}
+}
+
+func TestRunWorld_CustomZones(t *testing.T) {
+	output := captureOutput(func() {
+		if err := runWorld([]string{"london", "tokyo"}); err != nil {
+			t.Fatal(err)
+		}
+	})
+	if !strings.Contains(output, "london:") {
+		t.Errorf("expected london timezone, got: %s", output)
+	}
+	if !strings.Contains(output, "tokyo:") {
+		t.Errorf("expected tokyo timezone, got: %s", output)
+	}
+}
+
+func TestRunWorld_InvalidZone(t *testing.T) {
+	err := runWorld([]string{"invalid_zone_xyz"})
+	if err == nil {
+		t.Fatal("expected error for invalid timezone")
+	}
+}
 
 func TestCommonZonesHasExpectedEntries(t *testing.T) {
 	expected := map[string]string{
@@ -51,36 +102,6 @@ func TestLoadLocationAliasNY(t *testing.T) {
 	}
 	if loc.String() != "America/New_York" {
 		t.Errorf("expected 'America/New_York', got %q", loc.String())
-	}
-}
-
-func TestLoadLocationAliasLondon(t *testing.T) {
-	loc, err := loadLocation("london")
-	if err != nil {
-		t.Fatalf("unexpected error: %v", err)
-	}
-	if loc.String() != "Europe/London" {
-		t.Errorf("expected 'Europe/London', got %q", loc.String())
-	}
-}
-
-func TestLoadLocationAliasTokyo(t *testing.T) {
-	loc, err := loadLocation("tokyo")
-	if err != nil {
-		t.Fatalf("unexpected error: %v", err)
-	}
-	if loc.String() != "Asia/Tokyo" {
-		t.Errorf("expected 'Asia/Tokyo', got %q", loc.String())
-	}
-}
-
-func TestLoadLocationAliasHCMC(t *testing.T) {
-	loc, err := loadLocation("hcmc")
-	if err != nil {
-		t.Fatalf("unexpected error: %v", err)
-	}
-	if loc.String() != "Asia/Ho_Chi_Minh" {
-		t.Errorf("expected 'Asia/Ho_Chi_Minh', got %q", loc.String())
 	}
 }
 

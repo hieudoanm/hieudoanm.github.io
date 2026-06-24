@@ -1,25 +1,8 @@
 package scan
 
 import (
-	"fmt"
-	"os"
-	"path/filepath"
-	"strings"
-
-	"github.com/hieudoanm/jack/src/cmd/docsify/internal"
 	"github.com/spf13/cobra"
 )
-
-func parseExcludeList(s string) map[string]bool {
-	m := make(map[string]bool)
-	for _, part := range strings.Split(s, ",") {
-		part = strings.TrimSpace(part)
-		if part != "" {
-			m[part] = true
-		}
-	}
-	return m
-}
 
 func NewCmd() *cobra.Command {
 	var (
@@ -36,52 +19,7 @@ func NewCmd() *cobra.Command {
 		Example: `  docsify scan --dir . --out graph.graphml
   docsify scan --dir /path/to/project --verbose`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			absDir, err := filepath.Abs(dir)
-			if err != nil {
-				return fmt.Errorf("error resolving directory: %w", err)
-			}
-
-			excludeSet := parseExcludeList(exclude)
-
-			if verbose {
-				fmt.Fprintf(os.Stderr, "scanning %s\n", absDir)
-			}
-
-			files, err := internal.Walk(absDir, excludeSet)
-			if err != nil {
-				return fmt.Errorf("walk error: %w", err)
-			}
-
-			if verbose {
-				fmt.Fprintf(os.Stderr, "found %d source files\n", len(files))
-			}
-
-			graph := internal.NewGraph()
-
-			for _, f := range files {
-				if verbose {
-					fmt.Fprintf(os.Stderr, "  extracting: %s\n", f.RelPath)
-				}
-
-				info, err := internal.Extract(f)
-				if err != nil {
-					fmt.Fprintf(os.Stderr, "  warning: skipping %s: %v\n", f.RelPath, err)
-					continue
-				}
-
-				graph.AddFile(info)
-			}
-
-			graph.ResolveCallEdges()
-
-			if err := internal.Write(graph, out); err != nil {
-				return fmt.Errorf("write error: %w", err)
-			}
-
-			fmt.Printf("graph written to %s\n", out)
-			fmt.Printf("  nodes: %d  edges: %d\n", graph.NodeCount(), graph.EdgeCount())
-
-			return nil
+			return runScan(dir, out, exclude, verbose)
 		},
 	}
 

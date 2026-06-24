@@ -1,10 +1,6 @@
 package fetch
 
 import (
-	"encoding/json"
-	"fmt"
-
-	"github.com/hieudoanm/jack/src/cmd/doi/internal"
 	"github.com/spf13/cobra"
 )
 
@@ -17,17 +13,7 @@ func NewCmd() *cobra.Command {
   doi fetch 10.1038/nature12373`,
 		Args: cobra.MaximumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
-			id, err := internal.ResolveDOI(args)
-			if err != nil {
-				return err
-			}
-			data, err := internal.FetchCrossref(id)
-			if err != nil {
-				return err
-			}
-			b, _ := json.MarshalIndent(data, "", "  ")
-			fmt.Println(string(b))
-			return nil
+			return runFetch(cmd, args)
 		},
 	}
 }

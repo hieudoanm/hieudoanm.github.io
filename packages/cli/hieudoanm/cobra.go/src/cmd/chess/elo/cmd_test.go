@@ -34,7 +34,3 @@ func TestCommands_Use(t *testing.T) {
 		}
 	}
 }
-
-func ptr(f float64) *float64 {
-	return &f
-}

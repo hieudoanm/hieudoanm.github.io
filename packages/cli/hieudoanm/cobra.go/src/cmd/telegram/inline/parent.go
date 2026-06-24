@@ -2,6 +2,7 @@ package inline
 
 import (
 	"github.com/spf13/cobra"
+	"github.com/hieudoanm/jack/src/cmd/telegram/inline/answer"
 )
 
 func NewCmd() *cobra.Command {
@@ -10,6 +11,6 @@ func NewCmd() *cobra.Command {
 		Short: "Answer inline queries",
 		RunE:  func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
-	cmd.AddCommand(newAnswerCmd())
+		cmd.AddCommand(answer.NewCmd())
 	return cmd
 }

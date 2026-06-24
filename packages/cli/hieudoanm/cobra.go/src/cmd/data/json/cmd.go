@@ -1,9 +1,6 @@
 package json
 
 import (
-	"fmt"
-
-	"github.com/hieudoanm/jack/src/cmd/data/internal"
 	"github.com/spf13/cobra"
 )
 
@@ -20,37 +17,7 @@ func NewCmd() *cobra.Command {
   data json --merge base.json patch.json`,
 		Args: cobra.MaximumNArgs(2),
 		RunE: func(cmd *cobra.Command, args []string) error {
-			if diff != "" {
-				return internal.JSONDiff(args[0], diff)
-			}
-			if merge != "" {
-				return internal.JSONMerge(args[0], merge)
-			}
-
-			input, err := internal.ReadInput(args)
-			if err != nil {
-				return err
-			}
-
-			if query != "" {
-				data, err := internal.ParseJSON(input)
-				if err != nil {
-					return err
-				}
-				result, err := internal.JSONQuery(data, query)
-				if err != nil {
-					return err
-				}
-				fmt.Println(internal.OutputJSON(result))
-				return nil
-			}
-
-			data, err := internal.ParseJSON(input)
-			if err != nil {
-				return err
-			}
-			fmt.Println(internal.OutputJSON(data))
-			return nil
+			return runE(args, query, diff, merge)
 		},
 	}
 

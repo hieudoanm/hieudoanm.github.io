@@ -8,6 +8,7 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/shirou/gopsutil/v4/disk"
 
+	"github.com/hieudoanm/jack/src/cmd/system/disk/stats"
 	"github.com/hieudoanm/jack/src/libs/theme"
 )
 
@@ -87,6 +88,7 @@ func NewCmd() *cobra.Command {
 	cmd.Flags().BoolVarP(&showJSON, "json", "j", false, "Output in JSON format")
 	cmd.Flags().StringVarP(&filter, "filter", "f", "", "Filter by mount point or device")
 	cmd.Flags().BoolVarP(&sortBySize, "sort", "s", false, "Sort by usage percent")
+	cmd.AddCommand(stats.NewCmd())
 	return cmd
 }
 

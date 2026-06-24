@@ -7,6 +7,65 @@ import (
 	"time"
 )
 
+func runEpoch(args []string, fromDate, relative, format string, iso, unix, epochJSON bool) error {
+	if fromDate != "" {
+		t, err := parseEpochDateString(fromDate)
+		if err != nil {
+			return fmt.Errorf("invalid date: %w", err)
+		}
+		if epochJSON {
+			printEpochJSON(t.Unix(), t.Format(time.RFC3339))
+			return nil
+		}
+		fmt.Println(t.Unix())
+		return nil
+	}
+	if relative != "" {
+		t, err := parseEpochRelative(relative)
+		if err != nil {
+			return fmt.Errorf("invalid relative time: %w", err)
+		}
+		if epochJSON {
+			printEpochJSON(t.Unix(), t.Format(time.RFC3339))
+			return nil
+		}
+		fmt.Println(t.Unix())
+		return nil
+	}
+	if len(args) > 0 {
+		ts, err := strconv.ParseInt(args[0], 10, 64)
+		if err != nil {
+			return fmt.Errorf("invalid timestamp: %s", args[0])
+		}
+		t := time.Unix(ts, 0)
+		if epochJSON {
+			printEpochJSON(ts, t.Format(time.RFC3339))
+			return nil
+		}
+		if unix {
+			fmt.Println(ts)
+			return nil
+		}
+		if iso {
+			fmt.Println(t.Format(time.RFC3339))
+			return nil
+		}
+		if format != "" {
+			fmt.Println(t.Format(format))
+			return nil
+		}
+		fmt.Println(t.Format(time.RFC1123))
+		return nil
+	}
+	now := time.Now()
+	if epochJSON {
+		printEpochJSON(now.Unix(), now.Format(time.RFC3339))
+		return nil
+	}
+	fmt.Println(now.Unix())
+	return nil
+}
+
 func parseEpochDateString(s string) (time.Time, error) {
 	layouts := []string{
 		time.RFC3339,
@@ -31,7 +90,6 @@ func parseEpochRelative(s string) (time.Time, error) {
 		return time.Time{}, fmt.Errorf("invalid relative time: %s", s)
 	}
 
-	// e.g., "2 hours ago" or "+3 days"
 	sign := 1
 	offset := parts[0]
 	if offset[0] == '+' {

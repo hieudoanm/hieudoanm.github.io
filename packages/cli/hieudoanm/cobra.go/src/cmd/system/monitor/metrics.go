@@ -1,9 +1,12 @@
 package monitor
 
 import (
+	"encoding/json"
+	"fmt"
 	"math"
 	"sort"
 	"strings"
+	"time"
 
 	"github.com/shirou/gopsutil/v4/cpu"
 	"github.com/shirou/gopsutil/v4/disk"
@@ -14,6 +17,8 @@ import (
 
 	"github.com/hieudoanm/jack/src/libs/theme"
 )
+
+var jsonOutput bool
 
 const sparkChars = "▁▂▃▄▅▆▇█"
 
@@ -117,6 +122,37 @@ func Sparkline(data []float64, width int) string {
 	}
 
 	return strings.Repeat(" ", width-len(data)) + sb.String()
+}
+
+func monitorJSON() error {
+	m, err := GatherMetrics()
+	if err != nil {
+		return err
+	}
+	type procInfo struct {
+		PID   int32   `json:"pid"`
+		Name  string  `json:"name"`
+		CPU   float64 `json:"cpu_percent"`
+		MemMB uint64  `json:"mem_mb"`
+	}
+	procs := make([]procInfo, len(m.TopProcs))
+	for i, p := range m.TopProcs {
+		procs[i] = procInfo{PID: p.PID, Name: p.Name, CPU: p.CPU, MemMB: p.MemMB}
+	}
+	uptime := time.Duration(m.Uptime) * time.Second
+	out, err := json.MarshalIndent(map[string]interface{}{
+		"cpu_percent":   m.CPUTotal,
+		"ram_percent":   m.RAMPct,
+		"ram_used_gb":   m.RAMUsedGB,
+		"ram_total_gb":  m.RAMTotalGB,
+		"uptime":        uptime.String(),
+		"top_processes": procs,
+	}, "", "  ")
+	if err != nil {
+		return err
+	}
+	fmt.Println(string(out))
+	return nil
 }
 
 func Bar(pct float64, width int) string {

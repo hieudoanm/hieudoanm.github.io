@@ -1,6 +1,9 @@
 package location
 
-import "github.com/spf13/cobra"
+import (
+	"github.com/spf13/cobra"
+	"github.com/hieudoanm/jack/src/cmd/telegram/location/send"
+)
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
@@ -10,6 +13,6 @@ func NewCmd() *cobra.Command {
 			return cmd.Help()
 		},
 	}
-	cmd.AddCommand(newSendCmd())
+		cmd.AddCommand(send.NewCmd())
 	return cmd
 }

@@ -2,6 +2,10 @@ package tournament
 
 import (
 	"github.com/spf13/cobra"
+
+	"github.com/hieudoanm/jack/src/cmd/chess/chess.com/tournament/group"
+	"github.com/hieudoanm/jack/src/cmd/chess/chess.com/tournament/info"
+	"github.com/hieudoanm/jack/src/cmd/chess/chess.com/tournament/round"
 )
 
 func NewCmd() *cobra.Command {
@@ -11,8 +15,8 @@ func NewCmd() *cobra.Command {
 		Long:  `Fetch Chess.com tournament data: info, rounds, and groups.`,
 		RunE:  func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
-	cmd.AddCommand(newInfoCmd())
-	cmd.AddCommand(newRoundCmd())
-	cmd.AddCommand(newGroupCmd())
+	cmd.AddCommand(info.NewCmd())
+	cmd.AddCommand(round.NewCmd())
+	cmd.AddCommand(group.NewCmd())
 	return cmd
 }

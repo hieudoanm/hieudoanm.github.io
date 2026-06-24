@@ -1,11 +1,189 @@
 package epoch
 
 import (
+	"bytes"
 	"encoding/json"
+	"io"
+	"os"
+	"strconv"
 	"strings"
 	"testing"
 	"time"
 )
+
+func captureOutput(fn func()) string {
+	old := os.Stdout
+	r, w, _ := os.Pipe()
+	os.Stdout = w
+	fn()
+	w.Close()
+	var buf bytes.Buffer
+	io.Copy(&buf, r)
+	os.Stdout = old
+	return buf.String()
+}
+
+func TestRunEpoch_FromDateJSON(t *testing.T) {
+	output := captureOutput(func() {
+		if err := runEpoch([]string{}, "2024-06-11", "", "", false, false, true); err != nil {
+			t.Fatal(err)
+		}
+	})
+	var result map[string]interface{}
+	if err := json.Unmarshal([]byte(output), &result); err != nil {
+		t.Fatalf("invalid JSON: %v\noutput: %s", err, output)
+	}
+	if _, ok := result["epoch"]; !ok {
+		t.Error("expected epoch field")
+	}
+	if _, ok := result["rfc3339"]; !ok {
+		t.Error("expected rfc3339 field")
+	}
+}
+
+func TestRunEpoch_FromDateNumeric(t *testing.T) {
+	output := captureOutput(func() {
+		if err := runEpoch([]string{}, "2024-06-11", "", "", false, false, false); err != nil {
+			t.Fatal(err)
+		}
+	})
+	n, err := strconv.ParseInt(strings.TrimSpace(output), 10, 64)
+	if err != nil {
+		t.Errorf("expected numeric output, got %q: %v", output, err)
+	}
+	if n <= 0 {
+		t.Errorf("expected positive epoch, got %d", n)
+	}
+}
+
+func TestRunEpoch_RelativeJSON(t *testing.T) {
+	output := captureOutput(func() {
+		if err := runEpoch([]string{}, "", "2 hours ago", "", false, false, true); err != nil {
+			t.Fatal(err)
+		}
+	})
+	var result map[string]interface{}
+	if err := json.Unmarshal([]byte(output), &result); err != nil {
+		t.Fatalf("invalid JSON: %v\noutput: %s", err, output)
+	}
+	if _, ok := result["epoch"]; !ok {
+		t.Error("expected epoch field")
+	}
+	if _, ok := result["rfc3339"]; !ok {
+		t.Error("expected rfc3339 field")
+	}
+}
+
+func TestRunEpoch_ISOOutput(t *testing.T) {
+	output := captureOutput(func() {
+		if err := runEpoch([]string{"1718100000"}, "", "", "", true, false, false); err != nil {
+			t.Fatal(err)
+		}
+	})
+	if !strings.Contains(output, "2024") {
+		t.Errorf("expected year 2024 in output, got: %s", output)
+	}
+	if !strings.Contains(output, "T") {
+		t.Errorf("expected ISO 8601 format (with T), got: %s", output)
+	}
+}
+
+func TestRunEpoch_NoArgs(t *testing.T) {
+	output := captureOutput(func() {
+		if err := runEpoch([]string{}, "", "", "", false, false, false); err != nil {
+			t.Fatal(err)
+		}
+	})
+	if output == "" {
+		t.Error("expected non-empty output for current time")
+	}
+}
+
+func TestRunEpoch_InvalidArg(t *testing.T) {
+	err := runEpoch([]string{"not-a-timestamp"}, "", "", "", false, false, false)
+	if err == nil {
+		t.Fatal("expected error for invalid timestamp")
+	}
+}
+
+func TestRunEpoch_UnixFlag(t *testing.T) {
+	output := captureOutput(func() {
+		if err := runEpoch([]string{"1718100000"}, "", "", "", false, true, false); err != nil {
+			t.Fatal(err)
+		}
+	})
+	if !strings.Contains(output, "1718100000") {
+		t.Errorf("expected 1718100000 in output, got: %s", output)
+	}
+}
+
+func TestRunEpoch_KnownTimestamp(t *testing.T) {
+	output := captureOutput(func() {
+		if err := runEpoch([]string{"1718100000"}, "", "", "", false, false, false); err != nil {
+			t.Fatal(err)
+		}
+	})
+	if !strings.Contains(output, "2024") {
+		t.Errorf("expected year 2024 in output, got: %s", output)
+	}
+	if !strings.Contains(output, "06") && !strings.Contains(output, "Jun") {
+		t.Errorf("expected June in output, got: %s", output)
+	}
+	if !strings.Contains(output, "11") {
+		t.Errorf("expected day 11 in output, got: %s", output)
+	}
+}
+
+func TestRunEpoch_JSONOutput(t *testing.T) {
+	output := captureOutput(func() {
+		if err := runEpoch([]string{"1718100000"}, "", "", "", false, false, true); err != nil {
+			t.Fatal(err)
+		}
+	})
+	var result map[string]interface{}
+	if err := json.Unmarshal([]byte(output), &result); err != nil {
+		t.Fatalf("invalid JSON output: %v\noutput: %s", err, output)
+	}
+	if result["epoch"] != float64(1718100000) {
+		t.Errorf("expected epoch 1718100000, got %v", result["epoch"])
+	}
+	rfc3339, ok := result["rfc3339"].(string)
+	if !ok {
+		t.Fatalf("expected rfc3339 to be a string, got %T", result["rfc3339"])
+	}
+	if !strings.Contains(rfc3339, "2024") {
+		t.Errorf("expected rfc3339 to contain 2024, got %s", rfc3339)
+	}
+}
+
+func TestRunEpoch_FormatFlag(t *testing.T) {
+	output := captureOutput(func() {
+		if err := runEpoch([]string{"1718100000"}, "", "", "2006-01-02", false, false, false); err != nil {
+			t.Fatal(err)
+		}
+	})
+	if !strings.Contains(output, "2024-06-11") {
+		t.Errorf("expected formatted date 2024-06-11, got: %s", output)
+	}
+}
+
+func TestRunEpoch_NoArgsJSON(t *testing.T) {
+	output := captureOutput(func() {
+		if err := runEpoch([]string{}, "", "", "", false, false, true); err != nil {
+			t.Fatal(err)
+		}
+	})
+	var result map[string]interface{}
+	if err := json.Unmarshal([]byte(output), &result); err != nil {
+		t.Fatalf("invalid JSON: %v\noutput: %s", err, output)
+	}
+	if _, ok := result["epoch"]; !ok {
+		t.Error("expected epoch field")
+	}
+	if _, ok := result["rfc3339"]; !ok {
+		t.Error("expected rfc3339 field")
+	}
+}
 
 func TestParseEpochDateStringRFC3339(t *testing.T) {
 	tm, err := parseEpochDateString("2024-06-11T15:04:05Z")
