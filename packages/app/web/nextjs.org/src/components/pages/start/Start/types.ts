@@ -71,6 +71,7 @@ export type ModalId =
   | 'youtube-thumbnails'
   | 'resume-timeline'
   | 'split-bill'
-  | 'days-count';
+  | 'days-count'
+  | 'graph';
 
 export type SidebarTab = 'tasks' | 'clock';

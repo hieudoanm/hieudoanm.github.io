@@ -1,4 +1,4 @@
-import { Attractors } from '@hieudoanm.github.io/components/pages/attractors';
+import { Attractors } from '@hieudoanm.github.io/components/pages/app/attractors';
 import { NextPage } from 'next';
 
 const AttractorsPage: NextPage = () => {

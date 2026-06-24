@@ -511,3 +511,10 @@ export const ResumeTimelineModal = dynamic(
     ),
   { ssr: false }
 );
+export const GraphModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/visualization/GraphModal').then(
+      (mod) => mod.GraphModal
+    ),
+  { ssr: false }
+);

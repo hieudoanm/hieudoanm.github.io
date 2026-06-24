@@ -23,6 +23,7 @@ import {
   FlashcardsModal,
   Game2048Modal,
   GitHubSocialPreviewModal,
+  GraphModal,
   HouseModal,
   InflationModal,
   InstaSizeModal,
@@ -154,4 +155,5 @@ export const MODAL_MAP: Record<
   snake: SnakeModal,
   'resume-timeline': ResumeTimelineModal,
   'days-count': DaysCountModal,
+  graph: GraphModal,
 };

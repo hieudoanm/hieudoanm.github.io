@@ -539,5 +539,12 @@ export const makeTools = (
       color: '#ef4444',
       onClick: open('resume-timeline'),
     },
+    {
+      label: 'Graph',
+      description: 'Force Layout',
+      emoji: '🕸️',
+      color: '#6c5ce7',
+      onClick: open('graph'),
+    },
   ],
 });
