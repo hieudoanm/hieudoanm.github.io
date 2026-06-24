@@ -1,4 +1,4 @@
-package simplify
+package md
 
 import (
 	"strings"

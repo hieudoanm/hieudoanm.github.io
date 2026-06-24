@@ -1,4 +1,4 @@
-package youtube
+package thumbnails
 
 import (
 	"encoding/json"
@@ -6,9 +6,36 @@ import (
 	"os"
 
 	"github.com/spf13/cobra"
+
+	"github.com/hieudoanm/jack/src/cmd/web/youtube/internal"
 )
 
-func newYoutubeThumbnailsCmd() *cobra.Command {
+const (
+	qualityFlagName = "quality"
+	outputFlagName  = "output"
+	allFlagName     = "all"
+	listFlagName    = "list"
+)
+
+type ytQuality struct {
+	id         string
+	label      string
+	resolution string
+}
+
+var ytQualities = []ytQuality{
+	{"maxresdefault", "Max Resolution", "1280×720"},
+	{"sddefault", "SD", "640×480"},
+	{"hqdefault", "HQ", "480×360"},
+	{"mqdefault", "MQ", "320×180"},
+	{"default", "Default", "120×90"},
+	{"0", "Frame 0", "480×360"},
+	{"1", "Frame 1", "120×90"},
+	{"2", "Frame 2", "120×90"},
+	{"3", "Frame 3", "120×90"},
+}
+
+func NewCmd() *cobra.Command {
 	var url string
 	cmd := &cobra.Command{
 		Use:   "thumbnails [--url <video-url-or-id>]",
@@ -28,13 +55,13 @@ Accepts any of:
 		RunE: func(cmd *cobra.Command, args []string) error {
 			input := url
 
-			qualityFlag, _ := cmd.Flags().GetString("quality")
-			outputDir, _ := cmd.Flags().GetString("output")
-			downloadAll, _ := cmd.Flags().GetBool("all")
-			listOnly, _ := cmd.Flags().GetBool("list")
+			qualityFlag, _ := cmd.Flags().GetString(qualityFlagName)
+			outputDir, _ := cmd.Flags().GetString(outputFlagName)
+			downloadAll, _ := cmd.Flags().GetBool(allFlagName)
+			listOnly, _ := cmd.Flags().GetBool(listFlagName)
 			ytJSON, _ := cmd.Flags().GetBool("json")
 
-			videoID, err := ytExtractVideoID(input)
+			videoID, err := internal.ExtractVideoID(input)
 			if err != nil {
 				return err
 			}
@@ -116,10 +143,10 @@ Accepts any of:
 	}
 
 	cmd.Flags().StringVarP(&url, "url", "u", "", "Video URL or ID")
-	cmd.Flags().StringP("quality", "q", "", fmt.Sprintf("specific quality to download (%s)", ytValidQualityIDs()))
-	cmd.Flags().StringP("output", "o", ".", "output directory")
-	cmd.Flags().BoolP("all", "a", false, "download all quality variants")
-	cmd.Flags().BoolP("list", "l", false, "list thumbnail URLs without downloading")
+	cmd.Flags().StringP(qualityFlagName, "q", "", fmt.Sprintf("specific quality to download (%s)", ytValidQualityIDs()))
+	cmd.Flags().StringP(outputFlagName, "o", ".", "output directory")
+	cmd.Flags().BoolP(allFlagName, "a", false, "download all quality variants")
+	cmd.Flags().BoolP(listFlagName, "l", false, "list thumbnail URLs without downloading")
 	cmd.Flags().Bool("json", false, "Output in JSON format (with --list)")
 	return cmd
 }

@@ -1,4 +1,4 @@
-package simplify
+package csv
 
 import (
 	"os"
@@ -127,24 +127,6 @@ func Test_tablesToCSVFiles_empty(t *testing.T) {
 	}
 	if len(paths) != 0 {
 		t.Fatalf("expected 0 files, got %d", len(paths))
-	}
-}
-
-func Test_extractHost(t *testing.T) {
-	tests := []struct {
-		url  string
-		want string
-	}{
-		{"https://www.example.com/page", "example_com"},
-		{"https://en.wikipedia.org/wiki/Go", "en_wikipedia_org"},
-		{"http://localhost:8080/test", "localhost"},
-		{"invalid", "output"},
-	}
-	for _, tt := range tests {
-		got := extractHost(tt.url)
-		if got != tt.want {
-			t.Errorf("extractHost(%q) = %q, want %q", tt.url, got, tt.want)
-		}
 	}
 }
 

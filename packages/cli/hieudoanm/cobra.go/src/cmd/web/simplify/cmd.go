@@ -1,6 +1,12 @@
 package simplify
 
-import "github.com/spf13/cobra"
+import (
+	"github.com/spf13/cobra"
+
+	"github.com/hieudoanm/jack/src/cmd/web/simplify/csv"
+	"github.com/hieudoanm/jack/src/cmd/web/simplify/images"
+	"github.com/hieudoanm/jack/src/cmd/web/simplify/md"
+)
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
@@ -11,8 +17,8 @@ func NewCmd() *cobra.Command {
   web simplify md --url https://en.wikipedia.org/wiki/Go_(programming_language)`,
 		RunE: func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
-	cmd.AddCommand(newSimplifyCsvCmd())
-	cmd.AddCommand(newSimplifyMdCmd())
-	cmd.AddCommand(newSimplifyImagesCmd())
+	cmd.AddCommand(csv.NewCmd())
+	cmd.AddCommand(md.NewCmd())
+	cmd.AddCommand(images.NewCmd())
 	return cmd
 }

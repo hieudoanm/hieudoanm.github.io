@@ -2,6 +2,8 @@ package clock
 
 import (
 	"github.com/spf13/cobra"
+
+	"github.com/hieudoanm/jack/src/cmd/time/clock/now"
 )
 
 func NewCmd() *cobra.Command {
@@ -14,6 +16,6 @@ func NewCmd() *cobra.Command {
   time clock now --format "2006-01-02 15:04:05"`,
 		RunE: func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
-	cmd.AddCommand(newTimeNowCmd())
+	cmd.AddCommand(now.NewCmd())
 	return cmd
 }

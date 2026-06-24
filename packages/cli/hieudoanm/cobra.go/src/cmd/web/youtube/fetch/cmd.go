@@ -1,4 +1,4 @@
-package youtube
+package fetch
 
 import (
 	"encoding/json"
@@ -6,8 +6,10 @@ import (
 	"os"
 	"strings"
 
-	"github.com/hieudoanm/jack/src/cmd/web/youtube/transcript"
 	"github.com/spf13/cobra"
+
+	"github.com/hieudoanm/jack/src/cmd/web/youtube/internal"
+	"github.com/hieudoanm/jack/src/cmd/web/youtube/transcript"
 )
 
 var (
@@ -17,7 +19,7 @@ var (
 	ytNoTS       bool
 )
 
-func newYoutubeFetchCmd() *cobra.Command {
+func NewCmd() *cobra.Command {
 	var url string
 	cmd := &cobra.Command{
 		Use:   "fetch [--url <video-id-or-url>]",
@@ -28,7 +30,7 @@ func newYoutubeFetchCmd() *cobra.Command {
   web youtube fetch --url dQw4w9WgXcQ --format json
   web youtube fetch --url dQw4w9WgXcQ --no-timestamps`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			videoID, err := ytExtractVideoID(url)
+			videoID, err := internal.ExtractVideoID(url)
 			if err != nil {
 				return err
 			}

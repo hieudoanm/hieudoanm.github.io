@@ -362,8 +362,8 @@
 │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/fen/svg/cmd_test.go)
 │   │   │   │   │   ├── [service.go](./src/cmd/chess/fen/svg/service.go)
 │   │   │   │   │   └── [service_test.go](./src/cmd/chess/fen/svg/service_test.go)
-│   │   │   │   ├── [root_cmd.go](./src/cmd/chess/fen/root_cmd.go)
-│   │   │   │   └── [root_cmd_test.go](./src/cmd/chess/fen/root_cmd_test.go)
+│   │   │   │   ├── [parent.go](./src/cmd/chess/fen/parent.go)
+│   │   │   │   └── [parent_test.go](./src/cmd/chess/fen/parent_test.go)
 │   │   │   ├── lichess.org/
 │   │   │   │   ├── crosstable/
 │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/lichess.org/crosstable/cmd.go)
@@ -452,7 +452,7 @@
 │   │   │   │   └── [root_cmd_test.go](./src/cmd/chess/pgn/root_cmd_test.go)
 │   │   │   ├── play/
 │   │   │   │   ├── [cmd.go](./src/cmd/chess/play/cmd.go)
-│   │   │   │   ├── [root_cmd_test.go](./src/cmd/chess/play/root_cmd_test.go)
+│   │   │   │   ├── [cmd_test.go](./src/cmd/chess/play/cmd_test.go)
 │   │   │   │   └── [service.go](./src/cmd/chess/play/service.go)
 │   │   │   ├── setup/
 │   │   │   │   ├── [cmd.go](./src/cmd/chess/setup/cmd.go)
@@ -675,7 +675,6 @@
 │   │   │   │   ├── [cmd.go](./src/cmd/docsify/cobra/cmd.go)
 │   │   │   │   ├── [cmd_test.go](./src/cmd/docsify/cobra/cmd_test.go)
 │   │   │   │   ├── [service.go](./src/cmd/docsify/cobra/service.go)
-│   │   │   │   ├── [service.go.bak](./src/cmd/docsify/cobra/service.go.bak)
 │   │   │   │   └── [service_test.go](./src/cmd/docsify/cobra/service_test.go)
 │   │   │   ├── internal/
 │   │   │   │   ├── [extractor.go](./src/cmd/docsify/internal/extractor.go)
@@ -742,7 +741,6 @@
 │   │   │   │   ├── [cmd_test.go](./src/cmd/english/define/cmd_test.go)
 │   │   │   │   ├── [service.go](./src/cmd/english/define/service.go)
 │   │   │   │   └── [service_test.go](./src/cmd/english/define/service_test.go)
-│   │   │   ├── testutil/
 │   │   │   ├── [english_root_cmd.go](./src/cmd/english/english_root_cmd.go)
 │   │   │   └── [english_root_cmd_test.go](./src/cmd/english/english_root_cmd_test.go)
 │   │   ├── file/
@@ -767,10 +765,10 @@
 │   │   │   │   ├── [service.go](./src/cmd/file/duplicates/service.go)
 │   │   │   │   └── [service_test.go](./src/cmd/file/duplicates/service_test.go)
 │   │   │   ├── edit/
+│   │   │   │   ├── [cmd.go](./src/cmd/file/edit/cmd.go)
+│   │   │   │   ├── [cmd_test.go](./src/cmd/file/edit/cmd_test.go)
 │   │   │   │   ├── [diff_service.go](./src/cmd/file/edit/diff_service.go)
 │   │   │   │   ├── [diff_service_test.go](./src/cmd/file/edit/diff_service_test.go)
-│   │   │   │   ├── [root_cmd.go](./src/cmd/file/edit/root_cmd.go)
-│   │   │   │   ├── [root_cmd_test.go](./src/cmd/file/edit/root_cmd_test.go)
 │   │   │   │   ├── [service.go](./src/cmd/file/edit/service.go)
 │   │   │   │   └── [service_test.go](./src/cmd/file/edit/service_test.go)
 │   │   │   ├── grep/
@@ -857,7 +855,6 @@
 │   │   │   │   ├── [code_tui.go](./src/cmd/gemini/code/code_tui.go)
 │   │   │   │   ├── [service.go](./src/cmd/gemini/code/service.go)
 │   │   │   │   └── [service_test.go](./src/cmd/gemini/code/service_test.go)
-│   │   │   ├── [gemini_code_tui.go](./src/cmd/gemini/gemini_code_tui.go)
 │   │   │   ├── [gemini_root_cmd.go](./src/cmd/gemini/gemini_root_cmd.go)
 │   │   │   └── [gemini_root_cmd_test.go](./src/cmd/gemini/gemini_root_cmd_test.go)
 │   │   ├── gh/
@@ -1160,8 +1157,10 @@
 │   │   │   │   │   ├── [cmd_test.go](./src/cmd/system/disk/stats/cmd_test.go)
 │   │   │   │   │   ├── [service.go](./src/cmd/system/disk/stats/service.go)
 │   │   │   │   │   └── [service_test.go](./src/cmd/system/disk/stats/service_test.go)
-│   │   │   │   ├── [disk_cmd.go](./src/cmd/system/disk/disk_cmd.go)
-│   │   │   │   └── [disk_cmd_test.go](./src/cmd/system/disk/disk_cmd_test.go)
+│   │   │   │   ├── [cmd.go](./src/cmd/system/disk/cmd.go)
+│   │   │   │   ├── [cmd_test.go](./src/cmd/system/disk/cmd_test.go)
+│   │   │   │   ├── [service.go](./src/cmd/system/disk/service.go)
+│   │   │   │   └── [service_test.go](./src/cmd/system/disk/service_test.go)
 │   │   │   ├── env/
 │   │   │   │   ├── [cmd.go](./src/cmd/system/env/cmd.go)
 │   │   │   │   ├── [cmd_test.go](./src/cmd/system/env/cmd_test.go)
@@ -1174,8 +1173,8 @@
 │   │   │   │   └── [service_test.go](./src/cmd/system/info/service_test.go)
 │   │   │   ├── monitor/
 │   │   │   │   ├── [cmd.go](./src/cmd/system/monitor/cmd.go)
-│   │   │   │   ├── [metrics.go](./src/cmd/system/monitor/metrics.go)
-│   │   │   │   ├── [metrics_test.go](./src/cmd/system/monitor/metrics_test.go)
+│   │   │   │   ├── [service.go](./src/cmd/system/monitor/service.go)
+│   │   │   │   ├── [service_test.go](./src/cmd/system/monitor/service_test.go)
 │   │   │   │   ├── [tui.go](./src/cmd/system/monitor/tui.go)
 │   │   │   │   └── [tui_test.go](./src/cmd/system/monitor/tui_test.go)
 │   │   │   ├── path/
@@ -1545,12 +1544,14 @@
 │   │   │   │   ├── [service.go](./src/cmd/time/age/service.go)
 │   │   │   │   └── [service_test.go](./src/cmd/time/age/service_test.go)
 │   │   │   ├── clock/
+│   │   │   │   ├── now/
+│   │   │   │   │   ├── [cmd.go](./src/cmd/time/clock/now/cmd.go)
+│   │   │   │   │   ├── [cmd_test.go](./src/cmd/time/clock/now/cmd_test.go)
+│   │   │   │   │   ├── [service.go](./src/cmd/time/clock/now/service.go)
+│   │   │   │   │   └── [service_test.go](./src/cmd/time/clock/now/service_test.go)
 │   │   │   │   ├── [cmd.go](./src/cmd/time/clock/cmd.go)
 │   │   │   │   ├── [cmd_test.go](./src/cmd/time/clock/cmd_test.go)
-│   │   │   │   ├── [now_cmd.go](./src/cmd/time/clock/now_cmd.go)
-│   │   │   │   ├── [now_cmd_test.go](./src/cmd/time/clock/now_cmd_test.go)
-│   │   │   │   ├── [service.go](./src/cmd/time/clock/service.go)
-│   │   │   │   └── [service_test.go](./src/cmd/time/clock/service_test.go)
+│   │   │   │   └── [service.go](./src/cmd/time/clock/service.go)
 │   │   │   ├── cron/
 │   │   │   │   ├── [cmd.go](./src/cmd/time/cron/cmd.go)
 │   │   │   │   ├── [cmd_test.go](./src/cmd/time/cron/cmd_test.go)
@@ -1610,17 +1611,27 @@
 │   │   │   │   ├── [cmd.go](./src/cmd/web/shopify/cmd.go)
 │   │   │   │   └── [cmd_test.go](./src/cmd/web/shopify/cmd_test.go)
 │   │   │   ├── simplify/
+│   │   │   │   ├── csv/
+│   │   │   │   │   ├── [cmd.go](./src/cmd/web/simplify/csv/cmd.go)
+│   │   │   │   │   ├── [cmd_test.go](./src/cmd/web/simplify/csv/cmd_test.go)
+│   │   │   │   │   ├── [service.go](./src/cmd/web/simplify/csv/service.go)
+│   │   │   │   │   └── [service_test.go](./src/cmd/web/simplify/csv/service_test.go)
+│   │   │   │   ├── images/
+│   │   │   │   │   ├── [cmd.go](./src/cmd/web/simplify/images/cmd.go)
+│   │   │   │   │   ├── [cmd_test.go](./src/cmd/web/simplify/images/cmd_test.go)
+│   │   │   │   │   ├── [service.go](./src/cmd/web/simplify/images/service.go)
+│   │   │   │   │   └── [service_test.go](./src/cmd/web/simplify/images/service_test.go)
+│   │   │   │   ├── internal/
+│   │   │   │   │   ├── [fetch.go](./src/cmd/web/simplify/internal/fetch.go)
+│   │   │   │   │   ├── [host.go](./src/cmd/web/simplify/internal/host.go)
+│   │   │   │   │   └── [host_test.go](./src/cmd/web/simplify/internal/host_test.go)
+│   │   │   │   ├── md/
+│   │   │   │   │   ├── [cmd.go](./src/cmd/web/simplify/md/cmd.go)
+│   │   │   │   │   ├── [cmd_test.go](./src/cmd/web/simplify/md/cmd_test.go)
+│   │   │   │   │   ├── [service.go](./src/cmd/web/simplify/md/service.go)
+│   │   │   │   │   └── [service_test.go](./src/cmd/web/simplify/md/service_test.go)
 │   │   │   │   ├── [cmd.go](./src/cmd/web/simplify/cmd.go)
-│   │   │   │   ├── [cmd_test.go](./src/cmd/web/simplify/cmd_test.go)
-│   │   │   │   ├── [csv_cmd.go](./src/cmd/web/simplify/csv_cmd.go)
-│   │   │   │   ├── [csv_service.go](./src/cmd/web/simplify/csv_service.go)
-│   │   │   │   ├── [csv_service_test.go](./src/cmd/web/simplify/csv_service_test.go)
-│   │   │   │   ├── [images_cmd.go](./src/cmd/web/simplify/images_cmd.go)
-│   │   │   │   ├── [images_service.go](./src/cmd/web/simplify/images_service.go)
-│   │   │   │   ├── [images_service_test.go](./src/cmd/web/simplify/images_service_test.go)
-│   │   │   │   ├── [md_cmd.go](./src/cmd/web/simplify/md_cmd.go)
-│   │   │   │   ├── [md_service.go](./src/cmd/web/simplify/md_service.go)
-│   │   │   │   └── [md_service_test.go](./src/cmd/web/simplify/md_service_test.go)
+│   │   │   │   └── [cmd_test.go](./src/cmd/web/simplify/cmd_test.go)
 │   │   │   ├── snapshot/
 │   │   │   │   ├── [cmd.go](./src/cmd/web/snapshot/cmd.go)
 │   │   │   │   ├── [cmd_test.go](./src/cmd/web/snapshot/cmd_test.go)
@@ -1632,6 +1643,17 @@
 │   │   │   │   ├── [service.go](./src/cmd/web/weather/service.go)
 │   │   │   │   └── [service_test.go](./src/cmd/web/weather/service_test.go)
 │   │   │   ├── youtube/
+│   │   │   │   ├── fetch/
+│   │   │   │   │   ├── [cmd.go](./src/cmd/web/youtube/fetch/cmd.go)
+│   │   │   │   │   └── [cmd_test.go](./src/cmd/web/youtube/fetch/cmd_test.go)
+│   │   │   │   ├── internal/
+│   │   │   │   │   ├── [video.go](./src/cmd/web/youtube/internal/video.go)
+│   │   │   │   │   └── [video_test.go](./src/cmd/web/youtube/internal/video_test.go)
+│   │   │   │   ├── thumbnails/
+│   │   │   │   │   ├── [cmd.go](./src/cmd/web/youtube/thumbnails/cmd.go)
+│   │   │   │   │   ├── [cmd_test.go](./src/cmd/web/youtube/thumbnails/cmd_test.go)
+│   │   │   │   │   ├── [service.go](./src/cmd/web/youtube/thumbnails/service.go)
+│   │   │   │   │   └── [service_test.go](./src/cmd/web/youtube/thumbnails/service_test.go)
 │   │   │   │   ├── transcript/
 │   │   │   │   │   ├── [client.go](./src/cmd/web/youtube/transcript/client.go)
 │   │   │   │   │   ├── [client_test.go](./src/cmd/web/youtube/transcript/client_test.go)
@@ -1639,11 +1661,7 @@
 │   │   │   │   │   ├── [transcript_test.go](./src/cmd/web/youtube/transcript/transcript_test.go)
 │   │   │   │   │   └── [types.go](./src/cmd/web/youtube/transcript/types.go)
 │   │   │   │   ├── [cmd.go](./src/cmd/web/youtube/cmd.go)
-│   │   │   │   ├── [cmd_test.go](./src/cmd/web/youtube/cmd_test.go)
-│   │   │   │   ├── [fetch_cmd.go](./src/cmd/web/youtube/fetch_cmd.go)
-│   │   │   │   ├── [service.go](./src/cmd/web/youtube/service.go)
-│   │   │   │   ├── [service_test.go](./src/cmd/web/youtube/service_test.go)
-│   │   │   │   └── [thumbnails_cmd.go](./src/cmd/web/youtube/thumbnails_cmd.go)
+│   │   │   │   └── [cmd_test.go](./src/cmd/web/youtube/cmd_test.go)
 │   │   │   ├── [web_root_cmd.go](./src/cmd/web/web_root_cmd.go)
 │   │   │   └── [web_root_cmd_test.go](./src/cmd/web/web_root_cmd_test.go)
 │   │   ├── [root.go](./src/cmd/root.go)
@@ -1691,4 +1709,4 @@
 └── [main.go](./main.go)
 ```
 
-392 directories, 1296 files
+399 directories, 1307 files

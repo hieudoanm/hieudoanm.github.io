@@ -1,4 +1,4 @@
-package simplify
+package csv
 
 import (
 	"encoding/json"
@@ -6,9 +6,11 @@ import (
 	"os"
 
 	"github.com/spf13/cobra"
+
+	"github.com/hieudoanm/jack/src/cmd/web/simplify/internal"
 )
 
-func newSimplifyCsvCmd() *cobra.Command {
+func NewCmd() *cobra.Command {
 	var url string
 	var out string
 
@@ -34,7 +36,7 @@ Multiple tables produce individual <domain>-table-<N>.csv files.`,
 				return fmt.Errorf("directory %s does not exist", out)
 			}
 
-			html, err := fetchPage(url)
+			html, err := internal.FetchPage(url)
 			if err != nil {
 				return err
 			}

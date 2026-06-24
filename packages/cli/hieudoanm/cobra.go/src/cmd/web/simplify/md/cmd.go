@@ -1,4 +1,4 @@
-package simplify
+package md
 
 import (
 	"encoding/json"
@@ -7,9 +7,11 @@ import (
 	"path/filepath"
 
 	"github.com/spf13/cobra"
+
+	"github.com/hieudoanm/jack/src/cmd/web/simplify/internal"
 )
 
-func newSimplifyMdCmd() *cobra.Command {
+func NewCmd() *cobra.Command {
 	var url string
 	var out string
 
@@ -34,7 +36,7 @@ If reader view is not available the raw page is converted instead.`,
 				return fmt.Errorf("directory %s does not exist", out)
 			}
 
-			html, err := fetchPage(url)
+			html, err := internal.FetchPage(url)
 			if err != nil {
 				return err
 			}
@@ -57,7 +59,7 @@ If reader view is not available the raw page is converted instead.`,
 				markdown = "# " + title + "\n\n" + markdown
 			}
 
-			filename := extractHost(url) + ".md"
+			filename := internal.ExtractHost(url) + ".md"
 			filePath := filepath.Join(out, filename)
 
 			if err := os.WriteFile(filePath, []byte(markdown), 0644); err != nil {

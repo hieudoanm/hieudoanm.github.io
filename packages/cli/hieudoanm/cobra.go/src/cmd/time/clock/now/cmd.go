@@ -1,10 +1,10 @@
-package clock
+package now
 
 import (
 	"github.com/spf13/cobra"
 )
 
-func newTimeNowCmd() *cobra.Command {
+func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "now",
 		Short: "Display current date and time",
@@ -16,7 +16,7 @@ Supports JSON output and custom format strings.`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			jsonOutput, _ := cmd.Flags().GetBool("json")
 			format, _ := cmd.Flags().GetString("format")
-			return runClockNow(format, jsonOutput)
+			return RunNow(format, jsonOutput)
 		},
 	}
 	cmd.Flags().Bool("json", false, "Output in JSON format")

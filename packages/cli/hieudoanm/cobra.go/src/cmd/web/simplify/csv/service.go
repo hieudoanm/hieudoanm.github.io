@@ -1,39 +1,16 @@
-package simplify
+package csv
 
 import (
 	"encoding/csv"
 	"fmt"
-	"io"
-	"net/http"
-	"net/url"
 	"os"
 	"path/filepath"
 	"strings"
-	"time"
 
 	"golang.org/x/net/html"
+
+	"github.com/hieudoanm/jack/src/cmd/web/simplify/internal"
 )
-
-func fetchPage(pageURL string) (string, error) {
-	client := &http.Client{Timeout: 30 * time.Second}
-	req, err := http.NewRequest(http.MethodGet, pageURL, nil)
-	if err != nil {
-		return "", fmt.Errorf("create request: %w", err)
-	}
-	req.Header.Set("User-Agent", "Mozilla/5.0 (compatible; TableParser/1.0)")
-
-	resp, err := client.Do(req)
-	if err != nil {
-		return "", fmt.Errorf("fetch %s: %w", pageURL, err)
-	}
-	defer resp.Body.Close()
-
-	body, err := io.ReadAll(resp.Body)
-	if err != nil {
-		return "", fmt.Errorf("read body: %w", err)
-	}
-	return string(body), nil
-}
 
 func parseTables(htmlContent string) ([][][]string, error) {
 	doc, err := html.Parse(strings.NewReader(htmlContent))
@@ -104,7 +81,7 @@ func extractText(n *html.Node) string {
 }
 
 func tablesToCSVFiles(tables [][][]string, pageURL, outDir string) ([]string, error) {
-	host := extractHost(pageURL)
+	host := internal.ExtractHost(pageURL)
 	var paths []string
 
 	for i, table := range tables {
@@ -141,14 +118,4 @@ func tablesToCSVFiles(tables [][][]string, pageURL, outDir string) ([]string, er
 	}
 
 	return paths, nil
-}
-
-func extractHost(rawURL string) string {
-	u, err := url.Parse(rawURL)
-	if err != nil || u.Hostname() == "" {
-		return "output"
-	}
-	host := strings.ReplaceAll(u.Hostname(), "www.", "")
-	host = strings.ReplaceAll(host, ".", "_")
-	return host
 }

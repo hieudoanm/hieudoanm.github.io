@@ -1,4 +1,4 @@
-package simplify
+package images
 
 import (
 	"encoding/json"

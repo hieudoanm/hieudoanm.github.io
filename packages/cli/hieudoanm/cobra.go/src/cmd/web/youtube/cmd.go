@@ -1,6 +1,11 @@
 package youtube
 
-import "github.com/spf13/cobra"
+import (
+	"github.com/spf13/cobra"
+
+	"github.com/hieudoanm/jack/src/cmd/web/youtube/fetch"
+	"github.com/hieudoanm/jack/src/cmd/web/youtube/thumbnails"
+)
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
@@ -12,8 +17,8 @@ func NewCmd() *cobra.Command {
 		RunE: func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
 
-	cmd.AddCommand(newYoutubeThumbnailsCmd())
-	cmd.AddCommand(newYoutubeFetchCmd())
+	cmd.AddCommand(fetch.NewCmd())
+	cmd.AddCommand(thumbnails.NewCmd())
 
 	return cmd
 }

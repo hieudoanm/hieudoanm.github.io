@@ -1,4 +1,4 @@
-package simplify
+package images
 
 import (
 	"fmt"
@@ -8,7 +8,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-func newSimplifyImagesCmd() *cobra.Command {
+func NewCmd() *cobra.Command {
 	var url string
 	var out string
 	var imgIndex int

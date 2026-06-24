@@ -1,4 +1,4 @@
-package clock
+package now
 
 import (
 	"bytes"
@@ -21,9 +21,9 @@ func captureOutput(fn func()) string {
 	return buf.String()
 }
 
-func TestRunClockNow(t *testing.T) {
+func TestRunNow(t *testing.T) {
 	output := captureOutput(func() {
-		if err := runClockNow("", false); err != nil {
+		if err := RunNow("", false); err != nil {
 			t.Fatal(err)
 		}
 	})
@@ -38,9 +38,9 @@ func TestRunClockNow(t *testing.T) {
 	}
 }
 
-func TestRunClockNow_JSON(t *testing.T) {
+func TestRunNow_JSON(t *testing.T) {
 	output := captureOutput(func() {
-		if err := runClockNow("", true); err != nil {
+		if err := RunNow("", true); err != nil {
 			t.Fatal(err)
 		}
 	})
@@ -59,9 +59,9 @@ func TestRunClockNow_JSON(t *testing.T) {
 	}
 }
 
-func TestRunClockNow_CustomFormat(t *testing.T) {
+func TestRunNow_CustomFormat(t *testing.T) {
 	output := captureOutput(func() {
-		if err := runClockNow("2006-01-02", false); err != nil {
+		if err := RunNow("2006-01-02", false); err != nil {
 			t.Fatal(err)
 		}
 	})

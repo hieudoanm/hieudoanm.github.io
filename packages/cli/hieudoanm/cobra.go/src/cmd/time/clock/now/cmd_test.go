@@ -1,11 +1,11 @@
-package clock
+package now
 
 import (
 	"testing"
 )
 
-func TestNewTimeNowCmd_Structure(t *testing.T) {
-	cmd := newTimeNowCmd()
+func TestNewCmd_Structure(t *testing.T) {
+	cmd := NewCmd()
 	if cmd.Use != "now" {
 		t.Errorf("expected Use 'now', got %q", cmd.Use)
 	}
