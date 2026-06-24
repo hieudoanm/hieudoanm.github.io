@@ -41,19 +41,19 @@ func TestNewCommand_HasAllSubcommands(t *testing.T) {
 func TestNewCommand_SubcommandUseMatches(t *testing.T) {
 	cmd := NewCommand()
 	expectations := map[string]string{
-		"braille":    "braille [text]",
-		"morse":      "morse [text]",
+		"braille":    "braille <text>",
+		"morse":      "morse <text>",
 		"base64":     "base64",
 		"url":        "url [text]",
-		"capitalise": "capitalise [text]",
-		"deburr":     "deburr [text]",
-		"kebabcase":  "kebabcase [text]",
-		"camelcase":  "camelcase [text]",
-		"pascalcase": "pascalcase [text]",
-		"slug":       "slug [text]",
-		"lowercase":  "lowercase [text]",
-		"snakecase":  "snakecase [text]",
-		"uppercase":  "uppercase [text]",
+		"capitalise": "capitalise <text>",
+		"deburr":     "deburr <text>",
+		"kebabcase":  "kebabcase <text>",
+		"camelcase":  "camelcase <text>",
+		"pascalcase": "pascalcase <text>",
+		"slug":       "slug <text>",
+		"lowercase":  "lowercase <text>",
+		"snakecase":  "snakecase <text>",
+		"uppercase":  "uppercase <text>",
 		"count":      "count <text>",
 	}
 	for _, sub := range cmd.Commands() {
@@ -64,59 +64,5 @@ func TestNewCommand_SubcommandUseMatches(t *testing.T) {
 		if sub.Use != expected {
 			t.Errorf("%s.Use = %q, want %q", sub.Name(), sub.Use, expected)
 		}
-	}
-}
-
-func TestCapitalise(t *testing.T) {
-	if Capitalise("hello world") != "Hello World" {
-		t.Errorf(`Capitalise("hello world") = %q`, Capitalise("hello world"))
-	}
-	if Capitalise("") != "" {
-		t.Errorf(`Capitalise("") = %q`, Capitalise(""))
-	}
-}
-
-func TestDeburr(t *testing.T) {
-	if Deburr("héllo wörld") != "hello world" {
-		t.Errorf(`Deburr("héllo wörld") = %q`, Deburr("héllo wörld"))
-	}
-	if Deburr("café") != "cafe" {
-		t.Errorf(`Deburr("café") = %q`, Deburr("café"))
-	}
-}
-
-func TestToKebabCase(t *testing.T) {
-	if ToKebabCase("helloWorld") != "hello-world" {
-		t.Errorf(`ToKebabCase("helloWorld") = %q`, ToKebabCase("helloWorld"))
-	}
-	if ToKebabCase("Hello World") != "hello-world" {
-		t.Errorf(`ToKebabCase("Hello World") = %q`, ToKebabCase("Hello World"))
-	}
-}
-
-func TestToSnakeCase(t *testing.T) {
-	if ToSnakeCase("helloWorld") != "hello_world" {
-		t.Errorf(`ToSnakeCase("helloWorld") = %q`, ToSnakeCase("helloWorld"))
-	}
-	if ToSnakeCase("Hello World") != "hello_world" {
-		t.Errorf(`ToSnakeCase("Hello World") = %q`, ToSnakeCase("Hello World"))
-	}
-}
-
-func TestToBraille(t *testing.T) {
-	if ToBraille("hello") != "⠓⠑⠇⠇⠕" {
-		t.Errorf(`ToBraille("hello") = %q`, ToBraille("hello"))
-	}
-	if ToBraille("Hello") != "⠓⠑⠇⠇⠕" {
-		t.Errorf(`ToBraille("Hello") = %q`, ToBraille("Hello"))
-	}
-}
-
-func TestToMorse(t *testing.T) {
-	if ToMorse("sos") != "... --- ..." {
-		t.Errorf(`ToMorse("sos") = %q`, ToMorse("sos"))
-	}
-	if ToMorse("SOS") != "... --- ..." {
-		t.Errorf(`ToMorse("SOS") = %q`, ToMorse("SOS"))
 	}
 }

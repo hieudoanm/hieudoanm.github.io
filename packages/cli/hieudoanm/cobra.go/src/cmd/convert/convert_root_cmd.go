@@ -1,6 +1,20 @@
 package convert
 
 import (
+	"github.com/hieudoanm/jack/src/cmd/convert/base64"
+	"github.com/hieudoanm/jack/src/cmd/convert/braille"
+	"github.com/hieudoanm/jack/src/cmd/convert/camelcase"
+	"github.com/hieudoanm/jack/src/cmd/convert/capitalise"
+	"github.com/hieudoanm/jack/src/cmd/convert/count"
+	"github.com/hieudoanm/jack/src/cmd/convert/deburr"
+	"github.com/hieudoanm/jack/src/cmd/convert/kebabcase"
+	"github.com/hieudoanm/jack/src/cmd/convert/lowercase"
+	"github.com/hieudoanm/jack/src/cmd/convert/morse"
+	"github.com/hieudoanm/jack/src/cmd/convert/pascalcase"
+	"github.com/hieudoanm/jack/src/cmd/convert/slug"
+	"github.com/hieudoanm/jack/src/cmd/convert/snakecase"
+	"github.com/hieudoanm/jack/src/cmd/convert/uppercase"
+	"github.com/hieudoanm/jack/src/cmd/convert/url"
 	"github.com/spf13/cobra"
 )
 
@@ -15,20 +29,20 @@ func NewCommand() *cobra.Command {
 		RunE: func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
 
-	cmd.AddCommand(newBrailleCmd())
-	cmd.AddCommand(newMorseCmd())
-	cmd.AddCommand(newBase64Cmd())
-	cmd.AddCommand(newURLCmd())
-	cmd.AddCommand(newCapitaliseCmd())
-	cmd.AddCommand(newDeburrCmd())
-	cmd.AddCommand(newKebabcaseCmd())
-	cmd.AddCommand(newCamelcaseCmd())
-	cmd.AddCommand(newPascalcaseCmd())
-	cmd.AddCommand(newSlugCmd())
-	cmd.AddCommand(newLowercaseCmd())
-	cmd.AddCommand(newSnakecaseCmd())
-	cmd.AddCommand(newUppercaseCmd())
-	cmd.AddCommand(newCountCmd())
+	cmd.AddCommand(braille.NewCommand())
+	cmd.AddCommand(morse.NewCommand())
+	cmd.AddCommand(base64.NewCommand())
+	cmd.AddCommand(url.NewCommand())
+	cmd.AddCommand(capitalise.NewCommand())
+	cmd.AddCommand(deburr.NewCommand())
+	cmd.AddCommand(kebabcase.NewCommand())
+	cmd.AddCommand(camelcase.NewCommand())
+	cmd.AddCommand(pascalcase.NewCommand())
+	cmd.AddCommand(slug.NewCommand())
+	cmd.AddCommand(lowercase.NewCommand())
+	cmd.AddCommand(snakecase.NewCommand())
+	cmd.AddCommand(uppercase.NewCommand())
+	cmd.AddCommand(count.NewCommand())
 	cmd.PersistentFlags().BoolP("json", "j", false, "Output in JSON format")
 	return cmd
 }

@@ -1,7 +1,10 @@
 package web
 
 import (
+	"github.com/hieudoanm/jack/src/cmd/web/shopify"
 	"github.com/hieudoanm/jack/src/cmd/web/simplify"
+	"github.com/hieudoanm/jack/src/cmd/web/snapshot"
+	"github.com/hieudoanm/jack/src/cmd/web/weather"
 	"github.com/hieudoanm/jack/src/cmd/web/youtube"
 	"github.com/spf13/cobra"
 )
@@ -18,10 +21,10 @@ func NewCommand() *cobra.Command {
 		RunE: func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
 	cmd.AddCommand(
-		newShopifyCmd(),
+		shopify.NewCmd(),
 		simplify.NewCmd(),
-		newSnapshotCmd(),
-		newWeatherCmd(),
+		snapshot.NewCmd(),
+		weather.NewCmd(),
 		youtube.NewCmd(),
 	)
 	cmd.PersistentFlags().BoolP("json", "j", false, "Output in JSON format")

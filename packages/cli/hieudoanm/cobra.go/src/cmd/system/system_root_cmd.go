@@ -1,6 +1,16 @@
 package system
 
-import "github.com/spf13/cobra"
+import (
+	"github.com/spf13/cobra"
+
+	"github.com/hieudoanm/jack/src/cmd/system/battery"
+	"github.com/hieudoanm/jack/src/cmd/system/clipboard"
+	"github.com/hieudoanm/jack/src/cmd/system/disk"
+	"github.com/hieudoanm/jack/src/cmd/system/env"
+	"github.com/hieudoanm/jack/src/cmd/system/info"
+	"github.com/hieudoanm/jack/src/cmd/system/monitor"
+	"github.com/hieudoanm/jack/src/cmd/system/path"
+)
 
 func NewCommand() *cobra.Command {
 	cmd := &cobra.Command{
@@ -16,13 +26,14 @@ func NewCommand() *cobra.Command {
 		RunE: func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
 	cmd.AddCommand(
-		newMonitorCmd(),
-		newClipboardCmd(),
-		newInfoCmd(),
-		newEnvCmd(),
-		newPathCmd(),
-		newDiskCmd(),
-		newBatteryCmd(),
+		monitor.NewCmd(),
+		clipboard.NewCmd(),
+		info.NewCmd(),
+		env.NewCmd(),
+		path.NewCmd(),
+		disk.NewCmd(),
+		disk.NewStatsCmd(),
+		battery.NewCmd(),
 	)
 	cmd.PersistentFlags().BoolP("json", "j", false, "Output in JSON format")
 	return cmd

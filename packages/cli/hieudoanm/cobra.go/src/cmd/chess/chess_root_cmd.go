@@ -4,7 +4,11 @@ import (
 	"github.com/hieudoanm/jack/src/cmd/chess/chess.com"
 	"github.com/hieudoanm/jack/src/cmd/chess/chess960"
 	"github.com/hieudoanm/jack/src/cmd/chess/elo"
+	"github.com/hieudoanm/jack/src/cmd/chess/fen"
 	"github.com/hieudoanm/jack/src/cmd/chess/lichess.org"
+	"github.com/hieudoanm/jack/src/cmd/chess/pgn"
+	"github.com/hieudoanm/jack/src/cmd/chess/play"
+	"github.com/hieudoanm/jack/src/cmd/chess/setup"
 	"github.com/spf13/cobra"
 )
 
@@ -37,10 +41,10 @@ func NewCommand() *cobra.Command {
 	cmd.AddCommand(chess960.NewCmd())
 	cmd.AddCommand(chesscom.NewCmd())
 	cmd.AddCommand(elo.NewCmd())
-	cmd.AddCommand(newFenCmd())
-	cmd.AddCommand(newPgnCmd())
-	cmd.AddCommand(newPlayCmd())
-	cmd.AddCommand(newSetupCmd())
+	cmd.AddCommand(fen.NewCmd())
+	cmd.AddCommand(pgn.NewCmd())
+	cmd.AddCommand(play.NewCmd())
+	cmd.AddCommand(setup.NewCmd())
 
 	return cmd
 }

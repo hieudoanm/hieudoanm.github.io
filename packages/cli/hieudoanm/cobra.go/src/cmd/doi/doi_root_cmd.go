@@ -1,6 +1,10 @@
 package doi
 
 import (
+	"github.com/hieudoanm/jack/src/cmd/doi/cite"
+	"github.com/hieudoanm/jack/src/cmd/doi/fetch"
+	"github.com/hieudoanm/jack/src/cmd/doi/ref"
+	"github.com/hieudoanm/jack/src/cmd/doi/validate"
 	"github.com/spf13/cobra"
 )
 
@@ -16,10 +20,10 @@ func NewCommand() *cobra.Command {
 		RunE: func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
 
-	cmd.AddCommand(newCiteCmd())
-	cmd.AddCommand(newRefCmd())
-	cmd.AddCommand(newFetchCmd())
-	cmd.AddCommand(newValidateCmd())
+	cmd.AddCommand(cite.NewCmd())
+	cmd.AddCommand(ref.NewCmd())
+	cmd.AddCommand(fetch.NewCmd())
+	cmd.AddCommand(validate.NewCmd())
 	cmd.PersistentFlags().BoolP("json", "j", false, "Output in JSON format")
 	return cmd
 }
