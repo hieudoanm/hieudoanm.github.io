@@ -78,7 +78,7 @@
     "gif.js": "0.2.0",
     "github-markdown-css": "5.9.0",
     "html-to-pdfmake": "2.5.33",
-    "html2canvas-pro": "2.0.4",
+    "html2canvas-pro": "2.1.1",
     "marked": "18.0.5",
     "next": "16.2.9",
     "onnxruntime-web": "1.27.0",
@@ -135,6 +135,6 @@
     "ts-jest": "29.4.11",
     "ts-node": "10.9.2",
     "typescript": "6.0.3",
-    "typescript-eslint": "8.61.1"
+    "typescript-eslint": "8.62.0"
   }
 }
