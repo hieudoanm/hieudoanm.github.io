@@ -1,4 +1,4 @@
-package cmd
+package completion
 
 import (
 	"fmt"
@@ -7,7 +7,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-func newCompletionCmd() *cobra.Command {
+func NewCommand(rootCmd *cobra.Command) *cobra.Command {
 	var shell string
 	cmd := &cobra.Command{
 		Use:   "completion [--shell <shell>]",
@@ -37,10 +37,4 @@ func newCompletionCmd() *cobra.Command {
 
 	cmd.Flags().StringVarP(&shell, "shell", "s", "", "Shell type (bash, zsh, fish)")
 	return cmd
-}
-
-var completionCmd = newCompletionCmd()
-
-func init() {
-	rootCmd.AddCommand(completionCmd)
 }

@@ -8,6 +8,7 @@ import (
 	"github.com/hieudoanm/jack/src/cmd/casino"
 	"github.com/hieudoanm/jack/src/cmd/chess"
 	"github.com/hieudoanm/jack/src/cmd/colors"
+	"github.com/hieudoanm/jack/src/cmd/completion"
 	"github.com/hieudoanm/jack/src/cmd/convert"
 	"github.com/hieudoanm/jack/src/cmd/crypto"
 	"github.com/hieudoanm/jack/src/cmd/data"
@@ -111,6 +112,7 @@ func init() {
 	rootCmd.AddCommand(casino.NewCommand())
 	rootCmd.AddCommand(chess.NewCommand())
 	rootCmd.AddCommand(colors.NewCommand())
+	rootCmd.AddCommand(completion.NewCommand(rootCmd))
 	rootCmd.AddCommand(convert.NewCommand())
 	rootCmd.AddCommand(crypto.NewCommand())
 	rootCmd.AddCommand(data.NewCommand())

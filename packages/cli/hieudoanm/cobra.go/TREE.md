@@ -112,8 +112,8 @@
 │   │   │   │   ├── [conversion.go](./src/cmd/calc/unit/conversion.go)
 │   │   │   │   ├── [service.go](./src/cmd/calc/unit/service.go)
 │   │   │   │   └── [service_test.go](./src/cmd/calc/unit/service_test.go)
-│   │   │   ├── [calc_root_cmd.go](./src/cmd/calc/calc_root_cmd.go)
-│   │   │   └── [calc_root_cmd_test.go](./src/cmd/calc/calc_root_cmd_test.go)
+│   │   │   ├── [cmd.go](./src/cmd/calc/cmd.go)
+│   │   │   └── [cmd_test.go](./src/cmd/calc/cmd_test.go)
 │   │   ├── casino/
 │   │   │   ├── baccarat/
 │   │   │   │   ├── play/
@@ -184,8 +184,8 @@
 │   │   │   ├── slots/
 │   │   │   │   ├── [cmd.go](./src/cmd/casino/slots/cmd.go)
 │   │   │   │   └── [service.go](./src/cmd/casino/slots/service.go)
-│   │   │   ├── [casino_root_cmd.go](./src/cmd/casino/casino_root_cmd.go)
-│   │   │   └── [casino_root_cmd_test.go](./src/cmd/casino/casino_root_cmd_test.go)
+│   │   │   ├── [cmd.go](./src/cmd/casino/cmd.go)
+│   │   │   └── [cmd_test.go](./src/cmd/casino/cmd_test.go)
 │   │   ├── chess/
 │   │   │   ├── chess.com/
 │   │   │   │   ├── club/
@@ -448,18 +448,18 @@
 │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/pgn/uci/cmd.go)
 │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/pgn/uci/cmd_test.go)
 │   │   │   │   │   └── [service.go](./src/cmd/chess/pgn/uci/service.go)
-│   │   │   │   ├── [root_cmd.go](./src/cmd/chess/pgn/root_cmd.go)
-│   │   │   │   └── [root_cmd_test.go](./src/cmd/chess/pgn/root_cmd_test.go)
+│   │   │   │   ├── [cmd.go](./src/cmd/chess/pgn/cmd.go)
+│   │   │   │   └── [cmd_test.go](./src/cmd/chess/pgn/cmd_test.go)
 │   │   │   ├── play/
 │   │   │   │   ├── [cmd.go](./src/cmd/chess/play/cmd.go)
 │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/play/cmd_test.go)
 │   │   │   │   └── [service.go](./src/cmd/chess/play/service.go)
 │   │   │   ├── setup/
 │   │   │   │   ├── [cmd.go](./src/cmd/chess/setup/cmd.go)
-│   │   │   │   ├── [root_cmd_test.go](./src/cmd/chess/setup/root_cmd_test.go)
+│   │   │   │   ├── [cmd_test.go](./src/cmd/chess/setup/cmd_test.go)
 │   │   │   │   └── [service.go](./src/cmd/chess/setup/service.go)
-│   │   │   ├── [chess_root_cmd.go](./src/cmd/chess/chess_root_cmd.go)
-│   │   │   └── [chess_root_cmd_test.go](./src/cmd/chess/chess_root_cmd_test.go)
+│   │   │   ├── [cmd.go](./src/cmd/chess/cmd.go)
+│   │   │   └── [cmd_test.go](./src/cmd/chess/cmd_test.go)
 │   │   ├── colors/
 │   │   │   ├── hcl/
 │   │   │   │   ├── [cmd.go](./src/cmd/colors/hcl/cmd.go)
@@ -504,8 +504,11 @@
 │   │   │   │   ├── [cmd_test.go](./src/cmd/colors/rgb/cmd_test.go)
 │   │   │   │   ├── [service.go](./src/cmd/colors/rgb/service.go)
 │   │   │   │   └── [service_test.go](./src/cmd/colors/rgb/service_test.go)
-│   │   │   ├── [colors_root_cmd.go](./src/cmd/colors/colors_root_cmd.go)
-│   │   │   └── [colors_root_cmd_test.go](./src/cmd/colors/colors_root_cmd_test.go)
+│   │   │   ├── [cmd.go](./src/cmd/colors/cmd.go)
+│   │   │   └── [cmd_test.go](./src/cmd/colors/cmd_test.go)
+│   │   ├── completion/
+│   │   │   ├── [cmd.go](./src/cmd/completion/cmd.go)
+│   │   │   └── [cmd_test.go](./src/cmd/completion/cmd_test.go)
 │   │   ├── convert/
 │   │   │   ├── base64/
 │   │   │   │   ├── decode/
@@ -588,8 +591,8 @@
 │   │   │   │   ├── [cmd_test.go](./src/cmd/convert/url/cmd_test.go)
 │   │   │   │   ├── [service.go](./src/cmd/convert/url/service.go)
 │   │   │   │   └── [service_test.go](./src/cmd/convert/url/service_test.go)
-│   │   │   ├── [convert_root_cmd.go](./src/cmd/convert/convert_root_cmd.go)
-│   │   │   └── [convert_root_cmd_test.go](./src/cmd/convert/convert_root_cmd_test.go)
+│   │   │   ├── [cmd.go](./src/cmd/convert/cmd.go)
+│   │   │   └── [cmd_test.go](./src/cmd/convert/cmd_test.go)
 │   │   ├── crypto/
 │   │   │   ├── decrypt/
 │   │   │   │   ├── [cmd.go](./src/cmd/crypto/decrypt/cmd.go)
@@ -644,8 +647,8 @@
 │   │   │   │   ├── [cmd_test.go](./src/cmd/crypto/uuid/cmd_test.go)
 │   │   │   │   ├── [service.go](./src/cmd/crypto/uuid/service.go)
 │   │   │   │   └── [service_test.go](./src/cmd/crypto/uuid/service_test.go)
-│   │   │   ├── [crypto_root_cmd.go](./src/cmd/crypto/crypto_root_cmd.go)
-│   │   │   └── [crypto_root_cmd_test.go](./src/cmd/crypto/crypto_root_cmd_test.go)
+│   │   │   ├── [cmd.go](./src/cmd/crypto/cmd.go)
+│   │   │   └── [cmd_test.go](./src/cmd/crypto/cmd_test.go)
 │   │   ├── data/
 │   │   │   ├── csv/
 │   │   │   │   ├── [cmd.go](./src/cmd/data/csv/cmd.go)
@@ -668,8 +671,8 @@
 │   │   │   │   ├── [cmd_test.go](./src/cmd/data/yml/cmd_test.go)
 │   │   │   │   ├── [service.go](./src/cmd/data/yml/service.go)
 │   │   │   │   └── [service_test.go](./src/cmd/data/yml/service_test.go)
-│   │   │   ├── [data_root_cmd.go](./src/cmd/data/data_root_cmd.go)
-│   │   │   └── [data_root_cmd_test.go](./src/cmd/data/data_root_cmd_test.go)
+│   │   │   ├── [cmd.go](./src/cmd/data/cmd.go)
+│   │   │   └── [cmd_test.go](./src/cmd/data/cmd_test.go)
 │   │   ├── docsify/
 │   │   │   ├── cobra/
 │   │   │   │   ├── [cmd.go](./src/cmd/docsify/cobra/cmd.go)
@@ -700,8 +703,8 @@
 │   │   │   │   ├── [cmd_test.go](./src/cmd/docsify/tree/cmd_test.go)
 │   │   │   │   ├── [service.go](./src/cmd/docsify/tree/service.go)
 │   │   │   │   └── [service_test.go](./src/cmd/docsify/tree/service_test.go)
-│   │   │   ├── [docsify_root_cmd.go](./src/cmd/docsify/docsify_root_cmd.go)
-│   │   │   └── [docsify_root_cmd_test.go](./src/cmd/docsify/docsify_root_cmd_test.go)
+│   │   │   ├── [cmd.go](./src/cmd/docsify/cmd.go)
+│   │   │   └── [cmd_test.go](./src/cmd/docsify/cmd_test.go)
 │   │   ├── doi/
 │   │   │   ├── cite/
 │   │   │   │   ├── [cmd.go](./src/cmd/doi/cite/cmd.go)
@@ -733,16 +736,16 @@
 │   │   │   │   ├── [cmd_test.go](./src/cmd/doi/validate/cmd_test.go)
 │   │   │   │   ├── [service.go](./src/cmd/doi/validate/service.go)
 │   │   │   │   └── [service_test.go](./src/cmd/doi/validate/service_test.go)
-│   │   │   ├── [doi_root_cmd.go](./src/cmd/doi/doi_root_cmd.go)
-│   │   │   └── [doi_root_cmd_test.go](./src/cmd/doi/doi_root_cmd_test.go)
+│   │   │   ├── [cmd.go](./src/cmd/doi/cmd.go)
+│   │   │   └── [cmd_test.go](./src/cmd/doi/cmd_test.go)
 │   │   ├── english/
 │   │   │   ├── define/
 │   │   │   │   ├── [cmd.go](./src/cmd/english/define/cmd.go)
 │   │   │   │   ├── [cmd_test.go](./src/cmd/english/define/cmd_test.go)
 │   │   │   │   ├── [service.go](./src/cmd/english/define/service.go)
 │   │   │   │   └── [service_test.go](./src/cmd/english/define/service_test.go)
-│   │   │   ├── [english_root_cmd.go](./src/cmd/english/english_root_cmd.go)
-│   │   │   └── [english_root_cmd_test.go](./src/cmd/english/english_root_cmd_test.go)
+│   │   │   ├── [cmd.go](./src/cmd/english/cmd.go)
+│   │   │   └── [cmd_test.go](./src/cmd/english/cmd_test.go)
 │   │   ├── file/
 │   │   │   ├── checksum/
 │   │   │   │   ├── [cmd.go](./src/cmd/file/checksum/cmd.go)
@@ -772,8 +775,8 @@
 │   │   │   │   ├── [service.go](./src/cmd/file/edit/service.go)
 │   │   │   │   └── [service_test.go](./src/cmd/file/edit/service_test.go)
 │   │   │   ├── grep/
-│   │   │   │   ├── [root_cmd.go](./src/cmd/file/grep/root_cmd.go)
-│   │   │   │   ├── [root_cmd_test.go](./src/cmd/file/grep/root_cmd_test.go)
+│   │   │   │   ├── [cmd.go](./src/cmd/file/grep/cmd.go)
+│   │   │   │   ├── [cmd_test.go](./src/cmd/file/grep/cmd_test.go)
 │   │   │   │   ├── [search_service.go](./src/cmd/file/grep/search_service.go)
 │   │   │   │   ├── [search_service_test.go](./src/cmd/file/grep/search_service_test.go)
 │   │   │   │   ├── [service.go](./src/cmd/file/grep/service.go)
@@ -787,8 +790,8 @@
 │   │   │   │   ├── [service.go](./src/cmd/file/internal/service.go)
 │   │   │   │   └── [service_test.go](./src/cmd/file/internal/service_test.go)
 │   │   │   ├── read/
-│   │   │   │   ├── [root_cmd.go](./src/cmd/file/read/root_cmd.go)
-│   │   │   │   ├── [root_cmd_test.go](./src/cmd/file/read/root_cmd_test.go)
+│   │   │   │   ├── [cmd.go](./src/cmd/file/read/cmd.go)
+│   │   │   │   ├── [cmd_test.go](./src/cmd/file/read/cmd_test.go)
 │   │   │   │   ├── [service.go](./src/cmd/file/read/service.go)
 │   │   │   │   └── [service_test.go](./src/cmd/file/read/service_test.go)
 │   │   │   ├── size/
@@ -812,12 +815,12 @@
 │   │   │   │   ├── [service.go](./src/cmd/file/type/service.go)
 │   │   │   │   └── [service_test.go](./src/cmd/file/type/service_test.go)
 │   │   │   ├── write/
-│   │   │   │   ├── [root_cmd.go](./src/cmd/file/write/root_cmd.go)
-│   │   │   │   ├── [root_cmd_test.go](./src/cmd/file/write/root_cmd_test.go)
+│   │   │   │   ├── [cmd.go](./src/cmd/file/write/cmd.go)
+│   │   │   │   ├── [cmd_test.go](./src/cmd/file/write/cmd_test.go)
 │   │   │   │   ├── [service.go](./src/cmd/file/write/service.go)
 │   │   │   │   └── [service_test.go](./src/cmd/file/write/service_test.go)
-│   │   │   ├── [file_root_cmd.go](./src/cmd/file/file_root_cmd.go)
-│   │   │   └── [file_root_cmd_test.go](./src/cmd/file/file_root_cmd_test.go)
+│   │   │   ├── [cmd.go](./src/cmd/file/cmd.go)
+│   │   │   └── [cmd_test.go](./src/cmd/file/cmd_test.go)
 │   │   ├── games/
 │   │   │   ├── anagram/
 │   │   │   │   ├── [cmd.go](./src/cmd/games/anagram/cmd.go)
@@ -855,8 +858,8 @@
 │   │   │   │   ├── [code_tui.go](./src/cmd/gemini/code/code_tui.go)
 │   │   │   │   ├── [service.go](./src/cmd/gemini/code/service.go)
 │   │   │   │   └── [service_test.go](./src/cmd/gemini/code/service_test.go)
-│   │   │   ├── [gemini_root_cmd.go](./src/cmd/gemini/gemini_root_cmd.go)
-│   │   │   └── [gemini_root_cmd_test.go](./src/cmd/gemini/gemini_root_cmd_test.go)
+│   │   │   ├── [cmd.go](./src/cmd/gemini/cmd.go)
+│   │   │   └── [cmd_test.go](./src/cmd/gemini/cmd_test.go)
 │   │   ├── gh/
 │   │   │   ├── coc/
 │   │   │   │   ├── [cmd.go](./src/cmd/gh/coc/cmd.go)
@@ -889,8 +892,8 @@
 │   │   │   │   ├── [fetch.go](./src/cmd/gh/shared/fetch.go)
 │   │   │   │   ├── [mock.go](./src/cmd/gh/shared/mock.go)
 │   │   │   │   └── [shared_test.go](./src/cmd/gh/shared/shared_test.go)
-│   │   │   ├── [gh_root_cmd.go](./src/cmd/gh/gh_root_cmd.go)
-│   │   │   └── [gh_root_cmd_test.go](./src/cmd/gh/gh_root_cmd_test.go)
+│   │   │   ├── [cmd.go](./src/cmd/gh/cmd.go)
+│   │   │   └── [cmd_test.go](./src/cmd/gh/cmd_test.go)
 │   │   ├── history/
 │   │   │   ├── clear/
 │   │   │   │   ├── [cmd.go](./src/cmd/history/clear/cmd.go)
@@ -914,8 +917,8 @@
 │   │   │   │   └── [service_test.go](./src/cmd/history/stats/service_test.go)
 │   │   │   ├── testutil/
 │   │   │   │   └── [testutil.go](./src/cmd/history/testutil/testutil.go)
-│   │   │   ├── [history_root_cmd.go](./src/cmd/history/history_root_cmd.go)
-│   │   │   └── [history_root_cmd_test.go](./src/cmd/history/history_root_cmd_test.go)
+│   │   │   ├── [cmd.go](./src/cmd/history/cmd.go)
+│   │   │   └── [cmd_test.go](./src/cmd/history/cmd_test.go)
 │   │   ├── image/
 │   │   │   ├── convert/
 │   │   │   │   ├── [cmd.go](./src/cmd/image/convert/cmd.go)
@@ -939,8 +942,8 @@
 │   │   │   │   └── [service_test.go](./src/cmd/image/info/service_test.go)
 │   │   │   ├── testutil/
 │   │   │   │   └── [testutil.go](./src/cmd/image/testutil/testutil.go)
-│   │   │   ├── [image_root_cmd.go](./src/cmd/image/image_root_cmd.go)
-│   │   │   └── [image_root_cmd_test.go](./src/cmd/image/image_root_cmd_test.go)
+│   │   │   ├── [cmd.go](./src/cmd/image/cmd.go)
+│   │   │   └── [cmd_test.go](./src/cmd/image/cmd_test.go)
 │   │   ├── mcp/
 │   │   │   ├── serve/
 │   │   │   │   ├── [cmd.go](./src/cmd/mcp/serve/cmd.go)
@@ -952,8 +955,8 @@
 │   │   │   │   ├── [schema_service.go](./src/cmd/mcp/serve/schema_service.go)
 │   │   │   │   ├── [schema_service_test.go](./src/cmd/mcp/serve/schema_service_test.go)
 │   │   │   │   └── [service.go](./src/cmd/mcp/serve/service.go)
-│   │   │   ├── [mcp_root_cmd.go](./src/cmd/mcp/mcp_root_cmd.go)
-│   │   │   └── [mcp_root_cmd_test.go](./src/cmd/mcp/mcp_root_cmd_test.go)
+│   │   │   ├── [cmd.go](./src/cmd/mcp/cmd.go)
+│   │   │   └── [cmd_test.go](./src/cmd/mcp/cmd_test.go)
 │   │   ├── net/
 │   │   │   ├── cert/
 │   │   │   │   ├── check/
@@ -1015,8 +1018,8 @@
 │   │   │   │   ├── [service_darwin.go](./src/cmd/net/wifi/service_darwin.go)
 │   │   │   │   ├── [service_linux.go](./src/cmd/net/wifi/service_linux.go)
 │   │   │   │   └── [service_test.go](./src/cmd/net/wifi/service_test.go)
-│   │   │   ├── [net_root_cmd.go](./src/cmd/net/net_root_cmd.go)
-│   │   │   └── [net_root_cmd_test.go](./src/cmd/net/net_root_cmd_test.go)
+│   │   │   ├── [cmd.go](./src/cmd/net/cmd.go)
+│   │   │   └── [cmd_test.go](./src/cmd/net/cmd_test.go)
 │   │   ├── openapi/
 │   │   │   ├── internal/
 │   │   │   │   ├── [service.go](./src/cmd/openapi/internal/service.go)
@@ -1031,8 +1034,8 @@
 │   │   │   │   ├── [cmd_test.go](./src/cmd/openapi/validate/cmd_test.go)
 │   │   │   │   ├── [service.go](./src/cmd/openapi/validate/service.go)
 │   │   │   │   └── [service_test.go](./src/cmd/openapi/validate/service_test.go)
-│   │   │   ├── [openapi_root_cmd.go](./src/cmd/openapi/openapi_root_cmd.go)
-│   │   │   └── [openapi_root_cmd_test.go](./src/cmd/openapi/openapi_root_cmd_test.go)
+│   │   │   ├── [cmd.go](./src/cmd/openapi/cmd.go)
+│   │   │   └── [cmd_test.go](./src/cmd/openapi/cmd_test.go)
 │   │   ├── openrouter/
 │   │   │   ├── code/
 │   │   │   │   ├── [cmd.go](./src/cmd/openrouter/code/cmd.go)
@@ -1063,8 +1066,8 @@
 │   │   │   │   ├── [cmd.go](./src/cmd/openrouter/status/cmd.go)
 │   │   │   │   ├── [cmd_test.go](./src/cmd/openrouter/status/cmd_test.go)
 │   │   │   │   └── [service.go](./src/cmd/openrouter/status/service.go)
-│   │   │   ├── [openrouter_root_cmd.go](./src/cmd/openrouter/openrouter_root_cmd.go)
-│   │   │   └── [openrouter_root_cmd_test.go](./src/cmd/openrouter/openrouter_root_cmd_test.go)
+│   │   │   ├── [cmd.go](./src/cmd/openrouter/cmd.go)
+│   │   │   └── [cmd_test.go](./src/cmd/openrouter/cmd_test.go)
 │   │   ├── port/
 │   │   │   ├── check/
 │   │   │   │   ├── [cmd.go](./src/cmd/port/check/cmd.go)
@@ -1086,8 +1089,8 @@
 │   │   │   │   └── [service_test.go](./src/cmd/port/scan/service_test.go)
 │   │   │   ├── testutil/
 │   │   │   │   └── [testutil.go](./src/cmd/port/testutil/testutil.go)
-│   │   │   ├── [port_root_cmd.go](./src/cmd/port/port_root_cmd.go)
-│   │   │   └── [port_root_cmd_test.go](./src/cmd/port/port_root_cmd_test.go)
+│   │   │   ├── [cmd.go](./src/cmd/port/cmd.go)
+│   │   │   └── [cmd_test.go](./src/cmd/port/cmd_test.go)
 │   │   ├── search/
 │   │   │   ├── code/
 │   │   │   │   ├── [cmd.go](./src/cmd/search/code/cmd.go)
@@ -1117,8 +1120,8 @@
 │   │   │   │   ├── [cmd_test.go](./src/cmd/search/web/cmd_test.go)
 │   │   │   │   ├── [service.go](./src/cmd/search/web/service.go)
 │   │   │   │   └── [service_test.go](./src/cmd/search/web/service_test.go)
-│   │   │   ├── [search_root_cmd.go](./src/cmd/search/search_root_cmd.go)
-│   │   │   └── [search_root_cmd_test.go](./src/cmd/search/search_root_cmd_test.go)
+│   │   │   ├── [cmd.go](./src/cmd/search/cmd.go)
+│   │   │   └── [cmd_test.go](./src/cmd/search/cmd_test.go)
 │   │   ├── semver/
 │   │   │   ├── compare/
 │   │   │   │   ├── [cmd.go](./src/cmd/semver/compare/cmd.go)
@@ -1138,8 +1141,8 @@
 │   │   │   ├── version/
 │   │   │   │   ├── [version.go](./src/cmd/semver/version/version.go)
 │   │   │   │   └── [version_test.go](./src/cmd/semver/version/version_test.go)
-│   │   │   ├── [semver_root_cmd.go](./src/cmd/semver/semver_root_cmd.go)
-│   │   │   └── [semver_root_cmd_test.go](./src/cmd/semver/semver_root_cmd_test.go)
+│   │   │   ├── [cmd.go](./src/cmd/semver/cmd.go)
+│   │   │   └── [cmd_test.go](./src/cmd/semver/cmd_test.go)
 │   │   ├── system/
 │   │   │   ├── battery/
 │   │   │   │   ├── [cmd.go](./src/cmd/system/battery/cmd.go)
@@ -1184,8 +1187,8 @@
 │   │   │   │   └── [service_test.go](./src/cmd/system/path/service_test.go)
 │   │   │   ├── testutil/
 │   │   │   │   └── [testutil.go](./src/cmd/system/testutil/testutil.go)
-│   │   │   ├── [system_root_cmd.go](./src/cmd/system/system_root_cmd.go)
-│   │   │   └── [system_root_cmd_test.go](./src/cmd/system/system_root_cmd_test.go)
+│   │   │   ├── [cmd.go](./src/cmd/system/cmd.go)
+│   │   │   └── [cmd_test.go](./src/cmd/system/cmd_test.go)
 │   │   ├── telegram/
 │   │   │   ├── bot/
 │   │   │   │   ├── get_me/
@@ -1535,8 +1538,8 @@
 │   │   │   │   │   └── [service_test.go](./src/cmd/telegram/webhook/set/service_test.go)
 │   │   │   │   ├── [parent.go](./src/cmd/telegram/webhook/parent.go)
 │   │   │   │   └── [parent_test.go](./src/cmd/telegram/webhook/parent_test.go)
-│   │   │   ├── [telegram_root_cmd.go](./src/cmd/telegram/telegram_root_cmd.go)
-│   │   │   └── [telegram_root_cmd_test.go](./src/cmd/telegram/telegram_root_cmd_test.go)
+│   │   │   ├── [cmd.go](./src/cmd/telegram/cmd.go)
+│   │   │   └── [cmd_test.go](./src/cmd/telegram/cmd_test.go)
 │   │   ├── time/
 │   │   │   ├── age/
 │   │   │   │   ├── [cmd.go](./src/cmd/time/age/cmd.go)
@@ -1594,8 +1597,8 @@
 │   │   │   │   ├── [cmd_test.go](./src/cmd/time/world/cmd_test.go)
 │   │   │   │   ├── [service.go](./src/cmd/time/world/service.go)
 │   │   │   │   └── [service_test.go](./src/cmd/time/world/service_test.go)
-│   │   │   ├── [time_root_cmd.go](./src/cmd/time/time_root_cmd.go)
-│   │   │   └── [time_root_cmd_test.go](./src/cmd/time/time_root_cmd_test.go)
+│   │   │   ├── [cmd.go](./src/cmd/time/cmd.go)
+│   │   │   └── [cmd_test.go](./src/cmd/time/cmd_test.go)
 │   │   ├── version/
 │   │   │   ├── [cmd.go](./src/cmd/version/cmd.go)
 │   │   │   ├── [cmd_test.go](./src/cmd/version/cmd_test.go)
@@ -1662,11 +1665,9 @@
 │   │   │   │   │   └── [types.go](./src/cmd/web/youtube/transcript/types.go)
 │   │   │   │   ├── [cmd.go](./src/cmd/web/youtube/cmd.go)
 │   │   │   │   └── [cmd_test.go](./src/cmd/web/youtube/cmd_test.go)
-│   │   │   ├── [web_root_cmd.go](./src/cmd/web/web_root_cmd.go)
-│   │   │   └── [web_root_cmd_test.go](./src/cmd/web/web_root_cmd_test.go)
+│   │   │   ├── [cmd.go](./src/cmd/web/cmd.go)
+│   │   │   └── [cmd_test.go](./src/cmd/web/cmd_test.go)
 │   │   ├── [root.go](./src/cmd/root.go)
-│   │   ├── [root_completion_cmd.go](./src/cmd/root_completion_cmd.go)
-│   │   ├── [root_completion_cmd_test.go](./src/cmd/root_completion_cmd_test.go)
 │   │   └── [root_test.go](./src/cmd/root_test.go)
 │   ├── data/
 │   │   └── [countries.go](./src/data/countries.go)
@@ -1709,4 +1710,4 @@
 └── [main.go](./main.go)
 ```
 
-399 directories, 1307 files
+400 directories, 1307 files
