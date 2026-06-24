@@ -45,6 +45,7 @@
 │   │   │   │   ├── [cmd.go](./src/cmd/calc/eval/cmd.go)
 │   │   │   │   ├── [cmd_test.go](./src/cmd/calc/eval/cmd_test.go)
 │   │   │   │   ├── [evaluator.go](./src/cmd/calc/eval/evaluator.go)
+│   │   │   │   ├── [evaluator_test.go](./src/cmd/calc/eval/evaluator_test.go)
 │   │   │   │   ├── [service.go](./src/cmd/calc/eval/service.go)
 │   │   │   │   └── [service_test.go](./src/cmd/calc/eval/service_test.go)
 │   │   │   ├── factorial/
@@ -59,8 +60,11 @@
 │   │   │   │   └── [service_test.go](./src/cmd/calc/gcd/service_test.go)
 │   │   │   ├── internal/
 │   │   │   │   ├── [finance.go](./src/cmd/calc/internal/finance.go)
+│   │   │   │   ├── [finance_test.go](./src/cmd/calc/internal/finance_test.go)
 │   │   │   │   ├── [math.go](./src/cmd/calc/internal/math.go)
-│   │   │   │   └── [testutil.go](./src/cmd/calc/internal/testutil.go)
+│   │   │   │   ├── [math_test.go](./src/cmd/calc/internal/math_test.go)
+│   │   │   │   ├── [testutil.go](./src/cmd/calc/internal/testutil.go)
+│   │   │   │   └── [testutil_test.go](./src/cmd/calc/internal/testutil_test.go)
 │   │   │   ├── lcm/
 │   │   │   │   ├── [cmd.go](./src/cmd/calc/lcm/cmd.go)
 │   │   │   │   ├── [cmd_test.go](./src/cmd/calc/lcm/cmd_test.go)
@@ -110,6 +114,7 @@
 │   │   │   │   ├── [cmd.go](./src/cmd/calc/unit/cmd.go)
 │   │   │   │   ├── [cmd_test.go](./src/cmd/calc/unit/cmd_test.go)
 │   │   │   │   ├── [conversion.go](./src/cmd/calc/unit/conversion.go)
+│   │   │   │   ├── [conversion_test.go](./src/cmd/calc/unit/conversion_test.go)
 │   │   │   │   ├── [service.go](./src/cmd/calc/unit/service.go)
 │   │   │   │   └── [service_test.go](./src/cmd/calc/unit/service_test.go)
 │   │   │   ├── [cmd.go](./src/cmd/calc/cmd.go)
@@ -121,7 +126,8 @@
 │   │   │   │   │   ├── [cmd_test.go](./src/cmd/casino/baccarat/play/cmd_test.go)
 │   │   │   │   │   ├── [service.go](./src/cmd/casino/baccarat/play/service.go)
 │   │   │   │   │   ├── [service_test.go](./src/cmd/casino/baccarat/play/service_test.go)
-│   │   │   │   │   └── [tui.go](./src/cmd/casino/baccarat/play/tui.go)
+│   │   │   │   │   ├── [tui.go](./src/cmd/casino/baccarat/play/tui.go)
+│   │   │   │   │   └── [tui_test.go](./src/cmd/casino/baccarat/play/tui_test.go)
 │   │   │   │   ├── rules/
 │   │   │   │   │   ├── [rules.go](./src/cmd/casino/baccarat/rules/rules.go)
 │   │   │   │   │   └── [rules_test.go](./src/cmd/casino/baccarat/rules/rules_test.go)
@@ -130,7 +136,8 @@
 │   │   │   │   │   ├── [cmd_test.go](./src/cmd/casino/baccarat/strategy/cmd_test.go)
 │   │   │   │   │   ├── [service.go](./src/cmd/casino/baccarat/strategy/service.go)
 │   │   │   │   │   └── [service_test.go](./src/cmd/casino/baccarat/strategy/service_test.go)
-│   │   │   │   └── [cmd.go](./src/cmd/casino/baccarat/cmd.go)
+│   │   │   │   ├── [cmd.go](./src/cmd/casino/baccarat/cmd.go)
+│   │   │   │   └── [cmd_test.go](./src/cmd/casino/baccarat/cmd_test.go)
 │   │   │   ├── blackjack/
 │   │   │   │   ├── cheatsheet/
 │   │   │   │   │   ├── [cmd.go](./src/cmd/casino/blackjack/cheatsheet/cmd.go)
@@ -147,20 +154,27 @@
 │   │   │   │   │   ├── [cmd_test.go](./src/cmd/casino/blackjack/play/cmd_test.go)
 │   │   │   │   │   ├── [service.go](./src/cmd/casino/blackjack/play/service.go)
 │   │   │   │   │   ├── [service_test.go](./src/cmd/casino/blackjack/play/service_test.go)
-│   │   │   │   │   └── [tui.go](./src/cmd/casino/blackjack/play/tui.go)
-│   │   │   │   └── [cmd.go](./src/cmd/casino/blackjack/cmd.go)
+│   │   │   │   │   ├── [tui.go](./src/cmd/casino/blackjack/play/tui.go)
+│   │   │   │   │   └── [tui_test.go](./src/cmd/casino/blackjack/play/tui_test.go)
+│   │   │   │   ├── [cmd.go](./src/cmd/casino/blackjack/cmd.go)
+│   │   │   │   └── [cmd_test.go](./src/cmd/casino/blackjack/cmd_test.go)
 │   │   │   ├── coin/
 │   │   │   │   ├── [cmd.go](./src/cmd/casino/coin/cmd.go)
-│   │   │   │   └── [service.go](./src/cmd/casino/coin/service.go)
+│   │   │   │   ├── [cmd_test.go](./src/cmd/casino/coin/cmd_test.go)
+│   │   │   │   ├── [service.go](./src/cmd/casino/coin/service.go)
+│   │   │   │   └── [service_test.go](./src/cmd/casino/coin/service_test.go)
 │   │   │   ├── dice/
 │   │   │   │   ├── [cmd.go](./src/cmd/casino/dice/cmd.go)
-│   │   │   │   └── [service.go](./src/cmd/casino/dice/service.go)
+│   │   │   │   ├── [cmd_test.go](./src/cmd/casino/dice/cmd_test.go)
+│   │   │   │   ├── [service.go](./src/cmd/casino/dice/service.go)
+│   │   │   │   └── [service_test.go](./src/cmd/casino/dice/service_test.go)
 │   │   │   ├── internal/
 │   │   │   │   ├── [card.go](./src/cmd/casino/internal/card.go)
 │   │   │   │   ├── [card_test.go](./src/cmd/casino/internal/card_test.go)
 │   │   │   │   ├── [deck.go](./src/cmd/casino/internal/deck.go)
 │   │   │   │   ├── [deck_test.go](./src/cmd/casino/internal/deck_test.go)
-│   │   │   │   └── [display.go](./src/cmd/casino/internal/display.go)
+│   │   │   │   ├── [display.go](./src/cmd/casino/internal/display.go)
+│   │   │   │   └── [display_test.go](./src/cmd/casino/internal/display_test.go)
 │   │   │   ├── poker/
 │   │   │   │   ├── hand/
 │   │   │   │   │   ├── [eval.go](./src/cmd/casino/poker/hand/eval.go)
@@ -176,14 +190,20 @@
 │   │   │   │   │   ├── [cmd_test.go](./src/cmd/casino/poker/play/cmd_test.go)
 │   │   │   │   │   ├── [service.go](./src/cmd/casino/poker/play/service.go)
 │   │   │   │   │   ├── [service_test.go](./src/cmd/casino/poker/play/service_test.go)
-│   │   │   │   │   └── [tui.go](./src/cmd/casino/poker/play/tui.go)
-│   │   │   │   └── [cmd.go](./src/cmd/casino/poker/cmd.go)
+│   │   │   │   │   ├── [tui.go](./src/cmd/casino/poker/play/tui.go)
+│   │   │   │   │   └── [tui_test.go](./src/cmd/casino/poker/play/tui_test.go)
+│   │   │   │   ├── [cmd.go](./src/cmd/casino/poker/cmd.go)
+│   │   │   │   └── [cmd_test.go](./src/cmd/casino/poker/cmd_test.go)
 │   │   │   ├── roulette/
 │   │   │   │   ├── [cmd.go](./src/cmd/casino/roulette/cmd.go)
-│   │   │   │   └── [service.go](./src/cmd/casino/roulette/service.go)
+│   │   │   │   ├── [cmd_test.go](./src/cmd/casino/roulette/cmd_test.go)
+│   │   │   │   ├── [service.go](./src/cmd/casino/roulette/service.go)
+│   │   │   │   └── [service_test.go](./src/cmd/casino/roulette/service_test.go)
 │   │   │   ├── slots/
 │   │   │   │   ├── [cmd.go](./src/cmd/casino/slots/cmd.go)
-│   │   │   │   └── [service.go](./src/cmd/casino/slots/service.go)
+│   │   │   │   ├── [cmd_test.go](./src/cmd/casino/slots/cmd_test.go)
+│   │   │   │   ├── [service.go](./src/cmd/casino/slots/service.go)
+│   │   │   │   └── [service_test.go](./src/cmd/casino/slots/service_test.go)
 │   │   │   ├── [cmd.go](./src/cmd/casino/cmd.go)
 │   │   │   └── [cmd_test.go](./src/cmd/casino/cmd_test.go)
 │   │   ├── chess/
@@ -191,172 +211,238 @@
 │   │   │   │   ├── club/
 │   │   │   │   │   ├── matches/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/chess.com/club/matches/cmd.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/chess.com/club/matches/service.go)
+│   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/chess.com/club/matches/cmd_test.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/chess.com/club/matches/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/chess.com/club/matches/service_test.go)
 │   │   │   │   │   ├── members/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/chess.com/club/members/cmd.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/chess.com/club/members/service.go)
+│   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/chess.com/club/members/cmd_test.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/chess.com/club/members/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/chess.com/club/members/service_test.go)
 │   │   │   │   │   ├── profile/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/chess.com/club/profile/cmd.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/chess.com/club/profile/service.go)
+│   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/chess.com/club/profile/cmd_test.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/chess.com/club/profile/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/chess.com/club/profile/service_test.go)
 │   │   │   │   │   ├── [parent.go](./src/cmd/chess/chess.com/club/parent.go)
 │   │   │   │   │   └── [parent_test.go](./src/cmd/chess/chess.com/club/parent_test.go)
 │   │   │   │   ├── country/
 │   │   │   │   │   ├── clubs/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/chess.com/country/clubs/cmd.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/chess.com/country/clubs/service.go)
+│   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/chess.com/country/clubs/cmd_test.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/chess.com/country/clubs/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/chess.com/country/clubs/service_test.go)
 │   │   │   │   │   ├── players/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/chess.com/country/players/cmd.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/chess.com/country/players/service.go)
+│   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/chess.com/country/players/cmd_test.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/chess.com/country/players/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/chess.com/country/players/service_test.go)
 │   │   │   │   │   ├── profile/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/chess.com/country/profile/cmd.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/chess.com/country/profile/service.go)
+│   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/chess.com/country/profile/cmd_test.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/chess.com/country/profile/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/chess.com/country/profile/service_test.go)
 │   │   │   │   │   ├── [parent.go](./src/cmd/chess/chess.com/country/parent.go)
 │   │   │   │   │   └── [parent_test.go](./src/cmd/chess/chess.com/country/parent_test.go)
 │   │   │   │   ├── leaderboards/
 │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/chess.com/leaderboards/cmd.go)
+│   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/chess.com/leaderboards/cmd_test.go)
 │   │   │   │   │   ├── [service.go](./src/cmd/chess/chess.com/leaderboards/service.go)
 │   │   │   │   │   └── [service_test.go](./src/cmd/chess/chess.com/leaderboards/service_test.go)
 │   │   │   │   ├── match/
 │   │   │   │   │   ├── daily/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/chess.com/match/daily/cmd.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/chess.com/match/daily/service.go)
+│   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/chess.com/match/daily/cmd_test.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/chess.com/match/daily/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/chess.com/match/daily/service_test.go)
 │   │   │   │   │   ├── daily-board/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/chess.com/match/daily-board/cmd.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/chess.com/match/daily-board/service.go)
+│   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/chess.com/match/daily-board/cmd_test.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/chess.com/match/daily-board/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/chess.com/match/daily-board/service_test.go)
 │   │   │   │   │   ├── internal/
-│   │   │   │   │   │   └── [types.go](./src/cmd/chess/chess.com/match/internal/types.go)
+│   │   │   │   │   │   ├── [types.go](./src/cmd/chess/chess.com/match/internal/types.go)
+│   │   │   │   │   │   └── [types_test.go](./src/cmd/chess/chess.com/match/internal/types_test.go)
 │   │   │   │   │   ├── live/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/chess.com/match/live/cmd.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/chess.com/match/live/service.go)
+│   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/chess.com/match/live/cmd_test.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/chess.com/match/live/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/chess.com/match/live/service_test.go)
 │   │   │   │   │   ├── live-board/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/chess.com/match/live-board/cmd.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/chess.com/match/live-board/service.go)
+│   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/chess.com/match/live-board/cmd_test.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/chess.com/match/live-board/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/chess.com/match/live-board/service_test.go)
 │   │   │   │   │   ├── [parent.go](./src/cmd/chess/chess.com/match/parent.go)
 │   │   │   │   │   ├── [parent_test.go](./src/cmd/chess/chess.com/match/parent_test.go)
-│   │   │   │   │   └── [types.go](./src/cmd/chess/chess.com/match/types.go)
+│   │   │   │   │   ├── [types.go](./src/cmd/chess/chess.com/match/types.go)
+│   │   │   │   │   └── [types_test.go](./src/cmd/chess/chess.com/match/types_test.go)
 │   │   │   │   ├── player/
 │   │   │   │   │   ├── archive/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/chess.com/player/archive/cmd.go)
 │   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/chess.com/player/archive/cmd_test.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/chess.com/player/archive/service.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/chess.com/player/archive/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/chess.com/player/archive/service_test.go)
 │   │   │   │   │   ├── archives/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/chess.com/player/archives/cmd.go)
 │   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/chess.com/player/archives/cmd_test.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/chess.com/player/archives/service.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/chess.com/player/archives/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/chess.com/player/archives/service_test.go)
 │   │   │   │   │   ├── clubs/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/chess.com/player/clubs/cmd.go)
 │   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/chess.com/player/clubs/cmd_test.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/chess.com/player/clubs/service.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/chess.com/player/clubs/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/chess.com/player/clubs/service_test.go)
 │   │   │   │   │   ├── games/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/chess.com/player/games/cmd.go)
 │   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/chess.com/player/games/cmd_test.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/chess.com/player/games/service.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/chess.com/player/games/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/chess.com/player/games/service_test.go)
 │   │   │   │   │   ├── live/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/chess.com/player/live/cmd.go)
 │   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/chess.com/player/live/cmd_test.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/chess.com/player/live/service.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/chess.com/player/live/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/chess.com/player/live/service_test.go)
 │   │   │   │   │   ├── matches/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/chess.com/player/matches/cmd.go)
 │   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/chess.com/player/matches/cmd_test.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/chess.com/player/matches/service.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/chess.com/player/matches/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/chess.com/player/matches/service_test.go)
 │   │   │   │   │   ├── online/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/chess.com/player/online/cmd.go)
 │   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/chess.com/player/online/cmd_test.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/chess.com/player/online/service.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/chess.com/player/online/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/chess.com/player/online/service_test.go)
 │   │   │   │   │   ├── pgn/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/chess.com/player/pgn/cmd.go)
 │   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/chess.com/player/pgn/cmd_test.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/chess.com/player/pgn/service.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/chess.com/player/pgn/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/chess.com/player/pgn/service_test.go)
 │   │   │   │   │   ├── profile/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/chess.com/player/profile/cmd.go)
 │   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/chess.com/player/profile/cmd_test.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/chess.com/player/profile/service.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/chess.com/player/profile/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/chess.com/player/profile/service_test.go)
 │   │   │   │   │   ├── stats/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/chess.com/player/stats/cmd.go)
 │   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/chess.com/player/stats/cmd_test.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/chess.com/player/stats/service.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/chess.com/player/stats/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/chess.com/player/stats/service_test.go)
 │   │   │   │   │   ├── to_move/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/chess.com/player/to_move/cmd.go)
 │   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/chess.com/player/to_move/cmd_test.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/chess.com/player/to_move/service.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/chess.com/player/to_move/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/chess.com/player/to_move/service_test.go)
 │   │   │   │   │   ├── tournaments/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/chess.com/player/tournaments/cmd.go)
 │   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/chess.com/player/tournaments/cmd_test.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/chess.com/player/tournaments/service.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/chess.com/player/tournaments/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/chess.com/player/tournaments/service_test.go)
 │   │   │   │   │   ├── [parent.go](./src/cmd/chess/chess.com/player/parent.go)
 │   │   │   │   │   └── [parent_test.go](./src/cmd/chess/chess.com/player/parent_test.go)
 │   │   │   │   ├── puzzle/
 │   │   │   │   │   ├── daily/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/chess.com/puzzle/daily/cmd.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/chess.com/puzzle/daily/service.go)
+│   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/chess.com/puzzle/daily/cmd_test.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/chess.com/puzzle/daily/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/chess.com/puzzle/daily/service_test.go)
 │   │   │   │   │   ├── random/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/chess.com/puzzle/random/cmd.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/chess.com/puzzle/random/service.go)
+│   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/chess.com/puzzle/random/cmd_test.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/chess.com/puzzle/random/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/chess.com/puzzle/random/service_test.go)
 │   │   │   │   │   ├── [parent.go](./src/cmd/chess/chess.com/puzzle/parent.go)
 │   │   │   │   │   └── [parent_test.go](./src/cmd/chess/chess.com/puzzle/parent_test.go)
 │   │   │   │   ├── streamer/
 │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/chess.com/streamer/cmd.go)
 │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/chess.com/streamer/cmd_test.go)
-│   │   │   │   │   └── [service.go](./src/cmd/chess/chess.com/streamer/service.go)
+│   │   │   │   │   ├── [service.go](./src/cmd/chess/chess.com/streamer/service.go)
+│   │   │   │   │   └── [service_test.go](./src/cmd/chess/chess.com/streamer/service_test.go)
 │   │   │   │   ├── titled/
 │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/chess.com/titled/cmd.go)
-│   │   │   │   │   └── [service.go](./src/cmd/chess/chess.com/titled/service.go)
+│   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/chess.com/titled/cmd_test.go)
+│   │   │   │   │   ├── [service.go](./src/cmd/chess/chess.com/titled/service.go)
+│   │   │   │   │   └── [service_test.go](./src/cmd/chess/chess.com/titled/service_test.go)
 │   │   │   │   ├── tournament/
 │   │   │   │   │   ├── group/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/chess.com/tournament/group/cmd.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/chess.com/tournament/group/service.go)
+│   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/chess.com/tournament/group/cmd_test.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/chess.com/tournament/group/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/chess.com/tournament/group/service_test.go)
 │   │   │   │   │   ├── info/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/chess.com/tournament/info/cmd.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/chess.com/tournament/info/service.go)
+│   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/chess.com/tournament/info/cmd_test.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/chess.com/tournament/info/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/chess.com/tournament/info/service_test.go)
 │   │   │   │   │   ├── round/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/chess.com/tournament/round/cmd.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/chess.com/tournament/round/service.go)
+│   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/chess.com/tournament/round/cmd_test.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/chess.com/tournament/round/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/chess.com/tournament/round/service_test.go)
 │   │   │   │   │   ├── [parent.go](./src/cmd/chess/chess.com/tournament/parent.go)
 │   │   │   │   │   └── [parent_test.go](./src/cmd/chess/chess.com/tournament/parent_test.go)
-│   │   │   │   └── [parent.go](./src/cmd/chess/chess.com/parent.go)
+│   │   │   │   ├── [parent.go](./src/cmd/chess/chess.com/parent.go)
+│   │   │   │   └── [parent_test.go](./src/cmd/chess/chess.com/parent_test.go)
 │   │   │   ├── chess960/
 │   │   │   │   ├── random/
 │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/chess960/random/cmd.go)
 │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/chess960/random/cmd_test.go)
 │   │   │   │   │   ├── [positions.go](./src/cmd/chess/chess960/random/positions.go)
-│   │   │   │   │   └── [service.go](./src/cmd/chess/chess960/random/service.go)
+│   │   │   │   │   ├── [positions_test.go](./src/cmd/chess/chess960/random/positions_test.go)
+│   │   │   │   │   ├── [service.go](./src/cmd/chess/chess960/random/service.go)
+│   │   │   │   │   └── [service_test.go](./src/cmd/chess/chess960/random/service_test.go)
 │   │   │   │   ├── validate/
 │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/chess960/validate/cmd.go)
 │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/chess960/validate/cmd_test.go)
-│   │   │   │   │   └── [service.go](./src/cmd/chess/chess960/validate/service.go)
+│   │   │   │   │   ├── [service.go](./src/cmd/chess/chess960/validate/service.go)
+│   │   │   │   │   └── [service_test.go](./src/cmd/chess/chess960/validate/service_test.go)
 │   │   │   │   ├── [parent.go](./src/cmd/chess/chess960/parent.go)
 │   │   │   │   └── [parent_test.go](./src/cmd/chess/chess960/parent_test.go)
 │   │   │   ├── elo/
 │   │   │   │   ├── change/
 │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/elo/change/cmd.go)
-│   │   │   │   │   └── [service.go](./src/cmd/chess/elo/change/service.go)
+│   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/elo/change/cmd_test.go)
+│   │   │   │   │   ├── [service.go](./src/cmd/chess/elo/change/service.go)
+│   │   │   │   │   └── [service_test.go](./src/cmd/chess/elo/change/service_test.go)
 │   │   │   │   ├── diff/
 │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/elo/diff/cmd.go)
-│   │   │   │   │   └── [service.go](./src/cmd/chess/elo/diff/service.go)
+│   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/elo/diff/cmd_test.go)
+│   │   │   │   │   ├── [service.go](./src/cmd/chess/elo/diff/service.go)
+│   │   │   │   │   └── [service_test.go](./src/cmd/chess/elo/diff/service_test.go)
 │   │   │   │   ├── expected/
 │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/elo/expected/cmd.go)
-│   │   │   │   │   └── [service.go](./src/cmd/chess/elo/expected/service.go)
+│   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/elo/expected/cmd_test.go)
+│   │   │   │   │   ├── [service.go](./src/cmd/chess/elo/expected/service.go)
+│   │   │   │   │   └── [service_test.go](./src/cmd/chess/elo/expected/service_test.go)
 │   │   │   │   ├── internal/
 │   │   │   │   │   ├── [math.go](./src/cmd/chess/elo/internal/math.go)
 │   │   │   │   │   └── [math_test.go](./src/cmd/chess/elo/internal/math_test.go)
 │   │   │   │   ├── required/
 │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/elo/required/cmd.go)
-│   │   │   │   │   └── [service.go](./src/cmd/chess/elo/required/service.go)
+│   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/elo/required/cmd_test.go)
+│   │   │   │   │   ├── [service.go](./src/cmd/chess/elo/required/service.go)
+│   │   │   │   │   └── [service_test.go](./src/cmd/chess/elo/required/service_test.go)
 │   │   │   │   ├── tournament/
 │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/elo/tournament/cmd.go)
-│   │   │   │   │   └── [service.go](./src/cmd/chess/elo/tournament/service.go)
+│   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/elo/tournament/cmd_test.go)
+│   │   │   │   │   ├── [service.go](./src/cmd/chess/elo/tournament/service.go)
+│   │   │   │   │   └── [service_test.go](./src/cmd/chess/elo/tournament/service_test.go)
 │   │   │   │   ├── tpr/
 │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/elo/tpr/cmd.go)
-│   │   │   │   │   └── [service.go](./src/cmd/chess/elo/tpr/service.go)
+│   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/elo/tpr/cmd_test.go)
+│   │   │   │   │   ├── [service.go](./src/cmd/chess/elo/tpr/service.go)
+│   │   │   │   │   └── [service_test.go](./src/cmd/chess/elo/tpr/service_test.go)
 │   │   │   │   ├── [cmd.go](./src/cmd/chess/elo/cmd.go)
 │   │   │   │   └── [cmd_test.go](./src/cmd/chess/elo/cmd_test.go)
 │   │   │   ├── engine/
-│   │   │   │   └── [game.go](./src/cmd/chess/engine/game.go)
+│   │   │   │   ├── [game.go](./src/cmd/chess/engine/game.go)
+│   │   │   │   └── [game_test.go](./src/cmd/chess/engine/game_test.go)
 │   │   │   ├── fen/
 │   │   │   │   ├── eval/
 │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/fen/eval/cmd.go)
 │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/fen/eval/cmd_test.go)
-│   │   │   │   │   └── [service.go](./src/cmd/chess/fen/eval/service.go)
+│   │   │   │   │   ├── [service.go](./src/cmd/chess/fen/eval/service.go)
+│   │   │   │   │   └── [service_test.go](./src/cmd/chess/fen/eval/service_test.go)
 │   │   │   │   ├── svg/
 │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/fen/svg/cmd.go)
 │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/fen/svg/cmd_test.go)
@@ -367,77 +453,125 @@
 │   │   │   ├── lichess.org/
 │   │   │   │   ├── crosstable/
 │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/lichess.org/crosstable/cmd.go)
-│   │   │   │   │   └── [service.go](./src/cmd/chess/lichess.org/crosstable/service.go)
+│   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/lichess.org/crosstable/cmd_test.go)
+│   │   │   │   │   ├── [service.go](./src/cmd/chess/lichess.org/crosstable/service.go)
+│   │   │   │   │   └── [service_test.go](./src/cmd/chess/lichess.org/crosstable/service_test.go)
 │   │   │   │   ├── game/
 │   │   │   │   │   ├── export/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/lichess.org/game/export/cmd.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/lichess.org/game/export/service.go)
-│   │   │   │   │   └── [cmd.go](./src/cmd/chess/lichess.org/game/cmd.go)
+│   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/lichess.org/game/export/cmd_test.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/lichess.org/game/export/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/lichess.org/game/export/service_test.go)
+│   │   │   │   │   ├── [cmd.go](./src/cmd/chess/lichess.org/game/cmd.go)
+│   │   │   │   │   └── [cmd_test.go](./src/cmd/chess/lichess.org/game/cmd_test.go)
 │   │   │   │   ├── opening/
 │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/lichess.org/opening/cmd.go)
-│   │   │   │   │   └── [service.go](./src/cmd/chess/lichess.org/opening/service.go)
+│   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/lichess.org/opening/cmd_test.go)
+│   │   │   │   │   ├── [service.go](./src/cmd/chess/lichess.org/opening/service.go)
+│   │   │   │   │   └── [service_test.go](./src/cmd/chess/lichess.org/opening/service_test.go)
 │   │   │   │   ├── player/
 │   │   │   │   │   ├── leaderboard/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/lichess.org/player/leaderboard/cmd.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/lichess.org/player/leaderboard/service.go)
+│   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/lichess.org/player/leaderboard/cmd_test.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/lichess.org/player/leaderboard/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/lichess.org/player/leaderboard/service_test.go)
 │   │   │   │   │   ├── top10/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/lichess.org/player/top10/cmd.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/lichess.org/player/top10/service.go)
-│   │   │   │   │   └── [cmd.go](./src/cmd/chess/lichess.org/player/cmd.go)
+│   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/lichess.org/player/top10/cmd_test.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/lichess.org/player/top10/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/lichess.org/player/top10/service_test.go)
+│   │   │   │   │   ├── [cmd.go](./src/cmd/chess/lichess.org/player/cmd.go)
+│   │   │   │   │   └── [cmd_test.go](./src/cmd/chess/lichess.org/player/cmd_test.go)
 │   │   │   │   ├── puzzle/
 │   │   │   │   │   ├── by_id/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/lichess.org/puzzle/by_id/cmd.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/lichess.org/puzzle/by_id/service.go)
+│   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/lichess.org/puzzle/by_id/cmd_test.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/lichess.org/puzzle/by_id/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/lichess.org/puzzle/by_id/service_test.go)
 │   │   │   │   │   ├── daily/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/lichess.org/puzzle/daily/cmd.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/lichess.org/puzzle/daily/service.go)
-│   │   │   │   │   └── [cmd.go](./src/cmd/chess/lichess.org/puzzle/cmd.go)
+│   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/lichess.org/puzzle/daily/cmd_test.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/lichess.org/puzzle/daily/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/lichess.org/puzzle/daily/service_test.go)
+│   │   │   │   │   ├── [cmd.go](./src/cmd/chess/lichess.org/puzzle/cmd.go)
+│   │   │   │   │   └── [cmd_test.go](./src/cmd/chess/lichess.org/puzzle/cmd_test.go)
 │   │   │   │   ├── streamer/
 │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/lichess.org/streamer/cmd.go)
-│   │   │   │   │   └── [service.go](./src/cmd/chess/lichess.org/streamer/service.go)
+│   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/lichess.org/streamer/cmd_test.go)
+│   │   │   │   │   ├── [service.go](./src/cmd/chess/lichess.org/streamer/service.go)
+│   │   │   │   │   └── [service_test.go](./src/cmd/chess/lichess.org/streamer/service_test.go)
 │   │   │   │   ├── study/
 │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/lichess.org/study/cmd.go)
-│   │   │   │   │   └── [service.go](./src/cmd/chess/lichess.org/study/service.go)
+│   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/lichess.org/study/cmd_test.go)
+│   │   │   │   │   ├── [service.go](./src/cmd/chess/lichess.org/study/service.go)
+│   │   │   │   │   └── [service_test.go](./src/cmd/chess/lichess.org/study/service_test.go)
 │   │   │   │   ├── tablebase/
 │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/lichess.org/tablebase/cmd.go)
-│   │   │   │   │   └── [service.go](./src/cmd/chess/lichess.org/tablebase/service.go)
+│   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/lichess.org/tablebase/cmd_test.go)
+│   │   │   │   │   ├── [service.go](./src/cmd/chess/lichess.org/tablebase/service.go)
+│   │   │   │   │   └── [service_test.go](./src/cmd/chess/lichess.org/tablebase/service_test.go)
 │   │   │   │   ├── team/
 │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/lichess.org/team/cmd.go)
-│   │   │   │   │   └── [service.go](./src/cmd/chess/lichess.org/team/service.go)
+│   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/lichess.org/team/cmd_test.go)
+│   │   │   │   │   ├── [service.go](./src/cmd/chess/lichess.org/team/service.go)
+│   │   │   │   │   └── [service_test.go](./src/cmd/chess/lichess.org/team/service_test.go)
 │   │   │   │   ├── tournament/
 │   │   │   │   │   ├── info/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/lichess.org/tournament/info/cmd.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/lichess.org/tournament/info/service.go)
+│   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/lichess.org/tournament/info/cmd_test.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/lichess.org/tournament/info/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/lichess.org/tournament/info/service_test.go)
 │   │   │   │   │   ├── results/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/lichess.org/tournament/results/cmd.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/lichess.org/tournament/results/service.go)
-│   │   │   │   │   └── [cmd.go](./src/cmd/chess/lichess.org/tournament/cmd.go)
+│   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/lichess.org/tournament/results/cmd_test.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/lichess.org/tournament/results/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/lichess.org/tournament/results/service_test.go)
+│   │   │   │   │   ├── [cmd.go](./src/cmd/chess/lichess.org/tournament/cmd.go)
+│   │   │   │   │   └── [cmd_test.go](./src/cmd/chess/lichess.org/tournament/cmd_test.go)
 │   │   │   │   ├── tv/
 │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/lichess.org/tv/cmd.go)
-│   │   │   │   │   └── [service.go](./src/cmd/chess/lichess.org/tv/service.go)
+│   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/lichess.org/tv/cmd_test.go)
+│   │   │   │   │   ├── [service.go](./src/cmd/chess/lichess.org/tv/service.go)
+│   │   │   │   │   └── [service_test.go](./src/cmd/chess/lichess.org/tv/service_test.go)
 │   │   │   │   ├── user/
 │   │   │   │   │   ├── activity/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/lichess.org/user/activity/cmd.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/lichess.org/user/activity/service.go)
+│   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/lichess.org/user/activity/cmd_test.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/lichess.org/user/activity/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/lichess.org/user/activity/service_test.go)
 │   │   │   │   │   ├── perf/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/lichess.org/user/perf/cmd.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/lichess.org/user/perf/service.go)
+│   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/lichess.org/user/perf/cmd_test.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/lichess.org/user/perf/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/lichess.org/user/perf/service_test.go)
 │   │   │   │   │   ├── profile/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/lichess.org/user/profile/cmd.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/lichess.org/user/profile/service.go)
+│   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/lichess.org/user/profile/cmd_test.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/lichess.org/user/profile/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/lichess.org/user/profile/service_test.go)
 │   │   │   │   │   ├── rating/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/lichess.org/user/rating/cmd.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/lichess.org/user/rating/service.go)
+│   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/lichess.org/user/rating/cmd_test.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/lichess.org/user/rating/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/lichess.org/user/rating/service_test.go)
 │   │   │   │   │   ├── status/
 │   │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/lichess.org/user/status/cmd.go)
-│   │   │   │   │   │   └── [service.go](./src/cmd/chess/lichess.org/user/status/service.go)
-│   │   │   │   │   └── [cmd.go](./src/cmd/chess/lichess.org/user/cmd.go)
+│   │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/lichess.org/user/status/cmd_test.go)
+│   │   │   │   │   │   ├── [service.go](./src/cmd/chess/lichess.org/user/status/service.go)
+│   │   │   │   │   │   └── [service_test.go](./src/cmd/chess/lichess.org/user/status/service_test.go)
+│   │   │   │   │   ├── [cmd.go](./src/cmd/chess/lichess.org/user/cmd.go)
+│   │   │   │   │   └── [cmd_test.go](./src/cmd/chess/lichess.org/user/cmd_test.go)
 │   │   │   │   ├── [client.go](./src/cmd/chess/lichess.org/client.go)
+│   │   │   │   ├── [client_test.go](./src/cmd/chess/lichess.org/client_test.go)
 │   │   │   │   ├── [cloud_eval.go](./src/cmd/chess/lichess.org/cloud_eval.go)
+│   │   │   │   ├── [cloud_eval_test.go](./src/cmd/chess/lichess.org/cloud_eval_test.go)
 │   │   │   │   ├── [parent.go](./src/cmd/chess/lichess.org/parent.go)
-│   │   │   │   └── [types.go](./src/cmd/chess/lichess.org/types.go)
+│   │   │   │   ├── [parent_test.go](./src/cmd/chess/lichess.org/parent_test.go)
+│   │   │   │   ├── [types.go](./src/cmd/chess/lichess.org/types.go)
+│   │   │   │   └── [types_test.go](./src/cmd/chess/lichess.org/types_test.go)
 │   │   │   ├── openings/
-│   │   │   │   └── [openings.go](./src/cmd/chess/openings/openings.go)
+│   │   │   │   ├── [openings.go](./src/cmd/chess/openings/openings.go)
+│   │   │   │   └── [openings_test.go](./src/cmd/chess/openings/openings_test.go)
 │   │   │   ├── pgn/
 │   │   │   │   ├── fen/
 │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/pgn/fen/cmd.go)
@@ -447,17 +581,20 @@
 │   │   │   │   ├── uci/
 │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/pgn/uci/cmd.go)
 │   │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/pgn/uci/cmd_test.go)
-│   │   │   │   │   └── [service.go](./src/cmd/chess/pgn/uci/service.go)
+│   │   │   │   │   ├── [service.go](./src/cmd/chess/pgn/uci/service.go)
+│   │   │   │   │   └── [service_test.go](./src/cmd/chess/pgn/uci/service_test.go)
 │   │   │   │   ├── [cmd.go](./src/cmd/chess/pgn/cmd.go)
 │   │   │   │   └── [cmd_test.go](./src/cmd/chess/pgn/cmd_test.go)
 │   │   │   ├── play/
 │   │   │   │   ├── [cmd.go](./src/cmd/chess/play/cmd.go)
 │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/play/cmd_test.go)
-│   │   │   │   └── [service.go](./src/cmd/chess/play/service.go)
+│   │   │   │   ├── [service.go](./src/cmd/chess/play/service.go)
+│   │   │   │   └── [service_test.go](./src/cmd/chess/play/service_test.go)
 │   │   │   ├── setup/
 │   │   │   │   ├── [cmd.go](./src/cmd/chess/setup/cmd.go)
 │   │   │   │   ├── [cmd_test.go](./src/cmd/chess/setup/cmd_test.go)
-│   │   │   │   └── [service.go](./src/cmd/chess/setup/service.go)
+│   │   │   │   ├── [service.go](./src/cmd/chess/setup/service.go)
+│   │   │   │   └── [service_test.go](./src/cmd/chess/setup/service_test.go)
 │   │   │   ├── [cmd.go](./src/cmd/chess/cmd.go)
 │   │   │   └── [cmd_test.go](./src/cmd/chess/cmd_test.go)
 │   │   ├── colors/
@@ -657,10 +794,13 @@
 │   │   │   │   └── [service_test.go](./src/cmd/data/csv/service_test.go)
 │   │   │   ├── internal/
 │   │   │   │   ├── [csv_service.go](./src/cmd/data/internal/csv_service.go)
+│   │   │   │   ├── [csv_service_test.go](./src/cmd/data/internal/csv_service_test.go)
 │   │   │   │   ├── [json_service.go](./src/cmd/data/internal/json_service.go)
 │   │   │   │   ├── [json_service_test.go](./src/cmd/data/internal/json_service_test.go)
 │   │   │   │   ├── [reader.go](./src/cmd/data/internal/reader.go)
-│   │   │   │   └── [yml_service.go](./src/cmd/data/internal/yml_service.go)
+│   │   │   │   ├── [reader_test.go](./src/cmd/data/internal/reader_test.go)
+│   │   │   │   ├── [yml_service.go](./src/cmd/data/internal/yml_service.go)
+│   │   │   │   └── [yml_service_test.go](./src/cmd/data/internal/yml_service_test.go)
 │   │   │   ├── json/
 │   │   │   │   ├── [cmd.go](./src/cmd/data/json/cmd.go)
 │   │   │   │   ├── [cmd_test.go](./src/cmd/data/json/cmd_test.go)
@@ -724,6 +864,7 @@
 │   │   │   │   ├── [resolver_service.go](./src/cmd/doi/internal/resolver_service.go)
 │   │   │   │   ├── [resolver_service_test.go](./src/cmd/doi/internal/resolver_service_test.go)
 │   │   │   │   ├── [types.go](./src/cmd/doi/internal/types.go)
+│   │   │   │   ├── [types_test.go](./src/cmd/doi/internal/types_test.go)
 │   │   │   │   ├── [validator_service.go](./src/cmd/doi/internal/validator_service.go)
 │   │   │   │   └── [validator_service_test.go](./src/cmd/doi/internal/validator_service_test.go)
 │   │   │   ├── ref/
@@ -828,7 +969,8 @@
 │   │   │   │   ├── [service.go](./src/cmd/games/anagram/service.go)
 │   │   │   │   └── [service_test.go](./src/cmd/games/anagram/service_test.go)
 │   │   │   ├── internal/
-│   │   │   │   └── [words.go](./src/cmd/games/internal/words.go)
+│   │   │   │   ├── [words.go](./src/cmd/games/internal/words.go)
+│   │   │   │   └── [words_test.go](./src/cmd/games/internal/words_test.go)
 │   │   │   ├── reaction/
 │   │   │   │   ├── [cmd.go](./src/cmd/games/reaction/cmd.go)
 │   │   │   │   ├── [cmd_test.go](./src/cmd/games/reaction/cmd_test.go)
@@ -856,6 +998,7 @@
 │   │   │   │   ├── [cmd.go](./src/cmd/gemini/code/cmd.go)
 │   │   │   │   ├── [cmd_test.go](./src/cmd/gemini/code/cmd_test.go)
 │   │   │   │   ├── [code_tui.go](./src/cmd/gemini/code/code_tui.go)
+│   │   │   │   ├── [code_tui_test.go](./src/cmd/gemini/code/code_tui_test.go)
 │   │   │   │   ├── [service.go](./src/cmd/gemini/code/service.go)
 │   │   │   │   └── [service_test.go](./src/cmd/gemini/code/service_test.go)
 │   │   │   ├── [cmd.go](./src/cmd/gemini/cmd.go)
@@ -888,8 +1031,11 @@
 │   │   │   │   └── [service_test.go](./src/cmd/gh/og/service_test.go)
 │   │   │   ├── shared/
 │   │   │   │   ├── [colors.go](./src/cmd/gh/shared/colors.go)
+│   │   │   │   ├── [colors_test.go](./src/cmd/gh/shared/colors_test.go)
 │   │   │   │   ├── [config.go](./src/cmd/gh/shared/config.go)
+│   │   │   │   ├── [config_test.go](./src/cmd/gh/shared/config_test.go)
 │   │   │   │   ├── [fetch.go](./src/cmd/gh/shared/fetch.go)
+│   │   │   │   ├── [fetch_test.go](./src/cmd/gh/shared/fetch_test.go)
 │   │   │   │   ├── [mock.go](./src/cmd/gh/shared/mock.go)
 │   │   │   │   └── [shared_test.go](./src/cmd/gh/shared/shared_test.go)
 │   │   │   ├── [cmd.go](./src/cmd/gh/cmd.go)
@@ -954,7 +1100,8 @@
 │   │   │   │   ├── [exec_service_test.go](./src/cmd/mcp/serve/exec_service_test.go)
 │   │   │   │   ├── [schema_service.go](./src/cmd/mcp/serve/schema_service.go)
 │   │   │   │   ├── [schema_service_test.go](./src/cmd/mcp/serve/schema_service_test.go)
-│   │   │   │   └── [service.go](./src/cmd/mcp/serve/service.go)
+│   │   │   │   ├── [service.go](./src/cmd/mcp/serve/service.go)
+│   │   │   │   └── [service_test.go](./src/cmd/mcp/serve/service_test.go)
 │   │   │   ├── [cmd.go](./src/cmd/mcp/cmd.go)
 │   │   │   └── [cmd_test.go](./src/cmd/mcp/cmd_test.go)
 │   │   ├── net/
@@ -976,7 +1123,8 @@
 │   │   │   │   ├── [service.go](./src/cmd/net/http/service.go)
 │   │   │   │   └── [service_test.go](./src/cmd/net/http/service_test.go)
 │   │   │   ├── internal/
-│   │   │   │   └── [internal.go](./src/cmd/net/internal/internal.go)
+│   │   │   │   ├── [internal.go](./src/cmd/net/internal/internal.go)
+│   │   │   │   └── [internal_test.go](./src/cmd/net/internal/internal_test.go)
 │   │   │   ├── ip/
 │   │   │   │   ├── dns/
 │   │   │   │   │   ├── [cmd.go](./src/cmd/net/ip/dns/cmd.go)
@@ -1041,19 +1189,25 @@
 │   │   │   │   ├── [cmd.go](./src/cmd/openrouter/code/cmd.go)
 │   │   │   │   ├── [cmd_test.go](./src/cmd/openrouter/code/cmd_test.go)
 │   │   │   │   ├── [code_tui.go](./src/cmd/openrouter/code/code_tui.go)
-│   │   │   │   └── [service.go](./src/cmd/openrouter/code/service.go)
+│   │   │   │   ├── [code_tui_test.go](./src/cmd/openrouter/code/code_tui_test.go)
+│   │   │   │   ├── [service.go](./src/cmd/openrouter/code/service.go)
+│   │   │   │   └── [service_test.go](./src/cmd/openrouter/code/service_test.go)
 │   │   │   ├── config/
-│   │   │   │   └── [config.go](./src/cmd/openrouter/config/config.go)
+│   │   │   │   ├── [config.go](./src/cmd/openrouter/config/config.go)
+│   │   │   │   └── [config_test.go](./src/cmd/openrouter/config/config_test.go)
 │   │   │   ├── hook/
 │   │   │   │   ├── [cmd.go](./src/cmd/openrouter/hook/cmd.go)
 │   │   │   │   ├── [cmd_test.go](./src/cmd/openrouter/hook/cmd_test.go)
-│   │   │   │   └── [service.go](./src/cmd/openrouter/hook/service.go)
+│   │   │   │   ├── [service.go](./src/cmd/openrouter/hook/service.go)
+│   │   │   │   └── [service_test.go](./src/cmd/openrouter/hook/service_test.go)
 │   │   │   ├── models/
 │   │   │   │   ├── [cmd.go](./src/cmd/openrouter/models/cmd.go)
 │   │   │   │   ├── [cmd_test.go](./src/cmd/openrouter/models/cmd_test.go)
-│   │   │   │   └── [service.go](./src/cmd/openrouter/models/service.go)
+│   │   │   │   ├── [service.go](./src/cmd/openrouter/models/service.go)
+│   │   │   │   └── [service_test.go](./src/cmd/openrouter/models/service_test.go)
 │   │   │   ├── openrouterlib/
 │   │   │   │   ├── [generate.go](./src/cmd/openrouter/openrouterlib/generate.go)
+│   │   │   │   ├── [generate_test.go](./src/cmd/openrouter/openrouterlib/generate_test.go)
 │   │   │   │   ├── [models.go](./src/cmd/openrouter/openrouterlib/models.go)
 │   │   │   │   ├── [models_test.go](./src/cmd/openrouter/openrouterlib/models_test.go)
 │   │   │   │   ├── [probe.go](./src/cmd/openrouter/openrouterlib/probe.go)
@@ -1061,11 +1215,13 @@
 │   │   │   ├── serve/
 │   │   │   │   ├── [cmd.go](./src/cmd/openrouter/serve/cmd.go)
 │   │   │   │   ├── [cmd_test.go](./src/cmd/openrouter/serve/cmd_test.go)
-│   │   │   │   └── [service.go](./src/cmd/openrouter/serve/service.go)
+│   │   │   │   ├── [service.go](./src/cmd/openrouter/serve/service.go)
+│   │   │   │   └── [service_test.go](./src/cmd/openrouter/serve/service_test.go)
 │   │   │   ├── status/
 │   │   │   │   ├── [cmd.go](./src/cmd/openrouter/status/cmd.go)
 │   │   │   │   ├── [cmd_test.go](./src/cmd/openrouter/status/cmd_test.go)
-│   │   │   │   └── [service.go](./src/cmd/openrouter/status/service.go)
+│   │   │   │   ├── [service.go](./src/cmd/openrouter/status/service.go)
+│   │   │   │   └── [service_test.go](./src/cmd/openrouter/status/service_test.go)
 │   │   │   ├── [cmd.go](./src/cmd/openrouter/cmd.go)
 │   │   │   └── [cmd_test.go](./src/cmd/openrouter/cmd_test.go)
 │   │   ├── port/
@@ -1176,6 +1332,7 @@
 │   │   │   │   └── [service_test.go](./src/cmd/system/info/service_test.go)
 │   │   │   ├── monitor/
 │   │   │   │   ├── [cmd.go](./src/cmd/system/monitor/cmd.go)
+│   │   │   │   ├── [cmd_test.go](./src/cmd/system/monitor/cmd_test.go)
 │   │   │   │   ├── [service.go](./src/cmd/system/monitor/service.go)
 │   │   │   │   ├── [service_test.go](./src/cmd/system/monitor/service_test.go)
 │   │   │   │   ├── [tui.go](./src/cmd/system/monitor/tui.go)
@@ -1300,7 +1457,8 @@
 │   │   │   ├── dice/
 │   │   │   │   ├── [cmd.go](./src/cmd/telegram/dice/cmd.go)
 │   │   │   │   ├── [cmd_test.go](./src/cmd/telegram/dice/cmd_test.go)
-│   │   │   │   └── [service.go](./src/cmd/telegram/dice/service.go)
+│   │   │   │   ├── [service.go](./src/cmd/telegram/dice/service.go)
+│   │   │   │   └── [service_test.go](./src/cmd/telegram/dice/service_test.go)
 │   │   │   ├── forum/
 │   │   │   │   ├── close/
 │   │   │   │   │   ├── [cmd.go](./src/cmd/telegram/forum/close/cmd.go)
@@ -1360,6 +1518,7 @@
 │   │   │   │   └── [parent_test.go](./src/cmd/telegram/inline/parent_test.go)
 │   │   │   ├── internal/
 │   │   │   │   ├── [telegram_api.go](./src/cmd/telegram/internal/telegram_api.go)
+│   │   │   │   ├── [telegram_api_test.go](./src/cmd/telegram/internal/telegram_api_test.go)
 │   │   │   │   ├── [token.go](./src/cmd/telegram/internal/token.go)
 │   │   │   │   └── [token_test.go](./src/cmd/telegram/internal/token_test.go)
 │   │   │   ├── invoice/
@@ -1554,7 +1713,8 @@
 │   │   │   │   │   └── [service_test.go](./src/cmd/time/clock/now/service_test.go)
 │   │   │   │   ├── [cmd.go](./src/cmd/time/clock/cmd.go)
 │   │   │   │   ├── [cmd_test.go](./src/cmd/time/clock/cmd_test.go)
-│   │   │   │   └── [service.go](./src/cmd/time/clock/service.go)
+│   │   │   │   ├── [service.go](./src/cmd/time/clock/service.go)
+│   │   │   │   └── [service_test.go](./src/cmd/time/clock/service_test.go)
 │   │   │   ├── cron/
 │   │   │   │   ├── [cmd.go](./src/cmd/time/cron/cmd.go)
 │   │   │   │   ├── [cmd_test.go](./src/cmd/time/cron/cmd_test.go)
@@ -1571,7 +1731,9 @@
 │   │   │   │   └── [service_test.go](./src/cmd/time/epoch/service_test.go)
 │   │   │   ├── internal/
 │   │   │   │   ├── [datetime.go](./src/cmd/time/internal/datetime.go)
-│   │   │   │   └── [testutil.go](./src/cmd/time/internal/testutil.go)
+│   │   │   │   ├── [datetime_test.go](./src/cmd/time/internal/datetime_test.go)
+│   │   │   │   ├── [testutil.go](./src/cmd/time/internal/testutil.go)
+│   │   │   │   └── [testutil_test.go](./src/cmd/time/internal/testutil_test.go)
 │   │   │   ├── pomodoro/
 │   │   │   │   ├── [cmd.go](./src/cmd/time/pomodoro/cmd.go)
 │   │   │   │   ├── [cmd_test.go](./src/cmd/time/pomodoro/cmd_test.go)
@@ -1626,6 +1788,7 @@
 │   │   │   │   │   └── [service_test.go](./src/cmd/web/simplify/images/service_test.go)
 │   │   │   │   ├── internal/
 │   │   │   │   │   ├── [fetch.go](./src/cmd/web/simplify/internal/fetch.go)
+│   │   │   │   │   ├── [fetch_test.go](./src/cmd/web/simplify/internal/fetch_test.go)
 │   │   │   │   │   ├── [host.go](./src/cmd/web/simplify/internal/host.go)
 │   │   │   │   │   └── [host_test.go](./src/cmd/web/simplify/internal/host_test.go)
 │   │   │   │   ├── md/
@@ -1661,8 +1824,10 @@
 │   │   │   │   │   ├── [client.go](./src/cmd/web/youtube/transcript/client.go)
 │   │   │   │   │   ├── [client_test.go](./src/cmd/web/youtube/transcript/client_test.go)
 │   │   │   │   │   ├── [parser.go](./src/cmd/web/youtube/transcript/parser.go)
+│   │   │   │   │   ├── [parser_test.go](./src/cmd/web/youtube/transcript/parser_test.go)
 │   │   │   │   │   ├── [transcript_test.go](./src/cmd/web/youtube/transcript/transcript_test.go)
-│   │   │   │   │   └── [types.go](./src/cmd/web/youtube/transcript/types.go)
+│   │   │   │   │   ├── [types.go](./src/cmd/web/youtube/transcript/types.go)
+│   │   │   │   │   └── [types_test.go](./src/cmd/web/youtube/transcript/types_test.go)
 │   │   │   │   ├── [cmd.go](./src/cmd/web/youtube/cmd.go)
 │   │   │   │   └── [cmd_test.go](./src/cmd/web/youtube/cmd_test.go)
 │   │   │   ├── [cmd.go](./src/cmd/web/cmd.go)
@@ -1710,4 +1875,4 @@
 └── [main.go](./main.go)
 ```
 
-400 directories, 1307 files
+400 directories, 1472 files
