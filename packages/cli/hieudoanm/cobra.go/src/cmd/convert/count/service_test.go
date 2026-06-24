@@ -53,6 +53,21 @@ func TestRun_Empty(t *testing.T) {
 	}
 }
 
+func TestRun_JSON(t *testing.T) {
+	cmd := count.NewCommand()
+	cmd.Flags().Bool("json", false, "JSON output")
+	cmd.Flags().Set("json", "true")
+	var buf strings.Builder
+	cmd.SetOut(&buf)
+	if err := count.Run(cmd, []string{"hello world"}); err != nil {
+		t.Fatal(err)
+	}
+	got := strings.TrimSpace(buf.String())
+	if !strings.HasPrefix(got, "{") || !strings.Contains(got, "lines") {
+		t.Errorf("expected JSON output with lines field, got %q", got)
+	}
+}
+
 func TestRun_MultiLine(t *testing.T) {
 	cmd := count.NewCommand()
 	var buf strings.Builder

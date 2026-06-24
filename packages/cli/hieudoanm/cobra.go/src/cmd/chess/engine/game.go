@@ -387,7 +387,7 @@ func (g *Game) isKingAttacked(side Color) bool {
 		}
 	}
 	if kingSq == -1 {
-		return true
+		return false
 	}
 	opp := side.Opposite()
 	for _, off := range knightOffsets {
@@ -450,11 +450,15 @@ func (g *Game) Eval() int {
 	var score int
 	for i := 0; i < 64; i++ {
 		p := g.board[i]
-		if p == Empty {
+		if p == Empty || p == WK || p == BK {
 			continue
 		}
 		v := pieceValue[p]
-		score += v
+		if signOf(p) == 1 {
+			score += v
+		} else {
+			score -= v
+		}
 	}
 	return score
 }

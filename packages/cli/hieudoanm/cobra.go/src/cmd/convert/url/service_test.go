@@ -40,3 +40,18 @@ func TestRun_DecodeError(t *testing.T) {
 		t.Error("expected error for invalid URL encoding")
 	}
 }
+
+func TestRun_json(t *testing.T) {
+	cmd := url.NewCommand()
+	cmd.Flags().Bool("json", false, "JSON output")
+	cmd.Flags().Set("json", "true")
+	var buf strings.Builder
+	cmd.SetOut(&buf)
+	if err := url.Run(cmd, []string{"test"}, false); err != nil {
+		t.Fatal(err)
+	}
+	got := strings.TrimSpace(buf.String())
+	if !strings.HasPrefix(got, "{") {
+		t.Errorf("expected JSON output, got %q", got)
+	}
+}

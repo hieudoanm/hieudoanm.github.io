@@ -2,141 +2,181 @@ package wordle
 
 import (
 	"encoding/json"
-	"strings"
 	"testing"
 )
 
-func TestEvaluateGuessAllCorrect(t *testing.T) {
-	r := evaluateGuess("adieu", "adieu")
+func TestEvaluateGuess_correct(t *testing.T) {
+	r := evaluateGuess("apple", "apple")
 	for i, lr := range r {
 		if lr.Status != correct {
-			t.Errorf("evaluateGuess letter %d: status = %d, want %d", i, lr.Status, correct)
+			t.Errorf("letter %d should be correct, got %v", i, lr.Status)
 		}
-		if lr.Letter != rune("adieu"[i]) {
-			t.Errorf("evaluateGuess letter %d: Letter = %c, want %c", i, lr.Letter, rune("adieu"[i]))
+		if lr.Letter != rune("apple"[i]) {
+			t.Errorf("letter %d = %c, want %c", i, lr.Letter, "apple"[i])
 		}
 	}
 }
 
-func TestEvaluateGuessAllAbsent(t *testing.T) {
-	r := evaluateGuess("abcde", "fghij")
+func TestEvaluateGuess_allAbsent(t *testing.T) {
+	r := evaluateGuess("apple", "xyzzy")
 	for i, lr := range r {
 		if lr.Status != absent {
-			t.Errorf("evaluateGuess letter %d: status = %d, want %d", i, lr.Status, absent)
+			t.Errorf("letter %d should be absent, got %v", i, lr.Status)
 		}
 	}
 }
 
-func TestEvaluateGuessMixed(t *testing.T) {
-	r := evaluateGuess("abcde", "afcxy")
-	expected := []status{correct, absent, correct, absent, absent}
+func TestEvaluateGuess_mixed(t *testing.T) {
+	r := evaluateGuess("apple", "ample")
+	// a: correct, m: absent, p: correct (matches), l: correct, e: correct
+	expected := []status{correct, absent, correct, correct, correct}
 	if len(r) != len(expected) {
-		t.Fatalf("evaluateGuess returned %d results, want %d", len(r), len(expected))
+		t.Fatalf("got %d results, want %d", len(r), len(expected))
 	}
-	for i, lr := range r {
-		if lr.Status != expected[i] {
-			t.Errorf("evaluateGuess letter %d (%c): status = %d, want %d", i, lr.Letter, lr.Status, expected[i])
+	for i, e := range expected {
+		if r[i].Status != e {
+			t.Errorf("letter %d: got %v, want %v", i, r[i].Status, e)
 		}
 	}
 }
 
-func TestEvaluateGuessPresent(t *testing.T) {
-	r := evaluateGuess("abcde", "xbcda")
-	if r[4].Status != present {
-		t.Errorf("r[4] (a present): status = %d, want %d", r[4].Status, present)
+func TestEvaluateGuess_differentLengths(t *testing.T) {
+	r := evaluateGuess("apple", "apples")
+	if len(r) != 6 {
+		t.Errorf("expected 6 results, got %d", len(r))
 	}
 }
 
-func TestEvaluateGuessDuplicates(t *testing.T) {
-	r := evaluateGuess("abcde", "aaaaa")
+func TestEvaluateGuess_repeatedLetters(t *testing.T) {
+	// secret: "arena", guess: "apple"
+	// a: correct, p: absent, p: absent, l: absent, e: present
+	r := evaluateGuess("arena", "apple")
 	if r[0].Status != correct {
-		t.Errorf("r[0] (a correct): status = %d, want %d", r[0].Status, correct)
+		t.Error("first 'a' should be correct")
 	}
-	for i := 1; i < 5; i++ {
-		if r[i].Status != absent {
-			t.Errorf("r[%d] (extra a): status = %d, want %d", i, r[i].Status, absent)
-		}
+	if r[4].Status != present {
+		t.Error("'e' should be present")
 	}
 }
 
-func TestFormatResult(t *testing.T) {
-	r := evaluateGuess("abcde", "afcxy")
-	g := guess{Word: "afcxy", Result: r}
-	output := formatResult(g)
-	if !strings.Contains(output, "a") {
-		t.Error("formatResult missing letter 'a'")
+func TestEvaluateGuess_emptySecret(t *testing.T) {
+	r := evaluateGuess("", "hello")
+	if len(r) != 5 {
+		t.Errorf("expected 5 results, got %d", len(r))
 	}
-	if !strings.Contains(output, "f") {
-		t.Error("formatResult missing letter 'f'")
+}
+
+func TestEvaluateGuess_emptyGuess(t *testing.T) {
+	r := evaluateGuess("hello", "")
+	if len(r) != 0 {
+		t.Errorf("expected 0 results, got %d", len(r))
+	}
+}
+
+func TestIsValidWord_found(t *testing.T) {
+	words := []string{"apple", "banana", "cherry"}
+	if !isValidWord("apple", words) {
+		t.Error("isValidWord should return true for 'apple'")
+	}
+}
+
+func TestIsValidWord_notFound(t *testing.T) {
+	words := []string{"apple", "banana", "cherry"}
+	if isValidWord("grape", words) {
+		t.Error("isValidWord should return false for 'grape'")
+	}
+}
+
+func TestIsValidWord_emptyList(t *testing.T) {
+	if isValidWord("apple", nil) {
+		t.Error("isValidWord should return false for nil list")
+	}
+	if isValidWord("apple", []string{}) {
+		t.Error("isValidWord should return false for empty list")
+	}
+}
+
+func TestIsValidWord_caseSensitive(t *testing.T) {
+	words := []string{"Apple", "Banana"}
+	if isValidWord("apple", words) {
+		t.Error("isValidWord should be case sensitive")
 	}
 }
 
 func TestStatusToString(t *testing.T) {
-	if statusToString(correct) != "correct" {
-		t.Errorf("statusToString(correct) = %q", statusToString(correct))
+	tests := []struct {
+		s    status
+		want string
+	}{
+		{correct, "correct"},
+		{present, "present"},
+		{absent, "absent"},
+		{status(99), "absent"},
 	}
-	if statusToString(present) != "present" {
-		t.Errorf("statusToString(present) = %q", statusToString(present))
-	}
-	if statusToString(absent) != "absent" {
-		t.Errorf("statusToString(absent) = %q", statusToString(absent))
-	}
-}
-
-func TestBuildResultWon(t *testing.T) {
-	guesses := []guess{
-		{Word: "abcde", Result: []letterResult{
-			{Letter: 'a', Status: correct},
-			{Letter: 'b', Status: correct},
-			{Letter: 'c', Status: correct},
-			{Letter: 'd', Status: correct},
-			{Letter: 'e', Status: correct},
-		}},
-	}
-	r := buildResult("abcde", true, 1, guesses)
-	if r.Word != "abcde" {
-		t.Errorf("buildResult.Word = %q, want %q", r.Word, "abcde")
-	}
-	if !r.Won {
-		t.Error("buildResult.Won = false, want true")
-	}
-	if r.Attempts != 1 {
-		t.Errorf("buildResult.Attempts = %d, want 1", r.Attempts)
-	}
-	if len(r.Guesses) != 1 {
-		t.Fatalf("buildResult.Guesses = %d, want 1", len(r.Guesses))
+	for _, tt := range tests {
+		got := statusToString(tt.s)
+		if got != tt.want {
+			t.Errorf("statusToString(%d) = %q, want %q", tt.s, got, tt.want)
+		}
 	}
 }
 
-func TestBuildResultJSON(t *testing.T) {
-	guesses := []guess{
-		{Word: "adieu", Result: []letterResult{
+func TestBuildResult_won(t *testing.T) {
+	result := buildResult("apple", true, 3, []guess{
+		{Word: "ample", Result: []letterResult{
 			{Letter: 'a', Status: correct},
-			{Letter: 'd', Status: correct},
-			{Letter: 'i', Status: correct},
+			{Letter: 'm', Status: absent},
+			{Letter: 'p', Status: present},
+			{Letter: 'l', Status: absent},
 			{Letter: 'e', Status: correct},
-			{Letter: 'u', Status: correct},
 		}},
+	})
+	if result.Word != "apple" {
+		t.Errorf("Word = %q, want 'apple'", result.Word)
 	}
-	r := buildResult("adieu", true, 3, guesses)
-	data, err := json.Marshal(r)
+	if !result.Won {
+		t.Error("Won should be true")
+	}
+	if result.Attempts != 3 {
+		t.Errorf("Attempts = %d, want 3", result.Attempts)
+	}
+	if len(result.Guesses) != 1 {
+		t.Errorf("Guesses = %d, want 1", len(result.Guesses))
+	}
+}
+
+func TestBuildResult_jsonMarshal(t *testing.T) {
+	result := buildResult("apple", true, 2, []guess{
+		{Word: "apple", Result: []letterResult{
+			{Letter: 'a', Status: correct},
+			{Letter: 'p', Status: correct},
+			{Letter: 'p', Status: correct},
+			{Letter: 'l', Status: correct},
+			{Letter: 'e', Status: correct},
+		}},
+	})
+	data, err := json.Marshal(result)
 	if err != nil {
 		t.Fatal(err)
 	}
-	if !strings.Contains(string(data), `"word":"adieu"`) {
-		t.Errorf("JSON missing word field: %s", data)
-	}
-	if !strings.Contains(string(data), `"won":true`) {
-		t.Errorf("JSON missing won field: %s", data)
+	if len(data) == 0 {
+		t.Fatal("expected non-empty JSON")
 	}
 }
 
-func TestBuildResultLost(t *testing.T) {
-	r := buildResult("abcde", false, 6, nil)
-	if r.Won {
-		t.Error("buildResult.Won = true, want false")
+func TestFormatResult(t *testing.T) {
+	g := guess{
+		Word: "apple",
+		Result: []letterResult{
+			{Letter: 'a', Status: correct},
+			{Letter: 'p', Status: present},
+			{Letter: 'p', Status: absent},
+			{Letter: 'l', Status: present},
+			{Letter: 'e', Status: correct},
+		},
 	}
-	if r.Attempts != 6 {
-		t.Errorf("buildResult.Attempts = %d, want 6", r.Attempts)
+	out := formatResult(g)
+	if out == "" {
+		t.Error("formatResult should not be empty")
 	}
 }

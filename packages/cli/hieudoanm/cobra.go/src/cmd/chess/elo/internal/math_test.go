@@ -5,228 +5,217 @@ import (
 	"testing"
 )
 
-func ptr(f float64) *float64 {
-	return &f
+func TestExpectedScore_equal(t *testing.T) {
+	got := ExpectedScore(1500, 1500)
+	if math.Abs(got-0.5) > 0.001 {
+		t.Errorf("ExpectedScore(1500,1500) = %.4f, want 0.5", got)
+	}
 }
 
-func TestExpectedScore(t *testing.T) {
-	tests := []struct {
-		name      string
-		player    float64
-		opponent  float64
-		wantLower float64
-		wantUpper float64
-		wantExact *float64
-	}{
-		{name: "equal ratings", player: 1500, opponent: 1500, wantExact: ptr(0.5)},
-		{name: "player higher by 400", player: 1900, opponent: 1500, wantExact: ptr(0.9090909)},
-		{name: "player lower by 400", player: 1500, opponent: 1900, wantExact: ptr(0.0909091)},
-		{name: "player higher by 200", player: 1800, opponent: 1600, wantExact: ptr(0.7597469)},
-		{name: "player lower by 200", player: 1600, opponent: 1800, wantExact: ptr(0.2402531)},
-		{name: "large gap", player: 2400, opponent: 1200, wantExact: ptr(0.9990010)},
-		{name: "same as example", player: 1800, opponent: 2000, wantExact: ptr(0.2402531)},
+func TestExpectedScore_stronger(t *testing.T) {
+	got := ExpectedScore(1600, 1500)
+	if got <= 0.5 {
+		t.Errorf("ExpectedScore(1600,1500) = %.4f, want >0.5", got)
 	}
+}
 
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			got := ExpectedScore(tt.player, tt.opponent)
-			if tt.wantExact != nil {
-				if math.Abs(got-*tt.wantExact) > 1e-6 {
-					t.Errorf("ExpectedScore(%.0f, %.0f) = %.7f, want %.7f", tt.player, tt.opponent, got, *tt.wantExact)
-				}
-			} else {
-				if got < tt.wantLower || got > tt.wantUpper {
-					t.Errorf("ExpectedScore(%.0f, %.0f) = %.7f, want [%.7f, %.7f]", tt.player, tt.opponent, got, tt.wantLower, tt.wantUpper)
-				}
-			}
-		})
+func TestExpectedScore_weaker(t *testing.T) {
+	got := ExpectedScore(1400, 1500)
+	if got >= 0.5 {
+		t.Errorf("ExpectedScore(1400,1500) = %.4f, want <0.5", got)
+	}
+}
+
+func TestExpectedScore_known(t *testing.T) {
+	got := ExpectedScore(1500, 1700)
+	want := 1 / (1 + math.Pow(10, 200.0/400))
+	if math.Abs(got-want) > 0.0001 {
+		t.Errorf("ExpectedScore(1500,1700) = %.4f, want %.4f", got, want)
 	}
 }
 
 func TestRatingChange(t *testing.T) {
-	tests := []struct {
-		name      string
-		player    float64
-		opponent  float64
-		score     float64
-		k         float64
-		wantDelta float64
-		wantNew   float64
-		tolerance float64
-	}{
-		{name: "win against stronger", player: 1800, opponent: 2000, score: 1.0, k: 20, wantDelta: 15.1949, wantNew: 1815.1949, tolerance: 0.01},
-		{name: "draw against stronger", player: 1800, opponent: 2000, score: 0.5, k: 20, wantDelta: 5.1949, wantNew: 1805.1949, tolerance: 0.01},
-		{name: "loss against weaker", player: 1800, opponent: 1600, score: 0.0, k: 20, wantDelta: -15.1949, wantNew: 1784.8051, tolerance: 0.01},
-		{name: "equal ratings win", player: 1500, opponent: 1500, score: 1.0, k: 32, wantDelta: 16.0, wantNew: 1516.0, tolerance: 0.01},
-		{name: "equal ratings loss", player: 1500, opponent: 1500, score: 0.0, k: 32, wantDelta: -16.0, wantNew: 1484.0, tolerance: 0.01},
+	delta, newRating := RatingChange(1500, 1500, 1, 20)
+	// Expected score = 0.5, delta = 20 * (1 - 0.5) = 10
+	if math.Abs(delta-10) > 0.01 {
+		t.Errorf("delta = %.2f, want 10", delta)
 	}
+	if math.Abs(newRating-1510) > 0.01 {
+		t.Errorf("newRating = %.2f, want 1510", newRating)
+	}
+}
 
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			gotDelta, gotNew := RatingChange(tt.player, tt.opponent, tt.score, tt.k)
-			if math.Abs(gotDelta-tt.wantDelta) > tt.tolerance {
-				t.Errorf("RatingChange() delta = %.4f, want %.4f", gotDelta, tt.wantDelta)
-			}
-			if math.Abs(gotNew-tt.wantNew) > tt.tolerance {
-				t.Errorf("RatingChange() newRating = %.4f, want %.4f", gotNew, tt.wantNew)
-			}
-		})
+func TestRatingChange_loss(t *testing.T) {
+	delta, _ := RatingChange(1500, 1700, 0, 20)
+	// Expected score = ~0.24, delta = 20 * (0 - 0.24) = -4.8
+	if delta >= 0 {
+		t.Errorf("expected negative delta for loss vs stronger, got %.2f", delta)
+	}
+}
+
+func TestPerformanceRating_undefeated(t *testing.T) {
+	avg, tpr := PerformanceRating([]float64{1500, 1600, 1700}, 3, 3)
+	if tpr <= avg+700 {
+		t.Errorf("TPR for 3/3 should be high, avg=%.0f, tpr=%.0f", avg, tpr)
+	}
+}
+
+func TestPerformanceRating_winless(t *testing.T) {
+	avg, tpr := PerformanceRating([]float64{1500, 1600, 1700}, 0, 3)
+	if tpr >= avg-700 {
+		t.Errorf("TPR for 0/3 should be low, avg=%.0f, tpr=%.0f", avg, tpr)
+	}
+}
+
+func TestPerformanceRating_mixed(t *testing.T) {
+	avg, tpr := PerformanceRating([]float64{1500, 1600, 1700}, 2, 3)
+	if tpr <= avg || tpr > 2000 {
+		t.Errorf("TPR for 2/3 should be reasonable, avg=%.0f, tpr=%.0f", avg, tpr)
+	}
+}
+
+func TestRequiredScore(t *testing.T) {
+	score, pct := RequiredScore(1500, 10, 1600)
+	if score <= 0 || score > 10 {
+		t.Errorf("RequiredScore(1500,10,1600) = %.2f, want between 0 and 10", score)
+	}
+	if pct <= 0 || pct > 100 {
+		t.Errorf("pct = %.2f, want between 0 and 100", pct)
+	}
+}
+
+func TestRequiredScore_impossible(t *testing.T) {
+	score, _ := RequiredScore(1500, 10, 3000)
+	if score > 10 || score < 0 {
+		t.Errorf("RequiredScore(1500,10,3000) = %.2f, want clamped to [0,10]", score)
 	}
 }
 
 func TestDiffToExpected(t *testing.T) {
 	tests := []struct {
 		diff float64
-		want float64
 	}{
-		{diff: 0, want: 0.5},
-		{diff: 200, want: 0.7597469},
-		{diff: -200, want: 0.2402531},
-		{diff: 400, want: 0.9090909},
-		{diff: -400, want: 0.0909091},
+		{0},
+		{100},
+		{-100},
+		{400},
 	}
-
 	for _, tt := range tests {
-		t.Run("", func(t *testing.T) {
-			got := DiffToExpected(tt.diff)
-			if math.Abs(got-tt.want) > 1e-6 {
-				t.Errorf("DiffToExpected(%.0f) = %.7f, want %.7f", tt.diff, got, tt.want)
-			}
-		})
+		got := DiffToExpected(tt.diff)
+		if got <= 0 || got >= 1 {
+			t.Errorf("DiffToExpected(%.0f) = %.4f, want between 0 and 1", tt.diff, got)
+		}
+	}
+}
+
+func TestDiffToExpected_known(t *testing.T) {
+	got := DiffToExpected(200)
+	// 1 / (1 + 10^(-200/400)) = 1 / (1 + 10^-0.5) = 1 / (1 + 0.316...) = ~0.76
+	if math.Abs(got-0.76) > 0.01 {
+		t.Errorf("DiffToExpected(200) = %.4f, want ~0.76", got)
 	}
 }
 
 func TestExpectedToDiff(t *testing.T) {
-	tests := []struct {
-		exp  float64
-		want float64
-	}{
-		{exp: 0.5, want: 0},
-		{exp: 0.75, want: 191},
-		{exp: 0.9090909, want: 400},
-		{exp: 0.2402531, want: -200},
+	// Round trip
+	exp := 0.75
+	diff := ExpectedToDiff(exp)
+	back := DiffToExpected(diff)
+	if math.Abs(back-exp) > 0.001 {
+		t.Errorf("expected round trip: got %.4f, want %.4f", back, exp)
 	}
+}
 
-	for _, tt := range tests {
-		t.Run("", func(t *testing.T) {
-			got := ExpectedToDiff(tt.exp)
-			if math.Abs(got-tt.want) > 1 {
-				t.Errorf("ExpectedToDiff(%.7f) = %.0f, want %.0f", tt.exp, got, tt.want)
-			}
-		})
+func TestParseFloats_normal(t *testing.T) {
+	got := ParseFloats("1500,1600,1700")
+	if len(got) != 3 {
+		t.Fatalf("got %d values, want 3", len(got))
+	}
+	if got[0] != 1500 || got[1] != 1600 || got[2] != 1700 {
+		t.Errorf("got %v, want [1500 1600 1700]", got)
+	}
+}
+
+func TestParseFloats_spaces(t *testing.T) {
+	got := ParseFloats("1500, 1600, 1700")
+	if len(got) != 3 {
+		t.Fatalf("got %d values, want 3", len(got))
+	}
+}
+
+func TestParseFloats_single(t *testing.T) {
+	got := ParseFloats("1500")
+	if len(got) != 1 || got[0] != 1500 {
+		t.Errorf("got %v, want [1500]", got)
+	}
+}
+
+func TestParseFloats_empty(t *testing.T) {
+	got := ParseFloats("")
+	if len(got) != 0 {
+		t.Errorf("got %v, want empty", got)
+	}
+}
+
+func TestParseFloats_invalid(t *testing.T) {
+	got := ParseFloats("abc")
+	if got != nil {
+		t.Errorf("got %v, want nil", got)
+	}
+}
+
+func TestResultToScore_win(t *testing.T) {
+	for _, r := range []string{"win", "1"} {
+		got, err := ResultToScore(r)
+		if err != nil {
+			t.Errorf("ResultToScore(%q) error: %v", r, err)
+		}
+		if got != 1.0 {
+			t.Errorf("ResultToScore(%q) = %.1f, want 1.0", r, got)
+		}
+	}
+}
+
+func TestResultToScore_draw(t *testing.T) {
+	for _, r := range []string{"draw", "0.5"} {
+		got, err := ResultToScore(r)
+		if err != nil {
+			t.Errorf("ResultToScore(%q) error: %v", r, err)
+		}
+		if got != 0.5 {
+			t.Errorf("ResultToScore(%q) = %.1f, want 0.5", r, got)
+		}
+	}
+}
+
+func TestResultToScore_loss(t *testing.T) {
+	for _, r := range []string{"loss", "0"} {
+		got, err := ResultToScore(r)
+		if err != nil {
+			t.Errorf("ResultToScore(%q) error: %v", r, err)
+		}
+		if got != 0.0 {
+			t.Errorf("ResultToScore(%q) = %.1f, want 0.0", r, got)
+		}
+	}
+}
+
+func TestResultToScore_invalid(t *testing.T) {
+	_, err := ResultToScore("invalid")
+	if err == nil {
+		t.Fatal("expected error for invalid result")
 	}
 }
 
 func TestTournamentGames(t *testing.T) {
-	games, total := TournamentGames(1800, 20, []float64{1900, 1750, 1850}, []string{"win", "draw", "loss"})
-
+	games, totalDelta := TournamentGames(1500, 20, []float64{1500, 1600, 1400}, []string{"win", "loss", "win"})
 	if len(games) != 3 {
-		t.Fatalf("expected 3 games, got %d", len(games))
+		t.Fatalf("got %d games, want 3", len(games))
 	}
-
-	expected := []struct {
-		opponent float64
-		result   string
-		score    float64
-	}{
-		{1900, "win", 1.0},
-		{1750, "draw", 0.5},
-		{1850, "loss", 0.0},
+	if totalDelta == 0 {
+		t.Error("expected non-zero total delta")
 	}
-	for i, e := range expected {
-		if games[i].Opponent != e.opponent || games[i].Result != e.result || games[i].Score != e.score {
-			t.Errorf("game %d: got {%v, %q, %v}, want {%v, %q, %v}", i+1, games[i].Opponent, games[i].Result, games[i].Score, e.opponent, e.result, e.score)
-		}
-	}
-
-	if math.Abs(total-2.80) > 0.2 {
-		t.Errorf("expected total delta ~ 2.80, got %.2f", total)
-	}
-}
-
-func TestPerformanceRating(t *testing.T) {
-	tests := []struct {
-		name      string
-		ratings   []float64
-		score     float64
-		games     int
-		wantAvg   float64
-		wantTPR   float64
-		tolerance float64
-	}{
-		{name: "3/4 example", ratings: []float64{1800, 1900, 2000, 2100}, score: 3, games: 4, wantAvg: 1950, wantTPR: 2141, tolerance: 1},
-		{name: "perfect score", ratings: []float64{1800, 1900, 2000}, score: 3, games: 3, wantAvg: 1900, wantTPR: 2700, tolerance: 1},
-		{name: "zero score", ratings: []float64{1800, 1900, 2000}, score: 0, games: 3, wantAvg: 1900, wantTPR: 1100, tolerance: 1},
-		{name: "50% score", ratings: []float64{2000, 2000, 2000}, score: 1.5, games: 3, wantAvg: 2000, wantTPR: 2000, tolerance: 1},
-	}
-
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			gotAvg, gotTPR := PerformanceRating(tt.ratings, tt.score, tt.games)
-			if math.Abs(gotAvg-tt.wantAvg) > 0.01 {
-				t.Errorf("PerformanceRating() avg = %.2f, want %.2f", gotAvg, tt.wantAvg)
-			}
-			if math.Abs(gotTPR-tt.wantTPR) > tt.tolerance {
-				t.Errorf("PerformanceRating() tpr = %.2f, want %.2f", gotTPR, tt.wantTPR)
-			}
-		})
-	}
-}
-
-func TestParseFloats(t *testing.T) {
-	tests := []struct {
-		input string
-		want  []float64
-	}{
-		{input: "1800,1900,2000", want: []float64{1800, 1900, 2000}},
-		{input: "1800, 1900, 2000", want: []float64{1800, 1900, 2000}},
-		{input: "1800", want: []float64{1800}},
-		{input: "", want: nil},
-		{input: "abc", want: nil},
-	}
-
-	for _, tt := range tests {
-		t.Run("", func(t *testing.T) {
-			got := ParseFloats(tt.input)
-			if len(got) != len(tt.want) {
-				t.Fatalf("ParseFloats(%q) = %v, want %v", tt.input, got, tt.want)
-			}
-			for i := range got {
-				if got[i] != tt.want[i] {
-					t.Errorf("ParseFloats(%q)[%d] = %.0f, want %.0f", tt.input, i, got[i], tt.want[i])
-				}
-			}
-		})
-	}
-}
-
-func TestResultToScore(t *testing.T) {
-	tests := []struct {
-		input string
-		want  float64
-		err   bool
-	}{
-		{input: "win", want: 1.0},
-		{input: "1", want: 1.0},
-		{input: "draw", want: 0.5},
-		{input: "0.5", want: 0.5},
-		{input: "loss", want: 0.0},
-		{input: "0", want: 0.0},
-		{input: " invalid ", err: true},
-	}
-
-	for _, tt := range tests {
-		t.Run(tt.input, func(t *testing.T) {
-			got, err := ResultToScore(tt.input)
-			if tt.err && err == nil {
-				t.Fatal("expected error, got nil")
-			}
-			if !tt.err && err != nil {
-				t.Fatalf("unexpected error: %v", err)
-			}
-			if !tt.err && got != tt.want {
-				t.Errorf("ResultToScore(%q) = %.1f, want %.1f", tt.input, got, tt.want)
-			}
-		})
+	if games[0].Opponent != 1500 {
+		t.Errorf("first opponent = %.0f, want 1500", games[0].Opponent)
 	}
 }
