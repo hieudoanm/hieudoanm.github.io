@@ -20,6 +20,8 @@ export const GraphModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [fileName, setFileName] = useState('');
   const [error, setError] = useState('');
   const [stats, setStats] = useState({ nodes: 0, links: 0 });
+  const [hoveredNode, setHoveredNode] = useState<SimNode | null>(null);
+  const [hoverPos, setHoverPos] = useState({ x: 0, y: 0 });
 
   const loadFile = useCallback((file: File) => {
     setFileName(file.name);
@@ -92,6 +94,7 @@ export const GraphModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       const node: SimNode = {
         id: n.id,
         label: n.label || n.id,
+        path: n.path ?? '',
         group: n.group ?? 0,
         size: n.size ?? 5,
         x: width / 2 + (Math.random() - 0.5) * width * 0.6,
@@ -225,16 +228,26 @@ export const GraphModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     };
 
     const onPointerMove = (e: MouseEvent) => {
-      if (!isPointerDown) return;
-      if (isDraggingNode && dragNode) {
-        const tp = getTransformedPoint(e.offsetX, e.offsetY);
-        dragNode.fx = tp.x;
-        dragNode.fy = tp.y;
+      if (isPointerDown) {
+        if (isDraggingNode && dragNode) {
+          const tp = getTransformedPoint(e.offsetX, e.offsetY);
+          dragNode.fx = tp.x;
+          dragNode.fy = tp.y;
+          return;
+        }
+        transform.x = transformStart.x + (e.offsetX - pointerStart.x);
+        transform.y = transformStart.y + (e.offsetY - pointerStart.y);
+        requestRedraw();
         return;
       }
-      transform.x = transformStart.x + (e.offsetX - pointerStart.x);
-      transform.y = transformStart.y + (e.offsetY - pointerStart.y);
-      requestRedraw();
+
+      const hit = findNode(e.offsetX, e.offsetY);
+      if (hit) {
+        setHoveredNode(hit);
+        setHoverPos({ x: e.offsetX, y: e.offsetY });
+      } else {
+        setHoveredNode(null);
+      }
     };
 
     const onPointerUp = () => {
@@ -246,6 +259,18 @@ export const GraphModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       isPointerDown = false;
       isDraggingNode = false;
       dragNode = null;
+    };
+
+    const onPointerLeave = () => {
+      if (dragNode) {
+        dragNode.fx = null;
+        dragNode.fy = null;
+        (sim as Simulation<SimNode, SimLink>).alphaTarget(0);
+      }
+      isPointerDown = false;
+      isDraggingNode = false;
+      dragNode = null;
+      setHoveredNode(null);
     };
 
     const onWheel = (e: WheelEvent) => {
@@ -264,7 +289,7 @@ export const GraphModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     canvas.addEventListener('mousedown', onPointerDown);
     canvas.addEventListener('mousemove', onPointerMove);
     canvas.addEventListener('mouseup', onPointerUp);
-    canvas.addEventListener('mouseleave', onPointerUp);
+    canvas.addEventListener('mouseleave', onPointerLeave);
 
     sim.alpha(0.8).restart();
     requestRedraw();
@@ -275,7 +300,7 @@ export const GraphModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       canvas.removeEventListener('mousedown', onPointerDown);
       canvas.removeEventListener('mousemove', onPointerMove);
       canvas.removeEventListener('mouseup', onPointerUp);
-      canvas.removeEventListener('mouseleave', onPointerUp);
+      canvas.removeEventListener('mouseleave', onPointerLeave);
     };
   }, [data]);
 
@@ -337,11 +362,19 @@ export const GraphModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             </button>
           </div>
         ) : (
-          <div ref={containerRef} className="min-h-0 flex-1">
+          <div ref={containerRef} className="relative min-h-0 flex-1">
             <canvas
               ref={canvasRef}
               className="border-base-content/10 h-full w-full rounded-lg border"
             />
+            {hoveredNode && hoveredNode.path && (
+              <div
+                className="pointer-events-none absolute z-10 max-w-64 rounded-md bg-black/80 px-2.5 py-1.5 text-[11px] text-white shadow-lg"
+                style={{ left: hoverPos.x + 12, top: hoverPos.y - 10 }}>
+                <div className="font-medium">{hoveredNode.label}</div>
+                <div className="text-white/60">{hoveredNode.path}</div>
+              </div>
+            )}
           </div>
         )}
       </div>

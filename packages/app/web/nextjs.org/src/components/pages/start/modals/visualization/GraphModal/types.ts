@@ -1,6 +1,7 @@
 export interface GraphNode {
   id: string;
   label: string;
+  path?: string;
   group?: number;
   size?: number;
 }
@@ -16,7 +17,12 @@ export interface GraphData {
   links: GraphLink[];
 }
 
-export interface SimNode extends Required<GraphNode> {
+export interface SimNode {
+  id: string;
+  label: string;
+  path: string;
+  group: number;
+  size: number;
   x: number;
   y: number;
   vx: number;

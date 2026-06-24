@@ -126,12 +126,18 @@ func TestBuildGraph(t *testing.T) {
 	}
 
 	relPaths := make(map[string]string)
+	pathMap := make(map[string]string)
 	for _, n := range nodes {
-		relPaths[n.Name] = n.ID
+		relPaths[n.Label] = n.ID
+		pathMap[n.Label] = n.Path
 	}
 
 	if _, ok := relPaths["index"]; !ok {
 		t.Error("expected 'index' node")
+	}
+
+	if pathMap["deep"] != "sub/deep.md" {
+		t.Errorf("deep path = %q, want %q", pathMap["deep"], "sub/deep.md")
 	}
 
 	edgePairs := make(map[string]bool)
@@ -152,7 +158,7 @@ func TestBuildGraph(t *testing.T) {
 	}
 
 	for _, n := range nodes {
-		switch n.Name {
+		switch n.Label {
 		case "index":
 			if n.Links != 2 {
 				t.Errorf("index should have 2 links (to about, contact), got %d", n.Links)
@@ -235,13 +241,13 @@ func TestWriteJSON(t *testing.T) {
 	dir := t.TempDir()
 	path := filepath.Join(dir, "out.json")
 	nodes := []node{
-		{ID: "file1.md", Name: "file1", Path: "/root/file1.md", Links: 2},
-		{ID: "file2.md", Name: "file2", Path: "/root/file2.md", Links: 0},
+		{ID: "file1.md", Label: "file1", Path: "file1.md", Links: 2},
+		{ID: "file2.md", Label: "file2", Path: "file2.md", Links: 0},
 	}
 	edges := []edge{
 		{Source: "file1.md", Target: "file2.md"},
 	}
-	err := writeJSON("/root", nodes, edges, 1, path)
+	err := writeJSON(nodes, edges, path)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -254,17 +260,20 @@ func TestWriteJSON(t *testing.T) {
 	if err := json.Unmarshal(data, &g); err != nil {
 		t.Fatal(err)
 	}
-	if g.Root != "/root" {
-		t.Errorf("root = %q, want %q", g.Root, "/root")
-	}
-	if g.Orphan != 1 {
-		t.Errorf("orphan = %d, want 1", g.Orphan)
-	}
 	if len(g.Nodes) != 2 {
 		t.Errorf("expected 2 nodes, got %d", len(g.Nodes))
 	}
-	if len(g.Edges) != 1 {
-		t.Errorf("expected 1 edge, got %d", len(g.Edges))
+	if len(g.Links) != 1 {
+		t.Errorf("expected 1 link, got %d", len(g.Links))
+	}
+	if g.Nodes[0].Label != "file1" {
+		t.Errorf("node label = %q, want %q", g.Nodes[0].Label, "file1")
+	}
+	if g.Nodes[0].Size != 2 {
+		t.Errorf("node size = %d, want %d", g.Nodes[0].Size, 2)
+	}
+	if g.Nodes[0].Path != "file1.md" {
+		t.Errorf("node path = %q, want %q", g.Nodes[0].Path, "file1.md")
 	}
 }
 
@@ -272,8 +281,8 @@ func TestWriteDOT(t *testing.T) {
 	dir := t.TempDir()
 	path := filepath.Join(dir, "out.dot")
 	nodes := []node{
-		{ID: "a.md", Name: "a", Path: "/root/a.md", Links: 1},
-		{ID: "b.md", Name: "b", Path: "/root/b.md", Links: 0},
+		{ID: "a.md", Label: "a", Links: 1},
+		{ID: "b.md", Label: "b", Links: 0},
 	}
 	edges := []edge{
 		{Source: "a.md", Target: "b.md"},
@@ -319,7 +328,7 @@ func TestWriteEdges(t *testing.T) {
 	dir := t.TempDir()
 	path := filepath.Join(dir, "edges.txt")
 	nodes := []node{
-		{ID: "a.md", Name: "a", Path: "/root/a.md", Links: 1},
+		{ID: "a.md", Label: "a", Links: 1},
 	}
 	edges := []edge{
 		{Source: "a.md", Target: "b.md"},
@@ -422,8 +431,11 @@ func TestNewCmd_RunE_JSONFormat(t *testing.T) {
 		t.Fatal(err)
 	}
 	data, _ := os.ReadFile(out)
-	if !strings.Contains(string(data), `"root"`) {
-		t.Error("expected JSON format output")
+	if !strings.Contains(string(data), `"nodes"`) {
+		t.Error("expected JSON with nodes array")
+	}
+	if !strings.Contains(string(data), `"links"`) {
+		t.Error("expected JSON with links array")
 	}
 }
 

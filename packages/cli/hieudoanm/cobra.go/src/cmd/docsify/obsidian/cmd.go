@@ -15,9 +15,11 @@ import (
 
 type node struct {
 	ID    string `json:"id"`
-	Name  string `json:"name"`
+	Label string `json:"label"`
 	Path  string `json:"path"`
-	Links int    `json:"links"`
+	Group int    `json:"group,omitempty"`
+	Size  int    `json:"size,omitempty"`
+	Links int    `json:"-"`
 }
 
 type edge struct {
@@ -26,10 +28,8 @@ type edge struct {
 }
 
 type graph struct {
-	Root   string `json:"root"`
-	Nodes  []node `json:"nodes"`
-	Edges  []edge `json:"edges"`
-	Orphan int    `json:"orphan"`
+	Nodes []node `json:"nodes"`
+	Links []edge `json:"links"`
 }
 
 var wikiLinkRe = regexp.MustCompile(`\[\[([^\]|]+)(?:\|[^\]|]+)?\]\]`)
@@ -98,11 +98,16 @@ func buildGraph(root string, exclude map[string]bool) ([]node, []edge, error) {
 	for _, p := range sortedPaths {
 		rel, _ := filepath.Rel(root, p)
 		relMap[p] = rel
+		group := 0
+		if d := filepath.Dir(rel); d != "." {
+			group = len(strings.Split(d, string(filepath.Separator)))
+		}
 		nodeMap[p] = len(nodes)
 		nodes = append(nodes, node{
-			ID:   rel,
-			Name: markdownFiles[p],
-			Path: p,
+			ID:    rel,
+			Label: markdownFiles[p],
+			Path:  rel,
+			Group: group,
 		})
 	}
 
@@ -139,12 +144,13 @@ func buildGraph(root string, exclude map[string]bool) ([]node, []edge, error) {
 	return nodes, edges, nil
 }
 
-func writeJSON(root string, nodes []node, edges []edge, orphan int, path string) error {
+func writeJSON(nodes []node, edges []edge, path string) error {
+	for i := range nodes {
+		nodes[i].Size = nodes[i].Links
+	}
 	g := graph{
-		Root:   root,
-		Nodes:  nodes,
-		Edges:  edges,
-		Orphan: orphan,
+		Nodes: nodes,
+		Links: edges,
 	}
 	data, err := json.MarshalIndent(g, "", "  ")
 	if err != nil {
@@ -160,7 +166,7 @@ func writeDOT(nodes []node, edges []edge, path string) error {
 	b.WriteString("  node [shape=box style=rounded];\n\n")
 
 	for _, n := range nodes {
-		label := strings.NewReplacer(`"`, `\"`).Replace(n.Name)
+		label := strings.NewReplacer(`"`, `\"`).Replace(n.Label)
 		b.WriteString(fmt.Sprintf("  %q [label=%q];\n", n.ID, label))
 	}
 
@@ -234,16 +240,9 @@ Formats:
 				return err
 			}
 
-			var orphan int
-			for _, n := range nodes {
-				if n.Links == 0 {
-					orphan++
-				}
-			}
-
-			switch obsidianFormat {
+				switch obsidianFormat {
 			case "json":
-				return writeJSON(absDir, nodes, edges, orphan, obsidianOut)
+				return writeJSON(nodes, edges, obsidianOut)
 			case "dot":
 				return writeDOT(nodes, edges, obsidianOut)
 			default:
