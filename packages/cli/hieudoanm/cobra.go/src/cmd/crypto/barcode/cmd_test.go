@@ -15,7 +15,9 @@ func TestNewCommand_HasSubcommands(t *testing.T) {
 	for _, c := range cmd.Commands() {
 		names[c.Name()] = true
 	}
-	if !names["encode"] {
-		t.Error("missing subcommand: encode")
+	for _, want := range []string{"encode", "decode"} {
+		if !names[want] {
+			t.Errorf("missing subcommand: %s", want)
+		}
 	}
 }

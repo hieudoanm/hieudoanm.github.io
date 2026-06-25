@@ -1,6 +1,7 @@
 # TREE
 
 ```text
+├── coverage/
 ├── scripts/
 │   └── [install.sh](./scripts/install.sh)
 ├── src/
@@ -450,6 +451,8 @@
 │   │   │   │   │   └── [service_test.go](./src/cmd/chess/fen/svg/service_test.go)
 │   │   │   │   ├── [parent.go](./src/cmd/chess/fen/parent.go)
 │   │   │   │   └── [parent_test.go](./src/cmd/chess/fen/parent_test.go)
+│   │   │   ├── internal/
+│   │   │   │   └── [internal.go](./src/cmd/chess/internal/internal.go)
 │   │   │   ├── lichess.org/
 │   │   │   │   ├── crosstable/
 │   │   │   │   │   ├── [cmd.go](./src/cmd/chess/lichess.org/crosstable/cmd.go)
@@ -693,6 +696,11 @@
 │   │   │   │   ├── [cmd_test.go](./src/cmd/convert/kebabcase/cmd_test.go)
 │   │   │   │   ├── [service.go](./src/cmd/convert/kebabcase/service.go)
 │   │   │   │   └── [service_test.go](./src/cmd/convert/kebabcase/service_test.go)
+│   │   │   ├── lorem/
+│   │   │   │   ├── [cmd.go](./src/cmd/convert/lorem/cmd.go)
+│   │   │   │   ├── [cmd_test.go](./src/cmd/convert/lorem/cmd_test.go)
+│   │   │   │   ├── [service.go](./src/cmd/convert/lorem/service.go)
+│   │   │   │   └── [service_test.go](./src/cmd/convert/lorem/service_test.go)
 │   │   │   ├── lowercase/
 │   │   │   │   ├── [cmd.go](./src/cmd/convert/lowercase/cmd.go)
 │   │   │   │   ├── [cmd_test.go](./src/cmd/convert/lowercase/cmd_test.go)
@@ -731,6 +739,19 @@
 │   │   │   ├── [cmd.go](./src/cmd/convert/cmd.go)
 │   │   │   └── [cmd_test.go](./src/cmd/convert/cmd_test.go)
 │   │   ├── crypto/
+│   │   │   ├── barcode/
+│   │   │   │   ├── decode/
+│   │   │   │   │   ├── [cmd.go](./src/cmd/crypto/barcode/decode/cmd.go)
+│   │   │   │   │   ├── [cmd_test.go](./src/cmd/crypto/barcode/decode/cmd_test.go)
+│   │   │   │   │   ├── [service.go](./src/cmd/crypto/barcode/decode/service.go)
+│   │   │   │   │   └── [service_test.go](./src/cmd/crypto/barcode/decode/service_test.go)
+│   │   │   │   ├── encode/
+│   │   │   │   │   ├── [cmd.go](./src/cmd/crypto/barcode/encode/cmd.go)
+│   │   │   │   │   ├── [cmd_test.go](./src/cmd/crypto/barcode/encode/cmd_test.go)
+│   │   │   │   │   ├── [service.go](./src/cmd/crypto/barcode/encode/service.go)
+│   │   │   │   │   └── [service_test.go](./src/cmd/crypto/barcode/encode/service_test.go)
+│   │   │   │   ├── [cmd.go](./src/cmd/crypto/barcode/cmd.go)
+│   │   │   │   └── [cmd_test.go](./src/cmd/crypto/barcode/cmd_test.go)
 │   │   │   ├── decrypt/
 │   │   │   │   ├── [cmd.go](./src/cmd/crypto/decrypt/cmd.go)
 │   │   │   │   ├── [cmd_test.go](./src/cmd/crypto/decrypt/cmd_test.go)
@@ -770,10 +791,18 @@
 │   │   │   │   ├── [service.go](./src/cmd/crypto/passwd/service.go)
 │   │   │   │   └── [service_test.go](./src/cmd/crypto/passwd/service_test.go)
 │   │   │   ├── qrcode/
+│   │   │   │   ├── decode/
+│   │   │   │   │   ├── [cmd.go](./src/cmd/crypto/qrcode/decode/cmd.go)
+│   │   │   │   │   ├── [cmd_test.go](./src/cmd/crypto/qrcode/decode/cmd_test.go)
+│   │   │   │   │   ├── [service.go](./src/cmd/crypto/qrcode/decode/service.go)
+│   │   │   │   │   └── [service_test.go](./src/cmd/crypto/qrcode/decode/service_test.go)
+│   │   │   │   ├── encode/
+│   │   │   │   │   ├── [cmd.go](./src/cmd/crypto/qrcode/encode/cmd.go)
+│   │   │   │   │   ├── [cmd_test.go](./src/cmd/crypto/qrcode/encode/cmd_test.go)
+│   │   │   │   │   ├── [service.go](./src/cmd/crypto/qrcode/encode/service.go)
+│   │   │   │   │   └── [service_test.go](./src/cmd/crypto/qrcode/encode/service_test.go)
 │   │   │   │   ├── [cmd.go](./src/cmd/crypto/qrcode/cmd.go)
-│   │   │   │   ├── [cmd_test.go](./src/cmd/crypto/qrcode/cmd_test.go)
-│   │   │   │   ├── [service.go](./src/cmd/crypto/qrcode/service.go)
-│   │   │   │   └── [service_test.go](./src/cmd/crypto/qrcode/service_test.go)
+│   │   │   │   └── [cmd_test.go](./src/cmd/crypto/qrcode/cmd_test.go)
 │   │   │   ├── totp/
 │   │   │   │   ├── [cmd.go](./src/cmd/crypto/totp/cmd.go)
 │   │   │   │   ├── [cmd_test.go](./src/cmd/crypto/totp/cmd_test.go)
@@ -820,6 +849,7 @@
 │   │   │   │   ├── [service.go](./src/cmd/docsify/cobra/service.go)
 │   │   │   │   └── [service_test.go](./src/cmd/docsify/cobra/service_test.go)
 │   │   │   ├── internal/
+│   │   │   │   ├── [exclude.go](./src/cmd/docsify/internal/exclude.go)
 │   │   │   │   ├── [extractor.go](./src/cmd/docsify/internal/extractor.go)
 │   │   │   │   ├── [extractor_test.go](./src/cmd/docsify/internal/extractor_test.go)
 │   │   │   │   ├── [graph.go](./src/cmd/docsify/internal/graph.go)
@@ -1037,6 +1067,7 @@
 │   │   │   │   ├── [fetch.go](./src/cmd/gh/shared/fetch.go)
 │   │   │   │   ├── [fetch_test.go](./src/cmd/gh/shared/fetch_test.go)
 │   │   │   │   ├── [mock.go](./src/cmd/gh/shared/mock.go)
+│   │   │   │   ├── [mock_test.go](./src/cmd/gh/shared/mock_test.go)
 │   │   │   │   └── [shared_test.go](./src/cmd/gh/shared/shared_test.go)
 │   │   │   ├── [cmd.go](./src/cmd/gh/cmd.go)
 │   │   │   └── [cmd_test.go](./src/cmd/gh/cmd_test.go)
@@ -1262,6 +1293,7 @@
 │   │   │   │   └── [service_test.go](./src/cmd/search/files/service_test.go)
 │   │   │   ├── shared/
 │   │   │   │   ├── [capture.go](./src/cmd/search/shared/capture.go)
+│   │   │   │   ├── [capture_test.go](./src/cmd/search/shared/capture_test.go)
 │   │   │   │   ├── [walk.go](./src/cmd/search/shared/walk.go)
 │   │   │   │   └── [walk_test.go](./src/cmd/search/shared/walk_test.go)
 │   │   │   ├── text/
@@ -1311,6 +1343,8 @@
 │   │   │   │   ├── [service.go](./src/cmd/system/clipboard/service.go)
 │   │   │   │   └── [service_test.go](./src/cmd/system/clipboard/service_test.go)
 │   │   │   ├── disk/
+│   │   │   │   ├── internal/
+│   │   │   │   │   └── [internal.go](./src/cmd/system/disk/internal/internal.go)
 │   │   │   │   ├── stats/
 │   │   │   │   │   ├── [cmd.go](./src/cmd/system/disk/stats/cmd.go)
 │   │   │   │   │   ├── [cmd_test.go](./src/cmd/system/disk/stats/cmd_test.go)
@@ -1875,4 +1909,4 @@
 └── [main.go](./main.go)
 ```
 
-400 directories, 1472 files
+409 directories, 1497 files
