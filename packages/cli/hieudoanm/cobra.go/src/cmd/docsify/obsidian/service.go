@@ -9,6 +9,8 @@ import (
 	"regexp"
 	"sort"
 	"strings"
+
+	"github.com/hieudoanm/jack/src/cmd/docsify/internal"
 )
 
 type node struct {
@@ -37,7 +39,7 @@ func runObsidian(dir, out, format, exclude string) error {
 	if err != nil {
 		return fmt.Errorf("resolve directory: %w", err)
 	}
-	excludeSet := parseExcludeList(exclude)
+	excludeSet := internal.ParseExcludeList(exclude)
 	nodes, edges, err := buildGraph(absDir, excludeSet)
 	if err != nil {
 		return err
@@ -214,13 +216,4 @@ func writeOutput(data []byte, path string) error {
 	return os.WriteFile(path, data, 0644)
 }
 
-func parseExcludeList(s string) map[string]bool {
-	m := make(map[string]bool)
-	for _, part := range strings.Split(s, ",") {
-		part = strings.TrimSpace(part)
-		if part != "" {
-			m[part] = true
-		}
-	}
-	return m
-}
+

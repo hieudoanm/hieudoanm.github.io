@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"strings"
 	"time"
+
+	chess "github.com/hieudoanm/jack/src/cmd/chess/internal"
 )
 
 type Piece int8
@@ -232,8 +234,8 @@ func (g *Game) generateKnightMoves(sq int) []Move {
 func knightWrapOK(from, to int) bool {
 	fr, fc := sqToRC(from)
 	tr, tc := sqToRC(to)
-	dr := abs(fr - tr)
-	dc := abs(fc - tc)
+	dr := chess.Abs(fr - tr)
+	dc := chess.Abs(fc - tc)
 	return (dr == 1 && dc == 2) || (dr == 2 && dc == 1)
 }
 
@@ -279,7 +281,7 @@ func isWraparound(from, to, d int) bool {
 	tr, tc := sqToRC(to)
 	_ = tr
 	_ = fr
-	if abs(fc-tc) > 2 {
+	if chess.Abs(fc-tc) > 2 {
 		return true
 	}
 	return false
@@ -300,13 +302,6 @@ func absPiece(p Piece) Piece {
 		return -p
 	}
 	return p
-}
-
-func abs(a int) int {
-	if a < 0 {
-		return -a
-	}
-	return a
 }
 
 func (c Color) Opposite() Color {

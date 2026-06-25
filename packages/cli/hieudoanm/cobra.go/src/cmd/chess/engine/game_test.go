@@ -1,6 +1,10 @@
 package engine
 
-import "testing"
+import (
+	"testing"
+
+	chess "github.com/hieudoanm/jack/src/cmd/chess/internal"
+)
 
 func TestNewGame(t *testing.T) {
 	g := NewGame()
@@ -110,9 +114,9 @@ func TestAbs(t *testing.T) {
 		{-100, 100},
 	}
 	for _, tt := range tests {
-		got := abs(tt.a)
+		got := chess.Abs(tt.a)
 		if got != tt.want {
-			t.Errorf("abs(%d) = %d, want %d", tt.a, got, tt.want)
+			t.Errorf("Abs(%d) = %d, want %d", tt.a, got, tt.want)
 		}
 	}
 }

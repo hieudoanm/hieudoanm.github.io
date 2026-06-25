@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
-	"strings"
 
 	"github.com/hieudoanm/jack/src/cmd/docsify/internal"
 )
@@ -15,7 +14,7 @@ func runScan(dir, out, exclude string, verbose bool) error {
 		return fmt.Errorf("error resolving directory: %w", err)
 	}
 
-	excludeSet := parseExcludeList(exclude)
+	excludeSet := internal.ParseExcludeList(exclude)
 
 	if verbose {
 		fmt.Fprintf(os.Stderr, "scanning %s\n", absDir)
@@ -58,13 +57,4 @@ func runScan(dir, out, exclude string, verbose bool) error {
 	return nil
 }
 
-func parseExcludeList(s string) map[string]bool {
-	m := make(map[string]bool)
-	for _, part := range strings.Split(s, ",") {
-		part = strings.TrimSpace(part)
-		if part != "" {
-			m[part] = true
-		}
-	}
-	return m
-}
+

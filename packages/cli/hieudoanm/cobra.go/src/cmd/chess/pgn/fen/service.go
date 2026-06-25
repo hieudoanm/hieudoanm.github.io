@@ -7,6 +7,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/hieudoanm/jack/src/cmd/chess/internal"
 	"github.com/hieudoanm/jack/src/cmd/chess/lichess.org"
 	"github.com/notnil/chess"
 	"github.com/spf13/cobra"
@@ -74,7 +75,7 @@ func runFen(cmd *cobra.Command, args []string) error {
 		}
 		time.Sleep(300 * time.Millisecond)
 
-		cpLoss := abs(eval - prevEval)
+		cpLoss := internal.Abs(eval - prevEval)
 		prevEval = eval
 
 		side := "White"
@@ -129,9 +130,4 @@ func classifyMove(cp int) string {
 	}
 }
 
-func abs(a int) int {
-	if a < 0 {
-		return -a
-	}
-	return a
-}
+

@@ -7,6 +7,7 @@ import (
 
 	"github.com/shirou/gopsutil/v4/disk"
 
+	"github.com/hieudoanm/jack/src/cmd/system/disk/internal"
 	"github.com/hieudoanm/jack/src/libs/theme"
 )
 
@@ -60,25 +61,12 @@ func runDisk(showJSON bool, filter string, sortBySize bool) error {
 		for _, d := range disks {
 			fmt.Printf("%-35s %-10s %12s %12s %12s %s\n",
 				d.Mount, d.Fstype,
-				diskLabel(d.Total), diskLabel(d.Used), diskLabel(d.Free),
+				internal.DiskLabel(d.Total), internal.DiskLabel(d.Used), internal.DiskLabel(d.Free),
 				theme.StatusStyle(d.UsedPercent).Render(fmt.Sprintf("%.1f%%", d.UsedPercent)),
 			)
 		}
 	}
 	return nil
-}
-
-func diskLabel(bytes uint64) string {
-	const unit = 1024
-	if bytes < unit {
-		return fmt.Sprintf("%d B", bytes)
-	}
-	div, exp := uint64(unit), 0
-	for n := bytes / unit; n >= unit; n /= unit {
-		div *= unit
-		exp++
-	}
-	return fmt.Sprintf("%.1f %cB", float64(bytes)/float64(div), "KMGTPE"[exp])
 }
 
 func containsFold(s, substr string) bool {

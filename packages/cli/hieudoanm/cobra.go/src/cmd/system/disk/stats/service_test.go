@@ -5,6 +5,8 @@ import (
 	"os"
 	"strings"
 	"testing"
+
+	"github.com/hieudoanm/jack/src/cmd/system/disk/internal"
 )
 
 func captureOutput(fn func()) string {
@@ -54,9 +56,9 @@ func TestDiskLabel(t *testing.T) {
 	}
 
 	for _, tt := range tests {
-		got := diskLabel(tt.bytes)
+		got := internal.DiskLabel(tt.bytes)
 		if got != tt.want {
-			t.Errorf("diskLabel(%d) = %q, want %q", tt.bytes, got, tt.want)
+			t.Errorf("DiskLabel(%d) = %q, want %q", tt.bytes, got, tt.want)
 		}
 	}
 }

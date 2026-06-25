@@ -4,6 +4,8 @@ import (
 	"os"
 	"path/filepath"
 	"testing"
+
+	"github.com/hieudoanm/jack/src/cmd/docsify/internal"
 )
 
 func TestParseExcludeList(t *testing.T) {
@@ -25,9 +27,9 @@ func TestParseExcludeList(t *testing.T) {
 		},
 	}
 	for _, tc := range tests {
-		got := parseExcludeList(tc.input)
+		got := internal.ParseExcludeList(tc.input)
 		if len(got) != len(tc.expected) {
-			t.Errorf("parseExcludeList(%q) = %v (len=%d), want %v (len=%d)",
+			t.Errorf("ParseExcludeList(%q) = %v (len=%d), want %v (len=%d)",
 				tc.input, got, len(got), tc.expected, len(tc.expected))
 		}
 		for k := range tc.expected {
@@ -39,7 +41,7 @@ func TestParseExcludeList(t *testing.T) {
 }
 
 func TestParseExcludeList_trimsSpaces(t *testing.T) {
-	got := parseExcludeList("  a , b , c  ")
+	got := internal.ParseExcludeList("  a , b , c  ")
 	expected := map[string]bool{"a": true, "b": true, "c": true}
 	if len(got) != len(expected) {
 		t.Errorf("expected %d entries, got %d", len(expected), len(got))
@@ -52,7 +54,7 @@ func TestParseExcludeList_trimsSpaces(t *testing.T) {
 }
 
 func TestParseExcludeList_skipsEmptyParts(t *testing.T) {
-	got := parseExcludeList("a,,b,")
+	got := internal.ParseExcludeList("a,,b,")
 	expected := map[string]bool{"a": true, "b": true}
 	if len(got) != len(expected) {
 		t.Errorf("expected %d entries, got %d", len(expected), len(got))

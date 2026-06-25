@@ -1,6 +1,10 @@
 package disk
 
-import "testing"
+import (
+	"testing"
+
+	"github.com/hieudoanm/jack/src/cmd/system/disk/internal"
+)
 
 func TestDiskLabel(t *testing.T) {
 	tests := []struct {
@@ -16,9 +20,9 @@ func TestDiskLabel(t *testing.T) {
 	}
 
 	for _, tt := range tests {
-		got := diskLabel(tt.bytes)
+		got := internal.DiskLabel(tt.bytes)
 		if got != tt.want {
-			t.Errorf("diskLabel(%d) = %q, want %q", tt.bytes, got, tt.want)
+			t.Errorf("DiskLabel(%d) = %q, want %q", tt.bytes, got, tt.want)
 		}
 	}
 }

@@ -2,6 +2,8 @@ package fen
 
 import (
 	"testing"
+
+	"github.com/hieudoanm/jack/src/cmd/chess/internal"
 )
 
 func TestClassifyMove(t *testing.T) {
@@ -45,9 +47,9 @@ func TestAbs(t *testing.T) {
 	}
 
 	for _, tt := range tests {
-		got := abs(tt.a)
+		got := internal.Abs(tt.a)
 		if got != tt.want {
-			t.Errorf("abs(%d) = %d, want %d", tt.a, got, tt.want)
+			t.Errorf("Abs(%d) = %d, want %d", tt.a, got, tt.want)
 		}
 	}
 }

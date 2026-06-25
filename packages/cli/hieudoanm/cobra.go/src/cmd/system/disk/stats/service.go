@@ -6,21 +6,9 @@ import (
 
 	"github.com/shirou/gopsutil/v4/disk"
 
+	"github.com/hieudoanm/jack/src/cmd/system/disk/internal"
 	"github.com/hieudoanm/jack/src/libs/theme"
 )
-
-func diskLabel(bytes uint64) string {
-	const unit = 1024
-	if bytes < unit {
-		return fmt.Sprintf("%d B", bytes)
-	}
-	div, exp := uint64(unit), 0
-	for n := bytes / unit; n >= unit; n /= unit {
-		div *= unit
-		exp++
-	}
-	return fmt.Sprintf("%.1f %cB", float64(bytes)/float64(div), "KMGTPE"[exp])
-}
 
 func statsRun(showAll bool) error {
 	partitions, err := disk.Partitions(!showAll)
@@ -39,9 +27,9 @@ func statsRun(showAll bool) error {
 			continue
 		}
 
-		used := diskLabel(usage.Used)
-		total := diskLabel(usage.Total)
-		free := diskLabel(usage.Free)
+		used := internal.DiskLabel(usage.Used)
+		total := internal.DiskLabel(usage.Total)
+		free := internal.DiskLabel(usage.Free)
 		pct := usage.UsedPercent
 
 		bar := theme.StatusStyle(pct).Render(
