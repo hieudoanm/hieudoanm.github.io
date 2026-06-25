@@ -94,6 +94,18 @@ func TestCmd_RunE_InvalidAlgorithm(t *testing.T) {
 	}
 }
 
+func TestRunEncode_JSON(t *testing.T) {
+	output := captureOutput(func() {
+		if err := runEncode("HS256", "secret", `{"sub":"123"}`, true); err != nil {
+			t.Fatal(err)
+		}
+	})
+
+	if !strings.Contains(output, "token") {
+		t.Errorf("expected json output with 'token' key, got: %s", output)
+	}
+}
+
 func TestCmd_RunE_InvalidClaims(t *testing.T) {
 	cmd := NewCmd()
 	cmd.Flags().Set("key", "mysecret")

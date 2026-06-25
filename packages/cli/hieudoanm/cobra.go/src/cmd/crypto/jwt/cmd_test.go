@@ -12,6 +12,14 @@ func TestNewCommand_Use(t *testing.T) {
 	}
 }
 
+func TestNewCommand_RunE(t *testing.T) {
+	cmd := NewCommand()
+	err := cmd.RunE(cmd, []string{})
+	if err != nil {
+		t.Fatal(err)
+	}
+}
+
 func TestNewCommand_hasSubcommands(t *testing.T) {
 	cmd := NewCommand()
 	want := []string{"decode", "encode"}
