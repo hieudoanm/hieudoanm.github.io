@@ -1,6 +1,7 @@
 package search
 
 import (
+	"encoding/json"
 	"strings"
 	"testing"
 
@@ -37,6 +38,35 @@ func TestRunSearch_WithMatches(t *testing.T) {
 	}
 	if strings.Contains(out, "git status") {
 		t.Errorf("output should NOT contain 'git status', got: %s", out)
+	}
+}
+
+func TestRunSearch_JSON(t *testing.T) {
+	testutil.SetHomeTempDir(t)
+	history.Append(history.Entry{Timestamp: "2025-01-01T00:00:00Z", Source: "cli", Command: "ls -la"})
+
+	out, err := testutil.CaptureStdout(t, func() error { return runSearch("ls", 20, true) })
+	if err != nil {
+		t.Fatal(err)
+	}
+	var result []history.Entry
+	if err := json.Unmarshal([]byte(out), &result); err != nil {
+		t.Fatalf("invalid JSON: %v\noutput: %s", err, out)
+	}
+	if len(result) != 1 {
+		t.Errorf("expected 1 entry, got %d", len(result))
+	}
+}
+
+func TestRunSearch_JSON_Empty(t *testing.T) {
+	testutil.SetHomeTempDir(t)
+
+	out, err := testutil.CaptureStdout(t, func() error { return runSearch("zzzz", 20, true) })
+	if err != nil {
+		t.Fatal(err)
+	}
+	if out != "[]" {
+		t.Errorf("expected empty array, got: %s", out)
 	}
 }
 

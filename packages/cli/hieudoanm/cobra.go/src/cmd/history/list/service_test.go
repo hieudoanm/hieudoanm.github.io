@@ -1,6 +1,7 @@
 package list
 
 import (
+	"encoding/json"
 	"strings"
 	"testing"
 
@@ -32,6 +33,35 @@ func TestRunList_WithEntries(t *testing.T) {
 	}
 	if !strings.Contains(out, "file.read") {
 		t.Errorf("output should contain 'file.read', got: %s", out)
+	}
+}
+
+func TestRunList_JSON(t *testing.T) {
+	testutil.SetHomeTempDir(t)
+	history.Append(history.Entry{Timestamp: "2025-01-01T00:00:00Z", Source: "cli", Command: "ls -la"})
+
+	out, err := testutil.CaptureStdout(t, func() error { return runList(10, true) })
+	if err != nil {
+		t.Fatal(err)
+	}
+	var result []history.Entry
+	if err := json.Unmarshal([]byte(out), &result); err != nil {
+		t.Fatalf("invalid JSON: %v\noutput: %s", err, out)
+	}
+	if len(result) != 1 {
+		t.Errorf("expected 1 entry, got %d", len(result))
+	}
+}
+
+func TestRunList_JSON_Empty(t *testing.T) {
+	testutil.SetHomeTempDir(t)
+
+	out, err := testutil.CaptureStdout(t, func() error { return runList(10, true) })
+	if err != nil {
+		t.Fatal(err)
+	}
+	if out != "[]" {
+		t.Errorf("expected empty array, got: %s", out)
 	}
 }
 

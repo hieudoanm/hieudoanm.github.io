@@ -2,6 +2,7 @@ package qrcode
 
 import (
 	"bytes"
+	"encoding/json"
 	"io"
 	"os"
 	"testing"
@@ -30,5 +31,20 @@ func TestCmd_RunE(t *testing.T) {
 
 	if len(output) == 0 {
 		t.Error("expected non-empty QR code output")
+	}
+}
+
+func TestRunQRCode_JSON(t *testing.T) {
+	output := captureOutput(func() {
+		if err := runQRCode("hello", true); err != nil {
+			t.Fatal(err)
+		}
+	})
+	var result map[string]interface{}
+	if err := json.Unmarshal([]byte(output), &result); err != nil {
+		t.Fatalf("invalid JSON: %v\noutput: %s", err, output)
+	}
+	if result["data"] != "hello" {
+		t.Errorf("expected data 'hello', got %v", result["data"])
 	}
 }

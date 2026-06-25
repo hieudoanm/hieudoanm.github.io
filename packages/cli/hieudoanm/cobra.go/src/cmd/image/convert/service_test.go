@@ -48,3 +48,51 @@ func TestRunConvert_ValidPNG(t *testing.T) {
 		t.Fatalf("unexpected error: %v", err)
 	}
 }
+
+func TestRunConvert_JPEGOutput(t *testing.T) {
+	inputPath := testutil.CreateTestPNG(t)
+	testutil.SetHomeTempDir(t)
+	outputFormat = "jpg"
+	defer func() { outputFormat = "" }()
+
+	err := runConvert(inputPath)
+	if err != nil {
+		t.Fatalf("unexpected error: %v", err)
+	}
+}
+
+func TestRunConvert_GIFOutput(t *testing.T) {
+	inputPath := testutil.CreateTestPNG(t)
+	testutil.SetHomeTempDir(t)
+	outputFormat = "gif"
+	defer func() { outputFormat = "" }()
+
+	err := runConvert(inputPath)
+	if err != nil {
+		t.Fatalf("unexpected error: %v", err)
+	}
+}
+
+func TestRunConvert_UnsupportedFormat(t *testing.T) {
+	inputPath := testutil.CreateTestPNG(t)
+	testutil.SetHomeTempDir(t)
+	outputFormat = "bmp"
+	defer func() { outputFormat = "" }()
+
+	err := runConvert(inputPath)
+	if err == nil {
+		t.Fatal("expected error for unsupported format")
+	}
+}
+
+func TestRunConvert_WithCustomOutput(t *testing.T) {
+	inputPath := testutil.CreateTestPNG(t)
+	testutil.SetHomeTempDir(t)
+	output = inputPath + ".out.jpg"
+	defer func() { output = "" }()
+
+	err := runConvert(inputPath)
+	if err != nil {
+		t.Fatalf("unexpected error: %v", err)
+	}
+}

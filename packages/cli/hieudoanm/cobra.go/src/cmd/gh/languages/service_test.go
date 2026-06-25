@@ -1,14 +1,29 @@
 package languages
 
 import (
+	"bytes"
 	"errors"
+	"io"
 	"os"
 	"path/filepath"
 	"strings"
 	"testing"
 
 	"github.com/hieudoanm/jack/src/cmd/gh/shared"
+	requests "github.com/hieudoanm/jack/src/libs/requests"
 )
+
+func captureOutput(fn func()) string {
+	old := os.Stdout
+	r, w, _ := os.Pipe()
+	os.Stdout = w
+	fn()
+	w.Close()
+	var buf bytes.Buffer
+	io.Copy(&buf, r)
+	os.Stdout = old
+	return buf.String()
+}
 
 func TestFetchLanguages(t *testing.T) {
 	langsBody := `{"Go":500,"TypeScript":300,"Python":200}`
@@ -189,6 +204,86 @@ func TestGenerateLanguagesSVG_singleLanguage(t *testing.T) {
 	}
 	if !strings.Contains(svg, "100.0%") {
 		t.Error("expected single language to show 100.0%")
+	}
+}
+
+func TestRunLanguages_JSON(t *testing.T) {
+	old := shared.FetchFuncDefault
+	shared.FetchFuncDefault = func(url string, opts requests.Options) ([]byte, error) {
+		return []byte(`{"Go":500,"TypeScript":300}`), nil
+	}
+	defer func() { shared.FetchFuncDefault = old }()
+
+	output := captureOutput(func() {
+		if err := runLanguages("owner/repo", "", true); err != nil {
+			t.Fatal(err)
+		}
+	})
+	if !strings.Contains(output, `"Go"`) {
+		t.Errorf("expected JSON with Go, got: %s", output)
+	}
+}
+
+func TestRunLanguages_JSON_InvalidRepo(t *testing.T) {
+	old := shared.FetchFuncDefault
+	defer func() { shared.FetchFuncDefault = old }()
+
+	err := runLanguages("invalid", "", true)
+	if err == nil {
+		t.Fatal("expected error for invalid repo format")
+	}
+	if !strings.Contains(err.Error(), "owner/repo") {
+		t.Errorf("expected owner/repo error, got: %v", err)
+	}
+}
+
+func TestRunLanguages_JSON_FetchError(t *testing.T) {
+	old := shared.FetchFuncDefault
+	shared.FetchFuncDefault = func(url string, opts requests.Options) ([]byte, error) {
+		return nil, errors.New("network error")
+	}
+	defer func() { shared.FetchFuncDefault = old }()
+
+	err := runLanguages("owner/repo", "", true)
+	if err == nil {
+		t.Fatal("expected error for fetch failure")
+	}
+	if !strings.Contains(err.Error(), "fetching languages") {
+		t.Errorf("expected fetch error, got: %v", err)
+	}
+}
+
+func TestRunLanguages_JSON_ParseError(t *testing.T) {
+	old := shared.FetchFuncDefault
+	shared.FetchFuncDefault = func(url string, opts requests.Options) ([]byte, error) {
+		return []byte("invalid json"), nil
+	}
+	defer func() { shared.FetchFuncDefault = old }()
+
+	err := runLanguages("owner/repo", "", true)
+	if err == nil {
+		t.Fatal("expected error for parse failure")
+	}
+	if !strings.Contains(err.Error(), "parsing response") {
+		t.Errorf("expected parse error, got: %v", err)
+	}
+}
+
+func TestGenerateLanguagesSVG_tinyBar(t *testing.T) {
+	langs := map[string]int{
+		"Go":  1000,
+		"Rust": 1,
+	}
+	svg := GenerateLanguagesSVG(langs)
+
+	if !strings.Contains(svg, "Go") {
+		t.Error("expected SVG to contain Go")
+	}
+	if !strings.Contains(svg, "Rust") {
+		t.Error("expected SVG to contain Rust")
+	}
+	if !strings.Contains(svg, "0.1%") {
+		t.Error("expected tiny percentage for Rust")
 	}
 }
 

@@ -3,10 +3,12 @@ package age
 import (
 	"bytes"
 	"encoding/json"
+	"fmt"
 	"io"
 	"os"
 	"strings"
 	"testing"
+	"time"
 )
 
 func captureOutput(fn func()) string {
@@ -54,5 +56,53 @@ func TestRunAge_FutureDate(t *testing.T) {
 	err := runAge("2099-01-01", false)
 	if err == nil {
 		t.Fatal("expected error for future date")
+	}
+}
+
+func TestRunAge_DaysBorrow(t *testing.T) {
+	nowYear, nowMonth, nowDay := time.Now().Date()
+	birthDay := nowDay + 5
+	if birthDay > 28 {
+		birthDay = 1
+	}
+	birthMonth := int(nowMonth)
+	birthYear := nowYear - 1
+	dateStr := fmt.Sprintf("%04d-%02d-%02d", birthYear, birthMonth, birthDay)
+
+	output := captureOutput(func() {
+		if err := runAge(dateStr, false); err != nil {
+			t.Fatal(err)
+		}
+	})
+	if !strings.Contains(output, "years") {
+		t.Errorf("expected age output, got: %s", output)
+	}
+}
+
+func TestRunAge_MonthsBorrow(t *testing.T) {
+	nowYear, nowMonth, _ := time.Now().Date()
+	birthMonth := int(nowMonth) + 3
+	if birthMonth > 12 {
+		birthMonth = birthMonth - 12
+	}
+	dateStr := fmt.Sprintf("%04d-%02d-01", nowYear-1, birthMonth)
+
+	output := captureOutput(func() {
+		if err := runAge(dateStr, false); err != nil {
+			t.Fatal(err)
+		}
+	})
+	if !strings.Contains(output, "years") {
+		t.Errorf("expected age output, got: %s", output)
+	}
+}
+
+func TestRunAge_InvalidDateFormat(t *testing.T) {
+	err := runAge("not-a-date", false)
+	if err == nil {
+		t.Fatal("expected error for invalid date")
+	}
+	if !strings.Contains(err.Error(), "invalid date") {
+		t.Errorf("expected invalid date error, got: %v", err)
 	}
 }

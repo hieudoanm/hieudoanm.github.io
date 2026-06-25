@@ -59,6 +59,29 @@ func TestCmd_RunE(t *testing.T) {
 	}
 }
 
+func TestRunRandom_JSON(t *testing.T) {
+	output := captureOutput(func() {
+		if err := runRandom(1, 10, 3, true); err != nil {
+			t.Fatal(err)
+		}
+	})
+	if !strings.HasPrefix(output, "{") || !strings.Contains(output, "values") {
+		t.Errorf("expected JSON output with values, got: %s", output)
+	}
+}
+
+func TestRunRandom_ZeroCount(t *testing.T) {
+	output := captureOutput(func() {
+		if err := runRandom(5, 10, 0, false); err != nil {
+			t.Fatal(err)
+		}
+	})
+	lines := strings.Split(strings.TrimSpace(output), "\n")
+	if len(lines) != 1 {
+		t.Errorf("expected 1 value (default), got %d", len(lines))
+	}
+}
+
 func TestCmd_RunE_Count(t *testing.T) {
 	cmd := NewCmd()
 	cmd.Flags().Set("min", "1")
