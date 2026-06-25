@@ -6,11 +6,11 @@ import (
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "answer",
-		Short: "Answer an inline query",
-		Long:  `Send answers to an inline query.`,
+		Use:     "answer",
+		Short:   "Answer an inline query",
+		Long:    `Send answers to an inline query.`,
 		Example: `  telegram inline answer --inline-query-id "12345" --results '[{"type":"article","id":"1","title":"Result","input_message_content":{"message_text":"Hello"}}]'`,
-		RunE:  runE,
+		RunE:    runE,
 	}
 
 	cmd.Flags().String("inline-query-id", "", "Inline query ID")

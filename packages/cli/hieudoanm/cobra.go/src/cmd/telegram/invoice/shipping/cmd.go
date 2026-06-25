@@ -6,11 +6,11 @@ import (
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "shipping",
-		Short: "Answer a shipping query",
-		Long:  `Answer a shipping query from a user.`,
+		Use:     "shipping",
+		Short:   "Answer a shipping query",
+		Long:    `Answer a shipping query from a user.`,
 		Example: `  telegram invoice shipping --shipping-query-id "12345" --ok --shipping-options '[{"id":"standard","title":"Standard","prices":[{"label":"Shipping","amount":500}]}]'`,
-		RunE:  runE,
+		RunE:    runE,
 	}
 
 	cmd.Flags().String("shipping-query-id", "", "Shipping query ID")

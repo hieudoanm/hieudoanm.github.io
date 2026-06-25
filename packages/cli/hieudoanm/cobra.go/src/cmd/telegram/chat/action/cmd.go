@@ -11,7 +11,7 @@ func NewCmd() *cobra.Command {
 		Long:  `Broadcast a chat action (typing, upload_photo, etc.).`,
 		Example: `  telegram chat action --chat-id @channel --action typing
   telegram chat action --chat-id @channel --action upload_photo`,
-		RunE:  runE,
+		RunE: runE,
 	}
 
 	cmd.Flags().String("chat-id", "", "Target chat ID or @username")

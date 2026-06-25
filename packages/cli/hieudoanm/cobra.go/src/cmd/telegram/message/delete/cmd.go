@@ -6,11 +6,11 @@ import (
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "delete",
-		Short: "Delete a message",
-		Long:  `Delete a message sent by the bot.`,
+		Use:     "delete",
+		Short:   "Delete a message",
+		Long:    `Delete a message sent by the bot.`,
 		Example: `  telegram message delete --chat-id 123456 --message-id 42`,
-		RunE:  runE,
+		RunE:    runE,
 	}
 
 	cmd.Flags().String("chat-id", "", "Target chat ID or @username")

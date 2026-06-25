@@ -6,11 +6,11 @@ import (
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "set-name",
-		Short: "Set bot name",
-		Long:  `Change the bot's name.`,
+		Use:     "set-name",
+		Short:   "Set bot name",
+		Long:    `Change the bot's name.`,
 		Example: `  telegram bot set-name --name "MyBot" --language-code en`,
-		RunE:  runE,
+		RunE:    runE,
 	}
 
 	cmd.Flags().String("name", "", "New bot name")

@@ -11,7 +11,7 @@ func NewCmd() *cobra.Command {
 		Long:  `Send a text message to a Telegram chat.`,
 		Example: `  telegram message send --chat-id 123456 --text "Hello"
   telegram message send --chat-id @username --text "Hello" --parse-mode HTML`,
-		RunE:  runE,
+		RunE: runE,
 	}
 
 	cmd.Flags().String("chat-id", "", "Target chat ID or @username")

@@ -6,13 +6,12 @@ import (
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "info",
-		Short: "Get current webhook info",
-		Long:  `Fetch the current webhook configuration.`,
+		Use:     "info",
+		Short:   "Get current webhook info",
+		Long:    `Fetch the current webhook configuration.`,
 		Example: `  telegram webhook info`,
-		RunE:  runE,
+		RunE:    runE,
 	}
-
 
 	return cmd
 }

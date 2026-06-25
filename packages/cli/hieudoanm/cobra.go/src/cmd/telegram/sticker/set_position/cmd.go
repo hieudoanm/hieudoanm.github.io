@@ -6,11 +6,11 @@ import (
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "set-position",
-		Short: "Set sticker position in set",
-		Long:  `Set the position of a sticker in the set.`,
+		Use:     "set-position",
+		Short:   "Set sticker position in set",
+		Long:    `Set the position of a sticker in the set.`,
 		Example: `  telegram sticker set-position --sticker FILE_ID --position 2`,
-		RunE:  runE,
+		RunE:    runE,
 	}
 
 	cmd.Flags().String("sticker", "", "File ID of the sticker")

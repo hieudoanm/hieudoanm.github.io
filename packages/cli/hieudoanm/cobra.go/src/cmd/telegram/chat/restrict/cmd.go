@@ -6,11 +6,11 @@ import (
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "restrict",
-		Short: "Restrict a user in a chat",
-		Long:  `Restrict a user in a supergroup by setting permissions.`,
+		Use:     "restrict",
+		Short:   "Restrict a user in a chat",
+		Long:    `Restrict a user in a supergroup by setting permissions.`,
 		Example: `  telegram chat restrict --chat-id @channel --user-id 123456789 --permissions '{"can_send_messages":false}'`,
-		RunE:  runE,
+		RunE:    runE,
 	}
 
 	cmd.Flags().String("chat-id", "", "Target chat ID or @username")

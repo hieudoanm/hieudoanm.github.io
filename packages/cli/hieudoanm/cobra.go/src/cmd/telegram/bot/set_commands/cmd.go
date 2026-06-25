@@ -6,11 +6,11 @@ import (
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "set-commands",
-		Short: "Set bot commands",
-		Long:  `Set the list of the bot's commands for the command menu.`,
+		Use:     "set-commands",
+		Short:   "Set bot commands",
+		Long:    `Set the list of the bot's commands for the command menu.`,
 		Example: `  telegram bot set-commands --commands '[{"command":"start","description":"Start the bot"},{"command":"help","description":"Get help"}]'`,
-		RunE:  runE,
+		RunE:    runE,
 	}
 
 	cmd.Flags().String("commands", "", "JSON array of command objects")

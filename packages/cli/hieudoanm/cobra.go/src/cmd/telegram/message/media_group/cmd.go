@@ -6,11 +6,11 @@ import (
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "media-group",
-		Short: "Send a media group",
-		Long:  `Send a group of photos, videos, or mixed media as an album. The --media flag accepts a JSON array of media items.`,
+		Use:     "media-group",
+		Short:   "Send a media group",
+		Long:    `Send a group of photos, videos, or mixed media as an album. The --media flag accepts a JSON array of media items.`,
 		Example: `  telegram message media-group --chat-id @channel --media '[{"type":"photo","media":"https://example.com/a.jpg"},{"type":"photo","media":"https://example.com/b.jpg"}]'`,
-		RunE:  runE,
+		RunE:    runE,
 	}
 
 	cmd.Flags().String("chat-id", "", "Target chat ID or @username")

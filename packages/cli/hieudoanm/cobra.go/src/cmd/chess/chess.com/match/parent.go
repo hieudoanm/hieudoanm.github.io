@@ -5,8 +5,8 @@ import (
 
 	"github.com/hieudoanm/jack/src/cmd/chess/chess.com/match/daily"
 	"github.com/hieudoanm/jack/src/cmd/chess/chess.com/match/daily-board"
-	"github.com/hieudoanm/jack/src/cmd/chess/chess.com/match/live-board"
 	"github.com/hieudoanm/jack/src/cmd/chess/chess.com/match/live"
+	"github.com/hieudoanm/jack/src/cmd/chess/chess.com/match/live-board"
 )
 
 func NewCmd() *cobra.Command {

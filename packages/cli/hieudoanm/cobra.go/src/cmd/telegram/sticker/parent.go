@@ -1,7 +1,6 @@
 package sticker
 
 import (
-	"github.com/spf13/cobra"
 	"github.com/hieudoanm/jack/src/cmd/telegram/sticker/add_to_set"
 	"github.com/hieudoanm/jack/src/cmd/telegram/sticker/remove_from_set"
 	"github.com/hieudoanm/jack/src/cmd/telegram/sticker/replace_in_set"
@@ -11,6 +10,7 @@ import (
 	"github.com/hieudoanm/jack/src/cmd/telegram/sticker/set_position"
 	"github.com/hieudoanm/jack/src/cmd/telegram/sticker/set_thumbnail"
 	"github.com/hieudoanm/jack/src/cmd/telegram/sticker/set_title"
+	"github.com/spf13/cobra"
 )
 
 func NewCmd() *cobra.Command {
@@ -22,7 +22,7 @@ func NewCmd() *cobra.Command {
   telegram sticker set-title --name "my_set" --title "New Title"`,
 		RunE: func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
-		cmd.AddCommand(add_to_set.NewCmd())
+	cmd.AddCommand(add_to_set.NewCmd())
 	cmd.AddCommand(remove_from_set.NewCmd())
 	cmd.AddCommand(replace_in_set.NewCmd())
 	cmd.AddCommand(send.NewCmd())

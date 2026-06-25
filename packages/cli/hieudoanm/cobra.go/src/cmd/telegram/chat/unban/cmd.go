@@ -6,11 +6,11 @@ import (
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "unban",
-		Short: "Unban a user from a chat",
-		Long:  `Remove a user from the ban list of a group, supergroup, or channel.`,
+		Use:     "unban",
+		Short:   "Unban a user from a chat",
+		Long:    `Remove a user from the ban list of a group, supergroup, or channel.`,
 		Example: `  telegram chat unban --chat-id @channel --user-id 123456789`,
-		RunE:  runE,
+		RunE:    runE,
 	}
 
 	cmd.Flags().String("chat-id", "", "Target chat ID or @username")

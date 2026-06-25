@@ -6,11 +6,11 @@ import (
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "create",
-		Short: "Create an invoice link",
-		Long:  `Create a link for an invoice (Star Payments or custom provider).`,
+		Use:     "create",
+		Short:   "Create an invoice link",
+		Long:    `Create a link for an invoice (Star Payments or custom provider).`,
 		Example: `  telegram invoice create --title "Item" --description "Desc" --payload "{}" --currency XTR --prices '[{"label":"Item","amount":1}]'`,
-		RunE:  runE,
+		RunE:    runE,
 	}
 
 	cmd.Flags().String("title", "", "Product title")

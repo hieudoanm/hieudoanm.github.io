@@ -6,11 +6,11 @@ import (
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "send",
-		Short: "Send a game",
-		Long:  `Send a Telegram game to a chat.`,
+		Use:     "send",
+		Short:   "Send a game",
+		Long:    `Send a Telegram game to a chat.`,
 		Example: `  telegram game send --chat-id @channel --game-short-name "mygame"`,
-		RunE:  runE,
+		RunE:    runE,
 	}
 
 	cmd.Flags().String("chat-id", "", "Target chat ID or @username")

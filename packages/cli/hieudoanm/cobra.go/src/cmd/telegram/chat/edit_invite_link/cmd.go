@@ -6,11 +6,11 @@ import (
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "edit-invite-link",
-		Short: "Edit an invite link",
-		Long:  `Edit a non-primary invite link for a chat.`,
+		Use:     "edit-invite-link",
+		Short:   "Edit an invite link",
+		Long:    `Edit a non-primary invite link for a chat.`,
 		Example: `  telegram chat edit-invite-link --chat-id @channel --invite-link https://t.me/+abc --name "Updated"`,
-		RunE:  runE,
+		RunE:    runE,
 	}
 
 	cmd.Flags().String("chat-id", "", "Target chat ID or @username")

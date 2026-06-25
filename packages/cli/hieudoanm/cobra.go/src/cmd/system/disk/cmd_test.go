@@ -59,5 +59,3 @@ func TestNewCmd_RunE_JSON(t *testing.T) {
 		t.Errorf("expected JSON with mount field, got %q", output)
 	}
 }
-
-

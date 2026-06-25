@@ -10,6 +10,6 @@ func NewCmd() *cobra.Command {
 		Short:   "Show random puzzle",
 		Long:    `Fetch and display a randomly selected daily puzzle from Chess.com.`,
 		Example: `  chess com puzzle random`,
-		RunE: runRandomPuzzle,
+		RunE:    runRandomPuzzle,
 	}
 }

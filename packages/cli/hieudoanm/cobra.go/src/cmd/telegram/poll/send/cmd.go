@@ -11,7 +11,7 @@ func NewCmd() *cobra.Command {
 		Long:  `Send a native poll or quiz to a Telegram chat.`,
 		Example: `  telegram poll send --chat-id @channel --question "Favorite color?" --options '[{"text":"Red"},{"text":"Blue"},{"text":"Green"}]'
   telegram poll send --chat-id @channel --question "Quiz" --options '[{"text":"A"},{"text":"B"}]' --type quiz --correct-option-ids 0`,
-		RunE:  runE,
+		RunE: runE,
 	}
 
 	cmd.Flags().String("chat-id", "", "Target chat ID or @username")

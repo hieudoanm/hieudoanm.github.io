@@ -2,6 +2,7 @@ package ignore
 
 import (
 	"errors"
+	"io"
 	"os"
 	"path/filepath"
 	"strings"
@@ -115,5 +116,95 @@ func TestFetchIgnore(t *testing.T) {
 				t.Errorf("file content = %q, want %q", string(data), tt.wantOut)
 			}
 		})
+	}
+}
+
+func TestRunIgnoreJSON(t *testing.T) {
+	detailBody := `{"name":"Go","source":"# Go gitignore\n*.exe\n"}`
+
+	oldFetch := shared.FetchFuncDefault
+	shared.FetchFuncDefault = shared.MockFetchSeq(shared.MockResult{Body: []byte(detailBody)})
+	defer func() { shared.FetchFuncDefault = oldFetch }()
+
+	old := os.Stdout
+	r, w, _ := os.Pipe()
+	os.Stdout = w
+	err := runIgnore("Go", "", true)
+	w.Close()
+	out, _ := io.ReadAll(r)
+	os.Stdout = old
+
+	if err != nil {
+		t.Fatalf("unexpected error: %v", err)
+	}
+	if !strings.Contains(string(out), "Go gitignore") {
+		t.Errorf("expected Go gitignore in output, got: %s", out)
+	}
+}
+
+func TestRunIgnoreJSONMissingName(t *testing.T) {
+	err := runIgnore("", "", true)
+	if err == nil {
+		t.Fatal("expected error for missing name")
+	}
+}
+
+func TestRunIgnoreJSONFetchError(t *testing.T) {
+	oldFetch := shared.FetchFuncDefault
+	shared.FetchFuncDefault = shared.MockFetchSeq(shared.MockResult{Err: errors.New("network error")})
+	defer func() { shared.FetchFuncDefault = oldFetch }()
+
+	err := runIgnore("Go", "", true)
+	if err == nil {
+		t.Fatal("expected error")
+	}
+}
+
+func TestRunIgnoreJSONParseError(t *testing.T) {
+	oldFetch := shared.FetchFuncDefault
+	shared.FetchFuncDefault = shared.MockFetchSeq(shared.MockResult{Body: []byte("invalid json")})
+	defer func() { shared.FetchFuncDefault = oldFetch }()
+
+	err := runIgnore("Go", "", true)
+	if err == nil {
+		t.Fatal("expected error")
+	}
+}
+
+func TestRunIgnoreNonJSON(t *testing.T) {
+	listBody := `["Go","Python","Rust"]`
+	detailBody := `{"name":"Go","source":"# Binaries\n*.exe\n"}`
+
+	oldFetch := shared.FetchFuncDefault
+	shared.FetchFuncDefault = shared.MockFetchSeq(shared.MockResult{Body: []byte(listBody)}, shared.MockResult{Body: []byte(detailBody)})
+	defer func() { shared.FetchFuncDefault = oldFetch }()
+
+	dir := t.TempDir()
+	outPath := filepath.Join(dir, ".gitignore")
+	err := runIgnore("Go", outPath, false)
+	if err != nil {
+		t.Fatalf("unexpected error: %v", err)
+	}
+	data, err := os.ReadFile(outPath)
+	if err != nil {
+		t.Fatalf("error reading output file: %v", err)
+	}
+	if !strings.Contains(string(data), "*.exe") {
+		t.Errorf("expected gitignore content, got: %s", data)
+	}
+}
+
+func TestNewCommand_RunE(t *testing.T) {
+	listBody := `["Go","Python","Rust"]`
+	detailBody := `{"name":"Go","source":"*.exe\n*.dll\n"}`
+
+	oldFetch := shared.FetchFuncDefault
+	shared.FetchFuncDefault = shared.MockFetchSeq(shared.MockResult{Body: []byte(listBody)}, shared.MockResult{Body: []byte(detailBody)})
+	defer func() { shared.FetchFuncDefault = oldFetch }()
+
+	cmd := NewCommand()
+	cmd.SetArgs([]string{"--name", "Go", "--output", "/tmp/test-gitignore-out.txt"})
+	if err := cmd.Execute(); err != nil {
+		t.Fatal(err)
 	}
 }

@@ -153,7 +153,7 @@ func TestSqFromAlgebraic(t *testing.T) {
 
 func TestSqToRC(t *testing.T) {
 	tests := []struct {
-		sq     int
+		sq           int
 		wantR, wantC int
 	}{
 		{0, 0, 0},

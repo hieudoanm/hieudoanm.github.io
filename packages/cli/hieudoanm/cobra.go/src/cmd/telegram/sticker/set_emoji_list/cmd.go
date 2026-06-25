@@ -6,11 +6,11 @@ import (
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "set-emoji-list",
-		Short: "Set sticker emoji list",
-		Long:  `Change the list of emoji associated with a sticker.`,
+		Use:     "set-emoji-list",
+		Short:   "Set sticker emoji list",
+		Long:    `Change the list of emoji associated with a sticker.`,
 		Example: `  telegram sticker set-emoji-list --sticker FILE_ID --emoji-list '["😀","😂"]'`,
-		RunE:  runE,
+		RunE:    runE,
 	}
 
 	cmd.Flags().String("sticker", "", "File ID of the sticker")

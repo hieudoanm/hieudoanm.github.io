@@ -11,7 +11,7 @@ func NewCmd() *cobra.Command {
 		Long:  `Pin a message in a group, supergroup, or channel.`,
 		Example: `  telegram chat pin --chat-id @channel --message-id 42
   telegram chat pin --chat-id @channel --message-id 42 --disable-notification`,
-		RunE:  runE,
+		RunE: runE,
 	}
 
 	cmd.Flags().String("chat-id", "", "Target chat ID or @username")

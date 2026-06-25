@@ -6,11 +6,11 @@ import (
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "reopen",
-		Short: "Reopen a forum topic",
-		Long:  `Reopen a closed topic in a forum supergroup.`,
+		Use:     "reopen",
+		Short:   "Reopen a forum topic",
+		Long:    `Reopen a closed topic in a forum supergroup.`,
 		Example: `  telegram forum reopen --chat-id @channel --message-thread-id 42`,
-		RunE:  runE,
+		RunE:    runE,
 	}
 
 	cmd.Flags().String("chat-id", "", "Target supergroup chat ID or @username")

@@ -6,11 +6,11 @@ import (
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "add-to-set",
-		Short: "Add a sticker to a set",
-		Long:  `Add a new sticker to a set created by the bot.`,
+		Use:     "add-to-set",
+		Short:   "Add a sticker to a set",
+		Long:    `Add a new sticker to a set created by the bot.`,
 		Example: `  telegram sticker add-to-set --user-id 12345 --name "my_set" --sticker '{"sticker":"FILE_ID","emoji_list":["😀"]}'`,
-		RunE:  runE,
+		RunE:    runE,
 	}
 
 	cmd.Flags().Int64("user-id", 0, "Sticker set owner ID")

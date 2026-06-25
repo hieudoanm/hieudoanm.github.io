@@ -6,11 +6,11 @@ import (
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "pre-checkout",
-		Short: "Answer a pre-checkout query",
-		Long:  `Answer a pre-checkout query from a user.`,
+		Use:     "pre-checkout",
+		Short:   "Answer a pre-checkout query",
+		Long:    `Answer a pre-checkout query from a user.`,
 		Example: `  telegram invoice pre-checkout --pre-checkout-query-id "12345" --ok`,
-		RunE:  runE,
+		RunE:    runE,
 	}
 
 	cmd.Flags().String("pre-checkout-query-id", "", "Pre-checkout query ID")

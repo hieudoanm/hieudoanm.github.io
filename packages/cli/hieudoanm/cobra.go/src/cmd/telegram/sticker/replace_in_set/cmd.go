@@ -6,11 +6,11 @@ import (
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "replace-in-set",
-		Short: "Replace a sticker in a set",
-		Long:  `Replace an existing sticker in a set with a new one.`,
+		Use:     "replace-in-set",
+		Short:   "Replace a sticker in a set",
+		Long:    `Replace an existing sticker in a set with a new one.`,
 		Example: `  telegram sticker replace-in-set --user-id 12345 --name "my_set" --old-sticker FILE_ID --sticker '{"sticker":"NEW_FILE_ID","emoji_list":["😀"]}'`,
-		RunE:  runE,
+		RunE:    runE,
 	}
 
 	cmd.Flags().Int64("user-id", 0, "Sticker set owner ID")

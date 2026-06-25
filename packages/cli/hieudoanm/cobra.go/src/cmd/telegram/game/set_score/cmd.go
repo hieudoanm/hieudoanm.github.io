@@ -6,11 +6,11 @@ import (
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "set-score",
-		Short: "Set a game score",
-		Long:  `Set the score for a user in a game.`,
+		Use:     "set-score",
+		Short:   "Set a game score",
+		Long:    `Set the score for a user in a game.`,
 		Example: `  telegram game set-score --user-id 12345 --score 100 --chat-id @channel --message-id 42`,
-		RunE:  runE,
+		RunE:    runE,
 	}
 
 	cmd.Flags().Int64("user-id", 0, "Target user ID")

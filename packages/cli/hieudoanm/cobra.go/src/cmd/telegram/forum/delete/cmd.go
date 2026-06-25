@@ -6,11 +6,11 @@ import (
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "delete",
-		Short: "Delete a forum topic",
-		Long:  `Delete a topic in a forum supergroup.`,
+		Use:     "delete",
+		Short:   "Delete a forum topic",
+		Long:    `Delete a topic in a forum supergroup.`,
 		Example: `  telegram forum delete --chat-id @channel --message-thread-id 42`,
-		RunE:  runE,
+		RunE:    runE,
 	}
 
 	cmd.Flags().String("chat-id", "", "Target supergroup chat ID or @username")

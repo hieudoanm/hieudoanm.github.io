@@ -6,11 +6,11 @@ import (
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "set-keywords",
-		Short: "Set sticker keywords",
-		Long:  `Change the search keywords for a sticker.`,
+		Use:     "set-keywords",
+		Short:   "Set sticker keywords",
+		Long:    `Change the search keywords for a sticker.`,
 		Example: `  telegram sticker set-keywords --sticker FILE_ID --keywords '["keyword1","keyword2"]'`,
-		RunE:  runE,
+		RunE:    runE,
 	}
 
 	cmd.Flags().String("sticker", "", "File ID of the sticker")

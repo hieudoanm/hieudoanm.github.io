@@ -7,8 +7,8 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/hieudoanm/jack/src/libs/colors"
 	or "github.com/hieudoanm/jack/src/cmd/openrouter/openrouterlib"
+	"github.com/hieudoanm/jack/src/libs/colors"
 )
 
 func runModels(modelsSearch string, modelsJSON bool) error {

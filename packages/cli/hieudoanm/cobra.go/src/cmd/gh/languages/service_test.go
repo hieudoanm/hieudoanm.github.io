@@ -271,7 +271,7 @@ func TestRunLanguages_JSON_ParseError(t *testing.T) {
 
 func TestGenerateLanguagesSVG_tinyBar(t *testing.T) {
 	langs := map[string]int{
-		"Go":  1000,
+		"Go":   1000,
 		"Rust": 1,
 	}
 	svg := GenerateLanguagesSVG(langs)

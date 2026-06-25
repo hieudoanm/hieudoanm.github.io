@@ -1,8 +1,8 @@
 package poll
 
 import (
-	"github.com/spf13/cobra"
 	"github.com/hieudoanm/jack/src/cmd/telegram/poll/send"
+	"github.com/spf13/cobra"
 )
 
 func NewCmd() *cobra.Command {
@@ -13,6 +13,6 @@ func NewCmd() *cobra.Command {
 			return cmd.Help()
 		},
 	}
-		cmd.AddCommand(send.NewCmd())
+	cmd.AddCommand(send.NewCmd())
 	return cmd
 }

@@ -12,7 +12,7 @@ func NewCmd() *cobra.Command {
 		Short:   "Show live team match board",
 		Long:    `Fetch and display a live team match board's details.`,
 		Example: `  chess com match live-board --id 5833 --board 5`,
-		RunE: runLiveBoard,
+		RunE:    runLiveBoard,
 	}
 	cmd.Flags().StringVar(&id, "id", "", "Match ID")
 	cmd.Flags().IntVarP(&board, "board", "b", 0, "Board number")

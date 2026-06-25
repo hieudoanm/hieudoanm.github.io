@@ -6,11 +6,11 @@ import (
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "send",
-		Short: "Send a gift",
-		Long:  `Send a gift to a user by gift ID.`,
+		Use:     "send",
+		Short:   "Send a gift",
+		Long:    `Send a gift to a user by gift ID.`,
 		Example: `  telegram gift send --user-id 12345 --gift-id "gift_id_here" --text "Congrats!"`,
-		RunE:  runE,
+		RunE:    runE,
 	}
 
 	cmd.Flags().Int64("user-id", 0, "Target user ID")

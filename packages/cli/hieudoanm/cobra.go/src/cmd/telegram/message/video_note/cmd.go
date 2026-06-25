@@ -6,11 +6,11 @@ import (
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "video-note",
-		Short: "Send a video note",
-		Long:  `Send a video note (rounded video message) to a Telegram chat.`,
+		Use:     "video-note",
+		Short:   "Send a video note",
+		Long:    `Send a video note (rounded video message) to a Telegram chat.`,
 		Example: `  telegram message video-note --chat-id @channel --video-note https://example.com/video.mp4`,
-		RunE:  runE,
+		RunE:    runE,
 	}
 
 	cmd.Flags().String("chat-id", "", "Target chat ID or @username")

@@ -14,36 +14,36 @@ type DeleteResponse struct {
 }
 
 func runE(cmd *cobra.Command, args []string) error {
-			jsonOutput, _ := cmd.Flags().GetBool("json")
+	jsonOutput, _ := cmd.Flags().GetBool("json")
 
-			token, err := internal.ResolveToken(cmd)
-			if err != nil {
-				return err
-			}
+	token, err := internal.ResolveToken(cmd)
+	if err != nil {
+		return err
+	}
 
-			url := internal.TelegramAPIURL(token, "deleteWebhook")
-			responseByte, postErr := requests.Post(url, requests.Options{})
-			if postErr != nil {
-				return postErr
-			}
+	url := internal.TelegramAPIURL(token, "deleteWebhook")
+	responseByte, postErr := requests.Post(url, requests.Options{})
+	if postErr != nil {
+		return postErr
+	}
 
-			if jsonOutput {
-				var result map[string]interface{}
-				if err := json.Unmarshal(responseByte, &result); err != nil {
-					return err
-				}
-				out, _ := json.MarshalIndent(result, "", "  ")
-				fmt.Println(string(out))
-			} else {
-				var deleteResponse DeleteResponse
-				if err := json.Unmarshal(responseByte, &deleteResponse); err != nil {
-					return err
-				}
-				if deleteResponse.Ok {
-					fmt.Println("Success")
-				} else {
-					fmt.Println("Failed")
-				}
-			}
-			return nil
+	if jsonOutput {
+		var result map[string]interface{}
+		if err := json.Unmarshal(responseByte, &result); err != nil {
+			return err
+		}
+		out, _ := json.MarshalIndent(result, "", "  ")
+		fmt.Println(string(out))
+	} else {
+		var deleteResponse DeleteResponse
+		if err := json.Unmarshal(responseByte, &deleteResponse); err != nil {
+			return err
+		}
+		if deleteResponse.Ok {
+			fmt.Println("Success")
+		} else {
+			fmt.Println("Failed")
+		}
+	}
+	return nil
 }

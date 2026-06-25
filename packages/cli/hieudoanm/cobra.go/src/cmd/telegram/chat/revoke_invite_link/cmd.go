@@ -6,11 +6,11 @@ import (
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "revoke-invite-link",
-		Short: "Revoke an invite link",
-		Long:  `Revoke an invite link for a chat.`,
+		Use:     "revoke-invite-link",
+		Short:   "Revoke an invite link",
+		Long:    `Revoke an invite link for a chat.`,
 		Example: `  telegram chat revoke-invite-link --chat-id @channel --invite-link https://t.me/+abc`,
-		RunE:  runE,
+		RunE:    runE,
 	}
 
 	cmd.Flags().String("chat-id", "", "Target chat ID or @username")

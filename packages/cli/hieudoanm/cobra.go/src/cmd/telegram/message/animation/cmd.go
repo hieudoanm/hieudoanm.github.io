@@ -6,11 +6,11 @@ import (
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "animation",
-		Short: "Send an animation (GIF)",
-		Long:  `Send an animation or GIF to a Telegram chat.`,
+		Use:     "animation",
+		Short:   "Send an animation (GIF)",
+		Long:    `Send an animation or GIF to a Telegram chat.`,
 		Example: `  telegram message animation --chat-id @channel --animation https://example.com/animation.gif --caption "Funny GIF"`,
-		RunE:  runE,
+		RunE:    runE,
 	}
 
 	cmd.Flags().String("chat-id", "", "Target chat ID or @username")

@@ -6,11 +6,11 @@ import (
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "copy",
-		Short: "Copy a message",
-		Long:  `Copy a message from one chat to another.`,
+		Use:     "copy",
+		Short:   "Copy a message",
+		Long:    `Copy a message from one chat to another.`,
 		Example: `  telegram message copy --chat-id 123456 --from-chat-id 789012 --message-id 42`,
-		RunE:  runE,
+		RunE:    runE,
 	}
 
 	cmd.Flags().String("chat-id", "", "Target chat ID or @username")

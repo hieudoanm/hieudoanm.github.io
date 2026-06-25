@@ -6,13 +6,12 @@ import (
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "get-me",
-		Short: "Get bot info",
-		Long:  `Get basic information about the bot (via getMe).`,
+		Use:     "get-me",
+		Short:   "Get bot info",
+		Long:    `Get basic information about the bot (via getMe).`,
 		Example: `  telegram bot get-me`,
-		RunE:  runE,
+		RunE:    runE,
 	}
-
 
 	return cmd
 }

@@ -1,7 +1,6 @@
 package chat
 
 import (
-	"github.com/spf13/cobra"
 	"github.com/hieudoanm/jack/src/cmd/telegram/chat/action"
 	"github.com/hieudoanm/jack/src/cmd/telegram/chat/ban"
 	"github.com/hieudoanm/jack/src/cmd/telegram/chat/create_invite_link"
@@ -14,6 +13,7 @@ import (
 	"github.com/hieudoanm/jack/src/cmd/telegram/chat/restrict"
 	"github.com/hieudoanm/jack/src/cmd/telegram/chat/revoke_invite_link"
 	"github.com/hieudoanm/jack/src/cmd/telegram/chat/unban"
+	"github.com/spf13/cobra"
 )
 
 func NewCmd() *cobra.Command {
@@ -27,7 +27,7 @@ func NewCmd() *cobra.Command {
   telegram chat export-invite-link --chat-id @channel`,
 		RunE: func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
-		cmd.AddCommand(action.NewCmd())
+	cmd.AddCommand(action.NewCmd())
 	cmd.AddCommand(ban.NewCmd())
 	cmd.AddCommand(create_invite_link.NewCmd())
 	cmd.AddCommand(edit_invite_link.NewCmd())

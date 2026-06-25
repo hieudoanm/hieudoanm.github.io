@@ -11,7 +11,7 @@ func NewCmd() *cobra.Command {
 		Long:  `Ban a user from a group, supergroup, or channel.`,
 		Example: `  telegram chat ban --chat-id @channel --user-id 123456789
   telegram chat ban --chat-id @channel --user-id 123456789 --until-date 1767225600`,
-		RunE:  runE,
+		RunE: runE,
 	}
 
 	cmd.Flags().String("chat-id", "", "Target chat ID or @username")

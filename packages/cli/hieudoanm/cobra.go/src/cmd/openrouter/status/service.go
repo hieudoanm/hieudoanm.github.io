@@ -94,9 +94,9 @@ func runStatus(statusSearch string, statusWorkers int, jsonOutput bool) error {
 	if jsonOutput {
 		type resultItem struct {
 			Model     or.Model `json:"model"`
-			Status    string           `json:"status"`
-			Message   string           `json:"message,omitempty"`
-			LatencyMs int64            `json:"latency_ms,omitempty"`
+			Status    string   `json:"status"`
+			Message   string   `json:"message,omitempty"`
+			LatencyMs int64    `json:"latency_ms,omitempty"`
 		}
 		items := make([]resultItem, len(results))
 		for i, r := range results {

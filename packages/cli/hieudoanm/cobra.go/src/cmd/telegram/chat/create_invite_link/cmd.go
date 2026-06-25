@@ -6,11 +6,11 @@ import (
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "create-invite-link",
-		Short: "Create an invite link",
-		Long:  `Create an additional invite link for a chat.`,
+		Use:     "create-invite-link",
+		Short:   "Create an invite link",
+		Long:    `Create an additional invite link for a chat.`,
 		Example: `  telegram chat create-invite-link --chat-id @channel --name "Guests" --member-limit 10`,
-		RunE:  runE,
+		RunE:    runE,
 	}
 
 	cmd.Flags().String("chat-id", "", "Target chat ID or @username")

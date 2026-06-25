@@ -1,7 +1,6 @@
 package message
 
 import (
-	"github.com/spf13/cobra"
 	"github.com/hieudoanm/jack/src/cmd/telegram/message/animation"
 	"github.com/hieudoanm/jack/src/cmd/telegram/message/audio"
 	"github.com/hieudoanm/jack/src/cmd/telegram/message/copy"
@@ -15,6 +14,7 @@ import (
 	"github.com/hieudoanm/jack/src/cmd/telegram/message/video"
 	"github.com/hieudoanm/jack/src/cmd/telegram/message/video_note"
 	"github.com/hieudoanm/jack/src/cmd/telegram/message/voice"
+	"github.com/spf13/cobra"
 )
 
 func NewCmd() *cobra.Command {
@@ -30,7 +30,7 @@ func NewCmd() *cobra.Command {
   telegram message photo --chat-id @channel --photo https://example.com/img.jpg`,
 		RunE: func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
-		cmd.AddCommand(animation.NewCmd())
+	cmd.AddCommand(animation.NewCmd())
 	cmd.AddCommand(audio.NewCmd())
 	cmd.AddCommand(copy.NewCmd())
 	cmd.AddCommand(delete.NewCmd())

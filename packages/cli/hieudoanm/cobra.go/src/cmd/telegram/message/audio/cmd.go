@@ -6,11 +6,11 @@ import (
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "audio",
-		Short: "Send an audio file",
-		Long:  `Send an audio file to a Telegram chat.`,
+		Use:     "audio",
+		Short:   "Send an audio file",
+		Long:    `Send an audio file to a Telegram chat.`,
 		Example: `  telegram message audio --chat-id @channel --audio https://example.com/song.mp3 --caption "Listen to this"`,
-		RunE:  runE,
+		RunE:    runE,
 	}
 
 	cmd.Flags().String("chat-id", "", "Target chat ID or @username")

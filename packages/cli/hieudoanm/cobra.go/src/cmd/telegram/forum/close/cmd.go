@@ -6,11 +6,11 @@ import (
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "close",
-		Short: "Close a forum topic",
-		Long:  `Close a topic in a forum supergroup.`,
+		Use:     "close",
+		Short:   "Close a forum topic",
+		Long:    `Close a topic in a forum supergroup.`,
 		Example: `  telegram forum close --chat-id @channel --message-thread-id 42`,
-		RunE:  runE,
+		RunE:    runE,
 	}
 
 	cmd.Flags().String("chat-id", "", "Target supergroup chat ID or @username")

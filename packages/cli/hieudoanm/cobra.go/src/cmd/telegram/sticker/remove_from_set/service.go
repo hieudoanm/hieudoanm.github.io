@@ -10,38 +10,38 @@ import (
 )
 
 func runE(cmd *cobra.Command, args []string) error {
-			jsonOutput, _ := cmd.Flags().GetBool("json")
+	jsonOutput, _ := cmd.Flags().GetBool("json")
 
-			token, err := internal.ResolveToken(cmd)
-			if err != nil {
-				return err
-			}
+	token, err := internal.ResolveToken(cmd)
+	if err != nil {
+		return err
+	}
 
-			sticker, _ := cmd.Flags().GetString("sticker")
+	sticker, _ := cmd.Flags().GetString("sticker")
 
-			if sticker == "" {
-				return fmt.Errorf("--sticker is required")
-			}
+	if sticker == "" {
+		return fmt.Errorf("--sticker is required")
+	}
 
-			body := map[string]interface{}{
-				"sticker": sticker,
-			}
+	body := map[string]interface{}{
+		"sticker": sticker,
+	}
 
-			url := internal.TelegramAPIURL(token, "removeStickerFromSet")
-			responseByte, postErr := requests.Post(url, requests.Options{Body: body})
-			if postErr != nil {
-				return postErr
-			}
+	url := internal.TelegramAPIURL(token, "removeStickerFromSet")
+	responseByte, postErr := requests.Post(url, requests.Options{Body: body})
+	if postErr != nil {
+		return postErr
+	}
 
-			if jsonOutput {
-				var result map[string]interface{}
-				if err := json.Unmarshal(responseByte, &result); err != nil {
-					return err
-				}
-				out, _ := json.MarshalIndent(result, "", "  ")
-				fmt.Println(string(out))
-			} else {
-				fmt.Println("Success")
-			}
-			return nil
+	if jsonOutput {
+		var result map[string]interface{}
+		if err := json.Unmarshal(responseByte, &result); err != nil {
+			return err
+		}
+		out, _ := json.MarshalIndent(result, "", "  ")
+		fmt.Println(string(out))
+	} else {
+		fmt.Println("Success")
+	}
+	return nil
 }

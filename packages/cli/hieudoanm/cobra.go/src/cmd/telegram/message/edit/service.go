@@ -10,52 +10,52 @@ import (
 )
 
 func runE(cmd *cobra.Command, args []string) error {
-			jsonOutput, _ := cmd.Flags().GetBool("json")
+	jsonOutput, _ := cmd.Flags().GetBool("json")
 
-			token, err := internal.ResolveToken(cmd)
-			if err != nil {
-				return err
-			}
+	token, err := internal.ResolveToken(cmd)
+	if err != nil {
+		return err
+	}
 
-			chatID, _ := cmd.Flags().GetString("chat-id")
-			messageID, _ := cmd.Flags().GetInt("message-id")
-			text, _ := cmd.Flags().GetString("text")
-			parseMode, _ := cmd.Flags().GetString("parse-mode")
+	chatID, _ := cmd.Flags().GetString("chat-id")
+	messageID, _ := cmd.Flags().GetInt("message-id")
+	text, _ := cmd.Flags().GetString("text")
+	parseMode, _ := cmd.Flags().GetString("parse-mode")
 
-			if chatID == "" {
-				return fmt.Errorf("--chat-id is required")
-			}
-			if messageID == 0 {
-				return fmt.Errorf("--message-id is required")
-			}
-			if text == "" {
-				return fmt.Errorf("--text is required")
-			}
+	if chatID == "" {
+		return fmt.Errorf("--chat-id is required")
+	}
+	if messageID == 0 {
+		return fmt.Errorf("--message-id is required")
+	}
+	if text == "" {
+		return fmt.Errorf("--text is required")
+	}
 
-			body := map[string]interface{}{
-				"chat_id":    chatID,
-				"message_id": messageID,
-				"text":       text,
-			}
-			if parseMode != "" {
-				body["parse_mode"] = parseMode
-			}
+	body := map[string]interface{}{
+		"chat_id":    chatID,
+		"message_id": messageID,
+		"text":       text,
+	}
+	if parseMode != "" {
+		body["parse_mode"] = parseMode
+	}
 
-			url := internal.TelegramAPIURL(token, "editMessageText")
-			responseByte, postErr := requests.Post(url, requests.Options{Body: body})
-			if postErr != nil {
-				return postErr
-			}
+	url := internal.TelegramAPIURL(token, "editMessageText")
+	responseByte, postErr := requests.Post(url, requests.Options{Body: body})
+	if postErr != nil {
+		return postErr
+	}
 
-			if jsonOutput {
-				var result map[string]interface{}
-				if err := json.Unmarshal(responseByte, &result); err != nil {
-					return err
-				}
-				out, _ := json.MarshalIndent(result, "", "  ")
-				fmt.Println(string(out))
-			} else {
-				fmt.Println("Success")
-			}
-			return nil
+	if jsonOutput {
+		var result map[string]interface{}
+		if err := json.Unmarshal(responseByte, &result); err != nil {
+			return err
+		}
+		out, _ := json.MarshalIndent(result, "", "  ")
+		fmt.Println(string(out))
+	} else {
+		fmt.Println("Success")
+	}
+	return nil
 }

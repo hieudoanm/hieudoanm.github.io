@@ -6,11 +6,11 @@ import (
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "answer",
-		Short: "Answer a callback query",
-		Long:  `Send an answer to a callback query from an inline keyboard.`,
+		Use:     "answer",
+		Short:   "Answer a callback query",
+		Long:    `Send an answer to a callback query from an inline keyboard.`,
 		Example: `  telegram callback answer --callback-query-id "12345" --text "Done!" --show-alert`,
-		RunE:  runE,
+		RunE:    runE,
 	}
 
 	cmd.Flags().String("callback-query-id", "", "Callback query ID")

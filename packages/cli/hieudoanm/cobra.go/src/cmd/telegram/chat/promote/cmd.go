@@ -6,11 +6,11 @@ import (
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "promote",
-		Short: "Promote a user in a chat",
-		Long:  `Promote or demote a user to become an administrator in a supergroup or channel.`,
+		Use:     "promote",
+		Short:   "Promote a user in a chat",
+		Long:    `Promote or demote a user to become an administrator in a supergroup or channel.`,
 		Example: `  telegram chat promote --chat-id @channel --user-id 123456789 --can-delete-messages --can-invite-users`,
-		RunE:  runE,
+		RunE:    runE,
 	}
 
 	cmd.Flags().String("chat-id", "", "Target chat ID or @username")

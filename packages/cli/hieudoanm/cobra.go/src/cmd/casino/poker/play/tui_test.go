@@ -35,9 +35,9 @@ func TestPokerPlayModel_UpdateCtrlC(t *testing.T) {
 
 func TestAiPreflopStrength(t *testing.T) {
 	tests := []struct {
-		name string
+		name  string
 		cards []internal.Card
-		want int
+		want  int
 	}{
 		{"pocket aces", []internal.Card{{Rank: 14, Suit: internal.Spades}, {Rank: 14, Suit: internal.Hearts}}, 8},
 		{"pocket eights", []internal.Card{{Rank: 8, Suit: internal.Spades}, {Rank: 8, Suit: internal.Hearts}}, 8},

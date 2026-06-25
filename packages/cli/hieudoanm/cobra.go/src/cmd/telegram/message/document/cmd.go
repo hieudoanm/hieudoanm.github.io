@@ -6,11 +6,11 @@ import (
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "document",
-		Short: "Send a document",
-		Long:  `Send a document or file to a Telegram chat.`,
+		Use:     "document",
+		Short:   "Send a document",
+		Long:    `Send a document or file to a Telegram chat.`,
 		Example: `  telegram message document --chat-id @channel --document https://example.com/file.pdf --caption "Here is the file"`,
-		RunE:  runE,
+		RunE:    runE,
 	}
 
 	cmd.Flags().String("chat-id", "", "Target chat ID or @username")

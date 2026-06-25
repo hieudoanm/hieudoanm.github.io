@@ -79,6 +79,20 @@ func TestRunUnit_InvalidFrom(t *testing.T) {
 	}
 }
 
+func TestRunUnit_InvalidTo(t *testing.T) {
+	err := runUnit(12, "cm", "nonexistent", false)
+	if err == nil {
+		t.Fatal("expected error for unknown unit")
+	}
+}
+
+func TestRunUnit_CategoryMismatch(t *testing.T) {
+	err := runUnit(12, "cm", "kg", false)
+	if err == nil {
+		t.Fatal("expected error for category mismatch")
+	}
+}
+
 func TestRunUnit_Json(t *testing.T) {
 	output := captureOutput(func() {
 		if err := runUnit(32, "f", "c", true); err != nil {

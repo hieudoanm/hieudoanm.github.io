@@ -37,9 +37,9 @@ type guess struct {
 }
 
 type gameResult struct {
-	Word     string       `json:"word"`
-	Won      bool         `json:"won"`
-	Attempts int          `json:"attempts"`
+	Word     string      `json:"word"`
+	Won      bool        `json:"won"`
+	Attempts int         `json:"attempts"`
 	Guesses  []guessJSON `json:"guesses"`
 }
 

@@ -6,11 +6,11 @@ import (
 
 func NewCmd() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "set-thumbnail",
-		Short: "Set sticker set thumbnail",
-		Long:  `Set the thumbnail of a sticker set.`,
+		Use:     "set-thumbnail",
+		Short:   "Set sticker set thumbnail",
+		Long:    `Set the thumbnail of a sticker set.`,
 		Example: `  telegram sticker set-thumbnail --name "my_set" --user-id 12345 --thumbnail FILE_ID`,
-		RunE:  runE,
+		RunE:    runE,
 	}
 
 	cmd.Flags().String("name", "", "Sticker set short name")
