@@ -59,6 +59,48 @@ func TestRunTimer_Cancelled(t *testing.T) {
 	}
 }
 
+func TestRunTimer_CancelledJSON(t *testing.T) {
+	go func() {
+		time.Sleep(50 * time.Millisecond)
+		p, _ := os.FindProcess(os.Getpid())
+		p.Signal(os.Interrupt)
+	}()
+	output := captureOutput(func() {
+		if err := runTimer("10s", true); err != nil {
+			t.Fatal(err)
+		}
+	})
+	if !strings.Contains(output, "cancelled") {
+		t.Errorf("expected cancelled status, got: %s", output)
+	}
+}
+
+func TestNewCmd_RunE(t *testing.T) {
+	output := captureOutput(func() {
+		cmd := NewCmd()
+		cmd.SetArgs([]string{"--duration", "1s"})
+		if err := cmd.Execute(); err != nil {
+			t.Fatal(err)
+		}
+	})
+	if !strings.Contains(output, "Time's up") {
+		t.Errorf("expected Time's up, got: %s", output)
+	}
+}
+
+func TestNewCmd_RunE_JSON(t *testing.T) {
+	output := captureOutput(func() {
+		cmd := NewCmd()
+		cmd.SetArgs([]string{"--duration", "1s", "--json"})
+		if err := cmd.Execute(); err != nil {
+			t.Fatal(err)
+		}
+	})
+	if !strings.Contains(output, "completed") {
+		t.Errorf("expected completed status, got: %s", output)
+	}
+}
+
 func TestRunTimer_InvalidDuration(t *testing.T) {
 	err := runTimer("invalid", false)
 	if err == nil {
@@ -96,6 +138,16 @@ func TestParseTimerDurationBareNumber(t *testing.T) {
 	}
 }
 
+func TestParseTimerDurationHours(t *testing.T) {
+	d, err := parseTimerDuration("2h")
+	if err != nil {
+		t.Fatalf("unexpected error: %v", err)
+	}
+	if d != 2*time.Hour {
+		t.Errorf("expected 2h, got %v", d)
+	}
+}
+
 func TestParseTimerDurationEmpty(t *testing.T) {
 	_, err := parseTimerDuration("")
 	if err == nil {
@@ -114,6 +166,13 @@ func TestParseTimerDurationInvalidSuffix(t *testing.T) {
 	_, err := parseTimerDuration("10x")
 	if err == nil {
 		t.Fatal("expected error for invalid suffix")
+	}
+}
+
+func TestParseTimerDurationInvalidHours(t *testing.T) {
+	_, err := parseTimerDuration("xh")
+	if err == nil {
+		t.Fatal("expected error for invalid hours")
 	}
 }
 

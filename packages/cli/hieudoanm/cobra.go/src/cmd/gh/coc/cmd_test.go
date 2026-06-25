@@ -2,6 +2,8 @@ package coc
 
 import (
 	"testing"
+
+	"github.com/hieudoanm/jack/src/cmd/gh/shared"
 )
 
 func TestNewCommand_Structure(t *testing.T) {
@@ -35,5 +37,20 @@ to a file.`
 		t.Error("expected --output flag")
 	} else if f.DefValue != "CODE_OF_CONDUCT" {
 		t.Errorf("--output default = %q, want 'CODE_OF_CONDUCT'", f.DefValue)
+	}
+}
+
+func TestNewCommand_RunE(t *testing.T) {
+	listBody := `[{"key":"contributor_covenant","name":"Contributor Covenant","url":"https://","body":"# Code of Conduct"}]`
+	detailBody := `{"key":"contributor_covenant","name":"Contributor Covenant","url":"https://","body":"# Code of Conduct"}`
+
+	oldFetch := shared.FetchFuncDefault
+	shared.FetchFuncDefault = shared.MockFetchSeq(shared.MockResult{Body: []byte(listBody)}, shared.MockResult{Body: []byte(detailBody)})
+	defer func() { shared.FetchFuncDefault = oldFetch }()
+
+	cmd := NewCommand()
+	cmd.SetArgs([]string{"--key", "contributor_covenant", "--output", "/tmp/test-coc-out.md"})
+	if err := cmd.Execute(); err != nil {
+		t.Fatal(err)
 	}
 }

@@ -2,6 +2,7 @@ package license
 
 import (
 	"errors"
+	"io"
 	"os"
 	"path/filepath"
 	"strings"
@@ -115,5 +116,80 @@ func TestFetchLicense(t *testing.T) {
 				t.Errorf("file content = %q, want %q", string(data), tt.wantOut)
 			}
 		})
+	}
+}
+
+func TestRunLicenseJSON(t *testing.T) {
+	detailBody := `{"key":"mit","name":"MIT License","spdx_id":"MIT","url":"https://","body":"MIT License"}`
+
+	oldFetch := shared.FetchFuncDefault
+	shared.FetchFuncDefault = shared.MockFetchSeq(shared.MockResult{Body: []byte(detailBody)})
+	defer func() { shared.FetchFuncDefault = oldFetch }()
+
+	old := os.Stdout
+	r, w, _ := os.Pipe()
+	os.Stdout = w
+	err := runLicense("MIT", "", true)
+	w.Close()
+	out, _ := io.ReadAll(r)
+	os.Stdout = old
+
+	if err != nil {
+		t.Fatalf("unexpected error: %v", err)
+	}
+	if !strings.Contains(string(out), "MIT License") {
+		t.Errorf("expected MIT License in output, got: %s", out)
+	}
+}
+
+func TestRunLicenseJSONMissingSPDX(t *testing.T) {
+	err := runLicense("", "", true)
+	if err == nil {
+		t.Fatal("expected error for missing spdx-id")
+	}
+}
+
+func TestRunLicenseJSONFetchError(t *testing.T) {
+	oldFetch := shared.FetchFuncDefault
+	shared.FetchFuncDefault = shared.MockFetchSeq(shared.MockResult{Err: errors.New("network error")})
+	defer func() { shared.FetchFuncDefault = oldFetch }()
+
+	err := runLicense("MIT", "", true)
+	if err == nil {
+		t.Fatal("expected error")
+	}
+}
+
+func TestRunLicenseJSONParseError(t *testing.T) {
+	oldFetch := shared.FetchFuncDefault
+	shared.FetchFuncDefault = shared.MockFetchSeq(shared.MockResult{Body: []byte("invalid json")})
+	defer func() { shared.FetchFuncDefault = oldFetch }()
+
+	err := runLicense("MIT", "", true)
+	if err == nil {
+		t.Fatal("expected error")
+	}
+}
+
+func TestRunLicenseNonJSON(t *testing.T) {
+	listBody := `[{"key":"mit","name":"MIT License","spdx_id":"MIT","url":"https://","body":"MIT License"}]`
+	detailBody := `{"key":"mit","name":"MIT License","spdx_id":"MIT","url":"https://","body":"MIT License"}`
+
+	oldFetch := shared.FetchFuncDefault
+	shared.FetchFuncDefault = shared.MockFetchSeq(shared.MockResult{Body: []byte(listBody)}, shared.MockResult{Body: []byte(detailBody)})
+	defer func() { shared.FetchFuncDefault = oldFetch }()
+
+	dir := t.TempDir()
+	outPath := filepath.Join(dir, "license.txt")
+	err := runLicense("MIT", outPath, false)
+	if err != nil {
+		t.Fatalf("unexpected error: %v", err)
+	}
+	data, err := os.ReadFile(outPath)
+	if err != nil {
+		t.Fatalf("error reading output file: %v", err)
+	}
+	if string(data) != "MIT License" {
+		t.Errorf("file content = %q, want %q", string(data), "MIT License")
 	}
 }

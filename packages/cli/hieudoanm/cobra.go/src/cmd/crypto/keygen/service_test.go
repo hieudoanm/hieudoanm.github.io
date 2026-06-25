@@ -4,8 +4,10 @@ import (
 	"crypto/rand"
 	"crypto/rsa"
 	"errors"
+	"io"
 	"os"
 	"path/filepath"
+	"strings"
 	"testing"
 )
 
@@ -118,5 +120,65 @@ func TestGenRSA_2048_nestedDir(t *testing.T) {
 	path := filepath.Join(t.TempDir(), "subdir", "nested", "id_rsa")
 	if err := GenRSA(2048, path); err != nil {
 		t.Fatal(err)
+	}
+}
+
+func TestRunKeygen_unsupportedAlgorithm(t *testing.T) {
+	err := runKeygen("dsa", 1024, "/tmp/key", false)
+	if err == nil {
+		t.Fatal("expected error")
+	}
+	if !strings.Contains(err.Error(), "unsupported algorithm") {
+		t.Errorf("err = %q, want unsupported algorithm error", err.Error())
+	}
+}
+
+func TestRunKeygen_ed25519_json(t *testing.T) {
+	dir := t.TempDir()
+	path := filepath.Join(dir, "id_ed25519")
+
+	r, w, _ := os.Pipe()
+	oldStdout := os.Stdout
+	os.Stdout = w
+
+	err := runKeygen("ed25519", 256, path, true)
+
+	w.Close()
+	out, _ := io.ReadAll(r)
+	os.Stdout = oldStdout
+
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !strings.Contains(string(out), `"algorithm": "ed25519"`) {
+		t.Errorf("expected JSON with algorithm ed25519, got: %s", string(out))
+	}
+	if _, err := os.Stat(path); os.IsNotExist(err) {
+		t.Error("private key file not created")
+	}
+}
+
+func TestRunKeygen_rsa_json(t *testing.T) {
+	dir := t.TempDir()
+	path := filepath.Join(dir, "id_rsa")
+
+	r, w, _ := os.Pipe()
+	oldStdout := os.Stdout
+	os.Stdout = w
+
+	err := runKeygen("rsa", 2048, path, true)
+
+	w.Close()
+	out, _ := io.ReadAll(r)
+	os.Stdout = oldStdout
+
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !strings.Contains(string(out), `"algorithm": "rsa"`) {
+		t.Errorf("expected JSON with algorithm rsa, got: %s", string(out))
+	}
+	if _, err := os.Stat(path); os.IsNotExist(err) {
+		t.Error("private key file not created")
 	}
 }

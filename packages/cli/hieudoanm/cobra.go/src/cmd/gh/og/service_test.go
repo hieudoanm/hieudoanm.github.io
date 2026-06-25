@@ -2,6 +2,7 @@ package og
 
 import (
 	"errors"
+	"io"
 	"os"
 	"path/filepath"
 	"strings"
@@ -237,5 +238,71 @@ func TestGenerateOGSVG_unknownLanguageColor(t *testing.T) {
 
 	if !strings.Contains(svg, `fill="#6e7681"`) {
 		t.Error("expected unknown language to use default color")
+	}
+}
+
+func TestRunOG_jsonOutput(t *testing.T) {
+	repoBody := `{"name":"test-repo","full_name":"owner/test-repo","description":"A test repo","html_url":"https://github.com/owner/test-repo","stargazers_count":42,"forks_count":7,"language":"Go","owner":{"login":"owner","avatar_url":"https://avatars.githubusercontent.com/u/1"}}`
+
+	old := shared.FetchFuncDefault
+	shared.FetchFuncDefault = shared.MockFetchSeq(shared.MockResult{Body: []byte(repoBody)})
+	defer func() { shared.FetchFuncDefault = old }()
+
+	r, w, _ := os.Pipe()
+	oldStdout := os.Stdout
+	os.Stdout = w
+
+	err := runOG("owner/repo", "", true)
+
+	w.Close()
+	out, _ := io.ReadAll(r)
+	os.Stdout = oldStdout
+
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !strings.Contains(string(out), `"title": "owner/test-repo"`) {
+		t.Error("expected JSON output to contain title")
+	}
+	if !strings.Contains(string(out), `"description": "A test repo"`) {
+		t.Error("expected JSON output to contain description")
+	}
+}
+
+func TestRunOG_jsonOutput_invalidRepo(t *testing.T) {
+	err := runOG("invalid", "", true)
+	if err == nil {
+		t.Fatal("expected error")
+	}
+	if !strings.Contains(err.Error(), "repo must be in format owner/repo") {
+		t.Errorf("err = %q, want format error", err.Error())
+	}
+}
+
+func TestRunOG_jsonOutput_fetchError(t *testing.T) {
+	old := shared.FetchFuncDefault
+	shared.FetchFuncDefault = shared.MockFetchSeq(shared.MockResult{Err: errors.New("network error")})
+	defer func() { shared.FetchFuncDefault = old }()
+
+	err := runOG("owner/repo", "", true)
+	if err == nil {
+		t.Fatal("expected error")
+	}
+	if !strings.Contains(err.Error(), "error fetching repository") {
+		t.Errorf("err = %q, want fetch error", err.Error())
+	}
+}
+
+func TestRunOG_jsonOutput_parseError(t *testing.T) {
+	old := shared.FetchFuncDefault
+	shared.FetchFuncDefault = shared.MockFetchSeq(shared.MockResult{Body: []byte("invalid json")})
+	defer func() { shared.FetchFuncDefault = old }()
+
+	err := runOG("owner/repo", "", true)
+	if err == nil {
+		t.Fatal("expected error")
+	}
+	if !strings.Contains(err.Error(), "error parsing response") {
+		t.Errorf("err = %q, want parse error", err.Error())
 	}
 }

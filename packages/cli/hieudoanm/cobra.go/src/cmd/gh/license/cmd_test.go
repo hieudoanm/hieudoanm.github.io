@@ -2,6 +2,8 @@ package license
 
 import (
 	"testing"
+
+	"github.com/hieudoanm/jack/src/cmd/gh/shared"
 )
 
 func TestNewCommand_Structure(t *testing.T) {
@@ -34,5 +36,20 @@ one (or uses --spdx-id), then writes the license body to a file.`
 		t.Error("expected --output flag")
 	} else if f.DefValue != "LICENSE" {
 		t.Errorf("--output default = %q, want 'LICENSE'", f.DefValue)
+	}
+}
+
+func TestNewCommand_RunE(t *testing.T) {
+	listBody := `[{"key":"mit","name":"MIT License","spdx_id":"MIT","url":"https://","body":"MIT License"}]`
+	detailBody := `{"key":"mit","name":"MIT License","spdx_id":"MIT","url":"https://","body":"MIT License"}`
+
+	oldFetch := shared.FetchFuncDefault
+	shared.FetchFuncDefault = shared.MockFetchSeq(shared.MockResult{Body: []byte(listBody)}, shared.MockResult{Body: []byte(detailBody)})
+	defer func() { shared.FetchFuncDefault = oldFetch }()
+
+	cmd := NewCommand()
+	cmd.SetArgs([]string{"--spdx-id", "MIT", "--output", "/tmp/test-license-out.txt"})
+	if err := cmd.Execute(); err != nil {
+		t.Fatal(err)
 	}
 }
