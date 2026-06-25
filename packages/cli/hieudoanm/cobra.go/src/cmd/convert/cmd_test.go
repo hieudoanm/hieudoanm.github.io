@@ -25,8 +25,8 @@ func TestNewCommand_HasAllSubcommands(t *testing.T) {
 	}
 	expected := []string{
 		"braille", "morse", "base64", "url", "capitalise", "deburr",
-		"kebabcase", "camelcase", "pascalcase", "slug", "lowercase",
-		"snakecase", "uppercase", "count",
+		"kebabcase", "camelcase", "lorem", "pascalcase", "slug",
+		"lowercase", "snakecase", "uppercase", "count",
 	}
 	for _, name := range expected {
 		if !names[name] {
@@ -48,6 +48,7 @@ func TestNewCommand_SubcommandUseMatches(t *testing.T) {
 		"capitalise": "capitalise <text>",
 		"deburr":     "deburr <text>",
 		"kebabcase":  "kebabcase <text>",
+		"lorem":      "lorem",
 		"camelcase":  "camelcase <text>",
 		"pascalcase": "pascalcase <text>",
 		"slug":       "slug <text>",

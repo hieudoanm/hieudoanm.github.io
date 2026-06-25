@@ -8,6 +8,7 @@ import (
 	"github.com/hieudoanm/jack/src/cmd/convert/count"
 	"github.com/hieudoanm/jack/src/cmd/convert/deburr"
 	"github.com/hieudoanm/jack/src/cmd/convert/kebabcase"
+	"github.com/hieudoanm/jack/src/cmd/convert/lorem"
 	"github.com/hieudoanm/jack/src/cmd/convert/lowercase"
 	"github.com/hieudoanm/jack/src/cmd/convert/morse"
 	"github.com/hieudoanm/jack/src/cmd/convert/pascalcase"
@@ -36,6 +37,7 @@ func NewCommand() *cobra.Command {
 	cmd.AddCommand(capitalise.NewCommand())
 	cmd.AddCommand(deburr.NewCommand())
 	cmd.AddCommand(kebabcase.NewCommand())
+	cmd.AddCommand(lorem.NewCommand())
 	cmd.AddCommand(camelcase.NewCommand())
 	cmd.AddCommand(pascalcase.NewCommand())
 	cmd.AddCommand(slug.NewCommand())
