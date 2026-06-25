@@ -1,6 +1,7 @@
 package crypto
 
 import (
+	"github.com/hieudoanm/jack/src/cmd/crypto/barcode"
 	"github.com/hieudoanm/jack/src/cmd/crypto/decrypt"
 	"github.com/hieudoanm/jack/src/cmd/crypto/encrypt"
 	"github.com/hieudoanm/jack/src/cmd/crypto/hash"
@@ -24,6 +25,7 @@ func NewCommand() *cobra.Command {
 		RunE: func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
 	cmd.AddCommand(
+		barcode.NewCommand(),
 		hash.NewCommand(),
 		jwt.NewCommand(),
 		keygen.NewCommand(),

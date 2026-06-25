@@ -1,0 +1,20 @@
+package barcode
+
+import (
+	"github.com/hieudoanm/jack/src/cmd/crypto/barcode/encode"
+	"github.com/spf13/cobra"
+)
+
+func NewCommand() *cobra.Command {
+	cmd := &cobra.Command{
+		Use:   "barcode",
+		Short: "Generate 1D barcodes",
+		Long:  `Generate 1D barcodes in formats like Code 128, Code 39, EAN-13, and UPC-A. Output to terminal or as a PNG image.`,
+		Example: `  crypto barcode encode "1234567890"
+  crypto barcode encode --data "HELLO" --format code39
+  crypto barcode encode --data "5901234123457" --format ean13 --output barcode.png`,
+		RunE: func(cmd *cobra.Command, args []string) error { return cmd.Help() },
+	}
+	cmd.AddCommand(encode.NewCommand())
+	return cmd
+}

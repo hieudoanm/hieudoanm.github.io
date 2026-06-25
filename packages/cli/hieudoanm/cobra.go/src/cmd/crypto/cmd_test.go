@@ -16,7 +16,7 @@ func TestNewCommand(t *testing.T) {
 
 func TestNewCommand_hasAllSubcommands(t *testing.T) {
 	cmd := NewCommand()
-	want := []string{"hash", "jwt", "keygen", "passwd", "uuid", "qrcode", "encrypt", "decrypt", "totp"}
+	want := []string{"barcode", "hash", "jwt", "keygen", "passwd", "uuid", "qrcode", "encrypt", "decrypt", "totp"}
 	got := cmd.Commands()
 	if len(got) != len(want) {
 		t.Fatalf("got %d subcommands, want %d", len(got), len(want))
