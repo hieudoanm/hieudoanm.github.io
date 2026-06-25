@@ -1,22 +1,22 @@
 package qrcode
 
-import "github.com/spf13/cobra"
+import (
+	"github.com/hieudoanm/jack/src/cmd/crypto/qrcode/decode"
+	"github.com/hieudoanm/jack/src/cmd/crypto/qrcode/encode"
+	"github.com/spf13/cobra"
+)
 
 func NewCommand() *cobra.Command {
-	var data string
-
 	cmd := &cobra.Command{
-		Use:   "qrcode [--data <text>]",
-		Short: "Generate a QR code in the terminal",
-		Long:  `Generate a QR code from text and display it in the terminal using Unicode block characters.`,
-		Example: `  crypto qrcode --data "https://example.com"
-  crypto qrcode --data "Hello, World!"`,
-		RunE: func(cmd *cobra.Command, args []string) error {
-			jsonOutput, _ := cmd.Flags().GetBool("json")
-			return runQRCode(data, jsonOutput)
-		},
+		Use:   "qrcode",
+		Short: "Encode or decode QR codes",
+		Long:  `Encode text into a QR code or decode a QR code image back to text.`,
+		Example: `  crypto qrcode encode "https://example.com"
+  crypto qrcode encode --data "hello" --output qr.png
+  crypto qrcode decode qr.png`,
+		RunE: func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
-
-	cmd.Flags().StringVarP(&data, "data", "d", "", "Text or data to encode")
+	cmd.AddCommand(encode.NewCommand())
+	cmd.AddCommand(decode.NewCommand())
 	return cmd
 }
