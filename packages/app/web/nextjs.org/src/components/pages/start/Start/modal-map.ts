@@ -112,6 +112,9 @@ import {
   ImageFilterModal,
   ImageEffectModal,
   PdfEsignModal,
+  WriteRealEstateModal,
+  ImageProfileModal,
+  AudioToTextModal,
 } from './dynamic-imports';
 import { ModalId } from './types';
 
@@ -231,4 +234,7 @@ export const MODAL_MAP: Record<
   'image-filter': ImageFilterModal,
   'image-effect': ImageEffectModal,
   'pdf-esign': PdfEsignModal,
+  'write-real-estate': WriteRealEstateModal,
+  'image-profile': ImageProfileModal,
+  'audio-to-text': AudioToTextModal,
 };

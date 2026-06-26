@@ -13,7 +13,8 @@ type Tab =
   | 'title'
   | 'summarize'
   | 'shorten'
-  | 'translate';
+  | 'translate'
+  | 'complete';
 
 const TAB_LABELS: Record<Tab, string> = {
   grammar: 'Grammar',
@@ -24,6 +25,7 @@ const TAB_LABELS: Record<Tab, string> = {
   summarize: 'Summarize',
   shorten: 'Shorten',
   translate: 'Translate',
+  complete: 'Complete',
 };
 
 const LANGUAGES = [
@@ -66,6 +68,8 @@ export const WriteImproveModal: FC<{ onClose: () => void }> = ({ onClose }) => {
         return 'Shorten the following text to about half its length while preserving the essential meaning.';
       case 'translate':
         return `Translate the following text to ${language}. Detect the source language automatically. Return only the translated text.`;
+      case 'complete':
+        return 'Continue and complete the following partial paragraph or sentence naturally. Match the tone and style of the input. Return only the completed text.';
     }
   };
 
@@ -133,7 +137,9 @@ export const WriteImproveModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                         ? 'Enter text to summarize...'
                         : tab === 'shorten'
                           ? 'Enter text to shorten...'
-                          : 'Enter text to translate...'
+                          : tab === 'complete'
+                            ? 'Enter a partial paragraph to complete...'
+                            : 'Enter text to translate...'
           }
           value={input}
           onChange={(e) => setInput(e.target.value)}

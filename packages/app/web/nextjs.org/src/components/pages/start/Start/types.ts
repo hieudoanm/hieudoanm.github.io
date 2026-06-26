@@ -110,6 +110,9 @@ export type ModalId =
   | 'video-process'
   | 'image-filter'
   | 'image-effect'
-  | 'pdf-esign';
+  | 'pdf-esign'
+  | 'write-real-estate'
+  | 'image-profile'
+  | 'audio-to-text';
 
 export type SidebarTab = 'tasks' | 'clock';

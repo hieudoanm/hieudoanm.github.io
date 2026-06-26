@@ -686,6 +686,13 @@ export const makeTools = (
       color: '#3b82f6',
       onClick: open('image-effect'),
     },
+    {
+      label: 'Profile',
+      description: 'Photo Maker',
+      emoji: '👤',
+      color: '#3b82f6',
+      onClick: open('image-profile'),
+    },
   ],
   visualization: [
     {
@@ -767,6 +774,13 @@ export const makeTools = (
       color: '#8b5cf6',
       onClick: open('write-content'),
     },
+    {
+      label: 'Real Estate',
+      description: 'Descriptions',
+      emoji: '🏠',
+      color: '#8b5cf6',
+      onClick: open('write-real-estate'),
+    },
   ],
   video: [
     {
@@ -803,6 +817,13 @@ export const makeTools = (
       emoji: '⚙️',
       color: '#ef4444',
       onClick: open('video-process'),
+    },
+    {
+      label: 'Audio to Text',
+      description: 'Transcribe',
+      emoji: '🎤',
+      color: '#ef4444',
+      onClick: open('audio-to-text'),
     },
   ],
   data: [
