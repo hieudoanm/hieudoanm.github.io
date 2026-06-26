@@ -18,7 +18,7 @@ func TestNewCommand_HasSubcommands(t *testing.T) {
 	for _, c := range subs {
 		names[c.Name()] = true
 	}
-	for _, want := range []string{"combine", "security", "extract", "edit", "inspect", "maintain"} {
+	for _, want := range []string{"combine", "security", "extract", "edit", "inspect", "maintain", "convert", "crop", "delete", "rearrange", "add-numbers", "create", "annotate"} {
 		if !names[want] {
 			t.Errorf("missing subcommand: %s", want)
 		}

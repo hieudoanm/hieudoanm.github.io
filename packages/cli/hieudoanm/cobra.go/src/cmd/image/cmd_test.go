@@ -4,6 +4,28 @@ import (
 	"testing"
 )
 
+var allSubcommands = []string{
+	"background",
+	"blur",
+	"border",
+	"collage",
+	"combine",
+	"compress",
+	"convert",
+	"crop",
+	"dominant",
+	"flip",
+	"grayscale",
+	"icons",
+	"info",
+	"pixelate",
+	"resize",
+	"round",
+	"sharpen",
+	"split",
+	"text",
+}
+
 func TestNewCommand(t *testing.T) {
 	cmd := NewCommand()
 	if cmd.Use != "image" {
@@ -18,7 +40,7 @@ func TestNewCommand_HasSubcommands(t *testing.T) {
 	for _, c := range subs {
 		names[c.Name()] = true
 	}
-	for _, want := range []string{"convert", "dominant", "icons", "info"} {
+	for _, want := range allSubcommands {
 		if !names[want] {
 			t.Errorf("missing subcommand: %s", want)
 		}

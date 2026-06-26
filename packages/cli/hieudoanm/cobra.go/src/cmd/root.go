@@ -33,7 +33,9 @@ import (
 	"github.com/hieudoanm/jack/src/cmd/telegram"
 	time_cmd "github.com/hieudoanm/jack/src/cmd/time"
 	"github.com/hieudoanm/jack/src/cmd/version"
+	"github.com/hieudoanm/jack/src/cmd/video"
 	"github.com/hieudoanm/jack/src/cmd/web"
+	"github.com/hieudoanm/jack/src/cmd/write"
 	"github.com/hieudoanm/jack/src/libs/history"
 	"github.com/spf13/cobra"
 )
@@ -138,5 +140,7 @@ func init() {
 	rootCmd.AddCommand(telegram.NewCommand())
 	rootCmd.AddCommand(time_cmd.NewCommand())
 	rootCmd.AddCommand(version.NewCommand())
+	rootCmd.AddCommand(video.NewCommand())
 	rootCmd.AddCommand(web.NewCommand())
+	rootCmd.AddCommand(write.NewCommand())
 }
