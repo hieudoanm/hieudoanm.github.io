@@ -609,6 +609,13 @@ export const makeTools = (
       color: '#3b82f6',
       onClick: open('image-convert'),
     },
+    {
+      label: 'Create',
+      description: 'Chart/Meme/Collage',
+      emoji: '🎨',
+      color: '#3b82f6',
+      onClick: open('image-create'),
+    },
   ],
   visualization: [
     {
@@ -662,6 +669,27 @@ export const makeTools = (
       color: '#8b5cf6',
       onClick: open('write-social'),
     },
+    {
+      label: 'Business',
+      description: 'Writing',
+      emoji: '💼',
+      color: '#8b5cf6',
+      onClick: open('write-business'),
+    },
+    {
+      label: 'Marketing',
+      description: 'Writing',
+      emoji: '📢',
+      color: '#8b5cf6',
+      onClick: open('write-marketing'),
+    },
+    {
+      label: 'Legal',
+      description: 'Docs',
+      emoji: '⚖️',
+      color: '#8b5cf6',
+      onClick: open('write-legal'),
+    },
   ],
   video: [
     {
@@ -678,6 +706,20 @@ export const makeTools = (
       color: '#ef4444',
       onClick: open('video-edit'),
     },
+    {
+      label: 'Download',
+      description: 'Social Media',
+      emoji: '⬇️',
+      color: '#ef4444',
+      onClick: open('video-download'),
+    },
+    {
+      label: 'Audio',
+      description: 'Extract/Transcribe',
+      emoji: '🎵',
+      color: '#ef4444',
+      onClick: open('video-audio'),
+    },
   ],
   data: [
     {
@@ -686,6 +728,13 @@ export const makeTools = (
       emoji: '📊',
       color: '#10b981',
       onClick: open('file-convert'),
+    },
+    {
+      label: 'File Utils',
+      description: 'ZIP/Epoch/Word',
+      emoji: '🗜️',
+      color: '#10b981',
+      onClick: open('file-archive'),
     },
   ],
 });

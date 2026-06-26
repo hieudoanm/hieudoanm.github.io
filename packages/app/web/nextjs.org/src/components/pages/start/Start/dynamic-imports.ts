@@ -644,3 +644,52 @@ export const GraphModal = dynamic(
     ),
   { ssr: false }
 );
+export const VideoDownloadModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/VideoDownloadModal').then(
+      (mod) => mod.VideoDownloadModal
+    ),
+  { ssr: false }
+);
+export const VideoAudioModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/VideoAudioModal').then(
+      (mod) => mod.VideoAudioModal
+    ),
+  { ssr: false }
+);
+export const WriteBusinessModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/WriteBusinessModal').then(
+      (mod) => mod.WriteBusinessModal
+    ),
+  { ssr: false }
+);
+export const WriteMarketingModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/WriteMarketingModal').then(
+      (mod) => mod.WriteMarketingModal
+    ),
+  { ssr: false }
+);
+export const WriteLegalModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/WriteLegalModal').then(
+      (mod) => mod.WriteLegalModal
+    ),
+  { ssr: false }
+);
+export const FileArchiveModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/data/FileArchiveModal').then(
+      (mod) => mod.FileArchiveModal
+    ),
+  { ssr: false }
+);
+export const ImageCreateModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/images/ImageCreateModal').then(
+      (mod) => mod.ImageCreateModal
+    ),
+  { ssr: false }
+);

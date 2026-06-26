@@ -91,6 +91,13 @@ export type ModalId =
   | 'video-edit'
   | 'write-generate'
   | 'write-improve'
-  | 'write-social';
+  | 'write-social'
+  | 'video-download'
+  | 'video-audio'
+  | 'write-business'
+  | 'write-marketing'
+  | 'write-legal'
+  | 'file-archive'
+  | 'image-create';
 
 export type SidebarTab = 'tasks' | 'clock';
