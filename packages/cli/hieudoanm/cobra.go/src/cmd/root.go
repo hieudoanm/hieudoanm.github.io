@@ -25,6 +25,7 @@ import (
 	"github.com/hieudoanm/jack/src/cmd/net"
 	"github.com/hieudoanm/jack/src/cmd/openapi"
 	"github.com/hieudoanm/jack/src/cmd/openrouter"
+	"github.com/hieudoanm/jack/src/cmd/pdf"
 	"github.com/hieudoanm/jack/src/cmd/port"
 	"github.com/hieudoanm/jack/src/cmd/search"
 	"github.com/hieudoanm/jack/src/cmd/semver"
@@ -129,6 +130,7 @@ func init() {
 	rootCmd.AddCommand(net.NewCommand())
 	rootCmd.AddCommand(openapi.NewCommand())
 	rootCmd.AddCommand(openrouter.NewCommand())
+	rootCmd.AddCommand(pdf.NewCommand())
 	rootCmd.AddCommand(port.NewCommand())
 	rootCmd.AddCommand(search.NewCommand())
 	rootCmd.AddCommand(semver.NewCommand())
