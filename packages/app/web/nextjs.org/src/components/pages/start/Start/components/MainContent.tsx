@@ -63,6 +63,9 @@ const filterBy = <T extends { label?: string; id?: string }>(
 export const MainContent: FC<MainContentProps> = memo(
   ({ today, query, onQueryChange, toolSections }) => {
     const [tab, setTab] = useState<MainTab>('bookmarks');
+    const [viewMode, setViewMode] = useState<'category' | 'alphabetical'>(
+      'category'
+    );
     const filtering = query.trim().length > 0;
     const {
       tools,
@@ -108,6 +111,51 @@ export const MainContent: FC<MainContentProps> = memo(
         images,
         visualization,
       ]
+    );
+
+    const allToolsFlat = useMemo(
+      () =>
+        toolSectionDefs
+          .flatMap((s) => s.items)
+          .sort((a, b) => a.label.localeCompare(b.label)),
+      [toolSectionDefs]
+    );
+    const filteredAllTools = useMemo(
+      () =>
+        filtering
+          ? allToolsFlat.filter((t) => match(t.label, query))
+          : allToolsFlat,
+      [allToolsFlat, filtering, query]
+    );
+
+    const allBookmarksFlat = useMemo(
+      () =>
+        bookmarkSections
+          .flatMap((s) => s.items)
+          .sort((a, b) => a.label.localeCompare(b.label)),
+      []
+    );
+    const filteredAllBookmarks = useMemo(
+      () =>
+        filtering
+          ? allBookmarksFlat.filter((bm) => match(bm.label, query))
+          : allBookmarksFlat,
+      [allBookmarksFlat, filtering, query]
+    );
+
+    const allDownloadsFlat = useMemo(
+      () =>
+        downloadSections
+          .flatMap((s) => s.items)
+          .sort((a, b) => a.id.localeCompare(b.id)),
+      []
+    );
+    const filteredAllDownloads = useMemo(
+      () =>
+        filtering
+          ? allDownloadsFlat.filter((d) => match(d.id, query))
+          : allDownloadsFlat,
+      [allDownloadsFlat, filtering, query]
     );
 
     const filteredBookmarks = useMemo(
@@ -163,85 +211,164 @@ export const MainContent: FC<MainContentProps> = memo(
         </div>
         <div className="mb-8 w-full max-w-3xl">
           <div className="tabs tabs-boxed w-full justify-center">
-            {TABS.map(({ id, label, emoji }) => (
-              <button
-                key={id}
-                className={`tab flex-1 gap-1.5 ${tab === id ? 'tab-active' : ''}`}
-                onClick={() => setTab(id)}>
-                <span>{emoji}</span>
-                <span>{label}</span>
-              </button>
-            ))}
+            {TABS.map(({ id, label, emoji }) => {
+              const count =
+                id === 'bookmarks'
+                  ? allBookmarksFlat.length
+                  : id === 'downloads'
+                    ? allDownloadsFlat.length
+                    : allToolsFlat.length;
+              return (
+                <button
+                  key={id}
+                  className={`tab flex-1 gap-1.5 ${tab === id ? 'tab-active' : ''}`}
+                  onClick={() => setTab(id)}>
+                  <span>{emoji}</span>
+                  <span>{label}</span>
+                  <span className="badge badge-xs">{count}</span>
+                </button>
+              );
+            })}
           </div>
+        </div>
+
+        <div className="mb-4 flex w-full max-w-3xl justify-center gap-2">
+          <button
+            className={`tab tab-xs tab-bordered ${viewMode === 'category' ? 'tab-active' : ''}`}
+            onClick={() => setViewMode('category')}>
+            Categories
+          </button>
+          <button
+            className={`tab tab-xs tab-bordered ${viewMode === 'alphabetical' ? 'tab-active' : ''}`}
+            onClick={() => setViewMode('alphabetical')}>
+            A–Z
+          </button>
         </div>
 
         {tab === 'tools' && (
           <>
-            {filteredTools.map(({ label, filtered }) =>
-              !filtering || filtered.length > 0 ? (
-                <Section key={label} label={label} count={filtered.length}>
-                  <div className={GRID}>
-                    {filtered.map((t) => (
-                      <ToolCard key={t.label} {...t} />
-                    ))}
-                  </div>
-                </Section>
-              ) : null
-            )}
-            {filtering && !filteredTools.some((s) => s.filtered.length > 0) && (
-              <p className="text-base-content/30 mt-20 text-sm">
-                No tools match &quot;{query}&quot;.
-              </p>
+            {viewMode === 'alphabetical' ? (
+              <>
+                <div className={GRID}>
+                  {filteredAllTools.map((t) => (
+                    <ToolCard key={t.label} {...t} />
+                  ))}
+                </div>
+                {filtering && filteredAllTools.length === 0 && (
+                  <p className="text-base-content/30 mt-20 text-sm">
+                    No tools match &quot;{query}&quot;.
+                  </p>
+                )}
+              </>
+            ) : (
+              <>
+                {filteredTools.map(({ label, filtered }) =>
+                  !filtering || filtered.length > 0 ? (
+                    <Section key={label} label={label} count={filtered.length}>
+                      <div className={GRID}>
+                        {filtered.map((t) => (
+                          <ToolCard key={t.label} {...t} />
+                        ))}
+                      </div>
+                    </Section>
+                  ) : null
+                )}
+                {filtering &&
+                  !filteredTools.some((s) => s.filtered.length > 0) && (
+                    <p className="text-base-content/30 mt-20 text-sm">
+                      No tools match &quot;{query}&quot;.
+                    </p>
+                  )}
+              </>
             )}
           </>
         )}
 
         {tab === 'bookmarks' && (
           <>
-            {filteredBookmarks.map(({ label, filtered }) =>
-              !filtering || filtered.length > 0 ? (
-                <Section key={label} label={label} count={filtered.length}>
-                  <div className={GRID}>
-                    {filtered.map((bm) => (
-                      <ItemCard key={bm.label} {...bm} />
-                    ))}
-                  </div>
-                </Section>
-              ) : null
+            {viewMode === 'alphabetical' ? (
+              <>
+                <div className={GRID}>
+                  {filteredAllBookmarks.map((bm) => (
+                    <ItemCard key={bm.label} {...bm} />
+                  ))}
+                </div>
+                {filtering && filteredAllBookmarks.length === 0 && (
+                  <p className="text-base-content/30 mt-20 text-sm">
+                    No bookmarks match &quot;{query}&quot;.
+                  </p>
+                )}
+              </>
+            ) : (
+              <>
+                {filteredBookmarks.map(({ label, filtered }) =>
+                  !filtering || filtered.length > 0 ? (
+                    <Section key={label} label={label} count={filtered.length}>
+                      <div className={GRID}>
+                        {filtered.map((bm) => (
+                          <ItemCard key={bm.label} {...bm} />
+                        ))}
+                      </div>
+                    </Section>
+                  ) : null
+                )}
+                {filtering &&
+                  !filteredBookmarks.some((s) => s.filtered.length > 0) && (
+                    <p className="text-base-content/30 mt-20 text-sm">
+                      No bookmarks match &quot;{query}&quot;.
+                    </p>
+                  )}
+              </>
             )}
-            {filtering &&
-              !filteredBookmarks.some((s) => s.filtered.length > 0) && (
-                <p className="text-base-content/30 mt-20 text-sm">
-                  No bookmarks match &quot;{query}&quot;.
-                </p>
-              )}
           </>
         )}
 
         {tab === 'downloads' && (
           <>
-            {filteredDownloads.map(({ label, filtered }) =>
-              !filtering || filtered.length > 0 ? (
-                <Section key={label} label={label} count={filtered.length}>
-                  <div className={GRID}>
-                    {filtered.map((a) => (
-                      <ItemCard
-                        key={a.id}
-                        href={a.url}
-                        {...a}
-                        actions={a.downloads}
-                      />
-                    ))}
-                  </div>
-                </Section>
-              ) : null
+            {viewMode === 'alphabetical' ? (
+              <>
+                <div className={GRID}>
+                  {filteredAllDownloads.map((a) => (
+                    <ItemCard
+                      key={a.id}
+                      href={a.url}
+                      {...a}
+                      actions={a.downloads}
+                    />
+                  ))}
+                </div>
+                {filtering && filteredAllDownloads.length === 0 && (
+                  <p className="text-base-content/30 mt-20 text-sm">
+                    No downloads match &quot;{query}&quot;.
+                  </p>
+                )}
+              </>
+            ) : (
+              <>
+                {filteredDownloads.map(({ label, filtered }) =>
+                  !filtering || filtered.length > 0 ? (
+                    <Section key={label} label={label} count={filtered.length}>
+                      <div className={GRID}>
+                        {filtered.map((a) => (
+                          <ItemCard
+                            key={a.id}
+                            href={a.url}
+                            {...a}
+                            actions={a.downloads}
+                          />
+                        ))}
+                      </div>
+                    </Section>
+                  ) : null
+                )}
+                {filtering &&
+                  !filteredDownloads.some((s) => s.filtered.length > 0) && (
+                    <p className="text-base-content/30 mt-20 text-sm">
+                      No downloads match &quot;{query}&quot;.
+                    </p>
+                  )}
+              </>
             )}
-            {filtering &&
-              !filteredDownloads.some((s) => s.filtered.length > 0) && (
-                <p className="text-base-content/30 mt-20 text-sm">
-                  No downloads match &quot;{query}&quot;.
-                </p>
-              )}
           </>
         )}
 

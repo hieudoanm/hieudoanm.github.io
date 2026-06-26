@@ -14,7 +14,7 @@ exports[`ItemCard should render as a bookmark link 1`] = `
         class="card-body flex-col items-center justify-center gap-2 p-4 text-center"
       >
         <div
-          class="flex h-10 w-10 items-center justify-center rounded-xl text-xl shadow-inner transition-transform duration-300 group-hover:scale-110bg-neutral border-primary-content border"
+          class="flex h-10 w-10 items-center justify-center rounded-xl text-xl transition-transform duration-300 group-hover:scale-110bg-neutral border-primary-content border"
         >
           <span>
             🔥
@@ -66,7 +66,7 @@ exports[`ItemCard should render with a badge 1`] = `
         class="card-body flex-col items-center justify-center gap-2 p-4 text-center"
       >
         <div
-          class="flex h-10 w-10 items-center justify-center rounded-xl text-xl shadow-inner transition-transform duration-300 group-hover:scale-110"
+          class="flex h-10 w-10 items-center justify-center rounded-xl text-xl transition-transform duration-300 group-hover:scale-110"
           style="background: rgba(255, 0, 0, 0.133); border: 1.5px solid rgba(255, 0, 0, 0.267);"
         >
           <span>
@@ -113,7 +113,7 @@ exports[`ItemCard should render with action buttons 1`] = `
         class="card-body flex-col items-center justify-center gap-2 p-4 text-center"
       >
         <div
-          class="flex h-10 w-10 items-center justify-center rounded-xl text-xl shadow-inner transition-transform duration-300 group-hover:scale-110"
+          class="flex h-10 w-10 items-center justify-center rounded-xl text-xl transition-transform duration-300 group-hover:scale-110"
           style="background: rgba(255, 0, 0, 0.133); border: 1.5px solid rgba(255, 0, 0, 0.267);"
         >
           <span>

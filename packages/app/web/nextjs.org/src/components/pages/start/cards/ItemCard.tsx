@@ -27,7 +27,9 @@ export const ItemCard: FC<ItemCardProps> = ({
   <div
     className="card bg-base-200 border-base-300 hover:bg-base-300 group relative w-full border text-left transition-all duration-300 hover:scale-[1.03] hover:shadow-lg"
     style={
-      color ? ({ '--ai-color': color } as React.CSSProperties) : undefined
+      color
+        ? ({ '--ai-color': color } as unknown as React.CSSProperties)
+        : undefined
     }>
     <a href={href} rel="noopener noreferrer" className="block">
       {badge && (
@@ -47,7 +49,7 @@ export const ItemCard: FC<ItemCardProps> = ({
       )}
       <div className="card-body flex-col items-center justify-center gap-2 p-4 text-center">
         <div
-          className={`flex h-10 w-10 items-center justify-center rounded-xl text-xl shadow-inner transition-transform duration-300 group-hover:scale-110${color ? '' : 'bg-neutral border-primary-content border'}`}
+          className={`flex h-10 w-10 items-center justify-center rounded-xl text-xl transition-transform duration-300 group-hover:scale-110${color ? '' : 'bg-neutral border-primary-content border'}`}
           style={
             color
               ? { background: `${color}22`, border: `1.5px solid ${color}44` }
@@ -64,9 +66,9 @@ export const ItemCard: FC<ItemCardProps> = ({
           </div>
         </div>
         {(actions ?? [{ label: 'Open in new tab', url: href }]).map(
-          (action, index) => (
+          (action) => (
             <button
-              key={index}
+              key={action.url}
               type="button"
               onClick={(e: React.MouseEvent) => {
                 e.preventDefault();
@@ -83,3 +85,5 @@ export const ItemCard: FC<ItemCardProps> = ({
     </a>
   </div>
 );
+
+ItemCard.displayName = 'ItemCard';
