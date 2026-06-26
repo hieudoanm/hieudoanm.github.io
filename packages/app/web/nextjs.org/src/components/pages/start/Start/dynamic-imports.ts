@@ -616,6 +616,34 @@ export const VideoEditModal = dynamic(
     ),
   { ssr: false }
 );
+export const VideoProcessModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/VideoProcessModal').then(
+      (mod) => mod.VideoProcessModal
+    ),
+  { ssr: false }
+);
+export const TextToolsModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/tools/TextToolsModal').then(
+      (mod) => mod.TextToolsModal
+    ),
+  { ssr: false }
+);
+export const ScreenRecorderModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/tools/ScreenRecorderModal').then(
+      (mod) => mod.ScreenRecorderModal
+    ),
+  { ssr: false }
+);
+export const ImageCombinerModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/images/ImageCombinerModal').then(
+      (mod) => mod.ImageCombinerModal
+    ),
+  { ssr: false }
+);
 export const WriteGenerateModal = dynamic(
   () =>
     import('@hieudoanm.github.io/components/pages/start/modals/write/WriteGenerateModal').then(
@@ -690,6 +718,41 @@ export const ImageCreateModal = dynamic(
   () =>
     import('@hieudoanm.github.io/components/pages/start/modals/images/ImageCreateModal').then(
       (mod) => mod.ImageCreateModal
+    ),
+  { ssr: false }
+);
+export const ImageOcrModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/images/ImageOcrModal').then(
+      (mod) => mod.ImageOcrModal
+    ),
+  { ssr: false }
+);
+export const ImageBlurModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/images/ImageBlurModal').then(
+      (mod) => mod.ImageBlurModal
+    ),
+  { ssr: false }
+);
+export const WriteContentModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/WriteContentModal').then(
+      (mod) => mod.WriteContentModal
+    ),
+  { ssr: false }
+);
+export const PdfCreateModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/PdfCreateModal').then(
+      (mod) => mod.PdfCreateModal
+    ),
+  { ssr: false }
+);
+export const PdfTranslateModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/PdfTranslateModal').then(
+      (mod) => mod.PdfTranslateModal
     ),
   { ssr: false }
 );

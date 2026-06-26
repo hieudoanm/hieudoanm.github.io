@@ -98,6 +98,15 @@ export type ModalId =
   | 'write-marketing'
   | 'write-legal'
   | 'file-archive'
-  | 'image-create';
+  | 'image-create'
+  | 'image-ocr'
+  | 'image-blur'
+  | 'write-content'
+  | 'pdf-create'
+  | 'pdf-translate'
+  | 'text-tools'
+  | 'image-combiner'
+  | 'screen-recorder'
+  | 'video-process';
 
 export type SidebarTab = 'tasks' | 'clock';

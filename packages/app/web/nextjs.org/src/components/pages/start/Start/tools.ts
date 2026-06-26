@@ -84,6 +84,20 @@ export const makeTools = (
       onClick: open('uuid'),
     },
     {
+      label: 'Text Tools',
+      description: 'Diff/Case/Password',
+      emoji: '📝',
+      color: '#3b82f6',
+      onClick: open('text-tools'),
+    },
+    {
+      label: 'Screen Recorder',
+      description: 'Record & Download',
+      emoji: '🎥',
+      color: '#3b82f6',
+      onClick: open('screen-recorder'),
+    },
+    {
       label: 'Sheets',
       description: 'SQLite Browser',
       emoji: '🗄️',
@@ -346,6 +360,20 @@ export const makeTools = (
       emoji: '📑',
       color: '#ef4444',
       onClick: open('pdf-arrange'),
+    },
+    {
+      label: 'Create',
+      description: 'From Text',
+      emoji: '📄',
+      color: '#ef4444',
+      onClick: open('pdf-create'),
+    },
+    {
+      label: 'Translate',
+      description: 'PDF',
+      emoji: '🌐',
+      color: '#ef4444',
+      onClick: open('pdf-translate'),
     },
   ],
   education: [
@@ -616,6 +644,27 @@ export const makeTools = (
       color: '#3b82f6',
       onClick: open('image-create'),
     },
+    {
+      label: 'OCR',
+      description: 'Text/Barcode/QR',
+      emoji: '🔍',
+      color: '#3b82f6',
+      onClick: open('image-ocr'),
+    },
+    {
+      label: 'Blur',
+      description: 'Background/Face',
+      emoji: '🌫️',
+      color: '#3b82f6',
+      onClick: open('image-blur'),
+    },
+    {
+      label: 'Combine',
+      description: 'Join Images',
+      emoji: '🔗',
+      color: '#3b82f6',
+      onClick: open('image-combiner'),
+    },
   ],
   visualization: [
     {
@@ -690,6 +739,13 @@ export const makeTools = (
       color: '#8b5cf6',
       onClick: open('write-legal'),
     },
+    {
+      label: 'Content',
+      description: 'Writing',
+      emoji: '📰',
+      color: '#8b5cf6',
+      onClick: open('write-content'),
+    },
   ],
   video: [
     {
@@ -719,6 +775,13 @@ export const makeTools = (
       emoji: '🎵',
       color: '#ef4444',
       onClick: open('video-audio'),
+    },
+    {
+      label: 'Process',
+      description: 'Merge/Speed/Crop',
+      emoji: '⚙️',
+      color: '#ef4444',
+      onClick: open('video-process'),
     },
   ],
   data: [
