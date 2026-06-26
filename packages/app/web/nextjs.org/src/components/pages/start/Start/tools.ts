@@ -333,6 +333,20 @@ export const makeTools = (
       color: '#ef4444',
       onClick: open('pdf-maintain'),
     },
+    {
+      label: 'Convert',
+      description: 'Formats',
+      emoji: '📄',
+      color: '#ef4444',
+      onClick: open('pdf-convert'),
+    },
+    {
+      label: 'Arrange',
+      description: 'Reorder/Delete',
+      emoji: '📑',
+      color: '#ef4444',
+      onClick: open('pdf-arrange'),
+    },
   ],
   education: [
     {
@@ -574,6 +588,27 @@ export const makeTools = (
       color: '#22d3ee',
       onClick: open('youtube-thumbnails'),
     },
+    {
+      label: 'AI',
+      description: 'Image Tools',
+      emoji: '🤖',
+      color: '#3b82f6',
+      onClick: open('image-ai'),
+    },
+    {
+      label: 'Edit',
+      description: 'Image',
+      emoji: '🎨',
+      color: '#3b82f6',
+      onClick: open('image-edit'),
+    },
+    {
+      label: 'Convert',
+      description: 'Format',
+      emoji: '🔄',
+      color: '#3b82f6',
+      onClick: open('image-convert'),
+    },
   ],
   visualization: [
     {
@@ -603,6 +638,54 @@ export const makeTools = (
       emoji: '🕸️',
       color: '#6c5ce7',
       onClick: open('graph'),
+    },
+  ],
+  write: [
+    {
+      label: 'Write',
+      description: 'Generate',
+      emoji: '✍️',
+      color: '#8b5cf6',
+      onClick: open('write-generate'),
+    },
+    {
+      label: 'Improve',
+      description: 'Edit Text',
+      emoji: '📝',
+      color: '#8b5cf6',
+      onClick: open('write-improve'),
+    },
+    {
+      label: 'Social',
+      description: 'Content',
+      emoji: '📱',
+      color: '#8b5cf6',
+      onClick: open('write-social'),
+    },
+  ],
+  video: [
+    {
+      label: 'Convert',
+      description: 'Video',
+      emoji: '🎬',
+      color: '#ef4444',
+      onClick: open('video-convert'),
+    },
+    {
+      label: 'Edit',
+      description: 'Video',
+      emoji: '✂️',
+      color: '#ef4444',
+      onClick: open('video-edit'),
+    },
+  ],
+  data: [
+    {
+      label: 'File Convert',
+      description: 'CSV/Excel/XML',
+      emoji: '📊',
+      color: '#10b981',
+      onClick: open('file-convert'),
     },
   ],
 });

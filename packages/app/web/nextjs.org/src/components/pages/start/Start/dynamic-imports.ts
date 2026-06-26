@@ -560,6 +560,83 @@ export const PdfSecurityModal = dynamic(
     ),
   { ssr: false }
 );
+export const FileConvertModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/data/FileConvertModal').then(
+      (mod) => mod.FileConvertModal
+    ),
+  { ssr: false }
+);
+export const ImageAiModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/images/ImageAiModal').then(
+      (mod) => mod.ImageAiModal
+    ),
+  { ssr: false }
+);
+export const ImageConvertModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/images/ImageConvertModal').then(
+      (mod) => mod.ImageConvertModal
+    ),
+  { ssr: false }
+);
+export const ImageEditModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/images/ImageEditModal').then(
+      (mod) => mod.ImageEditModal
+    ),
+  { ssr: false }
+);
+export const PdfArrangeModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/PdfArrangeModal').then(
+      (mod) => mod.PdfArrangeModal
+    ),
+  { ssr: false }
+);
+export const PdfConvertModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/PdfConvertModal').then(
+      (mod) => mod.PdfConvertModal
+    ),
+  { ssr: false }
+);
+export const VideoConvertModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/VideoConvertModal').then(
+      (mod) => mod.VideoConvertModal
+    ),
+  { ssr: false }
+);
+export const VideoEditModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/VideoEditModal').then(
+      (mod) => mod.VideoEditModal
+    ),
+  { ssr: false }
+);
+export const WriteGenerateModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/WriteGenerateModal').then(
+      (mod) => mod.WriteGenerateModal
+    ),
+  { ssr: false }
+);
+export const WriteImproveModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/WriteImproveModal').then(
+      (mod) => mod.WriteImproveModal
+    ),
+  { ssr: false }
+);
+export const WriteSocialModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/WriteSocialModal').then(
+      (mod) => mod.WriteSocialModal
+    ),
+  { ssr: false }
+);
 export const GraphModal = dynamic(
   () =>
     import('@hieudoanm.github.io/components/pages/start/modals/visualization/GraphModal').then(

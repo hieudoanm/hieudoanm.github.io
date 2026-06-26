@@ -80,6 +80,17 @@ export type ModalId =
   | 'resume-timeline'
   | 'split-bill'
   | 'days-count'
-  | 'graph';
+  | 'file-convert'
+  | 'graph'
+  | 'image-ai'
+  | 'image-convert'
+  | 'image-edit'
+  | 'pdf-arrange'
+  | 'pdf-convert'
+  | 'video-convert'
+  | 'video-edit'
+  | 'write-generate'
+  | 'write-improve'
+  | 'write-social';
 
 export type SidebarTab = 'tasks' | 'clock';
