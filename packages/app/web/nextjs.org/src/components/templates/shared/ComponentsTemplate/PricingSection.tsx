@@ -1,6 +1,7 @@
+import { FC } from 'react';
 import { Section } from './Section';
 
-export const PricingSection = () => {
+export const PricingSection: FC = () => {
   const plans = [
     {
       tier: 'Starter',
@@ -88,3 +89,4 @@ export const PricingSection = () => {
     </Section>
   );
 };
+PricingSection.displayName = 'PricingSection';

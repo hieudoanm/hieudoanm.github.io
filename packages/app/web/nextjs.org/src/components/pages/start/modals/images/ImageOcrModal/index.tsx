@@ -143,3 +143,4 @@ export const ImageOcrModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+ImageOcrModal.displayName = 'ImageOcrModal';

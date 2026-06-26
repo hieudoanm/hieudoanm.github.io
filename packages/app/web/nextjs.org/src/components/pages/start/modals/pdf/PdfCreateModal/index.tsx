@@ -125,3 +125,5 @@ export const PdfCreateModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+
+PdfCreateModal.displayName = 'PdfCreateModal';

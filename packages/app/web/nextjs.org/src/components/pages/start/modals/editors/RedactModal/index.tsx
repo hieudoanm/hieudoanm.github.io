@@ -269,3 +269,4 @@ export const RedactModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+RedactModal.displayName = 'RedactModal';

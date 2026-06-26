@@ -5,3 +5,4 @@ export const EntryIcon: FC<{ icon: string }> = ({ icon }) => (
     <span className="text-xs">{icon}</span>
   </div>
 );
+EntryIcon.displayName = 'EntryIcon';

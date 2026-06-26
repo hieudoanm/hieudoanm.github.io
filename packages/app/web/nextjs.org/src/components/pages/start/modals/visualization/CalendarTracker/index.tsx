@@ -123,3 +123,4 @@ export const CalendarTrackerModal: FC<{ onClose: () => void }> = ({
     </ModalWrapper>
   );
 };
+CalendarTrackerModal.displayName = 'CalendarTrackerModal';

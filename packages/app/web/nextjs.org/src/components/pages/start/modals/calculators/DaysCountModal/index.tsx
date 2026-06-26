@@ -92,3 +92,4 @@ export const DaysCountModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+DaysCountModal.displayName = 'DaysCountModal';

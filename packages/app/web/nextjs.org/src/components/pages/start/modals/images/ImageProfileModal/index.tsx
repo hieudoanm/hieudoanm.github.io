@@ -120,3 +120,4 @@ export const ImageProfileModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+ImageProfileModal.displayName = 'ImageProfileModal';

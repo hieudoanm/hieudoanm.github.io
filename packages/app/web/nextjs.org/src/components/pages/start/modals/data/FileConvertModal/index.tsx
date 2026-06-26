@@ -526,3 +526,4 @@ export const FileConvertModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+FileConvertModal.displayName = 'FileConvertModal';

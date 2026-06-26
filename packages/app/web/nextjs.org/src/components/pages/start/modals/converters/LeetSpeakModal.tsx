@@ -164,3 +164,4 @@ export const LeetSpeakModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+LeetSpeakModal.displayName = 'LeetSpeakModal';

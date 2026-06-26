@@ -154,3 +154,4 @@ export const TimeTab: FC = () => {
     </div>
   );
 };
+TimeTab.displayName = 'TimeTab';

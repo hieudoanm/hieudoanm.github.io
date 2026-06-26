@@ -36,3 +36,4 @@ export const Chessboard: FC<{
     />
   );
 };
+Chessboard.displayName = 'Chessboard';

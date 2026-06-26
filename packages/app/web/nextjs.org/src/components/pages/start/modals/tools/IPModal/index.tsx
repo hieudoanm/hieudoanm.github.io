@@ -42,6 +42,7 @@ export const IPModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       setLoading(false);
     }
   };
+  IPModal.displayName = 'IPModal';
 
   const fetchDNS = async () => {
     if (!domain.trim()) return;

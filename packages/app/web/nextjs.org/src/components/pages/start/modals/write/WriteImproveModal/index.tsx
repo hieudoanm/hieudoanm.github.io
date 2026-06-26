@@ -175,3 +175,4 @@ export const WriteImproveModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+WriteImproveModal.displayName = 'WriteImproveModal';

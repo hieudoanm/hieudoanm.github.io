@@ -186,3 +186,4 @@ export const SlidesModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+SlidesModal.displayName = 'SlidesModal';

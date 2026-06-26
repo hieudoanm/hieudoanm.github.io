@@ -15,6 +15,7 @@ export const FigletModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
+  FigletModal.displayName = 'FigletModal';
 
   const onKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') onClose();

@@ -612,3 +612,4 @@ export const ImageEditModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+ImageEditModal.displayName = 'ImageEditModal';

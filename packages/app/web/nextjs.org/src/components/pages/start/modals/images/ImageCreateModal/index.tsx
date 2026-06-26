@@ -350,3 +350,4 @@ export const ImageCreateModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+ImageCreateModal.displayName = 'ImageCreateModal';

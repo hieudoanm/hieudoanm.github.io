@@ -56,3 +56,4 @@ export const Roman: FC = () => {
     </div>
   );
 };
+Roman.displayName = 'Roman';

@@ -139,3 +139,4 @@ export const Time: FC = () => {
     </div>
   );
 };
+Time.displayName = 'Time';

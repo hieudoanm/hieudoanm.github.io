@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { FC, useState } from 'react';
 
-export const ColorPopover = () => {
+export const ColorPopover: FC = () => {
   const [open, setOpen] = useState(false);
   const colors = [
     { bg: '#c9a84c', label: 'Gold' },
@@ -37,3 +37,4 @@ export const ColorPopover = () => {
     </div>
   );
 };
+ColorPopover.displayName = 'ColorPopover';

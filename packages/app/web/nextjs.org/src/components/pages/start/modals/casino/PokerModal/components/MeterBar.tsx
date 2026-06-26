@@ -11,3 +11,4 @@ export const MeterBar: FC<{ pct: number }> = ({ pct }) => {
     </div>
   );
 };
+MeterBar.displayName = 'MeterBar';

@@ -247,3 +247,4 @@ export const InflationModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+InflationModal.displayName = 'InflationModal';

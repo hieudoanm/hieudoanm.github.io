@@ -110,3 +110,4 @@ export const WriteContentModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+WriteContentModal.displayName = 'WriteContentModal';

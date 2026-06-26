@@ -427,3 +427,4 @@ export const ImageFilterModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+ImageFilterModal.displayName = 'ImageFilterModal';

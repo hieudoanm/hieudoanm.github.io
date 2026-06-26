@@ -94,3 +94,4 @@ export const ScreenRecorderModal: FC<{ onClose: () => void }> = ({
     </ModalWrapper>
   );
 };
+ScreenRecorderModal.displayName = 'ScreenRecorderModal';

@@ -119,3 +119,4 @@ export const PokedexModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </>
   );
 };
+PokedexModal.displayName = 'PokedexModal';

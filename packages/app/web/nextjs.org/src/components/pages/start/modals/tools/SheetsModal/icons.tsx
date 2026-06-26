@@ -8,6 +8,7 @@ export const IcoUpload = () => (
     <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12" />
   </svg>
 );
+IcoUpload.displayName = 'IcoUpload';
 
 export const IcoPlus = () => (
   <svg
@@ -19,6 +20,7 @@ export const IcoPlus = () => (
     <path d="M12 5v14M5 12h14" />
   </svg>
 );
+IcoPlus.displayName = 'IcoPlus';
 
 export const IcoSave = () => (
   <svg
@@ -30,6 +32,7 @@ export const IcoSave = () => (
     <path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2zM17 21v-8H7v8M7 3v5h8" />
   </svg>
 );
+IcoSave.displayName = 'IcoSave';
 
 export const IcoDownload = () => (
   <svg
@@ -41,6 +44,7 @@ export const IcoDownload = () => (
     <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
   </svg>
 );
+IcoDownload.displayName = 'IcoDownload';
 
 export const IcoSearch = () => (
   <svg
@@ -53,6 +57,7 @@ export const IcoSearch = () => (
     <path d="M21 21l-4.35-4.35" />
   </svg>
 );
+IcoSearch.displayName = 'IcoSearch';
 
 export const IcoDatabase = () => (
   <svg
@@ -66,6 +71,7 @@ export const IcoDatabase = () => (
     <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
   </svg>
 );
+IcoDatabase.displayName = 'IcoDatabase';
 
 export const IcoCopy = () => (
   <svg
@@ -78,6 +84,7 @@ export const IcoCopy = () => (
     <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
   </svg>
 );
+IcoCopy.displayName = 'IcoCopy';
 
 export const IcoCheck = () => (
   <svg
@@ -89,6 +96,7 @@ export const IcoCheck = () => (
     <path d="M20 6L9 17l-5-5" />
   </svg>
 );
+IcoCheck.displayName = 'IcoCheck';
 
 export const IcoX = () => (
   <svg
@@ -100,6 +108,7 @@ export const IcoX = () => (
     <path d="M18 6L6 18M6 6l12 12" />
   </svg>
 );
+IcoX.displayName = 'IcoX';
 
 export const IcoChevUp = () => (
   <svg
@@ -111,6 +120,7 @@ export const IcoChevUp = () => (
     <path d="M18 15l-6-6-6 6" />
   </svg>
 );
+IcoChevUp.displayName = 'IcoChevUp';
 
 export const IcoChevDown = () => (
   <svg
@@ -122,6 +132,7 @@ export const IcoChevDown = () => (
     <path d="M6 9l6 6 6-6" />
   </svg>
 );
+IcoChevDown.displayName = 'IcoChevDown';
 
 export const IcoChevronsUpDown = ({ className }: { className?: string }) => (
   <svg
@@ -137,6 +148,7 @@ export const IcoChevronsUpDown = ({ className }: { className?: string }) => (
     />
   </svg>
 );
+IcoChevronsUpDown.displayName = 'IcoChevronsUpDown';
 
 export const IcoTable = () => (
   <svg
@@ -150,3 +162,4 @@ export const IcoTable = () => (
     <line x1="5" y1="5" x2="5" y2="13" />
   </svg>
 );
+IcoTable.displayName = 'IcoTable';

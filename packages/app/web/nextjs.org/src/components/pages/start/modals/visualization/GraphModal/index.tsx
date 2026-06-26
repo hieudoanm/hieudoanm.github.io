@@ -381,3 +381,4 @@ export const GraphModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+GraphModal.displayName = 'GraphModal';

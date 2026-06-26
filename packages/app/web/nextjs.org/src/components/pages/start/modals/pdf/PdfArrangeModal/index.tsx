@@ -230,3 +230,4 @@ export const PdfArrangeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+PdfArrangeModal.displayName = 'PdfArrangeModal';

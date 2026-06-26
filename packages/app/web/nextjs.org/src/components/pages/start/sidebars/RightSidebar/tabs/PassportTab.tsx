@@ -32,6 +32,7 @@ export const PassportTab: FC = () => {
     const matchesRegion = region === '' || c.region === region;
     return matchesSearch && matchesRegion;
   });
+  PassportTab.displayName = 'PassportTab';
 
   return (
     <div className="flex flex-col gap-3 p-3">

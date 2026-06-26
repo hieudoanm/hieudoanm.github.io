@@ -149,3 +149,4 @@ export const PdfExtractModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+PdfExtractModal.displayName = 'PdfExtractModal';

@@ -72,6 +72,7 @@ export const SheetsModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     reader.readAsArrayBuffer(file);
     e.target.value = '';
   };
+  SheetsModal.displayName = 'SheetsModal';
 
   const handleDragOver = (e: React.DragEvent) => {
     e.preventDefault();

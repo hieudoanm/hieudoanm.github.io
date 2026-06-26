@@ -38,3 +38,4 @@ export const RightSidebar: FC<{ times: string[] }> = ({ times }) => {
     </aside>
   );
 };
+RightSidebar.displayName = 'RightSidebar';

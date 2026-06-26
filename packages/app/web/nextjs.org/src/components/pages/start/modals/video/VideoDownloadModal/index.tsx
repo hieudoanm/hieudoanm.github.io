@@ -76,3 +76,4 @@ export const VideoDownloadModal: FC<{ onClose: () => void }> = ({
     </ModalWrapper>
   );
 };
+VideoDownloadModal.displayName = 'VideoDownloadModal';

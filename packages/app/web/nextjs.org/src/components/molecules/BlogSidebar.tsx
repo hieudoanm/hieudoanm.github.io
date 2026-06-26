@@ -52,3 +52,5 @@ export const BlogSidebar: FC<BlogSidebarProps> = ({
     </div>
   </aside>
 );
+
+BlogSidebar.displayName = 'BlogSidebar';

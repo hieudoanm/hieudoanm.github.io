@@ -217,3 +217,4 @@ export const Base64Modal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+Base64Modal.displayName = 'Base64Modal';

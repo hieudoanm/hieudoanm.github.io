@@ -171,3 +171,4 @@ export const OpenAPI2Postman: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+OpenAPI2Postman.displayName = 'OpenAPI2Postman';

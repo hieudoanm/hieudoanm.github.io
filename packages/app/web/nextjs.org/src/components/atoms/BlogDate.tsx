@@ -54,3 +54,5 @@ export const BlogDate: FC<BlogDateProps> = ({
     </time>
   );
 };
+
+BlogDate.displayName = 'BlogDate';

@@ -69,3 +69,4 @@ export const BlogsTemplate: FC<BlogPostsProps> = ({ posts, meta }) => {
     </div>
   );
 };
+BlogsTemplate.displayName = 'BlogsTemplate';

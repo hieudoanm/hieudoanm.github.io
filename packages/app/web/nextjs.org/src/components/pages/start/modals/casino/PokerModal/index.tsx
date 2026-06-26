@@ -137,3 +137,4 @@ export const PokerModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+PokerModal.displayName = 'PokerModal';

@@ -19,3 +19,4 @@ export const GridOverlay: FC<{ overlay: OverlayMode }> = ({ overlay }) => {
     </div>
   );
 };
+GridOverlay.displayName = 'GridOverlay';

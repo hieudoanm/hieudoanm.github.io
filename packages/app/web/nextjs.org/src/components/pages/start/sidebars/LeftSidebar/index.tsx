@@ -40,3 +40,4 @@ export const LeftSidebar: FC = () => {
     </aside>
   );
 };
+LeftSidebar.displayName = 'LeftSidebar';

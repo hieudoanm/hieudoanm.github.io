@@ -317,3 +317,4 @@ export const PrisonerDilemmaModal: FC<{ onClose: () => void }> = ({
     </ModalWrapper>
   );
 };
+PrisonerDilemmaModal.displayName = 'PrisonerDilemmaModal';

@@ -157,3 +157,4 @@ export const PdfCombineModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+PdfCombineModal.displayName = 'PdfCombineModal';

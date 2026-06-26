@@ -153,3 +153,4 @@ export const GitHubSocialPreviewModal: FC<{ onClose: () => void }> = ({
     </ModalWrapper>
   );
 };
+GitHubSocialPreviewModal.displayName = 'GitHubSocialPreviewModal';

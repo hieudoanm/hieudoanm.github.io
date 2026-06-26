@@ -254,3 +254,4 @@ export const ChessClockModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+ChessClockModal.displayName = 'ChessClockModal';

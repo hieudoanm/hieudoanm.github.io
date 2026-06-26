@@ -80,3 +80,4 @@ export const Angle = () => {
     </div>
   );
 };
+Angle.displayName = 'Angle';

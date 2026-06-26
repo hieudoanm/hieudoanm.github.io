@@ -101,3 +101,4 @@ export const ManifestModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+ManifestModal.displayName = 'ManifestModal';

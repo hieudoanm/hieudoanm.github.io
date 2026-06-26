@@ -198,3 +198,4 @@ export const SnellenChartModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </dialog>
   );
 };
+SnellenChartModal.displayName = 'SnellenChartModal';

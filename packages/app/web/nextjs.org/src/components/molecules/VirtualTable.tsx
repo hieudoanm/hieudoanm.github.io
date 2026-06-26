@@ -238,3 +238,5 @@ export const VirtualTable = <T,>({
     </div>
   );
 };
+
+VirtualTable.displayName = 'VirtualTable';

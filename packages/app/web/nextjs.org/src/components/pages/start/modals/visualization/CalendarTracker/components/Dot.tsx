@@ -54,3 +54,4 @@ export const Dot: FC<DotProps> = ({ index, date }) => {
     );
   return null;
 };
+Dot.displayName = 'Dot';

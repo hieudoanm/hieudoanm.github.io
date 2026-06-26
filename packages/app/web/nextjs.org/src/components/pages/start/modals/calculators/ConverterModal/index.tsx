@@ -86,3 +86,4 @@ export const ConverterModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+ConverterModal.displayName = 'ConverterModal';

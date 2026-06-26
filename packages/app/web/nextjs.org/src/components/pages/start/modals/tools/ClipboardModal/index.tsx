@@ -121,3 +121,4 @@ export const ClipboardModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+ClipboardModal.displayName = 'ClipboardModal';

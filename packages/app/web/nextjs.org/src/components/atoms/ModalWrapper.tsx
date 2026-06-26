@@ -79,3 +79,5 @@ export const ModalWrapper: FC<ModalWrapperProps> = ({
     </dialog>
   );
 };
+
+ModalWrapper.displayName = 'ModalWrapper';

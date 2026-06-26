@@ -342,3 +342,4 @@ export const TowersModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+TowersModal.displayName = 'TowersModal';

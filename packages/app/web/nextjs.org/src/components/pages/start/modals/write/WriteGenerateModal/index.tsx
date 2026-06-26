@@ -133,3 +133,4 @@ export const WriteGenerateModal: FC<{ onClose: () => void }> = ({
     </ModalWrapper>
   );
 };
+WriteGenerateModal.displayName = 'WriteGenerateModal';

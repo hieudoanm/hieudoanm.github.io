@@ -147,3 +147,4 @@ export const ImageCombinerModal: FC<{ onClose: () => void }> = ({
     </ModalWrapper>
   );
 };
+ImageCombinerModal.displayName = 'ImageCombinerModal';

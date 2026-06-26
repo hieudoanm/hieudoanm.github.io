@@ -55,3 +55,4 @@ export const ToastUI: FC<{
     ))}
   </div>
 );
+ToastUI.displayName = 'ToastUI';

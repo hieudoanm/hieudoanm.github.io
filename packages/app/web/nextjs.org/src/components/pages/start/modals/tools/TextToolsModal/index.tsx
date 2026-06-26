@@ -290,3 +290,4 @@ export const TextToolsModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+TextToolsModal.displayName = 'TextToolsModal';

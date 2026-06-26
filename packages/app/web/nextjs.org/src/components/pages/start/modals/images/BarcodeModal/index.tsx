@@ -113,3 +113,4 @@ export const BarcodeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+BarcodeModal.displayName = 'BarcodeModal';

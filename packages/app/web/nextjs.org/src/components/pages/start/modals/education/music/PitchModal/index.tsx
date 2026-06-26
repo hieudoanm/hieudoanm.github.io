@@ -94,3 +94,4 @@ export const PitchModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+PitchModal.displayName = 'PitchModal';

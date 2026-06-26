@@ -21,3 +21,4 @@ export const PdfSecurityModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+PdfSecurityModal.displayName = 'PdfSecurityModal';

@@ -115,3 +115,4 @@ export const WatchFaceModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+WatchFaceModal.displayName = 'WatchFaceModal';

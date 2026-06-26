@@ -74,3 +74,4 @@ export const PhotosGrid: FC<PhotosGridProps> = ({
     </div>
   );
 };
+PhotosGrid.displayName = 'PhotosGrid';

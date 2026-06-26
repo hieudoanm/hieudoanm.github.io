@@ -92,3 +92,4 @@ export const Attractors: FC = () => {
     </div>
   );
 };
+Attractors.displayName = 'Attractors';

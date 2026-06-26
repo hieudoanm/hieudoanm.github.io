@@ -25,3 +25,4 @@ export const Weekday: FC = () => {
     </div>
   );
 };
+Weekday.displayName = 'Weekday';

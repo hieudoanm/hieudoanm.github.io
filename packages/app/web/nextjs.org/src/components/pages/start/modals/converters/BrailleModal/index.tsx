@@ -146,3 +146,4 @@ export const BrailleModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+BrailleModal.displayName = 'BrailleModal';

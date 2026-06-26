@@ -176,3 +176,4 @@ export const RockPaperScissorsModal: FC<{ onClose: () => void }> = ({
     </ModalWrapper>
   );
 };
+RockPaperScissorsModal.displayName = 'RockPaperScissorsModal';

@@ -153,3 +153,4 @@ export const Game2048Modal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+Game2048Modal.displayName = 'Game2048Modal';

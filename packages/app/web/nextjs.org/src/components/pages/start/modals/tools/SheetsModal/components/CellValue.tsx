@@ -24,3 +24,4 @@ export const CellValue: FC<{ value: CellVal }> = ({ value }) => {
     </span>
   );
 };
+CellValue.displayName = 'CellValue';

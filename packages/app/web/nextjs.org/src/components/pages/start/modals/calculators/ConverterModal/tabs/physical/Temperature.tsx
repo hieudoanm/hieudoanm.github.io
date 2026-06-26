@@ -90,3 +90,4 @@ export const Temperature: FC = () => {
     </div>
   );
 };
+Temperature.displayName = 'Temperature';

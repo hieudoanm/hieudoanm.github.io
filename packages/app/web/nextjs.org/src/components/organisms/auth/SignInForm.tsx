@@ -36,6 +36,7 @@ export const SignInForm: FC<SignInFormProps> = ({
     setLoading(false);
     onSuccess?.();
   };
+  SignInForm.displayName = 'SignInForm';
 
   return (
     <div className="bg-base-100 border-base-300 mx-auto max-w-sm rounded-2xl border p-8">

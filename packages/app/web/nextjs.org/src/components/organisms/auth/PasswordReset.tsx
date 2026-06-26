@@ -177,3 +177,5 @@ export const PasswordReset: FC<PasswordResetProps> = ({
     </div>
   );
 };
+
+PasswordReset.displayName = 'PasswordReset';

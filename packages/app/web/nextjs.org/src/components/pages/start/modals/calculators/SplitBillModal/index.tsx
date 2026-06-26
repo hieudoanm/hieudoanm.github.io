@@ -387,3 +387,4 @@ export const SplitBillModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+SplitBillModal.displayName = 'SplitBillModal';

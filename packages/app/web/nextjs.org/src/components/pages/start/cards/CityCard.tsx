@@ -22,6 +22,7 @@ export const WeatherBadge: FC<{ weather: WeatherData | undefined }> = ({
     </div>
   );
 };
+WeatherBadge.displayName = 'WeatherBadge';
 
 export const CityCard: FC<{
   label: string;
@@ -57,3 +58,4 @@ export const CityCard: FC<{
     </div>
   );
 };
+CityCard.displayName = 'CityCard';

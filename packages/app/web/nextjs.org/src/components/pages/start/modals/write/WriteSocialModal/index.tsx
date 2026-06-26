@@ -179,3 +179,4 @@ export const WriteSocialModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+WriteSocialModal.displayName = 'WriteSocialModal';

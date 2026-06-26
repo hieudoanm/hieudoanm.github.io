@@ -1,6 +1,7 @@
+import { FC } from 'react';
 import { Section } from './Section';
 
-export const ContainersSection = () => {
+export const ContainersSection: FC = () => {
   const faqs = [
     {
       q: 'What tokens does DaisyX export?',
@@ -48,6 +49,7 @@ export const ContainersSection = () => {
     other: 'text-base-content/20',
     '': 'text-base-content/50 hover:bg-base-300 hover:text-base-content',
   };
+  ContainersSection.displayName = 'ContainersSection';
   return (
     <Section
       label="Containers"

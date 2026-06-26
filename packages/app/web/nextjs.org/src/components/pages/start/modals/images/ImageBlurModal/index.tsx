@@ -206,3 +206,4 @@ export const ImageBlurModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+ImageBlurModal.displayName = 'ImageBlurModal';

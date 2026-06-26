@@ -144,3 +144,4 @@ export const Weight: FC = () => {
     </div>
   );
 };
+Weight.displayName = 'Weight';

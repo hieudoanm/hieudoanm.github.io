@@ -63,3 +63,4 @@ export const DailyView: FC<DailyViewProps> = ({ year, withWeekday }) => {
     </div>
   );
 };
+DailyView.displayName = 'DailyView';

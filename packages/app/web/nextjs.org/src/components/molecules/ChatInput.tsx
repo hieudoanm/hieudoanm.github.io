@@ -71,3 +71,5 @@ export const ChatInput: FC<ChatInputProps> = ({
     </form>
   );
 };
+
+ChatInput.displayName = 'ChatInput';

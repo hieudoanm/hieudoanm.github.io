@@ -63,3 +63,4 @@ export const VideoProcessModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+VideoProcessModal.displayName = 'VideoProcessModal';

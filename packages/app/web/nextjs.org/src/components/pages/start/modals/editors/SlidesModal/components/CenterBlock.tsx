@@ -47,3 +47,4 @@ export const CenterBlock: FC<{ block: SlideBlock }> = ({ block }) => {
     }
   }
 };
+CenterBlock.displayName = 'CenterBlock';

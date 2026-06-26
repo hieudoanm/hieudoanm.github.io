@@ -141,3 +141,4 @@ export const WordleModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+WordleModal.displayName = 'WordleModal';

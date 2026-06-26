@@ -173,3 +173,4 @@ export const LoremIpsumModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+LoremIpsumModal.displayName = 'LoremIpsumModal';

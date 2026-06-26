@@ -48,3 +48,4 @@ export const TypoglycemiaModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+TypoglycemiaModal.displayName = 'TypoglycemiaModal';

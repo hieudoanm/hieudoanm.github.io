@@ -121,3 +121,4 @@ export const Data: FC = () => {
     </div>
   );
 };
+Data.displayName = 'Data';

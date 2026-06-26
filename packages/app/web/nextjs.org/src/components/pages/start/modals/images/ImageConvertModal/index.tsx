@@ -155,3 +155,4 @@ export const ImageConvertModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+ImageConvertModal.displayName = 'ImageConvertModal';

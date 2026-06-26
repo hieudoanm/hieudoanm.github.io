@@ -15,3 +15,4 @@ export const RatioFrame: FC<{ ratio: number; overlay: OverlayMode }> = ({
     </div>
   </div>
 );
+RatioFrame.displayName = 'RatioFrame';

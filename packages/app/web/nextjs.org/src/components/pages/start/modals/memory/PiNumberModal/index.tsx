@@ -136,3 +136,4 @@ export const PiModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+PiModal.displayName = 'PiModal';

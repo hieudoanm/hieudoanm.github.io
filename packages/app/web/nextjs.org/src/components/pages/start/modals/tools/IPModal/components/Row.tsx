@@ -15,3 +15,4 @@ export const Row: FC<{
     </span>
   </div>
 );
+Row.displayName = 'Row';

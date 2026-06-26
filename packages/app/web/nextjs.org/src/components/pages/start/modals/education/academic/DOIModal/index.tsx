@@ -111,3 +111,4 @@ export const DOIModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+DOIModal.displayName = 'DOIModal';

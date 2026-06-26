@@ -58,3 +58,4 @@ export const ReferenceTable: React.FC<{
     </table>
   </div>
 );
+ReferenceTable.displayName = 'ReferenceTable';

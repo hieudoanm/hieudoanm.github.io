@@ -82,3 +82,4 @@ export const ResumeTimelineModal: FC<{ onClose: () => void }> = ({
     </ModalWrapper>
   );
 };
+ResumeTimelineModal.displayName = 'ResumeTimelineModal';

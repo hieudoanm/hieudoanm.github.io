@@ -139,3 +139,4 @@ export const PdfMaintainModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+PdfMaintainModal.displayName = 'PdfMaintainModal';

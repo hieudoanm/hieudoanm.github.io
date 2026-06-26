@@ -13,3 +13,5 @@ export const BlogCardList: FC<BlogCardListProps> = ({ posts }) => (
     ))}
   </div>
 );
+
+BlogCardList.displayName = 'BlogCardList';

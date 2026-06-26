@@ -88,3 +88,4 @@ export const BreakingBadModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+BreakingBadModal.displayName = 'BreakingBadModal';

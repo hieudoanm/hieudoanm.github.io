@@ -230,3 +230,4 @@ export const TaxModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+TaxModal.displayName = 'TaxModal';

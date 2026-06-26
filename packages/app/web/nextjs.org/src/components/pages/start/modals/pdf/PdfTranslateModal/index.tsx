@@ -29,3 +29,4 @@ export const PdfTranslateModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+PdfTranslateModal.displayName = 'PdfTranslateModal';

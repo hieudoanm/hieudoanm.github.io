@@ -102,3 +102,4 @@ export const Messages: FC<{ messages: Message[] }> = ({ messages = [] }) => {
     </div>
   );
 };
+Messages.displayName = 'Messages';

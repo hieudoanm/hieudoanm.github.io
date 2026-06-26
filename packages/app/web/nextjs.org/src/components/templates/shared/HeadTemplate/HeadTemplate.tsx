@@ -592,3 +592,5 @@ export const HeadTemplate: FC<HeadTemplateProps> = ({
     </Head>
   );
 };
+
+HeadTemplate.displayName = 'HeadTemplate';

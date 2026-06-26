@@ -25,6 +25,7 @@ export const ChatModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     messages: [],
     model: 'openrouter/free',
   });
+  ChatModal.displayName = 'ChatModal';
 
   const loading: boolean = messages.some((message) => message.loading);
 

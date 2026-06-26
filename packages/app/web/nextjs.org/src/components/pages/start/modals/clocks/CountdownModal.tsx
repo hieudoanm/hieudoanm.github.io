@@ -182,3 +182,4 @@ export const CountdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+CountdownModal.displayName = 'CountdownModal';

@@ -56,6 +56,7 @@ export const KaprekarModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     count: 0,
     length: number.toString().length,
   });
+  KaprekarModal.displayName = 'KaprekarModal';
   const isIgnored =
     IGNORE_NUMBERS_3.has(number) || IGNORE_NUMBERS_4.has(number);
   const isOutOfRange = number < 100 || number > 9999;

@@ -201,3 +201,4 @@ export const PomodoroModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+PomodoroModal.displayName = 'PomodoroModal';

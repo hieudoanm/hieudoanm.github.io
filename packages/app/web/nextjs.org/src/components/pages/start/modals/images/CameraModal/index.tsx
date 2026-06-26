@@ -198,3 +198,4 @@ export const CameraModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+CameraModal.displayName = 'CameraModal';

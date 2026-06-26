@@ -72,3 +72,4 @@ export const EditorTab: FC<{
     </div>
   );
 };
+EditorTab.displayName = 'EditorTab';

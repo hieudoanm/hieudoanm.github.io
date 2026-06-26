@@ -297,3 +297,4 @@ export const SignModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+SignModal.displayName = 'SignModal';

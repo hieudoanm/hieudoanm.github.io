@@ -97,3 +97,4 @@ export const ExportModal: FC<ExportModalProps> = ({
     </div>
   );
 };
+ExportModal.displayName = 'ExportModal';

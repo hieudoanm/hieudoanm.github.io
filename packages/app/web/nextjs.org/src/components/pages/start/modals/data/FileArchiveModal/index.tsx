@@ -53,3 +53,4 @@ export const FileArchiveModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+FileArchiveModal.displayName = 'FileArchiveModal';

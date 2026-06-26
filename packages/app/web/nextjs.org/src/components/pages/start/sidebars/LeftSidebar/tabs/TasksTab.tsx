@@ -14,6 +14,7 @@ export const TasksTab: FC = () => {
     databaseName: 'TasksDB',
     storeName: 'tasks',
   });
+  TasksTab.displayName = 'TasksTab';
 
   const [tasks, setTasks] = useState<Task[]>([]);
   const [newTask, setNewTask] = useState('');

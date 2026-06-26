@@ -240,3 +240,4 @@ export const TumblingEChartModal: FC<{ onClose: () => void }> = ({
     </dialog>
   );
 };
+TumblingEChartModal.displayName = 'TumblingEChartModal';

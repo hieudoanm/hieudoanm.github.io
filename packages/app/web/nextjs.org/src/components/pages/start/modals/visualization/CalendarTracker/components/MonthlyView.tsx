@@ -30,3 +30,4 @@ export const MonthlyView: FC<{ year: number }> = ({ year }) => (
     </div>
   </div>
 );
+MonthlyView.displayName = 'MonthlyView';

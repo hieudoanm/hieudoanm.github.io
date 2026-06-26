@@ -20,3 +20,4 @@ export const EntryCard: FC<{ entry: TimelineEntry & { icon: string } }> = ({
     <p className="text-base-content/30 mt-0.5 text-[10px]">{entry.location}</p>
   </div>
 );
+EntryCard.displayName = 'EntryCard';

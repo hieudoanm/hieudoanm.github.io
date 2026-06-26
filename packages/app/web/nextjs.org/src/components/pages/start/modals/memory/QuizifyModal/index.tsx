@@ -174,3 +174,4 @@ export const QuizifyModal: React.FC<{ onClose: () => void }> = ({
     </ModalWrapper>
   );
 };
+QuizifyModal.displayName = 'QuizifyModal';

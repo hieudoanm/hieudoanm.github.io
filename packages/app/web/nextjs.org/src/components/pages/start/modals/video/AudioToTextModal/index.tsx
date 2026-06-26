@@ -67,3 +67,4 @@ recognition.start();`}
     </ModalWrapper>
   );
 };
+AudioToTextModal.displayName = 'AudioToTextModal';

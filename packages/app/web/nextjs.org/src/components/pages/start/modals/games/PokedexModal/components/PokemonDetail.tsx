@@ -95,3 +95,4 @@ export const PokemonDetail: FC<{ p: Pokemon; onClose: () => void }> = ({
     </dialog>
   );
 };
+PokemonDetail.displayName = 'PokemonDetail';

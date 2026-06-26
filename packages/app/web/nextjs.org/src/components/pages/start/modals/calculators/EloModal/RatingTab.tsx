@@ -89,3 +89,4 @@ export const RatingTab: FC<{
     </div>
   );
 };
+RatingTab.displayName = 'RatingTab';

@@ -93,3 +93,4 @@ export const WriteLegalModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+WriteLegalModal.displayName = 'WriteLegalModal';

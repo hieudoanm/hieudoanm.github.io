@@ -154,3 +154,4 @@ export const InvoiceParserModal: FC<{ onClose: () => void }> = ({
     </ModalWrapper>
   );
 };
+InvoiceParserModal.displayName = 'InvoiceParserModal';

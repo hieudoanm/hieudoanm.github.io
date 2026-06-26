@@ -203,3 +203,4 @@ export const SnakeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+SnakeModal.displayName = 'SnakeModal';

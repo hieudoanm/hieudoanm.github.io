@@ -36,3 +36,4 @@ export const ReferenceCard: React.FC<{
     </div>
   );
 };
+ReferenceCard.displayName = 'ReferenceCard';

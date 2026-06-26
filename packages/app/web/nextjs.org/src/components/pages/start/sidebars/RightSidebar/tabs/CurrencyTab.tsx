@@ -157,3 +157,4 @@ export const CurrencyTab: FC = () => {
     </div>
   );
 };
+CurrencyTab.displayName = 'CurrencyTab';

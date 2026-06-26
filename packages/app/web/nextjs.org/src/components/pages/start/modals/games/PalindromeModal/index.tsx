@@ -281,3 +281,4 @@ export const PalindromeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+PalindromeModal.displayName = 'PalindromeModal';

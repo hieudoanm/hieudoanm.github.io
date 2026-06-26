@@ -95,3 +95,4 @@ export const WeeklyView: FC<WeeklyViewProps> = ({ year, withWeekday }) => (
     </div>
   </div>
 );
+WeeklyView.displayName = 'WeeklyView';

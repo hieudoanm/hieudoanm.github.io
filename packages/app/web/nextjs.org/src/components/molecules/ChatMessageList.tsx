@@ -58,3 +58,5 @@ export const ChatMessageList: FC<ChatMessageListProps> = ({
     </div>
   );
 };
+
+ChatMessageList.displayName = 'ChatMessageList';

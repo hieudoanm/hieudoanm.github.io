@@ -110,3 +110,4 @@ export const RecallModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+RecallModal.displayName = 'RecallModal';

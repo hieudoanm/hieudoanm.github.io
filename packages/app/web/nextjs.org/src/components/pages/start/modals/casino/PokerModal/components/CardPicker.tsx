@@ -64,3 +64,4 @@ export const CardPicker: FC<{
     </div>
   );
 };
+CardPicker.displayName = 'CardPicker';

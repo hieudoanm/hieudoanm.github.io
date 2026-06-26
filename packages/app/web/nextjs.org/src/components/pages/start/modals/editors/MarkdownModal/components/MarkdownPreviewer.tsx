@@ -18,3 +18,4 @@ export const MarkdownPreviewer: FC<{ html: string; fontClassName: string }> = ({
     />
   );
 };
+MarkdownPreviewer.displayName = 'MarkdownPreviewer';

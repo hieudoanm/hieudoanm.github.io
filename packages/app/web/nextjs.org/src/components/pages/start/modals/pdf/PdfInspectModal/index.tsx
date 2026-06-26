@@ -181,3 +181,4 @@ export const PdfInspectModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+PdfInspectModal.displayName = 'PdfInspectModal';

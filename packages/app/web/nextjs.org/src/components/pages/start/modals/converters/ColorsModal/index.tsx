@@ -139,3 +139,4 @@ export const ColorsModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+ColorsModal.displayName = 'ColorsModal';

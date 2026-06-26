@@ -74,3 +74,4 @@ export const Hemicycle: FC<{ chamber: Chamber }> = ({ chamber }) => {
     </svg>
   );
 };
+Hemicycle.displayName = 'Hemicycle';

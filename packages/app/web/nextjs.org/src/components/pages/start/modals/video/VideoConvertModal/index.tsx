@@ -113,3 +113,4 @@ export const VideoConvertModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+VideoConvertModal.displayName = 'VideoConvertModal';

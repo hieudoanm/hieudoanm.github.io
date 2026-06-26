@@ -1,6 +1,7 @@
+import { FC } from 'react';
 import { Section } from './Section';
 
-export const DataSection = () => {
+export const DataSection: FC = () => {
   const bars = [
     { month: 'Jan', val: '$42k', pct: 58 },
     { month: 'Feb', val: '$55k', pct: 72 },
@@ -134,3 +135,4 @@ export const DataSection = () => {
     </Section>
   );
 };
+DataSection.displayName = 'DataSection';

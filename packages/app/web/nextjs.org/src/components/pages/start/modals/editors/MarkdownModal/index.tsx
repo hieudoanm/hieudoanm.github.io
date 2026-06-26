@@ -247,3 +247,4 @@ export const MarkdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+MarkdownModal.displayName = 'MarkdownModal';

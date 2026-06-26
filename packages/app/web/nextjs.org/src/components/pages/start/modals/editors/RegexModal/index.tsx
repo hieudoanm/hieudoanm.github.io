@@ -126,3 +126,4 @@ export const RegexModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+RegexModal.displayName = 'RegexModal';

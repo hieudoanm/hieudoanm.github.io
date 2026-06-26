@@ -12,3 +12,4 @@ export const SortIcon: FC<{ active: boolean; dir: number }> = ({
     );
   return dir === 1 ? <IcoChevUp /> : <IcoChevDown />;
 };
+SortIcon.displayName = 'SortIcon';

@@ -282,3 +282,4 @@ export const InstaSizeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+InstaSizeModal.displayName = 'InstaSizeModal';

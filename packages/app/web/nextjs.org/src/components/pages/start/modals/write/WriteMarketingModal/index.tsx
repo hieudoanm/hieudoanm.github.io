@@ -116,3 +116,4 @@ export const WriteMarketingModal: FC<{ onClose: () => void }> = ({
     </ModalWrapper>
   );
 };
+WriteMarketingModal.displayName = 'WriteMarketingModal';

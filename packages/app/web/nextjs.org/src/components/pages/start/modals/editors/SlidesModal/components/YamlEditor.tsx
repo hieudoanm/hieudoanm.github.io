@@ -51,3 +51,4 @@ export const YamlEditor: FC<{
     />
   );
 };
+YamlEditor.displayName = 'YamlEditor';

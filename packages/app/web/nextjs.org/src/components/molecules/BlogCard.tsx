@@ -45,3 +45,5 @@ export const BlogCard: FC<BlogCardProps> = ({ post }) => (
     </div>
   </Link>
 );
+
+BlogCard.displayName = 'BlogCard';

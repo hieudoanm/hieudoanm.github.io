@@ -29,6 +29,7 @@ export const EmojisModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       alert('Failed to copy');
     }
   };
+  EmojisModal.displayName = 'EmojisModal';
 
   return (
     <ModalWrapper onClose={onClose} title="Emoji Explorer" size="max-w-3xl">

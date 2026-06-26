@@ -63,3 +63,4 @@ export const ChatSidebar: FC<ChatSidebarProps> = ({
     </div>
   );
 };
+ChatSidebar.displayName = 'ChatSidebar';

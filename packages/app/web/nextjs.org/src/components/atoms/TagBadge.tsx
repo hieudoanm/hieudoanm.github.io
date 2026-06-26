@@ -33,3 +33,5 @@ export const TagBadge: FC<TagBadgeProps> = ({ tag, active, onClick }) => {
     </span>
   );
 };
+
+TagBadge.displayName = 'TagBadge';

@@ -32,6 +32,7 @@ export const ChatModels: FC<ChatModelsProps> = ({
     staleTime: 1000 * 60 * 60,
     retry: 1,
   });
+  ChatModels.displayName = 'ChatModels';
 
   const freeModels =
     data?.data?.filter(

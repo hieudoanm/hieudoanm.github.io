@@ -119,3 +119,4 @@ export const NoSleepModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+NoSleepModal.displayName = 'NoSleepModal';

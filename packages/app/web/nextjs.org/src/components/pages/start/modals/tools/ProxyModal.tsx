@@ -112,3 +112,4 @@ const { data, isPending, error } = useQuery({
     </ModalWrapper>
   );
 };
+ProxyModal.displayName = 'ProxyModal';

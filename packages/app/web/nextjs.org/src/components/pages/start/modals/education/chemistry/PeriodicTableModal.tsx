@@ -121,3 +121,4 @@ export const PeriodicTableModal: FC<{ onClose: () => void }> = ({
     </ModalWrapper>
   );
 };
+PeriodicTableModal.displayName = 'PeriodicTableModal';

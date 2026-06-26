@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import { ColorPopover } from './ColorPopover';
 import { Section } from './Section';
 
-export const NavigationSection = () => {
+export const NavigationSection: FC = () => {
   const [activeTab, setActiveTab] = useState<
     'overview' | 'api' | 'examples' | 'changelog'
   >('overview');
@@ -15,6 +15,7 @@ export const NavigationSection = () => {
     changelog:
       'v2.4.0 — Added icon-only variant and loading state. v2.3.0 — New danger variant. v2.2.0 — Keyboard focus ring improvements.',
   };
+  NavigationSection.displayName = 'NavigationSection';
   return (
     <Section
       id="navigation"

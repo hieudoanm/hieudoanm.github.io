@@ -184,3 +184,4 @@ export const PdfEditModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+PdfEditModal.displayName = 'PdfEditModal';

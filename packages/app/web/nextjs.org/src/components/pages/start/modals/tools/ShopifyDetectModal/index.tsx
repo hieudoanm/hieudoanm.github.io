@@ -50,6 +50,7 @@ export const ShopifyDetectModal: FC<{ onClose: () => void }> = ({
     setLoading(false);
     setTab('check');
   };
+  ShopifyDetectModal.displayName = 'ShopifyDetectModal';
 
   const handleClear = () => {
     clearStorageHistory();

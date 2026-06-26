@@ -102,3 +102,4 @@ export const LegislationModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+LegislationModal.displayName = 'LegislationModal';

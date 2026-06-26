@@ -196,3 +196,4 @@ export const YouTubeThumbnailsModal: FC<{ onClose: () => void }> = ({
     </ModalWrapper>
   );
 };
+YouTubeThumbnailsModal.displayName = 'YouTubeThumbnailsModal';

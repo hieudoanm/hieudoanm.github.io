@@ -31,6 +31,7 @@ export const Counter: FC = () => {
       seconds: 0,
       messageIndex: 0,
     });
+  Counter.displayName = 'Counter';
   const intervalRef = useRef<number | null>(null);
 
   useEffect(() => {

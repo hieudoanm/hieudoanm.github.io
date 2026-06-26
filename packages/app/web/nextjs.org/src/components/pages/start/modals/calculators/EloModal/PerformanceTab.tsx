@@ -67,3 +67,4 @@ export const PerformanceTab: FC<{
     </div>
   );
 };
+PerformanceTab.displayName = 'PerformanceTab';

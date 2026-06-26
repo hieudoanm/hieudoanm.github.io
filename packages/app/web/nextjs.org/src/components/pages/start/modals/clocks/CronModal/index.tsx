@@ -162,3 +162,4 @@ export const CronModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+CronModal.displayName = 'CronModal';

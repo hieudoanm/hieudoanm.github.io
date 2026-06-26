@@ -50,3 +50,5 @@ export const ChatModelSelect: FC<ChatModelSelectProps> = ({
     </select>
   );
 };
+
+ChatModelSelect.displayName = 'ChatModelSelect';

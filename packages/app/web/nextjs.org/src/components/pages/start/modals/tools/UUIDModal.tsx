@@ -15,6 +15,7 @@ const UUID_ITEMS: { key: UUIDVersion; label: string; description: string }[] = [
 
 export const UUIDModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [uuids, setUuids] = useState({ v1: v1(), v4: v4(), v7: v7() });
+  UUIDModal.displayName = 'UUIDModal';
   const [copied, setCopied] = useState<string | null>(null);
 
   const regenerate = (version: UUIDVersion) =>

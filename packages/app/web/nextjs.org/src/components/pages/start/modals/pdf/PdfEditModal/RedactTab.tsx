@@ -297,3 +297,4 @@ export const RedactTab: FC<{ onClose: () => void }> = () => {
     </div>
   );
 };
+RedactTab.displayName = 'RedactTab';

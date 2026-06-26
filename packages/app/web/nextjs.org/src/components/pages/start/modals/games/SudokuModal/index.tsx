@@ -208,3 +208,4 @@ export const SudokuModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+SudokuModal.displayName = 'SudokuModal';

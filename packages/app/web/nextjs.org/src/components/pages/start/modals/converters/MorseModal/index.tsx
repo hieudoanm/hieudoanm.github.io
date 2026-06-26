@@ -171,3 +171,4 @@ export const MorseModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+MorseModal.displayName = 'MorseModal';

@@ -68,3 +68,4 @@ export const VideoAudioModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+VideoAudioModal.displayName = 'VideoAudioModal';

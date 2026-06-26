@@ -33,3 +33,4 @@ export const PdfEsignModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+PdfEsignModal.displayName = 'PdfEsignModal';

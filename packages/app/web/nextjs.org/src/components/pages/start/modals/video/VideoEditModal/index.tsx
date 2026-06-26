@@ -73,3 +73,4 @@ export const VideoEditModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+VideoEditModal.displayName = 'VideoEditModal';

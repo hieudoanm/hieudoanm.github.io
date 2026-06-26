@@ -125,5 +125,6 @@ export const ResumeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+ResumeModal.displayName = 'ResumeModal';
 
 export default ResumeModal;

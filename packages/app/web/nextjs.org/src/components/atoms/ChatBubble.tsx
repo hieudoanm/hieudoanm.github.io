@@ -27,3 +27,5 @@ export const ChatBubble: FC<ChatBubbleProps> = ({ role, content, model }) => {
     </div>
   );
 };
+
+ChatBubble.displayName = 'ChatBubble';

@@ -31,3 +31,5 @@ export const ChatTimestamp: FC<ChatTimestampProps> = ({ timestamp }) => (
     {formatTime(timestamp)}
   </span>
 );
+
+ChatTimestamp.displayName = 'ChatTimestamp';

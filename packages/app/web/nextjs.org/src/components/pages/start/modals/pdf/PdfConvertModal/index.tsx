@@ -212,3 +212,4 @@ export const PdfConvertModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+PdfConvertModal.displayName = 'PdfConvertModal';

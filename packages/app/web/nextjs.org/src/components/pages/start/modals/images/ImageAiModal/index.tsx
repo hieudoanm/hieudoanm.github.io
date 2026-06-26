@@ -114,3 +114,4 @@ export const ImageAiModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+ImageAiModal.displayName = 'ImageAiModal';

@@ -131,3 +131,4 @@ export const ChatTemplate: FC<ChatTemplateProps> = ({
     </div>
   );
 };
+ChatTemplate.displayName = 'ChatTemplate';

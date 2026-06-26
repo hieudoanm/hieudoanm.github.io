@@ -169,3 +169,4 @@ export const T3Modal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+T3Modal.displayName = 'T3Modal';

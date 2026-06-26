@@ -74,3 +74,4 @@ export const ViewTab: FC<{ html: string; intervalMs?: number }> = ({
     </div>
   );
 };
+ViewTab.displayName = 'ViewTab';

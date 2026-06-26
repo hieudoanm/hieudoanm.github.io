@@ -100,6 +100,7 @@ export const SVGModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     a.download = `icon-${icon.size}x${icon.size}.png`;
     a.click();
   };
+  SVGModal.displayName = 'SVGModal';
 
   const downloadAll = async () => {
     const script = document.createElement('script');

@@ -61,3 +61,4 @@ export const Base: FC = () => {
     </div>
   );
 };
+Base.displayName = 'Base';

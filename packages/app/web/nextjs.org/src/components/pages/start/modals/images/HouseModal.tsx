@@ -52,3 +52,4 @@ export const HouseModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+HouseModal.displayName = 'HouseModal';

@@ -156,3 +156,4 @@ export const BlackjackModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+BlackjackModal.displayName = 'BlackjackModal';

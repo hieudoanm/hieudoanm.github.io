@@ -162,3 +162,4 @@ export const Start: FC = () => {
     </div>
   );
 };
+Start.displayName = 'Start';

@@ -10,3 +10,4 @@ export const TextBlock: FC<{ text: string; className?: string }> = ({
     </pre>
   </div>
 );
+TextBlock.displayName = 'TextBlock';

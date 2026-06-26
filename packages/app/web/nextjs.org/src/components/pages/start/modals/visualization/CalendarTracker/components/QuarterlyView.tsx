@@ -37,6 +37,7 @@ export const QuarterlyView: FC<{ year: number }> = ({ year }) => {
     </div>
   );
 };
+QuarterlyView.displayName = 'QuarterlyView';
 
 export const HalfView: FC<{ year: number }> = ({ year }) => {
   const halves: number[][] = daysOfMonths.reduce((acc, day, index) => {
@@ -72,3 +73,4 @@ export const HalfView: FC<{ year: number }> = ({ year }) => {
     </div>
   );
 };
+HalfView.displayName = 'HalfView';

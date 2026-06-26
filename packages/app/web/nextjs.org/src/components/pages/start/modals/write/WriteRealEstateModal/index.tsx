@@ -107,3 +107,4 @@ export const WriteRealEstateModal: FC<{ onClose: () => void }> = ({
     </ModalWrapper>
   );
 };
+WriteRealEstateModal.displayName = 'WriteRealEstateModal';

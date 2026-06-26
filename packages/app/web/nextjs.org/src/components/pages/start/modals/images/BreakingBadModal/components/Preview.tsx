@@ -126,3 +126,4 @@ export const Preview: FC<{
     </div>
   );
 };
+Preview.displayName = 'Preview';

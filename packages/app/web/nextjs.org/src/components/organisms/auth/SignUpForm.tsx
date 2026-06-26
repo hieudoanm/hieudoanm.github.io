@@ -42,6 +42,7 @@ export const SignUpForm: FC<SignUpFormProps> = ({
     setLoading(false);
     onSuccess?.();
   };
+  SignUpForm.displayName = 'SignUpForm';
 
   return (
     <div className="bg-base-100 border-base-300 mx-auto max-w-sm rounded-2xl border p-8">

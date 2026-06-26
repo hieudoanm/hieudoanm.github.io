@@ -19,33 +19,36 @@ const faqs = [
   },
 ];
 
-export const FrequentlyAskedQuestions: FC = () => (
-  <section className="mx-auto max-w-3xl px-12 py-24">
-    <p className="text-primary mb-3 text-center text-xs font-medium tracking-[0.14em] uppercase">
-      FAQ
-    </p>
-    <h2 className="mb-4 text-center font-serif text-4xl leading-snug font-bold">
-      Frequently asked questions
-    </h2>
-    <p className="text-base-content/60 mx-auto mb-12 max-w-xl text-center text-base leading-relaxed">
-      Everything you need to know about DaisyX.
-    </p>
-    <div className="border-base-300 overflow-hidden rounded-2xl border">
-      {faqs.map(({ q, a }, i) => (
-        <div
-          key={i}
-          className="collapse-arrow border-base-300 collapse border-b bg-transparent last:border-b-0">
-          <input type="radio" name="faq" defaultChecked={i === 0} />
-          <div className="collapse-title text-base-content px-5 py-4 text-sm font-medium">
-            {q}
+export const FrequentlyAskedQuestions: FC = () => {
+  return (
+    <section className="mx-auto max-w-3xl px-12 py-24">
+      <p className="text-primary mb-3 text-center text-xs font-medium tracking-[0.14em] uppercase">
+        FAQ
+      </p>
+      <h2 className="mb-4 text-center font-serif text-4xl leading-snug font-bold">
+        Frequently asked questions
+      </h2>
+      <p className="text-base-content/60 mx-auto mb-12 max-w-xl text-center text-base leading-relaxed">
+        Everything you need to know about DaisyX.
+      </p>
+      <div className="border-base-300 overflow-hidden rounded-2xl border">
+        {faqs.map(({ q, a }, i) => (
+          <div
+            key={i}
+            className="collapse-arrow border-base-300 collapse border-b bg-transparent last:border-b-0">
+            <input type="radio" name="faq" defaultChecked={i === 0} />
+            <div className="collapse-title text-base-content px-5 py-4 text-sm font-medium">
+              {q}
+            </div>
+            <div className="collapse-content px-5">
+              <p className="text-base-content/50 pb-2 text-sm leading-relaxed">
+                {a}
+              </p>
+            </div>
           </div>
-          <div className="collapse-content px-5">
-            <p className="text-base-content/50 pb-2 text-sm leading-relaxed">
-              {a}
-            </p>
-          </div>
-        </div>
-      ))}
-    </div>
-  </section>
-);
+        ))}
+      </div>
+    </section>
+  );
+};
+FrequentlyAskedQuestions.displayName = 'FrequentlyAskedQuestions';

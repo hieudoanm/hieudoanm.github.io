@@ -108,3 +108,4 @@ export const SlidePreview: FC<{ slide: SlideLayout; index: number }> = ({
     </div>
   </div>
 );
+SlidePreview.displayName = 'SlidePreview';

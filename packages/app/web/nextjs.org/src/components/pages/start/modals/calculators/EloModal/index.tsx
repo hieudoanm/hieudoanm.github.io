@@ -68,3 +68,4 @@ export const EloModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+EloModal.displayName = 'EloModal';

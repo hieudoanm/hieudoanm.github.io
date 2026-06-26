@@ -197,3 +197,4 @@ export const LogMARChartModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </dialog>
   );
 };
+LogMARChartModal.displayName = 'LogMARChartModal';

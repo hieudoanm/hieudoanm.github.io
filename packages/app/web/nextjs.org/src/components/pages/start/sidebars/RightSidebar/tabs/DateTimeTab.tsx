@@ -56,6 +56,7 @@ export const DateTimeTab: FC<{ times: string[] }> = ({ times }) => {
       staleTime: 1000 * 60 * 10,
     })),
   });
+  DateTimeTab.displayName = 'DateTimeTab';
 
   const calendarData = calendar(year, month);
   const chosenEvents = getEventsForDate(chosenDate);

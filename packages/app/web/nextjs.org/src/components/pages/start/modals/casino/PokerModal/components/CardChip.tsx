@@ -18,3 +18,4 @@ export const CardChip: FC<{ card: Card; small?: boolean }> = ({
     {SUIT_SYMBOLS[card.suit]}
   </span>
 );
+CardChip.displayName = 'CardChip';

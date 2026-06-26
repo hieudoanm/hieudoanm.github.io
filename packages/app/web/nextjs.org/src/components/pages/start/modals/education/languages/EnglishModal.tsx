@@ -192,3 +192,4 @@ export const LanguagesEnglishModal: FC<{ onClose: () => void }> = ({
     </ModalWrapper>
   );
 };
+LanguagesEnglishModal.displayName = 'LanguagesEnglishModal';

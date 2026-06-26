@@ -6,3 +6,4 @@ export const DaisyUIThemes: FC = () => {
 
   return <ComponentsTemplate theme={theme} onThemeChange={setTheme} />;
 };
+DaisyUIThemes.displayName = 'DaisyUIThemes';

@@ -263,3 +263,5 @@ export const JSONSchemaModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+
+JSONSchemaModal.displayName = 'JSONSchemaModal';

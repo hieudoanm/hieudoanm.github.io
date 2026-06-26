@@ -84,3 +84,4 @@ export const QRCodeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+QRCodeModal.displayName = 'QRCodeModal';

@@ -153,3 +153,4 @@ export const CalculatorModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+CalculatorModal.displayName = 'CalculatorModal';

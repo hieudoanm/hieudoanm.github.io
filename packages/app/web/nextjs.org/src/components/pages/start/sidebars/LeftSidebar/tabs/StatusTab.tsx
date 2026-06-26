@@ -57,6 +57,7 @@ export const ServiceRow: FC<{ service: string; url: string }> = ({
     staleTime: 1000 * 60 * 2,
     retry: 1,
   });
+  ServiceRow.displayName = 'ServiceRow';
 
   const isOk: boolean = !error && data?.status?.indicator === 'none';
   const isErr: boolean =
@@ -176,3 +177,4 @@ export const StatusTab: FC = () => {
     </div>
   );
 };
+StatusTab.displayName = 'StatusTab';

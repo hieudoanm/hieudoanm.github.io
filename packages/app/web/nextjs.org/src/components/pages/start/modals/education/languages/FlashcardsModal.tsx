@@ -120,3 +120,4 @@ export const FlashcardsModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+FlashcardsModal.displayName = 'FlashcardsModal';

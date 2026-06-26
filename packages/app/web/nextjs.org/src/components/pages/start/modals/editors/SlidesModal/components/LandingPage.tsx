@@ -145,3 +145,4 @@ export const LandingPage: FC<{ data: PitchDeck }> = ({ data }) => {
     </div>
   );
 };
+LandingPage.displayName = 'LandingPage';

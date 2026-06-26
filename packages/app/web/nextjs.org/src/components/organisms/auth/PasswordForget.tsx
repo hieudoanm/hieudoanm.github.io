@@ -120,3 +120,5 @@ export const PasswordForget: FC<PasswordForgetProps> = ({
     </div>
   );
 };
+
+PasswordForget.displayName = 'PasswordForget';
