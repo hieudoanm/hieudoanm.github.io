@@ -375,6 +375,13 @@ export const makeTools = (
       color: '#ef4444',
       onClick: open('pdf-translate'),
     },
+    {
+      label: 'eSign',
+      description: 'Sign PDF',
+      emoji: '✍️',
+      color: '#ef4444',
+      onClick: open('pdf-esign'),
+    },
   ],
   education: [
     {
@@ -664,6 +671,20 @@ export const makeTools = (
       emoji: '🔗',
       color: '#3b82f6',
       onClick: open('image-combiner'),
+    },
+    {
+      label: 'Filters',
+      description: 'Colorize/Vignette',
+      emoji: '🎨',
+      color: '#3b82f6',
+      onClick: open('image-filter'),
+    },
+    {
+      label: 'Effects',
+      description: 'Shadow/Watermark',
+      emoji: '✨',
+      color: '#3b82f6',
+      onClick: open('image-effect'),
     },
   ],
   visualization: [

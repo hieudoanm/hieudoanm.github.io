@@ -107,6 +107,9 @@ export type ModalId =
   | 'text-tools'
   | 'image-combiner'
   | 'screen-recorder'
-  | 'video-process';
+  | 'video-process'
+  | 'image-filter'
+  | 'image-effect'
+  | 'pdf-esign';
 
 export type SidebarTab = 'tasks' | 'clock';

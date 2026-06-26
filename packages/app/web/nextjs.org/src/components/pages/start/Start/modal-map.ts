@@ -109,6 +109,9 @@ import {
   WriteMarketingModal,
   WriteSocialModal,
   YouTubeThumbnailsModal,
+  ImageFilterModal,
+  ImageEffectModal,
+  PdfEsignModal,
 } from './dynamic-imports';
 import { ModalId } from './types';
 
@@ -225,4 +228,7 @@ export const MODAL_MAP: Record<
   'image-combiner': ImageCombinerModal,
   'screen-recorder': ScreenRecorderModal,
   'video-process': VideoProcessModal,
+  'image-filter': ImageFilterModal,
+  'image-effect': ImageEffectModal,
+  'pdf-esign': PdfEsignModal,
 };

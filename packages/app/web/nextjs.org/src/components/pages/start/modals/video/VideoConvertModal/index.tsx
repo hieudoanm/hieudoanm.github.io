@@ -9,7 +9,11 @@ type Tab =
   | 'video-to-webp'
   | 'mp4-to-mp3'
   | 'm4a-to-mp3'
-  | 'video-to-gif';
+  | 'video-to-gif'
+  | 'avi-to-mp4'
+  | 'flv-to-mp4'
+  | 'wmv-to-mp4'
+  | 'extract-frames';
 
 const TABS: { id: Tab; label: string; cmd: string; desc: string }[] = [
   {
@@ -47,6 +51,30 @@ const TABS: { id: Tab; label: string; cmd: string; desc: string }[] = [
     label: 'Video to GIF',
     cmd: 'hieudoanm video togif input.mp4',
     desc: 'Convert video to animated GIF.',
+  },
+  {
+    id: 'avi-to-mp4',
+    label: 'AVI to MP4',
+    cmd: 'ffmpeg -i input.avi -c:v libx264 -c:a aac output.mp4',
+    desc: 'Convert AVI files to MP4 format with H.264 video and AAC audio.',
+  },
+  {
+    id: 'flv-to-mp4',
+    label: 'FLV to MP4',
+    cmd: 'ffmpeg -i input.flv -c:v libx264 -c:a aac output.mp4',
+    desc: 'Convert FLV (Flash Video) files to MP4 format.',
+  },
+  {
+    id: 'wmv-to-mp4',
+    label: 'WMV to MP4',
+    cmd: 'ffmpeg -i input.wmv -c:v libx264 -c:a aac output.mp4',
+    desc: 'Convert WMV (Windows Media Video) files to MP4 format.',
+  },
+  {
+    id: 'extract-frames',
+    label: 'Extract Frames',
+    cmd: 'ffmpeg -i input.mp4 -vf fps=1 frame_%04d.png',
+    desc: 'Extract video frames as individual PNG images (1 frame per second by default).',
   },
 ];
 

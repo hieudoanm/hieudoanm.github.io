@@ -756,3 +756,27 @@ export const PdfTranslateModal = dynamic(
     ),
   { ssr: false }
 );
+
+export const ImageFilterModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/images/ImageFilterModal').then(
+      (mod) => mod.ImageFilterModal
+    ),
+  { ssr: false }
+);
+
+export const ImageEffectModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/images/ImageEffectModal').then(
+      (mod) => mod.ImageEffectModal
+    ),
+  { ssr: false }
+);
+
+export const PdfEsignModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/PdfEsignModal').then(
+      (mod) => mod.PdfEsignModal
+    ),
+  { ssr: false }
+);
