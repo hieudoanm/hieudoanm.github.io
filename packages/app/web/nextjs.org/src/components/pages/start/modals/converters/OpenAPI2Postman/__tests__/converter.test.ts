@@ -208,9 +208,10 @@ describe('convertToPostman', () => {
     const result = convertToPostman(spec as any);
     const req = result.item[0].item[0].request;
     expect(req.body?.mode).toBe('urlencoded');
-    expect(req.body?.urlencoded).toHaveLength(1);
-    expect(req.body?.urlencoded[0].key).toBe('username');
-    expect(req.body?.urlencoded[0].value).toBe('john');
+    const body = req.body as { urlencoded: { key: string; value: string }[] };
+    expect(body.urlencoded).toHaveLength(1);
+    expect(body.urlencoded[0].key).toBe('username');
+    expect(body.urlencoded[0].value).toBe('john');
   });
 
   it('converts form-data request body', () => {
@@ -239,9 +240,10 @@ describe('convertToPostman', () => {
     const result = convertToPostman(spec as any);
     const req = result.item[0].item[0].request;
     expect(req.body?.mode).toBe('formdata');
-    expect(req.body?.formdata).toHaveLength(2);
-    expect(req.body?.formdata[0].type).toBe('file');
-    expect(req.body?.formdata[1].type).toBe('text');
+    const body = req.body as { formdata: { type: string }[] };
+    expect(body.formdata).toHaveLength(2);
+    expect(body.formdata[0].type).toBe('file');
+    expect(body.formdata[1].type).toBe('text');
   });
 
   it('sets baseUrl variable from servers', () => {

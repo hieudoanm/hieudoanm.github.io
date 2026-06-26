@@ -3,6 +3,7 @@ import { ReferenceCard } from '../ReferenceCard';
 
 describe('ReferenceCard', () => {
   const reference = {
+    id: 'ref-1',
     authors: [
       { family: 'Doe', given: 'John' },
       { family: 'Smith', given: 'Jane' },
@@ -41,7 +42,7 @@ describe('ReferenceCard', () => {
   });
 
   it('handles missing issue number', () => {
-    const refWithoutIssue = { ...reference, issue: undefined };
+    const refWithoutIssue = { ...reference, issue: '' };
     render(<ReferenceCard reference={refWithoutIssue} onDelete={jest.fn()} />);
     expect(screen.getByText(/10, 100-110/)).toBeInTheDocument();
   });

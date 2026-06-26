@@ -145,7 +145,7 @@ describe('renderPreview', () => {
       onerror: (() => void) | null = null;
       src = '';
       constructor() {
-        setTimeout(() => this.onerror?.(new Event('error')), 0);
+        setTimeout(() => this.onerror?.(), 0);
       }
     } as unknown as typeof Image;
 

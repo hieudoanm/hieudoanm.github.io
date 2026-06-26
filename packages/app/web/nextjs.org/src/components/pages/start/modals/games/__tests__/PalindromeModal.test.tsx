@@ -102,11 +102,11 @@ describe('PalindromeModal', () => {
     render(<PalindromeModal onClose={jest.fn()} />);
     const container = screen.getByText('Score').closest('div')?.parentElement;
     if (container) {
-      fireEvent.keyDown(container, { key: ' ' });
+      fireEvent.keyDown(container as Element, { key: ' ' });
     }
     const rBtns = screen.getAllByText('R');
     fireEvent.click(rBtns[0]);
-    fireEvent.keyDown(container, { key: ' ' });
+    fireEvent.keyDown(container as Element, { key: ' ' });
     const rAfterClear = screen.getAllByText('R');
     expect(rAfterClear.length).toBe(2);
   });

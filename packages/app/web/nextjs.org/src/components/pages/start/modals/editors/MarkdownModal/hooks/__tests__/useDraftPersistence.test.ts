@@ -1,6 +1,7 @@
 import { renderHook } from '@testing-library/react';
 import { useDraftRestore, useDraftSave } from '../useDraftPersistence';
-import { STORAGE_KEY, INITIAL_MARKDOWN } from '../../constants';
+import { STORAGE_KEY } from '../../constants';
+import { INITIAL_MARKDOWN } from '../../initialMarkdown';
 
 describe('useDraftRestore', () => {
   beforeEach(() => {

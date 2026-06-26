@@ -10,15 +10,18 @@ jest.mock('@codemirror/state', () => ({
 }));
 
 jest.mock('@codemirror/view', () => {
-  const EditorView = jest.fn().mockImplementation(() => ({
+  const mockEditorView = jest.fn().mockImplementation(() => ({
     destroy: jest.fn(),
     state: { doc: { toString: () => '' } },
     dispatch: jest.fn(),
   }));
-  EditorView.lineWrapping = {};
-  EditorView.theme = jest.fn().mockReturnValue({});
-  EditorView.updateListener = { of: jest.fn().mockReturnValue([]) };
-  return { EditorView };
+  return {
+    EditorView: Object.assign(mockEditorView, {
+      lineWrapping: {},
+      theme: jest.fn().mockReturnValue({}),
+      updateListener: { of: jest.fn().mockReturnValue([]) },
+    }),
+  };
 });
 
 jest.mock('@codemirror/lang-yaml', () => ({

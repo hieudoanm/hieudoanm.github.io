@@ -9,7 +9,7 @@ const mockSetMask = jest.fn();
 const mockOnKeyDown = jest.fn();
 
 const defaultMockState = {
-  phase: 'ready' as const,
+  phase: 'ready' as 'ready' | 'show' | 'input' | 'result',
   level: 1,
   number: '1234',
   input: '',

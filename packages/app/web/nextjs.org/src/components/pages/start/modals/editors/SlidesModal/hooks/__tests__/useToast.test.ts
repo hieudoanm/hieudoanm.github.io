@@ -76,7 +76,7 @@ describe('useToast', () => {
 
   it('returns id from show', () => {
     const { result } = renderHook(() => useToast());
-    let id: number;
+    let id = 0 as number;
     act(() => {
       id = result.current.show('info', 'Info');
     });

@@ -22,7 +22,9 @@ describe('useScrollSync', () => {
       writable: true,
     });
 
-    const view = { scrollDOM: editorScroll };
+    const view = {
+      scrollDOM: editorScroll,
+    } as unknown as import('@codemirror/view').EditorView;
     const viewRef = { current: view };
 
     const { result } = renderHook(() => useScrollSync(viewRef));
@@ -49,7 +51,9 @@ describe('useScrollSync', () => {
       writable: true,
     });
 
-    const view = { scrollDOM: editorScroll };
+    const view = {
+      scrollDOM: editorScroll,
+    } as unknown as import('@codemirror/view').EditorView;
     const viewRef = { current: view };
 
     const { result } = renderHook(() => useScrollSync(viewRef));

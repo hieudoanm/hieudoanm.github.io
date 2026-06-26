@@ -18,15 +18,18 @@ jest.mock('@codemirror/view', () => {
   const mockEditorView = jest.fn(() => ({
     destroy: jest.fn(),
   }));
-  mockEditorView.lineWrapping = Symbol('lineWrapping');
-  mockEditorView.theme = jest.fn(() => Symbol('theme'));
-  mockEditorView.updateListener = {
-    of: jest.fn((cb: typeof updateListenerCallback) => {
-      updateListenerCallback = cb;
-      return Symbol('listener');
+  return {
+    EditorView: Object.assign(mockEditorView, {
+      lineWrapping: {},
+      theme: jest.fn(() => ({})),
+      updateListener: {
+        of: jest.fn((cb: typeof updateListenerCallback) => {
+          updateListenerCallback = cb;
+          return [];
+        }),
+      },
     }),
   };
-  return { EditorView: mockEditorView };
 });
 
 jest.mock('@codemirror/theme-one-dark', () => ({

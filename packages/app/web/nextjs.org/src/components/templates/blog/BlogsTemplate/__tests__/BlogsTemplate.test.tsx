@@ -49,7 +49,7 @@ const mockMeta = {
 
 describe('BlogsTemplate', () => {
   const getMainContent = () => {
-    const cardsContainer = document.querySelector('.min-w-0')!;
+    const cardsContainer = document.querySelector('.min-w-0') as HTMLElement;
     return within(cardsContainer);
   };
 

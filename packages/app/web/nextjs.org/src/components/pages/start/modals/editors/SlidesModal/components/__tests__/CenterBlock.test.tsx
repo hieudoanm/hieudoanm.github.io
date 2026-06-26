@@ -25,10 +25,10 @@ describe('CenterBlock', () => {
     render(
       <CenterBlock
         block={{
-          type: 'pricing-plan',
+          type: 'pricing-plan' as const,
           name: 'Pro',
           price: '$29/mo',
-          description: 'Plan',
+          frequency: 'monthly',
         }}
       />
     );

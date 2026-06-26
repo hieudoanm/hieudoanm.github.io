@@ -1,6 +1,6 @@
-import { toTime, fmt, initClock, delayFor, formatElapsed } from '../clock';
 import { ONE_SECOND } from '../../constants';
-import { ChessClockSide, DelayType, Stage } from '../../types';
+import { ChessClockSide, ClockState, DelayType } from '../../types';
+import { delayFor, fmt, formatElapsed, initClock, toTime } from '../clock';
 
 beforeEach(() => {
   jest.spyOn(Date, 'now').mockReturnValue(1000000);

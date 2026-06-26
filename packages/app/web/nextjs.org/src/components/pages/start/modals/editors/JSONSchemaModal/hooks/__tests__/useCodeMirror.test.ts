@@ -2,13 +2,14 @@ let mockDispatch = jest.fn();
 let mockDestroy = jest.fn();
 let mockToString = jest.fn().mockReturnValue('');
 
-const createMockView = () => ({
-  dispatch: mockDispatch,
-  destroy: mockDestroy,
-  state: {
-    doc: { toString: mockToString },
-  },
-});
+const createMockView = () =>
+  ({
+    dispatch: mockDispatch,
+    destroy: mockDestroy,
+    state: { doc: { toString: mockToString } },
+    scrollDOM: document.createElement('div'),
+    contentDOM: document.createElement('div'),
+  }) as unknown as import('@codemirror/view').EditorView;
 
 jest.mock('@codemirror/state', () => ({
   EditorState: { create: jest.fn(() => ({})) },
