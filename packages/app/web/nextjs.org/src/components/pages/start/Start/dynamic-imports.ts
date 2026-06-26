@@ -49,6 +49,13 @@ export const Game2048Modal = dynamic(
     ),
   { ssr: false }
 );
+export const BarcodeModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/images/BarcodeModal').then(
+      (mod) => mod.BarcodeModal
+    ),
+  { ssr: false }
+);
 export const Base64Modal = dynamic(
   () =>
     import('@hieudoanm.github.io/components/pages/start/modals/images/Base64Modal').then(
@@ -74,6 +81,13 @@ export const LeetSpeakModal = dynamic(
   () =>
     import('@hieudoanm.github.io/components/pages/start/modals/converters/LeetSpeakModal').then(
       (mod) => mod.LeetSpeakModal
+    ),
+  { ssr: false }
+);
+export const LoremIpsumModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/converters/LoremIpsumModal').then(
+      (mod) => mod.LoremIpsumModal
     ),
   { ssr: false }
 );

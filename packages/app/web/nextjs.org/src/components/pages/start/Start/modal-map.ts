@@ -1,6 +1,7 @@
 import { ComponentType, FC } from 'react';
 
 import {
+  BarcodeModal,
   Base64Modal,
   BlackjackModal,
   BrailleModal,
@@ -34,6 +35,7 @@ import {
   LanguagesEnglishModal,
   LegislationModal,
   LeetSpeakModal,
+  LoremIpsumModal,
   LogMARChartModal,
   ManifestModal,
   MarkdownModal,
@@ -83,6 +85,7 @@ export const MODAL_MAP: Record<
   FC<{ onClose: () => void }> | ComponentType<{ onClose: () => void }>
 > = {
   game2048: Game2048Modal,
+  barcode: BarcodeModal,
   base64: Base64Modal,
   blackjack: BlackjackModal,
   braille: BrailleModal,
@@ -117,6 +120,7 @@ export const MODAL_MAP: Record<
   markdown: MarkdownModal,
   morse: MorseModal,
   leetspeak: LeetSpeakModal,
+  'lorem-ipsum': LoremIpsumModal,
   'no-sleep': NoSleepModal,
   openapi: OpenAPI2Postman,
   palindrome: PalindromeModal,

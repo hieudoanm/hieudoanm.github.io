@@ -1,4 +1,5 @@
 export type ModalId =
+  | 'barcode'
   | 'base64'
   | 'blackjack'
   | 'braille'
@@ -30,6 +31,7 @@ export type ModalId =
   | 'kaprekar'
   | 'legislation'
   | 'leetspeak'
+  | 'lorem-ipsum'
   | 'logmar'
   | 'manifest'
   | 'markdown'

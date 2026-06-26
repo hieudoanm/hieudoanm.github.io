@@ -225,6 +225,13 @@ export const makeTools = (
       onClick: open('leetspeak'),
     },
     {
+      label: 'Lorem Ipsum',
+      description: 'Dummy text',
+      emoji: '📝',
+      color: '#8b5cf6',
+      onClick: open('lorem-ipsum'),
+    },
+    {
       label: 'OpenAPI',
       description: 'to Postman',
       emoji: '🔄',
@@ -501,6 +508,13 @@ export const makeTools = (
       emoji: '📄',
       color: '#ef4444',
       onClick: open('invoice-parser'),
+    },
+    {
+      label: 'Barcode',
+      description: 'Generator',
+      emoji: '▌',
+      color: '#22d3ee',
+      onClick: open('barcode'),
     },
     {
       label: 'QR Code',

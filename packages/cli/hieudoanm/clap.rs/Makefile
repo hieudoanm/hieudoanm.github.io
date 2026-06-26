@@ -8,7 +8,7 @@ COMMIT       := $(shell git rev-parse --short HEAD 2>/dev/null || echo "unknown"
 FULL_VERSION := $(VERSION)-$(COMMIT)
 
 # Targets for cross-compilation (used by build-all)
-PLATFORMS := linux/amd64 linux/arm64 darwin/amd64 darwin/arm64 windows/amd64
+PLATFORMS := linux/amd64 linux/arm64 darwin/amd64 darwin/arm64
 
 ## clean: Remove build artifacts
 clean:
