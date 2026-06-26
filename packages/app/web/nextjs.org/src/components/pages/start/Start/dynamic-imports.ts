@@ -1,12 +1,5 @@
 import dynamic from 'next/dynamic';
 
-export const RedactModal = dynamic(
-  () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/editors/RedactModal').then(
-      (mod) => mod.RedactModal
-    ),
-  { ssr: false }
-);
 export const RegexModal = dynamic(
   () =>
     import('@hieudoanm.github.io/components/pages/start/modals/editors/RegexModal').then(
@@ -522,6 +515,48 @@ export const ResumeTimelineModal = dynamic(
   () =>
     import('@hieudoanm.github.io/components/pages/start/modals/visualization/ResumeTimelineModal').then(
       (mod) => mod.ResumeTimelineModal
+    ),
+  { ssr: false }
+);
+export const PdfCombineModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/PdfCombineModal').then(
+      (mod) => mod.PdfCombineModal
+    ),
+  { ssr: false }
+);
+export const PdfEditModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/PdfEditModal').then(
+      (mod) => mod.PdfEditModal
+    ),
+  { ssr: false }
+);
+export const PdfExtractModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/PdfExtractModal').then(
+      (mod) => mod.PdfExtractModal
+    ),
+  { ssr: false }
+);
+export const PdfInspectModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/PdfInspectModal').then(
+      (mod) => mod.PdfInspectModal
+    ),
+  { ssr: false }
+);
+export const PdfMaintainModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/PdfMaintainModal').then(
+      (mod) => mod.PdfMaintainModal
+    ),
+  { ssr: false }
+);
+export const PdfSecurityModal = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/PdfSecurityModal').then(
+      (mod) => mod.PdfSecurityModal
     ),
   { ssr: false }
 );
