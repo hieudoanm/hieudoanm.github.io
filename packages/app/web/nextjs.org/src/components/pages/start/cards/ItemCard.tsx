@@ -66,9 +66,9 @@ export const ItemCard: FC<ItemCardProps> = ({
           </div>
         </div>
         {(actions ?? [{ label: 'Open in new tab', url: href }]).map(
-          (action) => (
+          (action, i) => (
             <button
-              key={action.url}
+              key={`${action.url}-${i}`}
               type="button"
               onClick={(e: React.MouseEvent) => {
                 e.preventDefault();

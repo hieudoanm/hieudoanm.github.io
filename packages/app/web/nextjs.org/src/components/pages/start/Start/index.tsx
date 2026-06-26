@@ -1,15 +1,32 @@
-import { LeftSidebar } from '@hieudoanm.github.io/components/pages/start/sidebars/LeftSidebar';
-import { RightSidebar } from '@hieudoanm.github.io/components/pages/start/sidebars/RightSidebar';
+import dynamic from 'next/dynamic';
 import { getTimeInZone, timezones } from '@hieudoanm.github.io/data/timezones';
-import { FC, useCallback, useEffect, useMemo, useState } from 'react';
+import { FC, Suspense, useCallback, useEffect, useMemo, useState } from 'react';
 
 import { SearchBar } from './components/SearchBar';
-import { MainContent } from './components/MainContent';
 import { GRID_MOBILE } from './constants';
 import { useAllSections } from './hooks/useAllSections';
-import { MODAL_MAP } from './modal-map';
+import { getModalComponent } from './modal-loaders';
 import { makeTools } from './tools';
 import { ModalId, SidebarTab } from './types';
+
+const LeftSidebar = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/sidebars/LeftSidebar').then(
+      (m) => m.LeftSidebar
+    ),
+  { ssr: false }
+);
+const RightSidebar = dynamic(
+  () =>
+    import('@hieudoanm.github.io/components/pages/start/sidebars/RightSidebar').then(
+      (m) => m.RightSidebar
+    ),
+  { ssr: false }
+);
+const MainContent = dynamic(
+  () => import('./components/MainContent').then((m) => m.MainContent),
+  { ssr: false }
+);
 
 export const Start: FC = () => {
   const [times, setTimes] = useState(() =>
@@ -47,7 +64,10 @@ export const Start: FC = () => {
     []
   );
 
-  const ActiveModal = activeModal ? MODAL_MAP[activeModal] : null;
+  const ActiveModal = useMemo(
+    () => (activeModal ? getModalComponent(activeModal) : null),
+    [activeModal]
+  );
 
   return (
     <div className="bg-base-100 text-base-content min-h-screen">
@@ -81,9 +101,9 @@ export const Start: FC = () => {
 
           {allSections
             .filter(({ items }) => items.length > 0)
-            .map(({ label, items, Card }) => (
+            .map(({ label, items, Card }, idx) => (
               <section
-                key={label}
+                key={`${label}-${idx}`}
                 aria-label={label}
                 className="mx-auto mt-8 w-full max-w-2xl">
                 <p className="text-base-content/30 mb-4 flex items-center justify-center gap-2 font-mono text-xs tracking-widest uppercase">
@@ -158,7 +178,16 @@ export const Start: FC = () => {
         )}
       </div>
 
-      {ActiveModal && <ActiveModal onClose={close} />}
+      {ActiveModal && (
+        <Suspense
+          fallback={
+            <div className="modal modal-open">
+              <div className="modal-box">Loading...</div>
+            </div>
+          }>
+          <ActiveModal onClose={close} />
+        </Suspense>
+      )}
     </div>
   );
 };

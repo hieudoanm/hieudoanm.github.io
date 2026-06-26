@@ -15,7 +15,14 @@ import {
   extensions,
   packages,
 } from '@hieudoanm.github.io/data/downloads';
-import { FC, memo, useEffect, useMemo, useState } from 'react';
+import {
+  FC,
+  memo,
+  useEffect,
+  useDeferredValue,
+  useMemo,
+  useState,
+} from 'react';
 
 import { match, GRID } from '../constants';
 import { makeTools } from '../tools';
@@ -66,7 +73,8 @@ export const MainContent: FC<MainContentProps> = memo(
     const [viewMode, setViewMode] = useState<'category' | 'alphabetical'>(
       'category'
     );
-    const filtering = query.trim().length > 0;
+    const deferredQuery = useDeferredValue(query);
+    const filtering = deferredQuery.trim().length > 0;
     const {
       tools,
       calculators,
@@ -123,9 +131,9 @@ export const MainContent: FC<MainContentProps> = memo(
     const filteredAllTools = useMemo(
       () =>
         filtering
-          ? allToolsFlat.filter((t) => match(t.label, query))
+          ? allToolsFlat.filter((t) => match(t.label, deferredQuery))
           : allToolsFlat,
-      [allToolsFlat, filtering, query]
+      [allToolsFlat, filtering, deferredQuery]
     );
 
     const allBookmarksFlat = useMemo(
@@ -138,9 +146,9 @@ export const MainContent: FC<MainContentProps> = memo(
     const filteredAllBookmarks = useMemo(
       () =>
         filtering
-          ? allBookmarksFlat.filter((bm) => match(bm.label, query))
+          ? allBookmarksFlat.filter((bm) => match(bm.label, deferredQuery))
           : allBookmarksFlat,
-      [allBookmarksFlat, filtering, query]
+      [allBookmarksFlat, filtering, deferredQuery]
     );
 
     const allDownloadsFlat = useMemo(
@@ -153,34 +161,40 @@ export const MainContent: FC<MainContentProps> = memo(
     const filteredAllDownloads = useMemo(
       () =>
         filtering
-          ? allDownloadsFlat.filter((d) => match(d.id, query))
+          ? allDownloadsFlat.filter((d) => match(d.id, deferredQuery))
           : allDownloadsFlat,
-      [allDownloadsFlat, filtering, query]
+      [allDownloadsFlat, filtering, deferredQuery]
     );
 
     const filteredBookmarks = useMemo(
       () =>
         bookmarkSections.map((s) => ({
           ...s,
-          filtered: filtering ? filterBy(s.items, 'label', query) : s.items,
+          filtered: filtering
+            ? filterBy(s.items, 'label', deferredQuery)
+            : s.items,
         })),
-      [filtering, query]
+      [filtering, deferredQuery]
     );
     const filteredTools = useMemo(
       () =>
         toolSectionDefs.map((s) => ({
           ...s,
-          filtered: filtering ? filterBy(s.items, 'label', query) : s.items,
+          filtered: filtering
+            ? filterBy(s.items, 'label', deferredQuery)
+            : s.items,
         })),
-      [toolSectionDefs, filtering, query]
+      [toolSectionDefs, filtering, deferredQuery]
     );
     const filteredDownloads = useMemo(
       () =>
         downloadSections.map((s) => ({
           ...s,
-          filtered: filtering ? filterBy(s.items, 'id', query) : s.items,
+          filtered: filtering
+            ? filterBy(s.items, 'id', deferredQuery)
+            : s.items,
         })),
-      [filtering, query]
+      [filtering, deferredQuery]
     );
 
     useEffect(() => {
