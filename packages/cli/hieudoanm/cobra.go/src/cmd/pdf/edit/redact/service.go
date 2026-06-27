@@ -14,7 +14,7 @@ import (
 )
 
 type region struct {
-	page    int
+	page       int
 	x, y, w, h float64
 }
 
@@ -81,23 +81,23 @@ func run(cmd *cobra.Command, file string) error {
 			}
 			ann := model.NewSquareAnnotation(
 				rect,
-				0,    // apObjNr
-				"",   // contents
-				"",   // id
-				"",   // modDate
-				0,    // f
-				nil,  // col (border color)
-				"",   // title
-				nil,  // popupIndRef
-				nil,  // ca (opacity)
-				"",   // rc
-				"",   // subject
+				0,            // apObjNr
+				"",           // contents
+				"",           // id
+				"",           // modDate
+				0,            // f
+				nil,          // col (border color)
+				"",           // title
+				nil,          // popupIndRef
+				nil,          // ca (opacity)
+				"",           // rc
+				"",           // subject
 				&color.Black, // fillCol
-				0, 0, 0, 0, // margins
-				0,            // borderWidth
-				0,            // borderStyle
-				false,        // cloudyBorder
-				0,            // cloudyBorderIntensity
+				0, 0, 0, 0,   // margins
+				0,     // borderWidth
+				0,     // borderStyle
+				false, // cloudyBorder
+				0,     // cloudyBorderIntensity
 			)
 			annMap[reg.page] = append(annMap[reg.page], ann)
 		}

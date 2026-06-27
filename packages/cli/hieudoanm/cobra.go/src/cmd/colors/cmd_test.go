@@ -16,7 +16,7 @@ func TestNewCommand(t *testing.T) {
 
 func TestNewCommand_hasAllSubcommands(t *testing.T) {
 	cmd := NewCommand()
-	want := []string{"hcl", "hex", "oklch", "rgb", "palette", "random"}
+	want := []string{"figma", "hcl", "hex", "oklch", "rgb", "palette", "random"}
 	got := cmd.Commands()
 	if len(got) != len(want) {
 		t.Fatalf("got %d subcommands, want %d", len(got), len(want))

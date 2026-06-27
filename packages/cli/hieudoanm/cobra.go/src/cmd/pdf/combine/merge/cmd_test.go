@@ -19,5 +19,3 @@ func TestNewCommand_HasOutputFlag(t *testing.T) {
 		t.Error("missing --output flag")
 	}
 }
-
-

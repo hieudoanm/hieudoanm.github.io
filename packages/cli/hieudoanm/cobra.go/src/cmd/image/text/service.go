@@ -33,8 +33,8 @@ func runText(inputPath string, jsonOut bool) error {
 	col := parseColor(textColor)
 
 	d := &font.Drawer{
-		Dst: dst,
-		Src: image.NewUniform(col),
+		Dst:  dst,
+		Src:  image.NewUniform(col),
 		Face: basicfont.Face7x13,
 		Dot:  fixed.Point26_6{X: fixed.I(textX), Y: fixed.I(textY + 13)},
 	}

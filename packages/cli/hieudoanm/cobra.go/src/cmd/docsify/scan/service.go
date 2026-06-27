@@ -56,5 +56,3 @@ func runScan(dir, out, exclude string, verbose bool) error {
 
 	return nil
 }
-
-

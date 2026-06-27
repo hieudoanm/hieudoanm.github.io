@@ -48,17 +48,17 @@ func run(cmd *cobra.Command, dir string, all, long, human, reverse, sortByTime, 
 		if err != nil {
 			continue
 		}
-	modeStr := fi.Mode().String()
-	if len(modeStr) > 1 {
-		modeStr = modeStr[1:]
-	}
-	results = append(results, entry{
-		Name:    e.Name(),
-		Size:    fi.Size(),
-		Mode:    modeStr,
-		ModTime: fi.ModTime().Format("Jan _2 15:04"),
-		IsDir:   fi.IsDir(),
-	})
+		modeStr := fi.Mode().String()
+		if len(modeStr) > 1 {
+			modeStr = modeStr[1:]
+		}
+		results = append(results, entry{
+			Name:    e.Name(),
+			Size:    fi.Size(),
+			Mode:    modeStr,
+			ModTime: fi.ModTime().Format("Jan _2 15:04"),
+			IsDir:   fi.IsDir(),
+		})
 	}
 
 	sortEntries(results, sortByTime, sortBySize, reverse)
@@ -210,5 +210,3 @@ func fileTypeChar(isDir bool) string {
 	}
 	return "-"
 }
-
-

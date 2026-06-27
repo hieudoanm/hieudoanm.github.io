@@ -9,9 +9,9 @@ import (
 )
 
 type result struct {
-	Status string `json:"status"`
-	Input  string `json:"input"`
-	Output string `json:"output"`
+	Status string  `json:"status"`
+	Input  string  `json:"input"`
+	Output string  `json:"output"`
 	Amount float64 `json:"amount"`
 }
 

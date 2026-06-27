@@ -777,5 +777,3 @@ func statusIcon(s or.ProbeStatus) string {
 		return "?"
 	}
 }
-
-

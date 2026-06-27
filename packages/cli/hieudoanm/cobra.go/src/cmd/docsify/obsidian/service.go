@@ -215,5 +215,3 @@ func writeOutput(data []byte, path string) error {
 	}
 	return os.WriteFile(path, data, 0644)
 }
-
-

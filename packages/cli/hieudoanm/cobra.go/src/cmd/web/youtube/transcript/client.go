@@ -179,8 +179,6 @@ func (c *Client) fetchCaptions(baseURL string) ([]Line, error) {
 	return parseTimedText(b)
 }
 
-
-
 // selectTrack prefers manual captions over auto-generated for the given lang.
 func selectTrack(tracks []CaptionTrack, lang string) *CaptionTrack {
 	var fallback *CaptionTrack

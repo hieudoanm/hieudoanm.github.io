@@ -129,5 +129,3 @@ func classifyMove(cp int) string {
 		return "Blunder"
 	}
 }
-
-

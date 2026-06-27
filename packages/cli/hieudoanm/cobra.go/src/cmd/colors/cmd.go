@@ -1,6 +1,7 @@
 package colors
 
 import (
+	"github.com/hieudoanm/jack/src/cmd/colors/figma"
 	"github.com/hieudoanm/jack/src/cmd/colors/hcl"
 	"github.com/hieudoanm/jack/src/cmd/colors/hex"
 	"github.com/hieudoanm/jack/src/cmd/colors/oklch"
@@ -20,7 +21,12 @@ func NewCommand() *cobra.Command {
   colors hcl
   colors oklch
   colors palette
-  colors random`,
+  colors random
+  colors figma list
+  colors figma list
+  colors figma name --name "Garnet Sunrise"
+  colors figma hex --hex "#D3045D"
+  colors figma palettes`,
 		RunE: func(cmd *cobra.Command, args []string) error { return cmd.Help() },
 	}
 
@@ -31,6 +37,7 @@ func NewCommand() *cobra.Command {
 	cmd.AddCommand(oklch.NewCmd())
 	cmd.AddCommand(palette.NewCmd())
 	cmd.AddCommand(random.NewCmd())
+	cmd.AddCommand(figma.NewCommand())
 
 	return cmd
 }
