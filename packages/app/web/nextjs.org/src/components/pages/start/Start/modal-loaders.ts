@@ -6,47 +6,47 @@ type ModalComponent = ComponentType<{ onClose: () => void }>;
 
 const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
   'ai-art': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/AiArtModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/ai/AiArtModal').then(
       (m) => ({ default: m.AiArtModal })
     ),
   'ai-colorize': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/AiColorizeModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/ai/AiColorizeModal').then(
       (m) => ({ default: m.AiColorizeModal })
     ),
   'ai-generate': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/AiGenerateModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/ai/AiGenerateModal').then(
       (m) => ({ default: m.AiGenerateModal })
     ),
   'ai-remove-bg': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/AiRemoveBgModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/ai/AiRemoveBgModal').then(
       (m) => ({ default: m.AiRemoveBgModal })
     ),
   'ai-remove-object': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/AiRemoveObjectModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/ai/AiRemoveObjectModal').then(
       (m) => ({ default: m.AiRemoveObjectModal })
     ),
   'ai-remove-person': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/AiRemovePersonModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/ai/AiRemovePersonModal').then(
       (m) => ({ default: m.AiRemovePersonModal })
     ),
   'ai-remove-watermark': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/AiRemoveWatermarkModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/ai/AiRemoveWatermarkModal').then(
       (m) => ({ default: m.AiRemoveWatermarkModal })
     ),
   'ai-restore': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/AiRestoreModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/ai/AiRestoreModal').then(
       (m) => ({ default: m.AiRestoreModal })
     ),
   'ai-unblur': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/AiUnblurModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/ai/AiUnblurModal').then(
       (m) => ({ default: m.AiUnblurModal })
     ),
   'ai-upscale': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/AiUpscaleModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/ai/AiUpscaleModal').then(
       (m) => ({ default: m.AiUpscaleModal })
     ),
   angle: () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/calculators/AngleModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/converter/AngleModal').then(
       (m) => ({ default: m.AngleModal })
     ),
   'audio-to-text': () =>
@@ -54,19 +54,19 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.AudioToTextModal })
     ),
   barcode: () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/BarcodeModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-scan/BarcodeModal').then(
       (m) => ({ default: m.BarcodeModal })
     ),
   'barcode-read': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/BarcodeReadModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-scan/BarcodeReadModal').then(
       (m) => ({ default: m.BarcodeReadModal })
     ),
   base: () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/calculators/BaseModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/converter/BaseModal').then(
       (m) => ({ default: m.BaseModal })
     ),
   base64: () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/Base64Modal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-create/Base64Modal').then(
       (m) => ({ default: m.Base64Modal })
     ),
   blackjack: () =>
@@ -74,15 +74,15 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.BlackjackModal })
     ),
   braille: () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/converters/BrailleModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/format/BrailleModal').then(
       (m) => ({ default: m.BrailleModal })
     ),
   'breaking-bad': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/BreakingBadModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-create/BreakingBadModal').then(
       (m) => ({ default: m.BreakingBadModal })
     ),
   calculator: () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/calculators/CalculatorModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/converter/CalculatorModal').then(
       (m) => ({ default: m.CalculatorModal })
     ),
   'calendar-tracker': () =>
@@ -90,15 +90,15 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.CalendarTrackerModal })
     ),
   camera: () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/CameraModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-create/CameraModal').then(
       (m) => ({ default: m.CameraModal })
     ),
   'chart-maker': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/ChartMakerModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-create/ChartMakerModal').then(
       (m) => ({ default: m.ChartMakerModal })
     ),
   chat: () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/tools/ChatModal/ChatModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/utilities/ChatModal/ChatModal').then(
       (m) => ({ default: m.ChatModal })
     ),
   'chess-clock': () =>
@@ -106,19 +106,19 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.ChessClockModal })
     ),
   clipboard: () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/tools/ClipboardModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/utilities/ClipboardModal').then(
       (m) => ({ default: m.ClipboardModal })
     ),
   'collage-maker': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/CollageMakerModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-create/CollageMakerModal').then(
       (m) => ({ default: m.CollageMakerModal })
     ),
   colors: () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/converters/ColorsModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/format/ColorsModal').then(
       (m) => ({ default: m.ColorsModal })
     ),
   'contrast-checker': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/tools/ContrastCheckerModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/utilities/ContrastCheckerModal').then(
       (m) => ({ default: m.ContrastCheckerModal })
     ),
   countdown: () =>
@@ -138,11 +138,11 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.CsvToExcelModal })
     ),
   data: () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/calculators/DataModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/converter/DataModal').then(
       (m) => ({ default: m.DataModal })
     ),
   'days-count': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/calculators/DaysCountModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/financial/DaysCountModal').then(
       (m) => ({ default: m.DaysCountModal })
     ),
   doi: () =>
@@ -150,11 +150,11 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.DOIModal })
     ),
   elo: () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/calculators/EloModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/financial/EloModal').then(
       (m) => ({ default: m.EloModal })
     ),
   emojis: () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/tools/EmojisModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/utilities/EmojisModal').then(
       (m) => ({ default: m.EmojisModal })
     ),
   english: () =>
@@ -178,7 +178,7 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.ExcelToXmlModal })
     ),
   figlet: () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/tools/FigletModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/developer/FigletModal').then(
       (m) => ({ default: m.FigletModal })
     ),
 
@@ -191,11 +191,11 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.Game2048Modal })
     ),
   'github-social-preview': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/GitHubSocialPreviewModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-create/GitHubSocialPreviewModal').then(
       (m) => ({ default: m.GitHubSocialPreviewModal })
     ),
   'gradient-generator': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/tools/GradientGeneratorModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/utilities/GradientGeneratorModal').then(
       (m) => ({ default: m.GradientGeneratorModal })
     ),
   graph: () =>
@@ -203,126 +203,126 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.GraphModal })
     ),
   house: () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/HouseModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-create/HouseModal').then(
       (m) => ({ default: m.HouseModal })
     ),
   'image-adjust': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/ImageAdjustModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageAdjustModal').then(
       (m) => ({ default: m.ImageAdjustModal })
     ),
 
   'image-blur': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/ImageBlurModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageBlurModal').then(
       (m) => ({ default: m.ImageBlurModal })
     ),
   'image-border': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/ImageBorderModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/ImageBorderModal').then(
       (m) => ({ default: m.ImageBorderModal })
     ),
   'image-bw': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/ImageBwModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/ImageBwModal').then(
       (m) => ({ default: m.ImageBwModal })
     ),
   'image-colorize': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/ImageColorizeModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageColorizeModal').then(
       (m) => ({ default: m.ImageColorizeModal })
     ),
   'image-combiner': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/ImageCombinerModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageCombinerModal').then(
       (m) => ({ default: m.ImageCombinerModal })
     ),
   'image-compress': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/ImageCompressModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/ImageCompressModal').then(
       (m) => ({ default: m.ImageCompressModal })
     ),
   'image-convert': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/ImageConvertModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/ImageConvertModal').then(
       (m) => ({ default: m.ImageConvertModal })
     ),
 
   'image-crop': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/ImageCropModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/ImageCropModal').then(
       (m) => ({ default: m.ImageCropModal })
     ),
   'image-dominant-color': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/ImageDominantColorModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-scan/ImageDominantColorModal').then(
       (m) => ({ default: m.ImageDominantColorModal })
     ),
 
   'image-flip': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/ImageFlipModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/ImageFlipModal').then(
       (m) => ({ default: m.ImageFlipModal })
     ),
   'image-ocr': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/ImageOcrModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-scan/ImageOcrModal').then(
       (m) => ({ default: m.ImageOcrModal })
     ),
   'image-photo-filters': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/ImagePhotoFiltersModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImagePhotoFiltersModal').then(
       (m) => ({ default: m.ImagePhotoFiltersModal })
     ),
   'image-pixelate': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/ImagePixelateModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/ImagePixelateModal').then(
       (m) => ({ default: m.ImagePixelateModal })
     ),
   'image-profile': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/ImageProfileModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-create/ImageProfileModal').then(
       (m) => ({ default: m.ImageProfileModal })
     ),
   'image-resize': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/ImageResizeModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/ImageResizeModal').then(
       (m) => ({ default: m.ImageResizeModal })
     ),
   'image-rotate': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/ImageRotateModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/ImageRotateModal').then(
       (m) => ({ default: m.ImageRotateModal })
     ),
   'image-round': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/ImageRoundModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/ImageRoundModal').then(
       (m) => ({ default: m.ImageRoundModal })
     ),
   'image-shadow': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/ImageShadowModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageShadowModal').then(
       (m) => ({ default: m.ImageShadowModal })
     ),
   'image-sharpen': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/ImageSharpenModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/ImageSharpenModal').then(
       (m) => ({ default: m.ImageSharpenModal })
     ),
   'image-split': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/ImageSplitModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/ImageSplitModal').then(
       (m) => ({ default: m.ImageSplitModal })
     ),
   'image-text': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/ImageTextModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageTextModal').then(
       (m) => ({ default: m.ImageTextModal })
     ),
   'image-transparent-bg': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/ImageTransparentBgModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageTransparentBgModal').then(
       (m) => ({ default: m.ImageTransparentBgModal })
     ),
   'image-vignette': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/ImageVignetteModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageVignetteModal').then(
       (m) => ({ default: m.ImageVignetteModal })
     ),
   'image-watermark': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/ImageWatermarkModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageWatermarkModal').then(
       (m) => ({ default: m.ImageWatermarkModal })
     ),
   inflation: () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/calculators/InflationModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/financial/InflationModal').then(
       (m) => ({ default: m.InflationModal })
     ),
   instasize: () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/InstaSizeModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-create/InstaSizeModal').then(
       (m) => ({ default: m.InstaSizeModal })
     ),
   'invoice-parser': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/InvoiceParserModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-scan/InvoiceParserModal').then(
       (m) => ({ default: m.InvoiceParserModal })
     ),
   ip: () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/tools/IPModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/developer/IPModal').then(
       (m) => ({ default: m.IPModal })
     ),
   'json-schema': () =>
@@ -330,7 +330,7 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.JSONSchemaModal })
     ),
   kaprekar: () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/tools/KaprekarModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/utilities/KaprekarModal').then(
       (m) => ({ default: m.KaprekarModal })
     ),
   legislation: () =>
@@ -338,11 +338,11 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.LegislationModal })
     ),
   leetspeak: () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/converters/LeetSpeakModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/format/LeetSpeakModal').then(
       (m) => ({ default: m.LeetSpeakModal })
     ),
   length: () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/calculators/LengthModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/converter/LengthModal').then(
       (m) => ({ default: m.LengthModal })
     ),
   logmar: () =>
@@ -350,7 +350,7 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.LogMARChartModal })
     ),
   'lorem-ipsum': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/converters/LoremIpsumModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/format/LoremIpsumModal').then(
       (m) => ({ default: m.LoremIpsumModal })
     ),
   manifest: () =>
@@ -362,19 +362,19 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.MarkdownModal })
     ),
   'meme-maker': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/MemeMakerModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-create/MemeMakerModal').then(
       (m) => ({ default: m.MemeMakerModal })
     ),
   morse: () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/converters/MorseModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/format/MorseModal').then(
       (m) => ({ default: m.MorseModal })
     ),
   'no-sleep': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/tools/NoSleepModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/utilities/NoSleepModal').then(
       (m) => ({ default: m.NoSleepModal })
     ),
   openapi: () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/converters/OpenAPI2Postman').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/format/OpenAPI2Postman').then(
       (m) => ({ default: m.OpenAPI2Postman })
     ),
   palindrome: () =>
@@ -438,7 +438,7 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.PiModal })
     ),
   pixel: () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/PixelModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-create/PixelModal').then(
       (m) => ({ default: m.PixelModal })
     ),
   pitch: () =>
@@ -458,15 +458,15 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.PomodoroModal })
     ),
   proxy: () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/tools/ProxyModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/developer/ProxyModal').then(
       (m) => ({ default: m.ProxyModal })
     ),
   qr: () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/QRCodeModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-scan/QRCodeModal').then(
       (m) => ({ default: m.QRCodeModal })
     ),
   'qr-read': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/QrReadModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-scan/QrReadModal').then(
       (m) => ({ default: m.QrReadModal })
     ),
   quizify: () =>
@@ -494,7 +494,7 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.ResumeTimelineModal })
     ),
   roman: () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/calculators/RomanModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/converter/RomanModal').then(
       (m) => ({ default: m.RomanModal })
     ),
   rps: () =>
@@ -502,15 +502,15 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.RockPaperScissorsModal })
     ),
   'screen-recorder': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/tools/ScreenRecorderModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/utilities/ScreenRecorderModal').then(
       (m) => ({ default: m.ScreenRecorderModal })
     ),
   sheets: () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/tools/SheetsModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/developer/SheetsModal').then(
       (m) => ({ default: m.SheetsModal })
     ),
   'shopify-detect': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/tools/ShopifyDetectModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/developer/ShopifyDetectModal').then(
       (m) => ({ default: m.ShopifyDetectModal })
     ),
   sign: () =>
@@ -530,7 +530,7 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.SnellenChartModal })
     ),
   'split-bill': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/calculators/SplitBillModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/financial/SplitBillModal').then(
       (m) => ({ default: m.SplitBillModal })
     ),
   'split-csv': () =>
@@ -546,7 +546,7 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.SudokuModal })
     ),
   svg: () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/tools/SVGModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/developer/SVGModal').then(
       (m) => ({ default: m.SVGModal })
     ),
   t3: () =>
@@ -554,36 +554,36 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.T3Modal })
     ),
   tax: () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/calculators/TaxModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/financial/TaxModal').then(
       (m) => ({ default: m.TaxModal })
     ),
   temperature: () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/calculators/TemperatureModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/converter/TemperatureModal').then(
       (m) => ({ default: m.TemperatureModal })
     ),
   'text-case': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/tools/TextCaseModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/developer/TextCaseModal').then(
       (m) => ({ default: m.TextCaseModal })
     ),
   'text-diff': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/tools/TextDiffModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/developer/TextDiffModal').then(
       (m) => ({ default: m.TextDiffModal })
     ),
   'text-password': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/tools/TextPasswordModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/utilities/TextPasswordModal').then(
       (m) => ({ default: m.TextPasswordModal })
     ),
 
   'text-url-tracer': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/tools/TextUrlTracerModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/developer/TextUrlTracerModal').then(
       (m) => ({ default: m.TextUrlTracerModal })
     ),
   'text-word-count': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/tools/TextWordCountModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/utilities/TextWordCountModal').then(
       (m) => ({ default: m.TextWordCountModal })
     ),
   time: () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/calculators/TimeModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/converter/TimeModal').then(
       (m) => ({ default: m.TimeModal })
     ),
   towers: () =>
@@ -599,7 +599,7 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.TypoglycemiaModal })
     ),
   uuid: () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/tools/UUIDModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/developer/UUIDModal').then(
       (m) => ({ default: m.UUIDModal })
     ),
   'video-audio': () =>
@@ -627,7 +627,7 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.WatchFaceModal })
     ),
   weight: () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/calculators/WeightModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/converter/WeightModal').then(
       (m) => ({ default: m.WeightModal })
     ),
   'word-counter': () =>
@@ -683,7 +683,7 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.XmlToJsonModal })
     ),
   'youtube-thumbnails': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/images/YouTubeThumbnailsModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-create/YouTubeThumbnailsModal').then(
       (m) => ({ default: m.YouTubeThumbnailsModal })
     ),
 };

@@ -1,5 +1,11 @@
-import { useMemo } from 'react';
-
+import {
+  ItemCard,
+  ItemCardProps,
+} from '@hieudoanm.github.io/components/pages/start/cards/ItemCard';
+import {
+  Tool,
+  ToolCard,
+} from '@hieudoanm.github.io/components/pages/start/cards/ToolCard';
 import {
   agents as agentsBookmarks,
   code as codeBookmarks,
@@ -15,14 +21,7 @@ import {
   extensions,
   packages,
 } from '@hieudoanm.github.io/data/downloads';
-import { ItemCardProps } from '@hieudoanm.github.io/components/pages/start/cards/ItemCard';
-import {
-  Tool,
-  ToolCard,
-} from '@hieudoanm.github.io/components/pages/start/cards/ToolCard';
-import { ItemCard } from '@hieudoanm.github.io/components/pages/start/cards/ItemCard';
-import { ComponentType, FC } from 'react';
-
+import { ComponentType, FC, useMemo } from 'react';
 import { match } from '../constants';
 
 type SectionItem = ItemCardProps | Tool;
@@ -82,10 +81,24 @@ export const useAllSections = (
       items: SectionItem[];
       Card: Card;
     }[] = [
-      { label: 'Tools', items: f(toolSections.tools, 'label'), Card: ToolCard },
       {
-        label: 'Calculators',
-        items: f(toolSections.calculators, 'label'),
+        label: 'Developer',
+        items: f(toolSections.developer, 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Utilities',
+        items: f(toolSections.utilities, 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Converter',
+        items: f(toolSections.converter, 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Financial',
+        items: f(toolSections.financial, 'label'),
         Card: ToolCard,
       },
       {
@@ -99,8 +112,8 @@ export const useAllSections = (
         Card: ToolCard,
       },
       {
-        label: 'Converters',
-        items: f(toolSections.converters, 'label'),
+        label: 'Format',
+        items: f(toolSections.format, 'label'),
         Card: ToolCard,
       },
       {
@@ -121,8 +134,28 @@ export const useAllSections = (
         Card: ToolCard,
       },
       {
-        label: 'Images',
-        items: f(toolSections.images, 'label'),
+        label: 'AI',
+        items: f(toolSections.ai, 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Image Edit',
+        items: f(toolSections['image-edit'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Image Effect',
+        items: f(toolSections['image-effect'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Image Create',
+        items: f(toolSections['image-create'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Image Scan',
+        items: f(toolSections['image-scan'], 'label'),
         Card: ToolCard,
       },
       {
@@ -130,6 +163,18 @@ export const useAllSections = (
         items: f(toolSections.visualization, 'label'),
         Card: ItemCard as Card,
       },
+      {
+        label: 'Write',
+        items: f(toolSections.write, 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Video',
+        items: f(toolSections.video, 'label'),
+        Card: ToolCard,
+      },
+      { label: 'Data', items: f(toolSections.data, 'label'), Card: ToolCard },
+      { label: 'PDF', items: f(toolSections.pdf, 'label'), Card: ToolCard },
     ];
 
     const downloadSections: {
