@@ -4,6 +4,7 @@ import (
 	"os"
 	"time"
 
+	"github.com/hieudoanm/jack/src/cmd/better"
 	"github.com/hieudoanm/jack/src/cmd/calc"
 	"github.com/hieudoanm/jack/src/cmd/casino"
 	"github.com/hieudoanm/jack/src/cmd/chess"
@@ -111,6 +112,7 @@ func Execute() {
 }
 
 func init() {
+	rootCmd.AddCommand(better.NewCommand())
 	rootCmd.AddCommand(calc.NewCommand())
 	rootCmd.AddCommand(casino.NewCommand())
 	rootCmd.AddCommand(chess.NewCommand())
