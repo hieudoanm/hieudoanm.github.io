@@ -117,7 +117,10 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
     import('@hieudoanm.github.io/components/pages/start/modals/converters/ColorsModal').then(
       (m) => ({ default: m.ColorsModal })
     ),
-
+  'contrast-checker': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/tools/ContrastCheckerModal').then(
+      (m) => ({ default: m.ContrastCheckerModal })
+    ),
   countdown: () =>
     import('@hieudoanm.github.io/components/pages/start/modals/clocks/CountdownModal').then(
       (m) => ({ default: m.CountdownModal })
@@ -190,6 +193,10 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
   'github-social-preview': () =>
     import('@hieudoanm.github.io/components/pages/start/modals/images/GitHubSocialPreviewModal').then(
       (m) => ({ default: m.GitHubSocialPreviewModal })
+    ),
+  'gradient-generator': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/tools/GradientGeneratorModal').then(
+      (m) => ({ default: m.GradientGeneratorModal })
     ),
   graph: () =>
     import('@hieudoanm.github.io/components/pages/start/modals/visualization/GraphModal').then(

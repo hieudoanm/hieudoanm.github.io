@@ -28,11 +28,25 @@ export const makeTools = (
       onClick: open('emojis'),
     },
     {
+      label: 'Contrast',
+      description: 'Checker',
+      emoji: '👁️',
+      color: '#3b82f6',
+      onClick: open('contrast-checker'),
+    },
+    {
       label: 'Figlet',
       description: 'Text art',
       emoji: '📝',
       color: '#8b5cf6',
       onClick: open('figlet'),
+    },
+    {
+      label: 'Gradient',
+      description: 'Generator',
+      emoji: '🎨',
+      color: '#8b5cf6',
+      onClick: open('gradient-generator'),
     },
     {
       label: 'IP',
