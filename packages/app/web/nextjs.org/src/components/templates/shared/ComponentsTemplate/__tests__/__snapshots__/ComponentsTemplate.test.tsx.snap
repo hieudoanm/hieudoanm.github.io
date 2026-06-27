@@ -2696,7 +2696,8 @@ exports[`ComponentsTemplate to match snapshot 1`] = `
               <div
                 class="chat-header"
               >
-                Anakin 
+                Anakin
+                 
                 <time
                   class="text-base-content/60 text-xs"
                 >
