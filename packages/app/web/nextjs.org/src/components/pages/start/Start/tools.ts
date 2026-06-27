@@ -693,6 +693,13 @@ export const makeTools = (
       color: '#3b82f6',
       onClick: open('image-profile'),
     },
+    {
+      label: 'Pixel',
+      description: 'Art Grid',
+      emoji: '▪️',
+      color: '#8b5cf6',
+      onClick: open('pixel'),
+    },
   ],
   visualization: [
     {

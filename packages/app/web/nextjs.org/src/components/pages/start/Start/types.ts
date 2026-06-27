@@ -42,6 +42,7 @@ export type ModalId =
   | 'pd'
   | 'periodic-table'
   | 'pi'
+  | 'pixel'
   | 'pitch'
   | 'pokedex'
   | 'poker'

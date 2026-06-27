@@ -281,6 +281,10 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
     import('@hieudoanm.github.io/components/pages/start/modals/memory/PiNumberModal').then(
       (m) => ({ default: m.PiModal })
     ),
+  pixel: () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/images/PixelModal').then(
+      (m) => ({ default: m.PixelModal })
+    ),
   quizify: () =>
     import('@hieudoanm.github.io/components/pages/start/modals/memory/QuizifyModal').then(
       (m) => ({ default: m.QuizifyModal })
