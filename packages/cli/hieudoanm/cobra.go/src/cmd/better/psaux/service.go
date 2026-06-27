@@ -10,6 +10,8 @@ import (
 	"strings"
 )
 
+var execCommand = exec.Command
+
 type psauxEntry struct {
 	User    string  `json:"user"`
 	PID     int     `json:"pid"`
@@ -26,7 +28,7 @@ type psauxEntry struct {
 
 func run(sortBy, user string, jsonOutput bool) error {
 	format := "user,pid,pcpu,pmem,rss,vsz,tty,stat,lstart,time,comm"
-	out, err := exec.Command("ps", "-Ao", format).Output()
+	out, err := execCommand("ps", "-Ao", format).Output()
 	if err != nil {
 		return fmt.Errorf("ps failed: %w", err)
 	}

@@ -10,6 +10,8 @@ import (
 	"strings"
 )
 
+var execCommand = exec.Command
+
 type procEntry struct {
 	PID   int     `json:"pid"`
 	PPID  int     `json:"ppid,omitempty"`
@@ -38,7 +40,7 @@ func run(all bool, sortBy string, long, human, jsonOutput bool) error {
 		args = append(args, "-m")
 	}
 
-	out, err := exec.Command("ps", args...).Output()
+	out, err := execCommand("ps", args...).Output()
 	if err != nil {
 		return fmt.Errorf("ps failed: %w", err)
 	}
