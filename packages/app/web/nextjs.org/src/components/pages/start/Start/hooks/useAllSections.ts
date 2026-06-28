@@ -144,6 +144,21 @@ export const useAllSections = (
         Card: ToolCard,
       },
       {
+        label: 'Image Convert',
+        items: f(toolSections['image-convert'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Image Convert+',
+        items: f(toolSections['image-convert-plus'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Image Convert Pro',
+        items: f(toolSections['image-convert-pro'], 'label'),
+        Card: ToolCard,
+      },
+      {
         label: 'Image Effect',
         items: f(toolSections['image-effect'], 'label'),
         Card: ToolCard,
@@ -164,17 +179,120 @@ export const useAllSections = (
         Card: ItemCard as Card,
       },
       {
-        label: 'Write',
-        items: f(toolSections.write, 'label'),
+        label: 'Write Article',
+        items: f(toolSections['write-article'], 'label'),
         Card: ToolCard,
       },
       {
-        label: 'Video',
-        items: f(toolSections.video, 'label'),
+        label: 'Write Business',
+        items: f(toolSections['write-business'], 'label'),
         Card: ToolCard,
       },
-      { label: 'Data', items: f(toolSections.data, 'label'), Card: ToolCard },
-      { label: 'PDF', items: f(toolSections.pdf, 'label'), Card: ToolCard },
+      {
+        label: 'Write Content',
+        items: f(toolSections['write-content'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Write Edit',
+        items: f(toolSections['write-edit'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Write Misc',
+        items: f(toolSections['write-misc'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Write Real Estate',
+        items: f(toolSections['write-real-estate'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Write Social',
+        items: f(toolSections['write-social'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Video Convert',
+        items: f(toolSections['video-convert'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Video Convert Audio',
+        items: f(toolSections['video-convert-audio'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Video Convert Misc',
+        items: f(toolSections['video-convert-misc'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Video Edit',
+        items: f(toolSections['video-edit'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Video Download',
+        items: f(toolSections['video-download'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Video Audio',
+        items: f(toolSections['video-audio'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Data CSV',
+        items: f(toolSections['data-csv'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Data Excel',
+        items: f(toolSections['data-excel'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Data Utility',
+        items: f(toolSections['data-utility'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Data XML/JSON',
+        items: f(toolSections['data-xml-json'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'PDF Convert',
+        items: f(toolSections['pdf-convert'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'PDF Create',
+        items: f(toolSections['pdf-create'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'PDF Ebook',
+        items: f(toolSections['pdf-ebook'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'PDF Edit',
+        items: f(toolSections['pdf-edit'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'PDF Extract',
+        items: f(toolSections['pdf-extract'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'PDF Misc',
+        items: f(toolSections['pdf-misc'], 'label'),
+        Card: ToolCard,
+      },
     ];
 
     const downloadSections: {

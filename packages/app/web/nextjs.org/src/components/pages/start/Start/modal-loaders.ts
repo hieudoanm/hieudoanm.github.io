@@ -5,10 +5,6 @@ import { ModalId } from './types';
 type ModalComponent = ComponentType<{ onClose: () => void }>;
 
 const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
-  'ai-art': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/ai/AiArtModal').then(
-      (m) => ({ default: m.AiArtModal })
-    ),
   'ai-colorize': () =>
     import('@hieudoanm.github.io/components/pages/start/modals/ai/AiColorizeModal').then(
       (m) => ({ default: m.AiColorizeModal })
@@ -49,9 +45,17 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
     import('@hieudoanm.github.io/components/pages/start/modals/converter/AngleModal').then(
       (m) => ({ default: m.AngleModal })
     ),
-  'audio-to-text': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/video/AudioToTextModal').then(
-      (m) => ({ default: m.AudioToTextModal })
+  'audio-transcribe': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/audio/AudioTranscribeModal').then(
+      (m) => ({ default: m.AudioTranscribeModal })
+    ),
+  'azw3-to-epub': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/ebook/AZW3ToEPUBModal').then(
+      (m) => ({ default: m.AZW3ToEPUBModal })
+    ),
+  'azw3-to-mobi': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/ebook/AZW3ToMOBIModal').then(
+      (m) => ({ default: m.AZW3ToMOBIModal })
     ),
   barcode: () =>
     import('@hieudoanm.github.io/components/pages/start/modals/image-scan/BarcodeModal').then(
@@ -125,8 +129,20 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
     import('@hieudoanm.github.io/components/pages/start/modals/clocks/CountdownModal').then(
       (m) => ({ default: m.CountdownModal })
     ),
+  'create-md-to-pdf': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/create/CreateMdToPdfModal').then(
+      (m) => ({ default: m.CreateMdToPdfModal })
+    ),
+  'create-text-to-pdf': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/create/CreateTextToPdfModal').then(
+      (m) => ({ default: m.CreateTextToPdfModal })
+    ),
+  'create-url-to-pdf': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/create/CreateUrlToPdfModal').then(
+      (m) => ({ default: m.CreateUrlToPdfModal })
+    ),
   'create-zip': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/data/CreateZipModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/data/utility/CreateZipModal').then(
       (m) => ({ default: m.CreateZipModal })
     ),
   cron: () =>
@@ -134,8 +150,16 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.CronModal })
     ),
   'csv-to-excel': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/data/CsvToExcelModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/data/csv/CsvToExcelModal').then(
       (m) => ({ default: m.CsvToExcelModal })
+    ),
+  'csv-to-json': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/data/csv/CsvToJsonModal').then(
+      (m) => ({ default: m.CsvToJsonModal })
+    ),
+  'csv-to-xml': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/data/csv/CsvToXmlModal').then(
+      (m) => ({ default: m.CsvToXmlModal })
     ),
   data: () =>
     import('@hieudoanm.github.io/components/pages/start/modals/converter/DataModal').then(
@@ -162,19 +186,31 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.LanguagesEnglishModal })
     ),
   'epoch-convert': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/data/EpochConvertModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/data/utility/EpochConvertModal').then(
       (m) => ({ default: m.EpochConvertModal })
     ),
+  'epub-to-azw3': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/ebook/EPUBToAZW3Modal').then(
+      (m) => ({ default: m.EPUBToAZW3Modal })
+    ),
+  'epub-to-mobi': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/ebook/EPUBToMOBIModal').then(
+      (m) => ({ default: m.EPUBToMOBIModal })
+    ),
+  'epub-to-pdf': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/create/EpubToPdfModal').then(
+      (m) => ({ default: m.EpubToPdfModal })
+    ),
   'excel-to-csv': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/data/ExcelToCsvModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/data/csv/ExcelToCsvModal').then(
       (m) => ({ default: m.ExcelToCsvModal })
     ),
   'excel-to-pdf': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/data/ExcelToPdfModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/data/excel/ExcelToPdfModal').then(
       (m) => ({ default: m.ExcelToPdfModal })
     ),
   'excel-to-xml': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/data/ExcelToXmlModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/data/excel/ExcelToXmlModal').then(
       (m) => ({ default: m.ExcelToXmlModal })
     ),
   figlet: () =>
@@ -189,6 +225,10 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
   game2048: () =>
     import('@hieudoanm.github.io/components/pages/start/modals/games/Game2048Modal').then(
       (m) => ({ default: m.Game2048Modal })
+    ),
+  'generate-subtitle': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/audio/GenerateSubtitleModal').then(
+      (m) => ({ default: m.GenerateSubtitleModal })
     ),
   'github-social-preview': () =>
     import('@hieudoanm.github.io/components/pages/start/modals/image-create/GitHubSocialPreviewModal').then(
@@ -211,37 +251,145 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.ImageAdjustModal })
     ),
 
-  'image-blur': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageBlurModal').then(
-      (m) => ({ default: m.ImageBlurModal })
+  'image-blur-background': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageBlurBackgroundModal').then(
+      (m) => ({ default: m.ImageBlurBackgroundModal })
     ),
   'image-border': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/ImageBorderModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/edit/ImageBorderModal').then(
       (m) => ({ default: m.ImageBorderModal })
     ),
   'image-bw': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/ImageBwModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/edit/ImageBwModal').then(
       (m) => ({ default: m.ImageBwModal })
     ),
   'image-colorize': () =>
     import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageColorizeModal').then(
       (m) => ({ default: m.ImageColorizeModal })
     ),
-  'image-combiner': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageCombinerModal').then(
-      (m) => ({ default: m.ImageCombinerModal })
+  'image-combiner-side-by-side': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageCombinerSideBySideModal').then(
+      (m) => ({ default: m.ImageCombinerSideBySideModal })
+    ),
+  'image-combiner-stacked': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageCombinerStackedModal').then(
+      (m) => ({ default: m.ImageCombinerStackedModal })
     ),
   'image-compress': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/ImageCompressModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/edit/ImageCompressModal').then(
       (m) => ({ default: m.ImageCompressModal })
     ),
-  'image-convert': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/ImageConvertModal').then(
-      (m) => ({ default: m.ImageConvertModal })
+  'image-convert-gif-to-jpg': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-pro/ImageConvertGifToJpgModal').then(
+      (m) => ({ default: m.ImageConvertGifToJpgModal })
+    ),
+  'image-convert-gif-to-png': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-pro/ImageConvertGifToPngModal').then(
+      (m) => ({ default: m.ImageConvertGifToPngModal })
+    ),
+  'image-convert-heic-to-avif': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-pro/ImageConvertHeicToAvifModal').then(
+      (m) => ({ default: m.ImageConvertHeicToAvifModal })
+    ),
+  'image-convert-heic-to-jpg': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert/ImageConvertHeicToJpgModal').then(
+      (m) => ({ default: m.ImageConvertHeicToJpgModal })
+    ),
+  'image-convert-heic-to-png': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-plus/ImageConvertHeicToPngModal').then(
+      (m) => ({ default: m.ImageConvertHeicToPngModal })
+    ),
+  'image-convert-jpg-to-avif': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-plus/ImageConvertJpgToAvifModal').then(
+      (m) => ({ default: m.ImageConvertJpgToAvifModal })
+    ),
+  'image-convert-jpg-to-gif': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-plus/ImageConvertJpgToGifModal').then(
+      (m) => ({ default: m.ImageConvertJpgToGifModal })
+    ),
+  'image-convert-jpg-to-png': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert/ImageConvertJpgToPngModal').then(
+      (m) => ({ default: m.ImageConvertJpgToPngModal })
+    ),
+  'image-convert-jpg-to-svg': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-plus/ImageConvertJpgToSvgModal').then(
+      (m) => ({ default: m.ImageConvertJpgToSvgModal })
+    ),
+  'image-convert-jpg-to-tiff': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-plus/ImageConvertJpgToTiffModal').then(
+      (m) => ({ default: m.ImageConvertJpgToTiffModal })
+    ),
+  'image-convert-jpg-to-webp': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert/ImageConvertJpgToWebpModal').then(
+      (m) => ({ default: m.ImageConvertJpgToWebpModal })
+    ),
+  'image-convert-png-to-avif': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-plus/ImageConvertPngToAvifModal').then(
+      (m) => ({ default: m.ImageConvertPngToAvifModal })
+    ),
+  'image-convert-png-to-eps': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-plus/ImageConvertPngToEpsModal').then(
+      (m) => ({ default: m.ImageConvertPngToEpsModal })
+    ),
+  'image-convert-png-to-gif': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-plus/ImageConvertPngToGifModal').then(
+      (m) => ({ default: m.ImageConvertPngToGifModal })
+    ),
+  'image-convert-png-to-jpg': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert/ImageConvertPngToJpgModal').then(
+      (m) => ({ default: m.ImageConvertPngToJpgModal })
+    ),
+  'image-convert-png-to-svg': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert/ImageConvertPngToSvgModal').then(
+      (m) => ({ default: m.ImageConvertPngToSvgModal })
+    ),
+  'image-convert-png-to-tiff': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-plus/ImageConvertPngToTiffModal').then(
+      (m) => ({ default: m.ImageConvertPngToTiffModal })
+    ),
+  'image-convert-png-to-webp': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert/ImageConvertPngToWebpModal').then(
+      (m) => ({ default: m.ImageConvertPngToWebpModal })
+    ),
+  'image-convert-psd-to-jpg': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-pro/ImageConvertPsdToJpgModal').then(
+      (m) => ({ default: m.ImageConvertPsdToJpgModal })
+    ),
+  'image-convert-psd-to-png': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-pro/ImageConvertPsdToPngModal').then(
+      (m) => ({ default: m.ImageConvertPsdToPngModal })
+    ),
+  'image-convert-svg-to-png': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-pro/ImageConvertSvgToPngModal').then(
+      (m) => ({ default: m.ImageConvertSvgToPngModal })
+    ),
+  'image-convert-tiff-to-jpg': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-pro/ImageConvertTiffToJpgModal').then(
+      (m) => ({ default: m.ImageConvertTiffToJpgModal })
+    ),
+  'image-convert-tiff-to-png': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-pro/ImageConvertTiffToPngModal').then(
+      (m) => ({ default: m.ImageConvertTiffToPngModal })
+    ),
+  'image-convert-webp-to-avif': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-pro/ImageConvertWebpToAvifModal').then(
+      (m) => ({ default: m.ImageConvertWebpToAvifModal })
+    ),
+  'image-convert-webp-to-gif': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-pro/ImageConvertWebpToGifModal').then(
+      (m) => ({ default: m.ImageConvertWebpToGifModal })
+    ),
+  'image-convert-webp-to-jpg': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert/ImageConvertWebpToJpgModal').then(
+      (m) => ({ default: m.ImageConvertWebpToJpgModal })
+    ),
+  'image-convert-webp-to-png': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert/ImageConvertWebpToPngModal').then(
+      (m) => ({ default: m.ImageConvertWebpToPngModal })
     ),
 
   'image-crop': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/ImageCropModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/edit/ImageCropModal').then(
       (m) => ({ default: m.ImageCropModal })
     ),
   'image-dominant-color': () =>
@@ -250,7 +398,7 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
     ),
 
   'image-flip': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/ImageFlipModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/edit/ImageFlipModal').then(
       (m) => ({ default: m.ImageFlipModal })
     ),
   'image-ocr': () =>
@@ -262,23 +410,27 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.ImagePhotoFiltersModal })
     ),
   'image-pixelate': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/ImagePixelateModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/edit/ImagePixelateModal').then(
       (m) => ({ default: m.ImagePixelateModal })
+    ),
+  'image-pixelate-face': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImagePixelateFaceModal').then(
+      (m) => ({ default: m.ImagePixelateFaceModal })
     ),
   'image-profile': () =>
     import('@hieudoanm.github.io/components/pages/start/modals/image-create/ImageProfileModal').then(
       (m) => ({ default: m.ImageProfileModal })
     ),
   'image-resize': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/ImageResizeModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/edit/ImageResizeModal').then(
       (m) => ({ default: m.ImageResizeModal })
     ),
   'image-rotate': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/ImageRotateModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/edit/ImageRotateModal').then(
       (m) => ({ default: m.ImageRotateModal })
     ),
   'image-round': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/ImageRoundModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/edit/ImageRoundModal').then(
       (m) => ({ default: m.ImageRoundModal })
     ),
   'image-shadow': () =>
@@ -286,16 +438,20 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.ImageShadowModal })
     ),
   'image-sharpen': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/ImageSharpenModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/edit/ImageSharpenModal').then(
       (m) => ({ default: m.ImageSharpenModal })
     ),
   'image-split': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/ImageSplitModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/edit/ImageSplitModal').then(
       (m) => ({ default: m.ImageSplitModal })
     ),
   'image-text': () =>
     import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageTextModal').then(
       (m) => ({ default: m.ImageTextModal })
+    ),
+  'image-translate': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/image-scan/ImageTranslateModal').then(
+      (m) => ({ default: m.ImageTranslateModal })
     ),
   'image-transparent-bg': () =>
     import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageTransparentBgModal').then(
@@ -308,6 +464,10 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
   'image-watermark': () =>
     import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageWatermarkModal').then(
       (m) => ({ default: m.ImageWatermarkModal })
+    ),
+  'images-to-pdf': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/create/ImagesToPdfModal').then(
+      (m) => ({ default: m.ImagesToPdfModal })
     ),
   inflation: () =>
     import('@hieudoanm.github.io/components/pages/start/modals/financial/InflationModal').then(
@@ -328,6 +488,14 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
   'json-schema': () =>
     import('@hieudoanm.github.io/components/pages/start/modals/editors/JSONSchemaModal').then(
       (m) => ({ default: m.JSONSchemaModal })
+    ),
+  'json-to-csv': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/data/xml-json/JsonToCsvModal').then(
+      (m) => ({ default: m.JsonToCsvModal })
+    ),
+  'json-to-xml': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/data/xml-json/JsonToXmlModal').then(
+      (m) => ({ default: m.JsonToXmlModal })
     ),
   kaprekar: () =>
     import('@hieudoanm.github.io/components/pages/start/modals/utilities/KaprekarModal').then(
@@ -365,6 +533,14 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
     import('@hieudoanm.github.io/components/pages/start/modals/image-create/MemeMakerModal').then(
       (m) => ({ default: m.MemeMakerModal })
     ),
+  'mobi-to-azw3': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/ebook/MOBIToAZW3Modal').then(
+      (m) => ({ default: m.MOBIToAZW3Modal })
+    ),
+  'mobi-to-epub': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/ebook/MOBIToEPUBModal').then(
+      (m) => ({ default: m.MOBIToEPUBModal })
+    ),
   morse: () =>
     import('@hieudoanm.github.io/components/pages/start/modals/format/MorseModal').then(
       (m) => ({ default: m.MorseModal })
@@ -389,45 +565,101 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
     import('@hieudoanm.github.io/components/pages/start/modals/education/chemistry/PeriodicTableModal').then(
       (m) => ({ default: m.PeriodicTableModal })
     ),
-  'pdf-arrange': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/pdf/PdfArrangeModal').then(
-      (m) => ({ default: m.PdfArrangeModal })
+  'pdf-annotate': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/edit/PdfAnnotateModal').then(
+      (m) => ({ default: m.PdfAnnotateModal })
     ),
-  'pdf-combine': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/pdf/PdfCombineModal').then(
-      (m) => ({ default: m.PdfCombineModal })
+  'pdf-compress': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/edit/PdfCompressModal').then(
+      (m) => ({ default: m.PdfCompressModal })
     ),
-  'pdf-convert': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/pdf/PdfConvertModal').then(
-      (m) => ({ default: m.PdfConvertModal })
+  'pdf-crop': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/edit/PdfCropModal').then(
+      (m) => ({ default: m.PdfCropModal })
     ),
-  'pdf-create': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/pdf/PdfCreateModal').then(
-      (m) => ({ default: m.PdfCreateModal })
-    ),
-  'pdf-edit': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/pdf/PdfEditModal').then(
-      (m) => ({ default: m.PdfEditModal })
+  'pdf-delete-pages': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/edit/PdfDeletePagesModal').then(
+      (m) => ({ default: m.PdfDeletePagesModal })
     ),
   'pdf-esign': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/pdf/PdfEsignModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/esign/PdfEsignModal').then(
       (m) => ({ default: m.PdfEsignModal })
     ),
-  'pdf-extract': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/pdf/PdfExtractModal').then(
-      (m) => ({ default: m.PdfExtractModal })
+  'pdf-extract-images': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/extract/PdfExtractImagesModal').then(
+      (m) => ({ default: m.PdfExtractImagesModal })
     ),
-  'pdf-inspect': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/pdf/PdfInspectModal').then(
-      (m) => ({ default: m.PdfInspectModal })
+  'pdf-extract-text': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/extract/PdfExtractTextModal').then(
+      (m) => ({ default: m.PdfExtractTextModal })
     ),
-  'pdf-maintain': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/pdf/PdfMaintainModal').then(
-      (m) => ({ default: m.PdfMaintainModal })
+  'pdf-info': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/extract/PdfInfoModal').then(
+      (m) => ({ default: m.PdfInfoModal })
+    ),
+  'pdf-merge': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/edit/PdfMergeModal').then(
+      (m) => ({ default: m.PdfMergeModal })
+    ),
+  'pdf-metadata': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/extract/PdfMetadataModal').then(
+      (m) => ({ default: m.PdfMetadataModal })
+    ),
+  'pdf-ocr': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/extract/PdfOcrModal').then(
+      (m) => ({ default: m.PdfOcrModal })
+    ),
+  'pdf-page-numbers': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/edit/PdfPageNumbersModal').then(
+      (m) => ({ default: m.PdfPageNumbersModal })
+    ),
+  'pdf-rearrange': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/edit/PdfRearrangeModal').then(
+      (m) => ({ default: m.PdfRearrangeModal })
+    ),
+  'pdf-redact': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/edit/PdfRedactModal').then(
+      (m) => ({ default: m.PdfRedactModal })
+    ),
+  'pdf-repair': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/extract/PdfRepairModal').then(
+      (m) => ({ default: m.PdfRepairModal })
+    ),
+  'pdf-rotate': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/edit/PdfRotateModal').then(
+      (m) => ({ default: m.PdfRotateModal })
     ),
   'pdf-security': () =>
     import('@hieudoanm.github.io/components/pages/start/modals/pdf/PdfSecurityModal').then(
       (m) => ({ default: m.PdfSecurityModal })
+    ),
+  'pdf-split': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/edit/PdfSplitModal').then(
+      (m) => ({ default: m.PdfSplitModal })
+    ),
+  'pdf-to-epub': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/convert/PdfToEpubModal').then(
+      (m) => ({ default: m.PdfToEpubModal })
+    ),
+  'pdf-to-excel': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/convert/PdfToExcelModal').then(
+      (m) => ({ default: m.PdfToExcelModal })
+    ),
+  'pdf-to-images': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/convert/PdfToImagesModal').then(
+      (m) => ({ default: m.PdfToImagesModal })
+    ),
+  'pdf-to-ppt': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/convert/PdfToPptModal').then(
+      (m) => ({ default: m.PdfToPptModal })
+    ),
+  'pdf-to-word': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/convert/PdfToWordModal').then(
+      (m) => ({ default: m.PdfToWordModal })
+    ),
+  'pdf-watermark': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/edit/PdfWatermarkModal').then(
+      (m) => ({ default: m.PdfWatermarkModal })
     ),
   'pdf-translate': () =>
     import('@hieudoanm.github.io/components/pages/start/modals/pdf/PdfTranslateModal').then(
@@ -456,6 +688,10 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
   pomodoro: () =>
     import('@hieudoanm.github.io/components/pages/start/modals/clocks/PomodoroModal').then(
       (m) => ({ default: m.PomodoroModal })
+    ),
+  'ppt-to-pdf': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/create/PptToPdfModal').then(
+      (m) => ({ default: m.PptToPdfModal })
     ),
   proxy: () =>
     import('@hieudoanm.github.io/components/pages/start/modals/developer/ProxyModal').then(
@@ -534,11 +770,11 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.SplitBillModal })
     ),
   'split-csv': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/data/SplitCsvModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/data/csv/SplitCsvModal').then(
       (m) => ({ default: m.SplitCsvModal })
     ),
   'split-excel': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/data/SplitExcelModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/data/excel/SplitExcelModal').then(
       (m) => ({ default: m.SplitExcelModal })
     ),
   sudoku: () =>
@@ -602,25 +838,205 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
     import('@hieudoanm.github.io/components/pages/start/modals/developer/UUIDModal').then(
       (m) => ({ default: m.UUIDModal })
     ),
-  'video-audio': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/video/VideoAudioModal').then(
-      (m) => ({ default: m.VideoAudioModal })
+  'url-to-pdf': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/create/UrlToPdfModal').then(
+      (m) => ({ default: m.UrlToPdfModal })
     ),
-  'video-convert': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/video/VideoConvertModal').then(
-      (m) => ({ default: m.VideoConvertModal })
+  'video-aac-to-mp3': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/convert-audio/VideoAacToMp3Modal').then(
+      (m) => ({ default: m.VideoAacToMp3Modal })
     ),
-  'video-download': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/video/VideoDownloadModal').then(
-      (m) => ({ default: m.VideoDownloadModal })
+  'video-aac-to-mp4': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/convert-audio/VideoAacToMp4Modal').then(
+      (m) => ({ default: m.VideoAacToMp4Modal })
     ),
-  'video-edit': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/video/VideoEditModal').then(
-      (m) => ({ default: m.VideoEditModal })
+  'video-aac-to-wav': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/convert-audio/VideoAacToWavModal').then(
+      (m) => ({ default: m.VideoAacToWavModal })
     ),
-  'video-process': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/video/VideoProcessModal').then(
-      (m) => ({ default: m.VideoProcessModal })
+  'video-avi-to-gif': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/convert/VideoAviToGifModal').then(
+      (m) => ({ default: m.VideoAviToGifModal })
+    ),
+  'video-avi-to-mp3': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/convert/VideoAviToMp3Modal').then(
+      (m) => ({ default: m.VideoAviToMp3Modal })
+    ),
+  'video-avi-to-mp4': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/convert/VideoAviToMp4Modal').then(
+      (m) => ({ default: m.VideoAviToMp4Modal })
+    ),
+  'video-compress': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/edit/VideoCompressModal').then(
+      (m) => ({ default: m.VideoCompressModal })
+    ),
+  'video-convert-to-webm': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/convert-misc/VideoConvertToWebmModal').then(
+      (m) => ({ default: m.VideoConvertToWebmModal })
+    ),
+  'video-crop': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/edit/VideoCropModal').then(
+      (m) => ({ default: m.VideoCropModal })
+    ),
+  'video-download-facebook': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/download/VideoFacebookModal').then(
+      (m) => ({ default: m.VideoFacebookModal })
+    ),
+  'video-download-instagram': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/download/VideoInstagramModal').then(
+      (m) => ({ default: m.VideoInstagramModal })
+    ),
+  'video-download-tiktok': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/download/VideoTikTokModal').then(
+      (m) => ({ default: m.VideoTikTokModal })
+    ),
+  'video-download-twitter': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/download/VideoTwitterModal').then(
+      (m) => ({ default: m.VideoTwitterModal })
+    ),
+  'video-extract-audio': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/edit/VideoExtractAudioModal').then(
+      (m) => ({ default: m.VideoExtractAudioModal })
+    ),
+  'video-extract-frames': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/edit/VideoExtractFramesModal').then(
+      (m) => ({ default: m.VideoExtractFramesModal })
+    ),
+  'video-flv-to-mp4': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/convert/VideoFlvToMp4Modal').then(
+      (m) => ({ default: m.VideoFlvToMp4Modal })
+    ),
+  'video-gif-to-mov': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/convert/VideoGifToMovModal').then(
+      (m) => ({ default: m.VideoGifToMovModal })
+    ),
+  'video-gif-to-mp4': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/convert/VideoGifToMp4Modal').then(
+      (m) => ({ default: m.VideoGifToMp4Modal })
+    ),
+  'video-gif-to-webm': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/convert/VideoGifToWebmModal').then(
+      (m) => ({ default: m.VideoGifToWebmModal })
+    ),
+  'video-m4a-to-mp3': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/convert-audio/VideoM4aToMp3Modal').then(
+      (m) => ({ default: m.VideoM4aToMp3Modal })
+    ),
+  'video-m4a-to-mp4': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/convert-audio/VideoM4aToMp4Modal').then(
+      (m) => ({ default: m.VideoM4aToMp4Modal })
+    ),
+  'video-m4a-to-wav': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/convert-audio/VideoM4aToWavModal').then(
+      (m) => ({ default: m.VideoM4aToWavModal })
+    ),
+  'video-merge': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/edit/VideoMergeModal').then(
+      (m) => ({ default: m.VideoMergeModal })
+    ),
+  'video-mkv-to-gif': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/convert-misc/VideoMkvToGifModal').then(
+      (m) => ({ default: m.VideoMkvToGifModal })
+    ),
+  'video-mkv-to-mp3': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/convert-misc/VideoMkvToMp3Modal').then(
+      (m) => ({ default: m.VideoMkvToMp3Modal })
+    ),
+  'video-mkv-to-mp4': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/convert/VideoMkvToMp4Modal').then(
+      (m) => ({ default: m.VideoMkvToMp4Modal })
+    ),
+  'video-mov-to-avi': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/convert-misc/VideoMovToAviModal').then(
+      (m) => ({ default: m.VideoMovToAviModal })
+    ),
+  'video-mov-to-gif': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/convert-misc/VideoMovToGifModal').then(
+      (m) => ({ default: m.VideoMovToGifModal })
+    ),
+  'video-mov-to-mp3': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/convert-audio/VideoMovToMp3Modal').then(
+      (m) => ({ default: m.VideoMovToMp3Modal })
+    ),
+  'video-mov-to-mp4': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/convert/VideoMovToMp4Modal').then(
+      (m) => ({ default: m.VideoMovToMp4Modal })
+    ),
+  'video-mov-to-wav': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/convert-audio/VideoMovToWavModal').then(
+      (m) => ({ default: m.VideoMovToWavModal })
+    ),
+  'video-mp4-to-avi': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/convert/VideoMp4ToAviModal').then(
+      (m) => ({ default: m.VideoMp4ToAviModal })
+    ),
+  'video-mp4-to-mov': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/convert/VideoMp4ToMovModal').then(
+      (m) => ({ default: m.VideoMp4ToMovModal })
+    ),
+  'video-mp4-to-mp3': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/convert-audio/VideoMp4ToMp3Modal').then(
+      (m) => ({ default: m.VideoMp4ToMp3Modal })
+    ),
+  'video-mp4-to-ogg': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/convert-misc/VideoMp4ToOggModal').then(
+      (m) => ({ default: m.VideoMp4ToOggModal })
+    ),
+  'video-mp4-to-wav': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/convert-audio/VideoMp4ToWavModal').then(
+      (m) => ({ default: m.VideoMp4ToWavModal })
+    ),
+  'video-mute': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/edit/VideoMuteModal').then(
+      (m) => ({ default: m.VideoMuteModal })
+    ),
+  'video-ogg-to-mp3': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/convert-audio/VideoOggToMp3Modal').then(
+      (m) => ({ default: m.VideoOggToMp3Modal })
+    ),
+  'video-ogg-to-wav': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/convert-audio/VideoOggToWavModal').then(
+      (m) => ({ default: m.VideoOggToWavModal })
+    ),
+  'video-resize': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/edit/VideoResizeModal').then(
+      (m) => ({ default: m.VideoResizeModal })
+    ),
+  'video-speed': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/edit/VideoSpeedModal').then(
+      (m) => ({ default: m.VideoSpeedModal })
+    ),
+  'video-stabilize': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/edit/VideoStabilizeModal').then(
+      (m) => ({ default: m.VideoStabilizeModal })
+    ),
+  'video-to-gif': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/convert-misc/VideoToGifModal').then(
+      (m) => ({ default: m.VideoToGifModal })
+    ),
+  'video-to-webp': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/convert-misc/VideoToWebpModal').then(
+      (m) => ({ default: m.VideoToWebpModal })
+    ),
+  'video-trim': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/edit/VideoTrimModal').then(
+      (m) => ({ default: m.VideoTrimModal })
+    ),
+  'video-webm-to-mp3': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/convert-misc/VideoWebmToMp3Modal').then(
+      (m) => ({ default: m.VideoWebmToMp3Modal })
+    ),
+  'video-wmv-to-mp4': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/convert/VideoWmvToMp4Modal').then(
+      (m) => ({ default: m.VideoWmvToMp4Modal })
+    ),
+  'video-youtube-text': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/download/VideoYoutubeTextModal').then(
+      (m) => ({ default: m.VideoYoutubeTextModal })
+    ),
+  'video-youtube-transcript': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/video/download/VideoYoutubeTranscriptModal').then(
+      (m) => ({ default: m.VideoYoutubeTranscriptModal })
     ),
   watchface: () =>
     import('@hieudoanm.github.io/components/pages/start/modals/clocks/WatchfaceModal').then(
@@ -631,55 +1047,231 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.WeightModal })
     ),
   'word-counter': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/data/WordCounterModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/data/utility/WordCounterModal').then(
       (m) => ({ default: m.WordCounterModal })
+    ),
+  'word-to-pdf': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/create/WordToPdfModal').then(
+      (m) => ({ default: m.WordToPdfModal })
     ),
   wordle: () =>
     import('@hieudoanm.github.io/components/pages/start/modals/games/WordleModal').then(
       (m) => ({ default: m.WordleModal })
     ),
-  'write-business': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/write/WriteBusinessModal').then(
-      (m) => ({ default: m.WriteBusinessModal })
+  'write-ai-detector': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/misc/WriteAiDetectorModal').then(
+      (m) => ({ default: m.WriteAiDetectorModal })
     ),
-  'write-content': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/write/WriteContentModal').then(
-      (m) => ({ default: m.WriteContentModal })
+  'write-article': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/article/WriteArticleModal').then(
+      (m) => ({ default: m.WriteArticleModal })
     ),
-  'write-generate': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/write/WriteGenerateModal').then(
-      (m) => ({ default: m.WriteGenerateModal })
+  'write-article-rewriter': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/article/WriteArticleRewriterModal').then(
+      (m) => ({ default: m.WriteArticleRewriterModal })
     ),
-  'write-improve': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/write/WriteImproveModal').then(
-      (m) => ({ default: m.WriteImproveModal })
+  'write-bill-of-sale': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/business/WriteBillOfSaleModal').then(
+      (m) => ({ default: m.WriteBillOfSaleModal })
     ),
-  'write-legal': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/write/WriteLegalModal').then(
-      (m) => ({ default: m.WriteLegalModal })
+  'write-blog-ideas': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/article/WriteBlogIdeasModal').then(
+      (m) => ({ default: m.WriteBlogIdeasModal })
     ),
-  'write-marketing': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/write/WriteMarketingModal').then(
-      (m) => ({ default: m.WriteMarketingModal })
+  'write-blog-outline': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/article/WriteBlogOutlineModal').then(
+      (m) => ({ default: m.WriteBlogOutlineModal })
     ),
-  'write-real-estate': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/write/WriteRealEstateModal').then(
-      (m) => ({ default: m.WriteRealEstateModal })
+  'write-blog-post': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/article/WriteBlogPostModal').then(
+      (m) => ({ default: m.WriteBlogPostModal })
     ),
-  'write-social': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/write/WriteSocialModal').then(
-      (m) => ({ default: m.WriteSocialModal })
+  'write-business-name': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/business/WriteBusinessNameModal').then(
+      (m) => ({ default: m.WriteBusinessNameModal })
+    ),
+  'write-business-plan': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/business/WriteBusinessPlanModal').then(
+      (m) => ({ default: m.WriteBusinessPlanModal })
+    ),
+  'write-business-slogan': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/business/WriteBusinessSloganModal').then(
+      (m) => ({ default: m.WriteBusinessSloganModal })
+    ),
+  'write-caption': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/social/WriteCaptionModal').then(
+      (m) => ({ default: m.WriteCaptionModal })
+    ),
+  'write-cold-email': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/business/WriteColdEmailModal').then(
+      (m) => ({ default: m.WriteColdEmailModal })
+    ),
+  'write-complete': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/edit/WriteCompleteModal').then(
+      (m) => ({ default: m.WriteCompleteModal })
+    ),
+  'write-content-brief': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/content/WriteContentBriefModal').then(
+      (m) => ({ default: m.WriteContentBriefModal })
+    ),
+  'write-content-planner': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/content/WriteContentPlannerModal').then(
+      (m) => ({ default: m.WriteContentPlannerModal })
+    ),
+  'write-essay': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/article/WriteEssayModal').then(
+      (m) => ({ default: m.WriteEssayModal })
+    ),
+  'write-explain': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/misc/WriteExplainModal').then(
+      (m) => ({ default: m.WriteExplainModal })
+    ),
+  'write-faq': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/content/WriteFaqModal').then(
+      (m) => ({ default: m.WriteFaqModal })
+    ),
+  'write-grammar': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/edit/WriteGrammarModal').then(
+      (m) => ({ default: m.WriteGrammarModal })
+    ),
+  'write-headline': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/social/WriteHeadlineModal').then(
+      (m) => ({ default: m.WriteHeadlineModal })
+    ),
+  'write-humanizer': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/edit/WriteHumanizerModal').then(
+      (m) => ({ default: m.WriteHumanizerModal })
+    ),
+  'write-improve-text': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/edit/WriteImproveTextModal').then(
+      (m) => ({ default: m.WriteImproveTextModal })
+    ),
+  'write-landing-page': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/business/WriteLandingPageModal').then(
+      (m) => ({ default: m.WriteLandingPageModal })
+    ),
+  'write-linkedin-post': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/social/WriteLinkedInPostModal').then(
+      (m) => ({ default: m.WriteLinkedInPostModal })
+    ),
+  'write-listicle': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/article/WriteListicleModal').then(
+      (m) => ({ default: m.WriteListicleModal })
+    ),
+  'write-meta-description': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/social/WriteMetaDescriptionModal').then(
+      (m) => ({ default: m.WriteMetaDescriptionModal })
+    ),
+  'write-nda': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/business/WriteNdaModal').then(
+      (m) => ({ default: m.WriteNdaModal })
+    ),
+  'write-paragraph': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/article/WriteParagraphModal').then(
+      (m) => ({ default: m.WriteParagraphModal })
+    ),
+  'write-paraphrase': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/edit/WriteParaphraseModal').then(
+      (m) => ({ default: m.WriteParaphraseModal })
+    ),
+  'write-podcast-script': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/business/WritePodcastScriptModal').then(
+      (m) => ({ default: m.WritePodcastScriptModal })
+    ),
+  'write-poll': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/content/WritePollModal').then(
+      (m) => ({ default: m.WritePollModal })
+    ),
+  'write-press-release': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/business/WritePressReleaseModal').then(
+      (m) => ({ default: m.WritePressReleaseModal })
+    ),
+  'write-privacy-policy': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/business/WritePrivacyPolicyModal').then(
+      (m) => ({ default: m.WritePrivacyPolicyModal })
+    ),
+  'write-purchase-agreement': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/business/WritePurchaseAgreementModal').then(
+      (m) => ({ default: m.WritePurchaseAgreementModal })
+    ),
+  'write-real-estate-bio': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/real-estate/WriteRealEstateBioModal').then(
+      (m) => ({ default: m.WriteRealEstateBioModal })
+    ),
+  'write-real-estate-description': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/real-estate/WriteRealEstateDescriptionModal').then(
+      (m) => ({ default: m.WriteRealEstateDescriptionModal })
+    ),
+  'write-real-estate-listing': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/real-estate/WriteRealEstateListingModal').then(
+      (m) => ({ default: m.WriteRealEstateListingModal })
+    ),
+  'write-rewrite': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/edit/WriteRewriteModal').then(
+      (m) => ({ default: m.WriteRewriteModal })
+    ),
+  'write-shorten': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/edit/WriteShortenModal').then(
+      (m) => ({ default: m.WriteShortenModal })
+    ),
+  'write-story': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/article/WriteStoryModal').then(
+      (m) => ({ default: m.WriteStoryModal })
+    ),
+  'write-story-ideas': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/article/WriteStoryIdeasModal').then(
+      (m) => ({ default: m.WriteStoryIdeasModal })
+    ),
+  'write-summarize': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/edit/WriteSummarizeModal').then(
+      (m) => ({ default: m.WriteSummarizeModal })
+    ),
+  'write-summarize-podcast': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/misc/WriteSummarizePodcastModal').then(
+      (m) => ({ default: m.WriteSummarizePodcastModal })
+    ),
+  'write-summarize-youtube': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/misc/WriteSummarizeYoutubeModal').then(
+      (m) => ({ default: m.WriteSummarizeYoutubeModal })
+    ),
+  'write-tiktok-script': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/social/WriteTikTokScriptModal').then(
+      (m) => ({ default: m.WriteTikTokScriptModal })
+    ),
+  'write-title': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/misc/WriteTitleModal').then(
+      (m) => ({ default: m.WriteTitleModal })
+    ),
+  'write-tone': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/edit/WriteToneModal').then(
+      (m) => ({ default: m.WriteToneModal })
+    ),
+  'write-translate': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/edit/WriteTranslateModal').then(
+      (m) => ({ default: m.WriteTranslateModal })
+    ),
+  'write-trivia': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/content/WriteTriviaModal').then(
+      (m) => ({ default: m.WriteTriviaModal })
+    ),
+  'write-twitter-generator': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/social/WriteTwitterGeneratorModal').then(
+      (m) => ({ default: m.WriteTwitterGeneratorModal })
+    ),
+  'write-youtube-script': () =>
+    import('@hieudoanm.github.io/components/pages/start/modals/write/article/WriteYoutubeScriptModal').then(
+      (m) => ({ default: m.WriteYoutubeScriptModal })
     ),
   'xml-to-csv': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/data/XmlToCsvModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/data/xml-json/XmlToCsvModal').then(
       (m) => ({ default: m.XmlToCsvModal })
     ),
   'xml-to-excel': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/data/XmlToExcelModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/data/xml-json/XmlToExcelModal').then(
       (m) => ({ default: m.XmlToExcelModal })
     ),
   'xml-to-json': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/data/XmlToJsonModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/data/xml-json/XmlToJsonModal').then(
       (m) => ({ default: m.XmlToJsonModal })
     ),
   'youtube-thumbnails': () =>
