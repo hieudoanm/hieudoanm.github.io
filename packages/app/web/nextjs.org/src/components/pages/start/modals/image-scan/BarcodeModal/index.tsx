@@ -1,18 +1,7 @@
 import { FC, useState } from 'react';
 import JsBarcode from 'jsbarcode';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
-
-const FORMATS = [
-  'CODE128',
-  'EAN-13',
-  'UPC-A',
-  'CODE39',
-  'ITF',
-  'Codabar',
-  'Pharmacode',
-] as const;
-
-type Format = (typeof FORMATS)[number];
+import { FORMATS, Format } from './utils';
 
 export const BarcodeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [text, setText] = useState('');

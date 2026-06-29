@@ -2,9 +2,9 @@ import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper
 import { FC, useMemo, useState } from 'react';
 import { daysBetween } from './utils';
 
-function todayString(): string {
+const todayString = (): string => {
   return new Date().toISOString().split('T')[0];
-}
+};
 
 export const DaysCountModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [fromDate, setFromDate] = useState('');

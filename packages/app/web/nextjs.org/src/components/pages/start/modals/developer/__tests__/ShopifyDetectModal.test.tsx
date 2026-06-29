@@ -62,9 +62,9 @@ const mockHistoryData = [
 
 global.fetch = jest.fn();
 
-function setupHistoryData() {
+const setupHistoryData = () => {
   saveHistory(mockHistoryData);
-}
+};
 
 beforeEach(() => {
   saveHistory([]);

@@ -5,11 +5,11 @@ export interface DaysCountResult {
   days: number;
 }
 
-function daysInMonth(year: number, month: number): number {
+const daysInMonth = (year: number, month: number): number => {
   return new Date(year, month + 1, 0).getDate();
-}
+};
 
-export function daysBetween(from: Date, to: Date): DaysCountResult {
+export const daysBetween = (from: Date, to: Date): DaysCountResult => {
   if (from > to) {
     [from, to] = [to, from];
   }
@@ -35,4 +35,4 @@ export function daysBetween(from: Date, to: Date): DaysCountResult {
   }
 
   return { totalDays, years, months, days };
-}
+};

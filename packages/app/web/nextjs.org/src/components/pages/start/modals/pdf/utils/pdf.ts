@@ -11,7 +11,7 @@ export interface PDFInfo {
   fileSize: number;
 }
 
-export async function mergePDFs(files: File[]): Promise<Uint8Array> {
+export const mergePDFs = async (files: File[]): Promise<Uint8Array> => {
   const merged = await PDFDocument.create();
   for (const file of files) {
     const src = await PDFDocument.load(await file.arrayBuffer());
@@ -19,12 +19,12 @@ export async function mergePDFs(files: File[]): Promise<Uint8Array> {
     for (const page of pages) merged.addPage(page);
   }
   return merged.save();
-}
+};
 
-export async function splitPDF(
+export const splitPDF = async (
   file: File,
   pageRanges?: string
-): Promise<Uint8Array[]> {
+): Promise<Uint8Array[]> => {
   const src = await PDFDocument.load(await file.arrayBuffer());
   const total = src.getPageCount();
   const ranges = pageRanges
@@ -39,9 +39,9 @@ export async function splitPDF(
     results.push(await doc.save());
   }
   return results;
-}
+};
 
-function parsePageRanges(s: string, max: number): number[] {
+const parsePageRanges = (s: string, max: number): number[] => {
   const pages: number[] = [];
   for (const part of s.split(',')) {
     const trimmed = part.trim();
@@ -56,9 +56,9 @@ function parsePageRanges(s: string, max: number): number[] {
     }
   }
   return [...new Set(pages)].sort((a, b) => a - b);
-}
+};
 
-export async function extractText(file: File): Promise<string> {
+export const extractText = async (file: File): Promise<string> => {
   const loadingTask = pdfjs.getDocument(await file.arrayBuffer());
   const pdf = await loadingTask.promise;
   const parts: string[] = [];
@@ -71,9 +71,9 @@ export async function extractText(file: File): Promise<string> {
     parts.push(text);
   }
   return parts.join('\n\n');
-}
+};
 
-export async function extractImages(file: File): Promise<Blob[]> {
+export const extractImages = async (file: File): Promise<Blob[]> => {
   const loadingTask = pdfjs.getDocument(await file.arrayBuffer());
   const pdf = await loadingTask.promise;
   const blobs: Blob[] = [];
@@ -91,18 +91,18 @@ export async function extractImages(file: File): Promise<Blob[]> {
     blobs.push(blob);
   }
   return blobs;
-}
+};
 
-export async function compressPDF(file: File): Promise<Uint8Array> {
+export const compressPDF = async (file: File): Promise<Uint8Array> => {
   const pdfDoc = await PDFDocument.load(await file.arrayBuffer());
   return pdfDoc.save({ useObjectStreams: true });
-}
+};
 
-export async function rotatePDF(
+export const rotatePDF = async (
   file: File,
   angle: 90 | 180 | 270,
   pageNumbers?: number[]
-): Promise<Uint8Array> {
+): Promise<Uint8Array> => {
   const pdfDoc = await PDFDocument.load(await file.arrayBuffer());
   const pages =
     pageNumbers && pageNumbers.length > 0
@@ -112,12 +112,12 @@ export async function rotatePDF(
     page.setRotation(degrees(angle));
   }
   return pdfDoc.save();
-}
+};
 
-export async function addWatermark(
+export const addWatermark = async (
   file: File,
   text: string
-): Promise<Uint8Array> {
+): Promise<Uint8Array> => {
   const pdfDoc = await PDFDocument.load(await file.arrayBuffer());
   const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
   const pages = pdfDoc.getPages();
@@ -134,9 +134,9 @@ export async function addWatermark(
     });
   }
   return pdfDoc.save();
-}
+};
 
-export async function getPDFInfo(file: File): Promise<PDFInfo> {
+export const getPDFInfo = async (file: File): Promise<PDFInfo> => {
   const pdfDoc = await PDFDocument.load(await file.arrayBuffer());
   return {
     pageCount: pdfDoc.getPageCount(),
@@ -151,9 +151,9 @@ export async function getPDFInfo(file: File): Promise<PDFInfo> {
     encrypted: false,
     fileSize: file.size,
   };
-}
+};
 
-export async function setPDFMetadata(
+export const setPDFMetadata = async (
   file: File,
   metadata: {
     title?: string;
@@ -161,22 +161,22 @@ export async function setPDFMetadata(
     subject?: string;
     keywords?: string;
   }
-): Promise<Uint8Array> {
+): Promise<Uint8Array> => {
   const pdfDoc = await PDFDocument.load(await file.arrayBuffer());
   if (metadata.title !== undefined) pdfDoc.setTitle(metadata.title);
   if (metadata.author !== undefined) pdfDoc.setAuthor(metadata.author);
   if (metadata.subject !== undefined) pdfDoc.setSubject(metadata.subject);
   if (metadata.keywords !== undefined) pdfDoc.setKeywords([metadata.keywords]);
   return pdfDoc.save();
-}
+};
 
-export async function ocrPDF(file: File, language: string): Promise<string> {
+export const ocrPDF = async (file: File, language: string): Promise<string> => {
   const Tesseract = await import('tesseract.js');
   const { data } = await Tesseract.recognize(file, language);
   return data.text;
-}
+};
 
-export function downloadBlob(data: Blob | Uint8Array, filename: string) {
+export const downloadBlob = (data: Blob | Uint8Array, filename: string) => {
   const blob =
     data instanceof Blob
       ? data
@@ -187,4 +187,4 @@ export function downloadBlob(data: Blob | Uint8Array, filename: string) {
   a.download = filename;
   a.click();
   URL.revokeObjectURL(url);
-}
+};

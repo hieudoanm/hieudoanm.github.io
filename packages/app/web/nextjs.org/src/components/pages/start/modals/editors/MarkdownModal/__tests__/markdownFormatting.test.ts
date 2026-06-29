@@ -12,11 +12,11 @@ import {
   STYLE_FN,
 } from '../markdownFormatting';
 
-function createView(doc: string): EditorView {
+const createView = (doc: string): EditorView => {
   const parent = document.createElement('div');
   const state = EditorState.create({ doc });
   return new EditorView({ state, parent });
-}
+};
 
 describe('insertAround', () => {
   it('wraps selected text', () => {

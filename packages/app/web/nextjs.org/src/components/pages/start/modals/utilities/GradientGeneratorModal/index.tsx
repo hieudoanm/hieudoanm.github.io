@@ -2,41 +2,13 @@
 
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 import { FC, useMemo, useState } from 'react';
-
-type ColorStop = { color: string; position: number };
-
-type GradientType = 'linear' | 'radial';
-
-const DIRECTION_LABELS: { value: string; label: string }[] = [
-  { value: 'to bottom', label: '↓' },
-  { value: 'to top', label: '↑' },
-  { value: 'to right', label: '→' },
-  { value: 'to left', label: '←' },
-  { value: 'to bottom right', label: '↘' },
-  { value: 'to bottom left', label: '↙' },
-  { value: 'to top right', label: '↗' },
-  { value: 'to top left', label: '↖' },
-];
-
-const INITIAL_STOPS: ColorStop[] = [
-  { color: '#6366f1', position: 0 },
-  { color: '#ec4899', position: 100 },
-];
-
-function buildGradientCSS(
-  type: GradientType,
-  stops: ColorStop[],
-  direction: string,
-  angle: number
-): string {
-  const sorted = [...stops].sort((a, b) => a.position - b.position);
-  const stopsStr = sorted.map((s) => `${s.color} ${s.position}%`).join(', ');
-
-  if (type === 'radial') {
-    return `radial-gradient(circle, ${stopsStr})`;
-  }
-  return `linear-gradient(${angle}deg, ${stopsStr})`;
-}
+import {
+  ColorStop,
+  GradientType,
+  DIRECTION_LABELS,
+  INITIAL_STOPS,
+  buildGradientCSS,
+} from './utils';
 
 export const GradientGeneratorModal: FC<{ onClose: () => void }> = ({
   onClose,
