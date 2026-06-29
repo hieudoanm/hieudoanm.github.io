@@ -46,7 +46,7 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.AngleModal })
     ),
   'audio-transcribe': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/video/audio/AudioTranscribeModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/audio/AudioTranscribeModal').then(
       (m) => ({ default: m.AudioTranscribeModal })
     ),
   'azw3-to-epub': () =>
@@ -130,15 +130,15 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.CountdownModal })
     ),
   'create-md-to-pdf': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/pdf/create/CreateMdToPdfModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/from-doc/CreateMdToPdfModal').then(
       (m) => ({ default: m.CreateMdToPdfModal })
     ),
   'create-text-to-pdf': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/pdf/create/CreateTextToPdfModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/from-doc/CreateTextToPdfModal').then(
       (m) => ({ default: m.CreateTextToPdfModal })
     ),
   'create-url-to-pdf': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/pdf/create/CreateUrlToPdfModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/from-doc/CreateUrlToPdfModal').then(
       (m) => ({ default: m.CreateUrlToPdfModal })
     ),
   'create-zip': () =>
@@ -198,7 +198,7 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.EPUBToMOBIModal })
     ),
   'epub-to-pdf': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/pdf/create/EpubToPdfModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/from-doc/EpubToPdfModal').then(
       (m) => ({ default: m.EpubToPdfModal })
     ),
   'excel-to-csv': () =>
@@ -227,7 +227,7 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.Game2048Modal })
     ),
   'generate-subtitle': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/video/audio/GenerateSubtitleModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/audio/GenerateSubtitleModal').then(
       (m) => ({ default: m.GenerateSubtitleModal })
     ),
   'github-social-preview': () =>
@@ -280,111 +280,111 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.ImageCompressModal })
     ),
   'image-convert-gif-to-jpg': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-pro/ImageConvertGifToJpgModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-legacy/ImageConvertGifToJpgModal').then(
       (m) => ({ default: m.ImageConvertGifToJpgModal })
     ),
   'image-convert-gif-to-png': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-pro/ImageConvertGifToPngModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-legacy/ImageConvertGifToPngModal').then(
       (m) => ({ default: m.ImageConvertGifToPngModal })
     ),
   'image-convert-heic-to-avif': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-pro/ImageConvertHeicToAvifModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-legacy/ImageConvertHeicToAvifModal').then(
       (m) => ({ default: m.ImageConvertHeicToAvifModal })
     ),
   'image-convert-heic-to-jpg': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert/ImageConvertHeicToJpgModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-format/ImageConvertHeicToJpgModal').then(
       (m) => ({ default: m.ImageConvertHeicToJpgModal })
     ),
   'image-convert-heic-to-png': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-plus/ImageConvertHeicToPngModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-advanced/ImageConvertHeicToPngModal').then(
       (m) => ({ default: m.ImageConvertHeicToPngModal })
     ),
   'image-convert-jpg-to-avif': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-plus/ImageConvertJpgToAvifModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-advanced/ImageConvertJpgToAvifModal').then(
       (m) => ({ default: m.ImageConvertJpgToAvifModal })
     ),
   'image-convert-jpg-to-gif': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-plus/ImageConvertJpgToGifModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-advanced/ImageConvertJpgToGifModal').then(
       (m) => ({ default: m.ImageConvertJpgToGifModal })
     ),
   'image-convert-jpg-to-png': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert/ImageConvertJpgToPngModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-format/ImageConvertJpgToPngModal').then(
       (m) => ({ default: m.ImageConvertJpgToPngModal })
     ),
   'image-convert-jpg-to-svg': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-plus/ImageConvertJpgToSvgModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-advanced/ImageConvertJpgToSvgModal').then(
       (m) => ({ default: m.ImageConvertJpgToSvgModal })
     ),
   'image-convert-jpg-to-tiff': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-plus/ImageConvertJpgToTiffModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-advanced/ImageConvertJpgToTiffModal').then(
       (m) => ({ default: m.ImageConvertJpgToTiffModal })
     ),
   'image-convert-jpg-to-webp': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert/ImageConvertJpgToWebpModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-format/ImageConvertJpgToWebpModal').then(
       (m) => ({ default: m.ImageConvertJpgToWebpModal })
     ),
   'image-convert-png-to-avif': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-plus/ImageConvertPngToAvifModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-advanced/ImageConvertPngToAvifModal').then(
       (m) => ({ default: m.ImageConvertPngToAvifModal })
     ),
   'image-convert-png-to-eps': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-plus/ImageConvertPngToEpsModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-advanced/ImageConvertPngToEpsModal').then(
       (m) => ({ default: m.ImageConvertPngToEpsModal })
     ),
   'image-convert-png-to-gif': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-plus/ImageConvertPngToGifModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-advanced/ImageConvertPngToGifModal').then(
       (m) => ({ default: m.ImageConvertPngToGifModal })
     ),
   'image-convert-png-to-jpg': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert/ImageConvertPngToJpgModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-format/ImageConvertPngToJpgModal').then(
       (m) => ({ default: m.ImageConvertPngToJpgModal })
     ),
   'image-convert-png-to-svg': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert/ImageConvertPngToSvgModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-format/ImageConvertPngToSvgModal').then(
       (m) => ({ default: m.ImageConvertPngToSvgModal })
     ),
   'image-convert-png-to-tiff': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-plus/ImageConvertPngToTiffModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-advanced/ImageConvertPngToTiffModal').then(
       (m) => ({ default: m.ImageConvertPngToTiffModal })
     ),
   'image-convert-png-to-webp': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert/ImageConvertPngToWebpModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-format/ImageConvertPngToWebpModal').then(
       (m) => ({ default: m.ImageConvertPngToWebpModal })
     ),
   'image-convert-psd-to-jpg': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-pro/ImageConvertPsdToJpgModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-legacy/ImageConvertPsdToJpgModal').then(
       (m) => ({ default: m.ImageConvertPsdToJpgModal })
     ),
   'image-convert-psd-to-png': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-pro/ImageConvertPsdToPngModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-legacy/ImageConvertPsdToPngModal').then(
       (m) => ({ default: m.ImageConvertPsdToPngModal })
     ),
   'image-convert-svg-to-png': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-pro/ImageConvertSvgToPngModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-legacy/ImageConvertSvgToPngModal').then(
       (m) => ({ default: m.ImageConvertSvgToPngModal })
     ),
   'image-convert-tiff-to-jpg': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-pro/ImageConvertTiffToJpgModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-legacy/ImageConvertTiffToJpgModal').then(
       (m) => ({ default: m.ImageConvertTiffToJpgModal })
     ),
   'image-convert-tiff-to-png': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-pro/ImageConvertTiffToPngModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-legacy/ImageConvertTiffToPngModal').then(
       (m) => ({ default: m.ImageConvertTiffToPngModal })
     ),
   'image-convert-webp-to-avif': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-pro/ImageConvertWebpToAvifModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-legacy/ImageConvertWebpToAvifModal').then(
       (m) => ({ default: m.ImageConvertWebpToAvifModal })
     ),
   'image-convert-webp-to-gif': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-pro/ImageConvertWebpToGifModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-legacy/ImageConvertWebpToGifModal').then(
       (m) => ({ default: m.ImageConvertWebpToGifModal })
     ),
   'image-convert-webp-to-jpg': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert/ImageConvertWebpToJpgModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-format/ImageConvertWebpToJpgModal').then(
       (m) => ({ default: m.ImageConvertWebpToJpgModal })
     ),
   'image-convert-webp-to-png': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert/ImageConvertWebpToPngModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-format/ImageConvertWebpToPngModal').then(
       (m) => ({ default: m.ImageConvertWebpToPngModal })
     ),
 
@@ -466,7 +466,7 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.ImageWatermarkModal })
     ),
   'images-to-pdf': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/pdf/create/ImagesToPdfModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/from-doc/ImagesToPdfModal').then(
       (m) => ({ default: m.ImagesToPdfModal })
     ),
   inflation: () =>
@@ -638,23 +638,23 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.PdfSplitModal })
     ),
   'pdf-to-epub': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/pdf/convert/PdfToEpubModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/to-doc/PdfToEpubModal').then(
       (m) => ({ default: m.PdfToEpubModal })
     ),
   'pdf-to-excel': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/pdf/convert/PdfToExcelModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/to-doc/PdfToExcelModal').then(
       (m) => ({ default: m.PdfToExcelModal })
     ),
   'pdf-to-images': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/pdf/convert/PdfToImagesModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/to-doc/PdfToImagesModal').then(
       (m) => ({ default: m.PdfToImagesModal })
     ),
   'pdf-to-ppt': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/pdf/convert/PdfToPptModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/to-doc/PdfToPptModal').then(
       (m) => ({ default: m.PdfToPptModal })
     ),
   'pdf-to-word': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/pdf/convert/PdfToWordModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/to-doc/PdfToWordModal').then(
       (m) => ({ default: m.PdfToWordModal })
     ),
   'pdf-watermark': () =>
@@ -690,7 +690,7 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.PomodoroModal })
     ),
   'ppt-to-pdf': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/pdf/create/PptToPdfModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/from-doc/PptToPdfModal').then(
       (m) => ({ default: m.PptToPdfModal })
     ),
   proxy: () =>
@@ -839,7 +839,7 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.UUIDModal })
     ),
   'url-to-pdf': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/pdf/create/UrlToPdfModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/from-doc/UrlToPdfModal').then(
       (m) => ({ default: m.UrlToPdfModal })
     ),
   'video-aac-to-mp3': () =>
@@ -1051,7 +1051,7 @@ const loaders: Record<string, () => Promise<{ default: ModalComponent }>> = {
       (m) => ({ default: m.WordCounterModal })
     ),
   'word-to-pdf': () =>
-    import('@hieudoanm.github.io/components/pages/start/modals/pdf/create/WordToPdfModal').then(
+    import('@hieudoanm.github.io/components/pages/start/modals/pdf/from-doc/WordToPdfModal').then(
       (m) => ({ default: m.WordToPdfModal })
     ),
   wordle: () =>
