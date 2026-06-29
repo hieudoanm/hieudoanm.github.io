@@ -1,33 +1,131 @@
 'use client';
 
-import { FC } from 'react';
+import { FC, useState, useCallback, useRef, useEffect } from 'react';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
-const CLI_CMD =
-  'hieudoanm pdf sign input.pdf --signature sig.png --page 1 --x 100 --y 100';
-const CLI_NOTE =
-  'Adds a signature image to a PDF page. Create a signature image first (white bg, dark ink), then position it on the desired page.';
-
 export const PdfEsignModal: FC<{ onClose: () => void }> = ({ onClose }) => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [isDrawing, setIsDrawing] = useState(false);
+  const [color, setColor] = useState('#000000');
+  const [lineWidth, setLineWidth] = useState(3);
+
+  const getPos = (e: React.MouseEvent | React.TouchEvent) => {
+    const canvas = canvasRef.current;
+    if (!canvas) return { x: 0, y: 0 };
+    const rect = canvas.getBoundingClientRect();
+    if ('touches' in e) {
+      return {
+        x: e.touches[0].clientX - rect.left,
+        y: e.touches[0].clientY - rect.top,
+      };
+    }
+    return { x: e.clientX - rect.left, y: e.clientY - rect.top };
+  };
+
+  const startDraw = useCallback((e: React.MouseEvent | React.TouchEvent) => {
+    e.preventDefault();
+    const ctx = canvasRef.current?.getContext('2d');
+    if (!ctx) return;
+    const { x, y } = getPos(e);
+    ctx.beginPath();
+    ctx.moveTo(x, y);
+    setIsDrawing(true);
+  }, []);
+
+  const draw = useCallback(
+    (e: React.MouseEvent | React.TouchEvent) => {
+      e.preventDefault();
+      if (!isDrawing) return;
+      const ctx = canvasRef.current?.getContext('2d');
+      if (!ctx) return;
+      const { x, y } = getPos(e);
+      ctx.strokeStyle = color;
+      ctx.lineWidth = lineWidth;
+      ctx.lineCap = 'round';
+      ctx.lineTo(x, y);
+      ctx.stroke();
+    },
+    [isDrawing, color, lineWidth]
+  );
+
+  const stopDraw = useCallback(() => {
+    setIsDrawing(false);
+  }, []);
+
+  const clear = useCallback(() => {
+    const ctx = canvasRef.current?.getContext('2d');
+    if (!ctx || !canvasRef.current) return;
+    ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
+  }, []);
+
+  const download = useCallback(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    canvas.toBlob((blob) => {
+      if (!blob) return;
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'signature.png';
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+  }, []);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    canvas.width = canvas.offsetWidth * 2;
+    canvas.height = canvas.offsetHeight * 2;
+    const ctx = canvas.getContext('2d');
+    if (ctx) {
+      ctx.scale(2, 2);
+      ctx.fillStyle = '#fff';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
+  }, []);
+
   return (
-    <ModalWrapper onClose={onClose} title="PDF eSign">
+    <ModalWrapper onClose={onClose} title="PDF eSign" size="max-w-lg">
       <div className="flex flex-col gap-4">
-        <p className="text-sm">
-          Add an electronic signature to any PDF document.
-        </p>
-        <div className="bg-base-200 rounded p-4">
-          <p className="mb-2 text-xs font-bold">CLI Command:</p>
-          <pre className="text-sm">{CLI_CMD}</pre>
+        <p className="text-sm">Draw your signature below.</p>
+        <div className="flex items-center gap-3">
+          <label className="text-xs">Ink:</label>
+          <input
+            type="color"
+            value={color}
+            onChange={(e) => setColor(e.target.value)}
+            className="h-8 w-8 cursor-pointer border-0 p-0"
+          />
+          <label className="text-xs">Width:</label>
+          <input
+            type="range"
+            min={1}
+            max={10}
+            value={lineWidth}
+            onChange={(e) => setLineWidth(Number(e.target.value))}
+            className="range range-xs w-24"
+          />
+          <span className="text-xs">{lineWidth}px</span>
         </div>
-        <p className="text-base-content/60 text-xs">{CLI_NOTE}</p>
-        <div className="bg-base-200 mt-2 rounded p-4">
-          <p className="mb-2 text-xs font-bold">Workflow:</p>
-          <ol className="list-inside list-decimal space-y-1 text-xs">
-            <li>Sign on white paper, take a photo</li>
-            <li>Crop and convert to PNG via image tools</li>
-            <li>Use CLI to place signature on the PDF</li>
-            <li>Output is a new PDF with signature embedded</li>
-          </ol>
+        <canvas
+          ref={canvasRef}
+          className="border-base-300 h-40 w-full touch-none rounded border bg-white"
+          onMouseDown={startDraw}
+          onMouseMove={draw}
+          onMouseUp={stopDraw}
+          onMouseLeave={stopDraw}
+          onTouchStart={startDraw}
+          onTouchMove={draw}
+          onTouchEnd={stopDraw}
+        />
+        <div className="flex gap-2">
+          <button onClick={clear} className="btn btn-ghost btn-sm">
+            Clear
+          </button>
+          <button onClick={download} className="btn btn-primary btn-sm">
+            Download PNG
+          </button>
         </div>
       </div>
     </ModalWrapper>

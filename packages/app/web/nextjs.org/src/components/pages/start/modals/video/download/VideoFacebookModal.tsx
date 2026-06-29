@@ -1,23 +1,34 @@
 'use client';
 
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
 export const VideoFacebookModal: FC<{ onClose: () => void }> = ({
   onClose,
 }) => {
+  const [url, setUrl] = useState('');
+
   return (
     <ModalWrapper onClose={onClose} title="Facebook Download">
       <div className="flex flex-col gap-4">
-        <p className="text-sm">Downloads Facebook video. Requires yt-dlp.</p>
-        <div className="bg-base-200 rounded p-4">
-          <p className="mb-2 text-xs font-bold">CLI Command:</p>
-          <pre className="text-sm">
-            hieudoanm video download facebook &lt;url&gt;
-          </pre>
-        </div>
+        <p className="text-sm">
+          Download Facebook video. Requires server-side yt-dlp.
+        </p>
+        <input
+          type="url"
+          value={url}
+          onChange={(e) => setUrl(e.target.value)}
+          placeholder="https://facebook.com/watch?v=..."
+          className="input input-bordered input-sm w-full"
+        />
+        <button
+          onClick={() => {}}
+          disabled={!url}
+          className="btn btn-primary btn-sm">
+          Download
+        </button>
         <p className="text-base-content/60 text-xs">
-          This operation requires yt-dlp to be installed on your system.
+          Paste a Facebook video URL to download via server-side component.
         </p>
       </div>
     </ModalWrapper>

@@ -1,24 +1,72 @@
 'use client';
 
-import { FC } from 'react';
+import { FC, useState, useRef, useCallback } from 'react';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+
+const downloadBlob = (blob: Blob, name: string) => {
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = name;
+  a.click();
+  URL.revokeObjectURL(url);
+};
 
 export const VideoM4aToMp4Modal: FC<{ onClose: () => void }> = ({
   onClose,
 }) => {
+  const [file, setFile] = useState<File | null>(null);
+  const [processing, setProcessing] = useState(false);
+
+  const handleConvert = useCallback(async () => {
+    if (!file) return;
+    setProcessing(true);
+    try {
+      const ab = await file.arrayBuffer();
+      const ctx = new AudioContext();
+      const buf = await ctx.decodeAudioData(ab);
+      const dest = ctx.createMediaStreamDestination();
+      const src = ctx.createBufferSource();
+      src.buffer = buf;
+      src.connect(dest);
+      const mime = MediaRecorder.isTypeSupported('audio/mp4')
+        ? 'audio/mp4'
+        : 'audio/webm;codecs=opus';
+      const ext = mime.includes('mp4') ? 'm4a' : 'webm';
+      const chunks: Blob[] = [];
+      const rec = new MediaRecorder(dest.stream, { mimeType: mime });
+      rec.ondataavailable = (e) => chunks.push(e.data);
+      rec.onstop = () => {
+        downloadBlob(new Blob(chunks, { type: mime }), `output.${ext}`);
+        setProcessing(false);
+      };
+      rec.start();
+      src.start(0);
+      src.onended = () => rec.stop();
+    } catch {
+      setProcessing(false);
+    }
+  }, [file]);
+
   return (
     <ModalWrapper onClose={onClose} title="M4A to MP4">
       <div className="flex flex-col gap-4">
-        <p className="text-sm">Convert M4A audio to MP4 with silent video.</p>
-        <div className="bg-base-200 rounded p-4">
-          <p className="mb-2 text-xs font-bold">CLI Command:</p>
-          <pre className="text-sm">
-            hieudoanm video convert input.m4a output.mp4
-          </pre>
-        </div>
-        <p className="text-base-content/60 text-xs">
-          Requires ffmpeg installed on your system.
+        <p className="text-sm">
+          Convert M4A audio to M4A (AAC in MP4 container).
         </p>
+        <input
+          type="file"
+          accept=".m4a,audio/mp4"
+          onChange={(e) => setFile(e.target.files?.[0] ?? null)}
+          className="file-input file-input-bordered file-input-sm w-full"
+        />
+        {file && <p className="text-xs opacity-60">{file.name}</p>}
+        <button
+          onClick={handleConvert}
+          disabled={!file || processing}
+          className="btn btn-primary btn-sm">
+          {processing ? 'Converting...' : 'Convert'}
+        </button>
       </div>
     </ModalWrapper>
   );

@@ -1,22 +1,145 @@
 'use client';
 
-import { FC } from 'react';
+import { FC, useState, useCallback, useRef, useEffect } from 'react';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
 export const PdfAnnotateModal: FC<{ onClose: () => void }> = ({ onClose }) => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [file, setFile] = useState<File | null>(null);
+  const [isDrawing, setIsDrawing] = useState(false);
+  const [tool, setTool] = useState<'pen' | 'highlight' | 'underline'>('pen');
+  const [color, setColor] = useState('#ff0000');
+
+  const handleFile = useCallback(
+    async (e: React.ChangeEvent<HTMLInputElement>) => {
+      const f = e.target.files?.[0];
+      if (f) setFile(f);
+    },
+    []
+  );
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    canvas.width = canvas.offsetWidth * 2;
+    canvas.height = canvas.offsetHeight * 2;
+    const ctx = canvas.getContext('2d');
+    if (ctx) {
+      ctx.scale(2, 2);
+      ctx.fillStyle = '#fff';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
+  }, []);
+
+  const getPos = (e: React.MouseEvent) => {
+    const canvas = canvasRef.current;
+    if (!canvas) return { x: 0, y: 0 };
+    const rect = canvas.getBoundingClientRect();
+    return { x: e.clientX - rect.left, y: e.clientY - rect.top };
+  };
+
+  const startDraw = useCallback((e: React.MouseEvent) => {
+    const ctx = canvasRef.current?.getContext('2d');
+    if (!ctx) return;
+    const { x, y } = getPos(e);
+    ctx.beginPath();
+    ctx.moveTo(x, y);
+    setIsDrawing(true);
+  }, []);
+
+  const draw = useCallback(
+    (e: React.MouseEvent) => {
+      if (!isDrawing) return;
+      const ctx = canvasRef.current?.getContext('2d');
+      if (!ctx) return;
+      const { x, y } = getPos(e);
+      ctx.strokeStyle = color;
+      ctx.lineWidth = tool === 'highlight' ? 16 : tool === 'underline' ? 3 : 2;
+      ctx.globalAlpha = tool === 'highlight' ? 0.3 : 1;
+      ctx.lineCap = 'round';
+      ctx.lineTo(x, y);
+      ctx.stroke();
+      ctx.globalAlpha = 1;
+    },
+    [isDrawing, color, tool]
+  );
+
+  const stopDraw = useCallback(() => {
+    setIsDrawing(false);
+    const ctx = canvasRef.current?.getContext('2d');
+    if (ctx) ctx.beginPath();
+  }, []);
+
+  const clear = useCallback(() => {
+    const ctx = canvasRef.current?.getContext('2d');
+    if (!ctx || !canvasRef.current) return;
+    ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
+    ctx.fillStyle = '#fff';
+    ctx.fillRect(0, 0, canvasRef.current.width, canvasRef.current.height);
+  }, []);
+
+  const download = useCallback(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    canvas.toBlob((blob) => {
+      if (!blob) return;
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'annotated.png';
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+  }, []);
+
   return (
-    <ModalWrapper onClose={onClose} title="Annotate PDF" size="max-w-md">
+    <ModalWrapper onClose={onClose} title="Annotate PDF" size="max-w-lg">
       <div className="flex flex-col gap-4">
-        <p className="text-sm">Annotate.</p>
-        <div className="bg-base-200 rounded p-4">
-          <p className="mb-2 text-xs font-bold">CLI Command:</p>
-          <pre className="text-sm">
-            hieudoanm pdf annotate input.pdf --text "Note" --page 1 --x 100 --y
-            100
-          </pre>
+        <p className="text-sm">Draw annotations on a canvas overlay.</p>
+        <input
+          type="file"
+          accept=".pdf"
+          onChange={handleFile}
+          className="file-input file-input-bordered file-input-sm w-full"
+        />
+        {file && <p className="text-base-content/60 text-xs">{file.name}</p>}
+        <div className="flex items-center gap-3 text-xs">
+          <div className="btn-group">
+            {(['pen', 'highlight', 'underline'] as const).map((t) => (
+              <button
+                key={t}
+                onClick={() => setTool(t)}
+                className={`btn btn-xs ${tool === t ? 'btn-active' : ''}`}>
+                {t.charAt(0).toUpperCase() + t.slice(1)}
+              </button>
+            ))}
+          </div>
+          <input
+            type="color"
+            value={color}
+            onChange={(e) => setColor(e.target.value)}
+            className="h-8 w-8 cursor-pointer border-0 p-0"
+          />
         </div>
-        <p className="text-base-content/60 text-xs">
-          Adds text annotations via pdfcpu CLI.
+        <canvas
+          ref={canvasRef}
+          className="border-base-300 h-64 w-full touch-none rounded border bg-white"
+          onMouseDown={startDraw}
+          onMouseMove={draw}
+          onMouseUp={stopDraw}
+          onMouseLeave={stopDraw}
+        />
+        <div className="flex gap-2">
+          <button onClick={clear} className="btn btn-ghost btn-sm">
+            Clear
+          </button>
+          <button onClick={download} className="btn btn-primary btn-sm">
+            Download PNG
+          </button>
+        </div>
+        <p className="text-base-content/40 text-[10px]">
+          Full PDF annotation requires pdfjs. Canvas shows freehand drawing
+          preview.
         </p>
       </div>
     </ModalWrapper>
