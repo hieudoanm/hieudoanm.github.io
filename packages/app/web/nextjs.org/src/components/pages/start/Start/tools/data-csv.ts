@@ -27,14 +27,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     onClick: open('csv-to-xml'),
   },
   {
-    label: 'Excel to CSV',
-    description: 'Data',
-    tags: ['spreadsheet', 'xlsx', 'xls', 'microsoft-excel', 'comma-separated'],
-    emoji: '🔄',
-    color: '#10b981',
-    onClick: open('excel-to-csv'),
-  },
-  {
     label: 'Split CSV',
     description: 'Data',
     tags: ['spreadsheet', 'comma-separated'],

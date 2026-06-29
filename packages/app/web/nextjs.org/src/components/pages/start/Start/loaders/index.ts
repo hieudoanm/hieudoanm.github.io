@@ -3,12 +3,14 @@ import { ModalId } from '../types';
 
 import { loaders as aiLoaders } from './ai';
 import { loaders as casinoLoaders } from './casino';
+import { loaders as chessLoaders } from './chess';
 import { loaders as clocksLoaders } from './clocks';
 import { loaders as converterLoaders } from './converter';
 import { loaders as data_csvLoaders } from './data-csv';
 import { loaders as data_excelLoaders } from './data-excel';
+import { loaders as data_jsonLoaders } from './data-json';
+import { loaders as data_xmlLoaders } from './data-xml';
 import { loaders as data_utilityLoaders } from './data-utility';
-import { loaders as data_xml_jsonLoaders } from './data-xml-json';
 import { loaders as developerLoaders } from './developer';
 import { loaders as editorsLoaders } from './editors';
 import { loaders as educationLoaders } from './education';
@@ -65,12 +67,14 @@ const loaders: Record<
 > = {
   ...aiLoaders,
   ...casinoLoaders,
+  ...chessLoaders,
   ...clocksLoaders,
   ...converterLoaders,
   ...data_csvLoaders,
   ...data_excelLoaders,
+  ...data_jsonLoaders,
+  ...data_xmlLoaders,
   ...data_utilityLoaders,
-  ...data_xml_jsonLoaders,
   ...developerLoaders,
   ...editorsLoaders,
   ...educationLoaders,

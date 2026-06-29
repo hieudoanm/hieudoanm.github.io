@@ -1,5 +1,10 @@
 import { ComponentType, lazy } from 'react';
 
+const loadexcel_to_csv = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/data-excel/ExcelToCsvModal').then(
+    (m) => ({ default: m.ExcelToCsvModal })
+  );
+
 const loadexcel_to_pdf = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/data-excel/ExcelToPdfModal').then(
     (m) => ({ default: m.ExcelToPdfModal })
@@ -19,6 +24,7 @@ export const loaders: Record<
   string,
   () => Promise<{ default: ComponentType<{ onClose: () => void }> }>
 > = {
+  'excel-to-csv': loadexcel_to_csv,
   'excel-to-pdf': loadexcel_to_pdf,
   'excel-to-xml': loadexcel_to_xml,
   'split-excel': loadsplit_excel,

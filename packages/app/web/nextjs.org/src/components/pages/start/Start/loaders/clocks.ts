@@ -1,13 +1,19 @@
 import { ComponentType, lazy } from 'react';
 
-const loadchess_clock = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/clocks/ChessClockModal').then(
-    (m) => ({ default: m.ChessClockModal })
+const loaddays_count = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/clocks/DaysCountModal').then(
+    (m) => ({ default: m.DaysCountModal })
+  );
+
+const loadepoch_convert = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/clocks/EpochConvertModal').then(
+    (m) => ({ default: m.EpochConvertModal })
   );
 
 export const loaders: Record<
   string,
   () => Promise<{ default: ComponentType<{ onClose: () => void }> }>
 > = {
-  'chess-clock': loadchess_clock,
+  'days-count': loaddays_count,
+  'epoch-convert': loadepoch_convert,
 };

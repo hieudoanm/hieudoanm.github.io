@@ -3,12 +3,14 @@ import { ModalId } from '../types';
 
 import { make as aiMake } from './ai';
 import { make as casinoMake } from './casino';
+import { make as chessMake } from './chess';
 import { make as clocksMake } from './clocks';
 import { make as converterMake } from './converter';
 import { make as data_csvMake } from './data-csv';
 import { make as data_excelMake } from './data-excel';
+import { make as data_jsonMake } from './data-json';
+import { make as data_xmlMake } from './data-xml';
 import { make as data_utilityMake } from './data-utility';
-import { make as data_xml_jsonMake } from './data-xml-json';
 import { make as developerMake } from './developer';
 import { make as editorsMake } from './editors';
 import { make as educationMake } from './education';
@@ -64,12 +66,14 @@ export const makeTools = (
 ): Record<string, Tool[]> => ({
   ai: aiMake(open),
   casino: casinoMake(open),
+  chess: chessMake(open),
   clocks: clocksMake(open),
   converter: converterMake(open),
+  'data-json': data_jsonMake(open),
+  'data-xml': data_xmlMake(open),
   'data-csv': data_csvMake(open),
   'data-excel': data_excelMake(open),
   'data-utility': data_utilityMake(open),
-  'data-xml-json': data_xml_jsonMake(open),
   developer: developerMake(open),
   editors: editorsMake(open),
   education: educationMake(open),

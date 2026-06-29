@@ -3,14 +3,6 @@ import { ModalId } from '../types';
 
 export const make = (open: (id: ModalId) => () => void): Tool[] => [
   {
-    label: 'Chess Clock',
-    description: 'Chess Timer',
-    tags: ['world-clock', 'countdown', 'stopwatch', 'alarm'],
-    emoji: '♟️',
-    color: '#8b5cf6',
-    onClick: open('chess-clock'),
-  },
-  {
     label: 'Countdown',
     description: 'Timer',
     tags: ['clock', 'world-clock', 'stopwatch', 'alarm'],
@@ -48,5 +40,21 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     emoji: '⌚',
     color: '#ef4444',
     onClick: open('watchface'),
+  },
+  {
+    label: 'Days Count',
+    description: 'Date Difference',
+    tags: ['clock', 'time', 'date', 'difference'],
+    emoji: '📅',
+    color: '#8b5cf6',
+    onClick: open('days-count'),
+  },
+  {
+    label: 'Epoch Convert',
+    description: 'Timestamp',
+    tags: ['clock', 'time', 'timestamp', 'unix', 'epoch'],
+    emoji: '🕐',
+    color: '#8b5cf6',
+    onClick: open('epoch-convert'),
   },
 ];

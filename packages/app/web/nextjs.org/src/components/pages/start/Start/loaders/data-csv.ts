@@ -15,11 +15,6 @@ const loadcsv_to_xml = () =>
     (m) => ({ default: m.CsvToXmlModal })
   );
 
-const loadexcel_to_csv = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/data-csv/ExcelToCsvModal').then(
-    (m) => ({ default: m.ExcelToCsvModal })
-  );
-
 const loadsplit_csv = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/data-csv/SplitCsvModal').then(
     (m) => ({ default: m.SplitCsvModal })
@@ -32,6 +27,5 @@ export const loaders: Record<
   'csv-to-excel': loadcsv_to_excel,
   'csv-to-json': loadcsv_to_json,
   'csv-to-xml': loadcsv_to_xml,
-  'excel-to-csv': loadexcel_to_csv,
   'split-csv': loadsplit_csv,
 };

@@ -10,20 +10,4 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     color: '#10b981',
     onClick: open('create-zip'),
   },
-  {
-    label: 'Epoch Convert',
-    description: 'Data',
-    tags: ['utility', 'tool'],
-    emoji: '🕐',
-    color: '#10b981',
-    onClick: open('epoch-convert'),
-  },
-  {
-    label: 'Word Counter',
-    description: 'Data',
-    tags: ['utility', 'tool', 'docx', 'doc', 'microsoft-word', 'tally'],
-    emoji: '📝',
-    color: '#10b981',
-    onClick: open('word-counter'),
-  },
 ];

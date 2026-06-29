@@ -107,6 +107,11 @@ export const useAllSections = (
         Card: ToolCard,
       },
       {
+        label: 'Chess',
+        items: f(toolSections.chess, 'label'),
+        Card: ToolCard,
+      },
+      {
         label: 'Clocks',
         items: f(toolSections.clocks, 'label'),
         Card: ToolCard,
@@ -324,8 +329,13 @@ export const useAllSections = (
         Card: ToolCard,
       },
       {
-        label: 'Data XML/JSON',
-        items: f(toolSections['data-xml-json'], 'label'),
+        label: 'Data JSON',
+        items: f(toolSections['data-json'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Data XML',
+        items: f(toolSections['data-xml'], 'label'),
         Card: ToolCard,
       },
       {

@@ -74,4 +74,12 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     color: '#3b82f6',
     onClick: open('slides'),
   },
+  {
+    label: 'Word Counter',
+    description: 'Data',
+    tags: ['utility', 'tool', 'docx', 'doc', 'microsoft-word', 'tally'],
+    emoji: '📝',
+    color: '#10b981',
+    onClick: open('word-counter'),
+  },
 ];
