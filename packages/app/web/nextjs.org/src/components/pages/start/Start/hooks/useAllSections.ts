@@ -239,18 +239,58 @@ export const useAllSections = (
         Card: ToolCard,
       },
       {
-        label: 'Video Convert',
-        items: f(toolSections['video-convert'], 'label'),
+        label: 'AAC Convert',
+        items: f(toolSections['video-convert-aac'], 'label'),
         Card: ToolCard,
       },
       {
-        label: 'Video Convert Audio',
-        items: f(toolSections['video-convert-audio'], 'label'),
+        label: 'AVI Convert',
+        items: f(toolSections['video-convert-avi'], 'label'),
         Card: ToolCard,
       },
       {
-        label: 'Video Convert Misc',
-        items: f(toolSections['video-convert-misc'], 'label'),
+        label: 'FLV Convert',
+        items: f(toolSections['video-convert-flv'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'GIF Convert',
+        items: f(toolSections['video-convert-gif'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'M4A Convert',
+        items: f(toolSections['video-convert-m4a'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'MKV Convert',
+        items: f(toolSections['video-convert-mkv'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'MOV Convert',
+        items: f(toolSections['video-convert-mov'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'MP4 Convert',
+        items: f(toolSections['video-convert-mp4'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'OGG Convert',
+        items: f(toolSections['video-convert-ogg'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'WMV Convert',
+        items: f(toolSections['video-convert-wmv'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'WebM Convert',
+        items: f(toolSections['video-convert-webm'], 'label'),
         Card: ToolCard,
       },
       {

@@ -37,9 +37,17 @@ import { loaders as pdf_extractLoaders } from './pdf-extract';
 import { loaders as pdf_miscLoaders } from './pdf-misc';
 import { loaders as utilitiesLoaders } from './utilities';
 import { loaders as video_audioLoaders } from './video-audio';
-import { loaders as video_convertLoaders } from './video-convert';
-import { loaders as video_convert_audioLoaders } from './video-convert-audio';
-import { loaders as video_convert_miscLoaders } from './video-convert-misc';
+import { loaders as video_convert_aacLoaders } from './video-convert-aac';
+import { loaders as video_convert_aviLoaders } from './video-convert-avi';
+import { loaders as video_convert_flvLoaders } from './video-convert-flv';
+import { loaders as video_convert_gifLoaders } from './video-convert-gif';
+import { loaders as video_convert_m4aLoaders } from './video-convert-m4a';
+import { loaders as video_convert_mkvLoaders } from './video-convert-mkv';
+import { loaders as video_convert_movLoaders } from './video-convert-mov';
+import { loaders as video_convert_mp4Loaders } from './video-convert-mp4';
+import { loaders as video_convert_oggLoaders } from './video-convert-ogg';
+import { loaders as video_convert_wmvLoaders } from './video-convert-wmv';
+import { loaders as video_convert_webmLoaders } from './video-convert-webm';
 import { loaders as video_downloadLoaders } from './video-download';
 import { loaders as video_editLoaders } from './video-edit';
 import { loaders as visualizationLoaders } from './visualization';
@@ -91,9 +99,17 @@ const loaders: Record<
   ...pdf_miscLoaders,
   ...utilitiesLoaders,
   ...video_audioLoaders,
-  ...video_convertLoaders,
-  ...video_convert_audioLoaders,
-  ...video_convert_miscLoaders,
+  ...video_convert_aacLoaders,
+  ...video_convert_aviLoaders,
+  ...video_convert_flvLoaders,
+  ...video_convert_gifLoaders,
+  ...video_convert_m4aLoaders,
+  ...video_convert_mkvLoaders,
+  ...video_convert_movLoaders,
+  ...video_convert_mp4Loaders,
+  ...video_convert_oggLoaders,
+  ...video_convert_wmvLoaders,
+  ...video_convert_webmLoaders,
   ...video_downloadLoaders,
   ...video_editLoaders,
   ...visualizationLoaders,

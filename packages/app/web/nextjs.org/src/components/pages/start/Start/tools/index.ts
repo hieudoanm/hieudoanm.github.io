@@ -37,9 +37,17 @@ import { make as pdf_extractMake } from './pdf-extract';
 import { make as pdf_miscMake } from './pdf-misc';
 import { make as utilitiesMake } from './utilities';
 import { make as video_audioMake } from './video-audio';
-import { make as video_convertMake } from './video-convert';
-import { make as video_convert_audioMake } from './video-convert-audio';
-import { make as video_convert_miscMake } from './video-convert-misc';
+import { make as video_convert_aacMake } from './video-convert-aac';
+import { make as video_convert_aviMake } from './video-convert-avi';
+import { make as video_convert_flvMake } from './video-convert-flv';
+import { make as video_convert_gifMake } from './video-convert-gif';
+import { make as video_convert_m4aMake } from './video-convert-m4a';
+import { make as video_convert_mkvMake } from './video-convert-mkv';
+import { make as video_convert_movMake } from './video-convert-mov';
+import { make as video_convert_mp4Make } from './video-convert-mp4';
+import { make as video_convert_oggMake } from './video-convert-ogg';
+import { make as video_convert_wmvMake } from './video-convert-wmv';
+import { make as video_convert_webmMake } from './video-convert-webm';
 import { make as video_downloadMake } from './video-download';
 import { make as video_editMake } from './video-edit';
 import { make as visualizationMake } from './visualization';
@@ -90,9 +98,17 @@ export const makeTools = (
   'pdf-misc': pdf_miscMake(open),
   utilities: utilitiesMake(open),
   'video-audio': video_audioMake(open),
-  'video-convert': video_convertMake(open),
-  'video-convert-audio': video_convert_audioMake(open),
-  'video-convert-misc': video_convert_miscMake(open),
+  'video-convert-aac': video_convert_aacMake(open),
+  'video-convert-avi': video_convert_aviMake(open),
+  'video-convert-flv': video_convert_flvMake(open),
+  'video-convert-gif': video_convert_gifMake(open),
+  'video-convert-m4a': video_convert_m4aMake(open),
+  'video-convert-mkv': video_convert_mkvMake(open),
+  'video-convert-mov': video_convert_movMake(open),
+  'video-convert-mp4': video_convert_mp4Make(open),
+  'video-convert-ogg': video_convert_oggMake(open),
+  'video-convert-wmv': video_convert_wmvMake(open),
+  'video-convert-webm': video_convert_webmMake(open),
   'video-download': video_downloadMake(open),
   'video-edit': video_editMake(open),
   visualization: visualizationMake(open),

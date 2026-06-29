@@ -1,14 +1,8 @@
 'use client';
 
-import { FC, useState, useCallback } from 'react';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
-import {
-  downloadBlob,
-  encodeGif,
-  buildPalette,
-  quantizePixels,
-  lzwEncode,
-} from './utils';
+import { FC, useCallback, useState } from 'react';
+import { downloadBlob, encodeGif } from './utils';
 
 export const VideoToGifModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [file, setFile] = useState<File | null>(null);
