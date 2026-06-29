@@ -1,9 +1,10 @@
-import { ToolCard } from '@hieudoanm.github.io/components/pages/start/cards/ToolCard';
+import {
+  Tool,
+  ToolCard,
+} from '@hieudoanm.github.io/components/pages/start/cards/ToolCard';
 import { FC, useDeferredValue, useMemo } from 'react';
-
-import { matchTool, GRID } from '../constants';
+import { GRID, matchTool } from '../constants';
 import { getToolSectionDefs } from '../sections';
-import { Tool } from '@hieudoanm.github.io/components/pages/start/cards/ToolCard';
 import { Section } from './Section';
 
 interface ToolsViewProps {
