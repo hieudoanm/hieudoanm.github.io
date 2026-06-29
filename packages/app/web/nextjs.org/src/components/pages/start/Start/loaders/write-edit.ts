@@ -1,52 +1,52 @@
 import { ComponentType, lazy } from 'react';
 
 const loadwrite_complete = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/write/edit/WriteCompleteModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/write-edit/WriteCompleteModal').then(
     (m) => ({ default: m.WriteCompleteModal })
   );
 
 const loadwrite_grammar = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/write/edit/WriteGrammarModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/write-edit/WriteGrammarModal').then(
     (m) => ({ default: m.WriteGrammarModal })
   );
 
 const loadwrite_humanizer = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/write/edit/WriteHumanizerModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/write-edit/WriteHumanizerModal').then(
     (m) => ({ default: m.WriteHumanizerModal })
   );
 
 const loadwrite_improve_text = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/write/edit/WriteImproveTextModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/write-edit/WriteImproveTextModal').then(
     (m) => ({ default: m.WriteImproveTextModal })
   );
 
 const loadwrite_paraphrase = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/write/edit/WriteParaphraseModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/write-edit/WriteParaphraseModal').then(
     (m) => ({ default: m.WriteParaphraseModal })
   );
 
 const loadwrite_rewrite = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/write/edit/WriteRewriteModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/write-edit/WriteRewriteModal').then(
     (m) => ({ default: m.WriteRewriteModal })
   );
 
 const loadwrite_shorten = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/write/edit/WriteShortenModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/write-edit/WriteShortenModal').then(
     (m) => ({ default: m.WriteShortenModal })
   );
 
 const loadwrite_summarize = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/write/edit/WriteSummarizeModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/write-edit/WriteSummarizeModal').then(
     (m) => ({ default: m.WriteSummarizeModal })
   );
 
 const loadwrite_tone = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/write/edit/WriteToneModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/write-edit/WriteToneModal').then(
     (m) => ({ default: m.WriteToneModal })
   );
 
 const loadwrite_translate = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/write/edit/WriteTranslateModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/write-edit/WriteTranslateModal').then(
     (m) => ({ default: m.WriteTranslateModal })
   );
 

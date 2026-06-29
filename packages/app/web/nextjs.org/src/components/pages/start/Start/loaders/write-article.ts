@@ -1,57 +1,57 @@
 import { ComponentType, lazy } from 'react';
 
 const loadwrite_article = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/write/article/WriteArticleModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/write-article/WriteArticleModal').then(
     (m) => ({ default: m.WriteArticleModal })
   );
 
 const loadwrite_article_rewriter = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/write/article/WriteArticleRewriterModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/write-article/WriteArticleRewriterModal').then(
     (m) => ({ default: m.WriteArticleRewriterModal })
   );
 
 const loadwrite_blog_ideas = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/write/article/WriteBlogIdeasModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/write-article/WriteBlogIdeasModal').then(
     (m) => ({ default: m.WriteBlogIdeasModal })
   );
 
 const loadwrite_blog_outline = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/write/article/WriteBlogOutlineModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/write-article/WriteBlogOutlineModal').then(
     (m) => ({ default: m.WriteBlogOutlineModal })
   );
 
 const loadwrite_blog_post = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/write/article/WriteBlogPostModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/write-article/WriteBlogPostModal').then(
     (m) => ({ default: m.WriteBlogPostModal })
   );
 
 const loadwrite_essay = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/write/article/WriteEssayModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/write-article/WriteEssayModal').then(
     (m) => ({ default: m.WriteEssayModal })
   );
 
 const loadwrite_listicle = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/write/article/WriteListicleModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/write-article/WriteListicleModal').then(
     (m) => ({ default: m.WriteListicleModal })
   );
 
 const loadwrite_paragraph = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/write/article/WriteParagraphModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/write-article/WriteParagraphModal').then(
     (m) => ({ default: m.WriteParagraphModal })
   );
 
 const loadwrite_story = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/write/article/WriteStoryModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/write-article/WriteStoryModal').then(
     (m) => ({ default: m.WriteStoryModal })
   );
 
 const loadwrite_story_ideas = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/write/article/WriteStoryIdeasModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/write-article/WriteStoryIdeasModal').then(
     (m) => ({ default: m.WriteStoryIdeasModal })
   );
 
 const loadwrite_youtube_script = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/write/article/WriteYoutubeScriptModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/write-article/WriteYoutubeScriptModal').then(
     (m) => ({ default: m.WriteYoutubeScriptModal })
   );
 

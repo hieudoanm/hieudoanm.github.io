@@ -1,32 +1,32 @@
 import { ComponentType, lazy } from 'react';
 
 const loadvideo_download_facebook = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/video/download/VideoFacebookModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/video-download/VideoFacebookModal').then(
     (m) => ({ default: m.VideoFacebookModal })
   );
 
 const loadvideo_download_instagram = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/video/download/VideoInstagramModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/video-download/VideoInstagramModal').then(
     (m) => ({ default: m.VideoInstagramModal })
   );
 
 const loadvideo_download_tiktok = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/video/download/VideoTikTokModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/video-download/VideoTikTokModal').then(
     (m) => ({ default: m.VideoTikTokModal })
   );
 
 const loadvideo_download_twitter = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/video/download/VideoTwitterModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/video-download/VideoTwitterModal').then(
     (m) => ({ default: m.VideoTwitterModal })
   );
 
 const loadvideo_youtube_text = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/video/download/VideoYoutubeTextModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/video-download/VideoYoutubeTextModal').then(
     (m) => ({ default: m.VideoYoutubeTextModal })
   );
 
 const loadvideo_youtube_transcript = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/video/download/VideoYoutubeTranscriptModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/video-download/VideoYoutubeTranscriptModal').then(
     (m) => ({ default: m.VideoYoutubeTranscriptModal })
   );
 

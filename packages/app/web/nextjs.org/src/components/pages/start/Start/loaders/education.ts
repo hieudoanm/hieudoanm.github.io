@@ -1,7 +1,7 @@
 import { ComponentType, lazy } from 'react';
 
 const loadperiodic_table = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/education/chemistry/PeriodicTableModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/education/PeriodicTableModal').then(
     (m) => ({ default: m.PeriodicTableModal })
   );
 

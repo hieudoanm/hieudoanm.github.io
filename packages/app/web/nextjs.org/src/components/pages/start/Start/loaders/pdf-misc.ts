@@ -1,17 +1,17 @@
 import { ComponentType, lazy } from 'react';
 
 const loadpdf_security = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/pdf/PdfSecurityModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/pdf-misc/PdfSecurityModal').then(
     (m) => ({ default: m.PdfSecurityModal })
   );
 
 const loadpdf_translate = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/pdf/PdfTranslateModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/pdf-misc/PdfTranslateModal').then(
     (m) => ({ default: m.PdfTranslateModal })
   );
 
 const loadpdf_esign = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/pdf/esign/PdfEsignModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/pdf-misc/PdfEsignModal').then(
     (m) => ({ default: m.PdfEsignModal })
   );
 

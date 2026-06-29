@@ -1,42 +1,42 @@
 import { ComponentType, lazy } from 'react';
 
 const loadepub_to_pdf = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/pdf/from-doc/EpubToPdfModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/pdf-create/EpubToPdfModal').then(
     (m) => ({ default: m.EpubToPdfModal })
   );
 
 const loadimages_to_pdf = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/pdf/from-doc/ImagesToPdfModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/pdf-create/ImagesToPdfModal').then(
     (m) => ({ default: m.ImagesToPdfModal })
   );
 
 const loadcreate_md_to_pdf = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/pdf/from-doc/CreateMdToPdfModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/pdf-create/CreateMdToPdfModal').then(
     (m) => ({ default: m.CreateMdToPdfModal })
   );
 
 const loadppt_to_pdf = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/pdf/from-doc/PptToPdfModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/pdf-create/PptToPdfModal').then(
     (m) => ({ default: m.PptToPdfModal })
   );
 
 const loadcreate_text_to_pdf = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/pdf/from-doc/CreateTextToPdfModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/pdf-create/CreateTextToPdfModal').then(
     (m) => ({ default: m.CreateTextToPdfModal })
   );
 
 const loadcreate_url_to_pdf = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/pdf/from-doc/CreateUrlToPdfModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/pdf-create/CreateUrlToPdfModal').then(
     (m) => ({ default: m.CreateUrlToPdfModal })
   );
 
 const loadurl_to_pdf = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/pdf/from-doc/UrlToPdfModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/pdf-create/UrlToPdfModal').then(
     (m) => ({ default: m.UrlToPdfModal })
   );
 
 const loadword_to_pdf = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/pdf/from-doc/WordToPdfModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/pdf-create/WordToPdfModal').then(
     (m) => ({ default: m.WordToPdfModal })
   );
 

@@ -1,52 +1,52 @@
 import { ComponentType, lazy } from 'react';
 
 const loadimage_convert_gif_to_jpg = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-legacy/ImageConvertGifToJpgModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/image-convert-pro/ImageConvertGifToJpgModal').then(
     (m) => ({ default: m.ImageConvertGifToJpgModal })
   );
 
 const loadimage_convert_gif_to_png = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-legacy/ImageConvertGifToPngModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/image-convert-pro/ImageConvertGifToPngModal').then(
     (m) => ({ default: m.ImageConvertGifToPngModal })
   );
 
 const loadimage_convert_heic_to_avif = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-legacy/ImageConvertHeicToAvifModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/image-convert-pro/ImageConvertHeicToAvifModal').then(
     (m) => ({ default: m.ImageConvertHeicToAvifModal })
   );
 
 const loadimage_convert_psd_to_jpg = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-legacy/ImageConvertPsdToJpgModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/image-convert-pro/ImageConvertPsdToJpgModal').then(
     (m) => ({ default: m.ImageConvertPsdToJpgModal })
   );
 
 const loadimage_convert_psd_to_png = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-legacy/ImageConvertPsdToPngModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/image-convert-pro/ImageConvertPsdToPngModal').then(
     (m) => ({ default: m.ImageConvertPsdToPngModal })
   );
 
 const loadimage_convert_svg_to_png = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-legacy/ImageConvertSvgToPngModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/image-convert-pro/ImageConvertSvgToPngModal').then(
     (m) => ({ default: m.ImageConvertSvgToPngModal })
   );
 
 const loadimage_convert_tiff_to_jpg = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-legacy/ImageConvertTiffToJpgModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/image-convert-pro/ImageConvertTiffToJpgModal').then(
     (m) => ({ default: m.ImageConvertTiffToJpgModal })
   );
 
 const loadimage_convert_tiff_to_png = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-legacy/ImageConvertTiffToPngModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/image-convert-pro/ImageConvertTiffToPngModal').then(
     (m) => ({ default: m.ImageConvertTiffToPngModal })
   );
 
 const loadimage_convert_webp_to_avif = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-legacy/ImageConvertWebpToAvifModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/image-convert-pro/ImageConvertWebpToAvifModal').then(
     (m) => ({ default: m.ImageConvertWebpToAvifModal })
   );
 
 const loadimage_convert_webp_to_gif = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/image-edit/convert-legacy/ImageConvertWebpToGifModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/image-convert-pro/ImageConvertWebpToGifModal').then(
     (m) => ({ default: m.ImageConvertWebpToGifModal })
   );
 

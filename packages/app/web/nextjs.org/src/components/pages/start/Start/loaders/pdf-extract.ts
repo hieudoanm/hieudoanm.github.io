@@ -1,32 +1,32 @@
 import { ComponentType, lazy } from 'react';
 
 const loadpdf_extract_images = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/pdf/extract/PdfExtractImagesModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/pdf-extract/PdfExtractImagesModal').then(
     (m) => ({ default: m.PdfExtractImagesModal })
   );
 
 const loadpdf_extract_text = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/pdf/extract/PdfExtractTextModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/pdf-extract/PdfExtractTextModal').then(
     (m) => ({ default: m.PdfExtractTextModal })
   );
 
 const loadpdf_info = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/pdf/extract/PdfInfoModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/pdf-extract/PdfInfoModal').then(
     (m) => ({ default: m.PdfInfoModal })
   );
 
 const loadpdf_metadata = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/pdf/extract/PdfMetadataModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/pdf-extract/PdfMetadataModal').then(
     (m) => ({ default: m.PdfMetadataModal })
   );
 
 const loadpdf_ocr = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/pdf/extract/PdfOcrModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/pdf-extract/PdfOcrModal').then(
     (m) => ({ default: m.PdfOcrModal })
   );
 
 const loadpdf_repair = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/pdf/extract/PdfRepairModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/pdf-extract/PdfRepairModal').then(
     (m) => ({ default: m.PdfRepairModal })
   );
 

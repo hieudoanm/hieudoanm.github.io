@@ -1,62 +1,62 @@
 import { ComponentType, lazy } from 'react';
 
 const loadvideo_aac_to_mp3 = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/video/convert-audio/VideoAacToMp3Modal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/video-convert-audio/VideoAacToMp3Modal').then(
     (m) => ({ default: m.VideoAacToMp3Modal })
   );
 
 const loadvideo_aac_to_mp4 = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/video/convert-audio/VideoAacToMp4Modal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/video-convert-audio/VideoAacToMp4Modal').then(
     (m) => ({ default: m.VideoAacToMp4Modal })
   );
 
 const loadvideo_aac_to_wav = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/video/convert-audio/VideoAacToWavModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/video-convert-audio/VideoAacToWavModal').then(
     (m) => ({ default: m.VideoAacToWavModal })
   );
 
 const loadvideo_m4a_to_mp3 = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/video/convert-audio/VideoM4aToMp3Modal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/video-convert-audio/VideoM4aToMp3Modal').then(
     (m) => ({ default: m.VideoM4aToMp3Modal })
   );
 
 const loadvideo_m4a_to_mp4 = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/video/convert-audio/VideoM4aToMp4Modal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/video-convert-audio/VideoM4aToMp4Modal').then(
     (m) => ({ default: m.VideoM4aToMp4Modal })
   );
 
 const loadvideo_m4a_to_wav = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/video/convert-audio/VideoM4aToWavModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/video-convert-audio/VideoM4aToWavModal').then(
     (m) => ({ default: m.VideoM4aToWavModal })
   );
 
 const loadvideo_mov_to_mp3 = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/video/convert-audio/VideoMovToMp3Modal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/video-convert-audio/VideoMovToMp3Modal').then(
     (m) => ({ default: m.VideoMovToMp3Modal })
   );
 
 const loadvideo_mov_to_wav = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/video/convert-audio/VideoMovToWavModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/video-convert-audio/VideoMovToWavModal').then(
     (m) => ({ default: m.VideoMovToWavModal })
   );
 
 const loadvideo_mp4_to_mp3 = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/video/convert-audio/VideoMp4ToMp3Modal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/video-convert-audio/VideoMp4ToMp3Modal').then(
     (m) => ({ default: m.VideoMp4ToMp3Modal })
   );
 
 const loadvideo_mp4_to_wav = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/video/convert-audio/VideoMp4ToWavModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/video-convert-audio/VideoMp4ToWavModal').then(
     (m) => ({ default: m.VideoMp4ToWavModal })
   );
 
 const loadvideo_ogg_to_mp3 = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/video/convert-audio/VideoOggToMp3Modal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/video-convert-audio/VideoOggToMp3Modal').then(
     (m) => ({ default: m.VideoOggToMp3Modal })
   );
 
 const loadvideo_ogg_to_wav = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/video/convert-audio/VideoOggToWavModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/video-convert-audio/VideoOggToWavModal').then(
     (m) => ({ default: m.VideoOggToWavModal })
   );
 

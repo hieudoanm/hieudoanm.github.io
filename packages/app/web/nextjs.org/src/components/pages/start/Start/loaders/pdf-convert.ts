@@ -1,27 +1,27 @@
 import { ComponentType, lazy } from 'react';
 
 const loadpdf_to_excel = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/pdf/to-doc/PdfToExcelModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/pdf-convert/PdfToExcelModal').then(
     (m) => ({ default: m.PdfToExcelModal })
   );
 
 const loadpdf_to_epub = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/pdf/to-doc/PdfToEpubModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/pdf-convert/PdfToEpubModal').then(
     (m) => ({ default: m.PdfToEpubModal })
   );
 
 const loadpdf_to_images = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/pdf/to-doc/PdfToImagesModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/pdf-convert/PdfToImagesModal').then(
     (m) => ({ default: m.PdfToImagesModal })
   );
 
 const loadpdf_to_ppt = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/pdf/to-doc/PdfToPptModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/pdf-convert/PdfToPptModal').then(
     (m) => ({ default: m.PdfToPptModal })
   );
 
 const loadpdf_to_word = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/pdf/to-doc/PdfToWordModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/pdf-convert/PdfToWordModal').then(
     (m) => ({ default: m.PdfToWordModal })
   );
 
