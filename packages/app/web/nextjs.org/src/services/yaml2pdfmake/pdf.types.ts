@@ -1,7 +1,5 @@
 export type Margin =
-  | [number, number, number, number]
-  | [number, number]
-  | number;
+  [number, number, number, number] | [number, number] | number;
 
 export type PdfInlineText =
   | string

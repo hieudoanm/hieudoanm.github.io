@@ -137,9 +137,7 @@ export interface Reference {
 ========================================================= */
 
 export type Margin =
-  | [number, number, number, number]
-  | [number, number]
-  | number;
+  [number, number, number, number] | [number, number] | number;
 
 /* ---------- Text ---------- */
 

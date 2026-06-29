@@ -1,10 +1,5 @@
 export type Weight =
-  | 'ton'
-  | 'pound'
-  | 'ounce'
-  | 'kilogram'
-  | 'gram'
-  | 'milligram';
+  'ton' | 'pound' | 'ounce' | 'kilogram' | 'gram' | 'milligram';
 
 export const weightRates: Record<Weight, number> = {
   ton: 1,

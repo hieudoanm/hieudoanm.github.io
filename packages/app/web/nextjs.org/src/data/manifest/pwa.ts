@@ -98,10 +98,7 @@ export interface PWAManifest {
 
   launch_handler: {
     client_mode:
-      | 'auto'
-      | 'focus-existing'
-      | 'navigate-existing'
-      | 'navigate-new';
+      'auto' | 'focus-existing' | 'navigate-existing' | 'navigate-new';
   };
 
   note_taking: {

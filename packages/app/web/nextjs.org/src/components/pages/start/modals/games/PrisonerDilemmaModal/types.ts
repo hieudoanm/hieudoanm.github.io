@@ -10,8 +10,4 @@ export interface Round {
 }
 
 export type Strategy =
-  | 'titfortat'
-  | 'alwaysdefect'
-  | 'alwayscooperate'
-  | 'grimtrigger'
-  | 'random';
+  'titfortat' | 'alwaysdefect' | 'alwayscooperate' | 'grimtrigger' | 'random';

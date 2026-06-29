@@ -36,5 +36,4 @@ resume:
 `;
 
 export type ParseResult =
-  | { ok: true; doc: unknown }
-  | { ok: false; error: string };
+  { ok: true; doc: unknown } | { ok: false; error: string };

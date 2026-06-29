@@ -7,11 +7,7 @@ export type AttractorFn = (
 ) => readonly [number, number, number];
 
 export type AttractorType =
-  | 'lorenz'
-  | 'aizawa'
-  | 'thomas'
-  | 'halvorsen'
-  | 'arneodo';
+  'lorenz' | 'aizawa' | 'thomas' | 'halvorsen' | 'arneodo';
 
 export interface AttractorSettings {
   scale: number;

@@ -1,9 +1,5 @@
 export type DataUnit =
-  | 'bit'
-  | 'kilobyte'
-  | 'megabyte'
-  | 'gigabyte'
-  | 'terabyte';
+  'bit' | 'kilobyte' | 'megabyte' | 'gigabyte' | 'terabyte';
 
 export const dataRates: Record<DataUnit, number> = {
   bit: 1,

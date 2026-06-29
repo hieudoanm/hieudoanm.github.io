@@ -8,8 +8,7 @@ interface BatteryManager extends EventTarget {
   onchargingchange: ((this: BatteryManager, ev: Event) => unknown) | null;
   onchargingtimechange: ((this: BatteryManager, ev: Event) => unknown) | null;
   ondischargingtimechange:
-    | ((this: BatteryManager, ev: Event) => unknown)
-    | null;
+    ((this: BatteryManager, ev: Event) => unknown) | null;
   onlevelchange: ((this: BatteryManager, ev: Event) => unknown) | void;
 }
 

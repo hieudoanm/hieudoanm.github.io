@@ -57,8 +57,7 @@ function parseRawEntry(
   const remaining = Number(entry.remaining ?? entry.messages_remaining ?? 0);
   const used = Math.max(0, limit - remaining);
   const resetRaw = (entry.reset_time ?? entry.resets_at ?? null) as
-    | string
-    | null;
+    string | null;
   const resetAt = resetRaw ? new Date(resetRaw).getTime() : null;
   const period: PeriodData = { used, limit, resetAt };
   return win === 'daily' ? { daily: period } : { weekly: period };

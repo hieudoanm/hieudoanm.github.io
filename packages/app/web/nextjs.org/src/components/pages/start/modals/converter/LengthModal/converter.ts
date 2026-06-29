@@ -1,10 +1,5 @@
 export type Length =
-  | 'yard'
-  | 'foot'
-  | 'inch'
-  | 'centimeter'
-  | 'meter'
-  | 'kilometer';
+  'yard' | 'foot' | 'inch' | 'centimeter' | 'meter' | 'kilometer';
 
 export const lengthRates: Record<Length, number> = {
   yard: 1,

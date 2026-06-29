@@ -48,12 +48,7 @@ export interface OgImageProps {
 
 export interface OgProps {
   type?:
-    | 'website'
-    | 'article'
-    | 'profile'
-    | 'book'
-    | 'music.song'
-    | 'video.movie';
+    'website' | 'article' | 'profile' | 'book' | 'music.song' | 'video.movie';
   siteName?: string;
   locale?: string;
   alternateLocales?: string[];

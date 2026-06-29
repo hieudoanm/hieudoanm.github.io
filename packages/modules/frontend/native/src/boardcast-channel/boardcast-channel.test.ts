@@ -1,8 +1,7 @@
 import { createBroadcastChannel } from './boardcast-channel';
 
 type TestMessage =
-  | { type: 'theme'; value: 'light' | 'dark' }
-  | { type: 'logout' };
+  { type: 'theme'; value: 'light' | 'dark' } | { type: 'logout' };
 
 class MockBroadcastChannel {
   public name: string;

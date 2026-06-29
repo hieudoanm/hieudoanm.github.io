@@ -13,12 +13,7 @@ import { updateCastlingRights } from '../game/game';
 import { findBestMove } from './search';
 
 export type UCICommand =
-  | 'uci'
-  | 'isready'
-  | 'stop'
-  | 'quit'
-  | PositionCommand
-  | GoCommand;
+  'uci' | 'isready' | 'stop' | 'quit' | PositionCommand | GoCommand;
 
 export interface PositionCommand {
   type: 'position';
