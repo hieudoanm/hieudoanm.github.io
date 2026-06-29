@@ -3,6 +3,21 @@ import { ModalId } from '../types';
 
 export const make = (open: (id: ModalId) => () => void): Tool[] => [
   {
+    label: 'DOI',
+    description: 'Cite',
+    tags: [
+      'education',
+      'learning',
+      'study',
+      'academic',
+      'digital-object-identifier',
+      'citation',
+    ],
+    emoji: '📄',
+    color: '#3b82f6',
+    onClick: open('doi'),
+  },
+  {
     label: 'English',
     description: 'Dictionary',
     tags: ['education', 'learning', 'study', 'academic'],
@@ -17,14 +32,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     emoji: '📓',
     color: '#fefefe',
     onClick: open('flashcards'),
-  },
-  {
-    label: 'Sign Language',
-    description: 'Detection',
-    tags: ['education', 'learning', 'study', 'academic'],
-    emoji: '🤟',
-    color: '#3b82f6',
-    onClick: open('sign'),
   },
   {
     label: 'Periodic Table',
@@ -43,18 +50,11 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     onClick: open('pitch'),
   },
   {
-    label: 'DOI',
-    description: 'Cite',
-    tags: [
-      'education',
-      'learning',
-      'study',
-      'academic',
-      'digital-object-identifier',
-      'citation',
-    ],
-    emoji: '📄',
+    label: 'Sign Language',
+    description: 'Detection',
+    tags: ['education', 'learning', 'study', 'academic'],
+    emoji: '🤟',
     color: '#3b82f6',
-    onClick: open('doi'),
+    onClick: open('sign'),
   },
 ];

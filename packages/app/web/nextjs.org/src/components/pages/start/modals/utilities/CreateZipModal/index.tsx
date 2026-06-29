@@ -1,8 +1,6 @@
-'use client';
-
-import { FC, useState, useCallback, useRef } from 'react';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
-import { FileEntry, downloadBlob, createZipBlob, crc32 } from './utils';
+import { FC, useCallback, useRef, useState } from 'react';
+import { FileEntry, createZipBlob, downloadBlob } from './utils';
 
 export const CreateZipModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [files, setFiles] = useState<FileEntry[]>([]);
@@ -96,4 +94,5 @@ export const CreateZipModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </ModalWrapper>
   );
 };
+
 CreateZipModal.displayName = 'CreateZipModal';

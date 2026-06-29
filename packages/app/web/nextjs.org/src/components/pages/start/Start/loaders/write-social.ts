@@ -1,31 +1,31 @@
-import { ComponentType, lazy } from 'react';
+import { ComponentType } from 'react';
 
-const loadwrite_caption = () =>
+const loadWriteCaption = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/write-social/WriteCaptionModal').then(
     (m) => ({ default: m.WriteCaptionModal })
   );
 
-const loadwrite_headline = () =>
+const loadWriteHeadline = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/write-social/WriteHeadlineModal').then(
     (m) => ({ default: m.WriteHeadlineModal })
   );
 
-const loadwrite_linkedin_post = () =>
+const loadWriteLinkedInPost = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/write-social/WriteLinkedInPostModal').then(
     (m) => ({ default: m.WriteLinkedInPostModal })
   );
 
-const loadwrite_meta_description = () =>
+const loadWriteMetaDescription = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/write-social/WriteMetaDescriptionModal').then(
     (m) => ({ default: m.WriteMetaDescriptionModal })
   );
 
-const loadwrite_tiktok_script = () =>
+const loadWriteTikTokScript = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/write-social/WriteTikTokScriptModal').then(
     (m) => ({ default: m.WriteTikTokScriptModal })
   );
 
-const loadwrite_twitter_generator = () =>
+const loadWriteTwitterGenerator = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/write-social/WriteTwitterGeneratorModal').then(
     (m) => ({ default: m.WriteTwitterGeneratorModal })
   );
@@ -34,10 +34,10 @@ export const loaders: Record<
   string,
   () => Promise<{ default: ComponentType<{ onClose: () => void }> }>
 > = {
-  'write-caption': loadwrite_caption,
-  'write-headline': loadwrite_headline,
-  'write-linkedin-post': loadwrite_linkedin_post,
-  'write-meta-description': loadwrite_meta_description,
-  'write-tiktok-script': loadwrite_tiktok_script,
-  'write-twitter-generator': loadwrite_twitter_generator,
+  'write-caption': loadWriteCaption,
+  'write-headline': loadWriteHeadline,
+  'write-linkedin-post': loadWriteLinkedInPost,
+  'write-meta-description': loadWriteMetaDescription,
+  'write-tiktok-script': loadWriteTikTokScript,
+  'write-twitter-generator': loadWriteTwitterGenerator,
 };

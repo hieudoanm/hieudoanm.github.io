@@ -117,6 +117,11 @@ export const useAllSections = (
         Card: ToolCard,
       },
       {
+        label: 'Colors',
+        items: f(toolSections.colors, 'label'),
+        Card: ToolCard,
+      },
+      {
         label: 'Format',
         items: f(toolSections.format, 'label'),
         Card: ToolCard,
@@ -132,10 +137,34 @@ export const useAllSections = (
         Card: ToolCard,
       },
       { label: 'Eyes', items: f(toolSections.eyes, 'label'), Card: ToolCard },
-      { label: 'Games', items: f(toolSections.games, 'label'), Card: ToolCard },
       {
-        label: 'Memory',
-        items: f(toolSections.memory, 'label'),
+        label: 'Games Arcade',
+        items: f(toolSections['games-arcade'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Games Memory',
+        items: f(toolSections['games-memory'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Games Puzzle',
+        items: f(toolSections['games-puzzle'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Games Trivia',
+        items: f(toolSections['games-trivia'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Games Word',
+        items: f(toolSections['games-word'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Text Convert',
+        items: f(toolSections['text-convert'], 'label'),
         Card: ToolCard,
       },
       {
@@ -321,11 +350,6 @@ export const useAllSections = (
       {
         label: 'Data Excel',
         items: f(toolSections['data-excel'], 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'Data Utility',
-        items: f(toolSections['data-utility'], 'label'),
         Card: ToolCard,
       },
       {

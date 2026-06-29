@@ -1,11 +1,11 @@
-import { ComponentType, lazy } from 'react';
+import { ComponentType } from 'react';
 
-const loadimage_convert_psd_to_jpg = () =>
+const loadImageConvertPsdToJpg = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/image-convert-psd/ImageConvertPsdToJpgModal').then(
     (m) => ({ default: m.ImageConvertPsdToJpgModal })
   );
 
-const loadimage_convert_psd_to_png = () =>
+const loadImageConvertPsdToPng = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/image-convert-psd/ImageConvertPsdToPngModal').then(
     (m) => ({ default: m.ImageConvertPsdToPngModal })
   );
@@ -14,6 +14,6 @@ export const loaders: Record<
   string,
   () => Promise<{ default: ComponentType<{ onClose: () => void }> }>
 > = {
-  'image-convert-psd-to-jpg': loadimage_convert_psd_to_jpg,
-  'image-convert-psd-to-png': loadimage_convert_psd_to_png,
+  'image-convert-psd-to-jpg': loadImageConvertPsdToJpg,
+  'image-convert-psd-to-png': loadImageConvertPsdToPng,
 };

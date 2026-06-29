@@ -3,6 +3,14 @@ import { ModalId } from '../types';
 
 export const make = (open: (id: ModalId) => () => void): Tool[] => [
   {
+    label: 'HEIC to AVIF',
+    description: 'Convert',
+    tags: ['image', 'convert'],
+    emoji: '🔄',
+    color: '#06b6d4',
+    onClick: open('image-convert-heic-to-avif'),
+  },
+  {
     label: 'HEIC to JPG',
     description: 'Convert',
     tags: ['image', 'convert'],
@@ -17,13 +25,5 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     emoji: '🔄',
     color: '#06b6d4',
     onClick: open('image-convert-heic-to-png'),
-  },
-  {
-    label: 'HEIC to AVIF',
-    description: 'Convert',
-    tags: ['image', 'convert'],
-    emoji: '🔄',
-    color: '#06b6d4',
-    onClick: open('image-convert-heic-to-avif'),
   },
 ];

@@ -26,28 +26,20 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     onClick: open('clipboard'),
   },
   {
+    label: 'Create ZIP',
+    description: 'Data',
+    tags: ['utility', 'tool'],
+    emoji: '🗜️',
+    color: '#10b981',
+    onClick: open('create-zip'),
+  },
+  {
     label: 'Emojis',
     description: 'Explorer',
     tags: ['utility', 'tool', 'productivity'],
     emoji: '😀',
     color: '#f59e0b',
     onClick: open('emojis'),
-  },
-  {
-    label: 'Contrast',
-    description: 'Checker',
-    tags: ['utility', 'tool', 'productivity'],
-    emoji: '👁️',
-    color: '#3b82f6',
-    onClick: open('contrast-checker'),
-  },
-  {
-    label: 'Gradient',
-    description: 'Generator',
-    tags: ['utility', 'tool', 'productivity', 'create', 'maker', 'builder'],
-    emoji: '🎨',
-    color: '#8b5cf6',
-    onClick: open('gradient-generator'),
   },
   {
     label: 'Kaprekar',
@@ -90,6 +82,14 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     onClick: open('text-password'),
   },
   {
+    label: 'Screen Recorder',
+    description: 'Record & Download',
+    tags: ['utility', 'tool', 'productivity'],
+    emoji: '🎥',
+    color: '#3b82f6',
+    onClick: open('screen-recorder'),
+  },
+  {
     label: 'Word Count',
     description: 'Counter',
     tags: [
@@ -104,13 +104,5 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     emoji: '📊',
     color: '#3b82f6',
     onClick: open('text-word-count'),
-  },
-  {
-    label: 'Screen Recorder',
-    description: 'Record & Download',
-    tags: ['utility', 'tool', 'productivity'],
-    emoji: '🎥',
-    color: '#3b82f6',
-    onClick: open('screen-recorder'),
   },
 ];

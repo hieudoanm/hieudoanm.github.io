@@ -1,16 +1,13 @@
 'use client';
 
-import { FC, useState, useMemo } from 'react';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { FC, useMemo, useState } from 'react';
 import {
-  hexToRgb,
-  linearize,
-  luminance,
   contrastRatio,
-  formatRatio,
-  Level,
-  getLevels,
   formatHex,
+  formatRatio,
+  getLevels,
+  hexToRgb,
 } from './utils';
 
 export const ContrastCheckerModal: FC<{ onClose: () => void }> = ({

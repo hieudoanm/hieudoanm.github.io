@@ -1,31 +1,67 @@
-import { ComponentType, lazy } from 'react';
+import { ComponentType } from 'react';
 
-const loadshopify_detect = () =>
+const loadFiglet = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/developer/FigletModal').then(
+    (m) => ({ default: m.FigletModal })
+  );
+
+const loadIP = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/developer/IPModal').then(
+    (m) => ({ default: m.IPModal })
+  );
+
+const loadOpenAPI2Postman = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/developer/OpenAPI2Postman').then(
+    (m) => ({ default: m.OpenAPI2Postman })
+  );
+
+const loadProxy = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/developer/ProxyModal').then(
+    (m) => ({ default: m.ProxyModal })
+  );
+
+const loadSheets = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/developer/SheetsModal').then(
+    (m) => ({ default: m.SheetsModal })
+  );
+
+const loadShopifyDetect = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/developer/ShopifyDetectModal').then(
     (m) => ({ default: m.ShopifyDetectModal })
   );
 
-const loadtext_diff = () =>
+const loadSVG = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/developer/SVGModal').then(
+    (m) => ({ default: m.SVGModal })
+  );
+
+const loadTextDiff = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/developer/TextDiffModal').then(
     (m) => ({ default: m.TextDiffModal })
   );
 
-const loadtext_case = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/developer/TextCaseModal').then(
-    (m) => ({ default: m.TextCaseModal })
-  );
-
-const loadtext_url_tracer = () =>
+const loadTextUrlTracer = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/developer/TextUrlTracerModal').then(
     (m) => ({ default: m.TextUrlTracerModal })
+  );
+
+const loadUUID = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/developer/UUIDModal').then(
+    (m) => ({ default: m.UUIDModal })
   );
 
 export const loaders: Record<
   string,
   () => Promise<{ default: ComponentType<{ onClose: () => void }> }>
 > = {
-  'shopify-detect': loadshopify_detect,
-  'text-diff': loadtext_diff,
-  'text-case': loadtext_case,
-  'text-url-tracer': loadtext_url_tracer,
+  figlet: loadFiglet,
+  ip: loadIP,
+  openapi: loadOpenAPI2Postman,
+  proxy: loadProxy,
+  sheets: loadSheets,
+  'shopify-detect': loadShopifyDetect,
+  svg: loadSVG,
+  'text-diff': loadTextDiff,
+  'text-url-tracer': loadTextUrlTracer,
+  uuid: loadUUID,
 };

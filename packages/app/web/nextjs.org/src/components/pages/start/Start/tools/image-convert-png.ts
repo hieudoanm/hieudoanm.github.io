@@ -3,30 +3,6 @@ import { ModalId } from '../types';
 
 export const make = (open: (id: ModalId) => () => void): Tool[] => [
   {
-    label: 'PNG to JPG',
-    description: 'Convert',
-    tags: ['image', 'convert'],
-    emoji: '🔄',
-    color: '#06b6d4',
-    onClick: open('image-convert-png-to-jpg'),
-  },
-  {
-    label: 'PNG to WebP',
-    description: 'Convert',
-    tags: ['image', 'convert'],
-    emoji: '🔄',
-    color: '#06b6d4',
-    onClick: open('image-convert-png-to-webp'),
-  },
-  {
-    label: 'PNG to SVG',
-    description: 'Convert',
-    tags: ['image', 'convert'],
-    emoji: '🔄',
-    color: '#06b6d4',
-    onClick: open('image-convert-png-to-svg'),
-  },
-  {
     label: 'PNG to AVIF',
     description: 'Convert',
     tags: ['image', 'convert'],
@@ -51,11 +27,35 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     onClick: open('image-convert-png-to-gif'),
   },
   {
+    label: 'PNG to JPG',
+    description: 'Convert',
+    tags: ['image', 'convert'],
+    emoji: '🔄',
+    color: '#06b6d4',
+    onClick: open('image-convert-png-to-jpg'),
+  },
+  {
+    label: 'PNG to SVG',
+    description: 'Convert',
+    tags: ['image', 'convert'],
+    emoji: '🔄',
+    color: '#06b6d4',
+    onClick: open('image-convert-png-to-svg'),
+  },
+  {
     label: 'PNG to TIFF',
     description: 'Convert',
     tags: ['image', 'convert'],
     emoji: '🔄',
     color: '#06b6d4',
     onClick: open('image-convert-png-to-tiff'),
+  },
+  {
+    label: 'PNG to WebP',
+    description: 'Convert',
+    tags: ['image', 'convert'],
+    emoji: '🔄',
+    color: '#06b6d4',
+    onClick: open('image-convert-png-to-webp'),
   },
 ];

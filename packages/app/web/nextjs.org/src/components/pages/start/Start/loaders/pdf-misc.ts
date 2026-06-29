@@ -1,25 +1,25 @@
-import { ComponentType, lazy } from 'react';
+import { ComponentType } from 'react';
 
-const loadpdf_security = () =>
+const loadPdfEsign = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/pdf-misc/PdfEsignModal').then(
+    (m) => ({ default: m.PdfEsignModal })
+  );
+
+const loadPdfSecurity = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/pdf-misc/PdfSecurityModal').then(
     (m) => ({ default: m.PdfSecurityModal })
   );
 
-const loadpdf_translate = () =>
+const loadPdfTranslate = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/pdf-misc/PdfTranslateModal').then(
     (m) => ({ default: m.PdfTranslateModal })
-  );
-
-const loadpdf_esign = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/pdf-misc/PdfEsignModal').then(
-    (m) => ({ default: m.PdfEsignModal })
   );
 
 export const loaders: Record<
   string,
   () => Promise<{ default: ComponentType<{ onClose: () => void }> }>
 > = {
-  'pdf-security': loadpdf_security,
-  'pdf-translate': loadpdf_translate,
-  'pdf-esign': loadpdf_esign,
+  'pdf-esign': loadPdfEsign,
+  'pdf-security': loadPdfSecurity,
+  'pdf-translate': loadPdfTranslate,
 };

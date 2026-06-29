@@ -31,12 +31,12 @@ jest.mock('fabric', () => ({
   Rect: jest.fn().mockImplementation(() => ({ set: jest.fn() })),
 }));
 
-jest.mock('../RedactModal/utils/pdf', () => ({
+jest.mock('../PdfRedactModal/utils/pdf', () => ({
   exportRedactedPdf: jest.fn(),
 }));
 
 import { fireEvent, render, screen, act } from '@testing-library/react';
-import { RedactModal } from '../RedactModal';
+import { PdfRedactModal } from '../PdfRedactModal';
 
 const createMockFile = () =>
   new File(['dummy pdf content'], 'test.pdf', {
@@ -44,7 +44,7 @@ const createMockFile = () =>
   });
 
 const uploadFile = () => {
-  render(<RedactModal onClose={jest.fn()} />);
+  render(<PdfRedactModal onClose={jest.fn()} />);
   const fileInput = document.querySelector(
     'input[type="file"]'
   ) as HTMLInputElement;
@@ -69,7 +69,7 @@ const createRedaction = () => {
   });
 };
 
-describe('RedactModal', () => {
+describe('PdfRedactModal', () => {
   beforeEach(() => {
     jest.useFakeTimers();
     mockCanvasInstance.getObjects.mockReturnValue([]);
@@ -84,12 +84,12 @@ describe('RedactModal', () => {
   });
 
   it('should render with no document loaded state', () => {
-    render(<RedactModal onClose={jest.fn()} />);
+    render(<PdfRedactModal onClose={jest.fn()} />);
     expect(screen.getByText('No document loaded')).toBeInTheDocument();
   });
 
   it('should upload a PDF file', () => {
-    render(<RedactModal onClose={jest.fn()} />);
+    render(<PdfRedactModal onClose={jest.fn()} />);
     const fileInput = document.querySelector(
       'input[type="file"]'
     ) as HTMLInputElement;
@@ -122,7 +122,7 @@ describe('RedactModal', () => {
   });
 
   it('should export PDF on export button click', () => {
-    const { exportRedactedPdf } = require('../RedactModal/utils/pdf');
+    const { exportRedactedPdf } = require('../PdfRedactModal/utils/pdf');
     uploadFile();
     fireEvent.click(screen.getByText('Export PDF'));
     expect(exportRedactedPdf).toHaveBeenCalled();

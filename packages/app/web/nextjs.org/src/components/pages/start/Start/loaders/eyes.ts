@@ -1,6 +1,16 @@
-import { ComponentType, lazy } from 'react';
+import { ComponentType } from 'react';
 
-const loadtumbling_e = () =>
+const loadLogMARChart = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/eyes/LogMARChartModal').then(
+    (m) => ({ default: m.LogMARChartModal })
+  );
+
+const loadSnellenChart = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/eyes/SnellenChartModal').then(
+    (m) => ({ default: m.SnellenChartModal })
+  );
+
+const loadTumblingEChart = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/eyes/TumblingEChartModal').then(
     (m) => ({ default: m.TumblingEChartModal })
   );
@@ -9,5 +19,7 @@ export const loaders: Record<
   string,
   () => Promise<{ default: ComponentType<{ onClose: () => void }> }>
 > = {
-  'tumbling-e': loadtumbling_e,
+  logmar: loadLogMARChart,
+  snellen: loadSnellenChart,
+  'tumbling-e': loadTumblingEChart,
 };

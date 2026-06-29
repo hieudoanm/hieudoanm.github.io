@@ -5,19 +5,24 @@ import { make as aiMake } from './ai';
 import { make as casinoMake } from './casino';
 import { make as chessMake } from './chess';
 import { make as clocksMake } from './clocks';
+import { make as colorsMake } from './colors';
 import { make as converterMake } from './converter';
 import { make as data_csvMake } from './data-csv';
 import { make as data_excelMake } from './data-excel';
 import { make as data_jsonMake } from './data-json';
 import { make as data_xmlMake } from './data-xml';
-import { make as data_utilityMake } from './data-utility';
 import { make as developerMake } from './developer';
 import { make as editorsMake } from './editors';
 import { make as educationMake } from './education';
 import { make as eyesMake } from './eyes';
 import { make as financialMake } from './financial';
 import { make as formatMake } from './format';
-import { make as gamesMake } from './games';
+import { make as games_arcadeMake } from './games-arcade';
+import { make as games_memoryMake } from './games-memory';
+import { make as games_puzzleMake } from './games-puzzle';
+import { make as games_triviaMake } from './games-trivia';
+import { make as games_wordMake } from './games-word';
+import { make as text_convertMake } from './text-convert';
 import { make as image_convert_jpgMake } from './image-convert-jpg';
 import { make as image_convert_pngMake } from './image-convert-png';
 import { make as image_convert_webpMake } from './image-convert-webp';
@@ -30,7 +35,6 @@ import { make as image_createMake } from './image-create';
 import { make as image_editMake } from './image-edit';
 import { make as image_effectMake } from './image-effect';
 import { make as image_scanMake } from './image-scan';
-import { make as memoryMake } from './memory';
 import { make as pdf_convertMake } from './pdf-convert';
 import { make as pdf_createMake } from './pdf-create';
 import { make as pdf_ebookMake } from './pdf-ebook';
@@ -68,19 +72,24 @@ export const makeTools = (
   casino: casinoMake(open),
   chess: chessMake(open),
   clocks: clocksMake(open),
+  colors: colorsMake(open),
   converter: converterMake(open),
   'data-json': data_jsonMake(open),
   'data-xml': data_xmlMake(open),
   'data-csv': data_csvMake(open),
   'data-excel': data_excelMake(open),
-  'data-utility': data_utilityMake(open),
   developer: developerMake(open),
   editors: editorsMake(open),
   education: educationMake(open),
   eyes: eyesMake(open),
   financial: financialMake(open),
   format: formatMake(open),
-  games: gamesMake(open),
+  'games-arcade': games_arcadeMake(open),
+  'games-memory': games_memoryMake(open),
+  'games-puzzle': games_puzzleMake(open),
+  'games-trivia': games_triviaMake(open),
+  'games-word': games_wordMake(open),
+  'text-convert': text_convertMake(open),
   'image-convert-jpg': image_convert_jpgMake(open),
   'image-convert-png': image_convert_pngMake(open),
   'image-convert-webp': image_convert_webpMake(open),
@@ -93,7 +102,6 @@ export const makeTools = (
   'image-edit': image_editMake(open),
   'image-effect': image_effectMake(open),
   'image-scan': image_scanMake(open),
-  memory: memoryMake(open),
   'pdf-convert': pdf_convertMake(open),
   'pdf-create': pdf_createMake(open),
   'pdf-ebook': pdf_ebookMake(open),

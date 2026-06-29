@@ -27,14 +27,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     onClick: open('write-business-plan'),
   },
   {
-    label: 'Slogan',
-    description: 'Write',
-    tags: ['business', 'document', 'writing'],
-    emoji: '✍️',
-    color: '#8b5cf6',
-    onClick: open('write-business-slogan'),
-  },
-  {
     label: 'Cold Email',
     description: 'Write',
     tags: ['business', 'document', 'writing'],
@@ -89,5 +81,13 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     emoji: '✍️',
     color: '#8b5cf6',
     onClick: open('write-purchase-agreement'),
+  },
+  {
+    label: 'Slogan',
+    description: 'Write',
+    tags: ['business', 'document', 'writing'],
+    emoji: '✍️',
+    color: '#8b5cf6',
+    onClick: open('write-business-slogan'),
   },
 ];

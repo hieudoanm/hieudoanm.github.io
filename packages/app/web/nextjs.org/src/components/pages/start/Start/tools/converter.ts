@@ -3,14 +3,6 @@ import { ModalId } from '../types';
 
 export const make = (open: (id: ModalId) => () => void): Tool[] => [
   {
-    label: 'Calculator',
-    description: 'Math',
-    tags: ['converter', 'unit-converter', 'arithmetic'],
-    emoji: '➗',
-    color: '#8b5cf6',
-    onClick: open('calculator'),
-  },
-  {
     label: 'Angle',
     description: 'Converter',
     tags: ['unit-converter', 'transform', 'change'],
@@ -27,20 +19,20 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     onClick: open('base'),
   },
   {
+    label: 'Calculator',
+    description: 'Math',
+    tags: ['converter', 'unit-converter', 'arithmetic'],
+    emoji: '➗',
+    color: '#8b5cf6',
+    onClick: open('calculator'),
+  },
+  {
     label: 'Data',
     description: 'Converter',
     tags: ['unit-converter', 'transform', 'change'],
     emoji: '💾',
     color: '#8b5cf6',
     onClick: open('data'),
-  },
-  {
-    label: 'Roman',
-    description: 'Converter',
-    tags: ['unit-converter', 'transform', 'change'],
-    emoji: '🏛️',
-    color: '#8b5cf6',
-    onClick: open('roman'),
   },
   {
     label: 'Length',
@@ -51,12 +43,12 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     onClick: open('length'),
   },
   {
-    label: 'Weight',
+    label: 'Roman',
     description: 'Converter',
     tags: ['unit-converter', 'transform', 'change'],
-    emoji: '⚖️',
+    emoji: '🏛️',
     color: '#8b5cf6',
-    onClick: open('weight'),
+    onClick: open('roman'),
   },
   {
     label: 'Temperature',
@@ -81,5 +73,13 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     emoji: '⏰',
     color: '#8b5cf6',
     onClick: open('time'),
+  },
+  {
+    label: 'Weight',
+    description: 'Converter',
+    tags: ['unit-converter', 'transform', 'change'],
+    emoji: '⚖️',
+    color: '#8b5cf6',
+    onClick: open('weight'),
   },
 ];

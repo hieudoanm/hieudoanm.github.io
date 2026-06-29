@@ -1,21 +1,21 @@
-import { ComponentType, lazy } from 'react';
+import { ComponentType } from 'react';
 
-const loadcsv_to_excel = () =>
+const loadCsvToExcel = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/data-csv/CsvToExcelModal').then(
     (m) => ({ default: m.CsvToExcelModal })
   );
 
-const loadcsv_to_json = () =>
+const loadCsvToJson = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/data-csv/CsvToJsonModal').then(
     (m) => ({ default: m.CsvToJsonModal })
   );
 
-const loadcsv_to_xml = () =>
+const loadCsvToXml = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/data-csv/CsvToXmlModal').then(
     (m) => ({ default: m.CsvToXmlModal })
   );
 
-const loadsplit_csv = () =>
+const loadSplitCsv = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/data-csv/SplitCsvModal').then(
     (m) => ({ default: m.SplitCsvModal })
   );
@@ -24,8 +24,8 @@ export const loaders: Record<
   string,
   () => Promise<{ default: ComponentType<{ onClose: () => void }> }>
 > = {
-  'csv-to-excel': loadcsv_to_excel,
-  'csv-to-json': loadcsv_to_json,
-  'csv-to-xml': loadcsv_to_xml,
-  'split-csv': loadsplit_csv,
+  'csv-to-excel': loadCsvToExcel,
+  'csv-to-json': loadCsvToJson,
+  'csv-to-xml': loadCsvToXml,
+  'split-csv': loadSplitCsv,
 };

@@ -1,43 +1,43 @@
-import { ComponentType, lazy } from 'react';
+import { ComponentType } from 'react';
 
-const loadimage_convert_jpg_to_png = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/image-convert-jpg/ImageConvertJpgToPngModal').then(
-    (m) => ({ default: m.ImageConvertJpgToPngModal })
-  );
-
-const loadimage_convert_jpg_to_webp = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/image-convert-jpg/ImageConvertJpgToWebpModal').then(
-    (m) => ({ default: m.ImageConvertJpgToWebpModal })
-  );
-
-const loadimage_convert_jpg_to_avif = () =>
+const loadImageConvertJpgToAvif = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/image-convert-jpg/ImageConvertJpgToAvifModal').then(
     (m) => ({ default: m.ImageConvertJpgToAvifModal })
   );
 
-const loadimage_convert_jpg_to_gif = () =>
+const loadImageConvertJpgToGif = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/image-convert-jpg/ImageConvertJpgToGifModal').then(
     (m) => ({ default: m.ImageConvertJpgToGifModal })
   );
 
-const loadimage_convert_jpg_to_svg = () =>
+const loadImageConvertJpgToPng = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/image-convert-jpg/ImageConvertJpgToPngModal').then(
+    (m) => ({ default: m.ImageConvertJpgToPngModal })
+  );
+
+const loadImageConvertJpgToSvg = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/image-convert-jpg/ImageConvertJpgToSvgModal').then(
     (m) => ({ default: m.ImageConvertJpgToSvgModal })
   );
 
-const loadimage_convert_jpg_to_tiff = () =>
+const loadImageConvertJpgToTiff = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/image-convert-jpg/ImageConvertJpgToTiffModal').then(
     (m) => ({ default: m.ImageConvertJpgToTiffModal })
+  );
+
+const loadImageConvertJpgToWebp = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/image-convert-jpg/ImageConvertJpgToWebpModal').then(
+    (m) => ({ default: m.ImageConvertJpgToWebpModal })
   );
 
 export const loaders: Record<
   string,
   () => Promise<{ default: ComponentType<{ onClose: () => void }> }>
 > = {
-  'image-convert-jpg-to-png': loadimage_convert_jpg_to_png,
-  'image-convert-jpg-to-webp': loadimage_convert_jpg_to_webp,
-  'image-convert-jpg-to-avif': loadimage_convert_jpg_to_avif,
-  'image-convert-jpg-to-gif': loadimage_convert_jpg_to_gif,
-  'image-convert-jpg-to-svg': loadimage_convert_jpg_to_svg,
-  'image-convert-jpg-to-tiff': loadimage_convert_jpg_to_tiff,
+  'image-convert-jpg-to-avif': loadImageConvertJpgToAvif,
+  'image-convert-jpg-to-gif': loadImageConvertJpgToGif,
+  'image-convert-jpg-to-png': loadImageConvertJpgToPng,
+  'image-convert-jpg-to-svg': loadImageConvertJpgToSvg,
+  'image-convert-jpg-to-tiff': loadImageConvertJpgToTiff,
+  'image-convert-jpg-to-webp': loadImageConvertJpgToWebp,
 };

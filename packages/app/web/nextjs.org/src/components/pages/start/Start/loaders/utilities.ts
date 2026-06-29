@@ -1,43 +1,61 @@
-import { ComponentType, lazy } from 'react';
+import { ComponentType } from 'react';
 
-const loadcontrast_checker = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/utilities/ContrastCheckerModal').then(
-    (m) => ({ default: m.ContrastCheckerModal })
+const loadChat = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/utilities/ChatModal').then(
+    (m) => ({ default: m.ChatModal })
   );
 
-const loadgradient_generator = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/utilities/GradientGeneratorModal').then(
-    (m) => ({ default: m.GradientGeneratorModal })
+const loadClipboard = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/utilities/ClipboardModal').then(
+    (m) => ({ default: m.ClipboardModal })
   );
 
-const loadno_sleep = () =>
+const loadCreateZip = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/utilities/CreateZipModal').then(
+    (m) => ({ default: m.CreateZipModal })
+  );
+
+const loadEmojis = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/utilities/EmojisModal').then(
+    (m) => ({ default: m.EmojisModal })
+  );
+
+const loadKaprekar = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/utilities/KaprekarModal').then(
+    (m) => ({ default: m.KaprekarModal })
+  );
+
+const loadNoSleep = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/utilities/NoSleepModal').then(
     (m) => ({ default: m.NoSleepModal })
   );
 
-const loadtext_password = () =>
+const loadScreenRecorder = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/utilities/ScreenRecorderModal').then(
+    (m) => ({ default: m.ScreenRecorderModal })
+  );
+
+const loadTextPassword = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/utilities/TextPasswordModal').then(
     (m) => ({ default: m.TextPasswordModal })
   );
 
-const loadtext_word_count = () =>
+const loadTextWordCount = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/utilities/TextWordCountModal').then(
     (m) => ({ default: m.TextWordCountModal })
-  );
-
-const loadscreen_recorder = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/utilities/ScreenRecorderModal').then(
-    (m) => ({ default: m.ScreenRecorderModal })
   );
 
 export const loaders: Record<
   string,
   () => Promise<{ default: ComponentType<{ onClose: () => void }> }>
 > = {
-  'contrast-checker': loadcontrast_checker,
-  'gradient-generator': loadgradient_generator,
-  'no-sleep': loadno_sleep,
-  'text-password': loadtext_password,
-  'text-word-count': loadtext_word_count,
-  'screen-recorder': loadscreen_recorder,
+  chat: loadChat,
+  clipboard: loadClipboard,
+  'create-zip': loadCreateZip,
+  emojis: loadEmojis,
+  kaprekar: loadKaprekar,
+  'no-sleep': loadNoSleep,
+  'screen-recorder': loadScreenRecorder,
+  'text-password': loadTextPassword,
+  'text-word-count': loadTextWordCount,
 };

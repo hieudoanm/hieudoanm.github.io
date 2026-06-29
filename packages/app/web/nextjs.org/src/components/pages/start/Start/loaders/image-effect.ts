@@ -1,73 +1,73 @@
-import { ComponentType, lazy } from 'react';
+import { ComponentType } from 'react';
 
-const loadimage_blur_background = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageBlurBackgroundModal').then(
-    (m) => ({ default: m.ImageBlurBackgroundModal })
-  );
-
-const loadimage_colorize = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageColorizeModal').then(
-    (m) => ({ default: m.ImageColorizeModal })
-  );
-
-const loadimage_transparent_bg = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageTransparentBgModal').then(
-    (m) => ({ default: m.ImageTransparentBgModal })
-  );
-
-const loadimage_photo_filters = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImagePhotoFiltersModal').then(
-    (m) => ({ default: m.ImagePhotoFiltersModal })
-  );
-
-const loadimage_adjust = () =>
+const loadImageAdjust = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageAdjustModal').then(
     (m) => ({ default: m.ImageAdjustModal })
   );
 
-const loadimage_vignette = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageVignetteModal').then(
-    (m) => ({ default: m.ImageVignetteModal })
+const loadImageBlurBackground = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageBlurBackgroundModal').then(
+    (m) => ({ default: m.ImageBlurBackgroundModal })
   );
 
-const loadimage_shadow = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageShadowModal').then(
-    (m) => ({ default: m.ImageShadowModal })
-  );
-
-const loadimage_watermark = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageWatermarkModal').then(
-    (m) => ({ default: m.ImageWatermarkModal })
-  );
-
-const loadimage_text = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageTextModal').then(
-    (m) => ({ default: m.ImageTextModal })
-  );
-
-const loadimage_combiner_side_by_side = () =>
+const loadImageCombinerSideBySide = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageCombinerSideBySideModal').then(
     (m) => ({ default: m.ImageCombinerSideBySideModal })
   );
 
-const loadimage_combiner_stacked = () =>
+const loadImageCombinerStacked = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageCombinerStackedModal').then(
     (m) => ({ default: m.ImageCombinerStackedModal })
+  );
+
+const loadImagePhotoFilters = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImagePhotoFiltersModal').then(
+    (m) => ({ default: m.ImagePhotoFiltersModal })
+  );
+
+const loadImagePixelateFace = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImagePixelateFaceModal').then(
+    (m) => ({ default: m.ImagePixelateFaceModal })
+  );
+
+const loadImageShadow = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageShadowModal').then(
+    (m) => ({ default: m.ImageShadowModal })
+  );
+
+const loadImageText = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageTextModal').then(
+    (m) => ({ default: m.ImageTextModal })
+  );
+
+const loadImageTransparentBg = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageTransparentBgModal').then(
+    (m) => ({ default: m.ImageTransparentBgModal })
+  );
+
+const loadImageVignette = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageVignetteModal').then(
+    (m) => ({ default: m.ImageVignetteModal })
+  );
+
+const loadImageWatermark = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageWatermarkModal').then(
+    (m) => ({ default: m.ImageWatermarkModal })
   );
 
 export const loaders: Record<
   string,
   () => Promise<{ default: ComponentType<{ onClose: () => void }> }>
 > = {
-  'image-blur-background': loadimage_blur_background,
-  'image-colorize': loadimage_colorize,
-  'image-transparent-bg': loadimage_transparent_bg,
-  'image-photo-filters': loadimage_photo_filters,
-  'image-adjust': loadimage_adjust,
-  'image-vignette': loadimage_vignette,
-  'image-shadow': loadimage_shadow,
-  'image-watermark': loadimage_watermark,
-  'image-text': loadimage_text,
-  'image-combiner-side-by-side': loadimage_combiner_side_by_side,
-  'image-combiner-stacked': loadimage_combiner_stacked,
+  'image-adjust': loadImageAdjust,
+  'image-blur-background': loadImageBlurBackground,
+  'image-combiner-side-by-side': loadImageCombinerSideBySide,
+  'image-combiner-stacked': loadImageCombinerStacked,
+  'image-photo-filters': loadImagePhotoFilters,
+  'image-pixelate-face': loadImagePixelateFace,
+  'image-shadow': loadImageShadow,
+  'image-text': loadImageText,
+  'image-transparent-bg': loadImageTransparentBg,
+  'image-vignette': loadImageVignette,
+  'image-watermark': loadImageWatermark,
 };

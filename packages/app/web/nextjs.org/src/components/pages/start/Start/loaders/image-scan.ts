@@ -1,43 +1,49 @@
-import { ComponentType, lazy } from 'react';
+import { ComponentType } from 'react';
 
-const loadqr_read = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/image-scan/QrReadModal').then(
-    (m) => ({ default: m.QrReadModal })
+const loadBarcode = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/image-scan/BarcodeModal').then(
+    (m) => ({ default: m.BarcodeModal })
   );
 
-const loadbarcode_read = () =>
+const loadBarcodeRead = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/image-scan/BarcodeReadModal').then(
     (m) => ({ default: m.BarcodeReadModal })
   );
 
-const loadimage_ocr = () =>
+const loadImageOcr = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/image-scan/ImageOcrModal').then(
     (m) => ({ default: m.ImageOcrModal })
   );
 
-const loadimage_dominant_color = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/image-scan/ImageDominantColorModal').then(
-    (m) => ({ default: m.ImageDominantColorModal })
+const loadImageTranslate = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/image-scan/ImageTranslateModal').then(
+    (m) => ({ default: m.ImageTranslateModal })
   );
 
-const loadinvoice_parser = () =>
+const loadInvoiceParser = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/image-scan/InvoiceParserModal').then(
     (m) => ({ default: m.InvoiceParserModal })
   );
 
-const loadimage_translate = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/image-scan/ImageTranslateModal').then(
-    (m) => ({ default: m.ImageTranslateModal })
+const loadQRCode = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/image-scan/QRCodeModal').then(
+    (m) => ({ default: m.QRCodeModal })
+  );
+
+const loadQrRead = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/image-scan/QrReadModal').then(
+    (m) => ({ default: m.QrReadModal })
   );
 
 export const loaders: Record<
   string,
   () => Promise<{ default: ComponentType<{ onClose: () => void }> }>
 > = {
-  'qr-read': loadqr_read,
-  'barcode-read': loadbarcode_read,
-  'image-ocr': loadimage_ocr,
-  'image-dominant-color': loadimage_dominant_color,
-  'invoice-parser': loadinvoice_parser,
-  'image-translate': loadimage_translate,
+  barcode: loadBarcode,
+  'barcode-read': loadBarcodeRead,
+  'image-ocr': loadImageOcr,
+  'image-translate': loadImageTranslate,
+  'invoice-parser': loadInvoiceParser,
+  qr: loadQRCode,
+  'qr-read': loadQrRead,
 };

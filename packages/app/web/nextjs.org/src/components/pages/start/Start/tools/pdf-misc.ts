@@ -3,6 +3,14 @@ import { ModalId } from '../types';
 
 export const make = (open: (id: ModalId) => () => void): Tool[] => [
   {
+    label: 'eSign',
+    description: 'Sign PDF',
+    tags: ['document', 'utility', 'adobe', 'acrobat'],
+    emoji: '✍️',
+    color: '#ef4444',
+    onClick: open('pdf-esign'),
+  },
+  {
     label: 'Security',
     description: 'Encrypt/Decrypt',
     tags: ['pdf', 'document', 'utility'],
@@ -25,13 +33,5 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     emoji: '🌐',
     color: '#ef4444',
     onClick: open('pdf-translate'),
-  },
-  {
-    label: 'eSign',
-    description: 'Sign PDF',
-    tags: ['document', 'utility', 'adobe', 'acrobat'],
-    emoji: '✍️',
-    color: '#ef4444',
-    onClick: open('pdf-esign'),
   },
 ];

@@ -3,6 +3,14 @@ import { ModalId } from '../types';
 
 export const make = (open: (id: ModalId) => () => void): Tool[] => [
   {
+    label: 'Convert to WebM',
+    description: 'Video',
+    tags: ['media', 'convert'],
+    emoji: '🎬',
+    color: '#ef4444',
+    onClick: open('video-convert-to-webm'),
+  },
+  {
     label: 'MP4 to AVI',
     description: 'Video',
     tags: ['media', 'convert'],
@@ -27,14 +35,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     onClick: open('video-mp4-to-mp3'),
   },
   {
-    label: 'MP4 to WAV',
-    description: 'Video',
-    tags: ['media', 'convert'],
-    emoji: '🎬',
-    color: '#ef4444',
-    onClick: open('video-mp4-to-wav'),
-  },
-  {
     label: 'MP4 to OGG',
     description: 'Video',
     tags: ['media', 'convert'],
@@ -43,12 +43,12 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     onClick: open('video-mp4-to-ogg'),
   },
   {
-    label: 'Convert to WebM',
+    label: 'MP4 to WAV',
     description: 'Video',
     tags: ['media', 'convert'],
     emoji: '🎬',
     color: '#ef4444',
-    onClick: open('video-convert-to-webm'),
+    onClick: open('video-mp4-to-wav'),
   },
   {
     label: 'Video to GIF',
