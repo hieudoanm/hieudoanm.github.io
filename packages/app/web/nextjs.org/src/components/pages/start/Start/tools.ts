@@ -9,6 +9,16 @@ export const makeTools = (
     {
       label: 'Remove BG',
       description: 'AI Background',
+      tags: [
+        'artificial-intelligence',
+        'machine-learning',
+        'delete',
+        'erase',
+        'clear',
+        'removal',
+        'backdrop',
+        'background-removal',
+      ],
       emoji: '🖼️',
       color: '#3b82f6',
       onClick: open('ai-remove-bg'),
@@ -16,6 +26,15 @@ export const makeTools = (
     {
       label: 'Restore',
       description: 'AI Photo Restore',
+      tags: [
+        'artificial-intelligence',
+        'machine-learning',
+        'restoration',
+        'recover',
+        'repair',
+        'fix',
+        'old-photo',
+      ],
       emoji: '🔄',
       color: '#3b82f6',
       onClick: open('ai-restore'),
@@ -23,6 +42,14 @@ export const makeTools = (
     {
       label: 'Colorize',
       description: 'AI Colorize',
+      tags: [
+        'artificial-intelligence',
+        'machine-learning',
+        'colour',
+        'colorization',
+        'black-and-white',
+        'bw',
+      ],
       emoji: '🎨',
       color: '#3b82f6',
       onClick: open('ai-colorize'),
@@ -30,6 +57,13 @@ export const makeTools = (
     {
       label: 'Unblur',
       description: 'AI Deblur',
+      tags: [
+        'artificial-intelligence',
+        'machine-learning',
+        'sharpen',
+        'focus',
+        'blurry',
+      ],
       emoji: '👁️',
       color: '#3b82f6',
       onClick: open('ai-unblur'),
@@ -37,6 +71,16 @@ export const makeTools = (
     {
       label: 'Remove Watermark',
       description: 'AI Clean',
+      tags: [
+        'artificial-intelligence',
+        'machine-learning',
+        'delete',
+        'erase',
+        'clear',
+        'removal',
+        'watermark-removal',
+        'logo',
+      ],
       emoji: '💧',
       color: '#3b82f6',
       onClick: open('ai-remove-watermark'),
@@ -44,6 +88,23 @@ export const makeTools = (
     {
       label: 'Generate',
       description: 'AI Image Gen',
+      tags: [
+        'artificial-intelligence',
+        'machine-learning',
+        'generation',
+        'create',
+        'ai-art',
+        'text-to-image',
+        'stable-diffusion',
+        'dalle',
+        'photo',
+        'picture',
+        'img',
+        'png',
+        'jpg',
+        'jpeg',
+        'gif',
+      ],
       emoji: '✨',
       color: '#3b82f6',
       onClick: open('ai-generate'),
@@ -51,6 +112,13 @@ export const makeTools = (
     {
       label: 'Remove Person',
       description: 'AI Object Removal',
+      tags: [
+        'artificial-intelligence',
+        'machine-learning',
+        'delete',
+        'erase',
+        'clear',
+      ],
       emoji: '🚶',
       color: '#3b82f6',
       onClick: open('ai-remove-person'),
@@ -58,6 +126,14 @@ export const makeTools = (
     {
       label: 'Remove Object',
       description: 'AI Cleanup',
+      tags: [
+        'artificial-intelligence',
+        'machine-learning',
+        'delete',
+        'erase',
+        'clear',
+        'removal',
+      ],
       emoji: '🎯',
       color: '#3b82f6',
       onClick: open('ai-remove-object'),
@@ -65,6 +141,14 @@ export const makeTools = (
     {
       label: 'Upscale',
       description: 'AI Enlarge',
+      tags: [
+        'artificial-intelligence',
+        'machine-learning',
+        'blow-up',
+        'super-resolution',
+        'hd',
+        '4k',
+      ],
       emoji: '🔍',
       color: '#3b82f6',
       onClick: open('ai-upscale'),
@@ -74,6 +158,15 @@ export const makeTools = (
     {
       label: 'Blackjack',
       description: 'Cards Counter',
+      tags: [
+        'casino',
+        'gambling',
+        'card-game',
+        'bj',
+        '21',
+        'black-jack',
+        'tally',
+      ],
       emoji: '🃏',
       color: '#f59e0b',
       onClick: open('blackjack'),
@@ -81,6 +174,17 @@ export const makeTools = (
     {
       label: 'Poker',
       description: 'Odds Calculator',
+      tags: [
+        'casino',
+        'gambling',
+        'card-game',
+        'texas-holdem',
+        'holdem',
+        'cards',
+        'hand',
+        'math',
+        'arithmetic',
+      ],
       emoji: '🃏',
       color: '#f59e0b',
       onClick: open('poker'),
@@ -90,6 +194,7 @@ export const makeTools = (
     {
       label: 'Chess Clock',
       description: 'Chess Timer',
+      tags: ['world-clock', 'countdown', 'stopwatch', 'alarm'],
       emoji: '♟️',
       color: '#8b5cf6',
       onClick: open('chess-clock'),
@@ -97,6 +202,7 @@ export const makeTools = (
     {
       label: 'Countdown',
       description: 'Timer',
+      tags: ['clock', 'world-clock', 'stopwatch', 'alarm'],
       emoji: '⏳',
       color: '#06b6d4',
       onClick: open('countdown'),
@@ -104,6 +210,7 @@ export const makeTools = (
     {
       label: 'Cron',
       description: 'Expression Builder',
+      tags: ['clock', 'time', 'world-clock'],
       emoji: '🕒',
       color: '#8b5cf6',
       onClick: open('cron'),
@@ -111,6 +218,7 @@ export const makeTools = (
     {
       label: 'Pomodoro',
       description: 'Timer',
+      tags: ['clock', 'world-clock', 'countdown', 'stopwatch', 'alarm'],
       emoji: '🍅',
       color: '#ef4444',
       onClick: open('pomodoro'),
@@ -118,6 +226,14 @@ export const makeTools = (
     {
       label: 'Watchface',
       description: 'Garmin',
+      tags: [
+        'clock',
+        'time',
+        'world-clock',
+        'smartwatch',
+        'watch-face',
+        'clock-face',
+      ],
       emoji: '⌚',
       color: '#ef4444',
       onClick: open('watchface'),
@@ -127,6 +243,7 @@ export const makeTools = (
     {
       label: 'Calculator',
       description: 'Math',
+      tags: ['converter', 'unit-converter', 'arithmetic'],
       emoji: '➗',
       color: '#8b5cf6',
       onClick: open('calculator'),
@@ -134,6 +251,7 @@ export const makeTools = (
     {
       label: 'Angle',
       description: 'Converter',
+      tags: ['unit-converter', 'transform', 'change'],
       emoji: '📐',
       color: '#8b5cf6',
       onClick: open('angle'),
@@ -141,6 +259,7 @@ export const makeTools = (
     {
       label: 'Base',
       description: 'Converter',
+      tags: ['unit-converter', 'transform', 'change'],
       emoji: '💻',
       color: '#8b5cf6',
       onClick: open('base'),
@@ -148,6 +267,7 @@ export const makeTools = (
     {
       label: 'Data',
       description: 'Converter',
+      tags: ['unit-converter', 'transform', 'change'],
       emoji: '💾',
       color: '#8b5cf6',
       onClick: open('data'),
@@ -155,6 +275,7 @@ export const makeTools = (
     {
       label: 'Roman',
       description: 'Converter',
+      tags: ['unit-converter', 'transform', 'change'],
       emoji: '🏛️',
       color: '#8b5cf6',
       onClick: open('roman'),
@@ -162,6 +283,7 @@ export const makeTools = (
     {
       label: 'Length',
       description: 'Converter',
+      tags: ['unit-converter', 'transform', 'change'],
       emoji: '📏',
       color: '#8b5cf6',
       onClick: open('length'),
@@ -169,6 +291,7 @@ export const makeTools = (
     {
       label: 'Weight',
       description: 'Converter',
+      tags: ['unit-converter', 'transform', 'change'],
       emoji: '⚖️',
       color: '#8b5cf6',
       onClick: open('weight'),
@@ -176,6 +299,7 @@ export const makeTools = (
     {
       label: 'Temperature',
       description: 'Converter',
+      tags: ['unit-converter', 'transform', 'change'],
       emoji: '🌡️',
       color: '#8b5cf6',
       onClick: open('temperature'),
@@ -183,6 +307,15 @@ export const makeTools = (
     {
       label: 'Time',
       description: 'Converter',
+      tags: [
+        'unit-converter',
+        'timezone',
+        'world-clock',
+        'time-converter',
+        'clock',
+        'transform',
+        'change',
+      ],
       emoji: '⏰',
       color: '#8b5cf6',
       onClick: open('time'),
@@ -192,6 +325,13 @@ export const makeTools = (
     {
       label: 'CSV to Excel',
       description: 'Data',
+      tags: [
+        'spreadsheet',
+        'comma-separated',
+        'xlsx',
+        'xls',
+        'microsoft-excel',
+      ],
       emoji: '🔄',
       color: '#10b981',
       onClick: open('csv-to-excel'),
@@ -199,6 +339,7 @@ export const makeTools = (
     {
       label: 'CSV to JSON',
       description: 'Data',
+      tags: ['spreadsheet', 'comma-separated', 'javascript-object-notation'],
       emoji: '🔄',
       color: '#10b981',
       onClick: open('csv-to-json'),
@@ -206,6 +347,7 @@ export const makeTools = (
     {
       label: 'CSV to XML',
       description: 'Data',
+      tags: ['spreadsheet', 'comma-separated', 'markup'],
       emoji: '🔄',
       color: '#10b981',
       onClick: open('csv-to-xml'),
@@ -213,6 +355,13 @@ export const makeTools = (
     {
       label: 'Excel to CSV',
       description: 'Data',
+      tags: [
+        'spreadsheet',
+        'xlsx',
+        'xls',
+        'microsoft-excel',
+        'comma-separated',
+      ],
       emoji: '🔄',
       color: '#10b981',
       onClick: open('excel-to-csv'),
@@ -220,6 +369,7 @@ export const makeTools = (
     {
       label: 'Split CSV',
       description: 'Data',
+      tags: ['spreadsheet', 'comma-separated'],
       emoji: '✂️',
       color: '#10b981',
       onClick: open('split-csv'),
@@ -229,6 +379,15 @@ export const makeTools = (
     {
       label: 'Excel to PDF',
       description: 'Data',
+      tags: [
+        'spreadsheet',
+        'xlsx',
+        'xls',
+        'microsoft-excel',
+        'document',
+        'adobe',
+        'acrobat',
+      ],
       emoji: '📄',
       color: '#10b981',
       onClick: open('excel-to-pdf'),
@@ -236,6 +395,7 @@ export const makeTools = (
     {
       label: 'Excel to XML',
       description: 'Data',
+      tags: ['spreadsheet', 'xlsx', 'xls', 'microsoft-excel', 'markup'],
       emoji: '🔄',
       color: '#10b981',
       onClick: open('excel-to-xml'),
@@ -243,6 +403,7 @@ export const makeTools = (
     {
       label: 'Split Excel',
       description: 'Data',
+      tags: ['spreadsheet', 'xlsx', 'xls', 'microsoft-excel'],
       emoji: '✂️',
       color: '#10b981',
       onClick: open('split-excel'),
@@ -252,6 +413,7 @@ export const makeTools = (
     {
       label: 'Create ZIP',
       description: 'Data',
+      tags: ['utility', 'tool'],
       emoji: '🗜️',
       color: '#10b981',
       onClick: open('create-zip'),
@@ -259,6 +421,7 @@ export const makeTools = (
     {
       label: 'Epoch Convert',
       description: 'Data',
+      tags: ['utility', 'tool'],
       emoji: '🕐',
       color: '#10b981',
       onClick: open('epoch-convert'),
@@ -266,6 +429,7 @@ export const makeTools = (
     {
       label: 'Word Counter',
       description: 'Data',
+      tags: ['utility', 'tool', 'docx', 'doc', 'microsoft-word', 'tally'],
       emoji: '📝',
       color: '#10b981',
       onClick: open('word-counter'),
@@ -275,6 +439,13 @@ export const makeTools = (
     {
       label: 'JSON to CSV',
       description: 'Data',
+      tags: [
+        'xml',
+        'converter',
+        'javascript-object-notation',
+        'comma-separated',
+        'spreadsheet',
+      ],
       emoji: '🔄',
       color: '#10b981',
       onClick: open('json-to-csv'),
@@ -282,6 +453,7 @@ export const makeTools = (
     {
       label: 'JSON to XML',
       description: 'Data',
+      tags: ['converter', 'javascript-object-notation', 'markup'],
       emoji: '🔄',
       color: '#10b981',
       onClick: open('json-to-xml'),
@@ -289,6 +461,7 @@ export const makeTools = (
     {
       label: 'XML to CSV',
       description: 'Data',
+      tags: ['json', 'converter', 'markup', 'comma-separated', 'spreadsheet'],
       emoji: '🔄',
       color: '#10b981',
       onClick: open('xml-to-csv'),
@@ -296,6 +469,15 @@ export const makeTools = (
     {
       label: 'XML to Excel',
       description: 'Data',
+      tags: [
+        'json',
+        'converter',
+        'markup',
+        'xlsx',
+        'xls',
+        'spreadsheet',
+        'microsoft-excel',
+      ],
       emoji: '🔄',
       color: '#10b981',
       onClick: open('xml-to-excel'),
@@ -303,6 +485,7 @@ export const makeTools = (
     {
       label: 'XML to JSON',
       description: 'Data',
+      tags: ['converter', 'markup', 'javascript-object-notation'],
       emoji: '🔄',
       color: '#10b981',
       onClick: open('xml-to-json'),
@@ -312,6 +495,7 @@ export const makeTools = (
     {
       label: 'Figlet',
       description: 'Text art',
+      tags: ['developer', 'programming', 'code', 'dev-tools'],
       emoji: '📝',
       color: '#8b5cf6',
       onClick: open('figlet'),
@@ -319,6 +503,7 @@ export const makeTools = (
     {
       label: 'IP',
       description: 'Inspector',
+      tags: ['developer', 'programming', 'code', 'dev-tools'],
       emoji: '🌐',
       color: '#f59e0b',
       onClick: open('ip'),
@@ -326,6 +511,7 @@ export const makeTools = (
     {
       label: 'Proxy',
       description: 'CORS Proxy',
+      tags: ['developer', 'programming', 'code', 'dev-tools'],
       emoji: '🔗',
       color: '#3b82f6',
       onClick: open('proxy'),
@@ -333,6 +519,7 @@ export const makeTools = (
     {
       label: 'Shopify Detect',
       description: 'Detect Shopify',
+      tags: ['developer', 'programming', 'code', 'dev-tools'],
       emoji: '🔍',
       color: '#06b6d4',
       onClick: open('shopify-detect'),
@@ -340,6 +527,14 @@ export const makeTools = (
     {
       label: 'SVG',
       description: 'Editor',
+      tags: [
+        'developer',
+        'programming',
+        'code',
+        'dev-tools',
+        'modify',
+        'change',
+      ],
       emoji: '🎨',
       color: '#8b5cf6',
       onClick: open('svg'),
@@ -347,6 +542,18 @@ export const makeTools = (
     {
       label: 'UUID',
       description: 'Generator',
+      tags: [
+        'developer',
+        'programming',
+        'code',
+        'dev-tools',
+        'guid',
+        'unique-id',
+        'identifier',
+        'create',
+        'maker',
+        'builder',
+      ],
       emoji: '🔑',
       color: '#a855f7',
       onClick: open('uuid'),
@@ -354,6 +561,7 @@ export const makeTools = (
     {
       label: 'Diff',
       description: 'Text Comparison',
+      tags: ['developer', 'programming', 'code', 'dev-tools'],
       emoji: '📝',
       color: '#3b82f6',
       onClick: open('text-diff'),
@@ -361,6 +569,14 @@ export const makeTools = (
     {
       label: 'Case',
       description: 'Converter',
+      tags: [
+        'developer',
+        'programming',
+        'code',
+        'dev-tools',
+        'transform',
+        'change',
+      ],
       emoji: '🔤',
       color: '#3b82f6',
       onClick: open('text-case'),
@@ -368,6 +584,7 @@ export const makeTools = (
     {
       label: 'URL Tracer',
       description: 'Redirect Tracker',
+      tags: ['developer', 'programming', 'code', 'dev-tools'],
       emoji: '🔗',
       color: '#3b82f6',
       onClick: open('text-url-tracer'),
@@ -375,6 +592,15 @@ export const makeTools = (
     {
       label: 'Sheets',
       description: 'SQLite Browser',
+      tags: [
+        'developer',
+        'programming',
+        'code',
+        'dev-tools',
+        'spreadsheet',
+        'excel',
+        'google-sheets',
+      ],
       emoji: '🗄️',
       color: '#3b82f6',
       onClick: open('sheets'),
@@ -384,6 +610,7 @@ export const makeTools = (
     {
       label: 'JSON Schema',
       description: 'Validator',
+      tags: ['editor', 'edit', 'text', 'javascript-object-notation', 'data'],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('json-schema'),
@@ -391,6 +618,7 @@ export const makeTools = (
     {
       label: 'Manifest',
       description: 'JSON Editor',
+      tags: ['text', 'javascript-object-notation', 'data', 'modify', 'change'],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('manifest'),
@@ -398,6 +626,7 @@ export const makeTools = (
     {
       label: 'Markdown',
       description: 'Markdown Editor',
+      tags: ['text', 'md', 'readme', 'markup', 'modify', 'change'],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('markdown'),
@@ -405,6 +634,7 @@ export const makeTools = (
     {
       label: 'Resume',
       description: 'Resume Builder',
+      tags: ['editor', 'edit', 'text'],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('resume'),
@@ -412,6 +642,16 @@ export const makeTools = (
     {
       label: 'Regex',
       description: 'Pattern Generator',
+      tags: [
+        'editor',
+        'edit',
+        'text',
+        'regular-expression',
+        'regexp',
+        'create',
+        'maker',
+        'builder',
+      ],
       emoji: '🔍',
       color: '#3b82f6',
       onClick: open('regex'),
@@ -419,6 +659,7 @@ export const makeTools = (
     {
       label: 'Redact',
       description: 'PDF Redactor',
+      tags: ['editor', 'edit', 'text', 'document', 'adobe', 'acrobat'],
       emoji: '🖋️',
       color: '#3b82f6',
       onClick: open('redact'),
@@ -426,6 +667,14 @@ export const makeTools = (
     {
       label: 'Slides',
       description: 'Pitch Deck',
+      tags: [
+        'editor',
+        'edit',
+        'text',
+        'presentation',
+        'powerpoint',
+        'google-slides',
+      ],
       emoji: '📽️',
       color: '#3b82f6',
       onClick: open('slides'),
@@ -435,6 +684,7 @@ export const makeTools = (
     {
       label: 'English',
       description: 'Dictionary',
+      tags: ['education', 'learning', 'study', 'academic'],
       emoji: '📚',
       color: '#3b82f6',
       onClick: open('english'),
@@ -442,6 +692,7 @@ export const makeTools = (
     {
       label: 'Flashcards',
       description: 'Words',
+      tags: ['education', 'learning', 'study', 'academic'],
       emoji: '📓',
       color: '#fefefe',
       onClick: open('flashcards'),
@@ -449,6 +700,7 @@ export const makeTools = (
     {
       label: 'Sign Language',
       description: 'Detection',
+      tags: ['education', 'learning', 'study', 'academic'],
       emoji: '🤟',
       color: '#3b82f6',
       onClick: open('sign'),
@@ -456,6 +708,7 @@ export const makeTools = (
     {
       label: 'Periodic Table',
       description: 'Elements',
+      tags: ['education', 'learning', 'study', 'academic'],
       emoji: '📊',
       color: '#f59e0b',
       onClick: open('periodic-table'),
@@ -463,6 +716,7 @@ export const makeTools = (
     {
       label: 'Pitch',
       description: 'Training',
+      tags: ['education', 'learning', 'study', 'academic'],
       emoji: '🎹',
       color: '#8b5cf6',
       onClick: open('pitch'),
@@ -470,6 +724,14 @@ export const makeTools = (
     {
       label: 'DOI',
       description: 'Cite',
+      tags: [
+        'education',
+        'learning',
+        'study',
+        'academic',
+        'digital-object-identifier',
+        'citation',
+      ],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('doi'),
@@ -479,6 +741,7 @@ export const makeTools = (
     {
       label: 'LogMAR Chart',
       description: 'LogMAR Chart',
+      tags: ['eyes', 'vision', 'eye-test', 'sight'],
       emoji: '👀',
       color: '#3b82f6',
       onClick: open('logmar'),
@@ -486,6 +749,7 @@ export const makeTools = (
     {
       label: 'Snellen Chart',
       description: 'Snellen Chart',
+      tags: ['eyes', 'vision', 'eye-test', 'sight'],
       emoji: '👀',
       color: '#3b82f6',
       onClick: open('snellen'),
@@ -493,6 +757,7 @@ export const makeTools = (
     {
       label: 'Tumbling E Chart',
       description: 'Tumbling E Chart',
+      tags: ['eyes', 'vision', 'eye-test', 'sight'],
       emoji: '👀',
       color: '#3b82f6',
       onClick: open('tumbling-e'),
@@ -502,6 +767,7 @@ export const makeTools = (
     {
       label: 'Elo',
       description: 'Calculator',
+      tags: ['finance', 'money', 'financial', 'math', 'arithmetic'],
       emoji: '♟️',
       color: '#f59e0b',
       onClick: open('elo'),
@@ -509,6 +775,7 @@ export const makeTools = (
     {
       label: 'Inflation',
       description: 'Calculator',
+      tags: ['finance', 'money', 'financial', 'math', 'arithmetic'],
       emoji: '💰',
       color: '#f59e0b',
       onClick: open('inflation'),
@@ -516,6 +783,7 @@ export const makeTools = (
     {
       label: 'Tax',
       description: 'Vietnam PIT',
+      tags: ['finance', 'money', 'financial', 'calculator'],
       emoji: '🇻🇳',
       color: '#ef4444',
       onClick: open('tax'),
@@ -523,6 +791,7 @@ export const makeTools = (
     {
       label: 'Split Bill',
       description: 'Calculator',
+      tags: ['finance', 'money', 'financial', 'math', 'arithmetic'],
       emoji: '💵',
       color: '#10b981',
       onClick: open('split-bill'),
@@ -530,6 +799,7 @@ export const makeTools = (
     {
       label: 'Days Count',
       description: 'Date Difference',
+      tags: ['finance', 'money', 'financial', 'calculator'],
       emoji: '📅',
       color: '#3b82f6',
       onClick: open('days-count'),
@@ -539,6 +809,7 @@ export const makeTools = (
     {
       label: 'Braille',
       description: 'From Text',
+      tags: ['format', 'converter', 'data'],
       emoji: '⠿',
       color: '#8b5cf6',
       onClick: open('braille'),
@@ -546,6 +817,7 @@ export const makeTools = (
     {
       label: 'Colors',
       description: 'From HEX',
+      tags: ['format', 'converter', 'data'],
       emoji: '🎨',
       color: '#ec4899',
       onClick: open('colors'),
@@ -553,6 +825,7 @@ export const makeTools = (
     {
       label: 'Morse Code',
       description: 'From Text',
+      tags: ['format', 'converter', 'data'],
       emoji: '🔣',
       color: '#f59e0b',
       onClick: open('morse'),
@@ -560,6 +833,7 @@ export const makeTools = (
     {
       label: 'Leet Speak',
       description: 'From Text',
+      tags: ['format', 'converter', 'data'],
       emoji: '🔐',
       color: '#10b981',
       onClick: open('leetspeak'),
@@ -567,6 +841,14 @@ export const makeTools = (
     {
       label: 'Lorem Ipsum',
       description: 'Dummy text',
+      tags: [
+        'format',
+        'converter',
+        'data',
+        'placeholder',
+        'dummy-text',
+        'filler',
+      ],
       emoji: '📝',
       color: '#8b5cf6',
       onClick: open('lorem-ipsum'),
@@ -574,6 +856,7 @@ export const makeTools = (
     {
       label: 'OpenAPI',
       description: 'to Postman',
+      tags: ['format', 'converter', 'data', 'rest', 'swagger', 'specification'],
       emoji: '🔄',
       color: '#ff6c37',
       onClick: open('openapi'),
@@ -583,6 +866,7 @@ export const makeTools = (
     {
       label: '2048',
       description: 'Merge tiles',
+      tags: ['game', 'fun', 'entertainment'],
       emoji: '🔢',
       color: '#f59e0b',
       onClick: open('game2048'),
@@ -590,6 +874,7 @@ export const makeTools = (
     {
       label: 'Palindrome',
       description: 'Palindrome',
+      tags: ['game', 'fun', 'entertainment'],
       emoji: '🔁',
       color: '#f59e0b',
       onClick: open('palindrome'),
@@ -597,6 +882,7 @@ export const makeTools = (
     {
       label: 'PD',
       description: "Prisoner's Dilemma",
+      tags: ['game', 'fun', 'entertainment'],
       emoji: '⚖️',
       color: '#f59e0b',
       onClick: open('pd'),
@@ -604,6 +890,7 @@ export const makeTools = (
     {
       label: 'Sudoku',
       description: '4×4 & 9×9',
+      tags: ['game', 'fun', 'entertainment'],
       emoji: '🧩',
       color: '#f59e0b',
       onClick: open('sudoku'),
@@ -611,6 +898,7 @@ export const makeTools = (
     {
       label: 'Snake',
       description: '12×12 grid',
+      tags: ['game', 'fun', 'entertainment'],
       emoji: '🐍',
       color: '#f59e0b',
       onClick: open('snake'),
@@ -618,6 +906,7 @@ export const makeTools = (
     {
       label: 'Pokedex',
       description: 'Pokemon',
+      tags: ['game', 'fun', 'entertainment'],
       emoji: '📕',
       color: '#f59e0b',
       onClick: open('pokedex'),
@@ -625,6 +914,7 @@ export const makeTools = (
     {
       label: 'RPS',
       description: 'Rock Paper Scissors',
+      tags: ['game', 'fun', 'entertainment'],
       emoji: '✂️',
       color: '#f59e0b',
       onClick: open('rps'),
@@ -632,6 +922,7 @@ export const makeTools = (
     {
       label: 'T3',
       description: 'Tic-Tac-Toe',
+      tags: ['game', 'fun', 'entertainment'],
       emoji: '❌',
       color: '#f59e0b',
       onClick: open('t3'),
@@ -639,6 +930,7 @@ export const makeTools = (
     {
       label: 'Towers',
       description: 'Towers of Hanoi',
+      tags: ['game', 'fun', 'entertainment'],
       emoji: '🗼',
       color: '#f59e0b',
       onClick: open('towers'),
@@ -646,6 +938,7 @@ export const makeTools = (
     {
       label: 'Typoglycemia',
       description: 'Scrambled text',
+      tags: ['game', 'fun', 'entertainment'],
       emoji: '🔀',
       color: '#f59e0b',
       onClick: open('typoglycemia'),
@@ -653,6 +946,7 @@ export const makeTools = (
     {
       label: 'Wordle',
       description: 'Guess the word',
+      tags: ['game', 'fun', 'entertainment', 'docx', 'doc', 'microsoft-word'],
       emoji: '🟩',
       color: '#f59e0b',
       onClick: open('wordle'),
@@ -662,6 +956,7 @@ export const makeTools = (
     {
       label: 'HEIC to JPG',
       description: 'Convert',
+      tags: ['image', 'photo'],
       emoji: '🔄',
       color: '#06b6d4',
       onClick: open('image-convert-heic-to-jpg'),
@@ -669,6 +964,7 @@ export const makeTools = (
     {
       label: 'WebP to JPG',
       description: 'Convert',
+      tags: ['image', 'photo'],
       emoji: '🔄',
       color: '#06b6d4',
       onClick: open('image-convert-webp-to-jpg'),
@@ -676,6 +972,7 @@ export const makeTools = (
     {
       label: 'WebP to PNG',
       description: 'Convert',
+      tags: ['image', 'photo'],
       emoji: '🔄',
       color: '#06b6d4',
       onClick: open('image-convert-webp-to-png'),
@@ -683,6 +980,7 @@ export const makeTools = (
     {
       label: 'JPG to WebP',
       description: 'Convert',
+      tags: ['image', 'photo'],
       emoji: '🔄',
       color: '#06b6d4',
       onClick: open('image-convert-jpg-to-webp'),
@@ -690,6 +988,7 @@ export const makeTools = (
     {
       label: 'JPG to PNG',
       description: 'Convert',
+      tags: ['image', 'photo'],
       emoji: '🔄',
       color: '#06b6d4',
       onClick: open('image-convert-jpg-to-png'),
@@ -697,6 +996,7 @@ export const makeTools = (
     {
       label: 'PNG to WebP',
       description: 'Convert',
+      tags: ['image', 'photo'],
       emoji: '🔄',
       color: '#06b6d4',
       onClick: open('image-convert-png-to-webp'),
@@ -704,6 +1004,7 @@ export const makeTools = (
     {
       label: 'PNG to JPG',
       description: 'Convert',
+      tags: ['image', 'photo'],
       emoji: '🔄',
       color: '#06b6d4',
       onClick: open('image-convert-png-to-jpg'),
@@ -711,6 +1012,7 @@ export const makeTools = (
     {
       label: 'PNG to SVG',
       description: 'Convert',
+      tags: ['image', 'photo'],
       emoji: '🔄',
       color: '#06b6d4',
       onClick: open('image-convert-png-to-svg'),
@@ -720,6 +1022,7 @@ export const makeTools = (
     {
       label: 'HEIC to PNG',
       description: 'Convert',
+      tags: ['image', 'advanced', 'photo'],
       emoji: '🔄',
       color: '#06b6d4',
       onClick: open('image-convert-heic-to-png'),
@@ -727,6 +1030,7 @@ export const makeTools = (
     {
       label: 'JPG to AVIF',
       description: 'Convert',
+      tags: ['image', 'advanced', 'photo'],
       emoji: '🔄',
       color: '#06b6d4',
       onClick: open('image-convert-jpg-to-avif'),
@@ -734,6 +1038,7 @@ export const makeTools = (
     {
       label: 'JPG to GIF',
       description: 'Convert',
+      tags: ['image', 'advanced', 'photo'],
       emoji: '🔄',
       color: '#06b6d4',
       onClick: open('image-convert-jpg-to-gif'),
@@ -741,6 +1046,7 @@ export const makeTools = (
     {
       label: 'JPG to SVG',
       description: 'Convert',
+      tags: ['image', 'advanced', 'photo'],
       emoji: '🔄',
       color: '#06b6d4',
       onClick: open('image-convert-jpg-to-svg'),
@@ -748,6 +1054,7 @@ export const makeTools = (
     {
       label: 'JPG to TIFF',
       description: 'Convert',
+      tags: ['image', 'advanced', 'photo'],
       emoji: '🔄',
       color: '#06b6d4',
       onClick: open('image-convert-jpg-to-tiff'),
@@ -755,6 +1062,7 @@ export const makeTools = (
     {
       label: 'PNG to AVIF',
       description: 'Convert',
+      tags: ['image', 'advanced', 'photo'],
       emoji: '🔄',
       color: '#06b6d4',
       onClick: open('image-convert-png-to-avif'),
@@ -762,6 +1070,7 @@ export const makeTools = (
     {
       label: 'PNG to EPS',
       description: 'Convert',
+      tags: ['image', 'advanced', 'photo'],
       emoji: '🔄',
       color: '#06b6d4',
       onClick: open('image-convert-png-to-eps'),
@@ -769,6 +1078,7 @@ export const makeTools = (
     {
       label: 'PNG to GIF',
       description: 'Convert',
+      tags: ['image', 'advanced', 'photo'],
       emoji: '🔄',
       color: '#06b6d4',
       onClick: open('image-convert-png-to-gif'),
@@ -776,6 +1086,7 @@ export const makeTools = (
     {
       label: 'PNG to TIFF',
       description: 'Convert',
+      tags: ['image', 'advanced', 'photo'],
       emoji: '🔄',
       color: '#06b6d4',
       onClick: open('image-convert-png-to-tiff'),
@@ -785,6 +1096,7 @@ export const makeTools = (
     {
       label: 'GIF to JPG',
       description: 'Convert',
+      tags: ['image', 'pro', 'photo'],
       emoji: '🔄',
       color: '#06b6d4',
       onClick: open('image-convert-gif-to-jpg'),
@@ -792,6 +1104,7 @@ export const makeTools = (
     {
       label: 'GIF to PNG',
       description: 'Convert',
+      tags: ['image', 'pro', 'photo'],
       emoji: '🔄',
       color: '#06b6d4',
       onClick: open('image-convert-gif-to-png'),
@@ -799,6 +1112,7 @@ export const makeTools = (
     {
       label: 'HEIC to AVIF',
       description: 'Convert',
+      tags: ['image', 'pro', 'photo'],
       emoji: '🔄',
       color: '#06b6d4',
       onClick: open('image-convert-heic-to-avif'),
@@ -806,6 +1120,7 @@ export const makeTools = (
     {
       label: 'PSD to JPG',
       description: 'Convert',
+      tags: ['image', 'pro', 'photo'],
       emoji: '🔄',
       color: '#06b6d4',
       onClick: open('image-convert-psd-to-jpg'),
@@ -813,6 +1128,7 @@ export const makeTools = (
     {
       label: 'PSD to PNG',
       description: 'Convert',
+      tags: ['image', 'pro', 'photo'],
       emoji: '🔄',
       color: '#06b6d4',
       onClick: open('image-convert-psd-to-png'),
@@ -820,6 +1136,7 @@ export const makeTools = (
     {
       label: 'SVG to PNG',
       description: 'Convert',
+      tags: ['image', 'pro', 'photo'],
       emoji: '🔄',
       color: '#06b6d4',
       onClick: open('image-convert-svg-to-png'),
@@ -827,6 +1144,7 @@ export const makeTools = (
     {
       label: 'TIFF to JPG',
       description: 'Convert',
+      tags: ['image', 'pro', 'photo'],
       emoji: '🔄',
       color: '#06b6d4',
       onClick: open('image-convert-tiff-to-jpg'),
@@ -834,6 +1152,7 @@ export const makeTools = (
     {
       label: 'TIFF to PNG',
       description: 'Convert',
+      tags: ['image', 'pro', 'photo'],
       emoji: '🔄',
       color: '#06b6d4',
       onClick: open('image-convert-tiff-to-png'),
@@ -841,6 +1160,7 @@ export const makeTools = (
     {
       label: 'WebP to AVIF',
       description: 'Convert',
+      tags: ['image', 'pro', 'photo'],
       emoji: '🔄',
       color: '#06b6d4',
       onClick: open('image-convert-webp-to-avif'),
@@ -848,6 +1168,7 @@ export const makeTools = (
     {
       label: 'WebP to GIF',
       description: 'Convert',
+      tags: ['image', 'pro', 'photo'],
       emoji: '🔄',
       color: '#06b6d4',
       onClick: open('image-convert-webp-to-gif'),
@@ -857,6 +1178,7 @@ export const makeTools = (
     {
       label: 'Chart Maker',
       description: 'Create Chart',
+      tags: ['image', 'photo', 'generator'],
       emoji: '📊',
       color: '#3b82f6',
       onClick: open('chart-maker'),
@@ -864,6 +1186,7 @@ export const makeTools = (
     {
       label: 'Meme Maker',
       description: 'Create Meme',
+      tags: ['image', 'photo', 'generator', 'funny'],
       emoji: '🎭',
       color: '#3b82f6',
       onClick: open('meme-maker'),
@@ -871,6 +1194,7 @@ export const makeTools = (
     {
       label: 'Collage',
       description: 'Photo Collage',
+      tags: ['image', 'create', 'generator'],
       emoji: '🖼️',
       color: '#3b82f6',
       onClick: open('collage-maker'),
@@ -878,6 +1202,7 @@ export const makeTools = (
     {
       label: 'Profile',
       description: 'Photo Maker',
+      tags: ['image', 'create', 'generator'],
       emoji: '👤',
       color: '#3b82f6',
       onClick: open('image-profile'),
@@ -885,6 +1210,7 @@ export const makeTools = (
     {
       label: 'Pixel',
       description: 'Art Grid',
+      tags: ['image', 'create', 'photo', 'generator'],
       emoji: '▪️',
       color: '#8b5cf6',
       onClick: open('pixel'),
@@ -892,6 +1218,7 @@ export const makeTools = (
     {
       label: 'InstaSize',
       description: 'Square Fit',
+      tags: ['image', 'create', 'photo', 'generator'],
       emoji: '📸',
       color: '#3b82f6',
       onClick: open('instasize'),
@@ -899,6 +1226,7 @@ export const makeTools = (
     {
       label: 'Social Preview',
       description: 'GitHub',
+      tags: ['image', 'create', 'photo', 'generator'],
       emoji: '📸',
       color: '#10b981',
       onClick: open('github-social-preview'),
@@ -906,6 +1234,15 @@ export const makeTools = (
     {
       label: 'Thumbnails',
       description: 'YouTube',
+      tags: [
+        'image',
+        'create',
+        'photo',
+        'generator',
+        'yt',
+        'video',
+        'download',
+      ],
       emoji: '📸',
       color: '#22d3ee',
       onClick: open('youtube-thumbnails'),
@@ -913,6 +1250,7 @@ export const makeTools = (
     {
       label: 'House',
       description: 'M.D.',
+      tags: ['image', 'create', 'photo', 'generator'],
       emoji: '🏥',
       color: '#ef4444',
       onClick: open('house'),
@@ -920,6 +1258,7 @@ export const makeTools = (
     {
       label: 'Camera',
       description: 'Composition',
+      tags: ['image', 'create', 'photo', 'generator'],
       emoji: '📸',
       color: '#ef4444',
       onClick: open('camera'),
@@ -927,6 +1266,7 @@ export const makeTools = (
     {
       label: 'Breaking Bad',
       description: 'Element',
+      tags: ['image', 'create', 'photo', 'generator'],
       emoji: '🧪',
       color: '#eab308',
       onClick: open('breaking-bad'),
@@ -934,6 +1274,7 @@ export const makeTools = (
     {
       label: 'Base64',
       description: 'Decode/Encode',
+      tags: ['image', 'create', 'photo', 'generator', 'base-64'],
       emoji: '🔐',
       color: '#3b82f6',
       onClick: open('base64'),
@@ -943,6 +1284,20 @@ export const makeTools = (
     {
       label: 'Resize',
       description: 'Image',
+      tags: [
+        'edit',
+        'photo-editor',
+        'scale',
+        'resize-image',
+        'dimensions',
+        'photo',
+        'picture',
+        'img',
+        'png',
+        'jpg',
+        'jpeg',
+        'gif',
+      ],
       emoji: '📐',
       color: '#3b82f6',
       onClick: open('image-resize'),
@@ -950,6 +1305,20 @@ export const makeTools = (
     {
       label: 'Crop',
       description: 'Image',
+      tags: [
+        'edit',
+        'photo-editor',
+        'trim',
+        'cut',
+        'clip-image',
+        'photo',
+        'picture',
+        'img',
+        'png',
+        'jpg',
+        'jpeg',
+        'gif',
+      ],
       emoji: '✂️',
       color: '#3b82f6',
       onClick: open('image-crop'),
@@ -957,6 +1326,21 @@ export const makeTools = (
     {
       label: 'Compress',
       description: 'Image',
+      tags: [
+        'edit',
+        'photo-editor',
+        'zip',
+        'archive',
+        'minify',
+        'reduce-size',
+        'photo',
+        'picture',
+        'img',
+        'png',
+        'jpg',
+        'jpeg',
+        'gif',
+      ],
       emoji: '📦',
       color: '#3b82f6',
       onClick: open('image-compress'),
@@ -964,6 +1348,17 @@ export const makeTools = (
     {
       label: 'Flip',
       description: 'Image',
+      tags: [
+        'edit',
+        'photo-editor',
+        'photo',
+        'picture',
+        'img',
+        'png',
+        'jpg',
+        'jpeg',
+        'gif',
+      ],
       emoji: '🔄',
       color: '#3b82f6',
       onClick: open('image-flip'),
@@ -971,6 +1366,17 @@ export const makeTools = (
     {
       label: 'B&W',
       description: 'Image',
+      tags: [
+        'edit',
+        'photo-editor',
+        'photo',
+        'picture',
+        'img',
+        'png',
+        'jpg',
+        'jpeg',
+        'gif',
+      ],
       emoji: '⚫',
       color: '#3b82f6',
       onClick: open('image-bw'),
@@ -978,6 +1384,17 @@ export const makeTools = (
     {
       label: 'Pixelate',
       description: 'Image',
+      tags: [
+        'edit',
+        'photo-editor',
+        'photo',
+        'picture',
+        'img',
+        'png',
+        'jpg',
+        'jpeg',
+        'gif',
+      ],
       emoji: '🧊',
       color: '#3b82f6',
       onClick: open('image-pixelate'),
@@ -985,6 +1402,17 @@ export const makeTools = (
     {
       label: 'Sharpen',
       description: 'Image',
+      tags: [
+        'edit',
+        'photo-editor',
+        'photo',
+        'picture',
+        'img',
+        'png',
+        'jpg',
+        'jpeg',
+        'gif',
+      ],
       emoji: '💫',
       color: '#3b82f6',
       onClick: open('image-sharpen'),
@@ -992,6 +1420,17 @@ export const makeTools = (
     {
       label: 'Border',
       description: 'Image',
+      tags: [
+        'edit',
+        'photo-editor',
+        'photo',
+        'picture',
+        'img',
+        'png',
+        'jpg',
+        'jpeg',
+        'gif',
+      ],
       emoji: '🖼️',
       color: '#3b82f6',
       onClick: open('image-border'),
@@ -999,6 +1438,17 @@ export const makeTools = (
     {
       label: 'Round',
       description: 'Image',
+      tags: [
+        'edit',
+        'photo-editor',
+        'photo',
+        'picture',
+        'img',
+        'png',
+        'jpg',
+        'jpeg',
+        'gif',
+      ],
       emoji: '⭕',
       color: '#3b82f6',
       onClick: open('image-round'),
@@ -1006,6 +1456,19 @@ export const makeTools = (
     {
       label: 'Rotate',
       description: 'Image',
+      tags: [
+        'edit',
+        'photo-editor',
+        'flip',
+        'orientation',
+        'photo',
+        'picture',
+        'img',
+        'png',
+        'jpg',
+        'jpeg',
+        'gif',
+      ],
       emoji: '🔄',
       color: '#3b82f6',
       onClick: open('image-rotate'),
@@ -1013,6 +1476,19 @@ export const makeTools = (
     {
       label: 'Split',
       description: 'Image Splitter',
+      tags: [
+        'edit',
+        'photo-editor',
+        'photo',
+        'picture',
+        'img',
+        'png',
+        'jpg',
+        'jpeg',
+        'gif',
+        'divide',
+        'separate',
+      ],
       emoji: '✂️',
       color: '#3b82f6',
       onClick: open('image-split'),
@@ -1022,6 +1498,19 @@ export const makeTools = (
     {
       label: 'Blur Background',
       description: 'Image Effect',
+      tags: [
+        'filter',
+        'photo',
+        'bg',
+        'backdrop',
+        'background-removal',
+        'picture',
+        'img',
+        'png',
+        'jpg',
+        'jpeg',
+        'gif',
+      ],
       emoji: '🌫️',
       color: '#06b6d4',
       onClick: open('image-blur-background'),
@@ -1029,6 +1518,14 @@ export const makeTools = (
     {
       label: 'Colorize',
       description: 'Photo Filter',
+      tags: [
+        'image',
+        'effect',
+        'colour',
+        'colorization',
+        'black-and-white',
+        'bw',
+      ],
       emoji: '🎨',
       color: '#3b82f6',
       onClick: open('image-colorize'),
@@ -1036,6 +1533,7 @@ export const makeTools = (
     {
       label: 'Transparent BG',
       description: 'Make Transparent',
+      tags: ['image', 'effect', 'filter', 'photo'],
       emoji: '✨',
       color: '#3b82f6',
       onClick: open('image-transparent-bg'),
@@ -1043,6 +1541,7 @@ export const makeTools = (
     {
       label: 'Photo Filters',
       description: 'Apply Filters',
+      tags: ['image', 'effect'],
       emoji: '📸',
       color: '#3b82f6',
       onClick: open('image-photo-filters'),
@@ -1050,6 +1549,7 @@ export const makeTools = (
     {
       label: 'Adjust',
       description: 'Brightness/Contrast',
+      tags: ['image', 'effect', 'filter', 'photo'],
       emoji: '⚙️',
       color: '#3b82f6',
       onClick: open('image-adjust'),
@@ -1057,6 +1557,7 @@ export const makeTools = (
     {
       label: 'Vignette',
       description: 'Vignette Effect',
+      tags: ['image', 'filter', 'photo'],
       emoji: '🌑',
       color: '#3b82f6',
       onClick: open('image-vignette'),
@@ -1064,6 +1565,7 @@ export const makeTools = (
     {
       label: 'Shadow',
       description: 'Add Shadow',
+      tags: ['image', 'effect', 'filter', 'photo'],
       emoji: '👤',
       color: '#3b82f6',
       onClick: open('image-shadow'),
@@ -1071,6 +1573,7 @@ export const makeTools = (
     {
       label: 'Watermark',
       description: 'Add Watermark',
+      tags: ['image', 'effect', 'filter', 'photo', 'watermark-removal', 'logo'],
       emoji: '💧',
       color: '#3b82f6',
       onClick: open('image-watermark'),
@@ -1078,6 +1581,7 @@ export const makeTools = (
     {
       label: 'Text',
       description: 'Add Text',
+      tags: ['image', 'effect', 'filter', 'photo'],
       emoji: '✏️',
       color: '#3b82f6',
       onClick: open('image-text'),
@@ -1085,6 +1589,7 @@ export const makeTools = (
     {
       label: 'Side by Side',
       description: 'Combine',
+      tags: ['image', 'effect', 'filter', 'photo'],
       emoji: '🔗',
       color: '#06b6d4',
       onClick: open('image-combiner-side-by-side'),
@@ -1092,6 +1597,7 @@ export const makeTools = (
     {
       label: 'Stacked',
       description: 'Combine',
+      tags: ['image', 'effect', 'filter', 'photo'],
       emoji: '🔗',
       color: '#06b6d4',
       onClick: open('image-combiner-stacked'),
@@ -1101,6 +1607,18 @@ export const makeTools = (
     {
       label: 'Barcode',
       description: 'Generator',
+      tags: [
+        'image',
+        'scan',
+        'ocr',
+        'photo',
+        'code128',
+        'ean',
+        'upc',
+        'create',
+        'maker',
+        'builder',
+      ],
       emoji: '▌',
       color: '#22d3ee',
       onClick: open('barcode'),
@@ -1108,6 +1626,17 @@ export const makeTools = (
     {
       label: 'QR Code',
       description: 'Generator',
+      tags: [
+        'image',
+        'scan',
+        'ocr',
+        'photo',
+        'qrcode',
+        'barcode',
+        'create',
+        'maker',
+        'builder',
+      ],
       emoji: '▦',
       color: '#22d3ee',
       onClick: open('qr'),
@@ -1115,6 +1644,7 @@ export const makeTools = (
     {
       label: 'QR Read',
       description: 'QR Scanner',
+      tags: ['image', 'ocr', 'photo', 'qrcode', 'barcode', 'code'],
       emoji: '📱',
       color: '#3b82f6',
       onClick: open('qr-read'),
@@ -1122,6 +1652,7 @@ export const makeTools = (
     {
       label: 'Barcode Read',
       description: 'Barcode Scanner',
+      tags: ['image', 'ocr', 'photo', 'code128', 'ean', 'upc'],
       emoji: '📋',
       color: '#3b82f6',
       onClick: open('barcode-read'),
@@ -1129,6 +1660,7 @@ export const makeTools = (
     {
       label: 'OCR',
       description: 'Text Extraction',
+      tags: ['image', 'scan', 'photo'],
       emoji: '🔍',
       color: '#3b82f6',
       onClick: open('image-ocr'),
@@ -1136,6 +1668,17 @@ export const makeTools = (
     {
       label: 'Dominant Color',
       description: 'Extract Color',
+      tags: [
+        'image',
+        'scan',
+        'ocr',
+        'photo',
+        'colour',
+        'hex',
+        'rgb',
+        'hsl',
+        'picker',
+      ],
       emoji: '🎯',
       color: '#3b82f6',
       onClick: open('image-dominant-color'),
@@ -1143,6 +1686,7 @@ export const makeTools = (
     {
       label: 'Invoice Parser',
       description: 'OCR',
+      tags: ['image', 'scan', 'photo'],
       emoji: '📄',
       color: '#ef4444',
       onClick: open('invoice-parser'),
@@ -1150,6 +1694,19 @@ export const makeTools = (
     {
       label: 'Image Translate',
       description: 'OCR + Translate',
+      tags: [
+        'scan',
+        'photo',
+        'picture',
+        'img',
+        'png',
+        'jpg',
+        'jpeg',
+        'gif',
+        'translation',
+        'language',
+        'i18n',
+      ],
       emoji: '🌐',
       color: '#10b981',
       onClick: open('image-translate'),
@@ -1159,6 +1716,7 @@ export const makeTools = (
     {
       label: 'PI',
       description: 'Memorization',
+      tags: ['memory', 'brain', 'cognitive', 'game'],
       emoji: 'π',
       color: '#f59e0b',
       onClick: open('pi'),
@@ -1166,6 +1724,7 @@ export const makeTools = (
     {
       label: 'Quizify',
       description: 'Quiz',
+      tags: ['memory', 'brain', 'cognitive', 'game'],
       emoji: '❓',
       color: '#f59e0b',
       onClick: open('quizify'),
@@ -1173,6 +1732,7 @@ export const makeTools = (
     {
       label: 'Recall',
       description: 'Memorization',
+      tags: ['memory', 'brain', 'cognitive', 'game'],
       emoji: '🔣',
       color: '#f59e0b',
       onClick: open('recall'),
@@ -1182,6 +1742,16 @@ export const makeTools = (
     {
       label: 'PDF to Excel',
       description: 'PDF',
+      tags: [
+        'convert',
+        'document',
+        'adobe',
+        'acrobat',
+        'xlsx',
+        'xls',
+        'spreadsheet',
+        'microsoft-excel',
+      ],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('pdf-to-excel'),
@@ -1189,6 +1759,7 @@ export const makeTools = (
     {
       label: 'PDF to EPUB',
       description: 'PDF',
+      tags: ['convert', 'document', 'adobe', 'acrobat'],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('pdf-to-epub'),
@@ -1196,6 +1767,7 @@ export const makeTools = (
     {
       label: 'PDF to Images',
       description: 'PDF',
+      tags: ['convert', 'document', 'adobe', 'acrobat'],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('pdf-to-images'),
@@ -1203,6 +1775,7 @@ export const makeTools = (
     {
       label: 'PDF to PPT',
       description: 'PDF',
+      tags: ['convert', 'document', 'adobe', 'acrobat'],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('pdf-to-ppt'),
@@ -1210,6 +1783,15 @@ export const makeTools = (
     {
       label: 'PDF to Word',
       description: 'PDF',
+      tags: [
+        'convert',
+        'document',
+        'adobe',
+        'acrobat',
+        'docx',
+        'doc',
+        'microsoft-word',
+      ],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('pdf-to-word'),
@@ -1219,6 +1801,7 @@ export const makeTools = (
     {
       label: 'EPUB to PDF',
       description: 'PDF',
+      tags: ['create', 'document', 'word', 'adobe', 'acrobat'],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('epub-to-pdf'),
@@ -1226,6 +1809,7 @@ export const makeTools = (
     {
       label: 'Images to PDF',
       description: 'PDF',
+      tags: ['create', 'document', 'word', 'adobe', 'acrobat'],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('images-to-pdf'),
@@ -1233,6 +1817,7 @@ export const makeTools = (
     {
       label: 'MD to PDF',
       description: 'PDF',
+      tags: ['create', 'document', 'word', 'adobe', 'acrobat'],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('create-md-to-pdf'),
@@ -1240,6 +1825,7 @@ export const makeTools = (
     {
       label: 'PPT to PDF',
       description: 'PDF',
+      tags: ['create', 'document', 'word', 'adobe', 'acrobat'],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('ppt-to-pdf'),
@@ -1247,6 +1833,7 @@ export const makeTools = (
     {
       label: 'Text to PDF',
       description: 'PDF',
+      tags: ['create', 'document', 'word', 'adobe', 'acrobat'],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('create-text-to-pdf'),
@@ -1254,6 +1841,7 @@ export const makeTools = (
     {
       label: 'URL to PDF',
       description: 'PDF',
+      tags: ['create', 'document', 'word', 'adobe', 'acrobat'],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('create-url-to-pdf'),
@@ -1261,6 +1849,7 @@ export const makeTools = (
     {
       label: 'URL to PDF',
       description: 'PDF',
+      tags: ['create', 'document', 'word', 'adobe', 'acrobat'],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('url-to-pdf'),
@@ -1268,6 +1857,15 @@ export const makeTools = (
     {
       label: 'Word to PDF',
       description: 'PDF',
+      tags: [
+        'create',
+        'document',
+        'docx',
+        'doc',
+        'microsoft-word',
+        'adobe',
+        'acrobat',
+      ],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('word-to-pdf'),
@@ -1277,6 +1875,7 @@ export const makeTools = (
     {
       label: 'AZW3 to EPUB',
       description: 'Ebook',
+      tags: ['pdf', 'document'],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('azw3-to-epub'),
@@ -1284,6 +1883,7 @@ export const makeTools = (
     {
       label: 'AZW3 to MOBI',
       description: 'Ebook',
+      tags: ['pdf', 'epub', 'document'],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('azw3-to-mobi'),
@@ -1291,6 +1891,7 @@ export const makeTools = (
     {
       label: 'EPUB to AZW3',
       description: 'Ebook',
+      tags: ['pdf', 'document'],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('epub-to-azw3'),
@@ -1298,6 +1899,7 @@ export const makeTools = (
     {
       label: 'EPUB to MOBI',
       description: 'Ebook',
+      tags: ['pdf', 'document'],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('epub-to-mobi'),
@@ -1305,6 +1907,7 @@ export const makeTools = (
     {
       label: 'MOBI to AZW3',
       description: 'Ebook',
+      tags: ['pdf', 'epub', 'document'],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('mobi-to-azw3'),
@@ -1312,6 +1915,7 @@ export const makeTools = (
     {
       label: 'MOBI to EPUB',
       description: 'Ebook',
+      tags: ['pdf', 'document'],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('mobi-to-epub'),
@@ -1321,6 +1925,7 @@ export const makeTools = (
     {
       label: 'Annotate',
       description: 'PDF',
+      tags: ['edit', 'document', 'adobe', 'acrobat'],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('pdf-annotate'),
@@ -1328,6 +1933,16 @@ export const makeTools = (
     {
       label: 'Compress',
       description: 'PDF',
+      tags: [
+        'edit',
+        'document',
+        'zip',
+        'archive',
+        'minify',
+        'reduce-size',
+        'adobe',
+        'acrobat',
+      ],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('pdf-compress'),
@@ -1335,6 +1950,15 @@ export const makeTools = (
     {
       label: 'Crop Pages',
       description: 'PDF',
+      tags: [
+        'edit',
+        'document',
+        'trim',
+        'cut',
+        'clip-image',
+        'adobe',
+        'acrobat',
+      ],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('pdf-crop'),
@@ -1342,6 +1966,7 @@ export const makeTools = (
     {
       label: 'Delete Pages',
       description: 'PDF',
+      tags: ['edit', 'document', 'adobe', 'acrobat'],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('pdf-delete-pages'),
@@ -1349,6 +1974,7 @@ export const makeTools = (
     {
       label: 'Merge',
       description: 'PDF',
+      tags: ['edit', 'document', 'adobe', 'acrobat'],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('pdf-merge'),
@@ -1356,6 +1982,7 @@ export const makeTools = (
     {
       label: 'Page Numbers',
       description: 'PDF',
+      tags: ['edit', 'document', 'adobe', 'acrobat'],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('pdf-page-numbers'),
@@ -1363,6 +1990,7 @@ export const makeTools = (
     {
       label: 'Rearrange',
       description: 'PDF',
+      tags: ['edit', 'document', 'adobe', 'acrobat'],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('pdf-rearrange'),
@@ -1370,6 +1998,7 @@ export const makeTools = (
     {
       label: 'Redact',
       description: 'PDF',
+      tags: ['edit', 'document', 'adobe', 'acrobat'],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('pdf-redact'),
@@ -1377,6 +2006,7 @@ export const makeTools = (
     {
       label: 'Rotate',
       description: 'PDF',
+      tags: ['edit', 'document', 'flip', 'orientation', 'adobe', 'acrobat'],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('pdf-rotate'),
@@ -1384,6 +2014,7 @@ export const makeTools = (
     {
       label: 'Split',
       description: 'PDF',
+      tags: ['edit', 'document', 'adobe', 'acrobat'],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('pdf-split'),
@@ -1391,6 +2022,14 @@ export const makeTools = (
     {
       label: 'Watermark',
       description: 'PDF',
+      tags: [
+        'edit',
+        'document',
+        'watermark-removal',
+        'logo',
+        'adobe',
+        'acrobat',
+      ],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('pdf-watermark'),
@@ -1400,6 +2039,7 @@ export const makeTools = (
     {
       label: 'Extract Images',
       description: 'PDF',
+      tags: ['document', 'adobe', 'acrobat'],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('pdf-extract-images'),
@@ -1407,6 +2047,7 @@ export const makeTools = (
     {
       label: 'Extract Text',
       description: 'PDF',
+      tags: ['document', 'adobe', 'acrobat'],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('pdf-extract-text'),
@@ -1414,6 +2055,7 @@ export const makeTools = (
     {
       label: 'Info',
       description: 'PDF',
+      tags: ['extract', 'document', 'adobe', 'acrobat'],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('pdf-info'),
@@ -1421,6 +2063,7 @@ export const makeTools = (
     {
       label: 'Metadata',
       description: 'PDF',
+      tags: ['extract', 'document', 'adobe', 'acrobat'],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('pdf-metadata'),
@@ -1428,6 +2071,7 @@ export const makeTools = (
     {
       label: 'OCR',
       description: 'PDF',
+      tags: ['extract', 'document', 'adobe', 'acrobat'],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('pdf-ocr'),
@@ -1435,6 +2079,7 @@ export const makeTools = (
     {
       label: 'Repair',
       description: 'PDF',
+      tags: ['extract', 'document', 'adobe', 'acrobat'],
       emoji: '📄',
       color: '#3b82f6',
       onClick: open('pdf-repair'),
@@ -1444,6 +2089,7 @@ export const makeTools = (
     {
       label: 'Security',
       description: 'Encrypt/Decrypt',
+      tags: ['pdf', 'document', 'utility'],
       emoji: '🔒',
       color: '#ef4444',
       onClick: open('pdf-security'),
@@ -1451,6 +2097,15 @@ export const makeTools = (
     {
       label: 'Translate',
       description: 'PDF',
+      tags: [
+        'document',
+        'utility',
+        'translation',
+        'language',
+        'i18n',
+        'adobe',
+        'acrobat',
+      ],
       emoji: '🌐',
       color: '#ef4444',
       onClick: open('pdf-translate'),
@@ -1458,6 +2113,7 @@ export const makeTools = (
     {
       label: 'eSign',
       description: 'Sign PDF',
+      tags: ['document', 'utility', 'adobe', 'acrobat'],
       emoji: '✍️',
       color: '#ef4444',
       onClick: open('pdf-esign'),
@@ -1467,6 +2123,7 @@ export const makeTools = (
     {
       label: 'Chat',
       description: 'AI Assistant',
+      tags: ['utility', 'tool', 'productivity'],
       emoji: '💬',
       color: '#3b82f6',
       onClick: open('chat'),
@@ -1474,6 +2131,14 @@ export const makeTools = (
     {
       label: 'Clipboard',
       description: 'Clipboard',
+      tags: [
+        'utility',
+        'tool',
+        'productivity',
+        'copy',
+        'paste',
+        'clipboard-manager',
+      ],
       emoji: '📋',
       color: '#3b82f6',
       onClick: open('clipboard'),
@@ -1481,6 +2146,7 @@ export const makeTools = (
     {
       label: 'Emojis',
       description: 'Explorer',
+      tags: ['utility', 'tool', 'productivity'],
       emoji: '😀',
       color: '#f59e0b',
       onClick: open('emojis'),
@@ -1488,6 +2154,7 @@ export const makeTools = (
     {
       label: 'Contrast',
       description: 'Checker',
+      tags: ['utility', 'tool', 'productivity'],
       emoji: '👁️',
       color: '#3b82f6',
       onClick: open('contrast-checker'),
@@ -1495,6 +2162,7 @@ export const makeTools = (
     {
       label: 'Gradient',
       description: 'Generator',
+      tags: ['utility', 'tool', 'productivity', 'create', 'maker', 'builder'],
       emoji: '🎨',
       color: '#8b5cf6',
       onClick: open('gradient-generator'),
@@ -1502,6 +2170,7 @@ export const makeTools = (
     {
       label: 'Kaprekar',
       description: 'Routine',
+      tags: ['utility', 'tool', 'productivity'],
       emoji: '🔢',
       color: '#f59e0b',
       onClick: open('kaprekar'),
@@ -1509,6 +2178,14 @@ export const makeTools = (
     {
       label: 'No Sleep',
       description: 'Timer',
+      tags: [
+        'utility',
+        'tool',
+        'productivity',
+        'countdown',
+        'stopwatch',
+        'alarm',
+      ],
       emoji: '😴',
       color: '#3b82f6',
       onClick: open('no-sleep'),
@@ -1516,6 +2193,16 @@ export const makeTools = (
     {
       label: 'Password',
       description: 'Generator',
+      tags: [
+        'utility',
+        'tool',
+        'productivity',
+        'secret',
+        'strong',
+        'create',
+        'maker',
+        'builder',
+      ],
       emoji: '🔐',
       color: '#3b82f6',
       onClick: open('text-password'),
@@ -1523,6 +2210,15 @@ export const makeTools = (
     {
       label: 'Word Count',
       description: 'Counter',
+      tags: [
+        'utility',
+        'tool',
+        'productivity',
+        'docx',
+        'doc',
+        'microsoft-word',
+        'tally',
+      ],
       emoji: '📊',
       color: '#3b82f6',
       onClick: open('text-word-count'),
@@ -1530,6 +2226,7 @@ export const makeTools = (
     {
       label: 'Screen Recorder',
       description: 'Record & Download',
+      tags: ['utility', 'tool', 'productivity'],
       emoji: '🎥',
       color: '#3b82f6',
       onClick: open('screen-recorder'),
@@ -1539,6 +2236,7 @@ export const makeTools = (
     {
       label: 'Subtitles',
       description: 'Video',
+      tags: ['audio', 'media', 'mp4', 'movie', 'clip', 'footage'],
       emoji: '🎤',
       color: '#ef4444',
       onClick: open('generate-subtitle'),
@@ -1546,6 +2244,7 @@ export const makeTools = (
     {
       label: 'Transcribe',
       description: 'Video',
+      tags: ['audio', 'media', 'mp4', 'movie', 'clip', 'footage'],
       emoji: '🎤',
       color: '#ef4444',
       onClick: open('audio-transcribe'),
@@ -1555,6 +2254,7 @@ export const makeTools = (
     {
       label: 'AVI to GIF',
       description: 'Video',
+      tags: ['convert', 'media', 'mp4', 'movie', 'clip', 'footage'],
       emoji: '🎬',
       color: '#ef4444',
       onClick: open('video-avi-to-gif'),
@@ -1562,6 +2262,7 @@ export const makeTools = (
     {
       label: 'AVI to MP3',
       description: 'Video',
+      tags: ['convert', 'media', 'mp4', 'movie', 'clip', 'footage'],
       emoji: '🎬',
       color: '#ef4444',
       onClick: open('video-avi-to-mp3'),
@@ -1569,6 +2270,7 @@ export const makeTools = (
     {
       label: 'AVI to MP4',
       description: 'Video',
+      tags: ['convert', 'media', 'movie', 'clip', 'footage'],
       emoji: '🎬',
       color: '#ef4444',
       onClick: open('video-avi-to-mp4'),
@@ -1576,6 +2278,7 @@ export const makeTools = (
     {
       label: 'FLV to MP4',
       description: 'Video',
+      tags: ['convert', 'media', 'movie', 'clip', 'footage'],
       emoji: '🎬',
       color: '#ef4444',
       onClick: open('video-flv-to-mp4'),
@@ -1583,6 +2286,7 @@ export const makeTools = (
     {
       label: 'GIF to MOV',
       description: 'Video',
+      tags: ['convert', 'media', 'mp4', 'movie', 'clip', 'footage'],
       emoji: '🎬',
       color: '#ef4444',
       onClick: open('video-gif-to-mov'),
@@ -1590,6 +2294,7 @@ export const makeTools = (
     {
       label: 'GIF to MP4',
       description: 'Video',
+      tags: ['convert', 'media', 'movie', 'clip', 'footage'],
       emoji: '🎬',
       color: '#ef4444',
       onClick: open('video-gif-to-mp4'),
@@ -1597,6 +2302,7 @@ export const makeTools = (
     {
       label: 'GIF to WebM',
       description: 'Video',
+      tags: ['convert', 'media', 'mp4', 'movie', 'clip', 'footage'],
       emoji: '🎬',
       color: '#ef4444',
       onClick: open('video-gif-to-webm'),
@@ -1604,6 +2310,7 @@ export const makeTools = (
     {
       label: 'MKV to MP4',
       description: 'Video',
+      tags: ['convert', 'media', 'movie', 'clip', 'footage'],
       emoji: '🎬',
       color: '#ef4444',
       onClick: open('video-mkv-to-mp4'),
@@ -1611,6 +2318,7 @@ export const makeTools = (
     {
       label: 'MOV to MP4',
       description: 'Video',
+      tags: ['convert', 'media', 'movie', 'clip', 'footage'],
       emoji: '🎬',
       color: '#ef4444',
       onClick: open('video-mov-to-mp4'),
@@ -1618,6 +2326,7 @@ export const makeTools = (
     {
       label: 'MP4 to AVI',
       description: 'Video',
+      tags: ['convert', 'media', 'movie', 'clip', 'footage'],
       emoji: '🎬',
       color: '#ef4444',
       onClick: open('video-mp4-to-avi'),
@@ -1625,6 +2334,7 @@ export const makeTools = (
     {
       label: 'MP4 to MOV',
       description: 'Video',
+      tags: ['convert', 'media', 'movie', 'clip', 'footage'],
       emoji: '🎬',
       color: '#ef4444',
       onClick: open('video-mp4-to-mov'),
@@ -1632,6 +2342,7 @@ export const makeTools = (
     {
       label: 'WMV to MP4',
       description: 'Video',
+      tags: ['convert', 'media', 'movie', 'clip', 'footage'],
       emoji: '🎬',
       color: '#ef4444',
       onClick: open('video-wmv-to-mp4'),
@@ -1641,6 +2352,7 @@ export const makeTools = (
     {
       label: 'AAC to MP3',
       description: 'Video',
+      tags: ['audio', 'convert', 'media', 'mp4', 'movie', 'clip', 'footage'],
       emoji: '🎬',
       color: '#ef4444',
       onClick: open('video-aac-to-mp3'),
@@ -1648,6 +2360,7 @@ export const makeTools = (
     {
       label: 'AAC to MP4',
       description: 'Video',
+      tags: ['audio', 'convert', 'media', 'movie', 'clip', 'footage'],
       emoji: '🎬',
       color: '#ef4444',
       onClick: open('video-aac-to-mp4'),
@@ -1655,6 +2368,7 @@ export const makeTools = (
     {
       label: 'AAC to WAV',
       description: 'Video',
+      tags: ['audio', 'convert', 'media', 'mp4', 'movie', 'clip', 'footage'],
       emoji: '🎬',
       color: '#ef4444',
       onClick: open('video-aac-to-wav'),
@@ -1662,6 +2376,7 @@ export const makeTools = (
     {
       label: 'M4A to MP3',
       description: 'Video',
+      tags: ['audio', 'convert', 'media', 'mp4', 'movie', 'clip', 'footage'],
       emoji: '🎬',
       color: '#ef4444',
       onClick: open('video-m4a-to-mp3'),
@@ -1669,6 +2384,7 @@ export const makeTools = (
     {
       label: 'M4A to MP4',
       description: 'Video',
+      tags: ['audio', 'convert', 'media', 'movie', 'clip', 'footage'],
       emoji: '🎬',
       color: '#ef4444',
       onClick: open('video-m4a-to-mp4'),
@@ -1676,6 +2392,7 @@ export const makeTools = (
     {
       label: 'M4A to WAV',
       description: 'Video',
+      tags: ['audio', 'convert', 'media', 'mp4', 'movie', 'clip', 'footage'],
       emoji: '🎬',
       color: '#ef4444',
       onClick: open('video-m4a-to-wav'),
@@ -1683,6 +2400,7 @@ export const makeTools = (
     {
       label: 'MOV to MP3',
       description: 'Video',
+      tags: ['audio', 'convert', 'media', 'mp4', 'movie', 'clip', 'footage'],
       emoji: '🎬',
       color: '#ef4444',
       onClick: open('video-mov-to-mp3'),
@@ -1690,6 +2408,7 @@ export const makeTools = (
     {
       label: 'MOV to WAV',
       description: 'Video',
+      tags: ['audio', 'convert', 'media', 'mp4', 'movie', 'clip', 'footage'],
       emoji: '🎬',
       color: '#ef4444',
       onClick: open('video-mov-to-wav'),
@@ -1697,6 +2416,7 @@ export const makeTools = (
     {
       label: 'MP4 to MP3',
       description: 'Video',
+      tags: ['audio', 'convert', 'media', 'movie', 'clip', 'footage'],
       emoji: '🎬',
       color: '#ef4444',
       onClick: open('video-mp4-to-mp3'),
@@ -1704,6 +2424,7 @@ export const makeTools = (
     {
       label: 'MP4 to WAV',
       description: 'Video',
+      tags: ['audio', 'convert', 'media', 'movie', 'clip', 'footage'],
       emoji: '🎬',
       color: '#ef4444',
       onClick: open('video-mp4-to-wav'),
@@ -1711,6 +2432,7 @@ export const makeTools = (
     {
       label: 'OGG to MP3',
       description: 'Video',
+      tags: ['audio', 'convert', 'media', 'mp4', 'movie', 'clip', 'footage'],
       emoji: '🎬',
       color: '#ef4444',
       onClick: open('video-ogg-to-mp3'),
@@ -1718,6 +2440,7 @@ export const makeTools = (
     {
       label: 'OGG to WAV',
       description: 'Video',
+      tags: ['audio', 'convert', 'media', 'mp4', 'movie', 'clip', 'footage'],
       emoji: '🎬',
       color: '#ef4444',
       onClick: open('video-ogg-to-wav'),
@@ -1727,6 +2450,7 @@ export const makeTools = (
     {
       label: 'Convert to WebM',
       description: 'Video',
+      tags: ['media', 'mp4', 'movie', 'clip', 'footage'],
       emoji: '🎬',
       color: '#ef4444',
       onClick: open('video-convert-to-webm'),
@@ -1734,6 +2458,7 @@ export const makeTools = (
     {
       label: 'MKV to GIF',
       description: 'Video',
+      tags: ['convert', 'media', 'mp4', 'movie', 'clip', 'footage'],
       emoji: '🎬',
       color: '#ef4444',
       onClick: open('video-mkv-to-gif'),
@@ -1741,6 +2466,7 @@ export const makeTools = (
     {
       label: 'MKV to MP3',
       description: 'Video',
+      tags: ['convert', 'media', 'mp4', 'movie', 'clip', 'footage'],
       emoji: '🎬',
       color: '#ef4444',
       onClick: open('video-mkv-to-mp3'),
@@ -1748,6 +2474,7 @@ export const makeTools = (
     {
       label: 'MOV to AVI',
       description: 'Video',
+      tags: ['convert', 'media', 'mp4', 'movie', 'clip', 'footage'],
       emoji: '🎬',
       color: '#ef4444',
       onClick: open('video-mov-to-avi'),
@@ -1755,6 +2482,7 @@ export const makeTools = (
     {
       label: 'MOV to GIF',
       description: 'Video',
+      tags: ['convert', 'media', 'mp4', 'movie', 'clip', 'footage'],
       emoji: '🎬',
       color: '#ef4444',
       onClick: open('video-mov-to-gif'),
@@ -1762,6 +2490,7 @@ export const makeTools = (
     {
       label: 'MP4 to OGG',
       description: 'Video',
+      tags: ['convert', 'media', 'movie', 'clip', 'footage'],
       emoji: '🎬',
       color: '#ef4444',
       onClick: open('video-mp4-to-ogg'),
@@ -1769,6 +2498,7 @@ export const makeTools = (
     {
       label: 'Video to GIF',
       description: 'Video',
+      tags: ['convert', 'media', 'mp4', 'movie', 'clip', 'footage'],
       emoji: '🎬',
       color: '#ef4444',
       onClick: open('video-to-gif'),
@@ -1776,6 +2506,7 @@ export const makeTools = (
     {
       label: 'Video to WebP',
       description: 'Video',
+      tags: ['convert', 'media', 'mp4', 'movie', 'clip', 'footage'],
       emoji: '🎬',
       color: '#ef4444',
       onClick: open('video-to-webp'),
@@ -1783,6 +2514,7 @@ export const makeTools = (
     {
       label: 'WebM to MP3',
       description: 'Video',
+      tags: ['convert', 'media', 'mp4', 'movie', 'clip', 'footage'],
       emoji: '🎬',
       color: '#ef4444',
       onClick: open('video-webm-to-mp3'),
@@ -1792,6 +2524,17 @@ export const makeTools = (
     {
       label: 'Facebook',
       description: 'Video',
+      tags: [
+        'download',
+        'media',
+        'fb',
+        'social',
+        'meta',
+        'mp4',
+        'movie',
+        'clip',
+        'footage',
+      ],
       emoji: '⬇️',
       color: '#ef4444',
       onClick: open('video-download-facebook'),
@@ -1799,6 +2542,17 @@ export const makeTools = (
     {
       label: 'Instagram',
       description: 'Video',
+      tags: [
+        'download',
+        'media',
+        'ig',
+        'social',
+        'photo',
+        'mp4',
+        'movie',
+        'clip',
+        'footage',
+      ],
       emoji: '⬇️',
       color: '#ef4444',
       onClick: open('video-download-instagram'),
@@ -1806,6 +2560,16 @@ export const makeTools = (
     {
       label: 'TikTok',
       description: 'Video',
+      tags: [
+        'download',
+        'media',
+        'social',
+        'short-video',
+        'mp4',
+        'movie',
+        'clip',
+        'footage',
+      ],
       emoji: '⬇️',
       color: '#ef4444',
       onClick: open('video-download-tiktok'),
@@ -1813,6 +2577,16 @@ export const makeTools = (
     {
       label: 'Twitter/X',
       description: 'Video',
+      tags: [
+        'download',
+        'media',
+        'social',
+        'tweet',
+        'mp4',
+        'movie',
+        'clip',
+        'footage',
+      ],
       emoji: '⬇️',
       color: '#ef4444',
       onClick: open('video-download-twitter'),
@@ -1820,6 +2594,7 @@ export const makeTools = (
     {
       label: 'YouTube to Text',
       description: 'Video',
+      tags: ['download', 'media', 'yt', 'mp4', 'movie', 'clip', 'footage'],
       emoji: '⬇️',
       color: '#ef4444',
       onClick: open('video-youtube-text'),
@@ -1827,6 +2602,7 @@ export const makeTools = (
     {
       label: 'YouTube Transcript',
       description: 'Video',
+      tags: ['download', 'media', 'yt', 'mp4', 'movie', 'clip', 'footage'],
       emoji: '⬇️',
       color: '#ef4444',
       onClick: open('video-youtube-transcript'),
@@ -1836,6 +2612,18 @@ export const makeTools = (
     {
       label: 'Compress',
       description: 'Video',
+      tags: [
+        'edit',
+        'media',
+        'zip',
+        'archive',
+        'minify',
+        'reduce-size',
+        'mp4',
+        'movie',
+        'clip',
+        'footage',
+      ],
       emoji: '✂️',
       color: '#ef4444',
       onClick: open('video-compress'),
@@ -1843,6 +2631,17 @@ export const makeTools = (
     {
       label: 'Crop',
       description: 'Video',
+      tags: [
+        'edit',
+        'media',
+        'trim',
+        'cut',
+        'clip-image',
+        'mp4',
+        'movie',
+        'clip',
+        'footage',
+      ],
       emoji: '✂️',
       color: '#ef4444',
       onClick: open('video-crop'),
@@ -1850,6 +2649,19 @@ export const makeTools = (
     {
       label: 'Extract Audio',
       description: 'Video',
+      tags: [
+        'edit',
+        'media',
+        'sound',
+        'music',
+        'mp3',
+        'wav',
+        'ogg',
+        'mp4',
+        'movie',
+        'clip',
+        'footage',
+      ],
       emoji: '✂️',
       color: '#ef4444',
       onClick: open('video-extract-audio'),
@@ -1857,6 +2669,7 @@ export const makeTools = (
     {
       label: 'Extract Frames',
       description: 'Video',
+      tags: ['edit', 'media', 'mp4', 'movie', 'clip', 'footage'],
       emoji: '✂️',
       color: '#ef4444',
       onClick: open('video-extract-frames'),
@@ -1864,6 +2677,7 @@ export const makeTools = (
     {
       label: 'Merge',
       description: 'Video',
+      tags: ['edit', 'media', 'mp4', 'movie', 'clip', 'footage'],
       emoji: '✂️',
       color: '#ef4444',
       onClick: open('video-merge'),
@@ -1871,6 +2685,7 @@ export const makeTools = (
     {
       label: 'Mute',
       description: 'Video',
+      tags: ['edit', 'media', 'mp4', 'movie', 'clip', 'footage'],
       emoji: '✂️',
       color: '#ef4444',
       onClick: open('video-mute'),
@@ -1878,6 +2693,17 @@ export const makeTools = (
     {
       label: 'Resize',
       description: 'Video',
+      tags: [
+        'edit',
+        'media',
+        'scale',
+        'resize-image',
+        'dimensions',
+        'mp4',
+        'movie',
+        'clip',
+        'footage',
+      ],
       emoji: '✂️',
       color: '#ef4444',
       onClick: open('video-resize'),
@@ -1885,6 +2711,7 @@ export const makeTools = (
     {
       label: 'Speed',
       description: 'Video',
+      tags: ['edit', 'media', 'mp4', 'movie', 'clip', 'footage'],
       emoji: '✂️',
       color: '#ef4444',
       onClick: open('video-speed'),
@@ -1892,6 +2719,7 @@ export const makeTools = (
     {
       label: 'Stabilize',
       description: 'Video',
+      tags: ['edit', 'media', 'mp4', 'movie', 'clip', 'footage'],
       emoji: '✂️',
       color: '#ef4444',
       onClick: open('video-stabilize'),
@@ -1899,6 +2727,7 @@ export const makeTools = (
     {
       label: 'Trim',
       description: 'Video',
+      tags: ['edit', 'media', 'mp4', 'movie', 'clip', 'footage'],
       emoji: '✂️',
       color: '#ef4444',
       onClick: open('video-trim'),
@@ -1908,6 +2737,15 @@ export const makeTools = (
     {
       label: 'Calendar Tracker',
       description: 'Activities',
+      tags: [
+        'chart',
+        'graph',
+        'visualization',
+        'data',
+        'date',
+        'event',
+        'schedule',
+      ],
       emoji: '📅',
       color: '#10b981',
       onClick: open('calendar-tracker'),
@@ -1915,6 +2753,7 @@ export const makeTools = (
     {
       label: 'Legislation',
       description: 'Visualization',
+      tags: ['chart', 'graph', 'data'],
       emoji: '🏛️',
       color: '#ef4444',
       onClick: open('legislation'),
@@ -1922,6 +2761,7 @@ export const makeTools = (
     {
       label: 'Resume',
       description: 'Timeline',
+      tags: ['chart', 'graph', 'visualization', 'data'],
       emoji: '⏳',
       color: '#ef4444',
       onClick: open('resume-timeline'),
@@ -1929,6 +2769,7 @@ export const makeTools = (
     {
       label: 'Graph',
       description: 'Force Layout',
+      tags: ['chart', 'visualization', 'data'],
       emoji: '🕸️',
       color: '#6c5ce7',
       onClick: open('graph'),
@@ -1938,6 +2779,7 @@ export const makeTools = (
     {
       label: 'Article',
       description: 'Write',
+      tags: ['content', 'writing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-article'),
@@ -1945,6 +2787,7 @@ export const makeTools = (
     {
       label: 'Article Rewriter',
       description: 'Write',
+      tags: ['content', 'writing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-article-rewriter'),
@@ -1952,6 +2795,7 @@ export const makeTools = (
     {
       label: 'Blog Ideas',
       description: 'Write',
+      tags: ['article', 'content', 'writing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-blog-ideas'),
@@ -1959,6 +2803,7 @@ export const makeTools = (
     {
       label: 'Blog Outline',
       description: 'Write',
+      tags: ['article', 'content', 'writing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-blog-outline'),
@@ -1966,6 +2811,7 @@ export const makeTools = (
     {
       label: 'Blog Post',
       description: 'Write',
+      tags: ['article', 'content', 'writing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-blog-post'),
@@ -1973,6 +2819,7 @@ export const makeTools = (
     {
       label: 'Essay',
       description: 'Write',
+      tags: ['article', 'content', 'writing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-essay'),
@@ -1980,6 +2827,7 @@ export const makeTools = (
     {
       label: 'Listicle',
       description: 'Write',
+      tags: ['article', 'content', 'writing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-listicle'),
@@ -1987,6 +2835,7 @@ export const makeTools = (
     {
       label: 'Paragraph',
       description: 'Write',
+      tags: ['article', 'content', 'writing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-paragraph'),
@@ -1994,6 +2843,7 @@ export const makeTools = (
     {
       label: 'Story',
       description: 'Write',
+      tags: ['article', 'content', 'writing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-story'),
@@ -2001,6 +2851,7 @@ export const makeTools = (
     {
       label: 'Story Ideas',
       description: 'Write',
+      tags: ['article', 'content', 'writing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-story-ideas'),
@@ -2008,6 +2859,7 @@ export const makeTools = (
     {
       label: 'YouTube Script',
       description: 'Write',
+      tags: ['article', 'content', 'writing', 'yt', 'video', 'download'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-youtube-script'),
@@ -2017,6 +2869,7 @@ export const makeTools = (
     {
       label: 'Bill of Sale',
       description: 'Write',
+      tags: ['business', 'document', 'writing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-bill-of-sale'),
@@ -2024,6 +2877,7 @@ export const makeTools = (
     {
       label: 'Business Name',
       description: 'Write',
+      tags: ['document', 'writing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-business-name'),
@@ -2031,6 +2885,7 @@ export const makeTools = (
     {
       label: 'Business Plan',
       description: 'Write',
+      tags: ['document', 'writing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-business-plan'),
@@ -2038,6 +2893,7 @@ export const makeTools = (
     {
       label: 'Slogan',
       description: 'Write',
+      tags: ['business', 'document', 'writing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-business-slogan'),
@@ -2045,6 +2901,7 @@ export const makeTools = (
     {
       label: 'Cold Email',
       description: 'Write',
+      tags: ['business', 'document', 'writing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-cold-email'),
@@ -2052,6 +2909,7 @@ export const makeTools = (
     {
       label: 'Landing Page',
       description: 'Write',
+      tags: ['business', 'document', 'writing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-landing-page'),
@@ -2059,6 +2917,7 @@ export const makeTools = (
     {
       label: 'NDA',
       description: 'Write',
+      tags: ['business', 'document', 'writing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-nda'),
@@ -2066,6 +2925,7 @@ export const makeTools = (
     {
       label: 'Podcast Script',
       description: 'Write',
+      tags: ['business', 'document', 'writing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-podcast-script'),
@@ -2073,6 +2933,7 @@ export const makeTools = (
     {
       label: 'Press Release',
       description: 'Write',
+      tags: ['business', 'document', 'writing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-press-release'),
@@ -2080,6 +2941,7 @@ export const makeTools = (
     {
       label: 'Privacy Policy',
       description: 'Write',
+      tags: ['business', 'document', 'writing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-privacy-policy'),
@@ -2087,6 +2949,7 @@ export const makeTools = (
     {
       label: 'Purchase Agreement',
       description: 'Write',
+      tags: ['business', 'document', 'writing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-purchase-agreement'),
@@ -2096,6 +2959,7 @@ export const makeTools = (
     {
       label: 'Content Brief',
       description: 'Write',
+      tags: ['writing', 'copy'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-content-brief'),
@@ -2103,6 +2967,7 @@ export const makeTools = (
     {
       label: 'Content Planner',
       description: 'Write',
+      tags: ['writing', 'copy'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-content-planner'),
@@ -2110,6 +2975,7 @@ export const makeTools = (
     {
       label: 'FAQ',
       description: 'Write',
+      tags: ['content', 'writing', 'copy'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-faq'),
@@ -2117,6 +2983,7 @@ export const makeTools = (
     {
       label: 'Poll',
       description: 'Write',
+      tags: ['content', 'writing', 'copy'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-poll'),
@@ -2124,6 +2991,7 @@ export const makeTools = (
     {
       label: 'Trivia',
       description: 'Write',
+      tags: ['content', 'writing', 'copy'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-trivia'),
@@ -2133,6 +3001,7 @@ export const makeTools = (
     {
       label: 'Complete',
       description: 'Write',
+      tags: ['edit', 'rewrite', 'writing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-complete'),
@@ -2140,6 +3009,7 @@ export const makeTools = (
     {
       label: 'Grammar Check',
       description: 'Write',
+      tags: ['edit', 'rewrite', 'writing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-grammar'),
@@ -2147,6 +3017,7 @@ export const makeTools = (
     {
       label: 'Humanizer',
       description: 'Write',
+      tags: ['edit', 'rewrite', 'writing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-humanizer'),
@@ -2154,6 +3025,7 @@ export const makeTools = (
     {
       label: 'Improve Text',
       description: 'Write',
+      tags: ['edit', 'rewrite', 'writing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-improve-text'),
@@ -2161,6 +3033,7 @@ export const makeTools = (
     {
       label: 'Paraphrase',
       description: 'Write',
+      tags: ['edit', 'rewrite', 'writing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-paraphrase'),
@@ -2168,6 +3041,7 @@ export const makeTools = (
     {
       label: 'Rewrite',
       description: 'Write',
+      tags: ['edit', 'writing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-rewrite'),
@@ -2175,6 +3049,7 @@ export const makeTools = (
     {
       label: 'Shorten Text',
       description: 'Write',
+      tags: ['edit', 'rewrite', 'writing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-shorten'),
@@ -2182,6 +3057,7 @@ export const makeTools = (
     {
       label: 'Summarize',
       description: 'Write',
+      tags: ['edit', 'rewrite', 'writing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-summarize'),
@@ -2189,6 +3065,7 @@ export const makeTools = (
     {
       label: 'Tone Changer',
       description: 'Write',
+      tags: ['edit', 'rewrite', 'writing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-tone'),
@@ -2196,6 +3073,7 @@ export const makeTools = (
     {
       label: 'Translate',
       description: 'Write',
+      tags: ['edit', 'rewrite', 'writing', 'translation', 'language', 'i18n'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-translate'),
@@ -2205,6 +3083,7 @@ export const makeTools = (
     {
       label: 'AI Detector',
       description: 'Write',
+      tags: ['writing', 'text'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-ai-detector'),
@@ -2212,6 +3091,7 @@ export const makeTools = (
     {
       label: 'Explain',
       description: 'Write',
+      tags: ['writing', 'text'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-explain'),
@@ -2219,6 +3099,7 @@ export const makeTools = (
     {
       label: 'Summarize Podcast',
       description: 'Write',
+      tags: ['writing', 'text'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-summarize-podcast'),
@@ -2226,6 +3107,7 @@ export const makeTools = (
     {
       label: 'Summarize YouTube',
       description: 'Write',
+      tags: ['writing', 'text', 'yt', 'video', 'download'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-summarize-youtube'),
@@ -2233,6 +3115,7 @@ export const makeTools = (
     {
       label: 'Title Generator',
       description: 'Write',
+      tags: ['writing', 'text', 'create', 'maker', 'builder'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-title'),
@@ -2242,6 +3125,7 @@ export const makeTools = (
     {
       label: 'Agent Bio',
       description: 'Write',
+      tags: ['real-estate', 'property', 'listing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-real-estate-bio'),
@@ -2249,6 +3133,7 @@ export const makeTools = (
     {
       label: 'Real Estate Desc',
       description: 'Write',
+      tags: ['real-estate', 'property', 'listing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-real-estate-description'),
@@ -2256,6 +3141,7 @@ export const makeTools = (
     {
       label: 'Real Estate Listing',
       description: 'Write',
+      tags: ['real-estate', 'property'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-real-estate-listing'),
@@ -2265,6 +3151,7 @@ export const makeTools = (
     {
       label: 'Caption',
       description: 'Write',
+      tags: ['social-media', 'post', 'writing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-caption'),
@@ -2272,6 +3159,7 @@ export const makeTools = (
     {
       label: 'Headline',
       description: 'Write',
+      tags: ['social-media', 'post', 'writing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-headline'),
@@ -2279,6 +3167,7 @@ export const makeTools = (
     {
       label: 'LinkedIn Post',
       description: 'Write',
+      tags: ['social-media', 'writing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-linkedin-post'),
@@ -2286,6 +3175,7 @@ export const makeTools = (
     {
       label: 'Meta Description',
       description: 'Write',
+      tags: ['social-media', 'post', 'writing'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-meta-description'),
@@ -2293,6 +3183,7 @@ export const makeTools = (
     {
       label: 'TikTok Script',
       description: 'Write',
+      tags: ['social-media', 'post', 'writing', 'social', 'short-video'],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-tiktok-script'),
@@ -2300,6 +3191,16 @@ export const makeTools = (
     {
       label: 'Twitter Generator',
       description: 'Write',
+      tags: [
+        'social-media',
+        'post',
+        'writing',
+        'social',
+        'tweet',
+        'create',
+        'maker',
+        'builder',
+      ],
       emoji: '✍️',
       color: '#8b5cf6',
       onClick: open('write-twitter-generator'),

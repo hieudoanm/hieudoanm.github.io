@@ -24,7 +24,7 @@ import {
   useState,
 } from 'react';
 
-import { match, GRID } from '../constants';
+import { match, matchTool, GRID } from '../constants';
 import { makeTools } from '../tools';
 import { SearchBar } from './SearchBar';
 import { Section } from './Section';
@@ -227,7 +227,7 @@ export const MainContent: FC<MainContentProps> = memo(
     const filteredAllTools = useMemo(
       () =>
         filtering
-          ? allToolsFlat.filter((t) => match(t.label, deferredQuery))
+          ? allToolsFlat.filter((t) => matchTool(t, deferredQuery))
           : allToolsFlat,
       [allToolsFlat, filtering, deferredQuery]
     );
@@ -277,7 +277,7 @@ export const MainContent: FC<MainContentProps> = memo(
         toolSectionDefs.map((s) => ({
           ...s,
           filtered: filtering
-            ? filterBy(s.items, 'label', deferredQuery)
+            ? s.items.filter((t) => matchTool(t, deferredQuery))
             : s.items,
         })),
       [toolSectionDefs, filtering, deferredQuery]

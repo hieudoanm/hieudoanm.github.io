@@ -5,6 +5,7 @@ export interface Tool {
   description: string;
   emoji: string;
   color: string;
+  tags?: string[];
   onClick: () => void;
 }
 
