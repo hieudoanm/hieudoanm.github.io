@@ -2,8 +2,6 @@ import { ComponentType, lazy } from 'react';
 import { ModalId } from '../types';
 
 import { loaders as aiLoaders } from './ai';
-import { loaders as gamesCasinoLoaders } from './games-casino';
-import { loaders as gamesChessLoaders } from './games-chess';
 import { loaders as clocksLoaders } from './clocks';
 import { loaders as colorsLoaders } from './colors';
 import { loaders as converterLoaders } from './converter';
@@ -16,21 +14,21 @@ import { loaders as editorsLoaders } from './editors';
 import { loaders as educationLoaders } from './education';
 import { loaders as eyesLoaders } from './eyes';
 import { loaders as financialLoaders } from './financial';
-
 import { loaders as gamesArcadeLoaders } from './games-arcade';
+import { loaders as gamesCasinoLoaders } from './games-casino';
+import { loaders as gamesChessLoaders } from './games-chess';
 import { loaders as gamesMemoryLoaders } from './games-memory';
 import { loaders as gamesPuzzleLoaders } from './games-puzzle';
 import { loaders as gamesTriviaLoaders } from './games-trivia';
 import { loaders as gamesWordLoaders } from './games-word';
-import { loaders as textConvertLoaders } from './text-convert';
+import { loaders as imageConvertGifLoaders } from './image-convert-gif';
+import { loaders as imageConvertHeicLoaders } from './image-convert-heic';
 import { loaders as imageConvertJpgLoaders } from './image-convert-jpg';
 import { loaders as imageConvertPngLoaders } from './image-convert-png';
-import { loaders as imageConvertWebpLoaders } from './image-convert-webp';
-import { loaders as imageConvertHeicLoaders } from './image-convert-heic';
-import { loaders as imageConvertGifLoaders } from './image-convert-gif';
 import { loaders as imageConvertPsdLoaders } from './image-convert-psd';
-import { loaders as imageConvertTiffLoaders } from './image-convert-tiff';
 import { loaders as imageConvertSvgLoaders } from './image-convert-svg';
+import { loaders as imageConvertTiffLoaders } from './image-convert-tiff';
+import { loaders as imageConvertWebpLoaders } from './image-convert-webp';
 import { loaders as imageCreateLoaders } from './image-create';
 import { loaders as imageEditLoaders } from './image-edit';
 import { loaders as imageEffectLoaders } from './image-effect';
@@ -41,6 +39,7 @@ import { loaders as pdfEbookLoaders } from './pdf-ebook';
 import { loaders as pdfEditLoaders } from './pdf-edit';
 import { loaders as pdfExtractLoaders } from './pdf-extract';
 import { loaders as pdfMiscLoaders } from './pdf-misc';
+import { loaders as textConvertLoaders } from './text-convert';
 import { loaders as utilitiesLoaders } from './utilities';
 import { loaders as videoAudioLoaders } from './video-audio';
 import { loaders as videoConvertAacLoaders } from './video-convert-aac';
@@ -52,8 +51,8 @@ import { loaders as videoConvertMkvLoaders } from './video-convert-mkv';
 import { loaders as videoConvertMovLoaders } from './video-convert-mov';
 import { loaders as videoConvertMp4Loaders } from './video-convert-mp4';
 import { loaders as videoConvertOggLoaders } from './video-convert-ogg';
-import { loaders as videoConvertWmvLoaders } from './video-convert-wmv';
 import { loaders as videoConvertWebmLoaders } from './video-convert-webm';
+import { loaders as videoConvertWmvLoaders } from './video-convert-wmv';
 import { loaders as videoDownloadLoaders } from './video-download';
 import { loaders as videoEditLoaders } from './video-edit';
 import { loaders as visualizationLoaders } from './visualization';
@@ -70,8 +69,6 @@ const loaders: Record<
   () => Promise<{ default: ComponentType<{ onClose: () => void }> }>
 > = {
   ...aiLoaders,
-  ...gamesCasinoLoaders,
-  ...gamesChessLoaders,
   ...clocksLoaders,
   ...colorsLoaders,
   ...converterLoaders,
@@ -84,21 +81,21 @@ const loaders: Record<
   ...educationLoaders,
   ...eyesLoaders,
   ...financialLoaders,
-
   ...gamesArcadeLoaders,
+  ...gamesCasinoLoaders,
+  ...gamesChessLoaders,
   ...gamesMemoryLoaders,
   ...gamesPuzzleLoaders,
   ...gamesTriviaLoaders,
   ...gamesWordLoaders,
-  ...textConvertLoaders,
+  ...imageConvertGifLoaders,
+  ...imageConvertHeicLoaders,
   ...imageConvertJpgLoaders,
   ...imageConvertPngLoaders,
-  ...imageConvertWebpLoaders,
-  ...imageConvertHeicLoaders,
-  ...imageConvertGifLoaders,
   ...imageConvertPsdLoaders,
-  ...imageConvertTiffLoaders,
   ...imageConvertSvgLoaders,
+  ...imageConvertTiffLoaders,
+  ...imageConvertWebpLoaders,
   ...imageCreateLoaders,
   ...imageEditLoaders,
   ...imageEffectLoaders,
@@ -109,6 +106,7 @@ const loaders: Record<
   ...pdfEditLoaders,
   ...pdfExtractLoaders,
   ...pdfMiscLoaders,
+  ...textConvertLoaders,
   ...utilitiesLoaders,
   ...videoAudioLoaders,
   ...videoConvertAacLoaders,
@@ -120,8 +118,8 @@ const loaders: Record<
   ...videoConvertMovLoaders,
   ...videoConvertMp4Loaders,
   ...videoConvertOggLoaders,
-  ...videoConvertWmvLoaders,
   ...videoConvertWebmLoaders,
+  ...videoConvertWmvLoaders,
   ...videoDownloadLoaders,
   ...videoEditLoaders,
   ...visualizationLoaders,

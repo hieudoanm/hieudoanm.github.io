@@ -1,5 +1,10 @@
 import { ComponentType } from 'react';
 
+const loadBaccarat = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/games-casino/BaccaratModal').then(
+    (m) => ({ default: m.BaccaratModal })
+  );
+
 const loadBlackjack = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/games-casino/BlackjackModal').then(
     (m) => ({ default: m.BlackjackModal })
@@ -10,10 +15,17 @@ const loadPoker = () =>
     (m) => ({ default: m.PokerModal })
   );
 
+const loadSlotMachine = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/games-casino/SlotMachineModal').then(
+    (m) => ({ default: m.SlotMachineModal })
+  );
+
 export const loaders: Record<
   string,
   () => Promise<{ default: ComponentType<{ onClose: () => void }> }>
 > = {
   blackjack: loadBlackjack,
   poker: loadPoker,
+  'slot-machine': loadSlotMachine,
+  'tai-baccarat': loadBaccarat,
 };

@@ -3,6 +3,14 @@ import { ModalId } from '../types';
 
 export const make = (open: (id: ModalId) => () => void): Tool[] => [
   {
+    label: 'Baccarat',
+    description: 'Card game',
+    tags: ['games-casino', 'gambling', 'card-game', 'baccarat'],
+    emoji: '🏦',
+    color: '#f59e0b',
+    onClick: open('tai-baccarat'),
+  },
+  {
     label: 'Blackjack',
     description: 'Cards Counter',
     tags: [
@@ -35,5 +43,13 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     emoji: '🃏',
     color: '#f59e0b',
     onClick: open('poker'),
+  },
+  {
+    label: 'Slot Machine',
+    description: '3 reels',
+    tags: ['games-casino', 'gambling', 'slots'],
+    emoji: '🎰',
+    color: '#f59e0b',
+    onClick: open('slot-machine'),
   },
 ];

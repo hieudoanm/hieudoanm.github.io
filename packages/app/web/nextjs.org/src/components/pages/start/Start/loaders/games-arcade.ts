@@ -1,5 +1,10 @@
 import { ComponentType } from 'react';
 
+const loadDinoRun = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/games-arcade/DinoRunModal').then(
+    (m) => ({ default: m.DinoRunModal })
+  );
+
 const loadRockPaperScissors = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/games-arcade/RockPaperScissorsModal').then(
     (m) => ({ default: m.RockPaperScissorsModal })
@@ -19,6 +24,7 @@ export const loaders: Record<
   string,
   () => Promise<{ default: ComponentType<{ onClose: () => void }> }>
 > = {
+  'dino-run': loadDinoRun,
   rps: loadRockPaperScissors,
   snake: loadSnake,
   t3: loadT3,

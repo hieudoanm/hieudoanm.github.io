@@ -11,6 +11,14 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     onClick: open('memory-match'),
   },
   {
+    label: 'N-Back',
+    description: 'Working memory',
+    tags: ['memory', 'brain', 'cognitive', 'game'],
+    emoji: '🔢',
+    color: '#f59e0b',
+    onClick: open('n-back'),
+  },
+  {
     label: 'PI',
     description: 'Memorization',
     tags: ['memory', 'brain', 'cognitive', 'game'],

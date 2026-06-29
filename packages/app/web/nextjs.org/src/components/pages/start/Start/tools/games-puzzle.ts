@@ -19,6 +19,14 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     onClick: open('lights-out'),
   },
   {
+    label: 'Maze',
+    description: 'Gen & solve',
+    tags: ['game', 'fun', 'entertainment'],
+    emoji: '🌀',
+    color: '#f59e0b',
+    onClick: open('maze'),
+  },
+  {
     label: 'Sliding Puzzle',
     description: 'Upload & slide tiles',
     tags: ['game', 'fun', 'entertainment'],

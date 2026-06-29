@@ -5,6 +5,11 @@ const loadMemoryMatch = () =>
     (m) => ({ default: m.MemoryMatchModal })
   );
 
+const loadNBack = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/games-memory/NBackModal').then(
+    (m) => ({ default: m.NBackModal })
+  );
+
 const loadPiNumber = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/games-memory/PiNumberModal').then(
     (m) => ({ default: m.PiModal })
@@ -25,6 +30,7 @@ export const loaders: Record<
   () => Promise<{ default: ComponentType<{ onClose: () => void }> }>
 > = {
   'memory-match': loadMemoryMatch,
+  'n-back': loadNBack,
   pi: loadPiNumber,
   quizify: loadQuizify,
   recall: loadRecall,

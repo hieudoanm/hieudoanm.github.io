@@ -5,19 +5,24 @@ const loadGame2048 = () =>
     (m) => ({ default: m.Game2048Modal })
   );
 
-const loadSudoku = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/games-puzzle/SudokuModal').then(
-    (m) => ({ default: m.SudokuModal })
-  );
-
 const loadLightsOut = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/games-puzzle/LightsOutModal').then(
     (m) => ({ default: m.LightsOutModal })
   );
 
+const loadMaze = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/games-puzzle/MazeModal').then(
+    (m) => ({ default: m.MazeModal })
+  );
+
 const loadSlidingPuzzle = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/games-puzzle/SlidingPuzzleModal').then(
     (m) => ({ default: m.SlidingPuzzleModal })
+  );
+
+const loadSudoku = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/games-puzzle/SudokuModal').then(
+    (m) => ({ default: m.SudokuModal })
   );
 
 const loadTowers = () =>
@@ -31,6 +36,7 @@ export const loaders: Record<
 > = {
   game2048: loadGame2048,
   'lights-out': loadLightsOut,
+  maze: loadMaze,
   'sliding-puzzle': loadSlidingPuzzle,
   sudoku: loadSudoku,
   towers: loadTowers,

@@ -2,8 +2,6 @@ import { Tool } from '@hieudoanm.github.io/components/pages/start/cards/ToolCard
 import { ModalId } from '../types';
 
 import { make as aiMake } from './ai';
-import { make as gamesCasinoMake } from './games-casino';
-import { make as gamesChessMake } from './games-chess';
 import { make as clocksMake } from './clocks';
 import { make as colorsMake } from './colors';
 import { make as converterMake } from './converter';
@@ -16,21 +14,21 @@ import { make as editorsMake } from './editors';
 import { make as educationMake } from './education';
 import { make as eyesMake } from './eyes';
 import { make as financialMake } from './financial';
-
 import { make as games_arcadeMake } from './games-arcade';
+import { make as games_casinoMake } from './games-casino';
+import { make as games_chessMake } from './games-chess';
 import { make as games_memoryMake } from './games-memory';
 import { make as games_puzzleMake } from './games-puzzle';
 import { make as games_triviaMake } from './games-trivia';
 import { make as games_wordMake } from './games-word';
-import { make as text_convertMake } from './text-convert';
+import { make as image_convert_gifMake } from './image-convert-gif';
+import { make as image_convert_heicMake } from './image-convert-heic';
 import { make as image_convert_jpgMake } from './image-convert-jpg';
 import { make as image_convert_pngMake } from './image-convert-png';
-import { make as image_convert_webpMake } from './image-convert-webp';
-import { make as image_convert_heicMake } from './image-convert-heic';
-import { make as image_convert_gifMake } from './image-convert-gif';
 import { make as image_convert_psdMake } from './image-convert-psd';
-import { make as image_convert_tiffMake } from './image-convert-tiff';
 import { make as image_convert_svgMake } from './image-convert-svg';
+import { make as image_convert_tiffMake } from './image-convert-tiff';
+import { make as image_convert_webpMake } from './image-convert-webp';
 import { make as image_createMake } from './image-create';
 import { make as image_editMake } from './image-edit';
 import { make as image_effectMake } from './image-effect';
@@ -41,6 +39,7 @@ import { make as pdf_ebookMake } from './pdf-ebook';
 import { make as pdf_editMake } from './pdf-edit';
 import { make as pdf_extractMake } from './pdf-extract';
 import { make as pdf_miscMake } from './pdf-misc';
+import { make as text_convertMake } from './text-convert';
 import { make as utilitiesMake } from './utilities';
 import { make as video_audioMake } from './video-audio';
 import { make as video_convert_aacMake } from './video-convert-aac';
@@ -52,8 +51,8 @@ import { make as video_convert_mkvMake } from './video-convert-mkv';
 import { make as video_convert_movMake } from './video-convert-mov';
 import { make as video_convert_mp4Make } from './video-convert-mp4';
 import { make as video_convert_oggMake } from './video-convert-ogg';
-import { make as video_convert_wmvMake } from './video-convert-wmv';
 import { make as video_convert_webmMake } from './video-convert-webm';
+import { make as video_convert_wmvMake } from './video-convert-wmv';
 import { make as video_downloadMake } from './video-download';
 import { make as video_editMake } from './video-edit';
 import { make as visualizationMake } from './visualization';
@@ -69,35 +68,33 @@ export const makeTools = (
   open: (id: ModalId) => () => void
 ): Record<string, Tool[]> => ({
   ai: aiMake(open),
-  'games-casino': gamesCasinoMake(open),
-  'games-chess': gamesChessMake(open),
   clocks: clocksMake(open),
   colors: colorsMake(open),
   converter: converterMake(open),
-  'data-json': data_jsonMake(open),
-  'data-xml': data_xmlMake(open),
   'data-csv': data_csvMake(open),
   'data-excel': data_excelMake(open),
+  'data-json': data_jsonMake(open),
+  'data-xml': data_xmlMake(open),
   developer: developerMake(open),
   editors: editorsMake(open),
   education: educationMake(open),
   eyes: eyesMake(open),
   financial: financialMake(open),
-
   'games-arcade': games_arcadeMake(open),
+  'games-casino': games_casinoMake(open),
+  'games-chess': games_chessMake(open),
   'games-memory': games_memoryMake(open),
   'games-puzzle': games_puzzleMake(open),
   'games-trivia': games_triviaMake(open),
   'games-word': games_wordMake(open),
-  'text-convert': text_convertMake(open),
+  'image-convert-gif': image_convert_gifMake(open),
+  'image-convert-heic': image_convert_heicMake(open),
   'image-convert-jpg': image_convert_jpgMake(open),
   'image-convert-png': image_convert_pngMake(open),
-  'image-convert-webp': image_convert_webpMake(open),
-  'image-convert-heic': image_convert_heicMake(open),
-  'image-convert-gif': image_convert_gifMake(open),
   'image-convert-psd': image_convert_psdMake(open),
-  'image-convert-tiff': image_convert_tiffMake(open),
   'image-convert-svg': image_convert_svgMake(open),
+  'image-convert-tiff': image_convert_tiffMake(open),
+  'image-convert-webp': image_convert_webpMake(open),
   'image-create': image_createMake(open),
   'image-edit': image_editMake(open),
   'image-effect': image_effectMake(open),
@@ -108,6 +105,7 @@ export const makeTools = (
   'pdf-edit': pdf_editMake(open),
   'pdf-extract': pdf_extractMake(open),
   'pdf-misc': pdf_miscMake(open),
+  'text-convert': text_convertMake(open),
   utilities: utilitiesMake(open),
   'video-audio': video_audioMake(open),
   'video-convert-aac': video_convert_aacMake(open),
@@ -119,8 +117,8 @@ export const makeTools = (
   'video-convert-mov': video_convert_movMake(open),
   'video-convert-mp4': video_convert_mp4Make(open),
   'video-convert-ogg': video_convert_oggMake(open),
-  'video-convert-wmv': video_convert_wmvMake(open),
   'video-convert-webm': video_convert_webmMake(open),
+  'video-convert-wmv': video_convert_wmvMake(open),
   'video-download': video_downloadMake(open),
   'video-edit': video_editMake(open),
   visualization: visualizationMake(open),

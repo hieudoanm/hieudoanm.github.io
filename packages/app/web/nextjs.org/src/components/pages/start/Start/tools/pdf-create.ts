@@ -43,7 +43,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     onClick: open('create-text-to-pdf'),
   },
   {
-    label: 'URL to PDF',
+    label: 'Fetch URL to PDF',
     description: 'PDF',
     tags: ['create', 'document', 'word', 'adobe', 'acrobat'],
     emoji: '📄',

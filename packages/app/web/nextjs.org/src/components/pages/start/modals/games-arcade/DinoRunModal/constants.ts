@@ -1,0 +1,14 @@
+export const GRAVITY = 0.6;
+export const JUMP_FORCE = -10;
+export const GROUND_Y = 200;
+export const DINO_WIDTH = 24;
+export const DINO_HEIGHT = 28;
+export const OBSTACLE_WIDTH = 16;
+export const OBSTACLE_HEIGHT = 24;
+export const MIN_OBSTACLE_GAP = 80;
+export const MAX_OBSTACLE_GAP = 140;
+export const BASE_SPEED = 3;
+export const SPEED_INCREMENT = 0.001;
+export const MAX_SPEED = 10;
+export const CANVAS_WIDTH = 320;
+export const CANVAS_HEIGHT = 240;
