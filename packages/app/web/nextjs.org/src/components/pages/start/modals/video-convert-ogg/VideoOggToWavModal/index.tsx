@@ -1,7 +1,7 @@
 'use client';
 
-import { FC, useState, useRef, useCallback } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { FC, useState, useCallback } from 'react';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { downloadBlob, encodeWav } from './utils';
 
 export const VideoOggToWavModal: FC<{ onClose: () => void }> = ({
@@ -28,12 +28,7 @@ export const VideoOggToWavModal: FC<{ onClose: () => void }> = ({
     <ModalWrapper onClose={onClose} title="OGG to WAV">
       <div className="flex flex-col gap-4">
         <p className="text-sm">Convert OGG audio to WAV format.</p>
-        <input
-          type="file"
-          accept=".ogg,audio/ogg"
-          onChange={(e) => setFile(e.target.files?.[0] ?? null)}
-          className="file-input file-input-bordered file-input-sm w-full"
-        />
+        <Dropzone accept=".ogg,audio/ogg" onFile={setFile} />
         {file && <p className="text-xs opacity-60">{file.name}</p>}
         <button
           onClick={handleConvert}

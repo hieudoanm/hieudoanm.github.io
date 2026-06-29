@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useState, useCallback, useRef } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { FILTERS, downloadBlob, applyFilter } from './utils';
 
 export const ImagePhotoFiltersModal: FC<{ onClose: () => void }> = ({
@@ -36,12 +36,7 @@ export const ImagePhotoFiltersModal: FC<{ onClose: () => void }> = ({
   return (
     <ModalWrapper onClose={onClose} title="Photo Filters">
       <div className="flex flex-col gap-4">
-        <input
-          type="file"
-          accept="image/*"
-          className="file-input file-input-bordered"
-          onChange={(e) => setFile(e.target.files?.[0] || null)}
-        />
+        <Dropzone accept="image/*" onFile={(f) => setFile(f)} />
         <div className="flex flex-wrap gap-2">
           {FILTERS.map((f) => (
             <button

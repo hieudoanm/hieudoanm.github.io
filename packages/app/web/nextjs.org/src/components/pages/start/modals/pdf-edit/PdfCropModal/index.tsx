@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useState, useCallback, useEffect, useRef } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 
 export const PdfCropModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -12,9 +12,8 @@ export const PdfCropModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [right, setRight] = useState(10);
   const [unit, setUnit] = useState<'mm' | 'percent'>('mm');
 
-  const handleFile = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    const f = e.target.files?.[0];
-    if (f) setFile(f);
+  const handleFile = useCallback((f: File) => {
+    setFile(f);
   }, []);
 
   useEffect(() => {
@@ -72,12 +71,7 @@ export const PdfCropModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     <ModalWrapper onClose={onClose} title="Crop PDF" size="max-w-md">
       <div className="flex flex-col gap-4">
         <p className="text-sm">Set crop margins for your PDF pages.</p>
-        <input
-          type="file"
-          accept=".pdf"
-          onChange={handleFile}
-          className="file-input file-input-bordered file-input-sm w-full"
-        />
+        <Dropzone accept=".pdf" onFile={handleFile} />
         {file && (
           <p className="text-base-content/60 text-xs">
             {file.name} ({(file.size / 1024).toFixed(0)} KB)

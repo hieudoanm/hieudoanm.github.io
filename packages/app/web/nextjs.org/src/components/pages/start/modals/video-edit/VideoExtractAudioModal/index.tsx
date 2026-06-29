@@ -1,7 +1,7 @@
 'use client';
 
-import { FC, useState, useRef, useCallback } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { FC, useState, useCallback } from 'react';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { downloadBlob, encodeWav } from './utils';
 
 export const VideoExtractAudioModal: FC<{ onClose: () => void }> = ({
@@ -28,12 +28,7 @@ export const VideoExtractAudioModal: FC<{ onClose: () => void }> = ({
     <ModalWrapper onClose={onClose} title="Extract Audio">
       <div className="flex flex-col gap-4">
         <p className="text-sm">Extract audio track from video file as WAV.</p>
-        <input
-          type="file"
-          accept="video/*"
-          onChange={(e) => setFile(e.target.files?.[0] ?? null)}
-          className="file-input file-input-bordered file-input-sm w-full"
-        />
+        <Dropzone accept="video/*" onFile={setFile} />
         {file && <p className="text-xs opacity-60">{file.name}</p>}
         <button
           onClick={handleExtract}

@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useState, useCallback, useRef } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { downloadBlob } from './utils';
 
 export const ImageConvertGifToPngModal: FC<{ onClose: () => void }> = ({
@@ -40,12 +40,7 @@ export const ImageConvertGifToPngModal: FC<{ onClose: () => void }> = ({
     <ModalWrapper onClose={onClose} title="GIF to PNG" size="max-w-lg">
       <div className="flex flex-col gap-4">
         <p className="text-sm">Convert GIF images to PNG format.</p>
-        <input
-          type="file"
-          accept=".gif"
-          className="file-input file-input-bordered"
-          onChange={(e) => setFile(e.target.files?.[0] ?? null)}
-        />
+        <Dropzone accept=".gif" onFile={(f) => setFile(f)} />
         <canvas ref={canvasRef} className="hidden" />
         <button
           className="btn btn-primary"

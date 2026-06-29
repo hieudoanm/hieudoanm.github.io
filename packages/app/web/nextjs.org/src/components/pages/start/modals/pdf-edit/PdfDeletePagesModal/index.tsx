@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useState } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { PDFDocument } from 'pdf-lib';
 import { parsePageRange, downloadBlob } from './utils';
 
@@ -40,15 +40,7 @@ export const PdfDeletePagesModal: FC<{ onClose: () => void }> = ({
   return (
     <ModalWrapper onClose={onClose} title="Delete Pages" size="max-w-md">
       <div className="flex flex-col gap-4">
-        <input
-          type="file"
-          accept=".pdf"
-          className="file-input file-input-bordered"
-          onChange={(e) => {
-            const f = e.target.files?.[0];
-            if (f) setFile(f);
-          }}
-        />
+        <Dropzone accept=".pdf" onFile={(f) => setFile(f)} />
         <label className="flex flex-col gap-1">
           <span className="text-sm">Pages to delete (e.g., 1,3,5-7):</span>
           <input

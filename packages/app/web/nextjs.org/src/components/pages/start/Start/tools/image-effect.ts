@@ -39,6 +39,14 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     onClick: open('image-pixelate-face'),
   },
   {
+    label: 'Morphing',
+    description: 'Grid-based morph',
+    tags: ['image', 'effect', 'morph', 'warp', 'animation'],
+    emoji: '🫠',
+    color: '#3b82f6',
+    onClick: open('image-morphing'),
+  },
+  {
     label: 'Photo Filters',
     description: 'Apply Filters',
     tags: ['image', 'effect'],

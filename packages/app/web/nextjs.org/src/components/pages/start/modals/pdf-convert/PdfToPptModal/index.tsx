@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useState, useCallback } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { extractPdfText } from './utils';
 
 export const PdfToPptModal: FC<{ onClose: () => void }> = ({ onClose }) => {
@@ -9,23 +9,18 @@ export const PdfToPptModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [text, setText] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const handleFile = useCallback(
-    async (e: React.ChangeEvent<HTMLInputElement>) => {
-      const f = e.target.files?.[0];
-      if (!f) return;
-      setFile(f);
-      setLoading(true);
-      try {
-        const data = await f.arrayBuffer();
-        setText(extractPdfText(data));
-      } catch {
-        setText('Could not extract text.');
-      } finally {
-        setLoading(false);
-      }
-    },
-    []
-  );
+  const handleFile = useCallback(async (f: File) => {
+    setFile(f);
+    setLoading(true);
+    try {
+      const data = await f.arrayBuffer();
+      setText(extractPdfText(data));
+    } catch {
+      setText('Could not extract text.');
+    } finally {
+      setLoading(false);
+    }
+  }, []);
 
   const downloadPpt = useCallback(() => {
     const content = text
@@ -46,12 +41,7 @@ export const PdfToPptModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     <ModalWrapper onClose={onClose} title="PDF to PPT" size="max-w-md">
       <div className="flex flex-col gap-4">
         <p className="text-sm">Extract text from PDF as slide-like content.</p>
-        <input
-          type="file"
-          accept=".pdf"
-          onChange={handleFile}
-          className="file-input file-input-bordered file-input-sm w-full"
-        />
+        <Dropzone accept=".pdf" onFile={handleFile} />
         {file && <p className="text-base-content/60 text-xs">{file.name}</p>}
         {loading && <p className="text-xs">Extracting text...</p>}
         {text && (

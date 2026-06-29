@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useState, useCallback, useRef, useEffect } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 
 export const PdfAnnotateModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -10,13 +10,9 @@ export const PdfAnnotateModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [tool, setTool] = useState<'pen' | 'highlight' | 'underline'>('pen');
   const [color, setColor] = useState('#ff0000');
 
-  const handleFile = useCallback(
-    async (e: React.ChangeEvent<HTMLInputElement>) => {
-      const f = e.target.files?.[0];
-      if (f) setFile(f);
-    },
-    []
-  );
+  const handleFile = useCallback((f: File) => {
+    setFile(f);
+  }, []);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -96,12 +92,7 @@ export const PdfAnnotateModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     <ModalWrapper onClose={onClose} title="Annotate PDF" size="max-w-lg">
       <div className="flex flex-col gap-4">
         <p className="text-sm">Draw annotations on a canvas overlay.</p>
-        <input
-          type="file"
-          accept=".pdf"
-          onChange={handleFile}
-          className="file-input file-input-bordered file-input-sm w-full"
-        />
+        <Dropzone accept=".pdf" onFile={handleFile} />
         {file && <p className="text-base-content/60 text-xs">{file.name}</p>}
         <div className="flex items-center gap-3 text-xs">
           <div className="btn-group">

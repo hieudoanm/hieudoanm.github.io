@@ -1,5 +1,5 @@
-import { FC, useCallback, useEffect, useRef, useState } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { FC, useCallback, useEffect, useState } from 'react';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 
 import { Tab } from './types';
 import {
@@ -16,9 +16,6 @@ export const Base64Modal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [error, setError] = useState('');
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [fileName, setFileName] = useState('');
-  const [dragging, setDragging] = useState(false);
-  const fileRef = useRef<HTMLInputElement>(null);
-
   useEffect(() => {
     setInput('');
     setOutput('');
@@ -37,26 +34,6 @@ export const Base64Modal: FC<{ onClose: () => void }> = ({ onClose }) => {
     reader.onerror = () => setError('Failed to read file');
     reader.readAsDataURL(file);
   }, []);
-
-  const handleFileChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      const file = e.target.files?.[0];
-      if (!file) return;
-      readFileAsBase64(file);
-    },
-    [readFileAsBase64]
-  );
-
-  const handleDrop = useCallback(
-    (e: React.DragEvent) => {
-      e.preventDefault();
-      setDragging(false);
-      const file = e.dataTransfer.files?.[0];
-      if (!file) return;
-      readFileAsBase64(file);
-    },
-    [readFileAsBase64]
-  );
 
   const handleDecode = useCallback(() => {
     setError('');
@@ -126,12 +103,6 @@ export const Base64Modal: FC<{ onClose: () => void }> = ({ onClose }) => {
       subtitle="Decode / Encode"
       size="max-w-lg"
       footerNote="Cmd+Enter to run · Drop a file to encode">
-      <input
-        ref={fileRef}
-        type="file"
-        className="hidden"
-        onChange={handleFileChange}
-      />
       <div className="tabs tabs-boxed justify-center">
         {(['decode', 'encode'] as Tab[]).map((t) => (
           <button
@@ -143,19 +114,7 @@ export const Base64Modal: FC<{ onClose: () => void }> = ({ onClose }) => {
         ))}
       </div>
       {tab === 'encode' && (
-        <div
-          onDrop={handleDrop}
-          onDragOver={(e) => {
-            e.preventDefault();
-            setDragging(true);
-          }}
-          onDragLeave={() => setDragging(false)}
-          className={`border-base-300 mt-4 flex cursor-pointer items-center justify-center rounded-xl border-2 border-dashed p-4 transition-colors ${dragging ? 'border-primary bg-primary/5' : ''}`}
-          onClick={() => fileRef.current?.click()}>
-          <p className="text-base-content/40 text-center font-mono text-[11px] tracking-widest uppercase">
-            {fileName ? `📎 ${fileName}` : 'Click or drop a file to encode'}
-          </p>
-        </div>
+        <Dropzone accept="*/*" onFile={readFileAsBase64} className="mt-4" />
       )}
       <textarea
         className="textarea textarea-bordered mt-3 h-28 w-full font-mono text-xs"

@@ -1,5 +1,5 @@
 import { FC, useCallback, useEffect, useRef, useState } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 
 import { FilterDef } from './types';
 import { FILTERS } from './constants';
@@ -9,11 +9,9 @@ export const InstaSizeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [imageSrc, setImageSrc] = useState<string | null>(null);
   const [padding, setPadding] = useState(10);
   const [selectedFilter, setSelectedFilter] = useState<FilterDef>(FILTERS[0]);
-  const [isDragging, setIsDragging] = useState(false);
   const [outputUrl, setOutputUrl] = useState<string | null>(null);
   const [isProcessing, setIsProcessing] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const processImage = useCallback(
     (src: string, pad: number, filter: FilterDef) => {
@@ -74,48 +72,7 @@ export const InstaSizeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       fullHeight>
       <div className="min-h-[400px]">
         {!imageSrc ? (
-          <div
-            className={`cursor-pointer rounded-2xl border-2 border-dashed transition-all duration-200 ${isDragging ? 'border-primary bg-primary/5 scale-[1.01]' : 'border-base-300 hover:border-base-400 hover:bg-base-200/50'}`}
-            onDragOver={(e) => {
-              e.preventDefault();
-              setIsDragging(true);
-            }}
-            onDragLeave={() => setIsDragging(false)}
-            onDrop={(e) => {
-              e.preventDefault();
-              setIsDragging(false);
-              const f = e.dataTransfer.files[0];
-              if (f) handleFile(f);
-            }}
-            onClick={() => fileInputRef.current?.click()}>
-            <div className="flex flex-col items-center justify-center gap-5 px-8 py-24 select-none">
-              <div
-                className={`flex h-16 w-16 items-center justify-center rounded-2xl transition-colors ${isDragging ? 'bg-primary/10' : 'bg-base-200'}`}>
-                <svg
-                  width="28"
-                  height="28"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  className={`transition-colors ${isDragging ? 'text-primary' : 'text-base-content/40'}`}
-                  stroke="currentColor"
-                  strokeWidth="1.5">
-                  <path d="M4 16l4-4 4 4 4-8 4 8" />
-                  <rect x="3" y="3" width="18" height="18" rx="2" />
-                </svg>
-              </div>
-              <div className="text-center">
-                <p className="text-base-content text-lg font-semibold">
-                  {isDragging ? 'Drop your image here' : 'Upload an image'}
-                </p>
-                <p className="text-base-content/50 mt-1 text-sm">
-                  Drag & drop, or click to browse — PNG, JPG, WEBP
-                </p>
-              </div>
-              <button className="btn btn-primary btn-sm pointer-events-none rounded-full px-6">
-                Choose File
-              </button>
-            </div>
-          </div>
+          <Dropzone accept="image/*" onFile={handleFile} />
         ) : (
           <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[1fr_260px_220px]">
             <div className="space-y-4">
@@ -226,7 +183,7 @@ export const InstaSizeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                   Download PNG
                 </button>
                 <button
-                  onClick={() => fileInputRef.current?.click()}
+                  onClick={() => setImageSrc(null)}
                   className="btn btn-ghost text-base-content/50 h-10 w-full rounded-xl text-sm">
                   Upload different image
                 </button>
@@ -268,17 +225,6 @@ export const InstaSizeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
         )}
       </div>
       <canvas ref={canvasRef} className="hidden" />
-      <input
-        ref={fileInputRef}
-        type="file"
-        accept="image/*"
-        className="hidden"
-        onChange={(e) => {
-          const f = e.target.files?.[0];
-          if (f) handleFile(f);
-          e.target.value = '';
-        }}
-      />
     </ModalWrapper>
   );
 };

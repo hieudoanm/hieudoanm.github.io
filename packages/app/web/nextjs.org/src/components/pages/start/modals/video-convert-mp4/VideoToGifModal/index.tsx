@@ -1,6 +1,6 @@
 'use client';
 
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { FC, useCallback, useState } from 'react';
 import { downloadBlob, encodeGif } from './utils';
 
@@ -45,12 +45,7 @@ export const VideoToGifModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     <ModalWrapper onClose={onClose} title="Video to GIF">
       <div className="flex flex-col gap-4">
         <p className="text-sm">Convert video to animated GIF.</p>
-        <input
-          type="file"
-          accept="video/*"
-          onChange={(e) => setFile(e.target.files?.[0] ?? null)}
-          className="file-input file-input-bordered file-input-sm w-full"
-        />
+        <Dropzone accept="video/*" onFile={setFile} />
         {file && <p className="text-xs opacity-60">{file.name}</p>}
         <button
           onClick={handleConvert}

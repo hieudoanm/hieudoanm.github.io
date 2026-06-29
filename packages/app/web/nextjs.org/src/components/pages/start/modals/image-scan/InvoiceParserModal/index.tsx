@@ -1,7 +1,7 @@
 import * as ort from 'onnxruntime-web';
 import { FC, useState } from 'react';
 import Tesseract from 'tesseract.js';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { ExtractedFields } from './utils';
 
 export const InvoiceParserModal: FC<{ onClose: () => void }> = ({
@@ -12,8 +12,7 @@ export const InvoiceParserModal: FC<{ onClose: () => void }> = ({
   const [fields, setFields] = useState<ExtractedFields | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
 
-  const handleUpload = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    const file = e.target.files?.[0];
+  const handleUpload = (file: File): void => {
     if (!file) return;
     setImage(URL.createObjectURL(file));
   };
@@ -86,12 +85,7 @@ export const InvoiceParserModal: FC<{ onClose: () => void }> = ({
         <div className="card bg-base-200 p-6 shadow-sm">
           <h2 className="mb-4 text-xl font-semibold">Upload Invoice</h2>
 
-          <input
-            type="file"
-            accept="image/*"
-            className="file-input file-input-bordered w-full"
-            onChange={handleUpload}
-          />
+          <Dropzone accept="image/*" onFile={handleUpload} />
 
           {image && (
             <div className="mt-4">

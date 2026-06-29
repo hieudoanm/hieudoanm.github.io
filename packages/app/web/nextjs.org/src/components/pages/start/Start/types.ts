@@ -74,6 +74,7 @@ export const MODAL_IDS = [
   'image-combiner-stacked',
   'image-compress',
   'image-convert-gif-to-jpg',
+  'image-morphing',
   'image-convert-gif-to-png',
   'image-convert-heic-to-avif',
   'image-convert-heic-to-jpg',

@@ -1,7 +1,7 @@
 'use client';
 
-import { FC, useState, useRef, useCallback } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { FC, useState, useCallback } from 'react';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { downloadBlob, encodeWav } from './utils';
 
 export const VideoAacToWavModal: FC<{ onClose: () => void }> = ({
@@ -28,12 +28,7 @@ export const VideoAacToWavModal: FC<{ onClose: () => void }> = ({
     <ModalWrapper onClose={onClose} title="AAC to WAV">
       <div className="flex flex-col gap-4">
         <p className="text-sm">Convert AAC audio to WAV format.</p>
-        <input
-          type="file"
-          accept=".aac,audio/aac"
-          onChange={(e) => setFile(e.target.files?.[0] ?? null)}
-          className="file-input file-input-bordered file-input-sm w-full"
-        />
+        <Dropzone accept=".aac,audio/aac" onFile={setFile} />
         {file && <p className="text-xs opacity-60">{file.name}</p>}
         <button
           onClick={handleConvert}

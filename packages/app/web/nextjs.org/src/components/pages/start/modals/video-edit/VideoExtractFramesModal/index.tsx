@@ -1,7 +1,7 @@
 'use client';
 
-import { FC, useState, useRef, useCallback } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { FC, useState, useCallback } from 'react';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { downloadBlob } from './utils';
 
 export const VideoExtractFramesModal: FC<{ onClose: () => void }> = ({
@@ -52,12 +52,7 @@ export const VideoExtractFramesModal: FC<{ onClose: () => void }> = ({
     <ModalWrapper onClose={onClose} title="Extract Frames">
       <div className="flex flex-col gap-4">
         <p className="text-sm">Extract video frames as PNG images.</p>
-        <input
-          type="file"
-          accept="video/*"
-          onChange={(e) => setFile(e.target.files?.[0] ?? null)}
-          className="file-input file-input-bordered file-input-sm w-full"
-        />
+        <Dropzone accept="video/*" onFile={setFile} />
         {file && (
           <label className="text-xs">
             Frames per second:{' '}

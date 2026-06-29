@@ -1,7 +1,7 @@
 'use client';
 
-import { FC, useState, useRef, useCallback } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { FC, useState, useCallback } from 'react';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { downloadBlob } from './utils';
 
 export const VideoAacToMp4Modal: FC<{ onClose: () => void }> = ({
@@ -46,12 +46,7 @@ export const VideoAacToMp4Modal: FC<{ onClose: () => void }> = ({
         <p className="text-sm">
           Convert AAC audio to M4A (AAC in MP4 container).
         </p>
-        <input
-          type="file"
-          accept=".aac,audio/aac"
-          onChange={(e) => setFile(e.target.files?.[0] ?? null)}
-          className="file-input file-input-bordered file-input-sm w-full"
-        />
+        <Dropzone accept=".aac,audio/aac" onFile={setFile} />
         {file && <p className="text-xs opacity-60">{file.name}</p>}
         <button
           onClick={handleConvert}

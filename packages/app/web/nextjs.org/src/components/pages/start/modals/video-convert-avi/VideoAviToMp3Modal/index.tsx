@@ -1,7 +1,7 @@
 'use client';
 
-import { FC, useState, useRef, useCallback } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { FC, useState, useCallback } from 'react';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { downloadBlob } from './utils';
 
 export const VideoAviToMp3Modal: FC<{ onClose: () => void }> = ({
@@ -44,12 +44,7 @@ export const VideoAviToMp3Modal: FC<{ onClose: () => void }> = ({
     <ModalWrapper onClose={onClose} title="AVI to MP3">
       <div className="flex flex-col gap-4">
         <p className="text-sm">Extract audio from AVI as MP3.</p>
-        <input
-          type="file"
-          accept=".avi,video/x-msvideo"
-          onChange={(e) => setFile(e.target.files?.[0] ?? null)}
-          className="file-input file-input-bordered file-input-sm w-full"
-        />
+        <Dropzone accept=".avi,video/x-msvideo" onFile={setFile} />
         {file && <p className="text-xs opacity-60">{file.name}</p>}
         <button
           onClick={handleConvert}

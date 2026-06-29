@@ -1,12 +1,11 @@
 'use client';
 
-import { FC, useState, useRef } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { FC, useState } from 'react';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { splitPDF, downloadBlob } from '../../pdf-misc/utils/pdf';
 
 export const PdfSplitModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [loading, setLoading] = useState(false);
-  const splitInputRef = useRef<HTMLInputElement>(null);
   const [splitFile, setSplitFile] = useState<File | null>(null);
   const [pageRange, setPageRange] = useState('');
   const [splitFileCount, setSplitFileCount] = useState(0);
@@ -28,13 +27,7 @@ export const PdfSplitModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   return (
     <ModalWrapper onClose={onClose} title="Split PDF" size="max-w-2xl">
       <div className="flex flex-col gap-4">
-        <input
-          ref={splitInputRef}
-          type="file"
-          accept=".pdf"
-          className="file-input file-input-bordered"
-          onChange={(e) => setSplitFile(e.target.files?.[0] ?? null)}
-        />
+        <Dropzone accept=".pdf" onFile={(f) => setSplitFile(f)} />
         <label className="flex flex-col gap-1">
           <span className="text-sm">
             Page range (e.g. 1,3-5, leave empty for all pages):

@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useState } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { addWatermark, downloadBlob } from '../../pdf-misc/utils/pdf';
 
 export const PdfWatermarkModal: FC<{ onClose: () => void }> = ({ onClose }) => {
@@ -23,12 +23,7 @@ export const PdfWatermarkModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   return (
     <ModalWrapper onClose={onClose} title="Watermark PDF" size="max-w-md">
       <div className="flex flex-col gap-4">
-        <input
-          type="file"
-          accept=".pdf"
-          className="file-input file-input-bordered"
-          onChange={(e) => setFile(e.target.files?.[0] ?? null)}
-        />
+        <Dropzone accept=".pdf" onFile={(f) => setFile(f)} />
         <label className="flex flex-col gap-1">
           <span className="text-sm">Watermark text:</span>
           <input

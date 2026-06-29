@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useCallback, useRef, useState } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { downloadBlob } from './utils';
 
 export const ImageTextModal: FC<{ onClose: () => void }> = ({ onClose }) => {
@@ -40,15 +40,7 @@ export const ImageTextModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   return (
     <ModalWrapper onClose={onClose} title="Add Text">
       <div className="flex flex-col gap-4">
-        <input
-          type="file"
-          accept="image/*"
-          className="file-input file-input-bordered"
-          onChange={(e) => {
-            const f = e.target.files?.[0];
-            if (f) setFile(f);
-          }}
-        />
+        <Dropzone accept="image/*" onFile={(f) => setFile(f)} />
         {file && (
           <>
             <input

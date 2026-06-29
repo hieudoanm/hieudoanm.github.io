@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 
 import { QuizData } from './types';
 import { colorClassMap, parseCsv } from './utils/quiz';
@@ -38,9 +38,7 @@ export const QuizifyModal: React.FC<{ onClose: () => void }> = ({
     setScore(0);
   };
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
+  const handleFile = (file: File) => {
     const reader = new FileReader();
     reader.onload = (event) => {
       const text = event.target?.result as string;
@@ -86,12 +84,7 @@ export const QuizifyModal: React.FC<{ onClose: () => void }> = ({
     <ModalWrapper onClose={onClose} title="Quizify" size="max-w-2xl">
       {questions.length === 0 ? (
         <div className="space-y-4">
-          <input
-            type="file"
-            accept=".csv"
-            onChange={handleFileChange}
-            className="file-input file-input-bordered w-full"
-          />
+          <Dropzone accept=".csv" onFile={handleFile} />
           {csvError && <div className="text-error">{csvError}</div>}
         </div>
       ) : (

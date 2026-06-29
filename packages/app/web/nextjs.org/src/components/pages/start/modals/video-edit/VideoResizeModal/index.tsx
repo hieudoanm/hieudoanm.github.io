@@ -1,7 +1,7 @@
 'use client';
 
-import { FC, useState, useRef, useCallback } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { FC, useState, useCallback } from 'react';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { downloadBlob } from './utils';
 
 export const VideoResizeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
@@ -10,8 +10,7 @@ export const VideoResizeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [height, setHeight] = useState(480);
   const [processing, setProcessing] = useState(false);
 
-  const handleLoad = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const f = e.target.files?.[0] ?? null;
+  const handleLoad = (f: File) => {
     setFile(f);
     if (f) {
       const v = document.createElement('video');
@@ -72,12 +71,7 @@ export const VideoResizeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     <ModalWrapper onClose={onClose} title="Resize Video">
       <div className="flex flex-col gap-4">
         <p className="text-sm">Resize video to new dimensions.</p>
-        <input
-          type="file"
-          accept="video/*"
-          onChange={handleLoad}
-          className="file-input file-input-bordered file-input-sm w-full"
-        />
+        <Dropzone accept="video/*" onFile={handleLoad} />
         {file && (
           <div className="flex gap-2 text-xs">
             <label>

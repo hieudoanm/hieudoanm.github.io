@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useState, useCallback } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { downloadBlob, jsonToXml } from './utils';
 
 export const JsonToXmlModal: FC<{ onClose: () => void }> = ({ onClose }) => {
@@ -16,9 +16,7 @@ export const JsonToXmlModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     }
   }, [input]);
 
-  const handleFile = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
+  const handleFile = useCallback((file: File) => {
     const reader = new FileReader();
     reader.onload = () => setInput(reader.result as string);
     reader.readAsText(file);
@@ -27,12 +25,7 @@ export const JsonToXmlModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   return (
     <ModalWrapper onClose={onClose} title="JSON to XML" size="max-w-lg">
       <div className="flex flex-col gap-4">
-        <input
-          type="file"
-          accept=".json,.txt"
-          className="file-input file-input-bordered"
-          onChange={handleFile}
-        />
+        <Dropzone accept=".json,.txt" onFile={handleFile} />
         <textarea
           className="textarea textarea-bordered h-24 font-mono text-xs"
           placeholder='Paste JSON array here... [{"key": "value"}]'

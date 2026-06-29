@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useState } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { compressPDF, downloadBlob } from '../../pdf-misc/utils/pdf';
 
 export const PdfRepairModal: FC<{ onClose: () => void }> = ({ onClose }) => {
@@ -22,14 +22,7 @@ export const PdfRepairModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   return (
     <ModalWrapper onClose={onClose} title="Repair PDF" size="max-w-md">
       <div className="flex flex-col gap-4">
-        <input
-          type="file"
-          accept=".pdf"
-          className="file-input file-input-bordered"
-          onChange={(e) => {
-            setFile(e.target.files?.[0] ?? null);
-          }}
-        />
+        <Dropzone accept=".pdf" onFile={(f) => setFile(f)} />
 
         <div className="flex flex-col gap-3">
           <p className="text-base-content/70 text-sm">

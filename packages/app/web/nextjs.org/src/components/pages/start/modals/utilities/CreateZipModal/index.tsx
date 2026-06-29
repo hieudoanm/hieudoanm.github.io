@@ -1,24 +1,15 @@
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
-import { FC, useCallback, useRef, useState } from 'react';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
+import { FC, useCallback, useState } from 'react';
 import { FileEntry, createZipBlob, downloadBlob } from './utils';
 
 export const CreateZipModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [files, setFiles] = useState<FileEntry[]>([]);
   const [loading, setLoading] = useState(false);
   const [zipName, setZipName] = useState('archive.zip');
-  const inputRef = useRef<HTMLInputElement>(null);
 
-  const handleAddFiles = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      const newFiles = Array.from(e.target.files || []);
-      setFiles((prev) => [
-        ...prev,
-        ...newFiles.map((f) => ({ file: f, name: f.name })),
-      ]);
-      if (inputRef.current) inputRef.current.value = '';
-    },
-    []
-  );
+  const handleAddFile = useCallback((f: File) => {
+    setFiles((prev) => [...prev, { file: f, name: f.name }]);
+  }, []);
 
   const removeFile = useCallback((index: number) => {
     setFiles((prev) => prev.filter((_, i) => i !== index));
@@ -42,13 +33,7 @@ export const CreateZipModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   return (
     <ModalWrapper onClose={onClose} title="Create ZIP" size="max-w-lg">
       <div className="flex flex-col gap-4">
-        <input
-          ref={inputRef}
-          type="file"
-          multiple
-          className="file-input file-input-bordered"
-          onChange={handleAddFiles}
-        />
+        <Dropzone multiple onFile={handleAddFile} />
 
         <label className="flex items-center gap-2 text-sm">
           <span>Archive name:</span>

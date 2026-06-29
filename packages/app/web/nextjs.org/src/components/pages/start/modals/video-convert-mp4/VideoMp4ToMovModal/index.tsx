@@ -1,7 +1,7 @@
 'use client';
 
-import { FC, useState, useRef, useCallback } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { FC, useState, useCallback } from 'react';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { downloadBlob } from './utils';
 
 export const VideoMp4ToMovModal: FC<{ onClose: () => void }> = ({
@@ -62,12 +62,7 @@ export const VideoMp4ToMovModal: FC<{ onClose: () => void }> = ({
         <p className="text-sm">
           Convert MP4 videos to MOV format using browser APIs.
         </p>
-        <input
-          type="file"
-          accept=".mp4,video/mp4"
-          onChange={(e) => setFile(e.target.files?.[0] ?? null)}
-          className="file-input file-input-bordered file-input-sm w-full"
-        />
+        <Dropzone accept=".mp4,video/mp4" onFile={setFile} />
         {file && <p className="text-xs opacity-60">{file.name}</p>}
         <button
           onClick={handleConvert}

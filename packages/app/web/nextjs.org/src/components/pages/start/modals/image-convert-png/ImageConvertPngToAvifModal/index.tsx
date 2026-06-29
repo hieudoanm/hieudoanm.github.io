@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useState, useCallback, useRef } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { downloadBlob } from './utils';
 
 export const ImageConvertPngToAvifModal: FC<{ onClose: () => void }> = ({
@@ -45,12 +45,7 @@ export const ImageConvertPngToAvifModal: FC<{ onClose: () => void }> = ({
     <ModalWrapper onClose={onClose} title="PNG to AVIF" size="max-w-lg">
       <div className="flex flex-col gap-4">
         <p className="text-sm">Convert PNG images to AVIF format.</p>
-        <input
-          type="file"
-          accept=".png"
-          className="file-input file-input-bordered"
-          onChange={(e) => setFile(e.target.files?.[0] ?? null)}
-        />
+        <Dropzone accept=".png" onFile={(f) => setFile(f)} />
         <canvas ref={canvasRef} className="hidden" />
         <div className="flex flex-col gap-1">
           <label className="text-xs">

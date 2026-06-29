@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useState } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { extractText, downloadBlob } from '../../pdf-misc/utils/pdf';
 
 export const PdfExtractTextModal: FC<{ onClose: () => void }> = ({
@@ -38,12 +38,10 @@ export const PdfExtractTextModal: FC<{ onClose: () => void }> = ({
       size="max-w-3xl"
       fullHeight>
       <div className="flex flex-col gap-4">
-        <input
-          type="file"
+        <Dropzone
           accept=".pdf"
-          className="file-input file-input-bordered"
-          onChange={(e) => {
-            setFile(e.target.files?.[0] ?? null);
+          onFile={(f) => {
+            setFile(f);
             setText('');
           }}
         />

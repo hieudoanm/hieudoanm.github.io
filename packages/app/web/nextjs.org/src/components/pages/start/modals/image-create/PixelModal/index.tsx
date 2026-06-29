@@ -1,6 +1,6 @@
 'use client';
 
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { FC, useRef, useState } from 'react';
 import { GridSize, Mode, Tab, CELL, GAP, sample } from './utils';
 
@@ -11,14 +11,12 @@ export const PixelModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [gridSize, setGridSize] = useState<GridSize>(32);
   const [mode, setMode] = useState<Mode>('square');
   const [tab, setTab] = useState<Tab>('pixel');
-  const [dragging, setDragging] = useState(false);
   const [pixelData, setPixelData] = useState<{
     colors: string[];
     cols: number;
     rows: number;
   } | null>(null);
   const imgRef = useRef<HTMLImageElement | null>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
 
   const cell = CELL[gridSize];
   const pitch = cell + GAP;
@@ -109,59 +107,7 @@ export const PixelModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       title="Pixel Art Grid"
       subtitle={`${gridSize}×${gridSize}`}>
       <div className="flex flex-col items-center gap-4">
-        <input
-          ref={inputRef}
-          type="file"
-          accept="image/*"
-          className="hidden"
-          onChange={(e) => {
-            const file = e.target.files?.[0];
-            if (file) loadImage(file);
-          }}
-        />
-
-        {!uploaded && (
-          <div
-            role="button"
-            tabIndex={0}
-            onDragOver={(e) => {
-              e.preventDefault();
-              setDragging(true);
-            }}
-            onDragLeave={() => setDragging(false)}
-            onDrop={(e) => {
-              e.preventDefault();
-              setDragging(false);
-              loadImage(e.dataTransfer.files[0]);
-            }}
-            onClick={() => inputRef.current?.click()}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter' || e.key === ' ') inputRef.current?.click();
-            }}
-            className={`flex h-32 w-full cursor-pointer flex-col items-center justify-center gap-2 rounded-xl border-2 border-dashed text-sm transition-colors ${
-              dragging
-                ? 'border-primary bg-primary/10'
-                : 'border-base-300 hover:border-base-content/50'
-            }`}>
-            <svg
-              className="h-6 w-6 opacity-60"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"
-              />
-            </svg>
-            <span className="opacity-60">
-              Drop an image here or click to browse
-            </span>
-            {fileName && <span className="text-xs opacity-40">{fileName}</span>}
-          </div>
-        )}
+        {!uploaded && <Dropzone accept="image/*" onFile={loadImage} />}
 
         {uploaded && (
           <>

@@ -1,5 +1,5 @@
 import { type FC, useCallback, useEffect, useRef, useState } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import {
   forceSimulation,
   forceLink,
@@ -15,7 +15,6 @@ import type { GraphData, SimLink, SimNode } from './types';
 export const GraphModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const fileRef = useRef<HTMLInputElement>(null);
   const [data, setData] = useState<GraphData | null>(null);
   const [fileName, setFileName] = useState('');
   const [error, setError] = useState('');
@@ -41,29 +40,6 @@ export const GraphModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       }
     };
     reader.readAsText(file);
-  }, []);
-
-  const handleFileChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      const file = e.target.files?.[0];
-      if (!file) return;
-      loadFile(file);
-    },
-    [loadFile]
-  );
-
-  const handleDrop = useCallback(
-    (e: React.DragEvent) => {
-      e.preventDefault();
-      const file = e.dataTransfer.files?.[0];
-      if (!file) return;
-      loadFile(file);
-    },
-    [loadFile]
-  );
-
-  const handleDragOver = useCallback((e: React.DragEvent) => {
-    e.preventDefault();
   }, []);
 
   const loadExample = useCallback(() => {
@@ -313,18 +289,6 @@ export const GraphModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       <div className="flex flex-1 flex-col p-4 pt-2">
         <div className="mb-3 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <input
-              ref={fileRef}
-              type="file"
-              accept=".json,application/json"
-              className="hidden"
-              onChange={handleFileChange}
-            />
-            <button
-              className="btn btn-xs btn-ghost"
-              onClick={() => fileRef.current?.click()}>
-              Load JSON
-            </button>
             <button className="btn btn-xs btn-ghost" onClick={loadExample}>
               Load Example
             </button>
@@ -348,16 +312,16 @@ export const GraphModal: FC<{ onClose: () => void }> = ({ onClose }) => {
         )}
 
         {!data ? (
-          <div
-            className="border-base-content/20 bg-base-200/50 flex min-h-0 flex-1 cursor-pointer flex-col items-center justify-center gap-3 rounded-lg border-2 border-dashed p-8"
-            onDrop={handleDrop}
-            onDragOver={handleDragOver}
-            onClick={() => fileRef.current?.click()}>
-            <span className="text-base-content/20 text-4xl font-light">+</span>
-            <p className="text-base-content/40 text-xs">
-              Drop a JSON file here or click to browse
-            </p>
-            <button className="btn btn-xs btn-ghost" onClick={loadExample}>
+          <div className="flex min-h-0 flex-1 flex-col gap-3">
+            <Dropzone
+              accept=".json,application/json"
+              onFile={loadFile}
+              className="flex-1"
+              label="Drop a JSON file here or click to browse"
+            />
+            <button
+              className="btn btn-xs btn-ghost self-center"
+              onClick={loadExample}>
               Load example graph
             </button>
           </div>

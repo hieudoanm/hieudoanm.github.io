@@ -1,16 +1,15 @@
 'use client';
 
 import { FC, useState, useCallback } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { downloadBlob } from '../../pdf-misc/utils/pdf';
 
 export const EPUBToMOBIModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [file, setFile] = useState<File | null>(null);
   const [quality, setQuality] = useState('medium');
 
-  const handleFile = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    const f = e.target.files?.[0];
-    if (f) setFile(f);
+  const handleFile = useCallback((f: File) => {
+    setFile(f);
   }, []);
 
   const handleDownload = useCallback(() => {
@@ -22,12 +21,7 @@ export const EPUBToMOBIModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     <ModalWrapper onClose={onClose} title="EPUB to MOBI" size="max-w-md">
       <div className="flex flex-col gap-4">
         <p className="text-sm">Convert EPUB ebooks to MOBI format (Kindle).</p>
-        <input
-          type="file"
-          accept=".epub"
-          onChange={handleFile}
-          className="file-input file-input-bordered file-input-sm w-full"
-        />
+        <Dropzone accept=".epub" onFile={handleFile} />
         {file && (
           <div className="bg-base-200 space-y-1 rounded p-3 text-xs">
             <p>

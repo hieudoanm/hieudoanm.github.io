@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useState, useCallback } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 
 export const PdfSecurityModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [file, setFile] = useState<File | null>(null);
@@ -47,12 +47,7 @@ export const PdfSecurityModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           Edit PDF document metadata (title, author, subject).
         </p>
 
-        <input
-          type="file"
-          accept=".pdf"
-          className="file-input file-input-bordered"
-          onChange={(e) => setFile(e.target.files?.[0] || null)}
-        />
+        <Dropzone accept=".pdf" onFile={(f) => setFile(f)} />
 
         <input
           type="text"

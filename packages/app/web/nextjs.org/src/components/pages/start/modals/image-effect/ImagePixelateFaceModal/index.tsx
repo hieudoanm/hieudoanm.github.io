@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useState, useCallback, useRef } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { downloadBlob, pixelateRegion } from './utils';
 
 export const ImagePixelateFaceModal: FC<{ onClose: () => void }> = ({
@@ -38,12 +38,7 @@ export const ImagePixelateFaceModal: FC<{ onClose: () => void }> = ({
   return (
     <ModalWrapper onClose={onClose} title="Pixelate Face">
       <div className="flex flex-col gap-4">
-        <input
-          type="file"
-          accept="image/*"
-          className="file-input file-input-bordered"
-          onChange={(e) => setFile(e.target.files?.[0] || null)}
-        />
+        <Dropzone accept="image/*" onFile={(f) => setFile(f)} />
 
         <label className="flex flex-col gap-1 text-sm">
           Pixel Size: {pixelSize}

@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useState } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { PDFDocument } from 'pdf-lib';
 import { downloadBlob } from './utils';
 
@@ -42,12 +42,10 @@ export const ImagesToPdfModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   return (
     <ModalWrapper onClose={onClose} title="Images to PDF" size="max-w-lg">
       <div className="flex flex-col gap-4">
-        <input
-          type="file"
+        <Dropzone
           accept="image/*"
           multiple
-          className="file-input file-input-bordered"
-          onChange={(e) => setImageFiles(Array.from(e.target.files ?? []))}
+          onFile={(f) => setImageFiles((prev) => [...prev, f])}
         />
         {imageFiles.length > 0 && (
           <p className="text-sm">{imageFiles.length} image(s) selected</p>

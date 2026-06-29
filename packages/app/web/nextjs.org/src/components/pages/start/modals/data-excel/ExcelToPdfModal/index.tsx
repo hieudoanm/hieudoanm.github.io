@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useState, useCallback, useRef } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { Row, downloadBlob } from './utils';
 
 export const ExcelToPdfModal: FC<{ onClose: () => void }> = ({ onClose }) => {
@@ -11,29 +11,24 @@ export const ExcelToPdfModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [error, setError] = useState('');
   const tableRef = useRef<HTMLDivElement>(null);
 
-  const handleFile = useCallback(
-    async (e: React.ChangeEvent<HTMLInputElement>) => {
-      const file = e.target.files?.[0];
-      if (!file) return;
-      setLoading(true);
-      setError('');
-      try {
-        const XLSX = await import('xlsx');
-        const data = await file.arrayBuffer();
-        const workbook = XLSX.read(data, { type: 'array' });
-        const sheet = workbook.Sheets[workbook.SheetNames[0]];
-        const json = XLSX.utils.sheet_to_json(sheet, { defval: '' }) as Row[];
-        if (json.length > 0) {
-          setCols(Object.keys(json[0]));
-        }
-        setRows(json);
-      } catch {
-        setError('Failed to parse Excel file');
+  const handleFile = useCallback(async (file: File) => {
+    setLoading(true);
+    setError('');
+    try {
+      const XLSX = await import('xlsx');
+      const data = await file.arrayBuffer();
+      const workbook = XLSX.read(data, { type: 'array' });
+      const sheet = workbook.Sheets[workbook.SheetNames[0]];
+      const json = XLSX.utils.sheet_to_json(sheet, { defval: '' }) as Row[];
+      if (json.length > 0) {
+        setCols(Object.keys(json[0]));
       }
-      setLoading(false);
-    },
-    []
-  );
+      setRows(json);
+    } catch {
+      setError('Failed to parse Excel file');
+    }
+    setLoading(false);
+  }, []);
 
   const exportPdf = useCallback(() => {
     if (rows.length === 0) return;
@@ -59,12 +54,7 @@ export const ExcelToPdfModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       size="max-w-3xl"
       fullHeight>
       <div className="flex flex-col gap-4 overflow-auto p-6">
-        <input
-          type="file"
-          accept=".xlsx,.xls"
-          className="file-input file-input-bordered"
-          onChange={handleFile}
-        />
+        <Dropzone accept=".xlsx,.xls" onFile={handleFile} />
         {loading && <span className="loading loading-spinner" />}
         {error && <p className="text-error text-xs">{error}</p>}
         {rows.length > 0 && (

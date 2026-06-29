@@ -1,7 +1,7 @@
 'use client';
 
-import { FC, useState, useRef, useCallback } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { FC, useState, useCallback } from 'react';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { downloadBlob } from './utils';
 
 export const VideoWmvToMp4Modal: FC<{ onClose: () => void }> = ({
@@ -61,12 +61,7 @@ export const VideoWmvToMp4Modal: FC<{ onClose: () => void }> = ({
         <p className="text-sm">
           Convert WMV (Windows Media Video) files to MP4 format.
         </p>
-        <input
-          type="file"
-          accept=".wmv,video/x-ms-wmv"
-          onChange={(e) => setFile(e.target.files?.[0] ?? null)}
-          className="file-input file-input-bordered file-input-sm w-full"
-        />
+        <Dropzone accept=".wmv,video/x-ms-wmv" onFile={setFile} />
         {file && <p className="text-xs opacity-60">{file.name}</p>}
         <button
           onClick={handleConvert}

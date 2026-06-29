@@ -50,6 +50,11 @@ const loadImageVignette = () =>
     (m) => ({ default: m.ImageVignetteModal })
   );
 
+const loadImageMorphing = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageMorphingModal').then(
+    (m) => ({ default: m.ImageMorphingModal })
+  );
+
 const loadImageWatermark = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/image-effect/ImageWatermarkModal').then(
     (m) => ({ default: m.ImageWatermarkModal })
@@ -63,6 +68,7 @@ export const loaders: Record<
   'image-blur-background': loadImageBlurBackground,
   'image-combiner-side-by-side': loadImageCombinerSideBySide,
   'image-combiner-stacked': loadImageCombinerStacked,
+  'image-morphing': loadImageMorphing,
   'image-photo-filters': loadImagePhotoFilters,
   'image-pixelate-face': loadImagePixelateFace,
   'image-shadow': loadImageShadow,

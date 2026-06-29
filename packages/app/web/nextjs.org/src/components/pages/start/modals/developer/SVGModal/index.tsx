@@ -1,5 +1,5 @@
-import { FC, useCallback, useRef, useState } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { FC, useCallback, useState } from 'react';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 
 import { BgMode, Tab, GeneratedIcon } from './types';
 import { DEFAULT_SVG, PRESETS, ICON_SIZES } from './constants';
@@ -12,10 +12,8 @@ export const SVGModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [activeTab, setActiveTab] = useState<Tab>('editor');
   const [icons, setIcons] = useState<GeneratedIcon[]>([]);
   const [iconError, setIconError] = useState<string | null>(null);
-  const [dragging, setDragging] = useState(false);
   const [sourceName, setSourceName] = useState<string | null>(null);
   const [processing, setProcessing] = useState(false);
-  const inputRef = useRef<HTMLInputElement>(null);
 
   const handleCopy = useCallback(() => {
     navigator.clipboard.writeText(svgCode).then(() => {
@@ -87,9 +85,9 @@ export const SVGModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     [runIconGeneration]
   );
 
-  const handleFiles = useCallback(
-    (files: FileList | null) => {
-      if (files?.[0]) processFile(files[0]);
+  const handleFile = useCallback(
+    (file: File) => {
+      processFile(file);
     },
     [processFile]
   );
@@ -264,37 +262,14 @@ export const SVGModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                   {processing ? 'Rendering…' : 'Use current editor SVG'}
                 </button>
               </div>
-              <div
-                onClick={() => !processing && inputRef.current?.click()}
-                onDragOver={(e) => {
-                  e.preventDefault();
-                  setDragging(true);
-                }}
-                onDragLeave={() => setDragging(false)}
-                onDrop={(e) => {
-                  e.preventDefault();
-                  setDragging(false);
-                  handleFiles(e.dataTransfer.files);
-                }}
-                className={`border-base-content/10 flex cursor-pointer flex-col items-center justify-center gap-2 rounded-xl border-2 border-dashed py-8 transition-all ${processing ? 'bg-base-200 cursor-wait' : dragging ? 'bg-primary/5 border-primary/40' : 'bg-base-200/50 hover:bg-base-200'}`}>
-                <input
-                  ref={inputRef}
-                  type="file"
-                  accept="image/svg+xml,.svg"
-                  className="hidden"
-                  onChange={(e) => handleFiles(e.target.files)}
-                />
-                <div className="flex flex-col items-center gap-1 text-center">
-                  <span className="text-sm font-medium">
-                    {processing
-                      ? 'Generating...'
-                      : 'Drop SVG or Click to Upload'}
-                  </span>
-                  <span className="text-base-content/40 text-[10px] tracking-widest uppercase">
-                    SVG only · Generates PNG: 72px to 512px
-                  </span>
-                </div>
-              </div>
+              <Dropzone
+                accept="image/svg+xml,.svg"
+                onFile={handleFile}
+                disabled={processing}
+                label={
+                  processing ? 'Generating...' : 'Drop SVG or Click to Upload'
+                }
+              />
             </div>
             {iconError && (
               <div className="alert alert-error py-2 text-sm">

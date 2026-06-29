@@ -1,7 +1,7 @@
 'use client';
 
-import { FC, useState, useRef, useCallback } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { FC, useState, useCallback } from 'react';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { downloadBlob } from './utils';
 
 export const VideoGifToWebmModal: FC<{ onClose: () => void }> = ({
@@ -58,12 +58,7 @@ export const VideoGifToWebmModal: FC<{ onClose: () => void }> = ({
     <ModalWrapper onClose={onClose} title="GIF to WebM">
       <div className="flex flex-col gap-4">
         <p className="text-sm">Convert GIF animations to WebM video.</p>
-        <input
-          type="file"
-          accept=".gif,image/gif"
-          onChange={(e) => setFile(e.target.files?.[0] ?? null)}
-          className="file-input file-input-bordered file-input-sm w-full"
-        />
+        <Dropzone accept=".gif,image/gif" onFile={setFile} />
         {file && <p className="text-xs opacity-60">{file.name}</p>}
         <button
           onClick={handleConvert}

@@ -1,4 +1,4 @@
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { saveAs } from 'file-saver';
 import 'github-markdown-css/github-markdown.css';
 import { FC, ChangeEvent, useCallback, useMemo, useRef, useState } from 'react';
@@ -99,16 +99,12 @@ export const MarkdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     set({ markdown: '', html: '', restored: false, fileName: 'untitled.md' });
   }, [set]);
 
-  const fileInputRef = useRef<HTMLInputElement | null>(null);
   const ocrInputRef = useRef<HTMLInputElement | null>(null);
 
-  const handleOpen = useCallback(() => fileInputRef.current?.click(), []);
+  const handleOpen = useCallback(() => {}, []);
   const handleOpenFile = useCallback(
-    async (e: ChangeEvent<HTMLInputElement>) => {
-      const file = e.target.files?.item(0);
-      if (!file) return;
+    async (file: File) => {
       set({ markdown: await file.text(), fileName: file.name });
-      e.target.value = '';
     },
     [set]
   );
@@ -237,11 +233,9 @@ export const MarkdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
         </div>
         <StatsBar stats={stats} />
       </div>
-      <input
-        ref={fileInputRef}
-        type="file"
+      <Dropzone
         accept=".md,.markdown,text/markdown"
-        onChange={handleOpenFile}
+        onFile={handleOpenFile}
         className="hidden"
       />
     </ModalWrapper>

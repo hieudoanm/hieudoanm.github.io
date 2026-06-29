@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useState, useCallback, useRef } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { downloadBlob } from './utils';
 
 export const ImageShadowModal: FC<{ onClose: () => void }> = ({ onClose }) => {
@@ -39,12 +39,7 @@ export const ImageShadowModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   return (
     <ModalWrapper onClose={onClose} title="Drop Shadow">
       <div className="flex flex-col gap-4">
-        <input
-          type="file"
-          accept="image/*"
-          className="file-input file-input-bordered"
-          onChange={(e) => setFile(e.target.files?.[0] || null)}
-        />
+        <Dropzone accept="image/*" onFile={(f) => setFile(f)} />
         <label className="flex items-center gap-2 text-sm">
           Color:{' '}
           <input

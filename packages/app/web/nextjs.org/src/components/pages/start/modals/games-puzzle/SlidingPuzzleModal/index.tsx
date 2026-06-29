@@ -1,4 +1,4 @@
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { FC } from 'react';
 import { useSlidingPuzzle } from './useSlidingPuzzle';
 
@@ -15,48 +15,24 @@ export const SlidingPuzzleModal: FC<{ onClose: () => void }> = ({
     autoSolving,
     dragging,
     error,
-    fileRef,
     handleFile,
     handleClick,
     startAutoSolve,
     handleGridSizeChange,
     handleNewGame,
     handleChangeImage,
-    handleDragOver,
-    handleDragLeave,
-    handleDrop,
   } = useSlidingPuzzle();
 
   if (!imageUrl) {
     return (
       <ModalWrapper onClose={onClose} title="Slide Puzzle">
         <div className="flex flex-col gap-4 p-4">
-          <div
-            onDragOver={handleDragOver}
-            onDragLeave={handleDragLeave}
-            onDrop={handleDrop}
-            onClick={() => fileRef.current?.click()}
-            className={`flex cursor-pointer flex-col items-center justify-center gap-3 rounded-xl border-2 border-dashed p-12 transition-colors ${
-              dragging
-                ? 'border-primary bg-primary/5'
-                : 'border-base-content/20 hover:border-base-content/40'
-            }`}>
-            <input
-              ref={fileRef}
-              type="file"
-              accept="image/*"
-              className="hidden"
-              onChange={(e) => {
-                const file = e.target.files?.[0];
-                if (file) handleFile(file);
-              }}
-            />
-            <span className="text-4xl opacity-30">🖼️</span>
-            <p className="text-sm font-medium">Click or drag an image here</p>
-            <p className="text-xs opacity-40">
-              The image will be cropped to a square
-            </p>
-          </div>
+          <Dropzone
+            accept="image/*"
+            onFile={handleFile}
+            label="Click or drag an image here"
+            className={`${dragging ? 'border-primary bg-primary/5' : ''}`}
+          />
           {error && <p className="text-error text-center text-sm">{error}</p>}
         </div>
       </ModalWrapper>

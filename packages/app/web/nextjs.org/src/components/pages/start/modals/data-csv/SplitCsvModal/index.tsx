@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useState } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { downloadBlob, parseCSV, toCSV, readFileAsText } from './utils';
 
 export const SplitCsvModal: FC<{ onClose: () => void }> = ({ onClose }) => {
@@ -10,9 +10,7 @@ export const SplitCsvModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [fileCount, setFileCount] = useState(0);
   const [error, setError] = useState<string | null>(null);
 
-  const handleSplit = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
+  const handleSplit = async (file: File) => {
     setLoading(true);
     setError(null);
     setFileCount(0);
@@ -58,12 +56,7 @@ export const SplitCsvModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             }
           />
         </label>
-        <input
-          type="file"
-          accept=".csv"
-          className="file-input file-input-bordered"
-          onChange={handleSplit}
-        />
+        <Dropzone accept=".csv" onFile={handleSplit} />
         {loading && <span className="loading loading-spinner" />}
         {error && <p className="text-error text-sm">{error}</p>}
         {fileCount > 0 && (

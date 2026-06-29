@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useState, useCallback, useRef } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { downloadBlob } from './utils';
 
 export const ImageConvertHeicToPngModal: FC<{ onClose: () => void }> = ({
@@ -44,13 +44,11 @@ export const ImageConvertHeicToPngModal: FC<{ onClose: () => void }> = ({
     <ModalWrapper onClose={onClose} title="HEIC to PNG" size="max-w-lg">
       <div className="flex flex-col gap-4">
         <p className="text-sm">Convert HEIC images (iPhone) to PNG format.</p>
-        <input
-          type="file"
+        <Dropzone
           accept=".heic,.heif,.heics,.heifs"
-          className="file-input file-input-bordered"
-          onChange={(e) => {
+          onFile={(f) => {
             setError(null);
-            setFile(e.target.files?.[0] ?? null);
+            setFile(f);
           }}
         />
         <canvas ref={canvasRef} className="hidden" />

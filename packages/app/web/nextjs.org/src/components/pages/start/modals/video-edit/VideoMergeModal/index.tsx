@@ -1,17 +1,12 @@
 'use client';
 
-import { FC, useState, useRef, useCallback } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { FC, useState, useCallback } from 'react';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { downloadBlob } from './utils';
 
 export const VideoMergeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [files, setFiles] = useState<File[]>([]);
   const [processing, setProcessing] = useState(false);
-
-  const handleAdd = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newFiles = Array.from(e.target.files || []);
-    setFiles((prev) => [...prev, ...newFiles]);
-  };
 
   const handleMerge = useCallback(async () => {
     if (files.length < 2) return;
@@ -73,12 +68,10 @@ export const VideoMergeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
         <p className="text-sm">
           Merge multiple videos sequentially (browser-based, limited).
         </p>
-        <input
-          type="file"
+        <Dropzone
           accept="video/*"
           multiple
-          onChange={handleAdd}
-          className="file-input file-input-bordered file-input-sm w-full"
+          onFile={(f) => setFiles((prev) => [...prev, f])}
         />
         {files.length > 0 && (
           <ul className="space-y-1 text-xs">

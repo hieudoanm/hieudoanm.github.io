@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useState, useCallback, useRef } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { downloadBlob } from './utils';
 
 export const ImageCombinerStackedModal: FC<{ onClose: () => void }> = ({
@@ -53,12 +53,10 @@ export const ImageCombinerStackedModal: FC<{ onClose: () => void }> = ({
   return (
     <ModalWrapper onClose={onClose} title="Stack Vertically">
       <div className="flex flex-col gap-4">
-        <input
-          type="file"
+        <Dropzone
           accept="image/*"
           multiple
-          className="file-input file-input-bordered"
-          onChange={(e) => setFiles(Array.from(e.target.files ?? []))}
+          onFile={(f) => setFiles((prev) => [...prev, f])}
         />
         {files.length > 0 && (
           <p className="text-sm">{files.length} image(s) selected (min 2)</p>

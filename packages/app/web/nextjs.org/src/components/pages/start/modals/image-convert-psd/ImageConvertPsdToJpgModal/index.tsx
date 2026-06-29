@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useState, useCallback, useRef } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { downloadBlob } from './utils';
 
 export const ImageConvertPsdToJpgModal: FC<{ onClose: () => void }> = ({
@@ -49,13 +49,11 @@ export const ImageConvertPsdToJpgModal: FC<{ onClose: () => void }> = ({
     <ModalWrapper onClose={onClose} title="PSD to JPG" size="max-w-lg">
       <div className="flex flex-col gap-4">
         <p className="text-sm">Convert Photoshop PSD files to JPG format.</p>
-        <input
-          type="file"
+        <Dropzone
           accept=".psd"
-          className="file-input file-input-bordered"
-          onChange={(e) => {
+          onFile={(f) => {
             setError(null);
-            setFile(e.target.files?.[0] ?? null);
+            setFile(f);
           }}
         />
         <canvas ref={canvasRef} className="hidden" />

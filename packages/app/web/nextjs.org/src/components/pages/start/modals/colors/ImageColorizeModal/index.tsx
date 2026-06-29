@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useState, useCallback, useRef } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { downloadBlob, colorize } from './utils';
 
 export const ImageColorizeModal: FC<{ onClose: () => void }> = ({
@@ -37,12 +37,7 @@ export const ImageColorizeModal: FC<{ onClose: () => void }> = ({
   return (
     <ModalWrapper onClose={onClose} title="Colorize">
       <div className="flex flex-col gap-4">
-        <input
-          type="file"
-          accept="image/*"
-          className="file-input file-input-bordered"
-          onChange={(e) => setFile(e.target.files?.[0] || null)}
-        />
+        <Dropzone accept="image/*" onFile={(f) => setFile(f)} />
         <label className="flex items-center gap-2 text-sm">
           Color:{' '}
           <input

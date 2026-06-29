@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useState, useCallback, useRef } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { downloadBlob, floodFill, inpaintRegion } from './utils';
 
 export const AiRemovePersonModal: FC<{ onClose: () => void }> = ({
@@ -70,12 +70,10 @@ export const AiRemovePersonModal: FC<{ onClose: () => void }> = ({
   return (
     <ModalWrapper onClose={onClose} title="Remove Person" size="max-w-lg">
       <div className="flex flex-col gap-4">
-        <input
-          type="file"
+        <Dropzone
           accept="image/*"
-          className="file-input file-input-bordered"
-          onChange={(e) => {
-            setFile(e.target.files?.[0] || null);
+          onFile={(f) => {
+            setFile(f);
             setClickPos(null);
           }}
         />

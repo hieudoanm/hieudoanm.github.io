@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useState, useCallback } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { PDFDocument } from 'pdf-lib';
 import { downloadBlob } from './utils';
 
@@ -47,15 +47,7 @@ export const PdfRearrangeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   return (
     <ModalWrapper onClose={onClose} title="Rearrange Pages" size="max-w-xl">
       <div className="flex flex-col gap-4">
-        <input
-          type="file"
-          accept=".pdf"
-          className="file-input file-input-bordered"
-          onChange={async (e) => {
-            const f = e.target.files?.[0];
-            if (f) await loadPDF(f);
-          }}
-        />
+        <Dropzone accept=".pdf" onFile={async (f) => await loadPDF(f)} />
 
         {order.length > 0 && (
           <>

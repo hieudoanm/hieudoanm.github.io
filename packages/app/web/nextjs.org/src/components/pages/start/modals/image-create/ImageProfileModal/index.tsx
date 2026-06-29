@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useState, useRef, useCallback } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { Platform, PLATFORMS, downloadBlob } from './utils';
 
 export const ImageProfileModal: FC<{ onClose: () => void }> = ({ onClose }) => {
@@ -49,12 +49,7 @@ export const ImageProfileModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   return (
     <ModalWrapper onClose={onClose} title="Profile Photo Maker">
       <div className="flex flex-col gap-4">
-        <input
-          type="file"
-          accept="image/*"
-          className="file-input file-input-bordered"
-          onChange={(e) => setFile(e.target.files?.[0] || null)}
-        />
+        <Dropzone accept="image/*" onFile={(f) => setFile(f)} />
         <div className="flex flex-wrap gap-2">
           {PLATFORMS.map((p) => (
             <button

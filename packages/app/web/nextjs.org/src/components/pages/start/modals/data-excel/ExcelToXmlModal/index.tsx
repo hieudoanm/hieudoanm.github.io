@@ -1,16 +1,14 @@
 'use client';
 
 import { FC, useState } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { downloadBlob, readFile } from './utils';
 
 export const ExcelToXmlModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const handleConvert = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
+  const handleConvert = async (file: File) => {
     setLoading(true);
     setError(null);
     try {
@@ -49,12 +47,7 @@ export const ExcelToXmlModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   return (
     <ModalWrapper onClose={onClose} title="Excel to XML" size="max-w-lg">
       <div className="flex flex-col gap-4">
-        <input
-          type="file"
-          accept=".xlsx,.xls"
-          className="file-input file-input-bordered"
-          onChange={handleConvert}
-        />
+        <Dropzone accept=".xlsx,.xls" onFile={handleConvert} />
         {loading && <span className="loading loading-spinner" />}
         {error && <p className="text-error text-sm">{error}</p>}
       </div>

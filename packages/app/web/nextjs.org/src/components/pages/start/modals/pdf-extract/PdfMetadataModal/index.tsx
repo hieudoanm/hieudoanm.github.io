@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useState } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import {
   getPDFInfo,
   setPDFMetadata,
@@ -52,12 +52,10 @@ export const PdfMetadataModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   return (
     <ModalWrapper onClose={onClose} title="PDF Metadata" size="max-w-lg">
       <div className="flex flex-col gap-4">
-        <input
-          type="file"
+        <Dropzone
           accept=".pdf"
-          className="file-input file-input-bordered"
-          onChange={(e) => {
-            setFile(e.target.files?.[0] ?? null);
+          onFile={(f) => {
+            setFile(f);
             setInfo(null);
           }}
         />

@@ -1,13 +1,12 @@
 'use client';
 
-import { FC, useState, useRef } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { FC, useState } from 'react';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { mergePDFs, downloadBlob } from '../../pdf-misc/utils/pdf';
 
 export const PdfMergeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [files, setFiles] = useState<File[]>([]);
   const [loading, setLoading] = useState(false);
-  const mergeInputRef = useRef<HTMLInputElement>(null);
 
   const handleMergeFiles = async () => {
     if (files.length < 2) return;
@@ -34,19 +33,11 @@ export const PdfMergeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   return (
     <ModalWrapper onClose={onClose} title="Merge PDFs" size="max-w-2xl">
       <div className="flex flex-col gap-4">
-        <div className="flex items-center gap-2">
-          <input
-            ref={mergeInputRef}
-            type="file"
-            accept=".pdf"
-            multiple
-            className="file-input file-input-bordered flex-1"
-            onChange={(e) => {
-              const selected = Array.from(e.target.files ?? []);
-              setFiles((prev) => [...prev, ...selected]);
-            }}
-          />
-        </div>
+        <Dropzone
+          accept=".pdf"
+          multiple
+          onFile={(f) => setFiles((prev) => [...prev, f])}
+        />
         {files.length > 0 && (
           <ul className="flex flex-col gap-1">
             {files.map((f, i) => (

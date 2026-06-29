@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useState, useCallback, useEffect, useRef } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 
 export const PdfPageNumbersModal: FC<{ onClose: () => void }> = ({
   onClose,
@@ -12,9 +12,8 @@ export const PdfPageNumbersModal: FC<{ onClose: () => void }> = ({
   const [format, setFormat] = useState('{n}');
   const [file, setFile] = useState<File | null>(null);
 
-  const handleFile = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    const f = e.target.files?.[0];
-    if (f) setFile(f);
+  const handleFile = useCallback((f: File) => {
+    setFile(f);
   }, []);
 
   useEffect(() => {
@@ -62,12 +61,7 @@ export const PdfPageNumbersModal: FC<{ onClose: () => void }> = ({
     <ModalWrapper onClose={onClose} title="Page Numbers" size="max-w-md">
       <div className="flex flex-col gap-4">
         <p className="text-sm">Add page numbers to your PDF.</p>
-        <input
-          type="file"
-          accept=".pdf"
-          onChange={handleFile}
-          className="file-input file-input-bordered file-input-sm w-full"
-        />
+        <Dropzone accept=".pdf" onFile={handleFile} />
         {file && <p className="text-base-content/60 text-xs">{file.name}</p>}
         <div className="grid grid-cols-2 gap-3 text-xs">
           <div className="flex flex-col gap-1">

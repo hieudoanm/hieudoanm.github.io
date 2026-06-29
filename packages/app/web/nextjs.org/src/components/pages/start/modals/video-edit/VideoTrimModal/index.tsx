@@ -1,7 +1,7 @@
 'use client';
 
-import { FC, useState, useRef, useCallback } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { FC, useState, useCallback } from 'react';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { downloadBlob } from './utils';
 
 export const VideoTrimModal: FC<{ onClose: () => void }> = ({ onClose }) => {
@@ -11,8 +11,7 @@ export const VideoTrimModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [duration, setDuration] = useState(0);
   const [processing, setProcessing] = useState(false);
 
-  const handleLoad = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const f = e.target.files?.[0] ?? null;
+  const handleLoad = (f: File) => {
     setFile(f);
     if (f) {
       const v = document.createElement('video');
@@ -74,12 +73,7 @@ export const VideoTrimModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     <ModalWrapper onClose={onClose} title="Trim Video">
       <div className="flex flex-col gap-4">
         <p className="text-sm">Trim video by start and end timestamps.</p>
-        <input
-          type="file"
-          accept="video/*"
-          onChange={handleLoad}
-          className="file-input file-input-bordered file-input-sm w-full"
-        />
+        <Dropzone accept="video/*" onFile={handleLoad} />
         {file && (
           <>
             <p className="text-xs opacity-60">

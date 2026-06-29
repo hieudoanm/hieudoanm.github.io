@@ -1,5 +1,5 @@
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
-import { FC, useMemo, useRef, useState } from 'react';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
+import { FC, useMemo, useState } from 'react';
 
 import { DataView } from './components/DataView';
 import { EmptyState } from './components/EmptyState';
@@ -35,8 +35,6 @@ export const SheetsModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [isDragging, setIsDragging] = useState(false);
   const [showExport, setShowExport] = useState(false);
 
-  const fileInputRef = useRef<HTMLInputElement>(null);
-
   const filteredRows = useMemo(() => {
     let rows = [...queryResult.rows];
     if (search.trim()) {
@@ -63,14 +61,11 @@ export const SheetsModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     return rows;
   }, [queryResult.rows, search, sortCol, sortDir]);
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
+  const handleFile = (file: File) => {
     const reader = new FileReader();
     reader.onload = (ev) =>
       openDb(new Uint8Array(ev.target!.result as ArrayBuffer), file.name);
     reader.readAsArrayBuffer(file);
-    e.target.value = '';
   };
   SheetsModal.displayName = 'SheetsModal';
 
@@ -132,7 +127,7 @@ export const SheetsModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           dbFileName={dbFileName}
           opfsFiles={opfsFiles}
           dbInstance={!!dbInstance}
-          onOpen={() => fileInputRef.current?.click()}
+          onOpen={() => {}}
           onNewDb={createNewDb}
           onLoadOpfs={handleLoadOpfs}
           onSave={handleSave}
@@ -153,7 +148,7 @@ export const SheetsModal: FC<{ onClose: () => void }> = ({ onClose }) => {
               <EmptyState
                 loading={loading}
                 loadingMsg={loadingMsg}
-                onOpen={() => fileInputRef.current?.click()}
+                onOpen={() => {}}
                 onNewDb={createNewDb}
               />
             ) : (
@@ -196,12 +191,10 @@ export const SheetsModal: FC<{ onClose: () => void }> = ({ onClose }) => {
         </footer>
       </div>
 
-      <input
-        ref={fileInputRef}
-        type="file"
+      <Dropzone
         accept=".db,.sqlite,.sqlite3"
+        onFile={handleFile}
         className="hidden"
-        onChange={handleFileChange}
       />
     </ModalWrapper>
   );

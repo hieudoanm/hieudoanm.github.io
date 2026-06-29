@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useState, useCallback, useRef } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { downloadBlob } from './utils';
 
 export const ImageConvertJpgToTiffModal: FC<{ onClose: () => void }> = ({
@@ -40,12 +40,7 @@ export const ImageConvertJpgToTiffModal: FC<{ onClose: () => void }> = ({
     <ModalWrapper onClose={onClose} title="JPG to TIFF" size="max-w-lg">
       <div className="flex flex-col gap-4">
         <p className="text-sm">Convert JPG images to TIFF format.</p>
-        <input
-          type="file"
-          accept=".jpg,.jpeg"
-          className="file-input file-input-bordered"
-          onChange={(e) => setFile(e.target.files?.[0] ?? null)}
-        />
+        <Dropzone accept=".jpg,.jpeg" onFile={(f) => setFile(f)} />
         <canvas ref={canvasRef} className="hidden" />
         <button
           className="btn btn-primary"

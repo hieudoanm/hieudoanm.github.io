@@ -194,11 +194,6 @@ export const useAllSections = (
       },
       {
         label: 'GIF Convert',
-        items: f(toolSections['image-convert-gif'], 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'GIF Convert',
         items: f(toolSections['video-convert-gif'], 'label'),
         Card: ToolCard,
       },
@@ -220,6 +215,11 @@ export const useAllSections = (
       {
         label: 'Image Effect',
         items: f(toolSections['image-effect'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Image GIF Convert',
+        items: f(toolSections['image-convert-gif'], 'label'),
         Card: ToolCard,
       },
       {

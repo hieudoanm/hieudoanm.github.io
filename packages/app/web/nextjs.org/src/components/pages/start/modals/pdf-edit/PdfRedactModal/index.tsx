@@ -3,7 +3,7 @@
 import * as fabric from 'fabric';
 import { FC, useCallback, useRef, useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 
 import { RedactionBox } from './types';
 import { exportRedactedPdf } from './utils/pdf';
@@ -36,10 +36,8 @@ export const PdfRedactModal: FC<{ onClose: () => void }> = ({ onClose }) => {
 
   const canvasRefs = useRef<Record<number, fabric.Canvas>>({});
 
-  const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const f = e.target.files?.[0];
-    if (f)
-      setState((prev) => ({ ...prev, file: f, redactions: {}, redoStack: {} }));
+  const handleFile = (f: File) => {
+    setState((prev) => ({ ...prev, file: f, redactions: {}, redoStack: {} }));
   };
 
   const initFabric = useCallback(
@@ -166,15 +164,11 @@ export const PdfRedactModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       subtitle="Hide sensitive information from your documents."
       size="max-w-5xl">
       <div className="flex flex-wrap items-center gap-2">
-        <label className="btn btn-primary btn-sm rounded-lg">
-          Upload PDF
-          <input
-            type="file"
-            accept="application/pdf"
-            onChange={handleFile}
-            className="hidden"
-          />
-        </label>
+        <Dropzone
+          accept="application/pdf"
+          label="Upload PDF"
+          onFile={handleFile}
+        />
         {file && (
           <>
             <div className="divider divider-horizontal mx-1" />

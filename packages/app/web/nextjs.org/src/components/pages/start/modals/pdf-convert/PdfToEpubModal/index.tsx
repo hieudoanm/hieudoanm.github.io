@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useState, useCallback } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { extractPdfText } from './utils';
 
 export const PdfToEpubModal: FC<{ onClose: () => void }> = ({ onClose }) => {
@@ -9,23 +9,18 @@ export const PdfToEpubModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [text, setText] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const handleFile = useCallback(
-    async (e: React.ChangeEvent<HTMLInputElement>) => {
-      const f = e.target.files?.[0];
-      if (!f) return;
-      setFile(f);
-      setLoading(true);
-      try {
-        const data = await f.arrayBuffer();
-        setText(extractPdfText(data));
-      } catch {
-        setText('Could not extract text.');
-      } finally {
-        setLoading(false);
-      }
-    },
-    []
-  );
+  const handleFile = useCallback(async (f: File) => {
+    setFile(f);
+    setLoading(true);
+    try {
+      const data = await f.arrayBuffer();
+      setText(extractPdfText(data));
+    } catch {
+      setText('Could not extract text.');
+    } finally {
+      setLoading(false);
+    }
+  }, []);
 
   const downloadEpub = useCallback(() => {
     const html = `<?xml version="1.0"?>
@@ -56,12 +51,7 @@ ${text
           Extract text from PDF and download as HTML (simplified EPUB-like
           format).
         </p>
-        <input
-          type="file"
-          accept=".pdf"
-          onChange={handleFile}
-          className="file-input file-input-bordered file-input-sm w-full"
-        />
+        <Dropzone accept=".pdf" onFile={handleFile} />
         {file && <p className="text-base-content/60 text-xs">{file.name}</p>}
         {loading && <p className="text-xs">Extracting text...</p>}
         {text && (

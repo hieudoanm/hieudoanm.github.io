@@ -21,7 +21,7 @@ export const TOOL_SECTION_LABELS: Record<string, string> = {
   'games-puzzle': 'Games Puzzle',
   'games-trivia': 'Games Trivia',
   'games-word': 'Games Word',
-  'image-convert-gif': 'GIF Convert',
+  'image-convert-gif': 'Image GIF Convert',
   'image-convert-heic': 'HEIC Convert',
   'image-convert-jpg': 'JPG Convert',
   'image-convert-png': 'PNG Convert',

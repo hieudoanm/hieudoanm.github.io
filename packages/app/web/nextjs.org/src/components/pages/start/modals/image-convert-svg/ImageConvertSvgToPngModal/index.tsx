@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useState, useCallback, useRef } from 'react';
-import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
+import { Dropzone, ModalWrapper } from '@hieudoanm.github.io/components/atoms';
 import { downloadBlob } from './utils';
 
 export const ImageConvertSvgToPngModal: FC<{ onClose: () => void }> = ({
@@ -45,12 +45,7 @@ export const ImageConvertSvgToPngModal: FC<{ onClose: () => void }> = ({
         <p className="text-sm">
           Convert SVG vector graphics to PNG raster format.
         </p>
-        <input
-          type="file"
-          accept=".svg"
-          className="file-input file-input-bordered"
-          onChange={(e) => setFile(e.target.files?.[0] ?? null)}
-        />
+        <Dropzone accept=".svg" onFile={(f) => setFile(f)} />
         <canvas ref={canvasRef} className="hidden" />
         <button
           className="btn btn-primary"
