@@ -6,7 +6,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     label: 'Blackjack',
     description: 'Cards Counter',
     tags: [
-      'casino',
+      'games-casino',
       'gambling',
       'card-game',
       'bj',
@@ -22,7 +22,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     label: 'Poker',
     description: 'Odds Calculator',
     tags: [
-      'casino',
+      'games-casino',
       'gambling',
       'card-game',
       'texas-holdem',

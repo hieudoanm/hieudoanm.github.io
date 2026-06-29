@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`SlidingPuzzleModal renders upload dropzone initially 1`] = `
+<div>
+  <dialog
+    class="modal modal-open"
+    open=""
+    style="background: rgba(0, 0, 0, 0.6);"
+  >
+    <div
+      class="card bg-base-100 border-base-300 w-full max-w-sm border shadow-2xl"
+    >
+      <div
+        class="card-body gap-5 p-6"
+      >
+        <div
+          class="flex items-start justify-between"
+        >
+          <div>
+            <h2
+              class="text-lg font-black tracking-tight"
+            >
+              Slide Puzzle
+            </h2>
+          </div>
+          <button
+            class="btn btn-ghost btn-xs btn-square text-base opacity-60 hover:opacity-100"
+          >
+            ✕
+          </button>
+        </div>
+        <div
+          class="flex flex-col gap-4 p-4"
+        >
+          <div
+            class="flex cursor-pointer flex-col items-center justify-center gap-3 rounded-xl border-2 border-dashed p-12 transition-colors border-base-content/20 hover:border-base-content/40"
+          >
+            <input
+              accept="image/*"
+              class="hidden"
+              type="file"
+            />
+            <span
+              class="text-4xl opacity-30"
+            >
+              🖼️
+            </span>
+            <p
+              class="text-sm font-medium"
+            >
+              Click or drag an image here
+            </p>
+            <p
+              class="text-xs opacity-40"
+            >
+              The image will be cropped to a square
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form
+      class="modal-backdrop"
+      method="dialog"
+    >
+      <button>
+        close
+      </button>
+    </form>
+  </dialog>
+</div>
+`;

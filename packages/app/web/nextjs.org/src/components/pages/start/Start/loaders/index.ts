@@ -2,8 +2,8 @@ import { ComponentType, lazy } from 'react';
 import { ModalId } from '../types';
 
 import { loaders as aiLoaders } from './ai';
-import { loaders as casinoLoaders } from './casino';
-import { loaders as chessLoaders } from './chess';
+import { loaders as gamesCasinoLoaders } from './games-casino';
+import { loaders as gamesChessLoaders } from './games-chess';
 import { loaders as clocksLoaders } from './clocks';
 import { loaders as colorsLoaders } from './colors';
 import { loaders as converterLoaders } from './converter';
@@ -16,7 +16,7 @@ import { loaders as editorsLoaders } from './editors';
 import { loaders as educationLoaders } from './education';
 import { loaders as eyesLoaders } from './eyes';
 import { loaders as financialLoaders } from './financial';
-import { loaders as formatLoaders } from './format';
+
 import { loaders as gamesArcadeLoaders } from './games-arcade';
 import { loaders as gamesMemoryLoaders } from './games-memory';
 import { loaders as gamesPuzzleLoaders } from './games-puzzle';
@@ -70,8 +70,8 @@ const loaders: Record<
   () => Promise<{ default: ComponentType<{ onClose: () => void }> }>
 > = {
   ...aiLoaders,
-  ...casinoLoaders,
-  ...chessLoaders,
+  ...gamesCasinoLoaders,
+  ...gamesChessLoaders,
   ...clocksLoaders,
   ...colorsLoaders,
   ...converterLoaders,
@@ -84,7 +84,7 @@ const loaders: Record<
   ...educationLoaders,
   ...eyesLoaders,
   ...financialLoaders,
-  ...formatLoaders,
+
   ...gamesArcadeLoaders,
   ...gamesMemoryLoaders,
   ...gamesPuzzleLoaders,

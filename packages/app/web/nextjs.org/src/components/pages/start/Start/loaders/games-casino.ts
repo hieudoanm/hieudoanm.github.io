@@ -1,12 +1,12 @@
 import { ComponentType } from 'react';
 
 const loadBlackjack = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/casino/BlackjackModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/games-casino/BlackjackModal').then(
     (m) => ({ default: m.BlackjackModal })
   );
 
 const loadPoker = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/casino/PokerModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/games-casino/PokerModal').then(
     (m) => ({ default: m.PokerModal })
   );
 

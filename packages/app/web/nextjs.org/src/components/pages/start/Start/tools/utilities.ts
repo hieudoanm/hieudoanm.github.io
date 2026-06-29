@@ -50,6 +50,21 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     onClick: open('kaprekar'),
   },
   {
+    label: 'Lorem Ipsum',
+    description: 'Dummy text',
+    tags: [
+      'utility',
+      'converter',
+      'data',
+      'placeholder',
+      'dummy-text',
+      'filler',
+    ],
+    emoji: '📝',
+    color: '#8b5cf6',
+    onClick: open('lorem-ipsum'),
+  },
+  {
     label: 'No Sleep',
     description: 'Timer',
     tags: [

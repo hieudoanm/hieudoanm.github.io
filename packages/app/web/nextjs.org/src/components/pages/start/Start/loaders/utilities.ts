@@ -25,6 +25,11 @@ const loadKaprekar = () =>
     (m) => ({ default: m.KaprekarModal })
   );
 
+const loadLoremIpsum = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/utilities/LoremIpsumModal').then(
+    (m) => ({ default: m.LoremIpsumModal })
+  );
+
 const loadNoSleep = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/utilities/NoSleepModal').then(
     (m) => ({ default: m.NoSleepModal })
@@ -54,6 +59,7 @@ export const loaders: Record<
   'create-zip': loadCreateZip,
   emojis: loadEmojis,
   kaprekar: loadKaprekar,
+  'lorem-ipsum': loadLoremIpsum,
   'no-sleep': loadNoSleep,
   'screen-recorder': loadScreenRecorder,
   'text-password': loadTextPassword,

@@ -2,8 +2,8 @@ import { Tool } from '@hieudoanm.github.io/components/pages/start/cards/ToolCard
 import { ModalId } from '../types';
 
 import { make as aiMake } from './ai';
-import { make as casinoMake } from './casino';
-import { make as chessMake } from './chess';
+import { make as gamesCasinoMake } from './games-casino';
+import { make as gamesChessMake } from './games-chess';
 import { make as clocksMake } from './clocks';
 import { make as colorsMake } from './colors';
 import { make as converterMake } from './converter';
@@ -16,7 +16,7 @@ import { make as editorsMake } from './editors';
 import { make as educationMake } from './education';
 import { make as eyesMake } from './eyes';
 import { make as financialMake } from './financial';
-import { make as formatMake } from './format';
+
 import { make as games_arcadeMake } from './games-arcade';
 import { make as games_memoryMake } from './games-memory';
 import { make as games_puzzleMake } from './games-puzzle';
@@ -69,8 +69,8 @@ export const makeTools = (
   open: (id: ModalId) => () => void
 ): Record<string, Tool[]> => ({
   ai: aiMake(open),
-  casino: casinoMake(open),
-  chess: chessMake(open),
+  'games-casino': gamesCasinoMake(open),
+  'games-chess': gamesChessMake(open),
   clocks: clocksMake(open),
   colors: colorsMake(open),
   converter: converterMake(open),
@@ -83,7 +83,7 @@ export const makeTools = (
   education: educationMake(open),
   eyes: eyesMake(open),
   financial: financialMake(open),
-  format: formatMake(open),
+
   'games-arcade': games_arcadeMake(open),
   'games-memory': games_memoryMake(open),
   'games-puzzle': games_puzzleMake(open),

@@ -82,33 +82,18 @@ export const useAllSections = (
       Card: Card;
     }[] = [
       {
-        label: 'Developer',
-        items: f(toolSections.developer, 'label'),
+        label: 'AAC Convert',
+        items: f(toolSections['video-convert-aac'], 'label'),
         Card: ToolCard,
       },
       {
-        label: 'Utilities',
-        items: f(toolSections.utilities, 'label'),
+        label: 'AI',
+        items: f(toolSections.ai, 'label'),
         Card: ToolCard,
       },
       {
-        label: 'Converter',
-        items: f(toolSections.converter, 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'Financial',
-        items: f(toolSections.financial, 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'Casino',
-        items: f(toolSections.casino, 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'Chess',
-        items: f(toolSections.chess, 'label'),
+        label: 'AVI Convert',
+        items: f(toolSections['video-convert-avi'], 'label'),
         Card: ToolCard,
       },
       {
@@ -122,8 +107,33 @@ export const useAllSections = (
         Card: ToolCard,
       },
       {
-        label: 'Format',
-        items: f(toolSections.format, 'label'),
+        label: 'Converter',
+        items: f(toolSections.converter, 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Data CSV',
+        items: f(toolSections['data-csv'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Data Excel',
+        items: f(toolSections['data-excel'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Data JSON',
+        items: f(toolSections['data-json'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Data XML',
+        items: f(toolSections['data-xml'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Developer',
+        items: f(toolSections.developer, 'label'),
         Card: ToolCard,
       },
       {
@@ -138,8 +148,28 @@ export const useAllSections = (
       },
       { label: 'Eyes', items: f(toolSections.eyes, 'label'), Card: ToolCard },
       {
+        label: 'Financial',
+        items: f(toolSections.financial, 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'FLV Convert',
+        items: f(toolSections['video-convert-flv'], 'label'),
+        Card: ToolCard,
+      },
+      {
         label: 'Games Arcade',
         items: f(toolSections['games-arcade'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Games Casino',
+        items: f(toolSections['games-casino'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Games Chess',
+        items: f(toolSections['games-chess'], 'label'),
         Card: ToolCard,
       },
       {
@@ -163,33 +193,13 @@ export const useAllSections = (
         Card: ToolCard,
       },
       {
-        label: 'Text Convert',
-        items: f(toolSections['text-convert'], 'label'),
+        label: 'GIF Convert',
+        items: f(toolSections['image-convert-gif'], 'label'),
         Card: ToolCard,
       },
       {
-        label: 'AI',
-        items: f(toolSections.ai, 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'Image Edit',
-        items: f(toolSections['image-edit'], 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'JPG Convert',
-        items: f(toolSections['image-convert-jpg'], 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'PNG Convert',
-        items: f(toolSections['image-convert-png'], 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'WebP Convert',
-        items: f(toolSections['image-convert-webp'], 'label'),
+        label: 'GIF Convert',
+        items: f(toolSections['video-convert-gif'], 'label'),
         Card: ToolCard,
       },
       {
@@ -198,23 +208,13 @@ export const useAllSections = (
         Card: ToolCard,
       },
       {
-        label: 'GIF Convert',
-        items: f(toolSections['image-convert-gif'], 'label'),
+        label: 'Image Create',
+        items: f(toolSections['image-create'], 'label'),
         Card: ToolCard,
       },
       {
-        label: 'PSD Convert',
-        items: f(toolSections['image-convert-psd'], 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'TIFF Convert',
-        items: f(toolSections['image-convert-tiff'], 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'SVG Convert',
-        items: f(toolSections['image-convert-svg'], 'label'),
+        label: 'Image Edit',
+        items: f(toolSections['image-edit'], 'label'),
         Card: ToolCard,
       },
       {
@@ -223,19 +223,134 @@ export const useAllSections = (
         Card: ToolCard,
       },
       {
-        label: 'Image Create',
-        items: f(toolSections['image-create'], 'label'),
+        label: 'Image Scan',
+        items: f(toolSections['image-scan'], 'label'),
         Card: ToolCard,
       },
       {
-        label: 'Image Scan',
-        items: f(toolSections['image-scan'], 'label'),
+        label: 'JPG Convert',
+        items: f(toolSections['image-convert-jpg'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'M4A Convert',
+        items: f(toolSections['video-convert-m4a'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'MKV Convert',
+        items: f(toolSections['video-convert-mkv'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'MOV Convert',
+        items: f(toolSections['video-convert-mov'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'MP4 Convert',
+        items: f(toolSections['video-convert-mp4'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'OGG Convert',
+        items: f(toolSections['video-convert-ogg'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'PDF Convert',
+        items: f(toolSections['pdf-convert'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'PDF Create',
+        items: f(toolSections['pdf-create'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'PDF Ebook',
+        items: f(toolSections['pdf-ebook'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'PDF Edit',
+        items: f(toolSections['pdf-edit'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'PDF Extract',
+        items: f(toolSections['pdf-extract'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'PDF Misc',
+        items: f(toolSections['pdf-misc'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'PNG Convert',
+        items: f(toolSections['image-convert-png'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'PSD Convert',
+        items: f(toolSections['image-convert-psd'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'SVG Convert',
+        items: f(toolSections['image-convert-svg'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Text Convert',
+        items: f(toolSections['text-convert'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'TIFF Convert',
+        items: f(toolSections['image-convert-tiff'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Utilities',
+        items: f(toolSections.utilities, 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Video Audio',
+        items: f(toolSections['video-audio'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Video Download',
+        items: f(toolSections['video-download'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'Video Edit',
+        items: f(toolSections['video-edit'], 'label'),
         Card: ToolCard,
       },
       {
         label: 'Visualization',
         items: f(toolSections.visualization, 'label'),
         Card: ItemCard as Card,
+      },
+      {
+        label: 'WebM Convert',
+        items: f(toolSections['video-convert-webm'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'WebP Convert',
+        items: f(toolSections['image-convert-webp'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'WMV Convert',
+        items: f(toolSections['video-convert-wmv'], 'label'),
+        Card: ToolCard,
       },
       {
         label: 'Write Article',
@@ -270,126 +385,6 @@ export const useAllSections = (
       {
         label: 'Write Social',
         items: f(toolSections['write-social'], 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'AAC Convert',
-        items: f(toolSections['video-convert-aac'], 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'AVI Convert',
-        items: f(toolSections['video-convert-avi'], 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'FLV Convert',
-        items: f(toolSections['video-convert-flv'], 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'GIF Convert',
-        items: f(toolSections['video-convert-gif'], 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'M4A Convert',
-        items: f(toolSections['video-convert-m4a'], 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'MKV Convert',
-        items: f(toolSections['video-convert-mkv'], 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'MOV Convert',
-        items: f(toolSections['video-convert-mov'], 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'MP4 Convert',
-        items: f(toolSections['video-convert-mp4'], 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'OGG Convert',
-        items: f(toolSections['video-convert-ogg'], 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'WMV Convert',
-        items: f(toolSections['video-convert-wmv'], 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'WebM Convert',
-        items: f(toolSections['video-convert-webm'], 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'Video Edit',
-        items: f(toolSections['video-edit'], 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'Video Download',
-        items: f(toolSections['video-download'], 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'Video Audio',
-        items: f(toolSections['video-audio'], 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'Data CSV',
-        items: f(toolSections['data-csv'], 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'Data Excel',
-        items: f(toolSections['data-excel'], 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'Data JSON',
-        items: f(toolSections['data-json'], 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'Data XML',
-        items: f(toolSections['data-xml'], 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'PDF Convert',
-        items: f(toolSections['pdf-convert'], 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'PDF Create',
-        items: f(toolSections['pdf-create'], 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'PDF Ebook',
-        items: f(toolSections['pdf-ebook'], 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'PDF Edit',
-        items: f(toolSections['pdf-edit'], 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'PDF Extract',
-        items: f(toolSections['pdf-extract'], 'label'),
-        Card: ToolCard,
-      },
-      {
-        label: 'PDF Misc',
-        items: f(toolSections['pdf-misc'], 'label'),
         Card: ToolCard,
       },
     ];

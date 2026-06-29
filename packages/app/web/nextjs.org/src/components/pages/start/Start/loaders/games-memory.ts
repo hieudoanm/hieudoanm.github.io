@@ -1,5 +1,10 @@
 import { ComponentType } from 'react';
 
+const loadMemoryMatch = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/games-memory/MemoryMatchModal').then(
+    (m) => ({ default: m.MemoryMatchModal })
+  );
+
 const loadPiNumber = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/games-memory/PiNumberModal').then(
     (m) => ({ default: m.PiModal })
@@ -19,6 +24,7 @@ export const loaders: Record<
   string,
   () => Promise<{ default: ComponentType<{ onClose: () => void }> }>
 > = {
+  'memory-match': loadMemoryMatch,
   pi: loadPiNumber,
   quizify: loadQuizify,
   recall: loadRecall,

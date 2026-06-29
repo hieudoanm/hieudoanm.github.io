@@ -3,6 +3,14 @@ import { ModalId } from '../types';
 
 export const make = (open: (id: ModalId) => () => void): Tool[] => [
   {
+    label: 'Memory Match',
+    description: 'Find matching pairs',
+    tags: ['memory', 'brain', 'cognitive', 'game'],
+    emoji: '🧠',
+    color: '#f59e0b',
+    onClick: open('memory-match'),
+  },
+  {
     label: 'PI',
     description: 'Memorization',
     tags: ['memory', 'brain', 'cognitive', 'game'],

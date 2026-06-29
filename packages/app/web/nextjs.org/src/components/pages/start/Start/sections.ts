@@ -2,8 +2,6 @@ import { Tool } from '@hieudoanm.github.io/components/pages/start/cards/ToolCard
 
 export const TOOL_SECTION_LABELS: Record<string, string> = {
   ai: 'AI',
-  casino: 'Casino',
-  chess: 'Chess',
   clocks: 'Clocks',
   colors: 'Colors',
   converter: 'Converter',
@@ -16,8 +14,9 @@ export const TOOL_SECTION_LABELS: Record<string, string> = {
   education: 'Education',
   eyes: 'Eyes',
   financial: 'Financial',
-  format: 'Format',
   'games-arcade': 'Games Arcade',
+  'games-casino': 'Games Casino',
+  'games-chess': 'Games Chess',
   'games-memory': 'Games Memory',
   'games-puzzle': 'Games Puzzle',
   'games-trivia': 'Games Trivia',

@@ -5,7 +5,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
   {
     label: 'Chess Clock',
     description: 'Chess Timer',
-    tags: ['chess', 'board-game', 'clock', 'timer'],
+    tags: ['games-chess', 'board-game', 'clock', 'timer'],
     emoji: '♟️',
     color: '#8b5cf6',
     onClick: open('chess-clock'),
@@ -13,7 +13,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
   {
     label: 'Elo',
     description: 'Calculator',
-    tags: ['chess', 'rating', 'calculator'],
+    tags: ['games-chess', 'rating', 'calculator'],
     emoji: '♟️',
     color: '#f59e0b',
     onClick: open('elo'),

@@ -1,12 +1,12 @@
 import { ComponentType } from 'react';
 
 const loadChessClock = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/chess/ChessClockModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/games-chess/ChessClockModal').then(
     (m) => ({ default: m.ChessClockModal })
   );
 
 const loadElo = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/chess/EloModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/games-chess/EloModal').then(
     (m) => ({ default: m.EloModal })
   );
 

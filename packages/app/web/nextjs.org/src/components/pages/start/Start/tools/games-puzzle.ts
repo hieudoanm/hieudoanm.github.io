@@ -11,6 +11,22 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     onClick: open('game2048'),
   },
   {
+    label: 'Lights Out',
+    description: 'Toggle all lights off',
+    tags: ['game', 'fun', 'entertainment'],
+    emoji: '💡',
+    color: '#f59e0b',
+    onClick: open('lights-out'),
+  },
+  {
+    label: 'Sliding Puzzle',
+    description: 'Upload & slide tiles',
+    tags: ['game', 'fun', 'entertainment'],
+    emoji: '🧊',
+    color: '#f59e0b',
+    onClick: open('sliding-puzzle'),
+  },
+  {
     label: 'Sudoku',
     description: '4×4 & 9×9',
     tags: ['game', 'fun', 'entertainment'],
