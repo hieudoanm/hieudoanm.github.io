@@ -16,9 +16,14 @@ import { make as eyesMake } from './eyes';
 import { make as financialMake } from './financial';
 import { make as formatMake } from './format';
 import { make as gamesMake } from './games';
-import { make as image_convertMake } from './image-convert';
-import { make as image_convert_plusMake } from './image-convert-plus';
-import { make as image_convert_proMake } from './image-convert-pro';
+import { make as image_convert_jpgMake } from './image-convert-jpg';
+import { make as image_convert_pngMake } from './image-convert-png';
+import { make as image_convert_webpMake } from './image-convert-webp';
+import { make as image_convert_heicMake } from './image-convert-heic';
+import { make as image_convert_gifMake } from './image-convert-gif';
+import { make as image_convert_psdMake } from './image-convert-psd';
+import { make as image_convert_tiffMake } from './image-convert-tiff';
+import { make as image_convert_svgMake } from './image-convert-svg';
 import { make as image_createMake } from './image-create';
 import { make as image_editMake } from './image-edit';
 import { make as image_effectMake } from './image-effect';
@@ -64,9 +69,14 @@ export const makeTools = (
   financial: financialMake(open),
   format: formatMake(open),
   games: gamesMake(open),
-  'image-convert': image_convertMake(open),
-  'image-convert-plus': image_convert_plusMake(open),
-  'image-convert-pro': image_convert_proMake(open),
+  'image-convert-jpg': image_convert_jpgMake(open),
+  'image-convert-png': image_convert_pngMake(open),
+  'image-convert-webp': image_convert_webpMake(open),
+  'image-convert-heic': image_convert_heicMake(open),
+  'image-convert-gif': image_convert_gifMake(open),
+  'image-convert-psd': image_convert_psdMake(open),
+  'image-convert-tiff': image_convert_tiffMake(open),
+  'image-convert-svg': image_convert_svgMake(open),
   'image-create': image_createMake(open),
   'image-edit': image_editMake(open),
   'image-effect': image_effectMake(open),

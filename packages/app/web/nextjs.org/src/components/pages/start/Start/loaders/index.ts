@@ -16,9 +16,14 @@ import { loaders as eyesLoaders } from './eyes';
 import { loaders as financialLoaders } from './financial';
 import { loaders as formatLoaders } from './format';
 import { loaders as gamesLoaders } from './games';
-import { loaders as image_convertLoaders } from './image-convert';
-import { loaders as image_convert_plusLoaders } from './image-convert-plus';
-import { loaders as image_convert_proLoaders } from './image-convert-pro';
+import { loaders as image_convert_jpgLoaders } from './image-convert-jpg';
+import { loaders as image_convert_pngLoaders } from './image-convert-png';
+import { loaders as image_convert_webpLoaders } from './image-convert-webp';
+import { loaders as image_convert_heicLoaders } from './image-convert-heic';
+import { loaders as image_convert_gifLoaders } from './image-convert-gif';
+import { loaders as image_convert_psdLoaders } from './image-convert-psd';
+import { loaders as image_convert_tiffLoaders } from './image-convert-tiff';
+import { loaders as image_convert_svgLoaders } from './image-convert-svg';
 import { loaders as image_createLoaders } from './image-create';
 import { loaders as image_editLoaders } from './image-edit';
 import { loaders as image_effectLoaders } from './image-effect';
@@ -65,9 +70,14 @@ const loaders: Record<
   ...financialLoaders,
   ...formatLoaders,
   ...gamesLoaders,
-  ...image_convertLoaders,
-  ...image_convert_plusLoaders,
-  ...image_convert_proLoaders,
+  ...image_convert_jpgLoaders,
+  ...image_convert_pngLoaders,
+  ...image_convert_webpLoaders,
+  ...image_convert_heicLoaders,
+  ...image_convert_gifLoaders,
+  ...image_convert_psdLoaders,
+  ...image_convert_tiffLoaders,
+  ...image_convert_svgLoaders,
   ...image_createLoaders,
   ...image_editLoaders,
   ...image_effectLoaders,

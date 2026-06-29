@@ -144,18 +144,43 @@ export const useAllSections = (
         Card: ToolCard,
       },
       {
-        label: 'Image Convert',
-        items: f(toolSections['image-convert'], 'label'),
+        label: 'JPG Convert',
+        items: f(toolSections['image-convert-jpg'], 'label'),
         Card: ToolCard,
       },
       {
-        label: 'Image Convert+',
-        items: f(toolSections['image-convert-plus'], 'label'),
+        label: 'PNG Convert',
+        items: f(toolSections['image-convert-png'], 'label'),
         Card: ToolCard,
       },
       {
-        label: 'Image Convert Pro',
-        items: f(toolSections['image-convert-pro'], 'label'),
+        label: 'WebP Convert',
+        items: f(toolSections['image-convert-webp'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'HEIC Convert',
+        items: f(toolSections['image-convert-heic'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'GIF Convert',
+        items: f(toolSections['image-convert-gif'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'PSD Convert',
+        items: f(toolSections['image-convert-psd'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'TIFF Convert',
+        items: f(toolSections['image-convert-tiff'], 'label'),
+        Card: ToolCard,
+      },
+      {
+        label: 'SVG Convert',
+        items: f(toolSections['image-convert-svg'], 'label'),
         Card: ToolCard,
       },
       {
