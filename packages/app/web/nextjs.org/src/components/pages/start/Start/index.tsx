@@ -5,7 +5,7 @@ import { FC, Suspense, useCallback, useEffect, useMemo, useState } from 'react';
 import { SearchBar } from './components/SearchBar';
 import { GRID_MOBILE } from './constants';
 import { useAllSections } from './hooks/useAllSections';
-import { getModalComponent } from './modal-loaders';
+import { getModalComponent } from './loaders';
 import { makeTools } from './tools';
 import { ModalId, SidebarTab } from './types';
 

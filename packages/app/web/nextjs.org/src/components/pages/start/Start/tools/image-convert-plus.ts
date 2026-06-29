@@ -1,0 +1,77 @@
+import { Tool } from '@hieudoanm.github.io/components/pages/start/cards/ToolCard';
+import { ModalId } from '../types';
+
+export const make = (open: (id: ModalId) => () => void): Tool[] => [
+  {
+    label: 'HEIC to PNG',
+    description: 'Convert',
+    tags: ['image', 'advanced', 'photo'],
+    emoji: '🔄',
+    color: '#06b6d4',
+    onClick: open('image-convert-heic-to-png'),
+  },
+  {
+    label: 'JPG to AVIF',
+    description: 'Convert',
+    tags: ['image', 'advanced', 'photo'],
+    emoji: '🔄',
+    color: '#06b6d4',
+    onClick: open('image-convert-jpg-to-avif'),
+  },
+  {
+    label: 'JPG to GIF',
+    description: 'Convert',
+    tags: ['image', 'advanced', 'photo'],
+    emoji: '🔄',
+    color: '#06b6d4',
+    onClick: open('image-convert-jpg-to-gif'),
+  },
+  {
+    label: 'JPG to SVG',
+    description: 'Convert',
+    tags: ['image', 'advanced', 'photo'],
+    emoji: '🔄',
+    color: '#06b6d4',
+    onClick: open('image-convert-jpg-to-svg'),
+  },
+  {
+    label: 'JPG to TIFF',
+    description: 'Convert',
+    tags: ['image', 'advanced', 'photo'],
+    emoji: '🔄',
+    color: '#06b6d4',
+    onClick: open('image-convert-jpg-to-tiff'),
+  },
+  {
+    label: 'PNG to AVIF',
+    description: 'Convert',
+    tags: ['image', 'advanced', 'photo'],
+    emoji: '🔄',
+    color: '#06b6d4',
+    onClick: open('image-convert-png-to-avif'),
+  },
+  {
+    label: 'PNG to EPS',
+    description: 'Convert',
+    tags: ['image', 'advanced', 'photo'],
+    emoji: '🔄',
+    color: '#06b6d4',
+    onClick: open('image-convert-png-to-eps'),
+  },
+  {
+    label: 'PNG to GIF',
+    description: 'Convert',
+    tags: ['image', 'advanced', 'photo'],
+    emoji: '🔄',
+    color: '#06b6d4',
+    onClick: open('image-convert-png-to-gif'),
+  },
+  {
+    label: 'PNG to TIFF',
+    description: 'Convert',
+    tags: ['image', 'advanced', 'photo'],
+    emoji: '🔄',
+    color: '#06b6d4',
+    onClick: open('image-convert-png-to-tiff'),
+  },
+];

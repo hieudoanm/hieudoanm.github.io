@@ -4,18 +4,18 @@ import {
   CURRENCY_NAMES,
   QUICK_PAIRS,
 } from '@hieudoanm.github.io/data/currencies';
-import { FC, useCallback, useState } from 'react';
+import { FC, useMemo, useState } from 'react';
 
 export const CurrencyTab: FC = () => {
   const [from, setFrom] = useState('USD');
   const [to, setTo] = useState('SGD');
   const [amount, setAmount] = useState<string>('1');
 
-  const converted = useCallback(() => {
+  const converted = useMemo(() => {
     const n = Number.parseFloat(amount);
     if (Number.isNaN(n) || n < 0) return null;
     return convert(n, from, to);
-  }, [amount, from, to])();
+  }, [amount, from, to]);
 
   return (
     <div className="flex flex-col gap-3 p-3">

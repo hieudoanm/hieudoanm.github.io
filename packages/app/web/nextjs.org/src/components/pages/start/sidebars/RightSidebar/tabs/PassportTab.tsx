@@ -1,6 +1,6 @@
 // components/sidebars/PassportTab.tsx
 import { countries } from '@hieudoanm.github.io/data/countries';
-import { ChangeEvent, FC, useState } from 'react';
+import { ChangeEvent, FC, useMemo, useState } from 'react';
 
 interface Country {
   name: string;
@@ -15,13 +15,17 @@ interface Country {
 
 const REGIONS = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania'] as const;
 
-const ranked = (countries as Country[])
-  .filter((c) => c.rank > 0)
-  .sort((a, b) => a.rank - b.rank);
-
 export const PassportTab: FC = () => {
   const [search, setSearch] = useState('');
   const [region, setRegion] = useState('');
+
+  const ranked = useMemo(
+    () =>
+      (countries as Country[])
+        .filter((c) => c.rank > 0)
+        .sort((a, b) => a.rank - b.rank),
+    []
+  );
 
   const filtered = ranked.filter((c) => {
     const matchesSearch =

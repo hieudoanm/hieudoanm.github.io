@@ -1,0 +1,77 @@
+import { Tool } from '@hieudoanm.github.io/components/pages/start/cards/ToolCard';
+import { ModalId } from '../types';
+
+export const make = (open: (id: ModalId) => () => void): Tool[] => [
+  {
+    label: 'Convert to WebM',
+    description: 'Video',
+    tags: ['media', 'mp4', 'movie', 'clip', 'footage'],
+    emoji: '🎬',
+    color: '#ef4444',
+    onClick: open('video-convert-to-webm'),
+  },
+  {
+    label: 'MKV to GIF',
+    description: 'Video',
+    tags: ['convert', 'media', 'mp4', 'movie', 'clip', 'footage'],
+    emoji: '🎬',
+    color: '#ef4444',
+    onClick: open('video-mkv-to-gif'),
+  },
+  {
+    label: 'MKV to MP3',
+    description: 'Video',
+    tags: ['convert', 'media', 'mp4', 'movie', 'clip', 'footage'],
+    emoji: '🎬',
+    color: '#ef4444',
+    onClick: open('video-mkv-to-mp3'),
+  },
+  {
+    label: 'MOV to AVI',
+    description: 'Video',
+    tags: ['convert', 'media', 'mp4', 'movie', 'clip', 'footage'],
+    emoji: '🎬',
+    color: '#ef4444',
+    onClick: open('video-mov-to-avi'),
+  },
+  {
+    label: 'MOV to GIF',
+    description: 'Video',
+    tags: ['convert', 'media', 'mp4', 'movie', 'clip', 'footage'],
+    emoji: '🎬',
+    color: '#ef4444',
+    onClick: open('video-mov-to-gif'),
+  },
+  {
+    label: 'MP4 to OGG',
+    description: 'Video',
+    tags: ['convert', 'media', 'movie', 'clip', 'footage'],
+    emoji: '🎬',
+    color: '#ef4444',
+    onClick: open('video-mp4-to-ogg'),
+  },
+  {
+    label: 'Video to GIF',
+    description: 'Video',
+    tags: ['convert', 'media', 'mp4', 'movie', 'clip', 'footage'],
+    emoji: '🎬',
+    color: '#ef4444',
+    onClick: open('video-to-gif'),
+  },
+  {
+    label: 'Video to WebP',
+    description: 'Video',
+    tags: ['convert', 'media', 'mp4', 'movie', 'clip', 'footage'],
+    emoji: '🎬',
+    color: '#ef4444',
+    onClick: open('video-to-webp'),
+  },
+  {
+    label: 'WebM to MP3',
+    description: 'Video',
+    tags: ['convert', 'media', 'mp4', 'movie', 'clip', 'footage'],
+    emoji: '🎬',
+    color: '#ef4444',
+    onClick: open('video-webm-to-mp3'),
+  },
+];

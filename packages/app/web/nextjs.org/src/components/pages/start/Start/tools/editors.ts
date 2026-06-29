@@ -1,0 +1,77 @@
+import { Tool } from '@hieudoanm.github.io/components/pages/start/cards/ToolCard';
+import { ModalId } from '../types';
+
+export const make = (open: (id: ModalId) => () => void): Tool[] => [
+  {
+    label: 'JSON Schema',
+    description: 'Validator',
+    tags: ['editor', 'edit', 'text', 'javascript-object-notation', 'data'],
+    emoji: '📄',
+    color: '#3b82f6',
+    onClick: open('json-schema'),
+  },
+  {
+    label: 'Manifest',
+    description: 'JSON Editor',
+    tags: ['text', 'javascript-object-notation', 'data', 'modify', 'change'],
+    emoji: '📄',
+    color: '#3b82f6',
+    onClick: open('manifest'),
+  },
+  {
+    label: 'Markdown',
+    description: 'Markdown Editor',
+    tags: ['text', 'md', 'readme', 'markup', 'modify', 'change'],
+    emoji: '📄',
+    color: '#3b82f6',
+    onClick: open('markdown'),
+  },
+  {
+    label: 'Resume',
+    description: 'Resume Builder',
+    tags: ['editor', 'edit', 'text'],
+    emoji: '📄',
+    color: '#3b82f6',
+    onClick: open('resume'),
+  },
+  {
+    label: 'Regex',
+    description: 'Pattern Generator',
+    tags: [
+      'editor',
+      'edit',
+      'text',
+      'regular-expression',
+      'regexp',
+      'create',
+      'maker',
+      'builder',
+    ],
+    emoji: '🔍',
+    color: '#3b82f6',
+    onClick: open('regex'),
+  },
+  {
+    label: 'Redact',
+    description: 'PDF Redactor',
+    tags: ['editor', 'edit', 'text', 'document', 'adobe', 'acrobat'],
+    emoji: '🖋️',
+    color: '#3b82f6',
+    onClick: open('redact'),
+  },
+  {
+    label: 'Slides',
+    description: 'Pitch Deck',
+    tags: [
+      'editor',
+      'edit',
+      'text',
+      'presentation',
+      'powerpoint',
+      'google-slides',
+    ],
+    emoji: '📽️',
+    color: '#3b82f6',
+    onClick: open('slides'),
+  },
+];

@@ -1,0 +1,56 @@
+import { Tool } from '@hieudoanm.github.io/components/pages/start/cards/ToolCard';
+
+export const TOOL_SECTION_LABELS: Record<string, string> = {
+  developer: 'Developer',
+  utilities: 'Utilities',
+  converter: 'Converter',
+  financial: 'Financial',
+  casino: 'Casino',
+  clocks: 'Clocks',
+  format: 'Format',
+  editors: 'Editors',
+  education: 'Education',
+  eyes: 'Eyes',
+  games: 'Games',
+  memory: 'Memory',
+  ai: 'AI',
+  'image-edit': 'Image Edit',
+  'image-convert': 'Image Convert',
+  'image-convert-plus': 'Image Convert+',
+  'image-convert-pro': 'Image Convert Pro',
+  'image-effect': 'Image Effect',
+  'image-create': 'Image Create',
+  'image-scan': 'Image Scan',
+  visualization: 'Visualization',
+  'write-article': 'Write Article',
+  'write-business': 'Write Business',
+  'write-content': 'Write Content',
+  'write-edit': 'Write Edit',
+  'write-misc': 'Write Misc',
+  'write-real-estate': 'Write Real Estate',
+  'write-social': 'Write Social',
+  'video-convert': 'Video Convert',
+  'video-convert-audio': 'Video Convert Audio',
+  'video-convert-misc': 'Video Convert Misc',
+  'video-edit': 'Video Edit',
+  'video-download': 'Video Download',
+  'video-audio': 'Video Audio',
+  'data-csv': 'Data CSV',
+  'data-excel': 'Data Excel',
+  'data-utility': 'Data Utility',
+  'data-xml-json': 'Data XML/JSON',
+  'pdf-convert': 'PDF Convert',
+  'pdf-create': 'PDF Create',
+  'pdf-ebook': 'PDF Ebook',
+  'pdf-edit': 'PDF Edit',
+  'pdf-extract': 'PDF Extract',
+  'pdf-misc': 'PDF Misc',
+};
+
+export const getToolSectionDefs = (
+  toolSections: Record<string, Tool[]>
+): { label: string; items: Tool[] }[] =>
+  Object.entries(TOOL_SECTION_LABELS).map(([key, label]) => ({
+    label,
+    items: toolSections[key] ?? [],
+  }));

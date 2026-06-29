@@ -1,0 +1,29 @@
+import { Tool } from '@hieudoanm.github.io/components/pages/start/cards/ToolCard';
+import { ModalId } from '../types';
+
+export const make = (open: (id: ModalId) => () => void): Tool[] => [
+  {
+    label: 'PI',
+    description: 'Memorization',
+    tags: ['memory', 'brain', 'cognitive', 'game'],
+    emoji: 'π',
+    color: '#f59e0b',
+    onClick: open('pi'),
+  },
+  {
+    label: 'Quizify',
+    description: 'Quiz',
+    tags: ['memory', 'brain', 'cognitive', 'game'],
+    emoji: '❓',
+    color: '#f59e0b',
+    onClick: open('quizify'),
+  },
+  {
+    label: 'Recall',
+    description: 'Memorization',
+    tags: ['memory', 'brain', 'cognitive', 'game'],
+    emoji: '🔣',
+    color: '#f59e0b',
+    onClick: open('recall'),
+  },
+];
