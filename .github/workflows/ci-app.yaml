@@ -10,9 +10,9 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/mobile/expo.dev/**'
-      - 'packages/app/web/nextjs.org/**'
-      - 'packages/app/web/solidjs.com/**'
+      - 'packages/app/hieudoanm/mobile/expo.dev/**'
+      - 'packages/app/hieudoanm/web/nextjs.org/**'
+      - 'packages/app/hieudoanm/web/solidjs.com/**'
       - '.github/workflows/ci-app.yaml'
 
 permissions:
@@ -106,7 +106,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest]
-        app: [mobile/expo.dev, web/nextjs.org]
+        app: [hieudoanm/mobile/expo.dev, hieudoanm/web/nextjs.org]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout
@@ -135,15 +135,15 @@ jobs:
       - name: Build Workspace Dependencies
         run: pnpm run build --filter=@api/ts --filter=@chess/ts --filter=@lodash/ts --filter=@lodashx/ts --filter=@frontend/native --filter=@frontend/react
       - name: Build App
-        working-directory: packages/app/${{ matrix.app }}
+        working-directory: packages/app/hieudoanm/${{ matrix.app }}
         run: |
-          if [ "${{ matrix.app }}" = "mobile/expo.dev" ] && [ ! -d dist ]; then
+          if [ "${{ matrix.app }}" = "hieudoanm/mobile/expo.dev" ] && [ ! -d dist ]; then
             pnpm run build
-          elif [ "${{ matrix.app }}" = "web/nextjs.org" ] && [ ! -d out ]; then
+          elif [ "${{ matrix.app }}" = "hieudoanm/web/nextjs.org" ] && [ ! -d out ]; then
             EXPORT=true pnpm run build
           fi
       - name: Build Tauri Artifact
-        working-directory: packages/app/${{ matrix.app }}
+        working-directory: packages/app/hieudoanm/${{ matrix.app }}
         run: pnpm exec tauri build --ci --config '{"build":{"beforeBuildCommand":""}}'
       - name: Sanitize artifact name
         shell: bash
@@ -152,7 +152,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: app_tauri_${{ env.app_safe }}_${{ matrix.os }}
-          path: packages/app/${{ matrix.app }}/src-tauri/target/release/bundle/
+          path: packages/app/hieudoanm/${{ matrix.app }}/src-tauri/target/release/bundle/
 
   publish:
     name: Publish to GitHub Release
