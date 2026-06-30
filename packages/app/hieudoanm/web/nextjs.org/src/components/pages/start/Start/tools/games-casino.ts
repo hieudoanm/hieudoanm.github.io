@@ -45,6 +45,14 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     onClick: open('poker'),
   },
   {
+    label: 'Dice Game',
+    description: 'Over/Under 7',
+    tags: ['games-casino', 'gambling', 'dice', 'craps'],
+    emoji: '🎲',
+    color: '#f59e0b',
+    onClick: open('dice-game'),
+  },
+  {
     label: 'Slot Machine',
     description: '3 reels',
     tags: ['games-casino', 'gambling', 'slots'],

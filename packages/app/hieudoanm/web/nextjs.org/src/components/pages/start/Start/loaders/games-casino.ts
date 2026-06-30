@@ -15,6 +15,11 @@ const loadPoker = () =>
     (m) => ({ default: m.PokerModal })
   );
 
+const loadDiceGame = () =>
+  import('@hieudoanm.github.io/components/pages/start/modals/games-casino/DiceGameModal').then(
+    (m) => ({ default: m.DiceGameModal })
+  );
+
 const loadSlotMachine = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/games-casino/SlotMachineModal').then(
     (m) => ({ default: m.SlotMachineModal })
@@ -25,6 +30,7 @@ export const loaders: Record<
   () => Promise<{ default: ComponentType<{ onClose: () => void }> }>
 > = {
   blackjack: loadBlackjack,
+  'dice-game': loadDiceGame,
   poker: loadPoker,
   'slot-machine': loadSlotMachine,
   'tai-baccarat': loadBaccarat,

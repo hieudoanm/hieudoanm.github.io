@@ -41,6 +41,7 @@ export const MODAL_IDS = [
   'csv-to-xml',
   'data',
   'days-count',
+  'dice-game',
   'dino-run',
   'doi',
   'elo',
