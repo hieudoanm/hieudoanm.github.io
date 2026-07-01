@@ -13,7 +13,7 @@ on:
       - 'packages/app/hieudoanm/mobile/expo.dev/**'
       - 'packages/app/hieudoanm/web/nextjs.org/**'
       - 'packages/app/hieudoanm/web/solidjs.com/**'
-      - '.github/workflows/ci-app.yaml'
+      - '.github/workflows/ci-app-hieudoanm.yaml'
 
 permissions:
   contents: write

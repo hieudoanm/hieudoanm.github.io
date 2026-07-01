@@ -1,0 +1,11 @@
+@import 'tailwindcss';
+
+@plugin 'daisyui' {
+  themes:
+    dim --default,
+    light;
+}
+
+:root {
+  --editor-font: 'JetBrains Mono', 'Fira Code', monospace;
+}

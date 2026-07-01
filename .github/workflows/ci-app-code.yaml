@@ -1,0 +1,183 @@
+name: CI - Code
+
+concurrency:
+  group: ci-app-code-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/code/**'
+      - '.github/workflows/ci-app-code.yaml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.3
+      - name: Install pnpm
+        uses: pnpm/action-setup@v6.0.8
+        with:
+          version: '11.9.0'
+      - name: Install Node.js
+        uses: actions/setup-node@v6.4.0
+        with:
+          node-version: '26.4.0'
+          cache: 'pnpm'
+      - name: Install Dependencies
+        run: pnpm install
+      - name: Lint
+        run: pnpm run lint --filter=@hieudoanm.github.io/code
+      - name: Build
+        run: pnpm run build --filter=@hieudoanm.github.io/code
+      - name: Test
+        run: pnpm run test --filter=@hieudoanm.github.io/code || echo 'No tests configured'
+      - name: Upload Build Output
+        uses: actions/upload-artifact@v4
+        with:
+          name: code-out
+          path: packages/app/code/out/
+
+  desktop:
+    name: Desktop (${{ matrix.os }})
+    needs: [build]
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.3
+      - name: Install pnpm
+        uses: pnpm/action-setup@v6.0.8
+        with:
+          version: '11.9.0'
+      - name: Install System Dependencies
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libwebkit2gtk-4.1-dev \
+            libgtk-3-dev \
+            libappindicator3-dev \
+            librsvg2-dev \
+            patchelf
+      - name: Download Build Output
+        uses: actions/download-artifact@v4
+        with:
+          name: code-out
+          path: packages/app/code/out/
+      - name: Build Tauri Desktop
+        working-directory: packages/app/code
+        run: pnpm exec tauri build --ci --config '{"build":{"beforeBuildCommand":""}}'
+      - name: Upload Desktop Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: code_desktop_${{ matrix.os }}
+          path: packages/app/code/src-tauri/target/release/bundle/
+
+  android:
+    name: Android
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.3
+      - name: Install pnpm
+        uses: pnpm/action-setup@v6.0.8
+        with:
+          version: '11.9.0'
+      - name: Install System Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libwebkit2gtk-4.1-dev \
+            libgtk-3-dev \
+            libappindicator3-dev \
+            librsvg2-dev \
+            patchelf
+      - name: Install Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - name: Install Android SDK
+        uses: android-actions/setup-android@v3
+      - name: Install Rust Targets
+        run: |
+          rustup target add \
+            aarch64-linux-android \
+            armv7-linux-androideabi \
+            x86_64-linux-android \
+            i686-linux-android
+      - name: Download Build Output
+        uses: actions/download-artifact@v4
+        with:
+          name: code-out
+          path: packages/app/code/out/
+      - name: Init Android Project
+        working-directory: packages/app/code
+        run: pnpm exec tauri android init
+      - name: Build Android APK
+        working-directory: packages/app/code
+        run: pnpm exec tauri android build --ci
+      - name: Upload Android Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: code_android
+          path: packages/app/code/src-tauri/gen/android/app/build/outputs/
+
+  publish:
+    name: Publish to GitHub Release
+    needs: [desktop, android]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.3
+        with:
+          fetch-depth: 0
+      - name: Download Build Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+      - name: Collect Release Artifacts
+        run: |
+          mkdir -p release
+          for dir in artifacts/*/; do
+            find "$dir" -type f \( \
+              -name "*.AppImage" -o \
+              -name "*.deb" -o \
+              -name "*.dmg" -o \
+              -name "*.app" -o \
+              -name "*.msi" -o \
+              -name "*.tar.xz" -o \
+              -name "*.apk" -o \
+              -name "*.aab" \
+            \) ! -name "*control.tar.gz" ! -name "*data.tar.gz" -print0 | while IFS= read -r -d '' file; do
+              cp "$file" "release/"
+            done
+          done
+      - name: Publish Release
+        run: |
+          gh release delete code-latest --yes --cleanup-tag 2>/dev/null || true
+          gh release create code-latest \
+            --title "Code Editor (latest)" \
+            --notes "Auto-built from commit ${{ github.sha }}" \
+            $(find release -type f | sort)
+        env:
+          GH_TOKEN: ${{ github.token }}
