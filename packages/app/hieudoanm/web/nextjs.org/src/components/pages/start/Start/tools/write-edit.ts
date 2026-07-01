@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Write',
     tags: ['edit', 'rewrite', 'writing'],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-complete'),
   },
   {
@@ -15,7 +14,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Write',
     tags: ['edit', 'rewrite', 'writing'],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-grammar'),
   },
   {
@@ -23,7 +21,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Write',
     tags: ['edit', 'rewrite', 'writing'],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-humanizer'),
   },
   {
@@ -31,7 +28,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Write',
     tags: ['edit', 'rewrite', 'writing'],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-improve-text'),
   },
   {
@@ -39,7 +35,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Write',
     tags: ['edit', 'rewrite', 'writing'],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-paraphrase'),
   },
   {
@@ -47,7 +42,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Write',
     tags: ['edit', 'writing'],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-rewrite'),
   },
   {
@@ -55,7 +49,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Write',
     tags: ['edit', 'rewrite', 'writing'],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-shorten'),
   },
   {
@@ -63,7 +56,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Write',
     tags: ['edit', 'rewrite', 'writing'],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-summarize'),
   },
   {
@@ -71,7 +63,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Write',
     tags: ['edit', 'rewrite', 'writing'],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-tone'),
   },
   {
@@ -79,7 +70,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Write',
     tags: ['edit', 'rewrite', 'writing', 'translation', 'language', 'i18n'],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-translate'),
   },
 ];

@@ -20,9 +20,7 @@ describe('ManifestModal', () => {
 
   it('should switch between pwa and extension tabs', () => {
     render(<ManifestModal onClose={jest.fn()} />);
-    const tabs = screen.getAllByRole('tab');
-    expect(tabs).toHaveLength(2);
-    fireEvent.click(tabs[1]);
+    fireEvent.click(screen.getByText('🧩 Extension'));
   });
 
   it('should copy manifest to clipboard', async () => {
@@ -58,8 +56,7 @@ describe('ManifestModal', () => {
     await waitFor(() => {
       expect(screen.getByText('✓ Copied')).toBeInTheDocument();
     });
-    const tabs = screen.getAllByRole('tab');
-    fireEvent.click(tabs[1]);
+    fireEvent.click(screen.getByText('🧩 Extension'));
     expect(screen.queryByText('✓ Copied')).not.toBeInTheDocument();
   });
 });

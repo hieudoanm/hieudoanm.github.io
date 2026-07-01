@@ -18,7 +18,7 @@ exports[`PeriodicTableModal should render 1`] = `
         >
           <div>
             <h2
-              class="text-lg font-black tracking-tight"
+              class="text-lg font-normal tracking-tight"
             >
               Periodic Table
             </h2>
@@ -33,52 +33,52 @@ exports[`PeriodicTableModal should render 1`] = `
           class="mb-4 grid grid-cols-3 gap-2 md:grid-cols-6"
         >
           <button
-            class="btn btn-sm w-full font-semibold text-white shadow-md transition hover:cursor-pointer bg-yellow-900 "
+            class="btn btn-sm w-full font-normal text-white shadow-md transition hover:cursor-pointer bg-yellow-900 "
           >
             Nonmetal
           </button>
           <button
-            class="btn btn-sm w-full font-semibold text-white shadow-md transition hover:cursor-pointer bg-cyan-900 "
+            class="btn btn-sm w-full font-normal text-white shadow-md transition hover:cursor-pointer bg-cyan-900 "
           >
             Noble Gas
           </button>
           <button
-            class="btn btn-sm w-full font-semibold text-white shadow-md transition hover:cursor-pointer bg-red-900 "
+            class="btn btn-sm w-full font-normal text-white shadow-md transition hover:cursor-pointer bg-red-900 "
           >
             Alkali Metal
           </button>
           <button
-            class="btn btn-sm w-full font-semibold text-white shadow-md transition hover:cursor-pointer bg-green-900 "
+            class="btn btn-sm w-full font-normal text-white shadow-md transition hover:cursor-pointer bg-green-900 "
           >
             Alkaline Earth Metal
           </button>
           <button
-            class="btn btn-sm w-full font-semibold text-white shadow-md transition hover:cursor-pointer bg-purple-900 "
+            class="btn btn-sm w-full font-normal text-white shadow-md transition hover:cursor-pointer bg-purple-900 "
           >
             Metalloid
           </button>
           <button
-            class="btn btn-sm w-full font-semibold text-white shadow-md transition hover:cursor-pointer bg-indigo-900 "
+            class="btn btn-sm w-full font-normal text-white shadow-md transition hover:cursor-pointer bg-indigo-900 "
           >
             Halogen
           </button>
           <button
-            class="btn btn-sm w-full font-semibold text-white shadow-md transition hover:cursor-pointer bg-gray-900 "
+            class="btn btn-sm w-full font-normal text-white shadow-md transition hover:cursor-pointer bg-gray-900 "
           >
             Post-transition Metal
           </button>
           <button
-            class="btn btn-sm w-full font-semibold text-white shadow-md transition hover:cursor-pointer bg-blue-900 "
+            class="btn btn-sm w-full font-normal text-white shadow-md transition hover:cursor-pointer bg-blue-900 "
           >
             Transition Metal
           </button>
           <button
-            class="btn btn-sm w-full font-semibold text-white shadow-md transition hover:cursor-pointer bg-orange-900 "
+            class="btn btn-sm w-full font-normal text-white shadow-md transition hover:cursor-pointer bg-orange-900 "
           >
             Lanthanide
           </button>
           <button
-            class="btn btn-sm w-full font-semibold text-white shadow-md transition hover:cursor-pointer bg-pink-900 "
+            class="btn btn-sm w-full font-normal text-white shadow-md transition hover:cursor-pointer bg-pink-900 "
           >
             Actinide
           </button>
@@ -99,7 +99,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 1
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 H
               </span>
@@ -125,7 +125,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 2
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 He
               </span>
@@ -151,7 +151,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 3
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Li
               </span>
@@ -177,7 +177,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 4
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Be
               </span>
@@ -203,7 +203,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 5
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 B
               </span>
@@ -229,7 +229,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 6
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 C
               </span>
@@ -255,7 +255,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 7
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 N
               </span>
@@ -281,7 +281,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 8
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 O
               </span>
@@ -307,7 +307,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 9
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 F
               </span>
@@ -333,7 +333,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 10
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Ne
               </span>
@@ -359,7 +359,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 11
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Na
               </span>
@@ -385,7 +385,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 12
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Mg
               </span>
@@ -411,7 +411,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 13
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Al
               </span>
@@ -437,7 +437,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 14
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Si
               </span>
@@ -463,7 +463,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 15
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 P
               </span>
@@ -489,7 +489,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 16
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 S
               </span>
@@ -515,7 +515,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 17
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Cl
               </span>
@@ -541,7 +541,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 18
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Ar
               </span>
@@ -567,7 +567,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 19
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 K
               </span>
@@ -593,7 +593,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 20
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Ca
               </span>
@@ -619,7 +619,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 21
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Sc
               </span>
@@ -645,7 +645,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 22
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Ti
               </span>
@@ -671,7 +671,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 23
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 V
               </span>
@@ -697,7 +697,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 24
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Cr
               </span>
@@ -723,7 +723,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 25
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Mn
               </span>
@@ -749,7 +749,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 26
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Fe
               </span>
@@ -775,7 +775,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 27
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Co
               </span>
@@ -801,7 +801,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 28
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Ni
               </span>
@@ -827,7 +827,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 29
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Cu
               </span>
@@ -853,7 +853,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 30
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Zn
               </span>
@@ -879,7 +879,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 31
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Ga
               </span>
@@ -905,7 +905,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 32
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Ge
               </span>
@@ -931,7 +931,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 33
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 As
               </span>
@@ -957,7 +957,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 34
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Se
               </span>
@@ -983,7 +983,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 35
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Br
               </span>
@@ -1009,7 +1009,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 36
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Kr
               </span>
@@ -1035,7 +1035,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 37
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Rb
               </span>
@@ -1061,7 +1061,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 38
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Sr
               </span>
@@ -1087,7 +1087,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 39
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Y
               </span>
@@ -1113,7 +1113,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 40
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Zr
               </span>
@@ -1139,7 +1139,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 41
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Nb
               </span>
@@ -1165,7 +1165,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 42
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Mo
               </span>
@@ -1191,7 +1191,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 43
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Tc
               </span>
@@ -1217,7 +1217,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 44
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Ru
               </span>
@@ -1243,7 +1243,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 45
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Rh
               </span>
@@ -1269,7 +1269,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 46
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Pd
               </span>
@@ -1295,7 +1295,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 47
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Ag
               </span>
@@ -1321,7 +1321,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 48
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Cd
               </span>
@@ -1347,7 +1347,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 49
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 In
               </span>
@@ -1373,7 +1373,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 50
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Sn
               </span>
@@ -1399,7 +1399,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 51
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Sb
               </span>
@@ -1425,7 +1425,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 52
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Te
               </span>
@@ -1451,7 +1451,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 53
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 I
               </span>
@@ -1477,7 +1477,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 54
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Xe
               </span>
@@ -1503,7 +1503,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 55
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Cs
               </span>
@@ -1529,7 +1529,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 56
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Ba
               </span>
@@ -1555,7 +1555,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 57
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 La
               </span>
@@ -1581,7 +1581,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 58
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Ce
               </span>
@@ -1607,7 +1607,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 59
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Pr
               </span>
@@ -1633,7 +1633,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 60
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Nd
               </span>
@@ -1659,7 +1659,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 61
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Pm
               </span>
@@ -1685,7 +1685,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 62
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Sm
               </span>
@@ -1711,7 +1711,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 63
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Eu
               </span>
@@ -1737,7 +1737,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 64
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Gd
               </span>
@@ -1763,7 +1763,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 65
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Tb
               </span>
@@ -1789,7 +1789,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 66
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Dy
               </span>
@@ -1815,7 +1815,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 67
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Ho
               </span>
@@ -1841,7 +1841,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 68
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Er
               </span>
@@ -1867,7 +1867,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 69
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Tm
               </span>
@@ -1893,7 +1893,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 70
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Yb
               </span>
@@ -1919,7 +1919,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 71
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Lu
               </span>
@@ -1945,7 +1945,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 72
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Hf
               </span>
@@ -1971,7 +1971,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 73
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Ta
               </span>
@@ -1997,7 +1997,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 74
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 W
               </span>
@@ -2023,7 +2023,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 75
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Re
               </span>
@@ -2049,7 +2049,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 76
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Os
               </span>
@@ -2075,7 +2075,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 77
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Ir
               </span>
@@ -2101,7 +2101,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 78
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Pt
               </span>
@@ -2127,7 +2127,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 79
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Au
               </span>
@@ -2153,7 +2153,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 80
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Hg
               </span>
@@ -2179,7 +2179,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 81
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Tl
               </span>
@@ -2205,7 +2205,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 82
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Pb
               </span>
@@ -2231,7 +2231,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 83
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Bi
               </span>
@@ -2257,7 +2257,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 84
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Po
               </span>
@@ -2283,7 +2283,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 85
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 At
               </span>
@@ -2309,7 +2309,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 86
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Rn
               </span>
@@ -2335,7 +2335,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 87
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Fr
               </span>
@@ -2361,7 +2361,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 88
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Ra
               </span>
@@ -2387,7 +2387,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 89
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Ac
               </span>
@@ -2413,7 +2413,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 90
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Th
               </span>
@@ -2439,7 +2439,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 91
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Pa
               </span>
@@ -2465,7 +2465,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 92
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 U
               </span>
@@ -2491,7 +2491,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 93
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Np
               </span>
@@ -2517,7 +2517,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 94
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Pu
               </span>
@@ -2543,7 +2543,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 95
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Am
               </span>
@@ -2569,7 +2569,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 96
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Cm
               </span>
@@ -2595,7 +2595,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 97
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Bk
               </span>
@@ -2621,7 +2621,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 98
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Cf
               </span>
@@ -2647,7 +2647,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 99
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Es
               </span>
@@ -2673,7 +2673,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 100
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Fm
               </span>
@@ -2699,7 +2699,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 101
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Md
               </span>
@@ -2725,7 +2725,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 102
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 No
               </span>
@@ -2751,7 +2751,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 103
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Lr
               </span>
@@ -2777,7 +2777,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 104
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Rf
               </span>
@@ -2803,7 +2803,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 105
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Db
               </span>
@@ -2829,7 +2829,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 106
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Sg
               </span>
@@ -2855,7 +2855,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 107
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Bh
               </span>
@@ -2881,7 +2881,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 108
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Hs
               </span>
@@ -2907,7 +2907,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 109
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Mt
               </span>
@@ -2933,7 +2933,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 110
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Ds
               </span>
@@ -2959,7 +2959,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 111
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Rg
               </span>
@@ -2985,7 +2985,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 112
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Cn
               </span>
@@ -3011,7 +3011,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 113
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Nh
               </span>
@@ -3037,7 +3037,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 114
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Fl
               </span>
@@ -3063,7 +3063,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 115
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Mc
               </span>
@@ -3089,7 +3089,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 116
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Lv
               </span>
@@ -3115,7 +3115,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 117
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Ts
               </span>
@@ -3141,7 +3141,7 @@ exports[`PeriodicTableModal should render 1`] = `
                 118
               </span>
               <span
-                class="my-1 text-xl font-bold"
+                class="my-1 text-xl font-normal"
               >
                 Og
               </span>
@@ -3171,7 +3171,7 @@ exports[`PeriodicTableModal should render 1`] = `
               1
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               H
             </span>
@@ -3196,7 +3196,7 @@ exports[`PeriodicTableModal should render 1`] = `
               2
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               He
             </span>
@@ -3221,7 +3221,7 @@ exports[`PeriodicTableModal should render 1`] = `
               3
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Li
             </span>
@@ -3246,7 +3246,7 @@ exports[`PeriodicTableModal should render 1`] = `
               4
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Be
             </span>
@@ -3271,7 +3271,7 @@ exports[`PeriodicTableModal should render 1`] = `
               5
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               B
             </span>
@@ -3296,7 +3296,7 @@ exports[`PeriodicTableModal should render 1`] = `
               6
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               C
             </span>
@@ -3321,7 +3321,7 @@ exports[`PeriodicTableModal should render 1`] = `
               7
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               N
             </span>
@@ -3346,7 +3346,7 @@ exports[`PeriodicTableModal should render 1`] = `
               8
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               O
             </span>
@@ -3371,7 +3371,7 @@ exports[`PeriodicTableModal should render 1`] = `
               9
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               F
             </span>
@@ -3396,7 +3396,7 @@ exports[`PeriodicTableModal should render 1`] = `
               10
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Ne
             </span>
@@ -3421,7 +3421,7 @@ exports[`PeriodicTableModal should render 1`] = `
               11
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Na
             </span>
@@ -3446,7 +3446,7 @@ exports[`PeriodicTableModal should render 1`] = `
               12
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Mg
             </span>
@@ -3471,7 +3471,7 @@ exports[`PeriodicTableModal should render 1`] = `
               13
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Al
             </span>
@@ -3496,7 +3496,7 @@ exports[`PeriodicTableModal should render 1`] = `
               14
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Si
             </span>
@@ -3521,7 +3521,7 @@ exports[`PeriodicTableModal should render 1`] = `
               15
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               P
             </span>
@@ -3546,7 +3546,7 @@ exports[`PeriodicTableModal should render 1`] = `
               16
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               S
             </span>
@@ -3571,7 +3571,7 @@ exports[`PeriodicTableModal should render 1`] = `
               17
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Cl
             </span>
@@ -3596,7 +3596,7 @@ exports[`PeriodicTableModal should render 1`] = `
               18
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Ar
             </span>
@@ -3621,7 +3621,7 @@ exports[`PeriodicTableModal should render 1`] = `
               19
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               K
             </span>
@@ -3646,7 +3646,7 @@ exports[`PeriodicTableModal should render 1`] = `
               20
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Ca
             </span>
@@ -3671,7 +3671,7 @@ exports[`PeriodicTableModal should render 1`] = `
               21
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Sc
             </span>
@@ -3696,7 +3696,7 @@ exports[`PeriodicTableModal should render 1`] = `
               22
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Ti
             </span>
@@ -3721,7 +3721,7 @@ exports[`PeriodicTableModal should render 1`] = `
               23
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               V
             </span>
@@ -3746,7 +3746,7 @@ exports[`PeriodicTableModal should render 1`] = `
               24
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Cr
             </span>
@@ -3771,7 +3771,7 @@ exports[`PeriodicTableModal should render 1`] = `
               25
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Mn
             </span>
@@ -3796,7 +3796,7 @@ exports[`PeriodicTableModal should render 1`] = `
               26
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Fe
             </span>
@@ -3821,7 +3821,7 @@ exports[`PeriodicTableModal should render 1`] = `
               27
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Co
             </span>
@@ -3846,7 +3846,7 @@ exports[`PeriodicTableModal should render 1`] = `
               28
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Ni
             </span>
@@ -3871,7 +3871,7 @@ exports[`PeriodicTableModal should render 1`] = `
               29
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Cu
             </span>
@@ -3896,7 +3896,7 @@ exports[`PeriodicTableModal should render 1`] = `
               30
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Zn
             </span>
@@ -3921,7 +3921,7 @@ exports[`PeriodicTableModal should render 1`] = `
               31
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Ga
             </span>
@@ -3946,7 +3946,7 @@ exports[`PeriodicTableModal should render 1`] = `
               32
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Ge
             </span>
@@ -3971,7 +3971,7 @@ exports[`PeriodicTableModal should render 1`] = `
               33
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               As
             </span>
@@ -3996,7 +3996,7 @@ exports[`PeriodicTableModal should render 1`] = `
               34
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Se
             </span>
@@ -4021,7 +4021,7 @@ exports[`PeriodicTableModal should render 1`] = `
               35
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Br
             </span>
@@ -4046,7 +4046,7 @@ exports[`PeriodicTableModal should render 1`] = `
               36
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Kr
             </span>
@@ -4071,7 +4071,7 @@ exports[`PeriodicTableModal should render 1`] = `
               37
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Rb
             </span>
@@ -4096,7 +4096,7 @@ exports[`PeriodicTableModal should render 1`] = `
               38
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Sr
             </span>
@@ -4121,7 +4121,7 @@ exports[`PeriodicTableModal should render 1`] = `
               39
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Y
             </span>
@@ -4146,7 +4146,7 @@ exports[`PeriodicTableModal should render 1`] = `
               40
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Zr
             </span>
@@ -4171,7 +4171,7 @@ exports[`PeriodicTableModal should render 1`] = `
               41
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Nb
             </span>
@@ -4196,7 +4196,7 @@ exports[`PeriodicTableModal should render 1`] = `
               42
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Mo
             </span>
@@ -4221,7 +4221,7 @@ exports[`PeriodicTableModal should render 1`] = `
               43
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Tc
             </span>
@@ -4246,7 +4246,7 @@ exports[`PeriodicTableModal should render 1`] = `
               44
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Ru
             </span>
@@ -4271,7 +4271,7 @@ exports[`PeriodicTableModal should render 1`] = `
               45
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Rh
             </span>
@@ -4296,7 +4296,7 @@ exports[`PeriodicTableModal should render 1`] = `
               46
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Pd
             </span>
@@ -4321,7 +4321,7 @@ exports[`PeriodicTableModal should render 1`] = `
               47
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Ag
             </span>
@@ -4346,7 +4346,7 @@ exports[`PeriodicTableModal should render 1`] = `
               48
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Cd
             </span>
@@ -4371,7 +4371,7 @@ exports[`PeriodicTableModal should render 1`] = `
               49
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               In
             </span>
@@ -4396,7 +4396,7 @@ exports[`PeriodicTableModal should render 1`] = `
               50
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Sn
             </span>
@@ -4421,7 +4421,7 @@ exports[`PeriodicTableModal should render 1`] = `
               51
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Sb
             </span>
@@ -4446,7 +4446,7 @@ exports[`PeriodicTableModal should render 1`] = `
               52
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Te
             </span>
@@ -4471,7 +4471,7 @@ exports[`PeriodicTableModal should render 1`] = `
               53
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               I
             </span>
@@ -4496,7 +4496,7 @@ exports[`PeriodicTableModal should render 1`] = `
               54
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Xe
             </span>
@@ -4521,7 +4521,7 @@ exports[`PeriodicTableModal should render 1`] = `
               55
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Cs
             </span>
@@ -4546,7 +4546,7 @@ exports[`PeriodicTableModal should render 1`] = `
               56
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Ba
             </span>
@@ -4571,7 +4571,7 @@ exports[`PeriodicTableModal should render 1`] = `
               57
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               La
             </span>
@@ -4596,7 +4596,7 @@ exports[`PeriodicTableModal should render 1`] = `
               58
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Ce
             </span>
@@ -4621,7 +4621,7 @@ exports[`PeriodicTableModal should render 1`] = `
               59
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Pr
             </span>
@@ -4646,7 +4646,7 @@ exports[`PeriodicTableModal should render 1`] = `
               60
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Nd
             </span>
@@ -4671,7 +4671,7 @@ exports[`PeriodicTableModal should render 1`] = `
               61
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Pm
             </span>
@@ -4696,7 +4696,7 @@ exports[`PeriodicTableModal should render 1`] = `
               62
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Sm
             </span>
@@ -4721,7 +4721,7 @@ exports[`PeriodicTableModal should render 1`] = `
               63
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Eu
             </span>
@@ -4746,7 +4746,7 @@ exports[`PeriodicTableModal should render 1`] = `
               64
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Gd
             </span>
@@ -4771,7 +4771,7 @@ exports[`PeriodicTableModal should render 1`] = `
               65
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Tb
             </span>
@@ -4796,7 +4796,7 @@ exports[`PeriodicTableModal should render 1`] = `
               66
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Dy
             </span>
@@ -4821,7 +4821,7 @@ exports[`PeriodicTableModal should render 1`] = `
               67
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Ho
             </span>
@@ -4846,7 +4846,7 @@ exports[`PeriodicTableModal should render 1`] = `
               68
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Er
             </span>
@@ -4871,7 +4871,7 @@ exports[`PeriodicTableModal should render 1`] = `
               69
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Tm
             </span>
@@ -4896,7 +4896,7 @@ exports[`PeriodicTableModal should render 1`] = `
               70
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Yb
             </span>
@@ -4921,7 +4921,7 @@ exports[`PeriodicTableModal should render 1`] = `
               71
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Lu
             </span>
@@ -4946,7 +4946,7 @@ exports[`PeriodicTableModal should render 1`] = `
               72
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Hf
             </span>
@@ -4971,7 +4971,7 @@ exports[`PeriodicTableModal should render 1`] = `
               73
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Ta
             </span>
@@ -4996,7 +4996,7 @@ exports[`PeriodicTableModal should render 1`] = `
               74
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               W
             </span>
@@ -5021,7 +5021,7 @@ exports[`PeriodicTableModal should render 1`] = `
               75
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Re
             </span>
@@ -5046,7 +5046,7 @@ exports[`PeriodicTableModal should render 1`] = `
               76
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Os
             </span>
@@ -5071,7 +5071,7 @@ exports[`PeriodicTableModal should render 1`] = `
               77
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Ir
             </span>
@@ -5096,7 +5096,7 @@ exports[`PeriodicTableModal should render 1`] = `
               78
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Pt
             </span>
@@ -5121,7 +5121,7 @@ exports[`PeriodicTableModal should render 1`] = `
               79
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Au
             </span>
@@ -5146,7 +5146,7 @@ exports[`PeriodicTableModal should render 1`] = `
               80
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Hg
             </span>
@@ -5171,7 +5171,7 @@ exports[`PeriodicTableModal should render 1`] = `
               81
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Tl
             </span>
@@ -5196,7 +5196,7 @@ exports[`PeriodicTableModal should render 1`] = `
               82
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Pb
             </span>
@@ -5221,7 +5221,7 @@ exports[`PeriodicTableModal should render 1`] = `
               83
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Bi
             </span>
@@ -5246,7 +5246,7 @@ exports[`PeriodicTableModal should render 1`] = `
               84
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Po
             </span>
@@ -5271,7 +5271,7 @@ exports[`PeriodicTableModal should render 1`] = `
               85
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               At
             </span>
@@ -5296,7 +5296,7 @@ exports[`PeriodicTableModal should render 1`] = `
               86
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Rn
             </span>
@@ -5321,7 +5321,7 @@ exports[`PeriodicTableModal should render 1`] = `
               87
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Fr
             </span>
@@ -5346,7 +5346,7 @@ exports[`PeriodicTableModal should render 1`] = `
               88
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Ra
             </span>
@@ -5371,7 +5371,7 @@ exports[`PeriodicTableModal should render 1`] = `
               89
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Ac
             </span>
@@ -5396,7 +5396,7 @@ exports[`PeriodicTableModal should render 1`] = `
               90
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Th
             </span>
@@ -5421,7 +5421,7 @@ exports[`PeriodicTableModal should render 1`] = `
               91
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Pa
             </span>
@@ -5446,7 +5446,7 @@ exports[`PeriodicTableModal should render 1`] = `
               92
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               U
             </span>
@@ -5471,7 +5471,7 @@ exports[`PeriodicTableModal should render 1`] = `
               93
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Np
             </span>
@@ -5496,7 +5496,7 @@ exports[`PeriodicTableModal should render 1`] = `
               94
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Pu
             </span>
@@ -5521,7 +5521,7 @@ exports[`PeriodicTableModal should render 1`] = `
               95
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Am
             </span>
@@ -5546,7 +5546,7 @@ exports[`PeriodicTableModal should render 1`] = `
               96
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Cm
             </span>
@@ -5571,7 +5571,7 @@ exports[`PeriodicTableModal should render 1`] = `
               97
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Bk
             </span>
@@ -5596,7 +5596,7 @@ exports[`PeriodicTableModal should render 1`] = `
               98
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Cf
             </span>
@@ -5621,7 +5621,7 @@ exports[`PeriodicTableModal should render 1`] = `
               99
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Es
             </span>
@@ -5646,7 +5646,7 @@ exports[`PeriodicTableModal should render 1`] = `
               100
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Fm
             </span>
@@ -5671,7 +5671,7 @@ exports[`PeriodicTableModal should render 1`] = `
               101
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Md
             </span>
@@ -5696,7 +5696,7 @@ exports[`PeriodicTableModal should render 1`] = `
               102
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               No
             </span>
@@ -5721,7 +5721,7 @@ exports[`PeriodicTableModal should render 1`] = `
               103
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Lr
             </span>
@@ -5746,7 +5746,7 @@ exports[`PeriodicTableModal should render 1`] = `
               104
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Rf
             </span>
@@ -5771,7 +5771,7 @@ exports[`PeriodicTableModal should render 1`] = `
               105
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Db
             </span>
@@ -5796,7 +5796,7 @@ exports[`PeriodicTableModal should render 1`] = `
               106
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Sg
             </span>
@@ -5821,7 +5821,7 @@ exports[`PeriodicTableModal should render 1`] = `
               107
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Bh
             </span>
@@ -5846,7 +5846,7 @@ exports[`PeriodicTableModal should render 1`] = `
               108
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Hs
             </span>
@@ -5871,7 +5871,7 @@ exports[`PeriodicTableModal should render 1`] = `
               109
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Mt
             </span>
@@ -5896,7 +5896,7 @@ exports[`PeriodicTableModal should render 1`] = `
               110
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Ds
             </span>
@@ -5921,7 +5921,7 @@ exports[`PeriodicTableModal should render 1`] = `
               111
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Rg
             </span>
@@ -5946,7 +5946,7 @@ exports[`PeriodicTableModal should render 1`] = `
               112
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Cn
             </span>
@@ -5971,7 +5971,7 @@ exports[`PeriodicTableModal should render 1`] = `
               113
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Nh
             </span>
@@ -5996,7 +5996,7 @@ exports[`PeriodicTableModal should render 1`] = `
               114
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Fl
             </span>
@@ -6021,7 +6021,7 @@ exports[`PeriodicTableModal should render 1`] = `
               115
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Mc
             </span>
@@ -6046,7 +6046,7 @@ exports[`PeriodicTableModal should render 1`] = `
               116
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Lv
             </span>
@@ -6071,7 +6071,7 @@ exports[`PeriodicTableModal should render 1`] = `
               117
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Ts
             </span>
@@ -6096,7 +6096,7 @@ exports[`PeriodicTableModal should render 1`] = `
               118
             </span>
             <span
-              class="my-1 text-xl font-bold"
+              class="my-1 text-xl font-normal"
             >
               Og
             </span>

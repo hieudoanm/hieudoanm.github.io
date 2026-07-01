@@ -118,7 +118,7 @@ describe('PokerModal', () => {
     selectCards(container);
     await runCalc(container);
     const equitySpan = container.querySelector(
-      '.space-y-2 .font-bold'
+      '.space-y-2 .font-normal'
     ) as HTMLElement;
     expect(equitySpan?.textContent).toContain('%');
     expect(equitySpan?.style.color).toBe('rgb(34, 197, 94)');
@@ -130,7 +130,7 @@ describe('PokerModal', () => {
     selectCards(container);
     await runCalc(container);
     const equitySpan = container.querySelector(
-      '.space-y-2 .font-bold'
+      '.space-y-2 .font-normal'
     ) as HTMLElement;
     expect(equitySpan?.textContent).toContain('%');
     expect(equitySpan?.style.color).toBe('rgb(245, 158, 11)');
@@ -142,7 +142,7 @@ describe('PokerModal', () => {
     selectCards(container);
     await runCalc(container);
     const equitySpan = container.querySelector(
-      '.space-y-2 .font-bold'
+      '.space-y-2 .font-normal'
     ) as HTMLElement;
     expect(equitySpan?.textContent).toContain('%');
     expect(equitySpan?.style.color).toBe('rgb(239, 68, 68)');

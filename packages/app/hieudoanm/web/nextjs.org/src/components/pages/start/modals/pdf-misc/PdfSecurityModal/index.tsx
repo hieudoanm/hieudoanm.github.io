@@ -73,7 +73,7 @@ export const PdfSecurityModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           onChange={(e) => setSubject(e.target.value)}
         />
 
-        {error && <p className="text-error text-xs">{error}</p>}
+        {error && <p className="text-base-content/60 text-xs">{error}</p>}
 
         <button
           className="btn btn-primary btn-sm"

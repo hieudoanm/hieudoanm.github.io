@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Brightness/Contrast',
     tags: ['image', 'effect', 'filter', 'photo'],
     emoji: '⚙️',
-    color: '#3b82f6',
     onClick: open('image-adjust'),
   },
   {
@@ -27,7 +26,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'gif',
     ],
     emoji: '🌫️',
-    color: '#06b6d4',
     onClick: open('image-blur-background'),
   },
   {
@@ -35,7 +33,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: '',
     tags: [],
     emoji: '🔧',
-    color: '#3b82f6',
     onClick: open('image-pixelate-face'),
   },
   {
@@ -43,7 +40,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Grid-based morph',
     tags: ['image', 'effect', 'morph', 'warp', 'animation'],
     emoji: '🫠',
-    color: '#3b82f6',
     onClick: open('image-morphing'),
   },
   {
@@ -51,7 +47,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Apply Filters',
     tags: ['image', 'effect'],
     emoji: '📸',
-    color: '#3b82f6',
     onClick: open('image-photo-filters'),
   },
   {
@@ -59,7 +54,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Add Shadow',
     tags: ['image', 'effect', 'filter', 'photo'],
     emoji: '👤',
-    color: '#3b82f6',
     onClick: open('image-shadow'),
   },
   {
@@ -67,7 +61,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Combine',
     tags: ['image', 'effect', 'filter', 'photo'],
     emoji: '🔗',
-    color: '#06b6d4',
     onClick: open('image-combiner-side-by-side'),
   },
   {
@@ -75,7 +68,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Combine',
     tags: ['image', 'effect', 'filter', 'photo'],
     emoji: '🔗',
-    color: '#06b6d4',
     onClick: open('image-combiner-stacked'),
   },
   {
@@ -83,7 +75,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Add Text',
     tags: ['image', 'effect', 'filter', 'photo'],
     emoji: '✏️',
-    color: '#3b82f6',
     onClick: open('image-text'),
   },
   {
@@ -91,7 +82,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Make Transparent',
     tags: ['image', 'effect', 'filter', 'photo'],
     emoji: '✨',
-    color: '#3b82f6',
     onClick: open('image-transparent-bg'),
   },
   {
@@ -99,7 +89,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Vignette Effect',
     tags: ['image', 'filter', 'photo'],
     emoji: '🌑',
-    color: '#3b82f6',
     onClick: open('image-vignette'),
   },
   {
@@ -107,7 +96,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Add Watermark',
     tags: ['image', 'effect', 'filter', 'photo', 'watermark-removal', 'logo'],
     emoji: '💧',
-    color: '#3b82f6',
     onClick: open('image-watermark'),
   },
 ];

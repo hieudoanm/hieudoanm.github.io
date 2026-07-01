@@ -28,10 +28,10 @@ export const SearchBar: FC<{ query: string; onChange: (v: string) => void }> =
           onChange={(e) => onChange(e.target.value)}
           onKeyDown={onKeyDown}
           placeholder="Search or filter…"
-          className="input input-bordered join-item w-full"
+          className="input input-bordered join-item focus:border-primary focus:outline-primary w-full"
         />
         <button
-          className="btn join-item btn-neutral"
+          className="btn join-item btn-primary"
           onClick={googleSearch}
           aria-label="Search with Google">
           🔍

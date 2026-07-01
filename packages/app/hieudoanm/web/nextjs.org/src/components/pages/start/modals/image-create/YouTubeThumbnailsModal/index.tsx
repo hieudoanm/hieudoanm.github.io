@@ -140,7 +140,7 @@ export const YouTubeThumbnailsModal: FC<{ onClose: () => void }> = ({
                     }}
                   />
                   <div className="absolute right-0 bottom-0 left-0 bg-black/60 px-2 py-1">
-                    <p className="text-[10px] font-bold text-white">
+                    <p className="text-[10px] font-normal text-white">
                       {q.label}
                     </p>
                     <p className="text-[9px] text-white/50">{q.resolution}</p>

@@ -14,7 +14,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'citation',
     ],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('doi'),
   },
   {
@@ -22,7 +21,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Dictionary',
     tags: ['education', 'learning', 'study', 'academic'],
     emoji: '📚',
-    color: '#3b82f6',
     onClick: open('english'),
   },
   {
@@ -30,7 +28,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Words',
     tags: ['education', 'learning', 'study', 'academic'],
     emoji: '📓',
-    color: '#fefefe',
     onClick: open('flashcards'),
   },
   {
@@ -38,7 +35,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Elements',
     tags: ['education', 'learning', 'study', 'academic'],
     emoji: '📊',
-    color: '#f59e0b',
     onClick: open('periodic-table'),
   },
   {
@@ -46,7 +42,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Training',
     tags: ['education', 'learning', 'study', 'academic'],
     emoji: '🎹',
-    color: '#8b5cf6',
     onClick: open('pitch'),
   },
   {
@@ -54,7 +49,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Detection',
     tags: ['education', 'learning', 'study', 'academic'],
     emoji: '🤟',
-    color: '#3b82f6',
     onClick: open('sign'),
   },
 ];

@@ -85,9 +85,7 @@ describe('JSONSchemaModal', () => {
 
   it('should switch between json and yaml input modes', () => {
     render(<JSONSchemaModal onClose={jest.fn()} />);
-    const tabs = screen.getAllByRole('tab');
-    const yamlTab = tabs.find((t) => t.textContent === 'YAML');
-    if (yamlTab) fireEvent.click(yamlTab);
+    fireEvent.click(screen.getByText('YAML'));
   });
 
   it('should switch to schema panel', () => {
@@ -127,9 +125,7 @@ describe('JSONSchemaModal', () => {
 
   it('should minify be disabled in yaml mode', () => {
     render(<JSONSchemaModal onClose={jest.fn()} />);
-    const tabs = screen.getAllByRole('tab');
-    const yamlTab = tabs.find((t) => t.textContent === 'YAML');
-    if (yamlTab) fireEvent.click(yamlTab);
+    fireEvent.click(screen.getByText('YAML'));
     expect(screen.getByText('Minify')).toBeDisabled();
   });
 });

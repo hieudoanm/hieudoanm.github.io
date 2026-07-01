@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Convert',
     tags: ['image', 'convert'],
     emoji: '🔄',
-    color: '#06b6d4',
     onClick: open('image-convert-heic-to-avif'),
   },
   {
@@ -15,7 +14,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Convert',
     tags: ['image', 'convert'],
     emoji: '🔄',
-    color: '#06b6d4',
     onClick: open('image-convert-heic-to-jpg'),
   },
   {
@@ -23,7 +21,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Convert',
     tags: ['image', 'convert'],
     emoji: '🔄',
-    color: '#06b6d4',
     onClick: open('image-convert-heic-to-png'),
   },
 ];

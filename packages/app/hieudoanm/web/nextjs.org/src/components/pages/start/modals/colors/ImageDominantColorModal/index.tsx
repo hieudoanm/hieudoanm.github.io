@@ -45,7 +45,7 @@ export const ImageDominantColorModal: FC<{ onClose: () => void }> = ({
         {dominantResult && (
           <div className="bg-base-200 space-y-2 rounded p-4 text-sm">
             <div className="flex items-center gap-2">
-              <span className="font-bold">Dominant:</span>
+              <span className="font-normal">Dominant:</span>
               <span
                 className="h-6 w-6 rounded border"
                 style={{ backgroundColor: dominantResult }}
@@ -53,7 +53,7 @@ export const ImageDominantColorModal: FC<{ onClose: () => void }> = ({
               <span>{dominantResult}</span>
             </div>
             <div>
-              <span className="font-bold">Palette:</span>
+              <span className="font-normal">Palette:</span>
             </div>
             <div className="flex flex-wrap gap-1">
               {palette.map((c, i) => (

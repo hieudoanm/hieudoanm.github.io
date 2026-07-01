@@ -21,7 +21,7 @@ export const LeftSidebar: FC = () => {
           <button
             key={id}
             onClick={() => setTab(id)}
-            className={`flex-1 py-3 text-[10px] font-bold tracking-widest uppercase transition-all duration-200 ${
+            className={`flex-1 py-3 text-[10px] tracking-widest uppercase transition-all duration-200 ${
               tab === id
                 ? 'border-primary text-primary border-b-2'
                 : 'text-base-content/40 hover:text-base-content/70'

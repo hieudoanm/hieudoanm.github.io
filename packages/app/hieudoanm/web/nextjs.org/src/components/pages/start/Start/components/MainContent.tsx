@@ -369,12 +369,12 @@ export const MainContent: FC<MainContentProps> = memo(
         <p className="text-base-content/30 mb-2 font-mono text-xs tracking-widest uppercase">
           {today}
         </p>
-        <h1 className="mb-6 text-3xl font-black tracking-tight">Start Page</h1>
+        <h1 className="mb-6 text-3xl font-thin tracking-tight">Start Page</h1>
         <div className="mb-6 w-full max-w-3xl">
           <SearchBar query={query} onChange={onQueryChange} />
         </div>
         <div className="mb-8 w-full max-w-3xl">
-          <div className="tabs tabs-boxed w-full justify-center">
+          <div className="border-base-300 flex border-b">
             {TABS.map(({ id, label, emoji }) => {
               const count =
                 id === 'bookmarks'
@@ -385,7 +385,11 @@ export const MainContent: FC<MainContentProps> = memo(
               return (
                 <button
                   key={id}
-                  className={`tab flex-1 gap-1.5 ${tab === id ? 'tab-active' : ''}`}
+                  className={`flex flex-1 items-center justify-center gap-1.5 py-3 text-[10px] tracking-widest uppercase transition-all duration-200 ${
+                    tab === id
+                      ? 'border-primary text-primary border-b-2'
+                      : 'text-base-content/40 hover:text-base-content/70'
+                  }`}
                   onClick={() => setTab(id)}>
                   <span>{emoji}</span>
                   <span>{label}</span>
@@ -396,14 +400,22 @@ export const MainContent: FC<MainContentProps> = memo(
           </div>
         </div>
 
-        <div className="mb-4 flex w-full max-w-3xl justify-center gap-2">
+        <div className="mb-4 flex w-full max-w-3xl justify-center gap-4">
           <button
-            className={`tab tab-xs tab-bordered ${viewMode === 'category' ? 'tab-active' : ''}`}
+            className={`text-[10px] tracking-widest uppercase transition-all duration-200 ${
+              viewMode === 'category'
+                ? 'text-primary'
+                : 'text-base-content/40 hover:text-base-content/70'
+            }`}
             onClick={() => setViewMode('category')}>
             Categories
           </button>
           <button
-            className={`tab tab-xs tab-bordered ${viewMode === 'alphabetical' ? 'tab-active' : ''}`}
+            className={`text-[10px] tracking-widest uppercase transition-all duration-200 ${
+              viewMode === 'alphabetical'
+                ? 'text-primary'
+                : 'text-base-content/40 hover:text-base-content/70'
+            }`}
             onClick={() => setViewMode('alphabetical')}>
             A–Z
           </button>

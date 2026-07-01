@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Convert',
     tags: ['image', 'convert'],
     emoji: '🔄',
-    color: '#06b6d4',
     onClick: open('image-convert-png-to-avif'),
   },
   {
@@ -15,7 +14,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Convert',
     tags: ['image', 'convert'],
     emoji: '🔄',
-    color: '#06b6d4',
     onClick: open('image-convert-png-to-eps'),
   },
   {
@@ -23,7 +21,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Convert',
     tags: ['image', 'convert'],
     emoji: '🔄',
-    color: '#06b6d4',
     onClick: open('image-convert-png-to-gif'),
   },
   {
@@ -31,7 +28,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Convert',
     tags: ['image', 'convert'],
     emoji: '🔄',
-    color: '#06b6d4',
     onClick: open('image-convert-png-to-jpg'),
   },
   {
@@ -39,7 +35,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Convert',
     tags: ['image', 'convert'],
     emoji: '🔄',
-    color: '#06b6d4',
     onClick: open('image-convert-png-to-svg'),
   },
   {
@@ -47,7 +42,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Convert',
     tags: ['image', 'convert'],
     emoji: '🔄',
-    color: '#06b6d4',
     onClick: open('image-convert-png-to-tiff'),
   },
   {
@@ -55,7 +49,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Convert',
     tags: ['image', 'convert'],
     emoji: '🔄',
-    color: '#06b6d4',
     onClick: open('image-convert-png-to-webp'),
   },
 ];

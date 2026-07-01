@@ -32,7 +32,7 @@ export const ExportModal: FC<ExportModalProps> = ({
         onClick={(e) => e.stopPropagation()}>
         <div className="border-base-300 flex flex-shrink-0 items-center justify-between border-b px-5 py-4">
           <div className="flex items-center gap-3">
-            <span className="text-base-content font-bold tracking-tight">
+            <span className="text-base-content font-normal tracking-tight">
               Export <span className="text-primary font-mono">{tableName}</span>
             </span>
             <span className="text-base-content/30 font-mono text-xs">
@@ -71,7 +71,7 @@ export const ExportModal: FC<ExportModalProps> = ({
             {copied ? (
               <>
                 <IcoCheck />
-                <span className="text-success text-xs">Copied!</span>
+                <span className="text-primary text-xs">Copied!</span>
               </>
             ) : (
               <>

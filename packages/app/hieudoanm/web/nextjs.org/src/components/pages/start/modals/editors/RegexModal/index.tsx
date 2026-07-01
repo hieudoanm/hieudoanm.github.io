@@ -48,7 +48,7 @@ export const RegexModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     <ModalWrapper onClose={onClose} title="Regex Generator" size="max-w-2xl">
       <div className="flex flex-col gap-4">
         <div>
-          <label className="mb-1 block text-xs font-bold uppercase opacity-60">
+          <label className="mb-1 block text-xs font-normal uppercase opacity-60">
             Sample Strings (one per line)
           </label>
           <textarea
@@ -59,7 +59,7 @@ export const RegexModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           />
         </div>
         <div>
-          <label className="mb-1 block text-xs font-bold uppercase opacity-60">
+          <label className="mb-1 block text-xs font-normal uppercase opacity-60">
             Regex Pattern
           </label>
           <div className="flex gap-2">
@@ -97,7 +97,7 @@ export const RegexModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           )}
         </div>
         <div>
-          <label className="mb-1 block text-xs font-bold uppercase opacity-60">
+          <label className="mb-1 block text-xs font-normal uppercase opacity-60">
             Test Strings (one per line)
           </label>
           <textarea
@@ -112,7 +112,7 @@ export const RegexModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             {testLines.map((line, i) => (
               <div
                 key={i}
-                className={`border-base-200 flex items-center gap-3 border-b px-3 py-1.5 text-sm last:border-0 ${results[i] ? 'bg-success/10' : 'bg-error/10'}`}>
+                className={`border-base-200 flex items-center gap-3 border-b px-3 py-1.5 text-sm last:border-0 ${results[i] ? 'bg-base-content/8' : 'bg-base-content/5'}`}>
                 <span className="text-lg">{results[i] ? '✓' : '✗'}</span>
                 <span className="font-mono">{line}</span>
               </div>

@@ -90,7 +90,7 @@ export const TumblingEChartModal: FC<{ onClose: () => void }> = ({
             {line.directions.map((dir, i) => (
               <span
                 key={i}
-                className={`${line.size} text-base-content inline-block font-serif leading-none font-bold transition-all duration-300 select-none ${ROTATION[dir]} ${revealed ? 'opacity-100' : 'opacity-10'}`}>
+                className={`${line.size} text-base-content inline-block font-serif leading-none font-normal transition-all duration-300 select-none ${ROTATION[dir]} ${revealed ? 'opacity-100' : 'opacity-10'}`}>
                 E
               </span>
             ))}
@@ -119,7 +119,9 @@ export const TumblingEChartModal: FC<{ onClose: () => void }> = ({
                   {userAnswer && (
                     <span
                       className={
-                        correct ? 'text-success text-lg' : 'text-error text-lg'
+                        correct
+                          ? 'text-primary text-lg'
+                          : 'text-base-content/60 text-lg'
                       }>
                       {correct ? '✓' : '✗'}
                     </span>

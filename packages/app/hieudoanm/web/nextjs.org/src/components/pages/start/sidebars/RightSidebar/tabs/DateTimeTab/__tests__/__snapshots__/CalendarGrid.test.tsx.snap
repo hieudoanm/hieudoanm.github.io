@@ -1,0 +1,205 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`CalendarGrid should render 1`] = `
+<div>
+  <div>
+    <p
+      class="text-base-content/40 mb-2 text-[10px] font-normal tracking-widest uppercase"
+    >
+      July
+       
+      2026
+    </p>
+    <table
+      class="w-full border-collapse text-[11px]"
+    >
+      <thead>
+        <tr>
+          <th
+            class="text-base-content/30 w-6 pb-1 text-center font-normal"
+          >
+            Wk
+          </th>
+          <th
+            class="text-base-content/30 pb-1 text-center font-normal"
+          >
+            S
+          </th>
+          <th
+            class="text-base-content/30 pb-1 text-center font-normal"
+          >
+            M
+          </th>
+          <th
+            class="text-base-content/30 pb-1 text-center font-normal"
+          >
+            T
+          </th>
+          <th
+            class="text-base-content/30 pb-1 text-center font-normal"
+          >
+            W
+          </th>
+          <th
+            class="text-base-content/30 pb-1 text-center font-normal"
+          >
+            T
+          </th>
+          <th
+            class="text-base-content/30 pb-1 text-center font-normal"
+          >
+            F
+          </th>
+          <th
+            class="text-base-content/30 pb-1 text-center font-normal"
+          >
+            S
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td
+            class="text-base-content/25 py-0.5 text-center text-[10px]"
+          >
+            27
+          </td>
+          <td
+            class="p-0 text-center"
+          >
+            <button
+              class="h-6 w-6 rounded-full text-[11px] transition-colors text-base-content/20"
+            >
+              29
+            </button>
+          </td>
+          <td
+            class="p-0 text-center"
+          >
+            <button
+              class="h-6 w-6 rounded-full text-[11px] transition-colors text-base-content/20"
+            >
+              30
+            </button>
+          </td>
+          <td
+            class="p-0 text-center"
+          >
+            <button
+              class="h-6 w-6 rounded-full text-[11px] transition-colors bg-primary text-primary-content font-normal"
+            >
+              31
+            </button>
+          </td>
+          <td
+            class="p-0 text-center"
+          >
+            <button
+              class="h-6 w-6 rounded-full text-[11px] transition-colors bg-primary text-primary-content font-normal"
+            >
+              1
+            </button>
+          </td>
+          <td
+            class="p-0 text-center"
+          >
+            <button
+              class="h-6 w-6 rounded-full text-[11px] transition-colors hover:bg-base-300"
+            >
+              2
+            </button>
+          </td>
+          <td
+            class="p-0 text-center"
+          >
+            <button
+              class="h-6 w-6 rounded-full text-[11px] transition-colors hover:bg-base-300"
+            >
+              3
+            </button>
+          </td>
+          <td
+            class="p-0 text-center"
+          >
+            <button
+              class="h-6 w-6 rounded-full text-[11px] transition-colors hover:bg-base-300"
+            >
+              4
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="text-base-content/25 py-0.5 text-center text-[10px]"
+          >
+            27
+          </td>
+          <td
+            class="p-0 text-center"
+          >
+            <button
+              class="h-6 w-6 rounded-full text-[11px] transition-colors hover:bg-base-300"
+            >
+              5
+            </button>
+          </td>
+          <td
+            class="p-0 text-center"
+          >
+            <button
+              class="h-6 w-6 rounded-full text-[11px] transition-colors hover:bg-base-300"
+            >
+              6
+            </button>
+          </td>
+          <td
+            class="p-0 text-center"
+          >
+            <button
+              class="h-6 w-6 rounded-full text-[11px] transition-colors hover:bg-base-300"
+            >
+              7
+            </button>
+          </td>
+          <td
+            class="p-0 text-center"
+          >
+            <button
+              class="h-6 w-6 rounded-full text-[11px] transition-colors text-base-content/60 font-normal"
+            >
+              8
+            </button>
+          </td>
+          <td
+            class="p-0 text-center"
+          >
+            <button
+              class="h-6 w-6 rounded-full text-[11px] transition-colors hover:bg-base-300"
+            >
+              9
+            </button>
+          </td>
+          <td
+            class="p-0 text-center"
+          >
+            <button
+              class="h-6 w-6 rounded-full text-[11px] transition-colors hover:bg-base-300"
+            >
+              10
+            </button>
+          </td>
+          <td
+            class="p-0 text-center"
+          >
+            <button
+              class="h-6 w-6 rounded-full text-[11px] transition-colors hover:bg-base-300"
+            >
+              11
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;

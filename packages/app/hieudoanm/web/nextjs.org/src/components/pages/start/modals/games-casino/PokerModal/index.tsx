@@ -106,7 +106,7 @@ export const PokerModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           <div className="flex justify-between text-xs">
             <span className="opacity-50">Equity</span>
             <span
-              className="font-bold"
+              className="font-normal"
               style={{
                 color:
                   results.equity > 50

@@ -6,10 +6,9 @@ describe('ToolCard', () => {
     const { container } = render(
       <ToolCard
         label="test"
-        description="test"
-        emoji="test"
-        color="test"
-        onClick={() => {}}
+        description="test description"
+        emoji="😀"
+        onClick={jest.fn()}
       />
     );
     expect(container).toMatchSnapshot();

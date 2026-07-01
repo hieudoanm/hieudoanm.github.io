@@ -124,7 +124,7 @@ export const FlagGuesserModal: FC<{ onClose: () => void }> = ({ onClose }) => {
         {message && (
           <div className="flex flex-col items-center gap-2">
             <div
-              className={`text-sm font-bold ${message.correct ? 'text-success' : 'text-error'}`}>
+              className={`text-sm font-normal ${message.correct ? 'text-success' : 'text-error'}`}>
               {message.text}
               {!message.correct && (
                 <span className="ml-2 text-base">{current.flag}</span>

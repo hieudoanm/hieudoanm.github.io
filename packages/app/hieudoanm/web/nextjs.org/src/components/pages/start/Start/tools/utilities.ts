@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'AI Assistant',
     tags: ['utility', 'tool', 'productivity'],
     emoji: '💬',
-    color: '#3b82f6',
     onClick: open('chat'),
   },
   {
@@ -22,7 +21,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'clipboard-manager',
     ],
     emoji: '📋',
-    color: '#3b82f6',
     onClick: open('clipboard'),
   },
   {
@@ -30,7 +28,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Data',
     tags: ['utility', 'tool'],
     emoji: '🗜️',
-    color: '#10b981',
     onClick: open('create-zip'),
   },
   {
@@ -38,7 +35,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Explorer',
     tags: ['utility', 'tool', 'productivity'],
     emoji: '😀',
-    color: '#f59e0b',
     onClick: open('emojis'),
   },
   {
@@ -46,7 +42,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Routine',
     tags: ['utility', 'tool', 'productivity'],
     emoji: '🔢',
-    color: '#f59e0b',
     onClick: open('kaprekar'),
   },
   {
@@ -61,7 +56,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'filler',
     ],
     emoji: '📝',
-    color: '#8b5cf6',
     onClick: open('lorem-ipsum'),
   },
   {
@@ -76,7 +70,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'alarm',
     ],
     emoji: '😴',
-    color: '#3b82f6',
     onClick: open('no-sleep'),
   },
   {
@@ -93,7 +86,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'builder',
     ],
     emoji: '🔐',
-    color: '#3b82f6',
     onClick: open('text-password'),
   },
   {
@@ -101,7 +93,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Record & Download',
     tags: ['utility', 'tool', 'productivity'],
     emoji: '🎥',
-    color: '#3b82f6',
     onClick: open('screen-recorder'),
   },
   {
@@ -117,7 +108,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'tally',
     ],
     emoji: '📊',
-    color: '#3b82f6',
     onClick: open('text-word-count'),
   },
 ];

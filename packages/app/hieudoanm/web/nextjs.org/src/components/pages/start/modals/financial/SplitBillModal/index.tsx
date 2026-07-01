@@ -123,16 +123,22 @@ export const SplitBillModal: FC<{ onClose: () => void }> = ({ onClose }) => {
 
   return (
     <ModalWrapper onClose={onClose} title="Split Bill" size="max-w-lg">
-      <div role="tablist" className="tabs tabs-boxed mb-4 w-full">
+      <div className="border-base-300 mb-4 flex w-full border-b">
         <button
-          role="tab"
-          className={`tab flex-1 ${tab === 'equal' ? 'tab-active' : ''}`}
+          className={`flex-1 border-b-2 px-3 py-2 text-sm transition-colors ${
+            tab === 'equal'
+              ? 'border-primary text-primary'
+              : 'text-base-content/40 border-transparent'
+          }`}
           onClick={() => setTab('equal')}>
           Equal Split
         </button>
         <button
-          role="tab"
-          className={`tab flex-1 ${tab === 'settle' ? 'tab-active' : ''}`}
+          className={`flex-1 border-b-2 px-3 py-2 text-sm transition-colors ${
+            tab === 'settle'
+              ? 'border-primary text-primary'
+              : 'text-base-content/40 border-transparent'
+          }`}
           onClick={() => setTab('settle')}>
           Who Owes Who
         </button>
@@ -149,7 +155,7 @@ export const SplitBillModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           <>
             <div className="form-control">
               <label className="label mb-1 p-0">
-                <span className="label-text text-xs font-medium opacity-70">
+                <span className="label-text text-xs font-normal opacity-70">
                   Total Bill
                 </span>
               </label>
@@ -166,7 +172,7 @@ export const SplitBillModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             </div>
             <div className="form-control">
               <label className="label mb-1 p-0">
-                <span className="label-text text-xs font-medium opacity-70">
+                <span className="label-text text-xs font-normal opacity-70">
                   Number of People
                 </span>
               </label>
@@ -184,7 +190,7 @@ export const SplitBillModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             </div>
             <div className="form-control">
               <label className="label mb-1 p-0">
-                <span className="label-text text-xs font-medium opacity-70">
+                <span className="label-text text-xs font-normal opacity-70">
                   Tip (%)
                 </span>
               </label>
@@ -199,7 +205,7 @@ export const SplitBillModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             </div>
             <div className="form-control">
               <label className="label mb-1 p-0">
-                <span className="label-text text-xs font-medium opacity-70">
+                <span className="label-text text-xs font-normal opacity-70">
                   Tax (%)
                 </span>
               </label>
@@ -215,27 +221,27 @@ export const SplitBillModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             <div className="bg-base-200 mt-4 space-y-2 rounded-xl p-3">
               <div className="flex items-center justify-between">
                 <span className="text-xs opacity-70">Tip Amount</span>
-                <span className="text-sm font-bold">
+                <span className="text-sm font-normal">
                   {formatCurrency(eqResult.tipAmount, currency)}
                 </span>
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-xs opacity-70">Tax Amount</span>
-                <span className="text-sm font-bold">
+                <span className="text-sm font-normal">
                   {formatCurrency(eqResult.taxAmount, currency)}
                 </span>
               </div>
               <div className="divider my-1" />
               <div className="flex items-center justify-between">
                 <span className="text-xs opacity-70">Total</span>
-                <span className="text-sm font-bold">
+                <span className="text-sm font-normal">
                   {formatCurrency(eqResult.total, currency)}
                 </span>
               </div>
               <div className="divider my-1" />
               <div className="flex items-center justify-between">
-                <span className="text-xs font-semibold">Per Person</span>
-                <span className="text-lg font-black">
+                <span className="text-xs font-normal">Per Person</span>
+                <span className="text-lg font-normal">
                   {formatCurrency(eqResult.perPerson, currency)}
                 </span>
               </div>
@@ -282,7 +288,7 @@ export const SplitBillModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                   />
                   <span className="text-xs opacity-50">/</span>
                   {splitEqually ? (
-                    <span className="bg-base-200 flex h-8 w-28 items-center justify-end rounded-md px-2 text-sm font-bold opacity-80">
+                    <span className="bg-base-200 flex h-8 w-28 items-center justify-end rounded-md px-2 text-sm font-normal opacity-80">
                       {formatCurrency(p.owes, currency)}
                     </span>
                   ) : (
@@ -331,16 +337,16 @@ export const SplitBillModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             ) : null}
             {settlements && settlements.length > 0 && (
               <div className="bg-base-200 mt-2 flex flex-col space-y-2 gap-y-2 rounded-xl p-3">
-                <span className="text-xs font-semibold">Settle Up</span>
+                <span className="text-xs font-normal">Settle Up</span>
                 {settlements.map((s, i) => (
                   <div
                     key={i}
                     className="bg-base-100/50 flex items-center justify-between rounded-lg px-3 py-2">
-                    <span className="text-sm font-medium">
+                    <span className="text-sm font-normal">
                       {s.from} <span className="text-xs opacity-50">pays</span>{' '}
                       {s.to}
                     </span>
-                    <span className="text-sm font-bold">
+                    <span className="text-sm font-normal">
                       {formatCurrency(s.amount, currency)}
                     </span>
                   </div>
@@ -348,7 +354,7 @@ export const SplitBillModal: FC<{ onClose: () => void }> = ({ onClose }) => {
               </div>
             )}
             {settlements && settlements.length === 0 && (
-              <div className="bg-base-200 mt-2 rounded-xl p-3 text-center text-sm font-medium text-green-600">
+              <div className="bg-base-200 mt-2 rounded-xl p-3 text-center text-sm font-normal text-green-600">
                 All settled ✓
               </div>
             )}

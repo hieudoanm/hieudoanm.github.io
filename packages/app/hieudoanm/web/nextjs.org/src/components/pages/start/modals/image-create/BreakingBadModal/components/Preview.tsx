@@ -64,11 +64,11 @@ export const Preview: FC<{
           return (
             <div
               key={wordIdx}
-              className="flex flex-wrap items-center gap-1 text-4xl font-bold">
+              className="flex flex-wrap items-center gap-1 text-4xl font-normal">
               {before.map((letter, idx) => (
                 <span
                   key={`b-${idx}`}
-                  className="text-base-content text-4xl font-semibold">
+                  className="text-base-content text-4xl font-normal">
                   {letter}
                 </span>
               ))}
@@ -84,7 +84,7 @@ export const Preview: FC<{
               {after.map((letter, idx) => (
                 <span
                   key={`a-${idx}`}
-                  className="text-base-content text-4xl font-semibold">
+                  className="text-base-content text-4xl font-normal">
                   {letter}
                 </span>
               ))}

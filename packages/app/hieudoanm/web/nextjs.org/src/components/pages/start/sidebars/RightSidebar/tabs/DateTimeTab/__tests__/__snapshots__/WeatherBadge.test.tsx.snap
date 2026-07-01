@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`WeatherBadge should render loading state when no weather 1`] = `
+<div>
+  <span
+    class="badge badge-ghost badge-sm text-base-content/40 italic"
+  >
+    …
+  </span>
+</div>
+`;
+
+exports[`WeatherBadge should render temperature and description 1`] = `
+<div>
+  <div
+    class="flex flex-col items-end gap-0.5"
+  >
+    <span
+      class="badge badge-ghost badge-sm font-mono font-normal tracking-wider"
+    >
+      22
+      °C
+    </span>
+    <span
+      class="text-base-content/50 text-xs whitespace-nowrap"
+    >
+      ☀️ Clear sky
+    </span>
+  </div>
+</div>
+`;

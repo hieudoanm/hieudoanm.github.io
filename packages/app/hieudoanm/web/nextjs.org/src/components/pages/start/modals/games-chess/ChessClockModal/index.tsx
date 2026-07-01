@@ -24,7 +24,7 @@ const SideRow: FC<{
     <button
       onClick={() => onPress(side)}
       className={`relative flex flex-col items-center justify-center rounded-2xl p-8 transition-all duration-150 ${live ? 'bg-base-300 ring-primary z-10 scale-105 shadow-xl ring-2' : 'bg-base-200 hover:bg-base-300'}`}>
-      <span className="mb-2 text-4xl font-black tracking-tight tabular-nums">
+      <span className="mb-2 text-4xl font-normal tracking-tight tabular-nums">
         {fmt(ms)}
       </span>
       <span className="text-xs opacity-40">

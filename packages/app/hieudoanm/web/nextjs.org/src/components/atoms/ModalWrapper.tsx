@@ -28,7 +28,7 @@ export const ModalWrapper: FC<ModalWrapperProps> = ({
         <div
           className={`modal-box border-base-content/15 flex h-[90vh] w-full ${size} flex-col overflow-hidden border p-0`}>
           <div className="border-base-300 flex items-center justify-between border-b px-4 py-3">
-            <h3 className="text-sm font-bold">{title}</h3>
+            <h3 className="text-sm font-normal">{title}</h3>
             <button
               onClick={onClose}
               className="btn btn-sm btn-circle btn-ghost opacity-60 hover:opacity-100">
@@ -52,7 +52,7 @@ export const ModalWrapper: FC<ModalWrapperProps> = ({
         <div className="card-body gap-5 p-6">
           <div className="flex items-start justify-between">
             <div>
-              <h2 className="text-lg font-black tracking-tight">{title}</h2>
+              <h2 className="text-lg font-normal tracking-tight">{title}</h2>
               {subtitle && (
                 <p className="text-base-content/40 mt-0.5 font-mono text-[10px] tracking-widest uppercase">
                   {subtitle}

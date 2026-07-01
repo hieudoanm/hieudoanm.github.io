@@ -16,7 +16,7 @@ export const Sidebar: FC<SidebarProps> = memo(
   ({ tables, activeTable, opfsFiles, onSelectTable, onLoadOpfs }) => (
     <aside className="bg-base-200 border-base-300 flex w-56 flex-shrink-0 flex-col overflow-hidden border-r">
       <div className="px-3 pt-3 pb-1">
-        <p className="text-base-content/30 text-[10px] font-semibold tracking-widest uppercase">
+        <p className="text-base-content/30 text-[10px] font-normal tracking-widest uppercase">
           Tables
         </p>
       </div>
@@ -35,7 +35,7 @@ export const Sidebar: FC<SidebarProps> = memo(
               className={`flex-shrink-0 ${activeTable === t.name ? 'text-primary' : 'text-base-content/30'}`}>
               <IcoTable />
             </span>
-            <span className="flex-1 truncate text-xs font-medium">
+            <span className="flex-1 truncate text-xs font-normal">
               {t.name}
             </span>
             <span className="text-base-content/30 font-mono text-[10px] tabular-nums">
@@ -47,7 +47,7 @@ export const Sidebar: FC<SidebarProps> = memo(
       {opfsFiles.length > 0 && (
         <>
           <div className="border-base-300 border-t px-3 pt-3 pb-1">
-            <p className="text-base-content/30 text-[10px] font-semibold tracking-widest uppercase">
+            <p className="text-base-content/30 text-[10px] font-normal tracking-widest uppercase">
               Saved (OPFS)
             </p>
           </div>

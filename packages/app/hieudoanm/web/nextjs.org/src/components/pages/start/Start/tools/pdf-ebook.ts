@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Ebook',
     tags: ['pdf', 'document'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('azw3-to-epub'),
   },
   {
@@ -15,7 +14,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Ebook',
     tags: ['pdf', 'epub', 'document'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('azw3-to-mobi'),
   },
   {
@@ -23,7 +21,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Ebook',
     tags: ['pdf', 'document'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('epub-to-azw3'),
   },
   {
@@ -31,7 +28,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Ebook',
     tags: ['pdf', 'document'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('epub-to-mobi'),
   },
   {
@@ -39,7 +35,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Ebook',
     tags: ['pdf', 'epub', 'document'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('mobi-to-azw3'),
   },
   {
@@ -47,7 +42,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Ebook',
     tags: ['pdf', 'document'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('mobi-to-epub'),
   },
 ];

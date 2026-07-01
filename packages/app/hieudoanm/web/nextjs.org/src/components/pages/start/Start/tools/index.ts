@@ -5,64 +5,64 @@ import { make as aiMake } from './ai';
 import { make as clocksMake } from './clocks';
 import { make as colorsMake } from './colors';
 import { make as converterMake } from './converter';
-import { make as data_csvMake } from './data-csv';
-import { make as data_excelMake } from './data-excel';
-import { make as data_jsonMake } from './data-json';
-import { make as data_xmlMake } from './data-xml';
+import { make as dataCsvMake } from './data-csv';
+import { make as dataExcelMake } from './data-excel';
+import { make as dataJsonMake } from './data-json';
+import { make as dataXmlMake } from './data-xml';
 import { make as developerMake } from './developer';
 import { make as editorsMake } from './editors';
 import { make as educationMake } from './education';
 import { make as eyesMake } from './eyes';
 import { make as financialMake } from './financial';
-import { make as games_arcadeMake } from './games-arcade';
-import { make as games_casinoMake } from './games-casino';
-import { make as games_chessMake } from './games-chess';
-import { make as games_memoryMake } from './games-memory';
-import { make as games_puzzleMake } from './games-puzzle';
-import { make as games_triviaMake } from './games-trivia';
-import { make as games_wordMake } from './games-word';
-import { make as image_convert_gifMake } from './image-convert-gif';
-import { make as image_convert_heicMake } from './image-convert-heic';
-import { make as image_convert_jpgMake } from './image-convert-jpg';
-import { make as image_convert_pngMake } from './image-convert-png';
-import { make as image_convert_psdMake } from './image-convert-psd';
-import { make as image_convert_svgMake } from './image-convert-svg';
-import { make as image_convert_tiffMake } from './image-convert-tiff';
-import { make as image_convert_webpMake } from './image-convert-webp';
-import { make as image_createMake } from './image-create';
-import { make as image_editMake } from './image-edit';
-import { make as image_effectMake } from './image-effect';
-import { make as image_scanMake } from './image-scan';
-import { make as pdf_convertMake } from './pdf-convert';
-import { make as pdf_createMake } from './pdf-create';
-import { make as pdf_ebookMake } from './pdf-ebook';
-import { make as pdf_editMake } from './pdf-edit';
-import { make as pdf_extractMake } from './pdf-extract';
-import { make as pdf_miscMake } from './pdf-misc';
-import { make as text_convertMake } from './text-convert';
+import { make as gamesArcadeMake } from './games-arcade';
+import { make as gamesCasinoMake } from './games-casino';
+import { make as gamesChessMake } from './games-chess';
+import { make as gamesMemoryMake } from './games-memory';
+import { make as gamesPuzzleMake } from './games-puzzle';
+import { make as gamesTriviaMake } from './games-trivia';
+import { make as gamesWordMake } from './games-word';
+import { make as imageConvertGifMake } from './image-convert-gif';
+import { make as imageConvertHeicMake } from './image-convert-heic';
+import { make as imageConvertJpgMake } from './image-convert-jpg';
+import { make as imageConvertPngMake } from './image-convert-png';
+import { make as imageConvertPsdMake } from './image-convert-psd';
+import { make as imageConvertSvgMake } from './image-convert-svg';
+import { make as imageConvertTiffMake } from './image-convert-tiff';
+import { make as imageConvertWebpMake } from './image-convert-webp';
+import { make as imageCreateMake } from './image-create';
+import { make as imageEditMake } from './image-edit';
+import { make as imageEffectMake } from './image-effect';
+import { make as imageScanMake } from './image-scan';
+import { make as pdfConvertMake } from './pdf-convert';
+import { make as pdfCreateMake } from './pdf-create';
+import { make as pdfEbookMake } from './pdf-ebook';
+import { make as pdfEditMake } from './pdf-edit';
+import { make as pdfExtractMake } from './pdf-extract';
+import { make as pdfMiscMake } from './pdf-misc';
+import { make as textConvertMake } from './text-convert';
 import { make as utilitiesMake } from './utilities';
-import { make as video_audioMake } from './video-audio';
-import { make as video_convert_aacMake } from './video-convert-aac';
-import { make as video_convert_aviMake } from './video-convert-avi';
-import { make as video_convert_flvMake } from './video-convert-flv';
-import { make as video_convert_gifMake } from './video-convert-gif';
-import { make as video_convert_m4aMake } from './video-convert-m4a';
-import { make as video_convert_mkvMake } from './video-convert-mkv';
-import { make as video_convert_movMake } from './video-convert-mov';
-import { make as video_convert_mp4Make } from './video-convert-mp4';
-import { make as video_convert_oggMake } from './video-convert-ogg';
-import { make as video_convert_webmMake } from './video-convert-webm';
-import { make as video_convert_wmvMake } from './video-convert-wmv';
-import { make as video_downloadMake } from './video-download';
-import { make as video_editMake } from './video-edit';
+import { make as videoAudioMake } from './video-audio';
+import { make as videoConvertAacMake } from './video-convert-aac';
+import { make as videoConvertAviMake } from './video-convert-avi';
+import { make as videoConvertFlvMake } from './video-convert-flv';
+import { make as videoConvertGifMake } from './video-convert-gif';
+import { make as videoConvertM4aMake } from './video-convert-m4a';
+import { make as videoConvertMkvMake } from './video-convert-mkv';
+import { make as videoConvertMovMake } from './video-convert-mov';
+import { make as videoConvertMp4Make } from './video-convert-mp4';
+import { make as videoConvertOggMake } from './video-convert-ogg';
+import { make as videoConvertWebmMake } from './video-convert-webm';
+import { make as videoConvertWmvMake } from './video-convert-wmv';
+import { make as videoDownloadMake } from './video-download';
+import { make as videoEditMake } from './video-edit';
 import { make as visualizationMake } from './visualization';
-import { make as write_articleMake } from './write-article';
-import { make as write_businessMake } from './write-business';
-import { make as write_contentMake } from './write-content';
-import { make as write_editMake } from './write-edit';
-import { make as write_miscMake } from './write-misc';
-import { make as write_real_estateMake } from './write-real-estate';
-import { make as write_socialMake } from './write-social';
+import { make as writeArticleMake } from './write-article';
+import { make as writeBusinessMake } from './write-business';
+import { make as writeContentMake } from './write-content';
+import { make as writeEditMake } from './write-edit';
+import { make as writeMiscMake } from './write-misc';
+import { make as writeRealEstateMake } from './write-real-estate';
+import { make as writeSocialMake } from './write-social';
 
 export const makeTools = (
   open: (id: ModalId) => () => void
@@ -71,62 +71,62 @@ export const makeTools = (
   clocks: clocksMake(open),
   colors: colorsMake(open),
   converter: converterMake(open),
-  'data-csv': data_csvMake(open),
-  'data-excel': data_excelMake(open),
-  'data-json': data_jsonMake(open),
-  'data-xml': data_xmlMake(open),
+  'data-csv': dataCsvMake(open),
+  'data-excel': dataExcelMake(open),
+  'data-json': dataJsonMake(open),
+  'data-xml': dataXmlMake(open),
   developer: developerMake(open),
   editors: editorsMake(open),
   education: educationMake(open),
   eyes: eyesMake(open),
   financial: financialMake(open),
-  'games-arcade': games_arcadeMake(open),
-  'games-casino': games_casinoMake(open),
-  'games-chess': games_chessMake(open),
-  'games-memory': games_memoryMake(open),
-  'games-puzzle': games_puzzleMake(open),
-  'games-trivia': games_triviaMake(open),
-  'games-word': games_wordMake(open),
-  'image-convert-gif': image_convert_gifMake(open),
-  'image-convert-heic': image_convert_heicMake(open),
-  'image-convert-jpg': image_convert_jpgMake(open),
-  'image-convert-png': image_convert_pngMake(open),
-  'image-convert-psd': image_convert_psdMake(open),
-  'image-convert-svg': image_convert_svgMake(open),
-  'image-convert-tiff': image_convert_tiffMake(open),
-  'image-convert-webp': image_convert_webpMake(open),
-  'image-create': image_createMake(open),
-  'image-edit': image_editMake(open),
-  'image-effect': image_effectMake(open),
-  'image-scan': image_scanMake(open),
-  'pdf-convert': pdf_convertMake(open),
-  'pdf-create': pdf_createMake(open),
-  'pdf-ebook': pdf_ebookMake(open),
-  'pdf-edit': pdf_editMake(open),
-  'pdf-extract': pdf_extractMake(open),
-  'pdf-misc': pdf_miscMake(open),
-  'text-convert': text_convertMake(open),
+  'games-arcade': gamesArcadeMake(open),
+  'games-casino': gamesCasinoMake(open),
+  'games-chess': gamesChessMake(open),
+  'games-memory': gamesMemoryMake(open),
+  'games-puzzle': gamesPuzzleMake(open),
+  'games-trivia': gamesTriviaMake(open),
+  'games-word': gamesWordMake(open),
+  'image-convert-gif': imageConvertGifMake(open),
+  'image-convert-heic': imageConvertHeicMake(open),
+  'image-convert-jpg': imageConvertJpgMake(open),
+  'image-convert-png': imageConvertPngMake(open),
+  'image-convert-psd': imageConvertPsdMake(open),
+  'image-convert-svg': imageConvertSvgMake(open),
+  'image-convert-tiff': imageConvertTiffMake(open),
+  'image-convert-webp': imageConvertWebpMake(open),
+  'image-create': imageCreateMake(open),
+  'image-edit': imageEditMake(open),
+  'image-effect': imageEffectMake(open),
+  'image-scan': imageScanMake(open),
+  'pdf-convert': pdfConvertMake(open),
+  'pdf-create': pdfCreateMake(open),
+  'pdf-ebook': pdfEbookMake(open),
+  'pdf-edit': pdfEditMake(open),
+  'pdf-extract': pdfExtractMake(open),
+  'pdf-misc': pdfMiscMake(open),
+  'text-convert': textConvertMake(open),
   utilities: utilitiesMake(open),
-  'video-audio': video_audioMake(open),
-  'video-convert-aac': video_convert_aacMake(open),
-  'video-convert-avi': video_convert_aviMake(open),
-  'video-convert-flv': video_convert_flvMake(open),
-  'video-convert-gif': video_convert_gifMake(open),
-  'video-convert-m4a': video_convert_m4aMake(open),
-  'video-convert-mkv': video_convert_mkvMake(open),
-  'video-convert-mov': video_convert_movMake(open),
-  'video-convert-mp4': video_convert_mp4Make(open),
-  'video-convert-ogg': video_convert_oggMake(open),
-  'video-convert-webm': video_convert_webmMake(open),
-  'video-convert-wmv': video_convert_wmvMake(open),
-  'video-download': video_downloadMake(open),
-  'video-edit': video_editMake(open),
+  'video-audio': videoAudioMake(open),
+  'video-convert-aac': videoConvertAacMake(open),
+  'video-convert-avi': videoConvertAviMake(open),
+  'video-convert-flv': videoConvertFlvMake(open),
+  'video-convert-gif': videoConvertGifMake(open),
+  'video-convert-m4a': videoConvertM4aMake(open),
+  'video-convert-mkv': videoConvertMkvMake(open),
+  'video-convert-mov': videoConvertMovMake(open),
+  'video-convert-mp4': videoConvertMp4Make(open),
+  'video-convert-ogg': videoConvertOggMake(open),
+  'video-convert-webm': videoConvertWebmMake(open),
+  'video-convert-wmv': videoConvertWmvMake(open),
+  'video-download': videoDownloadMake(open),
+  'video-edit': videoEditMake(open),
   visualization: visualizationMake(open),
-  'write-article': write_articleMake(open),
-  'write-business': write_businessMake(open),
-  'write-content': write_contentMake(open),
-  'write-edit': write_editMake(open),
-  'write-misc': write_miscMake(open),
-  'write-real-estate': write_real_estateMake(open),
-  'write-social': write_socialMake(open),
+  'write-article': writeArticleMake(open),
+  'write-business': writeBusinessMake(open),
+  'write-content': writeContentMake(open),
+  'write-edit': writeEditMake(open),
+  'write-misc': writeMiscMake(open),
+  'write-real-estate': writeRealEstateMake(open),
+  'write-social': writeSocialMake(open),
 });

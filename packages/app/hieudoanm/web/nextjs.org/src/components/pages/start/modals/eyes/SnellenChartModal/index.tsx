@@ -83,7 +83,7 @@ export const SnellenChartModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           <div
             className={[
               line.size,
-              'font-serif leading-none font-bold tracking-widest',
+              'font-serif leading-none font-normal tracking-widest',
               'text-base-content select-none',
               'transition-opacity duration-300',
               revealed ? 'opacity-100' : 'opacity-10',

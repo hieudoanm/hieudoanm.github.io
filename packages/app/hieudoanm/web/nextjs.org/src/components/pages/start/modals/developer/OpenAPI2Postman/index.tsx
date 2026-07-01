@@ -70,14 +70,22 @@ export const OpenAPI2Postman: FC<{ onClose: () => void }> = ({ onClose }) => {
         🗑️ Clear
       </button>
 
-      <div className="tabs tabs-boxed bg-base-200 border-base-300 w-full self-center border sm:w-auto">
+      <div className="border-base-300 flex w-full self-center border-b sm:w-auto">
         <button
-          className={`tab font-mono text-[10px] tracking-wider uppercase ${activeTab === 'openapi' ? 'tab-active' : ''}`}
+          className={`border-b-2 px-3 py-2 font-mono text-[10px] tracking-wider uppercase transition-colors ${
+            activeTab === 'openapi'
+              ? 'border-primary text-primary'
+              : 'text-base-content/40 border-transparent'
+          }`}
           onClick={() => setActiveTab('openapi')}>
           OpenAPI Input
         </button>
         <button
-          className={`tab font-mono text-[10px] tracking-wider uppercase ${activeTab === 'postman' ? 'tab-active' : ''}`}
+          className={`border-b-2 px-3 py-2 font-mono text-[10px] tracking-wider uppercase transition-colors ${
+            activeTab === 'postman'
+              ? 'border-primary text-primary'
+              : 'text-base-content/40 border-transparent'
+          }`}
           onClick={() => setActiveTab('postman')}>
           Postman Output
         </button>
@@ -115,7 +123,7 @@ export const OpenAPI2Postman: FC<{ onClose: () => void }> = ({ onClose }) => {
           <div className="bg-base-200 border-base-300 flex w-full flex-col rounded-xl border">
             <div className="border-base-300 flex shrink-0 items-center justify-between border-b px-4 py-2">
               <div className="flex items-center gap-2">
-                <span className="badge badge-outline badge-sm text-warning border-warning/30 font-mono text-[10px] tracking-wider uppercase">
+                <span className="badge badge-outline badge-sm text-base-content/60 border-base-content/30 font-mono text-[10px] tracking-wider uppercase">
                   Postman
                 </span>
                 <span className="text-base-content/40 font-mono text-[10px] tracking-wider uppercase">

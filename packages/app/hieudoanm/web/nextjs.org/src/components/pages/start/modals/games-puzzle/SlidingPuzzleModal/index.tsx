@@ -51,7 +51,7 @@ export const SlidingPuzzleModal: FC<{ onClose: () => void }> = ({
             Moves: <strong>{movesCount}</strong>
           </span>
           <div className="flex items-center gap-2 text-sm">
-            <span className="min-w-[3ch] text-right font-mono text-xs font-bold">
+            <span className="min-w-[3ch] text-right font-mono text-xs font-normal">
               {gridSize}×{gridSize}
             </span>
             <input

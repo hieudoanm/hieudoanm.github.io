@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Data',
     tags: ['spreadsheet', 'xlsx', 'xls', 'microsoft-excel', 'comma-separated'],
     emoji: '🔄',
-    color: '#10b981',
     onClick: open('excel-to-csv'),
   },
   {
@@ -23,7 +22,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'acrobat',
     ],
     emoji: '📄',
-    color: '#10b981',
     onClick: open('excel-to-pdf'),
   },
   {
@@ -31,7 +29,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Data',
     tags: ['spreadsheet', 'xlsx', 'xls', 'microsoft-excel', 'markup'],
     emoji: '🔄',
-    color: '#10b981',
     onClick: open('excel-to-xml'),
   },
   {
@@ -39,7 +36,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Data',
     tags: ['spreadsheet', 'xlsx', 'xls', 'microsoft-excel'],
     emoji: '✂️',
-    color: '#10b981',
     onClick: open('split-excel'),
   },
 ];

@@ -9,14 +9,14 @@ export const CenterBlock: FC<{ block: SlideBlock }> = ({ block }) => {
       return (
         <TextBlock
           text={block.text}
-          className="text-base-content mb-8 text-5xl font-bold"
+          className="text-base-content mb-8 text-5xl font-normal"
         />
       );
     case 'subtitle':
       return (
         <TextBlock
           text={block.text}
-          className="text-primary mb-8 text-3xl font-semibold"
+          className="text-primary mb-8 text-3xl font-normal"
         />
       );
     case 'text':
@@ -29,7 +29,7 @@ export const CenterBlock: FC<{ block: SlideBlock }> = ({ block }) => {
     case 'pricing-plan':
       return (
         <div className="mt-8 flex w-full max-w-sm flex-col items-center">
-          <div className="text-base-content mb-8 text-xl font-bold">
+          <div className="text-base-content mb-8 text-xl font-normal">
             <TextBlock text={block.name} />
           </div>
           <div className="text-primary mb-8 text-6xl font-extrabold">

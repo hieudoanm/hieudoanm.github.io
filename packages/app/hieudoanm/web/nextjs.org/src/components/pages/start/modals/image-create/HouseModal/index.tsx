@@ -36,14 +36,14 @@ export const HouseModal: FC<{ onClose: () => void }> = ({ onClose }) => {
               return (
                 <div
                   key={`${letter}-${index}`}
-                  className={`border-base-content flex h-16 w-16 items-center justify-center text-4xl font-bold ${
+                  className={`border-base-content flex h-16 w-16 items-center justify-center text-4xl font-normal ${
                     isFirst ? 'mr-3 border-4' : 'border-b-4'
                   }`}>
                   {letter}
                 </div>
               );
             })}
-            <div className="absolute -right-12 -bottom-1 font-mono text-xs font-bold tracking-[0.3em] opacity-60">
+            <div className="absolute -right-12 -bottom-1 font-mono text-xs font-normal tracking-[0.3em] opacity-60">
               M.D.
             </div>
           </div>

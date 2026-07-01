@@ -18,7 +18,7 @@ exports[`PokerModal should render correctly 1`] = `
         >
           <div>
             <h2
-              class="text-lg font-black tracking-tight"
+              class="text-lg font-normal tracking-tight"
             >
               Poker Equity Calculator
             </h2>
@@ -33,7 +33,7 @@ exports[`PokerModal should render correctly 1`] = `
           class="mb-2"
         >
           <div
-            class="mb-1 text-xs font-semibold opacity-50"
+            class="mb-1 text-xs font-normal opacity-50"
           >
             Your hand
           </div>
@@ -432,7 +432,7 @@ exports[`PokerModal should render correctly 1`] = `
           class="mb-2"
         >
           <div
-            class="mb-1 text-xs font-semibold opacity-50"
+            class="mb-1 text-xs font-normal opacity-50"
           >
             Board (flop required)
           </div>

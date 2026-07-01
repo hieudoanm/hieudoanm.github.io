@@ -35,7 +35,7 @@ exports[`StatusTab should match snapshot 1`] = `
             class="flex flex-col gap-0.5"
           >
             <div
-              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+              class="hover:bg-base-300 group flex items-center justify-between rounded-full px-2 py-1.5 transition-colors duration-150"
             >
               <a
                 class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
@@ -53,7 +53,7 @@ exports[`StatusTab should match snapshot 1`] = `
               </div>
             </div>
             <div
-              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+              class="hover:bg-base-300 group flex items-center justify-between rounded-full px-2 py-1.5 transition-colors duration-150"
             >
               <a
                 class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
@@ -71,7 +71,7 @@ exports[`StatusTab should match snapshot 1`] = `
               </div>
             </div>
             <div
-              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+              class="hover:bg-base-300 group flex items-center justify-between rounded-full px-2 py-1.5 transition-colors duration-150"
             >
               <a
                 class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
@@ -89,7 +89,7 @@ exports[`StatusTab should match snapshot 1`] = `
               </div>
             </div>
             <div
-              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+              class="hover:bg-base-300 group flex items-center justify-between rounded-full px-2 py-1.5 transition-colors duration-150"
             >
               <a
                 class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
@@ -107,7 +107,7 @@ exports[`StatusTab should match snapshot 1`] = `
               </div>
             </div>
             <div
-              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+              class="hover:bg-base-300 group flex items-center justify-between rounded-full px-2 py-1.5 transition-colors duration-150"
             >
               <a
                 class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
@@ -125,7 +125,7 @@ exports[`StatusTab should match snapshot 1`] = `
               </div>
             </div>
             <div
-              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+              class="hover:bg-base-300 group flex items-center justify-between rounded-full px-2 py-1.5 transition-colors duration-150"
             >
               <a
                 class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
@@ -143,7 +143,7 @@ exports[`StatusTab should match snapshot 1`] = `
               </div>
             </div>
             <div
-              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+              class="hover:bg-base-300 group flex items-center justify-between rounded-full px-2 py-1.5 transition-colors duration-150"
             >
               <a
                 class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
@@ -161,7 +161,7 @@ exports[`StatusTab should match snapshot 1`] = `
               </div>
             </div>
             <div
-              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+              class="hover:bg-base-300 group flex items-center justify-between rounded-full px-2 py-1.5 transition-colors duration-150"
             >
               <a
                 class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
@@ -179,7 +179,7 @@ exports[`StatusTab should match snapshot 1`] = `
               </div>
             </div>
             <div
-              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+              class="hover:bg-base-300 group flex items-center justify-between rounded-full px-2 py-1.5 transition-colors duration-150"
             >
               <a
                 class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
@@ -197,7 +197,7 @@ exports[`StatusTab should match snapshot 1`] = `
               </div>
             </div>
             <div
-              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+              class="hover:bg-base-300 group flex items-center justify-between rounded-full px-2 py-1.5 transition-colors duration-150"
             >
               <a
                 class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
@@ -215,7 +215,7 @@ exports[`StatusTab should match snapshot 1`] = `
               </div>
             </div>
             <div
-              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+              class="hover:bg-base-300 group flex items-center justify-between rounded-full px-2 py-1.5 transition-colors duration-150"
             >
               <a
                 class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
@@ -233,7 +233,7 @@ exports[`StatusTab should match snapshot 1`] = `
               </div>
             </div>
             <div
-              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+              class="hover:bg-base-300 group flex items-center justify-between rounded-full px-2 py-1.5 transition-colors duration-150"
             >
               <a
                 class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
@@ -262,7 +262,7 @@ exports[`StatusTab should match snapshot 1`] = `
             class="flex flex-col gap-0.5"
           >
             <div
-              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+              class="hover:bg-base-300 group flex items-center justify-between rounded-full px-2 py-1.5 transition-colors duration-150"
             >
               <a
                 class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
@@ -280,7 +280,7 @@ exports[`StatusTab should match snapshot 1`] = `
               </div>
             </div>
             <div
-              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+              class="hover:bg-base-300 group flex items-center justify-between rounded-full px-2 py-1.5 transition-colors duration-150"
             >
               <a
                 class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
@@ -298,7 +298,7 @@ exports[`StatusTab should match snapshot 1`] = `
               </div>
             </div>
             <div
-              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+              class="hover:bg-base-300 group flex items-center justify-between rounded-full px-2 py-1.5 transition-colors duration-150"
             >
               <a
                 class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
@@ -316,7 +316,7 @@ exports[`StatusTab should match snapshot 1`] = `
               </div>
             </div>
             <div
-              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+              class="hover:bg-base-300 group flex items-center justify-between rounded-full px-2 py-1.5 transition-colors duration-150"
             >
               <a
                 class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
@@ -334,7 +334,7 @@ exports[`StatusTab should match snapshot 1`] = `
               </div>
             </div>
             <div
-              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+              class="hover:bg-base-300 group flex items-center justify-between rounded-full px-2 py-1.5 transition-colors duration-150"
             >
               <a
                 class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
@@ -352,7 +352,7 @@ exports[`StatusTab should match snapshot 1`] = `
               </div>
             </div>
             <div
-              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+              class="hover:bg-base-300 group flex items-center justify-between rounded-full px-2 py-1.5 transition-colors duration-150"
             >
               <a
                 class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
@@ -381,7 +381,7 @@ exports[`StatusTab should match snapshot 1`] = `
             class="flex flex-col gap-0.5"
           >
             <div
-              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+              class="hover:bg-base-300 group flex items-center justify-between rounded-full px-2 py-1.5 transition-colors duration-150"
             >
               <a
                 class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
@@ -399,7 +399,7 @@ exports[`StatusTab should match snapshot 1`] = `
               </div>
             </div>
             <div
-              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+              class="hover:bg-base-300 group flex items-center justify-between rounded-full px-2 py-1.5 transition-colors duration-150"
             >
               <a
                 class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
@@ -417,7 +417,7 @@ exports[`StatusTab should match snapshot 1`] = `
               </div>
             </div>
             <div
-              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+              class="hover:bg-base-300 group flex items-center justify-between rounded-full px-2 py-1.5 transition-colors duration-150"
             >
               <a
                 class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
@@ -446,7 +446,7 @@ exports[`StatusTab should match snapshot 1`] = `
             class="flex flex-col gap-0.5"
           >
             <div
-              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+              class="hover:bg-base-300 group flex items-center justify-between rounded-full px-2 py-1.5 transition-colors duration-150"
             >
               <a
                 class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
@@ -464,7 +464,7 @@ exports[`StatusTab should match snapshot 1`] = `
               </div>
             </div>
             <div
-              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+              class="hover:bg-base-300 group flex items-center justify-between rounded-full px-2 py-1.5 transition-colors duration-150"
             >
               <a
                 class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"
@@ -482,7 +482,7 @@ exports[`StatusTab should match snapshot 1`] = `
               </div>
             </div>
             <div
-              class="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150"
+              class="hover:bg-base-300 group flex items-center justify-between rounded-full px-2 py-1.5 transition-colors duration-150"
             >
               <a
                 class="text-base-content/70 group-hover:text-base-content text-xs tracking-wide capitalize underline decoration-dotted transition-colors"

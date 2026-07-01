@@ -165,15 +165,18 @@ export const JSONSchemaModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       fullHeight>
       <div className="border-base-300 flex flex-wrap items-center justify-between gap-2 border-b px-4 py-3">
         <div className="flex items-center gap-3">
-          <div className="tabs tabs-boxed tabs-sm">
+          <div className="flex gap-0">
             {(['json', 'yaml'] as InputMode[]).map((m) => (
-              <a
+              <button
                 key={m}
-                role="tab"
-                className={`tab ${inputMode === m ? 'tab-active' : ''}`}
+                className={`border-b-2 px-2 py-1 text-xs transition-colors ${
+                  inputMode === m
+                    ? 'border-primary text-primary'
+                    : 'text-base-content/40 border-transparent'
+                }`}
                 onClick={() => setInputMode(m)}>
                 {m.toUpperCase()}
-              </a>
+              </button>
             ))}
           </div>
         </div>
@@ -218,15 +221,18 @@ export const JSONSchemaModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             <span className="text-base-content/40 text-[10px] tracking-widest uppercase">
               Lang
             </span>
-            <div className="tabs tabs-boxed tabs-sm">
+            <div className="flex gap-0">
               {LANGUAGE_TABS.map((t) => (
-                <a
+                <button
                   key={t}
-                  role="tab"
-                  className={`tab ${convertTab === t ? 'tab-active' : ''}`}
+                  className={`border-b-2 px-2 py-1 text-xs transition-colors ${
+                    convertTab === t
+                      ? 'border-primary text-primary'
+                      : 'text-base-content/40 border-transparent'
+                  }`}
                   onClick={() => setConvertTab(t)}>
                   {TAB_LABELS[t]}
-                </a>
+                </button>
               ))}
             </div>
           </div>
@@ -235,15 +241,18 @@ export const JSONSchemaModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             <span className="text-base-content/40 text-[10px] tracking-widest uppercase">
               Format
             </span>
-            <div className="tabs tabs-boxed tabs-sm">
+            <div className="flex gap-0">
               {DATA_FORMAT_TABS.map((t) => (
-                <a
+                <button
                   key={t}
-                  role="tab"
-                  className={`tab ${convertTab === t ? 'tab-active' : ''}`}
+                  className={`border-b-2 px-2 py-1 text-xs transition-colors ${
+                    convertTab === t
+                      ? 'border-primary text-primary'
+                      : 'text-base-content/40 border-transparent'
+                  }`}
                   onClick={() => setConvertTab(t)}>
                   {TAB_LABELS[t]}
-                </a>
+                </button>
               ))}
             </div>
           </div>

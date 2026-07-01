@@ -123,7 +123,7 @@ export const ChatModels: FC<ChatModelsProps> = ({
                   className={`flex cursor-pointer flex-col gap-0.5 rounded-lg px-2.5 py-2 transition-colors ${
                     isSelected ? 'bg-neutral-700/60' : 'hover:bg-neutral-800/60'
                   }`}>
-                  <span className="text-xs font-medium">{model.name}</span>
+                  <span className="text-xs font-normal">{model.name}</span>
                   <span className="truncate text-[9px] opacity-30">
                     {model.id}
                   </span>

@@ -49,7 +49,7 @@ export const NoSleepModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     <ModalWrapper onClose={onClose} title="No Sleep" size="max-w-2xl">
       <div className="flex flex-col items-center justify-center gap-12 py-8">
         <p
-          className="text-base-content/50 text-xs font-semibold tracking-[0.35em] uppercase"
+          className="text-base-content/50 text-xs font-normal tracking-[0.35em] uppercase"
           style={{ fontFamily: "'DM Mono', monospace" }}>
           Have not slept for
         </p>
@@ -57,20 +57,20 @@ export const NoSleepModal: FC<{ onClose: () => void }> = ({ onClose }) => {
         <div className="flex flex-wrap items-end justify-center gap-x-8 gap-y-6">
           {visible.length === 0 ? (
             <div className="flex flex-col items-center gap-1">
-              <span className="text-primary text-6xl leading-none font-black tabular-nums md:text-8xl">
+              <span className="text-primary text-6xl leading-none font-normal tabular-nums md:text-8xl">
                 00
               </span>
-              <span className="text-base-content/40 text-xs font-semibold tracking-[0.25em] uppercase">
+              <span className="text-base-content/40 text-xs font-normal tracking-[0.25em] uppercase">
                 seconds
               </span>
             </div>
           ) : (
             visible.map((u) => (
               <div key={u.label} className="flex flex-col items-center gap-1">
-                <span className="text-primary text-6xl leading-none font-black tabular-nums md:text-8xl">
+                <span className="text-primary text-6xl leading-none font-normal tabular-nums md:text-8xl">
                   {u.value.toString().padStart(2, '0')}
                 </span>
-                <span className="text-base-content/40 text-xs font-semibold tracking-[0.25em] uppercase">
+                <span className="text-base-content/40 text-xs font-normal tracking-[0.25em] uppercase">
                   {u.label}
                 </span>
               </div>

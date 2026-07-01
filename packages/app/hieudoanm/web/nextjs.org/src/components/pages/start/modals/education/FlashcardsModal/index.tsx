@@ -76,13 +76,13 @@ export const FlashcardsModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             onClick={flipCard}>
             <div
               className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${flipped ? 'opacity-0' : 'opacity-100'}`}>
-              <p className="text-center text-2xl font-semibold">
+              <p className="text-center text-2xl font-normal">
                 {currentCard.front}
               </p>
             </div>
             <div
               className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${flipped ? 'opacity-100' : 'opacity-0'}`}>
-              <p className="text-center text-2xl font-semibold">
+              <p className="text-center text-2xl font-normal">
                 {currentCard.back}
               </p>
             </div>

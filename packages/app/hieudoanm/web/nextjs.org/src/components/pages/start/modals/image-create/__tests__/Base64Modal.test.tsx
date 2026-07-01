@@ -42,7 +42,9 @@ describe('Base64Modal', () => {
   it('switches to encode tab', () => {
     render(<Base64Modal onClose={onClose} />);
     fireEvent.click(screen.getByText('Encode'));
-    expect(screen.getByText(/Click or drop a file/)).toBeInTheDocument();
+    expect(
+      screen.getByText('Drop a file here or click to browse')
+    ).toBeInTheDocument();
   });
 
   it('switches back to decode tab', () => {
@@ -103,7 +105,9 @@ describe('Base64Modal', () => {
   it('encode tab shows upload area', () => {
     render(<Base64Modal onClose={onClose} />);
     fireEvent.click(screen.getByText('Encode'));
-    expect(screen.getByText(/Click or drop/)).toBeInTheDocument();
+    expect(
+      screen.getByText('Drop a file here or click to browse')
+    ).toBeInTheDocument();
   });
 
   it('uploads file via file input change', async () => {
@@ -127,7 +131,9 @@ describe('Base64Modal', () => {
     fireEvent.click(screen.getByText('Encode'));
     const fr = mockFileReader('data:text/plain;base64,SGVsbG8=');
     const file = new File(['Hello'], 'hello.txt', { type: 'text/plain' });
-    const dropZone = screen.getByText(/Click or drop/).closest('div')!;
+    const dropZone = screen
+      .getByText('Drop a file here or click to browse')
+      .closest('div')!;
     fireEvent.dragOver(dropZone);
     fireEvent.dragLeave(dropZone);
     fireEvent.drop(dropZone, { dataTransfer: { files: [file] } });

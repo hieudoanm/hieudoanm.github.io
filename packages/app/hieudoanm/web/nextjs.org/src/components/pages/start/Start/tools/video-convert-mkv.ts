@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Video',
     tags: ['media', 'convert'],
     emoji: '🎬',
-    color: '#ef4444',
     onClick: open('video-mkv-to-gif'),
   },
   {
@@ -15,7 +14,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Video',
     tags: ['media', 'convert'],
     emoji: '🎬',
-    color: '#ef4444',
     onClick: open('video-mkv-to-mp3'),
   },
   {
@@ -23,7 +21,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Video',
     tags: ['media', 'convert'],
     emoji: '🎬',
-    color: '#ef4444',
     onClick: open('video-mkv-to-mp4'),
   },
 ];

@@ -45,7 +45,7 @@ exports[`PassportTab should render 1`] = `
       </button>
     </div>
     <p
-      class="text-base-content/40 text-[10px] font-bold tracking-widest uppercase"
+      class="text-base-content/40 text-[10px] font-normal tracking-widest uppercase"
     >
       188
        countr
@@ -72,7 +72,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             United Arab Emirates
           </p>
@@ -103,7 +103,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Spain
           </p>
@@ -134,7 +134,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Singapore
           </p>
@@ -165,7 +165,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Belgium
           </p>
@@ -196,7 +196,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Portugal
           </p>
@@ -227,7 +227,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Denmark
           </p>
@@ -258,7 +258,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Malaysia
           </p>
@@ -289,7 +289,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Germany
           </p>
@@ -320,7 +320,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Greece
           </p>
@@ -351,7 +351,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Netherlands
           </p>
@@ -382,7 +382,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Italy
           </p>
@@ -413,7 +413,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Norway
           </p>
@@ -444,7 +444,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Luxembourg
           </p>
@@ -475,7 +475,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Finland
           </p>
@@ -506,7 +506,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Switzerland
           </p>
@@ -537,7 +537,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Austria
           </p>
@@ -568,7 +568,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Sweden
           </p>
@@ -599,7 +599,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             France
           </p>
@@ -630,7 +630,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Malta
           </p>
@@ -661,7 +661,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Ireland
           </p>
@@ -692,7 +692,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             South Korea
           </p>
@@ -723,7 +723,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Hungary
           </p>
@@ -754,7 +754,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Japan
           </p>
@@ -785,7 +785,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Latvia
           </p>
@@ -816,7 +816,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Poland
           </p>
@@ -847,7 +847,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Slovenia
           </p>
@@ -878,7 +878,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Romania
           </p>
@@ -909,7 +909,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Bulgaria
           </p>
@@ -940,7 +940,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Slovakia
           </p>
@@ -971,7 +971,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Croatia
           </p>
@@ -1002,7 +1002,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Estonia
           </p>
@@ -1033,7 +1033,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Cyprus
           </p>
@@ -1064,7 +1064,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Lithuania
           </p>
@@ -1095,7 +1095,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Liechtenstein
           </p>
@@ -1126,7 +1126,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             New Zealand
           </p>
@@ -1157,7 +1157,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             United Kingdom
           </p>
@@ -1188,7 +1188,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Australia
           </p>
@@ -1219,7 +1219,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Iceland
           </p>
@@ -1250,7 +1250,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Canada
           </p>
@@ -1281,7 +1281,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Monaco
           </p>
@@ -1312,7 +1312,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Hong Kong
           </p>
@@ -1343,7 +1343,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Brazil
           </p>
@@ -1374,7 +1374,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Argentina
           </p>
@@ -1405,7 +1405,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Chile
           </p>
@@ -1436,7 +1436,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Andorra
           </p>
@@ -1467,7 +1467,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             San Marino
           </p>
@@ -1498,7 +1498,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Barbados
           </p>
@@ -1529,7 +1529,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Brunei
           </p>
@@ -1560,7 +1560,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Bahamas
           </p>
@@ -1591,7 +1591,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Israel
           </p>
@@ -1622,7 +1622,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Uruguay
           </p>
@@ -1653,7 +1653,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Mexico
           </p>
@@ -1684,7 +1684,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Vatican City
           </p>
@@ -1715,7 +1715,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Seychelles
           </p>
@@ -1746,7 +1746,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Saint Kitts and Nevis
           </p>
@@ -1777,7 +1777,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Peru
           </p>
@@ -1808,7 +1808,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Antigua and Barbuda
           </p>
@@ -1839,7 +1839,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Costa Rica
           </p>
@@ -1870,7 +1870,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Ukraine
           </p>
@@ -1901,7 +1901,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Paraguay
           </p>
@@ -1932,7 +1932,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Trinidad and Tobago
           </p>
@@ -1963,7 +1963,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Mauritius
           </p>
@@ -1994,7 +1994,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Grenada
           </p>
@@ -2025,7 +2025,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Saint Lucia
           </p>
@@ -2056,7 +2056,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Panama
           </p>
@@ -2087,7 +2087,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Solomon Islands
           </p>
@@ -2118,7 +2118,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Dominica
           </p>
@@ -2149,7 +2149,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Colombia
           </p>
@@ -2180,7 +2180,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Serbia
           </p>
@@ -2211,7 +2211,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             El Salvador
           </p>
@@ -2242,7 +2242,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Guatemala
           </p>
@@ -2273,7 +2273,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Georgia
           </p>
@@ -2304,7 +2304,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             North Macedonia
           </p>
@@ -2335,7 +2335,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Montenegro
           </p>
@@ -2366,7 +2366,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Samoa
           </p>
@@ -2397,7 +2397,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Honduras
           </p>
@@ -2428,7 +2428,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Kiribati
           </p>
@@ -2459,7 +2459,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Marshall Islands
           </p>
@@ -2490,7 +2490,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Tuvalu
           </p>
@@ -2521,7 +2521,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Taiwan
           </p>
@@ -2552,7 +2552,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Tonga
           </p>
@@ -2583,7 +2583,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Albania
           </p>
@@ -2614,7 +2614,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Moldova
           </p>
@@ -2645,7 +2645,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Nicaragua
           </p>
@@ -2676,7 +2676,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Venezuela
           </p>
@@ -2707,7 +2707,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Bosnia and Herzegovina
           </p>
@@ -2738,7 +2738,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Micronesia
           </p>
@@ -2769,7 +2769,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Palau
           </p>
@@ -2800,7 +2800,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Qatar
           </p>
@@ -2831,7 +2831,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Kuwait
           </p>
@@ -2862,7 +2862,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             South Africa
           </p>
@@ -2893,7 +2893,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Timor-Leste
           </p>
@@ -2924,7 +2924,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Maldives
           </p>
@@ -2955,7 +2955,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Belize
           </p>
@@ -2986,7 +2986,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Ecuador
           </p>
@@ -3017,7 +3017,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Saudi Arabia
           </p>
@@ -3048,7 +3048,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Bahrain
           </p>
@@ -3079,7 +3079,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Fiji
           </p>
@@ -3110,7 +3110,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Jamaica
           </p>
@@ -3141,7 +3141,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Guyana
           </p>
@@ -3172,7 +3172,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Thailand
           </p>
@@ -3203,7 +3203,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Oman
           </p>
@@ -3234,7 +3234,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Vanuatu
           </p>
@@ -3265,7 +3265,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Kosovo
           </p>
@@ -3296,7 +3296,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             China
           </p>
@@ -3327,7 +3327,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Belarus
           </p>
@@ -3358,7 +3358,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Kazakhstan
           </p>
@@ -3389,7 +3389,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Indonesia
           </p>
@@ -3420,7 +3420,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Bolivia
           </p>
@@ -3451,7 +3451,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Papua New Guinea
           </p>
@@ -3482,7 +3482,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Nauru
           </p>
@@ -3513,7 +3513,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Suriname
           </p>
@@ -3544,7 +3544,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Botswana
           </p>
@@ -3575,7 +3575,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Morocco
           </p>
@@ -3606,7 +3606,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Dominican Republic
           </p>
@@ -3637,7 +3637,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Azerbaijan
           </p>
@@ -3668,7 +3668,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Lesotho
           </p>
@@ -3699,7 +3699,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Armenia
           </p>
@@ -3730,7 +3730,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Namibia
           </p>
@@ -3761,7 +3761,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Mongolia
           </p>
@@ -3792,7 +3792,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Eswatini
           </p>
@@ -3823,7 +3823,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Philippines
           </p>
@@ -3854,7 +3854,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Kenya
           </p>
@@ -3885,7 +3885,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Malawi
           </p>
@@ -3916,7 +3916,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Tunisia
           </p>
@@ -3947,7 +3947,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Cape Verde
           </p>
@@ -3978,7 +3978,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Tanzania
           </p>
@@ -4009,7 +4009,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Zambia
           </p>
@@ -4040,7 +4040,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Ghana
           </p>
@@ -4071,7 +4071,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Cuba
           </p>
@@ -4102,7 +4102,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Gambia
           </p>
@@ -4133,7 +4133,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             India
           </p>
@@ -4164,7 +4164,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Rwanda
           </p>
@@ -4195,7 +4195,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Kyrgyzstan
           </p>
@@ -4226,7 +4226,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Uganda
           </p>
@@ -4257,7 +4257,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Uzbekistan
           </p>
@@ -4288,7 +4288,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Zimbabwe
           </p>
@@ -4319,7 +4319,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Vietnam
           </p>
@@ -4350,7 +4350,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Mozambique
           </p>
@@ -4381,7 +4381,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Gabon
           </p>
@@ -4412,7 +4412,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Benin
           </p>
@@ -4443,7 +4443,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Madagascar
           </p>
@@ -4474,7 +4474,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Sierra Leone
           </p>
@@ -4505,7 +4505,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Tajikistan
           </p>
@@ -4536,7 +4536,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Algeria
           </p>
@@ -4567,7 +4567,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Cambodia
           </p>
@@ -4598,7 +4598,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Senegal
           </p>
@@ -4629,7 +4629,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Burkina Faso
           </p>
@@ -4660,7 +4660,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Equatorial Guinea
           </p>
@@ -4691,7 +4691,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Togo
           </p>
@@ -4722,7 +4722,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Angola
           </p>
@@ -4753,7 +4753,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Niger
           </p>
@@ -4784,7 +4784,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Mauritania
           </p>
@@ -4815,7 +4815,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Bhutan
           </p>
@@ -4846,7 +4846,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Jordan
           </p>
@@ -4877,7 +4877,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Laos
           </p>
@@ -4908,7 +4908,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Egypt
           </p>
@@ -4939,7 +4939,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Mali
           </p>
@@ -4970,7 +4970,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Guinea
           </p>
@@ -5001,7 +5001,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Comoros
           </p>
@@ -5032,7 +5032,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Turkmenistan
           </p>
@@ -5063,7 +5063,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Haiti
           </p>
@@ -5094,7 +5094,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Djibouti
           </p>
@@ -5125,7 +5125,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Central African Republic
           </p>
@@ -5156,7 +5156,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Guinea-Bissau
           </p>
@@ -5187,7 +5187,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Liberia
           </p>
@@ -5218,7 +5218,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Chad
           </p>
@@ -5249,7 +5249,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Cameroon
           </p>
@@ -5280,7 +5280,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Burundi
           </p>
@@ -5311,7 +5311,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Sri Lanka
           </p>
@@ -5342,7 +5342,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Myanmar
           </p>
@@ -5373,7 +5373,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Lebanon
           </p>
@@ -5404,7 +5404,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Nepal
           </p>
@@ -5435,7 +5435,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Nigeria
           </p>
@@ -5466,7 +5466,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Ethiopia
           </p>
@@ -5497,7 +5497,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Iran
           </p>
@@ -5528,7 +5528,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Libya
           </p>
@@ -5559,7 +5559,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Sudan
           </p>
@@ -5590,7 +5590,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             South Sudan
           </p>
@@ -5621,7 +5621,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Eritrea
           </p>
@@ -5652,7 +5652,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             North Korea
           </p>
@@ -5683,7 +5683,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Bangladesh
           </p>
@@ -5714,7 +5714,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Yemen
           </p>
@@ -5745,7 +5745,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Somalia
           </p>
@@ -5776,7 +5776,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Pakistan
           </p>
@@ -5807,7 +5807,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Iraq
           </p>
@@ -5838,7 +5838,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Syria
           </p>
@@ -5869,7 +5869,7 @@ exports[`PassportTab should render 1`] = `
           class="min-w-0 flex-1"
         >
           <p
-            class="truncate text-xs font-medium"
+            class="truncate text-xs font-normal"
           >
             Afghanistan
           </p>

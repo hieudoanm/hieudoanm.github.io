@@ -131,7 +131,7 @@ export const CronModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             <div className="flex items-center justify-center gap-3">
               {expr.split(' ').map((part, i) => (
                 <div key={i} className="flex flex-col items-center gap-1">
-                  <span className="font-mono text-xl leading-none font-black tabular-nums">
+                  <span className="font-mono text-xl leading-none font-normal tabular-nums">
                     {part}
                   </span>
                   <span className="text-base-content/30 font-mono text-[9px] tracking-widest uppercase">

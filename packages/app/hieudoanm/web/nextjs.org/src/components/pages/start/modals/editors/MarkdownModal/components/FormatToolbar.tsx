@@ -23,7 +23,7 @@ export const FormatToolbar: FC<FormatToolbarProps> = memo(
     <div className="border-base-300 flex flex-wrap items-center gap-0.5 border-b px-3 py-1">
       <button
         type="button"
-        className="btn btn-ghost btn-xs btn-square font-bold"
+        className="btn btn-ghost btn-xs btn-square font-normal"
         onClick={() => exec((v) => insertAround(v, '**', '**', 'bold text'))}
         title="Bold (Ctrl+B)">
         B
@@ -49,7 +49,7 @@ export const FormatToolbar: FC<FormatToolbarProps> = memo(
         <button
           key={level}
           type="button"
-          className="btn btn-ghost btn-xs btn-square font-bold"
+          className="btn btn-ghost btn-xs btn-square font-normal"
           onClick={() => exec((v) => insertHeading(v, level))}
           title={`Heading ${level}`}>
           H{level}

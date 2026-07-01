@@ -34,15 +34,18 @@ export const LegislationModal: FC<{ onClose: () => void }> = ({ onClose }) => {
         ))}
       </div>
       {chamberKeys.length > 1 && (
-        <div role="tablist" className="tabs tabs-boxed mb-4 w-full">
+        <div className="border-base-300 mb-4 flex w-full border-b">
           {chamberKeys.map((key) => (
-            <a
+            <button
               key={key}
-              role="tab"
-              className={`tab flex-1 text-xs ${chamberKey === key ? 'tab-active' : ''}`}
+              className={`flex-1 border-b-2 px-3 py-2 text-xs transition-colors ${
+                chamberKey === key
+                  ? 'border-primary text-primary'
+                  : 'text-base-content/40 border-transparent'
+              }`}
               onClick={() => setChamberKey(key)}>
               {key}
-            </a>
+            </button>
           ))}
         </div>
       )}
@@ -51,15 +54,15 @@ export const LegislationModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       </div>
       <div className="mt-3 mb-4 flex justify-center gap-6 text-xs">
         <div className="text-center">
-          <p className="text-2xl font-black">{chamber.totalSeats}</p>
+          <p className="text-2xl font-normal">{chamber.totalSeats}</p>
           <p className="opacity-40">Total seats</p>
         </div>
         <div className="text-center">
-          <p className="text-2xl font-black">{majority}</p>
+          <p className="text-2xl font-normal">{majority}</p>
           <p className="opacity-40">For majority</p>
         </div>
         <div className="text-center">
-          <p className="text-2xl font-black" style={{ color: largest.color }}>
+          <p className="text-2xl font-normal" style={{ color: largest.color }}>
             {largest.seats}
           </p>
           <p className="opacity-40">Largest party</p>

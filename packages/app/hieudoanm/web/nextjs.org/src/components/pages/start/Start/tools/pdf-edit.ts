@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'PDF',
     tags: ['edit', 'document', 'adobe', 'acrobat'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('pdf-annotate'),
   },
   {
@@ -24,7 +23,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'acrobat',
     ],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('pdf-compress'),
   },
   {
@@ -32,7 +30,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'PDF',
     tags: ['edit', 'document', 'trim', 'cut', 'clip-image', 'adobe', 'acrobat'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('pdf-crop'),
   },
   {
@@ -40,7 +37,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'PDF',
     tags: ['edit', 'document', 'adobe', 'acrobat'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('pdf-delete-pages'),
   },
   {
@@ -48,7 +44,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'PDF',
     tags: ['edit', 'document', 'adobe', 'acrobat'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('pdf-merge'),
   },
   {
@@ -56,7 +51,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'PDF',
     tags: ['edit', 'document', 'adobe', 'acrobat'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('pdf-page-numbers'),
   },
   {
@@ -64,7 +58,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'PDF',
     tags: ['edit', 'document', 'adobe', 'acrobat'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('pdf-rearrange'),
   },
   {
@@ -72,7 +65,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'PDF',
     tags: ['edit', 'document', 'adobe', 'acrobat'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('pdf-redact'),
   },
   {
@@ -80,7 +72,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'PDF',
     tags: ['edit', 'document', 'flip', 'orientation', 'adobe', 'acrobat'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('pdf-rotate'),
   },
   {
@@ -88,7 +79,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'PDF',
     tags: ['edit', 'document', 'adobe', 'acrobat'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('pdf-split'),
   },
   {
@@ -96,7 +86,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'PDF',
     tags: ['edit', 'document', 'watermark-removal', 'logo', 'adobe', 'acrobat'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('pdf-watermark'),
   },
 ];

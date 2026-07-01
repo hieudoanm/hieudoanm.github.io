@@ -14,7 +14,7 @@ exports[`SnakeModal should render correctly 1`] = `
         class="border-base-300 flex items-center justify-between border-b px-4 py-3"
       >
         <h3
-          class="text-sm font-bold"
+          class="text-sm font-normal"
         >
           Snake
         </h3>
@@ -502,7 +502,7 @@ exports[`SnakeModal should render correctly 1`] = `
             value="1"
           />
           <span
-            class="font-semibold"
+            class="font-normal"
           >
             1
           </span>

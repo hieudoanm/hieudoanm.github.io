@@ -67,7 +67,7 @@ export const ColorsModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             type="text"
             value={hex}
             onChange={(e) => update(e.target.value)}
-            className="w-full bg-transparent font-mono text-2xl font-black tracking-tight uppercase focus:outline-none"
+            className="w-full bg-transparent font-mono text-2xl font-normal tracking-tight uppercase focus:outline-none"
             maxLength={7}
           />
         </div>
@@ -87,7 +87,7 @@ export const ColorsModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             <span className="font-mono text-[10px] tracking-widest uppercase opacity-60">
               {label}
             </span>
-            <span className="font-mono text-sm font-semibold">{value}</span>
+            <span className="font-mono text-sm font-normal">{value}</span>
           </div>
         ))}
       </div>

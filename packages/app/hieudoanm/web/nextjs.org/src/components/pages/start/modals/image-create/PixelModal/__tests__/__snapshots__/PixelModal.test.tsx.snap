@@ -18,7 +18,7 @@ exports[`PixelModal matches snapshot 1`] = `
         >
           <div>
             <h2
-              class="text-lg font-black tracking-tight"
+              class="text-lg font-normal tracking-tight"
             >
               Pixel Art Grid
             </h2>
@@ -43,7 +43,7 @@ exports[`PixelModal matches snapshot 1`] = `
             type="file"
           />
           <div
-            class="flex h-32 w-full cursor-pointer flex-col items-center justify-center gap-2 rounded-xl border-2 border-dashed text-sm transition-colors border-base-300 hover:border-base-content/50"
+            class="flex h-32 w-full cursor-pointer flex-col items-center justify-center gap-2 rounded-xl border-2 border-dashed text-sm transition-colors border-base-300 hover:border-base-content/50 "
             role="button"
             tabindex="0"
           >
@@ -64,7 +64,7 @@ exports[`PixelModal matches snapshot 1`] = `
             <span
               class="opacity-60"
             >
-              Drop an image here or click to browse
+              Drop a file here or click to browse
             </span>
           </div>
         </div>

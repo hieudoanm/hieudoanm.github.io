@@ -172,14 +172,14 @@ export const PalindromeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
         <div className="mb-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <span className="text-xs opacity-50">Score</span>
-            <span className="badge badge-neutral font-bold">{score}</span>
+            <span className="badge badge-neutral font-normal">{score}</span>
           </div>
         </div>
         <div className="mb-3 flex items-center justify-between">
           <span className={`badge ${typeBadgeClass} text-xs`}>
             {typeBadgeLabel}
           </span>
-          <span className={`font-mono text-sm font-bold ${timerClass}`}>
+          <span className={`font-mono text-sm font-normal ${timerClass}`}>
             {timer}s
           </span>
         </div>
@@ -188,7 +188,7 @@ export const PalindromeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             <button
               key={item.id}
               onClick={() => moveToDrop(item.id)}
-              className="btn btn-sm btn-outline h-10 w-10 p-0 text-base font-bold">
+              className="btn btn-sm btn-outline h-10 w-10 p-0 text-base font-normal">
               {item.l.toUpperCase()}
             </button>
           ))}
@@ -201,7 +201,7 @@ export const PalindromeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             <button
               key={item.id}
               onClick={() => moveToBank(idx)}
-              className="btn btn-sm btn-info h-10 w-10 p-0 text-base font-bold">
+              className="btn btn-sm btn-info h-10 w-10 p-0 text-base font-normal">
               {item.l.toUpperCase()}
             </button>
           ))}
@@ -249,7 +249,7 @@ export const PalindromeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
               </div>
             ) : definition ? (
               <div>
-                <p className="mb-1 font-bold uppercase opacity-70">
+                <p className="mb-1 font-normal uppercase opacity-70">
                   {definition.word}
                 </p>
                 <ul className="space-y-1">

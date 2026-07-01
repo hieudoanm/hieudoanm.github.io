@@ -111,7 +111,7 @@ export const SheetsModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       {isDragging && (
         <div className="bg-base-100/80 pointer-events-none fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm">
           <div className="border-primary rounded-2xl border-2 border-dashed p-16 text-center">
-            <p className="text-primary text-xl font-semibold tracking-widest uppercase">
+            <p className="text-primary text-xl font-normal tracking-widest uppercase">
               Drop .db file
             </p>
           </div>
@@ -180,7 +180,7 @@ export const SheetsModal: FC<{ onClose: () => void }> = ({ onClose }) => {
 
         <footer className="bg-base-200 border-base-300 flex flex-shrink-0 items-center gap-3 border-t px-4 py-1.5">
           {dbInstance && (
-            <span className="bg-success inline-block h-2 w-2 flex-shrink-0 animate-pulse rounded-full" />
+            <span className="bg-primary inline-block h-2 w-2 flex-shrink-0 animate-pulse rounded-full" />
           )}
           <span className="text-base-content/40 truncate font-mono text-[11px]">
             {status}

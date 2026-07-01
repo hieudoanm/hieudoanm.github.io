@@ -105,11 +105,11 @@ export const RockPaperScissorsModal: FC<{ onClose: () => void }> = ({
             </span>
           </div>
           <div className="flex flex-col items-center gap-1">
-            <span className={`text-2xl font-black ${resultColor}`}>
+            <span className={`text-2xl font-normal ${resultColor}`}>
               {resultEmoji}
             </span>
             {result && (
-              <span className={`text-xs font-bold ${resultColor} uppercase`}>
+              <span className={`text-xs font-normal ${resultColor} uppercase`}>
                 {result}
               </span>
             )}

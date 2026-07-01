@@ -16,7 +16,7 @@ export const ReferenceCard: React.FC<{
   return (
     <div className="border-base-300 bg-base-200 rounded-lg border p-4 text-sm">
       <p className="text-base-content">
-        <span className="font-medium">{authors}</span> ({reference.year}).{' '}
+        <span className="font-normal">{authors}</span> ({reference.year}).{' '}
         <em>{reference.title}</em>. <em>{reference.journal}</em>. {journalPart}.
       </p>
       <div className="mt-2 flex items-center justify-between gap-4">
@@ -24,7 +24,7 @@ export const ReferenceCard: React.FC<{
           href={reference.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-info truncate text-xs hover:underline">
+          className="text-primary truncate text-xs hover:underline">
           {reference.url}
         </a>
         <button

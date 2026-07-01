@@ -39,7 +39,7 @@ export const ContrastCheckerModal: FC<{ onClose: () => void }> = ({
             color: fg,
             borderColor: 'oklch(0.5 0 0 / 0.2)',
           }}>
-          <p className="text-center text-2xl font-black tracking-tight">
+          <p className="text-center text-2xl font-normal tracking-tight">
             Sample Text
           </p>
           <p className="text-center text-xs leading-relaxed opacity-75">
@@ -94,12 +94,12 @@ export const ContrastCheckerModal: FC<{ onClose: () => void }> = ({
               <div
                 key={label}
                 className={`flex items-center justify-between px-3 py-2 ${
-                  pass ? 'text-success' : 'text-base-content/40'
+                  pass ? 'text-primary' : 'text-base-content/40'
                 }`}>
                 <span className="font-mono text-[10px] tracking-widest uppercase">
                   {label}
                 </span>
-                <span className="text-sm font-bold">
+                <span className="text-sm font-normal">
                   {pass ? 'PASS' : 'FAIL'}
                 </span>
               </div>

@@ -138,12 +138,12 @@ export const BaccaratModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                 {playerHand.map((c, i) => (
                   <span
                     key={i}
-                    className={`inline-flex h-8 w-6 items-center justify-center rounded text-xs font-bold ${isRed(c.suit) ? 'text-error' : 'text-base-content'}`}
+                    className={`inline-flex h-8 w-6 items-center justify-center rounded text-xs font-normal ${isRed(c.suit) ? 'text-error' : 'text-base-content'}`}
                     style={{ backgroundColor: '#1e293b' }}>
                     {cardName(c)}
                   </span>
                 ))}
-                <span className="ml-2 text-sm font-bold">
+                <span className="ml-2 text-sm font-normal">
                   {handValue(playerHand)}
                 </span>
               </div>
@@ -154,17 +154,17 @@ export const BaccaratModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                 {bankerHand.map((c, i) => (
                   <span
                     key={i}
-                    className={`inline-flex h-8 w-6 items-center justify-center rounded text-xs font-bold ${isRed(c.suit) ? 'text-error' : 'text-base-content'}`}
+                    className={`inline-flex h-8 w-6 items-center justify-center rounded text-xs font-normal ${isRed(c.suit) ? 'text-error' : 'text-base-content'}`}
                     style={{ backgroundColor: '#1e293b' }}>
                     {cardName(c)}
                   </span>
                 ))}
-                <span className="ml-2 text-sm font-bold">
+                <span className="ml-2 text-sm font-normal">
                   {handValue(bankerHand)}
                 </span>
               </div>
             </div>
-            <div className="text-center text-sm font-bold">
+            <div className="text-center text-sm font-normal">
               {result === 'tie' ? 'Tie!' : `${result} wins!`}
               {lastWon > 0 && (
                 <span className="text-success ml-2">+{lastWon}</span>

@@ -23,7 +23,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'gif',
     ],
     emoji: '✨',
-    color: '#3b82f6',
     onClick: open('ai-generate'),
   },
   {
@@ -40,7 +39,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'background-removal',
     ],
     emoji: '🖼️',
-    color: '#3b82f6',
     onClick: open('ai-remove-bg'),
   },
   {
@@ -55,7 +53,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'removal',
     ],
     emoji: '🎯',
-    color: '#3b82f6',
     onClick: open('ai-remove-object'),
   },
   {
@@ -69,7 +66,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'clear',
     ],
     emoji: '🚶',
-    color: '#3b82f6',
     onClick: open('ai-remove-person'),
   },
   {
@@ -86,7 +82,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'logo',
     ],
     emoji: '💧',
-    color: '#3b82f6',
     onClick: open('ai-remove-watermark'),
   },
   {
@@ -102,7 +97,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'old-photo',
     ],
     emoji: '🔄',
-    color: '#3b82f6',
     onClick: open('ai-restore'),
   },
   {
@@ -116,7 +110,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'blurry',
     ],
     emoji: '👁️',
-    color: '#3b82f6',
     onClick: open('ai-unblur'),
   },
   {
@@ -131,7 +124,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       '4k',
     ],
     emoji: '🔍',
-    color: '#3b82f6',
     onClick: open('ai-upscale'),
   },
 ];

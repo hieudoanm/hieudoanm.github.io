@@ -14,7 +14,7 @@ exports[`ManifestModal should render PWA manifest by default 1`] = `
         class="border-base-300 flex items-center justify-between border-b px-4 py-3"
       >
         <h3
-          class="text-sm font-bold"
+          class="text-sm font-normal"
         >
           Manifest Editor
         </h3>
@@ -28,20 +28,18 @@ exports[`ManifestModal should render PWA manifest by default 1`] = `
         class="border-base-300 flex items-center border-b px-4 py-3"
       >
         <div
-          class="tabs tabs-boxed"
+          class="flex gap-0"
         >
-          <a
-            class="tab tab-sm uppercase tab-active"
-            role="tab"
+          <button
+            class="border-b-2 px-3 py-1 text-xs uppercase transition-colors border-primary text-primary"
           >
             📱 PWA
-          </a>
-          <a
-            class="tab tab-sm uppercase "
-            role="tab"
+          </button>
+          <button
+            class="border-b-2 px-3 py-1 text-xs uppercase transition-colors border-transparent text-base-content/40"
           >
             🧩 Extension
-          </a>
+          </button>
         </div>
       </div>
       <div

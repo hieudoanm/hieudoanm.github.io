@@ -53,7 +53,7 @@ export const CreateMdToPdfModal: FC<{ onClose: () => void }> = ({
       <div className="flex flex-1 flex-col gap-4 overflow-hidden p-4">
         <div className="flex flex-1 gap-4 overflow-hidden">
           <div className="flex flex-1 flex-col">
-            <label className="mb-1 text-xs font-bold">Markdown</label>
+            <label className="mb-1 text-xs font-normal">Markdown</label>
             <textarea
               value={markdown}
               onChange={(e) => setMarkdown(e.target.value)}
@@ -61,7 +61,7 @@ export const CreateMdToPdfModal: FC<{ onClose: () => void }> = ({
             />
           </div>
           <div className="flex flex-1 flex-col">
-            <label className="mb-1 text-xs font-bold">Preview</label>
+            <label className="mb-1 text-xs font-normal">Preview</label>
             <div
               ref={previewRef}
               className="border-base-300 flex-1 overflow-auto rounded border p-3 text-xs"

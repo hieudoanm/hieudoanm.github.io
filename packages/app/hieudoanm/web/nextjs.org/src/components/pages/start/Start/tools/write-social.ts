@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Write',
     tags: ['social-media', 'post', 'writing'],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-caption'),
   },
   {
@@ -15,7 +14,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Write',
     tags: ['social-media', 'post', 'writing'],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-headline'),
   },
   {
@@ -23,7 +21,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Write',
     tags: ['social-media', 'writing'],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-linkedin-post'),
   },
   {
@@ -31,7 +28,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Write',
     tags: ['social-media', 'post', 'writing'],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-meta-description'),
   },
   {
@@ -39,7 +35,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Write',
     tags: ['social-media', 'post', 'writing', 'social', 'short-video'],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-tiktok-script'),
   },
   {
@@ -56,7 +51,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'builder',
     ],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-twitter-generator'),
   },
 ];

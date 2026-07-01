@@ -14,7 +14,7 @@ exports[`ResumeTimelineModal should render 1`] = `
         class="border-base-300 flex items-center justify-between border-b px-4 py-3"
       >
         <h3
-          class="text-sm font-bold"
+          class="text-sm font-normal"
         >
           Resume Timeline
         </h3>
@@ -37,7 +37,7 @@ exports[`ResumeTimelineModal should render 1`] = `
               class="pr-2 text-right md:pr-4"
             >
               <p
-                class="text-sm font-bold tracking-tight"
+                class="text-sm font-normal tracking-tight"
               >
                 🎓 Education
               </p>
@@ -47,7 +47,7 @@ exports[`ResumeTimelineModal should render 1`] = `
               class="pl-2 md:pl-4"
             >
               <p
-                class="text-sm font-bold tracking-tight"
+                class="text-sm font-normal tracking-tight"
               >
                 💼 Experience
               </p>
@@ -82,7 +82,7 @@ exports[`ResumeTimelineModal should render 1`] = `
                 class="flex flex-col items-center gap-1"
               >
                 <div
-                  class="font-mono text-[11px] font-bold tracking-tight opacity-60"
+                  class="font-mono text-[11px] font-normal tracking-tight opacity-60"
                 >
                   2026
                 </div>
@@ -116,7 +116,7 @@ exports[`ResumeTimelineModal should render 1`] = `
                   class="min-w-0"
                 >
                   <p
-                    class="text-sm leading-tight font-bold"
+                    class="text-sm leading-tight font-normal"
                   >
                     Engineer, Lead
                   </p>
@@ -162,7 +162,7 @@ exports[`ResumeTimelineModal should render 1`] = `
                 class="flex flex-col items-center gap-1"
               >
                 <div
-                  class="font-mono text-[11px] font-bold tracking-tight opacity-60"
+                  class="font-mono text-[11px] font-normal tracking-tight opacity-60"
                 >
                   2025
                 </div>
@@ -214,7 +214,7 @@ exports[`ResumeTimelineModal should render 1`] = `
                 class="flex flex-col items-center gap-1"
               >
                 <div
-                  class="font-mono text-[11px] font-bold tracking-tight opacity-60"
+                  class="font-mono text-[11px] font-normal tracking-tight opacity-60"
                 >
                   2024
                 </div>
@@ -248,7 +248,7 @@ exports[`ResumeTimelineModal should render 1`] = `
                   class="min-w-0"
                 >
                   <p
-                    class="text-sm leading-tight font-bold"
+                    class="text-sm leading-tight font-normal"
                   >
                     Engineer, Senior Analyst
                   </p>
@@ -294,7 +294,7 @@ exports[`ResumeTimelineModal should render 1`] = `
                 class="flex flex-col items-center gap-1"
               >
                 <div
-                  class="font-mono text-[11px] font-bold tracking-tight opacity-60"
+                  class="font-mono text-[11px] font-normal tracking-tight opacity-60"
                 >
                   2023
                 </div>
@@ -340,7 +340,7 @@ exports[`ResumeTimelineModal should render 1`] = `
                   class="min-w-0"
                 >
                   <p
-                    class="text-sm leading-tight font-bold"
+                    class="text-sm leading-tight font-normal"
                   >
                     Bachelor of Psychology
                   </p>
@@ -364,7 +364,7 @@ exports[`ResumeTimelineModal should render 1`] = `
                 class="flex flex-col items-center gap-1"
               >
                 <div
-                  class="font-mono text-[11px] font-bold tracking-tight opacity-60"
+                  class="font-mono text-[11px] font-normal tracking-tight opacity-60"
                 >
                   2022
                 </div>
@@ -426,7 +426,7 @@ exports[`ResumeTimelineModal should render 1`] = `
                 class="flex flex-col items-center gap-1"
               >
                 <div
-                  class="font-mono text-[11px] font-bold tracking-tight opacity-60"
+                  class="font-mono text-[11px] font-normal tracking-tight opacity-60"
                 >
                   2021
                 </div>
@@ -460,7 +460,7 @@ exports[`ResumeTimelineModal should render 1`] = `
                   class="min-w-0"
                 >
                   <p
-                    class="text-sm leading-tight font-bold"
+                    class="text-sm leading-tight font-normal"
                   >
                     Engineer, Analyst
                   </p>
@@ -506,7 +506,7 @@ exports[`ResumeTimelineModal should render 1`] = `
                 class="flex flex-col items-center gap-1"
               >
                 <div
-                  class="font-mono text-[11px] font-bold tracking-tight opacity-60"
+                  class="font-mono text-[11px] font-normal tracking-tight opacity-60"
                 >
                   2020
                 </div>
@@ -558,7 +558,7 @@ exports[`ResumeTimelineModal should render 1`] = `
                 class="flex flex-col items-center gap-1"
               >
                 <div
-                  class="font-mono text-[11px] font-bold tracking-tight opacity-60"
+                  class="font-mono text-[11px] font-normal tracking-tight opacity-60"
                 >
                   2019
                 </div>
@@ -592,7 +592,7 @@ exports[`ResumeTimelineModal should render 1`] = `
                   class="min-w-0"
                 >
                   <p
-                    class="text-sm leading-tight font-bold"
+                    class="text-sm leading-tight font-normal"
                   >
                     Back-end Engineer
                   </p>
@@ -638,7 +638,7 @@ exports[`ResumeTimelineModal should render 1`] = `
                 class="flex flex-col items-center gap-1"
               >
                 <div
-                  class="font-mono text-[11px] font-bold tracking-tight opacity-60"
+                  class="font-mono text-[11px] font-normal tracking-tight opacity-60"
                 >
                   2018
                 </div>
@@ -690,7 +690,7 @@ exports[`ResumeTimelineModal should render 1`] = `
                 class="flex flex-col items-center gap-1"
               >
                 <div
-                  class="font-mono text-[11px] font-bold tracking-tight opacity-60"
+                  class="font-mono text-[11px] font-normal tracking-tight opacity-60"
                 >
                   2017
                 </div>
@@ -724,7 +724,7 @@ exports[`ResumeTimelineModal should render 1`] = `
                   class="min-w-0"
                 >
                   <p
-                    class="text-sm leading-tight font-bold"
+                    class="text-sm leading-tight font-normal"
                   >
                     Front-end Engineer
                   </p>
@@ -770,7 +770,7 @@ exports[`ResumeTimelineModal should render 1`] = `
                 class="flex flex-col items-center gap-1"
               >
                 <div
-                  class="font-mono text-[11px] font-bold tracking-tight opacity-60"
+                  class="font-mono text-[11px] font-normal tracking-tight opacity-60"
                 >
                   2016
                 </div>
@@ -822,7 +822,7 @@ exports[`ResumeTimelineModal should render 1`] = `
                 class="flex flex-col items-center gap-1"
               >
                 <div
-                  class="font-mono text-[11px] font-bold tracking-tight opacity-60"
+                  class="font-mono text-[11px] font-normal tracking-tight opacity-60"
                 >
                   2015
                 </div>
@@ -856,7 +856,7 @@ exports[`ResumeTimelineModal should render 1`] = `
                   class="min-w-0"
                 >
                   <p
-                    class="text-sm leading-tight font-bold"
+                    class="text-sm leading-tight font-normal"
                   >
                     Front-end Engineer
                   </p>
@@ -902,7 +902,7 @@ exports[`ResumeTimelineModal should render 1`] = `
                 class="flex flex-col items-center gap-1"
               >
                 <div
-                  class="font-mono text-[11px] font-bold tracking-tight opacity-60"
+                  class="font-mono text-[11px] font-normal tracking-tight opacity-60"
                 >
                   2014
                 </div>
@@ -948,7 +948,7 @@ exports[`ResumeTimelineModal should render 1`] = `
                   class="min-w-0"
                 >
                   <p
-                    class="text-sm leading-tight font-bold"
+                    class="text-sm leading-tight font-normal"
                   >
                     Bachelor of BIT
                   </p>
@@ -972,7 +972,7 @@ exports[`ResumeTimelineModal should render 1`] = `
                 class="flex flex-col items-center gap-1"
               >
                 <div
-                  class="font-mono text-[11px] font-bold tracking-tight opacity-60"
+                  class="font-mono text-[11px] font-normal tracking-tight opacity-60"
                 >
                   2013
                 </div>

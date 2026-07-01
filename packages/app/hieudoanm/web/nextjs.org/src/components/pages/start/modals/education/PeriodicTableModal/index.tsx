@@ -26,7 +26,7 @@ const Block: FC<{
       }`}
       style={style}>
       <span className="text-xs">{element.number}</span>
-      <span className="my-1 text-xl font-bold">{symbol}</span>
+      <span className="my-1 text-xl font-normal">{symbol}</span>
       <span
         title={element.name}
         className="w-full truncate text-center text-[10px]">
@@ -89,7 +89,7 @@ export const PeriodicTableModal: FC<{ onClose: () => void }> = ({
           return (
             <button
               key={name}
-              className={`btn btn-sm w-full font-semibold text-white shadow-md transition hover:cursor-pointer ${backgroundColor} ${
+              className={`btn btn-sm w-full font-normal text-white shadow-md transition hover:cursor-pointer ${backgroundColor} ${
                 selectedType === name ? 'ring-2 ring-white' : ''
               }`}
               onClick={() =>

@@ -18,7 +18,7 @@ exports[`SplitBillModal should compute settlements 1`] = `
         >
           <div>
             <h2
-              class="text-lg font-black tracking-tight"
+              class="text-lg font-normal tracking-tight"
             >
               Split Bill
             </h2>
@@ -30,18 +30,15 @@ exports[`SplitBillModal should compute settlements 1`] = `
           </button>
         </div>
         <div
-          class="tabs tabs-boxed mb-4 w-full"
-          role="tablist"
+          class="mb-4 flex w-full border-b border-base-300"
         >
           <button
-            class="tab flex-1 "
-            role="tab"
+            class="border-b-2 flex-1 px-3 py-2 text-sm transition-colors border-transparent text-base-content/40"
           >
             Equal Split
           </button>
           <button
-            class="tab flex-1 tab-active"
-            role="tab"
+            class="border-b-2 flex-1 px-3 py-2 text-sm transition-colors border-primary text-primary"
           >
             Who Owes Who
           </button>
@@ -93,7 +90,7 @@ exports[`SplitBillModal should compute settlements 1`] = `
                 /
               </span>
               <span
-                class="bg-base-200 flex h-8 w-28 items-center justify-end rounded-md px-2 text-sm font-bold opacity-80"
+                class="bg-base-200 flex h-8 w-28 items-center justify-end rounded-md px-2 text-sm font-normal opacity-80"
               >
                 33 ₫
               </span>
@@ -126,7 +123,7 @@ exports[`SplitBillModal should compute settlements 1`] = `
                 /
               </span>
               <span
-                class="bg-base-200 flex h-8 w-28 items-center justify-end rounded-md px-2 text-sm font-bold opacity-80"
+                class="bg-base-200 flex h-8 w-28 items-center justify-end rounded-md px-2 text-sm font-normal opacity-80"
               >
                 33 ₫
               </span>
@@ -159,7 +156,7 @@ exports[`SplitBillModal should compute settlements 1`] = `
                 /
               </span>
               <span
-                class="bg-base-200 flex h-8 w-28 items-center justify-end rounded-md px-2 text-sm font-bold opacity-80"
+                class="bg-base-200 flex h-8 w-28 items-center justify-end rounded-md px-2 text-sm font-normal opacity-80"
               >
                 33 ₫
               </span>
@@ -206,7 +203,7 @@ exports[`SplitBillModal should compute settlements 1`] = `
             class="bg-base-200 mt-2 flex flex-col space-y-2 gap-y-2 rounded-xl p-3"
           >
             <span
-              class="text-xs font-semibold"
+              class="text-xs font-normal"
             >
               Settle Up
             </span>
@@ -214,7 +211,7 @@ exports[`SplitBillModal should compute settlements 1`] = `
               class="bg-base-100/50 flex items-center justify-between rounded-lg px-3 py-2"
             >
               <span
-                class="text-sm font-medium"
+                class="text-sm font-normal"
               >
                 Bob
                  
@@ -227,7 +224,7 @@ exports[`SplitBillModal should compute settlements 1`] = `
                 Alice
               </span>
               <span
-                class="text-sm font-bold"
+                class="text-sm font-normal"
               >
                 33 ₫
               </span>
@@ -236,7 +233,7 @@ exports[`SplitBillModal should compute settlements 1`] = `
               class="bg-base-100/50 flex items-center justify-between rounded-lg px-3 py-2"
             >
               <span
-                class="text-sm font-medium"
+                class="text-sm font-normal"
               >
                 Carol
                  
@@ -249,7 +246,7 @@ exports[`SplitBillModal should compute settlements 1`] = `
                 Alice
               </span>
               <span
-                class="text-sm font-bold"
+                class="text-sm font-normal"
               >
                 33 ₫
               </span>
@@ -379,7 +376,7 @@ exports[`SplitBillModal should render equal split tab 1`] = `
         >
           <div>
             <h2
-              class="text-lg font-black tracking-tight"
+              class="text-lg font-normal tracking-tight"
             >
               Split Bill
             </h2>
@@ -391,18 +388,15 @@ exports[`SplitBillModal should render equal split tab 1`] = `
           </button>
         </div>
         <div
-          class="tabs tabs-boxed mb-4 w-full"
-          role="tablist"
+          class="mb-4 flex w-full border-b border-base-300"
         >
           <button
-            class="tab flex-1 tab-active"
-            role="tab"
+            class="border-b-2 flex-1 px-3 py-2 text-sm transition-colors border-primary text-primary"
           >
             Equal Split
           </button>
           <button
-            class="tab flex-1 "
-            role="tab"
+            class="border-b-2 flex-1 px-3 py-2 text-sm transition-colors border-transparent text-base-content/40"
           >
             Who Owes Who
           </button>
@@ -417,7 +411,7 @@ exports[`SplitBillModal should render equal split tab 1`] = `
               class="label mb-1 p-0"
             >
               <span
-                class="label-text text-xs font-medium opacity-70"
+                class="label-text text-xs font-normal opacity-70"
               >
                 Total Bill
               </span>
@@ -437,7 +431,7 @@ exports[`SplitBillModal should render equal split tab 1`] = `
               class="label mb-1 p-0"
             >
               <span
-                class="label-text text-xs font-medium opacity-70"
+                class="label-text text-xs font-normal opacity-70"
               >
                 Number of People
               </span>
@@ -456,7 +450,7 @@ exports[`SplitBillModal should render equal split tab 1`] = `
               class="label mb-1 p-0"
             >
               <span
-                class="label-text text-xs font-medium opacity-70"
+                class="label-text text-xs font-normal opacity-70"
               >
                 Tip (%)
               </span>
@@ -476,7 +470,7 @@ exports[`SplitBillModal should render equal split tab 1`] = `
               class="label mb-1 p-0"
             >
               <span
-                class="label-text text-xs font-medium opacity-70"
+                class="label-text text-xs font-normal opacity-70"
               >
                 Tax (%)
               </span>
@@ -501,7 +495,7 @@ exports[`SplitBillModal should render equal split tab 1`] = `
                 Tip Amount
               </span>
               <span
-                class="text-sm font-bold"
+                class="text-sm font-normal"
               >
                 10 ₫
               </span>
@@ -515,7 +509,7 @@ exports[`SplitBillModal should render equal split tab 1`] = `
                 Tax Amount
               </span>
               <span
-                class="text-sm font-bold"
+                class="text-sm font-normal"
               >
                 0 ₫
               </span>
@@ -532,7 +526,7 @@ exports[`SplitBillModal should render equal split tab 1`] = `
                 Total
               </span>
               <span
-                class="text-sm font-bold"
+                class="text-sm font-normal"
               >
                 110 ₫
               </span>
@@ -544,12 +538,12 @@ exports[`SplitBillModal should render equal split tab 1`] = `
               class="flex items-center justify-between"
             >
               <span
-                class="text-xs font-semibold"
+                class="text-xs font-normal"
               >
                 Per Person
               </span>
               <span
-                class="text-lg font-black"
+                class="text-lg font-normal"
               >
                 55 ₫
               </span>
@@ -679,7 +673,7 @@ exports[`SplitBillModal should switch to settle tab 1`] = `
         >
           <div>
             <h2
-              class="text-lg font-black tracking-tight"
+              class="text-lg font-normal tracking-tight"
             >
               Split Bill
             </h2>
@@ -691,18 +685,15 @@ exports[`SplitBillModal should switch to settle tab 1`] = `
           </button>
         </div>
         <div
-          class="tabs tabs-boxed mb-4 w-full"
-          role="tablist"
+          class="mb-4 flex w-full border-b border-base-300"
         >
           <button
-            class="tab flex-1 "
-            role="tab"
+            class="border-b-2 flex-1 px-3 py-2 text-sm transition-colors border-transparent text-base-content/40"
           >
             Equal Split
           </button>
           <button
-            class="tab flex-1 tab-active"
-            role="tab"
+            class="border-b-2 flex-1 px-3 py-2 text-sm transition-colors border-primary text-primary"
           >
             Who Owes Who
           </button>
@@ -754,7 +745,7 @@ exports[`SplitBillModal should switch to settle tab 1`] = `
                 /
               </span>
               <span
-                class="bg-base-200 flex h-8 w-28 items-center justify-end rounded-md px-2 text-sm font-bold opacity-80"
+                class="bg-base-200 flex h-8 w-28 items-center justify-end rounded-md px-2 text-sm font-normal opacity-80"
               >
                 33 ₫
               </span>
@@ -787,7 +778,7 @@ exports[`SplitBillModal should switch to settle tab 1`] = `
                 /
               </span>
               <span
-                class="bg-base-200 flex h-8 w-28 items-center justify-end rounded-md px-2 text-sm font-bold opacity-80"
+                class="bg-base-200 flex h-8 w-28 items-center justify-end rounded-md px-2 text-sm font-normal opacity-80"
               >
                 33 ₫
               </span>
@@ -820,7 +811,7 @@ exports[`SplitBillModal should switch to settle tab 1`] = `
                 /
               </span>
               <span
-                class="bg-base-200 flex h-8 w-28 items-center justify-end rounded-md px-2 text-sm font-bold opacity-80"
+                class="bg-base-200 flex h-8 w-28 items-center justify-end rounded-md px-2 text-sm font-normal opacity-80"
               >
                 33 ₫
               </span>

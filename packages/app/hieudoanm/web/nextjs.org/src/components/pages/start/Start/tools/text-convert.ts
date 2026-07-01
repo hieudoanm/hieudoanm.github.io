@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: '',
     tags: [],
     emoji: '🔧',
-    color: '#3b82f6',
     onClick: open('braille'),
   },
   {
@@ -22,7 +21,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'change',
     ],
     emoji: '🔤',
-    color: '#3b82f6',
     onClick: open('text-case'),
   },
   {
@@ -30,7 +28,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: '',
     tags: [],
     emoji: '🔧',
-    color: '#3b82f6',
     onClick: open('leetspeak'),
   },
   {
@@ -38,7 +35,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: '',
     tags: [],
     emoji: '🔧',
-    color: '#3b82f6',
     onClick: open('morse'),
   },
 ];

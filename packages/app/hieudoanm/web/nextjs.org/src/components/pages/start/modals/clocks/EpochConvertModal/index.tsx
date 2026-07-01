@@ -43,7 +43,7 @@ export const EpochConvertModal: FC<{ onClose: () => void }> = ({ onClose }) => {
 
         {mode === 'toDate' ? (
           <div className="flex flex-col gap-2">
-            <label className="text-sm font-medium">Unix Timestamp (ms)</label>
+            <label className="text-sm font-normal">Unix Timestamp (ms)</label>
             <input
               type="number"
               className="input input-bordered font-mono text-sm"
@@ -59,7 +59,7 @@ export const EpochConvertModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           </div>
         ) : (
           <div className="flex flex-col gap-2">
-            <label className="text-sm font-medium">Date & Time</label>
+            <label className="text-sm font-normal">Date & Time</label>
             <input
               type="datetime-local"
               className="input input-bordered"
@@ -78,24 +78,24 @@ export const EpochConvertModal: FC<{ onClose: () => void }> = ({ onClose }) => {
 
         {mode === 'toDate' && dateStr && (
           <div className="bg-base-200 rounded p-3">
-            <p className="text-base-content/40 mb-1 text-[10px] font-bold tracking-widest uppercase">
+            <p className="text-base-content/40 mb-1 text-[10px] font-normal tracking-widest uppercase">
               Human Date
             </p>
-            <p className="font-mono text-lg font-bold">{dateStr}</p>
+            <p className="font-mono text-lg font-normal">{dateStr}</p>
           </div>
         )}
 
         {mode === 'toEpoch' && epoch && (
           <div className="bg-base-200 rounded p-3">
-            <p className="text-base-content/40 mb-1 text-[10px] font-bold tracking-widest uppercase">
+            <p className="text-base-content/40 mb-1 text-[10px] font-normal tracking-widest uppercase">
               Epoch (ms)
             </p>
-            <p className="font-mono text-lg font-bold">{epoch}</p>
+            <p className="font-mono text-lg font-normal">{epoch}</p>
           </div>
         )}
 
         <div className="border-base-300 border-t pt-3">
-          <p className="text-base-content/40 mb-1 text-[10px] font-bold tracking-widest uppercase">
+          <p className="text-base-content/40 mb-1 text-[10px] font-normal tracking-widest uppercase">
             Quick References
           </p>
           <div className="space-y-1 font-mono text-[11px]">

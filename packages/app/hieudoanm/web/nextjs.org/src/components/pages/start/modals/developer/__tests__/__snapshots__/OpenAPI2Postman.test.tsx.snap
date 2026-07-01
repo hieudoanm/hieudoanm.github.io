@@ -14,7 +14,7 @@ exports[`OpenAPI2Postman should render 1`] = `
         class="border-base-300 flex items-center justify-between border-b px-4 py-3"
       >
         <h3
-          class="text-sm font-bold"
+          class="text-sm font-normal"
         >
           OpenAPI to Postman
         </h3>
@@ -30,15 +30,15 @@ exports[`OpenAPI2Postman should render 1`] = `
         🗑️ Clear
       </button>
       <div
-        class="tabs tabs-boxed bg-base-200 border-base-300 w-full self-center border sm:w-auto"
+        class="flex w-full self-center border-b border-base-300 sm:w-auto"
       >
         <button
-          class="tab font-mono text-[10px] tracking-wider uppercase tab-active"
+          class="border-b-2 px-3 py-2 font-mono text-[10px] tracking-wider uppercase transition-colors border-primary text-primary"
         >
           OpenAPI Input
         </button>
         <button
-          class="tab font-mono text-[10px] tracking-wider uppercase "
+          class="border-b-2 px-3 py-2 font-mono text-[10px] tracking-wider uppercase transition-colors border-transparent text-base-content/40"
         >
           Postman Output
         </button>

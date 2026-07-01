@@ -14,7 +14,7 @@ exports[`ItemCard should render as a bookmark link 1`] = `
         class="card-body flex-col items-center justify-center gap-2 p-4 text-center"
       >
         <div
-          class="flex h-10 w-10 items-center justify-center rounded-xl text-xl transition-transform duration-300 group-hover:scale-110bg-neutral border-primary-content border"
+          class="bg-primary/20 border-primary/30 flex h-10 w-10 items-center justify-center rounded-full text-xl shadow-inner transition-transform duration-300 group-hover:scale-110"
         >
           <span>
             🔥
@@ -22,7 +22,7 @@ exports[`ItemCard should render as a bookmark link 1`] = `
         </div>
         <div>
           <div
-            class="truncate text-sm font-bold tracking-tight"
+            class="truncate text-sm font-normal tracking-tight"
           >
             test
           </div>
@@ -49,40 +49,37 @@ exports[`ItemCard should render with a badge 1`] = `
 <div>
   <div
     class="card bg-base-200 border-base-300 hover:bg-base-300 group relative w-full border text-left transition-all duration-300 hover:scale-[1.03] hover:shadow-lg"
-    style="--ai-color: #ff0000;"
   >
     <a
       class="block"
-      href="https://example.com"
+      href="/test"
       rel="noopener noreferrer"
     >
       <span
-        class="absolute -top-2 right-0 rounded-full px-1.5 py-0.5 font-mono text-[9px] leading-none font-bold tracking-widest uppercase"
-        style="background: rgba(255, 0, 0, 0.133); color: rgb(255, 0, 0); border: 1px solid rgba(255, 0, 0, 0.267);"
+        class="bg-primary/20 text-primary border-primary/30 absolute -top-2 right-0 rounded-full px-1.5 py-0.5 font-mono text-[9px] leading-none font-bold tracking-widest uppercase"
       >
-        New
+        AI
       </span>
       <div
         class="card-body flex-col items-center justify-center gap-2 p-4 text-center"
       >
         <div
-          class="flex h-10 w-10 items-center justify-center rounded-xl text-xl transition-transform duration-300 group-hover:scale-110"
-          style="background: rgba(255, 0, 0, 0.133); border: 1.5px solid rgba(255, 0, 0, 0.267);"
+          class="bg-primary/20 border-primary/30 flex h-10 w-10 items-center justify-center rounded-full text-xl shadow-inner transition-transform duration-300 group-hover:scale-110"
         >
           <span>
-            test
+            😀
           </span>
         </div>
         <div>
           <div
-            class="truncate text-sm font-bold tracking-tight"
+            class="truncate text-sm font-normal tracking-tight"
           >
             test
           </div>
           <div
             class="text-base-content/40 mt-0.5 truncate text-[10px] tracking-widest uppercase"
           >
-            test
+            test description
           </div>
         </div>
         <button
@@ -102,34 +99,32 @@ exports[`ItemCard should render with action buttons 1`] = `
 <div>
   <div
     class="card bg-base-200 border-base-300 hover:bg-base-300 group relative w-full border text-left transition-all duration-300 hover:scale-[1.03] hover:shadow-lg"
-    style="--ai-color: #ff0000;"
   >
     <a
       class="block"
-      href="https://example.com"
+      href="/test"
       rel="noopener noreferrer"
     >
       <div
         class="card-body flex-col items-center justify-center gap-2 p-4 text-center"
       >
         <div
-          class="flex h-10 w-10 items-center justify-center rounded-xl text-xl transition-transform duration-300 group-hover:scale-110"
-          style="background: rgba(255, 0, 0, 0.133); border: 1.5px solid rgba(255, 0, 0, 0.267);"
+          class="bg-primary/20 border-primary/30 flex h-10 w-10 items-center justify-center rounded-full text-xl shadow-inner transition-transform duration-300 group-hover:scale-110"
         >
           <span>
-            🔥
+            😀
           </span>
         </div>
         <div>
           <div
-            class="truncate text-sm font-bold tracking-tight"
+            class="truncate text-sm font-normal tracking-tight"
           >
             test
           </div>
           <div
             class="text-base-content/40 mt-0.5 truncate text-[10px] tracking-widest uppercase"
           >
-            test
+            test description
           </div>
         </div>
         <button
@@ -137,14 +132,7 @@ exports[`ItemCard should render with action buttons 1`] = `
           class="btn btn-primary btn-xs w-full no-underline transition-all"
           type="button"
         >
-          macOS
-        </button>
-        <button
-          aria-label="Open test in new tab"
-          class="btn btn-primary btn-xs w-full no-underline transition-all"
-          type="button"
-        >
-          Windows
+          Custom action
         </button>
       </div>
     </a>

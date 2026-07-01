@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Write',
     tags: ['writing', 'text'],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-ai-detector'),
   },
   {
@@ -15,7 +14,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Write',
     tags: ['writing', 'text'],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-explain'),
   },
   {
@@ -23,7 +21,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Write',
     tags: ['writing', 'text'],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-summarize-podcast'),
   },
   {
@@ -31,7 +28,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Write',
     tags: ['writing', 'text', 'yt', 'video', 'download'],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-summarize-youtube'),
   },
   {
@@ -39,7 +35,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Write',
     tags: ['writing', 'text', 'create', 'maker', 'builder'],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-title'),
   },
 ];

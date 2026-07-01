@@ -13,7 +13,7 @@ export const EntryCard: FC<{ entry: TimelineEntry & { icon: string } }> = ({
   entry,
 }) => (
   <div className="min-w-0">
-    <p className="text-sm leading-tight font-bold">{entry.title}</p>
+    <p className="text-sm leading-tight font-normal">{entry.title}</p>
     <p className="text-base-content/60 text-xs leading-tight">
       {entry.subtitle}
     </p>

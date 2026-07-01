@@ -94,7 +94,7 @@ export const WordleModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             return (
               <div
                 key={j}
-                className={`flex h-11 w-11 items-center justify-center rounded font-bold uppercase transition-colors duration-300 ${bg}`}>
+                className={`flex h-11 w-11 items-center justify-center rounded font-normal uppercase transition-colors duration-300 ${bg}`}>
                 {text}
               </div>
             );
@@ -125,7 +125,7 @@ export const WordleModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       )}
 
       {message && (
-        <p className="mb-3 text-center text-sm font-semibold">{message}</p>
+        <p className="mb-3 text-center text-sm font-normal">{message}</p>
       )}
 
       <div className="flex justify-center gap-2">

@@ -10,7 +10,6 @@ export interface ItemCardProps {
   href: string;
   emoji: string;
   description?: string;
-  color?: string;
   badge?: string;
   actions?: Action[];
 }
@@ -20,45 +19,22 @@ export const ItemCard: FC<ItemCardProps> = ({
   href,
   emoji,
   description,
-  color,
   badge,
   actions,
 }) => (
-  <div
-    className="card bg-base-200 border-base-300 hover:bg-base-300 group relative w-full border text-left transition-all duration-300 hover:scale-[1.03] hover:shadow-lg"
-    style={
-      color
-        ? ({ '--ai-color': color } as unknown as React.CSSProperties)
-        : undefined
-    }>
+  <div className="card bg-base-200 border-base-300 hover:bg-base-300 group relative w-full border text-left transition-all duration-300 hover:scale-[1.03] hover:shadow-lg">
     <a href={href} rel="noopener noreferrer" className="block">
       {badge && (
-        <span
-          className="absolute -top-2 right-0 rounded-full px-1.5 py-0.5 font-mono text-[9px] leading-none font-bold tracking-widest uppercase"
-          style={
-            color
-              ? {
-                  background: `${color}22`,
-                  color,
-                  border: `1px solid ${color}44`,
-                }
-              : undefined
-          }>
+        <span className="bg-primary/20 text-primary border-primary/30 absolute -top-2 right-0 rounded-full px-1.5 py-0.5 font-mono text-[9px] leading-none font-bold tracking-widest uppercase">
           {badge}
         </span>
       )}
       <div className="card-body flex-col items-center justify-center gap-2 p-4 text-center">
-        <div
-          className={`flex h-10 w-10 items-center justify-center rounded-xl text-xl transition-transform duration-300 group-hover:scale-110${color ? '' : 'bg-neutral border-primary-content border'}`}
-          style={
-            color
-              ? { background: `${color}22`, border: `1.5px solid ${color}44` }
-              : undefined
-          }>
+        <div className="bg-primary/20 border-primary/30 flex h-10 w-10 items-center justify-center rounded-full text-xl shadow-inner transition-transform duration-300 group-hover:scale-110">
           <span>{emoji}</span>
         </div>
         <div>
-          <div className="truncate text-sm font-bold tracking-tight">
+          <div className="truncate text-sm font-normal tracking-tight">
             {label}
           </div>
           <div className="text-base-content/40 mt-0.5 truncate text-[10px] tracking-widest uppercase">

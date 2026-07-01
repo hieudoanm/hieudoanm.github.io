@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Converter',
     tags: ['unit-converter', 'transform', 'change'],
     emoji: '📐',
-    color: '#8b5cf6',
     onClick: open('angle'),
   },
   {
@@ -15,7 +14,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Converter',
     tags: ['unit-converter', 'transform', 'change'],
     emoji: '💻',
-    color: '#8b5cf6',
     onClick: open('base'),
   },
   {
@@ -23,7 +21,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Math',
     tags: ['converter', 'unit-converter', 'arithmetic'],
     emoji: '➗',
-    color: '#8b5cf6',
     onClick: open('calculator'),
   },
   {
@@ -31,7 +28,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Converter',
     tags: ['unit-converter', 'transform', 'change'],
     emoji: '💾',
-    color: '#8b5cf6',
     onClick: open('data'),
   },
   {
@@ -39,7 +35,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Converter',
     tags: ['unit-converter', 'transform', 'change'],
     emoji: '📏',
-    color: '#8b5cf6',
     onClick: open('length'),
   },
   {
@@ -47,7 +42,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Converter',
     tags: ['unit-converter', 'transform', 'change'],
     emoji: '🏛️',
-    color: '#8b5cf6',
     onClick: open('roman'),
   },
   {
@@ -55,7 +49,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Converter',
     tags: ['unit-converter', 'transform', 'change'],
     emoji: '🌡️',
-    color: '#8b5cf6',
     onClick: open('temperature'),
   },
   {
@@ -71,7 +64,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'change',
     ],
     emoji: '⏰',
-    color: '#8b5cf6',
     onClick: open('time'),
   },
   {
@@ -79,7 +71,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Converter',
     tags: ['unit-converter', 'transform', 'change'],
     emoji: '⚖️',
-    color: '#8b5cf6',
     onClick: open('weight'),
   },
 ];

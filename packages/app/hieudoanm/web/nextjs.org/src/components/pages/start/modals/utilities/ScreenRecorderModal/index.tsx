@@ -74,7 +74,9 @@ export const ScreenRecorderModal: FC<{ onClose: () => void }> = ({
             <span className="text-lg">■</span> Stop Recording
           </button>
         )}
-        {recording && <span className="loading loading-spinner text-error" />}
+        {recording && (
+          <span className="loading loading-spinner text-base-content/60" />
+        )}
         {blob && (
           <div className="flex w-full flex-col gap-2">
             <p className="text-sm">

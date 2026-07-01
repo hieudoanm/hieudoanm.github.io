@@ -18,7 +18,7 @@ exports[`IPModal should render and fetch IP info on mount 1`] = `
         >
           <div>
             <h2
-              class="text-lg font-black tracking-tight"
+              class="text-lg font-normal tracking-tight"
             >
               IP Inspector
             </h2>

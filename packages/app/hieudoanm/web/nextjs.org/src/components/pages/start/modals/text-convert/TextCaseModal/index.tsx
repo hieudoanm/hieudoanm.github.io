@@ -33,24 +33,24 @@ export const TextCaseModal: FC<{ onClose: () => void }> = ({ onClose }) => {
         {inputText && (
           <div className="bg-base-200 space-y-2 rounded p-4 text-sm">
             <div>
-              <span className="font-bold">UPPER:</span> {caseConverted!.upper}
+              <span className="font-normal">UPPER:</span> {caseConverted!.upper}
             </div>
             <div>
-              <span className="font-bold">lower:</span> {caseConverted!.lower}
+              <span className="font-normal">lower:</span> {caseConverted!.lower}
             </div>
             <div>
-              <span className="font-bold">Title:</span> {caseConverted!.title}
+              <span className="font-normal">Title:</span> {caseConverted!.title}
             </div>
             <div>
-              <span className="font-bold">camelCase:</span>{' '}
+              <span className="font-normal">camelCase:</span>{' '}
               {caseConverted!.camel}
             </div>
             <div>
-              <span className="font-bold">snake_case:</span>{' '}
+              <span className="font-normal">snake_case:</span>{' '}
               {caseConverted!.snake}
             </div>
             <div>
-              <span className="font-bold">kebab-case:</span>{' '}
+              <span className="font-normal">kebab-case:</span>{' '}
               {caseConverted!.kebab}
             </div>
           </div>

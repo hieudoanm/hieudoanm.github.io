@@ -39,9 +39,9 @@ describe('FigletModal', () => {
 
   it('should change font via tab click', () => {
     render(<FigletModal onClose={jest.fn()} />);
-    const tabs = screen.getAllByRole('tab');
-    fireEvent.click(tabs[1]);
-    expect(tabs[1]).toHaveClass('tab-active');
+    const blockTab = screen.getByRole('button', { name: 'Block' });
+    fireEvent.click(blockTab);
+    expect(screen.getByText(/\[Block\]/)).toBeInTheDocument();
   });
 
   it('should copy output to clipboard', async () => {

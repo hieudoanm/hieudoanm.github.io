@@ -43,7 +43,7 @@ export const XmlToCsvModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       <div className="flex flex-col gap-4">
         <Dropzone accept=".xml" onFile={handleConvert} />
         {loading && <span className="loading loading-spinner" />}
-        {error && <p className="text-error text-sm">{error}</p>}
+        {error && <p className="text-base-content/60 text-sm">{error}</p>}
       </div>
     </ModalWrapper>
   );

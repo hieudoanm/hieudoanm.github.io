@@ -14,7 +14,7 @@ exports[`PokedexModal should render correctly 1`] = `
         class="border-base-300 flex items-center justify-between border-b px-4 py-3"
       >
         <h3
-          class="text-sm font-bold"
+          class="text-sm font-normal"
         >
           Pokédex
         </h3>

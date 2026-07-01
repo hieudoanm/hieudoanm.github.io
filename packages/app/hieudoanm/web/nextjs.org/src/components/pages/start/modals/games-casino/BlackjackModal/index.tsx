@@ -62,7 +62,7 @@ export const BlackjackModal: FC<{ onClose: () => void }> = ({ onClose }) => {
         <div className="bg-base-200 mb-4 flex flex-col items-center justify-center rounded-xl py-6">
           {currentCard ? (
             <span
-              className={`text-6xl leading-none font-black ${isRed(currentCard.suit) ? 'text-error' : 'text-base-content'}`}>
+              className={`text-6xl leading-none font-normal ${isRed(currentCard.suit) ? 'text-error' : 'text-base-content'}`}>
               {currentCard.rank}
               {currentCard.suit}
             </span>

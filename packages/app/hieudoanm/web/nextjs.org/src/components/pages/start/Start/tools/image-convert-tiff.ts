@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Convert',
     tags: ['image', 'convert'],
     emoji: '🔄',
-    color: '#06b6d4',
     onClick: open('image-convert-tiff-to-jpg'),
   },
   {
@@ -15,7 +14,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Convert',
     tags: ['image', 'convert'],
     emoji: '🔄',
-    color: '#06b6d4',
     onClick: open('image-convert-tiff-to-png'),
   },
 ];

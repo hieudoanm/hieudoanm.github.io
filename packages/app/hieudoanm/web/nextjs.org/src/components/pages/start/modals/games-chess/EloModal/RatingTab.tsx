@@ -10,7 +10,7 @@ export const RatingTab: FC<{
     <div className="space-y-3">
       <div className="form-control">
         <label className="label mb-1 p-0">
-          <span className="label-text text-xs font-medium opacity-70">
+          <span className="label-text text-xs font-normal opacity-70">
             Your Rating
           </span>
         </label>
@@ -29,7 +29,7 @@ export const RatingTab: FC<{
 
       <div className="form-control">
         <label className="label mb-1 p-0">
-          <span className="label-text text-xs font-medium opacity-70">
+          <span className="label-text text-xs font-normal opacity-70">
             Opponent Rating
           </span>
         </label>
@@ -48,7 +48,7 @@ export const RatingTab: FC<{
 
       <div className="form-control">
         <label className="label mb-1 p-0">
-          <span className="label-text text-xs font-medium opacity-70">
+          <span className="label-text text-xs font-normal opacity-70">
             Score
           </span>
         </label>
@@ -75,13 +75,13 @@ export const RatingTab: FC<{
 
       <div className="form-control mt-4">
         <label className="label mb-1 p-0">
-          <span className="label-text text-xs font-medium opacity-70">
+          <span className="label-text text-xs font-normal opacity-70">
             New Rating
           </span>
         </label>
         <input
           type="number"
-          className="input input-sm input-bordered w-full text-right font-bold"
+          className="input input-sm input-bordered w-full text-right font-normal"
           value={formula.ratingNew}
           readOnly
         />

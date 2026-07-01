@@ -143,10 +143,10 @@ export const QuizifyModal: React.FC<{ onClose: () => void }> = ({
               )}
               {selected && isLastQuestion && (
                 <div className="space-y-3 text-center">
-                  <div className="text-lg font-semibold">Quiz completed!</div>
+                  <div className="text-lg font-normal">Quiz completed!</div>
                   <div>
                     Score:{' '}
-                    <span className="font-bold">
+                    <span className="font-normal">
                       {score} / {questions.length}
                     </span>
                   </div>

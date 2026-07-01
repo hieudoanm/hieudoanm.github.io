@@ -18,7 +18,7 @@ exports[`PalindromeModal should render correctly 1`] = `
         >
           <div>
             <h2
-              class="text-lg font-black tracking-tight"
+              class="text-lg font-normal tracking-tight"
             >
               🔤 Palindrome
             </h2>
@@ -45,7 +45,7 @@ exports[`PalindromeModal should render correctly 1`] = `
                 Score
               </span>
               <span
-                class="badge badge-neutral font-bold"
+                class="badge badge-neutral font-normal"
               >
                 0
               </span>
@@ -60,7 +60,7 @@ exports[`PalindromeModal should render correctly 1`] = `
               Palindrome
             </span>
             <span
-              class="font-mono text-sm font-bold text-base-content"
+              class="font-mono text-sm font-normal text-base-content"
             >
               30
               s
@@ -70,37 +70,37 @@ exports[`PalindromeModal should render correctly 1`] = `
             class="bg-base-200 mb-2 flex min-h-14 flex-wrap items-center gap-2 rounded-xl p-3"
           >
             <button
-              class="btn btn-sm btn-outline h-10 w-10 p-0 text-base font-bold"
+              class="btn btn-sm btn-outline h-10 w-10 p-0 text-base font-normal"
             >
               R
             </button>
             <button
-              class="btn btn-sm btn-outline h-10 w-10 p-0 text-base font-bold"
+              class="btn btn-sm btn-outline h-10 w-10 p-0 text-base font-normal"
             >
               A
             </button>
             <button
-              class="btn btn-sm btn-outline h-10 w-10 p-0 text-base font-bold"
+              class="btn btn-sm btn-outline h-10 w-10 p-0 text-base font-normal"
             >
               C
             </button>
             <button
-              class="btn btn-sm btn-outline h-10 w-10 p-0 text-base font-bold"
+              class="btn btn-sm btn-outline h-10 w-10 p-0 text-base font-normal"
             >
               E
             </button>
             <button
-              class="btn btn-sm btn-outline h-10 w-10 p-0 text-base font-bold"
+              class="btn btn-sm btn-outline h-10 w-10 p-0 text-base font-normal"
             >
               C
             </button>
             <button
-              class="btn btn-sm btn-outline h-10 w-10 p-0 text-base font-bold"
+              class="btn btn-sm btn-outline h-10 w-10 p-0 text-base font-normal"
             >
               A
             </button>
             <button
-              class="btn btn-sm btn-outline h-10 w-10 p-0 text-base font-bold"
+              class="btn btn-sm btn-outline h-10 w-10 p-0 text-base font-normal"
             >
               R
             </button>

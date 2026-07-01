@@ -103,7 +103,7 @@ export const GenerateSubtitleModal: FC<{ onClose: () => void }> = ({
         <div className="textarea textarea-bordered h-40 w-full overflow-y-auto p-2 text-xs">
           {entries.map((e, i) => (
             <p key={i} className="mb-1">
-              <span className="font-bold">{i + 1}.</span> {e.text}
+              <span className="font-normal">{i + 1}.</span> {e.text}
             </p>
           ))}
         </div>

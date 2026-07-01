@@ -69,7 +69,7 @@ export const PitchModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             <button
               key={id}
               onClick={() => (started ? handleGuess(id) : playTone(id))}
-              className={`relative flex flex-1 items-end justify-center rounded-lg border-2 pb-2 text-xs font-bold transition-all duration-150 active:translate-y-0.5 ${whiteKeyClass(id)}`}>
+              className={`relative flex flex-1 items-end justify-center rounded-lg border-2 pb-2 text-xs font-normal transition-all duration-150 active:translate-y-0.5 ${whiteKeyClass(id)}`}>
               {note}
             </button>
           ))}
@@ -81,7 +81,7 @@ export const PitchModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             onClick={() => (started ? handleGuess(id) : playTone(id))}
             className={`absolute top-0 z-10 h-[58%] w-[9%] -translate-x-1/2 rounded-b-lg border-2 text-white transition-all duration-150 active:translate-y-0.5 ${blackKeyClass(id)}`}
             style={{ left: `${((position + 1) * 100) / 7}%` }}>
-            <div className="flex h-full items-end justify-center pb-1 text-[10px] font-bold">
+            <div className="flex h-full items-end justify-center pb-1 text-[10px] font-normal">
               {note}
             </div>
           </button>

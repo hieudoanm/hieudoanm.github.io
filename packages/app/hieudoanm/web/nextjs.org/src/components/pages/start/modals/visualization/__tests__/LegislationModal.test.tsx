@@ -15,8 +15,6 @@ describe('LegislationModal', () => {
 
   it('should show chamber tabs when multiple chambers exist', () => {
     render(<LegislationModal onClose={jest.fn()} />);
-    const tabs = screen.getAllByRole('tab');
-    expect(tabs.length).toBeGreaterThanOrEqual(2);
     expect(screen.getByText('Senate')).toBeInTheDocument();
     expect(screen.getByText('House of Representatives')).toBeInTheDocument();
   });

@@ -31,17 +31,17 @@ export const WordCounterModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             ] as const
           ).map(([label, value]) => (
             <div key={label} className="bg-base-200 rounded p-3 text-center">
-              <p className="text-base-content/40 text-[10px] font-bold tracking-widest uppercase">
+              <p className="text-base-content/40 text-[10px] font-normal tracking-widest uppercase">
                 {label}
               </p>
-              <p className="mt-1 font-mono text-xl font-black">{value}</p>
+              <p className="mt-1 font-mono text-xl font-normal">{value}</p>
             </div>
           ))}
           <div className="bg-base-200 col-span-2 rounded p-3 text-center">
-            <p className="text-base-content/40 text-[10px] font-bold tracking-widest uppercase">
+            <p className="text-base-content/40 text-[10px] font-normal tracking-widest uppercase">
               Reading Time
             </p>
-            <p className="mt-1 font-mono text-xl font-black">
+            <p className="mt-1 font-mono text-xl font-normal">
               {stats.readingTime}
             </p>
           </div>

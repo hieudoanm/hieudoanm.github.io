@@ -66,7 +66,7 @@ export const SplitExcelModal: FC<{ onClose: () => void }> = ({ onClose }) => {
         </label>
         <Dropzone accept=".xlsx,.xls" onFile={handleSplit} />
         {loading && <span className="loading loading-spinner" />}
-        {error && <p className="text-error text-sm">{error}</p>}
+        {error && <p className="text-base-content/60 text-sm">{error}</p>}
         {fileCount > 0 && (
           <p className="text-sm">Split into {fileCount} files.</p>
         )}

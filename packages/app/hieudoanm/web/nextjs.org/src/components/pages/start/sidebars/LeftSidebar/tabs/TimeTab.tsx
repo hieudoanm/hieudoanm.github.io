@@ -5,76 +5,17 @@ interface Block {
   label: string;
   start: number;
   end: number;
-  colorClass: string;
-  glassClass: string;
-  borderClass: string;
 }
 
 const BLOCKS: Block[] = [
-  {
-    label: 'Sleep',
-    start: 0,
-    end: 8,
-    colorClass: 'bg-primary',
-    glassClass: 'bg-primary/10 backdrop-blur-sm',
-    borderClass: 'border border-primary/30',
-  },
-  {
-    label: 'Breakfast',
-    start: 8,
-    end: 9,
-    colorClass: 'bg-warning',
-    glassClass: 'bg-warning/10 backdrop-blur-sm',
-    borderClass: 'border border-warning/30',
-  },
-  {
-    label: 'Morning work',
-    start: 9,
-    end: 12,
-    colorClass: 'bg-secondary',
-    glassClass: 'bg-secondary/10 backdrop-blur-sm',
-    borderClass: 'border border-secondary/30',
-  },
-  {
-    label: 'Lunch',
-    start: 12,
-    end: 13,
-    colorClass: 'bg-warning',
-    glassClass: 'bg-warning/10 backdrop-blur-sm',
-    borderClass: 'border border-warning/30',
-  },
-  {
-    label: 'Afternoon work',
-    start: 13,
-    end: 18,
-    colorClass: 'bg-secondary',
-    glassClass: 'bg-secondary/10 backdrop-blur-sm',
-    borderClass: 'border border-secondary/30',
-  },
-  {
-    label: 'Dinner',
-    start: 18,
-    end: 19,
-    colorClass: 'bg-warning',
-    glassClass: 'bg-warning/10 backdrop-blur-sm',
-    borderClass: 'border border-warning/30',
-  },
-  {
-    label: 'Exercise',
-    start: 19,
-    end: 21,
-    colorClass: 'bg-success',
-    glassClass: 'bg-success/10 backdrop-blur-sm',
-    borderClass: 'border border-success/30',
-  },
-  {
-    label: 'Relaxation',
-    start: 21,
-    end: 24,
-    colorClass: 'bg-accent',
-    glassClass: 'bg-accent/10 backdrop-blur-sm',
-    borderClass: 'border border-accent/30',
-  },
+  { label: 'Sleep', start: 0, end: 8 },
+  { label: 'Breakfast', start: 8, end: 9 },
+  { label: 'Morning work', start: 9, end: 12 },
+  { label: 'Lunch', start: 12, end: 13 },
+  { label: 'Afternoon work', start: 13, end: 18 },
+  { label: 'Dinner', start: 18, end: 19 },
+  { label: 'Exercise', start: 19, end: 21 },
+  { label: 'Relaxation', start: 21, end: 24 },
 ];
 
 export const TimeTab: FC = () => {
@@ -97,10 +38,10 @@ export const TimeTab: FC = () => {
               <div
                 key={block.label}
                 style={{ height: `${hours * 28}px` }}
-                className={`relative flex items-center gap-2 rounded-lg px-3 transition-all duration-300 ${
+                className={`relative flex items-center gap-2 rounded-full border px-3 transition-all duration-300 ${
                   isActive
-                    ? `${block.colorClass}/20 ${block.borderClass} shadow-sm`
-                    : `${block.glassClass} ${block.borderClass} opacity-50`
+                    ? 'bg-base-content/10 border-base-content/30 shadow-sm'
+                    : 'bg-base-content/5 border-base-content/10 opacity-60'
                 }`}>
                 {/* time range */}
                 <span
@@ -113,7 +54,7 @@ export const TimeTab: FC = () => {
 
                 {/* label */}
                 <span
-                  className={`flex-1 text-xs font-medium ${
+                  className={`flex-1 text-xs font-normal ${
                     isActive ? 'opacity-100' : 'opacity-60'
                   }`}>
                   {block.label}
@@ -129,9 +70,9 @@ export const TimeTab: FC = () => {
 
                 {/* active progress bar */}
                 {isActive && (
-                  <div className="bg-base-content/10 absolute right-2 bottom-1.5 left-2 h-0.5 overflow-hidden rounded-lg">
+                  <div className="bg-base-content/10 absolute right-2 bottom-1.5 left-2 h-0.5 overflow-hidden rounded-full">
                     <div
-                      className="bg-base-content/40 h-full rounded-lg transition-all duration-1000"
+                      className="bg-base-content/40 h-full rounded-full transition-all duration-1000"
                       style={{
                         width: `${(((currentHour - block.start) / hours) * 100).toFixed(1)}%`,
                       }}

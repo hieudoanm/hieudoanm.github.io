@@ -18,7 +18,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'builder',
     ],
     emoji: '▌',
-    color: '#22d3ee',
     onClick: open('barcode'),
   },
   {
@@ -26,7 +25,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Barcode Scanner',
     tags: ['image', 'ocr', 'photo', 'code128', 'ean', 'upc'],
     emoji: '📋',
-    color: '#3b82f6',
     onClick: open('barcode-read'),
   },
   {
@@ -46,7 +44,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'i18n',
     ],
     emoji: '🌐',
-    color: '#10b981',
     onClick: open('image-translate'),
   },
   {
@@ -54,7 +51,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'OCR',
     tags: ['image', 'scan', 'photo'],
     emoji: '📄',
-    color: '#ef4444',
     onClick: open('invoice-parser'),
   },
   {
@@ -62,7 +58,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Text Extraction',
     tags: ['image', 'scan', 'photo'],
     emoji: '🔍',
-    color: '#3b82f6',
     onClick: open('image-ocr'),
   },
   {
@@ -80,7 +75,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'builder',
     ],
     emoji: '▦',
-    color: '#22d3ee',
     onClick: open('qr'),
   },
   {
@@ -88,7 +82,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'QR Scanner',
     tags: ['image', 'ocr', 'photo', 'qrcode', 'barcode', 'code'],
     emoji: '📱',
-    color: '#3b82f6',
     onClick: open('qr-read'),
   },
 ];

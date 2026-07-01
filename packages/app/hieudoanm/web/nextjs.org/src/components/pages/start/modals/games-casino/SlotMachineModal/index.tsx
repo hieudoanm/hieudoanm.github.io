@@ -98,7 +98,7 @@ export const SlotMachineModal: FC<{ onClose: () => void }> = ({ onClose }) => {
 
         {message && (
           <div
-            className={`text-center text-sm font-bold ${winAmount > 0 ? 'text-success' : 'opacity-50'}`}>
+            className={`text-center text-sm font-normal ${winAmount > 0 ? 'text-success' : 'opacity-50'}`}>
             {message}
             {winAmount > 0 && <span className="ml-2 text-lg">{'🎉'}</span>}
           </div>

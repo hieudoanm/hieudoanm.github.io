@@ -89,7 +89,7 @@ export const ResumeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             </div>
 
             {!parseResult.ok && (
-              <div className="bg-error/10 text-error px-5 py-2 text-xs">
+              <div className="bg-base-content/10 text-base-content/60 px-5 py-2 text-xs">
                 {parseResult.error}
               </div>
             )}

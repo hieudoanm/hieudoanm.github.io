@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Validator',
     tags: ['editor', 'edit', 'text', 'javascript-object-notation', 'data'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('json-schema'),
   },
   {
@@ -15,7 +14,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'JSON Editor',
     tags: ['text', 'javascript-object-notation', 'data', 'modify', 'change'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('manifest'),
   },
   {
@@ -23,7 +21,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Markdown Editor',
     tags: ['text', 'md', 'readme', 'markup', 'modify', 'change'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('markdown'),
   },
   {
@@ -31,7 +28,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'PDF Redactor',
     tags: ['editor', 'edit', 'text', 'document', 'adobe', 'acrobat'],
     emoji: '🖋️',
-    color: '#3b82f6',
     onClick: open('redact'),
   },
   {
@@ -48,7 +44,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'builder',
     ],
     emoji: '🔍',
-    color: '#3b82f6',
     onClick: open('regex'),
   },
   {
@@ -56,7 +51,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Resume Builder',
     tags: ['editor', 'edit', 'text'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('resume'),
   },
   {
@@ -71,7 +65,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'google-slides',
     ],
     emoji: '📽️',
-    color: '#3b82f6',
     onClick: open('slides'),
   },
   {
@@ -79,7 +72,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Data',
     tags: ['utility', 'tool', 'docx', 'doc', 'microsoft-word', 'tally'],
     emoji: '📝',
-    color: '#10b981',
     onClick: open('word-counter'),
   },
 ];

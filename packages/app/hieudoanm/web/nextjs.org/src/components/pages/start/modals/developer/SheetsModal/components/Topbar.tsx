@@ -44,7 +44,7 @@ export const Topbar: FC<TopbarProps> = memo(
       </button>
       {dbFileName && (
         <div className="badge badge-outline badge-primary gap-2 px-3 py-3 font-mono text-xs">
-          <span className="bg-success inline-block h-2 w-2 animate-pulse rounded-full" />
+          <span className="bg-primary inline-block h-2 w-2 animate-pulse rounded-full" />
           {dbFileName}
         </div>
       )}

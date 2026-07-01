@@ -7,6 +7,8 @@ import {
 } from '@testing-library/react';
 import { InstaSizeModal } from '../InstaSizeModal';
 
+const DROPZONE_TEXT = 'Drop a file here or click to browse';
+
 const mockRenderToCanvas = jest.fn();
 jest.mock('../InstaSizeModal/utils/render', () => ({
   renderToCanvas: (...args: any[]) => {
@@ -37,7 +39,7 @@ const dropFile = async (fileReaderMock: ReturnType<typeof mockFileReader>) => {
 
   renderInsta();
   const dropZone = screen
-    .getByText('Upload an image')
+    .getByText(DROPZONE_TEXT)
     .closest('[class*="cursor-pointer"]')!;
   fireEvent.drop(dropZone, { dataTransfer: { files: [file] } });
   fileReaderMock.onload({ target: fileReaderMock });
@@ -57,31 +59,27 @@ describe('InstaSizeModal', () => {
 
   it('should render upload area when no image', () => {
     renderInsta();
-    expect(screen.getByText('Upload an image')).toBeInTheDocument();
-    expect(
-      screen.getByText('Drag & drop, or click to browse — PNG, JPG, WEBP')
-    ).toBeInTheDocument();
-    expect(screen.getByText('Choose File')).toBeInTheDocument();
+    expect(screen.getByText(DROPZONE_TEXT)).toBeInTheDocument();
   });
 
   it('should show dragging state on dragOver', () => {
     renderInsta();
     const dropZone = screen
-      .getByText('Upload an image')
+      .getByText(DROPZONE_TEXT)
       .closest('[class*="cursor-pointer"]')!;
     fireEvent.dragOver(dropZone);
-    expect(screen.getByText('Drop your image here')).toBeInTheDocument();
+    expect(dropZone.className).toContain('border-primary');
   });
 
   it('should reset dragging state on dragLeave', () => {
     renderInsta();
     const dropZone = screen
-      .getByText('Upload an image')
+      .getByText(DROPZONE_TEXT)
       .closest('[class*="cursor-pointer"]')!;
     fireEvent.dragOver(dropZone);
-    expect(screen.getByText('Drop your image here')).toBeInTheDocument();
+    expect(dropZone.className).toContain('border-primary');
     fireEvent.dragLeave(dropZone);
-    expect(screen.getByText('Upload an image')).toBeInTheDocument();
+    expect(dropZone.className).not.toContain('border-primary');
   });
 
   it('should handle file drop', async () => {
@@ -93,10 +91,10 @@ describe('InstaSizeModal', () => {
     const file = new File(['test'], 'test.txt', { type: 'text/plain' });
     renderInsta();
     const dropZone = screen
-      .getByText('Upload an image')
+      .getByText(DROPZONE_TEXT)
       .closest('[class*="cursor-pointer"]')!;
     fireEvent.drop(dropZone, { dataTransfer: { files: [file] } });
-    expect(screen.getByText('Upload an image')).toBeInTheDocument();
+    expect(screen.getByText(DROPZONE_TEXT)).toBeInTheDocument();
   });
 
   it('should handle file input change', async () => {
@@ -171,7 +169,7 @@ describe('InstaSizeModal', () => {
     await dropFile(fr);
 
     fireEvent.click(screen.getByText('✕ Clear'));
-    expect(screen.getByText('Upload an image')).toBeInTheDocument();
+    expect(screen.getByText(DROPZONE_TEXT)).toBeInTheDocument();
   });
 
   it('should call renderToCanvas on process', async () => {

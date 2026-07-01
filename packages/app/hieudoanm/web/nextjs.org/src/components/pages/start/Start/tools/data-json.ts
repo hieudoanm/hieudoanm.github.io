@@ -13,7 +13,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'spreadsheet',
     ],
     emoji: '🔄',
-    color: '#10b981',
     onClick: open('json-to-csv'),
   },
   {
@@ -21,7 +20,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Data',
     tags: ['converter', 'javascript-object-notation', 'markup'],
     emoji: '🔄',
-    color: '#10b981',
     onClick: open('json-to-xml'),
   },
 ];

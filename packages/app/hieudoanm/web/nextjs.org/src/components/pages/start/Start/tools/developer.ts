@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Text Comparison',
     tags: ['developer', 'programming', 'code', 'dev-tools'],
     emoji: '📝',
-    color: '#3b82f6',
     onClick: open('text-diff'),
   },
   {
@@ -15,7 +14,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Text art',
     tags: ['developer', 'programming', 'code', 'dev-tools'],
     emoji: '📝',
-    color: '#8b5cf6',
     onClick: open('figlet'),
   },
   {
@@ -23,7 +21,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Inspector',
     tags: ['developer', 'programming', 'code', 'dev-tools'],
     emoji: '🌐',
-    color: '#f59e0b',
     onClick: open('ip'),
   },
   {
@@ -39,7 +36,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'specification',
     ],
     emoji: '🔄',
-    color: '#ff6c37',
     onClick: open('openapi'),
   },
   {
@@ -47,7 +43,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'CORS Proxy',
     tags: ['developer', 'programming', 'code', 'dev-tools'],
     emoji: '🔗',
-    color: '#3b82f6',
     onClick: open('proxy'),
   },
   {
@@ -63,7 +58,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'google-sheets',
     ],
     emoji: '🗄️',
-    color: '#3b82f6',
     onClick: open('sheets'),
   },
   {
@@ -71,7 +65,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Detect Shopify',
     tags: ['developer', 'programming', 'code', 'dev-tools'],
     emoji: '🔍',
-    color: '#06b6d4',
     onClick: open('shopify-detect'),
   },
   {
@@ -79,7 +72,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Editor',
     tags: ['developer', 'programming', 'code', 'dev-tools', 'modify', 'change'],
     emoji: '🎨',
-    color: '#8b5cf6',
     onClick: open('svg'),
   },
   {
@@ -87,7 +79,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Redirect Tracker',
     tags: ['developer', 'programming', 'code', 'dev-tools'],
     emoji: '🔗',
-    color: '#3b82f6',
     onClick: open('text-url-tracer'),
   },
   {
@@ -106,7 +97,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'builder',
     ],
     emoji: '🔑',
-    color: '#a855f7',
     onClick: open('uuid'),
   },
 ];

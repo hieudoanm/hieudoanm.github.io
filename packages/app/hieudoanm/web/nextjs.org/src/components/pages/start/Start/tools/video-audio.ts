@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Video',
     tags: ['audio', 'media', 'mp4', 'movie', 'clip', 'footage'],
     emoji: '🎤',
-    color: '#ef4444',
     onClick: open('generate-subtitle'),
   },
   {
@@ -15,7 +14,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Video',
     tags: ['audio', 'media', 'mp4', 'movie', 'clip', 'footage'],
     emoji: '🎤',
-    color: '#ef4444',
     onClick: open('audio-transcribe'),
   },
 ];

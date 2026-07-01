@@ -8,7 +8,7 @@ export const CardChip: FC<{ card: Card; small?: boolean }> = ({
   small,
 }) => (
   <span
-    className={`inline-flex items-center justify-center rounded-md font-mono font-bold shadow-sm ${small ? 'h-8 w-6 text-[9px]' : 'h-10 w-8 text-xs'}`}
+    className={`inline-flex items-center justify-center rounded-md font-mono font-normal shadow-sm ${small ? 'h-8 w-6 text-[9px]' : 'h-10 w-8 text-xs'}`}
     style={{
       backgroundColor: '#1e293b',
       color: SUIT_COLORS[card.suit],

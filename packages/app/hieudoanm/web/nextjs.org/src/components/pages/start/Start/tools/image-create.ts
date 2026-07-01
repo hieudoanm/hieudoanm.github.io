@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Decode/Encode',
     tags: ['image', 'create', 'photo', 'generator', 'base-64'],
     emoji: '🔐',
-    color: '#3b82f6',
     onClick: open('base64'),
   },
   {
@@ -15,7 +14,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Element',
     tags: ['image', 'create', 'photo', 'generator'],
     emoji: '🧪',
-    color: '#eab308',
     onClick: open('breaking-bad'),
   },
   {
@@ -23,7 +21,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Composition',
     tags: ['image', 'create', 'photo', 'generator'],
     emoji: '📸',
-    color: '#ef4444',
     onClick: open('camera'),
   },
   {
@@ -31,7 +28,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Create Chart',
     tags: ['image', 'photo', 'generator'],
     emoji: '📊',
-    color: '#3b82f6',
     onClick: open('chart-maker'),
   },
   {
@@ -39,7 +35,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Photo Collage',
     tags: ['image', 'create', 'generator'],
     emoji: '🖼️',
-    color: '#3b82f6',
     onClick: open('collage-maker'),
   },
   {
@@ -47,7 +42,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'M.D.',
     tags: ['image', 'create', 'photo', 'generator'],
     emoji: '🏥',
-    color: '#ef4444',
     onClick: open('house'),
   },
   {
@@ -55,7 +49,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Square Fit',
     tags: ['image', 'create', 'photo', 'generator'],
     emoji: '📸',
-    color: '#3b82f6',
     onClick: open('instasize'),
   },
   {
@@ -63,7 +56,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Create Meme',
     tags: ['image', 'photo', 'generator', 'funny'],
     emoji: '🎭',
-    color: '#3b82f6',
     onClick: open('meme-maker'),
   },
   {
@@ -71,7 +63,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Art Grid',
     tags: ['image', 'create', 'photo', 'generator'],
     emoji: '▪️',
-    color: '#8b5cf6',
     onClick: open('pixel'),
   },
   {
@@ -79,7 +70,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Photo Maker',
     tags: ['image', 'create', 'generator'],
     emoji: '👤',
-    color: '#3b82f6',
     onClick: open('image-profile'),
   },
   {
@@ -87,7 +77,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'GitHub',
     tags: ['image', 'create', 'photo', 'generator'],
     emoji: '📸',
-    color: '#10b981',
     onClick: open('github-social-preview'),
   },
   {
@@ -95,7 +84,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'YouTube',
     tags: ['image', 'create', 'photo', 'generator', 'yt', 'video', 'download'],
     emoji: '📸',
-    color: '#22d3ee',
     onClick: open('youtube-thumbnails'),
   },
 ];

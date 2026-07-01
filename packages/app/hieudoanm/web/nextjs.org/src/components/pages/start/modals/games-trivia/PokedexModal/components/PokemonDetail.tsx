@@ -48,7 +48,7 @@ export const PokemonDetail: FC<{ p: Pokemon; onClose: () => void }> = ({
           />
           <div>
             <p className="text-xs opacity-40">#{p.id}</p>
-            <h3 className="text-lg font-bold capitalize">
+            <h3 className="text-lg font-normal capitalize">
               {p.name.replaceAll('-', ' ')}
             </h3>
             <span className={`badge badge-sm ${getTypeColor(p.type)}`}>
@@ -80,14 +80,14 @@ export const PokemonDetail: FC<{ p: Pokemon; onClose: () => void }> = ({
                 value={value}
                 max={255}
               />
-              <span className="w-8 text-right font-mono font-bold">
+              <span className="w-8 text-right font-mono font-normal">
                 {value}
               </span>
             </div>
           ))}
           <div className="flex justify-between pt-1 text-xs">
             <span className="opacity-40">Total</span>
-            <span className="font-mono font-bold">{total}</span>
+            <span className="font-mono font-normal">{total}</span>
           </div>
         </div>
       </div>

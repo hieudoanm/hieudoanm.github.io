@@ -268,7 +268,7 @@ export const TowersModal: FC<{ onClose: () => void }> = ({ onClose }) => {
               className="range range-primary range-xs w-28"
               disabled={autoPlaying}
             />
-            <span className="font-semibold">{diskCount}</span>
+            <span className="font-normal">{diskCount}</span>
           </div>
         </div>
         <div className="grid grid-cols-3 gap-3">

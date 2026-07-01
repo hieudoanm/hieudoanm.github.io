@@ -110,7 +110,7 @@ export const CountdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             <div className="grid grid-cols-6 gap-2 text-center">
               {units.map(([label, value]) => (
                 <div key={label} className="flex flex-col items-center gap-1">
-                  <span className="font-mono text-2xl leading-none font-black tabular-nums">
+                  <span className="font-mono text-2xl leading-none font-normal tabular-nums">
                     {String(value).padStart(2, '0')}
                   </span>
                   <span className="text-base-content/30 font-mono text-[9px] tracking-widest uppercase">

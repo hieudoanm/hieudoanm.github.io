@@ -66,7 +66,7 @@ export const EmojisModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                   title={`:${key}:`}
                   onClick={() => handleCopy(value, key)}
                   className={`hover:bg-base-300 flex flex-col items-center gap-1 rounded-lg p-2 text-center transition-colors ${
-                    isCopied ? 'bg-success/10' : ''
+                    isCopied ? 'bg-primary/10' : ''
                   }`}>
                   {/* Emoji */}
                   <span className="text-2xl leading-none">
@@ -83,7 +83,9 @@ export const EmojisModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                   </span>
                   {/* Copied flash */}
                   {isCopied && (
-                    <span className="text-success text-[9px] font-bold">✓</span>
+                    <span className="text-primary text-[9px] font-normal">
+                      ✓
+                    </span>
                   )}
                 </button>
               );

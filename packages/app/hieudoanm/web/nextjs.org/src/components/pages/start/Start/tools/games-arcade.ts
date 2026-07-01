@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Infinite runner',
     tags: ['game', 'fun', 'entertainment'],
     emoji: '🦖',
-    color: '#f59e0b',
     onClick: open('dino-run'),
   },
   {
@@ -15,7 +14,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Rock Paper Scissors',
     tags: ['game', 'fun', 'entertainment'],
     emoji: '✂️',
-    color: '#f59e0b',
     onClick: open('rps'),
   },
   {
@@ -23,7 +21,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: '12×12 grid',
     tags: ['game', 'fun', 'entertainment'],
     emoji: '🐍',
-    color: '#f59e0b',
     onClick: open('snake'),
   },
   {
@@ -31,7 +28,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Tic-Tac-Toe',
     tags: ['game', 'fun', 'entertainment'],
     emoji: '❌',
-    color: '#f59e0b',
     onClick: open('t3'),
   },
 ];

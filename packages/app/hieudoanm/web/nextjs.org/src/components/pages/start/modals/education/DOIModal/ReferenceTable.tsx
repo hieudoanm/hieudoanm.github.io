@@ -17,7 +17,7 @@ export const ReferenceTable: React.FC<{
             'Link',
             '',
           ].map((h) => (
-            <th key={h} className="text-base-content/60 font-medium">
+            <th key={h} className="text-base-content/60 font-normal">
               {h}
             </th>
           ))}
@@ -41,7 +41,7 @@ export const ReferenceTable: React.FC<{
                 href={ref.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-info hover:underline">
+                className="text-primary hover:underline">
                 View
               </a>
             </td>

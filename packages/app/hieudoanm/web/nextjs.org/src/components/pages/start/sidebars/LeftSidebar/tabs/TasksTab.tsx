@@ -78,7 +78,7 @@ export const TasksTab: FC = () => {
             {tasks.map((task) => (
               <li
                 key={task.id}
-                className="hover:bg-base-300 flex items-center gap-2 rounded-lg px-2 py-2 transition-colors">
+                className="hover:bg-base-300 flex items-center gap-2 rounded-full px-2 py-2 transition-colors">
                 <input
                   type="checkbox"
                   className="checkbox checkbox-primary checkbox-xs shrink-0"

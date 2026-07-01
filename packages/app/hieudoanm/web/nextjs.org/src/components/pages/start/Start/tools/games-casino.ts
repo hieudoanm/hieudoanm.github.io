@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Card game',
     tags: ['games-casino', 'gambling', 'card-game', 'baccarat'],
     emoji: '🏦',
-    color: '#f59e0b',
     onClick: open('tai-baccarat'),
   },
   {
@@ -23,7 +22,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'tally',
     ],
     emoji: '🃏',
-    color: '#f59e0b',
     onClick: open('blackjack'),
   },
   {
@@ -41,7 +39,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'arithmetic',
     ],
     emoji: '🃏',
-    color: '#f59e0b',
     onClick: open('poker'),
   },
   {
@@ -49,7 +46,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Over/Under 7',
     tags: ['games-casino', 'gambling', 'dice', 'craps'],
     emoji: '🎲',
-    color: '#f59e0b',
     onClick: open('dice-game'),
   },
   {
@@ -57,7 +53,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: '3 reels',
     tags: ['games-casino', 'gambling', 'slots'],
     emoji: '🎰',
-    color: '#f59e0b',
     onClick: open('slot-machine'),
   },
 ];

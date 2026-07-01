@@ -51,7 +51,7 @@ exports[`SnellenChartModal should render 1`] = `
           />
         </div>
         <div
-          class="text-[9rem] font-serif leading-none font-bold tracking-widest text-base-content select-none transition-opacity duration-300 opacity-10"
+          class="text-[9rem] font-serif leading-none font-normal tracking-widest text-base-content select-none transition-opacity duration-300 opacity-10"
         >
           N
         </div>

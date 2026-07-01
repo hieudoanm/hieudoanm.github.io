@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Find matching pairs',
     tags: ['memory', 'brain', 'cognitive', 'game'],
     emoji: '🧠',
-    color: '#f59e0b',
     onClick: open('memory-match'),
   },
   {
@@ -15,7 +14,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Working memory',
     tags: ['memory', 'brain', 'cognitive', 'game'],
     emoji: '🔢',
-    color: '#f59e0b',
     onClick: open('n-back'),
   },
   {
@@ -23,7 +21,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Memorization',
     tags: ['memory', 'brain', 'cognitive', 'game'],
     emoji: 'π',
-    color: '#f59e0b',
     onClick: open('pi'),
   },
   {
@@ -31,7 +28,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Quiz',
     tags: ['memory', 'brain', 'cognitive', 'game'],
     emoji: '❓',
-    color: '#f59e0b',
     onClick: open('quizify'),
   },
   {
@@ -39,7 +35,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Memorization',
     tags: ['memory', 'brain', 'cognitive', 'game'],
     emoji: '🔣',
-    color: '#f59e0b',
     onClick: open('recall'),
   },
 ];

@@ -66,7 +66,7 @@ export const ServiceRow: FC<{ service: string; url: string }> = ({
   const pageName: string = data?.page?.name || service;
 
   return (
-    <div className="hover:bg-base-300 group flex items-center justify-between rounded-lg px-2 py-1.5 transition-colors duration-150">
+    <div className="hover:bg-base-300 group flex items-center justify-between rounded-full px-2 py-1.5 transition-colors duration-150">
       <Link
         href={pageUrl}
         target="_blank"
@@ -77,11 +77,11 @@ export const ServiceRow: FC<{ service: string; url: string }> = ({
         {isPending ? (
           <div className="bg-base-content/20 h-2 w-2 animate-pulse rounded-full" />
         ) : isOk ? (
-          <div className="bg-success h-2 w-2 rounded-full" />
+          <div className="bg-base-content/60 h-2 w-2 rounded-full" />
         ) : isErr ? (
-          <div className="bg-error h-2 w-2 rounded-full" />
+          <div className="bg-base-content/30 h-2 w-2 rounded-full" />
         ) : (
-          <div className="bg-warning h-2 w-2 rounded-full" />
+          <div className="bg-base-content/20 h-2 w-2 rounded-full" />
         )}
       </div>
     </div>

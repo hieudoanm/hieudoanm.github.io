@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Write',
     tags: ['real-estate', 'property', 'listing'],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-real-estate-bio'),
   },
   {
@@ -15,7 +14,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Write',
     tags: ['real-estate', 'property', 'listing'],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-real-estate-description'),
   },
   {
@@ -23,7 +21,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Write',
     tags: ['real-estate', 'property'],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-real-estate-listing'),
   },
 ];

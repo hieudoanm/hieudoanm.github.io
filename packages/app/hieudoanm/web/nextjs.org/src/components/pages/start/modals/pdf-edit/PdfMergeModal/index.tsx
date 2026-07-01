@@ -58,7 +58,7 @@ export const PdfMergeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                 </button>
                 <span className="flex-1 truncate">{f.name}</span>
                 <button
-                  className="btn btn-ghost btn-xs text-error"
+                  className="btn btn-ghost btn-xs text-base-content/60"
                   onClick={() => removeFile(i)}>
                   ✕
                 </button>

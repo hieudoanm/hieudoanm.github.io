@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'PDF',
     tags: ['document', 'adobe', 'acrobat'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('pdf-extract-images'),
   },
   {
@@ -15,7 +14,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'PDF',
     tags: ['document', 'adobe', 'acrobat'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('pdf-extract-text'),
   },
   {
@@ -23,7 +21,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'PDF',
     tags: ['extract', 'document', 'adobe', 'acrobat'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('pdf-info'),
   },
   {
@@ -31,7 +28,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'PDF',
     tags: ['extract', 'document', 'adobe', 'acrobat'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('pdf-metadata'),
   },
   {
@@ -39,7 +35,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'PDF',
     tags: ['extract', 'document', 'adobe', 'acrobat'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('pdf-ocr'),
   },
   {
@@ -47,7 +42,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'PDF',
     tags: ['extract', 'document', 'adobe', 'acrobat'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('pdf-repair'),
   },
 ];

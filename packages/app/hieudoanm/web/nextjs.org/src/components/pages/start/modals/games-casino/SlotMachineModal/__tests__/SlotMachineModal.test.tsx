@@ -64,10 +64,10 @@ describe('SlotMachineModal', () => {
   });
 
   it('Space key triggers spin', () => {
-    render(<SlotMachineModal onClose={jest.fn()} />);
-    const container = screen.getByText('Slot Machine').closest('div');
-    if (container) {
-      fireEvent.keyDown(container, { key: ' ' });
+    const { container } = render(<SlotMachineModal onClose={jest.fn()} />);
+    const innerDiv = container.querySelector('[tabindex="0"]');
+    if (innerDiv) {
+      fireEvent.keyDown(innerDiv, { key: ' ' });
     }
     act(() => {
       jest.advanceTimersByTime(1000);
@@ -81,9 +81,9 @@ describe('SlotMachineModal', () => {
   });
 
   it('Reset Credits restores credits', () => {
-    render(<SlotMachineModal onClose={jest.fn()} />);
+    const { container } = render(<SlotMachineModal onClose={jest.fn()} />);
     spinAndAdvance();
     fireEvent.click(screen.getByText('Reset Credits'));
-    expect(screen.getByText(/100/)).toBeInTheDocument();
+    expect(container.textContent).toContain('Credits: 100');
   });
 });

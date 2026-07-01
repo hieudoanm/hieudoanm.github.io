@@ -9,7 +9,7 @@ export const Section: FC<{
     <p className="text-base-content/30 mb-4 flex items-center justify-center gap-2 font-mono text-xs tracking-widest uppercase">
       {label}
       {count !== undefined && (
-        <span className="badge badge-xs badge-neutral font-mono tracking-normal normal-case">
+        <span className="bg-primary/20 text-primary border-primary/30 badge badge-xs font-mono tracking-normal normal-case">
           {count}
         </span>
       )}

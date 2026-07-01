@@ -139,11 +139,11 @@ export const PomodoroModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             />
           </svg>
           <div className="absolute flex flex-col items-center">
-            <span className="font-mono text-3xl font-bold tabular-nums">
+            <span className="font-mono text-3xl font-normal tabular-nums">
               {fmt(remaining)}
             </span>
             <span
-              className={`text-xs font-medium tracking-widest uppercase ${isWork ? 'text-primary' : 'text-success'}`}>
+              className={`text-xs font-normal tracking-widest uppercase ${isWork ? 'text-primary' : 'text-primary'}`}>
               {isWork ? 'focus' : 'break'}
             </span>
           </div>

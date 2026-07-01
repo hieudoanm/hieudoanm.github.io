@@ -54,7 +54,7 @@ export const WriteBlogOutlineModal: FC<{ onClose: () => void }> = ({
         {result && (
           <div className="bg-base-200 rounded p-4">
             <div className="mb-2 flex items-center justify-between">
-              <span className="text-sm font-bold">Result:</span>
+              <span className="text-sm font-normal">Result:</span>
               <button
                 className="btn btn-ghost btn-xs"
                 onClick={() => navigator.clipboard.writeText(result)}>

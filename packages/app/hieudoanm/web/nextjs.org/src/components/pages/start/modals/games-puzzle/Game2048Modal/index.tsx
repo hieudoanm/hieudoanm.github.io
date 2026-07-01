@@ -101,7 +101,7 @@ export const Game2048Modal: FC<{ onClose: () => void }> = ({ onClose }) => {
             {grid.flat().map((val, i) => (
               <div
                 key={i}
-                className={`flex items-center justify-center rounded-md font-black transition-all ${TILE_COLORS[val] || 'bg-amber-800 text-white'} ${TILE_FONT[val] || 'text-xs'}`}
+                className={`flex items-center justify-center rounded-md font-normal transition-all ${TILE_COLORS[val] || 'bg-amber-800 text-white'} ${TILE_FONT[val] || 'text-xs'}`}
                 style={{ aspectRatio: '1' }}>
                 {val !== 0 ? val : ''}
               </div>

@@ -43,18 +43,21 @@ export const ManifestModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       fullHeight>
       {/* Type tabs */}
       <div className="border-base-300 flex items-center border-b px-4 py-3">
-        <div className="tabs tabs-boxed">
+        <div className="flex gap-0">
           {(['pwa', 'extension'] as ManifestType[]).map((t) => (
-            <a
+            <button
               key={t}
-              role="tab"
-              className={`tab tab-sm uppercase ${type === t ? 'tab-active' : ''}`}
+              className={`border-b-2 px-3 py-1 text-xs uppercase transition-colors ${
+                type === t
+                  ? 'border-primary text-primary'
+                  : 'text-base-content/40 border-transparent'
+              }`}
               onClick={() => {
                 setType(t);
                 setCopied(false);
               }}>
               {t === 'pwa' ? '📱 PWA' : '🧩 Extension'}
-            </a>
+            </button>
           ))}
         </div>
       </div>

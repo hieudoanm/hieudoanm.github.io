@@ -12,7 +12,7 @@ export const SlidePreview: FC<{ slide: SlideLayout; index: number }> = ({
     <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-purple-500 to-transparent opacity-0 transition-opacity group-hover:opacity-20" />
     <div className="flex items-start justify-between">
       {slide.kicker && (
-        <div className="text-secondary mb-8 text-lg font-semibold uppercase">
+        <div className="text-base-content/70 mb-8 text-lg font-normal uppercase">
           <TextBlock text={slide.kicker} />
         </div>
       )}
@@ -28,7 +28,7 @@ export const SlidePreview: FC<{ slide: SlideLayout; index: number }> = ({
               <TextBlock
                 key={i}
                 text={block.text}
-                className="text-base-content mb-8 text-5xl font-bold"
+                className="text-base-content mb-8 text-5xl font-normal"
               />
             );
           case 'subtitle':
@@ -36,7 +36,7 @@ export const SlidePreview: FC<{ slide: SlideLayout; index: number }> = ({
               <TextBlock
                 key={i}
                 text={block.text}
-                className="text-primary mb-8 text-2xl font-semibold"
+                className="text-primary mb-8 text-2xl font-normal"
               />
             );
           case 'text':
@@ -83,7 +83,7 @@ export const SlidePreview: FC<{ slide: SlideLayout; index: number }> = ({
                   <li key={j} className="flex gap-4">
                     <span className="text-3xl">{item.emoji}</span>
                     <div>
-                      <div className="text-base-content text-2xl font-bold">
+                      <div className="text-base-content text-2xl font-normal">
                         <TextBlock text={item.title ?? ''} />
                       </div>
                       {item.description && (

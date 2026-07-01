@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Sign PDF',
     tags: ['document', 'utility', 'adobe', 'acrobat'],
     emoji: '✍️',
-    color: '#ef4444',
     onClick: open('pdf-esign'),
   },
   {
@@ -15,7 +14,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Encrypt/Decrypt',
     tags: ['pdf', 'document', 'utility'],
     emoji: '🔒',
-    color: '#ef4444',
     onClick: open('pdf-security'),
   },
   {
@@ -31,7 +29,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'acrobat',
     ],
     emoji: '🌐',
-    color: '#ef4444',
     onClick: open('pdf-translate'),
   },
 ];

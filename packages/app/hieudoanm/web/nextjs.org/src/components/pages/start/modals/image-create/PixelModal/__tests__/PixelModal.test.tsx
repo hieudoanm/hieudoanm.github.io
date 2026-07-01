@@ -15,7 +15,7 @@ describe('PixelModal', () => {
   it('renders the dropzone', () => {
     render(<PixelModal onClose={jest.fn()} />);
     expect(
-      screen.getByText('Drop an image here or click to browse')
+      screen.getByText('Drop a file here or click to browse')
     ).toBeInTheDocument();
   });
 

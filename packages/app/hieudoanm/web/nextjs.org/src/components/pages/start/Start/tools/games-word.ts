@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Palindrome',
     tags: ['game', 'fun', 'entertainment'],
     emoji: '🔁',
-    color: '#f59e0b',
     onClick: open('palindrome'),
   },
   {
@@ -15,7 +14,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Scrambled text',
     tags: ['game', 'fun', 'entertainment'],
     emoji: '🔀',
-    color: '#f59e0b',
     onClick: open('typoglycemia'),
   },
   {
@@ -23,7 +21,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Guess the word',
     tags: ['game', 'fun', 'entertainment', 'docx', 'doc', 'microsoft-word'],
     emoji: '🟩',
-    color: '#f59e0b',
     onClick: open('wordle'),
   },
 ];

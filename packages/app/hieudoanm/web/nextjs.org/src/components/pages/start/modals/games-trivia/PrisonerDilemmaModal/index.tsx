@@ -187,18 +187,18 @@ export const PrisonerDilemmaModal: FC<{ onClose: () => void }> = ({
           </div>
         </div>
         <div className="border-base-300 overflow-hidden rounded-lg border text-center text-[10px]">
-          <div className="border-base-300 bg-base-200 grid grid-cols-3 border-b font-bold">
+          <div className="border-base-300 bg-base-200 grid grid-cols-3 border-b font-normal">
             <div className="p-1" />
             <div className="p-1">🤝 Coop</div>
             <div className="p-1">🔪 Defect</div>
           </div>
           <div className="border-base-300 grid grid-cols-3 border-b">
-            <div className="bg-base-200 p-1 font-bold">🤝 Coop</div>
+            <div className="bg-base-200 p-1 font-normal">🤝 Coop</div>
             <div className="text-success p-1">1yr, 1yr</div>
             <div className="text-error p-1">3yr, 0yr</div>
           </div>
           <div className="grid grid-cols-3">
-            <div className="bg-base-200 p-1 font-bold">🔪 Defect</div>
+            <div className="bg-base-200 p-1 font-normal">🔪 Defect</div>
             <div className="text-error p-1">0yr, 3yr</div>
             <div className="p-1">2yr, 2yr</div>
           </div>
@@ -232,7 +232,7 @@ export const PrisonerDilemmaModal: FC<{ onClose: () => void }> = ({
                 <div className="text-3xl">
                   {playerMove === 'cooperate' ? '🤝' : '🔪'}
                 </div>
-                <div className="text-xs font-bold uppercase">
+                <div className="text-xs font-normal uppercase">
                   {playerMove === 'cooperate' ? 'Cooperate' : 'Defect'}
                 </div>
                 <div className="text-xs opacity-60">
@@ -245,7 +245,7 @@ export const PrisonerDilemmaModal: FC<{ onClose: () => void }> = ({
                 <div className="text-3xl">
                   {opponentMove === 'cooperate' ? '🤝' : '🔪'}
                 </div>
-                <div className="text-xs font-bold uppercase">
+                <div className="text-xs font-normal uppercase">
                   {opponentMove === 'cooperate' ? 'Cooperate' : 'Defect'}
                 </div>
                 <div className="text-xs opacity-60">
@@ -265,7 +265,7 @@ export const PrisonerDilemmaModal: FC<{ onClose: () => void }> = ({
               {win === 'win' ? '🏆' : win === 'lose' ? '😞' : '🤝'}
             </div>
             <div
-              className={`text-lg font-bold ${win === 'win' ? 'text-success' : win === 'lose' ? 'text-error' : ''}`}>
+              className={`text-lg font-normal ${win === 'win' ? 'text-success' : win === 'lose' ? 'text-error' : ''}`}>
               {win === 'win'
                 ? 'You won!'
                 : win === 'lose'

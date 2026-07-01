@@ -306,7 +306,7 @@ export const GraphModal: FC<{ onClose: () => void }> = ({ onClose }) => {
         </div>
 
         {error && (
-          <div className="bg-error/10 text-error mb-3 rounded px-3 py-2 text-xs">
+          <div className="bg-base-content/10 text-base-content/60 mb-3 rounded px-3 py-2 text-xs">
             {error}
           </div>
         )}
@@ -335,7 +335,7 @@ export const GraphModal: FC<{ onClose: () => void }> = ({ onClose }) => {
               <div
                 className="pointer-events-none absolute z-10 max-w-64 rounded-md bg-black/80 px-2.5 py-1.5 text-[11px] text-white shadow-lg"
                 style={{ left: hoverPos.x + 12, top: hoverPos.y - 10 }}>
-                <div className="font-medium">{hoveredNode.label}</div>
+                <div className="font-normal">{hoveredNode.label}</div>
                 <div className="text-white/60">{hoveredNode.path}</div>
               </div>
             )}

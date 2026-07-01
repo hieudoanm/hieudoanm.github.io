@@ -103,11 +103,15 @@ export const Base64Modal: FC<{ onClose: () => void }> = ({ onClose }) => {
       subtitle="Decode / Encode"
       size="max-w-lg"
       footerNote="Cmd+Enter to run · Drop a file to encode">
-      <div className="tabs tabs-boxed justify-center">
+      <div className="border-base-300 flex justify-center border-b">
         {(['decode', 'encode'] as Tab[]).map((t) => (
           <button
             key={t}
-            className={`tab flex-1 ${tab === t ? 'tab-active' : ''}`}
+            className={`flex-1 border-b-2 px-3 py-2 text-sm transition-colors ${
+              tab === t
+                ? 'border-primary text-primary'
+                : 'text-base-content/40 border-transparent'
+            }`}
             onClick={() => setTab(t)}>
             {t === 'decode' ? 'Decode' : 'Encode'}
           </button>
@@ -133,7 +137,9 @@ export const Base64Modal: FC<{ onClose: () => void }> = ({ onClose }) => {
         className="btn btn-primary btn-sm mt-2 w-full font-mono tracking-widest">
         {tab === 'decode' ? 'Decode' : 'Encode'}
       </button>
-      {error && <p className="text-error mt-2 text-center text-xs">{error}</p>}
+      {error && (
+        <p className="text-base-content/60 mt-2 text-center text-xs">{error}</p>
+      )}
       {output && (
         <div className="mt-4 space-y-3">
           <div className="flex items-center justify-between">

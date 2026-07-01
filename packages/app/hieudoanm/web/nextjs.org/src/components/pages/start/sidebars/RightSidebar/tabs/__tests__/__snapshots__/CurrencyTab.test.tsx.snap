@@ -18,7 +18,7 @@ exports[`CurrencyTab should render 1`] = `
         </span>
       </label>
       <input
-        class="input input-bordered input-sm w-full font-mono text-lg font-bold tracking-tight"
+        class="input input-bordered input-sm w-full font-mono text-lg font-normal tracking-tight"
         min="0"
         placeholder="1.00"
         step="any"
@@ -39,7 +39,7 @@ exports[`CurrencyTab should render 1`] = `
         </span>
       </label>
       <select
-        class="select select-bordered select-sm text-sm font-bold"
+        class="select select-bordered select-sm text-sm font-normal"
       >
         <option
           value="AUD"
@@ -277,7 +277,7 @@ exports[`CurrencyTab should render 1`] = `
         </span>
       </label>
       <select
-        class="select select-bordered select-sm text-sm font-bold"
+        class="select select-bordered select-sm text-sm font-normal"
       >
         <option
           value="AUD"
@@ -509,7 +509,7 @@ exports[`CurrencyTab should render 1`] = `
          =
       </p>
       <p
-        class="text-primary font-mono text-2xl font-bold tracking-tight"
+        class="text-primary font-mono text-2xl font-normal tracking-tight"
       >
         1.3534
         <span
@@ -545,13 +545,13 @@ exports[`CurrencyTab should render 1`] = `
         class="flex flex-col gap-1"
       >
         <div
-          class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 transition-all duration-150 hover:bg-base-300"
+          class="flex cursor-pointer items-center justify-between rounded-full px-2 py-1.5 transition-all duration-150 hover:bg-base-300"
         >
           <div
             class="flex items-center gap-2"
           >
             <span
-              class="font-mono text-xs font-bold tracking-wider opacity-70"
+              class="font-mono text-xs font-normal tracking-wider opacity-70"
             >
               EUR
             </span>
@@ -568,13 +568,13 @@ exports[`CurrencyTab should render 1`] = `
           </span>
         </div>
         <div
-          class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 transition-all duration-150 hover:bg-base-300"
+          class="flex cursor-pointer items-center justify-between rounded-full px-2 py-1.5 transition-all duration-150 hover:bg-base-300"
         >
           <div
             class="flex items-center gap-2"
           >
             <span
-              class="font-mono text-xs font-bold tracking-wider opacity-70"
+              class="font-mono text-xs font-normal tracking-wider opacity-70"
             >
               GBP
             </span>
@@ -591,13 +591,13 @@ exports[`CurrencyTab should render 1`] = `
           </span>
         </div>
         <div
-          class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 transition-all duration-150 hover:bg-base-300"
+          class="flex cursor-pointer items-center justify-between rounded-full px-2 py-1.5 transition-all duration-150 hover:bg-base-300"
         >
           <div
             class="flex items-center gap-2"
           >
             <span
-              class="font-mono text-xs font-bold tracking-wider opacity-70"
+              class="font-mono text-xs font-normal tracking-wider opacity-70"
             >
               JPY
             </span>
@@ -614,13 +614,13 @@ exports[`CurrencyTab should render 1`] = `
           </span>
         </div>
         <div
-          class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 transition-all duration-150 bg-primary/10 ring-primary/30 ring-1"
+          class="flex cursor-pointer items-center justify-between rounded-full px-2 py-1.5 transition-all duration-150 bg-primary/10 ring-primary/30 ring-1"
         >
           <div
             class="flex items-center gap-2"
           >
             <span
-              class="font-mono text-xs font-bold tracking-wider text-primary"
+              class="font-mono text-xs font-normal tracking-wider text-primary"
             >
               SGD
             </span>
@@ -631,19 +631,19 @@ exports[`CurrencyTab should render 1`] = `
             </span>
           </div>
           <span
-            class="font-mono text-xs tabular-nums text-primary font-bold"
+            class="font-mono text-xs tabular-nums text-primary font-normal"
           >
             1.3534
           </span>
         </div>
         <div
-          class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 transition-all duration-150 hover:bg-base-300"
+          class="flex cursor-pointer items-center justify-between rounded-full px-2 py-1.5 transition-all duration-150 hover:bg-base-300"
         >
           <div
             class="flex items-center gap-2"
           >
             <span
-              class="font-mono text-xs font-bold tracking-wider opacity-70"
+              class="font-mono text-xs font-normal tracking-wider opacity-70"
             >
               CNY
             </span>
@@ -660,13 +660,13 @@ exports[`CurrencyTab should render 1`] = `
           </span>
         </div>
         <div
-          class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 transition-all duration-150 hover:bg-base-300"
+          class="flex cursor-pointer items-center justify-between rounded-full px-2 py-1.5 transition-all duration-150 hover:bg-base-300"
         >
           <div
             class="flex items-center gap-2"
           >
             <span
-              class="font-mono text-xs font-bold tracking-wider opacity-70"
+              class="font-mono text-xs font-normal tracking-wider opacity-70"
             >
               AUD
             </span>
@@ -683,13 +683,13 @@ exports[`CurrencyTab should render 1`] = `
           </span>
         </div>
         <div
-          class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 transition-all duration-150 hover:bg-base-300"
+          class="flex cursor-pointer items-center justify-between rounded-full px-2 py-1.5 transition-all duration-150 hover:bg-base-300"
         >
           <div
             class="flex items-center gap-2"
           >
             <span
-              class="font-mono text-xs font-bold tracking-wider opacity-70"
+              class="font-mono text-xs font-normal tracking-wider opacity-70"
             >
               CAD
             </span>
@@ -706,13 +706,13 @@ exports[`CurrencyTab should render 1`] = `
           </span>
         </div>
         <div
-          class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 transition-all duration-150 hover:bg-base-300"
+          class="flex cursor-pointer items-center justify-between rounded-full px-2 py-1.5 transition-all duration-150 hover:bg-base-300"
         >
           <div
             class="flex items-center gap-2"
           >
             <span
-              class="font-mono text-xs font-bold tracking-wider opacity-70"
+              class="font-mono text-xs font-normal tracking-wider opacity-70"
             >
               CHF
             </span>
@@ -729,13 +729,13 @@ exports[`CurrencyTab should render 1`] = `
           </span>
         </div>
         <div
-          class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 transition-all duration-150 hover:bg-base-300"
+          class="flex cursor-pointer items-center justify-between rounded-full px-2 py-1.5 transition-all duration-150 hover:bg-base-300"
         >
           <div
             class="flex items-center gap-2"
           >
             <span
-              class="font-mono text-xs font-bold tracking-wider opacity-70"
+              class="font-mono text-xs font-normal tracking-wider opacity-70"
             >
               INR
             </span>
@@ -752,13 +752,13 @@ exports[`CurrencyTab should render 1`] = `
           </span>
         </div>
         <div
-          class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 transition-all duration-150 hover:bg-base-300"
+          class="flex cursor-pointer items-center justify-between rounded-full px-2 py-1.5 transition-all duration-150 hover:bg-base-300"
         >
           <div
             class="flex items-center gap-2"
           >
             <span
-              class="font-mono text-xs font-bold tracking-wider opacity-70"
+              class="font-mono text-xs font-normal tracking-wider opacity-70"
             >
               KRW
             </span>
@@ -775,13 +775,13 @@ exports[`CurrencyTab should render 1`] = `
           </span>
         </div>
         <div
-          class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 transition-all duration-150 hover:bg-base-300"
+          class="flex cursor-pointer items-center justify-between rounded-full px-2 py-1.5 transition-all duration-150 hover:bg-base-300"
         >
           <div
             class="flex items-center gap-2"
           >
             <span
-              class="font-mono text-xs font-bold tracking-wider opacity-70"
+              class="font-mono text-xs font-normal tracking-wider opacity-70"
             >
               HKD
             </span>

@@ -19,11 +19,13 @@ export const ResumeTimelineModal: FC<{ onClose: () => void }> = ({
         <div className="mx-auto max-w-2xl p-6 pb-0">
           <div className="mb-4 grid grid-cols-[1fr_auto_1fr] gap-0">
             <div className="pr-2 text-right md:pr-4">
-              <p className="text-sm font-bold tracking-tight">🎓 Education</p>
+              <p className="text-sm font-normal tracking-tight">🎓 Education</p>
             </div>
             <div />
             <div className="pl-2 md:pl-4">
-              <p className="text-sm font-bold tracking-tight">💼 Experience</p>
+              <p className="text-sm font-normal tracking-tight">
+                💼 Experience
+              </p>
             </div>
           </div>
         </div>
@@ -49,7 +51,7 @@ export const ResumeTimelineModal: FC<{ onClose: () => void }> = ({
 
               <div className="timeline-middle self-center">
                 <div className="flex flex-col items-center gap-1">
-                  <div className="font-mono text-[11px] font-bold tracking-tight opacity-60">
+                  <div className="font-mono text-[11px] font-normal tracking-tight opacity-60">
                     {period.label}
                   </div>
                   <div className="flex items-center gap-1">

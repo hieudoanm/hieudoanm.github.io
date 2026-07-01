@@ -81,7 +81,7 @@ export const InflationModal: FC<{ onClose: () => void }> = ({ onClose }) => {
         <div className="space-y-4">
           <div className="form-control">
             <label className="label pb-1">
-              <span className="label-text font-semibold">Country</span>
+              <span className="label-text font-normal">Country</span>
             </label>
             <select
               className="select select-bordered w-full"
@@ -101,7 +101,7 @@ export const InflationModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           </div>
           <div className="form-control">
             <label className="label pb-1">
-              <span className="label-text font-semibold">Currency</span>
+              <span className="label-text font-normal">Currency</span>
             </label>
             <select
               className="select select-bordered w-full"
@@ -117,7 +117,7 @@ export const InflationModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           <div className="grid grid-cols-2 gap-3">
             <div className="form-control">
               <label className="label pb-1">
-                <span className="label-text font-semibold">From</span>
+                <span className="label-text font-normal">From</span>
               </label>
               <select
                 className="select select-bordered w-full"
@@ -132,7 +132,7 @@ export const InflationModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             </div>
             <div className="form-control">
               <label className="label pb-1">
-                <span className="label-text font-semibold">To</span>
+                <span className="label-text font-normal">To</span>
               </label>
               <select
                 className="select select-bordered w-full"
@@ -150,7 +150,7 @@ export const InflationModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           </div>
           <div className="form-control">
             <label className="label pb-1">
-              <span className="label-text font-semibold">Amount</span>
+              <span className="label-text font-normal">Amount</span>
             </label>
             <input
               type="number"
@@ -175,14 +175,14 @@ export const InflationModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           {result && hc ? (
             <div
               className={`rounded-xl border-2 p-4 ${hc.border} ${hc.bg} ${hc.text}`}>
-              <h2 className="mb-3 flex items-center gap-2 font-bold">
+              <h2 className="mb-3 flex items-center gap-2 font-normal">
                 {hc.emoji} {selectedCountry?.countryName} · {selectedYear}–
                 {targetYear}
               </h2>
               <table className="w-full table-auto text-sm">
                 <tbody>
                   <tr>
-                    <td className="py-1 font-semibold">Original</td>
+                    <td className="py-1 font-normal">Original</td>
                     <td className="py-1 text-right">
                       {amount.toLocaleString(locale, {
                         style: 'currency',
@@ -191,7 +191,7 @@ export const InflationModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                     </td>
                   </tr>
                   <tr>
-                    <td className="py-1 font-semibold">Adjusted</td>
+                    <td className="py-1 font-normal">Adjusted</td>
                     <td className="py-1 text-right">
                       {result.adjustedAmount.toLocaleString(locale, {
                         style: 'currency',
@@ -202,7 +202,7 @@ export const InflationModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                     </td>
                   </tr>
                   <tr>
-                    <td className="py-1 font-semibold">Cumulative</td>
+                    <td className="py-1 font-normal">Cumulative</td>
                     <td className="py-1 text-right">
                       {result.cumulativeRate.toLocaleString(locale, {
                         minimumFractionDigits: 2,
@@ -212,7 +212,7 @@ export const InflationModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                     </td>
                   </tr>
                   <tr>
-                    <td className="py-1 font-semibold">Average/yr</td>
+                    <td className="py-1 font-normal">Average/yr</td>
                     <td className="py-1 text-right">
                       {result.averageRate.toLocaleString(locale, {
                         minimumFractionDigits: 2,
@@ -222,8 +222,8 @@ export const InflationModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                     </td>
                   </tr>
                   <tr>
-                    <td className="py-1 font-semibold">Health</td>
-                    <td className="py-1 text-right font-bold capitalize">
+                    <td className="py-1 font-normal">Health</td>
+                    <td className="py-1 text-right font-normal capitalize">
                       {result.health}
                     </td>
                   </tr>

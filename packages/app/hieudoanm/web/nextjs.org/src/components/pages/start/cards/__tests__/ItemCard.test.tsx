@@ -13,11 +13,10 @@ describe('ItemCard', () => {
     const { container } = render(
       <ItemCard
         label="test"
-        href="https://example.com"
-        description="test"
-        emoji="test"
-        color="#ff0000"
-        badge="New"
+        href="/test"
+        description="test description"
+        emoji="😀"
+        badge="AI"
       />
     );
     expect(container).toMatchSnapshot();
@@ -27,14 +26,10 @@ describe('ItemCard', () => {
     const { container } = render(
       <ItemCard
         label="test"
-        href="https://example.com"
-        description="test"
-        emoji="🔥"
-        color="#ff0000"
-        actions={[
-          { label: 'macOS', url: 'https://example.com/macos' },
-          { label: 'Windows', url: 'https://example.com/windows' },
-        ]}
+        href="/test"
+        description="test description"
+        emoji="😀"
+        actions={[{ label: 'Custom action', url: 'https://example.com' }]}
       />
     );
     expect(container).toMatchSnapshot();

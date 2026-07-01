@@ -14,7 +14,7 @@ exports[`JSONSchemaModal should render with JSON input by default 1`] = `
         class="border-base-300 flex items-center justify-between border-b px-4 py-3"
       >
         <h3
-          class="text-sm font-bold"
+          class="text-sm font-normal"
         >
           JSON Schema
         </h3>
@@ -31,20 +31,18 @@ exports[`JSONSchemaModal should render with JSON input by default 1`] = `
           class="flex items-center gap-3"
         >
           <div
-            class="tabs tabs-boxed tabs-sm"
+            class="flex gap-0"
           >
-            <a
-              class="tab tab-active"
-              role="tab"
+            <button
+              class="border-b-2 px-2 py-1 text-xs transition-colors border-primary text-primary"
             >
               JSON
-            </a>
-            <a
-              class="tab "
-              role="tab"
+            </button>
+            <button
+              class="border-b-2 px-2 py-1 text-xs transition-colors border-transparent text-base-content/40"
             >
               YAML
-            </a>
+            </button>
           </div>
         </div>
         <div

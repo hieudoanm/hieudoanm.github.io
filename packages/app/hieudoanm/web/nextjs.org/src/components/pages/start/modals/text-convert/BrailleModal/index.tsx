@@ -109,12 +109,12 @@ export const BrailleModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           <table className="table-sm table w-full text-sm">
             <thead className="bg-base-200">
               <tr>
-                <th className="text-base-content/40 font-medium">Char</th>
-                <th className="text-base-content/40 font-medium">Braille</th>
-                <th className="text-base-content/40 hidden font-medium sm:table-cell">
+                <th className="text-base-content/40 font-normal">Char</th>
+                <th className="text-base-content/40 font-normal">Braille</th>
+                <th className="text-base-content/40 hidden font-normal sm:table-cell">
                   Unicode
                 </th>
-                <th className="text-base-content/40 hidden font-medium sm:table-cell">
+                <th className="text-base-content/40 hidden font-normal sm:table-cell">
                   Dots
                 </th>
               </tr>
@@ -124,7 +124,7 @@ export const BrailleModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                 const entry = braille[ch];
                 return (
                   <tr key={ch} className="border-base-300 border-t">
-                    <td className="font-mono font-medium uppercase">
+                    <td className="font-mono font-normal uppercase">
                       {ch === ' ' ? '␣' : ch}
                     </td>
                     <td className="text-primary font-mono text-xl">

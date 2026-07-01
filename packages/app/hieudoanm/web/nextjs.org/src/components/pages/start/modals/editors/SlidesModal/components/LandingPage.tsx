@@ -9,7 +9,7 @@ export const LandingPage: FC<{ data: PitchDeck }> = ({ data }) => {
     <div className="bg-base-100 text-base-content min-h-screen">
       <section className="bg-base-200 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-4xl px-4 text-center">
-          <h1 className="mb-6 text-3xl font-bold sm:text-4xl lg:text-5xl">
+          <h1 className="mb-6 text-3xl font-normal sm:text-4xl lg:text-5xl">
             {title?.product ?? ''}
           </h1>
           <p className="mb-4 text-lg opacity-80 sm:text-xl">
@@ -21,7 +21,7 @@ export const LandingPage: FC<{ data: PitchDeck }> = ({ data }) => {
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-6xl px-4">
           {problems?.title && (
-            <h2 className="mb-6 text-center text-2xl font-bold sm:text-3xl lg:text-4xl">
+            <h2 className="mb-6 text-center text-2xl font-normal sm:text-3xl lg:text-4xl">
               {problems.title}
             </h2>
           )}
@@ -48,7 +48,7 @@ export const LandingPage: FC<{ data: PitchDeck }> = ({ data }) => {
       <section className="bg-base-200 py-16 sm:py-20">
         <div className="mx-auto max-w-5xl px-4">
           {solutions?.title && (
-            <h2 className="mb-6 text-center text-2xl font-bold sm:text-3xl lg:text-4xl">
+            <h2 className="mb-6 text-center text-2xl font-normal sm:text-3xl lg:text-4xl">
               {solutions.title}
             </h2>
           )}
@@ -67,9 +67,7 @@ export const LandingPage: FC<{ data: PitchDeck }> = ({ data }) => {
                   <span className="badge badge-primary mx-auto mb-2">
                     Step {s.step}
                   </span>
-                  <h3 className="text-lg font-semibold sm:text-xl">
-                    {s.title}
-                  </h3>
+                  <h3 className="text-lg font-normal sm:text-xl">{s.title}</h3>
                   <p className="opacity-80">{s.description}</p>
                 </div>
               </div>
@@ -80,7 +78,7 @@ export const LandingPage: FC<{ data: PitchDeck }> = ({ data }) => {
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-6xl px-4">
           {product?.title && (
-            <h2 className="mb-6 text-center text-2xl font-bold sm:text-3xl lg:text-4xl">
+            <h2 className="mb-6 text-center text-2xl font-normal sm:text-3xl lg:text-4xl">
               {product.title}
             </h2>
           )}
@@ -107,7 +105,7 @@ export const LandingPage: FC<{ data: PitchDeck }> = ({ data }) => {
       <section className="bg-base-200 py-16 sm:py-20">
         <div className="mx-auto max-w-6xl px-4">
           {pricing?.title && (
-            <h2 className="mb-6 text-center text-2xl font-bold sm:text-3xl lg:text-4xl">
+            <h2 className="mb-6 text-center text-2xl font-normal sm:text-3xl lg:text-4xl">
               {pricing.title}
             </h2>
           )}
@@ -120,10 +118,10 @@ export const LandingPage: FC<{ data: PitchDeck }> = ({ data }) => {
             {(pricing?.plans ?? []).map((plan, i) => (
               <div key={i} className="card bg-base-100 text-center shadow-lg">
                 <div className="card-body">
-                  <h3 className="text-lg font-semibold sm:text-xl">
+                  <h3 className="text-lg font-normal sm:text-xl">
                     {plan.name}
                   </h3>
-                  <p className="my-4 text-3xl font-bold sm:text-4xl">
+                  <p className="my-4 text-3xl font-normal sm:text-4xl">
                     {formatCurrency(plan?.amount ?? 0, pricing?.currency ?? '')}
                   </p>
                   <p className="mb-2 text-sm opacity-60">{plan.frequency}</p>
@@ -136,7 +134,7 @@ export const LandingPage: FC<{ data: PitchDeck }> = ({ data }) => {
       </section>
       <footer className="footer footer-center bg-base-300 text-base-content p-6">
         <aside>
-          <p className="font-semibold">{title?.product}</p>
+          <p className="font-normal">{title?.product}</p>
           <p className="text-sm opacity-60">
             &copy; {new Date().getFullYear()} — All rights reserved
           </p>

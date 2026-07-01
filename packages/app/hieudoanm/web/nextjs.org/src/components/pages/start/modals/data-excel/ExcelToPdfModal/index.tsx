@@ -56,7 +56,7 @@ export const ExcelToPdfModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       <div className="flex flex-col gap-4 overflow-auto p-6">
         <Dropzone accept=".xlsx,.xls" onFile={handleFile} />
         {loading && <span className="loading loading-spinner" />}
-        {error && <p className="text-error text-xs">{error}</p>}
+        {error && <p className="text-base-content/60 text-xs">{error}</p>}
         {rows.length > 0 && (
           <>
             <div className="flex items-center justify-between">

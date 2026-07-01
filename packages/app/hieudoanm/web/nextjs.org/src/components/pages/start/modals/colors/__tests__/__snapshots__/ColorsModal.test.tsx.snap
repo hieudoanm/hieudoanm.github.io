@@ -18,7 +18,7 @@ exports[`ColorsModal should render 1`] = `
         >
           <div>
             <h2
-              class="text-lg font-black tracking-tight"
+              class="text-lg font-normal tracking-tight"
             >
               Colors
             </h2>
@@ -56,7 +56,7 @@ exports[`ColorsModal should render 1`] = `
               HEX
             </p>
             <input
-              class="w-full bg-transparent font-mono text-2xl font-black tracking-tight uppercase focus:outline-none"
+              class="w-full bg-transparent font-mono text-2xl font-normal tracking-tight uppercase focus:outline-none"
               maxlength="7"
               type="text"
               value="#171717"
@@ -75,7 +75,7 @@ exports[`ColorsModal should render 1`] = `
               RGB
             </span>
             <span
-              class="font-mono text-sm font-semibold"
+              class="font-mono text-sm font-normal"
             >
               rgb(23, 23, 23)
             </span>
@@ -89,7 +89,7 @@ exports[`ColorsModal should render 1`] = `
               HSL
             </span>
             <span
-              class="font-mono text-sm font-semibold"
+              class="font-mono text-sm font-normal"
             >
               hsl(0, 0%, 9%)
             </span>
@@ -103,7 +103,7 @@ exports[`ColorsModal should render 1`] = `
               OKLCH
             </span>
             <span
-              class="font-mono text-sm font-semibold"
+              class="font-mono text-sm font-normal"
             >
               oklch(0.2046, 0, 89.88)
             </span>

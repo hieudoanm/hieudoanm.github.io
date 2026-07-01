@@ -143,12 +143,12 @@ export const SVGModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       <div className="bg-base-200 border-base-300 flex border-b px-4">
         <button
           onClick={() => setActiveTab('editor')}
-          className={`px-4 py-2 text-sm font-medium transition-all ${activeTab === 'editor' ? 'border-primary text-primary border-b-2' : 'text-base-content/60 hover:text-base-content'}`}>
+          className={`px-4 py-2 text-sm font-normal transition-all ${activeTab === 'editor' ? 'border-primary text-primary border-b-2' : 'text-base-content/60 hover:text-base-content'}`}>
           Editor
         </button>
         <button
           onClick={() => setActiveTab('icons')}
-          className={`px-4 py-2 text-sm font-medium transition-all ${activeTab === 'icons' ? 'border-primary text-primary border-b-2' : 'text-base-content/60 hover:text-base-content'}`}>
+          className={`px-4 py-2 text-sm font-normal transition-all ${activeTab === 'icons' ? 'border-primary text-primary border-b-2' : 'text-base-content/60 hover:text-base-content'}`}>
           Icons
         </button>
       </div>
@@ -157,7 +157,7 @@ export const SVGModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           <div className="flex h-full flex-col lg:flex-row">
             <div className="border-base-300 bg-base-100 flex flex-1 flex-col border-r">
               <div className="border-base-300 bg-base-200/50 flex items-center justify-between border-b px-4 py-2">
-                <span className="text-base-content/40 text-[10px] font-bold tracking-widest uppercase">
+                <span className="text-base-content/40 text-[10px] font-normal tracking-widest uppercase">
                   SVG Source
                 </span>
                 <div className="flex gap-2">
@@ -181,7 +181,7 @@ export const SVGModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                 placeholder="Paste your SVG code here..."
               />
               <div className="border-base-300 bg-base-200/30 flex items-center gap-2 overflow-x-auto border-t p-2">
-                <span className="text-base-content/40 text-[9px] font-bold tracking-widest uppercase">
+                <span className="text-base-content/40 text-[9px] font-normal tracking-widest uppercase">
                   Presets:
                 </span>
                 {PRESETS.map((p) => (
@@ -196,7 +196,7 @@ export const SVGModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             </div>
             <div className="bg-base-300 flex flex-1 flex-col">
               <div className="border-base-300 bg-base-200/50 flex items-center justify-between border-b px-4 py-2">
-                <span className="text-base-content/40 text-[10px] font-bold tracking-widest uppercase">
+                <span className="text-base-content/40 text-[10px] font-normal tracking-widest uppercase">
                   Preview
                 </span>
                 <div className="flex gap-1">
@@ -252,7 +252,7 @@ export const SVGModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           <div className="bg-base-100 flex h-full flex-col gap-6 overflow-y-auto p-6">
             <div className="flex flex-col gap-3">
               <div className="flex items-center justify-between">
-                <span className="text-base-content/40 text-[10px] font-bold tracking-widest uppercase">
+                <span className="text-base-content/40 text-[10px] font-normal tracking-widest uppercase">
                   Icon Generation Source
                 </span>
                 <button
@@ -280,7 +280,7 @@ export const SVGModal: FC<{ onClose: () => void }> = ({ onClose }) => {
               <div className="flex flex-col gap-4">
                 <div className="border-base-300 flex items-center justify-between border-b pb-2">
                   <div>
-                    <h4 className="font-bold">Generated Icons</h4>
+                    <h4 className="font-normal">Generated Icons</h4>
                     <p className="text-base-content/40 text-[10px]">
                       Source: {sourceName}
                     </p>
@@ -304,7 +304,7 @@ export const SVGModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                         className="h-12 w-12 object-contain"
                       />
                       <div className="flex flex-col items-center gap-0.5">
-                        <span className="text-[10px] font-bold">
+                        <span className="text-[10px] font-normal">
                           {icon.size}px
                         </span>
                         <span className="text-primary text-[9px] opacity-0 transition-opacity group-hover:opacity-100">

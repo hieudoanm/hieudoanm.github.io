@@ -16,7 +16,7 @@ export const CardPicker: FC<{
   };
   return (
     <div className="mb-2">
-      <div className="mb-1 text-xs font-semibold opacity-50">{label}</div>
+      <div className="mb-1 text-xs font-normal opacity-50">{label}</div>
       <div className="flex flex-wrap gap-1">
         {cards.map((c, i) => (
           <button

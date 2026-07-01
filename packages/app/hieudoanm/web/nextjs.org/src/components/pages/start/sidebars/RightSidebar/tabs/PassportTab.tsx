@@ -68,7 +68,7 @@ export const PassportTab: FC = () => {
       </div>
 
       {/* Count */}
-      <p className="text-base-content/40 text-[10px] font-bold tracking-widest uppercase">
+      <p className="text-base-content/40 text-[10px] font-normal tracking-widest uppercase">
         {filtered.length} countr{filtered.length === 1 ? 'y' : 'ies'}
       </p>
 
@@ -84,7 +84,7 @@ export const PassportTab: FC = () => {
             <span className="text-lg leading-none">{c.flag}</span>
             {/* Name + meta */}
             <div className="min-w-0 flex-1">
-              <p className="truncate text-xs font-medium">{c.name}</p>
+              <p className="truncate text-xs font-normal">{c.name}</p>
               <p className="text-base-content/40 text-[10px]">
                 {c.cca2} · {c.subregion}
               </p>

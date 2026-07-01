@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Data',
     tags: ['json', 'converter', 'markup', 'comma-separated', 'spreadsheet'],
     emoji: '🔄',
-    color: '#10b981',
     onClick: open('xml-to-csv'),
   },
   {
@@ -23,7 +22,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'microsoft-excel',
     ],
     emoji: '🔄',
-    color: '#10b981',
     onClick: open('xml-to-excel'),
   },
   {
@@ -31,7 +29,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Data',
     tags: ['converter', 'markup', 'javascript-object-notation'],
     emoji: '🔄',
-    color: '#10b981',
     onClick: open('xml-to-json'),
   },
 ];

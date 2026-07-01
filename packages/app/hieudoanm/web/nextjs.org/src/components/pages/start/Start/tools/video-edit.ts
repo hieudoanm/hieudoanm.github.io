@@ -18,7 +18,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'footage',
     ],
     emoji: '✂️',
-    color: '#ef4444',
     onClick: open('video-compress'),
   },
   {
@@ -36,7 +35,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'footage',
     ],
     emoji: '✂️',
-    color: '#ef4444',
     onClick: open('video-crop'),
   },
   {
@@ -56,7 +54,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'footage',
     ],
     emoji: '✂️',
-    color: '#ef4444',
     onClick: open('video-extract-audio'),
   },
   {
@@ -64,7 +61,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Video',
     tags: ['edit', 'media', 'mp4', 'movie', 'clip', 'footage'],
     emoji: '✂️',
-    color: '#ef4444',
     onClick: open('video-extract-frames'),
   },
   {
@@ -72,7 +68,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Video',
     tags: ['edit', 'media', 'mp4', 'movie', 'clip', 'footage'],
     emoji: '✂️',
-    color: '#ef4444',
     onClick: open('video-merge'),
   },
   {
@@ -80,7 +75,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Video',
     tags: ['edit', 'media', 'mp4', 'movie', 'clip', 'footage'],
     emoji: '✂️',
-    color: '#ef4444',
     onClick: open('video-mute'),
   },
   {
@@ -98,7 +92,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'footage',
     ],
     emoji: '✂️',
-    color: '#ef4444',
     onClick: open('video-resize'),
   },
   {
@@ -106,7 +99,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Video',
     tags: ['edit', 'media', 'mp4', 'movie', 'clip', 'footage'],
     emoji: '✂️',
-    color: '#ef4444',
     onClick: open('video-speed'),
   },
   {
@@ -114,7 +106,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Video',
     tags: ['edit', 'media', 'mp4', 'movie', 'clip', 'footage'],
     emoji: '✂️',
-    color: '#ef4444',
     onClick: open('video-stabilize'),
   },
   {
@@ -122,7 +113,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Video',
     tags: ['edit', 'media', 'mp4', 'movie', 'clip', 'footage'],
     emoji: '✂️',
-    color: '#ef4444',
     onClick: open('video-trim'),
   },
 ];

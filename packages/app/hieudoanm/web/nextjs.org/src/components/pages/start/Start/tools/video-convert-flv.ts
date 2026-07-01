@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Video',
     tags: ['media', 'convert'],
     emoji: '🎬',
-    color: '#ef4444',
     onClick: open('video-flv-to-mp4'),
   },
 ];

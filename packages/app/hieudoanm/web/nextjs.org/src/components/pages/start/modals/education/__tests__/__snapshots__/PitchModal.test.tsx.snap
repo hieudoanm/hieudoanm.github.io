@@ -18,7 +18,7 @@ exports[`PitchModal should render 1`] = `
         >
           <div>
             <h2
-              class="text-lg font-black tracking-tight"
+              class="text-lg font-normal tracking-tight"
             >
               🎹 Pitch Trainer
             </h2>
@@ -81,37 +81,37 @@ exports[`PitchModal should render 1`] = `
             class="flex h-full gap-1"
           >
             <button
-              class="relative flex flex-1 items-end justify-center rounded-lg border-2 pb-2 text-xs font-bold transition-all duration-150 active:translate-y-0.5 bg-base-content border-base-content text-base-100"
+              class="relative flex flex-1 items-end justify-center rounded-lg border-2 pb-2 text-xs font-normal transition-all duration-150 active:translate-y-0.5 bg-base-content border-base-content text-base-100"
             >
               C
             </button>
             <button
-              class="relative flex flex-1 items-end justify-center rounded-lg border-2 pb-2 text-xs font-bold transition-all duration-150 active:translate-y-0.5 bg-base-content border-base-content text-base-100"
+              class="relative flex flex-1 items-end justify-center rounded-lg border-2 pb-2 text-xs font-normal transition-all duration-150 active:translate-y-0.5 bg-base-content border-base-content text-base-100"
             >
               D
             </button>
             <button
-              class="relative flex flex-1 items-end justify-center rounded-lg border-2 pb-2 text-xs font-bold transition-all duration-150 active:translate-y-0.5 bg-base-content border-base-content text-base-100"
+              class="relative flex flex-1 items-end justify-center rounded-lg border-2 pb-2 text-xs font-normal transition-all duration-150 active:translate-y-0.5 bg-base-content border-base-content text-base-100"
             >
               E
             </button>
             <button
-              class="relative flex flex-1 items-end justify-center rounded-lg border-2 pb-2 text-xs font-bold transition-all duration-150 active:translate-y-0.5 bg-base-content border-base-content text-base-100"
+              class="relative flex flex-1 items-end justify-center rounded-lg border-2 pb-2 text-xs font-normal transition-all duration-150 active:translate-y-0.5 bg-base-content border-base-content text-base-100"
             >
               F
             </button>
             <button
-              class="relative flex flex-1 items-end justify-center rounded-lg border-2 pb-2 text-xs font-bold transition-all duration-150 active:translate-y-0.5 bg-base-content border-base-content text-base-100"
+              class="relative flex flex-1 items-end justify-center rounded-lg border-2 pb-2 text-xs font-normal transition-all duration-150 active:translate-y-0.5 bg-base-content border-base-content text-base-100"
             >
               G
             </button>
             <button
-              class="relative flex flex-1 items-end justify-center rounded-lg border-2 pb-2 text-xs font-bold transition-all duration-150 active:translate-y-0.5 bg-base-content border-base-content text-base-100"
+              class="relative flex flex-1 items-end justify-center rounded-lg border-2 pb-2 text-xs font-normal transition-all duration-150 active:translate-y-0.5 bg-base-content border-base-content text-base-100"
             >
               A
             </button>
             <button
-              class="relative flex flex-1 items-end justify-center rounded-lg border-2 pb-2 text-xs font-bold transition-all duration-150 active:translate-y-0.5 bg-base-content border-base-content text-base-100"
+              class="relative flex flex-1 items-end justify-center rounded-lg border-2 pb-2 text-xs font-normal transition-all duration-150 active:translate-y-0.5 bg-base-content border-base-content text-base-100"
             >
               B
             </button>
@@ -121,7 +121,7 @@ exports[`PitchModal should render 1`] = `
             style="left: 14.285714285714286%;"
           >
             <div
-              class="flex h-full items-end justify-center pb-1 text-[10px] font-bold"
+              class="flex h-full items-end justify-center pb-1 text-[10px] font-normal"
             >
               C#
             </div>
@@ -131,7 +131,7 @@ exports[`PitchModal should render 1`] = `
             style="left: 28.571428571428573%;"
           >
             <div
-              class="flex h-full items-end justify-center pb-1 text-[10px] font-bold"
+              class="flex h-full items-end justify-center pb-1 text-[10px] font-normal"
             >
               D#
             </div>
@@ -141,7 +141,7 @@ exports[`PitchModal should render 1`] = `
             style="left: 57.142857142857146%;"
           >
             <div
-              class="flex h-full items-end justify-center pb-1 text-[10px] font-bold"
+              class="flex h-full items-end justify-center pb-1 text-[10px] font-normal"
             >
               F#
             </div>
@@ -151,7 +151,7 @@ exports[`PitchModal should render 1`] = `
             style="left: 71.42857142857143%;"
           >
             <div
-              class="flex h-full items-end justify-center pb-1 text-[10px] font-bold"
+              class="flex h-full items-end justify-center pb-1 text-[10px] font-normal"
             >
               G#
             </div>
@@ -161,7 +161,7 @@ exports[`PitchModal should render 1`] = `
             style="left: 85.71428571428571%;"
           >
             <div
-              class="flex h-full items-end justify-center pb-1 text-[10px] font-bold"
+              class="flex h-full items-end justify-center pb-1 text-[10px] font-normal"
             >
               A#
             </div>

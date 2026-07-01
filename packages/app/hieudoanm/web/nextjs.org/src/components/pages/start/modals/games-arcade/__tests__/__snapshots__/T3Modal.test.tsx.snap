@@ -18,7 +18,7 @@ exports[`T3Modal should render correctly 1`] = `
         >
           <div>
             <h2
-              class="text-lg font-black tracking-tight"
+              class="text-lg font-normal tracking-tight"
             >
               T3 - Tic-Tac-Toe
             </h2>
@@ -119,7 +119,7 @@ exports[`T3Modal should render correctly 1`] = `
               Current:
                
               <span
-                class="text-info font-semibold"
+                class="text-info font-normal"
               >
                 X
               </span>

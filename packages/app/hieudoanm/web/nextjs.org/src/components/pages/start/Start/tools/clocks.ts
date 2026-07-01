@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Timer',
     tags: ['clock', 'world-clock', 'stopwatch', 'alarm'],
     emoji: '⏳',
-    color: '#06b6d4',
     onClick: open('countdown'),
   },
   {
@@ -15,7 +14,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Expression Builder',
     tags: ['clock', 'time', 'world-clock'],
     emoji: '🕒',
-    color: '#8b5cf6',
     onClick: open('cron'),
   },
   {
@@ -23,7 +21,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Date Difference',
     tags: ['clock', 'time', 'date', 'difference'],
     emoji: '📅',
-    color: '#8b5cf6',
     onClick: open('days-count'),
   },
   {
@@ -31,7 +28,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Timestamp',
     tags: ['clock', 'time', 'timestamp', 'unix', 'epoch'],
     emoji: '🕐',
-    color: '#8b5cf6',
     onClick: open('epoch-convert'),
   },
   {
@@ -39,7 +35,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Timer',
     tags: ['clock', 'world-clock', 'countdown', 'stopwatch', 'alarm'],
     emoji: '🍅',
-    color: '#ef4444',
     onClick: open('pomodoro'),
   },
   {
@@ -54,7 +49,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'clock-face',
     ],
     emoji: '⌚',
-    color: '#ef4444',
     onClick: open('watchface'),
   },
 ];

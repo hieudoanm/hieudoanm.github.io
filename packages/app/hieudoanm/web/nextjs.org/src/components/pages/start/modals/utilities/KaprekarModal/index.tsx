@@ -72,7 +72,7 @@ export const KaprekarModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             max={9999}
             value={number}
             onChange={(e) => setNumber(Number(e.target.value))}
-            className="input input-bordered input-sm join-item flex-1 text-center font-mono text-lg font-bold tracking-tight tabular-nums"
+            className="input input-bordered input-sm join-item flex-1 text-center font-mono text-lg font-normal tracking-tight tabular-nums"
           />
           <button
             onClick={() => setNumber((p) => Math.min(p + 1, 9999))}
@@ -98,7 +98,7 @@ export const KaprekarModal: FC<{ onClose: () => void }> = ({ onClose }) => {
         )}
         {(isConstant3 || isConstant4) && (
           <div className="flex flex-col items-center gap-1 text-center">
-            <p className="text-primary font-mono text-3xl font-black tracking-tight">
+            <p className="text-primary font-mono text-3xl font-normal tracking-tight">
               {number}
             </p>
             <p className="text-base-content/40 font-mono text-[10px] tracking-widest uppercase">
@@ -128,7 +128,7 @@ export const KaprekarModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                   </span>
                   <span className="text-base-content/30 px-1">=</span>
                   <span
-                    className={`w-12 text-right font-bold ${isKC ? 'text-primary' : ''}`}>
+                    className={`w-12 text-right font-normal ${isKC ? 'text-primary' : ''}`}>
                     {result}
                   </span>
                 </div>

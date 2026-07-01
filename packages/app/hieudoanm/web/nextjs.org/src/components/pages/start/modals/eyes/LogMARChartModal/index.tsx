@@ -102,7 +102,7 @@ export const LogMARChartModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             <div className="bg-primary/20 h-px flex-1" />
           </div>
           <div
-            className={`${line.size} text-base-content font-serif leading-none font-bold tracking-widest transition-opacity duration-300 select-none ${revealed ? 'opacity-100' : 'opacity-10'}`}>
+            className={`${line.size} text-base-content font-serif leading-none font-normal tracking-widest transition-opacity duration-300 select-none ${revealed ? 'opacity-100' : 'opacity-10'}`}>
             {line.letters.split('').join(' ')}
           </div>
           <div className="flex flex-col items-center gap-3">

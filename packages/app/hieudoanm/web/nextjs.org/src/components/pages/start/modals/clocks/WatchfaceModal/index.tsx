@@ -46,14 +46,14 @@ const Dot: FC = () => {
         <div
           className="absolute h-full w-full transition-transform duration-[1000ms] ease-linear"
           style={{ transform: `rotate(${minuteAngle}deg)` }}>
-          <div className="bg-secondary shadow-secondary absolute top-8 left-1/2 h-4 w-4 -translate-x-1/2 rounded-full shadow-[0_0_15px_-3px_rgba(0,0,0,0.3)]" />
+          <div className="bg-base-content/60 absolute top-8 left-1/2 h-4 w-4 -translate-x-1/2 rounded-full shadow-[0_0_15px_-3px_rgba(0,0,0,0.3)]" />
         </div>
 
         {/* SECONDS */}
         <div
           className="absolute h-full w-full transition-transform duration-[1000ms] ease-linear"
           style={{ transform: `rotate(${secondAngle}deg)` }}>
-          <div className="bg-accent shadow-accent absolute top-5 left-1/2 h-2 w-2 -translate-x-1/2 rounded-full shadow-[0_0_15px_-3px_rgba(0,0,0,0.3)]" />
+          <div className="bg-base-content/40 absolute top-5 left-1/2 h-2 w-2 -translate-x-1/2 rounded-full shadow-[0_0_15px_-3px_rgba(0,0,0,0.3)]" />
         </div>
 
         {/* CENTER DOT */}
@@ -70,17 +70,19 @@ const Minimal: FC = () => {
     <div className="flex h-full w-full items-center justify-center p-8">
       <div className="border-base-content/10 bg-base-100 flex aspect-square w-full max-w-[300px] items-center justify-center rounded-full border-2 shadow-2xl">
         <div className="flex items-baseline font-mono tracking-tighter tabular-nums">
-          <p className="text-primary text-5xl font-black">{addZero(hours)}</p>
-          <p className="text-base-content/20 mx-1 mb-1 text-5xl font-black">
+          <p className="text-primary text-5xl font-normal">{addZero(hours)}</p>
+          <p className="text-base-content/20 mx-1 mb-1 text-5xl font-normal">
             :
           </p>
-          <p className="text-secondary text-5xl font-black">
+          <p className="text-base-content/80 text-5xl font-normal">
             {addZero(minutes)}
           </p>
-          <p className="text-base-content/20 mx-1 mb-1 text-5xl font-black">
+          <p className="text-base-content/20 mx-1 mb-1 text-5xl font-normal">
             :
           </p>
-          <p className="text-accent text-5xl font-black">{addZero(seconds)}</p>
+          <p className="text-base-content/60 text-5xl font-normal">
+            {addZero(seconds)}
+          </p>
         </div>
       </div>
     </div>

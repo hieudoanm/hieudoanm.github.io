@@ -79,21 +79,21 @@ export const TextUrlTracerModal: FC<{ onClose: () => void }> = ({
         </label>
 
         {error && (
-          <div className="bg-error/10 text-error rounded p-3 text-xs">
+          <div className="bg-base-content/10 text-base-content/60 rounded p-3 text-xs">
             {error}
           </div>
         )}
 
         {steps.length > 0 && (
           <div className="flex flex-col gap-2">
-            <p className="text-base-content/40 text-[10px] font-bold tracking-widest uppercase">
+            <p className="text-base-content/40 text-[10px] font-normal tracking-widest uppercase">
               Redirect Chain ({steps.length} hop{steps.length > 1 ? 's' : ''})
             </p>
             {steps.map((step, i) => (
               <div
                 key={i}
                 className="bg-base-200 flex items-start gap-3 rounded p-3">
-                <span className="mt-1 font-mono text-xs font-bold">
+                <span className="mt-1 font-mono text-xs font-normal">
                   {i + 1}.
                 </span>
                 <div className="min-w-0 flex-1">
@@ -102,10 +102,10 @@ export const TextUrlTracerModal: FC<{ onClose: () => void }> = ({
                     <span
                       className={`mt-1 inline-block rounded px-1.5 py-0.5 font-mono text-[10px] ${
                         step.status >= 400
-                          ? 'bg-error/20 text-error'
+                          ? 'bg-base-content/20 text-base-content/60'
                           : step.status >= 300
-                            ? 'bg-warning/20 text-warning'
-                            : 'bg-success/20 text-success'
+                            ? 'bg-base-content/10 text-base-content/40'
+                            : 'bg-base-content/5 text-base-content/30'
                       }`}>
                       {step.status} {step.statusText}
                     </span>

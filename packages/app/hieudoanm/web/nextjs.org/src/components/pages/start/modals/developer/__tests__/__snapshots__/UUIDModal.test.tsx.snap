@@ -18,7 +18,7 @@ exports[`UUIDModal should render with three UUID inputs 1`] = `
         >
           <div>
             <h2
-              class="text-lg font-black tracking-tight"
+              class="text-lg font-normal tracking-tight"
             >
               UUID Generator
             </h2>
@@ -54,7 +54,7 @@ exports[`UUIDModal should render with three UUID inputs 1`] = `
             >
               <div>
                 <span
-                  class="text-xs font-bold tracking-widest uppercase"
+                  class="text-xs font-normal tracking-widest uppercase"
                 >
                   UUID v1
                 </span>
@@ -94,7 +94,7 @@ exports[`UUIDModal should render with three UUID inputs 1`] = `
             >
               <div>
                 <span
-                  class="text-xs font-bold tracking-widest uppercase"
+                  class="text-xs font-normal tracking-widest uppercase"
                 >
                   UUID v4
                 </span>
@@ -134,7 +134,7 @@ exports[`UUIDModal should render with three UUID inputs 1`] = `
             >
               <div>
                 <span
-                  class="text-xs font-bold tracking-widest uppercase"
+                  class="text-xs font-normal tracking-widest uppercase"
                 >
                   UUID v7
                 </span>

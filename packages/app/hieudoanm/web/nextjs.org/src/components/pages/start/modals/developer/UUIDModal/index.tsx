@@ -51,7 +51,7 @@ export const UUIDModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             className="bg-base-200 border-base-300 rounded-xl border p-3">
             <div className="mb-2 flex items-center justify-between">
               <div>
-                <span className="text-xs font-bold tracking-widest uppercase">
+                <span className="text-xs font-normal tracking-widest uppercase">
                   {label}
                 </span>
                 <span className="text-base-content/30 ml-2 font-mono text-[10px]">

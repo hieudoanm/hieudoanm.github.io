@@ -60,7 +60,7 @@ export const PdfInfoModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             <tbody>
               {infoRows.map(([label, value]) => (
                 <tr key={label}>
-                  <td className="font-medium">{label}</td>
+                  <td className="font-normal">{label}</td>
                   <td>{value}</td>
                 </tr>
               ))}

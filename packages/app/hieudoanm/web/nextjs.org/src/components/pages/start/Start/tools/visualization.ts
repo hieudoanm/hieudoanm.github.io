@@ -15,7 +15,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'schedule',
     ],
     emoji: '📅',
-    color: '#10b981',
     onClick: open('calendar-tracker'),
   },
   {
@@ -23,7 +22,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Force Layout',
     tags: ['chart', 'visualization', 'data'],
     emoji: '🕸️',
-    color: '#6c5ce7',
     onClick: open('graph'),
   },
   {
@@ -31,7 +29,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Visualization',
     tags: ['chart', 'graph', 'data'],
     emoji: '🏛️',
-    color: '#ef4444',
     onClick: open('legislation'),
   },
   {
@@ -39,7 +36,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Timeline',
     tags: ['chart', 'graph', 'visualization', 'data'],
     emoji: '⏳',
-    color: '#ef4444',
     onClick: open('resume-timeline'),
   },
 ];

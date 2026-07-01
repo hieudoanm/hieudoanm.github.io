@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'PDF',
     tags: ['create', 'document', 'word', 'adobe', 'acrobat'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('epub-to-pdf'),
   },
   {
@@ -15,7 +14,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'PDF',
     tags: ['create', 'document', 'word', 'adobe', 'acrobat'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('images-to-pdf'),
   },
   {
@@ -23,7 +21,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'PDF',
     tags: ['create', 'document', 'word', 'adobe', 'acrobat'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('create-md-to-pdf'),
   },
   {
@@ -31,7 +28,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'PDF',
     tags: ['create', 'document', 'word', 'adobe', 'acrobat'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('ppt-to-pdf'),
   },
   {
@@ -39,7 +35,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'PDF',
     tags: ['create', 'document', 'word', 'adobe', 'acrobat'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('create-text-to-pdf'),
   },
   {
@@ -47,7 +42,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'PDF',
     tags: ['create', 'document', 'word', 'adobe', 'acrobat'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('create-url-to-pdf'),
   },
   {
@@ -55,7 +49,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'PDF',
     tags: ['create', 'document', 'word', 'adobe', 'acrobat'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('url-to-pdf'),
   },
   {
@@ -71,7 +64,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'acrobat',
     ],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('word-to-pdf'),
   },
 ];

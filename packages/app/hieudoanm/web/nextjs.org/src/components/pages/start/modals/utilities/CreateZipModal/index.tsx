@@ -56,7 +56,7 @@ export const CreateZipModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                   {(f.file.size / 1024).toFixed(1)} KB
                 </span>
                 <button
-                  className="btn btn-ghost btn-xs text-error"
+                  className="btn btn-ghost btn-xs text-base-content/60"
                   onClick={() => removeFile(i)}>
                   ✕
                 </button>

@@ -89,11 +89,11 @@ export const DiceGameModal: FC<{ onClose: () => void }> = ({ onClose }) => {
               <span className="text-2xl opacity-30">+</span>
               <span className="text-5xl">{DICE_FACES[dice[1]]}</span>
             </div>
-            <div className="text-center text-sm font-bold">
+            <div className="text-center text-sm font-normal">
               Total: <strong>{dice[0] + dice[1]}</strong>
             </div>
             <div
-              className={`text-center text-sm font-bold ${lastWon > 0 ? 'text-success' : 'opacity-50'}`}>
+              className={`text-center text-sm font-normal ${lastWon > 0 ? 'text-success' : 'opacity-50'}`}>
               {lastWon > 0 ? 'You win!' : 'You lose'}
               {lastWon > 0 && <span className="ml-2">+{lastWon}</span>}
             </div>

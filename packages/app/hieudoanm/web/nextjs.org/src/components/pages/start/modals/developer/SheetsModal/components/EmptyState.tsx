@@ -33,7 +33,7 @@ export const EmptyState: FC<EmptyStateProps> = memo(
             </svg>
           </div>
           <div>
-            <h1 className="text-base-content/80 mb-2 text-2xl font-bold tracking-tight">
+            <h1 className="text-base-content/80 mb-2 text-2xl font-normal tracking-tight">
               Sheets
             </h1>
             <p className="text-base-content/40 max-w-xs text-sm leading-relaxed">

@@ -95,7 +95,7 @@ export const PiModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             </>
           ) : locked ? (
             <>
-              <div className="text-error font-semibold">Mistake!</div>
+              <div className="text-error font-normal">Mistake!</div>
               <div>You reached digit {index}</div>
             </>
           ) : (

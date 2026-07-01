@@ -91,7 +91,7 @@ export const Start: FC = () => {
           <p className="text-base-content/30 mb-2 text-center font-mono text-xs tracking-widest uppercase">
             {today}
           </p>
-          <h1 className="mb-6 text-center text-2xl font-black tracking-tight">
+          <h1 className="mb-6 text-center text-2xl font-thin tracking-tight">
             Start Page
           </h1>
 
@@ -108,7 +108,7 @@ export const Start: FC = () => {
                 className="mx-auto mt-8 w-full max-w-2xl">
                 <p className="text-base-content/30 mb-4 flex items-center justify-center gap-2 font-mono text-xs tracking-widest uppercase">
                   {label}
-                  <span className="badge badge-xs badge-neutral font-mono tracking-normal normal-case">
+                  <span className="bg-primary/20 text-primary border-primary/30 badge badge-xs font-mono tracking-normal normal-case">
                     {items.length}
                   </span>
                 </p>
@@ -155,9 +155,9 @@ export const Start: FC = () => {
               className="fixed inset-0 z-40 bg-black/40"
               onClick={() => setActiveSidebar(null)}
             />
-            <div className="bg-base-100 border-base-300 fixed inset-x-0 bottom-16 z-50 max-h-[70vh] overflow-y-auto rounded-t-2xl border-t">
+            <div className="bg-base-100 border-base-300 fixed inset-x-0 bottom-16 z-50 max-h-[70vh] overflow-y-auto rounded-t-full border-t">
               <div className="bg-base-100 border-base-300 sticky top-0 flex items-center justify-between border-b px-4 py-3">
-                <span className="text-sm font-semibold capitalize">
+                <span className="text-[10px] font-normal tracking-widest uppercase">
                   {activeSidebar === 'tasks' ? 'Tasks' : 'Clock'}
                 </span>
                 <button

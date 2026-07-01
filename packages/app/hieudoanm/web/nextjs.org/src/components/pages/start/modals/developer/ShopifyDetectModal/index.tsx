@@ -59,16 +59,22 @@ export const ShopifyDetectModal: FC<{ onClose: () => void }> = ({
 
   return (
     <ModalWrapper onClose={onClose} title="Shopify Detector" size="max-w-lg">
-      <div role="tablist" className="tabs tabs-boxed mb-4">
-        <a
-          role="tab"
-          className={`tab flex-1 ${tab === 'check' ? 'tab-active' : ''}`}
+      <div className="mb-4 flex">
+        <button
+          className={`flex-1 border-b-2 px-3 py-2 text-sm transition-colors ${
+            tab === 'check'
+              ? 'border-primary text-primary'
+              : 'text-base-content/40 border-transparent'
+          }`}
           onClick={() => setTab('check')}>
           🔍 Check
-        </a>
-        <a
-          role="tab"
-          className={`tab flex-1 ${tab === 'history' ? 'tab-active' : ''}`}
+        </button>
+        <button
+          className={`flex-1 border-b-2 px-3 py-2 text-sm transition-colors ${
+            tab === 'history'
+              ? 'border-primary text-primary'
+              : 'text-base-content/40 border-transparent'
+          }`}
           onClick={() => setTab('history')}>
           🕐 History
           {history.length > 0 && (
@@ -76,7 +82,7 @@ export const ShopifyDetectModal: FC<{ onClose: () => void }> = ({
               {history.length}
             </span>
           )}
-        </a>
+        </button>
       </div>
       {tab === 'check' && (
         <div>
@@ -107,7 +113,7 @@ export const ShopifyDetectModal: FC<{ onClose: () => void }> = ({
               {results.map((r) => (
                 <div
                   key={r.url}
-                  className={`rounded-xl border-2 p-3 ${r.isShopify ? 'border-success/30 bg-success/5' : 'border-error/30 bg-error/5'}`}>
+                  className={`rounded-xl border-2 p-3 ${r.isShopify ? 'border-primary/30 bg-primary/5' : 'border-base-content/30 bg-base-content/5'}`}>
                   <div className="mb-2 flex items-center justify-between gap-2">
                     <span className="min-w-0 truncate font-mono text-xs">
                       {r.url}
@@ -124,7 +130,7 @@ export const ShopifyDetectModal: FC<{ onClose: () => void }> = ({
                     </div>
                   </div>
                   <div
-                    className={`mb-2 text-sm font-semibold ${r.isShopify ? 'text-success' : 'text-error'}`}>
+                    className={`mb-2 text-sm font-normal ${r.isShopify ? 'text-primary' : 'text-base-content/60'}`}>
                     {r.isShopify ? '✔ Shopify detected' : '✖ Not Shopify'}
                   </div>
                   <progress
@@ -157,7 +163,7 @@ export const ShopifyDetectModal: FC<{ onClose: () => void }> = ({
                   {history.length} entries
                 </span>
                 <button
-                  className="btn btn-ghost btn-xs text-error"
+                  className="btn btn-ghost btn-xs text-base-content/60"
                   onClick={handleClear}>
                   Clear all
                 </button>

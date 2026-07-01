@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Data',
     tags: ['spreadsheet', 'comma-separated', 'xlsx', 'xls', 'microsoft-excel'],
     emoji: '🔄',
-    color: '#10b981',
     onClick: open('csv-to-excel'),
   },
   {
@@ -15,7 +14,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Data',
     tags: ['spreadsheet', 'comma-separated', 'javascript-object-notation'],
     emoji: '🔄',
-    color: '#10b981',
     onClick: open('csv-to-json'),
   },
   {
@@ -23,7 +21,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Data',
     tags: ['spreadsheet', 'comma-separated', 'markup'],
     emoji: '🔄',
-    color: '#10b981',
     onClick: open('csv-to-xml'),
   },
   {
@@ -31,7 +28,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Data',
     tags: ['spreadsheet', 'comma-separated'],
     emoji: '✂️',
-    color: '#10b981',
     onClick: open('split-csv'),
   },
 ];

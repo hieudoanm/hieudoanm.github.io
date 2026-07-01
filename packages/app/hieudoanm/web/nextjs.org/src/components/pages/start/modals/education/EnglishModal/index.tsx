@@ -58,7 +58,7 @@ export const LanguagesEnglishModal: FC<{ onClose: () => void }> = ({
           id="word"
           name="word"
           placeholder="Type a word..."
-          className="input input-bordered w-full font-mono font-bold"
+          className="input input-bordered w-full font-mono font-normal"
           value={word}
           onChange={(event: ChangeEvent<HTMLInputElement>) =>
             setState((prev) => ({ ...prev, word: event.target.value }))
@@ -71,7 +71,7 @@ export const LanguagesEnglishModal: FC<{ onClose: () => void }> = ({
         style={{ maxHeight: '60vh' }}>
         <div className="mx-auto flex max-w-3xl flex-col gap-8">
           {(isPending || isFetching) && (
-            <div className="text-base-content/50 text-center text-lg font-medium">
+            <div className="text-base-content/50 text-center text-lg font-normal">
               Loading...
             </div>
           )}
@@ -94,7 +94,7 @@ export const LanguagesEnglishModal: FC<{ onClose: () => void }> = ({
 
           {data && !isFetching && !error && (
             <div className="flex flex-col gap-6">
-              <h1 className="text-center text-4xl font-bold tracking-tight">
+              <h1 className="text-center text-4xl font-normal tracking-tight">
                 {data.word}
               </h1>
 
@@ -103,7 +103,7 @@ export const LanguagesEnglishModal: FC<{ onClose: () => void }> = ({
                   key={partOfSpeech}
                   className="card bg-base-100 border-base-300 border shadow-md">
                   <div className="card-body flex flex-col gap-y-6">
-                    <h2 className="card-title text-primary border-base-300 border-b pb-2 text-sm font-bold capitalize">
+                    <h2 className="card-title text-primary border-base-300 border-b pb-2 text-sm font-normal capitalize">
                       {partOfSpeech}
                     </h2>
 
@@ -121,7 +121,7 @@ export const LanguagesEnglishModal: FC<{ onClose: () => void }> = ({
                           key={`${partOfSpeech}-${index}`}
                           className="flex flex-col gap-3">
                           <p className="border-primary/50 border-l-2 pl-4 text-sm leading-relaxed">
-                            <span className="mr-2 font-black opacity-50">
+                            <span className="mr-2 font-normal opacity-50">
                               Definition:
                             </span>
                             {definition}
@@ -129,7 +129,7 @@ export const LanguagesEnglishModal: FC<{ onClose: () => void }> = ({
 
                           {synonyms.length > 0 && (
                             <div className="flex flex-wrap items-center gap-2 pl-4">
-                              <span className="text-xs font-semibold opacity-50">
+                              <span className="text-xs font-normal opacity-50">
                                 Synonyms:
                               </span>
                               {synonyms.map((synonym) => (
@@ -150,7 +150,7 @@ export const LanguagesEnglishModal: FC<{ onClose: () => void }> = ({
 
                           {anonyms.length > 0 && (
                             <div className="flex flex-wrap items-center gap-2 pl-4">
-                              <span className="text-xs font-semibold opacity-50">
+                              <span className="text-xs font-normal opacity-50">
                                 Antonyms:
                               </span>
                               {anonyms.map((anonym) => (

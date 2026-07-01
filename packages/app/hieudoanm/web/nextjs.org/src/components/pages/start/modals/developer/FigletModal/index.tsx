@@ -46,15 +46,18 @@ export const FigletModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           </select>
         </div>
 
-        <div role="tablist" className="tabs tabs-boxed mb-4">
+        <div className="border-base-300 mb-4 flex flex-wrap border-b">
           {FONT_NAMES.map((f) => (
-            <a
+            <button
               key={f}
-              role="tab"
-              className={`tab ${font === f ? 'tab-active' : ''}`}
+              className={`border-b-2 px-3 py-2 text-sm transition-colors ${
+                font === f
+                  ? 'border-primary text-primary'
+                  : 'text-base-content/40 border-transparent'
+              }`}
               onClick={() => setFont(f)}>
               {f}
-            </a>
+            </button>
           ))}
         </div>
 

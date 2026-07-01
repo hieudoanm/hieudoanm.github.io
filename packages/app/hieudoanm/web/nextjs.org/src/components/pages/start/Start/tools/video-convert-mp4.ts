@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Video',
     tags: ['media', 'convert'],
     emoji: '🎬',
-    color: '#ef4444',
     onClick: open('video-convert-to-webm'),
   },
   {
@@ -15,7 +14,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Video',
     tags: ['media', 'convert'],
     emoji: '🎬',
-    color: '#ef4444',
     onClick: open('video-mp4-to-avi'),
   },
   {
@@ -23,7 +21,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Video',
     tags: ['media', 'convert'],
     emoji: '🎬',
-    color: '#ef4444',
     onClick: open('video-mp4-to-mov'),
   },
   {
@@ -31,7 +28,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Video',
     tags: ['media', 'convert'],
     emoji: '🎬',
-    color: '#ef4444',
     onClick: open('video-mp4-to-mp3'),
   },
   {
@@ -39,7 +35,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Video',
     tags: ['media', 'convert'],
     emoji: '🎬',
-    color: '#ef4444',
     onClick: open('video-mp4-to-ogg'),
   },
   {
@@ -47,7 +42,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Video',
     tags: ['media', 'convert'],
     emoji: '🎬',
-    color: '#ef4444',
     onClick: open('video-mp4-to-wav'),
   },
   {
@@ -55,7 +49,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Video',
     tags: ['media', 'convert'],
     emoji: '🎬',
-    color: '#ef4444',
     onClick: open('video-to-gif'),
   },
   {
@@ -63,7 +56,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Video',
     tags: ['media', 'convert'],
     emoji: '🎬',
-    color: '#ef4444',
     onClick: open('video-to-webp'),
   },
 ];

@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Name the country',
     tags: ['game', 'fun', 'entertainment'],
     emoji: '🇺🇳',
-    color: '#f59e0b',
     onClick: open('flag-guesser'),
   },
   {
@@ -15,7 +14,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: '',
     tags: ['game', 'fun', 'entertainment'],
     emoji: '⚖️',
-    color: '#f59e0b',
     onClick: open('pd'),
   },
   {
@@ -23,7 +21,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Pokemon',
     tags: ['game', 'fun', 'entertainment'],
     emoji: '📕',
-    color: '#f59e0b',
     onClick: open('pokedex'),
   },
 ];

@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Calculator',
     tags: ['finance', 'money', 'financial', 'math', 'arithmetic'],
     emoji: '💰',
-    color: '#f59e0b',
     onClick: open('inflation'),
   },
   {
@@ -15,7 +14,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Calculator',
     tags: ['finance', 'money', 'financial', 'math', 'arithmetic'],
     emoji: '💵',
-    color: '#10b981',
     onClick: open('split-bill'),
   },
   {
@@ -23,7 +21,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Vietnam PIT',
     tags: ['finance', 'money', 'financial', 'calculator'],
     emoji: '🇻🇳',
-    color: '#ef4444',
     onClick: open('tax'),
   },
 ];

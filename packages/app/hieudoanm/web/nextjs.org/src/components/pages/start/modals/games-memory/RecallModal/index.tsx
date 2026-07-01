@@ -97,7 +97,7 @@ export const RecallModal: FC<{ onClose: () => void }> = ({ onClose }) => {
         {phase === 'result' && (
           <div className="space-y-3 text-center">
             <p
-              className="text-sm font-medium"
+              className="text-sm font-normal"
               dangerouslySetInnerHTML={{ __html: message }}
             />
             <button className="btn btn-secondary w-full" onClick={next}>

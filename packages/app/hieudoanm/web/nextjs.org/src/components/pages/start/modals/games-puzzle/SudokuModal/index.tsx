@@ -170,7 +170,7 @@ export const SudokuModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                 onClick={() =>
                   !isGiven && dispatch({ type: 'SELECT', pos: [r, c] })
                 }
-                className={`flex aspect-square cursor-pointer items-center justify-center font-mono text-sm transition-colors ${isGiven ? 'font-bold' : ''} ${isSelected ? 'bg-primary/20' : isSameNum ? 'bg-primary/10' : (r + c) % 2 === 0 ? 'bg-base-200' : 'bg-base-100'} ${boxBorderR ? 'border-base-300 border-r-2' : ''} ${boxBorderB ? 'border-base-300 border-b-2' : ''} ${isGiven ? '' : 'hover:bg-primary/5'}`}>
+                className={`flex aspect-square cursor-pointer items-center justify-center font-mono text-sm transition-colors ${isGiven ? 'font-normal' : ''} ${isSelected ? 'bg-primary/20' : isSameNum ? 'bg-primary/10' : (r + c) % 2 === 0 ? 'bg-base-200' : 'bg-base-100'} ${boxBorderR ? 'border-base-300 border-r-2' : ''} ${boxBorderB ? 'border-base-300 border-b-2' : ''} ${isGiven ? '' : 'hover:bg-primary/5'}`}>
                 {val !== 0 ? val : ''}
               </div>
             );

@@ -58,16 +58,22 @@ export const TaxModal: FC<{ onClose: () => void }> = ({ onClose }) => {
 
   return (
     <ModalWrapper onClose={onClose} title="Tính Thuế TNCN">
-      <div role="tablist" className="tabs tabs-boxed mb-4 w-full">
+      <div className="border-base-300 mb-4 flex w-full border-b">
         <button
-          role="tab"
-          className={`tab w-[50%] ${activeTab === 'input' ? 'tab-active' : ''}`}
+          className={`w-1/2 border-b-2 px-3 py-2 text-sm transition-colors ${
+            activeTab === 'input'
+              ? 'border-primary text-primary'
+              : 'text-base-content/40 border-transparent'
+          }`}
           onClick={() => setActiveTab('input')}>
           Input
         </button>
         <button
-          role="tab"
-          className={`tab w-[50%] ${activeTab === 'results' ? 'tab-active' : ''}`}
+          className={`w-1/2 border-b-2 px-3 py-2 text-sm transition-colors ${
+            activeTab === 'results'
+              ? 'border-primary text-primary'
+              : 'text-base-content/40 border-transparent'
+          }`}
           onClick={() => setActiveTab('results')}>
           Results
         </button>
@@ -77,7 +83,7 @@ export const TaxModal: FC<{ onClose: () => void }> = ({ onClose }) => {
         <div className="space-y-3">
           <div className="form-control">
             <label className="label mb-1 p-0">
-              <span className="label-text text-xs font-medium opacity-70">
+              <span className="label-text text-xs font-normal opacity-70">
                 Kỳ tính thuế
               </span>
             </label>
@@ -104,7 +110,7 @@ export const TaxModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           </div>
           <div className="form-control">
             <label className="label mb-1 p-0">
-              <span className="label-text text-xs font-medium opacity-70">
+              <span className="label-text text-xs font-normal opacity-70">
                 {salaryMode === 'gross'
                   ? '💼 Thu nhập gộp (Gross)'
                   : '💰 Thu nhập thực lĩnh (Net)'}
@@ -119,7 +125,7 @@ export const TaxModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           </div>
           <div className="form-control">
             <label className="label mb-1 p-0">
-              <span className="label-text text-xs font-medium opacity-70">
+              <span className="label-text text-xs font-normal opacity-70">
                 👨‍👩‍👧 Người phụ thuộc
               </span>
             </label>
@@ -132,7 +138,7 @@ export const TaxModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           </div>
           <div className="form-control">
             <label className="label cursor-pointer p-0">
-              <span className="label-text text-xs font-medium opacity-70">
+              <span className="label-text text-xs font-normal opacity-70">
                 🛡️ Tính bảo hiểm
               </span>
               <input
@@ -149,7 +155,7 @@ export const TaxModal: FC<{ onClose: () => void }> = ({ onClose }) => {
       {activeTab === 'results' && (
         <div className="space-y-4">
           <div className="bg-base-200 rounded-xl p-3 text-sm">
-            <h4 className="mb-2 font-semibold">🧾 Khấu trừ</h4>
+            <h4 className="mb-2 font-normal">🧾 Khấu trừ</h4>
             <div className="space-y-1 text-xs">
               <div className="flex justify-between">
                 <span className="opacity-70">👤 Cá nhân:</span>
@@ -164,13 +170,13 @@ export const TaxModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                 <span>{data.employeeInsurance.toLocaleString()} VND</span>
               </div>
               <div className="divider my-1 h-1" />
-              <div className="flex justify-between font-bold">
+              <div className="flex justify-between font-normal">
                 <span>Tổng:</span>
                 <span>{data.totalDeductions.toLocaleString()} VND</span>
               </div>
             </div>
             {insuranceEnabled && data.insuranceBase < data.grossMonthly && (
-              <p className="text-warning mt-2 text-xs">
+              <p className="text-base-content/60 mt-2 text-xs">
                 ⚠ Áp dụng trần bảo hiểm
               </p>
             )}
@@ -187,7 +193,7 @@ export const TaxModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                 <span>{(data.effectiveTaxRate * 100).toFixed(2)}%</span>
               </div>
               <div className="divider my-1 h-1" />
-              <div className="text-primary flex justify-between font-bold">
+              <div className="text-primary flex justify-between font-normal">
                 <span>💰 Thực lĩnh:</span>
                 <span>{data.netMonthly.toLocaleString()} VND</span>
               </div>
@@ -200,7 +206,7 @@ export const TaxModal: FC<{ onClose: () => void }> = ({ onClose }) => {
 
           {data.breakdown.length > 0 && (
             <div className="bg-base-200 rounded-xl p-3">
-              <h4 className="mb-2 text-xs font-semibold">🧮 Chi tiết thuế</h4>
+              <h4 className="mb-2 text-xs font-normal">🧮 Chi tiết thuế</h4>
               <table className="table-sm table w-full text-[10px]">
                 <thead>
                   <tr>

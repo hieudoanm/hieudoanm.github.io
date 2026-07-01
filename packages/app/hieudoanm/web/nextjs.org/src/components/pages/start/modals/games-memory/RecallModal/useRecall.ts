@@ -79,7 +79,7 @@ export const useRecall = (onClose: () => void) => {
     } else {
       const highlighted = highlightMistakes(input, number);
       setMessage(
-        `Wrong 😢 The number was <span class="font-bold">${chunkDigits(number)}</span><br/>Your input: <span>${highlighted}</span>`
+        `Wrong 😢 The number was <span class="font-normal">${chunkDigits(number)}</span><br/>Your input: <span>${highlighted}</span>`
       );
       setLevel(1);
       setLastRoundFailed(true);

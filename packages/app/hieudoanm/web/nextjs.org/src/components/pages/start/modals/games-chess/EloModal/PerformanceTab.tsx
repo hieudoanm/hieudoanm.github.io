@@ -53,13 +53,13 @@ export const PerformanceTab: FC<{
 
       <div className="form-control mt-4">
         <label className="label mb-1 p-0">
-          <span className="label-text text-xs font-medium opacity-70">
+          <span className="label-text text-xs font-normal opacity-70">
             Performance
           </span>
         </label>
         <input
           type="number"
-          className="input input-sm input-bordered w-full text-center font-bold"
+          className="input input-sm input-bordered w-full text-center font-normal"
           value={performance}
           readOnly
         />

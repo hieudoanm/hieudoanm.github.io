@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Write',
     tags: ['business', 'document', 'writing'],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-bill-of-sale'),
   },
   {
@@ -15,7 +14,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Write',
     tags: ['document', 'writing'],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-business-name'),
   },
   {
@@ -23,7 +21,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Write',
     tags: ['document', 'writing'],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-business-plan'),
   },
   {
@@ -31,7 +28,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Write',
     tags: ['business', 'document', 'writing'],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-cold-email'),
   },
   {
@@ -39,7 +35,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Write',
     tags: ['business', 'document', 'writing'],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-landing-page'),
   },
   {
@@ -47,7 +42,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Write',
     tags: ['business', 'document', 'writing'],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-nda'),
   },
   {
@@ -55,7 +49,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Write',
     tags: ['business', 'document', 'writing'],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-podcast-script'),
   },
   {
@@ -63,7 +56,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Write',
     tags: ['business', 'document', 'writing'],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-press-release'),
   },
   {
@@ -71,7 +63,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Write',
     tags: ['business', 'document', 'writing'],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-privacy-policy'),
   },
   {
@@ -79,7 +70,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Write',
     tags: ['business', 'document', 'writing'],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-purchase-agreement'),
   },
   {
@@ -87,7 +77,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Write',
     tags: ['business', 'document', 'writing'],
     emoji: '✍️',
-    color: '#8b5cf6',
     onClick: open('write-business-slogan'),
   },
 ];

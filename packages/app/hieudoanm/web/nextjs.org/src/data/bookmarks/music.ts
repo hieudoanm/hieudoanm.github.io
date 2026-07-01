@@ -6,13 +6,13 @@ export const music: ItemCardProps[] = [
     href: 'https://open.spotify.com',
     description: 'Music',
     emoji: '🎵',
-    color: '#1DB954',
+    //color: '#1DB954',
   },
   {
     label: 'YouTube',
     href: 'https://youtube.com',
     description: 'Videos',
     emoji: '▶',
-    color: '#ff0000',
+    //color: '#ff0000',
   },
 ];

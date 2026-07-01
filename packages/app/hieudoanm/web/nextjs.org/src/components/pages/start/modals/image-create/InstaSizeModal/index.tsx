@@ -77,7 +77,7 @@ export const InstaSizeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[1fr_260px_220px]">
             <div className="space-y-4">
               <div className="flex items-center justify-between">
-                <h2 className="text-base-content/60 text-xs font-semibold tracking-widest uppercase">
+                <h2 className="text-base-content/60 text-xs font-normal tracking-widest uppercase">
                   Preview
                 </h2>
                 <button
@@ -113,13 +113,13 @@ export const InstaSizeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
               </p>
             </div>
             <div className="space-y-5">
-              <h2 className="text-base-content/60 text-xs font-semibold tracking-widest uppercase">
+              <h2 className="text-base-content/60 text-xs font-normal tracking-widest uppercase">
                 Padding
               </h2>
               <div className="card bg-base-200/60 space-y-5 rounded-2xl p-5">
                 <div className="flex items-end justify-between">
                   <div>
-                    <p className="text-base-content text-4xl font-bold tabular-nums">
+                    <p className="text-base-content text-4xl font-normal tabular-nums">
                       {padding}
                       <span className="text-base-content/40 ml-1 text-xl font-normal">
                         %
@@ -170,7 +170,7 @@ export const InstaSizeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                     a.click();
                   }}
                   disabled={!outputUrl || isProcessing}
-                  className="btn btn-neutral h-12 w-full gap-2 rounded-xl text-sm font-semibold">
+                  className="btn btn-neutral h-12 w-full gap-2 rounded-xl text-sm font-normal">
                   <svg
                     width="16"
                     height="16"
@@ -189,7 +189,7 @@ export const InstaSizeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                 </button>
               </div>
               <div className="bg-base-200/40 border-base-300/50 space-y-1.5 rounded-xl border p-4">
-                <p className="text-base-content/50 text-[10px] font-semibold tracking-wider uppercase">
+                <p className="text-base-content/50 text-[10px] font-normal tracking-wider uppercase">
                   Output
                 </p>
                 <div className="text-base-content/40 space-y-0.5 text-[10px]">
@@ -201,7 +201,7 @@ export const InstaSizeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
               </div>
             </div>
             <div className="space-y-5">
-              <h2 className="text-base-content/60 text-xs font-semibold tracking-widest uppercase">
+              <h2 className="text-base-content/60 text-xs font-normal tracking-widest uppercase">
                 Filter
               </h2>
               <div className="card bg-base-200/60 rounded-2xl p-4">
@@ -210,7 +210,7 @@ export const InstaSizeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                     <button
                       key={f.label}
                       onClick={() => setSelectedFilter(f)}
-                      className={`flex items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm transition-all ${selectedFilter.label === f.label ? 'bg-primary text-primary-content font-semibold' : 'hover:bg-base-300 text-base-content/70'}`}>
+                      className={`flex items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm transition-all ${selectedFilter.label === f.label ? 'bg-primary text-primary-content font-normal' : 'hover:bg-base-300 text-base-content/70'}`}>
                       <span
                         className="h-5 w-5 shrink-0 rounded-md border border-white/10"
                         style={{ background: filterColor(f.label) }}

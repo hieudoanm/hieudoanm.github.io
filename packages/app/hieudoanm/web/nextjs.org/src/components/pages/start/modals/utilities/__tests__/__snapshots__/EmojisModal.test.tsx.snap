@@ -18,7 +18,7 @@ exports[`EmojisModal should render with emoji count 1`] = `
         >
           <div>
             <h2
-              class="text-lg font-black tracking-tight"
+              class="text-lg font-normal tracking-tight"
             >
               Emoji Explorer
             </h2>

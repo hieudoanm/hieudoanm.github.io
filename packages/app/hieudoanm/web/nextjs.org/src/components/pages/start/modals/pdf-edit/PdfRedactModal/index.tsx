@@ -212,7 +212,7 @@ export const PdfRedactModal: FC<{ onClose: () => void }> = ({ onClose }) => {
               </svg>
             </div>
             <div>
-              <p className="font-semibold">No document loaded</p>
+              <p className="font-normal">No document loaded</p>
               <p className="text-base-content/50 text-sm">
                 Upload a PDF to start redacting.
               </p>

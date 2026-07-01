@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'LogMAR Chart',
     tags: ['eyes', 'vision', 'eye-test', 'sight'],
     emoji: '👀',
-    color: '#3b82f6',
     onClick: open('logmar'),
   },
   {
@@ -15,7 +14,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Snellen Chart',
     tags: ['eyes', 'vision', 'eye-test', 'sight'],
     emoji: '👀',
-    color: '#3b82f6',
     onClick: open('snellen'),
   },
   {
@@ -23,7 +21,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Tumbling E Chart',
     tags: ['eyes', 'vision', 'eye-test', 'sight'],
     emoji: '👀',
-    color: '#3b82f6',
     onClick: open('tumbling-e'),
   },
 ];

@@ -199,7 +199,7 @@ export const NBackModal: FC<{ onClose: () => void }> = ({ onClose }) => {
               {GRID_POSITIONS.map((pos) => (
                 <div
                   key={pos}
-                  className={`border-base-300 flex items-center justify-center border text-lg font-bold transition-colors duration-100 ${showStimulus && currentIdx >= 0 && trials[currentIdx]?.stimulus.position === pos ? 'bg-primary text-primary-content' : 'bg-base-200'}`}>
+                  className={`border-base-300 flex items-center justify-center border text-lg font-normal transition-colors duration-100 ${showStimulus && currentIdx >= 0 && trials[currentIdx]?.stimulus.position === pos ? 'bg-primary text-primary-content' : 'bg-base-200'}`}>
                   {showStimulus &&
                   currentIdx >= 0 &&
                   trials[currentIdx]?.stimulus.position === pos
@@ -225,7 +225,7 @@ export const NBackModal: FC<{ onClose: () => void }> = ({ onClose }) => {
 
         {phase === 'result' && (
           <div className="flex flex-col items-center gap-2 py-4">
-            <div className="text-lg font-bold">
+            <div className="text-lg font-normal">
               {accuracy > 0.7 ? 'Great!' : 'Keep practicing'}
             </div>
             <div className="grid grid-cols-2 gap-x-8 gap-y-1 text-sm">

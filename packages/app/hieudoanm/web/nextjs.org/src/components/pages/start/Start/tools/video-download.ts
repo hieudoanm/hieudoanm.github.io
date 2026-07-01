@@ -17,7 +17,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'footage',
     ],
     emoji: '⬇️',
-    color: '#ef4444',
     onClick: open('video-download-facebook'),
   },
   {
@@ -35,7 +34,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'footage',
     ],
     emoji: '⬇️',
-    color: '#ef4444',
     onClick: open('video-download-instagram'),
   },
   {
@@ -52,7 +50,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'footage',
     ],
     emoji: '⬇️',
-    color: '#ef4444',
     onClick: open('video-download-tiktok'),
   },
   {
@@ -69,7 +66,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'footage',
     ],
     emoji: '⬇️',
-    color: '#ef4444',
     onClick: open('video-download-twitter'),
   },
   {
@@ -77,7 +73,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Video',
     tags: ['download', 'media', 'yt', 'mp4', 'movie', 'clip', 'footage'],
     emoji: '⬇️',
-    color: '#ef4444',
     onClick: open('video-youtube-text'),
   },
   {
@@ -85,7 +80,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Video',
     tags: ['download', 'media', 'yt', 'mp4', 'movie', 'clip', 'footage'],
     emoji: '⬇️',
-    color: '#ef4444',
     onClick: open('video-youtube-transcript'),
   },
 ];

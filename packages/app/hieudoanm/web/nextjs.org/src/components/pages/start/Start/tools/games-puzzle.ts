@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Merge tiles',
     tags: ['game', 'fun', 'entertainment'],
     emoji: '🔢',
-    color: '#f59e0b',
     onClick: open('game2048'),
   },
   {
@@ -15,7 +14,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Toggle all lights off',
     tags: ['game', 'fun', 'entertainment'],
     emoji: '💡',
-    color: '#f59e0b',
     onClick: open('lights-out'),
   },
   {
@@ -23,7 +21,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Gen & solve',
     tags: ['game', 'fun', 'entertainment'],
     emoji: '🌀',
-    color: '#f59e0b',
     onClick: open('maze'),
   },
   {
@@ -31,7 +28,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Upload & slide tiles',
     tags: ['game', 'fun', 'entertainment'],
     emoji: '🧊',
-    color: '#f59e0b',
     onClick: open('sliding-puzzle'),
   },
   {
@@ -39,7 +35,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: '4×4 & 9×9',
     tags: ['game', 'fun', 'entertainment'],
     emoji: '🧩',
-    color: '#f59e0b',
     onClick: open('sudoku'),
   },
   {
@@ -47,7 +42,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'Towers of Hanoi',
     tags: ['game', 'fun', 'entertainment'],
     emoji: '🗼',
-    color: '#f59e0b',
     onClick: open('towers'),
   },
 ];

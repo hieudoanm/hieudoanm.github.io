@@ -23,6 +23,6 @@ export const highlightMistakes = (input: string, correct: string) =>
     .map((digit, i) =>
       digit === correct[i]
         ? digit
-        : `<span class="text-red-500 font-bold">${digit}</span>`
+        : `<span class="text-red-500 font-normal">${digit}</span>`
     )
     .join('');

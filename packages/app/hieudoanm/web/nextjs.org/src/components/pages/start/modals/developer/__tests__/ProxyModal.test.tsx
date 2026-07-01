@@ -27,17 +27,17 @@ describe('ProxyModal', () => {
     expect(screen.getByText(/curl "/i)).toBeInTheDocument();
 
     // Switch to fetch
-    const fetchTab = screen.getByRole('tab', { name: /fetch/i });
+    const fetchTab = screen.getByText(/fetch/i);
     fireEvent.click(fetchTab);
     expect(screen.getByText(/fetch\("/i)).toBeInTheDocument();
 
     // Switch to axios
-    const axiosTab = screen.getByRole('tab', { name: /axios/i });
+    const axiosTab = screen.getByText(/axios/i);
     fireEvent.click(axiosTab);
     expect(screen.getByText(/axios\.get\("/i)).toBeInTheDocument();
 
     // Switch to TanStack Query
-    const queryTab = screen.getByRole('tab', { name: /tanstack query/i });
+    const queryTab = screen.getByText(/tanstack query/i);
     fireEvent.click(queryTab);
     expect(screen.getByText(/isPending/i)).toBeInTheDocument();
   });

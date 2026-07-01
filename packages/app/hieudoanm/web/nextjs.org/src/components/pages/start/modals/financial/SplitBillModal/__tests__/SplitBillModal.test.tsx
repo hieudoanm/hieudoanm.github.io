@@ -16,7 +16,7 @@ describe('SplitBillModal', () => {
     render(<SplitBillModal onClose={jest.fn()} />);
     expect(screen.getByText('Split Bill')).toBeInTheDocument();
     expect(
-      screen.getByText('Equal Split').classList.contains('tab-active')
+      screen.getByText('Equal Split').classList.contains('text-primary')
     ).toBe(true);
   });
 
@@ -24,7 +24,7 @@ describe('SplitBillModal', () => {
     render(<SplitBillModal onClose={jest.fn()} />);
     fireEvent.click(screen.getByText('Who Owes Who'));
     expect(
-      screen.getByText('Who Owes Who').classList.contains('tab-active')
+      screen.getByText('Who Owes Who').classList.contains('text-primary')
     ).toBe(true);
   });
 

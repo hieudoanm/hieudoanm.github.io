@@ -18,7 +18,7 @@ exports[`EloModal should calculate performance 1`] = `
         >
           <div>
             <h2
-              class="text-lg font-black tracking-tight"
+              class="text-lg font-normal tracking-tight"
             >
               Elo Calculator
             </h2>
@@ -104,13 +104,13 @@ exports[`EloModal should calculate performance 1`] = `
               class="label mb-1 p-0"
             >
               <span
-                class="label-text text-xs font-medium opacity-70"
+                class="label-text text-xs font-normal opacity-70"
               >
                 Performance
               </span>
             </label>
             <input
-              class="input input-sm input-bordered w-full text-center font-bold"
+              class="input input-sm input-bordered w-full text-center font-normal"
               readonly=""
               type="number"
               value="1850"
@@ -149,7 +149,7 @@ exports[`EloModal should calculate rating 1`] = `
         >
           <div>
             <h2
-              class="text-lg font-black tracking-tight"
+              class="text-lg font-normal tracking-tight"
             >
               Elo Calculator
             </h2>
@@ -187,7 +187,7 @@ exports[`EloModal should calculate rating 1`] = `
               class="label mb-1 p-0"
             >
               <span
-                class="label-text text-xs font-medium opacity-70"
+                class="label-text text-xs font-normal opacity-70"
               >
                 Your Rating
               </span>
@@ -205,7 +205,7 @@ exports[`EloModal should calculate rating 1`] = `
               class="label mb-1 p-0"
             >
               <span
-                class="label-text text-xs font-medium opacity-70"
+                class="label-text text-xs font-normal opacity-70"
               >
                 Opponent Rating
               </span>
@@ -223,7 +223,7 @@ exports[`EloModal should calculate rating 1`] = `
               class="label mb-1 p-0"
             >
               <span
-                class="label-text text-xs font-medium opacity-70"
+                class="label-text text-xs font-normal opacity-70"
               >
                 Score
               </span>
@@ -260,13 +260,13 @@ exports[`EloModal should calculate rating 1`] = `
               class="label mb-1 p-0"
             >
               <span
-                class="label-text text-xs font-medium opacity-70"
+                class="label-text text-xs font-normal opacity-70"
               >
                 New Rating
               </span>
             </label>
             <input
-              class="input input-sm input-bordered w-full text-right font-bold"
+              class="input input-sm input-bordered w-full text-right font-normal"
               readonly=""
               type="number"
               value="1020"
@@ -305,7 +305,7 @@ exports[`EloModal should render rating tab 1`] = `
         >
           <div>
             <h2
-              class="text-lg font-black tracking-tight"
+              class="text-lg font-normal tracking-tight"
             >
               Elo Calculator
             </h2>
@@ -343,7 +343,7 @@ exports[`EloModal should render rating tab 1`] = `
               class="label mb-1 p-0"
             >
               <span
-                class="label-text text-xs font-medium opacity-70"
+                class="label-text text-xs font-normal opacity-70"
               >
                 Your Rating
               </span>
@@ -361,7 +361,7 @@ exports[`EloModal should render rating tab 1`] = `
               class="label mb-1 p-0"
             >
               <span
-                class="label-text text-xs font-medium opacity-70"
+                class="label-text text-xs font-normal opacity-70"
               >
                 Opponent Rating
               </span>
@@ -379,7 +379,7 @@ exports[`EloModal should render rating tab 1`] = `
               class="label mb-1 p-0"
             >
               <span
-                class="label-text text-xs font-medium opacity-70"
+                class="label-text text-xs font-normal opacity-70"
               >
                 Score
               </span>
@@ -416,13 +416,13 @@ exports[`EloModal should render rating tab 1`] = `
               class="label mb-1 p-0"
             >
               <span
-                class="label-text text-xs font-medium opacity-70"
+                class="label-text text-xs font-normal opacity-70"
               >
                 New Rating
               </span>
             </label>
             <input
-              class="input input-sm input-bordered w-full text-right font-bold"
+              class="input input-sm input-bordered w-full text-right font-normal"
               readonly=""
               type="number"
               value="1000"
@@ -461,7 +461,7 @@ exports[`EloModal should switch to performance tab 1`] = `
         >
           <div>
             <h2
-              class="text-lg font-black tracking-tight"
+              class="text-lg font-normal tracking-tight"
             >
               Elo Calculator
             </h2>
@@ -547,13 +547,13 @@ exports[`EloModal should switch to performance tab 1`] = `
               class="label mb-1 p-0"
             >
               <span
-                class="label-text text-xs font-medium opacity-70"
+                class="label-text text-xs font-normal opacity-70"
               >
                 Performance
               </span>
             </label>
             <input
-              class="input input-sm input-bordered w-full text-center font-bold"
+              class="input input-sm input-bordered w-full text-center font-normal"
               readonly=""
               type="number"
               value="0"

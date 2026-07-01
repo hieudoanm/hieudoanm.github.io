@@ -183,7 +183,7 @@ export const SnakeModal: FC<{ onClose: () => void }> = ({ onClose }) => {
             onChange={(e) => setSpeed(Number(e.target.value))}
             className="range range-primary range-xs w-28"
           />
-          <span className="font-semibold">{speed}</span>
+          <span className="font-normal">{speed}</span>
         </div>
         <div className="flex flex-wrap justify-center gap-2">
           <button

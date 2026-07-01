@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'PDF',
     tags: ['convert', 'document', 'adobe', 'acrobat'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('pdf-to-epub'),
   },
   {
@@ -24,7 +23,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'microsoft-excel',
     ],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('pdf-to-excel'),
   },
   {
@@ -32,7 +30,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'PDF',
     tags: ['convert', 'document', 'adobe', 'acrobat'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('pdf-to-images'),
   },
   {
@@ -40,7 +37,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: 'PDF',
     tags: ['convert', 'document', 'adobe', 'acrobat'],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('pdf-to-ppt'),
   },
   {
@@ -56,7 +52,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'microsoft-word',
     ],
     emoji: '📄',
-    color: '#3b82f6',
     onClick: open('pdf-to-word'),
   },
 ];

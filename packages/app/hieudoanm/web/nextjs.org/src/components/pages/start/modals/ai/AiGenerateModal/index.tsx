@@ -66,7 +66,7 @@ export const AiGenerateModal: FC<{ onClose: () => void }> = ({ onClose }) => {
         />
 
         <div>
-          <p className="text-base-content/40 mb-1 text-[10px] font-bold tracking-widest uppercase">
+          <p className="text-base-content/40 mb-1 text-[10px] font-normal tracking-widest uppercase">
             Style
           </p>
           <div className="flex flex-wrap gap-1">
@@ -83,7 +83,7 @@ export const AiGenerateModal: FC<{ onClose: () => void }> = ({ onClose }) => {
 
         <div className="flex gap-4">
           <div className="flex-1">
-            <p className="text-base-content/40 mb-1 text-[10px] font-bold tracking-widest uppercase">
+            <p className="text-base-content/40 mb-1 text-[10px] font-normal tracking-widest uppercase">
               Size
             </p>
             <div className="flex gap-1">

@@ -83,13 +83,13 @@ export const InvoiceParserModal: FC<{ onClose: () => void }> = ({
       {/* Content */}
       <div className="flex min-h-0 flex-1 flex-col overflow-y-auto p-6">
         <div className="card bg-base-200 p-6 shadow-sm">
-          <h2 className="mb-4 text-xl font-semibold">Upload Invoice</h2>
+          <h2 className="mb-4 text-xl font-normal">Upload Invoice</h2>
 
           <Dropzone accept="image/*" onFile={handleUpload} />
 
           {image && (
             <div className="mt-4">
-              <h3 className="font-semibold">Preview</h3>
+              <h3 className="font-normal">Preview</h3>
               <img
                 src={image}
                 alt="Invoice"
@@ -112,7 +112,7 @@ export const InvoiceParserModal: FC<{ onClose: () => void }> = ({
 
         {fields && (
           <div className="card bg-base-200 mt-6 p-6 shadow-sm">
-            <h2 className="mb-4 text-xl font-semibold">Extracted Fields</h2>
+            <h2 className="mb-4 text-xl font-normal">Extracted Fields</h2>
             <div className="grid grid-cols-1 gap-4">
               <div className="alert alert-info">
                 <span>
@@ -135,7 +135,7 @@ export const InvoiceParserModal: FC<{ onClose: () => void }> = ({
 
         {ocrText && (
           <div className="card bg-base-200 mt-6 p-6 shadow-sm">
-            <h2 className="text-xl font-semibold">OCR Output</h2>
+            <h2 className="text-xl font-normal">OCR Output</h2>
             <pre className="mt-3 text-xs whitespace-pre-wrap">{ocrText}</pre>
           </div>
         )}

@@ -18,7 +18,7 @@ exports[`SlidingPuzzleModal renders upload dropzone initially 1`] = `
         >
           <div>
             <h2
-              class="text-lg font-black tracking-tight"
+              class="text-lg font-normal tracking-tight"
             >
               Slide Puzzle
             </h2>
@@ -32,29 +32,35 @@ exports[`SlidingPuzzleModal renders upload dropzone initially 1`] = `
         <div
           class="flex flex-col gap-4 p-4"
         >
+          <input
+            accept="image/*"
+            class="hidden"
+            type="file"
+          />
           <div
-            class="flex cursor-pointer flex-col items-center justify-center gap-3 rounded-xl border-2 border-dashed p-12 transition-colors border-base-content/20 hover:border-base-content/40"
+            class="flex h-32 w-full cursor-pointer flex-col items-center justify-center gap-2 rounded-xl border-2 border-dashed text-sm transition-colors border-base-300 hover:border-base-content/50 "
+            role="button"
+            tabindex="0"
           >
-            <input
-              accept="image/*"
-              class="hidden"
-              type="file"
-            />
-            <span
-              class="text-4xl opacity-30"
+            <svg
+              class="h-6 w-6 opacity-60"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              🖼️
-            </span>
-            <p
-              class="text-sm font-medium"
+              <path
+                d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span
+              class="opacity-60"
             >
               Click or drag an image here
-            </p>
-            <p
-              class="text-xs opacity-40"
-            >
-              The image will be cropped to a square
-            </p>
+            </span>
           </div>
         </div>
       </div>

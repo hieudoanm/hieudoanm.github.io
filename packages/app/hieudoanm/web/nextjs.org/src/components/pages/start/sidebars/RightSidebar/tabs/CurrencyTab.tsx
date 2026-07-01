@@ -31,7 +31,7 @@ export const CurrencyTab: FC = () => {
           step="any"
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
-          className="input input-bordered input-sm w-full font-mono text-lg font-bold tracking-tight"
+          className="input input-bordered input-sm w-full font-mono text-lg font-normal tracking-tight"
           placeholder="1.00"
         />
       </div>
@@ -43,7 +43,7 @@ export const CurrencyTab: FC = () => {
           </span>
         </label>
         <select
-          className="select select-bordered select-sm text-sm font-bold"
+          className="select select-bordered select-sm text-sm font-normal"
           value={from}
           onChange={(e) => setFrom(e.target.value)}>
           {CURRENCIES.map((c) => (
@@ -70,7 +70,7 @@ export const CurrencyTab: FC = () => {
           </span>
         </label>
         <select
-          className="select select-bordered select-sm text-sm font-bold"
+          className="select select-bordered select-sm text-sm font-normal"
           value={to}
           onChange={(e) => setTo(e.target.value)}>
           {CURRENCIES.map((c) => (
@@ -87,7 +87,7 @@ export const CurrencyTab: FC = () => {
             <p className="text-base-content/40 mb-1 font-mono text-[10px] tracking-widest uppercase">
               {parseFloat(amount).toLocaleString()} {from} =
             </p>
-            <p className="text-primary font-mono text-2xl font-bold tracking-tight">
+            <p className="text-primary font-mono text-2xl font-normal tracking-tight">
               {converted.toLocaleString(undefined, {
                 minimumFractionDigits: 2,
                 maximumFractionDigits: 4,
@@ -124,14 +124,14 @@ export const CurrencyTab: FC = () => {
               <div
                 key={currency}
                 onClick={() => setTo(currency)}
-                className={`flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 transition-all duration-150 ${
+                className={`flex cursor-pointer items-center justify-between rounded-full px-2 py-1.5 transition-all duration-150 ${
                   isTarget
                     ? 'bg-primary/10 ring-primary/30 ring-1'
                     : 'hover:bg-base-300'
                 }`}>
                 <div className="flex items-center gap-2">
                   <span
-                    className={`font-mono text-xs font-bold tracking-wider ${isTarget ? 'text-primary' : 'opacity-70'}`}>
+                    className={`font-mono text-xs font-normal tracking-wider ${isTarget ? 'text-primary' : 'opacity-70'}`}>
                     {currency}
                   </span>
                   <span className="text-base-content/30 text-[10px] tracking-wide">
@@ -139,7 +139,7 @@ export const CurrencyTab: FC = () => {
                   </span>
                 </div>
                 <span
-                  className={`font-mono text-xs tabular-nums ${isTarget ? 'text-primary font-bold' : 'opacity-60'}`}>
+                  className={`font-mono text-xs tabular-nums ${isTarget ? 'text-primary font-normal' : 'opacity-60'}`}>
                   {rate.toLocaleString(undefined, {
                     minimumFractionDigits: 2,
                     maximumFractionDigits: 4,

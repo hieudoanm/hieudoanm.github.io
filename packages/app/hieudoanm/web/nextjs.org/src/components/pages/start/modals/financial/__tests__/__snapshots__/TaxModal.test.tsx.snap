@@ -18,7 +18,7 @@ exports[`TaxModal should render input tab 1`] = `
         >
           <div>
             <h2
-              class="text-lg font-black tracking-tight"
+              class="text-lg font-normal tracking-tight"
             >
               Tính Thuế TNCN
             </h2>
@@ -30,18 +30,15 @@ exports[`TaxModal should render input tab 1`] = `
           </button>
         </div>
         <div
-          class="tabs tabs-boxed mb-4 w-full"
-          role="tablist"
+          class="mb-4 flex w-full border-b border-base-300"
         >
           <button
-            class="tab w-[50%] tab-active"
-            role="tab"
+            class="border-b-2 w-1/2 px-3 py-2 text-sm transition-colors border-primary text-primary"
           >
             Input
           </button>
           <button
-            class="tab w-[50%] "
-            role="tab"
+            class="border-b-2 w-1/2 px-3 py-2 text-sm transition-colors border-transparent text-base-content/40"
           >
             Results
           </button>
@@ -56,7 +53,7 @@ exports[`TaxModal should render input tab 1`] = `
               class="label mb-1 p-0"
             >
               <span
-                class="label-text text-xs font-medium opacity-70"
+                class="label-text text-xs font-normal opacity-70"
               >
                 Kỳ tính thuế
               </span>
@@ -94,7 +91,7 @@ exports[`TaxModal should render input tab 1`] = `
               class="label mb-1 p-0"
             >
               <span
-                class="label-text text-xs font-medium opacity-70"
+                class="label-text text-xs font-normal opacity-70"
               >
                 💼 Thu nhập gộp (Gross)
               </span>
@@ -112,7 +109,7 @@ exports[`TaxModal should render input tab 1`] = `
               class="label mb-1 p-0"
             >
               <span
-                class="label-text text-xs font-medium opacity-70"
+                class="label-text text-xs font-normal opacity-70"
               >
                 👨‍👩‍👧 Người phụ thuộc
               </span>
@@ -130,7 +127,7 @@ exports[`TaxModal should render input tab 1`] = `
               class="label cursor-pointer p-0"
             >
               <span
-                class="label-text text-xs font-medium opacity-70"
+                class="label-text text-xs font-normal opacity-70"
               >
                 🛡️ Tính bảo hiểm
               </span>
@@ -174,7 +171,7 @@ exports[`TaxModal should show net to gross mode results 1`] = `
         >
           <div>
             <h2
-              class="text-lg font-black tracking-tight"
+              class="text-lg font-normal tracking-tight"
             >
               Tính Thuế TNCN
             </h2>
@@ -186,18 +183,15 @@ exports[`TaxModal should show net to gross mode results 1`] = `
           </button>
         </div>
         <div
-          class="tabs tabs-boxed mb-4 w-full"
-          role="tablist"
+          class="mb-4 flex w-full border-b border-base-300"
         >
           <button
-            class="tab w-[50%] "
-            role="tab"
+            class="border-b-2 w-1/2 px-3 py-2 text-sm transition-colors border-transparent text-base-content/40"
           >
             Input
           </button>
           <button
-            class="tab w-[50%] tab-active"
-            role="tab"
+            class="border-b-2 w-1/2 px-3 py-2 text-sm transition-colors border-primary text-primary"
           >
             Results
           </button>
@@ -209,7 +203,7 @@ exports[`TaxModal should show net to gross mode results 1`] = `
             class="bg-base-200 rounded-xl p-3 text-sm"
           >
             <h4
-              class="mb-2 font-semibold"
+              class="mb-2 font-normal"
             >
               🧾 Khấu trừ
             </h4>
@@ -259,7 +253,7 @@ exports[`TaxModal should show net to gross mode results 1`] = `
                 class="divider my-1 h-1"
               />
               <div
-                class="flex justify-between font-bold"
+                class="flex justify-between font-normal"
               >
                 <span>
                   Tổng:
@@ -307,7 +301,7 @@ exports[`TaxModal should show net to gross mode results 1`] = `
                 class="divider my-1 h-1"
               />
               <div
-                class="text-primary flex justify-between font-bold"
+                class="text-primary flex justify-between font-normal"
               >
                 <span>
                   💰 Thực lĩnh:
@@ -334,7 +328,7 @@ exports[`TaxModal should show net to gross mode results 1`] = `
             class="bg-base-200 rounded-xl p-3"
           >
             <h4
-              class="mb-2 text-xs font-semibold"
+              class="mb-2 text-xs font-normal"
             >
               🧮 Chi tiết thuế
             </h4>
@@ -433,7 +427,7 @@ exports[`TaxModal should show results with computed values 1`] = `
         >
           <div>
             <h2
-              class="text-lg font-black tracking-tight"
+              class="text-lg font-normal tracking-tight"
             >
               Tính Thuế TNCN
             </h2>
@@ -445,18 +439,15 @@ exports[`TaxModal should show results with computed values 1`] = `
           </button>
         </div>
         <div
-          class="tabs tabs-boxed mb-4 w-full"
-          role="tablist"
+          class="mb-4 flex w-full border-b border-base-300"
         >
           <button
-            class="tab w-[50%] "
-            role="tab"
+            class="border-b-2 w-1/2 px-3 py-2 text-sm transition-colors border-transparent text-base-content/40"
           >
             Input
           </button>
           <button
-            class="tab w-[50%] tab-active"
-            role="tab"
+            class="border-b-2 w-1/2 px-3 py-2 text-sm transition-colors border-primary text-primary"
           >
             Results
           </button>
@@ -468,7 +459,7 @@ exports[`TaxModal should show results with computed values 1`] = `
             class="bg-base-200 rounded-xl p-3 text-sm"
           >
             <h4
-              class="mb-2 font-semibold"
+              class="mb-2 font-normal"
             >
               🧾 Khấu trừ
             </h4>
@@ -518,7 +509,7 @@ exports[`TaxModal should show results with computed values 1`] = `
                 class="divider my-1 h-1"
               />
               <div
-                class="flex justify-between font-bold"
+                class="flex justify-between font-normal"
               >
                 <span>
                   Tổng:
@@ -566,7 +557,7 @@ exports[`TaxModal should show results with computed values 1`] = `
                 class="divider my-1 h-1"
               />
               <div
-                class="text-primary flex justify-between font-bold"
+                class="text-primary flex justify-between font-normal"
               >
                 <span>
                   💰 Thực lĩnh:
@@ -593,7 +584,7 @@ exports[`TaxModal should show results with computed values 1`] = `
             class="bg-base-200 rounded-xl p-3"
           >
             <h4
-              class="mb-2 text-xs font-semibold"
+              class="mb-2 text-xs font-normal"
             >
               🧮 Chi tiết thuế
             </h4>
@@ -692,7 +683,7 @@ exports[`TaxModal should switch to results tab 1`] = `
         >
           <div>
             <h2
-              class="text-lg font-black tracking-tight"
+              class="text-lg font-normal tracking-tight"
             >
               Tính Thuế TNCN
             </h2>
@@ -704,18 +695,15 @@ exports[`TaxModal should switch to results tab 1`] = `
           </button>
         </div>
         <div
-          class="tabs tabs-boxed mb-4 w-full"
-          role="tablist"
+          class="mb-4 flex w-full border-b border-base-300"
         >
           <button
-            class="tab w-[50%] "
-            role="tab"
+            class="border-b-2 w-1/2 px-3 py-2 text-sm transition-colors border-transparent text-base-content/40"
           >
             Input
           </button>
           <button
-            class="tab w-[50%] tab-active"
-            role="tab"
+            class="border-b-2 w-1/2 px-3 py-2 text-sm transition-colors border-primary text-primary"
           >
             Results
           </button>
@@ -727,7 +715,7 @@ exports[`TaxModal should switch to results tab 1`] = `
             class="bg-base-200 rounded-xl p-3 text-sm"
           >
             <h4
-              class="mb-2 font-semibold"
+              class="mb-2 font-normal"
             >
               🧾 Khấu trừ
             </h4>
@@ -777,7 +765,7 @@ exports[`TaxModal should switch to results tab 1`] = `
                 class="divider my-1 h-1"
               />
               <div
-                class="flex justify-between font-bold"
+                class="flex justify-between font-normal"
               >
                 <span>
                   Tổng:
@@ -825,7 +813,7 @@ exports[`TaxModal should switch to results tab 1`] = `
                 class="divider my-1 h-1"
               />
               <div
-                class="text-primary flex justify-between font-bold"
+                class="text-primary flex justify-between font-normal"
               >
                 <span>
                   💰 Thực lĩnh:
@@ -852,7 +840,7 @@ exports[`TaxModal should switch to results tab 1`] = `
             class="bg-base-200 rounded-xl p-3"
           >
             <h4
-              class="mb-2 text-xs font-semibold"
+              class="mb-2 text-xs font-normal"
             >
               🧮 Chi tiết thuế
             </h4>

@@ -146,7 +146,7 @@ export const CameraModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                       {currentRatio.label}
                     </span>
                   </button>
-                  <span className="text-[10px] font-semibold tracking-wider text-white/30 uppercase">
+                  <span className="text-[10px] font-normal tracking-wider text-white/30 uppercase">
                     Ratio
                   </span>
                 </div>
@@ -171,7 +171,7 @@ export const CameraModal: FC<{ onClose: () => void }> = ({ onClose }) => {
                       <path d="M23 4v6h-4M2 20v-6h4M20.49 9A9 9 0 0 0 5.64 5.64L2 10m22 4l-3.64 4.36A9 9 0 0 1 3.51 15" />
                     </svg>
                   </button>
-                  <span className="text-[10px] font-semibold tracking-wider text-white/30 uppercase">
+                  <span className="text-[10px] font-normal tracking-wider text-white/30 uppercase">
                     Flip
                   </span>
                 </div>

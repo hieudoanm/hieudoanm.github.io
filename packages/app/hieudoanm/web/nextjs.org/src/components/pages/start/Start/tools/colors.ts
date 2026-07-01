@@ -7,7 +7,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: '',
     tags: [],
     emoji: '🔧',
-    color: '#3b82f6',
     onClick: open('ai-colorize'),
   },
   {
@@ -15,7 +14,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: '',
     tags: [],
     emoji: '🔧',
-    color: '#3b82f6',
     onClick: open('colors'),
   },
   {
@@ -23,7 +21,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: '',
     tags: [],
     emoji: '🔧',
-    color: '#3b82f6',
     onClick: open('contrast-checker'),
   },
   {
@@ -31,7 +28,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: '',
     tags: [],
     emoji: '🔧',
-    color: '#3b82f6',
     onClick: open('gradient-generator'),
   },
   {
@@ -39,7 +35,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: '',
     tags: [],
     emoji: '🔧',
-    color: '#3b82f6',
     onClick: open('image-colorize'),
   },
   {
@@ -47,7 +42,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     description: '',
     tags: [],
     emoji: '🔧',
-    color: '#3b82f6',
     onClick: open('image-dominant-color'),
   },
 ];

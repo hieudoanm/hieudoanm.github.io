@@ -17,7 +17,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'gif',
     ],
     emoji: '⚫',
-    color: '#3b82f6',
     onClick: open('image-bw'),
   },
   {
@@ -35,7 +34,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'gif',
     ],
     emoji: '🖼️',
-    color: '#3b82f6',
     onClick: open('image-border'),
   },
   {
@@ -57,7 +55,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'gif',
     ],
     emoji: '📦',
-    color: '#3b82f6',
     onClick: open('image-compress'),
   },
   {
@@ -78,7 +75,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'gif',
     ],
     emoji: '✂️',
-    color: '#3b82f6',
     onClick: open('image-crop'),
   },
   {
@@ -96,7 +92,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'gif',
     ],
     emoji: '🔄',
-    color: '#3b82f6',
     onClick: open('image-flip'),
   },
   {
@@ -114,7 +109,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'gif',
     ],
     emoji: '🧊',
-    color: '#3b82f6',
     onClick: open('image-pixelate'),
   },
   {
@@ -135,7 +129,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'gif',
     ],
     emoji: '📐',
-    color: '#3b82f6',
     onClick: open('image-resize'),
   },
   {
@@ -155,7 +148,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'gif',
     ],
     emoji: '🔄',
-    color: '#3b82f6',
     onClick: open('image-rotate'),
   },
   {
@@ -173,7 +165,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'gif',
     ],
     emoji: '⭕',
-    color: '#3b82f6',
     onClick: open('image-round'),
   },
   {
@@ -191,7 +182,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'gif',
     ],
     emoji: '💫',
-    color: '#3b82f6',
     onClick: open('image-sharpen'),
   },
   {
@@ -211,7 +201,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'separate',
     ],
     emoji: '✂️',
-    color: '#3b82f6',
     onClick: open('image-split'),
   },
 ];

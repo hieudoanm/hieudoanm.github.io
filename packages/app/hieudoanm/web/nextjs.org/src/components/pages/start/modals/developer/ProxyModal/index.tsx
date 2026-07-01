@@ -50,7 +50,7 @@ const { data, isPending, error } = useQuery({
       size="max-w-2xl">
       {/* Input Section */}
       <div className="flex flex-col gap-2">
-        <label className="text-base-content/70 text-xs font-semibold tracking-wider uppercase">
+        <label className="text-base-content/70 text-xs font-normal tracking-wider uppercase">
           Target URL
         </label>
         <input
@@ -64,12 +64,15 @@ const { data, isPending, error } = useQuery({
 
       {/* Tabs and Code Section */}
       <div className="flex flex-col gap-3">
-        <div role="tablist" className="tabs tabs-boxed">
+        <div className="flex gap-0">
           {(['curl', 'fetch', 'axios', 'useQuery'] as TabType[]).map((t) => (
             <button
               key={t}
-              role="tab"
-              className={`tab capitalize ${activeTab === t ? 'tab-active' : ''}`}
+              className={`border-b-2 px-3 py-2 text-sm capitalize transition-colors ${
+                activeTab === t
+                  ? 'border-primary text-primary'
+                  : 'text-base-content/40 border-transparent'
+              }`}
               onClick={() => setActiveTab(t)}>
               {t === 'useQuery' ? 'TanStack Query' : t}
             </button>
@@ -89,7 +92,7 @@ const { data, isPending, error } = useQuery({
       </div>
 
       {/* Footer info */}
-      <div className="alert alert-info bg-info/10 border-info/20 py-2">
+      <div className="alert bg-base-200 border-base-300 py-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

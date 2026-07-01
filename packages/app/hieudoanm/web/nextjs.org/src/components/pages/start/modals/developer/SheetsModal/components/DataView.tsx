@@ -47,7 +47,7 @@ export const DataView: FC<DataViewProps> = memo(
       <div className="border-base-300 bg-base-200/50 flex flex-shrink-0 items-center gap-3 border-b px-4 py-2.5">
         {activeTable ? (
           <>
-            <span className="text-base-content font-mono text-sm font-semibold">
+            <span className="text-base-content font-mono text-sm font-normal">
               {activeTable}
             </span>
             <div className="badge badge-ghost badge-sm text-base-content/40 font-mono">

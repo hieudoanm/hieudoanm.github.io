@@ -32,7 +32,7 @@ export const DaysCountModal: FC<{ onClose: () => void }> = ({ onClose }) => {
         <div className="flex items-end gap-2">
           <div className="form-control flex-1">
             <label className="label mb-1 p-0">
-              <span className="label-text text-xs font-medium opacity-70">
+              <span className="label-text text-xs font-normal opacity-70">
                 From
               </span>
             </label>
@@ -53,7 +53,7 @@ export const DaysCountModal: FC<{ onClose: () => void }> = ({ onClose }) => {
         <div className="flex items-end gap-2">
           <div className="form-control flex-1">
             <label className="label mb-1 p-0">
-              <span className="label-text text-xs font-medium opacity-70">
+              <span className="label-text text-xs font-normal opacity-70">
                 To
               </span>
             </label>
@@ -75,14 +75,14 @@ export const DaysCountModal: FC<{ onClose: () => void }> = ({ onClose }) => {
           <div className="bg-base-200 space-y-2 rounded-xl p-3">
             <div className="flex items-center justify-between">
               <span className="text-xs opacity-70">Total Days</span>
-              <span className="text-lg font-black">
+              <span className="text-lg font-normal">
                 {result.totalDays.toLocaleString()}
               </span>
             </div>
             <div className="divider my-1" />
             <div className="flex items-center justify-between">
               <span className="text-xs opacity-70">Duration</span>
-              <span className="text-sm font-bold">
+              <span className="text-sm font-normal">
                 {durationParts.join(' ')}
               </span>
             </div>

@@ -117,13 +117,12 @@ export const T3Modal: FC<{ onClose: () => void }> = ({ onClose }) => {
       <div className="flex flex-col gap-2">
         <div className="flex items-center justify-between text-sm">
           {winner ? (
-            <div className="text-warning font-semibold">
+            <div className="text-warning font-normal">
               Winner: {winner.player}
             </div>
           ) : (
             <div>
-              Current:{' '}
-              <span className="text-info font-semibold">{current}</span>
+              Current: <span className="text-info font-normal">{current}</span>
             </div>
           )}
         </div>
