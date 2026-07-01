@@ -33,6 +33,7 @@ export const TOOL_SECTION_LABELS: Record<string, string> = {
   'image-edit': 'Image - Edit',
   'image-effect': 'Image - Effect',
   'image-scan': 'Image - Scan',
+  markdown: 'Markdown',
   'pdf-convert': 'PDF - Convert',
   'pdf-create': 'PDF - Create',
   'pdf-ebook': 'PDF - Ebook',

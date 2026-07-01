@@ -106,7 +106,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest]
-        app: [hieudoanm/mobile/expo.dev, hieudoanm/web/nextjs.org]
+        app: [mobile/expo.dev, web/nextjs.org]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout
@@ -137,9 +137,9 @@ jobs:
       - name: Build App
         working-directory: packages/app/hieudoanm/${{ matrix.app }}
         run: |
-          if [ "${{ matrix.app }}" = "hieudoanm/mobile/expo.dev" ] && [ ! -d dist ]; then
+          if [ "${{ matrix.app }}" = "mobile/expo.dev" ] && [ ! -d dist ]; then
             pnpm run build
-          elif [ "${{ matrix.app }}" = "hieudoanm/web/nextjs.org" ] && [ ! -d out ]; then
+          elif [ "${{ matrix.app }}" = "web/nextjs.org" ] && [ ! -d out ]; then
             EXPORT=true pnpm run build
           fi
       - name: Build Tauri Artifact

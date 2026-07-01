@@ -18,13 +18,6 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     onClick: open('images-to-pdf'),
   },
   {
-    label: 'MD to PDF',
-    description: 'PDF',
-    tags: ['create', 'document', 'word', 'adobe', 'acrobat'],
-    icon: PiFileText,
-    onClick: open('create-md-to-pdf'),
-  },
-  {
     label: 'PPT to PDF',
     description: 'PDF',
     tags: ['create', 'document', 'word', 'adobe', 'acrobat'],

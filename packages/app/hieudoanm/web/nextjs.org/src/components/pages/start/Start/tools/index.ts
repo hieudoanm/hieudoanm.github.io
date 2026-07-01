@@ -33,6 +33,7 @@ import { make as imageCreateMake } from './image-create';
 import { make as imageEditMake } from './image-edit';
 import { make as imageEffectMake } from './image-effect';
 import { make as imageScanMake } from './image-scan';
+import { make as markdownMake } from './markdown';
 import { make as pdfConvertMake } from './pdf-convert';
 import { make as pdfCreateMake } from './pdf-create';
 import { make as pdfEbookMake } from './pdf-ebook';
@@ -99,6 +100,7 @@ export const makeTools = (
   'image-edit': imageEditMake(open),
   'image-effect': imageEffectMake(open),
   'image-scan': imageScanMake(open),
+  markdown: markdownMake(open),
   'pdf-convert': pdfConvertMake(open),
   'pdf-create': pdfCreateMake(open),
   'pdf-ebook': pdfEbookMake(open),

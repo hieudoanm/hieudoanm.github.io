@@ -1,10 +1,5 @@
 import { ComponentType } from 'react';
 
-const loadCreateMdToPdf = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/pdf-create/CreateMdToPdfModal').then(
-    (m) => ({ default: m.CreateMdToPdfModal })
-  );
-
 const loadCreateTextToPdf = () =>
   import('@hieudoanm.github.io/components/pages/start/modals/pdf-create/CreateTextToPdfModal').then(
     (m) => ({ default: m.CreateTextToPdfModal })
@@ -44,7 +39,6 @@ export const loaders: Record<
   string,
   () => Promise<{ default: ComponentType<{ onClose: () => void }> }>
 > = {
-  'create-md-to-pdf': loadCreateMdToPdf,
   'create-text-to-pdf': loadCreateTextToPdf,
   'create-url-to-pdf': loadCreateUrlToPdf,
   'epub-to-pdf': loadEpubToPdf,

@@ -33,6 +33,7 @@ import { loaders as imageCreateLoaders } from './image-create';
 import { loaders as imageEditLoaders } from './image-edit';
 import { loaders as imageEffectLoaders } from './image-effect';
 import { loaders as imageScanLoaders } from './image-scan';
+import { loaders as markdownLoaders } from './markdown';
 import { loaders as pdfConvertLoaders } from './pdf-convert';
 import { loaders as pdfCreateLoaders } from './pdf-create';
 import { loaders as pdfEbookLoaders } from './pdf-ebook';
@@ -100,6 +101,7 @@ const loaders: Record<
   ...imageEditLoaders,
   ...imageEffectLoaders,
   ...imageScanLoaders,
+  ...markdownLoaders,
   ...pdfConvertLoaders,
   ...pdfCreateLoaders,
   ...pdfEbookLoaders,

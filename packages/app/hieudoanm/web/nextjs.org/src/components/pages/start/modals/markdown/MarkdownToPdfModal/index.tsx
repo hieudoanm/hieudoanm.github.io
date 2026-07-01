@@ -1,9 +1,9 @@
 'use client';
 
-import { FC, useState, useCallback, useRef, useEffect } from 'react';
+import { FC, useState, useCallback, useRef } from 'react';
 import { ModalWrapper } from '@hieudoanm.github.io/components/atoms/ModalWrapper';
 
-export const CreateMdToPdfModal: FC<{ onClose: () => void }> = ({
+export const MarkdownToPdfModal: FC<{ onClose: () => void }> = ({
   onClose,
 }) => {
   const [markdown, setMarkdown] = useState(
@@ -81,4 +81,4 @@ export const CreateMdToPdfModal: FC<{ onClose: () => void }> = ({
     </ModalWrapper>
   );
 };
-CreateMdToPdfModal.displayName = 'CreateMdToPdfModal';
+MarkdownToPdfModal.displayName = 'MarkdownToPdfModal';
