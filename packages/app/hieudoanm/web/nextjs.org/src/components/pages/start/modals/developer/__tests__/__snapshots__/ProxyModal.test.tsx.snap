@@ -61,17 +61,17 @@ exports[`ProxyModal should render and match snapshot 1`] = `
               curl
             </button>
             <button
-              class="border-b-2 px-3 py-2 text-sm capitalize transition-colors border-transparent text-base-content/40"
+              class="border-b-2 px-3 py-2 text-sm capitalize transition-colors text-base-content/40 border-transparent"
             >
               fetch
             </button>
             <button
-              class="border-b-2 px-3 py-2 text-sm capitalize transition-colors border-transparent text-base-content/40"
+              class="border-b-2 px-3 py-2 text-sm capitalize transition-colors text-base-content/40 border-transparent"
             >
               axios
             </button>
             <button
-              class="border-b-2 px-3 py-2 text-sm capitalize transition-colors border-transparent text-base-content/40"
+              class="border-b-2 px-3 py-2 text-sm capitalize transition-colors text-base-content/40 border-transparent"
             >
               TanStack Query
             </button>

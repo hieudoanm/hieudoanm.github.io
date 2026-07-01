@@ -1,3 +1,11 @@
+import {
+  PiBooks,
+  PiChartBar,
+  PiFileText,
+  PiHandPeace,
+  PiNotebook,
+  PiPianoKeys,
+} from 'react-icons/pi';
 import { Tool } from '@hieudoanm.github.io/components/pages/start/cards/ToolCard';
 import { ModalId } from '../types';
 
@@ -13,42 +21,42 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'digital-object-identifier',
       'citation',
     ],
-    emoji: '📄',
+    icon: PiFileText,
     onClick: open('doi'),
   },
   {
     label: 'English',
     description: 'Dictionary',
     tags: ['education', 'learning', 'study', 'academic'],
-    emoji: '📚',
+    icon: PiBooks,
     onClick: open('english'),
   },
   {
     label: 'Flashcards',
     description: 'Words',
     tags: ['education', 'learning', 'study', 'academic'],
-    emoji: '📓',
+    icon: PiNotebook,
     onClick: open('flashcards'),
   },
   {
     label: 'Periodic Table',
     description: 'Elements',
     tags: ['education', 'learning', 'study', 'academic'],
-    emoji: '📊',
+    icon: PiChartBar,
     onClick: open('periodic-table'),
   },
   {
     label: 'Pitch',
     description: 'Training',
     tags: ['education', 'learning', 'study', 'academic'],
-    emoji: '🎹',
+    icon: PiPianoKeys,
     onClick: open('pitch'),
   },
   {
     label: 'Sign Language',
     description: 'Detection',
     tags: ['education', 'learning', 'study', 'academic'],
-    emoji: '🤟',
+    icon: PiHandPeace,
     onClick: open('sign'),
   },
 ];

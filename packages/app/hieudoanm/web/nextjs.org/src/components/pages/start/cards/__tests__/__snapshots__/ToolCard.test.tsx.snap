@@ -11,9 +11,10 @@ exports[`ToolCard should render 1`] = `
       <div
         class="bg-primary/20 border-primary/30 flex h-10 w-10 items-center justify-center rounded-full text-xl shadow-inner transition-transform duration-300 group-hover:scale-110"
       >
-        <span>
-          😀
-        </span>
+        <svg
+          class="text-xl"
+          data-testid="mock-icon"
+        />
       </div>
       <div>
         <div

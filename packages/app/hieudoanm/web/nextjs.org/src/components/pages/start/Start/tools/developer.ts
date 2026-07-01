@@ -1,3 +1,13 @@
+import {
+  PiArrowsClockwise,
+  PiDatabase,
+  PiGlobe,
+  PiKey,
+  PiLink,
+  PiMagnifyingGlass,
+  PiNotePencil,
+  PiPaintBrush,
+} from 'react-icons/pi';
 import { Tool } from '@hieudoanm.github.io/components/pages/start/cards/ToolCard';
 import { ModalId } from '../types';
 
@@ -6,21 +16,21 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     label: 'Diff',
     description: 'Text Comparison',
     tags: ['developer', 'programming', 'code', 'dev-tools'],
-    emoji: '📝',
+    icon: PiNotePencil,
     onClick: open('text-diff'),
   },
   {
     label: 'Figlet',
     description: 'Text art',
     tags: ['developer', 'programming', 'code', 'dev-tools'],
-    emoji: '📝',
+    icon: PiNotePencil,
     onClick: open('figlet'),
   },
   {
     label: 'IP',
     description: 'Inspector',
     tags: ['developer', 'programming', 'code', 'dev-tools'],
-    emoji: '🌐',
+    icon: PiGlobe,
     onClick: open('ip'),
   },
   {
@@ -35,14 +45,14 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'swagger',
       'specification',
     ],
-    emoji: '🔄',
+    icon: PiArrowsClockwise,
     onClick: open('openapi'),
   },
   {
     label: 'Proxy',
     description: 'CORS Proxy',
     tags: ['developer', 'programming', 'code', 'dev-tools'],
-    emoji: '🔗',
+    icon: PiLink,
     onClick: open('proxy'),
   },
   {
@@ -57,28 +67,28 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'excel',
       'google-sheets',
     ],
-    emoji: '🗄️',
+    icon: PiDatabase,
     onClick: open('sheets'),
   },
   {
     label: 'Shopify Detect',
     description: 'Detect Shopify',
     tags: ['developer', 'programming', 'code', 'dev-tools'],
-    emoji: '🔍',
+    icon: PiMagnifyingGlass,
     onClick: open('shopify-detect'),
   },
   {
     label: 'SVG',
     description: 'Editor',
     tags: ['developer', 'programming', 'code', 'dev-tools', 'modify', 'change'],
-    emoji: '🎨',
+    icon: PiPaintBrush,
     onClick: open('svg'),
   },
   {
     label: 'URL Tracer',
     description: 'Redirect Tracker',
     tags: ['developer', 'programming', 'code', 'dev-tools'],
-    emoji: '🔗',
+    icon: PiLink,
     onClick: open('text-url-tracer'),
   },
   {
@@ -96,7 +106,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'maker',
       'builder',
     ],
-    emoji: '🔑',
+    icon: PiKey,
     onClick: open('uuid'),
   },
 ];

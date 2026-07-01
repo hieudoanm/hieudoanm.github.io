@@ -38,7 +38,7 @@ export const TimeTab: FC = () => {
               <div
                 key={block.label}
                 style={{ height: `${hours * 28}px` }}
-                className={`relative flex items-center gap-2 rounded-full border px-3 transition-all duration-300 ${
+                className={`relative flex items-center gap-2 rounded-lg border px-3 transition-all duration-300 ${
                   isActive
                     ? 'bg-base-content/10 border-base-content/30 shadow-sm'
                     : 'bg-base-content/5 border-base-content/10 opacity-60'

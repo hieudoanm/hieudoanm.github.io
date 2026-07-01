@@ -1,3 +1,4 @@
+import { PiProhibit } from 'react-icons/pi';
 import { Download } from './types';
 
 export const extensions: Download[] = [
@@ -5,7 +6,7 @@ export const extensions: Download[] = [
     id: 'hieudoanm-ext',
     label: '@hieudoanm/ext',
     url: 'https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-latest',
-    emoji: '🚫',
+    icon: PiProhibit,
     color: '#ef4444',
     description: 'AdsBlocker',
     downloads: [

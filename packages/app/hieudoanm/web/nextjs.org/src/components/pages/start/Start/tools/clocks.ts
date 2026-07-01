@@ -1,3 +1,11 @@
+import {
+  PiCalendar,
+  PiClock,
+  PiClockAfternoon,
+  PiHourglass,
+  PiTimer,
+  PiWatch,
+} from 'react-icons/pi';
 import { Tool } from '@hieudoanm.github.io/components/pages/start/cards/ToolCard';
 import { ModalId } from '../types';
 
@@ -6,35 +14,35 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     label: 'Countdown',
     description: 'Timer',
     tags: ['clock', 'world-clock', 'stopwatch', 'alarm'],
-    emoji: '⏳',
+    icon: PiHourglass,
     onClick: open('countdown'),
   },
   {
     label: 'Cron',
     description: 'Expression Builder',
     tags: ['clock', 'time', 'world-clock'],
-    emoji: '🕒',
+    icon: PiClockAfternoon,
     onClick: open('cron'),
   },
   {
     label: 'Days Count',
     description: 'Date Difference',
     tags: ['clock', 'time', 'date', 'difference'],
-    emoji: '📅',
+    icon: PiCalendar,
     onClick: open('days-count'),
   },
   {
     label: 'Epoch Convert',
     description: 'Timestamp',
     tags: ['clock', 'time', 'timestamp', 'unix', 'epoch'],
-    emoji: '🕐',
+    icon: PiClock,
     onClick: open('epoch-convert'),
   },
   {
     label: 'Pomodoro',
     description: 'Timer',
     tags: ['clock', 'world-clock', 'countdown', 'stopwatch', 'alarm'],
-    emoji: '🍅',
+    icon: PiTimer,
     onClick: open('pomodoro'),
   },
   {
@@ -48,7 +56,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'watch-face',
       'clock-face',
     ],
-    emoji: '⌚',
+    icon: PiWatch,
     onClick: open('watchface'),
   },
 ];

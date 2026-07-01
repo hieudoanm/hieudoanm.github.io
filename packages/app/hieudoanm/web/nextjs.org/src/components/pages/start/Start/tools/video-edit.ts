@@ -1,3 +1,4 @@
+import { PiScissors } from 'react-icons/pi';
 import { Tool } from '@hieudoanm.github.io/components/pages/start/cards/ToolCard';
 import { ModalId } from '../types';
 
@@ -17,7 +18,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'clip',
       'footage',
     ],
-    emoji: '✂️',
+    icon: PiScissors,
     onClick: open('video-compress'),
   },
   {
@@ -34,7 +35,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'clip',
       'footage',
     ],
-    emoji: '✂️',
+    icon: PiScissors,
     onClick: open('video-crop'),
   },
   {
@@ -53,28 +54,28 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'clip',
       'footage',
     ],
-    emoji: '✂️',
+    icon: PiScissors,
     onClick: open('video-extract-audio'),
   },
   {
     label: 'Extract Frames',
     description: 'Video',
     tags: ['edit', 'media', 'mp4', 'movie', 'clip', 'footage'],
-    emoji: '✂️',
+    icon: PiScissors,
     onClick: open('video-extract-frames'),
   },
   {
     label: 'Merge',
     description: 'Video',
     tags: ['edit', 'media', 'mp4', 'movie', 'clip', 'footage'],
-    emoji: '✂️',
+    icon: PiScissors,
     onClick: open('video-merge'),
   },
   {
     label: 'Mute',
     description: 'Video',
     tags: ['edit', 'media', 'mp4', 'movie', 'clip', 'footage'],
-    emoji: '✂️',
+    icon: PiScissors,
     onClick: open('video-mute'),
   },
   {
@@ -91,28 +92,28 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'clip',
       'footage',
     ],
-    emoji: '✂️',
+    icon: PiScissors,
     onClick: open('video-resize'),
   },
   {
     label: 'Speed',
     description: 'Video',
     tags: ['edit', 'media', 'mp4', 'movie', 'clip', 'footage'],
-    emoji: '✂️',
+    icon: PiScissors,
     onClick: open('video-speed'),
   },
   {
     label: 'Stabilize',
     description: 'Video',
     tags: ['edit', 'media', 'mp4', 'movie', 'clip', 'footage'],
-    emoji: '✂️',
+    icon: PiScissors,
     onClick: open('video-stabilize'),
   },
   {
     label: 'Trim',
     description: 'Video',
     tags: ['edit', 'media', 'mp4', 'movie', 'clip', 'footage'],
-    emoji: '✂️',
+    icon: PiScissors,
     onClick: open('video-trim'),
   },
 ];

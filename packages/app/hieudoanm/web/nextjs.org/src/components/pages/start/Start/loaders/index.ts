@@ -1,10 +1,9 @@
 import { ComponentType, lazy } from 'react';
 import { ModalId } from '../types';
 
-import { loaders as aiLoaders } from './ai';
+import { loaders as calculatorConvertLoaders } from './calculator-convert';
+import { loaders as calculatorFinanceLoaders } from './calculator-finance';
 import { loaders as clocksLoaders } from './clocks';
-import { loaders as colorsLoaders } from './colors';
-import { loaders as converterLoaders } from './converter';
 import { loaders as dataCsvLoaders } from './data-csv';
 import { loaders as dataExcelLoaders } from './data-excel';
 import { loaders as dataJsonLoaders } from './data-json';
@@ -12,8 +11,6 @@ import { loaders as dataXmlLoaders } from './data-xml';
 import { loaders as developerLoaders } from './developer';
 import { loaders as editorsLoaders } from './editors';
 import { loaders as educationLoaders } from './education';
-import { loaders as eyesLoaders } from './eyes';
-import { loaders as financialLoaders } from './financial';
 import { loaders as gamesArcadeLoaders } from './games-arcade';
 import { loaders as gamesCasinoLoaders } from './games-casino';
 import { loaders as gamesChessLoaders } from './games-chess';
@@ -21,6 +18,9 @@ import { loaders as gamesMemoryLoaders } from './games-memory';
 import { loaders as gamesPuzzleLoaders } from './games-puzzle';
 import { loaders as gamesTriviaLoaders } from './games-trivia';
 import { loaders as gamesWordLoaders } from './games-word';
+import { loaders as healthVisionLoaders } from './health-vision';
+import { loaders as imageAiLoaders } from './image-ai';
+import { loaders as imageColorLoaders } from './image-color';
 import { loaders as imageConvertGifLoaders } from './image-convert-gif';
 import { loaders as imageConvertHeicLoaders } from './image-convert-heic';
 import { loaders as imageConvertJpgLoaders } from './image-convert-jpg';
@@ -68,10 +68,9 @@ const loaders: Record<
   string,
   () => Promise<{ default: ComponentType<{ onClose: () => void }> }>
 > = {
-  ...aiLoaders,
+  ...calculatorConvertLoaders,
+  ...calculatorFinanceLoaders,
   ...clocksLoaders,
-  ...colorsLoaders,
-  ...converterLoaders,
   ...dataCsvLoaders,
   ...dataExcelLoaders,
   ...dataJsonLoaders,
@@ -79,8 +78,6 @@ const loaders: Record<
   ...developerLoaders,
   ...editorsLoaders,
   ...educationLoaders,
-  ...eyesLoaders,
-  ...financialLoaders,
   ...gamesArcadeLoaders,
   ...gamesCasinoLoaders,
   ...gamesChessLoaders,
@@ -88,6 +85,9 @@ const loaders: Record<
   ...gamesPuzzleLoaders,
   ...gamesTriviaLoaders,
   ...gamesWordLoaders,
+  ...healthVisionLoaders,
+  ...imageAiLoaders,
+  ...imageColorLoaders,
   ...imageConvertGifLoaders,
   ...imageConvertHeicLoaders,
   ...imageConvertJpgLoaders,

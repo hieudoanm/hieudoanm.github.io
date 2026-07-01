@@ -1,3 +1,13 @@
+import {
+  PiArrowsClockwise,
+  PiCircle,
+  PiImage,
+  PiPackage,
+  PiRuler,
+  PiScissors,
+  PiSnowflake,
+  PiStarFour,
+} from 'react-icons/pi';
 import { Tool } from '@hieudoanm.github.io/components/pages/start/cards/ToolCard';
 import { ModalId } from '../types';
 
@@ -16,7 +26,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'jpeg',
       'gif',
     ],
-    emoji: '⚫',
+    icon: PiCircle,
     onClick: open('image-bw'),
   },
   {
@@ -33,7 +43,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'jpeg',
       'gif',
     ],
-    emoji: '🖼️',
+    icon: PiImage,
     onClick: open('image-border'),
   },
   {
@@ -54,7 +64,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'jpeg',
       'gif',
     ],
-    emoji: '📦',
+    icon: PiPackage,
     onClick: open('image-compress'),
   },
   {
@@ -74,7 +84,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'jpeg',
       'gif',
     ],
-    emoji: '✂️',
+    icon: PiScissors,
     onClick: open('image-crop'),
   },
   {
@@ -91,7 +101,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'jpeg',
       'gif',
     ],
-    emoji: '🔄',
+    icon: PiArrowsClockwise,
     onClick: open('image-flip'),
   },
   {
@@ -108,7 +118,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'jpeg',
       'gif',
     ],
-    emoji: '🧊',
+    icon: PiSnowflake,
     onClick: open('image-pixelate'),
   },
   {
@@ -128,7 +138,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'jpeg',
       'gif',
     ],
-    emoji: '📐',
+    icon: PiRuler,
     onClick: open('image-resize'),
   },
   {
@@ -147,7 +157,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'jpeg',
       'gif',
     ],
-    emoji: '🔄',
+    icon: PiArrowsClockwise,
     onClick: open('image-rotate'),
   },
   {
@@ -164,7 +174,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'jpeg',
       'gif',
     ],
-    emoji: '⭕',
+    icon: PiCircle,
     onClick: open('image-round'),
   },
   {
@@ -181,7 +191,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'jpeg',
       'gif',
     ],
-    emoji: '💫',
+    icon: PiStarFour,
     onClick: open('image-sharpen'),
   },
   {
@@ -200,7 +210,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'divide',
       'separate',
     ],
-    emoji: '✂️',
+    icon: PiScissors,
     onClick: open('image-split'),
   },
 ];

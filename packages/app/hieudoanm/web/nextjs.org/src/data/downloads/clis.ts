@@ -1,3 +1,4 @@
+import { PiCodeSimple, PiTerminal } from 'react-icons/pi';
 import { Download } from './types';
 
 export const clis: Download[] = [
@@ -5,7 +6,7 @@ export const clis: Download[] = [
     id: 'bash',
     label: 'bash',
     url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/cli/bash',
-    emoji: '🐚',
+    icon: PiTerminal,
     color: '#4ade80',
     description: 'Aliases',
     downloads: [
@@ -19,7 +20,7 @@ export const clis: Download[] = [
     id: 'hieudoanm',
     label: 'hieudoanm',
     url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/cli/hieudoanm',
-    emoji: '👨‍💻',
+    icon: PiCodeSimple,
     color: '#1f2937',
     description: 'CLI',
     downloads: [

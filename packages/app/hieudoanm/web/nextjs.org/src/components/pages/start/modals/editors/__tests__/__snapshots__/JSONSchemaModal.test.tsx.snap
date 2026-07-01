@@ -39,7 +39,7 @@ exports[`JSONSchemaModal should render with JSON input by default 1`] = `
               JSON
             </button>
             <button
-              class="border-b-2 px-2 py-1 text-xs transition-colors border-transparent text-base-content/40"
+              class="border-b-2 px-2 py-1 text-xs transition-colors text-base-content/40 border-transparent"
             >
               YAML
             </button>

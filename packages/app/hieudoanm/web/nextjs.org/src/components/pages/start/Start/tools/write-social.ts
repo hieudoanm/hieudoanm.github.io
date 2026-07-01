@@ -1,3 +1,4 @@
+import { PiPencilLine } from 'react-icons/pi';
 import { Tool } from '@hieudoanm.github.io/components/pages/start/cards/ToolCard';
 import { ModalId } from '../types';
 
@@ -6,35 +7,35 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     label: 'Caption',
     description: 'Write',
     tags: ['social-media', 'post', 'writing'],
-    emoji: '✍️',
+    icon: PiPencilLine,
     onClick: open('write-caption'),
   },
   {
     label: 'Headline',
     description: 'Write',
     tags: ['social-media', 'post', 'writing'],
-    emoji: '✍️',
+    icon: PiPencilLine,
     onClick: open('write-headline'),
   },
   {
     label: 'LinkedIn Post',
     description: 'Write',
     tags: ['social-media', 'writing'],
-    emoji: '✍️',
+    icon: PiPencilLine,
     onClick: open('write-linkedin-post'),
   },
   {
     label: 'Meta Description',
     description: 'Write',
     tags: ['social-media', 'post', 'writing'],
-    emoji: '✍️',
+    icon: PiPencilLine,
     onClick: open('write-meta-description'),
   },
   {
     label: 'TikTok Script',
     description: 'Write',
     tags: ['social-media', 'post', 'writing', 'social', 'short-video'],
-    emoji: '✍️',
+    icon: PiPencilLine,
     onClick: open('write-tiktok-script'),
   },
   {
@@ -50,7 +51,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'maker',
       'builder',
     ],
-    emoji: '✍️',
+    icon: PiPencilLine,
     onClick: open('write-twitter-generator'),
   },
 ];

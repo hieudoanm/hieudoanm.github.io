@@ -1,3 +1,4 @@
+import { PiDatabase, PiGithubLogo, PiGlobe, PiRobot } from 'react-icons/pi';
 import { ItemCardProps } from '@hieudoanm.github.io/components/pages/start/cards/ItemCard';
 
 export const code: ItemCardProps[] = [
@@ -5,28 +6,28 @@ export const code: ItemCardProps[] = [
     label: 'GitHub',
     href: 'https://github.com',
     description: 'Git',
-    emoji: '🐙',
+    icon: PiGithubLogo,
     //color: '#6e40c9',
   },
   {
     label: 'Renovate',
     href: 'https://developer.mend.io',
     description: 'Code',
-    emoji: '🤖',
+    icon: PiRobot,
     //color: '#9b59b6',
   },
   {
     label: 'Vercel',
     href: 'https://vercel.com',
     description: 'Deployment',
-    emoji: '🌐',
+    icon: PiGlobe,
     //color: '#000000',
   },
   {
     label: 'Supabase',
     href: 'https://supabase.com',
     description: 'Database',
-    emoji: '🗄️',
+    icon: PiDatabase,
     //color: '#3ECF8E',
   },
 ];

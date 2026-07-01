@@ -15,6 +15,7 @@ import {
   extensions,
   packages,
 } from '@hieudoanm.github.io/data/downloads';
+import { PiBookmarkSimple, PiPackage, PiWrench } from 'react-icons/pi';
 import {
   FC,
   memo,
@@ -26,6 +27,7 @@ import {
 
 import { match, matchTool, GRID } from '../constants';
 import { makeTools } from '../tools';
+import { getToolSectionDefs } from '../sections';
 import { SearchBar } from './SearchBar';
 import { Section } from './Section';
 
@@ -38,10 +40,16 @@ interface MainContentProps {
   toolSections: ReturnType<typeof makeTools>;
 }
 
-const TABS: { id: MainTab; label: string; emoji: string }[] = [
-  { id: 'bookmarks', label: 'Bookmarks', emoji: '🔖' },
-  { id: 'downloads', label: 'Downloads', emoji: '📦' },
-  { id: 'tools', label: 'Tools', emoji: '🔧' },
+import type { ComponentType } from 'react';
+
+const TABS: {
+  id: MainTab;
+  label: string;
+  icon: ComponentType<{ className?: string; size?: number }>;
+}[] = [
+  { id: 'bookmarks', label: 'Bookmarks', icon: PiBookmarkSimple },
+  { id: 'downloads', label: 'Downloads', icon: PiPackage },
+  { id: 'tools', label: 'Tools', icon: PiWrench },
 ];
 
 const bookmarkSections = [
@@ -75,200 +83,12 @@ export const MainContent: FC<MainContentProps> = memo(
     );
     const deferredQuery = useDeferredValue(query);
     const filtering = deferredQuery.trim().length > 0;
-    const {
-      ai,
-      clocks,
-      colors,
-      converter,
-      'data-csv': dataCsv,
-      'data-excel': dataExcel,
-      'data-json': dataJson,
-      'data-xml': dataXml,
-      developer,
-      editors,
-      education,
-      eyes,
-      financial,
-      'games-arcade': gamesArcade,
-      'games-casino': gamesCasino,
-      'games-chess': gamesChess,
-      'games-memory': gamesMemory,
-      'games-puzzle': gamesPuzzle,
-      'games-trivia': gamesTrivia,
-      'games-word': gamesWord,
-      'image-convert-gif': imageConvertGIF,
-      'image-convert-heic': imageConvertHEIC,
-      'image-convert-jpg': imageConvertJPG,
-      'image-convert-png': imageConvertPNG,
-      'image-convert-psd': imageConvertPSD,
-      'image-convert-svg': imageConvertSVG,
-      'image-convert-tiff': imageConvertTIFF,
-      'image-convert-webp': imageConvertWebP,
-      'image-create': imageCreate,
-      'image-edit': imageEdit,
-      'image-effect': imageEffect,
-      'image-scan': imageScan,
-      'pdf-convert': pdfConvert,
-      'pdf-create': pdfCreate,
-      'pdf-ebook': pdfEbook,
-      'pdf-edit': pdfEdit,
-      'pdf-extract': pdfExtract,
-      'pdf-misc': pdfMisc,
-      'text-convert': textConvert,
-      utilities,
-      'video-audio': videoAudio,
-      'video-convert-aac': videoConvertAAC,
-      'video-convert-avi': videoConvertAVI,
-      'video-convert-flv': videoConvertFLV,
-      'video-convert-gif': videoConvertGIF,
-      'video-convert-m4a': videoConvertM4A,
-      'video-convert-mkv': videoConvertMKV,
-      'video-convert-mov': videoConvertMOV,
-      'video-convert-mp4': videoConvertMP4,
-      'video-convert-ogg': videoConvertOGG,
-      'video-convert-webm': videoConvertWebM,
-      'video-convert-wmv': videoConvertWMV,
-      'video-download': videoDownload,
-      'video-edit': videoEdit,
-      visualization,
-      'write-article': writeArticle,
-      'write-business': writeBusiness,
-      'write-content': writeContent,
-      'write-edit': writeEdit,
-      'write-misc': writeMisc,
-      'write-real-estate': writeRealEstate,
-      'write-social': writeSocial,
-    } = toolSections;
-
     const toolSectionDefs = useMemo(
-      () => [
-        { label: 'AAC Convert', items: videoConvertAAC },
-        { label: 'AI', items: ai },
-        { label: 'AVI Convert', items: videoConvertAVI },
-        { label: 'Clocks', items: clocks },
-        { label: 'Colors', items: colors },
-        { label: 'Converter', items: converter },
-        { label: 'Data CSV', items: dataCsv },
-        { label: 'Data Excel', items: dataExcel },
-        { label: 'Data JSON', items: dataJson },
-        { label: 'Data XML', items: dataXml },
-        { label: 'Developer', items: developer },
-        { label: 'Editors', items: editors },
-        { label: 'Education', items: education },
-        { label: 'Eyes', items: eyes },
-        { label: 'Financial', items: financial },
-        { label: 'FLV Convert', items: videoConvertFLV },
-        { label: 'Games Arcade', items: gamesArcade },
-        { label: 'Games Casino', items: gamesCasino },
-        { label: 'Games Chess', items: gamesChess },
-        { label: 'Games Memory', items: gamesMemory },
-        { label: 'Games Puzzle', items: gamesPuzzle },
-        { label: 'Games Trivia', items: gamesTrivia },
-        { label: 'Games Word', items: gamesWord },
-        { label: 'GIF Convert', items: videoConvertGIF },
-        { label: 'HEIC Convert', items: imageConvertHEIC },
-        { label: 'Image Create', items: imageCreate },
-        { label: 'Image Edit', items: imageEdit },
-        { label: 'Image Effect', items: imageEffect },
-        { label: 'Image GIF Convert', items: imageConvertGIF },
-        { label: 'Image Scan', items: imageScan },
-        { label: 'JPG Convert', items: imageConvertJPG },
-        { label: 'M4A Convert', items: videoConvertM4A },
-        { label: 'MKV Convert', items: videoConvertMKV },
-        { label: 'MOV Convert', items: videoConvertMOV },
-        { label: 'MP4 Convert', items: videoConvertMP4 },
-        { label: 'OGG Convert', items: videoConvertOGG },
-        { label: 'PDF Convert', items: pdfConvert },
-        { label: 'PDF Create', items: pdfCreate },
-        { label: 'PDF Ebook', items: pdfEbook },
-        { label: 'PDF Edit', items: pdfEdit },
-        { label: 'PDF Extract', items: pdfExtract },
-        { label: 'PDF Misc', items: pdfMisc },
-        { label: 'PNG Convert', items: imageConvertPNG },
-        { label: 'PSD Convert', items: imageConvertPSD },
-        { label: 'SVG Convert', items: imageConvertSVG },
-        { label: 'Text Convert', items: textConvert },
-        { label: 'TIFF Convert', items: imageConvertTIFF },
-        { label: 'Utilities', items: utilities },
-        { label: 'Video Audio', items: videoAudio },
-        { label: 'Video Download', items: videoDownload },
-        { label: 'Video Edit', items: videoEdit },
-        { label: 'Visualization', items: visualization },
-        { label: 'WebM Convert', items: videoConvertWebM },
-        { label: 'WebP Convert', items: imageConvertWebP },
-        { label: 'WMV Convert', items: videoConvertWMV },
-        { label: 'Write Article', items: writeArticle },
-        { label: 'Write Business', items: writeBusiness },
-        { label: 'Write Content', items: writeContent },
-        { label: 'Write Edit', items: writeEdit },
-        { label: 'Write Misc', items: writeMisc },
-        { label: 'Write Real Estate', items: writeRealEstate },
-        { label: 'Write Social', items: writeSocial },
-      ],
-      [
-        ai,
-        clocks,
-        colors,
-        converter,
-        dataCsv,
-        dataExcel,
-        dataJson,
-        dataXml,
-        developer,
-        editors,
-        education,
-        eyes,
-        financial,
-        gamesArcade,
-        gamesCasino,
-        gamesChess,
-        gamesMemory,
-        gamesPuzzle,
-        gamesTrivia,
-        gamesWord,
-        imageConvertGIF,
-        imageConvertHEIC,
-        imageConvertJPG,
-        imageConvertPNG,
-        imageConvertPSD,
-        imageConvertSVG,
-        imageConvertTIFF,
-        imageConvertWebP,
-        imageCreate,
-        imageEdit,
-        imageEffect,
-        imageScan,
-        pdfConvert,
-        pdfCreate,
-        pdfEbook,
-        pdfEdit,
-        pdfExtract,
-        pdfMisc,
-        textConvert,
-        utilities,
-        videoAudio,
-        videoConvertAAC,
-        videoConvertAVI,
-        videoConvertFLV,
-        videoConvertGIF,
-        videoConvertM4A,
-        videoConvertMKV,
-        videoConvertMOV,
-        videoConvertMP4,
-        videoConvertOGG,
-        videoConvertWebM,
-        videoConvertWMV,
-        videoDownload,
-        videoEdit,
-        visualization,
-        writeArticle,
-        writeBusiness,
-        writeContent,
-        writeEdit,
-        writeMisc,
-        writeRealEstate,
-        writeSocial,
-      ]
+      () =>
+        getToolSectionDefs(toolSections).sort((a, b) =>
+          a.label.localeCompare(b.label)
+        ),
+      [toolSections]
     );
 
     const allToolsFlat = useMemo(
@@ -375,7 +195,7 @@ export const MainContent: FC<MainContentProps> = memo(
         </div>
         <div className="mb-8 w-full max-w-3xl">
           <div className="border-base-300 flex border-b">
-            {TABS.map(({ id, label, emoji }) => {
+            {TABS.map(({ id, label, icon: TabIcon }) => {
               const count =
                 id === 'bookmarks'
                   ? allBookmarksFlat.length
@@ -391,7 +211,7 @@ export const MainContent: FC<MainContentProps> = memo(
                       : 'text-base-content/40 hover:text-base-content/70'
                   }`}
                   onClick={() => setTab(id)}>
-                  <span>{emoji}</span>
+                  <TabIcon size={14} />
                   <span>{label}</span>
                   <span className="badge badge-xs">{count}</span>
                 </button>

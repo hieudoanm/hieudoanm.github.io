@@ -42,19 +42,19 @@ describe('CalendarGrid', () => {
 
   it('should call setChosenDate on day click', () => {
     render(<CalendarGrid {...defaultProps} />);
-    fireEvent.click(screen.getByText('8'));
+    fireEvent.click(screen.getByRole('button', { name: '8' }));
     expect(defaultProps.setChosenDate).toHaveBeenCalled();
   });
 
   it('should highlight today', () => {
     render(<CalendarGrid {...defaultProps} />);
-    const todayBtn = screen.getByText('8');
+    const todayBtn = screen.getByRole('button', { name: '8' });
     expect(todayBtn.className).toContain('text-base-content/60');
   });
 
   it('should dim days outside current month', () => {
     render(<CalendarGrid {...defaultProps} />);
-    const prevMonthBtn = screen.getByText('29');
+    const prevMonthBtn = screen.getByRole('button', { name: '29' });
     expect(prevMonthBtn.className).toContain('text-base-content/20');
   });
 
@@ -66,11 +66,12 @@ describe('CalendarGrid', () => {
       month: 7,
       year: 2026,
       frequency: 'annual' as const,
-      type: 'holiday',
+      type: 'holiday' as const,
       country: 'US',
     };
     render(<CalendarGrid {...defaultProps} events={[event]} />);
-    const eventDayBtn = screen.getByText('5');
-    expect(eventDayBtn.className).toContain('text-primary');
+    const eventDayBtn = screen.getByRole('button', { name: '5' });
+    const dot = eventDayBtn.querySelector('span:last-child');
+    expect(dot?.className).toContain('rounded-full');
   });
 });

@@ -1,3 +1,12 @@
+import {
+  PiClipboard,
+  PiDeviceMobile,
+  PiFileText,
+  PiGlobe,
+  PiGridFour,
+  PiMagnifyingGlass,
+  PiSidebar,
+} from 'react-icons/pi';
 import { Tool } from '@hieudoanm.github.io/components/pages/start/cards/ToolCard';
 import { ModalId } from '../types';
 
@@ -17,14 +26,14 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'maker',
       'builder',
     ],
-    emoji: '▌',
+    icon: PiSidebar,
     onClick: open('barcode'),
   },
   {
     label: 'Barcode Read',
     description: 'Barcode Scanner',
     tags: ['image', 'ocr', 'photo', 'code128', 'ean', 'upc'],
-    emoji: '📋',
+    icon: PiClipboard,
     onClick: open('barcode-read'),
   },
   {
@@ -43,21 +52,21 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'language',
       'i18n',
     ],
-    emoji: '🌐',
+    icon: PiGlobe,
     onClick: open('image-translate'),
   },
   {
     label: 'Invoice Parser',
     description: 'OCR',
     tags: ['image', 'scan', 'photo'],
-    emoji: '📄',
+    icon: PiFileText,
     onClick: open('invoice-parser'),
   },
   {
     label: 'OCR',
     description: 'Text Extraction',
     tags: ['image', 'scan', 'photo'],
-    emoji: '🔍',
+    icon: PiMagnifyingGlass,
     onClick: open('image-ocr'),
   },
   {
@@ -74,14 +83,14 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'maker',
       'builder',
     ],
-    emoji: '▦',
+    icon: PiGridFour,
     onClick: open('qr'),
   },
   {
     label: 'QR Read',
     description: 'QR Scanner',
     tags: ['image', 'ocr', 'photo', 'qrcode', 'barcode', 'code'],
-    emoji: '📱',
+    icon: PiDeviceMobile,
     onClick: open('qr-read'),
   },
 ];

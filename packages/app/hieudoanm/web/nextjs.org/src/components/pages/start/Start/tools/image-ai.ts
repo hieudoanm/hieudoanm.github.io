@@ -1,3 +1,13 @@
+import {
+  PiArrowsClockwise,
+  PiCrosshair,
+  PiDrop,
+  PiEye,
+  PiImage,
+  PiMagnifyingGlass,
+  PiPersonSimpleWalk,
+  PiSparkle,
+} from 'react-icons/pi';
 import { Tool } from '@hieudoanm.github.io/components/pages/start/cards/ToolCard';
 import { ModalId } from '../types';
 
@@ -22,7 +32,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'jpeg',
       'gif',
     ],
-    emoji: '✨',
+    icon: PiSparkle,
     onClick: open('ai-generate'),
   },
   {
@@ -38,7 +48,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'backdrop',
       'background-removal',
     ],
-    emoji: '🖼️',
+    icon: PiImage,
     onClick: open('ai-remove-bg'),
   },
   {
@@ -52,7 +62,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'clear',
       'removal',
     ],
-    emoji: '🎯',
+    icon: PiCrosshair,
     onClick: open('ai-remove-object'),
   },
   {
@@ -65,7 +75,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'erase',
       'clear',
     ],
-    emoji: '🚶',
+    icon: PiPersonSimpleWalk,
     onClick: open('ai-remove-person'),
   },
   {
@@ -81,7 +91,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'watermark-removal',
       'logo',
     ],
-    emoji: '💧',
+    icon: PiDrop,
     onClick: open('ai-remove-watermark'),
   },
   {
@@ -96,7 +106,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'fix',
       'old-photo',
     ],
-    emoji: '🔄',
+    icon: PiArrowsClockwise,
     onClick: open('ai-restore'),
   },
   {
@@ -109,7 +119,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'focus',
       'blurry',
     ],
-    emoji: '👁️',
+    icon: PiEye,
     onClick: open('ai-unblur'),
   },
   {
@@ -123,7 +133,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'hd',
       '4k',
     ],
-    emoji: '🔍',
+    icon: PiMagnifyingGlass,
     onClick: open('ai-upscale'),
   },
 ];

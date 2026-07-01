@@ -1,3 +1,10 @@
+import {
+  PiFileText,
+  PiMagnifyingGlass,
+  PiNotePencil,
+  PiPenNib,
+  PiPresentation,
+} from 'react-icons/pi';
 import { Tool } from '@hieudoanm.github.io/components/pages/start/cards/ToolCard';
 import { ModalId } from '../types';
 
@@ -6,28 +13,28 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     label: 'JSON Schema',
     description: 'Validator',
     tags: ['editor', 'edit', 'text', 'javascript-object-notation', 'data'],
-    emoji: '📄',
+    icon: PiFileText,
     onClick: open('json-schema'),
   },
   {
     label: 'Manifest',
     description: 'JSON Editor',
     tags: ['text', 'javascript-object-notation', 'data', 'modify', 'change'],
-    emoji: '📄',
+    icon: PiFileText,
     onClick: open('manifest'),
   },
   {
     label: 'Markdown',
     description: 'Markdown Editor',
     tags: ['text', 'md', 'readme', 'markup', 'modify', 'change'],
-    emoji: '📄',
+    icon: PiFileText,
     onClick: open('markdown'),
   },
   {
     label: 'Redact',
     description: 'PDF Redactor',
     tags: ['editor', 'edit', 'text', 'document', 'adobe', 'acrobat'],
-    emoji: '🖋️',
+    icon: PiPenNib,
     onClick: open('redact'),
   },
   {
@@ -43,14 +50,14 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'maker',
       'builder',
     ],
-    emoji: '🔍',
+    icon: PiMagnifyingGlass,
     onClick: open('regex'),
   },
   {
     label: 'Resume',
     description: 'Resume Builder',
     tags: ['editor', 'edit', 'text'],
-    emoji: '📄',
+    icon: PiFileText,
     onClick: open('resume'),
   },
   {
@@ -64,14 +71,14 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'powerpoint',
       'google-slides',
     ],
-    emoji: '📽️',
+    icon: PiPresentation,
     onClick: open('slides'),
   },
   {
     label: 'Word Counter',
     description: 'Data',
     tags: ['utility', 'tool', 'docx', 'doc', 'microsoft-word', 'tally'],
-    emoji: '📝',
+    icon: PiNotePencil,
     onClick: open('word-counter'),
   },
 ];

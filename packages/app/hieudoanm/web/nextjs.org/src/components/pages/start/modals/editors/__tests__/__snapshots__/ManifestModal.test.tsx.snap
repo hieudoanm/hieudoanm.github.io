@@ -36,7 +36,7 @@ exports[`ManifestModal should render PWA manifest by default 1`] = `
             📱 PWA
           </button>
           <button
-            class="border-b-2 px-3 py-1 text-xs uppercase transition-colors border-transparent text-base-content/40"
+            class="border-b-2 px-3 py-1 text-xs uppercase transition-colors text-base-content/40 border-transparent"
           >
             🧩 Extension
           </button>

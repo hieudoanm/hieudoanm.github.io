@@ -7,7 +7,9 @@ describe('ToolCard', () => {
       <ToolCard
         label="test"
         description="test description"
-        emoji="😀"
+        icon={({ className }) => (
+          <svg className={className} data-testid="mock-icon" />
+        )}
         onClick={jest.fn()}
       />
     );

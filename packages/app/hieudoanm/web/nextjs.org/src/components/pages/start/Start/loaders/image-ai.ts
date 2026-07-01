@@ -1,42 +1,42 @@
 import { ComponentType } from 'react';
 
 const loadAiGenerate = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/ai/AiGenerateModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/image-ai/AiGenerateModal').then(
     (m) => ({ default: m.AiGenerateModal })
   );
 
 const loadAiRemoveBg = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/ai/AiRemoveBgModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/image-ai/AiRemoveBgModal').then(
     (m) => ({ default: m.AiRemoveBgModal })
   );
 
 const loadAiRemoveObject = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/ai/AiRemoveObjectModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/image-ai/AiRemoveObjectModal').then(
     (m) => ({ default: m.AiRemoveObjectModal })
   );
 
 const loadAiRemovePerson = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/ai/AiRemovePersonModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/image-ai/AiRemovePersonModal').then(
     (m) => ({ default: m.AiRemovePersonModal })
   );
 
 const loadAiRemoveWatermark = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/ai/AiRemoveWatermarkModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/image-ai/AiRemoveWatermarkModal').then(
     (m) => ({ default: m.AiRemoveWatermarkModal })
   );
 
 const loadAiRestore = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/ai/AiRestoreModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/image-ai/AiRestoreModal').then(
     (m) => ({ default: m.AiRestoreModal })
   );
 
 const loadAiUnblur = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/ai/AiUnblurModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/image-ai/AiUnblurModal').then(
     (m) => ({ default: m.AiUnblurModal })
   );
 
 const loadAiUpscale = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/ai/AiUpscaleModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/image-ai/AiUpscaleModal').then(
     (m) => ({ default: m.AiUpscaleModal })
   );
 

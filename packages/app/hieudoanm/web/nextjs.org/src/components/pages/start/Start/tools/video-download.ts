@@ -1,3 +1,4 @@
+import { PiDownload } from 'react-icons/pi';
 import { Tool } from '@hieudoanm.github.io/components/pages/start/cards/ToolCard';
 import { ModalId } from '../types';
 
@@ -16,7 +17,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'clip',
       'footage',
     ],
-    emoji: '⬇️',
+    icon: PiDownload,
     onClick: open('video-download-facebook'),
   },
   {
@@ -33,7 +34,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'clip',
       'footage',
     ],
-    emoji: '⬇️',
+    icon: PiDownload,
     onClick: open('video-download-instagram'),
   },
   {
@@ -49,7 +50,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'clip',
       'footage',
     ],
-    emoji: '⬇️',
+    icon: PiDownload,
     onClick: open('video-download-tiktok'),
   },
   {
@@ -65,21 +66,21 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'clip',
       'footage',
     ],
-    emoji: '⬇️',
+    icon: PiDownload,
     onClick: open('video-download-twitter'),
   },
   {
     label: 'YouTube to Text',
     description: 'Video',
     tags: ['download', 'media', 'yt', 'mp4', 'movie', 'clip', 'footage'],
-    emoji: '⬇️',
+    icon: PiDownload,
     onClick: open('video-youtube-text'),
   },
   {
     label: 'YouTube Transcript',
     description: 'Video',
     tags: ['download', 'media', 'yt', 'mp4', 'movie', 'clip', 'footage'],
-    emoji: '⬇️',
+    icon: PiDownload,
     onClick: open('video-youtube-transcript'),
   },
 ];

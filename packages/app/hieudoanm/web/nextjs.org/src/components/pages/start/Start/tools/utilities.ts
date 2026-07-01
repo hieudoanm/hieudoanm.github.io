@@ -1,3 +1,15 @@
+import {
+  PiChartBar,
+  PiChatCircle,
+  PiClipboard,
+  PiFilmStrip,
+  PiLock,
+  PiMoon,
+  PiNotePencil,
+  PiNumberSquareOne,
+  PiPackage,
+  PiSmiley,
+} from 'react-icons/pi';
 import { Tool } from '@hieudoanm.github.io/components/pages/start/cards/ToolCard';
 import { ModalId } from '../types';
 
@@ -6,7 +18,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     label: 'Chat',
     description: 'AI Assistant',
     tags: ['utility', 'tool', 'productivity'],
-    emoji: '💬',
+    icon: PiChatCircle,
     onClick: open('chat'),
   },
   {
@@ -20,28 +32,28 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'paste',
       'clipboard-manager',
     ],
-    emoji: '📋',
+    icon: PiClipboard,
     onClick: open('clipboard'),
   },
   {
     label: 'Create ZIP',
     description: 'Data',
     tags: ['utility', 'tool'],
-    emoji: '🗜️',
+    icon: PiPackage,
     onClick: open('create-zip'),
   },
   {
     label: 'Emojis',
     description: 'Explorer',
     tags: ['utility', 'tool', 'productivity'],
-    emoji: '😀',
+    icon: PiSmiley,
     onClick: open('emojis'),
   },
   {
     label: 'Kaprekar',
     description: 'Routine',
     tags: ['utility', 'tool', 'productivity'],
-    emoji: '🔢',
+    icon: PiNumberSquareOne,
     onClick: open('kaprekar'),
   },
   {
@@ -55,7 +67,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'dummy-text',
       'filler',
     ],
-    emoji: '📝',
+    icon: PiNotePencil,
     onClick: open('lorem-ipsum'),
   },
   {
@@ -69,7 +81,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'stopwatch',
       'alarm',
     ],
-    emoji: '😴',
+    icon: PiMoon,
     onClick: open('no-sleep'),
   },
   {
@@ -85,14 +97,14 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'maker',
       'builder',
     ],
-    emoji: '🔐',
+    icon: PiLock,
     onClick: open('text-password'),
   },
   {
     label: 'Screen Recorder',
     description: 'Record & Download',
     tags: ['utility', 'tool', 'productivity'],
-    emoji: '🎥',
+    icon: PiFilmStrip,
     onClick: open('screen-recorder'),
   },
   {
@@ -107,7 +119,7 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'microsoft-word',
       'tally',
     ],
-    emoji: '📊',
+    icon: PiChartBar,
     onClick: open('text-word-count'),
   },
 ];

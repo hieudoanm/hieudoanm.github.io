@@ -116,8 +116,7 @@ exports[`T3Modal should render correctly 1`] = `
             class="flex items-center justify-between text-sm"
           >
             <div>
-              Current:
-               
+              Current: 
               <span
                 class="text-info font-normal"
               >

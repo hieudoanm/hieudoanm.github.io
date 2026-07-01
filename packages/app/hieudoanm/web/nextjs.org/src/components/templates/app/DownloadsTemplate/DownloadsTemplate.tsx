@@ -1,4 +1,11 @@
-import { FC, useState } from 'react';
+import type { ComponentType, FC } from 'react';
+import { useState } from 'react';
+import {
+  PiAppleLogo,
+  PiDesktopTower,
+  PiLinuxLogo,
+  PiWindowsLogo,
+} from 'react-icons/pi';
 
 type CopiedKey = string | null;
 
@@ -31,14 +38,14 @@ const DownloadButton: FC<{
 
 // ── PLATFORM CARD ──
 const PlatformCard: FC<{
-  emoji: string;
+  icon: ComponentType<{ className?: string; size?: number }>;
   name: string;
   description: string;
   badge?: string;
   badgeClass?: string;
   children: React.ReactNode;
 }> = ({
-  emoji,
+  icon: Icon,
   name,
   description,
   badge,
@@ -49,7 +56,7 @@ const PlatformCard: FC<{
     <div className="card-body p-7">
       <div className="mb-4 flex items-center gap-3">
         <div className="bg-primary/10 flex h-11 w-11 shrink-0 items-center justify-center rounded-lg text-xl">
-          {emoji}
+          <Icon className="text-xl" size={24} />
         </div>
         <div className="flex-1">
           <div className="flex items-center gap-2">
@@ -74,7 +81,7 @@ const CliCard: FC<{ cli: string }> = ({ cli }) => {
       <div className="card-body p-7">
         <div className="mb-4 flex items-center gap-3">
           <div className="bg-primary/10 flex h-11 w-11 shrink-0 items-center justify-center rounded-lg text-xl">
-            🖥️
+            <PiDesktopTower className="text-xl" size={24} />
           </div>
           <div className="flex-1">
             <div className="flex items-center gap-2">
@@ -142,7 +149,7 @@ export const DownloadsTemplate: FC<{
 
           {/* macOS */}
           <PlatformCard
-            emoji="🍎"
+            icon={PiAppleLogo}
             name="macOS"
             description="macOS 12 Monterey or later · Apple Silicon & Intel"
             badge="Recommended"
@@ -153,7 +160,7 @@ export const DownloadsTemplate: FC<{
 
           {/* Ubuntu */}
           <PlatformCard
-            emoji="🐧"
+            icon={PiLinuxLogo}
             name="Ubuntu / Linux"
             description="Ubuntu 20.04+ · Debian-based distros · x86_64"
             badge="AppImage · deb"
@@ -164,7 +171,7 @@ export const DownloadsTemplate: FC<{
 
           {/* Windows */}
           <PlatformCard
-            emoji="🪟"
+            icon={PiWindowsLogo}
             name="Windows"
             description="Windows 10 / 11 · x86_64"
             badge="exe · msi"

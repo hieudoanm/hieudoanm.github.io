@@ -1,10 +1,11 @@
 import { render } from '@testing-library/react';
 import { ItemCard } from '../ItemCard';
+import { PiStarFour } from 'react-icons/pi';
 
 describe('ItemCard', () => {
   it('should render as a bookmark link', () => {
     const { container } = render(
-      <ItemCard href="https://example.com" label="test" emoji="🔥" />
+      <ItemCard href="https://example.com" label="test" icon={PiStarFour} />
     );
     expect(container).toMatchSnapshot();
   });
@@ -15,7 +16,7 @@ describe('ItemCard', () => {
         label="test"
         href="/test"
         description="test description"
-        emoji="😀"
+        icon={PiStarFour}
         badge="AI"
       />
     );
@@ -28,7 +29,7 @@ describe('ItemCard', () => {
         label="test"
         href="/test"
         description="test description"
-        emoji="😀"
+        icon={PiStarFour}
         actions={[{ label: 'Custom action', url: 'https://example.com' }]}
       />
     );

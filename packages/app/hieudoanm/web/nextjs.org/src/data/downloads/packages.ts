@@ -1,3 +1,4 @@
+import { PiGlobe, PiHorse, PiUpload } from 'react-icons/pi';
 import { Download } from './types';
 
 export const packages: Download[] = [
@@ -5,7 +6,7 @@ export const packages: Download[] = [
     id: 'frontend-native',
     label: '@frontend/native',
     url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/modules/frontend/native',
-    emoji: '🌐',
+    icon: PiGlobe,
     color: '#3b82f6',
     description: 'Native',
     downloads: [
@@ -19,7 +20,7 @@ export const packages: Download[] = [
     id: 'frontend-react',
     label: '@frontend/react',
     url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/modules/frontend/react',
-    emoji: '🌐',
+    icon: PiGlobe,
     color: '#3b82f6',
     description: 'React',
     downloads: [
@@ -33,7 +34,7 @@ export const packages: Download[] = [
     id: 'frontend-solid',
     label: '@frontend/solid',
     url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/modules/frontend/solid',
-    emoji: '🌐',
+    icon: PiGlobe,
     color: '#3b82f6',
     description: 'Solid',
     downloads: [
@@ -47,7 +48,7 @@ export const packages: Download[] = [
     id: 'chess-ts',
     label: '@chess/ts',
     url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/modules/chess/ts',
-    emoji: '♞',
+    icon: PiHorse,
     color: '#1f2937',
     description: 'Chess',
     downloads: [
@@ -61,7 +62,7 @@ export const packages: Download[] = [
     id: 'simple-upload-react',
     label: 'SUS3 React',
     url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/modules/simple/upload/frontend/react',
-    emoji: '📤',
+    icon: PiUpload,
     color: '#3b82f6',
     description: '@simple-upload/react',
     downloads: [
@@ -75,7 +76,7 @@ export const packages: Download[] = [
     id: 'simple-upload-solid',
     label: 'SUS3 Solid',
     url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/modules/simple/upload/frontend/solid',
-    emoji: '📤',
+    icon: PiUpload,
     color: '#3b82f6',
     description: '@simple-upload/solid',
     downloads: [
@@ -89,7 +90,7 @@ export const packages: Download[] = [
     id: 'simple-upload-server',
     label: 'SUS3 Server',
     url: 'https://github.com/hieudoanm/hieudoanm/tree/master/packages/modules/simple/upload/server',
-    emoji: '📤',
+    icon: PiUpload,
     color: '#3b82f6',
     description: '@simple-upload/server',
     downloads: [

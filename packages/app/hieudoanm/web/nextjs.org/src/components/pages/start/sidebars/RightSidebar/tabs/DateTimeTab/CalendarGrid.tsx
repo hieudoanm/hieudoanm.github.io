@@ -94,18 +94,19 @@ export const CalendarGrid: FC<{
                       <button
                         onClick={() => setChosenDate(cellDate)}
                         className={[
-                          'h-6 w-6 rounded-full text-[11px] transition-colors',
+                          'flex h-6 w-6 flex-col items-center justify-center rounded-full text-[11px] transition-colors',
                           isChosen
                             ? 'bg-primary text-primary-content font-normal'
                             : isToday
-                              ? 'text-base-content/60 font-normal'
+                              ? 'bg-base-content/10 text-base-content/60 font-normal'
                               : currentMonth !== 'current'
                                 ? 'text-base-content/20'
-                                : hasEvents
-                                  ? 'text-primary hover:bg-base-300'
-                                  : 'hover:bg-base-300',
+                                : 'hover:bg-base-300',
                         ].join(' ')}>
-                        {date}
+                        <span>{date}</span>
+                        {hasEvents && (
+                          <span className="bg-base-content/30 h-0.5 w-0.5 rounded-full" />
+                        )}
                       </button>
                     </td>
                   );

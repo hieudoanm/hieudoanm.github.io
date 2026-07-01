@@ -1,10 +1,9 @@
 import { Tool } from '@hieudoanm.github.io/components/pages/start/cards/ToolCard';
 import { ModalId } from '../types';
 
-import { make as aiMake } from './ai';
+import { make as calculatorConvertMake } from './calculator-convert';
+import { make as calculatorFinanceMake } from './calculator-finance';
 import { make as clocksMake } from './clocks';
-import { make as colorsMake } from './colors';
-import { make as converterMake } from './converter';
 import { make as dataCsvMake } from './data-csv';
 import { make as dataExcelMake } from './data-excel';
 import { make as dataJsonMake } from './data-json';
@@ -12,8 +11,6 @@ import { make as dataXmlMake } from './data-xml';
 import { make as developerMake } from './developer';
 import { make as editorsMake } from './editors';
 import { make as educationMake } from './education';
-import { make as eyesMake } from './eyes';
-import { make as financialMake } from './financial';
 import { make as gamesArcadeMake } from './games-arcade';
 import { make as gamesCasinoMake } from './games-casino';
 import { make as gamesChessMake } from './games-chess';
@@ -21,6 +18,9 @@ import { make as gamesMemoryMake } from './games-memory';
 import { make as gamesPuzzleMake } from './games-puzzle';
 import { make as gamesTriviaMake } from './games-trivia';
 import { make as gamesWordMake } from './games-word';
+import { make as healthVisionMake } from './health-vision';
+import { make as imageAiMake } from './image-ai';
+import { make as imageColorMake } from './image-color';
 import { make as imageConvertGifMake } from './image-convert-gif';
 import { make as imageConvertHeicMake } from './image-convert-heic';
 import { make as imageConvertJpgMake } from './image-convert-jpg';
@@ -67,10 +67,9 @@ import { make as writeSocialMake } from './write-social';
 export const makeTools = (
   open: (id: ModalId) => () => void
 ): Record<string, Tool[]> => ({
-  ai: aiMake(open),
+  'calculator-convert': calculatorConvertMake(open),
+  'calculator-finance': calculatorFinanceMake(open),
   clocks: clocksMake(open),
-  colors: colorsMake(open),
-  converter: converterMake(open),
   'data-csv': dataCsvMake(open),
   'data-excel': dataExcelMake(open),
   'data-json': dataJsonMake(open),
@@ -78,8 +77,6 @@ export const makeTools = (
   developer: developerMake(open),
   editors: editorsMake(open),
   education: educationMake(open),
-  eyes: eyesMake(open),
-  financial: financialMake(open),
   'games-arcade': gamesArcadeMake(open),
   'games-casino': gamesCasinoMake(open),
   'games-chess': gamesChessMake(open),
@@ -87,6 +84,9 @@ export const makeTools = (
   'games-puzzle': gamesPuzzleMake(open),
   'games-trivia': gamesTriviaMake(open),
   'games-word': gamesWordMake(open),
+  'health-vision': healthVisionMake(open),
+  'image-ai': imageAiMake(open),
+  'image-color': imageColorMake(open),
   'image-convert-gif': imageConvertGifMake(open),
   'image-convert-heic': imageConvertHeicMake(open),
   'image-convert-jpg': imageConvertJpgMake(open),

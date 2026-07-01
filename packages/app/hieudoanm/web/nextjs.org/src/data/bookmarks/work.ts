@@ -1,3 +1,9 @@
+import {
+  PiBriefcase,
+  PiCodeSimple,
+  PiNewspaper,
+  PiPackage,
+} from 'react-icons/pi';
 import { ItemCardProps } from '@hieudoanm.github.io/components/pages/start/cards/ItemCard';
 
 export const work: ItemCardProps[] = [
@@ -5,28 +11,28 @@ export const work: ItemCardProps[] = [
     label: 'LinkedIn',
     href: 'https://linkedin.com',
     description: 'Social network',
-    emoji: '💼',
+    icon: PiBriefcase,
     //color: '#0077b5',
   },
   {
     label: 'Hacker News',
     href: 'https://news.ycombinator.com',
     description: 'News',
-    emoji: '📰',
+    icon: PiNewspaper,
     //color: '#ff6600',
   },
   {
     label: 'Indie Hackers',
     href: 'https://www.indiehackers.com',
     description: 'News',
-    emoji: '👨‍💻',
+    icon: PiCodeSimple,
     //color: '#ffa200',
   },
   {
     label: 'Product Hunt',
     href: 'https://www.producthunt.com',
     description: 'News',
-    emoji: '📦',
+    icon: PiPackage,
     //color: '#ffa200',
   },
 ];

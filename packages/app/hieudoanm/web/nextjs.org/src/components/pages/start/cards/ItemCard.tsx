@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import type { ComponentType, FC } from 'react';
 
 export interface Action {
   label: string;
@@ -8,7 +8,7 @@ export interface Action {
 export interface ItemCardProps {
   label: string;
   href: string;
-  emoji: string;
+  icon: ComponentType<{ className?: string; size?: number }>;
   description?: string;
   badge?: string;
   actions?: Action[];
@@ -17,7 +17,7 @@ export interface ItemCardProps {
 export const ItemCard: FC<ItemCardProps> = ({
   label,
   href,
-  emoji,
+  icon: Icon,
   description,
   badge,
   actions,
@@ -31,7 +31,7 @@ export const ItemCard: FC<ItemCardProps> = ({
       )}
       <div className="card-body flex-col items-center justify-center gap-2 p-4 text-center">
         <div className="bg-primary/20 border-primary/30 flex h-10 w-10 items-center justify-center rounded-full text-xl shadow-inner transition-transform duration-300 group-hover:scale-110">
-          <span>{emoji}</span>
+          <Icon className="text-xl" size={24} />
         </div>
         <div>
           <div className="truncate text-sm font-normal tracking-tight">

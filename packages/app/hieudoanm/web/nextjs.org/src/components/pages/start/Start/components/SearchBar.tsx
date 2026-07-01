@@ -1,4 +1,5 @@
 import { FC, memo, useCallback, useRef } from 'react';
+import { PiMagnifyingGlass } from 'react-icons/pi';
 
 export const SearchBar: FC<{ query: string; onChange: (v: string) => void }> =
   memo(({ query, onChange }) => {
@@ -34,7 +35,7 @@ export const SearchBar: FC<{ query: string; onChange: (v: string) => void }> =
           className="btn join-item btn-primary"
           onClick={googleSearch}
           aria-label="Search with Google">
-          🔍
+          <PiMagnifyingGlass size={16} />
         </button>
       </div>
     );

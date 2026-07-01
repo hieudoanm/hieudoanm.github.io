@@ -30,15 +30,15 @@ exports[`SplitBillModal should compute settlements 1`] = `
           </button>
         </div>
         <div
-          class="mb-4 flex w-full border-b border-base-300"
+          class="border-base-300 mb-4 flex w-full border-b"
         >
           <button
-            class="border-b-2 flex-1 px-3 py-2 text-sm transition-colors border-transparent text-base-content/40"
+            class="flex-1 border-b-2 px-3 py-2 text-sm transition-colors text-base-content/40 border-transparent"
           >
             Equal Split
           </button>
           <button
-            class="border-b-2 flex-1 px-3 py-2 text-sm transition-colors border-primary text-primary"
+            class="flex-1 border-b-2 px-3 py-2 text-sm transition-colors border-primary text-primary"
           >
             Who Owes Who
           </button>
@@ -388,15 +388,15 @@ exports[`SplitBillModal should render equal split tab 1`] = `
           </button>
         </div>
         <div
-          class="mb-4 flex w-full border-b border-base-300"
+          class="border-base-300 mb-4 flex w-full border-b"
         >
           <button
-            class="border-b-2 flex-1 px-3 py-2 text-sm transition-colors border-primary text-primary"
+            class="flex-1 border-b-2 px-3 py-2 text-sm transition-colors border-primary text-primary"
           >
             Equal Split
           </button>
           <button
-            class="border-b-2 flex-1 px-3 py-2 text-sm transition-colors border-transparent text-base-content/40"
+            class="flex-1 border-b-2 px-3 py-2 text-sm transition-colors text-base-content/40 border-transparent"
           >
             Who Owes Who
           </button>
@@ -685,15 +685,15 @@ exports[`SplitBillModal should switch to settle tab 1`] = `
           </button>
         </div>
         <div
-          class="mb-4 flex w-full border-b border-base-300"
+          class="border-base-300 mb-4 flex w-full border-b"
         >
           <button
-            class="border-b-2 flex-1 px-3 py-2 text-sm transition-colors border-transparent text-base-content/40"
+            class="flex-1 border-b-2 px-3 py-2 text-sm transition-colors text-base-content/40 border-transparent"
           >
             Equal Split
           </button>
           <button
-            class="border-b-2 flex-1 px-3 py-2 text-sm transition-colors border-primary text-primary"
+            class="flex-1 border-b-2 px-3 py-2 text-sm transition-colors border-primary text-primary"
           >
             Who Owes Who
           </button>

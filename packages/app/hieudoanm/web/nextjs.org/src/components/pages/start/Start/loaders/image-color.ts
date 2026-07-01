@@ -1,32 +1,32 @@
 import { ComponentType } from 'react';
 
 const loadAiColorize = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/colors/AiColorizeModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/image-color/AiColorizeModal').then(
     (m) => ({ default: m.AiColorizeModal })
   );
 
 const loadColors = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/colors/ColorsModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/image-color/ColorsModal').then(
     (m) => ({ default: m.ColorsModal })
   );
 
 const loadContrastChecker = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/colors/ContrastCheckerModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/image-color/ContrastCheckerModal').then(
     (m) => ({ default: m.ContrastCheckerModal })
   );
 
 const loadGradientGenerator = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/colors/GradientGeneratorModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/image-color/GradientGeneratorModal').then(
     (m) => ({ default: m.GradientGeneratorModal })
   );
 
 const loadImageColorize = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/colors/ImageColorizeModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/image-color/ImageColorizeModal').then(
     (m) => ({ default: m.ImageColorizeModal })
   );
 
 const loadImageDominantColor = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/colors/ImageDominantColorModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/image-color/ImageDominantColorModal').then(
     (m) => ({ default: m.ImageDominantColorModal })
   );
 

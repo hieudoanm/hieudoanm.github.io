@@ -1,17 +1,17 @@
 import { ComponentType } from 'react';
 
 const loadLogMARChart = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/eyes/LogMARChartModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/health-vision/LogMARChartModal').then(
     (m) => ({ default: m.LogMARChartModal })
   );
 
 const loadSnellenChart = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/eyes/SnellenChartModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/health-vision/SnellenChartModal').then(
     (m) => ({ default: m.SnellenChartModal })
   );
 
 const loadTumblingEChart = () =>
-  import('@hieudoanm.github.io/components/pages/start/modals/eyes/TumblingEChartModal').then(
+  import('@hieudoanm.github.io/components/pages/start/modals/health-vision/TumblingEChartModal').then(
     (m) => ({ default: m.TumblingEChartModal })
   );
 

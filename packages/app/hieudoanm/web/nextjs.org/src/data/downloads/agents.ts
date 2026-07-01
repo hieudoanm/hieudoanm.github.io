@@ -1,3 +1,10 @@
+import {
+  PiBrain,
+  PiLightning,
+  PiMoon,
+  PiPlanet,
+  PiStarFour,
+} from 'react-icons/pi';
 import { Download } from './types';
 
 export const agents: Download[] = [
@@ -5,7 +12,7 @@ export const agents: Download[] = [
     id: 'antigravity',
     label: 'AntiGravity',
     url: 'https://antigravity.google',
-    emoji: '🛰️',
+    icon: PiPlanet,
     color: '#4285f4',
     description: 'AI Code Editor',
     downloads: [
@@ -18,7 +25,7 @@ export const agents: Download[] = [
     label: 'Claude',
     url: 'https://claude.com/product/claude-code',
     description: 'Anthropic',
-    emoji: '✦',
+    icon: PiStarFour,
     color: '#d97757',
     downloads: [
       { label: 'Download CLI', url: 'https://claude.com/download' },
@@ -30,7 +37,7 @@ export const agents: Download[] = [
     label: 'Codex',
     url: 'https://openai.com/codex/',
     description: 'OpenAI',
-    emoji: '✦',
+    icon: PiStarFour,
     color: '#10a37f',
     downloads: [
       { label: 'Download App', url: 'https://developers.openai.com/codex/app' },
@@ -41,7 +48,7 @@ export const agents: Download[] = [
     id: 'cursor',
     label: 'Cursor',
     url: 'https://cursor.com',
-    emoji: '🧠',
+    icon: PiBrain,
     color: '#7c3aed',
     description: 'AI Code Editor',
     downloads: [
@@ -54,7 +61,7 @@ export const agents: Download[] = [
     label: 'Kimi Code',
     url: 'https://www.kimi.com/code',
     description: 'Moonshot AI',
-    emoji: '🌙',
+    icon: PiMoon,
     color: '#39d353',
     downloads: [
       { label: 'Download CLI', url: 'https://www.kimi.com/code' },
@@ -66,7 +73,7 @@ export const agents: Download[] = [
     label: 'OpenCode',
     url: 'https://opencode.ai/',
     description: 'Anomaly',
-    emoji: '✦',
+    icon: PiStarFour,
     color: '#615ced',
     downloads: [{ label: 'Download CLI', url: 'https://opencode.ai/' }],
   },
@@ -75,7 +82,7 @@ export const agents: Download[] = [
     label: 'Qwen Code',
     url: 'https://qwen.ai/qwencode',
     description: 'Alibaba Cloud',
-    emoji: '✦',
+    icon: PiStarFour,
     color: '#615ced',
     downloads: [
       { label: 'Download App', url: 'https://qwen.ai/download' },
@@ -86,7 +93,7 @@ export const agents: Download[] = [
     id: 'zed',
     label: 'Zed',
     url: 'https://zed.dev',
-    emoji: '⚡',
+    icon: PiLightning,
     color: '#7c3aed',
     description: 'Code Editor',
     downloads: [

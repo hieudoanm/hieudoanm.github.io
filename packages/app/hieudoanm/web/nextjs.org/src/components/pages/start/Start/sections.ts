@@ -1,10 +1,9 @@
 import { Tool } from '@hieudoanm.github.io/components/pages/start/cards/ToolCard';
 
 export const TOOL_SECTION_LABELS: Record<string, string> = {
-  ai: 'AI',
+  'calculator-convert': 'Calculator - Convert',
+  'calculator-finance': 'Calculator - Finance',
   clocks: 'Clocks',
-  colors: 'Colors',
-  converter: 'Converter',
   'data-csv': 'Data - CSV',
   'data-excel': 'Data - Excel',
   'data-json': 'Data - JSON',
@@ -12,8 +11,6 @@ export const TOOL_SECTION_LABELS: Record<string, string> = {
   developer: 'Developer',
   editors: 'Editors',
   education: 'Education',
-  eyes: 'Eyes',
-  financial: 'Financial',
   'games-arcade': 'Game - Arcade',
   'games-casino': 'Game - Casino',
   'games-chess': 'Game - Chess',
@@ -21,6 +18,9 @@ export const TOOL_SECTION_LABELS: Record<string, string> = {
   'games-puzzle': 'Game - Puzzle',
   'games-trivia': 'Game - Trivia',
   'games-word': 'Game - Word',
+  'health-vision': 'Health - Vision',
+  'image-ai': 'Image - AI',
+  'image-color': 'Image - Color',
   'image-convert-gif': 'Image - GIF Convert',
   'image-convert-heic': 'Image - HEIC Convert',
   'image-convert-jpg': 'Image - JPG Convert',

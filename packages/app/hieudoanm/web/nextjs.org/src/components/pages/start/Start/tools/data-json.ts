@@ -1,3 +1,4 @@
+import { PiArrowsClockwise } from 'react-icons/pi';
 import { Tool } from '@hieudoanm.github.io/components/pages/start/cards/ToolCard';
 import { ModalId } from '../types';
 
@@ -12,14 +13,14 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
       'comma-separated',
       'spreadsheet',
     ],
-    emoji: '🔄',
+    icon: PiArrowsClockwise,
     onClick: open('json-to-csv'),
   },
   {
     label: 'JSON to XML',
     description: 'Data',
     tags: ['converter', 'javascript-object-notation', 'markup'],
-    emoji: '🔄',
+    icon: PiArrowsClockwise,
     onClick: open('json-to-xml'),
   },
 ];
