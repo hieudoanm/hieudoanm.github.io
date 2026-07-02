@@ -12,6 +12,7 @@ describe('CodeEditor', () => {
         filename="test.ts"
         content=""
         wordWrap={false}
+        fontSize={13}
         onChange={() => {}}
         onSave={() => {}}
         onCursorChange={() => {}}
@@ -27,6 +28,7 @@ describe('CodeEditor', () => {
         filename="test.ts"
         content="const x = 1;"
         wordWrap={false}
+        fontSize={13}
         onChange={() => {}}
         onSave={() => {}}
         onCursorChange={() => {}}

@@ -50,6 +50,8 @@ export const useCodePage = () => {
   const [showDuplicatePrompt, setShowDuplicatePrompt] = useState(false);
   const [duplicateTarget, setDuplicateTarget] = useState<string | null>(null);
   const [showGoToLine, setShowGoToLine] = useState(false);
+  const [fontSize, setFontSize] = useState(13);
+  const [showShortcuts, setShowShortcuts] = useState(false);
   const [wordWrap, setWordWrap] = useState(false);
   const [showDirPrompt, setShowDirPrompt] = useState(false);
   const [globalSearching, setGlobalSearching] = useState(false);
@@ -320,6 +322,58 @@ export const useCodePage = () => {
     setWordWrap((prev) => !prev);
   }, []);
 
+  const saveFileAs = useCallback(async () => {
+    const active = tabs.find((t) => t.path === activePath);
+    if (!active) return;
+
+    const dialog = await tryCatch(
+      () => import('@tauri-apps/plugin-dialog'),
+      'load dialog plugin'
+    );
+    if (!dialog) return;
+    const { save } = dialog;
+
+    const filePath = (await tryCatch(
+      () =>
+        save({
+          defaultPath: active.path.split('/').pop(),
+        }) as Promise<string | null>,
+      'save file as dialog'
+    )) as string | null;
+    if (!filePath) return;
+
+    const fs = await tryCatch(
+      () => import('@tauri-apps/plugin-fs'),
+      'load fs plugin'
+    );
+    if (!fs) return;
+    const { writeTextFile } = fs;
+
+    const ok = await tryCatch.void(
+      () => writeTextFile(filePath, active.content),
+      'save file as'
+    );
+    if (!ok) return;
+
+    setTabs((prev) => [
+      ...prev,
+      { path: filePath, content: active.content, original: active.content },
+    ]);
+    setActivePath(filePath);
+  }, [tabs, activePath, tryCatch]);
+
+  const handleZoomIn = useCallback(() => {
+    setFontSize((prev) => Math.min(prev + 1, 40));
+  }, []);
+
+  const handleZoomOut = useCallback(() => {
+    setFontSize((prev) => Math.max(prev - 1, 8));
+  }, []);
+
+  const handleZoomReset = useCallback(() => {
+    setFontSize(13);
+  }, []);
+
   const registerTabAccess = useCallback((path: string) => {
     recentTabsRef.current = [
       path,
@@ -520,6 +574,36 @@ export const useCodePage = () => {
           return;
         }
 
+        if (e.key === '=' && !e.shiftKey && !e.altKey) {
+          e.preventDefault();
+          handleZoomIn();
+          return;
+        }
+
+        if (e.key === '-' && !e.shiftKey && !e.altKey) {
+          e.preventDefault();
+          handleZoomOut();
+          return;
+        }
+
+        if (e.key === '0' && !e.shiftKey && !e.altKey) {
+          e.preventDefault();
+          handleZoomReset();
+          return;
+        }
+
+        if (e.key === '/' && !e.shiftKey && !e.altKey) {
+          e.preventDefault();
+          setShowShortcuts((v) => !v);
+          return;
+        }
+
+        if (e.key === 's' && e.shiftKey && !e.altKey) {
+          e.preventDefault();
+          saveFileAs();
+          return;
+        }
+
         if (e.key === 'Tab' && e.ctrlKey && !e.metaKey && !e.altKey) {
           e.preventDefault();
           const recent = recentTabsRef.current;
@@ -710,6 +794,9 @@ export const useCodePage = () => {
     showDuplicatePrompt,
     duplicateTarget,
     showGoToLine,
+    fontSize,
+    showShortcuts,
+    setShowShortcuts,
     wordWrap,
     showDirPrompt,
     globalSearching,
@@ -727,6 +814,7 @@ export const useCodePage = () => {
     addFile,
     deleteFile,
     saveFile,
+    saveFileAs,
     handleChange,
     handleSidebarDragStart,
     setSidebarState,

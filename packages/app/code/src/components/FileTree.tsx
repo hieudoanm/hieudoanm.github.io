@@ -4,6 +4,7 @@ import {
   LuFilePlus,
   LuFolderOpen,
   LuFolderPlus,
+  LuRefreshCw,
   LuX,
 } from 'react-icons/lu';
 import type { FileNode } from '../utils/tree';
@@ -25,6 +26,7 @@ interface FileTreeProps {
     name: string,
     isDir: boolean
   ) => void;
+  onRefresh: () => void;
 }
 
 export const FileTree: FC<FileTreeProps> = ({
@@ -38,6 +40,7 @@ export const FileTree: FC<FileTreeProps> = ({
   onDeleteFile,
   onToggleDir,
   onContextMenu,
+  onRefresh,
 }) => {
   return (
     <div className="flex h-full w-full flex-col">
@@ -68,6 +71,14 @@ export const FileTree: FC<FileTreeProps> = ({
             title="Open File">
             <LuFile className="h-4 w-4" />
           </button>
+          {root && (
+            <button
+              onClick={onRefresh}
+              className="btn btn-ghost btn-xs"
+              title="Refresh">
+              <LuRefreshCw className="h-3.5 w-3.5" />
+            </button>
+          )}
           <button
             onClick={onCloseSidebar}
             className="btn btn-ghost btn-xs"

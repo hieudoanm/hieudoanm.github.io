@@ -32,6 +32,7 @@ describe('FileTree', () => {
     onDeleteFile: () => {},
     onToggleDir: () => {},
     onContextMenu: () => {},
+    onRefresh: () => {},
   };
 
   it('renders empty state when root is null', () => {

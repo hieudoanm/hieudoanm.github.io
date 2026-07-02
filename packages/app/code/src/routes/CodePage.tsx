@@ -1,4 +1,5 @@
 import { useCallback, useRef, type FC } from 'react';
+import { Breadcrumb } from '../components/Breadcrumb';
 import { CodeEditor, type CodeEditorHandle } from '../components/CodeEditor';
 import { ActivityBar } from '../components/ActivityBar';
 import { WelcomeScreen } from '../components/WelcomeScreen';
@@ -10,6 +11,7 @@ import { GlobalSearchPanel } from '../components/GlobalSearchPanel';
 import { GoToLinePrompt } from '../components/GoToLinePrompt';
 import { InputPrompt } from '../components/InputPrompt';
 import { QuickOpen } from '../components/QuickOpen';
+import { ShortcutsModal } from '../components/ShortcutsModal';
 import { StatusBar } from '../components/StatusBar';
 import { TabBar } from '../components/TabBar';
 import { useCodePage } from '../hooks/useCodePage';
@@ -17,6 +19,7 @@ import { useCodePage } from '../hooks/useCodePage';
 export const CodePage: FC = () => {
   const {
     root,
+    rootPath,
     activePath,
     sidebarState,
     sidebarWidth,
@@ -25,6 +28,9 @@ export const CodePage: FC = () => {
     showFilePrompt,
     theme,
     showQuickOpen,
+    fontSize,
+    showShortcuts,
+    setShowShortcuts,
     globalSearchQuery,
     globalSearchResults,
     contextMenu,
@@ -47,6 +53,7 @@ export const CodePage: FC = () => {
     addFile,
     deleteFile,
     saveFile,
+    saveFileAs,
     handleChange,
     handleSidebarDragStart,
     setSidebarState,
@@ -69,6 +76,7 @@ export const CodePage: FC = () => {
     startDuplicate,
     searchFiles,
     collectAllFiles,
+    refreshTree,
     setShowQuickOpen,
     setGlobalSearchQuery,
     setShowGoToLine,
@@ -137,6 +145,7 @@ export const CodePage: FC = () => {
                 onDeleteFile={(path) => setPendingDelete(path)}
                 onToggleDir={loadDirChildren}
                 onContextMenu={openContextMenu}
+                onRefresh={() => rootPath && refreshTree(rootPath)}
               />
             )}
             <div
@@ -155,19 +164,24 @@ export const CodePage: FC = () => {
             onClose={closeTab}
           />
           {activeTab ? (
-            <div className="flex flex-1 overflow-hidden">
-              <CodeEditor
-                ref={editorRef}
-                key={activeTab.path}
-                filename={activeTab.path}
-                content={activeTab.content}
-                wordWrap={wordWrap}
-                onChange={handleChange}
-                onSave={saveFile}
-                onCursorChange={(line, col) => setCursorPos({ line, col })}
-                onGoToLine={() => setShowGoToLine(true)}
-              />
-            </div>
+            <>
+              <Breadcrumb rootPath={rootPath} filePath={activeTab.path} />
+              <div className="flex flex-1 overflow-hidden">
+                <CodeEditor
+                  ref={editorRef}
+                  key={activeTab.path}
+                  filename={activeTab.path}
+                  content={activeTab.content}
+                  wordWrap={wordWrap}
+                  fontSize={fontSize}
+                  onChange={handleChange}
+                  onSave={saveFile}
+                  onSaveAs={saveFileAs}
+                  onCursorChange={(line, col) => setCursorPos({ line, col })}
+                  onGoToLine={() => setShowGoToLine(true)}
+                />
+              </div>
+            </>
           ) : (
             <WelcomeScreen
               onOpenFolder={openFolder}
@@ -282,6 +296,10 @@ export const CodePage: FC = () => {
         open={showGoToLine}
         onSubmit={handleGoToLineSubmit}
         onCancel={() => setShowGoToLine(false)}
+      />
+      <ShortcutsModal
+        open={showShortcuts}
+        onClose={() => setShowShortcuts(false)}
       />
     </div>
   );

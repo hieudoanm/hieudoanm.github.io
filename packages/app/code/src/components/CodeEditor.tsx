@@ -22,8 +22,10 @@ interface CodeEditorProps {
   filename: string;
   content: string;
   wordWrap: boolean;
+  fontSize: number;
   onChange: (content: string) => void;
   onSave: () => void;
+  onSaveAs?: () => void;
   onCursorChange: (line: number, col: number) => void;
   onGoToLine?: () => void;
 }
@@ -34,8 +36,10 @@ export const CodeEditor = forwardRef<CodeEditorHandle, CodeEditorProps>(
       filename,
       content,
       wordWrap,
+      fontSize,
       onChange,
       onSave,
+      onSaveAs,
       onCursorChange,
       onGoToLine,
     },
@@ -45,12 +49,14 @@ export const CodeEditor = forwardRef<CodeEditorHandle, CodeEditorProps>(
     const viewRef = useRef<EditorView | null>(null);
     const onChangeRef = useRef(onChange);
     const onSaveRef = useRef(onSave);
+    const onSaveAsRef = useRef(onSaveAs);
     const onCursorChangeRef = useRef(onCursorChange);
     const onGoToLineRef = useRef(onGoToLine);
 
     useEffect(() => {
       onChangeRef.current = onChange;
       onSaveRef.current = onSave;
+      onSaveAsRef.current = onSaveAs;
       onCursorChangeRef.current = onCursorChange;
       onGoToLineRef.current = onGoToLine;
     });
@@ -110,6 +116,13 @@ export const CodeEditor = forwardRef<CodeEditorHandle, CodeEditorProps>(
                 return true;
               },
             },
+            {
+              key: 'Mod-Shift-s',
+              run: () => {
+                onSaveAsRef.current?.();
+                return true;
+              },
+            },
           ]),
           EditorView.updateListener.of((update) => {
             if (update.docChanged) {
@@ -124,7 +137,7 @@ export const CodeEditor = forwardRef<CodeEditorHandle, CodeEditorProps>(
           EditorView.theme({
             '&': {
               fontFamily: 'var(--editor-font)',
-              fontSize: '13px',
+              fontSize: 'var(--editor-font-size, 13px)',
               height: '100%',
             },
             '.cm-scroller': { overflow: 'auto' },
@@ -156,6 +169,12 @@ export const CodeEditor = forwardRef<CodeEditorHandle, CodeEditorProps>(
       }
     }, [content]);
 
-    return <div ref={editorRef} className="h-full w-full" />;
+    return (
+      <div
+        ref={editorRef}
+        className="h-full w-full"
+        style={{ '--editor-font-size': `${fontSize}px` } as React.CSSProperties}
+      />
+    );
   }
 );
