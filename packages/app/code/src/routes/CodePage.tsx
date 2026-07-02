@@ -1,4 +1,4 @@
-import { useCallback, useRef, type FC } from 'react';
+import { useCallback, useRef, useState, type FC } from 'react';
 import { Breadcrumb } from '../components/Breadcrumb';
 import { CodeEditor, type CodeEditorHandle } from '../components/CodeEditor';
 import { ActivityBar } from '../components/ActivityBar';
@@ -92,6 +92,17 @@ export const CodePage: FC = () => {
   } = useCodePage();
 
   const editorRef = useRef<CodeEditorHandle>(null);
+  const [createInDir, setCreateInDir] = useState<string | null>(null);
+
+  const handleAddFileInDir = useCallback((dir: string) => {
+    setCreateInDir(dir);
+    setShowFilePrompt(true);
+  }, []);
+
+  const handleAddDirInDir = useCallback((dir: string) => {
+    setCreateInDir(dir);
+    setShowDirPrompt(true);
+  }, []);
 
   const handleGoToLineSubmit = useCallback(
     (line: number) => {
@@ -229,6 +240,8 @@ export const CodePage: FC = () => {
             closeContextMenu();
           }}
           onDuplicate={startDuplicate}
+          onAddFile={handleAddFileInDir}
+          onAddDir={handleAddDirInDir}
         />
       )}
 
@@ -252,20 +265,42 @@ export const CodePage: FC = () => {
         title="New file"
         placeholder="filename.txt"
         onSubmit={(name) => {
-          handleCreateFile(name);
+          if (createInDir && rootPath) {
+            const relDir = createInDir.startsWith(rootPath)
+              ? createInDir.slice(rootPath.length).replace(/^\//, '')
+              : '';
+            handleCreateFile(relDir ? `${relDir}/${name}` : name);
+          } else {
+            handleCreateFile(name);
+          }
+          setCreateInDir(null);
           setShowFilePrompt(false);
         }}
-        onCancel={() => setShowFilePrompt(false)}
+        onCancel={() => {
+          setCreateInDir(null);
+          setShowFilePrompt(false);
+        }}
       />
       <InputPrompt
         open={showDirPrompt}
         title="New folder"
         placeholder="folder-name"
         onSubmit={(name) => {
-          handleCreateDir(name);
+          if (createInDir && rootPath) {
+            const relDir = createInDir.startsWith(rootPath)
+              ? createInDir.slice(rootPath.length).replace(/^\//, '')
+              : '';
+            handleCreateDir(relDir ? `${relDir}/${name}` : name);
+          } else {
+            handleCreateDir(name);
+          }
+          setCreateInDir(null);
           setShowDirPrompt(false);
         }}
-        onCancel={() => setShowDirPrompt(false)}
+        onCancel={() => {
+          setCreateInDir(null);
+          setShowDirPrompt(false);
+        }}
       />
       <InputPrompt
         open={showRenamePrompt}

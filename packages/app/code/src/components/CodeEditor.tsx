@@ -11,9 +11,19 @@ import {
   lineNumbers,
   highlightActiveLine,
   highlightActiveLineGutter,
+  highlightTrailingWhitespace,
+  rectangularSelection,
+  highlightWhitespace,
 } from '@codemirror/view';
-import { EditorState } from '@codemirror/state';
-import { defaultKeymap, history, historyKeymap } from '@codemirror/commands';
+import { Compartment, EditorState } from '@codemirror/state';
+import {
+  defaultKeymap,
+  history,
+  historyKeymap,
+  copyLineUp,
+  copyLineDown,
+  deleteLine,
+} from '@codemirror/commands';
 import { oneDark } from '@codemirror/theme-one-dark';
 import {
   bracketMatching,
@@ -100,6 +110,8 @@ export const CodeEditor = forwardRef<CodeEditorHandle, CodeEditorProps>(
       containerRef.current = node;
 
       const lang = getLanguageExtension(filename);
+      const whitespaceCompartment = new Compartment();
+      let whitespaceActive = false;
 
       const state = EditorState.create({
         doc: content,
@@ -112,14 +124,20 @@ export const CodeEditor = forwardRef<CodeEditorHandle, CodeEditorProps>(
           highlightSelectionMatches(),
           highlightActiveLine(),
           highlightActiveLineGutter(),
+          highlightTrailingWhitespace(),
+          rectangularSelection(),
           foldGutter(),
           autoCloseTags,
+          whitespaceCompartment.of([]),
           wordWrap ? EditorView.lineWrapping : [],
           keymap.of([
             ...defaultKeymap,
             ...historyKeymap,
             ...foldKeymap,
             ...searchKeymap,
+            { key: 'Shift-Alt-ArrowUp', run: copyLineUp },
+            { key: 'Shift-Alt-ArrowDown', run: copyLineDown },
+            { key: 'Mod-Shift-k', run: deleteLine },
             {
               key: 'Mod-g',
               run: () => {
@@ -155,11 +173,18 @@ export const CodeEditor = forwardRef<CodeEditorHandle, CodeEditorProps>(
               const pos = main.head;
               const line = update.state.doc.lineAt(pos);
               onCursorChangeRef.current(line.number, pos - line.from + 1);
-              if (
-                sel.ranges.some(
-                  (r: { from: number; to: number }) => r.from !== r.to
-                )
-              ) {
+              const hasSelection = sel.ranges.some(
+                (r: { from: number; to: number }) => r.from !== r.to
+              );
+              if (hasSelection !== whitespaceActive) {
+                whitespaceActive = hasSelection;
+                update.view.dispatch({
+                  effects: whitespaceCompartment.reconfigure(
+                    hasSelection ? highlightWhitespace() : []
+                  ),
+                });
+              }
+              if (hasSelection) {
                 const count = update.state.sliceDoc(
                   main.from,
                   main.to - main.from

@@ -11,6 +11,8 @@ interface ContextMenuProps {
   onRename: (path: string) => void;
   onDelete: (path: string) => void;
   onDuplicate: (path: string) => void;
+  onAddFile: (path: string) => void;
+  onAddDir: (path: string) => void;
 }
 
 export const ContextMenu: FC<ContextMenuProps> = ({
@@ -24,6 +26,8 @@ export const ContextMenu: FC<ContextMenuProps> = ({
   onRename,
   onDelete,
   onDuplicate,
+  onAddFile,
+  onAddDir,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -51,7 +55,19 @@ export const ContextMenu: FC<ContextMenuProps> = ({
       : path
     : path;
 
-  const items: { label: string; action: () => void; disabled?: boolean }[] = [
+  const items: {
+    label: string;
+    action: () => void;
+    disabled?: boolean;
+    divider?: boolean;
+  }[] = [
+    ...(isDir
+      ? [
+          { label: 'New File', action: () => onAddFile(path) },
+          { label: 'New Folder', action: () => onAddDir(path) },
+          { label: '', action: () => {}, disabled: true, divider: true },
+        ]
+      : []),
     { label: 'Copy path', action: () => navigator.clipboard.writeText(path) },
     {
       label: 'Copy relative path',
@@ -67,21 +83,25 @@ export const ContextMenu: FC<ContextMenuProps> = ({
       ref={ref}
       className="bg-base-100 border-base-300 fixed z-50 min-w-40 rounded-md border py-1 shadow-xl"
       style={{ left: x, top: y }}>
-      {items.map((item) => (
-        <button
-          key={item.label}
-          onClick={() => {
-            if (!item.disabled) item.action();
-          }}
-          disabled={item.disabled}
-          className={`w-full px-3 py-1.5 text-left text-sm ${
-            item.disabled
-              ? 'text-base-content/30 cursor-not-allowed'
-              : 'hover:bg-base-300 cursor-pointer'
-          }`}>
-          {item.label}
-        </button>
-      ))}
+      {items.map((item, i) =>
+        item.divider ? (
+          <div key={i} className="border-base-300 my-1 border-t" />
+        ) : (
+          <button
+            key={item.label}
+            onClick={() => {
+              if (!item.disabled) item.action();
+            }}
+            disabled={item.disabled}
+            className={`w-full px-3 py-1.5 text-left text-sm ${
+              item.disabled
+                ? 'text-base-content/30 cursor-not-allowed'
+                : 'hover:bg-base-300 cursor-pointer'
+            }`}>
+            {item.label}
+          </button>
+        )
+      )}
     </div>
   );
 };
