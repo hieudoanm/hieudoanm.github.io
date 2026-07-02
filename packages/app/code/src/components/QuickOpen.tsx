@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { type FC, useCallback, useEffect, useRef, useState } from 'react';
 import { getFileIcon } from '../utils/editor-languages';
 
 interface QuickOpenProps {
@@ -8,12 +8,12 @@ interface QuickOpenProps {
   collectFiles: () => Promise<string[]>;
 }
 
-export const QuickOpen = ({
+export const QuickOpen: FC<QuickOpenProps> = ({
   open,
   onClose,
   onSelect,
   collectFiles,
-}: QuickOpenProps) => {
+}) => {
   const [query, setQuery] = useState('');
   const [files, setFiles] = useState<string[]>([]);
   const [filtered, setFiltered] = useState<string[]>([]);

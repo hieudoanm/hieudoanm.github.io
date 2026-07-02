@@ -1,5 +1,6 @@
 import { LuCircle, LuX } from 'react-icons/lu';
 import { getFileIcon } from '../utils/editor-languages';
+import { FC } from 'react';
 
 interface Tab {
   path: string;
@@ -13,12 +14,12 @@ interface TabBarProps {
   onClose: (path: string) => void;
 }
 
-export const TabBar = ({
+export const TabBar: FC<TabBarProps> = ({
   tabs,
   activePath,
   onSelect,
   onClose,
-}: TabBarProps) => {
+}) => {
   if (tabs.length === 0) return null;
 
   return (

@@ -1,3 +1,4 @@
+import { type FC } from 'react';
 import { LuTriangleAlert } from 'react-icons/lu';
 
 interface ConfirmModalProps {
@@ -10,7 +11,7 @@ interface ConfirmModalProps {
   onCancel: () => void;
 }
 
-export const ConfirmModal = ({
+export const ConfirmModal: FC<ConfirmModalProps> = ({
   open,
   title,
   message,
@@ -18,7 +19,7 @@ export const ConfirmModal = ({
   cancelLabel = 'Cancel',
   onConfirm,
   onCancel,
-}: ConfirmModalProps) => {
+}) => {
   if (!open) return null;
 
   return (

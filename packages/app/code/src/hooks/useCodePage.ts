@@ -6,7 +6,7 @@ import {
   removeFromTree,
   sortChildren,
 } from '../utils/tree';
-import { useErrorModal } from '../components/ErrorModal';
+import { useErrorModal } from './useErrorModal';
 import { createTryCatch } from '../utils/try-catch';
 
 export interface SearchResult {
@@ -23,22 +23,23 @@ export interface ContextMenuState {
   isDir: boolean;
 }
 
+type SidebarState = 'closed' | 'explorer' | 'search';
+
 const INITIAL_WIDTH: number = 320;
 
 export const useCodePage = () => {
   const [root, setRoot] = useState<FileNode | null>(null);
   const [tabs, setTabs] = useState<OpenTab[]>([]);
   const [activePath, setActivePath] = useState<string | null>(null);
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarState, setSidebarState] = useState<SidebarState>('explorer');
   const [sidebarWidth, setSidebarWidth] = useState(INITIAL_WIDTH);
   const [cursorPos, setCursorPos] = useState({ line: 1, col: 1 });
   const [rootPath, setRootPath] = useState<string | null>(null);
   const [pendingDelete, setPendingDelete] = useState<string | null>(null);
   const [showFilePrompt, setShowFilePrompt] = useState(false);
-  const [theme, setTheme] = useState<'dim' | 'light'>('dim');
+  const [theme, setTheme] = useState<'dim' | 'winter'>('dim');
   const [showQuickOpen, setShowQuickOpen] = useState(false);
   const [quickOpenQuery, setQuickOpenQuery] = useState('');
-  const [showGlobalSearch, setShowGlobalSearch] = useState(false);
   const [globalSearchQuery, setGlobalSearchQuery] = useState('');
   const [globalSearchResults, setGlobalSearchResults] = useState<
     SearchResult[]
@@ -309,7 +310,7 @@ export const useCodePage = () => {
 
   const toggleTheme = useCallback(() => {
     setTheme((prev) => {
-      const next = prev === 'dim' ? 'light' : 'dim';
+      const next = prev === 'dim' ? 'winter' : 'dim';
       document.documentElement.setAttribute('data-theme', next);
       return next;
     });
@@ -502,7 +503,7 @@ export const useCodePage = () => {
       if (e.metaKey || e.ctrlKey) {
         if (e.key === 'b' && !e.shiftKey && !e.altKey) {
           e.preventDefault();
-          setSidebarOpen((v) => !v);
+          setSidebarState((v) => (v !== 'closed' ? 'closed' : 'explorer'));
           return;
         }
 
@@ -515,7 +516,7 @@ export const useCodePage = () => {
 
         if (e.key === 'Shift' && e.shiftKey && e.key.toLowerCase() === 'f') {
           e.preventDefault();
-          setShowGlobalSearch((v) => !v);
+          setSidebarState((v) => (v !== 'search' ? 'search' : 'closed'));
           return;
         }
 
@@ -692,7 +693,7 @@ export const useCodePage = () => {
     root,
     tabs,
     activePath,
-    sidebarOpen,
+    sidebarState,
     sidebarWidth,
     cursorPos,
     rootPath,
@@ -701,7 +702,6 @@ export const useCodePage = () => {
     theme,
     showQuickOpen,
     quickOpenQuery,
-    showGlobalSearch,
     globalSearchQuery,
     globalSearchResults,
     contextMenu,
@@ -729,7 +729,7 @@ export const useCodePage = () => {
     saveFile,
     handleChange,
     handleSidebarDragStart,
-    setSidebarOpen,
+    setSidebarState,
     setPendingDelete,
     setShowFilePrompt,
     setActivePath,
@@ -752,7 +752,6 @@ export const useCodePage = () => {
     collectAllFiles,
     setShowQuickOpen,
     setQuickOpenQuery,
-    setShowGlobalSearch,
     setGlobalSearchQuery,
     setShowGoToLine,
     setShowDirPrompt,

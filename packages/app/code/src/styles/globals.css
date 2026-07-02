@@ -3,7 +3,7 @@
 @plugin 'daisyui' {
   themes:
     dim --default,
-    light;
+    winter;
 }
 
 :root {

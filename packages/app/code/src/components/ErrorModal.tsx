@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { type FC, useCallback, useState } from 'react';
 import { LuCircleX, LuClipboardCopy, LuCheck } from 'react-icons/lu';
 import type { ErrorInfo } from '../utils/try-catch';
 
@@ -7,7 +7,7 @@ interface ErrorModalProps {
   onClose: () => void;
 }
 
-export const ErrorModal = ({ error, onClose }: ErrorModalProps) => {
+export const ErrorModal: FC<ErrorModalProps> = ({ error, onClose }) => {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = useCallback(async () => {
@@ -57,13 +57,4 @@ export const ErrorModal = ({ error, onClose }: ErrorModalProps) => {
       </div>
     </div>
   );
-};
-
-export const useErrorModal = () => {
-  const [error, setError] = useState<ErrorInfo | null>(null);
-
-  const showError = (err: ErrorInfo) => setError(err);
-  const hideError = () => setError(null);
-
-  return { error, showError, hideError, ErrorModal };
 };

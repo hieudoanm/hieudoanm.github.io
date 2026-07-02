@@ -1,6 +1,7 @@
 import { useCallback, useRef, type FC } from 'react';
-import { LuFile, LuFolderOpen, LuSearch, LuPalette } from 'react-icons/lu';
 import { CodeEditor, type CodeEditorHandle } from '../components/CodeEditor';
+import { ActivityBar } from '../components/ActivityBar';
+import { WelcomeScreen } from '../components/WelcomeScreen';
 import { ConfirmModal } from '../components/ConfirmModal';
 import { ContextMenu } from '../components/ContextMenu';
 import { ErrorModal } from '../components/ErrorModal';
@@ -17,14 +18,13 @@ export const CodePage: FC = () => {
   const {
     root,
     activePath,
-    sidebarOpen,
+    sidebarState,
     sidebarWidth,
     cursorPos,
     pendingDelete,
     showFilePrompt,
     theme,
     showQuickOpen,
-    showGlobalSearch,
     globalSearchQuery,
     globalSearchResults,
     contextMenu,
@@ -49,7 +49,7 @@ export const CodePage: FC = () => {
     saveFile,
     handleChange,
     handleSidebarDragStart,
-    setSidebarOpen,
+    setSidebarState,
     setPendingDelete,
     setShowFilePrompt,
     setActivePath,
@@ -70,7 +70,6 @@ export const CodePage: FC = () => {
     searchFiles,
     collectAllFiles,
     setShowQuickOpen,
-    setShowGlobalSearch,
     setGlobalSearchQuery,
     setShowGoToLine,
     setShowDirPrompt,
@@ -91,38 +90,29 @@ export const CodePage: FC = () => {
     [handleGoToLine]
   );
 
+  const handleOpenExplorer = useCallback(() => {
+    setSidebarState((prev) => (prev !== 'explorer' ? 'explorer' : 'closed'));
+  }, []);
+
+  const handleOpenSearch = useCallback(() => {
+    setSidebarState((prev) => (prev !== 'search' ? 'search' : 'closed'));
+  }, []);
+
   return (
     <div className="bg-base-300 text-base-content flex h-screen flex-col">
       <div className="flex flex-1 overflow-hidden">
-        <div className="bg-base-200 border-base-100 flex w-12 flex-col items-center gap-2 border-r py-2">
-          <button
-            onClick={() => setSidebarOpen((v) => !v)}
-            className={`btn btn-ghost btn-square btn-sm ${sidebarOpen ? 'text-primary' : 'text-base-content/60'}`}
-            title={sidebarOpen ? 'Close Explorer' : 'Open Explorer'}>
-            <LuFolderOpen className="h-5 w-5" />
-          </button>
-          <button
-            onClick={() => {
-              setShowGlobalSearch(true);
-              setSidebarOpen(true);
-            }}
-            className={`btn btn-ghost btn-square btn-sm ${showGlobalSearch ? 'text-primary' : 'text-base-content/60'}`}
-            title="Search (Cmd+Shift+F)">
-            <LuSearch className="h-5 w-5" />
-          </button>
-          <button
-            onClick={toggleTheme}
-            className="btn btn-ghost btn-square btn-sm text-base-content/60"
-            title={`Switch to ${theme === 'dim' ? 'light' : 'dim'} theme`}>
-            <LuPalette className="h-5 w-5" />
-          </button>
-          <div className="flex-1" />
-        </div>
-        {sidebarOpen && (
+        <ActivityBar
+          sidebarState={sidebarState}
+          theme={theme}
+          onOpenExplorer={handleOpenExplorer}
+          onOpenSearch={handleOpenSearch}
+          onToggleTheme={toggleTheme}
+        />
+        {sidebarState !== 'closed' && (
           <aside
             className="border-base-200 bg-base-200 relative flex shrink-0 border-r"
             style={{ width: sidebarWidth }}>
-            {showGlobalSearch ? (
+            {sidebarState === 'search' ? (
               <GlobalSearchPanel
                 query={globalSearchQuery}
                 results={globalSearchResults}
@@ -131,9 +121,9 @@ export const CodePage: FC = () => {
                 onSearch={searchFiles}
                 onSelectFile={(path) => {
                   openFileFromTree(path);
-                  setShowGlobalSearch(false);
+                  setSidebarState('explorer');
                 }}
-                onClose={() => setShowGlobalSearch(false)}
+                onClose={() => setSidebarState('explorer')}
               />
             ) : (
               <FileTree
@@ -141,7 +131,7 @@ export const CodePage: FC = () => {
                 onOpenFile={openFileFromTree}
                 onOpenFolder={openFolder}
                 onOpenFileDialog={openFileDialog}
-                onCloseSidebar={() => setSidebarOpen(false)}
+                onCloseSidebar={() => setSidebarState('closed')}
                 onAddFile={addFile}
                 onAddDir={() => setShowDirPrompt(true)}
                 onDeleteFile={(path) => setPendingDelete(path)}
@@ -179,28 +169,10 @@ export const CodePage: FC = () => {
               />
             </div>
           ) : (
-            <div className="flex flex-1 items-center justify-center">
-              <div className="text-center">
-                <p className="mb-2 text-lg font-semibold">Code</p>
-                <p className="text-base-content/40 text-sm">
-                  Open a folder or file to start editing
-                </p>
-                <div className="mt-4 flex justify-center gap-2">
-                  <button
-                    onClick={openFolder}
-                    className="btn btn-primary flex items-center gap-1">
-                    <LuFolderOpen className="h-4 w-4" />
-                    Open Folder
-                  </button>
-                  <button
-                    onClick={openFileDialog}
-                    className="btn btn-outline btn-primary flex items-center gap-1">
-                    <LuFile className="h-4 w-4" />
-                    Open File
-                  </button>
-                </div>
-              </div>
-            </div>
+            <WelcomeScreen
+              onOpenFolder={openFolder}
+              onOpenFileDialog={openFileDialog}
+            />
           )}
           {activeTab && (
             <StatusBar
@@ -209,8 +181,12 @@ export const CodePage: FC = () => {
               col={cursorPos.col}
               dirty={dirty}
               wordWrap={wordWrap}
-              sidebarOpen={sidebarOpen}
-              onToggleSidebar={() => setSidebarOpen((v) => !v)}
+              sidebarOpen={sidebarState !== 'closed'}
+              onToggleSidebar={() =>
+                setSidebarState((prev) =>
+                  prev !== 'closed' ? 'closed' : 'explorer'
+                )
+              }
               onToggleWordWrap={toggleWordWrap}
             />
           )}

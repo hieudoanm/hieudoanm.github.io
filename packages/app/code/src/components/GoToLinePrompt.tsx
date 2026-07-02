@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { type FC, useCallback, useEffect, useRef, useState } from 'react';
 
 interface GoToLinePromptProps {
   open: boolean;
@@ -6,11 +6,11 @@ interface GoToLinePromptProps {
   onCancel: () => void;
 }
 
-export const GoToLinePrompt = ({
+export const GoToLinePrompt: FC<GoToLinePromptProps> = ({
   open,
   onSubmit,
   onCancel,
-}: GoToLinePromptProps) => {
+}) => {
   const [value, setValue] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
 

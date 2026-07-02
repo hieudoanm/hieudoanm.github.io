@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { type FC, useEffect, useRef } from 'react';
 
 interface ContextMenuProps {
   x: number;
@@ -12,7 +12,7 @@ interface ContextMenuProps {
   onDuplicate: (path: string) => void;
 }
 
-export const ContextMenu = ({
+export const ContextMenu: FC<ContextMenuProps> = ({
   x,
   y,
   path,
@@ -21,7 +21,7 @@ export const ContextMenu = ({
   onRename,
   onDelete,
   onDuplicate,
-}: ContextMenuProps) => {
+}) => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

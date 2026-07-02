@@ -1,4 +1,4 @@
-import { useCallback, useRef } from 'react';
+import { type FC, useCallback, useRef } from 'react';
 import { LuSearch, LuX } from 'react-icons/lu';
 import type { SearchResult } from '../hooks/useCodePage';
 import { getFileIcon } from '../utils/editor-languages';
@@ -13,7 +13,7 @@ interface GlobalSearchPanelProps {
   onClose: () => void;
 }
 
-export const GlobalSearchPanel = ({
+export const GlobalSearchPanel: FC<GlobalSearchPanelProps> = ({
   query,
   results,
   searching,
@@ -21,7 +21,7 @@ export const GlobalSearchPanel = ({
   onSearch,
   onSelectFile,
   onClose,
-}: GlobalSearchPanelProps) => {
+}) => {
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const handleChange = useCallback(

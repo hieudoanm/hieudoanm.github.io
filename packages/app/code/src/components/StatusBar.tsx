@@ -1,3 +1,4 @@
+import { type FC } from 'react';
 import { LuPanelLeftClose, LuPanelLeftOpen, LuWrapText } from 'react-icons/lu';
 import { getFileIcon } from '../utils/editor-languages';
 
@@ -12,7 +13,7 @@ interface StatusBarProps {
   onToggleWordWrap: () => void;
 }
 
-export const StatusBar = ({
+export const StatusBar: FC<StatusBarProps> = ({
   path,
   line,
   col,
@@ -21,7 +22,7 @@ export const StatusBar = ({
   sidebarOpen,
   onToggleSidebar,
   onToggleWordWrap,
-}: StatusBarProps) => {
+}) => {
   const name = path.split('/').pop() ?? path;
   const ext = name.includes('.')
     ? name.split('.').pop()?.toUpperCase()

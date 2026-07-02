@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { type FC, useCallback, useEffect, useState } from 'react';
 
 interface InputPromptProps {
   open: boolean;
@@ -10,7 +10,7 @@ interface InputPromptProps {
   onCancel: () => void;
 }
 
-export const InputPrompt = ({
+export const InputPrompt: FC<InputPromptProps> = ({
   open,
   title,
   placeholder,
@@ -18,7 +18,7 @@ export const InputPrompt = ({
   submitLabel,
   onSubmit,
   onCancel,
-}: InputPromptProps) => {
+}) => {
   const [value, setValue] = useState('');
 
   useEffect(() => {

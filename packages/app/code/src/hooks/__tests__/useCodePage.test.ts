@@ -23,7 +23,7 @@ jest.mock('@tauri-apps/plugin-dialog', () => ({
   open: (...args: unknown[]) => mockDialogOpen(...args),
 }));
 
-jest.mock('../../components/ErrorModal', () => ({
+jest.mock('../useErrorModal', () => ({
   useErrorModal: jest.fn(() => ({
     error: null,
     showError: mockShowError,
@@ -42,7 +42,7 @@ describe('useCodePage', () => {
     expect(result.current.root).toBeNull();
     expect(result.current.tabs).toEqual([]);
     expect(result.current.activePath).toBeNull();
-    expect(result.current.sidebarOpen).toBe(true);
+    expect(result.current.sidebarState).toBe('explorer');
     expect(result.current.showFilePrompt).toBe(false);
     expect(result.current.pendingDelete).toBeNull();
     expect(result.current.dirty).toBe(false);
@@ -115,11 +115,11 @@ describe('useCodePage', () => {
     expect(result.current.dirtyTabs[0].dirty).toBe(true);
   });
 
-  it('sets sidebar state via setSidebarOpen', () => {
+  it('sets sidebar state via setSidebarState', () => {
     const { result } = renderHook(() => useCodePage());
 
-    act(() => result.current.setSidebarOpen(false));
-    expect(result.current.sidebarOpen).toBe(false);
+    act(() => result.current.setSidebarState('closed'));
+    expect(result.current.sidebarState).toBe('closed');
   });
 
   it('sets cursor position via setCursorPos', () => {
@@ -382,12 +382,12 @@ describe('useCodePage', () => {
   });
 
   describe('new features', () => {
-    it('toggleTheme toggles between dim and light', () => {
+    it('toggleTheme toggles between dim and winter', () => {
       const { result } = renderHook(() => useCodePage());
       expect(result.current.theme).toBe('dim');
 
       act(() => result.current.toggleTheme());
-      expect(result.current.theme).toBe('light');
+      expect(result.current.theme).toBe('winter');
 
       act(() => result.current.toggleTheme());
       expect(result.current.theme).toBe('dim');
@@ -397,7 +397,9 @@ describe('useCodePage', () => {
       const { result } = renderHook(() => useCodePage());
 
       act(() => result.current.toggleTheme());
-      expect(document.documentElement.getAttribute('data-theme')).toBe('light');
+      expect(document.documentElement.getAttribute('data-theme')).toBe(
+        'winter'
+      );
 
       act(() => result.current.toggleTheme());
       expect(document.documentElement.getAttribute('data-theme')).toBe('dim');
