@@ -44,10 +44,13 @@ jobs:
         run: pnpm run build --filter=@hieudoanm.github.io/code
       - name: Test
         run: pnpm run test --filter=@hieudoanm.github.io/code || echo 'No tests configured'
+      - name: Set Date
+        id: date
+        run: echo "value=$(date +'%Y_%m_%d')" >> "$GITHUB_OUTPUT"
       - name: Upload Build Output
         uses: actions/upload-artifact@v4
         with:
-          name: code-out
+          name: code-out-${{ steps.date.outputs.value }}
           path: packages/app/code/out/
 
   desktop:
@@ -83,10 +86,13 @@ jobs:
       - name: Build Tauri Desktop
         working-directory: packages/app/code
         run: pnpm exec tauri build --ci --config '{"build":{"beforeBuildCommand":""}}'
+      - name: Set Date
+        id: date
+        run: echo "value=$(date +'%Y_%m_%d')" >> "$GITHUB_OUTPUT"
       - name: Upload Desktop Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: code_desktop_${{ matrix.os }}
+          name: code_desktop_${{ matrix.os }}-${{ steps.date.outputs.value }}
           path: packages/app/code/src-tauri/target/release/bundle/
 
   android:
@@ -134,10 +140,13 @@ jobs:
       - name: Build Android APK
         working-directory: packages/app/code
         run: pnpm exec tauri android build --ci
+      - name: Set Date
+        id: date
+        run: echo "value=$(date +'%Y_%m_%d')" >> "$GITHUB_OUTPUT"
       - name: Upload Android Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: code_android
+          name: code_android-${{ steps.date.outputs.value }}
           path: packages/app/code/src-tauri/gen/android/app/build/outputs/
 
   publish:
