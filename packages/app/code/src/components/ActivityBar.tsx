@@ -3,7 +3,6 @@ import {
   LuFolderOpen,
   LuSearch,
   LuPalette,
-  LuTerminal,
   LuFolderClosed,
 } from 'react-icons/lu';
 
@@ -11,21 +10,17 @@ type SidebarState = 'closed' | 'explorer' | 'search';
 
 interface ActivityBarProps {
   sidebarState: SidebarState;
-  showTerminal: boolean;
   theme: 'dim' | 'winter';
   onOpenExplorer: () => void;
   onOpenSearch: () => void;
-  onOpenTerminal: () => void;
   onToggleTheme: () => void;
 }
 
 export const ActivityBar: FC<ActivityBarProps> = ({
   sidebarState,
-  showTerminal,
   theme,
   onOpenExplorer,
   onOpenSearch,
-  onOpenTerminal,
   onToggleTheme,
 }) => (
   <div className="bg-base-200 border-base-100 flex w-12 flex-col items-center gap-2 border-r py-2">
@@ -44,12 +39,6 @@ export const ActivityBar: FC<ActivityBarProps> = ({
       className={`btn btn-ghost btn-square btn-sm ${sidebarState === 'search' ? 'text-primary' : 'text-base-content/60'}`}
       title="Search (Cmd+Shift+F)">
       <LuSearch className="h-5 w-5" />
-    </button>
-    <button
-      onClick={onOpenTerminal}
-      className={`btn btn-ghost btn-square btn-sm ${showTerminal ? 'text-primary' : 'text-base-content/60'}`}
-      title={showTerminal ? 'Close Terminal' : 'Open Terminal (Ctrl+`)'}>
-      <LuTerminal className="h-5 w-5" />
     </button>
     <button
       onClick={onToggleTheme}

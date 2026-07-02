@@ -32,9 +32,7 @@ export const useCodePage = () => {
   const [tabs, setTabs] = useState<OpenTab[]>([]);
   const [activePath, setActivePath] = useState<string | null>(null);
   const [sidebarState, setSidebarState] = useState<SidebarState>('explorer');
-  const [showTerminal, setShowTerminal] = useState(false);
   const [leftSidebarWidth, setLeftSidebarWidth] = useState(INITIAL_WIDTH);
-  const [rightSidebarWidth, setRightSidebarWidth] = useState(INITIAL_WIDTH);
   const [cursorPos, setCursorPos] = useState({ line: 1, col: 1 });
   const [rootPath, setRootPath] = useState<string | null>(null);
   const [pendingDelete, setPendingDelete] = useState<string | null>(null);
@@ -62,7 +60,6 @@ export const useCodePage = () => {
   const { error, showError, hideError } = useErrorModal();
   const tryCatch = createTryCatch(showError);
   const leftSidebarWidthRef = useRef(INITIAL_WIDTH);
-  const rightSidebarWidthRef = useRef(INITIAL_WIDTH);
   const recentTabsRef = useRef<string[]>([]);
   const autosaveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const closeTabRef = useRef<(path: string) => void>(
@@ -81,9 +78,6 @@ export const useCodePage = () => {
   useEffect(() => {
     leftSidebarWidthRef.current = leftSidebarWidth;
   }, [leftSidebarWidth]);
-  useEffect(() => {
-    rightSidebarWidthRef.current = rightSidebarWidth;
-  }, [rightSidebarWidth]);
 
   const getActiveContent = useCallback(() => {
     return tabs.find((t) => t.path === activePath);
@@ -366,10 +360,6 @@ export const useCodePage = () => {
     setAutoSave((prev) => !prev);
   }, []);
 
-  const toggleTerminal = useCallback(() => {
-    setShowTerminal((prev) => !prev);
-  }, []);
-
   const saveFileAs = useCallback(async () => {
     const active = tabs.find((t) => t.path === activePath);
     if (!active) return;
@@ -622,12 +612,6 @@ export const useCodePage = () => {
           return;
         }
 
-        if (e.key === '`' && !e.shiftKey && !e.altKey) {
-          e.preventDefault();
-          setShowTerminal((v) => !v);
-          return;
-        }
-
         if (e.key === '=' && !e.shiftKey && !e.altKey) {
           e.preventDefault();
           handleZoomIn();
@@ -698,28 +682,6 @@ export const useCodePage = () => {
         Math.min(600, startWidth + e.clientX - startX)
       );
       setLeftSidebarWidth(newWidth);
-    };
-
-    const onMouseUp = () => {
-      document.removeEventListener('mousemove', onMouseMove);
-      document.removeEventListener('mouseup', onMouseUp);
-    };
-
-    document.addEventListener('mousemove', onMouseMove);
-    document.addEventListener('mouseup', onMouseUp);
-  }, []);
-
-  const handleRightSidebarDragStart = useCallback((e: React.MouseEvent) => {
-    e.preventDefault();
-    const startX = e.clientX;
-    const startWidth = rightSidebarWidthRef.current;
-
-    const onMouseMove = (e: MouseEvent) => {
-      const newWidth = Math.max(
-        160,
-        Math.min(600, startWidth + startX - e.clientX)
-      );
-      setRightSidebarWidth(newWidth);
     };
 
     const onMouseUp = () => {
@@ -865,10 +827,7 @@ export const useCodePage = () => {
     tabs,
     activePath,
     sidebarState,
-    showTerminal,
-    toggleTerminal,
     leftSidebarWidth,
-    rightSidebarWidth,
     cursorPos,
     selectionCount,
     setSelectionCount,
@@ -913,7 +872,6 @@ export const useCodePage = () => {
     saveFileAs,
     handleChange,
     handleSidebarDragStart,
-    handleRightSidebarDragStart,
     setSidebarState,
     setPendingDelete,
     setShowFilePrompt,

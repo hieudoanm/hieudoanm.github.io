@@ -14,8 +14,6 @@ import { QuickOpen } from '../components/QuickOpen';
 import { ShortcutsModal } from '../components/ShortcutsModal';
 import { StatusBar } from '../components/StatusBar';
 import { TabBar } from '../components/TabBar';
-import { TerminalPanel } from '../components/TerminalPanel';
-import { LuTerminal } from 'react-icons/lu';
 import { useCodePage } from '../hooks/useCodePage';
 
 export const CodePage: FC = () => {
@@ -25,7 +23,6 @@ export const CodePage: FC = () => {
     activePath,
     sidebarState,
     leftSidebarWidth,
-    rightSidebarWidth,
     cursorPos,
     selectionCount,
     setSelectionCount,
@@ -66,7 +63,6 @@ export const CodePage: FC = () => {
     saveFileAs,
     handleChange,
     handleSidebarDragStart,
-    handleRightSidebarDragStart,
     setSidebarState,
     setPendingDelete,
     setShowFilePrompt,
@@ -97,8 +93,6 @@ export const CodePage: FC = () => {
     setShowRenamePrompt,
     setDuplicateTarget,
     setShowDuplicatePrompt,
-    showTerminal,
-    toggleTerminal,
   } = useCodePage();
 
   const editorRef = useRef<CodeEditorHandle>(null);
@@ -135,11 +129,9 @@ export const CodePage: FC = () => {
       <div className="flex flex-1 overflow-hidden">
         <ActivityBar
           sidebarState={sidebarState}
-          showTerminal={showTerminal}
           theme={theme}
           onOpenExplorer={handleOpenExplorer}
           onOpenSearch={handleOpenSearch}
-          onOpenTerminal={toggleTerminal}
           onToggleTheme={toggleTheme}
         />
         {sidebarState !== 'closed' && (
@@ -237,29 +229,6 @@ export const CodePage: FC = () => {
             />
           )}
         </main>
-        {showTerminal && (
-          <aside
-            className="bg-base-200 border-base-300 relative flex shrink-0 border-r border-l"
-            style={{ width: rightSidebarWidth }}>
-            <TerminalPanel
-              onClose={toggleTerminal}
-              cwd={rootPath ?? undefined}
-            />
-            <div
-              className="bg-base-200 hover:bg-primary absolute top-0 left-0 z-10 -ml-1.5 h-full w-1 cursor-col-resize"
-              onMouseDown={handleRightSidebarDragStart}
-            />
-          </aside>
-        )}
-        <div className="bg-base-200 border-base-100 flex w-12 flex-col items-center gap-2 border-l py-2">
-          <button
-            onClick={toggleTerminal}
-            className={`btn btn-ghost btn-square btn-sm ${showTerminal ? 'text-primary' : 'text-base-content/60'}`}
-            title={showTerminal ? 'Close Terminal' : 'Open Terminal (Ctrl+`)'}>
-            <LuTerminal className="h-5 w-5" />
-          </button>
-          <div className="flex-1" />
-        </div>
       </div>
 
       {contextMenu && (
