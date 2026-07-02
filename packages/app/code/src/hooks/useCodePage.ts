@@ -55,6 +55,7 @@ export const useCodePage = () => {
   const [wordWrap, setWordWrap] = useState(false);
   const [showDirPrompt, setShowDirPrompt] = useState(false);
   const [globalSearching, setGlobalSearching] = useState(false);
+  const [selectionCount, setSelectionCount] = useState(0);
   const { error, showError, hideError } = useErrorModal();
   const tryCatch = createTryCatch(showError);
   const sidebarWidthRef = useRef(INITIAL_WIDTH);
@@ -805,6 +806,8 @@ export const useCodePage = () => {
     sidebarState,
     sidebarWidth,
     cursorPos,
+    selectionCount,
+    setSelectionCount,
     rootPath,
     pendingDelete,
     showFilePrompt,

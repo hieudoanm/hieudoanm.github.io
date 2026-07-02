@@ -11,6 +11,7 @@ describe('StatusBar', () => {
     path: '/project/src/index.ts',
     line: 10,
     col: 5,
+    selectionCount: 0,
     dirty: false,
     wordWrap: false,
     sidebarOpen: true,
@@ -37,6 +38,16 @@ describe('StatusBar', () => {
     const { container } = render(<StatusBar {...defaultProps} dirty={false} />);
     const dirtyDots = container.querySelectorAll('.text-primary');
     expect(dirtyDots.length).toBe(0);
+  });
+
+  it('shows selection count when text is selected', () => {
+    render(<StatusBar {...defaultProps} selectionCount={42} />);
+    expect(screen.getByText('(42 sel)')).toBeInTheDocument();
+  });
+
+  it('hides selection count when nothing is selected', () => {
+    render(<StatusBar {...defaultProps} selectionCount={0} />);
+    expect(screen.queryByText(/sel/)).not.toBeInTheDocument();
   });
 
   it('renders sidebar close icon when sidebar is open', () => {

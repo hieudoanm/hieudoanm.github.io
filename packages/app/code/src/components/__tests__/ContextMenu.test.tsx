@@ -2,6 +2,10 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { ContextMenu } from '../ContextMenu';
 
+Object.assign(navigator, {
+  clipboard: { writeText: jest.fn() },
+});
+
 describe('ContextMenu', () => {
   let defaultProps: ReturnType<typeof makeProps>;
 
@@ -12,6 +16,7 @@ describe('ContextMenu', () => {
       path: '/project/file.ts',
       name: 'file.ts',
       isDir: false,
+      rootPath: '/project',
       onClose: jest.fn(),
       onRename: jest.fn(),
       onDelete: jest.fn(),
@@ -26,9 +31,41 @@ describe('ContextMenu', () => {
 
   it('renders all actions', () => {
     render(<ContextMenu {...defaultProps} />);
+    expect(screen.getByText('Copy path')).toBeInTheDocument();
+    expect(screen.getByText('Copy relative path')).toBeInTheDocument();
     expect(screen.getByText('Rename')).toBeInTheDocument();
     expect(screen.getByText('Duplicate')).toBeInTheDocument();
     expect(screen.getByText('Delete')).toBeInTheDocument();
+  });
+
+  it('copies full path to clipboard', async () => {
+    const writeText = jest.fn();
+    Object.assign(navigator, {
+      clipboard: { writeText },
+    });
+    render(<ContextMenu {...defaultProps} />);
+    await userEvent.click(screen.getByText('Copy path'));
+    expect(writeText).toHaveBeenCalledWith('/project/file.ts');
+  });
+
+  it('copies relative path to clipboard', async () => {
+    const writeText = jest.fn();
+    Object.assign(navigator, {
+      clipboard: { writeText },
+    });
+    render(<ContextMenu {...defaultProps} />);
+    await userEvent.click(screen.getByText('Copy relative path'));
+    expect(writeText).toHaveBeenCalledWith('file.ts');
+  });
+
+  it('copies full path when no rootPath', async () => {
+    const writeText = jest.fn();
+    Object.assign(navigator, {
+      clipboard: { writeText },
+    });
+    render(<ContextMenu {...defaultProps} rootPath={null} />);
+    await userEvent.click(screen.getByText('Copy relative path'));
+    expect(writeText).toHaveBeenCalledWith('/project/file.ts');
   });
 
   it('calls onRename when Rename is clicked', async () => {

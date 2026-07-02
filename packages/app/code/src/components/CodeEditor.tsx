@@ -5,13 +5,25 @@ import {
   useImperativeHandle,
   useRef,
 } from 'react';
-import { EditorView, keymap, lineNumbers } from '@codemirror/view';
+import {
+  EditorView,
+  keymap,
+  lineNumbers,
+  highlightActiveLine,
+  highlightActiveLineGutter,
+} from '@codemirror/view';
 import { EditorState } from '@codemirror/state';
 import { defaultKeymap, history, historyKeymap } from '@codemirror/commands';
 import { oneDark } from '@codemirror/theme-one-dark';
-import { bracketMatching, indentOnInput } from '@codemirror/language';
+import {
+  bracketMatching,
+  indentOnInput,
+  foldGutter,
+  foldKeymap,
+} from '@codemirror/language';
 import { closeBrackets } from '@codemirror/autocomplete';
 import { searchKeymap, highlightSelectionMatches } from '@codemirror/search';
+import { autoCloseTags } from '@codemirror/lang-html';
 import { getLanguageExtension } from '../utils/editor-languages';
 
 export interface CodeEditorHandle {
@@ -27,6 +39,7 @@ interface CodeEditorProps {
   onSave: () => void;
   onSaveAs?: () => void;
   onCursorChange: (line: number, col: number) => void;
+  onSelectionChange: (count: number) => void;
   onGoToLine?: () => void;
 }
 
@@ -41,6 +54,7 @@ export const CodeEditor = forwardRef<CodeEditorHandle, CodeEditorProps>(
       onSave,
       onSaveAs,
       onCursorChange,
+      onSelectionChange,
       onGoToLine,
     },
     ref
@@ -51,6 +65,7 @@ export const CodeEditor = forwardRef<CodeEditorHandle, CodeEditorProps>(
     const onSaveRef = useRef(onSave);
     const onSaveAsRef = useRef(onSaveAs);
     const onCursorChangeRef = useRef(onCursorChange);
+    const onSelectionChangeRef = useRef(onSelectionChange);
     const onGoToLineRef = useRef(onGoToLine);
 
     useEffect(() => {
@@ -58,6 +73,7 @@ export const CodeEditor = forwardRef<CodeEditorHandle, CodeEditorProps>(
       onSaveRef.current = onSave;
       onSaveAsRef.current = onSaveAs;
       onCursorChangeRef.current = onCursorChange;
+      onSelectionChangeRef.current = onSelectionChange;
       onGoToLineRef.current = onGoToLine;
     });
 
@@ -94,10 +110,15 @@ export const CodeEditor = forwardRef<CodeEditorHandle, CodeEditorProps>(
           closeBrackets(),
           indentOnInput(),
           highlightSelectionMatches(),
+          highlightActiveLine(),
+          highlightActiveLineGutter(),
+          foldGutter(),
+          autoCloseTags,
           wordWrap ? EditorView.lineWrapping : [],
           keymap.of([
             ...defaultKeymap,
             ...historyKeymap,
+            ...foldKeymap,
             ...searchKeymap,
             {
               key: 'Mod-g',
@@ -129,9 +150,24 @@ export const CodeEditor = forwardRef<CodeEditorHandle, CodeEditorProps>(
               onChangeRef.current(update.state.doc.toString());
             }
             if (update.selectionSet) {
-              const pos = update.state.selection.main.head;
+              const sel = update.state.selection;
+              const main = sel.main;
+              const pos = main.head;
               const line = update.state.doc.lineAt(pos);
               onCursorChangeRef.current(line.number, pos - line.from + 1);
+              if (
+                sel.ranges.some(
+                  (r: { from: number; to: number }) => r.from !== r.to
+                )
+              ) {
+                const count = update.state.sliceDoc(
+                  main.from,
+                  main.to - main.from
+                ).length;
+                onSelectionChangeRef.current(count);
+              } else {
+                onSelectionChangeRef.current(0);
+              }
             }
           }),
           EditorView.theme({

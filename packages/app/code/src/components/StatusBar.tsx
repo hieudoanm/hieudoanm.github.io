@@ -6,6 +6,7 @@ interface StatusBarProps {
   path: string;
   line: number;
   col: number;
+  selectionCount: number;
   dirty: boolean;
   wordWrap: boolean;
   sidebarOpen: boolean;
@@ -17,6 +18,7 @@ export const StatusBar: FC<StatusBarProps> = ({
   path,
   line,
   col,
+  selectionCount,
   dirty,
   wordWrap,
   sidebarOpen,
@@ -42,6 +44,7 @@ export const StatusBar: FC<StatusBarProps> = ({
         </button>
         <span>
           Ln {line}, Col {col}
+          {selectionCount > 0 && <span> ({selectionCount} sel)</span>}
         </span>
       </div>
       <div className="flex items-center gap-2">

@@ -6,6 +6,7 @@ interface ContextMenuProps {
   path: string;
   name: string;
   isDir: boolean;
+  rootPath: string | null;
   onClose: () => void;
   onRename: (path: string) => void;
   onDelete: (path: string) => void;
@@ -16,7 +17,9 @@ export const ContextMenu: FC<ContextMenuProps> = ({
   x,
   y,
   path,
+  name,
   isDir,
+  rootPath,
   onClose,
   onRename,
   onDelete,
@@ -42,7 +45,18 @@ export const ContextMenu: FC<ContextMenuProps> = ({
     };
   }, [onClose]);
 
+  const relativePath = rootPath
+    ? path.startsWith(rootPath)
+      ? path.slice(rootPath.length).replace(/^\//, '')
+      : path
+    : path;
+
   const items: { label: string; action: () => void; disabled?: boolean }[] = [
+    { label: 'Copy path', action: () => navigator.clipboard.writeText(path) },
+    {
+      label: 'Copy relative path',
+      action: () => navigator.clipboard.writeText(relativePath),
+    },
     { label: 'Rename', action: () => onRename(path) },
     { label: 'Duplicate', action: () => onDuplicate(path), disabled: isDir },
     { label: 'Delete', action: () => onDelete(path) },

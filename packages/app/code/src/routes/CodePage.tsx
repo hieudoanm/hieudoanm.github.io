@@ -24,6 +24,8 @@ export const CodePage: FC = () => {
     sidebarState,
     sidebarWidth,
     cursorPos,
+    selectionCount,
+    setSelectionCount,
     pendingDelete,
     showFilePrompt,
     theme,
@@ -181,6 +183,7 @@ export const CodePage: FC = () => {
                   onSave={saveFile}
                   onSaveAs={saveFileAs}
                   onCursorChange={(line, col) => setCursorPos({ line, col })}
+                  onSelectionChange={(count) => setSelectionCount(count)}
                   onGoToLine={() => setShowGoToLine(true)}
                 />
               </div>
@@ -196,6 +199,7 @@ export const CodePage: FC = () => {
               path={activeTab.path}
               line={cursorPos.line}
               col={cursorPos.col}
+              selectionCount={selectionCount}
               dirty={dirty}
               wordWrap={wordWrap}
               sidebarOpen={sidebarState !== 'closed'}
@@ -217,6 +221,7 @@ export const CodePage: FC = () => {
           path={contextMenu.path}
           name={contextMenu.name}
           isDir={contextMenu.isDir}
+          rootPath={rootPath}
           onClose={closeContextMenu}
           onRename={startRename}
           onDelete={(path) => {
