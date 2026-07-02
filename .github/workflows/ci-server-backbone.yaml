@@ -96,7 +96,7 @@ jobs:
         run: |
           gh release delete backbone-latest --yes --cleanup-tag 2>/dev/null || true
           gh release create backbone-latest \
-            --title "Server Backbone (latest)" \
+            --title "Server - Backbone (latest)" \
             --notes "Auto-built server binaries from commit ${{ github.sha }}" \
             release/*
         env:

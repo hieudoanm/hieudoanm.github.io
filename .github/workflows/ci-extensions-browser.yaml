@@ -69,8 +69,8 @@ jobs:
         run: |
           gh release delete extensions-browser-latest --yes --cleanup-tag 2>/dev/null || true
           gh release create extensions-browser-latest \
-            --title "Extensions Browser (latest)" \
-            --notes "Auto-built Extensions Browser from commit ${{ github.sha }}" \
+            --title "Extensions - Browser Extensions (latest)" \
+            --notes "Auto-built Browser Extensions from commit ${{ github.sha }}" \
             release/*
         env:
           GH_TOKEN: ${{ github.token }}

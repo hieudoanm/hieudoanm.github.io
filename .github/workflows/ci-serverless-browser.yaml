@@ -69,7 +69,7 @@ jobs:
         run: |
           gh release delete serverless-browser-latest --yes --cleanup-tag 2>/dev/null || true
           gh release create serverless-browser-latest \
-            --title "Serverless Browser (latest)" \
+            --title "Serverless - Browser (latest)" \
             --notes "Auto-built Serverless Browser from commit ${{ github.sha }}" \
             release/*
         env:

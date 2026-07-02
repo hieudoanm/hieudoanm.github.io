@@ -176,7 +176,7 @@ jobs:
         run: |
           gh release delete code-latest --yes --cleanup-tag 2>/dev/null || true
           gh release create code-latest \
-            --title "Code Editor (latest)" \
+            --title "App - Code (latest)" \
             --notes "Auto-built from commit ${{ github.sha }}" \
             $(find release -type f | sort)
         env:
