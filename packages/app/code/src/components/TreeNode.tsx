@@ -1,4 +1,4 @@
-import { type FC, useState } from 'react';
+import { type FC, useEffect, useState } from 'react';
 import {
   LuChevronDown,
   LuChevronRight,
@@ -13,6 +13,8 @@ export interface TreeNodeProps {
   node: FileNode;
   depth: number;
   activePath: string | null;
+  expandAllTrigger: number;
+  collapseAllTrigger: number;
   onOpenFile: (path: string) => void;
   onDeleteFile: (path: string) => void;
   onToggleDir: (path: string) => void;
@@ -28,6 +30,8 @@ export const TreeNode: FC<TreeNodeProps> = ({
   node,
   depth,
   activePath,
+  expandAllTrigger,
+  collapseAllTrigger,
   onOpenFile,
   onDeleteFile,
   onToggleDir,
@@ -37,6 +41,14 @@ export const TreeNode: FC<TreeNodeProps> = ({
   const isDir = node.type === 'dir';
   const loaded = node.children !== undefined;
   const isActive = !isDir && node.path === activePath;
+
+  useEffect(() => {
+    if (expandAllTrigger > 0) setExpanded(true);
+  }, [expandAllTrigger]);
+
+  useEffect(() => {
+    if (collapseAllTrigger > 0) setExpanded(false);
+  }, [collapseAllTrigger]);
 
   return (
     <div>
@@ -99,6 +111,8 @@ export const TreeNode: FC<TreeNodeProps> = ({
               node={child}
               depth={depth + 1}
               activePath={activePath}
+              expandAllTrigger={expandAllTrigger}
+              collapseAllTrigger={collapseAllTrigger}
               onOpenFile={onOpenFile}
               onDeleteFile={onDeleteFile}
               onToggleDir={onToggleDir}

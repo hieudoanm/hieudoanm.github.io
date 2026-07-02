@@ -42,6 +42,9 @@ export const CodePage: FC = () => {
     duplicateTarget,
     showGoToLine,
     wordWrap,
+    autoSave,
+    toggleAutoSave,
+    fileSize,
     showDirPrompt,
     globalSearching,
     error,
@@ -52,6 +55,7 @@ export const CodePage: FC = () => {
     openFileDialog,
     closeTab,
     closeAllTabs,
+    closeOthersTab,
     handleCreateFile,
     addFile,
     deleteFile,
@@ -153,14 +157,12 @@ export const CodePage: FC = () => {
                 activePath={activePath}
                 onOpenFile={openFileFromTree}
                 onOpenFolder={openFolder}
-                onOpenFileDialog={openFileDialog}
                 onCloseSidebar={() => setSidebarState('closed')}
                 onAddFile={addFile}
                 onAddDir={() => setShowDirPrompt(true)}
                 onDeleteFile={(path) => setPendingDelete(path)}
                 onToggleDir={loadDirChildren}
                 onContextMenu={openContextMenu}
-                onRefresh={() => rootPath && refreshTree(rootPath)}
               />
             )}
             <div
@@ -178,6 +180,7 @@ export const CodePage: FC = () => {
             }}
             onClose={closeTab}
             onCloseAll={closeAllTabs}
+            onCloseOthers={closeOthersTab}
           />
           {activeTab ? (
             <>
@@ -211,6 +214,8 @@ export const CodePage: FC = () => {
               line={cursorPos.line}
               col={cursorPos.col}
               selectionCount={selectionCount}
+              fileSize={fileSize}
+              autoSave={autoSave}
               dirty={dirty}
               wordWrap={wordWrap}
               sidebarOpen={sidebarState !== 'closed'}
@@ -220,6 +225,7 @@ export const CodePage: FC = () => {
                 )
               }
               onToggleWordWrap={toggleWordWrap}
+              onToggleAutoSave={toggleAutoSave}
             />
           )}
         </main>

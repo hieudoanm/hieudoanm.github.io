@@ -25,14 +25,12 @@ describe('FileTree', () => {
   const defaultProps = {
     onOpenFile: () => {},
     onOpenFolder: () => {},
-    onOpenFileDialog: () => {},
     onCloseSidebar: () => {},
     onAddFile: () => {},
     onAddDir: () => {},
     onDeleteFile: () => {},
     onToggleDir: () => {},
     onContextMenu: () => {},
-    onRefresh: () => {},
     activePath: null,
   };
 

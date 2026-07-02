@@ -7,6 +7,7 @@ describe('TabBar', () => {
     onSelect: () => {},
     onClose: () => {},
     onCloseAll: () => {},
+    onCloseOthers: () => {},
   };
 
   it('renders nothing when tabs are empty', () => {
@@ -95,6 +96,7 @@ describe('TabBar', () => {
         onCloseAll={onCloseAll}
         onSelect={() => {}}
         onClose={() => {}}
+        onCloseOthers={() => {}}
       />
     );
     const buttons = screen.getAllByRole('button');

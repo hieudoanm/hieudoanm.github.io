@@ -53,6 +53,7 @@ export const useCodePage = () => {
   const [fontSize, setFontSize] = useState(13);
   const [showShortcuts, setShowShortcuts] = useState(false);
   const [wordWrap, setWordWrap] = useState(false);
+  const [autoSave, setAutoSave] = useState(true);
   const [showDirPrompt, setShowDirPrompt] = useState(false);
   const [globalSearching, setGlobalSearching] = useState(false);
   const [selectionCount, setSelectionCount] = useState(0);
@@ -237,6 +238,11 @@ export const useCodePage = () => {
     recentTabsRef.current = [];
   }, []);
 
+  const closeOthersTab = useCallback((path: string) => {
+    setTabs((prev) => prev.filter((t) => t.path === path));
+    setActivePath(path);
+  }, []);
+
   const handleCreateFile = useCallback(
     async (name: string) => {
       if (!rootPath) return;
@@ -296,9 +302,16 @@ export const useCodePage = () => {
     [rootPath, tryCatch, refreshTree, closeTab]
   );
 
+  const trimTrailingWhitespace = useCallback((content: string) => {
+    return content.replace(/[ \t]+$/gm, '');
+  }, []);
+
   const saveFile = useCallback(async () => {
     const tab = tabs.find((t) => t.path === activePath);
     if (!tab || tab.content === tab.original) return;
+
+    const trimmed = trimTrailingWhitespace(tab.content);
+    if (trimmed === tab.original) return;
 
     const fs = await tryCatch(
       () => import('@tauri-apps/plugin-fs'),
@@ -308,17 +321,19 @@ export const useCodePage = () => {
     const { writeTextFile } = fs;
 
     const ok = await tryCatch.void(
-      () => writeTextFile(tab.path, tab.content),
+      () => writeTextFile(tab.path, trimmed),
       'save file'
     );
     if (!ok) return;
 
     setTabs((prev) =>
       prev.map((t) =>
-        t.path === activePath ? { ...t, original: t.content } : t
+        t.path === activePath
+          ? { ...t, content: trimmed, original: trimmed }
+          : t
       )
     );
-  }, [tabs, activePath, tryCatch]);
+  }, [tabs, activePath, tryCatch, trimTrailingWhitespace]);
 
   const handleChange = useCallback(
     (content: string) => {
@@ -339,6 +354,10 @@ export const useCodePage = () => {
 
   const toggleWordWrap = useCallback(() => {
     setWordWrap((prev) => !prev);
+  }, []);
+
+  const toggleAutoSave = useCallback(() => {
+    setAutoSave((prev) => !prev);
   }, []);
 
   const saveFileAs = useCallback(async () => {
@@ -723,6 +742,7 @@ export const useCodePage = () => {
   }, [showQuickOpen]);
 
   useEffect(() => {
+    if (!autoSave) return;
     const dirtyTab = tabs.find((t) => t.content !== t.original);
     if (!dirtyTab) return;
 
@@ -751,7 +771,7 @@ export const useCodePage = () => {
     return () => {
       if (autosaveTimerRef.current) clearTimeout(autosaveTimerRef.current);
     };
-  }, [tabs, tryCatch]);
+  }, [tabs, tryCatch, autoSave]);
 
   useEffect(() => {
     if (!rootPath) return;
@@ -798,6 +818,9 @@ export const useCodePage = () => {
     path: t.path,
     dirty: t.content !== t.original,
   }));
+  const fileSize = activeTab
+    ? trimTrailingWhitespace(activeTab.content).length
+    : 0;
 
   return {
     root,
@@ -826,6 +849,8 @@ export const useCodePage = () => {
     showShortcuts,
     setShowShortcuts,
     wordWrap,
+    autoSave,
+    toggleAutoSave,
     showDirPrompt,
     globalSearching,
     error,
@@ -839,6 +864,7 @@ export const useCodePage = () => {
     openFileDialog,
     closeTab,
     closeAllTabs,
+    closeOthersTab,
     handleCreateFile,
     addFile,
     deleteFile,
@@ -854,6 +880,7 @@ export const useCodePage = () => {
     activeTab,
     dirty,
     dirtyTabs,
+    fileSize,
     toggleTheme,
     toggleWordWrap,
     registerTabAccess,

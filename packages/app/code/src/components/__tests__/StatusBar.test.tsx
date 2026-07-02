@@ -12,11 +12,14 @@ describe('StatusBar', () => {
     line: 10,
     col: 5,
     selectionCount: 0,
+    fileSize: 1024,
+    autoSave: true,
     dirty: false,
     wordWrap: false,
     sidebarOpen: true,
     onToggleSidebar: () => {},
     onToggleWordWrap: () => {},
+    onToggleAutoSave: () => {},
   };
 
   it('renders cursor position', () => {
@@ -35,9 +38,8 @@ describe('StatusBar', () => {
   });
 
   it('does not render dirty indicator when not dirty', () => {
-    const { container } = render(<StatusBar {...defaultProps} dirty={false} />);
-    const dirtyDots = container.querySelectorAll('.text-primary');
-    expect(dirtyDots.length).toBe(0);
+    render(<StatusBar {...defaultProps} dirty={false} />);
+    expect(screen.queryByText('●')).not.toBeInTheDocument();
   });
 
   it('shows selection count when text is selected', () => {
@@ -75,5 +77,15 @@ describe('StatusBar', () => {
       <StatusBar {...defaultProps} path="/a/b/c/MyComponent.tsx" />
     );
     expect(screen.getByText('TSX')).toBeInTheDocument();
+  });
+
+  it('renders file size in bytes', () => {
+    render(<StatusBar {...defaultProps} fileSize={512} />);
+    expect(screen.getByText('512 B')).toBeInTheDocument();
+  });
+
+  it('renders file size in KB', () => {
+    render(<StatusBar {...defaultProps} fileSize={2048} />);
+    expect(screen.getByText('2.0 KB')).toBeInTheDocument();
   });
 });
