@@ -12,6 +12,7 @@ import { TreeNode } from './TreeNode';
 
 interface FileTreeProps {
   root: FileNode | null;
+  activePath: string | null;
   onOpenFile: (path: string) => void;
   onOpenFolder: () => void;
   onOpenFileDialog: () => void;
@@ -31,6 +32,7 @@ interface FileTreeProps {
 
 export const FileTree: FC<FileTreeProps> = ({
   root,
+  activePath,
   onOpenFile,
   onOpenFolder,
   onOpenFileDialog,
@@ -92,6 +94,7 @@ export const FileTree: FC<FileTreeProps> = ({
           <TreeNode
             node={root}
             depth={0}
+            activePath={activePath}
             onOpenFile={onOpenFile}
             onDeleteFile={onDeleteFile}
             onToggleDir={onToggleDir}

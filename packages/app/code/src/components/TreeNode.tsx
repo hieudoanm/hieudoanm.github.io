@@ -12,6 +12,7 @@ import { getFileIcon } from '../utils/editor-languages';
 export interface TreeNodeProps {
   node: FileNode;
   depth: number;
+  activePath: string | null;
   onOpenFile: (path: string) => void;
   onDeleteFile: (path: string) => void;
   onToggleDir: (path: string) => void;
@@ -26,6 +27,7 @@ export interface TreeNodeProps {
 export const TreeNode: FC<TreeNodeProps> = ({
   node,
   depth,
+  activePath,
   onOpenFile,
   onDeleteFile,
   onToggleDir,
@@ -34,11 +36,14 @@ export const TreeNode: FC<TreeNodeProps> = ({
   const [expanded, setExpanded] = useState(false);
   const isDir = node.type === 'dir';
   const loaded = node.children !== undefined;
+  const isActive = !isDir && node.path === activePath;
 
   return (
     <div>
       <div
-        className="group hover:bg-base-200 flex cursor-pointer items-center gap-1 px-2 py-0.5 text-sm select-none"
+        className={`group flex cursor-pointer items-center gap-1 px-2 py-0.5 text-sm select-none ${
+          isActive ? 'bg-primary/10 text-primary' : 'hover:bg-base-200'
+        }`}
         style={{ paddingLeft: `${depth * 16 + 8}px` }}
         onClick={() => {
           if (isDir) {
@@ -93,6 +98,7 @@ export const TreeNode: FC<TreeNodeProps> = ({
               key={child.path}
               node={child}
               depth={depth + 1}
+              activePath={activePath}
               onOpenFile={onOpenFile}
               onDeleteFile={onDeleteFile}
               onToggleDir={onToggleDir}

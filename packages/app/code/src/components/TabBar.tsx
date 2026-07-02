@@ -12,6 +12,7 @@ interface TabBarProps {
   activePath: string | null;
   onSelect: (path: string) => void;
   onClose: (path: string) => void;
+  onCloseAll: () => void;
 }
 
 export const TabBar: FC<TabBarProps> = ({
@@ -19,6 +20,7 @@ export const TabBar: FC<TabBarProps> = ({
   activePath,
   onSelect,
   onClose,
+  onCloseAll,
 }) => {
   if (tabs.length === 0) return null;
 
@@ -53,6 +55,14 @@ export const TabBar: FC<TabBarProps> = ({
           </div>
         );
       })}
+      <div className="ml-auto flex items-center pr-1">
+        <button
+          onClick={onCloseAll}
+          className="hover:bg-base-300 btn btn-ghost btn-xs"
+          title="Close all tabs">
+          <LuX className="h-3 w-3" />
+        </button>
+      </div>
     </div>
   );
 };

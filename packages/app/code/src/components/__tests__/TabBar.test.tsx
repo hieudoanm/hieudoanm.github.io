@@ -3,14 +3,15 @@ import userEvent from '@testing-library/user-event';
 import { TabBar } from '../TabBar';
 
 describe('TabBar', () => {
+  const defaultProps = {
+    onSelect: () => {},
+    onClose: () => {},
+    onCloseAll: () => {},
+  };
+
   it('renders nothing when tabs are empty', () => {
     const { container } = render(
-      <TabBar
-        tabs={[]}
-        activePath={null}
-        onSelect={() => {}}
-        onClose={() => {}}
-      />
+      <TabBar tabs={[]} activePath={null} {...defaultProps} />
     );
     expect(container.firstChild).toBeNull();
   });
@@ -20,8 +21,7 @@ describe('TabBar', () => {
       <TabBar
         tabs={[{ path: 'src/index.ts', dirty: false }]}
         activePath="src/index.ts"
-        onSelect={() => {}}
-        onClose={() => {}}
+        {...defaultProps}
       />
     );
     expect(screen.getByText('index.ts')).toBeInTheDocument();
@@ -35,8 +35,7 @@ describe('TabBar', () => {
           { path: 'b.ts', dirty: false },
         ]}
         activePath="a.ts"
-        onSelect={() => {}}
-        onClose={() => {}}
+        {...defaultProps}
       />
     );
     const active = container.querySelector('.border-b-2');
@@ -48,8 +47,7 @@ describe('TabBar', () => {
       <TabBar
         tabs={[{ path: 'index.ts', dirty: true }]}
         activePath="index.ts"
-        onSelect={() => {}}
-        onClose={() => {}}
+        {...defaultProps}
       />
     );
     const svg = container.querySelector('svg[fill]');
@@ -62,8 +60,8 @@ describe('TabBar', () => {
       <TabBar
         tabs={[{ path: 'file.ts', dirty: false }]}
         activePath={null}
+        {...defaultProps}
         onSelect={onSelect}
-        onClose={() => {}}
       />
     );
     await userEvent.click(screen.getByText('file.ts'));
@@ -76,7 +74,7 @@ describe('TabBar', () => {
       <TabBar
         tabs={[{ path: 'file.ts', dirty: false }]}
         activePath="file.ts"
-        onSelect={() => {}}
+        {...defaultProps}
         onClose={onClose}
       />
     );
@@ -85,13 +83,31 @@ describe('TabBar', () => {
     expect(onClose).toHaveBeenCalledWith('file.ts');
   });
 
+  it('calls onCloseAll when close-all button is clicked', async () => {
+    const onCloseAll = jest.fn();
+    render(
+      <TabBar
+        tabs={[
+          { path: 'a.ts', dirty: false },
+          { path: 'b.ts', dirty: false },
+        ]}
+        activePath="a.ts"
+        onCloseAll={onCloseAll}
+        onSelect={() => {}}
+        onClose={() => {}}
+      />
+    );
+    const buttons = screen.getAllByRole('button');
+    await userEvent.click(buttons[buttons.length - 1]);
+    expect(onCloseAll).toHaveBeenCalled();
+  });
+
   it('extracts filename from full path', () => {
     render(
       <TabBar
         tabs={[{ path: 'src/components/Button.tsx', dirty: false }]}
         activePath="src/components/Button.tsx"
-        onSelect={() => {}}
-        onClose={() => {}}
+        {...defaultProps}
       />
     );
     expect(screen.getByText('Button.tsx')).toBeInTheDocument();

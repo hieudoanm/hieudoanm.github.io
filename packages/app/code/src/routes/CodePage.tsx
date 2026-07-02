@@ -49,6 +49,7 @@ export const CodePage: FC = () => {
     openFileFromTree,
     openFileDialog,
     closeTab,
+    closeAllTabs,
     handleCreateFile,
     addFile,
     deleteFile,
@@ -136,6 +137,7 @@ export const CodePage: FC = () => {
             ) : (
               <FileTree
                 root={root}
+                activePath={activePath}
                 onOpenFile={openFileFromTree}
                 onOpenFolder={openFolder}
                 onOpenFileDialog={openFileDialog}
@@ -162,6 +164,7 @@ export const CodePage: FC = () => {
               setActivePath(path);
             }}
             onClose={closeTab}
+            onCloseAll={closeAllTabs}
           />
           {activeTab ? (
             <>

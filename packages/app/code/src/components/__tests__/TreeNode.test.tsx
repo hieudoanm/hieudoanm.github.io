@@ -18,6 +18,7 @@ const dirNode: FileNode = {
 const defaultProps: TreeNodeProps = {
   node: fileNode,
   depth: 0,
+  activePath: null,
   onOpenFile: jest.fn(),
   onDeleteFile: jest.fn(),
   onToggleDir: jest.fn(),

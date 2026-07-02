@@ -60,6 +60,18 @@ export const useCodePage = () => {
   const sidebarWidthRef = useRef(INITIAL_WIDTH);
   const recentTabsRef = useRef<string[]>([]);
   const autosaveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const closeTabRef = useRef<(path: string) => void>(
+    null as unknown as (path: string) => void
+  );
+  const activePathRef = useRef(activePath);
+
+  useEffect(() => {
+    closeTabRef.current = closeTab;
+    activePathRef.current = activePath;
+  });
+  useEffect(() => {
+    activePathRef.current = activePath;
+  });
 
   useEffect(() => {
     sidebarWidthRef.current = sidebarWidth;
@@ -217,6 +229,12 @@ export const useCodePage = () => {
     },
     [activePath]
   );
+
+  const closeAllTabs = useCallback(() => {
+    setTabs([]);
+    setActivePath(null);
+    recentTabsRef.current = [];
+  }, []);
 
   const handleCreateFile = useCallback(
     async (name: string) => {
@@ -598,6 +616,13 @@ export const useCodePage = () => {
           return;
         }
 
+        if (e.key === 'w' && !e.shiftKey && !e.altKey) {
+          e.preventDefault();
+          const path = activePathRef.current;
+          if (path) closeTabRef.current(path);
+          return;
+        }
+
         if (e.key === 's' && e.shiftKey && !e.altKey) {
           e.preventDefault();
           saveFileAs();
@@ -810,6 +835,7 @@ export const useCodePage = () => {
     openFileFromTree,
     openFileDialog,
     closeTab,
+    closeAllTabs,
     handleCreateFile,
     addFile,
     deleteFile,

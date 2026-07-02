@@ -33,6 +33,7 @@ describe('FileTree', () => {
     onToggleDir: () => {},
     onContextMenu: () => {},
     onRefresh: () => {},
+    activePath: null,
   };
 
   it('renders empty state when root is null', () => {
