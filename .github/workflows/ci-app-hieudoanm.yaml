@@ -11,8 +11,7 @@ on:
       - 'dependabot/**'
     paths:
       - 'packages/app/hieudoanm/mobile/expo.dev/**'
-      - 'packages/app/hieudoanm/web/nextjs.org/**'
-      - 'packages/app/hieudoanm/web/solidjs.com/**'
+      - 'packages/app/hieudoanm/web/**'
       - '.github/workflows/ci-app-hieudoanm.yaml'
 
 permissions:
@@ -73,40 +72,12 @@ jobs:
       - name: Test
         run: pnpm run test --filter=...[origin/master]
 
-  solid:
-    name: SolidJS
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v6.0.3
-      - name: Install pnpm
-        uses: pnpm/action-setup@v6.0.8
-        with:
-          version: '11.9.0'
-      - name: Install Node.js
-        uses: actions/setup-node@v6.4.0
-        with:
-          node-version: '26.4.0'
-          cache: 'pnpm'
-      - name: Setup Chrome
-        uses: browser-actions/setup-chrome@v1.7.3
-        with:
-          install-chromedriver: true
-      - name: Install Dependencies
-        run: pnpm install
-      - name: Lint
-        run: pnpm run lint --filter=...[origin/master]
-      - name: Build
-        run: pnpm run build --filter=...[origin/master]
-      - name: Test
-        run: pnpm run test --filter=...[origin/master]
-
   tauri:
     name: Tauri (${{ matrix.app }}, ${{ matrix.os }})
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest]
-        app: [mobile/expo.dev, web/nextjs.org]
+        app: [mobile/expo.dev, web]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout
@@ -139,7 +110,7 @@ jobs:
         run: |
           if [ "${{ matrix.app }}" = "mobile/expo.dev" ] && [ ! -d dist ]; then
             pnpm run build
-          elif [ "${{ matrix.app }}" = "web/nextjs.org" ] && [ ! -d out ]; then
+          elif [ "${{ matrix.app }}" = "web" ] && [ ! -d out ]; then
             EXPORT=true pnpm run build
           fi
       - name: Build Tauri Artifact
