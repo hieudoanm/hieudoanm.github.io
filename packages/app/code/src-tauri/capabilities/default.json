@@ -28,6 +28,26 @@
         { "path": "$APPDATA/**" }
       ]
     },
-    "shell:default"
+    "shell:default",
+    {
+      "identifier": "shell:allow-execute",
+      "allow": [
+        {
+          "name": "terminal-shell",
+          "cmd": "/bin/zsh",
+          "args": true
+        }
+      ]
+    },
+    {
+      "identifier": "shell:allow-stdin-write",
+      "allow": [
+        {
+          "name": "terminal-shell",
+          "cmd": "/bin/zsh",
+          "args": true
+        }
+      ]
+    }
   ]
 }

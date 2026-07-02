@@ -5,16 +5,18 @@ import { ActivityBar } from '../ActivityBar';
 describe('ActivityBar', () => {
   const defaultProps = {
     sidebarState: 'explorer' as const,
+    showTerminal: false,
     theme: 'dim' as const,
     onOpenExplorer: jest.fn(),
     onOpenSearch: jest.fn(),
+    onOpenTerminal: jest.fn(),
     onToggleTheme: jest.fn(),
   };
 
-  it('renders all three buttons', () => {
+  it('renders all buttons', () => {
     render(<ActivityBar {...defaultProps} />);
     const buttons = screen.getAllByRole('button');
-    expect(buttons).toHaveLength(3);
+    expect(buttons).toHaveLength(4);
   });
 
   it('shows Close Explorer title when sidebar is open showing explorer', () => {
@@ -85,5 +87,40 @@ describe('ActivityBar', () => {
   it('shows correct theme toggle title for winter theme', () => {
     render(<ActivityBar {...defaultProps} theme="winter" />);
     expect(screen.getByTitle('Switch to dim theme')).toBeInTheDocument();
+  });
+
+  it('shows Open Terminal title when terminal is closed', () => {
+    render(<ActivityBar {...defaultProps} showTerminal={false} />);
+    expect(screen.getByTitle('Open Terminal (Ctrl+`)')).toBeInTheDocument();
+  });
+
+  it('shows Close Terminal title when terminal is open', () => {
+    render(<ActivityBar {...defaultProps} showTerminal={true} />);
+    expect(screen.getByTitle('Close Terminal')).toBeInTheDocument();
+  });
+
+  it('highlights terminal button when terminal is open', () => {
+    render(<ActivityBar {...defaultProps} showTerminal={true} />);
+    const btn = screen.getByTitle('Close Terminal');
+    expect(btn.className).toContain('text-primary');
+  });
+
+  it('does not highlight terminal button when terminal is closed', () => {
+    render(<ActivityBar {...defaultProps} showTerminal={false} />);
+    const btn = screen.getByTitle('Open Terminal (Ctrl+`)');
+    expect(btn.className).not.toContain('text-primary');
+  });
+
+  it('calls onOpenTerminal when terminal button is clicked', async () => {
+    const onOpenTerminal = jest.fn();
+    render(
+      <ActivityBar
+        {...defaultProps}
+        showTerminal={false}
+        onOpenTerminal={onOpenTerminal}
+      />
+    );
+    await userEvent.click(screen.getByTitle('Open Terminal (Ctrl+`)'));
+    expect(onOpenTerminal).toHaveBeenCalledTimes(1);
   });
 });

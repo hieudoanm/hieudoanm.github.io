@@ -9,3 +9,16 @@
 :root {
   --editor-font: 'JetBrains Mono', 'Fira Code', monospace;
 }
+
+.xterm {
+  padding: 4px;
+  height: 100%;
+}
+
+.xterm-viewport {
+  scrollbar-width: thin;
+}
+
+.xterm-cursor-layer {
+  opacity: 0.8;
+}
