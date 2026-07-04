@@ -101,20 +101,20 @@ const KNOCKOUT_TEAMS = toKnockoutTeams(CHAMPIONS_LEAGUE_2003.teams);
 
 const PREDETERMINED: Record<string, string> = {
   mun_por: 'por',
-  rso_lyo: 'lyo',
+  lyo_rso: 'lyo',
   bay_rma: 'rma',
   loc_mon: 'mon',
-  stg_che: 'che',
-  clv_ars: 'ars',
-  spr_acm: 'acm',
-  juv_dep: 'dep',
-  por_lyo: 'por',
+  che_stg: 'che',
+  ars_clv: 'ars',
+  acm_spr: 'acm',
+  dep_juv: 'dep',
+  lyo_por: 'por',
   acm_dep: 'dep',
-  rma_mon: 'mon',
-  che_ars: 'che',
-  por_dep: 'por',
-  mon_che: 'mon',
-  por_mon: 'por',
+  mon_rma: 'mon',
+  ars_che: 'che',
+  dep_por: 'por',
+  che_mon: 'mon',
+  mon_por: 'por',
 };
 
 const BRACKET_RAW: BracketRaw = [

@@ -105,7 +105,7 @@ const PREDETERMINED: Record<string, string> = {
   int_liv: 'liv',
   acm_ars: 'ars',
   lyo_mun: 'mun',
-  rma_rm: 'rm',
+  rm_rma: 'rm',
   bar_cel: 'bar',
   por_sch: 'sch',
   che_fen: 'che',

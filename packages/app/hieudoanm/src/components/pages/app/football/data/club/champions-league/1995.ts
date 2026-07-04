@@ -61,11 +61,11 @@ const KNOCKOUT_TEAMS = toKnockoutTeams(CHAMPIONS_LEAGUE_1995.teams);
 
 const PREDETERMINED: Record<string, string> = {
   juv_pan: 'juv',
-  bvb_bar: 'bvb',
-  spa_nte: 'spa',
+  bar_bvb: 'bvb',
+  nte_spa: 'spa',
   ajax_leg: 'ajax',
   ajax_spa: 'ajax',
-  juv_bvb: 'juv',
+  bvb_juv: 'juv',
   ajax_juv: 'juv',
 };
 

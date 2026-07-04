@@ -100,8 +100,8 @@ export const CHAMPIONS_LEAGUE_2016: ChampionsLeagueYearData = {
 const KNOCKOUT_TEAMS = toKnockoutTeams(CHAMPIONS_LEAGUE_2016.teams);
 
 const PREDETERMINED: Record<string, string> = {
-  bay_ars: 'bay',
-  rma_nap: 'rma',
+  ars_bay: 'bay',
+  nap_rma: 'rma',
   atl_lev: 'atl',
   lei_sei: 'lei',
   bar_psg: 'bar',
@@ -112,7 +112,7 @@ const PREDETERMINED: Record<string, string> = {
   atl_lei: 'atl',
   bar_juv: 'juv',
   bvb_mon: 'mon',
-  rma_atl: 'rma',
+  atl_rma: 'rma',
   juv_mon: 'juv',
   juv_rma: 'rma',
 };

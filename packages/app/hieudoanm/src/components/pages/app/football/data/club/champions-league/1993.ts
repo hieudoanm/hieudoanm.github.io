@@ -40,9 +40,9 @@ export const CHAMPIONS_LEAGUE_1993: ChampionsLeagueYearData = {
 const KNOCKOUT_TEAMS = toKnockoutTeams(CHAMPIONS_LEAGUE_1993.teams);
 
 const PREDETERMINED: Record<string, string> = {
+  // Final
   acm_bar: 'acm',
 };
-
 const BRACKET_RAW: BracketRaw = ['acm', 'bar'];
 
 export const KNOCKOUT: ChampionsLeagueKnockoutYearData = {

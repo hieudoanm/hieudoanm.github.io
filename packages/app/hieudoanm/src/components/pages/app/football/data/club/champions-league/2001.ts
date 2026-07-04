@@ -101,11 +101,11 @@ const KNOCKOUT_TEAMS = toKnockoutTeams(CHAMPIONS_LEAGUE_2001.teams);
 
 const PREDETERMINED: Record<string, string> = {
   bay_mun: 'bay',
-  rma_gal: 'rma',
-  val_ars: 'val',
+  gal_rma: 'rma',
+  ars_val: 'val',
   dep_lee: 'lev',
   bay_rma: 'bay',
-  lev_ars: 'lev',
+  ars_lev: 'lev',
   bay_lev: 'bay',
 };
 

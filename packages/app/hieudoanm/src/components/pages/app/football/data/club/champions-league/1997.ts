@@ -80,13 +80,13 @@ export const CHAMPIONS_LEAGUE_1997: ChampionsLeagueYearData = {
 const KNOCKOUT_TEAMS = toKnockoutTeams(CHAMPIONS_LEAGUE_1997.teams);
 
 const PREDETERMINED: Record<string, string> = {
-  rma_lev: 'rma',
-  bvb_bay: 'bvb',
-  juv_dyn: 'juv',
+  lev_rma: 'rma',
+  bay_bvb: 'bvb',
+  dyn_juv: 'juv',
   mon_psg: 'mon',
-  rma_bvb: 'rma',
+  bvb_rma: 'rma',
   juv_mon: 'juv',
-  rma_juv: 'rma',
+  juv_rma: 'rma',
 };
 
 const BRACKET_RAW: BracketRaw = [

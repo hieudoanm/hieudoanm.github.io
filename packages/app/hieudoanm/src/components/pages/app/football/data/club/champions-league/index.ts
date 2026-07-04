@@ -34,8 +34,8 @@ import { CHAMPIONS_LEAGUE_2020, KNOCKOUT as KO_2020 } from './2020';
 import { CHAMPIONS_LEAGUE_2021, KNOCKOUT as KO_2021 } from './2021';
 import { CHAMPIONS_LEAGUE_2022, KNOCKOUT as KO_2022 } from './2022';
 import { CHAMPIONS_LEAGUE_2023, KNOCKOUT as KO_2023 } from './2023';
-import { CHAMPIONS_LEAGUE_2024 } from './2024';
-import { CHAMPIONS_LEAGUE_2025 } from './2025';
+import { CHAMPIONS_LEAGUE_2024, KNOCKOUT as KO_2024 } from './2024';
+import { CHAMPIONS_LEAGUE_2025, KNOCKOUT as KO_2025 } from './2025';
 
 export type {
   ChampionsLeagueTeams,
@@ -114,6 +114,6 @@ export const KNOCKOUT_DATA: ChampionsLeagueKnockoutDataMap = {
   2021: KO_2021,
   2022: KO_2022,
   2023: KO_2023,
-  2024: null,
-  2025: null,
+  2024: KO_2024,
+  2025: KO_2025,
 };

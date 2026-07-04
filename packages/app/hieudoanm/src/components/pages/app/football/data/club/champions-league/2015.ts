@@ -101,7 +101,7 @@ const KNOCKOUT_TEAMS = toKnockoutTeams(CHAMPIONS_LEAGUE_2015.teams);
 
 const PREDETERMINED: Record<string, string> = {
   ars_bar: 'bar',
-  psv_atl: 'atl',
+  atl_psv: 'atl',
   bay_juv: 'bay',
   ben_zen: 'ben',
   dyn_mci: 'mci',

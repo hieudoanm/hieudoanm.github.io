@@ -60,11 +60,11 @@ export const CHAMPIONS_LEAGUE_1996: ChampionsLeagueYearData = {
 const KNOCKOUT_TEAMS = toKnockoutTeams(CHAMPIONS_LEAGUE_1996.teams);
 
 const PREDETERMINED: Record<string, string> = {
-  bvb_ajax: 'bvb',
+  ajax_bvb: 'bvb',
   juv_ros: 'juv',
-  aux_acm: 'aux',
-  por_atm: 'por',
-  bvb_aux: 'bvb',
+  acm_aux: 'aux',
+  atm_por: 'por',
+  aux_bvb: 'bvb',
   juv_por: 'juv',
   bvb_juv: 'bvb',
 };

@@ -100,16 +100,16 @@ export const CHAMPIONS_LEAGUE_2023: ChampionsLeagueYearData = {
 const KNOCKOUT_TEAMS = toKnockoutTeams(CHAMPIONS_LEAGUE_2023.teams);
 
 const PREDETERMINED: Record<string, string> = {
-  int_atl: 'atl',
-  psv_bvb: 'bvb',
+  atl_int: 'atl',
+  bvb_psv: 'bvb',
   psg_rso: 'psg',
-  nap_bar: 'bar',
-  por_ars: 'ars',
-  laz_bay: 'bay',
+  bar_nap: 'bar',
+  ars_por: 'ars',
+  bay_laz: 'bay',
   rbl_rma: 'rma',
   cop_mci: 'mci',
   atl_bvb: 'bvb',
-  psg_bar: 'psg',
+  bar_psg: 'psg',
   ars_bay: 'bay',
   mci_rma: 'rma',
   bvb_psg: 'bvb',

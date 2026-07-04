@@ -1,5 +1,9 @@
-import { s, t, group } from './types';
-import type { ChampionsLeagueYearData } from './types';
+import { s, t, group, toKnockoutTeams } from './types';
+import type { BracketRaw } from '../../../pages/knock-out/types';
+import type {
+  ChampionsLeagueYearData,
+  ChampionsLeagueKnockoutYearData,
+} from './types';
 
 export const CHAMPIONS_LEAGUE_2024: ChampionsLeagueYearData = {
   year: 2024,
@@ -126,4 +130,53 @@ export const CHAMPIONS_LEAGUE_2024: ChampionsLeagueYearData = {
       }
     ),
   ],
+};
+
+const KNOCKOUT_TEAMS = toKnockoutTeams(CHAMPIONS_LEAGUE_2024.teams);
+
+const PREDETERMINED: Record<string, string> = {
+  liv_psg: 'psg',
+  bar_rma: 'bar',
+  ars_bvb: 'ars',
+  acm_lev: 'acm',
+  ben_int: 'int',
+  atl_bay: 'atl',
+  avl_psv: 'avl',
+  ata_lil: 'ata',
+  bar_psg: 'psg',
+  acm_ars: 'ars',
+  atl_int: 'int',
+  ata_avl: 'avl',
+  ars_psg: 'psg',
+  avl_int: 'int',
+  int_psg: 'psg',
+};
+
+const BRACKET_RAW: BracketRaw = [
+  [
+    [
+      ['liv', 'psg'],
+      ['bar', 'rma'],
+    ],
+    [
+      ['ars', 'bvb'],
+      ['acm', 'lev'],
+    ],
+  ],
+  [
+    [
+      ['int', 'ben'],
+      ['atl', 'bay'],
+    ],
+    [
+      ['avl', 'psv'],
+      ['ata', 'lil'],
+    ],
+  ],
+];
+
+export const KNOCKOUT: ChampionsLeagueKnockoutYearData = {
+  teams: KNOCKOUT_TEAMS,
+  predetermined: PREDETERMINED,
+  bracket: BRACKET_RAW,
 };

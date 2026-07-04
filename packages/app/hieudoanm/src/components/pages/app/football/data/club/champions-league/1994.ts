@@ -62,11 +62,11 @@ const KNOCKOUT_TEAMS = toKnockoutTeams(CHAMPIONS_LEAGUE_1994.teams);
 const PREDETERMINED: Record<string, string> = {
   ajax_haj: 'ajax',
   bay_got: 'bay',
-  psg_bar: 'psg',
+  bar_psg: 'psg',
   acm_ben: 'acm',
   ajax_bay: 'ajax',
   acm_psg: 'acm',
-  ajax_acm: 'ajax',
+  acm_ajax: 'ajax',
 };
 
 const BRACKET_RAW: BracketRaw = [

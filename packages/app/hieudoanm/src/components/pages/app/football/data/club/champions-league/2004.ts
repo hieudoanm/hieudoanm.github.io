@@ -100,7 +100,7 @@ export const CHAMPIONS_LEAGUE_2004: ChampionsLeagueYearData = {
 const KNOCKOUT_TEAMS = toKnockoutTeams(CHAMPIONS_LEAGUE_2004.teams);
 
 const PREDETERMINED: Record<string, string> = {
-  liv_lev: 'liv',
+  lev_liv: 'liv',
   juv_rma: 'juv',
   ars_bay: 'bay',
   acm_mun: 'acm',
@@ -110,7 +110,7 @@ const PREDETERMINED: Record<string, string> = {
   int_por: 'int',
   juv_liv: 'liv',
   acm_int: 'acm',
-  che_bay: 'che',
+  bay_che: 'che',
   lyo_psv: 'psv',
   che_liv: 'liv',
   acm_psv: 'acm',

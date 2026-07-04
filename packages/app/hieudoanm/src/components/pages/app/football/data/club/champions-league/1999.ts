@@ -100,12 +100,12 @@ export const CHAMPIONS_LEAGUE_1999: ChampionsLeagueYearData = {
 const KNOCKOUT_TEAMS = toKnockoutTeams(CHAMPIONS_LEAGUE_1999.teams);
 
 const PREDETERMINED: Record<string, string> = {
-  rma_mun: 'rma',
-  val_laz: 'val',
+  mun_rma: 'rma',
+  laz_val: 'val',
   bar_che: 'bar',
   bay_por: 'bay',
-  rma_bay: 'rma',
-  val_bar: 'val',
+  bay_rma: 'rma',
+  bar_val: 'val',
   rma_val: 'rma',
 };
 

@@ -105,7 +105,7 @@ const PREDETERMINED: Record<string, string> = {
   ars_mon: 'mon',
   bar_mci: 'bar',
   bay_shakhtar: 'bay',
-  lev_atl: 'atl',
+  atl_lev: 'atl',
   che_psg: 'psg',
   rma_sch: 'rma',
   juv_mon: 'juv',

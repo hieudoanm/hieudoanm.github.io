@@ -102,8 +102,8 @@ const KNOCKOUT_TEAMS = toKnockoutTeams(CHAMPIONS_LEAGUE_2022.teams);
 const PREDETERMINED: Record<string, string> = {
   liv_rma: 'rma',
   bvb_che: 'che',
-  rbl_mci: 'mci',
-  psg_bay: 'bay',
+  mci_rbl: 'mci',
+  bay_psg: 'bay',
   acm_tot: 'acm',
   fra_nap: 'nap',
   ben_clb: 'ben',
