@@ -138,7 +138,7 @@ const SectionGrid: FC<{ title: string; items: TournamentDef[] }> = ({
     <h3 className="mb-3 text-center text-xs tracking-widest text-neutral-500 uppercase">
       {title}
     </h3>
-    <div className="mx-auto grid max-w-2xl grid-cols-2 gap-4">
+    <div className="mx-auto grid max-w-2xl grid-cols-1 gap-4 md:grid-cols-2">
       {items.map((t) => (
         <a
           key={t.id}
