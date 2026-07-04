@@ -1,13 +1,9 @@
-import { VersionTemplate } from '@hieudoanm.github.io/components/templates/app/VersionTemplate';
-import { GetStaticProps, NextPage } from 'next';
+import { VersionPage } from '@hieudoanm.github.io/components/pages/version';
+import type { GetStaticProps } from 'next';
 
 interface Props {
   version: string;
 }
-
-export const VersionPage: NextPage<Props> = ({ version }) => {
-  return <VersionTemplate version={version} />;
-};
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const now = new Date();

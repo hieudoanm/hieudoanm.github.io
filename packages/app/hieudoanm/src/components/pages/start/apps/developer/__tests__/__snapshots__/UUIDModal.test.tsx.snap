@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`UUIDModal should render with three UUID inputs 1`] = `
+<div>
+  <div
+    class="flex h-screen flex-col overflow-hidden"
+  >
+    <div
+      class="border-base-300 flex shrink-0 items-center justify-between border-b px-4 py-3"
+    >
+      <h2
+        class="text-sm font-normal tracking-tight"
+      >
+        UUID Generator
+      </h2>
+      <p
+        class="text-base-content/40 font-mono text-[10px] tracking-widest uppercase"
+      >
+        v1 · v4 · v7
+      </p>
+      <button
+        class="btn btn-ghost btn-xs btn-square text-base opacity-60 hover:opacity-100"
+      >
+        ✕
+      </button>
+    </div>
+    <div
+      class="flex flex-1 flex-col items-center justify-center overflow-y-auto p-8"
+    >
+      <div
+        class="mb-2 flex justify-end"
+      >
+        <button
+          class="btn btn-outline btn-xs font-mono tracking-widest"
+        >
+          ↺ All
+        </button>
+      </div>
+      <div
+        class="flex flex-col gap-3"
+      >
+        <div
+          class="bg-base-200 border-base-300 rounded-xl border p-3"
+        >
+          <div
+            class="mb-2 flex items-center justify-between"
+          >
+            <div>
+              <span
+                class="text-xs font-normal tracking-widest uppercase"
+              >
+                UUID v1
+              </span>
+              <span
+                class="text-base-content/30 ml-2 font-mono text-[10px]"
+              >
+                Timestamp + MAC address
+              </span>
+            </div>
+          </div>
+          <div
+            class="flex items-center gap-2"
+          >
+            <input
+              class="input input-bordered input-xs flex-1 font-mono text-xs tracking-wider"
+              readonly=""
+              value="v1-1"
+            />
+            <button
+              class="btn btn-ghost btn-xs btn-square"
+              title="Regenerate"
+            >
+              ↺
+            </button>
+            <button
+              class="btn btn-xs font-mono btn-primary"
+            >
+              Copy
+            </button>
+          </div>
+        </div>
+        <div
+          class="bg-base-200 border-base-300 rounded-xl border p-3"
+        >
+          <div
+            class="mb-2 flex items-center justify-between"
+          >
+            <div>
+              <span
+                class="text-xs font-normal tracking-widest uppercase"
+              >
+                UUID v4
+              </span>
+              <span
+                class="text-base-content/30 ml-2 font-mono text-[10px]"
+              >
+                Cryptographically random
+              </span>
+            </div>
+          </div>
+          <div
+            class="flex items-center gap-2"
+          >
+            <input
+              class="input input-bordered input-xs flex-1 font-mono text-xs tracking-wider"
+              readonly=""
+              value="v4-2"
+            />
+            <button
+              class="btn btn-ghost btn-xs btn-square"
+              title="Regenerate"
+            >
+              ↺
+            </button>
+            <button
+              class="btn btn-xs font-mono btn-primary"
+            >
+              Copy
+            </button>
+          </div>
+        </div>
+        <div
+          class="bg-base-200 border-base-300 rounded-xl border p-3"
+        >
+          <div
+            class="mb-2 flex items-center justify-between"
+          >
+            <div>
+              <span
+                class="text-xs font-normal tracking-widest uppercase"
+              >
+                UUID v7
+              </span>
+              <span
+                class="text-base-content/30 ml-2 font-mono text-[10px]"
+              >
+                Unix timestamp + random
+              </span>
+            </div>
+          </div>
+          <div
+            class="flex items-center gap-2"
+          >
+            <input
+              class="input input-bordered input-xs flex-1 font-mono text-xs tracking-wider"
+              readonly=""
+              value="v7-3"
+            />
+            <button
+              class="btn btn-ghost btn-xs btn-square"
+              title="Regenerate"
+            >
+              ↺
+            </button>
+            <button
+              class="btn btn-xs font-mono btn-primary"
+            >
+              Copy
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p
+      class="text-base-content/20 shrink-0 text-center font-mono text-[10px] tracking-widest uppercase"
+    >
+      Click outside to close · Regenerate any version independently
+    </p>
+  </div>
+</div>
+`;

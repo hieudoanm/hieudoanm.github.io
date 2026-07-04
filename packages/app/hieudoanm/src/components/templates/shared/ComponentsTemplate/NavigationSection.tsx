@@ -11,7 +11,7 @@ export const NavigationSection: FC = () => {
       'The Overview tab shows a high-level description of the component, its variants, and usage guidelines. Switch tabs to explore the API reference, live code examples, and version history.',
     api: 'API reference: Button accepts `variant` (primary | ghost | danger), `size` (sm | md | lg), `loading` (boolean), `disabled` (boolean), and all native button props via rest spread.',
     examples:
-      '<Button variant="primary" size="md" onClick={handleSubmit}>Save changes</Button>',
+      '<Button variant="primary" onClick={handleSubmit}>Save changes</Button>',
     changelog:
       'v2.4.0 — Added icon-only variant and loading state. v2.3.0 — New danger variant. v2.2.0 — Keyboard focus ring improvements.',
   };

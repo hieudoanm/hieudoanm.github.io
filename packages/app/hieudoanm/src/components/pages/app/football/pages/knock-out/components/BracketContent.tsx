@@ -3,7 +3,7 @@ import type { FC } from 'react';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import type { TournamentSlug } from '../../../data/tournament';
-import type { KnockoutYearData } from '../../../data/world-cup/types';
+import type { KnockoutYearData } from '../../../data/international/world-cup/types';
 import {
   buildParentMap,
   buildTree,

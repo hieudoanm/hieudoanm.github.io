@@ -1,0 +1,233 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`CalendarGrid should render 1`] = `
+<div>
+  <div>
+    <p
+      class="text-base-content/40 mb-2 text-[10px] font-normal tracking-widest uppercase"
+    >
+      July
+       
+      2026
+    </p>
+    <table
+      class="w-full border-collapse text-[11px]"
+    >
+      <thead>
+        <tr>
+          <th
+            class="text-base-content/30 w-6 pb-1 text-center font-normal"
+          >
+            Wk
+          </th>
+          <th
+            class="text-base-content/30 pb-1 text-center font-normal"
+          >
+            S
+          </th>
+          <th
+            class="text-base-content/30 pb-1 text-center font-normal"
+          >
+            M
+          </th>
+          <th
+            class="text-base-content/30 pb-1 text-center font-normal"
+          >
+            T
+          </th>
+          <th
+            class="text-base-content/30 pb-1 text-center font-normal"
+          >
+            W
+          </th>
+          <th
+            class="text-base-content/30 pb-1 text-center font-normal"
+          >
+            T
+          </th>
+          <th
+            class="text-base-content/30 pb-1 text-center font-normal"
+          >
+            F
+          </th>
+          <th
+            class="text-base-content/30 pb-1 text-center font-normal"
+          >
+            S
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td
+            class="text-base-content/25 py-0.5 text-center text-[10px]"
+          >
+            27
+          </td>
+          <td
+            class="p-0 text-center"
+          >
+            <button
+              class="flex h-6 w-6 flex-col items-center justify-center rounded-full text-[11px] transition-colors text-base-content/20"
+            >
+              <span>
+                29
+              </span>
+            </button>
+          </td>
+          <td
+            class="p-0 text-center"
+          >
+            <button
+              class="flex h-6 w-6 flex-col items-center justify-center rounded-full text-[11px] transition-colors text-base-content/20"
+            >
+              <span>
+                30
+              </span>
+            </button>
+          </td>
+          <td
+            class="p-0 text-center"
+          >
+            <button
+              class="flex h-6 w-6 flex-col items-center justify-center rounded-full text-[11px] transition-colors bg-primary text-primary-content font-normal"
+            >
+              <span>
+                31
+              </span>
+            </button>
+          </td>
+          <td
+            class="p-0 text-center"
+          >
+            <button
+              class="flex h-6 w-6 flex-col items-center justify-center rounded-full text-[11px] transition-colors bg-primary text-primary-content font-normal"
+            >
+              <span>
+                1
+              </span>
+            </button>
+          </td>
+          <td
+            class="p-0 text-center"
+          >
+            <button
+              class="flex h-6 w-6 flex-col items-center justify-center rounded-full text-[11px] transition-colors hover:bg-base-300"
+            >
+              <span>
+                2
+              </span>
+            </button>
+          </td>
+          <td
+            class="p-0 text-center"
+          >
+            <button
+              class="flex h-6 w-6 flex-col items-center justify-center rounded-full text-[11px] transition-colors hover:bg-base-300"
+            >
+              <span>
+                3
+              </span>
+            </button>
+          </td>
+          <td
+            class="p-0 text-center"
+          >
+            <button
+              class="flex h-6 w-6 flex-col items-center justify-center rounded-full text-[11px] transition-colors hover:bg-base-300"
+            >
+              <span>
+                4
+              </span>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="text-base-content/25 py-0.5 text-center text-[10px]"
+          >
+            27
+          </td>
+          <td
+            class="p-0 text-center"
+          >
+            <button
+              class="flex h-6 w-6 flex-col items-center justify-center rounded-full text-[11px] transition-colors hover:bg-base-300"
+            >
+              <span>
+                5
+              </span>
+            </button>
+          </td>
+          <td
+            class="p-0 text-center"
+          >
+            <button
+              class="flex h-6 w-6 flex-col items-center justify-center rounded-full text-[11px] transition-colors hover:bg-base-300"
+            >
+              <span>
+                6
+              </span>
+            </button>
+          </td>
+          <td
+            class="p-0 text-center"
+          >
+            <button
+              class="flex h-6 w-6 flex-col items-center justify-center rounded-full text-[11px] transition-colors hover:bg-base-300"
+            >
+              <span>
+                7
+              </span>
+            </button>
+          </td>
+          <td
+            class="p-0 text-center"
+          >
+            <button
+              class="flex h-6 w-6 flex-col items-center justify-center rounded-full text-[11px] transition-colors bg-base-content/10 text-base-content/60 font-normal"
+            >
+              <span>
+                8
+              </span>
+            </button>
+          </td>
+          <td
+            class="p-0 text-center"
+          >
+            <button
+              class="flex h-6 w-6 flex-col items-center justify-center rounded-full text-[11px] transition-colors hover:bg-base-300"
+            >
+              <span>
+                9
+              </span>
+            </button>
+          </td>
+          <td
+            class="p-0 text-center"
+          >
+            <button
+              class="flex h-6 w-6 flex-col items-center justify-center rounded-full text-[11px] transition-colors hover:bg-base-300"
+            >
+              <span>
+                10
+              </span>
+            </button>
+          </td>
+          <td
+            class="p-0 text-center"
+          >
+            <button
+              class="flex h-6 w-6 flex-col items-center justify-center rounded-full text-[11px] transition-colors hover:bg-base-300"
+            >
+              <span>
+                11
+              </span>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;

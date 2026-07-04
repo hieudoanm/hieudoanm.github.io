@@ -2,14 +2,18 @@ import { Breadcrumbs } from '@hieudoanm.github.io/components/pages/app/football/
 import { PageHeader } from '@hieudoanm.github.io/components/pages/app/football/components/PageHeader';
 import { PageShell } from '@hieudoanm.github.io/components/pages/app/football/components/PageShell';
 import { GroupStagePage } from '@hieudoanm.github.io/components/pages/app/football/pages/group-stage';
-import type { WorldCupYearData } from '@hieudoanm.github.io/components/pages/app/football/data/world-cup/types';
-import { ALL_WORLD_CUPS } from '@hieudoanm.github.io/components/pages/app/football/data/world-cup';
-import { ALL_EUROS } from '@hieudoanm.github.io/components/pages/app/football/data/euro';
-import { ALL_COPA } from '@hieudoanm.github.io/components/pages/app/football/data/copa';
-import { ALL_AFCON } from '@hieudoanm.github.io/components/pages/app/football/data/afcon';
-import { ALL_AFC } from '@hieudoanm.github.io/components/pages/app/football/data/afc';
-import { ALL_ASEAN } from '@hieudoanm.github.io/components/pages/app/football/data/asean';
-import { ALL_CONCACAF } from '@hieudoanm.github.io/components/pages/app/football/data/concacaf';
+import type { WorldCupYearData } from '@hieudoanm.github.io/components/pages/app/football/data/international/world-cup/types';
+import { ALL_WORLD_CUPS } from '@hieudoanm.github.io/components/pages/app/football/data/international/world-cup';
+import { ALL_EUROS } from '@hieudoanm.github.io/components/pages/app/football/data/international/euro';
+import { ALL_COPA } from '@hieudoanm.github.io/components/pages/app/football/data/international/copa';
+import { ALL_AFCON } from '@hieudoanm.github.io/components/pages/app/football/data/international/afcon';
+import { ALL_AFC } from '@hieudoanm.github.io/components/pages/app/football/data/international/afc';
+import { ALL_ASEAN } from '@hieudoanm.github.io/components/pages/app/football/data/international/asean';
+import { ALL_CONCACAF } from '@hieudoanm.github.io/components/pages/app/football/data/international/concacaf';
+import { ALL_PREMIER_LEAGUE } from '@hieudoanm.github.io/components/pages/app/football/data/club/premier-league';
+import { ALL_LA_LIGA } from '@hieudoanm.github.io/components/pages/app/football/data/club/la-liga';
+import { ALL_BUNDESLIGA } from '@hieudoanm.github.io/components/pages/app/football/data/club/bundesliga';
+import { ALL_CHAMPIONS_LEAGUE } from '@hieudoanm.github.io/components/pages/app/football/data/club/champions-league';
 import {
   TOURNAMENT_CONFIG,
   isValidTournament,
@@ -26,6 +30,10 @@ const ALL_DATA: Record<TournamentSlug, WorldCupYearData[]> = {
   afc: ALL_AFC as unknown as WorldCupYearData[],
   concacaf: ALL_CONCACAF as unknown as WorldCupYearData[],
   asean: ALL_ASEAN as unknown as WorldCupYearData[],
+  'premier-league': ALL_PREMIER_LEAGUE as unknown as WorldCupYearData[],
+  'la-liga': ALL_LA_LIGA as unknown as WorldCupYearData[],
+  bundesliga: ALL_BUNDESLIGA as unknown as WorldCupYearData[],
+  'champions-league': ALL_CHAMPIONS_LEAGUE as unknown as WorldCupYearData[],
 };
 
 const TournamentYearPage: FC<{
@@ -94,6 +102,18 @@ export const getStaticPaths: GetStaticPaths = () => {
     })),
     ...ALL_ASEAN.map((c) => ({
       params: { tournament: 'asean', year: String(c.year) },
+    })),
+    ...ALL_PREMIER_LEAGUE.map((c) => ({
+      params: { tournament: 'premier-league', year: String(c.year) },
+    })),
+    ...ALL_LA_LIGA.map((c) => ({
+      params: { tournament: 'la-liga', year: String(c.year) },
+    })),
+    ...ALL_BUNDESLIGA.map((c) => ({
+      params: { tournament: 'bundesliga', year: String(c.year) },
+    })),
+    ...ALL_CHAMPIONS_LEAGUE.map((c) => ({
+      params: { tournament: 'champions-league', year: String(c.year) },
     })),
   ];
   return { paths, fallback: false };

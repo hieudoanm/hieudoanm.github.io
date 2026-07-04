@@ -2,5 +2,5 @@ export { BlogDate } from './BlogDate';
 export { ChatBubble } from './ChatBubble';
 export { ChatTimestamp } from './ChatTimestamp';
 export { Dropzone } from './Dropzone';
-export { ModalWrapper } from './ModalWrapper';
+export { FullScreen } from './FullScreen';
 export { TagBadge } from './TagBadge';

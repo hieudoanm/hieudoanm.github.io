@@ -1,0 +1,165 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`PrisonerDilemmaModal should render correctly 1`] = `
+<div>
+  <div
+    class="flex h-screen flex-col overflow-hidden"
+  >
+    <div
+      class="border-base-300 flex shrink-0 items-center justify-between border-b px-4 py-3"
+    >
+      <h2
+        class="text-sm font-normal tracking-tight"
+      >
+        Prisoner's Dilemma
+      </h2>
+      <button
+        class="btn btn-ghost btn-xs btn-square text-base opacity-60 hover:opacity-100"
+      >
+        ✕
+      </button>
+    </div>
+    <div
+      class="flex-1 overflow-y-auto p-8"
+    >
+      <div
+        class="flex flex-col gap-3 outline-none"
+        tabindex="0"
+      >
+        <div
+          class="flex items-center justify-between text-sm"
+        >
+          <span>
+            Round 
+            <strong>
+              1
+            </strong>
+             /
+             
+            10
+          </span>
+          <div
+            class="flex gap-3"
+          >
+            <span>
+              You: 
+              <strong>
+                0yr
+              </strong>
+            </span>
+            <span
+              class="opacity-60"
+            >
+              Bot: 
+              <strong>
+                0yr
+              </strong>
+            </span>
+          </div>
+        </div>
+        <div
+          class="border-base-300 overflow-hidden rounded-lg border text-center text-[10px]"
+        >
+          <div
+            class="border-base-300 bg-base-200 grid grid-cols-3 border-b font-normal"
+          >
+            <div
+              class="p-1"
+            />
+            <div
+              class="p-1"
+            >
+              🤝 Coop
+            </div>
+            <div
+              class="p-1"
+            >
+              🔪 Defect
+            </div>
+          </div>
+          <div
+            class="border-base-300 grid grid-cols-3 border-b"
+          >
+            <div
+              class="bg-base-200 p-1 font-normal"
+            >
+              🤝 Coop
+            </div>
+            <div
+              class="text-success p-1"
+            >
+              1yr, 1yr
+            </div>
+            <div
+              class="text-error p-1"
+            >
+              3yr, 0yr
+            </div>
+          </div>
+          <div
+            class="grid grid-cols-3"
+          >
+            <div
+              class="bg-base-200 p-1 font-normal"
+            >
+              🔪 Defect
+            </div>
+            <div
+              class="text-error p-1"
+            >
+              0yr, 3yr
+            </div>
+            <div
+              class="p-1"
+            >
+              2yr, 2yr
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex justify-center gap-3 py-4"
+        >
+          <button
+            class="btn btn-success btn-lg flex-col gap-0 px-6"
+          >
+            <span
+              class="text-2xl"
+            >
+              🤝
+            </span>
+            <span
+              class="text-xs"
+            >
+              Cooperate
+            </span>
+          </button>
+          <button
+            class="btn btn-error btn-lg flex-col gap-0 px-6"
+          >
+            <span
+              class="text-2xl"
+            >
+              🔪
+            </span>
+            <span
+              class="text-xs"
+            >
+              Defect
+            </span>
+          </button>
+        </div>
+        <p
+          class="text-center text-xs opacity-40"
+        >
+          C cooperate · D defect
+        </p>
+        <p
+          class="text-center text-xs opacity-40"
+        >
+          C cooperate · D defect · R reset · Esc close
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

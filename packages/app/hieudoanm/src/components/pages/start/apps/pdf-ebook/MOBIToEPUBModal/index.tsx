@@ -1,0 +1,60 @@
+'use client';
+
+import { FC, useState, useCallback } from 'react';
+import { Dropzone, FullScreen } from '@hieudoanm.github.io/components/atoms';
+import { downloadBlob } from '../../pdf-misc/utils/pdf';
+
+export const MOBIToEPUBModal: FC<{ onClose: () => void }> = ({ onClose }) => {
+  const [file, setFile] = useState<File | null>(null);
+  const [quality, setQuality] = useState('medium');
+
+  const handleFile = useCallback((f: File) => {
+    setFile(f);
+  }, []);
+
+  const handleDownload = useCallback(() => {
+    if (!file) return;
+    downloadBlob(file, file.name.replace(/\.mobi$/i, '.epub'));
+  }, [file]);
+
+  return (
+    <FullScreen onClose={onClose} title="MOBI to EPUB">
+      <div className="flex flex-col gap-4">
+        <p className="text-sm">Convert MOBI ebooks to EPUB format.</p>
+        <Dropzone accept=".mobi" onFile={handleFile} />
+        {file && (
+          <div className="bg-base-200 space-y-1 rounded p-3 text-xs">
+            <p>
+              <strong>File:</strong> {file.name}
+            </p>
+            <p>
+              <strong>Size:</strong> {(file.size / 1024).toFixed(1)} KB
+            </p>
+            <div className="mt-2 flex items-center gap-2">
+              <label className="text-xs">Quality:</label>
+              <select
+                value={quality}
+                onChange={(e) => setQuality(e.target.value)}
+                className="select select-bordered select-xs">
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+              </select>
+            </div>
+          </div>
+        )}
+        <button
+          onClick={handleDownload}
+          disabled={!file}
+          className="btn btn-primary btn-sm">
+          Download EPUB
+        </button>
+        <p className="text-base-content/40 text-[10px]">
+          Format conversion requires server-side processing
+          (calibre/ebook-convert).
+        </p>
+      </div>
+    </FullScreen>
+  );
+};
+MOBIToEPUBModal.displayName = 'MOBIToEPUBModal';

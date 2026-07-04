@@ -4,18 +4,22 @@ import { useMemo } from 'react';
 import { Breadcrumbs } from '../../components/Breadcrumbs';
 import { PageHeader } from '../../components/PageHeader';
 import { PageShell } from '../../components/PageShell';
-import { ALL_AFC } from '../../data/afc';
-import { ALL_AFCON } from '../../data/afcon';
-import { ALL_COPA } from '../../data/copa';
-import { ALL_EUROS } from '../../data/euro';
+import { ALL_AFC } from '../../data/international/afc';
+import { ALL_AFCON } from '../../data/international/afcon';
+import { ALL_COPA } from '../../data/international/copa';
+import { ALL_EUROS } from '../../data/international/euro';
 import type { TournamentSlug } from '../../data/tournament';
 import { TOURNAMENT_CONFIG } from '../../data/tournament';
-import { ALL_WORLD_CUPS } from '../../data/world-cup';
+import { ALL_WORLD_CUPS } from '../../data/international/world-cup';
 import { StatList } from '../years/StatList';
 import type { YearInfo } from '../years/YearCard';
 import { YearCard } from '../years/YearCard';
-import { ALL_ASEAN } from '../../data/asean';
-import { ALL_CONCACAF } from '../../data/concacaf';
+import { ALL_ASEAN } from '../../data/international/asean';
+import { ALL_CONCACAF } from '../../data/international/concacaf';
+import { ALL_PREMIER_LEAGUE } from '../../data/club/premier-league';
+import { ALL_LA_LIGA } from '../../data/club/la-liga';
+import { ALL_BUNDESLIGA } from '../../data/club/bundesliga';
+import { ALL_CHAMPIONS_LEAGUE } from '../../data/club/champions-league';
 
 const aggregateFn = (field: 'champion' | 'runnerUp') => (data: YearInfo[]) => {
   const counts: Record<string, { wins: number; years: number[] }> = {};
@@ -41,6 +45,10 @@ const ALL_DATA: Record<TournamentSlug, YearInfo[]> = {
   afc: ALL_AFC,
   concacaf: ALL_CONCACAF,
   asean: ALL_ASEAN,
+  'premier-league': ALL_PREMIER_LEAGUE,
+  'la-liga': ALL_LA_LIGA,
+  bundesliga: ALL_BUNDESLIGA,
+  'champions-league': ALL_CHAMPIONS_LEAGUE,
 };
 
 const HOST_LABEL: Record<TournamentSlug, string> = {
@@ -51,6 +59,10 @@ const HOST_LABEL: Record<TournamentSlug, string> = {
   afc: 'AFC Asian Cup',
   concacaf: 'CONCACAF Gold Cup',
   asean: 'ASEAN Championship',
+  'premier-league': 'English Premier League',
+  'la-liga': 'Spanish La Liga',
+  bundesliga: 'German Bundesliga',
+  'champions-league': 'UEFA Champions League',
 };
 
 const DESCRIPTION: Record<TournamentSlug, string> = {
@@ -63,6 +75,13 @@ const DESCRIPTION: Record<TournamentSlug, string> = {
   afc: 'Browse every edition of the AFC Asian Cup, from 1956 to 2024.',
   concacaf: 'Browse every edition of the CONCACAF Gold Cup, from 1963 to 2023.',
   asean: 'Browse every edition of the ASEAN Championship, from 1996 to 2024.',
+  'premier-league':
+    'Browse every season of the English Premier League, from 1992 to 2026.',
+  'la-liga': 'Browse every season of the Spanish La Liga, from 1997 to 2026.',
+  bundesliga:
+    'Browse every season of the German Bundesliga, from 1992 to 2026.',
+  'champions-league':
+    'Browse every season of the UEFA Champions League, from 1992 to 2026.',
 };
 
 export const YearsPage: FC<{ tournament?: TournamentSlug }> = ({

@@ -2,16 +2,20 @@ import type { FC } from 'react';
 
 import { Breadcrumbs } from '../../components/Breadcrumbs';
 import { PageShell } from '../../components/PageShell';
-import { ALL_AFC } from '../../data/afc';
-import { ALL_AFCON } from '../../data/afcon';
-import { ALL_ASEAN } from '../../data/asean';
-import { ALL_CONCACAF } from '../../data/concacaf';
-import { ALL_COPA } from '../../data/copa';
-import { ALL_EUROS } from '../../data/euro';
+import { ALL_AFC } from '../../data/international/afc';
+import { ALL_AFCON } from '../../data/international/afcon';
+import { ALL_ASEAN } from '../../data/international/asean';
+import { ALL_CONCACAF } from '../../data/international/concacaf';
+import { ALL_COPA } from '../../data/international/copa';
+import { ALL_EUROS } from '../../data/international/euro';
 import type { TournamentSlug } from '../../data/tournament';
 import { TOURNAMENT_CONFIG } from '../../data/tournament';
-import { ALL_WORLD_CUPS } from '../../data/world-cup';
-import type { KnockoutYearData } from '../../data/world-cup/types';
+import { ALL_WORLD_CUPS } from '../../data/international/world-cup';
+import { ALL_PREMIER_LEAGUE } from '../../data/club/premier-league';
+import { ALL_LA_LIGA } from '../../data/club/la-liga';
+import { ALL_BUNDESLIGA } from '../../data/club/bundesliga';
+import { ALL_CHAMPIONS_LEAGUE } from '../../data/club/champions-league';
+import type { KnockoutYearData } from '../../data/international/world-cup/types';
 import { BracketContent } from './components/BracketContent';
 
 const ALL_DATA: Record<TournamentSlug, { year: number }[]> = {
@@ -22,6 +26,10 @@ const ALL_DATA: Record<TournamentSlug, { year: number }[]> = {
   afc: ALL_AFC,
   concacaf: ALL_CONCACAF,
   asean: ALL_ASEAN,
+  'premier-league': ALL_PREMIER_LEAGUE,
+  'la-liga': ALL_LA_LIGA,
+  bundesliga: ALL_BUNDESLIGA,
+  'champions-league': ALL_CHAMPIONS_LEAGUE,
 };
 
 export const KnockOutPage: FC<{

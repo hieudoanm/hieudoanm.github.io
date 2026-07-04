@@ -1,8 +1,6 @@
-import { ComponentsTemplate } from '@hieudoanm.github.io/components/templates/shared/ComponentsTemplate';
-import { NextPage } from 'next';
+import { DaisyUIThemes } from '@hieudoanm.github.io/components/pages/components';
+import type { NextPage } from 'next';
 
-const ComponentsPage: NextPage = () => {
-  return <ComponentsTemplate />;
-};
+const ComponentsPage: NextPage = () => <DaisyUIThemes />;
 
 export default ComponentsPage;
