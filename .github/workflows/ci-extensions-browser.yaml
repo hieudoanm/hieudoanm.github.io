@@ -1,4 +1,4 @@
-name: CI - Extensions Browser
+name: CI - Extensions - Browser
 
 on:
   push:

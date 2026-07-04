@@ -1,0 +1,43 @@
+import type { FC } from 'react';
+import type { TemplateProps } from '../common';
+
+export const Mobile: FC<TemplateProps> = ({ data }) => {
+  const headline = (data.headline as string) ?? '';
+  const description = (data.description as string) ?? '';
+  const image = (data.image as string) ?? '';
+
+  return (
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center gap-3 p-6">
+      <div className="flex w-full flex-col gap-1">
+        <h2 className="text-base-content text-center text-base font-bold">
+          {headline}
+        </h2>
+        {description && (
+          <p className="text-base-content/70 text-center text-[10px] leading-relaxed">
+            {description}
+          </p>
+        )}
+      </div>
+      <div className="ring-base-300 flex w-36 flex-col items-center rounded-[2.5rem] ring-4">
+        <div className="bg-base-200 mt-2 h-5 w-20 rounded-full" />
+        {image ? (
+          <div className="flex w-full flex-1 flex-col overflow-hidden rounded-[2rem] px-1 pb-1">
+            <div className="aspect-[9/16] w-full overflow-hidden rounded-2xl">
+              <img src={image} alt="" className="h-full w-full object-cover" />
+            </div>
+          </div>
+        ) : (
+          <div className="flex w-full flex-1 flex-col px-2 pb-1">
+            <div className="bg-base-200 flex aspect-[9/16] w-full items-center justify-center rounded-2xl">
+              <span className="text-neutral/30 text-[6px] font-semibold tracking-widest uppercase">
+                Add image URL
+              </span>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+Mobile.displayName = 'Mobile';

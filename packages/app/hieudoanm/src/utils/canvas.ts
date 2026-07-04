@@ -30,44 +30,27 @@ const restoreGradients = (els: NodeListOf<HTMLElement>) => {
 export const download = async ({
   ref,
   output = '',
-  square = false,
   backgroundColor = '#ffffff',
+  scale = 2,
 }: {
   ref: RefObject<HTMLDivElement | null>;
   output: string;
-  square?: boolean;
   backgroundColor?: string;
+  scale?: number;
 }) => {
   if (!ref.current) return;
 
   const fixed = fixGradients(ref.current);
   await new Promise((resolve) => requestAnimationFrame(resolve));
   const canvas = await html2canvas(ref.current, {
-    scale: 2,
+    scale,
     useCORS: true,
     backgroundColor,
   });
 
   restoreGradients(fixed);
 
-  let finalCanvas = canvas;
-
-  if (square && canvas.width !== canvas.height) {
-    const size = Math.max(canvas.width, canvas.height);
-    finalCanvas = document.createElement('canvas');
-    finalCanvas.width = size;
-    finalCanvas.height = size;
-    const ctx = finalCanvas.getContext('2d')!;
-    ctx.fillStyle = backgroundColor;
-    ctx.fillRect(0, 0, size, size);
-    ctx.drawImage(
-      canvas,
-      (size - canvas.width) / 2,
-      (size - canvas.height) / 2
-    );
-  }
-
-  const dataURL = finalCanvas.toDataURL('image/png');
+  const dataURL = canvas.toDataURL('image/png');
   const link = document.createElement('a');
   link.href = dataURL;
   link.download = `${output}.png`;

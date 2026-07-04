@@ -1,0 +1,36 @@
+import type { FC } from 'react';
+import type { TemplateProps } from '../common';
+
+export const QandA: FC<TemplateProps> = ({ data }) => {
+  const question = (data.question as string) ?? '';
+  const answer = (data.answer as string) ?? '';
+  const category = (data.category as string) ?? '';
+
+  return (
+    <div className="bg-base-100 flex h-full w-full flex-col justify-center gap-6 p-10">
+      {category && (
+        <span className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
+          {category}
+        </span>
+      )}
+      <div className="rounded-box border-accent/20 border px-5 py-4">
+        <div className="mb-1 flex items-start gap-2">
+          <span className="text-accent flex-shrink-0 text-sm font-bold">
+            Q:
+          </span>
+          <p className="text-base-content text-sm font-semibold">{question}</p>
+        </div>
+      </div>
+      <div className="rounded-box bg-accent/5 px-5 py-4">
+        <div className="flex items-start gap-2">
+          <span className="text-base-content flex-shrink-0 text-sm font-bold">
+            A:
+          </span>
+          <p className="text-neutral text-sm leading-relaxed">{answer}</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+QandA.displayName = 'QandA';

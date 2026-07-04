@@ -1,0 +1,62 @@
+import type { FC } from 'react';
+import type { TemplateProps } from '../common';
+
+export const IngredientSpotlight: FC<TemplateProps> = ({ data }) => {
+  const name = (data.name as string) ?? '';
+  const benefits = (data.benefits as string[]) ?? [];
+  const uses = (data.uses as string[]) ?? [];
+  const imageUrl = (data.imageUrl as string) ?? '';
+
+  return (
+    <div className="bg-base-100 flex h-full w-full flex-col p-12">
+      <span className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
+        Ingredient Spotlight
+      </span>
+      <h1 className="text-base-content mt-2 text-2xl font-bold">{name}</h1>
+      {benefits.length > 0 && (
+        <div className="mt-5">
+          <span className="text-neutral text-[10px] font-bold tracking-widest uppercase">
+            Benefits
+          </span>
+          <div className="mt-2 flex flex-col gap-1.5">
+            {benefits.map((b, i) => (
+              <div key={i} className="flex items-start gap-2">
+                <svg
+                  className="text-accent mt-0.5 h-3.5 w-3.5 flex-shrink-0"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <p className="text-base-content text-xs">{b}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+      {uses.length > 0 && (
+        <div className="mt-5">
+          <span className="text-neutral text-[10px] font-bold tracking-widest uppercase">
+            Ways to Use
+          </span>
+          <div className="mt-2 flex flex-wrap gap-1.5">
+            {uses.map((u, i) => (
+              <span
+                key={i}
+                className="rounded-box bg-base-300 text-neutral px-2.5 py-1 text-[10px]">
+                {u}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+IngredientSpotlight.displayName = 'IngredientSpotlight';

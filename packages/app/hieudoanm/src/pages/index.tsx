@@ -1,4 +1,4 @@
-import { Start } from '@hieudoanm.github.io/components/pages/start/Start';
+import { Start } from '@hieudoanm.github.io/components/pages/start';
 import { NextPage } from 'next';
 
 const StartPage: NextPage = () => {

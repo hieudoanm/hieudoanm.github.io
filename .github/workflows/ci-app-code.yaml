@@ -1,4 +1,4 @@
-name: CI - Code
+name: CI - App - Code
 
 concurrency:
   group: ci-app-code-${{ github.ref }}
@@ -93,7 +93,7 @@ jobs:
           path: packages/app/code/src-tauri/target/release/bundle/
 
   android:
-    name: Android
+    name: Mobile (Android)
     needs: [build]
     runs-on: ubuntu-latest
     steps:
@@ -134,9 +134,26 @@ jobs:
       - name: Init Android Project
         working-directory: packages/app/code
         run: pnpm exec tauri android init
-      - name: Build Android APK
+      - name: Create Keystore
+        run: |
+          keytool -genkey -v -keystore release.keystore \
+            -alias release -keyalg RSA -keysize 2048 -validity 10000 \
+            -storepass android -keypass android \
+            -dname "CN=, OU=, O=, L=, S=, C="
+      - name: Build Android APK & AAB
         working-directory: packages/app/code
         run: pnpm exec tauri android build --ci
+      - name: Sign APK
+        run: |
+          ANDROID_BUILD_TOOLS=$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -1)
+          "$ANDROID_BUILD_TOOLS/apksigner" sign \
+            --ks release.keystore \
+            --ks-pass pass:android \
+            --key-pass pass:android \
+            --ks-key-alias release \
+            packages/app/code/src-tauri/gen/android/app/build/outputs/apk/universal/release/app-universal-release-unsigned.apk
+          mv packages/app/code/src-tauri/gen/android/app/build/outputs/apk/universal/release/app-universal-release-unsigned.apk \
+             packages/app/code/src-tauri/gen/android/app/build/outputs/apk/universal/release/app-universal-release.apk
       - name: Set Date
         id: date
         run: echo "value=$(date +'%Y_%m_%d')" >> "$GITHUB_OUTPUT"
@@ -180,8 +197,8 @@ jobs:
           done
       - name: Publish Release
         run: |
-          gh release delete code-latest --yes --cleanup-tag 2>/dev/null || true
-          gh release create code-latest \
+          gh release delete app-code-latest --yes --cleanup-tag 2>/dev/null || true
+          gh release create app-code-latest \
             --title "App - Code (latest)" \
             --notes "Auto-built from commit ${{ github.sha }}" \
             $(find release -type f | sort)
