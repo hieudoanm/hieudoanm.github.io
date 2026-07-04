@@ -1,14 +1,16 @@
 import type { FC } from 'react';
 
-import type { WorldCupYearData } from '../../data/world-cup/types';
+import type { WorldCupYearData } from '../../data/international/world-cup/types';
 import type { GroupData, TeamStanding } from './types';
-import { KNOCKOUT_DATA as WC_KNOCKOUT_DATA } from '../../data/world-cup/knock-out';
-import { KNOCKOUT_DATA as EURO_KNOCKOUT_DATA } from '../../data/euro';
-import { KNOCKOUT_DATA as COPA_KNOCKOUT_DATA } from '../../data/copa';
-import { KNOCKOUT_DATA as AFCON_KNOCKOUT_DATA } from '../../data/afcon';
-import { KNOCKOUT_DATA as AFC_KNOCKOUT_DATA } from '../../data/afc';
-import { KNOCKOUT_DATA as ASEA_KNOCKOUT_DATA } from '../../data/asean';
-import { KNOCKOUT_DATA as CONCACAF_KNOCKOUT_DATA } from '../../data/concacaf';
+import { KNOCKOUT_DATA as WC_KNOCKOUT_DATA } from '../../data/international/world-cup/knock-out';
+import { KNOCKOUT_DATA as EURO_KNOCKOUT_DATA } from '../../data/international/euro';
+import { KNOCKOUT_DATA as COPA_KNOCKOUT_DATA } from '../../data/international/copa';
+import { KNOCKOUT_DATA as AFCON_KNOCKOUT_DATA } from '../../data/international/afcon';
+import { KNOCKOUT_DATA as AFC_KNOCKOUT_DATA } from '../../data/international/afc';
+import { KNOCKOUT_DATA as ASEA_KNOCKOUT_DATA } from '../../data/international/asean';
+import { KNOCKOUT_DATA as CONCACAF_KNOCKOUT_DATA } from '../../data/international/concacaf';
+import { KNOCKOUT_DATA as PL_KNOCKOUT_DATA } from '../../data/club/premier-league';
+import { KNOCKOUT_DATA as CL_KNOCKOUT_DATA } from '../../data/club/champions-league';
 import type { TournamentSlug } from '../../data/tournament';
 import { KnockoutLink } from '../../components/KnockoutLink';
 
@@ -135,6 +137,8 @@ const KNOCKOUT_DATA_MAP: Record<TournamentSlug, Record<number, unknown>> = {
   afc: AFC_KNOCKOUT_DATA,
   concacaf: CONCACAF_KNOCKOUT_DATA,
   asean: ASEA_KNOCKOUT_DATA,
+  'premier-league': PL_KNOCKOUT_DATA,
+  'champions-league': CL_KNOCKOUT_DATA,
 };
 
 export const GroupStagePage: FC<{

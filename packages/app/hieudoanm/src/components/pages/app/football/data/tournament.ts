@@ -40,6 +40,16 @@ export const TOURNAMENT_CONFIG: Record<string, TournamentConfig> = {
     label: 'ASEAN Championship',
     hrefPrefix: '/app/football/asean',
   },
+  'premier-league': {
+    slug: 'premier-league',
+    label: 'Premier League',
+    hrefPrefix: '/app/football/premier-league',
+  },
+  'champions-league': {
+    slug: 'champions-league',
+    label: 'Champions League',
+    hrefPrefix: '/app/football/champions-league',
+  },
 };
 
 export type TournamentSlug = keyof typeof TOURNAMENT_CONFIG;
