@@ -7,6 +7,14 @@ const nextConfig: NextConfig = {
   reactCompiler: true,
   reactStrictMode: true,
   output: EXPORT ? 'export' : undefined,
+  turbopack: {
+    rules: {
+      '*.md': {
+        loaders: ['raw-loader'],
+        as: '*.js',
+      },
+    },
+  },
 };
 
 export default nextConfig;

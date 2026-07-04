@@ -1,0 +1,58 @@
+import type { FC } from 'react';
+import type { TemplateProps } from '../../common';
+
+interface Level {
+  label: string;
+  items: string[];
+}
+
+export const Pyramid: FC<TemplateProps> = ({ data }) => {
+  const title = (data.title as string) ?? 'Pyramid';
+  const text = (data.text as string) ?? '';
+  const levels = (data.levels as Level[]) ?? [
+    { label: 'Top', items: ['Most important'] },
+    { label: 'Upper', items: ['High priority', 'Key goals'] },
+    { label: 'Middle', items: ['Medium priority', 'Supporting tasks'] },
+    { label: 'Lower', items: ['Low priority', 'Nice to have'] },
+    { label: 'Base', items: ['Foundation', 'Basics'] },
+  ];
+
+  const colors = ['#ff0030', '#d90029', '#b30022', '#8c001b', '#660014'];
+
+  return (
+    <div className="bg-base-100 flex h-full w-full flex-col p-6">
+      <div className="mb-3 text-center">
+        <div className="text-base-content text-sm font-bold">{title}</div>
+        {text && <div className="text-neutral mt-1 text-xs">{text}</div>}
+      </div>
+      <div className="flex flex-1 flex-col items-center justify-center gap-1">
+        {levels.map((level, i) => {
+          const width = 30 + i * 16;
+          return (
+            <div key={i} className="flex w-full justify-center">
+              <div
+                className="flex flex-col items-center rounded px-3 py-2"
+                style={{
+                  width: `${width}%`,
+                  backgroundColor: colors[i % colors.length],
+                }}>
+                <span className="text-[10px] font-bold text-white/80">
+                  {level.label}
+                </span>
+                <div className="mt-1 flex flex-wrap justify-center gap-1">
+                  {level.items.map((item, j) => (
+                    <span key={j} className="text-[9px] font-medium text-white">
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+Pyramid.displayName = 'Pyramid';

@@ -1,6 +1,29 @@
 import { getRoutes } from '../..';
 import type { Route } from '../../types';
+import { errorSchema } from '../../types';
 import type { NextApiHandler } from 'next';
+
+const responseForStatus = (
+  description: string,
+  schema?: Record<string, unknown>
+) => {
+  const entry: Record<string, unknown> = { description };
+  if (schema) entry.content = { 'application/json': { schema } };
+  return entry;
+};
+
+const tagDescriptions: Record<string, string> = {
+  Metadata: 'Server metadata and introspection endpoints',
+  Utility: 'Generic utility endpoints (proxy, helpers)',
+};
+
+const methodToOpId = (method: string, path: string): string => {
+  const parts = path.replace(/^\/api\/rest\//, '').split('/');
+  const resource = parts.map((p) => p.replace(/[{}]/g, '')).join('-');
+  return (
+    method.toLowerCase() + resource.charAt(0).toUpperCase() + resource.slice(1)
+  );
+};
 
 const buildOpenApiSpec = (routes: Route[]): Record<string, unknown> => {
   const paths: Record<string, Record<string, unknown>> = {};
@@ -19,21 +42,41 @@ const buildOpenApiSpec = (routes: Route[]): Record<string, unknown> => {
 
     if (!paths[r.path]) paths[r.path] = {};
 
-    paths[r.path][r.method.toLowerCase()] = {
+    const methodEntry: Record<string, unknown> = {
+      operationId: methodToOpId(r.method, r.path),
       summary: r.description,
       tags: r.tags,
       parameters,
       responses: {
-        '200': { description: 'Success' },
-        '400': { description: 'Bad Request' },
-        '404': { description: 'Not Found' },
-        '405': { description: 'Method Not Allowed' },
-        '500': { description: 'Internal Server Error' },
+        '200': responseForStatus('Success', r.responseSchema),
+        '400': responseForStatus('Bad Request', {
+          $ref: '#/components/schemas/ApiError',
+        }),
+        '404': responseForStatus('Not Found', {
+          $ref: '#/components/schemas/ApiError',
+        }),
+        '405': responseForStatus('Method Not Allowed', {
+          $ref: '#/components/schemas/ApiError',
+        }),
+        '500': responseForStatus('Internal Server Error', {
+          $ref: '#/components/schemas/ApiError',
+        }),
       },
     };
+
+    if (r.requestBody) {
+      methodEntry.requestBody = {
+        content: { 'application/json': { schema: r.requestBody } },
+      };
+    }
+
+    paths[r.path][r.method.toLowerCase()] = methodEntry;
   }
 
-  const tags = Array.from(tagSet).map((name) => ({ name }));
+  const tags = Array.from(tagSet).map((name) => ({
+    name,
+    description: tagDescriptions[name] ?? '',
+  }));
 
   return {
     openapi: '3.0.3',
@@ -41,10 +84,30 @@ const buildOpenApiSpec = (routes: Route[]): Record<string, unknown> => {
       title: 'REST API',
       version: '1.0.0',
       description: "Hieu Doan's personal REST API",
+      contact: {
+        name: 'Hieu Doan',
+        url: 'https://hieudoanm.vercel.app',
+      },
+      license: {
+        name: 'GPL-3.0',
+        url: 'https://opensource.org/licenses/GPL-3.0',
+      },
     },
-    servers: [{ url: '/api/rest' }],
+    servers: [{ url: '/api/rest', description: 'REST API base path' }],
     tags,
     paths,
+    components: {
+      schemas: {
+        ApiError: {
+          ...errorSchema,
+          description: 'Standard error response for 4xx and 5xx',
+        },
+      },
+    },
+    externalDocs: {
+      description: 'Project documentation',
+      url: 'https://hieudoanm.vercel.app/api/rest/docs',
+    },
   };
 };
 
@@ -86,7 +149,7 @@ export const docs: Route = {
   method: 'GET',
   path: '/api/rest/docs',
   description: 'OpenAPI Swagger documentation',
-  tags: ['System'],
+  tags: ['Metadata'],
   parameters: [
     {
       name: 'format',

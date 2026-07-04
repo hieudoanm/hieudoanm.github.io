@@ -1,0 +1,76 @@
+import type { FC } from 'react';
+import type { TemplateProps } from '../../common';
+
+const PAL = ['bg-primary', 'bg-secondary', 'bg-accent', 'bg-neutral'];
+const R = 80;
+const C = 2 * Math.PI * R;
+
+export const DonutChart: FC<TemplateProps> = ({ data }) => {
+  const headline = (data.headline as string) ?? '';
+  const input = (data.segments as { label: string; pct: number }[]) ?? [];
+  const list =
+    input.length > 0
+      ? input
+      : [
+          { label: 'Chrome', pct: 65 },
+          { label: 'Firefox', pct: 18 },
+          { label: 'Safari', pct: 12 },
+          { label: 'Other', pct: 5 },
+        ];
+  const total = list.reduce((sum, s) => sum + s.pct, 0);
+  let off = 0;
+
+  return (
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-10">
+      <h1 className="text-base-content mb-8 text-center text-3xl font-bold tracking-tight">
+        {headline || 'Market Share'}
+      </h1>
+      <div className="relative">
+        <svg width={200} height={200}>
+          {list.map((seg, i) => {
+            const d = (seg.pct / total) * C;
+            const el = (
+              <circle
+                key={i}
+                cx={100}
+                cy={100}
+                r={R}
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={24}
+                strokeDasharray={`${d} ${C - d}`}
+                strokeDashoffset={-off}
+                className={PAL[i % PAL.length]}
+                strokeLinecap="round"
+                transform="rotate(-90 100 100)"
+              />
+            );
+            off += d;
+            return el;
+          })}
+        </svg>
+        <div className="absolute inset-0 flex flex-col items-center justify-center">
+          <span className="text-base-content text-3xl font-black">
+            {total}%
+          </span>
+          <span className="text-neutral text-xs">Total</span>
+        </div>
+      </div>
+      <div className="mt-8 flex flex-wrap justify-center gap-4">
+        {list.map((seg, i) => (
+          <div key={i} className="flex items-center gap-2">
+            <span
+              className={`inline-block h-3 w-3 rounded-full ${PAL[i % PAL.length]}`}
+            />
+            <span className="text-base-content text-xs font-medium">
+              {seg.label}
+            </span>
+            <span className="text-primary text-xs font-bold">{seg.pct}%</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+DonutChart.displayName = 'DonutChart';

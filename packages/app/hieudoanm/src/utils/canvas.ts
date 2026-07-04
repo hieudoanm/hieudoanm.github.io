@@ -4,7 +4,7 @@ import type { RefObject } from 'react';
 const GRADIENT_RE =
   /\bbg-gradient-to-[a-z]+\s+(?:from-[^\s]+(?:\/\d+)?\s+)?(?:via-[^\s]+(?:\/\d+)?\s+)?to-[^\s]+(?:\/\d+)?\b/g;
 
-const fixGradients = (root: HTMLElement) => {
+export const fixGradients = (root: HTMLElement) => {
   const els = root.querySelectorAll<HTMLElement>(
     '.bg-clip-text.text-transparent'
   );
@@ -17,7 +17,7 @@ const fixGradients = (root: HTMLElement) => {
   return els;
 };
 
-const restoreGradients = (els: NodeListOf<HTMLElement>) => {
+export const restoreGradients = (els: NodeListOf<HTMLElement>) => {
   els.forEach((el) => {
     const orig = el.dataset.opencodeOrigClass;
     if (orig) {
@@ -27,47 +27,55 @@ const restoreGradients = (els: NodeListOf<HTMLElement>) => {
   });
 };
 
+export const preloadBackgroundImages = async (root: HTMLElement) => {
+  const elements = root.querySelectorAll<HTMLElement>('*');
+  const urls: string[] = [];
+  elements.forEach((el) => {
+    const bg = getComputedStyle(el).backgroundImage;
+    if (bg && bg !== 'none') {
+      const match = bg.match(/url\(["']?(.*?)["']?\)/);
+      if (match?.[1]) urls.push(match[1]);
+    }
+  });
+  await Promise.all(
+    urls.map(
+      (url) =>
+        new Promise<void>((resolve) => {
+          const img = new Image();
+          img.crossOrigin = 'anonymous';
+          img.onload = () => resolve();
+          img.onerror = () => resolve();
+          img.src = url;
+        })
+    )
+  );
+};
+
 export const download = async ({
   ref,
   output = '',
-  square = false,
   backgroundColor = '#ffffff',
+  scale = 2,
 }: {
   ref: RefObject<HTMLDivElement | null>;
   output: string;
-  square?: boolean;
   backgroundColor?: string;
+  scale?: number;
 }) => {
   if (!ref.current) return;
 
+  await preloadBackgroundImages(ref.current);
   const fixed = fixGradients(ref.current);
   await new Promise((resolve) => requestAnimationFrame(resolve));
   const canvas = await html2canvas(ref.current, {
-    scale: 2,
+    scale,
     useCORS: true,
     backgroundColor,
   });
 
   restoreGradients(fixed);
 
-  let finalCanvas = canvas;
-
-  if (square && canvas.width !== canvas.height) {
-    const size = Math.max(canvas.width, canvas.height);
-    finalCanvas = document.createElement('canvas');
-    finalCanvas.width = size;
-    finalCanvas.height = size;
-    const ctx = finalCanvas.getContext('2d')!;
-    ctx.fillStyle = backgroundColor;
-    ctx.fillRect(0, 0, size, size);
-    ctx.drawImage(
-      canvas,
-      (size - canvas.width) / 2,
-      (size - canvas.height) / 2
-    );
-  }
-
-  const dataURL = finalCanvas.toDataURL('image/png');
+  const dataURL = canvas.toDataURL('image/png');
   const link = document.createElement('a');
   link.href = dataURL;
   link.download = `${output}.png`;

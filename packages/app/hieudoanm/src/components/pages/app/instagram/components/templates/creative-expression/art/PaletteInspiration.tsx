@@ -1,0 +1,56 @@
+import type { FC } from 'react';
+import type { TemplateProps } from '../../common';
+
+interface PaletteColor {
+  name: string;
+  hex: string;
+}
+
+export const PaletteInspiration: FC<TemplateProps> = ({ data }) => {
+  const title = (data.title as string) ?? 'Palette Inspiration';
+  const description = (data.description as string) ?? '';
+  const palette = (data.palette as PaletteColor[]) ?? [
+    { name: 'Sunset', hex: '#f97316' },
+    { name: 'Coral', hex: '#fb7185' },
+    { name: 'Lavender', hex: '#a78bfa' },
+    { name: 'Sky', hex: '#38bdf8' },
+    { name: 'Sage', hex: '#86efac' },
+  ];
+  const mood = (data.mood as string) ?? '';
+
+  return (
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
+      <h1 className="text-base-content mb-2 text-2xl font-black tracking-tight">
+        {title}
+      </h1>
+      {description && (
+        <p className="text-neutral mb-6 max-w-sm text-sm leading-relaxed">
+          {description}
+        </p>
+      )}
+      <div className="mb-6 flex w-full items-center justify-center gap-3">
+        {palette.map((c) => (
+          <div key={c.name} className="flex flex-col items-center gap-2">
+            <div
+              className="h-14 w-14 rounded-xl shadow-md ring-1 ring-black/10"
+              style={{ backgroundColor: c.hex }}
+            />
+            <span className="text-base-content text-[11px] font-bold">
+              {c.name}
+            </span>
+            <span className="text-neutral text-[10px] tracking-wider uppercase">
+              {c.hex}
+            </span>
+          </div>
+        ))}
+      </div>
+      {mood && (
+        <span className="bg-primary/10 text-primary rounded-full px-4 py-1.5 text-xs font-semibold tracking-wider uppercase">
+          {mood}
+        </span>
+      )}
+    </div>
+  );
+};
+
+PaletteInspiration.displayName = 'PaletteInspiration';

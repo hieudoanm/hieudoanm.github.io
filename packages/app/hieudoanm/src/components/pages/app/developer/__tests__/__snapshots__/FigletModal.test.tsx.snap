@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`FigletModal should render 1`] = `
+<div>
+  <div
+    class="flex h-screen flex-col overflow-hidden"
+  >
+    <div
+      class="border-base-300 flex shrink-0 items-center justify-between border-b px-4 py-3"
+    >
+      <h2
+        class="text-sm font-normal tracking-tight"
+      >
+        FIGlet Generator
+      </h2>
+      <button
+        class="btn btn-ghost btn-xs btn-square text-base opacity-60 hover:opacity-100"
+      >
+        ✕
+      </button>
+    </div>
+    <div
+      class="flex flex-1 flex-col items-center justify-center overflow-y-auto p-8"
+    >
+      <div
+        class="rounded-box border-base-300 bg-base-200 border p-4"
+      >
+        <div>
+          <div
+            class="mb-3 flex gap-2"
+          >
+            <input
+              class="input input-bordered flex-1 font-mono"
+              maxlength="20"
+              placeholder="Type something…"
+              type="text"
+              value="Hello, World!"
+            />
+            <select
+              class="select select-bordered"
+            >
+              <option
+                value="Standard"
+              >
+                Standard
+              </option>
+              <option
+                value="Block"
+              >
+                Block
+              </option>
+              <option
+                value="Small"
+              >
+                Small
+              </option>
+              <option
+                value="Banner"
+              >
+                Banner
+              </option>
+            </select>
+          </div>
+          <div
+            class="border-base-300 mb-4 flex flex-wrap border-b"
+          >
+            <button
+              class="border-b-2 px-3 py-2 text-sm transition-colors border-primary text-primary"
+            >
+              Standard
+            </button>
+            <button
+              class="border-b-2 px-3 py-2 text-sm transition-colors text-base-content/40 border-transparent"
+            >
+              Block
+            </button>
+            <button
+              class="border-b-2 px-3 py-2 text-sm transition-colors text-base-content/40 border-transparent"
+            >
+              Small
+            </button>
+            <button
+              class="border-b-2 px-3 py-2 text-sm transition-colors text-base-content/40 border-transparent"
+            >
+              Banner
+            </button>
+          </div>
+          <div
+            class="bg-base-200 mb-3 overflow-x-auto rounded-xl p-4"
+          >
+            <pre
+              class="text-base-content/80 font-mono text-xs leading-tight whitespace-pre"
+            >
+              [Standard] Hello, World!
+            </pre>
+          </div>
+          <div
+            class="mb-3 flex items-center justify-between text-xs opacity-40"
+          >
+            <span>
+              13
+              /20 chars · letters, digits, punctuation supported
+            </span>
+            <span>
+              Rendered in 
+              Standard
+            </span>
+          </div>
+          <div
+            class="flex gap-2"
+          >
+            <button
+              class="btn btn-sm flex-1 btn-primary"
+            >
+              📋 Copy ASCII
+            </button>
+            <button
+              class="btn btn-ghost btn-sm"
+            >
+              Clear
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

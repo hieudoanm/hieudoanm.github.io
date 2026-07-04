@@ -8,14 +8,9 @@ interface AppDef {
 
 const APPS: AppDef[] = [
   {
-    label: 'Attractors',
-    description: 'Strange attractors visualization',
-    href: '/app/attractors',
-  },
-  {
-    label: 'Chess',
-    description: 'Chess board and game analysis',
-    href: '/app/chess',
+    label: 'Instagram',
+    description: 'Create square infographic images for Instagram',
+    href: '/app/instagram',
   },
   {
     label: 'Football',

@@ -1,0 +1,53 @@
+import type { FC } from 'react';
+import type { TemplateProps } from '../../common';
+
+export const BudgetTracker: FC<TemplateProps> = ({ data }) => {
+  const title = (data.title as string) ?? '';
+  const income = (data.income as string) ?? '';
+  const expenses = (data.expenses as string) ?? '';
+  const savings = (data.savings as string) ?? '';
+  const period = (data.period as string) ?? '';
+
+  const incomeNum = parseFloat(income.replace(/[^0-9.]/g, '')) || 1;
+  const expensesNum = parseFloat(expenses.replace(/[^0-9.]/g, '')) || 0;
+  const savingsNum = parseFloat(savings.replace(/[^0-9.]/g, '')) || 0;
+  const total = incomeNum + expensesNum + savingsNum || 1;
+
+  return (
+    <div className="bg-base-100 flex h-full w-full flex-col p-12">
+      <div className="flex items-center justify-between">
+        <h1 className="text-base-content text-lg font-bold">{title}</h1>
+        {period && (
+          <span className="text-neutral text-[10px] font-medium">{period}</span>
+        )}
+      </div>
+      <div className="mt-6 flex flex-col gap-4">
+        {[
+          { label: 'Income', value: income, color: 'bg-accent' },
+          { label: 'Expenses', value: expenses, color: 'bg-base-300' },
+          { label: 'Savings', value: savings, color: 'bg-accent/40' },
+        ].map((item) => {
+          const val = parseFloat(item.value.replace(/[^0-9.]/g, '')) || 0;
+          return (
+            <div key={item.label}>
+              <div className="mb-1 flex justify-between">
+                <span className="text-neutral text-xs">{item.label}</span>
+                <span className="text-base-content text-xs font-semibold">
+                  {item.value}
+                </span>
+              </div>
+              <div className="bg-base-300 h-2 w-full overflow-hidden rounded-full">
+                <div
+                  className={`h-full rounded-full transition-all ${item.color}`}
+                  style={{ width: `${(val / incomeNum) * 100}%` }}
+                />
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+BudgetTracker.displayName = 'BudgetTracker';

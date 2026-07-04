@@ -1,4 +1,4 @@
-name: CI - App
+name: CI - App - Hieu Doan
 
 concurrency:
   group: ci-app-hieudoanm-${{ github.ref }}
@@ -30,7 +30,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v6.0.8
         with:
-          version: '11.9.0'
+          version: '11.11.0'
       - name: Install Node.js
         uses: actions/setup-node@v6.4.0
         with:
@@ -64,7 +64,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v6.0.8
         with:
-          version: '11.9.0'
+          version: '11.11.0'
       - name: Install Node.js
         uses: actions/setup-node@v6.4.0
         with:
@@ -131,8 +131,8 @@ jobs:
           done
       - name: Publish Release
         run: |
-          gh release delete app-latest --yes --cleanup-tag 2>/dev/null || true
-          gh release create app-latest \
+          gh release delete app-hieudoanm-latest --yes --cleanup-tag 2>/dev/null || true
+          gh release create app-hieudoanm-latest \
             --title "App - Hieu Doan (latest)" \
             --notes "Auto-built apps from commit ${{ github.sha }}" \
             $(find release -type f | sort)

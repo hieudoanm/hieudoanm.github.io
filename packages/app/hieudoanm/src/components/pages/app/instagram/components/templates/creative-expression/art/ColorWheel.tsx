@@ -1,0 +1,57 @@
+import type { FC } from 'react';
+import type { TemplateProps } from '../../common';
+
+interface ColorEntry {
+  name: string;
+  hex: string;
+  role: string;
+}
+
+export const ColorWheel: FC<TemplateProps> = ({ data }) => {
+  const title = (data.title as string) ?? 'Color Theory';
+  const description = (data.description as string) ?? '';
+  const colors = (data.colors as ColorEntry[]) ?? [
+    { name: 'Primary', hex: '#ef4444', role: 'Base' },
+    { name: 'Secondary', hex: '#f97316', role: 'Mix' },
+    { name: 'Tertiary', hex: '#eab308', role: 'Blend' },
+    { name: 'Complement', hex: '#22c55e', role: 'Opposite' },
+    { name: 'Neutral', hex: '#6b7280', role: 'Balance' },
+  ];
+  const tip = (data.tip as string) ?? '';
+
+  return (
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
+      <h1 className="text-base-content mb-2 text-2xl font-black tracking-tight">
+        {title}
+      </h1>
+      {description && (
+        <p className="text-neutral mb-6 max-w-sm text-sm leading-relaxed">
+          {description}
+        </p>
+      )}
+      <div className="mb-6 flex w-full items-center justify-center gap-4">
+        {colors.map((c) => (
+          <div key={c.name} className="flex flex-col items-center gap-2">
+            <div
+              className="h-16 w-16 rounded-full shadow-md ring-2 ring-black/10"
+              style={{ backgroundColor: c.hex }}
+            />
+            <span className="text-base-content text-[11px] font-bold">
+              {c.name}
+            </span>
+            <span className="text-neutral text-[10px] tracking-wider uppercase">
+              {c.role}
+            </span>
+          </div>
+        ))}
+      </div>
+      {tip && (
+        <div className="bg-primary/10 text-primary rounded-lg px-4 py-2 text-xs font-medium">
+          {tip}
+        </div>
+      )}
+    </div>
+  );
+};
+
+ColorWheel.displayName = 'ColorWheel';

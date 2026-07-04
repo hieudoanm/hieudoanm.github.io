@@ -1,22 +1,13 @@
-import type { NextApiHandler, NextApiRequest, NextApiResponse } from 'next';
-import { getHandler } from '../../../server/rest';
+import { getHandler } from '@hieudoanm.github.io/server/rest';
+import type { NextApiHandler } from 'next';
 
-const handler: NextApiHandler = (req: NextApiRequest, res: NextApiResponse) => {
-  const { endpoint: ep } = req.query;
-
-  if (typeof ep !== 'string' || !ep) {
-    res.status(400).json({ error: 'Endpoint name required' });
-    return;
-  }
-
+const handler: NextApiHandler = async (req, res) => {
+  const ep = req.query.endpoint as string;
   const fn = getHandler(ep);
-
   if (!fn) {
-    res.status(404).json({ error: `Unknown endpoint '${ep}'` });
-    return;
+    return res.status(404).json({ error: `Unknown endpoint '${ep}'` });
   }
-
-  return fn(req, res);
+  await fn(req, res);
 };
 
 export default handler;

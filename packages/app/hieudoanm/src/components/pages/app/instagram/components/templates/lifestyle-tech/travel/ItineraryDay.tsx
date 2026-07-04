@@ -1,0 +1,60 @@
+import type { FC } from 'react';
+import type { TemplateProps } from '../../common';
+
+interface ItineraryItem {
+  time: string;
+  activity: string;
+  location?: string;
+}
+
+export const ItineraryDay: FC<TemplateProps> = ({ data }) => {
+  const title = (data.title as string) ?? 'Day Trip';
+  const day = (data.day as string) ?? '1';
+  const date = (data.date as string) ?? '';
+  const items = (data.items as ItineraryItem[]) ?? [
+    { time: '09:00', activity: 'Breakfast', location: 'Cafe Mocha' },
+    { time: '11:00', activity: 'Museum Visit', location: 'City Museum' },
+    { time: '13:00', activity: 'Lunch', location: 'Local Bistro' },
+  ];
+
+  return (
+    <div className="bg-base-100 flex h-full w-full p-6">
+      <div className="mr-6 flex flex-col items-center">
+        <div className="bg-primary text-primary-content flex h-12 w-12 items-center justify-center rounded-full text-lg font-black">
+          {day}
+        </div>
+      </div>
+      <div className="flex flex-1 flex-col">
+        {date && <p className="text-neutral mb-0.5 text-xs">{date}</p>}
+        <h1 className="text-base-content mb-4 text-lg font-bold">{title}</h1>
+        <div className="flex flex-1 flex-col">
+          {items.map((item, i) => (
+            <div key={i} className="flex items-start gap-3">
+              <div className="flex flex-col items-center">
+                <span className="bg-primary/10 text-primary rounded-full px-2 py-0.5 text-xs font-bold">
+                  {item.time}
+                </span>
+                {i < items.length - 1 && (
+                  <div
+                    className="border-base-300 border-l-2"
+                    style={{ height: '100%' }}
+                  />
+                )}
+              </div>
+              <div className="mb-3">
+                <p className="text-base-content text-sm font-medium">
+                  {item.activity}
+                </p>
+                {item.location && (
+                  <p className="text-neutral text-[10px]">{item.location}</p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+ItineraryDay.displayName = 'ItineraryDay';

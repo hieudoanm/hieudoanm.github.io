@@ -228,7 +228,7 @@ export const StoreItemTemplate: FC<{
             </h1>
 
             <div className="mb-4 flex items-center gap-3">
-              <StarRating rating={product.rating} size="md" />
+              <StarRating rating={product.rating} />
               <span className="text-base-content/40 text-sm">
                 ({product.reviewCount} reviews)
               </span>

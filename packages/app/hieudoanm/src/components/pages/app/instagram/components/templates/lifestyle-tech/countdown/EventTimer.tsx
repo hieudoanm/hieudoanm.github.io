@@ -1,0 +1,28 @@
+import type { FC } from 'react';
+import type { TemplateProps } from '../../common';
+
+export const EventTimer: FC<TemplateProps> = ({ data }) => {
+  const title = (data.title as string) ?? 'Event Timer';
+  const eventName = (data.eventName as string) ?? 'Annual Conference';
+  const timeLeft = (data.timeLeft as string) ?? '3d 12h 45m';
+  const date = (data.date as string) ?? 'Mar 15, 2025';
+  const text = (data.text as string) ?? '';
+
+  return (
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-6">
+      <div className="text-center">
+        <div className="text-neutral text-xs font-bold tracking-widest uppercase">
+          {title}
+        </div>
+        <div className="text-primary mt-3 text-4xl font-black">{timeLeft}</div>
+        <div className="text-base-content mt-2 text-lg font-bold">
+          {eventName}
+        </div>
+        <div className="text-neutral mt-1 text-xs">{date}</div>
+        {text && <p className="text-neutral mt-3 text-sm">{text}</p>}
+      </div>
+    </div>
+  );
+};
+
+EventTimer.displayName = 'EventTimer';

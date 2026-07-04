@@ -1,0 +1,77 @@
+import type { FC } from 'react';
+import type { TemplateProps } from '../../common';
+
+interface Player {
+  name: string;
+  number: number;
+  position: string;
+  rating?: number;
+}
+
+export const FormationCard: FC<TemplateProps> = ({ data }) => {
+  const title = (data.title as string) ?? '';
+  const formation = (data.formation as string) ?? '4-3-3';
+  const players = (data.players as Player[]) ?? [];
+
+  const positions = [
+    { top: '85%', left: '50%' },
+    { top: '70%', left: '20%' },
+    { top: '70%', left: '40%' },
+    { top: '70%', left: '60%' },
+    { top: '70%', left: '80%' },
+    { top: '50%', left: '25%' },
+    { top: '50%', left: '50%' },
+    { top: '50%', left: '75%' },
+    { top: '30%', left: '20%' },
+    { top: '30%', left: '50%' },
+    { top: '30%', left: '80%' },
+  ];
+
+  return (
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+      <div className="mb-3 text-center">
+        <div className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
+          Formation
+        </div>
+        {title && (
+          <div className="text-base-content mt-1 text-sm font-bold">
+            {title}
+          </div>
+        )}
+        <div className="text-primary mt-1 text-lg font-black">{formation}</div>
+      </div>
+      <div className="border-base-300 relative flex-1 overflow-hidden rounded border">
+        <div className="bg-success/10 absolute inset-0" />
+        <div className="bg-base-300 absolute top-1/2 left-0 h-px w-full opacity-50" />
+        <div className="border-base-300 absolute top-[25%] left-1/2 h-[50%] w-[40%] -translate-x-1/2 rounded-full border opacity-30" />
+        {players.slice(0, 11).map((player, i) => {
+          const pos = positions[i] ?? { top: '50%', left: '50%' };
+          return (
+            <div
+              key={i}
+              className="absolute flex flex-col items-center"
+              style={{
+                top: pos.top,
+                left: pos.left,
+                transform: 'translate(-50%, -50%)',
+              }}>
+              <div className="bg-primary text-primary-content flex h-6 w-6 items-center justify-center rounded-full text-[8px] font-bold shadow">
+                {player.number}
+              </div>
+              <div className="text-base-content mt-0.5 text-[7px] leading-none font-semibold">
+                {player.name}
+              </div>
+              {player.rating && (
+                <div className="text-accent text-[7px] font-bold">
+                  {player.rating}
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+FormationCard.displayName = 'FormationCard';

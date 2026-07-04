@@ -1,4 +1,4 @@
-name: CI - Server Backbone
+name: CI - Server - Backbone
 
 on:
   push:

@@ -1,8 +1,9 @@
 import { appRouter } from '@hieudoanm.github.io/server/trpc/routers/_app';
-import * as trpcNext from '@trpc/server/adapters/next';
-// export API handler
-// @link https://trpc.io/docs/v11/server/adapters
-export default trpcNext.createNextApiHandler({
+import { createNextApiHandler } from '@trpc/server/adapters/next';
+
+const handler = createNextApiHandler({
   router: appRouter,
   createContext: () => ({}),
 });
+
+export default handler;

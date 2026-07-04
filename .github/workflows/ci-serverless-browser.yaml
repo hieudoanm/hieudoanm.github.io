@@ -1,4 +1,4 @@
-name: CI - Serverless Browser
+name: CI - Serverless - Browser
 
 on:
   push:

@@ -1,5 +1,6 @@
 export interface TimeZone {
   label: string;
+  country: string;
   tz: string;
   lat: number;
   lon: number;
@@ -9,6 +10,7 @@ export interface TimeZone {
 export const timezones: TimeZone[] = [
   {
     label: 'Los Angeles',
+    country: 'United States',
     tz: 'America/Los_Angeles',
     lat: 34.0522,
     lon: -118.2437,
@@ -16,6 +18,7 @@ export const timezones: TimeZone[] = [
   },
   {
     label: 'Dallas',
+    country: 'United States',
     tz: 'America/Chicago',
     lat: 32.7767,
     lon: -96.797,
@@ -23,6 +26,7 @@ export const timezones: TimeZone[] = [
   },
   {
     label: 'New York',
+    country: 'United States',
     tz: 'America/New_York',
     lat: 40.7128,
     lon: -74.006,
@@ -30,6 +34,7 @@ export const timezones: TimeZone[] = [
   },
   {
     label: 'London',
+    country: 'United Kingdom',
     tz: 'Europe/London',
     lat: 51.5072,
     lon: -0.1276,
@@ -37,6 +42,7 @@ export const timezones: TimeZone[] = [
   },
   {
     label: 'Frankfurt',
+    country: 'Germany',
     tz: 'Europe/Berlin',
     lat: 50.1109,
     lon: 8.6821,
@@ -44,6 +50,7 @@ export const timezones: TimeZone[] = [
   },
   {
     label: 'Paris',
+    country: 'France',
     tz: 'Europe/Paris',
     lat: 48.8566,
     lon: 2.3522,
@@ -51,6 +58,7 @@ export const timezones: TimeZone[] = [
   },
   {
     label: 'Helsinki',
+    country: 'Finland',
     tz: 'Europe/Helsinki',
     lat: 60.1695,
     lon: 24.9354,
@@ -58,6 +66,7 @@ export const timezones: TimeZone[] = [
   },
   {
     label: 'Dubai',
+    country: 'United Arab Emirates',
     tz: 'Asia/Dubai',
     lat: 25.2048,
     lon: 55.2708,
@@ -65,6 +74,7 @@ export const timezones: TimeZone[] = [
   },
   {
     label: 'Bangkok',
+    country: 'Thailand',
     tz: 'Asia/Bangkok',
     lat: 13.7563,
     lon: 100.5018,
@@ -72,6 +82,7 @@ export const timezones: TimeZone[] = [
   },
   {
     label: 'Ho Chi Minh City',
+    country: 'Vietnam',
     tz: 'Asia/Ho_Chi_Minh',
     lat: 10.8231,
     lon: 106.6297,
@@ -79,6 +90,7 @@ export const timezones: TimeZone[] = [
   },
   {
     label: 'Singapore',
+    country: 'Singapore',
     tz: 'Asia/Singapore',
     lat: 1.3521,
     lon: 103.8198,
@@ -86,6 +98,7 @@ export const timezones: TimeZone[] = [
   },
   {
     label: 'Tokyo',
+    country: 'Japan',
     tz: 'Asia/Tokyo',
     lat: 35.6895,
     lon: 139.6917,
@@ -93,6 +106,7 @@ export const timezones: TimeZone[] = [
   },
   {
     label: 'Sydney',
+    country: 'Australia',
     tz: 'Australia/Sydney',
     lat: -33.8688,
     lon: 151.2093,
@@ -100,6 +114,7 @@ export const timezones: TimeZone[] = [
   },
   {
     label: 'Melbourne',
+    country: 'Australia',
     tz: 'Australia/Melbourne',
     lat: -37.8136,
     lon: 144.9631,

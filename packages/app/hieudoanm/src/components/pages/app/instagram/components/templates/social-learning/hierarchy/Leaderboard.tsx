@@ -1,0 +1,57 @@
+import type { FC } from 'react';
+import type { TemplateProps } from '../../common';
+
+interface Entry {
+  rank: number;
+  name: string;
+  score: string;
+  medal?: string;
+}
+
+const DEFAULT_MEDALS = ['🥇', '🥈', '🥉'];
+
+export const Leaderboard: FC<TemplateProps> = ({ data }) => {
+  const title = (data.title as string) ?? 'Leaderboard';
+  const entries = (data.entries as Entry[]) ?? [
+    { rank: 1, name: 'Alice', score: '2,450' },
+    { rank: 2, name: 'Bob', score: '2,120' },
+    { rank: 3, name: 'Carol', score: '1,890' },
+    { rank: 4, name: 'Dave', score: '1,650' },
+    { rank: 5, name: 'Eve', score: '1,420' },
+  ];
+
+  return (
+    <div className="bg-base-100 flex h-full w-full flex-col p-6">
+      <div className="text-base-content mb-4 text-center text-sm font-bold">
+        {title}
+      </div>
+      <div className="flex flex-1 flex-col gap-1">
+        {entries.map((entry, i) => {
+          const medal =
+            entry.medal ??
+            (entry.rank <= 3 ? DEFAULT_MEDALS[entry.rank - 1] : undefined);
+          return (
+            <div
+              key={i}
+              className={`flex items-center gap-3 rounded px-3 py-2 ${
+                i % 2 === 0 ? 'bg-base-200/50' : ''
+              }`}>
+              <span className="text-neutral w-5 text-right text-xs font-bold">
+                {entry.rank}
+              </span>
+              {medal && <span className="text-sm">{medal}</span>}
+              <span className="text-base-content flex-1 text-xs font-bold">
+                {entry.name}
+              </span>
+              <span className="text-primary text-xs font-bold">
+                {entry.score}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+Leaderboard.displayName = 'Leaderboard';

@@ -22,7 +22,6 @@ next-env.d.ts
 # production
 /build
 dist
-docs
 
 # mobile
 mobile/android

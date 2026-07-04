@@ -1,3 +1,8 @@
+declare module '*.md' {
+  const content: string;
+  export default content;
+}
+
 interface SpeechRecognitionEvent extends Event {
   resultIndex: number;
   results: SpeechRecognitionResultList;

@@ -1,0 +1,42 @@
+import type { FC } from 'react';
+import type { TemplateProps } from '../../common';
+
+export const PlayerStats: FC<TemplateProps> = ({ data }) => {
+  const name = (data.name as string) ?? 'Marcus Johnson';
+  const team = (data.team as string) ?? 'City FC';
+  const position = (data.position as string) ?? 'Forward';
+  const stats = (data.stats as { label: string; value: string }[]) ?? [
+    { label: 'Goals', value: '24' },
+    { label: 'Assists', value: '12' },
+    { label: 'Matches', value: '38' },
+    { label: 'Rating', value: '8.7' },
+  ];
+
+  return (
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
+      <div className="mb-6 text-center">
+        <h1 className="text-base-content text-2xl font-black">{name}</h1>
+        <div className="mt-1 flex items-center justify-center gap-2">
+          <span className="text-accent text-xs font-bold">{team}</span>
+          <span className="text-neutral text-[10px]">·</span>
+          <span className="text-neutral text-xs">{position}</span>
+        </div>
+      </div>
+
+      <div className="grid w-full grid-cols-2 gap-3">
+        {stats.map((s, i) => (
+          <div
+            key={i}
+            className="bg-base-200 rounded-box flex flex-col items-center py-4">
+            <span className="text-accent text-2xl font-black">{s.value}</span>
+            <span className="text-neutral mt-1 text-[10px] font-bold uppercase">
+              {s.label}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+PlayerStats.displayName = 'PlayerStats';
