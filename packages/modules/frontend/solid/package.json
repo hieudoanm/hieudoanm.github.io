@@ -31,7 +31,7 @@
     "@ton/crypto": "3.3.0",
     "@ton/ton": "16.3.0",
     "buffer": "6.0.3",
-    "solid-js": "1.9.13"
+    "solid-js": "1.9.14"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",

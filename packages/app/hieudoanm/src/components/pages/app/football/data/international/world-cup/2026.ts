@@ -155,6 +155,14 @@ const PREDETERMINED: Record<string, string> = {
   arg_cpv: 'arg',
   col_gha: 'col',
   // Round of 16
+  fra_par: 'fra',
+  can_mar: 'mar',
+  bra_nor: '',
+  eng_mex: '',
+  por_esp: '',
+  bel_usa: '',
+  arg_egy: '',
+  col_sui: '',
   // Quarter Final
   // Semi Final
   // Final
