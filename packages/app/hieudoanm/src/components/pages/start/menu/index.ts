@@ -1,7 +1,6 @@
 import { Tool } from '@hieudoanm.github.io/components/pages/start/components/cards/ToolCard';
 import { ModalId } from '../types';
 
-import { make as calculatorConvertMake } from './calculator-convert';
 import { make as calculatorFinanceMake } from './calculator-finance';
 import { make as clocksMake } from './clocks';
 import { make as dataCsvMake } from './data-csv';
@@ -68,7 +67,6 @@ import { make as writeSocialMake } from './write-social';
 export const makeTools = (
   open: (id: ModalId) => () => void
 ): Record<string, Tool[]> => ({
-  'calculator-convert': calculatorConvertMake(open),
   'calculator-finance': calculatorFinanceMake(open),
   clocks: clocksMake(open),
   'data-csv': dataCsvMake(open),

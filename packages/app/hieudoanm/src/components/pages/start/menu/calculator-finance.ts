@@ -1,8 +1,15 @@
-import { PiCurrencyDollar, PiFlag, PiMoney } from 'react-icons/pi';
+import { PiCurrencyDollar, PiDivide, PiFlag, PiMoney } from 'react-icons/pi';
 import { Tool } from '@hieudoanm.github.io/components/pages/start/components/cards/ToolCard';
 import { ModalId } from '../types';
 
 export const make = (open: (id: ModalId) => () => void): Tool[] => [
+  {
+    label: 'Calculator',
+    description: 'Arithmetic + Unit Converter',
+    tags: ['calculator', 'converter', 'arithmetic', 'unit-converter'],
+    icon: PiDivide,
+    onClick: open('calculator'),
+  },
   {
     label: 'Inflation',
     description: 'Calculator',

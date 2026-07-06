@@ -1,7 +1,6 @@
 import { ComponentType, lazy } from 'react';
 import { ModalId } from '../types';
 
-import { loaders as calculatorConvertLoaders } from './calculator-convert';
 import { loaders as calculatorFinanceLoaders } from './calculator-finance';
 import { loaders as clocksLoaders } from './clocks';
 import { loaders as dataCsvLoaders } from './data-csv';
@@ -69,7 +68,6 @@ const loaders: Record<
   string,
   () => Promise<{ default: ComponentType<{ onClose: () => void }> }>
 > = {
-  ...calculatorConvertLoaders,
   ...calculatorFinanceLoaders,
   ...clocksLoaders,
   ...dataCsvLoaders,
