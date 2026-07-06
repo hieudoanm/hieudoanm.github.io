@@ -164,6 +164,8 @@ const PREDETERMINED: Record<string, string> = {
   arg_egy: '',
   col_sui: '',
   // Quarter Final
+  fra_mar: '',
+  eng_nor: '',
   // Semi Final
   // Final
 };
