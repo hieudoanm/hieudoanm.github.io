@@ -67,6 +67,7 @@ export const MODAL_IDS = [
   'gradient-generator',
   'graph',
   'house',
+  'image',
   'image-adjust',
   'image-ai',
   'image-blur-background',

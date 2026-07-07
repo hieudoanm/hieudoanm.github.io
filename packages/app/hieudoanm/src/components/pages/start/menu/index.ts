@@ -18,20 +18,7 @@ import { make as gamesPuzzleMake } from './games-puzzle';
 import { make as gamesTriviaMake } from './games-trivia';
 import { make as gamesWordMake } from './games-word';
 import { make as healthVisionMake } from './health-vision';
-import { make as imageAiMake } from './image-ai';
-import { make as imageColorMake } from './image-color';
-import { make as imageConvertGifMake } from './image-convert-gif';
-import { make as imageConvertHeicMake } from './image-convert-heic';
-import { make as imageConvertJpgMake } from './image-convert-jpg';
-import { make as imageConvertPngMake } from './image-convert-png';
-import { make as imageConvertPsdMake } from './image-convert-psd';
-import { make as imageConvertSvgMake } from './image-convert-svg';
-import { make as imageConvertTiffMake } from './image-convert-tiff';
-import { make as imageConvertWebpMake } from './image-convert-webp';
-import { make as imageCreateMake } from './image-create';
-import { make as imageEditMake } from './image-edit';
-import { make as imageEffectMake } from './image-effect';
-import { make as imageScanMake } from './image-scan';
+import { make as imageMake } from './image';
 import { make as markdownMake } from './markdown';
 import { make as pdfMake } from './pdf';
 import { make as textConvertMake } from './text-convert';
@@ -60,20 +47,7 @@ export const makeTools = (
   'games-trivia': gamesTriviaMake(open),
   'games-word': gamesWordMake(open),
   'health-vision': healthVisionMake(open),
-  'image-ai': imageAiMake(open),
-  'image-color': imageColorMake(open),
-  'image-convert-gif': imageConvertGifMake(open),
-  'image-convert-heic': imageConvertHeicMake(open),
-  'image-convert-jpg': imageConvertJpgMake(open),
-  'image-convert-png': imageConvertPngMake(open),
-  'image-convert-psd': imageConvertPsdMake(open),
-  'image-convert-svg': imageConvertSvgMake(open),
-  'image-convert-tiff': imageConvertTiffMake(open),
-  'image-convert-webp': imageConvertWebpMake(open),
-  'image-create': imageCreateMake(open),
-  'image-edit': imageEditMake(open),
-  'image-effect': imageEffectMake(open),
-  'image-scan': imageScanMake(open),
+  image: imageMake(open),
   markdown: markdownMake(open),
   pdf: pdfMake(open),
   'text-convert': textConvertMake(open),

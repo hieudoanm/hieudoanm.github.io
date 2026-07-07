@@ -18,20 +18,7 @@ import { loaders as gamesPuzzleLoaders } from './games-puzzle';
 import { loaders as gamesTriviaLoaders } from './games-trivia';
 import { loaders as gamesWordLoaders } from './games-word';
 import { loaders as healthVisionLoaders } from './health-vision';
-import { loaders as imageAiLoaders } from './image-ai';
-import { loaders as imageColorLoaders } from './image-color';
-import { loaders as imageConvertGifLoaders } from './image-convert-gif';
-import { loaders as imageConvertHeicLoaders } from './image-convert-heic';
-import { loaders as imageConvertJpgLoaders } from './image-convert-jpg';
-import { loaders as imageConvertPngLoaders } from './image-convert-png';
-import { loaders as imageConvertPsdLoaders } from './image-convert-psd';
-import { loaders as imageConvertSvgLoaders } from './image-convert-svg';
-import { loaders as imageConvertTiffLoaders } from './image-convert-tiff';
-import { loaders as imageConvertWebpLoaders } from './image-convert-webp';
-import { loaders as imageCreateLoaders } from './image-create';
-import { loaders as imageEditLoaders } from './image-edit';
-import { loaders as imageEffectLoaders } from './image-effect';
-import { loaders as imageScanLoaders } from './image-scan';
+import { loaders as imageLoaders } from './image';
 import { loaders as markdownLoaders } from './markdown';
 import { loaders as pdfLoaders } from './pdf';
 import { loaders as textConvertLoaders } from './text-convert';
@@ -61,20 +48,7 @@ const loaders: Record<
   ...gamesTriviaLoaders,
   ...gamesWordLoaders,
   ...healthVisionLoaders,
-  ...imageAiLoaders,
-  ...imageColorLoaders,
-  ...imageConvertGifLoaders,
-  ...imageConvertHeicLoaders,
-  ...imageConvertJpgLoaders,
-  ...imageConvertPngLoaders,
-  ...imageConvertPsdLoaders,
-  ...imageConvertSvgLoaders,
-  ...imageConvertTiffLoaders,
-  ...imageConvertWebpLoaders,
-  ...imageCreateLoaders,
-  ...imageEditLoaders,
-  ...imageEffectLoaders,
-  ...imageScanLoaders,
+  ...imageLoaders,
   ...markdownLoaders,
   ...pdfLoaders,
   ...textConvertLoaders,
