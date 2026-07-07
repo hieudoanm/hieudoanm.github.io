@@ -159,7 +159,7 @@ const PREDETERMINED: Record<string, string> = {
   can_mar: 'mar',
   bra_nor: 'nor',
   eng_mex: 'eng',
-  por_esp: 'esp',
+  esp_por: 'esp',
   bel_usa: 'bel',
   arg_egy: '',
   col_sui: '',

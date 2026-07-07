@@ -2,9 +2,9 @@ import { ComponentsTemplate } from '@hieudoanm.github.io/components/templates/sh
 import type { FC } from 'react';
 import { useState } from 'react';
 
-export const DaisyUIThemes: FC = () => {
+export const ComponentsPage: FC = () => {
   const [theme, setTheme] = useState('luxury');
   return <ComponentsTemplate theme={theme} onThemeChange={setTheme} />;
 };
 
-DaisyUIThemes.displayName = 'DaisyUIThemes';
+ComponentsPage.displayName = 'ComponentsPage';

@@ -22,3 +22,5 @@ export const DownloadsPage: FC = () => (
     }}
   />
 );
+
+DownloadsPage.displayName = 'DownloadsPage';
