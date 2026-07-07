@@ -1,0 +1,87 @@
+name: CI - Block
+
+concurrency:
+  group: ci-app-block-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/block/**'
+      - '.github/workflows/ci-app-block.yaml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/app/block
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.3
+      - name: Install Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - name: Install Android SDK
+        uses: android-actions/setup-android@v3
+      - name: Cache Gradle
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('packages/app/block/**/*.gradle.kts') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+      - name: Make Gradle Executable
+        run: chmod +x gradlew
+      - name: Lint
+        run: ./gradlew lint
+      - name: Test
+        run: ./gradlew test
+      - name: Build APK
+        run: ./gradlew assembleDebug
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: block-apk
+          path: packages/app/block/app/build/outputs/apk/debug/
+
+  publish:
+    name: Publish to GitHub Release
+    needs: [build]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.3
+        with:
+          fetch-depth: 0
+      - name: Download APK
+        uses: actions/download-artifact@v4
+        with:
+          name: block-apk
+          path: apk
+      - name: Publish Release
+        run: |
+          gh release delete app-block-latest --yes --cleanup-tag 2>/dev/null || true
+          gh release create app-block-latest \
+            --title "App - Block (latest)" \
+            --notes "Auto-built from commit ${{ github.sha }}" \
+            apk/*
+        env:
+          GH_TOKEN: ${{ github.token }}
