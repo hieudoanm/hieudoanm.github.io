@@ -180,8 +180,8 @@ jobs:
           done
       - name: Publish Release
         run: |
-          gh release delete code-latest --yes --cleanup-tag 2>/dev/null || true
-          gh release create code-latest \
+          gh release delete app-code-latest --yes --cleanup-tag 2>/dev/null || true
+          gh release create app-code-latest \
             --title "App - Code (latest)" \
             --notes "Auto-built from commit ${{ github.sha }}" \
             $(find release -type f | sort)
