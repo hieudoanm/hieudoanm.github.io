@@ -159,6 +159,7 @@ export const MODAL_IDS = [
   'openapi',
   'palindrome',
   'pd',
+  'pdf',
   'pdf-annotate',
   'pdf-compress',
   'pdf-crop',

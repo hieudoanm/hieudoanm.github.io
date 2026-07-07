@@ -16,9 +16,9 @@ const loadMarkdown = () =>
   );
 
 const loadRedact = () =>
-  import('@hieudoanm.github.io/components/pages/start/apps/pdf-edit/PdfRedactModal').then(
-    (m) => ({ default: m.PdfRedactModal })
-  );
+  import('@hieudoanm.github.io/components/pages/start/apps/pdf').then((m) => ({
+    default: m.PdfModal,
+  }));
 
 const loadRegex = () =>
   import('@hieudoanm.github.io/components/pages/start/apps/editors/RegexModal').then(

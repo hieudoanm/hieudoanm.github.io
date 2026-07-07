@@ -33,12 +33,7 @@ import { make as imageEditMake } from './image-edit';
 import { make as imageEffectMake } from './image-effect';
 import { make as imageScanMake } from './image-scan';
 import { make as markdownMake } from './markdown';
-import { make as pdfConvertMake } from './pdf-convert';
-import { make as pdfCreateMake } from './pdf-create';
-import { make as pdfEbookMake } from './pdf-ebook';
-import { make as pdfEditMake } from './pdf-edit';
-import { make as pdfExtractMake } from './pdf-extract';
-import { make as pdfMiscMake } from './pdf-misc';
+import { make as pdfMake } from './pdf';
 import { make as textConvertMake } from './text-convert';
 import { make as utilitiesMake } from './utilities';
 import { make as videoMake } from './video';
@@ -80,12 +75,7 @@ export const makeTools = (
   'image-effect': imageEffectMake(open),
   'image-scan': imageScanMake(open),
   markdown: markdownMake(open),
-  'pdf-convert': pdfConvertMake(open),
-  'pdf-create': pdfCreateMake(open),
-  'pdf-ebook': pdfEbookMake(open),
-  'pdf-edit': pdfEditMake(open),
-  'pdf-extract': pdfExtractMake(open),
-  'pdf-misc': pdfMiscMake(open),
+  pdf: pdfMake(open),
   'text-convert': textConvertMake(open),
   utilities: utilitiesMake(open),
   video: videoMake(open),

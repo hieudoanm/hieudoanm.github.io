@@ -33,12 +33,7 @@ import { loaders as imageEditLoaders } from './image-edit';
 import { loaders as imageEffectLoaders } from './image-effect';
 import { loaders as imageScanLoaders } from './image-scan';
 import { loaders as markdownLoaders } from './markdown';
-import { loaders as pdfConvertLoaders } from './pdf-convert';
-import { loaders as pdfCreateLoaders } from './pdf-create';
-import { loaders as pdfEbookLoaders } from './pdf-ebook';
-import { loaders as pdfEditLoaders } from './pdf-edit';
-import { loaders as pdfExtractLoaders } from './pdf-extract';
-import { loaders as pdfMiscLoaders } from './pdf-misc';
+import { loaders as pdfLoaders } from './pdf';
 import { loaders as textConvertLoaders } from './text-convert';
 import { loaders as utilitiesLoaders } from './utilities';
 import { loaders as videoLoaders } from './video';
@@ -81,12 +76,7 @@ const loaders: Record<
   ...imageEffectLoaders,
   ...imageScanLoaders,
   ...markdownLoaders,
-  ...pdfConvertLoaders,
-  ...pdfCreateLoaders,
-  ...pdfEbookLoaders,
-  ...pdfEditLoaders,
-  ...pdfExtractLoaders,
-  ...pdfMiscLoaders,
+  ...pdfLoaders,
   ...textConvertLoaders,
   ...utilitiesLoaders,
   ...videoLoaders,
