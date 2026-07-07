@@ -78,6 +78,7 @@
     "html-to-pdfmake": "2.5.33",
     "html2canvas-pro": "2.2.1",
     "jsbarcode": "3.12.3",
+    "jspdf": "4.2.1",
     "jsqr": "1.4.0",
     "marked": "18.0.5",
     "next": "16.2.10",

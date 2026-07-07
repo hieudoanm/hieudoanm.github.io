@@ -1,5 +1,6 @@
-import { FC, memo } from 'react';
+'use client';
 
+import { FC, memo } from 'react';
 import { Stats } from '../markdownFormatting';
 
 export const StatsBar: FC<{ stats: Stats }> = memo(({ stats }) => (
@@ -11,5 +12,4 @@ export const StatsBar: FC<{ stats: Stats }> = memo(({ stats }) => (
     <span>Reading: {stats.readingTime}</span>
   </div>
 ));
-
 StatsBar.displayName = 'StatsBar';

@@ -1,6 +1,7 @@
+'use client';
+
 import { EditorView } from '@codemirror/view';
 import { FC, memo } from 'react';
-
 import {
   insertAround,
   insertAtLineStart,
@@ -51,7 +52,7 @@ export const FormatToolbar: FC<FormatToolbarProps> = memo(
           type="button"
           className="btn btn-ghost btn-xs btn-square font-normal"
           onClick={() => exec((v) => insertHeading(v, level))}
-          title={`Heading ${level}`}>
+          title={'Heading ' + level}>
           H{level}
         </button>
       ))}
@@ -104,7 +105,9 @@ export const FormatToolbar: FC<FormatToolbarProps> = memo(
         type="button"
         className="btn btn-ghost btn-xs"
         onClick={() => exec((v) => insertBlock(v, '```\n', '\n```', 'code'))}
-        title="Code block (Ctrl+Shift+C)">{`{ }`}</button>
+        title="Code block (Ctrl+Shift+C)">
+        {'{ }'}
+      </button>
       <button
         type="button"
         className="btn btn-ghost btn-xs"
@@ -164,5 +167,4 @@ export const FormatToolbar: FC<FormatToolbarProps> = memo(
     </div>
   )
 );
-
 FormatToolbar.displayName = 'FormatToolbar';

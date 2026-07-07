@@ -1,3 +1,5 @@
+'use client';
+
 import { ChangeEvent, FC, memo, RefObject } from 'react';
 
 interface FileToolbarProps {
@@ -109,5 +111,4 @@ export const FileToolbar: FC<FileToolbarProps> = memo(
     </div>
   )
 );
-
 FileToolbar.displayName = 'FileToolbar';

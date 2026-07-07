@@ -1,5 +1,6 @@
-import { FC, memo } from 'react';
+'use client';
 
+import { FC, memo } from 'react';
 import { FONTS } from '../fonts';
 import { ViewMode } from '../types';
 
@@ -76,5 +77,4 @@ export const ViewControls: FC<ViewControlsProps> = memo(
     </div>
   )
 );
-
 ViewControls.displayName = 'ViewControls';

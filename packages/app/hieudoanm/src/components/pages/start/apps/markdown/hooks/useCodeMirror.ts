@@ -1,10 +1,11 @@
+'use client';
+
 import { markdown as markdownLang } from '@codemirror/lang-markdown';
 import { search, searchKeymap } from '@codemirror/search';
 import { Compartment, EditorState } from '@codemirror/state';
 import { EditorView, keymap, lineNumbers } from '@codemirror/view';
 import { oneDark } from '@codemirror/theme-one-dark';
 import { useCallback, useEffect, useRef } from 'react';
-
 import {
   autoClose,
   insertAround,
@@ -110,21 +111,18 @@ export const useCodeMirror = (
           {
             key: 'Mod-Shift-c',
             run: (v) => {
-              insertBlock(v, '```', '```', 'code');
+              insertBlock(v, '```\n', '\n```', 'code');
               return true;
             },
           },
-          { key: '"', run: autoClose('"', '"') },
-          { key: "'", run: autoClose("'", "'") },
-          { key: '`', run: autoClose('`', '`') },
-          { key: '[', run: autoClose('[', ']') },
-          { key: '(', run: autoClose('(', ')') },
+          { key: 'Mod-Shift-`', run: autoClose('`', '`') },
         ]),
       ],
     });
-    viewRef.current = new EditorView({ state, parent: editorRef.current });
-    return () => viewRef.current?.destroy();
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+    const view = new EditorView({ state, parent: editorRef.current });
+    viewRef.current = view;
+    return () => view.destroy();
+  }, []);
 
   useEffect(() => {
     const view = viewRef.current;
@@ -135,17 +133,6 @@ export const useCodeMirror = (
       ),
     });
   }, [ocrLoading, editableCompartment]);
-
-  useEffect(() => {
-    const view = viewRef.current;
-    if (!view) return;
-    const current = view.state.doc.toString();
-    if (current !== markdown) {
-      view.dispatch({
-        changes: { from: 0, to: current.length, insert: markdown },
-      });
-    }
-  }, [markdown]);
 
   useEffect(() => {
     const view = viewRef.current;

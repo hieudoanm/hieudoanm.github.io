@@ -145,6 +145,7 @@ export const MODAL_IDS = [
   'lorem-ipsum',
   'manifest',
   'markdown',
+  'markdown-editor',
   'markdown-to-docx',
   'markdown-to-html',
   'markdown-to-image',

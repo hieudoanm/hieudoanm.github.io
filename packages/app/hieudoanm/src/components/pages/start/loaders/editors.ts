@@ -10,11 +10,6 @@ const loadManifest = () =>
     (m) => ({ default: m.ManifestModal })
   );
 
-const loadMarkdown = () =>
-  import('@hieudoanm.github.io/components/pages/start/apps/editors/MarkdownModal').then(
-    (m) => ({ default: m.MarkdownModal })
-  );
-
 const loadRedact = () =>
   import('@hieudoanm.github.io/components/pages/start/apps/pdf').then((m) => ({
     default: m.PdfModal,
@@ -46,7 +41,6 @@ export const loaders: Record<
 > = {
   'json-schema': loadJSONSchema,
   manifest: loadManifest,
-  markdown: loadMarkdown,
   redact: loadRedact,
   regex: loadRegex,
   resume: loadResume,

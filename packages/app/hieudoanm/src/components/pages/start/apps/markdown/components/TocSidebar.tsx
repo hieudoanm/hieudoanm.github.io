@@ -1,5 +1,6 @@
-import { FC, memo } from 'react';
+'use client';
 
+import { FC, memo } from 'react';
 import { TocItem } from '../constants';
 
 interface TocSidebarProps {
@@ -28,5 +29,4 @@ export const TocSidebar: FC<TocSidebarProps> = memo(({ items, onScrollTo }) => (
     )}
   </div>
 ));
-
 TocSidebar.displayName = 'TocSidebar';

@@ -1,25 +1,27 @@
-import { Dropzone, FullScreen } from '@hieudoanm.github.io/components/atoms';
+'use client';
+
+import { FC, ChangeEvent, useCallback, useMemo, useRef, useState } from 'react';
+import { Dropzone } from '@hieudoanm.github.io/components/atoms';
 import { saveAs } from 'file-saver';
 import 'github-markdown-css/github-markdown.css';
-import { FC, ChangeEvent, useCallback, useMemo, useRef, useState } from 'react';
-
-import { FileToolbar } from './components/FileToolbar';
-import { FormatToolbar } from './components/FormatToolbar';
-import { MarkdownPreviewer } from './components/MarkdownPreviewer';
-import { StatsBar } from './components/StatsBar';
-import { TocSidebar } from './components/TocSidebar';
-import { ViewControls } from './components/ViewControls';
-import { STORAGE_KEY } from './constants';
-import { FONTS, DEFAULT_FONT_ID } from './fonts';
-import { useCodeMirror } from './hooks/useCodeMirror';
-import { useDraftRestore, useDraftSave } from './hooks/useDraftPersistence';
-import { useMarkdownRender } from './hooks/useMarkdownRender';
-import { useScrollSync } from './hooks/useScrollSync';
-import { INITIAL_MARKDOWN } from './initialMarkdown';
-import { computeStats } from './markdownFormatting';
-import { MarkdownState, ViewMode } from './types';
-import { exportPdf } from './utils/pdfExport';
-import { recognizeTextFromImage } from './utils/ocrUtils';
+import { MarkdownToolConfig } from '../config';
+import { FileToolbar } from '../components/FileToolbar';
+import { FormatToolbar } from '../components/FormatToolbar';
+import { MarkdownPreviewer } from '../components/MarkdownPreviewer';
+import { StatsBar } from '../components/StatsBar';
+import { TocSidebar } from '../components/TocSidebar';
+import { ViewControls } from '../components/ViewControls';
+import { STORAGE_KEY } from '../constants';
+import { FONTS, DEFAULT_FONT_ID } from '../fonts';
+import { useCodeMirror } from '../hooks/useCodeMirror';
+import { useDraftRestore, useDraftSave } from '../hooks/useDraftPersistence';
+import { useMarkdownRender } from '../hooks/useMarkdownRender';
+import { useScrollSync } from '../hooks/useScrollSync';
+import { INITIAL_MARKDOWN } from '../initialMarkdown';
+import { computeStats } from '../markdownFormatting';
+import { MarkdownState, ViewMode } from '../types';
+import { exportPdf } from '../utils/pdfExport';
+import { recognizeTextFromImage } from '../utils/ocrUtils';
 
 const INITIAL_STATE: MarkdownState = {
   html: '',
@@ -34,7 +36,7 @@ const INITIAL_STATE: MarkdownState = {
   showLineNumbers: false,
 };
 
-export const MarkdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
+export const MarkdownEditorTool: FC<{ config: MarkdownToolConfig }> = () => {
   const [state, setState] = useState<MarkdownState>(INITIAL_STATE);
   const [stringStyle, setStringStyle] = useState('');
 
@@ -169,72 +171,69 @@ export const MarkdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   }, [html, set]);
 
   return (
-    <FullScreen onClose={onClose} title="Markdown Editor">
-      <div className="flex min-h-0 flex-1 flex-col overflow-hidden">
-        <FileToolbar
-          fileName={fileName}
-          loading={loading}
-          ocrLoading={ocrLoading}
-          onNew={handleNew}
-          onOpen={handleOpen}
-          onSave={handleSave}
-          onCopyMarkdown={handleCopyMarkdown}
-          onCopyHTML={handleCopyHTML}
-          onExportHTML={handleExportHTML}
-          onDownloadPdf={handleDownload}
-          onOcrFile={handleOCRFile}
-          ocrInputRef={ocrInputRef}
-        />
-        <FormatToolbar
-          exec={exec}
-          stringStyle={stringStyle}
-          onStyleChange={setStringStyle}
-        />
-        <ViewControls
-          viewMode={viewMode}
-          showToc={showToc}
-          showLineNumbers={showLineNumbers}
-          restored={restored}
-          fontId={fontId}
-          onViewModeChange={(mode: ViewMode) => set({ viewMode: mode })}
-          onTocToggle={() => set({ showToc: !showToc })}
-          onLineNumbersToggle={() => set({ showLineNumbers: !showLineNumbers })}
-          onFontChange={(id: string) => set({ fontId: id })}
-        />
-        <div className="flex min-h-0 flex-1 overflow-hidden">
-          {showToc && (
-            <TocSidebar items={tocItems} onScrollTo={scrollToHeading} />
-          )}
+    <div className="flex min-h-0 flex-1 flex-col overflow-hidden">
+      <FileToolbar
+        fileName={fileName}
+        loading={loading}
+        ocrLoading={ocrLoading}
+        onNew={handleNew}
+        onOpen={handleOpen}
+        onSave={handleSave}
+        onCopyMarkdown={handleCopyMarkdown}
+        onCopyHTML={handleCopyHTML}
+        onExportHTML={handleExportHTML}
+        onDownloadPdf={handleDownload}
+        onOcrFile={handleOCRFile}
+        ocrInputRef={ocrInputRef}
+      />
+      <FormatToolbar
+        exec={exec}
+        stringStyle={stringStyle}
+        onStyleChange={setStringStyle}
+      />
+      <ViewControls
+        viewMode={viewMode}
+        showToc={showToc}
+        showLineNumbers={showLineNumbers}
+        restored={restored}
+        fontId={fontId}
+        onViewModeChange={(mode: ViewMode) => set({ viewMode: mode })}
+        onTocToggle={() => set({ showToc: !showToc })}
+        onLineNumbersToggle={() => set({ showLineNumbers: !showLineNumbers })}
+        onFontChange={(id: string) => set({ fontId: id })}
+      />
+      <div className="flex min-h-0 flex-1 overflow-hidden">
+        {showToc && (
+          <TocSidebar items={tocItems} onScrollTo={scrollToHeading} />
+        )}
+        <div
+          className={`grid min-h-0 flex-1 overflow-hidden ${viewMode === 'split' ? 'divide-base-300 divide-x md:grid-cols-2' : 'grid-cols-1'}`}>
           <div
-            className={`grid min-h-0 flex-1 overflow-hidden ${viewMode === 'split' ? 'divide-base-300 divide-x md:grid-cols-2' : 'grid-cols-1'}`}>
+            className={`flex flex-col overflow-hidden ${viewMode === 'preview' ? 'hidden' : ''}`}>
             <div
-              className={`flex flex-col overflow-hidden ${viewMode === 'preview' ? 'hidden' : ''}`}>
-              <div
-                ref={editorRef}
-                className={`${ocrLoading ? 'pointer-events-none opacity-50' : ''} h-full w-full flex-1 overflow-auto text-sm`}
+              ref={editorRef}
+              className={`${ocrLoading ? 'pointer-events-none opacity-50' : ''} h-full w-full flex-1 overflow-auto text-sm`}
+            />
+          </div>
+          <div
+            className={`flex flex-col overflow-hidden ${viewMode === 'editor' ? 'hidden' : ''}`}>
+            <div
+              ref={previewScrollRef}
+              className="h-full w-full flex-1 overflow-auto p-4">
+              <MarkdownPreviewer
+                html={html}
+                fontClassName={selectedFont.className}
               />
-            </div>
-            <div
-              className={`flex flex-col overflow-hidden ${viewMode === 'editor' ? 'hidden' : ''}`}>
-              <div
-                ref={previewScrollRef}
-                className="h-full w-full flex-1 overflow-auto p-4">
-                <MarkdownPreviewer
-                  html={html}
-                  fontClassName={selectedFont.className}
-                />
-              </div>
             </div>
           </div>
         </div>
-        <StatsBar stats={stats} />
       </div>
+      <StatsBar stats={stats} />
       <Dropzone
         accept=".md,.markdown,text/markdown"
         onFile={handleOpenFile}
         className="hidden"
       />
-    </FullScreen>
+    </div>
   );
 };
-MarkdownModal.displayName = 'MarkdownModal';
