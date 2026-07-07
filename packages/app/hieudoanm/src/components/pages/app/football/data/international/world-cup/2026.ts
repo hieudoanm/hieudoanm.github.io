@@ -159,13 +159,14 @@ const PREDETERMINED: Record<string, string> = {
   can_mar: 'mar',
   bra_nor: 'nor',
   eng_mex: 'eng',
-  por_esp: '',
-  bel_usa: '',
+  por_esp: 'esp',
+  bel_usa: 'bel',
   arg_egy: '',
   col_sui: '',
   // Quarter Final
   fra_mar: '',
   eng_nor: '',
+  bel_esp: '',
   // Semi Final
   // Final
 };

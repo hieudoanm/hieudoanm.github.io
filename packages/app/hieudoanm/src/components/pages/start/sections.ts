@@ -1,7 +1,6 @@
 import { Tool } from '@hieudoanm.github.io/components/pages/start/components/cards/ToolCard';
 
 export const TOOL_SECTION_LABELS: Record<string, string> = {
-  'calculator-convert': 'Calculator - Convert',
   'calculator-finance': 'Calculator - Finance',
   clocks: 'Clocks',
   'data-csv': 'Data - CSV',
