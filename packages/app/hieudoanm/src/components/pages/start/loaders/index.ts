@@ -41,20 +41,7 @@ import { loaders as pdfExtractLoaders } from './pdf-extract';
 import { loaders as pdfMiscLoaders } from './pdf-misc';
 import { loaders as textConvertLoaders } from './text-convert';
 import { loaders as utilitiesLoaders } from './utilities';
-import { loaders as videoAudioLoaders } from './video-audio';
-import { loaders as videoConvertAacLoaders } from './video-convert-aac';
-import { loaders as videoConvertAviLoaders } from './video-convert-avi';
-import { loaders as videoConvertFlvLoaders } from './video-convert-flv';
-import { loaders as videoConvertGifLoaders } from './video-convert-gif';
-import { loaders as videoConvertM4aLoaders } from './video-convert-m4a';
-import { loaders as videoConvertMkvLoaders } from './video-convert-mkv';
-import { loaders as videoConvertMovLoaders } from './video-convert-mov';
-import { loaders as videoConvertMp4Loaders } from './video-convert-mp4';
-import { loaders as videoConvertOggLoaders } from './video-convert-ogg';
-import { loaders as videoConvertWebmLoaders } from './video-convert-webm';
-import { loaders as videoConvertWmvLoaders } from './video-convert-wmv';
-import { loaders as videoDownloadLoaders } from './video-download';
-import { loaders as videoEditLoaders } from './video-edit';
+import { loaders as videoLoaders } from './video';
 import { loaders as visualizationLoaders } from './visualization';
 import { loaders as writeLoaders } from './write';
 
@@ -102,20 +89,7 @@ const loaders: Record<
   ...pdfMiscLoaders,
   ...textConvertLoaders,
   ...utilitiesLoaders,
-  ...videoAudioLoaders,
-  ...videoConvertAacLoaders,
-  ...videoConvertAviLoaders,
-  ...videoConvertFlvLoaders,
-  ...videoConvertGifLoaders,
-  ...videoConvertM4aLoaders,
-  ...videoConvertMkvLoaders,
-  ...videoConvertMovLoaders,
-  ...videoConvertMp4Loaders,
-  ...videoConvertOggLoaders,
-  ...videoConvertWebmLoaders,
-  ...videoConvertWmvLoaders,
-  ...videoDownloadLoaders,
-  ...videoEditLoaders,
+  ...videoLoaders,
   ...visualizationLoaders,
   ...writeLoaders,
 };

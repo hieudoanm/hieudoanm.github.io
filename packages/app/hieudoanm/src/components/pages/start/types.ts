@@ -233,6 +233,7 @@ export const MODAL_IDS = [
   'typoglycemia',
   'url-to-pdf',
   'uuid',
+  'video',
   'video-aac-to-mp3',
   'video-aac-to-mp4',
   'video-aac-to-wav',

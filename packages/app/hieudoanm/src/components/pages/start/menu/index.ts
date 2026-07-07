@@ -41,20 +41,7 @@ import { make as pdfExtractMake } from './pdf-extract';
 import { make as pdfMiscMake } from './pdf-misc';
 import { make as textConvertMake } from './text-convert';
 import { make as utilitiesMake } from './utilities';
-import { make as videoAudioMake } from './video-audio';
-import { make as videoConvertAacMake } from './video-convert-aac';
-import { make as videoConvertAviMake } from './video-convert-avi';
-import { make as videoConvertFlvMake } from './video-convert-flv';
-import { make as videoConvertGifMake } from './video-convert-gif';
-import { make as videoConvertM4aMake } from './video-convert-m4a';
-import { make as videoConvertMkvMake } from './video-convert-mkv';
-import { make as videoConvertMovMake } from './video-convert-mov';
-import { make as videoConvertMp4Make } from './video-convert-mp4';
-import { make as videoConvertOggMake } from './video-convert-ogg';
-import { make as videoConvertWebmMake } from './video-convert-webm';
-import { make as videoConvertWmvMake } from './video-convert-wmv';
-import { make as videoDownloadMake } from './video-download';
-import { make as videoEditMake } from './video-edit';
+import { make as videoMake } from './video';
 import { make as visualizationMake } from './visualization';
 import { make as writeMake } from './write';
 
@@ -101,20 +88,7 @@ export const makeTools = (
   'pdf-misc': pdfMiscMake(open),
   'text-convert': textConvertMake(open),
   utilities: utilitiesMake(open),
-  'video-audio': videoAudioMake(open),
-  'video-convert-aac': videoConvertAacMake(open),
-  'video-convert-avi': videoConvertAviMake(open),
-  'video-convert-flv': videoConvertFlvMake(open),
-  'video-convert-gif': videoConvertGifMake(open),
-  'video-convert-m4a': videoConvertM4aMake(open),
-  'video-convert-mkv': videoConvertMkvMake(open),
-  'video-convert-mov': videoConvertMovMake(open),
-  'video-convert-mp4': videoConvertMp4Make(open),
-  'video-convert-ogg': videoConvertOggMake(open),
-  'video-convert-webm': videoConvertWebmMake(open),
-  'video-convert-wmv': videoConvertWmvMake(open),
-  'video-download': videoDownloadMake(open),
-  'video-edit': videoEditMake(open),
+  video: videoMake(open),
   visualization: visualizationMake(open),
   write: writeMake(open),
 });
