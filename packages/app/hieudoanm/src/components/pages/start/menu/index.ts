@@ -56,13 +56,7 @@ import { make as videoConvertWmvMake } from './video-convert-wmv';
 import { make as videoDownloadMake } from './video-download';
 import { make as videoEditMake } from './video-edit';
 import { make as visualizationMake } from './visualization';
-import { make as writeArticleMake } from './write-article';
-import { make as writeBusinessMake } from './write-business';
-import { make as writeContentMake } from './write-content';
-import { make as writeEditMake } from './write-edit';
-import { make as writeMiscMake } from './write-misc';
-import { make as writeRealEstateMake } from './write-real-estate';
-import { make as writeSocialMake } from './write-social';
+import { make as writeMake } from './write';
 
 export const makeTools = (
   open: (id: ModalId) => () => void
@@ -122,11 +116,5 @@ export const makeTools = (
   'video-download': videoDownloadMake(open),
   'video-edit': videoEditMake(open),
   visualization: visualizationMake(open),
-  'write-article': writeArticleMake(open),
-  'write-business': writeBusinessMake(open),
-  'write-content': writeContentMake(open),
-  'write-edit': writeEditMake(open),
-  'write-misc': writeMiscMake(open),
-  'write-real-estate': writeRealEstateMake(open),
-  'write-social': writeSocialMake(open),
+  write: writeMake(open),
 });

@@ -56,13 +56,7 @@ import { loaders as videoConvertWmvLoaders } from './video-convert-wmv';
 import { loaders as videoDownloadLoaders } from './video-download';
 import { loaders as videoEditLoaders } from './video-edit';
 import { loaders as visualizationLoaders } from './visualization';
-import { loaders as writeArticleLoaders } from './write-article';
-import { loaders as writeBusinessLoaders } from './write-business';
-import { loaders as writeContentLoaders } from './write-content';
-import { loaders as writeEditLoaders } from './write-edit';
-import { loaders as writeMiscLoaders } from './write-misc';
-import { loaders as writeRealEstateLoaders } from './write-real-estate';
-import { loaders as writeSocialLoaders } from './write-social';
+import { loaders as writeLoaders } from './write';
 
 const loaders: Record<
   string,
@@ -123,13 +117,7 @@ const loaders: Record<
   ...videoDownloadLoaders,
   ...videoEditLoaders,
   ...visualizationLoaders,
-  ...writeArticleLoaders,
-  ...writeBusinessLoaders,
-  ...writeContentLoaders,
-  ...writeEditLoaders,
-  ...writeMiscLoaders,
-  ...writeRealEstateLoaders,
-  ...writeSocialLoaders,
+  ...writeLoaders,
 };
 
 const cache = new Map<string, ComponentType<{ onClose: () => void }>>();

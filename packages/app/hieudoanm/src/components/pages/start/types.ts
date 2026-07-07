@@ -284,6 +284,7 @@ export const MODAL_IDS = [
   'video-youtube-transcript',
   'watchface',
   'weight',
+  'write',
   'word-counter',
   'word-to-pdf',
   'wordle',

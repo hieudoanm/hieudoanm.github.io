@@ -56,13 +56,7 @@ export const TOOL_SECTION_LABELS: Record<string, string> = {
   'video-download': 'Video - Download',
   'video-edit': 'Video - Edit',
   visualization: 'Visualization',
-  'write-article': 'Write - Article',
-  'write-business': 'Write - Business',
-  'write-content': 'Write - Content',
-  'write-edit': 'Write - Edit',
-  'write-misc': 'Write - Misc',
-  'write-real-estate': 'Write - Real Estate',
-  'write-social': 'Write - Social',
+  write: 'Write',
 };
 
 export const getToolSectionDefs = (
