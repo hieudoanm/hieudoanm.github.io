@@ -1,7 +1,7 @@
-name: CI - App - Block
+name: CI - App - Native - NFC
 
 concurrency:
-  group: ci-app-block-${{ github.ref }}
+  group: ci-app-native-nfc-${{ github.ref }}
   cancel-in-progress: true
 
 on:
@@ -14,8 +14,8 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/block/android/**'
-      - '.github/workflows/ci-app-block.yaml'
+      - 'packages/app/native/nfc/android/**'
+      - '.github/workflows/ci-app-native-nfc.yaml'
 
 permissions:
   contents: write
@@ -26,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: packages/app/block/android
+        working-directory: packages/app/native/nfc/android
     steps:
       - name: Checkout
         uses: actions/checkout@v6.0.3
@@ -43,7 +43,7 @@ jobs:
           path: |
             ~/.gradle/caches
             ~/.gradle/wrapper
-          key: ${{ runner.os }}-gradle-${{ hashFiles('packages/app/block/android/**/*.gradle.kts') }}
+          key: ${{ runner.os }}-gradle-${{ hashFiles('packages/app/native/nfc/android/**/*.gradle.kts') }}
           restore-keys: |
             ${{ runner.os }}-gradle-
       - name: Make Gradle Executable
@@ -61,27 +61,27 @@ jobs:
       - name: Build APK
         run: ./gradlew assembleRelease
         env:
-          RELEASE_STORE_FILE: ${{ github.workspace }}/packages/app/block/android/release.keystore
+          RELEASE_STORE_FILE: ${{ github.workspace }}/packages/app/native/nfc/android/release.keystore
           RELEASE_STORE_PASSWORD: android
           RELEASE_KEY_ALIAS: release
           RELEASE_KEY_PASSWORD: android
       - name: Build AAB
         run: ./gradlew bundleRelease
         env:
-          RELEASE_STORE_FILE: ${{ github.workspace }}/packages/app/block/android/release.keystore
+          RELEASE_STORE_FILE: ${{ github.workspace }}/packages/app/native/nfc/android/release.keystore
           RELEASE_STORE_PASSWORD: android
           RELEASE_KEY_ALIAS: release
           RELEASE_KEY_PASSWORD: android
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: block-apk
-          path: packages/app/block/android/app/build/outputs/apk/release/
+          name: nfc-apk
+          path: packages/app/native/nfc/android/app/build/outputs/apk/release/
       - name: Upload AAB
         uses: actions/upload-artifact@v4
         with:
-          name: block-aab
-          path: packages/app/block/android/app/build/outputs/bundle/release/
+          name: nfc-aab
+          path: packages/app/native/nfc/android/app/build/outputs/bundle/release/
 
   publish:
     name: Publish to GitHub Release
@@ -97,18 +97,18 @@ jobs:
       - name: Download APK
         uses: actions/download-artifact@v4
         with:
-          name: block-apk
+          name: nfc-apk
           path: artifacts/apk
       - name: Download AAB
         uses: actions/download-artifact@v4
         with:
-          name: block-aab
+          name: nfc-aab
           path: artifacts/aab
       - name: Publish Release
         run: |
-          gh release delete app-block-latest --yes --cleanup-tag 2>/dev/null || true
-          gh release create app-block-latest \
-            --title "App - Block (latest)" \
+          gh release delete app-native-nfc-latest --yes --cleanup-tag 2>/dev/null || true
+          gh release create app-native-nfc-latest \
+            --title "App - Native - NFC (latest)" \
             --notes "Auto-built from commit ${{ github.sha }}" \
             artifacts/apk/*.apk artifacts/aab/*.aab
         env:

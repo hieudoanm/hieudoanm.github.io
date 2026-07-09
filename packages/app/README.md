@@ -9,9 +9,12 @@
 
 ## Applications
 
-- [Block](./block)
-- [Code](./code)
-- [Hieu Doan](./hieudoanm)
+| No  | Category | Application              |
+| --- | -------- | ------------------------ |
+| 01  | Hybrid   | [Code](./code)           |
+| 02  | Hybrid   | [Hieu Doan](./hieudoanm) |
+| 03  | Native   | [Block](./native/block/) |
+| 04  | Native   | [NFC](./native/nfc/)     |
 
 ## Techstack
 
