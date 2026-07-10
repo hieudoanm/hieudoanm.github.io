@@ -1,20 +1,20 @@
 # App
 
 - [App](#app)
-  - [Boilerplate](#boilerplate)
   - [Applications](#applications)
   - [Techstack](#techstack)
 
-## [Boilerplate](./boilerplate)
-
 ## Applications
 
-| No  | Category | Application              |
-| --- | -------- | ------------------------ |
-| 01  | Hybrid   | [Code](./code)           |
-| 02  | Hybrid   | [Hieu Doan](./hieudoanm) |
-| 03  | Native   | [Block](./native/block/) |
-| 04  | Native   | [NFC](./native/nfc/)     |
+| No  | Category    | Application              |
+| --- | ----------- | ------------------------ |
+| 01  | Boilerplate | Expo                     |
+| 02  | Boilerplate | Next.js                  |
+| 03  | Boilerplate | Solid.js                 |
+| 04  | Hybrid      | [Code](./code)           |
+| 05  | Hybrid      | [Hieu Doan](./hieudoanm) |
+| 06  | Native      | [Block](./native/block/) |
+| 07  | Native      | [NFC](./native/nfc/)     |
 
 ## Techstack
 
