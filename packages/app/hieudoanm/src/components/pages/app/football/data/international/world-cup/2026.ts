@@ -164,7 +164,7 @@ const PREDETERMINED: Record<string, string> = {
   arg_egy: 'arg',
   col_sui: 'sui',
   // Quarter Final
-  fra_mar: '',
+  fra_mar: 'fra',
   eng_nor: '',
   bel_esp: '',
   arg_sui: '',
