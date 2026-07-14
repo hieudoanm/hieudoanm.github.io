@@ -1,7 +1,8 @@
+import html2canvas from 'html2canvas-pro';
+import JSZip from 'jszip';
 import type { FC } from 'react';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { parse, parseAllDocuments, stringify } from 'yaml';
-import html2canvas from 'html2canvas-pro';
 
 import {
   download,
@@ -10,13 +11,13 @@ import {
   restoreGradients,
 } from '@hieudoanm.github.io/utils/canvas';
 
-import { TEMPLATES, DEFAULT_CONTENT_MAP } from './data/templates-schema';
-import { TEMPLATE_MAP } from './components/templates';
-import { PreviewPane } from './components/preview/PreviewPane';
-import { Toolbar } from './components/toolbar/Toolbar';
-import { TemplateSidebar } from './components/sidebar/TemplateSidebar';
 import { EditorSidebar } from './components/editor/EditorSidebar';
 import { TemplateDocModal } from './components/modal/TemplateDocModal';
+import { PreviewPane } from './components/preview/PreviewPane';
+import { TemplateSidebar } from './components/sidebar/TemplateSidebar';
+import { TEMPLATE_MAP } from './components/templates';
+import { Toolbar } from './components/toolbar/Toolbar';
+import { DEFAULT_CONTENT_MAP, TEMPLATES } from './data/templates-schema';
 import type { PostItem } from './types';
 
 const MAX_POSTS = 20;
@@ -25,6 +26,8 @@ const LS_KEY_POSTS = 'instagram-posts';
 const LS_KEY_ACTIVE = 'instagram-active';
 const LS_KEY_FONT = 'instagram-font-family';
 const LS_KEY_INSTAGRAM = 'instagram-username';
+
+const LS_KEY_FILE_NAME = 'instagram-file-name';
 
 const LS_KEY_RAW_OLD = 'instagram-yaml-raw';
 const LS_KEY_ID_OLD = 'instagram-active-id';
@@ -116,7 +119,15 @@ export const InstagramPage: FC = () => {
   const [fontFamily, setFontFamily] = useState<string>(initialFont);
   const [instagramUsername, setInstagramUsername] =
     useState<string>(initialInstagram);
+  const initialFileName = loadFromStorage(LS_KEY_FILE_NAME, () => {
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const dd = String(today.getDate()).padStart(2, '0');
+    return `${yyyy}-${mm}-${dd}`;
+  });
   const [ratio, setRatio] = useState('1:1');
+  const [fileName, setFileName] = useState<string>(initialFileName);
   const [docOpen, setDocOpen] = useState(false);
   const [leftOpen, setLeftOpen] = useState(true);
   const [rightOpen, setRightOpen] = useState(true);
@@ -170,6 +181,10 @@ export const InstagramPage: FC = () => {
   useEffect(() => {
     localStorage.setItem(LS_KEY_INSTAGRAM, instagramUsername);
   }, [instagramUsername]);
+
+  useEffect(() => {
+    localStorage.setItem(LS_KEY_FILE_NAME, fileName);
+  }, [fileName]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -258,12 +273,14 @@ export const InstagramPage: FC = () => {
     const dd = String(today.getDate()).padStart(2, '0');
     const ii = String(activeIndex + 1).padStart(2, '0');
 
+    const base = fileName.trim() || `${yyyy}-${mm}-${dd}`;
+
     download({
       ref: captureRef,
-      output: `${yyyy}-${mm}-${dd}-${ii}`,
+      output: `${base}-${ii}`,
       backgroundColor: '#000000',
     });
-  }, [activeIndex]);
+  }, [activeIndex, fileName]);
 
   const handleDownloadAll = useCallback(async () => {
     if (!captureRef.current || posts.length <= 1) return;
@@ -274,8 +291,12 @@ export const InstagramPage: FC = () => {
     const mm = String(today.getMonth() + 1).padStart(2, '0');
     const dd = String(today.getDate()).padStart(2, '0');
 
+    const base = fileName.trim() || `${yyyy}-${mm}-${dd}`;
+
     const wait = (ms: number) =>
       new Promise((resolve) => setTimeout(resolve, ms));
+
+    const zip = new JSZip();
 
     for (let i = 0; i < posts.length; i++) {
       setActiveIndex(i);
@@ -293,18 +314,25 @@ export const InstagramPage: FC = () => {
       });
       restoreGradients(fixed);
 
-      const dataURL = canvas.toDataURL('image/png');
-      const link = document.createElement('a');
-      link.href = dataURL;
-      link.download = `${yyyy}-${mm}-${dd}-${i + 1}.png`;
-      link.click();
-      link.remove();
+      const blob = await new Promise<Blob>((resolve) =>
+        canvas.toBlob((b) => resolve(b!), 'image/png')
+      );
+      zip.file(`${base}-${i + 1}.png`, blob);
 
       await wait(200);
     }
 
+    const zipBlob = await zip.generateAsync({ type: 'blob' });
+    const url = URL.createObjectURL(zipBlob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `${base}.zip`;
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+
     setActiveIndex(originalIndex);
-  }, [activeIndex, posts.length]);
+  }, [activeIndex, posts.length, fileName]);
 
   const handleCopy = useCallback(async () => {
     if (!captureRef.current) return;
@@ -521,6 +549,8 @@ export const InstagramPage: FC = () => {
             onFontChange={setFontFamily}
             instagramUsername={instagramUsername}
             onInstagramUsernameChange={setInstagramUsername}
+            fileName={fileName}
+            onFileNameChange={setFileName}
           />
 
           <div className="flex flex-1 flex-col items-center justify-center">

@@ -1,7 +1,25 @@
 {
   "name": "@hieudoanm.github.io/code",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "private": true,
+  "description": "Code",
+  "keywords": [
+    "code"
+  ],
+  "homepage": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-code-latest",
+  "bugs": {
+    "url": "https://github.com/hieudoanm/hieudoanm.github.io/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hieudoanm/hieudoanm.github.io.git"
+  },
+  "license": "GPL-3.0",
+  "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
+  "packageManager": "pnpm@11.11.0",
+  "engines": {
+    "node": "26.5.0"
+  },
   "scripts": {
     "dev": "tauri dev",
     "web:dev": "next dev --turbopack",
