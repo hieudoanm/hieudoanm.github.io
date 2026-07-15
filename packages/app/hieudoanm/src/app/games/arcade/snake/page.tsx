@@ -1,9 +1,9 @@
 'use client';
 
 import { ToolPage } from '../../_shared/ToolPage';
-import { SnakeModal } from '@hieudoanm.github.io/components/pages/games/arcade/SnakeModal';
+import { Snake } from '@hieudoanm.github.io/components/pages/games/arcade/Snake';
 
 const GamesArcadeSnake = () => {
-  return <ToolPage Component={SnakeModal} backPath="/games/arcade" />;
+  return <ToolPage Component={Snake} backPath="/games/arcade" />;
 };
 export default GamesArcadeSnake;

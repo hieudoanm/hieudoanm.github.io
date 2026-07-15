@@ -1,5 +1,6 @@
 import {
   PiBuilding,
+  PiGridFour,
   PiHurricane,
   PiLamp,
   PiNumberSquareOne,
@@ -37,6 +38,13 @@ export const make = (open: (id: ModalId) => () => void): Tool[] => [
     tags: ['game', 'fun', 'entertainment'],
     icon: PiSnowflake,
     onClick: open('sliding-puzzle'),
+  },
+  {
+    label: 'Shikaku',
+    description: 'Divide into rectangles',
+    tags: ['game', 'fun', 'entertainment'],
+    icon: PiGridFour,
+    onClick: open('shikaku'),
   },
   {
     label: 'Sudoku',

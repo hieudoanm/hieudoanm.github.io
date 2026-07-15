@@ -12,8 +12,8 @@ loaders['attractors'] = () =>
   );
 
 loaders['blackjack'] = () =>
-  import('@hieudoanm.github.io/components/pages/games/casino/BlackjackModal').then(
-    (m) => ({ default: m.BlackjackModal })
+  import('@hieudoanm.github.io/components/pages/games/casino/Blackjack').then(
+    (m) => ({ default: m.Blackjack })
   );
 
 loaders['braille'] = () =>
@@ -37,23 +37,23 @@ loaders['chat'] = () =>
   );
 
 loaders['chess-board'] = () =>
-  import('@hieudoanm.github.io/components/pages/games/chess/ChessBoardModal').then(
-    (m) => ({ default: m.ChessBoardModal })
+  import('@hieudoanm.github.io/components/pages/games/chess/ChessBoard').then(
+    (m) => ({ default: m.ChessBoard })
   );
 
 loaders['chess-clock'] = () =>
-  import('@hieudoanm.github.io/components/pages/games/chess/ChessClockModal').then(
-    (m) => ({ default: m.ChessClockModal })
+  import('@hieudoanm.github.io/components/pages/games/chess/ChessClock').then(
+    (m) => ({ default: m.ChessClock })
   );
 
 loaders['chess-elo'] = () =>
-  import('@hieudoanm.github.io/components/pages/games/chess/ChessEloModal').then(
-    (m) => ({ default: m.ChessEloModal })
+  import('@hieudoanm.github.io/components/pages/games/chess/ChessElo').then(
+    (m) => ({ default: m.ChessElo })
   );
 
 loaders['chess-stats'] = () =>
-  import('@hieudoanm.github.io/components/pages/games/chess/ChessStatsModal').then(
-    (m) => ({ default: m.ChessStatsModal })
+  import('@hieudoanm.github.io/components/pages/games/chess/ChessStats').then(
+    (m) => ({ default: m.ChessStats })
   );
 
 loaders['clipboard'] = () =>
@@ -117,13 +117,13 @@ loaders['days-count'] = () =>
   );
 
 loaders['dice-game'] = () =>
-  import('@hieudoanm.github.io/components/pages/games/casino/DiceGameModal').then(
-    (m) => ({ default: m.DiceGameModal })
+  import('@hieudoanm.github.io/components/pages/games/casino/DiceGame').then(
+    (m) => ({ default: m.DiceGame })
   );
 
 loaders['dino-run'] = () =>
-  import('@hieudoanm.github.io/components/pages/games/arcade/DinoRunModal').then(
-    (m) => ({ default: m.DinoRunModal })
+  import('@hieudoanm.github.io/components/pages/games/arcade/DinoRun').then(
+    (m) => ({ default: m.DinoRun })
   );
 
 loaders['doi'] = () =>
@@ -182,8 +182,8 @@ loaders['flashcards'] = () =>
   );
 
 loaders['game2048'] = () =>
-  import('@hieudoanm.github.io/components/pages/games/puzzle/Game2048Modal').then(
-    (m) => ({ default: m.Game2048Modal })
+  import('@hieudoanm.github.io/components/pages/games/puzzle/Game2048').then(
+    (m) => ({ default: m.Game2048 })
   );
 
 loaders['graph'] = () =>
@@ -232,8 +232,8 @@ loaders['legislation'] = () =>
   );
 
 loaders['lights-out'] = () =>
-  import('@hieudoanm.github.io/components/pages/games/puzzle/LightsOutModal').then(
-    (m) => ({ default: m.LightsOutModal })
+  import('@hieudoanm.github.io/components/pages/games/puzzle/LightsOut').then(
+    (m) => ({ default: m.LightsOut })
   );
 
 loaders['logmar'] = () =>
@@ -252,13 +252,13 @@ loaders['manifest'] = () =>
   );
 
 loaders['maze'] = () =>
-  import('@hieudoanm.github.io/components/pages/games/puzzle/MazeModal').then(
-    (m) => ({ default: m.MazeModal })
+  import('@hieudoanm.github.io/components/pages/games/puzzle/Maze').then(
+    (m) => ({ default: m.Maze })
   );
 
 loaders['memory-match'] = () =>
-  import('@hieudoanm.github.io/components/pages/games/memory/MemoryMatchModal').then(
-    (m) => ({ default: m.MemoryMatchModal })
+  import('@hieudoanm.github.io/components/pages/games/memory/MemoryMatch').then(
+    (m) => ({ default: m.MemoryMatch })
   );
 
 loaders['morse'] = () =>
@@ -267,8 +267,8 @@ loaders['morse'] = () =>
   );
 
 loaders['n-back'] = () =>
-  import('@hieudoanm.github.io/components/pages/games/memory/NBackModal').then(
-    (m) => ({ default: m.NBackModal })
+  import('@hieudoanm.github.io/components/pages/games/memory/NBack').then(
+    (m) => ({ default: m.NBack })
   );
 
 loaders['no-sleep'] = () =>
@@ -282,13 +282,13 @@ loaders['openapi'] = () =>
   );
 
 loaders['palindrome'] = () =>
-  import('@hieudoanm.github.io/components/pages/games/word/PalindromeModal').then(
-    (m) => ({ default: m.PalindromeModal })
+  import('@hieudoanm.github.io/components/pages/games/word/Palindrome').then(
+    (m) => ({ default: m.Palindrome })
   );
 
 loaders['pd'] = () =>
-  import('@hieudoanm.github.io/components/pages/games/trivia/PrisonerDilemmaModal').then(
-    (m) => ({ default: m.PrisonerDilemmaModal })
+  import('@hieudoanm.github.io/components/pages/games/trivia/PrisonerDilemma').then(
+    (m) => ({ default: m.PrisonerDilemma })
   );
 
 loaders['periodic-table'] = () =>
@@ -297,8 +297,8 @@ loaders['periodic-table'] = () =>
   );
 
 loaders['pi'] = () =>
-  import('@hieudoanm.github.io/components/pages/games/memory/PiNumberModal').then(
-    (m) => ({ default: m.PiModal })
+  import('@hieudoanm.github.io/components/pages/games/memory/PiNumber').then(
+    (m) => ({ default: m.Pi })
   );
 
 loaders['pitch'] = () =>
@@ -307,13 +307,13 @@ loaders['pitch'] = () =>
   );
 
 loaders['pokedex'] = () =>
-  import('@hieudoanm.github.io/components/pages/games/trivia/PokedexModal').then(
-    (m) => ({ default: m.PokedexModal })
+  import('@hieudoanm.github.io/components/pages/games/trivia/Pokedex').then(
+    (m) => ({ default: m.Pokedex })
   );
 
 loaders['poker'] = () =>
-  import('@hieudoanm.github.io/components/pages/games/casino/PokerModal').then(
-    (m) => ({ default: m.PokerModal })
+  import('@hieudoanm.github.io/components/pages/games/casino/Poker').then(
+    (m) => ({ default: m.Poker })
   );
 
 loaders['pomodoro'] = () =>
@@ -327,13 +327,13 @@ loaders['proxy'] = () =>
   );
 
 loaders['quizify'] = () =>
-  import('@hieudoanm.github.io/components/pages/games/memory/QuizifyModal').then(
-    (m) => ({ default: m.QuizifyModal })
+  import('@hieudoanm.github.io/components/pages/games/memory/Quizify').then(
+    (m) => ({ default: m.Quizify })
   );
 
 loaders['recall'] = () =>
-  import('@hieudoanm.github.io/components/pages/games/memory/RecallModal').then(
-    (m) => ({ default: m.RecallModal })
+  import('@hieudoanm.github.io/components/pages/games/memory/Recall').then(
+    (m) => ({ default: m.Recall })
   );
 
 loaders['regex'] = () =>
@@ -382,18 +382,18 @@ loaders['slides'] = () =>
   );
 
 loaders['sliding-puzzle'] = () =>
-  import('@hieudoanm.github.io/components/pages/games/puzzle/SlidingPuzzleModal').then(
-    (m) => ({ default: m.SlidingPuzzleModal })
+  import('@hieudoanm.github.io/components/pages/games/puzzle/SlidingPuzzle').then(
+    (m) => ({ default: m.SlidingPuzzle })
   );
 
 loaders['slot-machine'] = () =>
-  import('@hieudoanm.github.io/components/pages/games/casino/SlotMachineModal').then(
-    (m) => ({ default: m.SlotMachineModal })
+  import('@hieudoanm.github.io/components/pages/games/casino/SlotMachine').then(
+    (m) => ({ default: m.SlotMachine })
   );
 
 loaders['snake'] = () =>
-  import('@hieudoanm.github.io/components/pages/games/arcade/SnakeModal').then(
-    (m) => ({ default: m.SnakeModal })
+  import('@hieudoanm.github.io/components/pages/games/arcade/Snake').then(
+    (m) => ({ default: m.Snake })
   );
 
 loaders['snellen'] = () =>
@@ -417,8 +417,8 @@ loaders['split-excel'] = () =>
   );
 
 loaders['sudoku'] = () =>
-  import('@hieudoanm.github.io/components/pages/games/puzzle/SudokuModal').then(
-    (m) => ({ default: m.SudokuModal })
+  import('@hieudoanm.github.io/components/pages/games/puzzle/Sudoku').then(
+    (m) => ({ default: m.Sudoku })
   );
 
 loaders['svg'] = () =>
@@ -427,13 +427,13 @@ loaders['svg'] = () =>
   );
 
 loaders['t3'] = () =>
-  import('@hieudoanm.github.io/components/pages/games/arcade/T3Modal').then(
-    (m) => ({ default: m.T3Modal })
-  );
+  import('@hieudoanm.github.io/components/pages/games/arcade/T3').then((m) => ({
+    default: m.T3,
+  }));
 
 loaders['tai-baccarat'] = () =>
-  import('@hieudoanm.github.io/components/pages/games/casino/BaccaratModal').then(
-    (m) => ({ default: m.BaccaratModal })
+  import('@hieudoanm.github.io/components/pages/games/casino/Baccarat').then(
+    (m) => ({ default: m.Baccarat })
   );
 
 loaders['tax'] = () =>
@@ -467,8 +467,8 @@ loaders['text-word-count'] = () =>
   );
 
 loaders['towers'] = () =>
-  import('@hieudoanm.github.io/components/pages/games/puzzle/TowersModal').then(
-    (m) => ({ default: m.TowersModal })
+  import('@hieudoanm.github.io/components/pages/games/puzzle/Towers').then(
+    (m) => ({ default: m.Towers })
   );
 
 loaders['tumbling-e'] = () =>
@@ -477,8 +477,8 @@ loaders['tumbling-e'] = () =>
   );
 
 loaders['typoglycemia'] = () =>
-  import('@hieudoanm.github.io/components/pages/games/word/TypoglycemiaModal').then(
-    (m) => ({ default: m.TypoglycemiaModal })
+  import('@hieudoanm.github.io/components/pages/games/word/Typoglycemia').then(
+    (m) => ({ default: m.Typoglycemia })
   );
 
 loaders['uuid'] = () =>
@@ -497,8 +497,8 @@ loaders['word-counter'] = () =>
   );
 
 loaders['wordle'] = () =>
-  import('@hieudoanm.github.io/components/pages/games/word/WordleModal').then(
-    (m) => ({ default: m.WordleModal })
+  import('@hieudoanm.github.io/components/pages/games/word/Wordle').then(
+    (m) => ({ default: m.Wordle })
   );
 
 loaders['xml-to-csv'] = () =>

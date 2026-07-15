@@ -1,10 +1,10 @@
 'use client';
 
 import { ToolPage } from '../../_shared/ToolPage';
-import { DinoRunModal } from '@hieudoanm.github.io/components/pages/games/arcade/DinoRunModal';
+import { DinoRun } from '@hieudoanm.github.io/components/pages/games/arcade/DinoRun';
 
 const GamesArcadeDinoRun = () => {
-  return <ToolPage Component={DinoRunModal} backPath="/games/arcade" />;
+  return <ToolPage Component={DinoRun} backPath="/games/arcade" />;
 };
 
 export default GamesArcadeDinoRun;

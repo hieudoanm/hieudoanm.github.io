@@ -1,5 +1,5 @@
 jest.mock(
-  '@hieudoanm.github.io/components/pages/games/trivia/PokedexModal/data/pokedex',
+  '@hieudoanm.github.io/components/pages/games/trivia/Pokedex/data/pokedex',
   () => ({
     pokedex: [
       {
@@ -23,50 +23,50 @@ jest.mock(
   })
 );
 
-jest.mock('../PokedexModal/utils/search', () => ({
+jest.mock('../Pokedex/utils/search', () => ({
   fuzzyMatch: (name: string, search: string) => (name.includes(search) ? 1 : 0),
 }));
 
-jest.mock('../PokedexModal/constants', () => ({
+jest.mock('../Pokedex/constants', () => ({
   getTypeColor: () => 'badge-info',
 }));
 
-jest.mock('../PokedexModal/components/PokemonDetail', () => ({
+jest.mock('../Pokedex/components/PokemonDetail', () => ({
   PokemonDetail: ({ p, onClose }: { p: any; onClose: () => void }) => (
     <div data-testid="pokemon-detail">{p.name}</div>
   ),
 }));
 
 import { render, fireEvent, screen } from '@testing-library/react';
-import { PokedexModal } from '../PokedexModal';
+import { Pokedex } from '../Pokedex';
 
-describe('PokedexModal', () => {
+describe('Pokedex', () => {
   it('should render correctly', () => {
-    const { container } = render(<PokedexModal onClose={jest.fn()} />);
+    const { container } = render(<Pokedex onClose={jest.fn()} />);
     expect(container).toMatchSnapshot();
   });
 
   it('shows pokemon count', () => {
-    render(<PokedexModal onClose={jest.fn()} />);
+    render(<Pokedex onClose={jest.fn()} />);
     expect(screen.getByText('3 Pokémon')).toBeInTheDocument();
   });
 
   it('filters by search', () => {
-    render(<PokedexModal onClose={jest.fn()} />);
+    render(<Pokedex onClose={jest.fn()} />);
     const searchInput = screen.getByPlaceholderText('Search…');
     fireEvent.change(searchInput, { target: { value: 'bulba' } });
     expect(screen.getByText('#1')).toBeInTheDocument();
   });
 
   it('filters by type', () => {
-    render(<PokedexModal onClose={jest.fn()} />);
+    render(<Pokedex onClose={jest.fn()} />);
     const typeSelect = screen.getByRole('combobox');
     fireEvent.change(typeSelect, { target: { value: 'fire' } });
     expect(screen.getByText('#4')).toBeInTheDocument();
   });
 
   it('sorts by clicking sort buttons', () => {
-    render(<PokedexModal onClose={jest.fn()} />);
+    render(<Pokedex onClose={jest.fn()} />);
     const hpBtn = screen.getByText('HP');
     fireEvent.click(hpBtn);
     expect(
@@ -85,14 +85,14 @@ describe('PokedexModal', () => {
   });
 
   it('shows empty state when no match', () => {
-    render(<PokedexModal onClose={jest.fn()} />);
+    render(<Pokedex onClose={jest.fn()} />);
     const searchInput = screen.getByPlaceholderText('Search…');
     fireEvent.change(searchInput, { target: { value: 'zzzzz' } });
     expect(screen.getByText('No Pokémon found')).toBeInTheDocument();
   });
 
   it('opens pokemon detail on click', () => {
-    render(<PokedexModal onClose={jest.fn()} />);
+    render(<Pokedex onClose={jest.fn()} />);
     const pokemon = screen.getByText('bulbasaur');
     fireEvent.click(pokemon);
     expect(screen.getByTestId('pokemon-detail')).toBeInTheDocument();

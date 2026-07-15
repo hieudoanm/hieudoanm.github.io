@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`SlotMachine should render correctly 1`] = `
+<div>
+  <div
+    class="flex h-screen flex-col overflow-hidden"
+  >
+    <div
+      class="border-base-300 flex shrink-0 items-center justify-between border-b px-4 py-3"
+    >
+      <h2
+        class="text-sm font-normal tracking-tight"
+      >
+        Slot Machine
+      </h2>
+      <button
+        class="btn btn-ghost btn-xs btn-square text-base opacity-60 hover:opacity-100"
+      >
+        ✕
+      </button>
+    </div>
+    <div
+      class="flex-1 overflow-y-auto p-8"
+    >
+      <div
+        class="flex flex-col gap-4 outline-none"
+        tabindex="0"
+      >
+        <div
+          class="flex items-center justify-between text-sm"
+        >
+          <span>
+            Credits: 
+            <strong
+              class="text-success"
+            >
+              100
+            </strong>
+          </span>
+          <span
+            class="opacity-60"
+          >
+            Bet: 
+            10
+          </span>
+        </div>
+        <div
+          class="bg-base-200 flex items-center justify-center gap-3 rounded-xl py-8"
+        >
+          <div
+            class="bg-base-300 flex h-20 w-20 items-center justify-center rounded-xl text-4xl shadow-inner "
+          >
+            🍒
+          </div>
+          <div
+            class="bg-base-300 flex h-20 w-20 items-center justify-center rounded-xl text-4xl shadow-inner "
+          >
+            🍒
+          </div>
+          <div
+            class="bg-base-300 flex h-20 w-20 items-center justify-center rounded-xl text-4xl shadow-inner "
+          >
+            🍒
+          </div>
+        </div>
+        <button
+          class="btn btn-primary w-full"
+        >
+          Spin
+        </button>
+        <button
+          class="btn btn-ghost btn-xs"
+        >
+          Reset Credits
+        </button>
+        <p
+          class="text-center text-xs opacity-40"
+        >
+          Space spin · Esc close
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

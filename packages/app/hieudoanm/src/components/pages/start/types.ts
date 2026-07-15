@@ -213,6 +213,7 @@ export const MODAL_IDS = [
   'rps',
   'screen-recorder',
   'sheets',
+  'shikaku',
   'shopify-detect',
   'sign',
   'slides',

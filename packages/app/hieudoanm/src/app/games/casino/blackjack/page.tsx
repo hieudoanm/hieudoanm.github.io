@@ -1,9 +1,9 @@
 'use client';
 
 import { ToolPage } from '../../_shared/ToolPage';
-import { BlackjackModal } from '@hieudoanm.github.io/components/pages/games/casino/BlackjackModal';
+import { Blackjack } from '@hieudoanm.github.io/components/pages/games/casino/Blackjack';
 
 const GamesCasinoBlackjack = () => {
-  return <ToolPage Component={BlackjackModal} backPath="/games/casino" />;
+  return <ToolPage Component={Blackjack} backPath="/games/casino" />;
 };
 export default GamesCasinoBlackjack;

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`PokedexModal should render correctly 1`] = `
+exports[`Pokedex should render correctly 1`] = `
 <div>
   <div
     class="flex h-screen flex-col overflow-hidden"

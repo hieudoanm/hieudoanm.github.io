@@ -1,9 +1,9 @@
 'use client';
 
 import { ToolPage } from '../../_shared/ToolPage';
-import { PokedexModal } from '@hieudoanm.github.io/components/pages/games/trivia/PokedexModal';
+import { Pokedex } from '@hieudoanm.github.io/components/pages/games/trivia/Pokedex';
 
 const GamesTriviaPokedex = () => {
-  return <ToolPage Component={PokedexModal} backPath="/games/trivia" />;
+  return <ToolPage Component={Pokedex} backPath="/games/trivia" />;
 };
 export default GamesTriviaPokedex;

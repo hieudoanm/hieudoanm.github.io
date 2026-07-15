@@ -1,9 +1,9 @@
 'use client';
 
 import { ToolPage } from '../../_shared/ToolPage';
-import { TowersModal } from '@hieudoanm.github.io/components/pages/games/puzzle/TowersModal';
+import { Towers } from '@hieudoanm.github.io/components/pages/games/puzzle/Towers';
 
 const GamesPuzzleTowers = () => {
-  return <ToolPage Component={TowersModal} backPath="/games/puzzle" />;
+  return <ToolPage Component={Towers} backPath="/games/puzzle" />;
 };
 export default GamesPuzzleTowers;

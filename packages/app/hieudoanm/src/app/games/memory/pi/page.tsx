@@ -1,9 +1,9 @@
 'use client';
 
 import { ToolPage } from '../../_shared/ToolPage';
-import { PiModal } from '@hieudoanm.github.io/components/pages/games/memory/PiNumberModal';
+import { Pi } from '@hieudoanm.github.io/components/pages/games/memory/PiNumber';
 
 const GamesMemoryPi = () => {
-  return <ToolPage Component={PiModal} backPath="/games/memory" />;
+  return <ToolPage Component={Pi} backPath="/games/memory" />;
 };
 export default GamesMemoryPi;

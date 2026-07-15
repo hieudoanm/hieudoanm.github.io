@@ -1,9 +1,9 @@
 'use client';
 
 import { ToolPage } from '../../_shared/ToolPage';
-import { PrisonerDilemmaModal } from '@hieudoanm.github.io/components/pages/games/trivia/PrisonerDilemmaModal';
+import { PrisonerDilemma } from '@hieudoanm.github.io/components/pages/games/trivia/PrisonerDilemma';
 
 const GamesTriviaPd = () => {
-  return <ToolPage Component={PrisonerDilemmaModal} backPath="/games/trivia" />;
+  return <ToolPage Component={PrisonerDilemma} backPath="/games/trivia" />;
 };
 export default GamesTriviaPd;

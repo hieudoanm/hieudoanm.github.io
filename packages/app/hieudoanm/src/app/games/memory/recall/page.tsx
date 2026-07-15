@@ -1,9 +1,9 @@
 'use client';
 
 import { ToolPage } from '../../_shared/ToolPage';
-import { RecallModal } from '@hieudoanm.github.io/components/pages/games/memory/RecallModal';
+import { Recall } from '@hieudoanm.github.io/components/pages/games/memory/Recall';
 
 const GamesMemoryRecall = () => {
-  return <ToolPage Component={RecallModal} backPath="/games/memory" />;
+  return <ToolPage Component={Recall} backPath="/games/memory" />;
 };
 export default GamesMemoryRecall;
