@@ -1,6 +1,6 @@
 # Slide 1 (Highlighted Title)
 highlighted-title:
-  headline: 'React Basics: Server vs Client Components'
+  headline: 'React Advanced: Server vs Client Components'
   highlights:
     - 'React'
     - 'Server'
