@@ -1,8 +1,8 @@
 'use client';
 
-import { FC } from 'react';
-import { useRouter } from 'next/navigation';
 import { FullScreen } from '@hieudoanm.github.io/components/atoms/FullScreen';
+import { useRouter } from 'next/navigation';
+import { FC } from 'react';
 import { GAME_CATEGORY_LABELS } from './_maps';
 
 const GAME_CATEGORIES = Object.entries(GAME_CATEGORY_LABELS).map(

@@ -3,56 +3,17 @@ import { FC, useDeferredValue, useMemo, useState } from 'react';
 import { PiGameController, PiMagnifyingGlass } from 'react-icons/pi';
 
 import { matchTool } from '../../../../constants';
-import { make as arcadeMake } from '../../../../menu/games-arcade';
-import { make as casinoMake } from '../../../../menu/games-casino';
-import { make as chessMake } from '../../../../menu/games-chess';
-import { make as countriesMake } from '../../../../menu/games-countries';
-import { make as memoryMake } from '../../../../menu/games-memory';
-import { make as puzzleMake } from '../../../../menu/games-puzzle';
-import { make as triviaMake } from '../../../../menu/games-trivia';
-import { make as wordMake } from '../../../../menu/games-word';
+import { GAME_SECTIONS, GameSection } from './data';
 import { Game, GameCard } from './GameCard';
 
-interface GameSection {
-  label: string;
-  slug: string;
-  items: Game[];
-}
-
-const GAME_SECTIONS: {
-  label: string;
-  slug: string;
-  make: typeof arcadeMake;
-}[] = [
-  { label: 'Arcade', slug: 'arcade', make: arcadeMake },
-  { label: 'Casino', slug: 'casino', make: casinoMake },
-  { label: 'Chess', slug: 'chess', make: chessMake },
-  { label: 'Countries', slug: 'countries', make: countriesMake },
-  { label: 'Memory', slug: 'memory', make: memoryMake },
-  { label: 'Puzzle', slug: 'puzzle', make: puzzleMake },
-  { label: 'Trivia', slug: 'trivia', make: triviaMake },
-  { label: 'Word', slug: 'word', make: wordMake },
-];
-
 const buildSections = (router: ReturnType<typeof useRouter>): GameSection[] =>
-  GAME_SECTIONS.map(({ label, slug, make }) => {
-    const toolIds: string[] = [];
-    const trackId = (id: string) => {
-      toolIds.push(id);
-      return () => {};
-    };
-    const tools = make(trackId);
-    return {
-      label,
-      slug,
-      items: tools.map((t, i) => ({
-        ...t,
-        category: slug,
-        toolId: toolIds[i],
-        onClick: () => router.push(`/games/${slug}/${toolIds[i]}`),
-      })),
-    };
-  });
+  GAME_SECTIONS.map((section) => ({
+    ...section,
+    items: section.items.map((item) => ({
+      ...item,
+      onClick: () => router.push(`/games/${section.slug}/${item.toolId}`),
+    })),
+  }));
 
 export const GamesTab: FC = () => {
   const router = useRouter();

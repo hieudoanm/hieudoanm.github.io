@@ -417,7 +417,7 @@ loaders['split-excel'] = () =>
   );
 
 loaders['sudoku'] = () =>
-  import('@hieudoanm.github.io/components/pages/games/puzzle/Sudoku').then(
+  import('@hieudoanm.github.io/components/pages/games/nikoli/Sudoku').then(
     (m) => ({ default: m.Sudoku })
   );
 
