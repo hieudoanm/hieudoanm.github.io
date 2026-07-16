@@ -223,13 +223,23 @@ export const BracketContent: FC<{
 
       <BracketActions
         onReset={() => setWinners({})}
-        onDownload={() =>
+        onDownload={() => {
+          const el = captureRef.current;
+          if (el) {
+            el.style.padding = '32px';
+            el.style.boxSizing = 'border-box';
+          }
           download({
             ref: captureRef,
             output: 'knockout-bracket',
             backgroundColor: '#09090b',
-          })
-        }
+          }).finally(() => {
+            if (el) {
+              el.style.padding = '';
+              el.style.boxSizing = '';
+            }
+          });
+        }}
         onShare={handleShare}
         copied={copied}
       />

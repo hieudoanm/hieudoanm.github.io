@@ -169,9 +169,10 @@ const PREDETERMINED: Record<string, string> = {
   bel_esp: 'esp',
   arg_sui: 'arg',
   // Semi Final
-  esp_fra: '',
-  arg_eng: '',
+  esp_fra: 'esp',
+  arg_eng: 'arg',
   // Final
+  arg_esp: '',
 };
 
 const BRACKET_RAW: BracketRaw = [
