@@ -1,3 +1,5 @@
+export const GAME_NAME = { en: 'Shikaku', ja: 'しかく' } as const;
+
 export type Point = [number, number];
 
 export type Region = {

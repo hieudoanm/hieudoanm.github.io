@@ -47,7 +47,7 @@ export const useFillomino = () => {
       if (puzzle[r][c] !== null) return;
       historyRef.current.push(grid.map((row) => [...row]));
       const next = grid.map((row) => [...row]);
-      next[r][c] = val;
+      next[r][c] = val === 0 ? null : val;
       setGrid(next);
       if (isComplete(next)) setWon(true);
     },

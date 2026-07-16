@@ -13,10 +13,16 @@ export const useHeyawake = () => {
 
   const init = useCallback(() => {
     if (timerRef.current) clearTimeout(timerRef.current);
-    const { grid: s, rooms: r } = generatePuzzle();
-    setSolution(s);
+    const { grid: sol, rooms: r } = generatePuzzle();
+    setSolution(sol);
     setRooms(r);
-    setGrid(s.map((row) => row.map((cell) => ({ ...cell, shaded: false }))));
+    setGrid(
+      Array.from({ length: SIZE }, () =>
+        Array.from({ length: SIZE }, () => ({ shaded: false, roomId: -1 }))
+      ).map((row, ri) =>
+        row.map((cell, ci) => ({ ...cell, roomId: sol[ri][ci].roomId }))
+      )
+    );
     setWon(false);
     setAutoSolving(false);
     historyRef.current = [];
