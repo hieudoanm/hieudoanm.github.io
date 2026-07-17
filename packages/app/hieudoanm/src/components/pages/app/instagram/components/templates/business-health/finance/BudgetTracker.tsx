@@ -14,11 +14,11 @@ export const BudgetTracker: FC<TemplateProps> = ({ data }) => {
   const total = incomeNum + expensesNum + savingsNum || 1;
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-12">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="flex items-center justify-between">
-        <h1 className="text-base-content text-lg font-bold">{title}</h1>
+        <h1 className="text-base-content text-4xl font-bold">{title}</h1>
         {period && (
-          <span className="text-neutral text-[10px] font-medium">{period}</span>
+          <span className="text-neutral text-xs font-medium">{period}</span>
         )}
       </div>
       <div className="mt-6 flex flex-col gap-4">

@@ -9,11 +9,11 @@ export const RatingScale: FC<TemplateProps> = ({ data }) => {
   const sublabel = (data.sublabel as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-12">
-      <h1 className="text-base-content mb-4 text-center text-2xl font-bold tracking-tight">
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
+      <h1 className="text-base-content mb-2 text-center text-4xl font-bold tracking-tight">
         {headline || 'Rating'}
       </h1>
-      <div className="mb-4 flex gap-2">
+      <div className="mb-2 flex gap-1">
         {Array.from({ length: scaleMax }, (_, i) => (
           <svg
             key={i}
@@ -24,9 +24,9 @@ export const RatingScale: FC<TemplateProps> = ({ data }) => {
           </svg>
         ))}
       </div>
-      {label && <p className="text-base-content text-xl font-bold">{label}</p>}
+      {label && <p className="text-base-content text-sm font-bold">{label}</p>}
       {sublabel && <p className="text-neutral mt-1 text-sm">{sublabel}</p>}
-      <div className="mt-4 flex w-full max-w-xs gap-1">
+      <div className="mt-2 flex w-full max-w-xs gap-1">
         <span className="text-neutral text-xs">1</span>
         <div className="flex-1" />
         <span className="text-neutral text-xs">{scaleMax}</span>

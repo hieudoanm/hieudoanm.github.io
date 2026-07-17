@@ -13,33 +13,33 @@ export const GearReview: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
-      <span className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
+      <span className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
         Gear Review
       </span>
-      <h1 className="text-base-content mt-1 text-xl font-bold">{name}</h1>
+      <h1 className="text-base-content mt-1 text-lg font-bold">{name}</h1>
       {category && (
-        <span className="bg-base-200 text-neutral mt-1 rounded px-2 py-0.5 text-[10px] font-bold">
+        <span className="bg-base-200 text-neutral mt-1 rounded px-1 py-0.5 text-xs font-bold">
           {category}
         </span>
       )}
-      <div className="mt-2 flex gap-1">
+      <div className="mt-1 flex gap-1">
         {stars.map((filled, i) => (
           <span
             key={i}
             className={
-              filled ? 'text-primary text-lg' : 'text-base-300 text-lg'
+              filled ? 'text-primary text-xs' : 'text-base-300 text-xs'
             }>
             ★
           </span>
         ))}
       </div>
       {price && (
-        <p className="text-base-content mt-2 text-lg font-black">{price}</p>
+        <p className="text-base-content mt-1 text-xs font-black">{price}</p>
       )}
-      <div className="mt-4 w-full max-w-xs space-y-2">
+      <div className="mt-2 w-full max-w-xs space-y-1">
         {pros.length > 0 && (
           <div className="text-left">
-            <p className="text-success mb-1 text-[10px] font-bold uppercase">
+            <p className="text-success mb-0.5 text-xs font-bold uppercase">
               Pros
             </p>
             {pros.map((pro, i) => (
@@ -51,7 +51,7 @@ export const GearReview: FC<TemplateProps> = ({ data }) => {
         )}
         {cons.length > 0 && (
           <div className="text-left">
-            <p className="text-error mb-1 text-[10px] font-bold uppercase">
+            <p className="text-error mb-0.5 text-xs font-bold uppercase">
               Cons
             </p>
             {cons.map((con, i) => (

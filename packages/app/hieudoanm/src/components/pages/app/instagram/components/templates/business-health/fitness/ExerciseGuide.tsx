@@ -9,17 +9,17 @@ export const ExerciseGuide: FC<TemplateProps> = ({ data }) => {
   const imageUrl = (data.imageUrl as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-12">
-      <h1 className="text-base-content text-xl font-bold">{name}</h1>
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+      <h1 className="text-base-content text-4xl font-bold">{name}</h1>
       {target && (
-        <span className="rounded-box bg-accent/10 text-accent mt-2 inline-block self-start px-3 py-0.5 text-[10px] font-bold">
+        <span className="rounded-box bg-accent/10 text-accent mt-2 inline-block self-start px-3 py-0.5 text-xs font-bold">
           {target}
         </span>
       )}
       <div className="mt-5 flex flex-col gap-3">
         {steps.map((step, i) => (
           <div key={i} className="flex items-start gap-3">
-            <span className="bg-accent text-accent-content mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded text-[9px] font-bold">
+            <span className="bg-accent text-accent-content mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded text-xs font-bold">
               {i + 1}
             </span>
             <p className="text-base-content text-sm">{step}</p>

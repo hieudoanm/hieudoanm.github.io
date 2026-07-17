@@ -40,21 +40,21 @@ export const Scorecard: FC<TemplateProps> = ({ data }) => {
 
       <div className="flex items-center justify-center gap-6 py-4">
         <div className="flex flex-1 flex-col items-end">
-          <span className="text-base-content text-lg font-bold">
+          <span className="text-base-content text-base font-bold">
             {homeTeam}
           </span>
         </div>
         <div className="flex items-baseline gap-2">
-          <span className="text-base-content text-4xl font-black">
+          <span className="text-base-content text-3xl font-black">
             {homeScore}
           </span>
-          <span className="text-neutral text-lg">-</span>
-          <span className="text-base-content text-4xl font-black">
+          <span className="text-neutral text-base">-</span>
+          <span className="text-base-content text-3xl font-black">
             {awayScore}
           </span>
         </div>
         <div className="flex flex-1 flex-col items-start">
-          <span className="text-base-content text-lg font-bold">
+          <span className="text-base-content text-base font-bold">
             {awayTeam}
           </span>
         </div>

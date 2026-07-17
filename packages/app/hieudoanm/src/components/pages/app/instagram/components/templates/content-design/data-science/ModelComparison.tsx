@@ -18,7 +18,7 @@ export const ModelComparison: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
-      <div className="mb-4 text-center">
+      <div className="mb-2 text-center">
         <div className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
           Model Comparison
         </div>
@@ -29,7 +29,7 @@ export const ModelComparison: FC<TemplateProps> = ({ data }) => {
         )}
       </div>
       <div className="flex flex-1 flex-col justify-center">
-        <div className="border-base-300 overflow-hidden rounded border text-[10px]">
+        <div className="border-base-300 overflow-hidden rounded-xl border text-[10px]">
           <div className="bg-base-200 flex">
             <div className="w-24 px-2 py-1.5 font-bold">Model</div>
             {metrics.map((m) => (

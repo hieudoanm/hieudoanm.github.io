@@ -21,23 +21,23 @@ export const UVIndex: FC<TemplateProps> = ({ data }) => {
   };
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-10">
-      <span className="text-accent mb-2 text-[10px] font-bold tracking-[0.2em] uppercase">
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
+      <span className="text-accent mb-2 text-xs font-bold tracking-[0.2em] uppercase">
         {title}
       </span>
 
-      <div className="mt-4 text-center">
-        <span className="text-accent text-7xl font-black">{value}</span>
+      <div className="mt-2 text-center">
+        <span className="text-accent text-4xl font-black">{value}</span>
         <div className="mt-2 flex justify-center">
           <span
-            className={`rounded-full px-4 py-1 text-xs font-bold tracking-[0.1em] uppercase ${levelColor(level)}`}>
+            className={`rounded-full px-2 py-1 text-xs font-bold tracking-[0.1em] uppercase ${levelColor(level)}`}>
             {level}
           </span>
         </div>
       </div>
 
-      <div className="bg-base-200 mt-5 rounded-lg px-4 py-2 text-center">
-        <span className="text-neutral text-[9px] font-bold tracking-[0.15em] uppercase">
+      <div className="bg-base-200 mt-2 rounded-2xl px-2 py-1 text-center">
+        <span className="text-neutral text-xs font-bold tracking-[0.15em] uppercase">
           Peak Time
         </span>
         <span className="text-base-content mt-1 block text-xs font-semibold">
@@ -45,8 +45,8 @@ export const UVIndex: FC<TemplateProps> = ({ data }) => {
         </span>
       </div>
 
-      <div className="mt-5 w-full">
-        <span className="text-neutral text-[9px] font-bold tracking-[0.15em] uppercase">
+      <div className="mt-2 w-full">
+        <span className="text-neutral text-xs font-bold tracking-[0.15em] uppercase">
           Protection Tips
         </span>
         <div className="mt-2 flex flex-col gap-2">

@@ -14,17 +14,17 @@ export const Comparison: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="flex h-full w-full flex-col">
-      <div className="bg-accent/10 px-10 py-5">
-        <h1 className="text-base-content text-center text-2xl font-bold tracking-tight">
+      <div className="bg-accent/10 px-5 py-3">
+        <h1 className="text-base-content text-center text-4xl font-bold tracking-tight">
           {headline}
         </h1>
       </div>
       <div className="flex flex-1">
-        <div className="flex w-1/2 flex-col items-center justify-center gap-4 p-8">
+        <div className="flex w-1/2 flex-col items-center justify-center gap-2 p-4">
           <span className="bg-accent/10 text-accent rounded-full px-4 py-1 text-xs font-bold tracking-widest uppercase">
             {before.label}
           </span>
-          <p className="text-neutral text-center text-sm leading-relaxed">
+          <p className="text-neutral text-center text-base leading-relaxed">
             {before.text}
           </p>
           {imageUrl && (
@@ -35,11 +35,11 @@ export const Comparison: FC<TemplateProps> = ({ data }) => {
           )}
         </div>
         <div className="bg-primary/50 flex w-0.5 flex-shrink-0" />
-        <div className="flex w-1/2 flex-col items-center justify-center gap-4 p-8">
+        <div className="flex w-1/2 flex-col items-center justify-center gap-2 p-4">
           <span className="bg-primary text-primary-content rounded-full px-4 py-1 text-xs font-bold tracking-widest uppercase">
             {after.label}
           </span>
-          <p className="text-neutral text-center text-sm leading-relaxed">
+          <p className="text-neutral text-center text-base leading-relaxed">
             {after.text}
           </p>
           {imageUrl && (

@@ -17,9 +17,9 @@ export const ProductSpecs: FC<TemplateProps> = ({ data }) => {
   ];
 
   return (
-    <div className="bg-base-100 border-t-primary flex h-full w-full flex-col border-t-4 p-6">
+    <div className="bg-base-100 border-t-primary flex h-full w-full flex-col border-t-4 p-8">
       <div className="mb-4">
-        <h1 className="text-base-content text-lg font-bold">{name}</h1>
+        <h1 className="text-base-content text-4xl font-bold">{name}</h1>
         <p className="text-neutral text-sm">{tagline}</p>
       </div>
       <div className="flex flex-1 flex-col gap-0">

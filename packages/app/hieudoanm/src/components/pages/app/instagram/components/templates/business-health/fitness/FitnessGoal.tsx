@@ -9,11 +9,11 @@ export const FitnessGoal: FC<TemplateProps> = ({ data }) => {
   const motivation = (data.motivation as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-12">
-      <span className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+      <span className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
         Fitness Goal
       </span>
-      <h1 className="text-base-content mt-2 text-2xl leading-tight font-bold">
+      <h1 className="text-base-content mt-2 text-4xl leading-tight font-bold">
         {goal}
       </h1>
       <div className="mt-3 flex gap-3">

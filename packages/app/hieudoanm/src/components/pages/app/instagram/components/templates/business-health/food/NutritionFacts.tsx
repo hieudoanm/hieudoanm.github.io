@@ -17,8 +17,8 @@ export const NutritionFacts: FC<TemplateProps> = ({ data }) => {
   ];
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col justify-center p-12">
-      <h1 className="text-base-content text-xl font-bold tracking-tight">
+    <div className="bg-base-100 flex h-full w-full flex-col justify-center p-8">
+      <h1 className="text-base-content text-4xl font-bold tracking-tight">
         {item}
       </h1>
       {serving && <p className="text-neutral mt-1 text-xs">Per {serving}</p>}

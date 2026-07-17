@@ -24,18 +24,20 @@ export const MealPlan: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-4 text-center">
-        <span className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
+        <span className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
           Meal Plan
         </span>
-        <h1 className="text-base-content mt-1 text-lg font-bold">{headline}</h1>
+        <h1 className="text-base-content mt-1 text-4xl font-bold">
+          {headline}
+        </h1>
       </div>
       <div className="bg-base-200 rounded-box overflow-hidden">
         <div className="border-base-300 flex border-b px-3 py-2">
-          <span className="text-neutral w-10 text-[9px] font-bold uppercase" />
+          <span className="text-neutral w-10 text-xs font-bold uppercase" />
           {['Breakfast', 'Lunch', 'Dinner'].map((h) => (
             <span
               key={h}
-              className="text-neutral flex-1 text-center text-[9px] font-bold uppercase">
+              className="text-neutral flex-1 text-center text-xs font-bold uppercase">
               {h}
             </span>
           ))}
@@ -50,7 +52,7 @@ export const MealPlan: FC<TemplateProps> = ({ data }) => {
             {[m.breakfast, m.lunch, m.dinner].map((meal, j) => (
               <span
                 key={j}
-                className="text-base-content flex-1 px-2 py-2.5 text-center text-[10px] font-medium">
+                className="text-base-content flex-1 px-2 py-2.5 text-center text-xs font-medium">
                 {meal}
               </span>
             ))}

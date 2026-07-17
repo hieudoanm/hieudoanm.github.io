@@ -21,32 +21,32 @@ export const ColorWheel: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
-      <h1 className="text-base-content mb-2 text-2xl font-black tracking-tight">
+      <h1 className="text-base-content mb-1 text-4xl font-black tracking-tight">
         {title}
       </h1>
       {description && (
-        <p className="text-neutral mb-6 max-w-sm text-sm leading-relaxed">
+        <p className="text-neutral mb-3 max-w-sm text-xs leading-relaxed">
           {description}
         </p>
       )}
-      <div className="mb-6 flex w-full items-center justify-center gap-4">
+      <div className="mb-3 flex w-full items-center justify-center gap-3">
         {colors.map((c) => (
-          <div key={c.name} className="flex flex-col items-center gap-2">
+          <div key={c.name} className="flex flex-col items-center gap-1">
             <div
               className="h-16 w-16 rounded-full shadow-md ring-2 ring-black/10"
               style={{ backgroundColor: c.hex }}
             />
-            <span className="text-base-content text-[11px] font-bold">
+            <span className="text-base-content text-xs font-bold">
               {c.name}
             </span>
-            <span className="text-neutral text-[10px] tracking-wider uppercase">
+            <span className="text-neutral text-xs tracking-wider uppercase">
               {c.role}
             </span>
           </div>
         ))}
       </div>
       {tip && (
-        <div className="bg-primary/10 text-primary rounded-lg px-4 py-2 text-xs font-medium">
+        <div className="bg-primary/10 text-primary rounded-lg px-2 py-1 text-xs font-medium">
           {tip}
         </div>
       )}

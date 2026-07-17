@@ -27,13 +27,13 @@ export const HighlightedTitle: FC<TemplateProps> = ({ data }) => {
   };
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-6">
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
       <div className="text-center">
-        <h1 className="text-base-content text-5xl leading-tight font-bold tracking-tight">
+        <h1 className="text-base-content text-4xl leading-tight font-bold tracking-tight">
           {renderHeadline()}
         </h1>
         {text && (
-          <p className="text-neutral mt-4 text-sm leading-relaxed">{text}</p>
+          <p className="text-neutral mt-2 text-base leading-relaxed">{text}</p>
         )}
       </div>
     </div>

@@ -7,14 +7,14 @@ export const PollVote: FC<TemplateProps> = ({ data }) => {
     (data.options as { label: string; percentage: number }[]) ?? [];
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-10">
-      <h1 className="text-base-content mb-6 text-lg leading-tight font-bold">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+      <h1 className="text-base-content mb-6 text-4xl leading-tight font-bold">
         {question}
       </h1>
       <div className="flex flex-1 flex-col justify-center gap-3">
         {options.map((opt, i) => (
           <div key={i}>
-            <div className="mb-1 flex items-center justify-between text-xs">
+            <div className="mb-2 flex items-center justify-between text-sm">
               <span className="text-base-content font-medium">{opt.label}</span>
               <span className="text-neutral">{opt.percentage}%</span>
             </div>
@@ -27,9 +27,7 @@ export const PollVote: FC<TemplateProps> = ({ data }) => {
           </div>
         ))}
       </div>
-      <p className="text-neutral mt-4 text-center text-[10px]">
-        Cast your vote
-      </p>
+      <p className="text-neutral mt-4 text-center text-sm">Cast your vote</p>
     </div>
   );
 };

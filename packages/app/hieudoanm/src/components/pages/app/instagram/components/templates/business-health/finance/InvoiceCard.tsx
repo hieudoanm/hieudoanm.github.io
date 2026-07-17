@@ -12,26 +12,26 @@ export const InvoiceCard: FC<TemplateProps> = ({ data }) => {
   ];
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-10">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="flex items-start justify-between">
         <div>
-          <span className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
+          <span className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
             Invoice
           </span>
-          <h1 className="text-base-content mt-1 text-lg font-bold">
+          <h1 className="text-base-content mt-1 text-4xl font-bold">
             {invoiceNumber}
           </h1>
         </div>
-        <span className="bg-accent/10 text-accent rounded px-2.5 py-0.5 text-[10px] font-bold">
+        <span className="bg-accent/10 text-accent rounded px-2.5 py-0.5 text-xs font-bold">
           {client}
         </span>
       </div>
       <div className="bg-base-200 rounded-box mt-5 overflow-hidden">
         <div className="border-base-300 flex border-b px-3 py-2">
-          <span className="text-neutral flex-1 text-[9px] font-bold uppercase">
+          <span className="text-neutral flex-1 text-xs font-bold uppercase">
             Description
           </span>
-          <span className="text-neutral text-[9px] font-bold uppercase">
+          <span className="text-neutral text-xs font-bold uppercase">
             Amount
           </span>
         </div>
@@ -51,7 +51,7 @@ export const InvoiceCard: FC<TemplateProps> = ({ data }) => {
       <div className="bg-base-200 rounded-box mt-4 flex items-center justify-between px-4 py-3">
         <span className="text-neutral text-xs">Due {dueDate}</span>
         <div className="text-right">
-          <span className="text-neutral text-[9px] font-bold uppercase">
+          <span className="text-neutral text-xs font-bold uppercase">
             Total
           </span>
           <p className="text-base-content text-lg font-black">{amount}</p>

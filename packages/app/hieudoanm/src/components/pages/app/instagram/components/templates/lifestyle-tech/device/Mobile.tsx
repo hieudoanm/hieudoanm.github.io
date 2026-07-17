@@ -7,13 +7,13 @@ export const Mobile: FC<TemplateProps> = ({ data }) => {
   const image = (data.image as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center gap-3 p-6">
-      <div className="flex w-full flex-col gap-1">
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center gap-4 p-8">
+      <div className="flex w-full flex-col gap-2">
         <h2 className="text-base-content text-center text-base font-bold">
           {headline}
         </h2>
         {description && (
-          <p className="text-base-content/70 text-center text-[10px] leading-relaxed">
+          <p className="text-base-content/70 text-center text-xs leading-relaxed">
             {description}
           </p>
         )}
@@ -29,7 +29,7 @@ export const Mobile: FC<TemplateProps> = ({ data }) => {
         ) : (
           <div className="flex w-full flex-1 flex-col px-2 pb-1">
             <div className="bg-base-200 flex aspect-[9/16] w-full items-center justify-center rounded-2xl">
-              <span className="text-neutral/30 text-[6px] font-semibold tracking-widest uppercase">
+              <span className="text-neutral/30 text-xs font-semibold tracking-widest uppercase">
                 Add image URL (9:16)
               </span>
             </div>

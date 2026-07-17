@@ -71,7 +71,7 @@ export const LeagueTable: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-4 text-center">
-        <div className="text-base-content text-sm font-bold">{headline}</div>
+        <div className="text-base-content text-base font-bold">{headline}</div>
         {text && <div className="text-neutral mt-1 text-xs">{text}</div>}
       </div>
 
@@ -93,7 +93,7 @@ export const LeagueTable: FC<TemplateProps> = ({ data }) => {
             <span className="text-accent w-8 text-xs font-bold">
               {row.position}
             </span>
-            <span className="text-base-content flex-1 text-sm font-medium">
+            <span className="text-base-content flex-1 text-base font-medium">
               {row.team}
             </span>
             <span className="text-neutral w-7 text-center text-xs">

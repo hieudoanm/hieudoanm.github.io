@@ -29,34 +29,36 @@ export const Versus: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="flex h-full w-full flex-col">
-      <div className="bg-accent/10 px-10 py-5">
-        <h1 className="text-base-content text-center text-2xl font-bold tracking-tight">
+      <div className="bg-accent/10 px-5 py-3">
+        <h1 className="text-base-content text-center text-4xl font-bold tracking-tight">
           {headline || 'Versus'}
         </h1>
       </div>
-      <div className="flex items-center justify-center gap-4 px-10 py-4">
-        <span className="text-base-content text-lg font-bold">
+      <div className="flex items-center justify-center gap-2 px-5 py-2">
+        <span className="text-base-content text-sm font-bold">
           {optionA.label}
         </span>
         <span className="text-primary text-sm font-bold">VS</span>
-        <span className="text-base-content text-lg font-bold">
+        <span className="text-base-content text-sm font-bold">
           {optionB.label}
         </span>
       </div>
-      <div className="flex flex-1 flex-col gap-3 px-10 pb-8">
+      <div className="flex flex-1 flex-col gap-2 px-8 pb-4">
         {rows.map((row, i) => (
           <div
             key={i}
-            className="rounded-box bg-accent/5 flex flex-col gap-1 px-5 py-3">
+            className="rounded-box bg-accent/5 flex flex-col gap-1 px-4 py-2">
             {row.label && (
               <span className="text-neutral text-[10px] font-medium tracking-wider uppercase">
                 {row.label}
               </span>
             )}
             <div className="flex items-center justify-between gap-4">
-              <span className="text-base-content flex-1 text-sm">{row.a}</span>
+              <span className="text-base-content flex-1 text-base">
+                {row.a}
+              </span>
               <span className="text-neutral text-xs">|</span>
-              <span className="text-base-content flex-1 text-right text-sm">
+              <span className="text-base-content flex-1 text-right text-base">
                 {row.b}
               </span>
             </div>

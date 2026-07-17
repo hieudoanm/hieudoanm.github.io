@@ -14,19 +14,19 @@ export const LaunchCountdown: FC<TemplateProps> = ({ data }) => {
   ];
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-6">
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
       <div className="text-center">
         <div className="text-primary text-xs font-bold tracking-widest uppercase">
           {title}
         </div>
         <div className="text-neutral mt-2 text-xs">{date}</div>
-        <div className="mt-6 flex gap-3">
+        <div className="mt-6 flex gap-4">
           {units.map((u, i) => (
             <div key={i} className="flex flex-col items-center">
-              <div className="bg-primary text-primary-content flex h-14 w-14 items-center justify-center rounded-lg text-2xl font-black">
+              <div className="bg-primary text-primary-content flex h-14 w-14 items-center justify-center rounded-lg text-base font-black">
                 {u.value}
               </div>
-              <span className="text-neutral mt-1 text-[9px] tracking-wider uppercase">
+              <span className="text-neutral mt-1 text-xs tracking-wider uppercase">
                 {u.label}
               </span>
             </div>

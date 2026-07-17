@@ -7,19 +7,19 @@ export const Minimal: FC<TemplateProps> = ({ data }) => {
   const imageUrl = (data.imageUrl as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-between gap-4 p-12 text-center">
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-between gap-4 p-8 text-center">
       <div />
       <div>
-        <h1 className="text-base-content mb-4 text-4xl leading-tight font-bold tracking-tight">
+        <h1 className="text-base-content mb-2 text-4xl leading-tight font-bold tracking-tight">
           {headline}
         </h1>
-        <p className="text-neutral mx-auto max-w-md text-base leading-relaxed">
+        <p className="text-neutral mx-auto max-w-md text-sm leading-relaxed">
           {text}
         </p>
       </div>
       {imageUrl ? (
         <div
-          className="rounded-box h-48 w-full bg-cover bg-center"
+          className="rounded-box h-24 w-full bg-cover bg-center"
           style={{ backgroundImage: `url(${imageUrl})` }}
         />
       ) : (

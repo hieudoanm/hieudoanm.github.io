@@ -31,36 +31,34 @@ export const Results: FC<TemplateProps> = ({ data }) => {
   const chart = (data.chart as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-10">
-      <span className="text-accent mb-3 text-[10px] font-bold tracking-[0.2em] uppercase">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+      <span className="text-accent mb-3 text-sm font-bold tracking-[0.2em] uppercase">
         Results
       </span>
-      <h1 className="text-base-content text-xl leading-tight font-bold">
+      <h1 className="text-base-content text-4xl leading-tight font-bold">
         {title}
       </h1>
 
-      <div className="mt-5 flex gap-4">
-        <div className="bg-base-200 flex-1 rounded-lg p-3 text-center">
-          <span className="text-accent text-lg font-black">{statistic}</span>
-          <span className="text-neutral mt-1 block text-[10px]">
-            Effect Size
-          </span>
+      <div className="mt-6 flex gap-3">
+        <div className="bg-base-200 flex-1 rounded-2xl p-3 text-center">
+          <span className="text-accent text-2xl font-black">{statistic}</span>
+          <span className="text-neutral mt-2 block text-sm">Effect Size</span>
         </div>
-        <div className="bg-base-200 flex-1 rounded-lg p-3 text-center">
-          <span className="text-base-content text-lg font-black">
+        <div className="bg-base-200 flex-1 rounded-2xl p-3 text-center">
+          <span className="text-base-content text-2xl font-black">
             {effectSize}
           </span>
-          <span className="text-neutral mt-1 block text-[10px]">
+          <span className="text-neutral mt-2 block text-sm">
             Interpretation
           </span>
         </div>
       </div>
 
-      <div className="mt-5 flex flex-col gap-2">
+      <div className="mt-6 flex flex-col gap-2">
         {findings.map((f, i) => (
           <div
             key={i}
-            className={`flex items-start gap-3 rounded-lg border p-3 ${
+            className={`flex items-start gap-4 rounded-2xl border p-4 ${
               f.significant
                 ? 'border-[#ff0030]/20 bg-[#ff0030]/5'
                 : 'border-[#e5e7eb] bg-transparent'
@@ -71,10 +69,10 @@ export const Results: FC<TemplateProps> = ({ data }) => {
               }`}
             />
             <div>
-              <span className="text-base-content text-xs font-medium">
+              <span className="text-base-content text-sm font-medium">
                 {f.label}
               </span>
-              <span className="text-neutral mt-0.5 block font-mono text-[10px]">
+              <span className="text-neutral mt-2 block font-mono text-sm">
                 {f.value}
               </span>
             </div>
@@ -83,8 +81,8 @@ export const Results: FC<TemplateProps> = ({ data }) => {
       </div>
 
       {chart && (
-        <div className="bg-base-200 mt-5 flex items-center justify-center rounded-lg p-4">
-          <span className="text-neutral text-xs">{chart}</span>
+        <div className="bg-base-200 mt-6 flex items-center justify-center rounded-2xl p-3">
+          <span className="text-neutral text-sm">{chart}</span>
         </div>
       )}
     </div>

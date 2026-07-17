@@ -9,10 +9,10 @@ export const FoodReview: FC<TemplateProps> = ({ data }) => {
   const imageUrl = (data.imageUrl as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-12">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="flex items-start justify-between">
         <div>
-          <h1 className="text-base-content text-xl font-bold">{dish}</h1>
+          <h1 className="text-base-content text-4xl font-bold">{dish}</h1>
           {restaurant && (
             <p className="text-neutral mt-0.5 text-xs">{restaurant}</p>
           )}

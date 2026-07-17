@@ -31,35 +31,35 @@ export const Projects: FC<TemplateProps> = ({ data }) => {
   ];
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-10">
-      <span className="text-accent mb-3 text-[10px] font-bold tracking-[0.2em] uppercase">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+      <span className="text-accent mb-2 text-xs font-bold tracking-[0.2em] uppercase">
         {title}
       </span>
 
-      <div className="flex flex-1 flex-col gap-5">
+      <div className="flex flex-1 flex-col gap-2">
         {projects.map((p, i) => (
-          <div key={i} className="rounded-lg border border-[#e5e7eb] p-4">
-            <span className="text-base-content text-sm font-bold">
+          <div key={i} className="rounded-2xl border border-[#e5e7eb] p-2">
+            <span className="text-base-content text-xs font-bold">
               {p.name}
             </span>
-            <p className="text-neutral mt-1 text-[11px] leading-relaxed">
+            <p className="text-neutral mt-1 text-xs leading-relaxed">
               {p.description}
             </p>
-            <div className="mt-2 flex flex-wrap gap-1">
+            <div className="mt-1 flex flex-wrap gap-1">
               {p.tech.map((t, j) => (
                 <span
                   key={j}
-                  className="bg-accent/10 text-accent rounded px-1.5 py-0.5 text-[9px] font-medium">
+                  className="bg-accent/10 text-accent rounded px-1.5 py-0.5 text-xs font-medium">
                   {t}
                 </span>
               ))}
             </div>
             {p.highlights && p.highlights.length > 0 && (
-              <div className="mt-2 flex flex-col gap-1">
+              <div className="mt-1 flex flex-col gap-1">
                 {p.highlights.map((h, j) => (
-                  <div key={j} className="flex items-center gap-1.5">
+                  <div key={j} className="flex items-center gap-1">
                     <span className="bg-accent h-1 w-1 rounded-full" />
-                    <span className="text-base-content text-[10px]">{h}</span>
+                    <span className="text-base-content text-xs">{h}</span>
                   </div>
                 ))}
               </div>

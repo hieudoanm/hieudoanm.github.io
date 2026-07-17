@@ -46,7 +46,7 @@ export const MatchSchedule: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-5 text-center">
-        <div className="text-base-content text-sm font-bold">{headline}</div>
+        <div className="text-base-content text-base font-bold">{headline}</div>
         {text && <div className="text-neutral mt-1 text-xs">{text}</div>}
       </div>
 
@@ -54,21 +54,19 @@ export const MatchSchedule: FC<TemplateProps> = ({ data }) => {
         {fixtures.map((f, i) => (
           <div key={i} className="border-base-300 rounded-box border px-4 py-3">
             <div className="mb-2 flex items-center justify-between">
-              <span className="text-accent text-[10px] font-bold">
-                {f.date}
-              </span>
-              <span className="text-neutral text-[10px]">{f.time}</span>
+              <span className="text-accent text-xs font-bold">{f.date}</span>
+              <span className="text-neutral text-xs">{f.time}</span>
             </div>
             <div className="flex items-center justify-between">
-              <span className="text-base-content flex-1 text-sm font-semibold">
+              <span className="text-base-content flex-1 text-base font-semibold">
                 {f.homeTeam}
               </span>
               <span className="text-neutral text-xs">vs</span>
-              <span className="text-base-content flex-1 text-right text-sm font-semibold">
+              <span className="text-base-content flex-1 text-right text-base font-semibold">
                 {f.awayTeam}
               </span>
             </div>
-            <div className="text-neutral mt-2 text-center text-[10px]">
+            <div className="text-neutral mt-2 text-center text-xs">
               {f.venue}
             </div>
           </div>

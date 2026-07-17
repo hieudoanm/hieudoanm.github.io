@@ -11,11 +11,11 @@ export const PricingCard: FC<TemplateProps> = ({ data }) => {
       : ['Feature one', 'Feature two', 'Feature three'];
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-10 text-center">
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
       <span className="bg-accent/10 text-accent mb-2 rounded-full px-4 py-1 text-xs font-bold tracking-widest uppercase">
         {plan}
       </span>
-      <div className="text-base-content mb-6 text-6xl font-black tracking-tight">
+      <div className="text-base-content mb-6 text-3xl font-black tracking-tight">
         {price}
       </div>
       <div className="flex flex-col gap-3">

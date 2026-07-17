@@ -21,11 +21,11 @@ export const Leaderboard: FC<TemplateProps> = ({ data }) => {
   ];
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-6">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="text-base-content mb-4 text-center text-sm font-bold">
         {title}
       </div>
-      <div className="flex flex-1 flex-col gap-1">
+      <div className="flex flex-1 flex-col gap-2">
         {entries.map((entry, i) => {
           const medal =
             entry.medal ??
@@ -33,17 +33,17 @@ export const Leaderboard: FC<TemplateProps> = ({ data }) => {
           return (
             <div
               key={i}
-              className={`flex items-center gap-3 rounded px-3 py-2 ${
+              className={`flex items-center gap-4 rounded-2xl px-4 py-2 ${
                 i % 2 === 0 ? 'bg-base-200/50' : ''
               }`}>
-              <span className="text-neutral w-5 text-right text-xs font-bold">
+              <span className="text-neutral w-6 text-right text-sm font-bold">
                 {entry.rank}
               </span>
               {medal && <span className="text-sm">{medal}</span>}
-              <span className="text-base-content flex-1 text-xs font-bold">
+              <span className="text-base-content flex-1 text-sm font-bold">
                 {entry.name}
               </span>
-              <span className="text-primary text-xs font-bold">
+              <span className="text-primary text-sm font-bold">
                 {entry.score}
               </span>
             </div>

@@ -17,15 +17,15 @@ export const LensGuide: FC<TemplateProps> = ({ data }) => {
       <div className="text-accent mb-1 text-xs font-bold tracking-[0.2em] uppercase">
         Lens Guide
       </div>
-      <h1 className="text-base-content mb-4 text-2xl font-bold">{title}</h1>
+      <h1 className="text-base-content mb-2 text-4xl font-bold">{title}</h1>
       {lenses.length > 0 && (
-        <div className="flex w-full max-w-md flex-col gap-2">
+        <div className="flex w-full max-w-md flex-col gap-1">
           {lenses.map((lens, i) => (
             <div
               key={i}
-              className="border-base-300 flex items-center gap-3 rounded border p-3 text-left">
-              <div className="bg-primary/10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full">
-                <span className="text-primary text-[10px] font-bold">
+              className="border-base-300 flex items-center gap-1 rounded border p-1 text-left">
+              <div className="bg-primary/10 flex h-6 w-6 shrink-0 items-center justify-center rounded-full">
+                <span className="text-primary text-xs font-bold">
                   {lens.focalLength}
                 </span>
               </div>
@@ -33,7 +33,7 @@ export const LensGuide: FC<TemplateProps> = ({ data }) => {
                 <div className="text-base-content text-xs font-bold">
                   {lens.name}
                 </div>
-                <div className="text-neutral text-[10px]">
+                <div className="text-neutral text-xs">
                   {lens.aperture} · {lens.use}
                 </div>
               </div>

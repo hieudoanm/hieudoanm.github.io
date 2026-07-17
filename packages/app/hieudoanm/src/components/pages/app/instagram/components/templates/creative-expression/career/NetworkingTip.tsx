@@ -10,15 +10,15 @@ export const NetworkingTip: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
-      <h1 className="text-primary mb-2 text-3xl font-bold">{title}</h1>
-      <p className="text-accent mb-2 text-xl font-semibold italic">"{tip}"</p>
-      <p className="text-base-content/70 mb-6 max-w-lg text-sm leading-relaxed">
+      <h1 className="text-primary mb-1 text-4xl font-bold">{title}</h1>
+      <p className="text-accent mb-1 text-2xl font-semibold italic">"{tip}"</p>
+      <p className="text-base-content/70 mb-3 max-w-lg text-xs leading-relaxed">
         {description}
       </p>
-      <div className="flex w-full max-w-lg gap-4">
-        <div className="bg-success/10 flex-1 rounded-xl p-4 text-left">
-          <p className="text-success mb-2 text-sm font-bold">✓ Do</p>
-          <ul className="space-y-1">
+      <div className="flex w-full max-w-lg gap-3">
+        <div className="bg-success/10 flex-1 rounded-lg p-2 text-left">
+          <p className="text-success mb-1 text-xs font-bold">✓ Do</p>
+          <ul className="space-y-0.5">
             {doList.map((item, index) => (
               <li key={index} className="text-base-content/70 text-xs">
                 • {item}
@@ -26,9 +26,9 @@ export const NetworkingTip: FC<TemplateProps> = ({ data }) => {
             ))}
           </ul>
         </div>
-        <div className="bg-error/10 flex-1 rounded-xl p-4 text-left">
-          <p className="text-error mb-2 text-sm font-bold">✗ Don't</p>
-          <ul className="space-y-1">
+        <div className="bg-error/10 flex-1 rounded-lg p-2 text-left">
+          <p className="text-error mb-1 text-xs font-bold">✗ Don't</p>
+          <ul className="space-y-0.5">
             {dontList.map((item, index) => (
               <li key={index} className="text-base-content/70 text-xs">
                 • {item}

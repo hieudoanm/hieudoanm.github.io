@@ -22,23 +22,23 @@ export const EditingChecklist: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
-      <h1 className="text-base-content mb-2 text-2xl font-black tracking-tight">
+      <h1 className="text-base-content mb-1 text-4xl font-black tracking-tight">
         {title}
       </h1>
       {description && (
-        <p className="text-neutral mb-5 max-w-sm text-sm leading-relaxed">
+        <p className="text-neutral mb-3 max-w-sm text-xs leading-relaxed">
           {description}
         </p>
       )}
-      <div className="w-full max-w-md space-y-4 text-left">
+      <div className="w-full max-w-md space-y-1 text-left">
         {categories.map((cat) => (
           <div key={cat.name}>
-            <span className="text-base-content mb-2 block text-xs font-bold tracking-wider uppercase">
+            <span className="text-base-content mb-1 block text-xs font-bold tracking-wider uppercase">
               {cat.name}
             </span>
             <ul className="space-y-1">
               {cat.items.map((item) => (
-                <li key={item} className="flex items-center gap-2 text-xs">
+                <li key={item} className="flex items-center gap-1 text-xs">
                   <span className="text-success font-bold">&#10003;</span>
                   <span className="text-neutral">{item}</span>
                 </li>

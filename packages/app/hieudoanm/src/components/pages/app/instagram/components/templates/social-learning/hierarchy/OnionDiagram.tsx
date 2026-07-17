@@ -19,10 +19,10 @@ export const OnionDiagram: FC<TemplateProps> = ({ data }) => {
   const colors = ['#ff0030', '#d90029', '#b30022', '#8c001b'];
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-6">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-3 text-center">
         <div className="text-base-content text-sm font-bold">{title}</div>
-        {text && <div className="text-neutral mt-1 text-xs">{text}</div>}
+        {text && <div className="text-neutral mt-2 text-sm">{text}</div>}
       </div>
       <div className="flex flex-1 items-center justify-center">
         <div className="relative flex items-center justify-center">
@@ -45,12 +45,12 @@ export const OnionDiagram: FC<TemplateProps> = ({ data }) => {
           <div className="relative z-10 flex flex-col items-center gap-0.5 px-8 py-6">
             {rings.map((ring, i) => (
               <div key={i} className="flex flex-col items-center">
-                <span className="text-[9px] font-bold text-white/80">
+                <span className="text-sm font-bold text-white/80">
                   {ring.label}
                 </span>
-                <div className="flex flex-wrap justify-center gap-1">
+                <div className="flex flex-wrap justify-center gap-2">
                   {ring.items.map((item, j) => (
-                    <span key={j} className="text-[8px] font-medium text-white">
+                    <span key={j} className="text-sm font-medium text-white">
                       {item}
                     </span>
                   ))}

@@ -28,7 +28,7 @@ export const DependencyGraph: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
-      <div className="mb-2 text-center">
+      <div className="mb-1 text-center">
         <div className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
           Dependency Graph
         </div>

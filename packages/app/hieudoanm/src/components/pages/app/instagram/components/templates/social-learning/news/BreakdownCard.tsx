@@ -21,25 +21,25 @@ export const BreakdownCard: FC<TemplateProps> = ({ data }) => {
   ];
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-10">
-      <h1 className="text-base-content text-2xl leading-tight font-black">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+      <h1 className="text-base-content text-4xl leading-tight font-black">
         {headline}
       </h1>
-      <p className="text-base-content/70 mt-3 text-sm leading-relaxed italic">
+      <p className="text-base-content/70 mt-4 text-sm leading-relaxed italic">
         {summary}
       </p>
-      <div className="bg-base-200 rounded-box mt-6 flex-1 p-5">
+      <div className="bg-base-200 rounded-box mt-6 flex-1 p-4">
         <ul className="flex flex-col gap-3">
           {points.map((point, i) => (
-            <li key={i} className="flex gap-3">
+            <li key={i} className="flex gap-4">
               <span className="bg-primary text-primary-content flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[10px] font-bold">
                 {i + 1}
               </span>
               <div>
-                <p className="text-base-content text-xs font-bold">
+                <p className="text-base-content text-sm font-bold">
                   {point.title}
                 </p>
-                <p className="text-base-content/70 text-[11px] leading-snug">
+                <p className="text-base-content/70 text-sm leading-snug">
                   {point.detail}
                 </p>
               </div>

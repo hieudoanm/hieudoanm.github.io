@@ -20,25 +20,25 @@ export const SetupTour: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
-      <h1 className="text-accent mb-1 text-2xl font-bold">{title}</h1>
-      <p className="text-neutral mb-4 text-xs">{description}</p>
-      <div className="mb-4 flex flex-1 flex-col gap-3">
+      <h1 className="text-accent mb-0.5 text-4xl font-bold">{title}</h1>
+      <p className="text-neutral mb-2 text-xs">{description}</p>
+      <div className="mb-2 flex flex-1 flex-col gap-2">
         {components.map((item, i) => (
           <div
             key={i}
-            className="bg-base-200 flex items-center justify-between rounded-lg px-4 py-3">
-            <span className="text-base-content text-sm font-semibold">
+            className="bg-base-200 flex items-center justify-between rounded-lg px-2 py-2">
+            <span className="text-base-content text-xs font-semibold">
               {item.name}
             </span>
             <span className="text-neutral text-xs">{item.spec}</span>
           </div>
         ))}
       </div>
-      <div className="border-t-base-200 border-t pt-3 text-right">
-        <span className="text-base-300 text-[10px] tracking-wider uppercase">
+      <div className="border-t-base-200 border-t pt-2 text-right">
+        <span className="text-base-300 text-xs tracking-wider uppercase">
           Total
         </span>
-        <p className="text-primary text-lg font-extrabold">{totalCost}</p>
+        <p className="text-primary text-xs font-extrabold">{totalCost}</p>
       </div>
     </div>
   );

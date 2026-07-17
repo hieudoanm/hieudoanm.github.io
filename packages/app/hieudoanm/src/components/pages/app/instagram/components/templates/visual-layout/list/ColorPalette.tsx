@@ -17,20 +17,20 @@ export const ColorPalette: FC<TemplateProps> = ({ data }) => {
   ];
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-10">
-      <h1 className="text-base-content mb-6 text-xl font-black">{headline}</h1>
-      <div className="flex flex-1 flex-col gap-4">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+      <h1 className="text-base-content mb-3 text-4xl font-black">{headline}</h1>
+      <div className="flex flex-1 flex-col gap-2">
         {colors.map((color) => (
-          <div key={color.name} className="flex items-center gap-4">
+          <div key={color.name} className="flex items-center gap-2">
             <div
-              className="h-14 w-14 shrink-0 rounded-xl shadow-sm ring-1 ring-black/5"
+              className="h-8 w-8 shrink-0 rounded-lg shadow-sm ring-1 ring-black/5"
               style={{ backgroundColor: color.hex }}
             />
             <div className="flex flex-col">
               <span className="text-base-content text-xs font-bold">
                 {color.name}
               </span>
-              <span className="text-neutral text-[11px] tracking-wide uppercase">
+              <span className="text-neutral text-xs tracking-wide uppercase">
                 {color.hex}
               </span>
             </div>

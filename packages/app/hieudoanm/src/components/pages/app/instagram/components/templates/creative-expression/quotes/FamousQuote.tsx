@@ -11,14 +11,14 @@ export const FamousQuote: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
-      <span className="text-primary mb-6 font-serif text-6xl">"</span>
-      <p className="text-base-content mb-6 max-w-xl text-2xl leading-relaxed font-medium">
+      <span className="text-primary mb-3 font-serif text-3xl">"</span>
+      <p className="text-base-content mb-3 max-w-xl text-2xl leading-relaxed font-medium">
         {quote}
       </p>
-      <span className="text-primary mb-6 font-serif text-6xl">"</span>
-      <p className="text-secondary mb-2 text-lg font-semibold">— {author}</p>
+      <span className="text-primary mb-3 font-serif text-3xl">"</span>
+      <p className="text-secondary mb-1 text-xs font-semibold">— {author}</p>
       {source && (
-        <p className="text-accent mb-1 text-sm font-medium">{source}</p>
+        <p className="text-accent mb-1 text-xs font-medium">{source}</p>
       )}
       {year && <p className="text-accent text-xs">{year}</p>}
     </div>

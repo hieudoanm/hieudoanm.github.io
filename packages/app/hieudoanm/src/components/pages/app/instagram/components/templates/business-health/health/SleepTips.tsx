@@ -8,14 +8,14 @@ export const SleepTips: FC<TemplateProps> = ({ data }) => {
   const quote = (data.quote as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-12">
-      <span className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+      <span className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
         Sleep Hygiene
       </span>
-      <h1 className="text-base-content mt-2 text-xl font-bold">{title}</h1>
+      <h1 className="text-base-content mt-2 text-4xl font-bold">{title}</h1>
       {tip && (
         <div className="bg-accent/5 rounded-box mt-4 px-4 py-3">
-          <span className="text-accent text-[10px] font-bold">Today's Tip</span>
+          <span className="text-accent text-xs font-bold">Today's Tip</span>
           <p className="text-base-content mt-1 text-sm">{tip}</p>
         </div>
       )}

@@ -8,9 +8,9 @@ export const WellnessTip: FC<TemplateProps> = ({ data }) => {
   const source = (data.source as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-12 text-center">
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
       {category && (
-        <span className="text-accent mb-4 text-[10px] font-bold tracking-[0.2em] uppercase">
+        <span className="text-accent mb-4 text-xs font-bold tracking-[0.2em] uppercase">
           {category}
         </span>
       )}

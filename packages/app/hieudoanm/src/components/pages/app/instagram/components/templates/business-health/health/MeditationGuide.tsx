@@ -8,9 +8,9 @@ export const MeditationGuide: FC<TemplateProps> = ({ data }) => {
   const tip = (data.tip as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-12">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="flex items-center justify-between">
-        <h1 className="text-base-content text-lg font-bold">{title}</h1>
+        <h1 className="text-base-content text-4xl font-bold">{title}</h1>
         {duration && (
           <span className="rounded-box bg-accent/10 text-accent px-3 py-1 text-xs font-bold">
             {duration}
@@ -29,7 +29,7 @@ export const MeditationGuide: FC<TemplateProps> = ({ data }) => {
       </div>
       {tip && (
         <div className="bg-accent/5 rounded-box mt-6 px-4 py-3">
-          <span className="text-accent text-[10px] font-bold tracking-widest uppercase">
+          <span className="text-accent text-xs font-bold tracking-widest uppercase">
             Tip
           </span>
           <p className="text-base-content mt-1 text-xs leading-relaxed">

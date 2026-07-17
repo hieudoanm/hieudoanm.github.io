@@ -10,23 +10,23 @@ export const RecipeCard: FC<TemplateProps> = ({ data }) => {
   const imageUrl = (data.imageUrl as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-10">
-      <h1 className="text-base-content text-xl font-bold">{title}</h1>
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+      <h1 className="text-base-content text-4xl font-bold">{title}</h1>
       <div className="mt-2 flex gap-2">
         {prepTime && (
-          <span className="rounded-box bg-accent/10 text-accent px-2.5 py-0.5 text-[10px] font-bold">
+          <span className="rounded-box bg-accent/10 text-accent px-2.5 py-0.5 text-xs font-bold">
             Prep {prepTime}
           </span>
         )}
         {cookTime && (
-          <span className="rounded-box bg-base-300 text-neutral px-2.5 py-0.5 text-[10px] font-bold">
+          <span className="rounded-box bg-base-300 text-neutral px-2.5 py-0.5 text-xs font-bold">
             Cook {cookTime}
           </span>
         )}
       </div>
       {ingredients.length > 0 && (
         <div className="mt-4">
-          <span className="text-neutral text-[10px] font-bold tracking-widest uppercase">
+          <span className="text-neutral text-xs font-bold tracking-widest uppercase">
             Ingredients
           </span>
           <div className="mt-1 flex flex-wrap gap-x-3 gap-y-1">

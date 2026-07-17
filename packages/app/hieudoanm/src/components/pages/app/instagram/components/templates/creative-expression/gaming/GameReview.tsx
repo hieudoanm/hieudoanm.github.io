@@ -11,17 +11,17 @@ export const GameReview: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
-      <div className="mb-4 flex items-center justify-between">
-        <span className="bg-accent/10 text-accent rounded-full px-3 py-1 text-[10px] font-bold">
+      <div className="mb-2 flex items-center justify-between">
+        <span className="bg-accent/10 text-accent rounded-full px-1.5 py-0.5 text-xs font-bold">
           {platform}
         </span>
         <span className="text-primary text-3xl font-extrabold">{score}</span>
       </div>
-      <h1 className="text-base-content mb-1 text-2xl font-bold">{title}</h1>
-      <p className="text-neutral mb-4 text-xs">Reviewed by {reviewer}</p>
-      <div className="flex flex-1 gap-4">
-        <div className="flex w-1/2 flex-col gap-2">
-          <span className="text-success text-[10px] font-bold tracking-widest uppercase">
+      <h1 className="text-base-content mb-0.5 text-4xl font-bold">{title}</h1>
+      <p className="text-neutral mb-2 text-xs">Reviewed by {reviewer}</p>
+      <div className="flex flex-1 gap-3">
+        <div className="flex w-1/2 flex-col gap-1">
+          <span className="text-success text-xs font-bold tracking-widest uppercase">
             Pros
           </span>
           {pros.map((item, i) => (
@@ -31,8 +31,8 @@ export const GameReview: FC<TemplateProps> = ({ data }) => {
           ))}
         </div>
         <div className="bg-accent/20 w-0.5 flex-shrink-0" />
-        <div className="flex w-1/2 flex-col gap-2">
-          <span className="text-error text-[10px] font-bold tracking-widest uppercase">
+        <div className="flex w-1/2 flex-col gap-1">
+          <span className="text-error text-xs font-bold tracking-widest uppercase">
             Cons
           </span>
           {cons.map((item, i) => (

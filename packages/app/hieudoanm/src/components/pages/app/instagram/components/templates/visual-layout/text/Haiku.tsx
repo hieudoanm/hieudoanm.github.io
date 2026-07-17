@@ -8,25 +8,25 @@ export const Haiku: FC<TemplateProps> = ({ data }) => {
   const line3 = (data.line3 as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-12">
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
       <div className="max-w-md text-center">
         {title && (
-          <h1 className="text-base-content mb-8 text-2xl font-bold tracking-tight">
+          <h1 className="text-base-content mb-4 text-4xl font-bold tracking-tight">
             {title}
           </h1>
         )}
-        <div className="border-primary/30 space-y-3 border-l-2 pl-6">
-          <p className="text-base-content text-xl leading-relaxed">
+        <div className="border-primary/30 space-y-3 border-l-2 pl-3">
+          <p className="text-base-content text-sm leading-relaxed">
             {line1 || 'An old silent pond'}
           </p>
-          <p className="text-base-content text-xl leading-relaxed">
+          <p className="text-base-content text-sm leading-relaxed">
             {line2 || 'A frog jumps into the pond'}
           </p>
-          <p className="text-base-content text-xl leading-relaxed">
+          <p className="text-base-content text-sm leading-relaxed">
             {line3 || 'Splash! Silence again'}
           </p>
         </div>
-        <p className="text-neutral mt-6 text-xs italic">— haiku</p>
+        <p className="text-neutral mt-3 text-xs italic">— haiku</p>
       </div>
     </div>
   );

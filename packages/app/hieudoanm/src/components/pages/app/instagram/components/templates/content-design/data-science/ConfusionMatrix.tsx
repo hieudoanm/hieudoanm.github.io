@@ -14,7 +14,7 @@ export const ConfusionMatrix: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
-      <div className="mb-4 text-center">
+      <div className="mb-2 text-center">
         <div className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
           Confusion Matrix
         </div>
@@ -24,7 +24,7 @@ export const ConfusionMatrix: FC<TemplateProps> = ({ data }) => {
           </div>
         )}
       </div>
-      <div className="flex flex-1 flex-col items-center justify-center gap-4">
+      <div className="flex flex-1 flex-col items-center justify-center gap-2">
         <div className="grid grid-cols-[auto_1fr_1fr] gap-1 text-center">
           <div />
           <div className="text-neutral text-[9px] font-bold uppercase">

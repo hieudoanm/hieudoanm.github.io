@@ -10,11 +10,11 @@ export const WorkoutCard: FC<TemplateProps> = ({ data }) => {
   const note = (data.note as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-12 text-center">
-      <span className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
+      <span className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
         {title}
       </span>
-      <h1 className="text-base-content mt-4 text-3xl leading-tight font-bold">
+      <h1 className="text-base-content mt-4 text-4xl leading-tight font-bold">
         {exercise}
       </h1>
       <div className="mt-6 flex gap-6">

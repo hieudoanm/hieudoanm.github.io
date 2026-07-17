@@ -16,7 +16,7 @@ export const PackingChecklist: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-5 text-center">
-        <span className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
+        <span className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
           Packing Checklist
         </span>
         <h1 className="text-base-content mt-1 text-lg font-bold">
@@ -25,19 +25,19 @@ export const PackingChecklist: FC<TemplateProps> = ({ data }) => {
         <span className="text-neutral text-xs">{days}</span>
       </div>
 
-      <div className="flex flex-1 gap-3">
+      <div className="flex flex-1 gap-4">
         {categories.map((cat, i) => (
-          <div key={i} className="bg-base-200 rounded-box flex-1 p-3">
-            <span className="text-accent text-[10px] font-bold uppercase">
+          <div key={i} className="bg-base-200 rounded-box flex-1 p-4">
+            <span className="text-accent text-xs font-bold uppercase">
               {cat.name}
             </span>
-            <div className="mt-2 flex flex-col gap-1.5">
+            <div className="mt-2 flex flex-col gap-2">
               {cat.items.map((item, j) => (
                 <div key={j} className="flex items-center gap-2">
-                  <span className="bg-accent/20 text-accent flex h-3.5 w-3.5 flex-shrink-0 items-center justify-center rounded-sm text-[7px] font-bold">
+                  <span className="bg-accent/20 text-accent flex h-3.5 w-3.5 flex-shrink-0 items-center justify-center rounded-sm text-xs font-bold">
                     ✓
                   </span>
-                  <span className="text-base-content text-[10px]">{item}</span>
+                  <span className="text-base-content text-xs">{item}</span>
                 </div>
               ))}
             </div>

@@ -22,11 +22,11 @@ export const Sparkline: FC<TemplateProps> = ({ data }) => {
     .join(' ');
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-10">
-      <p className="text-neutral mb-2 text-xs font-bold tracking-wider uppercase">
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
+      <p className="text-neutral mb-1 text-xs font-bold tracking-wider uppercase">
         {label}
       </p>
-      <svg viewBox={`0 0 ${w} ${h}`} className="mb-4 w-full max-w-xs">
+      <svg viewBox={`0 0 ${w} ${h}`} className="mb-2 w-full max-w-xs">
         <polyline
           fill="none"
           stroke="currentColor"
@@ -43,7 +43,7 @@ export const Sparkline: FC<TemplateProps> = ({ data }) => {
           className="fill-accent"
         />
       </svg>
-      <div className="text-primary text-5xl font-black">{current}</div>
+      <div className="text-primary text-2xl font-black">{current}</div>
     </div>
   );
 };

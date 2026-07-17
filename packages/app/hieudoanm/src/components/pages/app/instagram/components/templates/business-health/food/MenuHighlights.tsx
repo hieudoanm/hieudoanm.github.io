@@ -7,13 +7,13 @@ export const MenuHighlights: FC<TemplateProps> = ({ data }) => {
     (data.items as { name: string; price: string; desc?: string }[]) ?? [];
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-12">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
       {restaurant && (
-        <span className="text-accent mb-4 text-[10px] font-bold tracking-[0.2em] uppercase">
+        <span className="text-accent mb-4 text-xs font-bold tracking-[0.2em] uppercase">
           {restaurant}
         </span>
       )}
-      <h1 className="text-base-content text-lg font-bold">Menu Highlights</h1>
+      <h1 className="text-base-content text-4xl font-bold">Menu Highlights</h1>
       <div className="mt-5 flex flex-col gap-4">
         {items.map((item, i) => (
           <div

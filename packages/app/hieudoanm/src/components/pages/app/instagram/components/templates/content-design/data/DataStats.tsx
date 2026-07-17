@@ -10,7 +10,7 @@ export const DataStats: FC<TemplateProps> = ({ data }) => {
   const source = (data.source as string) ?? '';
 
   return (
-    <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden p-12 text-center">
+    <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden p-8 text-center">
       {imageUrl && (
         <div
           className="absolute inset-0 bg-cover bg-center opacity-10"
@@ -18,17 +18,17 @@ export const DataStats: FC<TemplateProps> = ({ data }) => {
         />
       )}
       <div className="relative z-10">
-        <div className="text-primary mb-2 text-8xl font-black tracking-tight">
+        <div className="text-primary mb-1 text-4xl font-black tracking-tight">
           {stat}
         </div>
-        {suffix && <p className="text-neutral mb-4 text-sm">{suffix}</p>}
-        <h1 className="text-base-content mb-3 text-2xl font-bold tracking-tight">
+        {suffix && <p className="text-neutral mb-2 text-sm">{suffix}</p>}
+        <h1 className="text-base-content mb-2 text-xl font-bold tracking-tight">
           {headline}
         </h1>
-        <p className="text-neutral mx-auto max-w-sm text-sm leading-relaxed">
+        <p className="text-neutral mx-auto max-w-sm text-base leading-relaxed">
           {text}
         </p>
-        {source && <p className="text-neutral mt-3 text-xs">— {source}</p>}
+        {source && <p className="text-neutral mt-2 text-xs">— {source}</p>}
       </div>
     </div>
   );

@@ -12,9 +12,9 @@ export const ProgressRing: FC<TemplateProps> = ({ data }) => {
   const offset = circumference - (value / 100) * circumference;
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-6">
-      <div className="text-base-content mb-4 text-sm font-bold">{title}</div>
-      {text && <div className="text-neutral mb-4 text-xs">{text}</div>}
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
+      <div className="text-base-content mb-2 text-sm font-bold">{title}</div>
+      {text && <div className="text-neutral mb-2 text-xs">{text}</div>}
       <svg viewBox="0 0 180 180" className="h-auto w-48">
         <circle
           cx={90}

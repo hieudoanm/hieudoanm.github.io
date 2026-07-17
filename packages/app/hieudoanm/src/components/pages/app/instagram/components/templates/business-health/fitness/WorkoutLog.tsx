@@ -18,24 +18,24 @@ export const WorkoutLog: FC<TemplateProps> = ({ data }) => {
   ];
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-6">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-4">
-        <h1 className="text-base-content text-lg font-bold">{title}</h1>
+        <h1 className="text-base-content text-4xl font-bold">{title}</h1>
         {date && <p className="text-neutral text-xs">{date}</p>}
       </div>
       <div className="border-base-300 flex flex-1 flex-col overflow-hidden rounded border">
         <div className="bg-primary/10 grid grid-cols-[1fr_3rem_3rem_4rem_3rem] gap-1 px-3 py-2">
-          <span className="text-primary text-[10px] font-bold">EXERCISE</span>
-          <span className="text-primary text-center text-[10px] font-bold">
+          <span className="text-primary text-xs font-bold">EXERCISE</span>
+          <span className="text-primary text-center text-xs font-bold">
             SETS
           </span>
-          <span className="text-primary text-center text-[10px] font-bold">
+          <span className="text-primary text-center text-xs font-bold">
             REPS
           </span>
-          <span className="text-primary text-center text-[10px] font-bold">
+          <span className="text-primary text-center text-xs font-bold">
             WEIGHT
           </span>
-          <span className="text-primary text-center text-[10px] font-bold">
+          <span className="text-primary text-center text-xs font-bold">
             REST
           </span>
         </div>

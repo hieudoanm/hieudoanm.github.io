@@ -75,22 +75,22 @@ export const FileTree: FC<TemplateProps> = ({ data }) => {
   const items = buildTree(lines);
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-6">
-      <div className="flex w-full flex-col gap-1">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+      <div className="flex w-full flex-col gap-2">
         <h2 className="text-base-content text-center text-base font-bold">
           {headline}
         </h2>
         {description && (
-          <p className="text-base-content/70 text-center text-[10px] leading-relaxed">
+          <p className="text-base-content/70 text-center text-xs leading-relaxed">
             {description}
           </p>
         )}
       </div>
-      <div className="border-base-300 mt-3 flex w-full flex-1 flex-col overflow-hidden rounded-lg border shadow-lg">
-        <div className="border-base-300 bg-base-200 text-base-content/50 flex items-center gap-2 border-b px-3 py-1.5 text-[7px] font-semibold tracking-wider uppercase">
+      <div className="border-base-300 mt-3 flex w-full flex-1 flex-col overflow-hidden rounded-2xl border shadow-lg">
+        <div className="border-base-300 bg-base-200 text-base-content/50 flex items-center gap-2 border-b px-3 py-1.5 text-xs font-semibold tracking-wider uppercase">
           Explorer
         </div>
-        <div className="bg-base-100 flex-1 overflow-auto px-3 py-2 font-mono text-[7px] leading-relaxed">
+        <div className="bg-base-100 flex-1 overflow-auto px-3 py-2 font-mono text-xs leading-relaxed">
           {items.map((item, i) => (
             <div key={i} className="flex items-center truncate leading-relaxed">
               <TreePrefix item={item} items={items} i={i} />

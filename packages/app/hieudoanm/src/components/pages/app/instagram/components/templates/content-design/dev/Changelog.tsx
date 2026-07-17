@@ -21,25 +21,25 @@ export const Changelog: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
-      <div className="mb-4 text-center">
+      <div className="mb-2 text-center">
         <div className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
           Changelog
         </div>
-        <div className="bg-primary text-base-100 mt-2 inline-block rounded-full px-3 py-1 text-xs font-bold">
+        <div className="bg-primary text-base-100 mt-1 inline-block rounded-full px-3 py-1 text-xs font-bold">
           v{version}
         </div>
         {date && <div className="text-neutral mt-1 text-[10px]">{date}</div>}
       </div>
-      <div className="text-base-content mb-3 text-center text-sm font-bold">
+      <div className="text-base-content mb-2 text-center text-sm font-bold">
         {title}
       </div>
-      <div className="flex flex-1 flex-col gap-1.5">
+      <div className="flex flex-1 flex-col gap-1">
         {changes.map((change, i) => {
           const color =
             TYPE_COLORS[change.type.toLowerCase()] ??
             'bg-neutral/20 text-neutral';
           return (
-            <div key={i} className="flex items-start gap-2">
+            <div key={i} className="flex items-start gap-1">
               <span
                 className={`${color} w-14 shrink-0 rounded px-1.5 py-0.5 text-center text-[9px] font-bold uppercase`}>
                 {change.type}

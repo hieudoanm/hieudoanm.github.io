@@ -6,7 +6,7 @@ export const Affirmation: FC<TemplateProps> = ({ data }) => {
   const subtitle = (data.subtitle as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center gap-4 p-12 text-center">
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center gap-3 p-8 text-center">
       <span className="text-accent text-sm font-bold tracking-[0.2em] uppercase">
         I Am
       </span>

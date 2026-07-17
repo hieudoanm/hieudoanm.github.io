@@ -28,7 +28,7 @@ export const HeadToHead: FC<TemplateProps> = ({ data }) => {
       return (
         <span
           key={i}
-          className={`${bg} flex h-5 w-5 items-center justify-center rounded text-[8px] font-bold text-white`}>
+          className={`${bg} flex h-5 w-5 items-center justify-center rounded text-xs font-bold text-white`}>
           {r}
         </span>
       );
@@ -44,11 +44,11 @@ export const HeadToHead: FC<TemplateProps> = ({ data }) => {
       </div>
 
       <div className="flex items-center justify-center gap-8 py-3">
-        <span className="text-base-content flex-1 text-right text-xl font-black">
+        <span className="text-base-content flex-1 text-right text-lg font-black">
           {teamA}
         </span>
-        <span className="text-accent text-sm font-bold">VS</span>
-        <span className="text-base-content flex-1 text-left text-xl font-black">
+        <span className="text-accent text-base font-bold">VS</span>
+        <span className="text-base-content flex-1 text-left text-lg font-black">
           {teamB}
         </span>
       </div>
@@ -70,7 +70,7 @@ export const HeadToHead: FC<TemplateProps> = ({ data }) => {
                 style={{ width: '55%' }}
               />
             </div>
-            <span className="text-neutral w-28 text-center text-[10px]">
+            <span className="text-neutral w-28 text-center text-xs">
               {s.label}
             </span>
             <div className="bg-primary/30 h-1.5 flex-1 rounded-full">

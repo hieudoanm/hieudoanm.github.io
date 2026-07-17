@@ -21,8 +21,8 @@ export const DonutChart: FC<TemplateProps> = ({ data }) => {
   let off = 0;
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-10">
-      <h1 className="text-base-content mb-8 text-center text-3xl font-bold tracking-tight">
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
+      <h1 className="text-base-content mb-4 text-center text-4xl font-bold tracking-tight">
         {headline || 'Market Share'}
       </h1>
       <div className="relative">
@@ -50,15 +50,15 @@ export const DonutChart: FC<TemplateProps> = ({ data }) => {
           })}
         </svg>
         <div className="absolute inset-0 flex flex-col items-center justify-center">
-          <span className="text-base-content text-3xl font-black">
+          <span className="text-base-content text-4xl font-black">
             {total}%
           </span>
           <span className="text-neutral text-xs">Total</span>
         </div>
       </div>
-      <div className="mt-8 flex flex-wrap justify-center gap-4">
+      <div className="mt-4 flex flex-wrap justify-center gap-2">
         {list.map((seg, i) => (
-          <div key={i} className="flex items-center gap-2">
+          <div key={i} className="flex items-center gap-1">
             <span
               className={`inline-block h-3 w-3 rounded-full ${PAL[i % PAL.length]}`}
             />

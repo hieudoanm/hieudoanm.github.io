@@ -32,28 +32,28 @@ export const WorkExperience: FC<TemplateProps> = ({ data }) => {
   ];
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-10">
-      <span className="text-accent mb-3 text-[10px] font-bold tracking-[0.2em] uppercase">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+      <span className="text-accent mb-2 text-xs font-bold tracking-[0.2em] uppercase">
         {title}
       </span>
 
-      <div className="flex flex-1 flex-col gap-5">
+      <div className="flex flex-1 flex-col gap-1">
         {jobs.map((job, i) => (
           <div key={i}>
             <div className="flex items-baseline justify-between">
-              <span className="text-base-content text-sm font-bold">
+              <span className="text-base-content text-xs font-bold">
                 {job.role}
               </span>
-              <span className="text-neutral text-[10px]">{job.period}</span>
+              <span className="text-neutral text-xs">{job.period}</span>
             </div>
             <span className="text-accent text-xs font-semibold">
               {job.company}
             </span>
-            <div className="mt-2 flex flex-col gap-1">
+            <div className="mt-1 flex flex-col gap-1">
               {job.achievements.map((a, j) => (
-                <div key={j} className="flex items-start gap-2">
+                <div key={j} className="flex items-start gap-1">
                   <span className="bg-accent mt-1 h-1 w-1 flex-shrink-0 rounded-full" />
-                  <span className="text-base-content text-[11px] leading-relaxed">
+                  <span className="text-base-content text-xs leading-relaxed">
                     {a}
                   </span>
                 </div>

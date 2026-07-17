@@ -55,27 +55,21 @@ export const download = async ({
   ref,
   output = '',
   backgroundColor = '#ffffff',
-  scale,
-  targetWidth,
+  scale = 1,
 }: {
   ref: RefObject<HTMLDivElement | null>;
   output: string;
   backgroundColor?: string;
   scale?: number;
-  targetWidth?: number;
 }) => {
   if (!ref.current) return;
-
-  const effectiveScale =
-    targetWidth && ref.current.offsetWidth > 0
-      ? targetWidth / ref.current.offsetWidth
-      : (scale ?? 2);
 
   await preloadBackgroundImages(ref.current);
   const fixed = fixGradients(ref.current);
   await new Promise((resolve) => requestAnimationFrame(resolve));
+
   const canvas = await html2canvas(ref.current, {
-    scale: effectiveScale,
+    scale,
     useCORS: true,
     backgroundColor,
   });

@@ -39,8 +39,8 @@ export const ScatterChart: FC<TemplateProps> = ({ data }) => {
   }));
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-6">
-      <div className="mb-3 text-center">
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
+      <div className="mb-2 text-center">
         <div className="text-base-content text-sm font-bold">{title}</div>
         {text && <div className="text-neutral mt-1 text-xs">{text}</div>}
       </div>

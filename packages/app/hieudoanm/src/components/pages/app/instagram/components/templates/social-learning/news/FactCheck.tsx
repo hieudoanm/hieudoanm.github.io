@@ -23,33 +23,31 @@ export const FactCheck: FC<TemplateProps> = ({ data }) => {
   const style = VERDICT_STYLES[verdict] ?? VERDICT_STYLES.false;
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-10">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-4 text-center">
-        <div className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
+        <div className="text-accent text-sm font-bold tracking-[0.2em] uppercase">
           Fact Check
         </div>
       </div>
-      <div className="border-base-300 rounded border p-6 text-center">
-        <div className="text-neutral mb-3 text-[10px] font-semibold tracking-wider uppercase">
+      <div className="border-base-300 rounded-2xl border p-4 text-center">
+        <div className="text-neutral mb-3 text-sm font-semibold tracking-wider uppercase">
           The Claim
         </div>
         <div className="text-base-content text-sm leading-relaxed italic">
           "{claim}"
         </div>
       </div>
-      <div className="mt-4 flex flex-1 flex-col items-center justify-center gap-3">
+      <div className="mt-4 flex flex-1 flex-col items-center justify-center gap-4">
         <span
-          className={`${style.bg} ${style.text} rounded px-4 py-1.5 text-xs font-black tracking-wider`}>
+          className={`${style.bg} ${style.text} rounded px-4 py-2 text-sm font-black tracking-wider`}>
           {style.label}
         </span>
         {explanation && (
-          <p className="text-neutral max-w-md text-center text-xs leading-relaxed">
+          <p className="text-neutral max-w-md text-center text-sm leading-relaxed">
             {explanation}
           </p>
         )}
-        {source && (
-          <div className="text-neutral text-[10px]">Source: {source}</div>
-        )}
+        {source && <div className="text-neutral text-sm">Source: {source}</div>}
       </div>
     </div>
   );

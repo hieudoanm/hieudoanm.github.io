@@ -18,7 +18,7 @@ export const FullBleed: FC<TemplateProps> = ({ data }) => {
         <h1 className="text-base-content mb-4 text-4xl leading-tight font-bold tracking-tight drop-shadow-lg">
           {headline}
         </h1>
-        <p className="text-base-content/80 text-base leading-relaxed drop-shadow">
+        <p className="text-base-content/80 text-sm leading-relaxed drop-shadow">
           {text}
         </p>
       </div>

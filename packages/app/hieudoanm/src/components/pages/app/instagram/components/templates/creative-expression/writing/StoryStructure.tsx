@@ -18,25 +18,25 @@ export const StoryStructure: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
-      <h1 className="text-base-content mb-1 text-2xl font-black tracking-tight">
+      <h1 className="text-base-content mb-0.5 text-4xl font-black tracking-tight">
         {title}
       </h1>
-      <p className="text-primary mb-2 text-sm font-semibold tracking-wider uppercase">
+      <p className="text-primary mb-1 text-xs font-semibold tracking-wider uppercase">
         {structure}
       </p>
       {description && (
-        <p className="text-neutral mb-6 max-w-sm text-sm leading-relaxed">
+        <p className="text-neutral mb-3 max-w-sm text-xs leading-relaxed">
           {description}
         </p>
       )}
-      <ol className="w-full max-w-sm space-y-3 text-left">
+      <ol className="w-full max-w-sm space-y-2 text-left">
         {elements.map((el, i) => (
-          <li key={el.name} className="flex items-start gap-3">
+          <li key={el.name} className="flex items-start gap-2">
             <span className="badge badge-primary badge-sm mt-0.5 shrink-0">
               {i + 1}
             </span>
             <div>
-              <span className="text-base-content text-sm font-bold">
+              <span className="text-base-content text-xs font-bold">
                 {el.name}
               </span>
               <p className="text-neutral text-xs leading-relaxed">

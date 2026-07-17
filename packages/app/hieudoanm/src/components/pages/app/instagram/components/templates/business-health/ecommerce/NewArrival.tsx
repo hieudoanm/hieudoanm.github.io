@@ -10,7 +10,7 @@ export const NewArrival: FC<TemplateProps> = ({ data }) => {
   const imageUrl = (data.imageUrl as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-6">
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
       <div className="text-center">
         <div className="bg-primary text-primary-content inline-block rounded px-3 py-1 text-xs font-bold tracking-wider uppercase">
           {badge}
@@ -23,7 +23,7 @@ export const NewArrival: FC<TemplateProps> = ({ data }) => {
           />
         ) : (
           <div className="bg-base-200 mx-auto mt-3 flex h-36 w-36 items-center justify-center rounded-lg">
-            <span className="text-neutral/30 text-[7px] font-semibold uppercase">
+            <span className="text-neutral/30 text-xs font-semibold uppercase">
               Image
             </span>
           </div>

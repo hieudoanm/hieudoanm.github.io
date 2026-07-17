@@ -12,22 +12,22 @@ export const HypothesisCard: FC<TemplateProps> = ({ data }) => {
   const method = (data.method as string) ?? 'A/B Testing';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-10">
-      <span className="text-accent mb-3 text-[10px] font-bold tracking-[0.2em] uppercase">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+      <span className="text-accent mb-3 text-sm font-bold tracking-[0.2em] uppercase">
         Hypothesis
       </span>
-      <div className="bg-accent/10 rounded-box p-4">
+      <div className="bg-accent/10 rounded-box p-3">
         <p className="text-base-content text-sm leading-relaxed font-medium">
           {hypothesis}
         </p>
       </div>
-      <div className="mt-5">
-        <span className="text-neutral text-[9px] font-bold tracking-[0.15em] uppercase">
+      <div className="mt-6">
+        <span className="text-neutral text-sm font-bold tracking-[0.15em] uppercase">
           Variables
         </span>
         <div className="bg-base-200 rounded-box mt-2 overflow-hidden">
-          <div className="border-base-300 flex border-b px-3 py-2">
-            <span className="text-neutral flex-1 text-[9px] font-bold uppercase">
+          <div className="border-base-300 flex border-b px-4 py-2">
+            <span className="text-neutral flex-1 text-sm font-bold uppercase">
               Name
             </span>
             <span className="text-neutral text-[9px] font-bold uppercase">
@@ -37,19 +37,19 @@ export const HypothesisCard: FC<TemplateProps> = ({ data }) => {
           {variables.map((v, i) => (
             <div
               key={i}
-              className="border-base-300 flex items-center justify-between border-b px-3 py-2 last:border-b-0">
-              <span className="text-base-content text-xs font-medium">
+              className="border-base-300 flex items-center justify-between border-b px-4 py-2 last:border-b-0">
+              <span className="text-base-content text-sm font-medium">
                 {v.name}
               </span>
-              <span className="bg-accent/10 text-accent rounded px-2 py-0.5 text-[10px] font-bold">
+              <span className="bg-accent/10 text-accent rounded-2xl px-2 py-2 text-sm font-bold">
                 {v.type}
               </span>
             </div>
           ))}
         </div>
       </div>
-      <div className="mt-auto pt-5">
-        <span className="bg-base-200 text-neutral inline-flex items-center rounded px-3 py-1 text-[10px] font-bold">
+      <div className="mt-auto pt-6">
+        <span className="bg-base-200 text-neutral inline-flex items-center rounded-2xl px-4 py-2 text-sm font-bold">
           {method}
         </span>
       </div>

@@ -8,9 +8,9 @@ export const TravelTip: FC<TemplateProps> = ({ data }) => {
   const hashtag = (data.hashtag as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-12 text-center">
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
       {category && (
-        <span className="text-accent mb-4 text-[10px] font-bold tracking-[0.2em] uppercase">
+        <span className="text-accent mb-4 text-xs font-bold tracking-[0.2em] uppercase">
           {category}
         </span>
       )}
@@ -26,7 +26,7 @@ export const TravelTip: FC<TemplateProps> = ({ data }) => {
           d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
         />
       </svg>
-      <p className="text-base-content text-xl leading-snug font-bold">{tip}</p>
+      <p className="text-base-content text-lg leading-snug font-bold">{tip}</p>
       <p className="text-neutral mt-4 text-sm leading-relaxed">{description}</p>
       {hashtag && (
         <span className="text-accent mt-6 text-xs font-medium">{hashtag}</span>

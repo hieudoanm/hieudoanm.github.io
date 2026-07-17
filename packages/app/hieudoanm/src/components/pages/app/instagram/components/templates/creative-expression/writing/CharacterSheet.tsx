@@ -11,16 +11,16 @@ export const CharacterSheet: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
-      <h1 className="text-base-content mb-1 text-2xl font-black tracking-tight">
+      <h1 className="text-base-content mb-0.5 text-4xl font-black tracking-tight">
         {name}
       </h1>
       <span className="badge badge-primary badge-sm mb-3">{role}</span>
       {description && (
-        <p className="text-neutral mb-4 max-w-sm text-sm leading-relaxed">
+        <p className="text-neutral mb-2 max-w-sm text-xs leading-relaxed">
           {description}
         </p>
       )}
-      <div className="mb-4 flex flex-wrap justify-center gap-2">
+      <div className="mb-2 flex flex-wrap justify-center gap-1">
         {traits.map((trait) => (
           <span key={trait} className="badge badge-outline badge-sm">
             {trait}
@@ -28,7 +28,7 @@ export const CharacterSheet: FC<TemplateProps> = ({ data }) => {
         ))}
       </div>
       {motivation && (
-        <p className="text-base-content mb-1 max-w-sm text-xs">
+        <p className="text-base-content mb-0.5 max-w-sm text-xs">
           <span className="font-bold">Motivation:</span> {motivation}
         </p>
       )}

@@ -40,15 +40,15 @@ export const Education: FC<TemplateProps> = ({ data }) => {
 
   const gapClass = useMemo(() => {
     const count = degrees.length;
-    if (count <= 1) return 'gap-6';
-    if (count === 2) return 'gap-4';
-    if (count === 3) return 'gap-2';
-    return 'gap-4';
+    if (count <= 1) return 'gap-3';
+    if (count === 2) return 'gap-2';
+    if (count === 3) return 'gap-1';
+    return 'gap-2';
   }, [degrees.length]);
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-10">
-      <span className="text-primary mb-3 text-[10px] font-bold tracking-[0.2em] uppercase">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+      <span className="text-primary mb-2 text-xs font-bold tracking-[0.2em] uppercase">
         {title}
       </span>
 
@@ -56,7 +56,7 @@ export const Education: FC<TemplateProps> = ({ data }) => {
         className={`divide-base-300 flex flex-1 flex-col divide-y ${gapClass} `}>
         {degrees.map((d, i) => (
           <div key={i} className="pb-2">
-            <span className="text-base-content text-sm font-bold">
+            <span className="text-base-content text-xs font-bold">
               🎓 {d.degree} {d.field}
             </span>
             <div>
@@ -64,23 +64,17 @@ export const Education: FC<TemplateProps> = ({ data }) => {
                 {d.institution}
               </span>
               {d.location && (
-                <span className="text-neutral ml-2 text-[10px]">
-                  {d.location}
-                </span>
+                <span className="text-neutral ml-2 text-xs">{d.location}</span>
               )}
             </div>
-            {d.gpa && (
-              <div className="text-neutral text-[10px]">GPA: {d.gpa}</div>
-            )}
-            {d.period && (
-              <div className="text-neutral text-[10px]">{d.period}</div>
-            )}
+            {d.gpa && <div className="text-neutral text-xs">GPA: {d.gpa}</div>}
+            {d.period && <div className="text-neutral text-xs">{d.period}</div>}
             {d.highlights && d.highlights.length > 0 && (
-              <div className="mt-2 flex flex-col gap-1">
+              <div className="mt-1 flex flex-col gap-1">
                 {d.highlights.map((h, j) => (
-                  <div key={j} className="flex items-start gap-2">
+                  <div key={j} className="flex items-start gap-1">
                     <span className="bg-accent mt-1 h-1 w-1 flex-shrink-0 rounded-full" />
-                    <span className="text-base-content text-[11px] leading-relaxed">
+                    <span className="text-base-content text-xs leading-relaxed">
                       {h}
                     </span>
                   </div>

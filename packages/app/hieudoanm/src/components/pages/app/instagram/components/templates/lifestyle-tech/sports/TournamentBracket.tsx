@@ -89,14 +89,14 @@ export const TournamentBracket: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-4 text-center">
-        <div className="text-base-content text-sm font-bold">{headline}</div>
+        <div className="text-base-content text-base font-bold">{headline}</div>
         {text && <div className="text-neutral mt-1 text-xs">{text}</div>}
       </div>
 
       <div className="flex flex-1 items-start justify-center gap-4">
         {rounds.map((round, ri) => (
           <div key={ri} className="flex flex-col items-center gap-2">
-            <div className="text-neutral mb-2 text-[10px] font-semibold tracking-wider uppercase">
+            <div className="text-neutral mb-2 text-xs font-semibold tracking-wider uppercase">
               {round.name}
             </div>
             <div className="flex flex-col gap-3">

@@ -6,8 +6,8 @@ export const FinancialPlan: FC<TemplateProps> = ({ data }) => {
   const steps = (data.steps as { label: string; desc: string }[]) ?? [];
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-12">
-      <h1 className="text-base-content mb-8 text-xl font-bold">{title}</h1>
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+      <h1 className="text-base-content mb-8 text-4xl font-bold">{title}</h1>
       <div className="flex flex-col gap-5">
         {steps.map((step, i) => (
           <div key={i} className="flex items-start gap-4">

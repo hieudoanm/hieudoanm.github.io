@@ -10,17 +10,17 @@ export const MindMap: FC<TemplateProps> = ({ data }) => {
   ];
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-10">
-      <div className="bg-primary text-primary-content mb-8 rounded-full px-8 py-3 text-lg font-black">
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
+      <div className="bg-primary text-primary-content mb-4 rounded-full px-8 py-4 text-2xl font-black">
         {central}
       </div>
       <div className="flex w-full flex-col gap-3">
         {branches.map((b, i) => (
-          <div key={i} className="flex items-center gap-3">
+          <div key={i} className="flex items-center gap-4">
             <div className="bg-accent/20 h-px w-8" />
-            <div className="bg-base-200 flex-1 rounded-lg px-4 py-3">
+            <div className="bg-base-200 flex-1 rounded-2xl px-4 py-3">
               <p className="text-base-content text-sm font-bold">{b.topic}</p>
-              <p className="text-neutral text-[11px]">{b.detail}</p>
+              <p className="text-neutral text-sm">{b.detail}</p>
             </div>
           </div>
         ))}

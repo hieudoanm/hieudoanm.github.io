@@ -12,39 +12,39 @@ export const Forecast: FC<TemplateProps> = ({ data }) => {
   const wind = (data.wind as string) ?? '12 km/h';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-10">
-      <span className="text-accent mb-2 text-[10px] font-bold tracking-[0.2em] uppercase">
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
+      <span className="text-accent mb-2 text-xs font-bold tracking-[0.2em] uppercase">
         {title}
       </span>
-      <h1 className="text-base-content text-2xl font-bold">{city}</h1>
+      <h1 className="text-base-content text-4xl font-bold">{city}</h1>
 
-      <div className="mt-6 text-center">
-        <span className="text-accent text-6xl font-black">{temp}</span>
-        <span className="text-neutral mt-2 block text-sm">{condition}</span>
+      <div className="mt-3 text-center">
+        <span className="text-accent text-3xl font-black">{temp}</span>
+        <span className="text-neutral mt-2 block text-xs">{condition}</span>
       </div>
 
-      <div className="mt-6 flex gap-6">
+      <div className="mt-3 flex gap-3">
         <div className="text-center">
-          <span className="text-neutral text-[9px] font-bold tracking-[0.15em] uppercase">
+          <span className="text-neutral text-xs font-bold tracking-[0.15em] uppercase">
             High
           </span>
-          <span className="text-base-content mt-1 block text-sm font-semibold">
+          <span className="text-base-content mt-1 block text-xs font-semibold">
             {high}
           </span>
         </div>
         <div className="text-center">
-          <span className="text-neutral text-[9px] font-bold tracking-[0.15em] uppercase">
+          <span className="text-neutral text-xs font-bold tracking-[0.15em] uppercase">
             Low
           </span>
-          <span className="text-base-content mt-1 block text-sm font-semibold">
+          <span className="text-base-content mt-1 block text-xs font-semibold">
             {low}
           </span>
         </div>
       </div>
 
-      <div className="bg-base-200 mt-6 flex gap-8 rounded-lg px-6 py-3">
+      <div className="bg-base-200 mt-3 flex gap-4 rounded-2xl px-3 py-1">
         <div className="text-center">
-          <span className="text-neutral text-[9px] font-bold tracking-[0.15em] uppercase">
+          <span className="text-neutral text-xs font-bold tracking-[0.15em] uppercase">
             Humidity
           </span>
           <span className="text-base-content mt-1 block text-xs font-semibold">
@@ -52,7 +52,7 @@ export const Forecast: FC<TemplateProps> = ({ data }) => {
           </span>
         </div>
         <div className="text-center">
-          <span className="text-neutral text-[9px] font-bold tracking-[0.15em] uppercase">
+          <span className="text-neutral text-xs font-bold tracking-[0.15em] uppercase">
             Wind
           </span>
           <span className="text-base-content mt-1 block text-xs font-semibold">

@@ -19,19 +19,19 @@ export const StatRow: FC<TemplateProps> = ({ data }) => {
         ];
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col justify-center p-6">
-      <h1 className="text-base-content mb-8 text-center text-2xl font-bold tracking-tight">
+    <div className="bg-base-100 flex h-full w-full flex-col justify-center p-8">
+      <h1 className="text-base-content mb-4 text-center text-4xl font-bold tracking-tight">
         {headline}
       </h1>
-      <div className="flex flex-1 items-center justify-center gap-3">
+      <div className="flex flex-1 items-center justify-center gap-2">
         {items.slice(0, 3).map((s, i) => (
           <div
             key={i}
             className="rounded-box bg-accent/5 flex flex-1 flex-col items-center p-4 text-center">
-            <span className="text-primary text-2xl font-black tracking-tight">
+            <span className="text-primary text-4xl font-black tracking-tight">
               {s.value}
             </span>
-            <span className="text-neutral mt-1 text-[10px] font-semibold tracking-widest uppercase">
+            <span className="text-neutral mt-1 text-xs font-semibold tracking-widest uppercase">
               {s.label}
             </span>
           </div>

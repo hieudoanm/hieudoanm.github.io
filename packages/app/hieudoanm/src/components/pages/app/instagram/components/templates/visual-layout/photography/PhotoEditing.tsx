@@ -13,10 +13,10 @@ export const PhotoEditing: FC<TemplateProps> = ({ data }) => {
       <div className="text-accent mb-1 text-xs font-bold tracking-[0.2em] uppercase">
         Photo Editing
       </div>
-      <h1 className="text-base-content mb-4 text-2xl font-bold">{title}</h1>
-      <div className="flex w-full max-w-md gap-2">
-        <div className="border-base-300 flex-1 rounded border p-4">
-          <span className="text-neutral text-[10px] font-bold uppercase">
+      <h1 className="text-base-content mb-2 text-4xl font-bold">{title}</h1>
+      <div className="flex w-full max-w-md gap-1">
+        <div className="border-base-300 flex-1 rounded border p-2">
+          <span className="text-neutral text-xs font-bold uppercase">
             {beforeLabel}
           </span>
           <div className="bg-base-300 mt-2 flex aspect-square items-center justify-center rounded">
@@ -31,8 +31,8 @@ export const PhotoEditing: FC<TemplateProps> = ({ data }) => {
             )}
           </div>
         </div>
-        <div className="border-base-300 flex-1 rounded border p-4">
-          <span className="text-primary text-[10px] font-bold uppercase">
+        <div className="border-base-300 flex-1 rounded border p-2">
+          <span className="text-primary text-xs font-bold uppercase">
             {afterLabel}
           </span>
           <div className="bg-base-300 mt-2 flex aspect-square items-center justify-center rounded">
@@ -49,7 +49,7 @@ export const PhotoEditing: FC<TemplateProps> = ({ data }) => {
         </div>
       </div>
       {description && (
-        <p className="text-neutral mt-4 max-w-sm text-xs leading-relaxed">
+        <p className="text-neutral mt-2 max-w-sm text-xs leading-relaxed">
           {description}
         </p>
       )}

@@ -18,7 +18,7 @@ export const DatabaseSchema: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
-      <div className="mb-4 text-center">
+      <div className="mb-2 text-center">
         <div className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
           Schema
         </div>
@@ -28,15 +28,15 @@ export const DatabaseSchema: FC<TemplateProps> = ({ data }) => {
           </div>
         )}
       </div>
-      <div className="flex flex-1 flex-wrap justify-center gap-3">
+      <div className="flex flex-1 flex-wrap justify-center gap-2">
         {tables.map((table) => (
           <div
             key={table.name}
-            className="border-base-300 w-[45%] min-w-[180px] rounded border">
-            <div className="bg-primary/10 text-primary rounded-t px-3 py-1.5 text-xs font-bold">
+            className="border-base-300 w-[45%] min-w-[180px] rounded-xl border">
+            <div className="bg-primary/10 text-primary rounded-t px-3 py-1.5 text-sm font-bold">
               {table.name}
             </div>
-            <div className="p-2">
+            <div className="p-1">
               {table.columns.map((col) => (
                 <div
                   key={col.name}

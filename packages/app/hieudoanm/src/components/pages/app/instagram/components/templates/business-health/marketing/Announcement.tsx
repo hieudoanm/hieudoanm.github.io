@@ -8,7 +8,7 @@ export const Announcement: FC<TemplateProps> = ({ data }) => {
   const date = (data.date as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-10">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-6">
         <span className="bg-primary text-primary-content rounded-full px-4 py-1.5 text-xs font-bold tracking-widest uppercase">
           {badge}

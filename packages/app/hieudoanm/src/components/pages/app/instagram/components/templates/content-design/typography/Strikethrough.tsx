@@ -8,23 +8,23 @@ export const Strikethrough: FC<TemplateProps> = ({ data }) => {
   const text = (data.text as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-6">
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
       <div className="text-center">
-        <div className="flex items-baseline justify-center gap-4">
-          <span className="text-base-content text-6xl leading-none font-black line-through opacity-40">
+        <div className="flex items-baseline justify-center gap-2">
+          <span className="text-base-content text-3xl leading-none font-black line-through opacity-40">
             {number}
           </span>
-          <span className="text-primary text-7xl leading-none font-black">
+          <span className="text-primary text-4xl leading-none font-black">
             {replacement}
           </span>
         </div>
         {label && (
-          <div className="text-base-content mt-4 text-lg font-bold tracking-wider uppercase">
+          <div className="text-base-content mt-2 text-sm font-bold tracking-wider uppercase">
             {label}
           </div>
         )}
         {text && (
-          <p className="text-neutral mt-3 text-sm leading-relaxed">{text}</p>
+          <p className="text-neutral mt-2 text-base leading-relaxed">{text}</p>
         )}
       </div>
     </div>

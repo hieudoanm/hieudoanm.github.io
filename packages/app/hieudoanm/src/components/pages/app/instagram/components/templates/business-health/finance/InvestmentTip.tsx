@@ -8,9 +8,9 @@ export const InvestmentTip: FC<TemplateProps> = ({ data }) => {
   const risk = (data.risk as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-12 text-center">
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
       {category && (
-        <span className="text-accent mb-4 text-[10px] font-bold tracking-[0.2em] uppercase">
+        <span className="text-accent mb-4 text-xs font-bold tracking-[0.2em] uppercase">
           {category}
         </span>
       )}
@@ -32,7 +32,7 @@ export const InvestmentTip: FC<TemplateProps> = ({ data }) => {
       <p className="text-neutral mt-3 text-sm leading-relaxed">{description}</p>
       {risk && (
         <span
-          className={`mt-5 rounded-full px-3 py-0.5 text-[10px] font-bold ${
+          className={`mt-5 rounded-full px-3 py-0.5 text-xs font-bold ${
             risk === 'Low'
               ? 'bg-accent/10 text-accent'
               : risk === 'Medium'

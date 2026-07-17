@@ -15,8 +15,8 @@ export const VisionBoard: FC<TemplateProps> = ({ data }) => {
             ? { backgroundImage: `url(${imageUrl})` }
             : { backgroundColor: '#e5e7eb' }
         }>
-        <div className="rounded-box bg-base-100/90 w-full px-4 py-3 backdrop-blur-sm">
-          <h1 className="text-base-content text-lg leading-tight font-bold">
+        <div className="rounded-box bg-base-100/90 w-full px-4 py-4 backdrop-blur-sm">
+          <h1 className="text-base-content text-4xl leading-tight font-bold">
             {headline}
           </h1>
         </div>

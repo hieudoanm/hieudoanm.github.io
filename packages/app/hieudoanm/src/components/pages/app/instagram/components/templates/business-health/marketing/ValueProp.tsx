@@ -24,7 +24,7 @@ export const ValueProp: FC<TemplateProps> = ({ data }) => {
   ];
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-6">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-3 text-center">
         <div className="text-base-content text-sm font-bold">{headline}</div>
       </div>
@@ -33,16 +33,14 @@ export const ValueProp: FC<TemplateProps> = ({ data }) => {
           <div
             key={i}
             className="border-base-300 flex items-start gap-3 rounded border px-3 py-2">
-            <div className="bg-primary flex h-6 w-6 shrink-0 items-center justify-center rounded text-[10px] font-bold text-white">
+            <div className="bg-primary flex h-6 w-6 shrink-0 items-center justify-center rounded text-xs font-bold text-white">
               {i + 1}
             </div>
             <div>
               <div className="text-base-content text-xs font-bold">
                 {f.title}
               </div>
-              <div className="text-neutral mt-0.5 text-[10px]">
-                {f.description}
-              </div>
+              <div className="text-neutral mt-0.5 text-xs">{f.description}</div>
             </div>
           </div>
         ))}

@@ -7,11 +7,11 @@ export const ChallengeCalendar: FC<TemplateProps> = ({ data }) => {
   const days = (data.days as { day: string; activity: string }[]) ?? [];
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-10">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-4 flex items-center justify-between">
-        <h1 className="text-base-content text-base font-bold">{title}</h1>
+        <h1 className="text-base-content text-4xl font-bold">{title}</h1>
         {month && (
-          <span className="text-accent text-[10px] font-bold tracking-widest uppercase">
+          <span className="text-accent text-xs font-bold tracking-widest uppercase">
             {month}
           </span>
         )}

@@ -10,14 +10,14 @@ export const DailyWisdom: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
-      <p className="badge badge-primary badge-outline mb-6 text-xs">
+      <p className="badge badge-primary badge-outline mb-3 text-xs">
         {category}
       </p>
-      <p className="text-base-content mb-8 max-w-xl text-3xl leading-snug font-bold">
+      <p className="text-base-content mb-4 max-w-xl text-2xl leading-snug font-bold">
         {wisdom}
       </p>
-      <p className="text-secondary mb-2 text-lg font-medium">— {author}</p>
-      {date && <p className="text-base-content/50 text-sm">{date}</p>}
+      <p className="text-secondary mb-1 text-xs font-medium">— {author}</p>
+      {date && <p className="text-base-content/50 text-xs">{date}</p>}
     </div>
   );
 };

@@ -9,31 +9,31 @@ export const ChordChart: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
-      <span className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
+      <span className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
         Chord Chart
       </span>
-      <h1 className="text-base-content mt-1 text-xl font-bold">{title}</h1>
+      <h1 className="text-base-content mt-0.5 text-lg font-bold">{title}</h1>
       {difficulty && (
-        <span className="bg-secondary/10 text-secondary mt-2 rounded-full px-3 py-0.5 text-[10px] font-bold">
+        <span className="bg-secondary/10 text-secondary mt-0.5 rounded-full px-3 py-0.5 text-xs font-bold">
           {difficulty}
         </span>
       )}
-      <div className="mt-5 grid grid-cols-3 gap-4">
+      <div className="mt-3 grid grid-cols-3 gap-2">
         {chords.map((chord, i) => (
           <div key={i} className="flex flex-col items-center">
-            <div className="bg-base-200 border-base-300 flex h-16 w-14 flex-col items-center justify-center rounded border">
-              <span className="text-base-content text-sm font-bold">
+            <div className="bg-base-200 border-base-300 flex h-8 w-7 flex-col items-center justify-center rounded-lg border">
+              <span className="text-base-content text-xs font-bold">
                 {chord.name}
               </span>
             </div>
-            <p className="text-neutral mt-1 text-[9px] leading-tight">
+            <p className="text-neutral mt-0.5 text-xs leading-tight">
               {chord.fingers}
             </p>
           </div>
         ))}
       </div>
       {tip && (
-        <div className="bg-accent/10 text-accent mt-5 max-w-xs rounded-lg px-4 py-2 text-xs">
+        <div className="bg-accent/10 text-accent mt-3 max-w-xs rounded-lg px-2 py-1 text-xs">
           💡 {tip}
         </div>
       )}

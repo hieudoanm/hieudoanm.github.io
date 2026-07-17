@@ -8,7 +8,7 @@ export const ThisOrThat: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
-      <h1 className="text-base-content mb-6 text-center text-lg font-bold">
+      <h1 className="text-base-content mb-6 text-center text-4xl font-bold">
         {headline}
       </h1>
       <div className="flex flex-1 items-stretch gap-3">
@@ -26,7 +26,7 @@ export const ThisOrThat: FC<TemplateProps> = ({ data }) => {
           </p>
         </div>
       </div>
-      <p className="text-neutral mt-4 text-center text-[10px]">
+      <p className="text-neutral mt-4 text-center text-sm">
         Which one do you prefer?
       </p>
     </div>

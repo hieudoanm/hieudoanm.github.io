@@ -18,32 +18,32 @@ export const Discussion: FC<TemplateProps> = ({ data }) => {
   ];
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-10">
-      <span className="text-accent mb-3 text-[10px] font-bold tracking-[0.2em] uppercase">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+      <span className="text-accent mb-3 text-sm font-bold tracking-[0.2em] uppercase">
         Discussion
       </span>
-      <h1 className="text-base-content text-xl leading-tight font-bold">
+      <h1 className="text-base-content text-4xl leading-tight font-bold">
         {title}
       </h1>
 
-      <div className="bg-base-200 mt-5 rounded-lg p-4">
-        <span className="text-neutral text-[9px] font-bold tracking-[0.15em] uppercase">
+      <div className="bg-base-200 mt-6 rounded-2xl p-3">
+        <span className="text-neutral text-sm font-bold tracking-[0.15em] uppercase">
           Interpretation
         </span>
-        <p className="text-base-content mt-1 text-xs leading-relaxed">
+        <p className="text-base-content mt-2 text-sm leading-relaxed">
           {interpretation}
         </p>
       </div>
 
-      <div className="mt-5">
-        <span className="text-neutral text-[9px] font-bold tracking-[0.15em] uppercase">
+      <div className="mt-6">
+        <span className="text-neutral text-sm font-bold tracking-[0.15em] uppercase">
           Implications
         </span>
         <div className="mt-2 flex flex-col gap-2">
           {implications.map((imp, i) => (
             <div key={i} className="flex items-start gap-2">
-              <span className="bg-accent mt-0.5 h-1.5 w-1.5 flex-shrink-0 rounded-full" />
-              <span className="text-base-content text-xs leading-relaxed">
+              <span className="bg-accent mt-2 h-2 w-2 flex-shrink-0 rounded-full" />
+              <span className="text-base-content text-sm leading-relaxed">
                 {imp}
               </span>
             </div>
@@ -51,17 +51,17 @@ export const Discussion: FC<TemplateProps> = ({ data }) => {
         </div>
       </div>
 
-      <div className="mt-5">
-        <span className="text-neutral text-[9px] font-bold tracking-[0.15em] uppercase">
+      <div className="mt-6">
+        <span className="text-neutral text-sm font-bold tracking-[0.15em] uppercase">
           Future Directions
         </span>
         <div className="mt-2 flex flex-col gap-2">
           {futureDirections.map((fd, i) => (
             <div key={i} className="flex items-start gap-3">
-              <span className="text-accent mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full text-[10px] font-bold">
+              <span className="text-accent mt-2 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold">
                 {i + 1}
               </span>
-              <span className="text-base-content text-xs leading-relaxed">
+              <span className="text-base-content text-sm leading-relaxed">
                 {fd}
               </span>
             </div>

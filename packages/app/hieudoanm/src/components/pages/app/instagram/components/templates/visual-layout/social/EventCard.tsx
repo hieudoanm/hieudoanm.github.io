@@ -9,25 +9,25 @@ export const EventCard: FC<TemplateProps> = ({ data }) => {
   const description = (data.description as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-10">
-      <div className="rounded-box border-accent/20 flex flex-1 flex-col border p-8 shadow-sm">
-        <div className="mb-6 inline-flex items-center gap-3">
-          <div className="bg-primary text-primary-content flex flex-col items-center justify-center px-4 py-2 text-center">
+    <div className="bg-base-100 flex h-full w-full flex-col p-4">
+      <div className="rounded-box border-accent/20 flex flex-1 flex-col border p-4 shadow-sm">
+        <div className="mb-3 inline-flex items-center gap-3">
+          <div className="bg-primary text-primary-content flex flex-col items-center justify-center px-2 py-1 text-center">
             <span className="text-xs font-bold tracking-wider uppercase">
               {date ? date.split(' ')[0] : 'JAN'}
             </span>
-            <span className="text-3xl leading-none font-black">
+            <span className="text-xs leading-none font-black">
               {date ? date.match(/\d+/)?.[0] : '15'}
             </span>
           </div>
           <div>
-            <h1 className="text-base-content text-xl font-bold tracking-tight">
+            <h1 className="text-base-content text-4xl font-bold tracking-tight">
               {title || 'Event Title'}
             </h1>
             {time && <p className="text-neutral text-xs">{time}</p>}
           </div>
         </div>
-        <p className="text-neutral mb-6 text-sm leading-relaxed">
+        <p className="text-neutral mb-3 text-sm leading-relaxed">
           {description || 'Event description goes here.'}
         </p>
         {location && (

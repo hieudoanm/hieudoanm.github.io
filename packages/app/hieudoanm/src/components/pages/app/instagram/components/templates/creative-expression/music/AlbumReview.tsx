@@ -13,32 +13,32 @@ export const AlbumReview: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
-      <div className="bg-base-200 mb-4 flex h-20 w-20 items-center justify-center rounded-full text-3xl">
+      <div className="bg-base-200 mb-2 flex h-10 w-10 items-center justify-center rounded-full text-xs">
         🎵
       </div>
-      <h1 className="text-base-content text-xl font-bold">{title}</h1>
-      <p className="text-neutral mt-1 text-sm">{artist}</p>
+      <h1 className="text-base-content text-lg font-bold">{title}</h1>
+      <p className="text-neutral mt-1 text-xs">{artist}</p>
       {genre && (
-        <span className="bg-accent/10 text-accent mt-2 rounded-full px-3 py-0.5 text-[10px] font-bold">
+        <span className="bg-accent/10 text-accent mt-1 rounded-full px-1.5 py-0.5 text-xs font-bold">
           {genre}
         </span>
       )}
-      <div className="mt-3 flex gap-1">
+      <div className="mt-1.5 flex gap-2">
         {stars.map((filled, i) => (
           <span
             key={i}
             className={
-              filled ? 'text-primary text-lg' : 'text-base-300 text-lg'
+              filled ? 'text-primary text-xs' : 'text-base-300 text-xs'
             }>
             ★
           </span>
         ))}
       </div>
-      <p className="text-neutral mt-4 max-w-xs text-xs leading-relaxed">
+      <p className="text-neutral mt-2 max-w-xs text-xs leading-relaxed">
         &ldquo;{review}&rdquo;
       </p>
       {favoriteTrack && (
-        <p className="text-base-content mt-3 text-[10px]">
+        <p className="text-base-content mt-1.5 text-xs">
           <span className="text-neutral">Favorite: </span>
           <span className="font-bold">{favoriteTrack}</span>
         </p>

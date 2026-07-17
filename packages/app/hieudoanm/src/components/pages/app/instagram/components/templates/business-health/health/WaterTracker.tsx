@@ -13,22 +13,22 @@ export const WaterTracker: FC<TemplateProps> = ({ data }) => {
   const emptyGlasses = Math.max(0, goalNum - fullGlasses);
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-12 text-center">
-      <span className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
+      <span className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
         Daily Water Intake
       </span>
       <div className="mt-6 mb-4 flex flex-wrap justify-center gap-1.5">
         {Array.from({ length: fullGlasses }).map((_, i) => (
           <div
             key={`full-${i}`}
-            className="bg-accent flex h-8 w-6 items-center justify-center rounded-t-sm rounded-b-md text-[10px]">
+            className="bg-accent flex h-8 w-6 items-center justify-center rounded-t-sm rounded-b-md text-xs">
             💧
           </div>
         ))}
         {Array.from({ length: emptyGlasses }).map((_, i) => (
           <div
             key={`empty-${i}`}
-            className="border-accent/20 flex h-8 w-6 items-center justify-center rounded-t-sm rounded-b-md border text-[10px]"
+            className="border-accent/20 flex h-8 w-6 items-center justify-center rounded-t-sm rounded-b-md border text-xs"
           />
         ))}
       </div>

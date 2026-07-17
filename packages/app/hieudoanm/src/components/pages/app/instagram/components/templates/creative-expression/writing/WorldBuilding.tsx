@@ -22,39 +22,37 @@ export const WorldBuilding: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
-      <h1 className="text-base-content mb-1 text-2xl font-black tracking-tight">
+      <h1 className="text-base-content mb-0.5 text-4xl font-black tracking-tight">
         {worldName}
       </h1>
-      <p className="text-primary mb-2 text-xs font-semibold tracking-wider uppercase">
+      <p className="text-primary mb-1 text-xs font-semibold tracking-wider uppercase">
         {title}
       </p>
       {description && (
-        <p className="text-neutral mb-5 max-w-sm text-sm leading-relaxed">
+        <p className="text-neutral mb-3 max-w-sm text-xs leading-relaxed">
           {description}
         </p>
       )}
-      <div className="mb-5 grid w-full max-w-md grid-cols-2 gap-3">
+      <div className="mb-3 grid w-full max-w-md grid-cols-2 gap-1">
         {aspects.map((a) => (
-          <div key={a.name} className="bg-base-200 rounded-lg p-3 text-left">
+          <div key={a.name} className="bg-base-200 rounded-lg p-2 text-left">
             <span className="text-base-content text-xs font-bold">
               {a.name}
             </span>
-            <p className="text-neutral text-[11px] leading-relaxed">
-              {a.detail}
-            </p>
+            <p className="text-neutral text-xs leading-relaxed">{a.detail}</p>
           </div>
         ))}
       </div>
       {rules.length > 0 && (
         <div className="w-full max-w-md text-left">
-          <span className="text-base-content mb-2 block text-xs font-bold tracking-wider uppercase">
+          <span className="text-base-content mb-1 block text-xs font-bold tracking-wider uppercase">
             World Rules
           </span>
           <ul className="space-y-1">
             {rules.map((rule) => (
               <li
                 key={rule}
-                className="text-neutral flex items-start gap-2 text-xs">
+                className="text-neutral flex items-start gap-1 text-xs">
                 <span className="text-primary mt-0.5">&#10003;</span>
                 {rule}
               </li>

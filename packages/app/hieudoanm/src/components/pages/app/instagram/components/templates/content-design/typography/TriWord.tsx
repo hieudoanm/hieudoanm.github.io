@@ -8,20 +8,20 @@ export const TriWord: FC<TemplateProps> = ({ data }) => {
   const text = (data.text as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-6">
-      <div className="flex items-baseline gap-3 text-center">
-        <span className="text-primary text-5xl leading-none font-black">
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
+      <div className="flex items-baseline gap-2 text-center">
+        <span className="text-primary text-4xl leading-none font-black">
           {word1}
         </span>
-        <span className="text-base-content text-2xl leading-none font-medium">
+        <span className="text-base-content text-base leading-none font-medium">
           {word2}
         </span>
-        <span className="text-primary text-5xl leading-none font-black">
+        <span className="text-primary text-4xl leading-none font-black">
           {word3}
         </span>
       </div>
       {text && (
-        <p className="text-neutral mt-4 text-sm leading-relaxed">{text}</p>
+        <p className="text-neutral mt-2 text-base leading-relaxed">{text}</p>
       )}
     </div>
   );

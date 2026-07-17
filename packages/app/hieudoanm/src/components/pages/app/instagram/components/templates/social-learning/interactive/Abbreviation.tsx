@@ -7,17 +7,17 @@ export const Abbreviation: FC<TemplateProps> = ({ data }) => {
   const words = full.split(' ');
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-12">
-      <span className="text-accent mb-8 text-[10px] font-bold tracking-[0.2em] uppercase">
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
+      <span className="text-accent mb-8 text-sm font-bold tracking-[0.2em] uppercase">
         Abbreviation
       </span>
       <div className="flex flex-col items-start gap-3">
         {abbr.split('').map((letter, i) => (
-          <div key={i} className="flex items-baseline gap-4">
-            <span className="text-primary text-6xl leading-none font-black tracking-tight">
+          <div key={i} className="flex items-baseline gap-3">
+            <span className="text-primary text-4xl leading-none font-black tracking-tight">
               {letter}
             </span>
-            <span className="text-base-content text-xl font-semibold">
+            <span className="text-base-content text-2xl font-semibold">
               {(words[i] ?? '').slice(1)}
             </span>
           </div>

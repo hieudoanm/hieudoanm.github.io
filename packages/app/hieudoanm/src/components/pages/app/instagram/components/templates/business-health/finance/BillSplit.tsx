@@ -13,7 +13,7 @@ export const BillSplit: FC<TemplateProps> = ({ data }) => {
   ];
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-10">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <p className="text-neutral mb-1 text-xs font-bold tracking-wider uppercase">
         {headline}
       </p>

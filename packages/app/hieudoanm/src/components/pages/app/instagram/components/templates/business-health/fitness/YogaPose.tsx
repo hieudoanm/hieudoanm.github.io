@@ -9,12 +9,12 @@ export const YogaPose: FC<TemplateProps> = ({ data }) => {
   const instructions = (data.instructions as string[]) ?? [];
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-12">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="flex items-start justify-between">
-        <h1 className="text-base-content text-xl font-bold">{name}</h1>
+        <h1 className="text-base-content text-4xl font-bold">{name}</h1>
         {difficulty && (
           <span
-            className={`rounded-full px-3 py-0.5 text-[10px] font-bold ${
+            className={`rounded-full px-3 py-0.5 text-xs font-bold ${
               difficulty === 'Beginner'
                 ? 'bg-accent/10 text-accent'
                 : difficulty === 'Intermediate'
@@ -33,7 +33,7 @@ export const YogaPose: FC<TemplateProps> = ({ data }) => {
           {benefits.map((b, i) => (
             <span
               key={i}
-              className="rounded-box bg-base-300 text-neutral px-2.5 py-0.5 text-[10px] font-medium">
+              className="rounded-box bg-base-300 text-neutral px-2.5 py-0.5 text-xs font-medium">
               {b}
             </span>
           ))}

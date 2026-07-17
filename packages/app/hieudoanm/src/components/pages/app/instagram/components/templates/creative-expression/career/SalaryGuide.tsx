@@ -15,9 +15,9 @@ export const SalaryGuide: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
-      <h1 className="text-primary mb-1 text-3xl font-bold">{title}</h1>
-      {role && <p className="badge badge-secondary mb-6">{role}</p>}
-      <div className="w-full max-w-lg overflow-hidden rounded-xl">
+      <h1 className="text-primary mb-0.5 text-4xl font-bold">{title}</h1>
+      {role && <p className="badge badge-secondary mb-3">{role}</p>}
+      <div className="w-full max-w-lg overflow-hidden rounded-lg">
         <table className="text-base-content table w-full text-sm">
           <thead>
             <tr className="bg-primary text-primary-content">
@@ -40,7 +40,7 @@ export const SalaryGuide: FC<TemplateProps> = ({ data }) => {
         </table>
       </div>
       {note && (
-        <p className="text-base-content/50 mt-4 max-w-md text-xs italic">
+        <p className="text-base-content/50 mt-2 max-w-md text-xs italic">
           {note}
         </p>
       )}

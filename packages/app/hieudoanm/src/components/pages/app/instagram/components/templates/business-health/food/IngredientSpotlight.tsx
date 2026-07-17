@@ -8,14 +8,14 @@ export const IngredientSpotlight: FC<TemplateProps> = ({ data }) => {
   const imageUrl = (data.imageUrl as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-12">
-      <span className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+      <span className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
         Ingredient Spotlight
       </span>
-      <h1 className="text-base-content mt-2 text-2xl font-bold">{name}</h1>
+      <h1 className="text-base-content mt-2 text-4xl font-bold">{name}</h1>
       {benefits.length > 0 && (
         <div className="mt-5">
-          <span className="text-neutral text-[10px] font-bold tracking-widest uppercase">
+          <span className="text-neutral text-xs font-bold tracking-widest uppercase">
             Benefits
           </span>
           <div className="mt-2 flex flex-col gap-1.5">
@@ -41,14 +41,14 @@ export const IngredientSpotlight: FC<TemplateProps> = ({ data }) => {
       )}
       {uses.length > 0 && (
         <div className="mt-5">
-          <span className="text-neutral text-[10px] font-bold tracking-widest uppercase">
+          <span className="text-neutral text-xs font-bold tracking-widest uppercase">
             Ways to Use
           </span>
           <div className="mt-2 flex flex-wrap gap-1.5">
             {uses.map((u, i) => (
               <span
                 key={i}
-                className="rounded-box bg-base-300 text-neutral px-2.5 py-1 text-[10px]">
+                className="rounded-box bg-base-300 text-neutral px-2.5 py-1 text-xs">
                 {u}
               </span>
             ))}

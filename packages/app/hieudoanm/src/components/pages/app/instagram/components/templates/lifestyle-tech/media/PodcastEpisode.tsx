@@ -11,23 +11,23 @@ export const PodcastEpisode: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center p-8">
       <div className="mb-4 text-center">
-        <div className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
+        <div className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
           Podcast
         </div>
       </div>
       <div className="bg-primary text-base-100 mb-5 flex h-24 w-24 items-center justify-center rounded-full">
-        <span className="text-3xl">&#9654;</span>
+        <span className="text-lg">&#9654;</span>
       </div>
-      <div className="text-base-content mb-2 text-center text-sm font-bold">
+      <div className="text-base-content mb-2 text-center text-base font-bold">
         {title}
       </div>
-      <div className="bg-accent/10 text-accent mb-3 rounded px-2.5 py-0.5 text-[10px] font-bold">
+      <div className="bg-accent/10 text-accent mb-3 rounded px-2.5 py-0.5 text-xs font-bold">
         EP {episode}
       </div>
       <div className="text-neutral mb-1 text-xs font-semibold">{guest}</div>
-      <div className="text-neutral mb-3 text-[10px]">{duration}</div>
+      <div className="text-neutral mb-3 text-xs">{duration}</div>
       {description && (
-        <p className="text-neutral max-w-[80%] text-center text-[10px] leading-relaxed">
+        <p className="text-neutral max-w-[80%] text-center text-xs leading-relaxed">
           {description}
         </p>
       )}

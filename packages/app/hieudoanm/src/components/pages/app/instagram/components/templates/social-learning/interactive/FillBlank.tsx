@@ -10,25 +10,25 @@ export const FillBlank: FC<TemplateProps> = ({ data }) => {
   const parts = text.split('___');
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-12 text-center">
-      <span className="text-accent mb-4 text-[10px] font-bold tracking-[0.2em] uppercase">
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
+      <span className="text-accent mb-4 text-sm font-bold tracking-[0.2em] uppercase">
         Fill in the Blank
       </span>
-      <p className="text-base-content text-lg leading-relaxed font-light">
+      <p className="text-base-content text-2xl leading-relaxed font-light">
         {parts.map((part, i) => (
           <span key={i}>
             {part}
             {i < parts.length - 1 && (
-              <span className="border-accent text-accent inline-block border-b-2 px-4 py-0.5 font-bold">
+              <span className="border-accent text-accent inline-block border-b-2 px-4 py-2 font-bold">
                 {blank || '______'}
               </span>
             )}
           </span>
         ))}
       </p>
-      {hint && <p className="text-neutral mt-4 text-xs">Hint: {hint}</p>}
+      {hint && <p className="text-neutral mt-4 text-sm">Hint: {hint}</p>}
       {author && (
-        <p className="text-accent mt-6 text-xs font-medium">&mdash; {author}</p>
+        <p className="text-accent mt-6 text-sm font-medium">&mdash; {author}</p>
       )}
     </div>
   );

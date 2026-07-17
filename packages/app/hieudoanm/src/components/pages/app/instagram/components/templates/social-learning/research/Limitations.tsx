@@ -40,44 +40,44 @@ export const Limitations: FC<TemplateProps> = ({ data }) => {
   };
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-10">
-      <span className="text-accent mb-3 text-[10px] font-bold tracking-[0.2em] uppercase">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+      <span className="text-accent mb-3 text-sm font-bold tracking-[0.2em] uppercase">
         Limitations
       </span>
-      <h1 className="text-base-content text-xl leading-tight font-bold">
+      <h1 className="text-base-content text-4xl leading-tight font-bold">
         {title}
       </h1>
 
-      <div className="mt-5 flex flex-col gap-3">
+      <div className="mt-6 flex flex-col gap-3">
         {limitations.map((lim, i) => (
-          <div key={i} className="rounded-lg border border-[#e5e7eb] p-3">
+          <div key={i} className="rounded-2xl border border-[#e5e7eb] p-3">
             <div className="flex items-center justify-between">
-              <span className="text-base-content text-xs font-semibold">
+              <span className="text-base-content text-sm font-semibold">
                 {lim.title}
               </span>
               <span
-                className={`rounded px-2 py-0.5 text-[9px] font-bold tracking-[0.1em] uppercase ${impactColor(lim.impact)}`}>
+                className={`rounded-2xl px-2 py-2 text-sm font-bold tracking-[0.1em] uppercase ${impactColor(lim.impact)}`}>
                 {lim.impact}
               </span>
             </div>
-            <p className="text-neutral mt-1 text-[11px] leading-relaxed">
+            <p className="text-neutral mt-1 text-sm leading-relaxed">
               {lim.description}
             </p>
           </div>
         ))}
       </div>
 
-      <div className="mt-5">
-        <span className="text-neutral text-[9px] font-bold tracking-[0.15em] uppercase">
+      <div className="mt-6">
+        <span className="text-neutral text-sm font-bold tracking-[0.15em] uppercase">
           Recommendations
         </span>
         <div className="mt-2 flex flex-col gap-2">
           {recommendations.map((r, i) => (
             <div key={i} className="flex items-start gap-3">
-              <span className="text-accent mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full text-[10px] font-bold">
+              <span className="text-accent mt-2 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold">
                 {i + 1}
               </span>
-              <span className="text-base-content text-xs leading-relaxed">
+              <span className="text-base-content text-sm leading-relaxed">
                 {r}
               </span>
             </div>

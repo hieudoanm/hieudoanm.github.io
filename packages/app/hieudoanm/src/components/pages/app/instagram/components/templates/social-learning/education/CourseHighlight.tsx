@@ -9,29 +9,29 @@ export const CourseHighlight: FC<TemplateProps> = ({ data }) => {
   const level = (data.level as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-12">
-      <h1 className="text-base-content text-xl leading-tight font-bold">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+      <h1 className="text-base-content text-4xl leading-tight font-bold">
         {title}
       </h1>
       {instructor && (
-        <p className="text-neutral mt-1 text-xs">by {instructor}</p>
+        <p className="text-neutral mt-2 text-sm">by {instructor}</p>
       )}
       <div className="mt-4 flex gap-2">
         {duration && (
-          <span className="rounded-box bg-accent/10 text-accent px-3 py-1 text-[10px] font-bold">
+          <span className="rounded-box bg-accent/10 text-accent px-4 py-2 text-sm font-bold">
             {duration}
           </span>
         )}
         {level && (
-          <span className="rounded-box bg-base-300 text-neutral px-3 py-1 text-[10px] font-bold">
+          <span className="rounded-box bg-base-300 text-neutral px-4 py-2 text-sm font-bold">
             {level}
           </span>
         )}
       </div>
-      <div className="mt-5 flex flex-col gap-2">
+      <div className="mt-6 flex flex-col gap-2">
         {modules.map((mod, i) => (
-          <div key={i} className="flex items-center gap-3">
-            <span className="text-accent flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full text-[10px] font-bold">
+          <div key={i} className="flex items-center gap-4">
+            <span className="text-accent flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold">
               {i + 1}
             </span>
             <p className="text-base-content text-sm">{mod}</p>

@@ -16,9 +16,9 @@ export const AspectRatio: FC<TemplateProps> = ({ data }) => {
   };
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-10">
-      <h1 className="text-base-content mb-6 text-lg font-bold">{headline}</h1>
-      <div className="flex flex-1 flex-col items-center justify-center gap-5">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+      <h1 className="text-base-content mb-6 text-4xl font-bold">{headline}</h1>
+      <div className="flex flex-1 flex-col items-center justify-center gap-6">
         {ratios.map((r, i) => {
           const dim = getDimensions(r.label);
           return (
@@ -26,7 +26,7 @@ export const AspectRatio: FC<TemplateProps> = ({ data }) => {
               <div className="bg-accent/10 border-accent/30 flex items-center justify-center rounded border">
                 <span className="text-accent text-xs font-bold">{r.label}</span>
               </div>
-              <span className="text-neutral text-[10px]">{r.description}</span>
+              <span className="text-neutral text-xs">{r.description}</span>
             </div>
           );
         })}

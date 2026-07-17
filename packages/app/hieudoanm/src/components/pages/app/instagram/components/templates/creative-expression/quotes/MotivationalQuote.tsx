@@ -11,13 +11,13 @@ export const MotivationalQuote: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
-      <p className="badge badge-primary mb-6 text-xs">{theme}</p>
-      <p className="text-base-content mb-6 max-w-xl text-2xl leading-snug font-bold">
+      <p className="badge badge-primary mb-3 text-xs">{theme}</p>
+      <p className="text-base-content mb-3 max-w-xl text-2xl leading-snug font-bold">
         {quote}
       </p>
-      <p className="text-secondary mb-2 text-lg font-semibold">— {author}</p>
+      <p className="text-secondary mb-1 text-xs font-semibold">— {author}</p>
       {subtitle && (
-        <p className="text-base-content/60 mt-1 max-w-md text-sm italic">
+        <p className="text-base-content/60 mt-1 max-w-md text-xs italic">
           {subtitle}
         </p>
       )}

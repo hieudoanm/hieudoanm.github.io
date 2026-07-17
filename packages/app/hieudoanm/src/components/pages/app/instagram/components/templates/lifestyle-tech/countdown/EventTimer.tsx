@@ -9,13 +9,13 @@ export const EventTimer: FC<TemplateProps> = ({ data }) => {
   const text = (data.text as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-6">
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
       <div className="text-center">
         <div className="text-neutral text-xs font-bold tracking-widest uppercase">
           {title}
         </div>
-        <div className="text-primary mt-3 text-4xl font-black">{timeLeft}</div>
-        <div className="text-base-content mt-2 text-lg font-bold">
+        <div className="text-primary mt-3 text-xl font-black">{timeLeft}</div>
+        <div className="text-base-content mt-2 text-base font-bold">
           {eventName}
         </div>
         <div className="text-neutral mt-1 text-xs">{date}</div>

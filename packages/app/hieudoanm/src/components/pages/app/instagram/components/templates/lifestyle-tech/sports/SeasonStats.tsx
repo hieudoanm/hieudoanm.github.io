@@ -24,7 +24,7 @@ export const SeasonStats: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-5 text-center">
-        <div className="text-base-content text-sm font-bold">{headline}</div>
+        <div className="text-base-content text-base font-bold">{headline}</div>
         {text && <div className="text-neutral mt-1 text-xs">{text}</div>}
       </div>
 
@@ -36,14 +36,14 @@ export const SeasonStats: FC<TemplateProps> = ({ data }) => {
             </span>
             <div className="flex flex-1 flex-col">
               <div className="flex items-center justify-between">
-                <span className="text-base-content text-sm font-semibold">
+                <span className="text-base-content text-base font-semibold">
                   {l.name}
                 </span>
-                <span className="text-accent text-sm font-black">
+                <span className="text-accent text-base font-black">
                   {l.value}
                 </span>
               </div>
-              <span className="text-neutral text-[10px]">{l.team}</span>
+              <span className="text-neutral text-xs">{l.team}</span>
               <div className="bg-neutral/20 mt-1 h-1.5 w-full overflow-hidden rounded-full">
                 <div
                   className="bg-accent h-full rounded-full"

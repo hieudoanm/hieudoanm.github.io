@@ -5,17 +5,19 @@ import { NavButton } from './NavButton';
 import { PostDots } from './PostDots';
 import { PreviewHeader } from './PreviewHeader';
 
-const ASPECT_CLASS: Record<string, string> = {
-  '1:1': 'aspect-square',
-  '4:5': 'aspect-[4/5]',
-  '9:16': 'aspect-[9/16]',
-  '2:3': 'aspect-[2/3]',
-  '3:4': 'aspect-[3/4]',
-  '16:9': 'aspect-video',
-  '4:3': 'aspect-[4/3]',
-  '3:2': 'aspect-[3/2]',
-  A4: 'aspect-[140/99]',
-  Letter: 'aspect-[11/8.5]',
+const CANVAS_SIZE = 512;
+
+const ASPECT_RATIO: Record<string, number> = {
+  '1:1': 1,
+  '4:5': 5 / 4,
+  '9:16': 16 / 9,
+  '2:3': 3 / 2,
+  '3:4': 4 / 3,
+  '16:9': 9 / 16,
+  '4:3': 3 / 4,
+  '3:2': 2 / 3,
+  A4: 99 / 140,
+  Letter: 8.5 / 11,
 };
 
 export const PreviewPane: FC<{
@@ -48,6 +50,8 @@ export const PreviewPane: FC<{
   children,
 }) => {
   const multi = totalPosts > 1;
+  const aspectMultiplier = ASPECT_RATIO[ratio] ?? 1;
+  const canvasHeight = CANVAS_SIZE * aspectMultiplier;
 
   return (
     <div className="flex-1">
@@ -59,7 +63,7 @@ export const PreviewPane: FC<{
         onDownloadAll={onDownloadAll}
       />
 
-      <div className="relative mx-auto w-full sm:w-96">
+      <div className="relative mx-auto" style={{ width: CANVAS_SIZE }}>
         {multi && (
           <NavButton
             direction="prev"
@@ -70,15 +74,19 @@ export const PreviewPane: FC<{
 
         <div
           ref={captureRef}
-          style={{ fontFamily }}
-          className={`border-base-300 mx-auto w-full overflow-hidden border shadow-2xl ${ASPECT_CLASS[ratio] || 'aspect-square'}`}>
+          style={{
+            fontFamily,
+            width: CANVAS_SIZE,
+            height: canvasHeight,
+          }}
+          className="border-base-300 mx-auto overflow-hidden border shadow-2xl">
           <div className="relative size-full">
             {children}
             {instagramUsername && (
               <InstagramBadge username={instagramUsername} />
             )}
             {multi && (
-              <span className="absolute top-2 right-2 rounded px-1.5 py-0.5 font-mono text-[10px] leading-none text-white">
+              <span className="absolute top-4 right-4 rounded-lg bg-black/30 px-3 py-1.5 font-mono text-lg leading-none text-white">
                 {activeIndex + 1} / {totalPosts}
               </span>
             )}

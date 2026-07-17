@@ -8,11 +8,11 @@ export const QuickQuiz: FC<TemplateProps> = ({ data }) => {
   const explanation = (data.explanation as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-12">
-      <span className="text-accent mb-4 text-[10px] font-bold tracking-[0.2em] uppercase">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+      <span className="text-accent mb-4 text-sm font-bold tracking-[0.2em] uppercase">
         Quick Quiz
       </span>
-      <p className="text-base-content text-base font-semibold">{question}</p>
+      <p className="text-base-content text-sm font-semibold">{question}</p>
       <div className="mt-4 flex flex-col gap-2">
         {options.map((opt, i) => {
           const letters = ['A', 'B', 'C', 'D'];
@@ -20,15 +20,15 @@ export const QuickQuiz: FC<TemplateProps> = ({ data }) => {
           return (
             <div
               key={i}
-              className={`rounded-box border px-4 py-2.5 text-sm ${
+              className={`rounded-box border px-4 py-2 text-sm ${
                 isCorrect ? 'border-accent bg-accent/5' : 'border-base-300'
               }`}>
               <span
-                className={`font-mono text-xs font-bold ${isCorrect ? 'text-accent' : 'text-neutral/40'}`}>
+                className={`font-mono text-sm font-bold ${isCorrect ? 'text-accent' : 'text-neutral/40'}`}>
                 {letters[i]}
               </span>
               <span
-                className={`ml-3 ${isCorrect ? 'text-base-content font-medium' : 'text-neutral'}`}>
+                className={`ml-4 ${isCorrect ? 'text-base-content font-medium' : 'text-neutral'}`}>
                 {opt}
               </span>
             </div>
@@ -37,7 +37,7 @@ export const QuickQuiz: FC<TemplateProps> = ({ data }) => {
       </div>
       {explanation && (
         <div className="border-accent/20 mt-6 border-t pt-4">
-          <p className="text-neutral text-xs leading-relaxed">{explanation}</p>
+          <p className="text-neutral text-sm leading-relaxed">{explanation}</p>
         </div>
       )}
     </div>

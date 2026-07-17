@@ -15,32 +15,32 @@ export const IntroLiterature: FC<TemplateProps> = ({ data }) => {
   ];
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-10">
-      <span className="text-accent mb-3 text-[10px] font-bold tracking-[0.2em] uppercase">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+      <span className="text-accent mb-3 text-sm font-bold tracking-[0.2em] uppercase">
         Introduction &amp; Literature Review
       </span>
-      <h1 className="text-base-content text-xl leading-tight font-bold">
+      <h1 className="text-base-content text-4xl leading-tight font-bold">
         {title}
       </h1>
 
-      <div className="bg-primary/5 mt-5 rounded-lg border border-[#ff0030]/10 p-4">
-        <span className="text-accent text-[9px] font-bold tracking-[0.15em] uppercase">
+      <div className="bg-primary/5 mt-6 rounded-lg border border-[#ff0030]/10 p-3">
+        <span className="text-accent text-sm font-bold tracking-[0.15em] uppercase">
           Research Question
         </span>
-        <p className="text-base-content mt-1 text-sm leading-relaxed font-medium">
+        <p className="text-base-content mt-2 text-sm leading-relaxed font-medium">
           {question}
         </p>
       </div>
 
-      <div className="mt-5">
-        <span className="text-neutral text-[9px] font-bold tracking-[0.15em] uppercase">
+      <div className="mt-6">
+        <span className="text-neutral text-sm font-bold tracking-[0.15em] uppercase">
           Hypotheses
         </span>
         <div className="mt-2 flex flex-col gap-2">
           {hypotheses.map((h, i) => (
             <div key={i} className="flex items-start gap-2">
-              <span className="bg-accent mt-0.5 h-1.5 w-1.5 flex-shrink-0 rounded-full" />
-              <span className="text-base-content text-xs leading-relaxed">
+              <span className="bg-accent mt-2 h-2 w-2 flex-shrink-0 rounded-full" />
+              <span className="text-base-content text-sm leading-relaxed">
                 {h}
               </span>
             </div>
@@ -48,15 +48,15 @@ export const IntroLiterature: FC<TemplateProps> = ({ data }) => {
         </div>
       </div>
 
-      <div className="mt-5">
-        <span className="text-neutral text-[9px] font-bold tracking-[0.15em] uppercase">
+      <div className="mt-6">
+        <span className="text-neutral text-sm font-bold tracking-[0.15em] uppercase">
           Key Literature
         </span>
         <div className="mt-2 flex flex-wrap gap-2">
           {citations.map((c, i) => (
             <span
               key={i}
-              className="bg-base-200 text-base-content rounded px-2 py-1 text-[10px] font-medium">
+              className="bg-base-200 text-base-content rounded-2xl px-2 py-2 text-sm font-medium">
               {c}
             </span>
           ))}

@@ -25,8 +25,8 @@ export const FeatureTable: FC<TemplateProps> = ({ data }) => {
   ];
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-6">
-      <div className="text-base-content mb-4 text-center text-sm font-bold">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+      <div className="text-base-content mb-2 text-center text-sm font-bold">
         {headline}
       </div>
       <div className="flex flex-1 flex-col gap-0.5">

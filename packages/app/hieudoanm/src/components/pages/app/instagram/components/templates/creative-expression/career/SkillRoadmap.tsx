@@ -14,19 +14,19 @@ export const SkillRoadmap: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
-      <h1 className="text-primary mb-1 text-3xl font-bold">{title}</h1>
-      {skill && <p className="badge badge-primary mb-6">{skill}</p>}
-      <div className="flex w-full max-w-md flex-col items-center gap-3">
+      <h1 className="text-primary mb-0.5 text-4xl font-bold">{title}</h1>
+      {skill && <p className="badge badge-primary mb-3">{skill}</p>}
+      <div className="flex w-full max-w-md flex-col items-center gap-1">
         {levels.map((item, index) => (
           <div
             key={index}
-            className="bg-base-200 flex w-full items-center gap-4 rounded-xl p-4">
-            <div className="bg-primary text-primary-content flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold">
+            className="bg-base-200 flex w-full items-center gap-1 rounded-lg p-2">
+            <div className="bg-primary text-primary-content flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-xs font-bold">
               {index + 1}
             </div>
             <div className="flex-1 text-left">
-              <div className="flex items-center gap-2">
-                <p className="text-primary text-sm font-semibold">
+              <div className="flex items-center gap-1">
+                <p className="text-primary text-xs font-semibold">
                   {item.level}
                 </p>
                 <span className="text-base-content/40 text-xs">
@@ -36,7 +36,7 @@ export const SkillRoadmap: FC<TemplateProps> = ({ data }) => {
               <p className="text-base-content/70 text-xs">{item.description}</p>
             </div>
             {index < levels.length - 1 && (
-              <div className="text-secondary absolute -mb-8 ml-5 text-xs">
+              <div className="text-secondary absolute -mb-4 ml-2.5 text-xs">
                 ↓
               </div>
             )}

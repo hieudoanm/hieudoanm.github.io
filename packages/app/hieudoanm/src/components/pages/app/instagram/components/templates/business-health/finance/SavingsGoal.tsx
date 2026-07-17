@@ -13,11 +13,11 @@ export const SavingsGoal: FC<TemplateProps> = ({ data }) => {
   const pct = Math.min(100, Math.round((currentNum / targetNum) * 100));
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-12 text-center">
-      <span className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
+      <span className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
         Savings Goal
       </span>
-      <h1 className="text-base-content mt-3 text-xl font-bold">{goal}</h1>
+      <h1 className="text-base-content mt-3 text-4xl font-bold">{goal}</h1>
       <div className="mt-6 w-full">
         <div className="bg-base-300 h-3 w-full overflow-hidden rounded-full">
           <div

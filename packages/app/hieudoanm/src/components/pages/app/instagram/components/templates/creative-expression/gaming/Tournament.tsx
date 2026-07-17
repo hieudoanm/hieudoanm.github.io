@@ -26,27 +26,27 @@ export const Tournament: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
-      <div className="mb-1 flex items-center gap-2">
-        <span className="text-accent text-xl font-extrabold">{title}</span>
+      <div className="mb-0.5 flex items-center gap-1">
+        <span className="text-accent text-lg font-extrabold">{title}</span>
       </div>
-      <div className="mb-4 flex items-center gap-2">
-        <span className="bg-accent/10 text-accent rounded-full px-3 py-0.5 text-[10px] font-bold">
+      <div className="mb-2 flex items-center gap-1">
+        <span className="bg-accent/10 text-accent rounded-full px-3 py-0.5 text-xs font-bold">
           {game}
         </span>
-        <span className="text-base-300 text-[10px]">{date}</span>
+        <span className="text-base-300 text-xs">{date}</span>
       </div>
-      <div className="flex flex-1 flex-col gap-2.5">
+      <div className="flex flex-1 flex-col gap-2">
         {results.map((result, i) => (
           <div
             key={i}
-            className="bg-base-200 flex items-center rounded-lg px-4 py-3">
-            <span className="mr-3 text-lg">
+            className="bg-base-200 flex items-center rounded-lg px-2 py-2">
+            <span className="mr-1.5 text-xs">
               {medals[result.position] ?? `#${result.position}`}
             </span>
-            <span className="text-base-content flex-1 text-sm font-bold">
+            <span className="text-base-content flex-1 text-xs font-bold">
               {result.team}
             </span>
-            <span className="text-primary text-lg font-extrabold">
+            <span className="text-primary text-xs font-extrabold">
               {result.score}
             </span>
           </div>

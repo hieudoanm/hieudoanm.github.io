@@ -17,21 +17,21 @@ export const MoodBoard: FC<TemplateProps> = ({ data }) => {
       <div className="text-accent mb-1 text-xs font-bold tracking-[0.2em] uppercase">
         Mood Board
       </div>
-      <h1 className="text-base-content mb-2 text-2xl font-bold">{title}</h1>
+      <h1 className="text-base-content mb-1 text-4xl font-bold">{title}</h1>
       {description && (
-        <p className="text-neutral mb-4 max-w-sm text-xs leading-relaxed">
+        <p className="text-neutral mb-1 max-w-sm text-xs leading-relaxed">
           {description}
         </p>
       )}
       {themes.length > 0 && (
-        <div className="mb-4 flex gap-2">
+        <div className="mb-1 flex gap-1">
           {themes.map((theme, i) => (
             <div key={i} className="flex flex-col items-center gap-1">
               <div
-                className="h-8 w-8 rounded-full border-2 border-white shadow-sm"
+                className="h-4 w-4 rounded-full border-2 border-white shadow-sm"
                 style={{ backgroundColor: theme.color }}
               />
-              <span className="text-neutral text-[9px]">{theme.name}</span>
+              <span className="text-neutral text-xs">{theme.name}</span>
             </div>
           ))}
         </div>
@@ -41,7 +41,7 @@ export const MoodBoard: FC<TemplateProps> = ({ data }) => {
           {keywords.map((kw, i) => (
             <span
               key={i}
-              className="rounded-box bg-base-300 text-base-content px-2 py-0.5 text-[10px]">
+              className="rounded-box bg-base-300 text-base-content px-2 py-0.5 text-xs">
               {kw}
             </span>
           ))}

@@ -30,12 +30,14 @@ export const SplitScreen: FC<TemplateProps> = ({ data }) => {
           Add image (9:16)
         </div>
       )}
-      <div className="relative flex w-1/2 flex-col items-start justify-center p-10">
+      <div className="relative flex w-1/2 flex-col items-start justify-center p-8">
         <div className="bg-primary absolute top-1/2 left-0 h-16 w-1 -translate-y-1/2 rounded-full" />
-        <h1 className="text-base-content mb-4 text-3xl leading-tight font-bold tracking-tight">
+        <h1 className="text-base-content mb-2 text-4xl leading-tight font-bold tracking-tight">
           {headline}
         </h1>
-        <p className="text-neutral max-w-xs text-sm leading-relaxed">{text}</p>
+        <p className="text-neutral max-w-xs text-base leading-relaxed">
+          {text}
+        </p>
       </div>
     </div>
   );

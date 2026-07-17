@@ -29,22 +29,22 @@ export const Skills: FC<TemplateProps> = ({ data }) => {
   ];
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-10">
-      <span className="text-accent mb-3 text-[10px] font-bold tracking-[0.2em] uppercase">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+      <span className="text-accent mb-2 text-xs font-bold tracking-[0.2em] uppercase">
         {title}
       </span>
 
-      <div className="flex flex-1 flex-col gap-5">
+      <div className="flex flex-1 flex-col gap-2">
         {categories.map((cat, i) => (
           <div key={i}>
             <span className="text-base-content text-xs font-bold">
               {cat.name}
             </span>
-            <div className="mt-2 flex flex-wrap gap-1.5">
+            <div className="mt-1 flex flex-wrap gap-1">
               {cat.items.map((item, j) => (
                 <span
                   key={j}
-                  className="bg-accent/10 text-accent rounded px-2 py-1 text-[10px] font-medium">
+                  className="bg-accent/10 text-accent rounded px-1 py-0.5 text-xs font-medium">
                   {item}
                 </span>
               ))}

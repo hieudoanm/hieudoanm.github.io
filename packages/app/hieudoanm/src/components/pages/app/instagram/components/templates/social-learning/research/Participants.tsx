@@ -22,48 +22,48 @@ export const Participants: FC<TemplateProps> = ({ data }) => {
   ];
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-10">
-      <span className="text-accent mb-3 text-[10px] font-bold tracking-[0.2em] uppercase">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+      <span className="text-accent mb-3 text-sm font-bold tracking-[0.2em] uppercase">
         Participants
       </span>
-      <h1 className="text-base-content text-xl leading-tight font-bold">
+      <h1 className="text-base-content text-4xl leading-tight font-bold">
         {title}
       </h1>
 
-      <div className="mt-5 flex items-center gap-4">
-        <span className="text-accent text-4xl font-black">{sampleSize}</span>
-        <span className="text-neutral text-xs">total participants</span>
+      <div className="mt-6 flex items-center gap-4">
+        <span className="text-accent text-3xl font-black">{sampleSize}</span>
+        <span className="text-neutral text-sm">total participants</span>
       </div>
 
-      <div className="mt-5 flex flex-col gap-2">
+      <div className="mt-6 flex flex-col gap-2">
         {demographics.map((d, i) => (
           <div
             key={i}
             className="flex items-center justify-between border-b border-[#e5e7eb] pb-2">
-            <span className="text-neutral text-xs font-medium">{d.label}</span>
-            <span className="text-base-content text-xs font-semibold">
+            <span className="text-neutral text-sm font-medium">{d.label}</span>
+            <span className="text-base-content text-sm font-semibold">
               {d.value}
             </span>
           </div>
         ))}
       </div>
 
-      <div className="bg-base-200 mt-5 rounded-lg p-3">
-        <span className="text-neutral text-[9px] font-bold tracking-[0.15em] uppercase">
+      <div className="bg-base-200 mt-6 rounded-2xl p-3">
+        <span className="text-neutral text-sm font-bold tracking-[0.15em] uppercase">
           Recruitment
         </span>
-        <p className="text-base-content mt-1 text-xs">{method}</p>
+        <p className="text-base-content mt-2 text-sm">{method}</p>
       </div>
 
       <div className="mt-4">
-        <span className="text-neutral text-[9px] font-bold tracking-[0.15em] uppercase">
+        <span className="text-neutral text-sm font-bold tracking-[0.15em] uppercase">
           Inclusion Criteria
         </span>
-        <div className="mt-2 flex flex-col gap-1">
+        <div className="mt-2 flex flex-col gap-2">
           {criteria.map((c, i) => (
             <div key={i} className="flex items-center gap-2">
-              <span className="bg-accent h-1 w-1 flex-shrink-0 rounded-full" />
-              <span className="text-base-content text-[11px]">{c}</span>
+              <span className="bg-accent h-2 w-2 flex-shrink-0 rounded-full" />
+              <span className="text-base-content text-sm">{c}</span>
             </div>
           ))}
         </div>

@@ -19,7 +19,7 @@ export const ArchitectureDiagram: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
-      <div className="mb-4 text-center">
+      <div className="mb-2 text-center">
         <div className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
           Architecture
         </div>
@@ -29,11 +29,11 @@ export const ArchitectureDiagram: FC<TemplateProps> = ({ data }) => {
           </div>
         )}
       </div>
-      <div className="flex flex-1 flex-col gap-3">
+      <div className="flex flex-1 flex-col gap-2">
         {components.map((comp, i) => (
           <div key={i}>
-            <div className="border-base-300 rounded border p-3">
-              <div className="text-base-content text-xs font-bold">
+            <div className="border-base-300 rounded-xl border p-2">
+              <div className="text-base-content text-sm font-bold">
                 {comp.name}
               </div>
               {comp.desc && (

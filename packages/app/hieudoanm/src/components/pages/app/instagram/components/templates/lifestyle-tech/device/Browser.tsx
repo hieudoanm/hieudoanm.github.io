@@ -9,18 +9,18 @@ export const Browser: FC<TemplateProps> = ({ data }) => {
   const image = (data.image as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center gap-3 p-6">
-      <div className="flex w-full flex-col gap-1">
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center gap-4 p-8">
+      <div className="flex w-full flex-col gap-2">
         <h2 className="text-base-content text-center text-base font-bold">
           {headline}
         </h2>
         {description && (
-          <p className="text-base-content/70 text-center text-[10px] leading-relaxed">
+          <p className="text-base-content/70 text-center text-xs leading-relaxed">
             {description}
           </p>
         )}
       </div>
-      <div className="border-base-300 flex w-full flex-col overflow-hidden rounded-lg border shadow-lg">
+      <div className="border-base-300 flex w-full flex-col overflow-hidden rounded-2xl border shadow-lg">
         <div className="bg-base-200 border-base-300 flex flex-col border-b">
           <div className="flex items-center gap-2 px-3 pt-2 pb-1">
             <div className="flex gap-1">
@@ -29,12 +29,12 @@ export const Browser: FC<TemplateProps> = ({ data }) => {
               <div className="h-2 w-2 rounded-full bg-green-500" />
             </div>
             {pageTitle && (
-              <span className="text-neutral/50 text-[8px] font-medium">
+              <span className="text-neutral/50 text-xs font-medium">
                 {pageTitle}
               </span>
             )}
           </div>
-          <div className="bg-base-100 mx-2 mb-1.5 flex items-center gap-1 rounded px-2 py-1 text-[8px]">
+          <div className="bg-base-100 mx-2 mb-1.5 flex items-center gap-1 rounded px-2 py-1 text-xs">
             <span className="text-neutral/40">https://</span>
             <span className="text-neutral font-medium">{url}</span>
           </div>
@@ -45,7 +45,7 @@ export const Browser: FC<TemplateProps> = ({ data }) => {
           </div>
         ) : (
           <div className="bg-base-200 flex aspect-video w-full items-center justify-center">
-            <span className="text-neutral/30 text-[7px] font-semibold tracking-widest uppercase">
+            <span className="text-neutral/30 text-xs font-semibold tracking-widest uppercase">
               Add image URL (16:9)
             </span>
           </div>

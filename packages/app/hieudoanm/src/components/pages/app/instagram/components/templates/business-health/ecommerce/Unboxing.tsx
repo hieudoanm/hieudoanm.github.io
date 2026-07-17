@@ -13,7 +13,7 @@ export const Unboxing: FC<TemplateProps> = ({ data }) => {
   const text = (data.text as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-6">
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
       <div className="text-center">
         <div className="text-neutral text-xs font-bold tracking-widest uppercase">
           {title}

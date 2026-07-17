@@ -7,18 +7,18 @@ export const ChallengeCard: FC<TemplateProps> = ({ data }) => {
   const days = (data.days as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center gap-6 p-12 text-center">
-      <span className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center gap-4 p-8 text-center">
+      <span className="text-accent text-sm font-bold tracking-[0.2em] uppercase">
         Challenge
       </span>
-      <h1 className="text-base-content text-2xl leading-tight font-bold">
+      <h1 className="text-base-content text-4xl leading-tight font-bold">
         {headline}
       </h1>
       <p className="text-neutral max-w-xs text-sm leading-relaxed">
         {description}
       </p>
       {days && (
-        <div className="rounded-box bg-accent/10 px-6 py-3">
+        <div className="rounded-box bg-accent/10 px-6 py-4">
           <span className="text-accent text-sm font-bold">
             {days} Day Challenge
           </span>

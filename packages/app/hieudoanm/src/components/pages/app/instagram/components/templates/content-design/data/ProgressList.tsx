@@ -20,14 +20,14 @@ export const ProgressList: FC<TemplateProps> = ({ data }) => {
         ];
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col justify-center p-10">
-      <h1 className="text-base-content mb-10 text-center text-3xl font-bold tracking-tight">
+    <div className="bg-base-100 flex h-full w-full flex-col justify-center p-8">
+      <h1 className="text-base-content mb-5 text-center text-4xl font-bold tracking-tight">
         {headline || 'Progress'}
       </h1>
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-3">
         {list.map((item, i) => (
           <div key={i}>
-            <div className="mb-2 flex items-center justify-between">
+            <div className="mb-1 flex items-center justify-between">
               <span className="text-base-content text-sm font-medium">
                 {item.label}
               </span>

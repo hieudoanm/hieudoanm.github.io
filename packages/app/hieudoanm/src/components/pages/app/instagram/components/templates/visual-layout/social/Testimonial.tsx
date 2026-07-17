@@ -11,8 +11,8 @@ export const Testimonial: FC<TemplateProps> = ({ data }) => {
   const verified = (data.verified as boolean) ?? false;
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-10 text-center">
-      <div className="mb-4 flex gap-1">
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
+      <div className="mb-2 flex gap-1">
         {Array.from({ length: 5 }, (_, i) => (
           <svg
             key={i}
@@ -23,26 +23,26 @@ export const Testimonial: FC<TemplateProps> = ({ data }) => {
           </svg>
         ))}
       </div>
-      <blockquote className="mb-6 max-w-md">
-        <p className="text-base-content text-xl leading-relaxed font-light italic">
+      <blockquote className="mb-3 max-w-md">
+        <p className="text-base-content text-xs leading-relaxed font-light italic">
           &ldquo;{quote}&rdquo;
         </p>
       </blockquote>
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-2">
         {imageUrl ? (
           <div
-            className="ring-accent/20 h-12 w-12 rounded-full bg-cover bg-center ring-2"
+            className="ring-accent/20 h-8 w-8 rounded-full bg-cover bg-center ring-2"
             style={{ backgroundImage: `url(${imageUrl})` }}
           />
         ) : (
-          <div className="bg-accent/10 ring-accent/20 flex h-12 w-12 items-center justify-center rounded-full ring-2">
+          <div className="bg-accent/10 ring-accent/20 flex h-8 w-8 items-center justify-center rounded-full ring-2">
             <span className="text-accent text-base font-bold">
               {name.charAt(0) || '?'}
             </span>
           </div>
         )}
         <div className="text-left">
-          <p className="text-base-content flex items-center gap-1.5 text-sm font-bold">
+          <p className="text-base-content flex items-center gap-1 text-xs font-bold">
             {name}
             {verified && (
               <svg

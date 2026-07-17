@@ -14,7 +14,7 @@ export const Chat: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       {title && (
-        <span className="text-accent mb-4 text-[10px] font-bold tracking-[0.2em] uppercase">
+        <span className="text-accent mb-4 text-sm font-bold tracking-[0.2em] uppercase">
           {title}
         </span>
       )}
@@ -25,11 +25,11 @@ export const Chat: FC<TemplateProps> = ({ data }) => {
             <div
               key={i}
               className={`flex flex-col ${isEven ? 'items-start' : 'items-end'}`}>
-              <span className="text-neutral mb-1 text-[10px] font-medium">
+              <span className="text-neutral mb-2 text-sm font-medium">
                 {msg.sender}
               </span>
               <div
-                className={`max-w-[75%] rounded-2xl px-4 py-2.5 ${
+                className={`max-w-[75%] rounded-2xl px-4 py-2 ${
                   isEven
                     ? 'bg-accent/10 rounded-bl-sm'
                     : 'bg-primary rounded-br-sm text-white'
@@ -42,7 +42,7 @@ export const Chat: FC<TemplateProps> = ({ data }) => {
                 </p>
               </div>
               {msg.time && (
-                <span className="text-neutral mt-1 text-[9px]">{msg.time}</span>
+                <span className="text-neutral mt-2 text-sm">{msg.time}</span>
               )}
             </div>
           );

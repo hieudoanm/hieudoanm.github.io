@@ -18,18 +18,18 @@ export const ItineraryDay: FC<TemplateProps> = ({ data }) => {
   ];
 
   return (
-    <div className="bg-base-100 flex h-full w-full p-6">
+    <div className="bg-base-100 flex h-full w-full p-8">
       <div className="mr-6 flex flex-col items-center">
-        <div className="bg-primary text-primary-content flex h-12 w-12 items-center justify-center rounded-full text-lg font-black">
+        <div className="bg-primary text-primary-content flex h-12 w-12 items-center justify-center rounded-full text-base font-black">
           {day}
         </div>
       </div>
       <div className="flex flex-1 flex-col">
         {date && <p className="text-neutral mb-0.5 text-xs">{date}</p>}
-        <h1 className="text-base-content mb-4 text-lg font-bold">{title}</h1>
+        <h1 className="text-base-content mb-4 text-4xl font-bold">{title}</h1>
         <div className="flex flex-1 flex-col">
           {items.map((item, i) => (
-            <div key={i} className="flex items-start gap-3">
+            <div key={i} className="flex items-start gap-4">
               <div className="flex flex-col items-center">
                 <span className="bg-primary/10 text-primary rounded-full px-2 py-0.5 text-xs font-bold">
                   {item.time}
@@ -42,11 +42,11 @@ export const ItineraryDay: FC<TemplateProps> = ({ data }) => {
                 )}
               </div>
               <div className="mb-3">
-                <p className="text-base-content text-sm font-medium">
+                <p className="text-base-content text-base font-medium">
                   {item.activity}
                 </p>
                 {item.location && (
-                  <p className="text-neutral text-[10px]">{item.location}</p>
+                  <p className="text-neutral text-xs">{item.location}</p>
                 )}
               </div>
             </div>

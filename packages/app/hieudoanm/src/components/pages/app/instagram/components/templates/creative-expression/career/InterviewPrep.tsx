@@ -14,22 +14,22 @@ export const InterviewPrep: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
-      <h1 className="text-primary mb-1 text-3xl font-bold">{title}</h1>
-      {role && <p className="badge badge-secondary mb-6">{role}</p>}
-      <div className="mb-6 w-full max-w-lg space-y-4 text-left">
+      <h1 className="text-primary mb-0.5 text-4xl font-bold">{title}</h1>
+      {role && <p className="badge badge-secondary mb-3">{role}</p>}
+      <div className="mb-3 w-full max-w-lg space-y-2 text-left">
         {questions.map((qa, index) => (
-          <div key={index} className="bg-base-200 rounded-xl p-4">
-            <p className="text-primary text-sm font-semibold">
+          <div key={index} className="bg-base-200 rounded-lg p-2">
+            <p className="text-primary text-xs font-semibold">
               Q{index + 1}: {qa.question}
             </p>
-            <p className="text-base-content/70 mt-2 text-xs leading-relaxed">
+            <p className="text-base-content/70 mt-1 text-xs leading-relaxed">
               {qa.answer}
             </p>
           </div>
         ))}
       </div>
       {tip && (
-        <p className="text-accent bg-accent/10 rounded-lg px-4 py-2 text-sm font-medium">
+        <p className="text-accent bg-accent/10 rounded-lg px-2 py-1 text-xs font-medium">
           💡 {tip}
         </p>
       )}

@@ -13,7 +13,7 @@ export const ProductShowcase: FC<TemplateProps> = ({ data }) => {
   const imageUrl = (data.imageUrl as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-6">
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
       <div className="text-center">
         {imageUrl ? (
           <img
@@ -23,7 +23,7 @@ export const ProductShowcase: FC<TemplateProps> = ({ data }) => {
           />
         ) : (
           <div className="bg-base-200 mx-auto flex h-32 w-32 items-center justify-center rounded-full">
-            <span className="text-neutral/30 text-[7px] font-semibold uppercase">
+            <span className="text-neutral/30 text-xs font-semibold uppercase">
               Image
             </span>
           </div>
@@ -35,7 +35,7 @@ export const ProductShowcase: FC<TemplateProps> = ({ data }) => {
           {features.map((f, i) => (
             <span
               key={i}
-              className="bg-base-200 text-base-content rounded px-2 py-0.5 text-[9px] font-medium">
+              className="bg-base-200 text-base-content rounded px-2 py-0.5 text-xs font-medium">
               {f}
             </span>
           ))}

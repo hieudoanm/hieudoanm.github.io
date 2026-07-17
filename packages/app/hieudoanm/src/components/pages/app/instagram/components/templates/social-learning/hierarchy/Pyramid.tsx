@@ -20,28 +20,28 @@ export const Pyramid: FC<TemplateProps> = ({ data }) => {
   const colors = ['#ff0030', '#d90029', '#b30022', '#8c001b', '#660014'];
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-6">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-3 text-center">
         <div className="text-base-content text-sm font-bold">{title}</div>
-        {text && <div className="text-neutral mt-1 text-xs">{text}</div>}
+        {text && <div className="text-neutral mt-2 text-sm">{text}</div>}
       </div>
-      <div className="flex flex-1 flex-col items-center justify-center gap-1">
+      <div className="flex flex-1 flex-col items-center justify-center gap-2">
         {levels.map((level, i) => {
           const width = 30 + i * 16;
           return (
             <div key={i} className="flex w-full justify-center">
               <div
-                className="flex flex-col items-center rounded px-3 py-2"
+                className="flex flex-col items-center rounded-2xl px-4 py-2"
                 style={{
                   width: `${width}%`,
                   backgroundColor: colors[i % colors.length],
                 }}>
-                <span className="text-[10px] font-bold text-white/80">
+                <span className="text-sm font-bold text-white/80">
                   {level.label}
                 </span>
-                <div className="mt-1 flex flex-wrap justify-center gap-1">
+                <div className="mt-2 flex flex-wrap justify-center gap-2">
                   {level.items.map((item, j) => (
-                    <span key={j} className="text-[9px] font-medium text-white">
+                    <span key={j} className="text-sm font-medium text-white">
                       {item}
                     </span>
                   ))}

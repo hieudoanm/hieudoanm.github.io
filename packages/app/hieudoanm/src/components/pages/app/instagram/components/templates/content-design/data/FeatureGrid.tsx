@@ -20,15 +20,15 @@ export const FeatureGrid: FC<TemplateProps> = ({ data }) => {
         ];
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-10">
-      <h1 className="text-base-content mb-8 text-center text-3xl font-bold tracking-tight">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+      <h1 className="text-base-content mb-4 text-center text-4xl font-bold tracking-tight">
         {headline}
       </h1>
-      <div className="grid flex-1 grid-cols-2 gap-4">
+      <div className="grid flex-1 grid-cols-2 gap-2">
         {items.slice(0, 4).map((f, i) => (
           <div
             key={i}
-            className="rounded-box bg-accent/5 flex flex-col items-center justify-center gap-2 p-6 text-center">
+            className="rounded-box bg-accent/5 flex flex-col items-center justify-center gap-1 p-4 text-center">
             <div className="bg-primary/20 flex h-10 w-10 items-center justify-center rounded-full">
               <span className="text-primary text-sm font-bold">0{i + 1}</span>
             </div>

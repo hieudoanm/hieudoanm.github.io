@@ -7,14 +7,14 @@ export const IconText: FC<TemplateProps> = ({ data }) => {
   const text = (data.text as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-6">
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
       <div className="text-center">
-        <div className="text-primary text-7xl leading-none">{icon}</div>
-        <h1 className="text-base-content mt-4 text-4xl font-bold tracking-tight">
+        <div className="text-primary text-4xl leading-none">{icon}</div>
+        <h1 className="text-base-content mt-2 text-4xl font-bold tracking-tight">
           {headline}
         </h1>
         {text && (
-          <p className="text-neutral mt-3 text-sm leading-relaxed">{text}</p>
+          <p className="text-neutral mt-2 text-base leading-relaxed">{text}</p>
         )}
       </div>
     </div>

@@ -29,7 +29,7 @@ export const VideoStill: FC<TemplateProps> = ({ data }) => {
           </svg>
         </div>
         {headline && (
-          <h1 className="text-center text-xl font-bold text-white drop-shadow-lg">
+          <h1 className="text-center text-4xl font-bold text-white drop-shadow-lg">
             {headline}
           </h1>
         )}

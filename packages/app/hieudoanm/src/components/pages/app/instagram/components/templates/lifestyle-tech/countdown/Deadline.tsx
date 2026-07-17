@@ -8,18 +8,18 @@ export const Deadline: FC<TemplateProps> = ({ data }) => {
   const text = (data.text as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-6">
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
       <div className="text-center">
         <div className="text-neutral text-xs font-bold tracking-widest uppercase">
           {title}
         </div>
-        <div className="text-primary mt-4 text-8xl leading-none font-black">
+        <div className="text-primary mt-4 text-4xl leading-none font-black">
           {daysLeft}
         </div>
         <div className="text-base-content mt-2 text-xs font-bold tracking-wider uppercase">
           days left
         </div>
-        <div className="text-neutral mt-3 text-sm font-medium">{task}</div>
+        <div className="text-neutral mt-3 text-base font-medium">{task}</div>
         {text && <p className="text-neutral mt-2 text-xs">{text}</p>}
       </div>
     </div>

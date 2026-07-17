@@ -17,69 +17,69 @@ export const ProfileHeader: FC<TemplateProps> = ({ data }) => {
   const x = (data.x as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-10">
-      <div className="bg-primary flex aspect-square h-16 w-16 items-center justify-center rounded-full text-2xl font-black text-white">
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
+      <div className="bg-primary flex aspect-square h-8 w-8 items-center justify-center rounded-full text-sm font-black text-white">
         {name.charAt(0)}
       </div>
 
-      <h1 className="text-base-content mt-4 text-2xl font-bold">{name}</h1>
+      <h1 className="text-base-content mt-2 text-4xl font-bold">{name}</h1>
       <span className="text-accent mt-1 text-xs font-semibold">{title}</span>
 
-      <p className="text-neutral mt-3 max-w-[280px] text-center text-xs leading-relaxed">
+      <p className="text-neutral mt-1 max-w-[280px] text-center text-xs leading-relaxed">
         {tagline}
       </p>
 
-      <div className="bg-base-200 mt-5 flex flex-col gap-2 rounded-lg px-5 py-3">
+      <div className="bg-base-200 mt-2 flex flex-col gap-1 rounded-2xl px-3 py-1">
         {email && (
-          <div className="flex items-center gap-2">
-            <span className="text-accent text-[10px]">✉</span>
-            <span className="text-base-content text-[11px]">{email}</span>
+          <div className="flex items-center gap-1">
+            <span className="text-accent text-xs">✉</span>
+            <span className="text-base-content text-xs">{email}</span>
           </div>
         )}
         {phone && (
-          <div className="flex items-center gap-2">
-            <span className="text-accent text-[10px]">☎</span>
-            <span className="text-base-content text-[11px]">{phone}</span>
+          <div className="flex items-center gap-1">
+            <span className="text-accent text-xs">☎</span>
+            <span className="text-base-content text-xs">{phone}</span>
           </div>
         )}
         {location && (
-          <div className="flex items-center gap-2">
-            <span className="text-accent text-[10px]">◎</span>
-            <span className="text-base-content text-[11px]">{location}</span>
+          <div className="flex items-center gap-1">
+            <span className="text-accent text-xs">◎</span>
+            <span className="text-base-content text-xs">{location}</span>
           </div>
         )}
         {website && (
-          <div className="flex items-center gap-2">
-            <span className="text-accent text-[10px]">⊞</span>
-            <span className="text-base-content text-[11px]">{website}</span>
+          <div className="flex items-center gap-1">
+            <span className="text-accent text-xs">⊞</span>
+            <span className="text-base-content text-xs">{website}</span>
           </div>
         )}
         {github && (
-          <div className="flex items-center gap-2">
-            <span className="text-accent text-[10px]">⌘</span>
-            <span className="text-base-content text-[11px]">
+          <div className="flex items-center gap-1">
+            <span className="text-accent text-xs">⌘</span>
+            <span className="text-base-content text-xs">
               github.com/{github}
             </span>
           </div>
         )}
         {linkedin && (
-          <div className="flex items-center gap-2">
-            <span className="text-accent text-[10px]">◫</span>
-            <span className="text-base-content text-[11px]">
+          <div className="flex items-center gap-1">
+            <span className="text-accent text-xs">◫</span>
+            <span className="text-base-content text-xs">
               linkedin.com/in/{linkedin}
             </span>
           </div>
         )}
         {instagram && (
-          <div className="flex items-center gap-2">
-            <span className="text-accent text-[10px]">◎</span>
-            <span className="text-base-content text-[11px]">@{instagram}</span>
+          <div className="flex items-center gap-1">
+            <span className="text-accent text-xs">◎</span>
+            <span className="text-base-content text-xs">@{instagram}</span>
           </div>
         )}
         {x && (
-          <div className="flex items-center gap-2">
-            <span className="text-accent text-[10px]">✕</span>
-            <span className="text-base-content text-[11px]">@{x}</span>
+          <div className="flex items-center gap-1">
+            <span className="text-accent text-xs">✕</span>
+            <span className="text-base-content text-xs">@{x}</span>
           </div>
         )}
       </div>

@@ -13,26 +13,26 @@ export const DailyDigest: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-4 text-center">
-        <div className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
+        <div className="text-accent text-sm font-bold tracking-[0.2em] uppercase">
           Daily Digest
         </div>
         {date && (
-          <div className="text-base-content mt-1 text-sm font-bold">{date}</div>
+          <div className="text-base-content mt-2 text-sm font-bold">{date}</div>
         )}
       </div>
-      <div className="flex flex-1 flex-col gap-3">
+      <div className="flex flex-1 flex-col gap-4">
         {stories.map((story, i) => (
           <div
             key={i}
-            className="border-base-300 flex gap-3 rounded border p-3">
-            <span className="text-primary flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold">
+            className="border-base-300 flex gap-3 rounded-2xl border p-3">
+            <span className="text-primary flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-sm font-bold">
               {i + 1}
             </span>
             <div className="min-w-0">
-              <div className="text-base-content text-xs leading-tight font-bold">
+              <div className="text-base-content text-sm leading-tight font-bold">
                 {story.headline}
               </div>
-              <div className="text-neutral mt-0.5 text-[10px] leading-snug">
+              <div className="text-neutral mt-2 text-sm leading-snug">
                 {story.summary}
               </div>
             </div>

@@ -22,13 +22,13 @@ export const WeeklyOutlook: FC<TemplateProps> = ({ data }) => {
   ];
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-10">
-      <span className="text-accent mb-2 text-[10px] font-bold tracking-[0.2em] uppercase">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+      <span className="text-accent mb-2 text-xs font-bold tracking-[0.2em] uppercase">
         {title}
       </span>
-      <h1 className="text-base-content text-xl font-bold">{city}</h1>
+      <h1 className="text-base-content text-4xl font-bold">{city}</h1>
 
-      <div className="mt-6 flex flex-col gap-2">
+      <div className="mt-6 flex flex-col gap-1">
         {days.map((d, i) => (
           <div
             key={i}
@@ -36,7 +36,7 @@ export const WeeklyOutlook: FC<TemplateProps> = ({ data }) => {
             <span className="text-base-content w-10 text-xs font-semibold">
               {d.day}
             </span>
-            <span className="text-neutral flex-1 text-center text-[11px]">
+            <span className="text-neutral flex-1 text-center text-xs">
               {d.condition}
             </span>
             <div className="flex items-center gap-3">

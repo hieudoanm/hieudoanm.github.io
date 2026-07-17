@@ -17,23 +17,23 @@ export const LightingTips: FC<TemplateProps> = ({ data }) => {
       <div className="text-accent mb-1 text-xs font-bold tracking-[0.2em] uppercase">
         Lighting
       </div>
-      <h1 className="text-base-content mb-1 text-2xl font-bold">{title}</h1>
+      <h1 className="text-base-content mb-1 text-4xl font-bold">{title}</h1>
       {setup && (
-        <span className="text-primary mb-2 text-sm font-bold">{setup}</span>
+        <span className="text-primary mb-1 text-xs font-bold">{setup}</span>
       )}
       {description && (
-        <p className="text-neutral mb-4 max-w-sm text-xs leading-relaxed">
+        <p className="text-neutral mb-1 max-w-sm text-xs leading-relaxed">
           {description}
         </p>
       )}
       {tips.length > 0 && (
-        <div className="mt-1 grid w-full max-w-md grid-cols-2 gap-2">
+        <div className="mt-1 grid w-full max-w-md grid-cols-2 gap-1">
           {tips.map((tip, i) => (
             <div
               key={i}
-              className="border-base-300 rounded border p-3 text-left">
+              className="border-base-300 rounded border p-1 text-left">
               <div className="text-primary text-xs font-bold">{tip.label}</div>
-              <div className="text-neutral mt-1 text-[10px] leading-relaxed">
+              <div className="text-neutral mt-1 text-xs leading-relaxed">
                 {tip.desc}
               </div>
             </div>

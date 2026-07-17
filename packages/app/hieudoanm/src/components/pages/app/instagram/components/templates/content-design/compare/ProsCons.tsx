@@ -12,14 +12,14 @@ export const ProsCons: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="flex h-full w-full flex-col">
-      <div className="bg-accent/10 px-10 py-5">
-        <h1 className="text-base-content text-center text-2xl font-bold tracking-tight">
+      <div className="bg-accent/10 px-5 py-3">
+        <h1 className="text-base-content text-center text-4xl font-bold tracking-tight">
           {headline || 'Pros & Cons'}
         </h1>
       </div>
       <div className="flex flex-1">
-        <div className="flex w-1/2 flex-col gap-3 p-8">
-          <span className="text-success mb-2 inline-flex items-center gap-2 text-sm font-bold tracking-widest uppercase">
+        <div className="flex w-1/2 flex-col gap-2 p-4">
+          <span className="text-success mb-1 inline-flex items-center gap-2 text-sm font-bold tracking-widest uppercase">
             <svg
               className="h-4 w-4"
               fill="none"
@@ -35,14 +35,14 @@ export const ProsCons: FC<TemplateProps> = ({ data }) => {
             Pros
           </span>
           {proList.map((item, i) => (
-            <p key={i} className="text-base-content text-sm leading-relaxed">
+            <p key={i} className="text-base-content text-base leading-relaxed">
               {item}
             </p>
           ))}
         </div>
         <div className="bg-accent/20 flex w-0.5 flex-shrink-0" />
-        <div className="flex w-1/2 flex-col gap-3 p-8">
-          <span className="text-error mb-2 inline-flex items-center gap-2 text-sm font-bold tracking-widest uppercase">
+        <div className="flex w-1/2 flex-col gap-2 p-4">
+          <span className="text-error mb-1 inline-flex items-center gap-2 text-sm font-bold tracking-widest uppercase">
             <svg
               className="h-4 w-4"
               fill="none"
@@ -58,7 +58,7 @@ export const ProsCons: FC<TemplateProps> = ({ data }) => {
             Cons
           </span>
           {conList.map((item, i) => (
-            <p key={i} className="text-base-content text-sm leading-relaxed">
+            <p key={i} className="text-base-content text-base leading-relaxed">
               {item}
             </p>
           ))}

@@ -17,30 +17,28 @@ export const CameraSettings: FC<TemplateProps> = ({ data }) => {
       <div className="text-accent mb-1 text-xs font-bold tracking-[0.2em] uppercase">
         Camera Settings
       </div>
-      <h1 className="text-base-content mb-2 text-2xl font-bold">{camera}</h1>
+      <h1 className="text-base-content mb-1 text-4xl font-bold">{camera}</h1>
       {mode && (
-        <span className="rounded-box bg-primary/10 text-primary mb-4 px-3 py-1 text-xs font-bold">
+        <span className="rounded-box bg-primary/10 text-primary mb-1 px-2 py-0.5 text-xs font-bold">
           {mode}
         </span>
       )}
       {settings.length > 0 && (
-        <div className="mt-2 grid w-full max-w-xs grid-cols-2 gap-2">
+        <div className="mt-2 grid w-full max-w-xs grid-cols-2 gap-1">
           {settings.map((s, i) => (
             <div
               key={i}
-              className="border-base-300 rounded border p-2 text-center">
-              <div className="text-base-content text-sm font-bold">
+              className="border-base-300 rounded border p-1 text-center">
+              <div className="text-base-content text-xs font-bold">
                 {s.value}
               </div>
-              <div className="text-neutral text-[10px] uppercase">
-                {s.label}
-              </div>
+              <div className="text-neutral text-xs uppercase">{s.label}</div>
             </div>
           ))}
         </div>
       )}
       {tip && (
-        <p className="text-neutral mt-4 max-w-xs text-xs leading-relaxed italic">
+        <p className="text-neutral mt-2 max-w-xs text-xs leading-relaxed italic">
           {tip}
         </p>
       )}

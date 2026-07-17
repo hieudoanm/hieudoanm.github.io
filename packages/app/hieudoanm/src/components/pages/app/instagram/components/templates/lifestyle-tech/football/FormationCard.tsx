@@ -30,11 +30,11 @@ export const FormationCard: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-3 text-center">
-        <div className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
+        <div className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
           Formation
         </div>
         {title && (
-          <div className="text-base-content mt-1 text-sm font-bold">
+          <div className="text-base-content mt-1 text-base font-bold">
             {title}
           </div>
         )}
@@ -55,14 +55,14 @@ export const FormationCard: FC<TemplateProps> = ({ data }) => {
                 left: pos.left,
                 transform: 'translate(-50%, -50%)',
               }}>
-              <div className="bg-primary text-primary-content flex h-6 w-6 items-center justify-center rounded-full text-[8px] font-bold shadow">
+              <div className="bg-primary text-primary-content flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold shadow">
                 {player.number}
               </div>
-              <div className="text-base-content mt-0.5 text-[7px] leading-none font-semibold">
+              <div className="text-base-content mt-0.5 text-xs leading-none font-semibold">
                 {player.name}
               </div>
               {player.rating && (
-                <div className="text-accent text-[7px] font-bold">
+                <div className="text-accent text-xs font-bold">
                   {player.rating}
                 </div>
               )}

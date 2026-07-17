@@ -279,7 +279,6 @@ export const InstagramPage: FC = () => {
       ref: captureRef,
       output: `${base}-${ii}`,
       backgroundColor: '#000000',
-      targetWidth: 1080,
     });
   }, [activeIndex, fileName]);
 
@@ -308,9 +307,8 @@ export const InstagramPage: FC = () => {
       const fixed = fixGradients(captureRef.current);
       await new Promise((r) => requestAnimationFrame(r));
 
-      const effectiveScale = 1080 / captureRef.current.offsetWidth;
       const canvas = await html2canvas(captureRef.current, {
-        scale: effectiveScale,
+        scale: 1,
         useCORS: true,
         backgroundColor: '#000000',
       });
@@ -339,12 +337,12 @@ export const InstagramPage: FC = () => {
   const handleCopy = useCallback(async () => {
     if (!captureRef.current) return;
     try {
-      const effectiveScale = 1080 / captureRef.current.offsetWidth;
       const canvas = await html2canvas(captureRef.current, {
-        scale: effectiveScale,
+        scale: 1,
         useCORS: true,
         backgroundColor: '#000000',
       });
+
       const blob = await new Promise<Blob | null>((resolve) =>
         canvas.toBlob(resolve)
       );

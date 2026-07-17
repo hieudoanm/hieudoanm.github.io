@@ -12,15 +12,15 @@ export const CoverLetter: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
-      <h1 className="text-primary mb-6 text-3xl font-bold">{title}</h1>
-      <div className="text-base-content/80 max-w-lg space-y-4 text-left text-sm leading-relaxed">
+      <h1 className="text-primary mb-3 text-4xl font-bold">{title}</h1>
+      <div className="text-base-content/80 max-w-lg space-y-2 text-left text-xs leading-relaxed">
         {greeting && <p className="font-medium">{greeting}</p>}
         {paragraphs.map((paragraph, index) => (
           <p key={index}>{paragraph}</p>
         ))}
-        {closing && <p className="mt-4">{closing}</p>}
+        {closing && <p className="mt-1">{closing}</p>}
         {signature && (
-          <p className="text-primary mt-2 font-semibold italic">{signature}</p>
+          <p className="text-primary mt-1 font-semibold italic">{signature}</p>
         )}
       </div>
     </div>

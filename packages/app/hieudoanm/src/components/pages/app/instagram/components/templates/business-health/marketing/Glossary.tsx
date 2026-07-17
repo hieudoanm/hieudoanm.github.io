@@ -7,7 +7,7 @@ export const Glossary: FC<TemplateProps> = ({ data }) => {
   const example = (data.example as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col justify-center p-10">
+    <div className="bg-base-100 flex h-full w-full flex-col justify-center p-8">
       <div className="mb-4">
         <span className="bg-accent/10 text-accent rounded-full px-4 py-1.5 text-xs font-bold tracking-widest uppercase">
           Glossary

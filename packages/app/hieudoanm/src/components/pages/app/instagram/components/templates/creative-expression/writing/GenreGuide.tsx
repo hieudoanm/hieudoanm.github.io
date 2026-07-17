@@ -18,24 +18,24 @@ export const GenreGuide: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
-      <h1 className="text-base-content mb-1 text-2xl font-black tracking-tight">
+      <h1 className="text-base-content mb-1 text-4xl font-black tracking-tight">
         {title}
       </h1>
       <span className="badge badge-primary badge-sm mb-3">{genre}</span>
       {description && (
-        <p className="text-neutral mb-5 max-w-sm text-sm leading-relaxed">
+        <p className="text-neutral mb-3 max-w-sm text-xs leading-relaxed">
           {description}
         </p>
       )}
-      <div className="mb-4 w-full max-w-sm text-left">
-        <span className="text-base-content mb-2 block text-xs font-bold tracking-wider uppercase">
+      <div className="mb-2 w-full max-w-sm text-left">
+        <span className="text-base-content mb-1 block text-xs font-bold tracking-wider uppercase">
           Required Elements
         </span>
         <ul className="space-y-1">
           {elements.map((el) => (
             <li
               key={el}
-              className="text-neutral flex items-start gap-2 text-xs">
+              className="text-neutral flex items-start gap-1 text-xs">
               <span className="text-primary mt-0.5">&#9679;</span>
               {el}
             </li>
@@ -43,7 +43,7 @@ export const GenreGuide: FC<TemplateProps> = ({ data }) => {
         </ul>
       </div>
       {examples.length > 0 && (
-        <div className="mb-4 flex flex-wrap justify-center gap-2">
+        <div className="mb-2 flex flex-wrap justify-center gap-1">
           {examples.map((ex) => (
             <span key={ex} className="badge badge-outline badge-sm">
               {ex}
@@ -52,7 +52,7 @@ export const GenreGuide: FC<TemplateProps> = ({ data }) => {
         </div>
       )}
       {tip && (
-        <div className="bg-accent/10 text-accent max-w-sm rounded-lg px-4 py-2 text-xs font-medium">
+        <div className="bg-accent/10 text-accent max-w-sm rounded-lg px-2 py-1 text-xs font-medium">
           {tip}
         </div>
       )}

@@ -11,17 +11,17 @@ export const Checklist: FC<TemplateProps> = ({ data }) => {
       : ['Task one', 'Task two', 'Task three', 'Task four'];
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col overflow-hidden px-6 py-5">
-      <h1 className="text-base-content mb-1 text-2xl font-bold tracking-tight">
+    <div className="bg-base-100 flex h-full w-full flex-col overflow-hidden p-8">
+      <h1 className="text-base-content mb-1 text-4xl font-bold tracking-tight">
         {headline}
       </h1>
-      {text && <p className="text-neutral mb-2 text-xs">{text}</p>}
-      <div className="flex min-h-0 flex-1 flex-col gap-2">
+      {text && <p className="text-neutral mb-1 text-xs">{text}</p>}
+      <div className="flex min-h-0 flex-1 flex-col gap-1">
         {list.map((item, i) => (
           <div
             key={i}
-            className="rounded-box bg-accent/5 flex items-center gap-3 px-4 py-2.5">
-            <div className="bg-primary/20 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full">
+            className="rounded-box bg-accent/5 flex items-center gap-1 px-2 py-1">
+            <div className="bg-primary/20 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full">
               <svg
                 className="text-primary h-4 w-4"
                 fill="none"
@@ -35,7 +35,7 @@ export const Checklist: FC<TemplateProps> = ({ data }) => {
                 />
               </svg>
             </div>
-            <span className="text-base-content text-sm leading-snug font-medium">
+            <span className="text-base-content text-xs leading-snug font-medium">
               {item}
             </span>
           </div>

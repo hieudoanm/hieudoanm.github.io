@@ -14,8 +14,8 @@ export const HeatmapGrid: FC<TemplateProps> = ({ data }) => {
   ];
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-6">
-      <div className="text-base-content mb-4 text-sm font-bold">{title}</div>
+    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
+      <div className="text-base-content mb-2 text-sm font-bold">{title}</div>
       <div className="flex flex-col gap-1">
         <div className="flex gap-1">
           <div className="w-10" />

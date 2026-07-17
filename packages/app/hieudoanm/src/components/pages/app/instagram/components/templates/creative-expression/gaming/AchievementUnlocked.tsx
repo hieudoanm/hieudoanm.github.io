@@ -11,18 +11,18 @@ export const AchievementUnlocked: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
-      <div className="bg-accent/10 mb-4 flex h-16 w-16 items-center justify-center rounded-full">
+      <div className="bg-accent/10 mb-1 flex h-8 w-8 items-center justify-center rounded-full">
         <span className="text-3xl">🏆</span>
       </div>
-      <h1 className="text-accent mb-1 text-2xl font-extrabold">{title}</h1>
-      <p className="text-neutral mb-3 text-xs font-medium">{game}</p>
-      <p className="text-base-content mb-4 max-w-[280px] text-sm leading-relaxed">
+      <h1 className="text-accent mb-0.5 text-4xl font-extrabold">{title}</h1>
+      <p className="text-neutral mb-1.5 text-xs font-medium">{game}</p>
+      <p className="text-base-content mb-1 max-w-[280px] text-xs leading-relaxed">
         {description}
       </p>
-      <span className="bg-primary/10 text-primary mb-2 rounded-full px-4 py-1 text-[10px] font-bold">
+      <span className="bg-primary/10 text-primary mb-1 rounded-full px-2 py-0.5 text-xs font-bold">
         {rarity}
       </span>
-      <p className="text-base-300 text-[10px]">Unlocked {dateUnlocked}</p>
+      <p className="text-base-300 text-xs">Unlocked {dateUnlocked}</p>
     </div>
   );
 };

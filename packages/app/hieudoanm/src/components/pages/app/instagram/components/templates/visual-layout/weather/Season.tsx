@@ -15,41 +15,41 @@ export const Season: FC<TemplateProps> = ({ data }) => {
   ];
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-10">
-      <span className="text-accent mb-2 text-[10px] font-bold tracking-[0.2em] uppercase">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+      <span className="text-accent mb-2 text-xs font-bold tracking-[0.2em] uppercase">
         {title}
       </span>
-      <h1 className="text-base-content text-xl font-bold">{season}</h1>
+      <h1 className="text-base-content text-4xl font-bold">{season}</h1>
       <span className="text-neutral text-xs">{city}</span>
 
-      <div className="mt-5 grid grid-cols-3 gap-3">
-        <div className="bg-base-200 rounded-lg p-3 text-center">
-          <span className="text-accent text-lg font-black">{avgTemp}</span>
-          <span className="text-neutral mt-1 block text-[9px] font-bold tracking-[0.15em] uppercase">
+      <div className="mt-2 grid grid-cols-3 gap-1">
+        <div className="bg-base-200 rounded-2xl p-1 text-center">
+          <span className="text-accent text-xs font-black">{avgTemp}</span>
+          <span className="text-neutral mt-1 block text-xs font-bold tracking-[0.15em] uppercase">
             Avg Temp
           </span>
         </div>
-        <div className="bg-base-200 rounded-lg p-3 text-center">
-          <span className="text-accent text-lg font-black">{rainfall}</span>
-          <span className="text-neutral mt-1 block text-[9px] font-bold tracking-[0.15em] uppercase">
+        <div className="bg-base-200 rounded-2xl p-1 text-center">
+          <span className="text-accent text-xs font-black">{rainfall}</span>
+          <span className="text-neutral mt-1 block text-xs font-bold tracking-[0.15em] uppercase">
             Rainfall
           </span>
         </div>
-        <div className="bg-base-200 rounded-lg p-3 text-center">
-          <span className="text-accent text-lg font-black">{daylight}</span>
-          <span className="text-neutral mt-1 block text-[9px] font-bold tracking-[0.15em] uppercase">
+        <div className="bg-base-200 rounded-2xl p-1 text-center">
+          <span className="text-accent text-xs font-black">{daylight}</span>
+          <span className="text-neutral mt-1 block text-xs font-bold tracking-[0.15em] uppercase">
             Daylight
           </span>
         </div>
       </div>
 
-      <div className="mt-5">
-        <span className="text-neutral text-[9px] font-bold tracking-[0.15em] uppercase">
+      <div className="mt-2">
+        <span className="text-neutral text-xs font-bold tracking-[0.15em] uppercase">
           Highlights
         </span>
-        <div className="mt-2 flex flex-col gap-2">
+        <div className="mt-2 flex flex-col gap-1">
           {highlights.map((h, i) => (
-            <div key={i} className="flex items-start gap-2">
+            <div key={i} className="flex items-start gap-1">
               <span className="bg-accent mt-0.5 h-1.5 w-1.5 flex-shrink-0 rounded-full" />
               <span className="text-base-content text-xs leading-relaxed">
                 {h}

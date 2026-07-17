@@ -12,10 +12,10 @@ export const BillReminder: FC<TemplateProps> = ({ data }) => {
     }[]) ?? [];
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-12">
+    <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-6 flex items-center justify-between">
-        <h1 className="text-base-content text-lg font-bold">{title}</h1>
-        <span className="text-neutral text-[10px] font-medium">Due Soon</span>
+        <h1 className="text-base-content text-4xl font-bold">{title}</h1>
+        <span className="text-neutral text-xs font-medium">Due Soon</span>
       </div>
       <div className="flex flex-col gap-3">
         {bills.map((bill, i) => (
@@ -28,7 +28,7 @@ export const BillReminder: FC<TemplateProps> = ({ data }) => {
             }`}>
             <div className="flex items-center gap-3">
               <span
-                className={`flex h-4 w-4 items-center justify-center rounded-full border text-[8px] font-bold ${
+                className={`flex h-4 w-4 items-center justify-center rounded-full border text-xs font-bold ${
                   bill.paid
                     ? 'border-accent bg-accent text-accent-content'
                     : 'border-neutral/30 text-transparent'
@@ -40,7 +40,7 @@ export const BillReminder: FC<TemplateProps> = ({ data }) => {
                   className={`text-sm font-medium ${bill.paid ? 'text-neutral/40 line-through' : 'text-base-content'}`}>
                   {bill.name}
                 </p>
-                <p className="text-neutral text-[10px]">Due {bill.dueDate}</p>
+                <p className="text-neutral text-xs">Due {bill.dueDate}</p>
               </div>
             </div>
             <span

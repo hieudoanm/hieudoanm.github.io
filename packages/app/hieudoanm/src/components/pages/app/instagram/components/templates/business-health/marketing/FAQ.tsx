@@ -24,8 +24,8 @@ export const FAQ: FC<TemplateProps> = ({ data }) => {
         ];
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col justify-center p-10">
-      <h1 className="text-base-content mb-8 text-center text-3xl font-bold tracking-tight">
+    <div className="bg-base-100 flex h-full w-full flex-col justify-center p-8">
+      <h1 className="text-base-content mb-8 text-center text-4xl font-bold tracking-tight">
         {headline}
       </h1>
       <div className="flex flex-col gap-4">
