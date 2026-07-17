@@ -17,6 +17,11 @@ export const useShikaku = () => {
   const [wrongFlash, setWrongFlash] = useState<Point[] | null>(null);
   const [autoSolving, setAutoSolving] = useState(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const assignedRef = useRef(assigned);
+
+  useEffect(() => {
+    assignedRef.current = assigned;
+  }, [assigned]);
 
   const initBoard = useCallback(() => {
     if (timerRef.current) clearTimeout(timerRef.current);
@@ -26,7 +31,9 @@ export const useShikaku = () => {
     setSolution(regions);
     setPlaced([]);
     setSelectedClue(null);
-    setAssigned(Array.from({ length: ROWS }, () => Array(COLS).fill(false)));
+    const empty = Array.from({ length: ROWS }, () => Array(COLS).fill(false));
+    setAssigned(empty);
+    assignedRef.current = empty;
     setWrongFlash(null);
     setAutoSolving(false);
   }, []);
@@ -115,8 +122,9 @@ export const useShikaku = () => {
             c.col === region.col + Math.floor(region.width / 2)
         );
         if (clue) {
+          const current = assignedRef.current;
           const cells: Point[] = [];
-          const newAssigned = assigned.map((r) => [...r]);
+          const newAssigned = current.map((r) => [...r]);
           for (let r = region.row; r < region.row + region.height; r++) {
             for (let c = region.col; c < region.col + region.width; c++) {
               newAssigned[r][c] = true;

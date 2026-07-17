@@ -12,13 +12,20 @@ export const useMasyu = () => {
   const [autoSolving, setAutoSolving] = useState(false);
   const historyRef = useRef<Grid[]>([]);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const gridRef = useRef(grid);
+
+  useEffect(() => {
+    gridRef.current = grid;
+  }, [grid]);
 
   const init = useCallback(() => {
     if (timerRef.current) clearTimeout(timerRef.current);
     const { pearls: p, solution: s } = generatePuzzle();
     setPearls(p);
     setSolution(s);
-    setGrid(Array.from({ length: SIZE }, () => Array(SIZE).fill(false)));
+    const empty = Array.from({ length: SIZE }, () => Array(SIZE).fill(false));
+    setGrid(empty);
+    gridRef.current = empty;
     setWon(false);
     setAutoSolving(false);
     historyRef.current = [];
@@ -80,7 +87,8 @@ export const useMasyu = () => {
       }
       timerRef.current = setTimeout(() => {
         const [r, c] = diffCells[idx];
-        const next = grid.map((row) => [...row]);
+        const current = gridRef.current;
+        const next = current.map((row) => [...row]);
         next[r][c] = solution[r][c];
         setGrid(next);
         if (checkWin(next, pearls)) setWon(true);

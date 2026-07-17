@@ -9,14 +9,21 @@ export const useNurikabe = () => {
   const [autoSolving, setAutoSolving] = useState(false);
   const historyRef = useRef<Grid[]>([]);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const gridRef = useRef(grid);
+
+  useEffect(() => {
+    gridRef.current = grid;
+  }, [grid]);
 
   const init = useCallback(() => {
     if (timerRef.current) clearTimeout(timerRef.current);
     const s = generatePuzzle();
     setSolution(s);
-    setGrid(
-      s.map((row) => row.map((cell) => ({ ...cell, state: 'empty' as const })))
+    const empty = s.map((row) =>
+      row.map((cell) => ({ ...cell, state: 'empty' as const }))
     );
+    setGrid(empty);
+    gridRef.current = empty;
     setWon(false);
     setAutoSolving(false);
     historyRef.current = [];
@@ -64,12 +71,16 @@ export const useNurikabe = () => {
     }
     if (won) return;
 
-    const diffCells: [number, number][] = [];
+    const diffs: [number, number, 'numbered' | 'shaded'][] = [];
     for (let r = 0; r < SIZE; r++)
-      for (let c = 0; c < SIZE; c++)
-        if (grid[r][c].state !== solution[r][c].state) diffCells.push([r, c]);
+      for (let c = 0; c < SIZE; c++) {
+        const sol = solution[r][c];
+        const target: 'numbered' | 'shaded' =
+          sol.islandId >= 0 ? 'numbered' : 'shaded';
+        if (grid[r][c].state !== target) diffs.push([r, c, target]);
+      }
 
-    if (diffCells.length === 0) return;
+    if (diffs.length === 0) return;
 
     setAutoSolving(true);
     historyRef.current.push(
@@ -78,14 +89,15 @@ export const useNurikabe = () => {
     let idx = 0;
 
     const play = () => {
-      if (idx >= diffCells.length) {
+      if (idx >= diffs.length) {
         setAutoSolving(false);
         return;
       }
       timerRef.current = setTimeout(() => {
-        const [r, c] = diffCells[idx];
-        const next = grid.map((row) => row.map((cell) => ({ ...cell })));
-        next[r][c].state = solution[r][c].state;
+        const [r, c, target] = diffs[idx];
+        const current = gridRef.current;
+        const next = current.map((row) => row.map((cell) => ({ ...cell })));
+        next[r][c].state = target;
         setGrid(next);
         if (checkWin(next)) setWon(true);
         idx++;

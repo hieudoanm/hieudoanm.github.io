@@ -10,6 +10,7 @@ export const useHeyawake = () => {
   const [autoSolving, setAutoSolving] = useState(false);
   const historyRef = useRef<Grid[]>([]);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const gridRef = useRef<Grid>([]);
 
   const init = useCallback(() => {
     if (timerRef.current) clearTimeout(timerRef.current);
@@ -27,6 +28,10 @@ export const useHeyawake = () => {
     setAutoSolving(false);
     historyRef.current = [];
   }, []);
+
+  useEffect(() => {
+    gridRef.current = grid;
+  }, [grid]);
 
   useEffect(() => {
     init();
@@ -88,7 +93,8 @@ export const useHeyawake = () => {
       }
       timerRef.current = setTimeout(() => {
         const [r, c] = diffCells[idx];
-        const next = grid.map((row) => row.map((cell) => ({ ...cell })));
+        const current = gridRef.current;
+        const next = current.map((row) => row.map((cell) => ({ ...cell })));
         next[r][c].shaded = solution[r][c].shaded;
         setGrid(next);
         if (checkWin(next, rooms)) setWon(true);

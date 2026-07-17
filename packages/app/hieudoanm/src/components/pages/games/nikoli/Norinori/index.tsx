@@ -1,6 +1,9 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { FullScreen } from '@hieudoanm.github.io/components/atoms/FullScreen';
+import { GameInstructionsModal } from '../_shared/GameInstructionsModal';
+import { GAME_DATA } from '../_shared/gameData';
 import { useNorinori } from './useNorinori';
+import { GAME_NAME } from './types';
 
 export const Norinori: FC<{ onClose: () => void }> = ({ onClose }) => {
   const {
@@ -14,9 +17,11 @@ export const Norinori: FC<{ onClose: () => void }> = ({ onClose }) => {
     autoSolve,
     newGame,
   } = useNorinori();
+  const [helpOpen, setHelpOpen] = useState(false);
+  const data = GAME_DATA.norinori;
 
   return (
-    <FullScreen onClose={onClose} title="Norinori">
+    <FullScreen onClose={onClose} title={GAME_NAME.en} subtitle={GAME_NAME.ja}>
       <div className="flex flex-1 flex-col gap-4 overflow-y-auto p-4">
         <div className="text-center text-xs opacity-60">
           Shade cells so each row/column matches its count. No two shaded cells
@@ -71,8 +76,22 @@ export const Norinori: FC<{ onClose: () => void }> = ({ onClose }) => {
             disabled={autoSolving}>
             New Game
           </button>
+          <button
+            className="btn btn-sm btn-ghost"
+            onClick={() => setHelpOpen(true)}>
+            How to Play
+          </button>
         </div>
       </div>
+
+      <GameInstructionsModal
+        isOpen={helpOpen}
+        onClose={() => setHelpOpen(false)}
+        title={data.title}
+        subtitle={data.subtitle}
+        instructions={data.instructions}
+        visualization={data.visualization}
+      />
     </FullScreen>
   );
 };

@@ -71,6 +71,25 @@ export const generatePuzzle = (): { grid: Grid; rooms: Room[] } => {
     }
   }
 
+  const shadedCells = new Set<string>();
+  for (const room of rooms) {
+    let remaining = room.clue ?? 0;
+    for (const [r, c] of room.cells) {
+      if (remaining > 0 && Math.random() < 0.5) {
+        shadedCells.add(`${r},${c}`);
+        grid[r][c].shaded = true;
+        remaining--;
+      }
+    }
+    for (const [r, c] of room.cells) {
+      if (remaining > 0 && !shadedCells.has(`${r},${c}`)) {
+        shadedCells.add(`${r},${c}`);
+        grid[r][c].shaded = true;
+        remaining--;
+      }
+    }
+  }
+
   return { grid, rooms };
 };
 

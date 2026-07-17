@@ -11,6 +11,7 @@ export const useFillomino = () => {
   const [autoSolving, setAutoSolving] = useState(false);
   const historyRef = useRef<Grid[]>([]);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const gridRef = useRef<Grid>([]);
 
   const init = useCallback(() => {
     if (timerRef.current) clearTimeout(timerRef.current);
@@ -18,6 +19,7 @@ export const useFillomino = () => {
     setSolution(s);
     setPuzzle(p);
     setGrid(p.map((row) => [...row]));
+    gridRef.current = p.map((row) => [...row]);
     setSelected(null);
     setWon(false);
     setAutoSolving(false);
@@ -30,6 +32,10 @@ export const useFillomino = () => {
       if (timerRef.current) clearTimeout(timerRef.current);
     };
   }, [init]);
+
+  useEffect(() => {
+    gridRef.current = grid;
+  }, [grid]);
 
   const handleCellClick = useCallback(
     (row: number, col: number) => {
@@ -92,7 +98,8 @@ export const useFillomino = () => {
       }
       timerRef.current = setTimeout(() => {
         const [r, c] = emptyCells[idx];
-        const next = grid.map((row) => [...row]);
+        const current = gridRef.current;
+        const next = current.map((row) => [...row]);
         next[r][c] = solution[r][c];
         setGrid(next);
         if (isComplete(next)) setWon(true);

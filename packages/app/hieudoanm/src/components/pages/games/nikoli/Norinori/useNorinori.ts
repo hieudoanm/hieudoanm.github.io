@@ -13,13 +13,20 @@ export const useNorinori = () => {
   const [autoSolving, setAutoSolving] = useState(false);
   const historyRef = useRef<Grid[]>([]);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const gridRef = useRef(grid);
+
+  useEffect(() => {
+    gridRef.current = grid;
+  }, [grid]);
 
   const init = useCallback(() => {
     if (timerRef.current) clearTimeout(timerRef.current);
     const { solution: s, clues: c } = generatePuzzle();
     setSolution(s);
     setClues(c);
-    setGrid(createEmpty());
+    const empty = createEmpty();
+    setGrid(empty);
+    gridRef.current = empty;
     setWon(false);
     setAutoSolving(false);
     historyRef.current = [];
@@ -81,7 +88,8 @@ export const useNorinori = () => {
       }
       timerRef.current = setTimeout(() => {
         const [r, c] = diffCells[idx];
-        const next = grid.map((row) => [...row]);
+        const current = gridRef.current;
+        const next = current.map((row) => [...row]);
         next[r][c] = solution[r][c];
         setGrid(next);
         if (validate(next, clues)) setWon(true);

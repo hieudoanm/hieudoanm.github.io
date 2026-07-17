@@ -1,7 +1,9 @@
 import { FC, useEffect, useReducer, useRef, useState } from 'react';
 import { FullScreen } from '@hieudoanm.github.io/components/atoms/FullScreen';
+import { GameInstructionsModal } from '../_shared/GameInstructionsModal';
+import { GAME_DATA } from '../_shared/gameData';
 
-import { Grid } from './types';
+import { Grid, GAME_NAME } from './types';
 import {
   createEmptyGrid,
   generatePuzzle,
@@ -70,6 +72,8 @@ export const Sudoku: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [diff, setDiff] = useState(0.5);
   const [state, dispatch] = useReducer(gameReducer, size, createInitialState);
   const timerRef = useRef<number | null>(null);
+  const [helpOpen, setHelpOpen] = useState(false);
+  const data = GAME_DATA.sudoku;
   const N = size * size;
 
   useEffect(() => {
@@ -134,7 +138,7 @@ export const Sudoku: FC<{ onClose: () => void }> = ({ onClose }) => {
   };
 
   return (
-    <FullScreen onClose={onClose} title="Sudoku">
+    <FullScreen onClose={onClose} title={GAME_NAME.en} subtitle={GAME_NAME.ja}>
       <div className="mb-2 flex items-center justify-between text-xs">
         <div className="flex gap-1">
           {['Easy', 'Medium', 'Hard'].map((l, i) => (
@@ -199,12 +203,26 @@ export const Sudoku: FC<{ onClose: () => void }> = ({ onClose }) => {
         <button onClick={hint} className="btn btn-ghost btn-sm">
           Hint
         </button>
+        <button
+          onClick={() => setHelpOpen(true)}
+          className="btn btn-ghost btn-sm">
+          How to Play
+        </button>
       </div>
       {state.won && (
         <div className="alert alert-success mt-2 text-center text-sm">
           Solved in {formatTime(state.timer)}!
         </div>
       )}
+
+      <GameInstructionsModal
+        isOpen={helpOpen}
+        onClose={() => setHelpOpen(false)}
+        title={data.title}
+        subtitle={data.subtitle}
+        instructions={data.instructions}
+        visualization={data.visualization}
+      />
     </FullScreen>
   );
 };

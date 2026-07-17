@@ -1,6 +1,9 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { FullScreen } from '@hieudoanm.github.io/components/atoms/FullScreen';
+import { GameInstructionsModal } from '../_shared/GameInstructionsModal';
+import { GAME_DATA } from '../_shared/gameData';
 import { useFillomino } from './useFillomino';
+import { GAME_NAME } from './types';
 
 export const Fillomino: FC<{ onClose: () => void }> = ({ onClose }) => {
   const {
@@ -17,6 +20,8 @@ export const Fillomino: FC<{ onClose: () => void }> = ({ onClose }) => {
     autoSolve,
     newGame,
   } = useFillomino();
+  const [helpOpen, setHelpOpen] = useState(false);
+  const data = GAME_DATA.fillomino;
 
   const isSelected = (r: number, c: number) =>
     selected?.[0] === r && selected?.[1] === c;
@@ -24,7 +29,7 @@ export const Fillomino: FC<{ onClose: () => void }> = ({ onClose }) => {
   const isGiven = (r: number, c: number) => puzzle[r][c] !== null;
 
   return (
-    <FullScreen onClose={onClose} title="Fillomino">
+    <FullScreen onClose={onClose} title={GAME_NAME.en} subtitle={GAME_NAME.ja}>
       <div className="flex flex-1 flex-col gap-4 overflow-y-auto p-4">
         <div className="text-center text-xs opacity-60">
           Fill the grid so each contiguous region of same number has exactly
@@ -86,8 +91,22 @@ export const Fillomino: FC<{ onClose: () => void }> = ({ onClose }) => {
             disabled={autoSolving}>
             New Game
           </button>
+          <button
+            className="btn btn-sm btn-ghost"
+            onClick={() => setHelpOpen(true)}>
+            How to Play
+          </button>
         </div>
       </div>
+
+      <GameInstructionsModal
+        isOpen={helpOpen}
+        onClose={() => setHelpOpen(false)}
+        title={data.title}
+        subtitle={data.subtitle}
+        instructions={data.instructions}
+        visualization={data.visualization}
+      />
     </FullScreen>
   );
 };
