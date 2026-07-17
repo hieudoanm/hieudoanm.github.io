@@ -24,23 +24,23 @@ export const FeatureGrid: FC<TemplateProps> = ({ data }) => {
       <h1 className="text-base-content mb-4 text-center text-4xl font-bold tracking-tight">
         {headline}
       </h1>
-      <div className="grid flex-1 grid-cols-2 gap-2">
+      <ul className="grid flex-1 grid-cols-2 gap-2">
         {items.slice(0, 4).map((f, i) => (
-          <div
+          <li
             key={i}
             className="rounded-box bg-accent/5 flex flex-col items-center justify-center gap-1 p-4 text-center">
             <div className="bg-primary/20 flex h-10 w-10 items-center justify-center rounded-full">
               <span className="text-primary text-sm font-bold">0{i + 1}</span>
             </div>
-            <span className="text-base-content text-sm font-bold tracking-tight">
+            <strong className="text-base-content text-sm font-bold tracking-tight">
               {f.label}
-            </span>
+            </strong>
             <span className="text-neutral text-xs leading-relaxed">
               {f.desc}
             </span>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

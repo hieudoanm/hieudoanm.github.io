@@ -16,12 +16,12 @@ export const BodyMeasurements: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <h1 className="text-base-content mb-6 text-4xl font-bold">{headline}</h1>
-      <div className="flex flex-1 flex-col gap-3">
+      <ul className="flex flex-1 flex-col gap-3">
         {measurements.map((m, i) => {
           const diff =
             (parseFloat(m.current) || 0) - (parseFloat(m.previous) || 0);
           return (
-            <div
+            <li
               key={i}
               className="bg-base-200 flex items-center justify-between rounded-lg px-4 py-3">
               <span className="text-base-content text-sm font-bold">
@@ -50,10 +50,10 @@ export const BodyMeasurements: FC<TemplateProps> = ({ data }) => {
                   {diff.toFixed(1)}
                 </span>
               </div>
-            </div>
+            </li>
           );
         })}
-      </div>
+      </ul>
     </div>
   );
 };

@@ -28,16 +28,16 @@ export const CourseHighlight: FC<TemplateProps> = ({ data }) => {
           </span>
         )}
       </div>
-      <div className="mt-6 flex flex-col gap-2">
+      <ol className="mt-6 flex flex-col gap-2">
         {modules.map((mod, i) => (
-          <div key={i} className="flex items-center gap-4">
+          <li key={i} className="flex items-center gap-4">
             <span className="text-accent flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold">
               {i + 1}
             </span>
             <p className="text-base-content text-sm">{mod}</p>
-          </div>
+          </li>
         ))}
-      </div>
+      </ol>
     </div>
   );
 };

@@ -20,7 +20,7 @@ export const MoodTracker: FC<TemplateProps> = ({ data }) => {
       <span className="text-accent mb-2 text-xs font-bold tracking-[0.2em] uppercase">
         {title || 'Mood Tracker'}
       </span>
-      {date && <p className="text-neutral mb-6 text-xs">{date}</p>}
+      {date && <time className="text-neutral mb-6 text-xs">{date}</time>}
       <span className="text-3xl">{MOOD_EMOJIS[mood] ?? '😐'}</span>
       <p className="text-base-content mt-4 text-lg font-semibold capitalize">
         {mood || 'Okay'}

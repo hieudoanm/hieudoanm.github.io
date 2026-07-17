@@ -22,18 +22,18 @@ export const SetupTour: FC<TemplateProps> = ({ data }) => {
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <h1 className="text-accent mb-0.5 text-4xl font-bold">{title}</h1>
       <p className="text-neutral mb-2 text-xs">{description}</p>
-      <div className="mb-2 flex flex-1 flex-col gap-2">
+      <ul className="mb-2 flex flex-1 flex-col gap-2">
         {components.map((item, i) => (
-          <div
+          <li
             key={i}
             className="bg-base-200 flex items-center justify-between rounded-lg px-2 py-2">
             <span className="text-base-content text-xs font-semibold">
               {item.name}
             </span>
             <span className="text-neutral text-xs">{item.spec}</span>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
       <div className="border-t-base-200 border-t pt-2 text-right">
         <span className="text-base-300 text-xs tracking-wider uppercase">
           Total

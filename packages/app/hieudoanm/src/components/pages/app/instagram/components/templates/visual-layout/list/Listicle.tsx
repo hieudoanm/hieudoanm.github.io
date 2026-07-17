@@ -31,9 +31,9 @@ export const Listicle: FC<TemplateProps> = ({ data }) => {
         {headline}
       </h1>
       <p className="text-neutral mb-1 text-xs">{text}</p>
-      <div className={`flex flex-1 flex-col ${gap}`}>
+      <ol className={`flex flex-1 flex-col ${gap}`}>
         {list.map((item, i) => (
-          <div
+          <li
             key={i}
             className="rounded-box bg-accent/5 flex items-center gap-2 px-1 py-1">
             <span className="bg-primary text-primary-content flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full text-xs font-bold">
@@ -42,13 +42,14 @@ export const Listicle: FC<TemplateProps> = ({ data }) => {
             <span className="text-base-content text-xs leading-tight font-medium">
               {item}
             </span>
-          </div>
+          </li>
         ))}
-      </div>
+      </ol>
       {imageUrl && (
-        <div
-          className="rounded-box mt-2 h-8 w-full flex-shrink-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${imageUrl})` }}
+        <img
+          src={imageUrl}
+          alt=""
+          className="rounded-box mt-2 h-8 w-full flex-shrink-0 object-cover"
         />
       )}
     </div>

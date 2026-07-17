@@ -14,14 +14,14 @@ export const WritingPrompt: FC<TemplateProps> = ({ data }) => {
       <h1 className="text-base-content mb-2 text-4xl font-black tracking-tight">
         {title}
       </h1>
-      <p className="text-base-content mb-3 max-w-md text-sm leading-relaxed italic">
+      <blockquote className="text-base-content mb-3 max-w-md text-sm leading-relaxed italic">
         &ldquo;{prompt}&rdquo;
-      </p>
-      <div className="flex items-center gap-2">
-        <span className="badge badge-primary badge-sm">{genre}</span>
-        <span className="badge badge-secondary badge-sm">{difficulty}</span>
-        <span className="badge badge-outline badge-sm">{wordCount} words</span>
-      </div>
+      </blockquote>
+      <ul className="flex items-center gap-2">
+        <li className="badge badge-primary badge-sm">{genre}</li>
+        <li className="badge badge-secondary badge-sm">{difficulty}</li>
+        <li className="badge badge-outline badge-sm">{wordCount} words</li>
+      </ul>
     </div>
   );
 };

@@ -11,9 +11,9 @@ export const BeliefCard: FC<TemplateProps> = ({ data }) => {
       <span className="text-accent text-sm font-bold tracking-[0.15em] uppercase">
         I Believe
       </span>
-      <p className="text-base-content text-4xl leading-snug font-bold">
+      <blockquote className="text-base-content text-4xl leading-snug font-bold">
         &ldquo;{belief}&rdquo;
-      </p>
+      </blockquote>
       {author && (
         <div className="mt-2">
           <p className="text-base-content text-sm font-medium">{author}</p>

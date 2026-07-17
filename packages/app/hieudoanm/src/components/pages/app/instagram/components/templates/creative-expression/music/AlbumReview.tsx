@@ -23,24 +23,24 @@ export const AlbumReview: FC<TemplateProps> = ({ data }) => {
           {genre}
         </span>
       )}
-      <div className="mt-1.5 flex gap-2">
+      <ul className="mt-1.5 flex gap-2">
         {stars.map((filled, i) => (
-          <span
+          <li
             key={i}
             className={
               filled ? 'text-primary text-xs' : 'text-base-300 text-xs'
             }>
             ★
-          </span>
+          </li>
         ))}
-      </div>
-      <p className="text-neutral mt-2 max-w-xs text-xs leading-relaxed">
+      </ul>
+      <blockquote className="text-neutral mt-2 max-w-xs text-xs leading-relaxed">
         &ldquo;{review}&rdquo;
-      </p>
+      </blockquote>
       {favoriteTrack && (
         <p className="text-base-content mt-1.5 text-xs">
           <span className="text-neutral">Favorite: </span>
-          <span className="font-bold">{favoriteTrack}</span>
+          <strong className="font-bold">{favoriteTrack}</strong>
         </p>
       )}
     </div>

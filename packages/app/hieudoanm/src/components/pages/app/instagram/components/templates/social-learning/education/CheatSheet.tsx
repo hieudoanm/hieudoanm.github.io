@@ -24,11 +24,11 @@ export const CheatSheet: FC<TemplateProps> = ({ data }) => {
         <div className="text-primary text-sm font-bold tracking-widest uppercase">
           {subject}
         </div>
-        <div className="text-base-content mt-2 text-sm font-bold">{title}</div>
+        <h2 className="text-base-content mt-2 text-sm font-bold">{title}</h2>
       </div>
-      <div className="flex flex-1 flex-col gap-2">
+      <ul className="flex flex-1 flex-col gap-2">
         {items.map((item, i) => (
-          <div
+          <li
             key={i}
             className="border-base-300 flex items-stretch gap-2 rounded-2xl border">
             <div className="bg-primary flex w-24 shrink-0 items-center justify-center rounded-l-2xl text-sm font-bold text-white">
@@ -37,9 +37,9 @@ export const CheatSheet: FC<TemplateProps> = ({ data }) => {
             <div className="text-base-content flex flex-1 items-center px-2 font-mono text-sm">
               {item.content}
             </div>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

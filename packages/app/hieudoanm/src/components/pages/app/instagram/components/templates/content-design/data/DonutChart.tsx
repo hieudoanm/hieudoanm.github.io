@@ -56,9 +56,9 @@ export const DonutChart: FC<TemplateProps> = ({ data }) => {
           <span className="text-neutral text-xs">Total</span>
         </div>
       </div>
-      <div className="mt-4 flex flex-wrap justify-center gap-2">
+      <ul className="mt-4 flex flex-wrap justify-center gap-2">
         {list.map((seg, i) => (
-          <div key={i} className="flex items-center gap-1">
+          <li key={i} className="flex items-center gap-1">
             <span
               className={`inline-block h-3 w-3 rounded-full ${PAL[i % PAL.length]}`}
             />
@@ -66,9 +66,9 @@ export const DonutChart: FC<TemplateProps> = ({ data }) => {
               {seg.label}
             </span>
             <span className="text-primary text-xs font-bold">{seg.pct}%</span>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

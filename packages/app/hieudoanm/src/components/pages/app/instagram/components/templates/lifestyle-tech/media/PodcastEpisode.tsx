@@ -18,14 +18,14 @@ export const PodcastEpisode: FC<TemplateProps> = ({ data }) => {
       <div className="bg-primary text-base-100 mb-5 flex h-24 w-24 items-center justify-center rounded-full">
         <span className="text-lg">&#9654;</span>
       </div>
-      <div className="text-base-content mb-2 text-center text-base font-bold">
+      <h2 className="text-base-content mb-2 text-center text-base font-bold">
         {title}
-      </div>
+      </h2>
       <div className="bg-accent/10 text-accent mb-3 rounded px-2.5 py-0.5 text-xs font-bold">
-        EP {episode}
+        <strong>EP {episode}</strong>
       </div>
-      <div className="text-neutral mb-1 text-xs font-semibold">{guest}</div>
-      <div className="text-neutral mb-3 text-xs">{duration}</div>
+      <p className="text-neutral mb-1 text-xs font-semibold">{guest}</p>
+      <p className="text-neutral mb-3 text-xs">{duration}</p>
       {description && (
         <p className="text-neutral max-w-[80%] text-center text-xs leading-relaxed">
           {description}

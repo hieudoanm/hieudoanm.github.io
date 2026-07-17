@@ -33,21 +33,19 @@ export const WorldBuilding: FC<TemplateProps> = ({ data }) => {
           {description}
         </p>
       )}
-      <div className="mb-3 grid w-full max-w-md grid-cols-2 gap-1">
+      <ul className="mb-3 grid w-full max-w-md grid-cols-2 gap-1">
         {aspects.map((a) => (
-          <div key={a.name} className="bg-base-200 rounded-lg p-2 text-left">
-            <span className="text-base-content text-xs font-bold">
-              {a.name}
-            </span>
+          <li key={a.name} className="bg-base-200 rounded-lg p-2 text-left">
+            <h3 className="text-base-content text-xs font-bold">{a.name}</h3>
             <p className="text-neutral text-xs leading-relaxed">{a.detail}</p>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
       {rules.length > 0 && (
         <div className="w-full max-w-md text-left">
-          <span className="text-base-content mb-1 block text-xs font-bold tracking-wider uppercase">
+          <h2 className="text-base-content mb-1 block text-xs font-bold tracking-wider uppercase">
             World Rules
-          </span>
+          </h2>
           <ul className="space-y-1">
             {rules.map((rule) => (
               <li

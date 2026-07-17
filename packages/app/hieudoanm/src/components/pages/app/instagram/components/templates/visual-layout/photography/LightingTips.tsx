@@ -14,9 +14,9 @@ export const LightingTips: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
-      <div className="text-accent mb-1 text-xs font-bold tracking-[0.2em] uppercase">
+      <h2 className="text-accent mb-1 text-xs font-bold tracking-[0.2em] uppercase">
         Lighting
-      </div>
+      </h2>
       <h1 className="text-base-content mb-1 text-4xl font-bold">{title}</h1>
       {setup && (
         <span className="text-primary mb-1 text-xs font-bold">{setup}</span>
@@ -27,18 +27,20 @@ export const LightingTips: FC<TemplateProps> = ({ data }) => {
         </p>
       )}
       {tips.length > 0 && (
-        <div className="mt-1 grid w-full max-w-md grid-cols-2 gap-1">
+        <ul className="mt-1 grid w-full max-w-md grid-cols-2 gap-1">
           {tips.map((tip, i) => (
-            <div
+            <li
               key={i}
               className="border-base-300 rounded border p-1 text-left">
-              <div className="text-primary text-xs font-bold">{tip.label}</div>
-              <div className="text-neutral mt-1 text-xs leading-relaxed">
+              <strong className="text-primary text-xs font-bold">
+                {tip.label}
+              </strong>
+              <p className="text-neutral mt-1 text-xs leading-relaxed">
                 {tip.desc}
-              </div>
-            </div>
+              </p>
+            </li>
           ))}
-        </div>
+        </ul>
       )}
     </div>
   );

@@ -24,13 +24,13 @@ export const SeasonStats: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-5 text-center">
-        <div className="text-base-content text-base font-bold">{headline}</div>
-        {text && <div className="text-neutral mt-1 text-xs">{text}</div>}
+        <h2 className="text-base-content text-base font-bold">{headline}</h2>
+        {text && <p className="text-neutral mt-1 text-xs">{text}</p>}
       </div>
 
-      <div className="flex flex-1 flex-col justify-center gap-4">
+      <ul className="flex flex-1 flex-col justify-center gap-4">
         {leaders.map((l, i) => (
-          <div key={i} className="flex items-center gap-3">
+          <li key={i} className="flex items-center gap-3">
             <span className="text-accent w-6 text-right text-xs font-black">
               {l.position}
             </span>
@@ -51,9 +51,9 @@ export const SeasonStats: FC<TemplateProps> = ({ data }) => {
                 />
               </div>
             </div>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

@@ -22,16 +22,16 @@ export const Leaderboard: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
-      <div className="text-base-content mb-4 text-center text-sm font-bold">
+      <h2 className="text-base-content mb-4 text-center text-sm font-bold">
         {title}
-      </div>
-      <div className="flex flex-1 flex-col gap-2">
+      </h2>
+      <ol className="flex flex-1 flex-col gap-2">
         {entries.map((entry, i) => {
           const medal =
             entry.medal ??
             (entry.rank <= 3 ? DEFAULT_MEDALS[entry.rank - 1] : undefined);
           return (
-            <div
+            <li
               key={i}
               className={`flex items-center gap-4 rounded-2xl px-4 py-2 ${
                 i % 2 === 0 ? 'bg-base-200/50' : ''
@@ -46,10 +46,10 @@ export const Leaderboard: FC<TemplateProps> = ({ data }) => {
               <span className="text-primary text-sm font-bold">
                 {entry.score}
               </span>
-            </div>
+            </li>
           );
         })}
-      </div>
+      </ol>
     </div>
   );
 };

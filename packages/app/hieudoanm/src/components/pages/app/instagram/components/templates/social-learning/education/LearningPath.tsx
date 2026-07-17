@@ -11,9 +11,9 @@ export const LearningPath: FC<TemplateProps> = ({ data }) => {
       <h1 className="text-base-content mb-4 text-4xl leading-tight font-bold">
         {title}
       </h1>
-      <div className="flex flex-col gap-0">
+      <ol className="flex flex-col gap-0">
         {steps.map((step, i) => (
-          <div
+          <li
             key={i}
             className="relative flex items-start gap-4 pb-4 last:pb-0">
             <div className="flex flex-col items-center">
@@ -32,9 +32,9 @@ export const LearningPath: FC<TemplateProps> = ({ data }) => {
                 <p className="text-neutral mt-2 text-sm">{step.desc}</p>
               )}
             </div>
-          </div>
+          </li>
         ))}
-      </div>
+      </ol>
     </div>
   );
 };

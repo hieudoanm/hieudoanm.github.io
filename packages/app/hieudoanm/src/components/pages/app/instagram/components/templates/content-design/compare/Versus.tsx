@@ -43,9 +43,9 @@ export const Versus: FC<TemplateProps> = ({ data }) => {
           {optionB.label}
         </span>
       </div>
-      <div className="flex flex-1 flex-col gap-2 px-8 pb-4">
+      <ul className="flex flex-1 flex-col gap-2 px-8 pb-4">
         {rows.map((row, i) => (
-          <div
+          <li
             key={i}
             className="rounded-box bg-accent/5 flex flex-col gap-1 px-4 py-2">
             {row.label && (
@@ -62,9 +62,9 @@ export const Versus: FC<TemplateProps> = ({ data }) => {
                 {row.b}
               </span>
             </div>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

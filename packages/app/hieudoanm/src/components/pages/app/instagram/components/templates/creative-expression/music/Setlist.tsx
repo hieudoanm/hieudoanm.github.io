@@ -16,10 +16,10 @@ export const Setlist: FC<TemplateProps> = ({ data }) => {
       </span>
       <h1 className="text-base-content mt-1 text-lg font-bold">{artist}</h1>
       {venue && <p className="text-neutral text-xs">{venue}</p>}
-      {date && <p className="text-neutral text-xs">{date}</p>}
-      <div className="mt-2 w-full max-w-xs space-y-1">
+      {date && <time className="text-neutral text-xs">{date}</time>}
+      <ol className="mt-2 w-full max-w-xs space-y-1">
         {songs.map((song, i) => (
-          <div key={i} className="flex items-center gap-1">
+          <li key={i} className="flex items-center gap-1">
             <span className="text-neutral w-4 text-xs font-bold">
               {song.number}
             </span>
@@ -31,19 +31,19 @@ export const Setlist: FC<TemplateProps> = ({ data }) => {
                 {song.album}
               </span>
             )}
-          </div>
+          </li>
         ))}
-      </div>
+      </ol>
       {encore.length > 0 && (
         <div className="mt-2 w-full max-w-xs">
           <p className="text-accent text-xs font-bold uppercase">Encore</p>
-          <div className="mt-1 space-y-1">
+          <ul className="mt-1 space-y-1">
             {encore.map((song, i) => (
-              <p key={i} className="text-base-content text-left text-xs">
+              <li key={i} className="text-base-content text-left text-xs">
                 {song}
-              </p>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       )}
     </div>

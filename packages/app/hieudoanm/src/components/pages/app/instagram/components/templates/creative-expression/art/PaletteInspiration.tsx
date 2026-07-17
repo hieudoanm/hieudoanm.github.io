@@ -28,22 +28,20 @@ export const PaletteInspiration: FC<TemplateProps> = ({ data }) => {
           {description}
         </p>
       )}
-      <div className="mb-3 flex w-full items-center justify-center gap-1">
+      <ul className="mb-3 flex w-full items-center justify-center gap-1">
         {palette.map((c) => (
-          <div key={c.name} className="flex flex-col items-center gap-1">
+          <li key={c.name} className="flex flex-col items-center gap-1">
             <div
               className="h-14 w-14 rounded-xl shadow-md ring-1 ring-black/10"
               style={{ backgroundColor: c.hex }}
             />
-            <span className="text-base-content text-xs font-bold">
-              {c.name}
-            </span>
+            <h3 className="text-base-content text-xs font-bold">{c.name}</h3>
             <span className="text-neutral text-xs tracking-wider uppercase">
               {c.hex}
             </span>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
       {mood && (
         <span className="bg-primary/10 text-primary rounded-full px-4 py-1.5 text-xs font-semibold tracking-wider uppercase">
           {mood}

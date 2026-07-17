@@ -54,9 +54,9 @@ export const Results: FC<TemplateProps> = ({ data }) => {
         </div>
       </div>
 
-      <div className="mt-6 flex flex-col gap-2">
+      <ul className="mt-6 flex flex-col gap-2">
         {findings.map((f, i) => (
-          <div
+          <li
             key={i}
             className={`flex items-start gap-4 rounded-2xl border p-4 ${
               f.significant
@@ -76,9 +76,9 @@ export const Results: FC<TemplateProps> = ({ data }) => {
                 {f.value}
               </span>
             </div>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
 
       {chart && (
         <div className="bg-base-200 mt-6 flex items-center justify-center rounded-2xl p-3">

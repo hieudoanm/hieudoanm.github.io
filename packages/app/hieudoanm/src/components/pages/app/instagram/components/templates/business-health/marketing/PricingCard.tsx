@@ -15,12 +15,12 @@ export const PricingCard: FC<TemplateProps> = ({ data }) => {
       <span className="bg-accent/10 text-accent mb-2 rounded-full px-4 py-1 text-xs font-bold tracking-widest uppercase">
         {plan}
       </span>
-      <div className="text-base-content mb-6 text-3xl font-black tracking-tight">
-        {price}
-      </div>
-      <div className="flex flex-col gap-3">
+      <p className="text-base-content mb-6 text-3xl font-black tracking-tight">
+        <strong>{price}</strong>
+      </p>
+      <ul className="flex flex-col gap-3">
         {items.map((f, i) => (
-          <div key={i} className="flex items-center gap-3">
+          <li key={i} className="flex items-center gap-3">
             <svg
               className="text-primary h-4 w-4 flex-shrink-0"
               fill="none"
@@ -34,9 +34,9 @@ export const PricingCard: FC<TemplateProps> = ({ data }) => {
               />
             </svg>
             <span className="text-neutral text-sm">{f}</span>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
       <div className="rounded-box bg-primary text-primary-content mt-8 px-8 py-3 text-sm font-bold tracking-wider uppercase">
         Get Started
       </div>

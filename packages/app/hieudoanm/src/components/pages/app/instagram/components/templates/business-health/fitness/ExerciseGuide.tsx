@@ -16,16 +16,16 @@ export const ExerciseGuide: FC<TemplateProps> = ({ data }) => {
           {target}
         </span>
       )}
-      <div className="mt-5 flex flex-col gap-3">
+      <ol className="mt-5 flex flex-col gap-3">
         {steps.map((step, i) => (
-          <div key={i} className="flex items-start gap-3">
+          <li key={i} className="flex items-start gap-3">
             <span className="bg-accent text-accent-content mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded text-xs font-bold">
               {i + 1}
             </span>
             <p className="text-base-content text-sm">{step}</p>
-          </div>
+          </li>
         ))}
-      </div>
+      </ol>
       {tips && (
         <div className="border-accent/20 mt-5 border-t pt-4">
           <p className="text-neutral text-xs italic">{tips}</p>

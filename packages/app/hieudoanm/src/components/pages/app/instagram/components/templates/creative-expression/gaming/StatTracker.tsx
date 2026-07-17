@@ -21,16 +21,16 @@ export const StatTracker: FC<TemplateProps> = ({ data }) => {
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
       <h1 className="text-base-content mb-0.5 text-4xl font-bold">{title}</h1>
       <p className="text-neutral mb-2 text-xs font-medium">{game}</p>
-      <div className="mb-3 grid w-full grid-cols-2 gap-2">
+      <ul className="mb-3 grid w-full grid-cols-2 gap-2">
         {stats.map((stat, i) => (
-          <div key={i} className="bg-base-200 rounded-lg px-2 py-2">
+          <li key={i} className="bg-base-200 rounded-lg px-2 py-2">
             <p className="text-primary text-lg font-extrabold">{stat.value}</p>
             <p className="text-base-300 mt-0.5 text-xs font-semibold tracking-wider uppercase">
               {stat.label}
             </p>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
       <span className="bg-accent/10 text-accent rounded-full px-3 py-1 text-xs font-bold">
         {highlight}
       </span>

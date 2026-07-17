@@ -27,13 +27,11 @@ export const GitGraph: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-2 text-center">
-        <div className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
+        <h2 className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
           Git Graph
-        </div>
+        </h2>
         {title && (
-          <div className="text-base-content mt-1 text-sm font-bold">
-            {title}
-          </div>
+          <h3 className="text-base-content mt-1 text-sm font-bold">{title}</h3>
         )}
       </div>
       <div className="flex flex-1 flex-col gap-1">

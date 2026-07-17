@@ -25,17 +25,17 @@ export const HypothesisCard: FC<TemplateProps> = ({ data }) => {
         <span className="text-neutral text-sm font-bold tracking-[0.15em] uppercase">
           Variables
         </span>
-        <div className="bg-base-200 rounded-box mt-2 overflow-hidden">
-          <div className="border-base-300 flex border-b px-4 py-2">
+        <ul className="bg-base-200 rounded-box mt-2 overflow-hidden">
+          <li className="border-base-300 flex border-b px-4 py-2">
             <span className="text-neutral flex-1 text-sm font-bold uppercase">
               Name
             </span>
             <span className="text-neutral text-[9px] font-bold uppercase">
               Type
             </span>
-          </div>
+          </li>
           {variables.map((v, i) => (
-            <div
+            <li
               key={i}
               className="border-base-300 flex items-center justify-between border-b px-4 py-2 last:border-b-0">
               <span className="text-base-content text-sm font-medium">
@@ -44,9 +44,9 @@ export const HypothesisCard: FC<TemplateProps> = ({ data }) => {
               <span className="bg-accent/10 text-accent rounded-2xl px-2 py-2 text-sm font-bold">
                 {v.type}
               </span>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
       <div className="mt-auto pt-6">
         <span className="bg-base-200 text-neutral inline-flex items-center rounded-2xl px-4 py-2 text-sm font-bold">

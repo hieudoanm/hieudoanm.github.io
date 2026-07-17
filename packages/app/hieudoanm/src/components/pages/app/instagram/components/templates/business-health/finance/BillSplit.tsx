@@ -17,23 +17,25 @@ export const BillSplit: FC<TemplateProps> = ({ data }) => {
       <p className="text-neutral mb-1 text-xs font-bold tracking-wider uppercase">
         {headline}
       </p>
-      <div className="text-primary text-4xl font-black">{total}</div>
+      <p className="text-primary text-4xl font-black">
+        <strong>{total}</strong>
+      </p>
       <div className="bg-accent/10 text-accent mt-3 inline-block self-start rounded-full px-4 py-1 text-sm font-bold">
         {each}
       </div>
       <p className="text-neutral mt-2 text-xs">{people}</p>
-      <div className="mt-6 flex flex-1 flex-col gap-2">
+      <ul className="mt-6 flex flex-1 flex-col gap-2">
         {items.map((item, i) => (
-          <div
+          <li
             key={i}
             className="border-base-300 flex items-center justify-between border-b pb-2">
             <span className="text-base-content text-sm">{item.name}</span>
             <span className="text-base-content text-sm font-semibold">
               {item.amount}
             </span>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

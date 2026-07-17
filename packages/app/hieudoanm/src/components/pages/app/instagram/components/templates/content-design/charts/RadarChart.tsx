@@ -55,8 +55,8 @@ export const RadarChart: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
       <div className="mb-2 text-center">
-        <div className="text-base-content text-sm font-bold">{title}</div>
-        {text && <div className="text-neutral mt-1 text-xs">{text}</div>}
+        <h2 className="text-base-content text-sm font-bold">{title}</h2>
+        {text && <p className="text-neutral mt-1 text-xs">{text}</p>}
       </div>
       <svg viewBox="0 0 190 180" className="h-auto w-full max-w-[280px]">
         {rings.map((pts, i) => (

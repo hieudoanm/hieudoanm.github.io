@@ -28,18 +28,18 @@ export const ClimateCompare: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
-      <span className="text-accent mb-2 text-xs font-bold tracking-[0.2em] uppercase">
+      <h2 className="text-accent mb-2 text-xs font-bold tracking-[0.2em] uppercase">
         {title}
-      </span>
+      </h2>
 
-      <div className="mt-2 flex gap-2">
+      <ul className="mt-2 flex gap-2">
         {[cityA, cityB].map((c, i) => (
-          <div
+          <li
             key={i}
             className="flex-1 rounded-2xl border border-[#e5e7eb] p-2 text-center">
-            <span className="text-base-content text-xs font-bold">
+            <strong className="text-base-content text-xs font-bold">
               {c.city}
-            </span>
+            </strong>
             <span className="text-accent mt-2 block text-xs font-black">
               {c.temp}
             </span>
@@ -64,9 +64,9 @@ export const ClimateCompare: FC<TemplateProps> = ({ data }) => {
                 </span>
               </div>
             </div>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
 
       <div className="bg-accent/5 mt-2 flex items-center justify-center rounded-2xl py-2">
         <span className="text-accent text-xs font-bold">

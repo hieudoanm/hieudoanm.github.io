@@ -46,15 +46,15 @@ export const MatchSchedule: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-5 text-center">
-        <div className="text-base-content text-base font-bold">{headline}</div>
-        {text && <div className="text-neutral mt-1 text-xs">{text}</div>}
+        <h2 className="text-base-content text-base font-bold">{headline}</h2>
+        {text && <p className="text-neutral mt-1 text-xs">{text}</p>}
       </div>
 
-      <div className="flex flex-1 flex-col gap-3">
+      <ul className="flex flex-1 flex-col gap-3">
         {fixtures.map((f, i) => (
-          <div key={i} className="border-base-300 rounded-box border px-4 py-3">
+          <li key={i} className="border-base-300 rounded-box border px-4 py-3">
             <div className="mb-2 flex items-center justify-between">
-              <span className="text-accent text-xs font-bold">{f.date}</span>
+              <time className="text-accent text-xs font-bold">{f.date}</time>
               <span className="text-neutral text-xs">{f.time}</span>
             </div>
             <div className="flex items-center justify-between">
@@ -69,9 +69,9 @@ export const MatchSchedule: FC<TemplateProps> = ({ data }) => {
             <div className="text-neutral mt-2 text-center text-xs">
               {f.venue}
             </div>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

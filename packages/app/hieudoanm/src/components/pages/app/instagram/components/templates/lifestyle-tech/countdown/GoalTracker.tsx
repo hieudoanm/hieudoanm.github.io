@@ -14,9 +14,9 @@ export const GoalTracker: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
       <div className="w-full max-w-[80%] text-center">
-        <div className="text-neutral text-xs font-bold tracking-widest uppercase">
+        <h2 className="text-neutral text-xs font-bold tracking-widest uppercase">
           {title}
-        </div>
+        </h2>
         <div className="text-base-content mt-3 text-base font-bold">{goal}</div>
         <div className="text-primary mt-2 text-2xl font-black">{pct}%</div>
         <div className="bg-base-200 mt-3 h-3 w-full overflow-hidden rounded-full">

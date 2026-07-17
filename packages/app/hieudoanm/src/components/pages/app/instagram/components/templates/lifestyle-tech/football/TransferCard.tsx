@@ -12,14 +12,14 @@ export const TransferCard: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-4 text-center">
-        <div className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
+        <h2 className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
           Transfer
-        </div>
+        </h2>
       </div>
       <div className="flex flex-1 flex-col items-center justify-center gap-4">
         <div className="text-center">
           <div className="text-base-content text-lg font-black">{player}</div>
-          {date && <div className="text-neutral mt-1 text-xs">{date}</div>}
+          {date && <time className="text-neutral mt-1 text-xs">{date}</time>}
         </div>
         <div className="flex items-center gap-4">
           <div className="w-24 text-right">

@@ -23,15 +23,15 @@ export const MusicTheory: FC<TemplateProps> = ({ data }) => {
         {description}
       </p>
       {examples.length > 0 && (
-        <div className="bg-base-200 mt-2 w-full max-w-xs overflow-hidden rounded-lg">
+        <ul className="bg-base-200 mt-2 w-full max-w-xs overflow-hidden rounded-lg">
           {examples.map((example, i) => (
-            <div
+            <li
               key={i}
               className="border-base-300 border-b px-2 py-1 last:border-b-0">
               <p className="text-base-content text-left text-xs">{example}</p>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       )}
       {tip && (
         <div className="bg-accent/10 text-accent mt-2 max-w-xs rounded-lg px-2 py-1 text-xs">

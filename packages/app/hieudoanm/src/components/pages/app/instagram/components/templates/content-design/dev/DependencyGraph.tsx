@@ -29,13 +29,11 @@ export const DependencyGraph: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-1 text-center">
-        <div className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
+        <h2 className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
           Dependency Graph
-        </div>
+        </h2>
         {title && (
-          <div className="text-base-content mt-1 text-sm font-bold">
-            {title}
-          </div>
+          <h3 className="text-base-content mt-1 text-sm font-bold">{title}</h3>
         )}
       </div>
       <svg className="flex-1" viewBox="0 0 500 220">

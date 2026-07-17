@@ -20,21 +20,21 @@ export const CharacterSheet: FC<TemplateProps> = ({ data }) => {
           {description}
         </p>
       )}
-      <div className="mb-2 flex flex-wrap justify-center gap-1">
+      <ul className="mb-2 flex flex-wrap justify-center gap-1">
         {traits.map((trait) => (
-          <span key={trait} className="badge badge-outline badge-sm">
+          <li key={trait} className="badge badge-outline badge-sm">
             {trait}
-          </span>
+          </li>
         ))}
-      </div>
+      </ul>
       {motivation && (
         <p className="text-base-content mb-0.5 max-w-sm text-xs">
-          <span className="font-bold">Motivation:</span> {motivation}
+          <strong className="font-bold">Motivation:</strong> {motivation}
         </p>
       )}
       {flaw && (
         <p className="text-error max-w-sm text-xs">
-          <span className="font-bold">Flaw:</span> {flaw}
+          <strong className="font-bold">Flaw:</strong> {flaw}
         </p>
       )}
     </div>

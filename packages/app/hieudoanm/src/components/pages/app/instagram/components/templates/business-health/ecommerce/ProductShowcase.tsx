@@ -28,18 +28,18 @@ export const ProductShowcase: FC<TemplateProps> = ({ data }) => {
             </span>
           </div>
         )}
-        <div className="text-base-content mt-4 text-xl font-bold">{name}</div>
+        <h2 className="text-base-content mt-4 text-xl font-bold">{name}</h2>
         <div className="text-primary mt-1 text-3xl font-black">{price}</div>
-        <div className="text-neutral mt-1 text-xs">{tagline}</div>
-        <div className="mt-3 flex flex-wrap justify-center gap-1.5">
+        <p className="text-neutral mt-1 text-xs">{tagline}</p>
+        <ul className="mt-3 flex flex-wrap justify-center gap-1.5">
           {features.map((f, i) => (
-            <span
+            <li
               key={i}
               className="bg-base-200 text-base-content rounded px-2 py-0.5 text-xs font-medium">
               {f}
-            </span>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </div>
   );

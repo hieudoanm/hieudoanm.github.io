@@ -17,9 +17,9 @@ export const BillReminder: FC<TemplateProps> = ({ data }) => {
         <h1 className="text-base-content text-4xl font-bold">{title}</h1>
         <span className="text-neutral text-xs font-medium">Due Soon</span>
       </div>
-      <div className="flex flex-col gap-3">
+      <ul className="flex flex-col gap-3">
         {bills.map((bill, i) => (
-          <div
+          <li
             key={i}
             className={`rounded-box flex items-center justify-between border px-4 py-3 ${
               bill.paid
@@ -40,16 +40,18 @@ export const BillReminder: FC<TemplateProps> = ({ data }) => {
                   className={`text-sm font-medium ${bill.paid ? 'text-neutral/40 line-through' : 'text-base-content'}`}>
                   {bill.name}
                 </p>
-                <p className="text-neutral text-xs">Due {bill.dueDate}</p>
+                <p className="text-neutral text-xs">
+                  Due <time>{bill.dueDate}</time>
+                </p>
               </div>
             </div>
             <span
               className={`text-sm font-semibold ${bill.paid ? 'text-neutral/30' : 'text-base-content'}`}>
               {bill.amount}
             </span>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

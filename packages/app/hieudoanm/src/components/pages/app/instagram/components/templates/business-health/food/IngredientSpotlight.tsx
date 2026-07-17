@@ -18,9 +18,9 @@ export const IngredientSpotlight: FC<TemplateProps> = ({ data }) => {
           <span className="text-neutral text-xs font-bold tracking-widest uppercase">
             Benefits
           </span>
-          <div className="mt-2 flex flex-col gap-1.5">
+          <ul className="mt-2 flex flex-col gap-1.5">
             {benefits.map((b, i) => (
-              <div key={i} className="flex items-start gap-2">
+              <li key={i} className="flex items-start gap-2">
                 <svg
                   className="text-accent mt-0.5 h-3.5 w-3.5 flex-shrink-0"
                   fill="none"
@@ -34,9 +34,9 @@ export const IngredientSpotlight: FC<TemplateProps> = ({ data }) => {
                   />
                 </svg>
                 <p className="text-base-content text-xs">{b}</p>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       )}
       {uses.length > 0 && (
@@ -44,15 +44,15 @@ export const IngredientSpotlight: FC<TemplateProps> = ({ data }) => {
           <span className="text-neutral text-xs font-bold tracking-widest uppercase">
             Ways to Use
           </span>
-          <div className="mt-2 flex flex-wrap gap-1.5">
+          <ul className="mt-2 flex flex-wrap gap-1.5">
             {uses.map((u, i) => (
-              <span
+              <li
                 key={i}
                 className="rounded-box bg-base-300 text-neutral px-2.5 py-1 text-xs">
                 {u}
-              </span>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       )}
     </div>

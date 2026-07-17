@@ -16,9 +16,9 @@ export const SkillRoadmap: FC<TemplateProps> = ({ data }) => {
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
       <h1 className="text-primary mb-0.5 text-4xl font-bold">{title}</h1>
       {skill && <p className="badge badge-primary mb-3">{skill}</p>}
-      <div className="flex w-full max-w-md flex-col items-center gap-1">
+      <ul className="flex w-full max-w-md flex-col items-center gap-1">
         {levels.map((item, index) => (
-          <div
+          <li
             key={index}
             className="bg-base-200 flex w-full items-center gap-1 rounded-lg p-2">
             <div className="bg-primary text-primary-content flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-xs font-bold">
@@ -40,9 +40,9 @@ export const SkillRoadmap: FC<TemplateProps> = ({ data }) => {
                 ↓
               </div>
             )}
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

@@ -22,9 +22,9 @@ export const Playlist: FC<TemplateProps> = ({ data }) => {
       {description && (
         <p className="text-neutral mt-1 text-xs">{description}</p>
       )}
-      <div className="bg-base-200 mt-2 w-full max-w-xs overflow-hidden rounded-lg">
+      <ul className="bg-base-200 mt-2 w-full max-w-xs overflow-hidden rounded-lg">
         {tracks.map((track, i) => (
-          <div
+          <li
             key={i}
             className="border-base-300 flex items-center gap-2 border-b px-2 py-1 last:border-b-0">
             <span className="text-neutral w-4 text-xs font-bold">
@@ -37,9 +37,9 @@ export const Playlist: FC<TemplateProps> = ({ data }) => {
               <p className="text-neutral truncate text-xs">{track.artist}</p>
             </div>
             <span className="text-neutral text-xs">{track.duration}</span>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
       {totalDuration && (
         <p className="text-neutral mt-2 text-xs">
           {tracks.length} tracks · {totalDuration}

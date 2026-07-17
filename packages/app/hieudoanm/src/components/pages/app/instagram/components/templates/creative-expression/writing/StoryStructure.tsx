@@ -36,9 +36,7 @@ export const StoryStructure: FC<TemplateProps> = ({ data }) => {
               {i + 1}
             </span>
             <div>
-              <span className="text-base-content text-xs font-bold">
-                {el.name}
-              </span>
+              <h3 className="text-base-content text-xs font-bold">{el.name}</h3>
               <p className="text-neutral text-xs leading-relaxed">
                 {el.description}
               </p>

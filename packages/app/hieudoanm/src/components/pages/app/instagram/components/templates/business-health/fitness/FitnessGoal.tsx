@@ -23,29 +23,29 @@ export const FitnessGoal: FC<TemplateProps> = ({ data }) => {
           </span>
         )}
         {deadline && (
-          <span className="rounded-box bg-base-300 text-neutral px-3 py-1 text-xs">
+          <time className="rounded-box bg-base-300 text-neutral px-3 py-1 text-xs">
             {deadline}
-          </span>
+          </time>
         )}
       </div>
       {plan.length > 0 && (
-        <div className="mt-6 flex flex-col gap-2">
+        <ol className="mt-6 flex flex-col gap-2">
           {plan.map((step, i) => (
-            <div key={i} className="flex items-start gap-3">
+            <li key={i} className="flex items-start gap-3">
               <span className="text-accent mt-0.5 text-xs font-bold">
                 {i + 1}.
               </span>
               <p className="text-base-content text-sm">{step}</p>
-            </div>
+            </li>
           ))}
-        </div>
+        </ol>
       )}
       {motivation && (
-        <div className="border-accent/20 mt-6 border-t pt-4">
+        <blockquote className="border-accent/20 mt-6 border-t pt-4">
           <p className="text-neutral text-xs italic">
             &ldquo;{motivation}&rdquo;
           </p>
-        </div>
+        </blockquote>
       )}
     </div>
   );

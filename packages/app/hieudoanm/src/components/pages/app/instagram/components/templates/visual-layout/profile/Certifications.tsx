@@ -32,20 +32,20 @@ export const Certifications: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
-      <span className="text-accent mb-2 text-xs font-bold tracking-[0.2em] uppercase">
+      <h2 className="text-accent mb-2 text-xs font-bold tracking-[0.2em] uppercase">
         {title}
-      </span>
+      </h2>
 
-      <div className="flex flex-1 flex-col gap-1">
+      <ul className="flex flex-1 flex-col gap-1">
         {certs.map((c, i) => (
-          <div key={i} className="rounded-2xl border border-[#e5e7eb] p-2">
+          <li key={i} className="rounded-2xl border border-[#e5e7eb] p-2">
             <div className="flex items-start justify-between">
               <span className="text-base-content text-xs font-bold">
-                {c.name}
+                <strong>{c.name}</strong>
               </span>
-              <span className="text-accent bg-accent/10 rounded px-2 py-0.5 text-xs font-semibold">
+              <time className="text-accent bg-accent/10 rounded px-2 py-0.5 text-xs font-semibold">
                 {c.date}
-              </span>
+              </time>
             </div>
             <span className="text-neutral mt-1 block text-xs">{c.issuer}</span>
             {c.credentialId && (
@@ -53,9 +53,9 @@ export const Certifications: FC<TemplateProps> = ({ data }) => {
                 ID: {c.credentialId}
               </span>
             )}
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

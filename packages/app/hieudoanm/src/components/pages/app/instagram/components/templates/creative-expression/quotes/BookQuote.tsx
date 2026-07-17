@@ -11,9 +11,9 @@ export const BookQuote: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
-      <p className="text-base-content mb-3 max-w-xl text-2xl leading-relaxed italic">
+      <blockquote className="text-base-content mb-3 max-w-xl text-2xl leading-relaxed italic">
         "{quote}"
-      </p>
+      </blockquote>
       <p className="text-secondary mb-0.5 text-xs font-semibold">{book}</p>
       <p className="text-base-content/70 mb-2 text-xs">by {author}</p>
       <div className="flex items-center gap-2">

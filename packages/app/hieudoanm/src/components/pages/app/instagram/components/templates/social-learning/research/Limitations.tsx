@@ -48,9 +48,9 @@ export const Limitations: FC<TemplateProps> = ({ data }) => {
         {title}
       </h1>
 
-      <div className="mt-6 flex flex-col gap-3">
+      <ul className="mt-6 flex flex-col gap-3">
         {limitations.map((lim, i) => (
-          <div key={i} className="rounded-2xl border border-[#e5e7eb] p-3">
+          <li key={i} className="rounded-2xl border border-[#e5e7eb] p-3">
             <div className="flex items-center justify-between">
               <span className="text-base-content text-sm font-semibold">
                 {lim.title}
@@ -63,26 +63,26 @@ export const Limitations: FC<TemplateProps> = ({ data }) => {
             <p className="text-neutral mt-1 text-sm leading-relaxed">
               {lim.description}
             </p>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
 
       <div className="mt-6">
         <span className="text-neutral text-sm font-bold tracking-[0.15em] uppercase">
           Recommendations
         </span>
-        <div className="mt-2 flex flex-col gap-2">
+        <ol className="mt-2 flex flex-col gap-2">
           {recommendations.map((r, i) => (
-            <div key={i} className="flex items-start gap-3">
+            <li key={i} className="flex items-start gap-3">
               <span className="text-accent mt-2 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold">
                 {i + 1}
               </span>
               <span className="text-base-content text-sm leading-relaxed">
                 {r}
               </span>
-            </div>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </div>
   );

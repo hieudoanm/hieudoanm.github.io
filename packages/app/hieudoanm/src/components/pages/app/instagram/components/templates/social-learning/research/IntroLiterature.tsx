@@ -36,31 +36,31 @@ export const IntroLiterature: FC<TemplateProps> = ({ data }) => {
         <span className="text-neutral text-sm font-bold tracking-[0.15em] uppercase">
           Hypotheses
         </span>
-        <div className="mt-2 flex flex-col gap-2">
+        <ul className="mt-2 flex flex-col gap-2">
           {hypotheses.map((h, i) => (
-            <div key={i} className="flex items-start gap-2">
+            <li key={i} className="flex items-start gap-2">
               <span className="bg-accent mt-2 h-2 w-2 flex-shrink-0 rounded-full" />
               <span className="text-base-content text-sm leading-relaxed">
                 {h}
               </span>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
 
       <div className="mt-6">
         <span className="text-neutral text-sm font-bold tracking-[0.15em] uppercase">
           Key Literature
         </span>
-        <div className="mt-2 flex flex-wrap gap-2">
+        <ul className="mt-2 flex flex-wrap gap-2">
           {citations.map((c, i) => (
-            <span
+            <li
               key={i}
               className="bg-base-200 text-base-content rounded-2xl px-2 py-2 text-sm font-medium">
               {c}
-            </span>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </div>
   );

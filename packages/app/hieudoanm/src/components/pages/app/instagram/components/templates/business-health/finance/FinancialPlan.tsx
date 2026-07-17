@@ -8,9 +8,9 @@ export const FinancialPlan: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <h1 className="text-base-content mb-8 text-4xl font-bold">{title}</h1>
-      <div className="flex flex-col gap-5">
+      <ol className="flex flex-col gap-5">
         {steps.map((step, i) => (
-          <div key={i} className="flex items-start gap-4">
+          <li key={i} className="flex items-start gap-4">
             <span className="bg-accent text-accent-content mt-0.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold">
               {i + 1}
             </span>
@@ -20,9 +20,9 @@ export const FinancialPlan: FC<TemplateProps> = ({ data }) => {
               </p>
               <p className="text-neutral mt-0.5 text-xs">{step.desc}</p>
             </div>
-          </div>
+          </li>
         ))}
-      </div>
+      </ol>
     </div>
   );
 };

@@ -19,13 +19,11 @@ export const DatabaseSchema: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-2 text-center">
-        <div className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
+        <h2 className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
           Schema
-        </div>
+        </h2>
         {title && (
-          <div className="text-base-content mt-1 text-sm font-bold">
-            {title}
-          </div>
+          <h3 className="text-base-content mt-1 text-sm font-bold">{title}</h3>
         )}
       </div>
       <div className="flex flex-1 flex-wrap justify-center gap-2">
@@ -33,12 +31,12 @@ export const DatabaseSchema: FC<TemplateProps> = ({ data }) => {
           <div
             key={table.name}
             className="border-base-300 w-[45%] min-w-[180px] rounded-xl border">
-            <div className="bg-primary/10 text-primary rounded-t px-3 py-1.5 text-sm font-bold">
+            <h4 className="bg-primary/10 text-primary rounded-t px-3 py-1.5 text-sm font-bold">
               {table.name}
-            </div>
-            <div className="p-1">
+            </h4>
+            <ul className="p-1">
               {table.columns.map((col) => (
-                <div
+                <li
                   key={col.name}
                   className="border-base-300 flex items-center justify-between border-t py-1">
                   <span className="text-base-content text-[10px]">
@@ -48,9 +46,9 @@ export const DatabaseSchema: FC<TemplateProps> = ({ data }) => {
                   <span className="text-neutral font-mono text-[9px]">
                     {col.type}
                   </span>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         ))}
       </div>

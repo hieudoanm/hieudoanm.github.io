@@ -39,33 +39,33 @@ export const Methods: FC<TemplateProps> = ({ data }) => {
         <span className="text-neutral text-sm font-bold tracking-[0.15em] uppercase">
           Procedure
         </span>
-        <div className="mt-2 flex flex-col gap-2">
+        <ol className="mt-2 flex flex-col gap-2">
           {procedure.map((p, i) => (
-            <div key={i} className="flex items-start gap-3">
+            <li key={i} className="flex items-start gap-3">
               <span className="text-accent mt-2 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold">
                 {i + 1}
               </span>
               <span className="text-base-content text-sm leading-relaxed">
                 {p}
               </span>
-            </div>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
 
       <div className="mt-6">
         <span className="text-neutral text-sm font-bold tracking-[0.15em] uppercase">
           Materials
         </span>
-        <div className="mt-2 flex flex-wrap gap-2">
+        <ul className="mt-2 flex flex-wrap gap-2">
           {materials.map((m, i) => (
-            <span
+            <li
               key={i}
               className="bg-base-200 text-base-content rounded-2xl px-2 py-2 text-sm font-medium">
               {m}
-            </span>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
 
       <div className="bg-base-200 mt-6 rounded-lg p-3">

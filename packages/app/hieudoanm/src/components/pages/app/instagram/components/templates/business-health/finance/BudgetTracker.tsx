@@ -18,10 +18,10 @@ export const BudgetTracker: FC<TemplateProps> = ({ data }) => {
       <div className="flex items-center justify-between">
         <h1 className="text-base-content text-4xl font-bold">{title}</h1>
         {period && (
-          <span className="text-neutral text-xs font-medium">{period}</span>
+          <time className="text-neutral text-xs font-medium">{period}</time>
         )}
       </div>
-      <div className="mt-6 flex flex-col gap-4">
+      <ul className="mt-6 flex flex-col gap-4">
         {[
           { label: 'Income', value: income, color: 'bg-accent' },
           { label: 'Expenses', value: expenses, color: 'bg-base-300' },
@@ -29,7 +29,7 @@ export const BudgetTracker: FC<TemplateProps> = ({ data }) => {
         ].map((item) => {
           const val = parseFloat(item.value.replace(/[^0-9.]/g, '')) || 0;
           return (
-            <div key={item.label}>
+            <li key={item.label}>
               <div className="mb-1 flex justify-between">
                 <span className="text-neutral text-xs">{item.label}</span>
                 <span className="text-base-content text-xs font-semibold">
@@ -42,10 +42,10 @@ export const BudgetTracker: FC<TemplateProps> = ({ data }) => {
                   style={{ width: `${(val / incomeNum) * 100}%` }}
                 />
               </div>
-            </div>
+            </li>
           );
         })}
-      </div>
+      </ul>
     </div>
   );
 };

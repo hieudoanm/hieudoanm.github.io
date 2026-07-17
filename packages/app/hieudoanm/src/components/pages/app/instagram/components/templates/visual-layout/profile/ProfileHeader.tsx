@@ -29,60 +29,60 @@ export const ProfileHeader: FC<TemplateProps> = ({ data }) => {
         {tagline}
       </p>
 
-      <div className="bg-base-200 mt-2 flex flex-col gap-1 rounded-2xl px-3 py-1">
+      <ul className="bg-base-200 mt-2 flex flex-col gap-1 rounded-2xl px-3 py-1">
         {email && (
-          <div className="flex items-center gap-1">
+          <li className="flex items-center gap-1">
             <span className="text-accent text-xs">✉</span>
             <span className="text-base-content text-xs">{email}</span>
-          </div>
+          </li>
         )}
         {phone && (
-          <div className="flex items-center gap-1">
+          <li className="flex items-center gap-1">
             <span className="text-accent text-xs">☎</span>
             <span className="text-base-content text-xs">{phone}</span>
-          </div>
+          </li>
         )}
         {location && (
-          <div className="flex items-center gap-1">
+          <li className="flex items-center gap-1">
             <span className="text-accent text-xs">◎</span>
             <span className="text-base-content text-xs">{location}</span>
-          </div>
+          </li>
         )}
         {website && (
-          <div className="flex items-center gap-1">
+          <li className="flex items-center gap-1">
             <span className="text-accent text-xs">⊞</span>
             <span className="text-base-content text-xs">{website}</span>
-          </div>
+          </li>
         )}
         {github && (
-          <div className="flex items-center gap-1">
+          <li className="flex items-center gap-1">
             <span className="text-accent text-xs">⌘</span>
             <span className="text-base-content text-xs">
               github.com/{github}
             </span>
-          </div>
+          </li>
         )}
         {linkedin && (
-          <div className="flex items-center gap-1">
+          <li className="flex items-center gap-1">
             <span className="text-accent text-xs">◫</span>
             <span className="text-base-content text-xs">
               linkedin.com/in/{linkedin}
             </span>
-          </div>
+          </li>
         )}
         {instagram && (
-          <div className="flex items-center gap-1">
+          <li className="flex items-center gap-1">
             <span className="text-accent text-xs">◎</span>
             <span className="text-base-content text-xs">@{instagram}</span>
-          </div>
+          </li>
         )}
         {x && (
-          <div className="flex items-center gap-1">
+          <li className="flex items-center gap-1">
             <span className="text-accent text-xs">✕</span>
             <span className="text-base-content text-xs">@{x}</span>
-          </div>
+          </li>
         )}
-      </div>
+      </ul>
     </div>
   );
 };

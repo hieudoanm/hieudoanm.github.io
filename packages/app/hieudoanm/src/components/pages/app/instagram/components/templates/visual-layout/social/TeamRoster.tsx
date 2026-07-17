@@ -20,12 +20,12 @@ export const TeamRoster: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
-      <div className="text-base-content mb-4 text-center text-xs font-bold">
+      <h2 className="text-base-content mb-4 text-center text-xs font-bold">
         {headline}
-      </div>
-      <div className="grid flex-1 grid-cols-3 gap-1">
+      </h2>
+      <ul className="grid flex-1 grid-cols-3 gap-1">
         {members.slice(0, 9).map((m, i) => (
-          <div
+          <li
             key={i}
             className="bg-accent/5 border-base-300 flex flex-col items-center gap-1 rounded border p-1">
             <div className="bg-primary/20 flex h-4 w-4 items-center justify-center rounded-full">
@@ -34,7 +34,7 @@ export const TeamRoster: FC<TemplateProps> = ({ data }) => {
               </span>
             </div>
             <span className="text-base-content text-xs font-bold">
-              {m.name}
+              <strong>{m.name}</strong>
             </span>
             <span className="text-neutral text-xs">{m.role}</span>
             {m.number != null && (
@@ -42,9 +42,9 @@ export const TeamRoster: FC<TemplateProps> = ({ data }) => {
                 #{m.number}
               </span>
             )}
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

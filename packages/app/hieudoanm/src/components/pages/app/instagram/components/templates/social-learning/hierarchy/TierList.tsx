@@ -22,7 +22,7 @@ export const TierList: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-4 text-center">
-        <div className="text-base-content text-sm font-bold">{title}</div>
+        <h2 className="text-base-content text-sm font-bold">{title}</h2>
         {text && <div className="text-neutral mt-2 text-sm">{text}</div>}
       </div>
       <div className="flex flex-1 flex-col gap-2">
@@ -34,13 +34,15 @@ export const TierList: FC<TemplateProps> = ({ data }) => {
               {tier.label}
             </div>
             <div className="border-base-300 flex flex-1 flex-wrap items-center justify-center gap-2 rounded-2xl border px-4 py-2">
-              {tier.items.map((item, j) => (
-                <span
-                  key={j}
-                  className="bg-base-200 text-base-content rounded-2xl px-2 py-2 text-sm font-medium">
-                  {item}
-                </span>
-              ))}
+              <ul className="flex flex-wrap items-center justify-center gap-2">
+                {tier.items.map((item, j) => (
+                  <li
+                    key={j}
+                    className="bg-base-200 text-base-content rounded-2xl px-2 py-2 text-sm font-medium">
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         ))}

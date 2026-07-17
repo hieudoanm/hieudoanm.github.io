@@ -24,13 +24,14 @@ export const Comparison: FC<TemplateProps> = ({ data }) => {
           <span className="bg-accent/10 text-accent rounded-full px-4 py-1 text-xs font-bold tracking-widest uppercase">
             {before.label}
           </span>
-          <p className="text-neutral text-center text-base leading-relaxed">
+          <pre className="text-neutral text-center text-base leading-relaxed">
             {before.text}
-          </p>
+          </pre>
           {imageUrl && (
-            <div
-              className="rounded-box h-28 w-full bg-cover bg-center opacity-80"
-              style={{ backgroundImage: `url(${imageUrl})` }}
+            <img
+              src={imageUrl}
+              alt=""
+              className="rounded-box h-28 w-full object-cover opacity-80"
             />
           )}
         </div>
@@ -39,13 +40,14 @@ export const Comparison: FC<TemplateProps> = ({ data }) => {
           <span className="bg-primary text-primary-content rounded-full px-4 py-1 text-xs font-bold tracking-widest uppercase">
             {after.label}
           </span>
-          <p className="text-neutral text-center text-base leading-relaxed">
+          <pre className="text-neutral text-center text-base leading-relaxed">
             {after.text}
-          </p>
+          </pre>
           {imageUrl && (
-            <div
-              className="rounded-box h-28 w-full bg-cover bg-center opacity-80"
-              style={{ backgroundImage: `url(${imageUrl})` }}
+            <img
+              src={imageUrl}
+              alt=""
+              className="rounded-box h-28 w-full object-cover opacity-80"
             />
           )}
         </div>

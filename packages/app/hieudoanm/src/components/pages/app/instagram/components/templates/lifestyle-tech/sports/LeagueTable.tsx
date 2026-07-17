@@ -71,51 +71,53 @@ export const LeagueTable: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-4 text-center">
-        <div className="text-base-content text-base font-bold">{headline}</div>
-        {text && <div className="text-neutral mt-1 text-xs">{text}</div>}
+        <h2 className="text-base-content text-base font-bold">{headline}</h2>
+        {text && <p className="text-neutral mt-1 text-xs">{text}</p>}
       </div>
 
       <div className="rounded-box border-base-300 flex-1 overflow-hidden border">
-        <div className="border-base-300 bg-base-200 flex border-b px-4 py-2">
-          <span className="text-neutral w-8 text-xs">#</span>
-          <span className="text-neutral flex-1 text-xs">Team</span>
-          <span className="text-neutral w-7 text-center text-xs">P</span>
-          <span className="text-neutral w-7 text-center text-xs">W</span>
-          <span className="text-neutral w-7 text-center text-xs">D</span>
-          <span className="text-neutral w-7 text-center text-xs">L</span>
-          <span className="text-neutral w-10 text-center text-xs">GD</span>
-          <span className="text-neutral w-10 text-right text-xs">Pts</span>
-        </div>
-        {standings.map((row, i) => (
-          <div
-            key={i}
-            className="border-base-300 flex items-center border-b px-4 py-2.5">
-            <span className="text-accent w-8 text-xs font-bold">
-              {row.position}
-            </span>
-            <span className="text-base-content flex-1 text-base font-medium">
-              {row.team}
-            </span>
-            <span className="text-neutral w-7 text-center text-xs">
-              {row.played}
-            </span>
-            <span className="text-neutral w-7 text-center text-xs">
-              {row.won}
-            </span>
-            <span className="text-neutral w-7 text-center text-xs">
-              {row.drawn}
-            </span>
-            <span className="text-neutral w-7 text-center text-xs">
-              {row.lost}
-            </span>
-            <span className="text-neutral w-10 text-center text-xs">
-              {row.gd}
-            </span>
-            <span className="text-base-content w-10 text-right text-xs font-bold">
-              {row.points}
-            </span>
-          </div>
-        ))}
+        <ul className="border-base-300 bg-base-200 flex border-b px-4 py-2">
+          <li className="text-neutral w-8 text-xs">#</li>
+          <li className="text-neutral flex-1 text-xs">Team</li>
+          <li className="text-neutral w-7 text-center text-xs">P</li>
+          <li className="text-neutral w-7 text-center text-xs">W</li>
+          <li className="text-neutral w-7 text-center text-xs">D</li>
+          <li className="text-neutral w-7 text-center text-xs">L</li>
+          <li className="text-neutral w-10 text-center text-xs">GD</li>
+          <li className="text-neutral w-10 text-right text-xs">Pts</li>
+        </ul>
+        <ul>
+          {standings.map((row, i) => (
+            <li
+              key={i}
+              className="border-base-300 flex items-center border-b px-4 py-2.5">
+              <span className="text-accent w-8 text-xs font-bold">
+                {row.position}
+              </span>
+              <span className="text-base-content flex-1 text-base font-medium">
+                {row.team}
+              </span>
+              <span className="text-neutral w-7 text-center text-xs">
+                {row.played}
+              </span>
+              <span className="text-neutral w-7 text-center text-xs">
+                {row.won}
+              </span>
+              <span className="text-neutral w-7 text-center text-xs">
+                {row.drawn}
+              </span>
+              <span className="text-neutral w-7 text-center text-xs">
+                {row.lost}
+              </span>
+              <span className="text-neutral w-10 text-center text-xs">
+                {row.gd}
+              </span>
+              <span className="text-base-content w-10 text-right text-xs font-bold">
+                {row.points}
+              </span>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

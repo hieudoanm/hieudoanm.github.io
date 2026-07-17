@@ -16,7 +16,7 @@ export const BookReview: FC<TemplateProps> = ({ data }) => {
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="border-l-accent flex flex-1 flex-col border-l-4 pl-4">
         <div className="mb-2 text-2xl">📖</div>
-        <div className="text-base-content text-2xl font-bold">{title}</div>
+        <h2 className="text-base-content text-2xl font-bold">{title}</h2>
         <div className="text-neutral mb-2 text-sm">by {author}</div>
         <div className="mb-3 flex gap-1">
           {stars.map((filled, i) => (

@@ -15,10 +15,10 @@ export const DealBadge: FC<TemplateProps> = ({ data }) => {
         {badge}
       </div>
       <p className="text-neutral mb-2 text-sm">{headline}</p>
-      <div className="text-primary text-2xl font-black">{dealPrice}</div>
-      <div className="text-neutral mt-1 text-lg line-through">
-        {originalPrice}
-      </div>
+      <p className="text-primary text-2xl font-black">
+        <strong>{dealPrice}</strong>
+      </p>
+      <p className="text-neutral mt-1 text-lg line-through">{originalPrice}</p>
       <div className="bg-primary/10 text-primary mt-3 rounded-full px-4 py-1 text-sm font-bold">
         {discount}
       </div>

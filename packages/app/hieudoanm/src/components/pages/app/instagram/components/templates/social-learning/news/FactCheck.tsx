@@ -25,14 +25,14 @@ export const FactCheck: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-4 text-center">
-        <div className="text-accent text-sm font-bold tracking-[0.2em] uppercase">
+        <h2 className="text-accent text-sm font-bold tracking-[0.2em] uppercase">
           Fact Check
-        </div>
+        </h2>
       </div>
       <div className="border-base-300 rounded-2xl border p-4 text-center">
-        <div className="text-neutral mb-3 text-sm font-semibold tracking-wider uppercase">
+        <h3 className="text-neutral mb-3 text-sm font-semibold tracking-wider uppercase">
           The Claim
-        </div>
+        </h3>
         <div className="text-base-content text-sm leading-relaxed italic">
           "{claim}"
         </div>
@@ -47,7 +47,7 @@ export const FactCheck: FC<TemplateProps> = ({ data }) => {
             {explanation}
           </p>
         )}
-        {source && <div className="text-neutral text-sm">Source: {source}</div>}
+        {source && <p className="text-neutral text-sm">Source: {source}</p>}
       </div>
     </div>
   );

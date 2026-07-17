@@ -17,7 +17,7 @@ export const DailyWisdom: FC<TemplateProps> = ({ data }) => {
         {wisdom}
       </p>
       <p className="text-secondary mb-1 text-xs font-medium">— {author}</p>
-      {date && <p className="text-base-content/50 text-xs">{date}</p>}
+      {date && <time className="text-base-content/50 text-xs">{date}</time>}
     </div>
   );
 };

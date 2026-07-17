@@ -22,18 +22,18 @@ export const ProductSpecs: FC<TemplateProps> = ({ data }) => {
         <h1 className="text-base-content text-4xl font-bold">{name}</h1>
         <p className="text-neutral text-sm">{tagline}</p>
       </div>
-      <div className="flex flex-1 flex-col gap-0">
+      <ul className="flex flex-1 flex-col gap-0">
         {specs.map((s, i) => (
-          <div
+          <li
             key={i}
             className={`border-base-300 flex items-center justify-between border-b px-3 py-2 ${i % 2 === 1 ? 'bg-base-200/50' : ''}`}>
             <span className="text-neutral text-xs">{s.label}</span>
             <span className="text-base-content text-xs font-semibold">
               {s.value}
             </span>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

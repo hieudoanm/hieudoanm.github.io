@@ -30,12 +30,12 @@ export const EditingChecklist: FC<TemplateProps> = ({ data }) => {
           {description}
         </p>
       )}
-      <div className="w-full max-w-md space-y-1 text-left">
+      <ul className="w-full max-w-md space-y-1 text-left">
         {categories.map((cat) => (
-          <div key={cat.name}>
-            <span className="text-base-content mb-1 block text-xs font-bold tracking-wider uppercase">
+          <li key={cat.name}>
+            <h2 className="text-base-content mb-1 block text-xs font-bold tracking-wider uppercase">
               {cat.name}
-            </span>
+            </h2>
             <ul className="space-y-1">
               {cat.items.map((item) => (
                 <li key={item} className="flex items-center gap-1 text-xs">
@@ -44,9 +44,9 @@ export const EditingChecklist: FC<TemplateProps> = ({ data }) => {
                 </li>
               ))}
             </ul>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

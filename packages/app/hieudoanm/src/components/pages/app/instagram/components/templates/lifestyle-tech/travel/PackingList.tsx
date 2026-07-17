@@ -12,14 +12,14 @@ export const PackingList: FC<TemplateProps> = ({ data }) => {
         <h1 className="text-base-content text-4xl font-bold">{title}</h1>
         <span className="text-neutral text-xs">{items.length} items</span>
       </div>
-      <div className="flex flex-col gap-2">
+      <ul className="flex flex-col gap-2">
         {items.map((item, i) => (
-          <div key={i} className="flex items-center gap-4">
+          <li key={i} className="flex items-center gap-4">
             <span className="border-accent/20 flex h-4 w-4 flex-shrink-0 items-center justify-center rounded border text-xs" />
             <p className="text-base-content text-sm">{item}</p>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
       {tip && (
         <div className="border-accent/20 mt-6 border-t pt-4">
           <p className="text-neutral text-xs">{tip}</p>

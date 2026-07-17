@@ -16,16 +16,16 @@ export const ChallengeCalendar: FC<TemplateProps> = ({ data }) => {
           </span>
         )}
       </div>
-      <div className="flex flex-1 flex-col gap-1.5 overflow-y-auto">
+      <ol className="flex flex-1 flex-col gap-1.5 overflow-y-auto">
         {days.map((d, i) => (
-          <div
+          <li
             key={i}
             className="rounded-box flex items-center gap-3 px-3 py-2 text-sm">
-            <span className="text-accent w-6 text-xs font-bold">{d.day}</span>
+            <time className="text-accent w-6 text-xs font-bold">{d.day}</time>
             <p className="text-base-content text-xs">{d.activity}</p>
-          </div>
+          </li>
         ))}
-      </div>
+      </ol>
     </div>
   );
 };

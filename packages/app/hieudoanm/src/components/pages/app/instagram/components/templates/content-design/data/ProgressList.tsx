@@ -24,9 +24,9 @@ export const ProgressList: FC<TemplateProps> = ({ data }) => {
       <h1 className="text-base-content mb-5 text-center text-4xl font-bold tracking-tight">
         {headline || 'Progress'}
       </h1>
-      <div className="flex flex-col gap-3">
+      <ul className="flex flex-col gap-3">
         {list.map((item, i) => (
-          <div key={i}>
+          <li key={i}>
             <div className="mb-1 flex items-center justify-between">
               <span className="text-base-content text-sm font-medium">
                 {item.label}
@@ -41,9 +41,9 @@ export const ProgressList: FC<TemplateProps> = ({ data }) => {
                 style={{ width: `${Math.min(100, Math.max(0, item.pct))}%` }}
               />
             </div>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

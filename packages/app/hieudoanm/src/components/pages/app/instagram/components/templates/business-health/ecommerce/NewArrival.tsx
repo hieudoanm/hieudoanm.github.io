@@ -28,7 +28,7 @@ export const NewArrival: FC<TemplateProps> = ({ data }) => {
             </span>
           </div>
         )}
-        <div className="text-base-content mt-3 text-lg font-bold">{name}</div>
+        <h2 className="text-base-content mt-3 text-lg font-bold">{name}</h2>
         <div className="mt-1 flex items-baseline justify-center gap-2">
           <span className="text-primary text-2xl font-black">{price}</span>
           {oldPrice && (

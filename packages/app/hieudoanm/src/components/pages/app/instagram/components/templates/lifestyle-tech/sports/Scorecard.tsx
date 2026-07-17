@@ -32,10 +32,10 @@ export const Scorecard: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-4 text-center">
-        <div className="text-neutral text-xs font-semibold tracking-widest uppercase">
+        <h2 className="text-neutral text-xs font-semibold tracking-widest uppercase">
           {headline}
-        </div>
-        {text && <div className="text-neutral mt-1 text-xs">{text}</div>}
+        </h2>
+        {text && <p className="text-neutral mt-1 text-xs">{text}</p>}
       </div>
 
       <div className="flex items-center justify-center gap-6 py-4">
@@ -70,30 +70,30 @@ export const Scorecard: FC<TemplateProps> = ({ data }) => {
 
       {scorers.length > 0 && (
         <div className="mb-4 flex justify-center gap-8">
-          <div className="flex flex-col items-end gap-1">
+          <ul className="flex flex-col items-end gap-1">
             {scorers
               .filter((s) => s.team === 'home')
               .map((s, i) => (
-                <span key={i} className="text-base-content text-xs">
+                <li key={i} className="text-base-content text-xs">
                   {s.name} {s.minute}&apos;
-                </span>
+                </li>
               ))}
-          </div>
-          <div className="flex flex-col items-start gap-1">
+          </ul>
+          <ul className="flex flex-col items-start gap-1">
             {scorers
               .filter((s) => s.team === 'away')
               .map((s, i) => (
-                <span key={i} className="text-base-content text-xs">
+                <li key={i} className="text-base-content text-xs">
                   {s.name} {s.minute}&apos;
-                </span>
+                </li>
               ))}
-          </div>
+          </ul>
         </div>
       )}
 
-      <div className="flex flex-1 flex-col justify-center gap-2">
+      <ul className="flex flex-1 flex-col justify-center gap-2">
         {stats.map((s, i) => (
-          <div key={i} className="flex items-center gap-3">
+          <li key={i} className="flex items-center gap-3">
             <span className="text-base-content w-10 text-right text-xs font-semibold">
               {s.home}
             </span>
@@ -115,9 +115,9 @@ export const Scorecard: FC<TemplateProps> = ({ data }) => {
             <span className="text-base-content w-10 text-left text-xs font-semibold">
               {s.away}
             </span>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

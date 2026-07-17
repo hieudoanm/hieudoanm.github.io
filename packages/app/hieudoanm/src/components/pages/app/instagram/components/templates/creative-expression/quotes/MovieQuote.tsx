@@ -10,9 +10,9 @@ export const MovieQuote: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
-      <p className="text-base-content mb-1.5 max-w-xl text-2xl leading-relaxed font-medium italic">
+      <blockquote className="text-base-content mb-1.5 max-w-xl text-2xl leading-relaxed font-medium italic">
         "{quote}"
-      </p>
+      </blockquote>
       <p className="text-primary mb-0.5 text-xs font-bold">{movie}</p>
       <p className="text-secondary mb-1.5 text-xs font-medium">
         as {character}

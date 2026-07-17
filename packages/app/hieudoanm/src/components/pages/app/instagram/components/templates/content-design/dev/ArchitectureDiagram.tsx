@@ -20,18 +20,16 @@ export const ArchitectureDiagram: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-2 text-center">
-        <div className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
+        <h2 className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
           Architecture
-        </div>
+        </h2>
         {title && (
-          <div className="text-base-content mt-1 text-sm font-bold">
-            {title}
-          </div>
+          <h3 className="text-base-content mt-1 text-sm font-bold">{title}</h3>
         )}
       </div>
-      <div className="flex flex-1 flex-col gap-2">
+      <ul className="flex flex-1 flex-col gap-2">
         {components.map((comp, i) => (
-          <div key={i}>
+          <li key={i}>
             <div className="border-base-300 rounded-xl border p-2">
               <div className="text-base-content text-sm font-bold">
                 {comp.name}
@@ -54,9 +52,9 @@ export const ArchitectureDiagram: FC<TemplateProps> = ({ data }) => {
                 )}
               </div>
             )}
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

@@ -30,9 +30,9 @@ export const Skills: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
-      <span className="text-accent mb-2 text-xs font-bold tracking-[0.2em] uppercase">
+      <h2 className="text-accent mb-2 text-xs font-bold tracking-[0.2em] uppercase">
         {title}
-      </span>
+      </h2>
 
       <div className="flex flex-1 flex-col gap-2">
         {categories.map((cat, i) => (

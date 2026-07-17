@@ -20,27 +20,27 @@ export const GameReview: FC<TemplateProps> = ({ data }) => {
       <h1 className="text-base-content mb-0.5 text-4xl font-bold">{title}</h1>
       <p className="text-neutral mb-2 text-xs">Reviewed by {reviewer}</p>
       <div className="flex flex-1 gap-3">
-        <div className="flex w-1/2 flex-col gap-1">
-          <span className="text-success text-xs font-bold tracking-widest uppercase">
+        <ul className="flex w-1/2 flex-col gap-1">
+          <li className="text-success text-xs font-bold tracking-widest uppercase">
             Pros
-          </span>
+          </li>
           {pros.map((item, i) => (
-            <p key={i} className="text-base-content text-xs leading-relaxed">
+            <li key={i} className="text-base-content text-xs leading-relaxed">
               {item}
-            </p>
+            </li>
           ))}
-        </div>
+        </ul>
         <div className="bg-accent/20 w-0.5 flex-shrink-0" />
-        <div className="flex w-1/2 flex-col gap-1">
-          <span className="text-error text-xs font-bold tracking-widest uppercase">
+        <ul className="flex w-1/2 flex-col gap-1">
+          <li className="text-error text-xs font-bold tracking-widest uppercase">
             Cons
-          </span>
+          </li>
           {cons.map((item, i) => (
-            <p key={i} className="text-base-content text-xs leading-relaxed">
+            <li key={i} className="text-base-content text-xs leading-relaxed">
               {item}
-            </p>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </div>
   );

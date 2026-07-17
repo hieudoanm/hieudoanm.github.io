@@ -22,44 +22,44 @@ export const GearReview: FC<TemplateProps> = ({ data }) => {
           {category}
         </span>
       )}
-      <div className="mt-1 flex gap-1">
+      <ul className="mt-1 flex gap-1">
         {stars.map((filled, i) => (
-          <span
+          <li
             key={i}
             className={
               filled ? 'text-primary text-xs' : 'text-base-300 text-xs'
             }>
             ★
-          </span>
+          </li>
         ))}
-      </div>
+      </ul>
       {price && (
         <p className="text-base-content mt-1 text-xs font-black">{price}</p>
       )}
       <div className="mt-2 w-full max-w-xs space-y-1">
         {pros.length > 0 && (
-          <div className="text-left">
-            <p className="text-success mb-0.5 text-xs font-bold uppercase">
+          <ul className="text-left">
+            <li className="text-success mb-0.5 text-xs font-bold uppercase">
               Pros
-            </p>
+            </li>
             {pros.map((pro, i) => (
-              <p key={i} className="text-base-content text-xs">
+              <li key={i} className="text-base-content text-xs">
                 ✓ {pro}
-              </p>
+              </li>
             ))}
-          </div>
+          </ul>
         )}
         {cons.length > 0 && (
-          <div className="text-left">
-            <p className="text-error mb-0.5 text-xs font-bold uppercase">
+          <ul className="text-left">
+            <li className="text-error mb-0.5 text-xs font-bold uppercase">
               Cons
-            </p>
+            </li>
             {cons.map((con, i) => (
-              <p key={i} className="text-base-content text-xs">
+              <li key={i} className="text-base-content text-xs">
                 ✗ {con}
-              </p>
+              </li>
             ))}
-          </div>
+          </ul>
         )}
       </div>
     </div>

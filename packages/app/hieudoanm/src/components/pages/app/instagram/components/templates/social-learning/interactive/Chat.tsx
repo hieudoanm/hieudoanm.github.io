@@ -42,7 +42,7 @@ export const Chat: FC<TemplateProps> = ({ data }) => {
                 </p>
               </div>
               {msg.time && (
-                <span className="text-neutral mt-2 text-sm">{msg.time}</span>
+                <time className="text-neutral mt-2 text-sm">{msg.time}</time>
               )}
             </div>
           );

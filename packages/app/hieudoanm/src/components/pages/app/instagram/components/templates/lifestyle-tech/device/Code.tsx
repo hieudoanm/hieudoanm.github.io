@@ -35,14 +35,16 @@ export const Code: FC<TemplateProps> = ({ data }) => {
           )}
         </div>
         <div className="flex-1 overflow-auto bg-[#0d1117] px-0 py-2 font-mono text-xs leading-relaxed">
-          {codeLines.map((line, i) => (
-            <div key={i} className="flex hover:bg-[#161b22]">
-              <span className="flex w-7 shrink-0 items-start justify-end pr-2 text-[#8b949e] select-none">
-                {i + 1}
-              </span>
-              <span className="whitespace-pre text-[#c9d1d9]">{line}</span>
-            </div>
-          ))}
+          <ol>
+            {codeLines.map((line, i) => (
+              <li key={i} className="flex hover:bg-[#161b22]">
+                <span className="flex w-7 shrink-0 items-start justify-end pr-2 text-[#8b949e] select-none">
+                  {i + 1}
+                </span>
+                <span className="whitespace-pre text-[#c9d1d9]">{line}</span>
+              </li>
+            ))}
+          </ol>
         </div>
       </div>
     </div>

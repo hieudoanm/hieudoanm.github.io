@@ -19,11 +19,15 @@ export const WorkoutCard: FC<TemplateProps> = ({ data }) => {
       </h1>
       <div className="mt-6 flex gap-6">
         <div className="text-center">
-          <span className="text-accent text-3xl font-bold">{sets}</span>
+          <span className="text-accent text-3xl font-bold">
+            <strong>{sets}</strong>
+          </span>
           <p className="text-neutral text-xs">Sets</p>
         </div>
         <div className="text-center">
-          <span className="text-accent text-3xl font-bold">{reps}</span>
+          <span className="text-accent text-3xl font-bold">
+            <strong>{reps}</strong>
+          </span>
           <p className="text-neutral text-xs">Reps</p>
         </div>
       </div>

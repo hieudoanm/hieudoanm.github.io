@@ -39,34 +39,34 @@ export const Discussion: FC<TemplateProps> = ({ data }) => {
         <span className="text-neutral text-sm font-bold tracking-[0.15em] uppercase">
           Implications
         </span>
-        <div className="mt-2 flex flex-col gap-2">
+        <ul className="mt-2 flex flex-col gap-2">
           {implications.map((imp, i) => (
-            <div key={i} className="flex items-start gap-2">
+            <li key={i} className="flex items-start gap-2">
               <span className="bg-accent mt-2 h-2 w-2 flex-shrink-0 rounded-full" />
               <span className="text-base-content text-sm leading-relaxed">
                 {imp}
               </span>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
 
       <div className="mt-6">
         <span className="text-neutral text-sm font-bold tracking-[0.15em] uppercase">
           Future Directions
         </span>
-        <div className="mt-2 flex flex-col gap-2">
+        <ol className="mt-2 flex flex-col gap-2">
           {futureDirections.map((fd, i) => (
-            <div key={i} className="flex items-start gap-3">
+            <li key={i} className="flex items-start gap-3">
               <span className="text-accent mt-2 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold">
                 {i + 1}
               </span>
               <span className="text-base-content text-sm leading-relaxed">
                 {fd}
               </span>
-            </div>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </div>
   );

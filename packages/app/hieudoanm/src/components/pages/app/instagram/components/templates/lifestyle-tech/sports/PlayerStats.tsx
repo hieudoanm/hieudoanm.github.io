@@ -23,18 +23,18 @@ export const PlayerStats: FC<TemplateProps> = ({ data }) => {
         </div>
       </div>
 
-      <div className="grid w-full grid-cols-2 gap-3">
+      <ul className="grid w-full grid-cols-2 gap-3">
         {stats.map((s, i) => (
-          <div
+          <li
             key={i}
             className="bg-base-200 rounded-box flex flex-col items-center py-4">
             <span className="text-accent text-3xl font-black">{s.value}</span>
             <span className="text-neutral mt-1 text-xs font-bold uppercase">
               {s.label}
             </span>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

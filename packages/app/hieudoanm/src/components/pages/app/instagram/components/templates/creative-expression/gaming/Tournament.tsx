@@ -33,11 +33,11 @@ export const Tournament: FC<TemplateProps> = ({ data }) => {
         <span className="bg-accent/10 text-accent rounded-full px-3 py-0.5 text-xs font-bold">
           {game}
         </span>
-        <span className="text-base-300 text-xs">{date}</span>
+        <time className="text-base-300 text-xs">{date}</time>
       </div>
-      <div className="flex flex-1 flex-col gap-2">
+      <ul className="flex flex-1 flex-col gap-2">
         {results.map((result, i) => (
-          <div
+          <li
             key={i}
             className="bg-base-200 flex items-center rounded-lg px-2 py-2">
             <span className="mr-1.5 text-xs">
@@ -49,9 +49,9 @@ export const Tournament: FC<TemplateProps> = ({ data }) => {
             <span className="text-primary text-xs font-extrabold">
               {result.score}
             </span>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

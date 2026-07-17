@@ -11,9 +11,9 @@ export const BucketList: FC<TemplateProps> = ({ data }) => {
         Bucket List
       </span>
       <h1 className="text-base-content mb-6 text-4xl font-bold">{title}</h1>
-      <div className="flex flex-col gap-4">
+      <ol className="flex flex-col gap-4">
         {items.map((item, i) => (
-          <div key={i} className="flex items-start gap-4">
+          <li key={i} className="flex items-start gap-4">
             <span className="text-accent mt-0.5 font-mono text-base font-bold">
               {String(i + 1).padStart(2, '0')}
             </span>
@@ -23,9 +23,9 @@ export const BucketList: FC<TemplateProps> = ({ data }) => {
               </p>
               <p className="text-neutral mt-0.5 text-xs">{item.reason}</p>
             </div>
-          </div>
+          </li>
         ))}
-      </div>
+      </ol>
     </div>
   );
 };

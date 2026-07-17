@@ -16,9 +16,9 @@ export const Checklist: FC<TemplateProps> = ({ data }) => {
         {headline}
       </h1>
       {text && <p className="text-neutral mb-1 text-xs">{text}</p>}
-      <div className="flex min-h-0 flex-1 flex-col gap-1">
+      <ul className="flex min-h-0 flex-1 flex-col gap-1">
         {list.map((item, i) => (
-          <div
+          <li
             key={i}
             className="rounded-box bg-accent/5 flex items-center gap-1 px-2 py-1">
             <div className="bg-primary/20 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full">
@@ -38,9 +38,9 @@ export const Checklist: FC<TemplateProps> = ({ data }) => {
             <span className="text-base-content text-xs leading-snug font-medium">
               {item}
             </span>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

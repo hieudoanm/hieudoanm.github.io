@@ -20,19 +20,19 @@ export const SleepTips: FC<TemplateProps> = ({ data }) => {
         </div>
       )}
       {tips.length > 0 && (
-        <div className="mt-5 flex flex-col gap-2">
+        <ul className="mt-5 flex flex-col gap-2">
           {tips.map((t, i) => (
-            <div key={i} className="flex items-start gap-3">
+            <li key={i} className="flex items-start gap-3">
               <span className="text-accent mt-0.5 text-sm">•</span>
               <p className="text-base-content text-sm">{t}</p>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       )}
       {quote && (
-        <p className="text-neutral mt-5 text-xs italic">
+        <blockquote className="text-neutral mt-5 text-xs italic">
           &ldquo;{quote}&rdquo;
-        </p>
+        </blockquote>
       )}
     </div>
   );

@@ -14,14 +14,14 @@ export const LensGuide: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
-      <div className="text-accent mb-1 text-xs font-bold tracking-[0.2em] uppercase">
+      <h2 className="text-accent mb-1 text-xs font-bold tracking-[0.2em] uppercase">
         Lens Guide
-      </div>
+      </h2>
       <h1 className="text-base-content mb-2 text-4xl font-bold">{title}</h1>
       {lenses.length > 0 && (
-        <div className="flex w-full max-w-md flex-col gap-1">
+        <ul className="flex w-full max-w-md flex-col gap-1">
           {lenses.map((lens, i) => (
-            <div
+            <li
               key={i}
               className="border-base-300 flex items-center gap-1 rounded border p-1 text-left">
               <div className="bg-primary/10 flex h-6 w-6 shrink-0 items-center justify-center rounded-full">
@@ -30,16 +30,16 @@ export const LensGuide: FC<TemplateProps> = ({ data }) => {
                 </span>
               </div>
               <div className="flex-1">
-                <div className="text-base-content text-xs font-bold">
+                <strong className="text-base-content text-xs font-bold">
                   {lens.name}
-                </div>
-                <div className="text-neutral text-xs">
+                </strong>
+                <p className="text-neutral text-xs">
                   {lens.aperture} · {lens.use}
-                </div>
+                </p>
               </div>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       )}
     </div>
   );

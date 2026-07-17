@@ -32,7 +32,9 @@ export const SavingsGoal: FC<TemplateProps> = ({ data }) => {
         <span className="text-accent mt-1 block text-sm font-bold">{pct}%</span>
       </div>
       {deadline && (
-        <p className="text-neutral mt-4 text-xs">Reach by {deadline}</p>
+        <p className="text-neutral mt-4 text-xs">
+          Reach by <time>{deadline}</time>
+        </p>
       )}
       {note && <p className="text-neutral mt-2 text-xs">{note}</p>}
     </div>

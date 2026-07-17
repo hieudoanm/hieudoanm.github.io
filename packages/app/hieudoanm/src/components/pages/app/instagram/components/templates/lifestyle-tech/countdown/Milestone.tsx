@@ -11,9 +11,9 @@ export const Milestone: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
       <div className="text-center">
-        <div className="text-neutral text-xs font-bold tracking-widest uppercase">
+        <h2 className="text-neutral text-xs font-bold tracking-widest uppercase">
           {title}
-        </div>
+        </h2>
         <div className="text-primary mt-3 text-2xl font-black">{milestone}</div>
         <div className="text-base-content mt-3 flex items-baseline justify-center gap-2">
           <span className="text-primary text-2xl font-black">{current}</span>

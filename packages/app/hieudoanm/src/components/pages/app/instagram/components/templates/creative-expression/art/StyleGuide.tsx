@@ -30,13 +30,11 @@ export const StyleGuide: FC<TemplateProps> = ({ data }) => {
       <h1 className="text-base-content mb-3 text-4xl font-black tracking-tight">
         {title}
       </h1>
-      <div className="flex w-full flex-col gap-3">
+      <ul className="flex w-full flex-col gap-3">
         {styles.map((s) => (
-          <div key={s.name} className="bg-base-200 rounded-lg p-2 text-left">
+          <li key={s.name} className="bg-base-200 rounded-lg p-2 text-left">
             <div className="mb-1 flex items-center gap-1">
-              <span className="text-base-content text-xs font-bold">
-                {s.name}
-              </span>
+              <h3 className="text-base-content text-xs font-bold">{s.name}</h3>
               <span className="bg-primary/15 text-primary rounded-full px-1 py-0.5 text-xs font-semibold tracking-wider uppercase">
                 {s.era}
               </span>
@@ -47,9 +45,9 @@ export const StyleGuide: FC<TemplateProps> = ({ data }) => {
             <p className="text-base-content/60 text-xs italic">
               {s.characteristics}
             </p>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

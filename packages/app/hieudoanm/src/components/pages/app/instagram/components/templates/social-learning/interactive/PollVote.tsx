@@ -11,9 +11,9 @@ export const PollVote: FC<TemplateProps> = ({ data }) => {
       <h1 className="text-base-content mb-6 text-4xl leading-tight font-bold">
         {question}
       </h1>
-      <div className="flex flex-1 flex-col justify-center gap-3">
+      <ul className="flex flex-1 flex-col justify-center gap-3">
         {options.map((opt, i) => (
-          <div key={i}>
+          <li key={i}>
             <div className="mb-2 flex items-center justify-between text-sm">
               <span className="text-base-content font-medium">{opt.label}</span>
               <span className="text-neutral">{opt.percentage}%</span>
@@ -24,9 +24,9 @@ export const PollVote: FC<TemplateProps> = ({ data }) => {
                 style={{ width: `${opt.percentage}%` }}
               />
             </div>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
       <p className="text-neutral mt-4 text-center text-sm">Cast your vote</p>
     </div>
   );

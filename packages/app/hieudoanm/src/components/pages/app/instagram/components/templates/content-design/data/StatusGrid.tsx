@@ -19,9 +19,9 @@ export const StatusGrid: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <h1 className="text-base-content mb-3 text-4xl font-bold">{headline}</h1>
-      <div className="grid flex-1 grid-cols-2 gap-2">
+      <ul className="grid flex-1 grid-cols-2 gap-2">
         {services.map((s, i) => (
-          <div
+          <li
             key={i}
             className="bg-base-200 flex items-center gap-2 rounded-xl px-2 py-2">
             <span
@@ -31,9 +31,9 @@ export const StatusGrid: FC<TemplateProps> = ({ data }) => {
               <p className="text-base-content text-sm font-bold">{s.name}</p>
               <p className="text-neutral text-xs">{s.status}</p>
             </div>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

@@ -17,9 +17,9 @@ export const DataTable: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
-      <div className="text-base-content mb-2 text-center text-sm font-bold">
+      <h2 className="text-base-content mb-2 text-center text-sm font-bold">
         {title}
-      </div>
+      </h2>
       <div className="border-base-300 flex-1 overflow-hidden rounded border">
         <table className="w-full text-left text-[10px]">
           <thead>

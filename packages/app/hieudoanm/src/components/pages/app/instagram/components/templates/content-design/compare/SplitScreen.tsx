@@ -9,10 +9,7 @@ export const SplitScreen: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="flex h-full w-full">
       {imageUrl ? (
-        <div
-          className="h-full w-1/2 bg-cover bg-center"
-          style={{ backgroundImage: `url(${imageUrl})` }}
-        />
+        <img src={imageUrl} alt="" className="h-full w-1/2 object-cover" />
       ) : (
         <div className="border-accent/30 bg-accent/5 text-accent flex h-full w-1/2 items-center justify-center border-2 border-dashed text-sm">
           <svg

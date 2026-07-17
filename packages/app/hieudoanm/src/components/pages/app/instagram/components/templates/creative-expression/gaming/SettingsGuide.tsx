@@ -27,14 +27,14 @@ export const SettingsGuide: FC<TemplateProps> = ({ data }) => {
         </span>
       </div>
       <p className="text-neutral mb-2 text-xs">{description}</p>
-      <div className="flex flex-1 flex-col gap-1">
-        <div className="text-base-300 flex text-xs font-bold tracking-wider uppercase">
+      <ul className="flex flex-1 flex-col gap-1">
+        <li className="text-base-300 flex text-xs font-bold tracking-wider uppercase">
           <span className="w-2/5">Setting</span>
           <span className="w-1/5 text-center">Default</span>
           <span className="w-2/5 text-right">Recommended</span>
-        </div>
+        </li>
         {settings.map((item, i) => (
-          <div
+          <li
             key={i}
             className="bg-base-200 flex items-center rounded-lg px-2 py-1.5">
             <span className="text-base-content w-2/5 text-xs font-semibold">
@@ -46,9 +46,9 @@ export const SettingsGuide: FC<TemplateProps> = ({ data }) => {
             <span className="text-success w-2/5 text-right text-xs font-bold">
               {item.recommendation}
             </span>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

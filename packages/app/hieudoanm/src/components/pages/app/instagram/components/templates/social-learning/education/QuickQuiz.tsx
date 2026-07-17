@@ -13,12 +13,12 @@ export const QuickQuiz: FC<TemplateProps> = ({ data }) => {
         Quick Quiz
       </span>
       <p className="text-base-content text-sm font-semibold">{question}</p>
-      <div className="mt-4 flex flex-col gap-2">
+      <ol className="mt-4 flex flex-col gap-2">
         {options.map((opt, i) => {
           const letters = ['A', 'B', 'C', 'D'];
           const isCorrect = opt === answer;
           return (
-            <div
+            <li
               key={i}
               className={`rounded-box border px-4 py-2 text-sm ${
                 isCorrect ? 'border-accent bg-accent/5' : 'border-base-300'
@@ -31,10 +31,10 @@ export const QuickQuiz: FC<TemplateProps> = ({ data }) => {
                 className={`ml-4 ${isCorrect ? 'text-base-content font-medium' : 'text-neutral'}`}>
                 {opt}
               </span>
-            </div>
+            </li>
           );
         })}
-      </div>
+      </ol>
       {explanation && (
         <div className="border-accent/20 mt-6 border-t pt-4">
           <p className="text-neutral text-sm leading-relaxed">{explanation}</p>

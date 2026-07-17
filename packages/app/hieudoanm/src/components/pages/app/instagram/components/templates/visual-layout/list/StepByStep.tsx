@@ -20,18 +20,18 @@ export const StepByStep: FC<TemplateProps> = ({ data }) => {
         {headline}
       </h1>
       <p className="text-neutral mb-4 text-center text-xs">{text}</p>
-      <div className="flex flex-1 items-center justify-center gap-2">
+      <ol className="flex flex-1 items-center justify-center gap-2">
         {items.map((step, i) => (
-          <div key={i} className="flex flex-1 flex-col items-center gap-1">
+          <li key={i} className="flex flex-1 flex-col items-center gap-1">
             <div className="rounded-box bg-accent/10 flex h-8 w-8 items-center justify-center">
               <span className="text-primary text-sm font-bold">{i + 1}</span>
             </div>
             <span className="text-neutral text-center text-xs font-semibold tracking-wide uppercase">
               {step.label}
             </span>
-          </div>
+          </li>
         ))}
-      </div>
+      </ol>
     </div>
   );
 };

@@ -11,18 +11,18 @@ export const Abbreviation: FC<TemplateProps> = ({ data }) => {
       <span className="text-accent mb-8 text-sm font-bold tracking-[0.2em] uppercase">
         Abbreviation
       </span>
-      <div className="flex flex-col items-start gap-3">
+      <ul className="flex flex-col items-start gap-3">
         {abbr.split('').map((letter, i) => (
-          <div key={i} className="flex items-baseline gap-3">
+          <li key={i} className="flex items-baseline gap-3">
             <span className="text-primary text-4xl leading-none font-black tracking-tight">
               {letter}
             </span>
             <span className="text-base-content text-2xl font-semibold">
               {(words[i] ?? '').slice(1)}
             </span>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

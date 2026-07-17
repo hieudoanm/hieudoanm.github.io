@@ -18,9 +18,9 @@ export const ChordChart: FC<TemplateProps> = ({ data }) => {
           {difficulty}
         </span>
       )}
-      <div className="mt-3 grid grid-cols-3 gap-2">
+      <ul className="mt-3 grid grid-cols-3 gap-2">
         {chords.map((chord, i) => (
-          <div key={i} className="flex flex-col items-center">
+          <li key={i} className="flex flex-col items-center">
             <div className="bg-base-200 border-base-300 flex h-8 w-7 flex-col items-center justify-center rounded-lg border">
               <span className="text-base-content text-xs font-bold">
                 {chord.name}
@@ -29,9 +29,9 @@ export const ChordChart: FC<TemplateProps> = ({ data }) => {
             <p className="text-neutral mt-0.5 text-xs leading-tight">
               {chord.fingers}
             </p>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
       {tip && (
         <div className="bg-accent/10 text-accent mt-3 max-w-xs rounded-lg px-2 py-1 text-xs">
           💡 {tip}

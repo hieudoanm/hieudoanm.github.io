@@ -22,7 +22,7 @@ export const BreakingNews: FC<TemplateProps> = ({ data }) => {
         <div className="text-neutral mt-4 flex items-center justify-center gap-2 text-sm">
           {source && <span className="font-semibold">{source}</span>}
           {source && timestamp && <span>-</span>}
-          {timestamp && <span>{timestamp}</span>}
+          {timestamp && <time>{timestamp}</time>}
         </div>
       </div>
     </div>

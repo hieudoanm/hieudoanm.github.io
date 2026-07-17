@@ -12,21 +12,21 @@ export const MeditationGuide: FC<TemplateProps> = ({ data }) => {
       <div className="flex items-center justify-between">
         <h1 className="text-base-content text-4xl font-bold">{title}</h1>
         {duration && (
-          <span className="rounded-box bg-accent/10 text-accent px-3 py-1 text-xs font-bold">
+          <time className="rounded-box bg-accent/10 text-accent px-3 py-1 text-xs font-bold">
             {duration}
-          </span>
+          </time>
         )}
       </div>
-      <div className="mt-6 flex flex-col gap-4">
+      <ol className="mt-6 flex flex-col gap-4">
         {instructions.map((inst, i) => (
-          <div key={i} className="flex items-start gap-3">
+          <li key={i} className="flex items-start gap-3">
             <span className="bg-accent text-accent-content mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full text-xs font-bold">
               {i + 1}
             </span>
             <p className="text-base-content pt-1 text-sm">{inst}</p>
-          </div>
+          </li>
         ))}
-      </div>
+      </ol>
       {tip && (
         <div className="bg-accent/5 rounded-box mt-6 px-4 py-3">
           <span className="text-accent text-xs font-bold tracking-widest uppercase">

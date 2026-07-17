@@ -15,22 +15,22 @@ export const Unboxing: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
       <div className="text-center">
-        <div className="text-neutral text-xs font-bold tracking-widest uppercase">
+        <h1 className="text-neutral text-xs font-bold tracking-widest uppercase">
           {title}
-        </div>
-        <div className="text-primary mt-2 text-2xl font-black">{product}</div>
-        <div className="text-primary mt-3 text-xs font-bold tracking-wider uppercase">
+        </h1>
+        <h2 className="text-primary mt-2 text-2xl font-black">{product}</h2>
+        <h3 className="text-primary mt-3 text-xs font-bold tracking-wider uppercase">
           What's inside
-        </div>
-        <div className="mt-3 flex flex-col gap-1.5">
+        </h3>
+        <ul className="mt-3 flex flex-col gap-1.5">
           {items.map((item, i) => (
-            <div
+            <li
               key={i}
               className="border-base-300 rounded border px-4 py-1.5 text-xs font-medium">
               {item}
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
         {text && <p className="text-neutral mt-3 text-sm">{text}</p>}
       </div>
     </div>

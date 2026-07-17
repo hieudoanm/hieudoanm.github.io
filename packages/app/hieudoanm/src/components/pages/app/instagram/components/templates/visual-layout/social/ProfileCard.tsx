@@ -10,9 +10,10 @@ export const ProfileCard: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
       {imageUrl ? (
-        <div
-          className="ring-accent/20 mb-3 h-14 w-14 rounded-full bg-cover bg-center ring-4"
-          style={{ backgroundImage: `url(${imageUrl})` }}
+        <img
+          src={imageUrl}
+          alt=""
+          className="ring-accent/20 mb-3 h-14 w-14 rounded-full object-cover ring-4"
         />
       ) : (
         <div className="bg-accent/10 ring-accent/20 mb-3 flex h-14 w-14 items-center justify-center rounded-full ring-4">

@@ -15,12 +15,12 @@ export const RecipeCard: FC<TemplateProps> = ({ data }) => {
       <div className="mt-2 flex gap-2">
         {prepTime && (
           <span className="rounded-box bg-accent/10 text-accent px-2.5 py-0.5 text-xs font-bold">
-            Prep {prepTime}
+            Prep <time>{prepTime}</time>
           </span>
         )}
         {cookTime && (
           <span className="rounded-box bg-base-300 text-neutral px-2.5 py-0.5 text-xs font-bold">
-            Cook {cookTime}
+            Cook <time>{cookTime}</time>
           </span>
         )}
       </div>
@@ -29,23 +29,23 @@ export const RecipeCard: FC<TemplateProps> = ({ data }) => {
           <span className="text-neutral text-xs font-bold tracking-widest uppercase">
             Ingredients
           </span>
-          <div className="mt-1 flex flex-wrap gap-x-3 gap-y-1">
+          <ul className="mt-1 flex flex-wrap gap-x-3 gap-y-1">
             {ingredients.map((ing, i) => (
-              <span key={i} className="text-base-content text-xs">
+              <li key={i} className="text-base-content text-xs">
                 • {ing}
-              </span>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       )}
       {steps.length > 0 && (
-        <div className="mt-4 flex flex-col gap-2">
+        <ol className="mt-4 flex flex-col gap-2">
           {steps.map((step, i) => (
-            <p key={i} className="text-base-content text-xs leading-relaxed">
+            <li key={i} className="text-base-content text-xs leading-relaxed">
               <span className="text-accent font-bold">{i + 1}.</span> {step}
-            </p>
+            </li>
           ))}
-        </div>
+        </ol>
       )}
     </div>
   );

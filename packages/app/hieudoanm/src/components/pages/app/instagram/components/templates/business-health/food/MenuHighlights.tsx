@@ -14,9 +14,9 @@ export const MenuHighlights: FC<TemplateProps> = ({ data }) => {
         </span>
       )}
       <h1 className="text-base-content text-4xl font-bold">Menu Highlights</h1>
-      <div className="mt-5 flex flex-col gap-4">
+      <ul className="mt-5 flex flex-col gap-4">
         {items.map((item, i) => (
-          <div
+          <li
             key={i}
             className="border-base-300 flex items-start justify-between border-b pb-3">
             <div className="pr-4">
@@ -30,9 +30,9 @@ export const MenuHighlights: FC<TemplateProps> = ({ data }) => {
             <span className="text-accent flex-shrink-0 text-sm font-bold">
               {item.price}
             </span>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

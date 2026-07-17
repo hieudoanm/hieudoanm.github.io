@@ -12,9 +12,9 @@ export const SongLyric: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
       <span className="text-primary mb-1 font-serif text-xl">♪</span>
-      <p className="text-base-content mb-3 max-w-xl text-2xl leading-relaxed font-medium italic">
+      <blockquote className="text-base-content mb-3 max-w-xl text-2xl leading-relaxed font-medium italic">
         "{lyric}"
-      </p>
+      </blockquote>
       <p className="text-primary mb-0.5 text-xs font-bold">{song}</p>
       <p className="text-secondary mb-1 text-xs">{artist}</p>
       <div className="flex items-center gap-2">

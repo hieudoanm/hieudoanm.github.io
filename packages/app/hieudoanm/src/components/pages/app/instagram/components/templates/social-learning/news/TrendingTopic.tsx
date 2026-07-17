@@ -9,21 +9,21 @@ export const TrendingTopic: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
       <div className="w-full text-center">
-        <div className="text-accent text-sm font-bold tracking-[0.2em] uppercase">
+        <h2 className="text-accent text-sm font-bold tracking-[0.2em] uppercase">
           Trending Now
-        </div>
+        </h2>
         <div className="text-primary mt-4 text-4xl font-black">{hashtag}</div>
         {volume && <div className="text-neutral mt-2 text-sm">{volume}</div>}
         {relatedTags.length > 0 && (
-          <div className="mt-6 flex flex-wrap justify-center gap-2">
+          <ul className="mt-6 flex flex-wrap justify-center gap-2">
             {relatedTags.map((tag, i) => (
-              <span
+              <li
                 key={i}
                 className="border-base-300 text-base-content rounded-full border px-4 py-2 text-sm font-medium">
                 {tag}
-              </span>
+              </li>
             ))}
-          </div>
+          </ul>
         )}
       </div>
     </div>

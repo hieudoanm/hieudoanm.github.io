@@ -22,27 +22,25 @@ export const Timeline: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="flex h-full w-full flex-col p-8">
-      <h1 className="text-base-content mb-3 text-4xl font-bold tracking-tight">
+      <h1 className="text-base-content mb-4 text-4xl font-bold tracking-tight">
         {title}
       </h1>
-      <div className="relative flex flex-1 flex-col gap-0 pl-4">
-        <div className="bg-accent/20 absolute top-2 left-[11px] h-[calc(100%-16px)] w-0.5" />
+      <div className="relative flex flex-1 flex-col gap-0">
+        <div className="bg-base-300 absolute top-2 bottom-2 left-[5px] w-0.5" />
         {items.map((entry, i) => (
-          <div
-            key={i}
-            className="relative flex flex-1 items-start gap-2 pb-2 last:pb-0">
-            <div
-              className={`absolute -left-8 mt-1.5 h-[18px] w-[18px] flex-shrink-0 rounded-full ring-4 ${
-                i === 0
-                  ? 'bg-primary ring-primary/20'
-                  : 'bg-accent/20 ring-white'
-              }`}
-            />
-            <div className="flex flex-col gap-0.5">
-              <span className="text-primary text-xs font-semibold tracking-wider uppercase">
+          <div key={i} className="relative flex flex-1 items-start gap-3">
+            <div className="relative z-10 mt-1 flex-shrink-0">
+              <div
+                className={`h-3 w-3 rounded-full ${
+                  i === 0 ? 'bg-primary ring-primary/20 ring-2' : 'bg-base-300'
+                }`}
+              />
+            </div>
+            <div className="flex flex-1 flex-col gap-0.5 pb-2">
+              <time className="text-primary text-xs font-semibold tracking-wider uppercase">
                 {entry.date}
-              </span>
-              <span className="text-neutral text-sm leading-relaxed">
+              </time>
+              <span className="text-base-content text-sm leading-snug">
                 {entry.event}
               </span>
             </div>
@@ -50,9 +48,10 @@ export const Timeline: FC<TemplateProps> = ({ data }) => {
         ))}
       </div>
       {imageUrl && (
-        <div
-          className="rounded-box mt-2 h-24 w-full flex-shrink-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${imageUrl})` }}
+        <img
+          src={imageUrl}
+          alt=""
+          className="rounded-box mt-2 h-24 w-full flex-shrink-0 object-cover"
         />
       )}
     </div>

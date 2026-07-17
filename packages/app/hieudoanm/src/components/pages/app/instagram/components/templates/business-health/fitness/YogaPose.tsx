@@ -29,26 +29,26 @@ export const YogaPose: FC<TemplateProps> = ({ data }) => {
         <span className="text-neutral mt-1 text-xs">Hold for {duration}</span>
       )}
       {benefits.length > 0 && (
-        <div className="mt-4 flex flex-wrap gap-1.5">
+        <ul className="mt-4 flex flex-wrap gap-1.5">
           {benefits.map((b, i) => (
-            <span
+            <li
               key={i}
               className="rounded-box bg-base-300 text-neutral px-2.5 py-0.5 text-xs font-medium">
               {b}
-            </span>
+            </li>
           ))}
-        </div>
+        </ul>
       )}
-      <div className="mt-5 flex flex-col gap-2">
+      <ol className="mt-5 flex flex-col gap-2">
         {instructions.map((inst, i) => (
-          <p key={i} className="text-base-content text-sm leading-relaxed">
+          <li key={i} className="text-base-content text-sm leading-relaxed">
             <span className="text-accent font-mono text-xs font-bold">
               {i + 1}.
             </span>{' '}
             {inst}
-          </p>
+          </li>
         ))}
-      </div>
+      </ol>
     </div>
   );
 };

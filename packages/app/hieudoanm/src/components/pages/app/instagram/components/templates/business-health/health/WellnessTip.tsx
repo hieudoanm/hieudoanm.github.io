@@ -26,10 +26,14 @@ export const WellnessTip: FC<TemplateProps> = ({ data }) => {
           d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
         />
       </svg>
-      <p className="text-base-content text-xl leading-snug font-bold">{tip}</p>
+      <p className="text-base-content text-xl leading-snug font-bold">
+        <strong>{tip}</strong>
+      </p>
       <p className="text-neutral mt-4 text-sm leading-relaxed">{description}</p>
       {source && (
-        <p className="text-accent mt-6 text-xs font-medium">&mdash; {source}</p>
+        <cite className="text-accent mt-6 text-xs font-medium">
+          &mdash; {source}
+        </cite>
       )}
     </div>
   );

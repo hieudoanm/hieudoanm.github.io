@@ -23,7 +23,7 @@ export const Announcement: FC<TemplateProps> = ({ data }) => {
       <div className="mt-auto">
         <div className="bg-accent/20 h-0.5 w-full rounded-full" />
         <p className="text-accent mt-4 text-sm font-medium tracking-wider uppercase">
-          {date}
+          <time>{date}</time>
         </p>
       </div>
     </div>

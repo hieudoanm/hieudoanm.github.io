@@ -18,16 +18,16 @@ export const StudyTips: FC<TemplateProps> = ({ data }) => {
         {technique}
       </h1>
       <p className="text-neutral mt-2 text-sm leading-relaxed">{description}</p>
-      <div className="mt-6 flex flex-col gap-3">
+      <ol className="mt-6 flex flex-col gap-3">
         {steps.map((step, i) => (
-          <div key={i} className="flex items-start gap-4">
+          <li key={i} className="flex items-start gap-4">
             <span className="text-accent mt-2 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold">
               {i + 1}
             </span>
             <p className="text-base-content text-sm">{step}</p>
-          </div>
+          </li>
         ))}
-      </div>
+      </ol>
     </div>
   );
 };

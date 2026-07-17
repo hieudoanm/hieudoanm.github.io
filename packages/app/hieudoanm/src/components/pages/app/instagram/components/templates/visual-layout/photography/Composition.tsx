@@ -9,9 +9,9 @@ export const Composition: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
-      <div className="text-accent mb-1 text-xs font-bold tracking-[0.2em] uppercase">
+      <h2 className="text-accent mb-1 text-xs font-bold tracking-[0.2em] uppercase">
         Composition
-      </div>
+      </h2>
       <h1 className="text-base-content mb-1 text-4xl font-bold">{title}</h1>
       {rule && (
         <span className="text-accent mb-1 text-xs font-bold">{rule}</span>
@@ -22,16 +22,16 @@ export const Composition: FC<TemplateProps> = ({ data }) => {
         </p>
       )}
       {tips.length > 0 && (
-        <div className="mt-1 flex w-full max-w-sm flex-col gap-1 text-left">
+        <ol className="mt-1 flex w-full max-w-sm flex-col gap-1 text-left">
           {tips.map((tip, i) => (
-            <div key={i} className="flex items-start gap-1">
+            <li key={i} className="flex items-start gap-1">
               <span className="text-accent mt-0.5 text-xs font-bold">
                 {i + 1}.
               </span>
               <p className="text-base-content text-xs leading-relaxed">{tip}</p>
-            </div>
+            </li>
           ))}
-        </div>
+        </ol>
       )}
     </div>
   );

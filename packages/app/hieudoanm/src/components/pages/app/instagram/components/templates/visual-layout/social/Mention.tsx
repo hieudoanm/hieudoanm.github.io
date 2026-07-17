@@ -13,9 +13,10 @@ export const Mention: FC<TemplateProps> = ({ data }) => {
       <div className="rounded-box border-accent/20 flex flex-1 flex-col border p-4">
         <div className="mb-2 flex items-center gap-1">
           {avatarUrl ? (
-            <div
-              className="h-6 w-6 rounded-full bg-cover bg-center"
-              style={{ backgroundImage: `url(${avatarUrl})` }}
+            <img
+              src={avatarUrl}
+              alt=""
+              className="h-6 w-6 rounded-full object-cover"
             />
           ) : (
             <div className="bg-accent/10 flex h-6 w-6 items-center justify-center rounded-full">

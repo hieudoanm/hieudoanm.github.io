@@ -49,7 +49,9 @@ export const InvoiceCard: FC<TemplateProps> = ({ data }) => {
         ))}
       </div>
       <div className="bg-base-200 rounded-box mt-4 flex items-center justify-between px-4 py-3">
-        <span className="text-neutral text-xs">Due {dueDate}</span>
+        <span className="text-neutral text-xs">
+          Due <time>{dueDate}</time>
+        </span>
         <div className="text-right">
           <span className="text-neutral text-xs font-bold uppercase">
             Total

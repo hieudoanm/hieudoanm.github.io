@@ -11,21 +11,21 @@ export const SunriseSunset: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
-      <span className="text-accent mb-2 text-xs font-bold tracking-[0.2em] uppercase">
+      <h2 className="text-accent mb-2 text-xs font-bold tracking-[0.2em] uppercase">
         {title}
-      </span>
+      </h2>
       <h1 className="text-base-content text-4xl font-bold">{city}</h1>
 
       <div className="mt-3 flex items-center gap-4">
         <div className="text-center">
-          <span className="text-accent text-xs font-black">{sunrise}</span>
+          <time className="text-accent text-xs font-black">{sunrise}</time>
           <span className="text-neutral mt-1 block text-xs font-bold tracking-[0.15em] uppercase">
             Sunrise
           </span>
         </div>
         <div className="bg-neutral/20 h-px w-12" />
         <div className="text-center">
-          <span className="text-accent text-xs font-black">{sunset}</span>
+          <time className="text-accent text-xs font-black">{sunset}</time>
           <span className="text-neutral mt-1 block text-xs font-bold tracking-[0.15em] uppercase">
             Sunset
           </span>

@@ -29,9 +29,9 @@ export const FoodReview: FC<TemplateProps> = ({ data }) => {
           ))}
         </div>
       </div>
-      <p className="text-base-content mt-5 text-sm leading-relaxed">
+      <blockquote className="text-base-content mt-5 text-sm leading-relaxed">
         &ldquo;{review}&rdquo;
-      </p>
+      </blockquote>
     </div>
   );
 };

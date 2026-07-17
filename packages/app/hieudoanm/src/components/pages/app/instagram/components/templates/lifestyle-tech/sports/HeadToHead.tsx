@@ -37,10 +37,10 @@ export const HeadToHead: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-4 text-center">
-        <div className="text-neutral text-xs font-semibold tracking-widest uppercase">
+        <h2 className="text-neutral text-xs font-semibold tracking-widest uppercase">
           {headline}
-        </div>
-        {text && <div className="text-neutral mt-1 text-xs">{text}</div>}
+        </h2>
+        {text && <p className="text-neutral mt-1 text-xs">{text}</p>}
       </div>
 
       <div className="flex items-center justify-center gap-8 py-3">
@@ -58,9 +58,9 @@ export const HeadToHead: FC<TemplateProps> = ({ data }) => {
         <div className="flex gap-1">{renderForm(formB)}</div>
       </div>
 
-      <div className="flex flex-1 flex-col justify-center gap-3 py-4">
+      <ul className="flex flex-1 flex-col justify-center gap-3 py-4">
         {stats.map((s, i) => (
-          <div key={i} className="flex items-center gap-3">
+          <li key={i} className="flex items-center gap-3">
             <span className="text-base-content w-12 text-right text-xs font-bold">
               {s.valueA}
             </span>
@@ -82,9 +82,9 @@ export const HeadToHead: FC<TemplateProps> = ({ data }) => {
             <span className="text-base-content w-12 text-left text-xs font-bold">
               {s.valueB}
             </span>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

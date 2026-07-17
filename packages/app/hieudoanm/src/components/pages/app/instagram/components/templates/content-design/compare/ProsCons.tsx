@@ -34,11 +34,15 @@ export const ProsCons: FC<TemplateProps> = ({ data }) => {
             </svg>
             Pros
           </span>
-          {proList.map((item, i) => (
-            <p key={i} className="text-base-content text-base leading-relaxed">
-              {item}
-            </p>
-          ))}
+          <ul>
+            {proList.map((item, i) => (
+              <li
+                key={i}
+                className="text-base-content text-base leading-relaxed">
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
         <div className="bg-accent/20 flex w-0.5 flex-shrink-0" />
         <div className="flex w-1/2 flex-col gap-2 p-4">
@@ -57,11 +61,15 @@ export const ProsCons: FC<TemplateProps> = ({ data }) => {
             </svg>
             Cons
           </span>
-          {conList.map((item, i) => (
-            <p key={i} className="text-base-content text-base leading-relaxed">
-              {item}
-            </p>
-          ))}
+          <ul>
+            {conList.map((item, i) => (
+              <li
+                key={i}
+                className="text-base-content text-base leading-relaxed">
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>

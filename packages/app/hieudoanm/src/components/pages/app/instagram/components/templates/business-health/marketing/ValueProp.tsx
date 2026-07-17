@@ -26,25 +26,23 @@ export const ValueProp: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-3 text-center">
-        <div className="text-base-content text-sm font-bold">{headline}</div>
+        <h2 className="text-base-content text-sm font-bold">{headline}</h2>
       </div>
-      <div className="flex flex-1 flex-col gap-2">
+      <ul className="flex flex-1 flex-col gap-2">
         {features.map((f, i) => (
-          <div
+          <li
             key={i}
             className="border-base-300 flex items-start gap-3 rounded border px-3 py-2">
             <div className="bg-primary flex h-6 w-6 shrink-0 items-center justify-center rounded text-xs font-bold text-white">
               {i + 1}
             </div>
             <div>
-              <div className="text-base-content text-xs font-bold">
-                {f.title}
-              </div>
-              <div className="text-neutral mt-0.5 text-xs">{f.description}</div>
+              <h3 className="text-base-content text-xs font-bold">{f.title}</h3>
+              <p className="text-neutral mt-0.5 text-xs">{f.description}</p>
             </div>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

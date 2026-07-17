@@ -30,9 +30,10 @@ export const Testimonial: FC<TemplateProps> = ({ data }) => {
       </blockquote>
       <div className="flex items-center gap-2">
         {imageUrl ? (
-          <div
-            className="ring-accent/20 h-8 w-8 rounded-full bg-cover bg-center ring-2"
-            style={{ backgroundImage: `url(${imageUrl})` }}
+          <img
+            src={imageUrl}
+            alt=""
+            className="ring-accent/20 h-8 w-8 rounded-full object-cover ring-2"
           />
         ) : (
           <div className="bg-accent/10 ring-accent/20 flex h-8 w-8 items-center justify-center rounded-full ring-2">

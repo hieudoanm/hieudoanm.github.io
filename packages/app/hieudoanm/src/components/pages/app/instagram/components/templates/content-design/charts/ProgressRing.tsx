@@ -13,8 +13,8 @@ export const ProgressRing: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
-      <div className="text-base-content mb-2 text-sm font-bold">{title}</div>
-      {text && <div className="text-neutral mb-2 text-xs">{text}</div>}
+      <h2 className="text-base-content mb-2 text-sm font-bold">{title}</h2>
+      {text && <p className="text-neutral mb-2 text-xs">{text}</p>}
       <svg viewBox="0 0 180 180" className="h-auto w-48">
         <circle
           cx={90}

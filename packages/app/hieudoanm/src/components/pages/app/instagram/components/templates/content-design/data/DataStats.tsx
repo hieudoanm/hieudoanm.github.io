@@ -12,9 +12,10 @@ export const DataStats: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden p-8 text-center">
       {imageUrl && (
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-10"
-          style={{ backgroundImage: `url(${imageUrl})` }}
+        <img
+          src={imageUrl}
+          alt=""
+          className="absolute inset-0 object-cover opacity-10"
         />
       )}
       <div className="relative z-10">

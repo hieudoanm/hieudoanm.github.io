@@ -21,7 +21,7 @@ export const Iceberg: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-3 text-center">
-        <div className="text-base-content text-sm font-bold">{title}</div>
+        <h2 className="text-base-content text-sm font-bold">{title}</h2>
         {text && <div className="text-neutral mt-2 text-sm">{text}</div>}
       </div>
       <div className="flex flex-1 flex-col items-center justify-center gap-2">
@@ -41,13 +41,13 @@ export const Iceberg: FC<TemplateProps> = ({ data }) => {
                 <span className="text-sm font-bold text-white/80">
                   {layer.label}
                 </span>
-                <div className="mt-2 flex flex-wrap justify-center gap-2">
+                <ul className="mt-2 flex flex-wrap justify-center gap-2">
                   {layer.items.map((item, j) => (
-                    <span key={j} className="text-sm font-medium text-white">
+                    <li key={j} className="text-sm font-medium text-white">
                       {item}
-                    </span>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             </div>
           );

@@ -10,7 +10,8 @@ export const HighlightedTitle: FC<TemplateProps> = ({ data }) => {
     const words = headline.split(/(\s+)/);
     return words.map((word, i) => {
       const isHighlight = highlights.some(
-        (h: string) => (h ?? '').toLowerCase() === word.trim().toLowerCase()
+        (h: string) =>
+          (h ?? '').toString().toLowerCase() === word.trim().toLowerCase()
       );
       return (
         <span

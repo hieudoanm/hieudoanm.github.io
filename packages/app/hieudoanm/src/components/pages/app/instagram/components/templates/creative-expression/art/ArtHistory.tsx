@@ -24,23 +24,23 @@ export const ArtHistory: FC<TemplateProps> = ({ data }) => {
       {period && (
         <p className="text-primary mb-3 text-xs font-semibold">{period}</p>
       )}
-      <div className="relative flex w-full flex-col gap-2 pl-3">
+      <ol className="relative flex w-full flex-col gap-2 pl-3">
         <div className="bg-primary/20 absolute top-2 left-[7px] h-[calc(100%-16px)] w-0.5" />
         {entries.map((e, i) => (
-          <div key={i} className="relative flex items-start gap-2">
+          <li key={i} className="relative flex items-start gap-2">
             <div className="bg-primary absolute top-1.5 -left-6 h-3 w-3 rounded-full ring-2 ring-white" />
             <div className="text-left">
-              <span className="text-primary text-xs font-bold tracking-wider uppercase">
+              <time className="text-primary text-xs font-bold tracking-wider uppercase">
                 {e.date}
-              </span>
+              </time>
               <p className="text-base-content text-xs leading-snug font-medium">
                 {e.event}
               </p>
               <p className="text-neutral text-xs italic">{e.artist}</p>
             </div>
-          </div>
+          </li>
         ))}
-      </div>
+      </ol>
     </div>
   );
 };

@@ -22,7 +22,7 @@ export const Ladder: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-3 text-center">
-        <div className="text-base-content text-sm font-bold">{title}</div>
+        <h2 className="text-base-content text-sm font-bold">{title}</h2>
         {text && <div className="text-neutral mt-2 text-sm">{text}</div>}
       </div>
       <div className="flex flex-1 flex-col justify-center gap-2">
@@ -43,13 +43,13 @@ export const Ladder: FC<TemplateProps> = ({ data }) => {
                 <div
                   className="rounded-r-2xl px-4 py-2"
                   style={{ backgroundColor: colors[idx % colors.length] }}>
-                  <div className="flex flex-wrap gap-2">
+                  <ul className="flex flex-wrap gap-2">
                     {rung.items.map((item, j) => (
-                      <span key={j} className="text-sm font-medium text-white">
+                      <li key={j} className="text-sm font-medium text-white">
                         {item}
-                      </span>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
               </div>
             </div>

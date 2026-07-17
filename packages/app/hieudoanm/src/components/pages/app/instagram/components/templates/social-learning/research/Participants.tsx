@@ -35,18 +35,18 @@ export const Participants: FC<TemplateProps> = ({ data }) => {
         <span className="text-neutral text-sm">total participants</span>
       </div>
 
-      <div className="mt-6 flex flex-col gap-2">
+      <ul className="mt-6 flex flex-col gap-2">
         {demographics.map((d, i) => (
-          <div
+          <li
             key={i}
             className="flex items-center justify-between border-b border-[#e5e7eb] pb-2">
             <span className="text-neutral text-sm font-medium">{d.label}</span>
             <span className="text-base-content text-sm font-semibold">
               {d.value}
             </span>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
 
       <div className="bg-base-200 mt-6 rounded-2xl p-3">
         <span className="text-neutral text-sm font-bold tracking-[0.15em] uppercase">
@@ -59,14 +59,14 @@ export const Participants: FC<TemplateProps> = ({ data }) => {
         <span className="text-neutral text-sm font-bold tracking-[0.15em] uppercase">
           Inclusion Criteria
         </span>
-        <div className="mt-2 flex flex-col gap-2">
+        <ul className="mt-2 flex flex-col gap-2">
           {criteria.map((c, i) => (
-            <div key={i} className="flex items-center gap-2">
+            <li key={i} className="flex items-center gap-2">
               <span className="bg-accent h-2 w-2 flex-shrink-0 rounded-full" />
               <span className="text-base-content text-sm">{c}</span>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </div>
   );

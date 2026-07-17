@@ -11,9 +11,10 @@ export const PullQuote: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
       {imageUrl && (
-        <div
-          className="ring-base-300 mb-3 h-16 w-16 rounded-full bg-cover bg-center ring-2"
-          style={{ backgroundImage: `url(${imageUrl})` }}
+        <img
+          src={imageUrl}
+          alt=""
+          className="ring-base-300 mb-3 h-16 w-16 rounded-full object-cover ring-2"
         />
       )}
       <div className="max-w-lg text-center">
@@ -21,14 +22,14 @@ export const PullQuote: FC<TemplateProps> = ({ data }) => {
           &ldquo;
         </span>
         <blockquote className="mb-3">
-          <p className="text-base-content text-xs leading-relaxed font-light italic">
+          <p className="text-base-content text-4xl leading-relaxed font-light italic">
             {quote ||
               text ||
               'The only way to do great work is to love what you do.'}
           </p>
         </blockquote>
         <span className="text-base-content mb-2 block text-xs font-bold">
-          {author || 'Steve Jobs'}
+          <strong>{author || 'Steve Jobs'}</strong>
         </span>
         {source && <span className="text-neutral text-xs">{source}</span>}
       </div>

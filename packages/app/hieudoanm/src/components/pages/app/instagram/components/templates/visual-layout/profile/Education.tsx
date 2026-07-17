@@ -48,14 +48,14 @@ export const Education: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
-      <span className="text-primary mb-2 text-xs font-bold tracking-[0.2em] uppercase">
+      <h2 className="text-primary mb-2 text-xs font-bold tracking-[0.2em] uppercase">
         {title}
-      </span>
+      </h2>
 
-      <div
+      <ul
         className={`divide-base-300 flex flex-1 flex-col divide-y ${gapClass} `}>
         {degrees.map((d, i) => (
-          <div key={i} className="pb-2">
+          <li key={i} className="pb-2">
             <span className="text-base-content text-xs font-bold">
               🎓 {d.degree} {d.field}
             </span>
@@ -68,22 +68,24 @@ export const Education: FC<TemplateProps> = ({ data }) => {
               )}
             </div>
             {d.gpa && <div className="text-neutral text-xs">GPA: {d.gpa}</div>}
-            {d.period && <div className="text-neutral text-xs">{d.period}</div>}
+            {d.period && (
+              <time className="text-neutral text-xs">{d.period}</time>
+            )}
             {d.highlights && d.highlights.length > 0 && (
-              <div className="mt-1 flex flex-col gap-1">
+              <ul className="mt-1 flex flex-col gap-1">
                 {d.highlights.map((h, j) => (
-                  <div key={j} className="flex items-start gap-1">
+                  <li key={j} className="flex items-start gap-1">
                     <span className="bg-accent mt-1 h-1 w-1 flex-shrink-0 rounded-full" />
                     <span className="text-base-content text-xs leading-relaxed">
                       {h}
                     </span>
-                  </div>
+                  </li>
                 ))}
-              </div>
+              </ul>
             )}
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

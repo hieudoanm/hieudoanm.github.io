@@ -24,18 +24,18 @@ export const AnatomyStudy: FC<TemplateProps> = ({ data }) => {
       {subject && (
         <p className="text-primary mb-3 text-xs font-semibold">{subject}</p>
       )}
-      <div className="mb-3 grid w-full grid-cols-2 gap-2">
+      <ul className="mb-3 grid w-full grid-cols-2 gap-2">
         {notes.map((n) => (
-          <div key={n.area} className="bg-base-200 rounded-lg p-2 text-left">
-            <span className="text-primary text-xs font-bold tracking-wider uppercase">
+          <li key={n.area} className="bg-base-200 rounded-lg p-2 text-left">
+            <h3 className="text-primary text-xs font-bold tracking-wider uppercase">
               {n.area}
-            </span>
+            </h3>
             <p className="text-neutral mt-0.5 text-xs leading-relaxed">
               {n.description}
             </p>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
       {tip && (
         <div className="bg-accent/10 text-accent rounded-lg px-2 py-1 text-xs font-medium">
           {tip}

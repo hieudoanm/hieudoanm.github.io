@@ -19,9 +19,9 @@ export const ColorPalette: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <h1 className="text-base-content mb-3 text-4xl font-black">{headline}</h1>
-      <div className="flex flex-1 flex-col gap-2">
+      <ul className="flex flex-1 flex-col gap-2">
         {colors.map((color) => (
-          <div key={color.name} className="flex items-center gap-2">
+          <li key={color.name} className="flex items-center gap-2">
             <div
               className="h-8 w-8 shrink-0 rounded-lg shadow-sm ring-1 ring-black/5"
               style={{ backgroundColor: color.hex }}
@@ -34,9 +34,9 @@ export const ColorPalette: FC<TemplateProps> = ({ data }) => {
                 {color.hex}
               </span>
             </div>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

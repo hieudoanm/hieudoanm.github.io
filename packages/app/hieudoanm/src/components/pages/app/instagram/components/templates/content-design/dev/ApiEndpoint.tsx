@@ -28,9 +28,9 @@ export const ApiEndpoint: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-2 text-center">
-        <div className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
+        <h2 className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
           API Endpoint
-        </div>
+        </h2>
       </div>
       <div className="border-base-300 rounded-xl border p-4">
         <div className="mb-2 flex items-center gap-1">
@@ -49,25 +49,29 @@ export const ApiEndpoint: FC<TemplateProps> = ({ data }) => {
         )}
         {params.length > 0 && (
           <div className="mb-2">
-            <div className="text-neutral mb-1 text-[9px] font-bold tracking-wider uppercase">
+            <h3 className="text-neutral mb-1 text-[9px] font-bold tracking-wider uppercase">
               Parameters
-            </div>
-            {params.map((p, i) => (
-              <div key={i} className="border-base-300 flex gap-1 border-t py-1">
-                <span className="text-primary font-mono text-[10px] font-semibold">
-                  {p.name}
-                </span>
-                <span className="text-accent text-[9px]">{p.type}</span>
-                <span className="text-neutral text-[9px]">{p.desc}</span>
-              </div>
-            ))}
+            </h3>
+            <ul>
+              {params.map((p, i) => (
+                <li
+                  key={i}
+                  className="border-base-300 flex gap-1 border-t py-1">
+                  <span className="text-primary font-mono text-[10px] font-semibold">
+                    {p.name}
+                  </span>
+                  <span className="text-accent text-[9px]">{p.type}</span>
+                  <span className="text-neutral text-[9px]">{p.desc}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         )}
         {responseExample && (
           <div>
-            <div className="text-neutral mb-1 text-[9px] font-bold tracking-wider uppercase">
+            <h3 className="text-neutral mb-1 text-[9px] font-bold tracking-wider uppercase">
               Response
-            </div>
+            </h3>
             <pre className="bg-base-200 rounded p-1 font-mono text-[9px] leading-relaxed">
               {responseExample}
             </pre>

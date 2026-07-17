@@ -91,19 +91,23 @@ export const FileTree: FC<TemplateProps> = ({ data }) => {
           Explorer
         </div>
         <div className="bg-base-100 flex-1 overflow-auto px-3 py-2 font-mono text-xs leading-relaxed">
-          {items.map((item, i) => (
-            <div key={i} className="flex items-center truncate leading-relaxed">
-              <TreePrefix item={item} items={items} i={i} />
-              <span
-                className={
-                  item.isFolder
-                    ? 'text-base-content/80 font-semibold'
-                    : 'text-base-content/60'
-                }>
-                {item.name}
-              </span>
-            </div>
-          ))}
+          <ul>
+            {items.map((item, i) => (
+              <li
+                key={i}
+                className="flex items-center truncate leading-relaxed">
+                <TreePrefix item={item} items={items} i={i} />
+                <span
+                  className={
+                    item.isFolder
+                      ? 'text-base-content/80 font-semibold'
+                      : 'text-base-content/60'
+                  }>
+                  {item.name}
+                </span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>

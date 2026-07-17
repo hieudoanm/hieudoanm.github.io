@@ -86,7 +86,7 @@ export const PreviewPane: FC<{
               <InstagramBadge username={instagramUsername} />
             )}
             {multi && (
-              <span className="absolute top-4 right-4 rounded-lg bg-black/30 px-3 py-1.5 font-mono text-lg leading-none text-white">
+              <span className="absolute top-4 right-4 rounded-lg bg-black/30 px-3 py-1.5 font-mono text-xs leading-none text-white">
                 {activeIndex + 1} / {totalPosts}
               </span>
             )}

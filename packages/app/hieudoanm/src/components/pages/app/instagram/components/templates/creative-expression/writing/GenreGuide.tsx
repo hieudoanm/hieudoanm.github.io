@@ -28,9 +28,9 @@ export const GenreGuide: FC<TemplateProps> = ({ data }) => {
         </p>
       )}
       <div className="mb-2 w-full max-w-sm text-left">
-        <span className="text-base-content mb-1 block text-xs font-bold tracking-wider uppercase">
+        <h2 className="text-base-content mb-1 block text-xs font-bold tracking-wider uppercase">
           Required Elements
-        </span>
+        </h2>
         <ul className="space-y-1">
           {elements.map((el) => (
             <li
@@ -43,13 +43,13 @@ export const GenreGuide: FC<TemplateProps> = ({ data }) => {
         </ul>
       </div>
       {examples.length > 0 && (
-        <div className="mb-2 flex flex-wrap justify-center gap-1">
+        <ul className="mb-2 flex flex-wrap justify-center gap-1">
           {examples.map((ex) => (
-            <span key={ex} className="badge badge-outline badge-sm">
+            <li key={ex} className="badge badge-outline badge-sm">
               {ex}
-            </span>
+            </li>
           ))}
-        </div>
+        </ul>
       )}
       {tip && (
         <div className="bg-accent/10 text-accent max-w-sm rounded-lg px-2 py-1 text-xs font-medium">

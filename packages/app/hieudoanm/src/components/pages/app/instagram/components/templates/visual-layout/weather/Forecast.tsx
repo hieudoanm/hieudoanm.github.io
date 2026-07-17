@@ -13,9 +13,9 @@ export const Forecast: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
-      <span className="text-accent mb-2 text-xs font-bold tracking-[0.2em] uppercase">
+      <h2 className="text-accent mb-2 text-xs font-bold tracking-[0.2em] uppercase">
         {title}
-      </span>
+      </h2>
       <h1 className="text-base-content text-4xl font-bold">{city}</h1>
 
       <div className="mt-3 text-center">

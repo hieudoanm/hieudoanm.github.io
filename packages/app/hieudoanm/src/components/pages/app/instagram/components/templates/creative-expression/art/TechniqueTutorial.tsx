@@ -36,25 +36,23 @@ export const TechniqueTutorial: FC<TemplateProps> = ({ data }) => {
         className={`mb-3 inline-block rounded-full px-2 py-1 text-xs font-bold tracking-wider uppercase ${badgeColor}`}>
         {difficulty}
       </span>
-      <div className="mb-3 flex w-full flex-col gap-2">
+      <ol className="mb-3 flex w-full flex-col gap-2">
         {steps.map((s, i) => (
-          <div
+          <li
             key={i}
             className="bg-base-200 flex items-start gap-2 rounded-lg p-2 text-left">
             <span className="bg-primary text-primary-content flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-xs font-bold">
               {i + 1}
             </span>
             <div>
-              <span className="text-base-content text-xs font-bold">
-                {s.step}
-              </span>
+              <h3 className="text-base-content text-xs font-bold">{s.step}</h3>
               <p className="text-neutral text-xs leading-snug">
                 {s.description}
               </p>
             </div>
-          </div>
+          </li>
         ))}
-      </div>
+      </ol>
       {tip && (
         <div className="bg-accent/10 text-accent rounded-lg px-2 py-1 text-xs font-medium">
           {tip}

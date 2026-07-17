@@ -29,22 +29,20 @@ export const ColorWheel: FC<TemplateProps> = ({ data }) => {
           {description}
         </p>
       )}
-      <div className="mb-3 flex w-full items-center justify-center gap-3">
+      <ul className="mb-3 flex w-full items-center justify-center gap-3">
         {colors.map((c) => (
-          <div key={c.name} className="flex flex-col items-center gap-1">
+          <li key={c.name} className="flex flex-col items-center gap-1">
             <div
               className="h-16 w-16 rounded-full shadow-md ring-2 ring-black/10"
               style={{ backgroundColor: c.hex }}
             />
-            <span className="text-base-content text-xs font-bold">
-              {c.name}
-            </span>
+            <h3 className="text-base-content text-xs font-bold">{c.name}</h3>
             <span className="text-neutral text-xs tracking-wider uppercase">
               {c.role}
             </span>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
       {tip && (
         <div className="bg-primary/10 text-primary rounded-lg px-2 py-1 text-xs font-medium">
           {tip}

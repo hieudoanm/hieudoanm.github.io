@@ -14,9 +14,9 @@ export const MoodBoard: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
-      <div className="text-accent mb-1 text-xs font-bold tracking-[0.2em] uppercase">
+      <h2 className="text-accent mb-1 text-xs font-bold tracking-[0.2em] uppercase">
         Mood Board
-      </div>
+      </h2>
       <h1 className="text-base-content mb-1 text-4xl font-bold">{title}</h1>
       {description && (
         <p className="text-neutral mb-1 max-w-sm text-xs leading-relaxed">
@@ -24,28 +24,28 @@ export const MoodBoard: FC<TemplateProps> = ({ data }) => {
         </p>
       )}
       {themes.length > 0 && (
-        <div className="mb-1 flex gap-1">
+        <ul className="mb-1 flex gap-1">
           {themes.map((theme, i) => (
-            <div key={i} className="flex flex-col items-center gap-1">
+            <li key={i} className="flex flex-col items-center gap-1">
               <div
                 className="h-4 w-4 rounded-full border-2 border-white shadow-sm"
                 style={{ backgroundColor: theme.color }}
               />
               <span className="text-neutral text-xs">{theme.name}</span>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       )}
       {keywords.length > 0 && (
-        <div className="flex flex-wrap justify-center gap-1">
+        <ul className="flex flex-wrap justify-center gap-1">
           {keywords.map((kw, i) => (
-            <span
+            <li
               key={i}
               className="rounded-box bg-base-300 text-base-content px-2 py-0.5 text-xs">
               {kw}
-            </span>
+            </li>
           ))}
-        </div>
+        </ul>
       )}
     </div>
   );

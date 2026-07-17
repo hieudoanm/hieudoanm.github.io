@@ -16,9 +16,9 @@ export const SubjectSummary: FC<TemplateProps> = ({ data }) => {
         <span className="text-neutral/30">/</span>
         <span className="text-neutral text-sm font-medium">{topic}</span>
       </div>
-      <div className="mt-4 flex flex-col gap-3">
+      <ul className="mt-4 flex flex-col gap-3">
         {keyPoints.map((point, i) => (
-          <div key={i} className="flex items-start gap-3">
+          <li key={i} className="flex items-start gap-3">
             <svg
               className="text-accent mt-2 h-4 w-4 flex-shrink-0"
               fill="none"
@@ -32,9 +32,9 @@ export const SubjectSummary: FC<TemplateProps> = ({ data }) => {
               />
             </svg>
             <p className="text-base-content text-sm">{point}</p>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
       {summary && (
         <div className="border-accent/20 mt-6 border-t pt-4">
           <p className="text-neutral text-sm leading-relaxed">{summary}</p>

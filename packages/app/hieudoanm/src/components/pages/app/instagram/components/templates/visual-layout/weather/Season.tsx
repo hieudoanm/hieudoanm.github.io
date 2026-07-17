@@ -16,9 +16,9 @@ export const Season: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
-      <span className="text-accent mb-2 text-xs font-bold tracking-[0.2em] uppercase">
+      <h2 className="text-accent mb-2 text-xs font-bold tracking-[0.2em] uppercase">
         {title}
-      </span>
+      </h2>
       <h1 className="text-base-content text-4xl font-bold">{season}</h1>
       <span className="text-neutral text-xs">{city}</span>
 
@@ -47,16 +47,16 @@ export const Season: FC<TemplateProps> = ({ data }) => {
         <span className="text-neutral text-xs font-bold tracking-[0.15em] uppercase">
           Highlights
         </span>
-        <div className="mt-2 flex flex-col gap-1">
+        <ul className="mt-2 flex flex-col gap-1">
           {highlights.map((h, i) => (
-            <div key={i} className="flex items-start gap-1">
+            <li key={i} className="flex items-start gap-1">
               <span className="bg-accent mt-0.5 h-1.5 w-1.5 flex-shrink-0 rounded-full" />
               <span className="text-base-content text-xs leading-relaxed">
                 {h}
               </span>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </div>
   );

@@ -21,6 +21,9 @@ import { DEFAULT_CONTENT_MAP, TEMPLATES } from './data/templates-schema';
 import type { PostItem } from './types';
 
 const MAX_POSTS = 20;
+const CANVAS_SIZE = 512;
+const EXPORT_SIZE = 1080;
+const EXPORT_SCALE = EXPORT_SIZE / CANVAS_SIZE;
 
 const LS_KEY_POSTS = 'instagram-posts';
 const LS_KEY_ACTIVE = 'instagram-active';
@@ -279,6 +282,7 @@ export const InstagramPage: FC = () => {
       ref: captureRef,
       output: `${base}-${ii}`,
       backgroundColor: '#000000',
+      scale: EXPORT_SCALE,
     });
   }, [activeIndex, fileName]);
 
@@ -308,7 +312,7 @@ export const InstagramPage: FC = () => {
       await new Promise((r) => requestAnimationFrame(r));
 
       const canvas = await html2canvas(captureRef.current, {
-        scale: 1,
+        scale: EXPORT_SCALE,
         useCORS: true,
         backgroundColor: '#000000',
       });
@@ -317,7 +321,7 @@ export const InstagramPage: FC = () => {
       const blob = await new Promise<Blob>((resolve) =>
         canvas.toBlob((b) => resolve(b!), 'image/png')
       );
-      zip.file(`${base}-${i + 1}.png`, blob);
+      zip.file(`${base}-${String(i + 1).padStart(2, '0')}.png`, blob);
 
       await wait(200);
     }
@@ -338,7 +342,7 @@ export const InstagramPage: FC = () => {
     if (!captureRef.current) return;
     try {
       const canvas = await html2canvas(captureRef.current, {
-        scale: 1,
+        scale: EXPORT_SCALE,
         useCORS: true,
         backgroundColor: '#000000',
       });

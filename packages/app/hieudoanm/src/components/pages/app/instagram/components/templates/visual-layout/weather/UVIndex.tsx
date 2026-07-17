@@ -22,9 +22,9 @@ export const UVIndex: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
-      <span className="text-accent mb-2 text-xs font-bold tracking-[0.2em] uppercase">
+      <h2 className="text-accent mb-2 text-xs font-bold tracking-[0.2em] uppercase">
         {title}
-      </span>
+      </h2>
 
       <div className="mt-2 text-center">
         <span className="text-accent text-4xl font-black">{value}</span>
@@ -49,16 +49,16 @@ export const UVIndex: FC<TemplateProps> = ({ data }) => {
         <span className="text-neutral text-xs font-bold tracking-[0.15em] uppercase">
           Protection Tips
         </span>
-        <div className="mt-2 flex flex-col gap-2">
+        <ul className="mt-2 flex flex-col gap-2">
           {tips.map((tip, i) => (
-            <div key={i} className="flex items-start gap-2">
+            <li key={i} className="flex items-start gap-2">
               <span className="bg-accent mt-0.5 h-1.5 w-1.5 flex-shrink-0 rounded-full" />
               <span className="text-base-content text-xs leading-relaxed">
                 {tip}
               </span>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </div>
   );

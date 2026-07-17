@@ -30,13 +30,13 @@ export const FormationCard: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-3 text-center">
-        <div className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
+        <h2 className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
           Formation
-        </div>
+        </h2>
         {title && (
-          <div className="text-base-content mt-1 text-base font-bold">
+          <h3 className="text-base-content mt-1 text-base font-bold">
             {title}
-          </div>
+          </h3>
         )}
         <div className="text-primary mt-1 text-lg font-black">{formation}</div>
       </div>

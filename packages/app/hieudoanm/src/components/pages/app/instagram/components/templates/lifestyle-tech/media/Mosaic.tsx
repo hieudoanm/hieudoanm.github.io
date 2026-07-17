@@ -7,23 +7,25 @@ export const Mosaic: FC<TemplateProps> = ({ data }) => {
 
   return (
     <div className="flex h-full w-full flex-col">
-      <div className="grid h-full w-full grid-cols-2 grid-rows-2 gap-1 p-1">
+      <ul className="grid h-full w-full grid-cols-2 grid-rows-2 gap-1 p-1">
         {urls.map((url, i) =>
           url ? (
-            <div
-              key={i}
-              className="rounded-box h-full w-full bg-cover bg-center"
-              style={{ backgroundImage: `url(${url})` }}
-            />
+            <li key={i}>
+              <img
+                src={url}
+                alt=""
+                className="rounded-box h-full w-full object-cover"
+              />
+            </li>
           ) : (
-            <div
+            <li
               key={i}
               className="rounded-box border-accent/30 bg-accent/5 text-accent flex h-full w-full items-center justify-center border-2 border-dashed text-xs">
               Image {i + 1} (1:1)
-            </div>
+            </li>
           )
         )}
-      </div>
+      </ul>
     </div>
   );
 };

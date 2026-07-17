@@ -21,7 +21,7 @@ export const Notification: FC<TemplateProps> = ({ data }) => {
               <span className="text-base-content text-xs font-bold">
                 {app || 'Messages'}
               </span>
-              <span className="text-neutral text-xs">{time || 'now'}</span>
+              <time className="text-neutral text-xs">{time || 'now'}</time>
             </div>
             <p className="text-base-content mt-0.5 text-base font-semibold">
               {title || 'Alex Chen'}

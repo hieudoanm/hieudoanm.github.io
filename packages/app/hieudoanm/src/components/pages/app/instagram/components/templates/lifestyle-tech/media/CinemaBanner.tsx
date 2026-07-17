@@ -10,10 +10,7 @@ export const CinemaBanner: FC<TemplateProps> = ({ data }) => {
   return (
     <div className="relative flex h-full w-full items-center justify-center bg-black">
       {imageUrl ? (
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${imageUrl})` }}
-        />
+        <img src={imageUrl} alt="" className="absolute inset-0 object-cover" />
       ) : (
         <div className="absolute inset-0 bg-black/80" />
       )}

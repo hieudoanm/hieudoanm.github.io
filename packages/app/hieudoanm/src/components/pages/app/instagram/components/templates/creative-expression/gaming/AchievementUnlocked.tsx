@@ -22,7 +22,9 @@ export const AchievementUnlocked: FC<TemplateProps> = ({ data }) => {
       <span className="bg-primary/10 text-primary mb-1 rounded-full px-2 py-0.5 text-xs font-bold">
         {rarity}
       </span>
-      <p className="text-base-300 text-xs">Unlocked {dateUnlocked}</p>
+      <p className="text-base-300 text-xs">
+        Unlocked <time>{dateUnlocked}</time>
+      </p>
     </div>
   );
 };
