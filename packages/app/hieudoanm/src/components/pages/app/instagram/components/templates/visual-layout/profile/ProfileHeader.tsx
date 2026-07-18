@@ -19,7 +19,7 @@ export const ProfileHeader: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center>
+    <Background>
       <div className="bg-primary flex aspect-square h-8 w-8 items-center justify-center rounded-full text-sm font-black text-white">
         {name.charAt(0)}
       </div>

@@ -11,7 +11,7 @@ export const EventCard: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background padding="sm">
+    <Background>
       <div className="rounded-box border-accent/20 flex flex-1 flex-col border p-4 shadow-sm">
         <div className="mb-3 inline-flex items-center gap-3">
           <div className="bg-primary text-primary-content flex flex-col items-center justify-center px-2 py-1 text-center">

@@ -11,7 +11,7 @@ export const Mention: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background padding="sm">
+    <Background>
       <div className="rounded-box border-accent/20 flex flex-1 flex-col border p-4">
         <div className="mb-2 flex items-center gap-1">
           {avatarUrl ? (

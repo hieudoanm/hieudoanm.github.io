@@ -15,7 +15,7 @@ export const SavingsGoal: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center textAlign>
+    <Background>
       <span className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
         Savings Goal
       </span>

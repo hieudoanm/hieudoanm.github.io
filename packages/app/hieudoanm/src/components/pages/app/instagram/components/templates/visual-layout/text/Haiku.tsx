@@ -10,7 +10,7 @@ export const Haiku: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center>
+    <Background>
       <div className="max-w-md text-center">
         {title && (
           <h1 className="text-base-content mb-4 text-4xl font-bold tracking-tight">

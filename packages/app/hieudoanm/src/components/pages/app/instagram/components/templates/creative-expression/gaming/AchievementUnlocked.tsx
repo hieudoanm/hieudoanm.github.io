@@ -12,7 +12,7 @@ export const AchievementUnlocked: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center textAlign>
+    <Background>
       <div className="bg-accent/10 mb-1 flex h-8 w-8 items-center justify-center rounded-full">
         <span className="text-3xl">🏆</span>
       </div>

@@ -10,7 +10,7 @@ export const TriWord: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center>
+    <Background>
       <div className="flex items-baseline gap-2 text-center">
         <span className="text-primary text-4xl leading-none font-black">
           {word1}

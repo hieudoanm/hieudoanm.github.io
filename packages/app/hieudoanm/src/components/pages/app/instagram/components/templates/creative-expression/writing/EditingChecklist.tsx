@@ -23,7 +23,7 @@ export const EditingChecklist: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center textAlign>
+    <Background>
       <h1 className="text-base-content mb-1 text-4xl font-black tracking-tight">
         {title}
       </h1>

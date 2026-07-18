@@ -16,7 +16,7 @@ export const SalaryGuide: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center textAlign>
+    <Background>
       <h1 className="text-primary mb-0.5 text-4xl font-bold">{title}</h1>
       {role && <p className="badge badge-secondary mb-3">{role}</p>}
       <div className="w-full max-w-lg overflow-hidden rounded-lg">

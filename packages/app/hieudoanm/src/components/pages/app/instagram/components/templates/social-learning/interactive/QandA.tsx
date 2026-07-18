@@ -9,7 +9,7 @@ export const QandA: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background gap="md">
+    <Background>
       {category && (
         <span className="text-accent text-sm font-bold tracking-[0.2em] uppercase">
           {category}

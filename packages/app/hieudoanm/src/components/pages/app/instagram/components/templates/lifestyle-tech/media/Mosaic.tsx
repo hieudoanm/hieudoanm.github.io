@@ -8,7 +8,7 @@ export const Mosaic: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background padding="none">
+    <Background>
       <ul className="grid h-full w-full grid-cols-2 grid-rows-2 gap-1 p-1">
         {urls.map((url, i) =>
           url ? (

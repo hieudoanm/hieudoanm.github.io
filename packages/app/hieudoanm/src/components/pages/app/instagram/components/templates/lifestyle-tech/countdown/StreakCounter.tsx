@@ -10,7 +10,7 @@ export const StreakCounter: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center>
+    <Background>
       <h2 className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
         {headline}
       </h2>

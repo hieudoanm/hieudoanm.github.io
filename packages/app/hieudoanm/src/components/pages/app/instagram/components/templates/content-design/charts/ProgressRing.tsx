@@ -14,7 +14,7 @@ export const ProgressRing: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center>
+    <Background>
       <h2 className="text-base-content mb-2 text-sm font-bold">{title}</h2>
       {text && <p className="text-neutral mb-2 text-xs">{text}</p>}
       <svg viewBox="0 0 180 180" className="h-auto w-48">

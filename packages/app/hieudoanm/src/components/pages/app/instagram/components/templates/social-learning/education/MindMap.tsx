@@ -12,7 +12,7 @@ export const MindMap: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center>
+    <Background>
       <div className="bg-primary text-primary-content mb-4 rounded-full px-8 py-4 text-2xl font-black">
         {central}
       </div>

@@ -16,7 +16,7 @@ export const LaunchCountdown: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center>
+    <Background>
       <div className="text-center">
         <h2 className="text-primary text-xs font-bold tracking-widest uppercase">
           {title}

@@ -24,7 +24,7 @@ export const DonutChart: FC<TemplateProps> = ({ data }) => {
   const citation = (data.citation as string) ?? '';
 
   return (
-    <Background center>
+    <Background>
       <h1 className="text-base-content mb-4 text-center text-4xl font-bold tracking-tight">
         {headline || 'Market Share'}
       </h1>

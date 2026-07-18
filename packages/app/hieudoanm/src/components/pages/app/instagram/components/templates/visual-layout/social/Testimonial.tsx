@@ -13,7 +13,7 @@ export const Testimonial: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center textAlign>
+    <Background>
       <div className="mb-2 flex gap-1">
         {Array.from({ length: 5 }, (_, i) => (
           <svg

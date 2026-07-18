@@ -11,7 +11,7 @@ export const EventTimer: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center>
+    <Background>
       <div className="text-center">
         <h2 className="text-neutral text-xs font-bold tracking-widest uppercase">
           {title}

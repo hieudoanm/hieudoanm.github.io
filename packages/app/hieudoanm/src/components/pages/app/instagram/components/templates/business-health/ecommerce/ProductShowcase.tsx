@@ -15,7 +15,7 @@ export const ProductShowcase: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center>
+    <Background>
       <div className="text-center">
         {imageUrl ? (
           <img

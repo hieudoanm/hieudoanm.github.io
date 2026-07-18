@@ -9,7 +9,7 @@ export const IconText: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center>
+    <Background>
       <div className="text-center">
         <div className="text-primary text-4xl leading-none">{icon}</div>
         <h1 className="text-base-content mt-2 text-4xl font-bold tracking-tight">

@@ -9,7 +9,7 @@ export const VideoStill: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center bg="bg-black" className="relative">
+    <Background className="relative">
       {imageUrl ? (
         <img src={imageUrl} alt="" className="absolute inset-0 object-cover" />
       ) : (

@@ -17,7 +17,7 @@ export const WordStack: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center>
+    <Background>
       <div className="text-center">
         {words.map((word, i) => (
           <div

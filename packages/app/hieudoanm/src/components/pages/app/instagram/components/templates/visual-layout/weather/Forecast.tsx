@@ -14,7 +14,7 @@ export const Forecast: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center>
+    <Background>
       <h2 className="text-accent mb-2 text-xs font-bold tracking-[0.2em] uppercase">
         {title}
       </h2>

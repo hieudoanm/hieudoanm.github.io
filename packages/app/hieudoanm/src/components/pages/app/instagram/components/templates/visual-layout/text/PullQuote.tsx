@@ -11,7 +11,7 @@ export const PullQuote: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center>
+    <Background>
       {imageUrl && (
         <img
           src={imageUrl}

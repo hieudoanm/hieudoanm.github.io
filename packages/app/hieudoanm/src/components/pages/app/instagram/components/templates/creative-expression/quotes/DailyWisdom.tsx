@@ -11,7 +11,7 @@ export const DailyWisdom: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center textAlign>
+    <Background>
       <p className="badge badge-primary badge-outline mb-3 text-xs">
         {category}
       </p>

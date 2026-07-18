@@ -15,7 +15,7 @@ export const Unboxing: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center>
+    <Background>
       <div className="text-center">
         <h1 className="text-neutral text-xs font-bold tracking-widest uppercase">
           {title}

@@ -15,7 +15,7 @@ export const SkillRoadmap: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center textAlign>
+    <Background>
       <h1 className="text-primary mb-0.5 text-4xl font-bold">{title}</h1>
       {skill && <p className="badge badge-primary mb-3">{skill}</p>}
       <ul className="flex w-full max-w-md flex-col items-center gap-1">

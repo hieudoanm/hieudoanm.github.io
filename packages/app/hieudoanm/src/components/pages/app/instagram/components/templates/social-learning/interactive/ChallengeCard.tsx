@@ -9,7 +9,7 @@ export const ChallengeCard: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center textAlign gap="md">
+    <Background>
       <span className="text-accent text-sm font-bold tracking-[0.2em] uppercase">
         Challenge
       </span>

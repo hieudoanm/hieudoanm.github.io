@@ -10,8 +10,6 @@ export const FullBleed: FC<TemplateProps> = ({ data }) => {
   const citation = (data.citation as string) ?? '';
   return (
     <Background
-      center
-      bg="bg-cover bg-center"
       className="relative"
       style={{
         backgroundImage: imageUrl ? `url(${imageUrl})` : undefined,

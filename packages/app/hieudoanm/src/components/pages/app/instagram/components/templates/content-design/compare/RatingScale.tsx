@@ -11,7 +11,7 @@ export const RatingScale: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center>
+    <Background>
       <h1 className="text-base-content mb-2 text-center text-4xl font-bold tracking-tight">
         {headline || 'Rating'}
       </h1>

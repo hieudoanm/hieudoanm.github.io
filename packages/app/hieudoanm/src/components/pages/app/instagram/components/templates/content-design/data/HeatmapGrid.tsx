@@ -16,7 +16,7 @@ export const HeatmapGrid: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center>
+    <Background>
       <h2 className="text-base-content mb-2 text-sm font-bold">{title}</h2>
       <div className="flex flex-col gap-1">
         <div className="flex gap-1">

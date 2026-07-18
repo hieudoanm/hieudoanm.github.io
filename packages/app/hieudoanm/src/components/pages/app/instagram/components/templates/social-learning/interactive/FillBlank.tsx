@@ -12,7 +12,7 @@ export const FillBlank: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center textAlign>
+    <Background>
       <span className="text-accent mb-4 text-sm font-bold tracking-[0.2em] uppercase">
         Fill in the Blank
       </span>

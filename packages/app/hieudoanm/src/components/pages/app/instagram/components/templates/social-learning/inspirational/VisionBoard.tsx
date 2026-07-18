@@ -9,7 +9,7 @@ export const VisionBoard: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background padding="none">
+    <Background>
       <div
         className="flex h-1/2 w-full items-end bg-cover bg-center p-6"
         style={

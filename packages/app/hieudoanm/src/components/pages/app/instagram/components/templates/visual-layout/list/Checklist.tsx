@@ -13,7 +13,7 @@ export const Checklist: FC<TemplateProps> = ({ data }) => {
   const citation = (data.citation as string) ?? '';
 
   return (
-    <Background overflow>
+    <Background>
       <div className="flex flex-col gap-y-4">
         <div className="flex flex-col gap-y-2">
           <h1 className="text-base-content mb-1 text-4xl font-bold tracking-tight">

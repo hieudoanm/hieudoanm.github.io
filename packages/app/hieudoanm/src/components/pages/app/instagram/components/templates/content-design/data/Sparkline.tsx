@@ -24,7 +24,7 @@ export const Sparkline: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center>
+    <Background>
       <p className="text-neutral mb-1 text-xs font-bold tracking-wider uppercase">
         {label}
       </p>

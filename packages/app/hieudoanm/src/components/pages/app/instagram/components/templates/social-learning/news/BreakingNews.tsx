@@ -10,7 +10,7 @@ export const BreakingNews: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center>
+    <Background>
       <div className="w-full max-w-lg text-center">
         <div className="mb-4 flex items-center justify-center gap-2">
           <span className="bg-error h-2 w-2 animate-pulse rounded-full" />

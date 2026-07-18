@@ -13,7 +13,7 @@ export const PricingCard: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center textAlign>
+    <Background>
       <span className="bg-accent/10 text-accent mb-2 rounded-full px-4 py-1 text-xs font-bold tracking-widest uppercase">
         {plan}
       </span>

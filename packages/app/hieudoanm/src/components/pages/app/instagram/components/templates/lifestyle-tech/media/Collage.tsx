@@ -8,7 +8,7 @@ export const Collage: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background padding="none" overflow className="no-flex-col relative">
+    <Background className="relative">
       <div className="flex h-full w-full items-center justify-center p-4">
         <div className="relative h-full w-full">
           {urls[0] ? (

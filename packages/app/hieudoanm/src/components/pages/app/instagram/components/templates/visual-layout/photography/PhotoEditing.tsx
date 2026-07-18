@@ -11,7 +11,7 @@ export const PhotoEditing: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center textAlign>
+    <Background>
       <h2 className="text-accent mb-1 text-xs font-bold tracking-[0.2em] uppercase">
         Photo Editing
       </h2>

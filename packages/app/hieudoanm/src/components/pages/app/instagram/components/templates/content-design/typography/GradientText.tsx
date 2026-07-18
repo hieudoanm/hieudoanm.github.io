@@ -8,7 +8,7 @@ export const GradientText: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center>
+    <Background>
       <h1 className="from-primary to-accent mb-4 bg-gradient-to-r bg-clip-text text-center text-4xl font-black text-transparent">
         {headline || 'Create'}
       </h1>

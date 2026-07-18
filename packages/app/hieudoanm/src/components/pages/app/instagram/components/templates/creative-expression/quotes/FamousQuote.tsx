@@ -12,7 +12,7 @@ export const FamousQuote: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center textAlign>
+    <Background>
       <span className="text-primary mb-3 font-serif text-3xl">"</span>
       <blockquote className="text-base-content mb-3 max-w-xl text-2xl leading-relaxed font-medium">
         {quote}

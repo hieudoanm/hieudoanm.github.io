@@ -11,7 +11,7 @@ export const MovieQuote: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center textAlign>
+    <Background>
       <blockquote className="text-base-content mb-1.5 max-w-xl text-2xl leading-relaxed font-medium italic">
         "{quote}"
       </blockquote>

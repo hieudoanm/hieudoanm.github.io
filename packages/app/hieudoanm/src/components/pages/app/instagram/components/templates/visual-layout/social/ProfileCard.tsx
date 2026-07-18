@@ -10,7 +10,7 @@ export const ProfileCard: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center textAlign>
+    <Background>
       {imageUrl ? (
         <img
           src={imageUrl}

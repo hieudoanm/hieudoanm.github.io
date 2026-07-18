@@ -11,7 +11,7 @@ export const NetworkingTip: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center textAlign>
+    <Background>
       <h1 className="text-primary mb-1 text-4xl font-bold">{title}</h1>
       <p className="text-accent mb-1 text-2xl font-semibold italic">"{tip}"</p>
       <p className="text-base-content/70 mb-3 max-w-lg text-xs leading-relaxed">

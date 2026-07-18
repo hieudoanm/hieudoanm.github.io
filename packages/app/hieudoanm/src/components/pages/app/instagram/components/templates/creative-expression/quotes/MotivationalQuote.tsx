@@ -12,7 +12,7 @@ export const MotivationalQuote: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center textAlign>
+    <Background>
       <p className="badge badge-primary mb-3 text-xs">{theme}</p>
       <blockquote className="text-base-content mb-3 max-w-xl text-2xl leading-snug font-bold">
         {quote}

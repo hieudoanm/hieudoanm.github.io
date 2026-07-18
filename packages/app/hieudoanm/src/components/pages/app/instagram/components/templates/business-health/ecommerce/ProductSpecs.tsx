@@ -19,7 +19,7 @@ export const ProductSpecs: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background border="border-t-4 border-t-primary">
+    <Background>
       <div className="mb-4">
         <h1 className="text-base-content text-4xl font-bold">{name}</h1>
         <p className="text-neutral text-sm">{tagline}</p>

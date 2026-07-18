@@ -8,7 +8,7 @@ export const Affirmation: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center textAlign gap="sm">
+    <Background>
       <span className="text-accent text-sm font-bold tracking-[0.2em] uppercase">
         I Am
       </span>

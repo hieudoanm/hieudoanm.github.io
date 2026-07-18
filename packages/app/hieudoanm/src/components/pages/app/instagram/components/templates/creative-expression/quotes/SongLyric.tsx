@@ -12,7 +12,7 @@ export const SongLyric: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center textAlign>
+    <Background>
       <span className="text-primary mb-1 font-serif text-xl">♪</span>
       <blockquote className="text-base-content mb-3 max-w-xl text-2xl leading-relaxed font-medium italic">
         "{lyric}"

@@ -30,7 +30,7 @@ export const Versus: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background padding="none">
+    <Background>
       <div className="bg-accent/10 px-5 py-3">
         <h1 className="text-base-content text-center text-4xl font-bold tracking-tight">
           {headline || 'Versus'}

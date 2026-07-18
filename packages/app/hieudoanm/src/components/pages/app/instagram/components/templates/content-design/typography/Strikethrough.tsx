@@ -10,7 +10,7 @@ export const Strikethrough: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center>
+    <Background>
       <div className="text-center">
         <div className="flex items-baseline justify-center gap-2">
           <span className="text-base-content text-3xl leading-none font-black line-through opacity-40">

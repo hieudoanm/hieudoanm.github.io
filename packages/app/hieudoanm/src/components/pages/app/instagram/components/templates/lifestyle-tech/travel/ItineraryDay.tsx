@@ -20,7 +20,7 @@ export const ItineraryDay: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background className="no-flex-col">
+    <Background>
       <div className="mr-6 flex flex-col items-center">
         <div className="bg-primary text-primary-content flex h-12 w-12 items-center justify-center rounded-full text-base font-black">
           {day}

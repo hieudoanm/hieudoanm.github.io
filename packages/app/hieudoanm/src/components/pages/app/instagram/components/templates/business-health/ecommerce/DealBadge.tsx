@@ -12,7 +12,7 @@ export const DealBadge: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center textAlign>
+    <Background>
       <div className="bg-accent text-base-100 mb-6 self-start rounded px-3 py-1 text-xs font-bold tracking-wider uppercase">
         {badge}
       </div>

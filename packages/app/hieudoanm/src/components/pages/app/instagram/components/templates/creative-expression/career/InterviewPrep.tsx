@@ -15,7 +15,7 @@ export const InterviewPrep: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center textAlign>
+    <Background>
       <h1 className="text-primary mb-0.5 text-4xl font-bold">{title}</h1>
       {role && <p className="badge badge-secondary mb-3">{role}</p>}
       <ul className="mb-3 w-full max-w-lg space-y-2 text-left">

@@ -12,7 +12,7 @@ export const DataStats: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center textAlign overflow className="relative">
+    <Background className="relative">
       {imageUrl && (
         <img
           src={imageUrl}

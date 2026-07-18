@@ -13,7 +13,7 @@ export const CoverLetter: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center textAlign>
+    <Background>
       <h1 className="text-primary mb-3 text-4xl font-bold">{title}</h1>
       <div className="text-base-content/80 max-w-lg space-y-2 text-left text-xs leading-relaxed">
         {greeting && <p className="font-medium">{greeting}</p>}

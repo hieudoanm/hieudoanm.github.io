@@ -10,7 +10,7 @@ export const Notification: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center className="no-flex-col">
+    <Background>
       <div className="bg-base-200 rounded-box w-full max-w-sm p-3 shadow-lg">
         <div className="flex items-start gap-4">
           <div className="bg-primary flex h-10 w-10 shrink-0 items-center justify-center rounded-xl">

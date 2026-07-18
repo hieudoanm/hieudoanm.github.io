@@ -15,7 +15,7 @@ export const PlayerStats: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center>
+    <Background>
       <div className="mb-6 text-center">
         <h1 className="text-base-content text-4xl font-black">{name}</h1>
         <div className="mt-1 flex items-center justify-center gap-2">

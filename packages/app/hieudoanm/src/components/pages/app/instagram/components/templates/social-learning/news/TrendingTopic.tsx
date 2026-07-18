@@ -9,7 +9,7 @@ export const TrendingTopic: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center>
+    <Background>
       <div className="w-full text-center">
         <h2 className="text-accent text-sm font-bold tracking-[0.2em] uppercase">
           Trending Now

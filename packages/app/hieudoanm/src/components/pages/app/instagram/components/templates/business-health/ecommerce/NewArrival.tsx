@@ -12,7 +12,7 @@ export const NewArrival: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center>
+    <Background>
       <div className="text-center">
         <div className="bg-primary text-primary-content inline-block rounded px-3 py-1 text-xs font-bold tracking-wider uppercase">
           {badge}

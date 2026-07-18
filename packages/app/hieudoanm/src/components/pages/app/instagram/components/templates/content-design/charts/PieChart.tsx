@@ -44,7 +44,7 @@ export const PieChart: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center>
+    <Background>
       <div className="mb-2 text-center">
         <h2 className="text-base-content text-sm font-bold">{title}</h2>
         {text && <p className="text-neutral mt-1 text-xs">{text}</p>}

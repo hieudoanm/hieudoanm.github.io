@@ -9,7 +9,7 @@ export const Abbreviation: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center>
+    <Background>
       <span className="text-accent mb-8 text-sm font-bold tracking-[0.2em] uppercase">
         Abbreviation
       </span>

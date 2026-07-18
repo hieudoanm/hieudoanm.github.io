@@ -9,7 +9,7 @@ export const MissionStatement: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background gap="md">
+    <Background>
       <div>
         <h2 className="text-accent text-sm font-bold tracking-[0.2em] uppercase">
           {headline}

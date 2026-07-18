@@ -27,7 +27,7 @@ export const TechniqueTutorial: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center textAlign>
+    <Background>
       <h1 className="text-base-content mb-0.5 text-4xl font-black tracking-tight">
         {title}
       </h1>

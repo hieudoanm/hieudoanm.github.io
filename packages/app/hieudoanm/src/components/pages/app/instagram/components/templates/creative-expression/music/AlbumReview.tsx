@@ -14,7 +14,7 @@ export const AlbumReview: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center textAlign>
+    <Background>
       <div className="bg-base-200 mb-2 flex h-10 w-10 items-center justify-center rounded-full text-xs">
         🎵
       </div>

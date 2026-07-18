@@ -12,7 +12,7 @@ export const BookQuote: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center textAlign>
+    <Background>
       <blockquote className="text-base-content mb-3 max-w-xl text-2xl leading-relaxed italic">
         "{quote}"
       </blockquote>

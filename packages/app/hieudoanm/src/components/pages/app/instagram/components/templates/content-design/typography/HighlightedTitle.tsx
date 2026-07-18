@@ -31,7 +31,7 @@ export const HighlightedTitle: FC<TemplateProps> = ({ data }) => {
   const citation = (data.citation as string) ?? '';
 
   return (
-    <Background center>
+    <Background>
       <div className="text-center">
         <h1 className="text-base-content text-4xl leading-tight font-bold tracking-tight">
           {renderHeadline()}

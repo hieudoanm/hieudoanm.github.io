@@ -20,7 +20,7 @@ export const StatTracker: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center textAlign>
+    <Background>
       <h1 className="text-base-content mb-0.5 text-4xl font-bold">{title}</h1>
       <p className="text-neutral mb-2 text-xs font-medium">{game}</p>
       <ul className="mb-3 grid w-full grid-cols-2 gap-2">

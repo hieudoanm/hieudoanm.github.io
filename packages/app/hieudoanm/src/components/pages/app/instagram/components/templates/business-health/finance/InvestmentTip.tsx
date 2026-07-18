@@ -10,7 +10,7 @@ export const InvestmentTip: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center textAlign>
+    <Background>
       {category && (
         <span className="text-accent mb-4 text-xs font-bold tracking-[0.2em] uppercase">
           {category}

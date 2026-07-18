@@ -9,7 +9,7 @@ export const Mobile: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center gap="md">
+    <Background>
       <div className="flex w-full flex-col gap-2">
         <h2 className="text-base-content text-center text-base font-bold">
           {headline}

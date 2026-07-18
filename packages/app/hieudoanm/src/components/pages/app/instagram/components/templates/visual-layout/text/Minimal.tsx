@@ -9,7 +9,7 @@ export const Minimal: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background center textAlign gap="md">
+    <Background>
       <div className="flex flex-col items-center justify-center">
         <h1 className="text-base-content mb-2 text-4xl leading-tight font-bold tracking-tight">
           {headline}
