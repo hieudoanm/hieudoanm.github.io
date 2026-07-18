@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
-import { Background } from '../../_shared';
+import { Background, Footer } from '../../_shared';
 
 export const WritingPrompt: FC<TemplateProps> = ({ data }) => {
   const title = (data.title as string) ?? 'Writing Prompt';
@@ -24,11 +24,7 @@ export const WritingPrompt: FC<TemplateProps> = ({ data }) => {
         <li className="badge badge-secondary badge-sm">{difficulty}</li>
         <li className="badge badge-outline badge-sm">{wordCount} words</li>
       </ul>
-      {citation && (
-        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
-          {citation}
-        </p>
-      )}
+      <Footer citation={citation} />
     </Background>
   );
 };

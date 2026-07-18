@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
-import { Background } from '../../_shared';
+import { Background, Footer } from '../../_shared';
 
 export const BudgetTracker: FC<TemplateProps> = ({ data }) => {
   const title = (data.title as string) ?? '';
@@ -43,11 +43,7 @@ export const BudgetTracker: FC<TemplateProps> = ({ data }) => {
                   className={`h-full rounded-full transition-all ${item.color}`}
                   style={{ width: `${(val / incomeNum) * 100}%` }}
                 />
-                {citation && (
-                  <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
-                    {citation}
-                  </p>
-                )}
+                <Footer citation={citation} />
               </div>
             </li>
           );

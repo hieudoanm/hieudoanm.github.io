@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
-import { Background } from '../../_shared';
+import { Background, Footer } from '../../_shared';
 
 export const CardOverlay: FC<TemplateProps> = ({ data }) => {
   const title = (data.title as string) ?? '';
@@ -22,11 +22,7 @@ export const CardOverlay: FC<TemplateProps> = ({ data }) => {
         </h1>
         <p className="text-neutral text-sm leading-relaxed">{text}</p>
       </div>
-      {citation && (
-        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
-          {citation}
-        </p>
-      )}
+      <Footer citation={citation} />
     </Background>
   );
 };

@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
-import { Background } from '../../_shared';
+import { Background, Footer } from '../../_shared';
 
 export const LaunchCountdown: FC<TemplateProps> = ({ data }) => {
   const title = (data.title as string) ?? 'Coming Soon';
@@ -36,11 +36,7 @@ export const LaunchCountdown: FC<TemplateProps> = ({ data }) => {
         </ul>
         {text && <p className="text-neutral mt-4 text-sm">{text}</p>}
       </div>
-      {citation && (
-        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
-          {citation}
-        </p>
-      )}
+      <Footer citation={citation} />
     </Background>
   );
 };

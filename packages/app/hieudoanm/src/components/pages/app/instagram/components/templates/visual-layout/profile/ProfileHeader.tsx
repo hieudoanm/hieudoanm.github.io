@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
-import { Background } from '../../_shared';
+import { Background, Footer } from '../../_shared';
 
 export const ProfileHeader: FC<TemplateProps> = ({ data }) => {
   const name = (data.name as string) ?? 'Alex Chen';
@@ -85,11 +85,7 @@ export const ProfileHeader: FC<TemplateProps> = ({ data }) => {
           </li>
         )}
       </ul>
-      {citation && (
-        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
-          {citation}
-        </p>
-      )}
+      <Footer citation={citation} />
     </Background>
   );
 };

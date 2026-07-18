@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
-import { Background } from '../../_shared';
+import { Background, Footer } from '../../_shared';
 
 export const StreakCounter: FC<TemplateProps> = ({ data }) => {
   const title = (data.title as string) ?? 'Learning Streak';
@@ -24,11 +24,7 @@ export const StreakCounter: FC<TemplateProps> = ({ data }) => {
       </div>
 
       <time className="text-neutral mt-5 text-xs">{started}</time>
-      {citation && (
-        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
-          {citation}
-        </p>
-      )}
+      <Footer citation={citation} />
     </Background>
   );
 };

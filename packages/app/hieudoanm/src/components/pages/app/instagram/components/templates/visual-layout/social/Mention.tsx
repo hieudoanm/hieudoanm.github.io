@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
-import { Background } from '../../_shared';
+import { Background, Footer } from '../../_shared';
 
 export const Mention: FC<TemplateProps> = ({ data }) => {
   const handle = (data.handle as string) ?? '';
@@ -92,11 +92,7 @@ export const Mention: FC<TemplateProps> = ({ data }) => {
           </div>
         </div>
       </div>
-      {citation && (
-        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
-          {citation}
-        </p>
-      )}
+      <Footer citation={citation} />
     </Background>
   );
 };

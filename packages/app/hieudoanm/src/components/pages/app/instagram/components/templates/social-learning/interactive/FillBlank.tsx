@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
-import { Background } from '../../_shared';
+import { Background, Footer } from '../../_shared';
 
 export const FillBlank: FC<TemplateProps> = ({ data }) => {
   const text = (data.text as string) ?? '';
@@ -32,11 +32,7 @@ export const FillBlank: FC<TemplateProps> = ({ data }) => {
       {author && (
         <p className="text-accent mt-6 text-sm font-medium">&mdash; {author}</p>
       )}
-      {citation && (
-        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
-          {citation}
-        </p>
-      )}
+      <Footer citation={citation} />
     </Background>
   );
 };

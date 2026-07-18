@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
-import { Background } from '../../_shared';
+import { Background, Footer } from '../../_shared';
 
 interface Ring {
   label: string;
@@ -25,11 +25,7 @@ export const OnionDiagram: FC<TemplateProps> = ({ data }) => {
       <div className="mb-3 text-center">
         <h2 className="text-base-content text-sm font-bold">{title}</h2>
         {text && <div className="text-neutral mt-2 text-sm">{text}</div>}
-        {citation && (
-          <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
-            {citation}
-          </p>
-        )}
+        <Footer citation={citation} />
       </div>
       <div className="flex flex-1 items-center justify-center">
         <div className="relative flex items-center justify-center">

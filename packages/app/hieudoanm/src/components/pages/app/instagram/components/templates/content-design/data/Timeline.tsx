@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
-import { Background } from '../../_shared';
+import { Background, Footer } from '../../_shared';
 
 interface TimelineEntry {
   date: string;
@@ -56,11 +56,7 @@ export const Timeline: FC<TemplateProps> = ({ data }) => {
           className="rounded-box mt-2 h-24 w-full flex-shrink-0 object-cover"
         />
       )}
-      {citation && (
-        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
-          {citation}
-        </p>
-      )}
+      <Footer citation={citation} />
     </Background>
   );
 };

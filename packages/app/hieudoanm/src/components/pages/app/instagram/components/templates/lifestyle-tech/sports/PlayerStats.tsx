@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
-import { Background } from '../../_shared';
+import { Background, Footer } from '../../_shared';
 
 export const PlayerStats: FC<TemplateProps> = ({ data }) => {
   const name = (data.name as string) ?? 'Marcus Johnson';
@@ -37,11 +37,7 @@ export const PlayerStats: FC<TemplateProps> = ({ data }) => {
           </li>
         ))}
       </ul>
-      {citation && (
-        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
-          {citation}
-        </p>
-      )}
+      <Footer citation={citation} />
     </Background>
   );
 };

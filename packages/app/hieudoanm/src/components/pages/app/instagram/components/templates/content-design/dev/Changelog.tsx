@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
-import { Background } from '../../_shared';
+import { Background, Footer } from '../../_shared';
 
 interface Change {
   type: string;
@@ -31,11 +31,7 @@ export const Changelog: FC<TemplateProps> = ({ data }) => {
           v{version}
         </div>
         {date && <time className="text-neutral mt-1 text-[10px]">{date}</time>}
-        {citation && (
-          <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
-            {citation}
-          </p>
-        )}
+        <Footer citation={citation} />
       </div>
       <h3 className="text-base-content mb-2 text-center text-sm font-bold">
         {title}

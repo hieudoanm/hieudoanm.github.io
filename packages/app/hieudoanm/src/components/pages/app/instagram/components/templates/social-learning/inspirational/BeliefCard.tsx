@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
-import { Background } from '../../_shared';
+import { Background, Footer } from '../../_shared';
 
 export const BeliefCard: FC<TemplateProps> = ({ data }) => {
   const belief = (data.belief as string) ?? '';
@@ -22,11 +22,7 @@ export const BeliefCard: FC<TemplateProps> = ({ data }) => {
           {context && <p className="text-neutral text-sm">{context}</p>}
         </div>
       )}
-      {citation && (
-        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
-          {citation}
-        </p>
-      )}
+      <Footer citation={citation} />
     </Background>
   );
 };

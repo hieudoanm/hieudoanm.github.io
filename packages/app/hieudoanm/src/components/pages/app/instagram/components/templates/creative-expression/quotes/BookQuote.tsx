@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
-import { Background } from '../../_shared';
+import { Background, Footer } from '../../_shared';
 
 export const BookQuote: FC<TemplateProps> = ({ data }) => {
   const quote =
@@ -24,11 +24,7 @@ export const BookQuote: FC<TemplateProps> = ({ data }) => {
           <p className="badge badge-outline badge-sm">p. {pageNumber}</p>
         )}
       </div>
-      {citation && (
-        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
-          {citation}
-        </p>
-      )}
+      <Footer citation={citation} />
     </Background>
   );
 };

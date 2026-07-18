@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
-import { Background } from '../../_shared';
+import { Background, Footer } from '../../_shared';
 
 export const PullQuote: FC<TemplateProps> = ({ data }) => {
   const quote = (data.quote as string) ?? '';
@@ -35,11 +35,7 @@ export const PullQuote: FC<TemplateProps> = ({ data }) => {
         </span>
         {source && <span className="text-neutral text-xs">{source}</span>}
       </div>
-      {citation && (
-        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
-          {citation}
-        </p>
-      )}
+      <Footer citation={citation} />
     </Background>
   );
 };

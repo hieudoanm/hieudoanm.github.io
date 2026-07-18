@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
-import { Background } from '../../_shared';
+import { Background, Footer } from '../../_shared';
 
 export const Strikethrough: FC<TemplateProps> = ({ data }) => {
   const number = (data.number as string) ?? '$99';
@@ -29,11 +29,7 @@ export const Strikethrough: FC<TemplateProps> = ({ data }) => {
           <p className="text-neutral mt-2 text-base leading-relaxed">{text}</p>
         )}
       </div>
-      {citation && (
-        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
-          {citation}
-        </p>
-      )}
+      <Footer citation={citation} />
     </Background>
   );
 };

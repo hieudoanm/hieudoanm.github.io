@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
-import { Background } from '../../_shared';
+import { Background, Footer } from '../../_shared';
 
 export const PricingCard: FC<TemplateProps> = ({ data }) => {
   const plan = (data.plan as string) ?? '';
@@ -42,11 +42,7 @@ export const PricingCard: FC<TemplateProps> = ({ data }) => {
       <div className="rounded-box bg-primary text-primary-content mt-8 px-8 py-3 text-sm font-bold tracking-wider uppercase">
         Get Started
       </div>
-      {citation && (
-        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
-          {citation}
-        </p>
-      )}
+      <Footer citation={citation} />
     </Background>
   );
 };

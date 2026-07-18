@@ -1,7 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
-import { Background } from '../../_shared';
-import { Header } from '../../_shared';
+import { Background, Footer, Header } from '../../_shared';
 
 interface SetupComponent {
   name: string;
@@ -41,11 +40,7 @@ export const SetupTour: FC<TemplateProps> = ({ data }) => {
         </span>
         <p className="text-primary text-xs font-extrabold">{totalCost}</p>
       </div>
-      {citation && (
-        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
-          {citation}
-        </p>
-      )}
+      <Footer citation={citation} />
     </Background>
   );
 };

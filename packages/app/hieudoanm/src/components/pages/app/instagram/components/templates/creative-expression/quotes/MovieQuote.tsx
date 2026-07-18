@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
-import { Background } from '../../_shared';
+import { Background, Footer } from '../../_shared';
 
 export const MovieQuote: FC<TemplateProps> = ({ data }) => {
   const quote = (data.quote as string) ?? 'Life is like a box of chocolates.';
@@ -23,11 +23,7 @@ export const MovieQuote: FC<TemplateProps> = ({ data }) => {
         {genre && <p className="badge badge-secondary badge-sm">{genre}</p>}
         {year && <p className="badge badge-outline badge-sm">{year}</p>}
       </div>
-      {citation && (
-        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
-          {citation}
-        </p>
-      )}
+      <Footer citation={citation} />
     </Background>
   );
 };

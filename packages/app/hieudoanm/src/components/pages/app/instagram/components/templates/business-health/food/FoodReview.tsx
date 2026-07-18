@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
-import { Background } from '../../_shared';
+import { Background, Footer } from '../../_shared';
 
 export const FoodReview: FC<TemplateProps> = ({ data }) => {
   const dish = (data.dish as string) ?? '';
@@ -34,11 +34,7 @@ export const FoodReview: FC<TemplateProps> = ({ data }) => {
       <blockquote className="text-base-content mt-5 text-sm leading-relaxed">
         &ldquo;{review}&rdquo;
       </blockquote>
-      {citation && (
-        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
-          {citation}
-        </p>
-      )}
+      <Footer citation={citation} />
     </Background>
   );
 };

@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
-import { Background } from '../../_shared';
+import { Background, Footer } from '../../_shared';
 
 export const AspectRatio: FC<TemplateProps> = ({ data }) => {
   const title = (data.title as string) ?? 'Common Ratios';
@@ -29,11 +29,7 @@ export const AspectRatio: FC<TemplateProps> = ({ data }) => {
                 <strong className="text-accent text-xs font-bold">
                   {r.label}
                 </strong>
-                {citation && (
-                  <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
-                    {citation}
-                  </p>
-                )}
+                <Footer citation={citation} />
               </div>
               <p className="text-neutral text-xs">{r.description}</p>
             </li>

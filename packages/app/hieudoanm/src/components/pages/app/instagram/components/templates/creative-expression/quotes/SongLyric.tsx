@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
-import { Background } from '../../_shared';
+import { Background, Footer } from '../../_shared';
 
 export const SongLyric: FC<TemplateProps> = ({ data }) => {
   const lyric =
@@ -23,11 +23,7 @@ export const SongLyric: FC<TemplateProps> = ({ data }) => {
         {album && <p className="badge badge-accent badge-sm">{album}</p>}
         {year && <p className="badge badge-outline badge-sm">{year}</p>}
       </div>
-      {citation && (
-        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
-          {citation}
-        </p>
-      )}
+      <Footer citation={citation} />
     </Background>
   );
 };
