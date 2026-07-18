@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const ProfileHeader: FC<TemplateProps> = ({ data }) => {
   const name = (data.name as string) ?? 'Alex Chen';
@@ -18,7 +19,7 @@ export const ProfileHeader: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
+    <Background center>
       <div className="bg-primary flex aspect-square h-8 w-8 items-center justify-center rounded-full text-sm font-black text-white">
         {name.charAt(0)}
       </div>
@@ -89,7 +90,7 @@ export const ProfileHeader: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

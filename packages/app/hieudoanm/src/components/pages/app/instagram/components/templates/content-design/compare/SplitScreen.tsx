@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const SplitScreen: FC<TemplateProps> = ({ data }) => {
   const headline = (data.headline as string) ?? '';
@@ -8,7 +9,7 @@ export const SplitScreen: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="flex h-full w-full">
+    <Background>
       {imageUrl ? (
         <img src={imageUrl} alt="" className="h-full w-1/2 object-cover" />
       ) : (
@@ -42,7 +43,7 @@ export const SplitScreen: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

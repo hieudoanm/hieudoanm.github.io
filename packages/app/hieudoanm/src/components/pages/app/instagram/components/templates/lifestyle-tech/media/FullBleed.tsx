@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const FullBleed: FC<TemplateProps> = ({ data }) => {
   const headline = (data.headline as string) ?? '';
@@ -8,8 +9,10 @@ export const FullBleed: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div
-      className="relative flex h-full w-full items-center justify-center bg-cover bg-center"
+    <Background
+      center
+      bg="bg-cover bg-center"
+      className="relative"
       style={{
         backgroundImage: imageUrl ? `url(${imageUrl})` : undefined,
         backgroundColor: imageUrl ? undefined : '#000000',
@@ -28,7 +31,7 @@ export const FullBleed: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

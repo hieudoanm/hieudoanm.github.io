@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const Testimonial: FC<TemplateProps> = ({ data }) => {
   const quote = (data.quote as string) ?? '';
@@ -12,7 +13,7 @@ export const Testimonial: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
+    <Background center textAlign>
       <div className="mb-2 flex gap-1">
         {Array.from({ length: 5 }, (_, i) => (
           <svg
@@ -70,7 +71,7 @@ export const Testimonial: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

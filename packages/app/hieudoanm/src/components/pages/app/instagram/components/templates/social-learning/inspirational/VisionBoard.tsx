@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const VisionBoard: FC<TemplateProps> = ({ data }) => {
   const headline = (data.headline as string) ?? '';
@@ -8,7 +9,7 @@ export const VisionBoard: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col">
+    <Background padding="none">
       <div
         className="flex h-1/2 w-full items-end bg-cover bg-center p-6"
         style={
@@ -32,7 +33,7 @@ export const VisionBoard: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

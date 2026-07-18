@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 interface Result {
   position: string;
@@ -26,7 +27,7 @@ export const Tournament: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+    <Background>
       <div className="mb-0.5 flex items-center gap-1">
         <span className="text-accent text-lg font-extrabold">{title}</span>
       </div>
@@ -58,7 +59,7 @@ export const Tournament: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

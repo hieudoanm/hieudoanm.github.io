@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 interface PaletteColor {
   name: string;
@@ -18,7 +19,7 @@ export const ColorPalette: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+    <Background>
       <h1 className="text-base-content mb-3 text-4xl font-black">{headline}</h1>
       <ul className="flex flex-1 flex-col gap-2">
         {colors.map((color) => (
@@ -43,7 +44,7 @@ export const ColorPalette: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

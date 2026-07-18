@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const MovieQuote: FC<TemplateProps> = ({ data }) => {
   const quote = (data.quote as string) ?? 'Life is like a box of chocolates.';
@@ -10,7 +11,7 @@ export const MovieQuote: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
+    <Background center textAlign>
       <blockquote className="text-base-content mb-1.5 max-w-xl text-2xl leading-relaxed font-medium italic">
         "{quote}"
       </blockquote>
@@ -27,7 +28,7 @@ export const MovieQuote: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 MovieQuote.displayName = 'MovieQuote';

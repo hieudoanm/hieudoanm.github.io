@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const MusicTheory: FC<TemplateProps> = ({ data }) => {
   const title = (data.title as string) ?? 'Music Theory';
@@ -10,7 +11,7 @@ export const MusicTheory: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
+    <Background center textAlign>
       <span className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
         Music Theory
       </span>
@@ -44,7 +45,7 @@ export const MusicTheory: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 MusicTheory.displayName = 'MusicTheory';

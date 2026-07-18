@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const DailyWisdom: FC<TemplateProps> = ({ data }) => {
   const wisdom =
@@ -10,7 +11,7 @@ export const DailyWisdom: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
+    <Background center textAlign>
       <p className="badge badge-primary badge-outline mb-3 text-xs">
         {category}
       </p>
@@ -24,7 +25,7 @@ export const DailyWisdom: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 DailyWisdom.displayName = 'DailyWisdom';

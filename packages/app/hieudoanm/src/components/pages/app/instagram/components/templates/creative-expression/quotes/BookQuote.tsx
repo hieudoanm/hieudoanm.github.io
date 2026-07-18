@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const BookQuote: FC<TemplateProps> = ({ data }) => {
   const quote =
@@ -11,7 +12,7 @@ export const BookQuote: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
+    <Background center textAlign>
       <blockquote className="text-base-content mb-3 max-w-xl text-2xl leading-relaxed italic">
         "{quote}"
       </blockquote>
@@ -28,7 +29,7 @@ export const BookQuote: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 BookQuote.displayName = 'BookQuote';

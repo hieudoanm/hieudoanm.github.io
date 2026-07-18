@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const PollVote: FC<TemplateProps> = ({ data }) => {
   const question = (data.question as string) ?? '';
@@ -8,7 +9,7 @@ export const PollVote: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+    <Background>
       <h1 className="text-base-content mb-6 text-4xl leading-tight font-bold">
         {question}
       </h1>
@@ -34,7 +35,7 @@ export const PollVote: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

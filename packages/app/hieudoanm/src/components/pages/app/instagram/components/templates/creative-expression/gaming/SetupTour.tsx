@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 interface SetupComponent {
   name: string;
@@ -20,7 +21,7 @@ export const SetupTour: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+    <Background>
       <h1 className="text-accent mb-0.5 text-4xl font-bold">{title}</h1>
       <p className="text-neutral mb-2 text-xs">{description}</p>
       <ul className="mb-2 flex flex-1 flex-col gap-2">
@@ -46,7 +47,7 @@ export const SetupTour: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

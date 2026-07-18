@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const PlayerStats: FC<TemplateProps> = ({ data }) => {
   const name = (data.name as string) ?? 'Marcus Johnson';
@@ -14,7 +15,7 @@ export const PlayerStats: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
+    <Background center>
       <div className="mb-6 text-center">
         <h1 className="text-base-content text-4xl font-black">{name}</h1>
         <div className="mt-1 flex items-center justify-center gap-2">
@@ -41,7 +42,7 @@ export const PlayerStats: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

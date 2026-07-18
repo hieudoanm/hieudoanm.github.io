@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const TransferCard: FC<TemplateProps> = ({ data }) => {
   const player = (data.player as string) ?? '';
@@ -11,7 +12,7 @@ export const TransferCard: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+    <Background>
       <div className="mb-4 text-center">
         <h2 className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
           Transfer
@@ -50,7 +51,7 @@ export const TransferCard: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const VideoStill: FC<TemplateProps> = ({ data }) => {
   const imageUrl = (data.imageUrl as string) ?? '';
@@ -8,7 +9,7 @@ export const VideoStill: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="relative flex h-full w-full items-center justify-center bg-black">
+    <Background center bg="bg-black" className="relative">
       {imageUrl ? (
         <img src={imageUrl} alt="" className="absolute inset-0 object-cover" />
       ) : (
@@ -42,7 +43,7 @@ export const VideoStill: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

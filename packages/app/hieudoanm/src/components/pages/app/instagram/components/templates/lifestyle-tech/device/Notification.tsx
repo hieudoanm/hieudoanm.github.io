@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const Notification: FC<TemplateProps> = ({ data }) => {
   const app = (data.app as string) ?? '';
@@ -9,7 +10,7 @@ export const Notification: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full items-center justify-center p-8">
+    <Background center className="no-flex-col">
       <div className="bg-base-200 rounded-box w-full max-w-sm p-3 shadow-lg">
         <div className="flex items-start gap-4">
           <div className="bg-primary flex h-10 w-10 shrink-0 items-center justify-center rounded-xl">
@@ -38,7 +39,7 @@ export const Notification: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

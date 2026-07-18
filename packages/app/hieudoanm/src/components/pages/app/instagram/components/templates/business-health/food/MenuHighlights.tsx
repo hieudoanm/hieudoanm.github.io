@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const MenuHighlights: FC<TemplateProps> = ({ data }) => {
   const restaurant = (data.restaurant as string) ?? '';
@@ -8,7 +9,7 @@ export const MenuHighlights: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+    <Background>
       {restaurant && (
         <span className="text-accent mb-4 text-xs font-bold tracking-[0.2em] uppercase">
           {restaurant}
@@ -39,7 +40,7 @@ export const MenuHighlights: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

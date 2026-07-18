@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const RecipeCard: FC<TemplateProps> = ({ data }) => {
   const title = (data.title as string) ?? '';
@@ -11,7 +12,7 @@ export const RecipeCard: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+    <Background>
       <h1 className="text-base-content text-4xl font-bold">{title}</h1>
       <div className="mt-2 flex gap-2">
         {prepTime && (
@@ -53,7 +54,7 @@ export const RecipeCard: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

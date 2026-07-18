@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const Takeaway: FC<TemplateProps> = ({ data }) => {
   const headline = (data.headline as string) ?? '';
@@ -8,7 +9,7 @@ export const Takeaway: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col justify-center p-8">
+    <Background>
       <div className="mb-3">
         <span className="bg-primary/20 text-primary rounded-full px-2 py-1.5 text-xs font-bold tracking-widest uppercase">
           Key Takeaway
@@ -30,7 +31,7 @@ export const Takeaway: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

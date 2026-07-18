@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 interface SkillLevel {
   level: string;
@@ -14,7 +15,7 @@ export const SkillRoadmap: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
+    <Background center textAlign>
       <h1 className="text-primary mb-0.5 text-4xl font-bold">{title}</h1>
       {skill && <p className="badge badge-primary mb-3">{skill}</p>}
       <ul className="flex w-full max-w-md flex-col items-center gap-1">
@@ -49,7 +50,7 @@ export const SkillRoadmap: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 SkillRoadmap.displayName = 'SkillRoadmap';

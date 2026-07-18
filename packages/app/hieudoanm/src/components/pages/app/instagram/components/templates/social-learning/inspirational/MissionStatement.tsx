@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const MissionStatement: FC<TemplateProps> = ({ data }) => {
   const headline = (data.headline as string) ?? '';
@@ -8,7 +9,7 @@ export const MissionStatement: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col justify-center gap-4 p-8">
+    <Background gap="md">
       <div>
         <h2 className="text-accent text-sm font-bold tracking-[0.2em] uppercase">
           {headline}
@@ -30,7 +31,7 @@ export const MissionStatement: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

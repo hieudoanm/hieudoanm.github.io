@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 interface Slice {
   label: string;
@@ -43,7 +44,7 @@ export const PieChart: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
+    <Background center>
       <div className="mb-2 text-center">
         <h2 className="text-base-content text-sm font-bold">{title}</h2>
         {text && <p className="text-neutral mt-1 text-xs">{text}</p>}
@@ -80,7 +81,7 @@ export const PieChart: FC<TemplateProps> = ({ data }) => {
           );
         })}
       </svg>
-    </div>
+    </Background>
   );
 };
 

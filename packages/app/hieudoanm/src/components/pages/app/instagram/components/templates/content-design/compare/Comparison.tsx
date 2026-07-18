@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 interface SideDef {
   label: string;
@@ -14,7 +15,7 @@ export const Comparison: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="flex h-full w-full flex-col">
+    <Background>
       <div className="bg-accent/10 px-5 py-3">
         <h1 className="text-base-content text-center text-4xl font-bold tracking-tight">
           {headline}
@@ -58,7 +59,7 @@ export const Comparison: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

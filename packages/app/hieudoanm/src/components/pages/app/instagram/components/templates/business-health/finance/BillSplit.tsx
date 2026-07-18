@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const BillSplit: FC<TemplateProps> = ({ data }) => {
   const headline = (data.headline as string) ?? 'Dinner Bill';
@@ -14,7 +15,7 @@ export const BillSplit: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+    <Background>
       <p className="text-neutral mb-1 text-xs font-bold tracking-wider uppercase">
         {headline}
       </p>
@@ -42,7 +43,7 @@ export const BillSplit: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

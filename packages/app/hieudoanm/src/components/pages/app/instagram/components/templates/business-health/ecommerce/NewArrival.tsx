@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const NewArrival: FC<TemplateProps> = ({ data }) => {
   const badge = (data.badge as string) ?? 'NEW';
@@ -11,7 +12,7 @@ export const NewArrival: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
+    <Background center>
       <div className="text-center">
         <div className="bg-primary text-primary-content inline-block rounded px-3 py-1 text-xs font-bold tracking-wider uppercase">
           {badge}
@@ -47,7 +48,7 @@ export const NewArrival: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

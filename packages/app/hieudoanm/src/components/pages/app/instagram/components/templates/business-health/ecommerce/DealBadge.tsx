@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const DealBadge: FC<TemplateProps> = ({ data }) => {
   const headline = (data.headline as string) ?? 'Limited Time Offer';
@@ -11,7 +12,7 @@ export const DealBadge: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
+    <Background center textAlign>
       <div className="bg-accent text-base-100 mb-6 self-start rounded px-3 py-1 text-xs font-bold tracking-wider uppercase">
         {badge}
       </div>
@@ -31,7 +32,7 @@ export const DealBadge: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

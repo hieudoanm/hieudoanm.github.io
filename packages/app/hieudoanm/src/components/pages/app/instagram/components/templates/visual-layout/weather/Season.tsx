@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const Season: FC<TemplateProps> = ({ data }) => {
   const title = (data.title as string) ?? 'Season Overview';
@@ -16,7 +17,7 @@ export const Season: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+    <Background>
       <h2 className="text-accent mb-2 text-xs font-bold tracking-[0.2em] uppercase">
         {title}
       </h2>
@@ -64,7 +65,7 @@ export const Season: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

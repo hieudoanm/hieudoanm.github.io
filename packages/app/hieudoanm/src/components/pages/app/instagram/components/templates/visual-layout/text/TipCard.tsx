@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const TipCard: FC<TemplateProps> = ({ data }) => {
   const number = (data.number as string) ?? '01';
@@ -8,7 +9,7 @@ export const TipCard: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col justify-center p-8">
+    <Background>
       <span className="text-primary/20 mb-2 text-4xl font-black tracking-tighter">
         {number}
       </span>
@@ -21,7 +22,7 @@ export const TipCard: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

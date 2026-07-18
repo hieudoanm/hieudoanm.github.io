@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 interface Node {
   name: string;
@@ -28,7 +29,7 @@ export const DependencyGraph: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+    <Background>
       <div className="mb-1 text-center">
         <h2 className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
           Dependency Graph
@@ -108,7 +109,7 @@ export const DependencyGraph: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

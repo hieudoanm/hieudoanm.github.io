@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const AspectRatio: FC<TemplateProps> = ({ data }) => {
   const headline = (data.headline as string) ?? 'Common Ratios';
@@ -17,7 +18,7 @@ export const AspectRatio: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+    <Background>
       <h1 className="text-base-content mb-6 text-4xl font-bold">{headline}</h1>
       <ul className="flex flex-1 flex-col items-center justify-center gap-6">
         {ratios.map((r, i) => {
@@ -39,7 +40,7 @@ export const AspectRatio: FC<TemplateProps> = ({ data }) => {
           );
         })}
       </ul>
-    </div>
+    </Background>
   );
 };
 

@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 interface StepDef {
   label: string;
@@ -16,7 +17,7 @@ export const StepByStep: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+    <Background>
       <h1 className="text-base-content mb-2 text-center text-4xl font-bold tracking-tight">
         {headline}
       </h1>
@@ -38,7 +39,7 @@ export const StepByStep: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

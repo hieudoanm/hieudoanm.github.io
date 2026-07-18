@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const ExerciseGuide: FC<TemplateProps> = ({ data }) => {
   const name = (data.name as string) ?? '';
@@ -10,7 +11,7 @@ export const ExerciseGuide: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+    <Background>
       <h1 className="text-base-content text-4xl font-bold">{name}</h1>
       {target && (
         <span className="rounded-box bg-accent/10 text-accent mt-2 inline-block self-start px-3 py-0.5 text-xs font-bold">
@@ -37,7 +38,7 @@ export const ExerciseGuide: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

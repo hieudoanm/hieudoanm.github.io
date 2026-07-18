@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const BudgetTracker: FC<TemplateProps> = ({ data }) => {
   const title = (data.title as string) ?? '';
@@ -15,7 +16,7 @@ export const BudgetTracker: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+    <Background>
       <div className="flex items-center justify-between">
         <h1 className="text-base-content text-4xl font-bold">{title}</h1>
         {period && (
@@ -52,7 +53,7 @@ export const BudgetTracker: FC<TemplateProps> = ({ data }) => {
           );
         })}
       </ul>
-    </div>
+    </Background>
   );
 };
 

@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 const PAL = ['bg-primary', 'bg-secondary', 'bg-accent', 'bg-neutral'];
 const R = 80;
@@ -23,7 +24,7 @@ export const DonutChart: FC<TemplateProps> = ({ data }) => {
   const citation = (data.citation as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
+    <Background center>
       <h1 className="text-base-content mb-4 text-center text-4xl font-bold tracking-tight">
         {headline || 'Market Share'}
       </h1>
@@ -76,7 +77,7 @@ export const DonutChart: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

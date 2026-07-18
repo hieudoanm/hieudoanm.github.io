@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 interface Exercise {
   name: string;
@@ -19,7 +20,7 @@ export const WorkoutLog: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+    <Background>
       <div className="mb-4">
         <h1 className="text-base-content text-4xl font-bold">{title}</h1>
         {date && <time className="text-neutral text-xs">{date}</time>}
@@ -63,7 +64,7 @@ export const WorkoutLog: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

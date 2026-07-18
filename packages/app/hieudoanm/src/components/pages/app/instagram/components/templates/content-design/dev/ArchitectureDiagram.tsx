@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 interface Component {
   name: string;
@@ -19,7 +20,7 @@ export const ArchitectureDiagram: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+    <Background>
       <div className="mb-2 text-center">
         <h2 className="text-accent text-[10px] font-bold tracking-[0.2em] uppercase">
           Architecture
@@ -61,7 +62,7 @@ export const ArchitectureDiagram: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

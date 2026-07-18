@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const TriWord: FC<TemplateProps> = ({ data }) => {
   const word1 = (data.word1 as string) ?? 'WORK';
@@ -9,7 +10,7 @@ export const TriWord: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
+    <Background center>
       <div className="flex items-baseline gap-2 text-center">
         <span className="text-primary text-4xl leading-none font-black">
           {word1}
@@ -29,7 +30,7 @@ export const TriWord: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

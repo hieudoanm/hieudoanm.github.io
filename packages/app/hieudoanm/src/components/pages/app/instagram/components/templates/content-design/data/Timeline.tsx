@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 interface TimelineEntry {
   date: string;
@@ -22,7 +23,7 @@ export const Timeline: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="flex h-full w-full flex-col p-8">
+    <Background>
       <h1 className="text-base-content mb-4 text-4xl font-bold tracking-tight">
         {title}
       </h1>
@@ -60,7 +61,7 @@ export const Timeline: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

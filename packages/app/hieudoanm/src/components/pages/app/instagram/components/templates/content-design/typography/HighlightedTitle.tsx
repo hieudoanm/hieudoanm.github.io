@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const HighlightedTitle: FC<TemplateProps> = ({ data }) => {
   const headline = (data.headline as string) ?? 'The Future is NOW';
@@ -30,7 +31,7 @@ export const HighlightedTitle: FC<TemplateProps> = ({ data }) => {
   const citation = (data.citation as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
+    <Background center>
       <div className="text-center">
         <h1 className="text-base-content text-4xl leading-tight font-bold tracking-tight">
           {renderHeadline()}
@@ -44,7 +45,7 @@ export const HighlightedTitle: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

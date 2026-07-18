@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const IngredientSpotlight: FC<TemplateProps> = ({ data }) => {
   const name = (data.name as string) ?? '';
@@ -9,7 +10,7 @@ export const IngredientSpotlight: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+    <Background>
       <span className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
         Ingredient Spotlight
       </span>
@@ -61,7 +62,7 @@ export const IngredientSpotlight: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

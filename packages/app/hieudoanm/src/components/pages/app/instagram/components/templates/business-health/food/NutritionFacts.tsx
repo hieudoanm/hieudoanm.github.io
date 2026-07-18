@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const NutritionFacts: FC<TemplateProps> = ({ data }) => {
   const item = (data.item as string) ?? '';
@@ -18,7 +19,7 @@ export const NutritionFacts: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col justify-center p-8">
+    <Background>
       <h1 className="text-base-content text-4xl font-bold tracking-tight">
         {item}
       </h1>
@@ -44,7 +45,7 @@ export const NutritionFacts: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

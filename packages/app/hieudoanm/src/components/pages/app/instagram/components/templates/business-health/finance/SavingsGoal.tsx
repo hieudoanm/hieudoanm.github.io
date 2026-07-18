@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const SavingsGoal: FC<TemplateProps> = ({ data }) => {
   const goal = (data.goal as string) ?? '';
@@ -14,7 +15,7 @@ export const SavingsGoal: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
+    <Background center textAlign>
       <span className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
         Savings Goal
       </span>
@@ -43,7 +44,7 @@ export const SavingsGoal: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

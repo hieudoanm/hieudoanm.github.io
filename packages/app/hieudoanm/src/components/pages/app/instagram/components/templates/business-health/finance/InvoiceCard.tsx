@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const InvoiceCard: FC<TemplateProps> = ({ data }) => {
   const invoiceNumber = (data.invoiceNumber as string) ?? 'INV-2025-001';
@@ -13,7 +14,7 @@ export const InvoiceCard: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+    <Background>
       <div className="flex items-start justify-between">
         <div>
           <span className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
@@ -65,7 +66,7 @@ export const InvoiceCard: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 InvoiceCard.displayName = 'InvoiceCard';

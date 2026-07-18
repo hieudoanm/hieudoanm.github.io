@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const AchievementUnlocked: FC<TemplateProps> = ({ data }) => {
   const title = (data.title as string) ?? 'Achievement Name';
@@ -11,7 +12,7 @@ export const AchievementUnlocked: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
+    <Background center textAlign>
       <div className="bg-accent/10 mb-1 flex h-8 w-8 items-center justify-center rounded-full">
         <span className="text-3xl">🏆</span>
       </div>
@@ -31,7 +32,7 @@ export const AchievementUnlocked: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

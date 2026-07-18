@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const Minimal: FC<TemplateProps> = ({ data }) => {
   const headline = (data.headline as string) ?? '';
@@ -8,7 +9,7 @@ export const Minimal: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center gap-4 p-8 text-center">
+    <Background center textAlign gap="md">
       <div className="flex flex-col items-center justify-center">
         <h1 className="text-base-content mb-2 text-4xl leading-tight font-bold tracking-tight">
           {headline}
@@ -31,7 +32,7 @@ export const Minimal: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

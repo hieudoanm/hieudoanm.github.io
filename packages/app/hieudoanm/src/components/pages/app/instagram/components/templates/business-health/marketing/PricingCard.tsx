@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const PricingCard: FC<TemplateProps> = ({ data }) => {
   const plan = (data.plan as string) ?? '';
@@ -12,7 +13,7 @@ export const PricingCard: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
+    <Background center textAlign>
       <span className="bg-accent/10 text-accent mb-2 rounded-full px-4 py-1 text-xs font-bold tracking-widest uppercase">
         {plan}
       </span>
@@ -46,7 +47,7 @@ export const PricingCard: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

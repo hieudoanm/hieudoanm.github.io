@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const QuickQuiz: FC<TemplateProps> = ({ data }) => {
   const question = (data.question as string) ?? '';
@@ -9,7 +10,7 @@ export const QuickQuiz: FC<TemplateProps> = ({ data }) => {
   const citation = (data.citation as string) ?? '';
 
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+    <Background>
       <span className="text-accent mb-4 text-sm font-bold tracking-[0.2em] uppercase">
         Quick Quiz
       </span>
@@ -48,7 +49,7 @@ export const QuickQuiz: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

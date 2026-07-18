@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const BodyMeasurements: FC<TemplateProps> = ({ data }) => {
   const headline = (data.headline as string) ?? 'Progress Tracker';
@@ -15,7 +16,7 @@ export const BodyMeasurements: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+    <Background>
       <h1 className="text-base-content mb-6 text-4xl font-bold">{headline}</h1>
       <ul className="flex flex-1 flex-col gap-3">
         {measurements.map((m, i) => {
@@ -60,7 +61,7 @@ export const BodyMeasurements: FC<TemplateProps> = ({ data }) => {
           );
         })}
       </ul>
-    </div>
+    </Background>
   );
 };
 

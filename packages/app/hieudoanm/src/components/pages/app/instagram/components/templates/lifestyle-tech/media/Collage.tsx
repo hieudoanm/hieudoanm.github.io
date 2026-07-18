@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const Collage: FC<TemplateProps> = ({ data }) => {
   const images = (data.images as string[]) ?? [];
@@ -7,7 +8,7 @@ export const Collage: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="relative flex h-full w-full overflow-hidden">
+    <Background padding="none" overflow className="no-flex-col relative">
       <div className="flex h-full w-full items-center justify-center p-4">
         <div className="relative h-full w-full">
           {urls[0] ? (
@@ -50,7 +51,7 @@ export const Collage: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

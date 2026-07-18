@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const Abbreviation: FC<TemplateProps> = ({ data }) => {
   const abbr = (data.abbr as string) ?? '';
@@ -8,7 +9,7 @@ export const Abbreviation: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
+    <Background center>
       <span className="text-accent mb-8 text-sm font-bold tracking-[0.2em] uppercase">
         Abbreviation
       </span>
@@ -29,7 +30,7 @@ export const Abbreviation: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

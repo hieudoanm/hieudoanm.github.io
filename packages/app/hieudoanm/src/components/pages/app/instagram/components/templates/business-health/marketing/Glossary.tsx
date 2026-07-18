@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const Glossary: FC<TemplateProps> = ({ data }) => {
   const term = (data.term as string) ?? '';
@@ -8,7 +9,7 @@ export const Glossary: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col justify-center p-8">
+    <Background>
       <div className="mb-4">
         <span className="bg-accent/10 text-accent rounded-full px-4 py-1.5 text-xs font-bold tracking-widest uppercase">
           Glossary
@@ -35,7 +36,7 @@ export const Glossary: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

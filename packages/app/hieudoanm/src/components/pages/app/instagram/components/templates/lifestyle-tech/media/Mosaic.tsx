@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const Mosaic: FC<TemplateProps> = ({ data }) => {
   const images = (data.images as string[]) ?? [];
@@ -7,7 +8,7 @@ export const Mosaic: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="flex h-full w-full flex-col">
+    <Background padding="none">
       <ul className="grid h-full w-full grid-cols-2 grid-rows-2 gap-1 p-1">
         {urls.map((url, i) =>
           url ? (
@@ -32,7 +33,7 @@ export const Mosaic: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const Haiku: FC<TemplateProps> = ({ data }) => {
   const title = (data.title as string) ?? '';
@@ -9,7 +10,7 @@ export const Haiku: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
+    <Background center>
       <div className="max-w-md text-center">
         {title && (
           <h1 className="text-base-content mb-4 text-4xl font-bold tracking-tight">
@@ -34,7 +35,7 @@ export const Haiku: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

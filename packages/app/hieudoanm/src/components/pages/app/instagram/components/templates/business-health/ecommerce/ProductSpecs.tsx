@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 interface Spec {
   label: string;
@@ -18,7 +19,7 @@ export const ProductSpecs: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 border-t-primary flex h-full w-full flex-col border-t-4 p-8">
+    <Background border="border-t-4 border-t-primary">
       <div className="mb-4">
         <h1 className="text-base-content text-4xl font-bold">{name}</h1>
         <p className="text-neutral text-sm">{tagline}</p>
@@ -40,7 +41,7 @@ export const ProductSpecs: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

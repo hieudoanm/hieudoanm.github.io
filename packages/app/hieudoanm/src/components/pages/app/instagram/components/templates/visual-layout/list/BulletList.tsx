@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const BulletList: FC<TemplateProps> = ({ data }) => {
   const headline = (data.headline as string) ?? '';
@@ -9,7 +10,7 @@ export const BulletList: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
+    <Background center>
       <div className="flex flex-col">
         <h1 className="text-base-content mb-4 text-4xl font-bold tracking-tight">
           {headline}
@@ -30,7 +31,7 @@ export const BulletList: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

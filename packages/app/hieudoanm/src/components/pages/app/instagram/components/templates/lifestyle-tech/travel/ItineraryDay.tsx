@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 interface ItineraryItem {
   time: string;
@@ -19,7 +20,7 @@ export const ItineraryDay: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full p-8">
+    <Background className="no-flex-col">
       <div className="mr-6 flex flex-col items-center">
         <div className="bg-primary text-primary-content flex h-12 w-12 items-center justify-center rounded-full text-base font-black">
           {day}
@@ -61,7 +62,7 @@ export const ItineraryDay: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

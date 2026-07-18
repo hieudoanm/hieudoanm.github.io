@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const Strikethrough: FC<TemplateProps> = ({ data }) => {
   const number = (data.number as string) ?? '$99';
@@ -9,7 +10,7 @@ export const Strikethrough: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
+    <Background center>
       <div className="text-center">
         <div className="flex items-baseline justify-center gap-2">
           <span className="text-base-content text-3xl leading-none font-black line-through opacity-40">
@@ -33,7 +34,7 @@ export const Strikethrough: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

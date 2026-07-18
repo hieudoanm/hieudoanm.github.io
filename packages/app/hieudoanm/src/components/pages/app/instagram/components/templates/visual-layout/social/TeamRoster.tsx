@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 interface Member {
   name: string;
@@ -20,7 +21,7 @@ export const TeamRoster: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+    <Background>
       <h2 className="text-base-content mb-4 text-center text-xs font-bold">
         {headline}
       </h2>
@@ -51,7 +52,7 @@ export const TeamRoster: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

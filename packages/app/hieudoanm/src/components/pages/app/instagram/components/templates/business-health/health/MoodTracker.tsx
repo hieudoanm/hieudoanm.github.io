@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 const MOOD_EMOJIS: Record<string, string> = {
   great: '😄',
@@ -17,7 +18,7 @@ export const MoodTracker: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
+    <Background center textAlign>
       <span className="text-accent mb-2 text-xs font-bold tracking-[0.2em] uppercase">
         {title || 'Mood Tracker'}
       </span>
@@ -34,7 +35,7 @@ export const MoodTracker: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

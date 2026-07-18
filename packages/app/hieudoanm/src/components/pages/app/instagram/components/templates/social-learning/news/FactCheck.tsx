@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 const VERDICT_STYLES: Record<
   string,
@@ -24,7 +25,7 @@ export const FactCheck: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+    <Background>
       <div className="mb-4 text-center">
         <h2 className="text-accent text-sm font-bold tracking-[0.2em] uppercase">
           Fact Check
@@ -55,7 +56,7 @@ export const FactCheck: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

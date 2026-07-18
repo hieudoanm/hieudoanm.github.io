@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const Setlist: FC<TemplateProps> = ({ data }) => {
   const artist = (data.artist as string) ?? 'Artist';
@@ -11,7 +12,7 @@ export const Setlist: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
+    <Background center textAlign>
       <span className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
         Setlist
       </span>
@@ -52,7 +53,7 @@ export const Setlist: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 Setlist.displayName = 'Setlist';

@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const PackingChecklist: FC<TemplateProps> = ({ data }) => {
   const destination = (data.destination as string) ?? 'Tokyo';
@@ -15,7 +16,7 @@ export const PackingChecklist: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+    <Background>
       <div className="mb-5 text-center">
         <span className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
           Packing Checklist
@@ -50,7 +51,7 @@ export const PackingChecklist: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

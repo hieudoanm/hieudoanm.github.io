@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 interface StoryElement {
   name: string;
@@ -18,7 +19,7 @@ export const StoryStructure: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
+    <Background center textAlign>
       <h1 className="text-base-content mb-0.5 text-4xl font-black tracking-tight">
         {title}
       </h1>
@@ -50,7 +51,7 @@ export const StoryStructure: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

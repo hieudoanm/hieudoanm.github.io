@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const StreakCounter: FC<TemplateProps> = ({ data }) => {
   const headline = (data.headline as string) ?? 'Learning Streak';
@@ -9,7 +10,7 @@ export const StreakCounter: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
+    <Background center>
       <h2 className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
         {headline}
       </h2>
@@ -28,7 +29,7 @@ export const StreakCounter: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

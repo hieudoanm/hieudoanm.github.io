@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 interface SalaryEntry {
   level: string;
@@ -15,7 +16,7 @@ export const SalaryGuide: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
+    <Background center textAlign>
       <h1 className="text-primary mb-0.5 text-4xl font-bold">{title}</h1>
       {role && <p className="badge badge-secondary mb-3">{role}</p>}
       <div className="w-full max-w-lg overflow-hidden rounded-lg">
@@ -50,7 +51,7 @@ export const SalaryGuide: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 SalaryGuide.displayName = 'SalaryGuide';

@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const HeatmapGrid: FC<TemplateProps> = ({ data }) => {
   const title = (data.title as string) ?? 'Heatmap';
@@ -15,7 +16,7 @@ export const HeatmapGrid: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
+    <Background center>
       <h2 className="text-base-content mb-2 text-sm font-bold">{title}</h2>
       <div className="flex flex-col gap-1">
         <div className="flex gap-1">
@@ -49,7 +50,7 @@ export const HeatmapGrid: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

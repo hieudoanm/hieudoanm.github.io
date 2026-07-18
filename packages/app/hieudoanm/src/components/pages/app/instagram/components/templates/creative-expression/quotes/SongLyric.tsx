@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const SongLyric: FC<TemplateProps> = ({ data }) => {
   const lyric =
@@ -11,7 +12,7 @@ export const SongLyric: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
+    <Background center textAlign>
       <span className="text-primary mb-1 font-serif text-xl">♪</span>
       <blockquote className="text-base-content mb-3 max-w-xl text-2xl leading-relaxed font-medium italic">
         "{lyric}"
@@ -27,7 +28,7 @@ export const SongLyric: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 SongLyric.displayName = 'SongLyric';

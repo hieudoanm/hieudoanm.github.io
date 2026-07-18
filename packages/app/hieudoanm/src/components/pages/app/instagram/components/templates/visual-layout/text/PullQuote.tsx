@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const PullQuote: FC<TemplateProps> = ({ data }) => {
   const quote = (data.quote as string) ?? '';
@@ -10,7 +11,7 @@ export const PullQuote: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
+    <Background center>
       {imageUrl && (
         <img
           src={imageUrl}
@@ -39,7 +40,7 @@ export const PullQuote: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

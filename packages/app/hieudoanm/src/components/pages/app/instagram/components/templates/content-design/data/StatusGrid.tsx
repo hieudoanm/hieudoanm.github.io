@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const StatusGrid: FC<TemplateProps> = ({ data }) => {
   const headline = (data.headline as string) ?? 'System Status';
@@ -18,7 +19,7 @@ export const StatusGrid: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+    <Background>
       <h1 className="text-base-content mb-3 text-4xl font-bold">{headline}</h1>
       <ul className="grid flex-1 grid-cols-2 gap-2">
         {services.map((s, i) => (
@@ -40,7 +41,7 @@ export const StatusGrid: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

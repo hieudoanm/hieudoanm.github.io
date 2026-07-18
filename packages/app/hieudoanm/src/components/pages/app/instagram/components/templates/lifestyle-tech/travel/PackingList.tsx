@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const PackingList: FC<TemplateProps> = ({ data }) => {
   const title = (data.title as string) ?? '';
@@ -8,7 +9,7 @@ export const PackingList: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+    <Background>
       <div className="mb-6 flex items-center justify-between">
         <h1 className="text-base-content text-4xl font-bold">{title}</h1>
         <span className="text-neutral text-xs">{items.length} items</span>
@@ -31,7 +32,7 @@ export const PackingList: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

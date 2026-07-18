@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const Mention: FC<TemplateProps> = ({ data }) => {
   const handle = (data.handle as string) ?? '';
@@ -10,7 +11,7 @@ export const Mention: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-4">
+    <Background padding="sm">
       <div className="rounded-box border-accent/20 flex flex-1 flex-col border p-4">
         <div className="mb-2 flex items-center gap-1">
           {avatarUrl ? (
@@ -96,7 +97,7 @@ export const Mention: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

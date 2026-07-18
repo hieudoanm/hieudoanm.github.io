@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const BreakingNews: FC<TemplateProps> = ({ data }) => {
   const headline = (data.headline as string) ?? '';
@@ -9,7 +10,7 @@ export const BreakingNews: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
+    <Background center>
       <div className="w-full max-w-lg text-center">
         <div className="mb-4 flex items-center justify-center gap-2">
           <span className="bg-error h-2 w-2 animate-pulse rounded-full" />
@@ -31,7 +32,7 @@ export const BreakingNews: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 interface Demographic {
   label: string;
@@ -23,7 +24,7 @@ export const Participants: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+    <Background>
       <span className="text-accent mb-3 text-sm font-bold tracking-[0.2em] uppercase">
         Participants
       </span>
@@ -74,7 +75,7 @@ export const Participants: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

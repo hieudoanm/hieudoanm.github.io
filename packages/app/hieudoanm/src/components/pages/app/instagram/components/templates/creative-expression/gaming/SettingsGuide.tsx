@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 interface Setting {
   name: string;
@@ -20,7 +21,7 @@ export const SettingsGuide: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+    <Background>
       <h1 className="text-base-content mb-0.5 text-4xl font-bold">{title}</h1>
       <div className="mb-0.5 flex items-center gap-1">
         <span className="bg-accent/10 text-accent rounded-full px-1.5 py-0.5 text-xs font-bold">
@@ -55,7 +56,7 @@ export const SettingsGuide: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

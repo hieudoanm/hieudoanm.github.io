@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 interface Lens {
   name: string;
@@ -14,7 +15,7 @@ export const LensGuide: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
+    <Background center textAlign>
       <h2 className="text-accent mb-1 text-xs font-bold tracking-[0.2em] uppercase">
         Lens Guide
       </h2>
@@ -47,7 +48,7 @@ export const LensGuide: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

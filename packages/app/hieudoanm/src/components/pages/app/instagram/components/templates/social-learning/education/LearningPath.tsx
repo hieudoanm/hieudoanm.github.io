@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const LearningPath: FC<TemplateProps> = ({ data }) => {
   const title = (data.title as string) ?? '';
@@ -8,7 +9,7 @@ export const LearningPath: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+    <Background>
       <h1 className="text-base-content mb-4 text-4xl leading-tight font-bold">
         {title}
       </h1>
@@ -41,7 +42,7 @@ export const LearningPath: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

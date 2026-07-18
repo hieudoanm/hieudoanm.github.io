@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const FillBlank: FC<TemplateProps> = ({ data }) => {
   const text = (data.text as string) ?? '';
@@ -11,7 +12,7 @@ export const FillBlank: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
+    <Background center textAlign>
       <span className="text-accent mb-4 text-sm font-bold tracking-[0.2em] uppercase">
         Fill in the Blank
       </span>
@@ -36,7 +37,7 @@ export const FillBlank: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

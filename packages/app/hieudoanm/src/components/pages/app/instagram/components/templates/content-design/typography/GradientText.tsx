@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const GradientText: FC<TemplateProps> = ({ data }) => {
   const headline = (data.headline as string) ?? '';
@@ -7,7 +8,7 @@ export const GradientText: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
+    <Background center>
       <h1 className="from-primary to-accent mb-4 bg-gradient-to-r bg-clip-text text-center text-4xl font-black text-transparent">
         {headline || 'Create'}
       </h1>
@@ -20,7 +21,7 @@ export const GradientText: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

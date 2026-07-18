@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const References: FC<TemplateProps> = ({ data }) => {
   const title = (data.title as string) ?? 'References';
@@ -13,7 +14,7 @@ export const References: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col justify-center p-8">
+    <Background>
       <div className="flex flex-col gap-y-4">
         <span className="text-accent mb-3 text-sm font-bold tracking-[0.2em] uppercase">
           {title}
@@ -50,7 +51,7 @@ export const References: FC<TemplateProps> = ({ data }) => {
           </p>
         )}
       </div>
-    </div>
+    </Background>
   );
 };
 

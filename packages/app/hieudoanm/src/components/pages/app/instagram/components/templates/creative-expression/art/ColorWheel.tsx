@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 interface ColorEntry {
   name: string;
@@ -21,7 +22,7 @@ export const ColorWheel: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
+    <Background center textAlign>
       <h1 className="text-base-content mb-1 text-4xl font-black tracking-tight">
         {title}
       </h1>
@@ -54,7 +55,7 @@ export const ColorWheel: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

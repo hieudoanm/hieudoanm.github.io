@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 interface ProgressItem {
   label: string;
@@ -21,7 +22,7 @@ export const ProgressList: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col justify-center p-8">
+    <Background>
       <h1 className="text-base-content mb-5 text-center text-4xl font-bold tracking-tight">
         {headline || 'Progress'}
       </h1>
@@ -50,7 +51,7 @@ export const ProgressList: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

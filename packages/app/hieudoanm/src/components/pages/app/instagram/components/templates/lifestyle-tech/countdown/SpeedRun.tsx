@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const SpeedRun: FC<TemplateProps> = ({ data }) => {
   const title = (data.title as string) ?? 'Speed Run';
@@ -10,7 +11,7 @@ export const SpeedRun: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
+    <Background center>
       <div className="text-center">
         <h2 className="text-neutral text-xs font-bold tracking-widest uppercase">
           {title}
@@ -30,7 +31,7 @@ export const SpeedRun: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 

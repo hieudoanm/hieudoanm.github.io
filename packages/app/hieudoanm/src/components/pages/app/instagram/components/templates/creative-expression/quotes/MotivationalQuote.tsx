@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const MotivationalQuote: FC<TemplateProps> = ({ data }) => {
   const quote =
@@ -11,7 +12,7 @@ export const MotivationalQuote: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
+    <Background center textAlign>
       <p className="badge badge-primary mb-3 text-xs">{theme}</p>
       <blockquote className="text-base-content mb-3 max-w-xl text-2xl leading-snug font-bold">
         {quote}
@@ -27,7 +28,7 @@ export const MotivationalQuote: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 MotivationalQuote.displayName = 'MotivationalQuote';

@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
+import { Background } from '../../_shared';
 
 export const OfferBanner: FC<TemplateProps> = ({ data }) => {
   const badge = (data.badge as string) ?? '';
@@ -10,7 +11,7 @@ export const OfferBanner: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-8">
+    <Background>
       <div className="rounded-box border-primary/40 flex flex-1 flex-col items-center justify-center border-2 border-dashed p-8 text-center">
         {badge && (
           <span className="bg-primary/10 text-primary mb-4 rounded-full px-4 py-1 text-xs font-bold tracking-widest uppercase">
@@ -39,7 +40,7 @@ export const OfferBanner: FC<TemplateProps> = ({ data }) => {
           {citation}
         </p>
       )}
-    </div>
+    </Background>
   );
 };
 
