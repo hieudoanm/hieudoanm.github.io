@@ -3,7 +3,7 @@ import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
 
 export const FullBleed: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? '';
+  const title = (data.title as string) ?? '';
   const text = (data.text as string) ?? '';
   const imageUrl = (data.imageUrl as string) ?? '';
 
@@ -18,7 +18,7 @@ export const FullBleed: FC<TemplateProps> = ({ data }) => {
       <div className="absolute inset-0 bg-black/60" />
       <div className="relative z-10 mx-8 max-w-lg text-center">
         <h1 className="text-base-content mb-4 text-4xl leading-tight font-bold tracking-tight drop-shadow-lg">
-          {headline}
+          {title}
         </h1>
         <p className="text-base-content/80 text-sm leading-relaxed drop-shadow">
           {text}

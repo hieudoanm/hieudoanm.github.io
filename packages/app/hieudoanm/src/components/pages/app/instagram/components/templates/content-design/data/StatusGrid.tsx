@@ -3,7 +3,7 @@ import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
 
 export const StatusGrid: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? 'System Status';
+  const title = (data.title as string) ?? 'System Status';
   const services = (data.services as { name: string; status: string }[]) ?? [
     { name: 'API', status: 'Operational' },
     { name: 'Database', status: 'Operational' },
@@ -20,7 +20,7 @@ export const StatusGrid: FC<TemplateProps> = ({ data }) => {
   const citation = (data.citation as string) ?? '';
   return (
     <Background>
-      <h1 className="text-base-content mb-3 text-4xl font-bold">{headline}</h1>
+      <h1 className="text-base-content mb-3 text-4xl font-bold">{title}</h1>
       <ul className="grid flex-1 grid-cols-2 gap-2">
         {services.map((s, i) => (
           <li

@@ -11,7 +11,7 @@ const CHECK = '✓';
 const CROSS = '—';
 
 export const FeatureTable: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? 'Compare Plans';
+  const title = (data.title as string) ?? 'Compare Plans';
   const features = (data.features as string[]) ?? [
     'Users',
     'Storage',
@@ -29,7 +29,7 @@ export const FeatureTable: FC<TemplateProps> = ({ data }) => {
   return (
     <Background>
       <h2 className="text-base-content mb-2 text-center text-sm font-bold">
-        {headline}
+        {title}
       </h2>
       <div className="flex flex-1 flex-col gap-0.5">
         <div className="border-base-300 flex border-b">

@@ -9,7 +9,7 @@ interface Stat {
 }
 
 export const HeadToHead: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? 'Head to Head';
+  const title = (data.title as string) ?? 'Head to Head';
   const text = (data.text as string) ?? '';
   const teamA = (data.teamA as string) ?? 'Team A';
   const teamB = (data.teamB as string) ?? 'Team B';
@@ -41,7 +41,7 @@ export const HeadToHead: FC<TemplateProps> = ({ data }) => {
     <Background>
       <div className="mb-4 text-center">
         <h2 className="text-neutral text-xs font-semibold tracking-widest uppercase">
-          {headline}
+          {title}
         </h2>
         {text && <p className="text-neutral mt-1 text-xs">{text}</p>}
       </div>

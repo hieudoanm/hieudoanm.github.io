@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
+import { Header } from '../../_shared';
 
 interface SetupComponent {
   name: string;
@@ -9,8 +10,7 @@ interface SetupComponent {
 
 export const SetupTour: FC<TemplateProps> = ({ data }) => {
   const title = (data.title as string) ?? 'My Gaming Setup';
-  const description =
-    (data.description as string) ?? 'The ultimate gaming station';
+  const subtitle = (data.subtitle as string) ?? 'The ultimate gaming station';
   const components =
     (data.components as SetupComponent[]) ??
     ([
@@ -22,8 +22,7 @@ export const SetupTour: FC<TemplateProps> = ({ data }) => {
   const citation = (data.citation as string) ?? '';
   return (
     <Background>
-      <h1 className="text-accent mb-0.5 text-4xl font-bold">{title}</h1>
-      <p className="text-neutral mb-2 text-xs">{description}</p>
+      <Header title={title} subtitle={subtitle} />
       <ul className="mb-2 flex flex-1 flex-col gap-2">
         {components.map((item, i) => (
           <li

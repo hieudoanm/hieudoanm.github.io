@@ -8,7 +8,7 @@ interface OptionDef {
 }
 
 export const Versus: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? '';
+  const title = (data.title as string) ?? '';
   const optionA = (data.optionA as OptionDef) ?? {
     label: 'Option A',
     desc: '',
@@ -33,7 +33,7 @@ export const Versus: FC<TemplateProps> = ({ data }) => {
     <Background>
       <div className="bg-accent/10 px-5 py-3">
         <h1 className="text-base-content text-center text-4xl font-bold tracking-tight">
-          {headline || 'Versus'}
+          {title || 'Versus'}
         </h1>
       </div>
       <div className="flex items-center justify-center gap-2 px-5 py-2">

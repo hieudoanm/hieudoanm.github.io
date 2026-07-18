@@ -3,7 +3,7 @@ import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
 
 export const StreakCounter: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? 'Learning Streak';
+  const title = (data.title as string) ?? 'Learning Streak';
   const streak = (data.streak as string) ?? '42';
   const label = (data.label as string) ?? 'days';
   const started = (data.started as string) ?? 'Started Feb 15, 2025';
@@ -12,7 +12,7 @@ export const StreakCounter: FC<TemplateProps> = ({ data }) => {
   return (
     <Background>
       <h2 className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
-        {headline}
+        {title}
       </h2>
 
       <div className="text-primary mt-4 text-3xl font-black">{streak}</div>

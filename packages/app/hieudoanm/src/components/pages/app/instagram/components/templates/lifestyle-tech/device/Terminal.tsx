@@ -1,10 +1,11 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
+import { Header } from '../../_shared';
 
 export const Terminal: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? '';
-  const description = (data.description as string) ?? '';
+  const title = (data.title as string) ?? '';
+  const subtitle = (data.subtitle as string) ?? '';
   const command = (data.command as string) ?? '';
   const output = (data.output as string) ?? '';
   const syntax = (data.syntax as string) ?? '';
@@ -13,14 +14,7 @@ export const Terminal: FC<TemplateProps> = ({ data }) => {
   return (
     <Background>
       <div className="flex w-full flex-col gap-2">
-        <h2 className="text-base-content text-center text-base font-bold">
-          {headline}
-        </h2>
-        {description && (
-          <p className="text-base-content/70 text-center text-xs leading-relaxed">
-            {description}
-          </p>
-        )}
+        <Header title={title} subtitle={subtitle} />
       </div>
       <div className="flex w-full flex-col overflow-hidden rounded-lg border border-[#30363d] shadow-2xl">
         <div className="flex items-center gap-1.5 border-b border-[#30363d] bg-[#161b22] px-3 py-2">

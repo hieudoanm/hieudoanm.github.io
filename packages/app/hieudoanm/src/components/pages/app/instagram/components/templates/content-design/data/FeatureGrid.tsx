@@ -8,7 +8,7 @@ interface FeatureDef {
 }
 
 export const FeatureGrid: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? '';
+  const title = (data.title as string) ?? '';
   const features = (data.features as FeatureDef[]) ?? [];
   const items =
     features.length > 0
@@ -24,7 +24,7 @@ export const FeatureGrid: FC<TemplateProps> = ({ data }) => {
   return (
     <Background>
       <h1 className="text-base-content mb-4 text-center text-4xl font-bold tracking-tight">
-        {headline}
+        {title}
       </h1>
       <ul className="grid flex-1 grid-cols-2 gap-2">
         {items.slice(0, 4).map((f, i) => (

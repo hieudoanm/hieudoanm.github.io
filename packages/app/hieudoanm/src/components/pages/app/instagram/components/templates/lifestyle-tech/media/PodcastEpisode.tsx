@@ -1,13 +1,14 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
+import { Header } from '../../_shared';
 
 export const PodcastEpisode: FC<TemplateProps> = ({ data }) => {
   const title = (data.title as string) ?? 'Untitled Episode';
   const episode = (data.episode as string) ?? '01';
   const guest = (data.guest as string) ?? 'Unknown Guest';
   const duration = (data.duration as string) ?? '00:00';
-  const description = (data.description as string) ?? '';
+  const subtitle = (data.subtitle as string) ?? '';
 
   const citation = (data.citation as string) ?? '';
   return (
@@ -20,19 +21,7 @@ export const PodcastEpisode: FC<TemplateProps> = ({ data }) => {
       <div className="bg-primary text-base-100 mb-5 flex h-24 w-24 items-center justify-center rounded-full">
         <span className="text-lg">&#9654;</span>
       </div>
-      <h2 className="text-base-content mb-2 text-center text-base font-bold">
-        {title}
-      </h2>
-      <div className="bg-accent/10 text-accent mb-3 rounded px-2.5 py-0.5 text-xs font-bold">
-        <strong>EP {episode}</strong>
-      </div>
-      <p className="text-neutral mb-1 text-xs font-semibold">{guest}</p>
-      <p className="text-neutral mb-3 text-xs">{duration}</p>
-      {description && (
-        <p className="text-neutral max-w-[80%] text-center text-xs leading-relaxed">
-          {description}
-        </p>
-      )}
+      <Header title={title} subtitle={subtitle} />
       {citation && (
         <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
           {citation}

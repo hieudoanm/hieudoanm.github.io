@@ -7,7 +7,7 @@ const R = 80;
 const C = 2 * Math.PI * R;
 
 export const DonutChart: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? '';
+  const title = (data.title as string) ?? '';
   const input = (data.segments as { label: string; pct: number }[]) ?? [];
   const list =
     input.length > 0
@@ -26,7 +26,7 @@ export const DonutChart: FC<TemplateProps> = ({ data }) => {
   return (
     <Background>
       <h1 className="text-base-content mb-4 text-center text-4xl font-bold tracking-tight">
-        {headline || 'Market Share'}
+        {title || 'Market Share'}
       </h1>
       <div className="relative">
         <svg width={200} height={200}>

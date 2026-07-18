@@ -3,7 +3,7 @@ import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
 
 export const BillSplit: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? 'Dinner Bill';
+  const title = (data.title as string) ?? 'Dinner Bill';
   const total = (data.total as string) ?? '$186.50';
   const people = (data.people as string) ?? '4 people';
   const each = (data.each as string) ?? '$46.63 each';
@@ -17,7 +17,7 @@ export const BillSplit: FC<TemplateProps> = ({ data }) => {
   return (
     <Background>
       <p className="text-neutral mb-1 text-xs font-bold tracking-wider uppercase">
-        {headline}
+        {title}
       </p>
       <p className="text-primary text-4xl font-black">
         <strong>{total}</strong>

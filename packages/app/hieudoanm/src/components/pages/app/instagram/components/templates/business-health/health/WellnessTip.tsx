@@ -5,7 +5,7 @@ import { Background } from '../../_shared';
 export const WellnessTip: FC<TemplateProps> = ({ data }) => {
   const tip = (data.tip as string) ?? '';
   const category = (data.category as string) ?? '';
-  const description = (data.description as string) ?? '';
+  const subtitle = (data.subtitle as string) ?? '';
   const source = (data.source as string) ?? '';
 
   const citation = (data.citation as string) ?? '';
@@ -31,7 +31,7 @@ export const WellnessTip: FC<TemplateProps> = ({ data }) => {
       <p className="text-base-content text-xl leading-snug font-bold">
         <strong>{tip}</strong>
       </p>
-      <p className="text-neutral mt-4 text-sm leading-relaxed">{description}</p>
+      <p className="text-neutral mt-4 text-sm leading-relaxed">{subtitle}</p>
       {source && (
         <cite className="text-accent mt-6 text-xs font-medium">
           &mdash; {source}

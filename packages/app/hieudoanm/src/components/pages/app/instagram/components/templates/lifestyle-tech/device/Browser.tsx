@@ -1,26 +1,20 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
+import { Header } from '../../_shared';
 
 export const Browser: FC<TemplateProps> = ({ data }) => {
   const url = (data.url as string) ?? '';
   const pageTitle = (data.pageTitle as string) ?? '';
-  const headline = (data.headline as string) ?? '';
-  const description = (data.description as string) ?? '';
+  const title = (data.title as string) ?? '';
+  const subtitle = (data.subtitle as string) ?? '';
   const image = (data.image as string) ?? '';
 
   const citation = (data.citation as string) ?? '';
   return (
     <Background>
       <div className="flex w-full flex-col gap-2">
-        <h2 className="text-base-content text-center text-base font-bold">
-          {headline}
-        </h2>
-        {description && (
-          <p className="text-base-content/70 text-center text-xs leading-relaxed">
-            {description}
-          </p>
-        )}
+        <Header title={title} subtitle={subtitle} />
       </div>
       <div className="border-base-300 flex w-full flex-col overflow-hidden rounded-2xl border shadow-lg">
         <div className="bg-base-200 border-base-300 flex flex-col border-b">

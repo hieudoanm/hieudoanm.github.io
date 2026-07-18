@@ -3,7 +3,7 @@ import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
 
 export const VisionBoard: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? '';
+  const title = (data.title as string) ?? '';
   const text = (data.text as string) ?? '';
   const imageUrl = (data.imageUrl as string) ?? '';
 
@@ -19,7 +19,7 @@ export const VisionBoard: FC<TemplateProps> = ({ data }) => {
         }>
         <div className="rounded-box bg-base-100/90 w-full px-4 py-4 backdrop-blur-sm">
           <h1 className="text-base-content text-4xl leading-tight font-bold">
-            {headline}
+            {title}
           </h1>
         </div>
       </div>

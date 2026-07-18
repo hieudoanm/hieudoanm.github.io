@@ -4,7 +4,7 @@ import { Background } from '../../_shared';
 
 export const CinemaBanner: FC<TemplateProps> = ({ data }) => {
   const imageUrl = (data.imageUrl as string) ?? '';
-  const headline = (data.headline as string) ?? '';
+  const title = (data.title as string) ?? '';
   const text = (data.text as string) ?? '';
   const caption = (data.caption as string) ?? '';
 
@@ -19,7 +19,7 @@ export const CinemaBanner: FC<TemplateProps> = ({ data }) => {
       <div className="absolute inset-0 bg-black/50" />
       <div className="relative z-10 mx-8 border-y border-white/20 px-8 py-6 text-center">
         <h1 className="mb-3 text-4xl font-bold tracking-tight text-white drop-shadow-lg">
-          {headline || 'Cinematic Title'}
+          {title || 'Cinematic Title'}
         </h1>
         <p className="mb-2 text-sm leading-relaxed text-white/80 drop-shadow">
           {text}

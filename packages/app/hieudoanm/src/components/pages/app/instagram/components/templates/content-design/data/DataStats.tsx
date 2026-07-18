@@ -4,7 +4,7 @@ import { Background } from '../../_shared';
 
 export const DataStats: FC<TemplateProps> = ({ data }) => {
   const stat = (data.stat as string) ?? (data.number as string) ?? '84%';
-  const headline = (data.headline as string) ?? (data.label as string) ?? '';
+  const title = (data.title as string) ?? (data.label as string) ?? '';
   const text = (data.text as string) ?? (data.context as string) ?? '';
   const imageUrl = (data.imageUrl as string) ?? '';
   const suffix = (data.suffix as string) ?? '';
@@ -26,7 +26,7 @@ export const DataStats: FC<TemplateProps> = ({ data }) => {
         </div>
         {suffix && <p className="text-neutral mb-2 text-sm">{suffix}</p>}
         <h1 className="text-base-content mb-2 text-xl font-bold tracking-tight">
-          {headline}
+          {title}
         </h1>
         <p className="text-neutral mx-auto max-w-sm text-base leading-relaxed">
           {text}

@@ -19,7 +19,7 @@ const METHOD_COLORS: Record<string, string> = {
 export const ApiEndpoint: FC<TemplateProps> = ({ data }) => {
   const method = (data.method as string) ?? 'GET';
   const path = (data.path as string) ?? '';
-  const description = (data.description as string) ?? '';
+  const subtitle = (data.subtitle as string) ?? '';
   const params = (data.params as Param[]) ?? [];
   const responseExample = (data.responseExample as string) ?? '';
 
@@ -44,9 +44,9 @@ export const ApiEndpoint: FC<TemplateProps> = ({ data }) => {
             {path}
           </span>
         </div>
-        {description && (
+        {subtitle && (
           <p className="text-neutral mb-2 text-[10px] leading-relaxed">
-            {description}
+            {subtitle}
           </p>
         )}
         {params.length > 0 && (

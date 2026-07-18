@@ -3,7 +3,7 @@ import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
 
 export const SplitScreen: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? '';
+  const title = (data.title as string) ?? '';
   const text = (data.text as string) ?? '';
   const imageUrl = (data.imageUrl as string) ?? '';
 
@@ -32,7 +32,7 @@ export const SplitScreen: FC<TemplateProps> = ({ data }) => {
       <div className="relative flex w-1/2 flex-col items-start justify-center p-8">
         <div className="bg-primary absolute top-1/2 left-0 h-16 w-1 -translate-y-1/2 rounded-full" />
         <h1 className="text-base-content mb-2 text-4xl leading-tight font-bold tracking-tight">
-          {headline}
+          {title}
         </h1>
         <p className="text-neutral max-w-xs text-base leading-relaxed">
           {text}

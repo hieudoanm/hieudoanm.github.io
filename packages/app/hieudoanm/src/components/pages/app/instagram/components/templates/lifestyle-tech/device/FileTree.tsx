@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
+import { Header } from '../../_shared';
 
 interface TreeItem {
   name: string;
@@ -68,8 +69,8 @@ const TreePrefix: FC<{ item: TreeItem; items: TreeItem[]; i: number }> = ({
 };
 
 export const FileTree: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? '';
-  const description = (data.description as string) ?? '';
+  const title = (data.title as string) ?? '';
+  const subtitle = (data.subtitle as string) ?? '';
   const tree = (data.tree as string) ?? '';
 
   const lines = tree.split('\n').filter(Boolean);
@@ -80,14 +81,7 @@ export const FileTree: FC<TemplateProps> = ({ data }) => {
   return (
     <Background>
       <div className="flex w-full flex-col gap-2">
-        <h2 className="text-base-content text-center text-base font-bold">
-          {headline}
-        </h2>
-        {description && (
-          <p className="text-base-content/70 text-center text-xs leading-relaxed">
-            {description}
-          </p>
-        )}
+        <Header title={title} subtitle={subtitle} />
       </div>
       <div className="border-base-300 mt-3 flex w-full flex-1 flex-col overflow-hidden rounded-2xl border shadow-lg">
         <div className="border-base-300 bg-base-200 text-base-content/50 flex items-center gap-2 border-b px-3 py-1.5 text-xs font-semibold tracking-wider uppercase">

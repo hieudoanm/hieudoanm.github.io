@@ -15,7 +15,7 @@ interface Stat {
 }
 
 export const Scorecard: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? 'Match Result';
+  const title = (data.title as string) ?? 'Match Result';
   const text = (data.text as string) ?? '';
   const homeTeam = (data.homeTeam as string) ?? 'Home';
   const awayTeam = (data.awayTeam as string) ?? 'Away';
@@ -35,7 +35,7 @@ export const Scorecard: FC<TemplateProps> = ({ data }) => {
     <Background>
       <div className="mb-4 text-center">
         <h2 className="text-neutral text-xs font-semibold tracking-widest uppercase">
-          {headline}
+          {title}
         </h2>
         {text && <p className="text-neutral mt-1 text-xs">{text}</p>}
       </div>

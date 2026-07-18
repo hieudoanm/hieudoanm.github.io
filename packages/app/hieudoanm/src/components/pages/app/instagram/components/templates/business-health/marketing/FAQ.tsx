@@ -8,7 +8,7 @@ interface QAItem {
 }
 
 export const FAQ: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? '';
+  const title = (data.title as string) ?? '';
   const items = (data.items as QAItem[]) ?? [];
   const pairs =
     items.length > 0
@@ -28,7 +28,7 @@ export const FAQ: FC<TemplateProps> = ({ data }) => {
   return (
     <Background>
       <h1 className="text-base-content mb-8 text-center text-4xl font-bold tracking-tight">
-        {headline}
+        {title}
       </h1>
       <div className="flex flex-col gap-4">
         {pairs.map((qa, i) => (

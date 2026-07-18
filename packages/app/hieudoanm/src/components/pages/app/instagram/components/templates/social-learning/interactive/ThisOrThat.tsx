@@ -3,7 +3,7 @@ import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
 
 export const ThisOrThat: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? '';
+  const title = (data.title as string) ?? '';
   const optionA = (data.optionA as string) ?? '';
   const optionB = (data.optionB as string) ?? '';
 
@@ -11,7 +11,7 @@ export const ThisOrThat: FC<TemplateProps> = ({ data }) => {
   return (
     <Background>
       <h1 className="text-base-content mb-6 text-center text-4xl font-bold">
-        {headline}
+        {title}
       </h1>
       <div className="flex flex-1 items-stretch gap-3">
         <div className="rounded-box border-accent/20 flex flex-1 items-center justify-center border px-4">

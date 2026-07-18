@@ -7,7 +7,7 @@ export const NewArrival: FC<TemplateProps> = ({ data }) => {
   const name = (data.name as string) ?? 'Classic Tee';
   const price = (data.price as string) ?? '$49';
   const oldPrice = (data.oldPrice as string) ?? '';
-  const description = (data.description as string) ?? '';
+  const subtitle = (data.subtitle as string) ?? '';
   const imageUrl = (data.imageUrl as string) ?? '';
 
   const citation = (data.citation as string) ?? '';
@@ -39,9 +39,7 @@ export const NewArrival: FC<TemplateProps> = ({ data }) => {
             </span>
           )}
         </div>
-        {description && (
-          <p className="text-neutral mt-1 text-xs">{description}</p>
-        )}
+        {subtitle && <p className="text-neutral mt-1 text-xs">{subtitle}</p>}
       </div>
       {citation && (
         <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">

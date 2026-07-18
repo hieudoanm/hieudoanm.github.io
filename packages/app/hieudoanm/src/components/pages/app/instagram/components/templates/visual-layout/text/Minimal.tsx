@@ -3,7 +3,7 @@ import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
 
 export const Minimal: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? '';
+  const title = (data.title as string) ?? '';
   const text = (data.text as string) ?? '';
   const imageUrl = (data.imageUrl as string) ?? '';
 
@@ -12,7 +12,7 @@ export const Minimal: FC<TemplateProps> = ({ data }) => {
     <Background>
       <div className="flex flex-col items-center justify-center">
         <h1 className="text-base-content mb-2 text-4xl leading-tight font-bold tracking-tight">
-          {headline}
+          {title}
         </h1>
         <p className="text-neutral mx-auto max-w-md text-sm leading-relaxed">
           {text}

@@ -3,13 +3,13 @@ import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
 
 export const HighlightedTitle: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? 'The Future is NOW';
+  const title = (data.title as string) ?? 'The Future is NOW';
   const highlights = (data.highlights as string[]) ?? ['NOW'];
   const text = (data.text as string) ?? '';
 
   const renderHeadline = () => {
-    const words = headline.split(/(\s+)/);
-    return words.map((word, i) => {
+    const words = title.split(/(\s+)/);
+    return words.map((word: string, i: number) => {
       const isHighlight = highlights.some(
         (h: string) =>
           (h ?? '').toString().toLowerCase() === word.trim().toLowerCase()

@@ -3,7 +3,7 @@ import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
 
 export const ProsCons: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? '';
+  const title = (data.title as string) ?? '';
   const pros = (data.pros as string[]) ?? [];
   const cons = (data.cons as string[]) ?? [];
   const proList =
@@ -16,7 +16,7 @@ export const ProsCons: FC<TemplateProps> = ({ data }) => {
     <Background>
       <div className="bg-accent/10 px-5 py-3">
         <h1 className="text-base-content text-center text-4xl font-bold tracking-tight">
-          {headline || 'Pros & Cons'}
+          {title || 'Pros & Cons'}
         </h1>
       </div>
       <div className="flex flex-1">

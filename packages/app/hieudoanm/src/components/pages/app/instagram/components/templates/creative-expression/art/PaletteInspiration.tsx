@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
+import { Header } from '../../_shared';
 
 interface PaletteColor {
   name: string;
@@ -9,7 +10,7 @@ interface PaletteColor {
 
 export const PaletteInspiration: FC<TemplateProps> = ({ data }) => {
   const title = (data.title as string) ?? 'Palette Inspiration';
-  const description = (data.description as string) ?? '';
+  const subtitle = (data.subtitle as string) ?? '';
   const palette = (data.palette as PaletteColor[]) ?? [
     { name: 'Sunset', hex: '#f97316' },
     { name: 'Coral', hex: '#fb7185' },
@@ -22,14 +23,7 @@ export const PaletteInspiration: FC<TemplateProps> = ({ data }) => {
   const citation = (data.citation as string) ?? '';
   return (
     <Background>
-      <h1 className="text-base-content mb-1 text-4xl font-black tracking-tight">
-        {title}
-      </h1>
-      {description && (
-        <p className="text-neutral mb-3 max-w-sm text-xs leading-relaxed">
-          {description}
-        </p>
-      )}
+      <Header title={title} subtitle={subtitle} />
       <ul className="mb-3 flex w-full items-center justify-center gap-1">
         {palette.map((c) => (
           <li key={c.name} className="flex flex-col items-center gap-1">

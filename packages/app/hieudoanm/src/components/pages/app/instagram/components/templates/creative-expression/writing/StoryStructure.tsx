@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
+import { Header } from '../../_shared';
 
 interface StoryElement {
   name: string;
@@ -10,7 +11,7 @@ interface StoryElement {
 export const StoryStructure: FC<TemplateProps> = ({ data }) => {
   const title = (data.title as string) ?? 'Story Structure';
   const structure = (data.structure as string) ?? 'Three-Act Structure';
-  const description = (data.description as string) ?? '';
+  const subtitle = (data.subtitle as string) ?? '';
   const elements = (data.elements as StoryElement[]) ?? [
     { name: 'Setup', description: 'Introduce characters and world' },
     { name: 'Confrontation', description: 'Rising conflict and stakes' },
@@ -20,17 +21,7 @@ export const StoryStructure: FC<TemplateProps> = ({ data }) => {
   const citation = (data.citation as string) ?? '';
   return (
     <Background>
-      <h1 className="text-base-content mb-0.5 text-4xl font-black tracking-tight">
-        {title}
-      </h1>
-      <p className="text-primary mb-1 text-xs font-semibold tracking-wider uppercase">
-        {structure}
-      </p>
-      {description && (
-        <p className="text-neutral mb-3 max-w-sm text-xs leading-relaxed">
-          {description}
-        </p>
-      )}
+      <Header title={title} subtitle={subtitle} />
       <ol className="w-full max-w-sm space-y-2 text-left">
         {elements.map((el, i) => (
           <li key={el.name} className="flex items-start gap-2">

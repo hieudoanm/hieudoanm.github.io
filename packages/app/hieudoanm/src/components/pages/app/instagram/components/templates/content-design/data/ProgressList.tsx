@@ -8,7 +8,7 @@ interface ProgressItem {
 }
 
 export const ProgressList: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? '';
+  const title = (data.title as string) ?? '';
   const items = (data.items as ProgressItem[]) ?? [];
   const list =
     items.length > 0
@@ -24,7 +24,7 @@ export const ProgressList: FC<TemplateProps> = ({ data }) => {
   return (
     <Background>
       <h1 className="text-base-content mb-5 text-center text-4xl font-bold tracking-tight">
-        {headline || 'Progress'}
+        {title || 'Progress'}
       </h1>
       <ul className="flex flex-col gap-3">
         {list.map((item, i) => (

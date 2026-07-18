@@ -3,7 +3,7 @@ import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
 
 export const BulletList: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? '';
+  const title = (data.title as string) ?? '';
   const items = (data.items as string[]) ?? [];
   const list =
     items.length > 0 ? items : ['Point one', 'Point two', 'Point three'];
@@ -13,7 +13,7 @@ export const BulletList: FC<TemplateProps> = ({ data }) => {
     <Background>
       <div className="flex flex-col">
         <h1 className="text-base-content mb-4 text-4xl font-bold tracking-tight">
-          {headline}
+          {title}
         </h1>
         <ul className="flex flex-1 flex-col gap-2">
           {list.map((item, i) => (

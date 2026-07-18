@@ -7,7 +7,7 @@ interface StepDef {
 }
 
 export const StepByStep: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? '';
+  const title = (data.title as string) ?? '';
   const text = (data.text as string) ?? '';
   const steps = (data.steps as StepDef[]) ?? [];
   const items =
@@ -19,7 +19,7 @@ export const StepByStep: FC<TemplateProps> = ({ data }) => {
   return (
     <Background>
       <h1 className="text-base-content mb-2 text-center text-4xl font-bold tracking-tight">
-        {headline}
+        {title}
       </h1>
       <p className="text-neutral mb-4 text-center text-xs">{text}</p>
       <ol className="flex flex-1 items-center justify-center gap-2">

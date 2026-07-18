@@ -8,7 +8,7 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'ecommerce',
     group: 'Business & Health',
     schema: [
-      { key: 'headline', type: 'string', description: 'Deal headline' },
+      { key: 'title', type: 'string', description: 'Deal title' },
       { key: 'originalPrice', type: 'string', description: 'Original price' },
       { key: 'dealPrice', type: 'string', description: 'Deal price' },
       { key: 'discount', type: 'string', description: 'Discount percentage' },
@@ -17,7 +17,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Flash Sale',
+      title: 'Flash Sale',
       originalPrice: '$299',
       dealPrice: '$149',
       discount: '50% OFF',
@@ -79,7 +79,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'string',
         description: 'Original price (optional)',
       },
-      { key: 'description', type: 'string', description: 'Short description' },
+      { key: 'subtitle', type: 'string', description: 'Short description' },
       { key: 'imageUrl', type: 'string', description: 'Product image URL' },
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
@@ -352,7 +352,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'tip', type: 'string', description: 'Investment tip' },
       { key: 'category', type: 'string', description: 'Investment category' },
       {
-        key: 'description',
+        key: 'subtitle',
         type: 'string',
         description: 'Detailed explanation',
       },
@@ -464,7 +464,7 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'food',
     group: 'Business & Health',
     schema: [
-      { key: 'headline', type: 'string', description: 'Plan title' },
+      { key: 'title', type: 'string', description: 'Plan title' },
       {
         key: 'meals',
         type: 'array',
@@ -473,7 +473,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Weekly Meal Plan',
+      title: 'Weekly Meal Plan',
       meals: [
         {
           day: 'Mon',
@@ -726,7 +726,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'tip', type: 'string', description: 'Wellness tip' },
       { key: 'category', type: 'string', description: 'Tip category' },
       {
-        key: 'description',
+        key: 'subtitle',
         type: 'string',
         description: 'Detailed explanation',
       },
@@ -818,17 +818,17 @@ export const TEMPLATES: TemplateDef[] = [
   {
     id: 'mission-statement',
     label: 'Mission Statement',
-    description: 'Mission and vision pair with headline',
+    description: 'Mission and vision pair with title',
     category: 'inspirational',
     group: 'Business & Health',
     schema: [
-      { key: 'headline', type: 'string', description: 'Section headline' },
+      { key: 'title', type: 'string', description: 'Section title' },
       { key: 'mission', type: 'string', description: 'Mission statement' },
       { key: 'vision', type: 'string', description: 'Vision statement' },
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Our Mission',
+      title: 'Our Mission',
       mission:
         'Empower every person and organisation on the planet to achieve more.',
       vision:
@@ -849,7 +849,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'guest', type: 'string', description: 'Guest name' },
       { key: 'duration', type: 'string', description: 'Episode duration' },
       {
-        key: 'description',
+        key: 'subtitle',
         type: 'string',
         description: 'Episode description',
       },
@@ -873,14 +873,14 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'inspirational',
     group: 'Business & Health',
     schema: [
-      { key: 'headline', type: 'string', description: 'Title' },
+      { key: 'title', type: 'string', description: 'Title' },
       { key: 'streak', type: 'string', description: 'Streak number' },
       { key: 'label', type: 'string', description: 'Unit label' },
       { key: 'started', type: 'string', description: 'Start date' },
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Learning Streak',
+      title: 'Learning Streak',
       streak: '42',
       label: 'days',
       started: 'Started Feb 15, 2025',
@@ -895,13 +895,13 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'inspirational',
     group: 'Business & Health',
     schema: [
-      { key: 'headline', type: 'string', description: 'Main title' },
+      { key: 'title', type: 'string', description: 'Main title' },
       { key: 'text', type: 'string', description: 'Body paragraph' },
       { key: 'imageUrl', type: 'string', description: 'URL to an image' },
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Dream Big',
+      title: 'Dream Big',
       text: 'Visualise your goals, then work backwards from the future you want to create.',
       imageUrl: '',
       citation: '',
@@ -920,14 +920,14 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'string',
         description: 'Chip label (e.g. New, Launch)',
       },
-      { key: 'headline', type: 'string', description: 'Main title' },
+      { key: 'title', type: 'string', description: 'Main title' },
       { key: 'text', type: 'string', description: 'Body paragraph' },
       { key: 'date', type: 'string', description: 'Date or timeline label' },
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       badge: 'Launching Soon',
-      headline: 'A New Way to Work',
+      title: 'A New Way to Work',
       text: 'We are building a platform that reimagines how teams collaborate across time zones.',
       date: 'Coming Q1 2025',
       citation: '',
@@ -941,12 +941,12 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'marketing',
     group: 'Business & Health',
     schema: [
-      { key: 'headline', type: 'string', description: 'Main title' },
+      { key: 'title', type: 'string', description: 'Main title' },
       { key: 'items', type: 'array', description: 'Array of {q, a} objects' },
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Frequently Asked',
+      title: 'Frequently Asked',
       items: [
         {
           q: 'How does it work?',
@@ -991,7 +991,7 @@ export const TEMPLATES: TemplateDef[] = [
     group: 'Business & Health',
     schema: [
       { key: 'badge', type: 'string', description: 'Offer badge label' },
-      { key: 'headline', type: 'string', description: 'Main title' },
+      { key: 'title', type: 'string', description: 'Main title' },
       { key: 'text', type: 'string', description: 'Body paragraph' },
       { key: 'code', type: 'string', description: 'Promo code' },
       { key: 'cta', type: 'string', description: 'Call to action text' },
@@ -999,7 +999,7 @@ export const TEMPLATES: TemplateDef[] = [
     ],
     defaultContent: {
       badge: 'Limited Offer',
-      headline: 'Special Offer',
+      title: 'Special Offer',
       text: 'Get 30% off your first month. No commitment required.',
       code: 'WELCOME30',
       cta: 'Claim Offer',
@@ -1047,7 +1047,7 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'marketing',
     group: 'Business & Health',
     schema: [
-      { key: 'headline', type: 'string', description: 'Section title' },
+      { key: 'title', type: 'string', description: 'Section title' },
       {
         key: 'features',
         type: 'array<{title, description}>',
@@ -1056,7 +1056,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Why Choose Us',
+      title: 'Why Choose Us',
       features: [
         {
           title: 'Lightning Fast',
@@ -1078,16 +1078,16 @@ export const TEMPLATES: TemplateDef[] = [
   {
     id: 'bullet-list',
     label: 'Bullet List',
-    description: 'Simple bullet point list with headline',
+    description: 'Simple bullet point list with title',
     category: 'list',
     group: 'Content & Design',
     schema: [
-      { key: 'headline', type: 'string', description: 'Main title' },
+      { key: 'title', type: 'string', description: 'Main title' },
       { key: 'items', type: 'array', description: 'Array of strings' },
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Key Points',
+      title: 'Key Points',
       items: [
         'Increased productivity',
         'Better collaboration',
@@ -1105,13 +1105,13 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'list',
     group: 'Content & Design',
     schema: [
-      { key: 'headline', type: 'string', description: 'Main title' },
+      { key: 'title', type: 'string', description: 'Main title' },
       { key: 'text', type: 'string', description: 'Supporting paragraph' },
       { key: 'items', type: 'array', description: 'Array of strings' },
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Launch Checklist',
+      title: 'Launch Checklist',
       text: 'Make sure everything is ready before you hit publish.',
       items: [
         'Write final copy',
@@ -1130,7 +1130,7 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'list',
     group: 'Content & Design',
     schema: [
-      { key: 'headline', type: 'string', description: 'Palette title' },
+      { key: 'title', type: 'string', description: 'Palette title' },
       {
         key: 'colors',
         type: 'array',
@@ -1139,7 +1139,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Brand Palette',
+      title: 'Brand Palette',
       colors: [
         {
           name: 'Primary',
@@ -1169,18 +1169,18 @@ export const TEMPLATES: TemplateDef[] = [
   {
     id: 'listicle',
     label: 'Listicle',
-    description: 'Numbered items with headline and bottom image',
+    description: 'Numbered items with title and bottom image',
     category: 'list',
     group: 'Content & Design',
     schema: [
-      { key: 'headline', type: 'string', description: 'Main title' },
+      { key: 'title', type: 'string', description: 'Main title' },
       { key: 'text', type: 'string', description: 'Supporting paragraph' },
       { key: 'items', type: 'array', description: 'Array of strings' },
       { key: 'imageUrl', type: 'string', description: 'Optional bottom image' },
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: '3 Daily Habits',
+      title: '3 Daily Habits',
       text: 'Small daily improvements over time lead to massive results.',
       items: ['Wake up at 5 AM', 'Read for 30 minutes', 'Exercise daily'],
       imageUrl: '',
@@ -1195,13 +1195,13 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'list',
     group: 'Content & Design',
     schema: [
-      { key: 'headline', type: 'string', description: 'Main title' },
+      { key: 'title', type: 'string', description: 'Main title' },
       { key: 'text', type: 'string', description: 'Supporting paragraph' },
       { key: 'steps', type: 'array', description: 'Array of {label} objects' },
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Getting Started',
+      title: 'Getting Started',
       text: 'Follow these three steps to begin your journey.',
       steps: [
         {
@@ -1225,12 +1225,12 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'list',
     group: 'Content & Design',
     schema: [
-      { key: 'headline', type: 'string', description: 'Main title' },
+      { key: 'title', type: 'string', description: 'Main title' },
       { key: 'steps', type: 'array', description: 'Array of {label} objects' },
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'How It Works',
+      title: 'How It Works',
       steps: [
         {
           label: 'Plan',
@@ -1253,13 +1253,13 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'media',
     group: 'Content & Design',
     schema: [
-      { key: 'headline', type: 'string', description: 'Main title' },
+      { key: 'title', type: 'string', description: 'Main title' },
       { key: 'text', type: 'string', description: 'Body paragraph' },
       { key: 'imageUrl', type: 'string', description: 'Background image' },
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'New Horizons',
+      title: 'New Horizons',
       text: 'The future belongs to those who believe in the beauty of their dreams.',
       imageUrl: '',
       citation: '',
@@ -1274,14 +1274,14 @@ export const TEMPLATES: TemplateDef[] = [
     group: 'Content & Design',
     schema: [
       { key: 'imageUrl', type: 'string', description: 'Background image URL' },
-      { key: 'headline', type: 'string', description: 'Main title' },
+      { key: 'title', type: 'string', description: 'Main title' },
       { key: 'text', type: 'string', description: 'Body text' },
       { key: 'caption', type: 'string', description: 'Bottom caption' },
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       imageUrl: '',
-      headline: 'A New Chapter',
+      title: 'A New Chapter',
       text: 'Every great story begins with a single step into the unknown.',
       caption: 'Coming this summer',
       citation: '',
@@ -1311,13 +1311,13 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'media',
     group: 'Content & Design',
     schema: [
-      { key: 'headline', type: 'string', description: 'Main title' },
+      { key: 'title', type: 'string', description: 'Main title' },
       { key: 'text', type: 'string', description: 'Body paragraph' },
       { key: 'imageUrl', type: 'string', description: 'Background image' },
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Dream Bigger',
+      title: 'Dream Bigger',
       text: 'The only limit to your impact is your imagination and commitment to act.',
       imageUrl: '',
       citation: '',
@@ -1348,7 +1348,7 @@ export const TEMPLATES: TemplateDef[] = [
     group: 'Content & Design',
     schema: [
       { key: 'imageUrl', type: 'string', description: 'Thumbnail image URL' },
-      { key: 'headline', type: 'string', description: 'Video title' },
+      { key: 'title', type: 'string', description: 'Video title' },
       {
         key: 'duration',
         type: 'string',
@@ -1358,7 +1358,7 @@ export const TEMPLATES: TemplateDef[] = [
     ],
     defaultContent: {
       imageUrl: '',
-      headline: 'Product Demo',
+      title: 'Product Demo',
       duration: '3:45',
       citation: '',
     },
@@ -1371,7 +1371,7 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'news',
     group: 'Content & Design',
     schema: [
-      { key: 'headline', type: 'string', description: 'Headline' },
+      { key: 'title', type: 'string', description: 'Headline' },
       { key: 'summary', type: 'string', description: 'Summary text' },
       {
         key: 'points',
@@ -1381,7 +1381,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Market Rally Explained',
+      title: 'Market Rally Explained',
       summary: 'Three key factors drove the S&P 500 to new highs this quarter.',
       points: [
         {
@@ -1408,7 +1408,7 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'news',
     group: 'Content & Design',
     schema: [
-      { key: 'headline', type: 'string', description: 'News headline' },
+      { key: 'title', type: 'string', description: 'News title' },
       { key: 'source', type: 'string', description: 'News source' },
       { key: 'timestamp', type: 'string', description: 'Time or date' },
       {
@@ -1419,7 +1419,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Global Summit Reaches Historic Climate Agreement',
+      title: 'Global Summit Reaches Historic Climate Agreement',
       source: 'Reuters',
       timestamp: '2 hours ago',
       urgency: 'BREAKING',
@@ -1430,14 +1430,14 @@ export const TEMPLATES: TemplateDef[] = [
   {
     id: 'daily-digest',
     label: 'Daily Digest',
-    description: 'Numbered story list with headlines and summaries',
+    description: 'Numbered story list with titles and summaries',
     category: 'news',
     group: 'Content & Design',
     schema: [
       { key: 'date', type: 'string', description: 'Date label' },
       {
         key: 'stories',
-        type: 'array<{headline, summary}>',
+        type: 'array<{title, summary}>',
         description: 'Top stories',
       },
       { key: 'citation', type: 'string', description: 'Source citation' },
@@ -1446,17 +1446,17 @@ export const TEMPLATES: TemplateDef[] = [
       date: 'March 15, 2025',
       stories: [
         {
-          headline: 'Tech stocks rally on AI breakthrough',
+          title: 'Tech stocks rally on AI breakthrough',
           summary:
             'Major indices hit record highs as leading companies announce new AI tools.',
         },
         {
-          headline: 'New renewable energy target set',
+          title: 'New renewable energy target set',
           summary:
             'Government pledges 80% clean energy by 2035 in landmark policy.',
         },
         {
-          headline: 'Space agency confirms water on Mars',
+          title: 'Space agency confirms water on Mars',
           summary: 'Underground ice deposits detected by latest rover mission.',
         },
       ],
@@ -1834,13 +1834,13 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'text',
     group: 'Content & Design',
     schema: [
-      { key: 'headline', type: 'string', description: 'Main title' },
+      { key: 'title', type: 'string', description: 'Main title' },
       { key: 'text', type: 'string', description: 'Body paragraph' },
       { key: 'imageUrl', type: 'string', description: 'URL to an image' },
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'The Art of Focus',
+      title: 'The Art of Focus',
       text: 'In a world of constant distraction, the ability to concentrate on what truly matters has become a superpower.',
       imageUrl: '',
       citation: '',
@@ -1874,7 +1874,7 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'text',
     group: 'Content & Design',
     schema: [
-      { key: 'headline', type: 'string', description: 'Main title' },
+      { key: 'title', type: 'string', description: 'Main title' },
       { key: 'rating', type: 'number', description: 'Rating value 1-5' },
       {
         key: 'scaleMax',
@@ -1886,7 +1886,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Customer Rating',
+      title: 'Customer Rating',
       rating: 4,
       scaleMax: 5,
       label: 'Excellent',
@@ -1902,13 +1902,13 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'text',
     group: 'Content & Design',
     schema: [
-      { key: 'headline', type: 'string', description: 'Main title' },
+      { key: 'title', type: 'string', description: 'Main title' },
       { key: 'text', type: 'string', description: 'Key insight text' },
       { key: 'source', type: 'string', description: 'Attribution source' },
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Attention is the New Currency',
+      title: 'Attention is the New Currency',
       text: 'In an information-rich world, the scarcest resource is not information but attention.',
       source: 'Herbert Simon, 1971',
       citation: '',
@@ -1927,13 +1927,13 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'string',
         description: 'Display number (e.g. 01)',
       },
-      { key: 'headline', type: 'string', description: 'Main title' },
+      { key: 'title', type: 'string', description: 'Main title' },
       { key: 'text', type: 'string', description: 'Body paragraph' },
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       number: '01',
-      headline: 'Start Small',
+      title: 'Start Small',
       text: 'Break your goals into tiny, manageable steps. Consistency beats intensity every time.',
       citation: '',
     },
@@ -1946,12 +1946,12 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'typography',
     group: 'Content & Design',
     schema: [
-      { key: 'headline', type: 'string', description: 'Main headline' },
+      { key: 'title', type: 'string', description: 'Main title' },
       { key: 'text', type: 'string', description: 'Supporting text' },
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Create',
+      title: 'Create',
       text: 'Beautiful designs that inspire and motivate people every day.',
       citation: '',
     },
@@ -1960,12 +1960,11 @@ export const TEMPLATES: TemplateDef[] = [
   {
     id: 'highlighted-title',
     label: 'Highlighted Title',
-    description:
-      'Big headline where specific words are wrapped in accent color',
+    description: 'Big title where specific words are wrapped in accent color',
     category: 'typography',
     group: 'Content & Design',
     schema: [
-      { key: 'headline', type: 'string', description: 'Full headline text' },
+      { key: 'title', type: 'string', description: 'Full title text' },
       {
         key: 'highlights',
         type: 'string[]',
@@ -1975,7 +1974,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'The Future is NOW',
+      title: 'The Future is NOW',
       highlights: ['NOW'],
       text: '',
       citation: '',
@@ -1990,13 +1989,13 @@ export const TEMPLATES: TemplateDef[] = [
     group: 'Content & Design',
     schema: [
       { key: 'icon', type: 'string', description: 'Emoji or icon character' },
-      { key: 'headline', type: 'string', description: 'Main text' },
+      { key: 'title', type: 'string', description: 'Main text' },
       { key: 'text', type: 'string', description: 'Description text' },
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       icon: '🚀',
-      headline: 'Ship Faster',
+      title: 'Ship Faster',
       text: '',
       citation: '',
     },
@@ -2174,7 +2173,7 @@ export const TEMPLATES: TemplateDef[] = [
     group: 'Creative Expression',
     schema: [
       { key: 'title', type: 'string', description: 'Title' },
-      { key: 'description', type: 'string', description: 'Description' },
+      { key: 'subtitle', type: 'string', description: 'Description' },
       {
         key: 'colors',
         type: 'array',
@@ -2226,7 +2225,7 @@ export const TEMPLATES: TemplateDef[] = [
     group: 'Creative Expression',
     schema: [
       { key: 'title', type: 'string', description: 'Title' },
-      { key: 'description', type: 'string', description: 'Description' },
+      { key: 'subtitle', type: 'string', description: 'Description' },
       {
         key: 'palette',
         type: 'array',
@@ -2414,7 +2413,7 @@ export const TEMPLATES: TemplateDef[] = [
     schema: [
       { key: 'title', type: 'string', description: 'Title' },
       { key: 'tip', type: 'string', description: 'Main tip' },
-      { key: 'description', type: 'string', description: 'Description' },
+      { key: 'subtitle', type: 'string', description: 'Description' },
       { key: 'doList', type: 'array', description: 'Array of do strings' },
       { key: 'dontList', type: 'array', description: "Array of don't strings" },
       { key: 'citation', type: 'string', description: 'Source citation' },
@@ -2448,7 +2447,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'title', type: 'string', description: 'Title' },
       { key: 'tip', type: 'string', description: 'Main tip' },
       { key: 'category', type: 'string', description: 'Category' },
-      { key: 'description', type: 'string', description: 'Description' },
+      { key: 'subtitle', type: 'string', description: 'Description' },
       {
         key: 'examples',
         type: 'array',
@@ -2562,7 +2561,7 @@ export const TEMPLATES: TemplateDef[] = [
     schema: [
       { key: 'title', type: 'string', description: 'Achievement name' },
       { key: 'game', type: 'string', description: 'Game title' },
-      { key: 'description', type: 'string', description: 'Description' },
+      { key: 'subtitle', type: 'string', description: 'Description' },
       { key: 'rarity', type: 'string', description: 'Rarity level' },
       { key: 'dateUnlocked', type: 'string', description: 'Date unlocked' },
       { key: 'citation', type: 'string', description: 'Source citation' },
@@ -2612,7 +2611,7 @@ export const TEMPLATES: TemplateDef[] = [
     schema: [
       { key: 'title', type: 'string', description: 'Title' },
       { key: 'game', type: 'string', description: 'Game' },
-      { key: 'description', type: 'string', description: 'Description' },
+      { key: 'subtitle', type: 'string', description: 'Description' },
       {
         key: 'settings',
         type: 'array',
@@ -2653,7 +2652,7 @@ export const TEMPLATES: TemplateDef[] = [
     group: 'Creative Expression',
     schema: [
       { key: 'title', type: 'string', description: 'Title' },
-      { key: 'description', type: 'string', description: 'Description' },
+      { key: 'subtitle', type: 'string', description: 'Description' },
       {
         key: 'components',
         type: 'array',
@@ -2881,7 +2880,7 @@ export const TEMPLATES: TemplateDef[] = [
     schema: [
       { key: 'title', type: 'string', description: 'Title' },
       { key: 'concept', type: 'string', description: 'Concept name' },
-      { key: 'description', type: 'string', description: 'Description' },
+      { key: 'subtitle', type: 'string', description: 'Description' },
       {
         key: 'examples',
         type: 'array',
@@ -2913,7 +2912,7 @@ export const TEMPLATES: TemplateDef[] = [
     group: 'Creative Expression',
     schema: [
       { key: 'title', type: 'string', description: 'Playlist title' },
-      { key: 'description', type: 'string', description: 'Description' },
+      { key: 'subtitle', type: 'string', description: 'Description' },
       {
         key: 'tracks',
         type: 'array',
@@ -3146,7 +3145,7 @@ export const TEMPLATES: TemplateDef[] = [
     schema: [
       { key: 'name', type: 'string', description: 'Character name' },
       { key: 'role', type: 'string', description: 'Role' },
-      { key: 'description', type: 'string', description: 'Description' },
+      { key: 'subtitle', type: 'string', description: 'Description' },
       { key: 'traits', type: 'array', description: 'Array of trait strings' },
       { key: 'motivation', type: 'string', description: 'Motivation' },
       { key: 'flaw', type: 'string', description: 'Fatal flaw' },
@@ -3171,7 +3170,7 @@ export const TEMPLATES: TemplateDef[] = [
     group: 'Creative Expression',
     schema: [
       { key: 'title', type: 'string', description: 'Title' },
-      { key: 'description', type: 'string', description: 'Description' },
+      { key: 'subtitle', type: 'string', description: 'Description' },
       {
         key: 'categories',
         type: 'array',
@@ -3205,7 +3204,7 @@ export const TEMPLATES: TemplateDef[] = [
     schema: [
       { key: 'title', type: 'string', description: 'Title' },
       { key: 'genre', type: 'string', description: 'Genre' },
-      { key: 'description', type: 'string', description: 'Description' },
+      { key: 'subtitle', type: 'string', description: 'Description' },
       {
         key: 'elements',
         type: 'array',
@@ -3239,7 +3238,7 @@ export const TEMPLATES: TemplateDef[] = [
     schema: [
       { key: 'title', type: 'string', description: 'Title' },
       { key: 'structure', type: 'string', description: 'Structure type' },
-      { key: 'description', type: 'string', description: 'Description' },
+      { key: 'subtitle', type: 'string', description: 'Description' },
       {
         key: 'elements',
         type: 'array',
@@ -3278,7 +3277,7 @@ export const TEMPLATES: TemplateDef[] = [
     schema: [
       { key: 'title', type: 'string', description: 'Title' },
       { key: 'worldName', type: 'string', description: 'World name' },
-      { key: 'description', type: 'string', description: 'Description' },
+      { key: 'subtitle', type: 'string', description: 'Description' },
       {
         key: 'aspects',
         type: 'array',
@@ -3342,7 +3341,7 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'analytics',
     group: 'Data & Visualization',
     schema: [
-      { key: 'headline', type: 'string', description: 'Showcase title' },
+      { key: 'title', type: 'string', description: 'Showcase title' },
       {
         key: 'ratios',
         type: 'array',
@@ -3351,7 +3350,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Common Ratios',
+      title: 'Common Ratios',
       ratios: [
         {
           label: '1:1',
@@ -3437,7 +3436,7 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'analytics',
     group: 'Data & Visualization',
     schema: [
-      { key: 'headline', type: 'string', description: 'Chart title' },
+      { key: 'title', type: 'string', description: 'Chart title' },
       {
         key: 'segments',
         type: 'array',
@@ -3446,7 +3445,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Market Share',
+      title: 'Market Share',
       segments: [
         {
           label: 'Chrome',
@@ -3498,7 +3497,7 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'analytics',
     group: 'Data & Visualization',
     schema: [
-      { key: 'headline', type: 'string', description: 'Grid title' },
+      { key: 'title', type: 'string', description: 'Grid title' },
       {
         key: 'services',
         type: 'array',
@@ -3507,7 +3506,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'System Status',
+      title: 'System Status',
       services: [
         {
           name: 'API',
@@ -3796,14 +3795,14 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'compare',
     group: 'Data & Visualization',
     schema: [
-      { key: 'headline', type: 'string', description: 'Main title' },
+      { key: 'title', type: 'string', description: 'Main title' },
       { key: 'before', type: 'object', description: '{label, text}' },
       { key: 'after', type: 'object', description: '{label, text}' },
       { key: 'imageUrl', type: 'string', description: 'Optional shared image' },
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Before vs After',
+      title: 'Before vs After',
       before: {
         label: 'Before',
         text: 'Manual process took 4 hours per report with frequent errors.',
@@ -3824,7 +3823,7 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'compare',
     group: 'Data & Visualization',
     schema: [
-      { key: 'headline', type: 'string', description: 'Table title' },
+      { key: 'title', type: 'string', description: 'Table title' },
       { key: 'features', type: 'string[]', description: 'Feature names' },
       {
         key: 'plans',
@@ -3834,7 +3833,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Compare Plans',
+      title: 'Compare Plans',
       features: [
         'Unlimited projects',
         'Priority support',
@@ -3867,13 +3866,13 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'compare',
     group: 'Data & Visualization',
     schema: [
-      { key: 'headline', type: 'string', description: 'Main title' },
+      { key: 'title', type: 'string', description: 'Main title' },
       { key: 'myth', type: 'string', description: 'The misconception' },
       { key: 'fact', type: 'string', description: 'The truth' },
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Common Misconceptions',
+      title: 'Common Misconceptions',
       myth: 'Eating at night causes weight gain by itself.',
       fact: 'Total calorie intake matters most, not the time of day you eat.',
       citation: '',
@@ -3887,13 +3886,13 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'compare',
     group: 'Data & Visualization',
     schema: [
-      { key: 'headline', type: 'string', description: 'Main title' },
+      { key: 'title', type: 'string', description: 'Main title' },
       { key: 'pros', type: 'array', description: 'Array of pro strings' },
       { key: 'cons', type: 'array', description: 'Array of con strings' },
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Pros & Cons',
+      title: 'Pros & Cons',
       pros: ['Fast setup', 'Low cost', 'Easy to use'],
       cons: ['Limited features', 'Steep learning curve'],
       citation: '',
@@ -3907,13 +3906,13 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'compare',
     group: 'Data & Visualization',
     schema: [
-      { key: 'headline', type: 'string', description: 'Main title' },
+      { key: 'title', type: 'string', description: 'Main title' },
       { key: 'text', type: 'string', description: 'Body paragraph' },
       { key: 'imageUrl', type: 'string', description: 'URL to an image' },
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Less is More',
+      title: 'Less is More',
       text: 'Simplicity is the ultimate sophistication. Every element must earn its place through purpose.',
       imageUrl: '',
       citation: '',
@@ -3927,7 +3926,7 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'compare',
     group: 'Data & Visualization',
     schema: [
-      { key: 'headline', type: 'string', description: 'Main title' },
+      { key: 'title', type: 'string', description: 'Main title' },
       { key: 'optionA', type: 'object', description: '{label, desc}' },
       { key: 'optionB', type: 'object', description: '{label, desc}' },
       {
@@ -3938,7 +3937,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Versus',
+      title: 'Versus',
       optionA: {
         label: 'Free',
         desc: '',
@@ -3977,7 +3976,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'string',
         description: 'Large statistic (e.g. 84%)',
       },
-      { key: 'headline', type: 'string', description: 'Main title' },
+      { key: 'title', type: 'string', description: 'Main title' },
       { key: 'text', type: 'string', description: 'Supporting paragraph' },
       {
         key: 'imageUrl',
@@ -3988,7 +3987,7 @@ export const TEMPLATES: TemplateDef[] = [
     ],
     defaultContent: {
       stat: '84%',
-      headline: 'User Satisfaction',
+      title: 'User Satisfaction',
       text: 'Based on survey responses from over 10,000 active users across 50 countries.',
       imageUrl: '',
       citation: '',
@@ -4002,7 +4001,7 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'data',
     group: 'Data & Visualization',
     schema: [
-      { key: 'headline', type: 'string', description: 'Main title' },
+      { key: 'title', type: 'string', description: 'Main title' },
       {
         key: 'features',
         type: 'array',
@@ -4011,7 +4010,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Why Choose Us',
+      title: 'Why Choose Us',
       features: [
         {
           label: 'Fast',
@@ -4041,7 +4040,7 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'data',
     group: 'Data & Visualization',
     schema: [
-      { key: 'headline', type: 'string', description: 'Main title' },
+      { key: 'title', type: 'string', description: 'Main title' },
       {
         key: 'items',
         type: 'array',
@@ -4050,7 +4049,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Progress',
+      title: 'Progress',
       items: [
         {
           label: 'Design',
@@ -4100,7 +4099,7 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'data',
     group: 'Data & Visualization',
     schema: [
-      { key: 'headline', type: 'string', description: 'Main title' },
+      { key: 'title', type: 'string', description: 'Main title' },
       {
         key: 'text',
         type: 'string',
@@ -4114,7 +4113,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'By the Numbers',
+      title: 'By the Numbers',
       text: '',
       stats: [
         {
@@ -4459,7 +4458,7 @@ export const TEMPLATES: TemplateDef[] = [
       },
       { key: 'path', type: 'string', description: 'Endpoint path' },
       {
-        key: 'description',
+        key: 'subtitle',
         type: 'string',
         description: 'Endpoint description',
       },
@@ -4949,15 +4948,15 @@ export const TEMPLATES: TemplateDef[] = [
     schema: [
       { key: 'url', type: 'string', description: 'Website URL' },
       { key: 'pageTitle', type: 'string', description: 'Browser tab title' },
-      { key: 'headline', type: 'string', description: 'Page headline' },
-      { key: 'description', type: 'string', description: 'Description text' },
+      { key: 'title', type: 'string', description: 'Page title' },
+      { key: 'subtitle', type: 'string', description: 'Description text' },
       { key: 'image', type: 'string', description: '16:9 content image URL' },
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       url: 'example.com',
       pageTitle: 'Welcome',
-      headline: 'Your Site',
+      title: 'Your Site',
       description: 'A modern web experience for everyone',
       image: '',
       citation: '',
@@ -4971,8 +4970,8 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'device',
     group: 'Lifestyle & Tech',
     schema: [
-      { key: 'headline', type: 'string', description: 'Project headline' },
-      { key: 'description', type: 'string', description: 'Description text' },
+      { key: 'title', type: 'string', description: 'Project title' },
+      { key: 'subtitle', type: 'string', description: 'Description text' },
       {
         key: 'tree',
         type: 'string',
@@ -4981,7 +4980,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Project Structure',
+      title: 'Project Structure',
       description: 'Well-organised codebase with clear separation of concerns.',
       tree: 'src/\n  components/\n    Button.tsx\n    Header.tsx\n  hooks/\n    useAuth.ts\n  utils/\n    api.ts\n  App.tsx\n  index.ts\npackage.json\ntsconfig.json',
       citation: '',
@@ -4995,8 +4994,8 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'device',
     group: 'Lifestyle & Tech',
     schema: [
-      { key: 'headline', type: 'string', description: 'Code headline' },
-      { key: 'description', type: 'string', description: 'Description text' },
+      { key: 'title', type: 'string', description: 'Code title' },
+      { key: 'subtitle', type: 'string', description: 'Description text' },
       { key: 'code', type: 'string', description: 'Multi-line code snippet' },
       {
         key: 'language',
@@ -5006,7 +5005,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Snippet',
+      title: 'Snippet',
       description: 'Clean and readable code example.',
       code: 'import { useState } from "react";\n\nconst App = () => {\n  const [count, setCount] = useState(0);\n  return <div>{count}</div>;\n};',
       language: 'TypeScript',
@@ -5021,13 +5020,13 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'device',
     group: 'Lifestyle & Tech',
     schema: [
-      { key: 'headline', type: 'string', description: 'App name or headline' },
-      { key: 'description', type: 'string', description: 'Description text' },
+      { key: 'title', type: 'string', description: 'App name or title' },
+      { key: 'subtitle', type: 'string', description: 'Description text' },
       { key: 'image', type: 'string', description: '9:16 content image URL' },
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'FitTrack',
+      title: 'FitTrack',
       description: 'Track your daily activity and stay motivated',
       image: '',
       citation: '',
@@ -5041,13 +5040,13 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'device',
     group: 'Lifestyle & Tech',
     schema: [
-      { key: 'headline', type: 'string', description: 'Watch headline' },
-      { key: 'description', type: 'string', description: 'Description text' },
+      { key: 'title', type: 'string', description: 'Watch title' },
+      { key: 'subtitle', type: 'string', description: 'Description text' },
       { key: 'image', type: 'string', description: '1:1 watch face image URL' },
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Health Watch',
+      title: 'Health Watch',
       description: 'Track your fitness goals with style',
       image: '',
       citation: '',
@@ -5061,15 +5060,15 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'device',
     group: 'Lifestyle & Tech',
     schema: [
-      { key: 'headline', type: 'string', description: 'Terminal title' },
-      { key: 'description', type: 'string', description: 'Description text' },
+      { key: 'title', type: 'string', description: 'Terminal title' },
+      { key: 'subtitle', type: 'string', description: 'Description text' },
       { key: 'command', type: 'string', description: 'Shell command' },
       { key: 'output', type: 'string', description: 'Command output' },
       { key: 'syntax', type: 'string', description: 'Code or syntax block' },
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Deploy Script',
+      title: 'Deploy Script',
       description: 'A quick deployment script for your project',
       command: 'npm run deploy',
       output: 'Deploying to production...',
@@ -5130,7 +5129,7 @@ export const TEMPLATES: TemplateDef[] = [
     schema: [
       { key: 'title', type: 'string', description: 'Title' },
       { key: 'rule', type: 'string', description: 'Rule name' },
-      { key: 'description', type: 'string', description: 'Description' },
+      { key: 'subtitle', type: 'string', description: 'Description' },
       { key: 'tips', type: 'array', description: 'Array of tip strings' },
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
@@ -5198,7 +5197,7 @@ export const TEMPLATES: TemplateDef[] = [
     schema: [
       { key: 'title', type: 'string', description: 'Title' },
       { key: 'setup', type: 'string', description: 'Lighting setup' },
-      { key: 'description', type: 'string', description: 'Description' },
+      { key: 'subtitle', type: 'string', description: 'Description' },
       {
         key: 'tips',
         type: 'array',
@@ -5240,7 +5239,7 @@ export const TEMPLATES: TemplateDef[] = [
     group: 'Lifestyle & Tech',
     schema: [
       { key: 'title', type: 'string', description: 'Title' },
-      { key: 'description', type: 'string', description: 'Description' },
+      { key: 'subtitle', type: 'string', description: 'Description' },
       {
         key: 'themes',
         type: 'array',
@@ -5285,7 +5284,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'title', type: 'string', description: 'Title' },
       { key: 'beforeLabel', type: 'string', description: 'Before label' },
       { key: 'afterLabel', type: 'string', description: 'After label' },
-      { key: 'description', type: 'string', description: 'Description' },
+      { key: 'subtitle', type: 'string', description: 'Description' },
       { key: 'imageUrl', type: 'string', description: 'Image URL' },
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
@@ -5307,7 +5306,7 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'sports',
     group: 'Lifestyle & Tech',
     schema: [
-      { key: 'headline', type: 'string', description: 'Match title' },
+      { key: 'title', type: 'string', description: 'Match title' },
       { key: 'text', type: 'string', description: 'Description text' },
       { key: 'teamA', type: 'string', description: 'Team A name' },
       { key: 'teamB', type: 'string', description: 'Team B name' },
@@ -5329,7 +5328,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Matchday 30',
+      title: 'Matchday 30',
       text: 'Top of the table clash',
       teamA: 'Arsenal',
       teamB: 'Liverpool',
@@ -5370,7 +5369,7 @@ export const TEMPLATES: TemplateDef[] = [
     group: 'Lifestyle & Tech',
     schema: [
       {
-        key: 'headline',
+        key: 'title',
         type: 'string',
         description: 'League name and season',
       },
@@ -5383,7 +5382,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Premier League 2024/25',
+      title: 'Premier League 2024/25',
       text: 'After Matchweek 28',
       standings: [
         {
@@ -5449,7 +5448,7 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'sports',
     group: 'Lifestyle & Tech',
     schema: [
-      { key: 'headline', type: 'string', description: 'Team or league name' },
+      { key: 'title', type: 'string', description: 'Team or league name' },
       { key: 'text', type: 'string', description: 'Description text' },
       {
         key: 'fixtures',
@@ -5459,7 +5458,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Arsenal — March Fixtures',
+      title: 'Arsenal — March Fixtures',
       text: 'Premier League & Champions League',
       fixtures: [
         {
@@ -5504,7 +5503,7 @@ export const TEMPLATES: TemplateDef[] = [
     group: 'Lifestyle & Tech',
     schema: [
       {
-        key: 'headline',
+        key: 'title',
         type: 'string',
         description: 'Competition or match title',
       },
@@ -5528,7 +5527,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Premier League',
+      title: 'Premier League',
       text: 'Matchday 28',
       homeTeam: 'Arsenal',
       awayTeam: 'Chelsea',
@@ -5587,7 +5586,7 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'sports',
     group: 'Lifestyle & Tech',
     schema: [
-      { key: 'headline', type: 'string', description: 'Stat category title' },
+      { key: 'title', type: 'string', description: 'Stat category title' },
       { key: 'text', type: 'string', description: 'Description text' },
       {
         key: 'leaders',
@@ -5597,7 +5596,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Top Scorers',
+      title: 'Top Scorers',
       text: 'Premier League 2024/25',
       leaders: [
         {
@@ -5643,7 +5642,7 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'sports',
     group: 'Lifestyle & Tech',
     schema: [
-      { key: 'headline', type: 'string', description: 'Tournament name' },
+      { key: 'title', type: 'string', description: 'Tournament name' },
       { key: 'text', type: 'string', description: 'Description text' },
       {
         key: 'rounds',
@@ -5653,7 +5652,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Champions League 2025',
+      title: 'Champions League 2025',
       text: 'Knockout Stage',
       rounds: [
         {
@@ -5835,7 +5834,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'name', type: 'string', description: 'Landmark name' },
       { key: 'location', type: 'string', description: 'Location' },
       {
-        key: 'description',
+        key: 'subtitle',
         type: 'string',
         description: 'Landmark description',
       },
@@ -5894,7 +5893,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'tip', type: 'string', description: 'Travel tip' },
       { key: 'category', type: 'string', description: 'Tip category' },
       {
-        key: 'description',
+        key: 'subtitle',
         type: 'string',
         description: 'Detailed explanation',
       },
@@ -6302,7 +6301,7 @@ export const TEMPLATES: TemplateDef[] = [
     group: 'Social & Learning',
     schema: [
       { key: 'technique', type: 'string', description: 'Study technique name' },
-      { key: 'description', type: 'string', description: 'Brief explanation' },
+      { key: 'subtitle', type: 'string', description: 'Brief explanation' },
       { key: 'steps', type: 'array', description: 'Array of step strings' },
       { key: 'subject', type: 'string', description: 'Subject or topic' },
       { key: 'citation', type: 'string', description: 'Source citation' },
@@ -6361,7 +6360,7 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'football',
     group: 'Social & Learning',
     schema: [
-      { key: 'headline', type: 'string', description: 'Title' },
+      { key: 'title', type: 'string', description: 'Title' },
       { key: 'total', type: 'string', description: 'Total amount' },
       { key: 'people', type: 'string', description: 'Number of people' },
       { key: 'each', type: 'string', description: 'Amount per person' },
@@ -6373,7 +6372,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Dinner Bill',
+      title: 'Dinner Bill',
       total: '$186.50',
       people: '4 people',
       each: '$46.63 each',
@@ -6928,9 +6927,9 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'interactive',
     group: 'Social & Learning',
     schema: [
-      { key: 'headline', type: 'string', description: 'Challenge title' },
+      { key: 'title', type: 'string', description: 'Challenge title' },
       {
-        key: 'description',
+        key: 'subtitle',
         type: 'string',
         description: 'Challenge description',
       },
@@ -6938,7 +6937,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Write Every Day',
+      title: 'Write Every Day',
       description: 'Build a writing habit one day at a time.',
       days: '30',
       citation: '',
@@ -7052,13 +7051,13 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'interactive',
     group: 'Social & Learning',
     schema: [
-      { key: 'headline', type: 'string', description: 'Main title' },
+      { key: 'title', type: 'string', description: 'Main title' },
       { key: 'optionA', type: 'string', description: 'Left option' },
       { key: 'optionB', type: 'string', description: 'Right option' },
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Which do you choose?',
+      title: 'Which do you choose?',
       optionA: 'Remote Work',
       optionB: 'Office Culture',
       citation: '',
@@ -7336,7 +7335,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'date', type: 'string', description: 'Event date' },
       { key: 'time', type: 'string', description: 'Event time' },
       { key: 'location', type: 'string', description: 'Event location' },
-      { key: 'description', type: 'string', description: 'Event description' },
+      { key: 'subtitle', type: 'string', description: 'Event description' },
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
@@ -7403,14 +7402,14 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'social',
     group: 'Social & Learning',
     schema: [
-      { key: 'headline', type: 'string', description: 'Main title' },
+      { key: 'title', type: 'string', description: 'Main title' },
       { key: 'text', type: 'string', description: 'Body paragraph' },
       { key: 'buttonLabel', type: 'string', description: 'Button text' },
       { key: 'hashtag', type: 'string', description: 'Associated hashtag' },
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Share This',
+      title: 'Share This',
       text: 'Help others discover this content by sharing it with your network.',
       buttonLabel: 'Share Now',
       hashtag: '#Infographic',
@@ -7425,7 +7424,7 @@ export const TEMPLATES: TemplateDef[] = [
     category: 'social',
     group: 'Social & Learning',
     schema: [
-      { key: 'headline', type: 'string', description: 'Team name' },
+      { key: 'title', type: 'string', description: 'Team name' },
       {
         key: 'members',
         type: 'array<{name, role, number}>',
@@ -7434,7 +7433,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
-      headline: 'Squad',
+      title: 'Squad',
       members: [
         {
           name: 'Alex Chen',

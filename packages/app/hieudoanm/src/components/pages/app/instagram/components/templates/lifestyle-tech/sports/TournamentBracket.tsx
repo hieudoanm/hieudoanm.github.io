@@ -16,7 +16,7 @@ interface Round {
 }
 
 export const TournamentBracket: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? 'Tournament Bracket';
+  const title = (data.title as string) ?? 'Tournament Bracket';
   const text = (data.text as string) ?? '';
   const rounds = (data.rounds as Round[]) ?? [
     {
@@ -91,7 +91,7 @@ export const TournamentBracket: FC<TemplateProps> = ({ data }) => {
   return (
     <Background>
       <div className="mb-4 text-center">
-        <h2 className="text-base-content text-base font-bold">{headline}</h2>
+        <h2 className="text-base-content text-base font-bold">{title}</h2>
         {text && <p className="text-neutral mt-1 text-xs">{text}</p>}
       </div>
 

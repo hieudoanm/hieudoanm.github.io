@@ -1,24 +1,18 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
+import { Header } from '../../_shared';
 
 export const Mobile: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? '';
-  const description = (data.description as string) ?? '';
+  const title = (data.title as string) ?? '';
+  const subtitle = (data.subtitle as string) ?? '';
   const image = (data.image as string) ?? '';
 
   const citation = (data.citation as string) ?? '';
   return (
     <Background>
       <div className="flex w-full flex-col gap-2">
-        <h2 className="text-base-content text-center text-base font-bold">
-          {headline}
-        </h2>
-        {description && (
-          <p className="text-base-content/70 text-center text-xs leading-relaxed">
-            {description}
-          </p>
-        )}
+        <Header title={title} subtitle={subtitle} />
       </div>
       <div className="ring-base-300 flex w-36 flex-col items-center rounded-[2.5rem] ring-4">
         <div className="bg-base-200 mt-2 h-5 w-20 rounded-full" />

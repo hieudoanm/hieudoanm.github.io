@@ -9,7 +9,7 @@ interface Member {
 }
 
 export const TeamRoster: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? 'Team Roster';
+  const title = (data.title as string) ?? 'Team Roster';
   const members = (data.members as Member[]) ?? [
     { name: 'Alice', role: 'Captain', number: 10 },
     { name: 'Bob', role: 'Striker', number: 9 },
@@ -23,7 +23,7 @@ export const TeamRoster: FC<TemplateProps> = ({ data }) => {
   return (
     <Background>
       <h2 className="text-base-content mb-4 text-center text-xs font-bold">
-        {headline}
+        {title}
       </h2>
       <ul className="grid flex-1 grid-cols-3 gap-1">
         {members.slice(0, 9).map((m, i) => (

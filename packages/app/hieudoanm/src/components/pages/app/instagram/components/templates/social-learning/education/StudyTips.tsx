@@ -4,7 +4,7 @@ import { Background } from '../../_shared';
 
 export const StudyTips: FC<TemplateProps> = ({ data }) => {
   const technique = (data.technique as string) ?? '';
-  const description = (data.description as string) ?? '';
+  const subtitle = (data.subtitle as string) ?? '';
   const steps = (data.steps as string[]) ?? [];
   const subject = (data.subject as string) ?? '';
 
@@ -19,7 +19,7 @@ export const StudyTips: FC<TemplateProps> = ({ data }) => {
       <h1 className="text-base-content text-4xl leading-tight font-bold">
         {technique}
       </h1>
-      <p className="text-neutral mt-2 text-sm leading-relaxed">{description}</p>
+      <p className="text-neutral mt-2 text-sm leading-relaxed">{subtitle}</p>
       <ol className="mt-6 flex flex-col gap-3">
         {steps.map((step, i) => (
           <li key={i} className="flex items-start gap-4">

@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
+import { Header } from '../../_shared';
 
 interface Theme {
   name: string;
@@ -9,7 +10,7 @@ interface Theme {
 
 export const MoodBoard: FC<TemplateProps> = ({ data }) => {
   const title = (data.title as string) ?? 'Mood Board';
-  const description = (data.description as string) ?? '';
+  const subtitle = (data.subtitle as string) ?? '';
   const themes = (data.themes as Theme[]) ?? [];
   const keywords = (data.keywords as string[]) ?? [];
 
@@ -19,12 +20,7 @@ export const MoodBoard: FC<TemplateProps> = ({ data }) => {
       <h2 className="text-accent mb-1 text-xs font-bold tracking-[0.2em] uppercase">
         Mood Board
       </h2>
-      <h1 className="text-base-content mb-1 text-4xl font-bold">{title}</h1>
-      {description && (
-        <p className="text-neutral mb-1 max-w-sm text-xs leading-relaxed">
-          {description}
-        </p>
-      )}
+      <Header title={title} subtitle={subtitle} />
       {themes.length > 0 && (
         <ul className="mb-1 flex gap-1">
           {themes.map((theme, i) => (

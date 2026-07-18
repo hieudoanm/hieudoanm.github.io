@@ -11,7 +11,7 @@ interface Fixture {
 }
 
 export const MatchSchedule: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? 'Match Schedule';
+  const title = (data.title as string) ?? 'Match Schedule';
   const text = (data.text as string) ?? '';
   const fixtures = (data.fixtures as Fixture[]) ?? [
     {
@@ -48,7 +48,7 @@ export const MatchSchedule: FC<TemplateProps> = ({ data }) => {
   return (
     <Background>
       <div className="mb-5 text-center">
-        <h2 className="text-base-content text-base font-bold">{headline}</h2>
+        <h2 className="text-base-content text-base font-bold">{title}</h2>
         {text && <p className="text-neutral mt-1 text-xs">{text}</p>}
       </div>
 

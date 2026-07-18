@@ -7,7 +7,7 @@ interface StepDef {
 }
 
 export const StepsHorizontal: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? '';
+  const title = (data.title as string) ?? '';
   const steps = (data.steps as StepDef[]) ?? [];
   const items =
     steps.length > 0
@@ -18,7 +18,7 @@ export const StepsHorizontal: FC<TemplateProps> = ({ data }) => {
   return (
     <Background>
       <h1 className="text-base-content mb-4 text-center text-4xl font-bold tracking-tight">
-        {headline}
+        {title}
       </h1>
       <ol className="flex flex-1 items-start justify-center gap-0 px-2">
         {items.map((step, i) => (

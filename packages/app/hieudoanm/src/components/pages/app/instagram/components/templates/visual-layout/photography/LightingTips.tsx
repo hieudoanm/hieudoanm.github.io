@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
+import { Header } from '../../_shared';
 
 interface LightingTip {
   label: string;
@@ -10,7 +11,7 @@ interface LightingTip {
 export const LightingTips: FC<TemplateProps> = ({ data }) => {
   const title = (data.title as string) ?? 'Lighting Tips';
   const setup = (data.setup as string) ?? '';
-  const description = (data.description as string) ?? '';
+  const subtitle = (data.subtitle as string) ?? '';
   const tips = (data.tips as LightingTip[]) ?? [];
 
   const citation = (data.citation as string) ?? '';
@@ -19,15 +20,7 @@ export const LightingTips: FC<TemplateProps> = ({ data }) => {
       <h2 className="text-accent mb-1 text-xs font-bold tracking-[0.2em] uppercase">
         Lighting
       </h2>
-      <h1 className="text-base-content mb-1 text-4xl font-bold">{title}</h1>
-      {setup && (
-        <span className="text-primary mb-1 text-xs font-bold">{setup}</span>
-      )}
-      {description && (
-        <p className="text-neutral mb-1 max-w-sm text-xs leading-relaxed">
-          {description}
-        </p>
-      )}
+      <Header title={title} subtitle={subtitle} />
       {tips.length > 0 && (
         <ul className="mt-1 grid w-full max-w-md grid-cols-2 gap-1">
           {tips.map((tip, i) => (

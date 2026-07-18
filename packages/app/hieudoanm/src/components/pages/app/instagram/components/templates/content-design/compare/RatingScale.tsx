@@ -3,7 +3,7 @@ import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
 
 export const RatingScale: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? '';
+  const title = (data.title as string) ?? '';
   const rating = (data.rating as number) ?? 4;
   const scaleMax = (data.scaleMax as number) ?? 5;
   const label = (data.label as string) ?? '';
@@ -13,7 +13,7 @@ export const RatingScale: FC<TemplateProps> = ({ data }) => {
   return (
     <Background>
       <h1 className="text-base-content mb-2 text-center text-4xl font-bold tracking-tight">
-        {headline || 'Rating'}
+        {title || 'Rating'}
       </h1>
       <div className="mb-2 flex gap-1">
         {Array.from({ length: scaleMax }, (_, i) => (

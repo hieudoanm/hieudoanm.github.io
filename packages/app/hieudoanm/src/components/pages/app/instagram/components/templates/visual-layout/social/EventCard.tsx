@@ -1,13 +1,12 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
-import { Background } from '../../_shared';
+import { Background, Header } from '../../_shared';
 
 export const EventCard: FC<TemplateProps> = ({ data }) => {
   const title = (data.title as string) ?? '';
   const date = (data.date as string) ?? '';
-  const time = (data.time as string) ?? '';
   const location = (data.location as string) ?? '';
-  const description = (data.description as string) ?? '';
+  const subtitle = (data.subtitle as string) ?? '';
 
   const citation = (data.citation as string) ?? '';
   return (
@@ -23,15 +22,9 @@ export const EventCard: FC<TemplateProps> = ({ data }) => {
             </span>
           </div>
           <div>
-            <h1 className="text-base-content text-4xl font-bold tracking-tight">
-              {title || 'Event Title'}
-            </h1>
-            {time && <p className="text-neutral text-xs">{time}</p>}
+            <Header title={title} subtitle={subtitle} />
           </div>
         </div>
-        <p className="text-neutral mb-3 text-sm leading-relaxed">
-          {description || 'Event description goes here.'}
-        </p>
         {location && (
           <div className="text-neutral mt-auto flex items-center gap-2 text-xs">
             <svg
@@ -54,12 +47,12 @@ export const EventCard: FC<TemplateProps> = ({ data }) => {
             {location}
           </div>
         )}
+        {citation && (
+          <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+            {citation}
+          </p>
+        )}
       </div>
-      {citation && (
-        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
-          {citation}
-        </p>
-      )}
     </Background>
   );
 };

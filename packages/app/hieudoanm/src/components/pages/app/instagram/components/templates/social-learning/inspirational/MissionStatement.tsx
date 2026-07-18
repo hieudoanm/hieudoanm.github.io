@@ -3,7 +3,7 @@ import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
 
 export const MissionStatement: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? '';
+  const title = (data.title as string) ?? '';
   const mission = (data.mission as string) ?? '';
   const vision = (data.vision as string) ?? '';
 
@@ -12,7 +12,7 @@ export const MissionStatement: FC<TemplateProps> = ({ data }) => {
     <Background>
       <div>
         <h2 className="text-accent text-sm font-bold tracking-[0.2em] uppercase">
-          {headline}
+          {title}
         </h2>
         <p className="text-base-content mt-4 text-4xl leading-snug font-bold">
           {mission}

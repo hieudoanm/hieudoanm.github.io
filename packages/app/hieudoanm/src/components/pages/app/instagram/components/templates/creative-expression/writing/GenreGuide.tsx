@@ -1,11 +1,12 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
+import { Header } from '../../_shared';
 
 export const GenreGuide: FC<TemplateProps> = ({ data }) => {
   const title = (data.title as string) ?? 'Genre Guide';
   const genre = (data.genre as string) ?? 'Mystery';
-  const description = (data.description as string) ?? '';
+  const subtitle = (data.subtitle as string) ?? '';
   const elements = (data.elements as string[]) ?? [
     'Clues',
     'Red herrings',
@@ -20,15 +21,7 @@ export const GenreGuide: FC<TemplateProps> = ({ data }) => {
   const citation = (data.citation as string) ?? '';
   return (
     <Background>
-      <h1 className="text-base-content mb-1 text-4xl font-black tracking-tight">
-        {title}
-      </h1>
-      <span className="badge badge-primary badge-sm mb-3">{genre}</span>
-      {description && (
-        <p className="text-neutral mb-3 max-w-sm text-xs leading-relaxed">
-          {description}
-        </p>
-      )}
+      <Header title={title} subtitle={subtitle} />
       <div className="mb-2 w-full max-w-sm text-left">
         <h2 className="text-base-content mb-1 block text-xs font-bold tracking-wider uppercase">
           Required Elements

@@ -5,7 +5,7 @@ import { Background } from '../../_shared';
 export const InvestmentTip: FC<TemplateProps> = ({ data }) => {
   const tip = (data.tip as string) ?? '';
   const category = (data.category as string) ?? '';
-  const description = (data.description as string) ?? '';
+  const subtitle = (data.subtitle as string) ?? '';
   const risk = (data.risk as string) ?? '';
 
   const citation = (data.citation as string) ?? '';
@@ -31,7 +31,7 @@ export const InvestmentTip: FC<TemplateProps> = ({ data }) => {
       <blockquote className="text-base-content text-lg leading-snug font-bold">
         &ldquo;{tip}&rdquo;
       </blockquote>
-      <p className="text-neutral mt-3 text-sm leading-relaxed">{description}</p>
+      <p className="text-neutral mt-3 text-sm leading-relaxed">{subtitle}</p>
       {risk && (
         <span
           className={`mt-5 rounded-full px-3 py-0.5 text-xs font-bold ${

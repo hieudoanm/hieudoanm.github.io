@@ -10,7 +10,7 @@ interface Leader {
 }
 
 export const SeasonStats: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? 'Season Stats';
+  const title = (data.title as string) ?? 'Season Stats';
   const text = (data.text as string) ?? '';
   const leaders = (data.leaders as Leader[]) ?? [
     { position: 1, name: 'Player A', team: 'Team Alpha', value: 24 },
@@ -26,7 +26,7 @@ export const SeasonStats: FC<TemplateProps> = ({ data }) => {
   return (
     <Background>
       <div className="mb-5 text-center">
-        <h2 className="text-base-content text-base font-bold">{headline}</h2>
+        <h2 className="text-base-content text-base font-bold">{title}</h2>
         {text && <p className="text-neutral mt-1 text-xs">{text}</p>}
       </div>
 

@@ -1,10 +1,11 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
+import { Header } from '../../_shared';
 
 export const ChallengeCard: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? '';
-  const description = (data.description as string) ?? '';
+  const title = (data.title as string) ?? '';
+  const subtitle = (data.subtitle as string) ?? '';
   const days = (data.days as string) ?? '';
 
   const citation = (data.citation as string) ?? '';
@@ -13,12 +14,7 @@ export const ChallengeCard: FC<TemplateProps> = ({ data }) => {
       <span className="text-accent text-sm font-bold tracking-[0.2em] uppercase">
         Challenge
       </span>
-      <h1 className="text-base-content text-4xl leading-tight font-bold">
-        {headline}
-      </h1>
-      <p className="text-neutral max-w-xs text-sm leading-relaxed">
-        {description}
-      </p>
+      <Header title={title} subtitle={subtitle} />
       {days && (
         <div className="rounded-box bg-accent/10 px-6 py-4">
           <span className="text-accent text-sm font-bold">

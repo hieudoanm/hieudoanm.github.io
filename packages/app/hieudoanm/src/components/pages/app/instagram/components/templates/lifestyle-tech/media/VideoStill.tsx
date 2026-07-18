@@ -4,7 +4,7 @@ import { Background } from '../../_shared';
 
 export const VideoStill: FC<TemplateProps> = ({ data }) => {
   const imageUrl = (data.imageUrl as string) ?? '';
-  const headline = (data.headline as string) ?? '';
+  const title = (data.title as string) ?? '';
   const duration = (data.duration as string) ?? '';
 
   const citation = (data.citation as string) ?? '';
@@ -27,9 +27,9 @@ export const VideoStill: FC<TemplateProps> = ({ data }) => {
             <path d="M8 5v14l11-7z" />
           </svg>
         </div>
-        {headline && (
+        {title && (
           <h1 className="text-center text-4xl font-bold text-white drop-shadow-lg">
-            {headline}
+            {title}
           </h1>
         )}
         {duration && (

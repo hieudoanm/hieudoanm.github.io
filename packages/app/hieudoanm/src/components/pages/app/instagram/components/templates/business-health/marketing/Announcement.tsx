@@ -4,7 +4,7 @@ import { Background } from '../../_shared';
 
 export const Announcement: FC<TemplateProps> = ({ data }) => {
   const badge = (data.badge as string) ?? 'New';
-  const headline = (data.headline as string) ?? '';
+  const title = (data.title as string) ?? '';
   const text = (data.text as string) ?? '';
   const date = (data.date as string) ?? '';
 
@@ -17,7 +17,7 @@ export const Announcement: FC<TemplateProps> = ({ data }) => {
         </span>
       </div>
       <h1 className="text-base-content mb-4 text-4xl leading-tight font-bold tracking-tight">
-        {headline}
+        {title}
       </h1>
       <p className="text-neutral mb-8 max-w-md text-base leading-relaxed">
         {text}

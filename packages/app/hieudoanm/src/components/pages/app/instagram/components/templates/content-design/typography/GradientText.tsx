@@ -3,14 +3,14 @@ import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
 
 export const GradientText: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? '';
+  const title = (data.title as string) ?? '';
   const text = (data.text as string) ?? '';
 
   const citation = (data.citation as string) ?? '';
   return (
     <Background>
       <h1 className="from-primary to-accent mb-4 bg-gradient-to-r bg-clip-text text-center text-4xl font-black text-transparent">
-        {headline || 'Create'}
+        {title || 'Create'}
       </h1>
       <p className="text-base-content max-w-md text-center text-base leading-relaxed font-light">
         {text ||

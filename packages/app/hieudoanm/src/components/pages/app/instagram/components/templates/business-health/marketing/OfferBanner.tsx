@@ -4,7 +4,7 @@ import { Background } from '../../_shared';
 
 export const OfferBanner: FC<TemplateProps> = ({ data }) => {
   const badge = (data.badge as string) ?? '';
-  const headline = (data.headline as string) ?? '';
+  const title = (data.title as string) ?? '';
   const text = (data.text as string) ?? '';
   const code = (data.code as string) ?? '';
   const cta = (data.cta as string) ?? '';
@@ -19,7 +19,7 @@ export const OfferBanner: FC<TemplateProps> = ({ data }) => {
           </span>
         )}
         <h1 className="text-base-content mb-3 text-4xl font-bold tracking-tight">
-          {headline || 'Special Offer'}
+          {title || 'Special Offer'}
         </h1>
         <p className="text-neutral mb-6 max-w-sm text-sm leading-relaxed">
           {text || 'Limited time offer. Get started today and save big.'}

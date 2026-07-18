@@ -3,7 +3,7 @@ import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
 
 export const BodyMeasurements: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? 'Progress Tracker';
+  const title = (data.title as string) ?? 'Progress Tracker';
   const measurements = (data.measurements as {
     part: string;
     current: string;
@@ -17,7 +17,7 @@ export const BodyMeasurements: FC<TemplateProps> = ({ data }) => {
   const citation = (data.citation as string) ?? '';
   return (
     <Background>
-      <h1 className="text-base-content mb-6 text-4xl font-bold">{headline}</h1>
+      <h1 className="text-base-content mb-6 text-4xl font-bold">{title}</h1>
       <ul className="flex flex-1 flex-col gap-3">
         {measurements.map((m, i) => {
           const diff =

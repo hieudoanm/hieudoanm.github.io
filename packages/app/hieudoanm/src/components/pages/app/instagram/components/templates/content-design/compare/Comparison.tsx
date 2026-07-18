@@ -8,7 +8,7 @@ interface SideDef {
 }
 
 export const Comparison: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? '';
+  const title = (data.title as string) ?? '';
   const before = (data.before as SideDef) ?? { label: 'Before', text: '' };
   const after = (data.after as SideDef) ?? { label: 'After', text: '' };
   const imageUrl = (data.imageUrl as string) ?? '';
@@ -18,7 +18,7 @@ export const Comparison: FC<TemplateProps> = ({ data }) => {
     <Background>
       <div className="bg-accent/10 px-5 py-3">
         <h1 className="text-base-content text-center text-4xl font-bold tracking-tight">
-          {headline}
+          {title}
         </h1>
       </div>
       <div className="flex flex-1">

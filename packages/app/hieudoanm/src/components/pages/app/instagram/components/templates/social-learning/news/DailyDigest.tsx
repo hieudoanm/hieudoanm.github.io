@@ -3,7 +3,7 @@ import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
 
 interface Story {
-  headline: string;
+  title: string;
   summary: string;
 }
 
@@ -34,7 +34,7 @@ export const DailyDigest: FC<TemplateProps> = ({ data }) => {
             </span>
             <div className="min-w-0">
               <h3 className="text-base-content text-sm leading-tight font-bold">
-                {story.headline}
+                {story.title}
               </h3>
               <p className="text-neutral mt-2 text-sm leading-snug">
                 {story.summary}

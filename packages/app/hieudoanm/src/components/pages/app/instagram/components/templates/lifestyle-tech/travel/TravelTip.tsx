@@ -5,7 +5,7 @@ import { Background } from '../../_shared';
 export const TravelTip: FC<TemplateProps> = ({ data }) => {
   const tip = (data.tip as string) ?? '';
   const category = (data.category as string) ?? '';
-  const description = (data.description as string) ?? '';
+  const subtitle = (data.subtitle as string) ?? '';
   const hashtag = (data.hashtag as string) ?? '';
 
   const citation = (data.citation as string) ?? '';
@@ -29,7 +29,7 @@ export const TravelTip: FC<TemplateProps> = ({ data }) => {
         />
       </svg>
       <p className="text-base-content text-lg leading-snug font-bold">{tip}</p>
-      <p className="text-neutral mt-4 text-sm leading-relaxed">{description}</p>
+      <p className="text-neutral mt-4 text-sm leading-relaxed">{subtitle}</p>
       {hashtag && (
         <span className="text-accent mt-6 text-xs font-medium">{hashtag}</span>
       )}

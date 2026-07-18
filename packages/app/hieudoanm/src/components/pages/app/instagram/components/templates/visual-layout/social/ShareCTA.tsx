@@ -3,7 +3,7 @@ import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
 
 export const ShareCTA: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? '';
+  const title = (data.title as string) ?? '';
   const text = (data.text as string) ?? '';
   const buttonLabel = (data.buttonLabel as string) ?? '';
   const hashtag = (data.hashtag as string) ?? '';
@@ -12,7 +12,7 @@ export const ShareCTA: FC<TemplateProps> = ({ data }) => {
   return (
     <Background>
       <h1 className="text-base-content mb-1 text-4xl font-bold tracking-tight">
-        {headline || 'Share This'}
+        {title || 'Share This'}
       </h1>
       <p className="text-neutral mb-4 max-w-sm text-sm leading-relaxed">
         {text ||

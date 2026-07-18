@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
+import { Header } from '../../_shared';
 
 interface WorldAspect {
   name: string;
@@ -10,7 +11,7 @@ interface WorldAspect {
 export const WorldBuilding: FC<TemplateProps> = ({ data }) => {
   const title = (data.title as string) ?? 'World Building';
   const worldName = (data.worldName as string) ?? 'New World';
-  const description = (data.description as string) ?? '';
+  const subtitle = (data.subtitle as string) ?? '';
   const aspects = (data.aspects as WorldAspect[]) ?? [
     { name: 'Geography', detail: 'Diverse landscapes and climates' },
     { name: 'Culture', detail: 'Unique traditions and beliefs' },
@@ -24,17 +25,7 @@ export const WorldBuilding: FC<TemplateProps> = ({ data }) => {
   const citation = (data.citation as string) ?? '';
   return (
     <Background>
-      <h1 className="text-base-content mb-0.5 text-4xl font-black tracking-tight">
-        {worldName}
-      </h1>
-      <p className="text-primary mb-1 text-xs font-semibold tracking-wider uppercase">
-        {title}
-      </p>
-      {description && (
-        <p className="text-neutral mb-3 max-w-sm text-xs leading-relaxed">
-          {description}
-        </p>
-      )}
+      <Header title={worldName} subtitle={subtitle} />
       <ul className="mb-3 grid w-full max-w-md grid-cols-2 gap-1">
         {aspects.map((a) => (
           <li key={a.name} className="bg-base-200 rounded-lg p-2 text-left">

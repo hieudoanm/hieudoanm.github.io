@@ -8,7 +8,7 @@ interface PaletteColor {
 }
 
 export const ColorPalette: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? 'Brand Palette';
+  const title = (data.title as string) ?? 'Brand Palette';
   const colors = (data.colors as PaletteColor[]) ?? [
     { name: 'Primary', hex: '#6366f1' },
     { name: 'Secondary', hex: '#8b5cf6' },
@@ -20,7 +20,7 @@ export const ColorPalette: FC<TemplateProps> = ({ data }) => {
   const citation = (data.citation as string) ?? '';
   return (
     <Background>
-      <h1 className="text-base-content mb-3 text-4xl font-black">{headline}</h1>
+      <h1 className="text-base-content mb-3 text-4xl font-black">{title}</h1>
       <ul className="flex flex-1 flex-col gap-2">
         {colors.map((color) => (
           <li key={color.name} className="flex items-center gap-2">

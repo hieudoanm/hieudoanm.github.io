@@ -5,7 +5,7 @@ import { Background } from '../../_shared';
 export const LandmarkSpotlight: FC<TemplateProps> = ({ data }) => {
   const name = (data.name as string) ?? '';
   const location = (data.location as string) ?? '';
-  const description = (data.description as string) ?? '';
+  const subtitle = (data.subtitle as string) ?? '';
   const funFact = (data.funFact as string) ?? '';
   const imageUrl = (data.imageUrl as string) ?? '';
 
@@ -18,7 +18,7 @@ export const LandmarkSpotlight: FC<TemplateProps> = ({ data }) => {
       <h1 className="text-base-content mt-1 text-4xl font-bold">{name}</h1>
       {location && <p className="text-neutral mt-1 text-xs">{location}</p>}
       <p className="text-base-content mt-5 text-sm leading-relaxed">
-        {description}
+        {subtitle}
       </p>
       {funFact && (
         <div className="bg-accent/5 rounded-box mt-6 px-4 py-3">

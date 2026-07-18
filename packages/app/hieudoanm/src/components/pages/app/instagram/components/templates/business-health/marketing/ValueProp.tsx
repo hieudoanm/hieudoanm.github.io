@@ -8,7 +8,7 @@ interface Feature {
 }
 
 export const ValueProp: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? 'Why Choose Us';
+  const title = (data.title as string) ?? 'Why Choose Us';
   const features = (data.features as Feature[]) ?? [
     {
       title: 'Lightning Fast',
@@ -28,7 +28,7 @@ export const ValueProp: FC<TemplateProps> = ({ data }) => {
   return (
     <Background>
       <div className="mb-3 text-center">
-        <h2 className="text-base-content text-sm font-bold">{headline}</h2>
+        <h2 className="text-base-content text-sm font-bold">{title}</h2>
       </div>
       <ul className="flex flex-1 flex-col gap-2">
         {features.map((f, i) => (

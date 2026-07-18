@@ -3,7 +3,7 @@ import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
 
 export const DealBadge: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? 'Limited Time Offer';
+  const title = (data.title as string) ?? 'Limited Time Offer';
   const originalPrice = (data.originalPrice as string) ?? '$99.99';
   const dealPrice = (data.dealPrice as string) ?? '$49.99';
   const discount = (data.discount as string) ?? '50% OFF';
@@ -16,7 +16,7 @@ export const DealBadge: FC<TemplateProps> = ({ data }) => {
       <div className="bg-accent text-base-100 mb-6 self-start rounded px-3 py-1 text-xs font-bold tracking-wider uppercase">
         {badge}
       </div>
-      <p className="text-neutral mb-2 text-sm">{headline}</p>
+      <p className="text-neutral mb-2 text-sm">{title}</p>
       <p className="text-primary text-2xl font-black">
         <strong>{dealPrice}</strong>
       </p>

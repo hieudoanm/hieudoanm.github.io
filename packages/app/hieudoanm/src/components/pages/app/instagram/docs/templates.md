@@ -189,7 +189,7 @@
     - [Device](#device)
       - [151. Browser](#151-browser)
       - [152. File Tree](#152-file-tree)
-      - [153. Code](#153-code)
+      - [153. Laptop](#153-laptop)
       - [154. Mobile](#154-mobile)
       - [155. Smart Watch](#155-smart-watch)
       - [156. Terminal](#156-terminal)
@@ -279,7 +279,7 @@
 
 | Key             | Type   | Description         |
 | --------------- | ------ | ------------------- |
-| `headline`      | string | Deal headline       |
+| `title`         | string | Deal title          |
 | `originalPrice` | string | Original price      |
 | `dealPrice`     | string | Deal price          |
 | `discount`      | string | Discount percentage |
@@ -291,7 +291,7 @@
 
 ```yaml
 deal-badge:
-  headline: 'Flash Sale'
+  title: 'Flash Sale'
   originalPrice: '$299'
   dealPrice: '$149'
   discount: '50% OFF'
@@ -341,15 +341,15 @@ invoice-card:
 
 **Fields:**
 
-| Key           | Type   | Description               |
-| ------------- | ------ | ------------------------- |
-| `badge`       | string | Badge label               |
-| `name`        | string | Product name              |
-| `price`       | string | Current price             |
-| `oldPrice`    | string | Original price (optional) |
-| `description` | string | Short description         |
-| `imageUrl`    | string | Product image URL         |
-| `citation`    | string | Source citation           |
+| Key        | Type   | Description               |
+| ---------- | ------ | ------------------------- |
+| `badge`    | string | Badge label               |
+| `name`     | string | Product name              |
+| `price`    | string | Current price             |
+| `oldPrice` | string | Original price (optional) |
+| `subtitle` | string | Short subtitle            |
+| `imageUrl` | string | Product image URL         |
+| `citation` | string | Source citation           |
 
 **Default content:**
 
@@ -359,7 +359,7 @@ new-arrival:
   name: 'Classic Tee'
   price: '$49'
   oldPrice: ''
-  description: ''
+  subtitle: ''
   imageUrl: ''
   citation: ''
 ```
@@ -608,13 +608,13 @@ financial-plan:
 
 **Fields:**
 
-| Key           | Type   | Description                  |
-| ------------- | ------ | ---------------------------- |
-| `tip`         | string | Investment tip               |
-| `category`    | string | Investment category          |
-| `description` | string | Detailed explanation         |
-| `risk`        | string | Risk level (Low/Medium/High) |
-| `citation`    | string | Source citation              |
+| Key        | Type   | Description                  |
+| ---------- | ------ | ---------------------------- |
+| `tip`      | string | Investment tip               |
+| `category` | string | Investment category          |
+| `subtitle` | string | Detailed explanation         |
+| `risk`     | string | Risk level (Low/Medium/High) |
+| `citation` | string | Source citation              |
 
 **Default content:**
 
@@ -622,7 +622,7 @@ financial-plan:
 investment-tip:
   tip: 'Diversify your portfolio'
   category: 'Strategy'
-  description:
+  subtitle:
     'Spread investments across different asset classes to reduce risk and
     stabilise returns over time.'
   risk: 'Low'
@@ -664,7 +664,7 @@ savings-goal:
 
 #### 13. Food Review
 
-**Description:** Dish review with star rating and description
+**Description:** Dish review with star rating and subtitle
 
 **Fields:**
 
@@ -735,7 +735,7 @@ ingredient-spotlight:
 
 | Key        | Type   | Description                                      |
 | ---------- | ------ | ------------------------------------------------ |
-| `headline` | string | Plan title                                       |
+| `title`    | string | Plan title                                       |
 | `meals`    | array  | Array of {day, breakfast, lunch, dinner} objects |
 | `citation` | string | Source citation                                  |
 
@@ -743,7 +743,7 @@ ingredient-spotlight:
 
 ```yaml
 meal-plan:
-  headline: 'Weekly Meal Plan'
+  title: 'Weekly Meal Plan'
   meals:
     - day: 'Mon'
       breakfast: 'Oatmeal'
@@ -997,13 +997,13 @@ water-tracker:
 
 **Fields:**
 
-| Key           | Type   | Description          |
-| ------------- | ------ | -------------------- |
-| `tip`         | string | Wellness tip         |
-| `category`    | string | Tip category         |
-| `description` | string | Detailed explanation |
-| `source`      | string | Attribution source   |
-| `citation`    | string | Source citation      |
+| Key        | Type   | Description          |
+| ---------- | ------ | -------------------- |
+| `tip`      | string | Wellness tip         |
+| `category` | string | Tip category         |
+| `subtitle` | string | Detailed explanation |
+| `source`   | string | Attribution source   |
+| `citation` | string | Source citation      |
 
 **Default content:**
 
@@ -1011,7 +1011,7 @@ water-tracker:
 wellness-tip:
   tip: 'Movement is medicine'
   category: 'Exercise'
-  description:
+  subtitle:
     'Even 10 minutes of moderate activity can boost mood, improve focus, and
     reduce stress.'
   source: 'World Health Organisation'
@@ -1103,13 +1103,13 @@ belief-card:
 
 #### 27. Mission Statement
 
-**Description:** Mission and vision pair with headline
+**Description:** Mission and vision pair with title
 
 **Fields:**
 
 | Key        | Type   | Description       |
 | ---------- | ------ | ----------------- |
-| `headline` | string | Section headline  |
+| `title`    | string | Section title     |
 | `mission`  | string | Mission statement |
 | `vision`   | string | Vision statement  |
 | `citation` | string | Source citation   |
@@ -1118,7 +1118,7 @@ belief-card:
 
 ```yaml
 mission-statement:
-  headline: 'Our Mission'
+  title: 'Our Mission'
   mission:
     'Empower every person and organisation on the planet to achieve more.'
   vision: 'A world where everyone has access to the tools they need to succeed.'
@@ -1133,14 +1133,14 @@ mission-statement:
 
 **Fields:**
 
-| Key           | Type   | Description         |
-| ------------- | ------ | ------------------- |
-| `title`       | string | Episode title       |
-| `episode`     | string | Episode number      |
-| `guest`       | string | Guest name          |
-| `duration`    | string | Episode duration    |
-| `description` | string | Episode description |
-| `citation`    | string | Source citation     |
+| Key        | Type   | Description      |
+| ---------- | ------ | ---------------- |
+| `title`    | string | Episode title    |
+| `episode`  | string | Episode number   |
+| `guest`    | string | Guest name       |
+| `duration` | string | Episode duration |
+| `subtitle` | string | Episode subtitle |
+| `citation` | string | Source citation  |
 
 **Default content:**
 
@@ -1150,7 +1150,7 @@ podcast-episode:
   episode: 'EP 42'
   guest: 'Dr. Sarah Chen'
   duration: '58 min'
-  description:
+  subtitle:
     'Exploring how artificial intelligence will reshape creative industries in
     the next decade.'
   citation: ''
@@ -1166,7 +1166,7 @@ podcast-episode:
 
 | Key        | Type   | Description     |
 | ---------- | ------ | --------------- |
-| `headline` | string | Title           |
+| `title`    | string | Title           |
 | `streak`   | string | Streak number   |
 | `label`    | string | Unit label      |
 | `started`  | string | Start date      |
@@ -1176,7 +1176,7 @@ podcast-episode:
 
 ```yaml
 streak-counter:
-  headline: 'Learning Streak'
+  title: 'Learning Streak'
   streak: '42'
   label: 'days'
   started: 'Started Feb 15, 2025'
@@ -1193,7 +1193,7 @@ streak-counter:
 
 | Key        | Type   | Description     |
 | ---------- | ------ | --------------- |
-| `headline` | string | Main title      |
+| `title`    | string | Main title      |
 | `text`     | string | Body paragraph  |
 | `imageUrl` | string | URL to an image |
 | `citation` | string | Source citation |
@@ -1202,7 +1202,7 @@ streak-counter:
 
 ```yaml
 vision-board:
-  headline: 'Dream Big'
+  title: 'Dream Big'
   text:
     'Visualise your goals, then work backwards from the future you want to
     create.'
@@ -1216,14 +1216,14 @@ vision-board:
 
 #### 31. Announcement
 
-**Description:** Badge, headline, body text, and date
+**Description:** Badge, title, body text, and date
 
 **Fields:**
 
 | Key        | Type   | Description                   |
 | ---------- | ------ | ----------------------------- |
 | `badge`    | string | Chip label (e.g. New, Launch) |
-| `headline` | string | Main title                    |
+| `title`    | string | Main title                    |
 | `text`     | string | Body paragraph                |
 | `date`     | string | Date or timeline label        |
 | `citation` | string | Source citation               |
@@ -1233,7 +1233,7 @@ vision-board:
 ```yaml
 announcement:
   badge: 'Launching Soon'
-  headline: 'A New Way to Work'
+  title: 'A New Way to Work'
   text:
     'We are building a platform that reimagines how teams collaborate across
     time zones.'
@@ -1251,7 +1251,7 @@ announcement:
 
 | Key        | Type   | Description             |
 | ---------- | ------ | ----------------------- |
-| `headline` | string | Main title              |
+| `title`    | string | Main title              |
 | `items`    | array  | Array of {q, a} objects |
 | `citation` | string | Source citation         |
 
@@ -1259,7 +1259,7 @@ announcement:
 
 ```yaml
 faq:
-  headline: 'Frequently Asked'
+  title: 'Frequently Asked'
   items:
     - q: 'How does it work?'
       a: 'Sign up, customize your template, and download your image in seconds.'
@@ -1308,7 +1308,7 @@ glossary:
 | Key        | Type   | Description         |
 | ---------- | ------ | ------------------- |
 | `badge`    | string | Offer badge label   |
-| `headline` | string | Main title          |
+| `title`    | string | Main title          |
 | `text`     | string | Body paragraph      |
 | `code`     | string | Promo code          |
 | `cta`      | string | Call to action text |
@@ -1319,7 +1319,7 @@ glossary:
 ```yaml
 offer-banner:
   badge: 'Limited Offer'
-  headline: 'Special Offer'
+  title: 'Special Offer'
   text: 'Get 30% off your first month. No commitment required.'
   code: 'WELCOME30'
   cta: 'Claim Offer'
@@ -1363,24 +1363,24 @@ pricing-card:
 
 **Fields:**
 
-| Key        | Type                        | Description     |
-| ---------- | --------------------------- | --------------- |
-| `headline` | string                      | Section title   |
-| `features` | array<{title, description}> | Feature items   |
-| `citation` | string                      | Source citation |
+| Key        | Type                     | Description     |
+| ---------- | ------------------------ | --------------- |
+| `title`    | string                   | Section title   |
+| `features` | array<{title, subtitle}> | Feature items   |
+| `citation` | string                   | Source citation |
 
 **Default content:**
 
 ```yaml
 value-prop:
-  headline: 'Why Choose Us'
+  title: 'Why Choose Us'
   features:
     - title: 'Lightning Fast'
-      description: 'Optimized for speed at every layer'
+      subtitle: 'Optimized for speed at every layer'
     - title: 'Built to Scale'
-      description: 'Grows with your business effortlessly'
+      subtitle: 'Grows with your business effortlessly'
     - title: 'Secure by Default'
-      description: 'Enterprise-grade security out of the box'
+      subtitle: 'Enterprise-grade security out of the box'
   citation: ''
 ```
 
@@ -1392,13 +1392,13 @@ value-prop:
 
 #### 37. Bullet List
 
-**Description:** Simple bullet point list with headline
+**Description:** Simple bullet point list with title
 
 **Fields:**
 
 | Key        | Type   | Description      |
 | ---------- | ------ | ---------------- |
-| `headline` | string | Main title       |
+| `title`    | string | Main title       |
 | `items`    | array  | Array of strings |
 | `citation` | string | Source citation  |
 
@@ -1406,7 +1406,7 @@ value-prop:
 
 ```yaml
 bullet-list:
-  headline: 'Key Points'
+  title: 'Key Points'
   items:
     - 'Increased productivity'
     - 'Better collaboration'
@@ -1425,7 +1425,7 @@ bullet-list:
 
 | Key        | Type   | Description          |
 | ---------- | ------ | -------------------- |
-| `headline` | string | Main title           |
+| `title`    | string | Main title           |
 | `text`     | string | Supporting paragraph |
 | `items`    | array  | Array of strings     |
 | `citation` | string | Source citation      |
@@ -1434,7 +1434,7 @@ bullet-list:
 
 ```yaml
 checklist:
-  headline: 'Launch Checklist'
+  title: 'Launch Checklist'
   text: 'Make sure everything is ready before you hit publish.'
   items:
     - 'Write final copy'
@@ -1454,7 +1454,7 @@ checklist:
 
 | Key        | Type   | Description                  |
 | ---------- | ------ | ---------------------------- |
-| `headline` | string | Palette title                |
+| `title`    | string | Palette title                |
 | `colors`   | array  | Array of {name, hex} objects |
 | `citation` | string | Source citation              |
 
@@ -1462,7 +1462,7 @@ checklist:
 
 ```yaml
 color-palette:
-  headline: 'Brand Palette'
+  title: 'Brand Palette'
   colors:
     - name: 'Primary'
       hex: '#6366f1'
@@ -1481,13 +1481,13 @@ color-palette:
 
 #### 40. Listicle
 
-**Description:** Numbered items with headline and bottom image
+**Description:** Numbered items with title and bottom image
 
 **Fields:**
 
 | Key        | Type   | Description           |
 | ---------- | ------ | --------------------- |
-| `headline` | string | Main title            |
+| `title`    | string | Main title            |
 | `text`     | string | Supporting paragraph  |
 | `items`    | array  | Array of strings      |
 | `imageUrl` | string | Optional bottom image |
@@ -1497,7 +1497,7 @@ color-palette:
 
 ```yaml
 listicle:
-  headline: '3 Daily Habits'
+  title: '3 Daily Habits'
   text: 'Small daily improvements over time lead to massive results.'
   items:
     - 'Wake up at 5 AM'
@@ -1517,7 +1517,7 @@ listicle:
 
 | Key        | Type   | Description              |
 | ---------- | ------ | ------------------------ |
-| `headline` | string | Main title               |
+| `title`    | string | Main title               |
 | `text`     | string | Supporting paragraph     |
 | `steps`    | array  | Array of {label} objects |
 | `citation` | string | Source citation          |
@@ -1526,7 +1526,7 @@ listicle:
 
 ```yaml
 step-by-step:
-  headline: 'Getting Started'
+  title: 'Getting Started'
   text: 'Follow these three steps to begin your journey.'
   steps:
     - label: 'Discover'
@@ -1545,7 +1545,7 @@ step-by-step:
 
 | Key        | Type   | Description              |
 | ---------- | ------ | ------------------------ |
-| `headline` | string | Main title               |
+| `title`    | string | Main title               |
 | `steps`    | array  | Array of {label} objects |
 | `citation` | string | Source citation          |
 
@@ -1553,7 +1553,7 @@ step-by-step:
 
 ```yaml
 steps-horizontal:
-  headline: 'How It Works'
+  title: 'How It Works'
   steps:
     - label: 'Plan'
     - label: 'Build'
@@ -1573,7 +1573,7 @@ steps-horizontal:
 
 | Key        | Type   | Description      |
 | ---------- | ------ | ---------------- |
-| `headline` | string | Main title       |
+| `title`    | string | Main title       |
 | `text`     | string | Body paragraph   |
 | `imageUrl` | string | Background image |
 | `citation` | string | Source citation  |
@@ -1582,7 +1582,7 @@ steps-horizontal:
 
 ```yaml
 card-overlay:
-  headline: 'New Horizons'
+  title: 'New Horizons'
   text: 'The future belongs to those who believe in the beauty of their dreams.'
   imageUrl: ''
   citation: ''
@@ -1599,7 +1599,7 @@ card-overlay:
 | Key        | Type   | Description          |
 | ---------- | ------ | -------------------- |
 | `imageUrl` | string | Background image URL |
-| `headline` | string | Main title           |
+| `title`    | string | Main title           |
 | `text`     | string | Body text            |
 | `caption`  | string | Bottom caption       |
 | `citation` | string | Source citation      |
@@ -1609,7 +1609,7 @@ card-overlay:
 ```yaml
 cinema-banner:
   imageUrl: ''
-  headline: 'A New Chapter'
+  title: 'A New Chapter'
   text: 'Every great story begins with a single step into the unknown.'
   caption: 'Coming this summer'
   citation: ''
@@ -1649,7 +1649,7 @@ collage:
 
 | Key        | Type   | Description      |
 | ---------- | ------ | ---------------- |
-| `headline` | string | Main title       |
+| `title`    | string | Main title       |
 | `text`     | string | Body paragraph   |
 | `imageUrl` | string | Background image |
 | `citation` | string | Source citation  |
@@ -1658,7 +1658,7 @@ collage:
 
 ```yaml
 full-bleed:
-  headline: 'Dream Bigger'
+  title: 'Dream Bigger'
   text:
     'The only limit to your impact is your imagination and commitment to act.'
   imageUrl: ''
@@ -1701,7 +1701,7 @@ mosaic:
 | Key        | Type   | Description                   |
 | ---------- | ------ | ----------------------------- |
 | `imageUrl` | string | Thumbnail image URL           |
-| `headline` | string | Video title                   |
+| `title`    | string | Video title                   |
 | `duration` | string | Duration display (e.g. 12:34) |
 | `citation` | string | Source citation               |
 
@@ -1710,7 +1710,7 @@ mosaic:
 ```yaml
 video-still:
   imageUrl: ''
-  headline: 'Product Demo'
+  title: 'Product Demo'
   duration: '3:45'
   citation: ''
 ```
@@ -1727,7 +1727,7 @@ video-still:
 
 | Key        | Type   | Description                      |
 | ---------- | ------ | -------------------------------- |
-| `headline` | string | Headline                         |
+| `title`    | string | Headline                         |
 | `summary`  | string | Summary text                     |
 | `points`   | array  | Array of {title, detail} objects |
 | `citation` | string | Source citation                  |
@@ -1736,7 +1736,7 @@ video-still:
 
 ```yaml
 breakdown-card:
-  headline: 'Market Rally Explained'
+  title: 'Market Rally Explained'
   summary: 'Three key factors drove the S&P 500 to new highs this quarter.'
   points:
     - title: 'Tech Earnings'
@@ -1752,13 +1752,13 @@ breakdown-card:
 
 #### 50. Breaking News
 
-**Description:** Urgency badge, headline, source, and timestamp
+**Description:** Urgency badge, title, source, and timestamp
 
 **Fields:**
 
 | Key         | Type   | Description                           |
 | ----------- | ------ | ------------------------------------- |
-| `headline`  | string | News headline                         |
+| `title`     | string | News title                            |
 | `source`    | string | News source                           |
 | `timestamp` | string | Time or date                          |
 | `urgency`   | string | Urgency label (e.g. BREAKING, UPDATE) |
@@ -1768,7 +1768,7 @@ breakdown-card:
 
 ```yaml
 breaking-news:
-  headline: 'Global Summit Reaches Historic Climate Agreement'
+  title: 'Global Summit Reaches Historic Climate Agreement'
   source: 'Reuters'
   timestamp: '2 hours ago'
   urgency: 'BREAKING'
@@ -1783,11 +1783,11 @@ breaking-news:
 
 **Fields:**
 
-| Key        | Type                       | Description     |
-| ---------- | -------------------------- | --------------- |
-| `date`     | string                     | Date label      |
-| `stories`  | array<{headline, summary}> | Top stories     |
-| `citation` | string                     | Source citation |
+| Key        | Type                    | Description     |
+| ---------- | ----------------------- | --------------- |
+| `date`     | string                  | Date label      |
+| `stories`  | array<{title, summary}> | Top stories     |
+| `citation` | string                  | Source citation |
 
 **Default content:**
 
@@ -1795,13 +1795,13 @@ breaking-news:
 daily-digest:
   date: 'March 15, 2025'
   stories:
-    - headline: 'Tech stocks rally on AI breakthrough'
+    - title: 'Tech stocks rally on AI breakthrough'
       summary:
         'Major indices hit record highs as leading companies announce new AI
         tools.'
-    - headline: 'New renewable energy target set'
+    - title: 'New renewable energy target set'
       summary: 'Government pledges 80% clean energy by 2035 in landmark policy.'
-    - headline: 'Space agency confirms water on Mars'
+    - title: 'Space agency confirms water on Mars'
       summary: 'Underground ice deposits detected by latest rover mission.'
   citation: ''
 ```
@@ -2018,11 +2018,11 @@ profile-header:
 
 **Fields:**
 
-| Key        | Type                                             | Description     |
-| ---------- | ------------------------------------------------ | --------------- |
-| `title`    | string                                           | Section title   |
-| `projects` | array<{name, description, tech[], highlights[]}> | Project list    |
-| `citation` | string                                           | Source citation |
+| Key        | Type                                          | Description     |
+| ---------- | --------------------------------------------- | --------------- |
+| `title`    | string                                        | Section title   |
+| `projects` | array<{name, subtitle, tech[], highlights[]}> | Project list    |
+| `citation` | string                                        | Source citation |
 
 **Default content:**
 
@@ -2031,8 +2031,7 @@ profile-projects:
   title: 'Projects'
   projects:
     - name: 'Design System'
-      description:
-        'A comprehensive component library used across 5 product teams.'
+      subtitle: 'A comprehensive component library used across 5 product teams.'
       tech:
         - 'React'
         - 'TypeScript'
@@ -2042,7 +2041,7 @@ profile-projects:
         - '95% test coverage'
         - 'Used by 40+ engineers'
     - name: 'Analytics Dashboard'
-      description: 'Real-time analytics platform for tracking user behaviour.'
+      subtitle: 'Real-time analytics platform for tracking user behaviour.'
       tech:
         - 'Next.js'
         - 'D3.js'
@@ -2164,13 +2163,13 @@ haiku:
 
 #### 62. Minimal
 
-**Description:** Clean serif headline with body text and bottom image
+**Description:** Clean serif title with body text and bottom image
 
 **Fields:**
 
 | Key        | Type   | Description     |
 | ---------- | ------ | --------------- |
-| `headline` | string | Main title      |
+| `title`    | string | Main title      |
 | `text`     | string | Body paragraph  |
 | `imageUrl` | string | URL to an image |
 | `citation` | string | Source citation |
@@ -2179,7 +2178,7 @@ haiku:
 
 ```yaml
 minimal:
-  headline: 'The Art of Focus'
+  title: 'The Art of Focus'
   text:
     'In a world of constant distraction, the ability to concentrate on what
     truly matters has become a superpower.'
@@ -2222,7 +2221,7 @@ pull-quote:
 
 | Key        | Type   | Description                |
 | ---------- | ------ | -------------------------- |
-| `headline` | string | Main title                 |
+| `title`    | string | Main title                 |
 | `rating`   | number | Rating value 1-5           |
 | `scaleMax` | number | Maximum rating (default 5) |
 | `label`    | string | Rating label               |
@@ -2233,7 +2232,7 @@ pull-quote:
 
 ```yaml
 rating-scale:
-  headline: 'Customer Rating'
+  title: 'Customer Rating'
   rating: 4
   scaleMax: 5
   label: 'Excellent'
@@ -2251,7 +2250,7 @@ rating-scale:
 
 | Key        | Type   | Description        |
 | ---------- | ------ | ------------------ |
-| `headline` | string | Main title         |
+| `title`    | string | Main title         |
 | `text`     | string | Key insight text   |
 | `source`   | string | Attribution source |
 | `citation` | string | Source citation    |
@@ -2260,7 +2259,7 @@ rating-scale:
 
 ```yaml
 takeaway:
-  headline: 'Attention is the New Currency'
+  title: 'Attention is the New Currency'
   text:
     'In an information-rich world, the scarcest resource is not information but
     attention.'
@@ -2272,14 +2271,14 @@ takeaway:
 
 #### 66. Tip Card
 
-**Description:** Large number, headline, and body text
+**Description:** Large number, title, and body text
 
 **Fields:**
 
 | Key        | Type   | Description              |
 | ---------- | ------ | ------------------------ |
 | `number`   | string | Display number (e.g. 01) |
-| `headline` | string | Main title               |
+| `title`    | string | Main title               |
 | `text`     | string | Body paragraph           |
 | `citation` | string | Source citation          |
 
@@ -2288,7 +2287,7 @@ takeaway:
 ```yaml
 tip-card:
   number: '01'
-  headline: 'Start Small'
+  title: 'Start Small'
   text:
     'Break your goals into tiny, manageable steps. Consistency beats intensity
     every time.'
@@ -2301,13 +2300,13 @@ tip-card:
 
 #### 67. Gradient Text
 
-**Description:** Large gradient headline text
+**Description:** Large gradient title text
 
 **Fields:**
 
 | Key        | Type   | Description     |
 | ---------- | ------ | --------------- |
-| `headline` | string | Main headline   |
+| `title`    | string | Main title      |
 | `text`     | string | Supporting text |
 | `citation` | string | Source citation |
 
@@ -2315,7 +2314,7 @@ tip-card:
 
 ```yaml
 gradient-text:
-  headline: 'Create'
+  title: 'Create'
   text: 'Beautiful designs that inspire and motivate people every day.'
   citation: ''
 ```
@@ -2324,13 +2323,13 @@ gradient-text:
 
 #### 68. Highlighted Title
 
-**Description:** Big headline where specific words are wrapped in accent color
+**Description:** Big title where specific words are wrapped in accent color
 
 **Fields:**
 
 | Key          | Type     | Description                        |
 | ------------ | -------- | ---------------------------------- |
-| `headline`   | string   | Full headline text                 |
+| `title`      | string   | Full title text                    |
 | `highlights` | string[] | Words to highlight in accent color |
 | `text`       | string   | Subtitle text                      |
 | `citation`   | string   | Source citation                    |
@@ -2339,7 +2338,7 @@ gradient-text:
 
 ```yaml
 highlighted-title:
-  headline: 'The Future is NOW'
+  title: 'The Future is NOW'
   highlights:
     - 'NOW'
   text: ''
@@ -2357,7 +2356,7 @@ highlighted-title:
 | Key        | Type   | Description             |
 | ---------- | ------ | ----------------------- |
 | `icon`     | string | Emoji or icon character |
-| `headline` | string | Main text               |
+| `title`    | string | Main text               |
 | `text`     | string | Description text        |
 | `citation` | string | Source citation         |
 
@@ -2366,7 +2365,7 @@ highlighted-title:
 ```yaml
 icon-text:
   icon: '🚀'
-  headline: 'Ship Faster'
+  title: 'Ship Faster'
   text: ''
   citation: ''
 ```
@@ -2467,13 +2466,13 @@ word-stack:
 
 **Fields:**
 
-| Key        | Type   | Description                          |
-| ---------- | ------ | ------------------------------------ |
-| `title`    | string | Title                                |
-| `subject`  | string | Subject area                         |
-| `notes`    | array  | Array of {area, description} objects |
-| `tip`      | string | Study tip                            |
-| `citation` | string | Source citation                      |
+| Key        | Type   | Description                       |
+| ---------- | ------ | --------------------------------- |
+| `title`    | string | Title                             |
+| `subject`  | string | Subject area                      |
+| `notes`    | array  | Array of {area, subtitle} objects |
+| `tip`      | string | Study tip                         |
+| `citation` | string | Source citation                   |
 
 **Default content:**
 
@@ -2483,11 +2482,11 @@ anatomy-study:
   subject: 'Human Figure'
   notes:
     - area: 'Skeletal'
-      description: 'Bone structure and joints'
+      subtitle: 'Bone structure and joints'
     - area: 'Muscular'
-      description: 'Muscle groups and tension'
+      subtitle: 'Muscle groups and tension'
     - area: 'Proportions'
-      description: 'Head-to-body ratios'
+      subtitle: 'Head-to-body ratios'
   tip: 'Practice gesture drawing for 5 minutes daily'
   citation: ''
 ```
@@ -2534,20 +2533,20 @@ art-history:
 
 **Fields:**
 
-| Key           | Type   | Description                        |
-| ------------- | ------ | ---------------------------------- |
-| `title`       | string | Title                              |
-| `description` | string | Description                        |
-| `colors`      | array  | Array of {name, hex, role} objects |
-| `tip`         | string | Tip text                           |
-| `citation`    | string | Source citation                    |
+| Key        | Type   | Description                        |
+| ---------- | ------ | ---------------------------------- |
+| `title`    | string | Title                              |
+| `subtitle` | string | Description                        |
+| `colors`   | array  | Array of {name, hex, role} objects |
+| `tip`      | string | Tip text                           |
+| `citation` | string | Source citation                    |
 
 **Default content:**
 
 ```yaml
 color-wheel:
   title: 'Color Theory'
-  description: 'Understanding the relationships between colors'
+  subtitle: 'Understanding the relationships between colors'
   colors:
     - name: 'Primary'
       hex: '#ef4444'
@@ -2576,20 +2575,20 @@ color-wheel:
 
 **Fields:**
 
-| Key           | Type   | Description                  |
-| ------------- | ------ | ---------------------------- |
-| `title`       | string | Title                        |
-| `description` | string | Description                  |
-| `palette`     | array  | Array of {name, hex} objects |
-| `mood`        | string | Mood tag                     |
-| `citation`    | string | Source citation              |
+| Key        | Type   | Description                  |
+| ---------- | ------ | ---------------------------- |
+| `title`    | string | Title                        |
+| `subtitle` | string | Description                  |
+| `palette`  | array  | Array of {name, hex} objects |
+| `mood`     | string | Mood tag                     |
+| `citation` | string | Source citation              |
 
 **Default content:**
 
 ```yaml
 palette-inspiration:
   title: 'Palette Inspiration'
-  description: 'A warm and inviting color palette'
+  subtitle: 'A warm and inviting color palette'
   palette:
     - name: 'Sunset'
       hex: '#f97316'
@@ -2613,11 +2612,11 @@ palette-inspiration:
 
 **Fields:**
 
-| Key        | Type   | Description                                                |
-| ---------- | ------ | ---------------------------------------------------------- |
-| `title`    | string | Title                                                      |
-| `styles`   | array  | Array of {name, era, description, characteristics} objects |
-| `citation` | string | Source citation                                            |
+| Key        | Type   | Description                                             |
+| ---------- | ------ | ------------------------------------------------------- |
+| `title`    | string | Title                                                   |
+| `styles`   | array  | Array of {name, era, subtitle, characteristics} objects |
+| `citation` | string | Source citation                                         |
 
 **Default content:**
 
@@ -2627,11 +2626,11 @@ style-guide:
   styles:
     - name: 'Impressionism'
       era: '1860s'
-      description: 'Light and movement'
+      subtitle: 'Light and movement'
       characteristics: 'Visible brushstrokes, open composition'
     - name: 'Cubism'
       era: '1907'
-      description: 'Geometric forms'
+      subtitle: 'Geometric forms'
       characteristics: 'Fragmented objects, multiple viewpoints'
   citation: ''
 ```
@@ -2644,14 +2643,14 @@ style-guide:
 
 **Fields:**
 
-| Key          | Type   | Description                          |
-| ------------ | ------ | ------------------------------------ |
-| `title`      | string | Title                                |
-| `technique`  | string | Technique name                       |
-| `difficulty` | string | Difficulty level                     |
-| `steps`      | array  | Array of {step, description} objects |
-| `tip`        | string | Pro tip                              |
-| `citation`   | string | Source citation                      |
+| Key          | Type   | Description                       |
+| ------------ | ------ | --------------------------------- |
+| `title`      | string | Title                             |
+| `technique`  | string | Technique name                    |
+| `difficulty` | string | Difficulty level                  |
+| `steps`      | array  | Array of {step, subtitle} objects |
+| `tip`        | string | Pro tip                           |
+| `citation`   | string | Source citation                   |
 
 **Default content:**
 
@@ -2662,11 +2661,11 @@ technique-tutorial:
   difficulty: 'Beginner'
   steps:
     - step: 'Prep'
-      description: 'Wet the paper evenly'
+      subtitle: 'Wet the paper evenly'
     - step: 'Base'
-      description: 'Apply light washes'
+      subtitle: 'Apply light washes'
     - step: 'Detail'
-      description: 'Add concentrated pigment'
+      subtitle: 'Add concentrated pigment'
   tip: 'Work quickly while the paper is still wet'
   citation: ''
 ```
@@ -2746,14 +2745,14 @@ interview-prep:
 
 **Fields:**
 
-| Key           | Type   | Description            |
-| ------------- | ------ | ---------------------- |
-| `title`       | string | Title                  |
-| `tip`         | string | Main tip               |
-| `description` | string | Description            |
-| `doList`      | array  | Array of do strings    |
-| `dontList`    | array  | Array of don't strings |
-| `citation`    | string | Source citation        |
+| Key        | Type   | Description            |
+| ---------- | ------ | ---------------------- |
+| `title`    | string | Title                  |
+| `tip`      | string | Main tip               |
+| `subtitle` | string | Description            |
+| `doList`   | array  | Array of do strings    |
+| `dontList` | array  | Array of don't strings |
+| `citation` | string | Source citation        |
 
 **Default content:**
 
@@ -2761,7 +2760,7 @@ interview-prep:
 networking-tip:
   title: 'Networking Tip'
   tip: 'Give before you ask'
-  description:
+  subtitle:
     'The best networking relationships are built on genuine value exchange.'
   doList:
     - 'Follow up within 24 hours'
@@ -2782,14 +2781,14 @@ networking-tip:
 
 **Fields:**
 
-| Key           | Type   | Description              |
-| ------------- | ------ | ------------------------ |
-| `title`       | string | Title                    |
-| `tip`         | string | Main tip                 |
-| `category`    | string | Category                 |
-| `description` | string | Description              |
-| `examples`    | array  | Array of example strings |
-| `citation`    | string | Source citation          |
+| Key        | Type   | Description              |
+| ---------- | ------ | ------------------------ |
+| `title`    | string | Title                    |
+| `tip`      | string | Main tip                 |
+| `category` | string | Category                 |
+| `subtitle` | string | Description              |
+| `examples` | array  | Array of example strings |
+| `citation` | string | Source citation          |
 
 **Default content:**
 
@@ -2798,7 +2797,7 @@ resume-tip:
   title: 'Resume Tip'
   tip: 'Start each bullet with a strong action verb'
   category: 'Formatting'
-  description:
+  subtitle:
     'Action verbs make your resume more impactful and help ATS systems parse
     your experience.'
   examples:
@@ -2852,12 +2851,12 @@ salary-guide:
 
 **Fields:**
 
-| Key        | Type   | Description                                     |
-| ---------- | ------ | ----------------------------------------------- |
-| `title`    | string | Title                                           |
-| `skill`    | string | Skill name                                      |
-| `levels`   | array  | Array of {level, description, duration} objects |
-| `citation` | string | Source citation                                 |
+| Key        | Type   | Description                                  |
+| ---------- | ------ | -------------------------------------------- |
+| `title`    | string | Title                                        |
+| `skill`    | string | Skill name                                   |
+| `levels`   | array  | Array of {level, subtitle, duration} objects |
+| `citation` | string | Source citation                              |
 
 **Default content:**
 
@@ -2867,13 +2866,13 @@ skill-roadmap:
   skill: 'React Development'
   levels:
     - level: 'Beginner'
-      description: 'Components, JSX, props, state'
+      subtitle: 'Components, JSX, props, state'
       duration: '2-4 weeks'
     - level: 'Intermediate'
-      description: 'Hooks, context, routing'
+      subtitle: 'Hooks, context, routing'
       duration: '1-2 months'
     - level: 'Advanced'
-      description: 'Performance, patterns, testing'
+      subtitle: 'Performance, patterns, testing'
       duration: '3-6 months'
   citation: ''
 ```
@@ -2892,7 +2891,7 @@ skill-roadmap:
 | -------------- | ------ | ---------------- |
 | `title`        | string | Achievement name |
 | `game`         | string | Game title       |
-| `description`  | string | Description      |
+| `subtitle`     | string | Description      |
 | `rarity`       | string | Rarity level     |
 | `dateUnlocked` | string | Date unlocked    |
 | `citation`     | string | Source citation  |
@@ -2903,7 +2902,7 @@ skill-roadmap:
 achievement-unlocked:
   title: 'Platinum Trophy'
   game: 'Ghost of Tsushima'
-  description: 'Collect all trophies'
+  subtitle: 'Collect all trophies'
   rarity: 'Ultra Rare'
   dateUnlocked: 'Mar 15, 2026'
   citation: ''
@@ -2953,13 +2952,13 @@ game-review:
 
 **Fields:**
 
-| Key           | Type   | Description                                    |
-| ------------- | ------ | ---------------------------------------------- |
-| `title`       | string | Title                                          |
-| `game`        | string | Game                                           |
-| `description` | string | Description                                    |
-| `settings`    | array  | Array of {name, value, recommendation} objects |
-| `citation`    | string | Source citation                                |
+| Key        | Type   | Description                                    |
+| ---------- | ------ | ---------------------------------------------- |
+| `title`    | string | Title                                          |
+| `game`     | string | Game                                           |
+| `subtitle` | string | Description                                    |
+| `settings` | array  | Array of {name, value, recommendation} objects |
+| `citation` | string | Source citation                                |
 
 **Default content:**
 
@@ -2967,7 +2966,7 @@ game-review:
 settings-guide:
   title: 'Optimal Settings'
   game: 'Valorant'
-  description: 'Best settings for competitive play'
+  subtitle: 'Best settings for competitive play'
   settings:
     - name: 'Resolution'
       value: '2560x1440'
@@ -2989,20 +2988,20 @@ settings-guide:
 
 **Fields:**
 
-| Key           | Type   | Description                   |
-| ------------- | ------ | ----------------------------- |
-| `title`       | string | Title                         |
-| `description` | string | Description                   |
-| `components`  | array  | Array of {name, spec} objects |
-| `totalCost`   | string | Total cost                    |
-| `citation`    | string | Source citation               |
+| Key          | Type   | Description                   |
+| ------------ | ------ | ----------------------------- |
+| `title`      | string | Title                         |
+| `subtitle`   | string | Description                   |
+| `components` | array  | Array of {name, spec} objects |
+| `totalCost`  | string | Total cost                    |
+| `citation`   | string | Source citation               |
 
 **Default content:**
 
 ```yaml
 setup-tour:
   title: 'My Gaming Setup'
-  description: 'The ultimate gaming station'
+  subtitle: 'The ultimate gaming station'
   components:
     - name: 'Monitor'
       spec: '27" 4K 144Hz'
@@ -3199,14 +3198,14 @@ gear-review:
 
 **Fields:**
 
-| Key           | Type   | Description              |
-| ------------- | ------ | ------------------------ |
-| `title`       | string | Title                    |
-| `concept`     | string | Concept name             |
-| `description` | string | Description              |
-| `examples`    | array  | Array of example strings |
-| `tip`         | string | Learning tip             |
-| `citation`    | string | Source citation          |
+| Key        | Type   | Description              |
+| ---------- | ------ | ------------------------ |
+| `title`    | string | Title                    |
+| `concept`  | string | Concept name             |
+| `subtitle` | string | Description              |
+| `examples` | array  | Array of example strings |
+| `tip`      | string | Learning tip             |
+| `citation` | string | Source citation          |
 
 **Default content:**
 
@@ -3214,7 +3213,7 @@ gear-review:
 music-theory:
   title: 'Music Theory'
   concept: 'Chord Progressions'
-  description:
+  subtitle:
     'The I-IV-V-I progression is the foundation of Western music and used in
     countless songs.'
   examples:
@@ -3236,7 +3235,7 @@ music-theory:
 | Key             | Type   | Description                                       |
 | --------------- | ------ | ------------------------------------------------- |
 | `title`         | string | Playlist title                                    |
-| `description`   | string | Description                                       |
+| `subtitle`      | string | Description                                       |
 | `tracks`        | array  | Array of {number, name, artist, duration} objects |
 | `totalDuration` | string | Total duration                                    |
 | `citation`      | string | Source citation                                   |
@@ -3246,7 +3245,7 @@ music-theory:
 ```yaml
 playlist:
   title: 'Focus Flow'
-  description: 'Deep concentration tracks'
+  subtitle: 'Deep concentration tracks'
   tracks:
     - number: '1'
       name: 'Weightless'
@@ -3485,15 +3484,15 @@ song-lyric:
 
 **Fields:**
 
-| Key           | Type   | Description            |
-| ------------- | ------ | ---------------------- |
-| `name`        | string | Character name         |
-| `role`        | string | Role                   |
-| `description` | string | Description            |
-| `traits`      | array  | Array of trait strings |
-| `motivation`  | string | Motivation             |
-| `flaw`        | string | Fatal flaw             |
-| `citation`    | string | Source citation        |
+| Key          | Type   | Description            |
+| ------------ | ------ | ---------------------- |
+| `name`       | string | Character name         |
+| `role`       | string | Role                   |
+| `subtitle`   | string | Description            |
+| `traits`     | array  | Array of trait strings |
+| `motivation` | string | Motivation             |
+| `flaw`       | string | Fatal flaw             |
+| `citation`   | string | Source citation        |
 
 **Default content:**
 
@@ -3501,7 +3500,7 @@ song-lyric:
 character-sheet:
   name: 'Elena Voss'
   role: 'Protagonist'
-  description: 'A determined journalist uncovering a conspiracy.'
+  subtitle: 'A determined journalist uncovering a conspiracy.'
   traits:
     - 'Brave'
     - 'Curious'
@@ -3519,19 +3518,19 @@ character-sheet:
 
 **Fields:**
 
-| Key           | Type   | Description                    |
-| ------------- | ------ | ------------------------------ |
-| `title`       | string | Title                          |
-| `description` | string | Description                    |
-| `categories`  | array  | Array of {name, items} objects |
-| `citation`    | string | Source citation                |
+| Key          | Type   | Description                    |
+| ------------ | ------ | ------------------------------ |
+| `title`      | string | Title                          |
+| `subtitle`   | string | Description                    |
+| `categories` | array  | Array of {name, items} objects |
+| `citation`   | string | Source citation                |
 
 **Default content:**
 
 ```yaml
 editing-checklist:
   title: "Editing Checklist"
-  description: "A comprehensive checklist for self-editing."
+  subtitle: "A comprehensive checklist for self-editing."
   categories:
     - name: "Structure"
       items: "["Clear thesis""
@@ -3548,15 +3547,15 @@ editing-checklist:
 
 **Fields:**
 
-| Key           | Type   | Description              |
-| ------------- | ------ | ------------------------ |
-| `title`       | string | Title                    |
-| `genre`       | string | Genre                    |
-| `description` | string | Description              |
-| `elements`    | array  | Array of element strings |
-| `examples`    | array  | Array of example strings |
-| `tip`         | string | Writing tip              |
-| `citation`    | string | Source citation          |
+| Key        | Type   | Description              |
+| ---------- | ------ | ------------------------ |
+| `title`    | string | Title                    |
+| `genre`    | string | Genre                    |
+| `subtitle` | string | Description              |
+| `elements` | array  | Array of element strings |
+| `examples` | array  | Array of example strings |
+| `tip`      | string | Writing tip              |
+| `citation` | string | Source citation          |
 
 **Default content:**
 
@@ -3564,7 +3563,7 @@ editing-checklist:
 genre-guide:
   title: 'Genre Guide'
   genre: 'Mystery'
-  description: 'A genre focused on solving a crime or puzzle.'
+  subtitle: 'A genre focused on solving a crime or puzzle.'
   elements:
     - 'Clues'
     - 'Red herrings'
@@ -3584,13 +3583,13 @@ genre-guide:
 
 **Fields:**
 
-| Key           | Type   | Description                          |
-| ------------- | ------ | ------------------------------------ |
-| `title`       | string | Title                                |
-| `structure`   | string | Structure type                       |
-| `description` | string | Description                          |
-| `elements`    | array  | Array of {name, description} objects |
-| `citation`    | string | Source citation                      |
+| Key         | Type   | Description                       |
+| ----------- | ------ | --------------------------------- |
+| `title`     | string | Title                             |
+| `structure` | string | Structure type                    |
+| `subtitle`  | string | Description                       |
+| `elements`  | array  | Array of {name, subtitle} objects |
+| `citation`  | string | Source citation                   |
 
 **Default content:**
 
@@ -3598,14 +3597,14 @@ genre-guide:
 story-structure:
   title: 'Story Structure'
   structure: 'Three-Act Structure'
-  description: 'The most common narrative framework used in storytelling.'
+  subtitle: 'The most common narrative framework used in storytelling.'
   elements:
     - name: 'Setup'
-      description: 'Introduce characters and world'
+      subtitle: 'Introduce characters and world'
     - name: 'Confrontation'
-      description: 'Rising conflict and stakes'
+      subtitle: 'Rising conflict and stakes'
     - name: 'Resolution'
-      description: 'Climax and resolution'
+      subtitle: 'Climax and resolution'
   citation: ''
 ```
 
@@ -3617,14 +3616,14 @@ story-structure:
 
 **Fields:**
 
-| Key           | Type   | Description                     |
-| ------------- | ------ | ------------------------------- |
-| `title`       | string | Title                           |
-| `worldName`   | string | World name                      |
-| `description` | string | Description                     |
-| `aspects`     | array  | Array of {name, detail} objects |
-| `rules`       | array  | Array of rule strings           |
-| `citation`    | string | Source citation                 |
+| Key         | Type   | Description                     |
+| ----------- | ------ | ------------------------------- |
+| `title`     | string | Title                           |
+| `worldName` | string | World name                      |
+| `subtitle`  | string | Description                     |
+| `aspects`   | array  | Array of {name, detail} objects |
+| `rules`     | array  | Array of rule strings           |
+| `citation`  | string | Source citation                 |
 
 **Default content:**
 
@@ -3632,7 +3631,7 @@ story-structure:
 world-building:
   title: 'World Building'
   worldName: 'New World'
-  description: 'A fantasy realm with ancient magic and political intrigue.'
+  subtitle: 'A fantasy realm with ancient magic and political intrigue.'
   aspects:
     - name: 'Geography'
       detail: 'Diverse landscapes and climates'
@@ -3689,24 +3688,24 @@ writing-prompt:
 
 **Fields:**
 
-| Key        | Type   | Description                           |
-| ---------- | ------ | ------------------------------------- |
-| `headline` | string | Showcase title                        |
-| `ratios`   | array  | Array of {label, description} objects |
-| `citation` | string | Source citation                       |
+| Key        | Type   | Description                        |
+| ---------- | ------ | ---------------------------------- |
+| `title`    | string | Showcase title                     |
+| `ratios`   | array  | Array of {label, subtitle} objects |
+| `citation` | string | Source citation                    |
 
 **Default content:**
 
 ```yaml
 aspect-ratio:
-  headline: 'Common Ratios'
+  title: 'Common Ratios'
   ratios:
     - label: '1:1'
-      description: 'Instagram Feed'
+      subtitle: 'Instagram Feed'
     - label: '4:5'
-      description: 'Instagram Portrait'
+      subtitle: 'Instagram Portrait'
     - label: '16:9'
-      description: 'YouTube Thumbnail'
+      subtitle: 'YouTube Thumbnail'
   citation: ''
 ```
 
@@ -3782,7 +3781,7 @@ references:
 
 | Key        | Type   | Description                   |
 | ---------- | ------ | ----------------------------- |
-| `headline` | string | Chart title                   |
+| `title`    | string | Chart title                   |
 | `segments` | array  | Array of {label, pct} objects |
 | `citation` | string | Source citation               |
 
@@ -3790,7 +3789,7 @@ references:
 
 ```yaml
 donut-chart:
-  headline: 'Market Share'
+  title: 'Market Share'
   segments:
     - label: 'Chrome'
       pct: '65'
@@ -3840,7 +3839,7 @@ notification:
 
 | Key        | Type   | Description                     |
 | ---------- | ------ | ------------------------------- |
-| `headline` | string | Grid title                      |
+| `title`    | string | Grid title                      |
 | `services` | array  | Array of {name, status} objects |
 | `citation` | string | Source citation                 |
 
@@ -3848,7 +3847,7 @@ notification:
 
 ```yaml
 status-grid:
-  headline: 'System Status'
+  title: 'System Status'
   services:
     - name: 'API'
       status: 'Operational'
@@ -4081,7 +4080,7 @@ scatter-chart:
 
 | Key        | Type   | Description           |
 | ---------- | ------ | --------------------- |
-| `headline` | string | Main title            |
+| `title`    | string | Main title            |
 | `before`   | object | {label, text}         |
 | `after`    | object | {label, text}         |
 | `imageUrl` | string | Optional shared image |
@@ -4091,7 +4090,7 @@ scatter-chart:
 
 ```yaml
 comparison:
-  headline: 'Before vs After'
+  title: 'Before vs After'
   before:
     label: 'Before'
     text: 'Manual process took 4 hours per report with frequent errors.'
@@ -4112,7 +4111,7 @@ comparison:
 
 | Key        | Type                  | Description               |
 | ---------- | --------------------- | ------------------------- |
-| `headline` | string                | Table title               |
+| `title`    | string                | Table title               |
 | `features` | string[]              | Feature names             |
 | `plans`    | array<{name, values}> | Plans with feature values |
 | `citation` | string                | Source citation           |
@@ -4121,7 +4120,7 @@ comparison:
 
 ```yaml
 feature-table:
-  headline: 'Compare Plans'
+  title: 'Compare Plans'
   features:
     - 'Unlimited projects'
     - 'Priority support'
@@ -4148,7 +4147,7 @@ feature-table:
 
 | Key        | Type   | Description       |
 | ---------- | ------ | ----------------- |
-| `headline` | string | Main title        |
+| `title`    | string | Main title        |
 | `myth`     | string | The misconception |
 | `fact`     | string | The truth         |
 | `citation` | string | Source citation   |
@@ -4157,7 +4156,7 @@ feature-table:
 
 ```yaml
 myth-vs-fact:
-  headline: 'Common Misconceptions'
+  title: 'Common Misconceptions'
   myth: 'Eating at night causes weight gain by itself.'
   fact: 'Total calorie intake matters most, not the time of day you eat.'
   citation: ''
@@ -4173,7 +4172,7 @@ myth-vs-fact:
 
 | Key        | Type   | Description          |
 | ---------- | ------ | -------------------- |
-| `headline` | string | Main title           |
+| `title`    | string | Main title           |
 | `pros`     | array  | Array of pro strings |
 | `cons`     | array  | Array of con strings |
 | `citation` | string | Source citation      |
@@ -4182,7 +4181,7 @@ myth-vs-fact:
 
 ```yaml
 proscons:
-  headline: 'Pros & Cons'
+  title: 'Pros & Cons'
   pros:
     - 'Fast setup'
     - 'Low cost'
@@ -4197,13 +4196,13 @@ proscons:
 
 #### 125. Split Screen
 
-**Description:** Image left, headline and text right
+**Description:** Image left, title and text right
 
 **Fields:**
 
 | Key        | Type   | Description     |
 | ---------- | ------ | --------------- |
-| `headline` | string | Main title      |
+| `title`    | string | Main title      |
 | `text`     | string | Body paragraph  |
 | `imageUrl` | string | URL to an image |
 | `citation` | string | Source citation |
@@ -4212,7 +4211,7 @@ proscons:
 
 ```yaml
 split-screen:
-  headline: 'Less is More'
+  title: 'Less is More'
   text:
     'Simplicity is the ultimate sophistication. Every element must earn its
     place through purpose.'
@@ -4230,7 +4229,7 @@ split-screen:
 
 | Key        | Type   | Description             |
 | ---------- | ------ | ----------------------- |
-| `headline` | string | Main title              |
+| `title`    | string | Main title              |
 | `optionA`  | object | {label, desc}           |
 | `optionB`  | object | {label, desc}           |
 | `features` | array  | Array of {a, b} objects |
@@ -4240,7 +4239,7 @@ split-screen:
 
 ```yaml
 versus:
-  headline: 'Versus'
+  title: 'Versus'
   optionA:
     label: 'Free'
     desc: ''
@@ -4270,7 +4269,7 @@ versus:
 | Key        | Type   | Description                |
 | ---------- | ------ | -------------------------- |
 | `stat`     | string | Large statistic (e.g. 84%) |
-| `headline` | string | Main title                 |
+| `title`    | string | Main title                 |
 | `text`     | string | Supporting paragraph       |
 | `imageUrl` | string | Optional background image  |
 | `citation` | string | Source citation            |
@@ -4280,7 +4279,7 @@ versus:
 ```yaml
 data-stats:
   stat: '84%'
-  headline: 'User Satisfaction'
+  title: 'User Satisfaction'
   text:
     'Based on survey responses from over 10,000 active users across 50
     countries.'
@@ -4298,7 +4297,7 @@ data-stats:
 
 | Key        | Type   | Description                    |
 | ---------- | ------ | ------------------------------ |
-| `headline` | string | Main title                     |
+| `title`    | string | Main title                     |
 | `features` | array  | Array of {label, desc} objects |
 | `citation` | string | Source citation                |
 
@@ -4306,7 +4305,7 @@ data-stats:
 
 ```yaml
 feature-grid:
-  headline: 'Why Choose Us'
+  title: 'Why Choose Us'
   features:
     - label: 'Fast'
       desc: 'Optimized for speed and performance'
@@ -4329,7 +4328,7 @@ feature-grid:
 
 | Key        | Type   | Description                   |
 | ---------- | ------ | ----------------------------- |
-| `headline` | string | Main title                    |
+| `title`    | string | Main title                    |
 | `items`    | array  | Array of {label, pct} objects |
 | `citation` | string | Source citation               |
 
@@ -4337,7 +4336,7 @@ feature-grid:
 
 ```yaml
 progress-list:
-  headline: 'Progress'
+  title: 'Progress'
   items:
     - label: 'Design'
       pct: '90'
@@ -4395,8 +4394,8 @@ sparkline:
 
 | Key        | Type   | Description                     |
 | ---------- | ------ | ------------------------------- |
-| `headline` | string | Main title                      |
-| `text`     | string | Description text under headline |
+| `title`    | string | Main title                      |
+| `text`     | string | Description text under title    |
 | `stats`    | array  | Array of {value, label} objects |
 | `citation` | string | Source citation                 |
 
@@ -4404,7 +4403,7 @@ sparkline:
 
 ```yaml
 stat-row:
-  headline: 'By the Numbers'
+  title: 'By the Numbers'
   text: ''
   stats:
     - value: '10K+'
@@ -4750,7 +4749,7 @@ model-comparison:
 | ----------------- | ------------------------- | ------------------------------------ |
 | `method`          | string                    | HTTP method (GET, POST, PUT, DELETE) |
 | `path`            | string                    | Endpoint path                        |
-| `description`     | string                    | Endpoint description                 |
+| `subtitle`        | string                    | Endpoint subtitle                    |
 | `params`          | array<{name, type, desc}> | Request parameters                   |
 | `responseExample` | string                    | Example response body                |
 | `citation`        | string                    | Source citation                      |
@@ -4761,14 +4760,14 @@ model-comparison:
 api-endpoint:
   method: 'GET'
   path: '/api/v1/users/:id'
-  description: 'Retrieve a user by their unique identifier'
+  subtitle: 'Retrieve a user by their unique identifier'
   params:
     - name: 'id'
       type: 'string'
-      description: 'User ID (path param)'
+      subtitle: 'User ID (path param)'
     - name: 'fields'
       type: 'string'
-      description: 'Comma-separated fields to include'
+      subtitle: 'Comma-separated fields to include'
   responseExample:
     "{\n  \"id\": \"usr_abc123\",\n  \"name\": \"Jane Doe\",\n  \"email\":
     \"jane@example.com\"\n}"
@@ -4825,13 +4824,13 @@ architecture-diagram:
 
 **Fields:**
 
-| Key        | Type                       | Description                                  |
-| ---------- | -------------------------- | -------------------------------------------- |
-| `title`    | string                     | Project name                                 |
-| `version`  | string                     | Version number                               |
-| `date`     | string                     | Release date                                 |
-| `changes`  | array<{type, description}> | Change entries (added/fixed/changed/removed) |
-| `citation` | string                     | Source citation                              |
+| Key        | Type                    | Description                                  |
+| ---------- | ----------------------- | -------------------------------------------- |
+| `title`    | string                  | Project name                                 |
+| `version`  | string                  | Version number                               |
+| `date`     | string                  | Release date                                 |
+| `changes`  | array<{type, subtitle}> | Change entries (added/fixed/changed/removed) |
+| `citation` | string                  | Source citation                              |
 
 **Default content:**
 
@@ -4842,15 +4841,15 @@ changelog:
   date: 'March 15, 2025'
   changes:
     - type: 'added'
-      description: 'Dark mode support'
+      subtitle: 'Dark mode support'
     - type: 'added'
-      description: 'Export to PDF feature'
+      subtitle: 'Export to PDF feature'
     - type: 'fixed'
-      description: 'Login timeout issue'
+      subtitle: 'Login timeout issue'
     - type: 'changed'
-      description: 'Updated navigation layout'
+      subtitle: 'Updated navigation layout'
     - type: 'removed'
-      description: 'Deprecated legacy API endpoints'
+      subtitle: 'Deprecated legacy API endpoints'
   citation: ''
 ```
 
@@ -5053,7 +5052,7 @@ event-timer:
 | Key        | Type   | Description      |
 | ---------- | ------ | ---------------- |
 | `title`    | string | Section title    |
-| `goal`     | string | Goal description |
+| `goal`     | string | Goal subtitle    |
 | `current`  | number | Current value    |
 | `target`   | number | Target value     |
 | `unit`     | string | Unit suffix      |
@@ -5138,7 +5137,7 @@ milestone:
 | Key        | Type   | Description        |
 | ---------- | ------ | ------------------ |
 | `title`    | string | Section title      |
-| `task`     | string | Task description   |
+| `task`     | string | Task subtitle      |
 | `record`   | string | Best time          |
 | `attempts` | string | Number of attempts |
 | `text`     | string | Description text   |
@@ -5166,14 +5165,14 @@ speed-run:
 
 **Fields:**
 
-| Key           | Type   | Description            |
-| ------------- | ------ | ---------------------- |
-| `url`         | string | Website URL            |
-| `pageTitle`   | string | Browser tab title      |
-| `headline`    | string | Page headline          |
-| `description` | string | Description text       |
-| `image`       | string | 16:9 content image URL |
-| `citation`    | string | Source citation        |
+| Key         | Type   | Description            |
+| ----------- | ------ | ---------------------- |
+| `url`       | string | Website URL            |
+| `pageTitle` | string | Browser tab title      |
+| `title`     | string | Page title             |
+| `subtitle`  | string | Description text       |
+| `image`     | string | 16:9 content image URL |
+| `citation`  | string | Source citation        |
 
 **Default content:**
 
@@ -5181,8 +5180,8 @@ speed-run:
 browser:
   url: 'example.com'
   pageTitle: 'Welcome'
-  headline: 'Your Site'
-  description: 'A modern web experience for everyone'
+  title: 'Your Site'
+  subtitle: 'A modern web experience for everyone'
   image: ''
   citation: ''
 ```
@@ -5195,19 +5194,19 @@ browser:
 
 **Fields:**
 
-| Key           | Type   | Description                                    |
-| ------------- | ------ | ---------------------------------------------- |
-| `headline`    | string | Project headline                               |
-| `description` | string | Description text                               |
-| `tree`        | string | Indented file/folder tree (2 spaces per depth) |
-| `citation`    | string | Source citation                                |
+| Key        | Type   | Description                                    |
+| ---------- | ------ | ---------------------------------------------- |
+| `title`    | string | Project title                                  |
+| `subtitle` | string | Description text                               |
+| `tree`     | string | Indented file/folder tree (2 spaces per depth) |
+| `citation` | string | Source citation                                |
 
 **Default content:**
 
 ```yaml
 desktop:
-  headline: 'Project Structure'
-  description: 'Well-organised codebase with clear separation of concerns.'
+  title: 'Project Structure'
+  subtitle: 'Well-organised codebase with clear separation of concerns.'
   tree:
     "src/\n  components/\n    Button.tsx\n    Header.tsx\n  hooks/\n    useAuth.ts\n  utils/\n    api.ts\n  App.tsx\n  index.ts\npackage.json\ntsconfig.json"
   citation: ''
@@ -5215,26 +5214,26 @@ desktop:
 
 ---
 
-#### 153. Code
+#### 153. Laptop
 
 **Description:** Code snippet card with syntax block and line numbers
 
 **Fields:**
 
-| Key           | Type   | Description                |
-| ------------- | ------ | -------------------------- |
-| `headline`    | string | Code headline              |
-| `description` | string | Description text           |
-| `code`        | string | Multi-line code snippet    |
-| `language`    | string | Programming language label |
-| `citation`    | string | Source citation            |
+| Key        | Type   | Description                |
+| ---------- | ------ | -------------------------- |
+| `title`    | string | Code title                 |
+| `subtitle` | string | Description text           |
+| `code`     | string | Multi-line code snippet    |
+| `language` | string | Programming language label |
+| `citation` | string | Source citation            |
 
 **Default content:**
 
 ```yaml
 laptop:
-  headline: 'Snippet'
-  description: 'Clean and readable code example.'
+  title: 'Snippet'
+  subtitle: 'Clean and readable code example.'
   code:
     "import { useState } from \"react\";\n\nconst App = () => {\n  const [count,
     setCount] = useState(0);\n  return <div>{count}</div>;\n};"
@@ -5250,19 +5249,19 @@ laptop:
 
 **Fields:**
 
-| Key           | Type   | Description            |
-| ------------- | ------ | ---------------------- |
-| `headline`    | string | App name or headline   |
-| `description` | string | Description text       |
-| `image`       | string | 9:16 content image URL |
-| `citation`    | string | Source citation        |
+| Key        | Type   | Description            |
+| ---------- | ------ | ---------------------- |
+| `title`    | string | App name or title      |
+| `subtitle` | string | Description text       |
+| `image`    | string | 9:16 content image URL |
+| `citation` | string | Source citation        |
 
 **Default content:**
 
 ```yaml
 mobile:
-  headline: 'FitTrack'
-  description: 'Track your daily activity and stay motivated'
+  title: 'FitTrack'
+  subtitle: 'Track your daily activity and stay motivated'
   image: ''
   citation: ''
 ```
@@ -5275,19 +5274,19 @@ mobile:
 
 **Fields:**
 
-| Key           | Type   | Description              |
-| ------------- | ------ | ------------------------ |
-| `headline`    | string | Watch headline           |
-| `description` | string | Description text         |
-| `image`       | string | 1:1 watch face image URL |
-| `citation`    | string | Source citation          |
+| Key        | Type   | Description              |
+| ---------- | ------ | ------------------------ |
+| `title`    | string | Watch title              |
+| `subtitle` | string | Description text         |
+| `image`    | string | 1:1 watch face image URL |
+| `citation` | string | Source citation          |
 
 **Default content:**
 
 ```yaml
 smart-watch:
-  headline: 'Health Watch'
-  description: 'Track your fitness goals with style'
+  title: 'Health Watch'
+  subtitle: 'Track your fitness goals with style'
   image: ''
   citation: ''
 ```
@@ -5300,21 +5299,21 @@ smart-watch:
 
 **Fields:**
 
-| Key           | Type   | Description          |
-| ------------- | ------ | -------------------- |
-| `headline`    | string | Terminal title       |
-| `description` | string | Description text     |
-| `command`     | string | Shell command        |
-| `output`      | string | Command output       |
-| `syntax`      | string | Code or syntax block |
-| `citation`    | string | Source citation      |
+| Key        | Type   | Description          |
+| ---------- | ------ | -------------------- |
+| `title`    | string | Terminal title       |
+| `subtitle` | string | Description text     |
+| `command`  | string | Shell command        |
+| `output`   | string | Command output       |
+| `syntax`   | string | Code or syntax block |
+| `citation` | string | Source citation      |
 
 **Default content:**
 
 ```yaml
 terminal:
-  headline: 'Deploy Script'
-  description: 'A quick deployment script for your project'
+  title: 'Deploy Script'
+  subtitle: 'A quick deployment script for your project'
   command: 'npm run deploy'
   output: 'Deploying to production...'
   syntax: "✓ Build complete\n✓ Tests passed\n✓ Deployed v2.4.1"
@@ -5366,13 +5365,13 @@ camera-settings:
 
 **Fields:**
 
-| Key           | Type   | Description          |
-| ------------- | ------ | -------------------- |
-| `title`       | string | Title                |
-| `rule`        | string | Rule name            |
-| `description` | string | Description          |
-| `tips`        | array  | Array of tip strings |
-| `citation`    | string | Source citation      |
+| Key        | Type   | Description          |
+| ---------- | ------ | -------------------- |
+| `title`    | string | Title                |
+| `rule`     | string | Rule name            |
+| `subtitle` | string | Description          |
+| `tips`     | array  | Array of tip strings |
+| `citation` | string | Source citation      |
 
 **Default content:**
 
@@ -5380,7 +5379,7 @@ camera-settings:
 composition:
   title: 'Composition'
   rule: 'Rule of Thirds'
-  description:
+  subtitle:
     'Divide your frame into a 3x3 grid and place subjects along the lines.'
   tips:
     - 'Place horizons on the upper or lower third'
@@ -5432,13 +5431,13 @@ lens-guide:
 
 **Fields:**
 
-| Key           | Type   | Description                    |
-| ------------- | ------ | ------------------------------ |
-| `title`       | string | Title                          |
-| `setup`       | string | Lighting setup                 |
-| `description` | string | Description                    |
-| `tips`        | array  | Array of {label, desc} objects |
-| `citation`    | string | Source citation                |
+| Key        | Type   | Description                    |
+| ---------- | ------ | ------------------------------ |
+| `title`    | string | Title                          |
+| `setup`    | string | Lighting setup                 |
+| `subtitle` | string | Description                    |
+| `tips`     | array  | Array of {label, desc} objects |
+| `citation` | string | Source citation                |
 
 **Default content:**
 
@@ -5446,7 +5445,7 @@ lens-guide:
 lighting-tips:
   title: 'Lighting Tips'
   setup: 'Three-Point Lighting'
-  description: 'The classic setup for portrait and studio photography.'
+  subtitle: 'The classic setup for portrait and studio photography.'
   tips:
     - label: 'Key Light'
       desc: 'Main light source, placed 45° to the subject'
@@ -5467,20 +5466,20 @@ lighting-tips:
 
 **Fields:**
 
-| Key           | Type   | Description                    |
-| ------------- | ------ | ------------------------------ |
-| `title`       | string | Title                          |
-| `description` | string | Description                    |
-| `themes`      | array  | Array of {name, color} objects |
-| `keywords`    | array  | Array of keyword strings       |
-| `citation`    | string | Source citation                |
+| Key        | Type   | Description                    |
+| ---------- | ------ | ------------------------------ |
+| `title`    | string | Title                          |
+| `subtitle` | string | Description                    |
+| `themes`   | array  | Array of {name, color} objects |
+| `keywords` | array  | Array of keyword strings       |
+| `citation` | string | Source citation                |
 
 **Default content:**
 
 ```yaml
 mood-board:
   title: 'Mood Board'
-  description: 'Inspiration for an autumn photoshoot'
+  subtitle: 'Inspiration for an autumn photoshoot'
   themes:
     - name: 'Warm'
       color: '#f97316'
@@ -5510,7 +5509,7 @@ mood-board:
 | `title`       | string | Title           |
 | `beforeLabel` | string | Before label    |
 | `afterLabel`  | string | After label     |
-| `description` | string | Description     |
+| `subtitle`    | string | Description     |
 | `imageUrl`    | string | Image URL       |
 | `citation`    | string | Source citation |
 
@@ -5521,7 +5520,7 @@ photo-editing:
   title: 'Photo Editing'
   beforeLabel: 'Before'
   afterLabel: 'After'
-  description: 'Basic color grading and exposure correction'
+  subtitle: 'Basic color grading and exposure correction'
   imageUrl: ''
   citation: ''
 ```
@@ -5539,7 +5538,7 @@ side by side
 
 | Key        | Type                           | Description                         |
 | ---------- | ------------------------------ | ----------------------------------- |
-| `headline` | string                         | Match title                         |
+| `title`    | string                         | Match title                         |
 | `text`     | string                         | Description text                    |
 | `teamA`    | string                         | Team A name                         |
 | `teamB`    | string                         | Team B name                         |
@@ -5552,7 +5551,7 @@ side by side
 
 ```yaml
 head-to-head:
-  headline: 'Matchday 30'
+  title: 'Matchday 30'
   text: 'Top of the table clash'
   teamA: 'Arsenal'
   teamB: 'Liverpool'
@@ -5585,7 +5584,7 @@ GD, and points
 
 | Key         | Type                                                          | Description            |
 | ----------- | ------------------------------------------------------------- | ---------------------- |
-| `headline`  | string                                                        | League name and season |
+| `title`     | string                                                        | League name and season |
 | `text`      | string                                                        | Description text       |
 | `standings` | array<{position, team, played, won, drawn, lost, gd, points}> | Team standings         |
 | `citation`  | string                                                        | Source citation        |
@@ -5594,7 +5593,7 @@ GD, and points
 
 ```yaml
 league-table:
-  headline: 'Premier League 2024/25'
+  title: 'Premier League 2024/25'
   text: 'After Matchweek 28'
   standings:
     - position: 1
@@ -5651,7 +5650,7 @@ kickoff times
 
 | Key        | Type                                           | Description         |
 | ---------- | ---------------------------------------------- | ------------------- |
-| `headline` | string                                         | Team or league name |
+| `title`    | string                                         | Team or league name |
 | `text`     | string                                         | Description text    |
 | `fixtures` | array<{date, time, homeTeam, awayTeam, venue}> | Upcoming fixtures   |
 | `citation` | string                                         | Source citation     |
@@ -5660,7 +5659,7 @@ kickoff times
 
 ```yaml
 match-schedule:
-  headline: 'Arsenal — March Fixtures'
+  title: 'Arsenal — March Fixtures'
   text: 'Premier League & Champions League'
   fixtures:
     - date: 'Sat 15 Mar'
@@ -5697,7 +5696,7 @@ stats
 
 | Key         | Type                        | Description                |
 | ----------- | --------------------------- | -------------------------- |
-| `headline`  | string                      | Competition or match title |
+| `title`     | string                      | Competition or match title |
 | `text`      | string                      | Description text           |
 | `homeTeam`  | string                      | Home team name             |
 | `awayTeam`  | string                      | Away team name             |
@@ -5713,7 +5712,7 @@ stats
 
 ```yaml
 scorecard:
-  headline: 'Premier League'
+  title: 'Premier League'
   text: 'Matchday 28'
   homeTeam: 'Arsenal'
   awayTeam: 'Chelsea'
@@ -5757,7 +5756,7 @@ scorecard:
 
 | Key        | Type                                 | Description         |
 | ---------- | ------------------------------------ | ------------------- |
-| `headline` | string                               | Stat category title |
+| `title`    | string                               | Stat category title |
 | `text`     | string                               | Description text    |
 | `leaders`  | array<{position, name, team, value}> | Top players ranking |
 | `citation` | string                               | Source citation     |
@@ -5766,7 +5765,7 @@ scorecard:
 
 ```yaml
 season-stats:
-  headline: 'Top Scorers'
+  title: 'Top Scorers'
   text: 'Premier League 2024/25'
   leaders:
     - position: 1
@@ -5803,7 +5802,7 @@ teams
 
 | Key        | Type                   | Description                        |
 | ---------- | ---------------------- | ---------------------------------- |
-| `headline` | string                 | Tournament name                    |
+| `title`    | string                 | Tournament name                    |
 | `text`     | string                 | Description text                   |
 | `rounds`   | array<{name, matches}> | Bracket rounds with match pairings |
 | `citation` | string                 | Source citation                    |
@@ -5957,14 +5956,14 @@ itinerary-day:
 
 **Fields:**
 
-| Key           | Type   | Description          |
-| ------------- | ------ | -------------------- |
-| `name`        | string | Landmark name        |
-| `location`    | string | Location             |
-| `description` | string | Landmark description |
-| `funFact`     | string | Interesting fact     |
-| `imageUrl`    | string | Optional image URL   |
-| `citation`    | string | Source citation      |
+| Key        | Type   | Description        |
+| ---------- | ------ | ------------------ |
+| `name`     | string | Landmark name      |
+| `location` | string | Location           |
+| `subtitle` | string | Landmark subtitle  |
+| `funFact`  | string | Interesting fact   |
+| `imageUrl` | string | Optional image URL |
+| `citation` | string | Source citation    |
 
 **Default content:**
 
@@ -5972,7 +5971,7 @@ itinerary-day:
 landmark-spotlight:
   name: 'Colosseum'
   location: 'Rome, Italy'
-  description:
+  subtitle:
     'The largest ancient amphitheatre ever built, capable of holding up to
     80,000 spectators.'
   funFact:
@@ -6023,13 +6022,13 @@ packing-list:
 
 **Fields:**
 
-| Key           | Type   | Description          |
-| ------------- | ------ | -------------------- |
-| `tip`         | string | Travel tip           |
-| `category`    | string | Tip category         |
-| `description` | string | Detailed explanation |
-| `hashtag`     | string | Related hashtag      |
-| `citation`    | string | Source citation      |
+| Key        | Type   | Description          |
+| ---------- | ------ | -------------------- |
+| `tip`      | string | Travel tip           |
+| `category` | string | Tip category         |
+| `subtitle` | string | Detailed explanation |
+| `hashtag`  | string | Related hashtag      |
+| `citation` | string | Source citation      |
 
 **Default content:**
 
@@ -6037,7 +6036,7 @@ packing-list:
 travel-tip:
   tip: 'Pack a portable charger'
   category: 'Packing'
-  description:
+  subtitle:
     'A portable power bank is a lifesaver during long travel days when outlets
     are scarce.'
   hashtag: '#TravelSmart'
@@ -6418,20 +6417,20 @@ quick-quiz:
 
 **Fields:**
 
-| Key           | Type   | Description           |
-| ------------- | ------ | --------------------- |
-| `technique`   | string | Study technique name  |
-| `description` | string | Brief explanation     |
-| `steps`       | array  | Array of step strings |
-| `subject`     | string | Subject or topic      |
-| `citation`    | string | Source citation       |
+| Key         | Type   | Description           |
+| ----------- | ------ | --------------------- |
+| `technique` | string | Study technique name  |
+| `subtitle`  | string | Brief explanation     |
+| `steps`     | array  | Array of step strings |
+| `subject`   | string | Subject or topic      |
+| `citation`  | string | Source citation       |
 
 **Default content:**
 
 ```yaml
 study-tips:
   technique: 'Pomodoro Technique'
-  description:
+  subtitle:
     'A time management method that uses focused work intervals followed by short
     breaks.'
   steps:
@@ -6488,7 +6487,7 @@ subject-summary:
 
 | Key        | Type   | Description                     |
 | ---------- | ------ | ------------------------------- |
-| `headline` | string | Title                           |
+| `title`    | string | Title                           |
 | `total`    | string | Total amount                    |
 | `people`   | string | Number of people                |
 | `each`     | string | Amount per person               |
@@ -6499,7 +6498,7 @@ subject-summary:
 
 ```yaml
 bill-split:
-  headline: 'Dinner Bill'
+  title: 'Dinner Bill'
   total: '$186.50'
   people: '4 people'
   each: '$46.63 each'
@@ -6952,19 +6951,19 @@ abbreviation:
 
 **Fields:**
 
-| Key           | Type   | Description           |
-| ------------- | ------ | --------------------- |
-| `headline`    | string | Challenge title       |
-| `description` | string | Challenge description |
-| `days`        | string | Duration (e.g. 30)    |
-| `citation`    | string | Source citation       |
+| Key        | Type   | Description        |
+| ---------- | ------ | ------------------ |
+| `title`    | string | Challenge title    |
+| `subtitle` | string | Challenge subtitle |
+| `days`     | string | Duration (e.g. 30) |
+| `citation` | string | Source citation    |
 
 **Default content:**
 
 ```yaml
 challenge-card:
-  headline: 'Write Every Day'
-  description: 'Build a writing habit one day at a time.'
+  title: 'Write Every Day'
+  subtitle: 'Build a writing habit one day at a time.'
   days: '30'
   citation: ''
 ```
@@ -7070,7 +7069,7 @@ poll-vote:
 
 | Key        | Type   | Description     |
 | ---------- | ------ | --------------- |
-| `headline` | string | Main title      |
+| `title`    | string | Main title      |
 | `optionA`  | string | Left option     |
 | `optionB`  | string | Right option    |
 | `citation` | string | Source citation |
@@ -7079,7 +7078,7 @@ poll-vote:
 
 ```yaml
 this-or-that:
-  headline: 'Which do you choose?'
+  title: 'Which do you choose?'
   optionA: 'Remote Work'
   optionB: 'Office Culture'
   citation: ''
@@ -7162,12 +7161,12 @@ intro-literature:
 
 **Fields:**
 
-| Key               | Type                                | Description                     |
-| ----------------- | ----------------------------------- | ------------------------------- |
-| `title`           | string                              | Section title                   |
-| `limitations`     | array<{title, description, impact}> | Study limitations               |
-| `recommendations` | string[]                            | Recommendations for future work |
-| `citation`        | string                              | Source citation                 |
+| Key               | Type                             | Description                     |
+| ----------------- | -------------------------------- | ------------------------------- |
+| `title`           | string                           | Section title                   |
+| `limitations`     | array<{title, subtitle, impact}> | Study limitations               |
+| `recommendations` | string[]                         | Recommendations for future work |
+| `citation`        | string                           | Source citation                 |
 
 **Default content:**
 
@@ -7176,13 +7175,13 @@ limitations:
   title: 'Limitations'
   limitations:
     - title: 'Sample generalizability'
-      description: 'Convenience sample from a single university'
+      subtitle: 'Convenience sample from a single university'
       impact: 'High'
     - title: 'Self-report measures'
-      description: 'Potential social desirability bias in survey responses'
+      subtitle: 'Potential social desirability bias in survey responses'
       impact: 'Medium'
     - title: 'Cross-sectional design'
-      description: 'Causal inferences limited by correlational data'
+      subtitle: 'Causal inferences limited by correlational data'
       impact: 'High'
   recommendations:
     - 'Replicate with community samples'
@@ -7279,7 +7278,7 @@ participants:
 | `findings`   | array<{label, value, significant}> | Key findings               |
 | `statistic`  | string                             | Overall test statistic     |
 | `effectSize` | string                             | Effect size interpretation |
-| `chart`      | string                             | Optional chart description |
+| `chart`      | string                             | Optional chart subtitle    |
 | `citation`   | string                             | Source citation            |
 
 **Default content:**
@@ -7313,14 +7312,14 @@ results:
 
 **Fields:**
 
-| Key           | Type   | Description       |
-| ------------- | ------ | ----------------- |
-| `title`       | string | Event title       |
-| `date`        | string | Event date        |
-| `time`        | string | Event time        |
-| `location`    | string | Event location    |
-| `description` | string | Event description |
-| `citation`    | string | Source citation   |
+| Key        | Type   | Description     |
+| ---------- | ------ | --------------- |
+| `title`    | string | Event title     |
+| `date`     | string | Event date      |
+| `time`     | string | Event time      |
+| `location` | string | Event location  |
+| `subtitle` | string | Event subtitle  |
+| `citation` | string | Source citation |
 
 **Default content:**
 
@@ -7330,7 +7329,7 @@ event-card:
   date: 'JAN 15'
   time: '10:00 AM — 4:00 PM'
   location: 'San Francisco, CA'
-  description:
+  subtitle:
     'Join industry leaders for a day of talks, workshops, and networking.'
   citation: ''
 ```
@@ -7403,7 +7402,7 @@ profile-card:
 
 | Key           | Type   | Description        |
 | ------------- | ------ | ------------------ |
-| `headline`    | string | Main title         |
+| `title`       | string | Main title         |
 | `text`        | string | Body paragraph     |
 | `buttonLabel` | string | Button text        |
 | `hashtag`     | string | Associated hashtag |
@@ -7413,7 +7412,7 @@ profile-card:
 
 ```yaml
 share-cta:
-  headline: 'Share This'
+  title: 'Share This'
   text: 'Help others discover this content by sharing it with your network.'
   buttonLabel: 'Share Now'
   hashtag: '#Infographic'
@@ -7430,7 +7429,7 @@ share-cta:
 
 | Key        | Type                        | Description     |
 | ---------- | --------------------------- | --------------- |
-| `headline` | string                      | Team name       |
+| `title`    | string                      | Team name       |
 | `members`  | array<{name, role, number}> | Team members    |
 | `citation` | string                      | Source citation |
 
@@ -7438,7 +7437,7 @@ share-cta:
 
 ```yaml
 team-roster:
-  headline: 'Squad'
+  title: 'Squad'
   members:
     - name: 'Alex Chen'
       role: 'Captain'

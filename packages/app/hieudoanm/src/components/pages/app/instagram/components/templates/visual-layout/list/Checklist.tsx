@@ -3,7 +3,7 @@ import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
 
 export const Checklist: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? '';
+  const title = (data.title as string) ?? '';
   const text = (data.text as string) ?? '';
   const items = (data.items as string[]) ?? [];
   const list =
@@ -17,7 +17,7 @@ export const Checklist: FC<TemplateProps> = ({ data }) => {
       <div className="flex flex-col gap-y-4">
         <div className="flex flex-col gap-y-2">
           <h1 className="text-base-content mb-1 text-4xl font-bold tracking-tight">
-            {headline}
+            {title}
           </h1>
           {text && <p className="text-neutral mb-1 text-xs">{text}</p>}
         </div>

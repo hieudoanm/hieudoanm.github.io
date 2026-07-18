@@ -3,7 +3,7 @@ import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
 
 export const Takeaway: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? '';
+  const title = (data.title as string) ?? '';
   const text = (data.text as string) ?? '';
   const source = (data.source as string) ?? '';
 
@@ -17,7 +17,7 @@ export const Takeaway: FC<TemplateProps> = ({ data }) => {
       </div>
       <div className="border-primary relative border-l-4 pl-3">
         <h1 className="text-base-content mb-2 text-4xl leading-tight font-bold tracking-tight">
-          {headline}
+          {title}
         </h1>
         <p className="text-neutral max-w-md text-sm leading-relaxed">{text}</p>
       </div>

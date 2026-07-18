@@ -1,10 +1,11 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
+import { Header } from '../../_shared';
 
 export const Playlist: FC<TemplateProps> = ({ data }) => {
   const title = (data.title as string) ?? 'My Playlist';
-  const description = (data.description as string) ?? '';
+  const subtitle = (data.subtitle as string) ?? '';
   const tracks =
     (data.tracks as {
       number: number;
@@ -20,10 +21,7 @@ export const Playlist: FC<TemplateProps> = ({ data }) => {
       <span className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
         Playlist
       </span>
-      <h1 className="text-base-content mt-1 text-lg font-bold">{title}</h1>
-      {description && (
-        <p className="text-neutral mt-1 text-xs">{description}</p>
-      )}
+      <Header title={title} subtitle={subtitle} />
       <ul className="bg-base-200 mt-2 w-full max-w-xs overflow-hidden rounded-lg">
         {tracks.map((track, i) => (
           <li

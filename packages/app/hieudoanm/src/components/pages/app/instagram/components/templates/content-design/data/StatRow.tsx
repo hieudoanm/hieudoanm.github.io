@@ -8,7 +8,7 @@ interface StatItem {
 }
 
 export const StatRow: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? '';
+  const title = (data.title as string) ?? '';
   const text = (data.text as string) ?? '';
   const stats = (data.stats as StatItem[]) ?? [];
   const items =
@@ -26,7 +26,7 @@ export const StatRow: FC<TemplateProps> = ({ data }) => {
       <div className="flex flex-col gap-y-4">
         <div className="flex flex-col gap-y-2">
           <h1 className="text-base-content text-center text-4xl font-bold tracking-tight">
-            {headline}
+            {title}
           </h1>
           {text && (
             <p className="text-base-content/60 text-center text-sm">{text}</p>

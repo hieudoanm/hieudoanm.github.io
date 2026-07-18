@@ -5,7 +5,7 @@ import { Background } from '../../_shared';
 export const CharacterSheet: FC<TemplateProps> = ({ data }) => {
   const name = (data.name as string) ?? 'Character';
   const role = (data.role as string) ?? 'Protagonist';
-  const description = (data.description as string) ?? '';
+  const subtitle = (data.subtitle as string) ?? '';
   const traits = (data.traits as string[]) ?? ['Brave', 'Curious', 'Flawed'];
   const motivation = (data.motivation as string) ?? '';
   const flaw = (data.flaw as string) ?? '';
@@ -17,9 +17,9 @@ export const CharacterSheet: FC<TemplateProps> = ({ data }) => {
         {name}
       </h1>
       <span className="badge badge-primary badge-sm mb-3">{role}</span>
-      {description && (
+      {subtitle && (
         <p className="text-neutral mb-2 max-w-sm text-xs leading-relaxed">
-          {description}
+          {subtitle}
         </p>
       )}
       <ul className="mb-2 flex flex-wrap justify-center gap-1">

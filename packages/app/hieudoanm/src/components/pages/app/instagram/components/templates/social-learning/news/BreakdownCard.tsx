@@ -8,7 +8,7 @@ interface BreakdownPoint {
 }
 
 export const BreakdownCard: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? 'Market Rally Explained';
+  const title = (data.title as string) ?? 'Market Rally Explained';
   const summary =
     (data.summary as string) ??
     'Three key factors drove the S&P 500 to new highs this quarter.';
@@ -25,7 +25,7 @@ export const BreakdownCard: FC<TemplateProps> = ({ data }) => {
   return (
     <Background>
       <h1 className="text-base-content text-4xl leading-tight font-black">
-        {headline}
+        {title}
       </h1>
       <p className="text-base-content/70 mt-4 text-sm leading-relaxed italic">
         {summary}

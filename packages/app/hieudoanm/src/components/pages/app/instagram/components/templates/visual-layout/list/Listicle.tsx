@@ -3,7 +3,7 @@ import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
 
 export const Listicle: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? '';
+  const title = (data.title as string) ?? '';
   const items = (data.items as string[]) ?? [];
   const text = (data.text as string) ?? '';
   const imageUrl = (data.imageUrl as string) ?? '';
@@ -30,7 +30,7 @@ export const Listicle: FC<TemplateProps> = ({ data }) => {
   return (
     <Background>
       <h1 className="text-base-content mb-1 text-4xl font-bold tracking-tight">
-        {headline}
+        {title}
       </h1>
       <p className="text-neutral mb-1 text-xs">{text}</p>
       <ol className={`flex flex-1 flex-col ${gap}`}>

@@ -1,12 +1,13 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
 import { Background } from '../../_shared';
+import { Header } from '../../_shared';
 
 export const AchievementUnlocked: FC<TemplateProps> = ({ data }) => {
   const title = (data.title as string) ?? 'Achievement Name';
   const game = (data.game as string) ?? 'Game Title';
-  const description =
-    (data.description as string) ?? 'Complete a difficult challenge';
+  const subtitle =
+    (data.subtitle as string) ?? 'Complete a difficult challenge';
   const rarity = (data.rarity as string) ?? 'Rare';
   const dateUnlocked = (data.dateUnlocked as string) ?? 'Jan 1, 2026';
 
@@ -16,11 +17,7 @@ export const AchievementUnlocked: FC<TemplateProps> = ({ data }) => {
       <div className="bg-accent/10 mb-1 flex h-8 w-8 items-center justify-center rounded-full">
         <span className="text-3xl">🏆</span>
       </div>
-      <h1 className="text-accent mb-0.5 text-4xl font-extrabold">{title}</h1>
-      <p className="text-neutral mb-1.5 text-xs font-medium">{game}</p>
-      <p className="text-base-content mb-1 max-w-[280px] text-xs leading-relaxed">
-        {description}
-      </p>
+      <Header title={title} subtitle={subtitle} />
       <span className="bg-primary/10 text-primary mb-1 rounded-full px-2 py-0.5 text-xs font-bold">
         {rarity}
       </span>

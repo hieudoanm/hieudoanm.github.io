@@ -5,7 +5,7 @@ import { Background } from '../../_shared';
 type Meal = { day: string; breakfast: string; lunch: string; dinner: string };
 
 export const MealPlan: FC<TemplateProps> = ({ data }) => {
-  const headline = (data.headline as string) ?? 'Weekly Meal Plan';
+  const title = (data.title as string) ?? 'Weekly Meal Plan';
   const meals = (data.meals as Meal[]) ?? [
     {
       day: 'Mon',
@@ -29,9 +29,7 @@ export const MealPlan: FC<TemplateProps> = ({ data }) => {
         <span className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
           Meal Plan
         </span>
-        <h1 className="text-base-content mt-1 text-4xl font-bold">
-          {headline}
-        </h1>
+        <h1 className="text-base-content mt-1 text-4xl font-bold">{title}</h1>
       </div>
       <div className="bg-base-200 rounded-box overflow-hidden">
         <div className="border-base-300 flex border-b px-3 py-2">
