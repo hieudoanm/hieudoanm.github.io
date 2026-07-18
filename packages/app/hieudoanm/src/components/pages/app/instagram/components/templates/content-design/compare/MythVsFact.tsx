@@ -6,6 +6,7 @@ export const MythVsFact: FC<TemplateProps> = ({ data }) => {
   const myth = (data.myth as string) ?? '';
   const fact = (data.fact as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="flex h-full w-full flex-col">
       <div className="bg-accent/10 px-5 py-3">
@@ -60,6 +61,11 @@ export const MythVsFact: FC<TemplateProps> = ({ data }) => {
           </p>
         </div>
       </div>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

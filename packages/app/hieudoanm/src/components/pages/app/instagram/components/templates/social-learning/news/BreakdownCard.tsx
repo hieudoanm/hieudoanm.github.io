@@ -20,6 +20,7 @@ export const BreakdownCard: FC<TemplateProps> = ({ data }) => {
     { title: 'Consumer Confidence', detail: 'Spending indices rose 4.2%' },
   ];
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <h1 className="text-base-content text-4xl leading-tight font-black">
@@ -47,6 +48,11 @@ export const BreakdownCard: FC<TemplateProps> = ({ data }) => {
           ))}
         </ul>
       </div>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

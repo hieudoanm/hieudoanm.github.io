@@ -7,6 +7,7 @@ export const MeditationGuide: FC<TemplateProps> = ({ data }) => {
   const instructions = (data.instructions as string[]) ?? [];
   const tip = (data.tip as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="flex items-center justify-between">
@@ -36,6 +37,11 @@ export const MeditationGuide: FC<TemplateProps> = ({ data }) => {
             {tip}
           </p>
         </div>
+      )}
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
       )}
     </div>
   );

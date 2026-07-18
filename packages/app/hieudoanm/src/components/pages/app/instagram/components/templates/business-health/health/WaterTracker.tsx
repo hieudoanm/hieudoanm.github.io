@@ -12,6 +12,7 @@ export const WaterTracker: FC<TemplateProps> = ({ data }) => {
   const fullGlasses = Math.min(currentNum, goalNum);
   const emptyGlasses = Math.max(0, goalNum - fullGlasses);
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
       <span className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
@@ -42,6 +43,11 @@ export const WaterTracker: FC<TemplateProps> = ({ data }) => {
         )}
       </p>
       {tip && <p className="text-neutral mt-4 text-xs italic">{tip}</p>}
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

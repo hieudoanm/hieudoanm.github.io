@@ -10,6 +10,7 @@ export const PricingCard: FC<TemplateProps> = ({ data }) => {
       ? features
       : ['Feature one', 'Feature two', 'Feature three'];
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
       <span className="bg-accent/10 text-accent mb-2 rounded-full px-4 py-1 text-xs font-bold tracking-widest uppercase">
@@ -40,6 +41,11 @@ export const PricingCard: FC<TemplateProps> = ({ data }) => {
       <div className="rounded-box bg-primary text-primary-content mt-8 px-8 py-3 text-sm font-bold tracking-wider uppercase">
         Get Started
       </div>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

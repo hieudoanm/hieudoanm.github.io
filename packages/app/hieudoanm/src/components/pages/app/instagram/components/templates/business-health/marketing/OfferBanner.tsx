@@ -8,6 +8,7 @@ export const OfferBanner: FC<TemplateProps> = ({ data }) => {
   const code = (data.code as string) ?? '';
   const cta = (data.cta as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="rounded-box border-primary/40 flex flex-1 flex-col items-center justify-center border-2 border-dashed p-8 text-center">
@@ -33,6 +34,11 @@ export const OfferBanner: FC<TemplateProps> = ({ data }) => {
           {cta || 'Get Started'}
         </div>
       </div>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

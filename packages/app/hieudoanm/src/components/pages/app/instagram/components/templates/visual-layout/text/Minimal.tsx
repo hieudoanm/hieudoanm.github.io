@@ -6,6 +6,7 @@ export const Minimal: FC<TemplateProps> = ({ data }) => {
   const text = (data.text as string) ?? '';
   const imageUrl = (data.imageUrl as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center gap-4 p-8 text-center">
       <div className="flex flex-col items-center justify-center">
@@ -24,6 +25,11 @@ export const Minimal: FC<TemplateProps> = ({ data }) => {
         />
       ) : (
         <></>
+      )}
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
       )}
     </div>
   );

@@ -21,6 +21,8 @@ export const HeadToHead: FC<TemplateProps> = ({ data }) => {
     { label: 'Clean Sheets', valueA: '6', valueB: '4' },
   ];
 
+  const citation = (data.citation as string) ?? '';
+
   const renderForm = (form: string) =>
     form.split(' ').map((r, i) => {
       const bg =
@@ -85,6 +87,11 @@ export const HeadToHead: FC<TemplateProps> = ({ data }) => {
           </li>
         ))}
       </ul>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

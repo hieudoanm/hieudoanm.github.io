@@ -7,6 +7,7 @@ export const StudyTips: FC<TemplateProps> = ({ data }) => {
   const steps = (data.steps as string[]) ?? [];
   const subject = (data.subject as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       {subject && (
@@ -28,6 +29,11 @@ export const StudyTips: FC<TemplateProps> = ({ data }) => {
           </li>
         ))}
       </ol>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

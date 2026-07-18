@@ -11,6 +11,7 @@ export const GearReview: FC<TemplateProps> = ({ data }) => {
 
   const stars = Array.from({ length: 5 }, (_, i) => i < rating);
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
       <span className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
@@ -62,6 +63,11 @@ export const GearReview: FC<TemplateProps> = ({ data }) => {
           </ul>
         )}
       </div>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

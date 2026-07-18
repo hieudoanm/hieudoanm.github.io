@@ -6,6 +6,7 @@ export const Takeaway: FC<TemplateProps> = ({ data }) => {
   const text = (data.text as string) ?? '';
   const source = (data.source as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col justify-center p-8">
       <div className="mb-3">
@@ -22,6 +23,11 @@ export const Takeaway: FC<TemplateProps> = ({ data }) => {
       {source && (
         <p className="text-accent mt-4 text-xs font-medium tracking-wider">
           &mdash; {source}
+        </p>
+      )}
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
         </p>
       )}
     </div>

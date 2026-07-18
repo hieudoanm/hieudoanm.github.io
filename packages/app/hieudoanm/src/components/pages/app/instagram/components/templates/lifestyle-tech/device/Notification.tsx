@@ -7,6 +7,7 @@ export const Notification: FC<TemplateProps> = ({ data }) => {
   const body = (data.body as string) ?? '';
   const time = (data.time as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full items-center justify-center p-8">
       <div className="bg-base-200 rounded-box w-full max-w-sm p-3 shadow-lg">
@@ -32,6 +33,11 @@ export const Notification: FC<TemplateProps> = ({ data }) => {
           </div>
         </div>
       </div>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

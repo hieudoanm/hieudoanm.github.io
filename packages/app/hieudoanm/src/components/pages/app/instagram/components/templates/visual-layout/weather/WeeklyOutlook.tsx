@@ -21,6 +21,7 @@ export const WeeklyOutlook: FC<TemplateProps> = ({ data }) => {
     { day: 'Sun', high: '19°', low: '12°', condition: 'Showers' },
   ];
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <h2 className="text-accent mb-2 text-xs font-bold tracking-[0.2em] uppercase">
@@ -46,6 +47,11 @@ export const WeeklyOutlook: FC<TemplateProps> = ({ data }) => {
           </li>
         ))}
       </ul>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

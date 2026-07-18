@@ -18,11 +18,17 @@ export const OnionDiagram: FC<TemplateProps> = ({ data }) => {
 
   const colors = ['#ff0030', '#d90029', '#b30022', '#8c001b'];
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-3 text-center">
         <h2 className="text-base-content text-sm font-bold">{title}</h2>
         {text && <div className="text-neutral mt-2 text-sm">{text}</div>}
+        {citation && (
+          <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+            {citation}
+          </p>
+        )}
       </div>
       <div className="flex flex-1 items-center justify-center">
         <div className="relative flex items-center justify-center">

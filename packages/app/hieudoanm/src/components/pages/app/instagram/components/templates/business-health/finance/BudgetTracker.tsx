@@ -13,6 +13,7 @@ export const BudgetTracker: FC<TemplateProps> = ({ data }) => {
   const savingsNum = parseFloat(savings.replace(/[^0-9.]/g, '')) || 0;
   const total = incomeNum + expensesNum + savingsNum || 1;
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="flex items-center justify-between">
@@ -41,6 +42,11 @@ export const BudgetTracker: FC<TemplateProps> = ({ data }) => {
                   className={`h-full rounded-full transition-all ${item.color}`}
                   style={{ width: `${(val / incomeNum) * 100}%` }}
                 />
+                {citation && (
+                  <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+                    {citation}
+                  </p>
+                )}
               </div>
             </li>
           );

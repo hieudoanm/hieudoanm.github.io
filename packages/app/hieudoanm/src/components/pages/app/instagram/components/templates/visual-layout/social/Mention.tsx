@@ -8,6 +8,7 @@ export const Mention: FC<TemplateProps> = ({ data }) => {
   const avatarUrl = (data.avatarUrl as string) ?? '';
   const likes = (data.likes as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-4">
       <div className="rounded-box border-accent/20 flex flex-1 flex-col border p-4">
@@ -90,6 +91,11 @@ export const Mention: FC<TemplateProps> = ({ data }) => {
           </div>
         </div>
       </div>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

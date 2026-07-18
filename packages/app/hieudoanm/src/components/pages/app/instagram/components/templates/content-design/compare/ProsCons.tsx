@@ -10,6 +10,7 @@ export const ProsCons: FC<TemplateProps> = ({ data }) => {
   const conList =
     cons.length > 0 ? cons : ['Limited features', 'Steep learning curve'];
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="flex h-full w-full flex-col">
       <div className="bg-accent/10 px-5 py-3">
@@ -72,6 +73,11 @@ export const ProsCons: FC<TemplateProps> = ({ data }) => {
           </ul>
         </div>
       </div>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

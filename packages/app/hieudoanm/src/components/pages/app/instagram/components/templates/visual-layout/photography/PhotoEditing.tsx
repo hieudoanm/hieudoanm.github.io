@@ -8,6 +8,7 @@ export const PhotoEditing: FC<TemplateProps> = ({ data }) => {
   const description = (data.description as string) ?? '';
   const imageUrl = (data.imageUrl as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
       <h2 className="text-accent mb-1 text-xs font-bold tracking-[0.2em] uppercase">
@@ -51,6 +52,11 @@ export const PhotoEditing: FC<TemplateProps> = ({ data }) => {
       {description && (
         <p className="text-neutral mt-2 max-w-sm text-xs leading-relaxed">
           {description}
+        </p>
+      )}
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
         </p>
       )}
     </div>

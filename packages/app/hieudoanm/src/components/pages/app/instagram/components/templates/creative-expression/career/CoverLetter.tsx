@@ -10,6 +10,7 @@ export const CoverLetter: FC<TemplateProps> = ({ data }) => {
 
   const paragraphs = body.split('\n').filter((p) => p.trim());
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
       <h1 className="text-primary mb-3 text-4xl font-bold">{title}</h1>
@@ -23,6 +24,11 @@ export const CoverLetter: FC<TemplateProps> = ({ data }) => {
           <p className="text-primary mt-1 font-semibold italic">{signature}</p>
         )}
       </div>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

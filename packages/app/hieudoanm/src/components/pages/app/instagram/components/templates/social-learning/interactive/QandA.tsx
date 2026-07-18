@@ -6,6 +6,7 @@ export const QandA: FC<TemplateProps> = ({ data }) => {
   const answer = (data.answer as string) ?? '';
   const category = (data.category as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col justify-center gap-4 p-8">
       {category && (
@@ -29,6 +30,11 @@ export const QandA: FC<TemplateProps> = ({ data }) => {
           <p className="text-neutral text-sm leading-relaxed">{answer}</p>
         </div>
       </div>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

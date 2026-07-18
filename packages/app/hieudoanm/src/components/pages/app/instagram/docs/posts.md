@@ -14,12 +14,16 @@ read, visually consistent, and easy to convert into design templates.
   - [Objectives](#objectives)
   - [General Rules](#general-rules)
   - [Recommended Structure](#recommended-structure)
-    - [Slide 1 — Cover](#slide-1--cover)
-    - [Slide 2 — Introduction](#slide-2--introduction)
-    - [Slide 3–7 — Main Content](#slide-37--main-content)
-    - [Slide 8 — Summary](#slide-8--summary)
-    - [Slide 9 — References](#slide-9--references)
-    - [Slide 10 — Discussion](#slide-10--discussion)
+    - [1. Cover \& Hook](#1-cover--hook)
+    - [2. The Short Answer (Main Claim) + Roadmap](#2-the-short-answer-main-claim--roadmap)
+    - [3. Background / Why This Matters](#3-background--why-this-matters)
+    - [4. Evidence 1](#4-evidence-1)
+    - [5. Evidence 2](#5-evidence-2)
+    - [6. Evidence 3](#6-evidence-3)
+    - [7. Counterarguments, Limitations, or Alternative Explanations](#7-counterarguments-limitations-or-alternative-explanations)
+    - [8. Conclusion \& Key Takeaways](#8-conclusion--key-takeaways)
+    - [9. References](#9-references)
+    - [10. Discussion / Q\&A](#10-discussion--qa)
   - [Slide Count](#slide-count)
   - [Writing Style](#writing-style)
   - [Hook Guidelines](#hook-guidelines)
@@ -78,7 +82,10 @@ Every post should aim to:
 
 ## Recommended Structure
 
-### Slide 1 — Cover
+### 1. Cover & Hook
+
+Introduce the topic with a compelling question, statement, or surprising fact to
+capture the audience's attention.
 
 Purpose:
 
@@ -107,13 +114,10 @@ Never:
 
 ---
 
-### Slide 2 — Introduction
+### 2. The Short Answer (Main Claim) + Roadmap
 
-Explain:
-
-- Why this topic matters
-- The problem
-- The misconception
+Present the main takeaway or thesis early, followed by a brief overview of what
+will be covered.
 
 Goal:
 
@@ -121,11 +125,39 @@ Make readers want to continue.
 
 ---
 
-### Slide 3–7 — Main Content
+### 3. Background / Why This Matters
 
-Each slide should contain exactly ONE idea.
+Provide the necessary context, define key concepts, and explain the significance
+of the topic.
 
-Possible formats:
+Explain:
+
+- Why this topic matters
+- The problem
+- The misconception
+
+---
+
+### 4. Evidence 1
+
+Present the first key piece of evidence, explain its meaning, and connect it to
+the main claim.
+
+---
+
+### 5. Evidence 2
+
+Present the second key piece of evidence, interpret the findings, and explain
+how it strengthens the argument.
+
+---
+
+### 6. Evidence 3
+
+Present the third key piece of evidence, discuss its implications, and reinforce
+the overall message.
+
+Possible formats for Evidence 1–3:
 
 - explanation
 - comparison
@@ -140,13 +172,22 @@ Possible formats:
 - pros & cons
 - step-by-step
 
-Avoid putting more than one major concept on a slide.
+Each slide should contain exactly ONE idea. Avoid putting more than one major
+concept on a slide.
 
 ---
 
-### Slide 8 — Summary
+### 7. Counterarguments, Limitations, or Alternative Explanations
 
-Summarize the entire carousel.
+Acknowledge uncertainties, competing explanations, or limitations of the
+evidence, and explain why the main conclusion remains supported.
+
+---
+
+### 8. Conclusion & Key Takeaways
+
+Summarize the main findings, answer the original question, and leave the
+audience with the most important takeaway.
 
 Possible formats:
 
@@ -159,7 +200,9 @@ Reader should remember the whole post after this slide.
 
 ---
 
-### Slide 9 — References
+### 9. References
+
+List all sources cited in the presentation using the appropriate citation style.
 
 Purpose:
 
@@ -174,11 +217,10 @@ Contains:
 
 ---
 
-### Slide 10 — Discussion
+### 10. Discussion / Q&A
 
-Purpose:
-
-Create conversation.
+Invite questions, encourage discussion, and address any remaining points of
+clarification.
 
 Examples:
 

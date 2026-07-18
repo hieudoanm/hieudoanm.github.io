@@ -14,6 +14,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'discount', type: 'string', description: 'Discount percentage' },
       { key: 'badge', type: 'string', description: 'Badge label' },
       { key: 'cta', type: 'string', description: 'Call to action' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Flash Sale',
@@ -22,6 +23,7 @@ export const TEMPLATES: TemplateDef[] = [
       discount: '50% OFF',
       badge: 'LIMITED',
       cta: 'Shop Now',
+      citation: '',
     },
   },
 
@@ -41,6 +43,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array',
         description: 'Array of {desc, amount} objects',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       invoiceNumber: 'INV-2025-001',
@@ -57,6 +60,7 @@ export const TEMPLATES: TemplateDef[] = [
           amount: '$2,000',
         },
       ],
+      citation: '',
     },
   },
 
@@ -77,6 +81,7 @@ export const TEMPLATES: TemplateDef[] = [
       },
       { key: 'description', type: 'string', description: 'Short description' },
       { key: 'imageUrl', type: 'string', description: 'Product image URL' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       badge: 'NEW',
@@ -85,6 +90,7 @@ export const TEMPLATES: TemplateDef[] = [
       oldPrice: '',
       description: '',
       imageUrl: '',
+      citation: '',
     },
   },
 
@@ -100,6 +106,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'tagline', type: 'string', description: 'Short tagline' },
       { key: 'features', type: 'string[]', description: 'Feature tags' },
       { key: 'imageUrl', type: 'string', description: 'Product image URL' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       name: 'Minimal Watch',
@@ -107,6 +114,7 @@ export const TEMPLATES: TemplateDef[] = [
       tagline: 'Timeless design, modern craft',
       features: ['Water resistant', 'Swiss movement', 'Sapphire glass'],
       imageUrl: '',
+      citation: '',
     },
   },
 
@@ -124,6 +132,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{label, value}>',
         description: 'Specification rows',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       name: 'Pro Laptop 16"',
@@ -154,6 +163,7 @@ export const TEMPLATES: TemplateDef[] = [
           value: '2.14 kg',
         },
       ],
+      citation: '',
     },
   },
 
@@ -168,12 +178,14 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'product', type: 'string', description: 'Product name' },
       { key: 'items', type: 'string[]', description: 'Box contents' },
       { key: 'text', type: 'string', description: 'Description text' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Unboxing',
       product: 'Pro Laptop 16"',
       items: ['Laptop', 'Charger', 'USB-C cable', 'Starter guide'],
       text: '',
+      citation: '',
     },
   },
 
@@ -190,6 +202,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array',
         description: 'Array of {name, amount, dueDate, paid} objects',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Upcoming Bills',
@@ -219,6 +232,7 @@ export const TEMPLATES: TemplateDef[] = [
           paid: false,
         },
       ],
+      citation: '',
     },
   },
 
@@ -234,6 +248,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'expenses', type: 'string', description: 'Expenses amount' },
       { key: 'savings', type: 'string', description: 'Savings amount' },
       { key: 'period', type: 'string', description: 'Time period' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Monthly Budget',
@@ -241,6 +256,7 @@ export const TEMPLATES: TemplateDef[] = [
       expenses: '$3,200',
       savings: '$1,800',
       period: 'March 2025',
+      citation: '',
     },
   },
 
@@ -257,6 +273,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array',
         description: 'Array of {category, amount, date} objects',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Recent Expenses',
@@ -282,6 +299,7 @@ export const TEMPLATES: TemplateDef[] = [
           date: 'Mar 12',
         },
       ],
+      citation: '',
     },
   },
 
@@ -298,6 +316,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array',
         description: 'Array of {label, desc} objects',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Debt Payoff Plan',
@@ -319,6 +338,7 @@ export const TEMPLATES: TemplateDef[] = [
           desc: 'Celebrate each debt paid off',
         },
       ],
+      citation: '',
     },
   },
 
@@ -341,6 +361,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'string',
         description: 'Risk level (Low/Medium/High)',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       tip: 'Diversify your portfolio',
@@ -348,6 +369,7 @@ export const TEMPLATES: TemplateDef[] = [
       description:
         'Spread investments across different asset classes to reduce risk and stabilise returns over time.',
       risk: 'Low',
+      citation: '',
     },
   },
 
@@ -363,6 +385,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'current', type: 'string', description: 'Current saved amount' },
       { key: 'deadline', type: 'string', description: 'Goal deadline' },
       { key: 'note', type: 'string', description: 'Optional note' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       goal: 'Emergency Fund',
@@ -370,6 +393,7 @@ export const TEMPLATES: TemplateDef[] = [
       current: '$6,500',
       deadline: 'Dec 2025',
       note: 'Saving $500 per month',
+      citation: '',
     },
   },
 
@@ -385,6 +409,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'rating', type: 'number', description: 'Star rating 1-5' },
       { key: 'review', type: 'string', description: 'Review text' },
       { key: 'imageUrl', type: 'string', description: 'Optional image URL' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       dish: 'Margherita Pizza',
@@ -393,6 +418,7 @@ export const TEMPLATES: TemplateDef[] = [
       review:
         'Perfectly crisp crust, fresh mozzarella, and the most flavourful tomato sauce I have had outside of Italy.',
       imageUrl: '',
+      citation: '',
     },
   },
 
@@ -411,6 +437,7 @@ export const TEMPLATES: TemplateDef[] = [
       },
       { key: 'uses', type: 'array', description: 'Array of use strings' },
       { key: 'imageUrl', type: 'string', description: 'Optional image URL' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       name: 'Turmeric',
@@ -426,6 +453,7 @@ export const TEMPLATES: TemplateDef[] = [
         'Rice dishes',
       ],
       imageUrl: '',
+      citation: '',
     },
   },
 
@@ -442,6 +470,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array',
         description: 'Array of {day, breakfast, lunch, dinner} objects',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Weekly Meal Plan',
@@ -465,6 +494,7 @@ export const TEMPLATES: TemplateDef[] = [
           dinner: 'Pasta',
         },
       ],
+      citation: '',
     },
   },
 
@@ -481,6 +511,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array',
         description: 'Array of {name, price, desc} objects',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       restaurant: 'The Green Bowl',
@@ -501,6 +532,7 @@ export const TEMPLATES: TemplateDef[] = [
           desc: 'Acai, banana, granola',
         },
       ],
+      citation: '',
     },
   },
 
@@ -517,6 +549,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'carbs', type: 'string', description: 'Carbohydrate content' },
       { key: 'protein', type: 'string', description: 'Protein content' },
       { key: 'serving', type: 'string', description: 'Serving size' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       item: 'Greek Yogurt',
@@ -525,6 +558,7 @@ export const TEMPLATES: TemplateDef[] = [
       carbs: '8g',
       protein: '20g',
       serving: '1 cup (245g)',
+      citation: '',
     },
   },
 
@@ -545,6 +579,7 @@ export const TEMPLATES: TemplateDef[] = [
       },
       { key: 'steps', type: 'array', description: 'Array of step strings' },
       { key: 'imageUrl', type: 'string', description: 'Optional image URL' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Avocado Toast',
@@ -564,6 +599,7 @@ export const TEMPLATES: TemplateDef[] = [
         'Season and garnish',
       ],
       imageUrl: '',
+      citation: '',
     },
   },
 
@@ -582,6 +618,7 @@ export const TEMPLATES: TemplateDef[] = [
         description: 'Array of instruction strings',
       },
       { key: 'tip', type: 'string', description: 'Helpful tip' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Mindful Breathing',
@@ -595,6 +632,7 @@ export const TEMPLATES: TemplateDef[] = [
         'Repeat for 5 minutes',
       ],
       tip: 'If your mind wanders, gently bring focus back to your breath without judgement.',
+      citation: '',
     },
   },
 
@@ -613,12 +651,14 @@ export const TEMPLATES: TemplateDef[] = [
       },
       { key: 'note', type: 'string', description: 'Journal note' },
       { key: 'date', type: 'string', description: 'Date string' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'How are you feeling?',
       mood: 'good',
       note: 'Had a productive morning and a nice walk in the park during lunch.',
       date: 'Mar 15, 2025',
+      citation: '',
     },
   },
 
@@ -633,6 +673,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'tip', type: 'string', description: 'Featured tip' },
       { key: 'tips', type: 'array', description: 'Array of tip strings' },
       { key: 'quote', type: 'string', description: 'Motivational quote' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Better Sleep Tonight',
@@ -645,6 +686,7 @@ export const TEMPLATES: TemplateDef[] = [
       ],
       quote:
         'Sleep is the golden chain that ties health and our bodies together.',
+      citation: '',
     },
   },
 
@@ -663,12 +705,14 @@ export const TEMPLATES: TemplateDef[] = [
       },
       { key: 'unit', type: 'string', description: 'Unit label' },
       { key: 'tip', type: 'string', description: 'Hydration tip' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       goal: '8',
       current: '5',
       unit: 'glasses',
       tip: 'Keep a water bottle on your desk as a visual reminder to sip throughout the day.',
+      citation: '',
     },
   },
 
@@ -687,6 +731,7 @@ export const TEMPLATES: TemplateDef[] = [
         description: 'Detailed explanation',
       },
       { key: 'source', type: 'string', description: 'Attribution source' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       tip: 'Movement is medicine',
@@ -694,6 +739,7 @@ export const TEMPLATES: TemplateDef[] = [
       description:
         'Even 10 minutes of moderate activity can boost mood, improve focus, and reduce stress.',
       source: 'World Health Organisation',
+      citation: '',
     },
   },
 
@@ -710,6 +756,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'sets', type: 'string', description: 'Number of sets' },
       { key: 'rest', type: 'string', description: 'Rest period' },
       { key: 'note', type: 'string', description: 'Optional note' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Exercise of the Day',
@@ -718,6 +765,7 @@ export const TEMPLATES: TemplateDef[] = [
       sets: '3',
       rest: '60 sec',
       note: 'Use assisted band if needed',
+      citation: '',
     },
   },
 
@@ -734,10 +782,12 @@ export const TEMPLATES: TemplateDef[] = [
         description: 'The affirmation text',
       },
       { key: 'subtitle', type: 'string', description: 'Supporting subtitle' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       affirmation: 'Resilient',
       subtitle: 'Every setback is a setup for a comeback.',
+      citation: '',
     },
   },
 
@@ -755,11 +805,13 @@ export const TEMPLATES: TemplateDef[] = [
         description: 'Person who holds this belief',
       },
       { key: 'context', type: 'string', description: 'Optional context' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       belief: 'Simplicity is the ultimate sophistication.',
       author: 'Leonardo da Vinci',
       context: 'Renaissance artist and inventor',
+      citation: '',
     },
   },
 
@@ -773,6 +825,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'headline', type: 'string', description: 'Section headline' },
       { key: 'mission', type: 'string', description: 'Mission statement' },
       { key: 'vision', type: 'string', description: 'Vision statement' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Our Mission',
@@ -780,6 +833,7 @@ export const TEMPLATES: TemplateDef[] = [
         'Empower every person and organisation on the planet to achieve more.',
       vision:
         'A world where everyone has access to the tools they need to succeed.',
+      citation: '',
     },
   },
 
@@ -799,6 +853,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'string',
         description: 'Episode description',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'The Future of AI',
@@ -807,6 +862,7 @@ export const TEMPLATES: TemplateDef[] = [
       duration: '58 min',
       description:
         'Exploring how artificial intelligence will reshape creative industries in the next decade.',
+      citation: '',
     },
   },
 
@@ -821,12 +877,14 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'streak', type: 'string', description: 'Streak number' },
       { key: 'label', type: 'string', description: 'Unit label' },
       { key: 'started', type: 'string', description: 'Start date' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Learning Streak',
       streak: '42',
       label: 'days',
       started: 'Started Feb 15, 2025',
+      citation: '',
     },
   },
 
@@ -840,11 +898,13 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'headline', type: 'string', description: 'Main title' },
       { key: 'text', type: 'string', description: 'Body paragraph' },
       { key: 'imageUrl', type: 'string', description: 'URL to an image' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Dream Big',
       text: 'Visualise your goals, then work backwards from the future you want to create.',
       imageUrl: '',
+      citation: '',
     },
   },
 
@@ -863,12 +923,14 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'headline', type: 'string', description: 'Main title' },
       { key: 'text', type: 'string', description: 'Body paragraph' },
       { key: 'date', type: 'string', description: 'Date or timeline label' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       badge: 'Launching Soon',
       headline: 'A New Way to Work',
       text: 'We are building a platform that reimagines how teams collaborate across time zones.',
       date: 'Coming Q1 2025',
+      citation: '',
     },
   },
 
@@ -881,6 +943,7 @@ export const TEMPLATES: TemplateDef[] = [
     schema: [
       { key: 'headline', type: 'string', description: 'Main title' },
       { key: 'items', type: 'array', description: 'Array of {q, a} objects' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Frequently Asked',
@@ -894,6 +957,7 @@ export const TEMPLATES: TemplateDef[] = [
           a: 'Yes, all templates are free to use with no hidden fees.',
         },
       ],
+      citation: '',
     },
   },
 
@@ -907,6 +971,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'term', type: 'string', description: 'The word or phrase' },
       { key: 'definition', type: 'string', description: 'Clear explanation' },
       { key: 'example', type: 'string', description: 'Usage example' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       term: 'Synergy',
@@ -914,6 +979,7 @@ export const TEMPLATES: TemplateDef[] = [
         'The interaction of two or more elements that produces a combined effect greater than the sum of their separate effects.',
       example:
         'The synergy between the design and engineering teams led to a breakthrough product.',
+      citation: '',
     },
   },
 
@@ -929,6 +995,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'text', type: 'string', description: 'Body paragraph' },
       { key: 'code', type: 'string', description: 'Promo code' },
       { key: 'cta', type: 'string', description: 'Call to action text' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       badge: 'Limited Offer',
@@ -936,6 +1003,7 @@ export const TEMPLATES: TemplateDef[] = [
       text: 'Get 30% off your first month. No commitment required.',
       code: 'WELCOME30',
       cta: 'Claim Offer',
+      citation: '',
     },
   },
 
@@ -957,6 +1025,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array',
         description: 'Array of feature strings',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       plan: 'Pro Plan',
@@ -967,6 +1036,7 @@ export const TEMPLATES: TemplateDef[] = [
         'Advanced analytics',
         'Team collaboration',
       ],
+      citation: '',
     },
   },
 
@@ -983,6 +1053,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{title, description}>',
         description: 'Feature items',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Why Choose Us',
@@ -1000,6 +1071,7 @@ export const TEMPLATES: TemplateDef[] = [
           description: 'Enterprise-grade security out of the box',
         },
       ],
+      citation: '',
     },
   },
 
@@ -1012,6 +1084,7 @@ export const TEMPLATES: TemplateDef[] = [
     schema: [
       { key: 'headline', type: 'string', description: 'Main title' },
       { key: 'items', type: 'array', description: 'Array of strings' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Key Points',
@@ -1021,6 +1094,7 @@ export const TEMPLATES: TemplateDef[] = [
         'Reduced costs',
         'Faster delivery',
       ],
+      citation: '',
     },
   },
 
@@ -1034,6 +1108,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'headline', type: 'string', description: 'Main title' },
       { key: 'text', type: 'string', description: 'Supporting paragraph' },
       { key: 'items', type: 'array', description: 'Array of strings' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Launch Checklist',
@@ -1044,6 +1119,7 @@ export const TEMPLATES: TemplateDef[] = [
         'Test on mobile',
         'Schedule social posts',
       ],
+      citation: '',
     },
   },
 
@@ -1060,6 +1136,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array',
         description: 'Array of {name, hex} objects',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Brand Palette',
@@ -1085,6 +1162,7 @@ export const TEMPLATES: TemplateDef[] = [
           hex: '#f8fafc',
         },
       ],
+      citation: '',
     },
   },
 
@@ -1099,12 +1177,14 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'text', type: 'string', description: 'Supporting paragraph' },
       { key: 'items', type: 'array', description: 'Array of strings' },
       { key: 'imageUrl', type: 'string', description: 'Optional bottom image' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: '3 Daily Habits',
       text: 'Small daily improvements over time lead to massive results.',
       items: ['Wake up at 5 AM', 'Read for 30 minutes', 'Exercise daily'],
       imageUrl: '',
+      citation: '',
     },
   },
 
@@ -1118,6 +1198,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'headline', type: 'string', description: 'Main title' },
       { key: 'text', type: 'string', description: 'Supporting paragraph' },
       { key: 'steps', type: 'array', description: 'Array of {label} objects' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Getting Started',
@@ -1133,6 +1214,7 @@ export const TEMPLATES: TemplateDef[] = [
           label: 'Apply',
         },
       ],
+      citation: '',
     },
   },
 
@@ -1145,6 +1227,7 @@ export const TEMPLATES: TemplateDef[] = [
     schema: [
       { key: 'headline', type: 'string', description: 'Main title' },
       { key: 'steps', type: 'array', description: 'Array of {label} objects' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'How It Works',
@@ -1159,6 +1242,7 @@ export const TEMPLATES: TemplateDef[] = [
           label: 'Launch',
         },
       ],
+      citation: '',
     },
   },
 
@@ -1172,11 +1256,13 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'headline', type: 'string', description: 'Main title' },
       { key: 'text', type: 'string', description: 'Body paragraph' },
       { key: 'imageUrl', type: 'string', description: 'Background image' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'New Horizons',
       text: 'The future belongs to those who believe in the beauty of their dreams.',
       imageUrl: '',
+      citation: '',
     },
   },
 
@@ -1191,12 +1277,14 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'headline', type: 'string', description: 'Main title' },
       { key: 'text', type: 'string', description: 'Body text' },
       { key: 'caption', type: 'string', description: 'Bottom caption' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       imageUrl: '',
       headline: 'A New Chapter',
       text: 'Every great story begins with a single step into the unknown.',
       caption: 'Coming this summer',
+      citation: '',
     },
   },
 
@@ -1208,9 +1296,11 @@ export const TEMPLATES: TemplateDef[] = [
     group: 'Content & Design',
     schema: [
       { key: 'images', type: 'array', description: 'Array of 3 image URLs' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       images: ['', '', ''],
+      citation: '',
     },
   },
 
@@ -1224,11 +1314,13 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'headline', type: 'string', description: 'Main title' },
       { key: 'text', type: 'string', description: 'Body paragraph' },
       { key: 'imageUrl', type: 'string', description: 'Background image' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Dream Bigger',
       text: 'The only limit to your impact is your imagination and commitment to act.',
       imageUrl: '',
+      citation: '',
     },
   },
 
@@ -1240,9 +1332,11 @@ export const TEMPLATES: TemplateDef[] = [
     group: 'Content & Design',
     schema: [
       { key: 'images', type: 'array', description: 'Array of 4 image URLs' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       images: ['', '', '', ''],
+      citation: '',
     },
   },
 
@@ -1260,11 +1354,13 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'string',
         description: 'Duration display (e.g. 12:34)',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       imageUrl: '',
       headline: 'Product Demo',
       duration: '3:45',
+      citation: '',
     },
   },
 
@@ -1282,6 +1378,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array',
         description: 'Array of {title, detail} objects',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Market Rally Explained',
@@ -1300,6 +1397,7 @@ export const TEMPLATES: TemplateDef[] = [
           detail: 'Spending indices rose 4.2%',
         },
       ],
+      citation: '',
     },
   },
 
@@ -1318,12 +1416,14 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'string',
         description: 'Urgency label (e.g. BREAKING, UPDATE)',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Global Summit Reaches Historic Climate Agreement',
       source: 'Reuters',
       timestamp: '2 hours ago',
       urgency: 'BREAKING',
+      citation: '',
     },
   },
 
@@ -1340,6 +1440,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{headline, summary}>',
         description: 'Top stories',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       date: 'March 15, 2025',
@@ -1359,6 +1460,7 @@ export const TEMPLATES: TemplateDef[] = [
           summary: 'Underground ice deposits detected by latest rover mission.',
         },
       ],
+      citation: '',
     },
   },
 
@@ -1381,6 +1483,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'string',
         description: 'Detailed explanation',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       claim: 'Drinking 8 glasses of water a day is scientifically proven',
@@ -1388,6 +1491,7 @@ export const TEMPLATES: TemplateDef[] = [
       source: 'Health Feedback',
       explanation:
         'Water needs vary by individual. The "8x8" rule is a reasonable guideline but not a strict scientific requirement.',
+      citation: '',
     },
   },
 
@@ -1401,12 +1505,14 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'question', type: 'string', description: 'The question' },
       { key: 'answer', type: 'string', description: 'The answer' },
       { key: 'category', type: 'string', description: 'Topic category' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       question: 'What is design thinking?',
       answer:
         'A human-centred approach to innovation that integrates the needs of people, technology, and business.',
       category: 'Design',
+      citation: '',
     },
   },
 
@@ -1420,11 +1526,13 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'hashtag', type: 'string', description: 'Trending hashtag' },
       { key: 'volume', type: 'string', description: 'Post or mention count' },
       { key: 'relatedTags', type: 'string[]', description: 'Related hashtags' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       hashtag: '#ClimateAction',
       volume: '1.2M posts today',
       relatedTags: ['#Sustainability', '#GreenEnergy', '#COP30', '#NetZero'],
+      citation: '',
     },
   },
 
@@ -1441,6 +1549,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{name, issuer, date, credentialId}>',
         description: 'Certification list',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Certifications',
@@ -1463,6 +1572,7 @@ export const TEMPLATES: TemplateDef[] = [
           date: '2021',
         },
       ],
+      citation: '',
     },
   },
 
@@ -1479,6 +1589,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{institution, degree, field, period, location?, gpa?, highlights?}>',
         description: 'Academic history',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Education',
@@ -1505,6 +1616,7 @@ export const TEMPLATES: TemplateDef[] = [
           highlights: ['Minor in Design Innovation'],
         },
       ],
+      citation: '',
     },
   },
 
@@ -1542,6 +1654,7 @@ export const TEMPLATES: TemplateDef[] = [
         description: 'Instagram handle (without @)',
       },
       { key: 'x', type: 'string', description: 'X/Twitter handle (without @)' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       name: 'Alex Chen',
@@ -1556,6 +1669,7 @@ export const TEMPLATES: TemplateDef[] = [
       linkedin: 'alexchen',
       instagram: 'alexchen',
       x: 'alexchen',
+      citation: '',
     },
   },
 
@@ -1572,6 +1686,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{name, description, tech[], highlights[]}>',
         description: 'Project list',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Projects',
@@ -1595,6 +1710,7 @@ export const TEMPLATES: TemplateDef[] = [
           highlights: ['Handles 1M+ events/day', 'Sub-second query response'],
         },
       ],
+      citation: '',
     },
   },
 
@@ -1611,6 +1727,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{name, items[]}>',
         description: 'Skill groups',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Skills',
@@ -1639,6 +1756,7 @@ export const TEMPLATES: TemplateDef[] = [
           ],
         },
       ],
+      citation: '',
     },
   },
 
@@ -1655,6 +1773,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{company, role, period, achievements}>',
         description: 'Work history',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Work Experience',
@@ -1678,6 +1797,7 @@ export const TEMPLATES: TemplateDef[] = [
           ],
         },
       ],
+      citation: '',
     },
   },
 
@@ -1696,12 +1816,14 @@ export const TEMPLATES: TemplateDef[] = [
         description: 'Second line (7 syllables)',
       },
       { key: 'line3', type: 'string', description: 'Third line (5 syllables)' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Silence',
       line1: 'An old silent pond',
       line2: 'A frog jumps into the pond',
       line3: 'Splash! Silence again',
+      citation: '',
     },
   },
 
@@ -1715,11 +1837,13 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'headline', type: 'string', description: 'Main title' },
       { key: 'text', type: 'string', description: 'Body paragraph' },
       { key: 'imageUrl', type: 'string', description: 'URL to an image' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'The Art of Focus',
       text: 'In a world of constant distraction, the ability to concentrate on what truly matters has become a superpower.',
       imageUrl: '',
+      citation: '',
     },
   },
 
@@ -1733,11 +1857,13 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'quote', type: 'string', description: 'The quoted text' },
       { key: 'author', type: 'string', description: 'Author name' },
       { key: 'source', type: 'string', description: 'Attribution source' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       quote: 'The only way to do great work is to love what you do.',
       author: 'Steve Jobs',
       source: 'Stanford commencement address, 2005',
+      citation: '',
     },
   },
 
@@ -1757,6 +1883,7 @@ export const TEMPLATES: TemplateDef[] = [
       },
       { key: 'label', type: 'string', description: 'Rating label' },
       { key: 'sublabel', type: 'string', description: 'Rating sublabel' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Customer Rating',
@@ -1764,6 +1891,7 @@ export const TEMPLATES: TemplateDef[] = [
       scaleMax: 5,
       label: 'Excellent',
       sublabel: 'Based on 2,500+ reviews',
+      citation: '',
     },
   },
 
@@ -1777,11 +1905,13 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'headline', type: 'string', description: 'Main title' },
       { key: 'text', type: 'string', description: 'Key insight text' },
       { key: 'source', type: 'string', description: 'Attribution source' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Attention is the New Currency',
       text: 'In an information-rich world, the scarcest resource is not information but attention.',
       source: 'Herbert Simon, 1971',
+      citation: '',
     },
   },
 
@@ -1799,11 +1929,13 @@ export const TEMPLATES: TemplateDef[] = [
       },
       { key: 'headline', type: 'string', description: 'Main title' },
       { key: 'text', type: 'string', description: 'Body paragraph' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       number: '01',
       headline: 'Start Small',
       text: 'Break your goals into tiny, manageable steps. Consistency beats intensity every time.',
+      citation: '',
     },
   },
 
@@ -1816,10 +1948,12 @@ export const TEMPLATES: TemplateDef[] = [
     schema: [
       { key: 'headline', type: 'string', description: 'Main headline' },
       { key: 'text', type: 'string', description: 'Supporting text' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Create',
       text: 'Beautiful designs that inspire and motivate people every day.',
+      citation: '',
     },
   },
 
@@ -1838,11 +1972,13 @@ export const TEMPLATES: TemplateDef[] = [
         description: 'Words to highlight in accent color',
       },
       { key: 'text', type: 'string', description: 'Subtitle text' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'The Future is NOW',
       highlights: ['NOW'],
       text: '',
+      citation: '',
     },
   },
 
@@ -1856,11 +1992,13 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'icon', type: 'string', description: 'Emoji or icon character' },
       { key: 'headline', type: 'string', description: 'Main text' },
       { key: 'text', type: 'string', description: 'Description text' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       icon: '🚀',
       headline: 'Ship Faster',
       text: '',
+      citation: '',
     },
   },
 
@@ -1879,12 +2017,14 @@ export const TEMPLATES: TemplateDef[] = [
       },
       { key: 'label', type: 'string', description: 'Descriptive label' },
       { key: 'text', type: 'string', description: 'Description text' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       number: '$99',
       replacement: 'FREE',
       label: 'Limited Time Offer',
       text: '',
+      citation: '',
     },
   },
 
@@ -1900,12 +2040,14 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'word2', type: 'string', description: 'Middle word (normal)' },
       { key: 'word3', type: 'string', description: 'Last word (accent)' },
       { key: 'text', type: 'string', description: 'Subtitle text' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       word1: 'WORK',
       word2: 'hard',
       word3: 'PLAY',
       text: '',
+      citation: '',
     },
   },
 
@@ -1923,6 +2065,7 @@ export const TEMPLATES: TemplateDef[] = [
         description: 'Words with highlight flag',
       },
       { key: 'text', type: 'string', description: 'Subtitle text' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       words: [
@@ -1940,6 +2083,7 @@ export const TEMPLATES: TemplateDef[] = [
         },
       ],
       text: '',
+      citation: '',
     },
   },
 
@@ -1958,6 +2102,7 @@ export const TEMPLATES: TemplateDef[] = [
         description: 'Array of {area, description} objects',
       },
       { key: 'tip', type: 'string', description: 'Study tip' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Anatomy Study',
@@ -1977,6 +2122,7 @@ export const TEMPLATES: TemplateDef[] = [
         },
       ],
       tip: 'Practice gesture drawing for 5 minutes daily',
+      citation: '',
     },
   },
 
@@ -1994,6 +2140,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array',
         description: 'Array of {date, event, artist} objects',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Art History',
@@ -2015,6 +2162,7 @@ export const TEMPLATES: TemplateDef[] = [
           artist: 'Vincent van Gogh',
         },
       ],
+      citation: '',
     },
   },
 
@@ -2033,6 +2181,7 @@ export const TEMPLATES: TemplateDef[] = [
         description: 'Array of {name, hex, role} objects',
       },
       { key: 'tip', type: 'string', description: 'Tip text' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Color Theory',
@@ -2065,6 +2214,7 @@ export const TEMPLATES: TemplateDef[] = [
         },
       ],
       tip: 'Use complementary colors for maximum contrast',
+      citation: '',
     },
   },
 
@@ -2083,6 +2233,7 @@ export const TEMPLATES: TemplateDef[] = [
         description: 'Array of {name, hex} objects',
       },
       { key: 'mood', type: 'string', description: 'Mood tag' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Palette Inspiration',
@@ -2110,6 +2261,7 @@ export const TEMPLATES: TemplateDef[] = [
         },
       ],
       mood: 'Warm & Inviting',
+      citation: '',
     },
   },
 
@@ -2127,6 +2279,7 @@ export const TEMPLATES: TemplateDef[] = [
         description:
           'Array of {name, era, description, characteristics} objects',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Art Movements',
@@ -2144,6 +2297,7 @@ export const TEMPLATES: TemplateDef[] = [
           characteristics: 'Fragmented objects, multiple viewpoints',
         },
       ],
+      citation: '',
     },
   },
 
@@ -2163,6 +2317,7 @@ export const TEMPLATES: TemplateDef[] = [
         description: 'Array of {step, description} objects',
       },
       { key: 'tip', type: 'string', description: 'Pro tip' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Watercolor Basics',
@@ -2183,6 +2338,7 @@ export const TEMPLATES: TemplateDef[] = [
         },
       ],
       tip: 'Work quickly while the paper is still wet',
+      citation: '',
     },
   },
 
@@ -2202,6 +2358,7 @@ export const TEMPLATES: TemplateDef[] = [
       },
       { key: 'closing', type: 'string', description: 'Closing line' },
       { key: 'signature', type: 'string', description: 'Signature' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Cover Letter',
@@ -2209,6 +2366,7 @@ export const TEMPLATES: TemplateDef[] = [
       body: 'I am writing to express my interest in the Software Engineer position. With 5 years of experience building scalable web applications, I am confident I can make a meaningful contribution to your team. My background includes leading cross-functional projects, mentoring junior developers, and delivering products that serve millions of users.',
       closing: 'Thank you for your time and consideration.',
       signature: 'Best regards, Alex Chen',
+      citation: '',
     },
   },
 
@@ -2227,6 +2385,7 @@ export const TEMPLATES: TemplateDef[] = [
         description: 'Array of {question, answer} objects',
       },
       { key: 'tip', type: 'string', description: 'Preparation tip' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Interview Prep',
@@ -2242,6 +2401,7 @@ export const TEMPLATES: TemplateDef[] = [
         },
       ],
       tip: 'STAR method: Situation, Task, Action, Result',
+      citation: '',
     },
   },
 
@@ -2257,6 +2417,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'description', type: 'string', description: 'Description' },
       { key: 'doList', type: 'array', description: 'Array of do strings' },
       { key: 'dontList', type: 'array', description: "Array of don't strings" },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Networking Tip',
@@ -2273,6 +2434,7 @@ export const TEMPLATES: TemplateDef[] = [
         'Only talk about yourself',
         'Spam with messages',
       ],
+      citation: '',
     },
   },
 
@@ -2292,6 +2454,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array',
         description: 'Array of example strings',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Resume Tip',
@@ -2304,6 +2467,7 @@ export const TEMPLATES: TemplateDef[] = [
         'Increased revenue by 25% YoY',
         'Reduced load time by 40%',
       ],
+      citation: '',
     },
   },
 
@@ -2322,6 +2486,7 @@ export const TEMPLATES: TemplateDef[] = [
         description: 'Array of {level, salary, location} objects',
       },
       { key: 'note', type: 'string', description: 'Disclaimer note' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Salary Guide',
@@ -2344,6 +2509,7 @@ export const TEMPLATES: TemplateDef[] = [
         },
       ],
       note: 'Salaries vary by company, experience, and location',
+      citation: '',
     },
   },
 
@@ -2361,6 +2527,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array',
         description: 'Array of {level, description, duration} objects',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Skill Roadmap',
@@ -2382,6 +2549,7 @@ export const TEMPLATES: TemplateDef[] = [
           duration: '3-6 months',
         },
       ],
+      citation: '',
     },
   },
 
@@ -2397,6 +2565,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'description', type: 'string', description: 'Description' },
       { key: 'rarity', type: 'string', description: 'Rarity level' },
       { key: 'dateUnlocked', type: 'string', description: 'Date unlocked' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Platinum Trophy',
@@ -2404,6 +2573,7 @@ export const TEMPLATES: TemplateDef[] = [
       description: 'Collect all trophies',
       rarity: 'Ultra Rare',
       dateUnlocked: 'Mar 15, 2026',
+      citation: '',
     },
   },
 
@@ -2420,6 +2590,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'reviewer', type: 'string', description: 'Reviewer name' },
       { key: 'pros', type: 'array', description: 'Array of pro strings' },
       { key: 'cons', type: 'array', description: 'Array of con strings' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Elden Ring',
@@ -2428,6 +2599,7 @@ export const TEMPLATES: TemplateDef[] = [
       reviewer: 'GameSpot',
       pros: ['Massive open world', 'Deep combat system', 'Stunning visuals'],
       cons: ['Steep learning curve', 'Some performance issues'],
+      citation: '',
     },
   },
 
@@ -2446,6 +2618,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array',
         description: 'Array of {name, value, recommendation} objects',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Optimal Settings',
@@ -2468,6 +2641,7 @@ export const TEMPLATES: TemplateDef[] = [
           recommendation: 'Capped at 240',
         },
       ],
+      citation: '',
     },
   },
 
@@ -2486,6 +2660,7 @@ export const TEMPLATES: TemplateDef[] = [
         description: 'Array of {name, spec} objects',
       },
       { key: 'totalCost', type: 'string', description: 'Total cost' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'My Gaming Setup',
@@ -2505,6 +2680,7 @@ export const TEMPLATES: TemplateDef[] = [
         },
       ],
       totalCost: '$2,500',
+      citation: '',
     },
   },
 
@@ -2523,6 +2699,7 @@ export const TEMPLATES: TemplateDef[] = [
         description: 'Array of {label, value} objects',
       },
       { key: 'highlight', type: 'string', description: 'Highlight badge' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Season Stats',
@@ -2546,6 +2723,7 @@ export const TEMPLATES: TemplateDef[] = [
         },
       ],
       highlight: 'Top 1%',
+      citation: '',
     },
   },
 
@@ -2564,6 +2742,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array',
         description: 'Array of {position, team, score} objects',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Tournament Results',
@@ -2586,6 +2765,7 @@ export const TEMPLATES: TemplateDef[] = [
           score: '9',
         },
       ],
+      citation: '',
     },
   },
 
@@ -2602,6 +2782,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'rating', type: 'number', description: 'Rating out of 5' },
       { key: 'review', type: 'string', description: 'Review text' },
       { key: 'favoriteTrack', type: 'string', description: 'Favorite track' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Abbey Road',
@@ -2610,6 +2791,7 @@ export const TEMPLATES: TemplateDef[] = [
       rating: 5,
       review: 'A masterpiece that showcases the band at their creative peak.',
       favoriteTrack: 'Come Together',
+      citation: '',
     },
   },
 
@@ -2628,6 +2810,7 @@ export const TEMPLATES: TemplateDef[] = [
       },
       { key: 'difficulty', type: 'string', description: 'Difficulty' },
       { key: 'tip', type: 'string', description: 'Playing tip' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Basic Chords',
@@ -2655,6 +2838,7 @@ export const TEMPLATES: TemplateDef[] = [
       ],
       difficulty: 'Beginner',
       tip: 'Practice transitioning between C, G, and Am',
+      citation: '',
     },
   },
 
@@ -2671,6 +2855,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'price', type: 'string', description: 'Price' },
       { key: 'pros', type: 'array', description: 'Array of pro strings' },
       { key: 'cons', type: 'array', description: 'Array of con strings' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       name: 'Audio-Technica ATH-M50x',
@@ -2683,6 +2868,7 @@ export const TEMPLATES: TemplateDef[] = [
         'Durable build',
       ],
       cons: ['Slightly heavy', 'Non-detachable cable on older models'],
+      citation: '',
     },
   },
 
@@ -2702,6 +2888,7 @@ export const TEMPLATES: TemplateDef[] = [
         description: 'Array of example strings',
       },
       { key: 'tip', type: 'string', description: 'Learning tip' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Music Theory',
@@ -2714,6 +2901,7 @@ export const TEMPLATES: TemplateDef[] = [
         'ii-V-I in jazz: Dm-G7-Cmaj7',
       ],
       tip: 'Listen to songs and try to identify the progression by ear',
+      citation: '',
     },
   },
 
@@ -2732,6 +2920,7 @@ export const TEMPLATES: TemplateDef[] = [
         description: 'Array of {number, name, artist, duration} objects',
       },
       { key: 'totalDuration', type: 'string', description: 'Total duration' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Focus Flow',
@@ -2757,6 +2946,7 @@ export const TEMPLATES: TemplateDef[] = [
         },
       ],
       totalDuration: '16:16',
+      citation: '',
     },
   },
 
@@ -2780,6 +2970,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array',
         description: 'Array of encore song strings',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       artist: 'Radiohead',
@@ -2803,6 +2994,7 @@ export const TEMPLATES: TemplateDef[] = [
         },
       ],
       encore: ['Creep', 'Karma Police'],
+      citation: '',
     },
   },
 
@@ -2818,6 +3010,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'author', type: 'string', description: 'Author name' },
       { key: 'pageNumber', type: 'string', description: 'Page number' },
       { key: 'genre', type: 'string', description: 'Genre' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       quote: 'It is a truth universally acknowledged.',
@@ -2825,6 +3018,7 @@ export const TEMPLATES: TemplateDef[] = [
       author: 'Jane Austen',
       pageNumber: '1',
       genre: 'Classic',
+      citation: '',
     },
   },
 
@@ -2839,12 +3033,14 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'author', type: 'string', description: 'Author name' },
       { key: 'category', type: 'string', description: 'Category tag' },
       { key: 'date', type: 'string', description: 'Date' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       wisdom: 'Simplicity is the ultimate sophistication.',
       author: 'Leonardo da Vinci',
       category: 'Philosophy',
       date: 'Jul 13',
+      citation: '',
     },
   },
 
@@ -2859,12 +3055,14 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'author', type: 'string', description: 'Author name' },
       { key: 'source', type: 'string', description: 'Source' },
       { key: 'year', type: 'string', description: 'Year' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       quote: 'The only way to do great work is to love what you do.',
       author: 'Steve Jobs',
       source: 'Stanford commencement address',
       year: '2005',
+      citation: '',
     },
   },
 
@@ -2879,6 +3077,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'author', type: 'string', description: 'Author name' },
       { key: 'theme', type: 'string', description: 'Theme tag' },
       { key: 'subtitle', type: 'string', description: 'Subtitle' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       quote:
@@ -2886,6 +3085,7 @@ export const TEMPLATES: TemplateDef[] = [
       author: 'Eleanor Roosevelt',
       theme: 'Dreams',
       subtitle: 'Keep believing in yourself',
+      citation: '',
     },
   },
 
@@ -2901,6 +3101,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'character', type: 'string', description: 'Character name' },
       { key: 'year', type: 'string', description: 'Year' },
       { key: 'genre', type: 'string', description: 'Genre' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       quote: 'Life is like a box of chocolates.',
@@ -2908,6 +3109,7 @@ export const TEMPLATES: TemplateDef[] = [
       character: 'Forrest Gump',
       year: '1994',
       genre: 'Drama',
+      citation: '',
     },
   },
 
@@ -2923,6 +3125,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'artist', type: 'string', description: 'Artist name' },
       { key: 'album', type: 'string', description: 'Album name' },
       { key: 'year', type: 'string', description: 'Year' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       lyric: 'Imagine all the people living life in peace.',
@@ -2930,6 +3133,7 @@ export const TEMPLATES: TemplateDef[] = [
       artist: 'John Lennon',
       album: 'Imagine',
       year: '1971',
+      citation: '',
     },
   },
 
@@ -2946,6 +3150,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'traits', type: 'array', description: 'Array of trait strings' },
       { key: 'motivation', type: 'string', description: 'Motivation' },
       { key: 'flaw', type: 'string', description: 'Fatal flaw' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       name: 'Elena Voss',
@@ -2954,6 +3159,7 @@ export const TEMPLATES: TemplateDef[] = [
       traits: ['Brave', 'Curious', 'Flawed'],
       motivation: 'Truth and justice',
       flaw: 'Reckless ambition',
+      citation: '',
     },
   },
 
@@ -2971,6 +3177,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array',
         description: 'Array of {name, items} objects',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Editing Checklist',
@@ -2985,6 +3192,7 @@ export const TEMPLATES: TemplateDef[] = [
           items: ['Grammar correct', 'Varied sentence length', 'Active voice'],
         },
       ],
+      citation: '',
     },
   },
 
@@ -3009,6 +3217,7 @@ export const TEMPLATES: TemplateDef[] = [
         description: 'Array of example strings',
       },
       { key: 'tip', type: 'string', description: 'Writing tip' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Genre Guide',
@@ -3017,6 +3226,7 @@ export const TEMPLATES: TemplateDef[] = [
       elements: ['Clues', 'Red herrings', 'Revelation'],
       examples: ['Sherlock Holmes', 'Gone Girl'],
       tip: 'Plant clues early and play fair with the reader',
+      citation: '',
     },
   },
 
@@ -3035,6 +3245,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array',
         description: 'Array of {name, description} objects',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Story Structure',
@@ -3054,6 +3265,7 @@ export const TEMPLATES: TemplateDef[] = [
           description: 'Climax and resolution',
         },
       ],
+      citation: '',
     },
   },
 
@@ -3073,6 +3285,7 @@ export const TEMPLATES: TemplateDef[] = [
         description: 'Array of {name, detail} objects',
       },
       { key: 'rules', type: 'array', description: 'Array of rule strings' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'World Building',
@@ -3093,6 +3306,7 @@ export const TEMPLATES: TemplateDef[] = [
         },
       ],
       rules: ['Magic has a cost', 'Actions have consequences'],
+      citation: '',
     },
   },
 
@@ -3108,6 +3322,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'genre', type: 'string', description: 'Genre' },
       { key: 'difficulty', type: 'string', description: 'Difficulty' },
       { key: 'wordCount', type: 'string', description: 'Target word count' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Writing Prompt',
@@ -3116,6 +3331,7 @@ export const TEMPLATES: TemplateDef[] = [
       genre: 'Fiction',
       difficulty: 'Intermediate',
       wordCount: '500',
+      citation: '',
     },
   },
 
@@ -3132,6 +3348,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array',
         description: 'Array of {label, description} objects',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Common Ratios',
@@ -3149,6 +3366,7 @@ export const TEMPLATES: TemplateDef[] = [
           description: 'YouTube Thumbnail',
         },
       ],
+      citation: '',
     },
   },
 
@@ -3164,6 +3382,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'rating', type: 'number', description: 'Star rating 1-5' },
       { key: 'review', type: 'string', description: 'Review text' },
       { key: 'genre', type: 'string', description: 'Book genre' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Atomic Habits',
@@ -3172,6 +3391,7 @@ export const TEMPLATES: TemplateDef[] = [
       review:
         'A practical guide to building good habits and breaking bad ones. Clear and actionable.',
       genre: 'Self-help',
+      citation: '',
     },
   },
 
@@ -3188,6 +3408,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{author?, title?, year?, url?}>',
         description: 'Reference items',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'References',
@@ -3205,6 +3426,7 @@ export const TEMPLATES: TemplateDef[] = [
           url: 'https://example.com/ui-patterns',
         },
       ],
+      citation: '',
     },
   },
 
@@ -3221,6 +3443,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array',
         description: 'Array of {label, pct} objects',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Market Share',
@@ -3242,6 +3465,7 @@ export const TEMPLATES: TemplateDef[] = [
           pct: 5,
         },
       ],
+      citation: '',
     },
   },
 
@@ -3256,12 +3480,14 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'title', type: 'string', description: 'Notification title' },
       { key: 'body', type: 'string', description: 'Notification body' },
       { key: 'time', type: 'string', description: 'Time stamp' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       app: 'Messages',
       title: 'Alex Chen',
       body: 'Are we still on for tomorrow?',
       time: 'now',
+      citation: '',
     },
   },
 
@@ -3278,6 +3504,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array',
         description: 'Array of {name, status} objects',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'System Status',
@@ -3299,6 +3526,7 @@ export const TEMPLATES: TemplateDef[] = [
           status: 'Operational',
         },
       ],
+      citation: '',
     },
   },
 
@@ -3316,6 +3544,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{label: string, value: number}>',
         description: 'Data points with label and value',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'User Growth',
@@ -3346,6 +3575,7 @@ export const TEMPLATES: TemplateDef[] = [
           value: 60,
         },
       ],
+      citation: '',
     },
   },
 
@@ -3363,6 +3593,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{label: string, value: number}>',
         description: 'Bar items with label and value',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Sales by Quarter',
@@ -3385,6 +3616,7 @@ export const TEMPLATES: TemplateDef[] = [
           value: 80,
         },
       ],
+      citation: '',
     },
   },
 
@@ -3402,6 +3634,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{label: string, value: number}>',
         description: 'Pie slices with label and value',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Traffic Sources',
@@ -3424,6 +3657,7 @@ export const TEMPLATES: TemplateDef[] = [
           value: 15,
         },
       ],
+      citation: '',
     },
   },
 
@@ -3442,12 +3676,14 @@ export const TEMPLATES: TemplateDef[] = [
         description: 'Progress percentage 0-100',
       },
       { key: 'label', type: 'string', description: 'Label below the ring' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Completion Rate',
       text: 'Overall project progress',
       value: 73,
       label: 'of tasks completed',
+      citation: '',
     },
   },
 
@@ -3465,6 +3701,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{label: string, value: number}>',
         description: 'Radar axes with label and value (0-100)',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Skill Assessment',
@@ -3495,6 +3732,7 @@ export const TEMPLATES: TemplateDef[] = [
           value: 60,
         },
       ],
+      citation: '',
     },
   },
 
@@ -3512,6 +3750,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{x: number, y: number, label?: string}>',
         description: 'Data points with x/y coordinates and optional label',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Performance Analysis',
@@ -3546,6 +3785,7 @@ export const TEMPLATES: TemplateDef[] = [
           y: 60,
         },
       ],
+      citation: '',
     },
   },
 
@@ -3560,6 +3800,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'before', type: 'object', description: '{label, text}' },
       { key: 'after', type: 'object', description: '{label, text}' },
       { key: 'imageUrl', type: 'string', description: 'Optional shared image' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Before vs After',
@@ -3572,6 +3813,7 @@ export const TEMPLATES: TemplateDef[] = [
         text: 'Automated pipeline runs in 5 minutes with 99.9% accuracy.',
       },
       imageUrl: '',
+      citation: '',
     },
   },
 
@@ -3589,6 +3831,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{name, values}>',
         description: 'Plans with feature values',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Compare Plans',
@@ -3613,6 +3856,7 @@ export const TEMPLATES: TemplateDef[] = [
           values: ['✓', '✓', '✓', '✓', '✓'],
         },
       ],
+      citation: '',
     },
   },
 
@@ -3626,11 +3870,13 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'headline', type: 'string', description: 'Main title' },
       { key: 'myth', type: 'string', description: 'The misconception' },
       { key: 'fact', type: 'string', description: 'The truth' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Common Misconceptions',
       myth: 'Eating at night causes weight gain by itself.',
       fact: 'Total calorie intake matters most, not the time of day you eat.',
+      citation: '',
     },
   },
 
@@ -3644,11 +3890,13 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'headline', type: 'string', description: 'Main title' },
       { key: 'pros', type: 'array', description: 'Array of pro strings' },
       { key: 'cons', type: 'array', description: 'Array of con strings' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Pros & Cons',
       pros: ['Fast setup', 'Low cost', 'Easy to use'],
       cons: ['Limited features', 'Steep learning curve'],
+      citation: '',
     },
   },
 
@@ -3662,11 +3910,13 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'headline', type: 'string', description: 'Main title' },
       { key: 'text', type: 'string', description: 'Body paragraph' },
       { key: 'imageUrl', type: 'string', description: 'URL to an image' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Less is More',
       text: 'Simplicity is the ultimate sophistication. Every element must earn its place through purpose.',
       imageUrl: '',
+      citation: '',
     },
   },
 
@@ -3685,6 +3935,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array',
         description: 'Array of {a, b} objects',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Versus',
@@ -3710,6 +3961,7 @@ export const TEMPLATES: TemplateDef[] = [
           b: 'Priority support',
         },
       ],
+      citation: '',
     },
   },
 
@@ -3732,12 +3984,14 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'string',
         description: 'Optional background image',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       stat: '84%',
       headline: 'User Satisfaction',
       text: 'Based on survey responses from over 10,000 active users across 50 countries.',
       imageUrl: '',
+      citation: '',
     },
   },
 
@@ -3754,6 +4008,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array',
         description: 'Array of {label, desc} objects',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Why Choose Us',
@@ -3775,6 +4030,7 @@ export const TEMPLATES: TemplateDef[] = [
           desc: 'Grows with your needs',
         },
       ],
+      citation: '',
     },
   },
 
@@ -3791,6 +4047,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array',
         description: 'Array of {label, pct} objects',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Progress',
@@ -3812,6 +4069,7 @@ export const TEMPLATES: TemplateDef[] = [
           pct: 20,
         },
       ],
+      citation: '',
     },
   },
 
@@ -3825,11 +4083,13 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'label', type: 'string', description: 'Chart label' },
       { key: 'values', type: 'array', description: 'Array of numbers' },
       { key: 'current', type: 'string', description: 'Current value' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       label: 'Revenue Trend',
       values: [20, 35, 25, 45, 40, 55, 50, 65, 60, 75],
       current: '$75K',
+      citation: '',
     },
   },
 
@@ -3842,13 +4102,20 @@ export const TEMPLATES: TemplateDef[] = [
     schema: [
       { key: 'headline', type: 'string', description: 'Main title' },
       {
+        key: 'text',
+        type: 'string',
+        description: 'Description text under headline',
+      },
+      {
         key: 'stats',
         type: 'array',
         description: 'Array of {value, label} objects',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'By the Numbers',
+      text: '',
       stats: [
         {
           value: '10K+',
@@ -3863,6 +4130,7 @@ export const TEMPLATES: TemplateDef[] = [
           label: 'Support',
         },
       ],
+      citation: '',
     },
   },
 
@@ -3880,6 +4148,7 @@ export const TEMPLATES: TemplateDef[] = [
         description: 'Array of {date, event} objects',
       },
       { key: 'imageUrl', type: 'string', description: 'Optional bottom image' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Project Milestones',
@@ -3902,6 +4171,7 @@ export const TEMPLATES: TemplateDef[] = [
         },
       ],
       imageUrl: '',
+      citation: '',
     },
   },
 
@@ -3923,6 +4193,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'fp', type: 'number', description: 'False Positives' },
       { key: 'fn', type: 'number', description: 'False Negatives' },
       { key: 'accuracy', type: 'string', description: 'Overall accuracy' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Email Spam Classifier',
@@ -3932,6 +4203,7 @@ export const TEMPLATES: TemplateDef[] = [
       fp: 15,
       fn: 25,
       accuracy: '94.6%',
+      citation: '',
     },
   },
 
@@ -3945,6 +4217,12 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'title', type: 'string', description: 'Table title' },
       { key: 'columns', type: 'string[]', description: 'Column headers' },
       { key: 'rows', type: 'string[][]', description: 'Table rows' },
+      {
+        key: 'text',
+        type: 'string',
+        description: 'Description text under the table',
+      },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Quarterly Results',
@@ -3975,6 +4253,8 @@ export const TEMPLATES: TemplateDef[] = [
           3: 'On track',
         },
       ],
+      text: 'Q2 and Q4 showed strong growth driven by new product launches. Q3 dip was due to seasonal factors and has since recovered.',
+      citation: '',
     },
   },
 
@@ -3993,6 +4273,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'number[][]',
         description: '2D array of values 0-100',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Activity Heatmap',
@@ -4030,6 +4311,7 @@ export const TEMPLATES: TemplateDef[] = [
           3: 20,
         },
       ],
+      citation: '',
     },
   },
 
@@ -4047,6 +4329,7 @@ export const TEMPLATES: TemplateDef[] = [
         description: 'Array of {name, type} objects',
       },
       { key: 'method', type: 'string', description: 'Research method' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       hypothesis: 'Users who see personalized content engage 40% more',
@@ -4061,6 +4344,7 @@ export const TEMPLATES: TemplateDef[] = [
         },
       ],
       method: 'A/B Testing',
+      citation: '',
     },
   },
 
@@ -4088,6 +4372,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'number',
         description: 'Epoch with best val loss',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Training Progress',
@@ -4101,6 +4386,7 @@ export const TEMPLATES: TemplateDef[] = [
         0.6, 0.61, 0.62, 0.63, 0.64, 0.65, 0.66,
       ],
       bestEpoch: 11,
+      citation: '',
     },
   },
 
@@ -4117,6 +4403,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{name, accuracy, f1, precision, recall, latency}>',
         description: 'Model metrics',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Classification Models',
@@ -4154,6 +4441,7 @@ export const TEMPLATES: TemplateDef[] = [
           latency: '45ms',
         },
       ],
+      citation: '',
     },
   },
 
@@ -4185,6 +4473,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'string',
         description: 'Example response body',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       method: 'GET',
@@ -4204,6 +4493,7 @@ export const TEMPLATES: TemplateDef[] = [
       ],
       responseExample:
         '{\n  "id": "usr_abc123",\n  "name": "Jane Doe",\n  "email": "jane@example.com"\n}',
+      citation: '',
     },
   },
 
@@ -4225,6 +4515,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{from, to, label}>',
         description: 'Connections between components',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Microservices Architecture',
@@ -4263,6 +4554,7 @@ export const TEMPLATES: TemplateDef[] = [
           label: 'queries',
         },
       ],
+      citation: '',
     },
   },
 
@@ -4281,6 +4573,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{type, description}>',
         description: 'Change entries (added/fixed/changed/removed)',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'App Release',
@@ -4308,6 +4601,7 @@ export const TEMPLATES: TemplateDef[] = [
           description: 'Deprecated legacy API endpoints',
         },
       ],
+      citation: '',
     },
   },
 
@@ -4324,6 +4618,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{name, columns}>',
         description: 'Database tables',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Database Schema',
@@ -4373,6 +4668,7 @@ export const TEMPLATES: TemplateDef[] = [
           ],
         },
       ],
+      citation: '',
     },
   },
 
@@ -4394,6 +4690,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{from, to}>',
         description: 'Connections between nodes',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Package Dependencies',
@@ -4445,6 +4742,7 @@ export const TEMPLATES: TemplateDef[] = [
           to: 'react',
         },
       ],
+      citation: '',
     },
   },
 
@@ -4465,6 +4763,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{name, commits}>',
         description: 'Branches with their commits',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Feature Branch Workflow',
@@ -4497,6 +4796,7 @@ export const TEMPLATES: TemplateDef[] = [
           ],
         },
       ],
+      citation: '',
     },
   },
 
@@ -4511,12 +4811,14 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'daysLeft', type: 'string', description: 'Days remaining' },
       { key: 'task', type: 'string', description: 'Task name' },
       { key: 'text', type: 'string', description: 'Description text' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Deadline',
       daysLeft: '5',
       task: 'Final submission',
       text: '',
+      citation: '',
     },
   },
 
@@ -4532,6 +4834,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'timeLeft', type: 'string', description: 'Time remaining' },
       { key: 'date', type: 'string', description: 'Event date' },
       { key: 'text', type: 'string', description: 'Description text' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Event Timer',
@@ -4539,6 +4842,7 @@ export const TEMPLATES: TemplateDef[] = [
       timeLeft: '3d 12h 45m',
       date: 'Mar 15, 2025',
       text: '',
+      citation: '',
     },
   },
 
@@ -4555,6 +4859,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'target', type: 'number', description: 'Target value' },
       { key: 'unit', type: 'string', description: 'Unit suffix' },
       { key: 'text', type: 'string', description: 'Description text' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Goal Tracker',
@@ -4563,6 +4868,7 @@ export const TEMPLATES: TemplateDef[] = [
       target: 100,
       unit: '',
       text: '',
+      citation: '',
     },
   },
 
@@ -4576,11 +4882,13 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'title', type: 'string', description: 'Countdown title' },
       { key: 'date', type: 'string', description: 'Target date string' },
       { key: 'text', type: 'string', description: 'Description text' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Coming Soon',
       date: '2025-03-01',
       text: '',
+      citation: '',
     },
   },
 
@@ -4596,6 +4904,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'current', type: 'string', description: 'Current value' },
       { key: 'target', type: 'string', description: 'Target value' },
       { key: 'text', type: 'string', description: 'Description text' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Milestone',
@@ -4603,6 +4912,7 @@ export const TEMPLATES: TemplateDef[] = [
       current: '9,847',
       target: '10,000',
       text: '',
+      citation: '',
     },
   },
 
@@ -4618,6 +4928,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'record', type: 'string', description: 'Best time' },
       { key: 'attempts', type: 'string', description: 'Number of attempts' },
       { key: 'text', type: 'string', description: 'Description text' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Speed Run',
@@ -4625,6 +4936,7 @@ export const TEMPLATES: TemplateDef[] = [
       record: '2h 15m',
       attempts: '12',
       text: '',
+      citation: '',
     },
   },
 
@@ -4640,6 +4952,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'headline', type: 'string', description: 'Page headline' },
       { key: 'description', type: 'string', description: 'Description text' },
       { key: 'image', type: 'string', description: '16:9 content image URL' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       url: 'example.com',
@@ -4647,6 +4960,7 @@ export const TEMPLATES: TemplateDef[] = [
       headline: 'Your Site',
       description: 'A modern web experience for everyone',
       image: '',
+      citation: '',
     },
   },
 
@@ -4664,11 +4978,13 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'string',
         description: 'Indented file/folder tree (2 spaces per depth)',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Project Structure',
       description: 'Well-organised codebase with clear separation of concerns.',
       tree: 'src/\n  components/\n    Button.tsx\n    Header.tsx\n  hooks/\n    useAuth.ts\n  utils/\n    api.ts\n  App.tsx\n  index.ts\npackage.json\ntsconfig.json',
+      citation: '',
     },
   },
 
@@ -4687,12 +5003,14 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'string',
         description: 'Programming language label',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Snippet',
       description: 'Clean and readable code example.',
       code: 'import { useState } from "react";\n\nconst App = () => {\n  const [count, setCount] = useState(0);\n  return <div>{count}</div>;\n};',
       language: 'TypeScript',
+      citation: '',
     },
   },
 
@@ -4706,11 +5024,13 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'headline', type: 'string', description: 'App name or headline' },
       { key: 'description', type: 'string', description: 'Description text' },
       { key: 'image', type: 'string', description: '9:16 content image URL' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'FitTrack',
       description: 'Track your daily activity and stay motivated',
       image: '',
+      citation: '',
     },
   },
 
@@ -4724,11 +5044,13 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'headline', type: 'string', description: 'Watch headline' },
       { key: 'description', type: 'string', description: 'Description text' },
       { key: 'image', type: 'string', description: '1:1 watch face image URL' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Health Watch',
       description: 'Track your fitness goals with style',
       image: '',
+      citation: '',
     },
   },
 
@@ -4744,6 +5066,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'command', type: 'string', description: 'Shell command' },
       { key: 'output', type: 'string', description: 'Command output' },
       { key: 'syntax', type: 'string', description: 'Code or syntax block' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Deploy Script',
@@ -4751,6 +5074,7 @@ export const TEMPLATES: TemplateDef[] = [
       command: 'npm run deploy',
       output: 'Deploying to production...',
       syntax: '✓ Build complete\n✓ Tests passed\n✓ Deployed v2.4.1',
+      citation: '',
     },
   },
 
@@ -4769,6 +5093,7 @@ export const TEMPLATES: TemplateDef[] = [
       },
       { key: 'mode', type: 'string', description: 'Shooting mode' },
       { key: 'tip', type: 'string', description: 'Photography tip' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       camera: 'Sony A7IV',
@@ -4792,6 +5117,7 @@ export const TEMPLATES: TemplateDef[] = [
       ],
       mode: 'Portrait',
       tip: 'Use a wide aperture for beautiful bokeh',
+      citation: '',
     },
   },
 
@@ -4806,6 +5132,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'rule', type: 'string', description: 'Rule name' },
       { key: 'description', type: 'string', description: 'Description' },
       { key: 'tips', type: 'array', description: 'Array of tip strings' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Composition',
@@ -4817,6 +5144,7 @@ export const TEMPLATES: TemplateDef[] = [
         'Align subjects with intersection points',
         'Leave space in the direction of movement',
       ],
+      citation: '',
     },
   },
 
@@ -4833,6 +5161,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array',
         description: 'Array of {name, focalLength, aperture, use} objects',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Lens Guide',
@@ -4856,6 +5185,7 @@ export const TEMPLATES: TemplateDef[] = [
           use: 'Sports / Wildlife',
         },
       ],
+      citation: '',
     },
   },
 
@@ -4874,6 +5204,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array',
         description: 'Array of {label, desc} objects',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Lighting Tips',
@@ -4897,6 +5228,7 @@ export const TEMPLATES: TemplateDef[] = [
           desc: 'Use softboxes or umbrellas to diffuse',
         },
       ],
+      citation: '',
     },
   },
 
@@ -4919,6 +5251,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array',
         description: 'Array of keyword strings',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Mood Board',
@@ -4938,6 +5271,7 @@ export const TEMPLATES: TemplateDef[] = [
         },
       ],
       keywords: ['autumn', 'golden hour', 'cozy', 'nature', 'warm tones'],
+      citation: '',
     },
   },
 
@@ -4953,6 +5287,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'afterLabel', type: 'string', description: 'After label' },
       { key: 'description', type: 'string', description: 'Description' },
       { key: 'imageUrl', type: 'string', description: 'Image URL' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Photo Editing',
@@ -4960,6 +5295,7 @@ export const TEMPLATES: TemplateDef[] = [
       afterLabel: 'After',
       description: 'Basic color grading and exposure correction',
       imageUrl: '',
+      citation: '',
     },
   },
 
@@ -4990,6 +5326,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{label, valueA, valueB}>',
         description: 'Comparison stats',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Matchday 30',
@@ -5020,6 +5357,7 @@ export const TEMPLATES: TemplateDef[] = [
           valueB: '12',
         },
       ],
+      citation: '',
     },
   },
 
@@ -5042,6 +5380,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{position, team, played, won, drawn, lost, gd, points}>',
         description: 'Team standings',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Premier League 2024/25',
@@ -5098,6 +5437,7 @@ export const TEMPLATES: TemplateDef[] = [
           points: 47,
         },
       ],
+      citation: '',
     },
   },
 
@@ -5116,6 +5456,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{date, time, homeTeam, awayTeam, venue}>',
         description: 'Upcoming fixtures',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Arsenal — March Fixtures',
@@ -5150,6 +5491,7 @@ export const TEMPLATES: TemplateDef[] = [
           venue: 'Emirates Stadium',
         },
       ],
+      citation: '',
     },
   },
 
@@ -5183,6 +5525,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{label, home, away}>',
         description: 'Match statistics',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Premier League',
@@ -5232,6 +5575,7 @@ export const TEMPLATES: TemplateDef[] = [
           away: '3',
         },
       ],
+      citation: '',
     },
   },
 
@@ -5250,6 +5594,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{position, name, team, value}>',
         description: 'Top players ranking',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Top Scorers',
@@ -5286,6 +5631,7 @@ export const TEMPLATES: TemplateDef[] = [
           value: 14,
         },
       ],
+      citation: '',
     },
   },
 
@@ -5304,6 +5650,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{name, matches}>',
         description: 'Bracket rounds with match pairings',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Champions League 2025',
@@ -5350,6 +5697,7 @@ export const TEMPLATES: TemplateDef[] = [
           ],
         },
       ],
+      citation: '',
     },
   },
 
@@ -5366,6 +5714,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array',
         description: 'Array of {place, reason} objects',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Travel Dreams',
@@ -5387,6 +5736,7 @@ export const TEMPLATES: TemplateDef[] = [
           reason: 'Experience rice terraces and temple culture',
         },
       ],
+      citation: '',
     },
   },
 
@@ -5406,6 +5756,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'bestTime', type: 'string', description: 'Best time to visit' },
       { key: 'tip', type: 'string', description: 'Travel tip' },
       { key: 'imageUrl', type: 'string', description: 'Optional image URL' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       destination: 'Kyoto, Japan',
@@ -5418,6 +5769,7 @@ export const TEMPLATES: TemplateDef[] = [
       bestTime: 'March–May or Oct–Nov',
       tip: 'Visit popular temples early in the morning to avoid crowds.',
       imageUrl: '',
+      citation: '',
     },
   },
 
@@ -5436,6 +5788,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{time, activity, location}>',
         description: 'Schedule items',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Tokyo Adventure',
@@ -5468,6 +5821,7 @@ export const TEMPLATES: TemplateDef[] = [
           location: 'Shinjuku',
         },
       ],
+      citation: '',
     },
   },
 
@@ -5487,6 +5841,7 @@ export const TEMPLATES: TemplateDef[] = [
       },
       { key: 'funFact', type: 'string', description: 'Interesting fact' },
       { key: 'imageUrl', type: 'string', description: 'Optional image URL' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       name: 'Colosseum',
@@ -5496,6 +5851,7 @@ export const TEMPLATES: TemplateDef[] = [
       funFact:
         'The Colosseum had a retractable awning system called the velarium to shield spectators from the sun.',
       imageUrl: '',
+      citation: '',
     },
   },
 
@@ -5509,6 +5865,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'title', type: 'string', description: 'Trip title' },
       { key: 'items', type: 'array', description: 'Array of item strings' },
       { key: 'tip', type: 'string', description: 'Packing tip' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Weekend Getaway',
@@ -5523,6 +5880,7 @@ export const TEMPLATES: TemplateDef[] = [
         'Snacks',
       ],
       tip: 'Roll your clothes instead of folding to save space and reduce wrinkles.',
+      citation: '',
     },
   },
 
@@ -5541,6 +5899,7 @@ export const TEMPLATES: TemplateDef[] = [
         description: 'Detailed explanation',
       },
       { key: 'hashtag', type: 'string', description: 'Related hashtag' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       tip: 'Pack a portable charger',
@@ -5548,6 +5907,7 @@ export const TEMPLATES: TemplateDef[] = [
       description:
         'A portable power bank is a lifesaver during long travel days when outlets are scarce.',
       hashtag: '#TravelSmart',
+      citation: '',
     },
   },
 
@@ -5569,6 +5929,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'object',
         description: '{city, temp, condition, humidity, wind}',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Climate Compare',
@@ -5586,6 +5947,7 @@ export const TEMPLATES: TemplateDef[] = [
         humidity: '55%',
         wind: '10 km/h',
       },
+      citation: '',
     },
   },
 
@@ -5604,6 +5966,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'low', type: 'string', description: 'Daily low' },
       { key: 'humidity', type: 'string', description: 'Humidity percentage' },
       { key: 'wind', type: 'string', description: 'Wind speed' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: "Today's Weather",
@@ -5614,6 +5977,7 @@ export const TEMPLATES: TemplateDef[] = [
       low: '14°C',
       humidity: '62%',
       wind: '12 km/h',
+      citation: '',
     },
   },
 
@@ -5635,6 +5999,7 @@ export const TEMPLATES: TemplateDef[] = [
         description: 'Average daylight hours',
       },
       { key: 'highlights', type: 'string[]', description: 'Season highlights' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Season Overview',
@@ -5648,6 +6013,7 @@ export const TEMPLATES: TemplateDef[] = [
         'Mild temperatures ideal for walking',
         'Occasional spring showers',
       ],
+      citation: '',
     },
   },
 
@@ -5664,6 +6030,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'sunset', type: 'string', description: 'Sunset time' },
       { key: 'daylight', type: 'string', description: 'Total daylight' },
       { key: 'goldenHour', type: 'string', description: 'Golden hour window' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Sunrise & Sunset',
@@ -5672,6 +6039,7 @@ export const TEMPLATES: TemplateDef[] = [
       sunset: '21:18',
       daylight: '14h 36m',
       goldenHour: '20:32 – 21:05',
+      citation: '',
     },
   },
 
@@ -5691,6 +6059,7 @@ export const TEMPLATES: TemplateDef[] = [
       },
       { key: 'tips', type: 'string[]', description: 'Protection tips' },
       { key: 'peakTime', type: 'string', description: 'Peak UV hours' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'UV Index',
@@ -5702,6 +6071,7 @@ export const TEMPLATES: TemplateDef[] = [
         'Wear protective clothing and sunglasses',
       ],
       peakTime: '11:00 AM – 3:00 PM',
+      citation: '',
     },
   },
 
@@ -5719,6 +6089,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{day, high, low, condition}>',
         description: 'Daily forecasts',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Weekly Outlook',
@@ -5767,6 +6138,7 @@ export const TEMPLATES: TemplateDef[] = [
           condition: 'Showers',
         },
       ],
+      citation: '',
     },
   },
 
@@ -5784,6 +6156,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{label, content}>',
         description: 'Reference items',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Cheat Sheet',
@@ -5814,6 +6187,7 @@ export const TEMPLATES: TemplateDef[] = [
           content: 'class Foo extends Bar {}',
         },
       ],
+      citation: '',
     },
   },
 
@@ -5833,6 +6207,7 @@ export const TEMPLATES: TemplateDef[] = [
       },
       { key: 'duration', type: 'string', description: 'Course duration' },
       { key: 'level', type: 'string', description: 'Difficulty level' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'JavaScript Fundamentals',
@@ -5845,6 +6220,7 @@ export const TEMPLATES: TemplateDef[] = [
       ],
       duration: '8 weeks',
       level: 'Beginner',
+      citation: '',
     },
   },
 
@@ -5861,6 +6237,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array',
         description: 'Array of {level, label, desc} objects',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Learn Web Development',
@@ -5886,6 +6263,7 @@ export const TEMPLATES: TemplateDef[] = [
           desc: 'APIs and databases',
         },
       ],
+      citation: '',
     },
   },
 
@@ -5904,6 +6282,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'string',
         description: 'Why the answer is correct',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       question: 'What is the capital of Japan?',
@@ -5911,6 +6290,7 @@ export const TEMPLATES: TemplateDef[] = [
       answer: 'Tokyo',
       explanation:
         'Tokyo has been the capital of Japan since 1868, during the Meiji Restoration.',
+      citation: '',
     },
   },
 
@@ -5925,6 +6305,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'description', type: 'string', description: 'Brief explanation' },
       { key: 'steps', type: 'array', description: 'Array of step strings' },
       { key: 'subject', type: 'string', description: 'Subject or topic' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       technique: 'Pomodoro Technique',
@@ -5937,6 +6318,7 @@ export const TEMPLATES: TemplateDef[] = [
         'Take a 5-minute break',
       ],
       subject: 'Study Skills',
+      citation: '',
     },
   },
 
@@ -5955,6 +6337,7 @@ export const TEMPLATES: TemplateDef[] = [
         description: 'Array of key point strings',
       },
       { key: 'summary', type: 'string', description: 'Concluding summary' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       subject: 'Science',
@@ -5967,6 +6350,7 @@ export const TEMPLATES: TemplateDef[] = [
       ],
       summary:
         'The water cycle is a continuous process that distributes water across the planet.',
+      citation: '',
     },
   },
 
@@ -5986,6 +6370,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array',
         description: 'Array of {name, amount} objects',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Dinner Bill',
@@ -6006,6 +6391,7 @@ export const TEMPLATES: TemplateDef[] = [
           amount: '$16.00',
         },
       ],
+      citation: '',
     },
   },
 
@@ -6027,6 +6413,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{name, number, position, rating?}>',
         description: 'Players (max 11)',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Arsenal',
@@ -6088,6 +6475,7 @@ export const TEMPLATES: TemplateDef[] = [
           position: 'LW',
         },
       ],
+      citation: '',
     },
   },
 
@@ -6104,6 +6492,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array',
         description: 'Array of {topic, detail} objects',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       central: 'Web Dev',
@@ -6121,6 +6510,7 @@ export const TEMPLATES: TemplateDef[] = [
           detail: 'Docker, K8s, CI/CD',
         },
       ],
+      citation: '',
     },
   },
 
@@ -6138,6 +6528,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array',
         description: 'Array of {name, items[]} objects',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       destination: 'Tokyo',
@@ -6156,6 +6547,7 @@ export const TEMPLATES: TemplateDef[] = [
           items: ['Passport', 'Tickets', 'Insurance'],
         },
       ],
+      citation: '',
     },
   },
 
@@ -6174,6 +6566,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array',
         description: 'Array of {label, value} objects',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       name: 'Marcus Johnson',
@@ -6197,6 +6590,7 @@ export const TEMPLATES: TemplateDef[] = [
           value: '8.7',
         },
       ],
+      citation: '',
     },
   },
 
@@ -6217,6 +6611,7 @@ export const TEMPLATES: TemplateDef[] = [
         description: 'Contract duration',
       },
       { key: 'date', type: 'string', description: 'Transfer date' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       player: 'Kylian Mbappe',
@@ -6225,6 +6620,7 @@ export const TEMPLATES: TemplateDef[] = [
       fee: 'Free',
       contractLength: '5 years',
       date: 'July 2024',
+      citation: '',
     },
   },
 
@@ -6242,6 +6638,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{label, items}>',
         description: 'Iceberg layers from surface to deep',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Iceberg',
@@ -6264,6 +6661,7 @@ export const TEMPLATES: TemplateDef[] = [
           items: ['Unknown to most', 'Core truth'],
         },
       ],
+      citation: '',
     },
   },
 
@@ -6281,6 +6679,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{label, items}>',
         description: 'Ladder rungs from bottom (novice) to top (expert)',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Ladder',
@@ -6307,6 +6706,7 @@ export const TEMPLATES: TemplateDef[] = [
           items: ['First steps'],
         },
       ],
+      citation: '',
     },
   },
 
@@ -6323,6 +6723,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{rank, name, score, medal}>',
         description: 'Ranked entries',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Top Contributors',
@@ -6356,6 +6757,7 @@ export const TEMPLATES: TemplateDef[] = [
           score: '980',
         },
       ],
+      citation: '',
     },
   },
 
@@ -6374,6 +6776,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{label, items}>',
         description: 'Rings from core to outer',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Onion Diagram',
@@ -6396,6 +6799,7 @@ export const TEMPLATES: TemplateDef[] = [
           items: ['Optional', 'Nice to have'],
         },
       ],
+      citation: '',
     },
   },
 
@@ -6413,6 +6817,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{label, items}>',
         description: 'Pyramid levels from top to base',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Pyramid',
@@ -6439,6 +6844,7 @@ export const TEMPLATES: TemplateDef[] = [
           items: ['Foundation', 'Basics'],
         },
       ],
+      citation: '',
     },
   },
 
@@ -6456,6 +6862,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{label, color, items}>',
         description: 'Tier rows with label, hex color, and items',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Tier List',
@@ -6492,6 +6899,7 @@ export const TEMPLATES: TemplateDef[] = [
           items: ['Skip this', 'Not recommended'],
         },
       ],
+      citation: '',
     },
   },
 
@@ -6504,10 +6912,12 @@ export const TEMPLATES: TemplateDef[] = [
     schema: [
       { key: 'abbr', type: 'string', description: 'Abbreviation or acronym' },
       { key: 'full', type: 'string', description: 'Full form' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       abbr: 'NASA',
       full: 'National Aeronautics Space Administration',
+      citation: '',
     },
   },
 
@@ -6525,11 +6935,13 @@ export const TEMPLATES: TemplateDef[] = [
         description: 'Challenge description',
       },
       { key: 'days', type: 'string', description: 'Duration (e.g. 30)' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Write Every Day',
       description: 'Build a writing habit one day at a time.',
       days: '30',
+      citation: '',
     },
   },
 
@@ -6546,6 +6958,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array',
         description: 'Array of {sender, text, time} objects',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Team Chat',
@@ -6571,6 +6984,7 @@ export const TEMPLATES: TemplateDef[] = [
           time: '2:33 PM',
         },
       ],
+      citation: '',
     },
   },
 
@@ -6585,12 +6999,14 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'blank', type: 'string', description: 'The answer' },
       { key: 'hint', type: 'string', description: 'Optional hint' },
       { key: 'author', type: 'string', description: 'Optional attribution' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       text: 'The only thing we have to fear is ___ itself.',
       blank: 'fear',
       hint: 'Franklin D. Roosevelt',
       author: 'Franklin D. Roosevelt',
+      citation: '',
     },
   },
 
@@ -6607,6 +7023,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array',
         description: 'Array of {label, percentage} objects',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       question: 'What matters most in design?',
@@ -6624,6 +7041,7 @@ export const TEMPLATES: TemplateDef[] = [
           percentage: 25,
         },
       ],
+      citation: '',
     },
   },
 
@@ -6637,11 +7055,13 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'headline', type: 'string', description: 'Main title' },
       { key: 'optionA', type: 'string', description: 'Left option' },
       { key: 'optionB', type: 'string', description: 'Right option' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Which do you choose?',
       optionA: 'Remote Work',
       optionB: 'Office Culture',
+      citation: '',
     },
   },
 
@@ -6669,6 +7089,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'string[]',
         description: 'Future research directions',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Discussion',
@@ -6684,6 +7105,7 @@ export const TEMPLATES: TemplateDef[] = [
         'Include neuroimaging measures',
         'Test across age groups',
       ],
+      citation: '',
     },
   },
 
@@ -6698,6 +7120,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'question', type: 'string', description: 'Research question' },
       { key: 'hypotheses', type: 'string[]', description: 'Study hypotheses' },
       { key: 'citations', type: 'string[]', description: 'Key cited works' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'The Effect of Sleep on Memory Consolidation',
@@ -6732,6 +7155,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'string[]',
         description: 'Recommendations for future work',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Limitations',
@@ -6757,6 +7181,7 @@ export const TEMPLATES: TemplateDef[] = [
         'Include behavioural measures alongside self-report',
         'Conduct longitudinal follow-up studies',
       ],
+      citation: '',
     },
   },
 
@@ -6776,6 +7201,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'string',
         description: 'Statistical analysis plan',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Methods',
@@ -6793,6 +7219,7 @@ export const TEMPLATES: TemplateDef[] = [
       ],
       analysis:
         'Mixed-effects regression with random intercepts for participants',
+      citation: '',
     },
   },
 
@@ -6813,6 +7240,7 @@ export const TEMPLATES: TemplateDef[] = [
       },
       { key: 'method', type: 'string', description: 'Recruitment method' },
       { key: 'criteria', type: 'string[]', description: 'Inclusion criteria' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Participants',
@@ -6837,6 +7265,7 @@ export const TEMPLATES: TemplateDef[] = [
         'Native English speakers',
         'No prior exposure to study stimuli',
       ],
+      citation: '',
     },
   },
 
@@ -6868,6 +7297,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'string',
         description: 'Optional chart description',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Results',
@@ -6891,6 +7321,7 @@ export const TEMPLATES: TemplateDef[] = [
       statistic: 'η² = 0.058',
       effectSize: 'Medium effect',
       chart: '',
+      citation: '',
     },
   },
 
@@ -6906,6 +7337,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'time', type: 'string', description: 'Event time' },
       { key: 'location', type: 'string', description: 'Event location' },
       { key: 'description', type: 'string', description: 'Event description' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       title: 'Design Summit 2025',
@@ -6914,6 +7346,7 @@ export const TEMPLATES: TemplateDef[] = [
       location: 'San Francisco, CA',
       description:
         'Join industry leaders for a day of talks, workshops, and networking.',
+      citation: '',
     },
   },
 
@@ -6929,6 +7362,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'name', type: 'string', description: 'Display name' },
       { key: 'avatarUrl', type: 'string', description: 'Avatar image URL' },
       { key: 'likes', type: 'string', description: 'Like count' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       handle: '@designer',
@@ -6936,6 +7370,7 @@ export const TEMPLATES: TemplateDef[] = [
       name: 'Designer Pro',
       avatarUrl: '',
       likes: '124',
+      citation: '',
     },
   },
 
@@ -6950,12 +7385,14 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'title', type: 'string', description: 'Job title or role' },
       { key: 'bio', type: 'string', description: 'Short biography' },
       { key: 'imageUrl', type: 'string', description: 'Profile photo URL' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       name: 'Alex Chen',
       title: 'Product Designer',
       bio: 'Designing meaningful experiences at the intersection of simplicity and functionality.',
       imageUrl: '',
+      citation: '',
     },
   },
 
@@ -6970,12 +7407,14 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'text', type: 'string', description: 'Body paragraph' },
       { key: 'buttonLabel', type: 'string', description: 'Button text' },
       { key: 'hashtag', type: 'string', description: 'Associated hashtag' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Share This',
       text: 'Help others discover this content by sharing it with your network.',
       buttonLabel: 'Share Now',
       hashtag: '#Infographic',
+      citation: '',
     },
   },
 
@@ -6992,6 +7431,7 @@ export const TEMPLATES: TemplateDef[] = [
         type: 'array<{name, role, number}>',
         description: 'Team members',
       },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       headline: 'Squad',
@@ -7027,6 +7467,7 @@ export const TEMPLATES: TemplateDef[] = [
           number: 3,
         },
       ],
+      citation: '',
     },
   },
 
@@ -7042,6 +7483,7 @@ export const TEMPLATES: TemplateDef[] = [
       { key: 'title', type: 'string', description: 'Customer role or company' },
       { key: 'rating', type: 'number', description: 'Star rating 1-5' },
       { key: 'imageUrl', type: 'string', description: 'Optional photo URL' },
+      { key: 'citation', type: 'string', description: 'Source citation' },
     ],
     defaultContent: {
       quote:
@@ -7050,6 +7492,7 @@ export const TEMPLATES: TemplateDef[] = [
       title: 'CEO, Brightside Inc.',
       rating: 5,
       imageUrl: '',
+      citation: '',
     },
   },
 ];

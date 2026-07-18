@@ -7,6 +7,7 @@ export const BreakingNews: FC<TemplateProps> = ({ data }) => {
   const timestamp = (data.timestamp as string) ?? '';
   const urgency = (data.urgency as string) ?? 'BREAKING';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
       <div className="w-full max-w-lg text-center">
@@ -25,6 +26,11 @@ export const BreakingNews: FC<TemplateProps> = ({ data }) => {
           {timestamp && <time>{timestamp}</time>}
         </div>
       </div>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

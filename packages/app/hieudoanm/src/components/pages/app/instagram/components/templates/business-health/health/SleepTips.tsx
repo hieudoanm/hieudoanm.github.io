@@ -7,6 +7,7 @@ export const SleepTips: FC<TemplateProps> = ({ data }) => {
   const tips = (data.tips as string[]) ?? [];
   const quote = (data.quote as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <span className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
@@ -33,6 +34,11 @@ export const SleepTips: FC<TemplateProps> = ({ data }) => {
         <blockquote className="text-neutral mt-5 text-xs italic">
           &ldquo;{quote}&rdquo;
         </blockquote>
+      )}
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
       )}
     </div>
   );

@@ -16,6 +16,7 @@ export const ProductSpecs: FC<TemplateProps> = ({ data }) => {
     { label: 'Warranty', value: '2 Years' },
   ];
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 border-t-primary flex h-full w-full flex-col border-t-4 p-8">
       <div className="mb-4">
@@ -34,6 +35,11 @@ export const ProductSpecs: FC<TemplateProps> = ({ data }) => {
           </li>
         ))}
       </ul>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

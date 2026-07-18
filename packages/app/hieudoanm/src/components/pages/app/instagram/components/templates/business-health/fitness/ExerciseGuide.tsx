@@ -8,6 +8,7 @@ export const ExerciseGuide: FC<TemplateProps> = ({ data }) => {
   const tips = (data.tips as string) ?? '';
   const imageUrl = (data.imageUrl as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <h1 className="text-base-content text-4xl font-bold">{name}</h1>
@@ -30,6 +31,11 @@ export const ExerciseGuide: FC<TemplateProps> = ({ data }) => {
         <div className="border-accent/20 mt-5 border-t pt-4">
           <p className="text-neutral text-xs italic">{tips}</p>
         </div>
+      )}
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
       )}
     </div>
   );

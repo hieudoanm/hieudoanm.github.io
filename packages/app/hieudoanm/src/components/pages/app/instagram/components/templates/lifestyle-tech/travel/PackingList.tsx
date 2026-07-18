@@ -6,6 +6,7 @@ export const PackingList: FC<TemplateProps> = ({ data }) => {
   const items = (data.items as string[]) ?? [];
   const tip = (data.tip as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-6 flex items-center justify-between">
@@ -24,6 +25,11 @@ export const PackingList: FC<TemplateProps> = ({ data }) => {
         <div className="border-accent/20 mt-6 border-t pt-4">
           <p className="text-neutral text-xs">{tip}</p>
         </div>
+      )}
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
       )}
     </div>
   );

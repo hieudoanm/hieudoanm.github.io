@@ -18,6 +18,7 @@ export const Iceberg: FC<TemplateProps> = ({ data }) => {
 
   const colors = ['#ffccd5', '#ff99ab', '#ff6680', '#ff0030'];
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-3 text-center">
@@ -49,6 +50,11 @@ export const Iceberg: FC<TemplateProps> = ({ data }) => {
                   ))}
                 </ul>
               </div>
+              {citation && (
+                <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+                  {citation}
+                </p>
+              )}
             </div>
           );
         })}

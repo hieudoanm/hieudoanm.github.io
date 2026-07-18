@@ -6,6 +6,7 @@ export const VideoStill: FC<TemplateProps> = ({ data }) => {
   const headline = (data.headline as string) ?? '';
   const duration = (data.duration as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="relative flex h-full w-full items-center justify-center bg-black">
       {imageUrl ? (
@@ -36,6 +37,11 @@ export const VideoStill: FC<TemplateProps> = ({ data }) => {
           </span>
         )}
       </div>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

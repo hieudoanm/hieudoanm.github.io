@@ -6,6 +6,7 @@ export const ChallengeCard: FC<TemplateProps> = ({ data }) => {
   const description = (data.description as string) ?? '';
   const days = (data.days as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center gap-4 p-8 text-center">
       <span className="text-accent text-sm font-bold tracking-[0.2em] uppercase">
@@ -23,6 +24,11 @@ export const ChallengeCard: FC<TemplateProps> = ({ data }) => {
             {days} Day Challenge
           </span>
         </div>
+      )}
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
       )}
     </div>
   );

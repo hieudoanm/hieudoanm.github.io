@@ -8,6 +8,7 @@ export const PodcastEpisode: FC<TemplateProps> = ({ data }) => {
   const duration = (data.duration as string) ?? '00:00';
   const description = (data.description as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center p-8">
       <div className="mb-4 text-center">
@@ -29,6 +30,11 @@ export const PodcastEpisode: FC<TemplateProps> = ({ data }) => {
       {description && (
         <p className="text-neutral max-w-[80%] text-center text-xs leading-relaxed">
           {description}
+        </p>
+      )}
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
         </p>
       )}
     </div>

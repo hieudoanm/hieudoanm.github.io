@@ -11,6 +11,7 @@ export const Chat: FC<TemplateProps> = ({ data }) => {
   const title = (data.title as string) ?? '';
   const messages = (data.messages as ChatMessage[]) ?? [];
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       {title && (
@@ -43,6 +44,11 @@ export const Chat: FC<TemplateProps> = ({ data }) => {
               </div>
               {msg.time && (
                 <time className="text-neutral mt-2 text-sm">{msg.time}</time>
+              )}
+              {citation && (
+                <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+                  {citation}
+                </p>
               )}
             </div>
           );

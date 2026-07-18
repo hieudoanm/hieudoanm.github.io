@@ -7,6 +7,7 @@ export const TriWord: FC<TemplateProps> = ({ data }) => {
   const word3 = (data.word3 as string) ?? 'PLAY';
   const text = (data.text as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
       <div className="flex items-baseline gap-2 text-center">
@@ -22,6 +23,11 @@ export const TriWord: FC<TemplateProps> = ({ data }) => {
       </div>
       {text && (
         <p className="text-neutral mt-2 text-base leading-relaxed">{text}</p>
+      )}
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
       )}
     </div>
   );

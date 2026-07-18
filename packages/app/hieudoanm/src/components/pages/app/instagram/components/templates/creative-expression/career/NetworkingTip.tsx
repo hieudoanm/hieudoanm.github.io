@@ -8,6 +8,7 @@ export const NetworkingTip: FC<TemplateProps> = ({ data }) => {
   const doList = (data.doList as string[]) ?? [];
   const dontList = (data.dontList as string[]) ?? [];
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
       <h1 className="text-primary mb-1 text-4xl font-bold">{title}</h1>
@@ -37,6 +38,11 @@ export const NetworkingTip: FC<TemplateProps> = ({ data }) => {
           </ul>
         </div>
       </div>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

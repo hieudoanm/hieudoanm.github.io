@@ -20,6 +20,7 @@ export const Timeline: FC<TemplateProps> = ({ data }) => {
           { date: 'Q4 2024', event: 'Public release' },
         ] as TimelineEntry[]);
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="flex h-full w-full flex-col p-8">
       <h1 className="text-base-content mb-4 text-4xl font-bold tracking-tight">
@@ -53,6 +54,11 @@ export const Timeline: FC<TemplateProps> = ({ data }) => {
           alt=""
           className="rounded-box mt-2 h-24 w-full flex-shrink-0 object-cover"
         />
+      )}
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
       )}
     </div>
   );

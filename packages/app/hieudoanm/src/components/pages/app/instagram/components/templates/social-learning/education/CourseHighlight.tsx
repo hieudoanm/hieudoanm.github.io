@@ -8,6 +8,7 @@ export const CourseHighlight: FC<TemplateProps> = ({ data }) => {
   const duration = (data.duration as string) ?? '';
   const level = (data.level as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <h1 className="text-base-content text-4xl leading-tight font-bold">
@@ -38,6 +39,11 @@ export const CourseHighlight: FC<TemplateProps> = ({ data }) => {
           </li>
         ))}
       </ol>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

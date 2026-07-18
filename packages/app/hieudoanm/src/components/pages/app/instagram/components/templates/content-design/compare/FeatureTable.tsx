@@ -24,6 +24,7 @@ export const FeatureTable: FC<TemplateProps> = ({ data }) => {
     { name: 'Enterprise', values: ['Unlimited', '1 TB', CHECK, CHECK, CHECK] },
   ];
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <h2 className="text-base-content mb-2 text-center text-sm font-bold">
@@ -58,6 +59,11 @@ export const FeatureTable: FC<TemplateProps> = ({ data }) => {
           ))}
         </ul>
       </div>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

@@ -16,6 +16,7 @@ export const ModelComparison: FC<TemplateProps> = ({ data }) => {
 
   const metrics = ['accuracy', 'f1', 'precision', 'recall', 'latency'] as const;
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-2 text-center">
@@ -54,6 +55,11 @@ export const ModelComparison: FC<TemplateProps> = ({ data }) => {
           ))}
         </div>
       </div>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

@@ -7,6 +7,7 @@ export const BulletList: FC<TemplateProps> = ({ data }) => {
   const list =
     items.length > 0 ? items : ['Point one', 'Point two', 'Point three'];
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
       <div className="flex flex-col">
@@ -24,6 +25,11 @@ export const BulletList: FC<TemplateProps> = ({ data }) => {
           ))}
         </ul>
       </div>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

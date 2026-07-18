@@ -10,6 +10,7 @@ export const Testimonial: FC<TemplateProps> = ({ data }) => {
   const product = (data.product as string) ?? '';
   const verified = (data.verified as boolean) ?? false;
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
       <div className="mb-2 flex gap-1">
@@ -64,6 +65,11 @@ export const Testimonial: FC<TemplateProps> = ({ data }) => {
           )}
         </div>
       </div>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

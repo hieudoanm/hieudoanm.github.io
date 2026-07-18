@@ -6,6 +6,7 @@ export const Abbreviation: FC<TemplateProps> = ({ data }) => {
   const full = (data.full as string) ?? '';
   const words = full.split(' ');
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
       <span className="text-accent mb-8 text-sm font-bold tracking-[0.2em] uppercase">
@@ -23,6 +24,11 @@ export const Abbreviation: FC<TemplateProps> = ({ data }) => {
           </li>
         ))}
       </ul>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

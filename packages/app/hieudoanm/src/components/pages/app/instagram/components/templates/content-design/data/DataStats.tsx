@@ -9,6 +9,7 @@ export const DataStats: FC<TemplateProps> = ({ data }) => {
   const suffix = (data.suffix as string) ?? '';
   const source = (data.source as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden p-8 text-center">
       {imageUrl && (
@@ -31,6 +32,11 @@ export const DataStats: FC<TemplateProps> = ({ data }) => {
         </p>
         {source && <p className="text-neutral mt-2 text-xs">— {source}</p>}
       </div>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

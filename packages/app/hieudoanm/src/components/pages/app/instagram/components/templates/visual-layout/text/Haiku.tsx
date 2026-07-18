@@ -7,6 +7,7 @@ export const Haiku: FC<TemplateProps> = ({ data }) => {
   const line2 = (data.line2 as string) ?? '';
   const line3 = (data.line3 as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
       <div className="max-w-md text-center">
@@ -28,6 +29,11 @@ export const Haiku: FC<TemplateProps> = ({ data }) => {
         </div>
         <p className="text-neutral mt-3 text-xs italic">— haiku</p>
       </div>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

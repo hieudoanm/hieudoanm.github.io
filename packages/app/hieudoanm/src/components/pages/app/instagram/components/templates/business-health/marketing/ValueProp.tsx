@@ -23,6 +23,7 @@ export const ValueProp: FC<TemplateProps> = ({ data }) => {
     },
   ];
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-3 text-center">
@@ -43,6 +44,11 @@ export const ValueProp: FC<TemplateProps> = ({ data }) => {
           </li>
         ))}
       </ul>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

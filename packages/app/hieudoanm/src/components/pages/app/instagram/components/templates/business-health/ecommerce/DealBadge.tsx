@@ -9,6 +9,7 @@ export const DealBadge: FC<TemplateProps> = ({ data }) => {
   const badge = (data.badge as string) ?? 'DEAL';
   const cta = (data.cta as string) ?? 'Shop Now';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
       <div className="bg-accent text-base-100 mb-6 self-start rounded px-3 py-1 text-xs font-bold tracking-wider uppercase">
@@ -25,6 +26,11 @@ export const DealBadge: FC<TemplateProps> = ({ data }) => {
       <div className="bg-primary text-primary-content mt-6 rounded-full px-8 py-2.5 text-sm font-bold tracking-wider uppercase">
         {cta}
       </div>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

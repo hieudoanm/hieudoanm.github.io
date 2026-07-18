@@ -19,6 +19,7 @@ export const Leaderboard: FC<TemplateProps> = ({ data }) => {
     { rank: 4, name: 'Dave', score: '1,650' },
     { rank: 5, name: 'Eve', score: '1,420' },
   ];
+  const citation = (data.citation as string) ?? '';
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
@@ -30,6 +31,8 @@ export const Leaderboard: FC<TemplateProps> = ({ data }) => {
           const medal =
             entry.medal ??
             (entry.rank <= 3 ? DEFAULT_MEDALS[entry.rank - 1] : undefined);
+          const citation = (data.citation as string) ?? '';
+
           return (
             <li
               key={i}
@@ -50,6 +53,11 @@ export const Leaderboard: FC<TemplateProps> = ({ data }) => {
           );
         })}
       </ol>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

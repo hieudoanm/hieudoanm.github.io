@@ -15,6 +15,7 @@ export const AspectRatio: FC<TemplateProps> = ({ data }) => {
     return { width: w * scale, height: h * scale };
   };
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <h1 className="text-base-content mb-6 text-4xl font-bold">{headline}</h1>
@@ -27,6 +28,11 @@ export const AspectRatio: FC<TemplateProps> = ({ data }) => {
                 <strong className="text-accent text-xs font-bold">
                   {r.label}
                 </strong>
+                {citation && (
+                  <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+                    {citation}
+                  </p>
+                )}
               </div>
               <p className="text-neutral text-xs">{r.description}</p>
             </li>

@@ -6,6 +6,7 @@ export const QuickQuiz: FC<TemplateProps> = ({ data }) => {
   const options = (data.options as string[]) ?? [];
   const answer = (data.answer as string) ?? '';
   const explanation = (data.explanation as string) ?? '';
+  const citation = (data.citation as string) ?? '';
 
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
@@ -17,6 +18,8 @@ export const QuickQuiz: FC<TemplateProps> = ({ data }) => {
         {options.map((opt, i) => {
           const letters = ['A', 'B', 'C', 'D'];
           const isCorrect = opt === answer;
+          const citation = (data.citation as string) ?? '';
+
           return (
             <li
               key={i}
@@ -39,6 +42,11 @@ export const QuickQuiz: FC<TemplateProps> = ({ data }) => {
         <div className="border-accent/20 mt-6 border-t pt-4">
           <p className="text-neutral text-sm leading-relaxed">{explanation}</p>
         </div>
+      )}
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
       )}
     </div>
   );

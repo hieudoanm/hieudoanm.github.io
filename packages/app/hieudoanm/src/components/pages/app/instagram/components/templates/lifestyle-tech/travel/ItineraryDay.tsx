@@ -17,6 +17,7 @@ export const ItineraryDay: FC<TemplateProps> = ({ data }) => {
     { time: '13:00', activity: 'Lunch', location: 'Local Bistro' },
   ];
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full p-8">
       <div className="mr-6 flex flex-col items-center">
@@ -55,6 +56,11 @@ export const ItineraryDay: FC<TemplateProps> = ({ data }) => {
           </ul>
         </div>
       </div>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

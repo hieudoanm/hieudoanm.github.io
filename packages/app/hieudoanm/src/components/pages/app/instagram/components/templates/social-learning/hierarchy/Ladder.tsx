@@ -19,6 +19,7 @@ export const Ladder: FC<TemplateProps> = ({ data }) => {
 
   const colors = ['#ff0030', '#d90029', '#b30022', '#8c001b', '#660014'];
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-3 text-center">
@@ -52,6 +53,11 @@ export const Ladder: FC<TemplateProps> = ({ data }) => {
                   </ul>
                 </div>
               </div>
+              {citation && (
+                <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+                  {citation}
+                </p>
+              )}
             </div>
           );
         })}

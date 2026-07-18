@@ -11,6 +11,7 @@ export const AlbumReview: FC<TemplateProps> = ({ data }) => {
 
   const stars = Array.from({ length: 5 }, (_, i) => i < rating);
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
       <div className="bg-base-200 mb-2 flex h-10 w-10 items-center justify-center rounded-full text-xs">
@@ -41,6 +42,11 @@ export const AlbumReview: FC<TemplateProps> = ({ data }) => {
         <p className="text-base-content mt-1.5 text-xs">
           <span className="text-neutral">Favorite: </span>
           <strong className="font-bold">{favoriteTrack}</strong>
+        </p>
+      )}
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
         </p>
       )}
     </div>

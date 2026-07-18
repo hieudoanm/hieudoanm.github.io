@@ -12,6 +12,7 @@ export const InterviewPrep: FC<TemplateProps> = ({ data }) => {
   const questions = (data.questions as QAPair[]) ?? [];
   const tip = (data.tip as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
       <h1 className="text-primary mb-0.5 text-4xl font-bold">{title}</h1>
@@ -31,6 +32,11 @@ export const InterviewPrep: FC<TemplateProps> = ({ data }) => {
       {tip && (
         <p className="text-accent bg-accent/10 rounded-lg px-2 py-1 text-xs font-medium">
           💡 {tip}
+        </p>
+      )}
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
         </p>
       )}
     </div>

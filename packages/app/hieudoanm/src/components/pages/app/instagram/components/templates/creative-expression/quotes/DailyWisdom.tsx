@@ -8,6 +8,7 @@ export const DailyWisdom: FC<TemplateProps> = ({ data }) => {
   const category = (data.category as string) ?? 'Philosophy';
   const date = (data.date as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
       <p className="badge badge-primary badge-outline mb-3 text-xs">
@@ -18,6 +19,11 @@ export const DailyWisdom: FC<TemplateProps> = ({ data }) => {
       </p>
       <p className="text-secondary mb-1 text-xs font-medium">— {author}</p>
       {date && <time className="text-base-content/50 text-xs">{date}</time>}
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

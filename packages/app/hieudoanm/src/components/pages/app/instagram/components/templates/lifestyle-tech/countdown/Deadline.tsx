@@ -7,6 +7,7 @@ export const Deadline: FC<TemplateProps> = ({ data }) => {
   const task = (data.task as string) ?? 'Final submission';
   const text = (data.text as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
       <div className="text-center">
@@ -22,6 +23,11 @@ export const Deadline: FC<TemplateProps> = ({ data }) => {
         <p className="text-neutral mt-3 text-base font-medium">{task}</p>
         {text && <p className="text-neutral mt-2 text-xs">{text}</p>}
       </div>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

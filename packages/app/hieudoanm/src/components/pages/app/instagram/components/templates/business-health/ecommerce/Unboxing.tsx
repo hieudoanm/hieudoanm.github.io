@@ -12,6 +12,7 @@ export const Unboxing: FC<TemplateProps> = ({ data }) => {
   ];
   const text = (data.text as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
       <div className="text-center">
@@ -33,6 +34,11 @@ export const Unboxing: FC<TemplateProps> = ({ data }) => {
         </ul>
         {text && <p className="text-neutral mt-3 text-sm">{text}</p>}
       </div>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

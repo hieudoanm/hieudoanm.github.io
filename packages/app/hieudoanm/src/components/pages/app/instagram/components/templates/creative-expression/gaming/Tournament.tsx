@@ -24,6 +24,7 @@ export const Tournament: FC<TemplateProps> = ({ data }) => {
       { position: '2', team: 'Team Beta', score: '12' },
     ] as Result[]);
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-0.5 flex items-center gap-1">
@@ -52,6 +53,11 @@ export const Tournament: FC<TemplateProps> = ({ data }) => {
           </li>
         ))}
       </ul>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

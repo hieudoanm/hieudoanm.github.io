@@ -17,6 +17,7 @@ export const WorkoutLog: FC<TemplateProps> = ({ data }) => {
     { name: 'Squat', sets: '5', reps: '5', weight: '100kg', rest: '120s' },
   ];
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-4">
@@ -57,6 +58,11 @@ export const WorkoutLog: FC<TemplateProps> = ({ data }) => {
           </div>
         ))}
       </div>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

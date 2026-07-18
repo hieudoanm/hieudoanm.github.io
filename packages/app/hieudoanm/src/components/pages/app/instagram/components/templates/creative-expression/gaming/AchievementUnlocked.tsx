@@ -9,6 +9,7 @@ export const AchievementUnlocked: FC<TemplateProps> = ({ data }) => {
   const rarity = (data.rarity as string) ?? 'Rare';
   const dateUnlocked = (data.dateUnlocked as string) ?? 'Jan 1, 2026';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
       <div className="bg-accent/10 mb-1 flex h-8 w-8 items-center justify-center rounded-full">
@@ -25,6 +26,11 @@ export const AchievementUnlocked: FC<TemplateProps> = ({ data }) => {
       <p className="text-base-300 text-xs">
         Unlocked <time>{dateUnlocked}</time>
       </p>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

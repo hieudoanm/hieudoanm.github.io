@@ -11,35 +11,44 @@ export const References: FC<TemplateProps> = ({ data }) => {
       url?: string;
     }>) ?? [];
 
+  const citation = (data.citation as string) ?? '';
   return (
-    <div className="bg-base-100 flex h-full w-full flex-col p-8">
-      <span className="text-accent mb-3 text-sm font-bold tracking-[0.2em] uppercase">
-        {title}
-      </span>
-
-      <div className="text-sm">
-        <ul className="list-decimal pl-5">
-          {items.map((item, i) => (
-            <li key={i} className="border-base-200 mb-3 border-l-2 pl-4">
-              {item.title && (
-                <div className="text-base-content text-sm font-semibold">
-                  {item.title}
+    <div className="bg-base-100 flex h-full w-full flex-col justify-center p-8">
+      <div className="flex flex-col gap-y-4">
+        <span className="text-accent mb-3 text-sm font-bold tracking-[0.2em] uppercase">
+          {title}
+        </span>
+        <div className="text-sm">
+          <ul className="list-decimal pl-5">
+            {items.map((item, i) => (
+              <li key={i} className="border-base-200 mb-3 border-l-2 pl-4">
+                {item.title && (
+                  <div className="text-base-content text-sm font-semibold">
+                    {item.title}
+                  </div>
+                )}
+                <div className="flex items-center gap-2">
+                  {item.author && (
+                    <div className="text-neutral text-sm">{item.author}</div>
+                  )}
+                  {item.year && (
+                    <div className="text-neutral text-sm">({item.year})</div>
+                  )}
                 </div>
-              )}
-              <div className="flex items-center gap-2">
-                {item.author && (
-                  <div className="text-neutral text-sm">{item.author}</div>
+                {item.url && (
+                  <div className="text-accent text-sm break-all">
+                    {item.url}
+                  </div>
                 )}
-                {item.year && (
-                  <div className="text-neutral text-sm">({item.year})</div>
-                )}
-              </div>
-              {item.url && (
-                <div className="text-accent text-sm break-all">{item.url}</div>
-              )}
-            </li>
-          ))}
-        </ul>
+              </li>
+            ))}
+          </ul>
+        </div>
+        {citation && (
+          <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+            {citation}
+          </p>
+        )}
       </div>
     </div>
   );

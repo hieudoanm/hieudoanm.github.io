@@ -6,6 +6,7 @@ export const MissionStatement: FC<TemplateProps> = ({ data }) => {
   const mission = (data.mission as string) ?? '';
   const vision = (data.vision as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col justify-center gap-4 p-8">
       <div>
@@ -23,6 +24,11 @@ export const MissionStatement: FC<TemplateProps> = ({ data }) => {
           </h3>
           <p className="text-neutral mt-2 text-sm leading-relaxed">{vision}</p>
         </div>
+      )}
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
       )}
     </div>
   );

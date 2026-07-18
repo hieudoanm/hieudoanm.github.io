@@ -17,6 +17,7 @@ export const ArchitectureDiagram: FC<TemplateProps> = ({ data }) => {
   const components = (data.components as Component[]) ?? [];
   const connections = (data.connections as Connection[]) ?? [];
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-2 text-center">
@@ -55,6 +56,11 @@ export const ArchitectureDiagram: FC<TemplateProps> = ({ data }) => {
           </li>
         ))}
       </ul>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

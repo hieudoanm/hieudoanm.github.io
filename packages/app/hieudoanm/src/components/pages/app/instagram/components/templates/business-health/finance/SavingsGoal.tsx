@@ -12,6 +12,7 @@ export const SavingsGoal: FC<TemplateProps> = ({ data }) => {
   const targetNum = parseFloat(target.replace(/[^0-9.]/g, '')) || 1;
   const pct = Math.min(100, Math.round((currentNum / targetNum) * 100));
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
       <span className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
@@ -37,6 +38,11 @@ export const SavingsGoal: FC<TemplateProps> = ({ data }) => {
         </p>
       )}
       {note && <p className="text-neutral mt-2 text-xs">{note}</p>}
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

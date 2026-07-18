@@ -13,6 +13,7 @@ export const HeatmapGrid: FC<TemplateProps> = ({ data }) => {
     [20, 75, 85],
   ];
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
       <h2 className="text-base-content mb-2 text-sm font-bold">{title}</h2>
@@ -43,6 +44,11 @@ export const HeatmapGrid: FC<TemplateProps> = ({ data }) => {
           </div>
         ))}
       </div>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

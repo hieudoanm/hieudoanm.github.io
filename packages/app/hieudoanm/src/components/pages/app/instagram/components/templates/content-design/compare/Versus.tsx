@@ -27,6 +27,7 @@ export const Versus: FC<TemplateProps> = ({ data }) => {
           { a: '1 user', b: 'Unlimited', label: 'Users' },
         ];
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="flex h-full w-full flex-col">
       <div className="bg-accent/10 px-5 py-3">
@@ -65,6 +66,11 @@ export const Versus: FC<TemplateProps> = ({ data }) => {
           </li>
         ))}
       </ul>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

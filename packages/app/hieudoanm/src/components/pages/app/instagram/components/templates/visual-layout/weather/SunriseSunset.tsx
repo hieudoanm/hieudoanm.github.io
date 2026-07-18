@@ -9,6 +9,7 @@ export const SunriseSunset: FC<TemplateProps> = ({ data }) => {
   const daylight = (data.daylight as string) ?? '14h 36m';
   const goldenHour = (data.goldenHour as string) ?? '20:32 – 21:05';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
       <h2 className="text-accent mb-2 text-xs font-bold tracking-[0.2em] uppercase">
@@ -50,6 +51,11 @@ export const SunriseSunset: FC<TemplateProps> = ({ data }) => {
           </span>
         </div>
       </div>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

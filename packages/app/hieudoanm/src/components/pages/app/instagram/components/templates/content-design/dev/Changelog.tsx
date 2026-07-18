@@ -19,6 +19,7 @@ export const Changelog: FC<TemplateProps> = ({ data }) => {
   const date = (data.date as string) ?? '';
   const changes = (data.changes as Change[]) ?? [];
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-2 text-center">
@@ -29,6 +30,11 @@ export const Changelog: FC<TemplateProps> = ({ data }) => {
           v{version}
         </div>
         {date && <time className="text-neutral mt-1 text-[10px]">{date}</time>}
+        {citation && (
+          <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+            {citation}
+          </p>
+        )}
       </div>
       <h3 className="text-base-content mb-2 text-center text-sm font-bold">
         {title}

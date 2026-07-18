@@ -7,6 +7,7 @@ export const WellnessTip: FC<TemplateProps> = ({ data }) => {
   const description = (data.description as string) ?? '';
   const source = (data.source as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
       {category && (
@@ -34,6 +35,11 @@ export const WellnessTip: FC<TemplateProps> = ({ data }) => {
         <cite className="text-accent mt-6 text-xs font-medium">
           &mdash; {source}
         </cite>
+      )}
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
       )}
     </div>
   );

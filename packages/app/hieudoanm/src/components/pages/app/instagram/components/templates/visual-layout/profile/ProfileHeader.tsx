@@ -16,6 +16,7 @@ export const ProfileHeader: FC<TemplateProps> = ({ data }) => {
   const instagram = (data.instagram as string) ?? '';
   const x = (data.x as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
       <div className="bg-primary flex aspect-square h-8 w-8 items-center justify-center rounded-full text-sm font-black text-white">
@@ -83,6 +84,11 @@ export const ProfileHeader: FC<TemplateProps> = ({ data }) => {
           </li>
         )}
       </ul>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

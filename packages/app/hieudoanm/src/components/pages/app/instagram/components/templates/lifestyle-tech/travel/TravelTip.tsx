@@ -7,6 +7,7 @@ export const TravelTip: FC<TemplateProps> = ({ data }) => {
   const description = (data.description as string) ?? '';
   const hashtag = (data.hashtag as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
       {category && (
@@ -30,6 +31,11 @@ export const TravelTip: FC<TemplateProps> = ({ data }) => {
       <p className="text-neutral mt-4 text-sm leading-relaxed">{description}</p>
       {hashtag && (
         <span className="text-accent mt-6 text-xs font-medium">{hashtag}</span>
+      )}
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
       )}
     </div>
   );

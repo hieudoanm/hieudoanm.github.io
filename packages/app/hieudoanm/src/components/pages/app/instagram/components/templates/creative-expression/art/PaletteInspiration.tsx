@@ -18,6 +18,7 @@ export const PaletteInspiration: FC<TemplateProps> = ({ data }) => {
   ];
   const mood = (data.mood as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
       <h1 className="text-base-content mb-1 text-4xl font-black tracking-tight">
@@ -46,6 +47,11 @@ export const PaletteInspiration: FC<TemplateProps> = ({ data }) => {
         <span className="bg-primary/10 text-primary rounded-full px-4 py-1.5 text-xs font-semibold tracking-wider uppercase">
           {mood}
         </span>
+      )}
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
       )}
     </div>
   );

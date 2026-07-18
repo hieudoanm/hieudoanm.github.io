@@ -5,6 +5,7 @@ export const Mosaic: FC<TemplateProps> = ({ data }) => {
   const images = (data.images as string[]) ?? [];
   const urls = images.length >= 4 ? images.slice(0, 4) : ['', '', '', ''];
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="flex h-full w-full flex-col">
       <ul className="grid h-full w-full grid-cols-2 grid-rows-2 gap-1 p-1">
@@ -26,6 +27,11 @@ export const Mosaic: FC<TemplateProps> = ({ data }) => {
           )
         )}
       </ul>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

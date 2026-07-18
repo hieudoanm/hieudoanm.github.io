@@ -22,6 +22,7 @@ export const FactCheck: FC<TemplateProps> = ({ data }) => {
 
   const style = VERDICT_STYLES[verdict] ?? VERDICT_STYLES.false;
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col p-8">
       <div className="mb-4 text-center">
@@ -49,6 +50,11 @@ export const FactCheck: FC<TemplateProps> = ({ data }) => {
         )}
         {source && <p className="text-neutral text-sm">Source: {source}</p>}
       </div>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

@@ -8,6 +8,7 @@ export const PullQuote: FC<TemplateProps> = ({ data }) => {
   const imageUrl = (data.imageUrl as string) ?? '';
   const text = (data.text as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
       {imageUrl && (
@@ -33,6 +34,11 @@ export const PullQuote: FC<TemplateProps> = ({ data }) => {
         </span>
         {source && <span className="text-neutral text-xs">{source}</span>}
       </div>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

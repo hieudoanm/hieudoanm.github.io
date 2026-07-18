@@ -9,6 +9,7 @@ export const SongLyric: FC<TemplateProps> = ({ data }) => {
   const album = (data.album as string) ?? '';
   const year = (data.year as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
       <span className="text-primary mb-1 font-serif text-xl">♪</span>
@@ -21,6 +22,11 @@ export const SongLyric: FC<TemplateProps> = ({ data }) => {
         {album && <p className="badge badge-accent badge-sm">{album}</p>}
         {year && <p className="badge badge-outline badge-sm">{year}</p>}
       </div>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

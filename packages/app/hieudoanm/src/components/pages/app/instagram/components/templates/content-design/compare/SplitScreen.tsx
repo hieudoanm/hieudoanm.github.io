@@ -6,6 +6,7 @@ export const SplitScreen: FC<TemplateProps> = ({ data }) => {
   const text = (data.text as string) ?? '';
   const imageUrl = (data.imageUrl as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="flex h-full w-full">
       {imageUrl ? (
@@ -36,6 +37,11 @@ export const SplitScreen: FC<TemplateProps> = ({ data }) => {
           {text}
         </p>
       </div>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

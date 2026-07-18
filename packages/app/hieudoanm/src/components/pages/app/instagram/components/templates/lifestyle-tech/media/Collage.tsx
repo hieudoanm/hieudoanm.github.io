@@ -5,6 +5,7 @@ export const Collage: FC<TemplateProps> = ({ data }) => {
   const images = (data.images as string[]) ?? [];
   const urls = images.length >= 3 ? images.slice(0, 3) : ['', '', ''];
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="relative flex h-full w-full overflow-hidden">
       <div className="flex h-full w-full items-center justify-center p-4">
@@ -44,6 +45,11 @@ export const Collage: FC<TemplateProps> = ({ data }) => {
           )}
         </div>
       </div>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

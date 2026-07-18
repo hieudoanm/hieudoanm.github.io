@@ -9,6 +9,7 @@ export const NewArrival: FC<TemplateProps> = ({ data }) => {
   const description = (data.description as string) ?? '';
   const imageUrl = (data.imageUrl as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
       <div className="text-center">
@@ -41,6 +42,11 @@ export const NewArrival: FC<TemplateProps> = ({ data }) => {
           <p className="text-neutral mt-1 text-xs">{description}</p>
         )}
       </div>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

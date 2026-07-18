@@ -285,6 +285,7 @@
 | `discount`      | string | Discount percentage |
 | `badge`         | string | Badge label         |
 | `cta`           | string | Call to action      |
+| `citation`      | string | Source citation     |
 
 **Default content:**
 
@@ -296,6 +297,7 @@ deal-badge:
   discount: '50% OFF'
   badge: 'LIMITED'
   cta: 'Shop Now'
+  citation: ''
 ```
 
 ---
@@ -313,6 +315,7 @@ deal-badge:
 | `amount`        | string | Total amount                    |
 | `dueDate`       | string | Due date                        |
 | `items`         | array  | Array of {desc, amount} objects |
+| `citation`      | string | Source citation                 |
 
 **Default content:**
 
@@ -327,6 +330,7 @@ invoice-card:
       amount: '$2,500'
     - desc: 'Development'
       amount: '$2,000'
+  citation: ''
 ```
 
 ---
@@ -345,6 +349,7 @@ invoice-card:
 | `oldPrice`    | string | Original price (optional) |
 | `description` | string | Short description         |
 | `imageUrl`    | string | Product image URL         |
+| `citation`    | string | Source citation           |
 
 **Default content:**
 
@@ -356,6 +361,7 @@ new-arrival:
   oldPrice: ''
   description: ''
   imageUrl: ''
+  citation: ''
 ```
 
 ---
@@ -373,6 +379,7 @@ new-arrival:
 | `tagline`  | string   | Short tagline     |
 | `features` | string[] | Feature tags      |
 | `imageUrl` | string   | Product image URL |
+| `citation` | string   | Source citation   |
 
 **Default content:**
 
@@ -386,6 +393,7 @@ product-showcase:
     - 'Swiss movement'
     - 'Sapphire glass'
   imageUrl: ''
+  citation: ''
 ```
 
 ---
@@ -396,11 +404,12 @@ product-showcase:
 
 **Fields:**
 
-| Key       | Type                  | Description        |
-| --------- | --------------------- | ------------------ |
-| `name`    | string                | Product name       |
-| `tagline` | string                | Product tagline    |
-| `specs`   | array<{label, value}> | Specification rows |
+| Key        | Type                  | Description        |
+| ---------- | --------------------- | ------------------ |
+| `name`     | string                | Product name       |
+| `tagline`  | string                | Product tagline    |
+| `specs`    | array<{label, value}> | Specification rows |
+| `citation` | string                | Source citation    |
 
 **Default content:**
 
@@ -421,6 +430,7 @@ product-specs:
       value: 'Up to 22 hours'
     - label: 'Weight'
       value: '2.14 kg'
+  citation: ''
 ```
 
 ---
@@ -431,12 +441,13 @@ product-specs:
 
 **Fields:**
 
-| Key       | Type     | Description      |
-| --------- | -------- | ---------------- |
-| `title`   | string   | Section title    |
-| `product` | string   | Product name     |
-| `items`   | string[] | Box contents     |
-| `text`    | string   | Description text |
+| Key        | Type     | Description      |
+| ---------- | -------- | ---------------- |
+| `title`    | string   | Section title    |
+| `product`  | string   | Product name     |
+| `items`    | string[] | Box contents     |
+| `text`     | string   | Description text |
+| `citation` | string   | Source citation  |
 
 **Default content:**
 
@@ -450,6 +461,7 @@ unboxing:
     - 'USB-C cable'
     - 'Starter guide'
   text: ''
+  citation: ''
 ```
 
 ---
@@ -462,10 +474,11 @@ unboxing:
 
 **Fields:**
 
-| Key     | Type   | Description                                    |
-| ------- | ------ | ---------------------------------------------- |
-| `title` | string | Reminder title                                 |
-| `bills` | array  | Array of {name, amount, dueDate, paid} objects |
+| Key        | Type   | Description                                    |
+| ---------- | ------ | ---------------------------------------------- |
+| `title`    | string | Reminder title                                 |
+| `bills`    | array  | Array of {name, amount, dueDate, paid} objects |
+| `citation` | string | Source citation                                |
 
 **Default content:**
 
@@ -489,6 +502,7 @@ bill-reminder:
       amount: '$120'
       dueDate: 'Apr 15'
       paid: false
+  citation: ''
 ```
 
 ---
@@ -506,6 +520,7 @@ bill-reminder:
 | `expenses` | string | Expenses amount |
 | `savings`  | string | Savings amount  |
 | `period`   | string | Time period     |
+| `citation` | string | Source citation |
 
 **Default content:**
 
@@ -516,6 +531,7 @@ budget-tracker:
   expenses: '$3,200'
   savings: '$1,800'
   period: 'March 2025'
+  citation: ''
 ```
 
 ---
@@ -530,6 +546,7 @@ budget-tracker:
 | ---------- | ------ | ----------------------------------------- |
 | `title`    | string | Log title                                 |
 | `expenses` | array  | Array of {category, amount, date} objects |
+| `citation` | string | Source citation                           |
 
 **Default content:**
 
@@ -549,6 +566,7 @@ expense-log:
     - category: 'Utilities'
       amount: '$120'
       date: 'Mar 12'
+  citation: ''
 ```
 
 ---
@@ -559,10 +577,11 @@ expense-log:
 
 **Fields:**
 
-| Key     | Type   | Description                    |
-| ------- | ------ | ------------------------------ |
-| `title` | string | Plan title                     |
-| `steps` | array  | Array of {label, desc} objects |
+| Key        | Type   | Description                    |
+| ---------- | ------ | ------------------------------ |
+| `title`    | string | Plan title                     |
+| `steps`    | array  | Array of {label, desc} objects |
+| `citation` | string | Source citation                |
 
 **Default content:**
 
@@ -578,6 +597,7 @@ financial-plan:
       desc: 'Allocate extra funds each month'
     - label: 'Track progress'
       desc: 'Celebrate each debt paid off'
+  citation: ''
 ```
 
 ---
@@ -594,6 +614,7 @@ financial-plan:
 | `category`    | string | Investment category          |
 | `description` | string | Detailed explanation         |
 | `risk`        | string | Risk level (Low/Medium/High) |
+| `citation`    | string | Source citation              |
 
 **Default content:**
 
@@ -605,6 +626,7 @@ investment-tip:
     'Spread investments across different asset classes to reduce risk and
     stabilise returns over time.'
   risk: 'Low'
+  citation: ''
 ```
 
 ---
@@ -622,6 +644,7 @@ investment-tip:
 | `current`  | string | Current saved amount |
 | `deadline` | string | Goal deadline        |
 | `note`     | string | Optional note        |
+| `citation` | string | Source citation      |
 
 **Default content:**
 
@@ -632,6 +655,7 @@ savings-goal:
   current: '$6,500'
   deadline: 'Dec 2025'
   note: 'Saving $500 per month'
+  citation: ''
 ```
 
 ---
@@ -651,6 +675,7 @@ savings-goal:
 | `rating`     | number | Star rating 1-5    |
 | `review`     | string | Review text        |
 | `imageUrl`   | string | Optional image URL |
+| `citation`   | string | Source citation    |
 
 **Default content:**
 
@@ -663,6 +688,7 @@ food-review:
     'Perfectly crisp crust, fresh mozzarella, and the most flavourful tomato
     sauce I have had outside of Italy.'
   imageUrl: ''
+  citation: ''
 ```
 
 ---
@@ -679,6 +705,7 @@ food-review:
 | `benefits` | array  | Array of benefit strings |
 | `uses`     | array  | Array of use strings     |
 | `imageUrl` | string | Optional image URL       |
+| `citation` | string | Source citation          |
 
 **Default content:**
 
@@ -695,6 +722,7 @@ ingredient-spotlight:
     - 'Smoothies'
     - 'Rice dishes'
   imageUrl: ''
+  citation: ''
 ```
 
 ---
@@ -709,6 +737,7 @@ ingredient-spotlight:
 | ---------- | ------ | ------------------------------------------------ |
 | `headline` | string | Plan title                                       |
 | `meals`    | array  | Array of {day, breakfast, lunch, dinner} objects |
+| `citation` | string | Source citation                                  |
 
 **Default content:**
 
@@ -728,6 +757,7 @@ meal-plan:
       breakfast: 'Toast'
       lunch: 'Caesar Salad'
       dinner: 'Pasta'
+  citation: ''
 ```
 
 ---
@@ -742,6 +772,7 @@ meal-plan:
 | ------------ | ------ | ------------------------------------ |
 | `restaurant` | string | Restaurant name                      |
 | `items`      | array  | Array of {name, price, desc} objects |
+| `citation`   | string | Source citation                      |
 
 **Default content:**
 
@@ -758,6 +789,7 @@ menu-highlights:
     - name: 'Acai Bowl'
       price: '$11'
       desc: 'Acai, banana, granola'
+  citation: ''
 ```
 
 ---
@@ -776,6 +808,7 @@ menu-highlights:
 | `carbs`    | string | Carbohydrate content |
 | `protein`  | string | Protein content      |
 | `serving`  | string | Serving size         |
+| `citation` | string | Source citation      |
 
 **Default content:**
 
@@ -787,6 +820,7 @@ nutrition-facts:
   carbs: '8g'
   protein: '20g'
   serving: '1 cup (245g)'
+  citation: ''
 ```
 
 ---
@@ -805,6 +839,7 @@ nutrition-facts:
 | `ingredients` | array  | Array of ingredient strings |
 | `steps`       | array  | Array of step strings       |
 | `imageUrl`    | string | Optional image URL          |
+| `citation`    | string | Source citation             |
 
 **Default content:**
 
@@ -825,6 +860,7 @@ recipe-card:
     - 'Spread on toast'
     - 'Season and garnish'
   imageUrl: ''
+  citation: ''
 ```
 
 ---
@@ -843,6 +879,7 @@ recipe-card:
 | `duration`     | string | Duration display             |
 | `instructions` | array  | Array of instruction strings |
 | `tip`          | string | Helpful tip                  |
+| `citation`     | string | Source citation              |
 
 **Default content:**
 
@@ -860,6 +897,7 @@ meditation-guide:
   tip:
     'If your mind wanders, gently bring focus back to your breath without
     judgement.'
+  citation: ''
 ```
 
 ---
@@ -870,12 +908,13 @@ meditation-guide:
 
 **Fields:**
 
-| Key     | Type   | Description                          |
-| ------- | ------ | ------------------------------------ |
-| `title` | string | Tracker title                        |
-| `mood`  | string | Mood label (great/good/okay/low/bad) |
-| `note`  | string | Journal note                         |
-| `date`  | string | Date string                          |
+| Key        | Type   | Description                          |
+| ---------- | ------ | ------------------------------------ |
+| `title`    | string | Tracker title                        |
+| `mood`     | string | Mood label (great/good/okay/low/bad) |
+| `note`     | string | Journal note                         |
+| `date`     | string | Date string                          |
+| `citation` | string | Source citation                      |
 
 **Default content:**
 
@@ -885,6 +924,7 @@ mood-tracker:
   mood: 'good'
   note: 'Had a productive morning and a nice walk in the park during lunch.'
   date: 'Mar 15, 2025'
+  citation: ''
 ```
 
 ---
@@ -895,12 +935,13 @@ mood-tracker:
 
 **Fields:**
 
-| Key     | Type   | Description          |
-| ------- | ------ | -------------------- |
-| `title` | string | Section title        |
-| `tip`   | string | Featured tip         |
-| `tips`  | array  | Array of tip strings |
-| `quote` | string | Motivational quote   |
+| Key        | Type   | Description          |
+| ---------- | ------ | -------------------- |
+| `title`    | string | Section title        |
+| `tip`      | string | Featured tip         |
+| `tips`     | array  | Array of tip strings |
+| `quote`    | string | Motivational quote   |
+| `citation` | string | Source citation      |
 
 **Default content:**
 
@@ -916,6 +957,7 @@ sleep-tips:
     - 'Avoid caffeine after 2 PM'
     - 'Limit alcohol before bed'
   quote: 'Sleep is the golden chain that ties health and our bodies together.'
+  citation: ''
 ```
 
 ---
@@ -926,12 +968,13 @@ sleep-tips:
 
 **Fields:**
 
-| Key       | Type   | Description              |
-| --------- | ------ | ------------------------ |
-| `goal`    | string | Daily goal (glasses)     |
-| `current` | string | Current glasses consumed |
-| `unit`    | string | Unit label               |
-| `tip`     | string | Hydration tip            |
+| Key        | Type   | Description              |
+| ---------- | ------ | ------------------------ |
+| `goal`     | string | Daily goal (glasses)     |
+| `current`  | string | Current glasses consumed |
+| `unit`     | string | Unit label               |
+| `tip`      | string | Hydration tip            |
+| `citation` | string | Source citation          |
 
 **Default content:**
 
@@ -943,6 +986,7 @@ water-tracker:
   tip:
     'Keep a water bottle on your desk as a visual reminder to sip throughout the
     day.'
+  citation: ''
 ```
 
 ---
@@ -959,6 +1003,7 @@ water-tracker:
 | `category`    | string | Tip category         |
 | `description` | string | Detailed explanation |
 | `source`      | string | Attribution source   |
+| `citation`    | string | Source citation      |
 
 **Default content:**
 
@@ -970,6 +1015,7 @@ wellness-tip:
     'Even 10 minutes of moderate activity can boost mood, improve focus, and
     reduce stress.'
   source: 'World Health Organisation'
+  citation: ''
 ```
 
 ---
@@ -980,14 +1026,15 @@ wellness-tip:
 
 **Fields:**
 
-| Key        | Type   | Description    |
-| ---------- | ------ | -------------- |
-| `title`    | string | Workout title  |
-| `exercise` | string | Exercise name  |
-| `reps`     | string | Number of reps |
-| `sets`     | string | Number of sets |
-| `rest`     | string | Rest period    |
-| `note`     | string | Optional note  |
+| Key        | Type   | Description     |
+| ---------- | ------ | --------------- |
+| `title`    | string | Workout title   |
+| `exercise` | string | Exercise name   |
+| `reps`     | string | Number of reps  |
+| `sets`     | string | Number of sets  |
+| `rest`     | string | Rest period     |
+| `note`     | string | Optional note   |
+| `citation` | string | Source citation |
 
 **Default content:**
 
@@ -999,6 +1046,7 @@ workout-card:
   sets: '3'
   rest: '60 sec'
   note: 'Use assisted band if needed'
+  citation: ''
 ```
 
 ---
@@ -1015,6 +1063,7 @@ workout-card:
 | ------------- | ------ | -------------------- |
 | `affirmation` | string | The affirmation text |
 | `subtitle`    | string | Supporting subtitle  |
+| `citation`    | string | Source citation      |
 
 **Default content:**
 
@@ -1022,6 +1071,7 @@ workout-card:
 affirmation:
   affirmation: 'Resilient'
   subtitle: 'Every setback is a setup for a comeback.'
+  citation: ''
 ```
 
 ---
@@ -1032,11 +1082,12 @@ affirmation:
 
 **Fields:**
 
-| Key       | Type   | Description                  |
-| --------- | ------ | ---------------------------- |
-| `belief`  | string | The belief statement         |
-| `author`  | string | Person who holds this belief |
-| `context` | string | Optional context             |
+| Key        | Type   | Description                  |
+| ---------- | ------ | ---------------------------- |
+| `belief`   | string | The belief statement         |
+| `author`   | string | Person who holds this belief |
+| `context`  | string | Optional context             |
+| `citation` | string | Source citation              |
 
 **Default content:**
 
@@ -1045,6 +1096,7 @@ belief-card:
   belief: 'Simplicity is the ultimate sophistication.'
   author: 'Leonardo da Vinci'
   context: 'Renaissance artist and inventor'
+  citation: ''
 ```
 
 ---
@@ -1060,6 +1112,7 @@ belief-card:
 | `headline` | string | Section headline  |
 | `mission`  | string | Mission statement |
 | `vision`   | string | Vision statement  |
+| `citation` | string | Source citation   |
 
 **Default content:**
 
@@ -1069,6 +1122,7 @@ mission-statement:
   mission:
     'Empower every person and organisation on the planet to achieve more.'
   vision: 'A world where everyone has access to the tools they need to succeed.'
+  citation: ''
 ```
 
 ---
@@ -1086,6 +1140,7 @@ mission-statement:
 | `guest`       | string | Guest name          |
 | `duration`    | string | Episode duration    |
 | `description` | string | Episode description |
+| `citation`    | string | Source citation     |
 
 **Default content:**
 
@@ -1098,6 +1153,7 @@ podcast-episode:
   description:
     'Exploring how artificial intelligence will reshape creative industries in
     the next decade.'
+  citation: ''
 ```
 
 ---
@@ -1108,12 +1164,13 @@ podcast-episode:
 
 **Fields:**
 
-| Key        | Type   | Description   |
-| ---------- | ------ | ------------- |
-| `headline` | string | Title         |
-| `streak`   | string | Streak number |
-| `label`    | string | Unit label    |
-| `started`  | string | Start date    |
+| Key        | Type   | Description     |
+| ---------- | ------ | --------------- |
+| `headline` | string | Title           |
+| `streak`   | string | Streak number   |
+| `label`    | string | Unit label      |
+| `started`  | string | Start date      |
+| `citation` | string | Source citation |
 
 **Default content:**
 
@@ -1123,6 +1180,7 @@ streak-counter:
   streak: '42'
   label: 'days'
   started: 'Started Feb 15, 2025'
+  citation: ''
 ```
 
 ---
@@ -1138,6 +1196,7 @@ streak-counter:
 | `headline` | string | Main title      |
 | `text`     | string | Body paragraph  |
 | `imageUrl` | string | URL to an image |
+| `citation` | string | Source citation |
 
 **Default content:**
 
@@ -1148,6 +1207,7 @@ vision-board:
     'Visualise your goals, then work backwards from the future you want to
     create.'
   imageUrl: ''
+  citation: ''
 ```
 
 ---
@@ -1166,6 +1226,7 @@ vision-board:
 | `headline` | string | Main title                    |
 | `text`     | string | Body paragraph                |
 | `date`     | string | Date or timeline label        |
+| `citation` | string | Source citation               |
 
 **Default content:**
 
@@ -1177,6 +1238,7 @@ announcement:
     'We are building a platform that reimagines how teams collaborate across
     time zones.'
   date: 'Coming Q1 2025'
+  citation: ''
 ```
 
 ---
@@ -1191,6 +1253,7 @@ announcement:
 | ---------- | ------ | ----------------------- |
 | `headline` | string | Main title              |
 | `items`    | array  | Array of {q, a} objects |
+| `citation` | string | Source citation         |
 
 **Default content:**
 
@@ -1202,6 +1265,7 @@ faq:
       a: 'Sign up, customize your template, and download your image in seconds.'
     - q: 'Is it free?'
       a: 'Yes, all templates are free to use with no hidden fees.'
+  citation: ''
 ```
 
 ---
@@ -1217,6 +1281,7 @@ faq:
 | `term`       | string | The word or phrase |
 | `definition` | string | Clear explanation  |
 | `example`    | string | Usage example      |
+| `citation`   | string | Source citation    |
 
 **Default content:**
 
@@ -1229,6 +1294,7 @@ glossary:
   example:
     'The synergy between the design and engineering teams led to a breakthrough
     product.'
+  citation: ''
 ```
 
 ---
@@ -1246,6 +1312,7 @@ glossary:
 | `text`     | string | Body paragraph      |
 | `code`     | string | Promo code          |
 | `cta`      | string | Call to action text |
+| `citation` | string | Source citation     |
 
 **Default content:**
 
@@ -1256,6 +1323,7 @@ offer-banner:
   text: 'Get 30% off your first month. No commitment required.'
   code: 'WELCOME30'
   cta: 'Claim Offer'
+  citation: ''
 ```
 
 ---
@@ -1271,6 +1339,7 @@ offer-banner:
 | `plan`     | string | Plan name (e.g. Pro)        |
 | `price`    | string | Price display (e.g. $29/mo) |
 | `features` | array  | Array of feature strings    |
+| `citation` | string | Source citation             |
 
 **Default content:**
 
@@ -1283,6 +1352,7 @@ pricing-card:
     - 'Priority support'
     - 'Advanced analytics'
     - 'Team collaboration'
+  citation: ''
 ```
 
 ---
@@ -1293,10 +1363,11 @@ pricing-card:
 
 **Fields:**
 
-| Key        | Type                        | Description   |
-| ---------- | --------------------------- | ------------- |
-| `headline` | string                      | Section title |
-| `features` | array<{title, description}> | Feature items |
+| Key        | Type                        | Description     |
+| ---------- | --------------------------- | --------------- |
+| `headline` | string                      | Section title   |
+| `features` | array<{title, description}> | Feature items   |
+| `citation` | string                      | Source citation |
 
 **Default content:**
 
@@ -1310,6 +1381,7 @@ value-prop:
       description: 'Grows with your business effortlessly'
     - title: 'Secure by Default'
       description: 'Enterprise-grade security out of the box'
+  citation: ''
 ```
 
 ---
@@ -1328,6 +1400,7 @@ value-prop:
 | ---------- | ------ | ---------------- |
 | `headline` | string | Main title       |
 | `items`    | array  | Array of strings |
+| `citation` | string | Source citation  |
 
 **Default content:**
 
@@ -1339,6 +1412,7 @@ bullet-list:
     - 'Better collaboration'
     - 'Reduced costs'
     - 'Faster delivery'
+  citation: ''
 ```
 
 ---
@@ -1354,6 +1428,7 @@ bullet-list:
 | `headline` | string | Main title           |
 | `text`     | string | Supporting paragraph |
 | `items`    | array  | Array of strings     |
+| `citation` | string | Source citation      |
 
 **Default content:**
 
@@ -1366,6 +1441,7 @@ checklist:
     - 'Review analytics'
     - 'Test on mobile'
     - 'Schedule social posts'
+  citation: ''
 ```
 
 ---
@@ -1380,6 +1456,7 @@ checklist:
 | ---------- | ------ | ---------------------------- |
 | `headline` | string | Palette title                |
 | `colors`   | array  | Array of {name, hex} objects |
+| `citation` | string | Source citation              |
 
 **Default content:**
 
@@ -1397,6 +1474,7 @@ color-palette:
       hex: '#64748b'
     - name: 'Background'
       hex: '#f8fafc'
+  citation: ''
 ```
 
 ---
@@ -1413,6 +1491,7 @@ color-palette:
 | `text`     | string | Supporting paragraph  |
 | `items`    | array  | Array of strings      |
 | `imageUrl` | string | Optional bottom image |
+| `citation` | string | Source citation       |
 
 **Default content:**
 
@@ -1425,6 +1504,7 @@ listicle:
     - 'Read for 30 minutes'
     - 'Exercise daily'
   imageUrl: ''
+  citation: ''
 ```
 
 ---
@@ -1440,6 +1520,7 @@ listicle:
 | `headline` | string | Main title               |
 | `text`     | string | Supporting paragraph     |
 | `steps`    | array  | Array of {label} objects |
+| `citation` | string | Source citation          |
 
 **Default content:**
 
@@ -1451,6 +1532,7 @@ step-by-step:
     - label: 'Discover'
     - label: 'Learn'
     - label: 'Apply'
+  citation: ''
 ```
 
 ---
@@ -1465,6 +1547,7 @@ step-by-step:
 | ---------- | ------ | ------------------------ |
 | `headline` | string | Main title               |
 | `steps`    | array  | Array of {label} objects |
+| `citation` | string | Source citation          |
 
 **Default content:**
 
@@ -1475,6 +1558,7 @@ steps-horizontal:
     - label: 'Plan'
     - label: 'Build'
     - label: 'Launch'
+  citation: ''
 ```
 
 ---
@@ -1492,6 +1576,7 @@ steps-horizontal:
 | `headline` | string | Main title       |
 | `text`     | string | Body paragraph   |
 | `imageUrl` | string | Background image |
+| `citation` | string | Source citation  |
 
 **Default content:**
 
@@ -1500,6 +1585,7 @@ card-overlay:
   headline: 'New Horizons'
   text: 'The future belongs to those who believe in the beauty of their dreams.'
   imageUrl: ''
+  citation: ''
 ```
 
 ---
@@ -1516,6 +1602,7 @@ card-overlay:
 | `headline` | string | Main title           |
 | `text`     | string | Body text            |
 | `caption`  | string | Bottom caption       |
+| `citation` | string | Source citation      |
 
 **Default content:**
 
@@ -1525,6 +1612,7 @@ cinema-banner:
   headline: 'A New Chapter'
   text: 'Every great story begins with a single step into the unknown.'
   caption: 'Coming this summer'
+  citation: ''
 ```
 
 ---
@@ -1535,9 +1623,10 @@ cinema-banner:
 
 **Fields:**
 
-| Key      | Type  | Description           |
-| -------- | ----- | --------------------- |
-| `images` | array | Array of 3 image URLs |
+| Key        | Type   | Description           |
+| ---------- | ------ | --------------------- |
+| `images`   | array  | Array of 3 image URLs |
+| `citation` | string | Source citation       |
 
 **Default content:**
 
@@ -1547,6 +1636,7 @@ collage:
     - ''
     - ''
     - ''
+  citation: ''
 ```
 
 ---
@@ -1562,6 +1652,7 @@ collage:
 | `headline` | string | Main title       |
 | `text`     | string | Body paragraph   |
 | `imageUrl` | string | Background image |
+| `citation` | string | Source citation  |
 
 **Default content:**
 
@@ -1571,6 +1662,7 @@ full-bleed:
   text:
     'The only limit to your impact is your imagination and commitment to act.'
   imageUrl: ''
+  citation: ''
 ```
 
 ---
@@ -1581,9 +1673,10 @@ full-bleed:
 
 **Fields:**
 
-| Key      | Type  | Description           |
-| -------- | ----- | --------------------- |
-| `images` | array | Array of 4 image URLs |
+| Key        | Type   | Description           |
+| ---------- | ------ | --------------------- |
+| `images`   | array  | Array of 4 image URLs |
+| `citation` | string | Source citation       |
 
 **Default content:**
 
@@ -1594,6 +1687,7 @@ mosaic:
     - ''
     - ''
     - ''
+  citation: ''
 ```
 
 ---
@@ -1609,6 +1703,7 @@ mosaic:
 | `imageUrl` | string | Thumbnail image URL           |
 | `headline` | string | Video title                   |
 | `duration` | string | Duration display (e.g. 12:34) |
+| `citation` | string | Source citation               |
 
 **Default content:**
 
@@ -1617,6 +1712,7 @@ video-still:
   imageUrl: ''
   headline: 'Product Demo'
   duration: '3:45'
+  citation: ''
 ```
 
 ---
@@ -1634,6 +1730,7 @@ video-still:
 | `headline` | string | Headline                         |
 | `summary`  | string | Summary text                     |
 | `points`   | array  | Array of {title, detail} objects |
+| `citation` | string | Source citation                  |
 
 **Default content:**
 
@@ -1648,6 +1745,7 @@ breakdown-card:
       detail: 'Interest rate hold signaled stability'
     - title: 'Consumer Confidence'
       detail: 'Spending indices rose 4.2%'
+  citation: ''
 ```
 
 ---
@@ -1664,6 +1762,7 @@ breakdown-card:
 | `source`    | string | News source                           |
 | `timestamp` | string | Time or date                          |
 | `urgency`   | string | Urgency label (e.g. BREAKING, UPDATE) |
+| `citation`  | string | Source citation                       |
 
 **Default content:**
 
@@ -1673,6 +1772,7 @@ breaking-news:
   source: 'Reuters'
   timestamp: '2 hours ago'
   urgency: 'BREAKING'
+  citation: ''
 ```
 
 ---
@@ -1683,10 +1783,11 @@ breaking-news:
 
 **Fields:**
 
-| Key       | Type                       | Description |
-| --------- | -------------------------- | ----------- |
-| `date`    | string                     | Date label  |
-| `stories` | array<{headline, summary}> | Top stories |
+| Key        | Type                       | Description     |
+| ---------- | -------------------------- | --------------- |
+| `date`     | string                     | Date label      |
+| `stories`  | array<{headline, summary}> | Top stories     |
+| `citation` | string                     | Source citation |
 
 **Default content:**
 
@@ -1702,6 +1803,7 @@ daily-digest:
       summary: 'Government pledges 80% clean energy by 2035 in landmark policy.'
     - headline: 'Space agency confirms water on Mars'
       summary: 'Underground ice deposits detected by latest rover mission.'
+  citation: ''
 ```
 
 ---
@@ -1718,6 +1820,7 @@ daily-digest:
 | `verdict`     | string | Verdict: true, false, or partial |
 | `source`      | string | Fact-check source                |
 | `explanation` | string | Detailed explanation             |
+| `citation`    | string | Source citation                  |
 
 **Default content:**
 
@@ -1729,6 +1832,7 @@ fact-check:
   explanation:
     'Water needs vary by individual. The "8x8" rule is a reasonable guideline
     but not a strict scientific requirement.'
+  citation: ''
 ```
 
 ---
@@ -1739,11 +1843,12 @@ fact-check:
 
 **Fields:**
 
-| Key        | Type   | Description    |
-| ---------- | ------ | -------------- |
-| `question` | string | The question   |
-| `answer`   | string | The answer     |
-| `category` | string | Topic category |
+| Key        | Type   | Description     |
+| ---------- | ------ | --------------- |
+| `question` | string | The question    |
+| `answer`   | string | The answer      |
+| `category` | string | Topic category  |
+| `citation` | string | Source citation |
 
 **Default content:**
 
@@ -1754,6 +1859,7 @@ q-and-a:
     'A human-centred approach to innovation that integrates the needs of people,
     technology, and business.'
   category: 'Design'
+  citation: ''
 ```
 
 ---
@@ -1769,6 +1875,7 @@ q-and-a:
 | `hashtag`     | string   | Trending hashtag      |
 | `volume`      | string   | Post or mention count |
 | `relatedTags` | string[] | Related hashtags      |
+| `citation`    | string   | Source citation       |
 
 **Default content:**
 
@@ -1781,6 +1888,7 @@ trending-topic:
     - '#GreenEnergy'
     - '#COP30'
     - '#NetZero'
+  citation: ''
 ```
 
 ---
@@ -1793,10 +1901,11 @@ trending-topic:
 
 **Fields:**
 
-| Key     | Type                                      | Description        |
-| ------- | ----------------------------------------- | ------------------ |
-| `title` | string                                    | Section title      |
-| `certs` | array<{name, issuer, date, credentialId}> | Certification list |
+| Key        | Type                                      | Description        |
+| ---------- | ----------------------------------------- | ------------------ |
+| `title`    | string                                    | Section title      |
+| `certs`    | array<{name, issuer, date, credentialId}> | Certification list |
+| `citation` | string                                    | Source citation    |
 
 **Default content:**
 
@@ -1815,6 +1924,7 @@ certifications:
     - name: 'Certified Scrum Master'
       issuer: 'Scrum Alliance'
       date: '2021'
+  citation: ''
 ```
 
 ---
@@ -1825,10 +1935,11 @@ certifications:
 
 **Fields:**
 
-| Key       | Type                                                                      | Description      |
-| --------- | ------------------------------------------------------------------------- | ---------------- |
-| `title`   | string                                                                    | Section title    |
-| `degrees` | array<{institution, degree, field, period, location?, gpa?, highlights?}> | Academic history |
+| Key        | Type                                                                      | Description      |
+| ---------- | ------------------------------------------------------------------------- | ---------------- |
+| `title`    | string                                                                    | Section title    |
+| `degrees`  | array<{institution, degree, field, period, location?, gpa?, highlights?}> | Academic history |
+| `citation` | string                                                                    | Source citation  |
 
 **Default content:**
 
@@ -1853,6 +1964,7 @@ education:
       gpa: '3.8'
       highlights:
         - 'Minor in Design Innovation'
+  citation: ''
 ```
 
 ---
@@ -1876,6 +1988,7 @@ education:
 | `linkedin`  | string | LinkedIn handle (without @)  |
 | `instagram` | string | Instagram handle (without @) |
 | `x`         | string | X/Twitter handle (without @) |
+| `citation`  | string | Source citation              |
 
 **Default content:**
 
@@ -1894,6 +2007,7 @@ profile-header:
   linkedin: 'alexchen'
   instagram: 'alexchen'
   x: 'alexchen'
+  citation: ''
 ```
 
 ---
@@ -1904,10 +2018,11 @@ profile-header:
 
 **Fields:**
 
-| Key        | Type                                             | Description   |
-| ---------- | ------------------------------------------------ | ------------- |
-| `title`    | string                                           | Section title |
-| `projects` | array<{name, description, tech[], highlights[]}> | Project list  |
+| Key        | Type                                             | Description     |
+| ---------- | ------------------------------------------------ | --------------- |
+| `title`    | string                                           | Section title   |
+| `projects` | array<{name, description, tech[], highlights[]}> | Project list    |
+| `citation` | string                                           | Source citation |
 
 **Default content:**
 
@@ -1935,6 +2050,7 @@ profile-projects:
       highlights:
         - 'Handles 1M+ events/day'
         - 'Sub-second query response'
+  citation: ''
 ```
 
 ---
@@ -1945,10 +2061,11 @@ profile-projects:
 
 **Fields:**
 
-| Key          | Type                   | Description   |
-| ------------ | ---------------------- | ------------- |
-| `title`      | string                 | Section title |
-| `categories` | array<{name, items[]}> | Skill groups  |
+| Key          | Type                   | Description     |
+| ------------ | ---------------------- | --------------- |
+| `title`      | string                 | Section title   |
+| `categories` | array<{name, items[]}> | Skill groups    |
+| `citation`   | string                 | Source citation |
 
 **Default content:**
 
@@ -1976,6 +2093,7 @@ skills:
         - 'Usability Testing'
         - 'A/B Testing'
         - 'Analytics'
+  citation: ''
 ```
 
 ---
@@ -1986,10 +2104,11 @@ skills:
 
 **Fields:**
 
-| Key     | Type                                         | Description   |
-| ------- | -------------------------------------------- | ------------- |
-| `title` | string                                       | Section title |
-| `jobs`  | array<{company, role, period, achievements}> | Work history  |
+| Key        | Type                                         | Description     |
+| ---------- | -------------------------------------------- | --------------- |
+| `title`    | string                                       | Section title   |
+| `jobs`     | array<{company, role, period, achievements}> | Work history    |
+| `citation` | string                                       | Source citation |
 
 **Default content:**
 
@@ -2009,6 +2128,7 @@ work-experience:
       achievements:
         - 'Redesigned checkout flow increasing conversion 18%'
         - 'Built and mentored design guild of 8 designers'
+  citation: ''
 ```
 
 ---
@@ -2021,12 +2141,13 @@ work-experience:
 
 **Fields:**
 
-| Key     | Type   | Description               |
-| ------- | ------ | ------------------------- |
-| `title` | string | Poem title                |
-| `line1` | string | First line (5 syllables)  |
-| `line2` | string | Second line (7 syllables) |
-| `line3` | string | Third line (5 syllables)  |
+| Key        | Type   | Description               |
+| ---------- | ------ | ------------------------- |
+| `title`    | string | Poem title                |
+| `line1`    | string | First line (5 syllables)  |
+| `line2`    | string | Second line (7 syllables) |
+| `line3`    | string | Third line (5 syllables)  |
+| `citation` | string | Source citation           |
 
 **Default content:**
 
@@ -2036,6 +2157,7 @@ haiku:
   line1: 'An old silent pond'
   line2: 'A frog jumps into the pond'
   line3: 'Splash! Silence again'
+  citation: ''
 ```
 
 ---
@@ -2051,6 +2173,7 @@ haiku:
 | `headline` | string | Main title      |
 | `text`     | string | Body paragraph  |
 | `imageUrl` | string | URL to an image |
+| `citation` | string | Source citation |
 
 **Default content:**
 
@@ -2061,6 +2184,7 @@ minimal:
     'In a world of constant distraction, the ability to concentrate on what
     truly matters has become a superpower.'
   imageUrl: ''
+  citation: ''
 ```
 
 ---
@@ -2071,11 +2195,12 @@ minimal:
 
 **Fields:**
 
-| Key      | Type   | Description        |
-| -------- | ------ | ------------------ |
-| `quote`  | string | The quoted text    |
-| `author` | string | Author name        |
-| `source` | string | Attribution source |
+| Key        | Type   | Description        |
+| ---------- | ------ | ------------------ |
+| `quote`    | string | The quoted text    |
+| `author`   | string | Author name        |
+| `source`   | string | Attribution source |
+| `citation` | string | Source citation    |
 
 **Default content:**
 
@@ -2084,6 +2209,7 @@ pull-quote:
   quote: 'The only way to do great work is to love what you do.'
   author: 'Steve Jobs'
   source: 'Stanford commencement address, 2005'
+  citation: ''
 ```
 
 ---
@@ -2101,6 +2227,7 @@ pull-quote:
 | `scaleMax` | number | Maximum rating (default 5) |
 | `label`    | string | Rating label               |
 | `sublabel` | string | Rating sublabel            |
+| `citation` | string | Source citation            |
 
 **Default content:**
 
@@ -2111,6 +2238,7 @@ rating-scale:
   scaleMax: 5
   label: 'Excellent'
   sublabel: 'Based on 2,500+ reviews'
+  citation: ''
 ```
 
 ---
@@ -2126,6 +2254,7 @@ rating-scale:
 | `headline` | string | Main title         |
 | `text`     | string | Key insight text   |
 | `source`   | string | Attribution source |
+| `citation` | string | Source citation    |
 
 **Default content:**
 
@@ -2136,6 +2265,7 @@ takeaway:
     'In an information-rich world, the scarcest resource is not information but
     attention.'
   source: 'Herbert Simon, 1971'
+  citation: ''
 ```
 
 ---
@@ -2151,6 +2281,7 @@ takeaway:
 | `number`   | string | Display number (e.g. 01) |
 | `headline` | string | Main title               |
 | `text`     | string | Body paragraph           |
+| `citation` | string | Source citation          |
 
 **Default content:**
 
@@ -2161,6 +2292,7 @@ tip-card:
   text:
     'Break your goals into tiny, manageable steps. Consistency beats intensity
     every time.'
+  citation: ''
 ```
 
 ---
@@ -2177,6 +2309,7 @@ tip-card:
 | ---------- | ------ | --------------- |
 | `headline` | string | Main headline   |
 | `text`     | string | Supporting text |
+| `citation` | string | Source citation |
 
 **Default content:**
 
@@ -2184,6 +2317,7 @@ tip-card:
 gradient-text:
   headline: 'Create'
   text: 'Beautiful designs that inspire and motivate people every day.'
+  citation: ''
 ```
 
 ---
@@ -2199,6 +2333,7 @@ gradient-text:
 | `headline`   | string   | Full headline text                 |
 | `highlights` | string[] | Words to highlight in accent color |
 | `text`       | string   | Subtitle text                      |
+| `citation`   | string   | Source citation                    |
 
 **Default content:**
 
@@ -2208,6 +2343,7 @@ highlighted-title:
   highlights:
     - 'NOW'
   text: ''
+  citation: ''
 ```
 
 ---
@@ -2223,6 +2359,7 @@ highlighted-title:
 | `icon`     | string | Emoji or icon character |
 | `headline` | string | Main text               |
 | `text`     | string | Description text        |
+| `citation` | string | Source citation         |
 
 **Default content:**
 
@@ -2231,6 +2368,7 @@ icon-text:
   icon: '🚀'
   headline: 'Ship Faster'
   text: ''
+  citation: ''
 ```
 
 ---
@@ -2247,6 +2385,7 @@ icon-text:
 | `replacement` | string | Replacement in accent color |
 | `label`       | string | Descriptive label           |
 | `text`        | string | Description text            |
+| `citation`    | string | Source citation             |
 
 **Default content:**
 
@@ -2256,6 +2395,7 @@ strikethrough:
   replacement: 'FREE'
   label: 'Limited Time Offer'
   text: ''
+  citation: ''
 ```
 
 ---
@@ -2267,12 +2407,13 @@ normal
 
 **Fields:**
 
-| Key     | Type   | Description          |
-| ------- | ------ | -------------------- |
-| `word1` | string | First word (accent)  |
-| `word2` | string | Middle word (normal) |
-| `word3` | string | Last word (accent)   |
-| `text`  | string | Subtitle text        |
+| Key        | Type   | Description          |
+| ---------- | ------ | -------------------- |
+| `word1`    | string | First word (accent)  |
+| `word2`    | string | Middle word (normal) |
+| `word3`    | string | Last word (accent)   |
+| `text`     | string | Subtitle text        |
+| `citation` | string | Source citation      |
 
 **Default content:**
 
@@ -2282,6 +2423,7 @@ tri-word:
   word2: 'hard'
   word3: 'PLAY'
   text: ''
+  citation: ''
 ```
 
 ---
@@ -2292,10 +2434,11 @@ tri-word:
 
 **Fields:**
 
-| Key     | Type                     | Description               |
-| ------- | ------------------------ | ------------------------- |
-| `words` | array<{text, highlight}> | Words with highlight flag |
-| `text`  | string                   | Subtitle text             |
+| Key        | Type                     | Description               |
+| ---------- | ------------------------ | ------------------------- |
+| `words`    | array<{text, highlight}> | Words with highlight flag |
+| `text`     | string                   | Subtitle text             |
+| `citation` | string                   | Source citation           |
 
 **Default content:**
 
@@ -2309,6 +2452,7 @@ word-stack:
     - text: 'MORE'
       highlight: true
   text: ''
+  citation: ''
 ```
 
 ---
@@ -2323,12 +2467,13 @@ word-stack:
 
 **Fields:**
 
-| Key       | Type   | Description                          |
-| --------- | ------ | ------------------------------------ |
-| `title`   | string | Title                                |
-| `subject` | string | Subject area                         |
-| `notes`   | array  | Array of {area, description} objects |
-| `tip`     | string | Study tip                            |
+| Key        | Type   | Description                          |
+| ---------- | ------ | ------------------------------------ |
+| `title`    | string | Title                                |
+| `subject`  | string | Subject area                         |
+| `notes`    | array  | Array of {area, description} objects |
+| `tip`      | string | Study tip                            |
+| `citation` | string | Source citation                      |
 
 **Default content:**
 
@@ -2344,6 +2489,7 @@ anatomy-study:
     - area: 'Proportions'
       description: 'Head-to-body ratios'
   tip: 'Practice gesture drawing for 5 minutes daily'
+  citation: ''
 ```
 
 ---
@@ -2354,11 +2500,12 @@ anatomy-study:
 
 **Fields:**
 
-| Key       | Type   | Description                            |
-| --------- | ------ | -------------------------------------- |
-| `title`   | string | Title                                  |
-| `period`  | string | Time period                            |
-| `entries` | array  | Array of {date, event, artist} objects |
+| Key        | Type   | Description                            |
+| ---------- | ------ | -------------------------------------- |
+| `title`    | string | Title                                  |
+| `period`   | string | Time period                            |
+| `entries`  | array  | Array of {date, event, artist} objects |
+| `citation` | string | Source citation                        |
 
 **Default content:**
 
@@ -2376,6 +2523,7 @@ art-history:
     - date: '1889'
       event: 'Starry Night created'
       artist: 'Vincent van Gogh'
+  citation: ''
 ```
 
 ---
@@ -2392,6 +2540,7 @@ art-history:
 | `description` | string | Description                        |
 | `colors`      | array  | Array of {name, hex, role} objects |
 | `tip`         | string | Tip text                           |
+| `citation`    | string | Source citation                    |
 
 **Default content:**
 
@@ -2416,6 +2565,7 @@ color-wheel:
       hex: '#6b7280'
       role: 'Balance'
   tip: 'Use complementary colors for maximum contrast'
+  citation: ''
 ```
 
 ---
@@ -2432,6 +2582,7 @@ color-wheel:
 | `description` | string | Description                  |
 | `palette`     | array  | Array of {name, hex} objects |
 | `mood`        | string | Mood tag                     |
+| `citation`    | string | Source citation              |
 
 **Default content:**
 
@@ -2451,6 +2602,7 @@ palette-inspiration:
     - name: 'Sage'
       hex: '#86efac'
   mood: 'Warm & Inviting'
+  citation: ''
 ```
 
 ---
@@ -2461,10 +2613,11 @@ palette-inspiration:
 
 **Fields:**
 
-| Key      | Type   | Description                                                |
-| -------- | ------ | ---------------------------------------------------------- |
-| `title`  | string | Title                                                      |
-| `styles` | array  | Array of {name, era, description, characteristics} objects |
+| Key        | Type   | Description                                                |
+| ---------- | ------ | ---------------------------------------------------------- |
+| `title`    | string | Title                                                      |
+| `styles`   | array  | Array of {name, era, description, characteristics} objects |
+| `citation` | string | Source citation                                            |
 
 **Default content:**
 
@@ -2480,6 +2633,7 @@ style-guide:
       era: '1907'
       description: 'Geometric forms'
       characteristics: 'Fragmented objects, multiple viewpoints'
+  citation: ''
 ```
 
 ---
@@ -2497,6 +2651,7 @@ style-guide:
 | `difficulty` | string | Difficulty level                     |
 | `steps`      | array  | Array of {step, description} objects |
 | `tip`        | string | Pro tip                              |
+| `citation`   | string | Source citation                      |
 
 **Default content:**
 
@@ -2513,6 +2668,7 @@ technique-tutorial:
     - step: 'Detail'
       description: 'Add concentrated pigment'
   tip: 'Work quickly while the paper is still wet'
+  citation: ''
 ```
 
 ---
@@ -2532,6 +2688,7 @@ technique-tutorial:
 | `body`      | string | Body paragraphs (newline separated) |
 | `closing`   | string | Closing line                        |
 | `signature` | string | Signature                           |
+| `citation`  | string | Source citation                     |
 
 **Default content:**
 
@@ -2547,6 +2704,7 @@ cover-letter:
     delivering products that serve millions of users.'
   closing: 'Thank you for your time and consideration.'
   signature: 'Best regards, Alex Chen'
+  citation: ''
 ```
 
 ---
@@ -2563,6 +2721,7 @@ cover-letter:
 | `role`      | string | Role                                |
 | `questions` | array  | Array of {question, answer} objects |
 | `tip`       | string | Preparation tip                     |
+| `citation`  | string | Source citation                     |
 
 **Default content:**
 
@@ -2576,6 +2735,7 @@ interview-prep:
     - question: 'Why this company?'
       answer: 'Research the mission and connect it to your goals'
   tip: 'STAR method: Situation, Task, Action, Result'
+  citation: ''
 ```
 
 ---
@@ -2593,6 +2753,7 @@ interview-prep:
 | `description` | string | Description            |
 | `doList`      | array  | Array of do strings    |
 | `dontList`    | array  | Array of don't strings |
+| `citation`    | string | Source citation        |
 
 **Default content:**
 
@@ -2610,6 +2771,7 @@ networking-tip:
     - 'Ask for favors immediately'
     - 'Only talk about yourself'
     - 'Spam with messages'
+  citation: ''
 ```
 
 ---
@@ -2627,6 +2789,7 @@ networking-tip:
 | `category`    | string | Category                 |
 | `description` | string | Description              |
 | `examples`    | array  | Array of example strings |
+| `citation`    | string | Source citation          |
 
 **Default content:**
 
@@ -2642,6 +2805,7 @@ resume-tip:
     - 'Managed a team of 5 developers'
     - 'Increased revenue by 25% YoY'
     - 'Reduced load time by 40%'
+  citation: ''
 ```
 
 ---
@@ -2652,12 +2816,13 @@ resume-tip:
 
 **Fields:**
 
-| Key       | Type   | Description                                |
-| --------- | ------ | ------------------------------------------ |
-| `title`   | string | Title                                      |
-| `role`    | string | Role                                       |
-| `entries` | array  | Array of {level, salary, location} objects |
-| `note`    | string | Disclaimer note                            |
+| Key        | Type   | Description                                |
+| ---------- | ------ | ------------------------------------------ |
+| `title`    | string | Title                                      |
+| `role`     | string | Role                                       |
+| `entries`  | array  | Array of {level, salary, location} objects |
+| `note`     | string | Disclaimer note                            |
+| `citation` | string | Source citation                            |
 
 **Default content:**
 
@@ -2676,6 +2841,7 @@ salary-guide:
       salary: '$160K-$200K'
       location: 'San Francisco'
   note: 'Salaries vary by company, experience, and location'
+  citation: ''
 ```
 
 ---
@@ -2686,11 +2852,12 @@ salary-guide:
 
 **Fields:**
 
-| Key      | Type   | Description                                     |
-| -------- | ------ | ----------------------------------------------- |
-| `title`  | string | Title                                           |
-| `skill`  | string | Skill name                                      |
-| `levels` | array  | Array of {level, description, duration} objects |
+| Key        | Type   | Description                                     |
+| ---------- | ------ | ----------------------------------------------- |
+| `title`    | string | Title                                           |
+| `skill`    | string | Skill name                                      |
+| `levels`   | array  | Array of {level, description, duration} objects |
+| `citation` | string | Source citation                                 |
 
 **Default content:**
 
@@ -2708,6 +2875,7 @@ skill-roadmap:
     - level: 'Advanced'
       description: 'Performance, patterns, testing'
       duration: '3-6 months'
+  citation: ''
 ```
 
 ---
@@ -2727,6 +2895,7 @@ skill-roadmap:
 | `description`  | string | Description      |
 | `rarity`       | string | Rarity level     |
 | `dateUnlocked` | string | Date unlocked    |
+| `citation`     | string | Source citation  |
 
 **Default content:**
 
@@ -2737,6 +2906,7 @@ achievement-unlocked:
   description: 'Collect all trophies'
   rarity: 'Ultra Rare'
   dateUnlocked: 'Mar 15, 2026'
+  citation: ''
 ```
 
 ---
@@ -2755,6 +2925,7 @@ achievement-unlocked:
 | `reviewer` | string | Reviewer name        |
 | `pros`     | array  | Array of pro strings |
 | `cons`     | array  | Array of con strings |
+| `citation` | string | Source citation      |
 
 **Default content:**
 
@@ -2771,6 +2942,7 @@ game-review:
   cons:
     - 'Steep learning curve'
     - 'Some performance issues'
+  citation: ''
 ```
 
 ---
@@ -2787,6 +2959,7 @@ game-review:
 | `game`        | string | Game                                           |
 | `description` | string | Description                                    |
 | `settings`    | array  | Array of {name, value, recommendation} objects |
+| `citation`    | string | Source citation                                |
 
 **Default content:**
 
@@ -2805,6 +2978,7 @@ settings-guide:
     - name: 'FPS'
       value: 'Unlimited'
       recommendation: 'Capped at 240'
+  citation: ''
 ```
 
 ---
@@ -2821,6 +2995,7 @@ settings-guide:
 | `description` | string | Description                   |
 | `components`  | array  | Array of {name, spec} objects |
 | `totalCost`   | string | Total cost                    |
+| `citation`    | string | Source citation               |
 
 **Default content:**
 
@@ -2836,6 +3011,7 @@ setup-tour:
     - name: 'Mouse'
       spec: 'Wireless 25K DPI'
   totalCost: '$2,500'
+  citation: ''
 ```
 
 ---
@@ -2852,6 +3028,7 @@ setup-tour:
 | `game`      | string | Game                            |
 | `stats`     | array  | Array of {label, value} objects |
 | `highlight` | string | Highlight badge                 |
+| `citation`  | string | Source citation                 |
 
 **Default content:**
 
@@ -2869,6 +3046,7 @@ stat-tracker:
     - label: 'CS/Min'
       value: '8.5'
   highlight: 'Top 1%'
+  citation: ''
 ```
 
 ---
@@ -2879,12 +3057,13 @@ stat-tracker:
 
 **Fields:**
 
-| Key       | Type   | Description                              |
-| --------- | ------ | ---------------------------------------- |
-| `title`   | string | Title                                    |
-| `game`    | string | Game                                     |
-| `date`    | string | Date                                     |
-| `results` | array  | Array of {position, team, score} objects |
+| Key        | Type   | Description                              |
+| ---------- | ------ | ---------------------------------------- |
+| `title`    | string | Title                                    |
+| `game`     | string | Game                                     |
+| `date`     | string | Date                                     |
+| `results`  | array  | Array of {position, team, score} objects |
+| `citation` | string | Source citation                          |
 
 **Default content:**
 
@@ -2903,6 +3082,7 @@ tournament:
     - position: '3'
       team: 'Team Gamma'
       score: '9'
+  citation: ''
 ```
 
 ---
@@ -2923,6 +3103,7 @@ tournament:
 | `rating`        | number | Rating out of 5 |
 | `review`        | string | Review text     |
 | `favoriteTrack` | string | Favorite track  |
+| `citation`      | string | Source citation |
 
 **Default content:**
 
@@ -2934,6 +3115,7 @@ album-review:
   rating: 5
   review: 'A masterpiece that showcases the band at their creative peak.'
   favoriteTrack: 'Come Together'
+  citation: ''
 ```
 
 ---
@@ -2950,6 +3132,7 @@ album-review:
 | `chords`     | array  | Array of {name, fingers} objects |
 | `difficulty` | string | Difficulty                       |
 | `tip`        | string | Playing tip                      |
+| `citation`   | string | Source citation                  |
 
 **Default content:**
 
@@ -2969,6 +3152,7 @@ chord-chart:
       fingers: '133211'
   difficulty: 'Beginner'
   tip: 'Practice transitioning between C, G, and Am'
+  citation: ''
 ```
 
 ---
@@ -2987,6 +3171,7 @@ chord-chart:
 | `price`    | string | Price                |
 | `pros`     | array  | Array of pro strings |
 | `cons`     | array  | Array of con strings |
+| `citation` | string | Source citation      |
 
 **Default content:**
 
@@ -3003,6 +3188,7 @@ gear-review:
   cons:
     - 'Slightly heavy'
     - 'Non-detachable cable on older models'
+  citation: ''
 ```
 
 ---
@@ -3020,6 +3206,7 @@ gear-review:
 | `description` | string | Description              |
 | `examples`    | array  | Array of example strings |
 | `tip`         | string | Learning tip             |
+| `citation`    | string | Source citation          |
 
 **Default content:**
 
@@ -3035,6 +3222,7 @@ music-theory:
     - 'I-V-vi-IV in G: G-D-Em-C'
     - 'ii-V-I in jazz: Dm-G7-Cmaj7'
   tip: 'Listen to songs and try to identify the progression by ear'
+  citation: ''
 ```
 
 ---
@@ -3051,6 +3239,7 @@ music-theory:
 | `description`   | string | Description                                       |
 | `tracks`        | array  | Array of {number, name, artist, duration} objects |
 | `totalDuration` | string | Total duration                                    |
+| `citation`      | string | Source citation                                   |
 
 **Default content:**
 
@@ -3072,6 +3261,7 @@ playlist:
       artist: 'Satie'
       duration: '3:06'
   totalDuration: '16:16'
+  citation: ''
 ```
 
 ---
@@ -3082,13 +3272,14 @@ playlist:
 
 **Fields:**
 
-| Key      | Type   | Description                             |
-| -------- | ------ | --------------------------------------- |
-| `artist` | string | Artist name                             |
-| `venue`  | string | Venue                                   |
-| `date`   | string | Date                                    |
-| `songs`  | array  | Array of {number, title, album} objects |
-| `encore` | array  | Array of encore song strings            |
+| Key        | Type   | Description                             |
+| ---------- | ------ | --------------------------------------- |
+| `artist`   | string | Artist name                             |
+| `venue`    | string | Venue                                   |
+| `date`     | string | Date                                    |
+| `songs`    | array  | Array of {number, title, album} objects |
+| `encore`   | array  | Array of encore song strings            |
+| `citation` | string | Source citation                         |
 
 **Default content:**
 
@@ -3110,6 +3301,7 @@ setlist:
   encore:
     - 'Creep'
     - 'Karma Police'
+  citation: ''
 ```
 
 ---
@@ -3122,13 +3314,14 @@ setlist:
 
 **Fields:**
 
-| Key          | Type   | Description |
-| ------------ | ------ | ----------- |
-| `quote`      | string | Quote text  |
-| `book`       | string | Book title  |
-| `author`     | string | Author name |
-| `pageNumber` | string | Page number |
-| `genre`      | string | Genre       |
+| Key          | Type   | Description     |
+| ------------ | ------ | --------------- |
+| `quote`      | string | Quote text      |
+| `book`       | string | Book title      |
+| `author`     | string | Author name     |
+| `pageNumber` | string | Page number     |
+| `genre`      | string | Genre           |
+| `citation`   | string | Source citation |
 
 **Default content:**
 
@@ -3139,6 +3332,7 @@ book-quote:
   author: 'Jane Austen'
   pageNumber: '1'
   genre: 'Classic'
+  citation: ''
 ```
 
 ---
@@ -3149,12 +3343,13 @@ book-quote:
 
 **Fields:**
 
-| Key        | Type   | Description  |
-| ---------- | ------ | ------------ |
-| `wisdom`   | string | Wisdom text  |
-| `author`   | string | Author name  |
-| `category` | string | Category tag |
-| `date`     | string | Date         |
+| Key        | Type   | Description     |
+| ---------- | ------ | --------------- |
+| `wisdom`   | string | Wisdom text     |
+| `author`   | string | Author name     |
+| `category` | string | Category tag    |
+| `date`     | string | Date            |
+| `citation` | string | Source citation |
 
 **Default content:**
 
@@ -3164,6 +3359,7 @@ daily-wisdom:
   author: 'Leonardo da Vinci'
   category: 'Philosophy'
   date: 'Jul 13'
+  citation: ''
 ```
 
 ---
@@ -3174,12 +3370,13 @@ daily-wisdom:
 
 **Fields:**
 
-| Key      | Type   | Description |
-| -------- | ------ | ----------- |
-| `quote`  | string | Quote text  |
-| `author` | string | Author name |
-| `source` | string | Source      |
-| `year`   | string | Year        |
+| Key        | Type   | Description     |
+| ---------- | ------ | --------------- |
+| `quote`    | string | Quote text      |
+| `author`   | string | Author name     |
+| `source`   | string | Source          |
+| `year`     | string | Year            |
+| `citation` | string | Source citation |
 
 **Default content:**
 
@@ -3189,6 +3386,7 @@ famous-quote:
   author: 'Steve Jobs'
   source: 'Stanford commencement address'
   year: '2005'
+  citation: ''
 ```
 
 ---
@@ -3199,12 +3397,13 @@ famous-quote:
 
 **Fields:**
 
-| Key        | Type   | Description |
-| ---------- | ------ | ----------- |
-| `quote`    | string | Quote text  |
-| `author`   | string | Author name |
-| `theme`    | string | Theme tag   |
-| `subtitle` | string | Subtitle    |
+| Key        | Type   | Description     |
+| ---------- | ------ | --------------- |
+| `quote`    | string | Quote text      |
+| `author`   | string | Author name     |
+| `theme`    | string | Theme tag       |
+| `subtitle` | string | Subtitle        |
+| `citation` | string | Source citation |
 
 **Default content:**
 
@@ -3215,6 +3414,7 @@ motivational-quote:
   author: 'Eleanor Roosevelt'
   theme: 'Dreams'
   subtitle: 'Keep believing in yourself'
+  citation: ''
 ```
 
 ---
@@ -3225,13 +3425,14 @@ motivational-quote:
 
 **Fields:**
 
-| Key         | Type   | Description    |
-| ----------- | ------ | -------------- |
-| `quote`     | string | Quote text     |
-| `movie`     | string | Movie title    |
-| `character` | string | Character name |
-| `year`      | string | Year           |
-| `genre`     | string | Genre          |
+| Key         | Type   | Description     |
+| ----------- | ------ | --------------- |
+| `quote`     | string | Quote text      |
+| `movie`     | string | Movie title     |
+| `character` | string | Character name  |
+| `year`      | string | Year            |
+| `genre`     | string | Genre           |
+| `citation`  | string | Source citation |
 
 **Default content:**
 
@@ -3242,6 +3443,7 @@ movie-quote:
   character: 'Forrest Gump'
   year: '1994'
   genre: 'Drama'
+  citation: ''
 ```
 
 ---
@@ -3252,13 +3454,14 @@ movie-quote:
 
 **Fields:**
 
-| Key      | Type   | Description |
-| -------- | ------ | ----------- |
-| `lyric`  | string | Lyric text  |
-| `song`   | string | Song title  |
-| `artist` | string | Artist name |
-| `album`  | string | Album name  |
-| `year`   | string | Year        |
+| Key        | Type   | Description     |
+| ---------- | ------ | --------------- |
+| `lyric`    | string | Lyric text      |
+| `song`     | string | Song title      |
+| `artist`   | string | Artist name     |
+| `album`    | string | Album name      |
+| `year`     | string | Year            |
+| `citation` | string | Source citation |
 
 **Default content:**
 
@@ -3269,6 +3472,7 @@ song-lyric:
   artist: 'John Lennon'
   album: 'Imagine'
   year: '1971'
+  citation: ''
 ```
 
 ---
@@ -3289,6 +3493,7 @@ song-lyric:
 | `traits`      | array  | Array of trait strings |
 | `motivation`  | string | Motivation             |
 | `flaw`        | string | Fatal flaw             |
+| `citation`    | string | Source citation        |
 
 **Default content:**
 
@@ -3303,6 +3508,7 @@ character-sheet:
     - 'Flawed'
   motivation: 'Truth and justice'
   flaw: 'Reckless ambition'
+  citation: ''
 ```
 
 ---
@@ -3318,6 +3524,7 @@ character-sheet:
 | `title`       | string | Title                          |
 | `description` | string | Description                    |
 | `categories`  | array  | Array of {name, items} objects |
+| `citation`    | string | Source citation                |
 
 **Default content:**
 
@@ -3330,6 +3537,7 @@ editing-checklist:
       items: "["Clear thesis""
     - name: "Language"
       items: "["Grammar correct""
+  citation: ''
 ```
 
 ---
@@ -3348,6 +3556,7 @@ editing-checklist:
 | `elements`    | array  | Array of element strings |
 | `examples`    | array  | Array of example strings |
 | `tip`         | string | Writing tip              |
+| `citation`    | string | Source citation          |
 
 **Default content:**
 
@@ -3364,6 +3573,7 @@ genre-guide:
     - 'Sherlock Holmes'
     - 'Gone Girl'
   tip: 'Plant clues early and play fair with the reader'
+  citation: ''
 ```
 
 ---
@@ -3380,6 +3590,7 @@ genre-guide:
 | `structure`   | string | Structure type                       |
 | `description` | string | Description                          |
 | `elements`    | array  | Array of {name, description} objects |
+| `citation`    | string | Source citation                      |
 
 **Default content:**
 
@@ -3395,6 +3606,7 @@ story-structure:
       description: 'Rising conflict and stakes'
     - name: 'Resolution'
       description: 'Climax and resolution'
+  citation: ''
 ```
 
 ---
@@ -3412,6 +3624,7 @@ story-structure:
 | `description` | string | Description                     |
 | `aspects`     | array  | Array of {name, detail} objects |
 | `rules`       | array  | Array of rule strings           |
+| `citation`    | string | Source citation                 |
 
 **Default content:**
 
@@ -3430,6 +3643,7 @@ world-building:
   rules:
     - 'Magic has a cost'
     - 'Actions have consequences'
+  citation: ''
 ```
 
 ---
@@ -3447,6 +3661,7 @@ world-building:
 | `genre`      | string | Genre             |
 | `difficulty` | string | Difficulty        |
 | `wordCount`  | string | Target word count |
+| `citation`   | string | Source citation   |
 
 **Default content:**
 
@@ -3459,6 +3674,7 @@ writing-prompt:
   genre: 'Fiction'
   difficulty: 'Intermediate'
   wordCount: '500'
+  citation: ''
 ```
 
 ---
@@ -3477,6 +3693,7 @@ writing-prompt:
 | ---------- | ------ | ------------------------------------- |
 | `headline` | string | Showcase title                        |
 | `ratios`   | array  | Array of {label, description} objects |
+| `citation` | string | Source citation                       |
 
 **Default content:**
 
@@ -3490,6 +3707,7 @@ aspect-ratio:
       description: 'Instagram Portrait'
     - label: '16:9'
       description: 'YouTube Thumbnail'
+  citation: ''
 ```
 
 ---
@@ -3500,13 +3718,14 @@ aspect-ratio:
 
 **Fields:**
 
-| Key      | Type   | Description     |
-| -------- | ------ | --------------- |
-| `title`  | string | Book title      |
-| `author` | string | Author name     |
-| `rating` | number | Star rating 1-5 |
-| `review` | string | Review text     |
-| `genre`  | string | Book genre      |
+| Key        | Type   | Description     |
+| ---------- | ------ | --------------- |
+| `title`    | string | Book title      |
+| `author`   | string | Author name     |
+| `rating`   | number | Star rating 1-5 |
+| `review`   | string | Review text     |
+| `genre`    | string | Book genre      |
+| `citation` | string | Source citation |
 
 **Default content:**
 
@@ -3519,6 +3738,7 @@ book-review:
     'A practical guide to building good habits and breaking bad ones. Clear and
     actionable.'
   genre: 'Self-help'
+  citation: ''
 ```
 
 ---
@@ -3529,10 +3749,11 @@ book-review:
 
 **Fields:**
 
-| Key     | Type                                  | Description     |
-| ------- | ------------------------------------- | --------------- |
-| `title` | string                                | Section title   |
-| `items` | array<{author?, title?, year?, url?}> | Reference items |
+| Key        | Type                                  | Description     |
+| ---------- | ------------------------------------- | --------------- |
+| `title`    | string                                | Section title   |
+| `items`    | array<{author?, title?, year?, url?}> | Reference items |
+| `citation` | string                                | Source citation |
 
 **Default content:**
 
@@ -3548,6 +3769,7 @@ references:
       title: 'Modern UI Patterns'
       year: '2022'
       url: 'https://example.com/ui-patterns'
+  citation: ''
 ```
 
 ---
@@ -3562,6 +3784,7 @@ references:
 | ---------- | ------ | ----------------------------- |
 | `headline` | string | Chart title                   |
 | `segments` | array  | Array of {label, pct} objects |
+| `citation` | string | Source citation               |
 
 **Default content:**
 
@@ -3577,6 +3800,7 @@ donut-chart:
       pct: '12'
     - label: 'Other'
       pct: '5'
+  citation: ''
 ```
 
 ---
@@ -3587,12 +3811,13 @@ donut-chart:
 
 **Fields:**
 
-| Key     | Type   | Description        |
-| ------- | ------ | ------------------ |
-| `app`   | string | App name           |
-| `title` | string | Notification title |
-| `body`  | string | Notification body  |
-| `time`  | string | Time stamp         |
+| Key        | Type   | Description        |
+| ---------- | ------ | ------------------ |
+| `app`      | string | App name           |
+| `title`    | string | Notification title |
+| `body`     | string | Notification body  |
+| `time`     | string | Time stamp         |
+| `citation` | string | Source citation    |
 
 **Default content:**
 
@@ -3602,6 +3827,7 @@ notification:
   title: 'Alex Chen'
   body: 'Are we still on for tomorrow?'
   time: 'now'
+  citation: ''
 ```
 
 ---
@@ -3616,6 +3842,7 @@ notification:
 | ---------- | ------ | ------------------------------- |
 | `headline` | string | Grid title                      |
 | `services` | array  | Array of {name, status} objects |
+| `citation` | string | Source citation                 |
 
 **Default content:**
 
@@ -3631,6 +3858,7 @@ status-grid:
       status: 'Degraded'
     - name: 'Auth'
       status: 'Operational'
+  citation: ''
 ```
 
 ---
@@ -3643,11 +3871,12 @@ status-grid:
 
 **Fields:**
 
-| Key      | Type                                  | Description                      |
-| -------- | ------------------------------------- | -------------------------------- |
-| `title`  | string                                | Chart title                      |
-| `text`   | string                                | Description text                 |
-| `points` | array<{label: string, value: number}> | Data points with label and value |
+| Key        | Type                                  | Description                      |
+| ---------- | ------------------------------------- | -------------------------------- |
+| `title`    | string                                | Chart title                      |
+| `text`     | string                                | Description text                 |
+| `points`   | array<{label: string, value: number}> | Data points with label and value |
+| `citation` | string                                | Source citation                  |
 
 **Default content:**
 
@@ -3668,6 +3897,7 @@ area-chart:
       value: 70
     - label: 'Jun'
       value: 60
+  citation: ''
 ```
 
 ---
@@ -3678,11 +3908,12 @@ area-chart:
 
 **Fields:**
 
-| Key     | Type                                  | Description                    |
-| ------- | ------------------------------------- | ------------------------------ |
-| `title` | string                                | Chart title                    |
-| `text`  | string                                | Description text               |
-| `items` | array<{label: string, value: number}> | Bar items with label and value |
+| Key        | Type                                  | Description                    |
+| ---------- | ------------------------------------- | ------------------------------ |
+| `title`    | string                                | Chart title                    |
+| `text`     | string                                | Description text               |
+| `items`    | array<{label: string, value: number}> | Bar items with label and value |
+| `citation` | string                                | Source citation                |
 
 **Default content:**
 
@@ -3699,6 +3930,7 @@ bar-chart:
       value: 45
     - label: 'Q4'
       value: 80
+  citation: ''
 ```
 
 ---
@@ -3709,11 +3941,12 @@ bar-chart:
 
 **Fields:**
 
-| Key      | Type                                  | Description                     |
-| -------- | ------------------------------------- | ------------------------------- |
-| `title`  | string                                | Chart title                     |
-| `text`   | string                                | Description text                |
-| `slices` | array<{label: string, value: number}> | Pie slices with label and value |
+| Key        | Type                                  | Description                     |
+| ---------- | ------------------------------------- | ------------------------------- |
+| `title`    | string                                | Chart title                     |
+| `text`     | string                                | Description text                |
+| `slices`   | array<{label: string, value: number}> | Pie slices with label and value |
+| `citation` | string                                | Source citation                 |
 
 **Default content:**
 
@@ -3730,6 +3963,7 @@ pie-chart:
       value: 20
     - label: 'Social'
       value: 15
+  citation: ''
 ```
 
 ---
@@ -3740,12 +3974,13 @@ pie-chart:
 
 **Fields:**
 
-| Key     | Type   | Description               |
-| ------- | ------ | ------------------------- |
-| `title` | string | Chart title               |
-| `text`  | string | Description text          |
-| `value` | number | Progress percentage 0-100 |
-| `label` | string | Label below the ring      |
+| Key        | Type   | Description               |
+| ---------- | ------ | ------------------------- |
+| `title`    | string | Chart title               |
+| `text`     | string | Description text          |
+| `value`    | number | Progress percentage 0-100 |
+| `label`    | string | Label below the ring      |
+| `citation` | string | Source citation           |
 
 **Default content:**
 
@@ -3755,6 +3990,7 @@ progress-ring:
   text: 'Overall project progress'
   value: 73
   label: 'of tasks completed'
+  citation: ''
 ```
 
 ---
@@ -3765,11 +4001,12 @@ progress-ring:
 
 **Fields:**
 
-| Key     | Type                                  | Description                             |
-| ------- | ------------------------------------- | --------------------------------------- |
-| `title` | string                                | Chart title                             |
-| `text`  | string                                | Description text                        |
-| `axes`  | array<{label: string, value: number}> | Radar axes with label and value (0-100) |
+| Key        | Type                                  | Description                             |
+| ---------- | ------------------------------------- | --------------------------------------- |
+| `title`    | string                                | Chart title                             |
+| `text`     | string                                | Description text                        |
+| `axes`     | array<{label: string, value: number}> | Radar axes with label and value (0-100) |
+| `citation` | string                                | Source citation                         |
 
 **Default content:**
 
@@ -3790,6 +4027,7 @@ radar-chart:
       value: 75
     - label: 'Skill'
       value: 60
+  citation: ''
 ```
 
 ---
@@ -3800,11 +4038,12 @@ radar-chart:
 
 **Fields:**
 
-| Key      | Type                                          | Description                                         |
-| -------- | --------------------------------------------- | --------------------------------------------------- |
-| `title`  | string                                        | Chart title                                         |
-| `text`   | string                                        | Description text                                    |
-| `points` | array<{x: number, y: number, label?: string}> | Data points with x/y coordinates and optional label |
+| Key        | Type                                          | Description                                         |
+| ---------- | --------------------------------------------- | --------------------------------------------------- |
+| `title`    | string                                        | Chart title                                         |
+| `text`     | string                                        | Description text                                    |
+| `points`   | array<{x: number, y: number, label?: string}> | Data points with x/y coordinates and optional label |
+| `citation` | string                                        | Source citation                                     |
 
 **Default content:**
 
@@ -3827,6 +4066,7 @@ scatter-chart:
       y: 75
     - x: 90
       y: 60
+  citation: ''
 ```
 
 ---
@@ -3845,6 +4085,7 @@ scatter-chart:
 | `before`   | object | {label, text}         |
 | `after`    | object | {label, text}         |
 | `imageUrl` | string | Optional shared image |
+| `citation` | string | Source citation       |
 
 **Default content:**
 
@@ -3858,6 +4099,7 @@ comparison:
     label: 'After'
     text: 'Automated pipeline runs in 5 minutes with 99.9% accuracy.'
   imageUrl: ''
+  citation: ''
 ```
 
 ---
@@ -3873,6 +4115,7 @@ comparison:
 | `headline` | string                | Table title               |
 | `features` | string[]              | Feature names             |
 | `plans`    | array<{name, values}> | Plans with feature values |
+| `citation` | string                | Source citation           |
 
 **Default content:**
 
@@ -3892,6 +4135,7 @@ feature-table:
       values: ['✓', '✓', '✓', '—', '—']
     - name: 'Enterprise'
       values: ['✓', '✓', '✓', '✓', '✓']
+  citation: ''
 ```
 
 ---
@@ -3907,6 +4151,7 @@ feature-table:
 | `headline` | string | Main title        |
 | `myth`     | string | The misconception |
 | `fact`     | string | The truth         |
+| `citation` | string | Source citation   |
 
 **Default content:**
 
@@ -3915,6 +4160,7 @@ myth-vs-fact:
   headline: 'Common Misconceptions'
   myth: 'Eating at night causes weight gain by itself.'
   fact: 'Total calorie intake matters most, not the time of day you eat.'
+  citation: ''
 ```
 
 ---
@@ -3930,6 +4176,7 @@ myth-vs-fact:
 | `headline` | string | Main title           |
 | `pros`     | array  | Array of pro strings |
 | `cons`     | array  | Array of con strings |
+| `citation` | string | Source citation      |
 
 **Default content:**
 
@@ -3943,6 +4190,7 @@ proscons:
   cons:
     - 'Limited features'
     - 'Steep learning curve'
+  citation: ''
 ```
 
 ---
@@ -3958,6 +4206,7 @@ proscons:
 | `headline` | string | Main title      |
 | `text`     | string | Body paragraph  |
 | `imageUrl` | string | URL to an image |
+| `citation` | string | Source citation |
 
 **Default content:**
 
@@ -3968,6 +4217,7 @@ split-screen:
     'Simplicity is the ultimate sophistication. Every element must earn its
     place through purpose.'
   imageUrl: ''
+  citation: ''
 ```
 
 ---
@@ -3984,6 +4234,7 @@ split-screen:
 | `optionA`  | object | {label, desc}           |
 | `optionB`  | object | {label, desc}           |
 | `features` | array  | Array of {a, b} objects |
+| `citation` | string | Source citation         |
 
 **Default content:**
 
@@ -4003,6 +4254,7 @@ versus:
       b: 'Unlimited users'
     - a: 'Email support'
       b: 'Priority support'
+  citation: ''
 ```
 
 ---
@@ -4021,6 +4273,7 @@ versus:
 | `headline` | string | Main title                 |
 | `text`     | string | Supporting paragraph       |
 | `imageUrl` | string | Optional background image  |
+| `citation` | string | Source citation            |
 
 **Default content:**
 
@@ -4032,6 +4285,7 @@ data-stats:
     'Based on survey responses from over 10,000 active users across 50
     countries.'
   imageUrl: ''
+  citation: ''
 ```
 
 ---
@@ -4046,6 +4300,7 @@ data-stats:
 | ---------- | ------ | ------------------------------ |
 | `headline` | string | Main title                     |
 | `features` | array  | Array of {label, desc} objects |
+| `citation` | string | Source citation                |
 
 **Default content:**
 
@@ -4061,6 +4316,7 @@ feature-grid:
       desc: 'Minimal learning curve'
     - label: 'Scalable'
       desc: 'Grows with your needs'
+  citation: ''
 ```
 
 ---
@@ -4075,6 +4331,7 @@ feature-grid:
 | ---------- | ------ | ----------------------------- |
 | `headline` | string | Main title                    |
 | `items`    | array  | Array of {label, pct} objects |
+| `citation` | string | Source citation               |
 
 **Default content:**
 
@@ -4090,6 +4347,7 @@ progress-list:
       pct: '40'
     - label: 'Deployment'
       pct: '20'
+  citation: ''
 ```
 
 ---
@@ -4100,11 +4358,12 @@ progress-list:
 
 **Fields:**
 
-| Key       | Type   | Description      |
-| --------- | ------ | ---------------- |
-| `label`   | string | Chart label      |
-| `values`  | array  | Array of numbers |
-| `current` | string | Current value    |
+| Key        | Type   | Description      |
+| ---------- | ------ | ---------------- |
+| `label`    | string | Chart label      |
+| `values`   | array  | Array of numbers |
+| `current`  | string | Current value    |
+| `citation` | string | Source citation  |
 
 **Default content:**
 
@@ -4123,6 +4382,7 @@ sparkline:
     - 60
     - 75
   current: '$75K'
+  citation: ''
 ```
 
 ---
@@ -4136,13 +4396,16 @@ sparkline:
 | Key        | Type   | Description                     |
 | ---------- | ------ | ------------------------------- |
 | `headline` | string | Main title                      |
+| `text`     | string | Description text under headline |
 | `stats`    | array  | Array of {value, label} objects |
+| `citation` | string | Source citation                 |
 
 **Default content:**
 
 ```yaml
 stat-row:
   headline: 'By the Numbers'
+  text: ''
   stats:
     - value: '10K+'
       label: 'Users'
@@ -4150,6 +4413,7 @@ stat-row:
       label: 'Uptime'
     - value: '24/7'
       label: 'Support'
+  citation: ''
 ```
 
 ---
@@ -4165,6 +4429,7 @@ stat-row:
 | `title`    | string | Timeline title                 |
 | `entries`  | array  | Array of {date, event} objects |
 | `imageUrl` | string | Optional bottom image          |
+| `citation` | string | Source citation                |
 
 **Default content:**
 
@@ -4181,6 +4446,7 @@ timeline:
     - date: 'Q4 2024'
       event: 'Public release'
   imageUrl: ''
+  citation: ''
 ```
 
 ---
@@ -4202,6 +4468,7 @@ timeline:
 | `fp`       | number   | False Positives        |
 | `fn`       | number   | False Negatives        |
 | `accuracy` | string   | Overall accuracy       |
+| `citation` | string   | Source citation        |
 
 **Default content:**
 
@@ -4216,6 +4483,7 @@ confusion-matrix:
   fp: 15
   fn: 25
   accuracy: '94.6%'
+  citation: ''
 ```
 
 ---
@@ -4226,11 +4494,13 @@ confusion-matrix:
 
 **Fields:**
 
-| Key       | Type       | Description    |
-| --------- | ---------- | -------------- |
-| `title`   | string     | Table title    |
-| `columns` | string[]   | Column headers |
-| `rows`    | string[][] | Table rows     |
+| Key        | Type       | Description                      |
+| ---------- | ---------- | -------------------------------- |
+| `title`    | string     | Table title                      |
+| `columns`  | string[]   | Column headers                   |
+| `rows`     | string[][] | Table rows                       |
+| `text`     | string     | Description text under the table |
+| `citation` | string     | Source citation                  |
 
 **Default content:**
 
@@ -4259,6 +4529,10 @@ data-table:
       1: '$3.5M'
       2: '+25%'
       3: 'On track'
+  text:
+    'Q2 and Q4 showed strong growth driven by new product launches. Q3 dip was
+    due to seasonal factors and has since recovered.'
+  citation: ''
 ```
 
 ---
@@ -4269,12 +4543,13 @@ data-table:
 
 **Fields:**
 
-| Key      | Type       | Description              |
-| -------- | ---------- | ------------------------ |
-| `title`  | string     | Grid title               |
-| `rows`   | string[]   | Row labels               |
-| `cols`   | string[]   | Column labels            |
-| `values` | number[][] | 2D array of values 0-100 |
+| Key        | Type       | Description              |
+| ---------- | ---------- | ------------------------ |
+| `title`    | string     | Grid title               |
+| `rows`     | string[]   | Row labels               |
+| `cols`     | string[]   | Column labels            |
+| `values`   | number[][] | 2D array of values 0-100 |
+| `citation` | string     | Source citation          |
 
 **Default content:**
 
@@ -4313,6 +4588,7 @@ heatmap-grid:
       1: '80'
       2: '50'
       3: '20'
+  citation: ''
 ```
 
 ---
@@ -4328,6 +4604,7 @@ heatmap-grid:
 | `hypothesis` | string | The hypothesis                |
 | `variables`  | array  | Array of {name, type} objects |
 | `method`     | string | Research method               |
+| `citation`   | string | Source citation               |
 
 **Default content:**
 
@@ -4340,6 +4617,7 @@ hypothesis-card:
     - name: 'Engagement rate'
       type: 'Dependent'
   method: 'A/B Testing'
+  citation: ''
 ```
 
 ---
@@ -4357,6 +4635,7 @@ hypothesis-card:
 | `trainLoss` | number[] | Training loss per epoch   |
 | `valLoss`   | number[] | Validation loss per epoch |
 | `bestEpoch` | number   | Epoch with best val loss  |
+| `citation`  | string   | Source citation           |
 
 **Default content:**
 
@@ -4407,6 +4686,7 @@ loss-curve:
     - 0.65
     - 0.66
   bestEpoch: 11
+  citation: ''
 ```
 
 ---
@@ -4417,10 +4697,11 @@ loss-curve:
 
 **Fields:**
 
-| Key      | Type                                                    | Description      |
-| -------- | ------------------------------------------------------- | ---------------- |
-| `title`  | string                                                  | Comparison title |
-| `models` | array<{name, accuracy, f1, precision, recall, latency}> | Model metrics    |
+| Key        | Type                                                    | Description      |
+| ---------- | ------------------------------------------------------- | ---------------- |
+| `title`    | string                                                  | Comparison title |
+| `models`   | array<{name, accuracy, f1, precision, recall, latency}> | Model metrics    |
+| `citation` | string                                                  | Source citation  |
 
 **Default content:**
 
@@ -4452,6 +4733,7 @@ model-comparison:
       precision: '0.92'
       recall: '0.94'
       latency: '45ms'
+  citation: ''
 ```
 
 ---
@@ -4471,6 +4753,7 @@ model-comparison:
 | `description`     | string                    | Endpoint description                 |
 | `params`          | array<{name, type, desc}> | Request parameters                   |
 | `responseExample` | string                    | Example response body                |
+| `citation`        | string                    | Source citation                      |
 
 **Default content:**
 
@@ -4489,6 +4772,7 @@ api-endpoint:
   responseExample:
     "{\n  \"id\": \"usr_abc123\",\n  \"name\": \"Jane Doe\",\n  \"email\":
     \"jane@example.com\"\n}"
+  citation: ''
 ```
 
 ---
@@ -4504,6 +4788,7 @@ api-endpoint:
 | `title`       | string                   | Diagram title                  |
 | `components`  | array<{name, desc}>      | System components              |
 | `connections` | array<{from, to, label}> | Connections between components |
+| `citation`    | string                   | Source citation                |
 
 **Default content:**
 
@@ -4529,6 +4814,7 @@ architecture-diagram:
     - from: 'User Service'
       to: 'PostgreSQL'
       label: 'queries'
+  citation: ''
 ```
 
 ---
@@ -4539,12 +4825,13 @@ architecture-diagram:
 
 **Fields:**
 
-| Key       | Type                       | Description                                  |
-| --------- | -------------------------- | -------------------------------------------- |
-| `title`   | string                     | Project name                                 |
-| `version` | string                     | Version number                               |
-| `date`    | string                     | Release date                                 |
-| `changes` | array<{type, description}> | Change entries (added/fixed/changed/removed) |
+| Key        | Type                       | Description                                  |
+| ---------- | -------------------------- | -------------------------------------------- |
+| `title`    | string                     | Project name                                 |
+| `version`  | string                     | Version number                               |
+| `date`     | string                     | Release date                                 |
+| `changes`  | array<{type, description}> | Change entries (added/fixed/changed/removed) |
+| `citation` | string                     | Source citation                              |
 
 **Default content:**
 
@@ -4564,6 +4851,7 @@ changelog:
       description: 'Updated navigation layout'
     - type: 'removed'
       description: 'Deprecated legacy API endpoints'
+  citation: ''
 ```
 
 ---
@@ -4574,10 +4862,11 @@ changelog:
 
 **Fields:**
 
-| Key      | Type                   | Description     |
-| -------- | ---------------------- | --------------- |
-| `title`  | string                 | Schema title    |
-| `tables` | array<{name, columns}> | Database tables |
+| Key        | Type                   | Description     |
+| ---------- | ---------------------- | --------------- |
+| `title`    | string                 | Schema title    |
+| `tables`   | array<{name, columns}> | Database tables |
+| `citation` | string                 | Source citation |
 
 **Default content:**
 
@@ -4607,6 +4896,7 @@ database-schema:
           type: 'VARCHAR(255)'
         - name: 'body'
           type: 'TEXT'
+  citation: ''
 ```
 
 ---
@@ -4617,11 +4907,12 @@ database-schema:
 
 **Fields:**
 
-| Key     | Type                   | Description               |
-| ------- | ---------------------- | ------------------------- |
-| `title` | string                 | Graph title               |
-| `nodes` | array<{name, version}> | Graph nodes               |
-| `edges` | array<{from, to}>      | Connections between nodes |
+| Key        | Type                   | Description               |
+| ---------- | ---------------------- | ------------------------- |
+| `title`    | string                 | Graph title               |
+| `nodes`    | array<{name, version}> | Graph nodes               |
+| `edges`    | array<{from, to}>      | Connections between nodes |
+| `citation` | string                 | Source citation           |
 
 **Default content:**
 
@@ -4652,6 +4943,7 @@ dependency-graph:
       to: 'react'
     - from: 'state'
       to: 'react'
+  citation: ''
 ```
 
 ---
@@ -4666,6 +4958,7 @@ dependency-graph:
 | ---------- | ---------------------- | --------------------------- |
 | `title`    | string                 | Repository or section title |
 | `branches` | array<{name, commits}> | Branches with their commits |
+| `citation` | string                 | Source citation             |
 
 **Default content:**
 
@@ -4686,6 +4979,7 @@ git-graph:
           message: 'Add login endpoint'
         - id: 'm0n1o2p'
           message: 'Add JWT middleware'
+  citation: ''
 ```
 
 ---
@@ -4706,6 +5000,7 @@ git-graph:
 | `daysLeft` | string | Days remaining   |
 | `task`     | string | Task name        |
 | `text`     | string | Description text |
+| `citation` | string | Source citation  |
 
 **Default content:**
 
@@ -4715,6 +5010,7 @@ deadline:
   daysLeft: '5'
   task: 'Final submission'
   text: ''
+  citation: ''
 ```
 
 ---
@@ -4732,6 +5028,7 @@ deadline:
 | `timeLeft`  | string | Time remaining   |
 | `date`      | string | Event date       |
 | `text`      | string | Description text |
+| `citation`  | string | Source citation  |
 
 **Default content:**
 
@@ -4742,6 +5039,7 @@ event-timer:
   timeLeft: '3d 12h 45m'
   date: 'Mar 15, 2025'
   text: ''
+  citation: ''
 ```
 
 ---
@@ -4752,14 +5050,15 @@ event-timer:
 
 **Fields:**
 
-| Key       | Type   | Description      |
-| --------- | ------ | ---------------- |
-| `title`   | string | Section title    |
-| `goal`    | string | Goal description |
-| `current` | number | Current value    |
-| `target`  | number | Target value     |
-| `unit`    | string | Unit suffix      |
-| `text`    | string | Description text |
+| Key        | Type   | Description      |
+| ---------- | ------ | ---------------- |
+| `title`    | string | Section title    |
+| `goal`     | string | Goal description |
+| `current`  | number | Current value    |
+| `target`   | number | Target value     |
+| `unit`     | string | Unit suffix      |
+| `text`     | string | Description text |
+| `citation` | string | Source citation  |
 
 **Default content:**
 
@@ -4771,6 +5070,7 @@ goal-tracker:
   target: 100
   unit: ''
   text: ''
+  citation: ''
 ```
 
 ---
@@ -4781,11 +5081,12 @@ goal-tracker:
 
 **Fields:**
 
-| Key     | Type   | Description        |
-| ------- | ------ | ------------------ |
-| `title` | string | Countdown title    |
-| `date`  | string | Target date string |
-| `text`  | string | Description text   |
+| Key        | Type   | Description        |
+| ---------- | ------ | ------------------ |
+| `title`    | string | Countdown title    |
+| `date`     | string | Target date string |
+| `text`     | string | Description text   |
+| `citation` | string | Source citation    |
 
 **Default content:**
 
@@ -4794,6 +5095,7 @@ launch-countdown:
   title: 'Coming Soon'
   date: '2025-03-01'
   text: ''
+  citation: ''
 ```
 
 ---
@@ -4811,6 +5113,7 @@ launch-countdown:
 | `current`   | string | Current value    |
 | `target`    | string | Target value     |
 | `text`      | string | Description text |
+| `citation`  | string | Source citation  |
 
 **Default content:**
 
@@ -4821,6 +5124,7 @@ milestone:
   current: '9,847'
   target: '10,000'
   text: ''
+  citation: ''
 ```
 
 ---
@@ -4838,6 +5142,7 @@ milestone:
 | `record`   | string | Best time          |
 | `attempts` | string | Number of attempts |
 | `text`     | string | Description text   |
+| `citation` | string | Source citation    |
 
 **Default content:**
 
@@ -4848,6 +5153,7 @@ speed-run:
   record: '2h 15m'
   attempts: '12'
   text: ''
+  citation: ''
 ```
 
 ---
@@ -4867,6 +5173,7 @@ speed-run:
 | `headline`    | string | Page headline          |
 | `description` | string | Description text       |
 | `image`       | string | 16:9 content image URL |
+| `citation`    | string | Source citation        |
 
 **Default content:**
 
@@ -4877,6 +5184,7 @@ browser:
   headline: 'Your Site'
   description: 'A modern web experience for everyone'
   image: ''
+  citation: ''
 ```
 
 ---
@@ -4892,6 +5200,7 @@ browser:
 | `headline`    | string | Project headline                               |
 | `description` | string | Description text                               |
 | `tree`        | string | Indented file/folder tree (2 spaces per depth) |
+| `citation`    | string | Source citation                                |
 
 **Default content:**
 
@@ -4901,6 +5210,7 @@ desktop:
   description: 'Well-organised codebase with clear separation of concerns.'
   tree:
     "src/\n  components/\n    Button.tsx\n    Header.tsx\n  hooks/\n    useAuth.ts\n  utils/\n    api.ts\n  App.tsx\n  index.ts\npackage.json\ntsconfig.json"
+  citation: ''
 ```
 
 ---
@@ -4917,6 +5227,7 @@ desktop:
 | `description` | string | Description text           |
 | `code`        | string | Multi-line code snippet    |
 | `language`    | string | Programming language label |
+| `citation`    | string | Source citation            |
 
 **Default content:**
 
@@ -4928,6 +5239,7 @@ laptop:
     "import { useState } from \"react\";\n\nconst App = () => {\n  const [count,
     setCount] = useState(0);\n  return <div>{count}</div>;\n};"
   language: 'TypeScript'
+  citation: ''
 ```
 
 ---
@@ -4943,6 +5255,7 @@ laptop:
 | `headline`    | string | App name or headline   |
 | `description` | string | Description text       |
 | `image`       | string | 9:16 content image URL |
+| `citation`    | string | Source citation        |
 
 **Default content:**
 
@@ -4951,6 +5264,7 @@ mobile:
   headline: 'FitTrack'
   description: 'Track your daily activity and stay motivated'
   image: ''
+  citation: ''
 ```
 
 ---
@@ -4966,6 +5280,7 @@ mobile:
 | `headline`    | string | Watch headline           |
 | `description` | string | Description text         |
 | `image`       | string | 1:1 watch face image URL |
+| `citation`    | string | Source citation          |
 
 **Default content:**
 
@@ -4974,6 +5289,7 @@ smart-watch:
   headline: 'Health Watch'
   description: 'Track your fitness goals with style'
   image: ''
+  citation: ''
 ```
 
 ---
@@ -4991,6 +5307,7 @@ smart-watch:
 | `command`     | string | Shell command        |
 | `output`      | string | Command output       |
 | `syntax`      | string | Code or syntax block |
+| `citation`    | string | Source citation      |
 
 **Default content:**
 
@@ -5001,6 +5318,7 @@ terminal:
   command: 'npm run deploy'
   output: 'Deploying to production...'
   syntax: "✓ Build complete\n✓ Tests passed\n✓ Deployed v2.4.1"
+  citation: ''
 ```
 
 ---
@@ -5019,6 +5337,7 @@ terminal:
 | `settings` | array  | Array of {label, value} objects |
 | `mode`     | string | Shooting mode                   |
 | `tip`      | string | Photography tip                 |
+| `citation` | string | Source citation                 |
 
 **Default content:**
 
@@ -5036,6 +5355,7 @@ camera-settings:
       value: '85mm'
   mode: 'Portrait'
   tip: 'Use a wide aperture for beautiful bokeh'
+  citation: ''
 ```
 
 ---
@@ -5052,6 +5372,7 @@ camera-settings:
 | `rule`        | string | Rule name            |
 | `description` | string | Description          |
 | `tips`        | array  | Array of tip strings |
+| `citation`    | string | Source citation      |
 
 **Default content:**
 
@@ -5065,6 +5386,7 @@ composition:
     - 'Place horizons on the upper or lower third'
     - 'Align subjects with intersection points'
     - 'Leave space in the direction of movement'
+  citation: ''
 ```
 
 ---
@@ -5075,10 +5397,11 @@ composition:
 
 **Fields:**
 
-| Key      | Type   | Description                                         |
-| -------- | ------ | --------------------------------------------------- |
-| `title`  | string | Title                                               |
-| `lenses` | array  | Array of {name, focalLength, aperture, use} objects |
+| Key        | Type   | Description                                         |
+| ---------- | ------ | --------------------------------------------------- |
+| `title`    | string | Title                                               |
+| `lenses`   | array  | Array of {name, focalLength, aperture, use} objects |
+| `citation` | string | Source citation                                     |
 
 **Default content:**
 
@@ -5098,6 +5421,7 @@ lens-guide:
       focalLength: '70-200mm'
       aperture: 'f/2.8'
       use: 'Sports / Wildlife'
+  citation: ''
 ```
 
 ---
@@ -5114,6 +5438,7 @@ lens-guide:
 | `setup`       | string | Lighting setup                 |
 | `description` | string | Description                    |
 | `tips`        | array  | Array of {label, desc} objects |
+| `citation`    | string | Source citation                |
 
 **Default content:**
 
@@ -5131,6 +5456,7 @@ lighting-tips:
       desc: 'Separates subject from background'
     - label: 'Modifier'
       desc: 'Use softboxes or umbrellas to diffuse'
+  citation: ''
 ```
 
 ---
@@ -5147,6 +5473,7 @@ lighting-tips:
 | `description` | string | Description                    |
 | `themes`      | array  | Array of {name, color} objects |
 | `keywords`    | array  | Array of keyword strings       |
+| `citation`    | string | Source citation                |
 
 **Default content:**
 
@@ -5167,6 +5494,7 @@ mood-board:
     - 'cozy'
     - 'nature'
     - 'warm tones'
+  citation: ''
 ```
 
 ---
@@ -5177,13 +5505,14 @@ mood-board:
 
 **Fields:**
 
-| Key           | Type   | Description  |
-| ------------- | ------ | ------------ |
-| `title`       | string | Title        |
-| `beforeLabel` | string | Before label |
-| `afterLabel`  | string | After label  |
-| `description` | string | Description  |
-| `imageUrl`    | string | Image URL    |
+| Key           | Type   | Description     |
+| ------------- | ------ | --------------- |
+| `title`       | string | Title           |
+| `beforeLabel` | string | Before label    |
+| `afterLabel`  | string | After label     |
+| `description` | string | Description     |
+| `imageUrl`    | string | Image URL       |
+| `citation`    | string | Source citation |
 
 **Default content:**
 
@@ -5194,6 +5523,7 @@ photo-editing:
   afterLabel: 'After'
   description: 'Basic color grading and exposure correction'
   imageUrl: ''
+  citation: ''
 ```
 
 ---
@@ -5216,6 +5546,7 @@ side by side
 | `formA`    | string                         | Team A recent form (e.g. W W D L W) |
 | `formB`    | string                         | Team B recent form (e.g. L W W W D) |
 | `stats`    | array<{label, valueA, valueB}> | Comparison stats                    |
+| `citation` | string                         | Source citation                     |
 
 **Default content:**
 
@@ -5240,6 +5571,7 @@ head-to-head:
     - label: 'Clean Sheets'
       valueA: '10'
       valueB: '12'
+  citation: ''
 ```
 
 ---
@@ -5256,6 +5588,7 @@ GD, and points
 | `headline`  | string                                                        | League name and season |
 | `text`      | string                                                        | Description text       |
 | `standings` | array<{position, team, played, won, drawn, lost, gd, points}> | Team standings         |
+| `citation`  | string                                                        | Source citation        |
 
 **Default content:**
 
@@ -5304,6 +5637,7 @@ league-table:
       lost: 9
       gd: '+5'
       points: 47
+  citation: ''
 ```
 
 ---
@@ -5320,6 +5654,7 @@ kickoff times
 | `headline` | string                                         | Team or league name |
 | `text`     | string                                         | Description text    |
 | `fixtures` | array<{date, time, homeTeam, awayTeam, venue}> | Upcoming fixtures   |
+| `citation` | string                                         | Source citation     |
 
 **Default content:**
 
@@ -5348,6 +5683,7 @@ match-schedule:
       homeTeam: 'Arsenal'
       awayTeam: 'Liverpool'
       venue: 'Emirates Stadium'
+  citation: ''
 ```
 
 ---
@@ -5371,6 +5707,7 @@ stats
 | `venue`     | string                      | Stadium or venue           |
 | `scorers`   | array<{name, minute, team}> | Goal scorers               |
 | `stats`     | array<{label, home, away}>  | Match statistics           |
+| `citation`  | string                      | Source citation            |
 
 **Default content:**
 
@@ -5407,6 +5744,7 @@ scorecard:
     - label: 'On Target'
       home: '6'
       away: '3'
+  citation: ''
 ```
 
 ---
@@ -5422,6 +5760,7 @@ scorecard:
 | `headline` | string                               | Stat category title |
 | `text`     | string                               | Description text    |
 | `leaders`  | array<{position, name, team, value}> | Top players ranking |
+| `citation` | string                               | Source citation     |
 
 **Default content:**
 
@@ -5450,6 +5789,7 @@ season-stats:
       name: 'Bukayo Saka'
       team: 'Arsenal'
       value: 14
+  citation: ''
 ```
 
 ---
@@ -5466,6 +5806,7 @@ teams
 | `headline` | string                 | Tournament name                    |
 | `text`     | string                 | Description text                   |
 | `rounds`   | array<{name, matches}> | Bracket rounds with match pairings |
+| `citation` | string                 | Source citation                    |
 
 **Default content:**
 
@@ -5497,6 +5838,7 @@ tournament-bracket:
       matches:
         - teamA: 'Arsenal'
           teamB: 'Inter Milan'
+  citation: ''
 ```
 
 ---
@@ -5509,10 +5851,11 @@ tournament-bracket:
 
 **Fields:**
 
-| Key     | Type   | Description                      |
-| ------- | ------ | -------------------------------- |
-| `title` | string | List title                       |
-| `items` | array  | Array of {place, reason} objects |
+| Key        | Type   | Description                      |
+| ---------- | ------ | -------------------------------- |
+| `title`    | string | List title                       |
+| `items`    | array  | Array of {place, reason} objects |
+| `citation` | string | Source citation                  |
 
 **Default content:**
 
@@ -5528,6 +5871,7 @@ bucket-list:
       reason: 'Watch sunset over white-washed villages'
     - place: 'Bali'
       reason: 'Experience rice terraces and temple culture'
+  citation: ''
 ```
 
 ---
@@ -5545,6 +5889,7 @@ bucket-list:
 | `bestTime`    | string | Best time to visit         |
 | `tip`         | string | Travel tip                 |
 | `imageUrl`    | string | Optional image URL         |
+| `citation`    | string | Source citation            |
 
 **Default content:**
 
@@ -5559,6 +5904,7 @@ destination-guide:
   bestTime: 'March–May or Oct–Nov'
   tip: 'Visit popular temples early in the morning to avoid crowds.'
   imageUrl: ''
+  citation: ''
 ```
 
 ---
@@ -5569,12 +5915,13 @@ destination-guide:
 
 **Fields:**
 
-| Key     | Type                              | Description    |
-| ------- | --------------------------------- | -------------- |
-| `title` | string                            | Trip title     |
-| `day`   | string                            | Day number     |
-| `date`  | string                            | Date string    |
-| `items` | array<{time, activity, location}> | Schedule items |
+| Key        | Type                              | Description     |
+| ---------- | --------------------------------- | --------------- |
+| `title`    | string                            | Trip title      |
+| `day`      | string                            | Day number      |
+| `date`     | string                            | Date string     |
+| `items`    | array<{time, activity, location}> | Schedule items  |
+| `citation` | string                            | Source citation |
 
 **Default content:**
 
@@ -5599,6 +5946,7 @@ itinerary-day:
     - time: '19:00'
       activity: 'Dinner in Shinjuku'
       location: 'Shinjuku'
+  citation: ''
 ```
 
 ---
@@ -5616,6 +5964,7 @@ itinerary-day:
 | `description` | string | Landmark description |
 | `funFact`     | string | Interesting fact     |
 | `imageUrl`    | string | Optional image URL   |
+| `citation`    | string | Source citation      |
 
 **Default content:**
 
@@ -5630,6 +5979,7 @@ landmark-spotlight:
     'The Colosseum had a retractable awning system called the velarium to shield
     spectators from the sun.'
   imageUrl: ''
+  citation: ''
 ```
 
 ---
@@ -5640,11 +5990,12 @@ landmark-spotlight:
 
 **Fields:**
 
-| Key     | Type   | Description           |
-| ------- | ------ | --------------------- |
-| `title` | string | Trip title            |
-| `items` | array  | Array of item strings |
-| `tip`   | string | Packing tip           |
+| Key        | Type   | Description           |
+| ---------- | ------ | --------------------- |
+| `title`    | string | Trip title            |
+| `items`    | array  | Array of item strings |
+| `tip`      | string | Packing tip           |
+| `citation` | string | Source citation       |
 
 **Default content:**
 
@@ -5661,6 +6012,7 @@ packing-list:
     - 'Travel pillow'
     - 'Snacks'
   tip: 'Roll your clothes instead of folding to save space and reduce wrinkles.'
+  citation: ''
 ```
 
 ---
@@ -5677,6 +6029,7 @@ packing-list:
 | `category`    | string | Tip category         |
 | `description` | string | Detailed explanation |
 | `hashtag`     | string | Related hashtag      |
+| `citation`    | string | Source citation      |
 
 **Default content:**
 
@@ -5688,6 +6041,7 @@ travel-tip:
     'A portable power bank is a lifesaver during long travel days when outlets
     are scarce.'
   hashtag: '#TravelSmart'
+  citation: ''
 ```
 
 ---
@@ -5700,11 +6054,12 @@ travel-tip:
 
 **Fields:**
 
-| Key     | Type   | Description                             |
-| ------- | ------ | --------------------------------------- |
-| `title` | string | Section title                           |
-| `cityA` | object | {city, temp, condition, humidity, wind} |
-| `cityB` | object | {city, temp, condition, humidity, wind} |
+| Key        | Type   | Description                             |
+| ---------- | ------ | --------------------------------------- |
+| `title`    | string | Section title                           |
+| `cityA`    | object | {city, temp, condition, humidity, wind} |
+| `cityB`    | object | {city, temp, condition, humidity, wind} |
+| `citation` | string | Source citation                         |
 
 **Default content:**
 
@@ -5723,6 +6078,7 @@ climate-compare:
     condition: 'Sunny'
     humidity: '55%'
     wind: '10 km/h'
+  citation: ''
 ```
 
 ---
@@ -5743,6 +6099,7 @@ climate-compare:
 | `low`       | string | Daily low           |
 | `humidity`  | string | Humidity percentage |
 | `wind`      | string | Wind speed          |
+| `citation`  | string | Source citation     |
 
 **Default content:**
 
@@ -5756,6 +6113,7 @@ forecast:
   low: '14°C'
   humidity: '62%'
   wind: '12 km/h'
+  citation: ''
 ```
 
 ---
@@ -5775,6 +6133,7 @@ forecast:
 | `rainfall`   | string   | Total rainfall         |
 | `daylight`   | string   | Average daylight hours |
 | `highlights` | string[] | Season highlights      |
+| `citation`   | string   | Source citation        |
 
 **Default content:**
 
@@ -5790,6 +6149,7 @@ season:
     - 'Cherry blossoms peak in early April'
     - 'Mild temperatures ideal for walking'
     - 'Occasional spring showers'
+  citation: ''
 ```
 
 ---
@@ -5808,6 +6168,7 @@ season:
 | `sunset`     | string | Sunset time        |
 | `daylight`   | string | Total daylight     |
 | `goldenHour` | string | Golden hour window |
+| `citation`   | string | Source citation    |
 
 **Default content:**
 
@@ -5819,6 +6180,7 @@ sunrise-sunset:
   sunset: '21:18'
   daylight: '14h 36m'
   goldenHour: '20:32 – 21:05'
+  citation: ''
 ```
 
 ---
@@ -5836,6 +6198,7 @@ sunrise-sunset:
 | `level`    | string   | UV level (Low/Moderate/High/Very High/Extreme) |
 | `tips`     | string[] | Protection tips                                |
 | `peakTime` | string   | Peak UV hours                                  |
+| `citation` | string   | Source citation                                |
 
 **Default content:**
 
@@ -5849,6 +6212,7 @@ uv-index:
     - 'Seek shade during midday hours'
     - 'Wear protective clothing and sunglasses'
   peakTime: '11:00 AM – 3:00 PM'
+  citation: ''
 ```
 
 ---
@@ -5859,11 +6223,12 @@ uv-index:
 
 **Fields:**
 
-| Key     | Type                               | Description     |
-| ------- | ---------------------------------- | --------------- |
-| `title` | string                             | Section title   |
-| `city`  | string                             | City name       |
-| `days`  | array<{day, high, low, condition}> | Daily forecasts |
+| Key        | Type                               | Description     |
+| ---------- | ---------------------------------- | --------------- |
+| `title`    | string                             | Section title   |
+| `city`     | string                             | City name       |
+| `days`     | array<{day, high, low, condition}> | Daily forecasts |
+| `citation` | string                             | Source citation |
 
 **Default content:**
 
@@ -5900,6 +6265,7 @@ weekly-outlook:
       high: '19°'
       low: '12°'
       condition: 'Showers'
+  citation: ''
 ```
 
 ---
@@ -5914,11 +6280,12 @@ weekly-outlook:
 
 **Fields:**
 
-| Key       | Type                    | Description       |
-| --------- | ----------------------- | ----------------- |
-| `title`   | string                  | Cheat sheet title |
-| `subject` | string                  | Subject name      |
-| `items`   | array<{label, content}> | Reference items   |
+| Key        | Type                    | Description       |
+| ---------- | ----------------------- | ----------------- |
+| `title`    | string                  | Cheat sheet title |
+| `subject`  | string                  | Subject name      |
+| `items`    | array<{label, content}> | Reference items   |
+| `citation` | string                  | Source citation   |
 
 **Default content:**
 
@@ -5939,6 +6306,7 @@ cheat-sheet:
       content: 'await fetch(url)'
     - label: 'Class'
       content: 'class Foo extends Bar {}'
+  citation: ''
 ```
 
 ---
@@ -5956,6 +6324,7 @@ cheat-sheet:
 | `modules`    | array  | Array of module name strings |
 | `duration`   | string | Course duration              |
 | `level`      | string | Difficulty level             |
+| `citation`   | string | Source citation              |
 
 **Default content:**
 
@@ -5970,6 +6339,7 @@ course-highlight:
     - 'Async Programming'
   duration: '8 weeks'
   level: 'Beginner'
+  citation: ''
 ```
 
 ---
@@ -5980,10 +6350,11 @@ course-highlight:
 
 **Fields:**
 
-| Key     | Type   | Description                           |
-| ------- | ------ | ------------------------------------- |
-| `title` | string | Path title                            |
-| `steps` | array  | Array of {level, label, desc} objects |
+| Key        | Type   | Description                           |
+| ---------- | ------ | ------------------------------------- |
+| `title`    | string | Path title                            |
+| `steps`    | array  | Array of {level, label, desc} objects |
+| `citation` | string | Source citation                       |
 
 **Default content:**
 
@@ -6003,6 +6374,7 @@ learning-path:
     - level: '4'
       label: 'Backend'
       desc: 'APIs and databases'
+  citation: ''
 ```
 
 ---
@@ -6019,6 +6391,7 @@ learning-path:
 | `options`     | array  | Array of answer strings   |
 | `answer`      | string | Correct answer            |
 | `explanation` | string | Why the answer is correct |
+| `citation`    | string | Source citation           |
 
 **Default content:**
 
@@ -6034,6 +6407,7 @@ quick-quiz:
   explanation:
     'Tokyo has been the capital of Japan since 1868, during the Meiji
     Restoration.'
+  citation: ''
 ```
 
 ---
@@ -6050,6 +6424,7 @@ quick-quiz:
 | `description` | string | Brief explanation     |
 | `steps`       | array  | Array of step strings |
 | `subject`     | string | Subject or topic      |
+| `citation`    | string | Source citation       |
 
 **Default content:**
 
@@ -6065,6 +6440,7 @@ study-tips:
     - 'Work until the timer rings'
     - 'Take a 5-minute break'
   subject: 'Study Skills'
+  citation: ''
 ```
 
 ---
@@ -6081,6 +6457,7 @@ study-tips:
 | `topic`     | string | Specific topic             |
 | `keyPoints` | array  | Array of key point strings |
 | `summary`   | string | Concluding summary         |
+| `citation`  | string | Source citation            |
 
 **Default content:**
 
@@ -6096,6 +6473,7 @@ subject-summary:
   summary:
     'The water cycle is a continuous process that distributes water across the
     planet.'
+  citation: ''
 ```
 
 ---
@@ -6115,6 +6493,7 @@ subject-summary:
 | `people`   | string | Number of people                |
 | `each`     | string | Amount per person               |
 | `items`    | array  | Array of {name, amount} objects |
+| `citation` | string | Source citation                 |
 
 **Default content:**
 
@@ -6131,6 +6510,7 @@ bill-split:
       amount: '$28.50'
     - name: 'Tax'
       amount: '$16.00'
+  citation: ''
 ```
 
 ---
@@ -6146,6 +6526,7 @@ bill-split:
 | `title`     | string                                   | Team or match title    |
 | `formation` | string                                   | Formation (e.g. 4-3-3) |
 | `players`   | array<{name, number, position, rating?}> | Players (max 11)       |
+| `citation`  | string                                   | Source citation        |
 
 **Default content:**
 
@@ -6186,6 +6567,7 @@ formation-card:
     - name: "Martinelli"
       number: 11
       position: "LW"
+  citation: ''
 ```
 
 ---
@@ -6200,6 +6582,7 @@ formation-card:
 | ---------- | ------ | -------------------------------- |
 | `central`  | string | Central topic                    |
 | `branches` | array  | Array of {topic, detail} objects |
+| `citation` | string | Source citation                  |
 
 **Default content:**
 
@@ -6213,6 +6596,7 @@ mind-map:
       detail: 'Node, Python, Go'
     - topic: 'DevOps'
       detail: 'Docker, K8s, CI/CD'
+  citation: ''
 ```
 
 ---
@@ -6228,6 +6612,7 @@ mind-map:
 | `destination` | string | Destination                      |
 | `days`        | string | Trip duration                    |
 | `categories`  | array  | Array of {name, items[]} objects |
+| `citation`    | string | Source citation                  |
 
 **Default content:**
 
@@ -6242,6 +6627,7 @@ packing-checklist:
       items: "["Phone charger""
     - name: "Documents"
       items: "["Passport""
+  citation: ''
 ```
 
 ---
@@ -6258,6 +6644,7 @@ packing-checklist:
 | `team`     | string | Team name                       |
 | `position` | string | Position                        |
 | `stats`    | array  | Array of {label, value} objects |
+| `citation` | string | Source citation                 |
 
 **Default content:**
 
@@ -6275,6 +6662,7 @@ player-stats:
       value: '38'
     - label: 'Rating'
       value: '8.7'
+  citation: ''
 ```
 
 ---
@@ -6293,6 +6681,7 @@ player-stats:
 | `fee`            | string | Transfer fee      |
 | `contractLength` | string | Contract duration |
 | `date`           | string | Transfer date     |
+| `citation`       | string | Source citation   |
 
 **Default content:**
 
@@ -6304,6 +6693,7 @@ transfer-card:
   fee: 'Free'
   contractLength: '5 years'
   date: 'July 2024'
+  citation: ''
 ```
 
 ---
@@ -6316,11 +6706,12 @@ transfer-card:
 
 **Fields:**
 
-| Key      | Type                  | Description                         |
-| -------- | --------------------- | ----------------------------------- |
-| `title`  | string                | Title text                          |
-| `text`   | string                | Subtitle text                       |
-| `layers` | array<{label, items}> | Iceberg layers from surface to deep |
+| Key        | Type                  | Description                         |
+| ---------- | --------------------- | ----------------------------------- |
+| `title`    | string                | Title text                          |
+| `text`     | string                | Subtitle text                       |
+| `layers`   | array<{label, items}> | Iceberg layers from surface to deep |
+| `citation` | string                | Source citation                     |
 
 **Default content:**
 
@@ -6337,6 +6728,7 @@ iceberg:
       items: ['Secrets', 'Years of practice']
     - label: 'Abyss'
       items: ['Unknown to most', 'Core truth']
+  citation: ''
 ```
 
 ---
@@ -6347,11 +6739,12 @@ iceberg:
 
 **Fields:**
 
-| Key     | Type                  | Description                                       |
-| ------- | --------------------- | ------------------------------------------------- |
-| `title` | string                | Title text                                        |
-| `text`  | string                | Subtitle text                                     |
-| `rungs` | array<{label, items}> | Ladder rungs from bottom (novice) to top (expert) |
+| Key        | Type                  | Description                                       |
+| ---------- | --------------------- | ------------------------------------------------- |
+| `title`    | string                | Title text                                        |
+| `text`     | string                | Subtitle text                                     |
+| `rungs`    | array<{label, items}> | Ladder rungs from bottom (novice) to top (expert) |
+| `citation` | string                | Source citation                                   |
 
 **Default content:**
 
@@ -6370,6 +6763,7 @@ ladder:
       items: ['Getting started']
     - label: 'Novice'
       items: ['First steps']
+  citation: ''
 ```
 
 ---
@@ -6380,10 +6774,11 @@ ladder:
 
 **Fields:**
 
-| Key       | Type                              | Description       |
-| --------- | --------------------------------- | ----------------- |
-| `title`   | string                            | Leaderboard title |
-| `entries` | array<{rank, name, score, medal}> | Ranked entries    |
+| Key        | Type                              | Description       |
+| ---------- | --------------------------------- | ----------------- |
+| `title`    | string                            | Leaderboard title |
+| `entries`  | array<{rank, name, score, medal}> | Ranked entries    |
+| `citation` | string                            | Source citation   |
 
 **Default content:**
 
@@ -6409,6 +6804,7 @@ leaderboard:
     - rank: 5
       name: 'Eve'
       score: '980'
+  citation: ''
 ```
 
 ---
@@ -6420,11 +6816,12 @@ importance
 
 **Fields:**
 
-| Key     | Type                  | Description              |
-| ------- | --------------------- | ------------------------ |
-| `title` | string                | Title text               |
-| `text`  | string                | Subtitle text            |
-| `rings` | array<{label, items}> | Rings from core to outer |
+| Key        | Type                  | Description              |
+| ---------- | --------------------- | ------------------------ |
+| `title`    | string                | Title text               |
+| `text`     | string                | Subtitle text            |
+| `rings`    | array<{label, items}> | Rings from core to outer |
+| `citation` | string                | Source citation          |
 
 **Default content:**
 
@@ -6441,6 +6838,7 @@ onion-diagram:
       items: ['Supporting', 'Helpful']
     - label: 'Outer'
       items: ['Optional', 'Nice to have']
+  citation: ''
 ```
 
 ---
@@ -6451,11 +6849,12 @@ onion-diagram:
 
 **Fields:**
 
-| Key      | Type                  | Description                     |
-| -------- | --------------------- | ------------------------------- |
-| `title`  | string                | Title text                      |
-| `text`   | string                | Subtitle text                   |
-| `levels` | array<{label, items}> | Pyramid levels from top to base |
+| Key        | Type                  | Description                     |
+| ---------- | --------------------- | ------------------------------- |
+| `title`    | string                | Title text                      |
+| `text`     | string                | Subtitle text                   |
+| `levels`   | array<{label, items}> | Pyramid levels from top to base |
+| `citation` | string                | Source citation                 |
 
 **Default content:**
 
@@ -6474,6 +6873,7 @@ pyramid:
       items: ['Low priority', 'Nice to have']
     - label: 'Base'
       items: ['Foundation', 'Basics']
+  citation: ''
 ```
 
 ---
@@ -6484,11 +6884,12 @@ pyramid:
 
 **Fields:**
 
-| Key     | Type                         | Description                                |
-| ------- | ---------------------------- | ------------------------------------------ |
-| `title` | string                       | Title text                                 |
-| `text`  | string                       | Subtitle text                              |
-| `tiers` | array<{label, color, items}> | Tier rows with label, hex color, and items |
+| Key        | Type                         | Description                                |
+| ---------- | ---------------------------- | ------------------------------------------ |
+| `title`    | string                       | Title text                                 |
+| `text`     | string                       | Subtitle text                              |
+| `tiers`    | array<{label, color, items}> | Tier rows with label, hex color, and items |
+| `citation` | string                       | Source citation                            |
 
 **Default content:**
 
@@ -6515,6 +6916,7 @@ tier-list:
     - label: 'F'
       color: '#40000d'
       items: ['Skip this', 'Not recommended']
+  citation: ''
 ```
 
 ---
@@ -6527,10 +6929,11 @@ tier-list:
 
 **Fields:**
 
-| Key    | Type   | Description             |
-| ------ | ------ | ----------------------- |
-| `abbr` | string | Abbreviation or acronym |
-| `full` | string | Full form               |
+| Key        | Type   | Description             |
+| ---------- | ------ | ----------------------- |
+| `abbr`     | string | Abbreviation or acronym |
+| `full`     | string | Full form               |
+| `citation` | string | Source citation         |
 
 **Default content:**
 
@@ -6538,6 +6941,7 @@ tier-list:
 abbreviation:
   abbr: 'NASA'
   full: 'National Aeronautics Space Administration'
+  citation: ''
 ```
 
 ---
@@ -6553,6 +6957,7 @@ abbreviation:
 | `headline`    | string | Challenge title       |
 | `description` | string | Challenge description |
 | `days`        | string | Duration (e.g. 30)    |
+| `citation`    | string | Source citation       |
 
 **Default content:**
 
@@ -6561,6 +6966,7 @@ challenge-card:
   headline: 'Write Every Day'
   description: 'Build a writing habit one day at a time.'
   days: '30'
+  citation: ''
 ```
 
 ---
@@ -6575,6 +6981,7 @@ challenge-card:
 | ---------- | ------ | ------------------------------------- |
 | `title`    | string | Chat title or label                   |
 | `messages` | array  | Array of {sender, text, time} objects |
+| `citation` | string | Source citation                       |
 
 **Default content:**
 
@@ -6594,6 +7001,7 @@ chat:
     - sender: 'Bob'
       text: 'Ship it!'
       time: '2:33 PM'
+  citation: ''
 ```
 
 ---
@@ -6604,12 +7012,13 @@ chat:
 
 **Fields:**
 
-| Key      | Type   | Description          |
-| -------- | ------ | -------------------- |
-| `text`   | string | Text with ___ marker |
-| `blank`  | string | The answer           |
-| `hint`   | string | Optional hint        |
-| `author` | string | Optional attribution |
+| Key        | Type   | Description          |
+| ---------- | ------ | -------------------- |
+| `text`     | string | Text with ___ marker |
+| `blank`    | string | The answer           |
+| `hint`     | string | Optional hint        |
+| `author`   | string | Optional attribution |
+| `citation` | string | Source citation      |
 
 **Default content:**
 
@@ -6619,6 +7028,7 @@ fill-blank:
   blank: 'fear'
   hint: 'Franklin D. Roosevelt'
   author: 'Franklin D. Roosevelt'
+  citation: ''
 ```
 
 ---
@@ -6633,6 +7043,7 @@ fill-blank:
 | ---------- | ------ | ------------------------------------ |
 | `question` | string | Poll question                        |
 | `options`  | array  | Array of {label, percentage} objects |
+| `citation` | string | Source citation                      |
 
 **Default content:**
 
@@ -6646,6 +7057,7 @@ poll-vote:
       percentage: 30
     - label: 'Performance'
       percentage: 25
+  citation: ''
 ```
 
 ---
@@ -6656,11 +7068,12 @@ poll-vote:
 
 **Fields:**
 
-| Key        | Type   | Description  |
-| ---------- | ------ | ------------ |
-| `headline` | string | Main title   |
-| `optionA`  | string | Left option  |
-| `optionB`  | string | Right option |
+| Key        | Type   | Description     |
+| ---------- | ------ | --------------- |
+| `headline` | string | Main title      |
+| `optionA`  | string | Left option     |
+| `optionB`  | string | Right option    |
+| `citation` | string | Source citation |
 
 **Default content:**
 
@@ -6669,6 +7082,7 @@ this-or-that:
   headline: 'Which do you choose?'
   optionA: 'Remote Work'
   optionB: 'Office Culture'
+  citation: ''
 ```
 
 ---
@@ -6687,6 +7101,7 @@ this-or-that:
 | `interpretation`   | string   | Key interpretation         |
 | `implications`     | string[] | Research implications      |
 | `futureDirections` | string[] | Future research directions |
+| `citation`         | string   | Source citation            |
 
 **Default content:**
 
@@ -6705,6 +7120,7 @@ discussion:
     - 'Replicate with longitudinal design'
     - 'Include neuroimaging measures'
     - 'Test across age groups'
+  citation: ''
 ```
 
 ---
@@ -6735,6 +7151,7 @@ intro-literature:
     - 'Walker & Stickgold (2006)'
     - 'Diekelmann & Born (2010)'
     - 'Wamsley (2019)'
+  citation: ''
 ```
 
 ---
@@ -6750,6 +7167,7 @@ intro-literature:
 | `title`           | string                              | Section title                   |
 | `limitations`     | array<{title, description, impact}> | Study limitations               |
 | `recommendations` | string[]                            | Recommendations for future work |
+| `citation`        | string                              | Source citation                 |
 
 **Default content:**
 
@@ -6770,6 +7188,7 @@ limitations:
     - 'Replicate with community samples'
     - 'Include behavioural measures alongside self-report'
     - 'Conduct longitudinal follow-up studies'
+  citation: ''
 ```
 
 ---
@@ -6787,6 +7206,7 @@ limitations:
 | `procedure` | string[] | Procedure steps           |
 | `materials` | string[] | Materials used            |
 | `analysis`  | string   | Statistical analysis plan |
+| `citation`  | string   | Source citation           |
 
 **Default content:**
 
@@ -6804,6 +7224,7 @@ methods:
     - 'Reaction time software (PsychoPy)'
     - 'Stimulus set (n = 120)'
   analysis: 'Mixed-effects regression with random intercepts for participants'
+  citation: ''
 ```
 
 ---
@@ -6821,6 +7242,7 @@ methods:
 | `demographics` | array<{label, value}> | Demographic breakdowns |
 | `method`       | string                | Recruitment method     |
 | `criteria`     | string[]              | Inclusion criteria     |
+| `citation`     | string                | Source citation        |
 
 **Default content:**
 
@@ -6840,6 +7262,7 @@ participants:
     - 'Aged 18–65'
     - 'Native English speakers'
     - 'No prior exposure to study stimuli'
+  citation: ''
 ```
 
 ---
@@ -6857,6 +7280,7 @@ participants:
 | `statistic`  | string                             | Overall test statistic     |
 | `effectSize` | string                             | Effect size interpretation |
 | `chart`      | string                             | Optional chart description |
+| `citation`   | string                             | Source citation            |
 
 **Default content:**
 
@@ -6876,6 +7300,7 @@ results:
   statistic: 'η² = 0.058'
   effectSize: 'Medium effect'
   chart: ''
+  citation: ''
 ```
 
 ---
@@ -6895,6 +7320,7 @@ results:
 | `time`        | string | Event time        |
 | `location`    | string | Event location    |
 | `description` | string | Event description |
+| `citation`    | string | Source citation   |
 
 **Default content:**
 
@@ -6906,6 +7332,7 @@ event-card:
   location: 'San Francisco, CA'
   description:
     'Join industry leaders for a day of talks, workshops, and networking.'
+  citation: ''
 ```
 
 ---
@@ -6923,6 +7350,7 @@ event-card:
 | `name`      | string | Display name        |
 | `avatarUrl` | string | Avatar image URL    |
 | `likes`     | string | Like count          |
+| `citation`  | string | Source citation     |
 
 **Default content:**
 
@@ -6933,6 +7361,7 @@ mention:
   name: 'Designer Pro'
   avatarUrl: ''
   likes: '124'
+  citation: ''
 ```
 
 ---
@@ -6949,6 +7378,7 @@ mention:
 | `title`    | string | Job title or role |
 | `bio`      | string | Short biography   |
 | `imageUrl` | string | Profile photo URL |
+| `citation` | string | Source citation   |
 
 **Default content:**
 
@@ -6960,6 +7390,7 @@ profile-card:
     'Designing meaningful experiences at the intersection of simplicity and
     functionality.'
   imageUrl: ''
+  citation: ''
 ```
 
 ---
@@ -6976,6 +7407,7 @@ profile-card:
 | `text`        | string | Body paragraph     |
 | `buttonLabel` | string | Button text        |
 | `hashtag`     | string | Associated hashtag |
+| `citation`    | string | Source citation    |
 
 **Default content:**
 
@@ -6985,6 +7417,7 @@ share-cta:
   text: 'Help others discover this content by sharing it with your network.'
   buttonLabel: 'Share Now'
   hashtag: '#Infographic'
+  citation: ''
 ```
 
 ---
@@ -6995,10 +7428,11 @@ share-cta:
 
 **Fields:**
 
-| Key        | Type                        | Description  |
-| ---------- | --------------------------- | ------------ |
-| `headline` | string                      | Team name    |
-| `members`  | array<{name, role, number}> | Team members |
+| Key        | Type                        | Description     |
+| ---------- | --------------------------- | --------------- |
+| `headline` | string                      | Team name       |
+| `members`  | array<{name, role, number}> | Team members    |
+| `citation` | string                      | Source citation |
 
 **Default content:**
 
@@ -7024,6 +7458,7 @@ team-roster:
     - name: 'Ana Silva'
       role: 'Engineer'
       number: 3
+  citation: ''
 ```
 
 ---
@@ -7041,6 +7476,7 @@ team-roster:
 | `title`    | string | Customer role or company |
 | `rating`   | number | Star rating 1-5          |
 | `imageUrl` | string | Optional photo URL       |
+| `citation` | string | Source citation          |
 
 **Default content:**
 
@@ -7053,6 +7489,7 @@ testimonial:
   title: 'CEO, Brightside Inc.'
   rating: 5
   imageUrl: ''
+  citation: ''
 ```
 
 ---

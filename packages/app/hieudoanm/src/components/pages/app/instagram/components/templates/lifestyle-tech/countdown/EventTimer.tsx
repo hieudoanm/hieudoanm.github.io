@@ -8,6 +8,7 @@ export const EventTimer: FC<TemplateProps> = ({ data }) => {
   const date = (data.date as string) ?? 'Mar 15, 2025';
   const text = (data.text as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
       <div className="text-center">
@@ -21,6 +22,11 @@ export const EventTimer: FC<TemplateProps> = ({ data }) => {
         <time className="text-neutral mt-1 text-xs">{date}</time>
         {text && <p className="text-neutral mt-3 text-sm">{text}</p>}
       </div>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

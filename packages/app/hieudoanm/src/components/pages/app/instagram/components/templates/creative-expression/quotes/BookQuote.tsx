@@ -9,6 +9,7 @@ export const BookQuote: FC<TemplateProps> = ({ data }) => {
   const pageNumber = (data.pageNumber as string) ?? '';
   const genre = (data.genre as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
       <blockquote className="text-base-content mb-3 max-w-xl text-2xl leading-relaxed italic">
@@ -22,6 +23,11 @@ export const BookQuote: FC<TemplateProps> = ({ data }) => {
           <p className="badge badge-outline badge-sm">p. {pageNumber}</p>
         )}
       </div>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

@@ -12,6 +12,7 @@ export const PlayerStats: FC<TemplateProps> = ({ data }) => {
     { label: 'Rating', value: '8.7' },
   ];
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8">
       <div className="mb-6 text-center">
@@ -35,6 +36,11 @@ export const PlayerStats: FC<TemplateProps> = ({ data }) => {
           </li>
         ))}
       </ul>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

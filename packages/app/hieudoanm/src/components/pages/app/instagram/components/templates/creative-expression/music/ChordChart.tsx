@@ -7,6 +7,7 @@ export const ChordChart: FC<TemplateProps> = ({ data }) => {
   const difficulty = (data.difficulty as string) ?? '';
   const tip = (data.tip as string) ?? '';
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
       <span className="text-accent text-xs font-bold tracking-[0.2em] uppercase">
@@ -36,6 +37,11 @@ export const ChordChart: FC<TemplateProps> = ({ data }) => {
         <div className="bg-accent/10 text-accent mt-3 max-w-xs rounded-lg px-2 py-1 text-xs">
           💡 {tip}
         </div>
+      )}
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
       )}
     </div>
   );

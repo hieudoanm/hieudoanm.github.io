@@ -19,6 +19,7 @@ export const ProgressList: FC<TemplateProps> = ({ data }) => {
           { label: 'Deployment', pct: 20 },
         ];
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col justify-center p-8">
       <h1 className="text-base-content mb-5 text-center text-4xl font-bold tracking-tight">
@@ -44,6 +45,11 @@ export const ProgressList: FC<TemplateProps> = ({ data }) => {
           </li>
         ))}
       </ul>
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
+      )}
     </div>
   );
 };

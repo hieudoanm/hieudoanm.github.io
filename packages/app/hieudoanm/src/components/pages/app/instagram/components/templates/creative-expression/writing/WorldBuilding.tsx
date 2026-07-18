@@ -20,6 +20,7 @@ export const WorldBuilding: FC<TemplateProps> = ({ data }) => {
     'Actions have consequences',
   ];
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
       <h1 className="text-base-content mb-0.5 text-4xl font-black tracking-tight">
@@ -57,6 +58,11 @@ export const WorldBuilding: FC<TemplateProps> = ({ data }) => {
             ))}
           </ul>
         </div>
+      )}
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
       )}
     </div>
   );

@@ -9,6 +9,7 @@ export const FillBlank: FC<TemplateProps> = ({ data }) => {
 
   const parts = text.split('___');
 
+  const citation = (data.citation as string) ?? '';
   return (
     <div className="bg-base-100 flex h-full w-full flex-col items-center justify-center p-8 text-center">
       <span className="text-accent mb-4 text-sm font-bold tracking-[0.2em] uppercase">
@@ -29,6 +30,11 @@ export const FillBlank: FC<TemplateProps> = ({ data }) => {
       {hint && <p className="text-neutral mt-4 text-sm">Hint: {hint}</p>}
       {author && (
         <p className="text-accent mt-6 text-sm font-medium">&mdash; {author}</p>
+      )}
+      {citation && (
+        <p className="text-base-content/40 mt-auto pt-4 text-center text-[10px]">
+          {citation}
+        </p>
       )}
     </div>
   );
