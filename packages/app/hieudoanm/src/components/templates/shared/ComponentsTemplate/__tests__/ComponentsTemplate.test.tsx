@@ -1,17 +1,19 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { ComponentsTemplate } from '../ComponentsTemplate';
 
 describe('ComponentsTemplate', () => {
-  it('renders with default luxury theme', () => {
+  it('renders with nothing theme', () => {
     const { container } = render(<ComponentsTemplate />);
     const root = container.firstChild as HTMLElement;
-    expect(root.getAttribute('data-theme')).toBe('luxury');
+    expect(root.getAttribute('data-theme')).toBe('nothing');
   });
 
-  it('renders with custom theme', () => {
-    const { container } = render(<ComponentsTemplate theme="light" />);
-    const root = container.firstChild as HTMLElement;
-    expect(root.getAttribute('data-theme')).toBe('light');
+  it('renders editor and preview', () => {
+    render(<ComponentsTemplate />);
+    expect(screen.getByText('Presets')).toBeInTheDocument();
+    expect(screen.getByText('Colors')).toBeInTheDocument();
+    expect(screen.getByText('Shape')).toBeInTheDocument();
+    expect(screen.getByText('CSS Output')).toBeInTheDocument();
   });
 
   it('renders all section labels', () => {
@@ -25,15 +27,6 @@ describe('ComponentsTemplate', () => {
     expect(screen.getByText('Data display')).toBeInTheDocument();
     expect(screen.getAllByText('Pricing').length).toBeGreaterThan(0);
     expect(screen.getAllByText('Extra').length).toBeGreaterThan(0);
-  });
-
-  it('calls onThemeChange when Nav theme changed', () => {
-    const onChange = jest.fn();
-    render(<ComponentsTemplate onThemeChange={onChange} />);
-    fireEvent.change(screen.getByLabelText('Theme'), {
-      target: { value: 'light' },
-    });
-    expect(onChange).toHaveBeenCalledWith('light');
   });
 
   it('to match snapshot', () => {

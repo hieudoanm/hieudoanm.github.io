@@ -7,6 +7,34 @@ while preserving the same visual hierarchy and spacing rhythm.
 
 ---
 
+## Table of Contents
+
+- [Sizing (512 × 512)](#sizing-512--512)
+  - [Table of Contents](#table-of-contents)
+  - [Canvas](#canvas)
+  - [Typography](#typography)
+  - [Spacing System](#spacing-system)
+  - [Margins](#margins)
+  - [Lists](#lists)
+  - [Cards](#cards)
+  - [Icons](#icons)
+  - [Paragraphs](#paragraphs)
+  - [Chart \& Diagram Guidelines](#chart--diagram-guidelines)
+    - [General Principles](#general-principles)
+    - [Recommended Chart Types](#recommended-chart-types)
+    - [Grid](#grid)
+    - [Data Labels](#data-labels)
+  - [CSS Design Tokens](#css-design-tokens)
+  - [Tailwind CSS Equivalents](#tailwind-css-equivalents)
+    - [Typography (TailwindCSS)](#typography-tailwindcss)
+    - [Spacing](#spacing)
+    - [Border Radius](#border-radius)
+    - [Layout](#layout)
+    - [Example Card](#example-card)
+  - [Design Tokens Summary](#design-tokens-summary)
+
+---
+
 ## Canvas
 
 - **Canvas Size:** 512 × 512 px
