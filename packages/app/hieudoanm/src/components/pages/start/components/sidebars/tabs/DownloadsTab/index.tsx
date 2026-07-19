@@ -1,12 +1,11 @@
 import { FC, useDeferredValue, useMemo, useState } from 'react';
 import { PiMagnifyingGlass, PiPackage } from 'react-icons/pi';
 import { DownloadCard } from './DownloadCard';
-import { agents, clis, extensions, packages } from './data';
+import { clis, extensions, packages } from './data';
 
 import { match } from '../../../../constants';
 
 const downloadSections = [
-  { label: 'Agents', items: agents },
   { label: 'CLIs', items: clis },
   { label: 'Extensions', items: extensions },
   { label: 'Packages', items: packages },

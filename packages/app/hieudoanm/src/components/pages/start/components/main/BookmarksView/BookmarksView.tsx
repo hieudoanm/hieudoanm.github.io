@@ -2,11 +2,21 @@ import { FC, useDeferredValue, useMemo } from 'react';
 import { GRID, match } from '../../../constants';
 import { ItemCard } from './ItemCard';
 import { Section } from './Section';
-import { agents, code, google, messaging, music, social, work } from './data';
+import {
+  agents,
+  code,
+  downloads,
+  google,
+  messaging,
+  music,
+  social,
+  work,
+} from './data';
 
 const bookmarkSections = [
   { label: 'Agents', items: agents },
   { label: 'Code', items: code },
+  { label: 'Downloads', items: downloads },
   { label: 'Google Workspace', items: google },
   { label: 'Messaging', items: messaging },
   { label: 'Music', items: music },
