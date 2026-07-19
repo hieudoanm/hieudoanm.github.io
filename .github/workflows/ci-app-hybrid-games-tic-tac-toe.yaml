@@ -1,0 +1,33 @@
+name: CI - App - Hybrid - Games - Tic-Tac-Toe
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/games/tic-tac-toe/**/*'
+      - '.github/workflows/ci-app-hybrid-games-tic-tac-toe.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-games-tic-tac-toe-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/games/tic-tac-toe
+      filter: '@hieudoanm.github.io/tic-tac-toe'
+      releaseName: app-hybrid-games-tic-tac-toe-latest
+      releaseTitle: App - Hybrid - Games - Tic-Tac-Toe (latest)
+      artifactPrefix: games-tic-tac-toe
+      artifactName: tic-tac-toe

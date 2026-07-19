@@ -1,0 +1,1149 @@
+#include "lodash.h"
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <math.h>
+
+static size_t hash_fnv1a(const char *key, size_t cap)
+{
+    size_t h = 2166136261u;
+    while (*key) {
+        h ^= (unsigned char)*key++;
+        h *= 16777619u;
+    }
+    return h % cap;
+}
+
+static char *str_dup(const char *s)
+{
+    if (!s) return NULL;
+    size_t n = strlen(s) + 1;
+    char *d = malloc(n);
+    if (d) memcpy(d, s, n);
+    return d;
+}
+
+static bool contains(const lodash_array_t *arr, void *val)
+{
+    if (!arr) return false;
+    for (size_t i = 0; i < arr->len; i++) {
+        if (arr->data[i] == val) return true;
+    }
+    return false;
+}
+
+static bool contains_by(const lodash_array_t *arr, void *tv, void *(*iteratee)(void *))
+{
+    if (!arr) return false;
+    for (size_t i = 0; i < arr->len; i++) {
+        if (iteratee(arr->data[i]) == tv) return true;
+    }
+    return false;
+}
+
+static bool contains_with(const lodash_array_t *arr, void *val, int (*comparator)(const void *, const void *))
+{
+    if (!arr) return false;
+    for (size_t i = 0; i < arr->len; i++) {
+        if (comparator(arr->data[i], val) == 0) return true;
+    }
+    return false;
+}
+
+/* --- Dynamic array --- */
+
+lodash_array_t *lodash_array_new(void)
+{
+    return lodash_array_with_capacity(16);
+}
+
+lodash_array_t *lodash_array_with_capacity(size_t cap)
+{
+    lodash_array_t *arr = malloc(sizeof(lodash_array_t));
+    if (!arr) return NULL;
+    arr->data = malloc(sizeof(void *) * cap);
+    if (!arr->data) {
+        free(arr);
+        return NULL;
+    }
+    arr->len = 0;
+    arr->cap = cap;
+    return arr;
+}
+
+void lodash_array_free(lodash_array_t *arr)
+{
+    if (arr) {
+        free(arr->data);
+        free(arr);
+    }
+}
+
+int lodash_array_push(lodash_array_t *arr, void *val)
+{
+    if (arr->len >= arr->cap) {
+        size_t new_cap = arr->cap * 2;
+        void **new_data = realloc(arr->data, sizeof(void *) * new_cap);
+        if (!new_data) return -1;
+        arr->data = new_data;
+        arr->cap = new_cap;
+    }
+    arr->data[arr->len++] = val;
+    return 0;
+}
+
+void *lodash_array_get(const lodash_array_t *arr, size_t idx)
+{
+    if (idx >= arr->len) return NULL;
+    return arr->data[idx];
+}
+
+void lodash_array_set(lodash_array_t *arr, size_t idx, void *val)
+{
+    if (idx < arr->len) {
+        arr->data[idx] = val;
+    }
+}
+
+/* --- Hash map --- */
+
+#define LODASH_MAP_INIT_CAP 64
+
+lodash_map_t *lodash_map_new(void)
+{
+    lodash_map_t *map = malloc(sizeof(lodash_map_t));
+    if (!map) return NULL;
+    map->buckets = calloc(LODASH_MAP_INIT_CAP, sizeof(lodash_map_entry_t *));
+    if (!map->buckets) {
+        free(map);
+        return NULL;
+    }
+    map->cap = LODASH_MAP_INIT_CAP;
+    map->len = 0;
+    return map;
+}
+
+void lodash_map_free(lodash_map_t *map)
+{
+    if (!map) return;
+    for (size_t i = 0; i < map->cap; i++) {
+        lodash_map_entry_t *entry = map->buckets[i];
+        while (entry) {
+            lodash_map_entry_t *next = entry->next;
+            free(entry->key);
+            free(entry);
+            entry = next;
+        }
+    }
+    free(map->buckets);
+    free(map);
+}
+
+int lodash_map_set(lodash_map_t *map, const char *key, void *val)
+{
+    if (!map || !key) return -1;
+    size_t idx = hash_fnv1a(key, map->cap);
+    lodash_map_entry_t *entry = map->buckets[idx];
+    while (entry) {
+        if (strcmp(entry->key, key) == 0) {
+            entry->val = val;
+            return 0;
+        }
+        entry = entry->next;
+    }
+    lodash_map_entry_t *new_entry = malloc(sizeof(lodash_map_entry_t));
+    if (!new_entry) return -1;
+    new_entry->key = str_dup(key);
+    if (!new_entry->key) {
+        free(new_entry);
+        return -1;
+    }
+    new_entry->val = val;
+    new_entry->next = map->buckets[idx];
+    map->buckets[idx] = new_entry;
+    map->len++;
+    return 0;
+}
+
+void *lodash_map_get(const lodash_map_t *map, const char *key)
+{
+    if (!map || !key) return NULL;
+    size_t idx = hash_fnv1a(key, map->cap);
+    lodash_map_entry_t *entry = map->buckets[idx];
+    while (entry) {
+        if (strcmp(entry->key, key) == 0) return entry->val;
+        entry = entry->next;
+    }
+    return NULL;
+}
+
+int lodash_map_has(const lodash_map_t *map, const char *key)
+{
+    if (!map || !key) return 0;
+    size_t idx = hash_fnv1a(key, map->cap);
+    lodash_map_entry_t *entry = map->buckets[idx];
+    while (entry) {
+        if (strcmp(entry->key, key) == 0) return 1;
+        entry = entry->next;
+    }
+    return 0;
+}
+
+int lodash_map_delete(lodash_map_t *map, const char *key)
+{
+    if (!map || !key) return -1;
+    size_t idx = hash_fnv1a(key, map->cap);
+    lodash_map_entry_t *entry = map->buckets[idx];
+    lodash_map_entry_t *prev = NULL;
+    while (entry) {
+        if (strcmp(entry->key, key) == 0) {
+            if (prev) prev->next = entry->next;
+            else map->buckets[idx] = entry->next;
+            free(entry->key);
+            free(entry);
+            map->len--;
+            return 0;
+        }
+        prev = entry;
+        entry = entry->next;
+    }
+    return -1;
+}
+
+char **lodash_map_keys(const lodash_map_t *map, size_t *n)
+{
+    if (!map) { if (n) *n = 0; return NULL; }
+    char **keys = malloc(sizeof(char *) * map->len);
+    if (!keys) { if (n) *n = 0; return NULL; }
+    size_t k = 0;
+    for (size_t i = 0; i < map->cap; i++) {
+        lodash_map_entry_t *entry = map->buckets[i];
+        while (entry) {
+            keys[k++] = str_dup(entry->key);
+            entry = entry->next;
+        }
+    }
+    if (n) *n = k;
+    return keys;
+}
+
+void **lodash_map_values(const lodash_map_t *map, size_t *n)
+{
+    if (!map) { if (n) *n = 0; return NULL; }
+    void **vals = malloc(sizeof(void *) * map->len);
+    if (!vals) { if (n) *n = 0; return NULL; }
+    size_t k = 0;
+    for (size_t i = 0; i < map->cap; i++) {
+        lodash_map_entry_t *entry = map->buckets[i];
+        while (entry) {
+            vals[k++] = entry->val;
+            entry = entry->next;
+        }
+    }
+    if (n) *n = k;
+    return vals;
+}
+
+/* --- String builder --- */
+
+lodash_str_t *lodash_str_new(void)
+{
+    lodash_str_t *s = malloc(sizeof(lodash_str_t));
+    if (!s) return NULL;
+    s->cap = 64;
+    s->buf = malloc(s->cap);
+    if (!s->buf) { free(s); return NULL; }
+    s->buf[0] = '\0';
+    s->len = 0;
+    return s;
+}
+
+void lodash_str_free(lodash_str_t *s)
+{
+    if (s) { free(s->buf); free(s); }
+}
+
+int lodash_str_append(lodash_str_t *s, const char *str)
+{
+    if (!s || !str) return -1;
+    size_t add = strlen(str);
+    if (s->len + add + 1 > s->cap) {
+        size_t new_cap = s->cap * 2 + add + 1;
+        char *nb = realloc(s->buf, new_cap);
+        if (!nb) return -1;
+        s->buf = nb;
+        s->cap = new_cap;
+    }
+    memcpy(s->buf + s->len, str, add + 1);
+    s->len += add;
+    return 0;
+}
+
+int lodash_str_append_char(lodash_str_t *s, char c)
+{
+    if (!s) return -1;
+    if (s->len + 2 > s->cap) {
+        size_t new_cap = s->cap * 2;
+        char *nb = realloc(s->buf, new_cap);
+        if (!nb) return -1;
+        s->buf = nb;
+        s->cap = new_cap;
+    }
+    s->buf[s->len++] = c;
+    s->buf[s->len] = '\0';
+    return 0;
+}
+
+char *lodash_str_detach(lodash_str_t *s)
+{
+    if (!s) return NULL;
+    char *buf = s->buf;
+    free(s);
+    return buf;
+}
+
+/* --- Array helpers --- */
+
+lodash_array_t *lodash_array_from(void **items, size_t n)
+{
+    lodash_array_t *arr = lodash_array_with_capacity(n);
+    if (!arr) return NULL;
+    memcpy(arr->data, items, sizeof(void *) * n);
+    arr->len = n;
+    return arr;
+}
+
+lodash_array_t *lodash_array_copy(const lodash_array_t *src)
+{
+    if (!src) return NULL;
+    return lodash_array_from(src->data, src->len);
+}
+
+lodash_array_t *lodash_array_clone_deep(const lodash_array_t *src)
+{
+    return lodash_array_copy(src);
+}
+
+/* --- Array --- */
+
+lodash_array_t *lodash_chunk(const lodash_array_t *arr, size_t size)
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arr || size == 0) return result;
+    for (size_t i = 0; i < arr->len; i += size) {
+        size_t chunk_len = size;
+        if (i + chunk_len > arr->len) chunk_len = arr->len - i;
+        lodash_array_t *chunk = lodash_array_with_capacity(chunk_len);
+        if (!chunk) { lodash_array_free(result); return NULL; }
+        for (size_t j = 0; j < chunk_len; j++) {
+            lodash_array_push(chunk, arr->data[i + j]);
+        }
+        lodash_array_push(result, (void *)chunk);
+    }
+    return result;
+}
+
+lodash_array_t *lodash_compact(const lodash_array_t *arr)
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arr) return result;
+    for (size_t i = 0; i < arr->len; i++) {
+        if (arr->data[i] != NULL) {
+            lodash_array_push(result, arr->data[i]);
+        }
+    }
+    return result;
+}
+
+lodash_array_t *lodash_concat(const lodash_array_t *arr, const lodash_array_t *values)
+{
+    lodash_array_t *result = lodash_array_new();
+    if (arr) {
+        for (size_t i = 0; i < arr->len; i++) lodash_array_push(result, arr->data[i]);
+    }
+    if (values) {
+        for (size_t i = 0; i < values->len; i++) lodash_array_push(result, values->data[i]);
+    }
+    return result;
+}
+
+lodash_array_t *lodash_difference(const lodash_array_t *arr, const lodash_array_t *values)
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arr) return result;
+    for (size_t i = 0; i < arr->len; i++) {
+        if (!contains(values, arr->data[i])) {
+            lodash_array_push(result, arr->data[i]);
+        }
+    }
+    return result;
+}
+
+lodash_array_t *lodash_difference_by(const lodash_array_t *arr, const lodash_array_t *values,
+                                      void *(*iteratee)(void *))
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arr) return result;
+    for (size_t i = 0; i < arr->len; i++) {
+        void *tv = iteratee(arr->data[i]);
+        bool found = false;
+        if (values) {
+            for (size_t j = 0; j < values->len; j++) {
+                if (iteratee(values->data[j]) == tv) { found = true; break; }
+            }
+        }
+        if (!found) lodash_array_push(result, arr->data[i]);
+    }
+    return result;
+}
+
+lodash_array_t *lodash_difference_with(const lodash_array_t *arr, const lodash_array_t *values,
+                                        int (*comparator)(const void *, const void *))
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arr) return result;
+    for (size_t i = 0; i < arr->len; i++) {
+        if (!contains_with(values, arr->data[i], comparator)) {
+            lodash_array_push(result, arr->data[i]);
+        }
+    }
+    return result;
+}
+
+lodash_array_t *lodash_drop(const lodash_array_t *arr, size_t n)
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arr) return result;
+    size_t start = (n < arr->len) ? n : arr->len;
+    for (size_t i = start; i < arr->len; i++) {
+        lodash_array_push(result, arr->data[i]);
+    }
+    return result;
+}
+
+lodash_array_t *lodash_drop_right(const lodash_array_t *arr, size_t n)
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arr) return result;
+    size_t end = (n < arr->len) ? arr->len - n : 0;
+    for (size_t i = 0; i < end; i++) {
+        lodash_array_push(result, arr->data[i]);
+    }
+    return result;
+}
+
+lodash_array_t *lodash_drop_right_while(const lodash_array_t *arr, int (*predicate)(void *))
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arr) return result;
+    size_t end = arr->len;
+    while (end > 0 && predicate(arr->data[end - 1])) end--;
+    for (size_t i = 0; i < end; i++) {
+        lodash_array_push(result, arr->data[i]);
+    }
+    return result;
+}
+
+lodash_array_t *lodash_drop_while(const lodash_array_t *arr, int (*predicate)(void *))
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arr) return result;
+    size_t start = 0;
+    while (start < arr->len && predicate(arr->data[start])) start++;
+    for (size_t i = start; i < arr->len; i++) {
+        lodash_array_push(result, arr->data[i]);
+    }
+    return result;
+}
+
+lodash_array_t *lodash_fill(const lodash_array_t *arr, void *val, size_t start, size_t end)
+{
+    if (!arr) return NULL;
+    lodash_array_t *result = lodash_array_copy(arr);
+    if (!result) return NULL;
+    if (end > result->len) end = result->len;
+    for (size_t i = start; i < end; i++) {
+        result->data[i] = val;
+    }
+    return result;
+}
+
+int lodash_find_index(const lodash_array_t *arr, int (*predicate)(void *), size_t from)
+{
+    if (!arr) return -1;
+    for (size_t i = from; i < arr->len; i++) {
+        if (predicate(arr->data[i])) return (int)i;
+    }
+    return -1;
+}
+
+int lodash_find_last_index(const lodash_array_t *arr, int (*predicate)(void *), size_t from)
+{
+    if (!arr) return -1;
+    size_t start = (from < arr->len) ? from : arr->len;
+    for (size_t i = start; i > 0; i--) {
+        if (predicate(arr->data[i - 1])) return (int)(i - 1);
+    }
+    return -1;
+}
+
+lodash_array_t *lodash_flatten(const lodash_array_t *arr)
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arr) return result;
+    for (size_t i = 0; i < arr->len; i++) {
+        lodash_array_push(result, arr->data[i]);
+    }
+    return result;
+}
+
+lodash_array_t *lodash_flatten_deep(const lodash_array_t *arr)
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arr) return result;
+    for (size_t i = 0; i < arr->len; i++) {
+        lodash_array_push(result, arr->data[i]);
+    }
+    return result;
+}
+
+lodash_array_t *lodash_flatten_depth(const lodash_array_t *arr, int depth)
+{
+    (void)depth;
+    lodash_array_t *result = lodash_array_new();
+    if (!arr) return result;
+    for (size_t i = 0; i < arr->len; i++) {
+        lodash_array_push(result, arr->data[i]);
+    }
+    return result;
+}
+
+lodash_map_t *lodash_from_pairs(const lodash_array_t *pairs)
+{
+    lodash_map_t *map = lodash_map_new();
+    if (!pairs) return map;
+    for (size_t i = 0; i < pairs->len; i++) {
+        lodash_array_t *pair = (lodash_array_t *)pairs->data[i];
+        if (pair && pair->len >= 1) {
+            char *key = (char *)pair->data[0];
+            void *val = (pair->len >= 2) ? pair->data[1] : NULL;
+            lodash_map_set(map, key, val);
+        }
+    }
+    return map;
+}
+
+void *lodash_head(const lodash_array_t *arr)
+{
+    if (!arr || arr->len == 0) return NULL;
+    return arr->data[0];
+}
+
+int lodash_index_of(const lodash_array_t *arr, void *val, size_t from)
+{
+    if (!arr) return -1;
+    for (size_t i = from; i < arr->len; i++) {
+        if (arr->data[i] == val) return (int)i;
+    }
+    return -1;
+}
+
+lodash_array_t *lodash_initial(const lodash_array_t *arr)
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arr || arr->len <= 1) return result;
+    for (size_t i = 0; i < arr->len - 1; i++) {
+        lodash_array_push(result, arr->data[i]);
+    }
+    return result;
+}
+
+lodash_array_t *lodash_intersection(const lodash_array_t *arrays, size_t n_arrays)
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arrays || n_arrays == 0) return result;
+    for (size_t i = 0; i < arrays[0].len; i++) {
+        void *val = arrays[0].data[i];
+        bool in_all = true;
+        for (size_t j = 1; j < n_arrays; j++) {
+            if (!contains(&arrays[j], val)) { in_all = false; break; }
+        }
+        if (in_all && !contains(result, val)) {
+            lodash_array_push(result, val);
+        }
+    }
+    return result;
+}
+
+lodash_array_t *lodash_intersection_by(void *(*iteratee)(void *),
+                                       const lodash_array_t *arrays, size_t n_arrays)
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arrays || n_arrays == 0) return result;
+    for (size_t i = 0; i < arrays[0].len; i++) {
+        void *tv = iteratee(arrays[0].data[i]);
+        bool in_all = true;
+        for (size_t j = 1; j < n_arrays; j++) {
+            if (!contains_by(&arrays[j], tv, iteratee)) { in_all = false; break; }
+        }
+        if (in_all && !contains_by(result, tv, iteratee)) {
+            lodash_array_push(result, arrays[0].data[i]);
+        }
+    }
+    return result;
+}
+
+lodash_array_t *lodash_intersection_with(int (*comparator)(const void *, const void *),
+                                          const lodash_array_t *arrays, size_t n_arrays)
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arrays || n_arrays == 0) return result;
+    for (size_t i = 0; i < arrays[0].len; i++) {
+        bool in_all = true;
+        for (size_t j = 1; j < n_arrays; j++) {
+            if (!contains_with(&arrays[j], arrays[0].data[i], comparator)) { in_all = false; break; }
+        }
+        if (in_all && !contains_with(result, arrays[0].data[i], comparator)) {
+            lodash_array_push(result, arrays[0].data[i]);
+        }
+    }
+    return result;
+}
+
+char *lodash_join(const lodash_array_t *arr, const char *sep)
+{
+    lodash_str_t *sb = lodash_str_new();
+    if (!arr) return lodash_str_detach(sb);
+    for (size_t i = 0; i < arr->len; i++) {
+        if (i > 0) lodash_str_append(sb, sep);
+        char buf[64];
+        int n = snprintf(buf, sizeof(buf), "%p", arr->data[i]);
+        if (n > 0) lodash_str_append(sb, buf);
+    }
+    return lodash_str_detach(sb);
+}
+
+void *lodash_last(const lodash_array_t *arr)
+{
+    if (!arr || arr->len == 0) return NULL;
+    return arr->data[arr->len - 1];
+}
+
+int lodash_last_index_of(const lodash_array_t *arr, void *val, size_t from)
+{
+    if (!arr || arr->len == 0) return -1;
+    size_t start = (from < arr->len) ? from : arr->len - 1;
+    for (size_t i = start + 1; i > 0; i--) {
+        if (arr->data[i - 1] == val) return (int)(i - 1);
+    }
+    return -1;
+}
+
+void *lodash_nth(const lodash_array_t *arr, int n)
+{
+    if (!arr || arr->len == 0) return NULL;
+    int idx = (n >= 0) ? n : (int)arr->len + n;
+    if (idx < 0 || idx >= (int)arr->len) return NULL;
+    return arr->data[(size_t)idx];
+}
+
+lodash_array_t *lodash_pull(const lodash_array_t *arr, const lodash_array_t *vals)
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arr) return result;
+    for (size_t i = 0; i < arr->len; i++) {
+        if (!contains(vals, arr->data[i])) {
+            lodash_array_push(result, arr->data[i]);
+        }
+    }
+    return result;
+}
+
+lodash_array_t *lodash_pull_all(const lodash_array_t *arr, const lodash_array_t *vals)
+{
+    return lodash_pull(arr, vals);
+}
+
+lodash_array_t *lodash_pull_all_by(const lodash_array_t *arr, const lodash_array_t *vals,
+                                    void *(*iteratee)(void *))
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arr) return result;
+    for (size_t i = 0; i < arr->len; i++) {
+        void *tv = iteratee(arr->data[i]);
+        bool found = false;
+        if (vals) {
+            for (size_t j = 0; j < vals->len; j++) {
+                if (iteratee(vals->data[j]) == tv) { found = true; break; }
+            }
+        }
+        if (!found) lodash_array_push(result, arr->data[i]);
+    }
+    return result;
+}
+
+lodash_array_t *lodash_pull_all_with(const lodash_array_t *arr, const lodash_array_t *vals,
+                                      int (*comparator)(const void *, const void *))
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arr) return result;
+    for (size_t i = 0; i < arr->len; i++) {
+        if (!contains_with(vals, arr->data[i], comparator)) {
+            lodash_array_push(result, arr->data[i]);
+        }
+    }
+    return result;
+}
+
+lodash_array_t *lodash_pull_at(const lodash_array_t *arr, const size_t *idxs, size_t n_idxs)
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arr) return result;
+    for (size_t i = 0; i < arr->len; i++) {
+        bool remove = false;
+        for (size_t j = 0; j < n_idxs; j++) {
+            if (idxs[j] == i) { remove = true; break; }
+        }
+        if (!remove) lodash_array_push(result, arr->data[i]);
+    }
+    return result;
+}
+
+lodash_array_t *lodash_remove(const lodash_array_t *arr, int (*predicate)(void *))
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arr) return result;
+    for (size_t i = 0; i < arr->len; i++) {
+        if (predicate(arr->data[i])) {
+            lodash_array_push(result, arr->data[i]);
+        }
+    }
+    return result;
+}
+
+lodash_array_t *lodash_reverse(const lodash_array_t *arr)
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arr) return result;
+    for (size_t i = arr->len; i > 0; i--) {
+        lodash_array_push(result, arr->data[i - 1]);
+    }
+    return result;
+}
+
+lodash_array_t *lodash_slice(const lodash_array_t *arr, int start, int end)
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arr) return result;
+    int len = (int)arr->len;
+    if (start < 0) start = len + start;
+    if (end < 0) end = len + end;
+    if (start < 0) start = 0;
+    if (end > len) end = len;
+    if (start >= end) return result;
+    for (int i = start; i < end; i++) {
+        lodash_array_push(result, arr->data[i]);
+    }
+    return result;
+}
+
+int lodash_sorted_index(const double *arr, size_t n, double val)
+{
+    if (!arr) return 0;
+    int lo = 0, hi = (int)n;
+    while (lo < hi) {
+        int mid = lo + (hi - lo) / 2;
+        if (arr[mid] < val) lo = mid + 1;
+        else hi = mid;
+    }
+    return lo;
+}
+
+int lodash_sorted_index_by(const lodash_array_t *arr, void *val, void *(*iteratee)(void *))
+{
+    if (!arr) return 0;
+    void *target = iteratee(val);
+    int lo = 0, hi = (int)arr->len;
+    while (lo < hi) {
+        int mid = lo + (hi - lo) / 2;
+        if (iteratee(arr->data[mid]) < target) lo = mid + 1;
+        else hi = mid;
+    }
+    return lo;
+}
+
+int lodash_sorted_index_of(const double *arr, size_t n, double val)
+{
+    int idx = lodash_sorted_index(arr, n, val);
+    if (idx < (int)n && arr[idx] == val) return idx;
+    return -1;
+}
+
+int lodash_sorted_last_index(const double *arr, size_t n, double val)
+{
+    if (!arr) return 0;
+    int lo = 0, hi = (int)n;
+    while (lo < hi) {
+        int mid = lo + (hi - lo) / 2;
+        if (arr[mid] <= val) lo = mid + 1;
+        else hi = mid;
+    }
+    return lo;
+}
+
+int lodash_sorted_last_index_by(const lodash_array_t *arr, void *val, void *(*iteratee)(void *))
+{
+    if (!arr) return 0;
+    void *target = iteratee(val);
+    int lo = 0, hi = (int)arr->len;
+    while (lo < hi) {
+        int mid = lo + (hi - lo) / 2;
+        if (iteratee(arr->data[mid]) <= target) lo = mid + 1;
+        else hi = mid;
+    }
+    return lo;
+}
+
+int lodash_sorted_last_index_of(const double *arr, size_t n, double val)
+{
+    int idx = lodash_sorted_last_index(arr, n, val);
+    if (idx > 0 && arr[idx - 1] == val) return idx - 1;
+    return -1;
+}
+
+lodash_array_t *lodash_sorted_uniq(const double *arr, size_t n)
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arr || n == 0) return result;
+    for (size_t i = 0; i < n; i++) {
+        if (i == 0 || arr[i - 1] != arr[i]) {
+            lodash_array_push(result, (void *)&arr[i]);
+        }
+    }
+    return result;
+}
+
+lodash_array_t *lodash_sorted_uniq_by(const lodash_array_t *arr, void *(*iteratee)(void *))
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arr) return result;
+    for (size_t i = 0; i < arr->len; i++) {
+        if (i == 0 || iteratee(arr->data[i]) != iteratee(arr->data[i - 1])) {
+            lodash_array_push(result, arr->data[i]);
+        }
+    }
+    return result;
+}
+
+lodash_array_t *lodash_tail(const lodash_array_t *arr)
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arr || arr->len <= 1) return result;
+    for (size_t i = 1; i < arr->len; i++) {
+        lodash_array_push(result, arr->data[i]);
+    }
+    return result;
+}
+
+lodash_array_t *lodash_take(const lodash_array_t *arr, size_t n)
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arr || n == 0) return result;
+    size_t count = (n < arr->len) ? n : arr->len;
+    for (size_t i = 0; i < count; i++) {
+        lodash_array_push(result, arr->data[i]);
+    }
+    return result;
+}
+
+lodash_array_t *lodash_take_right(const lodash_array_t *arr, size_t n)
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arr || n == 0) return result;
+    size_t count = (n < arr->len) ? n : arr->len;
+    size_t start = arr->len - count;
+    for (size_t i = start; i < arr->len; i++) {
+        lodash_array_push(result, arr->data[i]);
+    }
+    return result;
+}
+
+lodash_array_t *lodash_take_right_while(const lodash_array_t *arr, int (*predicate)(void *))
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arr) return result;
+    size_t i = arr->len;
+    while (i > 0) {
+        if (!predicate(arr->data[i - 1])) break;
+        i--;
+    }
+    for (; i < arr->len; i++) {
+        lodash_array_push(result, arr->data[i]);
+    }
+    return result;
+}
+
+lodash_array_t *lodash_take_while(const lodash_array_t *arr, int (*predicate)(void *))
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arr) return result;
+    for (size_t i = 0; i < arr->len && predicate(arr->data[i]); i++) {
+        lodash_array_push(result, arr->data[i]);
+    }
+    return result;
+}
+
+lodash_array_t *lodash_union(const lodash_array_t *arrays, size_t n_arrays)
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arrays || n_arrays == 0) return result;
+    for (size_t i = 0; i < n_arrays; i++) {
+        for (size_t j = 0; j < arrays[i].len; j++) {
+            if (!contains(result, arrays[i].data[j])) {
+                lodash_array_push(result, arrays[i].data[j]);
+            }
+        }
+    }
+    return result;
+}
+
+lodash_array_t *lodash_union_by(void *(*iteratee)(void *),
+                                 const lodash_array_t *arrays, size_t n_arrays)
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arrays || n_arrays == 0) return result;
+    for (size_t i = 0; i < n_arrays; i++) {
+        for (size_t j = 0; j < arrays[i].len; j++) {
+            if (!contains_by(result, iteratee(arrays[i].data[j]), iteratee)) {
+                lodash_array_push(result, arrays[i].data[j]);
+            }
+        }
+    }
+    return result;
+}
+
+lodash_array_t *lodash_union_with(int (*comparator)(const void *, const void *),
+                                   const lodash_array_t *arrays, size_t n_arrays)
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arrays || n_arrays == 0) return result;
+    for (size_t i = 0; i < n_arrays; i++) {
+        for (size_t j = 0; j < arrays[i].len; j++) {
+            if (!contains_with(result, arrays[i].data[j], comparator)) {
+                lodash_array_push(result, arrays[i].data[j]);
+            }
+        }
+    }
+    return result;
+}
+
+lodash_array_t *lodash_uniq(const lodash_array_t *arr)
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arr) return result;
+    for (size_t i = 0; i < arr->len; i++) {
+        if (!contains(result, arr->data[i])) {
+            lodash_array_push(result, arr->data[i]);
+        }
+    }
+    return result;
+}
+
+lodash_array_t *lodash_uniq_by(const lodash_array_t *arr, void *(*iteratee)(void *))
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arr) return result;
+    for (size_t i = 0; i < arr->len; i++) {
+        if (!contains_by(result, iteratee(arr->data[i]), iteratee)) {
+            lodash_array_push(result, arr->data[i]);
+        }
+    }
+    return result;
+}
+
+lodash_array_t *lodash_uniq_with(const lodash_array_t *arr,
+                                  int (*comparator)(const void *, const void *))
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arr) return result;
+    for (size_t i = 0; i < arr->len; i++) {
+        if (!contains_with(result, arr->data[i], comparator)) {
+            lodash_array_push(result, arr->data[i]);
+        }
+    }
+    return result;
+}
+
+lodash_array_t *lodash_unzip(const lodash_array_t *arr)
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arr) return result;
+    size_t n_cols = arr->len;
+    if (n_cols == 0) return result;
+    size_t n_rows = 0;
+    for (size_t i = 0; i < n_cols; i++) {
+        lodash_array_t *sub = (lodash_array_t *)arr->data[i];
+        if (sub && sub->len > n_rows) n_rows = sub->len;
+    }
+    for (size_t r = 0; r < n_rows; r++) {
+        lodash_array_t *row = lodash_array_with_capacity(n_cols);
+        if (!row) { lodash_array_free(result); return NULL; }
+        for (size_t c = 0; c < n_cols; c++) {
+            lodash_array_t *sub = (lodash_array_t *)arr->data[c];
+            void *val = (sub && r < sub->len) ? sub->data[r] : NULL;
+            lodash_array_push(row, val);
+        }
+        lodash_array_push(result, (void *)row);
+    }
+    return result;
+}
+
+lodash_array_t *lodash_unzip_with(const lodash_array_t *arr, void *(*iteratee)(void *))
+{
+    lodash_array_t *unzipped = lodash_unzip(arr);
+    if (!unzipped) return NULL;
+    for (size_t i = 0; i < unzipped->len; i++) {
+        lodash_array_t *sub = (lodash_array_t *)unzipped->data[i];
+        if (sub) {
+            for (size_t j = 0; j < sub->len; j++) {
+                sub->data[j] = iteratee(sub->data[j]);
+            }
+        }
+    }
+    return unzipped;
+}
+
+lodash_array_t *lodash_without(const lodash_array_t *arr, const lodash_array_t *vals)
+{
+    return lodash_difference(arr, vals);
+}
+
+lodash_array_t *lodash_xor(const lodash_array_t *arrays, size_t n_arrays)
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arrays || n_arrays == 0) return result;
+    lodash_array_t *all_unique = lodash_array_new();
+    for (size_t i = 0; i < n_arrays; i++) {
+        for (size_t j = 0; j < arrays[i].len; j++) {
+            if (!contains(all_unique, arrays[i].data[j])) {
+                lodash_array_push(all_unique, arrays[i].data[j]);
+            }
+        }
+    }
+    for (size_t i = 0; i < all_unique->len; i++) {
+        int count = 0;
+        for (size_t j = 0; j < n_arrays; j++) {
+            if (contains(&arrays[j], all_unique->data[i])) count++;
+        }
+        if (count == 1) lodash_array_push(result, all_unique->data[i]);
+    }
+    lodash_array_free(all_unique);
+    return result;
+}
+
+lodash_array_t *lodash_xor_by(void *(*iteratee)(void *),
+                               const lodash_array_t *arrays, size_t n_arrays)
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arrays || n_arrays == 0) return result;
+    lodash_array_t *all_unique = lodash_array_new();
+    for (size_t i = 0; i < n_arrays; i++) {
+        for (size_t j = 0; j < arrays[i].len; j++) {
+            if (!contains_by(all_unique, iteratee(arrays[i].data[j]), iteratee)) {
+                lodash_array_push(all_unique, arrays[i].data[j]);
+            }
+        }
+    }
+    for (size_t i = 0; i < all_unique->len; i++) {
+        int count = 0;
+        for (size_t j = 0; j < n_arrays; j++) {
+            if (contains_by(&arrays[j], iteratee(all_unique->data[i]), iteratee)) count++;
+        }
+        if (count == 1) lodash_array_push(result, all_unique->data[i]);
+    }
+    lodash_array_free(all_unique);
+    return result;
+}
+
+lodash_array_t *lodash_xor_with(int (*comparator)(const void *, const void *),
+                                 const lodash_array_t *arrays, size_t n_arrays)
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arrays || n_arrays == 0) return result;
+    lodash_array_t *all_unique = lodash_array_new();
+    for (size_t i = 0; i < n_arrays; i++) {
+        for (size_t j = 0; j < arrays[i].len; j++) {
+            if (!contains_with(all_unique, arrays[i].data[j], comparator)) {
+                lodash_array_push(all_unique, arrays[i].data[j]);
+            }
+        }
+    }
+    for (size_t i = 0; i < all_unique->len; i++) {
+        int count = 0;
+        for (size_t j = 0; j < n_arrays; j++) {
+            if (contains_with(&arrays[j], all_unique->data[i], comparator)) count++;
+        }
+        if (count == 1) lodash_array_push(result, all_unique->data[i]);
+    }
+    lodash_array_free(all_unique);
+    return result;
+}
+
+lodash_array_t *lodash_zip(const lodash_array_t *arrays, size_t n_arrays)
+{
+    lodash_array_t *result = lodash_array_new();
+    if (!arrays || n_arrays == 0) return result;
+    size_t max_len = 0;
+    for (size_t i = 0; i < n_arrays; i++) {
+        if (arrays[i].len > max_len) max_len = arrays[i].len;
+    }
+    for (size_t i = 0; i < max_len; i++) {
+        lodash_array_t *group = lodash_array_with_capacity(n_arrays);
+        if (!group) { lodash_array_free(result); return NULL; }
+        for (size_t j = 0; j < n_arrays; j++) {
+            void *val = (i < arrays[j].len) ? arrays[j].data[i] : NULL;
+            lodash_array_push(group, val);
+        }
+        lodash_array_push(result, (void *)group);
+    }
+    return result;
+}
+
+lodash_map_t *lodash_zip_object(const lodash_array_t *props, const lodash_array_t *vals)
+{
+    lodash_map_t *map = lodash_map_new();
+    if (!props) return map;
+    for (size_t i = 0; i < props->len; i++) {
+        char *key = (char *)props->data[i];
+        void *val = (vals && i < vals->len) ? vals->data[i] : NULL;
+        lodash_map_set(map, key, val);
+    }
+    return map;
+}
+
+lodash_map_t *lodash_zip_object_deep(const char **props, size_t n_props, const lodash_array_t *vals)
+{
+    lodash_map_t *map = lodash_map_new();
+    if (!props) return map;
+    for (size_t i = 0; i < n_props; i++) {
+        void *val = (vals && i < vals->len) ? vals->data[i] : NULL;
+        lodash_map_set(map, props[i], val);
+    }
+    return map;
+}
+
+lodash_array_t *lodash_zip_with(void *(*iteratee)(void *),
+                                 const lodash_array_t *arrays, size_t n_arrays)
+{
+    lodash_array_t *zipped = lodash_zip(arrays, n_arrays);
+    if (!zipped) return NULL;
+    for (size_t i = 0; i < zipped->len; i++) {
+        lodash_array_t *sub = (lodash_array_t *)zipped->data[i];
+        if (sub) {
+            for (size_t j = 0; j < sub->len; j++) {
+                sub->data[j] = iteratee(sub->data[j]);
+            }
+        }
+    }
+    return zipped;
+}

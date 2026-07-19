@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "africa-nile-settlement-5000",
+    "title": "Early Nile Settlements",
+    "year": -5000,
+    "description": "Communities farmed the Nile floodplain.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-naqada-culture-4000",
+    "title": "Naqada Culture",
+    "year": -4000,
+    "description": "The Naqada culture unified the Nile Valley.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-hieroglyphs-3200",
+    "title": "Hieroglyphs Developed",
+    "year": -3200,
+    "description": "Early hieroglyphic writing appeared in Egypt.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-narmer-palette-3100",
+    "title": "Narmer Palette",
+    "year": -3100,
+    "description": "The palette records the unification of Egypt.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-first-dynasty-3100",
+    "title": "First Dynasty Begins",
+    "year": -3100,
+    "description": "King Narmer founded the first royal dynasty.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-memphis-capital-3100",
+    "title": "Memphis Becomes Capital",
+    "year": -3100,
+    "description": "Memphis became the seat of Egyptian power.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-imhotep-2670",
+    "title": "Imhotep Builds the Step Pyramid",
+    "year": -2670,
+    "description": "Imhotep designed the Step Pyramid for Djoser.",
+    "category": "science",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-step-pyramid-2670",
+    "title": "Step Pyramid of Djoser",
+    "year": -2670,
+    "description": "The Step Pyramid at Saqqara was Egypt's first pyramid.",
+    "category": "technology",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-red-pyramid-2580",
+    "title": "Red Pyramid Built",
+    "year": -2580,
+    "description": "Sneferu built the first true smooth-sided pyramid.",
+    "category": "technology",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-great-pyramid-2560",
+    "title": "Great Pyramid Completed",
+    "year": -2560,
+    "description": "Khufu's Great Pyramid rose at Giza.",
+    "category": "technology",
+    "region": "africa",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-sphinx-carved-2500",
+    "title": "Great Sphinx Carved",
+    "year": -2500,
+    "description": "The Sphinx was carved beside the Giza pyramids.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-sun-temple-2500",
+    "title": "Solar Temples Built",
+    "year": -2500,
+    "description": "Sun temples honored the god Ra at Abu Gurab.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-first-intermediate-2181",
+    "title": "First Intermediate Period",
+    "year": -2181,
+    "description": "Central rule collapsed into regional chaos.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-middle-kingdom-2055",
+    "title": "Middle Kingdom Begins",
+    "year": -2055,
+    "description": "Mentuhotep II reunified Egypt.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-beni-hasan-tombs-2000",
+    "title": "Beni Hasan Tombs",
+    "year": -2000,
+    "description": "Nomarchs carved painted tombs at Beni Hasan.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-senusret-campaigns-1870",
+    "title": "Senusret III Campaigns",
+    "year": -1870,
+    "description": "Senusret III extended Egypt's southern border.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-hyksos-1650",
+    "title": "Hyksos Invade",
+    "year": -1650,
+    "description": "The Hyksos ruled northern Egypt with chariots.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-chariot-adopted-1550",
+    "title": "Chariots Adopted",
+    "year": -1550,
+    "description": "Egyptian armies adopted chariot warfare.",
+    "category": "technology",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-new-kingdom-1550",
+    "title": "New Kingdom Begins",
+    "year": -1550,
+    "description": "Ahmose expelled the Hyksos and founded a new era.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-hatshepsut-1479",
+    "title": "Hatshepsut Becomes Pharaoh",
+    "year": -1479,
+    "description": "Hatshepsut ruled as a female pharaoh.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-deir-el-bahari-1470",
+    "title": "Deir el-Bahari Built",
+    "year": -1470,
+    "description": "Hatshepsut's temple rose at Deir el-Bahari.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-thutmose-iii-1458",
+    "title": "Thutmose III Campaigns",
+    "year": -1458,
+    "description": "Thutmose III conquered lands across the Levant.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-akhenaten-1353",
+    "title": "Akhenaten's Religious Reform",
+    "year": -1353,
+    "description": "Akhenaten promoted worship of the Aten.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-amarna-1353",
+    "title": "Amarna Capital Built",
+    "year": -1353,
+    "description": "Akhenaten built a new capital at Amarna.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-tutankhamun-1332",
+    "title": "Tutankhamun Restores Order",
+    "year": -1332,
+    "description": "Tutankhamun restored the traditional gods.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-ramesses-ii-1279",
+    "title": "Ramesses II Reigns",
+    "year": -1279,
+    "description": "Ramesses II ruled for over six decades.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-kadesh-1274",
+    "title": "Battle of Kadesh",
+    "year": -1274,
+    "description": "Ramesses II fought the Hittites at Kadesh.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-abu-simbel-1264",
+    "title": "Abu Simbel Temples",
+    "year": -1264,
+    "description": "Ramesses II built the temples of Abu Simbel.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-kadesh-treaty-1258",
+    "title": "First Peace Treaty",
+    "year": -1258,
+    "description": "Egypt and the Hittites signed a peace treaty.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-merenptah-stele-1208",
+    "title": "Merneptah Stele",
+    "year": -1208,
+    "description": "The stele records the first mention of Israel.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-sea-peoples-1200",
+    "title": "Sea Peoples Raids",
+    "year": -1200,
+    "description": "Ramesses III repelled invasions by the Sea Peoples.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-medinet-habu-1186",
+    "title": "Medinet Habu Temple",
+    "year": -1186,
+    "description": "Ramesses III built his mortuary temple.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-tomb-robberies-1100",
+    "title": "Valley of the Kings Robbed",
+    "year": -1100,
+    "description": "Grave robbers plundered royal tombs.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-third-intermediate-1069",
+    "title": "Third Intermediate Period",
+    "year": -1069,
+    "description": "The country split among rival powers.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-libyan-dynasty-945",
+    "title": "Libyan Pharaohs Rule",
+    "year": -945,
+    "description": "Libyan chiefs founded new dynasties.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-kushite-conquest-747",
+    "title": "Kushite Kings Rule",
+    "year": -747,
+    "description": "The Kushite dynasty ruled from Nubia.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-assyrian-invasion-671",
+    "title": "Assyrians Invade",
+    "year": -671,
+    "description": "Assyrian armies conquered Egypt.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-saite-dynasty-664",
+    "title": "Saite Dynasty",
+    "year": -664,
+    "description": "The Saite kings restored Egyptian independence.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-persian-conquest-525",
+    "title": "Persians Conquer Egypt",
+    "year": -525,
+    "description": "The Persian empire seized Egypt.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-alexander-egypt-332",
+    "title": "Alexander Takes Egypt",
+    "year": -332,
+    "description": "Alexander the Great was welcomed as liberator.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-alexandria-founded-331",
+    "title": "Alexandria Founded",
+    "year": -331,
+    "description": "Alexander founded the city of Alexandria.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-ptolemy-rules-305",
+    "title": "Ptolemy Rules Egypt",
+    "year": -305,
+    "description": "Ptolemy I founded the Ptolemaic dynasty.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-library-alexandria-283",
+    "title": "Library of Alexandria Flourishes",
+    "year": -283,
+    "description": "Scholars gathered the ancient world's knowledge.",
+    "category": "science",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-pharos-lighthouse-280",
+    "title": "Lighthouse of Alexandria",
+    "year": -280,
+    "description": "The Pharos lighthouse guided ships for centuries.",
+    "category": "technology",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-septuagint-250",
+    "title": "Septuagint Translated",
+    "year": -250,
+    "description": "Hebrew scriptures were translated into Greek.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-eratosthenes-circumference-240",
+    "title": "Eratosthenes Measures the Earth",
+    "year": -240,
+    "description": "Eratosthenes calculated Earth's circumference.",
+    "category": "science",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-cleopatra-51",
+    "title": "Cleopatra VII Takes Throne",
+    "year": -51,
+    "description": "Cleopatra became the last active pharaoh.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-actium-31",
+    "title": "Battle of Actium",
+    "year": -31,
+    "description": "Octavian defeated Antony and Cleopatra.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-roman-annexation-30",
+    "title": "Rome Annexes Egypt",
+    "year": -30,
+    "description": "Octavian made Egypt a Roman province.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-antinoopolis-founded-130",
+    "title": "Antinoopolis Founded",
+    "year": 130,
+    "description": "Hadrian founded a city at Antinoopolis.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-coptic-church-200",
+    "title": "Coptic Church Emerges",
+    "year": 200,
+    "description": "Christianity spread among Egyptian believers.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-saint-antonys-270",
+    "title": "Anthony the Hermit",
+    "year": 270,
+    "description": "Anthony lived as an ascetic in the desert.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-council-nicaea-325",
+    "title": "Council of Nicaea",
+    "year": 325,
+    "description": "Church leaders met at Nicaea to settle doctrine.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-arab-conquest-641",
+    "title": "Arab Conquest of Egypt",
+    "year": 641,
+    "description": "Amr ibn al-As brought Egypt under Muslim rule.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-fustat-founded-641",
+    "title": "Fustat Founded",
+    "year": 641,
+    "description": "Fustat became the first Arab capital.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-ahmad-ibn-tulun-868",
+    "title": "Ibn Tulun Rules",
+    "year": 868,
+    "description": "The Tulunid governor ruled Egypt independently.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-ibn-tulun-mosque-879",
+    "title": "Ibn Tulun Mosque Built",
+    "year": 879,
+    "description": "The grand mosque still stands in Cairo.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-cairo-founded-969",
+    "title": "Cairo Founded",
+    "year": 969,
+    "description": "The Fatimids founded the city of Cairo.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-al-azhar-970",
+    "title": "Al-Azhar Founded",
+    "year": 970,
+    "description": "Al-Azhar opened as a mosque and university.",
+    "category": "science",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-ayyubid-1171",
+    "title": "Ayyubid Dynasty Begins",
+    "year": 1171,
+    "description": "Saladin founded the Ayyubid dynasty.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-saladin-cairo-1174",
+    "title": "Saladin Rules from Cairo",
+    "year": 1174,
+    "description": "Saladin united Egypt and Syria.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-mamluk-rule-1250",
+    "title": "Mamluks Take Power",
+    "year": 1250,
+    "description": "Slave soldiers seized control of Egypt.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-ain-jalut-1260",
+    "title": "Battle of Ain Jalut",
+    "year": 1260,
+    "description": "Mamluks halted the Mongol advance.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-baibars-1260",
+    "title": "Baibars Becomes Sultan",
+    "year": 1260,
+    "description": "Baibars defeated the Crusaders and Mongols.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-ottoman-conquest-1517",
+    "title": "Ottoomans Conquer Egypt",
+    "year": 1517,
+    "description": "The Ottomans ended the Mamluk sultanate.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-napoleon-1798",
+    "title": "Napoleon Invades Egypt",
+    "year": 1798,
+    "description": "Napoleon's fleet arrived at Alexandria.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-rosetta-stone-1799",
+    "title": "Rosetta Stone Found",
+    "year": 1799,
+    "description": "French soldiers unearthed the Rosetta Stone.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-muhammad-ali-1805",
+    "title": "Muhammad Ali Takes Power",
+    "year": 1805,
+    "description": "Muhammad Ali became ruler of Egypt.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-sudan-campaign-1820",
+    "title": "Muhammad Ali Invades Sudan",
+    "year": 1820,
+    "description": "Muhammad Ali's armies marched south.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-cotton-industry-1822",
+    "title": "Cotton Industry Grows",
+    "year": 1822,
+    "description": "Egypt's cotton trade boomed.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-suez-canal-1869",
+    "title": "Suez Canal Opens",
+    "year": 1869,
+    "description": "The canal linked the Mediterranean and Red Sea.",
+    "category": "technology",
+    "region": "africa",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-ahram-newspaper-1876",
+    "title": "Al-Ahram Founded",
+    "year": 1876,
+    "description": "The leading newspaper began publication.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-urabi-revolt-1879",
+    "title": "Urabi Revolt",
+    "year": 1879,
+    "description": "Colonel Ahmed Urabi led a nationalist revolt.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-british-occupation-1882",
+    "title": "Britain Occupies Egypt",
+    "year": 1882,
+    "description": "British troops seized control of Egypt.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-egyptian-museum-1902",
+    "title": "Egyptian Museum Opens",
+    "year": 1902,
+    "description": "The museum opened in downtown Cairo.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-dinshawai-incident-1906",
+    "title": "Dinshaway Incident",
+    "year": 1906,
+    "description": "An incident fueled Egyptian nationalism.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-egyptair-1932",
+    "title": "EgyptAir Founded",
+    "year": 1932,
+    "description": "Egypt's national airline was established.",
+    "category": "technology",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-king-farouk-1936",
+    "title": "Farouk Becomes King",
+    "year": 1936,
+    "description": "Farouk ascended the throne at age sixteen.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-el-alamein-1942",
+    "title": "Battle of El Alamein",
+    "year": 1942,
+    "description": "Allied forces halted the Axis advance.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-arab-league-1945",
+    "title": "League of Arab States Founded",
+    "year": 1945,
+    "description": "Cairo hosted the founding of the Arab League.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-free-officers-1952",
+    "title": "Free Officers Coup",
+    "year": 1952,
+    "description": "Officers overthrew King Farouk.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-nasser-1954",
+    "title": "Nasser Takes Power",
+    "year": 1954,
+    "description": "Gamal Abdel Nasser became president.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-suez-crisis-1956",
+    "title": "Suez Crisis",
+    "year": 1956,
+    "description": "Nasser nationalized the Suez Canal.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-uar-1958",
+    "title": "United Arab Republic Formed",
+    "year": 1958,
+    "description": "Egypt and Syria merged briefly.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-aswan-dam-1960",
+    "title": "Aswan High Dam Built",
+    "year": 1960,
+    "description": "Work began on the Aswan High Dam.",
+    "category": "technology",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-abu-simbel-move-1968",
+    "title": "Abu Simbel Relocated",
+    "year": 1968,
+    "description": "Engineers moved the temples above the flood zone.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-aswan-dam-complete-1970",
+    "title": "Aswan Dam Completed",
+    "year": 1970,
+    "description": "The dam began providing power and water.",
+    "category": "technology",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-sadat-president-1970",
+    "title": "Sadat Becomes President",
+    "year": 1970,
+    "description": "Anwar Sadat succeeded Nasser.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-october-war-1973",
+    "title": "October War",
+    "year": 1973,
+    "description": "Egypt crossed the Suez Canal into Sinai.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-camp-david-1978",
+    "title": "Camp David Accords",
+    "year": 1978,
+    "description": "Egypt and Israel agreed to peace at Camp David.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-peace-treaty-1979",
+    "title": "Egypt-Israel Treaty Signed",
+    "year": 1979,
+    "description": "The two nations signed a formal peace.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-sadat-assassinated-1981",
+    "title": "Sadat Assassinated",
+    "year": 1981,
+    "description": "Sadat was killed at a military parade.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-mubarak-1981",
+    "title": "Mubarak Takes Office",
+    "year": 1981,
+    "description": "Hosni Mubarak became president.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-cairo-earthquake-1992",
+    "title": "Cairo Earthquake",
+    "year": 1992,
+    "description": "A deadly quake struck Cairo.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-bibliotheca-alexandrina-2002",
+    "title": "Bibliotheca Alexandrina Opens",
+    "year": 2002,
+    "description": "The new Alexandria library opened.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-egyptian-revolution-2011",
+    "title": "January 25 Revolution",
+    "year": 2011,
+    "description": "Protests forced Mubarak from power.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-morsi-elected-2012",
+    "title": "Morsi Elected President",
+    "year": 2012,
+    "description": "Mohamed Morsi became the first elected president.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-sisis-coup-2013",
+    "title": "2013 Military Takeover",
+    "year": 2013,
+    "description": "The military removed President Morsi.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-sisi-president-2014",
+    "title": "Sisi Becomes President",
+    "year": 2014,
+    "description": "Abdel Fattah el-Sisi took office.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-new-admin-capital-2015",
+    "title": "New Capital Announced",
+    "year": 2015,
+    "description": "Egypt announced plans for a new capital.",
+    "category": "technology",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  }
+]

@@ -1,0 +1,20 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/browserverless",
+    "crates/headless",
+    "crates/cli",
+]
+
+[workspace.dependencies]
+servo = "0.5"
+clap = { version = "4", features = ["derive"] }
+thiserror = "2"
+image = "0.25"
+url = "2"
+log = "0.4"
+env_logger = "0.11"
+winit = "0.30"
+dpi = "0.1"
+tracing = "0.1"
+tiny_http = "0.12"

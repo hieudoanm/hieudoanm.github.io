@@ -1,0 +1,33 @@
+name: CI - App - Hybrid - Medical - Eyes
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/medical/eyes/**/*'
+      - '.github/workflows/ci-app-hybrid-medical-eyes.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-medical-eyes-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/medical/eyes
+      filter: '@hieudoanm.github.io/eyes'
+      releaseName: app-hybrid-medical-eyes-latest
+      releaseTitle: App - Hybrid - Medical - Eyes (latest)
+      artifactPrefix: medical-eyes
+      artifactName: eyes

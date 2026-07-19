@@ -1,0 +1,50 @@
+[
+  {
+    "id": "clis",
+    "label": "CLIs",
+    "items": [
+      {
+        "label": "bash",
+        "description": "Aliases",
+        "icon": "PiTerminal",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/cli/bash",
+        "actions": [
+          {
+            "label": "Download bash",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/cli/bash/download/bash/dist"
+          }
+        ]
+      },
+      {
+        "label": "jack",
+        "description": "Just Another Command-Line Kit",
+        "icon": "PiCodeSimple",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/cli-jack-latest",
+        "actions": [
+          {
+            "label": "Download bin",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/cli-jack-latest"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "extensions",
+    "label": "Extensions",
+    "items": [
+      {
+        "label": "@hieudoanm/ext",
+        "description": "Hieu Doan",
+        "icon": "PiProhibit",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-latest",
+        "actions": [
+          {
+            "label": "Download EXT",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-latest"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,31 @@
+name: CI - App - Native - macOS - Ports
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/native/ports/apple/macos/**/*'
+      - '.github/workflows/ci-app-native-macos-ports.yaml'
+      - '.github/workflows/ci-app-native-macos-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-native-macos-ports-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-native-macos-template.yaml
+    with:
+      package: packages/app/native/ports/apple/macos
+      releaseName: app-native-macos-ports-latest
+      releaseTitle: App - Native - macOS - Ports (latest)
+      artifactPrefix: macos-ports

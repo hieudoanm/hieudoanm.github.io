@@ -1,0 +1,33 @@
+name: CI - App - Hybrid - Utilities - Docs
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/utilities/docs/**/*'
+      - '.github/workflows/ci-app-hybrid-utilities-docs.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-utilities-docs-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/utilities/docs
+      filter: '@hieudoanm.github.io/docs'
+      releaseName: app-hybrid-utilities-docs-latest
+      releaseTitle: App - Hybrid - Utilities - Docs (latest)
+      artifactPrefix: utilities-docs
+      artifactName: docs

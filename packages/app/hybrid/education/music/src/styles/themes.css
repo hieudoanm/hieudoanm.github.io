@@ -1,0 +1,72 @@
+@plugin 'daisyui' {
+  themes:
+    music-light --default,
+    music-dark;
+}
+
+@plugin 'daisyui/theme' {
+  name: 'music-light';
+  default: true;
+  color-scheme: 'light';
+  --color-base-100: #faf5ff;
+  --color-base-200: #f0e6ff;
+  --color-base-300: #e0c9ff;
+  --color-base-content: #2a1240;
+  --color-primary: #9333ea;
+  --color-primary-content: #ffffff;
+  --color-secondary: #ec4899;
+  --color-secondary-content: #ffffff;
+  --color-accent: #0ea5e9;
+  --color-accent-content: #ffffff;
+  --color-neutral: #7c3aed;
+  --color-neutral-content: #ffffff;
+  --color-info: #6366f1;
+  --color-info-content: #ffffff;
+  --color-success: #10b981;
+  --color-success-content: #ffffff;
+  --color-warning: #f59e0b;
+  --color-warning-content: #1f1300;
+  --color-error: #e11d48;
+  --color-error-content: #ffffff;
+  --radius-selector: 1rem;
+  --radius-field: 0.75rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 2px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@plugin 'daisyui/theme' {
+  name: 'music-dark';
+  color-scheme: 'dark';
+  --color-base-100: #170b22;
+  --color-base-200: #1f1030;
+  --color-base-300: #321d4c;
+  --color-base-content: #f3e8ff;
+  --color-primary: #a855f7;
+  --color-primary-content: #180a26;
+  --color-secondary: #f472b6;
+  --color-secondary-content: #3b0a22;
+  --color-accent: #38bdf8;
+  --color-accent-content: #052029;
+  --color-neutral: #321d4c;
+  --color-neutral-content: #f3e8ff;
+  --color-info: #818cf8;
+  --color-info-content: #141b3d;
+  --color-success: #34d399;
+  --color-success-content: #04271a;
+  --color-warning: #fbbf24;
+  --color-warning-content: #241b00;
+  --color-error: #fb7185;
+  --color-error-content: #2b0508;
+  --radius-selector: 1rem;
+  --radius-field: 0.75rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 2px;
+  --depth: 0;
+  --noise: 0;
+}

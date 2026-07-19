@@ -1,0 +1,33 @@
+name: CI - App - Hybrid - Sports - Football
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/sports/football/**/*'
+      - '.github/workflows/ci-app-hybrid-sports-football.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-sports-football-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/sports/football
+      filter: '@hieudoanm.github.io/football'
+      releaseName: app-hybrid-sports-football-latest
+      releaseTitle: App - Hybrid - Sports - Football (latest)
+      artifactPrefix: sports-football
+      artifactName: football

@@ -1,0 +1,26 @@
+@layer base {
+  h1 {
+    @apply font-mono text-4xl font-light tracking-tight;
+  }
+  h2 {
+    @apply font-mono text-2xl font-light tracking-tight;
+  }
+  h3 {
+    @apply font-mono text-xl font-light tracking-tight;
+  }
+  h4 {
+    @apply font-mono text-lg font-light;
+  }
+
+  p {
+    @apply text-base leading-relaxed;
+  }
+
+  a {
+    @apply text-primary hover:text-primary/80 transition-colors;
+  }
+
+  button {
+    @apply select-none;
+  }
+}

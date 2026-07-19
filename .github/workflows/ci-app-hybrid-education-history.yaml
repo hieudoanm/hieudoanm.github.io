@@ -1,0 +1,33 @@
+name: CI - App - Hybrid - Education - History
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/education/history/**/*'
+      - '.github/workflows/ci-app-hybrid-education-history.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-education-history-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/education/history
+      filter: '@hieudoanm.github.io/history'
+      releaseName: app-hybrid-education-history-latest
+      releaseTitle: App - Hybrid - Education - History (latest)
+      artifactPrefix: education-history
+      artifactName: history

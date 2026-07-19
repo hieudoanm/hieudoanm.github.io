@@ -1,0 +1,4 @@
+section,sectionId,label,description,icon,href,actionLabel,actionUrl
+CLIs,clis,bash,Aliases,PiTerminal,https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/cli/bash,Download bash,https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/cli/bash/download/bash/dist
+CLIs,clis,jack,Just Another Command-Line Kit,PiCodeSimple,https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/cli-jack-latest,Download bin,https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/cli-jack-latest
+Extensions,extensions,@hieudoanm/ext,Hieu Doan,PiProhibit,https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-latest,Download EXT,https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-latest

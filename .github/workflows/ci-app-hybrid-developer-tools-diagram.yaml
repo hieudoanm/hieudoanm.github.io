@@ -1,0 +1,33 @@
+name: CI - App - Hybrid - Developer Tools - Diagram
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/developer-tools/diagram/**/*'
+      - '.github/workflows/ci-app-hybrid-developer-tools-diagram.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-developer-tools-diagram-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/developer-tools/diagram
+      filter: '@hieudoanm.github.io/diagram'
+      releaseName: app-hybrid-developer-tools-diagram-latest
+      releaseTitle: App - Hybrid - Developer Tools - Diagram (latest)
+      artifactPrefix: developer-tools-diagram
+      artifactName: diagram

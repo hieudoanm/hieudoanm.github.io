@@ -1,0 +1,69 @@
+name: CI - GitHub Pages
+
+on:
+  push:
+    branches:
+      - 'master'
+    paths:
+      - 'packages/app/hybrid/**/*'
+      - 'pnpm-lock.yaml'
+      - 'pnpm-workspace.yaml'
+      - 'turbo.json'
+      - '.nvmrc'
+      - 'scripts/build-docs.sh'
+      - '.github/workflows/ci-github-pages.yaml'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7.0.1
+      - name: Install pnpm
+        uses: pnpm/action-setup@v6.0.10
+        with:
+          version: '11.24.0'
+      - name: Install Node.js
+        uses: actions/setup-node@v7.0.0
+        with:
+          node-version-file: .nvmrc
+      - name: Cache pnpm
+        uses: actions/cache@v6.1.0
+        with:
+          path: ~/.local/share/pnpm/store
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: ${{ runner.os }}-pnpm-
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Build Site
+        run: ./scripts/build-docs.sh --all
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3.0.1
+        with:
+          path: docs/
+          retention-days: 1
+
+  deploy:
+    name: Deploy
+    needs: build
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4.0.0

@@ -1,0 +1,33 @@
+name: CI - App - Hybrid - Productivity - Resume
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/productivity/resume/**/*'
+      - '.github/workflows/ci-app-hybrid-productivity-resume.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-productivity-resume-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/productivity/resume
+      filter: '@hieudoanm.github.io/resume'
+      releaseName: app-hybrid-productivity-resume-latest
+      releaseTitle: App - Hybrid - Productivity - Resume (latest)
+      artifactPrefix: productivity-resume
+      artifactName: resume

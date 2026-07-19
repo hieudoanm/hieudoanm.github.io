@@ -1,0 +1,407 @@
+[
+  {
+    "label": "Agents",
+    "items": [
+      {
+        "label": "Claude",
+        "description": "Anthropic",
+        "href": "https://claude.ai/",
+        "icon": "PiStarFour",
+        "badge": "Chat"
+      },
+      {
+        "label": "ChatGPT",
+        "description": "OpenAI",
+        "href": "https://chatgpt.com",
+        "icon": "PiStarFour",
+        "badge": "Chat"
+      },
+      {
+        "label": "Qwen",
+        "description": "Alibaba Cloud",
+        "href": "https://qwen.ai",
+        "icon": "PiStarFour",
+        "badge": "Chat"
+      },
+      {
+        "label": "Kimi",
+        "description": "Moonshot AI",
+        "href": "https://kimi.moonshot.cn",
+        "icon": "PiMoon",
+        "badge": "Chat"
+      },
+      {
+        "label": "Perplexity",
+        "description": "AI Search",
+        "href": "https://www.perplexity.ai",
+        "icon": "PiMagnifyingGlass",
+        "badge": "Research"
+      },
+      {
+        "label": "Gemini",
+        "description": "Google",
+        "href": "https://gemini.google.com/app",
+        "icon": "PiSparkle"
+      },
+      {
+        "label": "Grok",
+        "description": "xAI",
+        "href": "https://grok.com",
+        "icon": "PiLightning"
+      },
+      {
+        "label": "Copilot",
+        "description": "Microsoft",
+        "href": "https://copilot.microsoft.com",
+        "icon": "PiWindowsLogo"
+      },
+      {
+        "label": "DeepSeek",
+        "description": "DeepSeek",
+        "href": "https://chat.deepseek.com",
+        "icon": "PiDrop"
+      },
+      {
+        "label": "Mistral",
+        "description": "Mistral AI",
+        "href": "https://chat.mistral.ai",
+        "icon": "PiWind"
+      },
+      {
+        "label": "Meta AI",
+        "description": "Meta",
+        "href": "https://www.meta.ai",
+        "icon": "PiInfinity"
+      },
+      {
+        "label": "HuggingChat",
+        "description": "HuggingFace",
+        "href": "https://huggingface.co/chat",
+        "icon": "PiSmiley"
+      },
+      {
+        "label": "Poe",
+        "description": "Quora",
+        "href": "https://poe.com",
+        "icon": "PiChatCircle"
+      },
+      {
+        "label": "Cohere",
+        "description": "Cohere",
+        "href": "https://coral.cohere.com",
+        "icon": "PiWaveform"
+      }
+    ]
+  },
+  {
+    "label": "Code",
+    "items": [
+      {
+        "label": "GitHub",
+        "description": "Git",
+        "href": "https://github.com",
+        "icon": "PiGithubLogo"
+      },
+      {
+        "label": "Renovate",
+        "description": "Code",
+        "href": "https://developer.mend.io",
+        "icon": "PiRobot"
+      },
+      {
+        "label": "Vercel",
+        "description": "Deployment",
+        "href": "https://vercel.com",
+        "icon": "PiGlobe"
+      },
+      {
+        "label": "Supabase",
+        "description": "Database",
+        "href": "https://supabase.com",
+        "icon": "PiDatabase"
+      }
+    ]
+  },
+  {
+    "label": "Google Workspace",
+    "items": [
+      {
+        "label": "Calendar",
+        "description": "Calendar",
+        "href": "https://calendar.google.com",
+        "icon": "PiCalendar"
+      },
+      {
+        "label": "Docs",
+        "description": "Word",
+        "href": "https://docs.google.com",
+        "icon": "PiNotePencil"
+      },
+      {
+        "label": "Drive",
+        "description": "OneDrive",
+        "href": "https://drive.google.com",
+        "icon": "PiFolder"
+      },
+      {
+        "label": "Gmail",
+        "description": "Email",
+        "href": "https://gmail.com",
+        "icon": "PiEnvelope"
+      },
+      {
+        "label": "Maps",
+        "description": "Maps",
+        "href": "https://maps.google.com",
+        "icon": "PiMapPin"
+      },
+      {
+        "label": "Sheets",
+        "description": "Excel",
+        "href": "https://sheets.google.com",
+        "icon": "PiChartBar"
+      },
+      {
+        "label": "Slides",
+        "description": "PowerPoint",
+        "href": "https://slides.google.com",
+        "icon": "PiPlay"
+      },
+      {
+        "label": "Tasks",
+        "description": "ToDo",
+        "href": "https://tasks.google.com",
+        "icon": "PiCheckCircle"
+      }
+    ]
+  },
+  {
+    "label": "Microsoft Workspace",
+    "items": [
+      {
+        "label": "Outlook",
+        "description": "Gmail",
+        "href": "https://outlook.com",
+        "icon": "PiEnvelopeSimple"
+      },
+      {
+        "label": "Calendar",
+        "description": "Calendar",
+        "href": "https://outlook.live.com/calendar",
+        "icon": "PiCalendar"
+      },
+      {
+        "label": "OneDrive",
+        "description": "Drive",
+        "href": "https://onedrive.live.com",
+        "icon": "PiCloudArrowUp"
+      },
+      {
+        "label": "Word",
+        "description": "Docs",
+        "href": "https://www.microsoft365.com/launch/word",
+        "icon": "PiFileDoc"
+      },
+      {
+        "label": "Excel",
+        "description": "Sheets",
+        "href": "https://www.microsoft365.com/launch/excel",
+        "icon": "PiChartBar"
+      },
+      {
+        "label": "PowerPoint",
+        "description": "Slides",
+        "href": "https://www.microsoft365.com/launch/powerpoint",
+        "icon": "PiPresentationChart"
+      },
+      {
+        "label": "To Do",
+        "description": "Tasks",
+        "href": "https://to-do.office.com/tasks/",
+        "icon": "PiCheckCircle"
+      },
+      {
+        "label": "Teams",
+        "description": "Chat",
+        "href": "https://teams.microsoft.com",
+        "icon": "PiUsersThree"
+      },
+      {
+        "label": "OneNote",
+        "description": "Keep",
+        "href": "https://www.onenote.com",
+        "icon": "PiNotebook"
+      },
+      {
+        "label": "Microsoft 365",
+        "description": "Workspace",
+        "href": "https://www.microsoft365.com",
+        "icon": "PiWindowsLogo"
+      }
+    ]
+  },
+  {
+    "label": "Messaging",
+    "items": [
+      {
+        "label": "Discord",
+        "description": "Messaging",
+        "href": "https://discord.com",
+        "icon": "PiGameController"
+      },
+      {
+        "label": "Messenger",
+        "description": "Messaging",
+        "href": "https://www.messenger.com",
+        "icon": "PiHeart"
+      },
+      {
+        "label": "Slack",
+        "description": "Messaging",
+        "href": "https://slack.com",
+        "icon": "PiCodeSimple"
+      },
+      {
+        "label": "Telegram",
+        "description": "Messaging",
+        "href": "https://web.telegram.org/",
+        "icon": "PiAirplane"
+      }
+    ]
+  },
+  {
+    "label": "Music",
+    "items": [
+      {
+        "label": "Spotify",
+        "description": "Music",
+        "href": "https://open.spotify.com",
+        "icon": "PiMusicNote"
+      },
+      {
+        "label": "YouTube",
+        "description": "Videos",
+        "href": "https://youtube.com",
+        "icon": "PiPlay"
+      }
+    ]
+  },
+  {
+    "label": "Social",
+    "items": [
+      {
+        "label": "Facebook",
+        "description": "Social network",
+        "href": "https://facebook.com",
+        "icon": "PiFacebookLogo"
+      },
+      {
+        "label": "Instagram",
+        "description": "Photos",
+        "href": "https://instagram.com",
+        "icon": "PiCamera"
+      },
+      {
+        "label": "Reddit",
+        "description": "Social network",
+        "href": "https://reddit.com",
+        "icon": "PiAlien"
+      },
+      {
+        "label": "Threads",
+        "description": "Social network",
+        "href": "https://threads.net",
+        "icon": "PiThreadsLogo"
+      },
+      {
+        "label": "Tiktok",
+        "description": "Social network",
+        "href": "https://www.tiktok.com",
+        "icon": "PiMusicNote"
+      },
+      {
+        "label": "X",
+        "description": "Social network",
+        "href": "https://x.com",
+        "icon": "PiTwitterLogo"
+      }
+    ]
+  },
+  {
+    "label": "Work",
+    "items": [
+      {
+        "label": "LinkedIn",
+        "description": "Social network",
+        "href": "https://linkedin.com",
+        "icon": "PiBriefcase"
+      },
+      {
+        "label": "Hacker News",
+        "description": "News",
+        "href": "https://news.ycombinator.com",
+        "icon": "PiNewspaper"
+      },
+      {
+        "label": "Indie Hackers",
+        "description": "News",
+        "href": "https://www.indiehackers.com",
+        "icon": "PiCodeSimple"
+      },
+      {
+        "label": "Product Hunt",
+        "description": "News",
+        "href": "https://www.producthunt.com",
+        "icon": "PiPackage"
+      },
+      {
+        "label": "Y Combinator",
+        "description": "Startup",
+        "href": "https://www.ycombinator.com",
+        "icon": "PiLightning"
+      },
+      {
+        "label": "BetaList",
+        "description": "Launch",
+        "href": "https://betalist.com",
+        "icon": "PiRocket"
+      },
+      {
+        "label": "TechCrunch",
+        "description": "News",
+        "href": "https://techcrunch.com",
+        "icon": "PiNewspaper"
+      },
+      {
+        "label": "Starter Story",
+        "description": "Stories",
+        "href": "https://www.starterstory.com",
+        "icon": "PiBookOpen"
+      },
+      {
+        "label": "Failory",
+        "description": "Stories",
+        "href": "https://www.failory.com",
+        "icon": "PiTrendDown"
+      },
+      {
+        "label": "Wellfound",
+        "description": "Jobs",
+        "href": "https://wellfound.com",
+        "icon": "PiBriefcase"
+      },
+      {
+        "label": "Crunchbase",
+        "description": "Data",
+        "href": "https://www.crunchbase.com",
+        "icon": "PiChartLine"
+      },
+      {
+        "label": "Hashnode",
+        "description": "Blogging",
+        "href": "https://hashnode.com",
+        "icon": "PiCodeSimple"
+      }
+    ]
+  }
+]

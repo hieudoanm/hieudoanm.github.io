@@ -1,0 +1,33 @@
+name: CI - App - Hybrid - Games - 8-bit
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/games/8-bit/**/*'
+      - '.github/workflows/ci-app-hybrid-games-8-bit.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-games-8-bit-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/games/8-bit
+      filter: '@hieudoanm.github.io/8-bit'
+      releaseName: app-hybrid-games-8-bit-latest
+      releaseTitle: App - Hybrid - Games - 8-bit (latest)
+      artifactPrefix: games-8-bit
+      artifactName: 8-bit

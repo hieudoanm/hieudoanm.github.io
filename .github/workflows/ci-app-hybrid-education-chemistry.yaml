@@ -1,0 +1,33 @@
+name: CI - App - Hybrid - Education - Chemistry
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/education/chemistry/**/*'
+      - '.github/workflows/ci-app-hybrid-education-chemistry.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-education-chemistry-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/education/chemistry
+      filter: '@hieudoanm.github.io/chemistry'
+      releaseName: app-hybrid-education-chemistry-latest
+      releaseTitle: App - Hybrid - Education - Chemistry (latest)
+      artifactPrefix: education-chemistry
+      artifactName: chemistry

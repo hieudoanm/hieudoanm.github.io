@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "europe-lascaux-paintings-17000",
+    "title": "Lascaux Cave Paintings",
+    "year": -17000,
+    "description": "Prehistoric artists painted vivid scenes at Lascaux.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-massalia-founded-600",
+    "title": "Massalia Founded",
+    "year": -600,
+    "description": "Greek colonists founded Massalia or modern Marseille.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-alesia-52",
+    "title": "Battle of Alesia",
+    "year": -52,
+    "description": "Vercingetorix surrendered to Julius Caesar.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-clovis-franks-486",
+    "title": "Clovis Unites the Franks",
+    "year": 486,
+    "description": "Clovis founded the Frankish kingdom.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-clovis-baptised-496",
+    "title": "Clovis Baptised",
+    "year": 496,
+    "description": "Clovis converted to Catholic Christianity.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-battle-of-tours-732",
+    "title": "Battle of Tours",
+    "year": 732,
+    "description": "Charles Martel halted the Muslim advance.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-pepin-crowned-751",
+    "title": "Pepin the Short Crowned",
+    "year": 751,
+    "description": "Pepin became the first Carolingian king.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-charlemagne-emperor-800",
+    "title": "Charlemagne Crowned Emperor",
+    "year": 800,
+    "description": "Charlemagne was crowned Roman emperor.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-treaty-verdun-843",
+    "title": "Treaty of Verdun",
+    "year": 843,
+    "description": "Charlemagne's empire was split into three.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-hugh-capet-987",
+    "title": "Hugh Capet Crowned",
+    "year": 987,
+    "description": "Hugh Capet founded the Capetian dynasty.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-norman-conquest-1066",
+    "title": "Norman Conquest of England",
+    "year": 1066,
+    "description": "William of Normandy conquered England.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-first-crusade-1096",
+    "title": "First Crusade Departs",
+    "year": 1096,
+    "description": "French knights joined the First Crusade.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-notre-dame-1163",
+    "title": "Notre-Dame Construction Begins",
+    "year": 1163,
+    "description": "Work began on Notre-Dame de Paris.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-albigensian-crusade-1209",
+    "title": "Albigensian Crusade",
+    "year": 1209,
+    "description": "Papal forces fought heretics in the south.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-bouvines-1214",
+    "title": "Battle of Bouvines",
+    "year": 1214,
+    "description": "Philip Augustus defeated an allied coalition.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-sainte-chapelle-1248",
+    "title": "Sainte-Chapelle Consecrated",
+    "year": 1248,
+    "description": "The royal chapel rose with its stained glass.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-estates-general-1302",
+    "title": "Estates General Meets",
+    "year": 1302,
+    "description": "France's first assembly met in Paris.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-templars-arrested-1307",
+    "title": "Knights Templar Arrested",
+    "year": 1307,
+    "description": "Philip IV moved to crush the Templars.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-avignon-papacy-1309",
+    "title": "Avignon Papacy Begins",
+    "year": 1309,
+    "description": "The popes moved to Avignon.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-hundred-years-war-1337",
+    "title": "Hundred Years' War Begins",
+    "year": 1337,
+    "description": "England and France clashed over the crown.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-black-death-1348",
+    "title": "Black Death Strikes",
+    "year": 1348,
+    "description": "The plague devastated France.",
+    "category": "medicine",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-agincourt-1415",
+    "title": "Battle of Agincourt",
+    "year": 1415,
+    "description": "English archers routed the French knights.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-joan-orleans-1429",
+    "title": "Joan of Arc Relieves Orléans",
+    "year": 1429,
+    "description": "Joan of Arc lifted the siege of Orléans.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-joan-burned-1431",
+    "title": "Joan of Arc Burned",
+    "year": 1431,
+    "description": "Joan was executed at Rouen.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-hundred-years-war-ends-1453",
+    "title": "Hundred Years' War Ends",
+    "year": 1453,
+    "description": "The French expelled the English.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-italian-wars-1494",
+    "title": "Italian Wars Begin",
+    "year": 1494,
+    "description": "France invaded Italy.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-marignano-1515",
+    "title": "Battle of Marignano",
+    "year": 1515,
+    "description": "Francis I won a famous victory in Italy.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-cartier-canada-1534",
+    "title": "Cartier Reaches Canada",
+    "year": 1534,
+    "description": "Jacques Cartier explored the St. Lawrence.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-wars-of-religion-1562",
+    "title": "Wars of Religion Begin",
+    "year": 1562,
+    "description": "Catholic and Protestant forces went to war.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-bartholomew-massacre-1572",
+    "title": "St Bartholomew's Day Massacre",
+    "year": 1572,
+    "description": "Catholics massacred Huguenots in Paris.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-edict-nantes-1598",
+    "title": "Edict of Nantes",
+    "year": 1598,
+    "description": "Henry IV granted Huguenots religious freedom.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-richelieu-1624",
+    "title": "Richelieu Becomes Minister",
+    "year": 1624,
+    "description": "Richelieu guided royal policy.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-french-academy-1635",
+    "title": "French Academy Founded",
+    "year": 1635,
+    "description": "Richelieu created the Académie française.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-louis-xiv-1643",
+    "title": "Louis XIV Becomes King",
+    "year": 1643,
+    "description": "The Sun King began his long reign.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-westphalia-1648",
+    "title": "Peace of Westphalia",
+    "year": 1648,
+    "description": "The Thirty Years' War ended in Europe.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-versailles-1661",
+    "title": "Versailles Expansion Begins",
+    "year": 1661,
+    "description": "Louis XIV rebuilt the palace at Versailles.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-nantes-revoked-1685",
+    "title": "Edict of Nantes Revoked",
+    "year": 1685,
+    "description": "Louis XIV revoked religious toleration.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-louis-xiv-dies-1715",
+    "title": "Louis XIV Dies",
+    "year": 1715,
+    "description": "The Sun King died after seventy-two years.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-mississippi-bubble-1720",
+    "title": "Mississippi Bubble Bursts",
+    "year": 1720,
+    "description": "John Law's financial scheme collapsed.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-encyclopedie-1751",
+    "title": "Encyclopédie Published",
+    "year": 1751,
+    "description": "Diderot's Encyclopédie began publication.",
+    "category": "science",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-seven-years-war-1756",
+    "title": "Seven Years' War Begins",
+    "year": 1756,
+    "description": "France fought Britain for empire.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-louis-xvi-1774",
+    "title": "Louis XVI Becomes King",
+    "year": 1774,
+    "description": "Louis XVI took the French throne.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-france-backs-us-1778",
+    "title": "France Backs the US",
+    "year": 1778,
+    "description": "France allied with the American rebels.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-montgolfier-1783",
+    "title": "Montgolfier Balloon Flight",
+    "year": 1783,
+    "description": "The Montgolfiers launched a hot-air balloon.",
+    "category": "technology",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-bastille-1789",
+    "title": "Storming of the Bastille",
+    "year": 1789,
+    "description": "Parisians stormed the royal fortress.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-declaration-rights-1789",
+    "title": "Declaration of the Rights of Man",
+    "year": 1789,
+    "description": "The assembly proclaimed the Declaration of the Rights of Man.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-republic-1792",
+    "title": "Republic Proclaimed",
+    "year": 1792,
+    "description": "France abolished the monarchy.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-louis-xvi-executed-1793",
+    "title": "Louis XVI Executed",
+    "year": 1793,
+    "description": "Louis XVI was guillotined.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-robespierre-1794",
+    "title": "Robespierre Falls",
+    "year": 1794,
+    "description": "The Reign of Terror ended with his arrest.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-napoleon-coup-1799",
+    "title": "Napoleon Seizes Power",
+    "year": 1799,
+    "description": "Napoleon overthrew the Directory.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-napoleon-emperor-1804",
+    "title": "Napoleon Crowned Emperor",
+    "year": 1804,
+    "description": "Napoleon crowned himself emperor.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-austerlitz-1805",
+    "title": "Battle of Austerlitz",
+    "year": 1805,
+    "description": "Napoleon crushed the Russian and Austrian armies.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-trafalgar-1805",
+    "title": "Battle of Trafalgar",
+    "year": 1805,
+    "description": "Nelson destroyed the French fleet.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-russian-campaign-1812",
+    "title": "Russian Campaign Fails",
+    "year": 1812,
+    "description": "Napoleon's army was destroyed in Russia.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-napoleon-abdicates-1814",
+    "title": "Napoleon Abdicates",
+    "year": 1814,
+    "description": "Napoleon was forced from power.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-waterloo-1815",
+    "title": "Battle of Waterloo",
+    "year": 1815,
+    "description": "Wellington and Blücher defeated Napoleon.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-july-revolution-1830",
+    "title": "July Revolution",
+    "year": 1830,
+    "description": "Parisians toppled Charles X.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-revolution-1848",
+    "title": "Revolution of 1848",
+    "year": 1848,
+    "description": "Revolts toppled the July Monarchy.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-second-empire-1852",
+    "title": "Second Empire Declared",
+    "year": 1852,
+    "description": "Louis-Napoleon became Emperor Napoleon III.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-solferino-1859",
+    "title": "Battle of Solferino",
+    "year": 1859,
+    "description": "The battle inspired the founding of the Red Cross.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-franco-prussian-war-1870",
+    "title": "Franco-Prussian War",
+    "year": 1870,
+    "description": "Prussia defeated France.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-paris-commune-1871",
+    "title": "Paris Commune",
+    "year": 1871,
+    "description": "Radicals briefly ruled Paris.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-third-republic-1875",
+    "title": "Third Republic Declared",
+    "year": 1875,
+    "description": "France settled into a republican regime.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-pasteur-rabies-1885",
+    "title": "Pasteur Rabies Vaccine",
+    "year": 1885,
+    "description": "Louis Pasteur tested a rabies vaccine.",
+    "category": "medicine",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-eiffel-tower-1889",
+    "title": "Eiffel Tower Opens",
+    "year": 1889,
+    "description": "The tower rose for the world exposition.",
+    "category": "technology",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-dreyfus-affair-1894",
+    "title": "Dreyfus Affair Begins",
+    "year": 1894,
+    "description": "A Jewish officer was wrongly convicted.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-lumiere-cinematographe-1895",
+    "title": "Lumière Cinématographe",
+    "year": 1895,
+    "description": "The Lumière brothers screened moving pictures.",
+    "category": "film",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-radium-1898",
+    "title": "Radium Discovered",
+    "year": 1898,
+    "description": "The Curies identified radium in Paris.",
+    "category": "science",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-paris-metro-1900",
+    "title": "Paris Métro Opens",
+    "year": 1900,
+    "description": "Paris opened its underground railway.",
+    "category": "technology",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-tour-de-france-1903",
+    "title": "First Tour de France",
+    "year": 1903,
+    "description": "The great cycling race was first held.",
+    "category": "sports",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-church-state-1905",
+    "title": "Church-State Separation",
+    "year": 1905,
+    "description": "France separated church and state.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-battle-of-marne-1914",
+    "title": "Battle of the Marne",
+    "year": 1914,
+    "description": "The French halted the German advance.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-battle-of-verdun-1916",
+    "title": "Battle of Verdun",
+    "year": 1916,
+    "description": "The longest battle of World War I raged.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-versailles-treaty-1919",
+    "title": "Versailles Treaty Signed",
+    "year": 1919,
+    "description": "The treaty ended World War I.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-world-cup-1938",
+    "title": "World Cup Hosted",
+    "year": 1938,
+    "description": "France hosted the FIFA World Cup.",
+    "category": "sports",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-fall-of-france-1940",
+    "title": "Fall of France",
+    "year": 1940,
+    "description": "Germany conquered France.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-d-day-1944",
+    "title": "D-Day Landings",
+    "year": 1944,
+    "description": "Allies landed on the Normandy beaches.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-paris-liberated-1944",
+    "title": "Paris Liberated",
+    "year": 1944,
+    "description": "Allied troops freed the capital.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-fourth-republic-1946",
+    "title": "Fourth Republic Begins",
+    "year": 1946,
+    "description": "France adopted a new constitution.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-dien-bien-phu-1954",
+    "title": "Battle of Dien Bien Phu",
+    "year": 1954,
+    "description": "The French lost the battle in Vietnam.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-fifth-republic-1958",
+    "title": "Fifth Republic Founded",
+    "year": 1958,
+    "description": "De Gaulle created the Fifth Republic.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-new-wave-1959",
+    "title": "French New Wave Begins",
+    "year": 1959,
+    "description": "Truffaut's films launched the New Wave.",
+    "category": "film",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-algeria-1962",
+    "title": "Algeria Gains Independence",
+    "year": 1962,
+    "description": "France recognised Algerian independence.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-ye-ye-1962",
+    "title": "Ye-Ye Music Boom",
+    "year": 1962,
+    "description": "Françoise Hardy and ye-ye pop ruled the charts.",
+    "category": "music",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-asterix-satellite-1965",
+    "title": "Asterix Satellite Launched",
+    "year": 1965,
+    "description": "France orbited its first satellite.",
+    "category": "space",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-may-68-1968",
+    "title": "May 68 Protests",
+    "year": 1968,
+    "description": "Students and workers revolted across France.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-ariane-1979",
+    "title": "Ariane Rocket Flies",
+    "year": 1979,
+    "description": "Europe's Ariane rocket launched.",
+    "category": "space",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-tgv-1981",
+    "title": "TGV High-Speed Train",
+    "year": 1981,
+    "description": "The TGV began regular high-speed service.",
+    "category": "technology",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-mitterrand-1981",
+    "title": "Mitterrand Becomes President",
+    "year": 1981,
+    "description": "François Mitterrand was elected president.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-maastricht-1992",
+    "title": "Maastricht Treaty Signed",
+    "year": 1992,
+    "description": "The treaty created the European Union.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-daft-punk-1993",
+    "title": "Daft Punk Forms",
+    "year": 1993,
+    "description": "The electronic duo formed in Paris.",
+    "category": "music",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-world-cup-1998",
+    "title": "World Cup Won",
+    "year": 1998,
+    "description": "France won the FIFA World Cup.",
+    "category": "sports",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-euro-2002",
+    "title": "Euro Adopted",
+    "year": 2002,
+    "description": "France adopted the euro currency.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-urban-riots-2005",
+    "title": "Urban Riots",
+    "year": 2005,
+    "description": "Banlieue unrest spread across France.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-the-artist-2011",
+    "title": "The Artist Wins Oscar",
+    "year": 2011,
+    "description": "The silent film won the Best Picture Oscar.",
+    "category": "film",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-charlie-hebdo-2015",
+    "title": "Charlie Hebdo Attack",
+    "year": 2015,
+    "description": "Gunmen attacked the satirical newspaper.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-macron-2017",
+    "title": "Macron Becomes President",
+    "year": 2017,
+    "description": "Emmanuel Macron took office.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-notre-dame-fire-2019",
+    "title": "Notre-Dame Fire",
+    "year": 2019,
+    "description": "A fire gutted the cathedral's roof.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-covid-lockdown-2020",
+    "title": "COVID-19 Lockdown",
+    "year": 2020,
+    "description": "France imposed a nationwide lockdown.",
+    "category": "medicine",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-paris-olympics-2024",
+    "title": "Paris Olympics",
+    "year": 2024,
+    "description": "France hosted the Summer Olympics.",
+    "category": "sports",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  }
+]

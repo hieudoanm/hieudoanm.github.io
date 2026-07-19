@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hieudoanm.github.io/free/resume/sitemap.xml

@@ -1,0 +1,33 @@
+name: CI - App - Hybrid - Games - Countries
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/games/countries/**/*'
+      - '.github/workflows/ci-app-hybrid-games-countries.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-games-countries-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/games/countries
+      filter: '@hieudoanm.github.io/countries'
+      releaseName: app-hybrid-games-countries-latest
+      releaseTitle: App - Hybrid - Games - Countries (latest)
+      artifactPrefix: games-countries
+      artifactName: countries

@@ -1,0 +1,344 @@
+[
+  {
+    "id": "bored",
+    "label": "Bored",
+    "items": [
+      {
+        "label": "Research",
+        "description": "Knowledge Explorer",
+        "icon": "PiMagnifyingGlass",
+        "toolId": "research"
+      },
+      {
+        "label": "Develop",
+        "description": "Skill Builder",
+        "icon": "PiNotebook",
+        "toolId": "develop"
+      },
+      {
+        "label": "Build",
+        "description": "Product Creator",
+        "icon": "PiWrench",
+        "toolId": "build"
+      },
+      {
+        "label": "Ship",
+        "description": "Infographic Publisher",
+        "icon": "PiRocketLaunch",
+        "toolId": "ship"
+      },
+      {
+        "label": "VibeSlotCode",
+        "description": "Stack + Idea Generator",
+        "icon": "PiSparkle",
+        "toolId": "vibe-slot-code"
+      },
+      {
+        "label": "WeirdSearch",
+        "description": "Weird Query Roller",
+        "icon": "PiSmileyMelting",
+        "toolId": "weird-search"
+      }
+    ]
+  },
+  {
+    "id": "calculator",
+    "label": "Calculator",
+    "items": [
+      {
+        "label": "Calculator",
+        "description": "Arithmetic + Unit Converter",
+        "icon": "PiDivide",
+        "toolId": "calculator"
+      },
+      {
+        "label": "Inflation",
+        "description": "Calculator",
+        "icon": "PiMoney",
+        "toolId": "inflation"
+      },
+      {
+        "label": "Split Bill",
+        "description": "Calculator",
+        "icon": "PiCurrencyDollar",
+        "toolId": "split-bill"
+      }
+    ]
+  },
+  {
+    "id": "clocks",
+    "label": "Clocks",
+    "items": [
+      {
+        "label": "Cron",
+        "description": "Expression Builder",
+        "icon": "PiClockAfternoon",
+        "toolId": "cron"
+      },
+      {
+        "label": "Epoch Convert",
+        "description": "Timestamp",
+        "icon": "PiClock",
+        "toolId": "epoch-convert"
+      }
+    ]
+  },
+  {
+    "id": "data-excel",
+    "label": "Data - Excel",
+    "items": [
+      {
+        "label": "Excel to PDF",
+        "description": "Excel → PDF",
+        "icon": "PiFileText",
+        "toolId": "excel-to-pdf"
+      },
+      {
+        "label": "Excel to XML",
+        "description": "Excel → XML",
+        "icon": "PiArrowsClockwise",
+        "toolId": "excel-to-xml"
+      },
+      {
+        "label": "Split Excel",
+        "description": "Split large files",
+        "icon": "PiScissors",
+        "toolId": "split-excel"
+      }
+    ]
+  },
+  {
+    "id": "data-xml",
+    "label": "Data - XML",
+    "items": [
+      {
+        "label": "JSON to XML",
+        "description": "JSON → XML",
+        "icon": "PiArrowsClockwise",
+        "toolId": "json-to-xml"
+      },
+      {
+        "label": "XML to Excel",
+        "description": "XML → Excel",
+        "icon": "PiArrowsClockwise",
+        "toolId": "xml-to-excel"
+      },
+      {
+        "label": "XML to JSON",
+        "description": "XML → JSON",
+        "icon": "PiArrowsClockwise",
+        "toolId": "xml-to-json"
+      }
+    ]
+  },
+  {
+    "id": "developer",
+    "label": "Developer",
+    "items": [
+      {
+        "label": "Diff",
+        "description": "Text Comparison",
+        "icon": "PiNotePencil",
+        "toolId": "text-diff"
+      },
+      {
+        "label": "Figlet",
+        "description": "Text art",
+        "icon": "PiNotePencil",
+        "toolId": "figlet"
+      },
+      {
+        "label": "IP",
+        "description": "Inspector",
+        "icon": "PiGlobe",
+        "toolId": "ip"
+      },
+      {
+        "label": "OpenAPI",
+        "description": "to Postman",
+        "icon": "PiArrowsClockwise",
+        "toolId": "openapi"
+      },
+      {
+        "label": "Proxy",
+        "description": "CORS Proxy",
+        "icon": "PiLink",
+        "toolId": "proxy"
+      },
+      {
+        "label": "Shopify Detect",
+        "description": "Detect Shopify",
+        "icon": "PiMagnifyingGlass",
+        "toolId": "shopify-detect"
+      },
+      {
+        "label": "URL Tracer",
+        "description": "Redirect Tracker",
+        "icon": "PiLink",
+        "toolId": "text-url-tracer"
+      },
+      {
+        "label": "UUID",
+        "description": "Generator",
+        "icon": "PiKey",
+        "toolId": "uuid"
+      }
+    ]
+  },
+  {
+    "id": "editors",
+    "label": "Editors",
+    "items": [
+      {
+        "label": "JSON Schema",
+        "description": "Validator",
+        "icon": "PiFileText",
+        "toolId": "json-schema"
+      },
+      {
+        "label": "Manifest",
+        "description": "JSON Editor",
+        "icon": "PiFileText",
+        "toolId": "manifest"
+      },
+      {
+        "label": "Regex",
+        "description": "Pattern Generator",
+        "icon": "PiMagnifyingGlass",
+        "toolId": "regex"
+      },
+      {
+        "label": "Slides",
+        "description": "Pitch Deck",
+        "icon": "PiPresentation",
+        "toolId": "slides"
+      }
+    ]
+  },
+  {
+    "id": "education",
+    "label": "Education",
+    "items": [
+      {
+        "label": "DOI",
+        "description": "Cite",
+        "icon": "PiFileText",
+        "toolId": "doi"
+      }
+    ]
+  },
+  {
+    "id": "puzzle",
+    "label": "Puzzle",
+    "items": [
+      {
+        "label": "2048",
+        "description": "Merge tiles",
+        "icon": "PiNumberSquareOne",
+        "toolId": "game2048"
+      },
+      {
+        "label": "Lights Out",
+        "description": "Toggle all lights off",
+        "icon": "PiLamp",
+        "toolId": "lights-out"
+      },
+      {
+        "label": "Sliding Puzzle",
+        "description": "Upload & slide tiles",
+        "icon": "PiSnowflake",
+        "toolId": "sliding-puzzle"
+      },
+      {
+        "label": "Towers",
+        "description": "Towers of Hanoi",
+        "icon": "PiBuilding",
+        "toolId": "towers"
+      }
+    ]
+  },
+  {
+    "id": "trivia",
+    "label": "Trivia",
+    "items": [
+      {
+        "label": "Palindrome",
+        "description": "Palindrome",
+        "icon": "PiRepeat",
+        "toolId": "palindrome"
+      },
+      {
+        "label": "Pokedex",
+        "description": "Pokemon",
+        "icon": "PiBook",
+        "toolId": "pokedex"
+      },
+      {
+        "label": "Quizify",
+        "description": "Quiz",
+        "icon": "PiQuestion",
+        "toolId": "quizify"
+      }
+    ]
+  },
+  {
+    "id": "utilities",
+    "label": "Utilities",
+    "items": [
+      {
+        "label": "Create ZIP",
+        "description": "Zip Files",
+        "icon": "PiFileText",
+        "toolId": "create-zip"
+      },
+      {
+        "label": "Emojis",
+        "description": "Explorer",
+        "icon": "PiSmiley",
+        "toolId": "emojis"
+      },
+      {
+        "label": "Kaprekar",
+        "description": "Routine",
+        "icon": "PiChartBar",
+        "toolId": "kaprekar"
+      },
+      {
+        "label": "Lorem Ipsum",
+        "description": "Dummy text",
+        "icon": "PiNotePencil",
+        "toolId": "lorem-ipsum"
+      },
+      {
+        "label": "No Sleep",
+        "description": "Timer",
+        "icon": "PiMoon",
+        "toolId": "no-sleep"
+      },
+      {
+        "label": "Screen Recorder",
+        "description": "Record & Download",
+        "icon": "PiFilmStrip",
+        "toolId": "screen-recorder"
+      }
+    ]
+  },
+  {
+    "id": "visualization",
+    "label": "Visualization",
+    "items": [
+      {
+        "label": "Attractors",
+        "description": "Strange Attractors",
+        "icon": "PiSpiral",
+        "toolId": "attractors"
+      },
+      {
+        "label": "Legislation",
+        "description": "Visualization",
+        "icon": "PiBuildings",
+        "toolId": "legislation"
+      }
+    ]
+  }
+]

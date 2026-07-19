@@ -1,0 +1,33 @@
+name: CI - App - Hybrid - Education - Economics
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/education/economics/**/*'
+      - '.github/workflows/ci-app-hybrid-education-economics.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-education-economics-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/education/economics
+      filter: '@hieudoanm.github.io/economics'
+      releaseName: app-hybrid-education-economics-latest
+      releaseTitle: App - Hybrid - Education - Economics (latest)
+      artifactPrefix: education-economics
+      artifactName: economics

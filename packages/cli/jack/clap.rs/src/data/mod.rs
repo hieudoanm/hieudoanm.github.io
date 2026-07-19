@@ -1,0 +1,260 @@
+use std::collections::HashMap;
+
+pub static COUNTRIES: once_cell::sync::Lazy<HashMap<&'static str, &'static str>> =
+    once_cell::sync::Lazy::new(|| {
+        let mut m = HashMap::new();
+        m.insert("AD", "Andorra");
+        m.insert("AE", "United Arab Emirates");
+        m.insert("AF", "Afghanistan");
+        m.insert("AG", "Antigua And Barbuda");
+        m.insert("AI", "Anguilla");
+        m.insert("AL", "Albania");
+        m.insert("AM", "Armenia");
+        m.insert("AO", "Angola");
+        m.insert("AQ", "Antarctica");
+        m.insert("AR", "Argentina");
+        m.insert("AS", "American Samoa");
+        m.insert("AT", "Austria");
+        m.insert("AU", "Australia");
+        m.insert("AW", "Aruba");
+        m.insert("AX", "Åland Islands");
+        m.insert("AZ", "Azerbaijan");
+        m.insert("BA", "Bosnia And Herzegovina");
+        m.insert("BB", "Barbados");
+        m.insert("BD", "Bangladesh");
+        m.insert("BE", "Belgium");
+        m.insert("BF", "Burkina Faso");
+        m.insert("BG", "Bulgaria");
+        m.insert("BH", "Bahrain");
+        m.insert("BI", "Burundi");
+        m.insert("BJ", "Benin");
+        m.insert("BL", "Saint Barthélemy");
+        m.insert("BM", "Bermuda");
+        m.insert("BN", "Brunei Darussalam");
+        m.insert("BO", "Bolivia");
+        m.insert("BQ", "Bonaire, Sint Eustatius And Saba");
+        m.insert("BR", "Brazil");
+        m.insert("BS", "Bahamas");
+        m.insert("BT", "Bhutan");
+        m.insert("BV", "Bouvet Island");
+        m.insert("BW", "Botswana");
+        m.insert("BY", "Belarus");
+        m.insert("BZ", "Belize");
+        m.insert("CA", "Canada");
+        m.insert("CC", "Cocos (Keeling) Islands");
+        m.insert("CD", "Democratic Republic Of The Congo");
+        m.insert("CF", "Central African Republic");
+        m.insert("CG", "Congo");
+        m.insert("CH", "Switzerland");
+        m.insert("CI", "Côte D'Ivoire");
+        m.insert("CK", "Cook Islands");
+        m.insert("CL", "Chile");
+        m.insert("CM", "Cameroon");
+        m.insert("CN", "China");
+        m.insert("CO", "Colombia");
+        m.insert("CR", "Costa Rica");
+        m.insert("CU", "Cuba");
+        m.insert("CV", "Cabo Verde");
+        m.insert("CW", "Curaçao");
+        m.insert("CX", "Christmas Island");
+        m.insert("CY", "Cyprus");
+        m.insert("CZ", "Czechia");
+        m.insert("DE", "Germany");
+        m.insert("DJ", "Djibouti");
+        m.insert("DK", "Denmark");
+        m.insert("DM", "Dominica");
+        m.insert("DO", "Dominican Republic");
+        m.insert("DZ", "Algeria");
+        m.insert("EC", "Ecuador");
+        m.insert("EE", "Estonia");
+        m.insert("EG", "Egypt");
+        m.insert("EH", "Western Sahara");
+        m.insert("ER", "Eritrea");
+        m.insert("ES", "Spain");
+        m.insert("ET", "Ethiopia");
+        m.insert("FI", "Finland");
+        m.insert("FJ", "Fiji");
+        m.insert("FK", "Falkland Islands");
+        m.insert("FM", "Micronesia");
+        m.insert("FO", "Faroe Islands");
+        m.insert("FR", "France");
+        m.insert("GA", "Gabon");
+        m.insert("GB", "United Kingdom");
+        m.insert("GD", "Grenada");
+        m.insert("GE", "Georgia");
+        m.insert("GF", "French Guiana");
+        m.insert("GG", "Guernsey");
+        m.insert("GH", "Ghana");
+        m.insert("GI", "Gibraltar");
+        m.insert("GL", "Greenland");
+        m.insert("GM", "Gambia");
+        m.insert("GN", "Guinea");
+        m.insert("GP", "Guadeloupe");
+        m.insert("GQ", "Equatorial Guinea");
+        m.insert("GR", "Greece");
+        m.insert("GS", "South Georgia And The South Sandwich Islands");
+        m.insert("GT", "Guatemala");
+        m.insert("GU", "Guam");
+        m.insert("GW", "Guinea-Bissau");
+        m.insert("GY", "Guyana");
+        m.insert("HK", "Hong Kong");
+        m.insert("HM", "Heard Island And McDonald Islands");
+        m.insert("HN", "Honduras");
+        m.insert("HR", "Croatia");
+        m.insert("HT", "Haiti");
+        m.insert("HU", "Hungary");
+        m.insert("ID", "Indonesia");
+        m.insert("IE", "Ireland");
+        m.insert("IL", "Israel");
+        m.insert("IM", "Isle Of Man");
+        m.insert("IN", "India");
+        m.insert("IO", "British Indian Ocean Territory");
+        m.insert("IQ", "Iraq");
+        m.insert("IR", "Iran");
+        m.insert("IS", "Iceland");
+        m.insert("IT", "Italy");
+        m.insert("JE", "Jersey");
+        m.insert("JM", "Jamaica");
+        m.insert("JO", "Jordan");
+        m.insert("JP", "Japan");
+        m.insert("KE", "Kenya");
+        m.insert("KG", "Kyrgyzstan");
+        m.insert("KH", "Cambodia");
+        m.insert("KI", "Kiribati");
+        m.insert("KM", "Comoros");
+        m.insert("KN", "Saint Kitts And Nevis");
+        m.insert("KP", "North Korea");
+        m.insert("KR", "South Korea");
+        m.insert("KW", "Kuwait");
+        m.insert("KY", "Cayman Islands");
+        m.insert("KZ", "Kazakhstan");
+        m.insert("LA", "Laos");
+        m.insert("LB", "Lebanon");
+        m.insert("LC", "Saint Lucia");
+        m.insert("LI", "Liechtenstein");
+        m.insert("LK", "Sri Lanka");
+        m.insert("LR", "Liberia");
+        m.insert("LS", "Lesotho");
+        m.insert("LT", "Lithuania");
+        m.insert("LU", "Luxembourg");
+        m.insert("LV", "Latvia");
+        m.insert("LY", "Libya");
+        m.insert("MA", "Morocco");
+        m.insert("MC", "Monaco");
+        m.insert("MD", "Moldova");
+        m.insert("ME", "Montenegro");
+        m.insert("MF", "Saint Martin");
+        m.insert("MG", "Madagascar");
+        m.insert("MH", "Marshall Islands");
+        m.insert("MK", "North Macedonia");
+        m.insert("ML", "Mali");
+        m.insert("MM", "Myanmar");
+        m.insert("MN", "Mongolia");
+        m.insert("MO", "Macao");
+        m.insert("MP", "Northern Mariana Islands");
+        m.insert("MQ", "Martinique");
+        m.insert("MR", "Mauritania");
+        m.insert("MS", "Montserrat");
+        m.insert("MT", "Malta");
+        m.insert("MU", "Mauritius");
+        m.insert("MV", "Maldives");
+        m.insert("MW", "Malawi");
+        m.insert("MX", "Mexico");
+        m.insert("MY", "Malaysia");
+        m.insert("MZ", "Mozambique");
+        m.insert("NA", "Namibia");
+        m.insert("NC", "New Caledonia");
+        m.insert("NE", "Niger");
+        m.insert("NF", "Norfolk Island");
+        m.insert("NG", "Nigeria");
+        m.insert("NI", "Nicaragua");
+        m.insert("NL", "Netherlands");
+        m.insert("NO", "Norway");
+        m.insert("NP", "Nepal");
+        m.insert("NR", "Nauru");
+        m.insert("NU", "Niue");
+        m.insert("NZ", "New Zealand");
+        m.insert("OM", "Oman");
+        m.insert("PA", "Panama");
+        m.insert("PE", "Peru");
+        m.insert("PF", "French Polynesia");
+        m.insert("PG", "Papua New Guinea");
+        m.insert("PH", "Philippines");
+        m.insert("PK", "Pakistan");
+        m.insert("PL", "Poland");
+        m.insert("PR", "Puerto Rico");
+        m.insert("PT", "Portugal");
+        m.insert("PY", "Paraguay");
+        m.insert("QA", "Qatar");
+        m.insert("RO", "Romania");
+        m.insert("RS", "Serbia");
+        m.insert("RU", "Russia");
+        m.insert("RW", "Rwanda");
+        m.insert("SA", "Saudi Arabia");
+        m.insert("SE", "Sweden");
+        m.insert("SG", "Singapore");
+        m.insert("SI", "Slovenia");
+        m.insert("SK", "Slovakia");
+        m.insert("SN", "Senegal");
+        m.insert("SO", "Somalia");
+        m.insert("SS", "South Sudan");
+        m.insert("SV", "El Salvador");
+        m.insert("TH", "Thailand");
+        m.insert("TR", "Türkiye");
+        m.insert("TW", "Taiwan");
+        m.insert("TZ", "Tanzania");
+        m.insert("UA", "Ukraine");
+        m.insert("UG", "Uganda");
+        m.insert("US", "United States");
+        m.insert("UY", "Uruguay");
+        m.insert("UZ", "Uzbekistan");
+        m.insert("VA", "Holy See");
+        m.insert("VE", "Venezuela");
+        m.insert("VN", "Viet Nam");
+        m.insert("ZA", "South Africa");
+        m.insert("ZM", "Zambia");
+        m.insert("ZW", "Zimbabwe");
+        m
+    });
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_countries_contains_known_codes() {
+        assert!(COUNTRIES.contains_key("US"));
+        assert!(COUNTRIES.contains_key("VN"));
+        assert!(COUNTRIES.contains_key("JP"));
+        assert!(COUNTRIES.contains_key("DE"));
+        assert!(COUNTRIES.contains_key("GB"));
+        assert!(COUNTRIES.contains_key("FR"));
+    }
+
+    #[test]
+    fn test_countries_right_names() {
+        assert_eq!(COUNTRIES.get("US"), Some(&"United States"));
+        assert_eq!(COUNTRIES.get("VN"), Some(&"Viet Nam"));
+        assert_eq!(COUNTRIES.get("JP"), Some(&"Japan"));
+        assert_eq!(COUNTRIES.get("DE"), Some(&"Germany"));
+        assert_eq!(COUNTRIES.get("GB"), Some(&"United Kingdom"));
+    }
+
+    #[test]
+    fn test_countries_unknown_code_not_present() {
+        assert!(!COUNTRIES.contains_key("ZZ"));
+        assert!(!COUNTRIES.contains_key("XX"));
+        assert!(!COUNTRIES.contains_key("AA"));
+    }
+
+    #[test]
+    fn test_countries_is_case_sensitive() {
+        assert!(!COUNTRIES.contains_key("us"));
+        assert!(!COUNTRIES.contains_key("vn"));
+    }
+
+    #[test]
+    fn test_countries_size() {
+        assert_eq!(COUNTRIES.len(), 211);
+    }
+}

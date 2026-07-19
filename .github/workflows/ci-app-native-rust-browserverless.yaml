@@ -1,0 +1,128 @@
+name: CI - App - Native - Rust - Browserverless
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/native/browserverless/rust/**'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-native-rust-browserverless-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  rust:
+    name: Rust
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/app/native/browserverless/rust
+    env:
+      RUSTC_WRAPPER: sccache
+      SCCACHE_GHA_ENABLED: "true"
+      CARGO_INCREMENTAL: "0"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7.0.1
+        with:
+          sparse-checkout: |
+            packages/app/native/browserverless/rust
+      - name: Install System Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libfontconfig1-dev \
+            libfreetype-dev \
+            libharfbuzz-dev \
+            libx11-dev \
+            libxcursor-dev \
+            libxrandr-dev \
+            libwayland-dev \
+            libgtk-3-dev \
+            clang \
+            cmake
+      - name: Install Rust
+        uses: actions-rust-lang/setup-rust-toolchain@v1.17.0
+        with:
+          components: clippy
+      - name: Start sccache Server (Rust and C), caching compiled artifacts by content hash
+        uses: mozilla-actions/sccache-action@v0.0.11
+      - name: Cache Cargo Registry (source downloads only)
+        uses: actions/cache@v6.1.0
+        with:
+          path: ~/.cargo/registry
+          key: ${{ runner.os }}-cargo-registry-app-native-rust-browserverless-${{ hashFiles('packages/app/native/browserverless/rust/Cargo.lock') }}
+          restore-keys: ${{ runner.os }}-cargo-registry-app-native-rust-browserverless-
+      # Each cargo invocation compiles a different profile/compiler
+      # (clippy-driver / dev-rustc / release-rustc), so the three steps cannot
+      # share artifacts. sccache content-addressed cache makes each one a near
+      # no-op on warm runs because the upstream Servo build is already cached.
+      - name: Lint
+        run: cargo clippy --workspace --all-targets -- -D warnings
+      - name: Test
+        run: cargo test --workspace
+      - name: Build
+        run: cargo build --release
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: app-native-rust-browserverless
+          path: packages/app/native/browserverless/rust/target/release/browserverless
+
+  publish:
+    name: Publish to GitHub Release
+    needs: [rust]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Download Build Artifacts
+        uses: actions/download-artifact@v8.0.1
+        with:
+          name: app-native-rust-browserverless
+          path: artifacts
+      - name: Collect Release Artifacts
+        run: |
+          mkdir -p release
+          for file in artifacts/*; do
+            cp "$file" "release/app-native-rust-browserverless-$(basename "$file")"
+          done
+      - name: Publish Release
+        run: |
+          set -euo pipefail
+          tag="app-native-rust-browserverless-latest"
+          # No checkout in this job: gh must not resolve the repo or commit via
+          # git, so pass --repo and --target explicitly.
+          repo="${GITHUB_REPOSITORY}"
+          sha="${GITHUB_SHA}"
+          # Remove any previous release and orphaned tag so a stale ref cannot
+          # make the recreate fail with HTTP 500. Both calls are best-effort.
+          gh release delete "$tag" --repo "$repo" --yes 2>/dev/null || true
+          gh api --method=DELETE \
+            "repos/$repo/git/refs/tags/$tag" 2>/dev/null || true
+          # GitHub can 500 transiently; retry before failing the build.
+          for attempt in 1 2 3 4 5; do
+            if gh release create "$tag" \
+              --repo "$repo" \
+              --target "$sha" \
+              --title "App - Native - Rust - Browserverless (latest)" \
+              --notes "Auto-built Browserverless from commit $sha" \
+              release/*; then
+              exit 0
+            fi
+            echo "gh release create failed (attempt $attempt/5); retrying..."
+            sleep 15
+          done
+          echo "gh release create failed after 5 attempts"
+          exit 1
+        env:
+          GH_TOKEN: ${{ github.token }}

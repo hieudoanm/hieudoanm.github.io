@@ -1,0 +1,33 @@
+name: CI - App - Hybrid - Games - Nikoli
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/games/nikoli/**/*'
+      - '.github/workflows/ci-app-hybrid-games-nikoli.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-games-nikoli-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/games/nikoli
+      filter: '@hieudoanm.github.io/nikoli'
+      releaseName: app-hybrid-games-nikoli-latest
+      releaseTitle: App - Hybrid - Games - Nikoli (latest)
+      artifactPrefix: games-nikoli
+      artifactName: nikoli

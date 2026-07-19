@@ -1,0 +1,44 @@
+# dependencies
+node_modules
+/node_modules
+/.pnp
+.pnp.*
+
+# testing
+/coverage
+coverage
+
+# next.js
+/.next/
+.next
+/out/
+
+# production
+/build
+dist
+
+# tauri
+/src-tauri/target/
+/src-tauri/gen/schemas
+
+# misc
+.DS_Store
+*.pem
+*.tsbuildinfo
+.env*
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# vercel
+.vercel
+
+# typescript
+next-env.d.ts
+
+# playwright
+playwright-report
+test-results

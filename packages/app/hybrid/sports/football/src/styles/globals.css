@@ -1,0 +1,17 @@
+@import 'tailwindcss';
+@import './base.css';
+@import './themes.css';
+
+@media print {
+  body {
+    height: auto;
+    overflow: visible;
+  }
+  .print-pitch {
+    width: 100%;
+    max-width: 100%;
+  }
+  .print-pitch [data-testid='pitch'] {
+    width: 100%;
+  }
+}

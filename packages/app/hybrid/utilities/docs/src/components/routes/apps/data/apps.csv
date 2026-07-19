@@ -1,0 +1,46 @@
+section,sectionId,label,description,icon,toolId
+Bored,bored,Research,Knowledge Explorer,PiMagnifyingGlass,research
+Bored,bored,Develop,Skill Builder,PiNotebook,develop
+Bored,bored,Build,Product Creator,PiWrench,build
+Bored,bored,Ship,Infographic Publisher,PiRocketLaunch,ship
+Bored,bored,VibeSlotCode,"Stack + Idea Generator",PiSparkle,vibe-slot-code
+Bored,bored,WeirdSearch,Weird Query Roller,PiSmileyMelting,weird-search
+Calculator,calculator,Calculator,"Arithmetic + Unit Converter",PiDivide,calculator
+Calculator,calculator,Inflation,Calculator,PiMoney,inflation
+Calculator,calculator,Split Bill,Calculator,PiCurrencyDollar,split-bill
+Clocks,clocks,Cron,Expression Builder,PiClockAfternoon,cron
+Clocks,clocks,Epoch Convert,Timestamp,PiClock,epoch-convert
+Data - Excel,data-excel,Excel to PDF,"Excel → PDF",PiFileText,excel-to-pdf
+Data - Excel,data-excel,Excel to XML,"Excel → XML",PiArrowsClockwise,excel-to-xml
+Data - Excel,data-excel,Split Excel,Split large files,PiScissors,split-excel
+Data - XML,data-xml,JSON to XML,"JSON → XML",PiArrowsClockwise,json-to-xml
+Data - XML,data-xml,XML to Excel,"XML → Excel",PiArrowsClockwise,xml-to-excel
+Data - XML,data-xml,XML to JSON,"XML → JSON",PiArrowsClockwise,xml-to-json
+Developer,developer,Diff,Text Comparison,PiNotePencil,text-diff
+Developer,developer,Figlet,Text art,PiNotePencil,figlet
+Developer,developer,IP,Inspector,PiGlobe,ip
+Developer,developer,OpenAPI,to Postman,PiArrowsClockwise,openapi
+Developer,developer,Proxy,CORS Proxy,PiLink,proxy
+Developer,developer,Shopify Detect,Detect Shopify,PiMagnifyingGlass,shopify-detect
+Developer,developer,URL Tracer,Redirect Tracker,PiLink,text-url-tracer
+Developer,developer,UUID,Generator,PiKey,uuid
+Editors,editors,JSON Schema,Validator,PiFileText,json-schema
+Editors,editors,Manifest,JSON Editor,PiFileText,manifest
+Editors,editors,Regex,Pattern Generator,PiMagnifyingGlass,regex
+Editors,editors,Slides,Pitch Deck,PiPresentation,slides
+Education,education,DOI,Cite,PiFileText,doi
+Puzzle,puzzle,2048,Merge tiles,PiNumberSquareOne,game2048
+Puzzle,puzzle,Lights Out,Toggle all lights off,PiLamp,lights-out
+Puzzle,puzzle,Sliding Puzzle,Upload & slide tiles,PiSnowflake,sliding-puzzle
+Puzzle,puzzle,Towers,Towers of Hanoi,PiBuilding,towers
+Trivia,trivia,Palindrome,Palindrome,PiRepeat,palindrome
+Trivia,trivia,Pokedex,Pokemon,PiBook,pokedex
+Trivia,trivia,Quizify,Quiz,PiQuestion,quizify
+Utilities,utilities,Create ZIP,Zip Files,PiFileText,create-zip
+Utilities,utilities,Emojis,Explorer,PiSmiley,emojis
+Utilities,utilities,Kaprekar,Routine,PiChartBar,kaprekar
+Utilities,utilities,Lorem Ipsum,Dummy text,PiNotePencil,lorem-ipsum
+Utilities,utilities,No Sleep,Timer,PiMoon,no-sleep
+Utilities,utilities,Screen Recorder,"Record & Download",PiFilmStrip,screen-recorder
+Visualization,visualization,Attractors,Strange Attractors,PiSpiral,attractors
+Visualization,visualization,Legislation,Visualization,PiBuildings,legislation

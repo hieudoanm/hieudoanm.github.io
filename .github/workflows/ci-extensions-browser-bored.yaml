@@ -1,0 +1,32 @@
+name: CI - Extensions - Browser - Bored
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/extensions/browser/bored/**'
+      - '.github/workflows/ci-extensions-browser-bored.yaml'
+      - '.github/workflows/ci-extensions-browser-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-extensions-browser-bored-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-extensions-browser-template.yaml
+    with:
+      package: packages/extensions/browser/bored
+      filter: '@hieudoanm.github.io/bored'
+      releaseName: extensions-browser-bored-latest
+      releaseTitle: Extensions - Browser - Bored (latest)
+      artifactPrefix: extensions-browser-bored

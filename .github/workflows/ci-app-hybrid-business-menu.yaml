@@ -1,0 +1,33 @@
+name: CI - App - Hybrid - Business - Menu
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/business/menu/**/*'
+      - '.github/workflows/ci-app-hybrid-business-menu.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-business-menu-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/business/menu
+      filter: '@hieudoanm.github.io/menu'
+      releaseName: app-hybrid-business-menu-latest
+      releaseTitle: App - Hybrid - Business - Menu (latest)
+      artifactPrefix: business-menu
+      artifactName: menu

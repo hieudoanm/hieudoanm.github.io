@@ -1,0 +1,11 @@
+@import 'tailwindcss';
+@import './base.css';
+@import './themes.css';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-tap-highlight-color: transparent;
+}

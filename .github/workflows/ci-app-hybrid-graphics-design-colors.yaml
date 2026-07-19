@@ -1,0 +1,33 @@
+name: CI - App - Hybrid - Graphics & Design - Colors
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/graphics-design/colors/**/*'
+      - '.github/workflows/ci-app-hybrid-graphics-design-colors.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-graphics-design-colors-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/graphics-design/colors
+      filter: '@hieudoanm.github.io/colors'
+      releaseName: app-hybrid-graphics-design-colors-latest
+      releaseTitle: App - Hybrid - Graphics & Design - Colors (latest)
+      artifactPrefix: graphics-design-colors
+      artifactName: colors

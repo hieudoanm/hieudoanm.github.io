@@ -1,0 +1,33 @@
+name: CI - App - Hybrid - Finance - Wallet
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/finance/wallet/**/*'
+      - '.github/workflows/ci-app-hybrid-finance-wallet.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-finance-wallet-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/finance/wallet
+      filter: '@hieudoanm.github.io/wallet'
+      releaseName: app-hybrid-finance-wallet-latest
+      releaseTitle: App - Hybrid - Finance - Wallet (latest)
+      artifactPrefix: finance-wallet
+      artifactName: wallet
