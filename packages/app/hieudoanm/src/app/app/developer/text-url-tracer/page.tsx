@@ -1,10 +1,8 @@
 'use client';
 
-import { TextUrlTracerModal } from '@hieudoanm.github.io/components/pages/app/developer/TextUrlTracerModal';
+import { TextUrlTracer } from '@hieudoanm.github.io/components/pages/app/developer/TextUrlTracer';
 import { ToolPage } from '../../_shared/ToolPage';
 
-const ToolDeveloperTextUrlTracer = () => (
-  <ToolPage Component={TextUrlTracerModal} />
-);
+const ToolDeveloperTextUrlTracer = () => <ToolPage Component={TextUrlTracer} />;
 
 export default ToolDeveloperTextUrlTracer;

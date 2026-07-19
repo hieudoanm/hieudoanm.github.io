@@ -545,7 +545,8 @@
 - **1968**: René Cassin
 - **1965**: United Nations Children's Fund
 - **1964**: Martin Luther King Jr.
-- **1963**: International Committee of the Red Cross, League of Red Cross Societies
+- **1963**: International Committee of the Red Cross, League of Red Cross
+  Societies
 - **1962**: Linus Pauling
 - **1961**: Dag Hammarskjöld
 - **1960**: Albert Lutuli

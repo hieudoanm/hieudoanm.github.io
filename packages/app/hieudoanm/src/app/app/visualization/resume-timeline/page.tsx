@@ -1,10 +1,10 @@
 'use client';
 
-import { ResumeTimelineModal } from '@hieudoanm.github.io/components/pages/app/visualization/ResumeTimelineModal';
+import { ResumeTimeline } from '@hieudoanm.github.io/components/pages/app/visualization/ResumeTimeline';
 import { ToolPage } from '../../_shared/ToolPage';
 
 const ToolVisualizationResumeTimeline = () => (
-  <ToolPage Component={ResumeTimelineModal} />
+  <ToolPage Component={ResumeTimeline} />
 );
 
 export default ToolVisualizationResumeTimeline;

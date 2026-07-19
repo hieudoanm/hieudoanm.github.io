@@ -1,8 +1,8 @@
 'use client';
 
-import { ImageModal } from '@hieudoanm.github.io/components/pages/app/image';
+import { Image } from '@hieudoanm.github.io/components/pages/app/image';
 import { ToolPage } from '../../_shared/ToolPage';
 
-const ToolImageContrastChecker = () => <ToolPage Component={ImageModal} />;
+const ToolImageContrastChecker = () => <ToolPage Component={Image} />;
 
 export default ToolImageContrastChecker;

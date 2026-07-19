@@ -1,8 +1,8 @@
 'use client';
 
-import { CreateZipModal } from '@hieudoanm.github.io/components/pages/app/utilities/CreateZipModal';
+import { CreateZip } from '@hieudoanm.github.io/components/pages/app/utilities/CreateZip';
 import { ToolPage } from '../../_shared/ToolPage';
 
-const ToolUtilitiesCreateZip = () => <ToolPage Component={CreateZipModal} />;
+const ToolUtilitiesCreateZip = () => <ToolPage Component={CreateZip} />;
 
 export default ToolUtilitiesCreateZip;

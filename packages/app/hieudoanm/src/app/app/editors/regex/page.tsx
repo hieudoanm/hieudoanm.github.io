@@ -1,8 +1,8 @@
 'use client';
 
-import { RegexModal } from '@hieudoanm.github.io/components/pages/app/editors/RegexModal';
+import { Regex } from '@hieudoanm.github.io/components/pages/app/editors/Regex';
 import { ToolPage } from '../../_shared/ToolPage';
 
-const ToolEditorsRegex = () => <ToolPage Component={RegexModal} />;
+const ToolEditorsRegex = () => <ToolPage Component={Regex} />;
 
 export default ToolEditorsRegex;

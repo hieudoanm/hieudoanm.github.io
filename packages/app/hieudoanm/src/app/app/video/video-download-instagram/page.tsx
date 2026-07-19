@@ -1,10 +1,8 @@
 'use client';
 
-import { VideoModal } from '@hieudoanm.github.io/components/pages/app/video';
+import { Video } from '@hieudoanm.github.io/components/pages/app/video';
 import { ToolPage } from '../../_shared/ToolPage';
 
-const ToolVideoVideoDownloadInstagram = () => (
-  <ToolPage Component={VideoModal} />
-);
+const ToolVideoVideoDownloadInstagram = () => <ToolPage Component={Video} />;
 
 export default ToolVideoVideoDownloadInstagram;

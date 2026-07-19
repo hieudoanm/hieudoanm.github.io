@@ -27,7 +27,8 @@
 [microsoft-word]: https://www.microsoft.com/microsoft-365/word
 [microsoft-excel]: https://www.microsoft.com/microsoft-365/excel
 [microsoft-powerpoint]: https://www.microsoft.com/microsoft-365/powerpoint
-[microsoft-forms]: https://www.microsoft.com/microsoft-365/online-surveys-polls-quizzes
+[microsoft-forms]:
+  https://www.microsoft.com/microsoft-365/online-surveys-polls-quizzes
 [microsoft-outlook]: https://outlook.live.com
 [microsoft-onedrive]: https://onedrive.live.com
 [microsoft-teams]: https://www.microsoft.com/microsoft-teams/group-chat-software

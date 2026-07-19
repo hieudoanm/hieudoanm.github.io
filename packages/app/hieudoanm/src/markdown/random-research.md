@@ -16,7 +16,8 @@
 
 ## Ideas
 
-- Questions that can be answered in 300 words (max 1 page) essay (with references)
+- Questions that can be answered in 300 words (max 1 page) essay (with
+  references)
 - Types of Questions: How? What? When? Where? Why? Who?
 - Topics
   - Sleep

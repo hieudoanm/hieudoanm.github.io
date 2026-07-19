@@ -1,10 +1,8 @@
 'use client';
 
-import { TumblingEChartModal } from '@hieudoanm.github.io/components/pages/app/health-vision/TumblingEChartModal';
+import { TumblingEChart } from '@hieudoanm.github.io/components/pages/app/health-vision/TumblingEChart';
 import { ToolPage } from '../../_shared/ToolPage';
 
-const ToolHealthVisionTumblingE = () => (
-  <ToolPage Component={TumblingEChartModal} />
-);
+const ToolHealthVisionTumblingE = () => <ToolPage Component={TumblingEChart} />;
 
 export default ToolHealthVisionTumblingE;

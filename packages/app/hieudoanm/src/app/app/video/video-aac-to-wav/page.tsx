@@ -1,8 +1,8 @@
 'use client';
 
-import { VideoModal } from '@hieudoanm.github.io/components/pages/app/video';
+import { Video } from '@hieudoanm.github.io/components/pages/app/video';
 import { ToolPage } from '../../_shared/ToolPage';
 
-const ToolVideoVideoAacToWav = () => <ToolPage Component={VideoModal} />;
+const ToolVideoVideoAacToWav = () => <ToolPage Component={Video} />;
 
 export default ToolVideoVideoAacToWav;

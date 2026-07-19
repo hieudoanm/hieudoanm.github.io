@@ -1,6 +1,6 @@
 import { FC, useEffect, useReducer, useRef, useState } from 'react';
 import { FullScreen } from '@hieudoanm.github.io/components/atoms/FullScreen';
-import { GameInstructionsModal } from '../_shared/GameInstructionsModal';
+import { GameInstructions } from '../_shared/GameInstructions';
 import { GAME_DATA } from '../_shared/gameData';
 
 import { Grid, GAME_NAME } from './types';
@@ -215,7 +215,7 @@ export const Sudoku: FC<{ onClose: () => void }> = ({ onClose }) => {
         </div>
       )}
 
-      <GameInstructionsModal
+      <GameInstructions
         isOpen={helpOpen}
         onClose={() => setHelpOpen(false)}
         title={data.title}

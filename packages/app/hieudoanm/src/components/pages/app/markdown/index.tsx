@@ -34,7 +34,7 @@ for (const [cat, ids] of Object.entries(CATEGORY_TOOLS)) {
   }
 }
 
-export const MarkdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
+export const Markdown: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [activeTool, setActiveTool] = useState<MarkdownToolConfig | null>(
     () => {
       const id = popPreselectedMarkdownTool();
@@ -100,7 +100,7 @@ export const MarkdownModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </FullScreen>
   );
 };
-MarkdownModal.displayName = 'MarkdownModal';
+Markdown.displayName = 'Markdown';
 
 function ToolbarSidebar({
   query,

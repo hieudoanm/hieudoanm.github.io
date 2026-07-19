@@ -1,8 +1,8 @@
 'use client';
 
-import { FlashcardsModal } from '@hieudoanm.github.io/components/pages/app/education/FlashcardsModal';
+import { Flashcards } from '@hieudoanm.github.io/components/pages/app/education/Flashcards';
 import { ToolPage } from '../../_shared/ToolPage';
 
-const ToolEducationFlashcards = () => <ToolPage Component={FlashcardsModal} />;
+const ToolEducationFlashcards = () => <ToolPage Component={Flashcards} />;
 
 export default ToolEducationFlashcards;

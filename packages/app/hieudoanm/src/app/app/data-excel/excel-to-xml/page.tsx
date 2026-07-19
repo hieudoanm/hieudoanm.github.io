@@ -1,8 +1,8 @@
 'use client';
 
-import { ExcelToXmlModal } from '@hieudoanm.github.io/components/pages/app/data-excel/ExcelToXmlModal';
+import { ExcelToXml } from '@hieudoanm.github.io/components/pages/app/data-excel/ExcelToXml';
 import { ToolPage } from '../../_shared/ToolPage';
 
-const ToolDataExcelExcelToXml = () => <ToolPage Component={ExcelToXmlModal} />;
+const ToolDataExcelExcelToXml = () => <ToolPage Component={ExcelToXml} />;
 
 export default ToolDataExcelExcelToXml;

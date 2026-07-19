@@ -1,8 +1,8 @@
 'use client';
 
-import { ProxyModal } from '@hieudoanm.github.io/components/pages/app/developer/ProxyModal';
+import { Proxy } from '@hieudoanm.github.io/components/pages/app/developer/Proxy';
 import { ToolPage } from '../../_shared/ToolPage';
 
-const ToolDeveloperProxy = () => <ToolPage Component={ProxyModal} />;
+const ToolDeveloperProxy = () => <ToolPage Component={Proxy} />;
 
 export default ToolDeveloperProxy;

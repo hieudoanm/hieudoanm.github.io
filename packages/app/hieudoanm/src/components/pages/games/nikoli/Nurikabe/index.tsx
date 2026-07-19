@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
 import { FullScreen } from '@hieudoanm.github.io/components/atoms/FullScreen';
-import { GameInstructionsModal } from '../_shared/GameInstructionsModal';
+import { GameInstructions } from '../_shared/GameInstructions';
 import { GAME_DATA } from '../_shared/gameData';
 import { useNurikabe } from './useNurikabe';
 import { GAME_NAME } from './types';
@@ -63,7 +63,7 @@ export const Nurikabe: FC<{ onClose: () => void }> = ({ onClose }) => {
         </div>
       </div>
 
-      <GameInstructionsModal
+      <GameInstructions
         isOpen={helpOpen}
         onClose={() => setHelpOpen(false)}
         title={data.title}

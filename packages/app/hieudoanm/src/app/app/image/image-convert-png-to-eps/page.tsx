@@ -1,8 +1,8 @@
 'use client';
 
-import { ImageModal } from '@hieudoanm.github.io/components/pages/app/image';
+import { Image } from '@hieudoanm.github.io/components/pages/app/image';
 import { ToolPage } from '../../_shared/ToolPage';
 
-const ToolImageImageConvertPngToEps = () => <ToolPage Component={ImageModal} />;
+const ToolImageImageConvertPngToEps = () => <ToolPage Component={Image} />;
 
 export default ToolImageImageConvertPngToEps;

@@ -1,8 +1,8 @@
 'use client';
 
-import { LoremIpsumModal } from '@hieudoanm.github.io/components/pages/app/utilities/LoremIpsumModal';
+import { LoremIpsum } from '@hieudoanm.github.io/components/pages/app/utilities/LoremIpsum';
 import { ToolPage } from '../../_shared/ToolPage';
 
-const ToolUtilitiesLoremIpsum = () => <ToolPage Component={LoremIpsumModal} />;
+const ToolUtilitiesLoremIpsum = () => <ToolPage Component={LoremIpsum} />;
 
 export default ToolUtilitiesLoremIpsum;

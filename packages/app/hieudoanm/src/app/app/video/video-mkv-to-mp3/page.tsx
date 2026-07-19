@@ -1,8 +1,8 @@
 'use client';
 
-import { VideoModal } from '@hieudoanm.github.io/components/pages/app/video';
+import { Video } from '@hieudoanm.github.io/components/pages/app/video';
 import { ToolPage } from '../../_shared/ToolPage';
 
-const ToolVideoVideoMkvToMp3 = () => <ToolPage Component={VideoModal} />;
+const ToolVideoVideoMkvToMp3 = () => <ToolPage Component={Video} />;
 
 export default ToolVideoVideoMkvToMp3;

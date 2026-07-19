@@ -90,7 +90,7 @@ for (const [cat, ids] of Object.entries(CATEGORY_TOOLS)) {
   }
 }
 
-export const PdfModal: FC<{ onClose: () => void }> = ({ onClose }) => {
+export const Pdf: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [activeTool, setActiveTool] = useState<PdfToolConfig | null>(() => {
     const preselectedId = popPreselectedPdfTool();
     if (preselectedId) {
@@ -153,7 +153,7 @@ export const PdfModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </FullScreen>
   );
 };
-PdfModal.displayName = 'PdfModal';
+Pdf.displayName = 'Pdf';
 
 function ToolbarSidebar({
   query,

@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { Weekday } from '../Weekday';
+import { Weekday } from '../WeekdayModal';
 
 describe('Weekday', () => {
   const originalInnerWidth = window.innerWidth;

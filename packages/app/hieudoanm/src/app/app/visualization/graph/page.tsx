@@ -1,8 +1,8 @@
 'use client';
 
-import { GraphModal } from '@hieudoanm.github.io/components/pages/app/visualization/GraphModal';
+import { Graph } from '@hieudoanm.github.io/components/pages/app/visualization/Graph';
 import { ToolPage } from '../../_shared/ToolPage';
 
-const ToolVisualizationGraph = () => <ToolPage Component={GraphModal} />;
+const ToolVisualizationGraph = () => <ToolPage Component={Graph} />;
 
 export default ToolVisualizationGraph;

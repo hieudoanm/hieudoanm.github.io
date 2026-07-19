@@ -6,10 +6,13 @@
 - **2018**: Caucher Birkar, Alessio Figalli, Peter Scholze, Akshay Venkatesh
 - **2014**: Artur Avila, Manjul Bhargava, Martin Hairer, Maryam Mirzakhani
 - **2010**: Elon Lindenstrauss, Ngô Bảo Châu, Stanislav Smirnov, Cédric Villani
-- **2006**: Andrei Okounkov, Grigori Perelman (declined), Terence Tao, Wendelin Werner
+- **2006**: Andrei Okounkov, Grigori Perelman (declined), Terence Tao, Wendelin
+  Werner
 - **2002**: Laurent Lafforgue, Vladimir Voevodsky
-- **1998**: Richard Borcherds, Timothy Gowers, Maxim Kontsevich, Curtis T. McMullen
-- **1994**: Jean Bourgain, Pierre-Louis Lions, Jean-Christophe Yoccoz, Efim Zelmanov
+- **1998**: Richard Borcherds, Timothy Gowers, Maxim Kontsevich, Curtis T.
+  McMullen
+- **1994**: Jean Bourgain, Pierre-Louis Lions, Jean-Christophe Yoccoz, Efim
+  Zelmanov
 - **1990**: Vladimir Drinfeld, Vaughan Jones, Shigefumi Mori, Edward Witten
 - **1986**: Simon Donaldson, Gerd Faltings, Michael Freedman
 - **1982**: Alain Connes, William Thurston, Shing-Tung Yau

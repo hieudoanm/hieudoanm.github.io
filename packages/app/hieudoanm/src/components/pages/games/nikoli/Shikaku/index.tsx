@@ -1,6 +1,6 @@
 import { FC, useMemo, useState } from 'react';
 import { FullScreen } from '@hieudoanm.github.io/components/atoms/FullScreen';
-import { GameInstructionsModal } from '../_shared/GameInstructionsModal';
+import { GameInstructions } from '../_shared/GameInstructions';
 import { GAME_DATA } from '../_shared/gameData';
 import { ROWS, COLS, getRegionColor } from './utils';
 import { useShikaku } from './useShikaku';
@@ -124,7 +124,7 @@ export const Shikaku: FC<{ onClose: () => void }> = ({ onClose }) => {
         </div>
       </div>
 
-      <GameInstructionsModal
+      <GameInstructions
         isOpen={helpOpen}
         onClose={() => setHelpOpen(false)}
         title={data.title}

@@ -145,7 +145,7 @@ for (const [cat, ids] of Object.entries(CATEGORY_TOOLS)) {
   }
 }
 
-export const ImageModal: FC<{ onClose: () => void }> = ({ onClose }) => {
+export const Image: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [activeTool, setActiveTool] = useState<ImageToolConfig | null>(() => {
     const id = popPreselectedImageTool();
     return TOOLS.find((t) => t.id === id) ?? null;
@@ -209,7 +209,7 @@ export const ImageModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </FullScreen>
   );
 };
-ImageModal.displayName = 'ImageModal';
+Image.displayName = 'Image';
 
 function ToolbarSidebar({
   query,

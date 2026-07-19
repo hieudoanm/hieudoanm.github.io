@@ -1,8 +1,8 @@
 'use client';
 
-import { ResumeModal } from '@hieudoanm.github.io/components/pages/app/editors/ResumeModal';
+import { Resume } from '@hieudoanm.github.io/components/pages/app/editors/Resume';
 import { ToolPage } from '../../_shared/ToolPage';
 
-const ToolEditorsResume = () => <ToolPage Component={ResumeModal} />;
+const ToolEditorsResume = () => <ToolPage Component={Resume} />;
 
 export default ToolEditorsResume;

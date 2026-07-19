@@ -1,8 +1,8 @@
 'use client';
 
-import { PitchModal } from '@hieudoanm.github.io/components/pages/app/education/PitchModal';
+import { Pitch } from '@hieudoanm.github.io/components/pages/app/education/Pitch';
 import { ToolPage } from '../../_shared/ToolPage';
 
-const ToolEducationPitch = () => <ToolPage Component={PitchModal} />;
+const ToolEducationPitch = () => <ToolPage Component={Pitch} />;
 
 export default ToolEducationPitch;

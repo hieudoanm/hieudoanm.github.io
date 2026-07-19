@@ -1,8 +1,8 @@
 'use client';
 
-import { LogMARChartModal } from '@hieudoanm.github.io/components/pages/app/health-vision/LogMARChartModal';
+import { LogMARChart } from '@hieudoanm.github.io/components/pages/app/health-vision/LogMARChart';
 import { ToolPage } from '../../_shared/ToolPage';
 
-const ToolHealthVisionLogmar = () => <ToolPage Component={LogMARChartModal} />;
+const ToolHealthVisionLogmar = () => <ToolPage Component={LogMARChart} />;
 
 export default ToolHealthVisionLogmar;

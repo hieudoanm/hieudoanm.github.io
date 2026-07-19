@@ -19,7 +19,8 @@
 
 ### Bachelor of Psychology
 
-- [[University]]: [Royal Melbourne Institute of Technology (RMIT)](https://www.rmit.edu.au/)
+- [[University]]:
+  [Royal Melbourne Institute of Technology (RMIT)](https://www.rmit.edu.au/)
 - Location: Ho Chi Minh City, [[Vietnam]]
 - Period: October 2022 - September 2025
 

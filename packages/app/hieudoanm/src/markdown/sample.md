@@ -19,14 +19,18 @@ Maximum 25 Words per Sentence
 ## Statement 1 (100 Words)
 
 - First Sentence (25 Words): What is the first statement?
-- Second Sentence (25 Words): Provide arguments for the first statement (references)
-- Third Sentence (50 Words): Provide first evidence for the first statement (references)
+- Second Sentence (25 Words): Provide arguments for the first statement
+  (references)
+- Third Sentence (50 Words): Provide first evidence for the first statement
+  (references)
 
 ## Statement 2 (100 Words)
 
 - First Sentence (25 Words): What is the second statement?
-- Second Sentence (25 Words): Provide arguments for the second statement (references)
-- Third Sentence (50 Words): Provide evidences for the second statement (references)
+- Second Sentence (25 Words): Provide arguments for the second statement
+  (references)
+- Third Sentence (50 Words): Provide evidences for the second statement
+  (references)
 
 ## Conclusion (50 Words)
 

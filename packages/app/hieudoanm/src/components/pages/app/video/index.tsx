@@ -47,7 +47,7 @@ const getToolComponent = (id: string): FC<{ config: VideoToolConfig }> => {
   return VideoConvertTool;
 };
 
-export const VideoModal: FC<{ onClose: () => void }> = ({ onClose }) => {
+export const Video: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [activeTool, setActiveTool] = useState<VideoToolConfig | null>(() => {
     const id = popPreselectedVideoTool();
     return TOOLS.find((t) => t.id === id) ?? null;
@@ -143,4 +143,4 @@ export const VideoModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </FullScreen>
   );
 };
-VideoModal.displayName = 'VideoModal';
+Video.displayName = 'Video';

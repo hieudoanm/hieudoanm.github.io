@@ -1,10 +1,8 @@
 'use client';
 
-import { ImageModal } from '@hieudoanm.github.io/components/pages/app/image';
+import { Image } from '@hieudoanm.github.io/components/pages/app/image';
 import { ToolPage } from '../../_shared/ToolPage';
 
-const ToolImageImageConvertWebpToPng = () => (
-  <ToolPage Component={ImageModal} />
-);
+const ToolImageImageConvertWebpToPng = () => <ToolPage Component={Image} />;
 
 export default ToolImageImageConvertWebpToPng;

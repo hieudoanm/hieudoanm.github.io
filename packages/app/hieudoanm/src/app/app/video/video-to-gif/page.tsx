@@ -1,8 +1,8 @@
 'use client';
 
-import { VideoModal } from '@hieudoanm.github.io/components/pages/app/video';
+import { Video } from '@hieudoanm.github.io/components/pages/app/video';
 import { ToolPage } from '../../_shared/ToolPage';
 
-const ToolVideoVideoToGif = () => <ToolPage Component={VideoModal} />;
+const ToolVideoVideoToGif = () => <ToolPage Component={Video} />;
 
 export default ToolVideoVideoToGif;

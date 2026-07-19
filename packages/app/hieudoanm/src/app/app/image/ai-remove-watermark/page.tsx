@@ -1,8 +1,8 @@
 'use client';
 
-import { ImageModal } from '@hieudoanm.github.io/components/pages/app/image';
+import { Image } from '@hieudoanm.github.io/components/pages/app/image';
 import { ToolPage } from '../../_shared/ToolPage';
 
-const ToolImageAiRemoveWatermark = () => <ToolPage Component={ImageModal} />;
+const ToolImageAiRemoveWatermark = () => <ToolPage Component={Image} />;
 
 export default ToolImageAiRemoveWatermark;

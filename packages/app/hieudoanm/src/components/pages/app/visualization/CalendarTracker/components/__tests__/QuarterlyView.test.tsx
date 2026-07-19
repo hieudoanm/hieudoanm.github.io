@@ -1,4 +1,4 @@
-jest.mock('../Dot', () => ({
+jest.mock('../DotModal', () => ({
   Dot: ({ index, date }: { index: number; date: Date }) => (
     <span data-testid="dot" data-index={index} data-date={date.toISOString()}>
       {index}
@@ -11,7 +11,7 @@ jest.mock('../../constants', () => ({
 }));
 
 import { render, screen } from '@testing-library/react';
-import { QuarterlyView, HalfView } from '../QuarterlyView';
+import { QuarterlyView, HalfView } from '../QuarterlyViewModal';
 
 describe('QuarterlyView', () => {
   it('renders 4 quarters', () => {

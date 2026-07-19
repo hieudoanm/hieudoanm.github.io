@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
-import { MonthlyView } from '../MonthlyView';
+import { MonthlyView } from '../MonthlyViewModal';
 
-jest.mock('../Dot', () => ({
+jest.mock('../DotModal', () => ({
   Dot: ({ index, date }: { index: number; date: Date }) => (
     <span data-testid="dot" data-index={index} data-date={date.toISOString()}>
       {index}

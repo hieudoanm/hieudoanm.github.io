@@ -1,8 +1,8 @@
 'use client';
 
-import { CsvToJsonModal } from '@hieudoanm.github.io/components/pages/app/data-csv/CsvToJsonModal';
+import { CsvToJson } from '@hieudoanm.github.io/components/pages/app/data-csv/CsvToJson';
 import { ToolPage } from '../../_shared/ToolPage';
 
-const ToolDataCsvCsvToJson = () => <ToolPage Component={CsvToJsonModal} />;
+const ToolDataCsvCsvToJson = () => <ToolPage Component={CsvToJson} />;
 
 export default ToolDataCsvCsvToJson;

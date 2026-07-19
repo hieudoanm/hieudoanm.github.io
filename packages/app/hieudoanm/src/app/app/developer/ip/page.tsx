@@ -1,8 +1,8 @@
 'use client';
 
-import { IPModal } from '@hieudoanm.github.io/components/pages/app/developer/IPModal';
+import { IP } from '@hieudoanm.github.io/components/pages/app/developer/IP';
 import { ToolPage } from '../../_shared/ToolPage';
 
-const ToolDeveloperIp = () => <ToolPage Component={IPModal} />;
+const ToolDeveloperIp = () => <ToolPage Component={IP} />;
 
 export default ToolDeveloperIp;

@@ -9,7 +9,8 @@
 
 ## Seven Kingdoms
 
-Historically, before Aegon I Targaryen united Westeros, there were seven independent kingdoms:
+Historically, before Aegon I Targaryen united Westeros, there were seven
+independent kingdoms:
 
 | No  | Kingdom                              | Ruling House (at Conquest) | Capital / Seat |
 | --- | ------------------------------------ | -------------------------- | -------------- |
@@ -25,7 +26,8 @@ Historically, before Aegon I Targaryen united Westeros, there were seven indepen
 
 ## Houses
 
-After Aegon's Conquest, the realm became known as the Seven Kingdoms, but the political divisions evolved into these regions:
+After Aegon's Conquest, the realm became known as the Seven Kingdoms, but the
+political divisions evolved into these regions:
 
 | No  | House     | Region       | Capital / Seat | Sigil                      | Motto                     |
 | --- | --------- | ------------ | -------------- | -------------------------- | ------------------------- |

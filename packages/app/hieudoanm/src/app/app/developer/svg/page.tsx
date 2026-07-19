@@ -1,8 +1,8 @@
 'use client';
 
-import { SVGModal } from '@hieudoanm.github.io/components/pages/app/developer/SVGModal';
+import { SVG } from '@hieudoanm.github.io/components/pages/app/developer/SVG';
 import { ToolPage } from '../../_shared/ToolPage';
 
-const ToolDeveloperSvg = () => <ToolPage Component={SVGModal} />;
+const ToolDeveloperSvg = () => <ToolPage Component={SVG} />;
 
 export default ToolDeveloperSvg;

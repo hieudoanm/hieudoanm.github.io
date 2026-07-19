@@ -1,8 +1,8 @@
 'use client';
 
-import { CountdownModal } from '@hieudoanm.github.io/components/pages/app/clocks/CountdownModal';
+import { Countdown } from '@hieudoanm.github.io/components/pages/app/clocks/Countdown';
 import { ToolPage } from '../../_shared/ToolPage';
 
-const ToolClocksCountdown = () => <ToolPage Component={CountdownModal} />;
+const ToolClocksCountdown = () => <ToolPage Component={Countdown} />;
 
 export default ToolClocksCountdown;

@@ -7,9 +7,7 @@ import { QuarterlyView, HalfView } from './components/QuarterlyView';
 import { WeeklyView } from './components/WeeklyView';
 import { View, years } from './constants';
 
-export const CalendarTrackerModal: FC<{ onClose: () => void }> = ({
-  onClose,
-}) => {
+export const CalendarTracker: FC<{ onClose: () => void }> = ({ onClose }) => {
   const today = new Date();
   const [{ year, view, withWeekday }, setState] = useState({
     year: today.getFullYear(),
@@ -123,4 +121,4 @@ export const CalendarTrackerModal: FC<{ onClose: () => void }> = ({
     </FullScreen>
   );
 };
-CalendarTrackerModal.displayName = 'CalendarTrackerModal';
+CalendarTracker.displayName = 'CalendarTracker';

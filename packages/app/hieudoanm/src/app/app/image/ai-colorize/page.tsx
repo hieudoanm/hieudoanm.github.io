@@ -1,8 +1,8 @@
 'use client';
 
-import { ImageModal } from '@hieudoanm.github.io/components/pages/app/image';
+import { Image } from '@hieudoanm.github.io/components/pages/app/image';
 import { ToolPage } from '../../_shared/ToolPage';
 
-const ToolImageAiColorize = () => <ToolPage Component={ImageModal} />;
+const ToolImageAiColorize = () => <ToolPage Component={Image} />;
 
 export default ToolImageAiColorize;

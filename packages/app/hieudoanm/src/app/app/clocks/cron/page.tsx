@@ -1,8 +1,8 @@
 'use client';
 
-import { CronModal } from '@hieudoanm.github.io/components/pages/app/clocks/CronModal';
+import { Cron } from '@hieudoanm.github.io/components/pages/app/clocks/Cron';
 import { ToolPage } from '../../_shared/ToolPage';
 
-const ToolClocksCron = () => <ToolPage Component={CronModal} />;
+const ToolClocksCron = () => <ToolPage Component={Cron} />;
 
 export default ToolClocksCron;

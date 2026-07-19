@@ -1,10 +1,10 @@
 'use client';
 
-import { ScreenRecorderModal } from '@hieudoanm.github.io/components/pages/app/utilities/ScreenRecorderModal';
+import { ScreenRecorder } from '@hieudoanm.github.io/components/pages/app/utilities/ScreenRecorder';
 import { ToolPage } from '../../_shared/ToolPage';
 
 const ToolUtilitiesScreenRecorder = () => (
-  <ToolPage Component={ScreenRecorderModal} />
+  <ToolPage Component={ScreenRecorder} />
 );
 
 export default ToolUtilitiesScreenRecorder;

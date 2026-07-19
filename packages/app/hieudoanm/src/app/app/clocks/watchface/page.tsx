@@ -1,8 +1,8 @@
 'use client';
 
-import { WatchFaceModal } from '@hieudoanm.github.io/components/pages/app/clocks/WatchfaceModal';
+import { WatchFace } from '@hieudoanm.github.io/components/pages/app/clocks/Watchface';
 import { ToolPage } from '../../_shared/ToolPage';
 
-const ToolClocksWatchface = () => <ToolPage Component={WatchFaceModal} />;
+const ToolClocksWatchface = () => <ToolPage Component={WatchFace} />;
 
 export default ToolClocksWatchface;

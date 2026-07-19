@@ -1,8 +1,8 @@
 'use client';
 
-import { ImageModal } from '@hieudoanm.github.io/components/pages/app/image';
+import { Image } from '@hieudoanm.github.io/components/pages/app/image';
 import { ToolPage } from '../../_shared/ToolPage';
 
-const ToolImageQrRead = () => <ToolPage Component={ImageModal} />;
+const ToolImageQrRead = () => <ToolPage Component={Image} />;
 
 export default ToolImageQrRead;

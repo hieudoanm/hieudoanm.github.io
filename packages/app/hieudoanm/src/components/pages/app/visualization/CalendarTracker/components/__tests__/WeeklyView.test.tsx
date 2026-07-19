@@ -1,4 +1,4 @@
-jest.mock('../Dot', () => ({
+jest.mock('../DotModal', () => ({
   Dot: ({ index, date }: { index: number; date: Date }) => (
     <span data-testid="dot" data-index={index} data-date={date.toISOString()}>
       {index}
@@ -6,7 +6,7 @@ jest.mock('../Dot', () => ({
   ),
 }));
 
-jest.mock('../Weekday', () => ({
+jest.mock('../WeekdayModal', () => ({
   Weekday: () => <div data-testid="weekday" />,
 }));
 
@@ -30,7 +30,7 @@ jest.mock('../../constants', () => ({
 }));
 
 import { render, screen } from '@testing-library/react';
-import { WeeklyView } from '../WeeklyView';
+import { WeeklyView } from '../WeeklyViewModal';
 
 describe('WeeklyView', () => {
   it('renders Dot components for each month', () => {

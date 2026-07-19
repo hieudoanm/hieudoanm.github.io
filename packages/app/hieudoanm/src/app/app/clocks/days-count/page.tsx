@@ -1,8 +1,8 @@
 'use client';
 
-import { DaysCountModal } from '@hieudoanm.github.io/components/pages/app/clocks/DaysCountModal';
+import { DaysCount } from '@hieudoanm.github.io/components/pages/app/clocks/DaysCount';
 import { ToolPage } from '../../_shared/ToolPage';
 
-const ToolClocksDaysCount = () => <ToolPage Component={DaysCountModal} />;
+const ToolClocksDaysCount = () => <ToolPage Component={DaysCount} />;
 
 export default ToolClocksDaysCount;

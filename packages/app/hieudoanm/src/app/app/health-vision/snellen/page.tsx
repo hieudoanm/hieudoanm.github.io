@@ -1,10 +1,8 @@
 'use client';
 
-import { SnellenChartModal } from '@hieudoanm.github.io/components/pages/app/health-vision/SnellenChartModal';
+import { SnellenChart } from '@hieudoanm.github.io/components/pages/app/health-vision/SnellenChart';
 import { ToolPage } from '../../_shared/ToolPage';
 
-const ToolHealthVisionSnellen = () => (
-  <ToolPage Component={SnellenChartModal} />
-);
+const ToolHealthVisionSnellen = () => <ToolPage Component={SnellenChart} />;
 
 export default ToolHealthVisionSnellen;

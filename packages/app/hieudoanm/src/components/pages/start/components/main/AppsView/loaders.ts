@@ -7,8 +7,8 @@ type Loader = () => Promise<{
 const loaders: Record<string, Loader> = {};
 
 loaders['attractors'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/visualization/AttractorsModal').then(
-    (m) => ({ default: m.AttractorsModal })
+  import('@hieudoanm.github.io/components/pages/app/visualization/Attractors').then(
+    (m) => ({ default: m.Attractors })
   );
 
 loaders['blackjack'] = () =>
@@ -17,8 +17,8 @@ loaders['blackjack'] = () =>
   );
 
 loaders['braille'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/text-convert/BrailleModal').then(
-    (m) => ({ default: m.BrailleModal })
+  import('@hieudoanm.github.io/components/pages/app/text-convert/Braille').then(
+    (m) => ({ default: m.Braille })
   );
 
 loaders['calculator'] = () =>
@@ -28,12 +28,12 @@ loaders['calculator'] = () =>
 
 loaders['calendar-tracker'] = () =>
   import('@hieudoanm.github.io/components/pages/app/visualization/CalendarTracker').then(
-    (m) => ({ default: m.CalendarTrackerModal })
+    (m) => ({ default: m.CalendarTracker })
   );
 
 loaders['chat'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/utilities/ChatModal').then(
-    (m) => ({ default: m.ChatModal })
+  import('@hieudoanm.github.io/components/pages/app/utilities/Chat').then(
+    (m) => ({ default: m.Chat })
   );
 
 loaders['chess-board'] = () =>
@@ -57,13 +57,13 @@ loaders['chess-stats'] = () =>
   );
 
 loaders['clipboard'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/utilities/ClipboardModal').then(
-    (m) => ({ default: m.ClipboardModal })
+  import('@hieudoanm.github.io/components/pages/app/utilities/Clipboard').then(
+    (m) => ({ default: m.Clipboard })
   );
 
 loaders['countdown'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/clocks/CountdownModal').then(
-    (m) => ({ default: m.CountdownModal })
+  import('@hieudoanm.github.io/components/pages/app/clocks/Countdown').then(
+    (m) => ({ default: m.Countdown })
   );
 
 loaders['countries-border'] = () =>
@@ -87,33 +87,33 @@ loaders['countries-higher-lower'] = () =>
   );
 
 loaders['create-zip'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/utilities/CreateZipModal').then(
-    (m) => ({ default: m.CreateZipModal })
+  import('@hieudoanm.github.io/components/pages/app/utilities/CreateZip').then(
+    (m) => ({ default: m.CreateZip })
   );
 
 loaders['cron'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/clocks/CronModal').then(
-    (m) => ({ default: m.CronModal })
-  );
+  import('@hieudoanm.github.io/components/pages/app/clocks/Cron').then((m) => ({
+    default: m.Cron,
+  }));
 
 loaders['csv-to-excel'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/data-csv/CsvToExcelModal').then(
-    (m) => ({ default: m.CsvToExcelModal })
+  import('@hieudoanm.github.io/components/pages/app/data-csv/CsvToExcel').then(
+    (m) => ({ default: m.CsvToExcel })
   );
 
 loaders['csv-to-json'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/data-csv/CsvToJsonModal').then(
-    (m) => ({ default: m.CsvToJsonModal })
+  import('@hieudoanm.github.io/components/pages/app/data-csv/CsvToJson').then(
+    (m) => ({ default: m.CsvToJson })
   );
 
 loaders['csv-to-xml'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/data-csv/CsvToXmlModal').then(
-    (m) => ({ default: m.CsvToXmlModal })
+  import('@hieudoanm.github.io/components/pages/app/data-csv/CsvToXml').then(
+    (m) => ({ default: m.CsvToXml })
   );
 
 loaders['days-count'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/clocks/DaysCountModal').then(
-    (m) => ({ default: m.DaysCountModal })
+  import('@hieudoanm.github.io/components/pages/app/clocks/DaysCount').then(
+    (m) => ({ default: m.DaysCount })
   );
 
 loaders['dice-game'] = () =>
@@ -127,8 +127,8 @@ loaders['dino-run'] = () =>
   );
 
 loaders['doi'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/education/DOIModal').then(
-    (m) => ({ default: m.DOIModal })
+  import('@hieudoanm.github.io/components/pages/app/education/DOI').then(
+    (m) => ({ default: m.DOI })
   );
 
 loaders['emoji-guesser'] = () =>
@@ -137,38 +137,38 @@ loaders['emoji-guesser'] = () =>
   );
 
 loaders['emojis'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/utilities/EmojisModal').then(
-    (m) => ({ default: m.EmojisModal })
+  import('@hieudoanm.github.io/components/pages/app/utilities/Emojis').then(
+    (m) => ({ default: m.Emojis })
   );
 
 loaders['english'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/education/EnglishModal').then(
-    (m) => ({ default: m.LanguagesEnglishModal })
+  import('@hieudoanm.github.io/components/pages/app/education/English').then(
+    (m) => ({ default: m.LanguagesEnglish })
   );
 
 loaders['epoch-convert'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/clocks/EpochConvertModal').then(
-    (m) => ({ default: m.EpochConvertModal })
+  import('@hieudoanm.github.io/components/pages/app/clocks/EpochConvert').then(
+    (m) => ({ default: m.EpochConvert })
   );
 
 loaders['excel-to-csv'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/data-excel/ExcelToCsvModal').then(
-    (m) => ({ default: m.ExcelToCsvModal })
+  import('@hieudoanm.github.io/components/pages/app/data-excel/ExcelToCsv').then(
+    (m) => ({ default: m.ExcelToCsv })
   );
 
 loaders['excel-to-pdf'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/data-excel/ExcelToPdfModal').then(
-    (m) => ({ default: m.ExcelToPdfModal })
+  import('@hieudoanm.github.io/components/pages/app/data-excel/ExcelToPdf').then(
+    (m) => ({ default: m.ExcelToPdf })
   );
 
 loaders['excel-to-xml'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/data-excel/ExcelToXmlModal').then(
-    (m) => ({ default: m.ExcelToXmlModal })
+  import('@hieudoanm.github.io/components/pages/app/data-excel/ExcelToXml').then(
+    (m) => ({ default: m.ExcelToXml })
   );
 
 loaders['figlet'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/developer/FigletModal').then(
-    (m) => ({ default: m.FigletModal })
+  import('@hieudoanm.github.io/components/pages/app/developer/Figlet').then(
+    (m) => ({ default: m.Figlet })
   );
 
 loaders['flag-guesser'] = () =>
@@ -177,8 +177,8 @@ loaders['flag-guesser'] = () =>
   );
 
 loaders['flashcards'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/education/FlashcardsModal').then(
-    (m) => ({ default: m.FlashcardsModal })
+  import('@hieudoanm.github.io/components/pages/app/education/Flashcards').then(
+    (m) => ({ default: m.Flashcards })
   );
 
 loaders['game2048'] = () =>
@@ -187,8 +187,8 @@ loaders['game2048'] = () =>
   );
 
 loaders['graph'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/visualization/GraphModal').then(
-    (m) => ({ default: m.GraphModal })
+  import('@hieudoanm.github.io/components/pages/app/visualization/Graph').then(
+    (m) => ({ default: m.Graph })
   );
 
 loaders['inflation'] = () =>
@@ -197,38 +197,38 @@ loaders['inflation'] = () =>
   );
 
 loaders['ip'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/developer/IPModal').then(
-    (m) => ({ default: m.IPModal })
+  import('@hieudoanm.github.io/components/pages/app/developer/IP').then(
+    (m) => ({ default: m.IP })
   );
 
 loaders['json-schema'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/editors/JSONSchemaModal').then(
-    (m) => ({ default: m.JSONSchemaModal })
+  import('@hieudoanm.github.io/components/pages/app/editors/JSONSchema').then(
+    (m) => ({ default: m.JSONSchema })
   );
 
 loaders['json-to-csv'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/data-json/JsonToCsvModal').then(
-    (m) => ({ default: m.JsonToCsvModal })
+  import('@hieudoanm.github.io/components/pages/app/data-json/JsonToCsv').then(
+    (m) => ({ default: m.JsonToCsv })
   );
 
 loaders['json-to-xml'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/data-json/JsonToXmlModal').then(
-    (m) => ({ default: m.JsonToXmlModal })
+  import('@hieudoanm.github.io/components/pages/app/data-json/JsonToXml').then(
+    (m) => ({ default: m.JsonToXml })
   );
 
 loaders['kaprekar'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/utilities/KaprekarModal').then(
-    (m) => ({ default: m.KaprekarModal })
+  import('@hieudoanm.github.io/components/pages/app/utilities/Kaprekar').then(
+    (m) => ({ default: m.Kaprekar })
   );
 
 loaders['leetspeak'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/text-convert/LeetSpeakModal').then(
-    (m) => ({ default: m.LeetSpeakModal })
+  import('@hieudoanm.github.io/components/pages/app/text-convert/LeetSpeak').then(
+    (m) => ({ default: m.LeetSpeak })
   );
 
 loaders['legislation'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/visualization/LegislationModal').then(
-    (m) => ({ default: m.LegislationModal })
+  import('@hieudoanm.github.io/components/pages/app/visualization/Legislation').then(
+    (m) => ({ default: m.Legislation })
   );
 
 loaders['lights-out'] = () =>
@@ -237,18 +237,18 @@ loaders['lights-out'] = () =>
   );
 
 loaders['logmar'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/health-vision/LogMARChartModal').then(
-    (m) => ({ default: m.LogMARChartModal })
+  import('@hieudoanm.github.io/components/pages/app/health-vision/LogMARChart').then(
+    (m) => ({ default: m.LogMARChart })
   );
 
 loaders['lorem-ipsum'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/utilities/LoremIpsumModal').then(
-    (m) => ({ default: m.LoremIpsumModal })
+  import('@hieudoanm.github.io/components/pages/app/utilities/LoremIpsum').then(
+    (m) => ({ default: m.LoremIpsum })
   );
 
 loaders['manifest'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/editors/ManifestModal').then(
-    (m) => ({ default: m.ManifestModal })
+  import('@hieudoanm.github.io/components/pages/app/editors/Manifest').then(
+    (m) => ({ default: m.Manifest })
   );
 
 loaders['maze'] = () =>
@@ -262,8 +262,8 @@ loaders['memory-match'] = () =>
   );
 
 loaders['morse'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/text-convert/MorseModal').then(
-    (m) => ({ default: m.MorseModal })
+  import('@hieudoanm.github.io/components/pages/app/text-convert/Morse').then(
+    (m) => ({ default: m.Morse })
   );
 
 loaders['n-back'] = () =>
@@ -272,8 +272,8 @@ loaders['n-back'] = () =>
   );
 
 loaders['no-sleep'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/utilities/NoSleepModal').then(
-    (m) => ({ default: m.NoSleepModal })
+  import('@hieudoanm.github.io/components/pages/app/utilities/NoSleep').then(
+    (m) => ({ default: m.NoSleep })
   );
 
 loaders['openapi'] = () =>
@@ -292,8 +292,8 @@ loaders['pd'] = () =>
   );
 
 loaders['periodic-table'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/education/PeriodicTableModal').then(
-    (m) => ({ default: m.PeriodicTableModal })
+  import('@hieudoanm.github.io/components/pages/app/education/PeriodicTable').then(
+    (m) => ({ default: m.PeriodicTable })
   );
 
 loaders['pi'] = () =>
@@ -302,8 +302,8 @@ loaders['pi'] = () =>
   );
 
 loaders['pitch'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/education/PitchModal').then(
-    (m) => ({ default: m.PitchModal })
+  import('@hieudoanm.github.io/components/pages/app/education/Pitch').then(
+    (m) => ({ default: m.Pitch })
   );
 
 loaders['pokedex'] = () =>
@@ -317,13 +317,13 @@ loaders['poker'] = () =>
   );
 
 loaders['pomodoro'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/clocks/PomodoroModal').then(
-    (m) => ({ default: m.PomodoroModal })
+  import('@hieudoanm.github.io/components/pages/app/clocks/Pomodoro').then(
+    (m) => ({ default: m.Pomodoro })
   );
 
 loaders['proxy'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/developer/ProxyModal').then(
-    (m) => ({ default: m.ProxyModal })
+  import('@hieudoanm.github.io/components/pages/app/developer/Proxy').then(
+    (m) => ({ default: m.Proxy })
   );
 
 loaders['quizify'] = () =>
@@ -337,18 +337,18 @@ loaders['recall'] = () =>
   );
 
 loaders['regex'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/editors/RegexModal').then(
-    (m) => ({ default: m.RegexModal })
+  import('@hieudoanm.github.io/components/pages/app/editors/Regex').then(
+    (m) => ({ default: m.Regex })
   );
 
 loaders['resume'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/editors/ResumeModal').then(
-    (m) => ({ default: m.ResumeModal })
+  import('@hieudoanm.github.io/components/pages/app/editors/Resume').then(
+    (m) => ({ default: m.Resume })
   );
 
 loaders['resume-timeline'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/visualization/ResumeTimelineModal').then(
-    (m) => ({ default: m.ResumeTimelineModal })
+  import('@hieudoanm.github.io/components/pages/app/visualization/ResumeTimeline').then(
+    (m) => ({ default: m.ResumeTimeline })
   );
 
 loaders['rps'] = () =>
@@ -357,28 +357,28 @@ loaders['rps'] = () =>
   );
 
 loaders['screen-recorder'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/utilities/ScreenRecorderModal').then(
-    (m) => ({ default: m.ScreenRecorderModal })
+  import('@hieudoanm.github.io/components/pages/app/utilities/ScreenRecorder').then(
+    (m) => ({ default: m.ScreenRecorder })
   );
 
 loaders['sheets'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/developer/SheetsModal').then(
-    (m) => ({ default: m.SheetsModal })
+  import('@hieudoanm.github.io/components/pages/app/developer/Sheets').then(
+    (m) => ({ default: m.Sheets })
   );
 
 loaders['shopify-detect'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/developer/ShopifyDetectModal').then(
-    (m) => ({ default: m.ShopifyDetectModal })
+  import('@hieudoanm.github.io/components/pages/app/developer/ShopifyDetect').then(
+    (m) => ({ default: m.ShopifyDetect })
   );
 
 loaders['sign'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/education/SignModal').then(
-    (m) => ({ default: m.SignModal })
+  import('@hieudoanm.github.io/components/pages/app/education/Sign').then(
+    (m) => ({ default: m.Sign })
   );
 
 loaders['slides'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/editors/SlidesModal').then(
-    (m) => ({ default: m.SlidesModal })
+  import('@hieudoanm.github.io/components/pages/app/editors/Slides').then(
+    (m) => ({ default: m.Slides })
   );
 
 loaders['sliding-puzzle'] = () =>
@@ -397,8 +397,8 @@ loaders['snake'] = () =>
   );
 
 loaders['snellen'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/health-vision/SnellenChartModal').then(
-    (m) => ({ default: m.SnellenChartModal })
+  import('@hieudoanm.github.io/components/pages/app/health-vision/SnellenChart').then(
+    (m) => ({ default: m.SnellenChart })
   );
 
 loaders['split-bill'] = () =>
@@ -407,13 +407,13 @@ loaders['split-bill'] = () =>
   );
 
 loaders['split-csv'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/data-csv/SplitCsvModal').then(
-    (m) => ({ default: m.SplitCsvModal })
+  import('@hieudoanm.github.io/components/pages/app/data-csv/SplitCsv').then(
+    (m) => ({ default: m.SplitCsv })
   );
 
 loaders['split-excel'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/data-excel/SplitExcelModal').then(
-    (m) => ({ default: m.SplitExcelModal })
+  import('@hieudoanm.github.io/components/pages/app/data-excel/SplitExcel').then(
+    (m) => ({ default: m.SplitExcel })
   );
 
 loaders['sudoku'] = () =>
@@ -422,8 +422,8 @@ loaders['sudoku'] = () =>
   );
 
 loaders['svg'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/developer/SVGModal').then(
-    (m) => ({ default: m.SVGModal })
+  import('@hieudoanm.github.io/components/pages/app/developer/SVG').then(
+    (m) => ({ default: m.SVG })
   );
 
 loaders['t3'] = () =>
@@ -442,28 +442,28 @@ loaders['tax'] = () =>
   );
 
 loaders['text-case'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/text-convert/TextCaseModal').then(
-    (m) => ({ default: m.TextCaseModal })
+  import('@hieudoanm.github.io/components/pages/app/text-convert/TextCase').then(
+    (m) => ({ default: m.TextCase })
   );
 
 loaders['text-diff'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/developer/TextDiffModal').then(
-    (m) => ({ default: m.TextDiffModal })
+  import('@hieudoanm.github.io/components/pages/app/developer/TextDiff').then(
+    (m) => ({ default: m.TextDiff })
   );
 
 loaders['text-password'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/utilities/TextPasswordModal').then(
-    (m) => ({ default: m.TextPasswordModal })
+  import('@hieudoanm.github.io/components/pages/app/utilities/TextPassword').then(
+    (m) => ({ default: m.TextPassword })
   );
 
 loaders['text-url-tracer'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/developer/TextUrlTracerModal').then(
-    (m) => ({ default: m.TextUrlTracerModal })
+  import('@hieudoanm.github.io/components/pages/app/developer/TextUrlTracer').then(
+    (m) => ({ default: m.TextUrlTracer })
   );
 
 loaders['text-word-count'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/utilities/TextWordCountModal').then(
-    (m) => ({ default: m.TextWordCountModal })
+  import('@hieudoanm.github.io/components/pages/app/utilities/TextWordCount').then(
+    (m) => ({ default: m.TextWordCount })
   );
 
 loaders['towers'] = () =>
@@ -472,8 +472,8 @@ loaders['towers'] = () =>
   );
 
 loaders['tumbling-e'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/health-vision/TumblingEChartModal').then(
-    (m) => ({ default: m.TumblingEChartModal })
+  import('@hieudoanm.github.io/components/pages/app/health-vision/TumblingEChart').then(
+    (m) => ({ default: m.TumblingEChart })
   );
 
 loaders['typoglycemia'] = () =>
@@ -482,18 +482,18 @@ loaders['typoglycemia'] = () =>
   );
 
 loaders['uuid'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/developer/UUIDModal').then(
-    (m) => ({ default: m.UUIDModal })
+  import('@hieudoanm.github.io/components/pages/app/developer/UUID').then(
+    (m) => ({ default: m.UUID })
   );
 
 loaders['watchface'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/clocks/WatchfaceModal').then(
-    (m) => ({ default: m.WatchFaceModal })
+  import('@hieudoanm.github.io/components/pages/app/clocks/Watchface').then(
+    (m) => ({ default: m.WatchFace })
   );
 
 loaders['word-counter'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/editors/WordCounterModal').then(
-    (m) => ({ default: m.WordCounterModal })
+  import('@hieudoanm.github.io/components/pages/app/editors/WordCounter').then(
+    (m) => ({ default: m.WordCounter })
   );
 
 loaders['wordle'] = () =>
@@ -502,18 +502,18 @@ loaders['wordle'] = () =>
   );
 
 loaders['xml-to-csv'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/data-xml/XmlToCsvModal').then(
-    (m) => ({ default: m.XmlToCsvModal })
+  import('@hieudoanm.github.io/components/pages/app/data-xml/XmlToCsv').then(
+    (m) => ({ default: m.XmlToCsv })
   );
 
 loaders['xml-to-excel'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/data-xml/XmlToExcelModal').then(
-    (m) => ({ default: m.XmlToExcelModal })
+  import('@hieudoanm.github.io/components/pages/app/data-xml/XmlToExcel').then(
+    (m) => ({ default: m.XmlToExcel })
   );
 
 loaders['xml-to-json'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/data-xml/XmlToJsonModal').then(
-    (m) => ({ default: m.XmlToJsonModal })
+  import('@hieudoanm.github.io/components/pages/app/data-xml/XmlToJson').then(
+    (m) => ({ default: m.XmlToJson })
   );
 
 export { loaders };

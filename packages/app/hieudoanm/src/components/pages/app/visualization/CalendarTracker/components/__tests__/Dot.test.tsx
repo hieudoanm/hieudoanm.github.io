@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { Dot } from '../Dot';
+import { Dot } from '../DotModal';
 
 describe('Dot', () => {
   it('renders empty dot for index 0', () => {

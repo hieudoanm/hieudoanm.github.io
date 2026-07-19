@@ -11,7 +11,10 @@
 
 ## Introduction (50 words)
 
-Monday Fear, often called the Sunday Scaries, refers to feelings of anxiety, dread, or uneasiness that occur before the beginning of a new work or school week. It is commonly experienced on Sunday evening as individuals anticipate the return of responsibilities and obligations.
+Monday Fear, often called the Sunday Scaries, refers to feelings of anxiety,
+dread, or uneasiness that occur before the beginning of a new work or school
+week. It is commonly experienced on Sunday evening as individuals anticipate the
+return of responsibilities and obligations.
 
 - How common it is (reference) (25 words)
 
