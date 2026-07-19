@@ -1,0 +1,67 @@
+@import 'tailwindcss';
+@plugin 'daisyui' {
+  themes:
+    business --default,
+    light,
+    cupcake,
+    bumblebee,
+    emerald,
+    corporate,
+    synthwave,
+    retro,
+    cyberpunk,
+    valentine,
+    halloween,
+    garden,
+    forest,
+    aqua,
+    lofi,
+    pastel,
+    fantasy,
+    wireframe,
+    black,
+    luxury,
+    dracula,
+    cmyk,
+    autumn,
+    acid,
+    lemonade,
+    night,
+    coffee,
+    winter,
+    dim,
+    nord,
+    sunset;
+}
+
+@layer base {
+  :root {
+    --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    @apply focus-visible:outline-primary focus-visible:outline-2 focus-visible:outline-offset-2;
+  }
+
+  .skeleton {
+    @apply bg-base-300 animate-pulse rounded;
+  }
+}
+
+@layer utilities {
+  .safe-bottom {
+    padding-bottom: var(--safe-area-bottom);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}

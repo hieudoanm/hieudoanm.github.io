@@ -1,0 +1,137 @@
+// components/modals/LeetSpeakModal.tsx
+import { FC, useCallback, useState } from 'react';
+import { FullScreen } from '@hieudoanm.github.io/components/atoms/FullScreen';
+import { leet, leetify, SAMPLES } from './utils';
+
+export const LeetSpeak: FC<{ onClose: () => void }> = ({ onClose }) => {
+  const [input, setInput] = useState('');
+  const [copied, setCopied] = useState(false);
+  const [showMap, setShowMap] = useState(false);
+
+  const output = leetify(input);
+  const uniqueChars = Array.from(new Set(input.toLowerCase().split(''))).filter(
+    (ch) => leet[ch]
+  );
+
+  const copy = useCallback(async () => {
+    if (!output) return;
+    await navigator.clipboard.writeText(output);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1500);
+  }, [output]);
+
+  return (
+    <FullScreen
+      centered
+      onClose={onClose}
+      title="Leet Speak"
+      subtitle="1337 · Character substitution · Copy">
+      <div className="flex flex-col gap-2">
+        <div className="flex items-center justify-between">
+          <span className="text-base-content/50 text-xs tracking-widest uppercase">
+            Input
+          </span>
+          <span className="badge badge-ghost font-mono text-xs">
+            {input.length} chars
+          </span>
+        </div>
+        <textarea
+          className="textarea textarea-bordered h-24 w-full resize-none text-sm leading-relaxed"
+          placeholder="Type or paste text…"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
+        <div className="flex flex-wrap gap-2">
+          {SAMPLES.map((s) => (
+            <button
+              key={s}
+              className="btn btn-ghost btn-xs border-base-300 border"
+              onClick={() => setInput(s)}>
+              {s.length > 30 ? s.slice(0, 30) + '…' : s}
+            </button>
+          ))}
+          {input && (
+            <button
+              className="btn btn-ghost btn-xs border-base-300 ml-auto border"
+              onClick={() => setInput('')}>
+              Clear
+            </button>
+          )}
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-2">
+        <div className="flex items-center justify-between">
+          <span className="text-base-content/50 text-xs tracking-widest uppercase">
+            Leet output
+          </span>
+          <span className="badge badge-ghost font-mono text-xs">
+            {output.length} chars
+          </span>
+        </div>
+        <div className="bg-base-200 border-base-300 min-h-[64px] overflow-auto rounded-xl border p-4">
+          {output.trim() ? (
+            <p className="text-primary font-mono text-lg leading-loose tracking-widest break-all">
+              {output}
+            </p>
+          ) : (
+            <p className="text-base-content/20 text-sm">
+              Leet output will appear here…
+            </p>
+          )}
+        </div>
+      </div>
+
+      <div className="flex flex-wrap gap-2">
+        <button
+          className={`btn btn-sm ${copied ? 'btn-success' : 'btn-primary'}`}
+          onClick={copy}
+          disabled={!output.trim()}>
+          {copied ? '✓ Copied' : 'Copy'}
+        </button>
+        {uniqueChars.length > 0 && (
+          <button
+            className="btn btn-ghost btn-sm border-base-300 ml-auto border"
+            onClick={() => setShowMap((v) => !v)}>
+            {showMap ? '▲ Hide map' : '▼ Char map'}
+          </button>
+        )}
+      </div>
+
+      {showMap && uniqueChars.length > 0 && (
+        <div className="border-base-300 overflow-hidden rounded-xl border">
+          <table className="table-sm table w-full text-sm">
+            <thead className="bg-base-200">
+              <tr>
+                <th className="text-base-content/40 font-normal">Char</th>
+                <th className="text-base-content/40 font-normal">Leet</th>
+                <th className="text-base-content/40 hidden font-normal sm:table-cell">
+                  Description
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {uniqueChars.map((ch) => {
+                const entry = leet[ch];
+                return (
+                  <tr key={ch} className="border-base-300 border-t">
+                    <td className="font-mono font-normal uppercase">
+                      {ch === ' ' ? '␣' : ch}
+                    </td>
+                    <td className="text-primary font-mono tracking-widest">
+                      {entry.symbol}
+                    </td>
+                    <td className="text-base-content/40 hidden font-mono text-xs sm:table-cell">
+                      {entry.description}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      )}
+    </FullScreen>
+  );
+};
+LeetSpeak.displayName = 'LeetSpeak';
