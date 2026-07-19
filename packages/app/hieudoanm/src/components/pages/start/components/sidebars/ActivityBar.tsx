@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { type FC } from 'react';
 import {
   PiGauge,
@@ -7,6 +8,8 @@ import {
   PiCalendarBlank,
   PiIdentificationCard,
   PiGlobeHemisphereWest,
+  PiHouse,
+  PiInfo,
   PiPackage,
   PiSquaresFour,
   PiGameController,
@@ -48,5 +51,17 @@ export const ActivityBar: FC<ActivityBarProps> = ({ activeTab, onToggle }) => (
       </button>
     ))}
     <div className="flex-1" />
+    <Link
+      href="/"
+      className="btn btn-ghost btn-square btn-sm text-base-content/60"
+      title="Home">
+      <PiHouse className="h-5 w-5" />
+    </Link>
+    <Link
+      href="/version"
+      className="btn btn-ghost btn-square btn-sm text-base-content/60"
+      title="Version">
+      <PiInfo className="h-5 w-5" />
+    </Link>
   </div>
 );

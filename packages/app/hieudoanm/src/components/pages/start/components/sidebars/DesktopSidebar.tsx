@@ -1,6 +1,6 @@
-import dynamic from 'next/dynamic';
 import { getTimeInZone, timezones } from '@hieudoanm.github.io/data/timezones';
-import { FC, useCallback, useEffect, useMemo, useState } from 'react';
+import dynamic from 'next/dynamic';
+import { FC, useCallback, useEffect, useState } from 'react';
 
 import { Tool } from '@hieudoanm.github.io/components/pages/start/components/cards/ToolCard';
 
