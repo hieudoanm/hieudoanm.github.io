@@ -1,0 +1,15 @@
+// Place self utilities — Tailwind v3 default scale
+
+$place-selfs: (
+  ('auto', auto),
+  ('start', start),
+  ('end', end),
+  ('center', center),
+  ('stretch', stretch)
+);
+
+@each $name, $value in $place-selfs {
+  .place-self-#{$name} {
+    place-self: $value;
+  }
+}

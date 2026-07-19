@@ -1,0 +1,27 @@
+id,name,number,role,bench
+marc,Marc-André ter Stegen,1,GK,false
+dani,Dani Alves,22,DEF,false
+pique,Gerard Piqué,3,DEF,false
+javier,Javier Mascherano,14,DEF,false
+jordi,Jordi Alba,18,DEF,false
+sergio,Sergio Busquets,5,MID,false
+ivan,Ivan Rakitić,4,MID,false
+andres,Andrés Iniesta,8,MID,false
+leo,Lionel Messi,10,FWD,false
+luis,Luis Suárez,9,FWD,false
+neymar,Neymar,11,FWD,false
+bravo,Claudio Bravo,13,GK,true
+masip,Jordi Masip,25,GK,true
+mathieu,Jérémy Mathieu,24,DEF,true
+vermaelen,Thomas Vermaelen,23,DEF,true
+adriano,Adriano,21,DEF,true
+bartra,Marc Bartra,15,DEF,true
+douglas,Douglas,2,DEF,true
+xavi,Xavi,6,MID,true
+sergiroberto,Sergi Roberto,20,MID,true
+rafinha,Rafinha,12,MID,true
+halilovic,Alen Halilović,30,MID,true
+pedro,Pedro,7,FWD,true
+munir,Munir El Haddadi,31,FWD,true
+sandro,Sandro Ramírez,19,FWD,true
+deulofeu,Gerard Deulofeu,16,FWD,true

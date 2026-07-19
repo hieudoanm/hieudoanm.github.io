@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "americas-olmec-1500",
+    "title": "Olmec Civilization Emerges",
+    "year": -1500,
+    "description": "The Olmec built the region's first great civilization.",
+    "category": "culture",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-san-lorenzo-1200",
+    "title": "San Lorenzo Flourishes",
+    "year": -1200,
+    "description": "The Olmec centre of San Lorenzo rose on the Gulf Coast.",
+    "category": "culture",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-la-venta-900",
+    "title": "La Venta Colossal Heads",
+    "year": -900,
+    "description": "The Olmec carved giant stone heads at La Venta.",
+    "category": "culture",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-zapotec-500",
+    "title": "Zapotecs Build Monte Albán",
+    "year": -500,
+    "description": "The Zapotecs founded the hilltop city of Monte Albán.",
+    "category": "culture",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-teotihuacan-founded-300",
+    "title": "Teotihuacan Founded",
+    "year": -300,
+    "description": "The great city of Teotihuacan began to grow.",
+    "category": "culture",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-maya-writing-250",
+    "title": "Maya Writing Flourishes",
+    "year": -250,
+    "description": "The Maya developed a full writing system.",
+    "category": "culture",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-teotihuacan-peak-300",
+    "title": "Teotihuacan Reaches Its Peak",
+    "year": 300,
+    "description": "Teotihuacan became one of the world's largest cities.",
+    "category": "culture",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-cacaxtla-600",
+    "title": "Cacaxtla Murals Painted",
+    "year": 600,
+    "description": "Warriors and deities cover the murals at Cacaxtla.",
+    "category": "culture",
+    "region": "americas",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-teotihuacan-falls-650",
+    "title": "Teotihuacan Declines",
+    "year": 650,
+    "description": "The great city was burned and abandoned.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-toltec-tula-900",
+    "title": "Toltecs Found Tula",
+    "year": 900,
+    "description": "The Toltecs built their capital at Tula.",
+    "category": "culture",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-chichen-itza-987",
+    "title": "Chichén Itzá Rises",
+    "year": 987,
+    "description": "Toltec warriors made Chichén Itzá a regional power.",
+    "category": "culture",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-aztecs-arrive-1250",
+    "title": "Aztecs Arrive in the Valley",
+    "year": 1250,
+    "description": "The Mexica migrated into the Valley of Mexico.",
+    "category": "culture",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-tenochtitlan-1325",
+    "title": "Tenochtitlan Founded",
+    "year": 1325,
+    "description": "The Aztecs built their capital on an island.",
+    "category": "culture",
+    "region": "americas",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-triple-alliance-1428",
+    "title": "Aztec Triple Alliance",
+    "year": 1428,
+    "description": "Itzcoatl forged the Aztec Triple Alliance.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-moctezuma-i-1440",
+    "title": "Moctezuma I Rules",
+    "year": 1440,
+    "description": "Moctezuma I expanded the Aztec empire.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-great-famine-1454",
+    "title": "Great Famine",
+    "year": 1454,
+    "description": "A famine struck the Aztec capital.",
+    "category": "culture",
+    "region": "americas",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-templo-mayor-1487",
+    "title": "Templo Mayor Dedicated",
+    "year": 1487,
+    "description": "The Aztecs enlarged the great temple at Tenochtitlan.",
+    "category": "culture",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-moctezuma-ii-1502",
+    "title": "Moctezuma II Takes Power",
+    "year": 1502,
+    "description": "Moctezuma II became emperor of the Aztecs.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-cortes-arrives-1519",
+    "title": "Cortés Lands in Mexico",
+    "year": 1519,
+    "description": "Hernán Cortés landed on the Gulf coast.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-noche-triste-1520",
+    "title": "La Noche Triste",
+    "year": 1520,
+    "description": "Aztec warriors drove the Spanish from Tenochtitlan.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-tenochtitlan-falls-1521",
+    "title": "Tenochtitlan Falls",
+    "year": 1521,
+    "description": "Cortés conquered the Aztec capital.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-cortes-governor-1522",
+    "title": "Cortés Named Governor",
+    "year": 1522,
+    "description": "Cortés received title to the conquered lands.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-guadalupe-1531",
+    "title": "Virgin of Guadalupe Appears",
+    "year": 1531,
+    "description": "The Virgin reportedly appeared to Juan Diego.",
+    "category": "culture",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-new-spain-1535",
+    "title": "Viceroyalty of New Spain",
+    "year": 1535,
+    "description": "Spain organised Mexico as a viceroyalty.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-unam-founded-1551",
+    "title": "UNAM Founded",
+    "year": 1551,
+    "description": "The Royal and Pontifical University opened in Mexico City.",
+    "category": "science",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-inquisition-1571",
+    "title": "Inquisition Reaches Mexico",
+    "year": 1571,
+    "description": "The Holy Office began operations in New Spain.",
+    "category": "culture",
+    "region": "americas",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-mexico-city-flood-1629",
+    "title": "Mexico City Floods",
+    "year": 1629,
+    "description": "A great flood drowned much of the capital.",
+    "category": "culture",
+    "region": "americas",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-corn-riot-1692",
+    "title": "Mexico City Corn Riot",
+    "year": 1692,
+    "description": "Hungry crowds rioted in the capital.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-calendar-stone-1790",
+    "title": "Aztec Calendar Stone Found",
+    "year": 1790,
+    "description": "Workers unearthed the great Sun Stone in Mexico City.",
+    "category": "culture",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-grito-de-dolores-1810",
+    "title": "Grito de Dolores",
+    "year": 1810,
+    "description": "Hidalgo launched the war for independence.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-hidalgo-executed-1811",
+    "title": "Hidalgo Executed",
+    "year": 1811,
+    "description": "Rebel priest Miguel Hidalgo was captured and shot.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-morelos-congress-1813",
+    "title": "Morelos Holds Congress",
+    "year": 1813,
+    "description": "José María Morelos convened the Congress of Chilpancingo.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-morelos-executed-1815",
+    "title": "Morelos Executed",
+    "year": 1815,
+    "description": "Rebel leader José María Morelos was shot.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-independence-1821",
+    "title": "Mexican Independence",
+    "year": 1821,
+    "description": "Iturbide entered Mexico City to end Spanish rule.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-iturbide-emperor-1822",
+    "title": "Iturbide Becomes Emperor",
+    "year": 1822,
+    "description": "Agustín de Iturbide ruled Mexico as emperor.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-federal-republic-1824",
+    "title": "Federal Republic Declared",
+    "year": 1824,
+    "description": "Mexico adopted a federal constitution.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-guadalupe-victoria-1824",
+    "title": "Guadalupe Victoria Elected",
+    "year": 1824,
+    "description": "Guadalupe Victoria became the first president.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-spanish-reconquest-1829",
+    "title": "Spain Tries to Reconquer",
+    "year": 1829,
+    "description": "Spain sent a force to reclaim Mexico.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-santa-anna-1833",
+    "title": "Santa Anna Takes Power",
+    "year": 1833,
+    "description": "Antonio López de Santa Anna dominated Mexican politics.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-alamo-1836",
+    "title": "Battle of the Alamo",
+    "year": 1836,
+    "description": "Mexican troops stormed the Alamo in Texas.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-san-jacinto-1836",
+    "title": "San Jacinto Battle",
+    "year": 1836,
+    "description": "Texans defeated Santa Anna and won independence.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-texas-annexed-1845",
+    "title": "Texas Annexed by the US",
+    "year": 1845,
+    "description": "The United States annexed the Republic of Texas.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-mexican-american-war-1846",
+    "title": "Mexican-American War Begins",
+    "year": 1846,
+    "description": "The United States invaded Mexico.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-chapultepec-1847",
+    "title": "Battle of Chapultepec",
+    "year": 1847,
+    "description": "US forces stormed the castle at Chapultepec.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-guadalupe-hidalgo-1848",
+    "title": "Treaty of Guadalupe Hidalgo",
+    "year": 1848,
+    "description": "Mexico lost half its territory to the United States.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-plan-de-ayutla-1854",
+    "title": "Plan de Ayutla",
+    "year": 1854,
+    "description": "Liberals revolted against Santa Anna's dictatorship.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-1857-constitution-1857",
+    "title": "Constitution of 1857",
+    "year": 1857,
+    "description": "Mexico adopted a liberal constitution.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-la-reforma-1858",
+    "title": "War of Reform Begins",
+    "year": 1858,
+    "description": "Liberals and conservatives fought the Reform War.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-reform-laws-1859",
+    "title": "Reform Laws Issued",
+    "year": 1859,
+    "description": "Juárez issued laws separating church and state.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-juarez-president-1861",
+    "title": "Juárez Becomes President",
+    "year": 1861,
+    "description": "Benito Juárez took office as president.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-puebla-1862",
+    "title": "Battle of Puebla",
+    "year": 1862,
+    "description": "Mexicans defeated the French at Puebla.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-french-mexico-city-1863",
+    "title": "French Take Mexico City",
+    "year": 1863,
+    "description": "French forces occupied Mexico City.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-french-empire-1864",
+    "title": "Maximilian Becomes Emperor",
+    "year": 1864,
+    "description": "France placed Maximilian on the Mexican throne.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-maximilian-executed-1867",
+    "title": "Maximilian Executed",
+    "year": 1867,
+    "description": "Republican forces shot Emperor Maximilian.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-porfiriato-1876",
+    "title": "Porfirio Díaz Takes Power",
+    "year": 1876,
+    "description": "Porfirio Díaz seized control of Mexico.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-cananea-strike-1906",
+    "title": "Cananea Strike",
+    "year": 1906,
+    "description": "Miners at Cananea demanded better conditions.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-revolution-1910",
+    "title": "Mexican Revolution Begins",
+    "year": 1910,
+    "description": "Madero called for revolt against Díaz.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-diaz-reelection-1910",
+    "title": "Díaz Re-Elected",
+    "year": 1910,
+    "description": "The long-time ruler won a rigged election.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-corridos-1910",
+    "title": "Corridos Spread in the Revolution",
+    "year": 1910,
+    "description": "Revolutionary corridos told stories in song.",
+    "category": "music",
+    "region": "americas",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-madero-president-1911",
+    "title": "Madero Becomes President",
+    "year": 1911,
+    "description": "Francisco Madero replaced the dictator Díaz.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-decena-tragica-1913",
+    "title": "Decena Trágica",
+    "year": 1913,
+    "description": "Ten bloody days toppled President Madero.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-veracruz-1914",
+    "title": "US Occupies Veracruz",
+    "year": 1914,
+    "description": "American troops seized the port of Veracruz.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-constitution-1917",
+    "title": "Constitution of 1917",
+    "year": 1917,
+    "description": "The revolution produced a new constitution.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-zapata-killed-1919",
+    "title": "Zapata Assassinated",
+    "year": 1919,
+    "description": "Revolutionary leader Emiliano Zapata was killed.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-obregon-president-1920",
+    "title": "Obregón Becomes President",
+    "year": 1920,
+    "description": "Álvaro Obregón took the presidency.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-villa-killed-1923",
+    "title": "Villa Assassinated",
+    "year": 1923,
+    "description": "Pancho Villa was murdered in Chihuahua.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-cristero-war-1926",
+    "title": "Cristero War Begins",
+    "year": 1926,
+    "description": "Catholics rebelled against anti-church laws.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-pnr-founded-1929",
+    "title": "PNR Party Founded",
+    "year": 1929,
+    "description": "The ruling party was founded as the PNR.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-mariachi-music-1930",
+    "title": "Mariachi Music Booms",
+    "year": 1930,
+    "description": "Mariachi bands gained a mass audience.",
+    "category": "music",
+    "region": "americas",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-cardenas-president-1934",
+    "title": "Cárdenas Becomes President",
+    "year": 1934,
+    "description": "Lázaro Cárdenas led a social reform agenda.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-oil-expropriation-1938",
+    "title": "Oil Expropriation",
+    "year": 1938,
+    "description": "Cárdenas nationalised the foreign oil industry.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-wwii-entry-1942",
+    "title": "Mexico Enters WWII",
+    "year": 1942,
+    "description": "Mexico declared war on the Axis powers.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-pri-founded-1946",
+    "title": "PRI Party Formed",
+    "year": 1946,
+    "description": "The ruling party became the PRI.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-maria-candelaria-1946",
+    "title": "María Candelaria Wins at Cannes",
+    "year": 1946,
+    "description": "The film took the top prize at Cannes.",
+    "category": "film",
+    "region": "americas",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-tepexpan-man-1947",
+    "title": "Tepexpan Man Found",
+    "year": 1947,
+    "description": "Archaeologists uncovered an ancient skeleton near Mexico City.",
+    "category": "science",
+    "region": "americas",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-pill-developed-1951",
+    "title": "Contraceptive Pill Developed",
+    "year": 1951,
+    "description": "Chemists in Mexico City synthesised the pill.",
+    "category": "medicine",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-tlatelolco-massacre-1968",
+    "title": "Tlatelolco Massacre",
+    "year": 1968,
+    "description": "Troops fired on students at Tlatelolco.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-1968-olympics-1968",
+    "title": "Mexico City Olympics",
+    "year": 1968,
+    "description": "Mexico hosted the Summer Olympic Games.",
+    "category": "sports",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-1970-world-cup-1970",
+    "title": "World Cup Hosted",
+    "year": 1970,
+    "description": "Mexico hosted the FIFA World Cup.",
+    "category": "sports",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-corpus-christi-1971",
+    "title": "Corpus Christi Massacre",
+    "year": 1971,
+    "description": "Paramilitaries attacked student marchers.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-oil-boom-1978",
+    "title": "Oil Boom",
+    "year": 1978,
+    "description": "Huge oil reserves boosted the economy.",
+    "category": "technology",
+    "region": "americas",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-debt-crisis-1982",
+    "title": "Debt Crisis",
+    "year": 1982,
+    "description": "Mexico defaulted on its foreign debt.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-1985-earthquake-1985",
+    "title": "Mexico City Earthquake",
+    "year": 1985,
+    "description": "A huge quake devastated the capital.",
+    "category": "culture",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-neri-vela-1985",
+    "title": "Neri Vela Flies to Space",
+    "year": 1985,
+    "description": "Rodolfo Neri Vela became Mexico's first astronaut.",
+    "category": "space",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-1986-world-cup-1986",
+    "title": "World Cup Hosted Again",
+    "year": 1986,
+    "description": "Mexico hosted the 1986 FIFA World Cup.",
+    "category": "sports",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-1988-election-1988",
+    "title": "Contested 1988 Election",
+    "year": 1988,
+    "description": "Allegations of fraud marred the presidential vote.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-nafta-1994",
+    "title": "NAFTA Takes Effect",
+    "year": 1994,
+    "description": "Mexico joined the North American Free Trade Agreement.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-zapatista-1994",
+    "title": "Zapatista Uprising",
+    "year": 1994,
+    "description": "Rebels rose up in Chiapas on New Year's Day.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-colosio-killed-1994",
+    "title": "Colosio Assassinated",
+    "year": 1994,
+    "description": "Presidential candidate Luis Donaldo Colosio was shot.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-peso-crisis-1995",
+    "title": "Peso Crisis",
+    "year": 1995,
+    "description": "The peso collapsed after the December devaluation.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-fox-president-2000",
+    "title": "Fox Wins the Presidency",
+    "year": 2000,
+    "description": "Vicente Fox ended seventy-one years of PRI rule.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-drug-war-2006",
+    "title": "Drug War Intensifies",
+    "year": 2006,
+    "description": "President Calderón deployed troops against cartels.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-swine-flu-2009",
+    "title": "Swine Flu Outbreak",
+    "year": 2009,
+    "description": "Mexico City became the epicentre of the H1N1 outbreak.",
+    "category": "medicine",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-pena-nieto-2012",
+    "title": "Peña Nieto Becomes President",
+    "year": 2012,
+    "description": "Enrique Peña Nieto returned the PRI to power.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-ayotzinapa-2014",
+    "title": "Ayotzinapa Disappearances",
+    "year": 2014,
+    "description": "Forty-three students vanished in Iguala.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-2017-earthquake-2017",
+    "title": "2017 Earthquake",
+    "year": 2017,
+    "description": "A powerful quake struck central Mexico.",
+    "category": "culture",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-amlo-president-2018",
+    "title": "AMLO Becomes President",
+    "year": 2018,
+    "description": "Andrés Manuel López Obrador took office.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-roma-oscars-2019",
+    "title": "Roma Wins Three Oscars",
+    "year": 2019,
+    "description": "Alfonso Cuarón's Roma earned three Academy Awards.",
+    "category": "film",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-covid-pandemic-2020",
+    "title": "COVID-19 Pandemic",
+    "year": 2020,
+    "description": "Mexico faced severe coronavirus outbreaks.",
+    "category": "medicine",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-sheinbaum-president-2024",
+    "title": "Sheinbaum Becomes President",
+    "year": 2024,
+    "description": "Claudia Sheinbaum became the first female president.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  }
+]

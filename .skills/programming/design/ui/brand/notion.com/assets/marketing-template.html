@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>Product landing page</title>
+    <link rel="stylesheet" href="../references/tokens.css" />
+    <style>
+      body { margin: 0; background: var(--m-bg); color: var(--m-ink); font: 1rem/1.5 var(--m-font); }
+      a { color: var(--m-blue); }
+      .wrap { max-width: 1200px; margin-inline: auto; padding-inline: clamp(1rem, 5vw, 4rem); }
+      header, nav, .actions { display: flex; align-items: center; gap: 1rem; }
+      header { justify-content: space-between; min-height: 4rem; border-bottom: 1px solid var(--m-border); }
+      nav a { color: inherit; text-decoration: none; }
+      .button { display: inline-block; padding: .7rem 1rem; border-radius: 10px; background: var(--m-blue); color: #fff; text-decoration: none; }
+      .hero { padding-block: clamp(4rem, 12vw, 8rem); max-width: 58rem; }
+      h1 { max-width: 12ch; margin: 0; font-size: clamp(3rem, 8vw, 6rem); line-height: .98; letter-spacing: -.045em; }
+      .hero p { max-width: 55ch; color: var(--m-muted); font-size: 1.25rem; }
+      .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: 1rem; padding-block: 3rem; }
+      .card { min-height: 12rem; padding: 1.5rem; border-radius: 12px; background: var(--m-mint); }
+      .card:nth-child(2) { background: var(--m-lavender); }
+      .card:nth-child(3) { background: var(--m-peach); }
+      @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; } }
+    </style>
+  </head>
+  <body>
+    <header class="wrap">
+      <a href="#" aria-label="Product home">Product</a>
+      <nav aria-label="Main navigation">
+        <a href="#features">Product</a><a href="#resources">Resources</a><a href="#pricing">Pricing</a>
+      </nav>
+      <a class="button" href="#signup">Get started</a>
+    </header>
+    <main class="wrap">
+      <section class="hero" aria-labelledby="hero-title">
+        <h1 id="hero-title">A clear promise about your product</h1>
+        <p>Explain the user benefit in one concise sentence. Replace this sample content with approved copy.</p>
+        <div class="actions"><a class="button" href="#signup">Start free</a><a href="#features">Explore features</a></div>
+      </section>
+      <section id="features" class="features" aria-label="Product benefits">
+        <article class="card"><h2>Capture</h2><p>Describe a concrete customer benefit.</p></article>
+        <article class="card"><h2>Find</h2><p>Show how the product reduces effort.</p></article>
+        <article class="card"><h2>Automate</h2><p>Explain the outcome without unsupported claims.</p></article>
+      </section>
+      <section id="signup"><h2>Make the next step clear</h2><a class="button" href="#">Get started</a></section>
+    </main>
+  </body>
+</html>

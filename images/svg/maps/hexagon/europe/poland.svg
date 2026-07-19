@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 314.85 241.40" width="314.85" height="241.40" role="img" aria-labelledby="poland-title poland-desc">
+  <title id="poland-title">Poland hex map</title>
+  <desc id="poland-desc">Hexagon map with 16 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.89; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 14.28 10.20; }
+    .label { fill: #52525b; font: 600 11.56px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="LU">
+    <title>Lublin</title>
+    <polygon class="tile" points="275.20,61.20 304.65,78.20 304.65,112.20 275.20,129.20 245.76,112.20 245.76,78.20" aria-label="Lublin"/>
+    <text class="label" x="275.20" y="95.20">LU</text>
+  </g>
+  <g class="state" data-state="PD">
+    <title>Podlachian</title>
+    <polygon class="tile" points="245.76,10.20 275.20,27.20 275.20,61.20 245.76,78.20 216.31,61.20 216.31,27.20" aria-label="Podlachian"/>
+    <text class="label" x="245.76" y="44.20">PD</text>
+  </g>
+  <g class="state" data-state="SK">
+    <title>Świętokrzyskie</title>
+    <polygon class="tile" points="245.76,112.20 275.20,129.20 275.20,163.20 245.76,180.20 216.31,163.20 216.31,129.20" aria-label="Świętokrzyskie"/>
+    <text class="label" x="245.76" y="146.20">SK</text>
+  </g>
+  <g class="state" data-state="MZ">
+    <title>Masovian</title>
+    <polygon class="tile" points="216.31,61.20 245.76,78.20 245.76,112.20 216.31,129.20 186.87,112.20 186.87,78.20" aria-label="Masovian"/>
+    <text class="label" x="216.31" y="95.20">MZ</text>
+  </g>
+  <g class="state" data-state="PK">
+    <title>Subcarpathian</title>
+    <polygon class="tile" points="216.31,163.20 245.76,180.20 245.76,214.20 216.31,231.20 186.87,214.20 186.87,180.20" aria-label="Subcarpathian"/>
+    <text class="label" x="216.31" y="197.20">PK</text>
+  </g>
+  <g class="state" data-state="WN">
+    <title>Warmian-Masurian</title>
+    <polygon class="tile" points="186.87,10.20 216.31,27.20 216.31,61.20 186.87,78.20 157.42,61.20 157.42,27.20" aria-label="Warmian-Masurian"/>
+    <text class="label" x="186.87" y="44.20">WN</text>
+  </g>
+  <g class="state" data-state="LD">
+    <title>Łódź</title>
+    <polygon class="tile" points="186.87,112.20 216.31,129.20 216.31,163.20 186.87,180.20 157.42,163.20 157.42,129.20" aria-label="Łódź"/>
+    <text class="label" x="186.87" y="146.20">LD</text>
+  </g>
+  <g class="state" data-state="KP">
+    <title>Kuyavian-Pomeranian</title>
+    <polygon class="tile" points="157.42,61.20 186.87,78.20 186.87,112.20 157.42,129.20 127.98,112.20 127.98,78.20" aria-label="Kuyavian-Pomeranian"/>
+    <text class="label" x="157.42" y="95.20">KP</text>
+  </g>
+  <g class="state" data-state="MA">
+    <title>Lesser Poland</title>
+    <polygon class="tile" points="157.42,163.20 186.87,180.20 186.87,214.20 157.42,231.20 127.98,214.20 127.98,180.20" aria-label="Lesser Poland"/>
+    <text class="label" x="157.42" y="197.20">MA</text>
+  </g>
+  <g class="state" data-state="PM">
+    <title>Pomeranian</title>
+    <polygon class="tile" points="127.98,10.20 157.42,27.20 157.42,61.20 127.98,78.20 98.53,61.20 98.53,27.20" aria-label="Pomeranian"/>
+    <text class="label" x="127.98" y="44.20">PM</text>
+  </g>
+  <g class="state" data-state="OP">
+    <title>Opole</title>
+    <polygon class="tile" points="127.98,112.20 157.42,129.20 157.42,163.20 127.98,180.20 98.53,163.20 98.53,129.20" aria-label="Opole"/>
+    <text class="label" x="127.98" y="146.20">OP</text>
+  </g>
+  <g class="state" data-state="WP">
+    <title>Greater Poland</title>
+    <polygon class="tile" points="98.53,61.20 127.98,78.20 127.98,112.20 98.53,129.20 69.09,112.20 69.09,78.20" aria-label="Greater Poland"/>
+    <text class="label" x="98.53" y="95.20">WP</text>
+  </g>
+  <g class="state" data-state="SL">
+    <title>Silesian</title>
+    <polygon class="tile" points="98.53,163.20 127.98,180.20 127.98,214.20 98.53,231.20 69.09,214.20 69.09,180.20" aria-label="Silesian"/>
+    <text class="label" x="98.53" y="197.20">SL</text>
+  </g>
+  <g class="state" data-state="ZP">
+    <title>West Pomeranian</title>
+    <polygon class="tile" points="69.09,10.20 98.53,27.20 98.53,61.20 69.09,78.20 39.64,61.20 39.64,27.20" aria-label="West Pomeranian"/>
+    <text class="label" x="69.09" y="44.20">ZP</text>
+  </g>
+  <g class="state" data-state="DS">
+    <title>Lower Silesian</title>
+    <polygon class="tile" points="69.09,112.20 98.53,129.20 98.53,163.20 69.09,180.20 39.64,163.20 39.64,129.20" aria-label="Lower Silesian"/>
+    <text class="label" x="69.09" y="146.20">DS</text>
+  </g>
+  <g class="state" data-state="LB">
+    <title>Lubusz</title>
+    <polygon class="tile" points="39.64,61.20 69.09,78.20 69.09,112.20 39.64,129.20 10.20,112.20 10.20,78.20" aria-label="Lubusz"/>
+    <text class="label" x="39.64" y="95.20">LB</text>
+  </g>
+</svg>

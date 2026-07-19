@@ -1,0 +1,47 @@
+erDiagram
+
+    users {
+        PK INTEGER id
+        UK NOT NULL VARCHAR(255) email
+        NOT NULL VARCHAR(100) name
+        NOT NULL VARCHAR(255) password_hash
+        NOT NULL TIMESTAMP created_at
+        NOT NULL TIMESTAMP updated_at
+    }
+
+    posts {
+        PK INTEGER id
+        NOT NULL INTEGER user_id
+        NOT NULL VARCHAR(200) title
+        TEXT content
+        NOT NULL VARCHAR(20) status
+        TIMESTAMP published_at
+        NOT NULL TIMESTAMP created_at
+        NOT NULL TIMESTAMP updated_at
+    }
+
+    categories {
+        PK INTEGER id
+        UK NOT NULL VARCHAR(50) name
+        UK NOT NULL VARCHAR(50) slug
+        TEXT description
+    }
+
+    post_categories {
+        NOT NULL INTEGER post_id
+        NOT NULL INTEGER category_id
+    }
+
+    comments {
+        PK INTEGER id
+        NOT NULL INTEGER post_id
+        NOT NULL INTEGER user_id
+        NOT NULL TEXT content
+        NOT NULL TIMESTAMP created_at
+    }
+
+    users ||--o{ posts : "user_posts"
+    posts ||--o{ post_categories : "post_categories_post"
+    categories ||--o{ post_categories : "post_categories_category"
+    posts ||--o{ comments : "post_comments"
+    users ||--o{ comments : "user_comments"

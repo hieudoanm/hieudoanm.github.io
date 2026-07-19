@@ -1,0 +1,15 @@
+// Mask clip utilities — Tailwind v4 default scale
+
+$mask-clips: (
+  ('border', border-box),
+  ('padding', padding-box),
+  ('content', content-box),
+  ('text', text)
+);
+
+@each $name, $value in $mask-clips {
+  .mask-clip-#{$name} {
+    -webkit-mask-clip: $value;
+    mask-clip: $value;
+  }
+}

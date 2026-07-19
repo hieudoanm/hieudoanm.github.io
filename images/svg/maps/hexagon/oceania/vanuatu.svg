@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 314.85 292.40" width="314.85" height="292.40" role="img" aria-labelledby="vanuatu-title vanuatu-desc">
+  <title id="vanuatu-title">Vanuatu hex map</title>
+  <desc id="vanuatu-desc">Hexagon map with 6 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.89; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 14.28 10.20; }
+    .label { fill: #52525b; font: 600 11.56px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="PAM">
+    <title>Penama</title>
+    <polygon class="tile inset" points="275.20,112.20 304.65,129.20 304.65,163.20 275.20,180.20 245.76,163.20 245.76,129.20" aria-label="Penama"/>
+    <text class="label" x="275.20" y="146.20">PAM</text>
+  </g>
+  <g class="state" data-state="MAP">
+    <title>Malampa</title>
+    <polygon class="tile inset" points="216.31,10.20 245.76,27.20 245.76,61.20 216.31,78.20 186.87,61.20 186.87,27.20" aria-label="Malampa"/>
+    <text class="label" x="216.31" y="44.20">MAP</text>
+  </g>
+  <g class="state" data-state="TAE">
+    <title>Tafea</title>
+    <polygon class="tile" points="157.42,112.20 186.87,129.20 186.87,163.20 157.42,180.20 127.98,163.20 127.98,129.20" aria-label="Tafea"/>
+    <text class="label" x="157.42" y="146.20">TAE</text>
+  </g>
+  <g class="state" data-state="SEE">
+    <title>Shefa</title>
+    <polygon class="tile inset" points="98.53,10.20 127.98,27.20 127.98,61.20 98.53,78.20 69.09,61.20 69.09,27.20" aria-label="Shefa"/>
+    <text class="label" x="98.53" y="44.20">SEE</text>
+  </g>
+  <g class="state" data-state="TOB">
+    <title>Torba</title>
+    <polygon class="tile inset" points="98.53,214.20 127.98,231.20 127.98,265.20 98.53,282.20 69.09,265.20 69.09,231.20" aria-label="Torba"/>
+    <text class="label" x="98.53" y="248.20">TOB</text>
+  </g>
+  <g class="state" data-state="SAM">
+    <title>Sanma</title>
+    <polygon class="tile inset" points="39.64,112.20 69.09,129.20 69.09,163.20 39.64,180.20 10.20,163.20 10.20,129.20" aria-label="Sanma"/>
+    <text class="label" x="39.64" y="146.20">SAM</text>
+  </g>
+</svg>

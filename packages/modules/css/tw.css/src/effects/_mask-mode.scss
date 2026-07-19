@@ -1,0 +1,14 @@
+// Mask mode utilities — Tailwind v4 default scale
+
+$mask-modes: (
+  ('alpha', alpha),
+  ('luminance', luminance),
+  ('match-source', match-source)
+);
+
+@each $name, $value in $mask-modes {
+  .mask-mode-#{$name} {
+    -webkit-mask-mode: $value;
+    mask-mode: $value;
+  }
+}

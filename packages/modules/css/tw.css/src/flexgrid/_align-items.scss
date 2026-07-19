@@ -1,0 +1,15 @@
+// Align items utilities — Tailwind v3 default scale
+
+$align-items: (
+  ('start', flex-start),
+  ('end', flex-end),
+  ('center', center),
+  ('baseline', baseline),
+  ('stretch', stretch)
+);
+
+@each $name, $value in $align-items {
+  .items-#{$name} {
+    align-items: $value;
+  }
+}

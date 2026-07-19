@@ -1,0 +1,13 @@
+// Scrollbar gutter utilities — Tailwind v4 default scale
+
+$scrollbar-gutters: (
+  ('auto', auto),
+  ('stable', stable),
+  ('stable-both-edges', 'stable both-edges')
+);
+
+@each $name, $value in $scrollbar-gutters {
+  .scrollbar-gutter-#{$name} {
+    scrollbar-gutter: #{$value};
+  }
+}

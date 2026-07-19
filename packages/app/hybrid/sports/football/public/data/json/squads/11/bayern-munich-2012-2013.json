@@ -1,0 +1,145 @@
+{
+  "name": "Bayern Munich 2012-2013",
+  "formationId": "433",
+  "players": [
+    { "id": "neuer", "name": "Manuel Neuer", "number": 1, "role": "GK" },
+    { "id": "lahm", "name": "Philipp Lahm", "number": 21, "role": "DEF" },
+    { "id": "boateng", "name": "Jérôme Boateng", "number": 17, "role": "DEF" },
+    { "id": "dante", "name": "Dante", "number": 4, "role": "DEF" },
+    { "id": "alaba", "name": "David Alaba", "number": 27, "role": "DEF" },
+    {
+      "id": "bastian",
+      "name": "Bastian Schweinsteiger",
+      "number": 31,
+      "role": "MID"
+    },
+    { "id": "javi", "name": "Javi Martínez", "number": 8, "role": "MID" },
+    { "id": "muller", "name": "Thomas Müller", "number": 25, "role": "MID" },
+    { "id": "ribery", "name": "Franck Ribéry", "number": 7, "role": "FWD" },
+    {
+      "id": "mandzukic",
+      "name": "Mario Mandžukić",
+      "number": 9,
+      "role": "FWD"
+    },
+    { "id": "robben", "name": "Arjen Robben", "number": 10, "role": "FWD" },
+    {
+      "id": "starke",
+      "name": "Tom Starke",
+      "number": 22,
+      "role": "GK",
+      "bench": true
+    },
+    {
+      "id": "raeder",
+      "name": "Lukas Raeder",
+      "number": 24,
+      "role": "GK",
+      "bench": true
+    },
+    {
+      "id": "rafinha",
+      "name": "Rafinha",
+      "number": 13,
+      "role": "DEF",
+      "bench": true
+    },
+    {
+      "id": "vanbuyten",
+      "name": "Daniel Van Buyten",
+      "number": 5,
+      "role": "DEF",
+      "bench": true
+    },
+    {
+      "id": "contento",
+      "name": "Diego Contento",
+      "number": 26,
+      "role": "DEF",
+      "bench": true
+    },
+    {
+      "id": "badstuber",
+      "name": "Holger Badstuber",
+      "number": 28,
+      "role": "DEF",
+      "bench": true
+    },
+    {
+      "id": "gustavo",
+      "name": "Luiz Gustavo",
+      "number": 30,
+      "role": "MID",
+      "bench": true
+    },
+    {
+      "id": "kroos",
+      "name": "Toni Kroos",
+      "number": 39,
+      "role": "MID",
+      "bench": true
+    },
+    {
+      "id": "shaqiri",
+      "name": "Xherdan Shaqiri",
+      "number": 11,
+      "role": "MID",
+      "bench": true
+    },
+    {
+      "id": "tymoshchuk",
+      "name": "Anatoliy Tymoshchuk",
+      "number": 44,
+      "role": "MID",
+      "bench": true
+    },
+    {
+      "id": "can",
+      "name": "Emre Can",
+      "number": 36,
+      "role": "MID",
+      "bench": true
+    },
+    {
+      "id": "pizarro",
+      "name": "Claudio Pizarro",
+      "number": 14,
+      "role": "FWD",
+      "bench": true
+    },
+    {
+      "id": "gomez",
+      "name": "Mario Gómez",
+      "number": 33,
+      "role": "FWD",
+      "bench": true
+    },
+    {
+      "id": "kirchhoff",
+      "name": "Jan Kirchhoff",
+      "number": 35,
+      "role": "DEF",
+      "bench": true
+    },
+    {
+      "id": "weihrauch",
+      "name": "Benedikt Weihrauch",
+      "number": 32,
+      "role": "FWD",
+      "bench": true
+    }
+  ],
+  "assignments": {
+    "433-0-0": ["neuer"],
+    "433-1-1": ["lahm"],
+    "433-1-2": ["boateng"],
+    "433-1-3": ["dante"],
+    "433-1-4": ["alaba"],
+    "433-2-5": ["bastian"],
+    "433-2-6": ["javi"],
+    "433-2-7": ["muller"],
+    "433-3-8": ["ribery"],
+    "433-3-9": ["mandzukic"],
+    "433-3-10": ["robben"]
+  }
+}

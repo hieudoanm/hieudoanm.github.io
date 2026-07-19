@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 344.29 343.40" width="344.29" height="343.40" role="img" aria-labelledby="saint-kitts-and-nevis-title saint-kitts-and-nevis-desc">
+  <title id="saint-kitts-and-nevis-title">Saint Kitts and Nevis hex map</title>
+  <desc id="saint-kitts-and-nevis-desc">Hexagon map with 14 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.89; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 14.28 10.20; }
+    .label { fill: #52525b; font: 600 11.56px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="JF">
+    <title>Saint John Figtree</title>
+    <polygon class="tile inset" points="304.65,163.20 334.09,180.20 334.09,214.20 304.65,231.20 275.20,214.20 275.20,180.20" aria-label="Saint John Figtree"/>
+    <text class="label" x="304.65" y="197.20">JF</text>
+  </g>
+  <g class="state" data-state="JW">
+    <title>Saint James Windward</title>
+    <polygon class="tile inset" points="304.65,61.20 334.09,78.20 334.09,112.20 304.65,129.20 275.20,112.20 275.20,78.20" aria-label="Saint James Windward"/>
+    <text class="label" x="304.65" y="95.20">JW</text>
+  </g>
+  <g class="state" data-state="TL">
+    <title>Saint Thomas Lowland</title>
+    <polygon class="tile inset" points="245.76,265.20 275.20,282.20 275.20,316.20 245.76,333.20 216.31,316.20 216.31,282.20" aria-label="Saint Thomas Lowland"/>
+    <text class="label" x="245.76" y="299.20">TL</text>
+  </g>
+  <g class="state" data-state="PB">
+    <title>Saint Peter Basseterre</title>
+    <polygon class="tile" points="216.31,112.20 245.76,129.20 245.76,163.20 216.31,180.20 186.87,163.20 186.87,129.20" aria-label="Saint Peter Basseterre"/>
+    <text class="label" x="216.31" y="146.20">PB</text>
+  </g>
+  <g class="state" data-state="MC">
+    <title>Saint Mary Cayon</title>
+    <polygon class="tile" points="186.87,61.20 216.31,78.20 216.31,112.20 186.87,129.20 157.42,112.20 157.42,78.20" aria-label="Saint Mary Cayon"/>
+    <text class="label" x="186.87" y="95.20">MC</text>
+  </g>
+  <g class="state" data-state="GB">
+    <title>Saint George Basseterre</title>
+    <polygon class="tile" points="186.87,163.20 216.31,180.20 216.31,214.20 186.87,231.20 157.42,214.20 157.42,180.20" aria-label="Saint George Basseterre"/>
+    <text class="label" x="186.87" y="197.20">GB</text>
+  </g>
+  <g class="state" data-state="JC">
+    <title>Saint John Capesterre</title>
+    <polygon class="tile" points="157.42,10.20 186.87,27.20 186.87,61.20 157.42,78.20 127.98,61.20 127.98,27.20" aria-label="Saint John Capesterre"/>
+    <text class="label" x="157.42" y="44.20">JC</text>
+  </g>
+  <g class="state" data-state="TP">
+    <title>Trinity Palmetto Point</title>
+    <polygon class="tile" points="157.42,112.20 186.87,129.20 186.87,163.20 157.42,180.20 127.98,163.20 127.98,129.20" aria-label="Trinity Palmetto Point"/>
+    <text class="label" x="157.42" y="146.20">TP</text>
+  </g>
+  <g class="state" data-state="CC">
+    <title>Christ Church Nichola Town</title>
+    <polygon class="tile" points="127.98,61.20 157.42,78.20 157.42,112.20 127.98,129.20 98.53,112.20 98.53,78.20" aria-label="Christ Church Nichola Town"/>
+    <text class="label" x="127.98" y="95.20">CC</text>
+  </g>
+  <g class="state" data-state="PL">
+    <title>Saint Paul Charlestown</title>
+    <polygon class="tile inset" points="127.98,265.20 157.42,282.20 157.42,316.20 127.98,333.20 98.53,316.20 98.53,282.20" aria-label="Saint Paul Charlestown"/>
+    <text class="label" x="127.98" y="299.20">PL</text>
+  </g>
+  <g class="state" data-state="PP">
+    <title>Saint Paul Capesterre</title>
+    <polygon class="tile" points="98.53,10.20 127.98,27.20 127.98,61.20 98.53,78.20 69.09,61.20 69.09,27.20" aria-label="Saint Paul Capesterre"/>
+    <text class="label" x="98.53" y="44.20">PP</text>
+  </g>
+  <g class="state" data-state="TM">
+    <title>Saint Thomas Middle Island</title>
+    <polygon class="tile" points="98.53,112.20 127.98,129.20 127.98,163.20 98.53,180.20 69.09,163.20 69.09,129.20" aria-label="Saint Thomas Middle Island"/>
+    <text class="label" x="98.53" y="146.20">TM</text>
+  </g>
+  <g class="state" data-state="AS">
+    <title>Saint Anne Sandy Point</title>
+    <polygon class="tile" points="69.09,61.20 98.53,78.20 98.53,112.20 69.09,129.20 39.64,112.20 39.64,78.20" aria-label="Saint Anne Sandy Point"/>
+    <text class="label" x="69.09" y="95.20">AS</text>
+  </g>
+  <g class="state" data-state="GG">
+    <title>Saint George Gingerland</title>
+    <polygon class="tile inset" points="39.64,214.20 69.09,231.20 69.09,265.20 39.64,282.20 10.20,265.20 10.20,231.20" aria-label="Saint George Gingerland"/>
+    <text class="label" x="39.64" y="248.20">GG</text>
+  </g>
+</svg>

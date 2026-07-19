@@ -1,0 +1,14 @@
+// Grid auto rows utilities — Tailwind v3 default scale
+
+$grid-auto-rows: (
+  ('auto', auto),
+  ('min', min-content),
+  ('max', max-content),
+  ('fr', minmax(0, 1fr))
+);
+
+@each $name, $value in $grid-auto-rows {
+  .auto-rows-#{$name} {
+    grid-auto-rows: #{$value};
+  }
+}

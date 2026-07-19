@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Claude Style Template</title>
+    <style>
+      /* tokens: keep in sync with references/tokens.css */
+      :root {
+        --_brand-clay: 14.8 63.1% 59.6%;
+        --_brand-clay-emphasized: 15.1 54.2% 51.2%;
+        --_gray-0: 0 0% 100%;
+        --_gray-20: 60 7.7% 97.5%;
+        --_gray-40: 60 3.7% 94.7%;
+        --_gray-50: 60 3% 93.5%;
+        --_gray-80: 60 3.8% 89.8%;
+        --_gray-100: 60 3.1% 87.5%;
+        --_gray-200: 60 1.6% 75.3%;
+        --_gray-350: 60 1.4% 57.8%;
+        --_gray-450: 60 1.7% 46.7%;
+        --_gray-700: 60 3.7% 21.2%;
+        --_gray-750: 60 4.8% 16.5%;
+        --_gray-800: 60 6.5% 12.2%;
+        --_gray-810: 60 5.3% 11.2%;
+        --_gray-860: 60 5.6% 7.1%;
+        --_gray-900: 0 0% 4.3%;
+        --_blue-450: 212.8 67.7% 50.2%;
+        --accent-brand: var(--_brand-clay);
+        --accent-main-000: var(--_brand-clay-emphasized);
+        --accent-secondary-100: var(--_blue-450);
+        --bg-000: var(--_gray-0);
+        --bg-100: var(--_gray-20);
+        --bg-200: var(--_gray-40);
+        --bg-300: var(--_gray-50);
+        --bg-400: var(--_gray-80);
+        --border-100: var(--_gray-810);
+        --text-000: var(--_gray-860);
+        --text-200: var(--_gray-700);
+        --text-300: var(--_gray-700);
+        --text-400: var(--_gray-450);
+        --border-alpha: 0.15;
+        --border-alpha-strong: 0.3;
+        --font-serif: Georgia, 'Times New Roman', serif;
+        --font-sans:
+          ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial,
+          sans-serif;
+        --radius-md: 8px;
+        --radius-lg: 12px;
+        --radius-xl: 16px;
+        --radius-pill: 9999px;
+        --container: 1200px;
+        --header-h: 64px;
+        --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --accent-main-000: var(--_brand-clay);
+          --bg-000: var(--_gray-750);
+          --bg-100: var(--_gray-800);
+          --bg-200: var(--_gray-810);
+          --bg-300: var(--_gray-860);
+          --bg-400: var(--_gray-900);
+          --border-100: var(--_gray-100);
+          --text-000: var(--_gray-20);
+          --text-200: var(--_gray-200);
+          --text-300: var(--_gray-200);
+          --text-400: var(--_gray-350);
+        }
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html {
+        color-scheme: light dark;
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: hsl(var(--bg-100));
+        color: hsl(var(--text-200));
+        font-family: var(--font-sans);
+        font-size: 1.0625rem;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: var(--font-serif);
+        font-weight: 400;
+        color: hsl(var(--text-000));
+        line-height: 1.1;
+        letter-spacing: -0.01em;
+      }
+      .container {
+        max-width: var(--container);
+        margin-inline: auto;
+        padding-inline: clamp(1rem, 4vw, 2rem);
+      }
+      .section {
+        padding-block: clamp(4rem, 8vw, 6rem);
+      }
+      .small {
+        font-size: 0.875rem;
+        color: hsl(var(--text-400));
+      }
+      a:focus-visible,
+      button:focus-visible,
+      input:focus-visible,
+      summary:focus-visible {
+        outline: 2px solid hsl(var(--accent-secondary-100));
+        outline-offset: 3px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        min-height: 44px;
+        padding: 12px 20px;
+        border-radius: var(--radius-md);
+        border: 1px solid hsl(var(--border-100) / var(--border-alpha-strong));
+        background: transparent;
+        color: hsl(var(--text-000));
+        font: inherit;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.15s var(--ease);
+      }
+      .btn:hover {
+        background: hsl(var(--bg-300));
+      }
+      .btn--primary {
+        background: hsl(var(--text-000));
+        color: hsl(var(--bg-000));
+        border-color: transparent;
+      }
+      .btn--primary:hover {
+        background: hsl(var(--text-200));
+      }
+      .btn--block {
+        width: 100%;
+      }
+      .card {
+        background: hsl(var(--bg-000));
+        border: 1px solid hsl(var(--border-100) / var(--border-alpha));
+        border-radius: var(--radius-lg);
+        padding: 24px;
+      }
+
+      /* nav */
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        height: var(--header-h);
+        background: hsl(var(--bg-100) / 0.92);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid hsl(var(--border-100) / var(--border-alpha));
+      }
+      .nav .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+      }
+      .logo {
+        font-family: var(--font-serif);
+        font-size: 1.5rem;
+        color: hsl(var(--text-000));
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+      .logo i {
+        font-style: normal;
+        color: hsl(var(--accent-brand));
+      }
+      .links {
+        display: flex;
+        gap: 1.5rem;
+        font-size: 0.95rem;
+        margin-right: auto;
+      }
+      .links a:hover {
+        color: hsl(var(--text-000));
+      }
+      .nav__right {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: 0.95rem;
+      }
+      .nav .btn {
+        min-height: 38px;
+        padding: 8px 14px;
+      }
+      .menu {
+        display: none;
+        margin-left: auto;
+        background: none;
+        border: 0;
+        font: inherit;
+        color: inherit;
+        cursor: pointer;
+      }
+      @media (max-width: 960px) {
+        .links,
+        .nav__right {
+          display: none;
+        }
+        .menu {
+          display: block;
+        }
+      }
+
+      /* hero */
+      .hero {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: clamp(2rem, 5vw, 4rem);
+        align-items: center;
+      }
+      .hero h1 {
+        font-size: clamp(2.75rem, 6vw + 0.5rem, 5rem);
+        margin-bottom: 1rem;
+      }
+      .hero .sub {
+        font-size: 1.25rem;
+        max-width: 34ch;
+        margin-bottom: 2rem;
+      }
+      .video {
+        aspect-ratio: 4/3;
+        border-radius: var(--radius-xl);
+        border: 1px solid hsl(var(--border-100) / var(--border-alpha));
+        background: hsl(var(--bg-200));
+        display: grid;
+        place-items: center;
+        color: hsl(var(--text-400));
+        font-size: 0.9rem;
+      }
+      @media (max-width: 960px) {
+        .hero {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* signup */
+      .signup {
+        max-width: 26rem;
+        display: grid;
+        gap: 0.75rem;
+      }
+      .divider {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: hsl(var(--text-400));
+        font-size: 0.9rem;
+      }
+      .divider::before,
+      .divider::after {
+        content: '';
+        flex: 1;
+        height: 1px;
+        background: hsl(var(--border-100) / var(--border-alpha));
+      }
+      .input {
+        width: 100%;
+        min-height: 44px;
+        padding: 10px 14px;
+        border-radius: var(--radius-md);
+        border: 1px solid hsl(var(--border-100) / var(--border-alpha-strong));
+        background: hsl(var(--bg-000));
+        color: hsl(var(--text-000));
+        font: inherit;
+      }
+      .input:focus {
+        border-color: hsl(var(--text-000));
+      }
+      .opt {
+        display: flex;
+        gap: 0.6rem;
+        align-items: flex-start;
+      }
+      .opt input {
+        margin-top: 0.35rem;
+      }
+
+      /* plans */
+      .head {
+        text-align: center;
+        margin-bottom: 2.5rem;
+      }
+      .head h2 {
+        font-size: clamp(2rem, 3vw + 0.75rem, 3rem);
+      }
+      .toggle {
+        display: inline-flex;
+        padding: 4px;
+        margin-top: 1.5rem;
+        border-radius: var(--radius-pill);
+        background: hsl(var(--bg-300));
+        gap: 2px;
+      }
+      .toggle button {
+        border: 1px solid transparent;
+        background: none;
+        padding: 8px 18px;
+        border-radius: var(--radius-pill);
+        font: inherit;
+        font-size: 0.95rem;
+        color: hsl(var(--text-300));
+        cursor: pointer;
+      }
+      .toggle button[aria-selected='true'] {
+        background: hsl(var(--bg-000));
+        color: hsl(var(--text-000));
+        border-color: hsl(var(--border-100) / var(--border-alpha));
+      }
+      .plans {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+      }
+      .plan {
+        padding: 32px;
+        border-radius: var(--radius-xl);
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .plan--hl {
+        border-color: hsl(var(--border-100) / 0.4);
+      }
+      .plan h3 {
+        font-size: 1.375rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .badge {
+        font-family: var(--font-sans);
+        font-size: 0.8rem;
+        padding: 2px 10px;
+        border-radius: var(--radius-pill);
+        background: hsl(var(--accent-brand) / 0.14);
+        color: hsl(var(--accent-main-000));
+      }
+      .price {
+        font-family: var(--font-serif);
+        font-size: 2.5rem;
+        color: hsl(var(--text-000));
+        line-height: 1;
+      }
+      .price span {
+        font-family: var(--font-sans);
+        font-size: 0.95rem;
+        color: hsl(var(--text-400));
+      }
+      .plan ul {
+        list-style: none;
+        margin: 0.5rem 0 0;
+        padding: 1rem 0 0;
+        border-top: 1px solid hsl(var(--border-100) / var(--border-alpha));
+        display: grid;
+        gap: 0.6rem;
+        font-size: 0.97rem;
+      }
+      .plan li::before {
+        content: '✓';
+        margin-right: 0.6rem;
+        color: hsl(var(--text-400));
+      }
+      @media (max-width: 960px) {
+        .plans {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* faq */
+      .faq {
+        max-width: 48rem;
+        margin-inline: auto;
+      }
+      details {
+        border-top: 1px solid hsl(var(--border-100) / var(--border-alpha));
+        padding: 1.25rem 0;
+      }
+      details:last-child {
+        border-bottom: 1px solid hsl(var(--border-100) / var(--border-alpha));
+      }
+      summary {
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        font-family: var(--font-serif);
+        font-size: 1.375rem;
+        color: hsl(var(--text-000));
+      }
+      summary::-webkit-details-marker {
+        display: none;
+      }
+      summary::after {
+        content: '+';
+        font-family: var(--font-sans);
+        color: hsl(var(--text-400));
+      }
+      details[open] summary::after {
+        content: '−';
+      }
+      details p {
+        margin-top: 0.75rem;
+        max-width: 62ch;
+      }
+
+      /* footer */
+      .footer {
+        border-top: 1px solid hsl(var(--border-100) / var(--border-alpha));
+        padding-block: 4rem 2rem;
+        font-size: 0.92rem;
+      }
+      .cols {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+      }
+      .footer h4 {
+        margin: 0 0 0.75rem;
+        font-size: 0.92rem;
+        font-weight: 500;
+        color: hsl(var(--text-000));
+      }
+      .footer ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 0.5rem;
+      }
+      .footer a:hover {
+        color: hsl(var(--text-000));
+      }
+      .bottom {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem 2rem;
+        justify-content: space-between;
+        margin-top: 3rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid hsl(var(--border-100) / var(--border-alpha));
+        color: hsl(var(--text-400));
+      }
+      .bottom nav {
+        display: flex;
+        gap: 1.25rem;
+      }
+      @media (max-width: 960px) {
+        .cols {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          transition: none !important;
+          animation: none !important;
+          scroll-behavior: auto !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="nav">
+      <div class="container">
+        <a class="logo" href="#"><i aria-hidden="true">✻</i>Yourbrand</a>
+        <nav class="links" aria-label="Primary">
+          <a href="#">Product</a><a href="#">Developers</a
+          ><a href="#">Enterprise</a><a href="#">Resources</a
+          ><a href="#">Pricing</a>
+        </nav>
+        <div class="nav__right">
+          <a href="#">Login</a><a class="btn" href="#">Contact sales</a>
+        </div>
+        <button class="menu" type="button">Menu</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container hero">
+          <div>
+            <h1>Think fast,<br />build faster</h1>
+            <p class="sub">Brainstorm in chat, build alongside it.</p>
+            <form class="signup" onsubmit="return false;">
+              <button class="btn btn--block" type="button">
+                Continue with Google
+              </button>
+              <div class="divider">or</div>
+              <input
+                class="input"
+                type="email"
+                placeholder="Enter your email"
+                aria-label="Email" />
+              <button class="btn btn--primary btn--block" type="submit">
+                Continue with email
+              </button>
+              <button class="btn btn--block" type="button">
+                Continue with SSO
+              </button>
+              <p class="small">
+                By continuing, you acknowledge our Privacy Policy.
+              </p>
+              <label class="opt small"
+                ><input type="checkbox" />
+                <span
+                  >I'd like to receive occasional product news by email.</span
+                ></label
+              >
+            </form>
+          </div>
+          <div class="video" role="img" aria-label="Product demo placeholder">
+            <!-- swap for: <video autoplay muted loop playsinline src="hero.mp4"></video> -->looping
+            product video
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 0">
+        <div class="container">
+          <div class="head">
+            <h2>Explore plans</h2>
+            <div class="toggle" role="tablist" aria-label="Audience">
+              <button role="tab" aria-selected="true">Individual</button>
+              <button role="tab" aria-selected="false">
+                Team and Enterprise
+              </button>
+            </div>
+          </div>
+          <div class="plans">
+            <article class="card plan">
+              <h3>Free</h3>
+              <p class="price">$0</p>
+              <p>Free for everyone</p>
+              <a class="btn btn--block" href="#">Try for free</a>
+              <ul>
+                <li>Chat on web, iOS, Android and desktop</li>
+                <li>Generate code and visualize data</li>
+                <li>Web search</li>
+                <li>Memory across conversations</li>
+              </ul>
+            </article>
+            <article class="card plan plan--hl">
+              <h3>Pro <span class="badge">Popular</span></h3>
+              <p class="price">$17 <span>per month, billed annually</span></p>
+              <p>For everyday productivity</p>
+              <a class="btn btn--primary btn--block" href="#">Get Pro</a>
+              <ul>
+                <li>Everything in Free</li>
+                <li>More usage</li>
+                <li>Unlimited projects</li>
+                <li>Research</li>
+              </ul>
+            </article>
+            <article class="card plan">
+              <h3>Max</h3>
+              <p class="price"><span>From</span> $100 <span>per month</span></p>
+              <p>5-20x more usage than Pro</p>
+              <a class="btn btn--block" href="#">Get Max</a>
+              <ul>
+                <li>Everything in Pro</li>
+                <li>Higher output limits</li>
+                <li>Priority access at peak times</li>
+              </ul>
+            </article>
+          </div>
+          <p class="small" style="text-align: center; margin-top: 1.5rem">
+            Usage limits apply. Prices shown are samples and may change.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container faq">
+          <div class="head"><h2>Frequently asked questions</h2></div>
+          <details open>
+            <summary>What is it and how does it work?</summary>
+            <p>A short, plain explanation in two or three sentences.</p>
+          </details>
+          <details>
+            <summary>What should I use it for?</summary>
+            <p>A short, plain explanation in two or three sentences.</p>
+          </details>
+          <details>
+            <summary>How much does it cost to use?</summary>
+            <p>A short, plain explanation in two or three sentences.</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="cols">
+          <div>
+            <h4>Products</h4>
+            <ul>
+              <li><a href="#">Chat</a></li>
+              <li><a href="#">Code</a></li>
+              <li><a href="#">Pricing</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Developers</h4>
+            <ul>
+              <li><a href="#">Docs</a></li>
+              <li><a href="#">API</a></li>
+              <li><a href="#">Console</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Customers</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Terms and policies</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom">
+          <span>© 2026 Your Company</span>
+          <nav aria-label="Social">
+            <a href="#">X</a><a href="#">LinkedIn</a><a href="#">YouTube</a
+            ><a href="#">Instagram</a>
+          </nav>
+          <label>
+            Language
+            <select aria-label="Language">
+              <option>English</option>
+              <option>日本語</option>
+              <option>Deutsch</option>
+              <option>Français</option>
+            </select>
+          </label>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.querySelectorAll('.toggle button').forEach(function (b) {
+        b.addEventListener('click', function () {
+          document.querySelectorAll('.toggle button').forEach(function (x) {
+            x.setAttribute('aria-selected', 'false');
+          });
+          b.setAttribute('aria-selected', 'true');
+        });
+      });
+    </script>
+  </body>
+</html>

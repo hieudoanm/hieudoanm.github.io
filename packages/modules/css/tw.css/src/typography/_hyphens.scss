@@ -1,0 +1,9 @@
+// Hyphens utilities — Tailwind v3 default scale
+
+$hyphenations: (('none', none), ('manual', manual), ('auto', auto));
+
+@each $name, $value in $hyphenations {
+  .hyphens-#{$name} {
+    hyphens: $value;
+  }
+}

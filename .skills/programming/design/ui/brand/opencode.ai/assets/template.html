@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>OpenCode Style Template</title>
+    <style>
+      /* tokens: keep in sync with references/tokens.css */
+      [data-page='opencode'] {
+        --color-background: hsl(0, 20%, 99%);
+        --color-background-weak: hsl(0, 8%, 97%);
+        --color-background-weak-hover: hsl(0, 8%, 94%);
+        --color-background-strong: hsl(0, 5%, 12%);
+        --color-background-strong-hover: hsl(0, 5%, 18%);
+        --color-background-interactive: hsl(62, 84%, 88%);
+        --color-background-interactive-weaker: hsl(64, 74%, 95%);
+        --color-text: hsl(0, 1%, 39%);
+        --color-text-weak: hsl(0, 1%, 60%);
+        --color-text-weaker: hsl(30, 2%, 81%);
+        --color-text-strong: hsl(0, 5%, 12%);
+        --color-text-inverted: hsl(0, 20%, 99%);
+        --color-border: hsl(30, 2%, 81%);
+        --color-border-weak: hsla(0, 100%, 3%, 0.12);
+        --color-icon: hsl(0, 1%, 55%);
+        --font-mono:
+          'Berkeley Mono', 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo,
+          Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+        --padding: 5rem;
+        --vertical-padding: 4rem;
+        --container: 67.5rem;
+        --lh-body: 2;
+        --fs-h1: 38px;
+      }
+      @media (max-width: 60rem) {
+        [data-page='opencode'] {
+          --padding: 1.5rem;
+          --vertical-padding: 3rem;
+          --lh-body: 1.8;
+          --fs-h1: 22px;
+        }
+      }
+      @media (prefers-color-scheme: dark) {
+        [data-page='opencode'] {
+          --color-background: hsl(0, 9%, 7%);
+          --color-background-weak: hsl(0, 6%, 10%);
+          --color-background-weak-hover: hsl(0, 6%, 15%);
+          --color-background-strong: hsl(0, 15%, 94%);
+          --color-background-strong-hover: hsl(0, 15%, 97%);
+          --color-background-interactive: hsl(62, 100%, 90%);
+          --color-background-interactive-weaker: hsl(60, 20%, 8%);
+          --color-text: hsl(0, 4%, 71%);
+          --color-text-weak: hsl(0, 2%, 49%);
+          --color-text-weaker: hsl(0, 3%, 28%);
+          --color-text-strong: hsl(0, 15%, 94%);
+          --color-text-inverted: hsl(0, 9%, 7%);
+          --color-border: hsl(0, 3%, 28%);
+          --color-border-weak: hsl(0, 4%, 23%);
+          --color-icon: hsl(10, 3%, 43%);
+        }
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html {
+        line-height: 1;
+      }
+      body {
+        margin: 0;
+      }
+      [data-page='opencode'] {
+        background: var(--color-background);
+        color: var(--color-text);
+        font-family: var(--font-mono);
+        min-height: 100vh;
+      }
+      [data-page='opencode'] a {
+        color: inherit;
+        text-decoration: none;
+      }
+      [data-page='opencode'] p {
+        margin: 0;
+        line-height: var(--lh-body);
+      }
+      [data-page='opencode'] h1,
+      [data-page='opencode'] h2,
+      [data-page='opencode'] h3 {
+        margin: 0;
+        color: var(--color-text-strong);
+      }
+      a:focus-visible,
+      button:focus-visible,
+      input:focus-visible,
+      summary:focus-visible {
+        outline: 2px solid var(--color-text-strong);
+        outline-offset: 3px;
+      }
+
+      .container {
+        max-width: var(--container);
+        margin-inline: auto;
+      }
+      .section {
+        border-top: 1px solid var(--color-border-weak);
+        padding: var(--vertical-padding) var(--padding);
+      }
+      .title {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+      .weak {
+        color: var(--color-text-weak);
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 8px 12px 8px 20px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        background: var(--color-background-strong);
+        color: var(--color-text-inverted);
+        font: inherit;
+        font-weight: 500;
+        line-height: 1.4;
+        cursor: pointer;
+      }
+      .btn:hover {
+        background: var(--color-background-strong-hover);
+      }
+      .btn--outline {
+        background: transparent;
+        color: var(--color-text-strong);
+        border-color: var(--color-border);
+      }
+      .btn--outline:hover {
+        background: var(--color-background-weak-hover);
+      }
+
+      /* header */
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.25rem var(--padding);
+      }
+      .logo {
+        font-weight: 700;
+        color: var(--color-text-strong);
+        letter-spacing: 0.02em;
+      }
+      .nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        font-size: 14px;
+        line-height: 1;
+      }
+      .nav a:hover {
+        color: var(--color-text-strong);
+      }
+      @media (max-width: 60rem) {
+        .nav {
+          display: none;
+        }
+      }
+      .menu-btn {
+        display: none;
+        background: none;
+        border: 0;
+        color: var(--color-text);
+        font: inherit;
+        padding: 0;
+        cursor: pointer;
+      }
+      @media (max-width: 60rem) {
+        .menu-btn {
+          display: block;
+        }
+      }
+
+      /* hero */
+      .hero {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: calc(var(--vertical-padding) * 1.5) var(--padding)
+          var(--vertical-padding);
+      }
+      .hero h1 {
+        font-size: var(--fs-h1);
+        line-height: 1.3;
+      }
+      .hero .sub {
+        max-width: 60ch;
+      }
+      .install {
+        max-width: 44rem;
+        margin-top: 1rem;
+      }
+      .tabs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.25rem;
+      }
+      .tab {
+        background: none;
+        border: 0;
+        padding: 0.6rem 0.9rem;
+        border-radius: 4px 4px 0 0;
+        font: inherit;
+        font-size: 14px;
+        line-height: 1;
+        color: var(--color-text-weak);
+        cursor: pointer;
+      }
+      .tab[aria-selected='true'] {
+        background: var(--color-background-interactive);
+        color: var(--color-text-strong);
+      }
+      .panel {
+        display: none;
+        border: 1px solid var(--color-border);
+        background: var(--color-background-weak);
+        border-radius: 0 6px 6px 6px;
+        padding: 1.1rem 1.25rem;
+        font-size: 16px;
+        line-height: 1.4;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+      .panel.on {
+        display: block;
+      }
+      .panel b {
+        font-weight: 500;
+        color: var(--color-text-strong);
+      }
+      .video {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+        border-top: 1px solid var(--color-border-weak);
+        background: var(--color-background-weak);
+        display: grid;
+        place-items: center;
+        font-size: 14px;
+        color: var(--color-text-weak);
+      }
+
+      /* features, stats */
+      .features {
+        list-style: none;
+        margin: 1.5rem 0 2rem;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.25rem 3rem;
+      }
+      .features li {
+        line-height: 2;
+      }
+      .features li::before {
+        content: '▪';
+        margin-right: 0.6rem;
+        color: var(--color-text-weaker);
+      }
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-top: 1.5rem;
+      }
+      .stat .n {
+        font-size: clamp(2rem, 5vw, 3.25rem);
+        font-weight: 700;
+        color: var(--color-text-strong);
+        line-height: 1.1;
+      }
+      .stat .l {
+        margin-top: 0.5rem;
+        line-height: 1.6;
+      }
+      .stat .fig {
+        margin-top: 0.75rem;
+        font-size: 13px;
+        color: var(--color-text-weak);
+      }
+      @media (max-width: 60rem) {
+        .features,
+        .stats {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* email dock */
+      .dock {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        align-items: center;
+        max-width: 40rem;
+        margin-top: 1.25rem;
+        padding: 0.75rem;
+        border: 1px solid var(--color-border);
+        border-radius: 14px;
+        background: var(--color-background-weak);
+      }
+      .dock input {
+        flex: 1 1 12rem;
+        min-width: 0;
+        padding: 10px 12px;
+        border: 1px solid var(--color-border);
+        border-radius: 4px;
+        background: var(--color-background);
+        color: var(--color-text-strong);
+        font: inherit;
+      }
+
+      /* faq */
+      details {
+        border-top: 1px solid var(--color-border-weak);
+        padding: 1.1rem 0;
+      }
+      details:last-child {
+        border-bottom: 1px solid var(--color-border-weak);
+      }
+      summary {
+        cursor: pointer;
+        list-style: none;
+        font-weight: 700;
+        color: var(--color-text-strong);
+        line-height: 1.5;
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+      summary::-webkit-details-marker {
+        display: none;
+      }
+      summary::after {
+        content: '+';
+        color: var(--color-text-weak);
+      }
+      details[open] summary::after {
+        content: '−';
+      }
+      details p {
+        margin-top: 0.75rem;
+      }
+
+      /* footer */
+      .footer {
+        border-top: 1px solid var(--color-border-weak);
+      }
+      .cells {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .cell {
+        flex: 1 1 0;
+        min-width: 8rem;
+        text-align: center;
+        padding: 2rem 0;
+        border-left: 1px solid var(--color-border-weak);
+        line-height: 1;
+      }
+      .cell:first-child {
+        border-left: 0;
+      }
+      .cell:hover {
+        color: var(--color-text-strong);
+        background: var(--color-background-weak);
+      }
+      @media (max-width: 25rem) {
+        .cell {
+          flex: 1 1 100%;
+          border-left: 0;
+          border-top: 1px solid var(--color-border-weak);
+        }
+      }
+      .legal {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: space-between;
+        padding: 1.5rem var(--padding);
+        border-top: 1px solid var(--color-border-weak);
+        font-size: 13px;
+        color: var(--color-text-weak);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          transition: none !important;
+          animation: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div data-page="opencode">
+      <header class="header">
+        <a class="logo" href="#">[ yourproduct ]</a>
+        <nav class="nav" aria-label="Primary">
+          <a href="#">GitHub</a><a href="#">Docs</a><a href="#">Data</a
+          ><a href="#">Zen</a><a href="#">Go</a><a href="#">Enterprise</a
+          ><a href="#">Download</a>
+        </nav>
+        <button class="menu-btn" type="button">Open menu</button>
+      </header>
+
+      <main>
+        <section class="hero">
+          <h1>The open source AI coding agent</h1>
+          <p class="sub">
+            Free models included, or connect any provider's model, so you can
+            work with the tools you already use.
+          </p>
+          <div class="install">
+            <div class="tabs" role="tablist" aria-label="Install method">
+              <button class="tab" role="tab" aria-selected="true" data-p="p0">
+                curl
+              </button>
+              <button class="tab" role="tab" aria-selected="false" data-p="p1">
+                npm
+              </button>
+              <button class="tab" role="tab" aria-selected="false" data-p="p2">
+                bun
+              </button>
+              <button class="tab" role="tab" aria-selected="false" data-p="p3">
+                brew
+              </button>
+            </div>
+            <div class="panel on" id="p0" role="tabpanel">
+              curl -fsSL <b>https://example.com/install</b> | bash
+            </div>
+            <div class="panel" id="p1" role="tabpanel">
+              npm i -g <b>yourpackage</b>
+            </div>
+            <div class="panel" id="p2" role="tabpanel">
+              bun add -g <b>yourpackage</b>
+            </div>
+            <div class="panel" id="p3" role="tabpanel">
+              brew install <b>yourpackage</b>
+            </div>
+          </div>
+        </section>
+
+        <div class="video" role="img" aria-label="Product demo placeholder">
+          <!-- swap for: <video src="demo.mp4" autoplay muted loop playsinline></video> -->product
+          demo, 16:9
+        </div>
+
+        <section class="section">
+          <div class="container">
+            <h2 class="title">What is YourProduct?</h2>
+            <p>
+              An open source agent that helps you write code in your terminal,
+              IDE, or desktop.
+            </p>
+            <ul class="features">
+              <li>LSP enabled</li>
+              <li>Multi-session</li>
+              <li>Share links</li>
+              <li>GitHub Copilot</li>
+              <li>ChatGPT Plus/Pro</li>
+              <li>Any model</li>
+              <li>Any editor</li>
+            </ul>
+            <a class="btn" href="#"
+              >Read docs <span aria-hidden="true">→</span></a
+            >
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <h2 class="title">Growing every month</h2>
+            <div class="stats">
+              <div class="stat">
+                <div class="n">208K</div>
+                <div class="l">GitHub stars</div>
+                <div class="fig">Fig 1</div>
+              </div>
+              <div class="stat">
+                <div class="n">950</div>
+                <div class="l">Contributors</div>
+                <div class="fig">Fig 2</div>
+              </div>
+              <div class="stat">
+                <div class="n">16M</div>
+                <div class="l">Monthly developers</div>
+                <div class="fig">Fig 3</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <h2 class="title">Built for privacy first</h2>
+            <p>
+              We don't store any of your code or context data, so you can work
+              in privacy-sensitive environments.
+            </p>
+            <p>
+              <a href="#" style="color: var(--color-text-strong)"
+                >Learn more about privacy ↗</a
+              >
+            </p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <h2 class="title">A curated set of models</h2>
+            <p>
+              Models tested and benchmarked for coding agents, so you don't have
+              to guess.
+            </p>
+            <p style="margin-top: 1rem">
+              <a class="btn btn--outline" href="#"
+                >Learn about Zen <span aria-hidden="true">→</span></a
+              >
+            </p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <h2 class="title">
+              Be the first to know when we release new products
+            </h2>
+            <form class="dock" onsubmit="return false;">
+              <input
+                type="email"
+                placeholder="Email address"
+                aria-label="Email address" />
+              <button class="btn" type="submit">
+                Subscribe <span aria-hidden="true">→</span>
+              </button>
+            </form>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <h2 class="title">Frequently asked questions</h2>
+            <details>
+              <summary>What is YourProduct?</summary>
+              <p>One or two literal sentences.</p>
+            </details>
+            <details>
+              <summary>How do I use YourProduct?</summary>
+              <p>One or two literal sentences.</p>
+            </details>
+            <details>
+              <summary>Do I need extra AI subscriptions to use it?</summary>
+              <p>One or two literal sentences.</p>
+            </details>
+            <details>
+              <summary>How much does it cost?</summary>
+              <p>One or two literal sentences.</p>
+            </details>
+            <details>
+              <summary>Is it open source?</summary>
+              <p>One or two literal sentences.</p>
+            </details>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="cells">
+          <a class="cell" href="#">GitHub [208K]</a
+          ><a class="cell" href="#">Docs</a
+          ><a class="cell" href="#">Changelog</a
+          ><a class="cell" href="#">Discord</a><a class="cell" href="#">X</a>
+        </div>
+        <div class="legal">
+          <span>©2026 YourCompany</span
+          ><span>Brand &nbsp; Privacy &nbsp; Terms</span><span>English</span>
+        </div>
+      </footer>
+    </div>
+    <script>
+      document.querySelectorAll('.tab').forEach(function (t) {
+        t.addEventListener('click', function () {
+          document.querySelectorAll('.tab').forEach(function (x) {
+            x.setAttribute('aria-selected', 'false');
+          });
+          document.querySelectorAll('.panel').forEach(function (x) {
+            x.classList.remove('on');
+          });
+          t.setAttribute('aria-selected', 'true');
+          document.getElementById(t.dataset.p).classList.add('on');
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+// Text decoration thickness utilities — Tailwind v3 default scale
+
+$text-decoration-thicknesses: (
+  ('auto', auto),
+  ('0', 0px),
+  ('1', 1px),
+  ('2', 2px),
+  ('4', 4px),
+  ('8', 8px)
+);
+
+@each $name, $value in $text-decoration-thicknesses {
+  .decoration-#{$name} {
+    text-decoration-thickness: $value;
+  }
+}

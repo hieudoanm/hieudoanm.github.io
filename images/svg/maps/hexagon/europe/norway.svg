@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285.40 547.40" width="285.40" height="547.40" role="img" aria-labelledby="norway-title norway-desc">
+  <title id="norway-title">Norway hex map</title>
+  <desc id="norway-desc">Hexagon map with 21 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.89; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 14.28 10.20; }
+    .label { fill: #52525b; font: 600 11.56px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="FI">
+    <title>Finnmark</title>
+    <polygon class="tile" points="245.76,163.20 275.20,180.20 275.20,214.20 245.76,231.20 216.31,214.20 216.31,180.20" aria-label="Finnmark"/>
+    <text class="label" x="245.76" y="197.20">FI</text>
+  </g>
+  <g class="state" data-state="HE">
+    <title>Hedmark</title>
+    <polygon class="tile" points="245.76,265.20 275.20,282.20 275.20,316.20 245.76,333.20 216.31,316.20 216.31,282.20" aria-label="Hedmark"/>
+    <text class="label" x="245.76" y="299.20">HE</text>
+  </g>
+  <g class="state" data-state="TR">
+    <title>Troms</title>
+    <polygon class="tile" points="216.31,112.20 245.76,129.20 245.76,163.20 216.31,180.20 186.87,163.20 186.87,129.20" aria-label="Troms"/>
+    <text class="label" x="216.31" y="146.20">TR</text>
+  </g>
+  <g class="state" data-state="ST">
+    <title>Sør-Trøndelag</title>
+    <polygon class="tile" points="216.31,214.20 245.76,231.20 245.76,265.20 216.31,282.20 186.87,265.20 186.87,231.20" aria-label="Sør-Trøndelag"/>
+    <text class="label" x="216.31" y="248.20">ST</text>
+  </g>
+  <g class="state" data-state="AK">
+    <title>Akershus</title>
+    <polygon class="tile" points="216.31,316.20 245.76,333.20 245.76,367.20 216.31,384.20 186.87,367.20 186.87,333.20" aria-label="Akershus"/>
+    <text class="label" x="216.31" y="350.20">AK</text>
+  </g>
+  <g class="state" data-state="SV">
+    <title>Svalbard</title>
+    <polygon class="tile inset" points="216.31,10.20 245.76,27.20 245.76,61.20 216.31,78.20 186.87,61.20 186.87,27.20" aria-label="Svalbard"/>
+    <text class="label" x="216.31" y="44.20">SV</text>
+  </g>
+  <g class="state" data-state="NT">
+    <title>Nord-Trøndelag</title>
+    <polygon class="tile" points="186.87,163.20 216.31,180.20 216.31,214.20 186.87,231.20 157.42,214.20 157.42,180.20" aria-label="Nord-Trøndelag"/>
+    <text class="label" x="186.87" y="197.20">NT</text>
+  </g>
+  <g class="state" data-state="OS">
+    <title>Oslo</title>
+    <polygon class="tile" points="186.87,265.20 216.31,282.20 216.31,316.20 186.87,333.20 157.42,316.20 157.42,282.20" aria-label="Oslo"/>
+    <text class="label" x="186.87" y="299.20">OS</text>
+  </g>
+  <g class="state" data-state="OF">
+    <title>Østfold</title>
+    <polygon class="tile" points="186.87,367.20 216.31,384.20 216.31,418.20 186.87,435.20 157.42,418.20 157.42,384.20" aria-label="Østfold"/>
+    <text class="label" x="186.87" y="401.20">OF</text>
+  </g>
+  <g class="state" data-state="NO">
+    <title>Nordland</title>
+    <polygon class="tile" points="157.42,112.20 186.87,129.20 186.87,163.20 157.42,180.20 127.98,163.20 127.98,129.20" aria-label="Nordland"/>
+    <text class="label" x="157.42" y="146.20">NO</text>
+  </g>
+  <g class="state" data-state="OP">
+    <title>Oppland</title>
+    <polygon class="tile" points="157.42,214.20 186.87,231.20 186.87,265.20 157.42,282.20 127.98,265.20 127.98,231.20" aria-label="Oppland"/>
+    <text class="label" x="157.42" y="248.20">OP</text>
+  </g>
+  <g class="state" data-state="VF">
+    <title>Vestfold</title>
+    <polygon class="tile" points="157.42,316.20 186.87,333.20 186.87,367.20 157.42,384.20 127.98,367.20 127.98,333.20" aria-label="Vestfold"/>
+    <text class="label" x="157.42" y="350.20">VF</text>
+  </g>
+  <g class="state" data-state="MR">
+    <title>Møre og Romsdal</title>
+    <polygon class="tile" points="127.98,163.20 157.42,180.20 157.42,214.20 127.98,231.20 98.53,214.20 98.53,180.20" aria-label="Møre og Romsdal"/>
+    <text class="label" x="127.98" y="197.20">MR</text>
+  </g>
+  <g class="state" data-state="BU">
+    <title>Buskerud</title>
+    <polygon class="tile" points="127.98,265.20 157.42,282.20 157.42,316.20 127.98,333.20 98.53,316.20 98.53,282.20" aria-label="Buskerud"/>
+    <text class="label" x="127.98" y="299.20">BU</text>
+  </g>
+  <g class="state" data-state="AA">
+    <title>Aust-Agder</title>
+    <polygon class="tile" points="127.98,367.20 157.42,384.20 157.42,418.20 127.98,435.20 98.53,418.20 98.53,384.20" aria-label="Aust-Agder"/>
+    <text class="label" x="127.98" y="401.20">AA</text>
+  </g>
+  <g class="state" data-state="BI">
+    <title>Bouvet Island</title>
+    <polygon class="tile inset" points="127.98,469.20 157.42,486.20 157.42,520.20 127.98,537.20 98.53,520.20 98.53,486.20" aria-label="Bouvet Island"/>
+    <text class="label" x="127.98" y="503.20">BI</text>
+  </g>
+  <g class="state" data-state="SF">
+    <title>Sogn og Fjordane</title>
+    <polygon class="tile" points="98.53,214.20 127.98,231.20 127.98,265.20 98.53,282.20 69.09,265.20 69.09,231.20" aria-label="Sogn og Fjordane"/>
+    <text class="label" x="98.53" y="248.20">SF</text>
+  </g>
+  <g class="state" data-state="TE">
+    <title>Telemark</title>
+    <polygon class="tile" points="98.53,316.20 127.98,333.20 127.98,367.20 98.53,384.20 69.09,367.20 69.09,333.20" aria-label="Telemark"/>
+    <text class="label" x="98.53" y="350.20">TE</text>
+  </g>
+  <g class="state" data-state="HO">
+    <title>Hordaland</title>
+    <polygon class="tile" points="69.09,265.20 98.53,282.20 98.53,316.20 69.09,333.20 39.64,316.20 39.64,282.20" aria-label="Hordaland"/>
+    <text class="label" x="69.09" y="299.20">HO</text>
+  </g>
+  <g class="state" data-state="VA">
+    <title>Vest-Agder</title>
+    <polygon class="tile" points="69.09,367.20 98.53,384.20 98.53,418.20 69.09,435.20 39.64,418.20 39.64,384.20" aria-label="Vest-Agder"/>
+    <text class="label" x="69.09" y="401.20">VA</text>
+  </g>
+  <g class="state" data-state="RO">
+    <title>Rogaland</title>
+    <polygon class="tile" points="39.64,316.20 69.09,333.20 69.09,367.20 39.64,384.20 10.20,367.20 10.20,333.20" aria-label="Rogaland"/>
+    <text class="label" x="39.64" y="350.20">RO</text>
+  </g>
+</svg>

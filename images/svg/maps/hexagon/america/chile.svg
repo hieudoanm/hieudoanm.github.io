@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 197.07 598.40" width="197.07" height="598.40" role="img" aria-labelledby="chile-title chile-desc">
+  <title id="chile-title">Chile hex map</title>
+  <desc id="chile-desc">Hexagon map with 16 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.89; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 14.28 10.20; }
+    .label { fill: #52525b; font: 600 11.56px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="AN">
+    <title>Antofagasta</title>
+    <polygon class="tile" points="157.42,61.20 186.87,78.20 186.87,112.20 157.42,129.20 127.98,112.20 127.98,78.20" aria-label="Antofagasta"/>
+    <text class="label" x="157.42" y="95.20">AN</text>
+  </g>
+  <g class="state" data-state="RM">
+    <title>Región Metropolitana de Santiago</title>
+    <polygon class="tile" points="157.42,163.20 186.87,180.20 186.87,214.20 157.42,231.20 127.98,214.20 127.98,180.20" aria-label="Región Metropolitana de Santiago"/>
+    <text class="label" x="157.42" y="197.20">RM</text>
+  </g>
+  <g class="state" data-state="AP">
+    <title>Arica y Parinacota</title>
+    <polygon class="tile" points="127.98,10.20 157.42,27.20 157.42,61.20 127.98,78.20 98.53,61.20 98.53,27.20" aria-label="Arica y Parinacota"/>
+    <text class="label" x="127.98" y="44.20">AP</text>
+  </g>
+  <g class="state" data-state="AT">
+    <title>Atacama</title>
+    <polygon class="tile" points="127.98,112.20 157.42,129.20 157.42,163.20 127.98,180.20 98.53,163.20 98.53,129.20" aria-label="Atacama"/>
+    <text class="label" x="127.98" y="146.20">AT</text>
+  </g>
+  <g class="state" data-state="LI">
+    <title>Libertador General Bernardo O'Higgins</title>
+    <polygon class="tile" points="127.98,214.20 157.42,231.20 157.42,265.20 127.98,282.20 98.53,265.20 98.53,231.20" aria-label="Libertador General Bernardo O'Higgins"/>
+    <text class="label" x="127.98" y="248.20">LI</text>
+  </g>
+  <g class="state" data-state="NB">
+    <title>Ñuble</title>
+    <polygon class="tile" points="127.98,316.20 157.42,333.20 157.42,367.20 127.98,384.20 98.53,367.20 98.53,333.20" aria-label="Ñuble"/>
+    <text class="label" x="127.98" y="350.20">NB</text>
+  </g>
+  <g class="state" data-state="TA">
+    <title>Tarapacá</title>
+    <polygon class="tile" points="98.53,61.20 127.98,78.20 127.98,112.20 98.53,129.20 69.09,112.20 69.09,78.20" aria-label="Tarapacá"/>
+    <text class="label" x="98.53" y="95.20">TA</text>
+  </g>
+  <g class="state" data-state="CO">
+    <title>Coquimbo</title>
+    <polygon class="tile" points="98.53,163.20 127.98,180.20 127.98,214.20 98.53,231.20 69.09,214.20 69.09,180.20" aria-label="Coquimbo"/>
+    <text class="label" x="98.53" y="197.20">CO</text>
+  </g>
+  <g class="state" data-state="ML">
+    <title>Maule</title>
+    <polygon class="tile" points="98.53,265.20 127.98,282.20 127.98,316.20 98.53,333.20 69.09,316.20 69.09,282.20" aria-label="Maule"/>
+    <text class="label" x="98.53" y="299.20">ML</text>
+  </g>
+  <g class="state" data-state="AR">
+    <title>La Araucanía</title>
+    <polygon class="tile" points="98.53,367.20 127.98,384.20 127.98,418.20 98.53,435.20 69.09,418.20 69.09,384.20" aria-label="La Araucanía"/>
+    <text class="label" x="98.53" y="401.20">AR</text>
+  </g>
+  <g class="state" data-state="AI">
+    <title>Aisén del General Carlos Ibáñez del Campo</title>
+    <polygon class="tile" points="98.53,469.20 127.98,486.20 127.98,520.20 98.53,537.20 69.09,520.20 69.09,486.20" aria-label="Aisén del General Carlos Ibáñez del Campo"/>
+    <text class="label" x="98.53" y="503.20">AI</text>
+  </g>
+  <g class="state" data-state="VS">
+    <title>Valparaíso</title>
+    <polygon class="tile" points="69.09,214.20 98.53,231.20 98.53,265.20 69.09,282.20 39.64,265.20 39.64,231.20" aria-label="Valparaíso"/>
+    <text class="label" x="69.09" y="248.20">VS</text>
+  </g>
+  <g class="state" data-state="BI">
+    <title>Bío-Bío</title>
+    <polygon class="tile" points="69.09,316.20 98.53,333.20 98.53,367.20 69.09,384.20 39.64,367.20 39.64,333.20" aria-label="Bío-Bío"/>
+    <text class="label" x="69.09" y="350.20">BI</text>
+  </g>
+  <g class="state" data-state="LL">
+    <title>Los Lagos</title>
+    <polygon class="tile" points="69.09,418.20 98.53,435.20 98.53,469.20 69.09,486.20 39.64,469.20 39.64,435.20" aria-label="Los Lagos"/>
+    <text class="label" x="69.09" y="452.20">LL</text>
+  </g>
+  <g class="state" data-state="MA">
+    <title>Magallanes y Antártica Chilena</title>
+    <polygon class="tile" points="69.09,520.20 98.53,537.20 98.53,571.20 69.09,588.20 39.64,571.20 39.64,537.20" aria-label="Magallanes y Antártica Chilena"/>
+    <text class="label" x="69.09" y="554.20">MA</text>
+  </g>
+  <g class="state" data-state="LR">
+    <title>Los Ríos</title>
+    <polygon class="tile" points="39.64,367.20 69.09,384.20 69.09,418.20 39.64,435.20 10.20,418.20 10.20,384.20" aria-label="Los Ríos"/>
+    <text class="label" x="39.64" y="401.20">LR</text>
+  </g>
+</svg>

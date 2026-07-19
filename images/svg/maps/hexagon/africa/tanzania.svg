@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 361.03 327.16" width="361.03" height="327.16" role="img" aria-labelledby="tanzania-title tanzania-desc">
+  <title id="tanzania-title">Tanzania hex map</title>
+  <desc id="tanzania-desc">Hexagon map with 30 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.12; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 10.49 7.49; }
+    .label { fill: #52525b; font: 600 8.49px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="ZS">
+    <title>Zanzibar South and Central</title>
+    <polygon class="tile inset" points="331.91,119.87 353.54,132.36 353.54,157.33 331.91,169.82 310.28,157.33 310.28,132.36" aria-label="Zanzibar South and Central"/>
+    <text class="label" x="331.91" y="144.85">ZS</text>
+  </g>
+  <g class="state" data-state="PS">
+    <title>Kusini-Pemba</title>
+    <polygon class="tile inset" points="288.65,44.95 310.28,57.44 310.28,82.41 288.65,94.90 267.03,82.41 267.03,57.44" aria-label="Kusini-Pemba"/>
+    <text class="label" x="288.65" y="69.93">PS</text>
+  </g>
+  <g class="state" data-state="ZN">
+    <title>Kaskazini-Unguja</title>
+    <polygon class="tile inset" points="288.65,194.80 310.28,207.28 310.28,232.26 288.65,244.74 267.03,232.26 267.03,207.28" aria-label="Kaskazini-Unguja"/>
+    <text class="label" x="288.65" y="219.77">ZN</text>
+  </g>
+  <g class="state" data-state="ZW">
+    <title>Zanzibar West</title>
+    <polygon class="tile inset" points="288.65,269.72 310.28,282.20 310.28,307.18 288.65,319.66 267.03,307.18 267.03,282.20" aria-label="Zanzibar West"/>
+    <text class="label" x="288.65" y="294.69">ZW</text>
+  </g>
+  <g class="state" data-state="DS">
+    <title>Dar-Es-Salaam</title>
+    <polygon class="tile" points="245.40,119.87 267.03,132.36 267.03,157.33 245.40,169.82 223.77,157.33 223.77,132.36" aria-label="Dar-Es-Salaam"/>
+    <text class="label" x="245.40" y="144.85">DS</text>
+  </g>
+  <g class="state" data-state="PW">
+    <title>Pwani</title>
+    <polygon class="tile" points="223.77,157.33 245.40,169.82 245.40,194.80 223.77,207.28 202.14,194.80 202.14,169.82" aria-label="Pwani"/>
+    <text class="label" x="223.77" y="182.31">PW</text>
+  </g>
+  <g class="state" data-state="MT">
+    <title>Mtwara</title>
+    <polygon class="tile" points="223.77,232.26 245.40,244.74 245.40,269.72 223.77,282.20 202.14,269.72 202.14,244.74" aria-label="Mtwara"/>
+    <text class="label" x="223.77" y="257.23">MT</text>
+  </g>
+  <g class="state" data-state="PN">
+    <title>Kaskazini-Pemba</title>
+    <polygon class="tile inset" points="223.77,7.49 245.40,19.98 245.40,44.95 223.77,57.44 202.14,44.95 202.14,19.98" aria-label="Kaskazini-Pemba"/>
+    <text class="label" x="223.77" y="32.47">PN</text>
+  </g>
+  <g class="state" data-state="TN">
+    <title>Tanga</title>
+    <polygon class="tile" points="202.14,119.87 223.77,132.36 223.77,157.33 202.14,169.82 180.52,157.33 180.52,132.36" aria-label="Tanga"/>
+    <text class="label" x="202.14" y="144.85">TN</text>
+  </g>
+  <g class="state" data-state="LI">
+    <title>Lindi</title>
+    <polygon class="tile" points="202.14,194.80 223.77,207.28 223.77,232.26 202.14,244.74 180.52,232.26 180.52,207.28" aria-label="Lindi"/>
+    <text class="label" x="202.14" y="219.77">LI</text>
+  </g>
+  <g class="state" data-state="KL">
+    <title>Kilimanjaro</title>
+    <polygon class="tile" points="180.52,82.41 202.14,94.90 202.14,119.87 180.52,132.36 158.89,119.87 158.89,94.90" aria-label="Kilimanjaro"/>
+    <text class="label" x="180.52" y="107.39">KL</text>
+  </g>
+  <g class="state" data-state="MO">
+    <title>Morogoro</title>
+    <polygon class="tile" points="180.52,157.33 202.14,169.82 202.14,194.80 180.52,207.28 158.89,194.80 158.89,169.82" aria-label="Morogoro"/>
+    <text class="label" x="180.52" y="182.31">MO</text>
+  </g>
+  <g class="state" data-state="RV">
+    <title>Ruvuma</title>
+    <polygon class="tile" points="180.52,232.26 202.14,244.74 202.14,269.72 180.52,282.20 158.89,269.72 158.89,244.74" aria-label="Ruvuma"/>
+    <text class="label" x="180.52" y="257.23">RV</text>
+  </g>
+  <g class="state" data-state="AS">
+    <title>Arusha</title>
+    <polygon class="tile" points="158.89,44.95 180.52,57.44 180.52,82.41 158.89,94.90 137.26,82.41 137.26,57.44" aria-label="Arusha"/>
+    <text class="label" x="158.89" y="69.93">AS</text>
+  </g>
+  <g class="state" data-state="MY">
+    <title>Manyara</title>
+    <polygon class="tile" points="158.89,119.87 180.52,132.36 180.52,157.33 158.89,169.82 137.26,157.33 137.26,132.36" aria-label="Manyara"/>
+    <text class="label" x="158.89" y="144.85">MY</text>
+  </g>
+  <g class="state" data-state="IRI">
+    <title>Iringa</title>
+    <polygon class="tile" points="158.89,194.80 180.52,207.28 180.52,232.26 158.89,244.74 137.26,232.26 137.26,207.28" aria-label="Iringa"/>
+    <text class="label" x="158.89" y="219.77">IRI</text>
+  </g>
+  <g class="state" data-state="SH">
+    <title>Simiyu</title>
+    <polygon class="tile" points="137.26,82.41 158.89,94.90 158.89,119.87 137.26,132.36 115.63,119.87 115.63,94.90" aria-label="Simiyu"/>
+    <text class="label" x="137.26" y="107.39">SH</text>
+  </g>
+  <g class="state" data-state="DO">
+    <title>Dodoma</title>
+    <polygon class="tile" points="137.26,157.33 158.89,169.82 158.89,194.80 137.26,207.28 115.63,194.80 115.63,169.82" aria-label="Dodoma"/>
+    <text class="label" x="137.26" y="182.31">DO</text>
+  </g>
+  <g class="state" data-state="IR">
+    <title>Njombe</title>
+    <polygon class="tile" points="137.26,232.26 158.89,244.74 158.89,269.72 137.26,282.20 115.63,269.72 115.63,244.74" aria-label="Njombe"/>
+    <text class="label" x="137.26" y="257.23">IR</text>
+  </g>
+  <g class="state" data-state="MA">
+    <title>Mara</title>
+    <polygon class="tile" points="115.63,44.95 137.26,57.44 137.26,82.41 115.63,94.90 94.00,82.41 94.00,57.44" aria-label="Mara"/>
+    <text class="label" x="115.63" y="69.93">MA</text>
+  </g>
+  <g class="state" data-state="SD">
+    <title>Singida</title>
+    <polygon class="tile" points="115.63,119.87 137.26,132.36 137.26,157.33 115.63,169.82 94.00,157.33 94.00,132.36" aria-label="Singida"/>
+    <text class="label" x="115.63" y="144.85">SD</text>
+  </g>
+  <g class="state" data-state="MB">
+    <title>Mbeya</title>
+    <polygon class="tile" points="115.63,194.80 137.26,207.28 137.26,232.26 115.63,244.74 94.00,232.26 94.00,207.28" aria-label="Mbeya"/>
+    <text class="label" x="115.63" y="219.77">MB</text>
+  </g>
+  <g class="state" data-state="MW">
+    <title>Mwanza</title>
+    <polygon class="tile" points="94.00,82.41 115.63,94.90 115.63,119.87 94.00,132.36 72.38,119.87 72.38,94.90" aria-label="Mwanza"/>
+    <text class="label" x="94.00" y="107.39">MW</text>
+  </g>
+  <g class="state" data-state="TB">
+    <title>Tabora</title>
+    <polygon class="tile" points="94.00,157.33 115.63,169.82 115.63,194.80 94.00,207.28 72.38,194.80 72.38,169.82" aria-label="Tabora"/>
+    <text class="label" x="94.00" y="182.31">TB</text>
+  </g>
+  <g class="state" data-state="KR">
+    <title>Kagera</title>
+    <polygon class="tile" points="72.38,44.95 94.00,57.44 94.00,82.41 72.38,94.90 50.75,82.41 50.75,57.44" aria-label="Kagera"/>
+    <text class="label" x="72.38" y="69.93">KR</text>
+  </g>
+  <g class="state" data-state="SHI">
+    <title>Shinyanga</title>
+    <polygon class="tile" points="72.38,119.87 94.00,132.36 94.00,157.33 72.38,169.82 50.75,157.33 50.75,132.36" aria-label="Shinyanga"/>
+    <text class="label" x="72.38" y="144.85">SHI</text>
+  </g>
+  <g class="state" data-state="RUK">
+    <title>Rukwa</title>
+    <polygon class="tile" points="72.38,194.80 94.00,207.28 94.00,232.26 72.38,244.74 50.75,232.26 50.75,207.28" aria-label="Rukwa"/>
+    <text class="label" x="72.38" y="219.77">RUK</text>
+  </g>
+  <g class="state" data-state="GEI">
+    <title>Geita</title>
+    <polygon class="tile" points="50.75,82.41 72.38,94.90 72.38,119.87 50.75,132.36 29.12,119.87 29.12,94.90" aria-label="Geita"/>
+    <text class="label" x="50.75" y="107.39">GEI</text>
+  </g>
+  <g class="state" data-state="RK">
+    <title>Katavi</title>
+    <polygon class="tile" points="50.75,157.33 72.38,169.82 72.38,194.80 50.75,207.28 29.12,194.80 29.12,169.82" aria-label="Katavi"/>
+    <text class="label" x="50.75" y="182.31">RK</text>
+  </g>
+  <g class="state" data-state="KM">
+    <title>Kigoma</title>
+    <polygon class="tile" points="29.12,119.87 50.75,132.36 50.75,157.33 29.12,169.82 7.49,157.33 7.49,132.36" aria-label="Kigoma"/>
+    <text class="label" x="29.12" y="144.85">KM</text>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+// Field sizing utilities — Tailwind v4 default scale
+
+$field-sizings: (('content', content), ('fixed', fixed));
+
+@each $name, $value in $field-sizings {
+  .field-sizing-#{$name} {
+    field-sizing: $value;
+  }
+}

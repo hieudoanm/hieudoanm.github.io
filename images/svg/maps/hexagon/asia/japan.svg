@@ -1,0 +1,246 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 364.51 351.14" width="364.51" height="351.14" role="img" aria-labelledby="japan-title japan-desc">
+  <title id="japan-title">Japan hex map</title>
+  <desc id="japan-desc">Hexagon map with 47 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 1.45; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 7.16 5.11; }
+    .label { fill: #52525b; font: 600 5.80px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="OKI">
+    <title>Okinawa</title>
+    <polygon class="tile inset" points="344.64,235.23 359.40,243.75 359.40,260.80 344.64,269.32 329.88,260.80 329.88,243.75" aria-label="Okinawa"/>
+    <text class="label" x="344.64" y="252.27">OKI</text>
+  </g>
+  <g class="state" data-state="HK">
+    <title>Hokkaidō</title>
+    <polygon class="tile inset" points="329.88,5.11 344.64,13.64 344.64,30.68 329.88,39.20 315.11,30.68 315.11,13.64" aria-label="Hokkaidō"/>
+    <text class="label" x="329.88" y="22.16">HK</text>
+  </g>
+  <g class="state" data-state="IW">
+    <title>Iwate</title>
+    <polygon class="tile" points="315.11,81.82 329.88,90.34 329.88,107.39 315.11,115.91 300.35,107.39 300.35,90.34" aria-label="Iwate"/>
+    <text class="label" x="315.11" y="98.86">IW</text>
+  </g>
+  <g class="state" data-state="TC">
+    <title>Tochigi</title>
+    <polygon class="tile" points="315.11,132.96 329.88,141.48 329.88,158.52 315.11,167.05 300.35,158.52 300.35,141.48" aria-label="Tochigi"/>
+    <text class="label" x="315.11" y="150.00">TC</text>
+  </g>
+  <g class="state" data-state="AO">
+    <title>Aomori</title>
+    <polygon class="tile" points="300.35,56.25 315.11,64.77 315.11,81.82 300.35,90.34 285.59,81.82 285.59,64.77" aria-label="Aomori"/>
+    <text class="label" x="300.35" y="73.30">AO</text>
+  </g>
+  <g class="state" data-state="MG">
+    <title>Miyagi</title>
+    <polygon class="tile" points="300.35,107.39 315.11,115.91 315.11,132.96 300.35,141.48 285.59,132.96 285.59,115.91" aria-label="Miyagi"/>
+    <text class="label" x="300.35" y="124.43">MG</text>
+  </g>
+  <g class="state" data-state="IB">
+    <title>Ibaraki</title>
+    <polygon class="tile" points="300.35,158.52 315.11,167.05 315.11,184.09 300.35,192.62 285.59,184.09 285.59,167.05" aria-label="Ibaraki"/>
+    <text class="label" x="300.35" y="175.57">IB</text>
+  </g>
+  <g class="state" data-state="KN">
+    <title>Kanagawa</title>
+    <polygon class="tile" points="300.35,209.66 315.11,218.18 315.11,235.23 300.35,243.75 285.59,235.23 285.59,218.18" aria-label="Kanagawa"/>
+    <text class="label" x="300.35" y="226.71">KN</text>
+  </g>
+  <g class="state" data-state="KAG">
+    <title>Kagoshima</title>
+    <polygon class="tile inset" points="300.35,260.80 315.11,269.32 315.11,286.37 300.35,294.89 285.59,286.37 285.59,269.32" aria-label="Kagoshima"/>
+    <text class="label" x="300.35" y="277.84">KAG</text>
+  </g>
+  <g class="state" data-state="AK">
+    <title>Akita</title>
+    <polygon class="tile" points="285.59,81.82 300.35,90.34 300.35,107.39 285.59,115.91 270.83,107.39 270.83,90.34" aria-label="Akita"/>
+    <text class="label" x="285.59" y="98.86">AK</text>
+  </g>
+  <g class="state" data-state="FS">
+    <title>Fukushima</title>
+    <polygon class="tile" points="285.59,132.96 300.35,141.48 300.35,158.52 285.59,167.05 270.83,158.52 270.83,141.48" aria-label="Fukushima"/>
+    <text class="label" x="285.59" y="150.00">FS</text>
+  </g>
+  <g class="state" data-state="CH">
+    <title>Chiba</title>
+    <polygon class="tile" points="285.59,184.09 300.35,192.62 300.35,209.66 285.59,218.18 270.83,209.66 270.83,192.62" aria-label="Chiba"/>
+    <text class="label" x="285.59" y="201.14">CH</text>
+  </g>
+  <g class="state" data-state="YT">
+    <title>Yamagata</title>
+    <polygon class="tile" points="270.83,107.39 285.59,115.91 285.59,132.96 270.83,141.48 256.07,132.96 256.07,115.91" aria-label="Yamagata"/>
+    <text class="label" x="270.83" y="124.43">YT</text>
+  </g>
+  <g class="state" data-state="GUN">
+    <title>Gunma</title>
+    <polygon class="tile" points="270.83,158.52 285.59,167.05 285.59,184.09 270.83,192.62 256.07,184.09 256.07,167.05" aria-label="Gunma"/>
+    <text class="label" x="270.83" y="175.57">GUN</text>
+  </g>
+  <g class="state" data-state="TK">
+    <title>Tokyo</title>
+    <polygon class="tile" points="270.83,209.66 285.59,218.18 285.59,235.23 270.83,243.75 256.07,235.23 256.07,218.18" aria-label="Tokyo"/>
+    <text class="label" x="270.83" y="226.71">TK</text>
+  </g>
+  <g class="state" data-state="NI">
+    <title>Niigata</title>
+    <polygon class="tile" points="256.07,132.96 270.83,141.48 270.83,158.52 256.07,167.05 241.30,158.52 241.30,141.48" aria-label="Niigata"/>
+    <text class="label" x="256.07" y="150.00">NI</text>
+  </g>
+  <g class="state" data-state="ST">
+    <title>Saitama</title>
+    <polygon class="tile" points="256.07,184.09 270.83,192.62 270.83,209.66 256.07,218.18 241.30,209.66 241.30,192.62" aria-label="Saitama"/>
+    <text class="label" x="256.07" y="201.14">ST</text>
+  </g>
+  <g class="state" data-state="NAG">
+    <title>Nagasaki</title>
+    <polygon class="tile inset" points="256.07,286.37 270.83,294.89 270.83,311.93 256.07,320.46 241.30,311.93 241.30,294.89" aria-label="Nagasaki"/>
+    <text class="label" x="256.07" y="303.41">NAG</text>
+  </g>
+  <g class="state" data-state="NN">
+    <title>Nagano</title>
+    <polygon class="tile" points="241.30,158.52 256.07,167.05 256.07,184.09 241.30,192.62 226.54,184.09 226.54,167.05" aria-label="Nagano"/>
+    <text class="label" x="241.30" y="175.57">NN</text>
+  </g>
+  <g class="state" data-state="YN">
+    <title>Yamanashi</title>
+    <polygon class="tile" points="241.30,209.66 256.07,218.18 256.07,235.23 241.30,243.75 226.54,235.23 226.54,218.18" aria-label="Yamanashi"/>
+    <text class="label" x="241.30" y="226.71">YN</text>
+  </g>
+  <g class="state" data-state="GF">
+    <title>Gifu</title>
+    <polygon class="tile" points="226.54,184.09 241.30,192.62 241.30,209.66 226.54,218.18 211.78,209.66 211.78,192.62" aria-label="Gifu"/>
+    <text class="label" x="226.54" y="201.14">GF</text>
+  </g>
+  <g class="state" data-state="SZ">
+    <title>Shizuoka</title>
+    <polygon class="tile" points="226.54,235.23 241.30,243.75 241.30,260.80 226.54,269.32 211.78,260.80 211.78,243.75" aria-label="Shizuoka"/>
+    <text class="label" x="226.54" y="252.27">SZ</text>
+  </g>
+  <g class="state" data-state="TY">
+    <title>Toyama</title>
+    <polygon class="tile" points="211.78,158.52 226.54,167.05 226.54,184.09 211.78,192.62 197.02,184.09 197.02,167.05" aria-label="Toyama"/>
+    <text class="label" x="211.78" y="175.57">TY</text>
+  </g>
+  <g class="state" data-state="AI">
+    <title>Aichi</title>
+    <polygon class="tile" points="211.78,209.66 226.54,218.18 226.54,235.23 211.78,243.75 197.02,235.23 197.02,218.18" aria-label="Aichi"/>
+    <text class="label" x="211.78" y="226.71">AI</text>
+  </g>
+  <g class="state" data-state="MZ">
+    <title>Miyazaki</title>
+    <polygon class="tile inset" points="211.78,311.93 226.54,320.46 226.54,337.50 211.78,346.03 197.02,337.50 197.02,320.46" aria-label="Miyazaki"/>
+    <text class="label" x="211.78" y="328.98">MZ</text>
+  </g>
+  <g class="state" data-state="FI">
+    <title>Fukui</title>
+    <polygon class="tile" points="197.02,184.09 211.78,192.62 211.78,209.66 197.02,218.18 182.26,209.66 182.26,192.62" aria-label="Fukui"/>
+    <text class="label" x="197.02" y="201.14">FI</text>
+  </g>
+  <g class="state" data-state="ME">
+    <title>Mie</title>
+    <polygon class="tile" points="197.02,235.23 211.78,243.75 211.78,260.80 197.02,269.32 182.26,260.80 182.26,243.75" aria-label="Mie"/>
+    <text class="label" x="197.02" y="252.27">ME</text>
+  </g>
+  <g class="state" data-state="IS">
+    <title>Ishikawa</title>
+    <polygon class="tile" points="182.26,158.52 197.02,167.05 197.02,184.09 182.26,192.62 167.49,184.09 167.49,167.05" aria-label="Ishikawa"/>
+    <text class="label" x="182.26" y="175.57">IS</text>
+  </g>
+  <g class="state" data-state="SH">
+    <title>Shiga</title>
+    <polygon class="tile" points="182.26,209.66 197.02,218.18 197.02,235.23 182.26,243.75 167.49,235.23 167.49,218.18" aria-label="Shiga"/>
+    <text class="label" x="182.26" y="226.71">SH</text>
+  </g>
+  <g class="state" data-state="WK">
+    <title>Wakayama</title>
+    <polygon class="tile" points="182.26,260.80 197.02,269.32 197.02,286.37 182.26,294.89 167.49,286.37 167.49,269.32" aria-label="Wakayama"/>
+    <text class="label" x="182.26" y="277.84">WK</text>
+  </g>
+  <g class="state" data-state="SG">
+    <title>Saga</title>
+    <polygon class="tile inset" points="182.26,107.39 197.02,115.91 197.02,132.96 182.26,141.48 167.49,132.96 167.49,115.91" aria-label="Saga"/>
+    <text class="label" x="182.26" y="124.43">SG</text>
+  </g>
+  <g class="state" data-state="KY">
+    <title>Kyōto</title>
+    <polygon class="tile" points="167.49,184.09 182.26,192.62 182.26,209.66 167.49,218.18 152.73,209.66 152.73,192.62" aria-label="Kyōto"/>
+    <text class="label" x="167.49" y="201.14">KY</text>
+  </g>
+  <g class="state" data-state="NR">
+    <title>Nara</title>
+    <polygon class="tile" points="167.49,235.23 182.26,243.75 182.26,260.80 167.49,269.32 152.73,260.80 152.73,243.75" aria-label="Nara"/>
+    <text class="label" x="167.49" y="252.27">NR</text>
+  </g>
+  <g class="state" data-state="HG">
+    <title>Hyōgo</title>
+    <polygon class="tile" points="152.73,209.66 167.49,218.18 167.49,235.23 152.73,243.75 137.97,235.23 137.97,218.18" aria-label="Hyōgo"/>
+    <text class="label" x="152.73" y="226.71">HG</text>
+  </g>
+  <g class="state" data-state="KC">
+    <title>Kōchi</title>
+    <polygon class="tile inset" points="152.73,311.93 167.49,320.46 167.49,337.50 152.73,346.03 137.97,337.50 137.97,320.46" aria-label="Kōchi"/>
+    <text class="label" x="152.73" y="328.98">KC</text>
+  </g>
+  <g class="state" data-state="OS">
+    <title>Ōsaka</title>
+    <polygon class="tile" points="137.97,184.09 152.73,192.62 152.73,209.66 137.97,218.18 123.21,209.66 123.21,192.62" aria-label="Ōsaka"/>
+    <text class="label" x="137.97" y="201.14">OS</text>
+  </g>
+  <g class="state" data-state="OY">
+    <title>Okayama</title>
+    <polygon class="tile" points="137.97,235.23 152.73,243.75 152.73,260.80 137.97,269.32 123.21,260.80 123.21,243.75" aria-label="Okayama"/>
+    <text class="label" x="137.97" y="252.27">OY</text>
+  </g>
+  <g class="state" data-state="KM">
+    <title>Kumamoto</title>
+    <polygon class="tile inset" points="137.97,132.96 152.73,141.48 152.73,158.52 137.97,167.05 123.21,158.52 123.21,141.48" aria-label="Kumamoto"/>
+    <text class="label" x="137.97" y="150.00">KM</text>
+  </g>
+  <g class="state" data-state="TT">
+    <title>Tottori</title>
+    <polygon class="tile" points="123.21,209.66 137.97,218.18 137.97,235.23 123.21,243.75 108.45,235.23 108.45,218.18" aria-label="Tottori"/>
+    <text class="label" x="123.21" y="226.71">TT</text>
+  </g>
+  <g class="state" data-state="HS">
+    <title>Hiroshima</title>
+    <polygon class="tile" points="108.45,235.23 123.21,243.75 123.21,260.80 108.45,269.32 93.69,260.80 93.69,243.75" aria-label="Hiroshima"/>
+    <text class="label" x="108.45" y="252.27">HS</text>
+  </g>
+  <g class="state" data-state="TS">
+    <title>Tokushima</title>
+    <polygon class="tile inset" points="108.45,286.37 123.21,294.89 123.21,311.93 108.45,320.46 93.69,311.93 93.69,294.89" aria-label="Tokushima"/>
+    <text class="label" x="108.45" y="303.41">TS</text>
+  </g>
+  <g class="state" data-state="SM">
+    <title>Shimane</title>
+    <polygon class="tile" points="93.69,209.66 108.45,218.18 108.45,235.23 93.69,243.75 78.92,235.23 78.92,218.18" aria-label="Shimane"/>
+    <text class="label" x="93.69" y="226.71">SM</text>
+  </g>
+  <g class="state" data-state="FO">
+    <title>Fukuoka</title>
+    <polygon class="tile inset" points="93.69,158.52 108.45,167.05 108.45,184.09 93.69,192.62 78.92,184.09 78.92,167.05" aria-label="Fukuoka"/>
+    <text class="label" x="93.69" y="175.57">FO</text>
+  </g>
+  <g class="state" data-state="YC">
+    <title>Yamaguchi</title>
+    <polygon class="tile" points="78.92,235.23 93.69,243.75 93.69,260.80 78.92,269.32 64.16,260.80 64.16,243.75" aria-label="Yamaguchi"/>
+    <text class="label" x="78.92" y="252.27">YC</text>
+  </g>
+  <g class="state" data-state="KG">
+    <title>Kagawa</title>
+    <polygon class="tile inset" points="49.40,286.37 64.16,294.89 64.16,311.93 49.40,320.46 34.64,311.93 34.64,294.89" aria-label="Kagawa"/>
+    <text class="label" x="49.40" y="303.41">KG</text>
+  </g>
+  <g class="state" data-state="EH">
+    <title>Ehime</title>
+    <polygon class="tile inset" points="49.40,184.09 64.16,192.62 64.16,209.66 49.40,218.18 34.64,209.66 34.64,192.62" aria-label="Ehime"/>
+    <text class="label" x="49.40" y="201.14">EH</text>
+  </g>
+  <g class="state" data-state="OT">
+    <title>Ōita</title>
+    <polygon class="tile inset" points="19.88,235.23 34.64,243.75 34.64,260.80 19.88,269.32 5.11,260.80 5.11,243.75" aria-label="Ōita"/>
+    <text class="label" x="19.88" y="252.27">OT</text>
+  </g>
+</svg>

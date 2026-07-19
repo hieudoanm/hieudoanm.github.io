@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360.35 188.26" width="360.35" height="188.26" role="img" aria-labelledby="mongolia-title mongolia-desc">
+  <title id="mongolia-title">Mongolia hex map</title>
+  <desc id="mongolia-desc">Hexagon map with 22 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.25; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 11.14 7.95; }
+    .label { fill: #52525b; font: 600 9.02px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="UB">
+    <title>Ulaanbaatar</title>
+    <polygon class="tile" points="329.44,47.73 352.40,60.99 352.40,87.50 329.44,100.76 306.47,87.50 306.47,60.99" aria-label="Ulaanbaatar"/>
+    <text class="label" x="329.44" y="74.24">UB</text>
+  </g>
+  <g class="state" data-state="GS">
+    <title>Govĭ-Sümber</title>
+    <polygon class="tile" points="306.47,7.95 329.44,21.21 329.44,47.73 306.47,60.99 283.51,47.73 283.51,21.21" aria-label="Govĭ-Sümber"/>
+    <text class="label" x="306.47" y="34.47">GS</text>
+  </g>
+  <g class="state" data-state="DD">
+    <title>Dornod</title>
+    <polygon class="tile" points="306.47,87.50 329.44,100.76 329.44,127.27 306.47,140.53 283.51,127.27 283.51,100.76" aria-label="Dornod"/>
+    <text class="label" x="306.47" y="114.02">DD</text>
+  </g>
+  <g class="state" data-state="HN">
+    <title>Hentiy</title>
+    <polygon class="tile" points="283.51,47.73 306.47,60.99 306.47,87.50 283.51,100.76 260.55,87.50 260.55,60.99" aria-label="Hentiy"/>
+    <text class="label" x="283.51" y="74.24">HN</text>
+  </g>
+  <g class="state" data-state="DA">
+    <title>Darhan-Uul</title>
+    <polygon class="tile" points="260.55,7.95 283.51,21.21 283.51,47.73 260.55,60.99 237.58,47.73 237.58,21.21" aria-label="Darhan-Uul"/>
+    <text class="label" x="260.55" y="34.47">DA</text>
+  </g>
+  <g class="state" data-state="SB">
+    <title>Sühbaatar</title>
+    <polygon class="tile" points="260.55,87.50 283.51,100.76 283.51,127.27 260.55,140.53 237.58,127.27 237.58,100.76" aria-label="Sühbaatar"/>
+    <text class="label" x="260.55" y="114.02">SB</text>
+  </g>
+  <g class="state" data-state="SL">
+    <title>Selenge</title>
+    <polygon class="tile" points="237.58,47.73 260.55,60.99 260.55,87.50 237.58,100.76 214.62,87.50 214.62,60.99" aria-label="Selenge"/>
+    <text class="label" x="237.58" y="74.24">SL</text>
+  </g>
+  <g class="state" data-state="DG">
+    <title>Dornogovi</title>
+    <polygon class="tile" points="237.58,127.27 260.55,140.53 260.55,167.05 237.58,180.30 214.62,167.05 214.62,140.53" aria-label="Dornogovi"/>
+    <text class="label" x="237.58" y="153.79">DG</text>
+  </g>
+  <g class="state" data-state="ER">
+    <title>Orhon</title>
+    <polygon class="tile" points="214.62,7.95 237.58,21.21 237.58,47.73 214.62,60.99 191.66,47.73 191.66,21.21" aria-label="Orhon"/>
+    <text class="label" x="214.62" y="34.47">ER</text>
+  </g>
+  <g class="state" data-state="DU">
+    <title>Dundgovi</title>
+    <polygon class="tile" points="214.62,87.50 237.58,100.76 237.58,127.27 214.62,140.53 191.66,127.27 191.66,100.76" aria-label="Dundgovi"/>
+    <text class="label" x="214.62" y="114.02">DU</text>
+  </g>
+  <g class="state" data-state="TO">
+    <title>Töv</title>
+    <polygon class="tile" points="191.66,47.73 214.62,60.99 214.62,87.50 191.66,100.76 168.70,87.50 168.70,60.99" aria-label="Töv"/>
+    <text class="label" x="191.66" y="74.24">TO</text>
+  </g>
+  <g class="state" data-state="OG">
+    <title>Ömnögovi</title>
+    <polygon class="tile" points="191.66,127.27 214.62,140.53 214.62,167.05 191.66,180.30 168.70,167.05 168.70,140.53" aria-label="Ömnögovi"/>
+    <text class="label" x="191.66" y="153.79">OG</text>
+  </g>
+  <g class="state" data-state="BU">
+    <title>Bulgan</title>
+    <polygon class="tile" points="168.70,7.95 191.66,21.21 191.66,47.73 168.70,60.99 145.73,47.73 145.73,21.21" aria-label="Bulgan"/>
+    <text class="label" x="168.70" y="34.47">BU</text>
+  </g>
+  <g class="state" data-state="OH">
+    <title>Övörhangay</title>
+    <polygon class="tile" points="168.70,87.50 191.66,100.76 191.66,127.27 168.70,140.53 145.73,127.27 145.73,100.76" aria-label="Övörhangay"/>
+    <text class="label" x="168.70" y="114.02">OH</text>
+  </g>
+  <g class="state" data-state="AR">
+    <title>Arhangay</title>
+    <polygon class="tile" points="145.73,47.73 168.70,60.99 168.70,87.50 145.73,100.76 122.77,87.50 122.77,60.99" aria-label="Arhangay"/>
+    <text class="label" x="145.73" y="74.24">AR</text>
+  </g>
+  <g class="state" data-state="HG">
+    <title>Hövsgöl</title>
+    <polygon class="tile" points="122.77,7.95 145.73,21.21 145.73,47.73 122.77,60.99 99.81,47.73 99.81,21.21" aria-label="Hövsgöl"/>
+    <text class="label" x="122.77" y="34.47">HG</text>
+  </g>
+  <g class="state" data-state="BH">
+    <title>Bayanhongor</title>
+    <polygon class="tile" points="122.77,87.50 145.73,100.76 145.73,127.27 122.77,140.53 99.81,127.27 99.81,100.76" aria-label="Bayanhongor"/>
+    <text class="label" x="122.77" y="114.02">BH</text>
+  </g>
+  <g class="state" data-state="DZ">
+    <title>Dzavhan</title>
+    <polygon class="tile" points="99.81,47.73 122.77,60.99 122.77,87.50 99.81,100.76 76.84,87.50 76.84,60.99" aria-label="Dzavhan"/>
+    <text class="label" x="99.81" y="74.24">DZ</text>
+  </g>
+  <g class="state" data-state="UV">
+    <title>Uvs</title>
+    <polygon class="tile" points="76.84,7.95 99.81,21.21 99.81,47.73 76.84,60.99 53.88,47.73 53.88,21.21" aria-label="Uvs"/>
+    <text class="label" x="76.84" y="34.47">UV</text>
+  </g>
+  <g class="state" data-state="GA">
+    <title>Govi-Altay</title>
+    <polygon class="tile" points="76.84,87.50 99.81,100.76 99.81,127.27 76.84,140.53 53.88,127.27 53.88,100.76" aria-label="Govi-Altay"/>
+    <text class="label" x="76.84" y="114.02">GA</text>
+  </g>
+  <g class="state" data-state="HD">
+    <title>Hovd</title>
+    <polygon class="tile" points="53.88,47.73 76.84,60.99 76.84,87.50 53.88,100.76 30.92,87.50 30.92,60.99" aria-label="Hovd"/>
+    <text class="label" x="53.88" y="74.24">HD</text>
+  </g>
+  <g class="state" data-state="BO">
+    <title>Bayan-Ölgiy</title>
+    <polygon class="tile" points="30.92,7.95 53.88,21.21 53.88,47.73 30.92,60.99 7.95,47.73 7.95,21.21" aria-label="Bayan-Ölgiy"/>
+    <text class="label" x="30.92" y="34.47">BO</text>
+  </g>
+</svg>

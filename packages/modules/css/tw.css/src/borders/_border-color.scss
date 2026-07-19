@@ -1,0 +1,13 @@
+@use '../colors/colors' as colors;
+
+// Border color utilities — core colors
+
+@each $class, $color in colors.$palette {
+  .border-#{$class} {
+    border-color: $color;
+  }
+}
+
+.border {
+  border-color: #e5e7eb;
+}

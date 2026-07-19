@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285.40 292.40" width="285.40" height="292.40" role="img" aria-labelledby="paraguay-title paraguay-desc">
+  <title id="paraguay-title">Paraguay hex map</title>
+  <desc id="paraguay-desc">Hexagon map with 18 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.89; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 14.28 10.20; }
+    .label { fill: #52525b; font: 600 11.56px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="AA">
+    <title>Alto Paraná</title>
+    <polygon class="tile" points="245.76,112.20 275.20,129.20 275.20,163.20 245.76,180.20 216.31,163.20 216.31,129.20" aria-label="Alto Paraná"/>
+    <text class="label" x="245.76" y="146.20">AA</text>
+  </g>
+  <g class="state" data-state="CY">
+    <title>Canindeyú</title>
+    <polygon class="tile" points="216.31,61.20 245.76,78.20 245.76,112.20 216.31,129.20 186.87,112.20 186.87,78.20" aria-label="Canindeyú"/>
+    <text class="label" x="216.31" y="95.20">CY</text>
+  </g>
+  <g class="state" data-state="CZ">
+    <title>Caazapá</title>
+    <polygon class="tile" points="216.31,163.20 245.76,180.20 245.76,214.20 216.31,231.20 186.87,214.20 186.87,180.20" aria-label="Caazapá"/>
+    <text class="label" x="216.31" y="197.20">CZ</text>
+  </g>
+  <g class="state" data-state="AM">
+    <title>Amambay</title>
+    <polygon class="tile" points="186.87,10.20 216.31,27.20 216.31,61.20 186.87,78.20 157.42,61.20 157.42,27.20" aria-label="Amambay"/>
+    <text class="label" x="186.87" y="44.20">AM</text>
+  </g>
+  <g class="state" data-state="CG">
+    <title>Caaguazú</title>
+    <polygon class="tile" points="186.87,112.20 216.31,129.20 216.31,163.20 186.87,180.20 157.42,163.20 157.42,129.20" aria-label="Caaguazú"/>
+    <text class="label" x="186.87" y="146.20">CG</text>
+  </g>
+  <g class="state" data-state="IT">
+    <title>Itapúa</title>
+    <polygon class="tile" points="186.87,214.20 216.31,231.20 216.31,265.20 186.87,282.20 157.42,265.20 157.42,231.20" aria-label="Itapúa"/>
+    <text class="label" x="186.87" y="248.20">IT</text>
+  </g>
+  <g class="state" data-state="SP">
+    <title>San Pedro</title>
+    <polygon class="tile" points="157.42,61.20 186.87,78.20 186.87,112.20 157.42,129.20 127.98,112.20 127.98,78.20" aria-label="San Pedro"/>
+    <text class="label" x="157.42" y="95.20">SP</text>
+  </g>
+  <g class="state" data-state="GU">
+    <title>Guairá</title>
+    <polygon class="tile" points="157.42,163.20 186.87,180.20 186.87,214.20 157.42,231.20 127.98,214.20 127.98,180.20" aria-label="Guairá"/>
+    <text class="label" x="157.42" y="197.20">GU</text>
+  </g>
+  <g class="state" data-state="CN">
+    <title>Concepción</title>
+    <polygon class="tile" points="127.98,10.20 157.42,27.20 157.42,61.20 127.98,78.20 98.53,61.20 98.53,27.20" aria-label="Concepción"/>
+    <text class="label" x="127.98" y="44.20">CN</text>
+  </g>
+  <g class="state" data-state="CR">
+    <title>Cordillera</title>
+    <polygon class="tile" points="127.98,112.20 157.42,129.20 157.42,163.20 127.98,180.20 98.53,163.20 98.53,129.20" aria-label="Cordillera"/>
+    <text class="label" x="127.98" y="146.20">CR</text>
+  </g>
+  <g class="state" data-state="MI">
+    <title>Misiones</title>
+    <polygon class="tile" points="127.98,214.20 157.42,231.20 157.42,265.20 127.98,282.20 98.53,265.20 98.53,231.20" aria-label="Misiones"/>
+    <text class="label" x="127.98" y="248.20">MI</text>
+  </g>
+  <g class="state" data-state="PH">
+    <title>Presidente Hayes</title>
+    <polygon class="tile" points="98.53,61.20 127.98,78.20 127.98,112.20 98.53,129.20 69.09,112.20 69.09,78.20" aria-label="Presidente Hayes"/>
+    <text class="label" x="98.53" y="95.20">PH</text>
+  </g>
+  <g class="state" data-state="PG">
+    <title>Paraguarí</title>
+    <polygon class="tile" points="98.53,163.20 127.98,180.20 127.98,214.20 98.53,231.20 69.09,214.20 69.09,180.20" aria-label="Paraguarí"/>
+    <text class="label" x="98.53" y="197.20">PG</text>
+  </g>
+  <g class="state" data-state="AG">
+    <title>Alto Paraguay</title>
+    <polygon class="tile" points="69.09,10.20 98.53,27.20 98.53,61.20 69.09,78.20 39.64,61.20 39.64,27.20" aria-label="Alto Paraguay"/>
+    <text class="label" x="69.09" y="44.20">AG</text>
+  </g>
+  <g class="state" data-state="ASU">
+    <title>Asunción</title>
+    <polygon class="tile" points="69.09,112.20 98.53,129.20 98.53,163.20 69.09,180.20 39.64,163.20 39.64,129.20" aria-label="Asunción"/>
+    <text class="label" x="69.09" y="146.20">ASU</text>
+  </g>
+  <g class="state" data-state="NE">
+    <title>Ñeembucú</title>
+    <polygon class="tile" points="69.09,214.20 98.53,231.20 98.53,265.20 69.09,282.20 39.64,265.20 39.64,231.20" aria-label="Ñeembucú"/>
+    <text class="label" x="69.09" y="248.20">NE</text>
+  </g>
+  <g class="state" data-state="BQ">
+    <title>Boquerón</title>
+    <polygon class="tile" points="39.64,61.20 69.09,78.20 69.09,112.20 39.64,129.20 10.20,112.20 10.20,78.20" aria-label="Boquerón"/>
+    <text class="label" x="39.64" y="95.20">BQ</text>
+  </g>
+  <g class="state" data-state="CE">
+    <title>Central</title>
+    <polygon class="tile" points="39.64,163.20 69.09,180.20 69.09,214.20 39.64,231.20 10.20,214.20 10.20,180.20" aria-label="Central"/>
+    <text class="label" x="39.64" y="197.20">CE</text>
+  </g>
+</svg>

@@ -1,0 +1,14 @@
+// Background clip utilities — Tailwind v3 default scale
+
+$background-clips: (
+  ('border', border-box),
+  ('padding', padding-box),
+  ('content', content-box),
+  ('text', text)
+);
+
+@each $name, $value in $background-clips {
+  .bg-clip-#{$name} {
+    background-clip: $value;
+  }
+}

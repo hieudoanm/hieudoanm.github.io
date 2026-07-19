@@ -1,0 +1,18 @@
+// Vertical align utilities — Tailwind v3 default scale
+
+$vertical-aligns: (
+  ('baseline', baseline),
+  ('top', top),
+  ('middle', middle),
+  ('bottom', bottom),
+  ('text-top', text-top),
+  ('text-bottom', text-bottom),
+  ('sub', sub),
+  ('super', super)
+);
+
+@each $name, $value in $vertical-aligns {
+  .align-#{$name} {
+    vertical-align: $value;
+  }
+}

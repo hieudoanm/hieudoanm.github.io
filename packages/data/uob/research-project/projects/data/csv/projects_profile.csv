@@ -1,0 +1,17 @@
+Profile type,Value,Priority,Notes
+interest,"AI, machine learning & data science",4,Primary interest
+interest,"Cognition, attention & decision-making",2,"Secondary interest, outside the top 3"
+interest,"Language, reading & communication",5,Primary interest
+interest,Memory & learning,2,"Secondary interest, outside the top 3"
+interest,Neuroscience & brain imaging,3,Primary interest
+method,Computational modelling,5,Primary method
+method,Neuroimaging & electrophysiology,5,Primary method
+method,Software & tool development,5,Primary method
+programme,MSc Cognitive Neuroimaging & Data Science - COMPUTATIONAL neuroscience,,Enter your exact programme to add programme fit to the ranking
+current skill,Python/programming,,Optional self-rating: 1-5
+current skill,Statistics/data analysis,,Optional self-rating: 1-5
+current skill,Qualitative research,,Optional self-rating: 1-5
+current skill,Neuroimaging/EEG/MEG,,Optional self-rating: 1-5
+skill goal,Software development,,Optional: add a priority 1-5 for skills you want to practise
+project type,,,"Optional: add Quantitative, Qualitative, or Mixed Methods"
+exclusion,,,Optional: enter a category or project type to exclude

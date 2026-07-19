@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 167.62 241.40" width="167.62" height="241.40" role="img" aria-labelledby="micronesia-title micronesia-desc">
+  <title id="micronesia-title">Micronesia hex map</title>
+  <desc id="micronesia-desc">Hexagon map with 4 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.89; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 14.28 10.20; }
+    .label { fill: #52525b; font: 600 11.56px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="KSA">
+    <title>Kosrae</title>
+    <polygon class="tile" points="127.98,112.20 157.42,129.20 157.42,163.20 127.98,180.20 98.53,163.20 98.53,129.20" aria-label="Kosrae"/>
+    <text class="label" x="127.98" y="146.20">KSA</text>
+  </g>
+  <g class="state" data-state="YAP">
+    <title>Yap</title>
+    <polygon class="tile inset" points="127.98,10.20 157.42,27.20 157.42,61.20 127.98,78.20 98.53,61.20 98.53,27.20" aria-label="Yap"/>
+    <text class="label" x="127.98" y="44.20">YAP</text>
+  </g>
+  <g class="state" data-state="PNI">
+    <title>Pohnpei</title>
+    <polygon class="tile inset" points="39.64,61.20 69.09,78.20 69.09,112.20 39.64,129.20 10.20,112.20 10.20,78.20" aria-label="Pohnpei"/>
+    <text class="label" x="39.64" y="95.20">PNI</text>
+  </g>
+  <g class="state" data-state="TRK">
+    <title>Chuuk</title>
+    <polygon class="tile inset" points="39.64,163.20 69.09,180.20 69.09,214.20 39.64,231.20 10.20,214.20 10.20,180.20" aria-label="Chuuk"/>
+    <text class="label" x="39.64" y="197.20">TRK</text>
+  </g>
+</svg>

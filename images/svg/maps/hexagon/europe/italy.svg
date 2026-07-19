@@ -1,0 +1,561 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 367.06 299.11" width="367.06" height="299.11" role="img" aria-labelledby="italy-title italy-desc">
+  <title id="italy-title">Italy hex map</title>
+  <desc id="italy-desc">Hexagon map with 110 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 0.96; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 4.72 3.37; }
+    .label { fill: #52525b; font: 600 3.82px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="SR">
+    <title>Siracusa</title>
+    <polygon class="tile inset" points="353.95,222.65 363.69,228.27 363.69,239.51 353.95,245.14 344.21,239.51 344.21,228.27" aria-label="Siracusa"/>
+    <text class="label" x="353.95" y="233.89">SR</text>
+  </g>
+  <g class="state" data-state="TP">
+    <title>Trapani</title>
+    <polygon class="tile inset" points="334.47,256.38 344.21,262.00 344.21,273.25 334.47,278.87 324.73,273.25 324.73,262.00" aria-label="Trapani"/>
+    <text class="label" x="334.47" y="267.62">TP</text>
+  </g>
+  <g class="state" data-state="CL">
+    <title>Caltanissetta</title>
+    <polygon class="tile inset" points="334.47,188.91 344.21,194.53 344.21,205.78 334.47,211.40 324.73,205.78 324.73,194.53" aria-label="Caltanissetta"/>
+    <text class="label" x="334.47" y="200.16">CL</text>
+  </g>
+  <g class="state" data-state="LE">
+    <title>Lecce</title>
+    <polygon class="tile" points="315.00,222.65 324.73,228.27 324.73,239.51 315.00,245.14 305.26,239.51 305.26,228.27" aria-label="Lecce"/>
+    <text class="label" x="315.00" y="233.89">LE</text>
+  </g>
+  <g class="state" data-state="BR">
+    <title>Brindisi</title>
+    <polygon class="tile" points="305.26,205.78 315.00,211.40 315.00,222.65 305.26,228.27 295.52,222.65 295.52,211.40" aria-label="Brindisi"/>
+    <text class="label" x="305.26" y="217.02">BR</text>
+  </g>
+  <g class="state" data-state="AG">
+    <title>Agrigento</title>
+    <polygon class="tile inset" points="305.26,273.25 315.00,278.87 315.00,290.11 305.26,295.74 295.52,290.11 295.52,278.87" aria-label="Agrigento"/>
+    <text class="label" x="305.26" y="284.49">AG</text>
+  </g>
+  <g class="state" data-state="BA">
+    <title>Bari</title>
+    <polygon class="tile" points="295.52,188.91 305.26,194.53 305.26,205.78 295.52,211.40 285.78,205.78 285.78,194.53" aria-label="Bari"/>
+    <text class="label" x="295.52" y="200.16">BA</text>
+  </g>
+  <g class="state" data-state="TA">
+    <title>Taranto</title>
+    <polygon class="tile" points="295.52,222.65 305.26,228.27 305.26,239.51 295.52,245.14 285.78,239.51 285.78,228.27" aria-label="Taranto"/>
+    <text class="label" x="295.52" y="233.89">TA</text>
+  </g>
+  <g class="state" data-state="RG">
+    <title>Ragusa</title>
+    <polygon class="tile inset" points="295.52,155.18 305.26,160.80 305.26,172.04 295.52,177.67 285.78,172.04 285.78,160.80" aria-label="Ragusa"/>
+    <text class="label" x="295.52" y="166.42">RG</text>
+  </g>
+  <g class="state" data-state="MT">
+    <title>Matera</title>
+    <polygon class="tile" points="285.78,205.78 295.52,211.40 295.52,222.65 285.78,228.27 276.04,222.65 276.04,211.40" aria-label="Matera"/>
+    <text class="label" x="285.78" y="217.02">MT</text>
+  </g>
+  <g class="state" data-state="KR">
+    <title>Crotene</title>
+    <polygon class="tile" points="285.78,239.51 295.52,245.14 295.52,256.38 285.78,262.00 276.04,256.38 276.04,245.14" aria-label="Crotene"/>
+    <text class="label" x="285.78" y="250.76">KR</text>
+  </g>
+  <g class="state" data-state="BT">
+    <title>Barletta-Andria Trani</title>
+    <polygon class="tile" points="276.04,188.91 285.78,194.53 285.78,205.78 276.04,211.40 266.31,205.78 266.31,194.53" aria-label="Barletta-Andria Trani"/>
+    <text class="label" x="276.04" y="200.16">BT</text>
+  </g>
+  <g class="state" data-state="CS">
+    <title>Cosenza</title>
+    <polygon class="tile" points="276.04,222.65 285.78,228.27 285.78,239.51 276.04,245.14 266.31,239.51 266.31,228.27" aria-label="Cosenza"/>
+    <text class="label" x="276.04" y="233.89">CS</text>
+  </g>
+  <g class="state" data-state="FG">
+    <title>Foggia</title>
+    <polygon class="tile" points="266.31,172.04 276.04,177.67 276.04,188.91 266.31,194.53 256.57,188.91 256.57,177.67" aria-label="Foggia"/>
+    <text class="label" x="266.31" y="183.29">FG</text>
+  </g>
+  <g class="state" data-state="PZ">
+    <title>Potenza</title>
+    <polygon class="tile" points="266.31,205.78 276.04,211.40 276.04,222.65 266.31,228.27 256.57,222.65 256.57,211.40" aria-label="Potenza"/>
+    <text class="label" x="266.31" y="217.02">PZ</text>
+  </g>
+  <g class="state" data-state="CZ">
+    <title>Catanzaro</title>
+    <polygon class="tile" points="266.31,239.51 276.04,245.14 276.04,256.38 266.31,262.00 256.57,256.38 256.57,245.14" aria-label="Catanzaro"/>
+    <text class="label" x="266.31" y="250.76">CZ</text>
+  </g>
+  <g class="state" data-state="CT">
+    <title>Catania</title>
+    <polygon class="tile inset" points="266.31,273.25 276.04,278.87 276.04,290.11 266.31,295.74 256.57,290.11 256.57,278.87" aria-label="Catania"/>
+    <text class="label" x="266.31" y="284.49">CT</text>
+  </g>
+  <g class="state" data-state="AV">
+    <title>Avellino</title>
+    <polygon class="tile" points="256.57,188.91 266.31,194.53 266.31,205.78 256.57,211.40 246.83,205.78 246.83,194.53" aria-label="Avellino"/>
+    <text class="label" x="256.57" y="200.16">AV</text>
+  </g>
+  <g class="state" data-state="VV">
+    <title>Vibo Valentia</title>
+    <polygon class="tile" points="256.57,222.65 266.31,228.27 266.31,239.51 256.57,245.14 246.83,239.51 246.83,228.27" aria-label="Vibo Valentia"/>
+    <text class="label" x="256.57" y="233.89">VV</text>
+  </g>
+  <g class="state" data-state="CB">
+    <title>Campobasso</title>
+    <polygon class="tile" points="246.83,172.04 256.57,177.67 256.57,188.91 246.83,194.53 237.09,188.91 237.09,177.67" aria-label="Campobasso"/>
+    <text class="label" x="246.83" y="183.29">CB</text>
+  </g>
+  <g class="state" data-state="SA">
+    <title>Salerno</title>
+    <polygon class="tile" points="246.83,205.78 256.57,211.40 256.57,222.65 246.83,228.27 237.09,222.65 237.09,211.40" aria-label="Salerno"/>
+    <text class="label" x="246.83" y="217.02">SA</text>
+  </g>
+  <g class="state" data-state="CH">
+    <title>Chieti</title>
+    <polygon class="tile" points="237.09,155.18 246.83,160.80 246.83,172.04 237.09,177.67 227.35,172.04 227.35,160.80" aria-label="Chieti"/>
+    <text class="label" x="237.09" y="166.42">CH</text>
+  </g>
+  <g class="state" data-state="BN">
+    <title>Benevento</title>
+    <polygon class="tile" points="237.09,188.91 246.83,194.53 246.83,205.78 237.09,211.40 227.35,205.78 227.35,194.53" aria-label="Benevento"/>
+    <text class="label" x="237.09" y="200.16">BN</text>
+  </g>
+  <g class="state" data-state="RC">
+    <title>Reggio Calabria</title>
+    <polygon class="tile" points="237.09,222.65 246.83,228.27 246.83,239.51 237.09,245.14 227.35,239.51 227.35,228.27" aria-label="Reggio Calabria"/>
+    <text class="label" x="237.09" y="233.89">RC</text>
+  </g>
+  <g class="state" data-state="ME">
+    <title>Messina</title>
+    <polygon class="tile inset" points="237.09,256.38 246.83,262.00 246.83,273.25 237.09,278.87 227.35,273.25 227.35,262.00" aria-label="Messina"/>
+    <text class="label" x="237.09" y="267.62">ME</text>
+  </g>
+  <g class="state" data-state="PE">
+    <title>Pescara</title>
+    <polygon class="tile" points="227.35,138.31 237.09,143.93 237.09,155.18 227.35,160.80 217.61,155.18 217.61,143.93" aria-label="Pescara"/>
+    <text class="label" x="227.35" y="149.55">PE</text>
+  </g>
+  <g class="state" data-state="IS">
+    <title>Isernia</title>
+    <polygon class="tile" points="227.35,172.04 237.09,177.67 237.09,188.91 227.35,194.53 217.61,188.91 217.61,177.67" aria-label="Isernia"/>
+    <text class="label" x="227.35" y="183.29">IS</text>
+  </g>
+  <g class="state" data-state="NA">
+    <title>Napoli</title>
+    <polygon class="tile" points="227.35,205.78 237.09,211.40 237.09,222.65 227.35,228.27 217.61,222.65 217.61,211.40" aria-label="Napoli"/>
+    <text class="label" x="227.35" y="217.02">NA</text>
+  </g>
+  <g class="state" data-state="FM">
+    <title>Fermo</title>
+    <polygon class="tile" points="217.61,121.44 227.35,127.07 227.35,138.31 217.61,143.93 207.88,138.31 207.88,127.07" aria-label="Fermo"/>
+    <text class="label" x="217.61" y="132.69">FM</text>
+  </g>
+  <g class="state" data-state="AQ">
+    <title>L'Aquila</title>
+    <polygon class="tile" points="217.61,155.18 227.35,160.80 227.35,172.04 217.61,177.67 207.88,172.04 207.88,160.80" aria-label="L'Aquila"/>
+    <text class="label" x="217.61" y="166.42">AQ</text>
+  </g>
+  <g class="state" data-state="CE">
+    <title>Caserta</title>
+    <polygon class="tile" points="217.61,188.91 227.35,194.53 227.35,205.78 217.61,211.40 207.88,205.78 207.88,194.53" aria-label="Caserta"/>
+    <text class="label" x="217.61" y="200.16">CE</text>
+  </g>
+  <g class="state" data-state="TS">
+    <title>Trieste</title>
+    <polygon class="tile" points="207.88,37.11 217.61,42.73 217.61,53.97 207.88,59.60 198.14,53.97 198.14,42.73" aria-label="Trieste"/>
+    <text class="label" x="207.88" y="48.35">TS</text>
+  </g>
+  <g class="state" data-state="AN">
+    <title>Ancona</title>
+    <polygon class="tile" points="207.88,104.58 217.61,110.20 217.61,121.44 207.88,127.07 198.14,121.44 198.14,110.20" aria-label="Ancona"/>
+    <text class="label" x="207.88" y="115.82">AN</text>
+  </g>
+  <g class="state" data-state="AP">
+    <title>Ascoli Piceno</title>
+    <polygon class="tile" points="207.88,138.31 217.61,143.93 217.61,155.18 207.88,160.80 198.14,155.18 198.14,143.93" aria-label="Ascoli Piceno"/>
+    <text class="label" x="207.88" y="149.55">AP</text>
+  </g>
+  <g class="state" data-state="FR">
+    <title>Frosinone</title>
+    <polygon class="tile" points="207.88,172.04 217.61,177.67 217.61,188.91 207.88,194.53 198.14,188.91 198.14,177.67" aria-label="Frosinone"/>
+    <text class="label" x="207.88" y="183.29">FR</text>
+  </g>
+  <g class="state" data-state="EN">
+    <title>Enna</title>
+    <polygon class="tile inset" points="207.88,239.51 217.61,245.14 217.61,256.38 207.88,262.00 198.14,256.38 198.14,245.14" aria-label="Enna"/>
+    <text class="label" x="207.88" y="250.76">EN</text>
+  </g>
+  <g class="state" data-state="GO">
+    <title>Gorizia</title>
+    <polygon class="tile" points="198.14,20.24 207.88,25.86 207.88,37.11 198.14,42.73 188.40,37.11 188.40,25.86" aria-label="Gorizia"/>
+    <text class="label" x="198.14" y="31.49">GO</text>
+  </g>
+  <g class="state" data-state="PU">
+    <title>Pesaro e Urbino</title>
+    <polygon class="tile" points="198.14,87.71 207.88,93.33 207.88,104.58 198.14,110.20 188.40,104.58 188.40,93.33" aria-label="Pesaro e Urbino"/>
+    <text class="label" x="198.14" y="98.95">PU</text>
+  </g>
+  <g class="state" data-state="MC">
+    <title>Macerata</title>
+    <polygon class="tile" points="198.14,121.44 207.88,127.07 207.88,138.31 198.14,143.93 188.40,138.31 188.40,127.07" aria-label="Macerata"/>
+    <text class="label" x="198.14" y="132.69">MC</text>
+  </g>
+  <g class="state" data-state="TE">
+    <title>Teramo</title>
+    <polygon class="tile" points="198.14,155.18 207.88,160.80 207.88,172.04 198.14,177.67 188.40,172.04 188.40,160.80" aria-label="Teramo"/>
+    <text class="label" x="198.14" y="166.42">TE</text>
+  </g>
+  <g class="state" data-state="LT">
+    <title>Latina</title>
+    <polygon class="tile" points="198.14,188.91 207.88,194.53 207.88,205.78 198.14,211.40 188.40,205.78 188.40,194.53" aria-label="Latina"/>
+    <text class="label" x="198.14" y="200.16">LT</text>
+  </g>
+  <g class="state" data-state="UD">
+    <title>Udine</title>
+    <polygon class="tile" points="188.40,3.37 198.14,9.00 198.14,20.24 188.40,25.86 178.66,20.24 178.66,9.00" aria-label="Udine"/>
+    <text class="label" x="188.40" y="14.62">UD</text>
+  </g>
+  <g class="state" data-state="VE">
+    <title>Venezia</title>
+    <polygon class="tile" points="188.40,37.11 198.14,42.73 198.14,53.97 188.40,59.60 178.66,53.97 178.66,42.73" aria-label="Venezia"/>
+    <text class="label" x="188.40" y="48.35">VE</text>
+  </g>
+  <g class="state" data-state="RN">
+    <title>Rimini</title>
+    <polygon class="tile" points="188.40,104.58 198.14,110.20 198.14,121.44 188.40,127.07 178.66,121.44 178.66,110.20" aria-label="Rimini"/>
+    <text class="label" x="188.40" y="115.82">RN</text>
+  </g>
+  <g class="state" data-state="PG">
+    <title>Perugia</title>
+    <polygon class="tile" points="188.40,138.31 198.14,143.93 198.14,155.18 188.40,160.80 178.66,155.18 178.66,143.93" aria-label="Perugia"/>
+    <text class="label" x="188.40" y="149.55">PG</text>
+  </g>
+  <g class="state" data-state="RM">
+    <title>Roma</title>
+    <polygon class="tile" points="188.40,172.04 198.14,177.67 198.14,188.91 188.40,194.53 178.66,188.91 178.66,177.67" aria-label="Roma"/>
+    <text class="label" x="188.40" y="183.29">RM</text>
+  </g>
+  <g class="state" data-state="PN">
+    <title>Pordenone</title>
+    <polygon class="tile" points="178.66,20.24 188.40,25.86 188.40,37.11 178.66,42.73 168.92,37.11 168.92,25.86" aria-label="Pordenone"/>
+    <text class="label" x="178.66" y="31.49">PN</text>
+  </g>
+  <g class="state" data-state="PD">
+    <title>Padova</title>
+    <polygon class="tile" points="178.66,53.97 188.40,59.60 188.40,70.84 178.66,76.46 168.92,70.84 168.92,59.60" aria-label="Padova"/>
+    <text class="label" x="178.66" y="65.22">PD</text>
+  </g>
+  <g class="state" data-state="RA">
+    <title>Ravenna</title>
+    <polygon class="tile" points="178.66,87.71 188.40,93.33 188.40,104.58 178.66,110.20 168.92,104.58 168.92,93.33" aria-label="Ravenna"/>
+    <text class="label" x="178.66" y="98.95">RA</text>
+  </g>
+  <g class="state" data-state="AR">
+    <title>Arezzo</title>
+    <polygon class="tile" points="178.66,121.44 188.40,127.07 188.40,138.31 178.66,143.93 168.92,138.31 168.92,127.07" aria-label="Arezzo"/>
+    <text class="label" x="178.66" y="132.69">AR</text>
+  </g>
+  <g class="state" data-state="TR">
+    <title>Terni</title>
+    <polygon class="tile" points="178.66,155.18 188.40,160.80 188.40,172.04 178.66,177.67 168.92,172.04 168.92,160.80" aria-label="Terni"/>
+    <text class="label" x="178.66" y="166.42">TR</text>
+  </g>
+  <g class="state" data-state="PA">
+    <title>Palermo</title>
+    <polygon class="tile inset" points="178.66,222.65 188.40,228.27 188.40,239.51 178.66,245.14 168.92,239.51 168.92,228.27" aria-label="Palermo"/>
+    <text class="label" x="178.66" y="233.89">PA</text>
+  </g>
+  <g class="state" data-state="BL">
+    <title>Belluno</title>
+    <polygon class="tile" points="168.92,3.37 178.66,9.00 178.66,20.24 168.92,25.86 159.18,20.24 159.18,9.00" aria-label="Belluno"/>
+    <text class="label" x="168.92" y="14.62">BL</text>
+  </g>
+  <g class="state" data-state="TV">
+    <title>Treviso</title>
+    <polygon class="tile" points="168.92,37.11 178.66,42.73 178.66,53.97 168.92,59.60 159.18,53.97 159.18,42.73" aria-label="Treviso"/>
+    <text class="label" x="168.92" y="48.35">TV</text>
+  </g>
+  <g class="state" data-state="FE">
+    <title>Ferrara</title>
+    <polygon class="tile" points="168.92,70.84 178.66,76.46 178.66,87.71 168.92,93.33 159.18,87.71 159.18,76.46" aria-label="Ferrara"/>
+    <text class="label" x="168.92" y="82.09">FE</text>
+  </g>
+  <g class="state" data-state="FC">
+    <title>Forlì-Cesena</title>
+    <polygon class="tile" points="168.92,104.58 178.66,110.20 178.66,121.44 168.92,127.07 159.18,121.44 159.18,110.20" aria-label="Forlì-Cesena"/>
+    <text class="label" x="168.92" y="115.82">FC</text>
+  </g>
+  <g class="state" data-state="SI">
+    <title>Siena</title>
+    <polygon class="tile" points="168.92,138.31 178.66,143.93 178.66,155.18 168.92,160.80 159.18,155.18 159.18,143.93" aria-label="Siena"/>
+    <text class="label" x="168.92" y="149.55">SI</text>
+  </g>
+  <g class="state" data-state="RI">
+    <title>Rieti</title>
+    <polygon class="tile" points="168.92,172.04 178.66,177.67 178.66,188.91 168.92,194.53 159.18,188.91 159.18,177.67" aria-label="Rieti"/>
+    <text class="label" x="168.92" y="183.29">RI</text>
+  </g>
+  <g class="state" data-state="VI">
+    <title>Vicenza</title>
+    <polygon class="tile" points="159.18,20.24 168.92,25.86 168.92,37.11 159.18,42.73 149.45,37.11 149.45,25.86" aria-label="Vicenza"/>
+    <text class="label" x="159.18" y="31.49">VI</text>
+  </g>
+  <g class="state" data-state="RO">
+    <title>Rovigo</title>
+    <polygon class="tile" points="159.18,53.97 168.92,59.60 168.92,70.84 159.18,76.46 149.45,70.84 149.45,59.60" aria-label="Rovigo"/>
+    <text class="label" x="159.18" y="65.22">RO</text>
+  </g>
+  <g class="state" data-state="BO">
+    <title>Bologna</title>
+    <polygon class="tile" points="159.18,87.71 168.92,93.33 168.92,104.58 159.18,110.20 149.45,104.58 149.45,93.33" aria-label="Bologna"/>
+    <text class="label" x="159.18" y="98.95">BO</text>
+  </g>
+  <g class="state" data-state="FI">
+    <title>Firenze</title>
+    <polygon class="tile" points="159.18,121.44 168.92,127.07 168.92,138.31 159.18,143.93 149.45,138.31 149.45,127.07" aria-label="Firenze"/>
+    <text class="label" x="159.18" y="132.69">FI</text>
+  </g>
+  <g class="state" data-state="VT">
+    <title>Viterbo</title>
+    <polygon class="tile" points="159.18,155.18 168.92,160.80 168.92,172.04 159.18,177.67 149.45,172.04 149.45,160.80" aria-label="Viterbo"/>
+    <text class="label" x="159.18" y="166.42">VT</text>
+  </g>
+  <g class="state" data-state="BZ">
+    <title>Bozen</title>
+    <polygon class="tile" points="149.45,3.37 159.18,9.00 159.18,20.24 149.45,25.86 139.71,20.24 139.71,9.00" aria-label="Bozen"/>
+    <text class="label" x="149.45" y="14.62">BZ</text>
+  </g>
+  <g class="state" data-state="VR">
+    <title>Verona</title>
+    <polygon class="tile" points="149.45,37.11 159.18,42.73 159.18,53.97 149.45,59.60 139.71,53.97 139.71,42.73" aria-label="Verona"/>
+    <text class="label" x="149.45" y="48.35">VR</text>
+  </g>
+  <g class="state" data-state="MO">
+    <title>Modena</title>
+    <polygon class="tile" points="149.45,70.84 159.18,76.46 159.18,87.71 149.45,93.33 139.71,87.71 139.71,76.46" aria-label="Modena"/>
+    <text class="label" x="149.45" y="82.09">MO</text>
+  </g>
+  <g class="state" data-state="PO">
+    <title>Prato</title>
+    <polygon class="tile" points="149.45,104.58 159.18,110.20 159.18,121.44 149.45,127.07 139.71,121.44 139.71,110.20" aria-label="Prato"/>
+    <text class="label" x="149.45" y="115.82">PO</text>
+  </g>
+  <g class="state" data-state="GR">
+    <title>Grosseto</title>
+    <polygon class="tile" points="149.45,138.31 159.18,143.93 159.18,155.18 149.45,160.80 139.71,155.18 139.71,143.93" aria-label="Grosseto"/>
+    <text class="label" x="149.45" y="149.55">GR</text>
+  </g>
+  <g class="state" data-state="TN">
+    <title>Trento</title>
+    <polygon class="tile" points="139.71,20.24 149.45,25.86 149.45,37.11 139.71,42.73 129.97,37.11 129.97,25.86" aria-label="Trento"/>
+    <text class="label" x="139.71" y="31.49">TN</text>
+  </g>
+  <g class="state" data-state="MN">
+    <title>Mantova</title>
+    <polygon class="tile" points="139.71,53.97 149.45,59.60 149.45,70.84 139.71,76.46 129.97,70.84 129.97,59.60" aria-label="Mantova"/>
+    <text class="label" x="139.71" y="65.22">MN</text>
+  </g>
+  <g class="state" data-state="PT">
+    <title>Pistoia</title>
+    <polygon class="tile" points="139.71,87.71 149.45,93.33 149.45,104.58 139.71,110.20 129.97,104.58 129.97,93.33" aria-label="Pistoia"/>
+    <text class="label" x="139.71" y="98.95">PT</text>
+  </g>
+  <g class="state" data-state="PI">
+    <title>Pisa</title>
+    <polygon class="tile" points="139.71,121.44 149.45,127.07 149.45,138.31 139.71,143.93 129.97,138.31 129.97,127.07" aria-label="Pisa"/>
+    <text class="label" x="139.71" y="132.69">PI</text>
+  </g>
+  <g class="state" data-state="OT">
+    <title>Olbia-Tempio</title>
+    <polygon class="tile inset" points="139.71,188.91 149.45,194.53 149.45,205.78 139.71,211.40 129.97,205.78 129.97,194.53" aria-label="Olbia-Tempio"/>
+    <text class="label" x="139.71" y="200.16">OT</text>
+  </g>
+  <g class="state" data-state="SO">
+    <title>Sondrio</title>
+    <polygon class="tile" points="129.97,3.37 139.71,9.00 139.71,20.24 129.97,25.86 120.23,20.24 120.23,9.00" aria-label="Sondrio"/>
+    <text class="label" x="129.97" y="14.62">SO</text>
+  </g>
+  <g class="state" data-state="BS">
+    <title>Brescia</title>
+    <polygon class="tile" points="129.97,37.11 139.71,42.73 139.71,53.97 129.97,59.60 120.23,53.97 120.23,42.73" aria-label="Brescia"/>
+    <text class="label" x="129.97" y="48.35">BS</text>
+  </g>
+  <g class="state" data-state="RE">
+    <title>Reggio Emilia</title>
+    <polygon class="tile" points="129.97,70.84 139.71,76.46 139.71,87.71 129.97,93.33 120.23,87.71 120.23,76.46" aria-label="Reggio Emilia"/>
+    <text class="label" x="129.97" y="82.09">RE</text>
+  </g>
+  <g class="state" data-state="LU">
+    <title>Lucca</title>
+    <polygon class="tile" points="129.97,104.58 139.71,110.20 139.71,121.44 129.97,127.07 120.23,121.44 120.23,110.20" aria-label="Lucca"/>
+    <text class="label" x="129.97" y="115.82">LU</text>
+  </g>
+  <g class="state" data-state="LI">
+    <title>Livorno</title>
+    <polygon class="tile" points="129.97,138.31 139.71,143.93 139.71,155.18 129.97,160.80 120.23,155.18 120.23,143.93" aria-label="Livorno"/>
+    <text class="label" x="129.97" y="149.55">LI</text>
+  </g>
+  <g class="state" data-state="BG">
+    <title>Bergamo</title>
+    <polygon class="tile" points="120.23,20.24 129.97,25.86 129.97,37.11 120.23,42.73 110.49,37.11 110.49,25.86" aria-label="Bergamo"/>
+    <text class="label" x="120.23" y="31.49">BG</text>
+  </g>
+  <g class="state" data-state="CR">
+    <title>Cremona</title>
+    <polygon class="tile" points="120.23,53.97 129.97,59.60 129.97,70.84 120.23,76.46 110.49,70.84 110.49,59.60" aria-label="Cremona"/>
+    <text class="label" x="120.23" y="65.22">CR</text>
+  </g>
+  <g class="state" data-state="PR">
+    <title>Parma</title>
+    <polygon class="tile" points="120.23,87.71 129.97,93.33 129.97,104.58 120.23,110.20 110.49,104.58 110.49,93.33" aria-label="Parma"/>
+    <text class="label" x="120.23" y="98.95">PR</text>
+  </g>
+  <g class="state" data-state="MS">
+    <title>Massa-Carrara</title>
+    <polygon class="tile" points="120.23,121.44 129.97,127.07 129.97,138.31 120.23,143.93 110.49,138.31 110.49,127.07" aria-label="Massa-Carrara"/>
+    <text class="label" x="120.23" y="132.69">MS</text>
+  </g>
+  <g class="state" data-state="LC">
+    <title>Lecco</title>
+    <polygon class="tile" points="110.49,3.37 120.23,9.00 120.23,20.24 110.49,25.86 100.76,20.24 100.76,9.00" aria-label="Lecco"/>
+    <text class="label" x="110.49" y="14.62">LC</text>
+  </g>
+  <g class="state" data-state="MB">
+    <title>Monza e Brianza</title>
+    <polygon class="tile" points="110.49,37.11 120.23,42.73 120.23,53.97 110.49,59.60 100.76,53.97 100.76,42.73" aria-label="Monza e Brianza"/>
+    <text class="label" x="110.49" y="48.35">MB</text>
+  </g>
+  <g class="state" data-state="PC">
+    <title>Piacenza</title>
+    <polygon class="tile" points="110.49,70.84 120.23,76.46 120.23,87.71 110.49,93.33 100.76,87.71 100.76,76.46" aria-label="Piacenza"/>
+    <text class="label" x="110.49" y="82.09">PC</text>
+  </g>
+  <g class="state" data-state="SS">
+    <title>Sassari</title>
+    <polygon class="tile inset" points="110.49,172.04 120.23,177.67 120.23,188.91 110.49,194.53 100.76,188.91 100.76,177.67" aria-label="Sassari"/>
+    <text class="label" x="110.49" y="183.29">SS</text>
+  </g>
+  <g class="state" data-state="CO">
+    <title>Como</title>
+    <polygon class="tile" points="100.76,20.24 110.49,25.86 110.49,37.11 100.76,42.73 91.02,37.11 91.02,25.86" aria-label="Como"/>
+    <text class="label" x="100.76" y="31.49">CO</text>
+  </g>
+  <g class="state" data-state="LO">
+    <title>Lodi</title>
+    <polygon class="tile" points="100.76,53.97 110.49,59.60 110.49,70.84 100.76,76.46 91.02,70.84 91.02,59.60" aria-label="Lodi"/>
+    <text class="label" x="100.76" y="65.22">LO</text>
+  </g>
+  <g class="state" data-state="SP">
+    <title>La Spezia</title>
+    <polygon class="tile" points="100.76,87.71 110.49,93.33 110.49,104.58 100.76,110.20 91.02,104.58 91.02,93.33" aria-label="La Spezia"/>
+    <text class="label" x="100.76" y="98.95">SP</text>
+  </g>
+  <g class="state" data-state="VA">
+    <title>Varese</title>
+    <polygon class="tile" points="91.02,3.37 100.76,9.00 100.76,20.24 91.02,25.86 81.28,20.24 81.28,9.00" aria-label="Varese"/>
+    <text class="label" x="91.02" y="14.62">VA</text>
+  </g>
+  <g class="state" data-state="MI">
+    <title>Milano</title>
+    <polygon class="tile" points="91.02,37.11 100.76,42.73 100.76,53.97 91.02,59.60 81.28,53.97 81.28,42.73" aria-label="Milano"/>
+    <text class="label" x="91.02" y="48.35">MI</text>
+  </g>
+  <g class="state" data-state="GE">
+    <title>Genova</title>
+    <polygon class="tile" points="91.02,70.84 100.76,76.46 100.76,87.71 91.02,93.33 81.28,87.71 81.28,76.46" aria-label="Genova"/>
+    <text class="label" x="91.02" y="82.09">GE</text>
+  </g>
+  <g class="state" data-state="NU">
+    <title>Nuoro</title>
+    <polygon class="tile inset" points="91.02,138.31 100.76,143.93 100.76,155.18 91.02,160.80 81.28,155.18 81.28,143.93" aria-label="Nuoro"/>
+    <text class="label" x="91.02" y="149.55">NU</text>
+  </g>
+  <g class="state" data-state="NO">
+    <title>Novara</title>
+    <polygon class="tile" points="81.28,20.24 91.02,25.86 91.02,37.11 81.28,42.73 71.54,37.11 71.54,25.86" aria-label="Novara"/>
+    <text class="label" x="81.28" y="31.49">NO</text>
+  </g>
+  <g class="state" data-state="PV">
+    <title>Pavia</title>
+    <polygon class="tile" points="81.28,53.97 91.02,59.60 91.02,70.84 81.28,76.46 71.54,70.84 71.54,59.60" aria-label="Pavia"/>
+    <text class="label" x="81.28" y="65.22">PV</text>
+  </g>
+  <g class="state" data-state="SV">
+    <title>Savona</title>
+    <polygon class="tile" points="81.28,87.71 91.02,93.33 91.02,104.58 81.28,110.20 71.54,104.58 71.54,93.33" aria-label="Savona"/>
+    <text class="label" x="81.28" y="98.95">SV</text>
+  </g>
+  <g class="state" data-state="VB">
+    <title>Verbano-Cusio-Ossola</title>
+    <polygon class="tile" points="71.54,3.37 81.28,9.00 81.28,20.24 71.54,25.86 61.80,20.24 61.80,9.00" aria-label="Verbano-Cusio-Ossola"/>
+    <text class="label" x="71.54" y="14.62">VB</text>
+  </g>
+  <g class="state" data-state="VC">
+    <title>Vercelli</title>
+    <polygon class="tile" points="71.54,37.11 81.28,42.73 81.28,53.97 71.54,59.60 61.80,53.97 61.80,42.73" aria-label="Vercelli"/>
+    <text class="label" x="71.54" y="48.35">VC</text>
+  </g>
+  <g class="state" data-state="AL">
+    <title>Alessandria</title>
+    <polygon class="tile" points="71.54,70.84 81.28,76.46 81.28,87.71 71.54,93.33 61.80,87.71 61.80,76.46" aria-label="Alessandria"/>
+    <text class="label" x="71.54" y="82.09">AL</text>
+  </g>
+  <g class="state" data-state="AO">
+    <title>Aoste</title>
+    <polygon class="tile" points="61.80,20.24 71.54,25.86 71.54,37.11 61.80,42.73 52.06,37.11 52.06,25.86" aria-label="Aoste"/>
+    <text class="label" x="61.80" y="31.49">AO</text>
+  </g>
+  <g class="state" data-state="TO">
+    <title>Turin</title>
+    <polygon class="tile" points="61.80,53.97 71.54,59.60 71.54,70.84 61.80,76.46 52.06,70.84 52.06,59.60" aria-label="Turin"/>
+    <text class="label" x="61.80" y="65.22">TO</text>
+  </g>
+  <g class="state" data-state="IM">
+    <title>Imperia</title>
+    <polygon class="tile" points="61.80,87.71 71.54,93.33 71.54,104.58 61.80,110.20 52.06,104.58 52.06,93.33" aria-label="Imperia"/>
+    <text class="label" x="61.80" y="98.95">IM</text>
+  </g>
+  <g class="state" data-state="OR">
+    <title>Oristrano</title>
+    <polygon class="tile inset" points="61.80,121.44 71.54,127.07 71.54,138.31 61.80,143.93 52.06,138.31 52.06,127.07" aria-label="Oristrano"/>
+    <text class="label" x="61.80" y="132.69">OR</text>
+  </g>
+  <g class="state" data-state="BI">
+    <title>Biella</title>
+    <polygon class="tile" points="52.06,37.11 61.80,42.73 61.80,53.97 52.06,59.60 42.33,53.97 42.33,42.73" aria-label="Biella"/>
+    <text class="label" x="52.06" y="48.35">BI</text>
+  </g>
+  <g class="state" data-state="CN">
+    <title>Cuneo</title>
+    <polygon class="tile" points="52.06,70.84 61.80,76.46 61.80,87.71 52.06,93.33 42.33,87.71 42.33,76.46" aria-label="Cuneo"/>
+    <text class="label" x="52.06" y="82.09">CN</text>
+  </g>
+  <g class="state" data-state="AT">
+    <title>Asti</title>
+    <polygon class="tile" points="42.33,53.97 52.06,59.60 52.06,70.84 42.33,76.46 32.59,70.84 32.59,59.60" aria-label="Asti"/>
+    <text class="label" x="42.33" y="65.22">AT</text>
+  </g>
+  <g class="state" data-state="OG">
+    <title>Ogliastra</title>
+    <polygon class="tile inset" points="32.59,104.58 42.33,110.20 42.33,121.44 32.59,127.07 22.85,121.44 22.85,110.20" aria-label="Ogliastra"/>
+    <text class="label" x="32.59" y="115.82">OG</text>
+  </g>
+  <g class="state" data-state="CI">
+    <title>Carbonia-Iglesias</title>
+    <polygon class="tile inset" points="32.59,3.37 42.33,9.00 42.33,20.24 32.59,25.86 22.85,20.24 22.85,9.00" aria-label="Carbonia-Iglesias"/>
+    <text class="label" x="32.59" y="14.62">CI</text>
+  </g>
+  <g class="state" data-state="CA">
+    <title>Cagliari</title>
+    <polygon class="tile inset" points="13.11,70.84 22.85,76.46 22.85,87.71 13.11,93.33 3.37,87.71 3.37,76.46" aria-label="Cagliari"/>
+    <text class="label" x="13.11" y="82.09">CA</text>
+  </g>
+  <g class="state" data-state="VS">
+    <title>Medio Campidano</title>
+    <polygon class="tile inset" points="13.11,37.11 22.85,42.73 22.85,53.97 13.11,59.60 3.37,53.97 3.37,42.73" aria-label="Medio Campidano"/>
+    <text class="label" x="13.11" y="48.35">VS</text>
+  </g>
+</svg>

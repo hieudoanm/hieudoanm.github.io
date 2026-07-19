@@ -1,0 +1,140 @@
+{
+  "name": "Bayern Munich 2019-2020",
+  "formationId": "433",
+  "players": [
+    { "id": "neuer", "name": "Manuel Neuer", "number": 1, "role": "GK" },
+    { "id": "pavard", "name": "Benjamin Pavard", "number": 5, "role": "DEF" },
+    { "id": "boateng", "name": "Jérôme Boateng", "number": 17, "role": "DEF" },
+    { "id": "alaba", "name": "David Alaba", "number": 27, "role": "DEF" },
+    { "id": "davies", "name": "Alphonso Davies", "number": 19, "role": "DEF" },
+    { "id": "kimmich", "name": "Joshua Kimmich", "number": 32, "role": "MID" },
+    { "id": "thiago", "name": "Thiago", "number": 6, "role": "MID" },
+    { "id": "goretzka", "name": "Leon Goretzka", "number": 18, "role": "MID" },
+    { "id": "gnabry", "name": "Serge Gnabry", "number": 7, "role": "FWD" },
+    {
+      "id": "lewandowski",
+      "name": "Robert Lewandowski",
+      "number": 9,
+      "role": "FWD"
+    },
+    { "id": "coman", "name": "Kingsley Coman", "number": 29, "role": "FWD" },
+    {
+      "id": "ulreich",
+      "name": "Sven Ulreich",
+      "number": 26,
+      "role": "GK",
+      "bench": true
+    },
+    {
+      "id": "hoffmann",
+      "name": "Ron-Thorben Hoffmann",
+      "number": 36,
+      "role": "GK",
+      "bench": true
+    },
+    {
+      "id": "sule",
+      "name": "Niklas Süle",
+      "number": 4,
+      "role": "DEF",
+      "bench": true
+    },
+    {
+      "id": "hernandez",
+      "name": "Lucas Hernández",
+      "number": 21,
+      "role": "DEF",
+      "bench": true
+    },
+    {
+      "id": "martinez",
+      "name": "Javi Martínez",
+      "number": 8,
+      "role": "DEF",
+      "bench": true
+    },
+    {
+      "id": "pavard2",
+      "name": "Michaël Cuisance",
+      "number": 11,
+      "role": "MID",
+      "bench": true
+    },
+    {
+      "id": "tolisso",
+      "name": "Corentin Tolisso",
+      "number": 24,
+      "role": "MID",
+      "bench": true
+    },
+    {
+      "id": "perisic",
+      "name": "Ivan Perišić",
+      "number": 14,
+      "role": "MID",
+      "bench": true
+    },
+    {
+      "id": "coutinho",
+      "name": "Philippe Coutinho",
+      "number": 10,
+      "role": "MID",
+      "bench": true
+    },
+    {
+      "id": "nubel",
+      "name": "Alexander Nübel",
+      "number": 35,
+      "role": "GK",
+      "bench": true
+    },
+    {
+      "id": "sarr",
+      "name": "Bouna Sarr",
+      "number": 22,
+      "role": "DEF",
+      "bench": true
+    },
+    {
+      "id": "odriozola",
+      "name": "Álvaro Odriozola",
+      "number": 2,
+      "role": "DEF",
+      "bench": true
+    },
+    {
+      "id": "zirkzee",
+      "name": "Joshua Zirkzee",
+      "number": 33,
+      "role": "FWD",
+      "bench": true
+    },
+    {
+      "id": "sanches",
+      "name": "Renato Sanches",
+      "number": 37,
+      "role": "MID",
+      "bench": true
+    },
+    {
+      "id": "wriedt",
+      "name": "Kwasi Okyere Wriedt",
+      "number": 34,
+      "role": "FWD",
+      "bench": true
+    }
+  ],
+  "assignments": {
+    "433-0-0": ["neuer"],
+    "433-1-1": ["pavard"],
+    "433-1-2": ["boateng"],
+    "433-1-3": ["alaba"],
+    "433-1-4": ["davies"],
+    "433-2-5": ["kimmich"],
+    "433-2-6": ["thiago"],
+    "433-2-7": ["goretzka"],
+    "433-3-8": ["gnabry"],
+    "433-3-9": ["lewandowski"],
+    "433-3-10": ["coman"]
+  }
+}

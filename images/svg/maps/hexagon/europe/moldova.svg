@@ -1,0 +1,211 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360.35 426.90" width="360.35" height="426.90" role="img" aria-labelledby="moldova-title moldova-desc">
+  <title id="moldova-title">Moldova hex map</title>
+  <desc id="moldova-desc">Hexagon map with 40 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.25; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 11.14 7.95; }
+    .label { fill: #52525b; font: 600 9.02px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="SV">
+    <title>Ștefan Vodă</title>
+    <polygon class="tile" points="329.44,286.37 352.40,299.62 352.40,326.14 329.44,339.40 306.47,326.14 306.47,299.62" aria-label="Ștefan Vodă"/>
+    <text class="label" x="329.44" y="312.88">SV</text>
+  </g>
+  <g class="state" data-state="BD">
+    <title>Bender</title>
+    <polygon class="tile" points="306.47,246.59 329.44,259.85 329.44,286.37 306.47,299.62 283.51,286.37 283.51,259.85" aria-label="Bender"/>
+    <text class="label" x="306.47" y="273.11">BD</text>
+  </g>
+  <g class="state" data-state="GRI">
+    <title>Grigoriopol</title>
+    <polygon class="tile" points="283.51,206.82 306.47,220.08 306.47,246.59 283.51,259.85 260.55,246.59 260.55,220.08" aria-label="Grigoriopol"/>
+    <text class="label" x="283.51" y="233.34">GRI</text>
+  </g>
+  <g class="state" data-state="CS">
+    <title>Causeni</title>
+    <polygon class="tile" points="283.51,286.37 306.47,299.62 306.47,326.14 283.51,339.40 260.55,326.14 260.55,299.62" aria-label="Causeni"/>
+    <text class="label" x="283.51" y="312.88">CS</text>
+  </g>
+  <g class="state" data-state="RE">
+    <title>Rezina</title>
+    <polygon class="tile" points="260.55,87.50 283.51,100.76 283.51,127.27 260.55,140.53 237.58,127.27 237.58,100.76" aria-label="Rezina"/>
+    <text class="label" x="260.55" y="114.02">RE</text>
+  </g>
+  <g class="state" data-state="DB">
+    <title>Transnistria</title>
+    <polygon class="tile" points="260.55,167.05 283.51,180.30 283.51,206.82 260.55,220.08 237.58,206.82 237.58,180.30" aria-label="Transnistria"/>
+    <text class="label" x="260.55" y="193.56">DB</text>
+  </g>
+  <g class="state" data-state="AN">
+    <title>Anenii Noi</title>
+    <polygon class="tile" points="260.55,246.59 283.51,259.85 283.51,286.37 260.55,299.62 237.58,286.37 237.58,259.85" aria-label="Anenii Noi"/>
+    <text class="label" x="260.55" y="273.11">AN</text>
+  </g>
+  <g class="state" data-state="RZ">
+    <title>Rezina</title>
+    <polygon class="tile" points="237.58,47.73 260.55,60.99 260.55,87.50 237.58,100.76 214.62,87.50 214.62,60.99" aria-label="Rezina"/>
+    <text class="label" x="237.58" y="74.24">RZ</text>
+  </g>
+  <g class="state" data-state="SN">
+    <title>Stîngă Nistrului</title>
+    <polygon class="tile" points="237.58,127.27 260.55,140.53 260.55,167.05 237.58,180.30 214.62,167.05 214.62,140.53" aria-label="Stîngă Nistrului"/>
+    <text class="label" x="237.58" y="153.79">SN</text>
+  </g>
+  <g class="state" data-state="CR">
+    <title>Criuleni</title>
+    <polygon class="tile" points="237.58,206.82 260.55,220.08 260.55,246.59 237.58,259.85 214.62,246.59 214.62,220.08" aria-label="Criuleni"/>
+    <text class="label" x="237.58" y="233.34">CR</text>
+  </g>
+  <g class="state" data-state="IA">
+    <title>Ialoveni</title>
+    <polygon class="tile" points="237.58,286.37 260.55,299.62 260.55,326.14 237.58,339.40 214.62,326.14 214.62,299.62" aria-label="Ialoveni"/>
+    <text class="label" x="237.58" y="312.88">IA</text>
+  </g>
+  <g class="state" data-state="SD">
+    <title>Şoldăneşti</title>
+    <polygon class="tile" points="214.62,87.50 237.58,100.76 237.58,127.27 214.62,140.53 191.66,127.27 191.66,100.76" aria-label="Şoldăneşti"/>
+    <text class="label" x="214.62" y="114.02">SD</text>
+  </g>
+  <g class="state" data-state="OR">
+    <title>Orhei</title>
+    <polygon class="tile" points="214.62,167.05 237.58,180.30 237.58,206.82 214.62,220.08 191.66,206.82 191.66,180.30" aria-label="Orhei"/>
+    <text class="label" x="214.62" y="193.56">OR</text>
+  </g>
+  <g class="state" data-state="CU">
+    <title>Chişinău</title>
+    <polygon class="tile" points="214.62,246.59 237.58,259.85 237.58,286.37 214.62,299.62 191.66,286.37 191.66,259.85" aria-label="Chişinău"/>
+    <text class="label" x="214.62" y="273.11">CU</text>
+  </g>
+  <g class="state" data-state="BS">
+    <title>Basarabeasca</title>
+    <polygon class="tile" points="214.62,326.14 237.58,339.40 237.58,365.91 214.62,379.17 191.66,365.91 191.66,339.40" aria-label="Basarabeasca"/>
+    <text class="label" x="214.62" y="352.65">BS</text>
+  </g>
+  <g class="state" data-state="CAM">
+    <title>Camenca</title>
+    <polygon class="tile" points="191.66,47.73 214.62,60.99 214.62,87.50 191.66,100.76 168.70,87.50 168.70,60.99" aria-label="Camenca"/>
+    <text class="label" x="191.66" y="74.24">CAM</text>
+  </g>
+  <g class="state" data-state="TE">
+    <title>Teleneşti</title>
+    <polygon class="tile" points="191.66,127.27 214.62,140.53 214.62,167.05 191.66,180.30 168.70,167.05 168.70,140.53" aria-label="Teleneşti"/>
+    <text class="label" x="191.66" y="153.79">TE</text>
+  </g>
+  <g class="state" data-state="ST">
+    <title>Străşeni</title>
+    <polygon class="tile" points="191.66,206.82 214.62,220.08 214.62,246.59 191.66,259.85 168.70,246.59 168.70,220.08" aria-label="Străşeni"/>
+    <text class="label" x="191.66" y="233.34">ST</text>
+  </g>
+  <g class="state" data-state="CM">
+    <title>Cimişlia</title>
+    <polygon class="tile" points="191.66,286.37 214.62,299.62 214.62,326.14 191.66,339.40 168.70,326.14 168.70,299.62" aria-label="Cimişlia"/>
+    <text class="label" x="191.66" y="312.88">CM</text>
+  </g>
+  <g class="state" data-state="TA">
+    <title>Taraclia</title>
+    <polygon class="tile" points="191.66,365.91 214.62,379.17 214.62,405.68 191.66,418.94 168.70,405.68 168.70,379.17" aria-label="Taraclia"/>
+    <text class="label" x="191.66" y="392.43">TA</text>
+  </g>
+  <g class="state" data-state="SO">
+    <title>Soroca</title>
+    <polygon class="tile" points="168.70,7.95 191.66,21.21 191.66,47.73 168.70,60.99 145.73,47.73 145.73,21.21" aria-label="Soroca"/>
+    <text class="label" x="168.70" y="34.47">SO</text>
+  </g>
+  <g class="state" data-state="FL">
+    <title>Floreşti</title>
+    <polygon class="tile" points="168.70,87.50 191.66,100.76 191.66,127.27 168.70,140.53 145.73,127.27 145.73,100.76" aria-label="Floreşti"/>
+    <text class="label" x="168.70" y="114.02">FL</text>
+  </g>
+  <g class="state" data-state="CL">
+    <title>Călărași</title>
+    <polygon class="tile" points="168.70,167.05 191.66,180.30 191.66,206.82 168.70,220.08 145.73,206.82 145.73,180.30" aria-label="Călărași"/>
+    <text class="label" x="168.70" y="193.56">CL</text>
+  </g>
+  <g class="state" data-state="HI">
+    <title>Hîncesti</title>
+    <polygon class="tile" points="168.70,246.59 191.66,259.85 191.66,286.37 168.70,299.62 145.73,286.37 145.73,259.85" aria-label="Hîncesti"/>
+    <text class="label" x="168.70" y="273.11">HI</text>
+  </g>
+  <g class="state" data-state="GA">
+    <title>Comrat</title>
+    <polygon class="tile" points="168.70,326.14 191.66,339.40 191.66,365.91 168.70,379.17 145.73,365.91 145.73,339.40" aria-label="Comrat"/>
+    <text class="label" x="168.70" y="352.65">GA</text>
+  </g>
+  <g class="state" data-state="DR">
+    <title>Drochia</title>
+    <polygon class="tile" points="145.73,47.73 168.70,60.99 168.70,87.50 145.73,100.76 122.77,87.50 122.77,60.99" aria-label="Drochia"/>
+    <text class="label" x="145.73" y="74.24">DR</text>
+  </g>
+  <g class="state" data-state="SI">
+    <title>Sîngerei</title>
+    <polygon class="tile" points="145.73,127.27 168.70,140.53 168.70,167.05 145.73,180.30 122.77,167.05 122.77,140.53" aria-label="Sîngerei"/>
+    <text class="label" x="145.73" y="153.79">SI</text>
+  </g>
+  <g class="state" data-state="NI">
+    <title>Nisporeni</title>
+    <polygon class="tile" points="145.73,206.82 168.70,220.08 168.70,246.59 145.73,259.85 122.77,246.59 122.77,220.08" aria-label="Nisporeni"/>
+    <text class="label" x="145.73" y="233.34">NI</text>
+  </g>
+  <g class="state" data-state="LE">
+    <title>Leova</title>
+    <polygon class="tile" points="145.73,286.37 168.70,299.62 168.70,326.14 145.73,339.40 122.77,326.14 122.77,299.62" aria-label="Leova"/>
+    <text class="label" x="145.73" y="312.88">LE</text>
+  </g>
+  <g class="state" data-state="CA">
+    <title>Cahul</title>
+    <polygon class="tile" points="145.73,365.91 168.70,379.17 168.70,405.68 145.73,418.94 122.77,405.68 122.77,379.17" aria-label="Cahul"/>
+    <text class="label" x="145.73" y="392.43">CA</text>
+  </g>
+  <g class="state" data-state="DO">
+    <title>Donduseni</title>
+    <polygon class="tile" points="122.77,7.95 145.73,21.21 145.73,47.73 122.77,60.99 99.81,47.73 99.81,21.21" aria-label="Donduseni"/>
+    <text class="label" x="122.77" y="34.47">DO</text>
+  </g>
+  <g class="state" data-state="BA">
+    <title>Bălţi</title>
+    <polygon class="tile" points="122.77,87.50 145.73,100.76 145.73,127.27 122.77,140.53 99.81,127.27 99.81,100.76" aria-label="Bălţi"/>
+    <text class="label" x="122.77" y="114.02">BA</text>
+  </g>
+  <g class="state" data-state="UN">
+    <title>Ungheni</title>
+    <polygon class="tile" points="122.77,167.05 145.73,180.30 145.73,206.82 122.77,220.08 99.81,206.82 99.81,180.30" aria-label="Ungheni"/>
+    <text class="label" x="122.77" y="193.56">UN</text>
+  </g>
+  <g class="state" data-state="CT">
+    <title>Cantemir</title>
+    <polygon class="tile" points="122.77,326.14 145.73,339.40 145.73,365.91 122.77,379.17 99.81,365.91 99.81,339.40" aria-label="Cantemir"/>
+    <text class="label" x="122.77" y="352.65">CT</text>
+  </g>
+  <g class="state" data-state="RI">
+    <title>Rîşcani</title>
+    <polygon class="tile" points="99.81,47.73 122.77,60.99 122.77,87.50 99.81,100.76 76.84,87.50 76.84,60.99" aria-label="Rîşcani"/>
+    <text class="label" x="99.81" y="74.24">RI</text>
+  </g>
+  <g class="state" data-state="FA">
+    <title>Făleşti</title>
+    <polygon class="tile" points="99.81,127.27 122.77,140.53 122.77,167.05 99.81,180.30 76.84,167.05 76.84,140.53" aria-label="Făleşti"/>
+    <text class="label" x="99.81" y="153.79">FA</text>
+  </g>
+  <g class="state" data-state="OC">
+    <title>Ocniţa</title>
+    <polygon class="tile" points="76.84,7.95 99.81,21.21 99.81,47.73 76.84,60.99 53.88,47.73 53.88,21.21" aria-label="Ocniţa"/>
+    <text class="label" x="76.84" y="34.47">OC</text>
+  </g>
+  <g class="state" data-state="GL">
+    <title>Glodeni</title>
+    <polygon class="tile" points="76.84,87.50 99.81,100.76 99.81,127.27 76.84,140.53 53.88,127.27 53.88,100.76" aria-label="Glodeni"/>
+    <text class="label" x="76.84" y="114.02">GL</text>
+  </g>
+  <g class="state" data-state="ED">
+    <title>Edineţ</title>
+    <polygon class="tile" points="53.88,47.73 76.84,60.99 76.84,87.50 53.88,100.76 30.92,87.50 30.92,60.99" aria-label="Edineţ"/>
+    <text class="label" x="53.88" y="74.24">ED</text>
+  </g>
+  <g class="state" data-state="BR">
+    <title>Briceni</title>
+    <polygon class="tile" points="30.92,7.95 53.88,21.21 53.88,47.73 30.92,60.99 7.95,47.73 7.95,21.21" aria-label="Briceni"/>
+    <text class="label" x="30.92" y="34.47">BR</text>
+  </g>
+</svg>

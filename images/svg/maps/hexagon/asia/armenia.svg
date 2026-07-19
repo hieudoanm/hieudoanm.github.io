@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285.40 241.40" width="285.40" height="241.40" role="img" aria-labelledby="armenia-title armenia-desc">
+  <title id="armenia-title">Armenia hex map</title>
+  <desc id="armenia-desc">Hexagon map with 11 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.89; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 14.28 10.20; }
+    .label { fill: #52525b; font: 600 11.56px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="SU">
+    <title>Syunik</title>
+    <polygon class="tile" points="245.76,163.20 275.20,180.20 275.20,214.20 245.76,231.20 216.31,214.20 216.31,180.20" aria-label="Syunik"/>
+    <text class="label" x="245.76" y="197.20">SU</text>
+  </g>
+  <g class="state" data-state="VD">
+    <title>Vayots Dzor</title>
+    <polygon class="tile" points="216.31,112.20 245.76,129.20 245.76,163.20 216.31,180.20 186.87,163.20 186.87,129.20" aria-label="Vayots Dzor"/>
+    <text class="label" x="216.31" y="146.20">VD</text>
+  </g>
+  <g class="state" data-state="GR">
+    <title>Gegharkunik</title>
+    <polygon class="tile" points="186.87,61.20 216.31,78.20 216.31,112.20 186.87,129.20 157.42,112.20 157.42,78.20" aria-label="Gegharkunik"/>
+    <text class="label" x="186.87" y="95.20">GR</text>
+  </g>
+  <g class="state" data-state="AV">
+    <title>Armavir</title>
+    <polygon class="tile" points="186.87,163.20 216.31,180.20 216.31,214.20 186.87,231.20 157.42,214.20 157.42,180.20" aria-label="Armavir"/>
+    <text class="label" x="186.87" y="197.20">AV</text>
+  </g>
+  <g class="state" data-state="TV">
+    <title>Tavush</title>
+    <polygon class="tile" points="157.42,10.20 186.87,27.20 186.87,61.20 157.42,78.20 127.98,61.20 127.98,27.20" aria-label="Tavush"/>
+    <text class="label" x="157.42" y="44.20">TV</text>
+  </g>
+  <g class="state" data-state="AR">
+    <title>Ararat</title>
+    <polygon class="tile" points="157.42,112.20 186.87,129.20 186.87,163.20 157.42,180.20 127.98,163.20 127.98,129.20" aria-label="Ararat"/>
+    <text class="label" x="157.42" y="146.20">AR</text>
+  </g>
+  <g class="state" data-state="KT">
+    <title>Kotayk</title>
+    <polygon class="tile" points="127.98,61.20 157.42,78.20 157.42,112.20 127.98,129.20 98.53,112.20 98.53,78.20" aria-label="Kotayk"/>
+    <text class="label" x="127.98" y="95.20">KT</text>
+  </g>
+  <g class="state" data-state="LO">
+    <title>Lori</title>
+    <polygon class="tile" points="98.53,10.20 127.98,27.20 127.98,61.20 98.53,78.20 69.09,61.20 69.09,27.20" aria-label="Lori"/>
+    <text class="label" x="98.53" y="44.20">LO</text>
+  </g>
+  <g class="state" data-state="ER">
+    <title>Erevan</title>
+    <polygon class="tile" points="98.53,112.20 127.98,129.20 127.98,163.20 98.53,180.20 69.09,163.20 69.09,129.20" aria-label="Erevan"/>
+    <text class="label" x="98.53" y="146.20">ER</text>
+  </g>
+  <g class="state" data-state="AG">
+    <title>Aragatsotn</title>
+    <polygon class="tile" points="69.09,61.20 98.53,78.20 98.53,112.20 69.09,129.20 39.64,112.20 39.64,78.20" aria-label="Aragatsotn"/>
+    <text class="label" x="69.09" y="95.20">AG</text>
+  </g>
+  <g class="state" data-state="SH">
+    <title>Shirak</title>
+    <polygon class="tile" points="39.64,10.20 69.09,27.20 69.09,61.20 39.64,78.20 10.20,61.20 10.20,27.20" aria-label="Shirak"/>
+    <text class="label" x="39.64" y="44.20">SH</text>
+  </g>
+</svg>

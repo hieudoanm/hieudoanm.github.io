@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "asia-jomon-pottery-14000",
+    "title": "Jomon Pottery Made",
+    "year": -14000,
+    "description": "Jomon people made some of the world's earliest pottery.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-yayoi-rice-300",
+    "title": "Yayoi Rice Farming Begins",
+    "year": -300,
+    "description": "Yayoi farmers introduced wet-rice cultivation.",
+    "category": "technology",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-kofun-tombs-250",
+    "title": "Kofun Burial Mounds Built",
+    "year": 250,
+    "description": "Rulers raised giant keyhole burial mounds.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-yamato-state-400",
+    "title": "Yamato State Rises",
+    "year": 400,
+    "description": "The Yamato court unified much of Japan.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-buddhism-japan-538",
+    "title": "Buddhism Reaches Japan",
+    "year": 538,
+    "description": "Buddhist teachers arrived from Korea.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-shotoku-constitution-604",
+    "title": "Seventeen Article Constitution",
+    "year": 604,
+    "description": "Prince Shōtoku issued a moral code of government.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-taika-reform-645",
+    "title": "Taika Reform",
+    "year": 645,
+    "description": "The court centralised land and power.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-nara-capital-710",
+    "title": "Nara Becomes Capital",
+    "year": 710,
+    "description": "Japan's first permanent capital rose at Nara.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-kojiki-712",
+    "title": "Kojiki Completed",
+    "year": 712,
+    "description": "The chronicle recorded Japan's myths and history.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-great-buddha-752",
+    "title": "Great Buddha Dedicated",
+    "year": 752,
+    "description": "Tōdai-ji's giant bronze Buddha was dedicated.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-heian-capital-794",
+    "title": "Heian Becomes Capital",
+    "year": 794,
+    "description": "The capital moved to Heian-kyō or modern Kyoto.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-fujiwara-regents-858",
+    "title": "Fujiwara Regents Rule",
+    "year": 858,
+    "description": "The Fujiwara clan dominated the throne.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-kokin-wakashu-905",
+    "title": "Kokin Wakashu Compiled",
+    "year": 905,
+    "description": "The imperial poetry anthology was completed.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-genji-monogatari-1000",
+    "title": "Tale of Genji Written",
+    "year": 1000,
+    "description": "Murasaki Shikibu wrote the Tale of Genji.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-hogen-disturbance-1156",
+    "title": "Hōgen Disturbance",
+    "year": 1156,
+    "description": "Court factions clashed in Kyoto.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-genpei-war-1180",
+    "title": "Genpei War Begins",
+    "year": 1180,
+    "description": "The Taira and Minamoto clans fought for power.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-dan-no-ura-1185",
+    "title": "Battle of Dan-no-ura",
+    "year": 1185,
+    "description": "The Minamoto destroyed the Taira at sea.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-kamakura-shogunate-1192",
+    "title": "Kamakura Shogunate Begins",
+    "year": 1192,
+    "description": "Minamoto no Yoritomo became shogun.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-zen-flourishes-1200",
+    "title": "Zen Flourishes",
+    "year": 1200,
+    "description": "Zen Buddhism spread among the samurai.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-mongol-invasion-1274",
+    "title": "First Mongol Invasion",
+    "year": 1274,
+    "description": "Kublai Khan's fleet attacked Kyushu.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-second-mongol-invasion-1281",
+    "title": "Second Mongol Invasion",
+    "year": 1281,
+    "description": "A typhoon scattered the Mongol fleet.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-kamakura-falls-1333",
+    "title": "Kamakura Shogunate Falls",
+    "year": 1333,
+    "description": "Emperor Go-Daigo restored imperial rule.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-ashikaga-shogunate-1336",
+    "title": "Ashikaga Shogunate Founded",
+    "year": 1336,
+    "description": "Ashikaga Takauji founded a new shogunate.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-kinkakuji-1397",
+    "title": "Kinkaku-ji Built",
+    "year": 1397,
+    "description": "The Golden Pavilion rose in Kyoto.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-onin-war-1467",
+    "title": "Ōnin War Begins",
+    "year": 1467,
+    "description": "Civil war plunged Japan into chaos.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-firearms-1543",
+    "title": "Firearms Reach Japan",
+    "year": 1543,
+    "description": "Portuguese traders brought guns to Tanegashima.",
+    "category": "technology",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-xavier-1549",
+    "title": "Xavier Arrives in Japan",
+    "year": 1549,
+    "description": "Francis Xavier began Christian missions.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-nobunaga-1568",
+    "title": "Oda Nobunaga Enters Kyoto",
+    "year": 1568,
+    "description": "Oda Nobunaga began to reunify Japan.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-honnoji-1582",
+    "title": "Honnō-ji Incident",
+    "year": 1582,
+    "description": "Nobunaga was betrayed and killed.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-hideyoshi-unifies-1590",
+    "title": "Hideyoshi Unifies Japan",
+    "year": 1590,
+    "description": "Toyotomi Hideyoshi completed reunification.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-korea-invasions-1592",
+    "title": "Invasions of Korea Begin",
+    "year": 1592,
+    "description": "Hideyoshi invaded the Korean peninsula.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-sekigahara-1600",
+    "title": "Battle of Sekigahara",
+    "year": 1600,
+    "description": "Tokugawa Ieyasu won the decisive battle.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-tokugawa-shogunate-1603",
+    "title": "Tokugawa Shogunate Begins",
+    "year": 1603,
+    "description": "Tokugawa Ieyasu became shogun.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-osaka-siege-1615",
+    "title": "Siege of Osaka Ends",
+    "year": 1615,
+    "description": "The Tokugawa crushed the last Toyotomi resistance.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-sakoku-1635",
+    "title": "Sakoku Isolation Begins",
+    "year": 1635,
+    "description": "Japan closed itself to the outside world.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-shimabara-rebellion-1637",
+    "title": "Shimabara Rebellion",
+    "year": 1637,
+    "description": "Peasants and Christians rose against the shogunate.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-genroku-1688",
+    "title": "Genroku Era Begins",
+    "year": 1688,
+    "description": "Arts and culture flourished in the Genroku era.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-47-ronin-1703",
+    "title": "Forty-Seven Ronin Revenge",
+    "year": 1703,
+    "description": "Loyal samurai avenged their lord in Edo.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-tenmei-famine-1782",
+    "title": "Tenmei Famine",
+    "year": 1782,
+    "description": "A terrible famine swept northern Japan.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-hokusai-prints-1830",
+    "title": "Hokusai's Great Wave",
+    "year": 1830,
+    "description": "Hokusai printed The Great Wave off Kanagawa.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-perry-arrives-1853",
+    "title": "Perry Arrives in Japan",
+    "year": 1853,
+    "description": "Commodore Perry's warships opened Japan.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-kanagawa-treaty-1854",
+    "title": "Treaty of Kanagawa",
+    "year": 1854,
+    "description": "Japan ended its policy of isolation.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-harris-treaty-1858",
+    "title": "Harris Treaty Signed",
+    "year": 1858,
+    "description": "The United States gained trading rights.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-meiji-restoration-1868",
+    "title": "Meiji Restoration",
+    "year": 1868,
+    "description": "The emperor was restored to power.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-boshin-war-1868",
+    "title": "Boshin War",
+    "year": 1868,
+    "description": "Imperial forces crushed the shogunate's army.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-tokyo-capital-1869",
+    "title": "Tokyo Becomes Capital",
+    "year": 1869,
+    "description": "The emperor moved the capital to Edo.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-domains-abolished-1871",
+    "title": "Feudal Domains Abolished",
+    "year": 1871,
+    "description": "The daimyo domains were replaced by prefectures.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-first-railway-1872",
+    "title": "First Railway Opens",
+    "year": 1872,
+    "description": "A steam railway linked Tokyo and Yokohama.",
+    "category": "technology",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-conscription-1873",
+    "title": "Conscription Introduced",
+    "year": 1873,
+    "description": "Japan created a modern national army.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-swords-banned-1876",
+    "title": "Samurai Swords Banned",
+    "year": 1876,
+    "description": "The new government outlawed wearing swords.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-meiji-constitution-1889",
+    "title": "Meiji Constitution",
+    "year": 1889,
+    "description": "Japan adopted a modern constitution.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-first-diet-1890",
+    "title": "First Diet Convenes",
+    "year": 1890,
+    "description": "Japan's parliament met for the first time.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-sino-japanese-war-1894",
+    "title": "First Sino-Japanese War",
+    "year": 1894,
+    "description": "Japan defeated Qing China over Korea.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-shimonoseki-treaty-1895",
+    "title": "Treaty of Shimonoseki",
+    "year": 1895,
+    "description": "China ceded Taiwan to Japan.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-anglo-japanese-1902",
+    "title": "Anglo-Japanese Alliance",
+    "year": 1902,
+    "description": "Britain and Japan signed a treaty.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-russo-japanese-war-1904",
+    "title": "Russo-Japanese War",
+    "year": 1904,
+    "description": "Japan fought Russia for influence in Manchuria.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-tsushima-1905",
+    "title": "Battle of Tsushima",
+    "year": 1905,
+    "description": "Japan's navy destroyed the Russian fleet.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-korea-annexed-1910",
+    "title": "Korea Annexed",
+    "year": 1910,
+    "description": "Japan formally annexed Korea.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-meiji-dies-1912",
+    "title": "Emperor Meiji Dies",
+    "year": 1912,
+    "description": "The Meiji era ended with his death.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-wwi-entry-1914",
+    "title": "Japan Enters WWI",
+    "year": 1914,
+    "description": "Japan joined the Allies in World War I.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-rice-riots-1918",
+    "title": "Rice Riots",
+    "year": 1918,
+    "description": "Nationwide protests followed soaring rice prices.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-kanto-earthquake-1923",
+    "title": "Great Kantō Earthquake",
+    "year": 1923,
+    "description": "A massive quake destroyed Tokyo and Yokohama.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-universal-suffrage-1925",
+    "title": "Universal Male Suffrage",
+    "year": 1925,
+    "description": "All adult men won the right to vote.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-hirohito-1926",
+    "title": "Hirohito Becomes Emperor",
+    "year": 1926,
+    "description": "Shōwa era began with Emperor Hirohito.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-manchurian-incident-1931",
+    "title": "Manchurian Incident",
+    "year": 1931,
+    "description": "Japanese troops occupied Manchuria.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-february-incident-1936",
+    "title": "February 26 Incident",
+    "year": 1936,
+    "description": "Young officers attempted a coup in Tokyo.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-sino-japanese-war-ii-1937",
+    "title": "Second Sino-Japanese War",
+    "year": 1937,
+    "description": "Japan invaded China in full scale.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-pearl-harbor-1941",
+    "title": "Attack on Pearl Harbor",
+    "year": 1941,
+    "description": "Japan struck the US Pacific Fleet.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 1,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-hiroshima-1945",
+    "title": "Hiroshima Bombed",
+    "year": 1945,
+    "description": "An atomic bomb devastated Hiroshima.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-japan-surrender-1945",
+    "title": "Japan Surrenders",
+    "year": 1945,
+    "description": "Japan ended World War II.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-postwar-constitution-1947",
+    "title": "Postwar Constitution",
+    "year": 1947,
+    "description": "Japan renounced war in its new constitution.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-tokyo-war-crimes-1948",
+    "title": "War Crimes Trials End",
+    "year": 1948,
+    "description": "The Tokyo Tribunal sentenced leading figures.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-rashomon-1950",
+    "title": "Rashomon Released",
+    "year": 1950,
+    "description": "Kurosawa's Rashomon won international acclaim.",
+    "category": "film",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-san-francisco-treaty-1951",
+    "title": "San Francisco Treaty",
+    "year": 1951,
+    "description": "Japan regained full sovereignty.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-godzilla-1954",
+    "title": "Godzilla Released",
+    "year": 1954,
+    "description": "The monster film became a global phenomenon.",
+    "category": "film",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-sdf-founded-1954",
+    "title": "Self-Defense Forces Formed",
+    "year": 1954,
+    "description": "Japan rebuilt its armed forces for defence.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-un-membership-1956",
+    "title": "Japan Joins the UN",
+    "year": 1956,
+    "description": "Japan was admitted to the United Nations.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-ampo-protests-1960",
+    "title": "Ampo Protests",
+    "year": 1960,
+    "description": "Mass demonstrations opposed the US-Japan treaty.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-sukiyaki-1963",
+    "title": "Sukiyaki Tops US Charts",
+    "year": 1963,
+    "description": "Kyu Sakamoto's song became a US number one.",
+    "category": "music",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-tokyo-olympics-1964",
+    "title": "Tokyo Olympics",
+    "year": 1964,
+    "description": "Japan hosted the Summer Olympics.",
+    "category": "sports",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-shinkansen-1964",
+    "title": "Shinkansen Opens",
+    "year": 1964,
+    "description": "The bullet train linked Tokyo and Osaka.",
+    "category": "technology",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-osaka-expo-1970",
+    "title": "Osaka Expo",
+    "year": 1970,
+    "description": "Japan hosted a world exposition.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-ohsumi-1970",
+    "title": "Ohsumi Satellite Launched",
+    "year": 1970,
+    "description": "Japan became the fourth spacefaring nation.",
+    "category": "space",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-okinawa-reversion-1972",
+    "title": "Okinawa Returns",
+    "year": 1972,
+    "description": "The United States returned Okinawa to Japan.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-walkman-1979",
+    "title": "Walkman Debuts",
+    "year": 1979,
+    "description": "Sony's Walkman transformed portable music.",
+    "category": "technology",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-heisei-begins-1989",
+    "title": "Heisei Era Begins",
+    "year": 1989,
+    "description": "Emperor Akihito took the throne.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-bubble-bursts-1991",
+    "title": "Economic Bubble Bursts",
+    "year": 1991,
+    "description": "Japan's asset bubble collapsed.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-kobe-earthquake-1995",
+    "title": "Kobe Earthquake",
+    "year": 1995,
+    "description": "A deadly quake struck the port city of Kobe.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-aum-attack-1995",
+    "title": "Aum Sarin Attack",
+    "year": 1995,
+    "description": "A cult released sarin gas in Tokyo's subway.",
+    "category": "medicine",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-nagano-olympics-1998",
+    "title": "Nagano Winter Olympics",
+    "year": 1998,
+    "description": "Japan hosted the Winter Games.",
+    "category": "sports",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-neutrino-oscillation-1998",
+    "title": "Neutrino Mass Found",
+    "year": 1998,
+    "description": "Scientists at Super-Kamiokande proved neutrinos have mass.",
+    "category": "science",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-spirited-away-2001",
+    "title": "Spirited Away Released",
+    "year": 2001,
+    "description": "Miyazaki's film won an Oscar.",
+    "category": "film",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-world-cup-2002",
+    "title": "FIFA World Cup Hosted",
+    "year": 2002,
+    "description": "Japan co-hosted the World Cup with South Korea.",
+    "category": "sports",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-hayabusa-2003",
+    "title": "Hayabusa Launches",
+    "year": 2003,
+    "description": "Japan's probe flew to an asteroid.",
+    "category": "space",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-ips-cells-2006",
+    "title": "iPS Cells Created",
+    "year": 2006,
+    "description": "Shinya Yamanaka created induced stem cells.",
+    "category": "medicine",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-tohoku-2011",
+    "title": "Tōhoku Earthquake",
+    "year": 2011,
+    "description": "A quake and tsunami struck northern Japan.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-fukushima-2011",
+    "title": "Fukushima Nuclear Disaster",
+    "year": 2011,
+    "description": "The tsunami caused a nuclear meltdown.",
+    "category": "technology",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-reiwa-begins-2019",
+    "title": "Reiwa Era Begins",
+    "year": 2019,
+    "description": "Emperor Naruhito ascended the throne.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-hayabusa2-2020",
+    "title": "Hayabusa2 Returns",
+    "year": 2020,
+    "description": "The probe delivered asteroid samples to Earth.",
+    "category": "space",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-tokyo-2020-2021",
+    "title": "Tokyo Olympics Held",
+    "year": 2021,
+    "description": "The Games were postponed by the pandemic.",
+    "category": "sports",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  }
+]

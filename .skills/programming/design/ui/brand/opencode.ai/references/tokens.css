@@ -1,0 +1,163 @@
+/*
+  OpenCode design tokens (opencode.ai marketing site).
+  VERIFIED from site source: colors, font stack, padding, vertical padding, radii, widths, breakpoint.
+  PROPOSED (marked inline): anything the source did not state.
+  Scope selector mirrors the site's [data-page="opencode"]; use :root if you have a single page.
+*/
+
+[data-page='opencode'] {
+  /* Color: light (default) */
+  --color-background: hsl(0, 20%, 99%);
+  --color-background-weak: hsl(0, 8%, 97%);
+  --color-background-weak-hover: hsl(0, 8%, 94%);
+  --color-background-strong: hsl(0, 5%, 12%);
+  --color-background-strong-hover: hsl(0, 5%, 18%);
+  --color-background-interactive: hsl(
+    62,
+    84%,
+    88%
+  ); /* pale yellow-lime accent */
+  --color-background-interactive-weaker: hsl(64, 74%, 95%);
+  --color-surface-raised-base: hsla(0, 100%, 3%, 0.01);
+  --color-surface-raised-base-active: hsla(0, 100%, 17%, 0.06);
+  --color-text: hsl(0, 1%, 39%);
+  --color-text-weak: hsl(0, 1%, 60%);
+  --color-text-weaker: hsl(30, 2%, 81%);
+  --color-text-strong: hsl(0, 5%, 12%);
+  --color-text-inverted: hsl(0, 20%, 99%);
+  --color-border: hsl(30, 2%, 81%);
+  --color-border-weak: hsla(0, 100%, 3%, 0.12);
+  --color-icon: hsl(0, 1%, 55%);
+
+  /* Type */
+  --font-mono:
+    'Berkeley Mono', 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo,
+    Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --font-sans: var(--font-mono); /* verified: sans is an alias of mono */
+  --heading-font-size: 1.375rem; /* 22px */
+  --fs-h1: 38px; /* 22px under 60rem */
+  --fs-section-title: 16px; /* weight 700 */
+  --fs-body: 15px; /* stated for mobile; desktop inherits - proposed 16px */
+  --lh-body: 2; /* 1.8 under 60rem */
+
+  /* Layout */
+  --padding: 5rem; /* 1.5rem under 60rem */
+  --vertical-padding: 4rem; /* 3rem under 60rem */
+  --container: 67.5rem;
+  --bp: 60rem;
+
+  /* Shape */
+  --radius-button: 4px; /* also inputs */
+  --radius-card: 6px; /* tab panels, cards */
+  --radius-dock: 14px; /* email dock */
+}
+
+@media (max-width: 60rem) {
+  [data-page='opencode'] {
+    --padding: 1.5rem;
+    --vertical-padding: 3rem;
+    --fs-h1: 22px;
+    --lh-body: 1.8;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  [data-page='opencode'] {
+    --color-background: hsl(0, 9%, 7%);
+    --color-background-weak: hsl(0, 6%, 10%);
+    --color-background-weak-hover: hsl(0, 6%, 15%);
+    --color-background-strong: hsl(0, 15%, 94%);
+    --color-background-strong-hover: hsl(0, 15%, 97%);
+    --color-background-interactive: hsl(62, 100%, 90%);
+    --color-background-interactive-weaker: hsl(60, 20%, 8%);
+    --color-text: hsl(0, 4%, 71%);
+    --color-text-weak: hsl(0, 2%, 49%);
+    --color-text-weaker: hsl(0, 3%, 28%);
+    --color-text-strong: hsl(0, 15%, 94%);
+    --color-text-inverted: hsl(0, 9%, 7%);
+    --color-border: hsl(0, 3%, 28%);
+    --color-border-weak: hsl(0, 4%, 23%);
+    --color-icon: hsl(10, 3%, 43%);
+  }
+}
+
+/* Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  line-height: 1;
+}
+body {
+  margin: 0;
+}
+[data-page='opencode'] {
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  min-height: 100vh;
+}
+[data-page='opencode'] a {
+  color: inherit;
+  text-decoration: none;
+}
+[data-page='opencode'] p {
+  margin: 0;
+  line-height: var(--lh-body);
+}
+[data-page='opencode'] h1,
+[data-page='opencode'] h2,
+[data-page='opencode'] h3 {
+  margin: 0;
+  color: var(--color-text-strong);
+}
+
+.section {
+  border-top: 1px solid var(--color-border-weak);
+  padding: var(--vertical-padding) var(--padding);
+}
+.container {
+  max-width: var(--container);
+  margin-inline: auto;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 8px 12px 8px 20px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-button);
+  background: var(--color-background-strong);
+  color: var(--color-text-inverted);
+  font: inherit;
+  font-weight: 500;
+  line-height: 1.4;
+  cursor: pointer;
+}
+.btn:hover {
+  background: var(--color-background-strong-hover);
+}
+.btn--outline {
+  background: transparent;
+  color: var(--color-text-strong);
+  border-color: var(--color-border);
+}
+.btn--outline:hover {
+  background: var(--color-background-weak-hover);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--color-text-strong);
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

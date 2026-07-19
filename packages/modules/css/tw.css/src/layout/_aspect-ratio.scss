@@ -1,0 +1,17 @@
+// Aspect ratio utilities — Tailwind v3 default scale
+
+$aspect-ratios: (
+  ('auto', auto),
+  ('square', '1 / 1'),
+  ('video', '16 / 9'),
+  ('3\\/4', '3 / 4'),
+  ('4\\/3', '4 / 3'),
+  ('9\\/16', '9 / 16'),
+  ('16\\/9', '16 / 9')
+);
+
+@each $name, $value in $aspect-ratios {
+  .aspect-#{$name} {
+    aspect-ratio: #{$value};
+  }
+}

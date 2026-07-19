@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 361.03 402.08" width="361.03" height="402.08" role="img" aria-labelledby="cabo-verde-title cabo-verde-desc">
+  <title id="cabo-verde-title">Cabo Verde hex map</title>
+  <desc id="cabo-verde-desc">Hexagon map with 22 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.12; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 10.49 7.49; }
+    .label { fill: #52525b; font: 600 8.49px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="PN">
+    <title>Porto Novo</title>
+    <polygon class="tile inset" points="331.91,194.80 353.54,207.28 353.54,232.26 331.91,244.74 310.28,232.26 310.28,207.28" aria-label="Porto Novo"/>
+    <text class="label" x="331.91" y="219.77">PN</text>
+  </g>
+  <g class="state" data-state="MA">
+    <title>Maio</title>
+    <polygon class="tile inset" points="267.03,157.33 288.65,169.82 288.65,194.80 267.03,207.28 245.40,194.80 245.40,169.82" aria-label="Maio"/>
+    <text class="label" x="267.03" y="182.31">MA</text>
+  </g>
+  <g class="state" data-state="TS">
+    <title>Tarrafal de São Nicolau</title>
+    <polygon class="tile inset" points="267.03,232.26 288.65,244.74 288.65,269.72 267.03,282.20 245.40,269.72 245.40,244.74" aria-label="Tarrafal de São Nicolau"/>
+    <text class="label" x="267.03" y="257.23">TS</text>
+  </g>
+  <g class="state" data-state="BV">
+    <title>Boa Vista</title>
+    <polygon class="tile inset" points="223.77,82.41 245.40,94.90 245.40,119.87 223.77,132.36 202.14,119.87 202.14,94.90" aria-label="Boa Vista"/>
+    <text class="label" x="223.77" y="107.39">BV</text>
+  </g>
+  <g class="state" data-state="SL">
+    <title>Sal</title>
+    <polygon class="tile inset" points="223.77,307.18 245.40,319.66 245.40,344.64 223.77,357.12 202.14,344.64 202.14,319.66" aria-label="Sal"/>
+    <text class="label" x="223.77" y="332.15">SL</text>
+  </g>
+  <g class="state" data-state="SD">
+    <title>São Domingos</title>
+    <polygon class="tile" points="202.14,194.80 223.77,207.28 223.77,232.26 202.14,244.74 180.52,232.26 180.52,207.28" aria-label="São Domingos"/>
+    <text class="label" x="202.14" y="219.77">SD</text>
+  </g>
+  <g class="state" data-state="CR">
+    <title>Santa Cruz</title>
+    <polygon class="tile" points="180.52,157.33 202.14,169.82 202.14,194.80 180.52,207.28 158.89,194.80 158.89,169.82" aria-label="Santa Cruz"/>
+    <text class="label" x="180.52" y="182.31">CR</text>
+  </g>
+  <g class="state" data-state="PR">
+    <title>Praia</title>
+    <polygon class="tile" points="180.52,232.26 202.14,244.74 202.14,269.72 180.52,282.20 158.89,269.72 158.89,244.74" aria-label="Praia"/>
+    <text class="label" x="180.52" y="257.23">PR</text>
+  </g>
+  <g class="state" data-state="RG">
+    <title>Ribeira Grande</title>
+    <polygon class="tile inset" points="180.52,7.49 202.14,19.98 202.14,44.95 180.52,57.44 158.89,44.95 158.89,19.98" aria-label="Ribeira Grande"/>
+    <text class="label" x="180.52" y="32.47">RG</text>
+  </g>
+  <g class="state" data-state="SM">
+    <title>São Miguel</title>
+    <polygon class="tile" points="158.89,119.87 180.52,132.36 180.52,157.33 158.89,169.82 137.26,157.33 137.26,132.36" aria-label="São Miguel"/>
+    <text class="label" x="158.89" y="144.85">SM</text>
+  </g>
+  <g class="state" data-state="SO">
+    <title>São Lourenço dos Órgãos</title>
+    <polygon class="tile" points="158.89,194.80 180.52,207.28 180.52,232.26 158.89,244.74 137.26,232.26 137.26,207.28" aria-label="São Lourenço dos Órgãos"/>
+    <text class="label" x="158.89" y="219.77">SO</text>
+  </g>
+  <g class="state" data-state="CA">
+    <title>Santa Catarina</title>
+    <polygon class="tile" points="137.26,157.33 158.89,169.82 158.89,194.80 137.26,207.28 115.63,194.80 115.63,169.82" aria-label="Santa Catarina"/>
+    <text class="label" x="137.26" y="182.31">CA</text>
+  </g>
+  <g class="state" data-state="RS">
+    <title>Ribeira Grande de Santiago</title>
+    <polygon class="tile" points="137.26,232.26 158.89,244.74 158.89,269.72 137.26,282.20 115.63,269.72 115.63,244.74" aria-label="Ribeira Grande de Santiago"/>
+    <text class="label" x="137.26" y="257.23">RS</text>
+  </g>
+  <g class="state" data-state="BR">
+    <title>Brava</title>
+    <polygon class="tile inset" points="137.26,307.18 158.89,319.66 158.89,344.64 137.26,357.12 115.63,344.64 115.63,319.66" aria-label="Brava"/>
+    <text class="label" x="137.26" y="332.15">BR</text>
+  </g>
+  <g class="state" data-state="TA">
+    <title>Tarrafal</title>
+    <polygon class="tile" points="115.63,119.87 137.26,132.36 137.26,157.33 115.63,169.82 94.00,157.33 94.00,132.36" aria-label="Tarrafal"/>
+    <text class="label" x="115.63" y="144.85">TA</text>
+  </g>
+  <g class="state" data-state="SS">
+    <title>São Salvador do Mundo</title>
+    <polygon class="tile" points="115.63,194.80 137.26,207.28 137.26,232.26 115.63,244.74 94.00,232.26 94.00,207.28" aria-label="São Salvador do Mundo"/>
+    <text class="label" x="115.63" y="219.77">SS</text>
+  </g>
+  <g class="state" data-state="RB">
+    <title>Ribeira Brava</title>
+    <polygon class="tile inset" points="115.63,44.95 137.26,57.44 137.26,82.41 115.63,94.90 94.00,82.41 94.00,57.44" aria-label="Ribeira Brava"/>
+    <text class="label" x="115.63" y="69.93">RB</text>
+  </g>
+  <g class="state" data-state="CF">
+    <title>Santa Catarina do Fogo</title>
+    <polygon class="tile inset" points="72.38,269.72 94.00,282.20 94.00,307.18 72.38,319.66 50.75,307.18 50.75,282.20" aria-label="Santa Catarina do Fogo"/>
+    <text class="label" x="72.38" y="294.69">CF</text>
+  </g>
+  <g class="state" data-state="PA">
+    <title>Paul</title>
+    <polygon class="tile inset" points="72.38,344.64 94.00,357.12 94.00,382.10 72.38,394.59 50.75,382.10 50.75,357.12" aria-label="Paul"/>
+    <text class="label" x="72.38" y="369.61">PA</text>
+  </g>
+  <g class="state" data-state="SV">
+    <title>São Vicente</title>
+    <polygon class="tile inset" points="50.75,7.49 72.38,19.98 72.38,44.95 50.75,57.44 29.12,44.95 29.12,19.98" aria-label="São Vicente"/>
+    <text class="label" x="50.75" y="32.47">SV</text>
+  </g>
+  <g class="state" data-state="MO">
+    <title>Mosteiros</title>
+    <polygon class="tile inset" points="29.12,194.80 50.75,207.28 50.75,232.26 29.12,244.74 7.49,232.26 7.49,207.28" aria-label="Mosteiros"/>
+    <text class="label" x="29.12" y="219.77">MO</text>
+  </g>
+  <g class="state" data-state="SF">
+    <title>São Filipe</title>
+    <polygon class="tile inset" points="29.12,119.87 50.75,132.36 50.75,157.33 29.12,169.82 7.49,157.33 7.49,132.36" aria-label="São Filipe"/>
+    <text class="label" x="29.12" y="144.85">SF</text>
+  </g>
+</svg>

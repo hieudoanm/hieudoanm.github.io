@@ -1,0 +1,14 @@
+// Mask origin utilities — Tailwind v4 default scale
+
+$mask-origins: (
+  ('border', border-box),
+  ('padding', padding-box),
+  ('content', content-box)
+);
+
+@each $name, $value in $mask-origins {
+  .mask-origin-#{$name} {
+    -webkit-mask-origin: $value;
+    mask-origin: $value;
+  }
+}

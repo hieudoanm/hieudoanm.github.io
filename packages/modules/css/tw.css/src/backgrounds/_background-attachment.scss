@@ -1,0 +1,13 @@
+// Background attachment utilities — Tailwind v3 default scale
+
+$background-attachments: (
+  ('fixed', fixed),
+  ('local', local),
+  ('scroll', scroll)
+);
+
+@each $name, $value in $background-attachments {
+  .bg-#{$name} {
+    background-attachment: $value;
+  }
+}

@@ -1,0 +1,16 @@
+// Border style utilities — Tailwind v3 default scale
+
+$border-styles: (
+  ('solid', solid),
+  ('dashed', dashed),
+  ('dotted', dotted),
+  ('double', double),
+  ('hidden', hidden),
+  ('none', none)
+);
+
+@each $name, $value in $border-styles {
+  .border-#{$name} {
+    border-style: $value;
+  }
+}

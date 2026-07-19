@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "europe-roman-conquest-43",
+    "title": "Roman Conquest of Britain",
+    "year": 43,
+    "description": "The Roman Empire began its invasion of Britain under Emperor Claudius.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-boudica-revolt-60",
+    "title": "Boudica's Revolt",
+    "year": 60,
+    "description": "Queen Boudica led a rebellion against Roman rule in Britain.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-hadrians-wall-122",
+    "title": "Hadrian's Wall Built",
+    "year": 122,
+    "description": "The Romans built a defensive wall across northern England.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-romans-leave-britain-410",
+    "title": "Romans Leave Britain",
+    "year": 410,
+    "description": "The last Roman legions withdrew from Britain.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-lindisfarne-raid-793",
+    "title": "Viking Raid on Lindisfarne",
+    "year": 793,
+    "description": "Viking raiders attacked the monastery at Lindisfarne.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-alfred-the-great-871",
+    "title": "Alfred the Great Becomes King",
+    "year": 871,
+    "description": "Alfred became King of Wessex and fought the Viking invaders.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-battle-of-hastings-1066",
+    "title": "Battle of Hastings",
+    "year": 1066,
+    "description": "William the Conqueror defeated King Harold II at Hastings.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-domesday-book-1086",
+    "title": "Domesday Book Completed",
+    "year": 1086,
+    "description": "William the Conqueror ordered a survey of all land and property.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-oxford-teaching-1096",
+    "title": "University of Oxford Teaching Begins",
+    "year": 1096,
+    "description": "Teaching at Oxford began in the late eleventh century.",
+    "category": "science",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-magna-carta-1215",
+    "title": "Magna Carta Signed",
+    "year": 1215,
+    "description": "King John sealed the Magna Carta limiting royal power.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-cambridge-university-1209",
+    "title": "University of Cambridge Founded",
+    "year": 1209,
+    "description": "Scholars left Oxford to found a new university at Cambridge.",
+    "category": "science",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-first-parliament-1265",
+    "title": "Simon de Montfort's Parliament",
+    "year": 1265,
+    "description": "Simon de Montfort summoned a parliament with elected representatives.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-peasants-revolt-1381",
+    "title": "Peasants' Revolt",
+    "year": 1381,
+    "description": "English peasants rebelled against the poll tax and feudal oppression.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-wars-of-the-roses-1455",
+    "title": "Wars of the Roses Begin",
+    "year": 1455,
+    "description": "The houses of York and Lancaster fought for the English throne.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-bosworth-field-1485",
+    "title": "Battle of Bosworth Field",
+    "year": 1485,
+    "description": "Henry Tudor defeated Richard III ending the Wars of the Roses.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-tudor-dynasty-1485",
+    "title": "Tudor Dynasty Begins",
+    "year": 1485,
+    "description": "Henry VII became the first Tudor king of England.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-act-of-supremacy-1534",
+    "title": "Church of England Established",
+    "year": 1534,
+    "description": "Henry VIII broke with Rome and created the Church of England.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-dissolution-monasteries-1536",
+    "title": "Dissolution of the Monasteries",
+    "year": 1536,
+    "description": "Henry VIII closed England's monasteries and seized their wealth.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-mary-rose-sinks-1545",
+    "title": "Mary Rose Sinks",
+    "year": 1545,
+    "description": "The warship Mary Rose sank in the Solent during battle.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-elizabeth-i-crowned-1558",
+    "title": "Elizabeth I Crowned",
+    "year": 1558,
+    "description": "Elizabeth I became Queen of England at age 25.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-drake-circumnavigates-1580",
+    "title": "Drake Circumnavigates the Globe",
+    "year": 1580,
+    "description": "Sir Francis Drake completed the first English voyage around the world.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-spanish-armada-1588",
+    "title": "Spanish Armada Defeated",
+    "year": 1588,
+    "description": "The English fleet defeated the Spanish Armada sent to invade.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-globe-theatre-1599",
+    "title": "Globe Theatre Opens",
+    "year": 1599,
+    "description": "Shakespeare's company opened the Globe Theatre on the Thames.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-east-india-company-1600",
+    "title": "East India Company Founded",
+    "year": 1600,
+    "description": "English merchants founded a company to trade with the East Indies.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-union-of-crowns-1603",
+    "title": "Union of the Crowns",
+    "year": 1603,
+    "description": "James VI of Scotland became James I of England.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-gunpowder-plot-1605",
+    "title": "Gunpowder Plot Foiled",
+    "year": 1605,
+    "description": "Catholics plotted to blow up Parliament in the Gunpowder Plot.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-first-folio-1623",
+    "title": "Shakespeare's First Folio",
+    "year": 1623,
+    "description": "Thirty-six of Shakespeare's plays were published together.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-english-civil-war-1642",
+    "title": "English Civil War Begins",
+    "year": 1642,
+    "description": "Parliament and King Charles I went to war.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-charles-i-executed-1649",
+    "title": "Charles I Executed",
+    "year": 1649,
+    "description": "King Charles I was executed after being convicted of treason.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-cromwell-protector-1653",
+    "title": "Cromwell Becomes Lord Protector",
+    "year": 1653,
+    "description": "Oliver Cromwell took power as Lord Protector of the Commonwealth.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-restoration-1660",
+    "title": "Monarchy Restored",
+    "year": 1660,
+    "description": "Charles II returned from exile and restored the monarchy.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-great-fire-london-1666",
+    "title": "Great Fire of London",
+    "year": 1666,
+    "description": "A fire destroyed much of the City of London.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-principia-published-1687",
+    "title": "Newton Publishes Principia",
+    "year": 1687,
+    "description": "Isaac Newton published his laws of motion and gravity.",
+    "category": "science",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-glorious-revolution-1688",
+    "title": "Glorious Revolution",
+    "year": 1688,
+    "description": "William of Orange replaced James II as king.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-bill-of-rights-1689",
+    "title": "Bill of Rights Passed",
+    "year": 1689,
+    "description": "Parliament passed the Bill of Rights limiting royal power.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-bank-of-england-1694",
+    "title": "Bank of England Founded",
+    "year": 1694,
+    "description": "The Bank of England was established to manage government finances.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-act-of-union-1707",
+    "title": "Act of Union Creates Great Britain",
+    "year": 1707,
+    "description": "England and Scotland united into the Kingdom of Great Britain.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-battle-of-culloden-1746",
+    "title": "Battle of Culloden",
+    "year": 1746,
+    "description": "Government forces crushed the Jacobite rebellion at Culloden.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-british-museum-1753",
+    "title": "British Museum Opens",
+    "year": 1753,
+    "description": "The British Museum opened as the first national public museum.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-spinning-jenny-1764",
+    "title": "Spinning Jenny Invented",
+    "year": 1764,
+    "description": "James Hargreaves invented the spinning jenny for weaving.",
+    "category": "technology",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-watt-steam-engine-1769",
+    "title": "Watt Patents the Steam Engine",
+    "year": 1769,
+    "description": "James Watt patented an improved steam engine.",
+    "category": "technology",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-first-fleet-1788",
+    "title": "First Fleet Sails to Australia",
+    "year": 1788,
+    "description": "The First Fleet carried convicts to establish a colony in Australia.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-battle-of-trafalgar-1805",
+    "title": "Battle of Trafalgar",
+    "year": 1805,
+    "description": "Nelson defeated the French and Spanish fleets at Trafalgar.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-slave-trade-act-1807",
+    "title": "Slave Trade Act",
+    "year": 1807,
+    "description": "Britain abolished the transatlantic slave trade.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-battle-of-waterloo-1815",
+    "title": "Battle of Waterloo",
+    "year": 1815,
+    "description": "British and allied forces defeated Napoleon at Waterloo.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-peterloo-massacre-1819",
+    "title": "Peterloo Massacre",
+    "year": 1819,
+    "description": "Cavalry charged a reform rally in Manchester killing several people.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-stockton-darlington-1825",
+    "title": "First Public Railway Opens",
+    "year": 1825,
+    "description": "The Stockton and Darlington Railway opened as the first public railway.",
+    "category": "technology",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-metropolitan-police-1829",
+    "title": "Metropolitan Police Founded",
+    "year": 1829,
+    "description": "Sir Robert Peel founded the Metropolitan Police in London.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-great-reform-act-1832",
+    "title": "Great Reform Act",
+    "year": 1832,
+    "description": "The Reform Act extended the vote to more men.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-slavery-abolition-act-1833",
+    "title": "Slavery Abolition Act",
+    "year": 1833,
+    "description": "Britain abolished slavery throughout most of its empire.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-victoria-crowned-1837",
+    "title": "Queen Victoria Crowned",
+    "year": 1837,
+    "description": "Victoria became Queen of the United Kingdom.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-peoples-charter-1838",
+    "title": "People's Charter Published",
+    "year": 1838,
+    "description": "Chartists published demands for universal male suffrage.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-penny-black-1840",
+    "title": "Penny Black Stamp Issued",
+    "year": 1840,
+    "description": "The Penny Black became the world's first adhesive postage stamp.",
+    "category": "technology",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-great-famine-1845",
+    "title": "Great Famine Begins in Ireland",
+    "year": 1845,
+    "description": "Potato blight triggered mass starvation in Ireland.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-public-health-act-1848",
+    "title": "Public Health Act",
+    "year": 1848,
+    "description": "The first Public Health Act addressed sanitation in British cities.",
+    "category": "medicine",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-great-exhibition-1851",
+    "title": "Great Exhibition Opens",
+    "year": 1851,
+    "description": "The Great Exhibition showcased industry at the Crystal Palace.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-crimean-war-1854",
+    "title": "Crimean War Begins",
+    "year": 1854,
+    "description": "Britain and France fought Russia in the Crimea.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-nightingale-scutari-1854",
+    "title": "Nightingale Serves at Scutari",
+    "year": 1854,
+    "description": "Florence Nightingale improved hospital care during the Crimean War.",
+    "category": "medicine",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-origin-of-species-1859",
+    "title": "Origin of Species Published",
+    "year": 1859,
+    "description": "Charles Darwin published his theory of evolution.",
+    "category": "science",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-london-underground-1863",
+    "title": "London Underground Opens",
+    "year": 1863,
+    "description": "The Metropolitan Railway opened as the world's first underground railway.",
+    "category": "technology",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-football-association-1863",
+    "title": "Football Association Founded",
+    "year": 1863,
+    "description": "The Football Association was founded in London.",
+    "category": "sports",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-second-reform-act-1867",
+    "title": "Second Reform Act",
+    "year": 1867,
+    "description": "The vote was extended to more working-class men.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-first-wimbledon-1877",
+    "title": "First Wimbledon Championship",
+    "year": 1877,
+    "description": "The first Wimbledon tennis tournament was held.",
+    "category": "sports",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-tower-bridge-1894",
+    "title": "Tower Bridge Opens",
+    "year": 1894,
+    "description": "Tower Bridge across the Thames was opened by the Prince of Wales.",
+    "category": "technology",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-wspu-founded-1903",
+    "title": "Suffragette Movement Founded",
+    "year": 1903,
+    "description": "Emmeline Pankhurst founded the Women's Social and Political Union.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-entente-cordiale-1904",
+    "title": "Entente Cordiale Signed",
+    "year": 1904,
+    "description": "Britain and France settled colonial disputes with an agreement.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-dreadnought-launched-1906",
+    "title": "HMS Dreadnought Launched",
+    "year": 1906,
+    "description": "The revolutionary battleship HMS Dreadnought was launched.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-old-age-pensions-1908",
+    "title": "Old Age Pensions Introduced",
+    "year": 1908,
+    "description": "The government began paying pensions to the over-70s.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-scott-south-pole-1912",
+    "title": "Scott Reaches the South Pole",
+    "year": 1912,
+    "description": "Robert Falcon Scott reached the South Pole on a doomed expedition.",
+    "category": "science",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-britain-enters-ww1-1914",
+    "title": "Britain Enters World War I",
+    "year": 1914,
+    "description": "Britain declared war on Germany after the invasion of Belgium.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-battle-of-somme-1916",
+    "title": "Battle of the Somme",
+    "year": 1916,
+    "description": "The Somme offensive caused huge British casualties.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-votes-for-women-1918",
+    "title": "Women Win the Vote",
+    "year": 1918,
+    "description": "The Representation of the People Act gave women the vote.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-ww1-armistice-1918",
+    "title": "World War I Ends",
+    "year": 1918,
+    "description": "The armistice ended fighting on the Western Front.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-bbc-founded-1922",
+    "title": "BBC Founded",
+    "year": 1922,
+    "description": "The British Broadcasting Company was founded in London.",
+    "category": "technology",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-general-strike-1926",
+    "title": "General Strike",
+    "year": 1926,
+    "description": "Millions of workers struck over miners' pay and conditions.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-penicillin-discovered-1928",
+    "title": "Penicillin Discovered",
+    "year": 1928,
+    "description": "Alexander Fleming discovered penicillin's antibiotic properties.",
+    "category": "medicine",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-bbc-tv-1936",
+    "title": "BBC Begins Television Broadcasts",
+    "year": 1936,
+    "description": "The BBC launched the world's first regular television service.",
+    "category": "technology",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-jarrow-march-1936",
+    "title": "Jarrow March",
+    "year": 1936,
+    "description": "Unemployed workers marched from Jarrow to London.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-dunkirk-1940",
+    "title": "Dunkirk Evacuation",
+    "year": 1940,
+    "description": "Allied troops were evacuated from the beaches of Dunkirk.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-battle-of-britain-1940",
+    "title": "Battle of Britain",
+    "year": 1940,
+    "description": "The RAF defeated the Luftwaffe in the skies over Britain.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-the-blitz-1940",
+    "title": "The Blitz Begins",
+    "year": 1940,
+    "description": "German bombers launched sustained attacks on British cities.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-beveridge-report-1942",
+    "title": "Beveridge Report Published",
+    "year": 1942,
+    "description": "The Beveridge Report proposed a welfare state after the war.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-d-day-1944",
+    "title": "D-Day Landings",
+    "year": 1944,
+    "description": "British and Allied forces landed on the beaches of Normandy.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-nhs-founded-1948",
+    "title": "National Health Service Founded",
+    "year": 1948,
+    "description": "The NHS began providing free healthcare to all.",
+    "category": "medicine",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-windrush-1948",
+    "title": "Empire Windrush Arrives",
+    "year": 1948,
+    "description": "The Empire Windrush brought Caribbean migrants to London.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-festival-of-britain-1951",
+    "title": "Festival of Britain",
+    "year": 1951,
+    "description": "The Festival of Britain celebrated national recovery.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-everest-summit-1953",
+    "title": "Everest Summit",
+    "year": 1953,
+    "description": "Hillary and Tenzing became the first to reach the summit of Everest.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-coronation-1953",
+    "title": "Coronation of Elizabeth II",
+    "year": 1953,
+    "description": "Elizabeth II was crowned at Westminster Abbey.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-england-world-cup-1966",
+    "title": "England Win the World Cup",
+    "year": 1966,
+    "description": "England won the FIFA World Cup at Wembley.",
+    "category": "sports",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-decimal-day-1971",
+    "title": "Decimal Day",
+    "year": 1971,
+    "description": "Britain switched to a decimal currency.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-bloody-sunday-1972",
+    "title": "Bloody Sunday",
+    "year": 1972,
+    "description": "British soldiers shot protesters in Derry Northern Ireland.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-sex-discrimination-act-1975",
+    "title": "Sex Discrimination Act",
+    "year": 1975,
+    "description": "The Act made sex discrimination in employment unlawful.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-test-tube-baby-1978",
+    "title": "First Test-Tube Baby Born",
+    "year": 1978,
+    "description": "Louise Brown became the first baby born through IVF.",
+    "category": "medicine",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-falklands-war-1982",
+    "title": "Falklands War",
+    "year": 1982,
+    "description": "Britain fought Argentina over the Falkland Islands.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-miners-strike-1984",
+    "title": "Miners' Strike",
+    "year": 1984,
+    "description": "British miners struck against planned pit closures.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-channel-tunnel-1994",
+    "title": "Channel Tunnel Opens",
+    "year": 1994,
+    "description": "The Channel Tunnel linked Britain and France by rail.",
+    "category": "technology",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-scottish-parliament-1999",
+    "title": "Scottish Parliament Reconvened",
+    "year": 1999,
+    "description": "Devolution created a new Scottish Parliament in Edinburgh.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-london-olympics-2012",
+    "title": "London Hosts the Olympics",
+    "year": 2012,
+    "description": "London staged the 2012 Summer Olympics.",
+    "category": "sports",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-scottish-referendum-2014",
+    "title": "Scottish Independence Referendum",
+    "year": 2014,
+    "description": "Scotland voted to remain part of the United Kingdom.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-brexit-referendum-2016",
+    "title": "Brexit Referendum",
+    "year": 2016,
+    "description": "The UK voted to leave the European Union.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  }
+]

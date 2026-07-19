@@ -1,0 +1,44 @@
+// Global box sizing, block margins and focus ring. `:where()` keeps the
+// focus rule at zero specificity so later rules can override it easily.
+
+@mixin reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  address,
+  blockquote,
+  dd,
+  dl,
+  figure,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  hr,
+  ol,
+  p,
+  pre,
+  ul {
+    margin: 0;
+  }
+
+  :where(
+    a,
+    button,
+    input,
+    select,
+    textarea,
+    summary,
+    dialog,
+    [tabindex],
+    [contenteditable]
+  ):focus-visible {
+    outline: 2px solid var(--base-focus-ring);
+    outline-offset: 2px;
+  }
+}

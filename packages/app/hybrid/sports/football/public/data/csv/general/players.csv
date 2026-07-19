@@ -1,0 +1,331 @@
+id,name,country
+pele,Pelé,Brazil
+maradona,Diego Maradona,Argentina
+messi,Lionel Messi,Argentina
+cristiano-ronaldo,Cristiano Ronaldo,Portugal
+zidane,Zinedine Zidane,France
+ronaldo-nazario,Ronaldo Nazário,Brazil
+ronaldinho,Ronaldinho,Brazil
+neymar,Neymar,Brazil
+cruyff,Johan Cruyff,Netherlands
+beckenbauer,Franz Beckenbauer,Germany
+platini,Michel Platini,France
+yashin,Lev Yashin,Russia
+zico,Zico,Brazil
+matthaeus,Lothar Matthäus,Germany
+muller,Gerd Müller,Germany
+van-basten,Marco van Basten,Netherlands
+gullit,Ruud Gullit,Netherlands
+puskas,Ferenc Puskás,Hungary
+di-stefano,Alfredo Di Stéfano,Argentina
+best,George Best,Northern Ireland
+baresi,Franco Baresi,Italy
+maldini,Paolo Maldini,Italy
+baggio,Roberto Baggio,Italy
+totti,Francesco Totti,Italy
+del-piero,Alessandro Del Piero,Italy
+buffon,Gianluigi Buffon,Italy
+casillas,Iker Casillas,Spain
+xavi,Xavi,Spain
+iniesta,Andrés Iniesta,Spain
+raul,Raúl,Spain
+torres,Fernando Torres,Spain
+villa,David Villa,Spain
+shevchenko,Andriy Shevchenko,Ukraine
+henry,Thierry Henry,France
+de-bruyne,Kevin De Bruyne,Belgium
+modric,Luka Modrić,Croatia
+kroos,Toni Kroos,Germany
+lewandowski,Robert Lewandowski,Poland
+neuer,Manuel Neuer,Germany
+lahm,Philipp Lahm,Germany
+kahn,Oliver Kahn,Germany
+klose,Miroslav Klose,Germany
+klinsmann,Jürgen Klinsmann,Germany
+rummenigge,Karl-Heinz Rummenigge,Germany
+ballack,Michael Ballack,Germany
+ozil,Mesut Özil,Germany
+schweinsteiger,Bastian Schweinsteiger,Germany
+kimmich,Joshua Kimmich,Germany
+gundogan,İlkay Gündoğan,Germany
+musiala,Jamal Musiala,Germany
+wirtz,Florian Wirtz,Germany
+havertz,Kai Havertz,Germany
+mueller-thomas,Thomas Müller,Germany
+salah,Mohamed Salah,Egypt
+mane,Sadio Mané,Senegal
+mbappe,Kylian Mbappé,France
+benzema,Karim Benzema,France
+griezmann,Antoine Griezmann,France
+giroud,Olivier Giroud,France
+dembele,Ousmane Dembélé,France
+lukaku,Romelu Lukaku,Belgium
+hazard,Eden Hazard,Belgium
+courtois,Thibaut Courtois,Belgium
+kante,N'Golo Kanté,France
+pogba,Paul Pogba,France
+vieira,Patrick Vieira,France
+makalele,Claude Makélélé,France
+pires,Robert Pirès,France
+papin,Jean-Pierre Papin,France
+cantona,Eric Cantona,France
+blanc,Laurent Blanc,France
+desailly,Marcel Desailly,France
+thuram,Lilian Thuram,France
+evra,Patrice Evra,France
+varane,Raphaël Varane,France
+lizarazu,Bixente Lizarazu,France
+kaka,Kaká,Brazil
+rivaldo,Rivaldo,Brazil
+roberto-carlos,Roberto Carlos,Brazil
+cafu,Cafu,Brazil
+dani-alves,Dani Alves,Brazil
+marcelo,Marcelo,Brazil
+thiago-silva,Thiago Silva,Brazil
+alisson,Alisson,Brazil
+ederson,Ederson,Brazil
+vinicius,Vinícius Júnior,Brazil
+rodrygo,Rodrygo,Brazil
+endrick,Endrick,Brazil
+suarez,Luis Suárez,Uruguay
+cavani,Edinson Cavani,Uruguay
+forlan,Diego Forlán,Uruguay
+nunez,Darwin Núñez,Uruguay
+valverde,Federico Valverde,Uruguay
+godin,Diego Godín,Uruguay
+agüero,Sergio Agüero,Argentina
+batistuta,Gabriel Batistuta,Argentina
+di-maria,Ángel Di María,Argentina
+dybala,Paulo Dybala,Argentina
+lautaro-martinez,Lautaro Martínez,Argentina
+julian-alvarez,Julián Álvarez,Argentina
+enzo-fernandez,Enzo Fernández,Argentina
+mascherano,Javier Mascherano,Argentina
+veron,Juan Sebastián Verón,Argentina
+redondo,Fernando Redondo,Argentina
+zanetti,Javier Zanetti,Argentina
+simeone,Diego Simeone,Argentina
+tevez,Carlos Tevez,Argentina
+higuain,Gonzalo Higuaín,Argentina
+mac-allister,Alexis Mac Allister,Argentina
+de-paul,Rodrigo De Paul,Argentina
+cambiasso,Esteban Cambiasso,Argentina
+emiliano-martinez,Emiliano Martínez,Argentina
+lisandro-martinez,Lisandro Martínez,Argentina
+rooney,Wayne Rooney,England
+kane,Harry Kane,England
+owen,Michael Owen,England
+shearer,Alan Shearer,England
+lineker,Gary Lineker,England
+beckham,David Beckham,England
+gerrard,Steven Gerrard,England
+lampard,Frank Lampard,England
+scholes,Paul Scholes,England
+terry,John Terry,England
+ferdinand,Rio Ferdinand,England
+ashley-cole,Ashley Cole,England
+neville,Gary Neville,England
+adams,Tony Adams,England
+seaman,David Seaman,England
+saka,Bukayo Saka,England
+foden,Phil Foden,England
+bellingham,Jude Bellingham,England
+sterling,Raheem Sterling,England
+rashford,Marcus Rashford,England
+grealish,Jack Grealish,England
+rice,Declan Rice,England
+palmer,Cole Palmer,England
+sancho,Jadon Sancho,England
+vardy,Jamie Vardy,England
+henderson,Jordan Henderson,England
+milner,James Milner,England
+trent-alexander,Trent Alexander-Arnold,England
+walker,Kyle Walker,England
+stones,John Stones,England
+maguire,Harry Maguire,England
+pickford,Jordan Pickford,England
+crouch,Peter Crouch,England
+sheringham,Teddy Sheringham,England
+campbell,Sol Campbell,England
+bale,Gareth Bale,Wales
+giggs,Ryan Giggs,Wales
+rush,Ian Rush,Wales
+robertson,Andrew Robertson,Scotland
+mcginn,John McGinn,Scotland
+mctominay,Scott McTominay,Scotland
+ibrahimovic,Zlatan Ibrahimović,Sweden
+larsson,Henrik Larsson,Sweden
+van-persie,Robin van Persie,Netherlands
+van-nistelrooy,Ruud van Nistelrooy,Netherlands
+bergkamp,Dennis Bergkamp,Netherlands
+seedorf,Clarence Seedorf,Netherlands
+davids,Edgar Davids,Netherlands
+sneijder,Wesley Sneijder,Netherlands
+robben,Arjen Robben,Netherlands
+depay,Memphis Depay,Netherlands
+van-dijk,Virgil van Dijk,Netherlands
+de-jong,Frenkie de Jong,Netherlands
+koeman,Ronald Koeman,Netherlands
+stam,Jaap Stam,Netherlands
+kuyt,Dirk Kuyt,Netherlands
+van-der-sar,Edwin van der Sar,Netherlands
+suker,Davor Šuker,Croatia
+boban,Zvonimir Boban,Croatia
+perisic,Ivan Perišić,Croatia
+rakitic,Ivan Rakitić,Croatia
+kovacic,Mateo Kovačić,Croatia
+brozovic,Marcelo Brozović,Croatia
+mandzukic,Mario Mandžukić,Croatia
+gvardiol,Joško Gvardiol,Croatia
+stanišic,Josip Stanišić,Croatia
+kramaric,Andrej Kramarić,Croatia
+jarni,Robert Jarni,Croatia
+boksic,Alen Bokšić,Croatia
+hagi,Gheorghe Hagi,Romania
+popescu,Gheorghe Popescu,Romania
+mutu,Adrian Mutu,Romania
+petrescu,Dan Petrescu,Romania
+marin,Răzvan Marin,Romania
+ianis-hagi,Ianis Hagi,Romania
+stancu,Nicolae Stanciu,Romania
+nedved,Pavel Nedvěd,Czechia
+cech,Petr Čech,Czechia
+rosicky,Tomáš Rosický,Czechia
+schick,Patrik Schick,Czechia
+hlosek,Adam Hložek,Czechia
+poborsky,Karel Poborský,Czechia
+smicer,Vladimír Šmicer,Czechia
+baros,Milan Baroš,Czechia
+hamsik,Marek Hamšík,Slovakia
+skrtel,Martin Škrteľ,Slovakia
+skriniar,Milan Škriniar,Slovakia
+lobotka,Stanislav Lobotka,Slovakia
+sesko,Benjamin Šeško,Slovenia
+oblak,Jan Oblak,Slovenia
+kampl,Kevin Kampl,Slovenia
+ilicic,Josip Iličić,Slovenia
+stoichkov,Hristo Stoichkov,Bulgaria
+berbatov,Dimitar Berbatov,Bulgaria
+drogba,Didier Drogba,Ivory Coast
+yaya-toure,Yaya Touré,Ivory Coast
+kolo-toure,Kolo Touré,Ivory Coast
+kessie,Franck Kessié,Ivory Coast
+haller,Sébastien Haller,Ivory Coast
+etoo,Samuel Eto'o,Cameroon
+weah,George Weah,Liberia
+aubameyang,Pierre-Emerick Aubameyang,Gabon
+okocha,Jay-Jay Okocha,Nigeria
+kanu,Nwankwo Kanu,Nigeria
+osimhen,Victor Osimhen,Nigeria
+adebayor,Emmanuel Adebayor,Togo
+mahrez,Riyad Mahrez,Algeria
+slimani,Islam Slimani,Algeria
+ziyech,Hakim Ziyech,Morocco
+en-nesyri,Youssef En-Nesyri,Morocco
+hakimi,Achraf Hakimi,Morocco
+amrabat,Sofyan Amrabat,Morocco
+son,Son Heung-min,South Korea
+park,Park Ji-sung,South Korea
+kagawa,Shinji Kagawa,Japan
+honda,Keisuke Honda,Japan
+kubo,Takefusa Kubo,Japan
+mitoma,Kaoru Mitoma,Japan
+endo,Wataru Endo,Japan
+cahill,Tim Cahill,Australia
+kewell,Harry Kewell,Australia
+viduka,Mark Viduka,Australia
+ryan,Mathew Ryan,Australia
+hugo-sanchez,Hugo Sánchez,Mexico
+blanco,Cuauhtémoc Blanco,Mexico
+marquez,Rafael Márquez,Mexico
+luis-hernandez,Luis Hernández,Mexico
+lozano,Hirving Lozano,Mexico
+jimenez,Raúl Jiménez,Mexico
+chicharito,Javier Hernández,Mexico
+vela,Carlos Vela,Mexico
+ochoa,Guillermo Ochoa,Mexico
+donovan,Landon Donovan,USA
+dempsey,Clint Dempsey,USA
+pulisic,Christian Pulisic,USA
+mckennie,Weston McKennie,USA
+aaronson,Brenden Aaronson,USA
+pepi,Ricardo Pepi,USA
+tim-howard,Tim Howard,USA
+friedel,Brad Friedel,USA
+bradley,Michael Bradley,USA
+davies,Alphonso Davies,Canada
+david,Jonathan David,Canada
+larin,Cyle Larin,Canada
+sun-jihai,Sun Jihai,China
+wu-lei,Wu Lei,China
+li-tie,Li Tie,China
+calhanoglu,Hakan Çalhanoğlu,Turkey
+turan,Arda Turan,Turkey
+yilmaz,Burak Yılmaz,Turkey
+sahin,Nuri Şahin,Turkey
+sukur,Hakan Şükür,Turkey
+receber,Rüştü Reçber,Turkey
+demiral,Merih Demiral,Turkey
+yildiz,Kenan Yıldız,Turkey
+yarmolenko,Andriy Yarmolenko,Ukraine
+zinchenko,Oleksandr Zinchenko,Ukraine
+mudryk,Mykhailo Mudryk,Ukraine
+dovbyk,Artem Dovbyk,Ukraine
+sudakov,Georgiy Sudakov,Ukraine
+lunin,Andriy Lunin,Ukraine
+arshavin,Andrey Arshavin,Russia
+golovin,Aleksandr Golovin,Russia
+dziuba,Artem Dzyuba,Russia
+akinfeev,Igor Akinfeev,Russia
+kerzhakov,Aleksandr Kerzhakov,Russia
+dzeko,Edin Džeko,Bosnia and Herzegovina
+pjanic,Miralem Pjanić,Bosnia and Herzegovina
+gattuso,Gennaro Gattuso,Italy
+pirlo,Andrea Pirlo,Italy
+nesta,Alessandro Nesta,Italy
+cannavaro,Fabio Cannavaro,Italy
+chiellini,Giorgio Chiellini,Italy
+bonucci,Leonardo Bonucci,Italy
+de-rossi,Daniele De Rossi,Italy
+verratti,Marco Verratti,Italy
+jorginho,Jorginho,Italy
+donnarumma,Gianluigi Donnarumma,Italy
+insigne,Lorenzo Insigne,Italy
+immobile,Ciro Immobile,Italy
+chiesa,Federico Chiesa,Italy
+inzaghi,Filippo Inzaghi,Italy
+vieri,Christian Vieri,Italy
+zoff,Dino Zoff,Italy
+puyol,Carles Puyol,Spain
+ramos,Sergio Ramos,Spain
+pique,Gerard Piqué,Spain
+xabi-alonso,Xabi Alonso,Spain
+fabregas,Cesc Fàbregas,Spain
+david-silva,David Silva,Spain
+busquets,Sergio Busquets,Spain
+pedri,Pedri,Spain
+gavi,Gavi,Spain
+yamal,Lamine Yamal,Spain
+morata,Álvaro Morata,Spain
+olmo,Dani Olmo,Spain
+rodri,Rodri,Spain
+cazorla,Santi Cazorla,Spain
+schmeichel,Peter Schmeichel,Denmark
+eriksen,Christian Eriksen,Denmark
+hojbjerg,Pierre-Emile Højbjerg,Denmark
+hojlund,Rasmus Højlund,Denmark
+laudrup,Michael Laudrup,Denmark
+braithwaite,Martin Braithwaite,Denmark
+odegaard,Martin Ødegaard,Norway
+haaland,Erling Haaland,Norway
+sorloth,Alexander Sørloth,Norway
+litmanen,Jari Litmanen,Finland
+hyypia,Sami Hyypiä,Finland
+pukki,Teemu Pukki,Finland
+gudjohnsen,Eidur Gudjohnsen,Iceland
+sigurdsson,Gylfi Sigurðsson,Iceland
+gudmundsson,Jóhann Berg Guðmundsson,Iceland
+keane,Roy Keane,Ireland
+given,Shay Given,Ireland
+duff,Damien Duff,Ireland
+mcgrath,Paul McGrath,Ireland

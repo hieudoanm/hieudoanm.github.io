@@ -1,0 +1,9 @@
+// Table layout utilities — Tailwind v3 default scale
+
+$table-layouts: (('auto', auto), ('fixed', fixed));
+
+@each $name, $value in $table-layouts {
+  .table-#{$name} {
+    table-layout: $value;
+  }
+}

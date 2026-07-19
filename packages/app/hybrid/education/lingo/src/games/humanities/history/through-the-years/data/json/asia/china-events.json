@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "asia-xia-dynasty-2070",
+    "title": "Xia Dynasty Begins",
+    "year": -2070,
+    "description": "The Xia became China's first recorded dynasty.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-shang-dynasty-1600",
+    "title": "Shang Dynasty Begins",
+    "year": -1600,
+    "description": "The Shang arose along the Yellow River.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-oracle-bones-1200",
+    "title": "Oracle Bones Used",
+    "year": -1200,
+    "description": "Shang rulers recorded divination on oracle bones.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-zhou-dynasty-1046",
+    "title": "Zhou Dynasty Founded",
+    "year": -1046,
+    "description": "The Zhou overthrew the Shang and ruled for centuries.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-mandate-of-heaven-1046",
+    "title": "Mandate of Heaven",
+    "year": -1046,
+    "description": "The Zhou justified their rule with the Mandate of Heaven.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-spring-autumn-770",
+    "title": "Spring and Autumn Period Begins",
+    "year": -770,
+    "description": "Regional lords contested power as Zhou authority faded.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-confucius-born-551",
+    "title": "Confucius Born",
+    "year": -551,
+    "description": "Confucius was born in the state of Lu.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-sun-tzu-500",
+    "title": "Art of War Written",
+    "year": -500,
+    "description": "Sun Tzu composed the classic text The Art of War.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-warring-states-475",
+    "title": "Warring States Period Begins",
+    "year": -475,
+    "description": "Seven states fought for supremacy in China.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-dao-de-jing-400",
+    "title": "Tao Te Ching Written",
+    "year": -400,
+    "description": "Laozi's Tao Te Ching laid the foundations of Daoism.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-shang-yang-356",
+    "title": "Shang Yang Reforms",
+    "year": -356,
+    "description": "Legalist reforms strengthened the state of Qin.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-qin-unification-221",
+    "title": "Qin Unifies China",
+    "year": -221,
+    "description": "Qin Shi Huang unified the warring states.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-qin-shi-huang-221",
+    "title": "Qin Shi Huang Becomes Emperor",
+    "year": -221,
+    "description": "Qin Shi Huang became the first emperor of China.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-great-wall-begins-221",
+    "title": "Great Wall Construction Begins",
+    "year": -221,
+    "description": "The first emperor linked northern walls into one Great Wall.",
+    "category": "technology",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-terracotta-army-210",
+    "title": "Terracotta Army Buried",
+    "year": -210,
+    "description": "Thousands of clay soldiers were buried with Qin Shi Huang.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-han-dynasty-206",
+    "title": "Han Dynasty Founded",
+    "year": -206,
+    "description": "Liu Bang founded the Han dynasty.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-silk-road-opens-130",
+    "title": "Silk Road Opens",
+    "year": -130,
+    "description": "Zhang Qian's journeys opened the Silk Road.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-paper-invented-105",
+    "title": "Paper Invented",
+    "year": 105,
+    "description": "Cai Lun improved the process of making paper.",
+    "category": "technology",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-seismoscope-132",
+    "title": "First Seismoscope Built",
+    "year": 132,
+    "description": "Zhang Heng invented an early earthquake detector.",
+    "category": "science",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-han-falls-220",
+    "title": "Han Dynasty Falls",
+    "year": 220,
+    "description": "The Han empire collapsed into the Three Kingdoms.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-three-kingdoms-220",
+    "title": "Three Kingdoms Period Begins",
+    "year": 220,
+    "description": "Wei Shu and Wu divided China.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-jin-dynasty-265",
+    "title": "Jin Dynasty Founded",
+    "year": 265,
+    "description": "The Jin reunified China briefly.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-romance-three-kingdoms-280",
+    "title": "Romance of the Three Kingdoms",
+    "year": 280,
+    "description": "The epic novel romanticized the era's heroes.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-northern-wei-386",
+    "title": "Northern Wei Dynasty",
+    "year": 386,
+    "description": "The Northern Wei rose to power in the north.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-sui-dynasty-581",
+    "title": "Sui Dynasty Reunifies China",
+    "year": 581,
+    "description": "The Sui reunited north and south China.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-grand-canal-605",
+    "title": "Grand Canal Completed",
+    "year": 605,
+    "description": "The Sui linked north and south by canal.",
+    "category": "technology",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-imperial-exams-605",
+    "title": "Imperial Examinations Established",
+    "year": 605,
+    "description": "The Sui introduced the civil service examination system.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-tang-dynasty-618",
+    "title": "Tang Dynasty Founded",
+    "year": 618,
+    "description": "The Tang founded one of China's golden ages.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-tang-foreigners-630",
+    "title": "Chang'an Welcomes Foreign Cultures",
+    "year": 630,
+    "description": "Chang'an became a cosmopolitan imperial hub.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-woodblock-printing-650",
+    "title": "Woodblock Printing Spreads",
+    "year": 650,
+    "description": "Woodblock printing multiplied texts across China.",
+    "category": "technology",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-wu-zhao-690",
+    "title": "Empress Wu Zetian Rules",
+    "year": 690,
+    "description": "Wu Zetian became the only female emperor.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-an-lushan-755",
+    "title": "An Lushan Rebellion",
+    "year": 755,
+    "description": "The rebellion shattered the Tang golden age.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-tang-falls-907",
+    "title": "Tang Dynasty Falls",
+    "year": 907,
+    "description": "The Tang empire collapsed into warlord states.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-five-dynasties-907",
+    "title": "Five Dynasties and Ten Kingdoms",
+    "year": 907,
+    "description": "Rival kingdoms fought after the Tang fell.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-song-dynasty-960",
+    "title": "Song Dynasty Founded",
+    "year": 960,
+    "description": "Zhao Kuangyin founded the Song dynasty.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-movable-type-1040",
+    "title": "Movable Type Invented",
+    "year": 1040,
+    "description": "Bi Sheng invented movable type printing.",
+    "category": "technology",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-gunpowder-1044",
+    "title": "Gunpowder Recipe Recorded",
+    "year": 1044,
+    "description": "A military manual recorded early gunpowder formulas.",
+    "category": "technology",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-compass-1119",
+    "title": "Compass Used for Navigation",
+    "year": 1119,
+    "description": "Chinese sailors navigated with magnetic compasses.",
+    "category": "technology",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-jingkang-incident-1127",
+    "title": "Jingkang Incident",
+    "year": 1127,
+    "description": "The Jurchen captured Kaifeng ending Northern Song.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-southern-song-1127",
+    "title": "Southern Song Established",
+    "year": 1127,
+    "description": "The Song court retreated south of the Yangtze.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-genghis-khan-1206",
+    "title": "Genghis Khan Unites Mongols",
+    "year": 1206,
+    "description": "Genghis Khan united the Mongol tribes.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-kublai-khan-1260",
+    "title": "Kublai Khan Becomes Khan",
+    "year": 1260,
+    "description": "Kublai Khan took power over the Mongol empire.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-yuan-dynasty-1271",
+    "title": "Yuan Dynasty Founded",
+    "year": 1271,
+    "description": "Kublai Khan founded the Yuan dynasty.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-marco-polo-1275",
+    "title": "Marco Polo Arrives in China",
+    "year": 1275,
+    "description": "Marco Polo reached the court of Kublai Khan.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-yuan-falls-1368",
+    "title": "Yuan Dynasty Falls",
+    "year": 1368,
+    "description": "The Mongols were driven out of China.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-ming-dynasty-1368",
+    "title": "Ming Dynasty Founded",
+    "year": 1368,
+    "description": "Zhu Yuanzhang founded the Ming dynasty.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-zheng-he-1405",
+    "title": "Zheng He's Voyages Begin",
+    "year": 1405,
+    "description": "Zheng He led fleets across the Indian Ocean.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-forbidden-city-1420",
+    "title": "Forbidden City Completed",
+    "year": 1420,
+    "description": "The Ming built the imperial palace in Beijing.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-ming-wall-1470",
+    "title": "Great Wall Rebuilt",
+    "year": 1470,
+    "description": "The Ming rebuilt the Great Wall into its modern form.",
+    "category": "technology",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-sea-ban-1522",
+    "title": "Haijin Sea Ban",
+    "year": 1522,
+    "description": "The Ming banned private maritime trade.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-wanli-reign-1572",
+    "title": "Wanli Emperor Reigns",
+    "year": 1572,
+    "description": "The long Wanli reign saw the decline of the Ming.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-ming-falls-1644",
+    "title": "Ming Dynasty Falls",
+    "year": 1644,
+    "description": "Rebels captured Beijing ending the Ming.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-qing-dynasty-1644",
+    "title": "Qing Dynasty Founded",
+    "year": 1644,
+    "description": "The Manchu Qing took control of China.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-kangxi-1661",
+    "title": "Kangxi Emperor Rules",
+    "year": 1661,
+    "description": "The Kangxi era brought stability and expansion.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-qianlong-1735",
+    "title": "Qianlong Emperor Rules",
+    "year": 1735,
+    "description": "Qianlong's long reign peaked Qing power.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-opium-war-1839",
+    "title": "First Opium War",
+    "year": 1839,
+    "description": "Britain forced open China's trade.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-treaty-nanjing-1842",
+    "title": "Treaty of Nanjing Signed",
+    "year": 1842,
+    "description": "China ceded Hong Kong and opened treaty ports.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-taiping-rebellion-1850",
+    "title": "Taiping Rebellion Begins",
+    "year": 1850,
+    "description": "Hong Xiuquan's rebellion ravaged China.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-arrow-war-1856",
+    "title": "Second Opium War",
+    "year": 1856,
+    "description": "Britain and France attacked China again.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-summer-palace-1860",
+    "title": "Summer Palace Destroyed",
+    "year": 1860,
+    "description": "Foreign troops looted the Yuanmingyuan.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-self-strengthening-1861",
+    "title": "Self-Strengthening Movement",
+    "year": 1861,
+    "description": "Qing officials modernized the military.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-boxer-rebellion-1899",
+    "title": "Boxer Rebellion Begins",
+    "year": 1899,
+    "description": "Boxers attacked foreigners and missionaries.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-boxer-protocol-1901",
+    "title": "Boxer Protocol Signed",
+    "year": 1901,
+    "description": "China paid huge indemnities to foreign powers.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-xinhai-revolution-1911",
+    "title": "Xinhai Revolution",
+    "year": 1911,
+    "description": "Republicans overthrew the Qing dynasty.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-republic-china-1912",
+    "title": "Republic of China Founded",
+    "year": 1912,
+    "description": "Sun Yat-sen proclaimed the Chinese Republic.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-yuan-shikai-1913",
+    "title": "Yuan Shikai Becomes President",
+    "year": 1913,
+    "description": "Yuan Shikai consolidated authoritarian power.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-may-fourth-1919",
+    "title": "May Fourth Movement",
+    "year": 1919,
+    "description": "Students protested against the Versailles terms.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-ccp-founded-1921",
+    "title": "Communist Party Founded",
+    "year": 1921,
+    "description": "The CCP held its first congress in Shanghai.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-first-united-front-1924",
+    "title": "First United Front",
+    "year": 1924,
+    "description": "Nationalists and communists allied against warlords.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-northern-expedition-1926",
+    "title": "Northern Expedition Begins",
+    "year": 1926,
+    "description": "Chiang Kai-shek's armies marched north.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-nanchang-uprising-1927",
+    "title": "Nanchang Uprising",
+    "year": 1927,
+    "description": "Communists launched their first armed revolt.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-long-march-1934",
+    "title": "Long March Begins",
+    "year": 1934,
+    "description": "Communist forces retreated across China.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-xian-incident-1936",
+    "title": "Xi'an Incident",
+    "year": 1936,
+    "description": "Chiang Kai-shek was detained and forced to resist Japan.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-second-sino-japanese-1937",
+    "title": "Second Sino-Japanese War",
+    "year": 1937,
+    "description": "Full-scale war broke out between China and Japan.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-nanjing-massacre-1937",
+    "title": "Nanjing Massacre",
+    "year": 1937,
+    "description": "Japanese troops carried out mass killings in Nanjing.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-ww2-china-1945",
+    "title": "China Wins World War II",
+    "year": 1945,
+    "description": "Japan surrendered ending the war in China.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-civil-war-resumes-1946",
+    "title": "Chinese Civil War Resumes",
+    "year": 1946,
+    "description": "Nationalists and communists resumed fighting.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-prc-founded-1949",
+    "title": "People's Republic Founded",
+    "year": 1949,
+    "description": "Mao Zedong proclaimed the PRC on October 1.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-korean-war-1950",
+    "title": "China Enters Korean War",
+    "year": 1950,
+    "description": "Chinese forces crossed into Korea.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-five-year-plans-1953",
+    "title": "First Five-Year Plan",
+    "year": 1953,
+    "description": "China began Soviet-style industrialization.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-great-leap-1958",
+    "title": "Great Leap Forward",
+    "year": 1958,
+    "description": "Mao launched an industrialization campaign.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-sino-soviet-split-1960",
+    "title": "Sino-Soviet Split",
+    "year": 1960,
+    "description": "China broke with the Soviet Union.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-cultural-revolution-1966",
+    "title": "Cultural Revolution Begins",
+    "year": 1966,
+    "description": "Mao purged rivals and upended society.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-ping-pong-diplomacy-1971",
+    "title": "Ping-Pong Diplomacy",
+    "year": 1971,
+    "description": "American table tennis players visited China.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-nixon-visits-1972",
+    "title": "Nixon Visits China",
+    "year": 1972,
+    "description": "Nixon's visit reopened US-China relations.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-mao-dies-1976",
+    "title": "Mao Zedong Dies",
+    "year": 1976,
+    "description": "Mao's death ended the Cultural Revolution era.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-reform-opening-1978",
+    "title": "Reform and Opening Up",
+    "year": 1978,
+    "description": "Deng Xiaoping launched market reforms.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-one-child-1979",
+    "title": "One-Child Policy",
+    "year": 1979,
+    "description": "China restricted most families to one child.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-special-economic-zones-1980",
+    "title": "Special Economic Zones",
+    "year": 1980,
+    "description": "Shenzhen and other zones opened to investment.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-tiananmen-1989",
+    "title": "Tiananmen Square Protest",
+    "year": 1989,
+    "description": "Student protests were suppressed in Beijing.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-hong-kong-handover-1997",
+    "title": "Hong Kong Handover",
+    "year": 1997,
+    "description": "Britain returned Hong Kong to China.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-macau-handover-1999",
+    "title": "Macau Handover",
+    "year": 1999,
+    "description": "Portugal returned Macau to China.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-wto-2001",
+    "title": "China Joins WTO",
+    "year": 2001,
+    "description": "China entered the World Trade Organization.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-shenzhou-2003",
+    "title": "First Manned Spaceflight",
+    "year": 2003,
+    "description": "Yang Liwei flew aboard Shenzhou 5.",
+    "category": "space",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-three-gorges-2003",
+    "title": "Three Gorges Dam Fills",
+    "year": 2003,
+    "description": "The giant dam began generating power.",
+    "category": "technology",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-beijing-olympics-2008",
+    "title": "Beijing Hosts Olympics",
+    "year": 2008,
+    "description": "Beijing staged the Summer Olympics.",
+    "category": "sports",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-high-speed-rail-2008",
+    "title": "High-Speed Rail Opens",
+    "year": 2008,
+    "description": "China launched its first high-speed rail line.",
+    "category": "technology",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-chang-e-2013",
+    "title": "Chang'e-3 Moon Landing",
+    "year": 2013,
+    "description": "China's probe landed on the Moon.",
+    "category": "space",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-chang-e-5-2020",
+    "title": "Chang'e-5 Returns Samples",
+    "year": 2020,
+    "description": "China returned Moon samples to Earth.",
+    "category": "space",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-tiangong-2021",
+    "title": "Tiangong Station Crewed",
+    "year": 2021,
+    "description": "Astronauts boarded the Tiangong station.",
+    "category": "space",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  }
+]

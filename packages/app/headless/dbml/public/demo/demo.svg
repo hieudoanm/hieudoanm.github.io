@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+  <title>dbml terminal: sql, mermaid, svg, all, serve</title>
+  <desc>Animated terminal window showing dbml sql, dbml mermaid, dbml svg, dbml all, and dbml serve with their output.</desc>
+
+  <style>
+    .line { opacity: 0; }
+    .line.sql { animation: rise 0.4s ease-out 0.9s forwards; }
+    .line.sqlout { animation: rise 0.4s ease-out 1.7s forwards; }
+    .line.mermaid { animation: rise 0.4s ease-out 2.4s forwards; }
+    .line.mermaidout { animation: rise 0.4s ease-out 3.1s forwards; }
+    .line.svg { animation: rise 0.4s ease-out 3.8s forwards; }
+    .line.svgout { animation: rise 0.4s ease-out 4.5s forwards; }
+    .line.all { animation: rise 0.4s ease-out 5.2s forwards; }
+    .line.allout { animation: rise 0.4s ease-out 5.9s forwards; }
+    .line.serve { animation: rise 0.4s ease-out 6.6s forwards; }
+    .line.serving { animation: rise 0.4s ease-out 7.3s forwards; }
+    .line.stop { animation: rise 0.4s ease-out 8.0s forwards; }
+    .line.prompt { animation: rise 0.4s ease-out 8.7s forwards; }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+  <rect x="0" y="0" width="1280" height="720" fill="#0f172a"/>
+  <rect x="0" y="0" width="1280" height="48" fill="#1e293b"/>
+  <line x1="0" y1="48" x2="1280" y2="48" stroke="#334155" stroke-width="1"/>
+
+  <circle cx="32" cy="24" r="8" fill="#ef4444"/>
+  <circle cx="58" cy="24" r="8" fill="#f59e0b"/>
+  <circle cx="84" cy="24" r="8" fill="#22c55e"/>
+
+  <text x="640" y="32" font-size="20" fill="#94a3b8" text-anchor="middle">dbml — zsh</text>
+
+  <g font-size="24" transform-origin="48 96">
+    <g class="line sql" transform-origin="48 96">
+      <text x="48" y="96">
+        <tspan fill="#475569">~/dbml </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#7c3aed">dbml </tspan><tspan fill="#e2e8f0">sql schema.dbml -o schema.sql</tspan>
+      </text>
+    </g>
+    <g class="line sqlout" transform-origin="48 136">
+      <text x="48" y="136" fill="#34d399">✓ Generated initial_schema.sql</text>
+    </g>
+
+    <g class="line mermaid" transform-origin="48 192">
+      <text x="48" y="192">
+        <tspan fill="#475569">~/dbml </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#7c3aed">dbml </tspan><tspan fill="#e2e8f0">mermaid schema.dbml -o diagram.mmd</tspan>
+      </text>
+    </g>
+    <g class="line mermaidout" transform-origin="48 232">
+      <text x="48" y="232" fill="#34d399">✓ Generated database-erd.mmd</text>
+    </g>
+
+    <g class="line svg" transform-origin="48 288">
+      <text x="48" y="288">
+        <tspan fill="#475569">~/dbml </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#7c3aed">dbml </tspan><tspan fill="#e2e8f0">svg schema.dbml -o diagram.svg</tspan>
+      </text>
+    </g>
+    <g class="line svgout" transform-origin="48 328">
+      <text x="48" y="328" fill="#34d399">✓ Generated schema.svg</text>
+    </g>
+
+    <g class="line all" transform-origin="48 384">
+      <text x="48" y="384">
+        <tspan fill="#475569">~/dbml </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#7c3aed">dbml </tspan><tspan fill="#e2e8f0">all schema.dbml --output-dir ./output</tspan>
+      </text>
+    </g>
+    <g class="line allout" transform-origin="48 424">
+      <text x="48" y="424" fill="#34d399">✓ Generated SQL, Mermaid, and SVG</text>
+    </g>
+
+    <g class="line serve" transform-origin="48 480">
+      <text x="48" y="480">
+        <tspan fill="#475569">~/dbml </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#7c3aed">dbml </tspan><tspan fill="#e2e8f0">serve --port 8080</tspan>
+      </text>
+    </g>
+    <g class="line serving" transform-origin="48 520">
+      <text x="48" y="520" fill="#34d399">🌐 HTTP server listening on http://localhost:8080</text>
+    </g>
+    <g class="line stop" transform-origin="48 560">
+      <text x="48" y="560" fill="#94a3b8">⏹️ Ctrl+C to stop</text>
+    </g>
+
+    <g class="line prompt" transform-origin="48 616">
+      <text x="48" y="616">
+        <tspan fill="#475569">~/dbml </tspan><tspan fill="#e2e8f0">$ </tspan>
+      </text>
+    </g>
+  </g>
+
+</svg>

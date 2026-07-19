@@ -1,0 +1,196 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360.35 307.58" width="360.35" height="307.58" role="img" aria-labelledby="nigeria-title nigeria-desc">
+  <title id="nigeria-title">Nigeria hex map</title>
+  <desc id="nigeria-desc">Hexagon map with 37 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.25; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 11.14 7.95; }
+    .label { fill: #52525b; font: 600 9.02px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="BO">
+    <title>Borno</title>
+    <polygon class="tile" points="329.44,47.73 352.40,60.99 352.40,87.50 329.44,100.76 306.47,87.50 306.47,60.99" aria-label="Borno"/>
+    <text class="label" x="329.44" y="74.24">BO</text>
+  </g>
+  <g class="state" data-state="AD">
+    <title>Adamawa</title>
+    <polygon class="tile" points="306.47,87.50 329.44,100.76 329.44,127.27 306.47,140.53 283.51,127.27 283.51,100.76" aria-label="Adamawa"/>
+    <text class="label" x="306.47" y="114.02">AD</text>
+  </g>
+  <g class="state" data-state="GO">
+    <title>Gombe</title>
+    <polygon class="tile" points="283.51,47.73 306.47,60.99 306.47,87.50 283.51,100.76 260.55,87.50 260.55,60.99" aria-label="Gombe"/>
+    <text class="label" x="283.51" y="74.24">GO</text>
+  </g>
+  <g class="state" data-state="TA">
+    <title>Taraba</title>
+    <polygon class="tile" points="283.51,127.27 306.47,140.53 306.47,167.05 283.51,180.30 260.55,167.05 260.55,140.53" aria-label="Taraba"/>
+    <text class="label" x="283.51" y="153.79">TA</text>
+  </g>
+  <g class="state" data-state="YO">
+    <title>Yobe</title>
+    <polygon class="tile" points="260.55,7.95 283.51,21.21 283.51,47.73 260.55,60.99 237.58,47.73 237.58,21.21" aria-label="Yobe"/>
+    <text class="label" x="260.55" y="34.47">YO</text>
+  </g>
+  <g class="state" data-state="PL">
+    <title>Plateau</title>
+    <polygon class="tile" points="260.55,87.50 283.51,100.76 283.51,127.27 260.55,140.53 237.58,127.27 237.58,100.76" aria-label="Plateau"/>
+    <text class="label" x="260.55" y="114.02">PL</text>
+  </g>
+  <g class="state" data-state="EB">
+    <title>Ebonyi</title>
+    <polygon class="tile" points="260.55,167.05 283.51,180.30 283.51,206.82 260.55,220.08 237.58,206.82 237.58,180.30" aria-label="Ebonyi"/>
+    <text class="label" x="260.55" y="193.56">EB</text>
+  </g>
+  <g class="state" data-state="BA">
+    <title>Bauchi</title>
+    <polygon class="tile" points="237.58,47.73 260.55,60.99 260.55,87.50 237.58,100.76 214.62,87.50 214.62,60.99" aria-label="Bauchi"/>
+    <text class="label" x="237.58" y="74.24">BA</text>
+  </g>
+  <g class="state" data-state="BE">
+    <title>Benue</title>
+    <polygon class="tile" points="237.58,127.27 260.55,140.53 260.55,167.05 237.58,180.30 214.62,167.05 214.62,140.53" aria-label="Benue"/>
+    <text class="label" x="237.58" y="153.79">BE</text>
+  </g>
+  <g class="state" data-state="CR">
+    <title>Cross River</title>
+    <polygon class="tile" points="237.58,206.82 260.55,220.08 260.55,246.59 237.58,259.85 214.62,246.59 214.62,220.08" aria-label="Cross River"/>
+    <text class="label" x="237.58" y="233.34">CR</text>
+  </g>
+  <g class="state" data-state="JI">
+    <title>Jigawa</title>
+    <polygon class="tile" points="214.62,7.95 237.58,21.21 237.58,47.73 214.62,60.99 191.66,47.73 191.66,21.21" aria-label="Jigawa"/>
+    <text class="label" x="214.62" y="34.47">JI</text>
+  </g>
+  <g class="state" data-state="KD">
+    <title>Kaduna</title>
+    <polygon class="tile" points="214.62,87.50 237.58,100.76 237.58,127.27 214.62,140.53 191.66,127.27 191.66,100.76" aria-label="Kaduna"/>
+    <text class="label" x="214.62" y="114.02">KD</text>
+  </g>
+  <g class="state" data-state="EN">
+    <title>Enugu</title>
+    <polygon class="tile" points="214.62,167.05 237.58,180.30 237.58,206.82 214.62,220.08 191.66,206.82 191.66,180.30" aria-label="Enugu"/>
+    <text class="label" x="214.62" y="193.56">EN</text>
+  </g>
+  <g class="state" data-state="AK">
+    <title>Akwa Ibom</title>
+    <polygon class="tile" points="214.62,246.59 237.58,259.85 237.58,286.37 214.62,299.62 191.66,286.37 191.66,259.85" aria-label="Akwa Ibom"/>
+    <text class="label" x="214.62" y="273.11">AK</text>
+  </g>
+  <g class="state" data-state="KN">
+    <title>Kano</title>
+    <polygon class="tile" points="191.66,47.73 214.62,60.99 214.62,87.50 191.66,100.76 168.70,87.50 168.70,60.99" aria-label="Kano"/>
+    <text class="label" x="191.66" y="74.24">KN</text>
+  </g>
+  <g class="state" data-state="NA">
+    <title>Nassarawa</title>
+    <polygon class="tile" points="191.66,127.27 214.62,140.53 214.62,167.05 191.66,180.30 168.70,167.05 168.70,140.53" aria-label="Nassarawa"/>
+    <text class="label" x="191.66" y="153.79">NA</text>
+  </g>
+  <g class="state" data-state="AB">
+    <title>Abia</title>
+    <polygon class="tile" points="191.66,206.82 214.62,220.08 214.62,246.59 191.66,259.85 168.70,246.59 168.70,220.08" aria-label="Abia"/>
+    <text class="label" x="191.66" y="233.34">AB</text>
+  </g>
+  <g class="state" data-state="KT">
+    <title>Katsina</title>
+    <polygon class="tile" points="168.70,7.95 191.66,21.21 191.66,47.73 168.70,60.99 145.73,47.73 145.73,21.21" aria-label="Katsina"/>
+    <text class="label" x="168.70" y="34.47">KT</text>
+  </g>
+  <g class="state" data-state="FC">
+    <title>Federal Capital Territory</title>
+    <polygon class="tile" points="168.70,87.50 191.66,100.76 191.66,127.27 168.70,140.53 145.73,127.27 145.73,100.76" aria-label="Federal Capital Territory"/>
+    <text class="label" x="168.70" y="114.02">FC</text>
+  </g>
+  <g class="state" data-state="AN">
+    <title>Anambra</title>
+    <polygon class="tile" points="168.70,167.05 191.66,180.30 191.66,206.82 168.70,220.08 145.73,206.82 145.73,180.30" aria-label="Anambra"/>
+    <text class="label" x="168.70" y="193.56">AN</text>
+  </g>
+  <g class="state" data-state="RI">
+    <title>Rivers</title>
+    <polygon class="tile" points="168.70,246.59 191.66,259.85 191.66,286.37 168.70,299.62 145.73,286.37 145.73,259.85" aria-label="Rivers"/>
+    <text class="label" x="168.70" y="273.11">RI</text>
+  </g>
+  <g class="state" data-state="ZA">
+    <title>Zamfara</title>
+    <polygon class="tile" points="145.73,47.73 168.70,60.99 168.70,87.50 145.73,100.76 122.77,87.50 122.77,60.99" aria-label="Zamfara"/>
+    <text class="label" x="145.73" y="74.24">ZA</text>
+  </g>
+  <g class="state" data-state="KO">
+    <title>Kogi</title>
+    <polygon class="tile" points="145.73,127.27 168.70,140.53 168.70,167.05 145.73,180.30 122.77,167.05 122.77,140.53" aria-label="Kogi"/>
+    <text class="label" x="145.73" y="153.79">KO</text>
+  </g>
+  <g class="state" data-state="IM">
+    <title>Imo</title>
+    <polygon class="tile" points="145.73,206.82 168.70,220.08 168.70,246.59 145.73,259.85 122.77,246.59 122.77,220.08" aria-label="Imo"/>
+    <text class="label" x="145.73" y="233.34">IM</text>
+  </g>
+  <g class="state" data-state="SO">
+    <title>Sokoto</title>
+    <polygon class="tile" points="122.77,7.95 145.73,21.21 145.73,47.73 122.77,60.99 99.81,47.73 99.81,21.21" aria-label="Sokoto"/>
+    <text class="label" x="122.77" y="34.47">SO</text>
+  </g>
+  <g class="state" data-state="EK">
+    <title>Ekiti</title>
+    <polygon class="tile" points="122.77,87.50 145.73,100.76 145.73,127.27 122.77,140.53 99.81,127.27 99.81,100.76" aria-label="Ekiti"/>
+    <text class="label" x="122.77" y="114.02">EK</text>
+  </g>
+  <g class="state" data-state="ED">
+    <title>Edo</title>
+    <polygon class="tile" points="122.77,167.05 145.73,180.30 145.73,206.82 122.77,220.08 99.81,206.82 99.81,180.30" aria-label="Edo"/>
+    <text class="label" x="122.77" y="193.56">ED</text>
+  </g>
+  <g class="state" data-state="BY">
+    <title>Bayelsa</title>
+    <polygon class="tile" points="122.77,246.59 145.73,259.85 145.73,286.37 122.77,299.62 99.81,286.37 99.81,259.85" aria-label="Bayelsa"/>
+    <text class="label" x="122.77" y="273.11">BY</text>
+  </g>
+  <g class="state" data-state="NI">
+    <title>Niger</title>
+    <polygon class="tile" points="99.81,47.73 122.77,60.99 122.77,87.50 99.81,100.76 76.84,87.50 76.84,60.99" aria-label="Niger"/>
+    <text class="label" x="99.81" y="74.24">NI</text>
+  </g>
+  <g class="state" data-state="ON">
+    <title>Ondo</title>
+    <polygon class="tile" points="99.81,127.27 122.77,140.53 122.77,167.05 99.81,180.30 76.84,167.05 76.84,140.53" aria-label="Ondo"/>
+    <text class="label" x="99.81" y="153.79">ON</text>
+  </g>
+  <g class="state" data-state="DE">
+    <title>Delta</title>
+    <polygon class="tile" points="99.81,206.82 122.77,220.08 122.77,246.59 99.81,259.85 76.84,246.59 76.84,220.08" aria-label="Delta"/>
+    <text class="label" x="99.81" y="233.34">DE</text>
+  </g>
+  <g class="state" data-state="KE">
+    <title>Kebbi</title>
+    <polygon class="tile" points="76.84,7.95 99.81,21.21 99.81,47.73 76.84,60.99 53.88,47.73 53.88,21.21" aria-label="Kebbi"/>
+    <text class="label" x="76.84" y="34.47">KE</text>
+  </g>
+  <g class="state" data-state="KW">
+    <title>Kwara</title>
+    <polygon class="tile" points="76.84,87.50 99.81,100.76 99.81,127.27 76.84,140.53 53.88,127.27 53.88,100.76" aria-label="Kwara"/>
+    <text class="label" x="76.84" y="114.02">KW</text>
+  </g>
+  <g class="state" data-state="OG">
+    <title>Ogun</title>
+    <polygon class="tile" points="76.84,167.05 99.81,180.30 99.81,206.82 76.84,220.08 53.88,206.82 53.88,180.30" aria-label="Ogun"/>
+    <text class="label" x="76.84" y="193.56">OG</text>
+  </g>
+  <g class="state" data-state="LA">
+    <title>Lagos</title>
+    <polygon class="tile" points="53.88,47.73 76.84,60.99 76.84,87.50 53.88,100.76 30.92,87.50 30.92,60.99" aria-label="Lagos"/>
+    <text class="label" x="53.88" y="74.24">LA</text>
+  </g>
+  <g class="state" data-state="OS">
+    <title>Osun</title>
+    <polygon class="tile" points="53.88,127.27 76.84,140.53 76.84,167.05 53.88,180.30 30.92,167.05 30.92,140.53" aria-label="Osun"/>
+    <text class="label" x="53.88" y="153.79">OS</text>
+  </g>
+  <g class="state" data-state="OY">
+    <title>Oyo</title>
+    <polygon class="tile" points="30.92,87.50 53.88,100.76 53.88,127.27 30.92,140.53 7.95,127.27 7.95,100.76" aria-label="Oyo"/>
+    <text class="label" x="30.92" y="114.02">OY</text>
+  </g>
+</svg>

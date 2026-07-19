@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357.71 231.05" width="357.71" height="231.05" role="img" aria-labelledby="nepal-title nepal-desc">
+  <title id="nepal-title">Nepal hex map</title>
+  <desc id="nepal-desc">Hexagon map with 14 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.77; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 13.67 9.76; }
+    .label { fill: #52525b; font: 600 11.06px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="ME">
+    <title>Mechi</title>
+    <polygon class="tile" points="319.76,156.20 347.94,172.47 347.94,205.01 319.76,221.28 291.58,205.01 291.58,172.47" aria-label="Mechi"/>
+    <text class="label" x="319.76" y="188.74">ME</text>
+  </g>
+  <g class="state" data-state="KO">
+    <title>Bhojpur</title>
+    <polygon class="tile" points="291.58,107.39 319.76,123.66 319.76,156.20 291.58,172.47 263.40,156.20 263.40,123.66" aria-label="Bhojpur"/>
+    <text class="label" x="291.58" y="139.93">KO</text>
+  </g>
+  <g class="state" data-state="SA">
+    <title>Sagarmatha</title>
+    <polygon class="tile" points="263.40,156.20 291.58,172.47 291.58,205.01 263.40,221.28 235.22,205.01 235.22,172.47" aria-label="Sagarmatha"/>
+    <text class="label" x="263.40" y="188.74">SA</text>
+  </g>
+  <g class="state" data-state="JA">
+    <title>Janakpur</title>
+    <polygon class="tile" points="235.22,107.39 263.40,123.66 263.40,156.20 235.22,172.47 207.04,156.20 207.04,123.66" aria-label="Janakpur"/>
+    <text class="label" x="235.22" y="139.93">JA</text>
+  </g>
+  <g class="state" data-state="BA">
+    <title>Bagmati</title>
+    <polygon class="tile" points="207.04,58.57 235.22,74.85 235.22,107.39 207.04,123.66 178.85,107.39 178.85,74.85" aria-label="Bagmati"/>
+    <text class="label" x="207.04" y="91.12">BA</text>
+  </g>
+  <g class="state" data-state="NA">
+    <title>Narayani</title>
+    <polygon class="tile" points="207.04,156.20 235.22,172.47 235.22,205.01 207.04,221.28 178.85,205.01 178.85,172.47" aria-label="Narayani"/>
+    <text class="label" x="207.04" y="188.74">NA</text>
+  </g>
+  <g class="state" data-state="GA">
+    <title>Gandaki</title>
+    <polygon class="tile" points="178.85,107.39 207.04,123.66 207.04,156.20 178.85,172.47 150.67,156.20 150.67,123.66" aria-label="Gandaki"/>
+    <text class="label" x="178.85" y="139.93">GA</text>
+  </g>
+  <g class="state" data-state="DH">
+    <title>Dhawalagiri</title>
+    <polygon class="tile" points="150.67,58.57 178.85,74.85 178.85,107.39 150.67,123.66 122.49,107.39 122.49,74.85" aria-label="Dhawalagiri"/>
+    <text class="label" x="150.67" y="91.12">DH</text>
+  </g>
+  <g class="state" data-state="LU">
+    <title>Lumbini</title>
+    <polygon class="tile" points="150.67,156.20 178.85,172.47 178.85,205.01 150.67,221.28 122.49,205.01 122.49,172.47" aria-label="Lumbini"/>
+    <text class="label" x="150.67" y="188.74">LU</text>
+  </g>
+  <g class="state" data-state="KA">
+    <title>Karnali</title>
+    <polygon class="tile" points="122.49,9.76 150.67,26.03 150.67,58.57 122.49,74.85 94.31,58.57 94.31,26.03" aria-label="Karnali"/>
+    <text class="label" x="122.49" y="42.30">KA</text>
+  </g>
+  <g class="state" data-state="RA">
+    <title>Rapti</title>
+    <polygon class="tile" points="122.49,107.39 150.67,123.66 150.67,156.20 122.49,172.47 94.31,156.20 94.31,123.66" aria-label="Rapti"/>
+    <text class="label" x="122.49" y="139.93">RA</text>
+  </g>
+  <g class="state" data-state="BH">
+    <title>Bheri</title>
+    <polygon class="tile" points="94.31,58.57 122.49,74.85 122.49,107.39 94.31,123.66 66.13,107.39 66.13,74.85" aria-label="Bheri"/>
+    <text class="label" x="94.31" y="91.12">BH</text>
+  </g>
+  <g class="state" data-state="SE">
+    <title>Seti</title>
+    <polygon class="tile" points="66.13,9.76 94.31,26.03 94.31,58.57 66.13,74.85 37.94,58.57 37.94,26.03" aria-label="Seti"/>
+    <text class="label" x="66.13" y="42.30">SE</text>
+  </g>
+  <g class="state" data-state="MA">
+    <title>Mahakali</title>
+    <polygon class="tile" points="37.94,58.57 66.13,74.85 66.13,107.39 37.94,123.66 9.76,107.39 9.76,74.85" aria-label="Mahakali"/>
+    <text class="label" x="37.94" y="91.12">MA</text>
+  </g>
+</svg>

@@ -1,0 +1,68 @@
+// Min block size utilities — logical min-height scale
+
+$min-block-size-unit: 0.25rem;
+$min-block-size-steps: (
+  ('0\\.5', 0.5),
+  ('1', 1),
+  ('1\\.5', 1.5),
+  ('2', 2),
+  ('2\\.5', 2.5),
+  ('3', 3),
+  ('3\\.5', 3.5),
+  ('4', 4),
+  ('5', 5),
+  ('6', 6),
+  ('7', 7),
+  ('8', 8),
+  ('9', 9),
+  ('10', 10),
+  ('11', 11),
+  ('12', 12),
+  ('14', 14),
+  ('16', 16),
+  ('20', 20),
+  ('24', 24),
+  ('28', 28),
+  ('32', 32),
+  ('36', 36),
+  ('40', 40),
+  ('44', 44),
+  ('48', 48),
+  ('52', 52),
+  ('56', 56),
+  ('60', 60),
+  ('64', 64),
+  ('72', 72),
+  ('80', 80),
+  ('96', 96)
+);
+
+.min-block-size-0 {
+  min-block-size: 0;
+}
+
+.min-block-size-px {
+  min-block-size: 1px;
+}
+
+.min-block-size-full {
+  min-block-size: 100%;
+}
+
+.min-block-size-min {
+  min-block-size: min-content;
+}
+
+.min-block-size-max {
+  min-block-size: max-content;
+}
+
+.min-block-size-fit {
+  min-block-size: fit-content;
+}
+
+@each $class, $step in $min-block-size-steps {
+  .min-block-size-#{$class} {
+    min-block-size: $step * $min-block-size-unit;
+  }
+}

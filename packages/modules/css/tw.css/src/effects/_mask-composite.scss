@@ -1,0 +1,14 @@
+// Mask composite utilities — Tailwind v4 default scale
+
+$mask-composites: (
+  ('add', add),
+  ('subtract', subtract),
+  ('intersect', intersect),
+  ('exclude', exclude)
+);
+
+@each $name, $value in $mask-composites {
+  .mask-composite-#{$name} {
+    mask-composite: $value;
+  }
+}

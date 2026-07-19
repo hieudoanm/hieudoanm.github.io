@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357.71 231.05" width="357.71" height="231.05" role="img" aria-labelledby="central-african-republic-title central-african-republic-desc">
+  <title id="central-african-republic-title">Central African Republic hex map</title>
+  <desc id="central-african-republic-desc">Hexagon map with 17 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.77; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 13.67 9.76; }
+    .label { fill: #52525b; font: 600 11.06px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="HM">
+    <title>Haut-Mbomou</title>
+    <polygon class="tile" points="319.76,107.39 347.94,123.66 347.94,156.20 319.76,172.47 291.58,156.20 291.58,123.66" aria-label="Haut-Mbomou"/>
+    <text class="label" x="319.76" y="139.93">HM</text>
+  </g>
+  <g class="state" data-state="HK">
+    <title>Haute-Kotto</title>
+    <polygon class="tile" points="291.58,58.57 319.76,74.85 319.76,107.39 291.58,123.66 263.40,107.39 263.40,74.85" aria-label="Haute-Kotto"/>
+    <text class="label" x="291.58" y="91.12">HK</text>
+  </g>
+  <g class="state" data-state="VK">
+    <title>Vakaga</title>
+    <polygon class="tile" points="263.40,9.76 291.58,26.03 291.58,58.57 263.40,74.85 235.22,58.57 235.22,26.03" aria-label="Vakaga"/>
+    <text class="label" x="263.40" y="42.30">VK</text>
+  </g>
+  <g class="state" data-state="MB">
+    <title>Mbomou</title>
+    <polygon class="tile" points="263.40,107.39 291.58,123.66 291.58,156.20 263.40,172.47 235.22,156.20 235.22,123.66" aria-label="Mbomou"/>
+    <text class="label" x="263.40" y="139.93">MB</text>
+  </g>
+  <g class="state" data-state="UK">
+    <title>Ouaka</title>
+    <polygon class="tile" points="235.22,58.57 263.40,74.85 263.40,107.39 235.22,123.66 207.04,107.39 207.04,74.85" aria-label="Ouaka"/>
+    <text class="label" x="235.22" y="91.12">UK</text>
+  </g>
+  <g class="state" data-state="BK">
+    <title>Basse-Kotto</title>
+    <polygon class="tile" points="235.22,156.20 263.40,172.47 263.40,205.01 235.22,221.28 207.04,205.01 207.04,172.47" aria-label="Basse-Kotto"/>
+    <text class="label" x="235.22" y="188.74">BK</text>
+  </g>
+  <g class="state" data-state="BB">
+    <title>Bamingui-Bangoran</title>
+    <polygon class="tile" points="207.04,9.76 235.22,26.03 235.22,58.57 207.04,74.85 178.85,58.57 178.85,26.03" aria-label="Bamingui-Bangoran"/>
+    <text class="label" x="207.04" y="42.30">BB</text>
+  </g>
+  <g class="state" data-state="KG">
+    <title>Kémo</title>
+    <polygon class="tile" points="207.04,107.39 235.22,123.66 235.22,156.20 207.04,172.47 178.85,156.20 178.85,123.66" aria-label="Kémo"/>
+    <text class="label" x="207.04" y="139.93">KG</text>
+  </g>
+  <g class="state" data-state="KB">
+    <title>Nana-Grébizi</title>
+    <polygon class="tile" points="178.85,58.57 207.04,74.85 207.04,107.39 178.85,123.66 150.67,107.39 150.67,74.85" aria-label="Nana-Grébizi"/>
+    <text class="label" x="178.85" y="91.12">KB</text>
+  </g>
+  <g class="state" data-state="BGF">
+    <title>Bangui</title>
+    <polygon class="tile" points="178.85,156.20 207.04,172.47 207.04,205.01 178.85,221.28 150.67,205.01 150.67,172.47" aria-label="Bangui"/>
+    <text class="label" x="178.85" y="188.74">BGF</text>
+  </g>
+  <g class="state" data-state="MP">
+    <title>Ombella-M'Poko</title>
+    <polygon class="tile" points="150.67,107.39 178.85,123.66 178.85,156.20 150.67,172.47 122.49,156.20 122.49,123.66" aria-label="Ombella-M'Poko"/>
+    <text class="label" x="150.67" y="139.93">MP</text>
+  </g>
+  <g class="state" data-state="AC">
+    <title>Ouham</title>
+    <polygon class="tile" points="122.49,58.57 150.67,74.85 150.67,107.39 122.49,123.66 94.31,107.39 94.31,74.85" aria-label="Ouham"/>
+    <text class="label" x="122.49" y="91.12">AC</text>
+  </g>
+  <g class="state" data-state="LB">
+    <title>Lobaye</title>
+    <polygon class="tile" points="122.49,156.20 150.67,172.47 150.67,205.01 122.49,221.28 94.31,205.01 94.31,172.47" aria-label="Lobaye"/>
+    <text class="label" x="122.49" y="188.74">LB</text>
+  </g>
+  <g class="state" data-state="HS">
+    <title>Mambéré-Kadéï</title>
+    <polygon class="tile" points="94.31,107.39 122.49,123.66 122.49,156.20 94.31,172.47 66.13,156.20 66.13,123.66" aria-label="Mambéré-Kadéï"/>
+    <text class="label" x="94.31" y="139.93">HS</text>
+  </g>
+  <g class="state" data-state="OP">
+    <title>Ouham-Pendé</title>
+    <polygon class="tile" points="66.13,58.57 94.31,74.85 94.31,107.39 66.13,123.66 37.94,107.39 37.94,74.85" aria-label="Ouham-Pendé"/>
+    <text class="label" x="66.13" y="91.12">OP</text>
+  </g>
+  <g class="state" data-state="SE">
+    <title>Sangha-Mbaéré</title>
+    <polygon class="tile" points="66.13,156.20 94.31,172.47 94.31,205.01 66.13,221.28 37.94,205.01 37.94,172.47" aria-label="Sangha-Mbaéré"/>
+    <text class="label" x="66.13" y="188.74">SE</text>
+  </g>
+  <g class="state" data-state="NM">
+    <title>Nana-Mambéré</title>
+    <polygon class="tile" points="37.94,107.39 66.13,123.66 66.13,156.20 37.94,172.47 9.76,156.20 9.76,123.66" aria-label="Nana-Mambéré"/>
+    <text class="label" x="37.94" y="139.93">NM</text>
+  </g>
+</svg>

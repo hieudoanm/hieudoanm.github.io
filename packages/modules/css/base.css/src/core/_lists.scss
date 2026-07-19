@@ -1,0 +1,28 @@
+// Ordered, unordered and definition lists.
+
+@mixin lists {
+  ul,
+  menu {
+    list-style-position: inside;
+    list-style-type: disc;
+    padding-left: 0;
+  }
+
+  ol {
+    list-style-position: inside;
+    list-style-type: decimal;
+    padding-left: 0;
+  }
+
+  li {
+    line-height: 1.625;
+  }
+
+  dt {
+    font-weight: 600;
+  }
+
+  dd {
+    margin-left: 0;
+  }
+}
